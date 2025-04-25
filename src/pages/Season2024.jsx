@@ -9,7 +9,7 @@ function SeasonPage() {
     fetch("/data/games.json")
       .then((res) => res.json())
       .then((allGames) => {
-        const seasonGames = allGames.filter((g) => g.Season === "2024");
+        const seasonGames = allGames.filter((g) => g.Season === 2024);
         setGames(seasonGames);
       })
       .catch((err) => console.error("Failed to load games", err));
