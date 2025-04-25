@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 
 function App() {
@@ -44,12 +45,13 @@ function App() {
 
     <section className="text-center">
       <h2 className="text-2xl font-semibold mt-10 mb-4">Individual Season Results</h2>
-      <a
-        href="/season/2024-2025"
+      <Link
+        to="/season/2024-2025"
         className="inline-block text-blue-600 hover:text-blue-800 underline text-lg font-medium"
-      >
-        View 2024–2025 Season
-      </a>
+>
+  View 2024–2025 Season
+</Link>
+
     </section>
 
     <section>
