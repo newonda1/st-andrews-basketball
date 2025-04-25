@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 function App() {
   const [games, setGames] = useState([]);
   const [playerStats, setPlayerStats] = useState([]);
+  const [players, setPlayers] = useState([]);
 
   useEffect(() => {
     fetch("/data/games.json")
@@ -14,7 +15,16 @@ function App() {
       .then((res) => res.json())
       .then(setPlayerStats)
       .catch((err) => console.error("Failed to load player stats", err));
+
+    fetch("/data/players.json")
+      .then((res) => res.json())
+      .then(setPlayers)
+      .catch((err) => console.error("Failed to load players", err));
   }, []);
+
+  const playerMap = Object.fromEntries(
+    players.map((p) => [p.PlayerID, `${p.FirstName} ${p.LastName}`])
+  );
 
   return (
     <div className="p-6 max-w-5xl mx-auto space-y-10">
@@ -43,7 +53,7 @@ function App() {
         <div className="space-y-4">
           {playerStats.slice(0, 10).map((stat, index) => (
             <div key={index} className="border rounded-lg p-4 shadow-sm">
-              <p className="font-semibold">Player ID: {stat.PlayerID}</p>
+              <p className="font-semibold">Player: {playerMap[stat.PlayerID] || stat.PlayerID}</p>
               <p>Game ID: {stat.GameID}</p>
               <p>
                 PTS: {stat.Points} | REB: {stat.Rebounds} | AST: {stat.Assists} | STL: {stat.Steals} | BLK: {stat.Blocks}
