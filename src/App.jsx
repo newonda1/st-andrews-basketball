@@ -54,36 +54,6 @@ function App() {
 
     </section>
 
-    <section>
-      <h2 className="text-2xl font-semibold mb-4">Recent Game Results</h2>
-      <div className="space-y-4">
-        {games.slice(0, 10).map((game) => (
-          <div key={game.GameID} className="border rounded-lg p-4 shadow-sm">
-            <p className="font-semibold">{game.Date} vs. {game.Opponent}</p>
-            <p>Result: {game.Result} — {game.TeamScore} to {game.OpponentScore}</p>
-            <p>Location: {game.LocationType} | Game Type: {game.GameType}</p>
-          </div>
-        ))}
-      </div>
-    </section>
-
-    <section>
-      <h2 className="text-2xl font-semibold mb-4">Recent Player Stats</h2>
-      <div className="space-y-4">
-        {playerStats.slice(0, 10).map((stat, index) => (
-          <div key={index} className="border rounded-lg p-4 shadow-sm">
-            <p className="font-semibold">Player: {playerMap[stat.PlayerID] || stat.PlayerID}</p>
-            <p>Game ID: {stat.GameID}</p>
-            <p>
-              PTS: {stat.Points} | REB: {stat.Rebounds} | AST: {stat.Assists} | STL: {stat.Steals} | BLK: {stat.Blocks}
-            </p>
-            <p>
-              3PM: {stat.ThreePM} / {stat.ThreePA}, 2PM: {stat.TwoPM} / {stat.TwoPA}, FTM: {stat.FTM} / {stat.FTA}
-            </p>
-          </div>
-        ))}
-      </div>
-    </section>
   </div>
 );
 }
