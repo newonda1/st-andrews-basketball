@@ -36,7 +36,7 @@ function App() {
       </h1>
     </header>
       <section className="mb-12">
-  <h2 className="text-3xl font-bold mb-4">Celebrating the Legacy of St. Andrew’s Boys Basketball</h2>
+ 
   <p className="text-lg leading-relaxed mb-4">
     The history of St. Andrew’s boys basketball is one of resilience, transformation, and championship legacy. Over nearly five decades, the program has evolved from its early foundational years into a powerhouse within Georgia's independent school athletics.
   </p>
