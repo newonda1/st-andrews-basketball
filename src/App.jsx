@@ -35,13 +35,30 @@ function App() {
         Celebrating the Legacy of St. Andrew&apos;s Basketball
       </h1>
     </header>
-
-    <section className="text-center">
-      <p className="text-gray-700 text-lg max-w-3xl mx-auto">
-        This site chronicles the history of St. Andrew’s boys basketball, featuring game results, player statistics,
-        and season recaps. Each year builds on the legacy of past teams, coaches, and athletes who have shaped the program.
-      </p>
-    </section>
+      <section className="mb-12">
+  <h2 className="text-3xl font-bold mb-4">Celebrating the Legacy of St. Andrew’s Boys Basketball</h2>
+  <p className="text-lg leading-relaxed mb-4">
+    The history of St. Andrew’s boys basketball is one of resilience, transformation, and championship legacy. Over nearly five decades, the program has evolved from its early foundational years into a powerhouse within Georgia's independent school athletics.
+  </p>
+  <p className="text-lg leading-relaxed mb-4">
+    The team began its journey in the late 1970s under Coach Dave Clay, who led the program through its early GISA seasons and into SCISA competition. These early years were marked by the grit and consistency required to build a program from the ground up. Coaches like Ron Lassiter, Joel Smoker, and Don Sherwood each helped lay the bricks of a growing basketball identity through the 1980s and early 1990s. The wins were often hard-fought, and the records fluctuated, but each season brought the team closer to a cohesive culture.
+  </p>
+  <p className="text-lg leading-relaxed mb-4">
+    The 1992–1993 season marked a major milestone when Coach Paul Hill led the Lions to their first state championship in program history, capturing the GISA AA title. That breakthrough season set a new standard for the program and sparked a sense of belief that St. Andrew’s could compete at the highest levels.
+  </p>
+  <p className="text-lg leading-relaxed mb-4">
+    The mid-90s through early 2000s continued that momentum. Under Coach Frank Dickson, the Lions built a reputation for postseason grit, culminating in a 1998 SCISA AA State Championship. That success was followed by another title in 2004 under Coach Michael Bennett, further solidifying the Lions as a consistent contender. During this stretch, the team became known for its strong home-court presence, disciplined defense, and tournament resilience.
+  </p>
+  <p className="text-lg leading-relaxed mb-4">
+    A transitional period followed in the late 2000s and early 2010s under Coach Joe Thoni, who brought stability and steady leadership. While state titles remained elusive during this stretch, the Lions remained a competitive presence in SCISA and continued to develop the foundation of a strong, enduring program.
+  </p>
+  <p className="text-lg leading-relaxed mb-4">
+    The arrival of Coach Mel Abrams Jr. in 2015 ushered in the most dominant era in St. Andrew’s basketball history. With a focus on culture, accountability, and high-level competition, Coach Abrams led the Lions to three state championships (2022, 2023, and 2025), including back-to-back GIAA AAA titles. His teams have averaged over 18 wins per season, regularly advanced deep into the playoffs, and elevated the program into one of the premier forces in Georgia’s independent school ranks.
+  </p>
+  <p className="text-lg leading-relaxed">
+    Across 639 total wins, 66 tournament victories, and 62 playoff wins, the story of St. Andrew’s basketball is one of perseverance and pride. It’s a story of student-athletes and coaches who committed themselves to excellence on and off the court, carrying the banner of the Lions through triumphs and trials alike. As new seasons unfold, they add chapters to this proud legacy—one game at a time.
+  </p>
+</section>
 
     <section className="text-center">
       <h2 className="text-2xl font-semibold mt-10 mb-4">Individual Season Results</h2>
