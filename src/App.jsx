@@ -43,19 +43,25 @@ function App() {
   <p className="text-lg leading-relaxed mb-4">
     The team began its journey in the late 1970s under Coach Dave Clay, who led the program through its early GISA seasons and into SCISA competition. These early years were marked by the grit and consistency required to build a program from the ground up. Coaches like Ron Lassiter, Joel Smoker, and Don Sherwood each helped lay the bricks of a growing basketball identity through the 1980s and early 1990s. The wins were often hard-fought, and the records fluctuated, but each season brought the team closer to a cohesive culture.
   </p>
+  <div className="mb-6">
   <img
     src="/images/first_team_1978.png"
     alt="1978-79 St. Andrew's Basketball Team"
-    className="w-64 h-auto rounded-lg shadow-md mb-4 float-left mr-6"
+    className="w-80 h-auto rounded-lg shadow-md mb-2 md:float-left md:mr-6"
   />
+  <p className="text-sm italic text-center md:text-left">1978-79 St. Andrew's first boys basketball team</p>
+</div>
   <p className="text-lg leading-relaxed mb-4">
     The 1992–1993 season marked a major milestone when Coach Paul Hill led the Lions to their first state championship in program history, capturing the GISA AA title. That breakthrough season set a new standard for the program and sparked a sense of belief that St. Andrew’s could compete at the highest levels.
   </p>
+ <div className="mb-6">
   <img
     src="/images/chris_haslem_1993.png"
-    alt="Chris Haslem 1992-93 Championship Season"
-    className="w-64 h-auto rounded-lg shadow-md mb-4 float-right ml-6"
+    alt="Chris Haslem during the 1992-93 Championship Season"
+    className="w-52 h-auto rounded-lg shadow-md mb-2 md:float-right md:ml-6"
   />
+  <p className="text-sm italic text-center md:text-right">Chris Haslem leading the Lions to their first state title in 1993</p>
+</div>
   <p className="text-lg leading-relaxed mb-4">
     The mid-90s through early 2000s continued that momentum. Under Coach Frank Dickson, the Lions built a reputation for postseason grit, culminating in a 1998 SCISA AA State Championship. That success was followed by another title in 2004 under Coach Michael Bennett, further solidifying the Lions as a consistent contender. During this stretch, the team became known for its strong home-court presence, quick defense, and tournament resilience.
   </p>
