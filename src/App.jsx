@@ -131,7 +131,7 @@ useEffect(() => {
               {/* Expand Years smoothly */}
               <div
                 className={`ml-6 overflow-hidden transition-all duration-500 ${
-                  expandedDecades[decade] ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
+                  expandedDecades[decade] ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
                 }`}
               >
                 {yearsByDecade[decade].map((year) => (
