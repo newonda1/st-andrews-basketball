@@ -75,90 +75,94 @@ useEffect(() => {
   <div className="flex justify-center items-center p-4 border-b">
     <h2 className="text-xl font-bold">Menu</h2>
   </div>
-<nav className="flex flex-col p-4 space-y-2 text-lg font-medium">
-  {/* Full Year-by-Year Results */}
-  <a
-    href="/yearly-results"
-    className="p-3 hover:bg-gray-200 rounded-md text-center"
-  >
-    Full Year-by-Year Results
-  </a>
-
-  {/* Individual Season Results with Expandable Decades */}
-  <div className="border-t pt-4">
-    <button
-      onClick={() => setSeasonOpen(!seasonOpen)}
-      className="flex items-center justify-between w-full p-3 hover:bg-gray-200 rounded-md"
+  <nav className="flex flex-col p-4 space-y-2 text-lg font-medium">
+    {/* Full Year-by-Year Results */}
+    <a
+      href="/yearly-results"
+      className="p-3 hover:bg-gray-200 rounded-md text-center"
     >
-      <span>Individual Season Results</span>
-<span
-  className={`ml-2 inline-block transform transition-transform duration-300 ${
-    seasonOpen ? "rotate-180" : "rotate-0"
-  }`}
->
-  ▼
-</span>
-    </button>
+      Full Year-by-Year Results
+    </a>
 
-    {/* Decades Expand */}
-    {seasonOpen && (
-      <div
-  className={`ml-4 overflow-hidden transition-all duration-500 ${
-    seasonOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-  }`}
->
-  {["1970s", "1980s", "1990s", "2000s", "2010s", "2020s"].map((decade) => (
-    <div key={decade}>
+    {/* Individual Season Results with Expandable Decades */}
+    <div className="border-t pt-4">
       <button
-        onClick={() =>
-          setExpandedDecades((prev) => ({
-            ...prev,
-            [decade]: !prev[decade],
-          }))
-        }
-        className="flex items-center justify-between w-full p-2 hover:bg-gray-100"
+        onClick={() => setSeasonOpen(!seasonOpen)}
+        className="flex items-center justify-between w-full p-3 hover:bg-gray-200 rounded-md"
       >
-        <span>{decade}</span>
+        <span>Individual Season Results</span>
         <span
           className={`ml-2 inline-block transform transition-transform duration-300 ${
-            expandedDecades[decade] ? "rotate-180" : "rotate-0"
+            seasonOpen ? "rotate-180" : "rotate-0"
           }`}
         >
-          ▶
+          ▼
         </span>
       </button>
 
-      {/* Expand Years smoothly */}
-      <div
-        className={`ml-6 overflow-hidden transition-all duration-500 ${
-          expandedDecades[decade] ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
-        }`}
-      >
-        {yearsByDecade[decade].map((year) => (
-          <Link
-            key={year}
-            to={`/season/${year}`}
-            className="block px-2 py-1 text-sm hover:bg-gray-200"
-          >
-            {year}
-          </Link>
-        ))}
-      </div>
-    </div>
-  ))}
-  </div>
-  {/* Legacy Players section */}
-  <div className="border-t pt-4">
-    <a
-      href="/legacy-players"
-      className="p-3 hover:bg-gray-200 rounded-md text-center"
-    >
-      Legacy Players
-    </a>
-  </div>
-</nav>
+      {/* Decades Expand */}
+      {seasonOpen && (
+        <div
+          className={`ml-4 overflow-hidden transition-all duration-500 ${
+            seasonOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
+          {["1970s", "1980s", "1990s", "2000s", "2010s", "2020s"].map((decade) => (
+            <div key={decade}>
+              <button
+                onClick={() =>
+                  setExpandedDecades((prev) => ({
+                    ...prev,
+                    [decade]: !prev[decade],
+                  }))
+                }
+                className="flex items-center justify-between w-full p-2 hover:bg-gray-100"
+              >
+                <span>{decade}</span>
+                <span
+                  className={`ml-2 inline-block transform transition-transform duration-300 ${
+                    expandedDecades[decade] ? "rotate-180" : "rotate-0"
+                  }`}
+                >
+                  ▶
+                </span>
+              </button>
 
+              {/* Expand Years smoothly */}
+              <div
+                className={`ml-6 overflow-hidden transition-all duration-500 ${
+                  expandedDecades[decade] ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
+                }`}
+              >
+                {yearsByDecade[decade].map((year) => (
+                  <Link
+                    key={year}
+                    to={`/season/${year}`}
+                    className="block px-2 py-1 text-sm hover:bg-gray-200"
+                  >
+                    {year}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+
+    {/* Legacy Players section */}
+    <div className="border-t pt-4">
+      <a
+        href="/legacy-players"
+        className="p-3 hover:bg-gray-200 rounded-md text-center"
+      >
+        Legacy Players
+      </a>
+    </div>
+
+  </nav>
 </div>
+
       <img src="/logo.png" alt="St. Andrew's Logo" className="h-20 mx-auto mb-4" />
       <h1 className="text-3xl font-bold">
         Celebrating the Legacy of St. Andrew&apos;s Basketball
