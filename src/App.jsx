@@ -7,6 +7,17 @@ function App() {
   const [players, setPlayers] = useState([]);
   const [menuOpen, setMenuOpen] = useState(false);
   const sidebarRef = useRef(null);
+  const [seasonOpen, setSeasonOpen] = useState(false);
+  const [expandedDecades, setExpandedDecades] = useState({});
+  const yearsByDecade = {
+    "1970s": ["1978-79", "1979-80"],
+    "1980s": ["1980-81", "1981-82", "1982-83", "1983-84", "1984-85", "1985-86", "1986-87", "1987-88", "1988-89", "1989-90"],
+    "1990s": ["1990-91", "1991-92", "1992-93", "1993-94", "1994-95", "1995-96", "1996-97", "1997-98", "1998-99"],
+    "2000s": ["1999-00", "2000-01", "2001-02", "2002-03", "2003-04", "2004-05", "2005-06", "2006-07", "2007-08", "2008-09"],
+    "2010s": ["2009-10", "2010-11", "2011-12", "2012-13", "2013-14", "2014-15", "2015-16", "2016-17", "2017-18", "2018-19"],
+    "2020s": ["2019-20", "2020-21", "2021-22", "2022-23", "2023-24", "2024-25"],
+  };
+
 
   useEffect(() => {
     fetch("/data/games.json")
@@ -64,11 +75,86 @@ useEffect(() => {
   <div className="flex justify-center items-center p-4 border-b">
     <h2 className="text-xl font-bold">Menu</h2>
   </div>
-  <nav className="flex flex-col">
-    <Link to="/seasons" className="p-4 hover:bg-gray-100 border-b">Full Season Results</Link>
-    <Link to="/season/2024" className="p-4 hover:bg-gray-100 border-b">Individual Season Results</Link>
-    <Link to="/legacy" className="p-4 hover:bg-gray-100 border-b">Legacy Players</Link>
-  </nav> 
+<nav className="flex flex-col p-4 space-y-2 text-lg font-medium">
+  {/* Full Year-by-Year Results */}
+  <a
+    href="/yearly-results"
+    className="p-3 hover:bg-gray-200 rounded-md text-center"
+  >
+    Full Year-by-Year Results
+  </a>
+
+  {/* Individual Season Results with Expandable Decades */}
+  <div className="border-t pt-4">
+    <button
+      onClick={() => setSeasonOpen(!seasonOpen)}
+      className="flex items-center justify-between w-full p-3 hover:bg-gray-200 rounded-md"
+    >
+      <span>Individual Season Results</span>
+      <span
+        className={`transform transition-transform ${
+          seasonOpen ? "rotate-90" : ""
+        }`}
+      >
+        ▶
+      </span>
+    </button>
+
+    {/* Decades Expand */}
+    {seasonOpen && (
+      <div className="ml-4 space-y-2">
+        {["1970s", "1980s", "1990s", "2000s", "2010s", "2020s"].map((decade) => (
+          <div key={decade}>
+            <button
+              onClick={() =>
+                setExpandedDecades((prev) => ({
+                  ...prev,
+                  [decade]: !prev[decade],
+                }))
+              }
+              className="flex items-center justify-between w-full p-2 hover:bg-gray-100 rounded-md"
+            >
+              <span>{decade}</span>
+              <span
+                className={`transform transition-transform ${
+                  expandedDecades[decade] ? "rotate-90" : ""
+                }`}
+              >
+                ▶
+              </span>
+            </button>
+
+            {/* Years Expand */}
+            {expandedDecades[decade] && (
+              <div className="ml-6 space-y-1">
+                {yearsByDecade[decade].map((year) => (
+                  <a
+                    key={year}
+                    href={`/season/${year}`}
+                    className="block p-2 hover:bg-gray-100 rounded-md text-sm"
+                  >
+                    {year}
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    )}
+  </div>
+
+  {/* Legacy Players */}
+  <div className="border-t pt-4">
+    <a
+      href="/legacy-players"
+      className="p-3 hover:bg-gray-200 rounded-md text-center"
+    >
+      Legacy Players
+    </a>
+  </div>
+</nav>
+
 </div>
       <img src="/logo.png" alt="St. Andrew's Logo" className="h-20 mx-auto mb-4" />
       <h1 className="text-3xl font-bold">
