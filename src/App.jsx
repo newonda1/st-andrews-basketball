@@ -148,7 +148,6 @@ useEffect(() => {
   ))}
 </div>
 
-  {(
   <>
     {/* Legacy Players section */}
   <div className="border-t pt-4">
@@ -159,7 +158,6 @@ useEffect(() => {
       Legacy Players
     </a>
   </div>
-)}
 </nav>
 
 </div>
