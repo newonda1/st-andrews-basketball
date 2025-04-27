@@ -66,15 +66,9 @@ useEffect(() => {
     menuOpen ? "translate-x-0" : "translate-x-full"
   } transition-transform duration-300 ease-in-out z-40 md:w-80`}
 >
-  <div className="flex justify-between items-center p-4 border-b">
-    <h2 className="text-xl font-bold">Menu</h2>
-    <button
-      className="text-gray-600 hover:text-black text-3xl leading-none"
-      onClick={() => setMenuOpen(false)}
-    >
-      &times;
-    </button>
-  </div>
+  <div className="flex justify-center items-center p-4 border-b">
+  <h2 className="text-xl font-bold">Menu</h2>
+</div>
   <nav className="flex flex-col p-6 space-y-6 text-lg font-medium">
     <a href="/season/2024" className="text-blue-600 hover:text-blue-800 underline">
       Individual Season Results
