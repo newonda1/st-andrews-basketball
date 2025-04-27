@@ -36,7 +36,7 @@ function App() {
       </h1>
     </header>
       <section className="mb-12">
- 
+  <div className="bg-gray-100 rounded-xl p-8 shadow-md">
 <p className="text-lg leading-relaxed mb-4 text-justify">
     The history of St. Andrew’s boys basketball is one of resilience, transformation, and championship legacy. Over nearly five decades, the program has evolved from its early foundational years into a powerhouse within Georgia's independent school athletics.
 </p>
@@ -82,6 +82,7 @@ function App() {
   <p className="text-lg leading-relaxed">
     Across 639 total wins, 66 tournament victories, and 62 playoff wins, the story of St. Andrew’s basketball is one of perseverance and pride. It’s a story of student-athletes and coaches who committed themselves to excellence on and off the court, carrying the banner of the Lions through triumphs and trials alike. As new seasons unfold, they add chapters to this proud legacy—one game at a time.
   </p>
+    </div>
 </section>
 
     <section className="text-center">
@@ -92,7 +93,6 @@ function App() {
 >
   View 2024–2025 Season
 </Link>
-
     </section>
 
   </div>
