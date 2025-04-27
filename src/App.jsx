@@ -69,10 +69,29 @@ useEffect(() => {
   <div className="flex justify-center items-center p-4 border-b">
   <h2 className="text-xl font-bold">Menu</h2>
 </div>
-  <nav className="flex flex-col p-6 space-y-6 text-lg font-medium">
-    <a href="/season/2024" className="text-blue-600 hover:text-blue-800 underline">
-      Individual Season Results
-    </a>
+<div className="flex flex-col mt-4">
+  <Link
+    to="/season/2024"
+    className="block px-6 py-4 hover:bg-gray-200 border-t text-lg font-medium text-gray-800"
+    onClick={() => setMenuOpen(false)}
+  >
+    Individual Season Results
+  </Link>
+  <Link
+    to="/legacy-players"
+    className="block px-6 py-4 hover:bg-gray-200 border-t text-lg font-medium text-gray-800"
+    onClick={() => setMenuOpen(false)}
+  >
+    Legacy Players
+  </Link>
+  <Link
+    to="/season-archives"
+    className="block px-6 py-4 hover:bg-gray-200 border-t border-b text-lg font-medium text-gray-800"
+    onClick={() => setMenuOpen(false)}
+  >
+    Season Archives
+  </Link>
+</div>
     {/* Later: Add more links here */}
   </nav>
 </div>
