@@ -126,7 +126,7 @@ useEffect(() => {
 
             {/* Years Expand */}
             {expandedDecades[decade] && (
-              <div className="ml-6 space-y-1">
+              <div className={`ml-6 space-y-1 transition-all duration-300 ease-in-out transform ${expandedDecades[decade] ? "opacity-100 max-h-screen" : "opacity-0 max-h-0 overflow-hidden"}`}>
                 {yearsByDecade[decade].map((year) => (
                   <a
                     key={year}
