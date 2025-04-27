@@ -102,47 +102,52 @@ useEffect(() => {
 
     {/* Decades Expand */}
     {seasonOpen && (
-      <div className="ml-4 space-y-2">
-        {["1970s", "1980s", "1990s", "2000s", "2010s", "2020s"].map((decade) => (
-          <div key={decade}>
-            <button
-              onClick={() =>
-                setExpandedDecades((prev) => ({
-                  ...prev,
-                  [decade]: !prev[decade],
-                }))
-              }
-              className="flex items-center justify-between w-full p-2 hover:bg-gray-100 rounded-md"
-            >
-              <span>{decade}</span>
-              <span
-  className={`ml-2 inline-block transform transition-transform duration-300 ${
-    expandedDecades[decade] ? "rotate-180" : "rotate-0"
+      <div
+  className={`ml-4 overflow-hidden transition-all duration-500 ${
+    seasonOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
   }`}
 >
-  ▼
-</span>
-            </button>
+  {["1970s", "1980s", "1990s", "2000s", "2010s", "2020s"].map((decade) => (
+    <div key={decade}>
+      <button
+        onClick={() =>
+          setExpandedDecades((prev) => ({
+            ...prev,
+            [decade]: !prev[decade],
+          }))
+        }
+        className="flex items-center justify-between w-full p-2 hover:bg-gray-100"
+      >
+        <span>{decade}</span>
+        <span
+          className={`ml-2 inline-block transform transition-transform duration-300 ${
+            expandedDecades[decade] ? "rotate-180" : "rotate-0"
+          }`}
+        >
+          ▶
+        </span>
+      </button>
 
-            {/* Years Expand */}
-            {expandedDecades[decade] && (
-              <div className={`ml-6 space-y-1 transition-all duration-300 ease-in-out transform ${expandedDecades[decade] ? "opacity-100 max-h-screen" : "opacity-0 max-h-0 overflow-hidden"}`}>
-                {yearsByDecade[decade].map((year) => (
-                  <a
-                    key={year}
-                    href={`/season/${year}`}
-                    className="block p-2 hover:bg-gray-100 rounded-md text-sm"
-                  >
-                    {year}
-                  </a>
-                ))}
-              </div>
-            )}
-          </div>
+      {/* Expand Years smoothly */}
+      <div
+        className={`ml-6 overflow-hidden transition-all duration-500 ${
+          expandedDecades[decade] ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        {yearsByDecade[decade].map((year) => (
+          <Link
+            key={year}
+            to={`/season/${year}`}
+            className="block px-2 py-1 text-sm hover:bg-gray-200"
+          >
+            {year}
+          </Link>
         ))}
       </div>
-    )}
-  </div>
+    </div>
+  ))}
+</div>
+
 
   {/* Legacy Players */}
   <div className="border-t pt-4">
