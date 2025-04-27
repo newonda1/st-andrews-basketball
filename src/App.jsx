@@ -71,6 +71,13 @@ useEffect(() => {
 </div>
 <div className="flex flex-col mt-4">
   <Link
+    to="/season-archives"
+    className="block px-6 py-4 hover:bg-gray-200 border-t border-b text-lg font-medium text-gray-800"
+    onClick={() => setMenuOpen(false)}
+  >
+    Season Results
+  </Link>
+  <Link
     to="/season/2024"
     className="block px-6 py-4 hover:bg-gray-200 border-t text-lg font-medium text-gray-800"
     onClick={() => setMenuOpen(false)}
@@ -83,13 +90,6 @@ useEffect(() => {
     onClick={() => setMenuOpen(false)}
   >
     Legacy Players
-  </Link>
-  <Link
-    to="/season-archives"
-    className="block px-6 py-4 hover:bg-gray-200 border-t border-b text-lg font-medium text-gray-800"
-    onClick={() => setMenuOpen(false)}
-  >
-    Season Archives
   </Link>
 </div>
     {/* Later: Add more links here */}
