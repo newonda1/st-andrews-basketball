@@ -124,17 +124,6 @@ useEffect(() => {
   </p>
     </div>
 </section>
-
-    <section className="text-center">
-      <h2 className="text-2xl font-semibold mt-10 mb-4">Individual Season Results</h2>
-      <Link
-        to="/season/2024"
-        className="inline-block text-blue-600 hover:text-blue-800 underline text-lg font-medium"
->
-  View 2024–2025 Season
-</Link>
-    </section>
-
   </div>
 );
 }
