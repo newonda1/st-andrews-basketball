@@ -47,7 +47,7 @@ function App() {
     The 1992–1993 season marked a major milestone when Coach Paul Hill led the Lions to their first state championship in program history, capturing the GISA AA title. That breakthrough season set a new standard for the program and sparked a sense of belief that St. Andrew’s could compete at the highest levels.
   </p>
   <p className="text-lg leading-relaxed mb-4">
-    The mid-90s through early 2000s continued that momentum. Under Coach Frank Dickson, the Lions built a reputation for postseason grit, culminating in a 1998 SCISA AA State Championship. That success was followed by another title in 2004 under Coach Michael Bennett, further solidifying the Lions as a consistent contender. During this stretch, the team became known for its strong home-court presence, disciplined defense, and tournament resilience.
+    The mid-90s through early 2000s continued that momentum. Under Coach Frank Dickson, the Lions built a reputation for postseason grit, culminating in a 1998 SCISA AA State Championship. That success was followed by another title in 2004 under Coach Michael Bennett, further solidifying the Lions as a consistent contender. During this stretch, the team became known for its strong home-court presence, quick defense, and tournament resilience.
   </p>
   <p className="text-lg leading-relaxed mb-4">
     A transitional period followed in the late 2000s and early 2010s under Coach Joe Thoni, who brought stability and steady leadership. While state titles remained elusive during this stretch, the Lions remained a competitive presence in SCISA and continued to develop the foundation of a strong, enduring program.
