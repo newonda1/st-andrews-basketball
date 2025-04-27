@@ -5,6 +5,7 @@ function App() {
   const [games, setGames] = useState([]);
   const [playerStats, setPlayerStats] = useState([]);
   const [players, setPlayers] = useState([]);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     fetch("/data/games.json")
@@ -30,6 +31,33 @@ function App() {
   return (
   <div className="p-6 max-w-5xl mx-auto space-y-10">
     <header className="text-center">
+      <button
+  className="fixed top-6 right-6 bg-blue-600 text-white px-4 py-2 rounded-md shadow-md hover:bg-blue-700 z-50"
+  onClick={() => setMenuOpen(true)}
+>
+  Menu
+</button>
+      <div
+  className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform ${
+    menuOpen ? "translate-x-0" : "translate-x-full"
+  } transition-transform duration-300 ease-in-out z-40`}
+>
+  <div className="flex justify-between items-center p-4 border-b">
+    <h2 className="text-xl font-bold">Table of Contents</h2>
+    <button
+      className="text-gray-600 hover:text-black text-2xl"
+      onClick={() => setMenuOpen(false)}
+    >
+      &times;
+    </button>
+  </div>
+  <nav className="flex flex-col p-4 space-y-4">
+    <a href="/season/2024" className="text-blue-600 hover:underline">
+      Individual Season Results
+    </a>
+    {/* Later: add more links here! */}
+  </nav>
+</div>
       <img src="/logo.png" alt="St. Andrew's Logo" className="h-20 mx-auto mb-4" />
       <h1 className="text-3xl font-bold">
         Celebrating the Legacy of St. Andrew&apos;s Basketball
