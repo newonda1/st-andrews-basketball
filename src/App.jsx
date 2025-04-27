@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 function App() {
   const [games, setGames] = useState([]);
   const [playerStats, setPlayerStats] = useState([]);
   const [players, setPlayers] = useState([]);
   const [menuOpen, setMenuOpen] = useState(false);
+  const sidebarRef = useRef(null);
 
   useEffect(() => {
     fetch("/data/games.json")
@@ -23,6 +24,24 @@ function App() {
       .then(setPlayers)
       .catch((err) => console.error("Failed to load players", err));
   }, []);
+
+useEffect(() => {
+  function handleClickOutside(event) {
+    if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+      setMenuOpen(false);
+    }
+  }
+
+  if (menuOpen) {
+    document.addEventListener("mousedown", handleClickOutside);
+  } else {
+    document.removeEventListener("mousedown", handleClickOutside);
+  }
+
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
+}, [menuOpen]);
 
   const playerMap = Object.fromEntries(
     players.map((p) => [p.PlayerID, `${p.FirstName} ${p.LastName}`])
@@ -42,6 +61,7 @@ function App() {
       />
     </button>
   <div
+    ref={sidebarRef}
   className={`fixed top-0 right-0 h-full w-64 bg-white shadow-2xl transform ${
     menuOpen ? "translate-x-0" : "translate-x-full"
   } transition-transform duration-300 ease-in-out z-40 md:w-80`}
