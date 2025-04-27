@@ -60,40 +60,15 @@ useEffect(() => {
         className="h-12 w-auto hover:scale-110 transition-transform duration-200 ease-in-out"
       />
     </button>
-  <div
-    ref={sidebarRef}
-  className={`fixed top-0 right-0 h-full w-64 bg-white shadow-2xl transform ${
-    menuOpen ? "translate-x-0" : "translate-x-full"
-  } transition-transform duration-300 ease-in-out z-40 md:w-80`}
->
+<div ref={sidebarRef} className={`fixed top-0 right-0 h-full w-64 bg-white shadow-2xl transform ${menuOpen ? "translate-x-0" : "translate-x-full"} transition-transform duration-300 ease-in-out z-40`}>
   <div className="flex justify-center items-center p-4 border-b">
-  <h2 className="text-xl font-bold">Menu</h2>
-</div>
-<div className="flex flex-col mt-4">
-  <Link
-    to="/season-archives"
-    className="block px-6 py-4 hover:bg-gray-200 border-t border-b text-lg font-medium text-gray-800"
-    onClick={() => setMenuOpen(false)}
-  >
-    Season Results
-  </Link>
-  <Link
-    to="/season/2024"
-    className="block px-6 py-4 hover:bg-gray-200 border-t text-lg font-medium text-gray-800"
-    onClick={() => setMenuOpen(false)}
-  >
-    Individual Season Results
-  </Link>
-  <Link
-    to="/legacy-players"
-    className="block px-6 py-4 hover:bg-gray-200 border-t text-lg font-medium text-gray-800"
-    onClick={() => setMenuOpen(false)}
-  >
-    Legacy Players
-  </Link>
-</div>
-    {/* Later: Add more links here */}
-  </nav>
+    <h2 className="text-xl font-bold">Menu</h2>
+  </div>
+  <nav className="flex flex-col">
+    <Link to="/seasons" className="p-4 hover:bg-gray-100 border-b">Full Season Results</Link>
+    <Link to="/season/2024" className="p-4 hover:bg-gray-100 border-b">Individual Season Results</Link>
+    <Link to="/legacy" className="p-4 hover:bg-gray-100 border-b">Legacy Players</Link>
+  </nav> 
 </div>
       <img src="/logo.png" alt="St. Andrew's Logo" className="h-20 mx-auto mb-4" />
       <h1 className="text-3xl font-bold">
