@@ -36,7 +36,7 @@ function App() {
       onClick={() => setMenuOpen(true)}
     >
       <img
-        src="/images/logo.png"
+        src="/images/button.png"
         alt="Menu"
         className="h-12 w-auto hover:scale-110 transition-transform duration-200 ease-in-out"
       />
