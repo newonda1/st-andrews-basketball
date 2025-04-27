@@ -68,7 +68,7 @@ function App() {
 <p className="text-lg leading-relaxed mb-4 text-justify">
     A transitional period followed in the late 2000s and early 2010s under Coach Joe Thoni, who brought stability and steady leadership. While state titles remained elusive during this stretch, the Lions remained a competitive presence in SCISA and continued to develop the foundation of a strong, enduring program.
   </p>
-         <div className="md:float-right md:ml-6 mb-6 text-center w-full md:w-80 animate-fade-in">
+         <div className="md:float-left md:ml-6 mb-6 text-center w-full md:w-80 animate-fade-in">
     <img
     src="/images/state_champions_2025.jpg"
     alt="2024-2025 State Championship Team"
