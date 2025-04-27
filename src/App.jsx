@@ -104,7 +104,7 @@ useEffect(() => {
       {seasonOpen && (
         <div
           className={`ml-4 overflow-hidden transition-all duration-500 ${
-            seasonOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+            seasonOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
           }`}
         >
           {["1970s", "1980s", "1990s", "2000s", "2010s", "2020s"].map((decade) => (
