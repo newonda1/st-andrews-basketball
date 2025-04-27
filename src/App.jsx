@@ -147,7 +147,7 @@ useEffect(() => {
     </div>
   ))}
 </div>
-
+<>
     {/* Legacy Players section */}
   <div className="border-t pt-4">
     <a
