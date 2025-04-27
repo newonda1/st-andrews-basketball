@@ -31,13 +31,17 @@ function App() {
   return (
   <div className="p-6 max-w-5xl mx-auto space-y-10">
     <header className="text-center">
-      <button
-  className="fixed top-6 right-6 bg-blue-600 text-white px-4 py-2 rounded-md shadow-md hover:bg-blue-700 z-50"
-  onClick={() => setMenuOpen(true)}
->
-  Menu
-</button>
-      <div
+    <button
+      className="fixed top-4 right-4 z-50"
+      onClick={() => setMenuOpen(true)}
+    >
+      <img
+        src="/images/logo.png"
+        alt="Menu"
+        className="h-12 w-auto hover:scale-110 transition-transform duration-200 ease-in-out"
+      />
+    </button>
+  <div
   className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform ${
     menuOpen ? "translate-x-0" : "translate-x-full"
   } transition-transform duration-300 ease-in-out z-40`}
