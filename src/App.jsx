@@ -130,10 +130,11 @@ useEffect(() => {
 
               {/* Expand Years smoothly */}
               <div
-                className={`ml-6 overflow-hidden transition-all duration-500 ${
+                className={`ml-6 overflow-hidden overflow-y-auto transition-all duration-500 ${
                   expandedDecades[decade] ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
-                }`}
+                } custom-scrollbar`}
               >
+
                 {yearsByDecade[decade].map((year) => (
                   <Link
                     key={year}
