@@ -91,13 +91,13 @@ useEffect(() => {
       className="flex items-center justify-between w-full p-3 hover:bg-gray-200 rounded-md"
     >
       <span>Individual Season Results</span>
-      <span
-        className={`transform transition-transform ${
-          seasonOpen ? "rotate-90" : ""
-        }`}
-      >
-        ▶
-      </span>
+<span
+  className={`ml-2 inline-block transform transition-transform duration-300 ${
+    seasonOpen ? "rotate-180" : "rotate-0"
+  }`}
+>
+  ▼
+</span>
     </button>
 
     {/* Decades Expand */}
@@ -116,12 +116,12 @@ useEffect(() => {
             >
               <span>{decade}</span>
               <span
-                className={`transform transition-transform ${
-                  expandedDecades[decade] ? "rotate-90" : ""
-                }`}
-              >
-                ▶
-              </span>
+  className={`ml-2 inline-block transform transition-transform duration-300 ${
+    expandedDecades[decade] ? "rotate-180" : "rotate-0"
+  }`}
+>
+  ▼
+</span>
             </button>
 
             {/* Years Expand */}
