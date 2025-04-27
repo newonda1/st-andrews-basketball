@@ -148,8 +148,7 @@ useEffect(() => {
   ))}
 </div>
 
-
-  {/* Legacy Players */}
+  // Legacy Players section
   <div className="border-t pt-4">
     <a
       href="/legacy-players"
