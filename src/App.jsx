@@ -76,7 +76,7 @@ useEffect(() => {
     <h2 className="text-xl font-bold">Menu</h2>
   </div>
   {/* Add a SCROLLABLE DIV here */}
-  <div className="flex-1 overflow-y-auto">
+  <div className="flex-1 overflow-y-auto overscroll-contain">
     <nav className="flex flex-col p-4 space-y-2 text-lg font-medium">
     {/* Full Year-by-Year Results */}
     <a
