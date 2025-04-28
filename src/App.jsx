@@ -165,6 +165,7 @@ useEffect(() => {
 
   </nav>
 </div>
+  </div>
 
       <img src="/logo.png" alt="St. Andrew's Logo" className="h-20 mx-auto mb-4" />
       <h1 className="text-3xl font-bold">
