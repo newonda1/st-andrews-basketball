@@ -75,7 +75,9 @@ useEffect(() => {
   <div className="flex justify-center items-center p-4 border-b">
     <h2 className="text-xl font-bold">Menu</h2>
   </div>
-  <nav className="flex flex-col p-4 space-y-2 text-lg font-medium">
+  {/* Add a SCROLLABLE DIV here */}
+  <div className="flex-1 overflow-y-auto">
+    <nav className="flex flex-col p-4 space-y-2 text-lg font-medium">
     {/* Full Year-by-Year Results */}
     <a
       href="/yearly-results"
