@@ -2,6 +2,10 @@ import React from 'react';
 
 function Home() {
   return (
+  <img src="/logo.png" alt="St. Andrew's Logo" className="h-20 mx-auto mb-4" />
+  <h1 className="text-3xl font-bold">
+    Celebrating the Legacy of St. Andrew&apos;s Basketball
+  </h1>
     <section className="mb-12">
   <div className="bg-gray-100 rounded-xl p-8 shadow-md">
 <p className="text-lg leading-relaxed mb-4 text-justify">
