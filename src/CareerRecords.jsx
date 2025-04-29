@@ -25,6 +25,12 @@ function CareerRecords() {
             Steals: 0,
             Blocks: 0,
             GamesPlayed: 0,
+            ThreePM: 0,
+            ThreePA: 0,
+            TwoPM: 0,
+            TwoPA: 0,
+            FTM: 0,
+            FTA: 0,
           };
         }
         playerTotals[playerId].Points += stat.Points || 0;
@@ -33,6 +39,12 @@ function CareerRecords() {
         playerTotals[playerId].Steals += stat.Steals || 0;
         playerTotals[playerId].Blocks += stat.Blocks || 0;
         playerTotals[playerId].GamesPlayed += 1;
+        playerTotals[playerId].ThreePM += stat.ThreePM || 0;
+        playerTotals[playerId].ThreePA += stat.ThreePA || 0;
+        playerTotals[playerId].TwoPM += stat.TwoPM || 0;
+        playerTotals[playerId].TwoPA += stat.TwoPA || 0;
+        playerTotals[playerId].FTM += stat.FTM || 0;
+        playerTotals[playerId].FTA += stat.FTA || 0;
       });
 
       const fullCareerStats = Object.values(playerTotals).map(player => {
@@ -83,6 +95,16 @@ function CareerRecords() {
             <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('Steals')}>Steals</th>
             <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('Blocks')}>Blocks</th>
             <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('GamesPlayed')}>Games Played</th>
+            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('3PM')}>3PM</th>
+            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('3PA')}>3PA</th>
+            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('3P%')}>3P%</th>
+            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('2PM')}>2PM</th>
+            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('2PA')}>2PA</th>
+            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('2P%')}>2P%</th>
+            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('FTM')}>FTM</th>
+            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('FTA')}>FTA</th>
+            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('FT%')}>FT%</th>
+            
           </tr>
         </thead>
         <tbody>
@@ -96,6 +118,22 @@ function CareerRecords() {
               <td className="px-4 py-2 text-center">{player.Steals}</td>
               <td className="px-4 py-2 text-center">{player.Blocks}</td>
               <td className="px-4 py-2 text-center">{player.GamesPlayed}</td>
+              <td className="px-4 py-2 text-center">{player.ThreePM}</td>
+              <td className="px-4 py-2 text-center">{player.ThreePA}</td>
+              <td className="px-4 py-2 text-center">
+                {player.ThreePA > 0 ? ((player.ThreePM / player.ThreePA) * 100).toFixed(1) + "%" : "—"}
+              </td>
+
+              <td className="px-4 py-2 text-center">{player.TwoPM}</td>
+              <td className="px-4 py-2 text-center">{player.TwoPA}</td>
+              <td className="px-4 py-2 text-center">
+                {player.TwoPA > 0 ? ((player.TwoPM / player.TwoPA) * 100).toFixed(1) + "%" : "—"}
+              </td>
+              <td className="px-4 py-2 text-center">{player.FTM}</td>
+              <td className="px-4 py-2 text-center">{player.FTA}</td>
+              <td className="px-4 py-2 text-center">
+                {player.FTA > 0 ? ((player.FTM / player.FTA) * 100).toFixed(1) + "%" : "—"}
+              </td>
             </tr>
           ))}
         </tbody>
