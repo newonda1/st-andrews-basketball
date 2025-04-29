@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ChrisHaslamLegacy() {
+export default function ChrisHaslam() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-10 space-y-10">
       <h1 className="text-4xl font-bold text-center">Chris Haslam – Class of 1993</h1>
