@@ -210,11 +210,11 @@ useEffect(() => {
   </nav>
 </div>
   </div>
+    <div className="flex items-center justify-center gap-4 mb-4">
+      <img src="/logo.png" alt="St. Andrew's Logo" className="h-16" />
+      <h1 className="text-2xl font-bold text-blue-800">Boys' Basketball</h1>
+    </div>
 
-      <img src="/logo.png" alt="St. Andrew's Logo" className="h-20 mx-auto mb-4" />
-      <h1 className="text-3xl font-bold">
-        Celebrating the Legacy of St. Andrew&apos;s Basketball
-      </h1>
     </header>
       <Routes>
         <Route path="/" element={<Home />} />
