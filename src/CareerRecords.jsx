@@ -9,6 +9,8 @@ function CareerRecords() {
       const playersRes = await fetch("/data/players.json");
       const statsData = await statsRes.json();
       const playersData = await playersRes.json();
+      console.log("Stats Data:", statsData);
+      console.log("Players Data:", playersData);
 
       // Create a map to accumulate career totals
       const playerTotals = {};
