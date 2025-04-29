@@ -182,7 +182,7 @@ function App() {
     onClick={() => setRecordsOpen(!recordsOpen)}
     className="flex items-center justify-between w-full p-3 hover:bg-gray-200 rounded-md"
   >
-    <span>All-Time Records</span>
+    <span>Individual Player Stats</span>
     <span
       className={`ml-2 inline-block transform transition-transform duration-300 ${
         recordsOpen ? "rotate-180" : "rotate-0"
@@ -198,7 +198,7 @@ function App() {
         to="/records/career"
         className="block px-2 py-1 text-sm hover:bg-gray-200"
       >
-        Career Records
+        Full Career Stats
       </Link>
       <Link
         to="/records/season"
