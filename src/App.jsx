@@ -1,7 +1,7 @@
 import { Link, Routes, Route } from "react-router-dom";
 import React, { useEffect, useState, useRef } from "react";
 import Home from './Home';
-import CareerRecords from './CareerRecords';
+import FullCareerStats from './records/FullCareerStats';
 import SeasonRecords from './SeasonRecords';
 import SingleGameRecords from './SingleGameRecords';
 import ChrisHaslam from './legacy/ChrisHaslam';
