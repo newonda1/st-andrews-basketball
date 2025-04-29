@@ -58,6 +58,7 @@ function Home() {
           </p>
         </div>
       </section>
+    </>
   );
 }
 
