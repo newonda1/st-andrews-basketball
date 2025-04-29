@@ -86,7 +86,7 @@ function CareerRecords() {
 
   return (
     <div className="p-6">
-      <h1 className="text-2xl font-bold mb-6">Career Records</h1>
+      <h1 className="text-2xl font-bold mb-6">Full Career Stats</h1>
         <div className="overflow-x-auto">
           <table className="w-full text-sm md:text-base table-auto whitespace-nowrap">
             <thead>
