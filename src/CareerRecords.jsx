@@ -55,6 +55,8 @@ function CareerRecords() {
     fetchData();
   }, []);
 
+  console.log("Career Stats at Render:", careerStats);
+  
   return (
     <div className="p-6">
       <h1 className="text-2xl font-bold mb-6">Career Records</h1>
