@@ -4,7 +4,6 @@ function Home() {
   return (
     <>
       <header className="text-center mb-6">
-        <img src="/logo.png" alt="St. Andrew's Logo" className="h-20 mx-auto mb-4" />
         <h1 className="text-3xl font-bold">
           Celebrating the Legacy of St. Andrew&apos;s Basketball
         </h1>
