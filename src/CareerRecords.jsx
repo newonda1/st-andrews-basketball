@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 
 function CareerRecords() {
   const [careerStats, setCareerStats] = useState([]);
+  const [sortField, setSortField] = useState('Points'); // Default sort
+  const [sortDirection, setSortDirection] = useState('desc'); // desc = highest first
 
   useEffect(() => {
     async function fetchData() {
@@ -9,10 +11,7 @@ function CareerRecords() {
       const playersRes = await fetch("/data/players.json");
       const statsData = await statsRes.json();
       const playersData = await playersRes.json();
-      console.log("Stats Data:", statsData);
-      console.log("Players Data:", playersData);
 
-      // Create a map to accumulate career totals
       const playerTotals = {};
 
       statsData.forEach(stat => {
@@ -36,7 +35,6 @@ function CareerRecords() {
         playerTotals[playerId].GamesPlayed += 1;
       });
 
-      // Merge player names
       const fullCareerStats = Object.values(playerTotals).map(player => {
         const playerInfo = playersData.find(p => p.PlayerID === player.PlayerID);
         return {
@@ -46,17 +44,31 @@ function CareerRecords() {
         };
       });
 
-      // Sort by total points scored
-      fullCareerStats.sort((a, b) => b.Points - a.Points);
-
       setCareerStats(fullCareerStats);
     }
 
     fetchData();
   }, []);
 
-  console.log("Career Stats at Render:", careerStats);
-  
+  // Sorting function
+  const sortedStats = [...careerStats].sort((a, b) => {
+    if (sortDirection === 'asc') {
+      return (a[sortField] ?? 0) - (b[sortField] ?? 0);
+    } else {
+      return (b[sortField] ?? 0) - (a[sortField] ?? 0);
+    }
+  });
+
+  const handleSort = (field) => {
+    if (field === sortField) {
+      // If clicking the same field, toggle ascending/descending
+      setSortDirection(sortDirection === 'asc' ? 'desc' : 'asc');
+    } else {
+      setSortField(field);
+      setSortDirection('desc'); // New field = start with descending
+    }
+  };
+
   return (
     <div className="p-6">
       <h1 className="text-2xl font-bold mb-6">Career Records</h1>
@@ -64,17 +76,17 @@ function CareerRecords() {
         <thead>
           <tr>
             <th className="px-4 py-2 text-left">Player</th>
-            <th className="px-4 py-2">Grad Year</th>
-            <th className="px-4 py-2">Points</th>
-            <th className="px-4 py-2">Rebounds</th>
-            <th className="px-4 py-2">Assists</th>
-            <th className="px-4 py-2">Steals</th>
-            <th className="px-4 py-2">Blocks</th>
-            <th className="px-4 py-2">Games Played</th>
+            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('GradYear')}>Grad Year</th>
+            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('Points')}>Points</th>
+            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('Rebounds')}>Rebounds</th>
+            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('Assists')}>Assists</th>
+            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('Steals')}>Steals</th>
+            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('Blocks')}>Blocks</th>
+            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('GamesPlayed')}>Games Played</th>
           </tr>
         </thead>
         <tbody>
-          {careerStats.map((player, index) => (
+          {sortedStats.map((player, index) => (
             <tr key={index} className="border-t">
               <td className="px-4 py-2">{player.Name}</td>
               <td className="px-4 py-2 text-center">{player.GradYear}</td>
