@@ -53,6 +53,9 @@ function CareerRecords() {
           ...player,
           Name: playerInfo ? `${playerInfo.FirstName} ${playerInfo.LastName}` : "Unknown Player",
           GradYear: playerInfo ? playerInfo.GradYear : "Unknown",
+          ThreePPercentage: player.ThreePA > 0 ? (player.ThreePM / player.ThreePA) * 100 : 0,
+          TwoPPercentage: player.TwoPA > 0 ? (player.TwoPM / player.TwoPA) * 100 : 0,
+          FTPercentage: player.FTA > 0 ? (player.FTM / player.FTA) * 100 : 0,
         };
       });
 
@@ -97,13 +100,13 @@ function CareerRecords() {
             <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('GamesPlayed')}>Games Played</th>
             <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('3PM')}>3PM</th>
             <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('3PA')}>3PA</th>
-            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('ThreePM')}>3P%</th>
+            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('ThreePPercentage')}>3P%</th>
             <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('2PM')}>2PM</th>
             <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('2PA')}>2PA</th>
-            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('TwoPM')}>2P%</th>
+            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('TwoPPercentage')}>2P%</th>
             <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('FTM')}>FTM</th>
             <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('FTA')}>FTA</th>
-            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('FTM')}>FT%</th>
+            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('FTPercentage')}>FT%</th>
           </tr>
         </thead>
         <tbody>
