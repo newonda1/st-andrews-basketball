@@ -42,90 +42,89 @@ function App() {
       .catch((err) => console.error("Failed to load players", err));
   }, []);
 
-useEffect(() => {
-  function handleClickOutside(event) {
-    if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
-      setMenuOpen(false);
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+        setMenuOpen(false);
+      }
     }
-  }
 
-  if (menuOpen) {
-    document.addEventListener("mousedown", handleClickOutside);
-  } else {
-    document.removeEventListener("mousedown", handleClickOutside);
-  }
+    if (menuOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
 
-  return () => {
-    document.removeEventListener("mousedown", handleClickOutside);
-  };
-}, [menuOpen]);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [menuOpen]);
 
   const playerMap = Object.fromEntries(
     players.map((p) => [p.PlayerID, `${p.FirstName} ${p.LastName}`])
   );
 
   return (
-  <div className="p-6 max-w-5xl mx-auto space-y-10">
-    <header className="text-center">
-    <button
-      className="fixed top-4 right-4 z-50"
-      onClick={() => setMenuOpen(true)}
-    >
-      <img
-        src="/images/button.png"
-        alt="Menu"
-        className="h-12 w-auto hover:scale-110 transition-transform duration-200 ease-in-out"
-      />
-    </button>
-<div ref={sidebarRef} className={`fixed top-0 right-0 h-full w-64 bg-white shadow-2xl flex flex-col transform ${menuOpen ? "translate-x-0" : "translate-x-full"} transition-transform duration-300 ease-in-out z-40`}>
-  <div className="flex justify-center items-center p-4 border-b">
-    <h2 className="text-xl font-bold">Menu</h2>
-  </div>
-  {/* Add a SCROLLABLE DIV here */}
-  <div className="flex-1 overflow-y-auto overscroll-contain scroll-smooth">
-    <nav className="flex flex-col p-4 space-y-2 text-lg font-medium">
-    {/* Full Year-by-Year Results */}
-    <a
-      href="/yearly-results"
-      className="p-3 hover:bg-gray-200 rounded-md text-center"
-    >
-      Full Year-by-Year Results
-    </a>
-
-    {/* Individual Season Results with Expandable Decades */}
-    <div className="border-t pt-4">
-      <button
-        onClick={() => setSeasonOpen(!seasonOpen)}
-        className="flex items-center justify-between w-full p-3 hover:bg-gray-200 rounded-md"
-      >
-        <span>Individual Season Results</span>
-        <span
-          className={`ml-2 inline-block transform transition-transform duration-300 ${
-            seasonOpen ? "rotate-180" : "rotate-0"
-          }`}
-        >
-          ▼
-        </span>
-      </button>
-
-      {/* Decades Expand */}
-      {seasonOpen && (
-        <div
-          className={`ml-4 overflow-hidden transition-all duration-500 ${
-            seasonOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
-          }`}
-        >
-          {["1970s", "1980s", "1990s", "2000s", "2010s", "2020s"].map((decade) => (
-            <div key={decade}>
-              <button
-                onClick={() =>
-                  setExpandedDecades((prev) => ({
-                    ...prev,
-                    [decade]: !prev[decade],
-                  }))
-                }
-                className="flex items-center justify-between w-full p-2 hover:bg-gray-100"
+    <div className="p-6 max-w-5xl mx-auto space-y-10">
+      <header className="text-center">
+        <button
+          className="fixed top-4 right-4 z-50"
+          onClick={() => setMenuOpen(true)}
+          >
+          <img
+            src="/images/button.png"
+            alt="Menu"
+            className="h-12 w-auto hover:scale-110 transition-transform duration-200 ease-in-out"
+          />
+        </button>
+      <div ref={sidebarRef} className={`fixed top-0 right-0 h-full w-64 bg-white shadow-2xl flex flex-col transform ${menuOpen ? "translate-x-0" : "translate-x-full"} transition-transform duration-300 ease-in-out z-40`}>
+        <div className="flex justify-center items-center p-4 border-b">
+          <h2 className="text-xl font-bold">Menu</h2>
+        </div>
+        <div className="flex-1 overflow-y-auto overscroll-contain scroll-smooth">
+          <nav className="flex flex-col p-4 space-y-2 text-lg font-medium">
+            {/* Full Year-by-Year Results */}
+            <a
+              href="/yearly-results"
+              className="p-3 hover:bg-gray-200 rounded-md text-center"
               >
+              Full Year-by-Year Results
+            </a>
+
+            {/* Individual Season Results with Expandable Decades */}
+            <div className="border-t pt-4">
+              <button
+                onClick={() => setSeasonOpen(!seasonOpen)}
+                className="flex items-center justify-between w-full p-3 hover:bg-gray-200 rounded-md"
+                >
+                <span>Individual Season Results</span>
+                <span
+                   className={`ml-2 inline-block transform transition-transform duration-300 ${
+                   seasonOpen ? "rotate-180" : "rotate-0"
+                   }`}
+                   >
+                   ▼
+                </span>
+              </button>
+
+            {/* Decades Expand */}
+            {seasonOpen && (
+              <div
+                className={`ml-4 overflow-hidden transition-all duration-500 ${
+                seasonOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+                }`}
+                >
+                {["1970s", "1980s", "1990s", "2000s", "2010s", "2020s"].map((decade) => (
+                  <div key={decade}>
+                    <button
+                      onClick={() =>
+                      setExpandedDecades((prev) => ({
+                      ...prev,
+                      [decade]: !prev[decade],
+                       }))
+                      }
+                      className="flex items-center justify-between w-full p-2 hover:bg-gray-100"
+                      >
                 <span>{decade}</span>
                 <span
                   className={`ml-2 inline-block transform transition-transform duration-300 ${
