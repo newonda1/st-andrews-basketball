@@ -23,7 +23,7 @@ function App() {
     "2010s": ["2010-11", "2011-12", "2012-13", "2013-14", "2014-15", "2015-16", "2016-17", "2017-18", "2018-19", "2019-20"],
     "2020s": ["2020-21", "2021-22", "2022-23", "2023-24", "2024-25"],
   };
-
+  const [legacyOpen, setLegacyOpen] = useState(false);
 
   useEffect(() => {
     fetch("/data/games.json")
@@ -161,13 +161,32 @@ useEffect(() => {
 
     {/* Legacy Players section */}
     <div className="border-t pt-4">
-      <a
-        href="/legacy-players"
-        className="p-3 hover:bg-gray-200 rounded-md text-center"
+  <button
+    onClick={() => setLegacyOpen(!legacyOpen)}
+    className="flex items-center justify-between w-full p-3 hover:bg-gray-200 rounded-md"
+  >
+    <span>Legacy Players</span>
+    <span
+      className={`ml-2 inline-block transform transition-transform duration-300 ${
+        legacyOpen ? "rotate-180" : "rotate-0"
+      }`}
+    >
+      ▼
+    </span>
+  </button>
+
+  {legacyOpen && (
+    <div className="ml-4">
+      <Link
+        to="/legacy/chris-haslam"
+        className="block px-2 py-1 text-sm hover:bg-gray-200"
       >
-        Legacy Players
-      </a>
+        Chris Haslam
+      </Link>
     </div>
+  )}
+</div>
+
     {/* All-Time Records Section */}
 <div className="border-t pt-4">
   <button
