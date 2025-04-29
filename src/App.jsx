@@ -30,7 +30,7 @@ function App() {
       .then(setGames)
       .catch((err) => console.error("Failed to load games", err));
 
-    fetch("/data/player_game_stats.json")
+    fetch("/data/playergamestats.json")
       .then((res) => res.json())
       .then(setPlayerStats)
       .catch((err) => console.error("Failed to load player stats", err));
