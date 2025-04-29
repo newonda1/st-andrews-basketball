@@ -91,22 +91,22 @@ function CareerRecords() {
         <thead>
           <tr>
             <th className="px-4 py-2 text-left">Player</th>
-            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('GradYear')}>Grad Year</th>
-            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('Points')}>Points</th>
-            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('Rebounds')}>Rebounds</th>
-            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('Assists')}>Assists</th>
-            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('Steals')}>Steals</th>
-            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('Blocks')}>Blocks</th>
-            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('GamesPlayed')}>Games Played</th>
-            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('ThreePM')}>3PM</th>
-            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('ThreePA')}>3PA</th>
-            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('ThreePPercentage')}>3P%</th>
-            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('TwoPM')}>2PM</th>
-            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('TwoPA')}>2PA</th>
-            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('TwoPPercentage')}>2P%</th>
-            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('FTM')}>FTM</th>
-            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('FTA')}>FTA</th>
-            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('FTPercentage')}>FT%</th>
+            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('GradYear')}>Grad Year{sortField === 'GradYear' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
+            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('Points')}>Points{sortField === 'Points' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
+            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('Rebounds')}>Rebounds{sortField === 'Rebounds' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
+            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('Assists')}>Assists{sortField === 'Assists' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
+            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('Steals')}>Steals{sortField === 'Steals' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
+            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('Blocks')}>Blocks{sortField === 'Blocks' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
+            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('GamesPlayed')}>Games Played{sortField === 'GamesPlayed' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
+            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('ThreePM')}>3PM{sortField === 'ThreePM' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
+            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('ThreePA')}>3PA{sortField === 'ThreePA' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
+            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('ThreePPercentage')}>3P%{sortField === 'ThreePPercentage' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
+            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('TwoPM')}>2PM{sortField === 'TwoPM' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
+            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('TwoPA')}>2PA{sortField === 'TwoPA' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
+            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('TwoPPercentage')}>2P%{sortField === 'TwoPPercentage' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
+            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('FTM')}>FTM{sortField === 'FTM' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
+            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('FTA')}>FTA{sortField === 'FTA' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
+            <th className="px-4 py-2 cursor-pointer" onClick={() => handleSort('FTPercentage')}>FT%{sortField === 'FTPercentage' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
           </tr>
         </thead>
         <tbody>
