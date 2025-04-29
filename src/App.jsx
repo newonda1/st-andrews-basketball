@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Routes, Route } from "react-router-dom";
 import React, { useEffect, useState, useRef } from "react";
 
 function App() {
@@ -212,6 +212,11 @@ useEffect(() => {
         Celebrating the Legacy of St. Andrew&apos;s Basketball
       </h1>
     </header>
+      <Routes>
+  <Route path="/records/career" element={<CareerRecords />} />
+  <Route path="/records/season" element={<SeasonRecords />} />
+  <Route path="/records/single-game" element={<SingleGameRecords />} />
+</Routes>
       <section className="mb-12">
   <div className="bg-gray-100 rounded-xl p-8 shadow-md">
 <p className="text-lg leading-relaxed mb-4 text-justify">
