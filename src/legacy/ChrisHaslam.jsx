@@ -32,8 +32,8 @@ export default function ChrisHaslam() {
           <ul className="list-disc list-inside">
             <li><strong>Season Points:</strong> 654</li>
             <li><strong>Season Rebounds:</strong> 345</li>
-            <li><strong>Double-Doubles:</strong> At least 12</li>
-            <li><strong>Triple-Doubles:</strong> At least 3</li>
+            <li><strong>Double-Doubles:</strong> 12</li>
+            <li><strong>Triple-Doubles:</strong> 3</li>
             <li><strong>Signature Game:</strong> 30 pts / 20 rebs / 14 blocks vs. Robert Toombs (Feb. 16, 1993)</li>
           </ul>
         </div>
