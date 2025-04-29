@@ -4,7 +4,7 @@ import Home from './Home';
 import CareerRecords from './CareerRecords';
 import SeasonRecords from './SeasonRecords';
 import SingleGameRecords from './SingleGameRecords';
-import ChrisHaslamLegacy from './legacy/ChrisHaslam';
+import ChrisHaslam from './legacy/ChrisHaslam';
 
 function App() {
   const [games, setGames] = useState([]);
