@@ -67,16 +67,6 @@ function App() {
   return (
     <div className="p-6 max-w-5xl mx-auto space-y-10">
       <header className="text-center">
-        <button
-          className="fixed top-4 right-4 z-50"
-          onClick={() => setMenuOpen(true)}
-          >
-          <img
-            src="/images/button.png"
-            alt="Menu"
-            className="h-12 w-auto hover:scale-110 transition-transform duration-200 ease-in-out"
-          />
-        </button>
       <div ref={sidebarRef} className={`fixed top-0 right-0 h-full w-64 bg-white shadow-2xl flex flex-col transform ${menuOpen ? "translate-x-0" : "translate-x-full"} transition-transform duration-300 ease-in-out z-40`}>
         <div className="flex justify-center items-center p-4 border-b">
           <h2 className="text-xl font-bold">Menu</h2>
@@ -229,9 +219,18 @@ function App() {
   </nav>
 </div>
   </div>
-    <div className="flex items-center justify-center gap-4 mb-4">
-      <img src="/logo.png" alt="St. Andrew's Logo" className="h-16" />
-      <h1 className="text-2xl font-bold text-blue-800">Boys' Basketball</h1>
+    <div className="flex items-center justify-between mb-4 px-4 h-20">
+      <div className="flex items-center gap-3">
+        <img src="/logo.png" alt="St. Andrew's Logo" className="h-12 w-auto" />
+        <h1 className="text-xl font-bold text-blue-800 whitespace-nowrap">Boys' Basketball</h1>
+      </div>
+      <button onClick={() => setMenuOpen(true)}>
+        <img
+          src="/images/button.png"
+          alt="Menu"
+          className="h-10 w-auto hover:scale-110 transition-transform duration-200 ease-in-out"
+        />
+      </button>
     </div>
 
     </header>
