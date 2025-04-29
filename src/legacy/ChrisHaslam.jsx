@@ -17,7 +17,7 @@ export default function ChrisHaslam() {
         </p>
       </div>
 
-      <section className="space-y-6 text-lg leading-relaxed">
+      <section className="space-y-6 text-lg leading-relaxed text-justify">
         <h2 className="text-2xl font-semibold">A One-Season Legend</h2>
         <p>
           Chris Haslam’s arrival at St. Andrew’s for his senior year in 1992 marked the beginning of
