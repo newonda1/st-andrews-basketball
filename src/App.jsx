@@ -241,6 +241,7 @@ useEffect(() => {
         <Route path="/records/career" element={<CareerRecords />} />
         <Route path="/records/season" element={<SeasonRecords />} />
         <Route path="/records/single-game" element={<SingleGameRecords />} />
+        <Route path="/legacy/ChrisHaslam" element={<ChrisHaslam />} />
       </Routes>
   </div>
 );
