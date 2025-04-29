@@ -178,7 +178,7 @@ useEffect(() => {
   {legacyOpen && (
     <div className="ml-4">
       <Link
-        to="/legacy/chris-haslam"
+        to="/legacy/ChrisHaslam"
         className="block px-2 py-1 text-sm hover:bg-gray-200"
       >
         Chris Haslam
