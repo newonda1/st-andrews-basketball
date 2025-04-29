@@ -1,5 +1,6 @@
 import { Link, Routes, Route } from "react-router-dom";
 import React, { useEffect, useState, useRef } from "react";
+import Home from './Home';
 
 function App() {
   const [games, setGames] = useState([]);
@@ -213,10 +214,11 @@ useEffect(() => {
       </h1>
     </header>
       <Routes>
-  <Route path="/records/career" element={<CareerRecords />} />
-  <Route path="/records/season" element={<SeasonRecords />} />
-  <Route path="/records/single-game" element={<SingleGameRecords />} />
-</Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/records/career" element={<CareerRecords />} />
+        <Route path="/records/season" element={<SeasonRecords />} />
+        <Route path="/records/single-game" element={<SingleGameRecords />} />
+      </Routes>
   </div>
 );
 }
