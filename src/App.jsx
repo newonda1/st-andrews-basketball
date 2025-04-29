@@ -8,6 +8,7 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const sidebarRef = useRef(null);
   const [seasonOpen, setSeasonOpen] = useState(false);
+  const [recordsOpen, setRecordsOpen] = useState(false);
   const [expandedDecades, setExpandedDecades] = useState({});
   const yearsByDecade = {
     "1970s": ["1978-79", "1979-80"],
@@ -162,6 +163,45 @@ useEffect(() => {
         Legacy Players
       </a>
     </div>
+    {/* All-Time Records Section */}
+<div className="border-t pt-4">
+  <button
+    onClick={() => setRecordsOpen(!recordsOpen)}
+    className="flex items-center justify-between w-full p-3 hover:bg-gray-200 rounded-md"
+  >
+    <span>All-Time Records</span>
+    <span
+      className={`ml-2 inline-block transform transition-transform duration-300 ${
+        recordsOpen ? "rotate-180" : "rotate-0"
+      }`}
+    >
+      ▼
+    </span>
+  </button>
+
+  {recordsOpen && (
+    <div className="ml-4 overflow-hidden transition-all duration-500">
+      <Link
+        to="/records/career"
+        className="block px-2 py-1 text-sm hover:bg-gray-200"
+      >
+        Career Records
+      </Link>
+      <Link
+        to="/records/season"
+        className="block px-2 py-1 text-sm hover:bg-gray-200"
+      >
+        Season Records
+      </Link>
+      <Link
+        to="/records/single-game"
+        className="block px-2 py-1 text-sm hover:bg-gray-200"
+      >
+        Single Game Records
+      </Link>
+    </div>
+  )}
+</div>
 
   </nav>
 </div>
