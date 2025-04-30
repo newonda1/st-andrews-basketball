@@ -1,39 +1,55 @@
 import React, { useEffect, useState } from "react";
-import playerStatsData from "./data/playergamestats.json";
-import playersData from "./data/players.json";
-import gamesData from "./data/games.json";
 
 function SingleGameRecords() {
   const [records, setRecords] = useState([]);
+  const [players, setPlayers] = useState([]);
+  const [games, setGames] = useState([]);
+  const [playerStats, setPlayerStats] = useState([]);
 
   useEffect(() => {
-    const statCategories = ["points", "rebounds", "assists"];
-    const topPerformances = [];
+    const fetchData = async () => {
+      const [playerStatsRes, playersRes, gamesRes] = await Promise.all([
+        fetch("/data/playergamestats.json"),
+        fetch("/data/players.json"),
+        fetch("/data/games.json"),
+      ]);
 
-    statCategories.forEach((stat) => {
-      const maxStat = Math.max(
-        ...playerStatsData.map((entry) => entry[stat] || 0)
-      );
+      const [playerStatsData, playersData, gamesData] = await Promise.all([
+        playerStatsRes.json(),
+        playersRes.json(),
+        gamesRes.json(),
+      ]);
 
-      const topEntries = playerStatsData.filter(
-        (entry) => entry[stat] === maxStat
-      );
+      setPlayerStats(playerStatsData);
+      setPlayers(playersData);
+      setGames(gamesData);
 
-      topEntries.forEach((entry) => {
-        const player = playersData.find((p) => p.id === entry.playerID);
-        const game = gamesData.find((g) => g.id === entry.gameID);
+      const statCategories = ["points", "rebounds", "assists"];
+      const topPerformances = [];
 
-        topPerformances.push({
-          stat,
-          value: entry[stat],
-          playerName: player ? player.name : "Unknown Player",
-          opponent: game ? game.opponent : "Unknown Opponent",
-          date: game ? game.date : "Unknown Date",
+      statCategories.forEach((stat) => {
+        const maxStat = Math.max(...playerStatsData.map((entry) => entry[stat] || 0));
+
+        const topEntries = playerStatsData.filter((entry) => entry[stat] === maxStat);
+
+        topEntries.forEach((entry) => {
+          const player = playersData.find((p) => p.id === entry.playerID);
+          const game = gamesData.find((g) => g.id === entry.gameID);
+
+          topPerformances.push({
+            stat,
+            value: entry[stat],
+            playerName: player ? player.name : "Unknown Player",
+            opponent: game ? game.opponent : "Unknown Opponent",
+            date: game ? game.date : "Unknown Date",
+          });
         });
       });
-    });
 
-    setRecords(topPerformances);
+      setRecords(topPerformances);
+    };
+
+    fetchData();
   }, []);
 
   return (
@@ -66,4 +82,5 @@ function SingleGameRecords() {
 }
 
 export default SingleGameRecords;
+
 
