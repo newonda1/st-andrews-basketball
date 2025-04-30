@@ -5,6 +5,8 @@ function SingleGameRecords() {
   const [players, setPlayers] = useState([]);
   const [games, setGames] = useState([]);
   const [playerStats, setPlayerStats] = useState([]);
+
+  // Helper to convert timestamp to readable date
   const formatDate = (ms) => {
     const date = new Date(ms);
     return date.toLocaleDateString("en-US", {
@@ -16,46 +18,63 @@ function SingleGameRecords() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const [playerStatsRes, playersRes, gamesRes] = await Promise.all([
-        fetch("/data/playergamestats.json"),
-        fetch("/data/players.json"),
-        fetch("/data/games.json"),
-      ]);
+      try {
+        const [playerStatsRes, playersRes, gamesRes] = await Promise.all([
+          fetch("/data/playergamestats.json"),
+          fetch("/data/players.json"),
+          fetch("/data/games.json"),
+        ]);
 
-      const [playerStatsData, playersData, gamesData] = await Promise.all([
-        playerStatsRes.json(),
-        playersRes.json(),
-        gamesRes.json(),
-      ]);
+        const [playerStatsData, playersData, gamesData] = await Promise.all([
+          playerStatsRes.json(),
+          playersRes.json(),
+          gamesRes.json(),
+        ]);
 
-      setPlayerStats(playerStatsData);
-      setPlayers(playersData);
-      setGames(gamesData);
+        setPlayerStats(playerStatsData);
+        setPlayers(playersData);
+        setGames(gamesData);
 
-      const statCategories = ["Points", "Rebounds", "Assists"];
-      const topPerformances = [];
+        const statCategories = [
+          "Points",
+          "Rebounds",
+          "Assists",
+          "Steals",
+          "TwoPM",
+          "ThreePM",
+          "FTM",
+          "FTA",
+        ];
 
-      statCategories.forEach((stat) => {
-        const maxStat = Math.max(...playerStatsData.map((entry) => entry[stat] || 0));
+        const topPerformances = [];
 
-        const topEntries = playerStatsData.filter((entry) => entry[stat] === maxStat);
+        statCategories.forEach((stat) => {
+          const maxStat = Math.max(...playerStatsData.map((entry) => entry[stat] || 0));
 
-        topEntries.forEach((entry) => {
-          const player = playersData.find((p) => String(p.PlayerID) === String(entry.PlayerID));
-          const game = gamesData.find((g) => String(g.GameID) === String(entry.GameID));
+          const topEntries = playerStatsData.filter((entry) => entry[stat] === maxStat);
 
+          topEntries.forEach((entry) => {
+            const player = playersData.find(
+              (p) => String(p.PlayerID) === String(entry.PlayerID)
+            );
+            const game = gamesData.find(
+              (g) => String(g.GameID) === String(entry.GameID)
+            );
 
-          topPerformances.push({
-            stat,
-            value: entry[stat],
-            playerName: player ? `${player.FirstName} ${player.LastName}` : "Unknown Player",
-            opponent: game ? game.Opponent : "Unknown Opponent",
-            date: game ? formatDate(game.Date) : "Unknown Date",
+            topPerformances.push({
+              stat,
+              value: entry[stat],
+              playerName: player ? `${player.FirstName} ${player.LastName}` : "Unknown Player",
+              opponent: game ? game.Opponent : "Unknown Opponent",
+              date: game ? formatDate(game.Date) : "Unknown Date",
+            });
           });
         });
-      });
 
-      setRecords(topPerformances);
+        setRecords(topPerformances);
+      } catch (err) {
+        console.error("Error loading data:", err);
+      }
     };
 
     fetchData();
@@ -91,5 +110,3 @@ function SingleGameRecords() {
 }
 
 export default SingleGameRecords;
-
-
