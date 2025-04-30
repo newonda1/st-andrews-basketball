@@ -24,7 +24,7 @@ function SingleGameRecords() {
       setPlayers(playersData);
       setGames(gamesData);
 
-      const statCategories = ["points", "rebounds", "assists"];
+      const statCategories = ["Points", "Rebounds", "Assists"];
       const topPerformances = [];
 
       statCategories.forEach((stat) => {
@@ -33,8 +33,8 @@ function SingleGameRecords() {
         const topEntries = playerStatsData.filter((entry) => entry[stat] === maxStat);
 
         topEntries.forEach((entry) => {
-          const player = playersData.find((p) => p.id === entry.playerID);
-          const game = gamesData.find((g) => g.id === entry.gameID);
+          const player = playersData.find((p) => p.id === entry.PlayerID);
+          const game = gamesData.find((g) => g.id === entry.GameID);
 
           topPerformances.push({
             stat,
