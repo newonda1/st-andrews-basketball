@@ -48,8 +48,8 @@ function SingleGameRecords() {
           topPerformances.push({
             stat,
             value: entry[stat],
-            playerName: player ? player.name : "Unknown Player",
-            opponent: game ? game.opponent : "Unknown Opponent",
+            playerName: player ? `${player.FirstName} ${player.LastName}` : "Unknown Player",
+            opponent: game ? game.Opponent : "Unknown Opponent",
             date: game ? formatDate(game.Date) : "Unknown Date",
           });
         });
