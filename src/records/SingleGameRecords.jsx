@@ -33,8 +33,8 @@ function SingleGameRecords() {
         const topEntries = playerStatsData.filter((entry) => entry[stat] === maxStat);
 
         topEntries.forEach((entry) => {
-          const player = playersData.find((p) => p.id === entry.PlayerID);
-          const game = gamesData.find((g) => g.id === entry.GameID);
+          const player = playersData.find((p) => String(p.id) === String(entry.PlayerID));
+          const game = gamesData.find((g) => String(g.id) === String(entry.GameID));
 
           topPerformances.push({
             stat,
