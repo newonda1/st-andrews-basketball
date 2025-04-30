@@ -5,6 +5,14 @@ function SingleGameRecords() {
   const [players, setPlayers] = useState([]);
   const [games, setGames] = useState([]);
   const [playerStats, setPlayerStats] = useState([]);
+  const formatDate = (ms) => {
+    const date = new Date(ms);
+    return date.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    });
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -33,15 +41,16 @@ function SingleGameRecords() {
         const topEntries = playerStatsData.filter((entry) => entry[stat] === maxStat);
 
         topEntries.forEach((entry) => {
-          const player = playersData.find((p) => String(p.id) === String(entry.PlayerID));
-          const game = gamesData.find((g) => String(g.id) === String(entry.GameID));
+          const player = playersData.find((p) => String(p.PlayerID) === String(entry.PlayerID));
+          const game = gamesData.find((g) => String(g.GameID) === String(entry.GameID));
+
 
           topPerformances.push({
             stat,
             value: entry[stat],
             playerName: player ? player.name : "Unknown Player",
             opponent: game ? game.opponent : "Unknown Opponent",
-            date: game ? game.date : "Unknown Date",
+            date: game ? formatDate(game.Date) : "Unknown Date",
           });
         });
       });
