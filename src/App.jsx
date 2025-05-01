@@ -136,7 +136,7 @@ function App() {
                 {yearsByDecade[decade].map((year) => (
                   <Link
                     key={year}
-                    to={`/season/${year}`}
+                    to={`/seasons/${year}`}
                     className="block px-2 py-1 text-sm hover:bg-gray-200"
                   >
                     {year}
@@ -241,7 +241,7 @@ function App() {
         <Route path="/records/season" element={<SeasonRecords />} />
         <Route path="/records/single-game" element={<SingleGameRecords />} />
         <Route path="/legacy/ChrisHaslam" element={<ChrisHaslam />} />
-        <Route path="/season/2024-25" element={<Season2024_25 />} />
+        <Route path="/seasons/2024-25" element={<Season2024_25 />} />
       </Routes>
   </div>
 );
