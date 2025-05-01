@@ -4,7 +4,7 @@
     "FirstName": "MJ",
     "LastName": "Scott",
     "GradYear": 2027,
-    "Position": NaN,
+    "Position": null,
     "JerseyNumber": 2.0
   },
   {
@@ -12,7 +12,7 @@
     "FirstName": "Amari",
     "LastName": "Cook",
     "GradYear": 2026,
-    "Position": NaN,
+    "Position": null,
     "JerseyNumber": 4.0
   },
   {
@@ -20,7 +20,7 @@
     "FirstName": "Guus",
     "LastName": "Blom",
     "GradYear": 2026,
-    "Position": NaN,
+    "Position": null,
     "JerseyNumber": 5.0
   },
   {
@@ -28,7 +28,7 @@
     "FirstName": "Chase",
     "LastName": "Brown",
     "GradYear": 2028,
-    "Position": NaN,
+    "Position": null,
     "JerseyNumber": 10.0
   },
   {
@@ -36,7 +36,7 @@
     "FirstName": "DeShaud",
     "LastName": "Singleton",
     "GradYear": 2025,
-    "Position": NaN,
+    "Position": null,
     "JerseyNumber": 11.0
   },
   {
@@ -44,7 +44,7 @@
     "FirstName": "Zayden",
     "LastName": "Edwards",
     "GradYear": 2025,
-    "Position": NaN,
+    "Position": null,
     "JerseyNumber": 12.0
   },
   {
@@ -52,7 +52,7 @@
     "FirstName": "Max",
     "LastName": "Carter",
     "GradYear": 2026,
-    "Position": NaN,
+    "Position": null,
     "JerseyNumber": 13.0
   },
   {
@@ -60,7 +60,7 @@
     "FirstName": "DeChiel",
     "LastName": "Singleton",
     "GradYear": 2027,
-    "Position": NaN,
+    "Position": null,
     "JerseyNumber": 15.0
   },
   {
@@ -68,7 +68,7 @@
     "FirstName": "Page",
     "LastName": "Getter",
     "GradYear": 2028,
-    "Position": NaN,
+    "Position": null,
     "JerseyNumber": 21.0
   },
   {
@@ -76,7 +76,7 @@
     "FirstName": "Ja'Cari",
     "LastName": "Glover",
     "GradYear": 2026,
-    "Position": NaN,
+    "Position": null,
     "JerseyNumber": 23.0
   },
   {
@@ -84,7 +84,7 @@
     "FirstName": "Patrick",
     "LastName": "Jackson",
     "GradYear": 2028,
-    "Position": NaN,
+    "Position": null,
     "JerseyNumber": 24.0
   },
   {
@@ -92,7 +92,7 @@
     "FirstName": "Miles",
     "LastName": "Cummings",
     "GradYear": 2025,
-    "Position": NaN,
+    "Position": null,
     "JerseyNumber": 42.0
   },
   {
@@ -100,31 +100,31 @@
     "FirstName": "Will",
     "LastName": "Davidson",
     "GradYear": 2025,
-    "Position": NaN,
-    "JerseyNumber": NaN
+    "Position": null,
+    "JerseyNumber": null
   },
   {
     "PlayerID": 202408,
     "FirstName": "Ben",
     "LastName": "Jouffrault",
     "GradYear": 2028,
-    "Position": NaN,
-    "JerseyNumber": NaN
+    "Position": null,
+    "JerseyNumber": null
   },
   {
     "PlayerID": 202409,
     "FirstName": "Gavin",
     "LastName": "Rychak",
     "GradYear": 2028,
-    "Position": NaN,
-    "JerseyNumber": NaN
+    "Position": null,
+    "JerseyNumber": null
   },
   {
     "PlayerID": 202303,
     "FirstName": "Dylan",
     "LastName": "Hall",
     "GradYear": 2027,
-    "Position": NaN,
-    "JerseyNumber": NaN
+    "Position": null,
+    "JerseyNumber": null
   }
 ]
