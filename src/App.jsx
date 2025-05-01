@@ -5,6 +5,7 @@ import FullCareerStats from './records/FullCareerStats';
 import SeasonRecords from './records/SeasonRecords';
 import SingleGameRecords from './records/SingleGameRecords';
 import ChrisHaslam from './legacy/ChrisHaslam';
+import Season2024_25 from './seasons/Season2024_25';
 
 function App() {
   const [games, setGames] = useState([]);
@@ -240,6 +241,7 @@ function App() {
         <Route path="/records/season" element={<SeasonRecords />} />
         <Route path="/records/single-game" element={<SingleGameRecords />} />
         <Route path="/legacy/ChrisHaslam" element={<ChrisHaslam />} />
+        <Route path="/season/2024-25" element={<Season2024_25 />} />
       </Routes>
   </div>
 );
