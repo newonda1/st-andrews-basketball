@@ -223,8 +223,10 @@ function App() {
   </div>
     <div className="flex items-center justify-between mb-4 px-4 h-20">
       <div className="flex items-center gap-3">
-        <img src="/logo.png" alt="St. Andrew's Logo" className="h-12 w-auto" />
-        <h1 className="text-xl font-bold text-blue-800 whitespace-nowrap">Boys' Basketball</h1>
+        <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+          <img src="/logo.png" alt="St. Andrew's Logo" className="h-12 w-auto" />
+          <h1 className="text-xl font-bold text-blue-800 whitespace-nowrap">Boys' Basketball</h1>
+        </Link>
       </div>
       <button onClick={() => setMenuOpen(true)}>
         <img
