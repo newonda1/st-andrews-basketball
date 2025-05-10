@@ -46,6 +46,9 @@ function Season2024_25() {
       }
     });
 
+    const calculateFTPercent = (player) =>
+      player.FTA > 0 ? (player.FTM / player.FTA) * 100 : 0;
+    
     const sortAndTakeTop3 = (statName, isPercent = false) => {
       let allPlayers = Object.values(totals);
 
