@@ -6,6 +6,16 @@ function Season2024_25() {
   const [players, setPlayers] = useState([]);
   const [leadersByStat, setLeadersByStat] = useState({});
   const [uploadedPhotos, setUploadedPhotos] = useState([]);
+  const statLabels = {
+    Points: 'Points',
+    Rebounds: 'Rebounds',
+    Assists: 'Assists',
+    Steals: 'Steals',
+    Blocks: 'Blocks',
+    ThreePM: '3-pointers made',
+    TwoPM: '2-pointers made',
+    FTPercentage: 'Free Throw %'
+  };
 
   useEffect(() => {
     async function fetchData() {
@@ -126,12 +136,12 @@ function Season2024_25() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {Object.entries(leadersByStat).map(([statName, topPlayers]) => (
           <div key={statName} className="bg-white rounded-lg shadow p-4">
-            <h3 className="text-xl font-semibold mb-2 text-center">{statName}</h3>
+            <h3 className="text-xl font-semibold mb-2 text-center">{statLabels[statName]}</h3>
             <table className="w-full text-sm text-center">
               <thead>
                 <tr>
                   <th className="border p-1">Player</th>
-                  <th className="border p-1">{statName}</th>
+                  <th className="border p-1">{statLabels[statName]}</th>
                 </tr>
               </thead>
               <tbody>
