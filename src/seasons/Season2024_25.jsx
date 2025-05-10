@@ -102,7 +102,7 @@ function Season2024_25() {
   };
 
   return (
-    <div className="p-8 space-y-10 max-w-6xl mx-auto">
+    <div className="bg-gray-100 p-8 rounded-lg shadow-md max-w-6xl mx-auto space-y-10">
       <h1 className="text-3xl font-bold text-center mb-4">2024-25 Season Recap</h1>
       <p className="text-lg leading-relaxed space-y-4 text-justify">
         The 2024–25 St. Andrew’s basketball season was one of dominance, resilience, and redemption — a year that will be remembered as one of the most complete campaigns in school history. Under the leadership of Coach Mel Abrams Jr., the team navigated a demanding schedule with a mix of veteran poise and youthful energy, ultimately claiming the school’s <strong>sixth state championship</strong> — and their <strong>third in the last four seasons</strong>.
