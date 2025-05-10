@@ -1,0 +1,22 @@
+[
+  {
+    "SeasonID": 2024,
+    "YearStart": 2024,
+    "YearEnd": 2025,
+    "HeadCoach": "Mel Abrams Jr.",
+    "RegionSeed": 1.0,
+    "RegionFinish": "Region Champion",
+    "StateSeed": 2.0,
+    "StateFinish": "State Champion"
+  },
+  {
+    "SeasonID": 1992,
+    "YearStart": 1992,
+    "YearEnd": 1993,
+    "HeadCoach": "Paul Hill",
+    "RegionSeed": null,
+    "RegionFinish": "Region Champion",
+    "StateSeed": null,
+    "StateFinish": "State Champion"
+  }
+]
