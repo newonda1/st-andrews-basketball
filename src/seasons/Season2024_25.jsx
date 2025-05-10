@@ -4,7 +4,7 @@ function Season2024_25() {
   const [games, setGames] = useState([]);
   const [playerStats, setPlayerStats] = useState([]);
   const [players, setPlayers] = useState([]);
-  const [seasonLeaders, setSeasonLeaders] = useState({});
+  const [leadersByStat, setLeadersByStat] = useState({});
   const [uploadedPhotos, setUploadedPhotos] = useState([]);
 
   useEffect(() => {
@@ -28,52 +28,66 @@ function Season2024_25() {
   }, []);
 
   useEffect(() => {
-    // Calculate season leaders
     const totals = {};
     playerStats.forEach(stat => {
       if (!totals[stat.PlayerID]) {
-        totals[stat.PlayerID] = { ...stat };
+        totals[stat.PlayerID] = { ...stat, GamesPlayed: 1 };
       } else {
         totals[stat.PlayerID].Points += stat.Points || 0;
         totals[stat.PlayerID].Rebounds += stat.Rebounds || 0;
         totals[stat.PlayerID].Assists += stat.Assists || 0;
         totals[stat.PlayerID].Steals += stat.Steals || 0;
         totals[stat.PlayerID].Blocks += stat.Blocks || 0;
+        totals[stat.PlayerID].ThreePM += stat.ThreePM || 0;
+        totals[stat.PlayerID].TwoPM += stat.TwoPM || 0;
+        totals[stat.PlayerID].FTM += stat.FTM || 0;
+        totals[stat.PlayerID].FTA += stat.FTA || 0;
+        totals[stat.PlayerID].GamesPlayed += 1;
       }
     });
 
-    const leaderByStat = (statName) => {
-      return Object.values(totals).reduce((max, player) =>
-        (player[statName] > (max[statName] || 0) ? player : max), {});
+    const calculateFTPercent = (player) =>
+      player.FTA > 0 ? (player.FTM / player.FTA) * 100 : 0;
+
+    const sortAndTakeTop3 = (statName, isPercent = false) => {
+      return Object.values(totals)
+        .map(p => ({
+          ...p,
+          StatValue: isPercent ? calculateFTPercent(p) : p[statName]
+        }))
+        .sort((a, b) => b.StatValue - a.StatValue)
+        .slice(0, 3);
     };
 
-    const leaders = {
-      Points: leaderByStat('Points'),
-      Rebounds: leaderByStat('Rebounds'),
-      Assists: leaderByStat('Assists'),
-      Steals: leaderByStat('Steals'),
-      Blocks: leaderByStat('Blocks'),
+    const stats = {
+      Points: sortAndTakeTop3('Points'),
+      Rebounds: sortAndTakeTop3('Rebounds'),
+      Assists: sortAndTakeTop3('Assists'),
+      Steals: sortAndTakeTop3('Steals'),
+      Blocks: sortAndTakeTop3('Blocks'),
+      ThreePM: sortAndTakeTop3('ThreePM'),
+      TwoPM: sortAndTakeTop3('TwoPM'),
+      FTPercentage: sortAndTakeTop3('FTM', true)
     };
 
-    setSeasonLeaders(leaders);
+    setLeadersByStat(stats);
   }, [playerStats]);
-
-  const handlePhotoUpload = (e) => {
-    const files = Array.from(e.target.files);
-    const newPhotos = files.map(file => URL.createObjectURL(file));
-    setUploadedPhotos(prev => [...prev, ...newPhotos]);
-    // TODO: Send to backend/storage for review
-  };
 
   const getPlayerName = (id) => {
     const player = players.find(p => p.PlayerID === id);
     return player ? `${player.FirstName} ${player.LastName}` : 'Unknown Player';
   };
 
-  return (
-    <div className="p-8 space-y-10 max-w-4xl mx-auto">
-      <h1 className="text-3xl font-bold text-center mb-4">2024-25 Season Recap</h1>
+  const handlePhotoUpload = (e) => {
+    const files = Array.from(e.target.files);
+    const newPhotos = files.map(file => URL.createObjectURL(file));
+    setUploadedPhotos(prev => [...prev, ...newPhotos]);
+    // TODO: send to backend or storage if needed
+  };
 
+  return (
+    <div className="p-8 space-y-10 max-w-6xl mx-auto">
+      <h1 className="text-3xl font-bold text-center mb-4">2024-25 Season Recap</h1>
       <p className="text-lg leading-relaxed">
         The 2024-25 season was one for the record books, culminating in a thrilling state championship
         victory under Coach Mel Abrams Jr. The team faced tough competition but held strong,
@@ -84,16 +98,36 @@ function Season2024_25() {
         This season cemented the program’s legacy as a perennial powerhouse.
       </p>
 
-      <h2 className="text-2xl font-semibold mt-8">🏅 Season Leaders</h2>
-      <ul className="list-disc list-inside text-lg">
-        <li>Points: {getPlayerName(seasonLeaders.Points?.PlayerID)} ({seasonLeaders.Points?.Points} pts)</li>
-        <li>Rebounds: {getPlayerName(seasonLeaders.Rebounds?.PlayerID)} ({seasonLeaders.Rebounds?.Rebounds} reb)</li>
-        <li>Assists: {getPlayerName(seasonLeaders.Assists?.PlayerID)} ({seasonLeaders.Assists?.Assists} ast)</li>
-        <li>Steals: {getPlayerName(seasonLeaders.Steals?.PlayerID)} ({seasonLeaders.Steals?.Steals} stl)</li>
-        <li>Blocks: {getPlayerName(seasonLeaders.Blocks?.PlayerID)} ({seasonLeaders.Blocks?.Blocks} blk)</li>
-      </ul>
+      <h2 className="text-2xl font-semibold mt-8 mb-4">🏅 Season Leaders</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {Object.entries(leadersByStat).map(([statName, topPlayers]) => (
+          <div key={statName} className="bg-white rounded-lg shadow p-4">
+            <h3 className="text-xl font-semibold mb-2 text-center">{statName}</h3>
+            <table className="w-full text-sm text-center">
+              <thead>
+                <tr>
+                  <th className="border p-1">Player</th>
+                  <th className="border p-1">{statName}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {topPlayers.map((p, idx) => (
+                  <tr key={idx}>
+                    <td className="border p-1">{getPlayerName(p.PlayerID)}</td>
+                    <td className="border p-1">
+                      {statName === 'FTPercentage'
+                        ? `${p.StatValue.toFixed(1)}%`
+                        : p.StatValue}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        ))}
+      </div>
 
-      <h2 className="text-2xl font-semibold mt-8">📅 Season Schedule & Results</h2>
+      <h2 className="text-2xl font-semibold mt-8 mb-4">📅 Season Schedule & Results</h2>
       <table className="w-full border text-center text-sm md:text-base">
         <thead>
           <tr>
@@ -117,14 +151,16 @@ function Season2024_25() {
         </tbody>
       </table>
 
-      <h2 className="text-2xl font-semibold mt-8">📸 Upload Your Photos</h2>
+      <h2 className="text-2xl font-semibold mt-8 mb-4">📸 Upload Your Photos</h2>
       <input type="file" accept="image/*" multiple onChange={handlePhotoUpload} className="block mb-4" />
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
         {uploadedPhotos.map((src, idx) => (
           <img key={idx} src={src} alt={`Uploaded ${idx}`} className="w-full h-auto rounded shadow" />
         ))}
       </div>
-      <p className="text-sm text-gray-600">Submitted photos will be reviewed before inclusion in the team’s online photobook.</p>
+      <p className="text-sm text-gray-600">
+        Submitted photos will be reviewed before inclusion in the team’s online photobook.
+      </p>
     </div>
   );
 }
