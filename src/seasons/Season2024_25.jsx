@@ -46,11 +46,15 @@ function Season2024_25() {
       }
     });
 
-    const calculateFTPercent = (player) =>
-      player.FTA > 0 ? (player.FTM / player.FTA) * 100 : 0;
-
     const sortAndTakeTop3 = (statName, isPercent = false) => {
-      return Object.values(totals)
+      let allPlayers = Object.values(totals);
+
+      if (isPercent && statName === 'FTM') {
+        // Filter out players with fewer than 25 free throw attempts
+        allPlayers = allPlayers.filter(p => p.FTA >= 25);
+      }
+
+      return allPlayers
         .map(p => ({
           ...p,
           StatValue: isPercent ? calculateFTPercent(p) : p[statName]
