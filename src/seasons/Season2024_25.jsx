@@ -147,6 +147,11 @@ function Season2024_25() {
                 ))}
               </tbody>
             </table>
+            {statName === 'FTPercentage' && (
+              <p className="text-xs text-gray-500 text-center italic mt-1">
+                Minimum of 25 FT attempts
+               </p>
+            )}
           </div>
         ))}
       </div>
