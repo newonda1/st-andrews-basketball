@@ -30,10 +30,10 @@ function Home() {
         <div className="md:float-right md:ml-6 mb-6 text-center w-full md:w-52 animate-fade-in">
           <img
           src="/images/chris_haslem_1993.png"
-          alt="Chris Haslem during the 1992-93 Championship Season"
+          alt="Chris Haslam during the 1992-93 Championship Season"
           className="w-full h-auto rounded-lg shadow-md mb-2"
           />
-          <p className="text-sm italic">Chris Haslem leading the Lions to their first state title in 1993</p>
+          <p className="text-sm italic">Chris Haslam leading the Lions to their first state title in 1993</p>
         </div>
           <p className="text-lg leading-relaxed mb-4 text-justify">
           The mid-90s through early 2000s continued that momentum. Under Coach Frank Dickson, the Lions built a reputation for postseason grit, culminating in a 1998 SCISA AA State Championship. That success was followed by another title in 2004 under Coach Michael Bennett, further solidifying the Lions as a consistent contender. During this stretch, the team became known for its strong home-court presence, quick defense, and tournament resilience.
