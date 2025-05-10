@@ -241,7 +241,7 @@ function App() {
         <Route path="/records/season" element={<SeasonRecords />} />
         <Route path="/records/single-game" element={<SingleGameRecords />} />
         <Route path="/legacy/ChrisHaslam" element={<ChrisHaslam />} />
-        <Route path="/seasons/2024-25" element={<Season2024_25 />} />
+        <Route path="/seasons/:seasonId" element={<SeasonPlaceholder />} />
       </Routes>
   </div>
 );
