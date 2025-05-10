@@ -6,6 +6,7 @@ import SeasonRecords from './records/SeasonRecords';
 import SingleGameRecords from './records/SingleGameRecords';
 import ChrisHaslam from './legacy/ChrisHaslam';
 import Season2024_25 from './seasons/Season2024_25';
+import SeasonPlaceholder from './seasons/SeasonPlaceholder';
 
 function App() {
   const [games, setGames] = useState([]);
