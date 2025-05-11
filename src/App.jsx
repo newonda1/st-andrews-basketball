@@ -8,6 +8,7 @@ import ChrisHaslam from './legacy/ChrisHaslam';
 import Season2024_25 from './seasons/Season2024_25';
 import SeasonPlaceholder from './seasons/SeasonPlaceholder';
 import RecordsVsOpponents from './pages/RecordsVsOpponents';
+import YearlyResults from './pages/YearlyResults';
 
 function App() {
   const [games, setGames] = useState([]);
@@ -77,12 +78,10 @@ function App() {
         <div className="flex-1 overflow-y-auto overscroll-contain scroll-smooth">
           <nav className="flex flex-col p-4 space-y-2 text-lg font-medium">
             {/* Full Year-by-Year Results */}
-            <a
-              href="/yearly-results"
-              className="p-3 hover:bg-gray-200 rounded-md text-center"
-              >
+            <Link to="/yearly-results" className="p-3 hover:bg-gray-200 rounded-md text-center">
               Full Year-by-Year Results
-            </a>
+            </Link>
+
 
             {/* Individual Season Results with Expandable Decades */}
             <div className="border-t pt-4">
@@ -256,6 +255,7 @@ function App() {
         <Route path="/seasons/2024-25" element={<Season2024_25 />} />
         <Route path="/seasons/:seasonId" element={<SeasonPlaceholder />} />
         <Route path="/records/opponents" element={<RecordsVsOpponents />} />
+        <Route path="/yearly-results" element={<YearlyResults />} />
       </Routes>
   </div>
 );
