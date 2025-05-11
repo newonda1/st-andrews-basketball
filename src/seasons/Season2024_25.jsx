@@ -166,8 +166,10 @@ function Season2024_25() {
         ))}
       </div>
 
-      <h2 className="text-2xl font-semibold mt-8 mb-4">📅 Season Schedule & Results</h2>
-      <div className="overflow-x-auto">
+      <h2 className="text-xl sm:text-2xl font-semibold mt-8 mb-4 whitespace-nowrap">
+        📅 Season Schedule & Results
+      </h2>
+      <div className="overflow-x-auto px-1">
         <table className="w-full border text-center text-xs sm:text-sm md:text-base">
           <thead>
             <tr>
@@ -183,7 +185,7 @@ function Season2024_25() {
                 <td className="border px-2 py-1">{new Date(game.Date).toLocaleDateString()}</td>
                 <td className="border px-2 py-1">{game.Opponent}</td>
                 <td className="border px-2 py-1">{game.Result}</td>
-                <td className="border px-2 py-1">{game.TeamScore} - {game.OpponentScore}</td>
+                <td className="border px-2 py-1 whitespace-nowrap">{game.TeamScore} - {game.OpponentScore}</td>
               </tr>
             ))}
           </tbody>
