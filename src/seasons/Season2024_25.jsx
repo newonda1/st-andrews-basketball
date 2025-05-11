@@ -167,28 +167,30 @@ function Season2024_25() {
       </div>
 
       <h2 className="text-2xl font-semibold mt-8 mb-4">📅 Season Schedule & Results</h2>
-      <table className="w-full border text-center text-sm md:text-base">
-        <thead>
-          <tr>
-            <th className="border p-2">Date</th>
-            <th className="border p-2">Opponent</th>
-            <th className="border p-2">Location</th>
-            <th className="border p-2">Result</th>
-            <th className="border p-2">Score</th>
-          </tr>
-        </thead>
-        <tbody>
-          {games.map((game, idx) => (
-            <tr key={idx}>
-              <td className="border p-2">{new Date(game.Date).toLocaleDateString()}</td>
-              <td className="border p-2">{game.Opponent}</td>
-              <td className="border p-2">{game.LocationType}</td>
-              <td className="border p-2">{game.Result}</td>
-              <td className="border p-2">{game.TeamScore} - {game.OpponentScore}</td>
+      <div className="overflow-x-auto">
+        <table className="w-full border text-center text-xs sm:text-sm md:text-base">
+          <thead>
+            <tr>
+              <th className="border px-2 py-1">Date</th>
+              <th className="border px-2 py-1">Opponent</th>
+              <th className="border px-2 py-1">Location</th>
+              <th className="border px-2 py-1">Result</th>
+              <th className="border px-2 py-1">Score</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {games.map((game, idx) => (
+              <tr key={idx}>
+                <td className="border px-2 py-1">{new Date(game.Date).toLocaleDateString()}</td>
+                <td className="border px-2 py-1">{game.Opponent}</td>
+                <td className="border px-2 py-1">{game.LocationType}</td>
+                <td className="border px-2 py-1">{game.Result}</td>
+                <td className="border px-2 py-1">{game.TeamScore} - {game.OpponentScore}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
       <h2 className="text-2xl font-semibold mt-8 mb-4">📸 Upload Your Photos</h2>
       <input type="file" accept="image/*" multiple onChange={handlePhotoUpload} className="block mb-4" />
