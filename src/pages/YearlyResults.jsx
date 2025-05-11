@@ -18,7 +18,7 @@ function YearlyResults() {
     const grouped = {};
 
     games.forEach((game) => {
-      const season = game.Season;
+      const season = String(game.Season);
       if (!grouped[season]) {
         grouped[season] = {
           season,
@@ -37,8 +37,10 @@ function YearlyResults() {
       }
 
       const stats = grouped[season];
-      const isWin = game.Result === "W";
-      const isLoss = game.Result === "L";
+      const result = (game.Result || "").trim().toUpperCase();
+      const isWin = result === "W";
+      const isLoss = result === "L";
+
       const loc = game.LocationType;
       const type = game.GameType;
 
@@ -46,7 +48,7 @@ function YearlyResults() {
       if (isLoss) stats.overallL += 1;
 
       if (loc === "Home") {
-        isWin ? stats.homeW++ : isLoss ? stats.homeL++ : null;
+         isWin ? stats.homeW++ : isLoss ? stats.homeL++ : null;
       } else if (loc === "Away") {
         isWin ? stats.awayW++ : isLoss ? stats.awayL++ : null;
       }
