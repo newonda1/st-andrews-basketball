@@ -173,7 +173,6 @@ function Season2024_25() {
             <tr>
               <th className="border px-2 py-1">Date</th>
               <th className="border px-2 py-1">Opponent</th>
-              <th className="border px-2 py-1">Location</th>
               <th className="border px-2 py-1">Result</th>
               <th className="border px-2 py-1">Score</th>
             </tr>
@@ -183,7 +182,6 @@ function Season2024_25() {
               <tr key={idx}>
                 <td className="border px-2 py-1">{new Date(game.Date).toLocaleDateString()}</td>
                 <td className="border px-2 py-1">{game.Opponent}</td>
-                <td className="border px-2 py-1">{game.LocationType}</td>
                 <td className="border px-2 py-1">{game.Result}</td>
                 <td className="border px-2 py-1">{game.TeamScore} - {game.OpponentScore}</td>
               </tr>
