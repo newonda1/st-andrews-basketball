@@ -7,6 +7,7 @@ import SingleGameRecords from './records/SingleGameRecords';
 import ChrisHaslam from './legacy/ChrisHaslam';
 import Season2024_25 from './seasons/Season2024_25';
 import SeasonPlaceholder from './seasons/SeasonPlaceholder';
+import RecordsVsOpponents from './pages/RecordsVsOpponents';
 
 function App() {
   const [games, setGames] = useState([]);
@@ -150,33 +151,41 @@ function App() {
       )}
     </div>
 
-    {/* Legacy Players section */}
     <div className="border-t pt-4">
-  <button
-    onClick={() => setLegacyOpen(!legacyOpen)}
-    className="flex items-center justify-between w-full p-3 hover:bg-gray-200 rounded-md"
-  >
-    <span>Legacy Players</span>
-    <span
-      className={`ml-2 inline-block transform transition-transform duration-300 ${
-        legacyOpen ? "rotate-180" : "rotate-0"
-      }`}
-    >
-      ▼
-    </span>
-  </button>
-
-  {legacyOpen && (
-    <div className="ml-4">
       <Link
-        to="/legacy/ChrisHaslam"
-        className="block px-2 py-1 text-sm hover:bg-gray-200"
+        to="/records/opponents"
+        className="block p-3 hover:bg-gray-200 rounded-md text-center"
       >
-        Chris Haslam
+        Records vs. Opponents
       </Link>
     </div>
-  )}
-</div>
+
+    {/* Legacy Players section */}
+    <div className="border-t pt-4">
+      <button
+        onClick={() => setLegacyOpen(!legacyOpen)}
+        className="flex items-center justify-between w-full p-3 hover:bg-gray-200 rounded-md"
+      >
+        <span>Legacy Players</span>
+        <span
+          className={`ml-2 inline-block transform transition-transform duration-300 ${
+            legacyOpen ? "rotate-180" : "rotate-0"
+          }`}
+        >
+          ▼
+        </span>
+      </button>
+      {legacyOpen && (
+        <div className="ml-4">
+          <Link
+            to="/legacy/ChrisHaslam"
+            className="block px-2 py-1 text-sm hover:bg-gray-200"
+          >
+            Chris Haslam
+          </Link>
+        </div>
+      )}
+    </div>
 
     {/* All-Time Records Section */}
 <div className="border-t pt-4">
@@ -246,6 +255,7 @@ function App() {
         <Route path="/legacy/ChrisHaslam" element={<ChrisHaslam />} />
         <Route path="/seasons/2024-25" element={<Season2024_25 />} />
         <Route path="/seasons/:seasonId" element={<SeasonPlaceholder />} />
+        <Route path="/records/opponents" element={<RecordsVsOpponents />} />
       </Routes>
   </div>
 );
