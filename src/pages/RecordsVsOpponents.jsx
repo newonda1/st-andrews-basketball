@@ -5,6 +5,7 @@ function RecordsVsOpponents() {
   const [opponentRecords, setOpponentRecords] = useState({});
   const [sortField, setSortField] = useState("Opponent");
   const [sortDirection, setSortDirection] = useState("asc");
+  const [expandedOpponent, setExpandedOpponent] = useState(null);
 
   useEffect(() => {
     fetch("/data/games.json")
@@ -38,6 +39,10 @@ function RecordsVsOpponents() {
       setSortField(field);
       setSortDirection("asc");
     }
+  };
+
+  const toggleOpponent = (opponent) => {
+    setExpandedOpponent(expandedOpponent === opponent ? null : opponent);
   };
 
   const sortedOpponents = Object.entries(opponentRecords).sort((a, b) => {
@@ -74,44 +79,46 @@ function RecordsVsOpponents() {
         <table className="w-full text-xs sm:text-sm md:text-base text-center border">
           <thead>
             <tr className="bg-gray-100">
-              <th
-                className="border p-2 cursor-pointer"
-                onClick={() => handleSort("Opponent")}
-              >
-                Opponent{" "}
-                {sortField === "Opponent" && (sortDirection === "asc" ? "▲" : "▼")}
+              <th className="border p-2 cursor-pointer" onClick={() => handleSort("Opponent")}>
+                Opponent {sortField === "Opponent" && (sortDirection === "asc" ? "▲" : "▼")}
               </th>
-              <th
-                className="border p-2 cursor-pointer"
-                onClick={() => handleSort("Wins")}
-              >
-                Wins {sortField === "Wins" && (sortDirection === "asc" ? "▲" : "▼")}
-              </th>
-              <th
-                className="border p-2 cursor-pointer"
-                onClick={() => handleSort("Losses")}
-              >
-                Losses{" "}
-                {sortField === "Losses" && (sortDirection === "asc" ? "▲" : "▼")}
-              </th>
-              <th
-                className="border p-2 cursor-pointer"
-                onClick={() => handleSort("Total")}
-              >
-                Total Games{" "}
-                {sortField === "Total" && (sortDirection === "asc" ? "▲" : "▼")}
-              </th>
+              <th className="border p-2 cursor-pointer" onClick={() => handleSort("Wins")}>Wins {sortField === "Wins" && (sortDirection === "asc" ? "▲" : "▼")}</th>
+              <th className="border p-2 cursor-pointer" onClick={() => handleSort("Losses")}>Losses {sortField === "Losses" && (sortDirection === "asc" ? "▲" : "▼")}</th>
+              <th className="border p-2 cursor-pointer" onClick={() => handleSort("Total")}>Total Games {sortField === "Total" && (sortDirection === "asc" ? "▲" : "▼")}</th>
             </tr>
           </thead>
           <tbody>
-            {sortedOpponents.map(([opponent, record], idx) => (
-              <tr key={idx} className="hover:bg-gray-50">
-                <td className="border px-2 py-1">{opponent}</td>
-                <td className="border px-2 py-1">{record.wins}</td>
-                <td className="border px-2 py-1">{record.losses}</td>
-                <td className="border px-2 py-1">{record.wins + record.losses}</td>
-              </tr>
-            ))}
+            {sortedOpponents.map(([opponent, record], idx) => {
+              const isExpanded = expandedOpponent === opponent;
+              const gamesAgainst = games.filter((g) => g.Opponent === opponent);
+
+              return (
+                <React.Fragment key={idx}>
+                  <tr
+                    className="hover:bg-gray-50 cursor-pointer"
+                    onClick={() => toggleOpponent(opponent)}
+                  >
+                    <td className="border px-2 py-1 font-medium text-left">{opponent}</td>
+                    <td className="border px-2 py-1">{record.wins}</td>
+                    <td className="border px-2 py-1">{record.losses}</td>
+                    <td className="border px-2 py-1">{record.wins + record.losses}</td>
+                  </tr>
+                  {isExpanded && (
+                    <tr>
+                      <td colSpan="4" className="bg-gray-50 text-left px-4 py-2">
+                        <ul className="space-y-1">
+                          {gamesAgainst.map((game, i) => (
+                            <li key={i} className="text-sm">
+                              {new Date(game.Date).toLocaleDateString()} — {game.Result} {game.TeamScore}-{game.OpponentScore} @ {game.LocationType}
+                            </li>
+                          ))}
+                        </ul>
+                      </td>
+                    </tr>
+                  )}
+                </React.Fragment>
+              );
+            })}
           </tbody>
         </table>
       </div>
@@ -120,3 +127,4 @@ function RecordsVsOpponents() {
 }
 
 export default RecordsVsOpponents;
+
