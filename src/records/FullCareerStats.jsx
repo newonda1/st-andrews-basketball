@@ -7,14 +7,23 @@ function CareerRecords() {
 
   useEffect(() => {
     async function fetchData() {
-      const statsRes = await fetch("/data/playergamestats.json");
-      const playersRes = await fetch("/data/players.json");
-      const statsData = await statsRes.json();
-      const playersData = await playersRes.json();
+      const [statsRes, adjustmentsRes, playersRes] = await Promise.all([
+        fetch("/data/playergamestats.json"),
+        fetch("/data/adjustments.json"),
+        fetch("/data/players.json")
+      ]);
+
+      const [statsData, adjustmentsData, playersData] = await Promise.all([
+        statsRes.json(),
+        adjustmentsRes.json(),
+        playersRes.json()
+      ]);
+
+      const combinedStats = [...statsData, ...adjustmentsData];
 
       const playerTotals = {};
 
-      statsData.forEach(stat => {
+      combinedStats.forEach(stat => {
         const playerId = stat.PlayerID;
         if (!playerTotals[playerId]) {
           playerTotals[playerId] = {
