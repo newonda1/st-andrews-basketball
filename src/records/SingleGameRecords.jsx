@@ -51,7 +51,7 @@ function SingleGameRecords() {
           const sorted = [...playerStatsData]
             .filter((entry) => entry[stat] !== undefined && entry[stat] > 0)
             .sort((a, b) => b[stat] - a[stat])
-            .slice(0, 5);
+            .slice(0, 10);
 
           const detailed = sorted.map((entry) => {
             const player = playersData.find(
