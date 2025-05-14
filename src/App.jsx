@@ -5,6 +5,7 @@ import FullCareerStats from './records/FullCareerStats';
 import SeasonRecords from './records/SeasonRecords';
 import SingleGameRecords from './records/SingleGameRecords';
 import ChrisHaslam from './legacy/ChrisHaslam';
+import Season1992_93 from './seasons/Season1992_93';
 import Season2024_25 from './seasons/Season2024_25';
 import SeasonPlaceholder from './seasons/SeasonPlaceholder';
 import RecordsVsOpponents from './pages/RecordsVsOpponents';
