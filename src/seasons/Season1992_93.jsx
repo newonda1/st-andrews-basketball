@@ -89,7 +89,7 @@ function Season1992_93() {
       {/* Section 0: Photo Collage */}
       {uploadedPhotos.length > 0 && (
         <div className="mb-8">
-          <h2 className="text-2xl font-semibold text-center mb-4">📸 Team Photos</h2>
+          <h2 className="text-2xl font-semibold mb-4">📸 Team Photos</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
             {uploadedPhotos.map((src, idx) => (
               <button
@@ -183,11 +183,11 @@ function Season1992_93() {
             >
               &times;
             </button>
-            <img
-              src={selectedPhoto}
-              alt="Full Size"
-              className="w-full h-auto object-contain rounded-lg shadow-lg"
-            />
+              <img
+                src={selectedPhoto}
+                alt="Full Size"
+                className="max-h-[80vh] max-w-[90vw] object-contain rounded-lg shadow-lg mx-auto"
+              />
           </div>
         </div>
       )}
