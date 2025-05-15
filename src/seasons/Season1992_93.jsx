@@ -112,27 +112,31 @@ function Season1992_93() {
       <h2 className="text-xl sm:text-2xl font-semibold mt-8 mb-4 whitespace-nowrap">
         📅 Season Schedule & Results
       </h2>
-      <div className="overflow-x-auto px-1">
-        <table className="w-full border text-center text-xs sm:text-sm md:text-base">
-          <thead>
-            <tr>
-              <th className="border px-2 py-1">Date</th>
-              <th className="border px-2 py-1">Opponent</th>
-              <th className="border px-2 py-1">Result</th>
-              <th className="border px-2 py-1">Score</th>
-            </tr>
-          </thead>
-          <tbody>
-            {games.map((game, idx) => (
-              <tr key={idx}>
-                <td className="border px-2 py-1">{new Date(game.Date).toLocaleDateString()}</td>
-                <td className="border px-2 py-1">{game.Opponent}</td>
-                <td className="border px-2 py-1">{game.Result}</td>
-                <td className="border px-2 py-1 whitespace-nowrap">{game.TeamScore} - {game.OpponentScore}</td>
+       <div className="overflow-x-auto px-1">
+        <div className="bg-white rounded-lg shadow p-4">
+          <table className="w-full border text-center text-xs sm:text-sm md:text-base">
+            <thead>
+              <tr>
+                <th className="border px-2 py-1">Date</th>
+                <th className="border px-2 py-1">Opponent</th>
+                <th className="border px-2 py-1">Location</th>
+                <th className="border px-2 py-1">Result</th>
+                <th className="border px-2 py-1">Score</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {games.map((game, idx) => (
+                <tr key={idx}>
+                  <td className="border px-2 py-1">{new Date(game.Date).toLocaleDateString()}</td>
+                  <td className="border px-2 py-1">{game.Opponent}</td>
+                  <td className="border px-2 py-1">{game.LocationType}</td>
+                  <td className="border px-2 py-1">{game.Result}</td>
+                  <td className="border px-2 py-1 whitespace-nowrap">{game.TeamScore} - {game.OpponentScore}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
 
       {/* Section 2: Player Totals for Points and Rebounds */}
