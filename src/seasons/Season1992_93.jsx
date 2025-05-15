@@ -4,6 +4,7 @@ function Season1992_93() {
   const [games, setGames] = useState([]);
   const [playerStats, setPlayerStats] = useState([]);
   const [players, setPlayers] = useState([]);
+  const [adjustments, setAdjustments] = useState([]);  // New state to hold adjustments data
   const [uploadedPhotos, setUploadedPhotos] = useState([]);
   const statLabels = {
     Points: 'Points',
@@ -15,13 +16,16 @@ function Season1992_93() {
       const gamesRes = await fetch("/data/games.json");
       const statsRes = await fetch("/data/playergamestats.json");
       const playersRes = await fetch("/data/players.json");
+      const adjustmentsRes = await fetch("/data/adjustments.json"); // Fetch the adjustments.json file
       const gamesData = await gamesRes.json();
       const statsData = await statsRes.json();
       const playersData = await playersRes.json();
+      const adjustmentsData = await adjustmentsRes.json(); // Store adjustments data
 
-      // Filter games and stats for the 1992 season
+      // Set the data
       setGames(gamesData.filter(g => g.Season === 1992));
       setPlayers(playersData);
+      setAdjustments(adjustmentsData);
 
       // Aggregate stats for each player for the 1992 season
       const totals = {};
@@ -37,7 +41,15 @@ function Season1992_93() {
         totals[stat.PlayerID].Rebounds += stat.Rebounds || 0;
       });
 
-      // Set the aggregated player stats
+      // Apply adjustments to the player stats
+      adjustmentsData.forEach(adjustment => {
+        if (totals[adjustment.PlayerID]) {
+          totals[adjustment.PlayerID].Points += adjustment.Points || 0;
+          totals[adjustment.PlayerID].Rebounds += adjustment.Rebounds || 0;
+        }
+      });
+
+      // Set the aggregated stats including adjustments
       setPlayerStats(totals);
     }
 
@@ -54,6 +66,9 @@ function Season1992_93() {
     const newPhotos = files.map(file => URL.createObjectURL(file));
     setUploadedPhotos(prev => [...prev, ...newPhotos]);
   };
+
+  // Sort the player stats by Points in descending order
+  const sortedPlayerStats = Object.values(playerStats).sort((a, b) => b.Points - a.Points);
 
   return (
     <div className="bg-gray-100 p-8 rounded-lg shadow-md max-w-6xl mx-auto space-y-10">
@@ -98,7 +113,7 @@ function Season1992_93() {
             </tr>
           </thead>
           <tbody>
-            {Object.values(playerStats).map((stat, idx) => {
+            {sortedPlayerStats.map((stat, idx) => {
               const playerName = getPlayerName(stat.PlayerID);
               return (
                 <tr key={idx}>
