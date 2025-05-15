@@ -5,6 +5,7 @@ function Season1992_93() {
   const [playerStats, setPlayerStats] = useState([]);
   const [players, setPlayers] = useState([]);
   const [adjustments, setAdjustments] = useState([]);  // New state to hold adjustments data
+  const [selectedPhoto, setSelectedPhoto] = useState(null); // for modal
   const [uploadedPhotos, setUploadedPhotos] = useState([
     '/images/1992_93_photo1.jpg',
     '/images/1992_93_photo2.jpg',
@@ -91,16 +92,17 @@ function Season1992_93() {
           <h2 className="text-2xl font-semibold text-center mb-4">📸 Team Photos</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
             {uploadedPhotos.map((src, idx) => (
-              <div
+              <button
                 key={idx}
-                className="relative overflow-hidden rounded-lg shadow transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+                onClick={() => setSelectedPhoto(src)}
+                className="relative overflow-hidden rounded-lg shadow focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
                 <img
                   src={src}
-                  alt={`Uploaded Photo ${idx + 1}`}
-                  className="w-full h-full object-cover aspect-[4/3] sm:aspect-[3/2] md:aspect-[1/1]"
+                  alt={`Photo ${idx + 1}`}
+                  className="w-full h-full object-cover aspect-[4/3] sm:aspect-[3/2] md:aspect-[1/1] transition-transform duration-300 hover:scale-105"
                 />
-              </div>
+              </button>
             ))}
           </div>
         </div>
