@@ -19,12 +19,26 @@ function Season1992_93() {
       const statsData = await statsRes.json();
       const playersData = await playersRes.json();
 
+      // Filter games and stats for the 1992 season
       setGames(gamesData.filter(g => g.Season === 1992));
-      setPlayerStats(statsData.filter(s => {
+      setPlayers(playersData);
+
+      // Aggregate stats for each player for the 1992 season
+      const totals = {};
+      statsData.filter(s => {
         const game = gamesData.find(g => g.GameID === s.GameID);
         return game && game.Season === 1992;
-      }));
-      setPlayers(playersData);
+      }).forEach(stat => {
+        if (!totals[stat.PlayerID]) {
+          totals[stat.PlayerID] = { PlayerID: stat.PlayerID, Points: 0, Rebounds: 0 };
+        }
+
+        totals[stat.PlayerID].Points += stat.Points || 0;
+        totals[stat.PlayerID].Rebounds += stat.Rebounds || 0;
+      });
+
+      // Set the aggregated player stats
+      setPlayerStats(totals);
     }
 
     fetchData();
@@ -84,7 +98,7 @@ function Season1992_93() {
             </tr>
           </thead>
           <tbody>
-            {playerStats.map((stat, idx) => {
+            {Object.values(playerStats).map((stat, idx) => {
               const playerName = getPlayerName(stat.PlayerID);
               return (
                 <tr key={idx}>
