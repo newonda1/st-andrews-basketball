@@ -89,13 +89,16 @@ function Season1992_93() {
       {uploadedPhotos.length > 0 && (
         <div className="mb-8">
           <h2 className="text-2xl font-semibold text-center mb-4">📸 Team Photos</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
             {uploadedPhotos.map((src, idx) => (
-              <div key={idx} className="relative">
+              <div
+                key={idx}
+                className="relative overflow-hidden rounded-lg shadow transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+              >
                 <img
                   src={src}
                   alt={`Uploaded Photo ${idx + 1}`}
-                  className="w-full h-auto object-cover rounded-lg shadow-md"
+                  className="w-full h-full object-cover aspect-[4/3] sm:aspect-[3/2] md:aspect-[1/1]"
                 />
               </div>
             ))}
