@@ -167,6 +167,30 @@ function Season1992_93() {
       <p className="text-sm text-gray-600">
         Submitted photos will be reviewed before inclusion in the team’s online photobook.
       </p>
+      {selectedPhoto && (
+        <div
+          className="fixed inset-0 z-50 bg-black bg-opacity-80 flex items-center justify-center px-4"
+          onClick={() => setSelectedPhoto(null)}
+        >
+          <div
+            className="relative max-w-4xl w-full max-h-[90vh] overflow-auto"
+            onClick={(e) => e.stopPropagation()} // Prevent closing on image click
+          >
+            <button
+              onClick={() => setSelectedPhoto(null)}
+              className="absolute top-2 right-2 text-white text-3xl font-bold z-10"
+              aria-label="Close"
+            >
+              &times;
+            </button>
+            <img
+              src={selectedPhoto}
+              alt="Full Size"
+              className="w-full h-auto object-contain rounded-lg shadow-lg"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
