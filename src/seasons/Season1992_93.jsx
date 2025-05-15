@@ -158,7 +158,9 @@ function Season1992_93() {
                     <tr key={idx}>
                       <td className="border px-2 py-1">{playerName}</td>
                       <td className="border px-2 py-1">{stat.Points}</td>
-                      <td className="border px-2 py-1">{stat.Rebounds}</td>
+                      <td className="border px-2 py-1">
+                        {stat.Rebounds === 0 ? '-' : stat.Rebounds}
+                      </td>
                     </tr>
                   );
                 })}
