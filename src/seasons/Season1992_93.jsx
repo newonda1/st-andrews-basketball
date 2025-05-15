@@ -85,6 +85,13 @@ function Season1992_93() {
     return () => clearInterval(slideInterval);
   }, [uploadedPhotos.length]);
 
+  // Handle file upload
+  const handlePhotoUpload = (e) => {
+    const files = Array.from(e.target.files);
+    const newPhotos = files.map(file => URL.createObjectURL(file));  // Convert files to image URLs
+    setUploadedPhotos(prev => [...prev, ...newPhotos]); // Add new uploaded photos to the existing ones
+  };
+
   return (
     <div className="bg-gray-100 p-8 rounded-lg shadow-md max-w-6xl mx-auto space-y-10">
       <h1 className="text-3xl font-bold text-center mb-4">1992-93 Season Recap</h1>
