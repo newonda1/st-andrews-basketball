@@ -16,7 +16,6 @@ function Season1992_93() {
     '/images/1992_93_photo8.jpg',
     '/images/1992_93_photo9.jpg',
   ]);
-  const [currentSlide, setCurrentSlide] = useState(0);  // State for the current slide index
   const statLabels = {
     Points: 'Points',
     Rebounds: 'Rebounds'
@@ -75,16 +74,6 @@ function Season1992_93() {
   // Sort the player stats by Points in descending order
   const sortedPlayerStats = Object.values(playerStats).sort((a, b) => b.Points - a.Points);
 
-  // Automatic slide transition (change every 3 seconds)
-  useEffect(() => {
-    const slideInterval = setInterval(() => {
-      setCurrentSlide(prev => (prev + 1) % uploadedPhotos.length);  // Loop back to the first image
-    }, 3000);  // Change every 3 seconds
-
-    // Clean up the interval on component unmount
-    return () => clearInterval(slideInterval);
-  }, [uploadedPhotos.length]);
-
   // Handle file upload
   const handlePhotoUpload = (e) => {
     const files = Array.from(e.target.files);
@@ -96,17 +85,20 @@ function Season1992_93() {
     <div className="bg-gray-100 p-8 rounded-lg shadow-md max-w-6xl mx-auto space-y-10">
       <h1 className="text-3xl font-bold text-center mb-4">1992-93 Season Recap</h1>
 
-      {/* Section 0: Photo Slideshow */}
+      {/* Section 0: Photo Collage */}
       {uploadedPhotos.length > 0 && (
-        <div className="relative mb-8">
-          <div className="w-full h-auto overflow-hidden rounded-lg shadow-lg">
-            {/* Slideshow Image */}
-            <img
-              src={uploadedPhotos[currentSlide]}
-              alt={`Slide ${currentSlide}`}
-              className="w-3/4 h-auto object-cover transition-transform duration-1000 transform ease-in-out"
-              style={{ transform: `rotateY(${currentSlide * 360 / uploadedPhotos.length}deg)` }} // Rotate effect
-            />
+        <div className="mb-8">
+          <h2 className="text-2xl font-semibold text-center mb-4">📸 Team Photos</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {uploadedPhotos.map((src, idx) => (
+              <div key={idx} className="relative">
+                <img
+                  src={src}
+                  alt={`Uploaded Photo ${idx + 1}`}
+                  className="w-full h-auto object-cover rounded-lg shadow-md"
+                />
+              </div>
+            ))}
           </div>
         </div>
       )}
