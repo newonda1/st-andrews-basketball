@@ -85,13 +85,6 @@ function Season1992_93() {
     return () => clearInterval(slideInterval);
   }, [uploadedPhotos.length]);
 
-  // Handle file upload
-  const handlePhotoUpload = (e) => {
-    const files = Array.from(e.target.files);
-    const newPhotos = files.map(file => URL.createObjectURL(file));
-    setUploadedPhotos(prev => [...prev, ...newPhotos]); // Add new uploaded photos to the existing ones
-  };
-
   return (
     <div className="bg-gray-100 p-8 rounded-lg shadow-md max-w-6xl mx-auto space-y-10">
       <h1 className="text-3xl font-bold text-center mb-4">1992-93 Season Recap</h1>
@@ -100,10 +93,12 @@ function Season1992_93() {
       {uploadedPhotos.length > 0 && (
         <div className="relative mb-8">
           <div className="w-full h-auto overflow-hidden rounded-lg shadow-lg">
+            {/* Slideshow Image */}
             <img
               src={uploadedPhotos[currentSlide]}
               alt={`Slide ${currentSlide}`}
-              className="w-full h-auto object-cover"
+              className="w-3/4 h-auto object-cover transition-transform duration-1000 transform ease-in-out"
+              style={{ transform: `rotateY(${currentSlide * 360 / uploadedPhotos.length}deg)` }} // Rotate effect
             />
           </div>
         </div>
