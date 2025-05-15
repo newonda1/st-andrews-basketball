@@ -5,7 +5,18 @@ function Season1992_93() {
   const [playerStats, setPlayerStats] = useState([]);
   const [players, setPlayers] = useState([]);
   const [adjustments, setAdjustments] = useState([]);  // New state to hold adjustments data
-  const [uploadedPhotos, setUploadedPhotos] = useState([]);
+  const [uploadedPhotos, setUploadedPhotos] = useState([
+    '/images/1992_93_photo1.jpg',
+    '/images/1992_93_photo2.jpg',
+    '/images/1992_93_photo3.jpg',
+    '/images/1992_93_photo4.jpg',
+    '/images/1992_93_photo5.jpg',
+    '/images/1992_93_photo6.jpg',
+    '/images/1992_93_photo7.jpg',
+    '/images/1992_93_photo8.jpg',
+    '/images/1992_93_photo9.jpg',
+  ]);
+  const [currentSlide, setCurrentSlide] = useState(0);  // State for the current slide index
   const statLabels = {
     Points: 'Points',
     Rebounds: 'Rebounds'
@@ -61,18 +72,35 @@ function Season1992_93() {
     return player ? `${player.FirstName} ${player.LastName}` : 'Unknown Player';
   };
 
-  const handlePhotoUpload = (e) => {
-    const files = Array.from(e.target.files);
-    const newPhotos = files.map(file => URL.createObjectURL(file));
-    setUploadedPhotos(prev => [...prev, ...newPhotos]);
-  };
-
   // Sort the player stats by Points in descending order
   const sortedPlayerStats = Object.values(playerStats).sort((a, b) => b.Points - a.Points);
+
+  // Automatic slide transition (change every 3 seconds)
+  useEffect(() => {
+    const slideInterval = setInterval(() => {
+      setCurrentSlide(prev => (prev + 1) % uploadedPhotos.length);  // Loop back to the first image
+    }, 3000);  // Change every 3 seconds
+
+    // Clean up the interval on component unmount
+    return () => clearInterval(slideInterval);
+  }, [uploadedPhotos.length]);
 
   return (
     <div className="bg-gray-100 p-8 rounded-lg shadow-md max-w-6xl mx-auto space-y-10">
       <h1 className="text-3xl font-bold text-center mb-4">1992-93 Season Recap</h1>
+
+      {/* Section 0: Photo Slideshow */}
+      {uploadedPhotos.length > 0 && (
+        <div className="relative mb-8">
+          <div className="w-full h-auto overflow-hidden rounded-lg shadow-lg">
+            <img
+              src={uploadedPhotos[currentSlide]}
+              alt={`Slide ${currentSlide}`}
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+      )}
 
       {/* Section 1: Season Schedule & Results */}
       <h2 className="text-xl sm:text-2xl font-semibold mt-8 mb-4 whitespace-nowrap">
