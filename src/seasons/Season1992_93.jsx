@@ -85,6 +85,13 @@ function Season1992_93() {
     return () => clearInterval(slideInterval);
   }, [uploadedPhotos.length]);
 
+  // Handle file upload
+  const handlePhotoUpload = (e) => {
+    const files = Array.from(e.target.files);
+    const newPhotos = files.map(file => URL.createObjectURL(file));
+    setUploadedPhotos(prev => [...prev, ...newPhotos]); // Add new uploaded photos to the existing ones
+  };
+
   return (
     <div className="bg-gray-100 p-8 rounded-lg shadow-md max-w-6xl mx-auto space-y-10">
       <h1 className="text-3xl font-bold text-center mb-4">1992-93 Season Recap</h1>
@@ -158,11 +165,6 @@ function Season1992_93() {
       {/* Section 3: Photo Upload */}
       <h2 className="text-2xl font-semibold mt-8 mb-4">📸 Upload Your Photos</h2>
       <input type="file" accept="image/*" multiple onChange={handlePhotoUpload} className="block mb-4" />
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-        {uploadedPhotos.map((src, idx) => (
-          <img key={idx} src={src} alt={`Uploaded ${idx}`} className="w-full h-auto rounded shadow" />
-        ))}
-      </div>
       <p className="text-sm text-gray-600">
         Submitted photos will be reviewed before inclusion in the team’s online photobook.
       </p>
