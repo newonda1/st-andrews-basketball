@@ -141,29 +141,31 @@ function Season1992_93() {
 
       {/* Section 2: Player Totals for Points and Rebounds */}
       <h2 className="text-2xl font-semibold mt-8 mb-4">🏀 Player Totals (Points & Rebounds)</h2>
-      <div className="overflow-x-auto px-1">
-        <table className="w-full border text-center text-xs sm:text-sm md:text-base">
-          <thead>
-            <tr>
-              <th className="border px-2 py-1">Player</th>
-              <th className="border px-2 py-1">Points</th>
-              <th className="border px-2 py-1">Rebounds</th>
-            </tr>
-          </thead>
-          <tbody>
-            {sortedPlayerStats.map((stat, idx) => {
-              const playerName = getPlayerName(stat.PlayerID);
-              return (
-                <tr key={idx}>
-                  <td className="border px-2 py-1">{playerName}</td>
-                  <td className="border px-2 py-1">{stat.Points}</td>
-                  <td className="border px-2 py-1">{stat.Rebounds}</td>
+        <div className="overflow-x-auto px-1">
+          <div className="bg-white rounded-lg shadow p-4">
+            <table className="w-full text-center text-sm">
+              <thead>
+                <tr>
+                  <th className="border px-2 py-1 w-1/2">Player</th>
+                  <th className="border px-2 py-1 w-1/4">Points</th>
+                  <th className="border px-2 py-1 w-1/4">Rebounds</th>
                 </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </div>
+              </thead>
+              <tbody>
+                {sortedPlayerStats.map((stat, idx) => {
+                  const playerName = getPlayerName(stat.PlayerID);
+                  return (
+                    <tr key={idx}>
+                      <td className="border px-2 py-1">{playerName}</td>
+                      <td className="border px-2 py-1">{stat.Points}</td>
+                      <td className="border px-2 py-1">{stat.Rebounds}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </div>
 
       {/* Section 3: Photo Upload */}
       <h2 className="text-2xl font-semibold mt-8 mb-4">📸 Upload Your Photos</h2>
