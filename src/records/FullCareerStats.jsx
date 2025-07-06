@@ -121,7 +121,7 @@ function CareerRecords() {
           <tbody>
             {sortedStats.map((player, index) => (
               <tr key={index} className="border-t odd:bg-white even:bg-gray-100">
-                <td className="sticky left-0 z-0 bg-white px-2 py-1">{player.Name}</td>
+                <td className="sticky left-0 z-0 px-2 py-1 bg-inherit">{player.Name}</td>
                 <td className="px-2 py-1 text-center">{player.GradYear}</td>
                 <td className="px-2 py-1 text-center">{player.Points}</td>
                 <td className="px-2 py-1 text-center">{player.Rebounds}</td>
