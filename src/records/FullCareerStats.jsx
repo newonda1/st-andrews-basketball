@@ -85,68 +85,67 @@ function CareerRecords() {
 
   const handleSort = (field) => {
     if (field === sortField) {
-      // If clicking the same field, toggle ascending/descending
       setSortDirection(sortDirection === 'asc' ? 'desc' : 'asc');
     } else {
       setSortField(field);
-      setSortDirection('desc'); // New field = start with descending
+      setSortDirection('desc');
     }
   };
 
   return (
     <div className="p-6">
       <h1 className="text-2xl font-bold mb-6">Full Career Stats</h1>
-        <div className="overflow-x-auto">
-          <table className="w-full text-sm md:text-base table-auto whitespace-nowrap">
-            <thead>
-              <tr>
-                <th className="px-2 py-1 text-left">Player</th>
-                <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort('GradYear')}>Grad Year{sortField === 'GradYear' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
-                <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort('Points')}>Points{sortField === 'Points' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
-                <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort('Rebounds')}>Rebounds{sortField === 'Rebounds' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
-                <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort('Assists')}>Assists{sortField === 'Assists' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
-                <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort('Steals')}>Steals{sortField === 'Steals' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
-                <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort('Blocks')}>Blocks{sortField === 'Blocks' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
-                <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort('GamesPlayed')}>Games Played{sortField === 'GamesPlayed' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
-                <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort('ThreePM')}>3PM{sortField === 'ThreePM' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
-                <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort('ThreePA')}>3PA{sortField === 'ThreePA' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
-                <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort('ThreePPercentage')}>3P%{sortField === 'ThreePPercentage' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
-                <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort('TwoPM')}>2PM{sortField === 'TwoPM' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
-                <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort('TwoPA')}>2PA{sortField === 'TwoPA' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
-                <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort('TwoPPercentage')}>2P%{sortField === 'TwoPPercentage' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
-                <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort('FTM')}>FTM{sortField === 'FTM' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
-                <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort('FTA')}>FTA{sortField === 'FTA' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
-                <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort('FTPercentage')}>FT%{sortField === 'FTPercentage' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
-              </tr>
-            </thead>
+      <div className="overflow-x-auto">
+        <table className="w-full text-sm md:text-base table-auto whitespace-nowrap">
+          <thead>
+            <tr>
+              <th className="sticky left-0 z-10 bg-white px-2 py-1 text-left">Player</th>
+              <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort('GradYear')}>Grad Year{sortField === 'GradYear' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
+              <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort('Points')}>Points{sortField === 'Points' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
+              <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort('Rebounds')}>Rebounds{sortField === 'Rebounds' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
+              <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort('Assists')}>Assists{sortField === 'Assists' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
+              <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort('Steals')}>Steals{sortField === 'Steals' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
+              <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort('Blocks')}>Blocks{sortField === 'Blocks' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
+              <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort('GamesPlayed')}>Games Played{sortField === 'GamesPlayed' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
+              <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort('ThreePM')}>3PM{sortField === 'ThreePM' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
+              <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort('ThreePA')}>3PA{sortField === 'ThreePA' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
+              <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort('ThreePPercentage')}>3P%{sortField === 'ThreePPercentage' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
+              <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort('TwoPM')}>2PM{sortField === 'TwoPM' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
+              <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort('TwoPA')}>2PA{sortField === 'TwoPA' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
+              <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort('TwoPPercentage')}>2P%{sortField === 'TwoPPercentage' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
+              <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort('FTM')}>FTM{sortField === 'FTM' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
+              <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort('FTA')}>FTA{sortField === 'FTA' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
+              <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort('FTPercentage')}>FT%{sortField === 'FTPercentage' && (sortDirection === 'asc' ? '▲' : '▼')}</th>
+            </tr>
+          </thead>
           <tbody>
-             {sortedStats.map((player, index) => (
-                <tr key={index} className="border-t">
-                  <td className="px-2 py-1">{player.Name}</td>
-                  <td className="px-2 py-1 text-center">{player.GradYear}</td>
-                  <td className="px-2 py-1 text-center">{player.Points}</td>
-                  <td className="px-2 py-1 text-center">{player.Rebounds}</td>
-                  <td className="px-2 py-1 text-center">{player.Assists}</td>
-                  <td className="px-2 py-1 text-center">{player.Steals}</td>
-                  <td className="px-2 py-1 text-center">{player.Blocks}</td>
-                  <td className="px-2 py-1 text-center">{player.GamesPlayed}</td>
-                  <td className="px-2 py-1 text-center">{player.ThreePM}</td>
-                  <td className="px-2 py-1 text-center">{player.ThreePA}</td>
-                  <td className="px-2 py-1 text-center">
-                    {player.ThreePA > 0 ? ((player.ThreePM / player.ThreePA) * 100).toFixed(1) + "%" : "—"}
-                  </td>
-                  <td className="px-2 py-1 text-center">{player.TwoPM}</td>
-                  <td className="px-2 py-1 text-center">{player.TwoPA}</td>
-                  <td className="px-2 py-1 text-center">
-                    {player.TwoPA > 0 ? ((player.TwoPM / player.TwoPA) * 100).toFixed(1) + "%" : "—"}
-                  </td>
-                  <td className="px-2 py-1 text-center">{player.FTM}</td>
-                  <td className="px-2 py-1 text-center">{player.FTA}</td>
-                  <td className="px-2 py-1 text-center">
-                    {player.FTA > 0 ? ((player.FTM / player.FTA) * 100).toFixed(1) + "%" : "—"}
-                  </td>
-                </tr>
-              ))}
+            {sortedStats.map((player, index) => (
+              <tr key={index} className="border-t odd:bg-white even:bg-gray-100">
+                <td className="sticky left-0 z-0 bg-white px-2 py-1">{player.Name}</td>
+                <td className="px-2 py-1 text-center">{player.GradYear}</td>
+                <td className="px-2 py-1 text-center">{player.Points}</td>
+                <td className="px-2 py-1 text-center">{player.Rebounds}</td>
+                <td className="px-2 py-1 text-center">{player.Assists}</td>
+                <td className="px-2 py-1 text-center">{player.Steals}</td>
+                <td className="px-2 py-1 text-center">{player.Blocks}</td>
+                <td className="px-2 py-1 text-center">{player.GamesPlayed}</td>
+                <td className="px-2 py-1 text-center">{player.ThreePM}</td>
+                <td className="px-2 py-1 text-center">{player.ThreePA}</td>
+                <td className="px-2 py-1 text-center">
+                  {player.ThreePA > 0 ? ((player.ThreePM / player.ThreePA) * 100).toFixed(1) + "%" : "—"}
+                </td>
+                <td className="px-2 py-1 text-center">{player.TwoPM}</td>
+                <td className="px-2 py-1 text-center">{player.TwoPA}</td>
+                <td className="px-2 py-1 text-center">
+                  {player.TwoPA > 0 ? ((player.TwoPM / player.TwoPA) * 100).toFixed(1) + "%" : "—"}
+                </td>
+                <td className="px-2 py-1 text-center">{player.FTM}</td>
+                <td className="px-2 py-1 text-center">{player.FTA}</td>
+                <td className="px-2 py-1 text-center">
+                  {player.FTA > 0 ? ((player.FTM / player.FTA) * 100).toFixed(1) + "%" : "—"}
+                </td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
