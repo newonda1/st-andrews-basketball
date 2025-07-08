@@ -6,6 +6,7 @@ import SeasonRecords from './records/SeasonRecords';
 import SingleGameRecords from './records/SingleGameRecords';
 import ChrisHaslam from './legacy/ChrisHaslam';
 import Season1992_93 from './seasons/Season1992_93';
+import Season2023_24 from './seasons/Season2023_24';
 import Season2024_25 from './seasons/Season2024_25';
 import SeasonPlaceholder from './seasons/SeasonPlaceholder';
 import RecordsVsOpponents from './pages/RecordsVsOpponents';
@@ -254,6 +255,7 @@ function App() {
         <Route path="/records/single-game" element={<SingleGameRecords />} />
         <Route path="/legacy/ChrisHaslam" element={<ChrisHaslam />} />
         <Route path="/seasons/1992-93" element={<Season1992_93 />} />
+        <Route path="/seasons/2023-24" element={<Season2023_24 />} />
         <Route path="/seasons/2024-25" element={<Season2024_25 />} />
         <Route path="/seasons/:seasonId" element={<SeasonPlaceholder />} />
         <Route path="/records/opponents" element={<RecordsVsOpponents />} />
