@@ -34,6 +34,8 @@ function YearlyResults() {
           seasonLabel: seasonMap[season]?.label || season,
           coach: seasonMap[season]?.coach || "Unknown",
           seasonResult: seasonMap[season]?.result || "",
+          overallW: 0,
+          overallL: 0,
           homeW: 0,
           homeL: 0,
           awayW: 0,
@@ -54,6 +56,9 @@ function YearlyResults() {
 
       const loc = game.LocationType;
       const type = game.GameType;
+
+      if (isWin) stats.overallW++;
+      if (isLoss) stats.overallL++;
 
       if (loc === "Home") {
         isWin ? stats.homeW++ : isLoss ? stats.homeL++ : null;
@@ -81,6 +86,8 @@ function YearlyResults() {
     setSeasonStats(statsArray);
   };
 
+  const formatRecord = (wins, losses) => `${wins}–${losses}`;
+
   return (
     <div className="space-y-10 px-4">
       <h1 className="text-2xl font-bold text-center">Full Year-by-Year Results</h1>
@@ -91,15 +98,12 @@ function YearlyResults() {
             <tr>
               <th className="border px-2 py-1">Season</th>
               <th className="border px-2 py-1">Coach</th>
-              <th className="border px-2 py-1">Home<br />W</th>
-              <th className="border px-2 py-1">Home<br />L</th>
-              <th className="border px-2 py-1">Away<br />W</th>
-              <th className="border px-2 py-1">Away<br />L</th>
-              <th className="border px-2 py-1">Tourney/<br />Showcase W</th>
-              <th className="border px-2 py-1">Tourney/<br />Showcase L</th>
-              <th className="border px-2 py-1">Playoff<br />W</th>
-              <th className="border px-2 py-1">Playoff<br />L</th>
-              <th className="border px-2 py-1">Region<br />W–L</th>
+              <th className="border px-2 py-1">Overall</th>
+              <th className="border px-2 py-1">Region</th>
+              <th className="border px-2 py-1">Home</th>
+              <th className="border px-2 py-1">Away</th>
+              <th className="border px-2 py-1">Tourney/<br />Showcase</th>
+              <th className="border px-2 py-1">Playoffs</th>
               <th className="border px-2 py-1">Season Result</th>
             </tr>
           </thead>
@@ -108,15 +112,12 @@ function YearlyResults() {
               <tr key={i} className="text-center">
                 <td className="border px-2 py-1">{row.seasonLabel}</td>
                 <td className="border px-2 py-1">{row.coach}</td>
-                <td className="border px-2 py-1">{row.homeW}</td>
-                <td className="border px-2 py-1">{row.homeL}</td>
-                <td className="border px-2 py-1">{row.awayW}</td>
-                <td className="border px-2 py-1">{row.awayL}</td>
-                <td className="border px-2 py-1">{row.tourneyW}</td>
-                <td className="border px-2 py-1">{row.tourneyL}</td>
-                <td className="border px-2 py-1">{row.playoffW}</td>
-                <td className="border px-2 py-1">{row.playoffL}</td>
-                <td className="border px-2 py-1">{row.regionW}–{row.regionL}</td>
+                <td className="border px-2 py-1">{formatRecord(row.overallW, row.overallL)}</td>
+                <td className="border px-2 py-1">{formatRecord(row.regionW, row.regionL)}</td>
+                <td className="border px-2 py-1">{formatRecord(row.homeW, row.homeL)}</td>
+                <td className="border px-2 py-1">{formatRecord(row.awayW, row.awayL)}</td>
+                <td className="border px-2 py-1">{formatRecord(row.tourneyW, row.tourneyL)}</td>
+                <td className="border px-2 py-1">{formatRecord(row.playoffW, row.playoffL)}</td>
                 <td className="border px-2 py-1">{row.seasonResult}</td>
               </tr>
             ))}
