@@ -1,20 +1,25 @@
 import React, { useEffect, useState } from "react";
 
 function YearlyResults() {
-  const [games, setGames] = useState([]);
   const [seasonStats, setSeasonStats] = useState([]);
 
   useEffect(() => {
-    fetch("/data/games.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setGames(data);
-        processSeasonStats(data);
+    Promise.all([
+      fetch("/data/games.json").then((res) => res.json()),
+      fetch("/data/seasons.json").then((res) => res.json())
+    ])
+      .then(([gamesData, seasonsData]) => {
+        processSeasonStats(gamesData, seasonsData);
       })
-      .catch((err) => console.error("Failed to load games:", err));
+      .catch((err) => console.error("Failed to load data:", err));
   }, []);
 
-  const processSeasonStats = (games) => {
+  const processSeasonStats = (games, seasons) => {
+    const seasonMap = {};
+    seasons.forEach((s) => {
+      seasonMap[String(s.SeasonID)] = s.HeadCoach || "Unknown";
+    });
+
     const grouped = {};
 
     games.forEach((game) => {
@@ -22,7 +27,7 @@ function YearlyResults() {
       if (!grouped[season]) {
         grouped[season] = {
           season,
-          coach: game.Coach || "Unknown",
+          coach: seasonMap[season] || "Unknown",
           overallW: 0,
           overallL: 0,
           homeW: 0,
@@ -48,15 +53,13 @@ function YearlyResults() {
       if (isLoss) stats.overallL += 1;
 
       if (loc === "Home") {
-         isWin ? stats.homeW++ : isLoss ? stats.homeL++ : null;
+        isWin ? stats.homeW++ : isLoss ? stats.homeL++ : null;
       } else if (loc === "Away") {
         isWin ? stats.awayW++ : isLoss ? stats.awayL++ : null;
       }
 
-      if (type === "Tournament") {
+      if (type === "Region Tournament" || type === "State Tournament") {
         isWin ? stats.tourneyW++ : isLoss ? stats.tourneyL++ : null;
-      } else if (type === "Playoff") {
-        isWin ? stats.playoffW++ : isLoss ? stats.playoffL++ : null;
       }
     });
 
@@ -71,7 +74,6 @@ function YearlyResults() {
     <div className="space-y-10 px-4">
       <h1 className="text-2xl font-bold text-center">Full Year-by-Year Results</h1>
 
-      {/* Season-by-Season Results Table */}
       <div>
         <h2 className="text-xl font-semibold mb-2">Season Breakdown</h2>
         <div className="overflow-x-auto">
