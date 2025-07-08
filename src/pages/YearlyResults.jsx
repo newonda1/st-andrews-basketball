@@ -19,7 +19,8 @@ function YearlyResults() {
     seasons.forEach((s) => {
       seasonMap[String(s.SeasonID)] = {
         coach: s.HeadCoach || "Unknown",
-        label: `${s.YearStart}–${String(s.YearEnd).slice(-2)}`
+        label: `${s.YearStart}–${String(s.YearEnd).slice(-2)}`,
+        result: `${s.RegionFinish}${s.StateFinish ? " & " + s.StateFinish : ""}`
       };
     });
 
@@ -32,8 +33,7 @@ function YearlyResults() {
           season,
           seasonLabel: seasonMap[season]?.label || season,
           coach: seasonMap[season]?.coach || "Unknown",
-          overallW: 0,
-          overallL: 0,
+          seasonResult: seasonMap[season]?.result || "",
           homeW: 0,
           homeL: 0,
           awayW: 0,
@@ -42,6 +42,8 @@ function YearlyResults() {
           tourneyL: 0,
           playoffW: 0,
           playoffL: 0,
+          regionW: 0,
+          regionL: 0,
         };
       }
 
@@ -53,17 +55,22 @@ function YearlyResults() {
       const loc = game.LocationType;
       const type = game.GameType;
 
-      if (isWin) stats.overallW += 1;
-      if (isLoss) stats.overallL += 1;
-
       if (loc === "Home") {
         isWin ? stats.homeW++ : isLoss ? stats.homeL++ : null;
       } else if (loc === "Away") {
         isWin ? stats.awayW++ : isLoss ? stats.awayL++ : null;
       }
 
-      if (type === "Region Tournament" || type === "State Tournament") {
+      if (type === "Tournament" || type === "Showcase") {
         isWin ? stats.tourneyW++ : isLoss ? stats.tourneyL++ : null;
+      }
+
+      if (type === "Region Tournament" || type === "State Tournament") {
+        isWin ? stats.playoffW++ : isLoss ? stats.playoffL++ : null;
+      }
+
+      if (type === "Region") {
+        isWin ? stats.regionW++ : isLoss ? stats.regionL++ : null;
       }
     });
 
@@ -78,46 +85,43 @@ function YearlyResults() {
     <div className="space-y-10 px-4">
       <h1 className="text-2xl font-bold text-center">Full Year-by-Year Results</h1>
 
-      <div>
-        <h2 className="text-xl font-semibold mb-2">Season Breakdown</h2>
-        <div className="overflow-x-auto">
-          <table className="min-w-full table-auto text-sm border">
-            <thead className="bg-gray-200">
-              <tr>
-                <th className="border px-2 py-1">Season</th>
-                <th className="border px-2 py-1">Coach</th>
-                <th className="border px-2 py-1">W</th>
-                <th className="border px-2 py-1">L</th>
-                <th className="border px-2 py-1">Home W</th>
-                <th className="border px-2 py-1">Home L</th>
-                <th className="border px-2 py-1">Away W</th>
-                <th className="border px-2 py-1">Away L</th>
-                <th className="border px-2 py-1">Tourney W</th>
-                <th className="border px-2 py-1">Tourney L</th>
-                <th className="border px-2 py-1">Playoff W</th>
-                <th className="border px-2 py-1">Playoff L</th>
+      <div className="overflow-x-auto">
+        <table className="min-w-full table-auto text-sm border">
+          <thead className="bg-gray-200">
+            <tr>
+              <th className="border px-2 py-1">Season</th>
+              <th className="border px-2 py-1">Coach</th>
+              <th className="border px-2 py-1">Home<br />W</th>
+              <th className="border px-2 py-1">Home<br />L</th>
+              <th className="border px-2 py-1">Away<br />W</th>
+              <th className="border px-2 py-1">Away<br />L</th>
+              <th className="border px-2 py-1">Tourney/<br />Showcase W</th>
+              <th className="border px-2 py-1">Tourney/<br />Showcase L</th>
+              <th className="border px-2 py-1">Playoff<br />W</th>
+              <th className="border px-2 py-1">Playoff<br />L</th>
+              <th className="border px-2 py-1">Region<br />W–L</th>
+              <th className="border px-2 py-1">Season Result</th>
+            </tr>
+          </thead>
+          <tbody>
+            {seasonStats.map((row, i) => (
+              <tr key={i} className="text-center">
+                <td className="border px-2 py-1">{row.seasonLabel}</td>
+                <td className="border px-2 py-1">{row.coach}</td>
+                <td className="border px-2 py-1">{row.homeW}</td>
+                <td className="border px-2 py-1">{row.homeL}</td>
+                <td className="border px-2 py-1">{row.awayW}</td>
+                <td className="border px-2 py-1">{row.awayL}</td>
+                <td className="border px-2 py-1">{row.tourneyW}</td>
+                <td className="border px-2 py-1">{row.tourneyL}</td>
+                <td className="border px-2 py-1">{row.playoffW}</td>
+                <td className="border px-2 py-1">{row.playoffL}</td>
+                <td className="border px-2 py-1">{row.regionW}–{row.regionL}</td>
+                <td className="border px-2 py-1">{row.seasonResult}</td>
               </tr>
-            </thead>
-            <tbody>
-              {seasonStats.map((row, i) => (
-                <tr key={i} className="text-center">
-                  <td className="border px-2 py-1">{row.seasonLabel}</td>
-                  <td className="border px-2 py-1">{row.coach}</td>
-                  <td className="border px-2 py-1">{row.overallW}</td>
-                  <td className="border px-2 py-1">{row.overallL}</td>
-                  <td className="border px-2 py-1">{row.homeW}</td>
-                  <td className="border px-2 py-1">{row.homeL}</td>
-                  <td className="border px-2 py-1">{row.awayW}</td>
-                  <td className="border px-2 py-1">{row.awayL}</td>
-                  <td className="border px-2 py-1">{row.tourneyW}</td>
-                  <td className="border px-2 py-1">{row.tourneyL}</td>
-                  <td className="border px-2 py-1">{row.playoffW}</td>
-                  <td className="border px-2 py-1">{row.playoffL}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+            ))}
+          </tbody>
+        </table>
       </div>
     </div>
   );
