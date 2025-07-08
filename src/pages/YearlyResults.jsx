@@ -88,13 +88,49 @@ function YearlyResults() {
 
   const formatRecord = (wins, losses) => `${wins}–${losses}`;
 
+  const calculateTotals = () => {
+    return seasonStats.reduce(
+      (totals, row) => {
+        totals.overallW += row.overallW;
+        totals.overallL += row.overallL;
+        totals.regionW += row.regionW;
+        totals.regionL += row.regionL;
+        totals.homeW += row.homeW;
+        totals.homeL += row.homeL;
+        totals.awayW += row.awayW;
+        totals.awayL += row.awayL;
+        totals.tourneyW += row.tourneyW;
+        totals.tourneyL += row.tourneyL;
+        totals.playoffW += row.playoffW;
+        totals.playoffL += row.playoffL;
+        return totals;
+      },
+      {
+        overallW: 0,
+        overallL: 0,
+        regionW: 0,
+        regionL: 0,
+        homeW: 0,
+        homeL: 0,
+        awayW: 0,
+        awayL: 0,
+        tourneyW: 0,
+        tourneyL: 0,
+        playoffW: 0,
+        playoffL: 0,
+      }
+    );
+  };
+
+  const totals = calculateTotals();
+
   return (
     <div className="space-y-10 px-4">
       <h1 className="text-2xl font-bold text-center">Full Year-by-Year Results</h1>
 
       <div className="overflow-x-auto">
         <table className="min-w-full table-auto text-sm border">
-          <thead className="bg-gray-200">
+          <thead className="bg-gray-200 font-bold">
             <tr>
               <th className="border px-2 py-1">Season</th>
               <th className="border px-2 py-1">Coach</th>
@@ -121,6 +157,17 @@ function YearlyResults() {
                 <td className="border px-2 py-1">{row.seasonResult}</td>
               </tr>
             ))}
+            <tr className="bg-gray-200 font-bold text-center">
+              <td className="border px-2 py-1"></td>
+              <td className="border px-2 py-1">Totals</td>
+              <td className="border px-2 py-1">{formatRecord(totals.overallW, totals.overallL)}</td>
+              <td className="border px-2 py-1">{formatRecord(totals.regionW, totals.regionL)}</td>
+              <td className="border px-2 py-1">{formatRecord(totals.homeW, totals.homeL)}</td>
+              <td className="border px-2 py-1">{formatRecord(totals.awayW, totals.awayL)}</td>
+              <td className="border px-2 py-1">{formatRecord(totals.tourneyW, totals.tourneyL)}</td>
+              <td className="border px-2 py-1">{formatRecord(totals.playoffW, totals.playoffL)}</td>
+              <td className="border px-2 py-1"></td>
+            </tr>
           </tbody>
         </table>
       </div>
