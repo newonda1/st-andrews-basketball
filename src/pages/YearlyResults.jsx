@@ -17,7 +17,10 @@ function YearlyResults() {
   const processSeasonStats = (games, seasons) => {
     const seasonMap = {};
     seasons.forEach((s) => {
-      seasonMap[String(s.SeasonID)] = s.HeadCoach || "Unknown";
+      seasonMap[String(s.SeasonID)] = {
+        coach: s.HeadCoach || "Unknown",
+        label: `${s.YearStart}–${String(s.YearEnd).slice(-2)}`
+      };
     });
 
     const grouped = {};
@@ -27,7 +30,8 @@ function YearlyResults() {
       if (!grouped[season]) {
         grouped[season] = {
           season,
-          coach: seasonMap[season] || "Unknown",
+          seasonLabel: seasonMap[season]?.label || season,
+          coach: seasonMap[season]?.coach || "Unknown",
           overallW: 0,
           overallL: 0,
           homeW: 0,
@@ -97,7 +101,7 @@ function YearlyResults() {
             <tbody>
               {seasonStats.map((row, i) => (
                 <tr key={i} className="text-center">
-                  <td className="border px-2 py-1">{row.season}</td>
+                  <td className="border px-2 py-1">{row.seasonLabel}</td>
                   <td className="border px-2 py-1">{row.coach}</td>
                   <td className="border px-2 py-1">{row.overallW}</td>
                   <td className="border px-2 py-1">{row.overallL}</td>
