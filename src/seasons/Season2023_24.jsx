@@ -133,9 +133,7 @@ function Season2023_24() {
 </p>
 
 <p className="text-lg leading-relaxed space-y-4 text-justify">
-  Other key contributors included <strong>RaKari Harrison</strong>, a force in the paint on both ends of the court, known for his rebounding tenacity and timely scoring. While  
-  <strong>Amari Cook</strong> and <strong>Richaard Williams</strong> provided energy off the bench and <strong>Rhys Baillie</strong> capped off his senior year with his 
-  <strong>career-high 25-point performance</strong> in a win over Pinewood.
+  Other key contributors included <strong>RaKari Harrison</strong>, a force in the paint on both ends of the court, known for his rebounding tenacity and timely scoring. While <strong>Amari Cook</strong> and <strong>Richaard Williams</strong> provided energy off the bench and <strong>Rhys Baillie</strong> capped off his senior year with his <strong>career-high 25-point performance</strong> in a win over Pinewood.
 </p>
 
 <p className="text-lg leading-relaxed space-y-4 text-justify">
