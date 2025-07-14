@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 function SeasonRecords() {
   const [players, setPlayers] = useState([]);
   const [games, setGames] = useState([]);
-  const [playerStats, setPlayerStats] = useState([]);
   const [topRecordsByStat, setTopRecordsByStat] = useState({});
 
   const statCategories = [
@@ -20,48 +19,64 @@ function SeasonRecords() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [playerStatsRes, playersRes, gamesRes] = await Promise.all([
+        const [playerStatsRes, playersRes, gamesRes, adjustmentsRes] = await Promise.all([
           fetch("/data/playergamestats.json"),
           fetch("/data/players.json"),
           fetch("/data/games.json"),
+          fetch("/data/adjustments.json"),
         ]);
 
-        const [playerStatsData, playersData, gamesData] = await Promise.all([
+        const [playerStatsData, playersData, gamesData, adjustmentsData] = await Promise.all([
           playerStatsRes.json(),
           playersRes.json(),
           gamesRes.json(),
+          adjustmentsRes.json(),
         ]);
 
-        setPlayerStats(playerStatsData);
         setPlayers(playersData);
         setGames(gamesData);
 
-        // Group by (PlayerID, Season)
+        // Map GameID to Season
+        const gameIdToSeason = Object.fromEntries(
+          gamesData.map((g) => [String(g.GameID), g.Season])
+        );
+
+        // Combine regular stats and adjustments
+        const allStats = [
+          ...playerStatsData.map((entry) => ({
+            ...entry,
+            Season: gameIdToSeason[String(entry.GameID)] || null,
+          })),
+          ...adjustmentsData.map((entry) => ({
+            ...entry,
+            Season: entry.SeasonID,
+          })),
+        ];
+
+        // Group and sum by (PlayerID, Season)
         const seasonTotals = {};
 
-        playerStatsData.forEach((entry) => {
-          const game = gamesData.find(
-            (g) => String(g.GameID) === String(entry.GameID)
-          );
-          if (!game || !game.Season) return;
+        allStats.forEach((entry) => {
+          if (!entry.PlayerID || !entry.Season) return;
 
-          const seasonKey = `${entry.PlayerID}_${game.Season}`;
+          const key = `${entry.PlayerID}_${entry.Season}`;
 
-          if (!seasonTotals[seasonKey]) {
-            seasonTotals[seasonKey] = {
+          if (!seasonTotals[key]) {
+            seasonTotals[key] = {
               PlayerID: entry.PlayerID,
-              Season: game.Season,
+              Season: entry.Season,
               ...Object.fromEntries(statCategories.map((stat) => [stat, 0])),
             };
           }
 
           statCategories.forEach((stat) => {
             if (entry[stat] !== undefined && entry[stat] !== null) {
-              seasonTotals[seasonKey][stat] += entry[stat];
+              seasonTotals[key][stat] += entry[stat];
             }
           });
         });
 
+        // Sort and extract top 10 for each stat
         const result = {};
 
         statCategories.forEach((stat) => {
@@ -99,7 +114,7 @@ function SeasonRecords() {
   return (
     <div className="p-6">
       <h1 className="text-3xl font-bold mb-6">Single Season Records</h1>
-      {statCategories.map((stat) => (
+      {Object.entries(topRecordsByStat).map(([stat, records]) => (
         <div key={stat} className="mb-10">
           <h2 className="text-xl font-semibold mb-2">{stat}</h2>
           <table className="w-full border border-gray-300">
@@ -111,7 +126,7 @@ function SeasonRecords() {
               </tr>
             </thead>
             <tbody>
-              {(topRecordsByStat[stat] || []).map((record, index) => (
+              {records.map((record, index) => (
                 <tr key={index} className="border-t">
                   <td className="p-2">{record.value}</td>
                   <td className="p-2">{record.playerName}</td>
