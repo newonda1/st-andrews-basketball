@@ -16,6 +16,13 @@ function SeasonRecords() {
     "FTA",
   ];
 
+  const formatSeason = (season) => {
+    if (!season || isNaN(season)) return "Unknown Season";
+    const startYear = parseInt(season);
+    const endYear = String((startYear + 1) % 100).padStart(2, "0");
+    return `${startYear}-${endYear}`;
+  };
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -95,7 +102,7 @@ function SeasonRecords() {
               playerName: player
                 ? `${player.FirstName} ${player.LastName}`
                 : "Unknown Player",
-              season: record.Season || "Unknown Season",
+              season: formatSeason(record.Season),
             };
           });
 
