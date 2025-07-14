@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 function SeasonRecords() {
   const [players, setPlayers] = useState([]);
+  const [games, setGames] = useState([]);
   const [playerStats, setPlayerStats] = useState([]);
   const [topRecordsByStat, setTopRecordsByStat] = useState({});
 
@@ -19,34 +20,44 @@ function SeasonRecords() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [playerStatsRes, playersRes] = await Promise.all([
+        const [playerStatsRes, playersRes, gamesRes] = await Promise.all([
           fetch("/data/playergamestats.json"),
           fetch("/data/players.json"),
+          fetch("/data/games.json"),
         ]);
 
-        const [playerStatsData, playersData] = await Promise.all([
+        const [playerStatsData, playersData, gamesData] = await Promise.all([
           playerStatsRes.json(),
           playersRes.json(),
+          gamesRes.json(),
         ]);
 
         setPlayerStats(playerStatsData);
         setPlayers(playersData);
+        setGames(gamesData);
 
+        // Group by (PlayerID, Season)
         const seasonTotals = {};
 
         playerStatsData.forEach((entry) => {
-          const key = `${entry.PlayerID}_${entry.Season}`;
-          if (!seasonTotals[key]) {
-            seasonTotals[key] = {
+          const game = gamesData.find(
+            (g) => String(g.GameID) === String(entry.GameID)
+          );
+          if (!game || !game.Season) return;
+
+          const seasonKey = `${entry.PlayerID}_${game.Season}`;
+
+          if (!seasonTotals[seasonKey]) {
+            seasonTotals[seasonKey] = {
               PlayerID: entry.PlayerID,
-              Season: entry.Season,
-              ...Object.fromEntries(statCategories.map(stat => [stat, 0])),
+              Season: game.Season,
+              ...Object.fromEntries(statCategories.map((stat) => [stat, 0])),
             };
           }
 
           statCategories.forEach((stat) => {
             if (entry[stat] !== undefined && entry[stat] !== null) {
-              seasonTotals[key][stat] += entry[stat];
+              seasonTotals[seasonKey][stat] += entry[stat];
             }
           });
         });
@@ -66,7 +77,9 @@ function SeasonRecords() {
 
             return {
               value: record[stat],
-              playerName: player ? `${player.FirstName} ${player.LastName}` : "Unknown Player",
+              playerName: player
+                ? `${player.FirstName} ${player.LastName}`
+                : "Unknown Player",
               season: record.Season || "Unknown Season",
             };
           });
