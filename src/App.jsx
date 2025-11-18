@@ -4,7 +4,6 @@ import Home from './Home';
 import FullCareerStats from './records/FullCareerStats';
 import SeasonRecords from './records/SeasonRecords';
 import SingleGameRecords from './records/SingleGameRecords';
-import ChrisHaslam from './legacy/ChrisHaslam';
 import Season1992_93 from './seasons/Season1992_93';
 import Season2023_24 from './seasons/Season2023_24';
 import Season2024_25 from './seasons/Season2024_25';
@@ -162,33 +161,6 @@ function App() {
       </Link>
     </div>
 
-    {/* Legacy Players section */}
-    <div className="border-t pt-4">
-      <button
-        onClick={() => setLegacyOpen(!legacyOpen)}
-        className="flex items-center justify-between w-full p-3 hover:bg-gray-200 rounded-md"
-      >
-        <span>Legacy Players</span>
-        <span
-          className={`ml-2 inline-block transform transition-transform duration-300 ${
-            legacyOpen ? "rotate-180" : "rotate-0"
-          }`}
-        >
-          ▼
-        </span>
-      </button>
-      {legacyOpen && (
-        <div className="ml-4">
-          <Link
-            to="/legacy/ChrisHaslam"
-            className="block px-2 py-1 text-sm hover:bg-gray-200"
-          >
-            Chris Haslam
-          </Link>
-        </div>
-      )}
-    </div>
-
     {/* All-Time Records Section */}
 <div className="border-t pt-4">
   <button
@@ -254,7 +226,6 @@ function App() {
         <Route path="/records/career" element={<FullCareerStats />} />
         <Route path="/records/season" element={<SeasonRecords />} />
         <Route path="/records/single-game" element={<SingleGameRecords />} />
-        <Route path="/legacy/ChrisHaslam" element={<ChrisHaslam />} />
         <Route path="/seasons/1992-93" element={<Season1992_93 />} />
         <Route path="/seasons/2023-24" element={<Season2023_24 />} />
         <Route path="/seasons/2024-25" element={<Season2024_25 />} />
