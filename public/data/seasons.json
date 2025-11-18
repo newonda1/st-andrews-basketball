@@ -1,0 +1,52 @@
+[
+  {
+    "SeasonID": 1992,
+    "YearStart": 1992,
+    "YearEnd": 1993,
+    "HeadCoach": "Paul Hill",
+    "RegionSeed": null,
+    "RegionFinish": "Region Champion",
+    "StateSeed": null,
+    "StateFinish": "State Champion"
+  },
+  {
+    "SeasonID": 2021,
+    "YearStart": 2021,
+    "YearEnd": 2022,
+    "HeadCoach": "Mel Abrams Jr.",
+    "RegionSeed": 1,
+    "RegionFinish": "Region Champion",
+    "StateSeed": null,
+    "StateFinish": "State Champion"
+  },
+  {
+    "SeasonID": 2022,
+    "YearStart": 2022,
+    "YearEnd": 2023,
+    "HeadCoach": "Mel Abrams Jr.",
+    "RegionSeed": 1,
+    "RegionFinish": "Region Champion",
+    "StateSeed": null,
+    "StateFinish": "State Champion"
+  },
+  {
+    "SeasonID": 2023,
+    "YearStart": 2023,
+    "YearEnd": 2024,
+    "HeadCoach": "Mel Abrams Jr.",
+    "RegionSeed": 1,
+    "RegionFinish": "Region Champion",
+    "StateSeed": 2,
+    "StateFinish": "State Final Four"
+  },
+  {
+    "SeasonID": 2024,
+    "YearStart": 2024,
+    "YearEnd": 2025,
+    "HeadCoach": "Mel Abrams Jr.",
+    "RegionSeed": 1,
+    "RegionFinish": "Region Champion",
+    "StateSeed": 2,
+    "StateFinish": "State Champion"
+  }
+]
