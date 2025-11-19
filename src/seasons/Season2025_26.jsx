@@ -162,7 +162,7 @@ function Season2025_26() {
             alt="2025–26 St. Andrew's boys' basketball roster"
             className="float-left mr-4 mb-3 w-full max-w-xs rounded-lg shadow"
           />
-          <p>
+          <p className="mb-5 leading-relaxed">
             After winning three state championships in the past four years, the
             St. Andrew’s Lions enter the 2025-26 basketball season carrying both
             high expectations and a new identity. For the first time in five
@@ -171,7 +171,7 @@ function Season2025_26() {
             dominant small-school programs.
           </p>
 
-          <p>
+          <p className="mb-5 leading-relaxed">
             Head coach Mel Abrams, now in his 11th season, guided last year’s
             team to a 26-3 overall record and a perfect 10-0 record in region
             play, which extended their region winning streak to 40 straight games
@@ -185,10 +185,10 @@ function Season2025_26() {
           <img
              src="/images/Season2025_26_2.PNG"
               alt="St. Andrew's boys' basketball action collage"
-            className="float-right ml-4 mt-4 mb-3 w-full max-w-md rounded-lg shadow"
+            className="float-right ml-4 mt-4 mb-3 w-full max-w-sm rounded-lg shadow"
            />
           
-          <p>
+          <p className="mb-5 leading-relaxed">
             The Lions return a solid core led by Ja’Cari Glover (6’5, F, class
             of ’26), who established himself as one of the region’s most
             versatile forwards last season. Glover’s ability to score, rebound,
@@ -200,7 +200,7 @@ function Season2025_26() {
             perimeter shooter and a two-way player.
           </p>
 
-          <p>
+          <p className="mb-5 leading-relaxed">
             Replacing Zayden Edwards (6’1, G), last year’s all-state performer
             and team captain, along with Miles Cummings (6’8, C), the Lions’
             interior anchor, will be no small task. Their graduation marks the
@@ -212,7 +212,7 @@ function Season2025_26() {
             helping to fill the void left by last year’s senior class.
           </p>
 
-          <p>
+          <p className="mb-5 leading-relaxed">
             St. Andrew’s has built a demanding non-region schedule, designed to
             test the Lions early and prepare them for another deep postseason
             run. For Abrams and his staff, the focus remains on growth,
@@ -222,7 +222,7 @@ function Season2025_26() {
             ends of the court, we have a chance to be very good again.”
           </p>
 
-          <p>
+          <p className="mb-5 leading-relaxed">
             Even amid change, the culture of St. Andrew’s basketball remains
             unmistakable as it will continue to focus on unselfish play,
             relentless defense, and a commitment to excellence that has made the
