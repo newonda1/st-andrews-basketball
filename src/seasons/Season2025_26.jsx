@@ -188,7 +188,7 @@ function Season2025_26() {
             className="float-right ml-4 mt-4 mb-3 w-full max-w-sm rounded-lg shadow"
            />
           
-          <p className="mb-5 leading-relaxed">
+          <p className="mb-3 leading-relaxed">
             The Lions return a solid core led by Ja’Cari Glover (6’5, F, class
             of ’26), who established himself as one of the region’s most
             versatile forwards last season. Glover’s ability to score, rebound,
@@ -200,7 +200,7 @@ function Season2025_26() {
             perimeter shooter and a two-way player.
           </p>
 
-          <p className="mb-5 leading-relaxed">
+          <p className="mb-3 leading-relaxed">
             Replacing Zayden Edwards (6’1, G), last year’s all-state performer
             and team captain, along with Miles Cummings (6’8, C), the Lions’
             interior anchor, will be no small task. Their graduation marks the
@@ -212,7 +212,7 @@ function Season2025_26() {
             helping to fill the void left by last year’s senior class.
           </p>
 
-          <p className="mb-5 leading-relaxed">
+          <p className="mb-3 leading-relaxed">
             St. Andrew’s has built a demanding non-region schedule, designed to
             test the Lions early and prepare them for another deep postseason
             run. For Abrams and his staff, the focus remains on growth,
@@ -222,7 +222,7 @@ function Season2025_26() {
             ends of the court, we have a chance to be very good again.”
           </p>
 
-          <p className="mb-5 leading-relaxed">
+          <p className="mb-3 leading-relaxed">
             Even amid change, the culture of St. Andrew’s basketball remains
             unmistakable as it will continue to focus on unselfish play,
             relentless defense, and a commitment to excellence that has made the
