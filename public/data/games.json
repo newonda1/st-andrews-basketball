@@ -2501,12 +2501,12 @@
     "Opponent": "South Effingham High School",
     "LocationType": "Home",
     "GameType": "Non-Region",
-    "Result": "Unknown",
-    "TeamScore": null,
-    "OpponentScore": null,
-    "ResultMargin": null,
+    "Result": "W",
+    "TeamScore": 77,
+    "OpponentScore": 46,
+    "ResultMargin": 31,
     "Season": 2025,
-    "IsComplete": "Unknown"
+    "IsComplete": "Yes"
   },
   {
     "GameID": 20251121,
