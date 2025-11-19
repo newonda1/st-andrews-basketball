@@ -1,20 +1,17 @@
 import React, { useEffect, useState } from "react";
 
-// Turn "1978" into "1978–79", leave labels with a dash alone
+// Turn "1978" into "1978–79", leave labels that already have a dash/en dash alone.
 function formatSeasonLabel(rawSeason) {
   const s = String(rawSeason);
 
-  // If it already has a dash/en dash, assume it's already formatted, e.g. "1992–93"
   if (s.includes("–") || s.includes("-")) return s;
 
-  // If it's a 4-digit year, make "YYYY–YY"
   if (s.length === 4 && !Number.isNaN(Number(s))) {
     const startYear = Number(s);
     const endYearShort = String((startYear + 1) % 100).padStart(2, "0");
     return `${startYear}–${endYearShort}`;
   }
 
-  // Fallback
   return s;
 }
 
@@ -33,83 +30,88 @@ function YearlyResults() {
   }, []);
 
   const processSeasonStats = (games, seasons) => {
-    // ---- 1. Build season metadata from seasons.json ----
+    // 1. Build lookup of season metadata from seasons.json
     const seasonMeta = {};
 
     seasons.forEach((s) => {
-      const meta = {
-        coach: s.HeadCoach || s.Coach || "Unknown",
-        label: undefined,
-        // Accept a SeasonResult field if you ever add it,
-        // otherwise build from RegionFinish / StateFinish
-        result:
-          s.SeasonResult ||
-          `${s.RegionFinish || ""}${
-            s.StateFinish ? (s.RegionFinish ? " & " : "") + s.StateFinish : ""
-          }`
-      };
+      const coach = s.HeadCoach || s.Coach || "Unknown";
 
-      // Decide how to label the season
+      let label = "";
       if (s.DisplaySeason) {
-        meta.label = s.DisplaySeason;
+        label = s.DisplaySeason;
       } else if (s.SeasonLabel) {
-        meta.label = s.SeasonLabel;
+        label = s.SeasonLabel;
       } else if (s.YearStart && s.YearEnd) {
-        meta.label = `${s.YearStart}–${String(s.YearEnd).slice(-2)}`;
-      } else if (s.SeasonID) {
-        meta.label = String(s.SeasonID);
+        label = `${s.YearStart}–${String(s.YearEnd).slice(-2)}`;
+      } else if (s.SeasonID != null) {
+        label = String(s.SeasonID);
       }
 
-      // Make it easy to match even if keys differ:
-      // SeasonID (might be "2024-25"), YearStart (e.g. 2024), or Season
-      const keySeasonId = s.SeasonID != null ? String(s.SeasonID) : null;
-      const keyYearStart = s.YearStart != null ? String(s.YearStart) : null;
-      const keySeason = s.Season != null ? String(s.Season) : null;
+      const parts = [];
+      if (s.RegionFinish) parts.push(s.RegionFinish);
+      if (s.StateFinish) parts.push(s.StateFinish);
+      const result = parts.join(" & ");
 
-      if (keySeasonId) seasonMeta[keySeasonId] = meta;
-      if (keyYearStart) seasonMeta[keyYearStart] = meta;
-      if (keySeason) seasonMeta[keySeason] = meta;
+      const meta = { coach, label, result };
+
+      const keyYear = s.YearStart != null ? String(s.YearStart) : null;
+      const keyId = s.SeasonID != null ? String(s.SeasonID) : null;
+
+      if (keyYear) seasonMeta[keyYear] = meta;
+      if (keyId) seasonMeta[keyId] = meta;
     });
 
-    // ---- 2. Group games by season and count records ----
+    // 2. Group games by season and count records
     const grouped = {};
 
     games.forEach((g) => {
-  const seasonKey = String(g.Season);
+      const seasonKey = String(g.Season);
 
-  if (!grouped[seasonKey]) {
-    grouped[seasonKey] = {
-      overallW: 0,
-      overallL: 0,
-      regionW: 0,
-      regionL: 0,
-      homeW: 0,
-      homeL: 0,
-      awayW: 0,
-      awayL: 0,
-      tourneyW: 0,
-      tourneyL: 0,
-      playoffW: 0,
-      playoffL: 0
-    };
-  }
+      if (!grouped[seasonKey]) {
+        grouped[seasonKey] = {
+          overallW: 0,
+          overallL: 0,
+          regionW: 0,
+          regionL: 0,
+          homeW: 0,
+          homeL: 0,
+          awayW: 0,
+          awayL: 0,
+          tourneyW: 0,
+          tourneyL: 0,
+          playoffW: 0,
+          playoffL: 0
+        };
+      }
 
-  const stats = grouped[seasonKey];
+      const stats = grouped[seasonKey];
 
-  const result = g.Result;
+      const result = g.Result;
 
-  // 🔴 Skip games that don’t have a final result yet
-  if (result !== "W" && result !== "L") {
-    return; // continue to the next game
-  }
+      // Skip games that don't have a real result yet (e.g. "Unknown")
+      if (result !== "W" && result !== "L") {
+        return;
+      }
 
       const isWin = result === "W";
-      const isLoss = result === "L";
-      const isRegion = g.IsRegion === true;
-      const isPlayoff = g.IsPlayoff === true;
-      const isTourney = g.IsTourney === true || g.IsShowcase === true;
-      const isHome = g.Site === "H";
-      const isAway = g.Site === "A";
+
+      const gameType = g.GameType || "";
+      const location = g.LocationType || "";
+
+      // Region = regular season region games only
+      const isRegion = gameType === "Region";
+
+      // Playoffs = region tournament + state tournament
+      const isPlayoff =
+        gameType === "Region Tournament" || gameType === "State Tournament";
+
+      // Tourney/Showcase = in-season tournaments & showcases (non-playoff)
+      const isTourney =
+        gameType === "Tournament" || gameType === "Showcase";
+
+      // Home / Away (neutral games don't count for either)
+      const isHome = location === "Home";
+      const isAway = location === "Away";
 
       // Overall
       if (isWin) stats.overallW++;
@@ -143,7 +145,7 @@ function YearlyResults() {
       }
     });
 
-    // ---- 3. Attach metadata and sort ----
+    // 3. Attach metadata and sort seasons oldest → newest
     const statsArray = Object.entries(grouped).map(([seasonKey, stats]) => {
       const meta = seasonMeta[seasonKey] || {};
       const displaySeason = formatSeasonLabel(meta.label || seasonKey);
@@ -157,7 +159,6 @@ function YearlyResults() {
       };
     });
 
-    // Sort by starting year, newest to oldest
     statsArray.sort(
       (a, b) =>
         Number(String(a.seasonKey).slice(0, 4)) -
