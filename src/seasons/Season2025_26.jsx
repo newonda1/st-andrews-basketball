@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import SeasonImgPlayers from "./Season2025_26_1.PNG";
-import SeasonImgJerseys from "./Season2025_26_2.PNG";
 import { Link } from 'react-router-dom';
 
 function Season2025_26() {
@@ -160,7 +158,7 @@ function Season2025_26() {
         <div className="text-gray-800 leading-relaxed">
           {/* 👇 Top-left image, text wraps around it */}
           <img
-            src={SeasonImgPlayers}
+            src="/images/Season2025_26_1.PNG"
             alt="2025–26 St. Andrew's boys' basketball roster"
             className="float-left mr-4 mb-3 w-full max-w-xs rounded-lg shadow"
           />
@@ -185,7 +183,7 @@ function Season2025_26() {
           </p>
 
           <img
-             src={SeasonImgJerseys}
+             src="/images/Season2025_26_2.PNG"
               alt="St. Andrew's boys' basketball action collage"
             className="float-right ml-4 mt-4 mb-3 w-full max-w-md rounded-lg shadow"
            />
