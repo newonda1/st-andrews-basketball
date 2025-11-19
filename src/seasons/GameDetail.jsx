@@ -89,9 +89,10 @@ function GameDetail() {
 
       <section>
         <h2 className="text-xl font-semibold mb-2">Game Recap</h2>
-        <p className="text-gray-700 leading-relaxed">
-          {/* TODO: Replace this with your actual recap text for this game. */}
-          Recap coming soon.
+        <p className="text-gray-700 leading-relaxed whitespace-pre-line">
+          {game.Recap && game.Recap.trim().length > 0
+            ? game.Recap
+            : "Recap coming soon."}
         </p>
       </section>
 
