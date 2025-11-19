@@ -154,10 +154,16 @@ function Season2025_26() {
       <h1 className="text-3xl font-bold text-center mb-4">2025–26 Season</h1>
 
       {/* 1. OVERVIEW */}
-      <section>
+      <section className="bg-white rounded-2xl shadow-sm p-6 space-y-4">
         <h2 className="text-2xl font-semibold mt-4 mb-3">Season Overview</h2>
 
-        <div className="space-y-4 text-lg leading-relaxed text-justify">
+        <div className="text-gray-800 leading-relaxed">
+          {/* 👇 Top-left image, text wraps around it */}
+          <img
+            src={SeasonImgPlayers}
+            alt="2025–26 St. Andrew's boys' basketball roster"
+            className="float-left mr-4 mb-3 w-full max-w-xs rounded-lg shadow"
+          />
           <p>
             After winning three state championships in the past four years, the
             St. Andrew’s Lions enter the 2025-26 basketball season carrying both
@@ -178,6 +184,12 @@ function Season2025_26() {
             defend and rebound as a group will determine how far we go.”
           </p>
 
+          <img
+             src={SeasonImgJerseys}
+              alt="St. Andrew's boys' basketball action collage"
+            className="float-right ml-4 mt-4 mb-3 w-full max-w-md rounded-lg shadow"
+           />
+          
           <p>
             The Lions return a solid core led by Ja’Cari Glover (6’5, F, class
             of ’26), who established himself as one of the region’s most
@@ -221,6 +233,7 @@ function Season2025_26() {
             Edwards leading the way, the question isn’t whether they can sustain
             their success. Instead, it’s on how they’ll redefine it.
           </p>
+          <div className="clear-both" />
         </div>
       </section>
 
