@@ -75,28 +75,36 @@ function YearlyResults() {
     const grouped = {};
 
     games.forEach((g) => {
-      const seasonKey = String(g.Season);
+  const seasonKey = String(g.Season);
 
-      if (!grouped[seasonKey]) {
-        grouped[seasonKey] = {
-          overallW: 0,
-          overallL: 0,
-          regionW: 0,
-          regionL: 0,
-          homeW: 0,
-          homeL: 0,
-          awayW: 0,
-          awayL: 0,
-          tourneyW: 0,
-          tourneyL: 0,
-          playoffW: 0,
-          playoffL: 0
-        };
-      }
+  if (!grouped[seasonKey]) {
+    grouped[seasonKey] = {
+      overallW: 0,
+      overallL: 0,
+      regionW: 0,
+      regionL: 0,
+      homeW: 0,
+      homeL: 0,
+      awayW: 0,
+      awayL: 0,
+      tourneyW: 0,
+      tourneyL: 0,
+      playoffW: 0,
+      playoffL: 0
+    };
+  }
 
-      const stats = grouped[seasonKey];
+  const stats = grouped[seasonKey];
 
-      const isWin = g.Result === "W";
+  const result = g.Result;
+
+  // 🔴 Skip games that don’t have a final result yet
+  if (result !== "W" && result !== "L") {
+    return; // continue to the next game
+  }
+
+      const isWin = result === "W";
+      const isLoss = result === "L";
       const isRegion = g.IsRegion === true;
       const isPlayoff = g.IsPlayoff === true;
       const isTourney = g.IsTourney === true || g.IsShowcase === true;
@@ -152,8 +160,8 @@ function YearlyResults() {
     // Sort by starting year, newest to oldest
     statsArray.sort(
       (a, b) =>
-        Number(String(b.seasonKey).slice(0, 4)) -
-        Number(String(a.seasonKey).slice(0, 4))
+        Number(String(a.seasonKey).slice(0, 4)) -
+        Number(String(b.seasonKey).slice(0, 4))
     );
 
     setSeasonStats(statsArray);
