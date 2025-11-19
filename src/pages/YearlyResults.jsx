@@ -213,7 +213,7 @@ function YearlyResults() {
       </h1>
 
       <div className="overflow-x-auto">
-        <table className="min-w-full table-auto text-sm border">
+        <table className="min-w-full table-auto text-sm border text-center">
           <thead className="bg-gray-200 font-bold">
             <tr>
               <th className="border px-2 py-1">Season</th>
