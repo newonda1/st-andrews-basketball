@@ -291,7 +291,6 @@ function Season2025_26() {
               {games.map((game, idx) => {
                 const hasResult = game.Result === 'W' || game.Result === 'L';
 
-                // If the game is complete, make the opponent name a link.
                 const opponentCell = hasResult ? (
                   <Link
                     to={`/games/${game.GameID}`}
@@ -305,10 +304,14 @@ function Season2025_26() {
 
                 return (
                   <tr key={game.GameID || idx}>
-                    <td className="border px-2 py-1">{formatDate(game.Date)}</td>
-                    <td className="border px-2 py-1">{opponentCell}</td>
-                    <td className="border px-2 py-1">{formatResult(game)}</td>
-                    <td className="border px-2 py-1 whitespace-nowrap">
+                    <td className="border px-2 py-1 text-center">
+                      {formatDate(game.Date)}
+                    </td>
+                    <td className="border px-2 py-1 text-center">{opponentCell}</td>
+                    <td className="border px-2 py-1 text-center">
+                      {formatResult(game)}
+                    </td>
+                    <td className="border px-2 py-1 whitespace-nowrap text-center">
                       {formatScore(game)}
                     </td>
                   </tr>
