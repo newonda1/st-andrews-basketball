@@ -160,7 +160,7 @@ function Season2025_26() {
           <img
             src="/images/Season2025_26_1.PNG"
             alt="2025–26 St. Andrew's boys' basketball roster"
-            className="float-left mr-4 mb-3 w-full max-w-xs rounded-lg shadow"
+            className="float-left mr-4 mb-1 w-full max-w-xs rounded-lg shadow"
           />
           <p className="mb-5 leading-relaxed">
             After winning three state championships in the past four years, the
@@ -171,7 +171,7 @@ function Season2025_26() {
             dominant small-school programs.
           </p>
 
-          <p className="mb-5 leading-relaxed">
+          <p className="mb-6 leading-relaxed">
             Head coach Mel Abrams, now in his 11th season, guided last year’s
             team to a 26-3 overall record and a perfect 10-0 record in region
             play, which extended their region winning streak to 40 straight games
