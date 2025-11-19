@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { useParams, Link } from "react-router-dom";
 
 function GameDetail() {
   const { gameId } = useParams();
@@ -9,41 +9,66 @@ function GameDetail() {
 
   useEffect(() => {
     async function fetchData() {
-      const [gamesRes, statsRes, playersRes] = await Promise.all([
-        fetch('/data/games.json'),
-        fetch('/data/playergamestats.json'),
-        fetch('/data/players.json')
-      ]);
+      try {
+        const [gamesRes, statsRes, playersRes] = await Promise.all([
+          fetch("/data/games.json"),
+          fetch("/data/playergamestats.json"),
+          fetch("/data/players.json"),
+        ]);
 
-      const [gamesData, statsData, playersData] = await Promise.all([
-        gamesRes.json(),
-        statsRes.json(),
-        playersRes.json()
-      ]);
+        const [gamesData, statsData, playersData] = await Promise.all([
+          gamesRes.json(),
+          statsRes.json(),
+          playersRes.json(),
+        ]);
 
-      const idNum = Number(gameId);
+        const idNum = Number(gameId);
 
-      const thisGame = gamesData.find((g) => g.GameID === idNum);
-      const thisStats = statsData.filter((s) => s.GameID === idNum);
+        const thisGame = gamesData.find((g) => Number(g.GameID) === idNum);
+        const thisStats = statsData.filter(
+          (s) => Number(s.GameID) === idNum
+        );
 
-      setGame(thisGame || null);
-      setPlayerStats(thisStats);
-      setPlayers(playersData);
+        setGame(thisGame || null);
+        setPlayerStats(thisStats);
+        setPlayers(playersData || []);
+      } catch (err) {
+        console.error("Failed to load game detail data:", err);
+      }
     }
 
     fetchData();
   }, [gameId]);
 
+  // More robust player-name lookup that handles different field names / types
   const getPlayerName = (playerId) => {
-    const p = players.find((pl) => pl.PlayerID === playerId);
-    return p ? p.PlayerName : `Player ${playerId}`;
+    const idNum = Number(playerId);
+
+    const p =
+      players.find((pl) => Number(pl.PlayerID) === idNum) ||
+      players.find((pl) => Number(pl.PlayerId) === idNum) ||
+      players.find((pl) => Number(pl.ID) === idNum);
+
+    if (!p) {
+      return `Player ${playerId}`;
+    }
+
+    // Try several name fields in order
+    const fullName =
+      p.PlayerName ||
+      p.Name ||
+      (p.FirstName && p.LastName
+        ? `${p.FirstName} ${p.LastName}`
+        : null);
+
+    return fullName || `Player ${playerId}`;
   };
 
   const formatDate = (ms) =>
     new Date(ms).toLocaleDateString(undefined, {
-      month: 'short',
-      day: 'numeric',
-      year: 'numeric'
+      month: "short",
+      day: "numeric",
+      year: "numeric",
     });
 
   if (!game) {
@@ -51,19 +76,19 @@ function GameDetail() {
   }
 
   const resultText =
-    game.Result === 'W'
-      ? 'Win'
-      : game.Result === 'L'
-      ? 'Loss'
-      : 'Result pending';
+    game.Result === "W"
+      ? "Win"
+      : game.Result === "L"
+      ? "Loss"
+      : "Result pending";
 
-  const showScore = game.Result === 'W' || game.Result === 'L';
+  const showScore = game.Result === "W" || game.Result === "L";
 
   return (
     <div className="p-4 space-y-6">
-      {/* 👈 Adjust this path to whatever your 2025–26 season route is */}
+      {/* Adjust this route if your season page path is different */}
       <Link
-        to="/seasons/Season2025_26"
+        to="/seasons/2025-26"
         className="text-sm text-blue-600 hover:underline"
       >
         ← Back to 2025–26 Season
@@ -77,7 +102,7 @@ function GameDetail() {
           {resultText}
           {showScore && (
             <>
-              {' '}
+              {" "}
               — {game.TeamScore}–{game.OpponentScore}
             </>
           )}
