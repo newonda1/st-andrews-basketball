@@ -11,6 +11,7 @@ import Season2025_26 from './seasons/Season2025_26';
 import SeasonPlaceholder from './seasons/SeasonPlaceholder';
 import RecordsVsOpponents from './pages/RecordsVsOpponents';
 import YearlyResults from './pages/YearlyResults';
+import GameDetail from './seasons/GameDetail';
 
 function App() {
   const [games, setGames] = useState([]);
@@ -233,6 +234,7 @@ function App() {
         <Route path="/seasons/:seasonId" element={<SeasonPlaceholder />} />
         <Route path="/records/opponents" element={<RecordsVsOpponents />} />
         <Route path="/yearly-results" element={<YearlyResults />} />
+        <Route path="/games/:gameId" element={<GameDetail />} />
       </Routes>
   </div>
 );
