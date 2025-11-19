@@ -156,12 +156,18 @@ function Season2025_26() {
         <h2 className="text-2xl font-semibold mt-4 mb-3">Season Overview</h2>
 
         <div className="text-gray-800 leading-relaxed">
-          {/* 👇 Top-left image, text wraps around it */}
-          <img
-            src="/images/Season2025_26_1.PNG"
-            alt="2025–26 St. Andrew's boys' basketball roster"
-            className="float-left mr-4 mb-1 w-full max-w-xs rounded-lg shadow"
-          />
+          <a
+            href="https://www.flipsnack.com/6D6FD76F8D6/boys-basketball-media-guide-2025-2026.html" 
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/images/Season2025_26_1.PNG"
+              alt="2025–26 St. Andrew's boys' basketball roster"
+              className="float-left mr-4 mb-3 w-full max-w-xs rounded-lg shadow cursor-pointer"
+            />
+          </a>
+          
           <p className="mb-5 leading-relaxed">
             After winning three state championships in the past four years, the
             St. Andrew’s Lions enter the 2025-26 basketball season carrying both
