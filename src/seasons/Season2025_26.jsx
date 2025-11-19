@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import SeasonImgPlayers from "./Season2025_26_1.PNG";
+import SeasonImgJerseys from "./Season2025_26_2.PNG";
 import { Link } from 'react-router-dom';
 
 function Season2025_26() {
