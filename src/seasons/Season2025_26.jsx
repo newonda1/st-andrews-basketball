@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Season2025_26() {
   const [games, setGames] = useState([]);
@@ -287,16 +288,32 @@ function Season2025_26() {
               </tr>
             </thead>
             <tbody>
-              {games.map((game, idx) => (
-                <tr key={game.GameID || idx}>
-                  <td className="border px-2 py-1">{formatDate(game.Date)}</td>
-                  <td className="border px-2 py-1">{game.Opponent}</td>
-                  <td className="border px-2 py-1">{formatResult(game)}</td>
-                  <td className="border px-2 py-1 whitespace-nowrap">
-                    {formatScore(game)}
-                  </td>
-                </tr>
-              ))}
+              {games.map((game, idx) => {
+                const hasResult = game.Result === 'W' || game.Result === 'L';
+
+                // If the game is complete, make the opponent name a link.
+                const opponentCell = hasResult ? (
+                  <Link
+                    to={`/games/${game.GameID}`}
+                    className="text-blue-700 hover:underline"
+                  >
+                    {game.Opponent}
+                  </Link>
+                ) : (
+                  game.Opponent
+                );
+
+                return (
+                  <tr key={game.GameID || idx}>
+                    <td className="border px-2 py-1">{formatDate(game.Date)}</td>
+                    <td className="border px-2 py-1">{opponentCell}</td>
+                    <td className="border px-2 py-1">{formatResult(game)}</td>
+                    <td className="border px-2 py-1 whitespace-nowrap">
+                      {formatScore(game)}
+                    </td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>
