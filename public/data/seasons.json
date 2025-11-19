@@ -1,5 +1,15 @@
 [
   {
+    "SeasonID": 1978,
+    "YearStart": 1978,
+    "YearEnd": 1979,
+    "HeadCoach": "Dave Clay",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
     "SeasonID": 1992,
     "YearStart": 1992,
     "YearEnd": 1993,
@@ -8,6 +18,16 @@
     "RegionFinish": "Region Champion",
     "StateSeed": null,
     "StateFinish": "State Champion"
+  },
+  {
+    "SeasonID": 2020,
+    "YearStart": 2020,
+    "YearEnd": 2021,
+    "HeadCoach": "Mel Abrams Jr.",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
   },
   {
     "SeasonID": 2021,
@@ -48,5 +68,15 @@
     "RegionFinish": "Region Champion",
     "StateSeed": 2,
     "StateFinish": "State Champion"
+  },
+  {
+    "SeasonID": 2025,
+    "YearStart": 2025,
+    "YearEnd": 2026,
+    "HeadCoach": "Mel Abrams Jr.",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
   }
 ]
