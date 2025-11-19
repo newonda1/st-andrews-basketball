@@ -182,7 +182,7 @@ function Season2025_26() {
             defend and rebound as a group will determine how far we go.”
           </p>
 
-          <p className="mb-3 leading-relaxed">
+          <p className="mb-5 leading-relaxed">
             The Lions return a solid core led by Ja’Cari Glover (6’5, F, class
             of ’26), who established himself as one of the region’s most
             versatile forwards last season. Glover’s ability to score, rebound,
@@ -212,7 +212,7 @@ function Season2025_26() {
             helping to fill the void left by last year’s senior class.
           </p>
 
-          <p className="mb-3 leading-relaxed">
+          <p className="mb-4 leading-relaxed">
             St. Andrew’s has built a demanding non-region schedule, designed to
             test the Lions early and prepare them for another deep postseason
             run. For Abrams and his staff, the focus remains on growth,
