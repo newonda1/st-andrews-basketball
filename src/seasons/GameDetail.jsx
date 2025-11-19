@@ -63,7 +63,7 @@ function GameDetail() {
     <div className="p-4 space-y-6">
       {/* 👈 Adjust this path to whatever your 2025–26 season route is */}
       <Link
-        to="/season/2025-26"
+        to="/seasons/Season2025_26"
         className="text-sm text-blue-600 hover:underline"
       >
         ← Back to 2025–26 Season
