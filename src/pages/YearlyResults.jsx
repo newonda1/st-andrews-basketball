@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from "react";
 
-// Turn "1978" into "1978-79", leave labels like "1992-93" alone
+// Turn "1978" into "1978–79", leave labels with a dash alone
 function formatSeasonLabel(rawSeason) {
   const s = String(rawSeason);
 
-  // If it already has a dash (e.g. "1992-93"), assume it's already formatted
-  if (s.includes("-")) return s;
+  // If it already has a dash/en dash, assume it's already formatted, e.g. "1992–93"
+  if (s.includes("–") || s.includes("-")) return s;
 
-  // If it's a 4-digit year, make "YYYY-YY"
+  // If it's a 4-digit year, make "YYYY–YY"
   if (s.length === 4 && !Number.isNaN(Number(s))) {
     const startYear = Number(s);
     const endYearShort = String((startYear + 1) % 100).padStart(2, "0");
-    return `${startYear}-${endYearShort}`;
+    return `${startYear}–${endYearShort}`;
   }
 
   // Fallback
@@ -33,27 +33,56 @@ function YearlyResults() {
   }, []);
 
   const processSeasonStats = (games, seasons) => {
-    const seasonMap = {};
+    // ---- 1. Build season metadata from seasons.json ----
+    const seasonMeta = {};
+
     seasons.forEach((s) => {
-      seasonMap[String(s.SeasonID)] = {
-        coach: s.HeadCoach || "Unknown",
-        label: `${s.YearStart}–${String(s.YearEnd).slice(-2)}`,
-        result: `${s.RegionFinish}${s.StateFinish ? " & " + s.StateFinish : ""}`
+      const meta = {
+        coach: s.HeadCoach || s.Coach || "Unknown",
+        label: undefined,
+        // Accept a SeasonResult field if you ever add it,
+        // otherwise build from RegionFinish / StateFinish
+        result:
+          s.SeasonResult ||
+          `${s.RegionFinish || ""}${
+            s.StateFinish ? (s.RegionFinish ? " & " : "") + s.StateFinish : ""
+          }`
       };
+
+      // Decide how to label the season
+      if (s.DisplaySeason) {
+        meta.label = s.DisplaySeason;
+      } else if (s.SeasonLabel) {
+        meta.label = s.SeasonLabel;
+      } else if (s.YearStart && s.YearEnd) {
+        meta.label = `${s.YearStart}–${String(s.YearEnd).slice(-2)}`;
+      } else if (s.SeasonID) {
+        meta.label = String(s.SeasonID);
+      }
+
+      // Make it easy to match even if keys differ:
+      // SeasonID (might be "2024-25"), YearStart (e.g. 2024), or Season
+      const keySeasonId = s.SeasonID != null ? String(s.SeasonID) : null;
+      const keyYearStart = s.YearStart != null ? String(s.YearStart) : null;
+      const keySeason = s.Season != null ? String(s.Season) : null;
+
+      if (keySeasonId) seasonMeta[keySeasonId] = meta;
+      if (keyYearStart) seasonMeta[keyYearStart] = meta;
+      if (keySeason) seasonMeta[keySeason] = meta;
     });
 
+    // ---- 2. Group games by season and count records ----
     const grouped = {};
 
-    games.forEach((game) => {
-      const season = String(game.Season);
-      if (!grouped[season]) {
-        grouped[season] = {
-          season,
-          seasonLabel: seasonMap[season]?.label || season,
-          coach: seasonMap[season]?.coach || "Unknown",
-          seasonResult: seasonMap[season]?.result || "",
+    games.forEach((g) => {
+      const seasonKey = String(g.Season);
+
+      if (!grouped[seasonKey]) {
+        grouped[seasonKey] = {
           overallW: 0,
           overallL: 0,
+          regionW: 0,
+          regionL: 0,
           homeW: 0,
           homeL: 0,
           awayW: 0,
@@ -61,67 +90,93 @@ function YearlyResults() {
           tourneyW: 0,
           tourneyL: 0,
           playoffW: 0,
-          playoffL: 0,
-          regionW: 0,
-          regionL: 0,
+          playoffL: 0
         };
       }
 
-      const stats = grouped[season];
-      const result = (game.Result || "").trim().toUpperCase();
-      const isWin = result === "W";
-      const isLoss = result === "L";
+      const stats = grouped[seasonKey];
 
-      const loc = game.LocationType;
-      const type = game.GameType;
+      const isWin = g.Result === "W";
+      const isRegion = g.IsRegion === true;
+      const isPlayoff = g.IsPlayoff === true;
+      const isTourney = g.IsTourney === true || g.IsShowcase === true;
+      const isHome = g.Site === "H";
+      const isAway = g.Site === "A";
 
+      // Overall
       if (isWin) stats.overallW++;
-      if (isLoss) stats.overallL++;
+      else stats.overallL++;
 
-      if (loc === "Home") {
-        isWin ? stats.homeW++ : isLoss ? stats.homeL++ : null;
-      } else if (loc === "Away") {
-        isWin ? stats.awayW++ : isLoss ? stats.awayL++ : null;
+      // Region
+      if (isRegion) {
+        if (isWin) stats.regionW++;
+        else stats.regionL++;
       }
 
-      if (type === "Tournament" || type === "Showcase") {
-        isWin ? stats.tourneyW++ : isLoss ? stats.tourneyL++ : null;
+      // Home / Away
+      if (isHome) {
+        if (isWin) stats.homeW++;
+        else stats.homeL++;
+      } else if (isAway) {
+        if (isWin) stats.awayW++;
+        else stats.awayL++;
       }
 
-      if (type === "Region Tournament" || type === "State Tournament") {
-        isWin ? stats.playoffW++ : isLoss ? stats.playoffL++ : null;
+      // Tourney / Showcase
+      if (isTourney) {
+        if (isWin) stats.tourneyW++;
+        else stats.tourneyL++;
       }
 
-      if (type === "Region") {
-        isWin ? stats.regionW++ : isLoss ? stats.regionL++ : null;
+      // Playoffs
+      if (isPlayoff) {
+        if (isWin) stats.playoffW++;
+        else stats.playoffL++;
       }
     });
 
-    const statsArray = Object.values(grouped).sort((a, b) =>
-      a.season.localeCompare(b.season)
+    // ---- 3. Attach metadata and sort ----
+    const statsArray = Object.entries(grouped).map(([seasonKey, stats]) => {
+      const meta = seasonMeta[seasonKey] || {};
+      const displaySeason = formatSeasonLabel(meta.label || seasonKey);
+
+      return {
+        seasonKey,
+        displaySeason,
+        coach: meta.coach || "Unknown",
+        seasonResult: meta.result || "",
+        ...stats
+      };
+    });
+
+    // Sort by starting year, newest to oldest
+    statsArray.sort(
+      (a, b) =>
+        Number(String(b.seasonKey).slice(0, 4)) -
+        Number(String(a.seasonKey).slice(0, 4))
     );
 
     setSeasonStats(statsArray);
   };
 
-  const formatRecord = (wins, losses) => `${wins}–${losses}`;
+  const formatRecord = (w, l) => `${w}–${l}`;
 
   const calculateTotals = () => {
     return seasonStats.reduce(
-      (totals, row) => {
-        totals.overallW += row.overallW;
-        totals.overallL += row.overallL;
-        totals.regionW += row.regionW;
-        totals.regionL += row.regionL;
-        totals.homeW += row.homeW;
-        totals.homeL += row.homeL;
-        totals.awayW += row.awayW;
-        totals.awayL += row.awayL;
-        totals.tourneyW += row.tourneyW;
-        totals.tourneyL += row.tourneyL;
-        totals.playoffW += row.playoffW;
-        totals.playoffL += row.playoffL;
-        return totals;
+      (acc, s) => {
+        acc.overallW += s.overallW;
+        acc.overallL += s.overallL;
+        acc.regionW += s.regionW;
+        acc.regionL += s.regionL;
+        acc.homeW += s.homeW;
+        acc.homeL += s.homeL;
+        acc.awayW += s.awayW;
+        acc.awayL += s.awayL;
+        acc.tourneyW += s.tourneyW;
+        acc.tourneyL += s.tourneyL;
+        acc.playoffW += s.playoffW;
+        acc.playoffL += s.playoffL;
+        return acc;
       },
       {
         overallW: 0,
@@ -135,7 +190,7 @@ function YearlyResults() {
         tourneyW: 0,
         tourneyL: 0,
         playoffW: 0,
-        playoffL: 0,
+        playoffL: 0
       }
     );
   };
@@ -144,7 +199,9 @@ function YearlyResults() {
 
   return (
     <div className="space-y-10 px-4">
-      <h1 className="text-2xl font-bold text-center">Full Year-by-Year Results</h1>
+      <h1 className="text-2xl font-bold text-center">
+        Full Year-by-Year Results
+      </h1>
 
       <div className="overflow-x-auto">
         <table className="min-w-full table-auto text-sm border">
@@ -156,34 +213,59 @@ function YearlyResults() {
               <th className="border px-2 py-1">Region</th>
               <th className="border px-2 py-1">Home</th>
               <th className="border px-2 py-1">Away</th>
-              <th className="border px-2 py-1">Tourney/<br />Showcase</th>
+              <th className="border px-2 py-1">Tourney/ Showcase</th>
               <th className="border px-2 py-1">Playoffs</th>
               <th className="border px-2 py-1">Season Result</th>
             </tr>
           </thead>
           <tbody>
-            {seasonStats.map((row, i) => (
-              <tr key={i} className="text-center">
-                <td className="border px-2 py-1">{row.seasonLabel}</td>
-                <td className="border px-2 py-1">{row.coach}</td>
-                <td className="border px-2 py-1">{formatRecord(row.overallW, row.overallL)}</td>
-                <td className="border px-2 py-1">{formatRecord(row.regionW, row.regionL)}</td>
-                <td className="border px-2 py-1">{formatRecord(row.homeW, row.homeL)}</td>
-                <td className="border px-2 py-1">{formatRecord(row.awayW, row.awayL)}</td>
-                <td className="border px-2 py-1">{formatRecord(row.tourneyW, row.tourneyL)}</td>
-                <td className="border px-2 py-1">{formatRecord(row.playoffW, row.playoffL)}</td>
-                <td className="border px-2 py-1">{row.seasonResult}</td>
+            {seasonStats.map((season) => (
+              <tr key={season.seasonKey}>
+                <td className="border px-2 py-1">{season.displaySeason}</td>
+                <td className="border px-2 py-1">{season.coach}</td>
+                <td className="border px-2 py-1">
+                  {formatRecord(season.overallW, season.overallL)}
+                </td>
+                <td className="border px-2 py-1">
+                  {formatRecord(season.regionW, season.regionL)}
+                </td>
+                <td className="border px-2 py-1">
+                  {formatRecord(season.homeW, season.homeL)}
+                </td>
+                <td className="border px-2 py-1">
+                  {formatRecord(season.awayW, season.awayL)}
+                </td>
+                <td className="border px-2 py-1">
+                  {formatRecord(season.tourneyW, season.tourneyL)}
+                </td>
+                <td className="border px-2 py-1">
+                  {formatRecord(season.playoffW, season.playoffL)}
+                </td>
+                <td className="border px-2 py-1">{season.seasonResult}</td>
               </tr>
             ))}
-            <tr className="bg-gray-200 font-bold text-center">
-              <td className="border px-2 py-1"></td>
+
+            <tr className="font-bold bg-gray-100">
               <td className="border px-2 py-1">Totals</td>
-              <td className="border px-2 py-1">{formatRecord(totals.overallW, totals.overallL)}</td>
-              <td className="border px-2 py-1">{formatRecord(totals.regionW, totals.regionL)}</td>
-              <td className="border px-2 py-1">{formatRecord(totals.homeW, totals.homeL)}</td>
-              <td className="border px-2 py-1">{formatRecord(totals.awayW, totals.awayL)}</td>
-              <td className="border px-2 py-1">{formatRecord(totals.tourneyW, totals.tourneyL)}</td>
-              <td className="border px-2 py-1">{formatRecord(totals.playoffW, totals.playoffL)}</td>
+              <td className="border px-2 py-1"></td>
+              <td className="border px-2 py-1">
+                {formatRecord(totals.overallW, totals.overallL)}
+              </td>
+              <td className="border px-2 py-1">
+                {formatRecord(totals.regionW, totals.regionL)}
+              </td>
+              <td className="border px-2 py-1">
+                {formatRecord(totals.homeW, totals.homeL)}
+              </td>
+              <td className="border px-2 py-1">
+                {formatRecord(totals.awayW, totals.awayL)}
+              </td>
+              <td className="border px-2 py-1">
+                {formatRecord(totals.tourneyW, totals.tourneyL)}
+              </td>
+              <td className="border px-2 py-1">
+                {formatRecord(totals.playoffW, totals.playoffL)}
+              </td>
               <td className="border px-2 py-1"></td>
             </tr>
           </tbody>
