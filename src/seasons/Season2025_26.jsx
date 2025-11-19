@@ -182,12 +182,6 @@ function Season2025_26() {
             defend and rebound as a group will determine how far we go.”
           </p>
 
-          <img
-             src="/images/Season2025_26_2.PNG"
-              alt="St. Andrew's boys' basketball action collage"
-            className="float-right ml-4 mt-4 mb-3 w-full max-w-sm rounded-lg shadow"
-           />
-          
           <p className="mb-3 leading-relaxed">
             The Lions return a solid core led by Ja’Cari Glover (6’5, F, class
             of ’26), who established himself as one of the region’s most
@@ -200,6 +194,12 @@ function Season2025_26() {
             perimeter shooter and a two-way player.
           </p>
 
+           <img
+             src="/images/Season2025_26_2.PNG"
+              alt="St. Andrew's boys' basketball action collage"
+            className="float-right ml-4 mt-4 mb-3 w-full max-w-sm rounded-lg shadow"
+           />
+          
           <p className="mb-3 leading-relaxed">
             Replacing Zayden Edwards (6’1, G), last year’s all-state performer
             and team captain, along with Miles Cummings (6’8, C), the Lions’
