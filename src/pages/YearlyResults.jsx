@@ -1,5 +1,23 @@
 import React, { useEffect, useState } from "react";
 
+// Turn "1978" into "1978-79", leave labels like "1992-93" alone
+function formatSeasonLabel(rawSeason) {
+  const s = String(rawSeason);
+
+  // If it already has a dash (e.g. "1992-93"), assume it's already formatted
+  if (s.includes("-")) return s;
+
+  // If it's a 4-digit year, make "YYYY-YY"
+  if (s.length === 4 && !Number.isNaN(Number(s))) {
+    const startYear = Number(s);
+    const endYearShort = String((startYear + 1) % 100).padStart(2, "0");
+    return `${startYear}-${endYearShort}`;
+  }
+
+  // Fallback
+  return s;
+}
+
 function YearlyResults() {
   const [seasonStats, setSeasonStats] = useState([]);
 
