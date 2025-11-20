@@ -231,7 +231,14 @@ function YearlyResults() {
           <tbody>
             {seasonStats.map((season) => (
               <tr key={season.seasonKey}>
-                <td className="border px-2 py-1">{season.displaySeason}</td>
+                <td className="border px-2 py-1">
+                  <Link
+                    to={`/seasons/${season.seasonKey}`}
+                    className="text-blue-600 hover:underline"
+                  >
+                    {season.displaySeason}
+                  </Link>
+                </td>
                 <td className="border px-2 py-1">{season.coach}</td>
                 <td className="border px-2 py-1">
                   {formatRecord(season.overallW, season.overallL)}
