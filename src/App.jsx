@@ -1,166 +1,243 @@
 import { Link, Routes, Route } from "react-router-dom";
 import React, { useEffect, useState, useRef } from "react";
-
 import Home from './Home';
 import FullCareerStats from './records/FullCareerStats';
 import SeasonRecords from './records/SeasonRecords';
 import SingleGameRecords from './records/SingleGameRecords';
-
 import Season1992_93 from './seasons/Season1992_93';
 import Season2023_24 from './seasons/Season2023_24';
 import Season2024_25 from './seasons/Season2024_25';
 import Season2025_26 from './seasons/Season2025_26';
-
 import SeasonPlaceholder from './seasons/SeasonPlaceholder';
 import RecordsVsOpponents from './pages/RecordsVsOpponents';
 import YearlyResults from './pages/YearlyResults';
 import GameDetail from './seasons/GameDetail';
 
-// Central list of seasons that have full dedicated pages
-const seasonPages = [
-  { slug: "1992-93", Component: Season1992_93 },
-  { slug: "2023-24", Component: Season2023_24 },
-  { slug: "2024-25", Component: Season2024_25 },
-  { slug: "2025-26", Component: Season2025_26 },
-];
-
 function App() {
-  return (
-    <div className="min-h-screen bg-gray-100 flex">
-      <aside className="w-64 bg-gray-900 text-white p-4 flex-shrink-0">
-        <h1 className="text-xl font-bold mb-4">St. Andrew&apos;s Basketball</h1>
+  const [games, setGames] = useState([]);
+  const [playerStats, setPlayerStats] = useState([]);
+  const [players, setPlayers] = useState([]);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const sidebarRef = useRef(null);
+  const [seasonOpen, setSeasonOpen] = useState(false);
+  const [recordsOpen, setRecordsOpen] = useState(false);
+  const [expandedDecades, setExpandedDecades] = useState({});
+  const yearsByDecade = {
+    "1970s": ["1978-79", "1979-80"],
+    "1980s": ["1980-81", "1981-82", "1982-83", "1983-84", "1984-85", "1985-86", "1986-87", "1987-88", "1988-89", "1989-90"],
+    "1990s": ["1990-91", "1991-92", "1992-93", "1993-94", "1994-95", "1995-96", "1996-97", "1997-98", "1998-99", "1999-00"],
+    "2000s": ["2000-01", "2001-02", "2002-03", "2003-04", "2004-05", "2005-06", "2006-07", "2007-08", "2008-09", "2009-10"],
+    "2010s": ["2010-11", "2011-12", "2012-13", "2013-14", "2014-15", "2015-16", "2016-17", "2017-18", "2018-19", "2019-20"],
+    "2020s": ["2020-21", "2021-22", "2022-23", "2023-24", "2024-25", "2025-26"],
+  };
+  const [legacyOpen, setLegacyOpen] = useState(false);
 
-        <nav className="space-y-4">
-          <div>
-            <h2 className="text-sm uppercase tracking-wide text-gray-400 mb-1">
-              Main
-            </h2>
-            <ul className="space-y-1">
-              <li>
-                <Link to="/" className="block px-2 py-1 rounded hover:bg-gray-800">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/yearly-results"
-                  className="block px-2 py-1 rounded hover:bg-gray-800"
-                >
-                  Yearly Results
-                </Link>
-              </li>
-            </ul>
-          </div>
+  useEffect(() => {
+    fetch("/data/games.json")
+      .then((res) => res.json())
+      .then(setGames)
+      .catch((err) => console.error("Failed to load games", err));
 
-          <div>
-            <h2 className="text-sm uppercase tracking-wide text-gray-400 mb-1">
-              Records
-            </h2>
-            <ul className="space-y-1">
-              <li>
-                <Link
-                  to="/records/career"
-                  className="block px-2 py-1 rounded hover:bg-gray-800"
-                >
-                  Career Records
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/records/season"
-                  className="block px-2 py-1 rounded hover:bg-gray-800"
-                >
-                  Season Records
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/records/single-game"
-                  className="block px-2 py-1 rounded hover:bg-gray-800"
-                >
-                  Single Game Records
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/records/opponents"
-                  className="block px-2 py-1 rounded hover:bg-gray-800"
-                >
-                  Records vs Opponents
-                </Link>
-              </li>
-            </ul>
-          </div>
+    fetch("/data/playergamestats.json")
+      .then((res) => res.json())
+      .then(setPlayerStats)
+      .catch((err) => console.error("Failed to load player stats", err));
 
-          <div>
-            <h2 className="text-sm uppercase tracking-wide text-gray-400 mb-1">
-              Seasons
-            </h2>
-            <ul className="space-y-1">
-              <li>
-                <Link
-                  to="/seasons/1992-93"
-                  className="block px-2 py-1 rounded hover:bg-gray-800"
-                >
-                  1992–93 Season
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/seasons/2023-24"
-                  className="block px-2 py-1 rounded hover:bg-gray-800"
-                >
-                  2023–24 Season
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/seasons/2024-25"
-                  className="block px-2 py-1 rounded hover:bg-gray-800"
-                >
-                  2024–25 Season
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/seasons/2025-26"
-                  className="block px-2 py-1 rounded hover:bg-gray-800"
-                >
-                  2025–26 Season
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </aside>
+    fetch("/data/players.json")
+      .then((res) => res.json())
+      .then(setPlayers)
+      .catch((err) => console.error("Failed to load players", err));
+  }, []);
 
-      <div className="flex-1 p-4">
-        <Routes>
-          <Route path="/" element={<Home />} />
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+        setMenuOpen(false);
+      }
+    }
 
-          {/* Records */}
-          <Route path="/records/career" element={<FullCareerStats />} />
-          <Route path="/records/season" element={<SeasonRecords />} />
-          <Route path="/records/single-game" element={<SingleGameRecords />} />
-          <Route path="/records/opponents" element={<RecordsVsOpponents />} />
+    if (menuOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
 
-          {/* Yearly results */}
-          <Route path="/yearly-results" element={<YearlyResults />} />
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [menuOpen]);
 
-          {/* Game detail */}
-          <Route path="/games/:gameId" element={<GameDetail />} />
-
-          {/* Dynamically mapped season pages */}
-          {seasonPages.map(({ slug, Component }) => (
-            <Route key={slug} path={`/seasons/${slug}`} element={<Component />} />
-          ))}
-
-          {/* Fallback for seasons not yet created */}
-          <Route path="/seasons/:seasonId" element={<SeasonPlaceholder />} />
-        </Routes>
-      </div>
-    </div>
+  const playerMap = Object.fromEntries(
+    players.map((p) => [p.PlayerID, `${p.FirstName} ${p.LastName}`])
   );
+
+  return (
+    <div className="p-6 max-w-5xl mx-auto space-y-10">
+      <header className="text-center">
+      <div ref={sidebarRef} className={`fixed top-0 right-0 h-full w-64 bg-white shadow-2xl flex flex-col transform ${menuOpen ? "translate-x-0" : "translate-x-full"} transition-transform duration-300 ease-in-out z-40`}>
+        <div className="flex justify-center items-center p-4 border-b">
+          <h2 className="text-xl font-bold">Menu</h2>
+        </div>
+        <div className="flex-1 overflow-y-auto overscroll-contain scroll-smooth">
+          <nav className="flex flex-col p-4 space-y-2 text-lg font-medium">
+            {/* Full Year-by-Year Results */}
+            <Link to="/yearly-results" className="p-3 hover:bg-gray-200 rounded-md text-center">
+              Full Year-by-Year Results
+            </Link>
+
+
+            {/* Individual Season Results with Expandable Decades */}
+            <div className="border-t pt-4">
+              <button
+                onClick={() => setSeasonOpen(!seasonOpen)}
+                className="flex items-center justify-between w-full p-3 hover:bg-gray-200 rounded-md"
+                >
+                <span>Individual Season Results</span>
+                <span
+                   className={`ml-2 inline-block transform transition-transform duration-300 ${
+                   seasonOpen ? "rotate-180" : "rotate-0"
+                   }`}
+                   >
+                   ▼
+                </span>
+              </button>
+
+            {/* Decades Expand */}
+            {seasonOpen && (
+              <div
+                className={`ml-4 overflow-hidden transition-all duration-500 ${
+                seasonOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+                }`}
+                >
+                {["1970s", "1980s", "1990s", "2000s", "2010s", "2020s"].map((decade) => (
+                  <div key={decade}>
+                    <button
+                      onClick={() =>
+                      setExpandedDecades((prev) => ({
+                      ...prev,
+                      [decade]: !prev[decade],
+                       }))
+                      }
+                      className="flex items-center justify-between w-full p-2 hover:bg-gray-100"
+                      >
+                <span>{decade}</span>
+                <span
+                  className={`ml-2 inline-block transform transition-transform duration-300 ${
+                    expandedDecades[decade] ? "rotate-180" : "rotate-0"
+                  }`}
+                >
+                  ▶
+                </span>
+              </button>
+
+              {/* Expand Years smoothly */}
+              <div
+                className={`ml-6 overflow-hidden overflow-y-auto transition-all duration-500 ${
+                  expandedDecades[decade] ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+                } custom-scrollbar`}
+              >
+
+                {yearsByDecade[decade].map((year) => (
+                  <Link
+                    key={year}
+                    to={`/seasons/${year}`}
+                    className="block px-2 py-1 text-sm hover:bg-gray-200"
+                  >
+                    {year}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+
+    <div className="border-t pt-4">
+      <Link
+        to="/records/opponents"
+        className="block p-3 hover:bg-gray-200 rounded-md text-center"
+      >
+        Records vs. Opponents
+      </Link>
+    </div>
+
+    {/* All-Time Records Section */}
+<div className="border-t pt-4">
+  <button
+    onClick={() => setRecordsOpen(!recordsOpen)}
+    className="flex items-center justify-between w-full p-3 hover:bg-gray-200 rounded-md"
+  >
+    <span>Individual Player Stats</span>
+    <span
+      className={`ml-2 inline-block transform transition-transform duration-300 ${
+        recordsOpen ? "rotate-180" : "rotate-0"
+      }`}
+    >
+      ▼
+    </span>
+  </button>
+
+  {recordsOpen && (
+    <div className="ml-4 overflow-hidden transition-all duration-500">
+      <Link
+        to="/records/career"
+        className="block px-2 py-1 text-sm hover:bg-gray-200"
+      >
+        Full Career Stats
+      </Link>
+      <Link
+        to="/records/season"
+        className="block px-2 py-1 text-sm hover:bg-gray-200"
+      >
+        Season Records
+      </Link>
+      <Link
+        to="/records/single-game"
+        className="block px-2 py-1 text-sm hover:bg-gray-200"
+      >
+        Single Game Records
+      </Link>
+    </div>
+  )}
+</div>
+
+  </nav>
+</div>
+  </div>
+    <div className="flex items-center justify-between mb-4 px-4 h-20">
+      <div className="flex items-center gap-3">
+        <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+          <img src="/logo.png" alt="St. Andrew's Logo" className="h-12 w-auto" />
+          <h1 className="text-xl font-bold text-blue-800 whitespace-nowrap">Boys' Basketball</h1>
+        </Link>
+      </div>
+      <button onClick={() => setMenuOpen(true)}>
+        <img
+          src="/images/button.png"
+          alt="Menu"
+          className="h-10 w-auto hover:scale-110 transition-transform duration-200 ease-in-out"
+        />
+      </button>
+    </div>
+
+    </header>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/records/career" element={<FullCareerStats />} />
+        <Route path="/records/season" element={<SeasonRecords />} />
+        <Route path="/records/single-game" element={<SingleGameRecords />} />
+        <Route path="/seasons/1992-93" element={<Season1992_93 />} />
+        <Route path="/seasons/2023-24" element={<Season2023_24 />} />
+        <Route path="/seasons/2024-25" element={<Season2024_25 />} />
+        <Route path="/seasons/2025-26" element={<Season2025_26 />} />
+        <Route path="/seasons/:seasonId" element={<SeasonPlaceholder />} />
+        <Route path="/records/opponents" element={<RecordsVsOpponents />} />
+        <Route path="/yearly-results" element={<YearlyResults />} />
+        <Route path="/games/:gameId" element={<GameDetail />} />
+      </Routes>
+  </div>
+);
 }
 
 export default App;
