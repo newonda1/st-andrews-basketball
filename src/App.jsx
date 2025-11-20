@@ -13,6 +13,13 @@ import RecordsVsOpponents from './pages/RecordsVsOpponents';
 import YearlyResults from './pages/YearlyResults';
 import GameDetail from './seasons/GameDetail';
 
+const seasonPages = [
+  { slug: "1992-93", Component: Season1992_93 },
+  { slug: "2023-24", Component: Season2023_24 },
+  { slug: "2024-25", Component: Season2024_25 },
+  { slug: "2025-26", Component: Season2025_26 },
+];
+
 function App() {
   const [games, setGames] = useState([]);
   const [playerStats, setPlayerStats] = useState([]);
@@ -227,10 +234,13 @@ function App() {
         <Route path="/records/career" element={<FullCareerStats />} />
         <Route path="/records/season" element={<SeasonRecords />} />
         <Route path="/records/single-game" element={<SingleGameRecords />} />
-        <Route path="/seasons/1992-93" element={<Season1992_93 />} />
-        <Route path="/seasons/2023-24" element={<Season2023_24 />} />
-        <Route path="/seasons/2024-25" element={<Season2024_25 />} />
-        <Route path="/seasons/2025-26" element={<Season2025_26 />} />
+        {seasonPages.map(({ slug, Component }) => (
+          <Route
+            key={slug}
+            path={`/seasons/${slug}`}
+            element={<Component />}
+          />
+        ))}
         <Route path="/seasons/:seasonId" element={<SeasonPlaceholder />} />
         <Route path="/records/opponents" element={<RecordsVsOpponents />} />
         <Route path="/yearly-results" element={<YearlyResults />} />
