@@ -31,7 +31,6 @@ function YearlyResults() {
   }, []);
 
   const processSeasonStats = (games, seasons) => {
-    // 1. Build lookup of season metadata from seasons.json
     const seasonMeta = {};
 
     seasons.forEach((s) => {
