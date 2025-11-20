@@ -10,6 +10,16 @@
     "StateFinish": null
   },
   {
+    "SeasonID": 1979,
+    "YearStart": 1979,
+    "YearEnd": 1980,
+    "HeadCoach": "Dave Clay",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
     "SeasonID": 1992,
     "YearStart": 1992,
     "YearEnd": 1993,
