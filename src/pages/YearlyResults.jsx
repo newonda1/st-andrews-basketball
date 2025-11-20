@@ -279,7 +279,7 @@ function YearlyResults() {
                 <td className="border px-2 py-1">
                   {formatRecord(season.playoffW, season.playoffL)}
                 </td>
-                <td className="border px-2 py-1">{season.seasonResult}</td>
+                <td className="border px-2 py-1">{season.result}</td>
               </tr>
             ))}
 
