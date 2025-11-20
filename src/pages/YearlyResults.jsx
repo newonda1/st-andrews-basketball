@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 // Turn "1978" into "1978–79", leave labels that already have a dash/en dash alone.
 function formatSeasonLabel(rawSeason) {
