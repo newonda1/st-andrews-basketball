@@ -16,6 +16,26 @@ function formatSeasonLabel(rawSeason) {
   return s;
 }
 
+// Turn a season key like "1979" or "1992-93" into a URL slug like "1979-80" or "1992-93"
+function seasonKeyToSlug(seasonKey) {
+  const s = String(seasonKey);
+
+  // If it's already in "YYYY-YY" or "YYYY–YY" form, normalize to use a plain hyphen
+  if (/^\d{4}[-–]\d{2}$/.test(s)) {
+    return s.replace("–", "-");
+  }
+
+  // If it's a plain year like "1979" or "2024", turn it into "1979-80" or "2024-25"
+  if (/^\d{4}$/.test(s)) {
+    const start = Number(s);
+    const endShort = String((start + 1) % 100).padStart(2, "0");
+    return `${start}-${endShort}`;
+  }
+
+  // Fallback: just return it as-is
+  return s;
+}
+
 function YearlyResults() {
   const [seasonStats, setSeasonStats] = useState([]);
 
@@ -149,13 +169,15 @@ function YearlyResults() {
     const statsArray = Object.entries(grouped).map(([seasonKey, stats]) => {
       const meta = seasonMeta[seasonKey] || {};
       const displaySeason = formatSeasonLabel(meta.label || seasonKey);
+      const routeSlug = seasonKeyToSlug(seasonKey);
 
       return {
         seasonKey,
+        routeSlug,
         displaySeason,
         coach: meta.coach || "Unknown",
-        seasonResult: meta.result || "",
-        ...stats
+        result: meta.result || "",
+        ...stats,
       };
     });
 
@@ -231,10 +253,10 @@ function YearlyResults() {
             {seasonStats.map((season) => (
               <tr key={season.seasonKey}>
                 <td className="border px-2 py-1">
-                  <Link
-                    to={`/seasons/${season.seasonKey}`}
-                    className="text-blue-600 hover:underline"
-                  >
+                   <Link
+                      to={`/seasons/${season.routeSlug}`}
+                      className="text-blue-600 hover:underline"
+                    >
                     {season.displaySeason}
                   </Link>
                 </td>
