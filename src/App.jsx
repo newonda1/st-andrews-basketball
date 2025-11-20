@@ -1,20 +1,22 @@
-import React from "react";
 import { Link, Routes, Route } from "react-router-dom";
+import React, { useEffect, useState, useRef } from "react";
 
-import Home from "./Home";
-import FullCareerStats from "./records/FullCareerStats";
-import SeasonRecords from "./records/SeasonRecords";
-import SingleGameRecords from "./records/SingleGameRecords";
-import Season1992_93 from "./seasons/Season1992_93";
-import Season2023_24 from "./seasons/Season2023_24";
-import Season2024_25 from "./seasons/Season2024_25";
-import Season2025_26 from "./seasons/Season2025_26";
-import SeasonPlaceholder from "./seasons/SeasonPlaceholder";
-import RecordsVsOpponents from "./pages/RecordsVsOpponents";
-import YearlyResults from "./pages/YearlyResults";
-import GameDetail from "./seasons/GameDetail";
+import Home from './Home';
+import FullCareerStats from './records/FullCareerStats';
+import SeasonRecords from './records/SeasonRecords';
+import SingleGameRecords from './records/SingleGameRecords';
 
-// Central list of seasons that have dedicated pages
+import Season1992_93 from './seasons/Season1992_93';
+import Season2023_24 from './seasons/Season2023_24';
+import Season2024_25 from './seasons/Season2024_25';
+import Season2025_26 from './seasons/Season2025_26';
+
+import SeasonPlaceholder from './seasons/SeasonPlaceholder';
+import RecordsVsOpponents from './pages/RecordsVsOpponents';
+import YearlyResults from './pages/YearlyResults';
+import GameDetail from './seasons/GameDetail';
+
+// Central list of seasons that have full dedicated pages
 const seasonPages = [
   { slug: "1992-93", Component: Season1992_93 },
   { slug: "2023-24", Component: Season2023_24 },
@@ -25,24 +27,17 @@ const seasonPages = [
 function App() {
   return (
     <div className="min-h-screen bg-gray-100 flex">
-      {/* Sidebar */}
       <aside className="w-64 bg-gray-900 text-white p-4 flex-shrink-0">
-        <h1 className="text-xl font-bold mb-4">
-          St. Andrew&apos;s Basketball
-        </h1>
+        <h1 className="text-xl font-bold mb-4">St. Andrew&apos;s Basketball</h1>
 
         <nav className="space-y-4">
-          {/* Main */}
           <div>
             <h2 className="text-sm uppercase tracking-wide text-gray-400 mb-1">
               Main
             </h2>
             <ul className="space-y-1">
               <li>
-                <Link
-                  to="/"
-                  className="block px-2 py-1 rounded hover:bg-gray-800"
-                >
+                <Link to="/" className="block px-2 py-1 rounded hover:bg-gray-800">
                   Home
                 </Link>
               </li>
@@ -57,7 +52,6 @@ function App() {
             </ul>
           </div>
 
-          {/* Records */}
           <div>
             <h2 className="text-sm uppercase tracking-wide text-gray-400 mb-1">
               Records
@@ -98,7 +92,6 @@ function App() {
             </ul>
           </div>
 
-          {/* Seasons */}
           <div>
             <h2 className="text-sm uppercase tracking-wide text-gray-400 mb-1">
               Seasons
@@ -141,10 +134,8 @@ function App() {
         </nav>
       </aside>
 
-      {/* Main content */}
       <div className="flex-1 p-4">
         <Routes>
-          {/* Home */}
           <Route path="/" element={<Home />} />
 
           {/* Records */}
@@ -153,22 +144,18 @@ function App() {
           <Route path="/records/single-game" element={<SingleGameRecords />} />
           <Route path="/records/opponents" element={<RecordsVsOpponents />} />
 
-          {/* Yearly Results table */}
+          {/* Yearly results */}
           <Route path="/yearly-results" element={<YearlyResults />} />
 
           {/* Game detail */}
           <Route path="/games/:gameId" element={<GameDetail />} />
 
-          {/* Explicit season pages from the seasonPages array */}
+          {/* Dynamically mapped season pages */}
           {seasonPages.map(({ slug, Component }) => (
-            <Route
-              key={slug}
-              path={`/seasons/${slug}`}
-              element={<Component />}
-            />
+            <Route key={slug} path={`/seasons/${slug}`} element={<Component />} />
           ))}
 
-          {/* Fallback / placeholder for any other season slug */}
+          {/* Fallback for seasons not yet created */}
           <Route path="/seasons/:seasonId" element={<SeasonPlaceholder />} />
         </Routes>
       </div>
