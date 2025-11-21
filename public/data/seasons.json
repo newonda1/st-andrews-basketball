@@ -50,6 +50,16 @@
     "StateFinish": null
   },
   {
+    "SeasonID": 1983,
+    "YearStart": 1983,
+    "YearEnd": 1984,
+    "HeadCoach": "Joel Smoker",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
     "SeasonID": 1992,
     "YearStart": 1992,
     "YearEnd": 1993,
