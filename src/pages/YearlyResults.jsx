@@ -237,6 +237,7 @@ function YearlyResults() {
       // final fallback: alphabetical by name
       return a.coach.localeCompare(b.coach);
     });
+  };
   
   const calculateTotals = () => {
     return seasonStats.reduce(
