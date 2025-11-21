@@ -40,6 +40,16 @@
     "StateFinish": null
   },
   {
+    "SeasonID": 1982,
+    "YearStart": 1982,
+    "YearEnd": 1983,
+    "HeadCoach": "Ron Lassiter",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
     "SeasonID": 1992,
     "YearStart": 1992,
     "YearEnd": 1993,
