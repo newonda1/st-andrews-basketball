@@ -270,7 +270,6 @@ function YearlyResults() {
   const totals = calculateTotals();
 
   return (
-      return (
     <div className="space-y-10 px-4">
       {/* Coaching totals */}
       <div className="space-y-2">
