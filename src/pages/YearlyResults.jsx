@@ -227,10 +227,16 @@ function YearlyResults() {
     });
 
     // Sort alphabetically by coach name (you can change this if you like)
-    return Object.values(coachMap).sort((a, b) =>
-      a.coach.localeCompare(b.coach)
-    );
-  };
+   return Object.values(coachMap).sort((a, b) => {
+      // primary: most wins first
+      if (b.overallW !== a.overallW) return b.overallW - a.overallW;
+      // fallback: best win% first (optional but nice)
+      const aPct = a.overallW + a.overallL ? a.overallW / (a.overallW + a.overallL) : 0;
+      const bPct = b.overallW + b.overallL ? b.overallW / (b.overallW + b.overallL) : 0;
+      if (bPct !== aPct) return bPct - aPct;
+      // final fallback: alphabetical by name
+      return a.coach.localeCompare(b.coach);
+    });
   
   const calculateTotals = () => {
     return seasonStats.reduce(
