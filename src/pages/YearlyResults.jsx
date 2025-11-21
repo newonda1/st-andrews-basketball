@@ -306,8 +306,10 @@ function YearlyResults() {
                   <td className="border px-2 py-1">
                     {formatWinPct(coach.overallW, coach.overallL)}
                   </td>
-                  <td className="border px-2 py-1">
-                    {coach.notes.join("; ")}
+                  <td className="border px-2 py-1 text-left">
+                    {coach.notes.map((note, idx) => (
+                      <div key={idx}>{note}</div>
+                    ))}
                   </td>
                 </tr>
               ))}
