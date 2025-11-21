@@ -192,6 +192,46 @@ function YearlyResults() {
 
   const formatRecord = (w, l) => `${w}–${l}`;
 
+    const formatWinPct = (w, l) => {
+    const total = w + l;
+    if (!total) return "–";
+    const pct = (w / total) * 100;
+    return `${pct.toFixed(1)}%`;
+  };
+
+  const calculateCoachTotals = () => {
+    const coachMap = {};
+
+    seasonStats.forEach((season) => {
+      const coachName = season.coach || "Unknown";
+
+      if (!coachMap[coachName]) {
+        coachMap[coachName] = {
+          coach: coachName,
+          years: 0,
+          overallW: 0,
+          overallL: 0,
+          notes: [],
+        };
+      }
+
+      const coach = coachMap[coachName];
+      coach.years += 1;
+      coach.overallW += season.overallW;
+      coach.overallL += season.overallL;
+
+      // Collect season results for the notes column
+      if (season.result && season.result.trim() !== "") {
+        coach.notes.push(`${season.displaySeason}: ${season.result}`);
+      }
+    });
+
+    // Sort alphabetically by coach name (you can change this if you like)
+    return Object.values(coachMap).sort((a, b) =>
+      a.coach.localeCompare(b.coach)
+    );
+  };
+  
   const calculateTotals = () => {
     return seasonStats.reduce(
       (acc, s) => {
@@ -226,10 +266,50 @@ function YearlyResults() {
     );
   };
 
+  const coachTotals = calculateCoachTotals();
   const totals = calculateTotals();
 
   return (
+      return (
     <div className="space-y-10 px-4">
+      {/* Coaching totals */}
+      <div className="space-y-2">
+        <h1 className="text-2xl font-bold text-center">
+          Coaching Records
+        </h1>
+
+        <div className="overflow-x-auto">
+          <table className="min-w-full table-auto text-sm border text-center">
+            <thead className="bg-gray-200 font-bold">
+              <tr>
+                <th className="border px-2 py-1">Coach</th>
+                <th className="border px-2 py-1">Years</th>
+                <th className="border px-2 py-1">Overall Record</th>
+                <th className="border px-2 py-1">Win %</th>
+                <th className="border px-2 py-1">Notes (Season Results)</th>
+              </tr>
+            </thead>
+            <tbody>
+              {coachTotals.map((coach) => (
+                <tr key={coach.coach}>
+                  <td className="border px-2 py-1">{coach.coach}</td>
+                  <td className="border px-2 py-1">{coach.years}</td>
+                  <td className="border px-2 py-1">
+                    {formatRecord(coach.overallW, coach.overallL)}
+                  </td>
+                  <td className="border px-2 py-1">
+                    {formatWinPct(coach.overallW, coach.overallL)}
+                  </td>
+                  <td className="border px-2 py-1">
+                    {coach.notes.join("; ")}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
       <h1 className="text-2xl font-bold text-center">
         Full Year-by-Year Results
       </h1>
