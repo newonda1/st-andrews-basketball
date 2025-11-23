@@ -4051,12 +4051,13 @@
     "Opponent": "Bradwell Institute",
     "LocationType": "Home",
     "GameType": "Non-Region",
-    "Result": "Unknown",
-    "TeamScore": null,
-    "OpponentScore": null,
-    "ResultMargin": null,
+    "Result": "L",
+    "TeamScore": 50,
+    "OpponentScore": 68,
+    "ResultMargin": -18,
     "Season": 2025,
-    "IsComplete": "Unknown"
+    "IsComplete": "Yes"
+    "Recap": "St. Andrew’s battled hard but ultimately came up short on Friday night, falling 68–50 to the Bradwell Institute Tigers. The Lions kept the game tight through much of the first half, trailing just 21–18 with four minutes remaining in the second quarter. However, Bradwell closed the half on a decisive 10–0 run, seizing momentum and controlling the game from that point forward. \n\nThe Tigers showcased a balanced offensive attack, with four players finishing in double figures. Christopher Perry led the way for Bradwell with 22 points, pacing an offense that proved difficult for the Lions to slow down. \n\nDespite the loss, Ja’Cari Glover delivered another standout performance, finishing with 21 points and 13 rebounds to record his third double-double of the season. His strong effort kept St. Andrew’s within reach early, but the Lions were unable to overcome Bradwell’s late-half surge and second-half control. \n\nWith the loss, the Lions move to 2–1 on the season. St. Andrew’s now turns its attention to a road matchup on December 2nd, when they travel to South Carolina to take on Hilton Head Island High School."
   },
   {
     "GameID": 20251129,
