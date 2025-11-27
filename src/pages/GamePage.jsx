@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 
 function GamePage() {
-  const { gameID } = useParams();
+  const { gameId } = useParams();
   const [game, setGame] = useState(null);
   const [playerStats, setPlayerStats] = useState([]);
   const [players, setPlayers] = useState([]);
@@ -11,15 +11,15 @@ function GamePage() {
     fetch("/data/games.json")
       .then((res) => res.json())
       .then((games) => {
-        const foundGame = games.find((g) => g.GameID === gameID);
+        const foundGame = games.find((g) => g.GameID === gameId);
         setGame(foundGame);
       })
       .catch((err) => console.error("Failed to load game", err));
 
-    fetch("/data/player_game_stats.json")
+    fetch("/data/playergamestats.json")
       .then((res) => res.json())
       .then((stats) => {
-        const statsForGame = stats.filter((s) => s.GameID === gameID);
+        const statsForGame = stats.filter((s) => s.GameID === gameId);
         setPlayerStats(statsForGame);
       })
       .catch((err) => console.error("Failed to load player stats", err));
