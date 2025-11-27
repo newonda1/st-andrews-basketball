@@ -147,7 +147,12 @@ function GameDetail() {
                 {playerStats.map((s) => (
                   <tr key={s.PlayerGameStatsID}>
                     <td className="border px-2 py-1">
-                      {getPlayerName(s.PlayerID)}
+                      <Link
+                        to={`/players/${s.PlayerID}`}
+                        className="text-blue-600 underline hover:text-blue-800"
+                      >
+                        {getPlayerName(s.PlayerID)}
+                      </Link>
                     </td>
                     <td className="border px-2 py-1">{s.Points}</td>
                     <td className="border px-2 py-1">{s.Rebounds}</td>
