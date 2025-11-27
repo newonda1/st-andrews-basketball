@@ -11,7 +11,7 @@ import Season2025_26 from './seasons/Season2025_26';
 import SeasonPlaceholder from './seasons/SeasonPlaceholder';
 import RecordsVsOpponents from './pages/RecordsVsOpponents';
 import YearlyResults from './pages/YearlyResults';
-import GamePage from "./pages/GamePage";
+import GameDetail from "./seasons/GameDetail";
 import PlayerPage from "./pages/PlayerPage";
 
 const seasonPages = [
@@ -245,7 +245,7 @@ function App() {
         <Route path="/seasons/:seasonId" element={<SeasonPlaceholder />} />
         <Route path="/records/opponents" element={<RecordsVsOpponents />} />
         <Route path="/yearly-results" element={<YearlyResults />} />
-        <Route path="/games/:gameId" element={<GamePage />} />
+        <Route path="/games/:gameId" element={<GameDetail />} />
         <Route path="/players/:playerId" element={<PlayerPage />} />
       </Routes>
   </div>
