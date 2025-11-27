@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 function GamePage() {
   const { gameID } = useParams();
@@ -51,7 +51,11 @@ function GamePage() {
       <ul className="space-y-4">
         {playerStats.map((stat, index) => (
           <li key={index} className="border rounded p-4 shadow-sm">
-            <p className="font-semibold">{playerMap[stat.PlayerID] || stat.PlayerID}</p>
+            <p className="font-semibold">
+              <Link to={`/players/${stat.PlayerID}`} className="hover:underline">
+                {playerMap[stat.PlayerID] || stat.PlayerID}
+              </Link>
+            </p>
             <p>
               PTS: {stat.Points} | REB: {stat.Rebounds} | AST: {stat.Assists} | STL: {stat.Steals} | BLK: {stat.Blocks}
             </p>
