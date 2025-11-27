@@ -26,6 +26,18 @@ function PlayerPage() {
   const [playerStats, setPlayerStats] = useState([]);
   const [loading, setLoading] = useState(true);
 
+    // Helper to find the player by ID, handling numeric IDs and alternate field names
+  const getPlayerById = (id) => {
+    const idNum = Number(id);
+
+    return (
+      players.find((p) => Number(p.PlayerID) === idNum) ||
+      players.find((p) => Number(p.PlayerId) === idNum) ||
+      players.find((p) => Number(p.ID) === idNum) ||
+      null
+    );
+  };
+
   // Load all the data we need
   useEffect(() => {
     async function loadData() {
@@ -33,7 +45,7 @@ function PlayerPage() {
         const [playersRes, gamesRes, statsRes] = await Promise.all([
           fetch("/data/players.json"),
           fetch("/data/games.json"),
-          fetch("/data/player_game_stats.json"),
+          fetch("/data/playergamestats.json"),
         ]);
 
         const [playersData, gamesData, statsData] = await Promise.all([
@@ -60,22 +72,26 @@ function PlayerPage() {
   }
 
   // 1. Find player
-  const player = players.find(
-    (p) => String(p.PlayerID) === String(playerId)
-  );
+  const player = getPlayerById(playerId);
 
   if (!player) {
     return <div className="p-6">Player not found.</div>;
   }
 
-  const playerName = `${player.FirstName} ${player.LastName}`;
+  const playerName =
+    player.PlayerName ||
+    player.Name ||
+    (player.FirstName && player.LastName
+      ? `${player.FirstName} ${player.LastName}`
+      : `Player ${playerId}`);
+  
   // Later you can add fields like YearsWithTeam or PhotoUrl to players.json
   const yearsWithTeam = player.YearsWithTeam || "";
   const photoUrl = player.PhotoUrl || null;
 
   // 2. Get all game stats for this player
   const statsForPlayer = playerStats.filter(
-    (s) => String(s.PlayerID) === String(playerId)
+    (s) => Number(s.PlayerID) === Number(playerId)
   );
 
   // 3. Join with game info (date, opponent, result, season)
