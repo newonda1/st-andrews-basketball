@@ -274,7 +274,12 @@ function Season2025_26() {
                     topPlayers.map((player, index) => (
                       <tr key={player.PlayerID || index}>
                         <td className="border p-1">
-                          {getPlayerName(player.PlayerID)}
+                          <Link
+                            to={`/players/${player.PlayerID}`}
+                            className="text-blue-700 hover:underline"
+                          >
+                            {getPlayerName(player.PlayerID)}
+                          </Link>
                         </td>
                         <td className="border p-1">
                           {statName === 'FTPercentage'
