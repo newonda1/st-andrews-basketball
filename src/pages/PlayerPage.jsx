@@ -155,6 +155,13 @@ function PlayerPage() {
     );
   });
 
+    const formatDate = (ms) =>
+    new Date(Number(ms)).toLocaleDateString(undefined, {
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+    });
+
   return (
     <div className="player-page max-w-5xl mx-auto p-4 space-y-8">
       {/* 1. Header: name, years, picture */}
@@ -265,16 +272,16 @@ function PlayerPage() {
               <tbody>
                 {statsWithGameInfo.map((row, idx) => (
                   <tr key={`${row.GameID}-${idx}`}>
-                    <td className="border px-2 py-1">
-                      {row.gameDate}
+                    <td className="border px-2 py-1 whitespace-nowrap">
+                      {row.gameDate ? formatDate(row.gameDate) : ""}
                     </td>
-                    <td className="border px-2 py-1">
+                    <td className="border px-2 py-1 whitespace-nowrap">
                       <Link
-                        to={`/games/${row.GameID}`}
-                        className="underline"
-                      >
-                        {row.opponent}
-                      </Link>
+                      to={`/games/${row.GameID}`}
+                      className="text-blue-600 hover:underline"
+                    >
+                      {row.opponent}
+                    </Link>
                     </td>
                     <td className="border px-2 py-1">
                       {row.result}
