@@ -12,6 +12,7 @@ import SeasonPlaceholder from './seasons/SeasonPlaceholder';
 import RecordsVsOpponents from './pages/RecordsVsOpponents';
 import YearlyResults from './pages/YearlyResults';
 import GameDetail from './seasons/GameDetail';
+import PlayerPage from "./pages/PlayerPage";
 
 const seasonPages = [
   { slug: "1992-93", Component: Season1992_93 },
@@ -245,6 +246,7 @@ function App() {
         <Route path="/records/opponents" element={<RecordsVsOpponents />} />
         <Route path="/yearly-results" element={<YearlyResults />} />
         <Route path="/games/:gameId" element={<GameDetail />} />
+        <Route path="/players/:playerId" element={<PlayerPage />} />
       </Routes>
   </div>
 );
