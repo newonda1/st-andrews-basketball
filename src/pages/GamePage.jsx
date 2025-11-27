@@ -52,7 +52,10 @@ function GamePage() {
         {playerStats.map((stat, index) => (
           <li key={index} className="border rounded p-4 shadow-sm">
             <p className="font-semibold">
-              <Link to={`/players/${stat.PlayerID}`} className="hover:underline">
+              <Link
+                to={`/players/${stat.PlayerID}`}
+                className="text-blue-600 underline hover:text-blue-800"
+              >
                 {playerMap[stat.PlayerID] || stat.PlayerID}
               </Link>
             </p>
