@@ -121,7 +121,8 @@ function Season2025_26() {
     setLeadersByStat(stats);
   }, [playerStats]);
 
-    useEffect(() => {
+  // Build season totals including shooting stats
+  useEffect(() => {
     if (playerStats.length === 0) {
       setSeasonTotals([]);
       return;
@@ -140,22 +141,48 @@ function Season2025_26() {
           Assists: 0,
           Steals: 0,
           Blocks: 0,
+          ThreePM: 0,
+          ThreePA: 0,
+          TwoPM: 0,
+          TwoPA: 0,
+          FTM: 0,
+          FTA: 0,
         };
       }
 
-      totalsMap[id].Points += stat.Points || 0;
-      totalsMap[id].Rebounds += stat.Rebounds || 0;
-      totalsMap[id].Assists += stat.Assists || 0;
-      totalsMap[id].Steals += stat.Steals || 0;
-      totalsMap[id].Blocks += stat.Blocks || 0;
+      const t = totalsMap[id];
+
+      t.Points += stat.Points || 0;
+      t.Rebounds += stat.Rebounds || 0;
+      t.Assists += stat.Assists || 0;
+      t.Steals += stat.Steals || 0;
+      t.Blocks += stat.Blocks || 0;
+
+      t.ThreePM += stat.ThreePM || 0;
+      t.ThreePA += stat.ThreePA || 0; // requires ThreePA field in playergamestats.json
+      t.TwoPM += stat.TwoPM || 0;
+      t.TwoPA += stat.TwoPA || 0;     // requires TwoPA field
+      t.FTM += stat.FTM || 0;
+      t.FTA += stat.FTA || 0;
     });
 
     setSeasonTotals(Object.values(totalsMap));
-  }, [playerStats]);
+  }, [playerStats]);;
 
   const getPlayerName = (id) => {
     const player = players.find((p) => p.PlayerID === id);
     return player ? `${player.FirstName} ${player.LastName}` : 'Unknown Player';
+  };
+
+    const getJerseyNumber = (id) => {
+    const player = players.find((p) => p.PlayerID === id);
+    // Adjust "JerseyNumber" to match your actual field name in players.json if needed
+    return player && player.JerseyNumber != null ? player.JerseyNumber : '';
+  };
+
+    const formatPct = (made, att) => {
+    if (!att || att === 0) return '0.0';
+    return ((made / att) * 100).toFixed(1);
   };
 
   const formatDate = (ms) => {
@@ -379,7 +406,7 @@ function Season2025_26() {
         </div>
       </section>
 
-      {/* 4. SEASON PLAYER TOTALS */}
+       {/* 4. SEASON PLAYER TOTALS */}
       <section>
         <h2 className="text-2xl font-semibold mt-8 mb-4">
           📊 Season Player Totals
@@ -395,11 +422,24 @@ function Season2025_26() {
               <thead>
                 <tr>
                   <th className="border px-2 py-1 text-left">Player</th>
+                  <th className="border px-2 py-1">#</th>
                   <th className="border px-2 py-1">PTS</th>
                   <th className="border px-2 py-1">REB</th>
                   <th className="border px-2 py-1">AST</th>
                   <th className="border px-2 py-1">STL</th>
                   <th className="border px-2 py-1">BLK</th>
+
+                  <th className="border px-2 py-1">3M</th>
+                  <th className="border px-2 py-1">3A</th>
+                  <th className="border px-2 py-1">3%</th>
+
+                  <th className="border px-2 py-1">2M</th>
+                  <th className="border px-2 py-1">2A</th>
+                  <th className="border px-2 py-1">2%</th>
+
+                  <th className="border px-2 py-1">FTM</th>
+                  <th className="border px-2 py-1">FTA</th>
+                  <th className="border px-2 py-1">FT%</th>
                 </tr>
               </thead>
               <tbody>
@@ -420,11 +460,33 @@ function Season2025_26() {
                           {getPlayerName(player.PlayerID)}
                         </Link>
                       </td>
+                      <td className="border px-2 py-1">
+                        {getJerseyNumber(player.PlayerID)}
+                      </td>
+
                       <td className="border px-2 py-1">{player.Points}</td>
                       <td className="border px-2 py-1">{player.Rebounds}</td>
                       <td className="border px-2 py-1">{player.Assists}</td>
                       <td className="border px-2 py-1">{player.Steals}</td>
                       <td className="border px-2 py-1">{player.Blocks}</td>
+
+                      <td className="border px-2 py-1">{player.ThreePM}</td>
+                      <td className="border px-2 py-1">{player.ThreePA}</td>
+                      <td className="border px-2 py-1">
+                        {formatPct(player.ThreePM, player.ThreePA)}%
+                      </td>
+
+                      <td className="border px-2 py-1">{player.TwoPM}</td>
+                      <td className="border px-2 py-1">{player.TwoPA}</td>
+                      <td className="border px-2 py-1">
+                        {formatPct(player.TwoPM, player.TwoPA)}%
+                      </td>
+
+                      <td className="border px-2 py-1">{player.FTM}</td>
+                      <td className="border px-2 py-1">{player.FTA}</td>
+                      <td className="border px-2 py-1">
+                        {formatPct(player.FTM, player.FTA)}%
+                      </td>
                     </tr>
                   ))}
               </tbody>
