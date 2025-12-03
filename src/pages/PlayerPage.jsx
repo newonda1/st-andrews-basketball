@@ -38,6 +38,17 @@ function PlayerPage() {
     );
   };
 
+      const formatDate = (ms) =>
+        new Date(Number(ms)).toLocaleDateString(undefined, {
+          month: "short",
+          day: "numeric",
+          year: "numeric",
+        });
+
+      const getPlayerPhotoUrl = (playerId) => {
+        return `/images/players/${playerId}.jpg`;   // use .png if your files are PNG
+      };
+
   // Load all the data we need
   useEffect(() => {
     async function loadData() {
@@ -154,17 +165,6 @@ function PlayerPage() {
       0
     );
   });
-
-    const formatDate = (ms) =>
-    new Date(Number(ms)).toLocaleDateString(undefined, {
-      month: "short",
-      day: "numeric",
-      year: "numeric",
-    });
-
-  const getPlayerPhotoUrl = (playerId) => {
-    return `/images/players/${playerId}.jpg`;   // use .png if your files are PNG
-  };
 
   return (
     <div className="player-page max-w-5xl mx-auto p-4 space-y-8">
