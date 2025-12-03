@@ -6,6 +6,7 @@ function Season2025_26() {
   const [playerStats, setPlayerStats] = useState([]);
   const [players, setPlayers] = useState([]);
   const [leadersByStat, setLeadersByStat] = useState({});
+  const [seasonTotals, setSeasonTotals] = useState([]); 
 
   const statLabels = {
     Points: 'Points',
@@ -118,6 +119,38 @@ function Season2025_26() {
     };
 
     setLeadersByStat(stats);
+  }, [playerStats]);
+
+    useEffect(() => {
+    if (playerStats.length === 0) {
+      setSeasonTotals([]);
+      return;
+    }
+
+    const totalsMap = {};
+
+    playerStats.forEach((stat) => {
+      const id = stat.PlayerID;
+
+      if (!totalsMap[id]) {
+        totalsMap[id] = {
+          PlayerID: id,
+          Points: 0,
+          Rebounds: 0,
+          Assists: 0,
+          Steals: 0,
+          Blocks: 0,
+        };
+      }
+
+      totalsMap[id].Points += stat.Points || 0;
+      totalsMap[id].Rebounds += stat.Rebounds || 0;
+      totalsMap[id].Assists += stat.Assists || 0;
+      totalsMap[id].Steals += stat.Steals || 0;
+      totalsMap[id].Blocks += stat.Blocks || 0;
+    });
+
+    setSeasonTotals(Object.values(totalsMap));
   }, [playerStats]);
 
   const getPlayerName = (id) => {
@@ -345,6 +378,61 @@ function Season2025_26() {
           </table>
         </div>
       </section>
+
+      {/* 4. SEASON PLAYER TOTALS */}
+      <section>
+        <h2 className="text-2xl font-semibold mt-8 mb-4">
+          📊 Season Player Totals
+        </h2>
+
+        {seasonTotals.length === 0 ? (
+          <p className="text-gray-600">
+            No player statistics are available yet for this season.
+          </p>
+        ) : (
+          <div className="overflow-x-auto px-1">
+            <table className="w-full border text-center text-xs sm:text-sm md:text-base">
+              <thead>
+                <tr>
+                  <th className="border px-2 py-1 text-left">Player</th>
+                  <th className="border px-2 py-1">PTS</th>
+                  <th className="border px-2 py-1">REB</th>
+                  <th className="border px-2 py-1">AST</th>
+                  <th className="border px-2 py-1">STL</th>
+                  <th className="border px-2 py-1">BLK</th>
+                </tr>
+              </thead>
+              <tbody>
+                {seasonTotals
+                  .slice()
+                  .sort((a, b) =>
+                    getPlayerName(a.PlayerID).localeCompare(
+                      getPlayerName(b.PlayerID)
+                    )
+                  )
+                  .map((player) => (
+                    <tr key={player.PlayerID}>
+                      <td className="border px-2 py-1 text-left">
+                        <Link
+                          to={`/players/${player.PlayerID}`}
+                          className="text-blue-700 hover:underline"
+                        >
+                          {getPlayerName(player.PlayerID)}
+                        </Link>
+                      </td>
+                      <td className="border px-2 py-1">{player.Points}</td>
+                      <td className="border px-2 py-1">{player.Rebounds}</td>
+                      <td className="border px-2 py-1">{player.Assists}</td>
+                      <td className="border px-2 py-1">{player.Steals}</td>
+                      <td className="border px-2 py-1">{player.Blocks}</td>
+                    </tr>
+                  ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </section>
+      
     </div>
   );
 }
