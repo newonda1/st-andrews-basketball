@@ -52,10 +52,6 @@ function GameDetail() {
     if (!p) {
       return `Player ${playerId}`;
     }
-
-    const getPlayerPhotoUrl = (playerId) => {
-      return `/images/players/${playerId}.jpg`; // or .png if your files are PNG
-    };
     
     // Try several name fields in order
     const fullName =
@@ -68,6 +64,10 @@ function GameDetail() {
     return fullName || `Player ${playerId}`;
   };
 
+      const getPlayerPhotoUrl = (playerId) => {
+        return `/images/players/${playerId}.jpg`; // or .png if your files are PNG
+      };
+  
   const formatDate = (ms) =>
     new Date(ms).toLocaleDateString(undefined, {
       month: "short",
