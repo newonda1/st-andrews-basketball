@@ -87,7 +87,7 @@ function PlayerPage() {
   
   // Later you can add fields like YearsWithTeam or PhotoUrl to players.json
   const yearsWithTeam = player.YearsWithTeam || "";
-  const photoUrl = player.PhotoUrl || null;
+  const photoUrl = getPlayerPhotoUrl(playerId);
 
   // 2. Get all game stats for this player
   const statsForPlayer = playerStats.filter(
@@ -162,6 +162,10 @@ function PlayerPage() {
       year: "numeric",
     });
 
+  const getPlayerPhotoUrl = (playerId) => {
+    return `/images/players/${playerId}.jpg`;   // use .png if your files are PNG
+  };
+
   return (
     <div className="player-page max-w-5xl mx-auto p-4 space-y-8">
       {/* 1. Header: name, years, picture */}
@@ -170,6 +174,7 @@ function PlayerPage() {
           <img
             src={photoUrl}
             alt={playerName}
+            onError={(e) => (e.currentTarget.src = "/images/players/default.jpg")}
             className="w-24 h-24 object-cover rounded-full border"
           />
         )}
