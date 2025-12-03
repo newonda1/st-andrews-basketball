@@ -4066,11 +4066,11 @@
     "LocationType": "Away",
     "GameType": "Non-Region",
     "Result": "Unknown",
-    "TeamScore": null,
-    "OpponentScore": null,
-    "ResultMargin": null,
+    "TeamScore": 56,
+    "OpponentScore": 53,
+    "ResultMargin": 3,
     "Season": 2025,
-    "IsComplete": "Unknown"
+    "IsComplete": "Yes"
   },
   {
     "GameID": 20251205,
