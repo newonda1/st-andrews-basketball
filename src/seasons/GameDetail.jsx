@@ -53,6 +53,10 @@ function GameDetail() {
       return `Player ${playerId}`;
     }
 
+    const getPlayerPhotoUrl = (playerId) => {
+      return `/images/players/${playerId}.jpg`; // or .png if your files are PNG
+    };
+    
     // Try several name fields in order
     const fullName =
       p.PlayerName ||
@@ -147,12 +151,20 @@ function GameDetail() {
                 {playerStats.map((s) => (
                   <tr key={s.PlayerGameStatsID}>
                     <td className="border px-2 py-1">
-                      <Link
-                        to={`/players/${s.PlayerID}`}
-                        className="text-blue-600 underline hover:text-blue-800"
-                      >
-                        {getPlayerName(s.PlayerID)}
-                      </Link>
+                      <div className="flex items-center gap-2">
+                        <img
+                          src={getPlayerPhotoUrl(s.PlayerID)}
+                          alt={getPlayerName(s.PlayerID)}
+                          onError={(e) => (e.currentTarget.src = "/images/players/default.jpg")}
+                          className="w-8 h-8 rounded-full object-cover border"
+                        />
+                        <Link
+                          to={`/players/${s.PlayerID}`}
+                          className="text-blue-600 underline hover:text-blue-800"
+                        >
+                          {getPlayerName(s.PlayerID)}
+                        </Link>
+                      </div>
                     </td>
                     <td className="border px-2 py-1">{s.Points}</td>
                     <td className="border px-2 py-1">{s.Rebounds}</td>
