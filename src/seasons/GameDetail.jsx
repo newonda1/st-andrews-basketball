@@ -139,34 +139,6 @@ function GameDetail() {
         </p>
       </header>
 
-      {/* NEW: Game Highlights section (above recap) */}
-      {game.HighlightsUrl && (
-        <section>
-          <h2 className="text-xl font-semibold mb-2">Game Highlights</h2>
-          <div className="w-full max-w-3xl aspect-video">
-            <iframe
-              src={game.HighlightsUrl}
-              title="Game Highlights"
-              className="w-full h-full border rounded"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </div>
-          <p className="text-xs text-gray-500 mt-1">
-            If the video doesn&apos;t play,{" "}
-            <a
-              href={game.HighlightsUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 underline"
-            >
-              watch on Hudl
-            </a>
-            .
-          </p>
-        </section>
-      )}
-
       <section>
         <h2 className="text-xl font-semibold mb-2">Game Recap</h2>
         <p className="text-gray-700 leading-relaxed whitespace-pre-line">
@@ -220,8 +192,9 @@ function GameDetail() {
 
                   return (
                     <tr key={s.PlayerGameStatsID}>
-                      <td className="border px-2 py-1 align-middle">
-                        <div className="flex items-center justify-center gap-2">
+                      {/* Player column: left-aligned */}
+                      <td className="border px-2 py-1 align-middle text-left">
+                        <div className="flex items-center justify-start gap-2">
                           <img
                             src={getPlayerPhotoUrl(s.PlayerID)}
                             alt={getPlayerName(s.PlayerID)}
@@ -239,6 +212,8 @@ function GameDetail() {
                           </Link>
                         </div>
                       </td>
+
+                      {/* All other columns: centered */}
                       <td className="border px-2 py-1 align-middle">
                         {s.Points}
                       </td>
