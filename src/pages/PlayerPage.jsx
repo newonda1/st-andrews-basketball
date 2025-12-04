@@ -6,6 +6,7 @@ const statKeys = [
   "Points",
   "Rebounds",
   "Assists",
+  "Turnovers",
   "Steals",
   "Blocks",
   "ThreePM",
@@ -21,6 +22,7 @@ const statLabelMap = {
   Points: "PTS",
   Rebounds: "REB",
   Assists: "AST",
+  Turnovers: "TO",
   Steals: "STL",
   Blocks: "BLK",
   ThreePM: "3PM",
@@ -57,7 +59,20 @@ const calcEFG = (twoPM, threePM, twoPA, threePA) => {
   const denom = tpa + thpa;
   if (!denom) return "-";
   const efg = ((tpm + thpm) + 0.5 * thpm) / denom;
-  return (efg * 100).toFixed(1); // show as percentage too
+  return (efg * 100).toFixed(1); // show as percentage
+};
+
+// Format season like 2024 -> "2024-25". If already "2024-25", leave it.
+const formatSeasonLabel = (seasonKey) => {
+  if (!seasonKey) return "Unknown";
+  const s = String(seasonKey);
+  if (s.includes("-")) return s;
+
+  const yearNum = Number(s);
+  if (Number.isNaN(yearNum)) return s;
+
+  const next = (yearNum + 1).toString().slice(-2);
+  return `${yearNum}-${next}`;
 };
 
 function PlayerPage() {
@@ -166,7 +181,7 @@ function PlayerPage() {
     });
 
   // 4. Build season totals
-  const seasonMap = {}; // { "2025-26": { season, gamesPlayed, Points, ... } }
+  const seasonMap = {}; // { "2025-26" or "2024": { season, gamesPlayed, Points, ... } }
 
   statsWithGameInfo.forEach((stat) => {
     const seasonKey = stat.season || "Unknown";
@@ -254,9 +269,9 @@ function PlayerPage() {
         </div>
       </header>
 
-      {/* 2. Season-by-season stats table */}
+      {/* 2. Career Totals (season-by-season + career row) */}
       <section>
-        <h2 className="text-2xl font-semibold mb-2">Season Totals</h2>
+        <h2 className="text-2xl font-semibold mb-2">Career Totals</h2>
         {seasonTotals.length === 0 ? (
           <p>No stats available.</p>
         ) : (
@@ -275,21 +290,27 @@ function PlayerPage() {
                         <th className="border px-2 py-1 text-center">3P%</th>
                       )}
                       {key === "TwoPA" && (
-                        <th className="border px-2 py-1 text-center">2P%</th>
+                        <>
+                          <th className="border px-2 py-1 text-center">
+                            2P%
+                          </th>
+                          <th className="border px-2 py-1 text-center">
+                            eFG%
+                          </th>
+                        </>
                       )}
                       {key === "FTA" && (
                         <th className="border px-2 py-1 text-center">FT%</th>
                       )}
                     </React.Fragment>
                   ))}
-                  <th className="border px-2 py-1 text-center">eFG%</th>
                 </tr>
               </thead>
               <tbody>
                 {seasonTotals.map((row) => (
                   <tr key={row.season}>
                     <td className="border px-2 py-1 text-center">
-                      {row.season}
+                      {formatSeasonLabel(row.season)}
                     </td>
                     <td className="border px-2 py-1 text-center">
                       {row.gamesPlayed}
@@ -305,9 +326,19 @@ function PlayerPage() {
                           </td>
                         )}
                         {key === "TwoPA" && (
-                          <td className="border px-2 py-1 text-center">
-                            {calcPct(row.TwoPM, row.TwoPA)}
-                          </td>
+                          <>
+                            <td className="border px-2 py-1 text-center">
+                              {calcPct(row.TwoPM, row.TwoPA)}
+                            </td>
+                            <td className="border px-2 py-1 text-center">
+                              {calcEFG(
+                                row.TwoPM,
+                                row.ThreePM,
+                                row.TwoPA,
+                                row.ThreePA
+                              )}
+                            </td>
+                          </>
                         )}
                         {key === "FTA" && (
                           <td className="border px-2 py-1 text-center">
@@ -316,14 +347,6 @@ function PlayerPage() {
                         )}
                       </React.Fragment>
                     ))}
-                    <td className="border px-2 py-1 text-center">
-                      {calcEFG(
-                        row.TwoPM,
-                        row.ThreePM,
-                        row.TwoPA,
-                        row.ThreePA
-                      )}
-                    </td>
                   </tr>
                 ))}
 
@@ -349,9 +372,22 @@ function PlayerPage() {
                         </td>
                       )}
                       {key === "TwoPA" && (
-                        <td className="border px-2 py-1 text-center">
-                          {calcPct(careerTotals.TwoPM, careerTotals.TwoPA)}
-                        </td>
+                        <>
+                          <td className="border px-2 py-1 text-center">
+                            {calcPct(
+                              careerTotals.TwoPM,
+                              careerTotals.TwoPA
+                            )}
+                          </td>
+                          <td className="border px-2 py-1 text-center">
+                            {calcEFG(
+                              careerTotals.TwoPM,
+                              careerTotals.ThreePM,
+                              careerTotals.TwoPA,
+                              careerTotals.ThreePA
+                            )}
+                          </td>
+                        </>
                       )}
                       {key === "FTA" && (
                         <td className="border px-2 py-1 text-center">
@@ -360,14 +396,6 @@ function PlayerPage() {
                       )}
                     </React.Fragment>
                   ))}
-                  <td className="border px-2 py-1 text-center">
-                    {calcEFG(
-                      careerTotals.TwoPM,
-                      careerTotals.ThreePM,
-                      careerTotals.TwoPA,
-                      careerTotals.ThreePA
-                    )}
-                  </td>
                 </tr>
               </tbody>
             </table>
@@ -412,9 +440,14 @@ function PlayerPage() {
                               </th>
                             )}
                             {key === "TwoPA" && (
-                              <th className="border px-2 py-1 text-center">
-                                2P%
-                              </th>
+                              <>
+                                <th className="border px-2 py-1 text-center">
+                                  2P%
+                                </th>
+                                <th className="border px-2 py-1 text-center">
+                                  eFG%
+                                </th>
+                              </>
                             )}
                             {key === "FTA" && (
                               <th className="border px-2 py-1 text-center">
@@ -423,7 +456,6 @@ function PlayerPage() {
                             )}
                           </React.Fragment>
                         ))}
-                        <th className="border px-2 py-1 text-center">eFG%</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -454,9 +486,19 @@ function PlayerPage() {
                                 </td>
                               )}
                               {key === "TwoPA" && (
-                                <td className="border px-2 py-1 text-center">
-                                  {calcPct(row.TwoPM, row.TwoPA)}
-                                </td>
+                                <>
+                                  <td className="border px-2 py-1 text-center">
+                                    {calcPct(row.TwoPM, row.TwoPA)}
+                                  </td>
+                                  <td className="border px-2 py-1 text-center">
+                                    {calcEFG(
+                                      row.TwoPM,
+                                      row.ThreePM,
+                                      row.TwoPA,
+                                      row.ThreePA
+                                    )}
+                                  </td>
+                                </>
                               )}
                               {key === "FTA" && (
                                 <td className="border px-2 py-1 text-center">
@@ -465,14 +507,6 @@ function PlayerPage() {
                               )}
                             </React.Fragment>
                           ))}
-                          <td className="border px-2 py-1 text-center">
-                            {calcEFG(
-                              row.TwoPM,
-                              row.ThreePM,
-                              row.TwoPA,
-                              row.ThreePA
-                            )}
-                          </td>
                         </tr>
                       ))}
                     </tbody>
