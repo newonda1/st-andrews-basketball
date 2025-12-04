@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 
-// We will fetch JSON from /data instead of importing it
-
-// These must match the field names in player_game_stats.json
+// These must match the *field names* in playergamestats.json
 const statKeys = [
   "Points",
   "Rebounds",
@@ -18,6 +16,32 @@ const statKeys = [
   "FTA",
 ];
 
+// Map data keys -> how we want them labeled in the tables
+const statLabelMap = {
+  ThreePM: "3PM",
+  ThreePA: "3PA",
+  TwoPM: "2PM",
+  TwoPA: "2PA",
+};
+
+const formatDate = (ms) =>
+  new Date(Number(ms)).toLocaleDateString(undefined, {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
+
+const getPlayerPhotoUrl = (playerId) => {
+  return `/images/players/${playerId}.jpg`; // use .png if your files are PNG
+};
+
+const calcPct = (made, att) => {
+  const m = Number(made) || 0;
+  const a = Number(att) || 0;
+  if (!a) return "-";
+  return ((m / a) * 100).toFixed(1); // e.g. "45.0"
+};
+
 function PlayerPage() {
   const { playerId } = useParams();
 
@@ -26,7 +50,7 @@ function PlayerPage() {
   const [playerStats, setPlayerStats] = useState([]);
   const [loading, setLoading] = useState(true);
 
-    // Helper to find the player by ID, handling numeric IDs and alternate field names
+  // Helper to find the player by ID, handling numeric IDs and alternate field names
   const getPlayerById = (id) => {
     const idNum = Number(id);
 
@@ -37,17 +61,6 @@ function PlayerPage() {
       null
     );
   };
-
-      const formatDate = (ms) =>
-        new Date(Number(ms)).toLocaleDateString(undefined, {
-          month: "short",
-          day: "numeric",
-          year: "numeric",
-        });
-
-      const getPlayerPhotoUrl = (playerId) => {
-        return `/images/players/${playerId}.jpg`;   // use .png if your files are PNG
-      };
 
   // Load all the data we need
   useEffect(() => {
@@ -95,8 +108,18 @@ function PlayerPage() {
     (player.FirstName && player.LastName
       ? `${player.FirstName} ${player.LastName}`
       : `Player ${playerId}`);
-  
-  // Later you can add fields like YearsWithTeam or PhotoUrl to players.json
+
+  // Jersey number + class/year, trying several possible field names
+  const jerseyNumber =
+    player.JerseyNumber ?? player.Number ?? player.Jersey ?? null;
+
+  const gradYear =
+    player.ClassOf ??
+    player.GradYear ??
+    player.GraduationYear ??
+    player.Class ??
+    null;
+
   const yearsWithTeam = player.YearsWithTeam || "";
   const photoUrl = getPlayerPhotoUrl(playerId);
 
@@ -166,20 +189,45 @@ function PlayerPage() {
     );
   });
 
+  // 6. Game logs grouped by season (most recent season first)
+  const gameLogsBySeason = statsWithGameInfo.reduce((acc, row) => {
+    const seasonKey = row.season || "Unknown";
+    if (!acc[seasonKey]) acc[seasonKey] = [];
+    acc[seasonKey].push(row);
+    return acc;
+  }, {});
+
+  const orderedSeasonKeys = Object.keys(gameLogsBySeason).sort((a, b) => {
+    if (a === "Unknown") return 1;
+    if (b === "Unknown") return -1;
+    return String(b).localeCompare(String(a)); // most recent (largest) first
+  });
+
   return (
     <div className="player-page max-w-5xl mx-auto p-4 space-y-8">
-      {/* 1. Header: name, years, picture */}
+      {/* 1. Header: name, jersey, class, years, picture */}
       <header className="flex items-center gap-4 mb-4">
         {photoUrl && (
           <img
             src={photoUrl}
             alt={playerName}
-            onError={(e) => (e.currentTarget.src = "/images/players/default.jpg")}
+            onError={(e) =>
+              (e.currentTarget.src = "/images/players/default.jpg")
+            }
             className="w-24 h-24 object-cover rounded-full border"
           />
         )}
         <div>
           <h1 className="text-3xl font-bold">{playerName}</h1>
+
+          {(jerseyNumber || gradYear) && (
+            <p className="text-gray-700 text-lg">
+              {jerseyNumber && <span>#{jerseyNumber}</span>}
+              {jerseyNumber && gradYear && <span> • </span>}
+              {gradYear && <span>Class of {gradYear}</span>}
+            </p>
+          )}
+
           {yearsWithTeam && (
             <p className="text-gray-600 text-lg">
               St. Andrew&apos;s Lions • {yearsWithTeam}
@@ -198,52 +246,76 @@ function PlayerPage() {
             <table className="min-w-full border text-sm">
               <thead>
                 <tr className="bg-gray-100">
-                  <th className="border px-2 py-1 text-left">Season</th>
-                  <th className="border px-2 py-1 text-right">GP</th>
+                  <th className="border px-2 py-1 text-center">Season</th>
+                  <th className="border px-2 py-1 text-center">GP</th>
                   {statKeys.map((key) => (
                     <th
                       key={key}
-                      className="border px-2 py-1 text-right"
+                      className="border px-2 py-1 text-center"
                     >
-                      {key}
+                      {statLabelMap[key] || key}
                     </th>
                   ))}
+                  {/* Percentage columns */}
+                  <th className="border px-2 py-1 text-center">3P%</th>
+                  <th className="border px-2 py-1 text-center">2P%</th>
+                  <th className="border px-2 py-1 text-center">FT%</th>
                 </tr>
               </thead>
               <tbody>
                 {seasonTotals.map((row) => (
                   <tr key={row.season}>
-                    <td className="border px-2 py-1">{row.season}</td>
-                    <td className="border px-2 py-1 text-right">
+                    <td className="border px-2 py-1 text-center">
+                      {row.season}
+                    </td>
+                    <td className="border px-2 py-1 text-center">
                       {row.gamesPlayed}
                     </td>
                     {statKeys.map((key) => (
                       <td
                         key={key}
-                        className="border px-2 py-1 text-right"
+                        className="border px-2 py-1 text-center"
                       >
                         {row[key]}
                       </td>
                     ))}
+                    <td className="border px-2 py-1 text-center">
+                      {calcPct(row.ThreePM, row.ThreePA)}
+                    </td>
+                    <td className="border px-2 py-1 text-center">
+                      {calcPct(row.TwoPM, row.TwoPA)}
+                    </td>
+                    <td className="border px-2 py-1 text-center">
+                      {calcPct(row.FTM, row.FTA)}
+                    </td>
                   </tr>
                 ))}
 
                 {/* Career row */}
                 <tr className="bg-gray-50 font-semibold">
-                  <td className="border px-2 py-1">
+                  <td className="border px-2 py-1 text-center">
                     {careerTotals.season}
                   </td>
-                  <td className="border px-2 py-1 text-right">
+                  <td className="border px-2 py-1 text-center">
                     {careerTotals.gamesPlayed}
                   </td>
                   {statKeys.map((key) => (
                     <td
                       key={key}
-                      className="border px-2 py-1 text-right"
+                      className="border px-2 py-1 text-center"
                     >
                       {careerTotals[key]}
                     </td>
                   ))}
+                  <td className="border px-2 py-1 text-center">
+                    {calcPct(careerTotals.ThreePM, careerTotals.ThreePA)}
+                  </td>
+                  <td className="border px-2 py-1 text-center">
+                    {calcPct(careerTotals.TwoPM, careerTotals.TwoPA)}
+                  </td>
+                  <td className="border px-2 py-1 text-center">
+                    {calcPct(careerTotals.FTM, careerTotals.FTA)}
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -251,59 +323,93 @@ function PlayerPage() {
         )}
       </section>
 
-      {/* 3. Game-by-game table */}
+      {/* 3. Game-by-game tables, split by season */}
       <section>
         <h2 className="text-2xl font-semibold mb-2">Game Logs</h2>
         {statsWithGameInfo.length === 0 ? (
           <p>No game logs available.</p>
         ) : (
-          <div className="overflow-x-auto">
-            <table className="min-w-full border text-sm">
-              <thead>
-                <tr className="bg-gray-100">
-                  <th className="border px-2 py-1 text-left">Date</th>
-                  <th className="border px-2 py-1 text-left">Opponent</th>
-                  <th className="border px-2 py-1 text-left">Result</th>
-                  {statKeys.map((key) => (
-                    <th
-                      key={key}
-                      className="border px-2 py-1 text-right"
-                    >
-                      {key}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {statsWithGameInfo.map((row, idx) => (
-                  <tr key={`${row.GameID}-${idx}`}>
-                    <td className="border px-2 py-1 whitespace-nowrap">
-                      {row.gameDate ? formatDate(row.gameDate) : ""}
-                    </td>
-                    <td className="border px-2 py-1 whitespace-nowrap">
-                      <Link
-                      to={`/games/${row.GameID}`}
-                      className="text-blue-600 hover:underline"
-                    >
-                      {row.opponent}
-                    </Link>
-                    </td>
-                    <td className="border px-2 py-1">
-                      {row.result}
-                    </td>
-                    {statKeys.map((key) => (
-                      <td
-                        key={key}
-                        className="border px-2 py-1 text-right"
-                      >
-                        {row[key]}
-                      </td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          orderedSeasonKeys.map((seasonKey) => {
+            const rows = gameLogsBySeason[seasonKey] || [];
+            return (
+              <div key={seasonKey} className="mb-6">
+                <h3 className="text-xl font-semibold mb-1">
+                  {seasonKey || "Unknown Season"}
+                </h3>
+                <div className="overflow-x-auto">
+                  <table className="min-w-full border text-sm">
+                    <thead>
+                      <tr className="bg-gray-100">
+                        <th className="border px-2 py-1 text-center">
+                          Date
+                        </th>
+                        <th className="border px-2 py-1 text-center">
+                          Opponent
+                        </th>
+                        <th className="border px-2 py-1 text-center">
+                          Result
+                        </th>
+                        {statKeys.map((key) => (
+                          <th
+                            key={key}
+                            className="border px-2 py-1 text-center"
+                          >
+                            {statLabelMap[key] || key}
+                          </th>
+                        ))}
+                        <th className="border px-2 py-1 text-center">
+                          3P%
+                        </th>
+                        <th className="border px-2 py-1 text-center">
+                          2P%
+                        </th>
+                        <th className="border px-2 py-1 text-center">
+                          FT%
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {rows.map((row, idx) => (
+                        <tr key={`${row.GameID}-${idx}`}>
+                          <td className="border px-2 py-1 text-center whitespace-nowrap">
+                            {row.gameDate ? formatDate(row.gameDate) : ""}
+                          </td>
+                          <td className="border px-2 py-1 text-center whitespace-nowrap">
+                            <Link
+                              to={`/games/${row.GameID}`}
+                              className="text-blue-600 hover:underline"
+                            >
+                              {row.opponent}
+                            </Link>
+                          </td>
+                          <td className="border px-2 py-1 text-center">
+                            {row.result}
+                          </td>
+                          {statKeys.map((key) => (
+                            <td
+                              key={key}
+                              className="border px-2 py-1 text-center"
+                            >
+                              {row[key]}
+                            </td>
+                          ))}
+                          <td className="border px-2 py-1 text-center">
+                            {calcPct(row.ThreePM, row.ThreePA)}
+                          </td>
+                          <td className="border px-2 py-1 text-center">
+                            {calcPct(row.TwoPM, row.TwoPA)}
+                          </td>
+                          <td className="border px-2 py-1 text-center">
+                            {calcPct(row.FTM, row.FTA)}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            );
+          })
         )}
       </section>
     </div>
