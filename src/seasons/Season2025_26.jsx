@@ -5,22 +5,15 @@ function Season2025_26() {
   const [games, setGames] = useState([]);
   const [playerStats, setPlayerStats] = useState([]);
   const [players, setPlayers] = useState([]);
-  const [leadersByStat, setLeadersByStat] = useState({});
-  const [seasonTotals, setSeasonTotals] = useState([]); 
-
-  const statLabels = {
-    Points: 'Points',
-    Rebounds: 'Rebounds',
-    Assists: 'Assists',
-    Steals: 'Steals',
-    Blocks: 'Blocks',
-    ThreePM: '3-pointers made',
-    TwoPM: '2-pointers made',
-    FTPercentage: 'Free Throw %',
-  };
+  const [seasonTotals, setSeasonTotals] = useState([]);
+  const [sortConfig, setSortConfig] = useState({
+    key: 'name',
+    direction: 'asc',
+  });
 
   const SEASON_ID = 2025; // 2025–26 season
 
+  // 1. Fetch data
   useEffect(() => {
     async function fetchData() {
       const gamesRes = await fetch('/data/games.json');
@@ -49,79 +42,7 @@ function Season2025_26() {
     fetchData();
   }, []);
 
-  useEffect(() => {
-    if (playerStats.length === 0) {
-      setLeadersByStat({});
-      return;
-    }
-
-    const totals = {};
-
-    playerStats.forEach((stat) => {
-      const id = stat.PlayerID;
-      if (!totals[id]) {
-        totals[id] = {
-          PlayerID: id,
-          Points: 0,
-          Rebounds: 0,
-          Assists: 0,
-          Steals: 0,
-          Blocks: 0,
-          ThreePM: 0,
-          TwoPM: 0,
-          FTM: 0,
-          FTA: 0,
-          GamesPlayed: 0,
-        };
-      }
-
-      totals[id].Points += stat.Points || 0;
-      totals[id].Rebounds += stat.Rebounds || 0;
-      totals[id].Assists += stat.Assists || 0;
-      totals[id].Steals += stat.Steals || 0;
-      totals[id].Blocks += stat.Blocks || 0;
-      totals[id].ThreePM += stat.ThreePM || 0;
-      totals[id].TwoPM += stat.TwoPM || 0;
-      totals[id].FTM += stat.FTM || 0;
-      totals[id].FTA += stat.FTA || 0;
-      totals[id].GamesPlayed += 1;
-    });
-
-    const calculateFTPercent = (player) =>
-      player.FTA > 0 ? (player.FTM / player.FTA) * 100 : 0;
-
-    const sortAndTakeTop3 = (statName, isPercent = false) => {
-      let allPlayers = Object.values(totals);
-
-      if (isPercent && statName === 'FTM') {
-        // Only include players with a meaningful FT sample size
-        allPlayers = allPlayers.filter((p) => p.FTA >= 25);
-      }
-
-      return allPlayers
-        .map((p) => ({
-          ...p,
-          StatValue: isPercent ? calculateFTPercent(p) : p[statName],
-        }))
-        .sort((a, b) => b.StatValue - a.StatValue)
-        .slice(0, 3);
-    };
-
-    const stats = {
-      Points: sortAndTakeTop3('Points'),
-      Rebounds: sortAndTakeTop3('Rebounds'),
-      Assists: sortAndTakeTop3('Assists'),
-      Steals: sortAndTakeTop3('Steals'),
-      Blocks: sortAndTakeTop3('Blocks'),
-      ThreePM: sortAndTakeTop3('ThreePM'),
-      TwoPM: sortAndTakeTop3('TwoPM'),
-      FTPercentage: sortAndTakeTop3('FTM', true),
-    };
-
-    setLeadersByStat(stats);
-  }, [playerStats]);
-
-  // Build season totals including shooting stats
+  // 2. Build season totals including shooting stats
   useEffect(() => {
     if (playerStats.length === 0) {
       setSeasonTotals([]);
@@ -139,6 +60,7 @@ function Season2025_26() {
           Points: 0,
           Rebounds: 0,
           Assists: 0,
+          Turnovers: 0,
           Steals: 0,
           Blocks: 0,
           ThreePM: 0,
@@ -155,34 +77,67 @@ function Season2025_26() {
       t.Points += stat.Points || 0;
       t.Rebounds += stat.Rebounds || 0;
       t.Assists += stat.Assists || 0;
+      t.Turnovers += stat.Turnovers || 0; // requires Turnovers field
       t.Steals += stat.Steals || 0;
       t.Blocks += stat.Blocks || 0;
 
       t.ThreePM += stat.ThreePM || 0;
-      t.ThreePA += stat.ThreePA || 0; // requires ThreePA field in playergamestats.json
+      t.ThreePA += stat.ThreePA || 0; // requires ThreePA field
       t.TwoPM += stat.TwoPM || 0;
-      t.TwoPA += stat.TwoPA || 0;     // requires TwoPA field
+      t.TwoPA += stat.TwoPA || 0; // requires TwoPA field
       t.FTM += stat.FTM || 0;
       t.FTA += stat.FTA || 0;
     });
 
     setSeasonTotals(Object.values(totalsMap));
-  }, [playerStats]);;
+  }, [playerStats]);
 
+  // -------- Helper functions --------
   const getPlayerName = (id) => {
     const player = players.find((p) => p.PlayerID === id);
     return player ? `${player.FirstName} ${player.LastName}` : 'Unknown Player';
   };
 
-    const getJerseyNumber = (id) => {
+  const getJerseyNumber = (id) => {
     const player = players.find((p) => p.PlayerID === id);
-    // Adjust "JerseyNumber" to match your actual field name in players.json if needed
     return player && player.JerseyNumber != null ? player.JerseyNumber : '';
   };
 
-    const formatPct = (made, att) => {
-    if (!att || att === 0) return '0.0';
-    return ((made / att) * 100).toFixed(1);
+  const getPlayerImage = (id) => {
+    const player = players.find((p) => p.PlayerID === id);
+    if (!player) return '/images/default-player.png';
+
+    // Adjust these field names to match your players.json
+    return (
+      player.Photo ||
+      player.Image ||
+      player.Headshot ||
+      player.HeadshotURL ||
+      '/images/default-player.png'
+    );
+  };
+
+  const rawPct = (made, att) => {
+    if (!att || att === 0) return 0;
+    return (made / att) * 100;
+  };
+
+  const formatPct = (made, att) => {
+    if (!att || att === 0) return '-';
+    return rawPct(made, att).toFixed(1);
+  };
+
+  const rawEFG = (player) => {
+    const made = (player.TwoPM || 0) + (player.ThreePM || 0);
+    const att = (player.TwoPA || 0) + (player.ThreePA || 0);
+    if (!att || att === 0) return 0;
+    return ((made + 0.5 * (player.ThreePM || 0)) / att) * 100;
+  };
+
+  const formatEFG = (player) => {
+    const att = (player.TwoPA || 0) + (player.ThreePA || 0);
+    if (!att || att === 0) return '-';
+    return rawEFG(player).toFixed(1);
   };
 
   const formatDate = (ms) => {
@@ -191,7 +146,6 @@ function Season2025_26() {
   };
 
   const formatResult = (game) => {
-    // For games not yet played / not complete, leave blank
     if (game.IsComplete !== 'Yes' || !game.Result) return '';
     return game.Result;
   };
@@ -207,17 +161,89 @@ function Season2025_26() {
     return `${game.TeamScore} - ${game.OpponentScore}`;
   };
 
+  // -------- Sorting logic for season totals --------
+  const handleSort = (key) => {
+    setSortConfig((prev) => {
+      if (prev.key === key) {
+        return {
+          key,
+          direction: prev.direction === 'desc' ? 'asc' : 'desc',
+        };
+      }
+      // Default to highest → lowest
+      return { key, direction: 'desc' };
+    });
+  };
+
+  const getSortValue = (player, key) => {
+    switch (key) {
+      case 'name':
+        return getPlayerName(player.PlayerID).toLowerCase();
+      case 'Points':
+        return player.Points || 0;
+      case 'Rebounds':
+        return player.Rebounds || 0;
+      case 'Assists':
+        return player.Assists || 0;
+      case 'Turnovers':
+        return player.Turnovers || 0;
+      case 'Steals':
+        return player.Steals || 0;
+      case 'Blocks':
+        return player.Blocks || 0;
+      case 'ThreePM':
+        return player.ThreePM || 0;
+      case 'ThreePA':
+        return player.ThreePA || 0;
+      case 'ThreePct':
+        return rawPct(player.ThreePM, player.ThreePA);
+      case 'TwoPM':
+        return player.TwoPM || 0;
+      case 'TwoPA':
+        return player.TwoPA || 0;
+      case 'TwoPct':
+        return rawPct(player.TwoPM, player.TwoPA);
+      case 'FTM':
+        return player.FTM || 0;
+      case 'FTA':
+        return player.FTA || 0;
+      case 'FTPct':
+        return rawPct(player.FTM, player.FTA);
+      case 'eFG':
+        return rawEFG(player);
+      default:
+        return 0;
+    }
+  };
+
+  const sortedSeasonTotals = seasonTotals
+    .slice()
+    .sort((a, b) => {
+      const aVal = getSortValue(a, sortConfig.key);
+      const bVal = getSortValue(b, sortConfig.key);
+
+      if (aVal < bVal) return sortConfig.direction === 'asc' ? -1 : 1;
+      if (aVal > bVal) return sortConfig.direction === 'asc' ? 1 : -1;
+      return 0;
+    });
+
+  // Small helper to show sort direction arrows
+  const sortArrow = (key) => {
+    if (sortConfig.key !== key) return '';
+    return sortConfig.direction === 'desc' ? ' ↓' : ' ↑';
+  };
+
   return (
     <div className="bg-gray-100 p-8 rounded-lg shadow-md max-w-6xl mx-auto space-y-10">
       <h1 className="text-3xl font-bold text-center mb-4">2025–26 Season</h1>
 
-      {/* 1. OVERVIEW */}
+      {/* 1. SEASON OVERVIEW */}
       <section className="bg-white rounded-2xl shadow-sm p-6 space-y-4">
         <h2 className="text-2xl font-semibold mt-4 mb-3">Season Overview</h2>
 
         <div className="text-gray-800 leading-relaxed">
           <a
-            href="https://www.flipsnack.com/6D6FD76F8D6/boys-basketball-media-guide-2025-2026.html" 
+            href="https://www.flipsnack.com/6D6FD76F8D6/boys-basketball-media-guide-2025-2026.html"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -227,7 +253,7 @@ function Season2025_26() {
               className="float-left mr-4 mb-3 w-full max-w-xs rounded-lg shadow cursor-pointer"
             />
           </a>
-          
+
           <p className="mb-5 leading-relaxed">
             After winning three state championships in the past four years, the
             St. Andrew’s Lions enter the 2025-26 basketball season carrying both
@@ -260,12 +286,12 @@ function Season2025_26() {
             perimeter shooter and a two-way player.
           </p>
 
-           <img
-             src="/images/Season2025_26_2.PNG"
-              alt="St. Andrew's boys' basketball action collage"
+          <img
+            src="/images/Season2025_26_2.PNG"
+            alt="St. Andrew's boys' basketball action collage"
             className="float-right ml-4 mt-4 mb-3 w-full max-w-sm rounded-lg shadow"
-           />
-          
+          />
+
           <p className="mb-3 leading-relaxed">
             Replacing Zayden Edwards (6’1, G), last year’s all-state performer
             and team captain, along with Miles Cummings (6’8, C), the Lions’
@@ -301,62 +327,7 @@ function Season2025_26() {
         </div>
       </section>
 
-      {/* 2. SEASON LEADERS */}
-      <section>
-        <h2 className="text-2xl font-semibold mt-8 mb-4">🏅 Season Leaders</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {Object.keys(leadersByStat).length === 0 && (
-            <p className="text-gray-600 col-span-2">
-              No individual statistics are available yet for this season.
-            </p>
-          )}
-
-          {Object.entries(leadersByStat).map(([statName, topPlayers]) => (
-            <div key={statName} className="bg-white rounded-lg shadow p-4">
-              <h3 className="text-xl font-semibold mb-2 text-center">
-                {statLabels[statName]}
-              </h3>
-              <table className="w-full text-sm text-center">
-                <thead>
-                  <tr>
-                    <th className="border p-1">Player</th>
-                    <th className="border p-1">{statLabels[statName]}</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {topPlayers.length === 0 ? (
-                    <tr>
-                      <td className="border p-1" colSpan={2}>
-                        No stats available yet.
-                      </td>
-                    </tr>
-                  ) : (
-                    topPlayers.map((player, index) => (
-                      <tr key={player.PlayerID || index}>
-                        <td className="border p-1">
-                          <Link
-                            to={`/players/${player.PlayerID}`}
-                            className="text-blue-700 hover:underline"
-                          >
-                            {getPlayerName(player.PlayerID)}
-                          </Link>
-                        </td>
-                        <td className="border p-1">
-                          {statName === 'FTPercentage'
-                            ? `${player.StatValue.toFixed(1)}%`
-                            : player.StatValue}
-                        </td>
-                      </tr>
-                    ))
-                  )}
-                </tbody>
-              </table>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* 3. FULL SCHEDULE – future games have blank result/score */}
+      {/* 2. FULL SCHEDULE – future games have blank result/score */}
       <section>
         <h2 className="text-2xl font-semibold mt-8 mb-4">
           📅 Schedule &amp; Results
@@ -391,7 +362,9 @@ function Season2025_26() {
                     <td className="border px-2 py-1 text-center">
                       {formatDate(game.Date)}
                     </td>
-                    <td className="border px-2 py-1 text-center">{opponentCell}</td>
+                    <td className="border px-2 py-1 text-center">
+                      {opponentCell}
+                    </td>
                     <td className="border px-2 py-1 text-center">
                       {formatResult(game)}
                     </td>
@@ -406,7 +379,7 @@ function Season2025_26() {
         </div>
       </section>
 
-       {/* 4. SEASON PLAYER TOTALS */}
+      {/* 3. SEASON PLAYER TOTALS (sortable, with photos) */}
       <section>
         <h2 className="text-2xl font-semibold mt-8 mb-4">
           📊 Season Player Totals
@@ -421,80 +394,181 @@ function Season2025_26() {
             <table className="w-full border text-center text-xs sm:text-sm md:text-base">
               <thead>
                 <tr>
-                  <th className="border px-2 py-1 text-left">Player</th>
-                  <th className="border px-2 py-1">#</th>
-                  <th className="border px-2 py-1">PTS</th>
-                  <th className="border px-2 py-1">REB</th>
-                  <th className="border px-2 py-1">AST</th>
-                  <th className="border px-2 py-1">STL</th>
-                  <th className="border px-2 py-1">BLK</th>
+                  <th
+                    className="border px-2 py-1 text-left cursor-pointer"
+                    onClick={() => handleSort('name')}
+                  >
+                    Player{sortArrow('name')}
+                  </th>
+                  <th
+                    className="border px-2 py-1 cursor-pointer"
+                    onClick={() => handleSort('Points')}
+                  >
+                    PTS{sortArrow('Points')}
+                  </th>
+                  <th
+                    className="border px-2 py-1 cursor-pointer"
+                    onClick={() => handleSort('Rebounds')}
+                  >
+                    REB{sortArrow('Rebounds')}
+                  </th>
+                  <th
+                    className="border px-2 py-1 cursor-pointer"
+                    onClick={() => handleSort('Assists')}
+                  >
+                    AST{sortArrow('Assists')}
+                  </th>
+                  <th
+                    className="border px-2 py-1 cursor-pointer"
+                    onClick={() => handleSort('Turnovers')}
+                  >
+                    TO{sortArrow('Turnovers')}
+                  </th>
+                  <th
+                    className="border px-2 py-1 cursor-pointer"
+                    onClick={() => handleSort('Steals')}
+                  >
+                    STL{sortArrow('Steals')}
+                  </th>
+                  <th
+                    className="border px-2 py-1 cursor-pointer"
+                    onClick={() => handleSort('Blocks')}
+                  >
+                    BLK{sortArrow('Blocks')}
+                  </th>
 
-                  <th className="border px-2 py-1">3M</th>
-                  <th className="border px-2 py-1">3A</th>
-                  <th className="border px-2 py-1">3%</th>
+                  <th
+                    className="border px-2 py-1 cursor-pointer"
+                    onClick={() => handleSort('ThreePM')}
+                  >
+                    3PM{sortArrow('ThreePM')}
+                  </th>
+                  <th
+                    className="border px-2 py-1 cursor-pointer"
+                    onClick={() => handleSort('ThreePA')}
+                  >
+                    3PA{sortArrow('ThreePA')}
+                  </th>
+                  <th
+                    className="border px-2 py-1 cursor-pointer"
+                    onClick={() => handleSort('ThreePct')}
+                  >
+                    3P%{sortArrow('ThreePct')}
+                  </th>
 
-                  <th className="border px-2 py-1">2M</th>
-                  <th className="border px-2 py-1">2A</th>
-                  <th className="border px-2 py-1">2%</th>
+                  <th
+                    className="border px-2 py-1 cursor-pointer"
+                    onClick={() => handleSort('TwoPM')}
+                  >
+                    2PM{sortArrow('TwoPM')}
+                  </th>
+                  <th
+                    className="border px-2 py-1 cursor-pointer"
+                    onClick={() => handleSort('TwoPA')}
+                  >
+                    2PA{sortArrow('TwoPA')}
+                  </th>
+                  <th
+                    className="border px-2 py-1 cursor-pointer"
+                    onClick={() => handleSort('TwoPct')}
+                  >
+                    2P%{sortArrow('TwoPct')}
+                  </th>
 
-                  <th className="border px-2 py-1">FTM</th>
-                  <th className="border px-2 py-1">FTA</th>
-                  <th className="border px-2 py-1">FT%</th>
+                  <th
+                    className="border px-2 py-1 cursor-pointer"
+                    onClick={() => handleSort('eFG')}
+                  >
+                    eFG%{sortArrow('eFG')}
+                  </th>
+
+                  <th
+                    className="border px-2 py-1 cursor-pointer"
+                    onClick={() => handleSort('FTM')}
+                  >
+                    FTM{sortArrow('FTM')}
+                  </th>
+                  <th
+                    className="border px-2 py-1 cursor-pointer"
+                    onClick={() => handleSort('FTA')}
+                  >
+                    FTA{sortArrow('FTA')}
+                  </th>
+                  <th
+                    className="border px-2 py-1 cursor-pointer"
+                    onClick={() => handleSort('FTPct')}
+                  >
+                    FT%{sortArrow('FTPct')}
+                  </th>
                 </tr>
               </thead>
               <tbody>
-                {seasonTotals
-                  .slice()
-                  .sort((a, b) =>
-                    getPlayerName(a.PlayerID).localeCompare(
-                      getPlayerName(b.PlayerID)
-                    )
-                  )
-                  .map((player) => (
+                {sortedSeasonTotals.map((player) => {
+                  const name = getPlayerName(player.PlayerID);
+                  const jersey = getJerseyNumber(player.PlayerID);
+                  const imageSrc = getPlayerImage(player.PlayerID);
+
+                  return (
                     <tr key={player.PlayerID}>
                       <td className="border px-2 py-1 text-left">
-                        <Link
-                          to={`/players/${player.PlayerID}`}
-                          className="text-blue-700 hover:underline"
-                        >
-                          {getPlayerName(player.PlayerID)}
-                        </Link>
-                      </td>
-                      <td className="border px-2 py-1">
-                        {getJerseyNumber(player.PlayerID)}
+                        <div className="flex items-center gap-2">
+                          <img
+                            src={imageSrc}
+                            alt={name}
+                            className="w-10 h-10 rounded-full object-cover"
+                          />
+                          <div className="flex flex-col">
+                            <Link
+                              to={`/players/${player.PlayerID}`}
+                              className="text-blue-700 hover:underline"
+                            >
+                              {name}
+                            </Link>
+                            {jersey && (
+                              <span className="text-xs text-gray-600">
+                                #{jersey}
+                              </span>
+                            )}
+                          </div>
+                        </div>
                       </td>
 
                       <td className="border px-2 py-1">{player.Points}</td>
                       <td className="border px-2 py-1">{player.Rebounds}</td>
                       <td className="border px-2 py-1">{player.Assists}</td>
+                      <td className="border px-2 py-1">{player.Turnovers}</td>
                       <td className="border px-2 py-1">{player.Steals}</td>
                       <td className="border px-2 py-1">{player.Blocks}</td>
 
                       <td className="border px-2 py-1">{player.ThreePM}</td>
                       <td className="border px-2 py-1">{player.ThreePA}</td>
                       <td className="border px-2 py-1">
-                        {formatPct(player.ThreePM, player.ThreePA)}%
+                        {formatPct(player.ThreePM, player.ThreePA)}
                       </td>
 
                       <td className="border px-2 py-1">{player.TwoPM}</td>
                       <td className="border px-2 py-1">{player.TwoPA}</td>
                       <td className="border px-2 py-1">
-                        {formatPct(player.TwoPM, player.TwoPA)}%
+                        {formatPct(player.TwoPM, player.TwoPA)}
+                      </td>
+
+                      <td className="border px-2 py-1">
+                        {formatEFG(player)}
                       </td>
 
                       <td className="border px-2 py-1">{player.FTM}</td>
                       <td className="border px-2 py-1">{player.FTA}</td>
                       <td className="border px-2 py-1">
-                        {formatPct(player.FTM, player.FTA)}%
+                        {formatPct(player.FTM, player.FTA)}
                       </td>
                     </tr>
-                  ))}
+                  );
+                })}
               </tbody>
             </table>
           </div>
         )}
       </section>
-      
     </div>
   );
 }
