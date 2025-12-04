@@ -52,8 +52,7 @@ function GameDetail() {
     if (!p) {
       return `Player ${playerId}`;
     }
-    
-    // Try several name fields in order
+
     const fullName =
       p.PlayerName ||
       p.Name ||
@@ -64,16 +63,40 @@ function GameDetail() {
     return fullName || `Player ${playerId}`;
   };
 
-      const getPlayerPhotoUrl = (playerId) => {
-        return `/images/players/${playerId}.jpg`; // or .png if your files are PNG
-      };
-  
+  const getPlayerPhotoUrl = (playerId) => {
+    return `/images/players/${playerId}.jpg`;
+  };
+
   const formatDate = (ms) =>
     new Date(ms).toLocaleDateString(undefined, {
       month: "short",
       day: "numeric",
       year: "numeric",
     });
+
+  // Helper for percentages like 3P%, 2P%, FT%
+  const formatPct = (made, att) => {
+    const m = Number(made);
+    const a = Number(att);
+    if (!a || a <= 0 || isNaN(m) || isNaN(a)) return "-";
+    return ((m / a) * 100).toFixed(1);
+  };
+
+  // Effective FG% = (FGM + 0.5 * 3PM) / FGA * 100
+  const calcEFG = (twoPM, threePM, twoPA, threePA) => {
+    const tpm = Number(twoPM) || 0;
+    const thpm = Number(threePM) || 0;
+    const tpa = Number(twoPA) || 0;
+    const thpa = Number(threePA) || 0;
+
+    const fgm = tpm + thpm;
+    const fga = tpa + thpa;
+
+    if (!fga || fga <= 0) return "-";
+
+    const efg = ((fgm + 0.5 * thpm) / fga) * 100;
+    return efg.toFixed(1);
+  };
 
   if (!game) {
     return <div className="p-4">Game not found.</div>;
@@ -116,6 +139,34 @@ function GameDetail() {
         </p>
       </header>
 
+      {/* NEW: Game Highlights section (above recap) */}
+      {game.HighlightsUrl && (
+        <section>
+          <h2 className="text-xl font-semibold mb-2">Game Highlights</h2>
+          <div className="w-full max-w-3xl aspect-video">
+            <iframe
+              src={game.HighlightsUrl}
+              title="Game Highlights"
+              className="w-full h-full border rounded"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+          <p className="text-xs text-gray-500 mt-1">
+            If the video doesn&apos;t play,{" "}
+            <a
+              href={game.HighlightsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 underline"
+            >
+              watch on Hudl
+            </a>
+            .
+          </p>
+        </section>
+      )}
+
       <section>
         <h2 className="text-xl font-semibold mb-2">Game Recap</h2>
         <p className="text-gray-700 leading-relaxed whitespace-pre-line">
@@ -140,44 +191,105 @@ function GameDetail() {
                   <th className="border px-2 py-1">PTS</th>
                   <th className="border px-2 py-1">REB</th>
                   <th className="border px-2 py-1">AST</th>
+                  <th className="border px-2 py-1">TO</th>
                   <th className="border px-2 py-1">STL</th>
                   <th className="border px-2 py-1">BLK</th>
                   <th className="border px-2 py-1">3PM</th>
+                  <th className="border px-2 py-1">3PA</th>
+                  <th className="border px-2 py-1">3P%</th>
                   <th className="border px-2 py-1">2PM</th>
-                  <th className="border px-2 py-1">FT</th>
+                  <th className="border px-2 py-1">2PA</th>
+                  <th className="border px-2 py-1">2P%</th>
+                  <th className="border px-2 py-1">eFG%</th>
+                  <th className="border px-2 py-1">FTM</th>
+                  <th className="border px-2 py-1">FTA</th>
+                  <th className="border px-2 py-1">FT%</th>
                 </tr>
               </thead>
               <tbody>
-                {playerStats.map((s) => (
-                  <tr key={s.PlayerGameStatsID}>
-                    <td className="border px-2 py-1">
-                      <div className="flex items-center gap-2">
-                        <img
-                          src={getPlayerPhotoUrl(s.PlayerID)}
-                          alt={getPlayerName(s.PlayerID)}
-                          onError={(e) => (e.currentTarget.src = "/images/players/default.jpg")}
-                          className="w-8 h-8 rounded-full object-cover border"
-                        />
-                        <Link
-                          to={`/players/${s.PlayerID}`}
-                          className="text-blue-600 underline hover:text-blue-800"
-                        >
-                          {getPlayerName(s.PlayerID)}
-                        </Link>
-                      </div>
-                    </td>
-                    <td className="border px-2 py-1">{s.Points}</td>
-                    <td className="border px-2 py-1">{s.Rebounds}</td>
-                    <td className="border px-2 py-1">{s.Assists}</td>
-                    <td className="border px-2 py-1">{s.Steals}</td>
-                    <td className="border px-2 py-1">{s.Blocks}</td>
-                    <td className="border px-2 py-1">{s.ThreePM}</td>
-                    <td className="border px-2 py-1">{s.TwoPM}</td>
-                    <td className="border px-2 py-1">
-                      {s.FTM}/{s.FTA}
-                    </td>
-                  </tr>
-                ))}
+                {playerStats.map((s) => {
+                  const threePct = formatPct(s.ThreePM, s.ThreePA);
+                  const twoPct = formatPct(s.TwoPM, s.TwoPA);
+                  const efgPct = calcEFG(
+                    s.TwoPM,
+                    s.ThreePM,
+                    s.TwoPA,
+                    s.ThreePA
+                  );
+                  const ftPct = formatPct(s.FTM, s.FTA);
+
+                  return (
+                    <tr key={s.PlayerGameStatsID}>
+                      <td className="border px-2 py-1 align-middle">
+                        <div className="flex items-center justify-center gap-2">
+                          <img
+                            src={getPlayerPhotoUrl(s.PlayerID)}
+                            alt={getPlayerName(s.PlayerID)}
+                            onError={(e) =>
+                              (e.currentTarget.src =
+                                "/images/players/default.jpg")
+                            }
+                            className="w-8 h-8 rounded-full object-cover border"
+                          />
+                          <Link
+                            to={`/players/${s.PlayerID}`}
+                            className="text-blue-600 underline hover:text-blue-800"
+                          >
+                            {getPlayerName(s.PlayerID)}
+                          </Link>
+                        </div>
+                      </td>
+                      <td className="border px-2 py-1 align-middle">
+                        {s.Points}
+                      </td>
+                      <td className="border px-2 py-1 align-middle">
+                        {s.Rebounds}
+                      </td>
+                      <td className="border px-2 py-1 align-middle">
+                        {s.Assists}
+                      </td>
+                      <td className="border px-2 py-1 align-middle">
+                        {s.Turnovers}
+                      </td>
+                      <td className="border px-2 py-1 align-middle">
+                        {s.Steals}
+                      </td>
+                      <td className="border px-2 py-1 align-middle">
+                        {s.Blocks}
+                      </td>
+                      <td className="border px-2 py-1 align-middle">
+                        {s.ThreePM}
+                      </td>
+                      <td className="border px-2 py-1 align-middle">
+                        {s.ThreePA}
+                      </td>
+                      <td className="border px-2 py-1 align-middle">
+                        {threePct}
+                      </td>
+                      <td className="border px-2 py-1 align-middle">
+                        {s.TwoPM}
+                      </td>
+                      <td className="border px-2 py-1 align-middle">
+                        {s.TwoPA}
+                      </td>
+                      <td className="border px-2 py-1 align-middle">
+                        {twoPct}
+                      </td>
+                      <td className="border px-2 py-1 align-middle">
+                        {efgPct}
+                      </td>
+                      <td className="border px-2 py-1 align-middle">
+                        {s.FTM}
+                      </td>
+                      <td className="border px-2 py-1 align-middle">
+                        {s.FTA}
+                      </td>
+                      <td className="border px-2 py-1 align-middle">
+                        {ftPct}
+                      </td>
+                    </tr>
+                  );
+                })}
               </tbody>
             </table>
           </div>
