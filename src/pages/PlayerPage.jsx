@@ -18,10 +18,17 @@ const statKeys = [
 
 // Map data keys -> how we want them labeled in the tables
 const statLabelMap = {
+  Points: "PTS",
+  Rebounds: "REB",
+  Assists: "AST",
+  Steals: "STL",
+  Blocks: "BLK",
   ThreePM: "3PM",
   ThreePA: "3PA",
   TwoPM: "2PM",
   TwoPA: "2PA",
+  FTM: "FTM",
+  FTA: "FTA",
 };
 
 const formatDate = (ms) =>
@@ -40,6 +47,17 @@ const calcPct = (made, att) => {
   const a = Number(att) || 0;
   if (!a) return "-";
   return ((m / a) * 100).toFixed(1); // e.g. "45.0"
+};
+
+const calcEFG = (twoPM, threePM, twoPA, threePA) => {
+  const tpm = Number(twoPM) || 0;
+  const thpm = Number(threePM) || 0;
+  const tpa = Number(twoPA) || 0;
+  const thpa = Number(threePA) || 0;
+  const denom = tpa + thpa;
+  if (!denom) return "-";
+  const efg = ((tpm + thpm) + 0.5 * thpm) / denom;
+  return (efg * 100).toFixed(1); // show as percentage too
 };
 
 function PlayerPage() {
@@ -249,17 +267,22 @@ function PlayerPage() {
                   <th className="border px-2 py-1 text-center">Season</th>
                   <th className="border px-2 py-1 text-center">GP</th>
                   {statKeys.map((key) => (
-                    <th
-                      key={key}
-                      className="border px-2 py-1 text-center"
-                    >
-                      {statLabelMap[key] || key}
-                    </th>
+                    <React.Fragment key={key}>
+                      <th className="border px-2 py-1 text-center">
+                        {statLabelMap[key] || key}
+                      </th>
+                      {key === "ThreePA" && (
+                        <th className="border px-2 py-1 text-center">3P%</th>
+                      )}
+                      {key === "TwoPA" && (
+                        <th className="border px-2 py-1 text-center">2P%</th>
+                      )}
+                      {key === "FTA" && (
+                        <th className="border px-2 py-1 text-center">FT%</th>
+                      )}
+                    </React.Fragment>
                   ))}
-                  {/* Percentage columns */}
-                  <th className="border px-2 py-1 text-center">3P%</th>
-                  <th className="border px-2 py-1 text-center">2P%</th>
-                  <th className="border px-2 py-1 text-center">FT%</th>
+                  <th className="border px-2 py-1 text-center">eFG%</th>
                 </tr>
               </thead>
               <tbody>
@@ -272,21 +295,34 @@ function PlayerPage() {
                       {row.gamesPlayed}
                     </td>
                     {statKeys.map((key) => (
-                      <td
-                        key={key}
-                        className="border px-2 py-1 text-center"
-                      >
-                        {row[key]}
-                      </td>
+                      <React.Fragment key={key}>
+                        <td className="border px-2 py-1 text-center">
+                          {row[key]}
+                        </td>
+                        {key === "ThreePA" && (
+                          <td className="border px-2 py-1 text-center">
+                            {calcPct(row.ThreePM, row.ThreePA)}
+                          </td>
+                        )}
+                        {key === "TwoPA" && (
+                          <td className="border px-2 py-1 text-center">
+                            {calcPct(row.TwoPM, row.TwoPA)}
+                          </td>
+                        )}
+                        {key === "FTA" && (
+                          <td className="border px-2 py-1 text-center">
+                            {calcPct(row.FTM, row.FTA)}
+                          </td>
+                        )}
+                      </React.Fragment>
                     ))}
                     <td className="border px-2 py-1 text-center">
-                      {calcPct(row.ThreePM, row.ThreePA)}
-                    </td>
-                    <td className="border px-2 py-1 text-center">
-                      {calcPct(row.TwoPM, row.TwoPA)}
-                    </td>
-                    <td className="border px-2 py-1 text-center">
-                      {calcPct(row.FTM, row.FTA)}
+                      {calcEFG(
+                        row.TwoPM,
+                        row.ThreePM,
+                        row.TwoPA,
+                        row.ThreePA
+                      )}
                     </td>
                   </tr>
                 ))}
@@ -300,21 +336,37 @@ function PlayerPage() {
                     {careerTotals.gamesPlayed}
                   </td>
                   {statKeys.map((key) => (
-                    <td
-                      key={key}
-                      className="border px-2 py-1 text-center"
-                    >
-                      {careerTotals[key]}
-                    </td>
+                    <React.Fragment key={key}>
+                      <td className="border px-2 py-1 text-center">
+                        {careerTotals[key]}
+                      </td>
+                      {key === "ThreePA" && (
+                        <td className="border px-2 py-1 text-center">
+                          {calcPct(
+                            careerTotals.ThreePM,
+                            careerTotals.ThreePA
+                          )}
+                        </td>
+                      )}
+                      {key === "TwoPA" && (
+                        <td className="border px-2 py-1 text-center">
+                          {calcPct(careerTotals.TwoPM, careerTotals.TwoPA)}
+                        </td>
+                      )}
+                      {key === "FTA" && (
+                        <td className="border px-2 py-1 text-center">
+                          {calcPct(careerTotals.FTM, careerTotals.FTA)}
+                        </td>
+                      )}
+                    </React.Fragment>
                   ))}
                   <td className="border px-2 py-1 text-center">
-                    {calcPct(careerTotals.ThreePM, careerTotals.ThreePA)}
-                  </td>
-                  <td className="border px-2 py-1 text-center">
-                    {calcPct(careerTotals.TwoPM, careerTotals.TwoPA)}
-                  </td>
-                  <td className="border px-2 py-1 text-center">
-                    {calcPct(careerTotals.FTM, careerTotals.FTA)}
+                    {calcEFG(
+                      careerTotals.TwoPM,
+                      careerTotals.ThreePM,
+                      careerTotals.TwoPA,
+                      careerTotals.ThreePA
+                    )}
                   </td>
                 </tr>
               </tbody>
@@ -350,22 +402,28 @@ function PlayerPage() {
                           Result
                         </th>
                         {statKeys.map((key) => (
-                          <th
-                            key={key}
-                            className="border px-2 py-1 text-center"
-                          >
-                            {statLabelMap[key] || key}
-                          </th>
+                          <React.Fragment key={key}>
+                            <th className="border px-2 py-1 text-center">
+                              {statLabelMap[key] || key}
+                            </th>
+                            {key === "ThreePA" && (
+                              <th className="border px-2 py-1 text-center">
+                                3P%
+                              </th>
+                            )}
+                            {key === "TwoPA" && (
+                              <th className="border px-2 py-1 text-center">
+                                2P%
+                              </th>
+                            )}
+                            {key === "FTA" && (
+                              <th className="border px-2 py-1 text-center">
+                                FT%
+                              </th>
+                            )}
+                          </React.Fragment>
                         ))}
-                        <th className="border px-2 py-1 text-center">
-                          3P%
-                        </th>
-                        <th className="border px-2 py-1 text-center">
-                          2P%
-                        </th>
-                        <th className="border px-2 py-1 text-center">
-                          FT%
-                        </th>
+                        <th className="border px-2 py-1 text-center">eFG%</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -386,21 +444,34 @@ function PlayerPage() {
                             {row.result}
                           </td>
                           {statKeys.map((key) => (
-                            <td
-                              key={key}
-                              className="border px-2 py-1 text-center"
-                            >
-                              {row[key]}
-                            </td>
+                            <React.Fragment key={key}>
+                              <td className="border px-2 py-1 text-center">
+                                {row[key]}
+                              </td>
+                              {key === "ThreePA" && (
+                                <td className="border px-2 py-1 text-center">
+                                  {calcPct(row.ThreePM, row.ThreePA)}
+                                </td>
+                              )}
+                              {key === "TwoPA" && (
+                                <td className="border px-2 py-1 text-center">
+                                  {calcPct(row.TwoPM, row.TwoPA)}
+                                </td>
+                              )}
+                              {key === "FTA" && (
+                                <td className="border px-2 py-1 text-center">
+                                  {calcPct(row.FTM, row.FTA)}
+                                </td>
+                              )}
+                            </React.Fragment>
                           ))}
                           <td className="border px-2 py-1 text-center">
-                            {calcPct(row.ThreePM, row.ThreePA)}
-                          </td>
-                          <td className="border px-2 py-1 text-center">
-                            {calcPct(row.TwoPM, row.TwoPA)}
-                          </td>
-                          <td className="border px-2 py-1 text-center">
-                            {calcPct(row.FTM, row.FTA)}
+                            {calcEFG(
+                              row.TwoPM,
+                              row.ThreePM,
+                              row.TwoPA,
+                              row.ThreePA
+                            )}
                           </td>
                         </tr>
                       ))}
