@@ -384,7 +384,7 @@ function Season2025_26() {
         ) : (
           <div className="overflow-x-auto px-1">
             <table className="w-full border text-center text-xs sm:text-sm md:text-base whitespace-nowrap">
-              <thead>
+              <thead className="bg-gray-400 text-black">
                 <tr>
                   <th
                     className="border px-2 py-1 text-left cursor-pointer"
@@ -508,20 +508,19 @@ function Season2025_26() {
 
                   return (
                     <tr key={player.PlayerID}>
-                      <td className="border px-2 py-1 text-left align-middle">
-                        <div className="flex items-center justify-start gap-2">
+                      <td className="border px-2 py-1 text-left align-middle max-w-[180px] overflow-hidden truncate">
+                        <div className="flex items-center gap-2">
                           <img
                             src={photoUrl}
                             alt={name}
                             onError={(e) => {
-                              e.currentTarget.src =
-                                '/images/players/default.jpg';
+                              e.currentTarget.src = '/images/players/default.jpg';
                             }}
                             className="w-8 h-8 rounded-full object-cover border"
                           />
                           <Link
                             to={`/players/${player.PlayerID}`}
-                            className="text-blue-600 underline hover:text-blue-800"
+                            className="text-blue-600 underline hover:text-blue-800 truncate"
                           >
                             {name}
                           </Link>
