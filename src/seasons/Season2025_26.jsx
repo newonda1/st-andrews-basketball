@@ -103,27 +103,9 @@ function Season2025_26() {
     return player && player.JerseyNumber != null ? player.JerseyNumber : '';
   };
 
-  // Match this to whatever field you use in the box-score component
-  const getPlayerImage = (id) => {
-    const player = players.find((p) => p.PlayerID === id);
-    if (!player) return '';
-
-    // Add/remove fields here to match your players.json
-    const src =
-      player.Headshot ||
-      player.HeadshotURL ||
-      player.PhotoURL ||
-      player.PhotoUrl ||
-      player.Image ||
-      player.Photo ||
-      '';
-
-    // If you store just a filename, you could prepend a folder here, e.g.:
-    // if (src && !src.startsWith('http') && !src.startsWith('/')) {
-    //   return `/images/players/${src}`;
-    // }
-
-    return src;
+  // Match GameDetail: /images/players/{PlayerID}.jpg
+  const getPlayerPhotoUrl = (playerId) => {
+    return `/images/players/${playerId}.jpg`;
   };
 
   const rawPct = (made, att) => {
@@ -179,7 +161,7 @@ function Season2025_26() {
           direction: prev.direction === 'desc' ? 'asc' : 'desc',
         };
       }
-      // Default for a new column click: highest → lowest
+      // Default: highest → lowest on first click
       return { key, direction: 'desc' };
     });
   };
@@ -401,7 +383,7 @@ function Season2025_26() {
           </p>
         ) : (
           <div className="overflow-x-auto px-1">
-            <table className="w-full border text-center text-xs sm:text-sm md:text-base">
+            <table className="w-full border text-center text-xs sm:text-sm md:text-base whitespace-nowrap">
               <thead>
                 <tr>
                   <th
@@ -522,55 +504,83 @@ function Season2025_26() {
                 {sortedSeasonTotals.map((player) => {
                   const name = getPlayerName(player.PlayerID);
                   const jersey = getJerseyNumber(player.PlayerID);
-                  const imageSrc = getPlayerImage(player.PlayerID);
+                  const photoUrl = getPlayerPhotoUrl(player.PlayerID);
 
                   return (
                     <tr key={player.PlayerID}>
-                      <td className="border px-2 py-1 text-left">
-                        <div className="flex items-center gap-2">
-                          {imageSrc && (
-                            <img
-                              src={imageSrc}
-                              alt={name}
-                              className="w-10 h-10 rounded-full object-cover"
-                            />
-                          )}
+                      <td className="border px-2 py-1 text-left align-middle">
+                        <div className="flex items-center justify-start gap-2">
+                          <img
+                            src={photoUrl}
+                            alt={name}
+                            onError={(e) => {
+                              e.currentTarget.src =
+                                '/images/players/default.jpg';
+                            }}
+                            className="w-8 h-8 rounded-full object-cover border"
+                          />
                           <Link
                             to={`/players/${player.PlayerID}`}
-                            className="text-blue-700 hover:underline"
+                            className="text-blue-600 underline hover:text-blue-800"
                           >
                             {name}
                           </Link>
                         </div>
                       </td>
-                      <td className="border px-2 py-1">{jersey}</td>
+                      <td className="border px-2 py-1 align-middle">
+                        {jersey}
+                      </td>
 
-                      <td className="border px-2 py-1">{player.Points}</td>
-                      <td className="border px-2 py-1">{player.Rebounds}</td>
-                      <td className="border px-2 py-1">{player.Assists}</td>
-                      <td className="border px-2 py-1">{player.Turnovers}</td>
-                      <td className="border px-2 py-1">{player.Steals}</td>
-                      <td className="border px-2 py-1">{player.Blocks}</td>
+                      <td className="border px-2 py-1 align-middle">
+                        {player.Points}
+                      </td>
+                      <td className="border px-2 py-1 align-middle">
+                        {player.Rebounds}
+                      </td>
+                      <td className="border px-2 py-1 align-middle">
+                        {player.Assists}
+                      </td>
+                      <td className="border px-2 py-1 align-middle">
+                        {player.Turnovers}
+                      </td>
+                      <td className="border px-2 py-1 align-middle">
+                        {player.Steals}
+                      </td>
+                      <td className="border px-2 py-1 align-middle">
+                        {player.Blocks}
+                      </td>
 
-                      <td className="border px-2 py-1">{player.ThreePM}</td>
-                      <td className="border px-2 py-1">{player.ThreePA}</td>
-                      <td className="border px-2 py-1">
+                      <td className="border px-2 py-1 align-middle">
+                        {player.ThreePM}
+                      </td>
+                      <td className="border px-2 py-1 align-middle">
+                        {player.ThreePA}
+                      </td>
+                      <td className="border px-2 py-1 align-middle">
                         {formatPct(player.ThreePM, player.ThreePA)}
                       </td>
 
-                      <td className="border px-2 py-1">{player.TwoPM}</td>
-                      <td className="border px-2 py-1">{player.TwoPA}</td>
-                      <td className="border px-2 py-1">
+                      <td className="border px-2 py-1 align-middle">
+                        {player.TwoPM}
+                      </td>
+                      <td className="border px-2 py-1 align-middle">
+                        {player.TwoPA}
+                      </td>
+                      <td className="border px-2 py-1 align-middle">
                         {formatPct(player.TwoPM, player.TwoPA)}
                       </td>
 
-                      <td className="border px-2 py-1">
+                      <td className="border px-2 py-1 align-middle">
                         {formatEFG(player)}
                       </td>
 
-                      <td className="border px-2 py-1">{player.FTM}</td>
-                      <td className="border px-2 py-1">{player.FTA}</td>
-                      <td className="border px-2 py-1">
+                      <td className="border px-2 py-1 align-middle">
+                        {player.FTM}
+                      </td>
+                      <td className="border px-2 py-1 align-middle">
+                        {player.FTA}
+                      </td>
+                      <td className="border px-2 py-1 align-middle">
                         {formatPct(player.FTM, player.FTA)}
                       </td>
                     </tr>
