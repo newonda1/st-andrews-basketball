@@ -84,7 +84,7 @@ function Season2025_26() {
       t.ThreePM += stat.ThreePM || 0;
       t.ThreePA += stat.ThreePA || 0; // requires ThreePA field
       t.TwoPM += stat.TwoPM || 0;
-      t.TwoPA += stat.TwoPA || 0; // requires TwoPA field
+      t.TwoPA += stat.TwoPA || 0;     // requires TwoPA field
       t.FTM += stat.FTM || 0;
       t.FTA += stat.FTA || 0;
     });
@@ -103,18 +103,27 @@ function Season2025_26() {
     return player && player.JerseyNumber != null ? player.JerseyNumber : '';
   };
 
+  // Match this to whatever field you use in the box-score component
   const getPlayerImage = (id) => {
     const player = players.find((p) => p.PlayerID === id);
-    if (!player) return '/images/default-player.png';
+    if (!player) return '';
 
-    // Adjust these field names to match your players.json
-    return (
-      player.Photo ||
-      player.Image ||
+    // Add/remove fields here to match your players.json
+    const src =
       player.Headshot ||
       player.HeadshotURL ||
-      '/images/default-player.png'
-    );
+      player.PhotoURL ||
+      player.PhotoUrl ||
+      player.Image ||
+      player.Photo ||
+      '';
+
+    // If you store just a filename, you could prepend a folder here, e.g.:
+    // if (src && !src.startsWith('http') && !src.startsWith('/')) {
+    //   return `/images/players/${src}`;
+    // }
+
+    return src;
   };
 
   const rawPct = (made, att) => {
@@ -170,7 +179,7 @@ function Season2025_26() {
           direction: prev.direction === 'desc' ? 'asc' : 'desc',
         };
       }
-      // Default to highest → lowest
+      // Default for a new column click: highest → lowest
       return { key, direction: 'desc' };
     });
   };
@@ -179,6 +188,8 @@ function Season2025_26() {
     switch (key) {
       case 'name':
         return getPlayerName(player.PlayerID).toLowerCase();
+      case 'jersey':
+        return Number(getJerseyNumber(player.PlayerID)) || 0;
       case 'Points':
         return player.Points || 0;
       case 'Rebounds':
@@ -227,7 +238,6 @@ function Season2025_26() {
       return 0;
     });
 
-  // Small helper to show sort direction arrows
   const sortArrow = (key) => {
     if (sortConfig.key !== key) return '';
     return sortConfig.direction === 'desc' ? ' ↓' : ' ↑';
@@ -379,7 +389,7 @@ function Season2025_26() {
         </div>
       </section>
 
-      {/* 3. SEASON PLAYER TOTALS (sortable, with photos) */}
+      {/* 3. SEASON PLAYER TOTALS (sortable, with photos & jersey column) */}
       <section>
         <h2 className="text-2xl font-semibold mt-8 mb-4">
           📊 Season Player Totals
@@ -399,6 +409,12 @@ function Season2025_26() {
                     onClick={() => handleSort('name')}
                   >
                     Player{sortArrow('name')}
+                  </th>
+                  <th
+                    className="border px-2 py-1 cursor-pointer"
+                    onClick={() => handleSort('jersey')}
+                  >
+                    #{sortArrow('jersey')}
                   </th>
                   <th
                     className="border px-2 py-1 cursor-pointer"
@@ -512,26 +528,22 @@ function Season2025_26() {
                     <tr key={player.PlayerID}>
                       <td className="border px-2 py-1 text-left">
                         <div className="flex items-center gap-2">
-                          <img
-                            src={imageSrc}
-                            alt={name}
-                            className="w-10 h-10 rounded-full object-cover"
-                          />
-                          <div className="flex flex-col">
-                            <Link
-                              to={`/players/${player.PlayerID}`}
-                              className="text-blue-700 hover:underline"
-                            >
-                              {name}
-                            </Link>
-                            {jersey && (
-                              <span className="text-xs text-gray-600">
-                                #{jersey}
-                              </span>
-                            )}
-                          </div>
+                          {imageSrc && (
+                            <img
+                              src={imageSrc}
+                              alt={name}
+                              className="w-10 h-10 rounded-full object-cover"
+                            />
+                          )}
+                          <Link
+                            to={`/players/${player.PlayerID}`}
+                            className="text-blue-700 hover:underline"
+                          >
+                            {name}
+                          </Link>
                         </div>
                       </td>
+                      <td className="border px-2 py-1">{jersey}</td>
 
                       <td className="border px-2 py-1">{player.Points}</td>
                       <td className="border px-2 py-1">{player.Rebounds}</td>
