@@ -82,159 +82,182 @@ function App() {
   return (
     <div className="p-6 max-w-5xl mx-auto space-y-10">
       <header className="text-center">
-      <div ref={sidebarRef} className={`fixed top-0 right-0 h-full w-64 bg-white shadow-2xl flex flex-col transform ${menuOpen ? "translate-x-0" : "translate-x-full"} transition-transform duration-300 ease-in-out z-40`}>
-        <div className="flex justify-center items-center p-4 border-b">
-          <h2 className="text-xl font-bold">Menu</h2>
-        </div>
-        <div className="flex-1 overflow-y-auto overscroll-contain scroll-smooth">
-          <nav className="flex flex-col p-4 space-y-2 text-lg font-medium">
-            {/* Full Year-by-Year Results */}
-            <Link to="/yearly-results" className="p-3 hover:bg-gray-200 rounded-md text-center">
-              Full Year-by-Year Results
-            </Link>
-
-
-            {/* Individual Season Results with Expandable Decades */}
-            <div className="border-t pt-4">
-              <button
-                onClick={() => setSeasonOpen(!seasonOpen)}
-                className="flex items-center justify-between w-full p-3 hover:bg-gray-200 rounded-md"
-                >
-                <span>Individual Season Results</span>
-                <span
-                   className={`ml-2 inline-block transform transition-transform duration-300 ${
-                   seasonOpen ? "rotate-180" : "rotate-0"
-                   }`}
-                   >
-                   ▼
-                </span>
-              </button>
-
-            {/* Decades Expand */}
-            {seasonOpen && (
-              <div
-                className={`ml-4 overflow-hidden transition-all duration-500 ${
-                seasonOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
-                }`}
-                >
-                {["1970s", "1980s", "1990s", "2000s", "2010s", "2020s"].map((decade) => (
-                  <div key={decade}>
-                    <button
-                      onClick={() =>
-                      setExpandedDecades((prev) => ({
-                      ...prev,
-                      [decade]: !prev[decade],
-                       }))
-                      }
-                      className="flex items-center justify-between w-full p-2 hover:bg-gray-100"
-                      >
-                <span>{decade}</span>
-                <span
-                  className={`ml-2 inline-block transform transition-transform duration-300 ${
-                    expandedDecades[decade] ? "rotate-180" : "rotate-0"
-                  }`}
-                >
-                  ▶
-                </span>
-              </button>
-
-              {/* Expand Years smoothly */}
-              <div
-                className={`ml-6 overflow-hidden overflow-y-auto transition-all duration-500 ${
-                  expandedDecades[decade] ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
-                } custom-scrollbar`}
+        <div
+          ref={sidebarRef}
+          className={`fixed top-0 right-0 h-full w-64 bg-white shadow-2xl flex flex-col transform ${
+            menuOpen ? "translate-x-0" : "translate-x-full"
+          } transition-transform duration-300 ease-in-out z-40`}
+        >
+          <div className="flex justify-center items-center p-4 border-b">
+            <h2 className="text-xl font-bold">Menu</h2>
+          </div>
+          <div className="flex-1 overflow-y-auto overscroll-contain scroll-smooth">
+            <nav className="flex flex-col p-4 space-y-2 text-lg font-medium">
+              {/* Full Year-by-Year Results */}
+              <Link
+                to="/yearly-results"
+                className="p-3 hover:bg-gray-200 rounded-md text-center"
               >
+                Full Year-by-Year Results
+              </Link>
 
-                {yearsByDecade[decade].map((year) => (
-                  <Link
-                    key={year}
-                    to={`/seasons/${year}`}
-                    className="block px-2 py-1 text-sm hover:bg-gray-200"
+              {/* Individual Season Results with Expandable Decades */}
+              <div className="border-t pt-4">
+                <button
+                  onClick={() => setSeasonOpen(!seasonOpen)}
+                  className="flex items-center justify-between w-full p-3 hover:bg-gray-200 rounded-md"
+                >
+                  <span>Individual Season Results</span>
+                  <span
+                    className={`ml-2 inline-block transform transition-transform duration-300 ${
+                      seasonOpen ? "rotate-180" : "rotate-0"
+                    }`}
                   >
-                    {year}
-                  </Link>
-                ))}
+                    ▼
+                  </span>
+                </button>
+
+                {/* Decades Expand */}
+                {seasonOpen && (
+                  <div
+                    className={`ml-4 overflow-hidden transition-all duration-500 ${
+                      seasonOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+                    }`}
+                  >
+                    {["1970s", "1980s", "1990s", "2000s", "2010s", "2020s"].map(
+                      (decade) => (
+                        <div key={decade}>
+                          <button
+                            onClick={() =>
+                              setExpandedDecades((prev) => ({
+                                ...prev,
+                                [decade]: !prev[decade],
+                              }))
+                            }
+                            className="flex items-center justify-between w-full p-2 hover:bg-gray-100"
+                          >
+                            <span>{decade}</span>
+                            <span
+                              className={`ml-2 inline-block transform transition-transform duration-300 ${
+                                expandedDecades[decade]
+                                  ? "rotate-180"
+                                  : "rotate-0"
+                              }`}
+                            >
+                              ▶
+                            </span>
+                          </button>
+
+                          {/* Expand Years smoothly */}
+                          <div
+                            className={`ml-6 overflow-hidden overflow-y-auto transition-all duration-500 ${
+                              expandedDecades[decade]
+                                ? "max-h-screen opacity-100"
+                                : "max-h-0 opacity-0"
+                            } custom-scrollbar`}
+                          >
+                            {yearsByDecade[decade].map((year) => (
+                              <Link
+                                key={year}
+                                to={`/seasons/${year}`}
+                                className="block px-2 py-1 text-sm hover:bg-gray-200"
+                              >
+                                {year}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      )
+                    )}
+                  </div>
+                )}
               </div>
-            </div>
-          ))}
+
+              <div className="border-t pt-4">
+                <Link
+                  to="/records/opponents"
+                  className="block p-3 hover:bg-gray-200 rounded-md text-center"
+                >
+                  Records vs. Opponents
+                </Link>
+              </div>
+
+              {/* All-Time Records Section */}
+              <div className="border-t pt-4">
+                <button
+                  onClick={() => setRecordsOpen(!recordsOpen)}
+                  className="flex items-center justify-between w-full p-3 hover:bg-gray-200 rounded-md"
+                >
+                  <span>Individual Player Stats</span>
+                  <span
+                    className={`ml-2 inline-block transform transition-transform duration-300 ${
+                      recordsOpen ? "rotate-180" : "rotate-0"
+                    }`}
+                  >
+                    ▼
+                  </span>
+                </button>
+
+                {recordsOpen && (
+                  <div className="ml-4 overflow-hidden transition-all duration-500">
+                    <Link
+                      to="/records/career"
+                      className="block px-2 py-1 text-sm hover:bg-gray-200"
+                    >
+                      Full Career Stats
+                    </Link>
+                    <Link
+                      to="/records/season"
+                      className="block px-2 py-1 text-sm hover:bg-gray-200"
+                    >
+                      Season Records
+                    </Link>
+                    <Link
+                      to="/records/single-game"
+                      className="block px-2 py-1 text-sm hover:bg-gray-200"
+                    >
+                      Single Game Records
+                    </Link>
+                  </div>
+                )}
+              </div>
+            </nav>
+          </div>
         </div>
-      )}
-    </div>
 
-    <div className="border-t pt-4">
-      <Link
-        to="/records/opponents"
-        className="block p-3 hover:bg-gray-200 rounded-md text-center"
-      >
-        Records vs. Opponents
-      </Link>
-    </div>
+        <div className="flex items-center justify-between mb-4 px-4 h-20">
+          <div className="flex items-center gap-3">
+            <Link
+              to="/"
+              className="flex items-center gap-3 hover:opacity-80 transition-opacity"
+            >
+              <img
+                src="/logo.png"
+                alt="St. Andrew's Logo"
+                className="h-12 w-auto"
+              />
+              <h1 className="text-xl font-bold text-blue-800 whitespace-nowrap">
+                Boys' Basketball
+              </h1>
+            </Link>
+          </div>
+          <button onClick={() => setMenuOpen(true)}>
+            <img
+              src="/images/button.png"
+              alt="Menu"
+              className="h-10 w-auto hover:scale-110 transition-transform duration-200 ease-in-out"
+            />
+          </button>
+        </div>
+      </header>
 
-    {/* All-Time Records Section */}
-<div className="border-t pt-4">
-  <button
-    onClick={() => setRecordsOpen(!recordsOpen)}
-    className="flex items-center justify-between w-full p-3 hover:bg-gray-200 rounded-md"
-  >
-    <span>Individual Player Stats</span>
-    <span
-      className={`ml-2 inline-block transform transition-transform duration-300 ${
-        recordsOpen ? "rotate-180" : "rotate-0"
-      }`}
-    >
-      ▼
-    </span>
-  </button>
-
-  {recordsOpen && (
-    <div className="ml-4 overflow-hidden transition-all duration-500">
-      <Link
-        to="/records/career"
-        className="block px-2 py-1 text-sm hover:bg-gray-200"
-      >
-        Full Career Stats
-      </Link>
-      <Link
-        to="/records/season"
-        className="block px-2 py-1 text-sm hover:bg-gray-200"
-      >
-        Season Records
-      </Link>
-      <Link
-        to="/records/single-game"
-        className="block px-2 py-1 text-sm hover:bg-gray-200"
-      >
-        Single Game Records
-      </Link>
-    </div>
-  )}
-</div>
-
-  </nav>
-</div>
-  </div>
-    <div className="flex items-center justify-between mb-4 px-4 h-20">
-      <div className="flex items-center gap-3">
-        <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-          <img src="/logo.png" alt="St. Andrew's Logo" className="h-12 w-auto" />
-          <h1 className="text-xl font-bold text-blue-800 whitespace-nowrap">Boys' Basketball</h1>
-        </Link>
-      </div>
-      <button onClick={() => setMenuOpen(true)}>
-        <img
-          src="/images/button.png"
-          alt="Menu"
-          className="h-10 w-auto hover:scale-110 transition-transform duration-200 ease-in-out"
-        />
-      </button>
-    </div>
-
-    </header>
       <Routes>
+        {/* Existing routes */}
         <Route path="/" element={<Home />} />
         <Route path="/records/career" element={<FullCareerStats />} />
         <Route path="/records/season" element={<SeasonRecords />} />
         <Route path="/records/single-game" element={<SingleGameRecords />} />
+
         {seasonPages.map(({ slug, Component }) => (
           <Route
             key={slug}
@@ -247,9 +270,36 @@ function App() {
         <Route path="/yearly-results" element={<YearlyResults />} />
         <Route path="/games/:gameId" element={<GameDetail />} />
         <Route path="/players/:playerId" element={<PlayerPage />} />
+
+        {/* NEW: Alias routes for boys basketball under /athletics/boys/basketball */}
+
+        {/* Specific season pages (same components, new paths) */}
+        {seasonPages.map(({ slug, Component }) => (
+          <Route
+            key={`boys-${slug}`}
+            path={`/athletics/boys/basketball/seasons/${slug}`}
+            element={<Component />}
+          />
+        ))}
+
+        {/* Generic season placeholder for other seasons */}
+        <Route
+          path="/athletics/boys/basketball/seasons/:seasonId"
+          element={<SeasonPlaceholder />}
+        />
+
+        {/* Game and player detail aliases */}
+        <Route
+          path="/athletics/boys/basketball/games/:gameId"
+          element={<GameDetail />}
+        />
+        <Route
+          path="/athletics/boys/basketball/players/:playerId"
+          element={<PlayerPage />}
+        />
       </Routes>
-  </div>
-);
+    </div>
+  );
 }
 
 export default App;
