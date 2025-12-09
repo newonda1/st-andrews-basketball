@@ -327,7 +327,7 @@ function BoysBasketballApp() {
         <Route path="players/:playerId" element={<PlayerPage />} />
 
         {/* Fallback */}
-        <Route index element={<Home />} />
+        <Route path="*" element={<Home />} />
       </Routes>
     </div>
   );
