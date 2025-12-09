@@ -42,7 +42,7 @@ function YearlyResults() {
   useEffect(() => {
     Promise.all([
       fetch("/data/games.json").then((res) => res.json()),
-      fetch("/data/seasons.json").then((res) => res.json())
+      fetch("/data/seasons.json").then((res) => res.json()),
     ])
       .then(([gamesData, seasonsData]) => {
         processSeasonStats(gamesData, seasonsData);
@@ -100,7 +100,7 @@ function YearlyResults() {
           tourneyW: 0,
           tourneyL: 0,
           playoffW: 0,
-          playoffL: 0
+          playoffL: 0,
         };
       }
 
@@ -192,7 +192,7 @@ function YearlyResults() {
 
   const formatRecord = (w, l) => `${w}–${l}`;
 
-    const formatWinPct = (w, l) => {
+  const formatWinPct = (w, l) => {
     const total = w + l;
     if (!total) return "–";
     const pct = (w / total) * 100;
@@ -226,19 +226,22 @@ function YearlyResults() {
       }
     });
 
-    // Sort alphabetically by coach name (you can change this if you like)
-   return Object.values(coachMap).sort((a, b) => {
-      // primary: most wins first
+    // Sort by most wins, then win%, then name
+    return Object.values(coachMap).sort((a, b) => {
       if (b.overallW !== a.overallW) return b.overallW - a.overallW;
-      // fallback: best win% first (optional but nice)
-      const aPct = a.overallW + a.overallL ? a.overallW / (a.overallW + a.overallL) : 0;
-      const bPct = b.overallW + b.overallL ? b.overallW / (b.overallW + b.overallL) : 0;
+      const aPct =
+        a.overallW + a.overallL
+          ? a.overallW / (a.overallW + a.overallL)
+          : 0;
+      const bPct =
+        b.overallW + b.overallL
+          ? b.overallW / (b.overallW + b.overallL)
+          : 0;
       if (bPct !== aPct) return bPct - aPct;
-      // final fallback: alphabetical by name
       return a.coach.localeCompare(b.coach);
     });
   };
-  
+
   const calculateTotals = () => {
     return seasonStats.reduce(
       (acc, s) => {
@@ -268,7 +271,7 @@ function YearlyResults() {
         tourneyW: 0,
         tourneyL: 0,
         playoffW: 0,
-        playoffL: 0
+        playoffL: 0,
       }
     );
   };
@@ -280,9 +283,7 @@ function YearlyResults() {
     <div className="space-y-10 px-4">
       {/* Coaching totals */}
       <div className="space-y-2">
-        <h1 className="text-2xl font-bold text-center">
-          Coaching Records
-        </h1>
+        <h1 className="text-2xl font-bold text-center">Coaching Records</h1>
 
         <div className="overflow-x-auto">
           <table className="min-w-full table-auto text-sm border text-center">
@@ -343,10 +344,10 @@ function YearlyResults() {
             {seasonStats.map((season) => (
               <tr key={season.seasonKey}>
                 <td className="border px-2 py-1">
-                   <Link
-                      to={`/seasons/${season.routeSlug}`}
-                      className="text-blue-600 hover:underline"
-                    >
+                  <Link
+                    to={`/athletics/boys/basketball/seasons/${season.routeSlug}`}
+                    className="text-blue-600 hover:underline"
+                  >
                     {season.displaySeason}
                   </Link>
                 </td>
