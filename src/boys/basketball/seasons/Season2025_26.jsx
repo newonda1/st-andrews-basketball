@@ -383,7 +383,7 @@ function Season2025_26() {
           </p>
         ) : (
           <div className="overflow-x-auto px-1">
-            <table className="w-full border text-center text-xs sm:text-sm md:text-base whitespace-nowrap">
+            <table className="w-full border text-center text-xs sm:text-sm md:text-base table-auto">
               <thead className="bg-gray-400 text-black">
                 <tr>
                   <th
@@ -508,7 +508,7 @@ function Season2025_26() {
 
                   return (
                     <tr key={player.PlayerID}>
-                      <td className="border px-2 py-1 text-left align-middle">
+                      <td className="border px-2 py-1 text-left align-middle min-w-[220px]">
                         <div className="flex items-center gap-2">
                           <img
                             src={photoUrl}
