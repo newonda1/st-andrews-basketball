@@ -8,268 +8,137 @@ function GameDetail() {
   const [players, setPlayers] = useState([]);
 
   useEffect(() => {
-    async function fetchData() {
-      try {
-        const [gamesRes, statsRes, playersRes] = await Promise.all([
-          fetch("/data/games.json"),
-          fetch("/data/playergamestats.json"),
-          fetch("/data/players.json"),
-        ]);
-
-        const [gamesData, statsData, playersData] = await Promise.all([
-          gamesRes.json(),
-          statsRes.json(),
-          playersRes.json(),
-        ]);
-
-        const idNum = Number(gameId);
-
-        const thisGame = gamesData.find((g) => Number(g.GameID) === idNum);
-        const thisStats = statsData.filter(
-          (s) => Number(s.GameID) === idNum
+    Promise.all([
+      fetch("/data/boys/basketball/games.json").then((res) => res.json()),
+      fetch("/data/boys/basketball/playergamestats.json").then((res) =>
+        res.json()
+      ),
+      fetch("/data/boys/basketball/players.json").then((res) => res.json()),
+    ])
+      .then(([gamesData, statsData, playersData]) => {
+        const gameObj = gamesData.find(
+          (g) => String(g.GameID) === String(gameId)
         );
+        setGame(gameObj || null);
 
-        setGame(thisGame || null);
-        setPlayerStats(thisStats);
-        setPlayers(playersData || []);
-      } catch (err) {
-        console.error("Failed to load game detail data:", err);
-      }
-    }
-
-    fetchData();
+        const statsForGame = statsData.filter(
+          (s) => String(s.GameID) === String(gameId)
+        );
+        setPlayerStats(statsForGame);
+        setPlayers(playersData);
+      })
+      .catch((err) => console.error("Failed to load game detail:", err));
   }, [gameId]);
 
-  // More robust player-name lookup that handles different field names / types
-  const getPlayerName = (playerId) => {
-    const idNum = Number(playerId);
-
-    const p =
-      players.find((pl) => Number(pl.PlayerID) === idNum) ||
-      players.find((pl) => Number(pl.PlayerId) === idNum) ||
-      players.find((pl) => Number(pl.ID) === idNum);
-
-    if (!p) {
-      return `Player ${playerId}`;
-    }
-
-    const fullName =
-      p.PlayerName ||
-      p.Name ||
-      (p.FirstName && p.LastName
-        ? `${p.FirstName} ${p.LastName}`
-        : null);
-
-    return fullName || `Player ${playerId}`;
-  };
-
-  const getPlayerPhotoUrl = (playerId) => {
-    return `/images/players/${playerId}.jpg`;
-  };
-
-  const formatDate = (ms) =>
-    new Date(ms).toLocaleDateString(undefined, {
+  const formatDate = (ms) => {
+    if (!ms) return "";
+    const d = new Date(ms);
+    return d.toLocaleDateString("en-US", {
       month: "short",
       day: "numeric",
       year: "numeric",
     });
-
-  // Helper for percentages like 3P%, 2P%, FT%
-  const formatPct = (made, att) => {
-    const m = Number(made);
-    const a = Number(att);
-    if (!a || a <= 0 || isNaN(m) || isNaN(a)) return "-";
-    return ((m / a) * 100).toFixed(1);
   };
 
-  // Effective FG% = (FGM + 0.5 * 3PM) / FGA * 100
-  const calcEFG = (twoPM, threePM, twoPA, threePA) => {
-    const tpm = Number(twoPM) || 0;
-    const thpm = Number(threePM) || 0;
-    const tpa = Number(twoPA) || 0;
-    const thpa = Number(threePA) || 0;
-
-    const fgm = tpm + thpm;
-    const fga = tpa + thpa;
-
-    if (!fga || fga <= 0) return "-";
-
-    const efg = ((fgm + 0.5 * thpm) / fga) * 100;
-    return efg.toFixed(1);
+  const getPlayerName = (playerId) => {
+    const p = players.find((pl) => pl.PlayerID === playerId);
+    return p ? `${p.FirstName} ${p.LastName}` : "Unknown";
   };
 
   if (!game) {
-    return <div className="p-4">Game not found.</div>;
+    return (
+      <div className="p-6 max-w-5xl mx-auto space-y-4">
+        <p className="text-center text-gray-700">Loading game data…</p>
+      </div>
+    );
   }
 
-  const resultText =
-    game.Result === "W"
-      ? "Win"
-      : game.Result === "L"
-      ? "Loss"
-      : "Result pending";
-
-  const showScore = game.Result === "W" || game.Result === "L";
+  const teamScore = game.TeamScore ?? "-";
+  const opponentScore = game.OpponentScore ?? "-";
 
   return (
-    <div className="p-4 space-y-6">
-      {/* Adjust this route if your season page path is different */}
-      <Link
-        to="/seasons/2025-26"
-        className="text-sm text-blue-600 hover:underline"
-      >
-        ← Back to 2025–26 Season
-      </Link>
-
-      <header>
-        <h1 className="text-2xl font-bold mb-2">
-          {formatDate(game.Date)} vs {game.Opponent}
+    <div className="p-6 max-w-5xl mx-auto space-y-6">
+      <header className="space-y-1 text-center">
+        <h1 className="text-2xl font-bold text-blue-800">
+          {game.Opponent} – Game Detail
         </h1>
-        <p className="text-lg">
-          {resultText}
-          {showScore && (
-            <>
-              {" "}
-              — {game.TeamScore}–{game.OpponentScore}
-            </>
-          )}
+        <p className="text-gray-700">
+          {formatDate(game.Date)} • {game.LocationType} • {game.GameType}
         </p>
-        <p className="text-sm text-gray-600">
-          {game.LocationType} • {game.GameType}
+        <p className="text-lg font-semibold">
+          Final: {teamScore}–{opponentScore} ({game.Result || "TBD"})
         </p>
       </header>
 
-      <section>
-        <h2 className="text-xl font-semibold mb-2">Game Recap</h2>
-        <p className="text-gray-700 leading-relaxed whitespace-pre-line">
-          {game.Recap && game.Recap.trim().length > 0
-            ? game.Recap
-            : "Recap coming soon."}
-        </p>
-      </section>
-
-      <section>
-        <h2 className="text-xl font-semibold mb-2">Box Score</h2>
-        {playerStats.length === 0 ? (
-          <p className="text-gray-600">
-            No player statistics recorded for this game yet.
-          </p>
-        ) : (
-          <div className="overflow-x-auto">
-            <table className="min-w-full border text-xs sm:text-sm text-center">
-              <thead className="bg-gray-100">
+      {/* Box Score */}
+      <section className="space-y-3">
+        <h2 className="text-xl font-semibold">Box Score</h2>
+        <div className="overflow-x-auto border rounded-xl bg-white shadow-sm">
+          <table className="min-w-full text-xs border text-center">
+            <thead className="bg-gray-200 font-bold">
+              <tr>
+                <th className="border px-2 py-1 text-left">Player</th>
+                <th className="border px-2 py-1">MIN</th>
+                <th className="border px-2 py-1">PTS</th>
+                <th className="border px-2 py-1">REB</th>
+                <th className="border px-2 py-1">AST</th>
+                <th className="border px-2 py-1">STL</th>
+                <th className="border px-2 py-1">BLK</th>
+                <th className="border px-2 py-1">TOV</th>
+                <th className="border px-2 py-1">2PM</th>
+                <th className="border px-2 py-1">2PA</th>
+                <th className="border px-2 py-1">3PM</th>
+                <th className="border px-2 py-1">3PA</th>
+                <th className="border px-2 py-1">FTM</th>
+                <th className="border px-2 py-1">FTA</th>
+              </tr>
+            </thead>
+            <tbody>
+              {playerStats.length === 0 && (
                 <tr>
-                  <th className="border px-2 py-1">Player</th>
-                  <th className="border px-2 py-1">PTS</th>
-                  <th className="border px-2 py-1">REB</th>
-                  <th className="border px-2 py-1">AST</th>
-                  <th className="border px-2 py-1">TO</th>
-                  <th className="border px-2 py-1">STL</th>
-                  <th className="border px-2 py-1">BLK</th>
-                  <th className="border px-2 py-1">3PM</th>
-                  <th className="border px-2 py-1">3PA</th>
-                  <th className="border px-2 py-1">3P%</th>
-                  <th className="border px-2 py-1">2PM</th>
-                  <th className="border px-2 py-1">2PA</th>
-                  <th className="border px-2 py-1">2P%</th>
-                  <th className="border px-2 py-1">eFG%</th>
-                  <th className="border px-2 py-1">FTM</th>
-                  <th className="border px-2 py-1">FTA</th>
-                  <th className="border px-2 py-1">FT%</th>
+                  <td
+                    colSpan={14}
+                    className="border px-2 py-3 text-center text-gray-600"
+                  >
+                    No player statistics available for this game.
+                  </td>
                 </tr>
-              </thead>
-              <tbody>
-                {playerStats.map((s) => {
-                  const threePct = formatPct(s.ThreePM, s.ThreePA);
-                  const twoPct = formatPct(s.TwoPM, s.TwoPA);
-                  const efgPct = calcEFG(
-                    s.TwoPM,
-                    s.ThreePM,
-                    s.TwoPA,
-                    s.ThreePA
-                  );
-                  const ftPct = formatPct(s.FTM, s.FTA);
-
-                  return (
-                    <tr key={s.PlayerGameStatsID}>
-                      {/* Player column: left-aligned */}
-                      <td className="border px-2 py-1 align-middle text-left">
-                        <div className="flex items-center justify-start gap-2">
-                          <img
-                            src={getPlayerPhotoUrl(s.PlayerID)}
-                            alt={getPlayerName(s.PlayerID)}
-                            onError={(e) =>
-                              (e.currentTarget.src =
-                                "/images/players/default.jpg")
-                            }
-                            className="w-8 h-8 rounded-full object-cover border"
-                          />
-                          <Link
-                            to={`/players/${s.PlayerID}`}
-                            className="text-blue-600 underline hover:text-blue-800"
-                          >
-                            {getPlayerName(s.PlayerID)}
-                          </Link>
-                        </div>
-                      </td>
-
-                      {/* All other columns: centered */}
-                      <td className="border px-2 py-1 align-middle">
-                        {s.Points}
-                      </td>
-                      <td className="border px-2 py-1 align-middle">
-                        {s.Rebounds}
-                      </td>
-                      <td className="border px-2 py-1 align-middle">
-                        {s.Assists}
-                      </td>
-                      <td className="border px-2 py-1 align-middle">
-                        {s.Turnovers}
-                      </td>
-                      <td className="border px-2 py-1 align-middle">
-                        {s.Steals}
-                      </td>
-                      <td className="border px-2 py-1 align-middle">
-                        {s.Blocks}
-                      </td>
-                      <td className="border px-2 py-1 align-middle">
-                        {s.ThreePM}
-                      </td>
-                      <td className="border px-2 py-1 align-middle">
-                        {s.ThreePA}
-                      </td>
-                      <td className="border px-2 py-1 align-middle">
-                        {threePct}
-                      </td>
-                      <td className="border px-2 py-1 align-middle">
-                        {s.TwoPM}
-                      </td>
-                      <td className="border px-2 py-1 align-middle">
-                        {s.TwoPA}
-                      </td>
-                      <td className="border px-2 py-1 align-middle">
-                        {twoPct}
-                      </td>
-                      <td className="border px-2 py-1 align-middle">
-                        {efgPct}
-                      </td>
-                      <td className="border px-2 py-1 align-middle">
-                        {s.FTM}
-                      </td>
-                      <td className="border px-2 py-1 align-middle">
-                        {s.FTA}
-                      </td>
-                      <td className="border px-2 py-1 align-middle">
-                        {ftPct}
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
-        )}
+              )}
+              {playerStats.map((stat) => (
+                <tr key={stat.ID} className="border-t">
+                  <td className="border px-2 py-1 text-left whitespace-nowrap">
+                    {getPlayerName(stat.PlayerID)}
+                  </td>
+                  <td className="border px-2 py-1">
+                    {stat.MinutesPlayed ?? "-"}
+                  </td>
+                  <td className="border px-2 py-1">{stat.Points ?? 0}</td>
+                  <td className="border px-2 py-1">{stat.Rebounds ?? 0}</td>
+                  <td className="border px-2 py-1">{stat.Assists ?? 0}</td>
+                  <td className="border px-2 py-1">{stat.Steals ?? 0}</td>
+                  <td className="border px-2 py-1">{stat.Blocks ?? 0}</td>
+                  <td className="border px-2 py-1">{stat.Turnovers ?? 0}</td>
+                  <td className="border px-2 py-1">{stat.TwoPM ?? 0}</td>
+                  <td className="border px-2 py-1">{stat.TwoPA ?? 0}</td>
+                  <td className="border px-2 py-1">{stat.ThreePM ?? 0}</td>
+                  <td className="border px-2 py-1">{stat.ThreePA ?? 0}</td>
+                  <td className="border px-2 py-1">{stat.FTM ?? 0}</td>
+                  <td className="border px-2 py-1">{stat.FTA ?? 0}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </section>
+
+      <div className="text-center">
+        <Link
+          to="/athletics/boys/basketball/seasons/2025-26"
+          className="inline-block mt-4 text-sm text-blue-700 hover:underline"
+        >
+          ← Back to 2025–26 Season
+        </Link>
+      </div>
     </div>
   );
 }
