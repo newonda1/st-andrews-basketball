@@ -1,17 +1,19 @@
 import { Link, Routes, Route } from "react-router-dom";
 import React, { useEffect, useState, useRef } from "react";
-import Home from "./Home";
-import FullCareerStats from "./records/FullCareerStats";
-import SeasonRecords from "./records/SeasonRecords";
-import SingleGameRecords from "./records/SingleGameRecords";
+
+import FullCareerStats from "./pages/FullCareerStats";
+import SeasonRecords from "./pages/SeasonRecords";
+import SingleGameRecords from "./pages/SingleGameRecords";
+
 import Season1992_93 from "./seasons/Season1992_93";
 import Season2023_24 from "./seasons/Season2023_24";
 import Season2024_25 from "./seasons/Season2024_25";
 import Season2025_26 from "./seasons/Season2025_26";
 import SeasonPlaceholder from "./seasons/SeasonPlaceholder";
+
 import RecordsVsOpponents from "./pages/RecordsVsOpponents";
 import YearlyResults from "./pages/YearlyResults";
-import GameDetail from "./seasons/GameDetail";
+import GameDetail from "./pages/GameDetail";
 import PlayerPage from "./pages/PlayerPage";
 
 const seasonPages = [
