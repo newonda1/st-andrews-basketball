@@ -508,7 +508,7 @@ function Season2025_26() {
 
                   return (
                     <tr key={player.PlayerID}>
-                      <td className="border px-2 py-1 text-left align-middle min-w-[220px]">
+                      <td className="border px-2 py-1 text-left align-middle min-w-[200px]">
                         <div className="flex items-center gap-2">
                           <img
                             src={photoUrl}
