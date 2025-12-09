@@ -95,7 +95,7 @@ function BoysBasketballApp() {
             <nav className="flex flex-col p-4 space-y-2 text-lg font-medium">
               {/* Full Year-by-Year Results */}
               <Link
-                to="/yearly-results"
+                to="/athletics/boys/basketball/yearly-results"
                 className="p-3 hover:bg-gray-200 rounded-md text-center"
               >
                 Full Year-by-Year Results
@@ -159,7 +159,7 @@ function BoysBasketballApp() {
                             {yearsByDecade[decade].map((year) => (
                               <Link
                                 key={year}
-                                to={`/seasons/${year}`}
+                                to={`/athletics/boys/basketball/seasons/${year}`}
                                 className="block px-2 py-1 text-sm hover:bg-gray-200"
                               >
                                 {year}
@@ -175,7 +175,7 @@ function BoysBasketballApp() {
 
               <div className="border-t pt-4">
                 <Link
-                  to="/records/opponents"
+                  to="/athletics/boys/basketball/records/opponents"
                   className="block p-3 hover:bg-gray-200 rounded-md text-center"
                 >
                   Records vs. Opponents
@@ -201,19 +201,19 @@ function BoysBasketballApp() {
                 {recordsOpen && (
                   <div className="ml-4 overflow-hidden transition-all duration-500">
                     <Link
-                      to="/records/career"
+                      to="/athletics/boys/basketball/records/career"
                       className="block px-2 py-1 text-sm hover:bg-gray-200"
                     >
                       Full Career Stats
                     </Link>
                     <Link
-                      to="/records/season"
+                      to="/athletics/boys/basketball/records/season"
                       className="block px-2 py-1 text-sm hover:bg-gray-200"
                     >
                       Season Records
                     </Link>
                     <Link
-                      to="/records/single-game"
+                      to="/athletics/boys/basketball/records/single-game"
                       className="block px-2 py-1 text-sm hover:bg-gray-200"
                     >
                       Single Game Records
@@ -228,7 +228,7 @@ function BoysBasketballApp() {
         <div className="flex items-center justify-between mb-4 px-4 h-20">
           <div className="flex items-center gap-3">
             <Link
-              to="/"
+              to="/athletics/boys/basketball"
               className="flex items-center gap-3 hover:opacity-80 transition-opacity"
             >
               <img
@@ -252,43 +252,44 @@ function BoysBasketballApp() {
       </header>
 
       <Routes>
-        {/* Existing routes */}
-        <Route path="/" element={<Home />} />
-        <Route path="/records/career" element={<FullCareerStats />} />
-        <Route path="/records/season" element={<SeasonRecords />} />
-        <Route path="/records/single-game" element={<SingleGameRecords />} />
+        {/* Boys basketball canonical routes under athletics */}
+        <Route
+          path="/athletics/boys/basketball"
+          element={<Home />}
+        />
+        <Route
+          path="/athletics/boys/basketball/records/career"
+          element={<FullCareerStats />}
+        />
+        <Route
+          path="/athletics/boys/basketball/records/season"
+          element={<SeasonRecords />}
+        />
+        <Route
+          path="/athletics/boys/basketball/records/single-game"
+          element={<SingleGameRecords />}
+        />
 
         {seasonPages.map(({ slug, Component }) => (
           <Route
             key={slug}
-            path={`/seasons/${slug}`}
-            element={<Component />}
-          />
-        ))}
-        <Route path="/seasons/:seasonId" element={<SeasonPlaceholder />} />
-        <Route path="/records/opponents" element={<RecordsVsOpponents />} />
-        <Route path="/yearly-results" element={<YearlyResults />} />
-        <Route path="/games/:gameId" element={<GameDetail />} />
-        <Route path="/players/:playerId" element={<PlayerPage />} />
-
-        {/* NEW: Alias routes for boys basketball under /athletics/boys/basketball */}
-
-        {/* Specific season pages (same components, new paths) */}
-        {seasonPages.map(({ slug, Component }) => (
-          <Route
-            key={`boys-${slug}`}
             path={`/athletics/boys/basketball/seasons/${slug}`}
             element={<Component />}
           />
         ))}
-
-        {/* Generic season placeholder for other seasons */}
         <Route
           path="/athletics/boys/basketball/seasons/:seasonId"
           element={<SeasonPlaceholder />}
         />
 
-        {/* Game and player detail aliases */}
+        <Route
+          path="/athletics/boys/basketball/records/opponents"
+          element={<RecordsVsOpponents />}
+        />
+        <Route
+          path="/athletics/boys/basketball/yearly-results"
+          element={<YearlyResults />}
+        />
         <Route
           path="/athletics/boys/basketball/games/:gameId"
           element={<GameDetail />}
