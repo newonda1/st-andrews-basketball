@@ -8,7 +8,7 @@ function RecordsVsOpponents() {
   const [expandedOpponent, setExpandedOpponent] = useState(null);
 
   useEffect(() => {
-    fetch("/data/games.json")
+    fetch("/data/boys/basketball/games.json")
       .then((res) => res.json())
       .then((data) => {
         setGames(data);
