@@ -92,17 +92,17 @@ function BoysBasketballApp() {
   const [legacyOpen, setLegacyOpen] = useState(false);
 
   useEffect(() => {
-    fetch("/data/games.json")
+    fetch("/data/boys/basketball/games.json")
       .then((res) => res.json())
       .then(setGames)
       .catch((err) => console.error("Failed to load games", err));
 
-    fetch("/data/playergamestats.json")
+    fetch("/data/boys/basketball/playergamestats.json")
       .then((res) => res.json())
       .then(setPlayerStats)
       .catch((err) => console.error("Failed to load player stats", err));
 
-    fetch("/data/players.json")
+    fetch("/data/boys/basketball/players.json")
       .then((res) => res.json())
       .then(setPlayers)
       .catch((err) => console.error("Failed to load players", err));
@@ -310,18 +310,11 @@ function BoysBasketballApp() {
         <Route path="records/career" element={<FullCareerStats />} />
         <Route path="records/season" element={<SeasonRecords />} />
         <Route path="records/single-game" element={<SingleGameRecords />} />
-        <Route
-          path="records/opponents"
-          element={<RecordsVsOpponents />}
-        />
+        <Route path="records/opponents" element={<RecordsVsOpponents />} />
 
         {/* Seasons */}
         {seasonPages.map(({ slug, Component }) => (
-          <Route
-            key={slug}
-            path={`seasons/${slug}`}
-            element={<Component />}
-          />
+          <Route key={slug} path={`seasons/${slug}`} element={<Component />} />
         ))}
         <Route path="seasons/:seasonId" element={<SeasonPlaceholder />} />
 
@@ -330,7 +323,7 @@ function BoysBasketballApp() {
         <Route path="games/:gameId" element={<GameDetail />} />
         <Route path="players/:playerId" element={<PlayerPage />} />
 
-        {/* Fallback: if something weird, show Home */}
+        {/* Fallback */}
         <Route path="*" element={<Home />} />
       </Routes>
     </div>
