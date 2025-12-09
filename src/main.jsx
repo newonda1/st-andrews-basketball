@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
+import BoysBasketballApp from "./BoysBasketballApp.jsx";
 import Season2024 from "./pages/Season2024.jsx";
 import GamePage from "./pages/GamePage.jsx";
 import "./index.css";
@@ -12,7 +12,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Routes>
         <Route path="/season/2024" element={<Season2024 />} />
         <Route path="/game/:gameID" element={<GamePage />} />
-        <Route path="/*" element={<App />} />
+        <Route path="/*" element={<BoysBasketballApp />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
