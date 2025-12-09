@@ -285,7 +285,7 @@ function BoysBasketballApp() {
               className="flex items-center gap-3 hover:opacity-80 transition-opacity"
             >
               <img
-                src="/logo.png"
+                src="/images/common/logo.png"
                 alt="St. Andrew's Logo"
                 className="h-12 w-auto"
               />
@@ -296,7 +296,7 @@ function BoysBasketballApp() {
           </div>
           <button onClick={() => setMenuOpen(true)}>
             <img
-              src="/images/button.png"
+              src="/images/common/button.png"
               alt="Menu"
               className="h-10 w-auto hover:scale-110 transition-transform duration-200 ease-in-out"
             />
