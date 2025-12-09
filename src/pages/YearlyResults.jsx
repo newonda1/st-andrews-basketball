@@ -41,8 +41,8 @@ function YearlyResults() {
 
   useEffect(() => {
     Promise.all([
-      fetch("/data/games.json").then((res) => res.json()),
-      fetch("/data/seasons.json").then((res) => res.json()),
+      fetch("/data/boys/basketball/games.json").then((res) => res.json()),
+      fetch("/data/boys/basketball/seasons.json").then((res) => res.json()),
     ])
       .then(([gamesData, seasonsData]) => {
         processSeasonStats(gamesData, seasonsData);
