@@ -61,9 +61,9 @@ function PlayerPage() {
     setError(null);
 
     Promise.all([
-      fetch("/data/basketball/boys/players.json").then((res) => res.json()),
-      fetch("/data/basketball/boys/games.json").then((res) => res.json()),
-      fetch("/data/basketball/boys/playergamestats.json").then((res) =>
+      fetch("/data/boys/basketball/players.json").then((res) => res.json()),
+      fetch("/data/boys/basketball/games.json").then((res) => res.json()),
+      fetch("/data/boys/basketball/playergamestats.json").then((res) =>
         res.json()
       ),
     ])
