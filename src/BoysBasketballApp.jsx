@@ -1,16 +1,16 @@
 import { Link, Routes, Route } from "react-router-dom";
 import React, { useEffect, useState, useRef } from "react";
-import Home from './Home';
-import FullCareerStats from './records/FullCareerStats';
-import SeasonRecords from './records/SeasonRecords';
-import SingleGameRecords from './records/SingleGameRecords';
-import Season1992_93 from './seasons/Season1992_93';
-import Season2023_24 from './seasons/Season2023_24';
-import Season2024_25 from './seasons/Season2024_25';
-import Season2025_26 from './seasons/Season2025_26';
-import SeasonPlaceholder from './seasons/SeasonPlaceholder';
-import RecordsVsOpponents from './pages/RecordsVsOpponents';
-import YearlyResults from './pages/YearlyResults';
+import Home from "./Home";
+import FullCareerStats from "./records/FullCareerStats";
+import SeasonRecords from "./records/SeasonRecords";
+import SingleGameRecords from "./records/SingleGameRecords";
+import Season1992_93 from "./seasons/Season1992_93";
+import Season2023_24 from "./seasons/Season2023_24";
+import Season2024_25 from "./seasons/Season2024_25";
+import Season2025_26 from "./seasons/Season2025_26";
+import SeasonPlaceholder from "./seasons/SeasonPlaceholder";
+import RecordsVsOpponents from "./pages/RecordsVsOpponents";
+import YearlyResults from "./pages/YearlyResults";
 import GameDetail from "./seasons/GameDetail";
 import PlayerPage from "./pages/PlayerPage";
 
@@ -32,11 +32,62 @@ function BoysBasketballApp() {
   const [expandedDecades, setExpandedDecades] = useState({});
   const yearsByDecade = {
     "1970s": ["1978-79", "1979-80"],
-    "1980s": ["1980-81", "1981-82", "1982-83", "1983-84", "1984-85", "1985-86", "1986-87", "1987-88", "1988-89", "1989-90"],
-    "1990s": ["1990-91", "1991-92", "1992-93", "1993-94", "1994-95", "1995-96", "1996-97", "1997-98", "1998-99", "1999-00"],
-    "2000s": ["2000-01", "2001-02", "2002-03", "2003-04", "2004-05", "2005-06", "2006-07", "2007-08", "2008-09", "2009-10"],
-    "2010s": ["2010-11", "2011-12", "2012-13", "2013-14", "2014-15", "2015-16", "2016-17", "2017-18", "2018-19", "2019-20"],
-    "2020s": ["2020-21", "2021-22", "2022-23", "2023-24", "2024-25", "2025-26"],
+    "1980s": [
+      "1980-81",
+      "1981-82",
+      "1982-83",
+      "1983-84",
+      "1984-85",
+      "1985-86",
+      "1986-87",
+      "1987-88",
+      "1988-89",
+      "1989-90",
+    ],
+    "1990s": [
+      "1990-91",
+      "1991-92",
+      "1992-93",
+      "1993-94",
+      "1994-95",
+      "1995-96",
+      "1996-97",
+      "1997-98",
+      "1998-99",
+      "1999-00",
+    ],
+    "2000s": [
+      "2000-01",
+      "2001-02",
+      "2002-03",
+      "2003-04",
+      "2004-05",
+      "2005-06",
+      "2006-07",
+      "2007-08",
+      "2008-09",
+      "2009-10",
+    ],
+    "2010s": [
+      "2010-11",
+      "2011-12",
+      "2012-13",
+      "2013-14",
+      "2014-15",
+      "2015-16",
+      "2016-17",
+      "2017-18",
+      "2018-19",
+      "2019-20",
+    ],
+    "2020s": [
+      "2020-21",
+      "2021-22",
+      "2022-23",
+      "2023-24",
+      "2024-25",
+      "2025-26",
+    ],
   };
   const [legacyOpen, setLegacyOpen] = useState(false);
 
@@ -237,7 +288,7 @@ function BoysBasketballApp() {
                 className="h-12 w-auto"
               />
               <h1 className="text-xl font-bold text-blue-800 whitespace-nowrap">
-                Boys' Basketball
+                Boys&apos; Basketball
               </h1>
             </Link>
           </div>
@@ -252,52 +303,35 @@ function BoysBasketballApp() {
       </header>
 
       <Routes>
-        {/* Boys basketball canonical routes under athletics */}
+        {/* Index route: /athletics/boys/basketball */}
+        <Route index element={<Home />} />
+
+        {/* Records */}
+        <Route path="records/career" element={<FullCareerStats />} />
+        <Route path="records/season" element={<SeasonRecords />} />
+        <Route path="records/single-game" element={<SingleGameRecords />} />
         <Route
-          path="/athletics/boys/basketball"
-          element={<Home />}
-        />
-        <Route
-          path="/athletics/boys/basketball/records/career"
-          element={<FullCareerStats />}
-        />
-        <Route
-          path="/athletics/boys/basketball/records/season"
-          element={<SeasonRecords />}
-        />
-        <Route
-          path="/athletics/boys/basketball/records/single-game"
-          element={<SingleGameRecords />}
+          path="records/opponents"
+          element={<RecordsVsOpponents />}
         />
 
+        {/* Seasons */}
         {seasonPages.map(({ slug, Component }) => (
           <Route
             key={slug}
-            path={`/athletics/boys/basketball/seasons/${slug}`}
+            path={`seasons/${slug}`}
             element={<Component />}
           />
         ))}
-        <Route
-          path="/athletics/boys/basketball/seasons/:seasonId"
-          element={<SeasonPlaceholder />}
-        />
+        <Route path="seasons/:seasonId" element={<SeasonPlaceholder />} />
 
-        <Route
-          path="/athletics/boys/basketball/records/opponents"
-          element={<RecordsVsOpponents />}
-        />
-        <Route
-          path="/athletics/boys/basketball/yearly-results"
-          element={<YearlyResults />}
-        />
-        <Route
-          path="/athletics/boys/basketball/games/:gameId"
-          element={<GameDetail />}
-        />
-        <Route
-          path="/athletics/boys/basketball/players/:playerId"
-          element={<PlayerPage />}
-        />
+        {/* Other pages */}
+        <Route path="yearly-results" element={<YearlyResults />} />
+        <Route path="games/:gameId" element={<GameDetail />} />
+        <Route path="players/:playerId" element={<PlayerPage />} />
+
+        {/* Fallback: if something weird, show Home */}
+        <Route path="*" element={<Home />} />
       </Routes>
     </div>
   );
