@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function Season2025_26() {
   const [games, setGames] = useState([]);
@@ -7,589 +7,337 @@ function Season2025_26() {
   const [players, setPlayers] = useState([]);
   const [seasonTotals, setSeasonTotals] = useState([]);
   const [sortConfig, setSortConfig] = useState({
-    key: 'name',
-    direction: 'asc',
+    key: "name",
+    direction: "asc",
   });
 
-  const SEASON_ID = 2025; // 2025–26 season
-
-  // 1. Fetch data
   useEffect(() => {
-    async function fetchData() {
-      const gamesRes = await fetch('/data/games.json');
-      const statsRes = await fetch('/data/playergamestats.json');
-      const playersRes = await fetch('/data/players.json');
+    Promise.all([
+      fetch("/data/boys/basketball/games.json").then((res) => res.json()),
+      fetch("/data/boys/basketball/playergamestats.json").then((res) =>
+        res.json()
+      ),
+      fetch("/data/boys/basketball/players.json").then((res) => res.json()),
+    ])
+      .then(([gamesData, playerStatsData, playersData]) => {
+        const seasonGames = gamesData
+          .filter((g) => g.Season === 2025)
+          .sort((a, b) => a.Date - b.Date);
+        setGames(seasonGames);
 
-      const gamesData = await gamesRes.json();
-      const statsData = await statsRes.json();
-      const playersData = await playersRes.json();
+        const seasonGameIds = new Set(seasonGames.map((g) => g.GameID));
 
-      // Filter to just 2025–26 games and sort by date
-      const seasonGames = gamesData
-        .filter((g) => g.Season === SEASON_ID)
-        .sort((a, b) => a.Date - b.Date);
-
-      const seasonGameIds = new Set(seasonGames.map((g) => g.GameID));
-
-      // Only stats from games in this season
-      const seasonStats = statsData.filter((s) => seasonGameIds.has(s.GameID));
-
-      setGames(seasonGames);
-      setPlayerStats(seasonStats);
-      setPlayers(playersData);
-    }
-
-    fetchData();
+        const filteredStats = playerStatsData.filter((ps) =>
+          seasonGameIds.has(ps.GameID)
+        );
+        setPlayerStats(filteredStats);
+        setPlayers(playersData);
+      })
+      .catch((err) => console.error("Failed to load data:", err));
   }, []);
 
-  // 2. Build season totals including shooting stats
   useEffect(() => {
-    if (playerStats.length === 0) {
-      setSeasonTotals([]);
-      return;
-    }
+    if (playerStats.length && players.length) {
+      const totalsMap = {};
 
-    const totalsMap = {};
+      playerStats.forEach((stat) => {
+        const key = stat.PlayerID;
+        if (!totalsMap[key]) {
+          totalsMap[key] = {
+            PlayerID: stat.PlayerID,
+            GamesPlayed: 0,
+            Points: 0,
+            Rebounds: 0,
+            Assists: 0,
+            Steals: 0,
+            Blocks: 0,
+            Turnovers: 0,
+            TwoPM: 0,
+            TwoPA: 0,
+            ThreePM: 0,
+            ThreePA: 0,
+            FTM: 0,
+            FTA: 0,
+          };
+        }
 
-    playerStats.forEach((stat) => {
-      const id = stat.PlayerID;
+        const entry = totalsMap[key];
 
-      if (!totalsMap[id]) {
-        totalsMap[id] = {
-          PlayerID: id,
-          Points: 0,
-          Rebounds: 0,
-          Assists: 0,
-          Turnovers: 0,
-          Steals: 0,
-          Blocks: 0,
-          ThreePM: 0,
-          ThreePA: 0,
-          TwoPM: 0,
-          TwoPA: 0,
-          FTM: 0,
-          FTA: 0,
+        if (stat.MinutesPlayed != null && stat.MinutesPlayed > 0) {
+          entry.GamesPlayed += 1;
+        }
+
+        entry.Points += stat.Points || 0;
+        entry.Rebounds += stat.Rebounds || 0;
+        entry.Assists += stat.Assists || 0;
+        entry.Steals += stat.Steals || 0;
+        entry.Blocks += stat.Blocks || 0;
+        entry.Turnovers += stat.Turnovers || 0;
+        entry.TwoPM += stat.TwoPM || 0;
+        entry.TwoPA += stat.TwoPA || 0;
+        entry.ThreePM += stat.ThreePM || 0;
+        entry.ThreePA += stat.ThreePA || 0;
+        entry.FTM += stat.FTM || 0;
+        entry.FTA += stat.FTA || 0;
+      });
+
+      const totalsArray = Object.values(totalsMap).map((totals) => {
+        const player = players.find((p) => p.PlayerID === totals.PlayerID);
+        const gamesPlayed = totals.GamesPlayed || 0;
+
+        const twoPtPct =
+          totals.TwoPA > 0 ? (totals.TwoPM / totals.TwoPA) * 100 : null;
+        const threePtPct =
+          totals.ThreePA > 0 ? (totals.ThreePM / totals.ThreePA) * 100 : null;
+        const ftPct =
+          totals.FTA > 0 ? (totals.FTM / totals.FTA) * 100 : null;
+
+        return {
+          ...totals,
+          Name: player ? `${player.FirstName} ${player.LastName}` : "Unknown",
+          TwoPtPct: twoPtPct,
+          ThreePtPct: threePtPct,
+          FTPct: ftPct,
+          PPG: gamesPlayed > 0 ? totals.Points / gamesPlayed : 0,
+          RPG: gamesPlayed > 0 ? totals.Rebounds / gamesPlayed : 0,
+          APG: gamesPlayed > 0 ? totals.Assists / gamesPlayed : 0,
         };
-      }
+      });
 
-      const t = totalsMap[id];
-
-      t.Points += stat.Points || 0;
-      t.Rebounds += stat.Rebounds || 0;
-      t.Assists += stat.Assists || 0;
-      t.Turnovers += stat.Turnovers || 0; // requires Turnovers field
-      t.Steals += stat.Steals || 0;
-      t.Blocks += stat.Blocks || 0;
-
-      t.ThreePM += stat.ThreePM || 0;
-      t.ThreePA += stat.ThreePA || 0; // requires ThreePA field
-      t.TwoPM += stat.TwoPM || 0;
-      t.TwoPA += stat.TwoPA || 0;     // requires TwoPA field
-      t.FTM += stat.FTM || 0;
-      t.FTA += stat.FTA || 0;
-    });
-
-    setSeasonTotals(Object.values(totalsMap));
-  }, [playerStats]);
-
-  // -------- Helper functions --------
-  const getPlayerName = (id) => {
-    const player = players.find((p) => p.PlayerID === id);
-    return player ? `${player.FirstName} ${player.LastName}` : 'Unknown Player';
-  };
-
-  const getJerseyNumber = (id) => {
-    const player = players.find((p) => p.PlayerID === id);
-    return player && player.JerseyNumber != null ? player.JerseyNumber : '';
-  };
-
-  // Match GameDetail: /images/players/{PlayerID}.jpg
-  const getPlayerPhotoUrl = (playerId) => {
-    return `/images/players/${playerId}.jpg`;
-  };
-
-  const rawPct = (made, att) => {
-    if (!att || att === 0) return 0;
-    return (made / att) * 100;
-  };
-
-  const formatPct = (made, att) => {
-    if (!att || att === 0) return '-';
-    return rawPct(made, att).toFixed(1);
-  };
-
-  const rawEFG = (player) => {
-    const made = (player.TwoPM || 0) + (player.ThreePM || 0);
-    const att = (player.TwoPA || 0) + (player.ThreePA || 0);
-    if (!att || att === 0) return 0;
-    return ((made + 0.5 * (player.ThreePM || 0)) / att) * 100;
-  };
-
-  const formatEFG = (player) => {
-    const att = (player.TwoPA || 0) + (player.ThreePA || 0);
-    if (!att || att === 0) return '-';
-    return rawEFG(player).toFixed(1);
-  };
+      setSeasonTotals(totalsArray);
+    }
+  }, [playerStats, players]);
 
   const formatDate = (ms) => {
-    if (!ms || ms < 0) return '';
-    return new Date(ms).toLocaleDateString();
-  };
-
-  const formatResult = (game) => {
-    if (game.IsComplete !== 'Yes' || !game.Result) return '';
-    return game.Result;
-  };
-
-  const formatScore = (game) => {
-    if (
-      game.IsComplete !== 'Yes' ||
-      game.TeamScore == null ||
-      game.OpponentScore == null
-    ) {
-      return '';
-    }
-    return `${game.TeamScore} - ${game.OpponentScore}`;
-  };
-
-  // -------- Sorting logic for season totals --------
-  const handleSort = (key) => {
-    setSortConfig((prev) => {
-      if (prev.key === key) {
-        return {
-          key,
-          direction: prev.direction === 'desc' ? 'asc' : 'desc',
-        };
-      }
-      // Default: highest → lowest on first click
-      return { key, direction: 'desc' };
+    if (!ms) return "";
+    const d = new Date(ms);
+    return d.toLocaleDateString("en-US", {
+      month: "short",
+      day: "numeric",
+      year: "numeric",
     });
   };
 
-  const getSortValue = (player, key) => {
-    switch (key) {
-      case 'name':
-        return getPlayerName(player.PlayerID).toLowerCase();
-      case 'jersey':
-        return Number(getJerseyNumber(player.PlayerID)) || 0;
-      case 'Points':
-        return player.Points || 0;
-      case 'Rebounds':
-        return player.Rebounds || 0;
-      case 'Assists':
-        return player.Assists || 0;
-      case 'Turnovers':
-        return player.Turnovers || 0;
-      case 'Steals':
-        return player.Steals || 0;
-      case 'Blocks':
-        return player.Blocks || 0;
-      case 'ThreePM':
-        return player.ThreePM || 0;
-      case 'ThreePA':
-        return player.ThreePA || 0;
-      case 'ThreePct':
-        return rawPct(player.ThreePM, player.ThreePA);
-      case 'TwoPM':
-        return player.TwoPM || 0;
-      case 'TwoPA':
-        return player.TwoPA || 0;
-      case 'TwoPct':
-        return rawPct(player.TwoPM, player.TwoPA);
-      case 'FTM':
-        return player.FTM || 0;
-      case 'FTA':
-        return player.FTA || 0;
-      case 'FTPct':
-        return rawPct(player.FTM, player.FTA);
-      case 'eFG':
-        return rawEFG(player);
-      default:
-        return 0;
-    }
-  };
+  const sortData = (data) => {
+    const sorted = [...data];
+    sorted.sort((a, b) => {
+      const { key, direction } = sortConfig;
+      let valA = a[key];
+      let valB = b[key];
 
-  const sortedSeasonTotals = seasonTotals
-    .slice()
-    .sort((a, b) => {
-      const aVal = getSortValue(a, sortConfig.key);
-      const bVal = getSortValue(b, sortConfig.key);
+      if (valA == null) valA = -Infinity;
+      if (valB == null) valB = -Infinity;
 
-      if (aVal < bVal) return sortConfig.direction === 'asc' ? -1 : 1;
-      if (aVal > bVal) return sortConfig.direction === 'asc' ? 1 : -1;
+      if (typeof valA === "string") {
+        valA = valA.toLowerCase();
+        valB = valB.toLowerCase();
+      }
+
+      if (valA < valB) return direction === "asc" ? -1 : 1;
+      if (valA > valB) return direction === "asc" ? 1 : -1;
       return 0;
     });
-
-  const sortArrow = (key) => {
-    if (sortConfig.key !== key) return '';
-    return sortConfig.direction === 'desc' ? ' ↓' : ' ↑';
+    return sorted;
   };
 
+  const handleSort = (key) => {
+    setSortConfig((prev) => ({
+      key,
+      direction: prev.key === key && prev.direction === "asc" ? "desc" : "asc",
+    }));
+  };
+
+  const getSortIndicator = (key) => {
+    if (sortConfig.key !== key) return "";
+    return sortConfig.direction === "asc" ? "▲" : "▼";
+  };
+
+  const formatNumber = (value, decimals = 1) =>
+    value != null ? value.toFixed(decimals) : "–";
+
+  const sortedTotals = sortData(seasonTotals);
+
   return (
-    <div className="bg-gray-100 p-8 rounded-lg shadow-md max-w-6xl mx-auto space-y-10">
-      <h1 className="text-3xl font-bold text-center mb-4">2025–26 Season</h1>
+    <div className="space-y-8 px-4">
+      <header className="text-center space-y-1">
+        <h1 className="text-2xl font-bold text-blue-800">
+          2025–26 Boys Varsity Basketball
+        </h1>
+        <p className="text-gray-700">
+          Schedule, results, and season totals for each player.
+        </p>
+      </header>
 
-      {/* 1. SEASON OVERVIEW */}
-      <section className="bg-white rounded-2xl shadow-sm p-6 space-y-4">
-        <h2 className="text-2xl font-semibold mt-4 mb-3">Season Overview</h2>
-
-        <div className="text-gray-800 leading-relaxed">
-          <a
-            href="https://www.flipsnack.com/6D6FD76F8D6/boys-basketball-media-guide-2025-2026.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="/images/Season2025_26_1.PNG"
-              alt="2025–26 St. Andrew's boys' basketball roster"
-              className="float-left mr-4 mb-3 w-full max-w-xs rounded-lg shadow cursor-pointer"
-            />
-          </a>
-
-          <p className="mb-5 leading-relaxed">
-            After winning three state championships in the past four years, the
-            St. Andrew’s Lions enter the 2025-26 basketball season carrying both
-            high expectations and a new identity. For the first time in five
-            years, the Lions will take the court without an Edwards brother in
-            the lineup, a symbolic turning of the page for one of Georgia’s most
-            dominant small-school programs.
-          </p>
-
-          <p className="mb-6 leading-relaxed">
-            Head coach Mel Abrams, now in his 11th season, guided last year’s
-            team to a 26-3 overall record and a perfect 10-0 record in region
-            play, which extended their region winning streak to 40 straight games
-            over the past four years. But as Abrams looks ahead, he knows
-            maintaining that standard will require new voices and new leadership
-            to emerge. “Our ability to defend individually and collectively will
-            be an area the coaches are observing closely,” Abrams said. “How we
-            defend and rebound as a group will determine how far we go.”
-          </p>
-
-          <p className="mb-5 leading-relaxed">
-            The Lions return a solid core led by Ja’Cari Glover (6’5, F, class
-            of ’26), who established himself as one of the region’s most
-            versatile forwards last season. Glover’s ability to score, rebound,
-            and guard multiple positions will once again anchor the Lions’
-            attack. Supporting him is a talented backcourt featuring Page Getter
-            (6’3, G, ’28) and Chase Brown (6’3, G, ’28), both young guards who
-            gained valuable experience during last year’s playoff run. Guus Blom
-            (6’0, SG, ’26), will also be a crucial contributor as a steady
-            perimeter shooter and a two-way player.
-          </p>
-
-          <img
-            src="/images/Season2025_26_2.PNG"
-            alt="St. Andrew's boys' basketball action collage"
-            className="float-right ml-4 mt-4 mb-3 w-full max-w-sm rounded-lg shadow"
-          />
-
-          <p className="mb-3 leading-relaxed">
-            Replacing Zayden Edwards (6’1, G), last year’s all-state performer
-            and team captain, along with Miles Cummings (6’8, C), the Lions’
-            interior anchor, will be no small task. Their graduation marks the
-            end of an era defined by dominance and chemistry but also opens the
-            door for new contributors to shape the team’s future. One promising
-            addition is Milos Copic (6’6, SG, ’26), a newcomer from Serbia whose
-            perimeter shooting and rebounding could provide an immediate boost.
-            His versatility gives St. Andrew’s another dimension on offense while
-            helping to fill the void left by last year’s senior class.
-          </p>
-
-          <p className="mb-4 leading-relaxed">
-            St. Andrew’s has built a demanding non-region schedule, designed to
-            test the Lions early and prepare them for another deep postseason
-            run. For Abrams and his staff, the focus remains on growth,
-            particularly on the defensive end as this new-look roster learns to
-            play together. “Ja’Cari needs to build on what he did last year,”
-            Abrams noted. “If our key returners can take the next step on both
-            ends of the court, we have a chance to be very good again.”
-          </p>
-
-          <p className="mb-3 leading-relaxed">
-            Even amid change, the culture of St. Andrew’s basketball remains
-            unmistakable as it will continue to focus on unselfish play,
-            relentless defense, and a commitment to excellence that has made the
-            program a powerhouse. The names on the roster may be new, but the
-            goal is unchanged. As the Lions open a new chapter without an
-            Edwards leading the way, the question isn’t whether they can sustain
-            their success. Instead, it’s on how they’ll redefine it.
-          </p>
-          <div className="clear-both" />
-        </div>
-      </section>
-
-      {/* 2. FULL SCHEDULE – future games have blank result/score */}
-      <section>
-        <h2 className="text-2xl font-semibold mt-8 mb-4">
-          📅 Schedule &amp; Results
-        </h2>
-        <div className="overflow-x-auto px-1">
-          <table className="w-full border text-center text-xs sm:text-sm md:text-base">
-            <thead>
+      {/* Schedule */}
+      <section className="space-y-3">
+        <h2 className="text-xl font-semibold text-left">Schedule & Results</h2>
+        <div className="overflow-x-auto border rounded-xl bg-white shadow-sm">
+          <table className="min-w-full text-sm">
+            <thead className="bg-gray-100">
               <tr>
-                <th className="border px-2 py-1">Date</th>
-                <th className="border px-2 py-1">Opponent</th>
-                <th className="border px-2 py-1">Result</th>
-                <th className="border px-2 py-1">Score</th>
+                <th className="px-4 py-2 text-left">Date</th>
+                <th className="px-4 py-2 text-left">Opponent</th>
+                <th className="px-4 py-2 text-left">Location</th>
+                <th className="px-4 py-2 text-center">Type</th>
+                <th className="px-4 py-2 text-center">Result</th>
+                <th className="px-4 py-2 text-center">Score</th>
               </tr>
             </thead>
             <tbody>
-              {games.map((game, idx) => {
-                const hasResult = game.Result === 'W' || game.Result === 'L';
-
-                const opponentCell = hasResult ? (
-                  <Link
-                    to={`/games/${game.GameID}`}
-                    className="text-blue-700 hover:underline"
+              {games.length === 0 && (
+                <tr>
+                  <td
+                    colSpan={6}
+                    className="px-4 py-4 text-center text-gray-600"
                   >
-                    {game.Opponent}
-                  </Link>
-                ) : (
-                  game.Opponent
-                );
+                    No games have been entered yet for the 2025–26 season.
+                  </td>
+                </tr>
+              )}
 
-                return (
-                  <tr key={game.GameID || idx}>
-                    <td className="border px-2 py-1 text-center">
-                      {formatDate(game.Date)}
-                    </td>
-                    <td className="border px-2 py-1 text-center">
-                      {opponentCell}
-                    </td>
-                    <td className="border px-2 py-1 text-center">
-                      {formatResult(game)}
-                    </td>
-                    <td className="border px-2 py-1 whitespace-nowrap text-center">
-                      {formatScore(game)}
-                    </td>
-                  </tr>
-                );
-              })}
+              {games.map((game) => (
+                <tr key={game.GameID} className="border-t">
+                  <td className="px-4 py-2 whitespace-nowrap">
+                    {formatDate(game.Date)}
+                  </td>
+                  <td className="px-4 py-2">
+                    <Link
+                      to={`/athletics/boys/basketball/games/${game.GameID}`}
+                      className="text-blue-700 hover:underline"
+                    >
+                      {game.Opponent}
+                    </Link>
+                  </td>
+                  <td className="px-4 py-2">{game.LocationType}</td>
+                  <td className="px-4 py-2 text-center">{game.GameType}</td>
+                  <td className="px-4 py-2 text-center">
+                    {game.Result || "-"}
+                  </td>
+                  <td className="px-4 py-2 text-center">
+                    {game.TeamScore != null && game.OpponentScore != null
+                      ? `${game.TeamScore}–${game.OpponentScore}`
+                      : "-"}
+                  </td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
       </section>
 
-      {/* 3. SEASON PLAYER TOTALS (sortable, with photos & jersey column) */}
-      <section>
-        <h2 className="text-2xl font-semibold mt-8 mb-4">
-          📊 Season Player Totals
-        </h2>
-
-        {seasonTotals.length === 0 ? (
-          <p className="text-gray-600">
-            No player statistics are available yet for this season.
-          </p>
-        ) : (
-          <div className="overflow-x-auto px-1">
-            <table className="w-full border text-center text-xs sm:text-sm md:text-base whitespace-nowrap">
-              <thead className="bg-gray-400 text-black">
-                <tr>
-                  <th
-                    className="border px-2 py-1 text-left cursor-pointer"
-                    onClick={() => handleSort('name')}
-                  >
-                    Player{sortArrow('name')}
-                  </th>
-                  <th
-                    className="border px-2 py-1 cursor-pointer"
-                    onClick={() => handleSort('jersey')}
-                  >
-                    #{sortArrow('jersey')}
-                  </th>
-                  <th
-                    className="border px-2 py-1 cursor-pointer"
-                    onClick={() => handleSort('Points')}
-                  >
-                    PTS{sortArrow('Points')}
-                  </th>
-                  <th
-                    className="border px-2 py-1 cursor-pointer"
-                    onClick={() => handleSort('Rebounds')}
-                  >
-                    REB{sortArrow('Rebounds')}
-                  </th>
-                  <th
-                    className="border px-2 py-1 cursor-pointer"
-                    onClick={() => handleSort('Assists')}
-                  >
-                    AST{sortArrow('Assists')}
-                  </th>
-                  <th
-                    className="border px-2 py-1 cursor-pointer"
-                    onClick={() => handleSort('Turnovers')}
-                  >
-                    TO{sortArrow('Turnovers')}
-                  </th>
-                  <th
-                    className="border px-2 py-1 cursor-pointer"
-                    onClick={() => handleSort('Steals')}
-                  >
-                    STL{sortArrow('Steals')}
-                  </th>
-                  <th
-                    className="border px-2 py-1 cursor-pointer"
-                    onClick={() => handleSort('Blocks')}
-                  >
-                    BLK{sortArrow('Blocks')}
-                  </th>
-
-                  <th
-                    className="border px-2 py-1 cursor-pointer"
-                    onClick={() => handleSort('ThreePM')}
-                  >
-                    3PM{sortArrow('ThreePM')}
-                  </th>
-                  <th
-                    className="border px-2 py-1 cursor-pointer"
-                    onClick={() => handleSort('ThreePA')}
-                  >
-                    3PA{sortArrow('ThreePA')}
-                  </th>
-                  <th
-                    className="border px-2 py-1 cursor-pointer"
-                    onClick={() => handleSort('ThreePct')}
-                  >
-                    3P%{sortArrow('ThreePct')}
-                  </th>
-
-                  <th
-                    className="border px-2 py-1 cursor-pointer"
-                    onClick={() => handleSort('TwoPM')}
-                  >
-                    2PM{sortArrow('TwoPM')}
-                  </th>
-                  <th
-                    className="border px-2 py-1 cursor-pointer"
-                    onClick={() => handleSort('TwoPA')}
-                  >
-                    2PA{sortArrow('TwoPA')}
-                  </th>
-                  <th
-                    className="border px-2 py-1 cursor-pointer"
-                    onClick={() => handleSort('TwoPct')}
-                  >
-                    2P%{sortArrow('TwoPct')}
-                  </th>
-
-                  <th
-                    className="border px-2 py-1 cursor-pointer"
-                    onClick={() => handleSort('eFG')}
-                  >
-                    eFG%{sortArrow('eFG')}
-                  </th>
-
-                  <th
-                    className="border px-2 py-1 cursor-pointer"
-                    onClick={() => handleSort('FTM')}
-                  >
-                    FTM{sortArrow('FTM')}
-                  </th>
-                  <th
-                    className="border px-2 py-1 cursor-pointer"
-                    onClick={() => handleSort('FTA')}
-                  >
-                    FTA{sortArrow('FTA')}
-                  </th>
-                  <th
-                    className="border px-2 py-1 cursor-pointer"
-                    onClick={() => handleSort('FTPct')}
-                  >
-                    FT%{sortArrow('FTPct')}
-                  </th>
+      {/* Season Totals */}
+      <section className="space-y-3">
+        <h2 className="text-xl font-semibold text-left">Season Totals</h2>
+        <div className="overflow-x-auto border rounded-xl bg-white shadow-sm">
+          <table className="min-w-full text-xs border text-center">
+            <thead className="bg-gray-200 font-bold">
+              <tr>
+                <th className="border px-2 py-1">Player</th>
+                <th
+                  className="border px-2 py-1 cursor-pointer"
+                  onClick={() => handleSort("GamesPlayed")}
+                >
+                  GP {getSortIndicator("GamesPlayed")}
+                </th>
+                <th
+                  className="border px-2 py-1 cursor-pointer"
+                  onClick={() => handleSort("Points")}
+                >
+                  PTS {getSortIndicator("Points")}
+                </th>
+                <th
+                  className="border px-2 py-1 cursor-pointer"
+                  onClick={() => handleSort("PPG")}
+                >
+                  PPG {getSortIndicator("PPG")}
+                </th>
+                <th
+                  className="border px-2 py-1 cursor-pointer"
+                  onClick={() => handleSort("Rebounds")}
+                >
+                  REB {getSortIndicator("Rebounds")}
+                </th>
+                <th
+                  className="border px-2 py-1 cursor-pointer"
+                  onClick={() => handleSort("RPG")}
+                >
+                  RPG {getSortIndicator("RPG")}
+                </th>
+                <th
+                  className="border px-2 py-1 cursor-pointer"
+                  onClick={() => handleSort("Assists")}
+                >
+                  AST {getSortIndicator("Assists")}
+                </th>
+                <th className="border px-2 py-1">STL</th>
+                <th className="border px-2 py-1">BLK</th>
+                <th className="border px-2 py-1">TOV</th>
+                <th className="border px-2 py-1">2PM</th>
+                <th className="border px-2 py-1">2PA</th>
+                <th className="border px-2 py-1">2P%</th>
+                <th className="border px-2 py-1">3PM</th>
+                <th className="border px-2 py-1">3PA</th>
+                <th className="border px-2 py-1">3P%</th>
+                <th className="border px-2 py-1">FTM</th>
+                <th className="border px-2 py-1">FTA</th>
+                <th className="border px-2 py-1">FT%</th>
+              </tr>
+            </thead>
+            <tbody>
+              {sortedTotals.map((totals) => (
+                <tr key={totals.PlayerID}>
+                  <td className="border px-2 py-1 whitespace-nowrap text-left">
+                    {totals.Name}
+                  </td>
+                  <td className="border px-2 py-1">{totals.GamesPlayed}</td>
+                  <td className="border px-2 py-1">{totals.Points}</td>
+                  <td className="border px-2 py-1">
+                    {formatNumber(totals.PPG)}
+                  </td>
+                  <td className="border px-2 py-1">{totals.Rebounds}</td>
+                  <td className="border px-2 py-1">
+                    {formatNumber(totals.RPG)}
+                  </td>
+                  <td className="border px-2 py-1">{totals.Assists}</td>
+                  <td className="border px-2 py-1">{totals.Steals}</td>
+                  <td className="border px-2 py-1">{totals.Blocks}</td>
+                  <td className="border px-2 py-1">{totals.Turnovers}</td>
+                  <td className="border px-2 py-1">{totals.TwoPM}</td>
+                  <td className="border px-2 py-1">{totals.TwoPA}</td>
+                  <td className="border px-2 py-1">
+                    {totals.TwoPtPct != null
+                      ? `${formatNumber(totals.TwoPtPct, 1)}%`
+                      : "–"}
+                  </td>
+                  <td className="border px-2 py-1">{totals.ThreePM}</td>
+                  <td className="border px-2 py-1">{totals.ThreePA}</td>
+                  <td className="border px-2 py-1">
+                    {totals.ThreePtPct != null
+                      ? `${formatNumber(totals.ThreePtPct, 1)}%`
+                      : "–"}
+                  </td>
+                  <td className="border px-2 py-1">{totals.FTM}</td>
+                  <td className="border px-2 py-1">{totals.FTA}</td>
+                  <td className="border px-2 py-1">
+                    {totals.FTPct != null
+                      ? `${formatNumber(totals.FTPct, 1)}%`
+                      : "–"}
+                  </td>
                 </tr>
-              </thead>
-              <tbody>
-                {sortedSeasonTotals.map((player) => {
-                  const name = getPlayerName(player.PlayerID);
-                  const jersey = getJerseyNumber(player.PlayerID);
-                  const photoUrl = getPlayerPhotoUrl(player.PlayerID);
-
-                  return (
-                    <tr key={player.PlayerID}>
-                      <td className="border px-2 py-1 text-left align-middle max-w-[180px] overflow-hidden truncate">
-                        <div className="flex items-center gap-2">
-                          <img
-                            src={photoUrl}
-                            alt={name}
-                            onError={(e) => {
-                              e.currentTarget.src = '/images/players/default.jpg';
-                            }}
-                            className="w-8 h-8 rounded-full object-cover border"
-                          />
-                          <Link
-                            to={`/players/${player.PlayerID}`}
-                            className="text-blue-600 underline hover:text-blue-800 truncate"
-                          >
-                            {name}
-                          </Link>
-                        </div>
-                      </td>
-                      <td className="border px-2 py-1 align-middle">
-                        {jersey}
-                      </td>
-
-                      <td className="border px-2 py-1 align-middle">
-                        {player.Points}
-                      </td>
-                      <td className="border px-2 py-1 align-middle">
-                        {player.Rebounds}
-                      </td>
-                      <td className="border px-2 py-1 align-middle">
-                        {player.Assists}
-                      </td>
-                      <td className="border px-2 py-1 align-middle">
-                        {player.Turnovers}
-                      </td>
-                      <td className="border px-2 py-1 align-middle">
-                        {player.Steals}
-                      </td>
-                      <td className="border px-2 py-1 align-middle">
-                        {player.Blocks}
-                      </td>
-
-                      <td className="border px-2 py-1 align-middle">
-                        {player.ThreePM}
-                      </td>
-                      <td className="border px-2 py-1 align-middle">
-                        {player.ThreePA}
-                      </td>
-                      <td className="border px-2 py-1 align-middle">
-                        {formatPct(player.ThreePM, player.ThreePA)}
-                      </td>
-
-                      <td className="border px-2 py-1 align-middle">
-                        {player.TwoPM}
-                      </td>
-                      <td className="border px-2 py-1 align-middle">
-                        {player.TwoPA}
-                      </td>
-                      <td className="border px-2 py-1 align-middle">
-                        {formatPct(player.TwoPM, player.TwoPA)}
-                      </td>
-
-                      <td className="border px-2 py-1 align-middle">
-                        {formatEFG(player)}
-                      </td>
-
-                      <td className="border px-2 py-1 align-middle">
-                        {player.FTM}
-                      </td>
-                      <td className="border px-2 py-1 align-middle">
-                        {player.FTA}
-                      </td>
-                      <td className="border px-2 py-1 align-middle">
-                        {formatPct(player.FTM, player.FTA)}
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
-        )}
+              ))}
+            </tbody>
+          </table>
+        </div>
       </section>
+
+      <div className="text-center">
+        <Link
+          to="/athletics/boys/basketball/yearly-results"
+          className="inline-block mt-4 text-sm text-blue-700 hover:underline"
+        >
+          ← Back to Yearly Results
+        </Link>
+      </div>
     </div>
   );
 }
