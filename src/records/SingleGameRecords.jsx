@@ -14,25 +14,27 @@ function SingleGameRecords() {
     "TwoPM",
     "ThreePM",
     "FTM",
-    "FTA",
+    "Blocks",
   ];
 
-  const formatDate = (ms) => {
-    const date = new Date(ms);
-    return date.toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-    });
+  const statLabels = {
+    Points: "Points",
+    Rebounds: "Rebounds",
+    Assists: "Assists",
+    Steals: "Steals",
+    TwoPM: "2-Point FGs",
+    ThreePM: "3-Point FGs",
+    FTM: "Free Throws",
+    Blocks: "Blocks",
   };
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const [playerStatsRes, playersRes, gamesRes] = await Promise.all([
-          fetch("/data/playergamestats.json"),
-          fetch("/data/players.json"),
-          fetch("/data/games.json"),
+          fetch("/data/boys/basketball/playergamestats.json"),
+          fetch("/data/boys/basketball/players.json"),
+          fetch("/data/boys/basketball/games.json"),
         ]);
 
         const [playerStatsData, playersData, gamesData] = await Promise.all([
@@ -44,71 +46,122 @@ function SingleGameRecords() {
         setPlayerStats(playerStatsData);
         setPlayers(playersData);
         setGames(gamesData);
-
-        const result = {};
-
-        statCategories.forEach((stat) => {
-          const sorted = [...playerStatsData]
-            .filter((entry) => entry[stat] !== undefined && entry[stat] > 0)
-            .sort((a, b) => b[stat] - a[stat])
-            .slice(0, 10);
-
-          const detailed = sorted.map((entry) => {
-            const player = playersData.find(
-              (p) => String(p.PlayerID) === String(entry.PlayerID)
-            );
-            const game = gamesData.find(
-              (g) => String(g.GameID) === String(entry.GameID)
-            );
-
-            return {
-              value: entry[stat],
-              playerName: player ? `${player.FirstName} ${player.LastName}` : "Unknown Player",
-              opponent: game ? game.Opponent : "Unknown Opponent",
-              date: game ? formatDate(game.Date) : "Unknown Date",
-            };
-          });
-
-          result[stat] = detailed;
-        });
-
-        setTopRecordsByStat(result);
-      } catch (err) {
-        console.error("Error loading data:", err);
+      } catch (error) {
+        console.error("Error loading data:", error);
       }
     };
 
     fetchData();
   }, []);
 
+  useEffect(() => {
+    if (playerStats.length && players.length && games.length) {
+      const playerMap = new Map(
+        players.map((p) => [p.PlayerID, `${p.FirstName} ${p.LastName}`])
+      );
+      const gameMap = new Map(
+        games.map((g) => [g.GameID, { Opponent: g.Opponent, Date: g.Date }])
+      );
+
+      const recordsByStat = {};
+
+      statCategories.forEach((stat) => {
+        let topValue = -Infinity;
+        let topRecords = [];
+
+        playerStats.forEach((entry) => {
+          const playerName = playerMap.get(entry.PlayerID) || "Unknown Player";
+          const gameInfo = gameMap.get(entry.GameID) || {
+            Opponent: "Unknown Opponent",
+            Date: null,
+          };
+
+          const statValue = Number(entry[stat]) || 0;
+
+          if (statValue > topValue && statValue > 0) {
+            topValue = statValue;
+            topRecords = [
+              {
+                statValue,
+                playerName,
+                ...gameInfo,
+              },
+            ];
+          } else if (statValue === topValue && statValue > 0) {
+            topRecords.push({
+              statValue,
+              playerName,
+              ...gameInfo,
+            });
+          }
+        });
+
+        recordsByStat[stat] = topRecords;
+      });
+
+      setTopRecordsByStat(recordsByStat);
+    }
+  }, [playerStats, players, games]);
+
+  const formatDate = (ms) => {
+    if (!ms) return "";
+    const date = new Date(ms);
+    return date.toLocaleDateString("en-US", {
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+    });
+  };
+
   return (
-    <div className="p-6">
-      <h1 className="text-3xl font-bold mb-6">Single Game Records</h1>
-      {statCategories.map((stat) => (
-        <div key={stat} className="mb-10">
-          <h2 className="text-xl font-semibold mb-2">{stat}</h2>
-          <table className="w-full border border-gray-300">
-            <thead>
-              <tr className="bg-gray-100">
-                <th className="p-2 text-left">Value</th>
-                <th className="p-2 text-left">Player</th>
-                <th className="p-2 text-left">Opponent</th>
-                <th className="p-2 text-left">Date</th>
-              </tr>
-            </thead>
-            <tbody>
-              {(topRecordsByStat[stat] || []).map((record, index) => (
-                <tr key={index} className="border-t">
-                  <td className="p-2">{record.value}</td>
-                  <td className="p-2">{record.playerName}</td>
-                  <td className="p-2">{record.opponent}</td>
-                  <td className="p-2">{record.date}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      ))}
+    <div className="space-y-10 px-4">
+      <h1 className="text-2xl font-bold text-center">
+        Single-Game Records (Boys)
+      </h1>
+
+      <div className="space-y-6">
+        {statCategories.map((stat) => {
+          const records = topRecordsByStat[stat] || [];
+
+          return (
+            <div key={stat} className="border rounded-lg shadow-sm bg-white">
+              <div className="bg-gray-200 px-4 py-2 font-semibold text-left">
+                {statLabels[stat]}
+              </div>
+              <div className="p-4">
+                {records.length === 0 ? (
+                  <p className="text-gray-600 text-sm">
+                    No records available for this stat yet.
+                  </p>
+                ) : (
+                  <table className="min-w-full text-sm text-center">
+                    <thead>
+                      <tr className="bg-gray-100">
+                        <th className="px-2 py-1">Value</th>
+                        <th className="px-2 py-1">Player</th>
+                        <th className="px-2 py-1">Opponent</th>
+                        <th className="px-2 py-1">Date</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {records.map((record, index) => (
+                        <tr key={index} className="border-t">
+                          <td className="px-2 py-1">{record.statValue}</td>
+                          <td className="px-2 py-1">{record.playerName}</td>
+                          <td className="px-2 py-1">{record.Opponent}</td>
+                          <td className="px-2 py-1">
+                            {formatDate(record.Date)}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                )}
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }
