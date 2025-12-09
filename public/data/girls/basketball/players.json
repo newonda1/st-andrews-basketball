@@ -1,0 +1,79 @@
+[
+  {
+    "PlayerID": 202201,
+    "FirstName": "Graci",
+    "LastName": "Dare",
+    "GradYear": 2027,
+    "JerseyNumber": 12
+  },
+  {
+    "PlayerID": 202202,
+    "FirstName": "Coco",
+    "LastName": "Carnhan",
+    "GradYear": 2026,
+    "JerseyNumber": 15
+  },
+  {
+    "PlayerID": 202203,
+    "FirstName": "Maren",
+    "LastName": "Wrieden",
+    "GradYear": 2026,
+    "JerseyNumber": 22
+  },
+  {
+    "PlayerID": 202301,
+    "FirstName": "Valerie",
+    "LastName": "Ward",
+    "GradYear": 2028,
+    "JerseyNumber": 2
+  },
+  {
+    "PlayerID": 202302,
+    "FirstName": "Avery",
+    "LastName": "Nein",
+    "GradYear": 2027,
+    "JerseyNumber": 11
+  },
+  {
+    "PlayerID": 202401,
+    "FirstName": "Lyleigh",
+    "LastName": "Bradshaw",
+    "GradYear": 2028,
+    "JerseyNumber": 10
+  },
+  {
+    "PlayerID": 202501,
+    "FirstName": "Aubri",
+    "LastName": "Rutledge",
+    "GradYear": 2029,
+    "JerseyNumber": 1
+  },
+  {
+    "PlayerID": 202502,
+    "FirstName": "Janiyah",
+    "LastName": "Johnson",
+    "GradYear": 2028,
+    "JerseyNumber": 5
+  },
+  {
+    "PlayerID": 202503,
+    "FirstName": "Zyona",
+    "LastName": "Edwards",
+    "GradYear": 2030,
+    "JerseyNumber": 21
+  },
+  {
+    "PlayerID": 202504,
+    "FirstName": "Kate",
+    "LastName": "Jackson",
+    "GradYear": 2029,
+    "JerseyNumber": 23
+  },
+  {
+    "PlayerID": 202505,
+    "FirstName": "Emma",
+    "LastName": "Taylor",
+    "GradYear": 2029,
+    "JerseyNumber": 24
+  }
+]
