@@ -306,7 +306,7 @@ function BoysBasketballApp() {
 
       <Routes>
         {/* Index route: /athletics/boys/basketball */}
-        <Route index element={<Home />} />
+         <Route index element={<Season2025_26 />} />
 
         {/* Records */}
         <Route path="records/career" element={<FullCareerStats />} />
@@ -326,7 +326,7 @@ function BoysBasketballApp() {
         <Route path="players/:playerId" element={<PlayerPage />} />
 
         {/* Fallback */}
-        <Route path="*" element={<Home />} />
+        <Route path="*" element={<Season2025_26 />} />
       </Routes>
     </div>
   );
