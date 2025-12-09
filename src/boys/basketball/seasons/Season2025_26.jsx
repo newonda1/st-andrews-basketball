@@ -7,7 +7,7 @@ function Season2025_26() {
   const [players, setPlayers] = useState([]);
   const [seasonTotals, setSeasonTotals] = useState([]);
   const [sortConfig, setSortConfig] = useState({
-    key: "name",
+    key: "jersey",
     direction: "asc",
   });
 
@@ -508,7 +508,7 @@ function Season2025_26() {
 
                   return (
                     <tr key={player.PlayerID}>
-                      <td className="border px-2 py-1 text-left align-middle max-w-[180px] overflow-hidden truncate">
+                      <td className="border px-2 py-1 text-left align-middle">
                         <div className="flex items-center gap-2">
                           <img
                             src={photoUrl}
@@ -521,7 +521,7 @@ function Season2025_26() {
                           />
                           <Link
                             to={`/athletics/boys/basketball/players/${player.PlayerID}`}
-                            className="text-blue-600 underline hover:text-blue-800 truncate"
+                            className="text-blue-600 underline hover:text-blue-800"
                           >
                             {name}
                           </Link>
