@@ -1,6 +1,7 @@
 import { Link, Routes, Route } from "react-router-dom";
 import React, { useEffect, useState, useRef } from "react";
 
+import Home from "./pages/Home";
 import FullCareerStats from "./pages/FullCareerStats";
 import SeasonRecords from "./pages/SeasonRecords";
 import SingleGameRecords from "./pages/SingleGameRecords";
@@ -306,7 +307,7 @@ function BoysBasketballApp() {
 
       <Routes>
         {/* Index route: /athletics/boys/basketball */}
-         <Route index element={<Season2025_26 />} />
+         <Route index element={<Home />} />
 
         {/* Records */}
         <Route path="records/career" element={<FullCareerStats />} />
@@ -326,7 +327,7 @@ function BoysBasketballApp() {
         <Route path="players/:playerId" element={<PlayerPage />} />
 
         {/* Fallback */}
-        <Route path="*" element={<Season2025_26 />} />
+        <Route index element={<Home />} />
       </Routes>
     </div>
   );
