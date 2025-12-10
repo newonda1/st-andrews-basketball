@@ -10,6 +10,7 @@ function Season2025_26() {
     key: "jersey",
     direction: "asc",
   });
+  const [showPerGame, setShowPerGame] = useState(false);
 
   const SEASON_ID = 2025; // 2025–26 season
 
@@ -44,7 +45,7 @@ function Season2025_26() {
     fetchData();
   }, []);
 
-  // 2. Build season totals including shooting stats
+  // 2. Build season totals including shooting stats + games played (GP)
   useEffect(() => {
     if (playerStats.length === 0) {
       setSeasonTotals([]);
@@ -71,6 +72,7 @@ function Season2025_26() {
           TwoPA: 0,
           FTM: 0,
           FTA: 0,
+          GamesPlayedSet: new Set(),
         };
       }
 
@@ -89,9 +91,30 @@ function Season2025_26() {
       t.TwoPA += stat.TwoPA || 0;
       t.FTM += stat.FTM || 0;
       t.FTA += stat.FTA || 0;
+
+      if (stat.GameID != null) {
+        t.GamesPlayedSet.add(stat.GameID);
+      }
     });
 
-    setSeasonTotals(Object.values(totalsMap));
+    const totalsArray = Object.values(totalsMap).map((p) => ({
+      PlayerID: p.PlayerID,
+      Points: p.Points,
+      Rebounds: p.Rebounds,
+      Assists: p.Assists,
+      Turnovers: p.Turnovers,
+      Steals: p.Steals,
+      Blocks: p.Blocks,
+      ThreePM: p.ThreePM,
+      ThreePA: p.ThreePA,
+      TwoPM: p.TwoPM,
+      TwoPA: p.TwoPA,
+      FTM: p.FTM,
+      FTA: p.FTA,
+      GamesPlayed: p.GamesPlayedSet.size,
+    }));
+
+    setSeasonTotals(totalsArray);
   }, [playerStats]);
 
   // -------- Helper functions --------
@@ -154,7 +177,29 @@ function Season2025_26() {
     return `${game.TeamScore} - ${game.OpponentScore}`;
   };
 
+  const formatPerGame = (player, key) => {
+    const gp = player.GamesPlayed || 0;
+    if (!gp) return 0;
+    const total = player[key] || 0;
+    return (total / gp).toFixed(1);
+  };
+
   // -------- Sorting logic for season totals --------
+  const countingStatKeys = new Set([
+    "Points",
+    "Rebounds",
+    "Assists",
+    "Turnovers",
+    "Steals",
+    "Blocks",
+    "ThreePM",
+    "ThreePA",
+    "TwoPM",
+    "TwoPA",
+    "FTM",
+    "FTA",
+  ]);
+
   const handleSort = (key) => {
     setSortConfig((prev) => {
       if (prev.key === key) {
@@ -169,11 +214,22 @@ function Season2025_26() {
   };
 
   const getSortValue = (player, key) => {
+    // For counting stats, respect the toggle between totals and per-game
+    if (countingStatKeys.has(key)) {
+      if (showPerGame) {
+        const gp = player.GamesPlayed || 0;
+        if (!gp) return 0;
+        return (player[key] || 0) / gp;
+      }
+    }
+
     switch (key) {
       case "name":
         return getPlayerName(player.PlayerID).toLowerCase();
       case "jersey":
         return Number(getJerseyNumber(player.PlayerID)) || 0;
+      case "GamesPlayed":
+        return player.GamesPlayed || 0;
       case "Points":
         return player.Points || 0;
       case "Rebounds":
@@ -373,9 +429,41 @@ function Season2025_26() {
 
       {/* 3. SEASON PLAYER TOTALS (sortable, with photos & jersey column) */}
       <section>
-        <h2 className="text-2xl font-semibold mt-8 mb-4">
-          📊 Season Player Totals
-        </h2>
+        <div className="flex items-center justify-between mt-8 mb-4">
+          <h2 className="text-2xl font-semibold">
+            📊 Player Statistics for the Season
+          </h2>
+
+          <div className="flex items-center space-x-2 text-xs sm:text-sm">
+            <span
+              className={`${
+                showPerGame ? "text-gray-400" : "text-gray-900 font-semibold"
+              }`}
+            >
+              Season totals
+            </span>
+            <button
+              type="button"
+              onClick={() => setShowPerGame((prev) => !prev)}
+              className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-200 ${
+                showPerGame ? "bg-green-500" : "bg-gray-300"
+              }`}
+            >
+              <span
+                className={`inline-block h-5 w-5 transform rounded-full bg-white shadow transition-transform duration-200 ${
+                  showPerGame ? "translate-x-5" : "translate-x-1"
+                }`}
+              />
+            </button>
+            <span
+              className={`${
+                showPerGame ? "text-gray-900 font-semibold" : "text-gray-400"
+              }`}
+            >
+              Per game averages
+            </span>
+          </div>
+        </div>
 
         {seasonTotals.length === 0 ? (
           <p className="text-gray-600">
@@ -397,6 +485,12 @@ function Season2025_26() {
                     onClick={() => handleSort("jersey")}
                   >
                     #{sortArrow("jersey")}
+                  </th>
+                  <th
+                    className="border px-2 py-1 cursor-pointer"
+                    onClick={() => handleSort("GamesPlayed")}
+                  >
+                    GP{sortArrow("GamesPlayed")}
                   </th>
                   <th
                     className="border px-2 py-1 cursor-pointer"
@@ -530,41 +624,64 @@ function Season2025_26() {
                       <td className="border px-2 py-1 align-middle">
                         {jersey}
                       </td>
-
                       <td className="border px-2 py-1 align-middle">
-                        {player.Points}
-                      </td>
-                      <td className="border px-2 py-1 align-middle">
-                        {player.Rebounds}
-                      </td>
-                      <td className="border px-2 py-1 align-middle">
-                        {player.Assists}
-                      </td>
-                      <td className="border px-2 py-1 align-middle">
-                        {player.Turnovers}
-                      </td>
-                      <td className="border px-2 py-1 align-middle">
-                        {player.Steals}
-                      </td>
-                      <td className="border px-2 py-1 align-middle">
-                        {player.Blocks}
+                        {player.GamesPlayed}
                       </td>
 
                       <td className="border px-2 py-1 align-middle">
-                        {player.ThreePM}
+                        {showPerGame
+                          ? formatPerGame(player, "Points")
+                          : player.Points}
                       </td>
                       <td className="border px-2 py-1 align-middle">
-                        {player.ThreePA}
+                        {showPerGame
+                          ? formatPerGame(player, "Rebounds")
+                          : player.Rebounds}
+                      </td>
+                      <td className="border px-2 py-1 align-middle">
+                        {showPerGame
+                          ? formatPerGame(player, "Assists")
+                          : player.Assists}
+                      </td>
+                      <td className="border px-2 py-1 align-middle">
+                        {showPerGame
+                          ? formatPerGame(player, "Turnovers")
+                          : player.Turnovers}
+                      </td>
+                      <td className="border px-2 py-1 align-middle">
+                        {showPerGame
+                          ? formatPerGame(player, "Steals")
+                          : player.Steals}
+                      </td>
+                      <td className="border px-2 py-1 align-middle">
+                        {showPerGame
+                          ? formatPerGame(player, "Blocks")
+                          : player.Blocks}
+                      </td>
+
+                      <td className="border px-2 py-1 align-middle">
+                        {showPerGame
+                          ? formatPerGame(player, "ThreePM")
+                          : player.ThreePM}
+                      </td>
+                      <td className="border px-2 py-1 align-middle">
+                        {showPerGame
+                          ? formatPerGame(player, "ThreePA")
+                          : player.ThreePA}
                       </td>
                       <td className="border px-2 py-1 align-middle">
                         {formatPct(player.ThreePM, player.ThreePA)}
                       </td>
 
                       <td className="border px-2 py-1 align-middle">
-                        {player.TwoPM}
+                        {showPerGame
+                          ? formatPerGame(player, "TwoPM")
+                          : player.TwoPM}
                       </td>
                       <td className="border px-2 py-1 align-middle">
-                        {player.TwoPA}
+                        {showPerGame
+                          ? formatPerGame(player, "TwoPA")
+                          : player.TwoPA}
                       </td>
                       <td className="border px-2 py-1 align-middle">
                         {formatPct(player.TwoPM, player.TwoPA)}
@@ -575,10 +692,14 @@ function Season2025_26() {
                       </td>
 
                       <td className="border px-2 py-1 align-middle">
-                        {player.FTM}
+                        {showPerGame
+                          ? formatPerGame(player, "FTM")
+                          : player.FTM}
                       </td>
                       <td className="border px-2 py-1 align-middle">
-                        {player.FTA}
+                        {showPerGame
+                          ? formatPerGame(player, "FTA")
+                          : player.FTA}
                       </td>
                       <td className="border px-2 py-1 align-middle">
                         {formatPct(player.FTM, player.FTA)}
