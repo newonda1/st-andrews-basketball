@@ -7,6 +7,7 @@ function GirlsBasketballApp() {
     <Routes>
       {/* Landing page for girls basketball */}
       <Route path="/" element={<Season2025_26 />} />
+      <Route path="games/:gameId" element={<GameDetail />} />
     </Routes>
   );
 }
