@@ -4084,7 +4084,7 @@
     "OpponentScore": 52,
     "ResultMargin": -3,
     "Season": 2025,
-    "IsComplete": "Unknown"
+    "IsComplete": "Yes"
   },
   {
     "GameID": 20251209,
@@ -4092,12 +4092,12 @@
     "Opponent": "South Effingham High School",
     "LocationType": "Away",
     "GameType": "Non-Region",
-    "Result": "Unknown",
-    "TeamScore": null,
-    "OpponentScore": null,
-    "ResultMargin": null,
+    "Result": "L",
+    "TeamScore": 54,
+    "OpponentScore": 56,
+    "ResultMargin": -2,
     "Season": 2025,
-    "IsComplete": "Unknown"
+    "IsComplete": "Yes"
   },
   {
     "GameID": 20251212,
