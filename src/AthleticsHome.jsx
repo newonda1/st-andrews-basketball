@@ -43,12 +43,12 @@ function AthleticsHome() {
               Girls Basketball
             </h2>
             <p className="text-gray-700 text-sm">
-              The girls basketball stats site is under construction. We&apos;re
-              starting with the current season.
+              Explore the 2025–26 girls basketball season, including schedule,
+              results, and player stats.
             </p>
           </div>
           <div className="mt-4 text-sm font-medium text-pink-700">
-            Open girls basketball &rarr;
+            View girls basketball &rarr;
           </div>
         </Link>
       </div>
