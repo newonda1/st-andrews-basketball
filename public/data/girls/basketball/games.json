@@ -91,11 +91,11 @@
     "LocationType": "Away",
     "GameType": "Non-Region",
     "Result": "Unknown",
-    "TeamScore": null,
-    "OpponentScore": null,
-    "ResultMargin": null,
+    "TeamScore": 30,
+    "OpponentScore": 39,
+    "ResultMargin": -9,
     "Season": 2025,
-    "IsComplete": "No",
+    "IsComplete": "Yes",
     "Recap": null
   },
   {
