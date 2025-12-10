@@ -27,10 +27,8 @@ function Season2025_26() {
         const statsData = await statsRes.json();
         const playersData = await playersRes.json();
 
-        // Filter to just 2025–26 games and sort by date
-        const seasonGames = gamesData
-          .filter((g) => String(g.Season) === String(SEASON_ID))
-          .sort((a, b) => a.Date - b.Date);
+        // For now, use all girls games and sort by date
+        const seasonGames = gamesData.sort((a, b) => a.Date - b.Date);
 
         const seasonGameIds = new Set(seasonGames.map((g) => g.GameID));
 
