@@ -1,6 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Season2025_26 from "./seasons/Season2025_26";
+import GameDetail from "./pages/GameDetail";   // ⬅️ add this line
 
 function GirlsBasketballApp() {
   return (
