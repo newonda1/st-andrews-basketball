@@ -274,7 +274,7 @@ function Season2025_26() {
               rel="noopener noreferrer"
             >
               <img
-                src="/images/girls/basketball/seasons/2025-26/Season2025_26_1.PNG"
+                src="/images/girls/basketball/seasons/2025-26/Season2025_26_1.png"
                 alt="2025–26 St. Andrew's girls' basketball roster"
                 className="float-left mr-4 mb-3 w-full max-w-xs rounded-lg shadow cursor-pointer"
               />
