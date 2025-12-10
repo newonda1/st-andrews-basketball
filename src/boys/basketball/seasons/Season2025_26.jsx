@@ -184,6 +184,17 @@ function Season2025_26() {
     return (total / gp).toFixed(1);
   };
 
+  // Assist/Turnover ratio (always from season totals)
+  const formatAssistToTurnover = (player) => {
+    const ast = player.Assists || 0;
+    const tov = player.Turnovers || 0;
+    if (!tov) {
+      // No turnovers → undefined/∞ ratio; show "-" for cleanliness
+      return "-";
+    }
+    return (ast / tov).toFixed(2);
+  };
+
   // -------- Sorting logic for season totals --------
   const countingStatKeys = new Set([
     "Points",
@@ -262,6 +273,12 @@ function Season2025_26() {
         return rawPct(player.FTM, player.FTA);
       case "eFG":
         return rawEFG(player);
+      case "AST_TO": {
+        const ast = player.Assists || 0;
+        const tov = player.Turnovers || 0;
+        if (!tov) return 0;
+        return ast / tov;
+      }
       default:
         return 0;
     }
@@ -518,6 +535,12 @@ function Season2025_26() {
                   </th>
                   <th
                     className="border px-2 py-1 cursor-pointer"
+                    onClick={() => handleSort("AST_TO")}
+                  >
+                    A/T{sortArrow("AST_TO")}
+                  </th>
+                  <th
+                    className="border px-2 py-1 cursor-pointer"
                     onClick={() => handleSort("Steals")}
                   >
                     STL{sortArrow("Steals")}
@@ -647,6 +670,9 @@ function Season2025_26() {
                         {showPerGame
                           ? formatPerGame(player, "Turnovers")
                           : player.Turnovers}
+                      </td>
+                      <td className="border px-2 py-1 align-middle">
+                        {formatAssistToTurnover(player)}
                       </td>
                       <td className="border px-2 py-1 align-middle">
                         {showPerGame
