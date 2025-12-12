@@ -267,7 +267,7 @@ function Season2025_26() {
 
           <div className="text-gray-800 leading-relaxed">
             <a
-              href="https://www.flipsnack.com/6D6FD76F8D6/girls-basketball-media-guide-2025-2026.html"
+              href="https://www.flipsnack.com/6D6FD76F8D6/2025-2026-girl-s-basketball-media-guide"
               target="_blank"
               rel="noopener noreferrer"
             >
