@@ -33,7 +33,6 @@ const statLabelMap = {
   FTA: "FTA",
 };
 
-// ✅ SAFE date parsing (prevents blank-screen crashes)
 const parseDateSafe = (value) => {
   if (value === null || value === undefined || value === "") return null;
   const s = String(value).trim();
@@ -101,24 +100,8 @@ function PlayerPage() {
   const [playerStats, setPlayerStats] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // toggle state for career table
+  // Toggle: totals vs per game
   const [showPerGame, setShowPerGame] = useState(false);
-
-  if (!playerId) {
-    return <div className="p-6">Invalid player link.</div>;
-  }
-
-  // Helper to find the player by ID, handling numeric IDs and alternate field names
-  const getPlayerById = (id) => {
-    const idNum = Number(id);
-
-    return (
-      players.find((p) => Number(p.PlayerID) === idNum) ||
-      players.find((p) => Number(p.PlayerId) === idNum) ||
-      players.find((p) => Number(p.ID) === idNum) ||
-      null
-    );
-  };
 
   // Load all the data we need
   useEffect(() => {
@@ -153,16 +136,115 @@ function PlayerPage() {
     loadData();
   }, []);
 
-  if (loading) {
-    return <div className="p-6">Loading player information...</div>;
-  }
+  // ✅ ALWAYS-CALLED memos (no hooks after early returns)
 
-  // 1. Find player
-  const player = getPlayerById(playerId);
+  const player = useMemo(() => {
+    const idNum = Number(playerId);
+    if (!Number.isFinite(idNum)) return null;
 
-  if (!player) {
-    return <div className="p-6">Player not found.</div>;
-  }
+    return (
+      players.find((p) => Number(p.PlayerID) === idNum) ||
+      players.find((p) => Number(p.PlayerId) === idNum) ||
+      players.find((p) => Number(p.ID) === idNum) ||
+      null
+    );
+  }, [players, playerId]);
+
+  const statsWithGameInfo = useMemo(() => {
+    const idNum = Number(playerId);
+    if (!Number.isFinite(idNum)) return [];
+
+    const statsForPlayer = playerStats.filter(
+      (s) => Number(s.PlayerID) === idNum
+    );
+
+    return statsForPlayer
+      .map((stat) => {
+        const game = games.find((g) => String(g.GameID) === String(stat.GameID));
+        return {
+          ...stat,
+          gameDate: game?.Date ?? "",
+          opponent: game?.Opponent || "",
+          result: game?.Result || "",
+          season: game?.Season || game?.Year || "",
+        };
+      })
+      .sort((a, b) => {
+        const da = parseDateSafe(a.gameDate);
+        const db = parseDateSafe(b.gameDate);
+        if (!da && !db) return 0;
+        if (!da) return 1;
+        if (!db) return -1;
+        return da.getTime() - db.getTime();
+      });
+  }, [playerStats, games, playerId]);
+
+  const seasonTotals = useMemo(() => {
+    const seasonMap = {};
+
+    statsWithGameInfo.forEach((stat) => {
+      const seasonKey = stat.season || "Unknown";
+
+      if (!seasonMap[seasonKey]) {
+        seasonMap[seasonKey] = { season: seasonKey, gamesPlayed: 0 };
+        statKeys.forEach((key) => (seasonMap[seasonKey][key] = 0));
+      }
+
+      seasonMap[seasonKey].gamesPlayed += 1;
+      statKeys.forEach((key) => {
+        seasonMap[seasonKey][key] += Number(stat[key]) || 0;
+      });
+    });
+
+    return Object.values(seasonMap).sort((a, b) =>
+      String(a.season).localeCompare(String(b.season))
+    );
+  }, [statsWithGameInfo]);
+
+  const careerTotals = useMemo(() => {
+    const base = {
+      season: "Career",
+      gamesPlayed: seasonTotals.reduce((t, s) => t + (s.gamesPlayed || 0), 0),
+    };
+
+    statKeys.forEach((key) => {
+      base[key] = seasonTotals.reduce((t, s) => t + (s[key] || 0), 0);
+    });
+
+    return base;
+  }, [seasonTotals]);
+
+  const gameLogsBySeason = useMemo(() => {
+    return statsWithGameInfo.reduce((acc, row) => {
+      const seasonKey = row.season || "Unknown";
+      if (!acc[seasonKey]) acc[seasonKey] = [];
+      acc[seasonKey].push(row);
+      return acc;
+    }, {});
+  }, [statsWithGameInfo]);
+
+  const orderedSeasonKeys = useMemo(() => {
+    return Object.keys(gameLogsBySeason).sort((a, b) => {
+      if (a === "Unknown") return 1;
+      if (b === "Unknown") return -1;
+      return String(b).localeCompare(String(a));
+    });
+  }, [gameLogsBySeason]);
+
+  const displayStat = (row, key) => {
+    const val = Number(row[key]) || 0;
+    if (!showPerGame) return val;
+
+    const gp = Number(row.gamesPlayed) || 0;
+    if (!gp) return "-";
+    return round1(val / gp);
+  };
+
+  // ✅ Now safe to early-return (all hooks already executed)
+
+  if (!playerId) return <div className="p-6">Invalid player link.</div>;
+  if (loading) return <div className="p-6">Loading player information...</div>;
+  if (!player) return <div className="p-6">Player not found.</div>;
 
   const playerName =
     player.PlayerName ||
@@ -183,107 +265,6 @@ function PlayerPage() {
 
   const yearsWithTeam = player.YearsWithTeam || "";
   const photoUrl = getPlayerPhotoUrl(playerId);
-
-  // 2. Get all game stats for this player
-  const statsForPlayer = playerStats.filter(
-    (s) => Number(s.PlayerID) === Number(playerId)
-  );
-
-  // 3. Join with game info (date, opponent, result, season)
-  const statsWithGameInfo = statsForPlayer
-    .map((stat) => {
-      const game = games.find(
-        (g) => String(g.GameID) === String(stat.GameID)
-      );
-      return {
-        ...stat,
-        gameDate: game?.Date ?? "",
-        opponent: game?.Opponent || "",
-        result: game?.Result || "",
-        season: game?.Season || game?.Year || "",
-      };
-    })
-    .sort((a, b) => {
-      const da = parseDateSafe(a.gameDate);
-      const db = parseDateSafe(b.gameDate);
-      if (!da && !db) return 0;
-      if (!da) return 1;
-      if (!db) return -1;
-      return da.getTime() - db.getTime();
-    });
-
-  // 4. Build season totals
-  const seasonTotals = useMemo(() => {
-    const seasonMap = {};
-
-    statsWithGameInfo.forEach((stat) => {
-      const seasonKey = stat.season || "Unknown";
-
-      if (!seasonMap[seasonKey]) {
-        seasonMap[seasonKey] = {
-          season: seasonKey,
-          gamesPlayed: 0,
-        };
-        statKeys.forEach((key) => {
-          seasonMap[seasonKey][key] = 0;
-        });
-      }
-
-      seasonMap[seasonKey].gamesPlayed += 1;
-      statKeys.forEach((key) => {
-        seasonMap[seasonKey][key] += Number(stat[key]) || 0;
-      });
-    });
-
-    return Object.values(seasonMap).sort((a, b) =>
-      String(a.season).localeCompare(String(b.season))
-    );
-  }, [statsWithGameInfo]);
-
-  // 5. Career totals
-  const careerTotals = useMemo(() => {
-    const base = {
-      season: "Career",
-      gamesPlayed: seasonTotals.reduce(
-        (total, s) => total + (s.gamesPlayed || 0),
-        0
-      ),
-    };
-
-    statKeys.forEach((key) => {
-      base[key] = seasonTotals.reduce(
-        (total, s) => total + (s[key] || 0),
-        0
-      );
-    });
-
-    return base;
-  }, [seasonTotals]);
-
-  const displayStat = (row, key) => {
-    const val = Number(row[key]) || 0;
-
-    if (!showPerGame) return val;
-
-    const gp = Number(row.gamesPlayed) || 0;
-    if (!gp) return "-";
-
-    return round1(val / gp);
-  };
-
-  // 6. Game logs grouped by season (most recent season first)
-  const gameLogsBySeason = statsWithGameInfo.reduce((acc, row) => {
-    const seasonKey = row.season || "Unknown";
-    if (!acc[seasonKey]) acc[seasonKey] = [];
-    acc[seasonKey].push(row);
-    return acc;
-  }, {});
-
-  const orderedSeasonKeys = Object.keys(gameLogsBySeason).sort((a, b) => {
-    if (a === "Unknown") return 1;
-    if (b === "Unknown") return -1;
-    return String(b).localeCompare(String(a));
-  });
 
   return (
     <div className="player-page max-w-5xl mx-auto p-4 space-y-8">
@@ -323,9 +304,7 @@ function PlayerPage() {
           <h2 className="text-2xl font-semibold">Career Totals</h2>
 
           <div className="flex items-center gap-2">
-            <span className="text-sm text-gray-600 whitespace-nowrap">
-              Totals
-            </span>
+            <span className="text-sm text-gray-600 whitespace-nowrap">Totals</span>
 
             <button
               type="button"
@@ -343,9 +322,7 @@ function PlayerPage() {
               />
             </button>
 
-            <span className="text-sm text-gray-600 whitespace-nowrap">
-              Per Game
-            </span>
+            <span className="text-sm text-gray-600 whitespace-nowrap">Per Game</span>
           </div>
         </div>
 
@@ -386,9 +363,7 @@ function PlayerPage() {
                     <td className="border px-2 py-1 text-center">
                       {formatSeasonLabel(row.season)}
                     </td>
-                    <td className="border px-2 py-1 text-center">
-                      {row.gamesPlayed}
-                    </td>
+                    <td className="border px-2 py-1 text-center">{row.gamesPlayed}</td>
 
                     {statKeys.map((key) => (
                       <React.Fragment key={key}>
@@ -427,12 +402,8 @@ function PlayerPage() {
                 ))}
 
                 <tr className="bg-gray-50 font-semibold">
-                  <td className="border px-2 py-1 text-center">
-                    {careerTotals.season}
-                  </td>
-                  <td className="border px-2 py-1 text-center">
-                    {careerTotals.gamesPlayed}
-                  </td>
+                  <td className="border px-2 py-1 text-center">{careerTotals.season}</td>
+                  <td className="border px-2 py-1 text-center">{careerTotals.gamesPlayed}</td>
 
                   {statKeys.map((key) => (
                     <React.Fragment key={key}>
@@ -496,9 +467,7 @@ function PlayerPage() {
                     <thead>
                       <tr className="bg-gray-100">
                         <th className="border px-2 py-1 text-center">Date</th>
-                        <th className="border px-2 py-1 text-center">
-                          Opponent
-                        </th>
+                        <th className="border px-2 py-1 text-center">Opponent</th>
                         <th className="border px-2 py-1 text-center">Result</th>
                         {statKeys.map((key) => (
                           <React.Fragment key={key}>
@@ -506,24 +475,16 @@ function PlayerPage() {
                               {statLabelMap[key] || key}
                             </th>
                             {key === "ThreePA" && (
-                              <th className="border px-2 py-1 text-center">
-                                3P%
-                              </th>
+                              <th className="border px-2 py-1 text-center">3P%</th>
                             )}
                             {key === "TwoPA" && (
                               <>
-                                <th className="border px-2 py-1 text-center">
-                                  2P%
-                                </th>
-                                <th className="border px-2 py-1 text-center">
-                                  eFG%
-                                </th>
+                                <th className="border px-2 py-1 text-center">2P%</th>
+                                <th className="border px-2 py-1 text-center">eFG%</th>
                               </>
                             )}
                             {key === "FTA" && (
-                              <th className="border px-2 py-1 text-center">
-                                FT%
-                              </th>
+                              <th className="border px-2 py-1 text-center">FT%</th>
                             )}
                           </React.Fragment>
                         ))}
@@ -537,21 +498,16 @@ function PlayerPage() {
                           </td>
                           <td className="border px-2 py-1 text-center whitespace-nowrap">
                             <Link
-                              // ✅ FIXED: correct route prefix
                               to={`/athletics/boys/basketball/games/${row.GameID}`}
                               className="text-blue-600 hover:underline"
                             >
                               {row.opponent}
                             </Link>
                           </td>
-                          <td className="border px-2 py-1 text-center">
-                            {row.result}
-                          </td>
+                          <td className="border px-2 py-1 text-center">{row.result}</td>
                           {statKeys.map((key) => (
                             <React.Fragment key={key}>
-                              <td className="border px-2 py-1 text-center">
-                                {row[key]}
-                              </td>
+                              <td className="border px-2 py-1 text-center">{row[key]}</td>
                               {key === "ThreePA" && (
                                 <td className="border px-2 py-1 text-center">
                                   {calcPct(row.ThreePM, row.ThreePA)}
