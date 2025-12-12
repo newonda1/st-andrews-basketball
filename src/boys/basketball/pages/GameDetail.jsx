@@ -1,21 +1,73 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { useParams, Link } from "react-router-dom";
+
+// Safe date parsing (prevents blank-screen crashes if a date is ever malformed)
+const parseDateSafe = (value) => {
+  if (value === null || value === undefined || value === "") return null;
+  const s = String(value).trim();
+  const d = /^\d+$/.test(s) ? new Date(Number(s)) : new Date(s);
+  if (Number.isNaN(d.getTime())) return null;
+  return d;
+};
+
+const formatDate = (value) => {
+  const d = parseDateSafe(value);
+  if (!d) return "";
+  return d.toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
+};
+
+// If season is "2025-26" return "2025-26".
+// If season is 2025 return "2025-26".
+const formatSeasonLabel = (seasonKey) => {
+  if (!seasonKey) return "";
+  const s = String(seasonKey);
+  if (s.includes("-")) return s;
+
+  const yearNum = Number(s);
+  if (Number.isNaN(yearNum)) return s;
+
+  const next = (yearNum + 1).toString().slice(-2);
+  return `${yearNum}-${next}`;
+};
 
 function GameDetail() {
   const { gameId } = useParams();
+
   const [game, setGame] = useState(null);
   const [playerStats, setPlayerStats] = useState([]);
   const [players, setPlayers] = useState([]);
 
+  const [loading, setLoading] = useState(true);
+  const [loadError, setLoadError] = useState("");
+
   useEffect(() => {
-    Promise.all([
-      fetch("/data/boys/basketball/games.json").then((res) => res.json()),
-      fetch("/data/boys/basketball/playergamestats.json").then((res) =>
-        res.json()
-      ),
-      fetch("/data/boys/basketball/players.json").then((res) => res.json()),
-    ])
-      .then(([gamesData, statsData, playersData]) => {
+    async function load() {
+      setLoading(true);
+      setLoadError("");
+
+      try {
+        const [gamesRes, statsRes, playersRes] = await Promise.all([
+          fetch("/data/boys/basketball/games.json"),
+          fetch("/data/boys/basketball/playergamestats.json"),
+          fetch("/data/boys/basketball/players.json"),
+        ]);
+
+        if (!gamesRes.ok) throw new Error(`games.json ${gamesRes.status}`);
+        if (!statsRes.ok) throw new Error(`playergamestats.json ${statsRes.status}`);
+        if (!playersRes.ok) throw new Error(`players.json ${playersRes.status}`);
+
+        const [gamesData, statsData, playersData] = await Promise.all([
+          gamesRes.json(),
+          statsRes.json(),
+          playersRes.json(),
+        ]);
+
+        setPlayers(playersData);
+
         const gameObj = gamesData.find(
           (g) => String(g.GameID) === String(gameId)
         );
@@ -25,27 +77,30 @@ function GameDetail() {
           (s) => String(s.GameID) === String(gameId)
         );
         setPlayerStats(statsForGame);
-        setPlayers(playersData);
-      })
-      .catch((err) => console.error("Failed to load game detail:", err));
+      } catch (err) {
+        console.error("Failed to load game detail:", err);
+        setLoadError(String(err?.message || err));
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    load();
   }, [gameId]);
 
-  const formatDate = (ms) => {
-    if (!ms) return "";
-    const d = new Date(ms);
-    return d.toLocaleDateString("en-US", {
-      month: "short",
-      day: "numeric",
-      year: "numeric",
-    });
-  };
+  // Map PlayerID -> name (robust to field differences)
+  const playerNameById = useMemo(() => {
+    const map = {};
+    for (const p of players) {
+      const id = String(p.PlayerID);
+      map[id] =
+        p.PlayerName ||
+        (p.FirstName && p.LastName ? `${p.FirstName} ${p.LastName}` : id);
+    }
+    return map;
+  }, [players]);
 
-  const getPlayerName = (playerId) => {
-    const p = players.find((pl) => pl.PlayerID === playerId);
-    return p ? `${p.FirstName} ${p.LastName}` : "Unknown";
-  };
-
-  if (!game) {
+  if (loading) {
     return (
       <div className="p-6 max-w-5xl mx-auto space-y-4">
         <p className="text-center text-gray-700">Loading game data…</p>
@@ -53,8 +108,49 @@ function GameDetail() {
     );
   }
 
+  if (loadError) {
+    return (
+      <div className="p-6 max-w-5xl mx-auto space-y-4">
+        <p className="text-center text-red-700">
+          Error loading game data: {loadError}
+        </p>
+        <div className="text-center">
+          <Link
+            to="/athletics/boys/basketball"
+            className="text-blue-700 hover:underline"
+          >
+            ← Back to Boys Basketball
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
+  if (!game) {
+    return (
+      <div className="p-6 max-w-5xl mx-auto space-y-4">
+        <p className="text-center text-gray-700">
+          Game not found (GameID: {gameId})
+        </p>
+        <div className="text-center">
+          <Link
+            to="/athletics/boys/basketball"
+            className="text-blue-700 hover:underline"
+          >
+            ← Back to Boys Basketball
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
   const teamScore = game.TeamScore ?? "-";
   const opponentScore = game.OpponentScore ?? "-";
+
+  const seasonLabel = formatSeasonLabel(game.Season || game.Year || "");
+  const seasonBackLink = seasonLabel
+    ? `/athletics/boys/basketball/seasons/${seasonLabel}`
+    : "/athletics/boys/basketball";
 
   return (
     <div className="p-6 max-w-5xl mx-auto space-y-6">
@@ -94,7 +190,7 @@ function GameDetail() {
               </tr>
             </thead>
             <tbody>
-              {playerStats.length === 0 && (
+              {playerStats.length === 0 ? (
                 <tr>
                   <td
                     colSpan={14}
@@ -103,29 +199,37 @@ function GameDetail() {
                     No player statistics available for this game.
                   </td>
                 </tr>
+              ) : (
+                playerStats.map((stat) => {
+                  const pid = String(stat.PlayerID);
+                  return (
+                    <tr key={stat.ID ?? `${stat.GameID}-${pid}`} className="border-t">
+                      <td className="border px-2 py-1 text-left whitespace-nowrap">
+                        {/* Optional but recommended: click to player page */}
+                        <Link
+                          to={`/athletics/boys/basketball/players/${pid}`}
+                          className="text-blue-700 hover:underline"
+                        >
+                          {playerNameById[pid] || "Unknown"}
+                        </Link>
+                      </td>
+                      <td className="border px-2 py-1">{stat.MinutesPlayed ?? "-"}</td>
+                      <td className="border px-2 py-1">{stat.Points ?? 0}</td>
+                      <td className="border px-2 py-1">{stat.Rebounds ?? 0}</td>
+                      <td className="border px-2 py-1">{stat.Assists ?? 0}</td>
+                      <td className="border px-2 py-1">{stat.Steals ?? 0}</td>
+                      <td className="border px-2 py-1">{stat.Blocks ?? 0}</td>
+                      <td className="border px-2 py-1">{stat.Turnovers ?? 0}</td>
+                      <td className="border px-2 py-1">{stat.TwoPM ?? 0}</td>
+                      <td className="border px-2 py-1">{stat.TwoPA ?? 0}</td>
+                      <td className="border px-2 py-1">{stat.ThreePM ?? 0}</td>
+                      <td className="border px-2 py-1">{stat.ThreePA ?? 0}</td>
+                      <td className="border px-2 py-1">{stat.FTM ?? 0}</td>
+                      <td className="border px-2 py-1">{stat.FTA ?? 0}</td>
+                    </tr>
+                  );
+                })
               )}
-              {playerStats.map((stat) => (
-                <tr key={stat.ID} className="border-t">
-                  <td className="border px-2 py-1 text-left whitespace-nowrap">
-                    {getPlayerName(stat.PlayerID)}
-                  </td>
-                  <td className="border px-2 py-1">
-                    {stat.MinutesPlayed ?? "-"}
-                  </td>
-                  <td className="border px-2 py-1">{stat.Points ?? 0}</td>
-                  <td className="border px-2 py-1">{stat.Rebounds ?? 0}</td>
-                  <td className="border px-2 py-1">{stat.Assists ?? 0}</td>
-                  <td className="border px-2 py-1">{stat.Steals ?? 0}</td>
-                  <td className="border px-2 py-1">{stat.Blocks ?? 0}</td>
-                  <td className="border px-2 py-1">{stat.Turnovers ?? 0}</td>
-                  <td className="border px-2 py-1">{stat.TwoPM ?? 0}</td>
-                  <td className="border px-2 py-1">{stat.TwoPA ?? 0}</td>
-                  <td className="border px-2 py-1">{stat.ThreePM ?? 0}</td>
-                  <td className="border px-2 py-1">{stat.ThreePA ?? 0}</td>
-                  <td className="border px-2 py-1">{stat.FTM ?? 0}</td>
-                  <td className="border px-2 py-1">{stat.FTA ?? 0}</td>
-                </tr>
-              ))}
             </tbody>
           </table>
         </div>
@@ -133,10 +237,10 @@ function GameDetail() {
 
       <div className="text-center">
         <Link
-          to="/athletics/boys/basketball/seasons/2025-26"
+          to={seasonBackLink}
           className="inline-block mt-4 text-sm text-blue-700 hover:underline"
         >
-          ← Back to 2025–26 Season
+          ← Back to {seasonLabel ? `${seasonLabel} Season` : "Boys Basketball"}
         </Link>
       </div>
     </div>
