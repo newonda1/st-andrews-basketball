@@ -33,12 +33,26 @@ const statLabelMap = {
   FTA: "FTA",
 };
 
-const formatDate = (ms) =>
-  new Date(Number(ms)).toLocaleDateString(undefined, {
+// ✅ SAFE date parsing (supports ms numbers, numeric strings, ISO strings)
+const parseDateSafe = (value) => {
+  if (value === null || value === undefined || value === "") return null;
+
+  const s = String(value).trim();
+  const d = /^\d+$/.test(s) ? new Date(Number(s)) : new Date(s);
+
+  if (Number.isNaN(d.getTime())) return null;
+  return d;
+};
+
+const formatDate = (value) => {
+  const d = parseDateSafe(value);
+  if (!d) return "";
+  return d.toLocaleDateString(undefined, {
     month: "short",
     day: "numeric",
     year: "numeric",
   });
+};
 
 const getPlayerPhotoUrl = (playerId) => {
   return `/images/boys/basketball/players/${playerId}.jpg`;
@@ -89,7 +103,7 @@ function PlayerPage() {
   const [playerStats, setPlayerStats] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // NEW: toggle state for career table
+  // toggle state for career table
   const [showPerGame, setShowPerGame] = useState(false);
 
   // Helper to find the player by ID, handling numeric IDs and alternate field names
@@ -104,7 +118,6 @@ function PlayerPage() {
     );
   };
 
-  // Load all the data we need
   useEffect(() => {
     async function loadData() {
       try {
@@ -113,6 +126,13 @@ function PlayerPage() {
           fetch("/data/boys/basketball/games.json"),
           fetch("/data/boys/basketball/playergamestats.json"),
         ]);
+
+        // ✅ if any fetch fails, throw a helpful error
+        if (!playersRes.ok)
+          throw new Error(`players.json failed: ${playersRes.status}`);
+        if (!gamesRes.ok) throw new Error(`games.json failed: ${gamesRes.status}`);
+        if (!statsRes.ok)
+          throw new Error(`playergamestats.json failed: ${statsRes.status}`);
 
         const [playersData, gamesData, statsData] = await Promise.all([
           playersRes.json(),
@@ -133,16 +153,10 @@ function PlayerPage() {
     loadData();
   }, []);
 
-  if (loading) {
-    return <div className="p-6">Loading player information...</div>;
-  }
+  if (loading) return <div className="p-6">Loading player information...</div>;
 
-  // 1. Find player
   const player = getPlayerById(playerId);
-
-  if (!player) {
-    return <div className="p-6">Player not found.</div>;
-  }
+  if (!player) return <div className="p-6">Player not found.</div>;
 
   const playerName =
     player.PlayerName ||
@@ -151,7 +165,6 @@ function PlayerPage() {
       ? `${player.FirstName} ${player.LastName}`
       : `Player ${playerId}`);
 
-  // Jersey number + class/year, trying several possible field names
   const jerseyNumber =
     player.JerseyNumber ?? player.Number ?? player.Jersey ?? null;
 
@@ -165,45 +178,40 @@ function PlayerPage() {
   const yearsWithTeam = player.YearsWithTeam || "";
   const photoUrl = getPlayerPhotoUrl(playerId);
 
-  // 2. Get all game stats for this player
   const statsForPlayer = playerStats.filter(
     (s) => Number(s.PlayerID) === Number(playerId)
   );
 
-  // 3. Join with game info (date, opponent, result, season)
   const statsWithGameInfo = statsForPlayer
     .map((stat) => {
-      const game = games.find(
-        (g) => String(g.GameID) === String(stat.GameID)
-      );
+      const game = games.find((g) => String(g.GameID) === String(stat.GameID));
       return {
         ...stat,
-        gameDate: game?.Date || "",
+        gameDate: game?.Date ?? "",
         opponent: game?.Opponent || "",
         result: game?.Result || "",
         season: game?.Season || game?.Year || "",
       };
     })
     .sort((a, b) => {
-      if (!a.gameDate || !b.gameDate) return 0;
-      return new Date(a.gameDate) - new Date(b.gameDate);
+      // ✅ safe sort (won’t crash if a date is bad)
+      const da = parseDateSafe(a.gameDate);
+      const db = parseDateSafe(b.gameDate);
+      if (!da && !db) return 0;
+      if (!da) return 1;
+      if (!db) return -1;
+      return da.getTime() - db.getTime();
     });
 
-  // 4. Build season totals
   const seasonTotals = useMemo(() => {
-    const seasonMap = {}; // { seasonKey: { season, gamesPlayed, Points, ... } }
+    const seasonMap = {};
 
     statsWithGameInfo.forEach((stat) => {
       const seasonKey = stat.season || "Unknown";
 
       if (!seasonMap[seasonKey]) {
-        seasonMap[seasonKey] = {
-          season: seasonKey,
-          gamesPlayed: 0,
-        };
-        statKeys.forEach((key) => {
-          seasonMap[seasonKey][key] = 0;
-        });
+        seasonMap[seasonKey] = { season: seasonKey, gamesPlayed: 0 };
+        statKeys.forEach((key) => (seasonMap[seasonKey][key] = 0));
       }
 
       seasonMap[seasonKey].gamesPlayed += 1;
@@ -217,7 +225,6 @@ function PlayerPage() {
     );
   }, [statsWithGameInfo]);
 
-  // 5. Career totals
   const careerTotals = useMemo(() => {
     const base = {
       season: "Career",
@@ -228,29 +235,21 @@ function PlayerPage() {
     };
 
     statKeys.forEach((key) => {
-      base[key] = seasonTotals.reduce(
-        (total, s) => total + (s[key] || 0),
-        0
-      );
+      base[key] = seasonTotals.reduce((total, s) => total + (s[key] || 0), 0);
     });
 
     return base;
   }, [seasonTotals]);
 
-  // NEW: helper to display either totals or per-game averages (not for GP or % columns)
   const displayStat = (row, key) => {
     const val = Number(row[key]) || 0;
-
     if (!showPerGame) return val;
 
     const gp = Number(row.gamesPlayed) || 0;
     if (!gp) return "-";
-
-    // per-game averages for counting stats and makes/attempts
     return round1(val / gp);
   };
 
-  // 6. Game logs grouped by season (most recent season first)
   const gameLogsBySeason = statsWithGameInfo.reduce((acc, row) => {
     const seasonKey = row.season || "Unknown";
     if (!acc[seasonKey]) acc[seasonKey] = [];
@@ -266,7 +265,6 @@ function PlayerPage() {
 
   return (
     <div className="player-page max-w-5xl mx-auto p-4 space-y-8">
-      {/* 1. Header: name, jersey, class, years, picture */}
       <header className="flex items-center gap-4 mb-4">
         {photoUrl && (
           <img
@@ -298,13 +296,10 @@ function PlayerPage() {
         </div>
       </header>
 
-      {/* 2. Career Totals (season-by-season + career row) */}
       <section>
-        {/* Title row with toggle on the right */}
         <div className="flex items-center justify-between mb-2">
           <h2 className="text-2xl font-semibold">Career Totals</h2>
 
-          {/* Toggle */}
           <div className="flex items-center gap-2">
             <span className="text-sm text-gray-600 whitespace-nowrap">
               Totals
@@ -347,7 +342,6 @@ function PlayerPage() {
                         {statLabelMap[key] || key}
                       </th>
 
-                      {/* % columns should NOT toggle */}
                       {key === "ThreePA" && (
                         <th className="border px-2 py-1 text-center">3P%</th>
                       )}
@@ -372,7 +366,6 @@ function PlayerPage() {
                       {formatSeasonLabel(row.season)}
                     </td>
 
-                    {/* GP never toggles */}
                     <td className="border px-2 py-1 text-center">
                       {row.gamesPlayed}
                     </td>
@@ -383,7 +376,6 @@ function PlayerPage() {
                           {displayStat(row, key)}
                         </td>
 
-                        {/* % columns (always computed from totals, regardless of toggle) */}
                         {key === "ThreePA" && (
                           <td className="border px-2 py-1 text-center">
                             {calcPct(row.ThreePM, row.ThreePA)}
@@ -414,13 +406,11 @@ function PlayerPage() {
                   </tr>
                 ))}
 
-                {/* Career row */}
                 <tr className="bg-gray-50 font-semibold">
                   <td className="border px-2 py-1 text-center">
                     {careerTotals.season}
                   </td>
 
-                  {/* Career GP never toggles */}
                   <td className="border px-2 py-1 text-center">
                     {careerTotals.gamesPlayed}
                   </td>
@@ -436,7 +426,6 @@ function PlayerPage() {
                         })()}
                       </td>
 
-                      {/* % columns (always computed from totals) */}
                       {key === "ThreePA" && (
                         <td className="border px-2 py-1 text-center">
                           {calcPct(careerTotals.ThreePM, careerTotals.ThreePA)}
@@ -471,7 +460,6 @@ function PlayerPage() {
         )}
       </section>
 
-      {/* 3. Game-by-game tables, split by season */}
       <section>
         <h2 className="text-2xl font-semibold mb-2">Game Logs</h2>
         {statsWithGameInfo.length === 0 ? (
@@ -492,9 +480,7 @@ function PlayerPage() {
                         <th className="border px-2 py-1 text-center">
                           Opponent
                         </th>
-                        <th className="border px-2 py-1 text-center">
-                          Result
-                        </th>
+                        <th className="border px-2 py-1 text-center">Result</th>
                         {statKeys.map((key) => (
                           <React.Fragment key={key}>
                             <th className="border px-2 py-1 text-center">
