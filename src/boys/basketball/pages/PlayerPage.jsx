@@ -17,12 +17,12 @@ const statKeys = [
   "FTA",
 ];
 
-// Display labels for each stat
-const statLabels = {
+// Map data keys -> how we want them labeled in the tables
+const statLabelMap = {
   Points: "PTS",
   Rebounds: "REB",
   Assists: "AST",
-  Turnovers: "TOV",
+  Turnovers: "TO",
   Steals: "STL",
   Blocks: "BLK",
   ThreePM: "3PM",
@@ -33,621 +33,492 @@ const statLabels = {
   FTA: "FTA",
 };
 
+const formatDate = (ms) =>
+  new Date(Number(ms)).toLocaleDateString(undefined, {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
+
+const getPlayerPhotoUrl = (playerId) => {
+  // Updated path for boys basketball player photos
+  return `/images/boys/basketball/players/${playerId}.jpg`;
+};
+
+const calcPct = (made, att) => {
+  const m = Number(made) || 0;
+  const a = Number(att) || 0;
+  if (!a) return "-";
+  return ((m / a) * 100).toFixed(1); // e.g. "45.0"
+};
+
+const calcEFG = (twoPM, threePM, twoPA, threePA) => {
+  const tpm = Number(twoPM) || 0;
+  const thpm = Number(threePM) || 0;
+  const tpa = Number(twoPA) || 0;
+  const thpa = Number(threePA) || 0;
+  const denom = tpa + thpa;
+  if (!denom) return "-";
+  const efg = ((tpm + thpm) + 0.5 * thpm) / denom;
+  return (efg * 100).toFixed(1); // show as percentage
+};
+
+// Format season like 2024 -> "2024-25". If already "2024-25", leave it.
+const formatSeasonLabel = (seasonKey) => {
+  if (!seasonKey) return "Unknown";
+  const s = String(seasonKey);
+  if (s.includes("-")) return s;
+
+  const yearNum = Number(s);
+  if (Number.isNaN(yearNum)) return s;
+
+  const next = (yearNum + 1).toString().slice(-2);
+  return `${yearNum}-${next}`;
+};
+
 function PlayerPage() {
   const { playerId } = useParams();
+
   const [players, setPlayers] = useState([]);
   const [games, setGames] = useState([]);
-  const [stats, setStats] = useState([]);
-
+  const [playerStats, setPlayerStats] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
 
-  const [groupedBySeason, setGroupedBySeason] = useState({});
-  const [totalsBySeason, setTotalsBySeason] = useState({});
-  const [overallTotals, setOverallTotals] = useState({});
-  const [efficiencyBySeason, setEfficiencyBySeason] = useState({});
-  const [overallEfficiency, setOverallEfficiency] = useState(null);
+  // Helper to find the player by ID, handling numeric IDs and alternate field names
+  const getPlayerById = (id) => {
+    const idNum = Number(id);
 
-  const [perGameBySeason, setPerGameBySeason] = useState({});
-  const [overallPerGame, setOverallPerGame] = useState({});
-  const [showPerGame, setShowPerGame] = useState(false);
+    return (
+      players.find((p) => Number(p.PlayerID) === idNum) ||
+      players.find((p) => Number(p.PlayerId) === idNum) ||
+      players.find((p) => Number(p.ID) === idNum) ||
+      null
+    );
+  };
 
-  const [per36BySeason, setPer36BySeason] = useState({});
-  const [overallPer36, setOverallPer36] = useState({});
-  const [showPer36, setShowPer36] = useState(false);
-
+  // Load all the data we need
   useEffect(() => {
-    setLoading(true);
-    setError(null);
+    async function loadData() {
+      try {
+        const [playersRes, gamesRes, statsRes] = await Promise.all([
+          // Updated fetch paths for boys basketball JSON
+          fetch("/data/boys/basketball/players.json"),
+          fetch("/data/boys/basketball/games.json"),
+          fetch("/data/boys/basketball/playergamestats.json"),
+        ]);
 
-    Promise.all([
-      fetch("/data/boys/basketball/players.json").then((res) => res.json()),
-      fetch("/data/boys/basketball/games.json").then((res) => res.json()),
-      fetch("/data/boys/basketball/playergamestats.json").then((res) =>
-        res.json()
-      ),
-    ])
-      .then(([playersData, gamesData, statsData]) => {
+        const [playersData, gamesData, statsData] = await Promise.all([
+          playersRes.json(),
+          gamesRes.json(),
+          statsRes.json(),
+        ]);
+
         setPlayers(playersData);
         setGames(gamesData);
-
-        const playerIdNum = Number(playerId);
-        const filteredStats = statsData.filter(
-          (row) => Number(row.PlayerID) === playerIdNum
-        );
-        setStats(filteredStats);
-        processStats(filteredStats, gamesData);
+        setPlayerStats(statsData);
+      } catch (err) {
+        console.error("Error loading player page data:", err);
+      } finally {
         setLoading(false);
-      })
-      .catch((err) => {
-        console.error(err);
-        setError("Failed to load player data. Please try again later.");
-        setLoading(false);
-      });
-  }, [playerId]);
-
-  const processStats = (playerStats, allGames) => {
-    const bySeason = {};
-    playerStats.forEach((row) => {
-      const season = row.Season;
-      if (!bySeason[season]) {
-        bySeason[season] = [];
       }
-      bySeason[season].push(row);
-    });
-
-    setGroupedBySeason(bySeason);
-
-    const seasonTotals = {};
-    const seasonEff = {};
-    const perGameSeason = {};
-    const per36Season = {};
-
-    const overall = { games: 0, minutes: 0 };
-    statKeys.forEach((k) => {
-      overall[k] = 0;
-    });
-
-    Object.entries(bySeason).forEach(([season, rows]) => {
-      const seasonTotal = { games: rows.length, minutes: 0 };
-      statKeys.forEach((k) => {
-        seasonTotal[k] = 0;
-      });
-
-      rows.forEach((row) => {
-        const minutes = Number(row.Minutes || 0);
-        seasonTotal.minutes += minutes;
-        overall.minutes += minutes;
-
-        statKeys.forEach((k) => {
-          const val = Number(row[k] || 0);
-          seasonTotal[k] += val;
-          overall[k] += val;
-        });
-
-        overall.games += 1;
-      });
-
-      seasonTotals[season] = seasonTotal;
-
-      const fga =
-        (seasonTotal.ThreePA || 0) + (seasonTotal.TwoPA || 0) || 0;
-      const fgm =
-        (seasonTotal.ThreePM || 0) + (seasonTotal.TwoPM || 0) || 0;
-      const fta = seasonTotal.FTA || 0;
-      const tov = seasonTotal.Turnovers || 0;
-      const pts = seasonTotal.Points || 0;
-
-      const effDen = fga + 0.44 * fta + tov;
-      const seasonEffValue = effDen > 0 ? (pts / effDen).toFixed(3) : null;
-      seasonEff[season] = seasonEffValue;
-
-      const gCount = rows.length || 1;
-      const perGame = {};
-      statKeys.forEach((k) => {
-        perGame[k] = (seasonTotal[k] / gCount).toFixed(1);
-      });
-      perGame.minutes = (seasonTotal.minutes / gCount).toFixed(1);
-      perGameSeason[season] = perGame;
-
-      const totalMinutes = seasonTotal.minutes || 0;
-      const per36 = {};
-      if (totalMinutes > 0) {
-        statKeys.forEach((k) => {
-          per36[k] = ((seasonTotal[k] * 36) / totalMinutes).toFixed(1);
-        });
-        per36.minutes = 36.0;
-      } else {
-        statKeys.forEach((k) => {
-          per36[k] = "0.0";
-        });
-        per36.minutes = 0.0;
-      }
-      per36Season[season] = per36;
-    });
-
-    setTotalsBySeason(seasonTotals);
-    setEfficiencyBySeason(seasonEff);
-    setPerGameBySeason(perGameSeason);
-    setPer36BySeason(per36Season);
-
-    const totalFGA =
-      (overall.ThreePA || 0) + (overall.TwoPA || 0) || 0;
-    const totalFGM =
-      (overall.ThreePM || 0) + (overall.TwoPM || 0) || 0;
-    const totalFTA = overall.FTA || 0;
-    const totalTOV = overall.Turnovers || 0;
-    const totalPTS = overall.Points || 0;
-    const overallEffDen = totalFGA + 0.44 * totalFTA + totalTOV;
-    const overallEffValue =
-      overallEffDen > 0 ? (totalPTS / overallEffDen).toFixed(3) : null;
-
-    const totalGames = overall.games || 1;
-    const overallPerGameCalc = {};
-    statKeys.forEach((k) => {
-      overallPerGameCalc[k] = (overall[k] / totalGames).toFixed(1);
-    });
-    overallPerGameCalc.minutes = (overall.minutes / totalGames).toFixed(1);
-
-    const overallPer36Calc = {};
-    if (overall.minutes > 0) {
-      statKeys.forEach((k) => {
-        overallPer36Calc[k] = ((overall[k] * 36) / overall.minutes).toFixed(1);
-      });
-      overallPer36Calc.minutes = 36.0;
-    } else {
-      statKeys.forEach((k) => {
-        overallPer36Calc[k] = "0.0";
-      });
-      overallPer36Calc.minutes = 0.0;
     }
 
-    setOverallTotals(overall);
-    setOverallEfficiency(overallEffValue);
-    setOverallPerGame(overallPerGameCalc);
-    setOverallPer36(overallPer36Calc);
-  };
-
-  const getPlayer = () =>
-    players.find((p) => String(p.PlayerID) === String(playerId));
-
-  const groupGamesBySeason = () => {
-    const bySeason = {};
-    stats.forEach((row) => {
-      const season = row.Season;
-      const game = games.find((g) => g.GameID === row.GameID);
-      if (!bySeason[season]) {
-        bySeason[season] = [];
-      }
-      bySeason[season].push({ statRow: row, game });
-    });
-
-    Object.values(bySeason).forEach((arr) => {
-      arr.sort((a, b) => {
-        const dateA = a.game ? a.game.Date : 0;
-        const dateB = b.game ? b.game.Date : 0;
-        return dateA - dateB;
-      });
-    });
-
-    return bySeason;
-  };
-
-  const formatSeasonLabel = (seasonVal) => {
-    const firstYear = String(seasonVal);
-    if (firstYear.length === 4) {
-      const startYear = Number(firstYear);
-      const endYearShort = String((startYear + 1) % 100).padStart(2, "0");
-      return `${startYear}–${endYearShort}`;
-    }
-    return String(seasonVal);
-  };
-
-  const formatDate = (ms) => {
-    if (!ms) return "";
-    const d = new Date(ms);
-    return d.toLocaleDateString("en-US", {
-      month: "short",
-      day: "numeric",
-      year: "numeric",
-    });
-  };
-
-  const formatOpponent = (game) => {
-    if (!game) return "";
-    let opponent = game.Opponent || "";
-
-    if (game.IsRegionGame === "Yes" || game.GameType === "Region") {
-      opponent += " (Region)";
-    }
-
-    if (game.GameType === "Tournament") {
-      opponent += " (Tournament)";
-    } else if (game.GameType === "Showcase") {
-      opponent += " (Showcase)";
-    } else if (game.GameType === "Region Tournament") {
-      opponent += " (Region Tournament)";
-    } else if (game.GameType === "State Tournament") {
-      opponent += " (State Tournament)";
-    }
-
-    return opponent;
-  };
-
-  const formatResult = (game) => {
-    if (!game || !game.Result || !game.TeamScore || !game.OpponentScore) {
-      return "";
-    }
-    const diff = game.TeamScore - game.OpponentScore;
-    const sign = diff > 0 ? "+" : "";
-    return `${game.Result} (${sign}${diff})`;
-  };
-
-  const calculatePercentages = (totals) => {
-    const threesMade = totals.ThreePM || 0;
-    const threesAtt = totals.ThreePA || 0;
-    const twosMade = totals.TwoPM || 0;
-    const twosAtt = totals.TwoPA || 0;
-    const ftMade = totals.FTM || 0;
-    const ftAtt = totals.FTA || 0;
-
-    const threePct =
-      threesAtt > 0 ? ((threesMade / threesAtt) * 100).toFixed(1) : "–";
-    const twoPct =
-      twosAtt > 0 ? ((twosMade / twosAtt) * 100).toFixed(1) : "–";
-    const ftPct = ftAtt > 0 ? ((ftMade / ftAtt) * 100).toFixed(1) : "–";
-
-    const totalFGA = threesAtt + twosAtt;
-    const totalFGM = threesMade + twosMade;
-    const fgPct =
-      totalFGA > 0 ? ((totalFGM / totalFGA) * 100).toFixed(1) : "–";
-
-    return { threePct, twoPct, ftPct, fgPct };
-  };
-
-  const getDisplayTotals = (season) => {
-    if (showPerGame) {
-      return perGameBySeason[season] || {};
-    } else if (showPer36) {
-      return per36BySeason[season] || {};
-    }
-    return totalsBySeason[season] || {};
-  };
-
-  const getDisplayOverall = () => {
-    if (showPerGame) return overallPerGame;
-    if (showPer36) return overallPer36;
-    return overallTotals;
-  };
-
-  const getDisplayUnitLabel = () => {
-    if (showPerGame) return "Per Game";
-    if (showPer36) return "Per 36 Minutes";
-    return "Season Totals";
-  };
-
-  const formatMinutes = (val) => {
-    if (val == null || val === "" || isNaN(val)) return "–";
-    const num = Number(val);
-    if (showPerGame || showPer36) {
-      return num.toFixed(1);
-    }
-    return num.toFixed(0);
-  };
+    loadData();
+  }, []);
 
   if (loading) {
-    return <div className="p-4 text-center">Loading player stats...</div>;
+    return <div className="p-6">Loading player information...</div>;
   }
 
-  if (error) {
-    return <div className="p-4 text-center text-red-600">{error}</div>;
-  }
+  // 1. Find player
+  const player = getPlayerById(playerId);
 
-  const player = getPlayer();
   if (!player) {
-    return (
-      <div className="p-4 text-center text-red-600">
-        Player not found for ID {playerId}.
-      </div>
-    );
+    return <div className="p-6">Player not found.</div>;
   }
 
-  const jersey = player.JerseyNumber ? `#${player.JerseyNumber}` : "";
-  const classYear = player.Class ? `Class of ${player.Class}` : "";
-  const position = player.Position || "";
-  const headerDetails = [jersey, position, classYear].filter(Boolean).join(" • ");
+  const playerName =
+    player.PlayerName ||
+    player.Name ||
+    (player.FirstName && player.LastName
+      ? `${player.FirstName} ${player.LastName}`
+      : `Player ${playerId}`);
 
-  const seasonGameGroups = groupGamesBySeason();
-  const displayOverall = getDisplayOverall();
-  const { threePct: overall3P, twoPct: overall2P, ftPct: overallFT, fgPct: overallFG } =
-    calculatePercentages(overallTotals);
+  // Jersey number + class/year, trying several possible field names
+  const jerseyNumber =
+    player.JerseyNumber ?? player.Number ?? player.Jersey ?? null;
+
+  const gradYear =
+    player.ClassOf ??
+    player.GradYear ??
+    player.GraduationYear ??
+    player.Class ??
+    null;
+
+  const yearsWithTeam = player.YearsWithTeam || "";
+  const photoUrl = getPlayerPhotoUrl(playerId);
+
+  // 2. Get all game stats for this player
+  const statsForPlayer = playerStats.filter(
+    (s) => Number(s.PlayerID) === Number(playerId)
+  );
+
+  // 3. Join with game info (date, opponent, result, season)
+  const statsWithGameInfo = statsForPlayer
+    .map((stat) => {
+      const game = games.find(
+        (g) => String(g.GameID) === String(stat.GameID)
+      );
+      return {
+        ...stat,
+        gameDate: game?.Date || "",
+        opponent: game?.Opponent || "",
+        result: game?.Result || "",
+        season: game?.Season || game?.Year || "",
+      };
+    })
+    .sort((a, b) => {
+      if (!a.gameDate || !b.gameDate) return 0;
+      return new Date(a.gameDate) - new Date(b.gameDate);
+    });
+
+  // 4. Build season totals
+  const seasonMap = {}; // { "2025-26" or "2024": { season, gamesPlayed, Points, ... } }
+
+  statsWithGameInfo.forEach((stat) => {
+    const seasonKey = stat.season || "Unknown";
+
+    if (!seasonMap[seasonKey]) {
+      seasonMap[seasonKey] = {
+        season: seasonKey,
+        gamesPlayed: 0,
+      };
+      statKeys.forEach((key) => {
+        seasonMap[seasonKey][key] = 0;
+      });
+    }
+
+    seasonMap[seasonKey].gamesPlayed += 1;
+    statKeys.forEach((key) => {
+      seasonMap[seasonKey][key] += Number(stat[key]) || 0;
+    });
+  });
+
+  const seasonTotals = Object.values(seasonMap).sort((a, b) =>
+    String(a.season).localeCompare(String(b.season))
+  );
+
+  // 5. Career totals
+  const careerTotals = {
+    season: "Career",
+    gamesPlayed: seasonTotals.reduce(
+      (total, s) => total + (s.gamesPlayed || 0),
+      0
+    ),
+  };
+
+  statKeys.forEach((key) => {
+    careerTotals[key] = seasonTotals.reduce(
+      (total, s) => total + (s[key] || 0),
+      0
+    );
+  });
+
+  // 6. Game logs grouped by season (most recent season first)
+  const gameLogsBySeason = statsWithGameInfo.reduce((acc, row) => {
+    const seasonKey = row.season || "Unknown";
+    if (!acc[seasonKey]) acc[seasonKey] = [];
+    acc[seasonKey].push(row);
+    return acc;
+  }, {});
+
+  const orderedSeasonKeys = Object.keys(gameLogsBySeason).sort((a, b) => {
+    if (a === "Unknown") return 1;
+    if (b === "Unknown") return -1;
+    return String(b).localeCompare(String(a)); // most recent (largest) first
+  });
 
   return (
-    <div className="space-y-10 px-4">
-      <header className="space-y-2 text-center">
-        <h1 className="text-3xl font-bold">
-          {player.FirstName} {player.LastName}
-        </h1>
-        <p className="text-gray-700">{headerDetails}</p>
-        <p className="text-gray-600 text-sm">
-          {getDisplayUnitLabel()}
-          {overallEfficiency !== null && (
-            <>
-              {" "}
-              • Shooting Efficiency:{" "}
-              <span className="font-semibold">{overallEfficiency}</span>
-            </>
-          )}
-        </p>
+    <div className="player-page max-w-5xl mx-auto p-4 space-y-8">
+      {/* 1. Header: name, jersey, class, years, picture */}
+      <header className="flex items-center gap-4 mb-4">
+        {photoUrl && (
+          <img
+            src={photoUrl}
+            alt={playerName}
+            onError={(e) =>
+              (e.currentTarget.src = "/images/boys/basketball/players/default.jpg")
+            }
+            className="w-24 h-24 object-cover rounded-full border"
+          />
+        )}
+        <div>
+          <h1 className="text-3xl font-bold">{playerName}</h1>
 
-        <div className="flex justify-center gap-3 mt-2 text-sm">
-          <button
-            onClick={() => {
-              setShowPerGame(false);
-              setShowPer36(false);
-            }}
-            className={`px-3 py-1 rounded border ${
-              !showPerGame && !showPer36
-                ? "bg-blue-600 text-white border-blue-600"
-                : "bg-white text-blue-600 border-blue-600"
-            }`}
-          >
-            Totals
-          </button>
-          <button
-            onClick={() => {
-              setShowPerGame(true);
-              setShowPer36(false);
-            }}
-            className={`px-3 py-1 rounded border ${
-              showPerGame
-                ? "bg-blue-600 text-white border-blue-600"
-                : "bg-white text-blue-600 border-blue-600"
-            }`}
-          >
-            Per Game
-          </button>
-          <button
-            onClick={() => {
-              setShowPerGame(false);
-              setShowPer36(true);
-            }}
-            className={`px-3 py-1 rounded border ${
-              showPer36
-                ? "bg-blue-600 text-white border-blue-600"
-                : "bg-white text-blue-600 border-blue-600"
-            }`}
-          >
-            Per 36 Minutes
-          </button>
+          {(jerseyNumber || gradYear) && (
+            <p className="text-gray-700 text-lg">
+              {jerseyNumber && <span>#{jerseyNumber}</span>}
+              {jerseyNumber && gradYear && <span> • </span>}
+              {gradYear && <span>Class of {gradYear}</span>}
+            </p>
+          )}
+
+          {yearsWithTeam && (
+            <p className="text-gray-600 text-lg">
+              St. Andrew&apos;s Lions • {yearsWithTeam}
+            </p>
+          )}
         </div>
       </header>
 
-      <section className="space-y-4">
-        <h2 className="text-xl font-semibold text-center">
-          Career Summary ({getDisplayUnitLabel()})
-        </h2>
-        <div className="overflow-x-auto">
-          <table className="min-w-full text-sm border table-fixed">
-            <thead className="bg-gray-100">
-              <tr>
-                <th className="border px-2 py-1 w-16">G</th>
-                <th className="border px-2 py-1 w-16">MIN</th>
-                <th className="border px-2 py-1 w-16">FG%</th>
-                <th className="border px-2 py-1 w-16">2P%</th>
-                <th className="border px-2 py-1 w-16">3P%</th>
-                <th className="border px-2 py-1 w-16">FT%</th>
-                {statKeys.map((key) => (
-                  <th key={key} className="border px-2 py-1 w-16">
-                    {statLabels[key]}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className="border px-2 py-1">
-                  {!showPerGame && !showPer36 ? displayOverall.games : "–"}
-                </td>
-                <td className="border px-2 py-1">
-                  {formatMinutes(displayOverall.minutes)}
-                </td>
-                <td className="border px-2 py-1">{overallFG}</td>
-                <td className="border px-2 py-1">{overall2P}</td>
-                <td className="border px-2 py-1">{overall3P}</td>
-                <td className="border px-2 py-1">{overallFT}</td>
-                {statKeys.map((key) => (
-                  <td key={key} className="border px-2 py-1">
-                    {displayOverall[key] != null
-                      ? Number(displayOverall[key]).toFixed(showPerGame || showPer36 ? 1 : 0)
-                      : "0.0"}
-                  </td>
-                ))}
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <section className="space-y-8">
-        <h2 className="text-xl font-semibold text-center">
-          Season-by-Season ({getDisplayUnitLabel()})
-        </h2>
-        {Object.keys(groupedBySeason)
-          .sort()
-          .map((season) => {
-            const totals = getDisplayTotals(season);
-            const baseTotals = totalsBySeason[season] || {};
-            const { threePct, twoPct, ftPct, fgPct } =
-              calculatePercentages(baseTotals);
-
-            return (
-              <div key={season} className="space-y-2">
-                <h3 className="text-lg font-semibold text-center">
-                  {formatSeasonLabel(season)}
-                </h3>
-                <div className="overflow-x-auto">
-                  <table className="min-w-full text-xs border table-fixed">
-                    <thead className="bg-gray-100">
-                      <tr>
-                        <th className="border px-2 py-1 w-16">G</th>
-                        <th className="border px-2 py-1 w-16">MIN</th>
-                        <th className="border px-2 py-1 w-16">FG%</th>
-                        <th className="border px-2 py-1 w-16">2P%</th>
-                        <th className="border px-2 py-1 w-16">3P%</th>
-                        <th className="border px-2 py-1 w-16">FT%</th>
-                        {statKeys.map((key) => (
-                          <th key={key} className="border px-2 py-1 w-16">
-                            {statLabels[key]}
+      {/* 2. Career Totals (season-by-season + career row) */}
+      <section>
+        <h2 className="text-2xl font-semibold mb-2">Career Totals</h2>
+        {seasonTotals.length === 0 ? (
+          <p>No stats available.</p>
+        ) : (
+          <div className="overflow-x-auto">
+            <table className="min-w-full border text-sm">
+              <thead>
+                <tr className="bg-gray-100">
+                  <th className="border px-2 py-1 text-center">Season</th>
+                  <th className="border px-2 py-1 text-center">GP</th>
+                  {statKeys.map((key) => (
+                    <React.Fragment key={key}>
+                      <th className="border px-2 py-1 text-center">
+                        {statLabelMap[key] || key}
+                      </th>
+                      {key === "ThreePA" && (
+                        <th className="border px-2 py-1 text-center">3P%</th>
+                      )}
+                      {key === "TwoPA" && (
+                        <>
+                          <th className="border px-2 py-1 text-center">
+                            2P%
                           </th>
-                        ))}
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td className="border px-2 py-1">
-                          {!showPerGame && !showPer36
-                            ? (totalsBySeason[season]?.games ?? "–")
-                            : "–"}
+                          <th className="border px-2 py-1 text-center">
+                            eFG%
+                          </th>
+                        </>
+                      )}
+                      {key === "FTA" && (
+                        <th className="border px-2 py-1 text-center">FT%</th>
+                      )}
+                    </React.Fragment>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {seasonTotals.map((row) => (
+                  <tr key={row.season}>
+                    <td className="border px-2 py-1 text-center">
+                      {formatSeasonLabel(row.season)}
+                    </td>
+                    <td className="border px-2 py-1 text-center">
+                      {row.gamesPlayed}
+                    </td>
+                    {statKeys.map((key) => (
+                      <React.Fragment key={key}>
+                        <td className="border px-2 py-1 text-center">
+                          {row[key]}
                         </td>
-                        <td className="border px-2 py-1">
-                          {formatMinutes(totals.minutes)}
-                        </td>
-                        <td className="border px-2 py-1">{fgPct}</td>
-                        <td className="border px-2 py-1">{twoPct}</td>
-                        <td className="border px-2 py-1">{threePct}</td>
-                        <td className="border px-2 py-1">{ftPct}</td>
-                        {statKeys.map((key) => (
-                          <td key={key} className="border px-2 py-1">
-                            {totals[key] != null
-                              ? Number(totals[key]).toFixed(
-                                  showPerGame || showPer36 ? 1 : 0
-                                )
-                              : "0.0"}
+                        {key === "ThreePA" && (
+                          <td className="border px-2 py-1 text-center">
+                            {calcPct(row.ThreePM, row.ThreePA)}
                           </td>
-                        ))}
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            );
-          })}
+                        )}
+                        {key === "TwoPA" && (
+                          <>
+                            <td className="border px-2 py-1 text-center">
+                              {calcPct(row.TwoPM, row.TwoPA)}
+                            </td>
+                            <td className="border px-2 py-1 text-center">
+                              {calcEFG(
+                                row.TwoPM,
+                                row.ThreePM,
+                                row.TwoPA,
+                                row.ThreePA
+                              )}
+                            </td>
+                          </>
+                        )}
+                        {key === "FTA" && (
+                          <td className="border px-2 py-1 text-center">
+                            {calcPct(row.FTM, row.FTA)}
+                          </td>
+                        )}
+                      </React.Fragment>
+                    ))}
+                  </tr>
+                ))}
+
+                {/* Career row */}
+                <tr className="bg-gray-50 font-semibold">
+                  <td className="border px-2 py-1 text-center">
+                    {careerTotals.season}
+                  </td>
+                  <td className="border px-2 py-1 text-center">
+                    {careerTotals.gamesPlayed}
+                  </td>
+                  {statKeys.map((key) => (
+                    <React.Fragment key={key}>
+                      <td className="border px-2 py-1 text-center">
+                        {careerTotals[key]}
+                      </td>
+                      {key === "ThreePA" && (
+                        <td className="border px-2 py-1 text-center">
+                          {calcPct(
+                            careerTotals.ThreePM,
+                            careerTotals.ThreePA
+                          )}
+                        </td>
+                      )}
+                      {key === "TwoPA" && (
+                        <>
+                          <td className="border px-2 py-1 text-center">
+                            {calcPct(
+                              careerTotals.TwoPM,
+                              careerTotals.TwoPA
+                            )}
+                          </td>
+                          <td className="border px-2 py-1 text-center">
+                            {calcEFG(
+                              careerTotals.TwoPM,
+                              careerTotals.ThreePM,
+                              careerTotals.TwoPA,
+                              careerTotals.ThreePA
+                            )}
+                          </td>
+                        </>
+                      )}
+                      {key === "FTA" && (
+                        <td className="border px-2 py-1 text-center">
+                          {calcPct(careerTotals.FTM, careerTotals.FTA)}
+                        </td>
+                      )}
+                    </React.Fragment>
+                  ))}
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        )}
       </section>
 
-      <section className="space-y-4">
-        <h2 className="text-xl font-semibold text-center">
-          Game-by-Game (Season Totals)
-        </h2>
-        <p className="text-center text-sm text-gray-600">
-          Game-by-game stats are always shown as raw totals, regardless of the
-          Per Game / Per 36 toggle.
-        </p>
-
-        {Object.keys(seasonGameGroups)
-          .sort()
-          .map((season) => {
-            const rows = seasonGameGroups[season];
-
+      {/* 3. Game-by-game tables, split by season */}
+      <section>
+        <h2 className="text-2xl font-semibold mb-2">Game Logs</h2>
+        {statsWithGameInfo.length === 0 ? (
+          <p>No game logs available.</p>
+        ) : (
+          orderedSeasonKeys.map((seasonKey) => {
+            const rows = gameLogsBySeason[seasonKey] || [];
             return (
-              <div key={season} className="space-y-2">
-                <h3 className="text-lg font-semibold text-center">
-                  {formatSeasonLabel(season)}
+              <div key={seasonKey} className="mb-6">
+                <h3 className="text-xl font-semibold mb-1">
+                  {seasonKey || "Unknown Season"}
                 </h3>
                 <div className="overflow-x-auto">
-                  <table className="min-w-full text-xs border table-fixed">
-                    <thead className="bg-gray-100">
-                      <tr>
-                        <th className="border px-2 py-1 w-24">Date</th>
-                        <th className="border px-2 py-1 w-40">Opponent</th>
-                        <th className="border px-2 py-1 w-16">Result</th>
-                        <th className="border px-2 py-1 w-16">MIN</th>
-                        <th className="border px-2 py-1 w-16">FG%</th>
-                        <th className="border px-2 py-1 w-16">2P%</th>
-                        <th className="border px-2 py-1 w-16">3P%</th>
-                        <th className="border px-2 py-1 w-16">FT%</th>
+                  <table className="min-w-full border text-sm">
+                    <thead>
+                      <tr className="bg-gray-100">
+                        <th className="border px-2 py-1 text-center">
+                          Date
+                        </th>
+                        <th className="border px-2 py-1 text-center">
+                          Opponent
+                        </th>
+                        <th className="border px-2 py-1 text-center">
+                          Result
+                        </th>
                         {statKeys.map((key) => (
-                          <th key={key} className="border px-2 py-1 w-16">
-                            {statLabels[key]}
-                          </th>
+                          <React.Fragment key={key}>
+                            <th className="border px-2 py-1 text-center">
+                              {statLabelMap[key] || key}
+                            </th>
+                            {key === "ThreePA" && (
+                              <th className="border px-2 py-1 text-center">
+                                3P%
+                              </th>
+                            )}
+                            {key === "TwoPA" && (
+                              <>
+                                <th className="border px-2 py-1 text-center">
+                                  2P%
+                                </th>
+                                <th className="border px-2 py-1 text-center">
+                                  eFG%
+                                </th>
+                              </>
+                            )}
+                            {key === "FTA" && (
+                              <th className="border px-2 py-1 text-center">
+                                FT%
+                              </th>
+                            )}
+                          </React.Fragment>
                         ))}
                       </tr>
                     </thead>
                     <tbody>
-                      {rows.map(({ statRow, game }) => {
-                        const threesMade = Number(statRow.ThreePM || 0);
-                        const threesAtt = Number(statRow.ThreePA || 0);
-                        const twosMade = Number(statRow.TwoPM || 0);
-                        const twosAtt = Number(statRow.TwoPA || 0);
-                        const ftMade = Number(statRow.FTM || 0);
-                        const ftAtt = Number(statRow.FTA || 0);
-
-                        const threePct =
-                          threesAtt > 0
-                            ? ((threesMade / threesAtt) * 100).toFixed(1)
-                            : "–";
-                        const twoPct =
-                          twosAtt > 0
-                            ? ((twosMade / twosAtt) * 100).toFixed(1)
-                            : "–";
-                        const ftPct =
-                          ftAtt > 0
-                            ? ((ftMade / ftAtt) * 100).toFixed(1)
-                            : "–";
-
-                        const totalFGA = threesAtt + twosAtt;
-                        const totalFGM = threesMade + twosMade;
-                        const fgPct =
-                          totalFGA > 0
-                            ? ((totalFGM / totalFGA) * 100).toFixed(1)
-                            : "–";
-
-                        return (
-                          <tr key={statRow.GameID}>
-                            <td className="border px-2 py-1 whitespace-nowrap">
-                              {formatDate(game?.Date)}
-                            </td>
-                            <td className="border px-2 py-1 text-center whitespace-nowrap">
-                              <Link
-                                to={`/athletics/boys/basketball/games/${row.GameID}`}
-                                className="text-blue-600 hover:underline"
-                              >
-                                {game ? formatOpponent(game) : ""}
-                              </Link>
-                            </td>
-                            <td className="border px-2 py-1 whitespace-nowrap">
-                              {formatResult(game)}
-                            </td>
-                            <td className="border px-2 py-1">
-                              {statRow.Minutes != null &&
-                              statRow.Minutes !== ""
-                                ? Number(statRow.Minutes).toFixed(1)
-                                : "0.0"}
-                            </td>
-                            <td className="border px-2 py-1">{fgPct}</td>
-                            <td className="border px-2 py-1">{twoPct}</td>
-                            <td className="border px-2 py-1">{threePct}</td>
-                            <td className="border px-2 py-1">{ftPct}</td>
-                            {statKeys.map((key) => (
-                              <td
-                                key={key}
-                                className="border px-2 py-1"
-                              >
-                                {statRow[key] != null &&
-                                statRow[key] !== ""
-                                  ? Number(statRow[key]).toFixed(0)
-                                  : "0"}
+                      {rows.map((row, idx) => (
+                        <tr key={`${row.GameID}-${idx}`}>
+                          <td className="border px-2 py-1 text-center whitespace-nowrap">
+                            {row.gameDate ? formatDate(row.gameDate) : ""}
+                          </td>
+                          <td className="border px-2 py-1 text-center whitespace-nowrap">
+                            {/* Updated link path for boys basketball game detail */}
+                            <Link
+                              to={`/boys/basketball/games/${row.GameID}`}
+                              className="text-blue-600 hover:underline"
+                            >
+                              {row.opponent}
+                            </Link>
+                          </td>
+                          <td className="border px-2 py-1 text-center">
+                            {row.result}
+                          </td>
+                          {statKeys.map((key) => (
+                            <React.Fragment key={key}>
+                              <td className="border px-2 py-1 text-center">
+                                {row[key]}
                               </td>
-                            ))}
-                          </tr>
-                        );
-                      })}
+                              {key === "ThreePA" && (
+                                <td className="border px-2 py-1 text-center">
+                                  {calcPct(row.ThreePM, row.ThreePA)}
+                                </td>
+                              )}
+                              {key === "TwoPA" && (
+                                <>
+                                  <td className="border px-2 py-1 text-center">
+                                    {calcPct(row.TwoPM, row.TwoPA)}
+                                  </td>
+                                  <td className="border px-2 py-1 text-center">
+                                    {calcEFG(
+                                      row.TwoPM,
+                                      row.ThreePM,
+                                      row.TwoPA,
+                                      row.ThreePA
+                                    )}
+                                  </td>
+                                </>
+                              )}
+                              {key === "FTA" && (
+                                <td className="border px-2 py-1 text-center">
+                                  {calcPct(row.FTM, row.FTA)}
+                                </td>
+                              )}
+                            </React.Fragment>
+                          ))}
+                        </tr>
+                      ))}
                     </tbody>
                   </table>
                 </div>
               </div>
             );
-          })}
+          })
+        )}
       </section>
     </div>
   );
