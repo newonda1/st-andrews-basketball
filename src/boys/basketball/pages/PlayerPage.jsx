@@ -33,13 +33,11 @@ const statLabelMap = {
   FTA: "FTA",
 };
 
-// ✅ SAFE date parsing (supports ms numbers, numeric strings, ISO strings)
+// ✅ SAFE date parsing (prevents blank-screen crashes)
 const parseDateSafe = (value) => {
   if (value === null || value === undefined || value === "") return null;
-
   const s = String(value).trim();
   const d = /^\d+$/.test(s) ? new Date(Number(s)) : new Date(s);
-
   if (Number.isNaN(d.getTime())) return null;
   return d;
 };
@@ -106,6 +104,10 @@ function PlayerPage() {
   // toggle state for career table
   const [showPerGame, setShowPerGame] = useState(false);
 
+  if (!playerId) {
+    return <div className="p-6">Invalid player link.</div>;
+  }
+
   // Helper to find the player by ID, handling numeric IDs and alternate field names
   const getPlayerById = (id) => {
     const idNum = Number(id);
@@ -118,6 +120,7 @@ function PlayerPage() {
     );
   };
 
+  // Load all the data we need
   useEffect(() => {
     async function loadData() {
       try {
@@ -127,12 +130,9 @@ function PlayerPage() {
           fetch("/data/boys/basketball/playergamestats.json"),
         ]);
 
-        // ✅ if any fetch fails, throw a helpful error
-        if (!playersRes.ok)
-          throw new Error(`players.json failed: ${playersRes.status}`);
-        if (!gamesRes.ok) throw new Error(`games.json failed: ${gamesRes.status}`);
-        if (!statsRes.ok)
-          throw new Error(`playergamestats.json failed: ${statsRes.status}`);
+        if (!playersRes.ok) throw new Error(`players.json ${playersRes.status}`);
+        if (!gamesRes.ok) throw new Error(`games.json ${gamesRes.status}`);
+        if (!statsRes.ok) throw new Error(`playergamestats.json ${statsRes.status}`);
 
         const [playersData, gamesData, statsData] = await Promise.all([
           playersRes.json(),
@@ -153,10 +153,16 @@ function PlayerPage() {
     loadData();
   }, []);
 
-  if (loading) return <div className="p-6">Loading player information...</div>;
+  if (loading) {
+    return <div className="p-6">Loading player information...</div>;
+  }
 
+  // 1. Find player
   const player = getPlayerById(playerId);
-  if (!player) return <div className="p-6">Player not found.</div>;
+
+  if (!player) {
+    return <div className="p-6">Player not found.</div>;
+  }
 
   const playerName =
     player.PlayerName ||
@@ -178,13 +184,17 @@ function PlayerPage() {
   const yearsWithTeam = player.YearsWithTeam || "";
   const photoUrl = getPlayerPhotoUrl(playerId);
 
+  // 2. Get all game stats for this player
   const statsForPlayer = playerStats.filter(
     (s) => Number(s.PlayerID) === Number(playerId)
   );
 
+  // 3. Join with game info (date, opponent, result, season)
   const statsWithGameInfo = statsForPlayer
     .map((stat) => {
-      const game = games.find((g) => String(g.GameID) === String(stat.GameID));
+      const game = games.find(
+        (g) => String(g.GameID) === String(stat.GameID)
+      );
       return {
         ...stat,
         gameDate: game?.Date ?? "",
@@ -194,7 +204,6 @@ function PlayerPage() {
       };
     })
     .sort((a, b) => {
-      // ✅ safe sort (won’t crash if a date is bad)
       const da = parseDateSafe(a.gameDate);
       const db = parseDateSafe(b.gameDate);
       if (!da && !db) return 0;
@@ -203,6 +212,7 @@ function PlayerPage() {
       return da.getTime() - db.getTime();
     });
 
+  // 4. Build season totals
   const seasonTotals = useMemo(() => {
     const seasonMap = {};
 
@@ -210,8 +220,13 @@ function PlayerPage() {
       const seasonKey = stat.season || "Unknown";
 
       if (!seasonMap[seasonKey]) {
-        seasonMap[seasonKey] = { season: seasonKey, gamesPlayed: 0 };
-        statKeys.forEach((key) => (seasonMap[seasonKey][key] = 0));
+        seasonMap[seasonKey] = {
+          season: seasonKey,
+          gamesPlayed: 0,
+        };
+        statKeys.forEach((key) => {
+          seasonMap[seasonKey][key] = 0;
+        });
       }
 
       seasonMap[seasonKey].gamesPlayed += 1;
@@ -225,6 +240,7 @@ function PlayerPage() {
     );
   }, [statsWithGameInfo]);
 
+  // 5. Career totals
   const careerTotals = useMemo(() => {
     const base = {
       season: "Career",
@@ -235,7 +251,10 @@ function PlayerPage() {
     };
 
     statKeys.forEach((key) => {
-      base[key] = seasonTotals.reduce((total, s) => total + (s[key] || 0), 0);
+      base[key] = seasonTotals.reduce(
+        (total, s) => total + (s[key] || 0),
+        0
+      );
     });
 
     return base;
@@ -243,13 +262,16 @@ function PlayerPage() {
 
   const displayStat = (row, key) => {
     const val = Number(row[key]) || 0;
+
     if (!showPerGame) return val;
 
     const gp = Number(row.gamesPlayed) || 0;
     if (!gp) return "-";
+
     return round1(val / gp);
   };
 
+  // 6. Game logs grouped by season (most recent season first)
   const gameLogsBySeason = statsWithGameInfo.reduce((acc, row) => {
     const seasonKey = row.season || "Unknown";
     if (!acc[seasonKey]) acc[seasonKey] = [];
@@ -341,7 +363,6 @@ function PlayerPage() {
                       <th className="border px-2 py-1 text-center">
                         {statLabelMap[key] || key}
                       </th>
-
                       {key === "ThreePA" && (
                         <th className="border px-2 py-1 text-center">3P%</th>
                       )}
@@ -365,7 +386,6 @@ function PlayerPage() {
                     <td className="border px-2 py-1 text-center">
                       {formatSeasonLabel(row.season)}
                     </td>
-
                     <td className="border px-2 py-1 text-center">
                       {row.gamesPlayed}
                     </td>
@@ -410,7 +430,6 @@ function PlayerPage() {
                   <td className="border px-2 py-1 text-center">
                     {careerTotals.season}
                   </td>
-
                   <td className="border px-2 py-1 text-center">
                     {careerTotals.gamesPlayed}
                   </td>
@@ -518,7 +537,8 @@ function PlayerPage() {
                           </td>
                           <td className="border px-2 py-1 text-center whitespace-nowrap">
                             <Link
-                              to={`/boys/basketball/games/${row.GameID}`}
+                              // ✅ FIXED: correct route prefix
+                              to={`/athletics/boys/basketball/games/${row.GameID}`}
                               className="text-blue-600 hover:underline"
                             >
                               {row.opponent}
