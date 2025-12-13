@@ -6,23 +6,31 @@ function GameDetail() {
   const [game, setGame] = useState(null);
   const [playerStats, setPlayerStats] = useState([]);
   const [players, setPlayers] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  // ✅ Update these two bases to match your new public folder organization
-  // Common options you might be using:
-  // 1) "/boys/basketball/data/"
-  // 2) "/data/boys/basketball/"
-  // 3) `${import.meta.env.BASE_URL}boys/basketball/data/`
-  const DATA_BASE = `${import.meta.env.BASE_URL}boys/basketball/data/`;
-  const PLAYER_IMG_BASE = `${import.meta.env.BASE_URL}boys/basketball/images/players/`;
+  // ✅ Correct paths for your current zip:
+  // public/data/boys/basketball/...
+  const DATA_BASE = "/data/boys/basketball/";
+  const PLAYER_IMG_BASE = "/images/boys/basketball/players/";
 
   useEffect(() => {
+    let cancelled = false;
+
     async function fetchData() {
+      setLoading(true);
+
       try {
         const [gamesRes, statsRes, playersRes] = await Promise.all([
           fetch(`${DATA_BASE}games.json`),
           fetch(`${DATA_BASE}playergamestats.json`),
           fetch(`${DATA_BASE}players.json`),
         ]);
+
+        if (!gamesRes.ok || !statsRes.ok || !playersRes.ok) {
+          throw new Error(
+            `Fetch failed: games(${gamesRes.status}) stats(${statsRes.status}) players(${playersRes.status})`
+          );
+        }
 
         const [gamesData, statsData, playersData] = await Promise.all([
           gamesRes.json(),
@@ -35,16 +43,28 @@ function GameDetail() {
         const thisGame = gamesData.find((g) => Number(g.GameID) === idNum);
         const thisStats = statsData.filter((s) => Number(s.GameID) === idNum);
 
-        setGame(thisGame || null);
-        setPlayerStats(thisStats);
-        setPlayers(playersData || []);
+        if (!cancelled) {
+          setGame(thisGame || null);
+          setPlayerStats(thisStats || []);
+          setPlayers(playersData || []);
+        }
       } catch (err) {
         console.error("Failed to load game detail data:", err);
+        if (!cancelled) {
+          setGame(null);
+          setPlayerStats([]);
+          setPlayers([]);
+        }
+      } finally {
+        if (!cancelled) setLoading(false);
       }
     }
 
     fetchData();
-  }, [gameId, DATA_BASE]);
+    return () => {
+      cancelled = true;
+    };
+  }, [gameId]);
 
   const getPlayerName = (playerId) => {
     const idNum = Number(playerId);
@@ -64,9 +84,7 @@ function GameDetail() {
     return fullName || `Player ${playerId}`;
   };
 
-  const getPlayerPhotoUrl = (playerId) => {
-    return `${PLAYER_IMG_BASE}${playerId}.jpg`;
-  };
+  const getPlayerPhotoUrl = (playerId) => `${PLAYER_IMG_BASE}${playerId}.jpg`;
 
   const formatDate = (ms) =>
     new Date(ms).toLocaleDateString(undefined, {
@@ -90,12 +108,22 @@ function GameDetail() {
 
     const fgm = tpm + thpm;
     const fga = tpa + thpa;
-
     if (!fga || fga <= 0) return "-";
 
-    const efg = ((fgm + 0.5 * thpm) / fga) * 100;
-    return efg.toFixed(1);
+    return (((fgm + 0.5 * thpm) / fga) * 100).toFixed(1);
   };
+
+  // Build a season slug like "2025-26" from the start year in your games.json ("Season": 2025)
+  const seasonSlugFromYearStart = (yearStart) => {
+    const ys = Number(yearStart);
+    if (!ys || isNaN(ys)) return null;
+    const ye2 = String(ys + 1).slice(-2);
+    return `${ys}-${ye2}`;
+  };
+
+  if (loading) {
+    return <div className="p-4">Loading…</div>;
+  }
 
   if (!game) {
     return <div className="p-4">Game not found.</div>;
@@ -106,16 +134,15 @@ function GameDetail() {
 
   const showScore = game.Result === "W" || game.Result === "L";
 
-  // ✅ Dynamic season back-link (instead of hardcoding 2025–26)
-  // Falls back to 2025-26 if SeasonID is missing in older data.
-  const seasonPath = game.SeasonID
-    ? `/boys/basketball/seasons/${game.SeasonID}`
-    : `/boys/basketball/seasons/2025-26`;
+  // ✅ Correct “Back to Season” link for your current router structure
+  // (your schedule links are /athletics/boys/basketball/games/:gameId)
+  const seasonSlug = seasonSlugFromYearStart(game.Season) || "2025-26";
+  const seasonPath = `/athletics/boys/basketball/seasons/${seasonSlug}`;
 
   return (
     <div className="p-4 space-y-6">
       <Link to={seasonPath} className="text-sm text-blue-600 hover:underline">
-        ← Back to Season
+        ← Back to {seasonSlug} Season
       </Link>
 
       <header>
@@ -186,12 +213,14 @@ function GameDetail() {
                             src={getPlayerPhotoUrl(s.PlayerID)}
                             alt={getPlayerName(s.PlayerID)}
                             onError={(e) => {
-                              e.currentTarget.src = `${PLAYER_IMG_BASE}default.jpg`;
+                              // Your zip doesn’t include a default player image,
+                              // so fall back to the school logo.
+                              e.currentTarget.src = "/images/common/logo.png";
                             }}
                             className="w-8 h-8 rounded-full object-cover border"
                           />
                           <Link
-                            to={`/boys/basketball/players/${s.PlayerID}`}
+                            to={`/athletics/boys/basketball/players/${s.PlayerID}`}
                             className="text-blue-600 underline hover:text-blue-800"
                           >
                             {getPlayerName(s.PlayerID)}
