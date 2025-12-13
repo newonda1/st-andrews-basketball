@@ -1,45 +1,44 @@
 import React, { useEffect, useMemo, useState } from "react";
 
-/**
- * Boys Basketball Admin – Phase 1 (robust loader)
- * Tries multiple possible public paths for JSON so we don't guess wrong.
- */
-
 function absUrl(path) {
-  // Ensures Safari always gets a valid absolute URL
   return new URL(path, window.location.origin).toString();
 }
 
-async function fetchJsonFirst(label, candidates) {
-  const attempts = [];
+async function fetchJson(label, path) {
+  const url = absUrl(path);
+  const res = await fetch(url, { cache: "no-store" });
 
-  for (const path of candidates) {
-    const url = absUrl(path);
+  const text = await res.text();
 
-    try {
-      const res = await fetch(url, { cache: "no-store" });
-      attempts.push(`${res.ok ? "✅" : "❌"} ${path} (HTTP ${res.status})`);
-
-      if (!res.ok) continue;
-
-      const data = await res.json();
-      return { data, usedPath: path, attempts };
-    } catch (e) {
-      attempts.push(`💥 ${path} (${String(e?.message || e)})`);
-    }
+  if (!res.ok) {
+    throw new Error(`${label} failed (HTTP ${res.status}) at ${path}`);
   }
 
-  throw new Error(
-    `${label} failed to load from any known path.\n` +
-      attempts.join("\n")
-  );
+  // If we accidentally got HTML back (SPA fallback), fail with a helpful message
+  const trimmed = text.trim();
+  if (trimmed.startsWith("<!DOCTYPE") || trimmed.startsWith("<html")) {
+    throw new Error(
+      `${label} did not return JSON at ${path}.\n` +
+        `It returned HTML instead (SPA fallback).\n` +
+        `This usually means the file is not in /public at that path.\n\n` +
+        `First 80 chars:\n${trimmed.slice(0, 80)}...`
+    );
+  }
+
+  try {
+    return JSON.parse(text);
+  } catch (e) {
+    throw new Error(
+      `${label} returned invalid JSON at ${path}.\n` +
+        `JSON parse error: ${String(e?.message || e)}`
+    );
+  }
 }
 
 export default function BoysBasketballAdmin() {
   const [players, setPlayers] = useState([]);
   const [seasonRosters, setSeasonRosters] = useState([]);
   const [selectedSeason, setSelectedSeason] = useState("");
-
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
@@ -54,38 +53,23 @@ export default function BoysBasketballAdmin() {
         setLoading(true);
         setError("");
 
-        // These are the 3 most likely locations in YOUR project:
-        // 1) /athletics/... (if you copied data under that route)
-        // 2) /boys/basketball/... (if you used a sport folder)
-        // 3) /data/... (your older / most common setup)
-        const playersResult = await fetchJsonFirst("players.json", [
-          "/athletics/boys/basketball/data/players.json",
-          "/boys/basketball/data/players.json",
-          "/data/players.json",
-        ]);
+        // ✅ These match your real public folder:
+        // /public/data/boys/basketball/*.json  ->  /data/boys/basketball/*.json
+        const playersPath = "/data/boys/basketball/players.json";
+        const rostersPath = "/data/boys/basketball/seasonrosters.json";
 
-        const rostersResult = await fetchJsonFirst("seasonrosters.json", [
-          "/athletics/boys/basketball/data/seasonrosters.json",
-          "/boys/basketball/data/seasonrosters.json",
-          "/data/seasonrosters.json",
-        ]);
+        const playersData = await fetchJson("players.json", playersPath);
+        const rostersData = await fetchJson("seasonrosters.json", rostersPath);
 
-        const playersData = Array.isArray(playersResult.data)
-          ? playersResult.data
-          : [];
-        const rostersData = Array.isArray(rostersResult.data)
-          ? rostersResult.data
-          : [];
-
-        setPlayers(playersData);
-        setSeasonRosters(rostersData);
+        setPlayers(Array.isArray(playersData) ? playersData : []);
+        setSeasonRosters(Array.isArray(rostersData) ? rostersData : []);
 
         setPathsUsed({
-          players: playersResult.usedPath,
-          seasonRosters: rostersResult.usedPath,
+          players: playersPath,
+          seasonRosters: rostersPath,
         });
 
-        if (rostersData.length > 0) {
+        if (Array.isArray(rostersData) && rostersData.length > 0) {
           setSelectedSeason(rostersData[0].SeasonID);
         }
       } catch (e) {
@@ -126,11 +110,6 @@ export default function BoysBasketballAdmin() {
       <div>
         <h2 style={{ marginTop: 0 }}>Boys Basketball Admin</h2>
         <p style={{ color: "crimson", whiteSpace: "pre-wrap" }}>{error}</p>
-
-        <p style={{ color: "#555" }}>
-          Quick check: open your regular season page and see what URL it uses
-          to load players/games. Whatever that is, we’ll match it here.
-        </p>
       </div>
     );
   }
@@ -163,7 +142,9 @@ export default function BoysBasketballAdmin() {
         </label>
       </section>
 
-      {!selectedRoster && <p style={{ marginTop: 12 }}>No roster found for this season.</p>}
+      {!selectedRoster && (
+        <p style={{ marginTop: 12 }}>No roster found for this season.</p>
+      )}
 
       {selectedRoster && (
         <table style={{ width: "100%", borderCollapse: "collapse", marginTop: 12 }}>
