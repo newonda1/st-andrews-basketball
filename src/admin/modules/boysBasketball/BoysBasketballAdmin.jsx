@@ -1,57 +1,101 @@
 import React, { useEffect, useMemo, useState } from "react";
 
 /**
- * Boys Basketball Admin – Phase 1
- * - Load players.json
- * - Load seasonrosters.json
- * - Display roster by season
- * - Confirm admin wiring works end-to-end
+ * Boys Basketball Admin – Phase 1 (robust loader)
+ * Tries multiple possible public paths for JSON so we don't guess wrong.
  */
 
-const DATA_PATHS = {
-  players: "/athletics/boys/basketball/data/players.json",
-  seasonRosters: "/athletics/boys/basketball/data/seasonrosters.json",
-};
+function absUrl(path) {
+  // Ensures Safari always gets a valid absolute URL
+  return new URL(path, window.location.origin).toString();
+}
+
+async function fetchJsonFirst(label, candidates) {
+  const attempts = [];
+
+  for (const path of candidates) {
+    const url = absUrl(path);
+
+    try {
+      const res = await fetch(url, { cache: "no-store" });
+      attempts.push(`${res.ok ? "✅" : "❌"} ${path} (HTTP ${res.status})`);
+
+      if (!res.ok) continue;
+
+      const data = await res.json();
+      return { data, usedPath: path, attempts };
+    } catch (e) {
+      attempts.push(`💥 ${path} (${String(e?.message || e)})`);
+    }
+  }
+
+  throw new Error(
+    `${label} failed to load from any known path.\n` +
+      attempts.join("\n")
+  );
+}
 
 export default function BoysBasketballAdmin() {
   const [players, setPlayers] = useState([]);
   const [seasonRosters, setSeasonRosters] = useState([]);
   const [selectedSeason, setSelectedSeason] = useState("");
+
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
+  const [pathsUsed, setPathsUsed] = useState({
+    players: "",
+    seasonRosters: "",
+  });
+
   useEffect(() => {
-    async function loadData() {
+    async function load() {
       try {
         setLoading(true);
         setError("");
 
-        const [playersRes, rostersRes] = await Promise.all([
-          fetch(DATA_PATHS.players),
-          fetch(DATA_PATHS.seasonRosters),
+        // These are the 3 most likely locations in YOUR project:
+        // 1) /athletics/... (if you copied data under that route)
+        // 2) /boys/basketball/... (if you used a sport folder)
+        // 3) /data/... (your older / most common setup)
+        const playersResult = await fetchJsonFirst("players.json", [
+          "/athletics/boys/basketball/data/players.json",
+          "/boys/basketball/data/players.json",
+          "/data/players.json",
         ]);
 
-        if (!playersRes.ok || !rostersRes.ok) {
-          throw new Error("Failed to load boys basketball data files.");
-        }
+        const rostersResult = await fetchJsonFirst("seasonrosters.json", [
+          "/athletics/boys/basketball/data/seasonrosters.json",
+          "/boys/basketball/data/seasonrosters.json",
+          "/data/seasonrosters.json",
+        ]);
 
-        const playersData = await playersRes.json();
-        const rostersData = await rostersRes.json();
+        const playersData = Array.isArray(playersResult.data)
+          ? playersResult.data
+          : [];
+        const rostersData = Array.isArray(rostersResult.data)
+          ? rostersResult.data
+          : [];
 
-        setPlayers(Array.isArray(playersData) ? playersData : []);
-        setSeasonRosters(Array.isArray(rostersData) ? rostersData : []);
+        setPlayers(playersData);
+        setSeasonRosters(rostersData);
+
+        setPathsUsed({
+          players: playersResult.usedPath,
+          seasonRosters: rostersResult.usedPath,
+        });
 
         if (rostersData.length > 0) {
           setSelectedSeason(rostersData[0].SeasonID);
         }
-      } catch (err) {
-        setError(err.message || "Unknown error loading data.");
+      } catch (e) {
+        setError(String(e?.message || e));
       } finally {
         setLoading(false);
       }
     }
 
-    loadData();
+    load();
   }, []);
 
   const selectedRoster = useMemo(() => {
@@ -59,7 +103,7 @@ export default function BoysBasketballAdmin() {
   }, [seasonRosters, selectedSeason]);
 
   const rosterWithNames = useMemo(() => {
-    if (!selectedRoster) return [];
+    if (!selectedRoster?.Players) return [];
 
     return selectedRoster.Players.map((entry) => {
       const player = players.find(
@@ -69,29 +113,41 @@ export default function BoysBasketballAdmin() {
       return {
         PlayerID: entry.PlayerID,
         JerseyNumber: entry.JerseyNumber,
-        Name: player
-          ? `${player.FirstName} ${player.LastName}`
-          : "Unknown Player",
+        Name: player ? `${player.FirstName} ${player.LastName}` : "Unknown Player",
         GradYear: player?.GradYear ?? "",
       };
     });
   }, [selectedRoster, players]);
 
-  if (loading) {
-    return <p>Loading boys basketball admin data…</p>;
-  }
+  if (loading) return <p>Loading boys basketball admin data…</p>;
 
   if (error) {
-    return <p style={{ color: "crimson" }}>{error}</p>;
+    return (
+      <div>
+        <h2 style={{ marginTop: 0 }}>Boys Basketball Admin</h2>
+        <p style={{ color: "crimson", whiteSpace: "pre-wrap" }}>{error}</p>
+
+        <p style={{ color: "#555" }}>
+          Quick check: open your regular season page and see what URL it uses
+          to load players/games. Whatever that is, we’ll match it here.
+        </p>
+      </div>
+    );
   }
 
   return (
     <div>
-      <h1>Boys Basketball Admin</h1>
+      <h2 style={{ marginTop: 0 }}>Boys Basketball Admin</h2>
 
-      <section style={{ marginBottom: 24 }}>
-        <h2>Season Roster</h2>
+      <p style={{ color: "#555", marginTop: 6 }}>
+        Loaded from:
+        <br />
+        <strong>players:</strong> {pathsUsed.players}
+        <br />
+        <strong>seasonrosters:</strong> {pathsUsed.seasonRosters}
+      </p>
 
+      <section style={{ marginTop: 16 }}>
         <label>
           Season:&nbsp;
           <select
@@ -107,16 +163,10 @@ export default function BoysBasketballAdmin() {
         </label>
       </section>
 
-      {!selectedRoster && <p>No roster found for this season.</p>}
+      {!selectedRoster && <p style={{ marginTop: 12 }}>No roster found for this season.</p>}
 
       {selectedRoster && (
-        <table
-          style={{
-            width: "100%",
-            borderCollapse: "collapse",
-            marginTop: 12,
-          }}
-        >
+        <table style={{ width: "100%", borderCollapse: "collapse", marginTop: 12 }}>
           <thead>
             <tr>
               <th style={th}>#</th>
@@ -138,9 +188,8 @@ export default function BoysBasketballAdmin() {
         </table>
       )}
 
-      <p style={{ marginTop: 16, color: "#555" }}>
-        ✅ Data loaded successfully.  
-        Next step: add roster editing and stat-entry forms.
+      <p style={{ marginTop: 14, color: "#555" }}>
+        ✅ If you see the roster, your admin wiring + JSON paths are correct.
       </p>
     </div>
   );
