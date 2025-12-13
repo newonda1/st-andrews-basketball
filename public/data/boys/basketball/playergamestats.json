@@ -13488,7 +13488,6 @@
   "FTA": 0,
   "StatComplete": "Yes"
 },
-  [
   {
     "StatID": 20251212202504,
     "PlayerID": 202504,
@@ -13741,5 +13740,4 @@
     "FTA": 0,
     "StatComplete": "Yes"
   }
-]
 ]
