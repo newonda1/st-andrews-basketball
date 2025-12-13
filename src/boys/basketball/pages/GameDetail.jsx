@@ -1,64 +1,28 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-
-// Safe date parsing (prevents blank-screen crashes if a date is ever malformed)
-const parseDateSafe = (value) => {
-  if (value === null || value === undefined || value === "") return null;
-  const s = String(value).trim();
-  const d = /^\d+$/.test(s) ? new Date(Number(s)) : new Date(s);
-  if (Number.isNaN(d.getTime())) return null;
-  return d;
-};
-
-const formatDate = (value) => {
-  const d = parseDateSafe(value);
-  if (!d) return "";
-  return d.toLocaleDateString("en-US", {
-    month: "short",
-    day: "numeric",
-    year: "numeric",
-  });
-};
-
-// If season is "2025-26" return "2025-26".
-// If season is 2025 return "2025-26".
-const formatSeasonLabel = (seasonKey) => {
-  if (!seasonKey) return "";
-  const s = String(seasonKey);
-  if (s.includes("-")) return s;
-
-  const yearNum = Number(s);
-  if (Number.isNaN(yearNum)) return s;
-
-  const next = (yearNum + 1).toString().slice(-2);
-  return `${yearNum}-${next}`;
-};
 
 function GameDetail() {
   const { gameId } = useParams();
-
   const [game, setGame] = useState(null);
   const [playerStats, setPlayerStats] = useState([]);
   const [players, setPlayers] = useState([]);
 
-  const [loading, setLoading] = useState(true);
-  const [loadError, setLoadError] = useState("");
+  // ✅ Update these two bases to match your new public folder organization
+  // Common options you might be using:
+  // 1) "/boys/basketball/data/"
+  // 2) "/data/boys/basketball/"
+  // 3) `${import.meta.env.BASE_URL}boys/basketball/data/`
+  const DATA_BASE = `${import.meta.env.BASE_URL}boys/basketball/data/`;
+  const PLAYER_IMG_BASE = `${import.meta.env.BASE_URL}boys/basketball/images/players/`;
 
   useEffect(() => {
-    async function load() {
-      setLoading(true);
-      setLoadError("");
-
+    async function fetchData() {
       try {
         const [gamesRes, statsRes, playersRes] = await Promise.all([
-          fetch("/data/boys/basketball/games.json"),
-          fetch("/data/boys/basketball/playergamestats.json"),
-          fetch("/data/boys/basketball/players.json"),
+          fetch(`${DATA_BASE}games.json`),
+          fetch(`${DATA_BASE}playergamestats.json`),
+          fetch(`${DATA_BASE}players.json`),
         ]);
-
-        if (!gamesRes.ok) throw new Error(`games.json ${gamesRes.status}`);
-        if (!statsRes.ok) throw new Error(`playergamestats.json ${statsRes.status}`);
-        if (!playersRes.ok) throw new Error(`players.json ${playersRes.status}`);
 
         const [gamesData, statsData, playersData] = await Promise.all([
           gamesRes.json(),
@@ -66,183 +30,199 @@ function GameDetail() {
           playersRes.json(),
         ]);
 
-        setPlayers(playersData);
+        const idNum = Number(gameId);
 
-        const gameObj = gamesData.find(
-          (g) => String(g.GameID) === String(gameId)
-        );
-        setGame(gameObj || null);
+        const thisGame = gamesData.find((g) => Number(g.GameID) === idNum);
+        const thisStats = statsData.filter((s) => Number(s.GameID) === idNum);
 
-        const statsForGame = statsData.filter(
-          (s) => String(s.GameID) === String(gameId)
-        );
-        setPlayerStats(statsForGame);
+        setGame(thisGame || null);
+        setPlayerStats(thisStats);
+        setPlayers(playersData || []);
       } catch (err) {
-        console.error("Failed to load game detail:", err);
-        setLoadError(String(err?.message || err));
-      } finally {
-        setLoading(false);
+        console.error("Failed to load game detail data:", err);
       }
     }
 
-    load();
-  }, [gameId]);
+    fetchData();
+  }, [gameId, DATA_BASE]);
 
-  // Map PlayerID -> name (robust to field differences)
-  const playerNameById = useMemo(() => {
-    const map = {};
-    for (const p of players) {
-      const id = String(p.PlayerID);
-      map[id] =
-        p.PlayerName ||
-        (p.FirstName && p.LastName ? `${p.FirstName} ${p.LastName}` : id);
-    }
-    return map;
-  }, [players]);
+  const getPlayerName = (playerId) => {
+    const idNum = Number(playerId);
 
-  if (loading) {
-    return (
-      <div className="p-6 max-w-5xl mx-auto space-y-4">
-        <p className="text-center text-gray-700">Loading game data…</p>
-      </div>
-    );
-  }
+    const p =
+      players.find((pl) => Number(pl.PlayerID) === idNum) ||
+      players.find((pl) => Number(pl.PlayerId) === idNum) ||
+      players.find((pl) => Number(pl.ID) === idNum);
 
-  if (loadError) {
-    return (
-      <div className="p-6 max-w-5xl mx-auto space-y-4">
-        <p className="text-center text-red-700">
-          Error loading game data: {loadError}
-        </p>
-        <div className="text-center">
-          <Link
-            to="/athletics/boys/basketball"
-            className="text-blue-700 hover:underline"
-          >
-            ← Back to Boys Basketball
-          </Link>
-        </div>
-      </div>
-    );
-  }
+    if (!p) return `Player ${playerId}`;
+
+    const fullName =
+      p.PlayerName ||
+      p.Name ||
+      (p.FirstName && p.LastName ? `${p.FirstName} ${p.LastName}` : null);
+
+    return fullName || `Player ${playerId}`;
+  };
+
+  const getPlayerPhotoUrl = (playerId) => {
+    return `${PLAYER_IMG_BASE}${playerId}.jpg`;
+  };
+
+  const formatDate = (ms) =>
+    new Date(ms).toLocaleDateString(undefined, {
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+    });
+
+  const formatPct = (made, att) => {
+    const m = Number(made);
+    const a = Number(att);
+    if (!a || a <= 0 || isNaN(m) || isNaN(a)) return "-";
+    return ((m / a) * 100).toFixed(1);
+  };
+
+  const calcEFG = (twoPM, threePM, twoPA, threePA) => {
+    const tpm = Number(twoPM) || 0;
+    const thpm = Number(threePM) || 0;
+    const tpa = Number(twoPA) || 0;
+    const thpa = Number(threePA) || 0;
+
+    const fgm = tpm + thpm;
+    const fga = tpa + thpa;
+
+    if (!fga || fga <= 0) return "-";
+
+    const efg = ((fgm + 0.5 * thpm) / fga) * 100;
+    return efg.toFixed(1);
+  };
 
   if (!game) {
-    return (
-      <div className="p-6 max-w-5xl mx-auto space-y-4">
-        <p className="text-center text-gray-700">
-          Game not found (GameID: {gameId})
-        </p>
-        <div className="text-center">
-          <Link
-            to="/athletics/boys/basketball"
-            className="text-blue-700 hover:underline"
-          >
-            ← Back to Boys Basketball
-          </Link>
-        </div>
-      </div>
-    );
+    return <div className="p-4">Game not found.</div>;
   }
 
-  const teamScore = game.TeamScore ?? "-";
-  const opponentScore = game.OpponentScore ?? "-";
+  const resultText =
+    game.Result === "W" ? "Win" : game.Result === "L" ? "Loss" : "Result pending";
 
-  const seasonLabel = formatSeasonLabel(game.Season || game.Year || "");
-  const seasonBackLink = seasonLabel
-    ? `/athletics/boys/basketball/seasons/${seasonLabel}`
-    : "/athletics/boys/basketball";
+  const showScore = game.Result === "W" || game.Result === "L";
+
+  // ✅ Dynamic season back-link (instead of hardcoding 2025–26)
+  // Falls back to 2025-26 if SeasonID is missing in older data.
+  const seasonPath = game.SeasonID
+    ? `/boys/basketball/seasons/${game.SeasonID}`
+    : `/boys/basketball/seasons/2025-26`;
 
   return (
-    <div className="p-6 max-w-5xl mx-auto space-y-6">
-      <header className="space-y-1 text-center">
-        <h1 className="text-2xl font-bold text-blue-800">
-          {game.Opponent} – Game Detail
+    <div className="p-4 space-y-6">
+      <Link to={seasonPath} className="text-sm text-blue-600 hover:underline">
+        ← Back to Season
+      </Link>
+
+      <header>
+        <h1 className="text-2xl font-bold mb-2">
+          {formatDate(game.Date)} vs {game.Opponent}
         </h1>
-        <p className="text-gray-700">
-          {formatDate(game.Date)} • {game.LocationType} • {game.GameType}
+        <p className="text-lg">
+          {resultText}
+          {showScore && (
+            <>
+              {" "}
+              — {game.TeamScore}–{game.OpponentScore}
+            </>
+          )}
         </p>
-        <p className="text-lg font-semibold">
-          Final: {teamScore}–{opponentScore} ({game.Result || "TBD"})
+        <p className="text-sm text-gray-600">
+          {game.LocationType} • {game.GameType}
         </p>
       </header>
 
-      {/* Box Score */}
-      <section className="space-y-3">
-        <h2 className="text-xl font-semibold">Box Score</h2>
-        <div className="overflow-x-auto border rounded-xl bg-white shadow-sm">
-          <table className="min-w-full text-xs border text-center">
-            <thead className="bg-gray-200 font-bold">
-              <tr>
-                <th className="border px-2 py-1 text-left">Player</th>
-                <th className="border px-2 py-1">MIN</th>
-                <th className="border px-2 py-1">PTS</th>
-                <th className="border px-2 py-1">REB</th>
-                <th className="border px-2 py-1">AST</th>
-                <th className="border px-2 py-1">STL</th>
-                <th className="border px-2 py-1">BLK</th>
-                <th className="border px-2 py-1">TOV</th>
-                <th className="border px-2 py-1">2PM</th>
-                <th className="border px-2 py-1">2PA</th>
-                <th className="border px-2 py-1">3PM</th>
-                <th className="border px-2 py-1">3PA</th>
-                <th className="border px-2 py-1">FTM</th>
-                <th className="border px-2 py-1">FTA</th>
-              </tr>
-            </thead>
-            <tbody>
-              {playerStats.length === 0 ? (
-                <tr>
-                  <td
-                    colSpan={14}
-                    className="border px-2 py-3 text-center text-gray-600"
-                  >
-                    No player statistics available for this game.
-                  </td>
-                </tr>
-              ) : (
-                playerStats.map((stat) => {
-                  const pid = String(stat.PlayerID);
-                  return (
-                    <tr key={stat.ID ?? `${stat.GameID}-${pid}`} className="border-t">
-                      <td className="border px-2 py-1 text-left whitespace-nowrap">
-                        {/* Optional but recommended: click to player page */}
-                        <Link
-                          to={`/athletics/boys/basketball/players/${pid}`}
-                          className="text-blue-700 hover:underline"
-                        >
-                          {playerNameById[pid] || "Unknown"}
-                        </Link>
-                      </td>
-                      <td className="border px-2 py-1">{stat.MinutesPlayed ?? "-"}</td>
-                      <td className="border px-2 py-1">{stat.Points ?? 0}</td>
-                      <td className="border px-2 py-1">{stat.Rebounds ?? 0}</td>
-                      <td className="border px-2 py-1">{stat.Assists ?? 0}</td>
-                      <td className="border px-2 py-1">{stat.Steals ?? 0}</td>
-                      <td className="border px-2 py-1">{stat.Blocks ?? 0}</td>
-                      <td className="border px-2 py-1">{stat.Turnovers ?? 0}</td>
-                      <td className="border px-2 py-1">{stat.TwoPM ?? 0}</td>
-                      <td className="border px-2 py-1">{stat.TwoPA ?? 0}</td>
-                      <td className="border px-2 py-1">{stat.ThreePM ?? 0}</td>
-                      <td className="border px-2 py-1">{stat.ThreePA ?? 0}</td>
-                      <td className="border px-2 py-1">{stat.FTM ?? 0}</td>
-                      <td className="border px-2 py-1">{stat.FTA ?? 0}</td>
-                    </tr>
-                  );
-                })
-              )}
-            </tbody>
-          </table>
-        </div>
+      <section>
+        <h2 className="text-xl font-semibold mb-2">Game Recap</h2>
+        <p className="text-gray-700 leading-relaxed whitespace-pre-line">
+          {game.Recap && game.Recap.trim().length > 0 ? game.Recap : "Recap coming soon."}
+        </p>
       </section>
 
-      <div className="text-center">
-        <Link
-          to={seasonBackLink}
-          className="inline-block mt-4 text-sm text-blue-700 hover:underline"
-        >
-          ← Back to {seasonLabel ? `${seasonLabel} Season` : "Boys Basketball"}
-        </Link>
-      </div>
+      <section>
+        <h2 className="text-xl font-semibold mb-2">Box Score</h2>
+        {playerStats.length === 0 ? (
+          <p className="text-gray-600">No player statistics recorded for this game yet.</p>
+        ) : (
+          <div className="overflow-x-auto">
+            <table className="min-w-full border text-xs sm:text-sm text-center">
+              <thead className="bg-gray-100">
+                <tr>
+                  <th className="border px-2 py-1">Player</th>
+                  <th className="border px-2 py-1">PTS</th>
+                  <th className="border px-2 py-1">REB</th>
+                  <th className="border px-2 py-1">AST</th>
+                  <th className="border px-2 py-1">TO</th>
+                  <th className="border px-2 py-1">STL</th>
+                  <th className="border px-2 py-1">BLK</th>
+                  <th className="border px-2 py-1">3PM</th>
+                  <th className="border px-2 py-1">3PA</th>
+                  <th className="border px-2 py-1">3P%</th>
+                  <th className="border px-2 py-1">2PM</th>
+                  <th className="border px-2 py-1">2PA</th>
+                  <th className="border px-2 py-1">2P%</th>
+                  <th className="border px-2 py-1">eFG%</th>
+                  <th className="border px-2 py-1">FTM</th>
+                  <th className="border px-2 py-1">FTA</th>
+                  <th className="border px-2 py-1">FT%</th>
+                </tr>
+              </thead>
+              <tbody>
+                {playerStats.map((s) => {
+                  const threePct = formatPct(s.ThreePM, s.ThreePA);
+                  const twoPct = formatPct(s.TwoPM, s.TwoPA);
+                  const efgPct = calcEFG(s.TwoPM, s.ThreePM, s.TwoPA, s.ThreePA);
+                  const ftPct = formatPct(s.FTM, s.FTA);
+
+                  return (
+                    <tr key={s.PlayerGameStatsID ?? `${s.GameID}-${s.PlayerID}`}>
+                      <td className="border px-2 py-1 align-middle text-left">
+                        <div className="flex items-center justify-start gap-2">
+                          <img
+                            src={getPlayerPhotoUrl(s.PlayerID)}
+                            alt={getPlayerName(s.PlayerID)}
+                            onError={(e) => {
+                              e.currentTarget.src = `${PLAYER_IMG_BASE}default.jpg`;
+                            }}
+                            className="w-8 h-8 rounded-full object-cover border"
+                          />
+                          <Link
+                            to={`/boys/basketball/players/${s.PlayerID}`}
+                            className="text-blue-600 underline hover:text-blue-800"
+                          >
+                            {getPlayerName(s.PlayerID)}
+                          </Link>
+                        </div>
+                      </td>
+
+                      <td className="border px-2 py-1 align-middle">{s.Points}</td>
+                      <td className="border px-2 py-1 align-middle">{s.Rebounds}</td>
+                      <td className="border px-2 py-1 align-middle">{s.Assists}</td>
+                      <td className="border px-2 py-1 align-middle">{s.Turnovers}</td>
+                      <td className="border px-2 py-1 align-middle">{s.Steals}</td>
+                      <td className="border px-2 py-1 align-middle">{s.Blocks}</td>
+                      <td className="border px-2 py-1 align-middle">{s.ThreePM}</td>
+                      <td className="border px-2 py-1 align-middle">{s.ThreePA}</td>
+                      <td className="border px-2 py-1 align-middle">{threePct}</td>
+                      <td className="border px-2 py-1 align-middle">{s.TwoPM}</td>
+                      <td className="border px-2 py-1 align-middle">{s.TwoPA}</td>
+                      <td className="border px-2 py-1 align-middle">{twoPct}</td>
+                      <td className="border px-2 py-1 align-middle">{efgPct}</td>
+                      <td className="border px-2 py-1 align-middle">{s.FTM}</td>
+                      <td className="border px-2 py-1 align-middle">{s.FTA}</td>
+                      <td className="border px-2 py-1 align-middle">{ftPct}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </section>
     </div>
   );
 }
