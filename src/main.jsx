@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AthleticsHome from "./AthleticsHome.jsx";
 import BoysBasketballApp from "./boys/basketball/BoysBasketballApp.jsx";
 import GirlsBasketballApp from "./girls/basketball/GirlsBasketballApp.jsx";
+import AdminApp from "./admin/AdminApp.jsx"; // ✅ NEW
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -26,6 +27,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           path="/athletics/girls/basketball/*"
           element={<GirlsBasketballApp />}
         />
+
+        {/* ✅ Admin (global) */}
+        <Route path="/admin/*" element={<AdminApp />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
