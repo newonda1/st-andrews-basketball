@@ -4119,12 +4119,12 @@
     "Opponent": "Johnson High School",
     "LocationType": "Neutral",
     "GameType": "Showcase",
-    "Result": "Unknown",
-    "TeamScore": null,
-    "OpponentScore": null,
-    "ResultMargin": null,
+    "Result": "L",
+    "TeamScore": 55,
+    "OpponentScore": 65,
+    "ResultMargin": -10,
     "Season": 2025,
-    "IsComplete": "Unknown"
+    "IsComplete": "Yes"
   },
   {
     "GameID": 20251219,
