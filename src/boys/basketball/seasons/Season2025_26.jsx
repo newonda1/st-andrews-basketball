@@ -11,6 +11,7 @@ function Season2025_26() {
     direction: "asc",
   });
   const [showPerGame, setShowPerGame] = useState(false);
+  const [showTeamTotals, setShowTeamTotals] = useState(false);
 
   const SEASON_ID = 2025; // 2025–26 season
 
@@ -388,11 +389,104 @@ function Season2025_26() {
       </section>
 
       {/* 2. FULL SCHEDULE – future games have blank result/score */}
-      <section>
-        <h2 className="text-2xl font-semibold mt-8 mb-4">
-          📅 Schedule &amp; Results
-        </h2>
-        <div className="overflow-x-auto px-1">
+      {/* 2. FULL SCHEDULE – toggle: Game Result vs Team Totals */}
+<section>
+  <div className="flex items-center justify-between mt-8 mb-4">
+    <h2 className="text-2xl font-semibold">📅 Schedule &amp; Results</h2>
+
+    {/* Toggle: Game Result / Team Totals */}
+    <div className="flex items-center gap-2 text-xs sm:text-sm">
+      <span className={`${showTeamTotals ? "text-gray-400" : "text-gray-900 font-semibold"}`}>
+        Game Result
+      </span>
+
+      <button
+        type="button"
+        onClick={() => setShowTeamTotals((prev) => !prev)}
+        className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-200 ${
+          showTeamTotals ? "bg-green-500" : "bg-gray-300"
+        }`}
+        aria-label="Toggle Game Result / Team Totals"
+      >
+        <span
+          className={`inline-block h-5 w-5 transform rounded-full bg-white shadow transition-transform duration-200 ${
+            showTeamTotals ? "translate-x-5" : "translate-x-1"
+          }`}
+        />
+      </button>
+
+      <span className={`${showTeamTotals ? "text-gray-900 font-semibold" : "text-gray-400"}`}>
+        Team Totals
+      </span>
+    </div>
+  </div>
+
+  {/* Helpers scoped to this section */}
+  {(() => {
+    const safeNum = (v) => (Number.isFinite(Number(v)) ? Number(v) : 0);
+
+    const pct = (made, att) => {
+      const m = safeNum(made);
+      const a = safeNum(att);
+      if (a <= 0) return "—";
+      return `${((m / a) * 100).toFixed(1)}%`;
+    };
+
+    const assistTo = (ast, to) => {
+      const a = safeNum(ast);
+      const t = safeNum(to);
+      if (t <= 0) return "—";
+      return (a / t).toFixed(2);
+    };
+
+    const teamTotalsByGameId = new Map();
+
+    // Build totals for each game once
+    for (const g of games) {
+      const gid = g.GameID;
+      const rows = playerStats.filter((s) => Number(s.GameID) === Number(gid));
+
+      const totals = {
+        REB: 0,
+        AST: 0,
+        TO: 0,
+        STL: 0,
+        BLK: 0,
+        ThreePM: 0,
+        ThreePA: 0,
+        TwoPM: 0,
+        TwoPA: 0,
+        FTM: 0,
+        FTA: 0,
+      };
+
+      for (const r of rows) {
+        // If you want to exclude incomplete rows, uncomment this:
+        // if (r.StatComplete && r.StatComplete !== "Yes") continue;
+
+        totals.REB += safeNum(r.Rebounds);
+        totals.AST += safeNum(r.Assists);
+        totals.TO += safeNum(r.Turnovers);
+        totals.STL += safeNum(r.Steals);
+        totals.BLK += safeNum(r.Blocks);
+
+        totals.ThreePM += safeNum(r.ThreePM);
+        totals.ThreePA += safeNum(r.ThreePA);
+
+        totals.TwoPM += safeNum(r.TwoPM);
+        totals.TwoPA += safeNum(r.TwoPA);
+
+        totals.FTM += safeNum(r.FTM);
+        totals.FTA += safeNum(r.FTA);
+      }
+
+      teamTotalsByGameId.set(Number(gid), totals);
+    }
+
+    return (
+      <div className="overflow-x-auto px-1">
+        {!showTeamTotals ? (
+          /* ------------------ GAME RESULT TABLE (your existing view) ------------------ */
           <table className="w-full border text-center text-xs sm:text-sm md:text-base">
             <thead>
               <tr>
@@ -418,26 +512,92 @@ function Season2025_26() {
                 );
 
                 return (
-                  <tr key={game.GameID || idx}>
-                    <td className="border px-2 py-1 text-center">
-                      {formatDate(game.Date)}
-                    </td>
-                    <td className="border px-2 py-1 text-center">
-                      {opponentCell}
-                    </td>
-                    <td className="border px-2 py-1 text-center">
-                      {formatResult(game)}
-                    </td>
-                    <td className="border px-2 py-1 whitespace-nowrap text-center">
-                      {formatScore(game)}
-                    </td>
+                  <tr key={game.GameID || idx} className={idx % 2 ? "bg-gray-50" : "bg-white"}>
+                    <td className="border px-2 py-1 text-center">{formatDate(game.Date)}</td>
+                    <td className="border px-2 py-1 text-center">{opponentCell}</td>
+                    <td className="border px-2 py-1 text-center">{formatResult(game)}</td>
+                    <td className="border px-2 py-1 whitespace-nowrap text-center">{formatScore(game)}</td>
                   </tr>
                 );
               })}
             </tbody>
           </table>
-        </div>
-      </section>
+        ) : (
+          /* ------------------ TEAM TOTALS TABLE ------------------ */
+          <table className="w-full border text-center text-xs sm:text-sm md:text-base table-auto whitespace-nowrap">
+            <thead className="bg-gray-100">
+              <tr>
+                <th className="border px-2 py-1">Date</th>
+                <th className="border px-2 py-1">Opponent</th>
+
+                <th className="border px-2 py-1">REB</th>
+                <th className="border px-2 py-1">AST</th>
+                <th className="border px-2 py-1">TO</th>
+                <th className="border px-2 py-1">A/T</th>
+                <th className="border px-2 py-1">STL</th>
+                <th className="border px-2 py-1">BLK</th>
+
+                <th className="border px-2 py-1">3PM</th>
+                <th className="border px-2 py-1">3PA</th>
+                <th className="border px-2 py-1">3P%</th>
+
+                <th className="border px-2 py-1">2PM</th>
+                <th className="border px-2 py-1">2P%</th>
+
+                <th className="border px-2 py-1">FTM</th>
+                <th className="border px-2 py-1">FTA</th>
+                <th className="border px-2 py-1">FT%</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              {games.map((game, idx) => {
+                const totals = teamTotalsByGameId.get(Number(game.GameID)) || null;
+                const hasResult = game.Result === "W" || game.Result === "L";
+
+                const opponentCell = hasResult ? (
+                  <Link
+                    to={`/athletics/boys/basketball/games/${game.GameID}`}
+                    className="text-blue-700 hover:underline"
+                  >
+                    {game.Opponent}
+                  </Link>
+                ) : (
+                  game.Opponent
+                );
+
+                return (
+                  <tr key={game.GameID || idx} className={idx % 2 ? "bg-gray-50" : "bg-white"}>
+                    <td className="border px-2 py-1">{formatDate(game.Date)}</td>
+                    <td className="border px-2 py-1">{opponentCell}</td>
+
+                    <td className="border px-2 py-1">{totals ? totals.REB : "—"}</td>
+                    <td className="border px-2 py-1">{totals ? totals.AST : "—"}</td>
+                    <td className="border px-2 py-1">{totals ? totals.TO : "—"}</td>
+                    <td className="border px-2 py-1">{totals ? assistTo(totals.AST, totals.TO) : "—"}</td>
+                    <td className="border px-2 py-1">{totals ? totals.STL : "—"}</td>
+                    <td className="border px-2 py-1">{totals ? totals.BLK : "—"}</td>
+
+                    <td className="border px-2 py-1">{totals ? totals.ThreePM : "—"}</td>
+                    <td className="border px-2 py-1">{totals ? totals.ThreePA : "—"}</td>
+                    <td className="border px-2 py-1">{totals ? pct(totals.ThreePM, totals.ThreePA) : "—"}</td>
+
+                    <td className="border px-2 py-1">{totals ? totals.TwoPM : "—"}</td>
+                    <td className="border px-2 py-1">{totals ? pct(totals.TwoPM, totals.TwoPA) : "—"}</td>
+
+                    <td className="border px-2 py-1">{totals ? totals.FTM : "—"}</td>
+                    <td className="border px-2 py-1">{totals ? totals.FTA : "—"}</td>
+                    <td className="border px-2 py-1">{totals ? pct(totals.FTM, totals.FTA) : "—"}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        )}
+      </div>
+    );
+  })()}
+</section>
 
       {/* 3. SEASON PLAYER TOTALS (sortable, with photos & jersey column) */}
       <section>
