@@ -2,12 +2,10 @@ import React, { useEffect, useMemo, useState } from "react";
 
 /**
  * Boys Basketball Admin – Box Score Entry UI (full-game at once)
- *
- * Data locations (your setup):
- *   /public/data/boys/basketball/*.json  -> fetch via /data/boys/basketball/*.json
- *
- * games.json uses: "Season": 2025 (meaning 2025-26)
- * seasonrosters.json uses: "SeasonID": "2025-26"
+ * Fixes:
+ * 1) Export ONLY current game's stat rows
+ * 2) Skip blank rows reliably
+ * 3) Add DNP checkbox to explicitly exclude players
  */
 
 function absUrl(path) {
@@ -102,10 +100,16 @@ const STAT_LABELS = {
   FTA: "FTA",
 };
 
-function emptyStatLine() {
-  const o = {};
+function emptyRow() {
+  const o = { DNP: false };
   for (const k of STAT_KEYS) o[k] = "";
   return o;
+}
+
+function rowHasAnyEnteredValue(row) {
+  if (!row) return false;
+  if (row.DNP) return false;
+  return STAT_KEYS.some((k) => String(row[k] ?? "").trim() !== "");
 }
 
 export default function BoysBasketballAdmin() {
@@ -124,13 +128,14 @@ export default function BoysBasketballAdmin() {
   const [selectedSeason, setSelectedSeason] = useState("");
   const [selectedGameId, setSelectedGameId] = useState("");
 
-  // boxScore is keyed by PlayerID -> { Points:"", Rebounds:"", ... }
+  // boxScore[playerId] = { DNP, Points, Rebounds, ... }
   const [boxScore, setBoxScore] = useState({});
+
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  // Save behavior
-  const [overwriteExisting, setOverwriteExisting] = useState(false);
+  // If checked, saving replaces existing rows for this game/player.
+  const [overwriteExisting, setOverwriteExisting] = useState(true);
 
   useEffect(() => {
     async function load() {
@@ -150,9 +155,7 @@ export default function BoysBasketballAdmin() {
         setGames(Array.isArray(g) ? g : []);
         setPlayerGameStats(Array.isArray(s) ? s : []);
 
-        if (Array.isArray(r) && r.length > 0) {
-          setSelectedSeason(r[0].SeasonID);
-        }
+        if (Array.isArray(r) && r.length > 0) setSelectedSeason(r[0].SeasonID);
       } catch (e) {
         setError(String(e?.message || e));
       } finally {
@@ -199,7 +202,7 @@ export default function BoysBasketballAdmin() {
     return gamesForSeason.find((g) => Number(g.GameID) === gid) || null;
   }, [gamesForSeason, selectedGameId]);
 
-  // existingStatsMap: PlayerID -> stat object for selected game (if exists)
+  // Existing stats for this GameID
   const existingStatsMap = useMemo(() => {
     const gid = Number(selectedGame?.GameID);
     if (!Number.isFinite(gid)) return new Map();
@@ -218,7 +221,7 @@ export default function BoysBasketballAdmin() {
     setBoxScore({});
   }, [selectedSeason]);
 
-  // When game changes, initialize (and prefill) box score rows for roster
+  // When game changes, generate rows for roster and prefill any existing stats
   useEffect(() => {
     if (!selectedGame || rosterPlayersDetailed.length === 0) {
       setBoxScore({});
@@ -229,11 +232,13 @@ export default function BoysBasketballAdmin() {
     for (const p of rosterPlayersDetailed) {
       const existing = existingStatsMap.get(Number(p.PlayerID));
       if (existing) {
-        const row = emptyStatLine();
+        const row = emptyRow();
+        // Prefill values as strings so inputs show them
         for (const k of STAT_KEYS) row[k] = existing?.[k] ?? "";
+        row.DNP = false;
         next[p.PlayerID] = row;
       } else {
-        next[p.PlayerID] = emptyStatLine();
+        next[p.PlayerID] = emptyRow();
       }
     }
 
@@ -244,49 +249,57 @@ export default function BoysBasketballAdmin() {
     setBoxScore((prev) => ({
       ...prev,
       [playerId]: {
-        ...(prev[playerId] || emptyStatLine()),
+        ...(prev[playerId] || emptyRow()),
         [statKey]: value,
       },
     }));
   }
 
+  function toggleDnp(playerId, checked) {
+    setBoxScore((prev) => {
+      const cur = prev[playerId] || emptyRow();
+      // When DNP is checked, clear the numeric inputs
+      if (checked) {
+        const cleared = emptyRow();
+        cleared.DNP = true;
+        return { ...prev, [playerId]: cleared };
+      }
+      return { ...prev, [playerId]: { ...cur, DNP: false } };
+    });
+  }
+
   function clearBoxScore() {
     if (!selectedGame) return;
     const next = {};
-    for (const p of rosterPlayersDetailed) {
-      next[p.PlayerID] = emptyStatLine();
-    }
+    for (const p of rosterPlayersDetailed) next[p.PlayerID] = emptyRow();
     setBoxScore(next);
   }
 
   function saveBoxScore() {
-    if (!selectedSeason) {
-      alert("Select a season.");
-      return;
-    }
-    if (!selectedGame) {
-      alert("Select a game.");
-      return;
-    }
+    if (!selectedSeason) return alert("Select a season.");
+    if (!selectedGame) return alert("Select a game.");
 
     const gid = Number(selectedGame.GameID);
-    if (!Number.isFinite(gid)) {
-      alert("Invalid GameID.");
-      return;
-    }
+    if (!Number.isFinite(gid)) return alert("Invalid GameID.");
 
-    // Build new/updated stat lines for roster players
+    // Build updates only for:
+    // - rows with any values entered, AND not DNP
     const updates = [];
+    const dnpPlayers = [];
+
     for (const p of rosterPlayersDetailed) {
       const pid = Number(p.PlayerID);
-      const row = boxScore[pid] || emptyStatLine();
+      const row = boxScore[pid] || emptyRow();
 
-      // If user leaves entire row blank, skip it (helps bench/DNP)
-      const hasAnyValue = STAT_KEYS.some((k) => String(row[k] ?? "").trim() !== "");
-      if (!hasAnyValue) continue;
+      if (row.DNP) {
+        dnpPlayers.push(pid);
+        continue;
+      }
+
+      if (!rowHasAnyEnteredValue(row)) continue;
 
       updates.push({
-        Season: seasonYear, // your convention
+        Season: seasonYear,
         GameID: gid,
         PlayerID: pid,
 
@@ -308,47 +321,48 @@ export default function BoysBasketballAdmin() {
     }
 
     if (updates.length === 0) {
-      alert("No stat rows entered yet.");
+      alert("No stat rows entered yet (or everyone is blank/DNP).");
       return;
     }
 
     setPlayerGameStats((prev) => {
-      const next = [...prev];
+      let next = [...prev];
 
-      // Make index for fast lookups (GameID|PlayerID -> idx)
-      const idx = new Map();
-      for (let i = 0; i < next.length; i++) {
-        const key = `${Number(next[i].GameID)}|${Number(next[i].PlayerID)}`;
-        idx.set(key, i);
+      // If overwriteExisting: remove any existing rows for this game for roster players,
+      // then add updates. This prevents “phantom” zero rows.
+      if (overwriteExisting) {
+        const rosterIds = new Set(rosterPlayersDetailed.map((p) => Number(p.PlayerID)));
+        next = next.filter((s) => !(Number(s.GameID) === gid && rosterIds.has(Number(s.PlayerID))));
       }
 
-      for (const up of updates) {
-        const key = `${Number(up.GameID)}|${Number(up.PlayerID)}`;
-        const existingIndex = idx.get(key);
-
-        if (existingIndex === undefined) {
-          next.push(up);
-          idx.set(key, next.length - 1);
-        } else {
-          // If overwriteExisting is false, we still update values (since this is an editor),
-          // but we keep any extra fields present in existing record.
-          const existing = next[existingIndex];
-          next[existingIndex] = overwriteExisting ? up : { ...existing, ...up };
-        }
+      // Also remove any existing rows for players explicitly marked DNP (optional safety)
+      if (dnpPlayers.length > 0) {
+        const dnpSet = new Set(dnpPlayers);
+        next = next.filter((s) => !(Number(s.GameID) === gid && dnpSet.has(Number(s.PlayerID))));
       }
 
-      return next;
+      return [...next, ...updates];
     });
 
-    alert("Box score saved in memory. Now download playergamestats.json to persist it.");
+    alert(
+      "Box score saved in memory.\n" +
+        "Use 'Download THIS game' to copy just this game's rows,\n" +
+        "or download full playergamestats.json to persist."
+    );
   }
 
-  // Simple computed check: total points from entered box score (non-blank rows)
+  // Export helpers
+  const currentGameRows = useMemo(() => {
+    const gid = Number(selectedGame?.GameID);
+    if (!Number.isFinite(gid)) return [];
+    return playerGameStats.filter((s) => Number(s.GameID) === gid);
+  }, [playerGameStats, selectedGame]);
+
   const enteredPointsTotal = useMemo(() => {
     let sum = 0;
     for (const pid of Object.keys(boxScore)) {
       const row = boxScore[pid];
-      if (!row) continue;
+      if (!row || row.DNP) continue;
       sum += numOrZero(row.Points);
     }
     return sum;
@@ -407,60 +421,30 @@ export default function BoysBasketballAdmin() {
 
       <hr style={{ margin: "18px 0" }} />
 
-      {/* Roster */}
-      <section>
-        <h3 style={{ margin: "0 0 8px" }}>Roster (for dropdown + validation)</h3>
-
-        {!selectedRoster && <p>No roster found for this season.</p>}
-
-        {selectedRoster && (
-          <div style={{ maxHeight: 220, overflow: "auto", border: "1px solid #e5e7eb", borderRadius: 12 }}>
-            <table style={{ width: "100%", borderCollapse: "collapse" }}>
-              <thead>
-                <tr>
-                  <th style={thSticky}>#</th>
-                  <th style={thSticky}>Player</th>
-                  <th style={thSticky}>Grad</th>
-                  <th style={thSticky}>PlayerID</th>
-                </tr>
-              </thead>
-              <tbody>
-                {rosterPlayersDetailed.map((p) => (
-                  <tr key={p.PlayerID}>
-                    <td style={td}>{p.JerseyNumber}</td>
-                    <td style={td}>{p.Name}</td>
-                    <td style={td}>{p.GradYear}</td>
-                    <td style={td}>{p.PlayerID}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        )}
-      </section>
-
-      <hr style={{ margin: "18px 0" }} />
-
       {/* Box Score Entry */}
       <section>
         <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 10 }}>
           <h3 style={{ margin: 0 }}>Game Box Score Entry</h3>
 
-          <button
-            style={btnPrimary}
-            onClick={saveBoxScore}
-            disabled={!selectedGame || rosterPlayersDetailed.length === 0}
-            title="Saves into in-memory state. Download to persist."
-          >
+          <button style={btnPrimary} onClick={saveBoxScore} disabled={!selectedGame}>
             Save Box Score
           </button>
 
           <button
             style={btn}
-            onClick={() => downloadJSON("playergamestats.json", playerGameStats)}
-            title="Download the updated file and replace it in /public/data/boys/basketball/"
+            onClick={() => downloadJSON(`game_${selectedGameId || "unknown"}_playergamestats.json`, currentGameRows)}
+            disabled={!selectedGame}
+            title="Downloads ONLY the stat rows for the selected GameID"
           >
-            Download playergamestats.json
+            Download THIS game
+          </button>
+
+          <button
+            style={btn}
+            onClick={() => downloadJSON("playergamestats.json", playerGameStats)}
+            title="Downloads the full file (use when you're ready to replace it in /public/data/boys/basketball/)"
+          >
+            Download full playergamestats.json
           </button>
 
           <button style={btn} onClick={clearBoxScore} disabled={!selectedGame}>
@@ -473,78 +457,78 @@ export default function BoysBasketballAdmin() {
               checked={overwriteExisting}
               onChange={(e) => setOverwriteExisting(e.target.checked)}
             />
-            Overwrite existing rows
+            Overwrite existing rows for this game
           </label>
 
           <div style={{ marginLeft: "auto", color: "#555", fontSize: 13 }}>
-            Loaded stat lines: <strong>{playerGameStats.length}</strong>
+            Existing rows for this game: <strong>{currentGameRows.length}</strong> • Entered PTS total:{" "}
+            <strong>{enteredPointsTotal}</strong>
           </div>
         </div>
 
-        {!selectedGame && (
-          <p style={{ marginTop: 10, color: "#555" }}>
-            Select a game to generate the box score table.
-          </p>
-        )}
+        {!selectedGame && <p style={{ marginTop: 10, color: "#555" }}>Select a game to generate the box score table.</p>}
 
         {selectedGame && (
-          <>
-            <div style={{ marginTop: 10, color: "#555", fontSize: 13 }}>
-              Prefill: <strong>{existingStatsMap.size}</strong> existing player stat lines found for this game. •
-              Entered points total: <strong>{enteredPointsTotal}</strong>
-            </div>
+          <div style={{ marginTop: 10, overflow: "auto", border: "1px solid #e5e7eb", borderRadius: 12 }}>
+            <table style={{ width: "100%", borderCollapse: "collapse", minWidth: 1100 }}>
+              <thead>
+                <tr>
+                  <th style={thSticky}>#</th>
+                  <th style={thSticky}>Player</th>
+                  <th style={thStickyCenter}>DNP</th>
+                  {STAT_KEYS.map((k) => (
+                    <th key={k} style={thStickyCenter}>
+                      {STAT_LABELS[k] || k}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
 
-            <div style={{ marginTop: 10, overflow: "auto", border: "1px solid #e5e7eb", borderRadius: 12 }}>
-              <table style={{ width: "100%", borderCollapse: "collapse", minWidth: 980 }}>
-                <thead>
-                  <tr>
-                    <th style={thSticky}>#</th>
-                    <th style={thSticky}>Player</th>
-                    {STAT_KEYS.map((k) => (
-                      <th key={k} style={thStickyCenter}>
-                        {STAT_LABELS[k] || k}
-                      </th>
-                    ))}
-                  </tr>
-                </thead>
+              <tbody>
+                {rosterPlayersDetailed.map((p) => {
+                  const row = boxScore[p.PlayerID] || emptyRow();
+                  const hasExisting = existingStatsMap.has(Number(p.PlayerID));
 
-                <tbody>
-                  {rosterPlayersDetailed.map((p) => {
-                    const row = boxScore[p.PlayerID] || emptyStatLine();
-                    const hasExisting = existingStatsMap.has(Number(p.PlayerID));
+                  return (
+                    <tr key={p.PlayerID} style={hasExisting ? rowExisting : undefined}>
+                      <td style={tdCenter}>{p.JerseyNumber}</td>
+                      <td style={tdName}>
+                        {p.Name}
+                        {hasExisting && <span style={pill}>existing</span>}
+                      </td>
 
-                    return (
-                      <tr key={p.PlayerID} style={hasExisting ? rowExisting : undefined}>
-                        <td style={tdCenter}>{p.JerseyNumber}</td>
-                        <td style={tdName}>
-                          {p.Name}
-                          {hasExisting && <span style={pill}>existing</span>}
+                      <td style={tdCenter}>
+                        <input
+                          type="checkbox"
+                          checked={!!row.DNP}
+                          onChange={(e) => toggleDnp(p.PlayerID, e.target.checked)}
+                        />
+                      </td>
+
+                      {STAT_KEYS.map((k) => (
+                        <td key={k} style={tdCenter}>
+                          <input
+                            value={row.DNP ? "" : row[k]}
+                            onChange={(e) => setCell(p.PlayerID, k, e.target.value)}
+                            inputMode="numeric"
+                            disabled={row.DNP}
+                            style={cellInput}
+                          />
                         </td>
-
-                        {STAT_KEYS.map((k) => (
-                          <td key={k} style={tdCenter}>
-                            <input
-                              value={row[k]}
-                              onChange={(e) => setCell(p.PlayerID, k, e.target.value)}
-                              inputMode="numeric"
-                              placeholder=""
-                              style={cellInput}
-                            />
-                          </td>
-                        ))}
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-            </div>
-
-            <p style={{ marginTop: 10, color: "#555", lineHeight: 1.4 }}>
-              Tip: Leave a player’s entire row blank to skip them (bench/DNP). If you want true DNP tracking later,
-              we can add a checkbox column.
-            </p>
-          </>
+                      ))}
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
         )}
+
+        <p style={{ marginTop: 10, color: "#555", lineHeight: 1.4 }}>
+          Tips:
+          <br />• Mark DNP to guarantee no row is saved for that player.
+          <br />• “Download THIS game” gives you just the rows you need to paste into your JSON (or compare).
+        </p>
       </section>
     </div>
   );
@@ -602,22 +586,20 @@ const thStickyCenter = {
   minWidth: 60,
 };
 
-const td = {
+const tdCenter = {
   borderBottom: "1px solid #eef2f7",
   padding: "8px 10px",
+  textAlign: "center",
+  whiteSpace: "nowrap",
   fontSize: 14,
 };
 
-const tdCenter = {
-  ...td,
-  textAlign: "center",
-  whiteSpace: "nowrap",
-};
-
 const tdName = {
-  ...td,
+  borderBottom: "1px solid #eef2f7",
+  padding: "8px 10px",
   whiteSpace: "nowrap",
   fontWeight: 700,
+  fontSize: 14,
 };
 
 const cellInput = {
