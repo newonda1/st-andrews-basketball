@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 
 function Season2025_26() {
@@ -189,6 +189,68 @@ function Season2025_26() {
   const formatAssistToTurnover = (player) => {
     const ast = player.Assists || 0;
     const tov = player.Turnovers || 0;
+    if (!tov) return "-";
+    return (ast / tov).toFixed(2);
+  };
+
+  // ---------- TEAM TOTALS ROW (new) ----------
+  const teamGamesPlayed = useMemo(() => {
+    const set = new Set();
+    for (const s of playerStats) {
+      if (s?.GameID != null) set.add(Number(s.GameID));
+    }
+    return set.size;
+  }, [playerStats]);
+
+  const teamTotalsRow = useMemo(() => {
+    const t = {
+      PlayerID: "TEAM_TOTALS",
+      GamesPlayed: teamGamesPlayed,
+
+      Points: 0,
+      Rebounds: 0,
+      Assists: 0,
+      Turnovers: 0,
+      Steals: 0,
+      Blocks: 0,
+
+      ThreePM: 0,
+      ThreePA: 0,
+      TwoPM: 0,
+      TwoPA: 0,
+      FTM: 0,
+      FTA: 0,
+    };
+
+    for (const p of seasonTotals) {
+      t.Points += Number(p.Points || 0);
+      t.Rebounds += Number(p.Rebounds || 0);
+      t.Assists += Number(p.Assists || 0);
+      t.Turnovers += Number(p.Turnovers || 0);
+      t.Steals += Number(p.Steals || 0);
+      t.Blocks += Number(p.Blocks || 0);
+
+      t.ThreePM += Number(p.ThreePM || 0);
+      t.ThreePA += Number(p.ThreePA || 0);
+
+      t.TwoPM += Number(p.TwoPM || 0);
+      t.TwoPA += Number(p.TwoPA || 0);
+
+      t.FTM += Number(p.FTM || 0);
+      t.FTA += Number(p.FTA || 0);
+    }
+
+    return t;
+  }, [seasonTotals, teamGamesPlayed]);
+
+  const formatTeamPerGame = (value) => {
+    if (!teamGamesPlayed) return "—";
+    return (Number(value || 0) / teamGamesPlayed).toFixed(1);
+  };
+
+  const formatTeamAssistToTurnover = (t) => {
+    const ast = Number(t.Assists || 0);
+    const tov = Number(t.Turnovers || 0);
     if (!tov) return "-";
     return (ast / tov).toFixed(2);
   };
@@ -388,218 +450,271 @@ function Season2025_26() {
         </div>
       </section>
 
-      {/* 2. FULL SCHEDULE – future games have blank result/score */}
       {/* 2. FULL SCHEDULE – toggle: Game Result vs Team Totals */}
-<section>
-  <div className="flex items-center justify-between mt-8 mb-4">
-    <h2 className="text-2xl font-semibold">📅 Schedule &amp; Results</h2>
+      <section>
+        <div className="flex items-center justify-between mt-8 mb-4">
+          <h2 className="text-2xl font-semibold">📅 Schedule &amp; Results</h2>
 
-    {/* Toggle: Game Result / Team Totals */}
-    <div className="flex items-center gap-2 text-xs sm:text-sm">
-      <span className={`${showTeamTotals ? "text-gray-400" : "text-gray-900 font-semibold"}`}>
-        Game Result
-      </span>
+          {/* Toggle: Game Result / Team Totals */}
+          <div className="flex items-center gap-2 text-xs sm:text-sm">
+            <span
+              className={`${
+                showTeamTotals ? "text-gray-400" : "text-gray-900 font-semibold"
+              }`}
+            >
+              Game Result
+            </span>
 
-      <button
-        type="button"
-        onClick={() => setShowTeamTotals((prev) => !prev)}
-        className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-200 ${
-          showTeamTotals ? "bg-green-500" : "bg-gray-300"
-        }`}
-        aria-label="Toggle Game Result / Team Totals"
-      >
-        <span
-          className={`inline-block h-5 w-5 transform rounded-full bg-white shadow transition-transform duration-200 ${
-            showTeamTotals ? "translate-x-5" : "translate-x-1"
-          }`}
-        />
-      </button>
+            <button
+              type="button"
+              onClick={() => setShowTeamTotals((prev) => !prev)}
+              className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-200 ${
+                showTeamTotals ? "bg-green-500" : "bg-gray-300"
+              }`}
+              aria-label="Toggle Game Result / Team Totals"
+            >
+              <span
+                className={`inline-block h-5 w-5 transform rounded-full bg-white shadow transition-transform duration-200 ${
+                  showTeamTotals ? "translate-x-5" : "translate-x-1"
+                }`}
+              />
+            </button>
 
-      <span className={`${showTeamTotals ? "text-gray-900 font-semibold" : "text-gray-400"}`}>
-        Team Totals
-      </span>
-    </div>
-  </div>
+            <span
+              className={`${
+                showTeamTotals ? "text-gray-900 font-semibold" : "text-gray-400"
+              }`}
+            >
+              Team Totals
+            </span>
+          </div>
+        </div>
 
-  {/* Helpers scoped to this section */}
-  {(() => {
-    const safeNum = (v) => (Number.isFinite(Number(v)) ? Number(v) : 0);
+        {/* Helpers scoped to this section */}
+        {(() => {
+          const safeNum = (v) => (Number.isFinite(Number(v)) ? Number(v) : 0);
 
-    const pct = (made, att) => {
-      const m = safeNum(made);
-      const a = safeNum(att);
-      if (a <= 0) return "—";
-      return `${((m / a) * 100).toFixed(1)}%`;
-    };
+          const pct = (made, att) => {
+            const m = safeNum(made);
+            const a = safeNum(att);
+            if (a <= 0) return "—";
+            return `${((m / a) * 100).toFixed(1)}%`;
+          };
 
-    const assistTo = (ast, to) => {
-      const a = safeNum(ast);
-      const t = safeNum(to);
-      if (t <= 0) return "—";
-      return (a / t).toFixed(2);
-    };
+          const assistTo = (ast, to) => {
+            const a = safeNum(ast);
+            const t = safeNum(to);
+            if (t <= 0) return "—";
+            return (a / t).toFixed(2);
+          };
 
-    const teamTotalsByGameId = new Map();
+          const teamTotalsByGameId = new Map();
 
-    // Build totals for each game once
-    for (const g of games) {
-      const gid = g.GameID;
-      const rows = playerStats.filter((s) => Number(s.GameID) === Number(gid));
+          // Build totals for each game once
+          for (const g of games) {
+            const gid = g.GameID;
+            const rows = playerStats.filter(
+              (s) => Number(s.GameID) === Number(gid)
+            );
 
-      const totals = {
-        REB: 0,
-        AST: 0,
-        TO: 0,
-        STL: 0,
-        BLK: 0,
-        ThreePM: 0,
-        ThreePA: 0,
-        TwoPM: 0,
-        TwoPA: 0,
-        FTM: 0,
-        FTA: 0,
-      };
+            const totals = {
+              REB: 0,
+              AST: 0,
+              TO: 0,
+              STL: 0,
+              BLK: 0,
+              ThreePM: 0,
+              ThreePA: 0,
+              TwoPM: 0,
+              TwoPA: 0,
+              FTM: 0,
+              FTA: 0,
+            };
 
-      for (const r of rows) {
-        // If you want to exclude incomplete rows, uncomment this:
-        // if (r.StatComplete && r.StatComplete !== "Yes") continue;
+            for (const r of rows) {
+              totals.REB += safeNum(r.Rebounds);
+              totals.AST += safeNum(r.Assists);
+              totals.TO += safeNum(r.Turnovers);
+              totals.STL += safeNum(r.Steals);
+              totals.BLK += safeNum(r.Blocks);
 
-        totals.REB += safeNum(r.Rebounds);
-        totals.AST += safeNum(r.Assists);
-        totals.TO += safeNum(r.Turnovers);
-        totals.STL += safeNum(r.Steals);
-        totals.BLK += safeNum(r.Blocks);
+              totals.ThreePM += safeNum(r.ThreePM);
+              totals.ThreePA += safeNum(r.ThreePA);
 
-        totals.ThreePM += safeNum(r.ThreePM);
-        totals.ThreePA += safeNum(r.ThreePA);
+              totals.TwoPM += safeNum(r.TwoPM);
+              totals.TwoPA += safeNum(r.TwoPA);
 
-        totals.TwoPM += safeNum(r.TwoPM);
-        totals.TwoPA += safeNum(r.TwoPA);
+              totals.FTM += safeNum(r.FTM);
+              totals.FTA += safeNum(r.FTA);
+            }
 
-        totals.FTM += safeNum(r.FTM);
-        totals.FTA += safeNum(r.FTA);
-      }
+            teamTotalsByGameId.set(Number(gid), totals);
+          }
 
-      teamTotalsByGameId.set(Number(gid), totals);
-    }
+          return (
+            <div className="overflow-x-auto px-1">
+              {!showTeamTotals ? (
+                <table className="w-full border text-center text-xs sm:text-sm md:text-base">
+                  <thead>
+                    <tr>
+                      <th className="border px-2 py-1">Date</th>
+                      <th className="border px-2 py-1">Opponent</th>
+                      <th className="border px-2 py-1">Result</th>
+                      <th className="border px-2 py-1">Score</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {games.map((game, idx) => {
+                      const hasResult =
+                        game.Result === "W" || game.Result === "L";
 
-    return (
-      <div className="overflow-x-auto px-1">
-        {!showTeamTotals ? (
-          /* ------------------ GAME RESULT TABLE (your existing view) ------------------ */
-          <table className="w-full border text-center text-xs sm:text-sm md:text-base">
-            <thead>
-              <tr>
-                <th className="border px-2 py-1">Date</th>
-                <th className="border px-2 py-1">Opponent</th>
-                <th className="border px-2 py-1">Result</th>
-                <th className="border px-2 py-1">Score</th>
-              </tr>
-            </thead>
-            <tbody>
-              {games.map((game, idx) => {
-                const hasResult = game.Result === "W" || game.Result === "L";
+                      const opponentCell = hasResult ? (
+                        <Link
+                          to={`/athletics/boys/basketball/games/${game.GameID}`}
+                          className="text-blue-700 hover:underline"
+                        >
+                          {game.Opponent}
+                        </Link>
+                      ) : (
+                        game.Opponent
+                      );
 
-                const opponentCell = hasResult ? (
-                  <Link
-                    to={`/athletics/boys/basketball/games/${game.GameID}`}
-                    className="text-blue-700 hover:underline"
-                  >
-                    {game.Opponent}
-                  </Link>
-                ) : (
-                  game.Opponent
-                );
+                      return (
+                        <tr
+                          key={game.GameID || idx}
+                          className={idx % 2 ? "bg-gray-50" : "bg-white"}
+                        >
+                          <td className="border px-2 py-1 text-center">
+                            {formatDate(game.Date)}
+                          </td>
+                          <td className="border px-2 py-1 text-center">
+                            {opponentCell}
+                          </td>
+                          <td className="border px-2 py-1 text-center">
+                            {formatResult(game)}
+                          </td>
+                          <td className="border px-2 py-1 whitespace-nowrap text-center">
+                            {formatScore(game)}
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              ) : (
+                <table className="w-full border text-center text-xs sm:text-sm md:text-base table-auto whitespace-nowrap">
+                  <thead className="bg-gray-100">
+                    <tr>
+                      <th className="border px-2 py-1">Date</th>
+                      <th className="border px-2 py-1">Opponent</th>
 
-                return (
-                  <tr key={game.GameID || idx} className={idx % 2 ? "bg-gray-50" : "bg-white"}>
-                    <td className="border px-2 py-1 text-center">{formatDate(game.Date)}</td>
-                    <td className="border px-2 py-1 text-center">{opponentCell}</td>
-                    <td className="border px-2 py-1 text-center">{formatResult(game)}</td>
-                    <td className="border px-2 py-1 whitespace-nowrap text-center">{formatScore(game)}</td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        ) : (
-          /* ------------------ TEAM TOTALS TABLE ------------------ */
-          <table className="w-full border text-center text-xs sm:text-sm md:text-base table-auto whitespace-nowrap">
-            <thead className="bg-gray-100">
-              <tr>
-                <th className="border px-2 py-1">Date</th>
-                <th className="border px-2 py-1">Opponent</th>
+                      <th className="border px-2 py-1">REB</th>
+                      <th className="border px-2 py-1">AST</th>
+                      <th className="border px-2 py-1">TO</th>
+                      <th className="border px-2 py-1">A/T</th>
+                      <th className="border px-2 py-1">STL</th>
+                      <th className="border px-2 py-1">BLK</th>
 
-                <th className="border px-2 py-1">REB</th>
-                <th className="border px-2 py-1">AST</th>
-                <th className="border px-2 py-1">TO</th>
-                <th className="border px-2 py-1">A/T</th>
-                <th className="border px-2 py-1">STL</th>
-                <th className="border px-2 py-1">BLK</th>
+                      <th className="border px-2 py-1">3PM</th>
+                      <th className="border px-2 py-1">3PA</th>
+                      <th className="border px-2 py-1">3P%</th>
 
-                <th className="border px-2 py-1">3PM</th>
-                <th className="border px-2 py-1">3PA</th>
-                <th className="border px-2 py-1">3P%</th>
+                      <th className="border px-2 py-1">2PM</th>
+                      <th className="border px-2 py-1">2PA</th>
+                      <th className="border px-2 py-1">2P%</th>
 
-                <th className="border px-2 py-1">2PM</th>
-                <th className="border px-2 py-1">2PA</th>
-                <th className="border px-2 py-1">2P%</th>
+                      <th className="border px-2 py-1">FTM</th>
+                      <th className="border px-2 py-1">FTA</th>
+                      <th className="border px-2 py-1">FT%</th>
+                    </tr>
+                  </thead>
 
-                <th className="border px-2 py-1">FTM</th>
-                <th className="border px-2 py-1">FTA</th>
-                <th className="border px-2 py-1">FT%</th>
-              </tr>
-            </thead>
+                  <tbody>
+                    {games.map((game, idx) => {
+                      const totals =
+                        teamTotalsByGameId.get(Number(game.GameID)) || null;
+                      const hasResult =
+                        game.Result === "W" || game.Result === "L";
 
-            <tbody>
-              {games.map((game, idx) => {
-                const totals = teamTotalsByGameId.get(Number(game.GameID)) || null;
-                const hasResult = game.Result === "W" || game.Result === "L";
+                      const opponentCell = hasResult ? (
+                        <Link
+                          to={`/athletics/boys/basketball/games/${game.GameID}`}
+                          className="text-blue-700 hover:underline"
+                        >
+                          {game.Opponent}
+                        </Link>
+                      ) : (
+                        game.Opponent
+                      );
 
-                const opponentCell = hasResult ? (
-                  <Link
-                    to={`/athletics/boys/basketball/games/${game.GameID}`}
-                    className="text-blue-700 hover:underline"
-                  >
-                    {game.Opponent}
-                  </Link>
-                ) : (
-                  game.Opponent
-                );
+                      return (
+                        <tr
+                          key={game.GameID || idx}
+                          className={idx % 2 ? "bg-gray-50" : "bg-white"}
+                        >
+                          <td className="border px-2 py-1">
+                            {formatDate(game.Date)}
+                          </td>
+                          <td className="border px-2 py-1">{opponentCell}</td>
 
-                return (
-                  <tr key={game.GameID || idx} className={idx % 2 ? "bg-gray-50" : "bg-white"}>
-                    <td className="border px-2 py-1">{formatDate(game.Date)}</td>
-                    <td className="border px-2 py-1">{opponentCell}</td>
+                          <td className="border px-2 py-1">
+                            {totals ? totals.REB : "—"}
+                          </td>
+                          <td className="border px-2 py-1">
+                            {totals ? totals.AST : "—"}
+                          </td>
+                          <td className="border px-2 py-1">
+                            {totals ? totals.TO : "—"}
+                          </td>
+                          <td className="border px-2 py-1">
+                            {totals ? assistTo(totals.AST, totals.TO) : "—"}
+                          </td>
+                          <td className="border px-2 py-1">
+                            {totals ? totals.STL : "—"}
+                          </td>
+                          <td className="border px-2 py-1">
+                            {totals ? totals.BLK : "—"}
+                          </td>
 
-                    <td className="border px-2 py-1">{totals ? totals.REB : "—"}</td>
-                    <td className="border px-2 py-1">{totals ? totals.AST : "—"}</td>
-                    <td className="border px-2 py-1">{totals ? totals.TO : "—"}</td>
-                    <td className="border px-2 py-1">{totals ? assistTo(totals.AST, totals.TO) : "—"}</td>
-                    <td className="border px-2 py-1">{totals ? totals.STL : "—"}</td>
-                    <td className="border px-2 py-1">{totals ? totals.BLK : "—"}</td>
+                          <td className="border px-2 py-1">
+                            {totals ? totals.ThreePM : "—"}
+                          </td>
+                          <td className="border px-2 py-1">
+                            {totals ? totals.ThreePA : "—"}
+                          </td>
+                          <td className="border px-2 py-1">
+                            {totals ? pct(totals.ThreePM, totals.ThreePA) : "—"}
+                          </td>
 
-                    <td className="border px-2 py-1">{totals ? totals.ThreePM : "—"}</td>
-                    <td className="border px-2 py-1">{totals ? totals.ThreePA : "—"}</td>
-                    <td className="border px-2 py-1">{totals ? pct(totals.ThreePM, totals.ThreePA) : "—"}</td>
+                          <td className="border px-2 py-1">
+                            {totals ? totals.TwoPM : "—"}
+                          </td>
+                          <td className="border px-2 py-1">
+                            {totals ? totals.TwoPA : "—"}
+                          </td>
+                          <td className="border px-2 py-1">
+                            {totals ? pct(totals.TwoPM, totals.TwoPA) : "—"}
+                          </td>
 
-                    <td className="border px-2 py-1">{totals ? totals.TwoPM : "—"}</td>
-                    <td className="border px-2 py-1">{totals ? totals.TwoPA : "—"}</td>
-                    <td className="border px-2 py-1">{totals ? pct(totals.TwoPM, totals.TwoPA) : "—"}</td>
-
-                    <td className="border px-2 py-1">{totals ? totals.FTM : "—"}</td>
-                    <td className="border px-2 py-1">{totals ? totals.FTA : "—"}</td>
-                    <td className="border px-2 py-1">{totals ? pct(totals.FTM, totals.FTA) : "—"}</td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        )}
-      </div>
-    );
-  })()}
-</section>
+                          <td className="border px-2 py-1">
+                            {totals ? totals.FTM : "—"}
+                          </td>
+                          <td className="border px-2 py-1">
+                            {totals ? totals.FTA : "—"}
+                          </td>
+                          <td className="border px-2 py-1">
+                            {totals ? pct(totals.FTM, totals.FTA) : "—"}
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              )}
+            </div>
+          );
+        })()}
+      </section>
 
       {/* 3. SEASON PLAYER TOTALS (sortable, with photos & jersey column) */}
       <section>
@@ -645,22 +760,21 @@ function Season2025_26() {
           </p>
         ) : (
           <div className="overflow-x-auto px-1">
-            {/* NOTE: only table styling below was changed */}
             <table className="w-full border text-center text-xs sm:text-sm md:text-base table-auto whitespace-nowrap">
-              {/* 1) lighter header */}
               <thead className="bg-gray-200 text-black">
                 <tr>
-                  {/* Sticky Player header with RIGHT seal (prevents bleed) */}
                   <th
                     className="border px-2 py-1 text-left cursor-pointer sticky left-0 z-40 bg-gray-200 border-r border-gray-300"
                     onClick={() => handleSort("name")}
                   >
                     <div className="relative">
-                      {/* LEFT MASK (covers bleed at far left) */}
                       <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-3 bg-gray-200" />
-                      <span className="relative">{`Player${sortArrow("name")}`}</span>
+                      <span className="relative">{`Player${sortArrow(
+                        "name"
+                      )}`}</span>
                     </div>
                   </th>
+
                   <th
                     className="border px-2 py-1 cursor-pointer"
                     onClick={() => handleSort("jersey")}
@@ -783,7 +897,6 @@ function Season2025_26() {
               </thead>
 
               <tbody>
-                {/* 2) alternating rows + sticky player cell matches row background */}
                 {sortedSeasonTotals.map((player, idx) => {
                   const name = getPlayerName(player.PlayerID);
                   const jersey = getJerseyNumber(player.PlayerID);
@@ -797,27 +910,28 @@ function Season2025_26() {
                         className={`border px-2 py-1 text-left align-middle min-w-[200px] sticky left-0 z-20 ${rowBg} border-r border-gray-300`}
                       >
                         <div className="relative">
-                         {/* LEFT MASK uses the SAME row background */}
-                         <div className={`pointer-events-none absolute left-0 top-0 bottom-0 w-3 ${rowBg}`} />
-
-                         <div className="relative flex items-center gap-2">
-                          <img
-                            src={photoUrl}
-                            alt={name}
-                            onError={(e) => {
-                              e.currentTarget.src = "/images/boys/basketball/players/default.jpg";
-                            }}
-                            className="w-8 h-8 rounded-full object-cover border"
+                          <div
+                            className={`pointer-events-none absolute left-0 top-0 bottom-0 w-3 ${rowBg}`}
                           />
-                          <Link
-                            to={`/athletics/boys/basketball/players/${player.PlayerID}`}
-                            className="text-blue-600 underline hover:text-blue-800"
-                          >
-                            {name}
-                          </Link>
+                          <div className="relative flex items-center gap-2">
+                            <img
+                              src={photoUrl}
+                              alt={name}
+                              onError={(e) => {
+                                e.currentTarget.src =
+                                  "/images/boys/basketball/players/default.jpg";
+                              }}
+                              className="w-8 h-8 rounded-full object-cover border"
+                            />
+                            <Link
+                              to={`/athletics/boys/basketball/players/${player.PlayerID}`}
+                              className="text-blue-600 underline hover:text-blue-800"
+                            >
+                              {name}
+                            </Link>
+                          </div>
                         </div>
-                      </div>
-                    </td>
+                      </td>
 
                       <td className="border px-2 py-1 align-middle">{jersey}</td>
                       <td className="border px-2 py-1 align-middle">
@@ -906,6 +1020,111 @@ function Season2025_26() {
                     </tr>
                   );
                 })}
+
+                {/* --- TEAM TOTALS ROW (new) --- */}
+                <tr className="bg-gray-300 font-bold">
+                  <td className="border px-2 py-2 text-left sticky left-0 z-30 bg-gray-300 border-r border-gray-300">
+                    TEAM TOTALS
+                  </td>
+
+                  <td className="border px-2 py-2">{""}</td>
+
+                  <td className="border px-2 py-2">
+                    {teamTotalsRow.GamesPlayed || 0}
+                  </td>
+
+                  <td className="border px-2 py-2">
+                    {showPerGame
+                      ? formatTeamPerGame(teamTotalsRow.Points)
+                      : teamTotalsRow.Points}
+                  </td>
+
+                  <td className="border px-2 py-2">
+                    {showPerGame
+                      ? formatTeamPerGame(teamTotalsRow.Rebounds)
+                      : teamTotalsRow.Rebounds}
+                  </td>
+
+                  <td className="border px-2 py-2">
+                    {showPerGame
+                      ? formatTeamPerGame(teamTotalsRow.Assists)
+                      : teamTotalsRow.Assists}
+                  </td>
+
+                  <td className="border px-2 py-2">
+                    {showPerGame
+                      ? formatTeamPerGame(teamTotalsRow.Turnovers)
+                      : teamTotalsRow.Turnovers}
+                  </td>
+
+                  <td className="border px-2 py-2">
+                    {formatTeamAssistToTurnover(teamTotalsRow)}
+                  </td>
+
+                  <td className="border px-2 py-2">
+                    {showPerGame
+                      ? formatTeamPerGame(teamTotalsRow.Steals)
+                      : teamTotalsRow.Steals}
+                  </td>
+
+                  <td className="border px-2 py-2">
+                    {showPerGame
+                      ? formatTeamPerGame(teamTotalsRow.Blocks)
+                      : teamTotalsRow.Blocks}
+                  </td>
+
+                  <td className="border px-2 py-2">
+                    {showPerGame
+                      ? formatTeamPerGame(teamTotalsRow.ThreePM)
+                      : teamTotalsRow.ThreePM}
+                  </td>
+
+                  <td className="border px-2 py-2">
+                    {showPerGame
+                      ? formatTeamPerGame(teamTotalsRow.ThreePA)
+                      : teamTotalsRow.ThreePA}
+                  </td>
+
+                  <td className="border px-2 py-2">
+                    {formatPct(teamTotalsRow.ThreePM, teamTotalsRow.ThreePA)}
+                  </td>
+
+                  <td className="border px-2 py-2">
+                    {showPerGame
+                      ? formatTeamPerGame(teamTotalsRow.TwoPM)
+                      : teamTotalsRow.TwoPM}
+                  </td>
+
+                  <td className="border px-2 py-2">
+                    {showPerGame
+                      ? formatTeamPerGame(teamTotalsRow.TwoPA)
+                      : teamTotalsRow.TwoPA}
+                  </td>
+
+                  <td className="border px-2 py-2">
+                    {formatPct(teamTotalsRow.TwoPM, teamTotalsRow.TwoPA)}
+                  </td>
+
+                  <td className="border px-2 py-2">
+                    {formatEFG(teamTotalsRow)}
+                  </td>
+
+                  <td className="border px-2 py-2">
+                    {showPerGame
+                      ? formatTeamPerGame(teamTotalsRow.FTM)
+                      : teamTotalsRow.FTM}
+                  </td>
+
+                  <td className="border px-2 py-2">
+                    {showPerGame
+                      ? formatTeamPerGame(teamTotalsRow.FTA)
+                      : teamTotalsRow.FTA}
+                  </td>
+
+                  <td className="border px-2 py-2">
+                    {formatPct(teamTotalsRow.FTM, teamTotalsRow.FTA)}
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
