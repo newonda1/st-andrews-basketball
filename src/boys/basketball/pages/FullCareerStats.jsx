@@ -1,6 +1,83 @@
 import React, { useEffect, useMemo, useState } from "react";
 
-function FullCareerStats() {
+/**
+ * FullCareerStats.jsx (Boys Basketball)
+ *
+ * Updates included:
+ * ✅ Fetches from new folder paths:
+ *    - /data/boys/basketball/playergamestats.json
+ *    - /data/boys/basketball/players.json
+ *    - /data/boys/basketball/adjustments.json (optional; won't crash if missing)
+ *
+ * ✅ Replaces "0" with "—" ONLY when the total is 0 because the stat was never tracked
+ *    (i.e., all entries were null/undefined across the dataset for that player/stat).
+ *
+ * ✅ Fades the "—" slightly for nicer visual appearance.
+ *
+ * ✅ Keeps sorting numeric and stable (we still sort using the numeric totals).
+ *
+ * Notes:
+ * - If a stat is tracked (even if it's legitimately 0), it will show 0.
+ * - If a stat was never tracked for that player (all rows were null/undefined), it will show "—".
+ */
+
+function displayStat(value, hasData) {
+  if (!hasData) return "—";
+  return value;
+}
+
+function absUrl(path) {
+  return new URL(path, window.location.origin).toString();
+}
+
+async function fetchJson(label, path) {
+  const url = absUrl(path);
+  const res = await fetch(url, { cache: "no-store" });
+
+  if (!res.ok) {
+    throw new Error(`${label} failed (HTTP ${res.status}) at ${path}`);
+  }
+
+  const text = await res.text();
+  const trimmed = text.trim();
+  if (trimmed.startsWith("<!DOCTYPE") || trimmed.startsWith("<html")) {
+    throw new Error(`${label} did not return JSON at ${path} (returned HTML).`);
+  }
+
+  try {
+    return JSON.parse(text);
+  } catch (e) {
+    throw new Error(`${label} returned invalid JSON at ${path}: ${String(e?.message || e)}`);
+  }
+}
+
+async function fetchJsonOptional(label, path) {
+  try {
+    const url = absUrl(path);
+    const res = await fetch(url, { cache: "no-store" });
+    if (!res.ok) return [];
+    const text = await res.text();
+    const trimmed = text.trim();
+    if (trimmed.startsWith("<!DOCTYPE") || trimmed.startsWith("<html")) return [];
+    const data = JSON.parse(text);
+    return Array.isArray(data) ? data : [];
+  } catch {
+    return [];
+  }
+}
+
+function safeNum(x) {
+  const n = Number(x);
+  return Number.isFinite(n) ? n : 0;
+}
+
+function hasValue(x) {
+  // IMPORTANT: 0 counts as "value exists" if explicitly present.
+  // Only null/undefined means "not tracked".
+  return x !== null && x !== undefined;
+}
+
+export default function FullCareerStats() {
   const [careerStats, setCareerStats] = useState([]);
   const [sortField, setSortField] = useState("Points"); // Default sort
   const [sortDirection, setSortDirection] = useState("desc"); // desc = highest first
@@ -15,28 +92,17 @@ function FullCareerStats() {
         const playersPath = "/data/boys/basketball/players.json";
         const adjustmentsPath = "/data/boys/basketball/adjustments.json";
 
-        // adjustments.json might not exist yet; handle gracefully
-        const [statsRes, playersRes, adjustmentsRes] = await Promise.all([
-          fetch(statsPath),
-          fetch(playersPath),
-          fetch(adjustmentsPath).catch(() => null),
+        const [statsDataRaw, playersDataRaw, adjustmentsDataRaw] = await Promise.all([
+          fetchJson("playergamestats.json", statsPath),
+          fetchJson("players.json", playersPath),
+          fetchJsonOptional("adjustments.json", adjustmentsPath),
         ]);
 
-        if (!statsRes.ok) throw new Error(`Failed to load ${statsPath} (HTTP ${statsRes.status})`);
-        if (!playersRes.ok) throw new Error(`Failed to load ${playersPath} (HTTP ${playersRes.status})`);
+        const statsData = Array.isArray(statsDataRaw) ? statsDataRaw : [];
+        const playersData = Array.isArray(playersDataRaw) ? playersDataRaw : [];
+        const adjustmentsData = Array.isArray(adjustmentsDataRaw) ? adjustmentsDataRaw : [];
 
-        const statsData = await statsRes.json();
-        const playersData = await playersRes.json();
-
-        let adjustmentsData = [];
-        if (adjustmentsRes && adjustmentsRes.ok) {
-          adjustmentsData = await adjustmentsRes.json();
-        }
-
-        const combinedStats = [
-          ...(Array.isArray(statsData) ? statsData : []),
-          ...(Array.isArray(adjustmentsData) ? adjustmentsData : []),
-        ];
+        const combinedStats = [...statsData, ...adjustmentsData];
 
         const playerTotals = {};
 
@@ -47,56 +113,109 @@ function FullCareerStats() {
           if (!playerTotals[playerId]) {
             playerTotals[playerId] = {
               PlayerID: playerId,
+
               Points: 0,
               Rebounds: 0,
               Assists: 0,
               Steals: 0,
               Blocks: 0,
               GamesPlayed: 0,
+
               ThreePM: 0,
               ThreePA: 0,
               TwoPM: 0,
               TwoPA: 0,
               FTM: 0,
               FTA: 0,
+
+              // Track whether a stat was ever recorded (non-null/undefined)
+              _has: {
+                Points: false,
+                Rebounds: false,
+                Assists: false,
+                Steals: false,
+                Blocks: false,
+                ThreePM: false,
+                ThreePA: false,
+                TwoPM: false,
+                TwoPA: false,
+                FTM: false,
+                FTA: false,
+              },
             };
           }
 
-          // accumulate (coerce to number, default 0)
-          playerTotals[playerId].Points += Number(stat.Points) || 0;
-          playerTotals[playerId].Rebounds += Number(stat.Rebounds) || 0;
-          playerTotals[playerId].Assists += Number(stat.Assists) || 0;
-          playerTotals[playerId].Steals += Number(stat.Steals) || 0;
-          playerTotals[playerId].Blocks += Number(stat.Blocks) || 0;
+          // Only count the stat toward totals and mark as "tracked" if the field exists.
+          // This prevents missing-history nulls from masquerading as "real zeros".
+          if (hasValue(stat.Points)) {
+            playerTotals[playerId].Points += safeNum(stat.Points);
+            playerTotals[playerId]._has.Points = true;
+          }
+          if (hasValue(stat.Rebounds)) {
+            playerTotals[playerId].Rebounds += safeNum(stat.Rebounds);
+            playerTotals[playerId]._has.Rebounds = true;
+          }
+          if (hasValue(stat.Assists)) {
+            playerTotals[playerId].Assists += safeNum(stat.Assists);
+            playerTotals[playerId]._has.Assists = true;
+          }
+          if (hasValue(stat.Steals)) {
+            playerTotals[playerId].Steals += safeNum(stat.Steals);
+            playerTotals[playerId]._has.Steals = true;
+          }
+          if (hasValue(stat.Blocks)) {
+            playerTotals[playerId].Blocks += safeNum(stat.Blocks);
+            playerTotals[playerId]._has.Blocks = true;
+          }
 
-          playerTotals[playerId].ThreePM += Number(stat.ThreePM) || 0;
-          playerTotals[playerId].ThreePA += Number(stat.ThreePA) || 0;
-          playerTotals[playerId].TwoPM += Number(stat.TwoPM) || 0;
-          playerTotals[playerId].TwoPA += Number(stat.TwoPA) || 0;
-          playerTotals[playerId].FTM += Number(stat.FTM) || 0;
-          playerTotals[playerId].FTA += Number(stat.FTA) || 0;
+          if (hasValue(stat.ThreePM)) {
+            playerTotals[playerId].ThreePM += safeNum(stat.ThreePM);
+            playerTotals[playerId]._has.ThreePM = true;
+          }
+          if (hasValue(stat.ThreePA)) {
+            playerTotals[playerId].ThreePA += safeNum(stat.ThreePA);
+            playerTotals[playerId]._has.ThreePA = true;
+          }
 
-          // Count as a game row if it has a GameID (stats file does) OR if adjustments is a game-level row
-          // This keeps your old behavior: every row contributes +1 game played.
+          if (hasValue(stat.TwoPM)) {
+            playerTotals[playerId].TwoPM += safeNum(stat.TwoPM);
+            playerTotals[playerId]._has.TwoPM = true;
+          }
+          if (hasValue(stat.TwoPA)) {
+            playerTotals[playerId].TwoPA += safeNum(stat.TwoPA);
+            playerTotals[playerId]._has.TwoPA = true;
+          }
+
+          if (hasValue(stat.FTM)) {
+            playerTotals[playerId].FTM += safeNum(stat.FTM);
+            playerTotals[playerId]._has.FTM = true;
+          }
+          if (hasValue(stat.FTA)) {
+            playerTotals[playerId].FTA += safeNum(stat.FTA);
+            playerTotals[playerId]._has.FTA = true;
+          }
+
+          // Keep your original behavior: each row counts as a game played.
+          // If you ever want to dedupe by GameID, we can do that later.
           playerTotals[playerId].GamesPlayed += 1;
         }
 
         const fullCareerStats = Object.values(playerTotals).map((player) => {
-          const playerInfo = (playersData || []).find(
-            (p) => Number(p.PlayerID) === Number(player.PlayerID)
-          );
+          const playerInfo = playersData.find((p) => Number(p.PlayerID) === Number(player.PlayerID));
 
-          const threeP = player.ThreePA > 0 ? (player.ThreePM / player.ThreePA) * 100 : 0;
-          const twoP = player.TwoPA > 0 ? (player.TwoPM / player.TwoPA) * 100 : 0;
-          const ftP = player.FTA > 0 ? (player.FTM / player.FTA) * 100 : 0;
+          const threePct =
+            player._has.ThreePA && player.ThreePA > 0 ? (player.ThreePM / player.ThreePA) * 100 : 0;
+          const twoPct =
+            player._has.TwoPA && player.TwoPA > 0 ? (player.TwoPM / player.TwoPA) * 100 : 0;
+          const ftPct = player._has.FTA && player.FTA > 0 ? (player.FTM / player.FTA) * 100 : 0;
 
           return {
             ...player,
             Name: playerInfo ? `${playerInfo.FirstName} ${playerInfo.LastName}` : "Unknown Player",
             GradYear: playerInfo ? playerInfo.GradYear : "Unknown",
-            ThreePPercentage: threeP,
-            TwoPPercentage: twoP,
-            FTPercentage: ftP,
+            ThreePPercentage: threePct,
+            TwoPPercentage: twoPct,
+            FTPercentage: ftPct,
           };
         });
 
@@ -109,12 +228,12 @@ function FullCareerStats() {
     fetchData();
   }, []);
 
-  // Sorting
   const sortedStats = useMemo(() => {
     return [...careerStats].sort((a, b) => {
       const av = a?.[sortField] ?? 0;
       const bv = b?.[sortField] ?? 0;
 
+      // numeric sort
       if (sortDirection === "asc") return (Number(av) || 0) - (Number(bv) || 0);
       return (Number(bv) || 0) - (Number(av) || 0);
     });
@@ -127,6 +246,15 @@ function FullCareerStats() {
       setSortField(field);
       setSortDirection("desc");
     }
+  };
+
+  // A small helper to render faded dashes
+  const StatCell = ({ value, hasData }) => {
+    const shown = displayStat(value, hasData);
+    if (shown === "—") {
+      return <span className="text-gray-400 font-medium">—</span>;
+    }
+    return <span>{shown}</span>;
   };
 
   return (
@@ -143,10 +271,7 @@ function FullCareerStats() {
         <table className="w-full text-sm md:text-base table-auto whitespace-nowrap">
           <thead>
             <tr className="bg-gray-50">
-              {/* Sticky column: give it a real background and a z-index so it stays clean */}
-              <th className="sticky left-0 z-20 bg-gray-50 px-2 py-1 text-left border-r">
-                Player
-              </th>
+              <th className="sticky left-0 z-20 bg-gray-50 px-2 py-1 text-left border-r">Player</th>
 
               <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort("GradYear")}>
                 Grad Year{sortField === "GradYear" && (sortDirection === "asc" ? "▲" : "▼")}
@@ -222,26 +347,69 @@ function FullCareerStats() {
                 </td>
 
                 <td className="px-2 py-1 text-center">{player.GradYear}</td>
-                <td className="px-2 py-1 text-center">{player.Points}</td>
-                <td className="px-2 py-1 text-center">{player.Rebounds}</td>
-                <td className="px-2 py-1 text-center">{player.Assists}</td>
-                <td className="px-2 py-1 text-center">{player.Steals}</td>
-                <td className="px-2 py-1 text-center">{player.Blocks}</td>
+
+                <td className="px-2 py-1 text-center">
+                  <StatCell value={player.Points} hasData={player._has?.Points} />
+                </td>
+
+                <td className="px-2 py-1 text-center">
+                  <StatCell value={player.Rebounds} hasData={player._has?.Rebounds} />
+                </td>
+
+                <td className="px-2 py-1 text-center">
+                  <StatCell value={player.Assists} hasData={player._has?.Assists} />
+                </td>
+
+                <td className="px-2 py-1 text-center">
+                  <StatCell value={player.Steals} hasData={player._has?.Steals} />
+                </td>
+
+                <td className="px-2 py-1 text-center">
+                  <StatCell value={player.Blocks} hasData={player._has?.Blocks} />
+                </td>
+
                 <td className="px-2 py-1 text-center">{player.GamesPlayed}</td>
-                <td className="px-2 py-1 text-center">{player.ThreePM}</td>
-                <td className="px-2 py-1 text-center">{player.ThreePA}</td>
+
                 <td className="px-2 py-1 text-center">
-                  {player.ThreePA > 0 ? player.ThreePPercentage.toFixed(1) + "%" : "—"}
+                  <StatCell value={player.ThreePM} hasData={player._has?.ThreePM} />
                 </td>
-                <td className="px-2 py-1 text-center">{player.TwoPM}</td>
-                <td className="px-2 py-1 text-center">{player.TwoPA}</td>
+
                 <td className="px-2 py-1 text-center">
-                  {player.TwoPA > 0 ? player.TwoPPercentage.toFixed(1) + "%" : "—"}
+                  <StatCell value={player.ThreePA} hasData={player._has?.ThreePA} />
                 </td>
-                <td className="px-2 py-1 text-center">{player.FTM}</td>
-                <td className="px-2 py-1 text-center">{player.FTA}</td>
+
                 <td className="px-2 py-1 text-center">
-                  {player.FTA > 0 ? player.FTPercentage.toFixed(1) + "%" : "—"}
+                  {player._has?.ThreePA && player.ThreePA > 0 ? player.ThreePPercentage.toFixed(1) + "%" : (
+                    <span className="text-gray-400 font-medium">—</span>
+                  )}
+                </td>
+
+                <td className="px-2 py-1 text-center">
+                  <StatCell value={player.TwoPM} hasData={player._has?.TwoPM} />
+                </td>
+
+                <td className="px-2 py-1 text-center">
+                  <StatCell value={player.TwoPA} hasData={player._has?.TwoPA} />
+                </td>
+
+                <td className="px-2 py-1 text-center">
+                  {player._has?.TwoPA && player.TwoPA > 0 ? player.TwoPPercentage.toFixed(1) + "%" : (
+                    <span className="text-gray-400 font-medium">—</span>
+                  )}
+                </td>
+
+                <td className="px-2 py-1 text-center">
+                  <StatCell value={player.FTM} hasData={player._has?.FTM} />
+                </td>
+
+                <td className="px-2 py-1 text-center">
+                  <StatCell value={player.FTA} hasData={player._has?.FTA} />
+                </td>
+
+                <td className="px-2 py-1 text-center">
+                  {player._has?.FTA && player.FTA > 0 ? player.FTPercentage.toFixed(1) + "%" : (
+                    <span className="text-gray-400 font-medium">—</span>
+                  )}
                 </td>
               </tr>
             ))}
@@ -251,5 +419,3 @@ function FullCareerStats() {
     </div>
   );
 }
-
-export default FullCareerStats;
