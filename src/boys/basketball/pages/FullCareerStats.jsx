@@ -1,262 +1,247 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 
 function FullCareerStats() {
-  const [playerStats, setPlayerStats] = useState([]);
-  const [players, setPlayers] = useState([]);
-  const [careerTotals, setCareerTotals] = useState([]);
-  const [sortConfig, setSortConfig] = useState({
-    key: "Points",
-    direction: "desc",
-  });
+  const [careerStats, setCareerStats] = useState([]);
+  const [sortField, setSortField] = useState("Points"); // Default sort
+  const [sortDirection, setSortDirection] = useState("desc"); // desc = highest first
+  const [error, setError] = useState("");
 
   useEffect(() => {
-    Promise.all([
-      fetch("/data/boys/basketball/playergamestats.json").then((res) =>
-        res.json()
-      ),
-      fetch("/data/boys/basketball/players.json").then((res) => res.json()),
-    ])
-      .then(([playerStatsData, playersData]) => {
-        setPlayerStats(playerStatsData);
-        setPlayers(playersData);
-      })
-      .catch((err) => console.error("Failed to load data:", err));
+    async function fetchData() {
+      try {
+        setError("");
+
+        const statsPath = "/data/boys/basketball/playergamestats.json";
+        const playersPath = "/data/boys/basketball/players.json";
+        const adjustmentsPath = "/data/boys/basketball/adjustments.json";
+
+        // adjustments.json might not exist yet; handle gracefully
+        const [statsRes, playersRes, adjustmentsRes] = await Promise.all([
+          fetch(statsPath),
+          fetch(playersPath),
+          fetch(adjustmentsPath).catch(() => null),
+        ]);
+
+        if (!statsRes.ok) throw new Error(`Failed to load ${statsPath} (HTTP ${statsRes.status})`);
+        if (!playersRes.ok) throw new Error(`Failed to load ${playersPath} (HTTP ${playersRes.status})`);
+
+        const statsData = await statsRes.json();
+        const playersData = await playersRes.json();
+
+        let adjustmentsData = [];
+        if (adjustmentsRes && adjustmentsRes.ok) {
+          adjustmentsData = await adjustmentsRes.json();
+        }
+
+        const combinedStats = [
+          ...(Array.isArray(statsData) ? statsData : []),
+          ...(Array.isArray(adjustmentsData) ? adjustmentsData : []),
+        ];
+
+        const playerTotals = {};
+
+        for (const stat of combinedStats) {
+          const playerId = Number(stat.PlayerID);
+          if (!Number.isFinite(playerId)) continue;
+
+          if (!playerTotals[playerId]) {
+            playerTotals[playerId] = {
+              PlayerID: playerId,
+              Points: 0,
+              Rebounds: 0,
+              Assists: 0,
+              Steals: 0,
+              Blocks: 0,
+              GamesPlayed: 0,
+              ThreePM: 0,
+              ThreePA: 0,
+              TwoPM: 0,
+              TwoPA: 0,
+              FTM: 0,
+              FTA: 0,
+            };
+          }
+
+          // accumulate (coerce to number, default 0)
+          playerTotals[playerId].Points += Number(stat.Points) || 0;
+          playerTotals[playerId].Rebounds += Number(stat.Rebounds) || 0;
+          playerTotals[playerId].Assists += Number(stat.Assists) || 0;
+          playerTotals[playerId].Steals += Number(stat.Steals) || 0;
+          playerTotals[playerId].Blocks += Number(stat.Blocks) || 0;
+
+          playerTotals[playerId].ThreePM += Number(stat.ThreePM) || 0;
+          playerTotals[playerId].ThreePA += Number(stat.ThreePA) || 0;
+          playerTotals[playerId].TwoPM += Number(stat.TwoPM) || 0;
+          playerTotals[playerId].TwoPA += Number(stat.TwoPA) || 0;
+          playerTotals[playerId].FTM += Number(stat.FTM) || 0;
+          playerTotals[playerId].FTA += Number(stat.FTA) || 0;
+
+          // Count as a game row if it has a GameID (stats file does) OR if adjustments is a game-level row
+          // This keeps your old behavior: every row contributes +1 game played.
+          playerTotals[playerId].GamesPlayed += 1;
+        }
+
+        const fullCareerStats = Object.values(playerTotals).map((player) => {
+          const playerInfo = (playersData || []).find(
+            (p) => Number(p.PlayerID) === Number(player.PlayerID)
+          );
+
+          const threeP = player.ThreePA > 0 ? (player.ThreePM / player.ThreePA) * 100 : 0;
+          const twoP = player.TwoPA > 0 ? (player.TwoPM / player.TwoPA) * 100 : 0;
+          const ftP = player.FTA > 0 ? (player.FTM / player.FTA) * 100 : 0;
+
+          return {
+            ...player,
+            Name: playerInfo ? `${playerInfo.FirstName} ${playerInfo.LastName}` : "Unknown Player",
+            GradYear: playerInfo ? playerInfo.GradYear : "Unknown",
+            ThreePPercentage: threeP,
+            TwoPPercentage: twoP,
+            FTPercentage: ftP,
+          };
+        });
+
+        setCareerStats(fullCareerStats);
+      } catch (e) {
+        setError(String(e?.message || e));
+      }
+    }
+
+    fetchData();
   }, []);
 
-  useEffect(() => {
-    if (playerStats.length && players.length) {
-      const careerMap = {};
+  // Sorting
+  const sortedStats = useMemo(() => {
+    return [...careerStats].sort((a, b) => {
+      const av = a?.[sortField] ?? 0;
+      const bv = b?.[sortField] ?? 0;
 
-      playerStats.forEach((game) => {
-        const id = game.PlayerID;
-
-        if (!careerMap[id]) {
-          careerMap[id] = {
-            PlayerID: id,
-            GamesPlayed: 0,
-            Points: 0,
-            Rebounds: 0,
-            Assists: 0,
-            Steals: 0,
-            Blocks: 0,
-            Turnovers: 0,
-            TwoPM: 0,
-            TwoPA: 0,
-            ThreePM: 0,
-            ThreePA: 0,
-            FTM: 0,
-            FTA: 0,
-          };
-        }
-
-        const entry = careerMap[id];
-
-        if (game.MinutesPlayed != null && game.MinutesPlayed > 0) {
-          entry.GamesPlayed += 1;
-        }
-
-        entry.Points += game.Points || 0;
-        entry.Rebounds += game.Rebounds || 0;
-        entry.Assists += game.Assists || 0;
-        entry.Steals += game.Steals || 0;
-        entry.Blocks += game.Blocks || 0;
-        entry.Turnovers += game.Turnovers || 0;
-        entry.TwoPM += game.TwoPM || 0;
-        entry.TwoPA += game.TwoPA || 0;
-        entry.ThreePM += game.ThreePM || 0;
-        entry.ThreePA += game.ThreePA || 0;
-        entry.FTM += game.FTM || 0;
-        entry.FTA += game.FTA || 0;
-      });
-
-      const merged = Object.values(careerMap).map((totals) => {
-        const player = players.find((p) => p.PlayerID === totals.PlayerID);
-        const gamesPlayed = totals.GamesPlayed || 0;
-
-        const twoPtPct =
-          totals.TwoPA > 0 ? (totals.TwoPM / totals.TwoPA) * 100 : null;
-        const threePtPct =
-          totals.ThreePA > 0 ? (totals.ThreePM / totals.ThreePA) * 100 : null;
-        const ftPct =
-          totals.FTA > 0 ? (totals.FTM / totals.FTA) * 100 : null;
-
-        return {
-          ...totals,
-          Name: player ? `${player.FirstName} ${player.LastName}` : "Unknown",
-          TwoPtPct: twoPtPct,
-          ThreePtPct: threePtPct,
-          FTPct: ftPct,
-          PPG: gamesPlayed > 0 ? totals.Points / gamesPlayed : 0,
-          RPG: gamesPlayed > 0 ? totals.Rebounds / gamesPlayed : 0,
-          APG: gamesPlayed > 0 ? totals.Assists / gamesPlayed : 0,
-          SPG: gamesPlayed > 0 ? totals.Steals / gamesPlayed : 0,
-          BPG: gamesPlayed > 0 ? totals.Blocks / gamesPlayed : 0,
-          TPG: gamesPlayed > 0 ? totals.Turnovers / gamesPlayed : 0,
-        };
-      });
-
-      setCareerTotals(merged);
-    }
-  }, [playerStats, players]);
-
-  const sortData = (data) => {
-    const sorted = [...data];
-    sorted.sort((a, b) => {
-      const { key, direction } = sortConfig;
-      let valA = a[key];
-      let valB = b[key];
-
-      if (valA == null) valA = -Infinity;
-      if (valB == null) valB = -Infinity;
-
-      if (typeof valA === "string") {
-        valA = valA.toLowerCase();
-        valB = valB.toLowerCase();
-      }
-
-      if (valA < valB) return direction === "asc" ? -1 : 1;
-      if (valA > valB) return direction === "asc" ? 1 : -1;
-      return 0;
+      if (sortDirection === "asc") return (Number(av) || 0) - (Number(bv) || 0);
+      return (Number(bv) || 0) - (Number(av) || 0);
     });
-    return sorted;
+  }, [careerStats, sortField, sortDirection]);
+
+  const handleSort = (field) => {
+    if (field === sortField) {
+      setSortDirection(sortDirection === "asc" ? "desc" : "asc");
+    } else {
+      setSortField(field);
+      setSortDirection("desc");
+    }
   };
-
-  const handleSort = (key) => {
-    setSortConfig((prev) => ({
-      key,
-      direction: prev.key === key && prev.direction === "desc" ? "asc" : "desc",
-    }));
-  };
-
-  const getSortIndicator = (key) => {
-    if (sortConfig.key !== key) return "";
-    return sortConfig.direction === "asc" ? "▲" : "▼";
-  };
-
-  const formatNumber = (value, decimals = 1) =>
-    value != null ? value.toFixed(decimals) : "–";
-
-  const sortedTotals = sortData(careerTotals);
 
   return (
-    <div className="space-y-6 px-4">
-      <h1 className="text-2xl font-bold text-center">Career Stats (Boys)</h1>
+    <div className="p-6">
+      <h1 className="text-2xl font-bold mb-6">Full Career Stats</h1>
+
+      {error && (
+        <div className="mb-4 p-3 rounded bg-red-50 text-red-700 border border-red-200 whitespace-pre-wrap">
+          {error}
+        </div>
+      )}
 
       <div className="overflow-x-auto">
-        <table className="min-w-full table-auto text-xs border text-center">
-          <thead className="bg-gray-200 font-bold">
-            <tr>
-              <th className="border px-2 py-1">Player</th>
-              <th
-                className="border px-2 py-1 cursor-pointer"
-                onClick={() => handleSort("GamesPlayed")}
-              >
-                GP {getSortIndicator("GamesPlayed")}
+        <table className="w-full text-sm md:text-base table-auto whitespace-nowrap">
+          <thead>
+            <tr className="bg-gray-50">
+              {/* Sticky column: give it a real background and a z-index so it stays clean */}
+              <th className="sticky left-0 z-20 bg-gray-50 px-2 py-1 text-left border-r">
+                Player
               </th>
-              <th
-                className="border px-2 py-1 cursor-pointer"
-                onClick={() => handleSort("Points")}
-              >
-                PTS {getSortIndicator("Points")}
+
+              <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort("GradYear")}>
+                Grad Year{sortField === "GradYear" && (sortDirection === "asc" ? "▲" : "▼")}
               </th>
-              <th
-                className="border px-2 py-1 cursor-pointer"
-                onClick={() => handleSort("PPG")}
-              >
-                PPG {getSortIndicator("PPG")}
+
+              <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort("Points")}>
+                Points{sortField === "Points" && (sortDirection === "asc" ? "▲" : "▼")}
               </th>
-              <th
-                className="border px-2 py-1 cursor-pointer"
-                onClick={() => handleSort("Rebounds")}
-              >
-                REB {getSortIndicator("Rebounds")}
+
+              <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort("Rebounds")}>
+                Rebounds{sortField === "Rebounds" && (sortDirection === "asc" ? "▲" : "▼")}
               </th>
-              <th
-                className="border px-2 py-1 cursor-pointer"
-                onClick={() => handleSort("RPG")}
-              >
-                RPG {getSortIndicator("RPG")}
+
+              <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort("Assists")}>
+                Assists{sortField === "Assists" && (sortDirection === "asc" ? "▲" : "▼")}
               </th>
-              <th
-                className="border px-2 py-1 cursor-pointer"
-                onClick={() => handleSort("Assists")}
-              >
-                AST {getSortIndicator("Assists")}
+
+              <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort("Steals")}>
+                Steals{sortField === "Steals" && (sortDirection === "asc" ? "▲" : "▼")}
               </th>
-              <th
-                className="border px-2 py-1 cursor-pointer"
-                onClick={() => handleSort("APG")}
-              >
-                APG {getSortIndicator("APG")}
+
+              <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort("Blocks")}>
+                Blocks{sortField === "Blocks" && (sortDirection === "asc" ? "▲" : "▼")}
               </th>
-              <th className="border px-2 py-1">STL</th>
-              <th className="border px-2 py-1">SPG</th>
-              <th className="border px-2 py-1">BLK</th>
-              <th className="border px-2 py-1">BPG</th>
-              <th className="border px-2 py-1">TOV</th>
-              <th className="border px-2 py-1">TPG</th>
-              <th className="border px-2 py-1">2PM</th>
-              <th className="border px-2 py-1">2PA</th>
-              <th className="border px-2 py-1">2P%</th>
-              <th className="border px-2 py-1">3PM</th>
-              <th className="border px-2 py-1">3PA</th>
-              <th className="border px-2 py-1">3P%</th>
-              <th className="border px-2 py-1">FTM</th>
-              <th className="border px-2 py-1">FTA</th>
-              <th className="border px-2 py-1">FT%</th>
+
+              <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort("GamesPlayed")}>
+                Games Played{sortField === "GamesPlayed" && (sortDirection === "asc" ? "▲" : "▼")}
+              </th>
+
+              <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort("ThreePM")}>
+                3PM{sortField === "ThreePM" && (sortDirection === "asc" ? "▲" : "▼")}
+              </th>
+
+              <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort("ThreePA")}>
+                3PA{sortField === "ThreePA" && (sortDirection === "asc" ? "▲" : "▼")}
+              </th>
+
+              <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort("ThreePPercentage")}>
+                3P%{sortField === "ThreePPercentage" && (sortDirection === "asc" ? "▲" : "▼")}
+              </th>
+
+              <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort("TwoPM")}>
+                2PM{sortField === "TwoPM" && (sortDirection === "asc" ? "▲" : "▼")}
+              </th>
+
+              <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort("TwoPA")}>
+                2PA{sortField === "TwoPA" && (sortDirection === "asc" ? "▲" : "▼")}
+              </th>
+
+              <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort("TwoPPercentage")}>
+                2P%{sortField === "TwoPPercentage" && (sortDirection === "asc" ? "▲" : "▼")}
+              </th>
+
+              <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort("FTM")}>
+                FTM{sortField === "FTM" && (sortDirection === "asc" ? "▲" : "▼")}
+              </th>
+
+              <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort("FTA")}>
+                FTA{sortField === "FTA" && (sortDirection === "asc" ? "▲" : "▼")}
+              </th>
+
+              <th className="px-2 py-1 cursor-pointer" onClick={() => handleSort("FTPercentage")}>
+                FT%{sortField === "FTPercentage" && (sortDirection === "asc" ? "▲" : "▼")}
+              </th>
             </tr>
           </thead>
+
           <tbody>
-            {sortedTotals.map((player) => (
-              <tr key={player.PlayerID}>
-                <td className="border px-2 py-1 whitespace-nowrap text-left">
+            {sortedStats.map((player, index) => (
+              <tr key={index} className="border-t odd:bg-white even:bg-gray-100">
+                <td className="sticky left-0 z-10 px-2 py-1 bg-inherit border-r font-medium">
                   {player.Name}
                 </td>
-                <td className="border px-2 py-1">{player.GamesPlayed}</td>
-                <td className="border px-2 py-1">{player.Points}</td>
-                <td className="border px-2 py-1">
-                  {formatNumber(player.PPG)}
+
+                <td className="px-2 py-1 text-center">{player.GradYear}</td>
+                <td className="px-2 py-1 text-center">{player.Points}</td>
+                <td className="px-2 py-1 text-center">{player.Rebounds}</td>
+                <td className="px-2 py-1 text-center">{player.Assists}</td>
+                <td className="px-2 py-1 text-center">{player.Steals}</td>
+                <td className="px-2 py-1 text-center">{player.Blocks}</td>
+                <td className="px-2 py-1 text-center">{player.GamesPlayed}</td>
+                <td className="px-2 py-1 text-center">{player.ThreePM}</td>
+                <td className="px-2 py-1 text-center">{player.ThreePA}</td>
+                <td className="px-2 py-1 text-center">
+                  {player.ThreePA > 0 ? player.ThreePPercentage.toFixed(1) + "%" : "—"}
                 </td>
-                <td className="border px-2 py-1">{player.Rebounds}</td>
-                <td className="border px-2 py-1">
-                  {formatNumber(player.RPG)}
+                <td className="px-2 py-1 text-center">{player.TwoPM}</td>
+                <td className="px-2 py-1 text-center">{player.TwoPA}</td>
+                <td className="px-2 py-1 text-center">
+                  {player.TwoPA > 0 ? player.TwoPPercentage.toFixed(1) + "%" : "—"}
                 </td>
-                <td className="border px-2 py-1">{player.Assists}</td>
-                <td className="border px-2 py-1">
-                  {formatNumber(player.APG)}
-                </td>
-                <td className="border px-2 py-1">{player.Steals}</td>
-                <td className="border px-2 py-1">
-                  {formatNumber(player.SPG)}
-                </td>
-                <td className="border px-2 py-1">{player.Blocks}</td>
-                <td className="border px-2 py-1">
-                  {formatNumber(player.BPG)}
-                </td>
-                <td className="border px-2 py-1">{player.Turnovers}</td>
-                <td className="border px-2 py-1">
-                  {formatNumber(player.TPG)}
-                </td>
-                <td className="border px-2 py-1">{player.TwoPM}</td>
-                <td className="border px-2 py-1">{player.TwoPA}</td>
-                <td className="border px-2 py-1">
-                  {player.TwoPtPct != null
-                    ? `${formatNumber(player.TwoPtPct, 1)}%`
-                    : "–"}
-                </td>
-                <td className="border px-2 py-1">{player.ThreePM}</td>
-                <td className="border px-2 py-1">{player.ThreePA}</td>
-                <td className="border px-2 py-1">
-                  {player.ThreePtPct != null
-                    ? `${formatNumber(player.ThreePtPct, 1)}%`
-                    : "–"}
-                </td>
-                <td className="border px-2 py-1">{player.FTM}</td>
-                <td className="border px-2 py-1">{player.FTA}</td>
-                <td className="border px-2 py-1">
-                  {player.FTPct != null
-                    ? `${formatNumber(player.FTPct, 1)}%`
-                    : "–"}
+                <td className="px-2 py-1 text-center">{player.FTM}</td>
+                <td className="px-2 py-1 text-center">{player.FTA}</td>
+                <td className="px-2 py-1 text-center">
+                  {player.FTA > 0 ? player.FTPercentage.toFixed(1) + "%" : "—"}
                 </td>
               </tr>
             ))}
