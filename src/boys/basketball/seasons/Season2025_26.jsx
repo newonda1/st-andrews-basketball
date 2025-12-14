@@ -490,10 +490,14 @@ function Season2025_26() {
                 <tr>
                   {/* Sticky Player header with RIGHT seal (prevents bleed) */}
                   <th
-                    className="border px-2 py-1 text-left cursor-pointer sticky left-0 z-40 bg-gray-200 border-r border-gray-300 shadow-[4px_0_0_0_rgba(0,0,0,0.04)]"
+                    className="border px-2 py-1 text-left cursor-pointer sticky left-0 z-40 bg-gray-200 border-r border-gray-300"
                     onClick={() => handleSort("name")}
                   >
-                    Player{sortArrow("name")}
+                    <div className="relative">
+                      {/* LEFT MASK (covers bleed at far left) */}
+                      <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-3 bg-gray-200" />
+                      <span className="relative">{`Player${sortArrow("name")}`}</span>
+                    </div>
                   </th>
                   <th
                     className="border px-2 py-1 cursor-pointer"
@@ -628,15 +632,18 @@ function Season2025_26() {
                   return (
                     <tr key={player.PlayerID} className={rowBg}>
                       <td
-                        className={`border px-2 py-1 text-left align-middle min-w-[200px] sticky left-0 z-20 ${rowBg} border-r border-gray-300 shadow-[4px_0_0_0_rgba(0,0,0,0.04)]`}
+                        className={`border px-2 py-1 text-left align-middle min-w-[200px] sticky left-0 z-20 ${rowBg} border-r border-gray-300`}
                       >
-                        <div className="flex items-center gap-2">
+                        <div className="relative">
+                         {/* LEFT MASK uses the SAME row background */}
+                         <div className={`pointer-events-none absolute left-0 top-0 bottom-0 w-3 ${rowBg}`} />
+
+                         <div className="relative flex items-center gap-2">
                           <img
                             src={photoUrl}
                             alt={name}
                             onError={(e) => {
-                              e.currentTarget.src =
-                                "/images/boys/basketball/players/default.jpg";
+                              e.currentTarget.src = "/images/boys/basketball/players/default.jpg";
                             }}
                             className="w-8 h-8 rounded-full object-cover border"
                           />
@@ -647,7 +654,8 @@ function Season2025_26() {
                             {name}
                           </Link>
                         </div>
-                      </td>
+                      </div>
+                    </td>
 
                       <td className="border px-2 py-1 align-middle">{jersey}</td>
                       <td className="border px-2 py-1 align-middle">
