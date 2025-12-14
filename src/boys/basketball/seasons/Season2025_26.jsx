@@ -542,6 +542,7 @@ function Season2025_26() {
                 <th className="border px-2 py-1">3P%</th>
 
                 <th className="border px-2 py-1">2PM</th>
+                <th className="border px-2 py-1">2PA</th>
                 <th className="border px-2 py-1">2P%</th>
 
                 <th className="border px-2 py-1">FTM</th>
@@ -583,6 +584,7 @@ function Season2025_26() {
                     <td className="border px-2 py-1">{totals ? pct(totals.ThreePM, totals.ThreePA) : "—"}</td>
 
                     <td className="border px-2 py-1">{totals ? totals.TwoPM : "—"}</td>
+                    <td className="border px-2 py-1">{totals ? totals.TwoPA : "—"}</td>
                     <td className="border px-2 py-1">{totals ? pct(totals.TwoPM, totals.TwoPA) : "—"}</td>
 
                     <td className="border px-2 py-1">{totals ? totals.FTM : "—"}</td>
