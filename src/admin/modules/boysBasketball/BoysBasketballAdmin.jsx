@@ -2,12 +2,23 @@ import React, { useEffect, useMemo, useState } from "react";
 
 /**
  * Boys Basketball Admin – Box Score Entry UI (full-game at once)
- * Fixes / changes in this version:
- * 1) Keep the older UI: roster list + same grid/table styling
- * 2) Remove "Download full playergamestats.json"
- * 3) Rename "Download THIS game" -> "Download JSON code"
- * 4) "Download JSON code" exports directly from boxScore (NOT from playerGameStats),
- *    so it won't return [] after you enter stats.
+ *
+ * This version matches your existing playergamestats.json schema:
+ *   - StatID (compound: `${GameID}${PlayerID}`)
+ *   - PlayerID
+ *   - GameID
+ *   - Points, Rebounds, Assists, Turnovers, Steals, Blocks
+ *   - ThreePM, ThreePA, TwoPM, TwoPA, FTM, FTA
+ *   - StatComplete: "Yes"
+ *
+ * Also adds:
+ *   - Download JSON code (exports ONLY this game's rows from boxScore)
+ *   - Copy JSON to clipboard (same payload)
+ *   - DNP checkbox (excludes player)
+ *
+ * IMPORTANT:
+ * - This assumes your GameID is the date-style ID already used in playergamestats.json (e.g., 20251212).
+ * - The export uses selectedGame.GameID as-is. Make sure games.json GameID values match that style.
  */
 
 function absUrl(path) {
@@ -41,7 +52,9 @@ async function fetchJson(label, path) {
 }
 
 function downloadJSON(filename, data) {
-  const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+  const blob = new Blob([JSON.stringify(data, null, 2)], {
+    type: "application/json",
+  });
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url;
@@ -50,6 +63,16 @@ function downloadJSON(filename, data) {
   a.click();
   a.remove();
   URL.revokeObjectURL(url);
+}
+
+async function copyToClipboard(text) {
+  // Works on HTTPS + localhost. If clipboard is blocked, we fall back to a prompt.
+  try {
+    await navigator.clipboard.writeText(text);
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 function seasonIdToYear(seasonId) {
@@ -72,6 +95,7 @@ function sortByJerseyThenName(a, b) {
   return String(a.Name).localeCompare(String(b.Name));
 }
 
+// These must match your playergamestats.json field names
 const STAT_KEYS = [
   "Points",
   "Rebounds",
@@ -114,6 +138,15 @@ function rowHasAnyEnteredValue(row) {
   return STAT_KEYS.some((k) => String(row[k] ?? "").trim() !== "");
 }
 
+function makeStatId(gameId, playerId) {
+  // Preserve your existing "compound" scheme (concatenate GameID + PlayerID)
+  // Example: GameID 20251212 + PlayerID 202506 -> 20251212202506
+  const s = `${Number(gameId)}${Number(playerId)}`;
+  // If it overflows JS safe int someday, you can switch to string StatID.
+  // For now your sizes are safe.
+  return Number(s);
+}
+
 export default function BoysBasketballAdmin() {
   const PATHS = {
     players: "/data/boys/basketball/players.json",
@@ -136,8 +169,9 @@ export default function BoysBasketballAdmin() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  // If checked, saving replaces existing rows for this game/player.
   const [overwriteExisting, setOverwriteExisting] = useState(true);
+
+  const [clipboardStatus, setClipboardStatus] = useState("");
 
   useEffect(() => {
     async function load() {
@@ -204,7 +238,7 @@ export default function BoysBasketballAdmin() {
     return gamesForSeason.find((g) => Number(g.GameID) === gid) || null;
   }, [gamesForSeason, selectedGameId]);
 
-  // Existing stats for this GameID
+  // Existing stats for this GameID (so we can show "existing" pill + prefill)
   const existingStatsMap = useMemo(() => {
     const gid = Number(selectedGame?.GameID);
     if (!Number.isFinite(gid)) return new Map();
@@ -235,7 +269,6 @@ export default function BoysBasketballAdmin() {
       const existing = existingStatsMap.get(Number(p.PlayerID));
       if (existing) {
         const row = emptyRow();
-        // Prefill values as strings so inputs show them
         for (const k of STAT_KEYS) row[k] = existing?.[k] ?? "";
         row.DNP = false;
         next[p.PlayerID] = row;
@@ -260,7 +293,6 @@ export default function BoysBasketballAdmin() {
   function toggleDnp(playerId, checked) {
     setBoxScore((prev) => {
       const cur = prev[playerId] || emptyRow();
-      // When DNP is checked, clear the numeric inputs
       if (checked) {
         const cleared = emptyRow();
         cleared.DNP = true;
@@ -277,7 +309,6 @@ export default function BoysBasketballAdmin() {
     setBoxScore(next);
   }
 
-  // ✅ Build export rows directly from what you typed (boxScore), not from playerGameStats
   function buildGameRowsFromBoxScore() {
     const gid = Number(selectedGame?.GameID);
     if (!Number.isFinite(gid)) return [];
@@ -292,9 +323,9 @@ export default function BoysBasketballAdmin() {
       if (!rowHasAnyEnteredValue(row)) continue;
 
       rows.push({
-        Season: seasonYear,
-        GameID: gid,
+        StatID: makeStatId(gid, pid),
         PlayerID: pid,
+        GameID: gid,
 
         Points: numOrZero(row.Points),
         Rebounds: numOrZero(row.Rebounds),
@@ -303,13 +334,14 @@ export default function BoysBasketballAdmin() {
         Steals: numOrZero(row.Steals),
         Blocks: numOrZero(row.Blocks),
 
-        TwoPM: numOrZero(row.TwoPM),
-        TwoPA: numOrZero(row.TwoPA),
         ThreePM: numOrZero(row.ThreePM),
         ThreePA: numOrZero(row.ThreePA),
-
+        TwoPM: numOrZero(row.TwoPM),
+        TwoPA: numOrZero(row.TwoPA),
         FTM: numOrZero(row.FTM),
         FTA: numOrZero(row.FTA),
+
+        StatComplete: "Yes",
       });
     }
 
@@ -349,7 +381,7 @@ export default function BoysBasketballAdmin() {
       return [...next, ...updates];
     });
 
-    alert("Box score saved in memory. Use 'Download JSON code' to export this game's rows.");
+    alert("Box score saved in memory. Use Download/Copy to export this game's rows.");
   }
 
   const enteredPointsTotal = useMemo(() => {
@@ -372,6 +404,9 @@ export default function BoysBasketballAdmin() {
       </div>
     );
   }
+
+  const exportRows = buildGameRowsFromBoxScore();
+  const exportText = JSON.stringify(exportRows, null, 2);
 
   return (
     <div>
@@ -415,7 +450,7 @@ export default function BoysBasketballAdmin() {
 
       <hr style={{ margin: "18px 0" }} />
 
-      {/* Roster list (restored) */}
+      {/* Roster list */}
       <section>
         <h3 style={{ margin: "0 0 8px" }}>Roster</h3>
 
@@ -465,9 +500,29 @@ export default function BoysBasketballAdmin() {
               downloadJSON(`game_${selectedGameId || "unknown"}_playergamestats.json`, rows);
             }}
             disabled={!selectedGame}
-            title="Downloads ONLY this game's rows, built from the table you just typed."
+            title="Downloads ONLY this game's rows (in playergamestats.json format)."
           >
             Download JSON code
+          </button>
+
+          <button
+            style={btn}
+            onClick={async () => {
+              if (!selectedGame) return;
+              setClipboardStatus("");
+              const ok = await copyToClipboard(exportText);
+              if (ok) {
+                setClipboardStatus("Copied!");
+                setTimeout(() => setClipboardStatus(""), 1500);
+              } else {
+                // Fallback: show a prompt the user can copy from
+                window.prompt("Clipboard blocked. Copy the JSON from here:", exportText);
+              }
+            }}
+            disabled={!selectedGame}
+            title="Copies ONLY this game's rows to clipboard."
+          >
+            Copy JSON to clipboard
           </button>
 
           <button style={btn} onClick={clearBoxScore} disabled={!selectedGame}>
@@ -487,6 +542,8 @@ export default function BoysBasketballAdmin() {
             Entered PTS total: <strong>{enteredPointsTotal}</strong>
           </div>
         </div>
+
+        {clipboardStatus && <div style={{ marginTop: 8, color: "#16a34a", fontWeight: 800 }}>{clipboardStatus}</div>}
 
         {!selectedGame && (
           <p style={{ marginTop: 10, color: "#555" }}>Select a game to generate the box score table.</p>
@@ -551,7 +608,7 @@ export default function BoysBasketballAdmin() {
         <p style={{ marginTop: 10, color: "#555", lineHeight: 1.4 }}>
           Tips:
           <br />• Mark DNP to guarantee no row is exported for that player.
-          <br />• “Download JSON code” exports only this game’s rows (built from what you typed).
+          <br />• Export matches playergamestats.json format (StatID + StatComplete).
         </p>
       </section>
     </div>
