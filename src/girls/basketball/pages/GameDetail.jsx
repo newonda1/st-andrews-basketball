@@ -204,13 +204,23 @@ function GameDetailGirls() {
             <tbody>
               {playerStats.map((s) => (
                 <tr key={s.PlayerGameStatsID ?? `${s.GameID}-${s.PlayerID}`}>
-                  <td className="border px-2 py-1 text-left">
-                    <Link
-                      to={`/athletics/girls/basketball/players/${s.PlayerID}`}
-                      className="text-blue-600 underline"
-                    >
-                      {getPlayerName(s.PlayerID)}
-                    </Link>
+                  <td className="border px-2 py-1 align-middle text-left">
+                    <div className="flex items-center justify-start gap-2">
+                      <img
+                        src={getPlayerPhotoUrl(s.PlayerID)}
+                        alt={getPlayerName(s.PlayerID)}
+                        onError={(e) => {
+                          e.currentTarget.src = "/images/common/logo.png";
+                        }}
+                        className="w-8 h-8 rounded-full object-cover border"
+                      />
+                      <Link
+                        to={`/athletics/girls/basketball/players/${s.PlayerID}`}
+                        className="text-blue-600 underline hover:text-blue-800"
+                      >
+                        {getPlayerName(s.PlayerID)}
+                      </Link>
+                    </div>
                   </td>
                   <td className="border px-2 py-1">{s.Points}</td>
                   <td className="border px-2 py-1">{s.Rebounds}</td>
