@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 
 function GameDetail() {
@@ -8,7 +8,6 @@ function GameDetail() {
   const [players, setPlayers] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // ✅ Correct paths for your current zip:
   // public/data/boys/basketball/...
   const DATA_BASE = "/data/boys/basketball/";
   const PLAYER_IMG_BASE = "/images/boys/basketball/players/";
@@ -121,6 +120,35 @@ function GameDetail() {
     return `${ys}-${ye2}`;
   };
 
+  // ✅ Team totals row (sums across playerStats)
+  const teamTotals = useMemo(() => {
+    const sum = (key) =>
+      playerStats.reduce((acc, s) => acc + (Number(s?.[key]) || 0), 0);
+
+    const totals = {
+      Points: sum("Points"),
+      Rebounds: sum("Rebounds"),
+      Assists: sum("Assists"),
+      Turnovers: sum("Turnovers"),
+      Steals: sum("Steals"),
+      Blocks: sum("Blocks"),
+      ThreePM: sum("ThreePM"),
+      ThreePA: sum("ThreePA"),
+      TwoPM: sum("TwoPM"),
+      TwoPA: sum("TwoPA"),
+      FTM: sum("FTM"),
+      FTA: sum("FTA"),
+    };
+
+    return {
+      ...totals,
+      ThreePct: formatPct(totals.ThreePM, totals.ThreePA),
+      TwoPct: formatPct(totals.TwoPM, totals.TwoPA),
+      EfgPct: calcEFG(totals.TwoPM, totals.ThreePM, totals.TwoPA, totals.ThreePA),
+      FtPct: formatPct(totals.FTM, totals.FTA),
+    };
+  }, [playerStats]);
+
   if (loading) {
     return <div className="p-4">Loading…</div>;
   }
@@ -134,15 +162,25 @@ function GameDetail() {
 
   const showScore = game.Result === "W" || game.Result === "L";
 
-  // ✅ Correct “Back to Season” link for your current router structure
-  // (your schedule links are /athletics/boys/basketball/games/:gameId)
-  const seasonSlug = seasonSlugFromYearStart(game.Season) || "2025-26";
-  const seasonPath = `/athletics/boys/basketball/seasons/${seasonSlug}`;
+  // ✅ Dynamic “Back to Season” link + label (no hard-coded season)
+  const seasonSlug = seasonSlugFromYearStart(game.Season);
+  const seasonPath = seasonSlug
+    ? `/athletics/boys/basketball/seasons/${seasonSlug}`
+    : "/athletics/boys/basketball/seasons";
+
+  // ✅ Recap title from games.json
+  const recapTitle =
+    game.RecapTitle && String(game.RecapTitle).trim().length > 0
+      ? game.RecapTitle
+      : "Game Recap";
+
+  const recapText =
+    game.Recap && String(game.Recap).trim().length > 0 ? game.Recap : "Recap coming soon.";
 
   return (
     <div className="p-4 space-y-6">
       <Link to={seasonPath} className="text-sm text-blue-600 hover:underline">
-        ← Back to {seasonSlug} Season
+        {seasonSlug ? `← Back to the ${seasonSlug} Season` : "← Back to Seasons"}
       </Link>
 
       <header>
@@ -164,10 +202,8 @@ function GameDetail() {
       </header>
 
       <section>
-        <h2 className="text-xl font-semibold mb-2">Game Recap</h2>
-        <p className="text-gray-700 leading-relaxed whitespace-pre-line">
-          {game.Recap && game.Recap.trim().length > 0 ? game.Recap : "Recap coming soon."}
-        </p>
+        <h2 className="text-xl font-semibold mb-2">{recapTitle}</h2>
+        <p className="text-gray-700 leading-relaxed whitespace-pre-line">{recapText}</p>
       </section>
 
       <section>
@@ -198,6 +234,7 @@ function GameDetail() {
                   <th className="border px-2 py-1">FT%</th>
                 </tr>
               </thead>
+
               <tbody>
                 {playerStats.map((s) => {
                   const threePct = formatPct(s.ThreePM, s.ThreePA);
@@ -213,8 +250,6 @@ function GameDetail() {
                             src={getPlayerPhotoUrl(s.PlayerID)}
                             alt={getPlayerName(s.PlayerID)}
                             onError={(e) => {
-                              // Your zip doesn’t include a default player image,
-                              // so fall back to the school logo.
                               e.currentTarget.src = "/images/common/logo.png";
                             }}
                             className="w-8 h-8 rounded-full object-cover border"
@@ -247,6 +282,27 @@ function GameDetail() {
                     </tr>
                   );
                 })}
+
+                {/* ✅ Team Totals row styled like header row */}
+                <tr className="bg-gray-100 font-semibold">
+                  <td className="border px-2 py-1 text-left">Team Totals</td>
+                  <td className="border px-2 py-1">{teamTotals.Points}</td>
+                  <td className="border px-2 py-1">{teamTotals.Rebounds}</td>
+                  <td className="border px-2 py-1">{teamTotals.Assists}</td>
+                  <td className="border px-2 py-1">{teamTotals.Turnovers}</td>
+                  <td className="border px-2 py-1">{teamTotals.Steals}</td>
+                  <td className="border px-2 py-1">{teamTotals.Blocks}</td>
+                  <td className="border px-2 py-1">{teamTotals.ThreePM}</td>
+                  <td className="border px-2 py-1">{teamTotals.ThreePA}</td>
+                  <td className="border px-2 py-1">{teamTotals.ThreePct}</td>
+                  <td className="border px-2 py-1">{teamTotals.TwoPM}</td>
+                  <td className="border px-2 py-1">{teamTotals.TwoPA}</td>
+                  <td className="border px-2 py-1">{teamTotals.TwoPct}</td>
+                  <td className="border px-2 py-1">{teamTotals.EfgPct}</td>
+                  <td className="border px-2 py-1">{teamTotals.FTM}</td>
+                  <td className="border px-2 py-1">{teamTotals.FTA}</td>
+                  <td className="border px-2 py-1">{teamTotals.FtPct}</td>
+                </tr>
               </tbody>
             </table>
           </div>
