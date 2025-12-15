@@ -62,25 +62,45 @@ function downloadText(filename, text) {
   URL.revokeObjectURL(url);
 }
 
+function seasonIdStartYear(seasonId) {
+  // "2025-26" => 2025
+  const y = parseInt(String(seasonId || "").slice(0, 4), 10);
+  return Number.isFinite(y) ? y : null;
+}
+
+function formatDateFromMs(ms) {
+  const n = Number(ms);
+  if (!Number.isFinite(n)) return "";
+  const d = new Date(n);
+  // display in local timezone like "2025-11-18"
+  const yyyy = d.getFullYear();
+  const mm = String(d.getMonth() + 1).padStart(2, "0");
+  const dd = String(d.getDate()).padStart(2, "0");
+  return `${yyyy}-${mm}-${dd}`;
+}
+
 /**
- * Normalize games so dropdown works even if the girls games.json uses different key names.
+ * Normalize games for girls format:
+ *  - GameID is number like 20251118
+ *  - Date is ms timestamp
+ *  - Season is start-year number (e.g. 2025)
+ *  - LocationType is "Home"/"Away"
  */
-function normalizeGame(g) {
+function normalizeGirlsGame(g) {
   if (!g || typeof g !== "object") return null;
 
-  const SeasonID = g.SeasonID ?? g.Season ?? g.seasonId ?? g.seasonID ?? g.year ?? "";
-  const GameID = g.GameID ?? g.GameId ?? g.gameId ?? g.id ?? g.ID ?? "";
-  const Date = g.Date ?? g.date ?? g.GameDate ?? g.gameDate ?? "";
-  const Opponent = g.Opponent ?? g.Opp ?? g.opponent ?? g.OppName ?? g.opp ?? "";
-  const HomeAway = g.HomeAway ?? g.homeAway ?? g.Site ?? g.site ?? g.LocationType ?? "";
+  const GameID = g.GameID ?? g.GameId ?? g.gameId ?? g.id ?? "";
+  const seasonStart = g.Season ?? g.season ?? g.SeasonStart ?? "";
+  const dateMs = g.Date ?? g.date ?? "";
 
   return {
     ...g,
-    SeasonID: String(SeasonID),
     GameID: String(GameID),
-    Date: String(Date),
-    Opponent: String(Opponent),
-    HomeAway: String(HomeAway),
+    SeasonStartYear: safeNum(seasonStart),
+    DateMs: safeNum(dateMs),
+    DateDisplay: formatDateFromMs(dateMs),
+    Opponent: String(g.Opponent ?? g.opponent ?? ""),
+    LocationType: String(g.LocationType ?? g.HomeAway ?? g.site ?? ""),
   };
 }
 
@@ -105,7 +125,6 @@ export default function GirlsBasketballAdmin() {
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-
   const [clipboardStatus, setClipboardStatus] = useState("");
 
   useEffect(() => {
@@ -135,17 +154,20 @@ export default function GirlsBasketballAdmin() {
         setLoading(false);
       }
     }
-
     load();
   }, []);
 
-  const games = useMemo(() => {
-    return (gamesRaw || []).map(normalizeGame).filter(Boolean);
-  }, [gamesRaw]);
+  const games = useMemo(() => (gamesRaw || []).map(normalizeGirlsGame).filter(Boolean), [gamesRaw]);
 
-  const rosterEntry = useMemo(() => {
-    return (seasonRosters || []).find((x) => x.SeasonID === selectedSeason) || null;
-  }, [seasonRosters, selectedSeason]);
+  const selectedSeasonStartYear = useMemo(
+    () => seasonIdStartYear(selectedSeason),
+    [selectedSeason]
+  );
+
+  const rosterEntry = useMemo(
+    () => (seasonRosters || []).find((x) => x.SeasonID === selectedSeason) || null,
+    [seasonRosters, selectedSeason]
+  );
 
   const rosterPlayers = useMemo(() => {
     const roster = rosterEntry?.Players || [];
@@ -169,27 +191,19 @@ export default function GirlsBasketballAdmin() {
     return merged;
   }, [rosterEntry, players]);
 
-  const rosterPlayerIds = useMemo(() => {
-    return new Set(rosterPlayers.map((p) => p.PlayerID));
-  }, [rosterPlayers]);
+  const rosterPlayerIds = useMemo(() => new Set(rosterPlayers.map((p) => p.PlayerID)), [rosterPlayers]);
 
   const seasonGames = useMemo(() => {
-    // IMPORTANT: filtering uses normalized SeasonID, but we also allow slight mismatches
-    // like "2025-26" vs "2025–26" (en-dash) by stripping non-digits/-.
-    const norm = (s) => String(s || "").replace(/[^\d-]/g, "");
-    const target = norm(selectedSeason);
+    // girls games.json uses "Season": 2025 (start year)  [oai_citation:3‡games.json](sediment://file_0000000019e471fd9f6098705f0179ed)
+    const targetYear = safeNum(selectedSeasonStartYear);
+    const list = (games || []).filter((g) => safeNum(g.SeasonStartYear) === targetYear);
 
-    const list = (games || []).filter((g) => norm(g.SeasonID) === target);
-
-    list.sort((a, b) => String(b.Date || "").localeCompare(String(a.Date || "")));
+    // sort newest first by timestamp
+    list.sort((a, b) => safeNum(b.DateMs) - safeNum(a.DateMs));
     return list;
-  }, [games, selectedSeason]);
+  }, [games, selectedSeasonStartYear]);
 
-  const selectedGame = useMemo(() => {
-    return (games || []).find((g) => g.GameID === selectedGameId) || null;
-  }, [games, selectedGameId]);
-
-  // initialize boxScore whenever season roster changes
+  // Initialize boxScore for roster players whenever roster changes
   useEffect(() => {
     const next = {};
     rosterPlayers.forEach((p) => {
@@ -222,7 +236,7 @@ export default function GirlsBasketballAdmin() {
     }));
   }
 
-  // if stats exist for this game, populate the table
+  // If stats exist for this game, populate the table
   useEffect(() => {
     if (!selectedGameId) return;
 
@@ -248,7 +262,6 @@ export default function GirlsBasketballAdmin() {
 
   const exportRowsForGame = useMemo(() => {
     if (!selectedSeason || !selectedGameId) return [];
-
     return rosterPlayers.map((p) => {
       const s = boxScore[p.PlayerID] || {};
       const dnp = Boolean(s.DNP);
@@ -256,7 +269,7 @@ export default function GirlsBasketballAdmin() {
       return {
         StatID: `${selectedGameId}${p.PlayerID}`,
         PlayerID: p.PlayerID,
-        GameID: selectedGameId,
+        GameID: safeNum(selectedGameId), // keep numeric style if your stats file uses numbers
         Points: dnp ? 0 : safeNum(s.Points),
         Rebounds: dnp ? 0 : safeNum(s.Rebounds),
         Assists: dnp ? 0 : safeNum(s.Assists),
@@ -284,6 +297,7 @@ export default function GirlsBasketballAdmin() {
     const withoutThisGame = (playerGameStats || []).filter(
       (r) => String(r.GameID) !== String(selectedGameId)
     );
+
     const nextAll = [...withoutThisGame, ...exportRowsForGame];
 
     nextAll.sort((a, b) => {
@@ -320,9 +334,7 @@ export default function GirlsBasketballAdmin() {
       <div style={{ padding: 20 }}>
         <h2>Girls Basketball Admin</h2>
         <p style={{ color: "crimson" }}>{error}</p>
-        <p>
-          Confirm these exist in <code>/public</code>:
-        </p>
+        <p>Confirm these exist in <code>/public</code>:</p>
         <ul>
           <li><code>{PATHS.players}</code></li>
           <li><code>{PATHS.seasonRosters}</code></li>
@@ -337,7 +349,7 @@ export default function GirlsBasketballAdmin() {
     <div style={{ padding: 20 }}>
       <h2 style={{ marginTop: 0 }}>Girls Basketball Admin</h2>
 
-      {/* Roster Panel (always visible) */}
+      {/* Roster Panel */}
       <div style={{ marginTop: 12 }}>
         <div style={{ display: "flex", gap: 16, flexWrap: "wrap", alignItems: "center" }}>
           <label>
@@ -365,11 +377,12 @@ export default function GirlsBasketballAdmin() {
         </div>
 
         <div style={{ marginTop: 12, overflowX: "auto", border: "1px solid #e5e7eb", borderRadius: 8 }}>
-          <table style={{ borderCollapse: "collapse", width: "100%", minWidth: 520 }}>
+          <table style={{ borderCollapse: "collapse", width: "100%", minWidth: 640 }}>
             <thead>
               <tr style={{ background: "#f3f4f6" }}>
                 <th style={th}>#</th>
                 <th style={{ ...th, textAlign: "left" }}>Roster</th>
+                <th style={th}>PlayerID</th>
                 <th style={th}>Grad</th>
               </tr>
             </thead>
@@ -380,12 +393,13 @@ export default function GirlsBasketballAdmin() {
                   <td style={{ ...td, textAlign: "left" }}>
                     {p.FirstName} {p.LastName}
                   </td>
+                  <td style={tdCenter}>{p.PlayerID}</td>
                   <td style={tdCenter}>{p.GradYear ?? ""}</td>
                 </tr>
               ))}
               {rosterPlayers.length === 0 && (
                 <tr style={{ borderTop: "1px solid #e5e7eb" }}>
-                  <td style={{ ...td, textAlign: "center" }} colSpan={3}>
+                  <td style={{ ...td, textAlign: "center" }} colSpan={4}>
                     No roster players found for SeasonID: <code>{selectedSeason}</code>
                   </td>
                 </tr>
@@ -402,12 +416,12 @@ export default function GirlsBasketballAdmin() {
           <select
             value={selectedGameId}
             onChange={(e) => setSelectedGameId(e.target.value)}
-            style={{ padding: 8, minWidth: 360 }}
+            style={{ padding: 8, minWidth: 420 }}
           >
             <option value="">Select a game…</option>
             {seasonGames.map((g) => (
               <option key={g.GameID} value={g.GameID}>
-                {g.Date} — {g.Opponent} ({g.HomeAway || ""})
+                {g.DateDisplay} — {g.Opponent} ({g.LocationType})
               </option>
             ))}
           </select>
@@ -424,25 +438,16 @@ export default function GirlsBasketballAdmin() {
       </div>
 
       {!selectedGameId ? (
-        <p style={{ marginTop: 16, opacity: 0.75 }}>
-          Select a game to enter stats.
-        </p>
+        <p style={{ marginTop: 16, opacity: 0.75 }}>Select a game to enter stats.</p>
       ) : (
         <>
-          <h3 style={{ marginTop: 18, marginBottom: 8, fontSize: 16 }}>
-            Box Score Entry{" "}
-            <span style={{ opacity: 0.7, fontWeight: 400 }}>
-              {selectedGame?.Date ? `— ${selectedGame.Date}` : ""}{" "}
-              {selectedGame?.Opponent ? `vs ${selectedGame.Opponent}` : ""}
-            </span>
-          </h3>
-
-          <div style={{ overflowX: "auto", border: "1px solid #e5e7eb", borderRadius: 8 }}>
-            <table style={{ borderCollapse: "collapse", width: "100%", minWidth: 980 }}>
+          <div style={{ overflowX: "auto", marginTop: 16, border: "1px solid #e5e7eb", borderRadius: 8 }}>
+            <table style={{ borderCollapse: "collapse", width: "100%", minWidth: 1040 }}>
               <thead>
                 <tr style={{ background: "#f3f4f6" }}>
                   <th style={th}>#</th>
                   <th style={{ ...th, textAlign: "left" }}>Player</th>
+                  <th style={th}>PlayerID</th>
                   <th style={th}>DNP</th>
                   {STAT_FIELDS.map((f) => (
                     <th key={f} style={th}>{STAT_LABELS[f] || f}</th>
@@ -459,10 +464,9 @@ export default function GirlsBasketballAdmin() {
                       <td style={tdCenter}>{p.JerseyNumber ?? ""}</td>
                       <td style={{ ...td, textAlign: "left" }}>
                         {p.FirstName} {p.LastName}{" "}
-                        <span style={{ opacity: 0.6, fontSize: 12 }}>
-                          ({p.GradYear})
-                        </span>
+                        <span style={{ opacity: 0.6, fontSize: 12 }}>({p.GradYear})</span>
                       </td>
+                      <td style={tdCenter}>{p.PlayerID}</td>
                       <td style={tdCenter}>
                         <input
                           type="checkbox"
@@ -491,9 +495,7 @@ export default function GirlsBasketballAdmin() {
           </div>
 
           <div style={{ marginTop: 16, display: "flex", gap: 10, flexWrap: "wrap", alignItems: "center" }}>
-            <button onClick={copyToClipboard} style={btn}>
-              Copy JSON
-            </button>
+            <button onClick={copyToClipboard} style={btn}>Copy JSON</button>
             <button
               onClick={() => {
                 const filename = overwriteExisting
@@ -510,8 +512,7 @@ export default function GirlsBasketballAdmin() {
 
           <div style={{ marginTop: 14 }}>
             <div style={{ fontSize: 12, opacity: 0.7, marginBottom: 6 }}>
-              Generated JSON (paste into{" "}
-              <code>/public/data/girls/basketball/playergamestats.json</code>)
+              Generated JSON (paste into <code>/public/data/girls/basketball/playergamestats.json</code>)
             </div>
             <textarea
               value={exportJsonText}
