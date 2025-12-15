@@ -65,6 +65,15 @@ function downloadJSON(filename, data) {
   URL.revokeObjectURL(url);
 }
 
+function formatDateMMDDYYYY(ms) {
+  const d = new Date(Number(ms));
+  if (Number.isNaN(d.getTime())) return "";
+  const mm = String(d.getMonth() + 1).padStart(2, "0");
+  const dd = String(d.getDate()).padStart(2, "0");
+  const yyyy = d.getFullYear();
+  return `${mm}/${dd}/${yyyy}`;
+}
+
 async function copyToClipboard(text) {
   // Works on HTTPS + localhost. If clipboard is blocked, we fall back to a prompt.
   try {
@@ -434,8 +443,7 @@ export default function BoysBasketballAdmin() {
             <option value="">Select game…</option>
             {gamesForSeason.map((g) => (
               <option key={g.GameID} value={g.GameID}>
-                {g.Date ? `${g.Date} — ` : ""}
-                {g.Opponent || "Opponent?"} (GameID {g.GameID})
+                {formatDateMMDDYYYY(g.Date)} — {g.Opponent || "Opponent?"} (GameID {g.GameID})
               </option>
             ))}
           </select>
