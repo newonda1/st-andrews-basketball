@@ -285,7 +285,7 @@ function GameDetail() {
 
                 {/* ✅ Team Totals row styled like header row */}
                 <tr className="bg-gray-100 font-semibold">
-                  <td className="border px-2 py-1 text-left">Team Totals</td>
+                  <td className="border px-2 py-1 text-center">Team Totals</td>
                   <td className="border px-2 py-1">{teamTotals.Points}</td>
                   <td className="border px-2 py-1">{teamTotals.Rebounds}</td>
                   <td className="border px-2 py-1">{teamTotals.Assists}</td>
