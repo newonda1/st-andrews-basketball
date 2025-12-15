@@ -1,15 +1,104 @@
 import React, { useEffect, useMemo, useState } from "react";
 
 /**
- * Girls Basketball Admin – Box Score Entry UI
- * Public JSON paths (from /public):
- *  - /data/girls/basketball/players.json
- *  - /data/girls/basketball/seasonrosters.json
- *  - /data/girls/basketball/games.json
- *  - /data/girls/basketball/playergamestats.json
+ * Girls Basketball Admin – Box Score Entry UI (full-game at once)
+ *
+ * Mirrors BoysBasketballAdmin.jsx UI/behavior, but reads from:
+ *  /data/girls/basketball/players.json
+ *  /data/girls/basketball/seasonrosters.json
+ *  /data/girls/basketball/games.json
+ *  /data/girls/basketball/playergamestats.json
+ *
+ * Assumptions (matching your girls games.json):
+ *  - games.json has Season as start-year number (e.g., 2025)
+ *  - games.json Date is a millisecond timestamp
+ *  - games.json GameID is date-style numeric ID (e.g., 20251202)
  */
 
-const STAT_FIELDS = [
+function absUrl(path) {
+  return new URL(path, window.location.origin).toString();
+}
+
+async function fetchJson(label, path) {
+  const url = absUrl(path);
+  const res = await fetch(url, { cache: "no-store" });
+  const text = await res.text();
+
+  if (!res.ok) throw new Error(`${label} failed (HTTP ${res.status}) at ${path}`);
+
+  const trimmed = text.trim();
+  if (trimmed.startsWith("<!DOCTYPE") || trimmed.startsWith("<html")) {
+    throw new Error(
+      `${label} did not return JSON at ${path}.\n` +
+        `It returned HTML (SPA fallback). Ensure the file exists in /public at that path.\n\n` +
+        `First 80 chars:\n${trimmed.slice(0, 80)}...`
+    );
+  }
+
+  try {
+    return JSON.parse(text);
+  } catch (e) {
+    throw new Error(
+      `${label} returned invalid JSON at ${path}.\n` +
+        `JSON parse error: ${String(e?.message || e)}`
+    );
+  }
+}
+
+function downloadJSON(filename, data) {
+  const blob = new Blob([JSON.stringify(data, null, 2)], {
+    type: "application/json",
+  });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
+}
+
+function formatDateMMDDYYYY(ms) {
+  const d = new Date(Number(ms));
+  if (Number.isNaN(d.getTime())) return "";
+  const mm = String(d.getMonth() + 1).padStart(2, "0");
+  const dd = String(d.getDate()).padStart(2, "0");
+  const yyyy = d.getFullYear();
+  return `${mm}/${dd}/${yyyy}`;
+}
+
+async function copyToClipboard(text) {
+  try {
+    await navigator.clipboard.writeText(text);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+function seasonIdToYear(seasonId) {
+  // "2025-26" -> 2025
+  const first = String(seasonId).split("-")[0];
+  const yr = Number(first);
+  return Number.isFinite(yr) ? yr : null;
+}
+
+function numOrZero(v) {
+  if (v === "" || v === null || v === undefined) return 0;
+  const n = Number(v);
+  return Number.isFinite(n) ? n : 0;
+}
+
+function sortByJerseyThenName(a, b) {
+  const ja = Number.isFinite(Number(a.JerseyNumber)) ? Number(a.JerseyNumber) : 999;
+  const jb = Number.isFinite(Number(b.JerseyNumber)) ? Number(b.JerseyNumber) : 999;
+  if (ja !== jb) return ja - jb;
+  return String(a.Name).localeCompare(String(b.Name));
+}
+
+// These must match your playergamestats.json field names
+const STAT_KEYS = [
   "Points",
   "Rebounds",
   "Assists",
@@ -39,69 +128,21 @@ const STAT_LABELS = {
   FTA: "FTA",
 };
 
-async function fetchJson(label, url) {
-  const res = await fetch(url, { cache: "no-store" });
-  if (!res.ok) throw new Error(`Failed to load ${label} (${res.status}): ${url}`);
-  return res.json();
+function emptyRow() {
+  const o = { DNP: false };
+  for (const k of STAT_KEYS) o[k] = "";
+  return o;
 }
 
-function safeNum(v) {
-  const n = Number(v);
-  return Number.isFinite(n) ? n : 0;
+function rowHasAnyEnteredValue(row) {
+  if (!row) return false;
+  if (row.DNP) return false;
+  return STAT_KEYS.some((k) => String(row[k] ?? "").trim() !== "");
 }
 
-function downloadText(filename, text) {
-  const blob = new Blob([text], { type: "application/json;charset=utf-8" });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = filename;
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
-  URL.revokeObjectURL(url);
-}
-
-function seasonIdStartYear(seasonId) {
-  // "2025-26" => 2025
-  const y = parseInt(String(seasonId || "").slice(0, 4), 10);
-  return Number.isFinite(y) ? y : null;
-}
-
-function formatDateFromMs(ms) {
-  const n = Number(ms);
-  if (!Number.isFinite(n)) return "";
-  const d = new Date(n);
-  // display in local timezone like "2025-11-18"
-  const yyyy = d.getFullYear();
-  const mm = String(d.getMonth() + 1).padStart(2, "0");
-  const dd = String(d.getDate()).padStart(2, "0");
-  return `${yyyy}-${mm}-${dd}`;
-}
-
-/**
- * Normalize games for girls format:
- *  - GameID is number like 20251118
- *  - Date is ms timestamp
- *  - Season is start-year number (e.g. 2025)
- *  - LocationType is "Home"/"Away"
- */
-function normalizeGirlsGame(g) {
-  if (!g || typeof g !== "object") return null;
-
-  const GameID = g.GameID ?? g.GameId ?? g.gameId ?? g.id ?? "";
-  const seasonStart = g.Season ?? g.season ?? g.SeasonStart ?? "";
-  const dateMs = g.Date ?? g.date ?? "";
-
-  return {
-    ...g,
-    GameID: String(GameID),
-    SeasonStartYear: safeNum(seasonStart),
-    DateMs: safeNum(dateMs),
-    DateDisplay: formatDateFromMs(dateMs),
-    Opponent: String(g.Opponent ?? g.opponent ?? ""),
-    LocationType: String(g.LocationType ?? g.HomeAway ?? g.site ?? ""),
-  };
+function makeStatId(gameId, playerId) {
+  const s = `${Number(gameId)}${Number(playerId)}`;
+  return Number(s);
 }
 
 export default function GirlsBasketballAdmin() {
@@ -114,17 +155,18 @@ export default function GirlsBasketballAdmin() {
 
   const [players, setPlayers] = useState([]);
   const [seasonRosters, setSeasonRosters] = useState([]);
-  const [gamesRaw, setGamesRaw] = useState([]);
+  const [games, setGames] = useState([]);
   const [playerGameStats, setPlayerGameStats] = useState([]);
 
   const [selectedSeason, setSelectedSeason] = useState("");
   const [selectedGameId, setSelectedGameId] = useState("");
 
   const [boxScore, setBoxScore] = useState({});
-  const [overwriteExisting, setOverwriteExisting] = useState(true);
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+
+  const [overwriteExisting, setOverwriteExisting] = useState(true);
   const [clipboardStatus, setClipboardStatus] = useState("");
 
   useEffect(() => {
@@ -142,348 +184,409 @@ export default function GirlsBasketballAdmin() {
 
         setPlayers(Array.isArray(p) ? p : []);
         setSeasonRosters(Array.isArray(r) ? r : []);
-        setGamesRaw(Array.isArray(g) ? g : []);
+        setGames(Array.isArray(g) ? g : []);
         setPlayerGameStats(Array.isArray(s) ? s : []);
 
-        if (Array.isArray(r) && r.length > 0 && r[0]?.SeasonID) {
-          setSelectedSeason(r[0].SeasonID);
-        }
+        if (Array.isArray(r) && r.length > 0) setSelectedSeason(r[0].SeasonID);
       } catch (e) {
         setError(String(e?.message || e));
       } finally {
         setLoading(false);
       }
     }
+
     load();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const games = useMemo(() => (gamesRaw || []).map(normalizeGirlsGame).filter(Boolean), [gamesRaw]);
+  const seasonYear = useMemo(() => seasonIdToYear(selectedSeason), [selectedSeason]);
 
-  const selectedSeasonStartYear = useMemo(
-    () => seasonIdStartYear(selectedSeason),
-    [selectedSeason]
-  );
+  const selectedRoster = useMemo(() => {
+    return seasonRosters.find((x) => x.SeasonID === selectedSeason) || null;
+  }, [seasonRosters, selectedSeason]);
 
-  const rosterEntry = useMemo(
-    () => (seasonRosters || []).find((x) => x.SeasonID === selectedSeason) || null,
-    [seasonRosters, selectedSeason]
-  );
+  const rosterPlayersDetailed = useMemo(() => {
+    if (!selectedRoster?.Players) return [];
 
-  const rosterPlayers = useMemo(() => {
-    const roster = rosterEntry?.Players || [];
-    const playerMap = new Map((players || []).map((p) => [p.PlayerID, p]));
-
-    const merged = roster
-      .map((rp) => {
-        const base = playerMap.get(rp.PlayerID);
-        if (!base) return null;
-        return {
-          PlayerID: rp.PlayerID,
-          JerseyNumber: rp.JerseyNumber ?? base.JerseyNumber,
-          FirstName: base.FirstName,
-          LastName: base.LastName,
-          GradYear: base.GradYear,
-        };
-      })
-      .filter(Boolean);
-
-    merged.sort((a, b) => safeNum(a.JerseyNumber) - safeNum(b.JerseyNumber));
-    return merged;
-  }, [rosterEntry, players]);
-
-  const rosterPlayerIds = useMemo(() => new Set(rosterPlayers.map((p) => p.PlayerID)), [rosterPlayers]);
-
-  const seasonGames = useMemo(() => {
-    // girls games.json uses "Season": 2025 (start year)  [oai_citation:3‡games.json](sediment://file_0000000019e471fd9f6098705f0179ed)
-    const targetYear = safeNum(selectedSeasonStartYear);
-    const list = (games || []).filter((g) => safeNum(g.SeasonStartYear) === targetYear);
-
-    // sort newest first by timestamp
-    list.sort((a, b) => safeNum(b.DateMs) - safeNum(a.DateMs));
-    return list;
-  }, [games, selectedSeasonStartYear]);
-
-  // Initialize boxScore for roster players whenever roster changes
-  useEffect(() => {
-    const next = {};
-    rosterPlayers.forEach((p) => {
-      next[p.PlayerID] = {
-        DNP: false,
-        Points: 0,
-        Rebounds: 0,
-        Assists: 0,
-        Turnovers: 0,
-        Steals: 0,
-        Blocks: 0,
-        TwoPM: 0,
-        TwoPA: 0,
-        ThreePM: 0,
-        ThreePA: 0,
-        FTM: 0,
-        FTA: 0,
+    const arr = selectedRoster.Players.map((entry) => {
+      const player = players.find((p) => Number(p.PlayerID) === Number(entry.PlayerID));
+      return {
+        PlayerID: Number(entry.PlayerID),
+        JerseyNumber: entry.JerseyNumber,
+        Name: player ? `${player.FirstName} ${player.LastName}` : "Unknown Player",
+        GradYear: player?.GradYear ?? "",
       };
     });
-    setBoxScore(next);
-  }, [rosterPlayers]);
 
-  function setStat(playerId, field, value) {
+    return arr.sort(sortByJerseyThenName);
+  }, [selectedRoster, players]);
+
+  const gamesForSeason = useMemo(() => {
+    if (!Number.isFinite(seasonYear)) return [];
+    return games
+      .filter((g) => Number(g.Season) === seasonYear)
+      .sort((a, b) => Number(a.GameID) - Number(b.GameID));
+  }, [games, seasonYear]);
+
+  const selectedGame = useMemo(() => {
+    const gid = Number(selectedGameId);
+    if (!Number.isFinite(gid)) return null;
+    return gamesForSeason.find((g) => Number(g.GameID) === gid) || null;
+  }, [gamesForSeason, selectedGameId]);
+
+  const existingStatsMap = useMemo(() => {
+    const gid = Number(selectedGame?.GameID);
+    if (!Number.isFinite(gid)) return new Map();
+
+    const map = new Map();
+    for (const s of playerGameStats) {
+      if (Number(s.GameID) !== gid) continue;
+      map.set(Number(s.PlayerID), s);
+    }
+    return map;
+  }, [playerGameStats, selectedGame]);
+
+  // When season changes, reset game + box score
+  useEffect(() => {
+    setSelectedGameId("");
+    setBoxScore({});
+  }, [selectedSeason]);
+
+  // When game changes, generate rows for roster and prefill any existing stats
+  useEffect(() => {
+    if (!selectedGame || rosterPlayersDetailed.length === 0) {
+      setBoxScore({});
+      return;
+    }
+
+    const next = {};
+    for (const p of rosterPlayersDetailed) {
+      const existing = existingStatsMap.get(Number(p.PlayerID));
+      if (existing) {
+        const row = emptyRow();
+        for (const k of STAT_KEYS) row[k] = existing?.[k] ?? "";
+        row.DNP = false;
+        next[p.PlayerID] = row;
+      } else {
+        next[p.PlayerID] = emptyRow();
+      }
+    }
+
+    setBoxScore(next);
+  }, [selectedGameId, rosterPlayersDetailed, existingStatsMap, selectedGame]);
+
+  function setCell(playerId, statKey, value) {
     setBoxScore((prev) => ({
       ...prev,
       [playerId]: {
-        ...(prev[playerId] || {}),
-        [field]: field === "DNP" ? Boolean(value) : safeNum(value),
+        ...(prev[playerId] || emptyRow()),
+        [statKey]: value,
       },
     }));
   }
 
-  // If stats exist for this game, populate the table
-  useEffect(() => {
-    if (!selectedGameId) return;
-
-    const rows = (playerGameStats || []).filter((r) => String(r.GameID) === String(selectedGameId));
-    if (rows.length === 0) return;
-
+  function toggleDnp(playerId, checked) {
     setBoxScore((prev) => {
-      const next = { ...prev };
-      for (const r of rows) {
-        if (!rosterPlayerIds.has(r.PlayerID)) continue;
-        next[r.PlayerID] = {
-          ...(next[r.PlayerID] || {}),
-          DNP: false,
-          ...STAT_FIELDS.reduce((acc, f) => {
-            acc[f] = safeNum(r[f]);
-            return acc;
-          }, {}),
-        };
+      const cur = prev[playerId] || emptyRow();
+      if (checked) {
+        const cleared = emptyRow();
+        cleared.DNP = true;
+        return { ...prev, [playerId]: cleared };
       }
-      return next;
+      return { ...prev, [playerId]: { ...cur, DNP: false } };
     });
-  }, [selectedGameId, playerGameStats, rosterPlayerIds]);
+  }
 
-  const exportRowsForGame = useMemo(() => {
-    if (!selectedSeason || !selectedGameId) return [];
-    return rosterPlayers.map((p) => {
-      const s = boxScore[p.PlayerID] || {};
-      const dnp = Boolean(s.DNP);
+  function clearBoxScore() {
+    if (!selectedGame) return;
+    const next = {};
+    for (const p of rosterPlayersDetailed) next[p.PlayerID] = emptyRow();
+    setBoxScore(next);
+  }
 
-      return {
-        StatID: `${selectedGameId}${p.PlayerID}`,
-        PlayerID: p.PlayerID,
-        GameID: safeNum(selectedGameId), // keep numeric style if your stats file uses numbers
-        Points: dnp ? 0 : safeNum(s.Points),
-        Rebounds: dnp ? 0 : safeNum(s.Rebounds),
-        Assists: dnp ? 0 : safeNum(s.Assists),
-        Turnovers: dnp ? 0 : safeNum(s.Turnovers),
-        Steals: dnp ? 0 : safeNum(s.Steals),
-        Blocks: dnp ? 0 : safeNum(s.Blocks),
-        TwoPM: dnp ? 0 : safeNum(s.TwoPM),
-        TwoPA: dnp ? 0 : safeNum(s.TwoPA),
-        ThreePM: dnp ? 0 : safeNum(s.ThreePM),
-        ThreePA: dnp ? 0 : safeNum(s.ThreePA),
-        FTM: dnp ? 0 : safeNum(s.FTM),
-        FTA: dnp ? 0 : safeNum(s.FTA),
+  function buildGameRowsFromBoxScore() {
+    const gid = Number(selectedGame?.GameID);
+    if (!Number.isFinite(gid)) return [];
+
+    const rows = [];
+
+    for (const p of rosterPlayersDetailed) {
+      const pid = Number(p.PlayerID);
+      const row = boxScore[pid] || emptyRow();
+
+      if (row.DNP) continue;
+      if (!rowHasAnyEnteredValue(row)) continue;
+
+      rows.push({
+        StatID: makeStatId(gid, pid),
+        PlayerID: pid,
+        GameID: gid,
+
+        Points: numOrZero(row.Points),
+        Rebounds: numOrZero(row.Rebounds),
+        Assists: numOrZero(row.Assists),
+        Turnovers: numOrZero(row.Turnovers),
+        Steals: numOrZero(row.Steals),
+        Blocks: numOrZero(row.Blocks),
+
+        ThreePM: numOrZero(row.ThreePM),
+        ThreePA: numOrZero(row.ThreePA),
+        TwoPM: numOrZero(row.TwoPM),
+        TwoPA: numOrZero(row.TwoPA),
+        FTM: numOrZero(row.FTM),
+        FTA: numOrZero(row.FTA),
+
         StatComplete: "Yes",
-      };
-    });
-  }, [selectedSeason, selectedGameId, rosterPlayers, boxScore]);
-
-  const exportJsonText = useMemo(() => {
-    if (!selectedGameId) return "";
-
-    if (!overwriteExisting) {
-      return JSON.stringify(exportRowsForGame, null, 2);
+      });
     }
 
-    const withoutThisGame = (playerGameStats || []).filter(
-      (r) => String(r.GameID) !== String(selectedGameId)
-    );
+    return rows;
+  }
 
-    const nextAll = [...withoutThisGame, ...exportRowsForGame];
+  function saveBoxScore() {
+    if (!selectedSeason) return alert("Select a season.");
+    if (!selectedGame) return alert("Select a game.");
 
-    nextAll.sort((a, b) => {
-      const g = String(a.GameID).localeCompare(String(b.GameID));
-      if (g !== 0) return g;
-      return safeNum(a.PlayerID) - safeNum(b.PlayerID);
+    const gid = Number(selectedGame.GameID);
+    if (!Number.isFinite(gid)) return alert("Invalid GameID.");
+
+    const updates = buildGameRowsFromBoxScore();
+    const dnpPlayers = rosterPlayersDetailed
+      .map((p) => Number(p.PlayerID))
+      .filter((pid) => (boxScore[pid] || emptyRow()).DNP);
+
+    if (updates.length === 0) {
+      alert("No stat rows entered yet (or everyone is blank/DNP).");
+      return;
+    }
+
+    setPlayerGameStats((prev) => {
+      let next = [...prev];
+
+      if (overwriteExisting) {
+        const rosterIds = new Set(rosterPlayersDetailed.map((p) => Number(p.PlayerID)));
+        next = next.filter((s) => !(Number(s.GameID) === gid && rosterIds.has(Number(s.PlayerID))));
+      }
+
+      if (dnpPlayers.length > 0) {
+        const dnpSet = new Set(dnpPlayers);
+        next = next.filter((s) => !(Number(s.GameID) === gid && dnpSet.has(Number(s.PlayerID))));
+      }
+
+      return [...next, ...updates];
     });
 
-    return JSON.stringify(nextAll, null, 2);
-  }, [overwriteExisting, exportRowsForGame, playerGameStats, selectedGameId]);
+    alert("Box score saved in memory. Use Download/Copy to export this game's rows.");
+  }
 
-  async function copyToClipboard() {
-    try {
-      await navigator.clipboard.writeText(exportJsonText);
-      setClipboardStatus("Copied!");
-      setTimeout(() => setClipboardStatus(""), 1200);
-    } catch {
-      setClipboardStatus("Copy failed");
-      setTimeout(() => setClipboardStatus(""), 1500);
+  const enteredPointsTotal = useMemo(() => {
+    let sum = 0;
+    for (const pid of Object.keys(boxScore)) {
+      const row = boxScore[pid];
+      if (!row || row.DNP) continue;
+      sum += numOrZero(row.Points);
     }
-  }
+    return sum;
+  }, [boxScore]);
 
-  if (loading) {
-    return (
-      <div style={{ padding: 20 }}>
-        <h2>Girls Basketball Admin</h2>
-        <p>Loading data…</p>
-      </div>
-    );
-  }
+  if (loading) return <p>Loading girls basketball admin data…</p>;
 
   if (error) {
     return (
-      <div style={{ padding: 20 }}>
-        <h2>Girls Basketball Admin</h2>
-        <p style={{ color: "crimson" }}>{error}</p>
-        <p>Confirm these exist in <code>/public</code>:</p>
-        <ul>
-          <li><code>{PATHS.players}</code></li>
-          <li><code>{PATHS.seasonRosters}</code></li>
-          <li><code>{PATHS.games}</code></li>
-          <li><code>{PATHS.playerGameStats}</code></li>
-        </ul>
+      <div>
+        <h2 style={{ marginTop: 0 }}>Girls Basketball Admin</h2>
+        <p style={{ color: "crimson", whiteSpace: "pre-wrap" }}>{error}</p>
       </div>
     );
   }
 
+  const exportRows = buildGameRowsFromBoxScore();
+  const exportText = JSON.stringify(exportRows, null, 2);
+
   return (
-    <div style={{ padding: 20 }}>
+    <div>
       <h2 style={{ marginTop: 0 }}>Girls Basketball Admin</h2>
 
-      {/* Roster Panel */}
-      <div style={{ marginTop: 12 }}>
-        <div style={{ display: "flex", gap: 16, flexWrap: "wrap", alignItems: "center" }}>
-          <label>
-            <div style={{ fontSize: 12, opacity: 0.75 }}>Season</div>
-            <select
-              value={selectedSeason}
-              onChange={(e) => {
-                setSelectedSeason(e.target.value);
-                setSelectedGameId("");
-              }}
-              style={{ padding: 8, minWidth: 160 }}
-            >
-              {(seasonRosters || []).map((s) => (
-                <option key={s.SeasonID} value={s.SeasonID}>
-                  {s.SeasonID}
-                </option>
-              ))}
-            </select>
-          </label>
-
-          <div style={{ fontSize: 12, opacity: 0.75, marginTop: 18 }}>
-            Games loaded: <b>{games.length}</b> — Matches this season:{" "}
-            <b>{seasonGames.length}</b>
-          </div>
-        </div>
-
-        <div style={{ marginTop: 12, overflowX: "auto", border: "1px solid #e5e7eb", borderRadius: 8 }}>
-          <table style={{ borderCollapse: "collapse", width: "100%", minWidth: 640 }}>
-            <thead>
-              <tr style={{ background: "#f3f4f6" }}>
-                <th style={th}>#</th>
-                <th style={{ ...th, textAlign: "left" }}>Roster</th>
-                <th style={th}>PlayerID</th>
-                <th style={th}>Grad</th>
-              </tr>
-            </thead>
-            <tbody>
-              {rosterPlayers.map((p) => (
-                <tr key={p.PlayerID} style={{ borderTop: "1px solid #e5e7eb" }}>
-                  <td style={tdCenter}>{p.JerseyNumber ?? ""}</td>
-                  <td style={{ ...td, textAlign: "left" }}>
-                    {p.FirstName} {p.LastName}
-                  </td>
-                  <td style={tdCenter}>{p.PlayerID}</td>
-                  <td style={tdCenter}>{p.GradYear ?? ""}</td>
-                </tr>
-              ))}
-              {rosterPlayers.length === 0 && (
-                <tr style={{ borderTop: "1px solid #e5e7eb" }}>
-                  <td style={{ ...td, textAlign: "center" }} colSpan={4}>
-                    No roster players found for SeasonID: <code>{selectedSeason}</code>
-                  </td>
-                </tr>
-              )}
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      {/* Game selection */}
-      <div style={{ marginTop: 16, display: "flex", gap: 16, flexWrap: "wrap", alignItems: "center" }}>
-        <label>
-          <div style={{ fontSize: 12, opacity: 0.75 }}>Game</div>
-          <select
-            value={selectedGameId}
-            onChange={(e) => setSelectedGameId(e.target.value)}
-            style={{ padding: 8, minWidth: 420 }}
-          >
-            <option value="">Select a game…</option>
-            {seasonGames.map((g) => (
-              <option key={g.GameID} value={g.GameID}>
-                {g.DateDisplay} — {g.Opponent} ({g.LocationType})
+      {/* Season + Game selectors */}
+      <section style={{ marginTop: 10, display: "grid", gridTemplateColumns: "1fr 2fr", gap: 12 }}>
+        <div>
+          <div style={label}>Season</div>
+          <select value={selectedSeason} onChange={(e) => setSelectedSeason(e.target.value)} style={input}>
+            {seasonRosters.map((r) => (
+              <option key={r.SeasonID} value={r.SeasonID}>
+                {r.SeasonID}
               </option>
             ))}
           </select>
-        </label>
+          <div style={{ marginTop: 6, color: "#555", fontSize: 13 }}>
+            games.json Season = <strong>{seasonYear ?? "?"}</strong>
+          </div>
+        </div>
 
-        <label style={{ display: "flex", alignItems: "center", gap: 8, marginTop: 18 }}>
-          <input
-            type="checkbox"
-            checked={overwriteExisting}
-            onChange={(e) => setOverwriteExisting(e.target.checked)}
-          />
-          Overwrite this game in <code>playergamestats.json</code>
-        </label>
-      </div>
+        <div>
+          <div style={label}>Game</div>
+          <select value={selectedGameId} onChange={(e) => setSelectedGameId(e.target.value)} style={input}>
+            <option value="">Select game…</option>
+            {gamesForSeason.map((g) => (
+              <option key={g.GameID} value={g.GameID}>
+                {formatDateMMDDYYYY(g.Date)} — {g.Opponent || "Opponent?"} (GameID {g.GameID})
+              </option>
+            ))}
+          </select>
+          {selectedGame && (
+            <div style={{ marginTop: 6, color: "#555", fontSize: 13 }}>
+              Selected: <strong>{selectedGame.Opponent || "Opponent?"}</strong> • GameID{" "}
+              <strong>{selectedGame.GameID}</strong>
+            </div>
+          )}
+        </div>
+      </section>
 
-      {!selectedGameId ? (
-        <p style={{ marginTop: 16, opacity: 0.75 }}>Select a game to enter stats.</p>
-      ) : (
-        <>
-          <div style={{ overflowX: "auto", marginTop: 16, border: "1px solid #e5e7eb", borderRadius: 8 }}>
-            <table style={{ borderCollapse: "collapse", width: "100%", minWidth: 1040 }}>
+      <hr style={{ margin: "18px 0" }} />
+
+      {/* Roster list */}
+      <section>
+        <h3 style={{ margin: "0 0 8px" }}>Roster</h3>
+
+        {!selectedRoster && <p>No roster found for this season.</p>}
+
+        {selectedRoster && (
+          <div style={{ maxHeight: 220, overflow: "auto", border: "1px solid #e5e7eb", borderRadius: 12 }}>
+            <table style={{ width: "100%", borderCollapse: "collapse" }}>
               <thead>
-                <tr style={{ background: "#f3f4f6" }}>
-                  <th style={th}>#</th>
-                  <th style={{ ...th, textAlign: "left" }}>Player</th>
-                  <th style={th}>PlayerID</th>
-                  <th style={th}>DNP</th>
-                  {STAT_FIELDS.map((f) => (
-                    <th key={f} style={th}>{STAT_LABELS[f] || f}</th>
-                  ))}
+                <tr>
+                  <th style={thSticky}>#</th>
+                  <th style={thSticky}>Player</th>
+                  <th style={thSticky}>Grad</th>
+                  <th style={thSticky}>PlayerID</th>
                 </tr>
               </thead>
               <tbody>
-                {rosterPlayers.map((p) => {
-                  const s = boxScore[p.PlayerID] || {};
-                  const dnp = Boolean(s.DNP);
+                {rosterPlayersDetailed.map((p) => (
+                  <tr key={p.PlayerID}>
+                    <td style={tdCenter}>{p.JerseyNumber}</td>
+                    <td style={td}>{p.Name}</td>
+                    <td style={tdCenter}>{p.GradYear}</td>
+                    <td style={tdCenter}>{p.PlayerID}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </section>
+
+      <hr style={{ margin: "18px 0" }} />
+
+      {/* Box Score Entry */}
+      <section>
+        <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 10 }}>
+          <h3 style={{ margin: 0 }}>Game Box Score Entry</h3>
+
+          <button style={btnPrimary} onClick={saveBoxScore} disabled={!selectedGame || rosterPlayersDetailed.length === 0}>
+            Save Box Score
+          </button>
+
+          <button
+            style={btn}
+            onClick={() => {
+              const rows = buildGameRowsFromBoxScore();
+              downloadJSON(`game_${selectedGameId || "unknown"}_playergamestats.json`, rows);
+            }}
+            disabled={!selectedGame}
+            title="Downloads ONLY this game's rows (in playergamestats.json format)."
+          >
+            Download JSON code
+          </button>
+
+          <button
+            style={btn}
+            onClick={async () => {
+              if (!selectedGame) return;
+              setClipboardStatus("");
+              const ok = await copyToClipboard(exportText);
+              if (ok) {
+                setClipboardStatus("Copied!");
+                setTimeout(() => setClipboardStatus(""), 1500);
+              } else {
+                window.prompt("Clipboard blocked. Copy the JSON from here:", exportText);
+              }
+            }}
+            disabled={!selectedGame}
+            title="Copies ONLY this game's rows to clipboard."
+          >
+            Copy JSON to clipboard
+          </button>
+
+          <button style={btn} onClick={clearBoxScore} disabled={!selectedGame}>
+            Clear Inputs
+          </button>
+
+          <label style={{ marginLeft: 6, display: "flex", alignItems: "center", gap: 6, color: "#111827" }}>
+            <input
+              type="checkbox"
+              checked={overwriteExisting}
+              onChange={(e) => setOverwriteExisting(e.target.checked)}
+            />
+            Overwrite existing rows for this game
+          </label>
+
+          <div style={{ marginLeft: "auto", color: "#555", fontSize: 13 }}>
+            Entered PTS total: <strong>{enteredPointsTotal}</strong>
+          </div>
+        </div>
+
+        {clipboardStatus && <div style={{ marginTop: 8, color: "#16a34a", fontWeight: 800 }}>{clipboardStatus}</div>}
+
+        {!selectedGame && (
+          <p style={{ marginTop: 10, color: "#555" }}>Select a game to generate the box score table.</p>
+        )}
+
+        {selectedGame && (
+          <div style={{ marginTop: 10, overflow: "auto", border: "1px solid #e5e7eb", borderRadius: 12 }}>
+            <table style={{ width: "100%", borderCollapse: "collapse", minWidth: 1100 }}>
+              <thead>
+                <tr>
+                  <th style={thSticky}>#</th>
+                  <th style={thSticky}>Player</th>
+                  <th style={thStickyCenter}>DNP</th>
+                  {STAT_KEYS.map((k) => (
+                    <th key={k} style={thStickyCenter}>
+                      {STAT_LABELS[k] || k}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+
+              <tbody>
+                {rosterPlayersDetailed.map((p) => {
+                  const row = boxScore[p.PlayerID] || emptyRow();
+                  const hasExisting = existingStatsMap.has(Number(p.PlayerID));
 
                   return (
-                    <tr key={p.PlayerID} style={{ borderTop: "1px solid #e5e7eb" }}>
-                      <td style={tdCenter}>{p.JerseyNumber ?? ""}</td>
-                      <td style={{ ...td, textAlign: "left" }}>
-                        {p.FirstName} {p.LastName}{" "}
-                        <span style={{ opacity: 0.6, fontSize: 12 }}>({p.GradYear})</span>
+                    <tr key={p.PlayerID} style={hasExisting ? rowExisting : undefined}>
+                      <td style={tdCenter}>{p.JerseyNumber}</td>
+                      <td style={tdName}>
+                        {p.Name}
+                        {hasExisting && <span style={pill}>existing</span>}
                       </td>
-                      <td style={tdCenter}>{p.PlayerID}</td>
+
                       <td style={tdCenter}>
                         <input
                           type="checkbox"
-                          checked={dnp}
-                          onChange={(e) => setStat(p.PlayerID, "DNP", e.target.checked)}
+                          checked={!!row.DNP}
+                          onChange={(e) => toggleDnp(p.PlayerID, e.target.checked)}
                         />
                       </td>
 
-                      {STAT_FIELDS.map((f) => (
-                        <td key={f} style={tdCenter}>
+                      {STAT_KEYS.map((k) => (
+                        <td key={k} style={tdCenter}>
                           <input
-                            type="number"
-                            value={safeNum(s[f])}
-                            onChange={(e) => setStat(p.PlayerID, f, e.target.value)}
-                            disabled={dnp}
-                            style={num}
-                            min={0}
+                            value={row.DNP ? "" : row[k]}
+                            onChange={(e) => setCell(p.PlayerID, k, e.target.value)}
+                            inputMode="numeric"
+                            disabled={row.DNP}
+                            style={cellInput}
                           />
                         </td>
                       ))}
@@ -493,76 +596,110 @@ export default function GirlsBasketballAdmin() {
               </tbody>
             </table>
           </div>
+        )}
 
-          <div style={{ marginTop: 16, display: "flex", gap: 10, flexWrap: "wrap", alignItems: "center" }}>
-            <button onClick={copyToClipboard} style={btn}>Copy JSON</button>
-            <button
-              onClick={() => {
-                const filename = overwriteExisting
-                  ? `playergamestats_${selectedSeason}.json`
-                  : `playergamestats_${selectedGameId}.json`;
-                downloadText(filename, exportJsonText);
-              }}
-              style={btn}
-            >
-              Download JSON
-            </button>
-            {clipboardStatus && <span style={{ opacity: 0.8 }}>{clipboardStatus}</span>}
-          </div>
-
-          <div style={{ marginTop: 14 }}>
-            <div style={{ fontSize: 12, opacity: 0.7, marginBottom: 6 }}>
-              Generated JSON (paste into <code>/public/data/girls/basketball/playergamestats.json</code>)
-            </div>
-            <textarea
-              value={exportJsonText}
-              readOnly
-              style={{
-                width: "100%",
-                minHeight: 220,
-                fontFamily: "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace",
-                fontSize: 12,
-                padding: 12,
-                borderRadius: 8,
-                border: "1px solid #e5e7eb",
-              }}
-            />
-          </div>
-        </>
-      )}
+        <p style={{ marginTop: 10, color: "#555", lineHeight: 1.4 }}>
+          Tips:
+          <br />• Mark DNP to guarantee no row is exported for that player.
+          <br />• Export matches playergamestats.json format (StatID + StatComplete).
+        </p>
+      </section>
     </div>
   );
 }
 
-const th = {
-  padding: "10px 8px",
+/* --- styles --- */
+
+const label = {
   fontSize: 12,
-  fontWeight: 700,
-  textAlign: "center",
-  whiteSpace: "nowrap",
+  color: "#6b7280",
+  fontWeight: 800,
+  marginBottom: 4,
 };
 
-const td = {
-  padding: "8px",
-  fontSize: 13,
-  whiteSpace: "nowrap",
-};
-
-const tdCenter = { ...td, textAlign: "center" };
-
-const num = {
-  width: 56,
-  padding: "6px 6px",
-  borderRadius: 6,
+const input = {
+  width: "100%",
+  padding: "10px 12px",
+  borderRadius: 12,
   border: "1px solid #d1d5db",
-  textAlign: "center",
+  outline: "none",
 };
 
 const btn = {
   padding: "10px 12px",
+  borderRadius: 12,
+  border: "1px solid #111827",
+  background: "white",
+  fontWeight: 900,
+  cursor: "pointer",
+};
+
+const btnPrimary = {
+  ...btn,
+  background: "#111827",
+  color: "white",
+};
+
+const thSticky = {
+  position: "sticky",
+  top: 0,
+  background: "#f9fafb",
+  borderBottom: "2px solid #e5e7eb",
+  textAlign: "left",
+  padding: "8px 10px",
+  fontSize: 12,
+  letterSpacing: 0.4,
+  textTransform: "uppercase",
+  color: "#374151",
+  zIndex: 1,
+};
+
+const thStickyCenter = {
+  ...thSticky,
+  textAlign: "center",
+  minWidth: 60,
+};
+
+const td = {
+  borderBottom: "1px solid #eef2f7",
+  padding: "8px 10px",
+  fontSize: 14,
+};
+
+const tdCenter = {
+  ...td,
+  textAlign: "center",
+  whiteSpace: "nowrap",
+};
+
+const tdName = {
+  ...td,
+  whiteSpace: "nowrap",
+  fontWeight: 700,
+};
+
+const cellInput = {
+  width: 54,
+  padding: "6px 6px",
   borderRadius: 10,
   border: "1px solid #d1d5db",
-  background: "white",
-  cursor: "pointer",
+  outline: "none",
+  textAlign: "center",
   fontWeight: 700,
+};
+
+const rowExisting = {
+  background: "#fafafa",
+};
+
+const pill = {
+  display: "inline-block",
+  marginLeft: 8,
+  padding: "2px 8px",
+  borderRadius: 999,
+  fontSize: 11,
+  fontWeight: 900,
+  border: "1px solid #e5e7eb",
+  color: "#374151",
+  background: "white",
 };
