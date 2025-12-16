@@ -676,7 +676,7 @@ function Season2025_26() {
               <thead className="bg-gray-100">
                 <tr>
                   <th
-                    className="border px-2 py-1 cursor-pointer sticky left-0 z-40 bg-gray-100 border-r text-center min-w-[280px]"
+                    className="border px-2 py-1 cursor-pointer sticky left-0 z-40 bg-gray-100 border-r text-center min-w-[200px]"
                     onClick={() => handleSort("name")}
                   >
                     Player{sortArrow("name")}
@@ -759,7 +759,7 @@ function Season2025_26() {
                   return (
                     <tr key={player.PlayerID} className={rowBg}>
                       <td
-                        className={`border px-2 py-1 text-left align-middle sticky left-0 z-20 ${rowBg} border-r min-w-[280px]`}
+                        className={`border px-2 py-1 text-left align-middle sticky left-0 z-20 ${rowBg} border-r min-w-[200px]`}
                       >
                         <div className="flex items-center justify-start gap-2">
                           <img
@@ -833,7 +833,7 @@ function Season2025_26() {
 
                 {/* TEAM TOTALS ROW */}
                 <tr className="bg-gray-100 font-semibold">
-                  <td className="border px-2 py-1 sticky left-0 z-30 bg-gray-100 border-r text-center min-w-[280px]">
+                  <td className="border px-2 py-1 sticky left-0 z-30 bg-gray-100 border-r text-center min-w-[200px]">
                     Team Totals
                   </td>
 
