@@ -193,7 +193,7 @@ function Season2025_26() {
     return (ast / tov).toFixed(2);
   };
 
-  // ---------- TEAM TOTALS ROW (new) ----------
+  // ---------- TEAM TOTALS ROW ----------
   const teamGamesPlayed = useMemo(() => {
     const set = new Set();
     for (const s of playerStats) {
@@ -377,6 +377,7 @@ function Season2025_26() {
             />
           </a>
 
+          {/* (Season overview text unchanged) */}
           <p className="mb-5 leading-relaxed">
             After winning three state championships in the past four years, the
             St. Andrew’s Lions enter the 2025-26 basketball season carrying both
@@ -446,6 +447,7 @@ function Season2025_26() {
             Edwards leading the way, the question isn’t whether they can sustain
             their success. Instead, it’s on how they’ll redefine it.
           </p>
+
           <div className="clear-both" />
         </div>
       </section>
@@ -455,7 +457,6 @@ function Season2025_26() {
         <div className="flex items-center justify-between mt-8 mb-4">
           <h2 className="text-2xl font-semibold">📅 Schedule &amp; Results</h2>
 
-          {/* Toggle: Game Result / Team Totals */}
           <div className="flex items-center gap-2 text-xs sm:text-sm">
             <span
               className={`${
@@ -490,7 +491,6 @@ function Season2025_26() {
           </div>
         </div>
 
-        {/* Helpers scoped to this section */}
         {(() => {
           const safeNum = (v) => (Number.isFinite(Number(v)) ? Number(v) : 0);
 
@@ -510,7 +510,6 @@ function Season2025_26() {
 
           const teamTotalsByGameId = new Map();
 
-          // Build totals for each game once
           for (const g of games) {
             const gid = g.GameID;
             const rows = playerStats.filter(
@@ -554,8 +553,8 @@ function Season2025_26() {
           return (
             <div className="overflow-x-auto px-1">
               {!showTeamTotals ? (
-                <table className="w-full border text-center text-xs sm:text-sm md:text-base">
-                  <thead>
+                <table className="min-w-full border text-xs sm:text-sm text-center">
+                  <thead className="bg-gray-100">
                     <tr>
                       <th className="border px-2 py-1">Date</th>
                       <th className="border px-2 py-1">Opponent</th>
@@ -565,13 +564,12 @@ function Season2025_26() {
                   </thead>
                   <tbody>
                     {games.map((game, idx) => {
-                      const hasResult =
-                        game.Result === "W" || game.Result === "L";
+                      const hasResult = game.Result === "W" || game.Result === "L";
 
                       const opponentCell = hasResult ? (
                         <Link
                           to={`/athletics/boys/basketball/games/${game.GameID}`}
-                          className="text-blue-700 hover:underline"
+                          className="text-blue-600 underline hover:text-blue-800"
                         >
                           {game.Opponent}
                         </Link>
@@ -584,16 +582,10 @@ function Season2025_26() {
                           key={game.GameID || idx}
                           className={idx % 2 ? "bg-gray-50" : "bg-white"}
                         >
-                          <td className="border px-2 py-1 text-center">
-                            {formatDate(game.Date)}
-                          </td>
-                          <td className="border px-2 py-1 text-center">
-                            {opponentCell}
-                          </td>
-                          <td className="border px-2 py-1 text-center">
-                            {formatResult(game)}
-                          </td>
-                          <td className="border px-2 py-1 whitespace-nowrap text-center">
+                          <td className="border px-2 py-1">{formatDate(game.Date)}</td>
+                          <td className="border px-2 py-1">{opponentCell}</td>
+                          <td className="border px-2 py-1">{formatResult(game)}</td>
+                          <td className="border px-2 py-1 whitespace-nowrap">
                             {formatScore(game)}
                           </td>
                         </tr>
@@ -602,7 +594,7 @@ function Season2025_26() {
                   </tbody>
                 </table>
               ) : (
-                <table className="w-full border text-center text-xs sm:text-sm md:text-base table-auto whitespace-nowrap">
+                <table className="min-w-full border text-xs sm:text-sm text-center whitespace-nowrap">
                   <thead className="bg-gray-100">
                     <tr>
                       <th className="border px-2 py-1">Date</th>
@@ -631,15 +623,13 @@ function Season2025_26() {
 
                   <tbody>
                     {games.map((game, idx) => {
-                      const totals =
-                        teamTotalsByGameId.get(Number(game.GameID)) || null;
-                      const hasResult =
-                        game.Result === "W" || game.Result === "L";
+                      const totals = teamTotalsByGameId.get(Number(game.GameID)) || null;
+                      const hasResult = game.Result === "W" || game.Result === "L";
 
                       const opponentCell = hasResult ? (
                         <Link
                           to={`/athletics/boys/basketball/games/${game.GameID}`}
-                          className="text-blue-700 hover:underline"
+                          className="text-blue-600 underline hover:text-blue-800"
                         >
                           {game.Opponent}
                         </Link>
@@ -652,56 +642,32 @@ function Season2025_26() {
                           key={game.GameID || idx}
                           className={idx % 2 ? "bg-gray-50" : "bg-white"}
                         >
-                          <td className="border px-2 py-1">
-                            {formatDate(game.Date)}
-                          </td>
+                          <td className="border px-2 py-1">{formatDate(game.Date)}</td>
                           <td className="border px-2 py-1">{opponentCell}</td>
 
-                          <td className="border px-2 py-1">
-                            {totals ? totals.REB : "—"}
-                          </td>
-                          <td className="border px-2 py-1">
-                            {totals ? totals.AST : "—"}
-                          </td>
-                          <td className="border px-2 py-1">
-                            {totals ? totals.TO : "—"}
-                          </td>
+                          <td className="border px-2 py-1">{totals ? totals.REB : "—"}</td>
+                          <td className="border px-2 py-1">{totals ? totals.AST : "—"}</td>
+                          <td className="border px-2 py-1">{totals ? totals.TO : "—"}</td>
                           <td className="border px-2 py-1">
                             {totals ? assistTo(totals.AST, totals.TO) : "—"}
                           </td>
-                          <td className="border px-2 py-1">
-                            {totals ? totals.STL : "—"}
-                          </td>
-                          <td className="border px-2 py-1">
-                            {totals ? totals.BLK : "—"}
-                          </td>
+                          <td className="border px-2 py-1">{totals ? totals.STL : "—"}</td>
+                          <td className="border px-2 py-1">{totals ? totals.BLK : "—"}</td>
 
-                          <td className="border px-2 py-1">
-                            {totals ? totals.ThreePM : "—"}
-                          </td>
-                          <td className="border px-2 py-1">
-                            {totals ? totals.ThreePA : "—"}
-                          </td>
+                          <td className="border px-2 py-1">{totals ? totals.ThreePM : "—"}</td>
+                          <td className="border px-2 py-1">{totals ? totals.ThreePA : "—"}</td>
                           <td className="border px-2 py-1">
                             {totals ? pct(totals.ThreePM, totals.ThreePA) : "—"}
                           </td>
 
-                          <td className="border px-2 py-1">
-                            {totals ? totals.TwoPM : "—"}
-                          </td>
-                          <td className="border px-2 py-1">
-                            {totals ? totals.TwoPA : "—"}
-                          </td>
+                          <td className="border px-2 py-1">{totals ? totals.TwoPM : "—"}</td>
+                          <td className="border px-2 py-1">{totals ? totals.TwoPA : "—"}</td>
                           <td className="border px-2 py-1">
                             {totals ? pct(totals.TwoPM, totals.TwoPA) : "—"}
                           </td>
 
-                          <td className="border px-2 py-1">
-                            {totals ? totals.FTM : "—"}
-                          </td>
-                          <td className="border px-2 py-1">
-                            {totals ? totals.FTA : "—"}
-                          </td>
+                          <td className="border px-2 py-1">{totals ? totals.FTM : "—"}</td>
+                          <td className="border px-2 py-1">{totals ? totals.FTA : "—"}</td>
                           <td className="border px-2 py-1">
                             {totals ? pct(totals.FTM, totals.FTA) : "—"}
                           </td>
@@ -716,19 +682,13 @@ function Season2025_26() {
         })()}
       </section>
 
-      {/* 3. SEASON PLAYER TOTALS (sortable, with photos & jersey column) */}
+      {/* 3. SEASON PLAYER TOTALS (restyled to match GameDetail Box Score) */}
       <section>
         <div className="flex items-center justify-between mt-8 mb-4">
-          <h2 className="text-2xl font-semibold">
-            📊 Player Statistics for the Season
-          </h2>
+          <h2 className="text-2xl font-semibold">📊 Player Statistics for the Season</h2>
 
           <div className="flex items-center space-x-2 text-xs sm:text-sm">
-            <span
-              className={`${
-                showPerGame ? "text-gray-400" : "text-gray-900 font-semibold"
-              }`}
-            >
+            <span className={`${showPerGame ? "text-gray-400" : "text-gray-900 font-semibold"}`}>
               Season totals
             </span>
             <button
@@ -744,41 +704,27 @@ function Season2025_26() {
                 }`}
               />
             </button>
-            <span
-              className={`${
-                showPerGame ? "text-gray-900 font-semibold" : "text-gray-400"
-              }`}
-            >
+            <span className={`${showPerGame ? "text-gray-900 font-semibold" : "text-gray-400"}`}>
               Per game averages
             </span>
           </div>
         </div>
 
         {seasonTotals.length === 0 ? (
-          <p className="text-gray-600">
-            No player statistics are available yet for this season.
-          </p>
+          <p className="text-gray-600">No player statistics are available yet for this season.</p>
         ) : (
-          <div className="overflow-x-auto px-1">
-            <table className="w-full border text-center text-xs sm:text-sm md:text-base table-auto whitespace-nowrap">
-              <thead className="bg-gray-200 text-black">
+          <div className="overflow-x-auto">
+            <table className="min-w-full border text-xs sm:text-sm text-center whitespace-nowrap">
+              <thead className="bg-gray-100">
                 <tr>
                   <th
-                    className="border px-2 py-1 text-left cursor-pointer sticky left-0 z-40 bg-gray-200 border-r border-gray-300"
+                    className="border px-2 py-1 text-left cursor-pointer sticky left-0 z-40 bg-gray-100 border-r"
                     onClick={() => handleSort("name")}
                   >
-                    <div className="relative">
-                      <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-3 bg-gray-200" />
-                      <span className="relative">{`Player${sortArrow(
-                        "name"
-                      )}`}</span>
-                    </div>
+                    Player{sortArrow("name")}
                   </th>
 
-                  <th
-                    className="border px-2 py-1 cursor-pointer"
-                    onClick={() => handleSort("jersey")}
-                  >
+                  <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("jersey")}>
                     #{sortArrow("jersey")}
                   </th>
                   <th
@@ -787,10 +733,7 @@ function Season2025_26() {
                   >
                     GP{sortArrow("GamesPlayed")}
                   </th>
-                  <th
-                    className="border px-2 py-1 cursor-pointer"
-                    onClick={() => handleSort("Points")}
-                  >
+                  <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("Points")}>
                     PTS{sortArrow("Points")}
                   </th>
                   <th
@@ -811,86 +754,47 @@ function Season2025_26() {
                   >
                     TO{sortArrow("Turnovers")}
                   </th>
-                  <th
-                    className="border px-2 py-1 cursor-pointer"
-                    onClick={() => handleSort("AST_TO")}
-                  >
+                  <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("AST_TO")}>
                     A/T{sortArrow("AST_TO")}
                   </th>
-                  <th
-                    className="border px-2 py-1 cursor-pointer"
-                    onClick={() => handleSort("Steals")}
-                  >
+                  <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("Steals")}>
                     STL{sortArrow("Steals")}
                   </th>
-                  <th
-                    className="border px-2 py-1 cursor-pointer"
-                    onClick={() => handleSort("Blocks")}
-                  >
+                  <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("Blocks")}>
                     BLK{sortArrow("Blocks")}
                   </th>
 
-                  <th
-                    className="border px-2 py-1 cursor-pointer"
-                    onClick={() => handleSort("ThreePM")}
-                  >
+                  <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("ThreePM")}>
                     3PM{sortArrow("ThreePM")}
                   </th>
-                  <th
-                    className="border px-2 py-1 cursor-pointer"
-                    onClick={() => handleSort("ThreePA")}
-                  >
+                  <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("ThreePA")}>
                     3PA{sortArrow("ThreePA")}
                   </th>
-                  <th
-                    className="border px-2 py-1 cursor-pointer"
-                    onClick={() => handleSort("ThreePct")}
-                  >
+                  <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("ThreePct")}>
                     3P%{sortArrow("ThreePct")}
                   </th>
 
-                  <th
-                    className="border px-2 py-1 cursor-pointer"
-                    onClick={() => handleSort("TwoPM")}
-                  >
+                  <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("TwoPM")}>
                     2PM{sortArrow("TwoPM")}
                   </th>
-                  <th
-                    className="border px-2 py-1 cursor-pointer"
-                    onClick={() => handleSort("TwoPA")}
-                  >
+                  <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("TwoPA")}>
                     2PA{sortArrow("TwoPA")}
                   </th>
-                  <th
-                    className="border px-2 py-1 cursor-pointer"
-                    onClick={() => handleSort("TwoPct")}
-                  >
+                  <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("TwoPct")}>
                     2P%{sortArrow("TwoPct")}
                   </th>
 
-                  <th
-                    className="border px-2 py-1 cursor-pointer"
-                    onClick={() => handleSort("eFG")}
-                  >
+                  <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("eFG")}>
                     eFG%{sortArrow("eFG")}
                   </th>
 
-                  <th
-                    className="border px-2 py-1 cursor-pointer"
-                    onClick={() => handleSort("FTM")}
-                  >
+                  <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("FTM")}>
                     FTM{sortArrow("FTM")}
                   </th>
-                  <th
-                    className="border px-2 py-1 cursor-pointer"
-                    onClick={() => handleSort("FTA")}
-                  >
+                  <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("FTA")}>
                     FTA{sortArrow("FTA")}
                   </th>
-                  <th
-                    className="border px-2 py-1 cursor-pointer"
-                    onClick={() => handleSort("FTPct")}
-                  >
+                  <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("FTPct")}>
                     FT%{sortArrow("FTPct")}
                   </th>
                 </tr>
@@ -907,112 +811,78 @@ function Season2025_26() {
                   return (
                     <tr key={player.PlayerID} className={rowBg}>
                       <td
-                        className={`border px-2 py-1 text-left align-middle min-w-[200px] sticky left-0 z-20 ${rowBg} border-r border-gray-300`}
+                        className={`border px-2 py-1 text-left align-middle sticky left-0 z-20 ${rowBg} border-r`}
                       >
-                        <div className="relative">
-                          <div
-                            className={`pointer-events-none absolute left-0 top-0 bottom-0 w-3 ${rowBg}`}
+                        <div className="flex items-center justify-start gap-2">
+                          <img
+                            src={photoUrl}
+                            alt={name}
+                            onError={(e) => {
+                              e.currentTarget.src = "/images/common/logo.png";
+                            }}
+                            className="w-8 h-8 rounded-full object-cover border"
                           />
-                          <div className="relative flex items-center gap-2">
-                            <img
-                              src={photoUrl}
-                              alt={name}
-                              onError={(e) => {
-                                e.currentTarget.src =
-                                  "/images/boys/basketball/players/default.jpg";
-                              }}
-                              className="w-8 h-8 rounded-full object-cover border"
-                            />
-                            <Link
-                              to={`/athletics/boys/basketball/players/${player.PlayerID}`}
-                              className="text-blue-600 underline hover:text-blue-800"
-                            >
-                              {name}
-                            </Link>
-                          </div>
+                          <Link
+                            to={`/athletics/boys/basketball/players/${player.PlayerID}`}
+                            className="text-blue-600 underline hover:text-blue-800"
+                          >
+                            {name}
+                          </Link>
                         </div>
                       </td>
 
                       <td className="border px-2 py-1 align-middle">{jersey}</td>
-                      <td className="border px-2 py-1 align-middle">
-                        {player.GamesPlayed}
-                      </td>
+                      <td className="border px-2 py-1 align-middle">{player.GamesPlayed}</td>
 
                       <td className="border px-2 py-1 align-middle">
-                        {showPerGame
-                          ? formatPerGame(player, "Points")
-                          : player.Points}
+                        {showPerGame ? formatPerGame(player, "Points") : player.Points}
                       </td>
                       <td className="border px-2 py-1 align-middle">
-                        {showPerGame
-                          ? formatPerGame(player, "Rebounds")
-                          : player.Rebounds}
+                        {showPerGame ? formatPerGame(player, "Rebounds") : player.Rebounds}
                       </td>
                       <td className="border px-2 py-1 align-middle">
-                        {showPerGame
-                          ? formatPerGame(player, "Assists")
-                          : player.Assists}
+                        {showPerGame ? formatPerGame(player, "Assists") : player.Assists}
                       </td>
                       <td className="border px-2 py-1 align-middle">
-                        {showPerGame
-                          ? formatPerGame(player, "Turnovers")
-                          : player.Turnovers}
+                        {showPerGame ? formatPerGame(player, "Turnovers") : player.Turnovers}
                       </td>
                       <td className="border px-2 py-1 align-middle">
                         {formatAssistToTurnover(player)}
                       </td>
                       <td className="border px-2 py-1 align-middle">
-                        {showPerGame
-                          ? formatPerGame(player, "Steals")
-                          : player.Steals}
+                        {showPerGame ? formatPerGame(player, "Steals") : player.Steals}
                       </td>
                       <td className="border px-2 py-1 align-middle">
-                        {showPerGame
-                          ? formatPerGame(player, "Blocks")
-                          : player.Blocks}
+                        {showPerGame ? formatPerGame(player, "Blocks") : player.Blocks}
                       </td>
 
                       <td className="border px-2 py-1 align-middle">
-                        {showPerGame
-                          ? formatPerGame(player, "ThreePM")
-                          : player.ThreePM}
+                        {showPerGame ? formatPerGame(player, "ThreePM") : player.ThreePM}
                       </td>
                       <td className="border px-2 py-1 align-middle">
-                        {showPerGame
-                          ? formatPerGame(player, "ThreePA")
-                          : player.ThreePA}
+                        {showPerGame ? formatPerGame(player, "ThreePA") : player.ThreePA}
                       </td>
                       <td className="border px-2 py-1 align-middle">
                         {formatPct(player.ThreePM, player.ThreePA)}
                       </td>
 
                       <td className="border px-2 py-1 align-middle">
-                        {showPerGame
-                          ? formatPerGame(player, "TwoPM")
-                          : player.TwoPM}
+                        {showPerGame ? formatPerGame(player, "TwoPM") : player.TwoPM}
                       </td>
                       <td className="border px-2 py-1 align-middle">
-                        {showPerGame
-                          ? formatPerGame(player, "TwoPA")
-                          : player.TwoPA}
+                        {showPerGame ? formatPerGame(player, "TwoPA") : player.TwoPA}
                       </td>
                       <td className="border px-2 py-1 align-middle">
                         {formatPct(player.TwoPM, player.TwoPA)}
                       </td>
 
-                      <td className="border px-2 py-1 align-middle">
-                        {formatEFG(player)}
-                      </td>
+                      <td className="border px-2 py-1 align-middle">{formatEFG(player)}</td>
 
                       <td className="border px-2 py-1 align-middle">
-                        {showPerGame
-                          ? formatPerGame(player, "FTM")
-                          : player.FTM}
+                        {showPerGame ? formatPerGame(player, "FTM") : player.FTM}
                       </td>
                       <td className="border px-2 py-1 align-middle">
-                        {showPerGame
-                          ? formatPerGame(player, "FTA")
-                          : player.FTA}
+                        {showPerGame ? formatPerGame(player, "FTA") : player.FTA}
                       </td>
                       <td className="border px-2 py-1 align-middle">
                         {formatPct(player.FTM, player.FTA)}
@@ -1021,107 +891,73 @@ function Season2025_26() {
                   );
                 })}
 
-                {/* --- TEAM TOTALS ROW (new) --- */}
-                <tr className="bg-gray-300 font-bold">
-                  <td className="border px-2 py-2 text-left sticky left-0 z-30 bg-gray-300 border-r border-gray-300">
-                    TEAM TOTALS
+                {/* TEAM TOTALS ROW - styled like GameDetail totals */}
+                <tr className="bg-gray-100 font-semibold">
+                  <td className="border px-2 py-1 text-left sticky left-0 z-30 bg-gray-100 border-r">
+                    Team Totals
                   </td>
 
-                  <td className="border px-2 py-2">{""}</td>
+                  <td className="border px-2 py-1">{""}</td>
 
-                  <td className="border px-2 py-2">
-                    {teamTotalsRow.GamesPlayed || 0}
+                  <td className="border px-2 py-1">{teamTotalsRow.GamesPlayed || 0}</td>
+
+                  <td className="border px-2 py-1">
+                    {showPerGame ? formatTeamPerGame(teamTotalsRow.Points) : teamTotalsRow.Points}
                   </td>
-
-                  <td className="border px-2 py-2">
-                    {showPerGame
-                      ? formatTeamPerGame(teamTotalsRow.Points)
-                      : teamTotalsRow.Points}
-                  </td>
-
-                  <td className="border px-2 py-2">
+                  <td className="border px-2 py-1">
                     {showPerGame
                       ? formatTeamPerGame(teamTotalsRow.Rebounds)
                       : teamTotalsRow.Rebounds}
                   </td>
-
-                  <td className="border px-2 py-2">
-                    {showPerGame
-                      ? formatTeamPerGame(teamTotalsRow.Assists)
-                      : teamTotalsRow.Assists}
+                  <td className="border px-2 py-1">
+                    {showPerGame ? formatTeamPerGame(teamTotalsRow.Assists) : teamTotalsRow.Assists}
                   </td>
-
-                  <td className="border px-2 py-2">
+                  <td className="border px-2 py-1">
                     {showPerGame
                       ? formatTeamPerGame(teamTotalsRow.Turnovers)
                       : teamTotalsRow.Turnovers}
                   </td>
-
-                  <td className="border px-2 py-2">
-                    {formatTeamAssistToTurnover(teamTotalsRow)}
+                  <td className="border px-2 py-1">{formatTeamAssistToTurnover(teamTotalsRow)}</td>
+                  <td className="border px-2 py-1">
+                    {showPerGame ? formatTeamPerGame(teamTotalsRow.Steals) : teamTotalsRow.Steals}
+                  </td>
+                  <td className="border px-2 py-1">
+                    {showPerGame ? formatTeamPerGame(teamTotalsRow.Blocks) : teamTotalsRow.Blocks}
                   </td>
 
-                  <td className="border px-2 py-2">
-                    {showPerGame
-                      ? formatTeamPerGame(teamTotalsRow.Steals)
-                      : teamTotalsRow.Steals}
-                  </td>
-
-                  <td className="border px-2 py-2">
-                    {showPerGame
-                      ? formatTeamPerGame(teamTotalsRow.Blocks)
-                      : teamTotalsRow.Blocks}
-                  </td>
-
-                  <td className="border px-2 py-2">
+                  <td className="border px-2 py-1">
                     {showPerGame
                       ? formatTeamPerGame(teamTotalsRow.ThreePM)
                       : teamTotalsRow.ThreePM}
                   </td>
-
-                  <td className="border px-2 py-2">
+                  <td className="border px-2 py-1">
                     {showPerGame
                       ? formatTeamPerGame(teamTotalsRow.ThreePA)
                       : teamTotalsRow.ThreePA}
                   </td>
-
-                  <td className="border px-2 py-2">
+                  <td className="border px-2 py-1">
                     {formatPct(teamTotalsRow.ThreePM, teamTotalsRow.ThreePA)}
                   </td>
 
-                  <td className="border px-2 py-2">
-                    {showPerGame
-                      ? formatTeamPerGame(teamTotalsRow.TwoPM)
-                      : teamTotalsRow.TwoPM}
+                  <td className="border px-2 py-1">
+                    {showPerGame ? formatTeamPerGame(teamTotalsRow.TwoPM) : teamTotalsRow.TwoPM}
                   </td>
-
-                  <td className="border px-2 py-2">
-                    {showPerGame
-                      ? formatTeamPerGame(teamTotalsRow.TwoPA)
-                      : teamTotalsRow.TwoPA}
+                  <td className="border px-2 py-1">
+                    {showPerGame ? formatTeamPerGame(teamTotalsRow.TwoPA) : teamTotalsRow.TwoPA}
                   </td>
-
-                  <td className="border px-2 py-2">
+                  <td className="border px-2 py-1">
                     {formatPct(teamTotalsRow.TwoPM, teamTotalsRow.TwoPA)}
                   </td>
 
-                  <td className="border px-2 py-2">
-                    {formatEFG(teamTotalsRow)}
-                  </td>
+                  <td className="border px-2 py-1">{formatEFG(teamTotalsRow)}</td>
 
-                  <td className="border px-2 py-2">
-                    {showPerGame
-                      ? formatTeamPerGame(teamTotalsRow.FTM)
-                      : teamTotalsRow.FTM}
+                  <td className="border px-2 py-1">
+                    {showPerGame ? formatTeamPerGame(teamTotalsRow.FTM) : teamTotalsRow.FTM}
                   </td>
-
-                  <td className="border px-2 py-2">
-                    {showPerGame
-                      ? formatTeamPerGame(teamTotalsRow.FTA)
-                      : teamTotalsRow.FTA}
+                  <td className="border px-2 py-1">
+                    {showPerGame ? formatTeamPerGame(teamTotalsRow.FTA) : teamTotalsRow.FTA}
                   </td>
-
-                  <td className="border px-2 py-2">
+                  <td className="border px-2 py-1">
                     {formatPct(teamTotalsRow.FTM, teamTotalsRow.FTA)}
                   </td>
                 </tr>
