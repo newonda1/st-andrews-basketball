@@ -26,14 +26,11 @@ function Season2025_26() {
       const statsData = await statsRes.json();
       const playersData = await playersRes.json();
 
-      // Filter to just 2025–26 games and sort by date
       const seasonGames = gamesData
         .filter((g) => g.Season === SEASON_ID)
         .sort((a, b) => a.Date - b.Date);
 
       const seasonGameIds = new Set(seasonGames.map((g) => g.GameID));
-
-      // Only stats from games in this season
       const seasonStats = statsData.filter((s) => seasonGameIds.has(s.GameID));
 
       setGames(seasonGames);
@@ -44,7 +41,7 @@ function Season2025_26() {
     fetchData();
   }, []);
 
-  // 2. Build season totals including shooting stats + games played (GP)
+  // 2. Build season totals + games played
   useEffect(() => {
     if (playerStats.length === 0) {
       setSeasonTotals([]);
@@ -116,7 +113,7 @@ function Season2025_26() {
     setSeasonTotals(totalsArray);
   }, [playerStats]);
 
-  // -------- Helper functions --------
+  // -------- Helpers --------
   const getPlayerName = (id) => {
     const player = players.find((p) => p.PlayerID === id);
     return player ? `${player.FirstName} ${player.LastName}` : "Unknown Player";
@@ -127,7 +124,6 @@ function Season2025_26() {
     return player && player.JerseyNumber != null ? player.JerseyNumber : "";
   };
 
-  // Match new folder structure: /images/boys/basketball/players/{PlayerID}.jpg
   const getPlayerPhotoUrl = (playerId) => {
     return `/images/boys/basketball/players/${playerId}.jpg`;
   };
@@ -185,7 +181,6 @@ function Season2025_26() {
     return (total / gp).toFixed(1);
   };
 
-  // Assist/Turnover ratio (always from season totals)
   const formatAssistToTurnover = (player) => {
     const ast = player.Assists || 0;
     const tov = player.Turnovers || 0;
@@ -193,7 +188,7 @@ function Season2025_26() {
     return (ast / tov).toFixed(2);
   };
 
-  // ---------- TEAM TOTALS ROW ----------
+  // ---------- TEAM TOTALS ----------
   const teamGamesPlayed = useMemo(() => {
     const set = new Set();
     for (const s of playerStats) {
@@ -255,7 +250,7 @@ function Season2025_26() {
     return (ast / tov).toFixed(2);
   };
 
-  // -------- Sorting logic for season totals --------
+  // -------- Sorting --------
   const countingStatKeys = new Set([
     "Points",
     "Rebounds",
@@ -274,22 +269,17 @@ function Season2025_26() {
   const handleSort = (key) => {
     setSortConfig((prev) => {
       if (prev.key === key) {
-        return {
-          key,
-          direction: prev.direction === "desc" ? "asc" : "desc",
-        };
+        return { key, direction: prev.direction === "desc" ? "asc" : "desc" };
       }
       return { key, direction: "desc" };
     });
   };
 
   const getSortValue = (player, key) => {
-    if (countingStatKeys.has(key)) {
-      if (showPerGame) {
-        const gp = player.GamesPlayed || 0;
-        if (!gp) return 0;
-        return (player[key] || 0) / gp;
-      }
+    if (countingStatKeys.has(key) && showPerGame) {
+      const gp = player.GamesPlayed || 0;
+      if (!gp) return 0;
+      return (player[key] || 0) / gp;
     }
 
     switch (key) {
@@ -299,34 +289,10 @@ function Season2025_26() {
         return Number(getJerseyNumber(player.PlayerID)) || 0;
       case "GamesPlayed":
         return player.GamesPlayed || 0;
-      case "Points":
-        return player.Points || 0;
-      case "Rebounds":
-        return player.Rebounds || 0;
-      case "Assists":
-        return player.Assists || 0;
-      case "Turnovers":
-        return player.Turnovers || 0;
-      case "Steals":
-        return player.Steals || 0;
-      case "Blocks":
-        return player.Blocks || 0;
-      case "ThreePM":
-        return player.ThreePM || 0;
-      case "ThreePA":
-        return player.ThreePA || 0;
       case "ThreePct":
         return rawPct(player.ThreePM, player.ThreePA);
-      case "TwoPM":
-        return player.TwoPM || 0;
-      case "TwoPA":
-        return player.TwoPA || 0;
       case "TwoPct":
         return rawPct(player.TwoPM, player.TwoPA);
-      case "FTM":
-        return player.FTM || 0;
-      case "FTA":
-        return player.FTA || 0;
       case "FTPct":
         return rawPct(player.FTM, player.FTA);
       case "eFG":
@@ -338,7 +304,7 @@ function Season2025_26() {
         return ast / tov;
       }
       default:
-        return 0;
+        return player[key] || 0;
     }
   };
 
@@ -357,11 +323,11 @@ function Season2025_26() {
   };
 
   return (
-    <div className="bg-gray-100 p-8 rounded-lg shadow-md max-w-6xl mx-auto space-y-10">
+    <div className="p-4 space-y-10 max-w-6xl mx-auto">
       <h1 className="text-3xl font-bold text-center mb-4">2025–26 Season</h1>
 
       {/* 1. SEASON OVERVIEW */}
-      <section className="bg-white rounded-2xl shadow-sm p-6 space-y-4">
+      <section className="space-y-4">
         <h2 className="text-2xl font-semibold mt-4 mb-3">Season Overview</h2>
 
         <div className="text-gray-800 leading-relaxed">
@@ -377,8 +343,8 @@ function Season2025_26() {
             />
           </a>
 
-          {/* (Season overview text unchanged) */}
-          <p className="mb-5 leading-relaxed">
+          <p className="mb-
+            leading-relaxed">
             After winning three state championships in the past four years, the
             St. Andrew’s Lions enter the 2025-26 basketball season carrying both
             high expectations and a new identity. For the first time in five
@@ -452,17 +418,13 @@ function Season2025_26() {
         </div>
       </section>
 
-      {/* 2. FULL SCHEDULE – toggle: Game Result vs Team Totals */}
+      {/* 2. SCHEDULE */}
       <section>
         <div className="flex items-center justify-between mt-8 mb-4">
           <h2 className="text-2xl font-semibold">📅 Schedule &amp; Results</h2>
 
           <div className="flex items-center gap-2 text-xs sm:text-sm">
-            <span
-              className={`${
-                showTeamTotals ? "text-gray-400" : "text-gray-900 font-semibold"
-              }`}
-            >
+            <span className={`${showTeamTotals ? "text-gray-400" : "text-gray-900 font-semibold"}`}>
               Game Result
             </span>
 
@@ -481,11 +443,7 @@ function Season2025_26() {
               />
             </button>
 
-            <span
-              className={`${
-                showTeamTotals ? "text-gray-900 font-semibold" : "text-gray-400"
-              }`}
-            >
+            <span className={`${showTeamTotals ? "text-gray-900 font-semibold" : "text-gray-400"}`}>
               Team Totals
             </span>
           </div>
@@ -551,7 +509,7 @@ function Season2025_26() {
           }
 
           return (
-            <div className="overflow-x-auto px-1">
+            <div className="overflow-x-auto">
               {!showTeamTotals ? (
                 <table className="min-w-full border text-xs sm:text-sm text-center">
                   <thead className="bg-gray-100">
@@ -682,7 +640,7 @@ function Season2025_26() {
         })()}
       </section>
 
-      {/* 3. SEASON PLAYER TOTALS (restyled to match GameDetail Box Score) */}
+      {/* 3. PLAYER STATS TABLE */}
       <section>
         <div className="flex items-center justify-between mt-8 mb-4">
           <h2 className="text-2xl font-semibold">📊 Player Statistics for the Season</h2>
@@ -718,7 +676,7 @@ function Season2025_26() {
               <thead className="bg-gray-100">
                 <tr>
                   <th
-                    className="border px-2 py-1 text-left cursor-pointer sticky left-0 z-40 bg-gray-100 border-r"
+                    className="border px-2 py-1 cursor-pointer sticky left-0 z-40 bg-gray-100 border-r text-center min-w-[280px]"
                     onClick={() => handleSort("name")}
                   >
                     Player{sortArrow("name")}
@@ -736,22 +694,13 @@ function Season2025_26() {
                   <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("Points")}>
                     PTS{sortArrow("Points")}
                   </th>
-                  <th
-                    className="border px-2 py-1 cursor-pointer"
-                    onClick={() => handleSort("Rebounds")}
-                  >
+                  <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("Rebounds")}>
                     REB{sortArrow("Rebounds")}
                   </th>
-                  <th
-                    className="border px-2 py-1 cursor-pointer"
-                    onClick={() => handleSort("Assists")}
-                  >
+                  <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("Assists")}>
                     AST{sortArrow("Assists")}
                   </th>
-                  <th
-                    className="border px-2 py-1 cursor-pointer"
-                    onClick={() => handleSort("Turnovers")}
-                  >
+                  <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("Turnovers")}>
                     TO{sortArrow("Turnovers")}
                   </th>
                   <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("AST_TO")}>
@@ -805,13 +754,12 @@ function Season2025_26() {
                   const name = getPlayerName(player.PlayerID);
                   const jersey = getJerseyNumber(player.PlayerID);
                   const photoUrl = getPlayerPhotoUrl(player.PlayerID);
-
                   const rowBg = idx % 2 === 0 ? "bg-white" : "bg-gray-50";
 
                   return (
                     <tr key={player.PlayerID} className={rowBg}>
                       <td
-                        className={`border px-2 py-1 text-left align-middle sticky left-0 z-20 ${rowBg} border-r`}
+                        className={`border px-2 py-1 text-left align-middle sticky left-0 z-20 ${rowBg} border-r min-w-[280px]`}
                       >
                         <div className="flex items-center justify-start gap-2">
                           <img
@@ -846,9 +794,7 @@ function Season2025_26() {
                       <td className="border px-2 py-1 align-middle">
                         {showPerGame ? formatPerGame(player, "Turnovers") : player.Turnovers}
                       </td>
-                      <td className="border px-2 py-1 align-middle">
-                        {formatAssistToTurnover(player)}
-                      </td>
+                      <td className="border px-2 py-1 align-middle">{formatAssistToTurnover(player)}</td>
                       <td className="border px-2 py-1 align-middle">
                         {showPerGame ? formatPerGame(player, "Steals") : player.Steals}
                       </td>
@@ -862,9 +808,7 @@ function Season2025_26() {
                       <td className="border px-2 py-1 align-middle">
                         {showPerGame ? formatPerGame(player, "ThreePA") : player.ThreePA}
                       </td>
-                      <td className="border px-2 py-1 align-middle">
-                        {formatPct(player.ThreePM, player.ThreePA)}
-                      </td>
+                      <td className="border px-2 py-1 align-middle">{formatPct(player.ThreePM, player.ThreePA)}</td>
 
                       <td className="border px-2 py-1 align-middle">
                         {showPerGame ? formatPerGame(player, "TwoPM") : player.TwoPM}
@@ -872,9 +816,7 @@ function Season2025_26() {
                       <td className="border px-2 py-1 align-middle">
                         {showPerGame ? formatPerGame(player, "TwoPA") : player.TwoPA}
                       </td>
-                      <td className="border px-2 py-1 align-middle">
-                        {formatPct(player.TwoPM, player.TwoPA)}
-                      </td>
+                      <td className="border px-2 py-1 align-middle">{formatPct(player.TwoPM, player.TwoPA)}</td>
 
                       <td className="border px-2 py-1 align-middle">{formatEFG(player)}</td>
 
@@ -884,38 +826,31 @@ function Season2025_26() {
                       <td className="border px-2 py-1 align-middle">
                         {showPerGame ? formatPerGame(player, "FTA") : player.FTA}
                       </td>
-                      <td className="border px-2 py-1 align-middle">
-                        {formatPct(player.FTM, player.FTA)}
-                      </td>
+                      <td className="border px-2 py-1 align-middle">{formatPct(player.FTM, player.FTA)}</td>
                     </tr>
                   );
                 })}
 
-                {/* TEAM TOTALS ROW - styled like GameDetail totals */}
+                {/* TEAM TOTALS ROW */}
                 <tr className="bg-gray-100 font-semibold">
-                  <td className="border px-2 py-1 text-left sticky left-0 z-30 bg-gray-100 border-r">
+                  <td className="border px-2 py-1 sticky left-0 z-30 bg-gray-100 border-r text-center min-w-[280px]">
                     Team Totals
                   </td>
 
                   <td className="border px-2 py-1">{""}</td>
-
                   <td className="border px-2 py-1">{teamTotalsRow.GamesPlayed || 0}</td>
 
                   <td className="border px-2 py-1">
                     {showPerGame ? formatTeamPerGame(teamTotalsRow.Points) : teamTotalsRow.Points}
                   </td>
                   <td className="border px-2 py-1">
-                    {showPerGame
-                      ? formatTeamPerGame(teamTotalsRow.Rebounds)
-                      : teamTotalsRow.Rebounds}
+                    {showPerGame ? formatTeamPerGame(teamTotalsRow.Rebounds) : teamTotalsRow.Rebounds}
                   </td>
                   <td className="border px-2 py-1">
                     {showPerGame ? formatTeamPerGame(teamTotalsRow.Assists) : teamTotalsRow.Assists}
                   </td>
                   <td className="border px-2 py-1">
-                    {showPerGame
-                      ? formatTeamPerGame(teamTotalsRow.Turnovers)
-                      : teamTotalsRow.Turnovers}
+                    {showPerGame ? formatTeamPerGame(teamTotalsRow.Turnovers) : teamTotalsRow.Turnovers}
                   </td>
                   <td className="border px-2 py-1">{formatTeamAssistToTurnover(teamTotalsRow)}</td>
                   <td className="border px-2 py-1">
@@ -926,18 +861,12 @@ function Season2025_26() {
                   </td>
 
                   <td className="border px-2 py-1">
-                    {showPerGame
-                      ? formatTeamPerGame(teamTotalsRow.ThreePM)
-                      : teamTotalsRow.ThreePM}
+                    {showPerGame ? formatTeamPerGame(teamTotalsRow.ThreePM) : teamTotalsRow.ThreePM}
                   </td>
                   <td className="border px-2 py-1">
-                    {showPerGame
-                      ? formatTeamPerGame(teamTotalsRow.ThreePA)
-                      : teamTotalsRow.ThreePA}
+                    {showPerGame ? formatTeamPerGame(teamTotalsRow.ThreePA) : teamTotalsRow.ThreePA}
                   </td>
-                  <td className="border px-2 py-1">
-                    {formatPct(teamTotalsRow.ThreePM, teamTotalsRow.ThreePA)}
-                  </td>
+                  <td className="border px-2 py-1">{formatPct(teamTotalsRow.ThreePM, teamTotalsRow.ThreePA)}</td>
 
                   <td className="border px-2 py-1">
                     {showPerGame ? formatTeamPerGame(teamTotalsRow.TwoPM) : teamTotalsRow.TwoPM}
@@ -945,9 +874,7 @@ function Season2025_26() {
                   <td className="border px-2 py-1">
                     {showPerGame ? formatTeamPerGame(teamTotalsRow.TwoPA) : teamTotalsRow.TwoPA}
                   </td>
-                  <td className="border px-2 py-1">
-                    {formatPct(teamTotalsRow.TwoPM, teamTotalsRow.TwoPA)}
-                  </td>
+                  <td className="border px-2 py-1">{formatPct(teamTotalsRow.TwoPM, teamTotalsRow.TwoPA)}</td>
 
                   <td className="border px-2 py-1">{formatEFG(teamTotalsRow)}</td>
 
@@ -957,9 +884,7 @@ function Season2025_26() {
                   <td className="border px-2 py-1">
                     {showPerGame ? formatTeamPerGame(teamTotalsRow.FTA) : teamTotalsRow.FTA}
                   </td>
-                  <td className="border px-2 py-1">
-                    {formatPct(teamTotalsRow.FTM, teamTotalsRow.FTA)}
-                  </td>
+                  <td className="border px-2 py-1">{formatPct(teamTotalsRow.FTM, teamTotalsRow.FTA)}</td>
                 </tr>
               </tbody>
             </table>
