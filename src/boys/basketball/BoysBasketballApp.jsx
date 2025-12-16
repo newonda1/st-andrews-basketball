@@ -1,5 +1,5 @@
+import React, { useEffect, useRef, useState } from "react";
 import { Link, Routes, Route } from "react-router-dom";
-import React, { useEffect, useState, useRef } from "react";
 
 import Home from "./pages/Home";
 import FullCareerStats from "./pages/FullCareerStats";
@@ -28,72 +28,13 @@ function BoysBasketballApp() {
   const [games, setGames] = useState([]);
   const [playerStats, setPlayerStats] = useState([]);
   const [players, setPlayers] = useState([]);
-  const [menuOpen, setMenuOpen] = useState(false);
-  const sidebarRef = useRef(null);
-  const [seasonOpen, setSeasonOpen] = useState(false);
-  const [recordsOpen, setRecordsOpen] = useState(false);
-  const [expandedDecades, setExpandedDecades] = useState({});
-  const yearsByDecade = {
-    "1970s": ["1978-79", "1979-80"],
-    "1980s": [
-      "1980-81",
-      "1981-82",
-      "1982-83",
-      "1983-84",
-      "1984-85",
-      "1985-86",
-      "1986-87",
-      "1987-88",
-      "1988-89",
-      "1989-90",
-    ],
-    "1990s": [
-      "1990-91",
-      "1991-92",
-      "1992-93",
-      "1993-94",
-      "1994-95",
-      "1995-96",
-      "1996-97",
-      "1997-98",
-      "1998-99",
-      "1999-00",
-    ],
-    "2000s": [
-      "2000-01",
-      "2001-02",
-      "2002-03",
-      "2003-04",
-      "2004-05",
-      "2005-06",
-      "2006-07",
-      "2007-08",
-      "2008-09",
-      "2009-10",
-    ],
-    "2010s": [
-      "2010-11",
-      "2011-12",
-      "2012-13",
-      "2013-14",
-      "2014-15",
-      "2015-16",
-      "2016-17",
-      "2017-18",
-      "2018-19",
-      "2019-20",
-    ],
-    "2020s": [
-      "2020-21",
-      "2021-22",
-      "2022-23",
-      "2023-24",
-      "2024-25",
-      "2025-26",
-    ],
-  };
-  const [legacyOpen, setLegacyOpen] = useState(false);
 
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [recordsOpen, setRecordsOpen] = useState(false);
+
+  const sidebarRef = useRef(null);
+
+  // Load core data (kept here in case other pages/components depend on it later)
   useEffect(() => {
     fetch("/data/boys/basketball/games.json")
       .then((res) => res.json())
@@ -111,6 +52,7 @@ function BoysBasketballApp() {
       .catch((err) => console.error("Failed to load players", err));
   }, []);
 
+  // Close sidebar when clicking outside
   useEffect(() => {
     function handleClickOutside(event) {
       if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
@@ -120,8 +62,6 @@ function BoysBasketballApp() {
 
     if (menuOpen) {
       document.addEventListener("mousedown", handleClickOutside);
-    } else {
-      document.removeEventListener("mousedown", handleClickOutside);
     }
 
     return () => {
@@ -129,13 +69,10 @@ function BoysBasketballApp() {
     };
   }, [menuOpen]);
 
-  const playerMap = Object.fromEntries(
-    players.map((p) => [p.PlayerID, `${p.FirstName} ${p.LastName}`])
-  );
-
   return (
     <div className="p-6 max-w-5xl mx-auto space-y-10">
       <header className="text-center">
+        {/* Sidebar */}
         <div
           ref={sidebarRef}
           className={`fixed top-0 right-0 h-full w-64 bg-white shadow-2xl flex flex-col transform ${
@@ -145,6 +82,7 @@ function BoysBasketballApp() {
           <div className="flex justify-center items-center p-4 border-b">
             <h2 className="text-xl font-bold">Menu</h2>
           </div>
+
           <div className="flex-1 overflow-y-auto overscroll-contain scroll-smooth">
             <nav className="flex flex-col p-4 space-y-2 text-lg font-medium">
               {/* Full Year-by-Year Results */}
@@ -155,78 +93,7 @@ function BoysBasketballApp() {
                 Full Year-by-Year Results
               </Link>
 
-              {/* Individual Season Results with Expandable Decades */}
-              <div className="border-t pt-4">
-                <button
-                  onClick={() => setSeasonOpen(!seasonOpen)}
-                  className="flex items-center justify-between w-full p-3 hover:bg-gray-200 rounded-md"
-                >
-                  <span>Individual Season Results</span>
-                  <span
-                    className={`ml-2 inline-block transform transition-transform duration-300 ${
-                      seasonOpen ? "rotate-180" : "rotate-0"
-                    }`}
-                  >
-                    ▼
-                  </span>
-                </button>
-
-                {/* Decades Expand */}
-                {seasonOpen && (
-                  <div
-                    className={`ml-4 overflow-hidden transition-all duration-500 ${
-                      seasonOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
-                    }`}
-                  >
-                    {["1970s", "1980s", "1990s", "2000s", "2010s", "2020s"].map(
-                      (decade) => (
-                        <div key={decade}>
-                          <button
-                            onClick={() =>
-                              setExpandedDecades((prev) => ({
-                                ...prev,
-                                [decade]: !prev[decade],
-                              }))
-                            }
-                            className="flex items-center justify-between w-full p-2 hover:bg-gray-100"
-                          >
-                            <span>{decade}</span>
-                            <span
-                              className={`ml-2 inline-block transform transition-transform duration-300 ${
-                                expandedDecades[decade]
-                                  ? "rotate-180"
-                                  : "rotate-0"
-                              }`}
-                            >
-                              ▶
-                            </span>
-                          </button>
-
-                          {/* Expand Years smoothly */}
-                          <div
-                            className={`ml-6 overflow-hidden overflow-y-auto transition-all duration-500 ${
-                              expandedDecades[decade]
-                                ? "max-h-screen opacity-100"
-                                : "max-h-0 opacity-0"
-                            } custom-scrollbar`}
-                          >
-                            {yearsByDecade[decade].map((year) => (
-                              <Link
-                                key={year}
-                                to={`/athletics/boys/basketball/seasons/${year}`}
-                                className="block px-2 py-1 text-sm hover:bg-gray-200"
-                              >
-                                {year}
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
-                      )
-                    )}
-                  </div>
-                )}
-              </div>
-
+              {/* Records vs. Opponents */}
               <div className="border-t pt-4">
                 <Link
                   to="/athletics/boys/basketball/records/opponents"
@@ -236,10 +103,10 @@ function BoysBasketballApp() {
                 </Link>
               </div>
 
-              {/* All-Time Records Section */}
+              {/* Individual Player Stats */}
               <div className="border-t pt-4">
                 <button
-                  onClick={() => setRecordsOpen(!recordsOpen)}
+                  onClick={() => setRecordsOpen((prev) => !prev)}
                   className="flex items-center justify-between w-full p-3 hover:bg-gray-200 rounded-md"
                 >
                   <span>Individual Player Stats</span>
@@ -279,6 +146,7 @@ function BoysBasketballApp() {
           </div>
         </div>
 
+        {/* Top bar */}
         <div className="flex items-center justify-between mb-4 px-4 h-20">
           <div className="flex items-center gap-3">
             <Link
@@ -295,6 +163,7 @@ function BoysBasketballApp() {
               </h1>
             </Link>
           </div>
+
           <button onClick={() => setMenuOpen(true)}>
             <img
               src="/images/common/button.png"
@@ -307,7 +176,7 @@ function BoysBasketballApp() {
 
       <Routes>
         {/* Index route: /athletics/boys/basketball */}
-         <Route index element={<Home />} />
+        <Route index element={<Home />} />
 
         {/* Records */}
         <Route path="records/career" element={<FullCareerStats />} />
