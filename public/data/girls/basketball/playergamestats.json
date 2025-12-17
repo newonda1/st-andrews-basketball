@@ -126,24 +126,6 @@
     "StatComplete": "Yes"
   },
   {
-    "StatID": 20251118202502,
-    "PlayerID": 202502,
-    "GameID": 20251118,
-    "Points": 0,
-    "Rebounds": 0,
-    "Assists": 0,
-    "Turnovers": 0,
-    "Steals": 0,
-    "Blocks": 0,
-    "ThreePM": 0,
-    "ThreePA": 0,
-    "TwoPM": 0,
-    "TwoPA": 0,
-    "FTM": 0,
-    "FTA": 0,
-    "StatComplete": "Yes"
-  },
-  {
     "StatID": 20251118202503,
     "PlayerID": 202503,
     "GameID": 20251118,
