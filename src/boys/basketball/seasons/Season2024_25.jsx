@@ -125,7 +125,6 @@ function Season2024_25() {
   };
 
   const getPlayerPhotoUrl = (playerId) => {
-    // If missing, we'll fallback to logo via onError (below)
     return `/images/boys/basketball/players/${playerId}.jpg`;
   };
 
@@ -309,7 +308,34 @@ function Season2024_25() {
     }
   };
 
+  // Special handling: when sorting by jersey, put blank jerseys at the bottom
   const sortedSeasonTotals = seasonTotals.slice().sort((a, b) => {
+    if (sortConfig.key === "jersey") {
+      const aJ = Number(getJerseyNumber(a.PlayerID));
+      const bJ = Number(getJerseyNumber(b.PlayerID));
+
+      const aMissing = !Number.isFinite(aJ) || getJerseyNumber(a.PlayerID) === "";
+      const bMissing = !Number.isFinite(bJ) || getJerseyNumber(b.PlayerID) === "";
+
+      // Always push missing jerseys to the bottom
+      if (aMissing && !bMissing) return 1;
+      if (!aMissing && bMissing) return -1;
+
+      // If both missing, keep it stable-ish by name
+      if (aMissing && bMissing) {
+        const an = getPlayerName(a.PlayerID).toLowerCase();
+        const bn = getPlayerName(b.PlayerID).toLowerCase();
+        if (an < bn) return -1;
+        if (an > bn) return 1;
+        return 0;
+      }
+
+      // Both have jerseys: normal numeric sort with direction
+      if (aJ < bJ) return sortConfig.direction === "asc" ? -1 : 1;
+      if (aJ > bJ) return sortConfig.direction === "asc" ? 1 : -1;
+      return 0;
+    }
+
     const aVal = getSortValue(a, sortConfig.key);
     const bVal = getSortValue(b, sortConfig.key);
 
@@ -338,12 +364,40 @@ function Season2024_25() {
             className="float-left mr-4 mb-3 w-full max-w-xs rounded-lg shadow"
           />
 
-          {/* Using the original text from the old 2024–25 page */}
-          <p className="mb-3 leading-relaxed">
-            2024–25 Boys Varsity Basketball
+          <p className="mb-4 leading-relaxed text-justify">
+            The 2024–25 St. Andrew’s basketball season was one of dominance, resilience, and redemption — a year that will be remembered as one of the most complete campaigns in school history. Under the leadership of Coach Mel Abrams Jr., the team navigated a demanding schedule with a mix of veteran poise and youthful energy, ultimately claiming the school’s <strong>sixth state championship</strong> — and their <strong>third in the last four seasons</strong>.
           </p>
-          <p className="mb-3 leading-relaxed">
-            Season schedule and results.
+
+          <p className="mb-4 leading-relaxed text-justify">
+            After graduating a large senior class, the team returned with only <strong>two players who had varsity experience</strong>. Despite the inexperience, the Lions showed flashes of promise behind standout leadership from returning <strong>all-state player Zayden Edwards</strong>. With several freshmen and new contributors stepping into big roles, the team focused on building chemistry and laying the foundation for future success. Among the newcomers were <strong>Ja'Cari Roberts, Page Getter, MJ Scott, Miles Cummings,</strong> and <strong>Deshaud Singleton</strong> — all of whom became vital pieces of the team’s identity and success.
+          </p>
+
+          <p className="mb-4 leading-relaxed text-justify">
+            From the outset, <strong>senior captain Zayden Edwards</strong> and junior <strong>Ja'Cari Glover</strong> set the tone, anchoring the team with their leadership and all-around production. Zayden, the reigning all-state player of the year, was again a force on both ends of the floor, while Ja'Cari brought an unmatched competitive fire that elevated the team in crucial moments. Their composure and intensity were vital as the Lions surged to a fast start in region play.
+          </p>
+
+          <p className="mb-4 leading-relaxed text-justify">
+            The regular season featured a number of memorable battles. One of the most emphatic came in a statement win over longtime rival <strong>Beach High</strong>, where St. Andrew’s dismantled the Bulldogs with suffocating defense and transition offense, building a 30-point lead by the third quarter. However, not every night went the Lions’ way. In what was arguably their most humbling moment, the team suffered a <strong>heartbreaking blowout loss to Benedictine</strong>, exposing vulnerabilities and forcing the group to regroup mentally and physically. That setback proved to be a turning point.
+          </p>
+
+          <p className="mb-4 leading-relaxed text-justify">
+            One of the most thrilling wins of the season came in a <strong>nail-biting victory against Lakeview Academy</strong>, where the Lions escaped with a one-point win thanks to clutch free throws in the final seconds and a last-second defensive stand. The emotional rollercoaster of that game exemplified the team’s ability to grind through adversity and maintain composure under pressure.
+          </p>
+
+          <p className="mb-4 leading-relaxed text-justify">
+            <strong>Freshman guard Page Getter</strong> emerged as one of the surprise breakout stars of the season, showing maturity beyond his years and becoming a steady presence in the backcourt. His confidence and clutch shooting earned him a starting role by midseason. <strong>Sophomore MJ Scott</strong> built on his promise from the previous year, turning into one of the team’s best perimeter defenders and consistently igniting the team with high-energy plays.
+          </p>
+
+          <p className="mb-4 leading-relaxed text-justify">
+            Seniors <strong>Deshaud Singleton</strong> and <strong>Miles Cummings</strong> also played pivotal roles, providing depth, experience, and reliability in big moments. <strong>Junior Amari Cook</strong> elevated his game throughout the year, showcasing improved decision-making and scoring ability, particularly in key region matchups.
+          </p>
+
+          <p className="mb-4 leading-relaxed text-justify">
+            By season’s end, the Lions had captured their <strong>fourth straight region championship</strong>, extending their unbeaten streak against region opponents to an astonishing <strong>40 consecutive wins</strong>. Their playoff run was a blend of confidence and execution, culminating in a dominant performance in the state final to secure the title.
+          </p>
+
+          <p className="mb-3 leading-relaxed text-justify">
+            In every sense, the 2024–25 season was a testament to balance: a blend of seasoned leadership, emerging stars, and unwavering commitment to team success. The Lions not only defended their region supremacy but also added another banner to the rafters, further cementing St. Andrew’s as one of the premier basketball programs in the state.
           </p>
 
           <div className="clear-both" />
@@ -356,11 +410,7 @@ function Season2024_25() {
           <h2 className="text-2xl font-semibold">📅 Schedule &amp; Results</h2>
 
           <div className="flex items-center gap-2 text-xs sm:text-sm">
-            <span
-              className={`${
-                showTeamTotals ? "text-gray-400" : "text-gray-900 font-semibold"
-              }`}
-            >
+            <span className={`${showTeamTotals ? "text-gray-400" : "text-gray-900 font-semibold"}`}>
               Game Result
             </span>
 
@@ -379,11 +429,7 @@ function Season2024_25() {
               />
             </button>
 
-            <span
-              className={`${
-                showTeamTotals ? "text-gray-900 font-semibold" : "text-gray-400"
-              }`}
-            >
+            <span className={`${showTeamTotals ? "text-gray-900 font-semibold" : "text-gray-400"}`}>
               Team Totals
             </span>
           </div>
@@ -410,9 +456,7 @@ function Season2024_25() {
 
           for (const g of games) {
             const gid = g.GameID;
-            const rows = playerStats.filter(
-              (s) => Number(s.GameID) === Number(gid)
-            );
+            const rows = playerStats.filter((s) => Number(s.GameID) === Number(gid));
 
             const totals = {
               REB: 0,
@@ -547,7 +591,7 @@ function Season2024_25() {
                           <td className="border px-2 py-1">{totals ? totals.AST : "—"}</td>
                           <td className="border px-2 py-1">{totals ? totals.TO : "—"}</td>
                           <td className="border px-2 py-1">
-                            {totals ? assistTo(totals.AST, totals.TO) : "—"}
+                            {totals ? (Number(totals.TO) ? assistTo(totals.AST, totals.TO) : "—") : "—"}
                           </td>
                           <td className="border px-2 py-1">{totals ? totals.STL : "—"}</td>
                           <td className="border px-2 py-1">{totals ? totals.BLK : "—"}</td>
@@ -625,10 +669,7 @@ function Season2024_25() {
                   <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("jersey")}>
                     #{sortArrow("jersey")}
                   </th>
-                  <th
-                    className="border px-2 py-1 cursor-pointer"
-                    onClick={() => handleSort("GamesPlayed")}
-                  >
+                  <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("GamesPlayed")}>
                     GP{sortArrow("GamesPlayed")}
                   </th>
                   <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("Points")}>
@@ -698,9 +739,7 @@ function Season2024_25() {
 
                   return (
                     <tr key={player.PlayerID} className={rowBg}>
-                      <td
-                        className={`border px-2 py-1 text-left align-middle sticky left-0 z-20 ${rowBg} border-r min-w-[200px]`}
-                      >
+                      <td className={`border px-2 py-1 text-left align-middle sticky left-0 z-20 ${rowBg} border-r min-w-[200px]`}>
                         <div className="flex items-center justify-start gap-2">
                           <img
                             src={photoUrl}
