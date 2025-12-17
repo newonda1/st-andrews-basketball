@@ -75,5 +75,12 @@
     "LastName": "Taylor",
     "GradYear": 2029,
     "JerseyNumber": 24
+  },
+  {
+    "PlayerID": 202506,
+    "FirstName": "PJ",
+    "LastName": "Benson",
+    "GradYear": 2028,
+    "JerseyNumber": 3
   }
 ]
