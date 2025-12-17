@@ -1,5 +1,20 @@
 [
   {
+    "SeasonID": "1978-89",
+    "Players": [
+      { "PlayerID": 197801, "JerseyNumber": 11 },
+      { "PlayerID": 197802, "JerseyNumber": 4 },
+      { "PlayerID": 197803, "JerseyNumber": 14 },
+      { "PlayerID": 197804, "JerseyNumber": 13 },
+      { "PlayerID": 197805, "JerseyNumber": 21 },
+      { "PlayerID": 197806, "JerseyNumber": 12 },
+      { "PlayerID": 197807, "JerseyNumber": 3 },
+      { "PlayerID": 197808, "JerseyNumber": 5 },
+      { "PlayerID": 197809, "JerseyNumber": 15 },
+      { "PlayerID": 197810, "JerseyNumber": 10 }
+    ]
+  },
+  {
     "SeasonID": "2025-26",
     "Players": [
       { "PlayerID": 202501, "JerseyNumber": 3 },
