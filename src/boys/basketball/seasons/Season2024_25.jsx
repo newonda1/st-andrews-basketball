@@ -350,8 +350,8 @@ function Season2024_25() {
   };
 
   return (
-    <div className="p-4 space-y-10 max-w-6xl mx-auto">
-      <h1 className="text-3xl font-bold text-center mb-4">2024–25 Season</h1>
+    <div className="pt-2 pb-4 space-y-8 max-w-6xl mx-auto">
+      <h1 className="text-3xl font-bold text-center mb-2">2024–25 Season</h1>
 
       {/* 1. SEASON OVERVIEW */}
       <section className="space-y-4">
