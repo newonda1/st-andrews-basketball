@@ -6,7 +6,7 @@ import FullCareerStats from "./pages/FullCareerStats";
 import SeasonRecords from "./pages/SeasonRecords";
 import SingleGameRecords from "./pages/SingleGameRecords";
 
-import Season1978_93 from "./seasons/Season1978_79";
+import Season1978_79 from "./seasons/Season1978_79";
 import Season1992_93 from "./seasons/Season1992_93";
 import Season2023_24 from "./seasons/Season2023_24";
 import Season2024_25 from "./seasons/Season2024_25";
