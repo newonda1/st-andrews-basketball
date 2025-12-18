@@ -320,7 +320,7 @@ function Season1978_79() {
                   return (
                     <tr key={p.PlayerID} className={rowBg}>
                       <td
-                        className={`border px-2 py-1 text-left align-middle sticky left-0 z-20 ${rowBg} border-r min-w-[220px]`}
+                        className={`border px-2 py-1 text-left align-middle sticky left-0 z-20 ${rowBg} border-r min-w-[140px]`}
                       >
                         <div className="flex items-center justify-start gap-2">
                           <img
