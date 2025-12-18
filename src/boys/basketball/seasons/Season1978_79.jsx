@@ -283,7 +283,7 @@ function Season1978_79() {
         {seasonTotals.length === 0 ? (
           <p className="text-gray-600 text-center">No player statistics are available yet for this season.</p>
         ) : (
-          <div className="overflow-x-auto max-w-4xl mx-auto">
+          <div className="overflow-x-auto max-w-3xl mx-auto">
             <table className="w-full border text-xs sm:text-sm text-center whitespace-nowrap">
               <thead className="bg-gray-100">
                 <tr>
