@@ -288,7 +288,7 @@ function Season1978_79() {
               <thead className="bg-gray-100">
                 <tr>
                   <th
-                    className="border px-2 py-1 cursor-pointer sticky left-0 z-40 bg-gray-100 border-r text-center min-w-[220px]"
+                    className="border px-2 py-1 cursor-pointer sticky left-0 z-40 bg-gray-100 border-r text-center min-w-[140px]"
                     onClick={() => handleSort("name")}
                   >
                     Player{sortArrow("name")}
