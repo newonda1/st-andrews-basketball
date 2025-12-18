@@ -15,7 +15,6 @@ function Season1978_79() {
   const SEASON_ID = 1978; // 1978–79 season (games.json Season field should be 1978)
 
   const carouselImages = useMemo(() => {
-    // Matches your filenames shown in Finder: 1978_79_01.png ... 1978_79_10.png
     const base = "/images/boys/basketball/seasons/1978-79";
     return Array.from({ length: 10 }, (_, i) => {
       const n = String(i + 1).padStart(2, "0");
@@ -127,8 +126,6 @@ function Season1978_79() {
       if (prev.key === key) {
         return { key, direction: prev.direction === "desc" ? "asc" : "desc" };
       }
-      // default direction for new sort keys:
-      // jersey/name asc makes sense; stats desc makes sense
       const ascKeys = new Set(["name", "jersey"]);
       return { key, direction: ascKeys.has(key) ? "asc" : "desc" };
     });
@@ -172,12 +169,13 @@ function Season1978_79() {
   const goNext = () => setSlideIndex((i) => (i + 1) % carouselImages.length);
 
   return (
-    <div className="pt-2 pb-4 space-y-8 max-w-6xl mx-auto">
-      <h1 className="text-3xl font-bold text-center mb-2">1978–79 Season</h1>
+    <div className="pt-1 pb-4 space-y-6 max-w-6xl mx-auto">
+      {/* 1) Reduced title spacing */}
+      <h1 className="text-3xl font-bold text-center mb-0">1978–79 Season</h1>
 
-      {/* 1) SEASON OVERVIEW (Carousel) */}
-      <section className="space-y-4">
-        <h2 className="text-2xl font-semibold mt-4 mb-3">Season Overview</h2>
+      {/* 2) SEASON IMAGES (Carousel) */}
+      <section className="space-y-3">
+        <h2 className="text-2xl font-semibold mt-2 mb-2">Season Images</h2>
 
         <div className="border rounded-xl bg-white shadow-sm overflow-hidden">
           <div className="relative">
@@ -213,7 +211,6 @@ function Season1978_79() {
             </div>
           </div>
 
-          {/* Dots */}
           <div className="flex items-center justify-center gap-2 py-3 bg-white">
             {carouselImages.map((_, i) => (
               <button
@@ -231,14 +228,15 @@ function Season1978_79() {
         </div>
       </section>
 
-      {/* 2) SCHEDULE (Game Results only) */}
+      {/* 3) SCHEDULE (reduced width) */}
       <section>
-        <div className="flex items-center justify-between mt-8 mb-4">
+        <div className="flex items-center justify-between mt-6 mb-3">
           <h2 className="text-2xl font-semibold">📅 Schedule &amp; Results</h2>
         </div>
 
-        <div className="overflow-x-auto">
-          <table className="min-w-full border text-xs sm:text-sm text-center">
+        {/* Reduced width wrapper */}
+        <div className="overflow-x-auto max-w-3xl mx-auto">
+          <table className="w-full border text-xs sm:text-sm text-center">
             <thead className="bg-gray-100">
               <tr>
                 <th className="border px-2 py-1">Date</th>
@@ -276,17 +274,17 @@ function Season1978_79() {
         </div>
       </section>
 
-      {/* 3) PLAYER POINTS TABLE */}
+      {/* 4) PLAYER POINTS TABLE (reduced width) */}
       <section>
-        <div className="flex items-center justify-between mt-8 mb-4">
+        <div className="flex items-center justify-between mt-6 mb-3">
           <h2 className="text-2xl font-semibold">📊 Player Statistics for the Season</h2>
         </div>
 
         {seasonTotals.length === 0 ? (
-          <p className="text-gray-600">No player statistics are available yet for this season.</p>
+          <p className="text-gray-600 text-center">No player statistics are available yet for this season.</p>
         ) : (
-          <div className="overflow-x-auto">
-            <table className="min-w-full border text-xs sm:text-sm text-center whitespace-nowrap">
+          <div className="overflow-x-auto max-w-4xl mx-auto">
+            <table className="w-full border text-xs sm:text-sm text-center whitespace-nowrap">
               <thead className="bg-gray-100">
                 <tr>
                   <th
