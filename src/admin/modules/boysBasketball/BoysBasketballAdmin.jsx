@@ -16,9 +16,10 @@ import React, { useEffect, useMemo, useState } from "react";
  *   - Copy JSON to clipboard (same payload)
  *   - DNP checkbox (excludes player)
  *
- * IMPORTANT:
- * - This assumes your GameID is the date-style ID already used in playergamestats.json (e.g., 20251212).
- * - The export uses selectedGame.GameID as-is. Make sure games.json GameID values match that style.
+ * UPDATE (Historical data):
+ * - If a stat input is left blank, export will write null (instead of 0).
+ * - DNP still produces no row.
+ * - If the entire row is blank, no row is produced.
  */
 
 function absUrl(path) {
@@ -91,7 +92,15 @@ function seasonIdToYear(seasonId) {
   return Number.isFinite(yr) ? yr : null;
 }
 
-function numOrZero(v) {
+/** Export helper: blanks -> null */
+function numOrNull(v) {
+  if (v === "" || v === null || v === undefined) return null;
+  const n = Number(v);
+  return Number.isFinite(n) ? n : null;
+}
+
+/** UI-only helper: blanks -> 0 (for totals/quick math on screen) */
+function numForTotal(v) {
   if (v === "" || v === null || v === undefined) return 0;
   const n = Number(v);
   return Number.isFinite(n) ? n : 0;
@@ -336,19 +345,19 @@ export default function BoysBasketballAdmin() {
         PlayerID: pid,
         GameID: gid,
 
-        Points: numOrZero(row.Points),
-        Rebounds: numOrZero(row.Rebounds),
-        Assists: numOrZero(row.Assists),
-        Turnovers: numOrZero(row.Turnovers),
-        Steals: numOrZero(row.Steals),
-        Blocks: numOrZero(row.Blocks),
+        Points: numOrNull(row.Points),
+        Rebounds: numOrNull(row.Rebounds),
+        Assists: numOrNull(row.Assists),
+        Turnovers: numOrNull(row.Turnovers),
+        Steals: numOrNull(row.Steals),
+        Blocks: numOrNull(row.Blocks),
 
-        ThreePM: numOrZero(row.ThreePM),
-        ThreePA: numOrZero(row.ThreePA),
-        TwoPM: numOrZero(row.TwoPM),
-        TwoPA: numOrZero(row.TwoPA),
-        FTM: numOrZero(row.FTM),
-        FTA: numOrZero(row.FTA),
+        ThreePM: numOrNull(row.ThreePM),
+        ThreePA: numOrNull(row.ThreePA),
+        TwoPM: numOrNull(row.TwoPM),
+        TwoPA: numOrNull(row.TwoPA),
+        FTM: numOrNull(row.FTM),
+        FTA: numOrNull(row.FTA),
 
         StatComplete: "Yes",
       });
@@ -398,7 +407,7 @@ export default function BoysBasketballAdmin() {
     for (const pid of Object.keys(boxScore)) {
       const row = boxScore[pid];
       if (!row || row.DNP) continue;
-      sum += numOrZero(row.Points);
+      sum += numForTotal(row.Points);
     }
     return sum;
   }, [boxScore]);
@@ -523,7 +532,6 @@ export default function BoysBasketballAdmin() {
                 setClipboardStatus("Copied!");
                 setTimeout(() => setClipboardStatus(""), 1500);
               } else {
-                // Fallback: show a prompt the user can copy from
                 window.prompt("Clipboard blocked. Copy the JSON from here:", exportText);
               }
             }}
