@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link, Routes, Route } from "react-router-dom";
+import { Link, Routes, Route, useParams } from "react-router-dom";
 
 import Home from "./pages/Home";
 import FullCareerStats from "./pages/FullCareerStats";
@@ -16,6 +16,7 @@ import SeasonPlaceholder from "./seasons/SeasonPlaceholder";
 import RecordsVsOpponents from "./pages/RecordsVsOpponents";
 import YearlyResults from "./pages/YearlyResults";
 import GameDetail from "./pages/GameDetail";
+import GameDetailHistorical from "./pages/GameDetailHistorical";
 import PlayerPage from "./pages/PlayerPage";
 
 const seasonPages = [
@@ -25,6 +26,46 @@ const seasonPages = [
   { slug: "2024-25", Component: Season2024_25 },
   { slug: "2025-26", Component: Season2025_26 },
 ];
+
+// ✅ Decides which game detail page to render based on the game's Season
+function GameDetailRouter() {
+  const { gameId } = useParams();
+  const [game, setGame] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    async function loadGame() {
+      setLoading(true);
+      try {
+        const res = await fetch("/data/boys/basketball/games.json");
+        const gamesData = await res.json();
+        const g = gamesData.find((x) => Number(x.GameID) === Number(gameId));
+
+        if (!cancelled) setGame(g || null);
+      } catch (err) {
+        console.error("Failed to load game for router:", err);
+        if (!cancelled) setGame(null);
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
+    }
+
+    loadGame();
+    return () => {
+      cancelled = true;
+    };
+  }, [gameId]);
+
+  if (loading) return <div className="p-4">Loading…</div>;
+  if (!game) return <div className="p-4">Game not found.</div>;
+
+  // ✅ Choose your cutoff. I used <= 1999 as "historical".
+  const isHistorical = Number(game.Season) <= 2011;
+
+  return isHistorical ? <GameDetailHistorical /> : <GameDetail />;
+}
 
 function BoysBasketballApp() {
   const [games, setGames] = useState([]);
@@ -194,7 +235,7 @@ function BoysBasketballApp() {
 
         {/* Other pages */}
         <Route path="yearly-results" element={<YearlyResults />} />
-        <Route path="games/:gameId" element={<GameDetail />} />
+        <Route path="games/:gameId" element={<GameDetailRouter />} />
         <Route path="players/:playerId" element={<PlayerPage />} />
 
         {/* Fallback */}
