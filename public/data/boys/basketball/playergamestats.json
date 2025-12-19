@@ -324,6 +324,24 @@
     "StatComplete": "Yes"
   },
   {
+    "StatID": 19781216197808,
+    "PlayerID": 197808,
+    "GameID": 19781216,
+    "Points": 27,
+    "Rebounds": null,
+    "Assists": null,
+    "Turnovers": null,
+    "Steals": null,
+    "Blocks": null,
+    "ThreePM": null,
+    "ThreePA": null,
+    "TwoPM": null,
+    "TwoPA": null,
+    "FTM": null,
+    "FTA": null,
+    "StatComplete": "Yes"
+  },
+  {
     "StatID": 19921201199202,
     "PlayerID": 199202,
     "GameID": 19921201,
