@@ -141,13 +141,14 @@
     "Opponent": "Episcopal School of Jacksonville",
     "LocationType": "Away",
     "GameType": "Non-Region",
-    "Result": "Unknown",
-    "TeamScore": null,
-    "OpponentScore": null,
-    "ResultMargin": null,
+    "Result": "L",
+    "TeamScore": 43,
+    "OpponentScore": 52,
+    "ResultMargin": -9,
     "Season": 2025,
-    "IsComplete": "No",
-    "Recap": null
+    "IsComplete": "Yes",
+    "RecapTitle": "Lions Fall Short Against Episcopal in Christmas Classic",
+    "Recap": "St. Andrew’s competed in an afternoon matchup today at 2:00 PM, coming up short in a 52–43 decision against Episcopal School of Jacksonville. \n\nThe Eagles’ size presented challenges throughout the game, but the Lions remained steady and within reach for much of the contest. Aubri Rutledge led St. Andrew’s with 19 points, along with 5 rebounds and 5 steals, providing consistent effort on both ends of the floor. \n\nValerie Ward contributed 8 points and 3 steals, while eighth grader Zyona Edwards added 12 points, continuing to gain valuable varsity experience. \n\nSt. Andrew’s showed composure and effort throughout the afternoon against a physical opponent, taking positives from the matchup moving forward."
   },
   {
     "GameID": 20251220,
