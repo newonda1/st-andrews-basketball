@@ -208,62 +208,58 @@ function GameDetailHistorical() {
           <p className="text-gray-600">No player statistics recorded for this game yet.</p>
         ) : (
           <div className="overflow-x-auto">
-            <table className="min-w-full border text-xs sm:text-sm text-center">
-              <thead className="bg-gray-100">
-                <tr>
-                  <th className="border px-2 py-1">Player</th>
-                  <th className="border px-2 py-1">PTS</th>
-                  <th className="border px-2 py-1">REB</th>
-                  <th className="border px-2 py-1">AST</th>
-                  <th className="border px-2 py-1">STL</th>
-                </tr>
-              </thead>
+  <table className="w-auto mx-auto border text-xs sm:text-sm text-center whitespace-nowrap">
+    <thead className="bg-gray-100">
+      <tr>
+        <th className="border px-2 py-1 text-left">Player</th>
+        <th className="border px-1.5 py-1">PTS</th>
+        <th className="border px-1.5 py-1">REB</th>
+        <th className="border px-1.5 py-1">AST</th>
+        <th className="border px-1.5 py-1">STL</th>
+      </tr>
+    </thead>
 
-              <tbody>
-                {playerStats.map((s) => {
-                  return (
-                    <tr key={s.PlayerGameStatsID ?? `${s.GameID}-${s.PlayerID}`}>
-                      <td className="border px-2 py-1 align-middle text-left">
-                        <div className="flex items-center justify-start gap-2">
-                          <img
-                            src={getPlayerPhotoUrl(s.PlayerID)}
-                            alt={getPlayerName(s.PlayerID)}
-                            onError={(e) => {
-                              e.currentTarget.src = "/images/common/logo.png";
-                            }}
-                            className="w-8 h-8 rounded-full object-cover border"
-                          />
-                          <Link
-                            to={`/athletics/boys/basketball/players/${s.PlayerID}`}
-                            className="text-blue-600 underline hover:text-blue-800"
-                          >
-                            {getPlayerName(s.PlayerID)}
-                          </Link>
-                        </div>
-                      </td>
+    <tbody>
+      {playerStats.map((s) => (
+        <tr key={s.PlayerGameStatsID ?? `${s.GameID}-${s.PlayerID}`}>
+          <td className="border px-2 py-1 align-middle text-left">
+            <div className="flex items-center gap-2">
+              <img
+                src={getPlayerPhotoUrl(s.PlayerID)}
+                alt={getPlayerName(s.PlayerID)}
+                onError={(e) => {
+                  e.currentTarget.src = "/images/common/logo.png";
+                }}
+                className="w-8 h-8 rounded-full object-cover border shrink-0"
+              />
+              <Link
+                to={`/athletics/boys/basketball/players/${s.PlayerID}`}
+                className="text-blue-600 underline hover:text-blue-800"
+              >
+                {getPlayerName(s.PlayerID)}
+              </Link>
+            </div>
+          </td>
 
-                      {/* 5) Missing stat => "—" */}
-                      <td className="border px-2 py-1 align-middle">{cellOrDash(s.Points)}</td>
-                      <td className="border px-2 py-1 align-middle">{cellOrDash(s.Rebounds)}</td>
-                      <td className="border px-2 py-1 align-middle">{cellOrDash(s.Assists)}</td>
-                      <td className="border px-2 py-1 align-middle">{cellOrDash(s.Steals)}</td>
-                    </tr>
-                  );
-                })}
+          <td className="border px-1.5 py-1">{cellOrDash(s.Points)}</td>
+          <td className="border px-1.5 py-1">{cellOrDash(s.Rebounds)}</td>
+          <td className="border px-1.5 py-1">{cellOrDash(s.Assists)}</td>
+          <td className="border px-1.5 py-1">{cellOrDash(s.Steals)}</td>
+        </tr>
+      ))}
 
-                {/* 4) Team totals: PTS always computed; others "—" if any missing in that column */}
-                {teamTotals && (
-                  <tr className="bg-gray-100 font-semibold">
-                    <td className="border px-2 py-1 text-center">Team Totals</td>
-                    <td className="border px-2 py-1">{teamTotals.Points}</td>
-                    <td className="border px-2 py-1">{teamTotals.Rebounds}</td>
-                    <td className="border px-2 py-1">{teamTotals.Assists}</td>
-                    <td className="border px-2 py-1">{teamTotals.Steals}</td>
-                  </tr>
-                )}
-              </tbody>
-            </table>
-          </div>
+      {teamTotals && (
+        <tr className="bg-gray-100 font-semibold">
+          <td className="border px-2 py-1 text-center">Team Totals</td>
+          <td className="border px-1.5 py-1">{teamTotals.Points}</td>
+          <td className="border px-1.5 py-1">{teamTotals.Rebounds}</td>
+          <td className="border px-1.5 py-1">{teamTotals.Assists}</td>
+          <td className="border px-1.5 py-1">{teamTotals.Steals}</td>
+        </tr>
+      )}
+    </tbody>
+  </table>
+</div>
         )}
       </section>
     </div>
