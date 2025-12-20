@@ -119,6 +119,7 @@ function GameDetailGirls() {
     return `${ys}-${ye2}`;
   };
 
+  // ✅ Team totals row (sums across playerStats)
   const teamTotals = useMemo(() => {
     const sum = (key) =>
       playerStats.reduce((acc, s) => acc + (Number(s?.[key]) || 0), 0);
@@ -155,10 +156,19 @@ function GameDetailGirls() {
     ? `/athletics/girls/basketball/seasons/${seasonSlug}`
     : "/athletics/girls/basketball/seasons";
 
+  // ✅ Header lines (match boys)
+  const resultText =
+    game.Result === "W" ? "Win" : game.Result === "L" ? "Loss" : "Result pending";
+
+  const showScore = game.Result === "W" || game.Result === "L";
+
   const recapTitle =
     game.RecapTitle && String(game.RecapTitle).trim().length > 0
       ? game.RecapTitle
       : "Game Recap";
+
+  const recapText =
+    game.Recap && String(game.Recap).trim().length > 0 ? game.Recap : "Recap coming soon.";
 
   return (
     <div className="p-4 space-y-6">
@@ -166,111 +176,132 @@ function GameDetailGirls() {
         {seasonSlug ? `← Back to the ${seasonSlug} Season` : "← Back to Seasons"}
       </Link>
 
+      {/* ✅ Added header block (date/opponent, result, location/type) */}
+      <header>
+        <h1 className="text-2xl font-bold mb-2">
+          {formatDate(game.Date)} vs {game.Opponent}
+        </h1>
+        <p className="text-lg">
+          {resultText}
+          {showScore && (
+            <>
+              {" "}
+              — {game.TeamScore}–{game.OpponentScore}
+            </>
+          )}
+        </p>
+        <p className="text-sm text-gray-600">
+          {game.LocationType} • {game.GameType}
+        </p>
+      </header>
+
       <section>
         <h2 className="text-xl font-semibold mb-2">{recapTitle}</h2>
-        <p className="text-gray-700 leading-relaxed whitespace-pre-line">
-          {game.Recap && game.Recap.trim().length > 0
-            ? game.Recap
-            : "Recap coming soon."}
-        </p>
+        <p className="text-gray-700 leading-relaxed whitespace-pre-line">{recapText}</p>
       </section>
 
       <section>
         <h2 className="text-xl font-semibold mb-2">Box Score</h2>
-        <div className="overflow-x-auto">
-          <table className="min-w-full border text-xs sm:text-sm text-center">
-            <thead className="bg-gray-100">
-              <tr>
-                <th className="border px-2 py-1">Player</th>
-                <th className="border px-2 py-1">PTS</th>
-                <th className="border px-2 py-1">REB</th>
-                <th className="border px-2 py-1">AST</th>
-                <th className="border px-2 py-1">TO</th>
-                <th className="border px-2 py-1">STL</th>
-                <th className="border px-2 py-1">BLK</th>
-                <th className="border px-2 py-1">3PM</th>
-                <th className="border px-2 py-1">3PA</th>
-                <th className="border px-2 py-1">3P%</th>
-                <th className="border px-2 py-1">2PM</th>
-                <th className="border px-2 py-1">2PA</th>
-                <th className="border px-2 py-1">2P%</th>
-                <th className="border px-2 py-1">eFG%</th>
-                <th className="border px-2 py-1">FTM</th>
-                <th className="border px-2 py-1">FTA</th>
-                <th className="border px-2 py-1">FT%</th>
-              </tr>
-            </thead>
 
-            <tbody>
-              {playerStats.map((s) => (
-                <tr key={s.PlayerGameStatsID ?? `${s.GameID}-${s.PlayerID}`}>
-                  <td className="border px-2 py-1 align-middle text-left">
-                    <div className="flex items-center justify-start gap-2">
-                      <img
-                        src={getPlayerPhotoUrl(s.PlayerID)}
-                        alt={getPlayerName(s.PlayerID)}
-                        onError={(e) => {
-                          e.currentTarget.src = "/images/common/logo.png";
-                        }}
-                        className="w-8 h-8 rounded-full object-cover border"
-                      />
-                      <Link
-                        to={`/athletics/girls/basketball/players/${s.PlayerID}`}
-                        className="text-blue-600 underline hover:text-blue-800"
-                      >
-                        {getPlayerName(s.PlayerID)}
-                      </Link>
-                    </div>
-                  </td>
-                  <td className="border px-2 py-1">{s.Points}</td>
-                  <td className="border px-2 py-1">{s.Rebounds}</td>
-                  <td className="border px-2 py-1">{s.Assists}</td>
-                  <td className="border px-2 py-1">{s.Turnovers}</td>
-                  <td className="border px-2 py-1">{s.Steals}</td>
-                  <td className="border px-2 py-1">{s.Blocks}</td>
-                  <td className="border px-2 py-1">{s.ThreePM}</td>
-                  <td className="border px-2 py-1">{s.ThreePA}</td>
-                  <td className="border px-2 py-1">
-                    {formatPct(s.ThreePM, s.ThreePA)}
-                  </td>
-                  <td className="border px-2 py-1">{s.TwoPM}</td>
-                  <td className="border px-2 py-1">{s.TwoPA}</td>
-                  <td className="border px-2 py-1">
-                    {formatPct(s.TwoPM, s.TwoPA)}
-                  </td>
-                  <td className="border px-2 py-1">
-                    {calcEFG(s.TwoPM, s.ThreePM, s.TwoPA, s.ThreePA)}
-                  </td>
-                  <td className="border px-2 py-1">{s.FTM}</td>
-                  <td className="border px-2 py-1">{s.FTA}</td>
-                  <td className="border px-2 py-1">
-                    {formatPct(s.FTM, s.FTA)}
-                  </td>
+        {playerStats.length === 0 ? (
+          <p className="text-gray-600 italic">Box score coming soon.</p>
+        ) : (
+          <div className="overflow-x-auto">
+            <table className="min-w-full border text-xs sm:text-sm text-center">
+              <thead className="bg-gray-100">
+                <tr>
+                  <th className="border px-2 py-1">Player</th>
+                  <th className="border px-2 py-1">PTS</th>
+                  <th className="border px-2 py-1">REB</th>
+                  <th className="border px-2 py-1">AST</th>
+                  <th className="border px-2 py-1">TO</th>
+                  <th className="border px-2 py-1">STL</th>
+                  <th className="border px-2 py-1">BLK</th>
+                  <th className="border px-2 py-1">3PM</th>
+                  <th className="border px-2 py-1">3PA</th>
+                  <th className="border px-2 py-1">3P%</th>
+                  <th className="border px-2 py-1">2PM</th>
+                  <th className="border px-2 py-1">2PA</th>
+                  <th className="border px-2 py-1">2P%</th>
+                  <th className="border px-2 py-1">eFG%</th>
+                  <th className="border px-2 py-1">FTM</th>
+                  <th className="border px-2 py-1">FTA</th>
+                  <th className="border px-2 py-1">FT%</th>
                 </tr>
-              ))}
+              </thead>
 
-              <tr className="bg-gray-100 font-semibold">
-                <td className="border px-2 py-1 text-left">Team Totals</td>
-                <td className="border px-2 py-1">{teamTotals.Points}</td>
-                <td className="border px-2 py-1">{teamTotals.Rebounds}</td>
-                <td className="border px-2 py-1">{teamTotals.Assists}</td>
-                <td className="border px-2 py-1">{teamTotals.Turnovers}</td>
-                <td className="border px-2 py-1">{teamTotals.Steals}</td>
-                <td className="border px-2 py-1">{teamTotals.Blocks}</td>
-                <td className="border px-2 py-1">{teamTotals.ThreePM}</td>
-                <td className="border px-2 py-1">{teamTotals.ThreePA}</td>
-                <td className="border px-2 py-1">{teamTotals.ThreePct}</td>
-                <td className="border px-2 py-1">{teamTotals.TwoPM}</td>
-                <td className="border px-2 py-1">{teamTotals.TwoPA}</td>
-                <td className="border px-2 py-1">{teamTotals.TwoPct}</td>
-                <td className="border px-2 py-1">{teamTotals.EfgPct}</td>
-                <td className="border px-2 py-1">{teamTotals.FTM}</td>
-                <td className="border px-2 py-1">{teamTotals.FTA}</td>
-                <td className="border px-2 py-1">{teamTotals.FtPct}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+              <tbody>
+                {playerStats.map((s) => (
+                  <tr key={s.PlayerGameStatsID ?? `${s.GameID}-${s.PlayerID}`}>
+                    <td className="border px-2 py-1 align-middle text-left">
+                      <div className="flex items-center justify-start gap-2">
+                        <img
+                          src={getPlayerPhotoUrl(s.PlayerID)}
+                          alt={getPlayerName(s.PlayerID)}
+                          onError={(e) => {
+                            e.currentTarget.src = "/images/common/logo.png";
+                          }}
+                          className="w-8 h-8 rounded-full object-cover border"
+                        />
+                        <Link
+                          to={`/athletics/girls/basketball/players/${s.PlayerID}`}
+                          className="text-blue-600 underline hover:text-blue-800"
+                        >
+                          {getPlayerName(s.PlayerID)}
+                        </Link>
+                      </div>
+                    </td>
+
+                    <td className="border px-2 py-1">{s.Points}</td>
+                    <td className="border px-2 py-1">{s.Rebounds}</td>
+                    <td className="border px-2 py-1">{s.Assists}</td>
+                    <td className="border px-2 py-1">{s.Turnovers}</td>
+                    <td className="border px-2 py-1">{s.Steals}</td>
+                    <td className="border px-2 py-1">{s.Blocks}</td>
+                    <td className="border px-2 py-1">{s.ThreePM}</td>
+                    <td className="border px-2 py-1">{s.ThreePA}</td>
+                    <td className="border px-2 py-1">
+                      {formatPct(s.ThreePM, s.ThreePA)}
+                    </td>
+                    <td className="border px-2 py-1">{s.TwoPM}</td>
+                    <td className="border px-2 py-1">{s.TwoPA}</td>
+                    <td className="border px-2 py-1">
+                      {formatPct(s.TwoPM, s.TwoPA)}
+                    </td>
+                    <td className="border px-2 py-1">
+                      {calcEFG(s.TwoPM, s.ThreePM, s.TwoPA, s.ThreePA)}
+                    </td>
+                    <td className="border px-2 py-1">{s.FTM}</td>
+                    <td className="border px-2 py-1">{s.FTA}</td>
+                    <td className="border px-2 py-1">
+                      {formatPct(s.FTM, s.FTA)}
+                    </td>
+                  </tr>
+                ))}
+
+                <tr className="bg-gray-100 font-semibold">
+                  <td className="border px-2 py-1 text-left">Team Totals</td>
+                  <td className="border px-2 py-1">{teamTotals.Points}</td>
+                  <td className="border px-2 py-1">{teamTotals.Rebounds}</td>
+                  <td className="border px-2 py-1">{teamTotals.Assists}</td>
+                  <td className="border px-2 py-1">{teamTotals.Turnovers}</td>
+                  <td className="border px-2 py-1">{teamTotals.Steals}</td>
+                  <td className="border px-2 py-1">{teamTotals.Blocks}</td>
+                  <td className="border px-2 py-1">{teamTotals.ThreePM}</td>
+                  <td className="border px-2 py-1">{teamTotals.ThreePA}</td>
+                  <td className="border px-2 py-1">{teamTotals.ThreePct}</td>
+                  <td className="border px-2 py-1">{teamTotals.TwoPM}</td>
+                  <td className="border px-2 py-1">{teamTotals.TwoPA}</td>
+                  <td className="border px-2 py-1">{teamTotals.TwoPct}</td>
+                  <td className="border px-2 py-1">{teamTotals.EfgPct}</td>
+                  <td className="border px-2 py-1">{teamTotals.FTM}</td>
+                  <td className="border px-2 py-1">{teamTotals.FTA}</td>
+                  <td className="border px-2 py-1">{teamTotals.FtPct}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        )}
       </section>
     </div>
   );
