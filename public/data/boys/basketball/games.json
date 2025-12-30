@@ -4162,12 +4162,14 @@
     "Opponent": "Arlington Christian School",
     "LocationType": "Neutral",
     "GameType": "Showcase",
-    "Result": "Unknown",
-    "TeamScore": null,
-    "OpponentScore": null,
-    "ResultMargin": null,
+    "Result": "W",
+    "TeamScore": 56,
+    "OpponentScore": 48,
+    "ResultMargin": 8,
     "Season": 2025,
-    "IsComplete": "Unknown"
+    "IsComplete": "Yes",
+    "RecapTitle": "Glover’s Double-Double Powers Lions to Third Straight Win",
+    "Recap": "St. Andrew’s continued its holiday surge Monday with a 56–48 win over Arlington Christian at the Saint Francis Holiday Shootout, securing its third straight victory behind strong defense and second-half control. \n\nThe Lions carried a narrow 27–25 halftime lead before creating separation after the break, using disciplined defense and improved shot selection to pull away in the third quarter. St. Andrew’s maintained that advantage throughout the final period, closing out a composed road victory. \n\nJa’Cari Glover led the way with a dominant double-double of 19 points and a season-high 15 rebounds, marking his seventh double-double of the season and the fifth time over the past two years he has reached the 15-rebound mark. Getter added 16 points, while Amari Cook delivered a steady performance at point guard, finishing with a season-high 8 assists. \n\nSt. Andrew’s will be back in action tomorrow, traveling to Marietta, GA, to face the Midtown Knights in the Lemon Street Classic."
   },
   {
     "GameID": 20251230,
