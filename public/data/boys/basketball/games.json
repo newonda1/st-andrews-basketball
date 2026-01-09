@@ -4182,7 +4182,9 @@
     "OpponentScore": 57,
     "ResultMargin": -8,
     "Season": 2025,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "RecapTitle": null,
+    "Recap": null,
   },
   {
     "GameID": 20260109,
