@@ -4177,12 +4177,12 @@
     "Opponent": "Midtown High School",
     "LocationType": "Neutral",
     "GameType": "Showcase",
-    "Result": "Unknown",
-    "TeamScore": null,
-    "OpponentScore": null,
-    "ResultMargin": null,
+    "Result": "L",
+    "TeamScore": 49,
+    "OpponentScore": 57,
+    "ResultMargin": -8,
     "Season": 2025,
-    "IsComplete": "Unknown"
+    "IsComplete": "Yes"
   },
   {
     "GameID": 20260109,
