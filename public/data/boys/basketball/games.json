@@ -4207,12 +4207,14 @@
     "Opponent": "Savannah High School",
     "LocationType": "Home",
     "GameType": "Non-Region",
-    "Result": "Unknown",
-    "TeamScore": null,
-    "OpponentScore": null,
-    "ResultMargin": null,
+    "Result": "W",
+    "TeamScore": 69,
+    "OpponentScore": 49,
+    "ResultMargin": 20,
     "Season": 2025,
-    "IsComplete": "Unknown"
+    "IsComplete": "Yes",
+    "RecapTitle": null,
+    "Recap": null
   },
   {
     "GameID": 20260113,
