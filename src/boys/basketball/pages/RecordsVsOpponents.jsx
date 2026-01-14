@@ -6,8 +6,8 @@ function RecordsVsOpponents() {
   const [players, setPlayers] = useState([]);
 
   const [opponentRecords, setOpponentRecords] = useState({});
-  const [sortField, setSortField] = useState("Opponent");
-  const [sortDirection, setSortDirection] = useState("asc");
+  const [sortField, setSortField] = useState("Total");
+  const [sortDirection, setSortDirection] = useState("desc");
   const [expandedOpponent, setExpandedOpponent] = useState(null);
 
   // --- Helpers ---
