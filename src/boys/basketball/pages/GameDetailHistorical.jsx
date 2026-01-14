@@ -88,6 +88,7 @@ function GameDetailHistorical() {
 
   const formatDate = (ms) =>
     new Date(ms).toLocaleDateString(undefined, {
+      timeZone: "UTC",
       month: "short",
       day: "numeric",
       year: "numeric",
