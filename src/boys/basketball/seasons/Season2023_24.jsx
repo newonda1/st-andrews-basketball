@@ -155,7 +155,12 @@ function Season2023_24() {
     if (ms == null) return "";
     const d = new Date(Number(ms));
     if (Number.isNaN(d.getTime())) return "";
-    return d.toLocaleDateString();
+    return d.toLocaleDateString("en-US", {
+      timeZone: "UTC",
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+    });
   };
 
   const formatResult = (game) => {
