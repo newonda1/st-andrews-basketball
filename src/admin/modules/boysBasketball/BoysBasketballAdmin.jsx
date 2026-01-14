@@ -25,6 +25,11 @@ import React, { useEffect, useMemo, useState } from "react";
  * - Adds Season Builder (seasons.json schema)
  * - Adds Game Builder (games.json schema)
  * - Outputs JSON objects to copy/paste into those files
+ *
+ * NEW (This update #2):
+ * - GameID is ALWAYS auto-generated from date (YYYYMMDD).
+ * - Opponent selection is a dropdown populated from existing games.json Opponent values,
+ *   with a "Create new..." option to type a new opponent name.
  */
 
 function absUrl(path) {
@@ -181,7 +186,7 @@ function makeStatId(gameId, playerId) {
 }
 
 /* -------------------------
-   NEW: Season/Game Builders
+   Season/Game Builders
 -------------------------- */
 
 function dateStrToEpochUtcMs(dateStr) {
@@ -228,7 +233,6 @@ export default function BoysBasketballAdmin() {
     seasonRosters: "/data/boys/basketball/seasonrosters.json",
     games: "/data/boys/basketball/games.json",
     playerGameStats: "/data/boys/basketball/playergamestats.json",
-    // If/when you have seasons.json at a public path, you can load it too:
     // seasons: "/data/boys/basketball/seasons.json",
   };
 
@@ -251,7 +255,7 @@ export default function BoysBasketballAdmin() {
   const [clipboardStatus, setClipboardStatus] = useState("");
 
   /* -------------------------
-     NEW: Season Builder state
+     Season Builder state
   -------------------------- */
   const [seasonSeasonID, setSeasonSeasonID] = useState("");
   const [seasonYearStart, setSeasonYearStart] = useState("");
@@ -265,16 +269,19 @@ export default function BoysBasketballAdmin() {
   const [seasonCopyStatus, setSeasonCopyStatus] = useState("");
 
   /* -------------------------
-     NEW: Game Builder state
+     Game Builder state
   -------------------------- */
   const [gameDateStr, setGameDateStr] = useState("");
-  const [gameGameIDManual, setGameGameIDManual] = useState(""); // optional override
-  const [gameOpponent, setGameOpponent] = useState("");
+
+  // Opponent dropdown + "create new" option
+  const [opponentSelectValue, setOpponentSelectValue] = useState(""); // either existing opponent name or "__NEW__"
+  const [gameOpponentNew, setGameOpponentNew] = useState("");
+
   const [gameLocationType, setGameLocationType] = useState("Home");
   const [gameGameType, setGameGameType] = useState("Non-Region");
   const [gameTeamScore, setGameTeamScore] = useState("");
   const [gameOppScore, setGameOppScore] = useState("");
-  const [gameSeason, setGameSeason] = useState(""); // should be numeric like 1978
+  const [gameSeason, setGameSeason] = useState(""); // numeric like 1978
   const [gameIsComplete, setGameIsComplete] = useState("Yes");
 
   const [gameCopyStatus, setGameCopyStatus] = useState("");
@@ -501,8 +508,23 @@ export default function BoysBasketballAdmin() {
   }, [boxScore]);
 
   /* -------------------------
-     NEW: Builder computed JSON
+     Builders computed JSON
   -------------------------- */
+
+  // Build list of existing opponents from games.json
+  const opponentOptions = useMemo(() => {
+    const set = new Set();
+    for (const g of games || []) {
+      const name = String(g?.Opponent ?? "").trim();
+      if (name) set.add(name);
+    }
+    return Array.from(set).sort((a, b) => a.localeCompare(b));
+  }, [games]);
+
+  const gameOpponentResolved = useMemo(() => {
+    if (opponentSelectValue === "__NEW__") return String(gameOpponentNew || "").trim();
+    return String(opponentSelectValue || "").trim();
+  }, [opponentSelectValue, gameOpponentNew]);
 
   // Season object (seasons.json schema)
   const seasonObj = useMemo(() => {
@@ -557,14 +579,12 @@ export default function BoysBasketballAdmin() {
     return seasonJsonText.replace(/\n}$/, "\n},");
   }, [seasonJsonText]);
 
-  // Game object (games.json schema)
+  // Game object (games.json schema) — GameID is ALWAYS derived from Date (YYYYMMDD)
   const gameObj = useMemo(() => {
     const Date = dateStrToEpochUtcMs(gameDateStr);
-    const autoGameID = dateStrToGameId(gameDateStr);
-    const manualGameID = intOrNull(gameGameIDManual);
-    const GameID = manualGameID ?? autoGameID;
+    const GameID = dateStrToGameId(gameDateStr);
 
-    const Opponent = String(gameOpponent || "").trim() || null;
+    const Opponent = String(gameOpponentResolved || "").trim() || null;
     const LocationType = String(gameLocationType || "").trim() || null;
     const GameType = String(gameGameType || "").trim() || null;
 
@@ -594,8 +614,7 @@ export default function BoysBasketballAdmin() {
     };
   }, [
     gameDateStr,
-    gameGameIDManual,
-    gameOpponent,
+    gameOpponentResolved,
     gameLocationType,
     gameGameType,
     gameTeamScore,
@@ -613,11 +632,6 @@ export default function BoysBasketballAdmin() {
     if (!gameJsonText) return "";
     return gameJsonText.replace(/\n}$/, "\n},");
   }, [gameJsonText]);
-
-  const gameIdCollision = useMemo(() => {
-    if (!gameObj?.GameID) return false;
-    return games.some((g) => Number(g.GameID) === Number(gameObj.GameID));
-  }, [games, gameObj]);
 
   if (loading) return <p>Loading boys basketball admin data…</p>;
 
@@ -638,7 +652,7 @@ export default function BoysBasketballAdmin() {
       <h2 style={{ marginTop: 0 }}>Boys Basketball Admin</h2>
 
       {/* -------------------------
-          NEW: Season + Game Builder
+          Season + Game Builder
       -------------------------- */}
       <section style={{ marginTop: 10 }}>
         <h3 style={{ margin: "0 0 8px" }}>Season + Game Builder (copy/paste into JSON files)</h3>
@@ -671,7 +685,10 @@ export default function BoysBasketballAdmin() {
               style={btn}
               onClick={() => {
                 if (!seasonJsonText) return alert("Fill SeasonID at minimum.");
-                downloadText(`season_${seasonObj?.SeasonID || "unknown"}.json.txt`, seasonJsonTextWithComma || seasonJsonText);
+                downloadText(
+                  `season_${seasonObj?.SeasonID || "unknown"}.json.txt`,
+                  seasonJsonTextWithComma || seasonJsonText
+                );
               }}
               disabled={!seasonJsonText}
               title="Downloads a text file containing one season object."
@@ -685,30 +702,15 @@ export default function BoysBasketballAdmin() {
           <div style={{ marginTop: 10, display: "grid", gridTemplateColumns: "repeat(4, minmax(200px, 1fr))", gap: 10 }}>
             <div>
               <div style={label}>SeasonID</div>
-              <input
-                style={input}
-                value={seasonSeasonID}
-                onChange={(e) => setSeasonSeasonID(e.target.value)}
-                placeholder="2021"
-              />
+              <input style={input} value={seasonSeasonID} onChange={(e) => setSeasonSeasonID(e.target.value)} placeholder="2021" />
             </div>
             <div>
               <div style={label}>YearStart</div>
-              <input
-                style={input}
-                value={seasonYearStart}
-                onChange={(e) => setSeasonYearStart(e.target.value)}
-                placeholder="2021"
-              />
+              <input style={input} value={seasonYearStart} onChange={(e) => setSeasonYearStart(e.target.value)} placeholder="2021" />
             </div>
             <div>
               <div style={label}>YearEnd</div>
-              <input
-                style={input}
-                value={seasonYearEnd}
-                onChange={(e) => setSeasonYearEnd(e.target.value)}
-                placeholder="2022"
-              />
+              <input style={input} value={seasonYearEnd} onChange={(e) => setSeasonYearEnd(e.target.value)} placeholder="2022" />
             </div>
             <div>
               <div style={label}>HeadCoach</div>
@@ -722,12 +724,7 @@ export default function BoysBasketballAdmin() {
 
             <div>
               <div style={label}>RegionSeed</div>
-              <input
-                style={input}
-                value={seasonRegionSeed}
-                onChange={(e) => setSeasonRegionSeed(e.target.value)}
-                placeholder="1"
-              />
+              <input style={input} value={seasonRegionSeed} onChange={(e) => setSeasonRegionSeed(e.target.value)} placeholder="1" />
             </div>
             <div>
               <div style={label}>RegionFinish</div>
@@ -740,12 +737,7 @@ export default function BoysBasketballAdmin() {
             </div>
             <div>
               <div style={label}>StateSeed</div>
-              <input
-                style={input}
-                value={seasonStateSeed}
-                onChange={(e) => setSeasonStateSeed(e.target.value)}
-                placeholder="null or 1"
-              />
+              <input style={input} value={seasonStateSeed} onChange={(e) => setSeasonStateSeed(e.target.value)} placeholder="null or 1" />
             </div>
             <div>
               <div style={label}>StateFinish</div>
@@ -773,13 +765,6 @@ export default function BoysBasketballAdmin() {
               style={btn}
               onClick={async () => {
                 if (!gameJsonText) return alert("Fill Date, Opponent, and Season at minimum.");
-                if (gameIdCollision) {
-                  const proceed = window.confirm(
-                    `Warning: GameID ${gameObj.GameID} already exists in games.json.\n\n` +
-                      `If you continue, you may create a duplicate ID.\n\nProceed anyway?`
-                  );
-                  if (!proceed) return;
-                }
                 setGameCopyStatus("");
                 const ok = await copyToClipboard(gameJsonTextWithComma || gameJsonText);
                 if (ok) {
@@ -807,12 +792,6 @@ export default function BoysBasketballAdmin() {
               Download Game JSON
             </button>
 
-            {gameIdCollision && (
-              <span style={{ color: "#b00020", fontWeight: 900 }}>
-                GameID collision (already exists) — consider manual override.
-              </span>
-            )}
-
             {gameCopyStatus && <span style={{ color: "#16a34a", fontWeight: 900 }}>{gameCopyStatus}</span>}
           </div>
 
@@ -824,58 +803,67 @@ export default function BoysBasketballAdmin() {
                 style={input}
                 value={gameDateStr}
                 onChange={(e) => {
-                  setGameDateStr(e.target.value);
+                  const nextDate = e.target.value;
+                  setGameDateStr(nextDate);
                   // auto-fill Season with currently selected season year when empty
                   if (!gameSeason && Number.isFinite(seasonYear)) setGameSeason(String(seasonYear));
                 }}
               />
               <div style={{ marginTop: 6, color: "#555", fontSize: 12 }}>
-                Auto GameID: <strong>{dateStrToGameId(gameDateStr) ?? "—"}</strong> • Date(ms):{" "}
+                GameID: <strong>{dateStrToGameId(gameDateStr) ?? "—"}</strong> • Date(ms):{" "}
                 <strong>{dateStrToEpochUtcMs(gameDateStr) ?? "—"}</strong>
               </div>
             </div>
 
             <div>
-              <div style={label}>GameID (manual override)</div>
-              <input
+              <div style={label}>Opponent</div>
+              <select
                 style={input}
-                value={gameGameIDManual}
-                onChange={(e) => setGameGameIDManual(e.target.value)}
-                placeholder="Leave blank to use YYYYMMDD"
-              />
+                value={opponentSelectValue}
+                onChange={(e) => {
+                  const v = e.target.value;
+                  setOpponentSelectValue(v);
+                  if (v !== "__NEW__") setGameOpponentNew("");
+                }}
+              >
+                <option value="">Select opponent…</option>
+                <option value="__NEW__">+ Create new opponent…</option>
+                {opponentOptions.map((name) => (
+                  <option key={name} value={name}>
+                    {name}
+                  </option>
+                ))}
+              </select>
+
+              {opponentSelectValue === "__NEW__" && (
+                <div style={{ marginTop: 8 }}>
+                  <div style={label}>New Opponent Name</div>
+                  <input
+                    style={input}
+                    value={gameOpponentNew}
+                    onChange={(e) => setGameOpponentNew(e.target.value)}
+                    placeholder="Type new school name…"
+                  />
+                </div>
+              )}
+
               <div style={{ marginTop: 6, color: "#555", fontSize: 12 }}>
-                Final GameID:{" "}
-                <strong>
-                  {(intOrNull(gameGameIDManual) ?? dateStrToGameId(gameDateStr)) ?? "—"}
-                </strong>
+                Final Opponent: <strong>{gameOpponentResolved || "—"}</strong>
               </div>
             </div>
 
             <div>
-              <div style={label}>Opponent</div>
-              <input
-                style={input}
-                value={gameOpponent}
-                onChange={(e) => setGameOpponent(e.target.value)}
-                placeholder="Pathway Day School"
-              />
-            </div>
-
-            <div>
               <div style={label}>Season (numeric)</div>
-              <input
-                style={input}
-                value={gameSeason}
-                onChange={(e) => setGameSeason(e.target.value)}
-                placeholder="1978"
-              />
+              <input style={input} value={gameSeason} onChange={(e) => setGameSeason(e.target.value)} placeholder="1978" />
             </div>
 
             <div>
               <div style={label}>LocationType</div>
               <select style={input} value={gameLocationType} onChange={(e) => setGameLocationType(e.target.value)}>
                 {["Home", "Away", "Neutral"].map((t) => (
-                  <option key={t} value={t}>{t}</option>
+                  <option key={t} value={t}>
+                    {t}
+                  </option>
                 ))}
               </select>
             </div>
@@ -884,7 +872,9 @@ export default function BoysBasketballAdmin() {
               <div style={label}>GameType</div>
               <select style={input} value={gameGameType} onChange={(e) => setGameGameType(e.target.value)}>
                 {["Non-Region", "Region", "Tournament", "Region Tournament", "State Tournament"].map((t) => (
-                  <option key={t} value={t}>{t}</option>
+                  <option key={t} value={t}>
+                    {t}
+                  </option>
                 ))}
               </select>
             </div>
@@ -920,13 +910,8 @@ export default function BoysBasketballAdmin() {
               </div>
               <div style={{ marginTop: 6, color: "#555", fontSize: 12 }}>
                 Result:{" "}
-                <strong>
-                  {computeResult(intOrNull(gameTeamScore), intOrNull(gameOppScore), gameIsComplete) ?? "—"}
-                </strong>{" "}
-                • Margin:{" "}
-                <strong>
-                  {computeMargin(intOrNull(gameTeamScore), intOrNull(gameOppScore), gameIsComplete) ?? "—"}
-                </strong>
+                <strong>{computeResult(intOrNull(gameTeamScore), intOrNull(gameOppScore), gameIsComplete) ?? "—"}</strong> • Margin:{" "}
+                <strong>{computeMargin(intOrNull(gameTeamScore), intOrNull(gameOppScore), gameIsComplete) ?? "—"}</strong>
               </div>
             </div>
           </div>
@@ -974,8 +959,7 @@ export default function BoysBasketballAdmin() {
           </select>
           {selectedGame && (
             <div style={{ marginTop: 6, color: "#555", fontSize: 13 }}>
-              Selected: <strong>{selectedGame.Opponent || "Opponent?"}</strong> • GameID{" "}
-              <strong>{selectedGame.GameID}</strong>
+              Selected: <strong>{selectedGame.Opponent || "Opponent?"}</strong> • GameID <strong>{selectedGame.GameID}</strong>
             </div>
           )}
         </div>
@@ -1062,11 +1046,7 @@ export default function BoysBasketballAdmin() {
           </button>
 
           <label style={{ marginLeft: 6, display: "flex", alignItems: "center", gap: 6, color: "#111827" }}>
-            <input
-              type="checkbox"
-              checked={overwriteExisting}
-              onChange={(e) => setOverwriteExisting(e.target.checked)}
-            />
+            <input type="checkbox" checked={overwriteExisting} onChange={(e) => setOverwriteExisting(e.target.checked)} />
             Overwrite existing rows for this game
           </label>
 
@@ -1077,9 +1057,7 @@ export default function BoysBasketballAdmin() {
 
         {clipboardStatus && <div style={{ marginTop: 8, color: "#16a34a", fontWeight: 800 }}>{clipboardStatus}</div>}
 
-        {!selectedGame && (
-          <p style={{ marginTop: 10, color: "#555" }}>Select a game to generate the box score table.</p>
-        )}
+        {!selectedGame && <p style={{ marginTop: 10, color: "#555" }}>Select a game to generate the box score table.</p>}
 
         {selectedGame && (
           <div style={{ marginTop: 10, overflow: "auto", border: "1px solid #e5e7eb", borderRadius: 12 }}>
@@ -1111,11 +1089,7 @@ export default function BoysBasketballAdmin() {
                       </td>
 
                       <td style={tdCenter}>
-                        <input
-                          type="checkbox"
-                          checked={!!row.DNP}
-                          onChange={(e) => toggleDnp(p.PlayerID, e.target.checked)}
-                        />
+                        <input type="checkbox" checked={!!row.DNP} onChange={(e) => toggleDnp(p.PlayerID, e.target.checked)} />
                       </td>
 
                       {STAT_KEYS.map((k) => (
