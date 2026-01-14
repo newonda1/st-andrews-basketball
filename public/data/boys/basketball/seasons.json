@@ -70,13 +70,33 @@
     "StateFinish": "State Champion"
   },
   {
+  "SeasonID": 2018,
+  "YearStart": 2018,
+  "YearEnd": 2019,
+  "HeadCoach": "Mel Abrams Jr.",
+  "RegionSeed": null,
+  "RegionFinish": null,
+  "StateSeed": 2,
+  "StateFinish": "State Final Four"
+},
+  {
+  "SeasonID": 2019,
+  "YearStart": 2019,
+  "YearEnd": 2020,
+  "HeadCoach": "Mel Abrams Jr.",
+  "RegionSeed": null,
+  "RegionFinish": null,
+  "StateSeed": 2,
+  "StateFinish": "State Runner-up"
+},
+  {
     "SeasonID": 2020,
     "YearStart": 2020,
     "YearEnd": 2021,
     "HeadCoach": "Mel Abrams Jr.",
     "RegionSeed": null,
     "RegionFinish": null,
-    "StateSeed": null,
+    "StateSeed": 7,
     "StateFinish": null
   },
   {
@@ -86,7 +106,7 @@
     "HeadCoach": "Mel Abrams Jr.",
     "RegionSeed": 1,
     "RegionFinish": "Region Champion",
-    "StateSeed": null,
+    "StateSeed": 3,
     "StateFinish": "State Champion"
   },
   {
@@ -96,7 +116,7 @@
     "HeadCoach": "Mel Abrams Jr.",
     "RegionSeed": 1,
     "RegionFinish": "Region Champion",
-    "StateSeed": null,
+    "StateSeed": 1,
     "StateFinish": "State Champion"
   },
   {
