@@ -19,6 +19,7 @@ function Season1992_93() {
     if (!ms) return "";
     const d = new Date(ms);
     return d.toLocaleDateString("en-US", {
+      timeZone: "UTC",
       month: "short",
       day: "numeric",
       year: "numeric",
