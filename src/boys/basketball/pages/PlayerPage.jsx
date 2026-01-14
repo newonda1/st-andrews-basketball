@@ -45,6 +45,7 @@ const formatDate = (value) => {
   const d = parseDateSafe(value);
   if (!d) return "";
   return d.toLocaleDateString(undefined, {
+    timeZone: "UTC",
     month: "short",
     day: "numeric",
     year: "numeric",
