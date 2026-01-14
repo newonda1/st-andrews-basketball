@@ -70,6 +70,16 @@
     "StateFinish": "State Champion"
   },
   {
+  "SeasonID": 2017,
+  "YearStart": 2017,
+  "YearEnd": 2018,
+  "HeadCoach": "Mel Abrams Jr.",
+  "RegionSeed": null,
+  "RegionFinish": null,
+  "StateSeed": null,
+  "StateFinish": null
+},
+  {
   "SeasonID": 2018,
   "YearStart": 2018,
   "YearEnd": 2019,
