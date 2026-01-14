@@ -4222,12 +4222,12 @@
     "Opponent": "Frederica Academy",
     "LocationType": "Home",
     "GameType": "Region",
-    "Result": "Unknown",
-    "TeamScore": null,
-    "OpponentScore": null,
-    "ResultMargin": null,
+    "Result": "W",
+    "TeamScore": 58,
+    "OpponentScore": 46,
+    "ResultMargin": 12,
     "Season": 2025,
-    "IsComplete": "Unknown"
+    "IsComplete": "Yes"
   },
   {
     "GameID": 20260116,
