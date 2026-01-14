@@ -109,7 +109,7 @@ function RecordsVsOpponents() {
                         <ul className="space-y-1">
                           {gamesAgainst.map((game, i) => (
                             <li key={i} className="text-sm">
-                              {new Date(game.Date).toLocaleDateString()} — {game.Result} {game.TeamScore}-{game.OpponentScore} @ {game.LocationType}
+                              {new Date(Number(game.Date)).toLocaleDateString("en-US", { timeZone: "UTC" })} — {game.Result} {game.TeamScore}-{game.OpponentScore} @ {game.LocationType}
                             </li>
                           ))}
                         </ul>
