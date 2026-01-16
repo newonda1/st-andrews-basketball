@@ -70,6 +70,86 @@
     "StateFinish": "State Champion"
   },
   {
+    "SeasonID": 2003,
+    "YearStart": 2003,
+    "YearEnd": 2004,
+    "HeadCoach": "Michael Bennet",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": "State Champion"
+  },
+  {
+    "SeasonID": 2004,
+    "YearStart": 2004,
+    "YearEnd": 2005,
+    "HeadCoach": "Dave Clay",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
+    "SeasonID": 2005,
+    "YearStart": 2005,
+    "YearEnd": 2006,
+    "HeadCoach": "Dave Clay",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
+    "SeasonID": 2006,
+    "YearStart": 2006,
+    "YearEnd": 2007,
+    "HeadCoach": "Dave Clay",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
+    "SeasonID": 2007,
+    "YearStart": 2007,
+    "YearEnd": 2008,
+    "HeadCoach": "Dave Clay",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
+    "SeasonID": 2008,
+    "YearStart": 2008,
+    "YearEnd": 2009,
+    "HeadCoach": "Dave Clay",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
+    "SeasonID": 2009,
+    "YearStart": 2009,
+    "YearEnd": 2010,
+    "HeadCoach": "Joe Thoni",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
+    "SeasonID": 2010,
+    "YearStart": 2010,
+    "YearEnd": 2011,
+    "HeadCoach": "Joe Thoni",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
   "SeasonID": 2011,
   "YearStart": 2011,
   "YearEnd": 2012,
