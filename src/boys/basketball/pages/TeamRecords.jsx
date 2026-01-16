@@ -12,343 +12,295 @@ function formatDate(dateValue) {
   });
 }
 
-function getMaxGame(games, selector) {
-  const valid = games.filter((g) => {
-    const v = selector(g);
-    return v !== null && v !== undefined && !Number.isNaN(Number(v));
-  });
-  if (!valid.length) return null;
-
-  return valid.reduce((best, g) =>
-    selector(g) > selector(best) ? g : best
-  );
-}
-
-function getMinGame(games, selector) {
-  const valid = games.filter((g) => {
-    const v = selector(g);
-    return v !== null && v !== undefined && !Number.isNaN(Number(v));
-  });
-  if (!valid.length) return null;
-
-  return valid.reduce((best, g) =>
-    selector(g) < selector(best) ? g : best
-  );
+function formatSeason(season) {
+  if (!season) return "—";
+  return `${season}-${String(season + 1).slice(-2)}`;
 }
 
 function TeamRecords() {
   const [games, setGames] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [seasons, setSeasons] = useState([]);
+  const [openRow, setOpenRow] = useState(null);
 
-  // Load games.json
   useEffect(() => {
-    async function loadGames() {
-      try {
-        const res = await fetch("/data/boys/basketball/games.json");
-        if (!res.ok) throw new Error("Failed to load games.json");
-        const data = await res.json();
-        setGames(Array.isArray(data) ? data : []);
-      } catch (err) {
-        console.error(err);
-        setError("Unable to load game data.");
-      } finally {
-        setLoading(false);
-      }
-    }
-    loadGames();
+    fetch("/data/boys/basketball/games.json")
+      .then((r) => r.json())
+      .then(setGames);
+
+    fetch("/data/boys/basketball/seasons.json")
+      .then((r) => r.json())
+      .then(setSeasons);
   }, []);
 
+  const coachBySeason = useMemo(() => {
+    const map = {};
+    seasons.forEach((s) => {
+      map[s.SeasonID] = s.HeadCoach;
+    });
+    return map;
+  }, [seasons]);
+
   const completeGames = useMemo(
-    () =>
-      games.filter(
-        (g) => g && (g.IsComplete === "Yes" || g.IsComplete === true)
-      ),
+    () => games.filter((g) => g.IsComplete === "Yes"),
     [games]
   );
 
   /* ----------------------------------
-     INDIVIDUAL GAME RECORDS
+     INDIVIDUAL GAME RECORDS (TOP 10)
   ---------------------------------- */
-  const individualRecords = useMemo(() => {
-    if (!completeGames.length) return {};
-
-    const mostPoints = getMaxGame(completeGames, (g) => g.TeamScore);
-    const leastAllowed = getMinGame(completeGames, (g) => g.OpponentScore);
-
-    const largestMargin = getMaxGame(completeGames, (g) =>
-      g.ResultMargin ?? g.TeamScore - g.OpponentScore
-    );
-
-    const mostCombined = getMaxGame(
-      completeGames,
-      (g) => g.TeamScore + g.OpponentScore
-    );
-
+  const gameLeaders = useMemo(() => {
     return {
-      mostPoints,
-      leastAllowed,
-      largestMargin,
-      mostCombined,
+      mostPoints: [...completeGames]
+        .sort((a, b) => b.TeamScore - a.TeamScore)
+        .slice(0, 10),
+
+      leastAllowed: [...completeGames]
+        .sort((a, b) => a.OpponentScore - b.OpponentScore)
+        .slice(0, 10),
+
+      largestMargin: [...completeGames]
+        .sort(
+          (a, b) =>
+            (b.ResultMargin ?? b.TeamScore - b.OpponentScore) -
+            (a.ResultMargin ?? a.TeamScore - a.OpponentScore)
+        )
+        .slice(0, 10),
+
+      mostCombined: [...completeGames]
+        .sort(
+          (a, b) =>
+            b.TeamScore + b.OpponentScore -
+            (a.TeamScore + a.OpponentScore)
+        )
+        .slice(0, 10),
     };
   }, [completeGames]);
 
   /* ----------------------------------
-     SEASON AGGREGATES
+     SEASON STATS
   ---------------------------------- */
   const seasonStats = useMemo(() => {
     const map = {};
-
     completeGames.forEach((g) => {
-      const season = g.Season;
-      if (!season) return;
-
-      if (!map[season]) {
-        map[season] = {
-          season,
-          games: 0,
+      if (!map[g.Season]) {
+        map[g.Season] = {
+          season: g.Season,
           wins: 0,
-          teamPoints: 0,
-          oppPoints: 0,
+          games: 0,
+          pointsFor: 0,
+          pointsAgainst: 0,
         };
       }
-
-      map[season].games += 1;
-      if (g.Result === "W") map[season].wins += 1;
-      map[season].teamPoints += Number(g.TeamScore) || 0;
-      map[season].oppPoints += Number(g.OpponentScore) || 0;
+      map[g.Season].games++;
+      if (g.Result === "W") map[g.Season].wins++;
+      map[g.Season].pointsFor += g.TeamScore;
+      map[g.Season].pointsAgainst += g.OpponentScore;
     });
 
     return Object.values(map).map((s) => ({
       ...s,
-      winPct: s.games ? s.wins / s.games : 0,
-      avgDiff: s.games
-        ? (s.teamPoints - s.oppPoints) / s.games
-        : 0,
+      winPct: s.wins / s.games,
+      avgDiff: (s.pointsFor - s.pointsAgainst) / s.games,
     }));
   }, [completeGames]);
 
-  const seasonRecords = useMemo(() => {
-    if (!seasonStats.length) return {};
-
-    const mostWins = seasonStats.reduce((a, b) =>
-      b.wins > a.wins ? b : a
-    );
-
-    const highestWinPct = seasonStats.reduce((a, b) =>
-      b.winPct > a.winPct ? b : a
-    );
-
-    const mostPoints = seasonStats.reduce((a, b) =>
-      b.teamPoints > a.teamPoints ? b : a
-    );
-
-    const leastPointsAllowed = seasonStats.reduce((a, b) =>
-      b.oppPoints < a.oppPoints ? b : a
-    );
-
-    const bestAvgDiff = seasonStats.reduce((a, b) =>
-      b.avgDiff > a.avgDiff ? b : a
-    );
-
+  const seasonLeaders = useMemo(() => {
     return {
-      mostWins,
-      highestWinPct,
-      mostPoints,
-      leastPointsAllowed,
-      bestAvgDiff,
+      mostWins: [...seasonStats].sort((a, b) => b.wins - a.wins).slice(0, 10),
+      bestWinPct: [...seasonStats]
+        .sort((a, b) => b.winPct - a.winPct)
+        .slice(0, 10),
+      mostPoints: [...seasonStats]
+        .sort((a, b) => b.pointsFor - a.pointsFor)
+        .slice(0, 10),
+      leastAllowed: [...seasonStats]
+        .sort((a, b) => a.pointsAgainst - b.pointsAgainst)
+        .slice(0, 10),
+      bestAvgDiff: [...seasonStats]
+        .sort((a, b) => b.avgDiff - a.avgDiff)
+        .slice(0, 10),
     };
   }, [seasonStats]);
 
-  if (loading) return <div className="p-4">Loading team records…</div>;
-  if (error) return <div className="p-4 text-red-600">{error}</div>;
+  const toggle = (key) =>
+    setOpenRow((prev) => (prev === key ? null : key));
 
   return (
     <div className="space-y-10">
-      {/* ----------------------------------
-          INDIVIDUAL GAME RECORDS
-      ---------------------------------- */}
-      <div className="space-y-3">
-        <h2 className="text-xl font-bold text-center">
-          Individual Game Records
-        </h2>
+      {/* INDIVIDUAL GAME RECORDS */}
+      <h2 className="text-xl font-bold text-center">
+        Individual Game Records
+      </h2>
 
-        <div className="overflow-x-auto">
-          <table className="min-w-full border border-gray-300 bg-white text-sm">
-            <thead className="bg-gray-100">
-              <tr>
-                <th className="px-3 py-2 border-b text-left">Record</th>
-                <th className="px-3 py-2 border-b text-right">Value</th>
-                <th className="px-3 py-2 border-b text-left">Opponent</th>
-                <th className="px-3 py-2 border-b text-left">Date</th>
-                <th className="px-3 py-2 border-b text-center">Game Score</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className="px-3 py-2 border-b">Most points scored</td>
-                <td className="px-3 py-2 border-b text-right">
-                  {individualRecords.mostPoints?.TeamScore ?? "—"}
-                </td>
-                <td className="px-3 py-2 border-b">
-                  {individualRecords.mostPoints?.Opponent ?? "—"}
-                </td>
-                <td className="px-3 py-2 border-b">
-                  {formatDate(individualRecords.mostPoints?.Date)}
-                </td>
-                <td className="px-3 py-2 border-b text-center">
-                  {individualRecords.mostPoints
-                    ? `${individualRecords.mostPoints.TeamScore}-${individualRecords.mostPoints.OpponentScore}`
-                    : "—"}
-                </td>
-              </tr>
+      <table className="w-full border text-sm">
+        <thead className="bg-gray-100">
+          <tr>
+            <th className="p-2 text-left">Record</th>
+            <th className="p-2 text-right">Value</th>
+            <th className="p-2 text-left">Opponent</th>
+            <th className="p-2 text-left">Date</th>
+            <th className="p-2 text-center">Game Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            ["Most points scored", "mostPoints"],
+            ["Least points allowed", "leastAllowed"],
+            ["Largest margin of victory", "largestMargin"],
+            ["Most combined points", "mostCombined"],
+          ].map(([label, key]) => {
+            const top = gameLeaders[key]?.[0];
+            return (
+              <React.Fragment key={key}>
+                <tr
+                  className="cursor-pointer hover:bg-gray-50"
+                  onClick={() => toggle(key)}
+                >
+                  <td className="p-2">{label}</td>
+                  <td className="p-2 text-right">
+                    {key === "mostCombined"
+                      ? top?.TeamScore + top?.OpponentScore
+                      : key === "leastAllowed"
+                      ? top?.OpponentScore
+                      : key === "largestMargin"
+                      ? top?.ResultMargin
+                      : top?.TeamScore}
+                  </td>
+                  <td className="p-2">{top?.Opponent}</td>
+                  <td className="p-2">{formatDate(top?.Date)}</td>
+                  <td className="p-2 text-center">
+                    {top
+                      ? `${top.TeamScore}-${top.OpponentScore}`
+                      : "—"}
+                  </td>
+                </tr>
 
-              <tr>
-                <td className="px-3 py-2 border-b">Least points allowed</td>
-                <td className="px-3 py-2 border-b text-right">
-                  {individualRecords.leastAllowed?.OpponentScore ?? "—"}
-                </td>
-                <td className="px-3 py-2 border-b">
-                  {individualRecords.leastAllowed?.Opponent ?? "—"}
-                </td>
-                <td className="px-3 py-2 border-b">
-                  {formatDate(individualRecords.leastAllowed?.Date)}
-                </td>
-                <td className="px-3 py-2 border-b text-center">
-                  {individualRecords.leastAllowed
-                    ? `${individualRecords.leastAllowed.TeamScore}-${individualRecords.leastAllowed.OpponentScore}`
-                    : "—"}
-                </td>
-              </tr>
+                {openRow === key && (
+                  <tr>
+                    <td colSpan={5} className="p-2 bg-gray-50">
+                      <table className="w-full text-xs border">
+                        <thead>
+                          <tr className="bg-gray-200">
+                            <th className="p-1">#</th>
+                            <th className="p-1">Score</th>
+                            <th className="p-1">Opponent</th>
+                            <th className="p-1">Date</th>
+                            <th className="p-1">Final</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {gameLeaders[key].map((g, i) => (
+                            <tr key={g.GameID}>
+                              <td className="p-1 text-center">{i + 1}</td>
+                              <td className="p-1 text-center">
+                                {key === "mostCombined"
+                                  ? g.TeamScore + g.OpponentScore
+                                  : key === "leastAllowed"
+                                  ? g.OpponentScore
+                                  : key === "largestMargin"
+                                  ? g.ResultMargin
+                                  : g.TeamScore}
+                              </td>
+                              <td className="p-1">{g.Opponent}</td>
+                              <td className="p-1">{formatDate(g.Date)}</td>
+                              <td className="p-1 text-center">
+                                {g.TeamScore}-{g.OpponentScore}
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                )}
+              </React.Fragment>
+            );
+          })}
+        </tbody>
+      </table>
 
-              <tr>
-                <td className="px-3 py-2 border-b">
-                  Largest margin of victory
-                </td>
-                <td className="px-3 py-2 border-b text-right">
-                  {individualRecords.largestMargin
-                    ? `${individualRecords.largestMargin.ResultMargin ?? individualRecords.largestMargin.TeamScore - individualRecords.largestMargin.OpponentScore}`
-                    : "—"}
-                </td>
-                <td className="px-3 py-2 border-b">
-                  {individualRecords.largestMargin?.Opponent ?? "—"}
-                </td>
-                <td className="px-3 py-2 border-b">
-                  {formatDate(individualRecords.largestMargin?.Date)}
-                </td>
-                <td className="px-3 py-2 border-b text-center">
-                  {individualRecords.largestMargin
-                    ? `${individualRecords.largestMargin.TeamScore}-${individualRecords.largestMargin.OpponentScore}`
-                    : "—"}
-                </td>
-              </tr>
+      {/* SEASON RECORDS */}
+      <h2 className="text-xl font-bold text-center">Season Records</h2>
 
-              <tr>
-                <td className="px-3 py-2 border-b">Most combined points</td>
-                <td className="px-3 py-2 border-b text-right">
-                  {individualRecords.mostCombined
-                    ? individualRecords.mostCombined.TeamScore +
-                      individualRecords.mostCombined.OpponentScore
-                    : "—"}
-                </td>
-                <td className="px-3 py-2 border-b">
-                  {individualRecords.mostCombined?.Opponent ?? "—"}
-                </td>
-                <td className="px-3 py-2 border-b">
-                  {formatDate(individualRecords.mostCombined?.Date)}
-                </td>
-                <td className="px-3 py-2 border-b text-center">
-                  {individualRecords.mostCombined
-                    ? `${individualRecords.mostCombined.TeamScore}-${individualRecords.mostCombined.OpponentScore}`
-                    : "—"}
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
+      <table className="w-full border text-sm">
+        <thead className="bg-gray-100">
+          <tr>
+            <th className="p-2 text-left">Record</th>
+            <th className="p-2 text-right">Value</th>
+            <th className="p-2 text-left">Season</th>
+            <th className="p-2 text-left">Coach</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            ["Most wins", "mostWins", "wins"],
+            ["Highest winning %", "bestWinPct", "winPct"],
+            ["Most points scored", "mostPoints", "pointsFor"],
+            ["Least points allowed", "leastAllowed", "pointsAgainst"],
+            ["Highest average point differential", "bestAvgDiff", "avgDiff"],
+          ].map(([label, key, field]) => {
+            const top = seasonLeaders[key]?.[0];
+            return (
+              <React.Fragment key={key}>
+                <tr
+                  className="cursor-pointer hover:bg-gray-50"
+                  onClick={() => toggle(key)}
+                >
+                  <td className="p-2">{label}</td>
+                  <td className="p-2 text-right">
+                    {field === "winPct"
+                      ? top?.winPct.toFixed(3)
+                      : field === "avgDiff"
+                      ? top?.avgDiff.toFixed(2)
+                      : top?.[field]}
+                  </td>
+                  <td className="p-2">{formatSeason(top?.season)}</td>
+                  <td className="p-2">
+                    {coachBySeason[top?.season] ?? "—"}
+                  </td>
+                </tr>
 
-      {/* ----------------------------------
-          SEASON RECORDS
-      ---------------------------------- */}
-      <div className="space-y-3">
-        <h2 className="text-xl font-bold text-center">Season Records</h2>
-
-        <div className="overflow-x-auto">
-          <table className="min-w-full border border-gray-300 bg-white text-sm">
-            <thead className="bg-gray-100">
-              <tr>
-                <th className="px-3 py-2 border-b text-left">Record</th>
-                <th className="px-3 py-2 border-b text-right">Value</th>
-                <th className="px-3 py-2 border-b text-left">Season</th>
-                <th className="px-3 py-2 border-b text-left">Coach</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className="px-3 py-2 border-b">Most wins</td>
-                <td className="px-3 py-2 border-b text-right">
-                  {seasonRecords.mostWins?.wins ?? "—"}
-                </td>
-                <td className="px-3 py-2 border-b">
-                  {seasonRecords.mostWins?.season ?? "—"}
-                </td>
-                <td className="px-3 py-2 border-b">—</td>
-              </tr>
-
-              <tr>
-                <td className="px-3 py-2 border-b">Highest winning %</td>
-                <td className="px-3 py-2 border-b text-right">
-                  {seasonRecords.highestWinPct
-                    ? seasonRecords.highestWinPct.winPct.toFixed(3)
-                    : "—"}
-                </td>
-                <td className="px-3 py-2 border-b">
-                  {seasonRecords.highestWinPct?.season ?? "—"}
-                </td>
-                <td className="px-3 py-2 border-b">—</td>
-              </tr>
-
-              <tr>
-                <td className="px-3 py-2 border-b">Most points scored</td>
-                <td className="px-3 py-2 border-b text-right">
-                  {seasonRecords.mostPoints?.teamPoints ?? "—"}
-                </td>
-                <td className="px-3 py-2 border-b">
-                  {seasonRecords.mostPoints?.season ?? "—"}
-                </td>
-                <td className="px-3 py-2 border-b">—</td>
-              </tr>
-
-              <tr>
-                <td className="px-3 py-2 border-b">Least points allowed</td>
-                <td className="px-3 py-2 border-b text-right">
-                  {seasonRecords.leastPointsAllowed?.oppPoints ?? "—"}
-                </td>
-                <td className="px-3 py-2 border-b">
-                  {seasonRecords.leastPointsAllowed?.season ?? "—"}
-                </td>
-                <td className="px-3 py-2 border-b">—</td>
-              </tr>
-
-              <tr>
-                <td className="px-3 py-2 border-b">
-                  Highest average point differential
-                </td>
-                <td className="px-3 py-2 border-b text-right">
-                  {seasonRecords.bestAvgDiff
-                    ? seasonRecords.bestAvgDiff.avgDiff.toFixed(2)
-                    : "—"}
-                </td>
-                <td className="px-3 py-2 border-b">
-                  {seasonRecords.bestAvgDiff?.season ?? "—"}
-                </td>
-                <td className="px-3 py-2 border-b">—</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
+                {openRow === key && (
+                  <tr>
+                    <td colSpan={4} className="p-2 bg-gray-50">
+                      <table className="w-full text-xs border">
+                        <thead className="bg-gray-200">
+                          <tr>
+                            <th className="p-1">#</th>
+                            <th className="p-1">Value</th>
+                            <th className="p-1">Season</th>
+                            <th className="p-1">Coach</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {seasonLeaders[key].map((s, i) => (
+                            <tr key={s.season}>
+                              <td className="p-1 text-center">{i + 1}</td>
+                              <td className="p-1 text-center">
+                                {field === "winPct"
+                                  ? s.winPct.toFixed(3)
+                                  : field === "avgDiff"
+                                  ? s.avgDiff.toFixed(2)
+                                  : s[field]}
+                              </td>
+                              <td className="p-1">
+                                {formatSeason(s.season)}
+                              </td>
+                              <td className="p-1">
+                                {coachBySeason[s.season] ?? "—"}
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                )}
+              </React.Fragment>
+            );
+          })}
+        </tbody>
+      </table>
     </div>
   );
 }
