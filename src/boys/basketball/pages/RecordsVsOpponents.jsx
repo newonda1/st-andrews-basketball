@@ -58,6 +58,11 @@ function RecordsVsOpponents() {
     return `${team}-${opp}`;
   };
 
+  const isOtherGame = (g) => {
+    const t = (g.GameType ?? "").toString().trim().toLowerCase();
+    return t === "tournament" || t === "showcase";
+  };
+
   const isPlayoffGame = (g) => {
     const t =
       g.GameType ?? g.Type ?? g.GameCategory ?? g.Category ?? g.SeasonType ?? "";
@@ -134,13 +139,19 @@ function RecordsVsOpponents() {
             .trim()
             .toLowerCase();
 
+          // Home / Away records
           if (locRaw === "home") {
             if (isWin) records[name].homeWins += 1;
             else if (isLoss) records[name].homeLosses += 1;
-          } else if (locRaw === "away") {
+          }
+
+          if (locRaw === "away") {
             if (isWin) records[name].awayWins += 1;
             else if (isLoss) records[name].awayLosses += 1;
-          } else {
+          }
+
+          // Other = Tournament or Showcase ONLY
+          if (isOtherGame(game)) {
             if (isWin) records[name].otherWins += 1;
             else if (isLoss) records[name].otherLosses += 1;
           }
