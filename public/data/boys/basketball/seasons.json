@@ -70,6 +70,16 @@
     "StateFinish": "State Champion"
   },
   {
+  "SeasonID": 2012,
+  "YearStart": 2012,
+  "YearEnd": 2013,
+  "HeadCoach": "Joe Thoni",
+  "RegionSeed": null,
+  "RegionFinish": null,
+  "StateSeed": null,
+  "StateFinish": null
+},
+  {
   "SeasonID": 2013,
   "YearStart": 2013,
   "YearEnd": 2014,
