@@ -336,7 +336,7 @@ function YearlyResults() {
               <th className="border px-2 py-1">Region</th>
               <th className="border px-2 py-1">Home</th>
               <th className="border px-2 py-1">Away</th>
-              <th className="border px-2 py-1">Tourney/ Showcase</th>
+              <th className="border px-2 py-1">Other</th>
               <th className="border px-2 py-1">Playoffs</th>
               <th className="border px-2 py-1">Season Result</th>
             </tr>
