@@ -1,11 +1,10 @@
 // src/boys/basketball/pages/TeamRecords.jsx
 import React, { useEffect, useMemo, useState } from "react";
-import { Link } from "react-router-dom";
 
 function formatDate(dateValue) {
-  if (!dateValue) return "";
+  if (!dateValue) return "—";
   const d = new Date(dateValue);
-  if (Number.isNaN(d.getTime())) return "";
+  if (Number.isNaN(d.getTime())) return "—";
   return d.toLocaleDateString("en-US", {
     month: "short",
     day: "numeric",
@@ -18,7 +17,7 @@ function getMaxGame(games, selector) {
     const v = selector(g);
     return v !== null && v !== undefined && !Number.isNaN(Number(v));
   });
-  if (valid.length === 0) return null;
+  if (!valid.length) return null;
 
   return valid.reduce((best, g) =>
     selector(g) > selector(best) ? g : best
@@ -30,7 +29,7 @@ function getMinGame(games, selector) {
     const v = selector(g);
     return v !== null && v !== undefined && !Number.isNaN(Number(v));
   });
-  if (valid.length === 0) return null;
+  if (!valid.length) return null;
 
   return valid.reduce((best, g) =>
     selector(g) < selector(best) ? g : best
@@ -51,266 +50,305 @@ function TeamRecords() {
         const data = await res.json();
         setGames(Array.isArray(data) ? data : []);
       } catch (err) {
-        console.error("Error loading games:", err);
+        console.error(err);
         setError("Unable to load game data.");
       } finally {
         setLoading(false);
       }
     }
-
     loadGames();
   }, []);
 
-  const completeGames = useMemo(() => {
-    return games.filter(
-      (g) => g && (g.IsComplete === "Yes" || g.IsComplete === true)
-    );
-  }, [games]);
+  const completeGames = useMemo(
+    () =>
+      games.filter(
+        (g) => g && (g.IsComplete === "Yes" || g.IsComplete === true)
+      ),
+    [games]
+  );
 
-  const records = useMemo(() => {
-    if (!completeGames.length) {
-      return {
-        mostPoints: null,
-        fewestAllowed: null,
-        largestWin: null,
-        highestCombined: null,
-        largestRegionWin: null,
-        largestHomeWin: null,
-        largestAwayWin: null,
-      };
-    }
+  /* ----------------------------------
+     INDIVIDUAL GAME RECORDS
+  ---------------------------------- */
+  const individualRecords = useMemo(() => {
+    if (!completeGames.length) return {};
 
-    const mostPoints = getMaxGame(completeGames, (g) => Number(g.TeamScore));
+    const mostPoints = getMaxGame(completeGames, (g) => g.TeamScore);
+    const leastAllowed = getMinGame(completeGames, (g) => g.OpponentScore);
 
-    const fewestAllowed = getMinGame(completeGames, (g) =>
-      Number(g.OpponentScore)
+    const largestMargin = getMaxGame(completeGames, (g) =>
+      g.ResultMargin ?? g.TeamScore - g.OpponentScore
     );
 
-    // If ResultMargin is missing for some games, fall back to TeamScore - OpponentScore
-    const largestWin = getMaxGame(completeGames, (g) => {
-      const margin =
-        g.ResultMargin !== undefined && g.ResultMargin !== null
-          ? Number(g.ResultMargin)
-          : Number(g.TeamScore) - Number(g.OpponentScore);
-      return margin;
-    });
-
-    const highestCombined = getMaxGame(completeGames, (g) =>
-      Number(g.TeamScore) + Number(g.OpponentScore)
+    const mostCombined = getMaxGame(
+      completeGames,
+      (g) => g.TeamScore + g.OpponentScore
     );
-
-    const regionGames = completeGames.filter(
-      (g) =>
-        g.GameType &&
-        String(g.GameType).toLowerCase() === "region" &&
-        Number(g.TeamScore) > Number(g.OpponentScore)
-    );
-    const largestRegionWin = getMaxGame(regionGames, (g) => {
-      const margin =
-        g.ResultMargin !== undefined && g.ResultMargin !== null
-          ? Number(g.ResultMargin)
-          : Number(g.TeamScore) - Number(g.OpponentScore);
-      return margin;
-    });
-
-    const homeGames = completeGames.filter(
-      (g) =>
-        g.LocationType &&
-        String(g.LocationType).toLowerCase() === "home" &&
-        Number(g.TeamScore) > Number(g.OpponentScore)
-    );
-    const largestHomeWin = getMaxGame(homeGames, (g) => {
-      const margin =
-        g.ResultMargin !== undefined && g.ResultMargin !== null
-          ? Number(g.ResultMargin)
-          : Number(g.TeamScore) - Number(g.OpponentScore);
-      return margin;
-    });
-
-    const awayGames = completeGames.filter(
-      (g) =>
-        g.LocationType &&
-        String(g.LocationType).toLowerCase() === "away" &&
-        Number(g.TeamScore) > Number(g.OpponentScore)
-    );
-    const largestAwayWin = getMaxGame(awayGames, (g) => {
-      const margin =
-        g.ResultMargin !== undefined && g.ResultMargin !== null
-          ? Number(g.ResultMargin)
-          : Number(g.TeamScore) - Number(g.OpponentScore);
-      return margin;
-    });
 
     return {
       mostPoints,
-      fewestAllowed,
-      largestWin,
-      highestCombined,
-      largestRegionWin,
-      largestHomeWin,
-      largestAwayWin,
+      leastAllowed,
+      largestMargin,
+      mostCombined,
     };
   }, [completeGames]);
 
-  if (loading) {
-    return <div className="p-4">Loading team records…</div>;
-  }
+  /* ----------------------------------
+     SEASON AGGREGATES
+  ---------------------------------- */
+  const seasonStats = useMemo(() => {
+    const map = {};
 
-  if (error) {
-    return <div className="p-4 text-red-600">{error}</div>;
-  }
+    completeGames.forEach((g) => {
+      const season = g.Season;
+      if (!season) return;
 
-  const {
-    mostPoints,
-    fewestAllowed,
-    largestWin,
-    highestCombined,
-    largestRegionWin,
-    largestHomeWin,
-    largestAwayWin,
-  } = records;
+      if (!map[season]) {
+        map[season] = {
+          season,
+          games: 0,
+          wins: 0,
+          teamPoints: 0,
+          oppPoints: 0,
+        };
+      }
 
-  const renderRow = (label, game, getValue) => {
-    const value = game ? getValue(game) : "—";
-    const opponent = game?.Opponent || "—";
-    const season = game?.Season ?? "—";
-    const date = game?.Date ? formatDate(game.Date) : "";
-    const gameId = game?.GameID;
+      map[season].games += 1;
+      if (g.Result === "W") map[season].wins += 1;
+      map[season].teamPoints += Number(g.TeamScore) || 0;
+      map[season].oppPoints += Number(g.OpponentScore) || 0;
+    });
 
-    return (
-      <tr className="hover:bg-gray-50" key={label}>
-        <td className="px-3 py-2 border-b">{label}</td>
-        <td className="px-3 py-2 border-b text-right">{value}</td>
-        <td className="px-3 py-2 border-b">
-          {opponent}
-          {date ? ` (${date})` : ""}
-        </td>
-        <td className="px-3 py-2 border-b">{season}</td>
-        <td className="px-3 py-2 border-b text-center">
-          {gameId ? (
-            <Link
-              to={`/athletics/boys/basketball/games/${gameId}`}
-              className="text-blue-600 hover:underline"
-            >
-              View game
-            </Link>
-          ) : (
-            "—"
-          )}
-        </td>
-      </tr>
+    return Object.values(map).map((s) => ({
+      ...s,
+      winPct: s.games ? s.wins / s.games : 0,
+      avgDiff: s.games
+        ? (s.teamPoints - s.oppPoints) / s.games
+        : 0,
+    }));
+  }, [completeGames]);
+
+  const seasonRecords = useMemo(() => {
+    if (!seasonStats.length) return {};
+
+    const mostWins = seasonStats.reduce((a, b) =>
+      b.wins > a.wins ? b : a
     );
-  };
+
+    const highestWinPct = seasonStats.reduce((a, b) =>
+      b.winPct > a.winPct ? b : a
+    );
+
+    const mostPoints = seasonStats.reduce((a, b) =>
+      b.teamPoints > a.teamPoints ? b : a
+    );
+
+    const leastPointsAllowed = seasonStats.reduce((a, b) =>
+      b.oppPoints < a.oppPoints ? b : a
+    );
+
+    const bestAvgDiff = seasonStats.reduce((a, b) =>
+      b.avgDiff > a.avgDiff ? b : a
+    );
+
+    return {
+      mostWins,
+      highestWinPct,
+      mostPoints,
+      leastPointsAllowed,
+      bestAvgDiff,
+    };
+  }, [seasonStats]);
+
+  if (loading) return <div className="p-4">Loading team records…</div>;
+  if (error) return <div className="p-4 text-red-600">{error}</div>;
 
   return (
-    <div className="space-y-8">
-      <div className="text-center space-y-2">
-        <h2 className="text-2xl font-bold">Team Single-Game Records</h2>
-        <p className="text-sm text-gray-600 max-w-2xl mx-auto">
-          Auto-calculated from the official game log. Only completed games are
-          included. Click a game to view its full box score and recap.
-        </p>
-      </div>
-
-      {/* Core scoring & margin records */}
+    <div className="space-y-10">
+      {/* ----------------------------------
+          INDIVIDUAL GAME RECORDS
+      ---------------------------------- */}
       <div className="space-y-3">
-        <h3 className="text-lg font-semibold">Scoring &amp; Margin</h3>
+        <h2 className="text-xl font-bold text-center">
+          Individual Game Records
+        </h2>
+
         <div className="overflow-x-auto">
           <table className="min-w-full border border-gray-300 bg-white text-sm">
             <thead className="bg-gray-100">
               <tr>
                 <th className="px-3 py-2 border-b text-left">Record</th>
                 <th className="px-3 py-2 border-b text-right">Value</th>
-                <th className="px-3 py-2 border-b text-left">Opponent (Date)</th>
-                <th className="px-3 py-2 border-b text-left">Season</th>
-                <th className="px-3 py-2 border-b text-center">Game</th>
+                <th className="px-3 py-2 border-b text-left">Opponent</th>
+                <th className="px-3 py-2 border-b text-left">Date</th>
+                <th className="px-3 py-2 border-b text-center">Game Score</th>
               </tr>
             </thead>
             <tbody>
-              {renderRow("Most points scored", mostPoints, (g) => g.TeamScore)}
-              {renderRow(
-                "Fewest points allowed",
-                fewestAllowed,
-                (g) => g.OpponentScore
-              )}
-              {renderRow("Largest margin of victory", largestWin, (g) => {
-                const margin =
-                  g.ResultMargin !== undefined && g.ResultMargin !== null
-                    ? g.ResultMargin
-                    : Number(g.TeamScore) - Number(g.OpponentScore);
-                return `${margin} pts`;
-              })}
-              {renderRow(
-                "Highest combined score",
-                highestCombined,
-                (g) => Number(g.TeamScore) + Number(g.OpponentScore)
-              )}
+              <tr>
+                <td className="px-3 py-2 border-b">Most points scored</td>
+                <td className="px-3 py-2 border-b text-right">
+                  {individualRecords.mostPoints?.TeamScore ?? "—"}
+                </td>
+                <td className="px-3 py-2 border-b">
+                  {individualRecords.mostPoints?.Opponent ?? "—"}
+                </td>
+                <td className="px-3 py-2 border-b">
+                  {formatDate(individualRecords.mostPoints?.Date)}
+                </td>
+                <td className="px-3 py-2 border-b text-center">
+                  {individualRecords.mostPoints
+                    ? `${individualRecords.mostPoints.TeamScore}-${individualRecords.mostPoints.OpponentScore}`
+                    : "—"}
+                </td>
+              </tr>
+
+              <tr>
+                <td className="px-3 py-2 border-b">Least points allowed</td>
+                <td className="px-3 py-2 border-b text-right">
+                  {individualRecords.leastAllowed?.OpponentScore ?? "—"}
+                </td>
+                <td className="px-3 py-2 border-b">
+                  {individualRecords.leastAllowed?.Opponent ?? "—"}
+                </td>
+                <td className="px-3 py-2 border-b">
+                  {formatDate(individualRecords.leastAllowed?.Date)}
+                </td>
+                <td className="px-3 py-2 border-b text-center">
+                  {individualRecords.leastAllowed
+                    ? `${individualRecords.leastAllowed.TeamScore}-${individualRecords.leastAllowed.OpponentScore}`
+                    : "—"}
+                </td>
+              </tr>
+
+              <tr>
+                <td className="px-3 py-2 border-b">
+                  Largest margin of victory
+                </td>
+                <td className="px-3 py-2 border-b text-right">
+                  {individualRecords.largestMargin
+                    ? `${individualRecords.largestMargin.ResultMargin ?? individualRecords.largestMargin.TeamScore - individualRecords.largestMargin.OpponentScore}`
+                    : "—"}
+                </td>
+                <td className="px-3 py-2 border-b">
+                  {individualRecords.largestMargin?.Opponent ?? "—"}
+                </td>
+                <td className="px-3 py-2 border-b">
+                  {formatDate(individualRecords.largestMargin?.Date)}
+                </td>
+                <td className="px-3 py-2 border-b text-center">
+                  {individualRecords.largestMargin
+                    ? `${individualRecords.largestMargin.TeamScore}-${individualRecords.largestMargin.OpponentScore}`
+                    : "—"}
+                </td>
+              </tr>
+
+              <tr>
+                <td className="px-3 py-2 border-b">Most combined points</td>
+                <td className="px-3 py-2 border-b text-right">
+                  {individualRecords.mostCombined
+                    ? individualRecords.mostCombined.TeamScore +
+                      individualRecords.mostCombined.OpponentScore
+                    : "—"}
+                </td>
+                <td className="px-3 py-2 border-b">
+                  {individualRecords.mostCombined?.Opponent ?? "—"}
+                </td>
+                <td className="px-3 py-2 border-b">
+                  {formatDate(individualRecords.mostCombined?.Date)}
+                </td>
+                <td className="px-3 py-2 border-b text-center">
+                  {individualRecords.mostCombined
+                    ? `${individualRecords.mostCombined.TeamScore}-${individualRecords.mostCombined.OpponentScore}`
+                    : "—"}
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
       </div>
 
-      {/* Context-specific wins */}
+      {/* ----------------------------------
+          SEASON RECORDS
+      ---------------------------------- */}
       <div className="space-y-3">
-        <h3 className="text-lg font-semibold">Context Records</h3>
+        <h2 className="text-xl font-bold text-center">Season Records</h2>
+
         <div className="overflow-x-auto">
           <table className="min-w-full border border-gray-300 bg-white text-sm">
             <thead className="bg-gray-100">
               <tr>
                 <th className="px-3 py-2 border-b text-left">Record</th>
                 <th className="px-3 py-2 border-b text-right">Value</th>
-                <th className="px-3 py-2 border-b text-left">Opponent (Date)</th>
                 <th className="px-3 py-2 border-b text-left">Season</th>
-                <th className="px-3 py-2 border-b text-center">Game</th>
+                <th className="px-3 py-2 border-b text-left">Coach</th>
               </tr>
             </thead>
             <tbody>
-              {renderRow(
-                "Largest region win",
-                largestRegionWin,
-                (g) => {
-                  const margin =
-                    g.ResultMargin !== undefined && g.ResultMargin !== null
-                      ? g.ResultMargin
-                      : Number(g.TeamScore) - Number(g.OpponentScore);
-                  return `${margin} pts`;
-                }
-              )}
-              {renderRow(
-                "Largest home win",
-                largestHomeWin,
-                (g) => {
-                  const margin =
-                    g.ResultMargin !== undefined && g.ResultMargin !== null
-                      ? g.ResultMargin
-                      : Number(g.TeamScore) - Number(g.OpponentScore);
-                  return `${margin} pts`;
-                }
-              )}
-              {renderRow(
-                "Largest away win",
-                largestAwayWin,
-                (g) => {
-                  const margin =
-                    g.ResultMargin !== undefined && g.ResultMargin !== null
-                      ? g.ResultMargin
-                      : Number(g.TeamScore) - Number(g.OpponentScore);
-                  return `${margin} pts`;
-                }
-              )}
+              <tr>
+                <td className="px-3 py-2 border-b">Most wins</td>
+                <td className="px-3 py-2 border-b text-right">
+                  {seasonRecords.mostWins?.wins ?? "—"}
+                </td>
+                <td className="px-3 py-2 border-b">
+                  {seasonRecords.mostWins?.season ?? "—"}
+                </td>
+                <td className="px-3 py-2 border-b">—</td>
+              </tr>
+
+              <tr>
+                <td className="px-3 py-2 border-b">Highest winning %</td>
+                <td className="px-3 py-2 border-b text-right">
+                  {seasonRecords.highestWinPct
+                    ? seasonRecords.highestWinPct.winPct.toFixed(3)
+                    : "—"}
+                </td>
+                <td className="px-3 py-2 border-b">
+                  {seasonRecords.highestWinPct?.season ?? "—"}
+                </td>
+                <td className="px-3 py-2 border-b">—</td>
+              </tr>
+
+              <tr>
+                <td className="px-3 py-2 border-b">Most points scored</td>
+                <td className="px-3 py-2 border-b text-right">
+                  {seasonRecords.mostPoints?.teamPoints ?? "—"}
+                </td>
+                <td className="px-3 py-2 border-b">
+                  {seasonRecords.mostPoints?.season ?? "—"}
+                </td>
+                <td className="px-3 py-2 border-b">—</td>
+              </tr>
+
+              <tr>
+                <td className="px-3 py-2 border-b">Least points allowed</td>
+                <td className="px-3 py-2 border-b text-right">
+                  {seasonRecords.leastPointsAllowed?.oppPoints ?? "—"}
+                </td>
+                <td className="px-3 py-2 border-b">
+                  {seasonRecords.leastPointsAllowed?.season ?? "—"}
+                </td>
+                <td className="px-3 py-2 border-b">—</td>
+              </tr>
+
+              <tr>
+                <td className="px-3 py-2 border-b">
+                  Highest average point differential
+                </td>
+                <td className="px-3 py-2 border-b text-right">
+                  {seasonRecords.bestAvgDiff
+                    ? seasonRecords.bestAvgDiff.avgDiff.toFixed(2)
+                    : "—"}
+                </td>
+                <td className="px-3 py-2 border-b">
+                  {seasonRecords.bestAvgDiff?.season ?? "—"}
+                </td>
+                <td className="px-3 py-2 border-b">—</td>
+              </tr>
             </tbody>
           </table>
         </div>
       </div>
-
-      <p className="text-xs text-gray-500 text-center max-w-xl mx-auto">
-        Records on this page are generated directly from{" "}
-        <code className="bg-gray-100 px-1 py-0.5 rounded">
-          games.json
-        </code>{" "}
-        using current data. As older seasons and historical scores are added,
-        these records will update automatically.
-      </p>
     </div>
   );
 }
