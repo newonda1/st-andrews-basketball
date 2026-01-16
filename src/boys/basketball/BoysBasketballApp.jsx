@@ -12,6 +12,7 @@ import Season2023_24 from "./seasons/Season2023_24";
 import Season2024_25 from "./seasons/Season2024_25";
 import Season2025_26 from "./seasons/Season2025_26";
 import SeasonPlaceholder from "./seasons/SeasonPlaceholder";
+import TeamRecords from "./pages/TeamRecords";
 
 import RecordsVsOpponents from "./pages/RecordsVsOpponents";
 import YearlyResults from "./pages/YearlyResults";
@@ -182,6 +183,12 @@ function BoysBasketballApp() {
                     >
                       Single Game Records
                     </Link>
+                    <Link
+                      to="/athletics/boys/basketball/records/team"
+                      className="block px-2 py-1 text-sm hover:bg-gray-200"
+                      >
+                      Team Records (Single Game)
+                    </Link>
                   </div>
                 )}
               </div>
@@ -225,6 +232,7 @@ function BoysBasketballApp() {
         <Route path="records/career" element={<FullCareerStats />} />
         <Route path="records/season" element={<SeasonRecords />} />
         <Route path="records/single-game" element={<SingleGameRecords />} />
+        <Route path="records/team" element={<TeamRecords />} />
         <Route path="records/opponents" element={<RecordsVsOpponents />} />
 
         {/* Seasons */}
