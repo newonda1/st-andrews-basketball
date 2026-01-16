@@ -31,7 +31,6 @@ function RecordsVsOpponents() {
   };
 
   const gameTypeLabel = (g) => {
-    // Adjust these to match your exact schema if needed
     const t =
       g.GameType ?? g.Type ?? g.GameCategory ?? g.Category ?? g.SeasonType ?? "";
     const s = String(t).trim();
@@ -40,17 +39,45 @@ function RecordsVsOpponents() {
   };
 
   const resultLabel = (g) => {
-    // If Result is "Unknown" (or missing), we show "—"
     const r = (g?.Result ?? "").toString().trim();
     if (!r || r.toLowerCase() === "unknown") return "—";
     return r;
   };
 
   const locationLabel = (g) => {
-    // Your data uses LocationType (Home/Away/Neutral), but keep fallback options.
     const loc = g.LocationType ?? g.Location ?? g.Site ?? "";
     const s = String(loc).trim();
     return s || "—";
+  };
+
+  const scoreLabel = (g) => {
+    const team = g?.TeamScore;
+    const opp = g?.OpponentScore;
+
+    if (team == null || opp == null) return "—";
+    return `${team}-${opp}`;
+  };
+
+  const isPlayoffGame = (g) => {
+    const t =
+      g.GameType ?? g.Type ?? g.GameCategory ?? g.Category ?? g.SeasonType ?? "";
+    const s = String(t).trim().toLowerCase();
+    if (!s) return false;
+    // Adjust keywords as needed based on your data
+    return (
+      s.includes("playoff") ||
+      s.includes("tournament") ||
+      s.includes("state") ||
+      s.includes("semifinal") ||
+      s.includes("quarterfinal") ||
+      s.includes("championship")
+    );
+  };
+
+  const formatSubRecord = (wins, losses) => {
+    const total = wins + losses;
+    if (total === 0) return "—";
+    return `${wins}-${losses}`;
   };
 
   // --- Fetch data (games + stats + players) ---
@@ -61,7 +88,7 @@ function RecordsVsOpponents() {
       fetch("/data/boys/basketball/players.json").then((r) => r.json()),
     ])
       .then(([gamesData, statsData, playersData]) => {
-        // 3) Remove "Unknown" opponent games from this page entirely
+        // Remove "Unknown" opponent games from this page entirely
         const filteredGames = (gamesData || []).filter((g) => {
           const opp = (g?.Opponent ?? "").toString().trim();
           return opp && opp.toLowerCase() !== "unknown";
@@ -71,19 +98,64 @@ function RecordsVsOpponents() {
         setPlayerGameStats(statsData || []);
         setPlayers(playersData || []);
 
-        // Build opponent records from filtered games
+        // Build opponent records with breakdowns
         const records = {};
         filteredGames.forEach((game) => {
           const name = game.Opponent;
-          if (!records[name]) records[name] = { wins: 0, losses: 0 };
+          if (!records[name]) {
+            records[name] = {
+              wins: 0,
+              losses: 0,
+              homeWins: 0,
+              homeLosses: 0,
+              awayWins: 0,
+              awayLosses: 0,
+              playoffWins: 0,
+              playoffLosses: 0,
+              otherWins: 0,
+              otherLosses: 0,
+            };
+          }
 
-          if (game.Result === "W") records[name].wins += 1;
-          else if (game.Result === "L") records[name].losses += 1;
+          const res = (game.Result ?? "").toString().trim().toUpperCase();
+          const isWin = res === "W";
+          const isLoss = res === "L";
+
+          if (isWin) records[name].wins += 1;
+          else if (isLoss) records[name].losses += 1;
+
+          const locRaw = (
+            game.LocationType ??
+            game.Location ??
+            game.Site ??
+            ""
+          )
+            .toString()
+            .trim()
+            .toLowerCase();
+
+          if (locRaw === "home") {
+            if (isWin) records[name].homeWins += 1;
+            else if (isLoss) records[name].homeLosses += 1;
+          } else if (locRaw === "away") {
+            if (isWin) records[name].awayWins += 1;
+            else if (isLoss) records[name].awayLosses += 1;
+          } else {
+            if (isWin) records[name].otherWins += 1;
+            else if (isLoss) records[name].otherLosses += 1;
+          }
+
+          if (isPlayoffGame(game)) {
+            if (isWin) records[name].playoffWins += 1;
+            else if (isLoss) records[name].playoffLosses += 1;
+          }
         });
 
         setOpponentRecords(records);
       })
-      .catch((err) => console.error("Failed to load data for RecordsVsOpponents", err));
+      .catch((err) =>
+        console.error("Failed to load data for RecordsVsOpponents", err)
+      );
   }, []);
 
   const handleSort = (field) => {
@@ -112,8 +184,13 @@ function RecordsVsOpponents() {
       } else if (sortField === "Losses") {
         aVal = a[1].losses;
         bVal = b[1].losses;
+      } else if (sortField === "Pct") {
+        const aTotal = a[1].wins + a[1].losses;
+        const bTotal = b[1].wins + b[1].losses;
+        aVal = aTotal > 0 ? a[1].wins / aTotal : 0;
+        bVal = bTotal > 0 ? b[1].wins / bTotal : 0;
       } else {
-        // Total
+        // Total games
         aVal = a[1].wins + a[1].losses;
         bVal = b[1].wins + b[1].losses;
       }
@@ -143,7 +220,6 @@ function RecordsVsOpponents() {
   }, [games]);
 
   const leadingScorerByGameId = useMemo(() => {
-    // Build a quick lookup: GameID -> { PlayerID, Points }
     const map = new Map();
 
     for (const row of playerGameStats) {
@@ -153,7 +229,6 @@ function RecordsVsOpponents() {
       const pts = safeNum(row?.Points);
       const existing = map.get(String(gid));
 
-      // if we haven't set it yet, or this row beats it, replace
       if (!existing || pts > existing.Points) {
         map.set(String(gid), { PlayerID: row.PlayerID, Points: pts });
       }
@@ -163,7 +238,6 @@ function RecordsVsOpponents() {
   }, [playerGameStats]);
 
   const leadingScorerLabel = (game) => {
-    // 2) If Result is "Unknown" show dash for Result + Leading Scorer
     const r = (game?.Result ?? "").toString().trim().toLowerCase();
     if (!r || r === "unknown") return "—";
 
@@ -172,8 +246,6 @@ function RecordsVsOpponents() {
 
     const name = getPlayerName(lead.PlayerID);
     const pts = safeNum(lead.Points);
-
-    // if there are no stats recorded yet, points may be 0; still show if that's what data says
     return `${name} - ${pts} points`;
   };
 
@@ -186,22 +258,42 @@ function RecordsVsOpponents() {
           <thead>
             <tr className="bg-gray-100">
               <th
-                className="border p-2 cursor-pointer"
+                className="border p-2 cursor-pointer text-left"
                 onClick={() => handleSort("Opponent")}
               >
                 Opponent{" "}
                 {sortField === "Opponent" && (sortDirection === "asc" ? "▲" : "▼")}
               </th>
-              <th className="border p-2 cursor-pointer" onClick={() => handleSort("Wins")}>
-                Wins {sortField === "Wins" && (sortDirection === "asc" ? "▲" : "▼")}
-              </th>
-              <th className="border p-2 cursor-pointer" onClick={() => handleSort("Losses")}>
-                Losses {sortField === "Losses" && (sortDirection === "asc" ? "▲" : "▼")}
-              </th>
-              <th className="border p-2 cursor-pointer" onClick={() => handleSort("Total")}>
+              <th
+                className="border p-2 cursor-pointer"
+                onClick={() => handleSort("Total")}
+              >
                 Total Games{" "}
                 {sortField === "Total" && (sortDirection === "asc" ? "▲" : "▼")}
               </th>
+              <th
+                className="border p-2 cursor-pointer"
+                onClick={() => handleSort("Wins")}
+              >
+                Wins {sortField === "Wins" && (sortDirection === "asc" ? "▲" : "▼")}
+              </th>
+              <th
+                className="border p-2 cursor-pointer"
+                onClick={() => handleSort("Losses")}
+              >
+                Losses{" "}
+                {sortField === "Losses" && (sortDirection === "asc" ? "▲" : "▼")}
+              </th>
+              <th
+                className="border p-2 cursor-pointer"
+                onClick={() => handleSort("Pct")}
+              >
+                % {sortField === "Pct" && (sortDirection === "asc" ? "▲" : "▼")}
+              </th>
+              <th className="border p-2">Home</th>
+              <th className="border p-2">Away</th>
+              <th className="border p-2">Playoffs</th>
+              <th className="border p-2">Other</th>
             </tr>
           </thead>
 
@@ -210,21 +302,40 @@ function RecordsVsOpponents() {
               const isExpanded = expandedOpponent === opponent;
               const gamesAgainst = gamesByOpponent.get(opponent) || [];
 
+              const totalGames = record.wins + record.losses;
+              const pct =
+                totalGames > 0 ? (record.wins / totalGames).toFixed(3) : "—";
+
               return (
                 <React.Fragment key={`${opponent}-${idx}`}>
                   <tr
                     className="hover:bg-gray-50 cursor-pointer"
                     onClick={() => toggleOpponent(opponent)}
                   >
-                    <td className="border px-2 py-1 font-medium text-left">{opponent}</td>
+                    <td className="border px-2 py-1 font-medium text-left">
+                      {opponent}
+                    </td>
+                    <td className="border px-2 py-1">{totalGames}</td>
                     <td className="border px-2 py-1">{record.wins}</td>
                     <td className="border px-2 py-1">{record.losses}</td>
-                    <td className="border px-2 py-1">{record.wins + record.losses}</td>
+                    <td className="border px-2 py-1">{pct}</td>
+                    <td className="border px-2 py-1">
+                      {formatSubRecord(record.homeWins, record.homeLosses)}
+                    </td>
+                    <td className="border px-2 py-1">
+                      {formatSubRecord(record.awayWins, record.awayLosses)}
+                    </td>
+                    <td className="border px-2 py-1">
+                      {formatSubRecord(record.playoffWins, record.playoffLosses)}
+                    </td>
+                    <td className="border px-2 py-1">
+                      {formatSubRecord(record.otherWins, record.otherLosses)}
+                    </td>
                   </tr>
 
                   {isExpanded && (
                     <tr>
-                      <td colSpan="4" className="bg-gray-50 px-3 py-3">
+                      <td colSpan={9} className="bg-gray-50 px-3 py-3">
                         <div className="overflow-x-auto">
                           <table className="w-full text-xs sm:text-sm text-center border bg-white rounded">
                             <thead className="bg-gray-100">
@@ -233,12 +344,18 @@ function RecordsVsOpponents() {
                                 <th className="border px-2 py-1">Location</th>
                                 <th className="border px-2 py-1">Game Type</th>
                                 <th className="border px-2 py-1">Result</th>
-                                <th className="border px-2 py-1">SAS Leading Scorer</th>
+                                <th className="border px-2 py-1">Score</th>
+                                <th className="border px-2 py-1">
+                                  SAS Leading Scorer
+                                </th>
                               </tr>
                             </thead>
                             <tbody>
                               {gamesAgainst.map((game, i) => (
-                                <tr key={`${game.GameID ?? i}-${i}`} className={i % 2 ? "bg-gray-50" : "bg-white"}>
+                                <tr
+                                  key={`${game.GameID ?? i}-${i}`}
+                                  className={i % 2 ? "bg-gray-50" : "bg-white"}
+                                >
                                   <td className="border px-2 py-1 whitespace-nowrap">
                                     {formatDateUTC(game.Date)}
                                   </td>
@@ -251,6 +368,9 @@ function RecordsVsOpponents() {
                                   <td className="border px-2 py-1 whitespace-nowrap">
                                     {resultLabel(game)}
                                   </td>
+                                  <td className="border px-2 py-1 whitespace-nowrap">
+                                    {scoreLabel(game)}
+                                  </td>
                                   <td className="border px-2 py-1 text-left">
                                     {leadingScorerLabel(game)}
                                   </td>
@@ -259,7 +379,10 @@ function RecordsVsOpponents() {
 
                               {gamesAgainst.length === 0 && (
                                 <tr>
-                                  <td colSpan={5} className="border px-2 py-3 text-gray-600">
+                                  <td
+                                    colSpan={6}
+                                    className="border px-2 py-3 text-gray-600"
+                                  >
                                     No games found.
                                   </td>
                                 </tr>
