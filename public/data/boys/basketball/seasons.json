@@ -60,6 +60,86 @@
     "StateFinish": null
   },
   {
+    "SeasonID": 1984,
+    "YearStart": 1984,
+    "YearEnd": 1985,
+    "HeadCoach": "Don Sherwood",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
+    "SeasonID": 1985,
+    "YearStart": 1985,
+    "YearEnd": 1986,
+    "HeadCoach": "Don Sherwood",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
+    "SeasonID": 1986,
+    "YearStart": 1987,
+    "YearEnd": 1987,
+    "HeadCoach": "Don Sherwood",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
+    "SeasonID": 1987,
+    "YearStart": 1987,
+    "YearEnd": 1988,
+    "HeadCoach": "Em Hubbard",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
+    "SeasonID": 1988,
+    "YearStart": 1988,
+    "YearEnd": 1989,
+    "HeadCoach": "Em Hubbard",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
+    "SeasonID": 1989,
+    "YearStart": 1989,
+    "YearEnd": 1990,
+    "HeadCoach": "Michael Strange",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
+    "SeasonID": 1990,
+    "YearStart": 1990,
+    "YearEnd": 1991,
+    "HeadCoach": "Michael Strange",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
+    "SeasonID": 1991,
+    "YearStart": 1991,
+    "YearEnd": 1992,
+    "HeadCoach": "Michael Strange",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
     "SeasonID": 1992,
     "YearStart": 1992,
     "YearEnd": 1993,
@@ -68,6 +148,106 @@
     "RegionFinish": "Region Champion",
     "StateSeed": null,
     "StateFinish": "State Champion"
+  },
+  {
+    "SeasonID": 1993,
+    "YearStart": 1993,
+    "YearEnd": 1994,
+    "HeadCoach": "Paul Hill",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
+    "SeasonID": 1994,
+    "YearStart": 1994,
+    "YearEnd": 1995,
+    "HeadCoach": "Dennis Frisco",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
+    "SeasonID": 1995,
+    "YearStart": 1995,
+    "YearEnd": 1996,
+    "HeadCoach": "Frank Dickson",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
+    "SeasonID": 1996,
+    "YearStart": 1996,
+    "YearEnd": 1997,
+    "HeadCoach": "Frank Dickson",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
+    "SeasonID": 1997,
+    "YearStart": 1997,
+    "YearEnd": 1998,
+    "HeadCoach": "Frank Dickson",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
+    "SeasonID": 1998,
+    "YearStart": 1998,
+    "YearEnd": 1999,
+    "HeadCoach": "Frank Dickson",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
+    "SeasonID": 1999,
+    "YearStart": 1999,
+    "YearEnd": 2000,
+    "HeadCoach": "Clarence Wilson",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
+    "SeasonID": 2000,
+    "YearStart": 2000,
+    "YearEnd": 2001,
+    "HeadCoach": "Karl Demasi",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
+    "SeasonID": 2001,
+    "YearStart": 2001,
+    "YearEnd": 2002,
+    "HeadCoach": "Karl Demasi",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+   {
+    "SeasonID": 2002,
+    "YearStart": 2002,
+    "YearEnd": 2003,
+    "HeadCoach": "Michael Bennet",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
   },
   {
     "SeasonID": 2003,
