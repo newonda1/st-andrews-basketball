@@ -40,25 +40,40 @@ function TeamRecords() {
     return map;
   }, [seasons]);
 
-  const completeGames = useMemo(
-    () => games.filter((g) => g.IsComplete === "Yes"),
-    [games]
-  );
+  // ------------------------------------------------------------
+  // Split games into:
+  // 1) outcomeKnownGames: include W/L even if score is unknown
+  // 2) scoreKnownGames: include only games with reliable scores
+  // ------------------------------------------------------------
+  const outcomeKnownGames = useMemo(() => {
+    return (games || []).filter((g) => {
+      const r = (g?.Result ?? "").toString().trim().toUpperCase();
+      return r === "W" || r === "L";
+    });
+  }, [games]);
+
+  const scoreKnownGames = useMemo(() => {
+    return (games || []).filter((g) => {
+      const hasScores = g?.TeamScore != null && g?.OpponentScore != null;
+      return g?.IsComplete === "Yes" && hasScores;
+    });
+  }, [games]);
 
   /* ----------------------------------
      INDIVIDUAL GAME RECORDS (TOP 10)
+     (scores required)
   ---------------------------------- */
   const gameLeaders = useMemo(() => {
     return {
-      mostPoints: [...completeGames]
+      mostPoints: [...scoreKnownGames]
         .sort((a, b) => b.TeamScore - a.TeamScore)
         .slice(0, 10),
 
-      leastAllowed: [...completeGames]
+      leastAllowed: [...scoreKnownGames]
         .sort((a, b) => a.OpponentScore - b.OpponentScore)
         .slice(0, 10),
 
-      largestMargin: [...completeGames]
+      largestMargin: [...scoreKnownGames]
         .sort(
           (a, b) =>
             (b.ResultMargin ?? b.TeamScore - b.OpponentScore) -
@@ -66,71 +81,116 @@ function TeamRecords() {
         )
         .slice(0, 10),
 
-      mostCombined: [...completeGames]
+      mostCombined: [...scoreKnownGames]
         .sort(
           (a, b) =>
-            b.TeamScore + b.OpponentScore -
-            (a.TeamScore + a.OpponentScore)
+            b.TeamScore + b.OpponentScore - (a.TeamScore + a.OpponentScore)
         )
         .slice(0, 10),
     };
-  }, [completeGames]);
+  }, [scoreKnownGames]);
 
   /* ----------------------------------
      SEASON STATS
+     - wins/losses from outcomeKnownGames
+     - points/differential from scoreKnownGames
   ---------------------------------- */
   const seasonStats = useMemo(() => {
-    const map = {};
-    completeGames.forEach((g) => {
-      if (!map[g.Season]) {
-        map[g.Season] = {
-          season: g.Season,
-          wins: 0,
-          games: 0,
-          pointsFor: 0,
-          pointsAgainst: 0,
-        };
+    const wlMap = {};
+    outcomeKnownGames.forEach((g) => {
+      const season = g.Season;
+      if (season == null) return;
+
+      if (!wlMap[season]) {
+        wlMap[season] = { season, wins: 0, losses: 0, games: 0 };
       }
-      map[g.Season].games++;
-      if (g.Result === "W") map[g.Season].wins++;
-      map[g.Season].pointsFor += g.TeamScore;
-      map[g.Season].pointsAgainst += g.OpponentScore;
+
+      wlMap[season].games += 1;
+      if (g.Result === "W") wlMap[season].wins += 1;
+      if (g.Result === "L") wlMap[season].losses += 1;
     });
 
-    return Object.values(map).map((s) => ({
-      ...s,
-      winPct: s.wins / s.games,
-      avgDiff: (s.pointsFor - s.pointsAgainst) / s.games,
-    }));
-  }, [completeGames]);
+    const scoreMap = {};
+    scoreKnownGames.forEach((g) => {
+      const season = g.Season;
+      if (season == null) return;
+
+      if (!scoreMap[season]) {
+        scoreMap[season] = { season, scoredGames: 0, pointsFor: 0, pointsAgainst: 0 };
+      }
+
+      scoreMap[season].scoredGames += 1;
+      scoreMap[season].pointsFor += g.TeamScore;
+      scoreMap[season].pointsAgainst += g.OpponentScore;
+    });
+
+    const allSeasons = new Set([
+      ...Object.keys(wlMap),
+      ...Object.keys(scoreMap),
+    ]);
+
+    return Array.from(allSeasons).map((sKey) => {
+      const season = Number(sKey);
+      const wl = wlMap[sKey] ?? { season, wins: 0, losses: 0, games: 0 };
+      const sc = scoreMap[sKey] ?? {
+        season,
+        scoredGames: 0,
+        pointsFor: 0,
+        pointsAgainst: 0,
+      };
+
+      const winPct = wl.games > 0 ? wl.wins / wl.games : null;
+      const avgDiff =
+        sc.scoredGames > 0
+          ? (sc.pointsFor - sc.pointsAgainst) / sc.scoredGames
+          : null;
+
+      return {
+        season,
+        wins: wl.wins,
+        losses: wl.losses,
+        games: wl.games,
+        winPct,
+        scoredGames: sc.scoredGames,
+        pointsFor: sc.pointsFor,
+        pointsAgainst: sc.pointsAgainst,
+        avgDiff,
+      };
+    });
+  }, [outcomeKnownGames, scoreKnownGames]);
 
   const seasonLeaders = useMemo(() => {
+    const wlOnly = seasonStats.filter((s) => (s.games ?? 0) > 0);
+    const scoreOnly = seasonStats.filter((s) => (s.scoredGames ?? 0) > 0);
+
     return {
-      mostWins: [...seasonStats].sort((a, b) => b.wins - a.wins).slice(0, 10),
-      bestWinPct: [...seasonStats]
+      // outcome-based
+      mostWins: [...wlOnly].sort((a, b) => b.wins - a.wins).slice(0, 10),
+      bestWinPct: [...wlOnly]
+        .filter((s) => s.winPct != null)
         .sort((a, b) => b.winPct - a.winPct)
         .slice(0, 10),
-      mostPoints: [...seasonStats]
+
+      // score-based
+      mostPoints: [...scoreOnly]
         .sort((a, b) => b.pointsFor - a.pointsFor)
         .slice(0, 10),
-      leastAllowed: [...seasonStats]
+      leastAllowed: [...scoreOnly]
         .sort((a, b) => a.pointsAgainst - b.pointsAgainst)
         .slice(0, 10),
-      bestAvgDiff: [...seasonStats]
+      bestAvgDiff: [...scoreOnly]
+        .filter((s) => s.avgDiff != null)
         .sort((a, b) => b.avgDiff - a.avgDiff)
         .slice(0, 10),
     };
   }, [seasonStats]);
 
-  const toggle = (key) =>
-    setOpenRow((prev) => (prev === key ? null : key));
+  const toggle = (key) => setOpenRow((prev) => (prev === key ? null : key));
 
   return (
     <div className="space-y-10">
       {/* INDIVIDUAL GAME RECORDS */}
-      <h2 className="text-xl font-bold text-center">
-        Individual Game Records
-      </h2>
+      <h2 className="text-xl font-bold text-center">Individual Game Records</h2>
 
       <table className="w-full border text-sm">
         <thead className="bg-gray-100">
@@ -152,26 +212,23 @@ function TeamRecords() {
             const top = gameLeaders[key]?.[0];
             return (
               <React.Fragment key={key}>
-                <tr
-                  className="cursor-pointer hover:bg-gray-50"
-                  onClick={() => toggle(key)}
-                >
+                <tr className="cursor-pointer hover:bg-gray-50" onClick={() => toggle(key)}>
                   <td className="p-2">{label}</td>
                   <td className="p-2 text-right">
-                    {key === "mostCombined"
-                      ? top?.TeamScore + top?.OpponentScore
-                      : key === "leastAllowed"
-                      ? top?.OpponentScore
-                      : key === "largestMargin"
-                      ? top?.ResultMargin
-                      : top?.TeamScore}
+                    {top
+                      ? key === "mostCombined"
+                        ? top.TeamScore + top.OpponentScore
+                        : key === "leastAllowed"
+                        ? top.OpponentScore
+                        : key === "largestMargin"
+                        ? top.ResultMargin ?? top.TeamScore - top.OpponentScore
+                        : top.TeamScore
+                      : "—"}
                   </td>
-                  <td className="p-2">{top?.Opponent}</td>
+                  <td className="p-2">{top?.Opponent ?? "—"}</td>
                   <td className="p-2">{formatDate(top?.Date)}</td>
                   <td className="p-2 text-center">
-                    {top
-                      ? `${top.TeamScore}-${top.OpponentScore}`
-                      : "—"}
+                    {top ? `${top.TeamScore}-${top.OpponentScore}` : "—"}
                   </td>
                 </tr>
 
@@ -198,7 +255,7 @@ function TeamRecords() {
                                   : key === "leastAllowed"
                                   ? g.OpponentScore
                                   : key === "largestMargin"
-                                  ? g.ResultMargin
+                                  ? g.ResultMargin ?? g.TeamScore - g.OpponentScore
                                   : g.TeamScore}
                               </td>
                               <td className="p-1">{g.Opponent}</td>
@@ -208,6 +265,13 @@ function TeamRecords() {
                               </td>
                             </tr>
                           ))}
+                          {gameLeaders[key].length === 0 && (
+                            <tr>
+                              <td colSpan={5} className="p-2 text-center text-gray-600">
+                                No scored games available for this record.
+                              </td>
+                            </tr>
+                          )}
                         </tbody>
                       </table>
                     </td>
@@ -242,22 +306,23 @@ function TeamRecords() {
             const top = seasonLeaders[key]?.[0];
             return (
               <React.Fragment key={key}>
-                <tr
-                  className="cursor-pointer hover:bg-gray-50"
-                  onClick={() => toggle(key)}
-                >
+                <tr className="cursor-pointer hover:bg-gray-50" onClick={() => toggle(key)}>
                   <td className="p-2">{label}</td>
                   <td className="p-2 text-right">
-                    {field === "winPct"
-                      ? top?.winPct.toFixed(3)
+                    {!top
+                      ? "—"
+                      : field === "winPct"
+                      ? top.winPct != null
+                        ? top.winPct.toFixed(3)
+                        : "—"
                       : field === "avgDiff"
-                      ? top?.avgDiff.toFixed(2)
-                      : top?.[field]}
+                      ? top.avgDiff != null
+                        ? top.avgDiff.toFixed(2)
+                        : "—"
+                      : top[field]}
                   </td>
                   <td className="p-2">{formatSeason(top?.season)}</td>
-                  <td className="p-2">
-                    {coachBySeason[top?.season] ?? "—"}
-                  </td>
+                  <td className="p-2">{coachBySeason[top?.season] ?? "—"}</td>
                 </tr>
 
                 {openRow === key && (
@@ -273,24 +338,32 @@ function TeamRecords() {
                           </tr>
                         </thead>
                         <tbody>
-                          {seasonLeaders[key].map((s, i) => (
+                          {(seasonLeaders[key] || []).map((s, i) => (
                             <tr key={s.season}>
                               <td className="p-1 text-center">{i + 1}</td>
                               <td className="p-1 text-center">
                                 {field === "winPct"
-                                  ? s.winPct.toFixed(3)
+                                  ? s.winPct != null
+                                    ? s.winPct.toFixed(3)
+                                    : "—"
                                   : field === "avgDiff"
-                                  ? s.avgDiff.toFixed(2)
+                                  ? s.avgDiff != null
+                                    ? s.avgDiff.toFixed(2)
+                                    : "—"
                                   : s[field]}
                               </td>
-                              <td className="p-1">
-                                {formatSeason(s.season)}
-                              </td>
-                              <td className="p-1">
-                                {coachBySeason[s.season] ?? "—"}
-                              </td>
+                              <td className="p-1">{formatSeason(s.season)}</td>
+                              <td className="p-1">{coachBySeason[s.season] ?? "—"}</td>
                             </tr>
                           ))}
+
+                          {(seasonLeaders[key] || []).length === 0 && (
+                            <tr>
+                              <td colSpan={4} className="p-2 text-center text-gray-600">
+                                No seasons available for this record.
+                              </td>
+                            </tr>
+                          )}
                         </tbody>
                       </table>
                     </td>
