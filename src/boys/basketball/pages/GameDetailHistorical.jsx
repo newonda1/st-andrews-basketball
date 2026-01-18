@@ -86,13 +86,29 @@ function GameDetailHistorical() {
 
   const getPlayerPhotoUrl = (playerId) => `${PLAYER_IMG_BASE}${playerId}.jpg`;
 
-  const formatDate = (ms) =>
-    new Date(ms).toLocaleDateString(undefined, {
-      timeZone: "UTC",
+  const formatDate = (gameId) => {
+    if (!gameId) return "";
+
+    const n = Number(gameId);
+   if (!Number.isFinite(n)) return "";
+
+   const year = Math.floor(n / 10000);
+   const month = Math.floor(n / 100) % 100;
+   const day = n % 100;
+
+   if (year < 1900 || month < 1 || month > 12 || day < 1 || day > 31) {
+    return "";
+   }
+
+   const d = new Date(Date.UTC(year, month - 1, day));
+
+   return d.toLocaleDateString(undefined, {
+     timeZone: "UTC",
       month: "short",
-      day: "numeric",
-      year: "numeric",
-    });
+     day: "numeric",
+     year: "numeric",
+   });
+  };
 
   // Build a season slug like "2025-26" from the start year in your games.json ("Season": 2025)
   const seasonSlugFromYearStart = (yearStart) => {
@@ -179,7 +195,7 @@ function GameDetailHistorical() {
       {/* 1) Keep the top part */}
       <header>
         <h1 className="text-2xl font-bold mb-2">
-          {formatDate(game.Date)} vs {game.Opponent}
+          {formatDate(game.GameID)} vs {game.Opponent}
         </h1>
         <p className="text-lg">
           {resultText}
