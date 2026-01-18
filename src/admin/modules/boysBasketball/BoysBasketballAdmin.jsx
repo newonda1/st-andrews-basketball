@@ -1,35 +1,20 @@
 import React, { useEffect, useMemo, useState } from "react";
 
 /**
- * Boys Basketball Admin – Box Score Entry UI (full-game at once)
+ * Boys Basketball Admin – Box Score + Game Builder
  *
- * This version matches your existing playergamestats.json schema:
- *   - StatID (compound: `${GameID}${PlayerID}`)
- *   - PlayerID
- *   - GameID
- *   - Points, Rebounds, Assists, Turnovers, Steals, Blocks
- *   - ThreePM, ThreePA, TwoPM, TwoPA, FTM, FTA
- *   - StatComplete: "Yes"
+ * Features:
+ * - Box score entry for one game at a time, matching playergamestats.json:
+ *   StatID, PlayerID, GameID, Points, Rebounds, Assists, Turnovers,
+ *   Steals, Blocks, TwoPM/TwoPA, ThreePM/ThreePA, FTM/FTA, StatComplete.
+ * - DNP checkbox and “blank row” skipping so only real stats export.
+ * - Download / copy JSON for ONLY this game’s playergamestats rows.
  *
- * Also adds:
- *   - Download JSON code (exports ONLY this game's rows from boxScore)
- *   - Copy JSON to clipboard (same payload)
- *   - DNP checkbox (excludes player)
- *
- * UPDATE (Historical data):
- * - If a stat input is left blank, export will write null (instead of 0).
- * - DNP still produces no row.
- * - If the entire row is blank, no row is produced.
- *
- * NEW (This update):
- * - Adds Season Builder (seasons.json schema)
- * - Adds Game Builder (games.json schema)
- * - Outputs JSON objects to copy/paste into those files
- *
- * NEW (This update #2):
- * - GameID is ALWAYS auto-generated from date (YYYYMMDD).
- * - Opponent selection is a dropdown populated from existing games.json Opponent values,
- *   with a "Create new..." option to type a new opponent name.
+ * Game Builder:
+ * - Creates a single games.json object using:
+ *   GameID (from date, YYYYMMDD), Opponent, LocationType, GameType,
+ *   Result, TeamScore, OpponentScore, Season, IsComplete.
+ * - Does NOT use or export Date or ResultMargin fields.
  */
 
 function absUrl(path) {
@@ -88,9 +73,19 @@ function downloadText(filename, text) {
   URL.revokeObjectURL(url);
 }
 
-function formatDateMMDDYYYY(ms) {
-  const d = new Date(Number(ms));
-  if (Number.isNaN(d.getTime())) return "";
+function formatDateMMDDYYYY(gameId) {
+  if (!gameId) return "";
+
+  const n = Number(gameId);
+  if (!Number.isFinite(n)) return "";
+
+  const year = Math.floor(n / 10000);
+  const month = Math.floor(n / 100) % 100;
+  const day = n % 100;
+
+  if (year < 1900 || month < 1 || month > 12 || day < 1 || day > 31) return "";
+
+  const d = new Date(Date.UTC(year, month - 1, day));
   const mm = String(d.getUTCMonth() + 1).padStart(2, "0");
   const dd = String(d.getUTCDate()).padStart(2, "0");
   const yyyy = d.getUTCFullYear();
@@ -253,20 +248,6 @@ export default function BoysBasketballAdmin() {
   const [overwriteExisting, setOverwriteExisting] = useState(true);
 
   const [clipboardStatus, setClipboardStatus] = useState("");
-
-  /* -------------------------
-     Season Builder state
-  -------------------------- */
-  const [seasonSeasonID, setSeasonSeasonID] = useState("");
-  const [seasonYearStart, setSeasonYearStart] = useState("");
-  const [seasonYearEnd, setSeasonYearEnd] = useState("");
-  const [seasonHeadCoach, setSeasonHeadCoach] = useState("Mel Abrams Jr.");
-  const [seasonRegionSeed, setSeasonRegionSeed] = useState("");
-  const [seasonRegionFinish, setSeasonRegionFinish] = useState("");
-  const [seasonStateSeed, setSeasonStateSeed] = useState("");
-  const [seasonStateFinish, setSeasonStateFinish] = useState("");
-
-  const [seasonCopyStatus, setSeasonCopyStatus] = useState("");
 
   /* -------------------------
      Game Builder state
@@ -526,102 +507,46 @@ export default function BoysBasketballAdmin() {
     return String(opponentSelectValue || "").trim();
   }, [opponentSelectValue, gameOpponentNew]);
 
-  // Season object (seasons.json schema)
-  const seasonObj = useMemo(() => {
-    const SeasonID = intOrNull(seasonSeasonID);
-    const YearStart = intOrNull(seasonYearStart);
-    const YearEnd = intOrNull(seasonYearEnd);
-    const HeadCoach = String(seasonHeadCoach || "").trim() || null;
+  // Game object (games.json schema) — GameID is ALWAYS derived from date string (YYYYMMDD)
+const gameObj = useMemo(() => {
+  const GameID = dateStrToGameId(gameDateStr);
 
-    const RegionSeed = intOrNull(seasonRegionSeed);
-    const RegionFinish = String(seasonRegionFinish || "").trim() || null;
+  const Opponent = String(gameOpponentResolved || "").trim() || null;
+  const LocationType = String(gameLocationType || "").trim() || null;
+  const GameType = String(gameGameType || "").trim() || null;
 
-    const StateSeed = intOrNull(seasonStateSeed);
-    const StateFinish = String(seasonStateFinish || "").trim() || null;
+  const TeamScore = intOrNull(gameTeamScore);
+  const OpponentScore = intOrNull(gameOppScore);
 
-    // If they enter SeasonID but not YearStart/YearEnd, try to infer
-    let inferredStart = YearStart;
-    let inferredEnd = YearEnd;
+  const Season = intOrNull(gameSeason);
+  const IsComplete = gameIsComplete === "Yes" ? "Yes" : "No";
 
-    if (SeasonID && !YearStart) inferredStart = SeasonID;
-    if (SeasonID && !YearEnd) inferredEnd = SeasonID + 1;
+  // Require at least GameID, Opponent, Season
+  if (!GameID || !Opponent || !Season) return null;
 
-    if (!SeasonID) return null;
+  const Result = computeResult(TeamScore, OpponentScore, IsComplete);
 
-    return {
-      SeasonID,
-      YearStart: inferredStart ?? null,
-      YearEnd: inferredEnd ?? null,
-      HeadCoach,
-      RegionSeed: RegionSeed ?? null,
-      RegionFinish,
-      StateSeed: StateSeed ?? null,
-      StateFinish,
-    };
-  }, [
-    seasonSeasonID,
-    seasonYearStart,
-    seasonYearEnd,
-    seasonHeadCoach,
-    seasonRegionSeed,
-    seasonRegionFinish,
-    seasonStateSeed,
-    seasonStateFinish,
-  ]);
-
-  const seasonJsonText = useMemo(() => {
-    if (!seasonObj) return "";
-    return JSON.stringify(seasonObj, null, 2);
-  }, [seasonObj]);
-
-  const seasonJsonTextWithComma = useMemo(() => {
-    if (!seasonJsonText) return "";
-    return seasonJsonText.replace(/\n}$/, "\n},");
-  }, [seasonJsonText]);
-
-  // Game object (games.json schema) — GameID is ALWAYS derived from Date (YYYYMMDD)
-  const gameObj = useMemo(() => {
-    const Date = dateStrToEpochUtcMs(gameDateStr);
-    const GameID = dateStrToGameId(gameDateStr);
-
-    const Opponent = String(gameOpponentResolved || "").trim() || null;
-    const LocationType = String(gameLocationType || "").trim() || null;
-    const GameType = String(gameGameType || "").trim() || null;
-
-    const TeamScore = intOrNull(gameTeamScore);
-    const OpponentScore = intOrNull(gameOppScore);
-
-    const Season = intOrNull(gameSeason);
-    const IsComplete = gameIsComplete === "Yes" ? "Yes" : "No";
-
-    if (!GameID || !Date || !Opponent || !Season) return null;
-
-    const Result = computeResult(TeamScore, OpponentScore, IsComplete);
-    const ResultMargin = computeMargin(TeamScore, OpponentScore, IsComplete);
-
-    return {
-      GameID,
-      Date,
-      Opponent,
-      LocationType,
-      GameType,
-      Result,
-      TeamScore: IsComplete === "Yes" ? TeamScore : null,
-      OpponentScore: IsComplete === "Yes" ? OpponentScore : null,
-      ResultMargin,
-      Season,
-      IsComplete,
-    };
-  }, [
-    gameDateStr,
-    gameOpponentResolved,
-    gameLocationType,
-    gameGameType,
-    gameTeamScore,
-    gameOppScore,
-    gameSeason,
-    gameIsComplete,
-  ]);
+  return {
+    GameID,
+    Opponent,
+    LocationType,
+    GameType,
+    Result,
+    TeamScore: IsComplete === "Yes" ? TeamScore : null,
+    OpponentScore: IsComplete === "Yes" ? OpponentScore : null,
+    Season,
+    IsComplete,
+  };
+}, [
+  gameDateStr,
+  gameOpponentResolved,
+  gameLocationType,
+  gameGameType,
+  gameTeamScore,
+  gameOppScore,
+  gameSeason,
+  gameIsComplete,
+]);
 
   const gameJsonText = useMemo(() => {
     if (!gameObj) return "";
@@ -656,105 +581,6 @@ export default function BoysBasketballAdmin() {
       -------------------------- */}
       <section style={{ marginTop: 10 }}>
         <h3 style={{ margin: "0 0 8px" }}>Season + Game Builder (copy/paste into JSON files)</h3>
-
-        {/* Season Builder */}
-        <div style={{ border: "1px solid #e5e7eb", borderRadius: 12, padding: 12 }}>
-          <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 10 }}>
-            <div style={{ fontWeight: 900 }}>Season Builder</div>
-
-            <button
-              style={btn}
-              onClick={async () => {
-                if (!seasonJsonText) return alert("Fill SeasonID at minimum.");
-                setSeasonCopyStatus("");
-                const ok = await copyToClipboard(seasonJsonTextWithComma || seasonJsonText);
-                if (ok) {
-                  setSeasonCopyStatus("Copied!");
-                  setTimeout(() => setSeasonCopyStatus(""), 1500);
-                } else {
-                  window.prompt("Clipboard blocked. Copy the JSON from here:", seasonJsonTextWithComma || seasonJsonText);
-                }
-              }}
-              disabled={!seasonJsonText}
-              title="Copies a single season object (with a trailing comma) to paste into seasons.json array."
-            >
-              Copy Season JSON
-            </button>
-
-            <button
-              style={btn}
-              onClick={() => {
-                if (!seasonJsonText) return alert("Fill SeasonID at minimum.");
-                downloadText(
-                  `season_${seasonObj?.SeasonID || "unknown"}.json.txt`,
-                  seasonJsonTextWithComma || seasonJsonText
-                );
-              }}
-              disabled={!seasonJsonText}
-              title="Downloads a text file containing one season object."
-            >
-              Download Season JSON
-            </button>
-
-            {seasonCopyStatus && <span style={{ color: "#16a34a", fontWeight: 900 }}>{seasonCopyStatus}</span>}
-          </div>
-
-          <div style={{ marginTop: 10, display: "grid", gridTemplateColumns: "repeat(4, minmax(200px, 1fr))", gap: 10 }}>
-            <div>
-              <div style={label}>SeasonID</div>
-              <input style={input} value={seasonSeasonID} onChange={(e) => setSeasonSeasonID(e.target.value)} placeholder="2021" />
-            </div>
-            <div>
-              <div style={label}>YearStart</div>
-              <input style={input} value={seasonYearStart} onChange={(e) => setSeasonYearStart(e.target.value)} placeholder="2021" />
-            </div>
-            <div>
-              <div style={label}>YearEnd</div>
-              <input style={input} value={seasonYearEnd} onChange={(e) => setSeasonYearEnd(e.target.value)} placeholder="2022" />
-            </div>
-            <div>
-              <div style={label}>HeadCoach</div>
-              <input
-                style={input}
-                value={seasonHeadCoach}
-                onChange={(e) => setSeasonHeadCoach(e.target.value)}
-                placeholder="Mel Abrams Jr."
-              />
-            </div>
-
-            <div>
-              <div style={label}>RegionSeed</div>
-              <input style={input} value={seasonRegionSeed} onChange={(e) => setSeasonRegionSeed(e.target.value)} placeholder="1" />
-            </div>
-            <div>
-              <div style={label}>RegionFinish</div>
-              <input
-                style={input}
-                value={seasonRegionFinish}
-                onChange={(e) => setSeasonRegionFinish(e.target.value)}
-                placeholder="Region Champion"
-              />
-            </div>
-            <div>
-              <div style={label}>StateSeed</div>
-              <input style={input} value={seasonStateSeed} onChange={(e) => setSeasonStateSeed(e.target.value)} placeholder="null or 1" />
-            </div>
-            <div>
-              <div style={label}>StateFinish</div>
-              <input
-                style={input}
-                value={seasonStateFinish}
-                onChange={(e) => setSeasonStateFinish(e.target.value)}
-                placeholder="State Champion"
-              />
-            </div>
-          </div>
-
-          <div style={{ marginTop: 10 }}>
-            <div style={label}>Season JSON output (object + trailing comma)</div>
-            <pre style={preBox}>{seasonJsonTextWithComma || "// Fill SeasonID to generate JSON"}</pre>
-          </div>
-        </div>
 
         {/* Game Builder */}
         <div style={{ marginTop: 12, border: "1px solid #e5e7eb", borderRadius: 12, padding: 12 }}>
@@ -886,7 +712,7 @@ export default function BoysBasketballAdmin() {
                 <option value="No">No</option>
               </select>
               <div style={{ marginTop: 6, color: "#555", fontSize: 12 }}>
-                If "No", scores export as null and Result/Margin are null.
+                If "No", scores export as null and Result is null.
               </div>
             </div>
 
@@ -953,7 +779,7 @@ export default function BoysBasketballAdmin() {
             <option value="">Select game…</option>
             {gamesForSeason.map((g) => (
               <option key={g.GameID} value={g.GameID}>
-                {formatDateMMDDYYYY(g.Date)} — {g.Opponent || "Opponent?"} (GameID {g.GameID})
+                {formatDateMMDDYYYY(g.GameID)} — {g.Opponent || "Opponent?"} (GameID {g.GameID})
               </option>
             ))}
           </select>
