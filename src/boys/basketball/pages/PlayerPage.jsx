@@ -33,16 +33,24 @@ const statLabelMap = {
   FTA: "FTA",
 };
 
-const parseDateSafe = (value) => {
-  if (value === null || value === undefined || value === "") return null;
-  const s = String(value).trim();
-  const d = /^\d+$/.test(s) ? new Date(Number(s)) : new Date(s);
-  if (Number.isNaN(d.getTime())) return null;
-  return d;
+const parseDateFromGameID = (gameId) => {
+  if (!gameId) return null;
+
+  const s = String(gameId).trim();
+  if (!/^\d{8}$/.test(s)) return null;
+
+  const year = Number(s.slice(0, 4));
+  const month = Number(s.slice(4, 6));
+  const day = Number(s.slice(6, 8));
+
+  if (year < 1900 || month < 1 || month > 12 || day < 1 || day > 31) return null;
+
+  const d = new Date(Date.UTC(year, month - 1, day));
+  return Number.isNaN(d.getTime()) ? null : d;
 };
 
-const formatDate = (value) => {
-  const d = parseDateSafe(value);
+const formatDateFromGameID = (gameId) => {
+  const d = parseDateFromGameID(gameId);
   if (!d) return "";
   return d.toLocaleDateString(undefined, {
     timeZone: "UTC",
@@ -162,17 +170,19 @@ function PlayerPage() {
     return statsForPlayer
       .map((stat) => {
         const game = games.find((g) => String(g.GameID) === String(stat.GameID));
+        const gameId = game?.GameID ?? stat.GameID; // always have one
         return {
           ...stat,
-          gameDate: game?.Date ?? "",
+          gameId,
+          gameDateObj: parseDateFromGameID(gameId),
           opponent: game?.Opponent || "",
           result: game?.Result || "",
           season: game?.Season || game?.Year || "",
         };
       })
       .sort((a, b) => {
-        const da = parseDateSafe(a.gameDate);
-        const db = parseDateSafe(b.gameDate);
+        const da = a.gameDateObj;
+        const db = b.gameDateObj;
         if (!da && !db) return 0;
         if (!da) return 1;
         if (!db) return -1;
@@ -495,7 +505,7 @@ function PlayerPage() {
                       {rows.map((row, idx) => (
                         <tr key={`${row.GameID}-${idx}`}>
                           <td className="border px-2 py-1 text-center whitespace-nowrap">
-                            {row.gameDate ? formatDate(row.gameDate) : ""}
+                            {formatDateFromGameID(row.gameId)}
                           </td>
                           <td className="border px-2 py-1 text-center whitespace-nowrap">
                             <Link
