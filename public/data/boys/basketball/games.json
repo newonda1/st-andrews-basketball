@@ -1660,14 +1660,14 @@
     "Season": 1984,
     "IsComplete": "Yes"
   },
-  {
-    "GameID": 19850122,
-    "Opponent": "Frederica Academy",
+    {
+    "GameID": 19850125,
+    "Opponent": "Fullington Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
-    "Result": "W",
-    "TeamScore": 52,
-    "OpponentScore": 42,
+    "Result": "L",
+    "TeamScore": 36,
+    "OpponentScore": 58,
     "Season": 1984,
     "IsComplete": "Yes"
   },
@@ -1771,7 +1771,7 @@
     "IsComplete": "No"
   },
   {
-    "GameID": 19850220,
+  "GameID": 19850220,
     "Opponent": "Robert Toombs Christian Academy",
     "LocationType": "Neutral",
     "GameType": "Region Tournament",
