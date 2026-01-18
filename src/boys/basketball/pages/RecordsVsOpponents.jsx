@@ -10,17 +10,29 @@ function RecordsVsOpponents() {
   const [sortDirection, setSortDirection] = useState("desc");
   const [expandedOpponent, setExpandedOpponent] = useState(null);
 
-  // --- Helpers ---
-  const formatDateUTC = (ms) => {
-    if (ms == null) return "";
-    const d = new Date(Number(ms));
-    if (Number.isNaN(d.getTime())) return "";
-    return d.toLocaleDateString("en-US", {
-      timeZone: "UTC",
-      month: "numeric",
-      day: "numeric",
-      year: "numeric",
-    });
+// Helpers ---
+  const formatDateFromGameID = (gameId) => {
+    if (!gameId) return "—";
+
+    const n = Number(gameId);
+   if (!Number.isFinite(n)) return "—";
+
+   const year = Math.floor(n / 10000);
+   const month = Math.floor(n / 100) % 100;
+   const day = n % 100;
+
+   if (year < 1900 || month < 1 || month > 12 || day < 1 || day > 31) {
+     return "—";
+   }
+
+   const d = new Date(Date.UTC(year, month - 1, day));
+
+   return d.toLocaleDateString("en-US", {
+     timeZone: "UTC",
+     month: "numeric",
+     day: "numeric",
+     year: "numeric",
+   });
   };
 
   const safeNum = (v) => (Number.isFinite(Number(v)) ? Number(v) : 0);
@@ -368,7 +380,7 @@ function RecordsVsOpponents() {
                                   className={i % 2 ? "bg-gray-50" : "bg-white"}
                                 >
                                   <td className="border px-2 py-1 whitespace-nowrap">
-                                    {formatDateUTC(game.Date)}
+                                    {formatDateUTC(game.GameID)}
                                   </td>
                                   <td className="border px-2 py-1 whitespace-nowrap">
                                     {locationLabel(game)}
