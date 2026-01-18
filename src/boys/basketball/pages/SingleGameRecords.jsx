@@ -29,24 +29,14 @@ function safeNum(x) {
 }
 
 function tryParseGameDate(game) {
-  const d = game?.Date;
-
-  if (typeof d === "number" && Number.isFinite(d)) {
-    const dt = new Date(d);
-    if (!Number.isNaN(dt.getTime())) return dt;
-  }
-
-  if (typeof d === "string") {
-    const dt = new Date(d);
-    if (!Number.isNaN(dt.getTime())) return dt;
-  }
-
   const gid = String(game?.GameID ?? "");
   if (/^\d{8}$/.test(gid)) {
     const y = Number(gid.slice(0, 4));
     const m = Number(gid.slice(4, 6));
-    const day = Number(gid.slice(6, 8));
-    const dt = new Date(y, m - 1, day);
+    const d = Number(gid.slice(6, 8));
+
+    // Use UTC to avoid timezone shifts
+    const dt = new Date(Date.UTC(y, m - 1, d));
     if (!Number.isNaN(dt.getTime())) return dt;
   }
 
@@ -57,6 +47,7 @@ function formatDateFromGame(game) {
   const dt = tryParseGameDate(game);
   if (!dt) return "Unknown Date";
   return dt.toLocaleDateString("en-US", {
+    timeZone: "UTC",
     year: "numeric",
     month: "short",
     day: "numeric",

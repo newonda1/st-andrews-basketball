@@ -1,16 +1,29 @@
 // src/boys/basketball/pages/TeamRecords.jsx
 import React, { useEffect, useMemo, useState } from "react";
 
-function formatDate(dateValue) {
-  if (!dateValue) return "—";
-  const d = new Date(dateValue);
-  if (Number.isNaN(d.getTime())) return "—";
+const formatDateFromGameID = (gameId) => {
+  if (!gameId) return "—";
+
+  const n = Number(gameId);
+  if (!Number.isFinite(n)) return "—";
+
+  const year = Math.floor(n / 10000);
+  const month = Math.floor(n / 100) % 100;
+  const day = n % 100;
+
+  if (year < 1900 || month < 1 || month > 12 || day < 1 || day > 31) {
+    return "—";
+  }
+
+  const d = new Date(Date.UTC(year, month - 1, day));
+
   return d.toLocaleDateString("en-US", {
+    timeZone: "UTC",
     month: "short",
     day: "numeric",
     year: "numeric",
   });
-}
+};
 
 function formatSeason(season) {
   if (!season) return "—";
@@ -76,8 +89,8 @@ function TeamRecords() {
       largestMargin: [...scoreKnownGames]
         .sort(
           (a, b) =>
-            (b.ResultMargin ?? b.TeamScore - b.OpponentScore) -
-            (a.ResultMargin ?? a.TeamScore - a.OpponentScore)
+            (b.TeamScore - b.OpponentScore) -
+           (a.TeamScore - a.OpponentScore)
         )
         .slice(0, 10),
 
@@ -221,12 +234,12 @@ function TeamRecords() {
                         : key === "leastAllowed"
                         ? top.OpponentScore
                         : key === "largestMargin"
-                        ? top.ResultMargin ?? top.TeamScore - top.OpponentScore
+                        ? top.TeamScore - top.OpponentScore
                         : top.TeamScore
                       : "—"}
                   </td>
                   <td className="p-2">{top?.Opponent ?? "—"}</td>
-                  <td className="p-2">{formatDate(top?.Date)}</td>
+                  <td className="p-2">{formatDateFromGameID(top?.GameID)}</td>
                   <td className="p-2 text-center">
                     {top ? `${top.TeamScore}-${top.OpponentScore}` : "—"}
                   </td>
@@ -255,11 +268,11 @@ function TeamRecords() {
                                   : key === "leastAllowed"
                                   ? g.OpponentScore
                                   : key === "largestMargin"
-                                  ? g.ResultMargin ?? g.TeamScore - g.OpponentScore
+                                  ? g.TeamScore - g.OpponentScore
                                   : g.TeamScore}
                               </td>
                               <td className="p-1">{g.Opponent}</td>
-                              <td className="p-1">{formatDate(g.Date)}</td>
+                              <td className="p-1">{formatDateFromGameID(g.GameID)}</td>
                               <td className="p-1 text-center">
                                 {g.TeamScore}-{g.OpponentScore}
                               </td>
