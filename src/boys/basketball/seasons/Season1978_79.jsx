@@ -35,7 +35,9 @@ function Season1978_79() {
 
       const seasonGames = gamesData
         .filter((g) => Number(g.Season) === Number(SEASON_ID))
-        .sort((a, b) => Number(a.Date) - Number(b.Date));
+        .sort(
+          (a, b) => (Number(a.GameID) || 0) - (Number(b.GameID) || 0)
+        );
 
       const seasonGameIds = new Set(seasonGames.map((g) => Number(g.GameID)));
       const seasonStats = statsData.filter((s) => seasonGameIds.has(Number(s.GameID)));
@@ -65,16 +67,28 @@ function Season1978_79() {
 
   const safeNum = (v) => (Number.isFinite(Number(v)) ? Number(v) : 0);
 
-  const formatDate = (ms) => {
-    if (ms == null) return "";
-    const d = new Date(Number(ms));
-    if (Number.isNaN(d.getTime())) return "";
+  const formatDateFromGameID = (gameId) => {
+    if (!gameId) return "";
+
+    const n = Number(gameId);
+    if (!Number.isFinite(n)) return "";
+
+    const year = Math.floor(n / 10000);
+    const month = Math.floor(n / 100) % 100;
+    const day = n % 100;
+
+    if (year < 1900 || month < 1 || month > 12 || day < 1 || day > 31) {
+      return "";
+    }
+
+    const d = new Date(Date.UTC(year, month - 1, day));
+
     return d.toLocaleDateString("en-US", {
       timeZone: "UTC",
       month: "short",
       day: "numeric",
       year: "numeric",
-    });  
+    });
   };
 
   const formatResult = (game) => {
@@ -286,7 +300,9 @@ function Season1978_79() {
 
                 return (
                   <tr key={game.GameID || idx} className={idx % 2 ? "bg-gray-50" : "bg-white"}>
-                    <td className="border px-2 py-1">{formatDate(game.Date)}</td>
+                    <td className="border px-2 py-1">
+                      {formatDateFromGameID(game.GameID)}
+                    </td>
                     <td className="border px-2 py-1">{opponentCell}</td>
                     <td className="border px-2 py-1">{formatResult(game)}</td>
                     <td className="border px-2 py-1 whitespace-nowrap">{formatScore(game)}</td>

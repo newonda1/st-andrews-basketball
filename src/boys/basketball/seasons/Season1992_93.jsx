@@ -9,15 +9,30 @@ function Season1992_93() {
       .then((res) => res.json())
       .then((data) => {
         const filtered = data.filter((g) => g.Season === 1992);
-        filtered.sort((a, b) => a.Date - b.Date);
+        filtered.sort(
+          (a, b) => (Number(a.GameID) || 0) - (Number(b.GameID) || 0)
+        );
         setGames(filtered);
       })
       .catch((err) => console.error("Failed to load games:", err));
   }, []);
 
-  const formatDate = (ms) => {
-    if (!ms) return "";
-    const d = new Date(ms);
+  const formatDateFromGameID = (gameId) => {
+    if (!gameId) return "";
+
+    const n = Number(gameId);
+    if (!Number.isFinite(n)) return "";
+
+    const year = Math.floor(n / 10000);
+    const month = Math.floor(n / 100) % 100;
+    const day = n % 100;
+
+    if (year < 1900 || month < 1 || month > 12 || day < 1 || day > 31) {
+      return "";
+    }
+
+    const d = new Date(Date.UTC(year, month - 1, day));
+
     return d.toLocaleDateString("en-US", {
       timeZone: "UTC",
       month: "short",
@@ -62,7 +77,7 @@ function Season1992_93() {
             {games.map((game) => (
               <tr key={game.GameID} className="border-t">
                 <td className="px-4 py-2 whitespace-nowrap">
-                  {formatDate(game.Date)}
+                  {formatDateFromGameID(game.GameID)}
                 </td>
                 <td className="px-4 py-2">{game.Opponent}</td>
                 <td className="px-4 py-2">{game.LocationType}</td>
