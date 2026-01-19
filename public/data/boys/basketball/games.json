@@ -1914,6 +1914,116 @@
     "IsComplete": "Yes"
   },
   {
+  "GameID": 19860116,
+    "Opponent": "Pineland Christian Academy",
+    "LocationType": "Home",
+    "GameType": "Non-Region",
+    "Result": "L",
+    "TeamScore": 47,
+    "OpponentScore": 67,
+    "Season": 1985,
+    "IsComplete": "Yes"
+  },
+  {
+  "GameID": 19860118,
+    "Opponent": "Trinity Christian Academy",
+    "LocationType": "Away",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 50,
+    "OpponentScore": 45,
+    "Season": 1985,
+    "IsComplete": "Yes"
+  },
+  {
+  "GameID": 19860121,
+    "Opponent": "Frederica Academy",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 36,
+    "OpponentScore": 31,
+    "Season": 1985,
+    "IsComplete": "Yes"
+  },
+  {
+  "GameID": 19860124,
+    "Opponent": "Fullington Academy",
+    "LocationType": "Home",
+    "GameType": "Non-Region",
+    "Result": "L",
+    "TeamScore": 51,
+    "OpponentScore": 61,
+    "Season": 1985,
+    "IsComplete": "Yes"
+  },
+  {
+  "GameID": 19860125,
+    "Opponent": "Trinity Christian Academy",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 32,
+    "OpponentScore": 37,
+    "Season": 1985,
+    "IsComplete": "Yes"
+  },
+  {
+  "GameID": 19860128,
+    "Opponent": "Bulloch Academy",
+    "LocationType": "Home",
+    "GameType": "Non-Region",
+    "Result": "W",
+    "TeamScore": 31,
+    "OpponentScore": 26,
+    "Season": 1985,
+    "IsComplete": "Yes"
+  },
+  {
+  "GameID": 19860131,
+    "Opponent": "Citizens Christian Academy",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 58,
+    "OpponentScore": 41,
+    "Season": 1985,
+    "IsComplete": "Yes"
+  },
+  {
+  "GameID": 19860204,
+    "Opponent": "David Emanuel Academy",
+    "LocationType": "Away",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 20,
+    "OpponentScore": 19,
+    "Season": 1985,
+    "IsComplete": "Yes"
+  },
+  {
+  "GameID": 19860207,
+    "Opponent": "Robert Toombs Christian Academy",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 43,
+    "OpponentScore": 45,
+    "Season": 1985,
+    "IsComplete": "Yes"
+  },
+  {
+  "GameID": 19860211,
+    "Opponent": "Hilton Head Preparatory School",
+    "LocationType": "Home",
+    "GameType": "Non-Region",
+    "Result": "L",
+    "TeamScore": 37,
+    "OpponentScore": 46,
+    "Season": 1985,
+    "IsComplete": "Yes"
+  },
+  {
     "GameID": 19921115,
     "Opponent": "Unknown",
     "LocationType": "Unknown",
