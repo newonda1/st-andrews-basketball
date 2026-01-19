@@ -10,29 +10,29 @@ function RecordsVsOpponents() {
   const [sortDirection, setSortDirection] = useState("desc");
   const [expandedOpponent, setExpandedOpponent] = useState(null);
 
-// Helpers ---
+  // Helpers ---
   const formatDateFromGameID = (gameId) => {
     if (!gameId) return "—";
 
     const n = Number(gameId);
-   if (!Number.isFinite(n)) return "—";
+    if (!Number.isFinite(n)) return "—";
 
-   const year = Math.floor(n / 10000);
-   const month = Math.floor(n / 100) % 100;
-   const day = n % 100;
+    const year = Math.floor(n / 10000);
+    const month = Math.floor(n / 100) % 100;
+    const day = n % 100;
 
-   if (year < 1900 || month < 1 || month > 12 || day < 1 || day > 31) {
-     return "—";
-   }
+    if (year < 1900 || month < 1 || month > 12 || day < 1 || day > 31) {
+      return "—";
+    }
 
-   const d = new Date(Date.UTC(year, month - 1, day));
+    const d = new Date(Date.UTC(year, month - 1, day));
 
-   return d.toLocaleDateString("en-US", {
-     timeZone: "UTC",
-     month: "numeric",
-     day: "numeric",
-     year: "numeric",
-   });
+    return d.toLocaleDateString("en-US", {
+      timeZone: "UTC",
+      month: "numeric",
+      day: "numeric",
+      year: "numeric",
+    });
   };
 
   const safeNum = (v) => (Number.isFinite(Number(v)) ? Number(v) : 0);
@@ -65,7 +65,6 @@ function RecordsVsOpponents() {
   const scoreLabel = (g) => {
     const team = g?.TeamScore;
     const opp = g?.OpponentScore;
-
     if (team == null || opp == null) return "—";
     return `${team}-${opp}`;
   };
@@ -80,7 +79,6 @@ function RecordsVsOpponents() {
       g.GameType ?? g.Type ?? g.GameCategory ?? g.Category ?? g.SeasonType ?? "";
     const s = String(t).trim().toLowerCase();
     if (!s) return false;
-    // Adjust keywords as needed based on your data
     return (
       s.includes("playoff") ||
       s.includes("tournament") ||
@@ -236,7 +234,9 @@ function RecordsVsOpponents() {
     }
     // sort games per opponent by date ascending
     for (const [opp, arr] of map.entries()) {
-      arr.sort((a, b) => safeNum(a.Date) - safeNum(b.Date));
+      arr.sort(
+        (a, b) => safeNum(a.GameID ?? a.Date) - safeNum(b.GameID ?? b.Date)
+      );
       map.set(opp, arr);
     }
     return map;
@@ -274,7 +274,9 @@ function RecordsVsOpponents() {
 
   return (
     <div className="max-w-5xl mx-auto p-6 bg-white shadow rounded-lg">
-      <h1 className="text-2xl font-bold mb-4 text-center">Records vs. Opponents</h1>
+      <h1 className="text-2xl font-bold mb-4 text-center">
+        Records vs. Opponents
+      </h1>
 
       <div className="overflow-x-auto">
         <table className="w-full text-xs sm:text-sm md:text-base text-center border">
@@ -285,7 +287,8 @@ function RecordsVsOpponents() {
                 onClick={() => handleSort("Opponent")}
               >
                 Opponent{" "}
-                {sortField === "Opponent" && (sortDirection === "asc" ? "▲" : "▼")}
+                {sortField === "Opponent" &&
+                  (sortDirection === "asc" ? "▲" : "▼")}
               </th>
               <th
                 className="border p-2 cursor-pointer"
@@ -298,7 +301,8 @@ function RecordsVsOpponents() {
                 className="border p-2 cursor-pointer"
                 onClick={() => handleSort("Wins")}
               >
-                Wins {sortField === "Wins" && (sortDirection === "asc" ? "▲" : "▼")}
+                Wins{" "}
+                {sortField === "Wins" && (sortDirection === "asc" ? "▲" : "▼")}
               </th>
               <th
                 className="border p-2 cursor-pointer"
@@ -380,7 +384,7 @@ function RecordsVsOpponents() {
                                   className={i % 2 ? "bg-gray-50" : "bg-white"}
                                 >
                                   <td className="border px-2 py-1 whitespace-nowrap">
-                                    {formatDateUTC(game.GameID)}
+                                    {formatDateFromGameID(game.GameID ?? game.Date)}
                                   </td>
                                   <td className="border px-2 py-1 whitespace-nowrap">
                                     {locationLabel(game)}
