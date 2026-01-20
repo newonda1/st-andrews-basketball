@@ -2024,6 +2024,50 @@
     "IsComplete": "Yes"
   },
   {
+  "GameID": 19861121,
+    "Opponent": "Unknown",
+    "LocationType": null,
+    "GameType": null,
+    "Result": "Unknown",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 1986,
+    "IsComplete": "No"
+  },
+  {
+  "GameID": 19861128,
+    "Opponent": "Unknown",
+    "LocationType": null,
+    "GameType": null,
+    "Result": "Unknown",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 1986,
+    "IsComplete": "No"
+  },
+  {
+  "GameID": 19861129,
+    "Opponent": "Unknown",
+    "LocationType": null,
+    "GameType": null,
+    "Result": "Unknown",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 1986,
+    "IsComplete": "No"
+  },
+  {
+  "GameID": 19861202,
+    "Opponent": "Hilton Head Preparatory School",
+    "LocationType": "Away",
+    "GameType": "Non-Region",
+    "Result": "L",
+    "TeamScore": 27,
+    "OpponentScore": 57,
+    "Season": 1986,
+    "IsComplete": "Yes"
+  },
+  {
     "GameID": 19921115,
     "Opponent": "Unknown",
     "LocationType": "Unknown",
