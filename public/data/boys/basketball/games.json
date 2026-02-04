@@ -7850,26 +7850,17 @@
     "Recap":"St. Andrew’s closed out its home schedule in emphatic fashion Friday night, defeating Pinewood Christian 90–46 on Senior Night at St. Andrew’s. The victory marked the Lions’ 19th consecutive win over Pinewood, a streak that now dates back to 2018, and represented the first time St. Andrew’s has reached 90 points in a game since 2023, when the Lions scored 100 at Pinewood.\n\nFrom the opening minutes, the Lions set a fast tempo and established control on both ends of the floor. St. Andrew’s scored efficiently inside and from the perimeter, steadily stretching the margin throughout the first half before pulling away decisively after the break. The offensive balance and defensive pressure prevented Pinewood from finding any sustained rhythm as the Lions maintained control for all four quarters.\n\nJa’Cari Glover led the way with 22 points and 9 rebounds, scoring efficiently around the basket and anchoring the Lions inside. Amari Cook delivered a strong all-around performance with 17 points, 7 assists, and 6 steals, while consistently pushing the pace. Page Getter added 12 points, as St. Andrew’s depth was on full display with 13 different Lions finding the scoring column, allowing the team to maintain its intensity throughout the night.\n\nThe milestone performance carried added significance as St. Andrew’s honored its seniors in their final home appearance of the season. The Lions will now have the weekend off as they prepare for their next big region game when they travel to Frederica on Tuesday."
   },
   {
-    "GameID": 20260131,
-    "Opponent": "Bradwell Institute",
-    "LocationType": "Away",
-    "GameType": "Non-Region",
-    "Result": "Unknown",
-    "TeamScore": null,
-    "OpponentScore": null,
-    "Season": 2025,
-    "IsComplete": "Unknown"
-  },
-  {
     "GameID": 20260203,
     "Opponent": "Frederica Academy",
     "LocationType": "Away",
     "GameType": "Region",
-    "Result": "Unknown",
-    "TeamScore": null,
-    "OpponentScore": null,
+    "Result": "W",
+    "TeamScore": 66,
+    "OpponentScore": 58,
     "Season": 2025,
-    "IsComplete": "Unknown"
+    "IsComplete": "Yes",
+    "RecapTitle": "Lions Hold Off Late Surge at Frederica, Extend Streak",
+    "Recap": "St. Andrew’s School earned a hard-fought road victory Tuesday night, holding off a late Frederica Academy surge to secure a 66–58 win in a hostile environment. The victory improved the Lions to 15–6 overall and 7–0 in region play, while extending their winning streak over Frederica to 15 straight games dating back to 2018.\n\nThe Lions built control early, taking an 18-point lead into halftime behind balanced scoring and efficient offense. Frederica responded after the break, trimming the margin in the third quarter and feeding off the home crowd’s energy. After St. Andrew’s led 54–37 near the end of the third, Frederica rattled off a 21–5 run over the next several minutes, cutting the deficit to just 59–58 with under two minutes remaining and bringing the gym to a full roar.\n\nIn the game’s final moments, St. Andrew’s showed poise on both ends of the floor. The Lions clamped down defensively, denying Frederica any clean looks, and executed at the free-throw line to close out the win. Page Getter knocked down five of six free throws, while Miloš Copic added two more, accounting for the final seven points of the game as Frederica was held scoreless the rest of the way.\n\nFour Lions finished in double figures, led by Milos Copic’s 17 points to go along with 5 rebounds, 5 assists, and 3 steals in an all-around performance. Ja’Cari Glover added 14 points and a team-high 9 rebounds, providing a steady presence inside. Page Getter scored 11, and Amari Cook contributed 10 points and 5 assists, consistently setting up teammates and keeping the offense organized.\n\nSt. Andrew’s will close out the regular season Friday night when the Lions travel to Bulloch Academy, where they will look to finish 8–0 in region play for the fifth consecutive season."
   },
   {
     "GameID": 20260206,
