@@ -7872,5 +7872,27 @@
     "OpponentScore": null,
     "Season": 2025,
     "IsComplete": "Unknown"
+  },
+  {
+    "GameID": 20260212,
+    "Opponent": "TBA",
+    "LocationType": "Neutral",
+    "GameType": "Region Tournament",
+    "Result": "Unknown",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 2025,
+    "IsComplete": "Unknown"
+  },
+  {
+    "GameID": 20260213,
+    "Opponent": "TBA",
+    "LocationType": "Neutral",
+    "GameType": "Region Tournament",
+    "Result": "Unknown",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 2025,
+    "IsComplete": "Unknown"
   }
 ]
