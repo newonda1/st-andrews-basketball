@@ -424,7 +424,7 @@
     "YearStart": 2020,
     "YearEnd": 2021,
     "HeadCoach": "Mel Abrams Jr.",
-    "RegionSeed": null,
+    "RegionSeed": 1,
     "RegionFinish": null,
     "StateSeed": 7,
     "StateFinish": null
@@ -474,7 +474,7 @@
     "YearStart": 2025,
     "YearEnd": 2026,
     "HeadCoach": "Mel Abrams Jr.",
-    "RegionSeed": null,
+    "RegionSeed": 1,
     "RegionFinish": null,
     "StateSeed": null,
     "StateFinish": null
