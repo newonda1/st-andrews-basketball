@@ -14463,7 +14463,7 @@
   {
     "StatID": 20251115202302,
     "PlayerID": 202302,
-    "GameID": 20251015,
+    "GameID": 20251115,
     "Points": 2,
     "Rebounds": 0,
     "Assists": 3,
@@ -14481,7 +14481,7 @@
   {
     "StatID": 20251115202401,
     "PlayerID": 202401,
-    "GameID": 20251015,
+    "GameID": 20251115,
     "Points": 5,
     "Rebounds": 0,
     "Assists": 0,
@@ -14499,7 +14499,7 @@
   {
     "StatID": 20251115202402,
     "PlayerID": 202402,
-    "GameID": 20251015,
+    "GameID": 20251115,
     "Points": 0,
     "Rebounds": 3,
     "Assists": 0,
@@ -14517,7 +14517,7 @@
   {
     "StatID": 20251115202301,
     "PlayerID": 202301,
-    "GameID": 20251015,
+    "GameID": 20251115,
     "Points": 0,
     "Rebounds": 1,
     "Assists": 0,
@@ -14535,7 +14535,7 @@
   {
     "StatID": 20251115202405,
     "PlayerID": 202405,
-    "GameID": 20251015,
+    "GameID": 20251115,
     "Points": 13,
     "Rebounds": 11,
     "Assists": 2,
@@ -14553,7 +14553,7 @@
   {
     "StatID": 20251115202406,
     "PlayerID": 202406,
-    "GameID": 20251015,
+    "GameID": 20251115,
     "Points": 17,
     "Rebounds": 11,
     "Assists": 0,
@@ -14571,7 +14571,7 @@
   {
     "StatID": 20251115202407,
     "PlayerID": 202407,
-    "GameID": 20251015,
+    "GameID": 20251115,
     "Points": 8,
     "Rebounds": 5,
     "Assists": 2,
@@ -14589,7 +14589,7 @@
   {
     "StatID": 20251115202505,
     "PlayerID": 202505,
-    "GameID": 20251015,
+    "GameID": 20251115,
     "Points": 5,
     "Rebounds": 7,
     "Assists": 3,
