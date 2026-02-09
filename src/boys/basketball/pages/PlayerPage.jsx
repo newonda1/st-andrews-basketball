@@ -101,6 +101,16 @@ const round1 = (n) => {
   return x.toFixed(1);
 };
 
+// Try to detect if a game is a region game based on common fields
+const isRegionGame = (game) => {
+  if (!game) return false;
+  const val = (v) => (v == null ? "" : String(v).toLowerCase());
+  if (val(game.GameType) === "region") return true;
+  if (val(game.Type) === "region") return true;
+  if (val(game.Region) === "yes") return true;
+  return false;
+};
+
 function PlayerPage() {
   const { playerId } = useParams();
 
@@ -178,6 +188,7 @@ function PlayerPage() {
           opponent: game?.Opponent || "",
           result: game?.Result || "",
           season: game?.Season || game?.Year || "",
+          isRegion: isRegionGame(game),
         };
       })
       .sort((a, b) => {
@@ -224,6 +235,47 @@ function PlayerPage() {
 
     return base;
   }, [seasonTotals]);
+
+  // 🔹 NEW: Region-only season & career totals
+  const regionSeasonTotals = useMemo(() => {
+    const seasonMap = {};
+
+    statsWithGameInfo.forEach((stat) => {
+      if (!stat.isRegion) return;
+
+      const seasonKey = stat.season || "Unknown";
+
+      if (!seasonMap[seasonKey]) {
+        seasonMap[seasonKey] = { season: seasonKey, gamesPlayed: 0 };
+        statKeys.forEach((key) => (seasonMap[seasonKey][key] = 0));
+      }
+
+      seasonMap[seasonKey].gamesPlayed += 1;
+      statKeys.forEach((key) => {
+        seasonMap[seasonKey][key] += Number(stat[key]) || 0;
+      });
+    });
+
+    return Object.values(seasonMap).sort((a, b) =>
+      String(a.season).localeCompare(String(b.season))
+    );
+  }, [statsWithGameInfo]);
+
+  const regionCareerTotals = useMemo(() => {
+    const base = {
+      season: "Region Career",
+      gamesPlayed: regionSeasonTotals.reduce(
+        (t, s) => t + (s.gamesPlayed || 0),
+        0
+      ),
+    };
+
+    statKeys.forEach((key) => {
+      base[key] = regionSeasonTotals.reduce((t, s) => t + (s[key] || 0), 0);
+    });
+
+    return base;
+  }, [regionSeasonTotals]);
 
   const gameLogsBySeason = useMemo(() => {
     return statsWithGameInfo.reduce((acc, row) => {
@@ -310,6 +362,7 @@ function PlayerPage() {
         </div>
       </header>
 
+      {/* Overall career totals */}
       <section>
         <div className="flex items-center justify-between mb-2">
           <h2 className="text-2xl font-semibold">Career Totals</h2>
@@ -333,7 +386,9 @@ function PlayerPage() {
               />
             </button>
 
-            <span className="text-sm text-gray-600 whitespace-nowrap">Per Game</span>
+            <span className="text-sm text-gray-600 whitespace-nowrap">
+              Per Game
+            </span>
           </div>
         </div>
 
@@ -374,7 +429,9 @@ function PlayerPage() {
                     <td className="border px-2 py-1 text-center">
                       {formatSeasonLabel(row.season)}
                     </td>
-                    <td className="border px-2 py-1 text-center">{row.gamesPlayed}</td>
+                    <td className="border px-2 py-1 text-center">
+                      {row.gamesPlayed}
+                    </td>
 
                     {statKeys.map((key) => (
                       <React.Fragment key={key}>
@@ -413,8 +470,12 @@ function PlayerPage() {
                 ))}
 
                 <tr className="bg-gray-50 font-semibold">
-                  <td className="border px-2 py-1 text-center">{careerTotals.season}</td>
-                  <td className="border px-2 py-1 text-center">{careerTotals.gamesPlayed}</td>
+                  <td className="border px-2 py-1 text-center">
+                    {careerTotals.season}
+                  </td>
+                  <td className="border px-2 py-1 text-center">
+                    {careerTotals.gamesPlayed}
+                  </td>
 
                   {statKeys.map((key) => (
                     <React.Fragment key={key}>
@@ -423,7 +484,9 @@ function PlayerPage() {
                           if (!showPerGame) return Number(careerTotals[key]) || 0;
                           const gp = Number(careerTotals.gamesPlayed) || 0;
                           if (!gp) return "-";
-                          return round1((Number(careerTotals[key]) || 0) / gp);
+                          return round1(
+                            (Number(careerTotals[key]) || 0) / gp
+                          );
                         })()}
                       </td>
 
@@ -461,6 +524,181 @@ function PlayerPage() {
         )}
       </section>
 
+      {/* NEW: Region-only totals */}
+      <section>
+        <div className="flex items-center justify-between mb-2">
+          <h2 className="text-2xl font-semibold">Region Game Totals</h2>
+
+          {/* Reuse the same totals/per-game toggle */}
+          <div className="flex items-center gap-2">
+            <span className="text-sm text-gray-600 whitespace-nowrap">Totals</span>
+
+            <button
+              type="button"
+              onClick={() => setShowPerGame((v) => !v)}
+              className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                showPerGame ? "bg-blue-600" : "bg-gray-300"
+              }`}
+              aria-pressed={showPerGame}
+              aria-label="Toggle totals vs per-game"
+            >
+              <span
+                className={`inline-block h-5 w-5 transform rounded-full bg-white transition-transform ${
+                  showPerGame ? "translate-x-5" : "translate-x-1"
+                }`}
+              />
+            </button>
+
+            <span className="text-sm text-gray-600 whitespace-nowrap">
+              Per Game
+            </span>
+          </div>
+        </div>
+
+        {regionSeasonTotals.length === 0 ? (
+          <p>No region game stats available.</p>
+        ) : (
+          <div className="overflow-x-auto">
+            <table className="min-w-full border text-sm">
+              <thead>
+                <tr className="bg-gray-100">
+                  <th className="border px-2 py-1 text-center">Season</th>
+                  <th className="border px-2 py-1 text-center">GP</th>
+                  {statKeys.map((key) => (
+                    <React.Fragment key={key}>
+                      <th className="border px-2 py-1 text-center">
+                        {statLabelMap[key] || key}
+                      </th>
+                      {key === "ThreePA" && (
+                        <th className="border px-2 py-1 text-center">3P%</th>
+                      )}
+                      {key === "TwoPA" && (
+                        <>
+                          <th className="border px-2 py-1 text-center">2P%</th>
+                          <th className="border px-2 py-1 text-center">eFG%</th>
+                        </>
+                      )}
+                      {key === "FTA" && (
+                        <th className="border px-2 py-1 text-center">FT%</th>
+                      )}
+                    </React.Fragment>
+                  ))}
+                </tr>
+              </thead>
+
+              <tbody>
+                {regionSeasonTotals.map((row) => (
+                  <tr key={row.season}>
+                    <td className="border px-2 py-1 text-center">
+                      {formatSeasonLabel(row.season)}
+                    </td>
+                    <td className="border px-2 py-1 text-center">
+                      {row.gamesPlayed}
+                    </td>
+
+                    {statKeys.map((key) => (
+                      <React.Fragment key={key}>
+                        <td className="border px-2 py-1 text-center">
+                          {displayStat(row, key)}
+                        </td>
+
+                        {key === "ThreePA" && (
+                          <td className="border px-2 py-1 text-center">
+                            {calcPct(row.ThreePM, row.ThreePA)}
+                          </td>
+                        )}
+                        {key === "TwoPA" && (
+                          <>
+                            <td className="border px-2 py-1 text-center">
+                              {calcPct(row.TwoPM, row.TwoPA)}
+                            </td>
+                            <td className="border px-2 py-1 text-center">
+                              {calcEFG(
+                                row.TwoPM,
+                                row.ThreePM,
+                                row.TwoPA,
+                                row.ThreePA
+                              )}
+                            </td>
+                          </>
+                        )}
+                        {key === "FTA" && (
+                          <td className="border px-2 py-1 text-center">
+                            {calcPct(row.FTM, row.FTA)}
+                          </td>
+                        )}
+                      </React.Fragment>
+                    ))}
+                  </tr>
+                ))}
+
+                <tr className="bg-gray-50 font-semibold">
+                  <td className="border px-2 py-1 text-center">
+                    {regionCareerTotals.season}
+                  </td>
+                  <td className="border px-2 py-1 text-center">
+                    {regionCareerTotals.gamesPlayed}
+                  </td>
+
+                  {statKeys.map((key) => (
+                    <React.Fragment key={key}>
+                      <td className="border px-2 py-1 text-center">
+                        {(() => {
+                          if (!showPerGame)
+                            return Number(regionCareerTotals[key]) || 0;
+                          const gp =
+                            Number(regionCareerTotals.gamesPlayed) || 0;
+                          if (!gp) return "-";
+                          return round1(
+                            (Number(regionCareerTotals[key]) || 0) / gp
+                          );
+                        })()}
+                      </td>
+
+                      {key === "ThreePA" && (
+                        <td className="border px-2 py-1 text-center">
+                          {calcPct(
+                            regionCareerTotals.ThreePM,
+                            regionCareerTotals.ThreePA
+                          )}
+                        </td>
+                      )}
+                      {key === "TwoPA" && (
+                        <>
+                          <td className="border px-2 py-1 text-center">
+                            {calcPct(
+                              regionCareerTotals.TwoPM,
+                              regionCareerTotals.TwoPA
+                            )}
+                          </td>
+                          <td className="border px-2 py-1 text-center">
+                            {calcEFG(
+                              regionCareerTotals.TwoPM,
+                              regionCareerTotals.ThreePM,
+                              regionCareerTotals.TwoPA,
+                              regionCareerTotals.ThreePA
+                            )}
+                          </td>
+                        </>
+                      )}
+                      {key === "FTA" && (
+                        <td className="border px-2 py-1 text-center">
+                          {calcPct(
+                            regionCareerTotals.FTM,
+                            regionCareerTotals.FTA
+                          )}
+                        </td>
+                      )}
+                    </React.Fragment>
+                  ))}
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        )}
+      </section>
+
+      {/* Game logs */}
       <section>
         <h2 className="text-2xl font-semibold mb-2">Game Logs</h2>
         {statsWithGameInfo.length === 0 ? (
@@ -486,16 +724,24 @@ function PlayerPage() {
                               {statLabelMap[key] || key}
                             </th>
                             {key === "ThreePA" && (
-                              <th className="border px-2 py-1 text-center">3P%</th>
+                              <th className="border px-2 py-1 text-center">
+                                3P%
+                              </th>
                             )}
                             {key === "TwoPA" && (
                               <>
-                                <th className="border px-2 py-1 text-center">2P%</th>
-                                <th className="border px-2 py-1 text-center">eFG%</th>
+                                <th className="border px-2 py-1 text-center">
+                                  2P%
+                                </th>
+                                <th className="border px-2 py-1 text-center">
+                                  eFG%
+                                </th>
                               </>
                             )}
                             {key === "FTA" && (
-                              <th className="border px-2 py-1 text-center">FT%</th>
+                              <th className="border px-2 py-1 text-center">
+                                FT%
+                              </th>
                             )}
                           </React.Fragment>
                         ))}
@@ -515,10 +761,14 @@ function PlayerPage() {
                               {row.opponent}
                             </Link>
                           </td>
-                          <td className="border px-2 py-1 text-center">{row.result}</td>
+                          <td className="border px-2 py-1 text-center">
+                            {row.result}
+                          </td>
                           {statKeys.map((key) => (
                             <React.Fragment key={key}>
-                              <td className="border px-2 py-1 text-center">{row[key]}</td>
+                              <td className="border px-2 py-1 text-center">
+                                {row[key]}
+                              </td>
                               {key === "ThreePA" && (
                                 <td className="border px-2 py-1 text-center">
                                   {calcPct(row.ThreePM, row.ThreePA)}
