@@ -8482,14 +8482,16 @@
   },
   {
     "GameID": 20260212,
-    "Opponent": "TBA (Region Tournament)",
-    "LocationType": "Neutral",
+    "Opponent": "Pinewood Christian Academy",
+    "LocationType": "Away",
     "GameType": "Region Tournament",
-    "Result": "Unknown",
-    "TeamScore": null,
-    "OpponentScore": null,
+    "Result": "W",
+    "TeamScore": 75,
+    "OpponentScore": 44,
     "Season": 2025,
-    "IsComplete": "Unknown"
+    "IsComplete": "Yes",
+    "RecapTitle": "Lions Advance to Region Finals, Extend Dominance Over Pinewood",
+    "Recap": "St. Andrew’s punched its ticket to the region championship game Thursday night with a 75–44 victory over Pinewood Christian in the semifinals of the region tournament at Pinewood Christian Academy. The win marked the Lions’ 20th consecutive victory over Pinewood, a streak dating back to 2018, and extended St. Andrew’s remarkable run to 49 straight wins over region opponents. A victory in the finals would push that streak to a perfect 50.\n\nPage Getter delivered a career performance, pouring in a career-high 25 points while adding 6 rebounds to lead all scorers. Chase Brown carried his momentum from last week’s game at Bulloch Academy into the semifinal, finishing with 14 points. Amari Cook added 12 points, 4 assists, 4 rebounds, and 3 steals, while Milos Copic contributed 9 points and 7 assists as the Lions showcased their balance and depth.\n\nWith the victory, St. Andrew’s advances to the region championship game tomorrow at 7 p.m., where the Lions will face Frederica in a rematch for the title. St. Andrew’s will be seeking its fifth consecutive region championship, looking to continue both its region dominance and its historic winning streak within region play."
   },
   {
     "GameID": 20260213,
