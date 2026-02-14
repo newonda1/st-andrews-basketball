@@ -8482,24 +8482,41 @@
   },
   {
     "GameID": 20260212,
-    "Opponent": "TBA (Region Tournament)",
-    "LocationType": "Neutral",
+    "Opponent": "Pinewood Christian Academy",
+    "LocationType": "Away",
     "GameType": "Region Tournament",
-    "Result": "Unknown",
-    "TeamScore": null,
-    "OpponentScore": null,
+    "Result": "W",
+    "TeamScore": 75,
+    "OpponentScore": 44,
     "Season": 2025,
-    "IsComplete": "Unknown"
+    "IsComplete": "Yes",
+    "RecapTitle": "Lions Advance to Region Finals, Extend Dominance Over Pinewood",
+    "Recap": "St. Andrew’s punched its ticket to the region championship game Thursday night with a 75–44 victory over Pinewood Christian in the semifinals of the region tournament at Pinewood Christian Academy. The win marked the Lions’ 20th consecutive victory over Pinewood, a streak dating back to 2018, and extended St. Andrew’s remarkable run to 49 straight wins over region opponents. A victory in the finals would push that streak to a perfect 50.\n\nPage Getter delivered a career performance, pouring in a career-high 25 points while adding 6 rebounds to lead all scorers. Chase Brown carried his momentum from last week’s game at Bulloch Academy into the semifinal, finishing with 14 points. Amari Cook added 12 points, 4 assists, 4 rebounds, and 3 steals, while Milos Copic contributed 9 points and 7 assists as the Lions showcased their balance and depth.\n\nWith the victory, St. Andrew’s advances to the region championship game tomorrow at 7 p.m., where the Lions will face Frederica in a rematch for the title. St. Andrew’s will be seeking its fifth consecutive region championship, looking to continue both its region dominance and its historic winning streak within region play."
   },
   {
     "GameID": 20260213,
-    "Opponent": "TBA (Region Tournament)",
+    "Opponent": "Frederica Academy",
     "LocationType": "Neutral",
     "GameType": "Region Tournament",
+    "Result": "W",
+    "TeamScore": 61,
+    "OpponentScore": 48,
+    "Season": 2025,
+    "IsComplete": "Yes",
+    "RecapTitle": "Lions Capture Region Title, Earn 50th Straight Region Win and 200th for Abrams",
+    "Recap": "St. Andrew’s claimed its fifth consecutive region championship Friday night with a 61–48 victory over Frederica in the title game at Pinewood Christian Academy. The win improved the Lions to 18–7 on the season, extended their remarkable run to 50 consecutive victories over region opponents, and marked the 200th career win for head coach Mel Abrams in his 11th season at St. Andrew’s.\n\nThe Lions set the tone early, controlling the tempo in the opening quarter and frustrating Frederica’s offense. St. Andrew’s held the Knights to just six first-quarter points and carried a 14–6 lead into the second period. Frederica responded in the second quarter, heating up offensively while the Lions’ shots stopped falling. The Knights grabbed their first lead of the night with 38 seconds remaining in the half and entered the break with a 22–21 advantage.\n\nFrederica maintained that momentum early in the third quarter before St. Andrew’s began to swing the game back in its favor. Ja’Cari Glover and Milos Copic each scored four quick points to knot the score at 29–29 midway through the period. The highlight of the run came when Copic missed on a driving layup, but Glover trailed the play, snatched the rebound with one hand, and finished with an emphatic dunk to energize the Lions.\n\nAfter Frederica answered with a three-pointer, Page Getter responded with one of his own to tie the game at 32–32 with 3:19 left in the quarter. What followed was the decisive stretch of the night. Chase Brown, quiet through the first half, ignited an 11–0 run to close the third quarter. Brown drilled a three while being fouled and converted the free throw for a four-point play, then followed a Glover layup with a driving score of his own. Moments later, Guus Blom secured an offensive rebound and kicked it out to Brown on the perimeter, where he buried another three to send the Lions into the fourth quarter with a commanding 43–32 lead .\n\nFrederica attempted one final push early in the fourth quarter, but Brown stayed hot. He connected on two more three-pointers and was fouled on another long-range attempt, calmly converting all three free throws to stretch the margin to 54–39 with 4:51 remaining. The Knights never trimmed the deficit to fewer than 11 points the rest of the way.\n\nBrown finished with 20 points, punctuating his explosive second half. Glover dominated the interior with 17 points and 16 rebounds, anchoring the Lions inside. Getter added 10 points, while Copic contributed 7 points, 7 rebounds, and 5 assists, helping steady the offense throughout the game.\n\nWith the championship secured, St. Andrew’s now turns its focus to the state tournament. The Lions have earned a first-round bye and will await their quarterfinal opponent next Saturday in Macon, as they look to carry their momentum beyond region play and into the state bracket."
+  },
+  {
+    "GameID": 20260221,
+    "Opponent": "TBD (State Tournament)",
+    "LocationType": "Neutral",
+    "GameType": "State Tournament",
     "Result": "Unknown",
     "TeamScore": null,
     "OpponentScore": null,
     "Season": 2025,
-    "IsComplete": "Unknown"
+    "IsComplete": "Unknown",
+    "RecapTitle": null,
+    "Recap": null
   }
 ]
