@@ -201,16 +201,24 @@ export default function SeasonRecords() {
       try {
         setError("");
 
-        const [playerStatsRaw, playersRaw, seasonsRaw] = await Promise.all([
+        const [playerStatsRaw, playersRaw, seasonsRaw, gamesRaw] = await Promise.all([
           fetchJson("playergamestats.json", "/data/boys/basketball/playergamestats.json"),
           fetchJson("players.json", "/data/boys/basketball/players.json"),
           fetchJson("seasons.json", "/data/boys/basketball/seasons.json"),
+          fetchJson("games.json", "/data/boys/basketball/games.json"),
         ]);
 
         const playerStats = Array.isArray(playerStatsRaw) ? playerStatsRaw : [];
         const players = Array.isArray(playersRaw) ? playersRaw : [];
         const seasons = Array.isArray(seasonsRaw) ? seasonsRaw : [];
+        const games = Array.isArray(gamesRaw) ? gamesRaw : [];
+
         const seasonsMap = new Map(seasons.map((s) => [String(s.SeasonID), s]));
+        const gameToSeasonMap = new Map(
+          games
+            .filter((g) => g && g.GameID != null && (g.SeasonID != null || g.Season != null))
+            .map((g) => [String(g.GameID), String(g.SeasonID ?? g.Season)])
+        );
 
         const playerMap = new Map(players.map((p) => [String(p.PlayerID), p]));
 
@@ -220,7 +228,7 @@ export default function SeasonRecords() {
         for (const g of playerStats) {
           if (!g || g.PlayerID == null) continue;
 
-          const seasonIdRaw = g.SeasonID ?? g.Season;
+          const seasonIdRaw = gameToSeasonMap.get(String(g.GameID));
           if (seasonIdRaw == null) continue;
 
           const pid = String(g.PlayerID);
@@ -264,7 +272,8 @@ export default function SeasonRecords() {
             safeNum(g.Turnovers) +
             safeNum(g.TwoPA) +
             safeNum(g.ThreePA) +
-            safeNum(g.FTA);
+            safeNum(g.FTA) +
+            safeNum(g.FTM);
           const played = hasMinutes || participationSum > 0;
           if (played) entry.GamesPlayed += 1;
 
