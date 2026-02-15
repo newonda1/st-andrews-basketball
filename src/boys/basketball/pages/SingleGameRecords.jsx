@@ -39,7 +39,6 @@ function tryParseGameDate(game) {
     const dt = new Date(Date.UTC(y, m - 1, d));
     if (!Number.isNaN(dt.getTime())) return dt;
   }
-
   return null;
 }
 
@@ -54,12 +53,53 @@ function formatDateFromGame(game) {
   });
 }
 
-export default function SingleGameRecords() {
-  const [topRecordsByStat, setTopRecordsByStat] = useState({});
-  const [error, setError] = useState("");
+function getGameScore(game) {
+  if (!game) return "—";
 
-  const statCategories = useMemo(
-    () => ["Points", "Rebounds", "Assists", "Steals", "TwoPM", "ThreePM", "FTM", "FTA"],
+  const A = Number(game.TeamScore);
+  const B = Number(game.OpponentScore);
+
+  if (Number.isFinite(A) && Number.isFinite(B)) return `${A}-${B}`;
+
+  // If one/both are null/unknown, avoid showing "NaN-NaN"
+  return "—";
+}
+
+export default function SingleGameRecords() {
+  const [rowsByRecord, setRowsByRecord] = useState({});
+  const [error, setError] = useState("");
+  const [expandedKey, setExpandedKey] = useState(null);
+
+  const recordDefs = useMemo(
+    () => [
+      { key: "Points", label: "Points", abbr: "PTS", valueFn: (s) => safeNum(s?.Points) },
+      { key: "Rebounds", label: "Rebounds", abbr: "REB", valueFn: (s) => safeNum(s?.Rebounds) },
+      { key: "Assists", label: "Assists", abbr: "AST", valueFn: (s) => safeNum(s?.Assists) },
+      { key: "Steals", label: "Steals", abbr: "STL", valueFn: (s) => safeNum(s?.Steals) },
+      { key: "Blocks", label: "Blocks", abbr: "BLK", valueFn: (s) => safeNum(s?.Blocks) },
+
+      // FG = 2P + 3P
+      {
+        key: "FGM",
+        label: "Field Goals Made",
+        abbr: "FGM",
+        valueFn: (s) => safeNum(s?.TwoPM) + safeNum(s?.ThreePM),
+      },
+      {
+        key: "FGA",
+        label: "Field Goal Attempts",
+        abbr: "FGA",
+        valueFn: (s) => safeNum(s?.TwoPA) + safeNum(s?.ThreePA),
+      },
+
+      { key: "TwoPM", label: "2-Pt Field Goals Made", abbr: "2PM", valueFn: (s) => safeNum(s?.TwoPM) },
+      { key: "TwoPA", label: "2-Pt Field Goal Attempts", abbr: "2PA", valueFn: (s) => safeNum(s?.TwoPA) },
+      { key: "ThreePM", label: "3-Pt Field Goals Made", abbr: "3PM", valueFn: (s) => safeNum(s?.ThreePM) },
+      { key: "ThreePA", label: "3-Pt Field Goal Attempts", abbr: "3PA", valueFn: (s) => safeNum(s?.ThreePA) },
+      { key: "FTM", label: "Free Throws Made", abbr: "FTM", valueFn: (s) => safeNum(s?.FTM) },
+      { key: "FTA", label: "Free Throw Attempts", abbr: "FTA", valueFn: (s) => safeNum(s?.FTA) },
+      { key: "Turnovers", label: "Turnovers", abbr: "TO", valueFn: (s) => safeNum(s?.Turnovers) },
+    ],
     []
   );
 
@@ -81,39 +121,43 @@ export default function SingleGameRecords() {
         const playerMap = new Map(playersData.map((p) => [String(p.PlayerID), p]));
         const gameMap = new Map(gamesData.map((g) => [String(g.GameID), g]));
 
-        const result = {};
+        const next = {};
 
-        statCategories.forEach((stat) => {
-          const top10 = playerStatsData
-            .filter((entry) => entry && entry[stat] !== undefined && safeNum(entry[stat]) > 0)
-            .sort((a, b) => safeNum(b[stat]) - safeNum(a[stat]))
-            .slice(0, 10)
-            .map((entry) => {
-              const player = playerMap.get(String(entry.PlayerID));
-              const game = gameMap.get(String(entry.GameID));
+        for (const def of recordDefs) {
+          const list = playerStatsData
+            .filter((s) => s && s.PlayerID != null && s.GameID != null)
+            .map((s) => {
+              const player = playerMap.get(String(s.PlayerID));
+              const game = gameMap.get(String(s.GameID));
               return {
-                value: safeNum(entry[stat]),
-                playerName: player ? `${player.FirstName} ${player.LastName}` : "Unknown Player",
-                opponent: game?.Opponent ?? "Unknown Opponent",
+                value: def.valueFn(s),
+                playerName: player ? `${player.FirstName} ${player.LastName}` : "Unknown",
                 date: game ? formatDateFromGame(game) : "Unknown Date",
+                opponent: game?.Opponent ?? "Unknown Opponent",
+                score: getGameScore(game),
               };
-            });
+            })
+            // Keep only rows with a meaningful value for the category
+            .filter((r) => Number.isFinite(r.value) && r.value > 0)
+            .sort((a, b) => b.value - a.value)
+            .slice(0, 20);
 
-          // Pad to 10 rows so it’s obvious the UI is working even if data is missing
-          while (top10.length < 10) {
-            top10.push({
+          // Pad out to 20 so it’s obvious the dropdown is working even if data is sparse
+          while (list.length < 20) {
+            list.push({
               value: "—",
               playerName: "—",
-              opponent: "—",
               date: "—",
+              opponent: "—",
+              score: "—",
               _placeholder: true,
             });
           }
 
-          result[stat] = top10;
-        });
+          next[def.key] = list;
+        }
 
-        setTopRecordsByStat(result);
+        setRowsByRecord(next);
       } catch (e) {
         setError(String(e?.message || e));
         console.error(e);
@@ -121,65 +165,106 @@ export default function SingleGameRecords() {
     };
 
     run();
-  }, [statCategories]);
+  }, [recordDefs]);
+
+  const toggleExpanded = (key) => {
+    setExpandedKey((prev) => (prev === key ? null : key));
+  };
 
   return (
-    <div className="p-6">
-      <h1 className="text-3xl font-bold mb-6">Single Game Records</h1>
+    <div className="space-y-6 px-4">
+      <h1 className="text-2xl font-bold text-center">Single Game Records</h1>
 
       {error && (
-        <div className="mb-5 p-3 rounded bg-red-50 text-red-700 border border-red-200 whitespace-pre-wrap">
+        <div className="p-3 rounded bg-red-50 text-red-700 border border-red-200 whitespace-pre-wrap">
           {error}
         </div>
       )}
 
-      <div className="space-y-8">
-        {statCategories.map((stat) => (
-          <div
-            key={stat}
-            className="rounded-xl border border-gray-200 bg-white shadow-sm overflow-hidden"
-          >
-            <div className="px-4 py-3 bg-gray-50 border-b border-gray-200 flex items-center justify-between">
-              <h2 className="text-lg md:text-xl font-semibold">{stat}</h2>
-              <span className="text-xs text-gray-500">Top 10</span>
-            </div>
+      <div className="overflow-x-auto">
+        <table className="min-w-full table-auto text-xs border text-center">
+          <thead className="bg-gray-200 font-bold">
+            <tr>
+              <th className="border px-2 py-1">Record</th>
+              <th className="border px-2 py-1">Player</th>
+              <th className="border px-2 py-1">Value</th>
+              <th className="border px-2 py-1">Date</th>
+              <th className="border px-2 py-1">Opponent</th>
+              <th className="border px-2 py-1">Game Score</th>
+            </tr>
+          </thead>
 
-            <div className="overflow-x-auto">
-              <table className="w-full text-sm md:text-base table-auto whitespace-nowrap">
-                <thead>
-                  <tr className="bg-gray-100">
-                    <th className="p-2 text-left w-12">#</th>
-                    <th className="p-2 text-left">Value</th>
-                    <th className="p-2 text-left">Player</th>
-                    <th className="p-2 text-left">Opponent</th>
-                    <th className="p-2 text-left">Date</th>
+          <tbody>
+            {recordDefs.map((def) => {
+              const top = (rowsByRecord[def.key] || [])[0];
+              const isOpen = expandedKey === def.key;
+
+              const topPlayer = top?.playerName ?? "—";
+              const topValue = top?.value ?? "—";
+              const topDate = top?.date ?? "—";
+              const topOpp = top?.opponent ?? "—";
+              const topScore = top?.score ?? "—";
+
+              return (
+                <React.Fragment key={def.key}>
+                  <tr
+                    onClick={() => toggleExpanded(def.key)}
+                    className={`border-t cursor-pointer hover:bg-gray-100 ${isOpen ? "bg-gray-50" : "bg-white"}`}
+                  >
+                    <td className="border px-2 py-2 font-semibold">{def.label}</td>
+                    <td className="border px-2 py-2">{topPlayer}</td>
+                    <td className="border px-2 py-2 font-semibold">{topValue}</td>
+                    <td className="border px-2 py-2">{topDate}</td>
+                    <td className="border px-2 py-2">{topOpp}</td>
+                    <td className="border px-2 py-2">{topScore}</td>
                   </tr>
-                </thead>
 
-                <tbody>
-                  {(topRecordsByStat[stat] || []).map((record, index) => (
-                    <tr
-                      key={index}
-                      className={`border-t ${
-                        record._placeholder ? "bg-white text-gray-400" : index % 2 === 0 ? "bg-white" : "bg-gray-50"
-                      }`}
-                    >
-                      <td className="p-2 font-semibold">{index + 1}</td>
-                      <td className="p-2 font-semibold">{record.value}</td>
-                      <td className="p-2">{record.playerName}</td>
-                      <td className="p-2">{record.opponent}</td>
-                      <td className="p-2">{record.date}</td>
+                  {isOpen && (
+                    <tr className="border-t">
+                      <td className="border px-2 py-2" colSpan={6}>
+                        <div className="overflow-x-auto">
+                          <table className="min-w-full table-auto text-xs border text-center">
+                            <thead className="bg-gray-200 font-bold">
+                              <tr>
+                                <th className="border px-2 py-1">#</th>
+                                <th className="border px-2 py-1">Player</th>
+                                <th className="border px-2 py-1">{def.abbr}</th>
+                                <th className="border px-2 py-1">Date</th>
+                                <th className="border px-2 py-1">Opponent</th>
+                                <th className="border px-2 py-1">Score</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              {(rowsByRecord[def.key] || []).map((r, idx) => (
+                                <tr
+                                  key={idx}
+                                  className={`border-t ${
+                                    r._placeholder
+                                      ? "bg-white text-gray-400"
+                                      : idx % 2 === 0
+                                      ? "bg-white"
+                                      : "bg-gray-50"
+                                  }`}
+                                >
+                                  <td className="border px-2 py-1 font-semibold">{idx + 1}</td>
+                                  <td className="border px-2 py-1">{r.playerName}</td>
+                                  <td className="border px-2 py-1 font-semibold">{r.value}</td>
+                                  <td className="border px-2 py-1">{r.date}</td>
+                                  <td className="border px-2 py-1">{r.opponent}</td>
+                                  <td className="border px-2 py-1">{r.score}</td>
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      </td>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-
-            <div className="px-4 py-2 text-xs text-gray-500 border-t bg-white">
-              Note: If you see “—” rows, it means fewer than 10 entries exist with {stat} &gt; 0 in your data.
-            </div>
-          </div>
-        ))}
+                  )}
+                </React.Fragment>
+              );
+            })}
+          </tbody>
+        </table>
       </div>
     </div>
   );
