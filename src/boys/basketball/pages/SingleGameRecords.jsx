@@ -53,17 +53,22 @@ function formatDateFromGame(game) {
   });
 }
 
-function getGameScore(game) {
+function getGameResult(game) {
   if (!game) return "—";
 
   const A = Number(game.TeamScore);
   const B = Number(game.OpponentScore);
 
-  if (Number.isFinite(A) && Number.isFinite(B)) return `${A}-${B}`;
+  if (!Number.isFinite(A) || !Number.isFinite(B)) return "—";
 
-  // If one/both are null/unknown, avoid showing "NaN-NaN"
-  return "—";
+  let outcome = "Tie";
+  if (A > B) outcome = "Win";
+  else if (A < B) outcome = "Loss";
+
+  return `${A}-${B} ${outcome}`;
 }
+
+const FALLBACK_HEADSHOT = "/images/common/logo.png";
 
 export default function SingleGameRecords() {
   const [rowsByRecord, setRowsByRecord] = useState({});
@@ -132,9 +137,10 @@ export default function SingleGameRecords() {
               return {
                 value: def.valueFn(s),
                 playerName: player ? `${player.FirstName} ${player.LastName}` : "Unknown",
+                playerImg: player?.PlayerID ? `/images/boys/basketball/players/${player.PlayerID}.jpg` : null,
                 date: game ? formatDateFromGame(game) : "Unknown Date",
                 opponent: game?.Opponent ?? "Unknown Opponent",
-                score: getGameScore(game),
+                gameResult: getGameResult(game),
               };
             })
             // Keep only rows with a meaningful value for the category
@@ -147,9 +153,10 @@ export default function SingleGameRecords() {
             list.push({
               value: "—",
               playerName: "—",
+              playerImg: null,
               date: "—",
               opponent: "—",
-              score: "—",
+              gameResult: "—",
               _placeholder: true,
             });
           }
@@ -174,6 +181,9 @@ export default function SingleGameRecords() {
   return (
     <div className="space-y-6 px-4">
       <h1 className="text-2xl font-bold text-center">Single Game Records</h1>
+      <p className="text-center text-sm italic text-gray-600">
+        Select any record to see the top 20 historical results for that record
+      </p>
 
       {error && (
         <div className="p-3 rounded bg-red-50 text-red-700 border border-red-200 whitespace-pre-wrap">
@@ -190,7 +200,7 @@ export default function SingleGameRecords() {
               <th className="border px-2 py-1">Value</th>
               <th className="border px-2 py-1">Date</th>
               <th className="border px-2 py-1">Opponent</th>
-              <th className="border px-2 py-1">Game Score</th>
+              <th className="border px-2 py-1">Game Result</th>
             </tr>
           </thead>
 
@@ -203,7 +213,7 @@ export default function SingleGameRecords() {
               const topValue = top?.value ?? "—";
               const topDate = top?.date ?? "—";
               const topOpp = top?.opponent ?? "—";
-              const topScore = top?.score ?? "—";
+              const topResult = top?.gameResult ?? "—";
 
               return (
                 <React.Fragment key={def.key}>
@@ -212,11 +222,27 @@ export default function SingleGameRecords() {
                     className={`border-t cursor-pointer hover:bg-gray-100 ${isOpen ? "bg-gray-50" : "bg-white"}`}
                   >
                     <td className="border px-2 py-2 font-semibold">{def.label}</td>
-                    <td className="border px-2 py-2">{topPlayer}</td>
+                    <td className="border px-2 py-2">
+                      <div className="flex items-center justify-center gap-2">
+                        {top?.playerImg && topPlayer !== "—" && topPlayer !== "Unknown" ? (
+                          <img
+                            src={top.playerImg}
+                            alt={topPlayer}
+                            className="h-7 w-7 rounded-full object-cover"
+                            loading="lazy"
+                            onError={(e) => {
+                              e.currentTarget.onerror = null;
+                              e.currentTarget.src = FALLBACK_HEADSHOT;
+                            }}
+                          />
+                        ) : null}
+                        <span>{topPlayer}</span>
+                      </div>
+                    </td>
                     <td className="border px-2 py-2 font-semibold">{topValue}</td>
                     <td className="border px-2 py-2">{topDate}</td>
                     <td className="border px-2 py-2">{topOpp}</td>
-                    <td className="border px-2 py-2">{topScore}</td>
+                    <td className="border px-2 py-2">{topResult}</td>
                   </tr>
 
                   {isOpen && (
@@ -231,7 +257,7 @@ export default function SingleGameRecords() {
                                 <th className="border px-2 py-1">{def.abbr}</th>
                                 <th className="border px-2 py-1">Date</th>
                                 <th className="border px-2 py-1">Opponent</th>
-                                <th className="border px-2 py-1">Score</th>
+                                <th className="border px-2 py-1">Game Result</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -247,11 +273,27 @@ export default function SingleGameRecords() {
                                   }`}
                                 >
                                   <td className="border px-2 py-1 font-semibold">{idx + 1}</td>
-                                  <td className="border px-2 py-1">{r.playerName}</td>
+                                  <td className="border px-2 py-1">
+                                    <div className="flex items-center justify-center gap-2">
+                                      {r.playerImg && r.playerName !== "—" && r.playerName !== "Unknown" ? (
+                                        <img
+                                          src={r.playerImg}
+                                          alt={r.playerName}
+                                          className="h-7 w-7 rounded-full object-cover"
+                                          loading="lazy"
+                                          onError={(e) => {
+                                            e.currentTarget.onerror = null;
+                                            e.currentTarget.src = FALLBACK_HEADSHOT;
+                                          }}
+                                        />
+                                      ) : null}
+                                      <span>{r.playerName}</span>
+                                    </div>
+                                  </td>
                                   <td className="border px-2 py-1 font-semibold">{r.value}</td>
                                   <td className="border px-2 py-1">{r.date}</td>
                                   <td className="border px-2 py-1">{r.opponent}</td>
-                                  <td className="border px-2 py-1">{r.score}</td>
+                                  <td className="border px-2 py-1">{r.gameResult}</td>
                                 </tr>
                               ))}
                             </tbody>
