@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 
 function absUrl(path) {
   return new URL(path, window.location.origin).toString();
@@ -136,6 +137,7 @@ export default function SingleGameRecords() {
               const game = gameMap.get(String(s.GameID));
               return {
                 value: def.valueFn(s),
+                playerId: String(s.PlayerID),
                 playerName: player ? `${player.FirstName} ${player.LastName}` : "Unknown",
                 playerImg: player?.PlayerID ? `/images/boys/basketball/players/${player.PlayerID}.jpg` : null,
                 date: game ? formatDateFromGame(game) : "Unknown Date",
@@ -152,6 +154,7 @@ export default function SingleGameRecords() {
           while (list.length < 20) {
             list.push({
               value: "—",
+              playerId: null,
               playerName: "—",
               playerImg: null,
               date: "—",
@@ -181,7 +184,7 @@ export default function SingleGameRecords() {
   return (
     <div className="space-y-6 px-4">
       <h1 className="text-2xl font-bold text-center">Single Game Records</h1>
-      <p className="text-center text-sm italic text-gray-600">
+      <p className="-mt-3 text-center text-sm italic text-gray-600">
         Select any record to see the top 20 historical results for that record
       </p>
 
@@ -210,6 +213,7 @@ export default function SingleGameRecords() {
               const isOpen = expandedKey === def.key;
 
               const topPlayer = top?.playerName ?? "—";
+              const topPlayerId = top?.playerId ?? null;
               const topValue = top?.value ?? "—";
               const topDate = top?.date ?? "—";
               const topOpp = top?.opponent ?? "—";
@@ -236,7 +240,18 @@ export default function SingleGameRecords() {
                             }}
                           />
                         ) : null}
-                        <span>{topPlayer}</span>
+
+                        {topPlayerId && topPlayer !== "—" && topPlayer !== "Unknown" ? (
+                          <Link
+                            to={`/athletics/boys/basketball/players/${topPlayerId}`}
+                            className="hover:underline"
+                            onClick={(e) => e.stopPropagation()}
+                          >
+                            {topPlayer}
+                          </Link>
+                        ) : (
+                          <span>{topPlayer}</span>
+                        )}
                       </div>
                     </td>
                     <td className="border px-2 py-2 font-semibold">{topValue}</td>
@@ -287,7 +302,18 @@ export default function SingleGameRecords() {
                                           }}
                                         />
                                       ) : null}
-                                      <span>{r.playerName}</span>
+
+                                      {r.playerId && r.playerName !== "—" && r.playerName !== "Unknown" ? (
+                                        <Link
+                                          to={`/athletics/boys/basketball/players/${r.playerId}`}
+                                          className="hover:underline"
+                                          onClick={(e) => e.stopPropagation()}
+                                        >
+                                          {r.playerName}
+                                        </Link>
+                                      ) : (
+                                        <span>{r.playerName}</span>
+                                      )}
                                     </div>
                                   </td>
                                   <td className="border px-2 py-1 font-semibold">{r.value}</td>
