@@ -74,7 +74,8 @@ function BoysBasketballApp() {
   const [players, setPlayers] = useState([]);
 
   const [menuOpen, setMenuOpen] = useState(false);
-  const [recordsOpen, setRecordsOpen] = useState(false);
+  const [teamStatsOpen, setTeamStatsOpen] = useState(false);
+  const [individualStatsOpen, setIndividualStatsOpen] = useState(false);
 
   const sidebarRef = useRef(null);
 
@@ -137,33 +138,73 @@ function BoysBasketballApp() {
                 Full Year-by-Year Results
               </Link>
 
-              {/* Records vs. Opponents */}
+              {/* Opponent Game History (was Records vs. Opponents) */}
               <div className="border-t pt-4">
                 <Link
                   to="/athletics/boys/basketball/records/opponents"
                   className="block p-3 hover:bg-gray-200 rounded-md text-center"
                 >
-                  Records vs. Opponents
+                  Opponent Game History
                 </Link>
               </div>
 
-              {/* Individual Player Stats */}
+              {/* Team Stats */}
               <div className="border-t pt-4">
                 <button
-                  onClick={() => setRecordsOpen((prev) => !prev)}
+                  onClick={() => setTeamStatsOpen((prev) => !prev)}
                   className="flex items-center justify-between w-full p-3 hover:bg-gray-200 rounded-md"
                 >
-                  <span>Individual Player Stats</span>
+                  <span>Team Stats</span>
                   <span
                     className={`ml-2 inline-block transform transition-transform duration-300 ${
-                      recordsOpen ? "rotate-180" : "rotate-0"
+                      teamStatsOpen ? "rotate-180" : "rotate-0"
                     }`}
                   >
                     ▼
                   </span>
                 </button>
 
-                {recordsOpen && (
+                {teamStatsOpen && (
+                  <div className="ml-4 overflow-hidden transition-all duration-500">
+                    <Link
+                      to="/athletics/boys/basketball/team/full"
+                      className="block px-2 py-1 text-sm hover:bg-gray-200"
+                    >
+                      Full Team Stats
+                    </Link>
+                    <Link
+                      to="/athletics/boys/basketball/records/team"
+                      className="block px-2 py-1 text-sm hover:bg-gray-200"
+                    >
+                      Team Records (Single Game)
+                    </Link>
+                    <Link
+                      to="/athletics/boys/basketball/team/season-records"
+                      className="block px-2 py-1 text-sm hover:bg-gray-200"
+                    >
+                      Team Records (Season)
+                    </Link>
+                  </div>
+                )}
+              </div>
+
+              {/* Individual Stats */}
+              <div className="border-t pt-4">
+                <button
+                  onClick={() => setIndividualStatsOpen((prev) => !prev)}
+                  className="flex items-center justify-between w-full p-3 hover:bg-gray-200 rounded-md"
+                >
+                  <span>Individual Stats</span>
+                  <span
+                    className={`ml-2 inline-block transform transition-transform duration-300 ${
+                      individualStatsOpen ? "rotate-180" : "rotate-0"
+                    }`}
+                  >
+                    ▼
+                  </span>
+                </button>
+
+                {individualStatsOpen && (
                   <div className="ml-4 overflow-hidden transition-all duration-500">
                     <Link
                       to="/athletics/boys/basketball/records/career"
@@ -172,22 +213,16 @@ function BoysBasketballApp() {
                       Full Career Stats
                     </Link>
                     <Link
-                      to="/athletics/boys/basketball/records/season"
-                      className="block px-2 py-1 text-sm hover:bg-gray-200"
-                    >
-                      Season Records
-                    </Link>
-                    <Link
                       to="/athletics/boys/basketball/records/single-game"
                       className="block px-2 py-1 text-sm hover:bg-gray-200"
                     >
                       Single Game Records
                     </Link>
                     <Link
-                      to="/athletics/boys/basketball/records/team"
+                      to="/athletics/boys/basketball/records/season"
                       className="block px-2 py-1 text-sm hover:bg-gray-200"
-                      >
-                      Team Records (Single Game)
+                    >
+                      Season Records
                     </Link>
                   </div>
                 )}
