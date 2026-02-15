@@ -44,14 +44,24 @@ function YearlyResults() {
     Promise.all([
       fetch("/data/boys/basketball/games.json").then((res) => res.json()),
       fetch("/data/boys/basketball/seasons.json").then((res) => res.json()),
+      fetch("/data/boys/basketball/seasonsadjustments.json")
+        .then((res) => (res.ok ? res.json() : []))
+        .catch(() => []),
     ])
-      .then(([gamesData, seasonsData]) => {
-        processSeasonStats(gamesData, seasonsData);
+      .then(([gamesData, seasonsData, adjustmentsData]) => {
+        processSeasonStats(gamesData, seasonsData, adjustmentsData);
       })
       .catch((err) => console.error("Failed to load data:", err));
   }, []);
 
-  const processSeasonStats = (games, seasons) => {
+  const processSeasonStats = (games, seasons, adjustments) => {
+    // Optional adjustments (known season totals for seasons with incomplete game logs)
+    const adjMap = {};
+    (adjustments || []).forEach((a) => {
+      if (a && a.SeasonID != null) {
+        adjMap[String(a.SeasonID)] = a;
+      }
+    });
     const seasonMeta = {};
 
     seasons.forEach((s) => {
@@ -166,6 +176,54 @@ function YearlyResults() {
       }
     });
 
+    // Ensure seasons that exist only in adjustments still appear in the tables
+    Object.keys(adjMap).forEach((seasonKey) => {
+      if (!grouped[seasonKey]) {
+        grouped[seasonKey] = {
+          overallW: 0,
+          overallL: 0,
+          regionW: 0,
+          regionL: 0,
+          homeW: 0,
+          homeL: 0,
+          awayW: 0,
+          awayL: 0,
+          tourneyW: 0,
+          tourneyL: 0,
+          playoffW: 0,
+          playoffL: 0,
+        };
+      }
+    });
+
+    // Apply adjustments (numbers override computed values; null forces an unknown "–" display)
+    const overrideKeys = [
+      "overallW",
+      "overallL",
+      "regionW",
+      "regionL",
+      "homeW",
+      "homeL",
+      "awayW",
+      "awayL",
+      "tourneyW",
+      "tourneyL",
+      "playoffW",
+      "playoffL",
+    ];
+
+    Object.entries(grouped).forEach(([seasonKey, stats]) => {
+      const adj = adjMap[seasonKey];
+      if (!adj) return;
+
+      overrideKeys.forEach((k) => {
+        if (Object.prototype.hasOwnProperty.call(adj, k)) {
+          // Allow number OR null (null means "unknown")
+          stats[k] = adj[k];
+        }
+      });
+    });
+
     // 3. Attach metadata and sort seasons oldest → newest
     const statsArray = Object.entries(grouped).map(([seasonKey, stats]) => {
       const meta = seasonMeta[seasonKey] || {};
@@ -191,9 +249,15 @@ function YearlyResults() {
     setSeasonStats(statsArray);
   };
 
-  const formatRecord = (w, l) => `${w}–${l}`;
+  const formatRecord = (w, l) => {
+    if (w === null || l === null) return "–";
+    if (w === undefined || l === undefined) return "–";
+    return `${w}–${l}`;
+  };
 
   const formatWinPct = (w, l) => {
+    if (w === null || l === null) return "–";
+    if (w === undefined || l === undefined) return "–";
     const total = w + l;
     if (!total) return "–";
     const pct = (w / total) * 100;
@@ -244,20 +308,24 @@ function YearlyResults() {
   };
 
   const calculateTotals = () => {
+    const add = (acc, key, value) => {
+      if (typeof value === "number") acc[key] += value;
+    };
+
     return seasonStats.reduce(
       (acc, s) => {
-        acc.overallW += s.overallW;
-        acc.overallL += s.overallL;
-        acc.regionW += s.regionW;
-        acc.regionL += s.regionL;
-        acc.homeW += s.homeW;
-        acc.homeL += s.homeL;
-        acc.awayW += s.awayW;
-        acc.awayL += s.awayL;
-        acc.tourneyW += s.tourneyW;
-        acc.tourneyL += s.tourneyL;
-        acc.playoffW += s.playoffW;
-        acc.playoffL += s.playoffL;
+        add(acc, "overallW", s.overallW);
+        add(acc, "overallL", s.overallL);
+        add(acc, "regionW", s.regionW);
+        add(acc, "regionL", s.regionL);
+        add(acc, "homeW", s.homeW);
+        add(acc, "homeL", s.homeL);
+        add(acc, "awayW", s.awayW);
+        add(acc, "awayL", s.awayL);
+        add(acc, "tourneyW", s.tourneyW);
+        add(acc, "tourneyL", s.tourneyL);
+        add(acc, "playoffW", s.playoffW);
+        add(acc, "playoffL", s.playoffL);
         return acc;
       },
       {

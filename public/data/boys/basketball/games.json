@@ -3377,50 +3377,6 @@
     "IsComplete": "Yes"
   },
   {
-    "GameID": 20031202,
-    "Opponent": "Memorial Day School",
-    "LocationType": "Home",
-    "GameType": "Non-Region",
-    "Result": "L",
-    "TeamScore": 47,
-    "OpponentScore": 64,
-    "Season": 2003,
-    "IsComplete": "Yes"
-  },
-  {
-    "GameID": 20031205,
-    "Opponent": "Providence Christian Academy",
-    "LocationType": "Home",
-    "GameType": "Non-Region",
-    "Result": "W",
-    "TeamScore": 59,
-    "OpponentScore": 53,
-    "Season": 2003,
-    "IsComplete": "Yes"
-  },
-  {
-    "GameID": 20031212,
-    "Opponent": "Hilton Head Preparatory School",
-    "LocationType": "Away",
-    "GameType": "Tournament",
-    "Result": "L",
-    "TeamScore": 50,
-    "OpponentScore": 68,
-    "Season": 2003,
-    "IsComplete": "Yes"
-  },
-  {
-    "GameID": 20031213,
-    "Opponent": "Hilton Head Christian Academy",
-    "LocationType": "Neutral",
-    "GameType": "Tournament",
-    "Result": "W",
-    "TeamScore": 74,
-    "OpponentScore": 49,
-    "Season": 2003,
-    "IsComplete": "Yes"
-  },
-  {
     "GameID": 20071119,
     "Opponent": "Beaufort Academy",
     "LocationType": "Neutral",
