@@ -134,6 +134,7 @@ function BoysBasketballApp() {
               <Link
                 to="/athletics/boys/basketball/yearly-results"
                 className="p-3 hover:bg-gray-200 rounded-md text-center"
+                onClick={() => setMenuOpen(false)}
               >
                 Full Year-by-Year Results
               </Link>
@@ -143,6 +144,7 @@ function BoysBasketballApp() {
                 <Link
                   to="/athletics/boys/basketball/records/opponents"
                   className="block p-3 hover:bg-gray-200 rounded-md text-center"
+                  onClick={() => setMenuOpen(false)}
                 >
                   Opponent Game History
                 </Link>
@@ -169,18 +171,21 @@ function BoysBasketballApp() {
                     <Link
                       to="/athletics/boys/basketball/team/full"
                       className="block px-2 py-1 text-sm hover:bg-gray-200"
+                      onClick={() => setMenuOpen(false)}
                     >
                       Full Team Stats
                     </Link>
                     <Link
                       to="/athletics/boys/basketball/records/team"
                       className="block px-2 py-1 text-sm hover:bg-gray-200"
+                      onClick={() => setMenuOpen(false)}
                     >
                       Team Records (Single Game)
                     </Link>
                     <Link
                       to="/athletics/boys/basketball/team/season-records"
                       className="block px-2 py-1 text-sm hover:bg-gray-200"
+                      onClick={() => setMenuOpen(false)}
                     >
                       Team Records (Season)
                     </Link>
@@ -209,18 +214,21 @@ function BoysBasketballApp() {
                     <Link
                       to="/athletics/boys/basketball/records/career"
                       className="block px-2 py-1 text-sm hover:bg-gray-200"
+                      onClick={() => setMenuOpen(false)}
                     >
                       Full Career Stats
                     </Link>
                     <Link
                       to="/athletics/boys/basketball/records/single-game"
                       className="block px-2 py-1 text-sm hover:bg-gray-200"
+                      onClick={() => setMenuOpen(false)}
                     >
                       Single Game Records
                     </Link>
                     <Link
                       to="/athletics/boys/basketball/records/season"
                       className="block px-2 py-1 text-sm hover:bg-gray-200"
+                      onClick={() => setMenuOpen(false)}
                     >
                       Season Records
                     </Link>
