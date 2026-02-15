@@ -218,10 +218,13 @@ export default function SeasonRecords() {
         const seasonMap = {};
 
         for (const g of playerStats) {
-          if (!g || g.PlayerID == null || g.Season == null) continue;
+          if (!g || g.PlayerID == null) continue;
+
+          const seasonIdRaw = g.SeasonID ?? g.Season;
+          if (seasonIdRaw == null) continue;
 
           const pid = String(g.PlayerID);
-          const season = String(g.Season);
+          const season = String(seasonIdRaw);
           const key = `${pid}-${season}`;
 
           if (!seasonMap[key]) {
@@ -248,8 +251,21 @@ export default function SeasonRecords() {
 
           const entry = seasonMap[key];
 
-          // Match your existing SeasonRecords logic: count GP only when minutes > 0
-          const played = g.MinutesPlayed != null && Number(g.MinutesPlayed) > 0;
+          // Count a game as played if MinutesPlayed > 0 (when available),
+          // otherwise if the row shows any recorded participation (any stat or attempt > 0).
+          const mp = Number(g.MinutesPlayed);
+          const hasMinutes = Number.isFinite(mp) && mp > 0;
+          const participationSum =
+            safeNum(g.Points) +
+            safeNum(g.Rebounds) +
+            safeNum(g.Assists) +
+            safeNum(g.Steals) +
+            safeNum(g.Blocks) +
+            safeNum(g.Turnovers) +
+            safeNum(g.TwoPA) +
+            safeNum(g.ThreePA) +
+            safeNum(g.FTA);
+          const played = hasMinutes || participationSum > 0;
           if (played) entry.GamesPlayed += 1;
 
           // Sum stats
