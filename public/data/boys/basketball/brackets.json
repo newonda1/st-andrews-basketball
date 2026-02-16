@@ -1,0 +1,58 @@
+
+
+{
+  "2024": {
+    "region": {
+      "title": "2024 Region Tournament",
+      "teams": {
+        "standrews": {
+          "name": "St. Andrew’s School",
+          "card": "/images/boys/basketball/teams/standrews.svg"
+        },
+        "team2": {
+          "name": "Team 2",
+          "card": "/images/boys/basketball/teams/team2.svg"
+        },
+        "team3": {
+          "name": "Team 3",
+          "card": "/images/boys/basketball/teams/team3.svg"
+        },
+        "team4": {
+          "name": "Team 4",
+          "card": "/images/boys/basketball/teams/team4.svg"
+        },
+        "team5": {
+          "name": "Team 5",
+          "card": "/images/boys/basketball/teams/team5.svg"
+        }
+      },
+      "games": {
+        "playIn": {
+          "top": { "teamId": "team4", "score": null },
+          "bottom": { "teamId": "team5", "score": null },
+          "winner": null
+        },
+        "semi1": {
+          "top": { "teamId": "standrews", "score": null },
+          "bottom": { "teamId": null, "score": null },
+          "winner": null
+        },
+        "semi2": {
+          "top": { "teamId": "team2", "score": null },
+          "bottom": { "teamId": "team3", "score": null },
+          "winner": null
+        },
+        "final": {
+          "top": { "teamId": null, "score": null },
+          "bottom": { "teamId": null, "score": null },
+          "winner": null
+        }
+      }
+    },
+    "state": {
+      "title": "2024 State Tournament",
+      "teams": {},
+      "games": {}
+    }
+  }
+}
