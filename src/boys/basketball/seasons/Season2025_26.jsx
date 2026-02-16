@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import RegionBracket5SVG from "../components/RegionBracket5SVG";
+import StateBracket12SVG from "../components/StateBracket12SVG";
 
 function Season2025_26() {
   const [games, setGames] = useState([]);
@@ -679,6 +680,21 @@ function Season2025_26() {
         ) : (
           <p className="text-gray-600">
             Region bracket data is not available for this season (missing key "{String(SEASON_ID)}" in brackets.json).
+          </p>
+        )}
+      </section>
+
+      {/* 2.6 STATE TOURNAMENT BRACKET */}
+      <section className="space-y-3">
+        <h2 className="text-2xl font-semibold">🏆 State Tournament Bracket</h2>
+
+        {bracketsData === null ? (
+          <p className="text-gray-600">Loading state bracket…</p>
+        ) : bracketsData?.[String(SEASON_ID)]?.state ? (
+          <StateBracket12SVG bracket={bracketsData[String(SEASON_ID)].state} />
+        ) : (
+          <p className="text-gray-600">
+            State bracket data is not available for this season (missing key "{String(SEASON_ID)}" in brackets.json).
           </p>
         )}
       </section>
