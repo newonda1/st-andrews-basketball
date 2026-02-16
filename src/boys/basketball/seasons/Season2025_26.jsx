@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
+import RegionBracket5SVG from "../components/RegionBracket5SVG";
 
 function Season2025_26() {
   const [games, setGames] = useState([]);
@@ -12,6 +13,7 @@ function Season2025_26() {
   });
   const [showPerGame, setShowPerGame] = useState(false);
   const [showTeamTotals, setShowTeamTotals] = useState(false);
+  const [bracketsData, setBracketsData] = useState(null);
 
   const SEASON_ID = 2025; // 2025–26 season
 
@@ -21,10 +23,12 @@ function Season2025_26() {
       const gamesRes = await fetch("/data/boys/basketball/games.json");
       const statsRes = await fetch("/data/boys/basketball/playergamestats.json");
       const playersRes = await fetch("/data/boys/basketball/players.json");
+      const bracketsRes = await fetch("/data/boys/basketball/brackets.json");
 
       const gamesData = await gamesRes.json();
       const statsData = await statsRes.json();
       const playersData = await playersRes.json();
+      const bracketsJson = await bracketsRes.json();
 
       const seasonGames = gamesData
         .filter((g) => g.Season === SEASON_ID)
@@ -38,6 +42,7 @@ function Season2025_26() {
       setGames(seasonGames);
       setPlayerStats(seasonStats);
       setPlayers(playersData);
+      setBracketsData(bracketsJson);
     }
 
     fetchData();
@@ -661,6 +666,21 @@ function Season2025_26() {
             </div>
           );
         })()}
+      </section>
+
+      {/* 2.5 REGION TOURNAMENT BRACKET */}
+      <section className="space-y-3">
+        <h2 className="text-2xl font-semibold">🏆 Region Tournament Bracket</h2>
+
+        {bracketsData === null ? (
+          <p className="text-gray-600">Loading region bracket…</p>
+        ) : bracketsData?.[String(SEASON_ID)]?.region ? (
+          <RegionBracket5SVG bracket={bracketsData[String(SEASON_ID)].region} />
+        ) : (
+          <p className="text-gray-600">
+            Region bracket data is not available for this season (missing key "{String(SEASON_ID)}" in brackets.json).
+          </p>
+        )}
       </section>
 
       {/* 3. PLAYER STATS TABLE */}
