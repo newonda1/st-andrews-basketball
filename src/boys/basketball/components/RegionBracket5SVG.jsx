@@ -152,10 +152,19 @@ function RegionBracket5SVG({ bracket }) {
     const bubbleR = 10;
     const bubbleY = y + (cardH - bubbleH) / 2;
 
-    // NOTE: Most of your team-card SVGs have a left logo block ~80px wide.
-    // Place seed just to the right of that block, and score flush-right inside the card.
-    const seedX = x + 92;
-    const scoreX = x + cardW - 12 - bubbleW;
+    // Reserve space inside the card so bubbles don't overlap the team-card image/text.
+    const leftInset = bubbleW + 18;   // space for seed bubble + gap
+    const rightInset = bubbleW + 18;  // space for score bubble + gap
+
+    // Seed bubble: inside card, left of logo
+    const seedX = x + 10;
+
+    // Score bubble: inside card, flush-right
+    const scoreX = x + cardW - 10 - bubbleW;
+
+    // Team-card image is shifted/shrunk to avoid overlapping bubbles
+    const imgX = x + leftInset;
+    const imgW = cardW - leftInset - rightInset;
 
     return (
       <g>
@@ -177,22 +186,22 @@ function RegionBracket5SVG({ bracket }) {
         {href ? (
           <image
             href={href}
-            x={x}
+            x={imgX}
             y={y}
-            width={cardW}
+            width={imgW}
             height={cardH}
             preserveAspectRatio="xMidYMid meet"
           />
         ) : (
           <g>
             <rect x={x} y={y} width={cardW} height={cardH} rx={14} fill="rgba(245,247,250,1)" />
-            <text x={x + 14} y={y + 38} fontSize="16" fill="rgba(40,44,52,0.9)">
+            <text x={imgX + 10} y={y + 38} fontSize="16" fill="rgba(40,44,52,0.9)">
               {teamId ? teams[teamId]?.name ?? teamId : "TBD"}
             </text>
           </g>
         )}
 
-        {/* Seed bubble (inside card, right of logo) */}
+        {/* Seed bubble (inside card, left of logo) */}
         {seed !== null && seed !== undefined && seed !== "" && (
           <g>
             <rect
