@@ -68,18 +68,58 @@ function RegionBracket5SVG({ bracket }) {
     return g?.winner ?? null;
   };
 
-  // Resolve placeholder slots that come from earlier winners
+  // Resolve placeholder slots that come from earlier winners + infer seeds by bracket position
   const resolved = useMemo(() => {
-    const playWinner = winnerOf("playIn");
-    const semi1BottomTeam = playWinner;
+    const playTopTeam = games.playIn?.top?.teamId ?? null;     // seed 4
+    const playBotTeam = games.playIn?.bottom?.teamId ?? null;  // seed 5
 
-    const semi1Winner = winnerOf("semi1");
-    const semi2Winner = winnerOf("semi2");
+    const semi1TopTeam = games.semi1?.top?.teamId ?? null;     // seed 1
+    const semi2TopTeam = games.semi2?.top?.teamId ?? null;     // seed 2
+    const semi2BotTeam = games.semi2?.bottom?.teamId ?? null;  // seed 3
+
+    const playWinnerTeam = winnerOf("playIn");
+    const playWinnerSeed =
+      playWinnerTeam === playTopTeam ? 4 :
+      playWinnerTeam === playBotTeam ? 5 :
+      null;
+
+    const semi1BottomTeam = playWinnerTeam; // 1 plays the play-in winner
+    const semi1BottomSeed = playWinnerSeed;
+
+    const semi1WinnerTeam = winnerOf("semi1");
+    const semi1WinnerSeed =
+      semi1WinnerTeam === semi1TopTeam ? 1 :
+      semi1WinnerTeam === semi1BottomTeam ? semi1BottomSeed :
+      null;
+
+    const semi2WinnerTeam = winnerOf("semi2");
+    const semi2WinnerSeed =
+      semi2WinnerTeam === semi2TopTeam ? 2 :
+      semi2WinnerTeam === semi2BotTeam ? 3 :
+      null;
 
     return {
+      // Play-in slots
+      playTopTeam,
+      playBotTeam,
+      playTopSeed: 4,
+      playBotSeed: 5,
+
+      // Semis slots
+      semi1TopTeam,
+      semi1TopSeed: 1,
       semi1BottomTeam,
-      finalTopTeam: semi1Winner,
-      finalBotTeam: semi2Winner,
+      semi1BottomSeed,
+      semi2TopTeam,
+      semi2TopSeed: 2,
+      semi2BotTeam,
+      semi2BotSeed: 3,
+
+      // Finals slots (derived)
+      finalTopTeam: semi1WinnerTeam,
+      finalTopSeed: semi1WinnerSeed,
+      finalBotTeam: semi2WinnerTeam,
+      finalBotSeed: semi2WinnerSeed,
     };
   }, [games]);
 
@@ -98,14 +138,29 @@ function RegionBracket5SVG({ bracket }) {
     return !!teamId && g?.winner === teamId;
   };
 
-  const Card = ({ x, y, teamId, score, highlight }) => {
+  const Card = ({ x, y, teamId, seed, score, highlight }) => {
     const href = cardPath(teamId);
 
     const stroke = highlight ? "rgba(25,115,232,0.9)" : "rgba(120,130,140,0.45)";
     const strokeW = highlight ? 2.5 : 1.25;
 
+    const winnerFill = highlight ? "rgba(25,115,232,0.08)" : "transparent";
+
+    // Bubble geometry (seed left, score right)
+    const bubbleW = 34;
+    const bubbleH = 36;
+    const bubbleR = 10;
+    const bubbleY = y + 14;
+
+    const seedX = x - (bubbleW + 10);
+    const scoreX = x + cardW + 10;
+
     return (
       <g>
+        {/* subtle winner background */}
+        <rect x={x} y={y} width={cardW} height={cardH} rx={14} fill={winnerFill} />
+
+        {/* outline */}
         <rect
           x={x}
           y={y}
@@ -135,23 +190,50 @@ function RegionBracket5SVG({ bracket }) {
           </g>
         )}
 
-        {score !== null && score !== undefined && score !== "" && (
+        {/* Seed bubble (left of card) */}
+        {seed !== null && seed !== undefined && seed !== "" && (
           <g>
             <rect
-              x={x + cardW + 10}
-              y={y + 14}
-              width={34}
-              height={36}
-              rx={10}
+              x={seedX}
+              y={bubbleY}
+              width={bubbleW}
+              height={bubbleH}
+              rx={bubbleR}
               fill="rgba(255,255,255,0.9)"
               stroke="rgba(120,130,140,0.35)"
               strokeWidth="1"
             />
             <text
-              x={x + cardW + 27}
-              y={y + 39}
+              x={seedX + bubbleW / 2}
+              y={bubbleY + 25}
               textAnchor="middle"
-              fontSize="16"
+              fontSize="14"
+              fontWeight="700"
+              fill="rgba(30,34,40,0.95)"
+            >
+              {seed}
+            </text>
+          </g>
+        )}
+
+        {/* Score bubble (right of card) */}
+        {score !== null && score !== undefined && score !== "" && (
+          <g>
+            <rect
+              x={scoreX}
+              y={bubbleY}
+              width={bubbleW}
+              height={bubbleH}
+              rx={bubbleR}
+              fill="rgba(255,255,255,0.9)"
+              stroke="rgba(120,130,140,0.35)"
+              strokeWidth="1"
+            />
+            <text
+              x={scoreX + bubbleW / 2}
+              y={bubbleY + 25}
+              textAnchor="middle"
+              fontSize="14"
               fontWeight="700"
               fill="rgba(30,34,40,0.95)"
             >
@@ -196,6 +278,7 @@ function RegionBracket5SVG({ bracket }) {
             x={x0}
             y={yPlayTop}
             teamId={games.playIn?.top?.teamId ?? null}
+            seed={resolved.playTopSeed}
             score={scoreFor("playIn", "top")}
             highlight={isWinner("playIn", games.playIn?.top?.teamId)}
           />
@@ -203,6 +286,7 @@ function RegionBracket5SVG({ bracket }) {
             x={x0}
             y={yPlayBot}
             teamId={games.playIn?.bottom?.teamId ?? null}
+            seed={resolved.playBotSeed}
             score={scoreFor("playIn", "bottom")}
             highlight={isWinner("playIn", games.playIn?.bottom?.teamId)}
           />
@@ -212,6 +296,7 @@ function RegionBracket5SVG({ bracket }) {
             x={x1}
             y={ySemi1Top}
             teamId={games.semi1?.top?.teamId ?? null}
+            seed={resolved.semi1TopSeed}
             score={scoreFor("semi1", "top")}
             highlight={isWinner("semi1", games.semi1?.top?.teamId)}
           />
@@ -219,6 +304,7 @@ function RegionBracket5SVG({ bracket }) {
             x={x1}
             y={ySemi1Bot}
             teamId={resolved.semi1BottomTeam}
+            seed={resolved.semi1BottomSeed}
             score={scoreFor("semi1", "bottom")}
             highlight={isWinner("semi1", resolved.semi1BottomTeam)}
           />
@@ -228,6 +314,7 @@ function RegionBracket5SVG({ bracket }) {
             x={x1}
             y={ySemi2Top}
             teamId={games.semi2?.top?.teamId ?? null}
+            seed={resolved.semi2TopSeed}
             score={scoreFor("semi2", "top")}
             highlight={isWinner("semi2", games.semi2?.top?.teamId)}
           />
@@ -235,6 +322,7 @@ function RegionBracket5SVG({ bracket }) {
             x={x1}
             y={ySemi2Bot}
             teamId={games.semi2?.bottom?.teamId ?? null}
+            seed={resolved.semi2BotSeed}
             score={scoreFor("semi2", "bottom")}
             highlight={isWinner("semi2", games.semi2?.bottom?.teamId)}
           />
@@ -244,6 +332,7 @@ function RegionBracket5SVG({ bracket }) {
             x={x2}
             y={yFinalTop}
             teamId={resolved.finalTopTeam}
+            seed={resolved.finalTopSeed}
             score={scoreFor("final", "top")}
             highlight={isWinner("final", resolved.finalTopTeam)}
           />
@@ -251,6 +340,7 @@ function RegionBracket5SVG({ bracket }) {
             x={x2}
             y={yFinalBot}
             teamId={resolved.finalBotTeam}
+            seed={resolved.finalBotSeed}
             score={scoreFor("final", "bottom")}
             highlight={isWinner("final", resolved.finalBotTeam)}
           />
