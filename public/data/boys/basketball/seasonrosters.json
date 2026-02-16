@@ -14,6 +14,25 @@
       { "PlayerID": 197810, "JerseyNumber": 10 }
     ]
   },
+  {
+    "SeasonID": "2024-25",
+    "Players": [
+      { "PlayerID": 202007, "JerseyNumber": 2 },
+      { "PlayerID": 202003, "JerseyNumber": 3 },
+      { "PlayerID": 202108, "JerseyNumber": 4 },
+      { "PlayerID": 202006, "JerseyNumber": 5 },
+      { "PlayerID": 202202, "JerseyNumber": 10 },
+      { "PlayerID": 202105, "JerseyNumber": 11 },
+      { "PlayerID": 202103, "JerseyNumber": 12 },
+      { "PlayerID": 202203, "JerseyNumber": 13 },
+      { "PlayerID": 202205, "JerseyNumber": 15 },
+      { "PlayerID": 202102, "JerseyNumber": 15 },
+      { "PlayerID": 202106, "JerseyNumber": 20 },
+      { "PlayerID": 202204, "JerseyNumber": 21 },
+      { "PlayerID": 202001, "JerseyNumber": 24 },
+      { "PlayerID": 202201, "JerseyNumber": 25 }
+    ]
+  },
    {
     "SeasonID": "2024-25",
     "Players": [
