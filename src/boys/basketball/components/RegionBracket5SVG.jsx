@@ -24,14 +24,14 @@ import React, { useMemo } from "react";
  */
 function RegionBracket5SVG({ bracket }) {
   // --- Layout constants (tweak once; every season stays consistent) ---
-  const cardW = 260;
+  const cardW = 320;
   const cardH = 64;
   const colGap = 90;
   const rowGap = 28;
 
   // SVG canvas size (viewBox) — responsive via width: 100%
   // Columns: Play-in (col0), Semis (col1), Final (col2)
-  const W = 3 * cardW + 2 * colGap + 80;
+  const W = 3 * cardW + 2 * colGap + 200;
   const leftPad = 40;
   const topPad = 40;
 
@@ -138,7 +138,7 @@ function RegionBracket5SVG({ bracket }) {
         {score !== null && score !== undefined && score !== "" && (
           <g>
             <rect
-              x={x + cardW - 44}
+              x={x + cardW + 10}
               y={y + 14}
               width={34}
               height={36}
@@ -148,7 +148,7 @@ function RegionBracket5SVG({ bracket }) {
               strokeWidth="1"
             />
             <text
-              x={x + cardW - 27}
+              x={x + cardW + 27}
               y={y + 39}
               textAnchor="middle"
               fontSize="16"
