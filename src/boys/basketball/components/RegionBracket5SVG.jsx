@@ -31,7 +31,7 @@ function RegionBracket5SVG({ bracket }) {
 
   // SVG canvas size (viewBox) — responsive via width: 100%
   // Columns: Play-in (col0), Semis (col1), Final (col2)
-  const W = 3 * cardW + 2 * colGap + 200;
+  const W = 3 * cardW + 2 * colGap + 120;
   const leftPad = 40;
   const topPad = 40;
 
@@ -146,14 +146,16 @@ function RegionBracket5SVG({ bracket }) {
 
     const winnerFill = highlight ? "rgba(25,115,232,0.08)" : "transparent";
 
-    // Bubble geometry (seed left, score right)
+    // Bubble geometry (seed + score INSIDE the card)
     const bubbleW = 34;
-    const bubbleH = 36;
+    const bubbleH = 32;
     const bubbleR = 10;
-    const bubbleY = y + 14;
+    const bubbleY = y + (cardH - bubbleH) / 2;
 
-    const seedX = x - (bubbleW + 10);
-    const scoreX = x + cardW + 10;
+    // NOTE: Most of your team-card SVGs have a left logo block ~80px wide.
+    // Place seed just to the right of that block, and score flush-right inside the card.
+    const seedX = x + 92;
+    const scoreX = x + cardW - 12 - bubbleW;
 
     return (
       <g>
@@ -190,7 +192,7 @@ function RegionBracket5SVG({ bracket }) {
           </g>
         )}
 
-        {/* Seed bubble (left of card) */}
+        {/* Seed bubble (inside card, right of logo) */}
         {seed !== null && seed !== undefined && seed !== "" && (
           <g>
             <rect
@@ -205,7 +207,7 @@ function RegionBracket5SVG({ bracket }) {
             />
             <text
               x={seedX + bubbleW / 2}
-              y={bubbleY + 25}
+              y={bubbleY + bubbleH / 2 + 5}
               textAnchor="middle"
               fontSize="14"
               fontWeight="700"
@@ -216,7 +218,7 @@ function RegionBracket5SVG({ bracket }) {
           </g>
         )}
 
-        {/* Score bubble (right of card) */}
+        {/* Score bubble (inside card, right of team name) */}
         {score !== null && score !== undefined && score !== "" && (
           <g>
             <rect
@@ -231,7 +233,7 @@ function RegionBracket5SVG({ bracket }) {
             />
             <text
               x={scoreX + bubbleW / 2}
-              y={bubbleY + 25}
+              y={bubbleY + bubbleH / 2 + 5}
               textAnchor="middle"
               fontSize="14"
               fontWeight="700"
