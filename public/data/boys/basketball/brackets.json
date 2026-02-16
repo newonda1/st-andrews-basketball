@@ -57,7 +57,7 @@
   },
   "2025": {
     "region": {
-      "title": "2025 Region Tournament",
+      "title": "2025-26 Region Tournament",
       "teams": {
         "standrews": {
           "name": "St. Andrew’s",
@@ -104,7 +104,7 @@
       }
     },
     "state": {
-      "title": "2025 State Tournament",
+      "title": "2025-26 State Tournament",
       "teams": {
         "brookwood": { "name": "Brookwood", "seed": 1, "card": "/images/boys/basketball/teams/brookwood.svg" },
         "standrews": { "name": "St. Andrew’s", "seed": 2, "card": "/images/boys/basketball/teams/standrews.svg" },
