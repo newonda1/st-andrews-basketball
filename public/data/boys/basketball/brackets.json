@@ -54,5 +54,59 @@
       "teams": {},
       "games": {}
     }
+  },
+  "2025": {
+    "region": {
+      "title": "2025 Region Tournament",
+      "teams": {
+        "standrews": {
+          "name": "St. Andrew’s",
+          "card": "/images/boys/basketball/teams/standrews.svg"
+        },
+        "westminster": {
+          "name": "Westminster",
+          "card": "/images/boys/basketball/teams/westminster.svg"
+        },
+        "pinewood": {
+          "name": "Pinewood",
+          "card": "/images/boys/basketball/teams/pinewood.svg"
+        },
+        "frederica": {
+          "name": "Frederica",
+          "card": "/images/boys/basketball/teams/frederica.svg"
+        },
+        "bulloch": {
+          "name": "Bulloch",
+          "card": "/images/boys/basketball/teams/bulloch.svg"
+        }
+      },
+      "games": {
+        "playIn": {
+          "top": { "teamId": "westminster", "score": 55 },
+          "bottom": { "teamId": "pinewood", "score": 62 },
+          "winner": "pinewood"
+        },
+        "semi1": {
+          "top": { "teamId": "standrews", "score": 75 },
+          "bottom": { "teamId": null, "score": 44 },
+          "winner": "standrews"
+        },
+        "semi2": {
+          "top": { "teamId": "frederica", "score": 54 },
+          "bottom": { "teamId": "bulloch", "score": 40 },
+          "winner": "frederica"
+        },
+        "final": {
+          "top": { "teamId": null, "score": 61 },
+          "bottom": { "teamId": null, "score": 48 },
+          "winner": "standrews"
+        }
+      }
+    },
+    "state": {
+      "title": "2025 State Tournament",
+      "teams": {},
+      "games": {}
+    }
   }
 }
