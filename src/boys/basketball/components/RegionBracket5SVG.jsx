@@ -1,0 +1,284 @@
+import React, { useMemo } from "react";
+
+/**
+ * RegionBracket5SVG
+ * Renders a 5-team region tournament bracket:
+ * - Play-in: 4 vs 5
+ * - Semifinals: 1 vs (4/5 winner) and 2 vs 3
+ * - Final: winners meet
+ *
+ * Expects a `bracket` object shaped like:
+ * {
+ *   title: "2025 Region Tournament",
+ *   teams: { teamId: { name, card } },
+ *   games: {
+ *     playIn: { top:{teamId,score}, bottom:{teamId,score}, winner },
+ *     semi1:  { top:{teamId,score}, bottom:{teamId,score}, winner },
+ *     semi2:  { top:{teamId,score}, bottom:{teamId,score}, winner },
+ *     final:  { top:{teamId,score}, bottom:{teamId,score}, winner }
+ *   }
+ * }
+ *
+ * Team "card" should be a public URL path, e.g.:
+ * "/images/boys/basketball/teams/standrews.svg"
+ */
+function RegionBracket5SVG({ bracket }) {
+  // --- Layout constants (tweak once; every season stays consistent) ---
+  const cardW = 260;
+  const cardH = 64;
+  const colGap = 90;
+  const rowGap = 28;
+
+  // SVG canvas size (viewBox) — responsive via width: 100%
+  // Columns: Play-in (col0), Semis (col1), Final (col2)
+  const W = 3 * cardW + 2 * colGap + 80;
+  const leftPad = 40;
+  const topPad = 40;
+
+  // Row positions (top-left y of each card)
+  // Play-in
+  const yPlayTop = topPad + 0;
+  const yPlayBot = yPlayTop + cardH + rowGap;
+
+  // Semis: Semi1 above, Semi2 below
+  const ySemi1Top = topPad + 0;
+  const ySemi1Bot = ySemi1Top + cardH + rowGap;
+
+  const ySemi2Top = topPad + 2 * (cardH + rowGap) + 40;
+  const ySemi2Bot = ySemi2Top + cardH + rowGap;
+
+  // Final sits between the two semis
+  const yFinalTop = topPad + (cardH + rowGap) + 20;
+  const yFinalBot = yFinalTop + cardH + rowGap;
+
+  // Column x positions
+  const x0 = leftPad;
+  const x1 = x0 + cardW + colGap;
+  const x2 = x1 + cardW + colGap;
+
+  // Overall canvas height
+  const H = ySemi2Bot + cardH + topPad;
+
+  const teams = bracket?.teams ?? {};
+  const games = bracket?.games ?? {};
+
+  // Helper: resolve winner teamId for a given game key
+  const winnerOf = (gameKey) => {
+    const g = games?.[gameKey];
+    return g?.winner ?? null;
+  };
+
+  // Resolve placeholder slots that come from earlier winners
+  const resolved = useMemo(() => {
+    const playWinner = winnerOf("playIn");
+    const semi1BottomTeam = playWinner;
+
+    const semi1Winner = winnerOf("semi1");
+    const semi2Winner = winnerOf("semi2");
+
+    return {
+      semi1BottomTeam,
+      finalTopTeam: semi1Winner,
+      finalBotTeam: semi2Winner,
+    };
+  }, [games]);
+
+  const cardPath = (teamId) => (teamId && teams[teamId]?.card ? teams[teamId].card : null);
+
+  const scoreFor = (gameKey, side) => {
+    const g = games?.[gameKey];
+    if (!g) return null;
+    const obj = g?.[side];
+    if (!obj) return null;
+    return obj.score ?? null;
+  };
+
+  const isWinner = (gameKey, teamId) => {
+    const g = games?.[gameKey];
+    return !!teamId && g?.winner === teamId;
+  };
+
+  const Card = ({ x, y, teamId, score, highlight }) => {
+    const href = cardPath(teamId);
+
+    const stroke = highlight ? "rgba(25,115,232,0.9)" : "rgba(120,130,140,0.45)";
+    const strokeW = highlight ? 2.5 : 1.25;
+
+    return (
+      <g>
+        <rect
+          x={x}
+          y={y}
+          width={cardW}
+          height={cardH}
+          rx={14}
+          fill="transparent"
+          stroke={stroke}
+          strokeWidth={strokeW}
+        />
+
+        {href ? (
+          <image
+            href={href}
+            x={x}
+            y={y}
+            width={cardW}
+            height={cardH}
+            preserveAspectRatio="xMidYMid meet"
+          />
+        ) : (
+          <g>
+            <rect x={x} y={y} width={cardW} height={cardH} rx={14} fill="rgba(245,247,250,1)" />
+            <text x={x + 14} y={y + 38} fontSize="16" fill="rgba(40,44,52,0.9)">
+              {teamId ? teams[teamId]?.name ?? teamId : "TBD"}
+            </text>
+          </g>
+        )}
+
+        {score !== null && score !== undefined && score !== "" && (
+          <g>
+            <rect
+              x={x + cardW - 44}
+              y={y + 14}
+              width={34}
+              height={36}
+              rx={10}
+              fill="rgba(255,255,255,0.9)"
+              stroke="rgba(120,130,140,0.35)"
+              strokeWidth="1"
+            />
+            <text
+              x={x + cardW - 27}
+              y={y + 39}
+              textAnchor="middle"
+              fontSize="16"
+              fontWeight="700"
+              fill="rgba(30,34,40,0.95)"
+            >
+              {score}
+            </text>
+          </g>
+        )}
+      </g>
+    );
+  };
+
+  // connector helper: from right-middle of one card to left-middle of another, with elbow
+  const elbow = (xA, yA, xB, yB) => {
+    const midX = (xA + xB) / 2;
+    return `M ${xA} ${yA} L ${midX} ${yA} L ${midX} ${yB} L ${xB} ${yB}`;
+  };
+
+  const lineStyle = {
+    fill: "none",
+    stroke: "rgba(90,100,110,0.65)",
+    strokeWidth: 2,
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+  };
+
+  return (
+    <div style={{ width: "100%", overflowX: "auto" }}>
+      <div style={{ minWidth: 820, padding: "8px 0" }}>
+        <div style={{ fontWeight: 700, marginBottom: 8 }}>
+          {bracket?.title ?? "Region Tournament"}
+        </div>
+
+        <svg
+          viewBox={`0 0 ${W} ${H}`}
+          width="100%"
+          height="auto"
+          role="img"
+          aria-label={bracket?.title ?? "Region Tournament Bracket"}
+        >
+          {/* PLAY-IN (4 vs 5) */}
+          <Card
+            x={x0}
+            y={yPlayTop}
+            teamId={games.playIn?.top?.teamId ?? null}
+            score={scoreFor("playIn", "top")}
+            highlight={isWinner("playIn", games.playIn?.top?.teamId)}
+          />
+          <Card
+            x={x0}
+            y={yPlayBot}
+            teamId={games.playIn?.bottom?.teamId ?? null}
+            score={scoreFor("playIn", "bottom")}
+            highlight={isWinner("playIn", games.playIn?.bottom?.teamId)}
+          />
+
+          {/* SEMI 1 (1 vs play-in winner) */}
+          <Card
+            x={x1}
+            y={ySemi1Top}
+            teamId={games.semi1?.top?.teamId ?? null}
+            score={scoreFor("semi1", "top")}
+            highlight={isWinner("semi1", games.semi1?.top?.teamId)}
+          />
+          <Card
+            x={x1}
+            y={ySemi1Bot}
+            teamId={resolved.semi1BottomTeam}
+            score={scoreFor("semi1", "bottom")}
+            highlight={isWinner("semi1", resolved.semi1BottomTeam)}
+          />
+
+          {/* SEMI 2 (2 vs 3) */}
+          <Card
+            x={x1}
+            y={ySemi2Top}
+            teamId={games.semi2?.top?.teamId ?? null}
+            score={scoreFor("semi2", "top")}
+            highlight={isWinner("semi2", games.semi2?.top?.teamId)}
+          />
+          <Card
+            x={x1}
+            y={ySemi2Bot}
+            teamId={games.semi2?.bottom?.teamId ?? null}
+            score={scoreFor("semi2", "bottom")}
+            highlight={isWinner("semi2", games.semi2?.bottom?.teamId)}
+          />
+
+          {/* FINAL */}
+          <Card
+            x={x2}
+            y={yFinalTop}
+            teamId={resolved.finalTopTeam}
+            score={scoreFor("final", "top")}
+            highlight={isWinner("final", resolved.finalTopTeam)}
+          />
+          <Card
+            x={x2}
+            y={yFinalBot}
+            teamId={resolved.finalBotTeam}
+            score={scoreFor("final", "bottom")}
+            highlight={isWinner("final", resolved.finalBotTeam)}
+          />
+
+          {/* CONNECTORS */}
+          <path d={elbow(x0 + cardW, yPlayTop + cardH / 2, x1, ySemi1Bot + cardH / 2)} {...lineStyle} />
+          <path d={elbow(x0 + cardW, yPlayBot + cardH / 2, x1, ySemi1Bot + cardH / 2)} {...lineStyle} />
+
+          <path d={elbow(x1 + cardW, ySemi1Top + cardH / 2, x2, yFinalTop + cardH / 2)} {...lineStyle} />
+          <path d={elbow(x1 + cardW, ySemi1Bot + cardH / 2, x2, yFinalTop + cardH / 2)} {...lineStyle} />
+
+          <path d={elbow(x1 + cardW, ySemi2Top + cardH / 2, x2, yFinalBot + cardH / 2)} {...lineStyle} />
+          <path d={elbow(x1 + cardW, ySemi2Bot + cardH / 2, x2, yFinalBot + cardH / 2)} {...lineStyle} />
+
+          <text x={x0} y={topPad - 14} fontSize="14" fill="rgba(60,70,80,0.85)" fontWeight="700">
+            Play-In (4 vs 5)
+          </text>
+          <text x={x1} y={topPad - 14} fontSize="14" fill="rgba(60,70,80,0.85)" fontWeight="700">
+            Semifinals
+          </text>
+          <text x={x2} y={topPad - 14} fontSize="14" fill="rgba(60,70,80,0.85)" fontWeight="700">
+            Championship
+          </text>
+        </svg>
+      </div>
+    </div>
+  );
+}
+
+export { RegionBracket5SVG };
+export default RegionBracket5SVG;
