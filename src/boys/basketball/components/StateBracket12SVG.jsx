@@ -64,17 +64,18 @@ function StateBracket12SVG({ bracket }) {
   // R1 has 8 team slots (4 games)
   const yR1 = Array.from({ length: 8 }, (_, i) => topPad + i * (cardH + rowGap));
 
-  // Quarterfinal slots align with R1 groupings (top-down: qf_4, qf_3, qf_2, qf_1)
+  // Quarterfinal slots align with R1 order:
+  // Top-down: qf_1 (1 vs w5/12), qf_4 (4 vs w8/9), qf_3 (3 vs w6/11), qf_2 (2 vs w7/10)
   const yQF = [
-    yR1[0], yR1[1], // qf_4 (4 vs winner 5/12)
-    yR1[2], yR1[3], // qf_3
-    yR1[4], yR1[5], // qf_2
-    yR1[6], yR1[7], // qf_1
+    yR1[0], yR1[1], // qf_1
+    yR1[2], yR1[3], // qf_4
+    yR1[4], yR1[5], // qf_3
+    yR1[6], yR1[7], // qf_2
   ];
 
   // Semifinals: 4 slots (2 games)
-  // sf_top uses winners of qf_4 and qf_3 => align around yR1[1] and yR1[3]
-  // sf_bot uses winners of qf_2 and qf_1 => align around yR1[5] and yR1[7]
+  // sf_top: winners of qf_1 and qf_4
+  // sf_bot: winners of qf_3 and qf_2
   const ySF = [
     yR1[1], // sf_top top
     yR1[3], // sf_top bottom
@@ -282,7 +283,7 @@ function StateBracket12SVG({ bracket }) {
             Championship
           </text>
 
-          {/* ---------------- R1 (5v12, 6v11, 7v10, 8v9) ---------------- */}
+          {/* ---------------- R1 (5v12, 8v9, 6v11, 7v10) ---------------- */}
           {/* r1_5_12 */}
           <Card
             x={x0}
@@ -301,10 +302,28 @@ function StateBracket12SVG({ bracket }) {
             highlight={isWinner("r1_5_12", games.r1_5_12?.bottom?.teamId)}
           />
 
-          {/* r1_6_11 */}
+          {/* r1_8_9 */}
           <Card
             x={x0}
             y={yR1[2]}
+            teamId={games.r1_8_9?.top?.teamId ?? null}
+            seed={seedOf(games.r1_8_9?.top?.teamId)}
+            score={scoreFor("r1_8_9", "top")}
+            highlight={isWinner("r1_8_9", games.r1_8_9?.top?.teamId)}
+          />
+          <Card
+            x={x0}
+            y={yR1[3]}
+            teamId={games.r1_8_9?.bottom?.teamId ?? null}
+            seed={seedOf(games.r1_8_9?.bottom?.teamId)}
+            score={scoreFor("r1_8_9", "bottom")}
+            highlight={isWinner("r1_8_9", games.r1_8_9?.bottom?.teamId)}
+          />
+
+          {/* r1_6_11 */}
+          <Card
+            x={x0}
+            y={yR1[4]}
             teamId={games.r1_6_11?.top?.teamId ?? null}
             seed={seedOf(games.r1_6_11?.top?.teamId)}
             score={scoreFor("r1_6_11", "top")}
@@ -312,7 +331,7 @@ function StateBracket12SVG({ bracket }) {
           />
           <Card
             x={x0}
-            y={yR1[3]}
+            y={yR1[5]}
             teamId={games.r1_6_11?.bottom?.teamId ?? null}
             seed={seedOf(games.r1_6_11?.bottom?.teamId)}
             score={scoreFor("r1_6_11", "bottom")}
@@ -322,7 +341,7 @@ function StateBracket12SVG({ bracket }) {
           {/* r1_7_10 */}
           <Card
             x={x0}
-            y={yR1[4]}
+            y={yR1[6]}
             teamId={games.r1_7_10?.top?.teamId ?? null}
             seed={seedOf(games.r1_7_10?.top?.teamId)}
             score={scoreFor("r1_7_10", "top")}
@@ -330,36 +349,36 @@ function StateBracket12SVG({ bracket }) {
           />
           <Card
             x={x0}
-            y={yR1[5]}
+            y={yR1[7]}
             teamId={games.r1_7_10?.bottom?.teamId ?? null}
             seed={seedOf(games.r1_7_10?.bottom?.teamId)}
             score={scoreFor("r1_7_10", "bottom")}
             highlight={isWinner("r1_7_10", games.r1_7_10?.bottom?.teamId)}
           />
 
-          {/* r1_8_9 */}
-          <Card
-            x={x0}
-            y={yR1[6]}
-            teamId={games.r1_8_9?.top?.teamId ?? null}
-            seed={seedOf(games.r1_8_9?.top?.teamId)}
-            score={scoreFor("r1_8_9", "top")}
-            highlight={isWinner("r1_8_9", games.r1_8_9?.top?.teamId)}
-          />
-          <Card
-            x={x0}
-            y={yR1[7]}
-            teamId={games.r1_8_9?.bottom?.teamId ?? null}
-            seed={seedOf(games.r1_8_9?.bottom?.teamId)}
-            score={scoreFor("r1_8_9", "bottom")}
-            highlight={isWinner("r1_8_9", games.r1_8_9?.bottom?.teamId)}
-          />
-
           {/* ---------------- QF ---------------- */}
-          {/* qf_4 (4 vs winner 5/12) */}
+          {/* qf_1 (1 vs winner 5/12) */}
           <Card
             x={x1}
             y={yQF[0]}
+            teamId={games.qf_1?.top?.teamId ?? null}
+            seed={seedOf(games.qf_1?.top?.teamId)}
+            score={scoreFor("qf_1", "top")}
+            highlight={isWinner("qf_1", games.qf_1?.top?.teamId)}
+          />
+          <Card
+            x={x1}
+            y={yQF[1]}
+            teamId={resolved.w5_12}
+            seed={seedOf(resolved.w5_12)}
+            score={scoreFor("qf_1", "bottom")}
+            highlight={isWinner("qf_1", resolved.w5_12)}
+          />
+
+          {/* qf_4 (4 vs winner 8/9) */}
+          <Card
+            x={x1}
+            y={yQF[2]}
             teamId={games.qf_4?.top?.teamId ?? null}
             seed={seedOf(games.qf_4?.top?.teamId)}
             score={scoreFor("qf_4", "top")}
@@ -367,17 +386,17 @@ function StateBracket12SVG({ bracket }) {
           />
           <Card
             x={x1}
-            y={yQF[1]}
-            teamId={resolved.w5_12}
-            seed={seedOf(resolved.w5_12)}
+            y={yQF[3]}
+            teamId={resolved.w8_9}
+            seed={seedOf(resolved.w8_9)}
             score={scoreFor("qf_4", "bottom")}
-            highlight={isWinner("qf_4", resolved.w5_12)}
+            highlight={isWinner("qf_4", resolved.w8_9)}
           />
 
           {/* qf_3 (3 vs winner 6/11) */}
           <Card
             x={x1}
-            y={yQF[2]}
+            y={yQF[4]}
             teamId={games.qf_3?.top?.teamId ?? null}
             seed={seedOf(games.qf_3?.top?.teamId)}
             score={scoreFor("qf_3", "top")}
@@ -385,7 +404,7 @@ function StateBracket12SVG({ bracket }) {
           />
           <Card
             x={x1}
-            y={yQF[3]}
+            y={yQF[5]}
             teamId={resolved.w6_11}
             seed={seedOf(resolved.w6_11)}
             score={scoreFor("qf_3", "bottom")}
@@ -395,7 +414,7 @@ function StateBracket12SVG({ bracket }) {
           {/* qf_2 (2 vs winner 7/10) */}
           <Card
             x={x1}
-            y={yQF[4]}
+            y={yQF[6]}
             teamId={games.qf_2?.top?.teamId ?? null}
             seed={seedOf(games.qf_2?.top?.teamId)}
             score={scoreFor("qf_2", "top")}
@@ -403,66 +422,48 @@ function StateBracket12SVG({ bracket }) {
           />
           <Card
             x={x1}
-            y={yQF[5]}
+            y={yQF[7]}
             teamId={resolved.w7_10}
             seed={seedOf(resolved.w7_10)}
             score={scoreFor("qf_2", "bottom")}
             highlight={isWinner("qf_2", resolved.w7_10)}
           />
 
-          {/* qf_1 (1 vs winner 8/9) */}
-          <Card
-            x={x1}
-            y={yQF[6]}
-            teamId={games.qf_1?.top?.teamId ?? null}
-            seed={seedOf(games.qf_1?.top?.teamId)}
-            score={scoreFor("qf_1", "top")}
-            highlight={isWinner("qf_1", games.qf_1?.top?.teamId)}
-          />
-          <Card
-            x={x1}
-            y={yQF[7]}
-            teamId={resolved.w8_9}
-            seed={seedOf(resolved.w8_9)}
-            score={scoreFor("qf_1", "bottom")}
-            highlight={isWinner("qf_1", resolved.w8_9)}
-          />
-
           {/* ---------------- SF ---------------- */}
-          {/* sf_top: winners of qf_4 and qf_3 */}
+          {/* sf_top: winners of qf_1 and qf_4 */}
           <Card
             x={x2}
             y={ySF[0]}
-            teamId={resolved.wqf4}
-            seed={seedOf(resolved.wqf4)}
+            teamId={resolved.wqf1}
+            seed={seedOf(resolved.wqf1)}
             score={scoreFor("sf_top", "top")}
-            highlight={isWinner("sf_top", resolved.wqf4)}
+            highlight={isWinner("sf_top", resolved.wqf1)}
           />
           <Card
             x={x2}
             y={ySF[1]}
-            teamId={resolved.wqf3}
-            seed={seedOf(resolved.wqf3)}
+            teamId={resolved.wqf4}
+            seed={seedOf(resolved.wqf4)}
             score={scoreFor("sf_top", "bottom")}
-            highlight={isWinner("sf_top", resolved.wqf3)}
+            highlight={isWinner("sf_top", resolved.wqf4)}
           />
 
-          {/* sf_bot: winners of qf_2 and qf_1 */}
+          {/* sf_bot: winners of qf_3 and qf_2 */}
           <Card
             x={x2}
             y={ySF[2]}
-            teamId={resolved.wqf2}
-            seed={seedOf(resolved.wqf2)}
+            teamId={resolved.wqf3}
+            seed={seedOf(resolved.wqf3)}
             score={scoreFor("sf_bot", "top")}
-            highlight={isWinner("sf_bot", resolved.wqf2)}
+            highlight={isWinner("sf_bot", resolved.wqf3)}
           />
           <Card
             x={x2}
             y={ySF[3]}
-            teamId={resolved.wqf1}
-            seed={seedOf(resolved.wqf1)}
+            teamId={resolved.wqf2}
+            seed={seedOf(resolved.wqf2)}
             score={scoreFor("sf_bot", "bottom")}
-            highlight={isWinner("sf_bot", resolved.wqf1)}
+            highlight={isWinner("sf_bot", resolved.wqf2)}
           />
 
           {/* ---------------- FINAL ---------------- */}
@@ -485,30 +486,36 @@ function StateBracket12SVG({ bracket }) {
 
           {/* ---------------- CONNECTORS ---------------- */}
           {/* R1 -> QF (connect both R1 cards to the QF bottom slot for that pairing) */}
-          {/* r1_5_12 -> qf_4 bottom */}
+          {/* r1_5_12 -> qf_1 bottom */}
           <path d={elbow(x0 + cardW, cy(yR1[0]), x1, cy(yQF[1]))} {...lineStyle} />
           <path d={elbow(x0 + cardW, cy(yR1[1]), x1, cy(yQF[1]))} {...lineStyle} />
-          {/* r1_6_11 -> qf_3 bottom */}
+
+          {/* r1_8_9 -> qf_4 bottom */}
           <path d={elbow(x0 + cardW, cy(yR1[2]), x1, cy(yQF[3]))} {...lineStyle} />
           <path d={elbow(x0 + cardW, cy(yR1[3]), x1, cy(yQF[3]))} {...lineStyle} />
-          {/* r1_7_10 -> qf_2 bottom */}
+
+          {/* r1_6_11 -> qf_3 bottom */}
           <path d={elbow(x0 + cardW, cy(yR1[4]), x1, cy(yQF[5]))} {...lineStyle} />
           <path d={elbow(x0 + cardW, cy(yR1[5]), x1, cy(yQF[5]))} {...lineStyle} />
-          {/* r1_8_9 -> qf_1 bottom */}
+
+          {/* r1_7_10 -> qf_2 bottom */}
           <path d={elbow(x0 + cardW, cy(yR1[6]), x1, cy(yQF[7]))} {...lineStyle} />
           <path d={elbow(x0 + cardW, cy(yR1[7]), x1, cy(yQF[7]))} {...lineStyle} />
 
           {/* QF -> SF (connect both QF cards to their SF slot) */}
-          {/* qf_4 -> sf_top top */}
+          {/* qf_1 -> sf_top top */}
           <path d={elbow(x1 + cardW, cy(yQF[0]), x2, cy(ySF[0]))} {...lineStyle} />
           <path d={elbow(x1 + cardW, cy(yQF[1]), x2, cy(ySF[0]))} {...lineStyle} />
-          {/* qf_3 -> sf_top bottom */}
+
+          {/* qf_4 -> sf_top bottom */}
           <path d={elbow(x1 + cardW, cy(yQF[2]), x2, cy(ySF[1]))} {...lineStyle} />
           <path d={elbow(x1 + cardW, cy(yQF[3]), x2, cy(ySF[1]))} {...lineStyle} />
-          {/* qf_2 -> sf_bot top */}
+
+          {/* qf_3 -> sf_bot top */}
           <path d={elbow(x1 + cardW, cy(yQF[4]), x2, cy(ySF[2]))} {...lineStyle} />
           <path d={elbow(x1 + cardW, cy(yQF[5]), x2, cy(ySF[2]))} {...lineStyle} />
-          {/* qf_1 -> sf_bot bottom */}
+
+          {/* qf_2 -> sf_bot bottom */}
           <path d={elbow(x1 + cardW, cy(yQF[6]), x2, cy(ySF[3]))} {...lineStyle} />
           <path d={elbow(x1 + cardW, cy(yQF[7]), x2, cy(ySF[3]))} {...lineStyle} />
 
