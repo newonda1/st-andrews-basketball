@@ -142,34 +142,34 @@
         },
 
         "qf_4": {
-          "top": { "teamId": "deerfieldwindsor", "score": null },
-          "bottom": { "teamId": "valwood", "score": null },
-          "winner": null
+          "top": { "teamId": "deerfieldwindsor", "score": 53 },
+          "bottom": { "teamId": "valwood", "score": 59 },
+          "winner": "valwood"
         },
         "qf_3": {
-          "top": { "teamId": "lakeview", "score": null },
-          "bottom": { "teamId": "tiftarea", "score": null },
-          "winner": null
+          "top": { "teamId": "lakeview", "score": 59 },
+          "bottom": { "teamId": "tiftarea", "score": 51 },
+          "winner": "lakeview"
         },
         "qf_2": {
-          "top": { "teamId": "standrews", "score": null },
-          "bottom": { "teamId": "frederica", "score": null },
-          "winner": null
+          "top": { "teamId": "standrews", "score": 72 },
+          "bottom": { "teamId": "frederica", "score": 55 },
+          "winner": "standrews"
         },
         "qf_1": {
-          "top": { "teamId": "brookwood", "score": null },
-          "bottom": { "teamId": "westfield", "score": null },
-          "winner": null
+          "top": { "teamId": "brookwood", "score": 70 },
+          "bottom": { "teamId": "westfield", "score": 49 },
+          "winner": "brookwood"
         },
 
         "sf_top": {
-          "top": { "teamId": null, "score": null },
-          "bottom": { "teamId": null, "score": null },
+          "top": { "teamId": "brookwood", "score": null },
+          "bottom": { "teamId": "valwood", "score": null },
           "winner": null
         },
         "sf_bot": {
-          "top": { "teamId": null, "score": null },
-          "bottom": { "teamId": null, "score": null },
+          "top": { "teamId": "lakeview", "score": null },
+          "bottom": { "teamId": "standrews", "score": null },
           "winner": null
         },
 
