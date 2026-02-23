@@ -351,7 +351,7 @@ function Season2025_26() {
 
       {/* 1. SEASON RECAP */}
       <section className="space-y-4">
-        <h2 className="text-2xl font-semibold mt-4 mb-3">Season Recap</h2>
+        <h2 className="text-2xl font-semibold mt-4 mb-3">Final Four Bound!!</h2>
 
         <div className="text-gray-800 leading-relaxed">
           <a
