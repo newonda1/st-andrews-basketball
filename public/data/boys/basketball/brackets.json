@@ -168,14 +168,14 @@
           "winner": null
         },
         "sf_bot": {
-          "top": { "teamId": "lakeview", "score": null },
-          "bottom": { "teamId": "standrews", "score": null },
-          "winner": null
+          "top": { "teamId": "lakeview", "score": 50 },
+          "bottom": { "teamId": "standrews", "score": 58 },
+          "winner": "standrews"
         },
 
         "final": {
           "top": { "teamId": null, "score": null },
-          "bottom": { "teamId": null, "score": null },
+          "bottom": { "teamId": "standrews", "score": null },
           "winner": null
         }
       }
