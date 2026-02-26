@@ -3,49 +3,49 @@
 {
   "2024": {
     "region": {
-      "title": "2024 Region Tournament",
+      "title": "2024-2025 Region Tournament",
       "teams": {
         "standrews": {
-          "name": "St. Andrew’s School",
+          "name": "St. Andrew’s",
           "card": "/images/boys/basketball/teams/standrews.svg"
         },
-        "team2": {
-          "name": "Team 2",
-          "card": "/images/boys/basketball/teams/team2.svg"
+        "westminster": {
+          "name": "Westminster",
+          "card": "/images/boys/basketball/teams/westminster.svg"
         },
-        "team3": {
-          "name": "Team 3",
-          "card": "/images/boys/basketball/teams/team3.svg"
+        "pinewood": {
+          "name": "Pinewood",
+          "card": "/images/boys/basketball/teams/pinewood.svg"
         },
-        "team4": {
-          "name": "Team 4",
-          "card": "/images/boys/basketball/teams/team4.svg"
+        "frederica": {
+          "name": "Frederica",
+          "card": "/images/boys/basketball/teams/frederica.svg"
         },
-        "team5": {
-          "name": "Team 5",
-          "card": "/images/boys/basketball/teams/team5.svg"
+        "bulloch": {
+          "name": "Bulloch",
+          "card": "/images/boys/basketball/teams/bulloch.svg"
         }
       },
       "games": {
         "playIn": {
-          "top": { "teamId": "team4", "score": null },
-          "bottom": { "teamId": "team5", "score": null },
-          "winner": null
+          "top": { "teamId": "bulloch", "score": 71 },
+          "bottom": { "teamId": "pinewood", "score": 49 },
+          "winner": "bulloch"
         },
         "semi1": {
-          "top": { "teamId": "standrews", "score": null },
-          "bottom": { "teamId": null, "score": null },
-          "winner": null
+          "top": { "teamId": "standrews", "score": 76 },
+          "bottom": { "teamId": "bulloch", "score": 31 },
+          "winner": "standrews"
         },
         "semi2": {
-          "top": { "teamId": "team2", "score": null },
-          "bottom": { "teamId": "team3", "score": null },
-          "winner": null
+          "top": { "teamId": "westminster", "score": 51 },
+          "bottom": { "teamId": "frederica", "score": 46 },
+          "winner": "westminster"
         },
         "final": {
-          "top": { "teamId": null, "score": null },
-          "bottom": { "teamId": null, "score": null },
-          "winner": null
+          "top": { "teamId": "standrews", "score": 63 },
+          "bottom": { "teamId": "westminster", "score": 34 },
+          "winner": "standrews"
         }
       }
     },
