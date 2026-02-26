@@ -1,5 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
+import RegionBracket5SVG from "../components/RegionBracket5SVG";
+import StateBracket12SVG from "../components/StateBracket12SVG";
 
 function Season2024_25() {
   const [games, setGames] = useState([]);
@@ -12,6 +14,7 @@ function Season2024_25() {
   });
   const [showPerGame, setShowPerGame] = useState(false);
   const [showTeamTotals, setShowTeamTotals] = useState(false);
+  const [bracketsData, setBracketsData] = useState(null);
 
   const SEASON_ID = 2024; // 2024–25 season
 
@@ -21,16 +24,16 @@ function Season2024_25() {
       const gamesRes = await fetch("/data/boys/basketball/games.json");
       const statsRes = await fetch("/data/boys/basketball/playergamestats.json");
       const playersRes = await fetch("/data/boys/basketball/players.json");
+      const bracketsRes = await fetch("/data/boys/basketball/brackets.json");
 
       const gamesData = await gamesRes.json();
       const statsData = await statsRes.json();
       const playersData = await playersRes.json();
+      const bracketsJson = await bracketsRes.json();
 
       const seasonGames = gamesData
         .filter((g) => g.Season === SEASON_ID)
-        .sort(
-          (a, b) => (Number(a.GameID) || 0) - (Number(b.GameID) || 0)
-        );
+        .sort((a, b) => (Number(a.GameID) || 0) - (Number(b.GameID) || 0));
 
       const seasonGameIds = new Set(seasonGames.map((g) => g.GameID));
       const seasonStats = statsData.filter((s) => seasonGameIds.has(s.GameID));
@@ -38,6 +41,7 @@ function Season2024_25() {
       setGames(seasonGames);
       setPlayerStats(seasonStats);
       setPlayers(playersData);
+      setBracketsData(bracketsJson);
     }
 
     fetchData();
@@ -333,8 +337,10 @@ function Season2024_25() {
       const aJ = Number(getJerseyNumber(a.PlayerID));
       const bJ = Number(getJerseyNumber(b.PlayerID));
 
-      const aMissing = !Number.isFinite(aJ) || getJerseyNumber(a.PlayerID) === "";
-      const bMissing = !Number.isFinite(bJ) || getJerseyNumber(b.PlayerID) === "";
+      const aMissing =
+        !Number.isFinite(aJ) || getJerseyNumber(a.PlayerID) === "";
+      const bMissing =
+        !Number.isFinite(bJ) || getJerseyNumber(b.PlayerID) === "";
 
       // Always push missing jerseys to the bottom
       if (aMissing && !bMissing) return 1;
@@ -384,39 +390,96 @@ function Season2024_25() {
           />
 
           <p className="mb-4 leading-relaxed text-justify">
-            The 2024–25 St. Andrew’s basketball season was one of dominance, resilience, and redemption — a year that will be remembered as one of the most complete campaigns in school history. Under the leadership of Coach Mel Abrams Jr., the team navigated a demanding schedule with a mix of veteran poise and youthful energy, ultimately claiming the school’s <strong>sixth state championship</strong> — and their <strong>third in the last four seasons</strong>.
+            The 2024–25 St. Andrew’s basketball season was one of dominance,
+            resilience, and redemption — a year that will be remembered as one
+            of the most complete campaigns in school history. Under the
+            leadership of Coach Mel Abrams Jr., the team navigated a demanding
+            schedule with a mix of veteran poise and youthful energy, ultimately
+            claiming the school’s <strong>sixth state championship</strong> —
+            and their <strong>third in the last four seasons</strong>.
           </p>
 
           <p className="mb-4 leading-relaxed text-justify">
-            After graduating a large senior class, the team returned with only <strong>two players who had varsity experience</strong>. Despite the inexperience, the Lions showed flashes of promise behind standout leadership from returning <strong>all-state player Zayden Edwards</strong>. With several freshmen and new contributors stepping into big roles, the team focused on building chemistry and laying the foundation for future success. Among the newcomers were <strong>Ja'Cari Roberts, Page Getter, MJ Scott, Miles Cummings,</strong> and <strong>Deshaud Singleton</strong> — all of whom became vital pieces of the team’s identity and success.
+            After graduating a large senior class, the team returned with only{" "}
+            <strong>two players who had varsity experience</strong>. Despite the
+            inexperience, the Lions showed flashes of promise behind standout
+            leadership from returning <strong>all-state player Zayden Edwards</strong>.
+            With several freshmen and new contributors stepping into big roles,
+            the team focused on building chemistry and laying the foundation for
+            future success. Among the newcomers were <strong>Ja'Cari Roberts,
+            Page Getter, MJ Scott, Miles Cummings,</strong> and{" "}
+            <strong>Deshaud Singleton</strong> — all of whom became vital pieces
+            of the team’s identity and success.
           </p>
 
           <p className="mb-4 leading-relaxed text-justify">
-            From the outset, <strong>senior captain Zayden Edwards</strong> and junior <strong>Ja'Cari Glover</strong> set the tone, anchoring the team with their leadership and all-around production. Zayden, the reigning all-state player of the year, was again a force on both ends of the floor, while Ja'Cari brought an unmatched competitive fire that elevated the team in crucial moments. Their composure and intensity were vital as the Lions surged to a fast start in region play.
+            From the outset, <strong>senior captain Zayden Edwards</strong> and
+            junior <strong>Ja'Cari Glover</strong> set the tone, anchoring the
+            team with their leadership and all-around production. Zayden, the
+            reigning all-state player of the year, was again a force on both
+            ends of the floor, while Ja'Cari brought an unmatched competitive
+            fire that elevated the team in crucial moments. Their composure and
+            intensity were vital as the Lions surged to a fast start in region
+            play.
           </p>
 
           <p className="mb-4 leading-relaxed text-justify">
-            The regular season featured a number of memorable battles. One of the most emphatic came in a statement win over longtime rival <strong>Beach High</strong>, where St. Andrew’s dismantled the Bulldogs with suffocating defense and transition offense, building a 30-point lead by the third quarter. However, not every night went the Lions’ way. In what was arguably their most humbling moment, the team suffered a <strong>heartbreaking blowout loss to Benedictine</strong>, exposing vulnerabilities and forcing the group to regroup mentally and physically. That setback proved to be a turning point.
+            The regular season featured a number of memorable battles. One of
+            the most emphatic came in a statement win over longtime rival{" "}
+            <strong>Beach High</strong>, where St. Andrew’s dismantled the
+            Bulldogs with suffocating defense and transition offense, building a
+            30-point lead by the third quarter. However, not every night went
+            the Lions’ way. In what was arguably their most humbling moment, the
+            team suffered a <strong>heartbreaking blowout loss to Benedictine</strong>,
+            exposing vulnerabilities and forcing the group to regroup mentally
+            and physically. That setback proved to be a turning point.
           </p>
 
           <p className="mb-4 leading-relaxed text-justify">
-            One of the most thrilling wins of the season came in a <strong>nail-biting victory against Lakeview Academy</strong>, where the Lions escaped with a one-point win thanks to clutch free throws in the final seconds and a last-second defensive stand. The emotional rollercoaster of that game exemplified the team’s ability to grind through adversity and maintain composure under pressure.
+            One of the most thrilling wins of the season came in a{" "}
+            <strong>nail-biting victory against Lakeview Academy</strong>, where
+            the Lions escaped with a one-point win thanks to clutch free throws
+            in the final seconds and a last-second defensive stand. The
+            emotional rollercoaster of that game exemplified the team’s ability
+            to grind through adversity and maintain composure under pressure.
           </p>
 
           <p className="mb-4 leading-relaxed text-justify">
-            <strong>Freshman guard Page Getter</strong> emerged as one of the surprise breakout stars of the season, showing maturity beyond his years and becoming a steady presence in the backcourt. His confidence and clutch shooting earned him a starting role by midseason. <strong>Sophomore MJ Scott</strong> built on his promise from the previous year, turning into one of the team’s best perimeter defenders and consistently igniting the team with high-energy plays.
+            <strong>Freshman guard Page Getter</strong> emerged as one of the
+            surprise breakout stars of the season, showing maturity beyond his
+            years and becoming a steady presence in the backcourt. His
+            confidence and clutch shooting earned him a starting role by
+            midseason. <strong>Sophomore MJ Scott</strong> built on his promise
+            from the previous year, turning into one of the team’s best
+            perimeter defenders and consistently igniting the team with
+            high-energy plays.
           </p>
 
           <p className="mb-4 leading-relaxed text-justify">
-            Seniors <strong>Deshaud Singleton</strong> and <strong>Miles Cummings</strong> also played pivotal roles, providing depth, experience, and reliability in big moments. <strong>Junior Amari Cook</strong> elevated his game throughout the year, showcasing improved decision-making and scoring ability, particularly in key region matchups.
+            Seniors <strong>Deshaud Singleton</strong> and{" "}
+            <strong>Miles Cummings</strong> also played pivotal roles,
+            providing depth, experience, and reliability in big moments.{" "}
+            <strong>Junior Amari Cook</strong> elevated his game throughout the
+            year, showcasing improved decision-making and scoring ability,
+            particularly in key region matchups.
           </p>
 
           <p className="mb-4 leading-relaxed text-justify">
-            By season’s end, the Lions had captured their <strong>fourth straight region championship</strong>, extending their unbeaten streak against region opponents to an astonishing <strong>40 consecutive wins</strong>. Their playoff run was a blend of confidence and execution, culminating in a dominant performance in the state final to secure the title.
+            By season’s end, the Lions had captured their{" "}
+            <strong>fourth straight region championship</strong>, extending
+            their unbeaten streak against region opponents to an astonishing{" "}
+            <strong>40 consecutive wins</strong>. Their playoff run was a blend
+            of confidence and execution, culminating in a dominant performance
+            in the state final to secure the title.
           </p>
 
           <p className="mb-3 leading-relaxed text-justify">
-            In every sense, the 2024–25 season was a testament to balance: a blend of seasoned leadership, emerging stars, and unwavering commitment to team success. The Lions not only defended their region supremacy but also added another banner to the rafters, further cementing St. Andrew’s as one of the premier basketball programs in the state.
+            In every sense, the 2024–25 season was a testament to balance: a
+            blend of seasoned leadership, emerging stars, and unwavering
+            commitment to team success. The Lions not only defended their region
+            supremacy but also added another banner to the rafters, further
+            cementing St. Andrew’s as one of the premier basketball programs in
+            the state.
           </p>
 
           <div className="clear-both" />
@@ -429,7 +492,11 @@ function Season2024_25() {
           <h2 className="text-2xl font-semibold">📅 Schedule &amp; Results</h2>
 
           <div className="flex items-center gap-2 text-xs sm:text-sm">
-            <span className={`${showTeamTotals ? "text-gray-400" : "text-gray-900 font-semibold"}`}>
+            <span
+              className={`${
+                showTeamTotals ? "text-gray-400" : "text-gray-900 font-semibold"
+              }`}
+            >
               Game Result
             </span>
 
@@ -448,7 +515,11 @@ function Season2024_25() {
               />
             </button>
 
-            <span className={`${showTeamTotals ? "text-gray-900 font-semibold" : "text-gray-400"}`}>
+            <span
+              className={`${
+                showTeamTotals ? "text-gray-900 font-semibold" : "text-gray-400"
+              }`}
+            >
               Team Totals
             </span>
           </div>
@@ -475,7 +546,9 @@ function Season2024_25() {
 
           for (const g of games) {
             const gid = g.GameID;
-            const rows = playerStats.filter((s) => Number(s.GameID) === Number(gid));
+            const rows = playerStats.filter(
+              (s) => Number(s.GameID) === Number(gid)
+            );
 
             const totals = {
               REB: 0,
@@ -525,7 +598,8 @@ function Season2024_25() {
                   </thead>
                   <tbody>
                     {games.map((game, idx) => {
-                      const hasResult = game.Result === "W" || game.Result === "L";
+                      const hasResult =
+                        game.Result === "W" || game.Result === "L";
 
                       const opponentCell = hasResult ? (
                         <Link
@@ -547,7 +621,9 @@ function Season2024_25() {
                             {formatDateFromGameID(game.GameID)}
                           </td>
                           <td className="border px-2 py-1">{opponentCell}</td>
-                          <td className="border px-2 py-1">{formatResult(game)}</td>
+                          <td className="border px-2 py-1">
+                            {formatResult(game)}
+                          </td>
                           <td className="border px-2 py-1 whitespace-nowrap">
                             {formatScore(game)}
                           </td>
@@ -586,8 +662,10 @@ function Season2024_25() {
 
                   <tbody>
                     {games.map((game, idx) => {
-                      const totals = teamTotalsByGameId.get(Number(game.GameID)) || null;
-                      const hasResult = game.Result === "W" || game.Result === "L";
+                      const totals =
+                        teamTotalsByGameId.get(Number(game.GameID)) || null;
+                      const hasResult =
+                        game.Result === "W" || game.Result === "L";
 
                       const opponentCell = hasResult ? (
                         <Link
@@ -610,29 +688,55 @@ function Season2024_25() {
                           </td>
                           <td className="border px-2 py-1">{opponentCell}</td>
 
-                          <td className="border px-2 py-1">{totals ? totals.REB : "—"}</td>
-                          <td className="border px-2 py-1">{totals ? totals.AST : "—"}</td>
-                          <td className="border px-2 py-1">{totals ? totals.TO : "—"}</td>
                           <td className="border px-2 py-1">
-                            {totals ? (Number(totals.TO) ? assistTo(totals.AST, totals.TO) : "—") : "—"}
+                            {totals ? totals.REB : "—"}
                           </td>
-                          <td className="border px-2 py-1">{totals ? totals.STL : "—"}</td>
-                          <td className="border px-2 py-1">{totals ? totals.BLK : "—"}</td>
+                          <td className="border px-2 py-1">
+                            {totals ? totals.AST : "—"}
+                          </td>
+                          <td className="border px-2 py-1">
+                            {totals ? totals.TO : "—"}
+                          </td>
+                          <td className="border px-2 py-1">
+                            {totals
+                              ? Number(totals.TO)
+                                ? assistTo(totals.AST, totals.TO)
+                                : "—"
+                              : "—"}
+                          </td>
+                          <td className="border px-2 py-1">
+                            {totals ? totals.STL : "—"}
+                          </td>
+                          <td className="border px-2 py-1">
+                            {totals ? totals.BLK : "—"}
+                          </td>
 
-                          <td className="border px-2 py-1">{totals ? totals.ThreePM : "—"}</td>
-                          <td className="border px-2 py-1">{totals ? totals.ThreePA : "—"}</td>
+                          <td className="border px-2 py-1">
+                            {totals ? totals.ThreePM : "—"}
+                          </td>
+                          <td className="border px-2 py-1">
+                            {totals ? totals.ThreePA : "—"}
+                          </td>
                           <td className="border px-2 py-1">
                             {totals ? pct(totals.ThreePM, totals.ThreePA) : "—"}
                           </td>
 
-                          <td className="border px-2 py-1">{totals ? totals.TwoPM : "—"}</td>
-                          <td className="border px-2 py-1">{totals ? totals.TwoPA : "—"}</td>
+                          <td className="border px-2 py-1">
+                            {totals ? totals.TwoPM : "—"}
+                          </td>
+                          <td className="border px-2 py-1">
+                            {totals ? totals.TwoPA : "—"}
+                          </td>
                           <td className="border px-2 py-1">
                             {totals ? pct(totals.TwoPM, totals.TwoPA) : "—"}
                           </td>
 
-                          <td className="border px-2 py-1">{totals ? totals.FTM : "—"}</td>
-                          <td className="border px-2 py-1">{totals ? totals.FTA : "—"}</td>
+                          <td className="border px-2 py-1">
+                            {totals ? totals.FTM : "—"}
+                          </td>
+                          <td className="border px-2 py-1">
+                            {totals ? totals.FTA : "—"}
+                          </td>
                           <td className="border px-2 py-1">
                             {totals ? pct(totals.FTM, totals.FTA) : "—"}
                           </td>
@@ -647,13 +751,51 @@ function Season2024_25() {
         })()}
       </section>
 
+      {/* 2.5 REGION TOURNAMENT BRACKET */}
+      <section className="space-y-3">
+        <h2 className="text-2xl font-semibold">🏆 Region Tournament Bracket</h2>
+
+        {bracketsData === null ? (
+          <p className="text-gray-600">Loading region bracket…</p>
+        ) : bracketsData?.[String(SEASON_ID)]?.region ? (
+          <RegionBracket5SVG bracket={bracketsData[String(SEASON_ID)].region} />
+        ) : (
+          <p className="text-gray-600">
+            Region bracket data is not available for this season (missing key "
+            {String(SEASON_ID)}" in brackets.json).
+          </p>
+        )}
+      </section>
+
+      {/* 2.6 STATE TOURNAMENT BRACKET */}
+      <section className="space-y-3">
+        <h2 className="text-2xl font-semibold">🏆 State Tournament Bracket</h2>
+
+        {bracketsData === null ? (
+          <p className="text-gray-600">Loading state bracket…</p>
+        ) : bracketsData?.[String(SEASON_ID)]?.state ? (
+          <StateBracket12SVG bracket={bracketsData[String(SEASON_ID)].state} />
+        ) : (
+          <p className="text-gray-600">
+            State bracket data is not available for this season (missing key "
+            {String(SEASON_ID)}" in brackets.json).
+          </p>
+        )}
+      </section>
+
       {/* 3. PLAYER STATS TABLE */}
       <section>
         <div className="flex items-center justify-between mt-8 mb-4">
-          <h2 className="text-2xl font-semibold">📊 Player Statistics for the Season</h2>
+          <h2 className="text-2xl font-semibold">
+            📊 Player Statistics for the Season
+          </h2>
 
           <div className="flex items-center space-x-2 text-xs sm:text-sm">
-            <span className={`${showPerGame ? "text-gray-400" : "text-gray-900 font-semibold"}`}>
+            <span
+              className={`${
+                showPerGame ? "text-gray-400" : "text-gray-900 font-semibold"
+              }`}
+            >
               Season totals
             </span>
             <button
@@ -669,14 +811,20 @@ function Season2024_25() {
                 }`}
               />
             </button>
-            <span className={`${showPerGame ? "text-gray-900 font-semibold" : "text-gray-400"}`}>
+            <span
+              className={`${
+                showPerGame ? "text-gray-900 font-semibold" : "text-gray-400"
+              }`}
+            >
               Per game averages
             </span>
           </div>
         </div>
 
         {seasonTotals.length === 0 ? (
-          <p className="text-gray-600">No player statistics are available yet for this season.</p>
+          <p className="text-gray-600">
+            No player statistics are available yet for this season.
+          </p>
         ) : (
           <div className="overflow-x-auto">
             <table className="min-w-full border text-xs sm:text-sm text-center whitespace-nowrap">
@@ -689,65 +837,122 @@ function Season2024_25() {
                     Player{sortArrow("name")}
                   </th>
 
-                  <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("jersey")}>
+                  <th
+                    className="border px-2 py-1 cursor-pointer"
+                    onClick={() => handleSort("jersey")}
+                  >
                     #{sortArrow("jersey")}
                   </th>
-                  <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("GamesPlayed")}>
+                  <th
+                    className="border px-2 py-1 cursor-pointer"
+                    onClick={() => handleSort("GamesPlayed")}
+                  >
                     GP{sortArrow("GamesPlayed")}
                   </th>
-                  <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("Points")}>
+                  <th
+                    className="border px-2 py-1 cursor-pointer"
+                    onClick={() => handleSort("Points")}
+                  >
                     PTS{sortArrow("Points")}
                   </th>
-                  <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("Rebounds")}>
+                  <th
+                    className="border px-2 py-1 cursor-pointer"
+                    onClick={() => handleSort("Rebounds")}
+                  >
                     REB{sortArrow("Rebounds")}
                   </th>
-                  <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("Assists")}>
+                  <th
+                    className="border px-2 py-1 cursor-pointer"
+                    onClick={() => handleSort("Assists")}
+                  >
                     AST{sortArrow("Assists")}
                   </th>
-                  <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("Turnovers")}>
+                  <th
+                    className="border px-2 py-1 cursor-pointer"
+                    onClick={() => handleSort("Turnovers")}
+                  >
                     TO{sortArrow("Turnovers")}
                   </th>
-                  <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("AST_TO")}>
+                  <th
+                    className="border px-2 py-1 cursor-pointer"
+                    onClick={() => handleSort("AST_TO")}
+                  >
                     A/T{sortArrow("AST_TO")}
                   </th>
-                  <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("Steals")}>
+                  <th
+                    className="border px-2 py-1 cursor-pointer"
+                    onClick={() => handleSort("Steals")}
+                  >
                     STL{sortArrow("Steals")}
                   </th>
-                  <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("Blocks")}>
+                  <th
+                    className="border px-2 py-1 cursor-pointer"
+                    onClick={() => handleSort("Blocks")}
+                  >
                     BLK{sortArrow("Blocks")}
                   </th>
 
-                  <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("ThreePM")}>
+                  <th
+                    className="border px-2 py-1 cursor-pointer"
+                    onClick={() => handleSort("ThreePM")}
+                  >
                     3PM{sortArrow("ThreePM")}
                   </th>
-                  <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("ThreePA")}>
+                  <th
+                    className="border px-2 py-1 cursor-pointer"
+                    onClick={() => handleSort("ThreePA")}
+                  >
                     3PA{sortArrow("ThreePA")}
                   </th>
-                  <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("ThreePct")}>
+                  <th
+                    className="border px-2 py-1 cursor-pointer"
+                    onClick={() => handleSort("ThreePct")}
+                  >
                     3P%{sortArrow("ThreePct")}
                   </th>
 
-                  <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("TwoPM")}>
+                  <th
+                    className="border px-2 py-1 cursor-pointer"
+                    onClick={() => handleSort("TwoPM")}
+                  >
                     2PM{sortArrow("TwoPM")}
                   </th>
-                  <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("TwoPA")}>
+                  <th
+                    className="border px-2 py-1 cursor-pointer"
+                    onClick={() => handleSort("TwoPA")}
+                  >
                     2PA{sortArrow("TwoPA")}
                   </th>
-                  <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("TwoPct")}>
+                  <th
+                    className="border px-2 py-1 cursor-pointer"
+                    onClick={() => handleSort("TwoPct")}
+                  >
                     2P%{sortArrow("TwoPct")}
                   </th>
 
-                  <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("eFG")}>
+                  <th
+                    className="border px-2 py-1 cursor-pointer"
+                    onClick={() => handleSort("eFG")}
+                  >
                     eFG%{sortArrow("eFG")}
                   </th>
 
-                  <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("FTM")}>
+                  <th
+                    className="border px-2 py-1 cursor-pointer"
+                    onClick={() => handleSort("FTM")}
+                  >
                     FTM{sortArrow("FTM")}
                   </th>
-                  <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("FTA")}>
+                  <th
+                    className="border px-2 py-1 cursor-pointer"
+                    onClick={() => handleSort("FTA")}
+                  >
                     FTA{sortArrow("FTA")}
                   </th>
-                  <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("FTPct")}>
+                  <th
+                    className="border px-2 py-1 cursor-pointer"
+                    onClick={() => handleSort("FTPct")}
+                  >
                     FT%{sortArrow("FTPct")}
                   </th>
                 </tr>
@@ -762,7 +967,9 @@ function Season2024_25() {
 
                   return (
                     <tr key={player.PlayerID} className={rowBg}>
-                      <td className={`border px-2 py-1 text-left align-middle sticky left-0 z-20 ${rowBg} border-r min-w-[200px]`}>
+                      <td
+                        className={`border px-2 py-1 text-left align-middle sticky left-0 z-20 ${rowBg} border-r min-w-[200px]`}
+                      >
                         <div className="flex items-center justify-start gap-2">
                           <img
                             src={photoUrl}
@@ -781,54 +988,92 @@ function Season2024_25() {
                         </div>
                       </td>
 
-                      <td className="border px-2 py-1 align-middle">{jersey}</td>
-                      <td className="border px-2 py-1 align-middle">{player.GamesPlayed}</td>
-
                       <td className="border px-2 py-1 align-middle">
-                        {showPerGame ? formatPerGame(player, "Points") : player.Points}
+                        {jersey}
                       </td>
                       <td className="border px-2 py-1 align-middle">
-                        {showPerGame ? formatPerGame(player, "Rebounds") : player.Rebounds}
-                      </td>
-                      <td className="border px-2 py-1 align-middle">
-                        {showPerGame ? formatPerGame(player, "Assists") : player.Assists}
-                      </td>
-                      <td className="border px-2 py-1 align-middle">
-                        {showPerGame ? formatPerGame(player, "Turnovers") : player.Turnovers}
-                      </td>
-                      <td className="border px-2 py-1 align-middle">{formatAssistToTurnover(player)}</td>
-                      <td className="border px-2 py-1 align-middle">
-                        {showPerGame ? formatPerGame(player, "Steals") : player.Steals}
-                      </td>
-                      <td className="border px-2 py-1 align-middle">
-                        {showPerGame ? formatPerGame(player, "Blocks") : player.Blocks}
+                        {player.GamesPlayed}
                       </td>
 
                       <td className="border px-2 py-1 align-middle">
-                        {showPerGame ? formatPerGame(player, "ThreePM") : player.ThreePM}
+                        {showPerGame
+                          ? formatPerGame(player, "Points")
+                          : player.Points}
                       </td>
                       <td className="border px-2 py-1 align-middle">
-                        {showPerGame ? formatPerGame(player, "ThreePA") : player.ThreePA}
+                        {showPerGame
+                          ? formatPerGame(player, "Rebounds")
+                          : player.Rebounds}
                       </td>
-                      <td className="border px-2 py-1 align-middle">{formatPct(player.ThreePM, player.ThreePA)}</td>
+                      <td className="border px-2 py-1 align-middle">
+                        {showPerGame
+                          ? formatPerGame(player, "Assists")
+                          : player.Assists}
+                      </td>
+                      <td className="border px-2 py-1 align-middle">
+                        {showPerGame
+                          ? formatPerGame(player, "Turnovers")
+                          : player.Turnovers}
+                      </td>
+                      <td className="border px-2 py-1 align-middle">
+                        {formatAssistToTurnover(player)}
+                      </td>
+                      <td className="border px-2 py-1 align-middle">
+                        {showPerGame
+                          ? formatPerGame(player, "Steals")
+                          : player.Steals}
+                      </td>
+                      <td className="border px-2 py-1 align-middle">
+                        {showPerGame
+                          ? formatPerGame(player, "Blocks")
+                          : player.Blocks}
+                      </td>
 
                       <td className="border px-2 py-1 align-middle">
-                        {showPerGame ? formatPerGame(player, "TwoPM") : player.TwoPM}
+                        {showPerGame
+                          ? formatPerGame(player, "ThreePM")
+                          : player.ThreePM}
                       </td>
                       <td className="border px-2 py-1 align-middle">
-                        {showPerGame ? formatPerGame(player, "TwoPA") : player.TwoPA}
+                        {showPerGame
+                          ? formatPerGame(player, "ThreePA")
+                          : player.ThreePA}
                       </td>
-                      <td className="border px-2 py-1 align-middle">{formatPct(player.TwoPM, player.TwoPA)}</td>
+                      <td className="border px-2 py-1 align-middle">
+                        {formatPct(player.ThreePM, player.ThreePA)}
+                      </td>
 
-                      <td className="border px-2 py-1 align-middle">{formatEFG(player)}</td>
+                      <td className="border px-2 py-1 align-middle">
+                        {showPerGame
+                          ? formatPerGame(player, "TwoPM")
+                          : player.TwoPM}
+                      </td>
+                      <td className="border px-2 py-1 align-middle">
+                        {showPerGame
+                          ? formatPerGame(player, "TwoPA")
+                          : player.TwoPA}
+                      </td>
+                      <td className="border px-2 py-1 align-middle">
+                        {formatPct(player.TwoPM, player.TwoPA)}
+                      </td>
 
                       <td className="border px-2 py-1 align-middle">
-                        {showPerGame ? formatPerGame(player, "FTM") : player.FTM}
+                        {formatEFG(player)}
+                      </td>
+
+                      <td className="border px-2 py-1 align-middle">
+                        {showPerGame
+                          ? formatPerGame(player, "FTM")
+                          : player.FTM}
                       </td>
                       <td className="border px-2 py-1 align-middle">
-                        {showPerGame ? formatPerGame(player, "FTA") : player.FTA}
+                        {showPerGame
+                          ? formatPerGame(player, "FTA")
+                          : player.FTA}
                       </td>
-                      <td className="border px-2 py-1 align-middle">{formatPct(player.FTM, player.FTA)}</td>
+                      <td className="border px-2 py-1 align-middle">
+                        {formatPct(player.FTM, player.FTA)}
+                      </td>
                     </tr>
                   );
                 })}
@@ -840,53 +1085,89 @@ function Season2024_25() {
                   </td>
 
                   <td className="border px-2 py-1">{""}</td>
-                  <td className="border px-2 py-1">{teamTotalsRow.GamesPlayed || 0}</td>
-
                   <td className="border px-2 py-1">
-                    {showPerGame ? formatTeamPerGame(teamTotalsRow.Points) : teamTotalsRow.Points}
-                  </td>
-                  <td className="border px-2 py-1">
-                    {showPerGame ? formatTeamPerGame(teamTotalsRow.Rebounds) : teamTotalsRow.Rebounds}
-                  </td>
-                  <td className="border px-2 py-1">
-                    {showPerGame ? formatTeamPerGame(teamTotalsRow.Assists) : teamTotalsRow.Assists}
-                  </td>
-                  <td className="border px-2 py-1">
-                    {showPerGame ? formatTeamPerGame(teamTotalsRow.Turnovers) : teamTotalsRow.Turnovers}
-                  </td>
-                  <td className="border px-2 py-1">{formatTeamAssistToTurnover(teamTotalsRow)}</td>
-                  <td className="border px-2 py-1">
-                    {showPerGame ? formatTeamPerGame(teamTotalsRow.Steals) : teamTotalsRow.Steals}
-                  </td>
-                  <td className="border px-2 py-1">
-                    {showPerGame ? formatTeamPerGame(teamTotalsRow.Blocks) : teamTotalsRow.Blocks}
+                    {teamTotalsRow.GamesPlayed || 0}
                   </td>
 
                   <td className="border px-2 py-1">
-                    {showPerGame ? formatTeamPerGame(teamTotalsRow.ThreePM) : teamTotalsRow.ThreePM}
+                    {showPerGame
+                      ? formatTeamPerGame(teamTotalsRow.Points)
+                      : teamTotalsRow.Points}
                   </td>
                   <td className="border px-2 py-1">
-                    {showPerGame ? formatTeamPerGame(teamTotalsRow.ThreePA) : teamTotalsRow.ThreePA}
+                    {showPerGame
+                      ? formatTeamPerGame(teamTotalsRow.Rebounds)
+                      : teamTotalsRow.Rebounds}
                   </td>
-                  <td className="border px-2 py-1">{formatPct(teamTotalsRow.ThreePM, teamTotalsRow.ThreePA)}</td>
+                  <td className="border px-2 py-1">
+                    {showPerGame
+                      ? formatTeamPerGame(teamTotalsRow.Assists)
+                      : teamTotalsRow.Assists}
+                  </td>
+                  <td className="border px-2 py-1">
+                    {showPerGame
+                      ? formatTeamPerGame(teamTotalsRow.Turnovers)
+                      : teamTotalsRow.Turnovers}
+                  </td>
+                  <td className="border px-2 py-1">
+                    {formatTeamAssistToTurnover(teamTotalsRow)}
+                  </td>
+                  <td className="border px-2 py-1">
+                    {showPerGame
+                      ? formatTeamPerGame(teamTotalsRow.Steals)
+                      : teamTotalsRow.Steals}
+                  </td>
+                  <td className="border px-2 py-1">
+                    {showPerGame
+                      ? formatTeamPerGame(teamTotalsRow.Blocks)
+                      : teamTotalsRow.Blocks}
+                  </td>
 
                   <td className="border px-2 py-1">
-                    {showPerGame ? formatTeamPerGame(teamTotalsRow.TwoPM) : teamTotalsRow.TwoPM}
+                    {showPerGame
+                      ? formatTeamPerGame(teamTotalsRow.ThreePM)
+                      : teamTotalsRow.ThreePM}
                   </td>
                   <td className="border px-2 py-1">
-                    {showPerGame ? formatTeamPerGame(teamTotalsRow.TwoPA) : teamTotalsRow.TwoPA}
+                    {showPerGame
+                      ? formatTeamPerGame(teamTotalsRow.ThreePA)
+                      : teamTotalsRow.ThreePA}
                   </td>
-                  <td className="border px-2 py-1">{formatPct(teamTotalsRow.TwoPM, teamTotalsRow.TwoPA)}</td>
+                  <td className="border px-2 py-1">
+                    {formatPct(teamTotalsRow.ThreePM, teamTotalsRow.ThreePA)}
+                  </td>
 
-                  <td className="border px-2 py-1">{formatEFG(teamTotalsRow)}</td>
+                  <td className="border px-2 py-1">
+                    {showPerGame
+                      ? formatTeamPerGame(teamTotalsRow.TwoPM)
+                      : teamTotalsRow.TwoPM}
+                  </td>
+                  <td className="border px-2 py-1">
+                    {showPerGame
+                      ? formatTeamPerGame(teamTotalsRow.TwoPA)
+                      : teamTotalsRow.TwoPA}
+                  </td>
+                  <td className="border px-2 py-1">
+                    {formatPct(teamTotalsRow.TwoPM, teamTotalsRow.TwoPA)}
+                  </td>
 
                   <td className="border px-2 py-1">
-                    {showPerGame ? formatTeamPerGame(teamTotalsRow.FTM) : teamTotalsRow.FTM}
+                    {formatEFG(teamTotalsRow)}
+                  </td>
+
+                  <td className="border px-2 py-1">
+                    {showPerGame
+                      ? formatTeamPerGame(teamTotalsRow.FTM)
+                      : teamTotalsRow.FTM}
                   </td>
                   <td className="border px-2 py-1">
-                    {showPerGame ? formatTeamPerGame(teamTotalsRow.FTA) : teamTotalsRow.FTA}
+                    {showPerGame
+                      ? formatTeamPerGame(teamTotalsRow.FTA)
+                      : teamTotalsRow.FTA}
                   </td>
-                  <td className="border px-2 py-1">{formatPct(teamTotalsRow.FTM, teamTotalsRow.FTA)}</td>
+                  <td className="border px-2 py-1">
+                    {formatPct(teamTotalsRow.FTM, teamTotalsRow.FTA)}
+                  </td>
                 </tr>
               </tbody>
             </table>
