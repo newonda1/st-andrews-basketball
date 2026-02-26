@@ -50,10 +50,130 @@
       }
     },
     "state": {
-      "title": "2024 State Tournament",
-      "teams": {},
-      "games": {}
+  "title": "2024-2025 State Tournament",
+  "teams": {
+    "brookwood": {
+      "name": "Brookwood",
+      "seed": 1,
+      "card": "/images/boys/basketball/teams/brookwood.svg"
+    },
+    "standrews": {
+      "name": "St. Andrew’s",
+      "seed": 2,
+      "card": "/images/boys/basketball/teams/standrews.svg"
+    },
+    "lakeview": {
+      "name": "Lakeview",
+      "seed": 3,
+      "card": "/images/boys/basketball/teams/lakeview.svg"
+    },
+    "deerfieldwindsor": {
+      "name": "Deerfield-Windsor",
+      "seed": 4,
+      "card": "/images/boys/basketball/teams/deerfieldwindsor.svg"
+    },
+    "frederica": {
+      "name": "Frederica",
+      "seed": 5,
+      "card": "/images/boys/basketball/teams/frederica.svg"
+    },
+    "westminster": {
+      "name": "Westminster",
+      "seed": 6,
+      "card": "/images/boys/basketball/teams/westminster.svg"
+    },
+    "tiftarea": {
+      "name": "Tiftarea",
+      "seed": 7,
+      "card": "/images/boys/basketball/teams/tiftarea.svg"
+    },
+    "dominionchristian": {
+      "name": "Dominion Christian",
+      "seed": 8,
+      "card": "/images/boys/basketball/teams/dominionchristian.svg"
+    },
+    "valwood": {
+      "name": "Valwood",
+      "seed": 9,
+      "card": "/images/boys/basketball/teams/valwood.svg"
+    },
+    "westfield": {
+      "name": "Westfield",
+      "seed": 10,
+      "card": "/images/boys/basketball/teams/westfield.svg"
+    },
+    "terrell": {
+      "name": "Terrell",
+      "seed": 11,
+      "card": "/images/boys/basketball/teams/terrell.svg"
+    },
+    "johnmilledge": {
+      "name": "John Milledge",
+      "seed": 12,
+      "card": "/images/boys/basketball/teams/johnmilledge.svg"
     }
+  },
+  "games": {
+    "r1_8_9": {
+      "top":  { "teamId": "dominionchristian", "score": 51 },
+      "bottom": { "teamId": "valwood", "score": 54 },
+      "winner": "valwood"
+    },
+    "r1_5_12": {
+      "top":  { "teamId": "frederica", "score": 59 },
+      "bottom": { "teamId": "johnmilledge", "score": 46 },
+      "winner": "frederica"
+    },
+    "r1_7_10": {
+      "top":  { "teamId": "tiftarea", "score": 48 },
+      "bottom": { "teamId": "westfield", "score": 44 },
+      "winner": "tiftarea"
+    },
+    "r1_6_11": {
+      "top":  { "teamId": "westminster", "score": 55 },
+      "bottom": { "teamId": "terrell", "score": 42 },
+      "winner": "westminster"
+    },
+
+    "qf_1": {
+      "top":  { "teamId": "brookwood", "score": 79 },
+      "bottom": { "teamId": "valwood", "score": 29 },
+      "winner": "brookwood"
+    },
+    "qf_4": {
+      "top":  { "teamId": "deerfieldwindsor", "score": 49 },
+      "bottom": { "teamId": "frederica", "score": 45 },
+      "winner": "deerfieldwindsor"
+    },
+    "qf_2": {
+      "top":  { "teamId": "standrews", "score": 70 },
+      "bottom": { "teamId": "tiftarea", "score": 49 },
+      "winner": "standrews"
+    },
+    "qf_3": {
+      "top":  { "teamId": "lakeview", "score": 75 },
+      "bottom": { "teamId": "westminster", "score": 39 },
+      "winner": "lakeview"
+    },
+
+    "sf_top": {
+      "top":  { "teamId": "brookwood", "score": 45 },
+      "bottom": { "teamId": "deerfieldwindsor", "score": 35 },
+      "winner": "brookwood"
+    },
+    "sf_bot": {
+      "top":  { "teamId": "standrews", "score": 45 },
+      "bottom": { "teamId": "lakeview", "score": 43 },
+      "winner": "standrews"
+    },
+
+    "final": {
+      "top":  { "teamId": "brookwood", "score": 43 },
+      "bottom": { "teamId": "standrews", "score": 54 },
+      "winner": "standrews"
+    }
+  }
+}
   },
   "2025": {
     "region": {
