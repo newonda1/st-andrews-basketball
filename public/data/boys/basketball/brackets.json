@@ -162,8 +162,8 @@
       "winner": "brookwood"
     },
     "sf_bot": {
-      "top":  { "teamId": "standrews", "score": 45 },
-      "bottom": { "teamId": "lakeview", "score": 43 },
+      "top":  { "teamId": "lakeview", "score": 43 },
+      "bottom": { "teamId": "standrews", "score": 45 },
       "winner": "standrews"
     },
 
