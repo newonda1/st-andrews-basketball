@@ -8,6 +8,7 @@ import SingleGameRecords from "./pages/SingleGameRecords";
 
 import Season1978_79 from "./seasons/Season1978_79";
 import Season1992_93 from "./seasons/Season1992_93";
+import Season2023_24 from "./seasons/Season2022_23";
 import Season2023_24 from "./seasons/Season2023_24";
 import Season2024_25 from "./seasons/Season2024_25";
 import Season2025_26 from "./seasons/Season2025_26";
@@ -23,6 +24,7 @@ import PlayerPage from "./pages/PlayerPage";
 const seasonPages = [
   { slug: "1978-79", Component: Season1978_79 },
   { slug: "1992-93", Component: Season1992_93 },
+  { slug: "2023-24", Component: Season2022_23 },
   { slug: "2023-24", Component: Season2023_24 },
   { slug: "2024-25", Component: Season2024_25 },
   { slug: "2025-26", Component: Season2025_26 },
