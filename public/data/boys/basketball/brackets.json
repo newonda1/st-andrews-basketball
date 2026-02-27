@@ -1,6 +1,180 @@
 
 
 {
+  "2023": {
+    "region": {
+      "title": "2023-2024 Region Tournament",
+      "teams": {
+        "standrews": {
+          "name": "St. Andrew’s",
+          "card": "/images/boys/basketball/teams/standrews.svg"
+        },
+        "westminster": {
+          "name": "Westminster",
+          "card": "/images/boys/basketball/teams/westminster.svg"
+        },
+        "pinewood": {
+          "name": "Pinewood",
+          "card": "/images/boys/basketball/teams/pinewood.svg"
+        },
+        "frederica": {
+          "name": "Frederica",
+          "card": "/images/boys/basketball/teams/frederica.svg"
+        },
+        "bulloch": {
+          "name": "Bulloch",
+          "card": "/images/boys/basketball/teams/bulloch.svg"
+        }
+      },
+      "games": {
+        "playIn": {
+          "top": { "teamId": "pinewood", "score": 63 },
+          "bottom": { "teamId": "westminster", "score": 59 },
+          "winner": "pinewood"
+        },
+        "semi1": {
+          "top": { "teamId": "standrews", "score": 71 },
+          "bottom": { "teamId": "pinewood", "score": 32 },
+          "winner": "standrews"
+        },
+        "semi2": {
+          "top": { "teamId": "frederica", "score": 53 },
+          "bottom": { "teamId": "bulloch", "score": 40 },
+          "winner": "frederica"
+        },
+        "final": {
+          "top": { "teamId": "standrews", "score": 67 },
+          "bottom": { "teamId": "frederica", "score": 42 },
+          "winner": "standrews"
+        }
+      }
+    },
+    "state": {
+  "title": "2023-2024 State Tournament",
+  "teams": {
+    "brookwood": {
+      "name": "Heritage",
+      "seed": 1,
+      "card": "/images/boys/basketball/teams/heritage.svg"
+    },
+    "standrews": {
+      "name": "St. Andrew’s",
+      "seed": 2,
+      "card": "/images/boys/basketball/teams/standrews.svg"
+    },
+    "lakeview": {
+      "name": "Lakeview",
+      "seed": 3,
+      "card": "/images/boys/basketball/teams/lakeview.svg"
+    },
+    "deerfieldwindsor": {
+      "name": "Brookwood",
+      "seed": 4,
+      "card": "/images/boys/basketball/teams/brookwood.svg"
+    },
+    "frederica": {
+      "name": "Frederica",
+      "seed": 5,
+      "card": "/images/boys/basketball/teams/frederica.svg"
+    },
+    "westminster": {
+      "name": "John Milledge",
+      "seed": 6,
+      "card": "/images/boys/basketball/teams/johnmilledge.svg"
+    },
+    "tiftarea": {
+      "name": "Dominion Christian",
+      "seed": 7,
+      "card": "/images/boys/basketball/teams/dominionchristian.svg"
+    },
+    "dominionchristian": {
+      "name": "Deerfield-Windsor",
+      "seed": 8,
+      "card": "/images/boys/basketball/teams/deerfieldwindsor.svg"
+    },
+    "valwood": {
+      "name": "Southland",
+      "seed": 9,
+      "card": "/images/boys/basketball/teams/southland.svg"
+    },
+    "westfield": {
+      "name": "Pinewood",
+      "seed": 10,
+      "card": "/images/boys/basketball/teams/pinewood.svg"
+    },
+    "terrell": {
+      "name": "Terrell",
+      "seed": 11,
+      "card": "/images/boys/basketball/teams/terrell.svg"
+    },
+    "johnmilledge": {
+      "name": "Tiftarea",
+      "seed": 12,
+      "card": "/images/boys/basketball/teams/tiftarea.svg"
+    }
+  },
+  "games": {
+    "r1_8_9": {
+      "top":  { "teamId": "deerfieldwindsor", "score": 59 },
+      "bottom": { "teamId": "southland", "score": 29 },
+      "winner": "deerfieldwindsor"
+    },
+    "r1_5_12": {
+      "top":  { "teamId": "frederica", "score": 76 },
+      "bottom": { "teamId": "tiftarea", "score": 34 },
+      "winner": "frederica"
+    },
+    "r1_7_10": {
+      "top":  { "teamId": "dominionchristian", "score": 62 },
+      "bottom": { "teamId": "pinewood", "score": 57 },
+      "winner": "dominionchristian"
+    },
+    "r1_6_11": {
+      "top":  { "teamId": "johnmilledge", "score": 68 },
+      "bottom": { "teamId": "terrell", "score": 26 },
+      "winner": "johnmilledge"
+    },
+
+    "qf_1": {
+      "top":  { "teamId": "heritage", "score": 66 },
+      "bottom": { "teamId": "deerfieldwindsor", "score": 16 },
+      "winner": "heritage"
+    },
+    "qf_4": {
+      "top":  { "teamId": "brookwood", "score": 48 },
+      "bottom": { "teamId": "frederica", "score": 64 },
+      "winner": "frederica"
+    },
+    "qf_2": {
+      "top":  { "teamId": "standrews", "score": 64 },
+      "bottom": { "teamId": "dominionchristian", "score": 63 },
+      "winner": "standrews"
+    },
+    "qf_3": {
+      "top":  { "teamId": "lakeview", "score": 52 },
+      "bottom": { "teamId": "johnmilledge", "score": 34 },
+      "winner": "lakeview"
+    },
+
+    "sf_top": {
+      "top":  { "teamId": "heritage", "score": 60 },
+      "bottom": { "teamId": "frederica", "score": 50 },
+      "winner": "heritage"
+    },
+    "sf_bot": {
+      "top":  { "teamId": "lakeview", "score": 56 },
+      "bottom": { "teamId": "standrews", "score": 54 },
+      "winner": "lakeview"
+    },
+
+    "final": {
+      "top":  { "teamId": "heritage", "score": 44 },
+      "bottom": { "teamId": "lakeview", "score": 53 },
+      "winner": "lakeview"
+    }
+  }
+}
+  },
   "2024": {
     "region": {
       "title": "2024-2025 Region Tournament",
