@@ -52,7 +52,7 @@
     "state": {
   "title": "2023-2024 State Tournament",
   "teams": {
-    "brookwood": {
+    "heritage": {
       "name": "Heritage",
       "seed": 1,
       "card": "/images/boys/basketball/teams/heritage.svg"
@@ -67,7 +67,7 @@
       "seed": 3,
       "card": "/images/boys/basketball/teams/lakeview.svg"
     },
-    "deerfieldwindsor": {
+    "brookwood": {
       "name": "Brookwood",
       "seed": 4,
       "card": "/images/boys/basketball/teams/brookwood.svg"
@@ -77,27 +77,27 @@
       "seed": 5,
       "card": "/images/boys/basketball/teams/frederica.svg"
     },
-    "westminster": {
+    "johnmilledge": {
       "name": "John Milledge",
       "seed": 6,
       "card": "/images/boys/basketball/teams/johnmilledge.svg"
     },
-    "tiftarea": {
+    "dominionchristian": {
       "name": "Dominion Christian",
       "seed": 7,
       "card": "/images/boys/basketball/teams/dominionchristian.svg"
     },
-    "dominionchristian": {
+    "deerfieldwindsor": {
       "name": "Deerfield-Windsor",
       "seed": 8,
       "card": "/images/boys/basketball/teams/deerfieldwindsor.svg"
     },
-    "valwood": {
+    "southland": {
       "name": "Southland",
       "seed": 9,
       "card": "/images/boys/basketball/teams/southland.svg"
     },
-    "westfield": {
+    "pinewood": {
       "name": "Pinewood",
       "seed": 10,
       "card": "/images/boys/basketball/teams/pinewood.svg"
@@ -107,7 +107,7 @@
       "seed": 11,
       "card": "/images/boys/basketball/teams/terrell.svg"
     },
-    "johnmilledge": {
+    "tiftarea": {
       "name": "Tiftarea",
       "seed": 12,
       "card": "/images/boys/basketball/teams/tiftarea.svg"
