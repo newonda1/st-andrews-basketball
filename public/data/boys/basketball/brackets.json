@@ -640,9 +640,9 @@
         },
 
         "final": {
-          "top": { "teamId": "brookwood", "score": null },
-          "bottom": { "teamId": "standrews", "score": null },
-          "winner": null
+          "top": { "teamId": "brookwood", "score": 61 },
+          "bottom": { "teamId": "standrews", "score": 46 },
+          "winner": "brookwood"
         }
       }
     }
