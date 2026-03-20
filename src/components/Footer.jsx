@@ -23,7 +23,7 @@ export default function Footer() {
         St. Andrew&apos;s Athletics
       </div>
 
-      {/* Powered by section */}
+      {/* Powered by */}
       <div
         style={{
           display: "flex",
@@ -41,18 +41,14 @@ export default function Footer() {
           style={{
             display: "flex",
             alignItems: "center",
-            gap: "6px",
             textDecoration: "none",
-            color: "#2563eb",
-            fontWeight: "500",
           }}
         >
           <img
             src="/images/branding/preplegacy-logo.png"
             alt="PrepLegacy"
-            style={{ height: "20px" }}
+            style={{ height: "22px" }}
           />
-          PrepLegacy
         </a>
       </div>
     </footer>
