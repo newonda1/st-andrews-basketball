@@ -32,7 +32,7 @@ function AthleticsHome() {
       <div className="px-6 py-8 max-w-5xl mx-auto">
         <header className="text-center mb-8">
           <img
-            src="/images/st-andrews/st_andrews_athletics_logo.png"
+            src="/images/common/st_andrews_athletics_logo.png"
             alt="St. Andrew's Lions Athletics"
             className="w-full max-w-3xl mx-auto object-contain"
             loading="eager"
