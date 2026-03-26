@@ -34,7 +34,7 @@ function AthleticsHome() {
           <img
             src="/images/common/st_andrews_athletics_logo.png"
             alt="St. Andrew's Lions Athletics"
-            className="w-full max-w-3xl mx-auto object-contain"
+            className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto object-contain"
             loading="eager"
           />
         </header>
