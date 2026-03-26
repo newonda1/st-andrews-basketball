@@ -45,7 +45,7 @@ function AthleticsHome() {
               Historical Athletic Statistics
             </h1>
             <p className="text-gray-700 leading-relaxed">
-              Select a sport below to view season results, team records,<br>player
+              Select a sport below to view season results, team records,<br />player
               statistics, and historical program information.
             </p>
           </div>
