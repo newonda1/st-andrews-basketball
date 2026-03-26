@@ -42,10 +42,10 @@ function AthleticsHome() {
         <section className="max-w-3xl mx-auto mb-10">
           <div className="bg-white border border-gray-200 rounded-2xl shadow-sm px-6 py-5 text-center">
             <h1 className="text-2xl md:text-3xl font-bold text-blue-800 mb-2">
-              Athletic Statistics
+              Historical Athletic Statistics
             </h1>
             <p className="text-gray-700 leading-relaxed">
-              Select a sport below to view season results, team records, player
+              Select a sport below to view season results, team records,<br>player
               statistics, and historical program information.
             </p>
           </div>
