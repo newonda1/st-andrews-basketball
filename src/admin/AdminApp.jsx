@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { Link, NavLink, Route, Routes, Navigate } from "react-router-dom";
 import BoysBasketballAdmin from "./modules/boysBasketball/BoysBasketballAdmin";
-import BoysBaseballAdmin from "./modules/boysBaseball/BoysBaseballAdmin";
+import BoysBaseballAdmin from "./modules/boysBaseball/boysBaseballAdmin";
 import GirlsBasketballAdmin from "./modules/girlsBasketball/GirlsBasketballAdmin";
 
 /**
