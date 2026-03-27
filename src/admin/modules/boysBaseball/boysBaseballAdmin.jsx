@@ -311,9 +311,10 @@ function formatJson(entries) {
   return lines.join("\n");
 }
 
-export default function boysBaseballAdmin() {
+export default function BoysBaseballAdmin() {
   const [players, setPlayers] = useState([]);
   const [seasonRosters, setSeasonRosters] = useState([]);
+  const [seasons, setSeasons] = useState([]);
   const [games, setGames] = useState([]);
   const [seasonId, setSeasonId] = useState("2026");
   const [gameId, setGameId] = useState("");
@@ -326,9 +327,10 @@ export default function boysBaseballAdmin() {
   useEffect(() => {
     async function loadData() {
       try {
-        const [playersRes, rostersRes, gamesRes] = await Promise.all([
+        const [playersRes, rostersRes, seasonsRes, gamesRes] = await Promise.all([
           fetch("/data/boys/players.json"),
           fetch("/data/boys/baseball/seasonrosters.json"),
+          fetch("/data/boys/baseball/seasons.json"),
           fetch("/data/boys/baseball/games.json"),
         ]);
 
@@ -338,30 +340,36 @@ export default function boysBaseballAdmin() {
         if (!rostersRes.ok) {
           throw new Error(`Could not load seasonrosters.json (${rostersRes.status}).`);
         }
+        if (!seasonsRes.ok) {
+          throw new Error(`Could not load seasons.json (${seasonsRes.status}).`);
+        }
         if (!gamesRes.ok) {
           throw new Error(`Could not load games.json (${gamesRes.status}).`);
         }
 
-        const [playersData, rostersData, gamesData] = await Promise.all([
+        const [playersData, rostersData, seasonsData, gamesData] = await Promise.all([
           playersRes.json(),
           rostersRes.json(),
+          seasonsRes.json(),
           gamesRes.json(),
         ]);
 
         const safePlayers = Array.isArray(playersData) ? playersData : [];
         const safeRosters = Array.isArray(rostersData) ? rostersData : [];
+        const safeSeasons = Array.isArray(seasonsData) ? seasonsData : [];
         const safeGames = Array.isArray(gamesData) ? gamesData : [];
 
         setPlayers(safePlayers);
         setSeasonRosters(safeRosters);
+        setSeasons(safeSeasons);
         setGames(safeGames);
 
-        if (!safeGames.length && safeRosters.length) {
-          setStatus("Loaded roster data, but games.json appears empty.");
+        if (!safeSeasons.length) {
+          setStatus("Loaded players and rosters, but seasons.json appears empty.");
         } else if (!safeGames.length) {
-          setStatus("Loaded data, but no baseball games were found.");
+          setStatus("Loaded seasons, but games.json appears empty.");
         } else {
-          setStatus(`Loaded ${safeGames.length} baseball games successfully.`);
+          setStatus(`Loaded ${safeSeasons.length} seasons and ${safeGames.length} baseball games successfully.`);
         }
       } catch (error) {
         setStatus(error.message || "Failed to load supporting data.");
@@ -377,11 +385,12 @@ export default function boysBaseballAdmin() {
   }, [seasonId, seasonRosters]);
 
   const availableSeasons = useMemo(() => {
+    const seasonFileSeasons = seasons.map((entry) => String(entry.SeasonID)).filter(Boolean);
     const gameSeasons = games.map((game) => String(game.Season)).filter(Boolean);
     const rosterSeasons = seasonRosters.map((entry) => String(entry.SeasonID)).filter(Boolean);
-    const values = Array.from(new Set([...gameSeasons, ...rosterSeasons]));
+    const values = Array.from(new Set([...seasonFileSeasons, ...gameSeasons, ...rosterSeasons]));
     return values.sort((a, b) => Number(a) - Number(b));
-  }, [games, seasonRosters]);
+  }, [seasons, games, seasonRosters]);
 
   const seasonGames = useMemo(() => {
     return games
@@ -590,6 +599,9 @@ export default function boysBaseballAdmin() {
 
       <div style={{ marginBottom: 16 }}>
         <strong>Loaded games:</strong> {games.length}
+      </div>
+      <div style={{ marginBottom: 16 }}>
+        <strong>Loaded seasons:</strong> {seasons.length}
       </div>
 
       <div style={{ marginBottom: 16 }}>
