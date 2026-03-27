@@ -332,8 +332,14 @@ export default function boysBaseballAdmin() {
           fetch("/data/boys/baseball/games.json"),
         ]);
 
-        if (!playersRes.ok || !rostersRes.ok || !gamesRes.ok) {
-          throw new Error("Could not load players, season roster data, or games data.");
+        if (!playersRes.ok) {
+          throw new Error(`Could not load players.json (${playersRes.status}).`);
+        }
+        if (!rostersRes.ok) {
+          throw new Error(`Could not load seasonrosters.json (${rostersRes.status}).`);
+        }
+        if (!gamesRes.ok) {
+          throw new Error(`Could not load games.json (${gamesRes.status}).`);
         }
 
         const [playersData, rostersData, gamesData] = await Promise.all([
@@ -342,9 +348,21 @@ export default function boysBaseballAdmin() {
           gamesRes.json(),
         ]);
 
-        setPlayers(Array.isArray(playersData) ? playersData : []);
-        setSeasonRosters(Array.isArray(rostersData) ? rostersData : []);
-        setGames(Array.isArray(gamesData) ? gamesData : []);
+        const safePlayers = Array.isArray(playersData) ? playersData : [];
+        const safeRosters = Array.isArray(rostersData) ? rostersData : [];
+        const safeGames = Array.isArray(gamesData) ? gamesData : [];
+
+        setPlayers(safePlayers);
+        setSeasonRosters(safeRosters);
+        setGames(safeGames);
+
+        if (!safeGames.length && safeRosters.length) {
+          setStatus("Loaded roster data, but games.json appears empty.");
+        } else if (!safeGames.length) {
+          setStatus("Loaded data, but no baseball games were found.");
+        } else {
+          setStatus(`Loaded ${safeGames.length} baseball games successfully.`);
+        }
       } catch (error) {
         setStatus(error.message || "Failed to load supporting data.");
       }
@@ -359,9 +377,11 @@ export default function boysBaseballAdmin() {
   }, [seasonId, seasonRosters]);
 
   const availableSeasons = useMemo(() => {
-    const values = Array.from(new Set(games.map((game) => String(game.Season))));
+    const gameSeasons = games.map((game) => String(game.Season)).filter(Boolean);
+    const rosterSeasons = seasonRosters.map((entry) => String(entry.SeasonID)).filter(Boolean);
+    const values = Array.from(new Set([...gameSeasons, ...rosterSeasons]));
     return values.sort((a, b) => Number(a) - Number(b));
-  }, [games]);
+  }, [games, seasonRosters]);
 
   const seasonGames = useMemo(() => {
     return games
@@ -566,6 +586,10 @@ export default function boysBaseballAdmin() {
 
       <div style={{ marginBottom: 16 }}>
         <strong>Status:</strong> {status}
+      </div>
+
+      <div style={{ marginBottom: 16 }}>
+        <strong>Loaded games:</strong> {games.length}
       </div>
 
       <div style={{ marginBottom: 16 }}>
