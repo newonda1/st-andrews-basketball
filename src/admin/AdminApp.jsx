@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { Link, NavLink, Route, Routes, Navigate } from "react-router-dom";
 import BoysBasketballAdmin from "./modules/boysBasketball/BoysBasketballAdmin";
+import BoysBaseballAdmin from "./modules/boysBaseball/boysBaseballAdmin";
 import GirlsBasketballAdmin from "./modules/girlsBasketball/GirlsBasketballAdmin";
 
 /**
@@ -114,6 +115,7 @@ function AdminLayout({ onLock }) {
   const navLinks = useMemo(
     () => [
       { to: "/admin/boys-basketball", label: "Boys Basketball" },
+      { to: "/admin/boys-baseball", label: "Boys Baseball" },
       { to: "/admin/girls-basketball", label: "Girls Basketball" },
       // Add more modules later:
       // { to: "/admin/girls-basketball", label: "Girls Basketball" },
@@ -182,6 +184,7 @@ function AdminLayout({ onLock }) {
           <Routes>
             <Route index element={<Navigate to="/admin/boys-basketball" replace />} />
             <Route path="boys-basketball" element={<BoysBasketballAdmin />} />
+            <Route path="boys-baseball" element={<BoysBaseballAdmin />} />
             <Route path="girls-basketball" element={<GirlsBasketballAdmin />} />
             <Route
               path="*"
