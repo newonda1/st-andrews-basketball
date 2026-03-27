@@ -311,11 +311,6 @@ function formatJson(entries) {
   return lines.join("\n");
 }
 
-function buildDataUrl(path) {
-  const normalizedPath = path.startsWith("/") ? path : `/${path}`;
-  const base = window.location.origin;
-  return new URL(normalizedPath, base).toString();
-}
 
 export default function BoysBaseballAdmin() {
   const [players, setPlayers] = useState([]);
@@ -333,29 +328,29 @@ export default function BoysBaseballAdmin() {
   useEffect(() => {
     async function loadData() {
       try {
-        const playersUrl = buildDataUrl("/data/boys/players.json");
-        const rostersUrl = buildDataUrl("/data/boys/baseball/seasonrosters.json");
-        const seasonsUrl = buildDataUrl("/data/boys/baseball/seasons.json");
-        const gamesUrl = buildDataUrl("/data/boys/baseball/games.json");
+        const playersPath = "/data/boys/players.json";
+        const rostersPath = "/data/boys/baseball/seasonrosters.json";
+        const seasonsPath = "/data/boys/baseball/seasons.json";
+        const gamesPath = "/data/boys/baseball/games.json";
 
-        const playersRes = await fetch(playersUrl);
+        const playersRes = await fetch(playersPath);
         if (!playersRes.ok) {
-          throw new Error(`Could not load players.json (${playersRes.status}) from ${playersUrl}`);
+          throw new Error(`Could not load players.json (${playersRes.status}) from ${playersPath}`);
         }
 
-        const rostersRes = await fetch(rostersUrl);
+        const rostersRes = await fetch(rostersPath);
         if (!rostersRes.ok) {
-          throw new Error(`Could not load seasonrosters.json (${rostersRes.status}) from ${rostersUrl}`);
+          throw new Error(`Could not load seasonrosters.json (${rostersRes.status}) from ${rostersPath}`);
         }
 
-        const seasonsRes = await fetch(seasonsUrl);
+        const seasonsRes = await fetch(seasonsPath);
         if (!seasonsRes.ok) {
-          throw new Error(`Could not load seasons.json (${seasonsRes.status}) from ${seasonsUrl}`);
+          throw new Error(`Could not load seasons.json (${seasonsRes.status}) from ${seasonsPath}`);
         }
 
-        const gamesRes = await fetch(gamesUrl);
+        const gamesRes = await fetch(gamesPath);
         if (!gamesRes.ok) {
-          throw new Error(`Could not load games.json (${gamesRes.status}) from ${gamesUrl}`);
+          throw new Error(`Could not load games.json (${gamesRes.status}) from ${gamesPath}`);
         }
 
         const playersData = await playersRes.json();
