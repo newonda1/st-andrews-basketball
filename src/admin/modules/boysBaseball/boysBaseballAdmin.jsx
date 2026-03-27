@@ -311,6 +311,12 @@ function formatJson(entries) {
   return lines.join("\n");
 }
 
+function buildDataUrl(path) {
+  const normalizedPath = path.startsWith("/") ? path : `/${path}`;
+  const base = window.location.origin;
+  return new URL(normalizedPath, base).toString();
+}
+
 export default function BoysBaseballAdmin() {
   const [players, setPlayers] = useState([]);
   const [seasonRosters, setSeasonRosters] = useState([]);
@@ -327,32 +333,35 @@ export default function BoysBaseballAdmin() {
   useEffect(() => {
     async function loadData() {
       try {
-        const [playersRes, rostersRes, seasonsRes, gamesRes] = await Promise.all([
-          fetch("/data/boys/players.json"),
-          fetch("/data/boys/baseball/seasonrosters.json"),
-          fetch("/data/boys/baseball/seasons.json"),
-          fetch("/data/boys/baseball/games.json"),
-        ]);
+        const playersUrl = buildDataUrl("/data/boys/players.json");
+        const rostersUrl = buildDataUrl("/data/boys/baseball/seasonrosters.json");
+        const seasonsUrl = buildDataUrl("/data/boys/baseball/seasons.json");
+        const gamesUrl = buildDataUrl("/data/boys/baseball/games.json");
 
+        const playersRes = await fetch(playersUrl);
         if (!playersRes.ok) {
-          throw new Error(`Could not load players.json (${playersRes.status}).`);
-        }
-        if (!rostersRes.ok) {
-          throw new Error(`Could not load seasonrosters.json (${rostersRes.status}).`);
-        }
-        if (!seasonsRes.ok) {
-          throw new Error(`Could not load seasons.json (${seasonsRes.status}).`);
-        }
-        if (!gamesRes.ok) {
-          throw new Error(`Could not load games.json (${gamesRes.status}).`);
+          throw new Error(`Could not load players.json (${playersRes.status}) from ${playersUrl}`);
         }
 
-        const [playersData, rostersData, seasonsData, gamesData] = await Promise.all([
-          playersRes.json(),
-          rostersRes.json(),
-          seasonsRes.json(),
-          gamesRes.json(),
-        ]);
+        const rostersRes = await fetch(rostersUrl);
+        if (!rostersRes.ok) {
+          throw new Error(`Could not load seasonrosters.json (${rostersRes.status}) from ${rostersUrl}`);
+        }
+
+        const seasonsRes = await fetch(seasonsUrl);
+        if (!seasonsRes.ok) {
+          throw new Error(`Could not load seasons.json (${seasonsRes.status}) from ${seasonsUrl}`);
+        }
+
+        const gamesRes = await fetch(gamesUrl);
+        if (!gamesRes.ok) {
+          throw new Error(`Could not load games.json (${gamesRes.status}) from ${gamesUrl}`);
+        }
+
+        const playersData = await playersRes.json();
+        const rostersData = await rostersRes.json();
+        const seasonsData = await seasonsRes.json();
+        const gamesData = await gamesRes.json();
 
         const safePlayers = Array.isArray(playersData) ? playersData : [];
         const safeRosters = Array.isArray(rostersData) ? rostersData : [];
@@ -372,7 +381,7 @@ export default function BoysBaseballAdmin() {
           setStatus(`Loaded ${safeSeasons.length} seasons and ${safeGames.length} baseball games successfully.`);
         }
       } catch (error) {
-        setStatus(error.message || "Failed to load supporting data.");
+        setStatus(`${error?.name ? `${error.name}: ` : ""}${error?.message || "Failed to load supporting data."}`);
       }
     }
 
