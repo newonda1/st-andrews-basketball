@@ -314,6 +314,7 @@ function formatJson(entries) {
 export default function boysBaseballAdmin() {
   const [players, setPlayers] = useState([]);
   const [seasonRosters, setSeasonRosters] = useState([]);
+  const [games, setGames] = useState([]);
   const [seasonId, setSeasonId] = useState("2026");
   const [gameId, setGameId] = useState("");
   const [fileName, setFileName] = useState("");
@@ -325,22 +326,25 @@ export default function boysBaseballAdmin() {
   useEffect(() => {
     async function loadData() {
       try {
-        const [playersRes, rostersRes] = await Promise.all([
+        const [playersRes, rostersRes, gamesRes] = await Promise.all([
           fetch("/data/boys/players.json"),
           fetch("/data/boys/baseball/seasonrosters.json"),
+          fetch("/data/boys/baseball/games.json"),
         ]);
 
-        if (!playersRes.ok || !rostersRes.ok) {
-          throw new Error("Could not load players or season roster data.");
+        if (!playersRes.ok || !rostersRes.ok || !gamesRes.ok) {
+          throw new Error("Could not load players, season roster data, or games data.");
         }
 
-        const [playersData, rostersData] = await Promise.all([
+        const [playersData, rostersData, gamesData] = await Promise.all([
           playersRes.json(),
           rostersRes.json(),
+          gamesRes.json(),
         ]);
 
         setPlayers(Array.isArray(playersData) ? playersData : []);
         setSeasonRosters(Array.isArray(rostersData) ? rostersData : []);
+        setGames(Array.isArray(gamesData) ? gamesData : []);
       } catch (error) {
         setStatus(error.message || "Failed to load supporting data.");
       }
@@ -354,7 +358,38 @@ export default function boysBaseballAdmin() {
     return Array.isArray(match?.Players) ? match.Players : [];
   }, [seasonId, seasonRosters]);
 
+  const availableSeasons = useMemo(() => {
+    const values = Array.from(new Set(games.map((game) => String(game.Season))));
+    return values.sort((a, b) => Number(a) - Number(b));
+  }, [games]);
+
+  const seasonGames = useMemo(() => {
+    return games
+      .filter((game) => String(game.Season) === String(seasonId))
+      .slice()
+      .sort((a, b) => Number(a.GameID) - Number(b.GameID));
+  }, [games, seasonId]);
+
   const playerIndexes = useMemo(() => buildPlayerIndexes(players, rosterPlayers), [players, rosterPlayers]);
+
+  useEffect(() => {
+    if (!availableSeasons.length) return;
+
+    if (!availableSeasons.includes(String(seasonId))) {
+      setSeasonId(availableSeasons[0]);
+    }
+  }, [availableSeasons, seasonId]);
+
+  useEffect(() => {
+    if (!seasonGames.length) {
+      setGameId("");
+      return;
+    }
+
+    if (!seasonGames.some((game) => String(game.GameID) === String(gameId))) {
+      setGameId(String(seasonGames[0].GameID));
+    }
+  }, [seasonGames, gameId]);
 
   async function handleFileChange(event) {
     const file = event.target.files?.[0];
@@ -375,13 +410,8 @@ export default function boysBaseballAdmin() {
   }
 
   function handleGenerate() {
-    if (!gameId.trim()) {
-      setStatus("Enter a GameID before generating output.");
-      return;
-    }
-
-    if (!/^\d{10}$/.test(gameId.trim())) {
-      setStatus("GameID must be 10 digits, like 2026021901.");
+    if (!String(gameId).trim()) {
+      setStatus("Choose a GameID before generating output.");
       return;
     }
 
@@ -479,24 +509,41 @@ export default function boysBaseballAdmin() {
         }}
       >
         <label style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-          <span>SeasonID</span>
-          <input
-            type="text"
+          <span>Season</span>
+          <select
             value={seasonId}
             onChange={(e) => setSeasonId(e.target.value)}
             style={{ padding: 10, fontSize: 16 }}
-          />
+          >
+            {availableSeasons.length === 0 ? (
+              <option value="">No seasons found</option>
+            ) : (
+              availableSeasons.map((season) => (
+                <option key={season} value={season}>
+                  {season}
+                </option>
+              ))
+            )}
+          </select>
         </label>
 
         <label style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-          <span>GameID</span>
-          <input
-            type="text"
-            placeholder="2026021901"
+          <span>Game</span>
+          <select
             value={gameId}
             onChange={(e) => setGameId(e.target.value)}
             style={{ padding: 10, fontSize: 16 }}
-          />
+          >
+            {seasonGames.length === 0 ? (
+              <option value="">No games found</option>
+            ) : (
+              seasonGames.map((game) => (
+                <option key={game.GameID} value={String(game.GameID)}>
+                  {`${game.GameID} — ${game.Opponent}`}
+                </option>
+              ))
+            )}
+          </select>
         </label>
 
         <label style={{ display: "flex", flexDirection: "column", gap: 6 }}>
@@ -526,7 +573,7 @@ export default function boysBaseballAdmin() {
       </div>
 
       <div style={{ marginBottom: 24 }}>
-        <strong>Roster size for SeasonID {seasonId}:</strong> {rosterPlayers.length}
+        <strong>Roster size for Season {seasonId}:</strong> {rosterPlayers.length}
       </div>
 
       {warnings.length > 0 && (
