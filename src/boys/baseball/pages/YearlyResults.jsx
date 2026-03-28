@@ -2,131 +2,71 @@ import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 
 const styles = {
-  pageTitle: {
-    marginTop: 0,
-    marginBottom: "8px",
-    fontSize: "2rem",
-    color: "#0f172a",
+  page: {
+    width: "100%",
   },
-  intro: {
-    marginTop: 0,
-    marginBottom: "20px",
-    color: "#475569",
-    lineHeight: 1.6,
+  sectionTitle: {
+    textAlign: "center",
+    fontSize: "2rem",
+    fontWeight: 700,
+    margin: "18px 0 14px",
+    color: "#000",
   },
   status: {
-    padding: "14px 16px",
-    borderRadius: "12px",
-    background: "#f8fafc",
-    color: "#334155",
-    marginBottom: "18px",
-    border: "1px solid #e2e8f0",
-  },
-  seasonCard: {
-    border: "1px solid #e2e8f0",
-    borderRadius: "16px",
-    overflow: "hidden",
-    marginBottom: "22px",
-    boxShadow: "0 2px 10px rgba(0,0,0,0.04)",
-  },
-  seasonHeader: {
-    background: "#0f172a",
-    color: "white",
-    padding: "16px 18px",
-  },
-  seasonTitleRow: {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    gap: "12px",
-    flexWrap: "wrap",
-  },
-  seasonTitle: {
-    margin: 0,
-    fontSize: "1.35rem",
-  },
-  recordBadge: {
-    fontWeight: 700,
-    background: "rgba(255,255,255,0.12)",
-    padding: "6px 10px",
-    borderRadius: "999px",
-    border: "1px solid rgba(255,255,255,0.18)",
-  },
-  seasonMeta: {
-    marginTop: "10px",
-    display: "flex",
-    gap: "10px",
-    flexWrap: "wrap",
-    fontSize: "0.95rem",
-    opacity: 0.92,
-  },
-  seasonBody: {
-    padding: "18px",
-    background: "white",
-  },
-  summaryGrid: {
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(170px, 1fr))",
-    gap: "12px",
-    marginBottom: "18px",
-  },
-  summaryBox: {
-    border: "1px solid #e2e8f0",
-    borderRadius: "12px",
-    padding: "12px 14px",
-    background: "#f8fafc",
-  },
-  summaryLabel: {
-    margin: 0,
-    color: "#64748b",
-    fontSize: "0.82rem",
-    textTransform: "uppercase",
-    letterSpacing: "0.05em",
-  },
-  summaryValue: {
-    margin: "6px 0 0",
-    fontSize: "1.15rem",
-    fontWeight: 700,
-    color: "#0f172a",
+    textAlign: "center",
+    fontSize: "1rem",
+    color: "#475569",
+    margin: "8px 0 20px",
   },
   tableWrap: {
+    width: "100%",
     overflowX: "auto",
+    marginBottom: "42px",
   },
   table: {
     width: "100%",
     borderCollapse: "collapse",
-    minWidth: "760px",
+    background: "transparent",
   },
   th: {
-    textAlign: "left",
+    background: "#d1d5db",
+    color: "#111",
+    fontWeight: 700,
+    fontSize: "0.95rem",
+    textAlign: "center",
     padding: "10px 12px",
-    background: "#f8fafc",
-    borderBottom: "1px solid #e2e8f0",
-    color: "#334155",
-    fontSize: "0.9rem",
+    border: "1px solid #d1d5db",
     whiteSpace: "nowrap",
   },
   td: {
-    padding: "10px 12px",
-    borderBottom: "1px solid #e2e8f0",
-    color: "#0f172a",
-    verticalAlign: "top",
+    padding: "9px 12px",
+    border: "1px solid #d1d5db",
+    textAlign: "center",
+    fontSize: "0.95rem",
+    color: "#111",
+    verticalAlign: "middle",
+    background: "transparent",
+  },
+  leftTd: {
+    textAlign: "left",
+  },
+  notesCell: {
+    textAlign: "center",
+    lineHeight: 1.45,
+    whiteSpace: "pre-line",
+  },
+  link: {
+    color: "#2563eb",
+    textDecoration: "none",
+    fontWeight: 500,
   },
   muted: {
     color: "#64748b",
   },
-  win: {
-    fontWeight: 700,
-    color: "#166534",
-  },
-  loss: {
-    fontWeight: 700,
-    color: "#b91c1c",
-  },
-  gameLink: {
-    color: "#7c2d12",
-    textDecoration: "none",
-    fontWeight: 700,
+  noData: {
+    textAlign: "center",
+    color: "#64748b",
+    padding: "18px 0 6px",
   },
 };
 
@@ -142,31 +82,84 @@ function formatDateFromGameId(gameId) {
   if (Number.isNaN(date.getTime())) return "—";
 
   return date.toLocaleDateString("en-US", {
-    month: "short",
+    month: "numeric",
     day: "numeric",
-    year: "numeric",
+    year: "2-digit",
     timeZone: "UTC",
   });
 }
 
-function seasonLabel(seasonId) {
-  return String(seasonId ?? "");
+function seasonDisplay(seasonId) {
+  const year = Number(seasonId);
+  if (!Number.isFinite(year)) return String(seasonId ?? "—");
+  const next = String(year + 1).slice(-2);
+  return `${year}–${next}`;
 }
 
 function buildRecord(games, filterFn = () => true) {
   const filtered = games.filter(filterFn);
   const wins = filtered.filter((game) => game.Result === "W").length;
   const losses = filtered.filter((game) => game.Result === "L").length;
-  return `${wins}-${losses}`;
+  return { wins, losses, text: `${wins}–${losses}` };
 }
 
-function classifyGameType(gameType) {
-  const value = String(gameType ?? "").toLowerCase();
-  if (value.includes("region")) return "Region";
-  if (value.includes("state")) return "State Tournament";
-  if (value.includes("playoff")) return "State Tournament";
-  if (value.includes("showcase")) return "Showcase";
-  return "Non-Region";
+function classifyGameBucket(game) {
+  const gameType = String(game.GameType ?? "").toLowerCase();
+  if (gameType.includes("region") && !gameType.includes("tournament")) return "region";
+  if (game.LocationType === "Home") return "home";
+  if (game.LocationType === "Away") return "away";
+  return "other";
+}
+
+function sortGamesChronologically(games) {
+  return games.slice().sort((a, b) => Number(a.GameID) - Number(b.GameID));
+}
+
+function computeCoachSummaries(seasonsWithGames) {
+  const coachMap = new Map();
+
+  seasonsWithGames.forEach(({ season, games }) => {
+    const coach = season.HeadCoach || "Unknown";
+    if (!coachMap.has(coach)) {
+      coachMap.set(coach, {
+        coach,
+        seasons: [],
+        wins: 0,
+        losses: 0,
+        notes: [],
+      });
+    }
+
+    const entry = coachMap.get(coach);
+    entry.seasons.push(Number(season.SeasonID));
+
+    const overall = buildRecord(games);
+    entry.wins += overall.wins;
+    entry.losses += overall.losses;
+
+    const notes = [];
+    if (season.RegionFinish) notes.push(season.RegionFinish);
+    if (season.StateFinish) notes.push(season.StateFinish);
+    if (notes.length) {
+      entry.notes.push(`${seasonDisplay(season.SeasonID)}: ${notes.join(" & ")}`);
+    }
+  });
+
+  return Array.from(coachMap.values())
+    .map((entry) => {
+      const totalGames = entry.wins + entry.losses;
+      const winPct = totalGames ? `${((entry.wins / totalGames) * 100).toFixed(1)}%` : "—";
+      const minSeason = Math.min(...entry.seasons);
+      return {
+        coach: entry.coach,
+        years: entry.seasons.length,
+        overall: `${entry.wins}–${entry.losses}`,
+        winPct,
+        notes: entry.notes.join("\n"),
+        sortKey: Number.isFinite(minSeason) ? minSeason : 9999,
+      };
+    })
+    .sort((a, b) => b.sortKey - a.sortKey);
 }
 
 export default function YearlyResults() {
@@ -199,12 +192,7 @@ export default function YearlyResults() {
 
         setGames(safeGames);
         setSeasons(safeSeasons);
-
-        if (!safeGames.length) {
-          setStatus("No baseball games were found yet.");
-        } else {
-          setStatus(`Loaded ${safeGames.length} baseball games.`);
-        }
+        setStatus("");
       } catch (error) {
         setStatus(error?.message || "Failed to load baseball data.");
       }
@@ -242,126 +230,131 @@ export default function YearlyResults() {
     return Array.from(seasonMap.values())
       .map(({ season, games: seasonGames }) => ({
         season,
-        games: seasonGames.slice().sort((a, b) => Number(a.GameID) - Number(b.GameID)),
+        games: sortGamesChronologically(seasonGames),
       }))
       .filter((entry) => entry.games.length > 0)
-      .sort((a, b) => Number(b.season.SeasonID) - Number(a.season.SeasonID));
+      .sort((a, b) => Number(a.season.SeasonID) - Number(b.season.SeasonID));
   }, [games, seasons]);
 
+  const coachSummaries = useMemo(
+    () => computeCoachSummaries(seasonsWithGames),
+    [seasonsWithGames]
+  );
+
+  const yearlyRows = useMemo(() => {
+    return seasonsWithGames.map(({ season, games: seasonGames }) => {
+      const overall = buildRecord(seasonGames).text;
+      const region = buildRecord(seasonGames, (game) => classifyGameBucket(game) === "region").text;
+      const home = buildRecord(seasonGames, (game) => classifyGameBucket(game) === "home").text;
+      const away = buildRecord(seasonGames, (game) => classifyGameBucket(game) === "away").text;
+      const other = buildRecord(seasonGames, (game) => classifyGameBucket(game) === "other").text;
+      const playoffs = buildRecord(
+        seasonGames,
+        (game) => String(game.GameType ?? "").toLowerCase().includes("state")
+      ).text;
+
+      const seasonResults = [season.RegionFinish, season.StateFinish].filter(Boolean).join(" & ");
+
+      return {
+        seasonId: season.SeasonID,
+        seasonLabel: seasonDisplay(season.SeasonID),
+        coach: season.HeadCoach || "—",
+        overall,
+        region,
+        home,
+        away,
+        other,
+        playoffs,
+        seasonResult: seasonResults || "",
+      };
+    });
+  }, [seasonsWithGames]);
+
   return (
-    <div>
-      <h1 style={styles.pageTitle}>Yearly Results</h1>
-      <p style={styles.intro}>
-        This page gives you a season-by-season view of the baseball results that
-        have already been entered. It is a good place to verify scores, dates,
-        opponents, and win-loss records as the database is being built.
-      </p>
+    <div style={styles.page}>
+      {status ? <div style={styles.status}>{status}</div> : null}
 
-      <div style={styles.status}>{status}</div>
+      <h2 style={styles.sectionTitle}>Coaching Records</h2>
 
-      {seasonsWithGames.length === 0 ? (
-        <div style={styles.status}>No season results are available yet.</div>
-      ) : (
-        seasonsWithGames.map(({ season, games: seasonGames }) => {
-          const overallRecord = buildRecord(seasonGames);
-          const homeRecord = buildRecord(seasonGames, (game) => game.LocationType === "Home");
-          const awayRecord = buildRecord(seasonGames, (game) => game.LocationType === "Away");
-          const neutralRecord = buildRecord(seasonGames, (game) => game.LocationType === "Neutral");
-          const regionRecord = buildRecord(
-            seasonGames,
-            (game) => String(game.GameType ?? "").toLowerCase().includes("region")
-          );
+      <div style={styles.tableWrap}>
+        <table style={styles.table}>
+          <thead>
+            <tr>
+              <th style={styles.th}>Coach</th>
+              <th style={styles.th}>Years</th>
+              <th style={styles.th}>Overall Record</th>
+              <th style={styles.th}>Win %</th>
+              <th style={styles.th}>Notes (Season Results)</th>
+            </tr>
+          </thead>
+          <tbody>
+            {coachSummaries.length === 0 ? (
+              <tr>
+                <td style={styles.td} colSpan={5}>
+                  <span style={styles.muted}>No coaching data available yet.</span>
+                </td>
+              </tr>
+            ) : (
+              coachSummaries.map((coach) => (
+                <tr key={coach.coach}>
+                  <td style={styles.td}>{coach.coach}</td>
+                  <td style={styles.td}>{coach.years}</td>
+                  <td style={styles.td}>{coach.overall}</td>
+                  <td style={styles.td}>{coach.winPct}</td>
+                  <td style={{ ...styles.td, ...styles.notesCell }}>{coach.notes || ""}</td>
+                </tr>
+              ))
+            )}
+          </tbody>
+        </table>
+      </div>
 
-          return (
-            <section key={season.SeasonID} style={styles.seasonCard}>
-              <div style={styles.seasonHeader}>
-                <div style={styles.seasonTitleRow}>
-                  <h2 style={styles.seasonTitle}>{seasonLabel(season.SeasonID)} Season</h2>
-                  <div style={styles.recordBadge}>Overall: {overallRecord}</div>
-                </div>
+      <h2 style={styles.sectionTitle}>Full Year-by-Year Results</h2>
 
-                <div style={styles.seasonMeta}>
-                  <span>Head Coach: {season.HeadCoach || "—"}</span>
-                  <span>Region Finish: {season.RegionFinish || "—"}</span>
-                  <span>State Finish: {season.StateFinish || "—"}</span>
-                </div>
-              </div>
-
-              <div style={styles.seasonBody}>
-                <div style={styles.summaryGrid}>
-                  <div style={styles.summaryBox}>
-                    <p style={styles.summaryLabel}>Overall</p>
-                    <p style={styles.summaryValue}>{overallRecord}</p>
-                  </div>
-                  <div style={styles.summaryBox}>
-                    <p style={styles.summaryLabel}>Home</p>
-                    <p style={styles.summaryValue}>{homeRecord}</p>
-                  </div>
-                  <div style={styles.summaryBox}>
-                    <p style={styles.summaryLabel}>Away</p>
-                    <p style={styles.summaryValue}>{awayRecord}</p>
-                  </div>
-                  <div style={styles.summaryBox}>
-                    <p style={styles.summaryLabel}>Neutral</p>
-                    <p style={styles.summaryValue}>{neutralRecord}</p>
-                  </div>
-                  <div style={styles.summaryBox}>
-                    <p style={styles.summaryLabel}>Region</p>
-                    <p style={styles.summaryValue}>{regionRecord}</p>
-                  </div>
-                </div>
-
-                <div style={styles.tableWrap}>
-                  <table style={styles.table}>
-                    <thead>
-                      <tr>
-                        <th style={styles.th}>Date</th>
-                        <th style={styles.th}>Opponent</th>
-                        <th style={styles.th}>Site</th>
-                        <th style={styles.th}>Type</th>
-                        <th style={styles.th}>Result</th>
-                        <th style={styles.th}>Score</th>
-                        <th style={styles.th}>Game ID</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {seasonGames.map((game) => {
-                        const hasScore =
-                          game.TeamScore !== null &&
-                          game.TeamScore !== undefined &&
-                          game.OpponentScore !== null &&
-                          game.OpponentScore !== undefined;
-
-                        return (
-                          <tr key={game.GameID}>
-                            <td style={styles.td}>{formatDateFromGameId(game.GameID)}</td>
-                            <td style={styles.td}>{game.Opponent || "—"}</td>
-                            <td style={styles.td}>{game.LocationType || "—"}</td>
-                            <td style={styles.td}>{classifyGameType(game.GameType)}</td>
-                            <td style={styles.td}>
-                              <span style={game.Result === "W" ? styles.win : styles.loss}>
-                                {game.Result || "—"}
-                              </span>
-                            </td>
-                            <td style={styles.td}>
-                              {hasScore ? `${game.TeamScore} - ${game.OpponentScore}` : <span style={styles.muted}>—</span>}
-                            </td>
-                            <td style={styles.td}>
-                              <Link to={`/athletics/boys/baseball/games/${game.GameID}`} style={styles.gameLink}>
-                                {game.GameID}
-                              </Link>
-                            </td>
-                          </tr>
-                        );
-                      })}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </section>
-          );
-        })
-      )}
+      <div style={styles.tableWrap}>
+        <table style={styles.table}>
+          <thead>
+            <tr>
+              <th style={styles.th}>Season</th>
+              <th style={styles.th}>Coach</th>
+              <th style={styles.th}>Overall</th>
+              <th style={styles.th}>Region</th>
+              <th style={styles.th}>Home</th>
+              <th style={styles.th}>Away</th>
+              <th style={styles.th}>Other</th>
+              <th style={styles.th}>Playoffs</th>
+              <th style={styles.th}>Season Result</th>
+            </tr>
+          </thead>
+          <tbody>
+            {yearlyRows.length === 0 ? (
+              <tr>
+                <td style={styles.td} colSpan={9}>
+                  <span style={styles.muted}>No yearly baseball results are available yet.</span>
+                </td>
+              </tr>
+            ) : (
+              yearlyRows.map((row) => (
+                <tr key={row.seasonId}>
+                  <td style={styles.td}>
+                    <Link to={`/athletics/boys/baseball/seasons/${row.seasonId}`} style={styles.link}>
+                      {row.seasonLabel}
+                    </Link>
+                  </td>
+                  <td style={styles.td}>{row.coach}</td>
+                  <td style={styles.td}>{row.overall}</td>
+                  <td style={styles.td}>{row.region}</td>
+                  <td style={styles.td}>{row.home}</td>
+                  <td style={styles.td}>{row.away}</td>
+                  <td style={styles.td}>{row.other}</td>
+                  <td style={styles.td}>{row.playoffs}</td>
+                  <td style={{ ...styles.td, ...styles.leftTd }}>{row.seasonResult}</td>
+                </tr>
+              ))
+            )}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
