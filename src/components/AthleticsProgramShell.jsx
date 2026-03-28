@@ -133,12 +133,6 @@ const styles = {
     background: "#e2e8f0",
     color: "#7c2d12",
   },
-  menuNote: {
-    margin: "10px 2px 0",
-    fontSize: "0.92rem",
-    lineHeight: 1.6,
-    color: "#475569",
-  },
   footer: {
     marginTop: "24px",
     borderTop: "1px solid #e5e7eb",
@@ -299,11 +293,6 @@ export default function AthleticsProgramShell({
                 {(section.links || []).map(renderMenuLink)}
               </div>
             ))}
-
-            <p style={styles.menuNote}>
-              Use the navigation above to move between pages while keeping the
-              same layout and styling throughout the program site.
-            </p>
           </aside>
         </>
       )}
