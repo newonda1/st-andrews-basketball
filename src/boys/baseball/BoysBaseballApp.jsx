@@ -3,6 +3,7 @@ import { Route, Routes, Navigate } from "react-router-dom";
 import AthleticsProgramShell from "../../components/AthleticsProgramShell";
 import YearlyResults from "./pages/YearlyResults";
 import Season2026 from "./seasons/Season2026";
+import GameDetail from "./pages/GameDetail";
 
 function PlaceholderPage({ title, text }) {
   return (
@@ -82,6 +83,7 @@ export default function BoysBaseballApp() {
       <Routes>
         <Route index element={<YearlyResults />} />
         <Route path="seasons/2026" element={<Season2026 />} />
+        <Route path="games/:gameId" element={<GameDetail />} />
         <Route
           path="opponent-history"
           element={
