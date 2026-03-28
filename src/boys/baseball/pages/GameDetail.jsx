@@ -63,6 +63,26 @@ function buildPhotoUrl(playerId) {
   return `/images/boys/baseball/players/${playerId}.jpg`;
 }
 
+function formatOpponentAbbr(game) {
+  if (game?.OpponentAbbr) return game.OpponentAbbr;
+  const opponent = String(game?.Opponent || "").trim();
+  if (!opponent) return "OPP";
+  const words = opponent
+    .replace(/[^A-Za-z0-9\s&'-]/g, "")
+    .split(/\s+/)
+    .filter(Boolean);
+  if (!words.length) return "OPP";
+  return words
+    .slice(0, 4)
+    .map((w) => w[0])
+    .join("")
+    .toUpperCase();
+}
+
+function getDecisionPitcher(rows, key) {
+  return rows.find((row) => Number(row[key] || 0) > 0) || null;
+}
+
 const sectionTitleClass = "text-2xl font-semibold mt-8 mb-4";
 const cardClass = "overflow-x-auto rounded-lg shadow border border-gray-200 bg-white";
 const thClass = "px-3 py-2 text-center bg-gray-100 text-gray-700 font-semibold";
@@ -316,6 +336,16 @@ export default function GameDetail() {
 
   const complete = game.Result === "W" || game.Result === "L";
 
+  const lineScore = game.LineScore || null;
+  const innings = Array.isArray(lineScore?.Innings) ? lineScore.Innings : [];
+  const stAndrewsLine = Array.isArray(lineScore?.StAndrews) ? lineScore.StAndrews : [];
+  const opponentLine = Array.isArray(lineScore?.Opponent) ? lineScore.Opponent : [];
+  const opponentAbbr = formatOpponentAbbr(game);
+
+  const winningPitcher = getDecisionPitcher(pitchingRows, "W");
+  const losingPitcher = getDecisionPitcher(pitchingRows, "L");
+  const savePitcher = getDecisionPitcher(pitchingRows, "SV");
+
   return (
     <div className="max-w-6xl mx-auto py-4 space-y-8">
       <div className="space-y-2">
@@ -342,30 +372,140 @@ export default function GameDetail() {
         </div>
       </div>
 
-      <section className="rounded-lg shadow border border-gray-200 bg-white p-5">
-        <div className="flex flex-wrap items-end justify-between gap-4">
-          <div>
-            <p className="text-sm uppercase tracking-wide text-gray-500 font-semibold mb-1">Final Score</p>
-            <div className="flex items-end gap-4 flex-wrap">
-              <div>
-                <div className="text-lg font-semibold">St. Andrew&apos;s</div>
-                <div className="text-4xl font-bold">{game.TeamScore ?? "-"}</div>
-              </div>
-              <div className="text-2xl font-semibold text-gray-400">-</div>
-              <div>
-                <div className="text-lg font-semibold">{game.Opponent}</div>
-                <div className="text-4xl font-bold">{game.OpponentScore ?? "-"}</div>
+      <section className="rounded-2xl shadow border border-gray-200 bg-white overflow-hidden">
+        <div className="px-5 pt-5 pb-3 border-b border-gray-200">
+          <div className="flex flex-wrap items-start justify-between gap-4">
+            <div>
+              <p className="text-sm uppercase tracking-[0.18em] text-gray-500 font-semibold mb-2">Final Score</p>
+              <div className="flex items-end gap-5 flex-wrap">
+                <div>
+                  <div className="text-sm font-semibold tracking-wide text-gray-500 uppercase mb-1">ST. N</div>
+                  <div className="text-5xl md:text-6xl font-black text-gray-900 leading-none">{game.TeamScore ?? "-"}</div>
+                </div>
+                <div className="text-3xl md:text-4xl font-bold text-gray-300 leading-none">-</div>
+                <div>
+                  <div className="text-sm font-semibold tracking-wide text-gray-500 uppercase mb-1">{opponentAbbr}</div>
+                  <div className="text-5xl md:text-6xl font-black text-gray-900 leading-none">{game.OpponentScore ?? "-"}</div>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="text-right">
-            <div className="text-sm uppercase tracking-wide text-gray-500 font-semibold">Result</div>
-            <div className={`text-3xl font-bold ${game.Result === "W" ? "text-green-700" : game.Result === "L" ? "text-red-700" : "text-gray-500"}`}>
-              {game.Result || "Upcoming"}
+            <div className="text-left md:text-right">
+              <div className="text-sm uppercase tracking-wide text-gray-500 font-semibold">Result</div>
+              <div className={`text-3xl font-black ${game.Result === "W" ? "text-green-700" : game.Result === "L" ? "text-red-700" : "text-gray-500"}`}>
+                {game.Result || "Upcoming"}
+              </div>
             </div>
           </div>
         </div>
+
+        {lineScore ? (
+          <div className="px-3 md:px-5 py-4 border-b border-gray-200 overflow-x-auto">
+            <table className="min-w-full text-sm md:text-base border-separate border-spacing-0">
+              <thead>
+                <tr>
+                  <th className="px-4 py-3 text-left bg-gray-50 text-gray-500 font-semibold border border-gray-200"> </th>
+                  {innings.map((inning, idx) => (
+                    <th key={`inning-${idx}`} className="px-4 py-3 text-center bg-gray-50 text-gray-600 font-semibold border border-gray-200 min-w-[52px]">
+                      {inning}
+                    </th>
+                  ))}
+                  <th className="px-4 py-3 text-center bg-gray-100 text-gray-800 font-bold border border-gray-200 min-w-[52px]">R</th>
+                  <th className="px-4 py-3 text-center bg-gray-100 text-gray-800 font-bold border border-gray-200 min-w-[52px]">H</th>
+                  <th className="px-4 py-3 text-center bg-gray-100 text-gray-800 font-bold border border-gray-200 min-w-[52px]">E</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="px-4 py-4 font-bold text-left border border-gray-200 whitespace-nowrap">{opponentAbbr}</td>
+                  {innings.map((_, idx) => (
+                    <td key={`opp-${idx}`} className="px-4 py-4 text-center text-xl md:text-2xl font-medium border border-gray-200">
+                      {opponentLine[idx] ?? ""}
+                    </td>
+                  ))}
+                  <td className="px-4 py-4 text-center text-xl md:text-2xl font-extrabold border border-gray-200 bg-gray-50">{lineScore?.OpponentTotals?.R ?? game.OpponentScore ?? "-"}</td>
+                  <td className="px-4 py-4 text-center text-xl md:text-2xl font-extrabold border border-gray-200 bg-gray-50">{lineScore?.OpponentTotals?.H ?? "-"}</td>
+                  <td className="px-4 py-4 text-center text-xl md:text-2xl font-extrabold border border-gray-200 bg-gray-50">{lineScore?.OpponentTotals?.E ?? "-"}</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-4 font-black text-left border border-gray-200 whitespace-nowrap">ST. N</td>
+                  {innings.map((_, idx) => (
+                    <td key={`st-${idx}`} className="px-4 py-4 text-center text-xl md:text-2xl font-semibold border border-gray-200">
+                      {stAndrewsLine[idx] ?? ""}
+                    </td>
+                  ))}
+                  <td className="px-4 py-4 text-center text-xl md:text-2xl font-black border border-gray-200 bg-blue-50 text-blue-900">{lineScore?.StAndrewsTotals?.R ?? game.TeamScore ?? "-"}</td>
+                  <td className="px-4 py-4 text-center text-xl md:text-2xl font-black border border-gray-200 bg-blue-50 text-blue-900">{lineScore?.StAndrewsTotals?.H ?? "-"}</td>
+                  <td className="px-4 py-4 text-center text-xl md:text-2xl font-black border border-gray-200 bg-blue-50 text-blue-900">{lineScore?.StAndrewsTotals?.E ?? "-"}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        ) : null}
+
+        {(winningPitcher || losingPitcher || savePitcher) ? (
+          <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200">
+            {winningPitcher ? (
+              <div className="p-4 flex items-center gap-4">
+                <img
+                  src={buildPhotoUrl(winningPitcher.PlayerID)}
+                  alt={winningPitcher.name}
+                  className="w-16 h-16 rounded-full object-cover border border-gray-300 bg-gray-50"
+                  onError={(e) => {
+                    e.currentTarget.style.display = "none";
+                  }}
+                />
+                <div>
+                  <div className="text-sm font-black tracking-wide text-gray-500 uppercase">Win</div>
+                  <div className="text-xl font-bold text-gray-900">{winningPitcher.name}</div>
+                  <div className="text-sm text-gray-600 mt-1">
+                    {outsToBaseballInnings(winningPitcher.IP)} IP, {winningPitcher.H} H, {winningPitcher.ER} ER, {winningPitcher.SO} K, {winningPitcher.BB} BB
+                  </div>
+                </div>
+              </div>
+            ) : <div className="hidden md:block" />}
+
+            {losingPitcher ? (
+              <div className="p-4 flex items-center gap-4">
+                <img
+                  src={buildPhotoUrl(losingPitcher.PlayerID)}
+                  alt={losingPitcher.name}
+                  className="w-16 h-16 rounded-full object-cover border border-gray-300 bg-gray-50"
+                  onError={(e) => {
+                    e.currentTarget.style.display = "none";
+                  }}
+                />
+                <div>
+                  <div className="text-sm font-black tracking-wide text-gray-500 uppercase">Loss</div>
+                  <div className="text-xl font-bold text-gray-900">{losingPitcher.name}</div>
+                  <div className="text-sm text-gray-600 mt-1">
+                    {outsToBaseballInnings(losingPitcher.IP)} IP, {losingPitcher.H} H, {losingPitcher.ER} ER, {losingPitcher.SO} K, {losingPitcher.BB} BB
+                  </div>
+                </div>
+              </div>
+            ) : <div className="hidden md:block" />}
+
+            {savePitcher ? (
+              <div className="p-4 flex items-center gap-4">
+                <img
+                  src={buildPhotoUrl(savePitcher.PlayerID)}
+                  alt={savePitcher.name}
+                  className="w-16 h-16 rounded-full object-cover border border-gray-300 bg-gray-50"
+                  onError={(e) => {
+                    e.currentTarget.style.display = "none";
+                  }}
+                />
+                <div>
+                  <div className="text-sm font-black tracking-wide text-gray-500 uppercase">Save</div>
+                  <div className="text-xl font-bold text-gray-900">{savePitcher.name}</div>
+                  <div className="text-sm text-gray-600 mt-1">
+                    {outsToBaseballInnings(savePitcher.IP)} IP, {savePitcher.H} H, {savePitcher.ER} ER, {savePitcher.SO} K, {savePitcher.BB} BB
+                  </div>
+                </div>
+              </div>
+            ) : <div className="hidden md:block" />}
+          </div>
+        ) : null}
       </section>
 
       {game.Recap ? (
