@@ -7,35 +7,30 @@ import AthleticsHome from "./AthleticsHome.jsx";
 import BoysBasketballApp from "./boys/basketball/BoysBasketballApp.jsx";
 import BoysBaseballApp from "./boys/baseball/BoysBaseballApp.jsx";
 import GirlsBasketballApp from "./girls/basketball/GirlsBasketballApp.jsx";
-import AdminApp from "./admin/AdminApp.jsx"; // ✅ NEW
+import AdminApp from "./admin/AdminApp.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        {/* Athletics landing */}
         <Route path="/" element={<AthleticsHome />} />
         <Route path="/athletics" element={<AthleticsHome />} />
 
-        {/* Boys Basketball */}
         <Route
           path="/athletics/boys/basketball/*"
           element={<BoysBasketballApp />}
         />
 
-        {/* Boys Baseball */}
         <Route
           path="/athletics/boys/baseball/*"
           element={<BoysBaseballApp />}
         />
 
-        {/* Girls Basketball */}
         <Route
           path="/athletics/girls/basketball/*"
           element={<GirlsBasketballApp />}
         />
 
-        {/* ✅ Admin (global) */}
         <Route path="/admin/*" element={<AdminApp />} />
       </Routes>
     </BrowserRouter>
