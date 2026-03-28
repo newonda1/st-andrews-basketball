@@ -164,6 +164,22 @@ const styles = {
     color: "#475569",
     fontSize: "0.92rem",
   },
+  footerLeftLink: {
+    color: "#475569",
+    fontSize: "0.92rem",
+    textDecoration: "none",
+    fontWeight: 500,
+  },
+  footerRight: {
+    display: "flex",
+    alignItems: "center",
+    gap: "8px",
+  },
+  poweredBy: {
+    margin: 0,
+    color: "#475569",
+    fontSize: "0.92rem",
+  },
   footerLink: {
     display: "inline-flex",
     alignItems: "center",
@@ -243,19 +259,25 @@ export default function AthleticsProgramShell({
       {showFooter ? (
         <footer style={styles.footer}>
           <div style={styles.footerInner}>
-            <p style={styles.footerText}>{footerText}</p>
-            <a
-              href={footerHref}
-              target="_blank"
-              rel="noreferrer"
-              style={styles.footerLink}
-            >
-              <img
-                src={footerLogoSrc}
-                alt="Prep Legacy"
-                style={styles.footerLogo}
-              />
-            </a>
+            <Link to={athleticsHomePath} style={styles.footerLeftLink}>
+              {footerText}
+            </Link>
+
+            <div style={styles.footerRight}>
+              <p style={styles.poweredBy}>Powered by</p>
+              <a
+                href={footerHref}
+                target="_blank"
+                rel="noreferrer"
+                style={styles.footerLink}
+              >
+                <img
+                  src={footerLogoSrc}
+                  alt="Prep Legacy"
+                  style={styles.footerLogo}
+                />
+              </a>
+            </div>
           </div>
         </footer>
       ) : null}
