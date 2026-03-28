@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import AthleticsHome from "./AthleticsHome.jsx";
 import BoysBasketballApp from "./boys/basketball/BoysBasketballApp.jsx";
+import BoysBaseballApp from "./boys/baseball/BoysBaseballApp.jsx";
 import GirlsBasketballApp from "./girls/basketball/GirlsBasketballApp.jsx";
 import AdminApp from "./admin/AdminApp.jsx"; // ✅ NEW
 
@@ -20,6 +21,12 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route
           path="/athletics/boys/basketball/*"
           element={<BoysBasketballApp />}
+        />
+
+        {/* Boys Baseball */}
+        <Route
+          path="/athletics/boys/baseball/*"
+          element={<BoysBaseballApp />}
         />
 
         {/* Girls Basketball */}
