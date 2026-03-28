@@ -102,12 +102,8 @@ function buildRecord(games, filterFn = () => true) {
   return { wins, losses, text: `${wins}–${losses}` };
 }
 
-function classifyGameBucket(game) {
-  const gameType = String(game.GameType ?? "").toLowerCase();
-  if (gameType.includes("region") && !gameType.includes("tournament")) return "region";
-  if (game.LocationType === "Home") return "home";
-  if (game.LocationType === "Away") return "away";
-  return "other";
+function isCompletedGame(game) {
+  return game?.Result === "W" || game?.Result === "L";
 }
 
 function sortGamesChronologically(games) {
@@ -242,14 +238,34 @@ export default function YearlyResults() {
 
   const yearlyRows = useMemo(() => {
     return seasonsWithGames.map(({ season, games: seasonGames }) => {
-      const overall = buildRecord(seasonGames).text;
-      const region = buildRecord(seasonGames, (game) => classifyGameBucket(game) === "region").text;
-      const home = buildRecord(seasonGames, (game) => classifyGameBucket(game) === "home").text;
-      const away = buildRecord(seasonGames, (game) => classifyGameBucket(game) === "away").text;
-      const other = buildRecord(seasonGames, (game) => classifyGameBucket(game) === "other").text;
+      const completedGames = seasonGames.filter(isCompletedGame);
+
+      const overall = buildRecord(completedGames).text;
+      const region = buildRecord(
+        completedGames,
+        (game) => String(game.GameType ?? "").toLowerCase() === "region"
+      ).text;
+      const home = buildRecord(
+        completedGames,
+        (game) => String(game.LocationType ?? "") === "Home"
+      ).text;
+      const away = buildRecord(
+        completedGames,
+        (game) => String(game.LocationType ?? "") === "Away"
+      ).text;
+      const other = buildRecord(
+        completedGames,
+        (game) => {
+          const gameType = String(game.GameType ?? "").toLowerCase();
+          return !gameType.includes("region") && !gameType.includes("state") && !gameType.includes("playoff");
+        }
+      ).text;
       const playoffs = buildRecord(
-        seasonGames,
-        (game) => String(game.GameType ?? "").toLowerCase().includes("state")
+        completedGames,
+        (game) => {
+          const gameType = String(game.GameType ?? "").toLowerCase();
+          return gameType.includes("state") || gameType.includes("playoff");
+        }
       ).text;
 
       const seasonResults = [season.RegionFinish, season.StateFinish].filter(Boolean).join(" & ");
