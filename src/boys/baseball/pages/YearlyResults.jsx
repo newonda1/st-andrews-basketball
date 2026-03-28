@@ -253,13 +253,6 @@ export default function YearlyResults() {
         completedGames,
         (game) => String(game.LocationType ?? "") === "Away"
       ).text;
-      const other = buildRecord(
-        completedGames,
-        (game) => {
-          const gameType = String(game.GameType ?? "").toLowerCase();
-          return !gameType.includes("region") && !gameType.includes("state") && !gameType.includes("playoff");
-        }
-      ).text;
       const playoffs = buildRecord(
         completedGames,
         (game) => {
@@ -278,7 +271,6 @@ export default function YearlyResults() {
         region,
         home,
         away,
-        other,
         playoffs,
         seasonResult: seasonResults || "",
       };
@@ -336,7 +328,6 @@ export default function YearlyResults() {
               <th style={styles.th}>Region</th>
               <th style={styles.th}>Home</th>
               <th style={styles.th}>Away</th>
-              <th style={styles.th}>Other</th>
               <th style={styles.th}>Playoffs</th>
               <th style={styles.th}>Season Result</th>
             </tr>
@@ -344,7 +335,7 @@ export default function YearlyResults() {
           <tbody>
             {yearlyRows.length === 0 ? (
               <tr>
-                <td style={styles.td} colSpan={9}>
+                <td style={styles.td} colSpan={8}>
                   <span style={styles.muted}>No yearly baseball results are available yet.</span>
                 </td>
               </tr>
@@ -361,7 +352,6 @@ export default function YearlyResults() {
                   <td style={styles.td}>{row.region}</td>
                   <td style={styles.td}>{row.home}</td>
                   <td style={styles.td}>{row.away}</td>
-                  <td style={styles.td}>{row.other}</td>
                   <td style={styles.td}>{row.playoffs}</td>
                   <td style={{ ...styles.td, ...styles.leftTd }}>{row.seasonResult}</td>
                 </tr>
