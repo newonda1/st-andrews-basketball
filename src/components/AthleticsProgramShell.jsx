@@ -37,7 +37,7 @@ const styles = {
     fontSize: "1.8rem",
     fontWeight: 700,
     lineHeight: 1.1,
-    color: "#1d4aa8",
+    color: "#012169",
   },
   subtitle: {
     margin: 0,
