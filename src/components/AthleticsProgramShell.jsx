@@ -1,5 +1,3 @@
-
-
 import React, { useMemo, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
@@ -33,13 +31,13 @@ const styles = {
   titleWrap: {
     display: "flex",
     flexDirection: "column",
-    gap: "2px",
   },
   title: {
     margin: 0,
     fontSize: "1.8rem",
     fontWeight: 700,
     lineHeight: 1.1,
+    color: "#1d4aa8",
   },
   subtitle: {
     margin: 0,
@@ -220,7 +218,6 @@ export default function AthleticsProgramShell({
           />
           <div style={styles.titleWrap}>
             <h1 style={styles.title}>{title}</h1>
-            {subtitle ? <p style={styles.subtitle}>{subtitle}</p> : null}
           </div>
         </Link>
 
