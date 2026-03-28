@@ -62,15 +62,11 @@ const styles = {
     maxWidth: "1300px",
     width: "100%",
     margin: "0 auto",
-    padding: "0 24px 24px",
+    padding: "0 16px 24px",
     boxSizing: "border-box",
     flex: 1,
   },
   main: {
-    background: "white",
-    borderRadius: "16px",
-    boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
-    padding: "20px",
     minHeight: "520px",
   },
   overlay: {
