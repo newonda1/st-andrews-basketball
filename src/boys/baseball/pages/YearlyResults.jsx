@@ -7,7 +7,7 @@ const styles = {
   },
   sectionTitle: {
     textAlign: "center",
-    fontSize: "2rem",
+    fontSize: "1.5rem",
     fontWeight: 700,
     margin: "18px 0 14px",
     color: "#000",
@@ -92,8 +92,7 @@ function formatDateFromGameId(gameId) {
 function seasonDisplay(seasonId) {
   const year = Number(seasonId);
   if (!Number.isFinite(year)) return String(seasonId ?? "—");
-  const next = String(year + 1).slice(-2);
-  return `${year}–${next}`;
+  return String(year);
 }
 
 function buildRecord(games, filterFn = () => true) {
