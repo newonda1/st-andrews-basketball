@@ -83,6 +83,14 @@ function getDecisionPitcher(rows, key) {
   return rows.find((row) => Number(row[key] || 0) > 0) || null;
 }
 
+function formatPitcherDecisionSuffix(decisionTotals, key) {
+  if (!decisionTotals) return "";
+  if (key === "SV") {
+    return decisionTotals.SV > 0 ? ` (${decisionTotals.SV})` : "";
+  }
+  return ` (${decisionTotals.W}-${decisionTotals.L})`;
+}
+
 const sectionTitleClass = "text-2xl font-semibold mt-8 mb-4";
 const cardClass = "overflow-x-auto rounded-lg shadow border border-gray-200 bg-white";
 const thClass = "px-3 py-2 text-center bg-gray-100 text-gray-700 font-semibold";
@@ -157,39 +165,120 @@ export default function GameDetail() {
     [playerStats, numericGameId]
   );
 
+  const seasonPitcherDecisionMap = useMemo(() => {
+    if (!game) return new Map();
+
+    const seasonGames = games
+      .filter((g) => Number(g.Season) === Number(game.Season))
+      .filter((g) => Number(g.GameID) <= Number(game.GameID))
+      .map((g) => Number(g.GameID));
+
+    const seasonGameIdSet = new Set(seasonGames);
+    const map = new Map();
+
+    playerStats
+      .filter((stat) => seasonGameIdSet.has(Number(stat.GameID)))
+      .forEach((stat) => {
+        const playerId = Number(stat.PlayerID);
+        if (!map.has(playerId)) {
+          map.set(playerId, { W: 0, L: 0, SV: 0 });
+        }
+        const totals = map.get(playerId);
+        totals.W += safeNumber(stat.W);
+        totals.L += safeNumber(stat.L);
+        totals.SV += safeNumber(stat.SV);
+      });
+
+    return map;
+  }, [games, playerStats, game]);
+
+  const seasonCumulativeMap = useMemo(() => {
+    if (!game) return new Map();
+
+    const seasonGames = games
+      .filter((g) => Number(g.Season) === Number(game.Season))
+      .filter((g) => Number(g.GameID) <= Number(game.GameID))
+      .map((g) => Number(g.GameID));
+
+    const seasonGameIdSet = new Set(seasonGames);
+    const map = new Map();
+
+    playerStats
+      .filter((stat) => seasonGameIdSet.has(Number(stat.GameID)))
+      .forEach((stat) => {
+        const playerId = Number(stat.PlayerID);
+        if (!map.has(playerId)) {
+          map.set(playerId, {
+            H: 0,
+            AB: 0,
+            ipOuts: 0,
+            HAllowed: 0,
+            ER: 0,
+            BBAllowed: 0,
+            PO: 0,
+            A: 0,
+            E: 0,
+          });
+        }
+
+        const totals = map.get(playerId);
+        totals.H += safeNumber(stat.H);
+        totals.AB += safeNumber(stat.AB);
+        totals.ipOuts += baseballInningsToOuts(stat.IP);
+        totals.HAllowed += safeNumber(stat.H_Allowed);
+        totals.ER += safeNumber(stat.ER);
+        totals.BBAllowed += safeNumber(stat.BB_Allowed);
+        totals.PO += safeNumber(stat.PO);
+        totals.A += safeNumber(stat.A);
+        totals.E += safeNumber(stat.E);
+      });
+
+    return map;
+  }, [games, playerStats, game]);
+
   const hittingRows = useMemo(() => {
     return gameStats
-      .map((stat) => ({
-        PlayerID: Number(stat.PlayerID),
-        jersey: getJerseyNumber(jerseyMap, stat.PlayerID),
-        name: getPlayerName(playersMap, stat.PlayerID),
-        PA: safeNumber(stat.PA),
-        AB: safeNumber(stat.AB),
-        R: safeNumber(stat.R),
-        H: safeNumber(stat.H),
-        Single: safeNumber(stat["1B"]),
-        Double: safeNumber(stat["2B"]),
-        Triple: safeNumber(stat["3B"]),
-        HR: safeNumber(stat.HR),
-        RBI: safeNumber(stat.RBI),
-        BB: safeNumber(stat.BB),
-        SO: safeNumber(stat.SO),
-        HBP: safeNumber(stat.HBP),
-        SF: safeNumber(stat.SF),
-        SB: safeNumber(stat.SB),
-        TB: safeNumber(stat.TB),
-      }))
+      .map((stat) => {
+        const cumulative = seasonCumulativeMap.get(Number(stat.PlayerID)) || { H: 0, AB: 0 };
+        return {
+          PlayerID: Number(stat.PlayerID),
+          jersey: getJerseyNumber(jerseyMap, stat.PlayerID),
+          name: getPlayerName(playersMap, stat.PlayerID),
+          PA: safeNumber(stat.PA),
+          AB: safeNumber(stat.AB),
+          R: safeNumber(stat.R),
+          H: safeNumber(stat.H),
+          Single: safeNumber(stat["1B"]),
+          Double: safeNumber(stat["2B"]),
+          Triple: safeNumber(stat["3B"]),
+          HR: safeNumber(stat.HR),
+          RBI: safeNumber(stat.RBI),
+          BB: safeNumber(stat.BB),
+          SO: safeNumber(stat.SO),
+          HBP: safeNumber(stat.HBP),
+          SF: safeNumber(stat.SF),
+          SB: safeNumber(stat.SB),
+          TB: safeNumber(stat.TB),
+          seasonAVG: cumulative.AB ? cumulative.H / cumulative.AB : NaN,
+        };
+      })
       .filter((row) => row.PA || row.AB || row.BB || row.HBP)
       .sort((a, b) => {
         if (a.jersey !== b.jersey) return a.jersey - b.jersey;
         return a.name.localeCompare(b.name);
       });
-  }, [gameStats, jerseyMap, playersMap]);
+  }, [gameStats, jerseyMap, playersMap, seasonCumulativeMap]);
 
   const pitchingRows = useMemo(() => {
     return gameStats
       .map((stat) => {
         const ipOuts = baseballInningsToOuts(stat.IP);
+        const cumulative = seasonCumulativeMap.get(Number(stat.PlayerID)) || {
+          ipOuts: 0,
+          HAllowed: 0,
+          ER: 0,
+          BBAllowed: 0,
+        };
         return {
           PlayerID: Number(stat.PlayerID),
           jersey: getJerseyNumber(jerseyMap, stat.PlayerID),
@@ -205,6 +294,8 @@ export default function GameDetail() {
           SO: safeNumber(stat.SO_Pitching),
           BF: safeNumber(stat.BF),
           Pitches: safeNumber(stat.Pitches),
+          seasonERA: cumulative.ipOuts ? (cumulative.ER * 21) / cumulative.ipOuts : NaN,
+          seasonWHIP: cumulative.ipOuts ? ((cumulative.HAllowed + cumulative.BBAllowed) * 3) / cumulative.ipOuts : NaN,
         };
       })
       .filter((row) => row.IP > 0 || row.BF > 0)
@@ -213,7 +304,7 @@ export default function GameDetail() {
         if (a.jersey !== b.jersey) return a.jersey - b.jersey;
         return a.name.localeCompare(b.name);
       });
-  }, [gameStats, jerseyMap, playersMap]);
+  }, [gameStats, jerseyMap, playersMap, seasonCumulativeMap]);
 
   const fieldingRows = useMemo(() => {
     return gameStats
@@ -235,6 +326,8 @@ export default function GameDetail() {
         const e = safeNumber(stat.E);
         const tc = po + a + e;
 
+        const cumulative = seasonCumulativeMap.get(Number(stat.PlayerID)) || { PO: 0, A: 0, E: 0 };
+        const cumulativeTC = cumulative.PO + cumulative.A + cumulative.E;
         return {
           PlayerID: Number(stat.PlayerID),
           jersey: getJerseyNumber(jerseyMap, stat.PlayerID),
@@ -247,6 +340,7 @@ export default function GameDetail() {
           DP: safeNumber(stat.DP),
           PB: safeNumber(stat.PB),
           FPCT: tc ? (po + a) / tc : NaN,
+          seasonFPCT: cumulativeTC ? (cumulative.PO + cumulative.A) / cumulativeTC : NaN,
         };
       })
       .filter((row) => row.INN > 0 || row.PO || row.A || row.E || row.PB)
@@ -254,7 +348,7 @@ export default function GameDetail() {
         if (a.jersey !== b.jersey) return a.jersey - b.jersey;
         return a.name.localeCompare(b.name);
       });
-  }, [gameStats, jerseyMap, playersMap]);
+  }, [gameStats, jerseyMap, playersMap, seasonCumulativeMap]);
 
   const hittingTotals = useMemo(() => {
     return hittingRows.reduce(
@@ -379,7 +473,7 @@ export default function GameDetail() {
               <p className="text-sm uppercase tracking-[0.18em] text-gray-500 font-semibold mb-2">Final Score</p>
               <div className="flex items-end gap-5 flex-wrap">
                 <div>
-                  <div className="text-sm font-semibold tracking-wide text-gray-500 uppercase mb-1">ST. N</div>
+                  <div className="text-sm font-semibold tracking-wide text-gray-500 uppercase mb-1">SAS</div>
                   <div className="text-5xl md:text-6xl font-black text-gray-900 leading-none">{game.TeamScore ?? "-"}</div>
                 </div>
                 <div className="text-3xl md:text-4xl font-bold text-gray-300 leading-none">-</div>
@@ -428,7 +522,7 @@ export default function GameDetail() {
                   <td className="px-4 py-4 text-center text-xl md:text-2xl font-extrabold border border-gray-200 bg-gray-50">{lineScore?.OpponentTotals?.E ?? "-"}</td>
                 </tr>
                 <tr>
-                  <td className="px-4 py-4 font-black text-left border border-gray-200 whitespace-nowrap">ST. N</td>
+                  <td className="px-4 py-4 font-black text-left border border-gray-200 whitespace-nowrap">SAS</td>
                   {innings.map((_, idx) => (
                     <td key={`st-${idx}`} className="px-4 py-4 text-center text-xl md:text-2xl font-semibold border border-gray-200">
                       {stAndrewsLine[idx] ?? ""}
@@ -457,7 +551,10 @@ export default function GameDetail() {
                 />
                 <div>
                   <div className="text-sm font-black tracking-wide text-gray-500 uppercase">Win</div>
-                  <div className="text-xl font-bold text-gray-900">{winningPitcher.name}</div>
+                  <div className="text-xl font-bold text-gray-900">
+                    {winningPitcher.name}
+                    {formatPitcherDecisionSuffix(seasonPitcherDecisionMap.get(winningPitcher.PlayerID), "W")}
+                  </div>
                   <div className="text-sm text-gray-600 mt-1">
                     {outsToBaseballInnings(winningPitcher.IP)} IP, {winningPitcher.H} H, {winningPitcher.ER} ER, {winningPitcher.SO} K, {winningPitcher.BB} BB
                   </div>
@@ -477,7 +574,10 @@ export default function GameDetail() {
                 />
                 <div>
                   <div className="text-sm font-black tracking-wide text-gray-500 uppercase">Loss</div>
-                  <div className="text-xl font-bold text-gray-900">{losingPitcher.name}</div>
+                  <div className="text-xl font-bold text-gray-900">
+                    {losingPitcher.name}
+                    {formatPitcherDecisionSuffix(seasonPitcherDecisionMap.get(losingPitcher.PlayerID), "L")}
+                  </div>
                   <div className="text-sm text-gray-600 mt-1">
                     {outsToBaseballInnings(losingPitcher.IP)} IP, {losingPitcher.H} H, {losingPitcher.ER} ER, {losingPitcher.SO} K, {losingPitcher.BB} BB
                   </div>
@@ -497,7 +597,10 @@ export default function GameDetail() {
                 />
                 <div>
                   <div className="text-sm font-black tracking-wide text-gray-500 uppercase">Save</div>
-                  <div className="text-xl font-bold text-gray-900">{savePitcher.name}</div>
+                  <div className="text-xl font-bold text-gray-900">
+                    {savePitcher.name}
+                    {formatPitcherDecisionSuffix(seasonPitcherDecisionMap.get(savePitcher.PlayerID), "SV")}
+                  </div>
                   <div className="text-sm text-gray-600 mt-1">
                     {outsToBaseballInnings(savePitcher.IP)} IP, {savePitcher.H} H, {savePitcher.ER} ER, {savePitcher.SO} K, {savePitcher.BB} BB
                   </div>
@@ -519,7 +622,7 @@ export default function GameDetail() {
       ) : null}
 
       <section>
-        <h2 className={sectionTitleClass}>⚾ St. Andrew&apos;s Hitting</h2>
+        <h2 className={sectionTitleClass}>St. Andrew&apos;s Hitting</h2>
         <div className={cardClass}>
           <table className="min-w-full bg-white text-sm">
             <thead>
@@ -568,7 +671,7 @@ export default function GameDetail() {
                   <td className={tdClass}>{row.BB}</td>
                   <td className={tdClass}>{row.SO}</td>
                   <td className={tdClass}>{row.SB}</td>
-                  <td className={tdClass}>{formatPct(row.H, row.AB)}</td>
+                  <td className={tdClass}>{Number.isFinite(row.seasonAVG) ? row.seasonAVG.toFixed(3).replace(/^0(?=\.)/, "") : "-"}</td>
                 </tr>
               ))}
               <tr className="font-semibold bg-gray-50">
@@ -593,7 +696,7 @@ export default function GameDetail() {
       </section>
 
       <section>
-        <h2 className={sectionTitleClass}>🥎 St. Andrew&apos;s Pitching</h2>
+        <h2 className={sectionTitleClass}>St. Andrew&apos;s Pitching</h2>
         <div className={cardClass}>
           <table className="min-w-full bg-white text-sm">
             <thead>
@@ -629,8 +732,8 @@ export default function GameDetail() {
                   <td className={tdClass}>{row.W}</td>
                   <td className={tdClass}>{row.L}</td>
                   <td className={tdClass}>{row.SV}</td>
-                  <td className={tdClass}>{formatDecimal(row.IP ? (row.ER * 21) / row.IP : NaN)}</td>
-                  <td className={tdClass}>{formatDecimal(row.IP ? ((row.H + row.BB) * 3) / row.IP : NaN)}</td>
+                  <td className={tdClass}>{formatDecimal(row.seasonERA)}</td>
+                  <td className={tdClass}>{formatDecimal(row.seasonWHIP)}</td>
                 </tr>
               ))}
               <tr className="font-semibold bg-gray-50">
@@ -655,7 +758,7 @@ export default function GameDetail() {
       </section>
 
       <section>
-        <h2 className={sectionTitleClass}>🧤 St. Andrew&apos;s Fielding</h2>
+        <h2 className={sectionTitleClass}>St. Andrew&apos;s Fielding</h2>
         <div className={cardClass}>
           <table className="min-w-full bg-white text-sm">
             <thead>
@@ -684,7 +787,7 @@ export default function GameDetail() {
                   <td className={tdClass}>{row.TC}</td>
                   <td className={tdClass}>{row.DP}</td>
                   <td className={tdClass}>{row.PB}</td>
-                  <td className={tdClass}>{Number.isFinite(row.FPCT) ? row.FPCT.toFixed(3).replace(/^0(?=\.)/, "") : "-"}</td>
+                  <td className={tdClass}>{Number.isFinite(row.seasonFPCT) ? row.seasonFPCT.toFixed(3).replace(/^0(?=\.)/, "") : "-"}</td>
                 </tr>
               ))}
               <tr className="font-semibold bg-gray-50">
