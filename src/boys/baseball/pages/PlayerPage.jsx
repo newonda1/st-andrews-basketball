@@ -432,9 +432,9 @@ function PlayerPage() {
   const activeView = STAT_VIEWS[selectedView];
 
   const thClass =
-    "px-2 py-2 text-left text-xs font-bold uppercase tracking-wide text-slate-600 bg-slate-100 border-b border-slate-200 whitespace-nowrap";
+    "px-2 py-2 text-left text-[11px] font-bold uppercase tracking-wide text-slate-600 bg-slate-100 border-b border-slate-200 whitespace-nowrap";
   const tdClass =
-    "px-2 py-1.5 text-sm text-slate-800 border-b border-slate-100 whitespace-nowrap";
+    "px-2 py-1.5 text-[15px] text-slate-800 border-b border-slate-100 whitespace-nowrap";
 
   if (loading) {
     return <div className="max-w-6xl mx-auto px-4 py-8 text-slate-600">Loading player page...</div>;
@@ -452,7 +452,7 @@ function PlayerPage() {
     <div className="max-w-6xl mx-auto px-4 py-8 md:py-10">
         <section className="mb-10">
           <div className="flex items-center gap-4 md:gap-5">
-            <div className="w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden bg-slate-100 border border-slate-200 shrink-0">
+            <div className="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden bg-slate-100 border border-slate-200 shrink-0">
               {!imageError ? (
                 <img
                   src={photoSrc}
@@ -468,10 +468,10 @@ function PlayerPage() {
             </div>
 
             <div className="min-w-0">
-              <h1 className="text-3xl md:text-5xl font-black text-black leading-none mb-2">
+              <h1 className="text-2xl md:text-3xl font-black text-black leading-tight mb-1">
                 {player.FirstName} {player.LastName}
               </h1>
-              <div className="text-slate-700 text-xl md:text-2xl font-medium">
+              <div className="text-slate-700 text-lg md:text-xl font-medium">
                 {currentJersey != null ? `#${currentJersey} • ` : ""}Class of {player.GradYear ?? "-"}
               </div>
             </div>
@@ -487,7 +487,7 @@ function PlayerPage() {
                   key={key}
                   type="button"
                   onClick={() => setSelectedView(key)}
-                  className={`px-4 py-2 rounded-full border text-sm font-bold transition ${
+                  className={`px-3 py-1.5 rounded-full border text-sm font-bold transition ${
                     active
                       ? "bg-slate-900 text-white border-slate-900"
                       : "bg-white text-slate-700 border-slate-300 hover:border-slate-400"
@@ -501,7 +501,7 @@ function PlayerPage() {
         </section>
 
         <section className="mb-10">
-          <h2 className="text-2xl md:text-3xl font-black text-black mb-4">Career Totals</h2>
+          <h2 className="text-xl md:text-2xl font-black text-black mb-3">Career Totals</h2>
           <div className="overflow-x-auto">
             <table className="min-w-full">
               <thead>
@@ -523,7 +523,7 @@ function PlayerPage() {
         </section>
 
         <section className="mb-10">
-          <h2 className="text-2xl md:text-3xl font-black text-black mb-4">Region Game Totals</h2>
+          <h2 className="text-xl md:text-2xl font-black text-black mb-3">Region Game Totals</h2>
           <div className="overflow-x-auto">
             <table className="min-w-full">
               <thead>
@@ -545,7 +545,7 @@ function PlayerPage() {
         </section>
 
         <section className="mb-10">
-          <h2 className="text-2xl md:text-3xl font-black text-black mb-4">Game Logs</h2>
+          <h2 className="text-xl md:text-2xl font-black text-black mb-3">Game Logs</h2>
 
           <div>
             {gamesBySeason.length === 0 ? (
@@ -553,7 +553,7 @@ function PlayerPage() {
             ) : (
               gamesBySeason.map(([season, seasonGames]) => (
                 <div key={season} className="mb-8 last:mb-0">
-                  <div className="text-2xl font-black text-black mb-3">
+                  <div className="text-lg md:text-xl font-black text-black mb-3">
                     {season}
                   </div>
                   <div className="overflow-x-auto">
@@ -579,7 +579,7 @@ function PlayerPage() {
                                   {isOpponentColumn ? (
                                     <Link
                                       to={`/athletics/boys/baseball/games/${game.GameID}`}
-                                      className="text-blue-700 hover:text-blue-900 font-semibold"
+                                      className="text-blue-700 hover:text-blue-900"
                                     >
                                       {content}
                                     </Link>
