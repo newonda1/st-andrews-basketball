@@ -435,9 +435,9 @@ function PlayerPage() {
     "rounded-2xl border border-slate-200 bg-white shadow-sm overflow-hidden";
   const tableWrapClass = "overflow-x-auto";
   const thClass =
-    "px-3 py-3 text-left text-xs font-bold uppercase tracking-wide text-slate-600 bg-slate-100 border-b border-slate-200 whitespace-nowrap";
+    "px-2 py-2 text-left text-xs font-bold uppercase tracking-wide text-slate-600 bg-slate-100 border-b border-slate-200 whitespace-nowrap";
   const tdClass =
-    "px-3 py-3 text-sm text-slate-800 border-b border-slate-100 whitespace-nowrap";
+    "px-2 py-1.5 text-sm text-slate-800 border-b border-slate-100 whitespace-nowrap";
 
   if (loading) {
     return <div className="max-w-6xl mx-auto px-4 py-8 text-slate-600">Loading player page...</div>;
@@ -536,7 +536,7 @@ function PlayerPage() {
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <tr className="bg-white hover:bg-gray-100">
                   {activeView.summaryColumns.map((col) => (
                     <td key={col.key} className={tdClass}>{col.render(careerTotals)}</td>
                   ))}
@@ -560,7 +560,7 @@ function PlayerPage() {
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <tr className="bg-white hover:bg-gray-100">
                   {activeView.summaryColumns.map((col) => (
                     <td key={col.key} className={tdClass}>{col.render(regionTotals)}</td>
                   ))}
@@ -594,8 +594,11 @@ function PlayerPage() {
                         </tr>
                       </thead>
                       <tbody>
-                        {seasonGames.map((game) => (
-                          <tr key={game.GameID}>
+                        {seasonGames.map((game, index) => (
+                          <tr
+                            key={game.GameID}
+                            className={`${index % 2 === 0 ? "bg-white" : "bg-gray-50/70"} hover:bg-gray-100`}
+                          >
                             {activeView.logColumns.map((col) => {
                               const content = col.render(game);
                               const isOpponentColumn = col.key === "opponent";
