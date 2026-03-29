@@ -76,7 +76,7 @@ function SortableHeader({ label, sortKey, sortConfig, onSort, className = "" }) 
 
   return (
     <th
-      className={`px-3 py-2 text-center cursor-pointer select-none ${className}`}
+      className={`px-2 py-2 text-xs text-center cursor-pointer select-none whitespace-nowrap ${className}`}
       onClick={() => onSort(sortKey)}
     >
       {label}
@@ -446,24 +446,27 @@ export default function Season2026() {
         <h2 className="text-2xl font-semibold mt-8 mb-4">Schedule &amp; Results</h2>
 
         <div className="overflow-x-auto rounded-lg shadow border border-gray-200">
-          <table className="min-w-full bg-white">
-            <thead className="bg-gray-100 text-sm text-gray-700 uppercase tracking-wide">
+          <table className="min-w-full bg-white text-sm">
+            <thead className="bg-gray-100 text-xs text-gray-700 uppercase tracking-wide">
               <tr>
-                <th className="px-4 py-3 text-left">Date</th>
-                <th className="px-4 py-3 text-left">Opponent</th>
-                <th className="px-4 py-3 text-center">Site</th>
-                <th className="px-4 py-3 text-center">Type</th>
-                <th className="px-4 py-3 text-center">Result</th>
-                <th className="px-4 py-3 text-center">Score</th>
+                <th className="px-3 py-2 text-left">Date</th>
+                <th className="px-3 py-2 text-left">Opponent</th>
+                <th className="px-3 py-2 text-center">Site</th>
+                <th className="px-3 py-2 text-center">Type</th>
+                <th className="px-3 py-2 text-center">Result</th>
+                <th className="px-3 py-2 text-center">Score</th>
               </tr>
             </thead>
             <tbody className="text-sm text-gray-800">
-              {games.map((game) => {
+              {games.map((game, index) => {
                 const complete = game.Result === "W" || game.Result === "L";
                 return (
-                  <tr key={game.GameID} className="border-t border-gray-200 hover:bg-gray-50">
-                    <td className="px-4 py-3 whitespace-nowrap">{formatDateFromGameID(game.GameID)}</td>
-                    <td className="px-4 py-3 whitespace-nowrap">
+                  <tr
+                    key={game.GameID}
+                    className={`border-t border-gray-200 ${index % 2 === 0 ? "bg-white" : "bg-gray-50/70"} hover:bg-gray-100`}
+                  >
+                    <td className="px-3 py-2 whitespace-nowrap">{formatDateFromGameID(game.GameID)}</td>
+                    <td className="px-3 py-2 whitespace-nowrap">
                       <Link
                         to={`/athletics/boys/baseball/games/${game.GameID}`}
                         className="text-blue-700 hover:underline"
@@ -471,12 +474,12 @@ export default function Season2026() {
                         {game.Opponent}
                       </Link>
                     </td>
-                    <td className="px-4 py-3 text-center whitespace-nowrap">{game.LocationType || ""}</td>
-                    <td className="px-4 py-3 text-center whitespace-nowrap">{game.GameType || ""}</td>
-                    <td className="px-4 py-3 text-center font-semibold whitespace-nowrap">
+                    <td className="px-3 py-2 text-center whitespace-nowrap">{game.LocationType || ""}</td>
+                    <td className="px-3 py-2 text-center whitespace-nowrap">{game.GameType || ""}</td>
+                    <td className="px-3 py-2 text-center font-semibold whitespace-nowrap">
                       {game.Result || ""}
                     </td>
-                    <td className="px-4 py-3 text-center whitespace-nowrap">
+                    <td className="px-3 py-2 text-center whitespace-nowrap">
                       {complete && game.TeamScore != null && game.OpponentScore != null
                         ? `${game.TeamScore} - ${game.OpponentScore}`
                         : ""}
@@ -516,15 +519,18 @@ export default function Season2026() {
               </tr>
             </thead>
             <tbody>
-              {hittingRows.map((player) => (
-                <tr key={player.PlayerID} className="border-t border-gray-200 hover:bg-gray-50">
-                  <td className="px-3 py-2 text-center">{player.jersey === 999 ? "" : player.jersey}</td>
-                  <td className="px-3 py-2 text-left whitespace-nowrap">
-                    <div className="flex items-center gap-3">
+              {hittingRows.map((player, index) => (
+                <tr
+                  key={player.PlayerID}
+                  className={`border-t border-gray-200 ${index % 2 === 0 ? "bg-white" : "bg-gray-50/70"} hover:bg-gray-100`}
+                >
+                  <td className="px-2 py-1.5 text-center">{player.jersey === 999 ? "" : player.jersey}</td>
+                  <td className="px-2 py-1.5 text-left whitespace-nowrap">
+                    <div className="flex items-center gap-2">
                       <img
                         src={buildPlayerPhotoUrl(player.PlayerID)}
                         alt={player.name}
-                        className="w-10 h-10 rounded-full object-cover border border-gray-300"
+                        className="w-8 h-8 rounded-full object-cover border border-gray-300"
                         onError={(e) => {
                           e.currentTarget.style.display = "none";
                         }}
@@ -537,22 +543,22 @@ export default function Season2026() {
                       </Link>
                     </div>
                   </td>
-                  <td className="px-3 py-2 text-center">{player.GP}</td>
-                  <td className="px-3 py-2 text-center">{player.PA}</td>
-                  <td className="px-3 py-2 text-center">{player.AB}</td>
-                  <td className="px-3 py-2 text-center">{player.R}</td>
-                  <td className="px-3 py-2 text-center">{player.H}</td>
-                  <td className="px-3 py-2 text-center">{player.Double}</td>
-                  <td className="px-3 py-2 text-center">{player.Triple}</td>
-                  <td className="px-3 py-2 text-center">{player.HR}</td>
-                  <td className="px-3 py-2 text-center">{player.RBI}</td>
-                  <td className="px-3 py-2 text-center">{player.BB}</td>
-                  <td className="px-3 py-2 text-center">{player.SO}</td>
-                  <td className="px-3 py-2 text-center">{player.SB}</td>
-                  <td className="px-3 py-2 text-center">{formatPct(player.H, player.AB)}</td>
-                  <td className="px-3 py-2 text-center">{formatPct(player.H + player.BB + player.HBP, player.AB + player.BB + player.HBP + player.SF)}</td>
-                  <td className="px-3 py-2 text-center">{formatPct(player.TB, player.AB)}</td>
-                  <td className="px-3 py-2 text-center">{Number.isFinite(player.OPS) ? player.OPS.toFixed(3).replace(/^0(?=\.)/, "") : "-"}</td>
+                  <td className="px-2 py-1.5 text-center">{player.GP}</td>
+                  <td className="px-2 py-1.5 text-center">{player.PA}</td>
+                  <td className="px-2 py-1.5 text-center">{player.AB}</td>
+                  <td className="px-2 py-1.5 text-center">{player.R}</td>
+                  <td className="px-2 py-1.5 text-center">{player.H}</td>
+                  <td className="px-2 py-1.5 text-center">{player.Double}</td>
+                  <td className="px-2 py-1.5 text-center">{player.Triple}</td>
+                  <td className="px-2 py-1.5 text-center">{player.HR}</td>
+                  <td className="px-2 py-1.5 text-center">{player.RBI}</td>
+                  <td className="px-2 py-1.5 text-center">{player.BB}</td>
+                  <td className="px-2 py-1.5 text-center">{player.SO}</td>
+                  <td className="px-2 py-1.5 text-center">{player.SB}</td>
+                  <td className="px-2 py-1.5 text-center">{formatPct(player.H, player.AB)}</td>
+                  <td className="px-2 py-1.5 text-center">{formatPct(player.H + player.BB + player.HBP, player.AB + player.BB + player.HBP + player.SF)}</td>
+                  <td className="px-2 py-1.5 text-center">{formatPct(player.TB, player.AB)}</td>
+                  <td className="px-2 py-1.5 text-center">{Number.isFinite(player.OPS) ? player.OPS.toFixed(3).replace(/^0(?=\.)/, "") : "-"}</td>
                 </tr>
               ))}
             </tbody>
@@ -583,10 +589,13 @@ export default function Season2026() {
               </tr>
             </thead>
             <tbody>
-              {pitchingRows.map((player) => (
-                <tr key={player.PlayerID} className="border-t border-gray-200 hover:bg-gray-50">
-                  <td className="px-3 py-2 text-center">{player.jersey === 999 ? "" : player.jersey}</td>
-                  <td className="px-3 py-2 text-left whitespace-nowrap">
+              {pitchingRows.map((player, index) => (
+                <tr
+                  key={player.PlayerID}
+                  className={`border-t border-gray-200 ${index % 2 === 0 ? "bg-white" : "bg-gray-50/70"} hover:bg-gray-100`}
+                >
+                  <td className="px-2 py-1.5 text-center">{player.jersey === 999 ? "" : player.jersey}</td>
+                  <td className="px-2 py-1.5 text-left whitespace-nowrap">
                     <Link
                       to={`/athletics/boys/baseball/players/${player.PlayerID}`}
                       className="text-blue-700 hover:underline"
@@ -594,18 +603,18 @@ export default function Season2026() {
                       {player.name}
                     </Link>
                   </td>
-                  <td className="px-3 py-2 text-center">{player.appearances}</td>
-                  <td className="px-3 py-2 text-center">{formatBaseballInningsFromOuts(player.ipOuts)}</td>
-                  <td className="px-3 py-2 text-center">{player.W}</td>
-                  <td className="px-3 py-2 text-center">{player.L}</td>
-                  <td className="px-3 py-2 text-center">{player.SV}</td>
-                  <td className="px-3 py-2 text-center">{player.HAllowed}</td>
-                  <td className="px-3 py-2 text-center">{player.RAllowed}</td>
-                  <td className="px-3 py-2 text-center">{player.ER}</td>
-                  <td className="px-3 py-2 text-center">{player.BBAllowed}</td>
-                  <td className="px-3 py-2 text-center">{player.SOPitching}</td>
-                  <td className="px-3 py-2 text-center">{formatDecimal(player.ERA)}</td>
-                  <td className="px-3 py-2 text-center">{formatDecimal(player.WHIP)}</td>
+                  <td className="px-2 py-1.5 text-center">{player.appearances}</td>
+                  <td className="px-2 py-1.5 text-center">{formatBaseballInningsFromOuts(player.ipOuts)}</td>
+                  <td className="px-2 py-1.5 text-center">{player.W}</td>
+                  <td className="px-2 py-1.5 text-center">{player.L}</td>
+                  <td className="px-2 py-1.5 text-center">{player.SV}</td>
+                  <td className="px-2 py-1.5 text-center">{player.HAllowed}</td>
+                  <td className="px-2 py-1.5 text-center">{player.RAllowed}</td>
+                  <td className="px-2 py-1.5 text-center">{player.ER}</td>
+                  <td className="px-2 py-1.5 text-center">{player.BBAllowed}</td>
+                  <td className="px-2 py-1.5 text-center">{player.SOPitching}</td>
+                  <td className="px-2 py-1.5 text-center">{formatDecimal(player.ERA)}</td>
+                  <td className="px-2 py-1.5 text-center">{formatDecimal(player.WHIP)}</td>
                 </tr>
               ))}
             </tbody>
@@ -633,10 +642,13 @@ export default function Season2026() {
               </tr>
             </thead>
             <tbody>
-              {fieldingRows.map((player) => (
-                <tr key={player.PlayerID} className="border-t border-gray-200 hover:bg-gray-50">
-                  <td className="px-3 py-2 text-center">{player.jersey === 999 ? "" : player.jersey}</td>
-                  <td className="px-3 py-2 text-left whitespace-nowrap">
+              {fieldingRows.map((player, index) => (
+                <tr
+                  key={player.PlayerID}
+                  className={`border-t border-gray-200 ${index % 2 === 0 ? "bg-white" : "bg-gray-50/70"} hover:bg-gray-100`}
+                >
+                  <td className="px-2 py-1.5 text-center">{player.jersey === 999 ? "" : player.jersey}</td>
+                  <td className="px-2 py-1.5 text-left whitespace-nowrap">
                     <Link
                       to={`/athletics/boys/baseball/players/${player.PlayerID}`}
                       className="text-blue-700 hover:underline"
@@ -644,15 +656,15 @@ export default function Season2026() {
                       {player.name}
                     </Link>
                   </td>
-                  <td className="px-3 py-2 text-center">{player.GP}</td>
-                  <td className="px-3 py-2 text-center">{formatBaseballInningsFromOuts(player.defensiveOuts)}</td>
-                  <td className="px-3 py-2 text-center">{player.PO}</td>
-                  <td className="px-3 py-2 text-center">{player.A}</td>
-                  <td className="px-3 py-2 text-center">{player.E}</td>
-                  <td className="px-3 py-2 text-center">{player.TC}</td>
-                  <td className="px-3 py-2 text-center">{player.DP}</td>
-                  <td className="px-3 py-2 text-center">{player.PB}</td>
-                  <td className="px-3 py-2 text-center">{player.TC ? formatPct(player.PO + player.A, player.TC) : "-"}</td>
+                  <td className="px-2 py-1.5 text-center">{player.GP}</td>
+                  <td className="px-2 py-1.5 text-center">{formatBaseballInningsFromOuts(player.defensiveOuts)}</td>
+                  <td className="px-2 py-1.5 text-center">{player.PO}</td>
+                  <td className="px-2 py-1.5 text-center">{player.A}</td>
+                  <td className="px-2 py-1.5 text-center">{player.E}</td>
+                  <td className="px-2 py-1.5 text-center">{player.TC}</td>
+                  <td className="px-2 py-1.5 text-center">{player.DP}</td>
+                  <td className="px-2 py-1.5 text-center">{player.PB}</td>
+                  <td className="px-2 py-1.5 text-center">{player.TC ? formatPct(player.PO + player.A, player.TC) : "-"}</td>
                 </tr>
               ))}
             </tbody>
