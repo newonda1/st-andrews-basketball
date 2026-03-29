@@ -478,31 +478,32 @@ function PlayerPage() {
           </div>
         </section>
 
-        <section className="mb-10">
-          <div className="flex flex-wrap gap-3">
-            {Object.entries(STAT_VIEWS).map(([key, value]) => {
-              const active = selectedView === key;
-              return (
-                <button
-                  key={key}
-                  type="button"
-                  onClick={() => setSelectedView(key)}
-                  className={`px-3 py-1.5 rounded-full border text-sm font-bold transition ${
-                    active
-                      ? "bg-slate-900 text-white border-slate-900"
-                      : "bg-white text-slate-700 border-slate-300 hover:border-slate-400"
-                  }`}
-                >
-                  {value.label}
-                </button>
-              );
-            })}
-          </div>
-        </section>
+        {/* stat-view section removed */}
 
         <section className="mb-10">
-          <h2 className="text-xl md:text-2xl font-black text-black mb-3">Career Totals</h2>
-          <div className="overflow-x-auto">
+          <div className="mb-3 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+            <h2 className="text-xl md:text-2xl font-black text-black">Career Totals</h2>
+            <div className="flex flex-wrap gap-3 md:justify-end">
+              {Object.entries(STAT_VIEWS).map(([key, value]) => {
+                const active = selectedView === key;
+                return (
+                  <button
+                    key={key}
+                    type="button"
+                    onClick={() => setSelectedView(key)}
+                    className={`px-3 py-1.5 rounded-full border text-sm font-bold transition ${
+                      active
+                        ? "bg-slate-900 text-white border-slate-900"
+                        : "bg-white text-slate-700 border-slate-300 hover:border-slate-400"
+                    }`}
+                  >
+                    {value.label}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+          <div className="overflow-x-auto border border-slate-200">
             <table className="min-w-full">
               <thead>
                 <tr>
@@ -524,7 +525,7 @@ function PlayerPage() {
 
         <section className="mb-10">
           <h2 className="text-xl md:text-2xl font-black text-black mb-3">Region Game Totals</h2>
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto border border-slate-200">
             <table className="min-w-full">
               <thead>
                 <tr>
@@ -556,7 +557,7 @@ function PlayerPage() {
                   <div className="text-lg md:text-xl font-black text-black mb-3">
                     {season}
                   </div>
-                  <div className="overflow-x-auto">
+                  <div className="overflow-x-auto border border-slate-200">
                     <table className="min-w-full">
                       <thead>
                         <tr>
