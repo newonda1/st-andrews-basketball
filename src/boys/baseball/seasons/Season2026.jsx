@@ -529,7 +529,12 @@ export default function Season2026() {
                           e.currentTarget.style.display = "none";
                         }}
                       />
-                      <span>{player.name}</span>
+                      <Link
+                        to={`/athletics/boys/baseball/players/${player.PlayerID}`}
+                        className="text-blue-700 hover:underline"
+                      >
+                        {player.name}
+                      </Link>
                     </div>
                   </td>
                   <td className="px-3 py-2 text-center">{player.GP}</td>
@@ -581,7 +586,14 @@ export default function Season2026() {
               {pitchingRows.map((player) => (
                 <tr key={player.PlayerID} className="border-t border-gray-200 hover:bg-gray-50">
                   <td className="px-3 py-2 text-center">{player.jersey === 999 ? "" : player.jersey}</td>
-                  <td className="px-3 py-2 text-left whitespace-nowrap">{player.name}</td>
+                  <td className="px-3 py-2 text-left whitespace-nowrap">
+                    <Link
+                      to={`/athletics/boys/baseball/players/${player.PlayerID}`}
+                      className="text-blue-700 hover:underline"
+                    >
+                      {player.name}
+                    </Link>
+                  </td>
                   <td className="px-3 py-2 text-center">{player.appearances}</td>
                   <td className="px-3 py-2 text-center">{formatBaseballInningsFromOuts(player.ipOuts)}</td>
                   <td className="px-3 py-2 text-center">{player.W}</td>
@@ -624,7 +636,14 @@ export default function Season2026() {
               {fieldingRows.map((player) => (
                 <tr key={player.PlayerID} className="border-t border-gray-200 hover:bg-gray-50">
                   <td className="px-3 py-2 text-center">{player.jersey === 999 ? "" : player.jersey}</td>
-                  <td className="px-3 py-2 text-left whitespace-nowrap">{player.name}</td>
+                  <td className="px-3 py-2 text-left whitespace-nowrap">
+                    <Link
+                      to={`/athletics/boys/baseball/players/${player.PlayerID}`}
+                      className="text-blue-700 hover:underline"
+                    >
+                      {player.name}
+                    </Link>
+                  </td>
                   <td className="px-3 py-2 text-center">{player.GP}</td>
                   <td className="px-3 py-2 text-center">{formatBaseballInningsFromOuts(player.defensiveOuts)}</td>
                   <td className="px-3 py-2 text-center">{player.PO}</td>
