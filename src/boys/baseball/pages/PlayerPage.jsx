@@ -206,6 +206,27 @@ function addStats(total, row) {
   total.SF_Innings += safeNumber(row.SF_Innings);
 }
 
+function buildSeasonTotals(rows, filterFn = () => true) {
+  const grouped = new Map();
+
+  rows.forEach((game) => {
+    if (!filterFn(game)) return;
+
+    const seasonKey = formatSeasonLabel(game.Season);
+    if (!grouped.has(seasonKey)) {
+      grouped.set(seasonKey, emptyTotals());
+    }
+
+    const totals = grouped.get(seasonKey);
+    addStats(totals, game.stats);
+    totals.Games += 1;
+  });
+
+  return [...grouped.entries()]
+    .sort((a, b) => Number(b[0]) - Number(a[0]))
+    .map(([season, totals]) => ({ season, totals }));
+}
+
 const STAT_VIEWS = {
   batting: {
     label: "Batting",
@@ -396,6 +417,8 @@ function PlayerPage() {
     return null;
   }, [seasonRosters, numericPlayerId]);
 
+  const careerTotalsBySeason = useMemo(() => buildSeasonTotals(playerGameRows), [playerGameRows]);
+
   const careerTotals = useMemo(() => {
     const totals = emptyTotals();
     playerGameRows.forEach((game) => {
@@ -404,6 +427,11 @@ function PlayerPage() {
     });
     return totals;
   }, [playerGameRows]);
+
+  const regionTotalsBySeason = useMemo(
+    () => buildSeasonTotals(playerGameRows, (game) => game.GameType === "Region"),
+    [playerGameRows]
+  );
 
   const regionTotals = useMemo(() => {
     const totals = emptyTotals();
@@ -432,9 +460,9 @@ function PlayerPage() {
   const activeView = STAT_VIEWS[selectedView];
 
   const thClass =
-    "px-2 py-2 text-left text-[11px] font-bold uppercase tracking-wide text-slate-600 bg-slate-100 border-b border-slate-200 whitespace-nowrap";
+    "px-2 py-2 text-center text-[11px] font-bold uppercase tracking-wide text-slate-600 bg-slate-100 border-b border-slate-200 whitespace-nowrap";
   const tdClass =
-    "px-2 py-1.5 text-[15px] text-slate-800 border-b border-slate-100 whitespace-nowrap";
+    "px-2 py-1.5 text-[15px] text-slate-800 text-center border-b border-slate-100 whitespace-nowrap";
 
   if (loading) {
     return <div className="max-w-6xl mx-auto px-4 py-8 text-slate-600">Loading player page...</div>;
@@ -507,15 +535,28 @@ function PlayerPage() {
             <table className="min-w-full">
               <thead>
                 <tr>
+                  <th className={thClass}>Season</th>
                   {activeView.summaryColumns.map((col) => (
                     <th key={col.key} className={thClass}>{col.label}</th>
                   ))}
                 </tr>
               </thead>
               <tbody>
-                <tr className="bg-white hover:bg-gray-100">
+                {careerTotalsBySeason.map(({ season, totals }, index) => (
+                  <tr
+                    key={season}
+                    className={`${index % 2 === 0 ? "bg-white" : "bg-gray-50/70"} hover:bg-gray-100`}
+                  >
+                    <td className={`${tdClass} font-semibold`}>{season}</td>
+                    {activeView.summaryColumns.map((col) => (
+                      <td key={col.key} className={tdClass}>{col.render(totals)}</td>
+                    ))}
+                  </tr>
+                ))}
+                <tr className="bg-slate-100 font-semibold">
+                  <td className={`${tdClass} font-bold`}>Total</td>
                   {activeView.summaryColumns.map((col) => (
-                    <td key={col.key} className={tdClass}>{col.render(careerTotals)}</td>
+                    <td key={col.key} className={`${tdClass} font-bold`}>{col.render(careerTotals)}</td>
                   ))}
                 </tr>
               </tbody>
@@ -529,17 +570,38 @@ function PlayerPage() {
             <table className="min-w-full">
               <thead>
                 <tr>
+                  <th className={thClass}>Season</th>
                   {activeView.summaryColumns.map((col) => (
                     <th key={col.key} className={thClass}>{col.label}</th>
                   ))}
                 </tr>
               </thead>
               <tbody>
-                <tr className="bg-white hover:bg-gray-100">
-                  {activeView.summaryColumns.map((col) => (
-                    <td key={col.key} className={tdClass}>{col.render(regionTotals)}</td>
-                  ))}
-                </tr>
+                {regionTotalsBySeason.length === 0 ? (
+                  <tr className="bg-white">
+                    <td className={tdClass} colSpan={activeView.summaryColumns.length + 1}>-</td>
+                  </tr>
+                ) : (
+                  <>
+                    {regionTotalsBySeason.map(({ season, totals }, index) => (
+                      <tr
+                        key={season}
+                        className={`${index % 2 === 0 ? "bg-white" : "bg-gray-50/70"} hover:bg-gray-100`}
+                      >
+                        <td className={`${tdClass} font-semibold`}>{season}</td>
+                        {activeView.summaryColumns.map((col) => (
+                          <td key={col.key} className={tdClass}>{col.render(totals)}</td>
+                        ))}
+                      </tr>
+                    ))}
+                    <tr className="bg-slate-100 font-semibold">
+                      <td className={`${tdClass} font-bold`}>Total</td>
+                      {activeView.summaryColumns.map((col) => (
+                        <td key={col.key} className={`${tdClass} font-bold`}>{col.render(regionTotals)}</td>
+                      ))}
+                    </tr>
+                  </>
+                )}
               </tbody>
             </table>
           </div>
