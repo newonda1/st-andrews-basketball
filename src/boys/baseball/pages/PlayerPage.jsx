@@ -223,7 +223,7 @@ function buildSeasonTotals(rows, filterFn = () => true) {
   });
 
   return [...grouped.entries()]
-    .sort((a, b) => Number(b[0]) - Number(a[0]))
+    .sort((a, b) => Number(a[0]) - Number(b[0]))
     .map(([season, totals]) => ({ season, totals }));
 }
 
