@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const { spawnSync } = require("child_process");
 
 // ===== CONFIG =====
 const PROJECT_ROOT = process.cwd();
@@ -20,11 +21,62 @@ const GAMES_PATH = path.join(
 );
 
 // ===== GET ARGUMENTS =====
-const [, , gameId, filePath] = process.argv;
+const args = process.argv.slice(2);
+
+if (args.length === 1 && /^\d{4}$/.test(args[0])) {
+  const yearPrefix = args[0];
+  const importDir = path.join(PROJECT_ROOT, "imports/baseball/gamechanger");
+
+  if (!fs.existsSync(importDir)) {
+    console.log(`Import folder not found: ${importDir}`);
+    process.exit(1);
+  }
+
+  const files = fs
+    .readdirSync(importDir)
+    .filter((name) => name.startsWith(yearPrefix) && name.toLowerCase().endsWith(".csv"))
+    .sort();
+
+  if (!files.length) {
+    console.log(`No CSV files found in imports/baseball/gamechanger for year prefix ${yearPrefix}.`);
+    process.exit(1);
+  }
+
+  console.log(`Found ${files.length} file(s) for ${yearPrefix}:\n`);
+  files.forEach((file) => console.log(`- ${file}`));
+  console.log("");
+
+  for (const file of files) {
+    const currentGameId = path.basename(file, path.extname(file));
+    const relativeFilePath = `imports/baseball/gamechanger/${file}`;
+
+    console.log(`\n=== Importing ${currentGameId} ===\n`);
+
+    const result = spawnSync(
+      process.execPath,
+      [__filename, currentGameId, relativeFilePath],
+      {
+        cwd: PROJECT_ROOT,
+        stdio: "inherit",
+      }
+    );
+
+    if (result.status !== 0) {
+      console.log(`\nBatch import stopped on ${file}.`);
+      process.exit(result.status || 1);
+    }
+  }
+
+  console.log(`\nBatch import complete for ${files.length} file(s) starting with ${yearPrefix}.`);
+  process.exit(0);
+}
+
+const [gameId, filePath] = args;
 
 if (!gameId || !filePath) {
   console.log("Usage:");
-  console.log("node scripts/importBaseballGameChanger.js <GameID> <csvPath>");
+  console.log("Single game: node scripts/importBaseballGameChanger.js <GameID> <csvPath>");
+  console.log("Batch by year: node scripts/importBaseballGameChanger.js <YYYY>");
   process.exit(1);
 }
 
