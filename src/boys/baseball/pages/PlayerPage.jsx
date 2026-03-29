@@ -2,7 +2,6 @@
 
 import React, { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import AthleticsProgramShell from "../../../components/AthleticsProgramShell";
 
 const DATA_BASE = "/data/boys/baseball";
 const IMAGE_BASE = "/images/boys/baseball/players";
@@ -441,32 +440,19 @@ function PlayerPage() {
     "px-3 py-3 text-sm text-slate-800 border-b border-slate-100 whitespace-nowrap";
 
   if (loading) {
-    return (
-      <AthleticsProgramShell sportTitle="Boys' Baseball">
-        <div className="max-w-6xl mx-auto px-4 py-8 text-slate-600">Loading player page...</div>
-      </AthleticsProgramShell>
-    );
+    return <div className="max-w-6xl mx-auto px-4 py-8 text-slate-600">Loading player page...</div>;
   }
 
   if (error) {
-    return (
-      <AthleticsProgramShell sportTitle="Boys' Baseball">
-        <div className="max-w-6xl mx-auto px-4 py-8 text-red-700">{error}</div>
-      </AthleticsProgramShell>
-    );
+    return <div className="max-w-6xl mx-auto px-4 py-8 text-red-700">{error}</div>;
   }
 
   if (!player) {
-    return (
-      <AthleticsProgramShell sportTitle="Boys' Baseball">
-        <div className="max-w-6xl mx-auto px-4 py-8 text-slate-600">Player not found.</div>
-      </AthleticsProgramShell>
-    );
+    return <div className="max-w-6xl mx-auto px-4 py-8 text-slate-600">Player not found.</div>;
   }
 
   return (
-    <AthleticsProgramShell sportTitle="Boys' Baseball">
-      <div className="max-w-6xl mx-auto px-4 py-6 md:py-8 space-y-6">
+    <div className="max-w-6xl mx-auto px-4 py-6 md:py-8 space-y-6">
         <div className="text-sm text-slate-500">
           <Link to="/athletics/boys/baseball" className="hover:text-slate-800">
             Boys' Baseball
@@ -639,7 +625,6 @@ function PlayerPage() {
           </div>
         </section>
       </div>
-    </AthleticsProgramShell>
   );
 }
 
