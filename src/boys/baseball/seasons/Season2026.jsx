@@ -443,7 +443,7 @@ export default function Season2026() {
       <h1 className="text-3xl font-bold text-center mb-2">2026 Season</h1>
 
       <section>
-        <h2 className="text-2xl font-semibold mt-8 mb-4">📅 Schedule &amp; Results</h2>
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Schedule &amp; Results</h2>
 
         <div className="overflow-x-auto rounded-lg shadow border border-gray-200">
           <table className="min-w-full bg-white">
@@ -490,7 +490,7 @@ export default function Season2026() {
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mt-8 mb-4">⚾ Hitting Statistics</h2>
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Hitting Statistics</h2>
         <div className="overflow-x-auto rounded-lg shadow border border-gray-200">
           <table className="min-w-full bg-white text-sm">
             <thead className="bg-gray-100 text-gray-700">
@@ -561,7 +561,7 @@ export default function Season2026() {
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mt-8 mb-4">🥎 Pitching Statistics</h2>
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Pitching Statistics</h2>
         <div className="overflow-x-auto rounded-lg shadow border border-gray-200">
           <table className="min-w-full bg-white text-sm">
             <thead className="bg-gray-100 text-gray-700">
@@ -614,7 +614,7 @@ export default function Season2026() {
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mt-8 mb-4">🧤 Fielding Statistics</h2>
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Fielding Statistics</h2>
         <div className="overflow-x-auto rounded-lg shadow border border-gray-200">
           <table className="min-w-full bg-white text-sm">
             <thead className="bg-gray-100 text-gray-700">
