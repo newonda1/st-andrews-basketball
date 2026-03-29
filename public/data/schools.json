@@ -74,6 +74,12 @@
     "State": "SC"
   },
   {
+    "SchoolID": "ga-coastal-homeschool-pembroke",
+    "Name": "Coastal HomeSchool",
+    "City": "Pembroke",
+    "State": "GA"
+  },
+  {
     "SchoolID": "ga-creekside-christian-academy-mcdonough",
     "Name": "Creekside Christian Academy",
     "City": "McDonough",
@@ -179,6 +185,12 @@
     "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island",
     "Name": "Hilton Head Preparatory School",
     "City": "Hilton Head Island",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-hardeeville-high-school-hardeeville",
+    "Name": "Hardeeville High School",
+    "City": "Hardeeville",
     "State": "SC"
   },
   {
