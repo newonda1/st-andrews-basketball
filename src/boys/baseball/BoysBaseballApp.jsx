@@ -33,6 +33,15 @@ export default function BoysBaseballApp() {
           },
         ],
       },
+      {
+        title: "Team Stats",
+        links: [
+          {
+            to: "/athletics/boys/baseball/seasons/2026",
+            label: "2026 Season",
+          },
+        ],
+      },
     ],
     []
   );
@@ -53,6 +62,16 @@ export default function BoysBaseballApp() {
         <Route path="seasons/2026" element={<Season2026 />} />
         <Route path="games/:gameId" element={<GameDetail />} />
         <Route path="players/:playerId" element={<PlayerPage />} />
+
+        <Route
+          path="opponent-history"
+          element={
+            <PlaceholderPage
+              title="Opponent Game History"
+              text="This page will eventually show the full game history against each baseball opponent in the database."
+            />
+          }
+        />
 
         <Route
           path="*"
