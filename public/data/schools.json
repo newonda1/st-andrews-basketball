@@ -462,5 +462,17 @@
     "Name": "Young Americans Christian School",
     "City": "Conyers",
     "State": "GA"
+  },
+  {
+    "SchoolID": "ga-george-walton-academy-monroe",
+    "Name": "George Walton Academy",
+    "City": "Monroe",
+    "State": "GA"
+  },
+  {
+    "SchoolID": "ga-citizens-christian-academy-douglas",
+    "Name": "Citizens Christian Academy",
+    "City": "Douglas",
+    "State": "GA"
   }
 ]
