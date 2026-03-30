@@ -258,6 +258,30 @@
     "GradYear": 2026
   },
   {
+    "PlayerID": 202209,
+    "FirstName": "Justin",
+    "LastName": "Kryder",
+    "GradYear": 2023
+  },
+  {
+    "PlayerID": 202210,
+    "FirstName": "Bowen",
+    "LastName": "Futch",
+    "GradYear": 2023
+  },
+  {
+    "PlayerID": 202211,
+    "FirstName": "Andrew",
+    "LastName": "Bacon",
+    "GradYear": 2023
+  },
+  {
+    "PlayerID": 202212,
+    "FirstName": "Ethan",
+    "LastName": "Wilkins",
+    "GradYear": 2023
+  },
+  {
     "PlayerID": 202301,
     "FirstName": "Max",
     "LastName": "Carter",
