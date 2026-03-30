@@ -1,6 +1,34 @@
-
-
 [
+  {
+    "SchoolID": "fl-episcopal-school-of-jacksonville-jacksonville",
+    "Name": "Episcopal School of Jacksonville",
+    "City": "Jacksonville",
+    "State": "FL"
+  },
+  {
+    "SchoolID": "fl-gibbs-high-school-st-petersburg",
+    "Name": "Gibbs High School",
+    "City": "St. Petersburg",
+    "State": "FL"
+  },
+  {
+    "SchoolID": "fl-ponte-vedra-high-school-ponte-vedra",
+    "Name": "Ponte Vedra High School",
+    "City": "Ponte Vedra",
+    "State": "FL"
+  },
+  {
+    "SchoolID": "fl-raines-high-school-jacksonville",
+    "Name": "Raines High School",
+    "City": "Jacksonville",
+    "State": "FL"
+  },
+  {
+    "SchoolID": "fl-trinity-prep-school-winter-park",
+    "Name": "Trinity Prep School",
+    "City": "Winter Park",
+    "State": "FL"
+  },
   {
     "SchoolID": "ga-arlington-christian-school-fairburn",
     "Name": "Arlington Christian School",
@@ -18,12 +46,6 @@
     "Name": "Beach High School",
     "City": "Savannah",
     "State": "GA"
-  },
-  {
-    "SchoolID": "sc-beaufort-academy-beaufort",
-    "Name": "Beaufort Academy",
-    "City": "Beaufort",
-    "State": "SC"
   },
   {
     "SchoolID": "ga-benedictine-military-school-savannah",
@@ -47,6 +69,12 @@
     "SchoolID": "ga-bulloch-academy-statesboro",
     "Name": "Bulloch Academy",
     "City": "Statesboro",
+    "State": "GA"
+  },
+  {
+    "SchoolID": "ga-citizens-christian-academy-douglas",
+    "Name": "Citizens Christian Academy",
+    "City": "Douglas",
     "State": "GA"
   },
   {
@@ -86,6 +114,12 @@
     "State": "GA"
   },
   {
+    "SchoolID": "ga-david-emanuel-academy-stillmore",
+    "Name": "David Emanuel Academy",
+    "City": "Stillmore",
+    "State": "GA"
+  },
+  {
     "SchoolID": "ga-dominion-christian-academy-marietta",
     "Name": "Dominion Christian Academy",
     "City": "Marietta",
@@ -102,12 +136,6 @@
     "Name": "First Preparatory Christian Academy",
     "City": "Hinesville",
     "State": "GA"
-  },
-  {
-    "SchoolID": "fl-episcopal-school-of-jacksonville-jacksonville",
-    "Name": "Episcopal School of Jacksonville",
-    "City": "Jacksonville",
-    "State": "FL"
   },
   {
     "SchoolID": "ga-first-presbyterian-day-school-macon",
@@ -128,10 +156,10 @@
     "State": "GA"
   },
   {
-    "SchoolID": "fl-gibbs-high-school-st-petersburg",
-    "Name": "Gibbs High School",
-    "City": "St. Petersburg",
-    "State": "FL"
+    "SchoolID": "ga-george-walton-academy-monroe",
+    "Name": "George Walton Academy",
+    "City": "Monroe",
+    "State": "GA"
   },
   {
     "SchoolID": "ga-glynn-academy-brunswick",
@@ -185,6 +213,12 @@
     "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island",
     "Name": "Hilton Head Preparatory School",
     "City": "Hilton Head Island",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-holy-trinity-classical-christian-school-beaufort",
+    "Name": "Holy Trinity Classical Christian School",
+    "City": "Beaufort",
     "State": "SC"
   },
   {
@@ -272,6 +306,12 @@
     "State": "GA"
   },
   {
+    "SchoolID": "ga-memorial-day-school-savannah",
+    "Name": "Memorial Day School",
+    "City": "Savannah",
+    "State": "GA"
+  },
+  {
     "SchoolID": "ga-miller-grove-high-school-lithonia",
     "Name": "Miller Grove High School",
     "City": "Lithonia",
@@ -314,27 +354,27 @@
     "State": "GA"
   },
   {
+    "SchoolID": "va-norfolk-academy-norfolk",
+    "Name": "Norfolk Academy",
+    "City": "Norfolk",
+    "State": "VA"
+  },
+  {
     "SchoolID": "ga-pinewood-christian-academy-bellville",
     "Name": "Pinewood Christian Academy",
     "City": "Bellville",
     "State": "GA"
   },
   {
-    "SchoolID": "fl-ponte-vedra-high-school-ponte-vedra",
-    "Name": "Ponte Vedra High School",
-    "City": "Ponte Vedra",
-    "State": "FL"
-  },
-  {
-    "SchoolID": "fl-raines-high-school-jacksonville",
-    "Name": "Raines High School",
-    "City": "Jacksonville",
-    "State": "FL"
-  },
-  {
     "SchoolID": "ga-riverside-military-academy-gainesville",
     "Name": "Riverside Military Academy",
     "City": "Gainesville",
+    "State": "GA"
+  },
+  {
+    "SchoolID": "ga-savannah-athletic-association-high-school-bloomingdale",
+    "Name": "Savannah Athletic Association High School",
+    "City": "Bloomingdale",
     "State": "GA"
   },
   {
@@ -347,12 +387,6 @@
     "SchoolID": "ga-savannah-high-school-savannah",
     "Name": "Savannah High School",
     "City": "Savannah",
-    "State": "GA"
-  },
-  {
-    "SchoolID": "ga-savannah-athletic-association-high-school-bloomingdale",
-    "Name": "Savannah Athletic Association High School",
-    "City": "Bloomingdale",
     "State": "GA"
   },
   {
@@ -434,12 +468,6 @@
     "State": "GA"
   },
   {
-    "SchoolID": "fl-trinity-prep-school-winter-park",
-    "Name": "Trinity Prep School",
-    "City": "Winter Park",
-    "State": "FL"
-  },
-  {
     "SchoolID": "ga-vidalia-heritage-academy-vidalia",
     "Name": "Vidalia Heritage Academy",
     "City": "Vidalia",
@@ -461,18 +489,6 @@
     "SchoolID": "ga-young-americans-christian-school-conyers",
     "Name": "Young Americans Christian School",
     "City": "Conyers",
-    "State": "GA"
-  },
-  {
-    "SchoolID": "ga-george-walton-academy-monroe",
-    "Name": "George Walton Academy",
-    "City": "Monroe",
-    "State": "GA"
-  },
-  {
-    "SchoolID": "ga-citizens-christian-academy-douglas",
-    "Name": "Citizens Christian Academy",
-    "City": "Douglas",
     "State": "GA"
   }
 ]
