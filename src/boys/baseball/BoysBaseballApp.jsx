@@ -9,17 +9,20 @@ import YearlyResults from "./pages/YearlyResults";
 import GameDetail from "./pages/GameDetail";
 import PlayerPage from "./pages/PlayerPage";
 
-import FullCareerStats from "./pages/FullCareerStats";
-import SeasonRecords from "./pages/SeasonRecords";
-import SingleGameRecords from "./pages/SingleGameRecords";
-import TeamRecords from "./pages/TeamRecords";
-import RecordsVsOpponents from "./pages/RecordsVsOpponents";
-
 const seasonPages = [
   { slug: "2026", Component: Season2026 },
   { slug: "2025", Component: Season2025 },
   { slug: "2024", Component: Season2024 },
 ];
+
+function PlaceholderPage({ title, text }) {
+  return (
+    <div className="p-4">
+      <h2 className="text-2xl font-bold mb-3">{title}</h2>
+      <p>{text}</p>
+    </div>
+  );
+}
 
 export default function BoysBaseballApp() {
   const [games, setGames] = useState([]);
@@ -215,11 +218,51 @@ export default function BoysBaseballApp() {
       <Routes>
         <Route index element={<YearlyResults />} />
 
-        <Route path="records/career" element={<FullCareerStats />} />
-        <Route path="records/season" element={<SeasonRecords />} />
-        <Route path="records/single-game" element={<SingleGameRecords />} />
-        <Route path="records/team" element={<TeamRecords />} />
-        <Route path="records/opponents" element={<RecordsVsOpponents />} />
+        <Route
+          path="records/career"
+          element={
+            <PlaceholderPage
+              title="Full Career Stats"
+              text="This page will eventually show full career statistics for baseball players in the database."
+            />
+          }
+        />
+        <Route
+          path="records/season"
+          element={
+            <PlaceholderPage
+              title="Season Records"
+              text="This page will eventually show individual baseball season records."
+            />
+          }
+        />
+        <Route
+          path="records/single-game"
+          element={
+            <PlaceholderPage
+              title="Single Game Records"
+              text="This page will eventually show individual baseball single-game records."
+            />
+          }
+        />
+        <Route
+          path="records/team"
+          element={
+            <PlaceholderPage
+              title="Team Records"
+              text="This page will eventually show baseball team records."
+            />
+          }
+        />
+        <Route
+          path="records/opponents"
+          element={
+            <PlaceholderPage
+              title="Opponent Game History"
+              text="This page will eventually show the full game history against each baseball opponent in the database."
+            />
+          }
+        />
 
         {seasonPages.map(({ slug, Component }) => (
           <Route key={slug} path={`seasons/${slug}`} element={<Component />} />
