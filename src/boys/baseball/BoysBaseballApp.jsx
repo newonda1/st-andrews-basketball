@@ -5,6 +5,7 @@ import AthleticsProgramShell from "../../components/AthleticsProgramShell";
 import YearlyResults from "./pages/YearlyResults";
 import Season2026 from "./seasons/Season2026";
 import Season2025 from "./seasons/Season2025";
+import Season2024 from "./seasons/Season2024";
 import GameDetail from "./pages/GameDetail";
 import PlayerPage from "./pages/PlayerPage";
 
@@ -45,6 +46,10 @@ export default function BoysBaseballApp() {
             to: "/athletics/boys/baseball/seasons/2025",
             label: "2025 Season",
           },
+          {
+            to: "/athletics/boys/baseball/seasons/2024",
+            label: "2024 Season",
+          },
         ],
       },
     ],
@@ -66,6 +71,7 @@ export default function BoysBaseballApp() {
         <Route index element={<YearlyResults />} />
         <Route path="seasons/2026" element={<Season2026 />} />
         <Route path="seasons/2025" element={<Season2025 />} />
+        <Route path="seasons/2024" element={<Season2024 />} />
         <Route path="games/:gameId" element={<GameDetail />} />
         <Route path="players/:playerId" element={<PlayerPage />} />
 
