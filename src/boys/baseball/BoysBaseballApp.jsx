@@ -4,6 +4,7 @@ import { Link, Route, Routes } from "react-router-dom";
 import Season2026 from "./seasons/Season2026";
 import Season2025 from "./seasons/Season2025";
 import Season2024 from "./seasons/Season2024";
+import Season2023 from "./seasons/Season2023";
 
 import YearlyResults from "./pages/YearlyResults";
 import GameDetail from "./pages/GameDetail";
@@ -14,6 +15,7 @@ const seasonPages = [
   { slug: "2026", Component: Season2026 },
   { slug: "2025", Component: Season2025 },
   { slug: "2024", Component: Season2024 },
+  { slug: "2023", Component: Season2023 },
 ];
 
 function PlaceholderPage({ title, text }) {
