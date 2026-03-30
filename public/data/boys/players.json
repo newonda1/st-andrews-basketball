@@ -300,6 +300,36 @@
     "GradYear": 2027
   },
   {
+    "PlayerID": 202308,
+    "FirstName": "Daniel",
+    "LastName": "Weeks",
+    "GradYear": 2027
+  },
+  {
+    "PlayerID": 202309,
+    "FirstName": "Nate",
+    "LastName": "Enus",
+    "GradYear": 2027
+  },
+  {
+    "PlayerID": 202310,
+    "FirstName": "Drake",
+    "LastName": "Wilson",
+    "GradYear": 2025
+  },
+  {
+    "PlayerID": 202311,
+    "FirstName": "Gavin",
+    "LastName": "Wortman",
+    "GradYear": 2025
+  },
+  {
+    "PlayerID": 202312,
+    "FirstName": "Ian",
+    "LastName": "Willis",
+    "GradYear": 2026
+  },
+  {
     "PlayerID": 202401,
     "FirstName": "Guus",
     "LastName": "Blom",
