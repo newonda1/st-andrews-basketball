@@ -12,6 +12,7 @@ import PlayerPage from "./pages/PlayerPage";
 import RecordsVsOpponents from "./pages/RecordsVsOpponents";
 import SingleGameRecords from "./pages/SingleGameRecords";
 import SeasonRecords from "./pages/SeasonRecords";
+import CareerRecords from "./pages/CareerRecords";
 
 const seasonPages = [
   { slug: "2026", Component: Season2026 },
@@ -186,6 +187,13 @@ export default function BoysBaseballApp() {
                     >
                       Season Records
                     </Link>
+                    <Link
+                      to="/athletics/boys/baseball/records/career-records"
+                      className="block px-2 py-1 text-sm hover:bg-gray-200"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      Career Records
+                    </Link>
                   </div>
                 )}
               </div>
@@ -233,6 +241,7 @@ export default function BoysBaseballApp() {
           }
         />
         <Route path="records/season" element={<SeasonRecords />} />
+        <Route path="records/career-records" element={<CareerRecords />} />
         <Route path="records/single-game" element={<SingleGameRecords />} />
         <Route
           path="records/team"
