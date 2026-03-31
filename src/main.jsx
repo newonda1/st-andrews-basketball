@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 
 import AthleticsHome from "./AthleticsHome.jsx";
 import BoysBasketballApp from "./boys/basketball/BoysBasketballApp.jsx";
@@ -34,5 +35,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/admin/*" element={<AdminApp />} />
       </Routes>
     </BrowserRouter>
+    <Analytics />
   </React.StrictMode>
 );
