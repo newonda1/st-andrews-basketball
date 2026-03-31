@@ -33,7 +33,10 @@ function safeNum(x) {
 
 function tryParseGameDate(game) {
   const gid = String(game?.GameID ?? "");
-  if (/^\d{8}$/.test(gid)) {
+
+  // Baseball GameIDs may include extra trailing digits after YYYYMMDD,
+  // so use the first 8 digits whenever available.
+  if (/^\d{8,}$/.test(gid)) {
     const y = Number(gid.slice(0, 4));
     const m = Number(gid.slice(4, 6));
     const d = Number(gid.slice(6, 8));
@@ -41,6 +44,7 @@ function tryParseGameDate(game) {
     const dt = new Date(Date.UTC(y, m - 1, d));
     if (!Number.isNaN(dt.getTime())) return dt;
   }
+
   return null;
 }
 
