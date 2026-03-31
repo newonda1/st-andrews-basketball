@@ -26,9 +26,22 @@ async function fetchJson(label, path) {
   }
 }
 
+
 function safeNum(x) {
   const n = Number(x);
   return Number.isFinite(n) ? n : 0;
+}
+
+function formatRecordValue(value) {
+  if (!Number.isFinite(value)) return value;
+
+  const roundedToTenth = Math.round(value * 10) / 10;
+
+  if (Math.abs(roundedToTenth - Math.round(roundedToTenth)) < 1e-9) {
+    return String(Math.round(roundedToTenth));
+  }
+
+  return roundedToTenth.toFixed(1);
 }
 
 function getSeasonKey(game) {
@@ -290,7 +303,9 @@ export default function SeasonRecords() {
                         )}
                       </div>
                     </td>
-                    <td className="border px-2 py-2 font-semibold">{topValue}</td>
+                    <td className="border px-2 py-2 font-semibold">
+                      {topValue === "—" ? topValue : formatRecordValue(topValue)}
+                    </td>
                     <td className="border px-2 py-2">{topSeason}</td>
                   </tr>
 
@@ -348,7 +363,9 @@ export default function SeasonRecords() {
                                       )}
                                     </div>
                                   </td>
-                                  <td className="border px-2 py-1 font-semibold">{r.value}</td>
+                                  <td className="border px-2 py-1 font-semibold">
+                                    {r.value === "—" ? r.value : formatRecordValue(r.value)}
+                                  </td>
                                   <td className="border px-2 py-1">{r.season}</td>
                                 </tr>
                               ))}
