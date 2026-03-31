@@ -58,12 +58,23 @@ function getSeasonKey(game) {
   return "Unknown Season";
 }
 
+
 function formatSeasonLabel(seasonKey) {
   const text = String(seasonKey ?? "").trim();
   if (!text) return "Unknown Season";
 
   if (text.includes("-")) return text;
   return text;
+}
+
+function hasMinimumNoHitLength(ip) {
+  return safeNum(ip) >= 5;
+}
+
+function isSoloPitchingEffortForGame(playerId, gameRows) {
+  const pitchingRows = (gameRows || []).filter((row) => safeNum(row?.IP) > 0);
+  if (pitchingRows.length !== 1) return false;
+  return String(pitchingRows[0].PlayerID) === String(playerId);
 }
 
 const FALLBACK_HEADSHOT = "/images/common/logo.png";
@@ -76,6 +87,8 @@ export default function SeasonRecords() {
   const recordDefs = useMemo(
     () => [
       { key: "GamesPlayed", label: "Games Played", abbr: "GP", valueFn: (s) => safeNum(s?.GamesPlayed) },
+      { key: "NoHitters", label: "No-Hitters", abbr: "NH", valueFn: (s) => safeNum(s?.NoHitters) },
+      { key: "PerfectGames", label: "Perfect Games", abbr: "PG", valueFn: (s) => safeNum(s?.PerfectGames) },
 
       { key: "PA", label: "Plate Appearances", abbr: "PA", valueFn: (s) => safeNum(s?.PA) },
       { key: "AB", label: "At Bats", abbr: "AB", valueFn: (s) => safeNum(s?.AB) },
@@ -158,6 +171,14 @@ export default function SeasonRecords() {
         const playerMap = new Map(playersData.map((p) => [String(p.PlayerID), p]));
         const gameMap = new Map(gamesData.map((g) => [String(g.GameID), g]));
 
+        const statsByGame = new Map();
+        for (const row of playerStatsData) {
+          if (!row || row.GameID == null) continue;
+          const key = String(row.GameID);
+          if (!statsByGame.has(key)) statsByGame.set(key, []);
+          statsByGame.get(key).push(row);
+        }
+
         const seasonTotalsMap = new Map();
 
         for (const s of playerStatsData) {
@@ -172,6 +193,8 @@ export default function SeasonRecords() {
               PlayerID: String(s.PlayerID),
               SeasonKey: seasonKey,
               GamesPlayed: 0,
+              NoHitters: 0,
+              PerfectGames: 0,
             });
           }
 
@@ -179,8 +202,28 @@ export default function SeasonRecords() {
           totals.GamesPlayed += 1;
 
           for (const def of recordDefs) {
-            if (def.key === "GamesPlayed") continue;
+            if (def.key === "GamesPlayed" || def.key === "NoHitters" || def.key === "PerfectGames") continue;
             totals[def.key] = safeNum(totals[def.key]) + def.valueFn(s);
+          }
+
+          const gameRows = statsByGame.get(String(s.GameID)) || [];
+          const gameIsSoloEffort = isSoloPitchingEffortForGame(s.PlayerID, gameRows);
+          const gameHasMinimumLength = hasMinimumNoHitLength(s?.IP);
+          const sasErrors = safeNum(game?.LineScore?.StAndrewsTotals?.E);
+
+          if (gameIsSoloEffort && gameHasMinimumLength && safeNum(s?.H_Allowed) === 0) {
+            totals.NoHitters = safeNum(totals.NoHitters) + 1;
+          }
+
+          if (
+            gameIsSoloEffort &&
+            gameHasMinimumLength &&
+            safeNum(s?.H_Allowed) === 0 &&
+            safeNum(s?.BB_Allowed) === 0 &&
+            safeNum(s?.HBP_Pitching) === 0 &&
+            sasErrors === 0
+          ) {
+            totals.PerfectGames = safeNum(totals.PerfectGames) + 1;
           }
         }
 
@@ -239,6 +282,9 @@ export default function SeasonRecords() {
       <h1 className="text-2xl font-bold text-center">Season Records</h1>
       <p className="-mt-3 text-center text-sm italic text-gray-600">
         Select any record to see the top 20 historical results for that record
+      </p>
+      <p className="-mt-4 text-center text-xs italic text-gray-500">
+        No-hitters and perfect games require a solo pitching effort of at least 5 innings. Perfect games also require 0 hits, 0 walks, 0 hit batters, and 0 St. Andrew&apos;s errors.
       </p>
 
       {error && (
