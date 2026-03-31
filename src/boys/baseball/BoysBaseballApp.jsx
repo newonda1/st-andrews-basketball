@@ -10,6 +10,7 @@ import YearlyResults from "./pages/YearlyResults";
 import GameDetail from "./pages/GameDetail";
 import PlayerPage from "./pages/PlayerPage";
 import RecordsVsOpponents from "./pages/RecordsVsOpponents";
+import SingleGameRecords from "./pages/SingleGameRecords";
 
 const seasonPages = [
   { slug: "2026", Component: Season2026 },
@@ -239,15 +240,7 @@ export default function BoysBaseballApp() {
             />
           }
         />
-        <Route
-          path="records/single-game"
-          element={
-            <PlaceholderPage
-              title="Single Game Records"
-              text="This page will eventually show individual baseball single-game records."
-            />
-          }
-        />
+        <Route path="records/single-game" element={<SingleGameRecords />} />
         <Route
           path="records/team"
           element={
