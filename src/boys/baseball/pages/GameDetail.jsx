@@ -467,10 +467,10 @@ export default function GameDetail() {
       </div>
 
       <section className="rounded-2xl shadow border border-gray-200 bg-white overflow-hidden">
-        <div className="px-5 pt-5 pb-3 border-b border-gray-200">
+        <div className="px-5 pt-5 pb-4 border-b border-gray-200 bg-gray-50/60">
           <div className="flex flex-wrap items-start justify-between gap-4">
             <div>
-              <p className="text-sm uppercase tracking-[0.18em] text-gray-500 font-semibold mb-2">Final Score</p>
+              <p className="text-xs uppercase tracking-[0.22em] text-gray-500 font-semibold mb-3">Game Summary</p>
               <div className="flex items-end gap-5 flex-wrap">
                 <div>
                   <div className="text-sm font-semibold tracking-wide text-gray-500 uppercase mb-1">SAS</div>
@@ -485,7 +485,7 @@ export default function GameDetail() {
             </div>
 
             <div className="text-left md:text-right">
-              <div className="text-sm uppercase tracking-wide text-gray-500 font-semibold">Result</div>
+              <div className="text-xs uppercase tracking-[0.18em] text-gray-500 font-semibold">Result</div>
               <div className={`text-3xl font-black ${game.Result === "W" ? "text-green-700" : game.Result === "L" ? "text-red-700" : "text-gray-500"}`}>
                 {game.Result || "Upcoming"}
               </div>
@@ -494,18 +494,43 @@ export default function GameDetail() {
         </div>
 
         {game.Recap ? (
-          <div className="px-5 py-5 border-b border-gray-200">
-            <div className="mb-3">
-              <p className="text-sm uppercase tracking-[0.18em] text-gray-500 font-semibold mb-2">Game Recap</p>
-              {game.RecapTitle ? <h2 className="text-2xl font-semibold text-gray-900">{game.RecapTitle}</h2> : null}
+          <div className="px-5 md:px-8 py-6 md:py-8 border-b border-gray-200">
+            <div className="max-w-4xl mx-auto">
+              <div className="mb-5 pb-4 border-b border-gray-200">
+                <p className="text-xs uppercase tracking-[0.24em] text-gray-500 font-semibold mb-3">Game Recap</p>
+                {game.RecapTitle ? (
+                  <h2 className="text-3xl md:text-4xl leading-tight font-semibold text-gray-900 font-serif">
+                    {game.RecapTitle}
+                  </h2>
+                ) : null}
+                <div className="mt-4 text-sm text-gray-500">
+                  {formatDateFromGameID(game.GameID)} • {game.LocationType} • {game.GameType}
+                </div>
+              </div>
+
+              <div className="space-y-5 text-[17px] leading-8 text-gray-800 font-serif">
+                {String(game.Recap)
+                  .split("\n\n")
+                  .filter(Boolean)
+                  .map((paragraph, idx) => (
+                    <p key={idx}>{paragraph}</p>
+                  ))}
+              </div>
             </div>
-            <div className="text-gray-800 leading-7 whitespace-pre-line">{game.Recap}</div>
           </div>
         ) : null}
 
         {lineScore ? (
-          <div className="px-3 md:px-5 py-4 border-b border-gray-200 overflow-x-auto">
-            <table className="min-w-full text-sm md:text-base border-separate border-spacing-0">
+          <div className="px-5 md:px-8 pt-5 pb-0">
+            <div className="max-w-4xl mx-auto">
+              <p className="text-xs uppercase tracking-[0.24em] text-gray-500 font-semibold">Line Score</p>
+            </div>
+          </div>
+        ) : null}
+
+        {lineScore ? (
+          <div className="px-3 md:px-8 py-4 border-b border-gray-200 overflow-x-auto">
+            <table className="min-w-full max-w-4xl mx-auto text-sm md:text-base border-separate border-spacing-0">
               <thead>
                 <tr>
                   <th className="px-4 py-3 text-left bg-gray-50 text-gray-500 font-semibold border border-gray-200"> </th>
