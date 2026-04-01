@@ -747,7 +747,19 @@ export default function GameDetail() {
               {pitchingRows.map((row) => (
                 <tr key={row.PlayerID} className="hover:bg-gray-50">
                   <td className={tdClass}>{row.jersey}</td>
-                  <td className={`${tdClass} text-left whitespace-nowrap`}>{row.name}</td>
+                  <td className={`${tdClass} text-left whitespace-nowrap`}>
+                    <div className="flex items-center gap-3">
+                      <img
+                        src={buildPhotoUrl(row.PlayerID)}
+                        alt={row.name}
+                        className="w-10 h-10 rounded-full object-cover border border-gray-300"
+                        onError={(e) => {
+                          e.currentTarget.style.display = "none";
+                        }}
+                      />
+                      <span>{row.name}</span>
+                    </div>
+                  </td>
                   <td className={tdClass}>{outsToBaseballInnings(row.IP)}</td>
                   <td className={tdClass}>{row.H}</td>
                   <td className={tdClass}>{row.R}</td>
@@ -805,7 +817,19 @@ export default function GameDetail() {
               {fieldingRows.map((row) => (
                 <tr key={row.PlayerID} className="hover:bg-gray-50">
                   <td className={tdClass}>{row.jersey}</td>
-                  <td className={`${tdClass} text-left whitespace-nowrap`}>{row.name}</td>
+                  <td className={`${tdClass} text-left whitespace-nowrap`}>
+                    <div className="flex items-center gap-3">
+                      <img
+                        src={buildPhotoUrl(row.PlayerID)}
+                        alt={row.name}
+                        className="w-10 h-10 rounded-full object-cover border border-gray-300"
+                        onError={(e) => {
+                          e.currentTarget.style.display = "none";
+                        }}
+                      />
+                      <span>{row.name}</span>
+                    </div>
+                  </td>
                   <td className={tdClass}>{outsToBaseballInnings(row.INN)}</td>
                   <td className={tdClass}>{row.PO}</td>
                   <td className={tdClass}>{row.A}</td>
