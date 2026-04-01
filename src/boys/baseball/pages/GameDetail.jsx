@@ -493,6 +493,16 @@ export default function GameDetail() {
           </div>
         </div>
 
+        {game.Recap ? (
+          <div className="px-5 py-5 border-b border-gray-200">
+            <div className="mb-3">
+              <p className="text-sm uppercase tracking-[0.18em] text-gray-500 font-semibold mb-2">Game Recap</p>
+              {game.RecapTitle ? <h2 className="text-2xl font-semibold text-gray-900">{game.RecapTitle}</h2> : null}
+            </div>
+            <div className="text-gray-800 leading-7 whitespace-pre-line">{game.Recap}</div>
+          </div>
+        ) : null}
+
         {lineScore ? (
           <div className="px-3 md:px-5 py-4 border-b border-gray-200 overflow-x-auto">
             <table className="min-w-full text-sm md:text-base border-separate border-spacing-0">
@@ -611,15 +621,6 @@ export default function GameDetail() {
         ) : null}
       </section>
 
-      {game.Recap ? (
-        <section>
-          <h2 className={sectionTitleClass}>📝 Recap</h2>
-          <div className="rounded-lg shadow border border-gray-200 bg-white p-5">
-            {game.RecapTitle ? <h3 className="text-xl font-semibold mb-3">{game.RecapTitle}</h3> : null}
-            <div className="text-gray-800 leading-7 whitespace-pre-line">{game.Recap}</div>
-          </div>
-        </section>
-      ) : null}
 
       <section>
         <h2 className={sectionTitleClass}>St. Andrew&apos;s Hitting</h2>
