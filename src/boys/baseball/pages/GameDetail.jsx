@@ -454,47 +454,14 @@ export default function GameDetail() {
         </div>
 
         <h1 className="text-3xl font-bold">
-          St. Andrew&apos;s vs. {game.Opponent}
+          St. Andrew&apos;s ({game.TeamScore ?? "-"}) vs. {game.Opponent} ({game.OpponentScore ?? "-"})
         </h1>
-
-        <div className="text-gray-700 flex flex-wrap gap-x-4 gap-y-1">
-          <span>{formatDateFromGameID(game.GameID)}</span>
-          <span>•</span>
-          <span>{game.LocationType}</span>
-          <span>•</span>
-          <span>{game.GameType}</span>
-        </div>
       </div>
 
       <section className="rounded-2xl shadow border border-gray-200 bg-white overflow-hidden">
-        <div className="px-5 pt-5 pb-4 border-b border-gray-200 bg-gray-50/60">
-          <div className="flex flex-wrap items-start justify-between gap-4">
-            <div>
-              <p className="text-xs uppercase tracking-[0.22em] text-gray-500 font-semibold mb-3">Game Summary</p>
-              <div className="flex items-end gap-5 flex-wrap">
-                <div>
-                  <div className="text-sm font-semibold tracking-wide text-gray-500 uppercase mb-1">SAS</div>
-                  <div className="text-5xl md:text-6xl font-black text-gray-900 leading-none">{game.TeamScore ?? "-"}</div>
-                </div>
-                <div className="text-3xl md:text-4xl font-bold text-gray-300 leading-none">-</div>
-                <div>
-                  <div className="text-sm font-semibold tracking-wide text-gray-500 uppercase mb-1">{opponentAbbr}</div>
-                  <div className="text-5xl md:text-6xl font-black text-gray-900 leading-none">{game.OpponentScore ?? "-"}</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="text-left md:text-right">
-              <div className="text-xs uppercase tracking-[0.18em] text-gray-500 font-semibold">Result</div>
-              <div className={`text-3xl font-black ${game.Result === "W" ? "text-green-700" : game.Result === "L" ? "text-red-700" : "text-gray-500"}`}>
-                {game.Result || "Upcoming"}
-              </div>
-            </div>
-          </div>
-        </div>
 
         {game.Recap ? (
-          <div className="px-5 md:px-8 py-6 md:py-8 border-b border-gray-200">
+          <div className="px-5 md:px-8 py-6 md:py-8 border-b border-gray-200 bg-gray-50/30">
             <div className="max-w-4xl mx-auto">
               <div className="mb-5 pb-4 border-b border-gray-200">
                 <p className="text-xs uppercase tracking-[0.24em] text-gray-500 font-semibold mb-3">Game Recap</p>
@@ -522,7 +489,7 @@ export default function GameDetail() {
 
         {lineScore ? (
           <div className="px-5 md:px-8 pt-5 pb-0">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-4xl mx-auto pt-1">
               <p className="text-xs uppercase tracking-[0.24em] text-gray-500 font-semibold">Line Score</p>
             </div>
           </div>
