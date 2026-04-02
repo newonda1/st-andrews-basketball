@@ -35,7 +35,7 @@ export default function Footer() {
             src="/images/common/st_andrews_athletics_logo.png"
             alt="St. Andrew's Athletics"
             style={{
-              height: "40px",
+              height: "48px",
               width: "auto",
               display: "block",
             }}
