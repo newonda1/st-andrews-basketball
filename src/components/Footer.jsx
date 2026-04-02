@@ -26,13 +26,20 @@ export default function Footer() {
         <Link
           to="/athletics"
           style={{
-            color: "#475569",
-            fontSize: "0.92rem",
+            display: "inline-flex",
+            alignItems: "center",
             textDecoration: "none",
-            fontWeight: 500,
           }}
         >
-          St. Andrew&apos;s Athletics
+          <img
+            src="/images/common/st_andrews_athletics_logo.png"
+            alt="St. Andrew's Athletics"
+            style={{
+              height: "40px",
+              width: "auto",
+              display: "block",
+            }}
+          />
         </Link>
 
         <div
