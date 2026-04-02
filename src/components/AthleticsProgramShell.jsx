@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import Footer from "./Footer";
 
 const styles = {
   page: {
@@ -133,53 +134,6 @@ const styles = {
     background: "#e2e8f0",
     color: "#7c2d12",
   },
-  footer: {
-    marginTop: "24px",
-    borderTop: "1px solid #e5e7eb",
-    background: "#ffffff",
-  },
-  footerInner: {
-    maxWidth: "1300px",
-    margin: "0 auto",
-    padding: "18px 24px",
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    gap: "16px",
-    flexWrap: "wrap",
-    boxSizing: "border-box",
-  },
-  footerText: {
-    margin: 0,
-    color: "#475569",
-    fontSize: "0.92rem",
-  },
-  footerLeftLink: {
-    color: "#475569",
-    fontSize: "0.92rem",
-    textDecoration: "none",
-    fontWeight: 500,
-  },
-  footerRight: {
-    display: "flex",
-    alignItems: "center",
-    gap: "8px",
-  },
-  poweredBy: {
-    margin: 0,
-    color: "#475569",
-    fontSize: "0.92rem",
-  },
-  footerLink: {
-    display: "inline-flex",
-    alignItems: "center",
-    textDecoration: "none",
-  },
-  footerLogo: {
-    height: "34px",
-    width: "auto",
-    display: "block",
-  },
 };
 
 export default function AthleticsProgramShell({
@@ -190,9 +144,6 @@ export default function AthleticsProgramShell({
   children,
   athleticsHomePath = "/athletics",
   showFooter = true,
-  footerText = "Built with Prep Legacy",
-  footerHref = "https://preplegacy.com",
-  footerLogoSrc = "/images/branding/preplegacy-logo.png",
 }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -246,31 +197,7 @@ export default function AthleticsProgramShell({
         <main style={styles.main}>{children}</main>
       </div>
 
-      {showFooter ? (
-        <footer style={styles.footer}>
-          <div style={styles.footerInner}>
-            <Link to={athleticsHomePath} style={styles.footerLeftLink}>
-              {footerText}
-            </Link>
-
-            <div style={styles.footerRight}>
-              <p style={styles.poweredBy}>Powered by</p>
-              <a
-                href={footerHref}
-                target="_blank"
-                rel="noreferrer"
-                style={styles.footerLink}
-              >
-                <img
-                  src={footerLogoSrc}
-                  alt="Prep Legacy"
-                  style={styles.footerLogo}
-                />
-              </a>
-            </div>
-          </div>
-        </footer>
-      ) : null}
+      {showFooter ? <Footer /> : null}
 
       {menuOpen && (
         <>
