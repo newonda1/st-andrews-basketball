@@ -21,9 +21,8 @@ export default function Footer() {
           gap: "16px",
           flexWrap: "wrap",
           boxSizing: "border-box",
-          textAlign: "center",
         }}
-        className="flex-col sm:flex-row"
+        className="flex-col sm:flex-row text-center sm:text-left"
       >
         <Link
           to="/athletics"
@@ -34,7 +33,7 @@ export default function Footer() {
             textDecoration: "none",
             width: "100%",
           }}
-          className="sm:w-auto"
+          className="sm:w-auto sm:justify-start"
         >
           <img
             src="/images/common/st_andrews_athletics_logo.png"
@@ -55,7 +54,7 @@ export default function Footer() {
             gap: "8px",
             width: "100%",
           }}
-          className="sm:w-auto"
+          className="sm:w-auto sm:justify-end"
         >
           <p
             style={{
