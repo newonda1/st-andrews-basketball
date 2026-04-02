@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Footer from "./components/Footer";
+import AthleticsProgramShell from "./components/AthleticsProgramShell";
 
 const sports = [
   {
@@ -26,27 +26,33 @@ const sports = [
   },
 ];
 
+const menuSections = [
+  {
+    title: "Sports",
+    links: [
+      { to: "/athletics/boys/basketball", label: "Boys Basketball" },
+      { to: "/athletics/girls/basketball", label: "Girls Basketball" },
+      { to: "/athletics/boys/baseball", label: "Boys Baseball" },
+    ],
+  },
+];
+
 function AthleticsHome() {
   return (
-    <>
-      <div className="px-6 py-8 max-w-5xl mx-auto">
-        <header className="text-center mb-8">
-          <img
-            src="/images/common/st_andrews_athletics_logo.png"
-            alt="St. Andrew's Lions Athletics"
-            className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto object-contain"
-            loading="eager"
-          />
-        </header>
-
-        <section className="max-w-3xl mx-auto mb-10">
+    <AthleticsProgramShell
+      title="St. Andrew's Athletics"
+      menuTitle="Athletics"
+      menuSections={menuSections}
+      athleticsHomePath="/athletics"
+    >
+      <div className="px-2 py-2 sm:px-4 sm:py-4 max-w-5xl mx-auto">
+        <section className="max-w-3xl mx-auto mb-8">
           <div className="bg-white border border-gray-200 rounded-2xl shadow-sm px-6 py-5 text-center">
             <h1 className="text-2xl md:text-3xl font-bold text-blue-800 mb-2">
               Historical Athletic Statistics
             </h1>
             <p className="text-gray-700 leading-relaxed">
-              <span className="block">Select a sport below to view season results, team records, player
-              statistics, and historical program information.</span>
+              Select a sport below to view season results, team records, player statistics, and historical program information.
             </p>
           </div>
         </section>
@@ -84,9 +90,7 @@ function AthleticsHome() {
           </div>
         </section>
       </div>
-
-      <Footer />
-    </>
+    </AthleticsProgramShell>
   );
 }
 
