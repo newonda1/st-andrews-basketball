@@ -660,12 +660,20 @@ export default function Season2026() {
                 >
                   <td className="px-2 py-1.5 text-center">{player.jersey === 999 ? "" : player.jersey}</td>
                   <td className="px-2 py-1.5 text-left whitespace-nowrap">
-                    <Link
-                      to={`/athletics/boys/baseball/players/${player.PlayerID}`}
-                      className="text-blue-700 hover:underline"
-                    >
-                      {player.name}
-                    </Link>
+                    <div className="flex items-center gap-2">
+                      <img
+                        src={buildPlayerPhotoUrl(player.PlayerID)}
+                        alt={player.name}
+                        className="w-8 h-8 rounded-full object-cover border border-gray-300"
+                        onError={handlePlayerImageError}
+                      />
+                      <Link
+                        to={`/athletics/boys/baseball/players/${player.PlayerID}`}
+                        className="text-blue-700 hover:underline"
+                      >
+                        {player.name}
+                      </Link>
+                    </div>
                   </td>
                   <td className="px-2 py-1.5 text-center">{player.GP}</td>
                   <td className="px-2 py-1.5 text-center">{formatBaseballInningsFromOuts(player.defensiveOuts)}</td>
