@@ -29,11 +29,9 @@ export default function Footer() {
           style={{
             display: "inline-flex",
             alignItems: "center",
-            justifyContent: "center",
             textDecoration: "none",
-            width: "100%",
           }}
-          className="sm:w-auto sm:justify-start"
+          className="w-full justify-center sm:w-auto sm:justify-start"
         >
           <img
             src="/images/common/st_andrews_athletics_logo.png"
@@ -50,11 +48,9 @@ export default function Footer() {
           style={{
             display: "flex",
             alignItems: "center",
-            justifyContent: "center",
             gap: "8px",
-            width: "100%",
           }}
-          className="sm:w-auto sm:justify-end"
+          className="w-full justify-center sm:w-auto sm:justify-end"
         >
           <p
             style={{
