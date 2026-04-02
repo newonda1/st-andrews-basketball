@@ -21,15 +21,20 @@ export default function Footer() {
           gap: "16px",
           flexWrap: "wrap",
           boxSizing: "border-box",
+          textAlign: "center",
         }}
+        className="flex-col sm:flex-row"
       >
         <Link
           to="/athletics"
           style={{
             display: "inline-flex",
             alignItems: "center",
+            justifyContent: "center",
             textDecoration: "none",
+            width: "100%",
           }}
+          className="sm:w-auto"
         >
           <img
             src="/images/common/st_andrews_athletics_logo.png"
@@ -46,8 +51,11 @@ export default function Footer() {
           style={{
             display: "flex",
             alignItems: "center",
+            justifyContent: "center",
             gap: "8px",
+            width: "100%",
           }}
+          className="sm:w-auto"
         >
           <p
             style={{
