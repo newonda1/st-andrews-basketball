@@ -25,7 +25,7 @@ const styles = {
     color: "#0f172a",
   },
   logo: {
-    height: "64px",
+    height: "80px",
     width: "auto",
     display: "block",
   },
