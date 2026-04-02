@@ -1,5 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Link, Route, Routes } from "react-router-dom";
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+
+import AthleticsProgramShell from "../../components/AthleticsProgramShell";
 
 import Season2026 from "./seasons/Season2026";
 import Season2025 from "./seasons/Season2025";
@@ -21,6 +23,60 @@ const seasonPages = [
   { slug: "2023", Component: Season2023 },
 ];
 
+const menuSections = [
+  {
+    title: "Results",
+    links: [
+      {
+        to: "/athletics/boys/baseball/yearly-results",
+        label: "Full Year-by-Year Results",
+      },
+      {
+        to: "/athletics/boys/baseball/records/opponents",
+        label: "Opponent Game History",
+      },
+    ],
+  },
+  {
+    title: "Team Stats",
+    links: [
+      {
+        to: "/athletics/boys/baseball/team/full",
+        label: "Full Team Stats",
+      },
+      {
+        to: "/athletics/boys/baseball/records/team",
+        label: "Team Records (Single Game)",
+      },
+      {
+        to: "/athletics/boys/baseball/team/season-records",
+        label: "Team Records (Season)",
+      },
+    ],
+  },
+  {
+    title: "Individual Stats",
+    links: [
+      {
+        to: "/athletics/boys/baseball/records/career",
+        label: "Full Career Stats",
+      },
+      {
+        to: "/athletics/boys/baseball/records/single-game",
+        label: "Single Game Records",
+      },
+      {
+        to: "/athletics/boys/baseball/records/season",
+        label: "Season Records",
+      },
+      {
+        to: "/athletics/boys/baseball/records/career-records",
+        label: "Career Records",
+      },
+    ],
+  },
+];
+
 function PlaceholderPage({ title, text }) {
   return (
     <div className="p-4">
@@ -31,203 +87,13 @@ function PlaceholderPage({ title, text }) {
 }
 
 export default function BoysBaseballApp() {
-  const [games, setGames] = useState([]);
-  const [playerStats, setPlayerStats] = useState([]);
-  const [players, setPlayers] = useState([]);
-
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [teamStatsOpen, setTeamStatsOpen] = useState(false);
-  const [individualStatsOpen, setIndividualStatsOpen] = useState(false);
-
-  const sidebarRef = useRef(null);
-
-  useEffect(() => {
-    fetch("/data/boys/baseball/games.json")
-      .then((res) => res.json())
-      .then(setGames)
-      .catch((err) => console.error("Failed to load games", err));
-
-    fetch("/data/boys/baseball/playergamestats.json")
-      .then((res) => res.json())
-      .then(setPlayerStats)
-      .catch((err) => console.error("Failed to load player stats", err));
-
-    fetch("/data/boys/players.json")
-      .then((res) => res.json())
-      .then(setPlayers)
-      .catch((err) => console.error("Failed to load players", err));
-  }, []);
-
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
-        setMenuOpen(false);
-      }
-    }
-
-    if (menuOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
-    }
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [menuOpen]);
-
   return (
-    <div className="p-6 max-w-5xl mx-auto space-y-10">
-      <header className="text-center">
-        <div
-          ref={sidebarRef}
-          className={`fixed top-0 right-0 h-full w-64 bg-white shadow-2xl flex flex-col transform ${
-            menuOpen ? "translate-x-0" : "translate-x-full"
-          } transition-transform duration-300 ease-in-out z-40`}
-        >
-          <div className="flex justify-center items-center p-4 border-b">
-            <h2 className="text-xl font-bold">Menu</h2>
-          </div>
-
-          <div className="flex-1 overflow-y-auto overscroll-contain scroll-smooth">
-            <nav className="flex flex-col p-4 space-y-2 text-lg font-medium">
-              <Link
-                to="/athletics/boys/baseball/yearly-results"
-                className="p-3 hover:bg-gray-200 rounded-md text-center"
-                onClick={() => setMenuOpen(false)}
-              >
-                Full Year-by-Year Results
-              </Link>
-
-              <div className="border-t pt-4">
-                <Link
-                  to="/athletics/boys/baseball/records/opponents"
-                  className="block p-3 hover:bg-gray-200 rounded-md text-center"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  Opponent Game History
-                </Link>
-              </div>
-
-              <div className="border-t pt-4">
-                <button
-                  onClick={() => setTeamStatsOpen((prev) => !prev)}
-                  className="flex items-center justify-between w-full p-3 hover:bg-gray-200 rounded-md"
-                >
-                  <span>Team Stats</span>
-                  <span
-                    className={`ml-2 inline-block transform transition-transform duration-300 ${
-                      teamStatsOpen ? "rotate-180" : "rotate-0"
-                    }`}
-                  >
-                    ▼
-                  </span>
-                </button>
-
-                {teamStatsOpen && (
-                  <div className="ml-4 overflow-hidden transition-all duration-500">
-                    <Link
-                      to="/athletics/boys/baseball/team/full"
-                      className="block px-2 py-1 text-sm hover:bg-gray-200"
-                      onClick={() => setMenuOpen(false)}
-                    >
-                      Full Team Stats
-                    </Link>
-                    <Link
-                      to="/athletics/boys/baseball/records/team"
-                      className="block px-2 py-1 text-sm hover:bg-gray-200"
-                      onClick={() => setMenuOpen(false)}
-                    >
-                      Team Records (Single Game)
-                    </Link>
-                    <Link
-                      to="/athletics/boys/baseball/team/season-records"
-                      className="block px-2 py-1 text-sm hover:bg-gray-200"
-                      onClick={() => setMenuOpen(false)}
-                    >
-                      Team Records (Season)
-                    </Link>
-                  </div>
-                )}
-              </div>
-
-              <div className="border-t pt-4">
-                <button
-                  onClick={() => setIndividualStatsOpen((prev) => !prev)}
-                  className="flex items-center justify-between w-full p-3 hover:bg-gray-200 rounded-md"
-                >
-                  <span>Individual Stats</span>
-                  <span
-                    className={`ml-2 inline-block transform transition-transform duration-300 ${
-                      individualStatsOpen ? "rotate-180" : "rotate-0"
-                    }`}
-                  >
-                    ▼
-                  </span>
-                </button>
-
-                {individualStatsOpen && (
-                  <div className="ml-4 overflow-hidden transition-all duration-500">
-                    <Link
-                      to="/athletics/boys/baseball/records/career"
-                      className="block px-2 py-1 text-sm hover:bg-gray-200"
-                      onClick={() => setMenuOpen(false)}
-                    >
-                      Full Career Stats
-                    </Link>
-                    <Link
-                      to="/athletics/boys/baseball/records/single-game"
-                      className="block px-2 py-1 text-sm hover:bg-gray-200"
-                      onClick={() => setMenuOpen(false)}
-                    >
-                      Single Game Records
-                    </Link>
-                    <Link
-                      to="/athletics/boys/baseball/records/season"
-                      className="block px-2 py-1 text-sm hover:bg-gray-200"
-                      onClick={() => setMenuOpen(false)}
-                    >
-                      Season Records
-                    </Link>
-                    <Link
-                      to="/athletics/boys/baseball/records/career-records"
-                      className="block px-2 py-1 text-sm hover:bg-gray-200"
-                      onClick={() => setMenuOpen(false)}
-                    >
-                      Career Records
-                    </Link>
-                  </div>
-                )}
-              </div>
-            </nav>
-          </div>
-        </div>
-
-        <div className="flex items-center justify-between mb-4 px-4 h-20">
-          <div className="flex items-center gap-3">
-            <Link
-              to="/athletics/boys/baseball"
-              className="flex items-center gap-3 hover:opacity-80 transition-opacity"
-            >
-              <img
-                src="/images/common/logo.png"
-                alt="St. Andrew's Logo"
-                className="h-12 w-auto"
-              />
-              <h1 className="text-xl font-bold text-blue-800 whitespace-nowrap">
-                Boys&apos; Baseball
-              </h1>
-            </Link>
-          </div>
-
-          <button onClick={() => setMenuOpen(true)}>
-            <img
-              src="/images/common/button.png"
-              alt="Menu"
-              className="h-10 w-auto hover:scale-110 transition-transform duration-200 ease-in-out"
-            />
-          </button>
-        </div>
-      </header>
-
+    <AthleticsProgramShell
+      title="Boys' Baseball"
+      menuTitle="Boys' Baseball"
+      menuSections={menuSections}
+      athleticsHomePath="/athletics"
+    >
       <Routes>
         <Route index element={<YearlyResults />} />
 
@@ -264,6 +130,6 @@ export default function BoysBaseballApp() {
 
         <Route path="*" element={<YearlyResults />} />
       </Routes>
-    </div>
+    </AthleticsProgramShell>
   );
 }
