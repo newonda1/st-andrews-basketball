@@ -1548,10 +1548,27 @@
     "Opponent": "Pinewood Christian Academy",
     "LocationType": "Home",
     "GameType": "Region",
-    "Result": null,
-    "TeamScore": null,
-    "OpponentScore": null,
-    "Season": 2026
+    "Result": "L",
+    "TeamScore": 2,
+    "OpponentScore": 9,
+    "Season": 2026,
+    "RecapTitle": "Big First Inning Lifts Pinewood Past St. Andrew’s",
+    "Recap": "Pinewood Christian Academy used a five-run first inning to take control early and went on to defeat St. Andrew’s 9-2 on Thursday.\n\nThe visitors wasted no time jumping in front. After a hit batter and a walk put runners on, Hearn doubled to bring home two runs. H. Folsom followed with a two-run double of his own, and Pinewood added two more runs on a groundout, a single, and an error to build a 5-0 lead before the Lions could record the final out of the inning.\n\nSt. Andrew’s settled in after the opening frame and showed signs of life offensively. In the third, Jack Kelley doubled and later scored on a double play off the bat of Wells Searcy to get the Lions on the board.\n\nThe Lions added another run in the fifth in unusual fashion. Ellis Kelley reached on a bunt single and eventually moved to third before stealing home to cut the deficit to 5-2.\n\nPinewood extended its lead in the sixth. The visitors took advantage of a pair of walks, a hit batter, and an error to push across three runs, highlighted by a sacrifice fly from Oates and an RBI single by H. Folsom.\n\nPinewood added one more run in the seventh on an RBI single to make it 9-2.\n\nEllis Kelley led St. Andrew’s at the plate, going 2-for-3, while Jack Kelley added a double. The Lions finished with six hits and drew five walks.\n\nIsaac Wrieden took the loss for St. Andrew’s, allowing five runs, four earned, over three innings while striking out two. Brady Grant and Jacob Navarre combined to provide relief out of the bullpen.\n\nFor Pinewood, H. Folsom drove in three runs and collected two hits, while Hearn also added a pair of hits. Pinewood turned two double plays defensively in the win.\n\nThe Lions and Pinewood met again later Thursday for the second game of the doubleheader.",
+    "LineScore": {
+      "Innings": [1, 2, 3, 4, 5, 6, 7],
+      "StAndrews": [0, 0, 1, 0, 1, 0, 0],
+      "Opponent": [5, 0, 0, 0, 0, 3, 1],
+      "StAndrewsTotals": {
+        "R": 2,
+        "H": 6,
+        "E": 2
+      },
+      "OpponentTotals": {
+        "R": 9,
+        "H": 7,
+        "E": 1
+      }
+    }
   },
   {
     "GameID": 2026040902,
@@ -1559,10 +1576,27 @@
     "Opponent": "Pinewood Christian Academy",
     "LocationType": "Home",
     "GameType": "Region",
-    "Result": null,
-    "TeamScore": null,
-    "OpponentScore": null,
-    "Season": 2026
+    "Result": "L",
+    "TeamScore": 0,
+    "OpponentScore": 11,
+    "Season": 2026,
+    "RecapTitle": "Pinewood Pulls Away In Fifth And Sixth To Sweep Doubleheader",
+    "Recap": "Pinewood Christian Academy broke open a close game with six runs in the fifth inning and added four more in the sixth to defeat St. Andrew’s 11-0 on Thursday in the second game of the doubleheader.\n\nThe game remained scoreless through two innings before Pinewood broke through in the third. Wilson singled to start the frame, moved into scoring position on a sacrifice bunt, and later came home on a groundout by Oates to give the visitors a 1-0 lead.\n\nSt. Andrew’s had its best chance in the bottom of the third. Pat Jackson reached on a hit-by-pitch, Ellis Kelley followed with a single, and Jack Kelley later walked to load traffic on the bases, but Pinewood worked out of the inning without allowing a run.\n\nThe decisive blow came in the fifth. Pinewood scored six times in the inning, beginning with RBI singles by Wasson and Hearn. Oates then delivered the biggest swing of the game, launching a three-run home run to right. Tippet later added an RBI double as Pinewood stretched the lead to 7-0.\n\nThe visitors kept the pressure on in the sixth. Oates drove in another run with an RBI single, Folsom followed with a run-scoring double, and Lewis added a two-run single to push the margin to 11-0.\n\nEllis Kelley took the loss for the Lions, allowing seven runs, six earned, over five innings while striking out three. Lanford Harris worked the final inning in relief and struck out one.\n\nAt the plate, Ellis Kelley and Isaac Wrieden each recorded hits for St. Andrew’s, while Xavier Wilcox and Patton Martin also added singles. The Lions drew seven walks but were unable to break through against Pinewood starter Nobles, who tossed a complete-game shutout.\n\nFor Pinewood, Oates led the way with five RBIs, while Wasson, Hearn, Folsom, and Wilson each collected two hits. Pinewood finished with 12 hits in the win.\n\nSt. Andrew’s travels to Thomas Heyward Academy on Monday.",
+    "LineScore": {
+      "Innings": [1, 2, 3, 4, 5, 6],
+      "StAndrews": [0, 0, 0, 0, 0, 0],
+      "Opponent": [0, 0, 1, 0, 6, 4],
+      "StAndrewsTotals": {
+        "R": 0,
+        "H": 4,
+        "E": 3
+      },
+      "OpponentTotals": {
+        "R": 11,
+        "H": 12,
+        "E": 0
+      }
+    }
   },
   {
     "GameID": 2026041301,
