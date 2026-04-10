@@ -10,7 +10,24 @@
     "Result": "L",
     "TeamScore": 1,
     "OpponentScore": 18,
-    "Season": 2022
+    "Season": 2022,
+    "RecapTitle": "Early Deficit Too Much As St. Andrew’s Falls To Trinity Christian",
+    "Recap": "Trinity Christian took control early and never looked back in an 18-1 win over St. Andrew’s on Monday.\n\nThe visitors jumped out in the first inning when Allen delivered a bases-clearing double to give Trinity Christian a 3-0 lead.\n\nTrinity Christian continued to apply pressure in the second and third innings, extending the advantage behind aggressive baserunning and timely hitting. The game broke open in the fourth, when Trinity Christian erupted for 11 runs on a combination of singles, walks, and defensive miscues to push the lead to 18-0.\n\nSt. Andrew’s struggled to generate offense against Currie, who struck out eight over three hitless innings to earn the win. Luke Goodwin provided relief for Trinity Christian.\n\nGabe Barnhill took the loss for the Lions, allowing six runs over two and two-thirds innings while striking out three. Thomas Jackson also saw time on the mound in relief.\n\nAlec Waters accounted for St. Andrew’s lone hit of the game and later came around to score the team’s only run in the fourth inning.\n\nFor Trinity Christian, Brown led the way at the plate with two hits, while multiple players contributed to an aggressive effort on the basepaths. The visitors were also clean defensively, finishing without an error.\n\nSt. Andrew’s looks to bounce back in its next contest.",
+    "LineScore": {
+      "Innings": [1, 2, 3, 4],
+      "StAndrews": [0, 0, 0, 1],
+      "Opponent": [3, 2, 2, 11],
+      "StAndrewsTotals": {
+        "R": 1,
+        "H": 1,
+        "E": 8
+      },
+      "OpponentTotals": {
+        "R": 18,
+        "H": 9,
+        "E": 0
+      }
+    }
   },
   {
     "GameID": 2022030101,
@@ -1140,7 +1157,7 @@
     "TeamScore": 2,
     "OpponentScore": 11,
     "Season": 2026,
-    "Reacp": "Colleton Prep defeated St. Andrew’s 11-2 on Saturday, using a six-run sixth inning to pull away.\n\nColleton Prep opened the scoring in the top of the first with the help of two walks. Smoak brought in the game’s first run after drawing a bases-loaded walk.\n\nColleton Prep broke the game open in the sixth, scoring six runs on three hits. Fisk drew a walk to force in a run, Kinard launched a grand slam to right field, and a passed ball added another run.\n\nRiver Reeves took the loss for the Lions, going three innings while allowing two runs on two hits, striking out one and walking four. Martin started for Colleton Prep and went the distance, allowing four hits and two runs (one earned) over seven innings while striking out two and walking three.\n\nJacob Navarre and Harris led St. Andrew’s offensively with two hits each, and both players also drove in a run. Wilcox added two stolen bases for the Lions, who also turned one double play and played a clean game defensively without committing an error. Navarre led the way in the field with five chances.\n\nFor Colleton Prep, Kinard delivered the biggest blow from the middle of the lineup, finishing with four RBIs while going 2-for-4. Fisk and Kinard each collected two hits, and Fisk also drew three walks. As a team, Colleton Prep showed patience at the plate, finishing with 11 walks, and also turned two double plays.\n\nSt. Andrew’s returns home Wednesday to face The Habersham School.",
+    "Recap": "Colleton Prep defeated St. Andrew’s 11-2 on Saturday, using a six-run sixth inning to pull away.\n\nColleton Prep opened the scoring in the top of the first with the help of two walks. Smoak brought in the game’s first run after drawing a bases-loaded walk.\n\nColleton Prep broke the game open in the sixth, scoring six runs on three hits. Fisk drew a walk to force in a run, Kinard launched a grand slam to right field, and a passed ball added another run.\n\nRiver Reeves took the loss for the Lions, going three innings while allowing two runs on two hits, striking out one and walking four. Martin started for Colleton Prep and went the distance, allowing four hits and two runs (one earned) over seven innings while striking out two and walking three.\n\nJacob Navarre and Harris led St. Andrew’s offensively with two hits each, and both players also drove in a run. Wilcox added two stolen bases for the Lions, who also turned one double play and played a clean game defensively without committing an error. Navarre led the way in the field with five chances.\n\nFor Colleton Prep, Kinard delivered the biggest blow from the middle of the lineup, finishing with four RBIs while going 2-for-4. Fisk and Kinard each collected two hits, and Fisk also drew three walks. As a team, Colleton Prep showed patience at the plate, finishing with 11 walks, and also turned two double plays.\n\nSt. Andrew’s returns home Wednesday to face The Habersham School.",
     "RecapTitle": "Big Sixth Inning Leads Colleton Prep Past St. Andrew's",
     "LineScore": {
       "Innings": [1, 2, 3, 4, 5, 6, 7],
