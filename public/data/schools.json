@@ -474,6 +474,12 @@
     "State": "GA"
   },
   {
+    "SchoolID": "ga-walker-school-marietta",
+    "Name": "The Walker School",
+    "City": "Marietta",
+    "State": "GA"
+  },
+  {
     "SchoolID": "ga-westminster-schools-of-augusta-augusta",
     "Name": "Westminster Schools of Augusta",
     "City": "Augusta",
