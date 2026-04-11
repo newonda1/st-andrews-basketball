@@ -6,6 +6,12 @@
     "State": "FL"
   },
   {
+    "SchoolID": "fl-father-lopez-catholic-high-school-daytona-beach",
+    "Name": "Father Lopez Catholic High School",
+    "City": "Daytona Beach",
+    "State": "FL"
+  },
+  {
     "SchoolID": "fl-gibbs-high-school-st-petersburg",
     "Name": "Gibbs High School",
     "City": "St. Petersburg",
@@ -21,12 +27,6 @@
     "SchoolID": "fl-raines-high-school-jacksonville",
     "Name": "Raines High School",
     "City": "Jacksonville",
-    "State": "FL"
-  },
-  {
-    "SchoolID": "fl-trinity-prep-school-winter-park",
-    "Name": "Trinity Prep School",
-    "City": "Winter Park",
     "State": "FL"
   },
   {
@@ -96,6 +96,12 @@
     "State": "GA"
   },
   {
+    "SchoolID": "il-centennial-high-school-champaign",
+    "Name": "Centennial High School",
+    "City": "Champaign",
+    "State": "IL"
+  },
+  {
     "SchoolID": "ga-charlton-county-high-school-folkston",
     "Name": "Charlton County High School",
     "City": "Folkston",
@@ -138,6 +144,12 @@
     "State": "GA"
   },
   {
+    "SchoolID": "ga-edmund-burke-academy-waynesboro",
+    "Name": "Edmund Burke Academy",
+    "City": "Waynesboro",
+    "State": "GA"
+  },
+  {
     "SchoolID": "ga-first-preparatory-christian-academy-hinesville",
     "Name": "First Preparatory Christian Academy",
     "City": "Hinesville",
@@ -174,6 +186,12 @@
     "State": "GA"
   },
   {
+    "SchoolID": "md-glenelg-country-school-ellicott-city",
+    "Name": "Glenelg Country School",
+    "City": "Ellicott City",
+    "State": "MD"
+  },
+  {
     "SchoolID": "ga-groves-high-school-garden-city",
     "Name": "Groves High School",
     "City": "Garden City",
@@ -204,6 +222,24 @@
     "State": "GA"
   },
   {
+    "SchoolID": "sc-hardeeville-high-school-hardeeville",
+    "Name": "Hardeeville High School",
+    "City": "Hardeeville",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "ga-hiram-high-school-hiram",
+    "Name": "Hiram High School",
+    "City": "Hiram",
+    "State": "GA"
+  },
+  {
+    "SchoolID": "ga-holy-spirit-preparatory-school-atlanta",
+    "Name": "Holy Spirit Preparatory School",
+    "City": "Atlanta",
+    "State": "GA"
+  },
+  {
     "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island",
     "Name": "Hilton Head Christian Academy",
     "City": "Hilton Head Island",
@@ -226,24 +262,6 @@
     "Name": "Holy Trinity Classical Christian School",
     "City": "Beaufort",
     "State": "SC"
-  },
-  {
-    "SchoolID": "sc-hardeeville-high-school-hardeeville",
-    "Name": "Hardeeville High School",
-    "City": "Hardeeville",
-    "State": "SC"
-  },
-  {
-    "SchoolID": "ga-hiram-high-school-hiram",
-    "Name": "Hiram High School",
-    "City": "Hiram",
-    "State": "GA"
-  },
-  {
-    "SchoolID": "ga-holy-spirit-preparatory-school-atlanta",
-    "Name": "Holy Spirit Preparatory School",
-    "City": "Atlanta",
-    "State": "GA"
   },
   {
     "SchoolID": "ga-islands-high-school-savannah",
@@ -360,10 +378,10 @@
     "State": "GA"
   },
   {
-    "SchoolID": "va-norfolk-academy-norfolk",
-    "Name": "Norfolk Academy",
-    "City": "Norfolk",
-    "State": "VA"
+    "SchoolID": "sc-robert-e-lee-academy-bishopville",
+    "Name": "Robert E. Lee Academy",
+    "City": "Bishopville",
+    "State": "SC"
   },
   {
     "SchoolID": "ga-pinewood-christian-academy-bellville",
@@ -414,6 +432,12 @@
     "State": "GA"
   },
   {
+    "SchoolID": "ga-southwest-georgia-academy-damascus",
+    "Name": "Southwest Georgia Academy",
+    "City": "Damascus",
+    "State": "GA"
+  },
+  {
     "SchoolID": "ga-st-andrews-school-savannah",
     "Name": "St. Andrew's School",
     "City": "Savannah",
@@ -450,6 +474,12 @@
     "State": "GA"
   },
   {
+    "SchoolID": "tn-ravenwood-high-school-brentwood",
+    "Name": "Ravenwood High School",
+    "City": "Brentwood",
+    "State": "TN"
+  },
+  {
     "SchoolID": "sc-thomas-heyward-academy-ridgeland",
     "Name": "Thomas Heyward Academy",
     "City": "Ridgeland",
@@ -472,6 +502,12 @@
     "Name": "Trinity Christian Academy",
     "City": "Dublin",
     "State": "GA"
+  },
+  {
+    "SchoolID": "tn-brentwood-high-school-brentwood",
+    "Name": "Brentwood High School",
+    "City": "Brentwood",
+    "State": "TN"
   },
   {
     "SchoolID": "ga-vidalia-heritage-academy-vidalia",
