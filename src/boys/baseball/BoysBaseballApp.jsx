@@ -11,6 +11,7 @@ import Season2022 from "./seasons/Season2022";
 import Season2021 from "./seasons/Season2021";
 import Season2020 from "./seasons/Season2020";
 import Season2019 from "./seasons/Season2019";
+import Season2018 from "./seasons/Season2018";
 
 import YearlyResults from "./pages/YearlyResults";
 import GameDetail from "./pages/GameDetail";
@@ -29,6 +30,7 @@ const seasonPages = [
   { slug: "2021", Component: Season2021 },
   { slug: "2020", Component: Season2020 },
   { slug: "2019", Component: Season2019 },
+  { slug: "2018", Component: Season2018 },
 ];
 
 const menuSections = [
