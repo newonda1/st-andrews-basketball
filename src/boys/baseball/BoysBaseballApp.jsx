@@ -9,6 +9,7 @@ import Season2024 from "./seasons/Season2024";
 import Season2023 from "./seasons/Season2023";
 import Season2022 from "./seasons/Season2022";
 import Season2021 from "./seasons/Season2021";
+import Season2020 from "./seasons/Season2020";
 
 import YearlyResults from "./pages/YearlyResults";
 import GameDetail from "./pages/GameDetail";
@@ -25,6 +26,7 @@ const seasonPages = [
   { slug: "2023", Component: Season2023 },
   { slug: "2022", Component: Season2022 },
   { slug: "2021", Component: Season2021 },
+  { slug: "2020", Component: Season2020 },
 ];
 
 const menuSections = [
