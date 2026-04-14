@@ -498,7 +498,7 @@ export default function Season2026() {
   }, [groupedStats, fieldingSort]);
 
   return (
-    <div className="pt-2 pb-4 space-y-8 max-w-6xl mx-auto">
+    <div className="pt-2 pb-10 lg:pb-40 space-y-8 max-w-6xl mx-auto">
       <h1 className="text-3xl font-bold text-center mb-2">2026 Season</h1>
 
       <section>
