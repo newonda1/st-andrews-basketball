@@ -73,6 +73,10 @@ function sortableString(value) {
   return String(value ?? "").toLowerCase();
 }
 
+function hasNonZeroStat(stat, keys) {
+  return keys.some((key) => Number(stat[key] || 0) !== 0);
+}
+
 function SortableHeader({ label, sortKey, sortConfig, onSort, className = "" }) {
   const arrow =
     sortConfig.key !== sortKey ? "" : sortConfig.direction === "asc" ? " ↑" : " ↓";
@@ -269,7 +273,28 @@ export default function Season2020() {
 
       const t = map.get(id);
       const gameId = Number(stat.GameID);
-      if (Number.isFinite(gameId)) t.GamesPlayedSet.add(gameId);
+
+      const hittingAppearance = hasNonZeroStat(stat, [
+        "PA",
+        "AB",
+        "R",
+        "H",
+        "1B",
+        "2B",
+        "3B",
+        "HR",
+        "RBI",
+        "BB",
+        "SO",
+        "HBP",
+        "SAC",
+        "SF",
+        "ROE",
+        "FC",
+        "SB",
+        "CS",
+        "TB",
+      ]);
 
       t.PA += Number(stat.PA || 0);
       t.AB += Number(stat.AB || 0);
@@ -288,14 +313,36 @@ export default function Season2020() {
       t.SB += Number(stat.SB || 0);
       t.CS += Number(stat.CS || 0);
       t.TB += Number(stat.TB || 0);
-      if (
-        Number(stat.PA || 0) || Number(stat.AB || 0) || Number(stat.BB || 0) || Number(stat.HBP || 0)
-      ) {
+      if (hittingAppearance) {
         t.HittingGamesSet.add(gameId);
       }
 
       const outingOuts = baseballInningsToOuts(stat.IP || 0);
-      if (outingOuts > 0 || Number(stat.BF || 0) > 0) {
+      const pitchingAppearance =
+        outingOuts > 0 ||
+        hasNonZeroStat(stat, [
+          "BF",
+          "Pitches",
+          "W",
+          "L",
+          "SV",
+          "SVO",
+          "BS",
+          "H_Allowed",
+          "R_Allowed",
+          "ER",
+          "BB_Allowed",
+          "SO_Pitching",
+          "HBP_Pitching",
+          "BK",
+          "PIK_Allowed",
+          "CS_Pitching",
+          "SB_Allowed",
+          "WP",
+          "IP",
+          "P_Innings",
+        ]);
+      if (pitchingAppearance) {
         t.appearances += 1;
         t.PitchingGamesSet.add(gameId);
       }
@@ -333,8 +380,15 @@ export default function Season2020() {
       ].reduce((sum, key) => sum + baseballInningsToOuts(stat[key] || 0), 0);
 
       t.defensiveOuts += defensiveOuts;
-      if (defensiveOuts > 0 || Number(stat.A || 0) || Number(stat.PO || 0) || Number(stat.E || 0)) {
+      const fieldingAppearance =
+        defensiveOuts > 0 ||
+        hasNonZeroStat(stat, ["A", "PO", "E", "DP", "TP", "PB", "PIK_Fielding", "CI"]);
+      if (fieldingAppearance) {
         t.FieldingGamesSet.add(gameId);
+      }
+
+      if (Number.isFinite(gameId) && (hittingAppearance || pitchingAppearance || fieldingAppearance)) {
+        t.GamesPlayedSet.add(gameId);
       }
     });
 
