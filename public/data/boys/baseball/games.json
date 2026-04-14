@@ -2695,10 +2695,27 @@
     "Opponent": "Thomas Heyward Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
-    "Result": null,
-    "TeamScore": null,
-    "OpponentScore": null,
-    "Season": 2026
+    "Result": "W",
+    "TeamScore": 9,
+    "OpponentScore": 6,
+    "Season": 2026,
+    "RecapTitle": "St. Andrew’s Jumps Early, Holds Off Late Rally To Defeat Thomas Heyward",
+    "Recap": "St. Andrew’s built an early lead and held off a late push from Thomas Heyward Academy to secure a 9-6 win on Monday.\n\nThe Lions wasted no time getting on the board in the first inning. Ellis Kelley and Jack Kelley each drew walks to start the rally, and after another free pass loaded the bases, Xavier Wilcox delivered a two-run single to center. Lanford Harris followed with an RBI bunt single, and additional runs scored on wild pitches and a hit batter as St. Andrew’s jumped out to a 4-0 lead.\n\nSt. Andrew’s added to its advantage in the third inning when Harris worked a walk, advanced on the bases, and eventually scored on a Thomas Heyward error to make it 5-0.\n\nThe Lions extended the lead again in the fifth. Harris singled and later came home on a wild pitch, and Jacob Navarre delivered the biggest hit of the inning with a two-run single to push the margin to 9-0.\n\nThomas Heyward began to chip away in the bottom of the fifth, scoring twice on a two-run single by Hair. The hosts added another run in the sixth on a bases-loaded walk and continued to apply pressure in the seventh. An error and a pair of hits helped bring in three runs, and a sacrifice fly cut the deficit to 9-6 before the Lions recorded the final out.\n\nLanford Harris earned the win for St. Andrew’s, allowing just one hit over four scoreless innings while walking two. Brady Grant and Wells Searcy worked in relief to help close out the game.\n\nAt the plate, Harris led the way with two hits and two runs scored. Navarre and Wilcox each drove in two runs, while the Lions showed strong plate discipline with nine walks and applied pressure on the bases throughout the game.\n\nThomas Heyward finished with nine hits, led by Stanley with three and Bowers with two. Hair drove in three runs to pace the offense as the hosts mounted a late comeback effort.",
+    "LineScore": {
+      "Innings": [1, 2, 3, 4, 5, 6, 7],
+      "StAndrews": [4, 0, 1, 0, 4, 0, 0],
+      "Opponent": [0, 0, 0, 0, 2, 1, 3],
+      "StAndrewsTotals": {
+        "R": 9,
+        "H": 5,
+        "E": 2
+      },
+      "OpponentTotals": {
+        "R": 6,
+        "H": 9,
+        "E": 1
+      }
+    }
   },
   {
     "GameID": 2026041501,
