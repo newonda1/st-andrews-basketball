@@ -215,7 +215,7 @@ export default function AthleticsProgramShell({
 
       <div
         style={styles.content}
-        className="pb-8 lg:pb-[112px]"
+        className="pb-8 lg:pb-[144px]"
       >
         <main
           style={{
@@ -223,7 +223,7 @@ export default function AthleticsProgramShell({
             paddingTop: CONTENT_TOP_PADDING,
             paddingBottom: showFooter ? "32px" : 0,
           }}
-          className={showFooter ? "lg:pb-[112px]" : undefined}
+          className={showFooter ? "lg:pb-[144px]" : undefined}
         >
           {children}
         </main>
