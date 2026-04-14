@@ -2,6 +2,8 @@ import React, { useMemo, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Footer from "./Footer";
 
+const HEADER_HEIGHT = "96px";
+
 const styles = {
   page: {
     minHeight: "100vh",
@@ -11,11 +13,25 @@ const styles = {
     display: "flex",
     flexDirection: "column",
   },
+  header: {
+    position: "fixed",
+    top: 0,
+    left: 0,
+    right: 0,
+    height: HEADER_HEIGHT,
+    background: "#ffffff",
+    borderBottom: "1px solid #e2e8f0",
+    zIndex: 30,
+  },
   topBar: {
+    maxWidth: "1300px",
+    height: "100%",
+    margin: "0 auto",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    padding: "20px 24px 14px",
+    padding: "16px 24px",
+    boxSizing: "border-box",
   },
   logoLink: {
     display: "flex",
@@ -166,34 +182,40 @@ export default function AthleticsProgramShell({
 
   return (
     <div style={styles.page}>
-      <div style={styles.topBar}>
-        <Link to={athleticsHomePath} style={styles.logoLink}>
-          <img
-            src="/images/common/logo.png"
-            alt="St. Andrew's Athletics"
-            style={styles.logo}
-          />
-          <div style={styles.titleWrap}>
-            <h1 style={styles.title}>{title}</h1>
-          </div>
-        </Link>
+      <header style={styles.header}>
+        <div style={styles.topBar}>
+          <Link to={athleticsHomePath} style={styles.logoLink}>
+            <img
+              src="/images/common/logo.png"
+              alt="St. Andrew's Athletics"
+              style={styles.logo}
+            />
+            <div style={styles.titleWrap}>
+              <h1 style={styles.title}>{title}</h1>
+              {subtitle ? <p style={styles.subtitle}>{subtitle}</p> : null}
+            </div>
+          </Link>
 
-        <button
-          type="button"
-          aria-label="Open program navigation"
-          style={styles.menuButton}
-          onClick={() => setMenuOpen(true)}
-        >
-          <img
-            src="/images/common/button.png"
-            alt=""
-            aria-hidden="true"
-            style={styles.menuIcon}
-          />
-        </button>
-      </div>
+          <button
+            type="button"
+            aria-label="Open program navigation"
+            style={styles.menuButton}
+            onClick={() => setMenuOpen(true)}
+          >
+            <img
+              src="/images/common/button.png"
+              alt=""
+              aria-hidden="true"
+              style={styles.menuIcon}
+            />
+          </button>
+        </div>
+      </header>
 
-      <div style={styles.content}>
+      <div
+        style={styles.content}
+        className="pt-[96px] pb-6 lg:pb-[104px]"
+      >
         <main style={styles.main}>{children}</main>
       </div>
 
