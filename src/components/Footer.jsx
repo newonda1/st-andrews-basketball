@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <footer
+      className="lg:fixed lg:bottom-0 lg:left-0 lg:right-0 lg:z-30"
       style={{
         marginTop: "24px",
         borderTop: "1px solid #e5e7eb",
@@ -22,7 +23,7 @@ export default function Footer() {
           flexWrap: "wrap",
           boxSizing: "border-box",
         }}
-        className="flex-col sm:flex-row text-center sm:text-left"
+        className="flex-col text-center sm:flex-row sm:text-left"
       >
         <Link
           to="/athletics"
