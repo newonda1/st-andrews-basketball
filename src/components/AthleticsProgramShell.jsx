@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import Footer from "./Footer";
 
 const HEADER_HEIGHT = "96px";
+const CONTENT_TOP_PADDING = "120px";
 
 const styles = {
   page: {
@@ -79,7 +80,7 @@ const styles = {
     maxWidth: "1300px",
     width: "100%",
     margin: "0 auto",
-    padding: "0 16px 24px",
+    padding: "0 16px 32px",
     boxSizing: "border-box",
     flex: 1,
   },
@@ -214,9 +215,18 @@ export default function AthleticsProgramShell({
 
       <div
         style={styles.content}
-        className="pt-[96px] pb-6 lg:pb-[104px]"
+        className="pb-8 lg:pb-[112px]"
       >
-        <main style={styles.main}>{children}</main>
+        <main
+          style={{
+            ...styles.main,
+            paddingTop: CONTENT_TOP_PADDING,
+            paddingBottom: showFooter ? "32px" : 0,
+          }}
+          className={showFooter ? "lg:pb-[112px]" : undefined}
+        >
+          {children}
+        </main>
       </div>
 
       {showFooter ? <Footer /> : null}
