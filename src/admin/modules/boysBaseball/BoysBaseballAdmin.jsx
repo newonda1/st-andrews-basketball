@@ -621,6 +621,13 @@ function splitEmbeddedPlaySegments(line) {
   return [first, second].filter(Boolean);
 }
 
+function extractSingleFielderPosition(line) {
+  const match = line.match(
+    /\b(pitcher|catcher|first baseman|second baseman|third baseman|shortstop|left fielder|center fielder|right fielder)\s+[A-Z]\s+[A-Za-z'-]+/i
+  );
+  return match ? normalizeHeader(match[1]) : "";
+}
+
 function parseFielderSequence(line, indexes) {
   const matches = [...line.matchAll(/(?:pitcher|catcher|first baseman|second baseman|third baseman|shortstop|left fielder|center fielder|right fielder)\s+([A-Z]\s+[A-Za-z'-]+)/gi)];
   return matches
@@ -1015,6 +1022,27 @@ function parseLegacyPlayByPlay(text, indexes, gameId, entriesByPlayerId, options
 
       if (/grounds out/i.test(line)) {
         if (fielders[0]) {
+          const firstFielderEntry = ensureLegacyEntry(entriesByPlayerId, gameId, fielders[0].PlayerID);
+          if (fielders[1]) {
+            incrementEntryValue(firstFielderEntry, "A", 1);
+          } else {
+            const position = extractSingleFielderPosition(line);
+            if (position === "FIRST BASEMAN" || position === "PITCHER") {
+              incrementEntryValue(firstFielderEntry, "PO", 1);
+            } else {
+              incrementEntryValue(firstFielderEntry, "A", 1);
+            }
+          }
+        }
+        if (fielders[1]) {
+          const putoutEntry = ensureLegacyEntry(entriesByPlayerId, gameId, fielders[1].PlayerID);
+          incrementEntryValue(putoutEntry, "PO", 1);
+        }
+        return;
+      }
+
+      if (/fielders choice/i.test(line)) {
+        if (fielders[0]) {
           const assistEntry = ensureLegacyEntry(entriesByPlayerId, gameId, fielders[0].PlayerID);
           incrementEntryValue(assistEntry, "A", 1);
         }
@@ -1029,6 +1057,19 @@ function parseLegacyPlayByPlay(text, indexes, gameId, entriesByPlayerId, options
         if (fielders[0]) {
           const putoutEntry = ensureLegacyEntry(entriesByPlayerId, gameId, fielders[0].PlayerID);
           incrementEntryValue(putoutEntry, "PO", 1);
+        }
+        return;
+      }
+
+      if (/picked off/i.test(line)) {
+        if (fielders[0]) {
+          const putoutEntry = ensureLegacyEntry(entriesByPlayerId, gameId, fielders[0].PlayerID);
+          incrementEntryValue(putoutEntry, "PO", 1);
+          incrementEntryValue(putoutEntry, "PIK_Fielding", 1);
+        }
+        if (activePitcher) {
+          const pitcherEntry = ensureLegacyEntry(entriesByPlayerId, gameId, activePitcher.PlayerID);
+          incrementEntryValue(pitcherEntry, "PIK_Allowed", 1);
         }
         return;
       }
