@@ -1,6 +1,7 @@
 
 
 import React, { useEffect, useMemo, useState } from "react";
+import Tesseract from "tesseract.js";
 
 const OUTPUT_FIELDS = [
   "StatID",
@@ -819,6 +820,18 @@ function replacePreviewUrl(setter, nextFile, currentUrl) {
   setter(nextFile ? URL.createObjectURL(nextFile) : "");
 }
 
+async function recognizeImageText(file, onProgress) {
+  const result = await Tesseract.recognize(file, "eng", {
+    logger: (message) => {
+      if (message.status === "recognizing text" && typeof message.progress === "number") {
+        onProgress(Math.round(message.progress * 100));
+      }
+    },
+  });
+
+  return String(result?.data?.text || "");
+}
+
 
 export default function BoysBaseballAdmin() {
   const [players, setPlayers] = useState([]);
@@ -845,6 +858,18 @@ export default function BoysBaseballAdmin() {
   const [pitchingImagePreview, setPitchingImagePreview] = useState("");
   const [pitchingDetailImageName, setPitchingDetailImageName] = useState("");
   const [pitchingDetailImagePreview, setPitchingDetailImagePreview] = useState("");
+  const [ocrProgress, setOcrProgress] = useState({
+    batting: 0,
+    battingDetail: 0,
+    pitching: 0,
+    pitchingDetail: 0,
+  });
+  const [ocrStatus, setOcrStatus] = useState({
+    batting: "idle",
+    battingDetail: "idle",
+    pitching: "idle",
+    pitchingDetail: "idle",
+  });
 
   useEffect(() => {
     async function loadData() {
@@ -1025,6 +1050,17 @@ export default function BoysBaseballAdmin() {
   }
 
   function handleGenerateLegacy() {
+    const hasLegacyImages = Boolean(
+      battingImageName || battingDetailImageName || pitchingImageName || pitchingDetailImageName
+    );
+    const hasLegacyText = Boolean(
+      legacyBattingText.trim() ||
+        legacyBattingDetailText.trim() ||
+        legacyPitchingText.trim() ||
+        legacyPitchingDetailText.trim() ||
+        legacyPlayByPlayText.trim()
+    );
+
     if (!String(gameId).trim()) {
       setStatus("Choose a GameID before generating output.");
       return;
@@ -1035,8 +1071,8 @@ export default function BoysBaseballAdmin() {
       return;
     }
 
-    if (!legacyBattingText.trim() && !legacyPitchingText.trim()) {
-      setStatus("Paste batting text, pitching text, or both before generating legacy output.");
+    if (!hasLegacyImages && !hasLegacyText) {
+      setStatus("Upload at least one box score image or paste play-by-play before generating legacy output.");
       return;
     }
 
@@ -1055,7 +1091,13 @@ export default function BoysBaseballAdmin() {
     setWarnings(legacyWarnings);
 
     if (!entries.length) {
-      setStatus("No legacy rows were generated. Double-check the pasted text format.");
+      if (hasLegacyImages && !hasLegacyText) {
+        setStatus(
+          "Box score images were uploaded, but automatic image-to-stats extraction is not wired yet, so no JSON rows could be generated from images alone."
+        );
+      } else {
+        setStatus("No legacy rows were generated. Double-check the pasted text format.");
+      }
       return;
     }
 
@@ -1078,33 +1120,68 @@ export default function BoysBaseballAdmin() {
     setBattingDetailImageName("");
     setPitchingImageName("");
     setPitchingDetailImageName("");
+    setOcrStatus({
+      batting: "sample-loaded",
+      battingDetail: "sample-loaded",
+      pitching: "sample-loaded",
+      pitchingDetail: "sample-loaded",
+    });
+    setOcrProgress({
+      batting: 100,
+      battingDetail: 100,
+      pitching: 100,
+      pitchingDetail: 100,
+    });
     setStatus("Loaded the 2022030801 legacy sample. Review the text and generate JSON when ready.");
   }
 
-  function handleLegacyImageChange(kind, event) {
+  async function handleLegacyImageChange(kind, event) {
     const file = event.target.files?.[0] || null;
+
+    const applyRecognizedText = (recognizedText) => {
+      if (kind === "batting") {
+        setLegacyBattingText(normalizeLegacyImportedText(recognizedText, playerIndexes));
+      } else if (kind === "battingDetail") {
+        setLegacyBattingDetailText(normalizeLegacyDetailText(recognizedText));
+      } else if (kind === "pitching") {
+        setLegacyPitchingText(normalizeLegacyImportedText(recognizedText, playerIndexes));
+      } else if (kind === "pitchingDetail") {
+        setLegacyPitchingDetailText(normalizeLegacyDetailText(recognizedText));
+      }
+    };
+
+    setOcrProgress((prev) => ({ ...prev, [kind]: 0 }));
+    setOcrStatus((prev) => ({ ...prev, [kind]: file ? "queued" : "idle" }));
 
     if (kind === "batting") {
       setBattingImageName(file?.name || "");
       replacePreviewUrl(setBattingImagePreview, file, battingImagePreview);
-      return;
-    }
-
-    if (kind === "battingDetail") {
+    } else if (kind === "battingDetail") {
       setBattingDetailImageName(file?.name || "");
       replacePreviewUrl(setBattingDetailImagePreview, file, battingDetailImagePreview);
-      return;
-    }
-
-    if (kind === "pitching") {
+    } else if (kind === "pitching") {
       setPitchingImageName(file?.name || "");
       replacePreviewUrl(setPitchingImagePreview, file, pitchingImagePreview);
-      return;
-    }
-
-    if (kind === "pitchingDetail") {
+    } else if (kind === "pitchingDetail") {
       setPitchingDetailImageName(file?.name || "");
       replacePreviewUrl(setPitchingDetailImagePreview, file, pitchingDetailImagePreview);
+    }
+
+    if (!file) return;
+
+    try {
+      setOcrStatus((prev) => ({ ...prev, [kind]: "reading" }));
+      setStatus(`Reading ${file.name}...`);
+      const recognizedText = await recognizeImageText(file, (progress) => {
+        setOcrProgress((prev) => ({ ...prev, [kind]: progress }));
+      });
+      applyRecognizedText(recognizedText);
+      setOcrProgress((prev) => ({ ...prev, [kind]: 100 }));
+      setOcrStatus((prev) => ({ ...prev, [kind]: "done" }));
+      setStatus(`Read text from ${file.name}. You can generate legacy JSON now or add more images/play-by-play.`);
+    } catch (error) {
+      setOcrStatus((prev) => ({ ...prev, [kind]: "error" }));
+      setStatus(`OCR failed for ${file.name}: ${String(error?.message || error)}`);
     }
   }
 
@@ -1245,9 +1322,8 @@ export default function BoysBaseballAdmin() {
       >
         <h2 style={{ marginTop: 0 }}>1. Box Score Images</h2>
         <p style={{ maxWidth: 900, lineHeight: 1.5, marginBottom: 16 }}>
-          Upload your box score screenshots here. This version stores the images for review
-          and keeps the batting and pitching text fields directly underneath them so you can
-          paste copied text or OCR output from those screenshots in one place.
+          Upload your box score screenshots here. The page stores them for review and
+          preview while we keep building out automatic image-to-stats extraction.
         </p>
 
         <div
@@ -1262,11 +1338,22 @@ export default function BoysBaseballAdmin() {
             <span>Batting Box Score Image</span>
             <input type="file" accept="image/*" onChange={(e) => handleLegacyImageChange("batting", e)} />
             <div style={{ fontSize: 13, color: "#475569" }}>{battingImageName || "No image selected"}</div>
+            <div style={{ fontSize: 13, color: "#334155" }}>
+              OCR: {ocrStatus.batting} {ocrStatus.batting === "reading" ? `(${ocrProgress.batting}%)` : ""}
+            </div>
             {battingImagePreview ? (
               <img
                 src={battingImagePreview}
                 alt="Batting box score preview"
                 style={{ width: "100%", borderRadius: 10, border: "1px solid #cbd5e1" }}
+              />
+            ) : null}
+            {legacyBattingText ? (
+              <textarea
+                value={legacyBattingText}
+                readOnly
+                spellCheck={false}
+                style={{ width: "100%", minHeight: 120, fontFamily: "monospace", fontSize: 12 }}
               />
             ) : null}
           </label>
@@ -1275,11 +1362,23 @@ export default function BoysBaseballAdmin() {
             <span>Batting Detail Image</span>
             <input type="file" accept="image/*" onChange={(e) => handleLegacyImageChange("battingDetail", e)} />
             <div style={{ fontSize: 13, color: "#475569" }}>{battingDetailImageName || "No image selected"}</div>
+            <div style={{ fontSize: 13, color: "#334155" }}>
+              OCR: {ocrStatus.battingDetail}{" "}
+              {ocrStatus.battingDetail === "reading" ? `(${ocrProgress.battingDetail}%)` : ""}
+            </div>
             {battingDetailImagePreview ? (
               <img
                 src={battingDetailImagePreview}
                 alt="Batting detail preview"
                 style={{ width: "100%", borderRadius: 10, border: "1px solid #cbd5e1" }}
+              />
+            ) : null}
+            {legacyBattingDetailText ? (
+              <textarea
+                value={legacyBattingDetailText}
+                readOnly
+                spellCheck={false}
+                style={{ width: "100%", minHeight: 120, fontFamily: "monospace", fontSize: 12 }}
               />
             ) : null}
           </label>
@@ -1288,11 +1387,22 @@ export default function BoysBaseballAdmin() {
             <span>Pitching Box Score Image</span>
             <input type="file" accept="image/*" onChange={(e) => handleLegacyImageChange("pitching", e)} />
             <div style={{ fontSize: 13, color: "#475569" }}>{pitchingImageName || "No image selected"}</div>
+            <div style={{ fontSize: 13, color: "#334155" }}>
+              OCR: {ocrStatus.pitching} {ocrStatus.pitching === "reading" ? `(${ocrProgress.pitching}%)` : ""}
+            </div>
             {pitchingImagePreview ? (
               <img
                 src={pitchingImagePreview}
                 alt="Pitching box score preview"
                 style={{ width: "100%", borderRadius: 10, border: "1px solid #cbd5e1" }}
+              />
+            ) : null}
+            {legacyPitchingText ? (
+              <textarea
+                value={legacyPitchingText}
+                readOnly
+                spellCheck={false}
+                style={{ width: "100%", minHeight: 120, fontFamily: "monospace", fontSize: 12 }}
               />
             ) : null}
           </label>
@@ -1301,6 +1411,10 @@ export default function BoysBaseballAdmin() {
             <span>Pitching Detail Image</span>
             <input type="file" accept="image/*" onChange={(e) => handleLegacyImageChange("pitchingDetail", e)} />
             <div style={{ fontSize: 13, color: "#475569" }}>{pitchingDetailImageName || "No image selected"}</div>
+            <div style={{ fontSize: 13, color: "#334155" }}>
+              OCR: {ocrStatus.pitchingDetail}{" "}
+              {ocrStatus.pitchingDetail === "reading" ? `(${ocrProgress.pitchingDetail}%)` : ""}
+            </div>
             {pitchingDetailImagePreview ? (
               <img
                 src={pitchingDetailImagePreview}
@@ -1308,58 +1422,14 @@ export default function BoysBaseballAdmin() {
                 style={{ width: "100%", borderRadius: 10, border: "1px solid #cbd5e1" }}
               />
             ) : null}
-          </label>
-        </div>
-
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-            gap: 16,
-          }}
-        >
-          <label style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-            <span>Batting Text From Box Score</span>
-            <textarea
-              value={legacyBattingText}
-              onChange={(e) => setLegacyBattingText(normalizeLegacyImportedText(e.target.value, playerIndexes))}
-              spellCheck={false}
-              placeholder={`Anthony Kusilka (C) 3 3 1 0 1 1\nEdward Ashton (CF, P) 4 0 1 0 0 2`}
-              style={{ width: "100%", minHeight: 180, fontFamily: "monospace", fontSize: 14 }}
-            />
-          </label>
-
-          <label style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-            <span>Batting Detail Text</span>
-            <textarea
-              value={legacyBattingDetailText}
-              onChange={(e) => setLegacyBattingDetailText(normalizeLegacyDetailText(e.target.value))}
-              spellCheck={false}
-              placeholder={`2B: Tripp Jackson\nTB: Tripp Jackson 2, Andrew Bacon 1\nSB: Anthony Kusilka 3, Andrew Bacon 2\nCS: Andrew Bacon\nE: Edward Ashton, Tripp Jackson`}
-              style={{ width: "100%", minHeight: 180, fontFamily: "monospace", fontSize: 14 }}
-            />
-          </label>
-
-          <label style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-            <span>Pitching Text From Box Score</span>
-            <textarea
-              value={legacyPitchingText}
-              onChange={(e) => setLegacyPitchingText(normalizeLegacyImportedText(e.target.value, playerIndexes))}
-              spellCheck={false}
-              placeholder={`Luke Peaster #4 (L) 6.2 10 8 7 3 4\nEdward Ashton 0.1 0 0 0 0 0`}
-              style={{ width: "100%", minHeight: 180, fontFamily: "monospace", fontSize: 14 }}
-            />
-          </label>
-
-          <label style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-            <span>Pitching Detail Text</span>
-            <textarea
-              value={legacyPitchingDetailText}
-              onChange={(e) => setLegacyPitchingDetailText(normalizeLegacyDetailText(e.target.value))}
-              spellCheck={false}
-              placeholder={`Pitches-Strikes: Luke Peaster 94-68, Edward Ashton 7-4\nBatters Faced: Luke Peaster 34, Edward Ashton 1\nWP: Luke Peaster`}
-              style={{ width: "100%", minHeight: 180, fontFamily: "monospace", fontSize: 14 }}
-            />
+            {legacyPitchingDetailText ? (
+              <textarea
+                value={legacyPitchingDetailText}
+                readOnly
+                spellCheck={false}
+                style={{ width: "100%", minHeight: 120, fontFamily: "monospace", fontSize: 12 }}
+              />
+            ) : null}
           </label>
         </div>
       </div>
