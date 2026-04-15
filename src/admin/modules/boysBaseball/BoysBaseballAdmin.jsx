@@ -814,6 +814,11 @@ function finalizeLegacyEntries(entriesByPlayerId) {
     .sort((a, b) => Number(a.PlayerID) - Number(b.PlayerID));
 }
 
+function replacePreviewUrl(setter, nextFile, currentUrl) {
+  if (currentUrl) URL.revokeObjectURL(currentUrl);
+  setter(nextFile ? URL.createObjectURL(nextFile) : "");
+}
+
 
 export default function BoysBaseballAdmin() {
   const [players, setPlayers] = useState([]);
@@ -832,6 +837,14 @@ export default function BoysBaseballAdmin() {
   const [legacyPitchingText, setLegacyPitchingText] = useState("");
   const [legacyPitchingDetailText, setLegacyPitchingDetailText] = useState("");
   const [legacyPlayByPlayText, setLegacyPlayByPlayText] = useState("");
+  const [battingImageName, setBattingImageName] = useState("");
+  const [battingImagePreview, setBattingImagePreview] = useState("");
+  const [battingDetailImageName, setBattingDetailImageName] = useState("");
+  const [battingDetailImagePreview, setBattingDetailImagePreview] = useState("");
+  const [pitchingImageName, setPitchingImageName] = useState("");
+  const [pitchingImagePreview, setPitchingImagePreview] = useState("");
+  const [pitchingDetailImageName, setPitchingDetailImageName] = useState("");
+  const [pitchingDetailImagePreview, setPitchingDetailImagePreview] = useState("");
 
   useEffect(() => {
     async function loadData() {
@@ -1061,8 +1074,47 @@ export default function BoysBaseballAdmin() {
     setLegacyPitchingText(LEGACY_SAMPLE_2022030801.pitching);
     setLegacyPitchingDetailText(LEGACY_SAMPLE_2022030801.pitchingDetails);
     setLegacyPlayByPlayText(LEGACY_SAMPLE_2022030801.playByPlay);
+    setBattingImageName("");
+    setBattingDetailImageName("");
+    setPitchingImageName("");
+    setPitchingDetailImageName("");
     setStatus("Loaded the 2022030801 legacy sample. Review the text and generate JSON when ready.");
   }
+
+  function handleLegacyImageChange(kind, event) {
+    const file = event.target.files?.[0] || null;
+
+    if (kind === "batting") {
+      setBattingImageName(file?.name || "");
+      replacePreviewUrl(setBattingImagePreview, file, battingImagePreview);
+      return;
+    }
+
+    if (kind === "battingDetail") {
+      setBattingDetailImageName(file?.name || "");
+      replacePreviewUrl(setBattingDetailImagePreview, file, battingDetailImagePreview);
+      return;
+    }
+
+    if (kind === "pitching") {
+      setPitchingImageName(file?.name || "");
+      replacePreviewUrl(setPitchingImagePreview, file, pitchingImagePreview);
+      return;
+    }
+
+    if (kind === "pitchingDetail") {
+      setPitchingDetailImageName(file?.name || "");
+      replacePreviewUrl(setPitchingDetailImagePreview, file, pitchingDetailImagePreview);
+    }
+  }
+
+  useEffect(() => {
+    return () => {
+      [battingImagePreview, battingDetailImagePreview, pitchingImagePreview, pitchingDetailImagePreview]
+        .filter(Boolean)
+        .forEach((url) => URL.revokeObjectURL(url));
+    };
+  }, [battingImagePreview, battingDetailImagePreview, pitchingImagePreview, pitchingDetailImagePreview]);
 
   async function handleCopy() {
     try {
@@ -1191,13 +1243,73 @@ export default function BoysBaseballAdmin() {
           background: "#eff6ff",
         }}
       >
-        <h2 style={{ marginTop: 0 }}>Legacy GameChanger Paste Import</h2>
+        <h2 style={{ marginTop: 0 }}>1. Box Score Images</h2>
         <p style={{ maxWidth: 900, lineHeight: 1.5, marginBottom: 16 }}>
-          Use this for 2022-and-earlier GameChanger games without CSV export. Paste OCR text
-          or copied table text from the box score, then optionally paste play-by-play to
-          enrich fields such as <code>ROE</code>, <code>FC</code>, <code>HBP</code>,{" "}
-          <code>SAC</code>, and <code>SF</code>.
+          Upload your box score screenshots here. This version stores the images for review
+          and keeps the batting and pitching text fields directly underneath them so you can
+          paste copied text or OCR output from those screenshots in one place.
         </p>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+            gap: 16,
+            marginBottom: 20,
+          }}
+        >
+          <label style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+            <span>Batting Box Score Image</span>
+            <input type="file" accept="image/*" onChange={(e) => handleLegacyImageChange("batting", e)} />
+            <div style={{ fontSize: 13, color: "#475569" }}>{battingImageName || "No image selected"}</div>
+            {battingImagePreview ? (
+              <img
+                src={battingImagePreview}
+                alt="Batting box score preview"
+                style={{ width: "100%", borderRadius: 10, border: "1px solid #cbd5e1" }}
+              />
+            ) : null}
+          </label>
+
+          <label style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+            <span>Batting Detail Image</span>
+            <input type="file" accept="image/*" onChange={(e) => handleLegacyImageChange("battingDetail", e)} />
+            <div style={{ fontSize: 13, color: "#475569" }}>{battingDetailImageName || "No image selected"}</div>
+            {battingDetailImagePreview ? (
+              <img
+                src={battingDetailImagePreview}
+                alt="Batting detail preview"
+                style={{ width: "100%", borderRadius: 10, border: "1px solid #cbd5e1" }}
+              />
+            ) : null}
+          </label>
+
+          <label style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+            <span>Pitching Box Score Image</span>
+            <input type="file" accept="image/*" onChange={(e) => handleLegacyImageChange("pitching", e)} />
+            <div style={{ fontSize: 13, color: "#475569" }}>{pitchingImageName || "No image selected"}</div>
+            {pitchingImagePreview ? (
+              <img
+                src={pitchingImagePreview}
+                alt="Pitching box score preview"
+                style={{ width: "100%", borderRadius: 10, border: "1px solid #cbd5e1" }}
+              />
+            ) : null}
+          </label>
+
+          <label style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+            <span>Pitching Detail Image</span>
+            <input type="file" accept="image/*" onChange={(e) => handleLegacyImageChange("pitchingDetail", e)} />
+            <div style={{ fontSize: 13, color: "#475569" }}>{pitchingDetailImageName || "No image selected"}</div>
+            {pitchingDetailImagePreview ? (
+              <img
+                src={pitchingDetailImagePreview}
+                alt="Pitching detail preview"
+                style={{ width: "100%", borderRadius: 10, border: "1px solid #cbd5e1" }}
+              />
+            ) : null}
+          </label>
+        </div>
 
         <div
           style={{
@@ -1207,7 +1319,7 @@ export default function BoysBaseballAdmin() {
           }}
         >
           <label style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-            <span>Legacy Batting Lines</span>
+            <span>Batting Text From Box Score</span>
             <textarea
               value={legacyBattingText}
               onChange={(e) => setLegacyBattingText(normalizeLegacyImportedText(e.target.value, playerIndexes))}
@@ -1218,7 +1330,7 @@ export default function BoysBaseballAdmin() {
           </label>
 
           <label style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-            <span>Legacy Batting Details</span>
+            <span>Batting Detail Text</span>
             <textarea
               value={legacyBattingDetailText}
               onChange={(e) => setLegacyBattingDetailText(normalizeLegacyDetailText(e.target.value))}
@@ -1229,7 +1341,7 @@ export default function BoysBaseballAdmin() {
           </label>
 
           <label style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-            <span>Legacy Pitching Lines</span>
+            <span>Pitching Text From Box Score</span>
             <textarea
               value={legacyPitchingText}
               onChange={(e) => setLegacyPitchingText(normalizeLegacyImportedText(e.target.value, playerIndexes))}
@@ -1240,7 +1352,7 @@ export default function BoysBaseballAdmin() {
           </label>
 
           <label style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-            <span>Legacy Pitching Details</span>
+            <span>Pitching Detail Text</span>
             <textarea
               value={legacyPitchingDetailText}
               onChange={(e) => setLegacyPitchingDetailText(normalizeLegacyDetailText(e.target.value))}
@@ -1250,15 +1362,31 @@ export default function BoysBaseballAdmin() {
             />
           </label>
         </div>
+      </div>
 
-        <label style={{ display: "flex", flexDirection: "column", gap: 6, marginTop: 16 }}>
-          <span>Optional Play-by-Play</span>
+      <div
+        style={{
+          marginBottom: 24,
+          padding: 16,
+          border: "1px solid #c7d2fe",
+          background: "#eef2ff",
+        }}
+      >
+        <h2 style={{ marginTop: 0 }}>2. Play-By-Play</h2>
+        <p style={{ maxWidth: 900, lineHeight: 1.5, marginBottom: 16 }}>
+          Paste the GameChanger play-by-play here to enrich the generated rows with fields
+          such as <code>ROE</code>, <code>FC</code>, <code>HBP</code>, <code>SAC</code>,
+          and <code>SF</code>.
+        </p>
+
+        <label style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+          <span>GameChanger Play-by-Play</span>
           <textarea
             value={legacyPlayByPlayText}
             onChange={(e) => setLegacyPlayByPlayText(normalizeLegacyImportedText(e.target.value, playerIndexes))}
             spellCheck={false}
             placeholder={`Bottom 1st - St. Andrew's Varsity Lions\nA Kusilka hits a line drive and reaches on an error...\nC Helle lines into fielder's choice...`}
-            style={{ width: "100%", minHeight: 240, fontFamily: "monospace", fontSize: 14 }}
+            style={{ width: "100%", minHeight: 260, fontFamily: "monospace", fontSize: 14 }}
           />
         </label>
       </div>
