@@ -271,7 +271,7 @@ export default function SingleGameRecords() {
   };
 
   return (
-    <div className="space-y-6 px-4">
+    <div className="pt-2 pb-10 lg:pb-40 space-y-6 px-4 max-w-6xl mx-auto">
       <h1 className="text-2xl font-bold text-center">Single Game Records</h1>
       <p className="-mt-3 text-center text-sm italic text-gray-600">
         Select any record to see the top 20 historical results for that record
