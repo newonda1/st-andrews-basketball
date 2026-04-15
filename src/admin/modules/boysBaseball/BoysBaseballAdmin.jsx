@@ -320,6 +320,7 @@ function buildPlayerIndexes(players, rosterPlayers) {
   const byLastName = new Map();
   const globalByFullName = new Map();
   const globalByLastName = new Map();
+  const globalByInitialLast = buildLegacyAbbreviationMap(players);
   const rosterDetails = [];
 
   players.forEach((player) => {
@@ -365,6 +366,7 @@ function buildPlayerIndexes(players, rosterPlayers) {
     byLastName,
     globalByFullName,
     globalByLastName,
+    globalByInitialLast,
     byInitialLast: buildLegacyAbbreviationMap(rosterDetails.map((detail) => detail.player)),
     rosterDetails,
   };
@@ -416,6 +418,7 @@ function matchLegacyPlayer(label, indexes) {
   if (abbreviatedMatch) {
     const key = `${abbreviatedMatch[1]}|${abbreviatedMatch[2].trim()}`;
     if (indexes.byInitialLast.has(key)) return indexes.byInitialLast.get(key);
+    if (indexes.globalByInitialLast.has(key)) return indexes.globalByInitialLast.get(key);
   }
 
   const firstLastMatch = cleaned.match(/^([A-Z][A-Z\s-]*)\s+([A-Z][A-Z\s-]+)$/);
@@ -901,14 +904,16 @@ function parseLegacyPlayByPlay(text, indexes, gameId, entriesByPlayerId) {
     const activePitcher = getCurrentPitcher();
     const fielders = parseFielderSequence(line, indexes);
 
-    if (/steals\s+(2ND|3RD|HOME)/i.test(normalizedLine) && activePitcher) {
+    const stolenBaseEvents = normalizedLine.match(/STEALS\s+(2ND|3RD|HOME)|STEAL OF HOME/g) || [];
+    if (stolenBaseEvents.length && activePitcher) {
       const pitcherEntry = ensureLegacyEntry(entriesByPlayerId, gameId, activePitcher.PlayerID);
-      incrementEntryValue(pitcherEntry, "SB_Allowed", 1);
+      incrementEntryValue(pitcherEntry, "SB_Allowed", stolenBaseEvents.length);
     }
 
-    if (/caught stealing/i.test(line) && activePitcher) {
+    const caughtStealingEvents = line.match(/caught stealing/gi) || [];
+    if (caughtStealingEvents.length && activePitcher) {
       const pitcherEntry = ensureLegacyEntry(entriesByPlayerId, gameId, activePitcher.PlayerID);
-      incrementEntryValue(pitcherEntry, "CS_Pitching", 1);
+      incrementEntryValue(pitcherEntry, "CS_Pitching", caughtStealingEvents.length);
     }
 
     if (/wild pitch/i.test(line) && activePitcher) {
