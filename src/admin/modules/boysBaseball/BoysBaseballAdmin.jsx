@@ -1367,6 +1367,45 @@ export default function BoysBaseballAdmin() {
     }
   }
 
+  function handleResetLegacyImporter() {
+    [battingImagePreview, battingDetailImagePreview, pitchingImagePreview, pitchingDetailImagePreview]
+      .filter(Boolean)
+      .forEach((url) => URL.revokeObjectURL(url));
+
+    setLegacyBattingText("");
+    setLegacyBattingDetailText("");
+    setLegacyPitchingText("");
+    setLegacyPitchingDetailText("");
+    setLegacyPlayByPlayText("");
+
+    setBattingImageName("");
+    setBattingImagePreview("");
+    setBattingDetailImageName("");
+    setBattingDetailImagePreview("");
+    setPitchingImageName("");
+    setPitchingImagePreview("");
+    setPitchingDetailImageName("");
+    setPitchingDetailImagePreview("");
+
+    setOcrProgress({
+      batting: 0,
+      battingDetail: 0,
+      pitching: 0,
+      pitchingDetail: 0,
+    });
+    setOcrStatus({
+      batting: "idle",
+      battingDetail: "idle",
+      pitching: "idle",
+      pitchingDetail: "idle",
+    });
+
+    setOutput("[]");
+    setWarnings([]);
+    setReviewSummary(null);
+    setStatus("Legacy importer cleared. Select the next game and upload new screenshots.");
+  }
+
   useEffect(() => {
     return () => {
       [battingImagePreview, battingDetailImagePreview, pitchingImagePreview, pitchingDetailImagePreview]
@@ -1454,6 +1493,9 @@ export default function BoysBaseballAdmin() {
         </button>
         <button type="button" onClick={handleGenerateLegacy} style={{ padding: "10px 16px" }}>
           Generate Legacy JSON
+        </button>
+        <button type="button" onClick={handleResetLegacyImporter} style={{ padding: "10px 16px" }}>
+          Reset Legacy Importer
         </button>
         <button type="button" onClick={handleDownload} style={{ padding: "10px 16px" }}>
           Download JSON
