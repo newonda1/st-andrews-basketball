@@ -296,13 +296,10 @@ export default function SeasonRecords() {
   };
 
   return (
-    <div className="space-y-6 px-4">
+    <div className="pt-2 pb-10 lg:pb-40 space-y-6 px-4 max-w-6xl mx-auto">
       <h1 className="text-2xl font-bold text-center">Season Records</h1>
-      <p className="-mt-3 text-center text-sm italic text-gray-600">
+      <p className="-mt-1.5 text-center text-sm italic text-gray-600">
         Select any record to see the top 20 historical results for that record
-      </p>
-      <p className="-mt-4 text-center text-xs italic text-gray-500">
-        No-hitters and perfect games require a solo pitching effort of at least 5 innings. Perfect games also require 0 hits, 0 walks, 0 hit batters, and 0 St. Andrew&apos;s errors.
       </p>
 
       {error && (
@@ -455,6 +452,10 @@ export default function SeasonRecords() {
           </tbody>
         </table>
       </div>
+
+      <p className="text-center text-xs italic text-gray-500">
+        No-hitters and perfect games require a solo pitching effort of at least 5 innings. Perfect games also require 0 hits, 0 walks, 0 hit batters, and 0 St. Andrew&apos;s errors.
+      </p>
     </div>
   );
 }
