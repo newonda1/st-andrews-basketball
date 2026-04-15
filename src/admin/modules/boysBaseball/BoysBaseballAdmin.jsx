@@ -135,73 +135,6 @@ const POSITION_ALIASES = {
 
 const LEGACY_DETAIL_LABELS = ["2B", "3B", "HR", "TB", "SB", "CS", "E", "PITCHES-STRIKES", "BATTERS FACED", "WP"];
 
-const LEGACY_SAMPLE_2022030801 = {
-  seasonId: "2022",
-  gameId: "2022030801",
-  batting: `Anthony Kusilka (C) 3 3 1 0 1 1
-Edward Ashton (CF, P) 4 0 1 0 0 2
-Andrew Bacon #5 (3B) 3 2 1 1 1 0
-Gabe Barnhill #11 (SS) 3 0 0 0 0 3
-Cameron Helle #9 (RF) 3 0 1 2 0 1
-Luke Peaster #4 (P, CF) 3 0 1 0 0 0
-Tripp Jackson #24 (1B) 3 0 1 0 0 0
-Issac Ross #21 (LF) 2 0 0 0 0 2
-Xaiver Wilcox #31 (LF) 1 0 0 0 0 1
-Gerrit Mol #6 (DH) 2 0 0 0 1 2`,
-  battingDetails: `2B: Tripp Jackson
-TB: Tripp Jackson 2, Andrew Bacon 1, Anthony Kusilka 1, Cameron Helle 1, Edward Ashton 1, Luke Peaster 1
-SB: Anthony Kusilka 3, Andrew Bacon 2, Cameron Helle, Edward Ashton, Luke Peaster
-CS: Andrew Bacon, Cameron Helle, Tripp Jackson
-E: Edward Ashton, Tripp Jackson`,
-  pitching: `Luke Peaster #4 (L) 6.2 10 8 7 3 4
-Edward Ashton 0.1 0 0 0 0 0`,
-  pitchingDetails: `Pitches-Strikes: Luke Peaster 94-68, Edward Ashton 7-4
-Batters Faced: Luke Peaster 34, Edward Ashton 1`,
-  playByPlay: `Bottom 1st - St. Andrew's Varsity Lions
-A Kusilka hits a line drive and reaches on an error by center fielder J Carter, A Kusilka advances to 2nd on the same error.
-E Ashton strikes out looking, R Braddy pitching, A Kusilka remains at 2nd.
-A Bacon walks, R Braddy pitching.
-G Barnhill strikes out looking, R Braddy pitching, A Bacon remains at 1st.
-C Helle singles on a ground ball to right fielder J Wiggins, A Bacon scores.
-
-Bottom 2nd - St. Andrew's Varsity Lions
-L Peaster singles on a pop fly to pitcher R Braddy.
-T Jackson flies out to right fielder J Wiggins, L Peaster remains at 1st.
-I Ross strikes out looking, R Braddy pitching, L Peaster remains at 2nd.
-G Mol strikes out swinging, R Braddy pitching.
-
-Bottom 3rd - St. Andrew's Varsity Lions
-A Kusilka singles on a line drive to third baseman R Griner.
-E Ashton hits a ground ball and reaches on an error by second baseman J Willes, A Kusilka advances to 2nd.
-A Bacon singles on a ground ball to second baseman J Willes, E Ashton held up at 2nd, A Kusilka scores.
-G Barnhill strikes out swinging, R Braddy pitching, E Ashton remains at 2nd, A Bacon remains at 1st.
-C Helle lines into fielder's choice, second baseman J Willes to shortstop C Calhoun to third baseman R Griner, E Ashton out advancing to 3rd, A Bacon scores.
-L Peaster grounds out, second baseman J Willes to first baseman B Smith.
-
-Bottom 4th - St. Andrew's Varsity Lions
-T Jackson doubles on a line drive to center fielder T Braddock.
-I Ross strikes out looking, B Fleming pitching, T Jackson remains at 2nd.
-G Mol strikes out swinging, B Fleming pitching, T Jackson remains at 2nd.
-
-Bottom 5th - St. Andrew's Varsity Lions
-A Kusilka walks, B Fleming pitching.
-E Ashton strikes out looking, B Fleming pitching, A Kusilka remains at 1st.
-A Bacon bunts and reaches on an error by first baseman B Smith, A Kusilka scores.
-G Barnhill strikes out looking, B Fleming pitching, A Bacon remains at 2nd.
-
-Bottom 6th - St. Andrew's Varsity Lions
-C Helle strikes out looking, B Fleming pitching.
-L Peaster lines out to right fielder B Martin.
-T Jackson grounds out, third baseman R Griner to first baseman B Smith.
-
-Bottom 7th - St. Andrew's Varsity Lions
-X Wilcox strikes out looking, B Fleming pitching.
-G Mol walks, B Fleming pitching.
-A Kusilka strikes out looking, B Fleming pitching, G Mol remains at 1st.
-E Ashton singles on a line drive to right fielder B Martin, G Mol advances to 3rd.
-A Bacon grounds into fielder's choice to second baseman, G Mol did not score, E Ashton out advancing to 2nd.`,
-};
-
 function normalizeHeader(value) {
   return String(value ?? "")
     .trim()
@@ -1011,6 +944,79 @@ async function recognizeImageText(file, onProgress) {
   return String(result?.data?.text || "");
 }
 
+async function copyTextToClipboard(text) {
+  await navigator.clipboard.writeText(text);
+}
+
+function hasBattingAppearance(entry) {
+  return (
+    parseDecimal(entry.PA) ||
+    parseDecimal(entry.AB) ||
+    parseDecimal(entry.BB) ||
+    parseDecimal(entry.HBP) ||
+    parseDecimal(entry.ROE) ||
+    parseDecimal(entry.FC)
+  );
+}
+
+function hasPitchingAppearance(entry) {
+  return parseDecimal(entry.IP) || parseDecimal(entry.BF) || parseDecimal(entry.Pitches);
+}
+
+function hasFieldingOnlyAppearance(entry) {
+  return (
+    !hasBattingAppearance(entry) &&
+    !hasPitchingAppearance(entry) &&
+    (parseDecimal(entry.A) ||
+      parseDecimal(entry.PO) ||
+      parseDecimal(entry.E) ||
+      parseDecimal(entry.DP) ||
+      parseDecimal(entry.PB))
+  );
+}
+
+function sumEntries(entries, field) {
+  return entries.reduce((sum, entry) => sum + parseDecimal(entry[field]), 0);
+}
+
+function buildReviewSummary(entries, gameRecord) {
+  const battingTotals = {
+    AB: sumEntries(entries, "AB"),
+    R: sumEntries(entries, "R"),
+    H: sumEntries(entries, "H"),
+    RBI: sumEntries(entries, "RBI"),
+    BB: sumEntries(entries, "BB"),
+    SO: sumEntries(entries, "SO"),
+  };
+
+  const pitchingTotals = {
+    IP: sumEntries(entries, "IP"),
+    H_Allowed: sumEntries(entries, "H_Allowed"),
+    R_Allowed: sumEntries(entries, "R_Allowed"),
+    ER: sumEntries(entries, "ER"),
+    BB_Allowed: sumEntries(entries, "BB_Allowed"),
+    SO_Pitching: sumEntries(entries, "SO_Pitching"),
+    SB_Allowed: sumEntries(entries, "SB_Allowed"),
+  };
+
+  const defensiveOnly = entries.filter(hasFieldingOnlyAppearance);
+
+  return {
+    playerCount: entries.length,
+    battingTotals,
+    pitchingTotals,
+    expectedTeamRuns: parseDecimal(gameRecord?.TeamScore),
+    expectedOpponentRuns: parseDecimal(gameRecord?.OpponentScore),
+    defensiveOnly,
+  };
+}
+
+function formatPlayerLabel(entry, players) {
+  const player = players.find((item) => Number(item.PlayerID) === Number(entry.PlayerID));
+  if (!player) return String(entry.PlayerID);
+  return `${player.FirstName} ${player.LastName}`;
+}
+
 
 export default function BoysBaseballAdmin() {
   const [players, setPlayers] = useState([]);
@@ -1024,6 +1030,7 @@ export default function BoysBaseballAdmin() {
   const [output, setOutput] = useState("[]");
   const [warnings, setWarnings] = useState([]);
   const [status, setStatus] = useState("Load a GameChanger CSV and generate playergamestats entries.");
+  const [reviewSummary, setReviewSummary] = useState(null);
   const [legacyBattingText, setLegacyBattingText] = useState("");
   const [legacyBattingDetailText, setLegacyBattingDetailText] = useState("");
   const [legacyPitchingText, setLegacyPitchingText] = useState("");
@@ -1167,7 +1174,7 @@ export default function BoysBaseballAdmin() {
     }
   }
 
-  function handleGenerate() {
+  async function handleGenerate() {
     if (!String(gameId).trim()) {
       setStatus("Choose a GameID before generating output.");
       return;
@@ -1218,17 +1225,28 @@ export default function BoysBaseballAdmin() {
     });
 
     const formatted = formatJson(entries);
+    const gameRecord = seasonGames.find((game) => String(game.GameID) === String(gameId)) || null;
     setOutput(formatted);
     setWarnings(unmatched);
+    setReviewSummary(buildReviewSummary(entries, gameRecord));
 
-    if (unmatched.length) {
-      setStatus(`Generated ${entries.length} entries with ${unmatched.length} unmatched row(s).`);
-    } else {
-      setStatus(`Generated ${entries.length} entries successfully.`);
+    try {
+      await copyTextToClipboard(formatted);
+      if (unmatched.length) {
+        setStatus(`Generated and copied ${entries.length} entries with ${unmatched.length} unmatched row(s).`);
+      } else {
+        setStatus(`Generated and copied ${entries.length} entries successfully.`);
+      }
+    } catch {
+      if (unmatched.length) {
+        setStatus(`Generated ${entries.length} entries with ${unmatched.length} unmatched row(s), but clipboard copy failed.`);
+      } else {
+        setStatus(`Generated ${entries.length} entries, but clipboard copy failed.`);
+      }
     }
   }
 
-  function handleGenerateLegacy() {
+  async function handleGenerateLegacy() {
     const hasLegacyImages = Boolean(
       battingImageName || battingDetailImageName || pitchingImageName || pitchingDetailImageName
     );
@@ -1265,9 +1283,12 @@ export default function BoysBaseballAdmin() {
     parseLegacyPlayByPlay(legacyPlayByPlayText, playerIndexes, gameId.trim(), entriesByPlayerId);
 
     const entries = finalizeLegacyEntries(entriesByPlayerId);
+    const formatted = formatJson(entries);
+    const gameRecord = seasonGames.find((game) => String(game.GameID) === String(gameId)) || null;
 
-    setOutput(formatJson(entries));
+    setOutput(formatted);
     setWarnings(legacyWarnings);
+    setReviewSummary(buildReviewSummary(entries, gameRecord));
 
     if (!entries.length) {
       if (hasLegacyImages && !hasLegacyText) {
@@ -1280,38 +1301,20 @@ export default function BoysBaseballAdmin() {
       return;
     }
 
-    if (legacyWarnings.length) {
-      setStatus(`Generated ${entries.length} legacy entries with ${legacyWarnings.length} review warning(s).`);
-    } else {
-      setStatus(`Generated ${entries.length} legacy entries successfully.`);
+    try {
+      await copyTextToClipboard(formatted);
+      if (legacyWarnings.length) {
+        setStatus(`Generated and copied ${entries.length} legacy entries with ${legacyWarnings.length} review warning(s).`);
+      } else {
+        setStatus(`Generated and copied ${entries.length} legacy entries successfully.`);
+      }
+    } catch {
+      if (legacyWarnings.length) {
+        setStatus(`Generated ${entries.length} legacy entries with ${legacyWarnings.length} review warning(s), but clipboard copy failed.`);
+      } else {
+        setStatus(`Generated ${entries.length} legacy entries, but clipboard copy failed.`);
+      }
     }
-  }
-
-  function handleLoadLegacySample() {
-    setSeasonId(LEGACY_SAMPLE_2022030801.seasonId);
-    setGameId(LEGACY_SAMPLE_2022030801.gameId);
-    setLegacyBattingText(LEGACY_SAMPLE_2022030801.batting);
-    setLegacyBattingDetailText(LEGACY_SAMPLE_2022030801.battingDetails);
-    setLegacyPitchingText(LEGACY_SAMPLE_2022030801.pitching);
-    setLegacyPitchingDetailText(LEGACY_SAMPLE_2022030801.pitchingDetails);
-    setLegacyPlayByPlayText(LEGACY_SAMPLE_2022030801.playByPlay);
-    setBattingImageName("");
-    setBattingDetailImageName("");
-    setPitchingImageName("");
-    setPitchingDetailImageName("");
-    setOcrStatus({
-      batting: "sample-loaded",
-      battingDetail: "sample-loaded",
-      pitching: "sample-loaded",
-      pitchingDetail: "sample-loaded",
-    });
-    setOcrProgress({
-      batting: 100,
-      battingDetail: 100,
-      pitching: 100,
-      pitchingDetail: 100,
-    });
-    setStatus("Loaded the 2022030801 legacy sample. Review the text and generate JSON when ready.");
   }
 
   async function handleLegacyImageChange(kind, event) {
@@ -1371,15 +1374,6 @@ export default function BoysBaseballAdmin() {
         .forEach((url) => URL.revokeObjectURL(url));
     };
   }, [battingImagePreview, battingDetailImagePreview, pitchingImagePreview, pitchingDetailImagePreview]);
-
-  async function handleCopy() {
-    try {
-      await navigator.clipboard.writeText(output);
-      setStatus("JSON copied to clipboard.");
-    } catch {
-      setStatus("Could not copy to clipboard. You can still copy from the output box.");
-    }
-  }
 
   function handleDownload() {
     const blob = new Blob([output], { type: "application/json" });
@@ -1461,12 +1455,6 @@ export default function BoysBaseballAdmin() {
         <button type="button" onClick={handleGenerateLegacy} style={{ padding: "10px 16px" }}>
           Generate Legacy JSON
         </button>
-        <button type="button" onClick={handleLoadLegacySample} style={{ padding: "10px 16px" }}>
-          Load 2022030801 Sample
-        </button>
-        <button type="button" onClick={handleCopy} style={{ padding: "10px 16px" }}>
-          Copy JSON
-        </button>
         <button type="button" onClick={handleDownload} style={{ padding: "10px 16px" }}>
           Download JSON
         </button>
@@ -1490,6 +1478,36 @@ export default function BoysBaseballAdmin() {
       <div style={{ marginBottom: 24 }}>
         <strong>Roster size for Season {seasonId}:</strong> {rosterPlayers.length}
       </div>
+
+      {reviewSummary ? (
+        <div
+          style={{
+            marginBottom: 24,
+            padding: 16,
+            border: "1px solid #cbd5e1",
+            background: "#f8fafc",
+          }}
+        >
+          <h3 style={{ marginTop: 0 }}>Review Summary</h3>
+          <div style={{ marginBottom: 8 }}>
+            <strong>Players generated:</strong> {reviewSummary.playerCount}
+          </div>
+          <div style={{ marginBottom: 8 }}>
+            <strong>Batting totals:</strong>{" "}
+            {`AB ${reviewSummary.battingTotals.AB}, R ${reviewSummary.battingTotals.R} / expected ${reviewSummary.expectedTeamRuns}, H ${reviewSummary.battingTotals.H}, RBI ${reviewSummary.battingTotals.RBI}, BB ${reviewSummary.battingTotals.BB}, SO ${reviewSummary.battingTotals.SO}`}
+          </div>
+          <div style={{ marginBottom: 8 }}>
+            <strong>Pitching totals:</strong>{" "}
+            {`IP ${reviewSummary.pitchingTotals.IP.toFixed(1)}, H ${reviewSummary.pitchingTotals.H_Allowed}, R ${reviewSummary.pitchingTotals.R_Allowed} / expected ${reviewSummary.expectedOpponentRuns}, ER ${reviewSummary.pitchingTotals.ER}, BB ${reviewSummary.pitchingTotals.BB_Allowed}, SO ${reviewSummary.pitchingTotals.SO_Pitching}, SB Allowed ${reviewSummary.pitchingTotals.SB_Allowed}`}
+          </div>
+          <div>
+            <strong>Defensive-only rows:</strong>{" "}
+            {reviewSummary.defensiveOnly.length
+              ? reviewSummary.defensiveOnly.map((entry) => formatPlayerLabel(entry, players)).join(", ")
+              : "None"}
+          </div>
+        </div>
+      ) : null}
 
       <div
         style={{
