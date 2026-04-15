@@ -407,6 +407,12 @@ function matchLegacyPlayer(label, indexes) {
     if (cleaned === detail.lastName) return detail.player;
   }
 
+  for (const detail of indexes.rosterDetails) {
+    if (cleaned.includes(` ${detail.lastName}`) || cleaned.endsWith(detail.lastName)) {
+      return detail.player;
+    }
+  }
+
   return null;
 }
 
@@ -493,6 +499,10 @@ function addBreaksBeforeLabels(text) {
   }, text);
 }
 
+function addBreaksBeforeTeam(text) {
+  return String(text ?? "").replace(/\s+(TEAM)\b/gi, "\n$1");
+}
+
 function addBreaksBeforeRosterNames(text, indexes) {
   let output = String(text ?? "");
 
@@ -500,10 +510,14 @@ function addBreaksBeforeRosterNames(text, indexes) {
     .slice()
     .sort((a, b) => b.fullName.length - a.fullName.length)
     .forEach((detail) => {
+      const lastName = escapeRegex(detail.player.LastName);
+      const firstInitial = escapeRegex(detail.player.FirstName.charAt(0));
       const patterns = [
         new RegExp(`\\s+(${escapeRegex(detail.player.FirstName)}\\s+${escapeRegex(detail.player.LastName)})\\b`, "gi"),
         new RegExp(`\\s+(${escapeRegex(detail.player.FirstName)}\\s+#\\d+)\\b`, "gi"),
-        new RegExp(`\\s+(${escapeRegex(detail.player.FirstName.charAt(0))}\\s+${escapeRegex(detail.player.LastName)})\\b`, "gi"),
+        new RegExp(`\\s+(${firstInitial}\\s+${lastName})\\b`, "gi"),
+        new RegExp(`\\s+([A-Z][A-Za-z'-]*\\s+${lastName}\\s+#\\d+)\\b`, "gi"),
+        new RegExp(`\\s+([A-Z][A-Za-z'-]*\\s+${lastName})\\b`, "gi"),
       ];
 
       patterns.forEach((pattern) => {
@@ -527,6 +541,7 @@ function normalizeLegacyImportedText(text, indexes) {
 
   output = normalizeOcrNumberTokens(output);
   output = addBreaksBeforeLabels(output);
+  output = addBreaksBeforeTeam(output);
   output = addBreaksBeforeRosterNames(output, indexes);
 
   return output
@@ -576,6 +591,7 @@ function parseLegacyBatting(text, indexes, gameId, entriesByPlayerId, warnings) 
     if (!match) return;
 
     const [, label, ab, runs, hits, rbi, walks, strikeouts] = match;
+    if (/\bTEAM\b/i.test(label)) return;
     const player = matchLegacyPlayer(label, indexes);
 
     if (!player) {
@@ -604,6 +620,7 @@ function parseLegacyPitching(text, indexes, gameId, entriesByPlayerId, warnings)
     if (!match) return;
 
     const [, label, ip, hits, runs, earnedRuns, walks, strikeouts] = match;
+    if (/\bTEAM\b/i.test(label)) return;
     const player = matchLegacyPlayer(label, indexes);
 
     if (!player) {
