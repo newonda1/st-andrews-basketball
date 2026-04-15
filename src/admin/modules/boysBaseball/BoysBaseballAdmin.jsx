@@ -592,6 +592,20 @@ function normalizeLegacyDetailText(text) {
     .join("\n");
 }
 
+function normalizeLegacyPlayByPlayText(text) {
+  return String(text ?? "")
+    .replace(/\u00A0/g, " ")
+    .replace(/[“”]/g, '"')
+    .replace(/[‘’]/g, "'")
+    .replace(/[–—]/g, "-")
+    .replace(/\t/g, " ")
+    .replace(/([^\n])\s+(Top\s+\d|Bottom\s+\d)/gi, "$1\n$2")
+    .split(/\r?\n/)
+    .map((line) => line.replace(/\s+/g, " ").trim())
+    .filter(Boolean)
+    .join("\n");
+}
+
 function parseBaseballInningsValue(value) {
   const cleaned = String(value ?? "").trim().replace(/,/g, "");
   if (!cleaned) return 0;
@@ -860,9 +874,7 @@ function finalizeLegacyEntries(entriesByPlayerId) {
           parseInteger(entry.BB) +
           parseInteger(entry.HBP) +
           parseInteger(entry.SAC) +
-          parseInteger(entry.SF) +
-          parseInteger(entry.ROE) +
-          parseInteger(entry.FC);
+          parseInteger(entry.SF);
       }
 
       return entry;
@@ -1513,7 +1525,7 @@ export default function BoysBaseballAdmin() {
           <span>GameChanger Play-by-Play</span>
           <textarea
             value={legacyPlayByPlayText}
-            onChange={(e) => setLegacyPlayByPlayText(normalizeLegacyImportedText(e.target.value, playerIndexes))}
+            onChange={(e) => setLegacyPlayByPlayText(normalizeLegacyPlayByPlayText(e.target.value))}
             spellCheck={false}
             placeholder={`Bottom 1st - St. Andrew's Varsity Lions\nA Kusilka hits a line drive and reaches on an error...\nC Helle lines into fielder's choice...`}
             style={{ width: "100%", minHeight: 260, fontFamily: "monospace", fontSize: 14 }}
