@@ -625,6 +625,32 @@ function parseBaseballInningsValue(value) {
   return parseDecimal(cleaned);
 }
 
+function matchLegacyNameToken(token, indexes) {
+  return matchLegacyPlayer(String(token ?? "").replace(/\./g, " "), indexes);
+}
+
+function maybeSetCurrentPitcherFromLine(line, indexes, setCurrentPitcher) {
+  const inAtPitcherMatch = line.match(/Lineup changed:\s+([A-Z]\s+[A-Za-z'-]+)\s+in at pitcher/i);
+  if (inAtPitcherMatch) {
+    const player = matchLegacyNameToken(inAtPitcherMatch[1], indexes);
+    if (player) setCurrentPitcher(player);
+    return;
+  }
+
+  const inForPitcherMatch = line.match(/([A-Z]\s+[A-Za-z'-]+)\s+in for pitcher\s+([A-Z]\s+[A-Za-z'-]+)/i);
+  if (inForPitcherMatch) {
+    const player = matchLegacyNameToken(inForPitcherMatch[1], indexes);
+    if (player) setCurrentPitcher(player);
+  }
+}
+
+function parseFielderSequence(line, indexes) {
+  const matches = [...line.matchAll(/(?:pitcher|catcher|first baseman|second baseman|third baseman|shortstop|left fielder|center fielder|right fielder)\s+([A-Z]\s+[A-Za-z'-]+)/gi)];
+  return matches
+    .map((match) => matchLegacyNameToken(match[1], indexes))
+    .filter(Boolean);
+}
+
 function incrementEntryValue(entry, field, amount = 1) {
   entry[field] = parseDecimal(entry[field]) + parseDecimal(amount);
 }
@@ -816,37 +842,113 @@ function parseLegacyDetails(text, indexes, gameId, entriesByPlayerId, warnings) 
 }
 
 function parseLegacyPlayByPlay(text, indexes, gameId, entriesByPlayerId) {
-  let isBottomHalf = false;
+  let half = "";
+  let currentPitcher = null;
+
+  const getCurrentPitcher = () => {
+    if (currentPitcher) return currentPitcher;
+
+    const pitchingEntries = Array.from(entriesByPlayerId.values())
+      .filter((entry) => parseDecimal(entry.IP) > 0)
+      .sort((a, b) => parseDecimal(b.IP) - parseDecimal(a.IP));
+
+    if (!pitchingEntries.length) return null;
+
+    const matched = indexes.rosterDetails.find(
+      (detail) => Number(detail.player.PlayerID) === Number(pitchingEntries[0].PlayerID)
+    );
+    return matched?.player || null;
+  };
 
   splitNonEmptyLines(text).forEach((line) => {
+    maybeSetCurrentPitcherFromLine(line, indexes, (player) => {
+      currentPitcher = player;
+    });
+
     if (/^Top\b/i.test(line)) {
-      isBottomHalf = false;
+      half = "top";
       return;
     }
 
     if (/^Bottom\b/i.test(line)) {
-      isBottomHalf = true;
+      half = "bottom";
       return;
     }
 
-    if (!isBottomHalf) return;
-
-    const batterMatch = line.match(/^([A-Z][A-Za-z.'-]*\s+[A-Z][A-Za-z.'-]*)\b/);
-    const batter = batterMatch ? matchLegacyPlayer(batterMatch[1], indexes) : null;
-    if (!batter) return;
-
-    const entry = ensureLegacyEntry(entriesByPlayerId, gameId, batter.PlayerID);
     const normalizedLine = normalizeHeader(line);
 
-    if (normalizedLine.includes("HIT BY PITCH")) incrementEntryValue(entry, "HBP", 1);
-    if (normalizedLine.includes("REACHES ON AN ERROR")) incrementEntryValue(entry, "ROE", 1);
-    if (normalizedLine.includes("REACHED ON AN ERROR")) incrementEntryValue(entry, "ROE", 1);
-    if (normalizedLine.includes("FIELDERS CHOICE")) incrementEntryValue(entry, "FC", 1);
-    if (normalizedLine.includes("SAC FLY")) incrementEntryValue(entry, "SF", 1);
-    if (normalizedLine.includes("SACRIFICE FLY")) incrementEntryValue(entry, "SF", 1);
-    if (normalizedLine.includes("SAC BUNT")) incrementEntryValue(entry, "SAC", 1);
-    if (normalizedLine.includes("SACRIFICE BUNT")) incrementEntryValue(entry, "SAC", 1);
-    if (normalizedLine.includes("SACRIFICE HIT")) incrementEntryValue(entry, "SAC", 1);
+    if (half === "bottom") {
+      const batterMatch = line.match(/^([A-Z][A-Za-z.'-]*\s+[A-Z][A-Za-z.'-]*)\b/);
+      const batter = batterMatch ? matchLegacyPlayer(batterMatch[1], indexes) : null;
+      if (!batter) return;
+
+      const entry = ensureLegacyEntry(entriesByPlayerId, gameId, batter.PlayerID);
+
+      if (normalizedLine.includes("HIT BY PITCH")) incrementEntryValue(entry, "HBP", 1);
+      if (normalizedLine.includes("REACHES ON AN ERROR")) incrementEntryValue(entry, "ROE", 1);
+      if (normalizedLine.includes("REACHED ON AN ERROR")) incrementEntryValue(entry, "ROE", 1);
+      if (normalizedLine.includes("FIELDERS CHOICE")) incrementEntryValue(entry, "FC", 1);
+      if (normalizedLine.includes("SAC FLY")) incrementEntryValue(entry, "SF", 1);
+      if (normalizedLine.includes("SACRIFICE FLY")) incrementEntryValue(entry, "SF", 1);
+      if (normalizedLine.includes("SAC BUNT")) incrementEntryValue(entry, "SAC", 1);
+      if (normalizedLine.includes("SACRIFICE BUNT")) incrementEntryValue(entry, "SAC", 1);
+      if (normalizedLine.includes("SACRIFICE HIT")) incrementEntryValue(entry, "SAC", 1);
+      return;
+    }
+
+    if (half !== "top") return;
+
+    const activePitcher = getCurrentPitcher();
+    const fielders = parseFielderSequence(line, indexes);
+
+    if (/steals\s+(2ND|3RD|HOME)/i.test(normalizedLine) && activePitcher) {
+      const pitcherEntry = ensureLegacyEntry(entriesByPlayerId, gameId, activePitcher.PlayerID);
+      incrementEntryValue(pitcherEntry, "SB_Allowed", 1);
+    }
+
+    if (/caught stealing/i.test(line) && activePitcher) {
+      const pitcherEntry = ensureLegacyEntry(entriesByPlayerId, gameId, activePitcher.PlayerID);
+      incrementEntryValue(pitcherEntry, "CS_Pitching", 1);
+    }
+
+    if (/wild pitch/i.test(line) && activePitcher) {
+      const pitcherEntry = ensureLegacyEntry(entriesByPlayerId, gameId, activePitcher.PlayerID);
+      incrementEntryValue(pitcherEntry, "WP", 1);
+    }
+
+    if (/balk/i.test(line) && activePitcher) {
+      const pitcherEntry = ensureLegacyEntry(entriesByPlayerId, gameId, activePitcher.PlayerID);
+      incrementEntryValue(pitcherEntry, "BK", 1);
+    }
+
+    if (/grounds out/i.test(line)) {
+      if (fielders[0]) {
+        const assistEntry = ensureLegacyEntry(entriesByPlayerId, gameId, fielders[0].PlayerID);
+        incrementEntryValue(assistEntry, "A", 1);
+      }
+      if (fielders[1]) {
+        const putoutEntry = ensureLegacyEntry(entriesByPlayerId, gameId, fielders[1].PlayerID);
+        incrementEntryValue(putoutEntry, "PO", 1);
+      }
+      return;
+    }
+
+    if (/flies out|lines out|pops out/i.test(line)) {
+      if (fielders[0]) {
+        const putoutEntry = ensureLegacyEntry(entriesByPlayerId, gameId, fielders[0].PlayerID);
+        incrementEntryValue(putoutEntry, "PO", 1);
+      }
+      return;
+    }
+
+    if (/grounds into a double play/i.test(line)) {
+      fielders.forEach((fielder, index) => {
+        const entry = ensureLegacyEntry(entriesByPlayerId, gameId, fielder.PlayerID);
+        if (index === 0) incrementEntryValue(entry, "A", 1);
+        if (index === 1) incrementEntryValue(entry, "PO", 1);
+        incrementEntryValue(entry, "DP", 1);
+      });
+    }
   });
 }
 
