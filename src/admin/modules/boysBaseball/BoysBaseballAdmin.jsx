@@ -318,7 +318,22 @@ function buildPlayerIndexes(players, rosterPlayers) {
   const byJerseyLast = new Map();
   const byFullName = new Map();
   const byLastName = new Map();
+  const globalByFullName = new Map();
+  const globalByLastName = new Map();
   const rosterDetails = [];
+
+  players.forEach((player) => {
+    const first = normalizeName(player.FirstName);
+    const last = normalizeName(player.LastName);
+    const full = `${first}|${last}`;
+
+    if (full) globalByFullName.set(full, player);
+    if (last && !globalByLastName.has(last)) {
+      globalByLastName.set(last, player);
+    } else if (last) {
+      globalByLastName.set(last, null);
+    }
+  });
 
   rosterPlayers.forEach((rosterEntry) => {
     const player = playersById.get(String(rosterEntry.PlayerID));
@@ -348,6 +363,8 @@ function buildPlayerIndexes(players, rosterPlayers) {
     byJerseyLast,
     byFullName,
     byLastName,
+    globalByFullName,
+    globalByLastName,
     byInitialLast: buildLegacyAbbreviationMap(rosterDetails.map((detail) => detail.player)),
     rosterDetails,
   };
@@ -401,7 +418,14 @@ function matchLegacyPlayer(label, indexes) {
     if (indexes.byInitialLast.has(key)) return indexes.byInitialLast.get(key);
   }
 
+  const firstLastMatch = cleaned.match(/^([A-Z][A-Z\s-]*)\s+([A-Z][A-Z\s-]+)$/);
+  if (firstLastMatch) {
+    const fullKey = `${firstLastMatch[1].trim()}|${firstLastMatch[2].trim()}`;
+    if (indexes.globalByFullName.has(fullKey)) return indexes.globalByFullName.get(fullKey);
+  }
+
   if (indexes.byLastName.has(cleaned)) return indexes.byLastName.get(cleaned);
+  if (indexes.globalByLastName.has(cleaned)) return indexes.globalByLastName.get(cleaned);
 
   for (const detail of indexes.rosterDetails) {
     if (cleaned === detail.lastName) return detail.player;
@@ -568,6 +592,25 @@ function normalizeLegacyDetailText(text) {
     .join("\n");
 }
 
+function parseBaseballInningsValue(value) {
+  const cleaned = String(value ?? "").trim().replace(/,/g, "");
+  if (!cleaned) return 0;
+
+  if (/^\d+\.\d$/.test(cleaned)) {
+    return parseDecimal(cleaned);
+  }
+
+  if (/^0[12]$/.test(cleaned)) {
+    return parseDecimal(`0.${cleaned[1]}`);
+  }
+
+  if (/^\d+[012]$/.test(cleaned) && cleaned.length > 1) {
+    return parseDecimal(`${cleaned.slice(0, -1)}.${cleaned.slice(-1)}`);
+  }
+
+  return parseDecimal(cleaned);
+}
+
 function incrementEntryValue(entry, field, amount = 1) {
   entry[field] = parseDecimal(entry[field]) + parseDecimal(amount);
 }
@@ -629,8 +672,8 @@ function parseLegacyPitching(text, indexes, gameId, entriesByPlayerId, warnings)
     }
 
     const entry = ensureLegacyEntry(entriesByPlayerId, gameId, player.PlayerID);
-    entry.IP = parseDecimal(ip);
-    entry.P_Innings = parseDecimal(ip);
+    entry.IP = parseBaseballInningsValue(ip);
+    entry.P_Innings = parseBaseballInningsValue(ip);
     entry.H_Allowed = parseInteger(hits);
     entry.R_Allowed = parseInteger(runs);
     entry.ER = parseInteger(earnedRuns);
