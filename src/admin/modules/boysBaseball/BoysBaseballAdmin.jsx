@@ -717,6 +717,21 @@ function parseLegacyPitching(text, indexes, gameId, entriesByPlayerId, warnings)
   });
 }
 
+function parseLegacyCatcherIds(text, indexes) {
+  const catcherIds = new Set();
+
+  splitNonEmptyLines(text).forEach((line) => {
+    if (!/\(C\)/i.test(line)) return;
+    const playerLineRegex = /^(.*\D)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s*$/;
+    const match = line.match(playerLineRegex);
+    const label = match?.[1] || line;
+    const player = matchLegacyPlayer(label, indexes);
+    if (player) catcherIds.add(String(player.PlayerID));
+  });
+
+  return catcherIds;
+}
+
 function parseNamedCountList(value, indexes, warnings, label) {
   const output = [];
   const items = String(value ?? "")
@@ -769,7 +784,7 @@ function parsePitchingDetailList(value, indexes, warnings, label) {
   return output;
 }
 
-function applyLegacyDetailLine(line, indexes, gameId, entriesByPlayerId, warnings) {
+function applyLegacyDetailLine(line, indexes, gameId, entriesByPlayerId, warnings, detailType = "batting") {
   const separatorIndex = line.indexOf(":");
   if (separatorIndex === -1) return;
 
@@ -777,7 +792,7 @@ function applyLegacyDetailLine(line, indexes, gameId, entriesByPlayerId, warning
   const value = line.slice(separatorIndex + 1).trim();
   if (!value) return;
 
-  if (label === "2B" || label === "3B" || label === "HR" || label === "SB" || label === "CS" || label === "E") {
+  if (label === "2B" || label === "3B" || label === "HR" || label === "SB" || label === "CS" || label === "E" || label === "HBP") {
     const fieldMap = {
       "2B": "2B",
       "3B": "3B",
@@ -785,6 +800,7 @@ function applyLegacyDetailLine(line, indexes, gameId, entriesByPlayerId, warning
       SB: "SB",
       CS: "CS",
       E: "E",
+      HBP: detailType === "pitching" ? "HBP_Pitching" : "HBP",
     };
 
     parseNamedCountList(value, indexes, warnings, label).forEach(({ player, count }) => {
@@ -826,9 +842,9 @@ function applyLegacyDetailLine(line, indexes, gameId, entriesByPlayerId, warning
   }
 }
 
-function parseLegacyDetails(text, indexes, gameId, entriesByPlayerId, warnings) {
+function parseLegacyDetails(text, indexes, gameId, entriesByPlayerId, warnings, detailType = "batting") {
   splitNonEmptyLines(text).forEach((line) => {
-    applyLegacyDetailLine(line, indexes, gameId, entriesByPlayerId, warnings);
+    applyLegacyDetailLine(line, indexes, gameId, entriesByPlayerId, warnings, detailType);
   });
 }
 
@@ -844,7 +860,11 @@ function parseLegacyPlayByPlay(text, indexes, gameId, entriesByPlayerId, options
   let half = "";
   let currentPitcher = null;
   let currentBatterSubstitution = null;
-  const { skipWildPitchParsing = false } = options;
+  const {
+    skipWildPitchParsing = false,
+    teamBattingHalf = "bottom",
+    catcherIds = new Set(),
+  } = options;
 
   const getCurrentPitcher = () => {
     if (currentPitcher) return currentPitcher;
@@ -882,7 +902,7 @@ function parseLegacyPlayByPlay(text, indexes, gameId, entriesByPlayerId, options
 
       const normalizedLine = normalizeHeader(line);
 
-      if (half === "bottom") {
+      if (half === teamBattingHalf) {
         const batterMatch = line.match(/^([A-Z][A-Za-z.'-]*\s+[A-Z][A-Za-z.'-]*)\b/);
         let batter = batterMatch ? matchLegacyPlayer(batterMatch[1], indexes) : null;
         if (
@@ -953,7 +973,8 @@ function parseLegacyPlayByPlay(text, indexes, gameId, entriesByPlayerId, options
         return;
       }
 
-      if (half !== "top") return;
+      const teamFieldingHalf = teamBattingHalf === "top" ? "bottom" : "top";
+      if (half !== teamFieldingHalf) return;
 
       const activePitcher = getCurrentPitcher();
       const fielders = parseFielderSequence(line, indexes);
@@ -977,6 +998,14 @@ function parseLegacyPlayByPlay(text, indexes, gameId, entriesByPlayerId, options
       if (!skipWildPitchParsing && /wild pitch/i.test(line) && activePitcher) {
         const pitcherEntry = ensureLegacyEntry(entriesByPlayerId, gameId, activePitcher.PlayerID);
         incrementEntryValue(pitcherEntry, "WP", 1);
+      }
+
+      const passedBallEvents = line.match(/passed ball/gi) || [];
+      if (passedBallEvents.length && catcherIds.size) {
+        catcherIds.forEach((playerId) => {
+          const catcherEntry = ensureLegacyEntry(entriesByPlayerId, gameId, playerId);
+          incrementEntryValue(catcherEntry, "PB", passedBallEvents.length);
+        });
       }
 
       if (/balk/i.test(line) && activePitcher) {
@@ -1403,18 +1432,22 @@ export default function BoysBaseballAdmin() {
     const entriesByPlayerId = new Map();
     const legacyWarnings = [];
     const pitchingDetailLabels = parseLegacyDetailLabels(legacyPitchingDetailText);
+    const gameRecord = seasonGames.find((game) => String(game.GameID) === String(gameId)) || null;
+    const teamBattingHalf = gameRecord?.LocationType === "Away" ? "top" : "bottom";
+    const catcherIds = parseLegacyCatcherIds(legacyBattingText, playerIndexes);
 
     parseLegacyBatting(legacyBattingText, playerIndexes, gameId.trim(), entriesByPlayerId, legacyWarnings);
-    parseLegacyDetails(legacyBattingDetailText, playerIndexes, gameId.trim(), entriesByPlayerId, legacyWarnings);
+    parseLegacyDetails(legacyBattingDetailText, playerIndexes, gameId.trim(), entriesByPlayerId, legacyWarnings, "batting");
     parseLegacyPitching(legacyPitchingText, playerIndexes, gameId.trim(), entriesByPlayerId, legacyWarnings);
-    parseLegacyDetails(legacyPitchingDetailText, playerIndexes, gameId.trim(), entriesByPlayerId, legacyWarnings);
+    parseLegacyDetails(legacyPitchingDetailText, playerIndexes, gameId.trim(), entriesByPlayerId, legacyWarnings, "pitching");
     parseLegacyPlayByPlay(legacyPlayByPlayText, playerIndexes, gameId.trim(), entriesByPlayerId, {
       skipWildPitchParsing: pitchingDetailLabels.has("WP"),
+      teamBattingHalf,
+      catcherIds,
     });
 
     const entries = finalizeLegacyEntries(entriesByPlayerId);
     const formatted = formatJson(entries);
-    const gameRecord = seasonGames.find((game) => String(game.GameID) === String(gameId)) || null;
 
     setOutput(formatted);
     setWarnings(legacyWarnings);
