@@ -612,6 +612,20 @@ function ensureLegacyEntry(entriesByPlayerId, gameId, playerId) {
   return entriesByPlayerId.get(key);
 }
 
+function hasRecordedBattingLine(entry) {
+  return (
+    parseDecimal(entry.AB) ||
+    parseDecimal(entry.H) ||
+    parseDecimal(entry.BB) ||
+    parseDecimal(entry.SO) ||
+    parseDecimal(entry.HBP) ||
+    parseDecimal(entry.ROE) ||
+    parseDecimal(entry.FC) ||
+    parseDecimal(entry.SAC) ||
+    parseDecimal(entry.SF)
+  );
+}
+
 function parseLegacyBatting(text, indexes, gameId, entriesByPlayerId, warnings) {
   const playerLineRegex =
     /^(.*\D)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s*$/;
@@ -840,7 +854,49 @@ function parseLegacyPlayByPlay(text, indexes, gameId, entriesByPlayerId, options
       const batter = batterMatch ? matchLegacyPlayer(batterMatch[1], indexes) : null;
       if (!batter) return;
 
+      const hadExistingEntry = entriesByPlayerId.has(String(batter.PlayerID));
       const entry = ensureLegacyEntry(entriesByPlayerId, gameId, batter.PlayerID);
+      const shouldBackfillBatting = !hadExistingEntry || !hasRecordedBattingLine(entry);
+
+      if (shouldBackfillBatting) {
+        if (normalizedLine.includes("IS INTENTIONALLY WALKED") || normalizedLine.includes(" WALKS ")) {
+          incrementEntryValue(entry, "BB", 1);
+        } else if (normalizedLine.includes("HIT BY PITCH")) {
+          incrementEntryValue(entry, "HBP", 1);
+        } else if (normalizedLine.includes("SINGLES")) {
+          incrementEntryValue(entry, "AB", 1);
+          incrementEntryValue(entry, "H", 1);
+        } else if (normalizedLine.includes("DOUBLES")) {
+          incrementEntryValue(entry, "AB", 1);
+          incrementEntryValue(entry, "H", 1);
+          incrementEntryValue(entry, "2B", 1);
+        } else if (normalizedLine.includes("TRIPLES")) {
+          incrementEntryValue(entry, "AB", 1);
+          incrementEntryValue(entry, "H", 1);
+          incrementEntryValue(entry, "3B", 1);
+        } else if (normalizedLine.includes("HOMERS")) {
+          incrementEntryValue(entry, "AB", 1);
+          incrementEntryValue(entry, "H", 1);
+          incrementEntryValue(entry, "HR", 1);
+        } else if (
+          normalizedLine.includes("STRIKES OUT") ||
+          normalizedLine.includes("FLIES OUT") ||
+          normalizedLine.includes("GROUNDS OUT") ||
+          normalizedLine.includes("POPS OUT") ||
+          normalizedLine.includes("LINES OUT") ||
+          normalizedLine.includes("OUT ON INFIELD FLY")
+        ) {
+          incrementEntryValue(entry, "AB", 1);
+          if (normalizedLine.includes("STRIKES OUT")) incrementEntryValue(entry, "SO", 1);
+        } else if (
+          normalizedLine.includes("REACHES ON AN ERROR") ||
+          normalizedLine.includes("REACHED ON AN ERROR")
+        ) {
+          incrementEntryValue(entry, "AB", 1);
+        } else if (normalizedLine.includes("FIELDERS CHOICE")) {
+          incrementEntryValue(entry, "AB", 1);
+        }
+      }
 
       if (normalizedLine.includes("HIT BY PITCH")) incrementEntryValue(entry, "HBP", 1);
       if (normalizedLine.includes("REACHES ON AN ERROR")) incrementEntryValue(entry, "ROE", 1);
@@ -869,6 +925,10 @@ function parseLegacyPlayByPlay(text, indexes, gameId, entriesByPlayerId, options
     if (caughtStealingEvents.length && activePitcher) {
       const pitcherEntry = ensureLegacyEntry(entriesByPlayerId, gameId, activePitcher.PlayerID);
       incrementEntryValue(pitcherEntry, "CS_Pitching", caughtStealingEvents.length);
+      if (fielders[0]) {
+        const putoutEntry = ensureLegacyEntry(entriesByPlayerId, gameId, fielders[0].PlayerID);
+        incrementEntryValue(putoutEntry, "PO", caughtStealingEvents.length);
+      }
     }
 
     if (!skipWildPitchParsing && /wild pitch/i.test(line) && activePitcher) {
