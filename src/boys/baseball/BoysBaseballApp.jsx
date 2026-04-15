@@ -17,6 +17,7 @@ import YearlyResults from "./pages/YearlyResults";
 import GameDetail from "./pages/GameDetail";
 import PlayerPage from "./pages/PlayerPage";
 import RecordsVsOpponents from "./pages/RecordsVsOpponents";
+import FullCareerStats from "./pages/FullCareerStats";
 import SingleGameRecords from "./pages/SingleGameRecords";
 import SeasonRecords from "./pages/SeasonRecords";
 import CareerRecords from "./pages/CareerRecords";
@@ -34,6 +35,107 @@ const seasonPages = [
 ];
 
 const menuSections = [
+  {
+    title: "Results",
+    links: [
+      {
+        to: "/athletics/boys/baseball/yearly-results",
+        label: "Full Year-by-Year Results",
+      },
+      {
+        to: "/athletics/boys/baseball/records/opponents",
+        label: "Opponent Game History",
+      },
+    ],
+  },
+  {
+    title: "Team Stats",
+    links: [
+      {
+        to: "/athletics/boys/baseball/team/full",
+        label: "Full Team Stats",
+      },
+      {
+        to: "/athletics/boys/baseball/records/team",
+        label: "Team Records (Single Game)",
+      },
+      {
+        to: "/athletics/boys/baseball/team/season-records",
+        label: "Team Records (Season)",
+      },
+    ],
+  },
+  {
+    title: "Individual Stats",
+    links: [
+      {
+        to: "/athletics/boys/baseball/records/career",
+        label: "Full Career Stats",
+      },
+      {
+        to: "/athletics/boys/baseball/records/single-game",
+        label: "Single Game Records",
+      },
+      {
+        to: "/athletics/boys/baseball/records/season",
+        label: "Season Records",
+      },
+      {
+        to: "/athletics/boys/baseball/records/career-records",
+        label: "Career Records",
+      },
+    ],
+  },
+];
+
+function PlaceholderPage({ title, text }) {
+  return (
+    <div className="p-4">
+      <h2 className="text-2xl font-bold mb-3">{title}</h2>
+      <p>{text}</p>
+    </div>
+  );
+}
+
+export default function BoysBaseballApp() {
+  return (
+    <AthleticsProgramShell
+      title="Boys' Baseball"
+      menuTitle="Boys' Baseball"
+      menuSections={menuSections}
+      athleticsHomePath="/athletics"
+    >
+      <Routes>
+        <Route index element={<YearlyResults />} />
+
+        <Route path="records/career" element={<FullCareerStats />} />
+        <Route path="records/season" element={<SeasonRecords />} />
+        <Route path="records/career-records" element={<CareerRecords />} />
+        <Route path="records/single-game" element={<SingleGameRecords />} />
+        <Route
+          path="records/team"
+          element={
+            <PlaceholderPage
+              title="Team Records"
+              text="This page will eventually show baseball team records."
+            />
+          }
+        />
+        <Route path="records/opponents" element={<RecordsVsOpponents />} />
+
+        {seasonPages.map(({ slug, Component }) => (
+          <Route key={slug} path={`seasons/${slug}`} element={<Component />} />
+        ))}
+
+        <Route path="yearly-results" element={<YearlyResults />} />
+        <Route path="games/:gameId" element={<GameDetail />} />
+        <Route path="players/:playerId" element={<PlayerPage />} />
+
+        <Route path="*" element={<YearlyResults />} />
+      </Routes>
+    </AthleticsProgramShell>
+  );
+}
   {
     title: "Results",
     links: [
