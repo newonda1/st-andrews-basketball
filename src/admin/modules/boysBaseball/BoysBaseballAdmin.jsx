@@ -132,6 +132,75 @@ const POSITION_ALIASES = {
   SF_Innings: ["SF INNINGS", "SF", "SHORT FIELD INNINGS"],
 };
 
+const LEGACY_DETAIL_LABELS = ["2B", "3B", "HR", "TB", "SB", "CS", "E", "PITCHES-STRIKES", "BATTERS FACED", "WP"];
+
+const LEGACY_SAMPLE_2022030801 = {
+  seasonId: "2022",
+  gameId: "2022030801",
+  batting: `Anthony Kusilka (C) 3 3 1 0 1 1
+Edward Ashton (CF, P) 4 0 1 0 0 2
+Andrew Bacon #5 (3B) 3 2 1 1 1 0
+Gabe Barnhill #11 (SS) 3 0 0 0 0 3
+Cameron Helle #9 (RF) 3 0 1 2 0 1
+Luke Peaster #4 (P, CF) 3 0 1 0 0 0
+Tripp Jackson #24 (1B) 3 0 1 0 0 0
+Issac Ross #21 (LF) 2 0 0 0 0 2
+Xaiver Wilcox #31 (LF) 1 0 0 0 0 1
+Gerrit Mol #6 (DH) 2 0 0 0 1 2`,
+  battingDetails: `2B: Tripp Jackson
+TB: Tripp Jackson 2, Andrew Bacon 1, Anthony Kusilka 1, Cameron Helle 1, Edward Ashton 1, Luke Peaster 1
+SB: Anthony Kusilka 3, Andrew Bacon 2, Cameron Helle, Edward Ashton, Luke Peaster
+CS: Andrew Bacon, Cameron Helle, Tripp Jackson
+E: Edward Ashton, Tripp Jackson`,
+  pitching: `Luke Peaster #4 (L) 6.2 10 8 7 3 4
+Edward Ashton 0.1 0 0 0 0 0`,
+  pitchingDetails: `Pitches-Strikes: Luke Peaster 94-68, Edward Ashton 7-4
+Batters Faced: Luke Peaster 34, Edward Ashton 1`,
+  playByPlay: `Bottom 1st - St. Andrew's Varsity Lions
+A Kusilka hits a line drive and reaches on an error by center fielder J Carter, A Kusilka advances to 2nd on the same error.
+E Ashton strikes out looking, R Braddy pitching, A Kusilka remains at 2nd.
+A Bacon walks, R Braddy pitching.
+G Barnhill strikes out looking, R Braddy pitching, A Bacon remains at 1st.
+C Helle singles on a ground ball to right fielder J Wiggins, A Bacon scores.
+
+Bottom 2nd - St. Andrew's Varsity Lions
+L Peaster singles on a pop fly to pitcher R Braddy.
+T Jackson flies out to right fielder J Wiggins, L Peaster remains at 1st.
+I Ross strikes out looking, R Braddy pitching, L Peaster remains at 2nd.
+G Mol strikes out swinging, R Braddy pitching.
+
+Bottom 3rd - St. Andrew's Varsity Lions
+A Kusilka singles on a line drive to third baseman R Griner.
+E Ashton hits a ground ball and reaches on an error by second baseman J Willes, A Kusilka advances to 2nd.
+A Bacon singles on a ground ball to second baseman J Willes, E Ashton held up at 2nd, A Kusilka scores.
+G Barnhill strikes out swinging, R Braddy pitching, E Ashton remains at 2nd, A Bacon remains at 1st.
+C Helle lines into fielder's choice, second baseman J Willes to shortstop C Calhoun to third baseman R Griner, E Ashton out advancing to 3rd, A Bacon scores.
+L Peaster grounds out, second baseman J Willes to first baseman B Smith.
+
+Bottom 4th - St. Andrew's Varsity Lions
+T Jackson doubles on a line drive to center fielder T Braddock.
+I Ross strikes out looking, B Fleming pitching, T Jackson remains at 2nd.
+G Mol strikes out swinging, B Fleming pitching, T Jackson remains at 2nd.
+
+Bottom 5th - St. Andrew's Varsity Lions
+A Kusilka walks, B Fleming pitching.
+E Ashton strikes out looking, B Fleming pitching, A Kusilka remains at 1st.
+A Bacon bunts and reaches on an error by first baseman B Smith, A Kusilka scores.
+G Barnhill strikes out looking, B Fleming pitching, A Bacon remains at 2nd.
+
+Bottom 6th - St. Andrew's Varsity Lions
+C Helle strikes out looking, B Fleming pitching.
+L Peaster lines out to right fielder B Martin.
+T Jackson grounds out, third baseman R Griner to first baseman B Smith.
+
+Bottom 7th - St. Andrew's Varsity Lions
+X Wilcox strikes out looking, B Fleming pitching.
+G Mol walks, B Fleming pitching.
+A Kusilka strikes out looking, B Fleming pitching, G Mol remains at 1st.
+E Ashton singles on a line drive to right fielder B Martin, G Mol advances to 3rd.
+A Bacon grounds into fielder's choice to second baseman, G Mol did not score, E Ashton out advancing to 2nd.`,
+};
+
 function normalizeHeader(value) {
   return String(value ?? "")
     .trim()
@@ -222,15 +291,37 @@ function parseDecimal(value) {
   return Number.isNaN(parsed) ? 0 : parsed;
 }
 
+function buildLegacyAbbreviationMap(players) {
+  const byKey = new Map();
+
+  players.forEach((player) => {
+    const first = normalizeName(player.FirstName);
+    const last = normalizeName(player.LastName);
+    if (!first || !last) return;
+
+    const key = `${first.charAt(0)}|${last}`;
+    if (!byKey.has(key)) byKey.set(key, []);
+    byKey.get(key).push(player);
+  });
+
+  const unique = new Map();
+  byKey.forEach((matches, key) => {
+    if (matches.length === 1) unique.set(key, matches[0]);
+  });
+  return unique;
+}
+
 function buildPlayerIndexes(players, rosterPlayers) {
   const rosterMap = new Map(rosterPlayers.map((entry) => [String(entry.PlayerID), entry]));
+  const playersById = new Map(players.map((player) => [String(player.PlayerID), player]));
   const byJerseyLast = new Map();
   const byFullName = new Map();
   const byLastName = new Map();
+  const rosterDetails = [];
 
-  players.forEach((player) => {
-    const rosterEntry = rosterMap.get(String(player.PlayerID));
-    if (!rosterEntry) return;
+  rosterPlayers.forEach((rosterEntry) => {
+    const player = playersById.get(String(rosterEntry.PlayerID));
+    if (!player) return;
 
     const first = normalizeName(player.FirstName);
     const last = normalizeName(player.LastName);
@@ -239,10 +330,26 @@ function buildPlayerIndexes(players, rosterPlayers) {
 
     if (jersey && last) byJerseyLast.set(`${jersey}|${last}`, player);
     if (full) byFullName.set(full, player);
-    if (last) byLastName.set(last, player);
+    if (last && !byLastName.has(last)) {
+      byLastName.set(last, player);
+    } else if (last) {
+      byLastName.set(last, null);
+    }
+
+    rosterDetails.push({
+      player,
+      fullName: `${first} ${last}`.trim(),
+      lastName: last,
+    });
   });
 
-  return { byJerseyLast, byFullName, byLastName };
+  return {
+    byJerseyLast,
+    byFullName,
+    byLastName,
+    byInitialLast: buildLegacyAbbreviationMap(rosterDetails.map((detail) => detail.player)),
+    rosterDetails,
+  };
 }
 
 function matchPlayer(row, indexes) {
@@ -260,6 +367,43 @@ function matchPlayer(row, indexes) {
 
   if (lastName && indexes.byLastName.has(lastName)) {
     return indexes.byLastName.get(lastName);
+  }
+
+  return null;
+}
+
+function normalizeLegacyPlayerLabel(value) {
+  return normalizeName(
+    String(value ?? "")
+      .replace(/#\d+/g, " ")
+      .replace(/\([^)]*\)/g, " ")
+      .replace(/[^A-Za-z0-9\s-]/g, " ")
+      .replace(/\s+/g, " ")
+  );
+}
+
+function matchLegacyPlayer(label, indexes) {
+  const cleaned = normalizeLegacyPlayerLabel(label);
+  if (!cleaned) return null;
+
+  for (const detail of indexes.rosterDetails) {
+    if (cleaned === detail.fullName) return detail.player;
+  }
+
+  for (const detail of indexes.rosterDetails) {
+    if (cleaned.includes(detail.fullName)) return detail.player;
+  }
+
+  const abbreviatedMatch = cleaned.match(/^([A-Z])\s+([A-Z][A-Z\s-]+)$/);
+  if (abbreviatedMatch) {
+    const key = `${abbreviatedMatch[1]}|${abbreviatedMatch[2].trim()}`;
+    if (indexes.byInitialLast.has(key)) return indexes.byInitialLast.get(key);
+  }
+
+  if (indexes.byLastName.has(cleaned)) return indexes.byLastName.get(cleaned);
+
+  for (const detail of indexes.rosterDetails) {
+    if (cleaned === detail.lastName) return detail.player;
   }
 
   return null;
@@ -311,6 +455,365 @@ function formatJson(entries) {
   return lines.join("\n");
 }
 
+function createEmptyEntry(gameId, playerId) {
+  return OUTPUT_FIELDS.reduce((entry, field) => {
+    if (field === "StatID") {
+      entry[field] = `${gameId}${playerId}`;
+    } else if (field === "GameID") {
+      entry[field] = parseInteger(gameId);
+    } else if (field === "PlayerID") {
+      entry[field] = parseInteger(playerId);
+    } else {
+      entry[field] = 0;
+    }
+    return entry;
+  }, {});
+}
+
+function splitNonEmptyLines(text) {
+  return String(text ?? "")
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter(Boolean);
+}
+
+function escapeRegex(value) {
+  return String(value ?? "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function normalizeOcrNumberTokens(text) {
+  return String(text ?? "").replace(/(\d)[Oo](?=\d|\s|$)/g, "$10");
+}
+
+function addBreaksBeforeLabels(text) {
+  return LEGACY_DETAIL_LABELS.reduce((output, label) => {
+    const pattern = new RegExp(`\\s+(${escapeRegex(label)})\\s*:`, "gi");
+    return output.replace(pattern, "\n$1:");
+  }, text);
+}
+
+function addBreaksBeforeRosterNames(text, indexes) {
+  let output = String(text ?? "");
+
+  indexes.rosterDetails
+    .slice()
+    .sort((a, b) => b.fullName.length - a.fullName.length)
+    .forEach((detail) => {
+      const patterns = [
+        new RegExp(`\\s+(${escapeRegex(detail.player.FirstName)}\\s+${escapeRegex(detail.player.LastName)})\\b`, "gi"),
+        new RegExp(`\\s+(${escapeRegex(detail.player.FirstName)}\\s+#\\d+)\\b`, "gi"),
+        new RegExp(`\\s+(${escapeRegex(detail.player.FirstName.charAt(0))}\\s+${escapeRegex(detail.player.LastName)})\\b`, "gi"),
+      ];
+
+      patterns.forEach((pattern) => {
+        output = output.replace(pattern, "\n$1");
+      });
+    });
+
+  return output;
+}
+
+function normalizeLegacyImportedText(text, indexes) {
+  let output = String(text ?? "")
+    .replace(/\u00A0/g, " ")
+    .replace(/[“”]/g, '"')
+    .replace(/[‘’]/g, "'")
+    .replace(/[–—]/g, "-")
+    .replace(/[•·]/g, " ")
+    .replace(/\t/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  output = normalizeOcrNumberTokens(output);
+  output = addBreaksBeforeLabels(output);
+  output = addBreaksBeforeRosterNames(output, indexes);
+
+  return output
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter(Boolean)
+    .join("\n");
+}
+
+function normalizeLegacyDetailText(text) {
+  return addBreaksBeforeLabels(
+    String(text ?? "")
+      .replace(/\u00A0/g, " ")
+      .replace(/[“”]/g, '"')
+      .replace(/[‘’]/g, "'")
+      .replace(/[–—]/g, "-")
+      .replace(/\t/g, " ")
+      .replace(/\s+/g, " ")
+      .trim()
+  )
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter(Boolean)
+    .join("\n");
+}
+
+function incrementEntryValue(entry, field, amount = 1) {
+  entry[field] = parseDecimal(entry[field]) + parseDecimal(amount);
+}
+
+function ensureLegacyEntry(entriesByPlayerId, gameId, playerId) {
+  const key = String(playerId);
+  if (!entriesByPlayerId.has(key)) {
+    entriesByPlayerId.set(key, createEmptyEntry(gameId, playerId));
+  }
+  return entriesByPlayerId.get(key);
+}
+
+function parseLegacyBatting(text, indexes, gameId, entriesByPlayerId, warnings) {
+  const playerLineRegex =
+    /^(.*\D)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s*$/;
+
+  splitNonEmptyLines(text).forEach((line) => {
+    if (/^LINEUP\b/i.test(line) || /^TEAM\b/i.test(line)) return;
+
+    const match = line.match(playerLineRegex);
+    if (!match) return;
+
+    const [, label, ab, runs, hits, rbi, walks, strikeouts] = match;
+    const player = matchLegacyPlayer(label, indexes);
+
+    if (!player) {
+      warnings.push(`Legacy batting line could not be matched: ${label.trim()}`);
+      return;
+    }
+
+    const entry = ensureLegacyEntry(entriesByPlayerId, gameId, player.PlayerID);
+    entry.AB = parseInteger(ab);
+    entry.R = parseInteger(runs);
+    entry.H = parseInteger(hits);
+    entry.RBI = parseInteger(rbi);
+    entry.BB = parseInteger(walks);
+    entry.SO = parseInteger(strikeouts);
+  });
+}
+
+function parseLegacyPitching(text, indexes, gameId, entriesByPlayerId, warnings) {
+  const pitchingLineRegex =
+    /^(.*\D)\s+(\d+(?:\.\d+)?)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s*$/;
+
+  splitNonEmptyLines(text).forEach((line) => {
+    if (/^PITCHING\b/i.test(line) || /^TEAM\b/i.test(line)) return;
+
+    const match = line.match(pitchingLineRegex);
+    if (!match) return;
+
+    const [, label, ip, hits, runs, earnedRuns, walks, strikeouts] = match;
+    const player = matchLegacyPlayer(label, indexes);
+
+    if (!player) {
+      warnings.push(`Legacy pitching line could not be matched: ${label.trim()}`);
+      return;
+    }
+
+    const entry = ensureLegacyEntry(entriesByPlayerId, gameId, player.PlayerID);
+    entry.IP = parseDecimal(ip);
+    entry.P_Innings = parseDecimal(ip);
+    entry.H_Allowed = parseInteger(hits);
+    entry.R_Allowed = parseInteger(runs);
+    entry.ER = parseInteger(earnedRuns);
+    entry.BB_Allowed = parseInteger(walks);
+    entry.SO_Pitching = parseInteger(strikeouts);
+
+    if (/\(W\)/i.test(label)) entry.W = 1;
+    if (/\(L\)/i.test(label)) entry.L = 1;
+    if (/\(SV\)/i.test(label)) entry.SV = 1;
+  });
+}
+
+function parseNamedCountList(value, indexes, warnings, label) {
+  const output = [];
+  const items = String(value ?? "")
+    .split(",")
+    .map((item) => item.trim())
+    .filter(Boolean);
+
+  items.forEach((item) => {
+    const countMatch = item.match(/^(.*?)(?:\s+(\d+(?:\.\d+)?))?$/);
+    const playerLabel = countMatch?.[1]?.trim() || item;
+    const player = matchLegacyPlayer(playerLabel, indexes);
+
+    if (!player) {
+      warnings.push(`${label} detail could not be matched: ${playerLabel}`);
+      return;
+    }
+
+    output.push({
+      player,
+      count: countMatch?.[2] ? parseDecimal(countMatch[2]) : 1,
+    });
+  });
+
+  return output;
+}
+
+function parsePitchingDetailList(value, indexes, warnings, label) {
+  const output = [];
+  const items = String(value ?? "")
+    .split(",")
+    .map((item) => item.trim())
+    .filter(Boolean);
+
+  items.forEach((item) => {
+    const match = item.match(/^(.*?)(?:\s+(\d+(?:\.\d+)?)(?:-\d+(?:\.\d+)?)?)?$/);
+    const playerLabel = match?.[1]?.trim() || item;
+    const player = matchLegacyPlayer(playerLabel, indexes);
+
+    if (!player) {
+      warnings.push(`${label} detail could not be matched: ${playerLabel}`);
+      return;
+    }
+
+    output.push({
+      player,
+      count: match?.[2] ? parseDecimal(match[2]) : 1,
+    });
+  });
+
+  return output;
+}
+
+function applyLegacyDetailLine(line, indexes, gameId, entriesByPlayerId, warnings) {
+  const separatorIndex = line.indexOf(":");
+  if (separatorIndex === -1) return;
+
+  const label = normalizeHeader(line.slice(0, separatorIndex));
+  const value = line.slice(separatorIndex + 1).trim();
+  if (!value) return;
+
+  if (label === "2B" || label === "3B" || label === "HR" || label === "SB" || label === "CS" || label === "E") {
+    const fieldMap = {
+      "2B": "2B",
+      "3B": "3B",
+      HR: "HR",
+      SB: "SB",
+      CS: "CS",
+      E: "E",
+    };
+
+    parseNamedCountList(value, indexes, warnings, label).forEach(({ player, count }) => {
+      const entry = ensureLegacyEntry(entriesByPlayerId, gameId, player.PlayerID);
+      incrementEntryValue(entry, fieldMap[label], count);
+    });
+    return;
+  }
+
+  if (label === "TB") {
+    parseNamedCountList(value, indexes, warnings, label).forEach(({ player, count }) => {
+      const entry = ensureLegacyEntry(entriesByPlayerId, gameId, player.PlayerID);
+      entry.TB = parseDecimal(count);
+    });
+    return;
+  }
+
+  if (label === "PITCHES STRIKES") {
+    parsePitchingDetailList(value, indexes, warnings, label).forEach(({ player, count }) => {
+      const entry = ensureLegacyEntry(entriesByPlayerId, gameId, player.PlayerID);
+      entry.Pitches = parseInteger(count);
+    });
+    return;
+  }
+
+  if (label === "BATTERS FACED") {
+    parsePitchingDetailList(value, indexes, warnings, label).forEach(({ player, count }) => {
+      const entry = ensureLegacyEntry(entriesByPlayerId, gameId, player.PlayerID);
+      entry.BF = parseInteger(count);
+    });
+    return;
+  }
+
+  if (label === "WP") {
+    parseNamedCountList(value, indexes, warnings, label).forEach(({ player, count }) => {
+      const entry = ensureLegacyEntry(entriesByPlayerId, gameId, player.PlayerID);
+      incrementEntryValue(entry, "WP", count);
+    });
+  }
+}
+
+function parseLegacyDetails(text, indexes, gameId, entriesByPlayerId, warnings) {
+  splitNonEmptyLines(text).forEach((line) => {
+    applyLegacyDetailLine(line, indexes, gameId, entriesByPlayerId, warnings);
+  });
+}
+
+function parseLegacyPlayByPlay(text, indexes, gameId, entriesByPlayerId) {
+  let isBottomHalf = false;
+
+  splitNonEmptyLines(text).forEach((line) => {
+    if (/^Top\b/i.test(line)) {
+      isBottomHalf = false;
+      return;
+    }
+
+    if (/^Bottom\b/i.test(line)) {
+      isBottomHalf = true;
+      return;
+    }
+
+    if (!isBottomHalf) return;
+
+    const batterMatch = line.match(/^([A-Z][A-Za-z.'-]*\s+[A-Z][A-Za-z.'-]*)\b/);
+    const batter = batterMatch ? matchLegacyPlayer(batterMatch[1], indexes) : null;
+    if (!batter) return;
+
+    const entry = ensureLegacyEntry(entriesByPlayerId, gameId, batter.PlayerID);
+    const normalizedLine = normalizeHeader(line);
+
+    if (normalizedLine.includes("HIT BY PITCH")) incrementEntryValue(entry, "HBP", 1);
+    if (normalizedLine.includes("REACHES ON AN ERROR")) incrementEntryValue(entry, "ROE", 1);
+    if (normalizedLine.includes("REACHED ON AN ERROR")) incrementEntryValue(entry, "ROE", 1);
+    if (normalizedLine.includes("FIELDERS CHOICE")) incrementEntryValue(entry, "FC", 1);
+    if (normalizedLine.includes("SAC FLY")) incrementEntryValue(entry, "SF", 1);
+    if (normalizedLine.includes("SACRIFICE FLY")) incrementEntryValue(entry, "SF", 1);
+    if (normalizedLine.includes("SAC BUNT")) incrementEntryValue(entry, "SAC", 1);
+    if (normalizedLine.includes("SACRIFICE BUNT")) incrementEntryValue(entry, "SAC", 1);
+    if (normalizedLine.includes("SACRIFICE HIT")) incrementEntryValue(entry, "SAC", 1);
+  });
+}
+
+function finalizeLegacyEntries(entriesByPlayerId) {
+  return Array.from(entriesByPlayerId.values())
+    .map((entry) => {
+      const singles = Math.max(
+        0,
+        parseInteger(entry.H) - parseInteger(entry["2B"]) - parseInteger(entry["3B"]) - parseInteger(entry.HR)
+      );
+
+      entry["1B"] = singles;
+
+      if (!parseInteger(entry.TB)) {
+        entry.TB =
+          singles +
+          parseInteger(entry["2B"]) * 2 +
+          parseInteger(entry["3B"]) * 3 +
+          parseInteger(entry.HR) * 4;
+      }
+
+      if (!parseInteger(entry.PA)) {
+        entry.PA =
+          parseInteger(entry.AB) +
+          parseInteger(entry.BB) +
+          parseInteger(entry.HBP) +
+          parseInteger(entry.SAC) +
+          parseInteger(entry.SF) +
+          parseInteger(entry.ROE) +
+          parseInteger(entry.FC);
+      }
+
+      return entry;
+    })
+    .filter((entry) =>
+      OUTPUT_FIELDS.some((field) =>
+        !["StatID", "GameID", "PlayerID"].includes(field) && parseDecimal(entry[field]) !== 0
+      )
+    )
+    .sort((a, b) => Number(a.PlayerID) - Number(b.PlayerID));
+}
+
 
 export default function BoysBaseballAdmin() {
   const [players, setPlayers] = useState([]);
@@ -324,6 +827,11 @@ export default function BoysBaseballAdmin() {
   const [output, setOutput] = useState("[]");
   const [warnings, setWarnings] = useState([]);
   const [status, setStatus] = useState("Load a GameChanger CSV and generate playergamestats entries.");
+  const [legacyBattingText, setLegacyBattingText] = useState("");
+  const [legacyBattingDetailText, setLegacyBattingDetailText] = useState("");
+  const [legacyPitchingText, setLegacyPitchingText] = useState("");
+  const [legacyPitchingDetailText, setLegacyPitchingDetailText] = useState("");
+  const [legacyPlayByPlayText, setLegacyPlayByPlayText] = useState("");
 
   useEffect(() => {
     async function loadData() {
@@ -503,6 +1011,59 @@ export default function BoysBaseballAdmin() {
     }
   }
 
+  function handleGenerateLegacy() {
+    if (!String(gameId).trim()) {
+      setStatus("Choose a GameID before generating output.");
+      return;
+    }
+
+    if (!rosterPlayers.length) {
+      setStatus(`No baseball roster found for SeasonID ${seasonId}.`);
+      return;
+    }
+
+    if (!legacyBattingText.trim() && !legacyPitchingText.trim()) {
+      setStatus("Paste batting text, pitching text, or both before generating legacy output.");
+      return;
+    }
+
+    const entriesByPlayerId = new Map();
+    const legacyWarnings = [];
+
+    parseLegacyBatting(legacyBattingText, playerIndexes, gameId.trim(), entriesByPlayerId, legacyWarnings);
+    parseLegacyDetails(legacyBattingDetailText, playerIndexes, gameId.trim(), entriesByPlayerId, legacyWarnings);
+    parseLegacyPitching(legacyPitchingText, playerIndexes, gameId.trim(), entriesByPlayerId, legacyWarnings);
+    parseLegacyDetails(legacyPitchingDetailText, playerIndexes, gameId.trim(), entriesByPlayerId, legacyWarnings);
+    parseLegacyPlayByPlay(legacyPlayByPlayText, playerIndexes, gameId.trim(), entriesByPlayerId);
+
+    const entries = finalizeLegacyEntries(entriesByPlayerId);
+
+    setOutput(formatJson(entries));
+    setWarnings(legacyWarnings);
+
+    if (!entries.length) {
+      setStatus("No legacy rows were generated. Double-check the pasted text format.");
+      return;
+    }
+
+    if (legacyWarnings.length) {
+      setStatus(`Generated ${entries.length} legacy entries with ${legacyWarnings.length} review warning(s).`);
+    } else {
+      setStatus(`Generated ${entries.length} legacy entries successfully.`);
+    }
+  }
+
+  function handleLoadLegacySample() {
+    setSeasonId(LEGACY_SAMPLE_2022030801.seasonId);
+    setGameId(LEGACY_SAMPLE_2022030801.gameId);
+    setLegacyBattingText(LEGACY_SAMPLE_2022030801.batting);
+    setLegacyBattingDetailText(LEGACY_SAMPLE_2022030801.battingDetails);
+    setLegacyPitchingText(LEGACY_SAMPLE_2022030801.pitching);
+    setLegacyPitchingDetailText(LEGACY_SAMPLE_2022030801.pitchingDetails);
+    setLegacyPlayByPlayText(LEGACY_SAMPLE_2022030801.playByPlay);
+    setStatus("Loaded the 2022030801 legacy sample. Review the text and generate JSON when ready.");
+  }
+
   async function handleCopy() {
     try {
       await navigator.clipboard.writeText(output);
@@ -589,6 +1150,12 @@ export default function BoysBaseballAdmin() {
         <button type="button" onClick={handleGenerate} style={{ padding: "10px 16px" }}>
           Generate JSON
         </button>
+        <button type="button" onClick={handleGenerateLegacy} style={{ padding: "10px 16px" }}>
+          Generate Legacy JSON
+        </button>
+        <button type="button" onClick={handleLoadLegacySample} style={{ padding: "10px 16px" }}>
+          Load 2022030801 Sample
+        </button>
         <button type="button" onClick={handleCopy} style={{ padding: "10px 16px" }}>
           Copy JSON
         </button>
@@ -614,6 +1181,86 @@ export default function BoysBaseballAdmin() {
 
       <div style={{ marginBottom: 24 }}>
         <strong>Roster size for Season {seasonId}:</strong> {rosterPlayers.length}
+      </div>
+
+      <div
+        style={{
+          marginBottom: 24,
+          padding: 16,
+          border: "1px solid #bfdbfe",
+          background: "#eff6ff",
+        }}
+      >
+        <h2 style={{ marginTop: 0 }}>Legacy GameChanger Paste Import</h2>
+        <p style={{ maxWidth: 900, lineHeight: 1.5, marginBottom: 16 }}>
+          Use this for 2022-and-earlier GameChanger games without CSV export. Paste OCR text
+          or copied table text from the box score, then optionally paste play-by-play to
+          enrich fields such as <code>ROE</code>, <code>FC</code>, <code>HBP</code>,{" "}
+          <code>SAC</code>, and <code>SF</code>.
+        </p>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+            gap: 16,
+          }}
+        >
+          <label style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+            <span>Legacy Batting Lines</span>
+            <textarea
+              value={legacyBattingText}
+              onChange={(e) => setLegacyBattingText(normalizeLegacyImportedText(e.target.value, playerIndexes))}
+              spellCheck={false}
+              placeholder={`Anthony Kusilka (C) 3 3 1 0 1 1\nEdward Ashton (CF, P) 4 0 1 0 0 2`}
+              style={{ width: "100%", minHeight: 180, fontFamily: "monospace", fontSize: 14 }}
+            />
+          </label>
+
+          <label style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+            <span>Legacy Batting Details</span>
+            <textarea
+              value={legacyBattingDetailText}
+              onChange={(e) => setLegacyBattingDetailText(normalizeLegacyDetailText(e.target.value))}
+              spellCheck={false}
+              placeholder={`2B: Tripp Jackson\nTB: Tripp Jackson 2, Andrew Bacon 1\nSB: Anthony Kusilka 3, Andrew Bacon 2\nCS: Andrew Bacon\nE: Edward Ashton, Tripp Jackson`}
+              style={{ width: "100%", minHeight: 180, fontFamily: "monospace", fontSize: 14 }}
+            />
+          </label>
+
+          <label style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+            <span>Legacy Pitching Lines</span>
+            <textarea
+              value={legacyPitchingText}
+              onChange={(e) => setLegacyPitchingText(normalizeLegacyImportedText(e.target.value, playerIndexes))}
+              spellCheck={false}
+              placeholder={`Luke Peaster #4 (L) 6.2 10 8 7 3 4\nEdward Ashton 0.1 0 0 0 0 0`}
+              style={{ width: "100%", minHeight: 180, fontFamily: "monospace", fontSize: 14 }}
+            />
+          </label>
+
+          <label style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+            <span>Legacy Pitching Details</span>
+            <textarea
+              value={legacyPitchingDetailText}
+              onChange={(e) => setLegacyPitchingDetailText(normalizeLegacyDetailText(e.target.value))}
+              spellCheck={false}
+              placeholder={`Pitches-Strikes: Luke Peaster 94-68, Edward Ashton 7-4\nBatters Faced: Luke Peaster 34, Edward Ashton 1\nWP: Luke Peaster`}
+              style={{ width: "100%", minHeight: 180, fontFamily: "monospace", fontSize: 14 }}
+            />
+          </label>
+        </div>
+
+        <label style={{ display: "flex", flexDirection: "column", gap: 6, marginTop: 16 }}>
+          <span>Optional Play-by-Play</span>
+          <textarea
+            value={legacyPlayByPlayText}
+            onChange={(e) => setLegacyPlayByPlayText(normalizeLegacyImportedText(e.target.value, playerIndexes))}
+            spellCheck={false}
+            placeholder={`Bottom 1st - St. Andrew's Varsity Lions\nA Kusilka hits a line drive and reaches on an error...\nC Helle lines into fielder's choice...`}
+            style={{ width: "100%", minHeight: 240, fontFamily: "monospace", fontSize: 14 }}
+          />
+        </label>
       </div>
 
       {warnings.length > 0 && (
