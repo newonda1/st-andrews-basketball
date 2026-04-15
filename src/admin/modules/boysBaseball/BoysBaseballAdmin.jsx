@@ -463,6 +463,18 @@ function addBreaksBeforeTeam(text) {
   return String(text ?? "").replace(/\s+(TEAM)\b/gi, "\n$1");
 }
 
+function addBreaksBetweenLegacyRows(text) {
+  return String(text ?? "")
+    .replace(
+      /(\d+\s+\d+\s+\d+\s+\d+\s+\d+\s+\d+)\s+(?=[A-Z][A-Za-z'-]+(?:\s+[A-Z][A-Za-z'#.-]+){1,4}\s+\d)/g,
+      "$1\n"
+    )
+    .replace(
+      /(\d+(?:\.\d+)?\s+\d+\s+\d+\s+\d+\s+\d+\s+\d+)\s+(?=[A-Z][A-Za-z'-]+(?:\s+[A-Z][A-Za-z'#.-]+){1,4}\s+\d)/g,
+      "$1\n"
+    );
+}
+
 function addBreaksBeforeRosterNames(text, indexes) {
   let output = String(text ?? "");
 
@@ -503,6 +515,7 @@ function normalizeLegacyImportedText(text, indexes) {
   output = addBreaksBeforeLabels(output);
   output = addBreaksBeforeTeam(output);
   output = addBreaksBeforeRosterNames(output, indexes);
+  output = addBreaksBetweenLegacyRows(output);
 
   return output
     .split(/\r?\n/)
@@ -777,9 +790,18 @@ function parseLegacyDetails(text, indexes, gameId, entriesByPlayerId, warnings) 
   });
 }
 
-function parseLegacyPlayByPlay(text, indexes, gameId, entriesByPlayerId) {
+function parseLegacyDetailLabels(text) {
+  return new Set(
+    splitNonEmptyLines(text)
+      .map((line) => normalizeHeader(line.split(":")[0]))
+      .filter(Boolean)
+  );
+}
+
+function parseLegacyPlayByPlay(text, indexes, gameId, entriesByPlayerId, options = {}) {
   let half = "";
   let currentPitcher = null;
+  const { skipWildPitchParsing = false } = options;
 
   const getCurrentPitcher = () => {
     if (currentPitcher) return currentPitcher;
@@ -849,7 +871,7 @@ function parseLegacyPlayByPlay(text, indexes, gameId, entriesByPlayerId) {
       incrementEntryValue(pitcherEntry, "CS_Pitching", caughtStealingEvents.length);
     }
 
-    if (/wild pitch/i.test(line) && activePitcher) {
+    if (!skipWildPitchParsing && /wild pitch/i.test(line) && activePitcher) {
       const pitcherEntry = ensureLegacyEntry(entriesByPlayerId, gameId, activePitcher.PlayerID);
       incrementEntryValue(pitcherEntry, "WP", 1);
     }
@@ -871,7 +893,7 @@ function parseLegacyPlayByPlay(text, indexes, gameId, entriesByPlayerId) {
       return;
     }
 
-    if (/flies out|lines out|pops out/i.test(line)) {
+    if (/flies out|lines out|pops out|out on infield fly/i.test(line)) {
       if (fielders[0]) {
         const putoutEntry = ensureLegacyEntry(entriesByPlayerId, gameId, fielders[0].PlayerID);
         incrementEntryValue(putoutEntry, "PO", 1);
@@ -1275,12 +1297,15 @@ export default function BoysBaseballAdmin() {
 
     const entriesByPlayerId = new Map();
     const legacyWarnings = [];
+    const pitchingDetailLabels = parseLegacyDetailLabels(legacyPitchingDetailText);
 
     parseLegacyBatting(legacyBattingText, playerIndexes, gameId.trim(), entriesByPlayerId, legacyWarnings);
     parseLegacyDetails(legacyBattingDetailText, playerIndexes, gameId.trim(), entriesByPlayerId, legacyWarnings);
     parseLegacyPitching(legacyPitchingText, playerIndexes, gameId.trim(), entriesByPlayerId, legacyWarnings);
     parseLegacyDetails(legacyPitchingDetailText, playerIndexes, gameId.trim(), entriesByPlayerId, legacyWarnings);
-    parseLegacyPlayByPlay(legacyPlayByPlayText, playerIndexes, gameId.trim(), entriesByPlayerId);
+    parseLegacyPlayByPlay(legacyPlayByPlayText, playerIndexes, gameId.trim(), entriesByPlayerId, {
+      skipWildPitchParsing: pitchingDetailLabels.has("WP"),
+    });
 
     const entries = finalizeLegacyEntries(entriesByPlayerId);
     const formatted = formatJson(entries);
