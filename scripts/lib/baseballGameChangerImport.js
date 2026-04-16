@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const { execFileSync } = require("child_process");
 
 function getProjectPaths(projectRoot = process.cwd()) {
   return {
@@ -65,6 +66,153 @@ function parseCsvLine(line) {
   return result;
 }
 
+function decodeXmlEntities(value) {
+  return String(value ?? "")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'");
+}
+
+function columnRefToIndex(ref) {
+  let index = 0;
+
+  for (const ch of String(ref || "").toUpperCase()) {
+    index = index * 26 + (ch.charCodeAt(0) - 64);
+  }
+
+  return Math.max(index - 1, 0);
+}
+
+function extractXmlText(xml) {
+  return decodeXmlEntities(
+    String(xml || "")
+      .replace(/<[^>]+>/g, "")
+      .trim()
+  );
+}
+
+function readXlsxEntry(filePath, entryPath) {
+  try {
+    return execFileSync("unzip", ["-p", filePath, entryPath], {
+      encoding: "utf-8",
+      stdio: ["ignore", "pipe", "ignore"],
+    });
+  } catch (error) {
+    throw new Error(`Unable to read ${entryPath} from ${filePath}. Make sure 'unzip' is available.`);
+  }
+}
+
+function getFirstWorksheetPath(filePath) {
+  const workbookXml = readXlsxEntry(filePath, "xl/workbook.xml");
+  const workbookRelsXml = readXlsxEntry(filePath, "xl/_rels/workbook.xml.rels");
+
+  const firstSheetMatch = workbookXml.match(/<sheet\b[^>]*r:id="([^"]+)"/);
+  if (!firstSheetMatch) {
+    throw new Error(`No worksheet found in ${filePath}`);
+  }
+
+  const relId = firstSheetMatch[1];
+  const relRegex = new RegExp(
+    `<Relationship\\b[^>]*Id="${relId}"[^>]*Target="([^"]+)"`,
+    "i"
+  );
+  const relMatch = workbookRelsXml.match(relRegex);
+
+  if (!relMatch) {
+    throw new Error(`Unable to resolve the first worksheet in ${filePath}`);
+  }
+
+  const target = relMatch[1].replace(/^\/+/, "");
+  return target.startsWith("xl/") ? target : `xl/${target.replace(/^\.?\/*/, "")}`;
+}
+
+function parseSharedStrings(sharedStringsXml) {
+  const strings = [];
+  const stringMatches = sharedStringsXml.matchAll(/<si\b[^>]*>([\s\S]*?)<\/si>/g);
+
+  for (const match of stringMatches) {
+    const cellXml = match[1];
+    const textSegments = [...cellXml.matchAll(/<t\b[^>]*>([\s\S]*?)<\/t>/g)].map((segment) =>
+      decodeXmlEntities(segment[1])
+    );
+    strings.push(textSegments.join("").trim());
+  }
+
+  return strings;
+}
+
+function parseWorksheetRows(sheetXml, sharedStrings) {
+  const rows = [];
+  const rowMatches = sheetXml.matchAll(/<row\b[^>]*>([\s\S]*?)<\/row>/g);
+
+  for (const rowMatch of rowMatches) {
+    const rowXml = rowMatch[1];
+    const row = [];
+    const cellMatches = rowXml.matchAll(/<c\b([^>]*)>([\s\S]*?)<\/c>/g);
+
+    for (const cellMatch of cellMatches) {
+      const attrs = cellMatch[1];
+      const cellXml = cellMatch[2];
+      const refMatch = attrs.match(/\br="([A-Z]+)\d+"/i);
+      if (!refMatch) continue;
+
+      const index = columnRefToIndex(refMatch[1]);
+      const typeMatch = attrs.match(/\bt="([^"]+)"/i);
+      const cellType = typeMatch ? typeMatch[1] : "";
+      let value = "";
+
+      if (cellType === "s") {
+        const sharedIndexMatch = cellXml.match(/<v>([\s\S]*?)<\/v>/);
+        const sharedIndex = Number(sharedIndexMatch ? sharedIndexMatch[1] : -1);
+        value = sharedStrings[sharedIndex] ?? "";
+      } else if (cellType === "inlineStr") {
+        value = extractXmlText(cellXml);
+      } else {
+        const valueMatch = cellXml.match(/<v>([\s\S]*?)<\/v>/);
+        value = decodeXmlEntities(valueMatch ? valueMatch[1] : "");
+      }
+
+      row[index] = cleanCell(value);
+    }
+
+    rows.push(row);
+  }
+
+  return rows;
+}
+
+function readXlsxRows(filePath) {
+  const worksheetPath = getFirstWorksheetPath(filePath);
+  const sheetXml = readXlsxEntry(filePath, worksheetPath);
+
+  let sharedStrings = [];
+  try {
+    const sharedStringsXml = readXlsxEntry(filePath, "xl/sharedStrings.xml");
+    sharedStrings = parseSharedStrings(sharedStringsXml);
+  } catch (error) {
+    sharedStrings = [];
+  }
+
+  return parseWorksheetRows(sheetXml, sharedStrings);
+}
+
+function readGameChangerRows(filePath) {
+  const extension = path.extname(filePath).toLowerCase();
+
+  if (extension === ".xlsx") {
+    return readXlsxRows(filePath).filter((row) => row.some((cell) => cleanCell(cell) !== ""));
+  }
+
+  const raw = fs.readFileSync(filePath, "utf-8");
+  return raw
+    .split(/\r?\n/)
+    .map((r) => r.trim())
+    .filter(Boolean)
+    .map(parseCsvLine);
+}
+
 function toNumber(value) {
   const cleaned = cleanCell(value);
   if (cleaned === "" || cleaned === "-" || cleaned === "N/A") return 0;
@@ -113,6 +261,25 @@ function buildPlayerLookup(players) {
   });
 
   return map;
+}
+
+function buildRosterLookup(projectRoot, season) {
+  const rosterPath = path.join(projectRoot, "public/data/boys/baseball/seasonrosters.json");
+
+  if (!fs.existsSync(rosterPath) || season == null) {
+    return new Map();
+  }
+
+  const rosters = JSON.parse(fs.readFileSync(rosterPath, "utf-8"));
+  const seasonRoster = rosters.find((entry) => Number(entry.SeasonID) === Number(season));
+  const lookup = new Map();
+
+  for (const player of seasonRoster?.Players || []) {
+    if (player.JerseyNumber == null || player.JerseyNumber === "") continue;
+    lookup.set(String(player.JerseyNumber), Number(player.PlayerID));
+  }
+
+  return lookup;
 }
 
 function makeEmptyStats(gameIdValue, playerId) {
@@ -218,20 +385,16 @@ function importGameChangerCsv({ projectRoot = process.cwd(), gameId, filePath, w
   const resolvedFilePath = resolveCsvPath(projectRoot, filePath, gameId);
 
   if (!fs.existsSync(resolvedFilePath)) {
-    throw new Error(`CSV file not found: ${resolvedFilePath}`);
+    throw new Error(`Stat file not found: ${resolvedFilePath}`);
   }
 
-  const csvRaw = fs.readFileSync(resolvedFilePath, "utf-8");
   const players = JSON.parse(fs.readFileSync(paths.PLAYERS_PATH, "utf-8"));
   const games = JSON.parse(fs.readFileSync(paths.GAMES_PATH, "utf-8"));
   const existingStats = JSON.parse(fs.readFileSync(paths.STATS_PATH, "utf-8"));
+  const gameRecord = games.find((g) => Number(g.GameID) === Number(gameId)) || null;
+  const rosterLookup = buildRosterLookup(projectRoot, gameRecord?.Season);
 
-  const rows = csvRaw
-    .split(/\r?\n/)
-    .map((r) => r.trim())
-    .filter(Boolean);
-
-  const parsed = rows.map(parseCsvLine);
+  const parsed = readGameChangerRows(resolvedFilePath);
   const playerLookup = buildPlayerLookup(players);
 
   const dataRows = parsed.slice(2).filter((row) => {
@@ -256,6 +419,13 @@ function importGameChangerCsv({ projectRoot = process.cwd(), gameId, filePath, w
       if (playerLookup.has(lookupKey)) {
         player = playerLookup.get(lookupKey);
         break;
+      }
+    }
+
+    if (!player) {
+      const rosterPlayerId = rosterLookup.get(cleanCell(row[0]));
+      if (rosterPlayerId != null) {
+        player = players.find((entry) => Number(entry.PlayerID) === Number(rosterPlayerId)) || null;
       }
     }
 
@@ -336,7 +506,6 @@ function importGameChangerCsv({ projectRoot = process.cwd(), gameId, filePath, w
   }
 
   const generatedStats = generatedRows.map((entry) => entry.stats);
-  const gameRecord = games.find((g) => Number(g.GameID) === Number(gameId)) || null;
 
   const generatedTotals = {
     runs: sumBy(generatedStats, "R"),
