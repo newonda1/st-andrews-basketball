@@ -759,10 +759,12 @@ function parseLegacyBatting(text, indexes, gameId, entriesByPlayerId, warnings) 
 
 function parseLegacyPitching(text, indexes, gameId, entriesByPlayerId, warnings) {
   let pitchingOrder = 0;
+  let teamTotals = null;
+  const parsedPitcherIds = [];
 
   splitNonEmptyLines(text).forEach((rawLine) => {
     const line = normalizeLegacyStatLine(stripLegacyJerseyMarkers(rawLine));
-    if (/^PITCHING\b/i.test(line) || /^TEAM\b/i.test(line)) return;
+    if (/^PITCHING\b/i.test(line)) return;
 
     const extracted = extractTrailingNumericValues(line, 6);
     if (!extracted) {
@@ -774,7 +776,17 @@ function parseLegacyPitching(text, indexes, gameId, entriesByPlayerId, warnings)
 
     const [ip, hits, runs, earnedRuns, walks, strikeouts] = extracted.values;
     const label = extracted.label;
-    if (/\bTEAM\b/i.test(label)) return;
+    if (/\bTEAM\b/i.test(label)) {
+      teamTotals = {
+        IP: parseBaseballInningsValue(ip),
+        H_Allowed: parseInteger(hits),
+        R_Allowed: parseInteger(runs),
+        ER: parseInteger(earnedRuns),
+        BB_Allowed: parseInteger(walks),
+        SO_Pitching: parseInteger(strikeouts),
+      };
+      return;
+    }
     const player = matchLegacyPlayer(label, indexes);
 
     if (!player) {
@@ -792,11 +804,17 @@ function parseLegacyPitching(text, indexes, gameId, entriesByPlayerId, warnings)
     entry.ER = parseInteger(earnedRuns);
     entry.BB_Allowed = parseInteger(walks);
     entry.SO_Pitching = parseInteger(strikeouts);
+    parsedPitcherIds.push(String(player.PlayerID));
 
     if (/\(W\)/i.test(label)) entry.W = 1;
     if (/\(L\)/i.test(label)) entry.L = 1;
     if (/\(SV\)/i.test(label)) entry.SV = 1;
   });
+
+  return {
+    parsedPitcherIds,
+    teamTotals,
+  };
 }
 
 function parseLegacyCatcherIds(text, indexes) {
@@ -1298,6 +1316,51 @@ function hasPitchingAppearance(entry) {
   return parseDecimal(entry.IP) || parseDecimal(entry.BF) || parseDecimal(entry.Pitches);
 }
 
+function fillMissingPitchingFromTeamTotals(entriesByPlayerId, pitchingParseResult, warnings) {
+  const teamTotals = pitchingParseResult?.teamTotals;
+  if (!teamTotals) return;
+
+  const entries = Array.from(entriesByPlayerId.values());
+  const parsedPitchers = entries.filter((entry) => parseDecimal(entry.IP) > 0);
+  const missingPitchers = entries.filter(
+    (entry) =>
+      parseDecimal(entry.IP) === 0 &&
+      (parseDecimal(entry.BF) > 0 ||
+        parseDecimal(entry.Pitches) > 0 ||
+        parseDecimal(entry.W) > 0 ||
+        parseDecimal(entry.L) > 0 ||
+        parseDecimal(entry.SV) > 0)
+  );
+
+  if (missingPitchers.length !== 1 || parsedPitchers.length < 1) return;
+
+  const missingEntry = missingPitchers[0];
+  const derived = {
+    IP: Math.max(0, teamTotals.IP - sumEntries(parsedPitchers, "IP")),
+    H_Allowed: Math.max(0, teamTotals.H_Allowed - sumEntries(parsedPitchers, "H_Allowed")),
+    R_Allowed: Math.max(0, teamTotals.R_Allowed - sumEntries(parsedPitchers, "R_Allowed")),
+    ER: Math.max(0, teamTotals.ER - sumEntries(parsedPitchers, "ER")),
+    BB_Allowed: Math.max(0, teamTotals.BB_Allowed - sumEntries(parsedPitchers, "BB_Allowed")),
+    SO_Pitching: Math.max(0, teamTotals.SO_Pitching - sumEntries(parsedPitchers, "SO_Pitching")),
+  };
+
+  missingEntry.IP = derived.IP;
+  missingEntry.P_Innings = derived.IP;
+  missingEntry.H_Allowed = derived.H_Allowed;
+  missingEntry.R_Allowed = derived.R_Allowed;
+  missingEntry.ER = derived.ER;
+  missingEntry.BB_Allowed = derived.BB_Allowed;
+  missingEntry.SO_Pitching = derived.SO_Pitching;
+
+  if (missingEntry._PitchingOrder == null || missingEntry._PitchingOrder === "") {
+    missingEntry._PitchingOrder = parsedPitchers.length;
+  }
+
+  warnings.push(
+    `Derived missing pitching line for PlayerID ${missingEntry.PlayerID} from TEAM totals because an individual pitching row was not parsed.`
+  );
+}
+
 function hasFieldingOnlyAppearance(entry) {
   return (
     !hasBattingAppearance(entry) &&
@@ -1626,8 +1689,15 @@ export default function BoysBaseballAdmin() {
 
     parseLegacyBatting(legacyBattingText, playerIndexes, gameId.trim(), entriesByPlayerId, legacyWarnings);
     parseLegacyDetails(legacyBattingDetailText, playerIndexes, gameId.trim(), entriesByPlayerId, legacyWarnings, "batting");
-    parseLegacyPitching(legacyPitchingText, playerIndexes, gameId.trim(), entriesByPlayerId, legacyWarnings);
+    const pitchingParseResult = parseLegacyPitching(
+      legacyPitchingText,
+      playerIndexes,
+      gameId.trim(),
+      entriesByPlayerId,
+      legacyWarnings
+    );
     parseLegacyDetails(legacyPitchingDetailText, playerIndexes, gameId.trim(), entriesByPlayerId, legacyWarnings, "pitching");
+    fillMissingPitchingFromTeamTotals(entriesByPlayerId, pitchingParseResult, legacyWarnings);
     parseLegacyPlayByPlay(legacyPlayByPlayText, playerIndexes, gameId.trim(), entriesByPlayerId, {
       skipWildPitchParsing: pitchingDetailLabels.has("WP"),
       teamBattingHalf,
