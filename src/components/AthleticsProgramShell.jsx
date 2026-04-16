@@ -2,6 +2,9 @@ import React, { useMemo, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Footer from "./Footer";
 
+const HEADER_HEIGHT = "96px";
+const CONTENT_TOP_PADDING = "120px";
+
 const styles = {
   page: {
     minHeight: "100vh",
@@ -16,35 +19,40 @@ const styles = {
     top: 0,
     left: 0,
     right: 0,
+    height: HEADER_HEIGHT,
     background: "#ffffff",
     borderBottom: "1px solid #e2e8f0",
     zIndex: 30,
   },
   topBar: {
     maxWidth: "1300px",
+    height: "100%",
     margin: "0 auto",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
+    padding: "16px 24px",
     boxSizing: "border-box",
   },
   logoLink: {
     display: "flex",
     alignItems: "center",
+    gap: "12px",
     textDecoration: "none",
     color: "#0f172a",
   },
   logo: {
+    height: "80px",
     width: "auto",
     display: "block",
   },
   titleWrap: {
     display: "flex",
     flexDirection: "column",
-    minWidth: 0,
   },
   title: {
     margin: 0,
+    fontSize: "1.8rem",
     fontWeight: 700,
     lineHeight: 1.1,
     color: "#012169",
@@ -62,9 +70,10 @@ const styles = {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    flexShrink: 0,
   },
   menuIcon: {
+    width: "42px",
+    height: "42px",
     display: "block",
   },
   content: {
@@ -174,26 +183,16 @@ export default function AthleticsProgramShell({
 
   return (
     <div style={styles.page}>
-      <header style={styles.header} className="h-20 sm:h-24">
-        <div style={styles.topBar} className="h-full px-3 py-3 sm:px-6 sm:py-4">
-          <Link
-            to={athleticsHomePath}
-            style={styles.logoLink}
-            className="min-w-0 gap-2 sm:gap-3"
-          >
+      <header style={styles.header}>
+        <div style={styles.topBar}>
+          <Link to={athleticsHomePath} style={styles.logoLink}>
             <img
               src="/images/common/logo.png"
               alt="St. Andrew's Athletics"
               style={styles.logo}
-              className="h-12 sm:h-20"
             />
             <div style={styles.titleWrap}>
-              <h1
-                style={styles.title}
-                className="text-[0.95rem] leading-[0.96] sm:text-[1.8rem]"
-              >
-                {title}
-              </h1>
+              <h1 style={styles.title}>{title}</h1>
               {subtitle ? <p style={styles.subtitle}>{subtitle}</p> : null}
             </div>
           </Link>
@@ -202,7 +201,6 @@ export default function AthleticsProgramShell({
             type="button"
             aria-label="Open program navigation"
             style={styles.menuButton}
-            className="h-11 w-11 shrink-0 overflow-hidden rounded-xl"
             onClick={() => setMenuOpen(true)}
           >
             <img
@@ -210,7 +208,6 @@ export default function AthleticsProgramShell({
               alt=""
               aria-hidden="true"
               style={styles.menuIcon}
-              className="h-full w-full object-contain"
             />
           </button>
         </div>
@@ -223,9 +220,10 @@ export default function AthleticsProgramShell({
         <main
           style={{
             ...styles.main,
+            paddingTop: CONTENT_TOP_PADDING,
             paddingBottom: showFooter ? "32px" : 0,
           }}
-          className={showFooter ? "pt-[104px] lg:pb-[144px] sm:pt-[120px]" : "pt-[104px] sm:pt-[120px]"}
+          className={showFooter ? "lg:pb-[144px]" : undefined}
         >
           {children}
         </main>
