@@ -245,6 +245,22 @@ function normalizeLegacyStatLine(line) {
     .trim();
 }
 
+function extractTrailingNumericValues(line, count) {
+  const matches = [...String(line ?? "").matchAll(/(\d+(?:\.\d+)?)/g)];
+  if (matches.length < count) return null;
+
+  const values = matches.slice(-count);
+  const firstValueIndex = values[0]?.index ?? -1;
+  if (firstValueIndex < 0) return null;
+
+  return {
+    label: String(line ?? "")
+      .slice(0, firstValueIndex)
+      .trim(),
+    values: values.map((match) => match[1]),
+  };
+}
+
 function buildLegacyAbbreviationMap(players) {
   const byKey = new Map();
 
@@ -710,17 +726,15 @@ function hasRecordedBattingLine(entry) {
 }
 
 function parseLegacyBatting(text, indexes, gameId, entriesByPlayerId, warnings) {
-  const playerLineRegex =
-    /^(.*\D)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s*$/;
-
   splitNonEmptyLines(text).forEach((rawLine) => {
     const line = normalizeLegacyStatLine(rawLine);
     if (/^LINEUP\b/i.test(line) || /^TEAM\b/i.test(line)) return;
 
-    const match = line.match(playerLineRegex);
-    if (!match) return;
+    const extracted = extractTrailingNumericValues(line, 6);
+    if (!extracted) return;
 
-    const [, label, ab, runs, hits, rbi, walks, strikeouts] = match;
+    const [ab, runs, hits, rbi, walks, strikeouts] = extracted.values;
+    const label = extracted.label;
     if (/\bTEAM\b/i.test(label)) return;
     const player = matchLegacyPlayer(label, indexes);
 
@@ -740,22 +754,20 @@ function parseLegacyBatting(text, indexes, gameId, entriesByPlayerId, warnings) 
 }
 
 function parseLegacyPitching(text, indexes, gameId, entriesByPlayerId, warnings) {
-  const pitchingLineRegex =
-    /^(.*\D)\s+(\d+(?:\.\d+)?)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s*$/;
-
   splitNonEmptyLines(text).forEach((rawLine) => {
     const line = normalizeLegacyStatLine(rawLine);
     if (/^PITCHING\b/i.test(line) || /^TEAM\b/i.test(line)) return;
 
-    const match = line.match(pitchingLineRegex);
-    if (!match) {
+    const extracted = extractTrailingNumericValues(line, 6);
+    if (!extracted) {
       if (/[A-Za-z]/.test(line) && /\d/.test(line)) {
         warnings.push(`Legacy pitching line could not be parsed: ${line.trim()}`);
       }
       return;
     }
 
-    const [, label, ip, hits, runs, earnedRuns, walks, strikeouts] = match;
+    const [ip, hits, runs, earnedRuns, walks, strikeouts] = extracted.values;
+    const label = extracted.label;
     if (/\bTEAM\b/i.test(label)) return;
     const player = matchLegacyPlayer(label, indexes);
 
@@ -945,6 +957,7 @@ function parseLegacyPlayByPlay(text, indexes, gameId, entriesByPlayerId, options
     .filter(Boolean);
   let inferredPitcherIndex = 0;
   let inferredPitcherLockedForHalf = false;
+  let activeHalfPitcherId = null;
 
   const getCurrentPitcher = () => {
     if (currentPitcher) return currentPitcher;
@@ -973,18 +986,27 @@ function parseLegacyPlayByPlay(text, indexes, gameId, entriesByPlayerId, options
   };
 
   const closePreviousHalfIfNeeded = () => {
-    if (half !== teamFieldingHalf || !inferredPitcherLockedForHalf) return;
-    if (inferredPitcherIndex >= orderedPitchers.length) return;
+    if (half !== teamFieldingHalf || !activeHalfPitcherId) return;
 
-    orderedPitchers[inferredPitcherIndex].outsRemaining -= 3;
+    const activePitcherEntry = orderedPitchers.find(
+      (pitcher) => Number(pitcher.player.PlayerID) === Number(activeHalfPitcherId)
+    );
+
+    if (activePitcherEntry) {
+      activePitcherEntry.outsRemaining -= 3;
+    }
+
     inferredPitcherLockedForHalf = false;
+    activeHalfPitcherId = null;
   };
 
   splitNonEmptyLines(text).forEach((rawLine) => {
     splitEmbeddedPlaySegments(rawLine).forEach((line) => {
       maybeSetCurrentPitcherFromLine(line, indexes, (player) => {
         currentPitcher = player;
-        inferredPitcherLockedForHalf = false;
+        if (half === teamFieldingHalf) {
+          activeHalfPitcherId = player.PlayerID;
+        }
       });
       maybeSetBatterSubstitutionFromLine(line, indexes, (substitution) => {
         currentBatterSubstitution = substitution;
@@ -996,6 +1018,7 @@ function parseLegacyPlayByPlay(text, indexes, gameId, entriesByPlayerId, options
         if (half === teamFieldingHalf) {
           currentPitcher = getInferredPitcher();
           inferredPitcherLockedForHalf = Boolean(currentPitcher);
+          activeHalfPitcherId = currentPitcher?.PlayerID || null;
         }
         return;
       }
@@ -1006,6 +1029,7 @@ function parseLegacyPlayByPlay(text, indexes, gameId, entriesByPlayerId, options
         if (half === teamFieldingHalf) {
           currentPitcher = getInferredPitcher();
           inferredPitcherLockedForHalf = Boolean(currentPitcher);
+          activeHalfPitcherId = currentPitcher?.PlayerID || null;
         }
         return;
       }
