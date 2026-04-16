@@ -18,8 +18,6 @@ const sports = [
       2003, 2004, 2022, 2023, 2024, 2025, 2026,
     ],
     stateYears: [1993, 1998, 2004, 2022, 2023, 2025],
-    regionYearsPerLine: 3,
-    stateYearsPerLine: 3,
   },
   {
     name: "Girls Basketball",
@@ -27,8 +25,6 @@ const sports = [
     icon: "/images/girls/basketball/girls_basketball_icon.png",
     regionYears: [1999, 2003, 2004],
     stateYears: [2003, 2005, 2006],
-    regionYearsPerLine: 3,
-    stateYearsPerLine: 3,
   },
   {
     name: "Boys Baseball",
@@ -36,8 +32,6 @@ const sports = [
     icon: "/images/boys/baseball/boys_baseball_icon.png",
     regionYears: [2019],
     stateYears: [],
-    regionYearsPerLine: 3,
-    stateYearsPerLine: 3,
   },
 ];
 
@@ -52,37 +46,21 @@ const menuSections = [
   },
 ];
 
-function chunkYears(years, yearsPerLine) {
-  if (years.length === 0) {
-    return [];
-  }
-
-  const lines = [];
-
-  for (let index = 0; index < years.length; index += yearsPerLine) {
-    lines.push(years.slice(index, index + yearsPerLine).join("  "));
-  }
-
-  return lines;
-}
-
-function ChampionshipSection({ title, years, yearsPerLine }) {
-  const lines = chunkYears(years, yearsPerLine);
-
+function ChampionshipSection({ title, years }) {
   return (
     <section className="rounded-2xl border border-white/20 bg-white/[0.08] px-3 py-3 shadow-inner shadow-black/10 backdrop-blur-[1px] sm:px-4">
       <h3 className="text-[0.6rem] font-bold uppercase tracking-[0.22em] text-blue-100 sm:text-[0.68rem]">
         {title}
       </h3>
 
-      {lines.length > 0 ? (
-        <div className="mt-2 space-y-1.5">
-          {lines.map((line) => (
+      {years.length > 0 ? (
+        <div className="mt-2 grid grid-cols-2 gap-x-3 gap-y-1.5 lg:grid-cols-4">
+          {years.map((year) => (
             <div
-              key={`${title}-${line}`}
+              key={`${title}-${year}`}
               className="text-[0.76rem] font-black leading-tight tracking-[0.09em] text-white sm:text-[0.86rem]"
             >
-              {line}
+              {year}
             </div>
           ))}
         </div>
@@ -106,15 +84,7 @@ function SportBanner({ sport }) {
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.22),_transparent_42%)]" />
 
         <header className="relative">
-          <img
-            src={SCHOOL_LOGO}
-            alt=""
-            aria-hidden="true"
-            className="mx-auto w-14 drop-shadow-[0_4px_8px_rgba(15,23,42,0.35)] sm:w-16"
-            loading="lazy"
-          />
-
-          <div className="mt-3 flex items-center justify-center gap-3 rounded-2xl border border-white/20 bg-white/[0.08] px-3 py-3 shadow-inner shadow-black/10">
+          <div className="flex items-center justify-center gap-3 rounded-2xl border border-white/20 bg-white/[0.08] px-3 py-3 shadow-inner shadow-black/10">
             <img
               src={sport.icon}
               alt=""
@@ -132,13 +102,11 @@ function SportBanner({ sport }) {
           <ChampionshipSection
             title="Region Championships"
             years={sport.regionYears}
-            yearsPerLine={sport.regionYearsPerLine}
           />
           {sport.stateYears.length > 0 ? (
             <ChampionshipSection
               title="State Championships"
               years={sport.stateYears}
-              yearsPerLine={sport.stateYearsPerLine}
             />
           ) : null}
         </div>
@@ -167,7 +135,7 @@ function AthleticsHome() {
     >
       <div className="mx-auto max-w-7xl px-2 py-2 sm:px-4 sm:py-4">
         <section className="mt-4">
-          <div className="mx-auto max-w-6xl rounded-[2rem] border border-slate-200 bg-white/80 px-3 py-6 shadow-sm shadow-slate-300/40 backdrop-blur sm:px-5 sm:py-8 lg:px-6">
+          <div className="mx-auto max-w-6xl px-3 py-6 sm:px-5 sm:py-8 lg:px-6">
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">
                 Championship Legacy
