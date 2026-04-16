@@ -7,8 +7,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "import:baseball:gamechanger": "node scripts/importBaseballGameChanger.js",
-    "import:baseball:single": "node scripts/importSingleBaseballGameChanger.js",
-    "fill:baseball:missing": "node scripts/fillMissingBaseballGameEntries.js"
+    "import:baseball:single": "node scripts/importSingleBaseballGameChanger.js"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
