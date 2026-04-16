@@ -6,10 +6,11 @@ const BANNER_SHAPE = {
   clipPath: "polygon(0 0, 100% 0, 100% calc(100% - 58px), 50% 100%, 0 calc(100% - 58px))",
 };
 
+const SCHOOL_LOGO = "/images/common/logo.png";
+
 const sports = [
   {
     name: "Boys Basketball",
-    bannerNameLines: ["Boys", "Basketball"],
     to: "/athletics/boys/basketball",
     icon: "/images/boys/basketball/boys_basketball_icon.png",
     regionYears: [
@@ -22,7 +23,6 @@ const sports = [
   },
   {
     name: "Girls Basketball",
-    bannerNameLines: ["Girls", "Basketball"],
     to: "/athletics/girls/basketball",
     icon: "/images/girls/basketball/girls_basketball_icon.png",
     regionYears: [1999, 2003, 2004],
@@ -32,7 +32,6 @@ const sports = [
   },
   {
     name: "Boys Baseball",
-    bannerNameLines: ["Boys", "Baseball"],
     to: "/athletics/boys/baseball",
     icon: "/images/boys/baseball/boys_baseball_icon.png",
     regionYears: [2019],
@@ -87,11 +86,7 @@ function ChampionshipSection({ title, years, yearsPerLine }) {
             </div>
           ))}
         </div>
-      ) : (
-        <div className="mt-2 text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-blue-100/80 sm:text-[0.8rem]">
-          None listed
-        </div>
-      )}
+      ) : null}
     </section>
   );
 }
@@ -108,28 +103,28 @@ function SportBanner({ sport }) {
         style={BANNER_SHAPE}
         className="relative flex h-full min-h-[31rem] flex-col overflow-hidden border-[3px] border-blue-100 bg-gradient-to-b from-blue-700 via-blue-800 to-blue-950 px-3 pb-20 pt-4 text-white shadow-xl transition duration-300 group-hover:-translate-y-1 group-hover:shadow-2xl sm:min-h-[34rem] sm:px-4 sm:pt-5"
       >
-        <div className="pointer-events-none absolute inset-x-8 top-12 h-px bg-blue-200/40" />
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.22),_transparent_42%)]" />
 
-        <img
-          src={sport.icon}
-          alt=""
-          aria-hidden="true"
-          className="pointer-events-none absolute bottom-24 right-3 w-16 opacity-[0.15] brightness-200 saturate-0 sm:right-4 sm:w-20"
-          loading="lazy"
-        />
+        <header className="relative">
+          <img
+            src={SCHOOL_LOGO}
+            alt=""
+            aria-hidden="true"
+            className="mx-auto w-14 drop-shadow-[0_4px_8px_rgba(15,23,42,0.35)] sm:w-16"
+            loading="lazy"
+          />
 
-        <header className="relative text-center">
-          <p className="text-[0.55rem] font-bold uppercase tracking-[0.28em] text-blue-100 sm:text-[0.62rem]">
-            Lions Athletics
-          </p>
-          <h2 className="mt-2 text-[1.65rem] font-black uppercase leading-none tracking-[0.08em] text-white sm:text-[1.9rem]">
-            Champions
-          </h2>
-          <div className="mt-3 text-[0.72rem] font-bold uppercase leading-tight tracking-[0.28em] text-white sm:text-[0.8rem]">
-            {sport.bannerNameLines.map((line) => (
-              <div key={line}>{line}</div>
-            ))}
+          <div className="mt-3 flex items-center justify-center gap-3 rounded-2xl border border-white/20 bg-white/[0.08] px-3 py-3 shadow-inner shadow-black/10">
+            <img
+              src={sport.icon}
+              alt=""
+              aria-hidden="true"
+              className="h-12 w-12 shrink-0 object-contain drop-shadow-[0_4px_8px_rgba(15,23,42,0.35)] sm:h-14 sm:w-14"
+              loading="lazy"
+            />
+            <h2 className="text-left text-[0.98rem] font-black uppercase leading-tight tracking-[0.16em] text-white sm:text-[1.08rem]">
+              {sport.name}
+            </h2>
           </div>
         </header>
 
@@ -139,15 +134,23 @@ function SportBanner({ sport }) {
             years={sport.regionYears}
             yearsPerLine={sport.regionYearsPerLine}
           />
-          <ChampionshipSection
-            title="State Championships"
-            years={sport.stateYears}
-            yearsPerLine={sport.stateYearsPerLine}
-          />
+          {sport.stateYears.length > 0 ? (
+            <ChampionshipSection
+              title="State Championships"
+              years={sport.stateYears}
+              yearsPerLine={sport.stateYearsPerLine}
+            />
+          ) : null}
         </div>
 
-        <div className="relative mt-5 text-center text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-blue-100 transition duration-300 group-hover:text-white sm:text-[0.76rem]">
-          View Stats &rarr;
+        <div className="relative mt-5 flex justify-center">
+          <img
+            src={SCHOOL_LOGO}
+            alt=""
+            aria-hidden="true"
+            className="w-20 transition duration-300 group-hover:scale-105 sm:w-24"
+            loading="lazy"
+          />
         </div>
       </article>
     </Link>
