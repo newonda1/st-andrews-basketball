@@ -1104,48 +1104,18 @@
     }
   },
   {
-    "GameID": 2022040301,
+    "GameID": 2022040401,
     "OpponentID": "ga-pinewood-christian-academy-bellville",
     "Opponent": "Pinewood Christian",
     "LocationType": "Away",
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 1,
-    "OpponentScore": 16,
-    "Season": 2022,
-    "LineScore": {
-      "Innings": [
-        1,
-        2,
-        3,
-        4
-      ],
-      "StAndrews": [
-        1,
-        0,
-        0,
-        0
-      ],
-      "Opponent": [
-        5,
-        0,
-        3,
-        8
-      ],
-      "StAndrewsTotals": {
-        "R": 1,
-        "H": 2,
-        "E": 8
-      },
-      "OpponentTotals": {
-        "R": 16,
-        "H": 13,
-        "E": 1
-      }
-    }
+    "OpponentScore": 15,
+    "Season": 2022
   },
   {
-    "GameID": 2022040501,
+    "GameID": 2022040801,
     "OpponentID": "ga-pinewood-christian-academy-bellville",
     "Opponent": "Pinewood Christian",
     "LocationType": "Home",
@@ -1156,7 +1126,7 @@
     "Season": 2022
   },
   {
-    "GameID": 2022040801,
+    "GameID": 2022040802,
     "OpponentID": "ga-pinewood-christian-academy-bellville",
     "Opponent": "Pinewood Christian",
     "LocationType": "Home",
