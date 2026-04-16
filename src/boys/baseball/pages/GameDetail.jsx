@@ -441,7 +441,7 @@ export default function GameDetail() {
   const savePitcher = getDecisionPitcher(pitchingRows, "SV");
 
   return (
-    <div className="max-w-6xl mx-auto py-4 space-y-8">
+    <div className="max-w-6xl mx-auto pt-4 pb-10 lg:pb-40 space-y-8">
       <div className="space-y-2">
         <div className="text-sm text-gray-600">
           <Link to="/athletics/boys/baseball" className="text-blue-700 hover:underline">
