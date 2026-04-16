@@ -1065,7 +1065,43 @@
     "Result": "L",
     "TeamScore": 1,
     "OpponentScore": 12,
-    "Season": 2022
+    "Season": 2022,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "StAndrews": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "Opponent": [
+        2,
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "StAndrewsTotals": {
+        "R": 1,
+        "H": 1,
+        "E": 5
+      },
+      "OpponentTotals": {
+        "R": 12,
+        "H": 10,
+        "E": 0
+      }
+    }
   },
   {
     "GameID": 2022040401,
