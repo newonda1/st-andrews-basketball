@@ -79,10 +79,8 @@ function SportBanner({ sport }) {
 
       <article
         style={BANNER_SHAPE}
-        className="relative flex h-full min-h-[31rem] flex-col overflow-hidden border-[3px] border-blue-100 bg-gradient-to-b from-blue-700 via-blue-800 to-blue-950 px-3 pb-20 pt-4 text-white shadow-xl transition duration-300 group-hover:-translate-y-1 group-hover:shadow-2xl sm:min-h-[34rem] sm:px-4 sm:pt-5"
+        className="relative flex h-full min-h-[31rem] flex-col overflow-hidden border-[3px] border-blue-100 bg-blue-800/85 px-3 pb-20 pt-4 text-white shadow-xl transition duration-300 group-hover:-translate-y-1 group-hover:shadow-2xl sm:min-h-[34rem] sm:px-4 sm:pt-5"
       >
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.22),_transparent_42%)]" />
-
         <header className="relative">
           <div className="flex items-center justify-center gap-3 rounded-2xl border border-white/20 bg-white/[0.08] px-3 py-3 shadow-inner shadow-black/10">
             <img
@@ -112,15 +110,13 @@ function SportBanner({ sport }) {
         </div>
 
         <div className="relative mt-5 flex justify-center">
-          <div className="flex h-24 w-24 items-center justify-center rounded-full border border-white/20 bg-white/10 shadow-lg shadow-slate-950/20 backdrop-blur-[2px] transition duration-300 group-hover:scale-105 sm:h-28 sm:w-28">
-            <img
-              src={SCHOOL_LOGO}
-              alt=""
-              aria-hidden="true"
-              className="w-16 sm:w-20"
-              loading="lazy"
-            />
-          </div>
+          <img
+            src={SCHOOL_LOGO}
+            alt=""
+            aria-hidden="true"
+            className="w-20 object-contain drop-shadow-[0_6px_14px_rgba(15,23,42,0.28)] transition duration-300 group-hover:scale-105 sm:w-24"
+            loading="lazy"
+          />
         </div>
       </article>
     </Link>
