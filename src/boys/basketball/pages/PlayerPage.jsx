@@ -337,8 +337,7 @@ function PlayerPage() {
             src={photoUrl}
             alt={playerName}
             onError={(e) =>
-              (e.currentTarget.src =
-                "/images/boys/basketball/players/default.jpg")
+              (e.currentTarget.src = "/images/common/logo.png")
             }
             className="w-24 h-24 object-cover rounded-full border"
           />
