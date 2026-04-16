@@ -245,6 +245,10 @@ function normalizeLegacyStatLine(line) {
     .trim();
 }
 
+function stripLegacyJerseyMarkers(line) {
+  return String(line ?? "").replace(/#\s*\d+\b/g, " ").replace(/\s+/g, " ").trim();
+}
+
 function extractTrailingNumericValues(line, count) {
   const matches = [...String(line ?? "").matchAll(/(\d+(?:\.\d+)?)/g)];
   if (matches.length < count) return null;
@@ -727,7 +731,7 @@ function hasRecordedBattingLine(entry) {
 
 function parseLegacyBatting(text, indexes, gameId, entriesByPlayerId, warnings) {
   splitNonEmptyLines(text).forEach((rawLine) => {
-    const line = normalizeLegacyStatLine(rawLine);
+    const line = normalizeLegacyStatLine(stripLegacyJerseyMarkers(rawLine));
     if (/^LINEUP\b/i.test(line) || /^TEAM\b/i.test(line)) return;
 
     const extracted = extractTrailingNumericValues(line, 6);
@@ -754,8 +758,10 @@ function parseLegacyBatting(text, indexes, gameId, entriesByPlayerId, warnings) 
 }
 
 function parseLegacyPitching(text, indexes, gameId, entriesByPlayerId, warnings) {
+  let pitchingOrder = 0;
+
   splitNonEmptyLines(text).forEach((rawLine) => {
-    const line = normalizeLegacyStatLine(rawLine);
+    const line = normalizeLegacyStatLine(stripLegacyJerseyMarkers(rawLine));
     if (/^PITCHING\b/i.test(line) || /^TEAM\b/i.test(line)) return;
 
     const extracted = extractTrailingNumericValues(line, 6);
@@ -777,6 +783,8 @@ function parseLegacyPitching(text, indexes, gameId, entriesByPlayerId, warnings)
     }
 
     const entry = ensureLegacyEntry(entriesByPlayerId, gameId, player.PlayerID);
+    entry._PitchingOrder = pitchingOrder;
+    pitchingOrder += 1;
     entry.IP = parseBaseballInningsValue(ip);
     entry.P_Innings = parseBaseballInningsValue(ip);
     entry.H_Allowed = parseInteger(hits);
@@ -942,6 +950,11 @@ function parseLegacyPlayByPlay(text, indexes, gameId, entriesByPlayerId, options
   const teamFieldingHalf = teamBattingHalf === "top" ? "bottom" : "top";
   const orderedPitchers = Array.from(entriesByPlayerId.values())
     .filter((entry) => parseDecimal(entry.IP) > 0)
+    .sort((a, b) => {
+      const orderDiff = parseInteger(a._PitchingOrder) - parseInteger(b._PitchingOrder);
+      if (orderDiff !== 0) return orderDiff;
+      return Number(a.PlayerID) - Number(b.PlayerID);
+    })
     .map((entry) => {
       const player = indexes.rosterDetails.find(
         (detail) => Number(detail.player.PlayerID) === Number(entry.PlayerID)
