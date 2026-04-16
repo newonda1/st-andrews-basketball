@@ -1,5 +1,3 @@
-
-
 [
   {
     "GameID": 2018022701,
@@ -740,9 +738,24 @@
     "RecapTitle": "Early Deficit Too Much As St. Andrew’s Falls To Trinity Christian",
     "Recap": "Trinity Christian took control early and never looked back in an 18-1 win over St. Andrew’s on Monday.\n\nThe visitors jumped out in the first inning when Allen delivered a bases-clearing double to give Trinity Christian a 3-0 lead.\n\nTrinity Christian continued to apply pressure in the second and third innings, extending the advantage behind aggressive baserunning and timely hitting. The game broke open in the fourth, when Trinity Christian erupted for 11 runs on a combination of singles, walks, and defensive miscues to push the lead to 18-0.\n\nSt. Andrew’s struggled to generate offense against Currie, who struck out eight over three hitless innings to earn the win. Luke Goodwin provided relief for Trinity Christian.\n\nGabe Barnhill took the loss for the Lions, allowing six runs over two and two-thirds innings while striking out three. Thomas Jackson also saw time on the mound in relief.\n\nAlec Waters accounted for St. Andrew’s lone hit of the game and later came around to score the team’s only run in the fourth inning.\n\nFor Trinity Christian, Brown led the way at the plate with two hits, while multiple players contributed to an aggressive effort on the basepaths. The visitors were also clean defensively, finishing without an error.\n\nSt. Andrew’s looks to bounce back in its next contest.",
     "LineScore": {
-      "Innings": [1, 2, 3, 4],
-      "StAndrews": [0, 0, 0, 1],
-      "Opponent": [3, 2, 2, 11],
+      "Innings": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "StAndrews": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "Opponent": [
+        3,
+        2,
+        2,
+        11
+      ],
       "StAndrewsTotals": {
         "R": 1,
         "H": 1,
@@ -768,9 +781,27 @@
     "RecapTitle": "St. Andrew’s Breaks Through With 11-1 Win Over Memorial Day",
     "Recap": "St. Andrew’s earned its first win of the season in convincing fashion, defeating Memorial Day 11-1 on Tuesday.\n\nThe Lions wasted no time getting on the board in the opening inning, taking advantage of several defensive miscues to plate four runs and grab early control of the game.\n\nSt. Andrew’s continued to build its lead throughout the afternoon. In the third inning, Luke Peaster and Andrew Bacon each delivered RBI singles to extend the advantage to 6-0. The Lions added another run in the fourth before breaking the game open in the fifth.\n\nThe big fifth inning saw St. Andrew’s score four more runs, highlighted by RBI efforts from Bacon, Gavin Wortman, and Alec Waters, pushing the lead to 11-0.\n\nOn the mound, Peaster delivered a dominant performance to earn the win. The right-hander threw four scoreless innings, allowing just three hits while striking out six and walking none. Waters came on in relief and closed out the game.\n\nAt the plate, Gabe Barnhill led the way with two hits, while the Lions showed an aggressive approach on the basepaths, stealing 11 bases in the game. Bacon led the charge with three stolen bases as St. Andrew’s applied constant pressure.\n\nMemorial Day broke through with a run in the fifth, but the outcome was never in doubt as the Lions secured the 11-1 victory.",
     "LineScore": {
-      "Innings": [1, 2, 3, 4, 5],
-      "StAndrews": [4, 0, 2, 1, 4],
-      "Opponent": [0, 0, 0, 0, 1],
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "StAndrews": [
+        4,
+        0,
+        2,
+        1,
+        4
+      ],
+      "Opponent": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
       "StAndrewsTotals": {
         "R": 11,
         "H": 5,
@@ -902,7 +933,40 @@
     "Result": "L",
     "TeamScore": 5,
     "OpponentScore": 17,
-    "Season": 2022
+    "Season": 2022,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "StAndrews": [
+        0,
+        3,
+        0,
+        0,
+        2
+      ],
+      "Opponent": [
+        3,
+        4,
+        1,
+        9,
+        "X"
+      ],
+      "StAndrewsTotals": {
+        "R": 5,
+        "H": 5,
+        "E": 2
+      },
+      "OpponentTotals": {
+        "R": 17,
+        "H": 12,
+        "E": 2
+      }
+    }
   },
   {
     "GameID": 2022032801,
@@ -1610,9 +1674,24 @@
     "RecapTitle": "St. Andrew's Varsity Lions Fall To Hilton Head Prep After Surrendering Big Second Inning",
     "Recap": "Hilton Head Prep used a massive second inning to defeat St. Andrew’s 16-0 on Tuesday at Hilton Head Preparatory School.\n\nHilton Head Prep opened the scoring in the first inning on a double by Pirkey.\n\nThe game turned in the second inning when Hilton Head Prep erupted for 11 runs on eight hits. Middleton singled in a run, Hausher drove in two with a sacrifice fly, Stanyard doubled in two, Britschge and Hunter each drew bases-loaded walks, Middleton added another RBI single and later walked in a run, Hausher singled home a run, and a fielder’s choice brought in another as the lead quickly grew.\n\nHilton Head Prep added to its lead in the fourth inning, scoring three more runs to complete the scoring.\n\nJacob Navare started on the mound for the Lions, allowing six hits and nine runs (seven earned) over one and one-third innings while walking three. Connor Campbell earned the win for Hilton Head Prep, throwing three hitless innings while striking out five.\n\nHilton Head Prep finished with 11 hits in the game. Middleton, Espinoza, and Campbell each collected two hits, while Stanyard, Rooney, Campbell, and Hausher each drove in two runs. The hosts showed patience at the plate with nine walks, stole multiple bases, and played error-free defense.",
     "LineScore": {
-      "Innings": [1, 2, 3, 4],
-      "StAndrews": [0, 0, 0, 0],
-      "Opponent": [2, 11, 0, 3],
+      "Innings": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "StAndrews": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "Opponent": [
+        2,
+        11,
+        0,
+        3
+      ],
       "StAndrewsTotals": {
         "R": 0,
         "H": 0,
@@ -1638,9 +1717,21 @@
     "RecapTitle": "Second-Inning Burst Enough To Lead John Paul II Past St. Andrew's Varsity Lions",
     "Recap": "John Paul II used a massive second inning to power past St. Andrew’s 14-0 on Friday at St. Andrew’s School.\n\nJohn Paul II opened the scoring in the first inning when a fielder’s choice allowed a run to cross the plate.\n\nThe game turned decisively in the second inning, when John Paul II erupted for 11 runs on six hits. RBI singles from #2, #10, #12, and #24 highlighted the inning, while walks, a wild pitch, and defensive miscues helped extend the rally.\n\nJohn Paul II added two more runs in the third inning on a double by #34 and a single by #29 to complete the scoring.\n\nJacob Navare started on the mound for St. Andrew’s, allowing six hits and 10 runs (six earned) over one and two-thirds innings while striking out one and walking four. Rizzo earned the win for John Paul II, allowing one hit over three scoreless innings while striking out four.\n\nJack Kelley led the Lions offensively with the team’s lone hit. St. Andrew’s also turned a double play defensively.\n\nJohn Paul II finished with 11 hits in the game. #12, #24, and #10 each collected two hits, with #10 driving in three runs. John Paul II also showed patience at the plate with six walks and played error-free defense.",
     "LineScore": {
-      "Innings": [1, 2, 3],
-      "StAndrews": [0, 0, 0],
-      "Opponent": [1, 11, 2],
+      "Innings": [
+        1,
+        2,
+        3
+      ],
+      "StAndrews": [
+        0,
+        0,
+        0
+      ],
+      "Opponent": [
+        1,
+        11,
+        2
+      ],
       "StAndrewsTotals": {
         "R": 0,
         "H": 1,
@@ -1666,9 +1757,21 @@
     "RecapTitle": "Vidalia Heritage Academy Pulls Away Early In 16-1 Win Over St. Andrew’s",
     "Recap": "Vidalia Heritage Academy jumped ahead in the first inning and never looked back in a 16-1 win over St. Andrew’s on Saturday.\n\nVidalia Heritage broke the game open right away, scoring eight runs in the bottom of the first. Maddyx Herrin delivered a two-run single, Luke Moxley followed with an RBI single, Jake Adams added another run-scoring hit, Wyatt Norton ripped a two-run double, Pearson O’Neal doubled in a run, and Juddson Wilkes brought home another with a groundout.\n\nThe hosts added one more run in the second when Moxley grounded out to score Trevor White, stretching the lead to 9-0.\n\nVidalia Heritage scored seven more in the third. Greer Posey singled in a run, Wilkes added another RBI single, Moxley brought home a run on a fielder’s choice, Adams singled in another, two runs scored on an error, and Bragg Alford grounded out to cap the inning.\n\nSt. Andrew’s avoided the shutout in the third when Lanford Harris reached on an error and later scored on a throwing error by the Vidalia Heritage pitcher.\n\nJhett Reeves started on the mound for the Lions and allowed seven hits and nine runs, six earned, over two innings while striking out one. Trevor White earned the win for Vidalia Heritage, allowing one hit and one unearned run over three innings while striking out five.\n\nIsaac Wrieden recorded St. Andrew’s lone hit. For Vidalia Heritage, Jake Adams went 3-for-3, while Juddson Wilkes and Pearson O’Neal each collected multiple hits. Moxley led the hosts with three RBIs in the win.",
     "LineScore": {
-      "Innings": [1, 2, 3],
-      "StAndrews": [0, 0, 1],
-      "Opponent": [8, 1, 7],
+      "Innings": [
+        1,
+        2,
+        3
+      ],
+      "StAndrews": [
+        0,
+        0,
+        1
+      ],
+      "Opponent": [
+        8,
+        1,
+        7
+      ],
       "StAndrewsTotals": {
         "R": 1,
         "H": 1,
@@ -1694,9 +1797,27 @@
     "RecapTitle": "St. Andrew's Varsity Lions With Tough Game Against Westminster Schools of Augusta",
     "Recap": "St. Andrew's Varsity Lions couldn't keep up with Westminster Schools of Augusta and fell 11-1 on Thursday at Westminster Schools of Augusta.\n\nWestminster Schools of Augusta were the first to get on the board in the first inning when an error allowed two runs to score.\n\nSt. Andrew’s answered in the third inning. Brady Grant singled, River Reeves followed with a single, and Isaac Wrieden added a hit to load the bases. A balk brought Reeves home to cut the deficit to 2-1.\n\nWestminster extended its lead in the bottom of the third, taking advantage of multiple errors along with a single by Julian Lively to push the margin to 6-1.\n\nThe game broke open further in the fourth inning. Charlie Grinalds delivered a two-run double, and Westminster continued to capitalize on defensive miscues and aggressive baserunning to stretch the lead to 10-1.\n\nWestminster added its final run in the fifth inning on another St. Andrew’s error.\n\nRiver Reeves started on the mound for the Lions, allowing six hits and nine runs (two earned) over three innings while striking out three and walking two. Grinalds earned the win for Westminster, allowing four hits and one run over five innings while striking out nine and walking one.\n\nReeves led St. Andrew’s offensively from the nine spot in the lineup, going 2-for-2 at the plate. Grant and Wrieden also contributed hits for the Lions.\n\nWestminster collected nine hits in the game. Grinalds drove in three runs, while Ryan Janovic recorded two hits. The hosts were aggressive on the basepaths, stealing eight bases, and played error-free defense. Freeman led the team defensively with nine chances.",
     "LineScore": {
-      "Innings": [1, 2, 3, 4, 5],
-      "StAndrews": [0, 0, 1, 0, 0],
-      "Opponent": [2, 0, 4, 4, 1],
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "StAndrews": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "Opponent": [
+        2,
+        0,
+        4,
+        4,
+        1
+      ],
       "StAndrewsTotals": {
         "R": 1,
         "H": 4,
@@ -1722,9 +1843,30 @@
     "RecapTitle": "Westminster Uses Big Fourth Inning To Defeat St. Andrew’s 12-2",
     "Recap": "Westminster Schools of Augusta broke open a tight game with a six-run fourth inning and went on to defeat St. Andrew’s 12-2 on Thursday.\n\nWestminster scored first in the bottom of the opening inning when an error allowed a run to cross, but the Lions answered in the third. Jhett Reeves singled and later scored when Pat Jackson dropped down a bunt single to tie the game at 1-1.\n\nWestminster moved back in front in the bottom of the third on another St. Andrew’s error, but the Lions responded again in the fourth. Lanford Harris singled, Jacob Navare walked, and Reeves lined a single to right to score Harris and even the game at 2-2.\n\nThe game turned in the bottom of the fourth, when Westminster erupted for six runs on just two hits. Thomas Freeman delivered a two-run double, Charlie Grinalds added an RBI triple, and Westminster took advantage of walks, wild pitches, and aggressive baserunning to build an 8-2 lead.\n\nWestminster added one run in the fifth and three more in the sixth to finish the scoring. Grinalds capped his strong night with a two-run single in the sixth.\n\nLanford Harris started on the mound for St. Andrew’s and allowed two unearned runs over three innings while striking out six. Jacob Navare and Brady Grant followed in relief. Hornsby earned the win for Westminster, allowing five hits and two runs over five innings.\n\nReeves led the Lions offensively by going 2-for-2 with an RBI, while Jackson also drove in a run. Westminster was led by Freeman and Grinalds, who each drove in three runs, and Grinalds finished 3-for-4 at the plate. Westminster also drew 15 walks and stole seven bases in the win.",
     "LineScore": {
-      "Innings": [1, 2, 3, 4, 5, 6],
-      "StAndrews": [0, 0, 1, 1, 0, 0],
-      "Opponent": [1, 0, 1, 6, 1, 3],
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "StAndrews": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "Opponent": [
+        1,
+        0,
+        1,
+        6,
+        1,
+        3
+      ],
       "StAndrewsTotals": {
         "R": 2,
         "H": 5,
@@ -1750,9 +1892,21 @@
     "RecapTitle": "St. Andrew's Varsity Lions Stymied By Islands",
     "Recap": "St. Andrew’s Varsity Lions couldn’t keep up with Islands and fell 16-1 on Thursday at Islands High School.\n\nSt. Andrew’s got on the board in the top of the first inning when Jacob Navare reached on an error that allowed Jack Kelley to score.\n\nIslands responded immediately in the bottom half of the inning, erupting for eight runs. Stewart delivered a two-run home run, and additional RBI hits from #14 and #4, along with defensive miscues, helped the hosts take control early.\n\nIslands added another eight runs in the third inning to put the game out of reach. The inning was highlighted by a three-run home run from #5, while a combination of walks, singles, and errors continued to fuel the rally.\n\nRiver Reeves started on the mound for the Lions, allowing eight runs (five earned) over one-third of an inning. Brady Grant came on in relief as Islands continued to apply pressure throughout the game.\n\nAt the plate, Reeves and Grant each recorded a hit for St. Andrew’s.\n\nFor Islands, #14, #5, and Stewart each collected two hits, with #5 and Stewart driving in four runs apiece. The hosts also showed patience at the plate with six walks and were aggressive on the basepaths, stealing four bases.\n\nIslands also turned a double play and controlled the game from the opening inning.",
     "LineScore": {
-      "Innings": [1, 2, 3],
-      "StAndrews": [1, 0, 0],
-      "Opponent": [8, 0, 8],
+      "Innings": [
+        1,
+        2,
+        3
+      ],
+      "StAndrews": [
+        1,
+        0,
+        0
+      ],
+      "Opponent": [
+        8,
+        0,
+        8
+      ],
       "StAndrewsTotals": {
         "R": 1,
         "H": 2,
@@ -1778,9 +1932,27 @@
     "RecapTitle": "Reeves Dominates As Lions Cruise Past Hardeeville",
     "Recap": "River Reeves delivered a dominant performance on the mound, striking out 15 and allowing no hits over five innings to lead St. Andrew’s to an 18-1 win over Hardeeville on Saturday.\n\nThe Lions wasted no time getting on the board in the first inning. Lanford Harris and Jack Kelley each singled, and St. Andrew’s took advantage of errors, a sacrifice bunt by Wells Searcy, and a passed ball to build a 4-0 lead.\n\nSt. Andrew’s added five more runs in the second. Darius Chapman delivered an RBI single, Jacob Navare drew a bases-loaded walk, Searcy executed another sacrifice bunt, and two more runs scored on a passed ball and an error to extend the lead to 9-0.\n\nThe Lions continued to pour it on in the third inning. Chapman added a sacrifice bunt to bring in a run, Harris singled to drive in another, and Kelley capped the inning with an inside-the-park home run to make it 12-0.\n\nHardeeville broke through in the bottom of the third with its lone run, but Reeves quickly shut the door and maintained control throughout.\n\nSt. Andrew’s put the game out of reach in the fifth inning, scoring six runs without recording a hit. Reeves drew a bases-loaded walk, Brady Grant added an RBI groundout, multiple runs scored on errors, Chapman drove in a run with a groundout, A. Cook walked to force in a run, and another run scored on a balk to push the lead to 18-1.\n\nAt the plate, Chapman led the way with three RBIs, while Kelley, Chapman, and Harris each collected two hits. The Lions showed patience at the plate with 11 walks and were aggressive on the basepaths, tallying five stolen bases.\n\nDefensively, St. Andrew’s capitalized on Hardeeville miscues, while Reeves’ dominance on the mound ensured the outcome was never in doubt.",
     "LineScore": {
-      "Innings": [1, 2, 3, 4, 5],
-      "StAndrews": [4, 5, 3, 0, 6],
-      "Opponent": [0, 0, 1, 0, 0],
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "StAndrews": [
+        4,
+        5,
+        3,
+        0,
+        6
+      ],
+      "Opponent": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
       "StAndrewsTotals": {
         "R": 18,
         "H": 7,
@@ -1806,9 +1978,27 @@
     "RecapTitle": "Big Fourth Inning Leads Frederica Academy Past St. Andrew's Varsity Lions",
     "Recap": "Frederica Academy scored seven runs in the fourth inning, which helped them defeat St. Andrew's Varsity Lions 11-1 on Thursday at FREDERICA ACADEMY.\n\nSt. Andrew's Varsity Lions got on the board in the top of the first inning after a balk brought home a run.\n\nIn the bottom of the first, Frederica Academy answered and moved in front when Wensel singled to center field and Goff doubled to center field, each driving in a run.\n\nFrederica Academy added another run in the third inning when Adams drew a walk to make it 3-1.\n\nThe game broke open in the bottom of the fourth, when Frederica Academy scored seven runs on three hits. Wensel drew a bases-loaded walk, White singled to score two runs, Adams drew a walk to force in a run, Durken was hit by a pitch with the bases loaded, Grantham added an RBI single, and Sammis lifted a sacrifice fly to center.\n\nRiver Reeves started on the mound for St. Andrew's and allowed six runs, four earned, over three innings while striking out one. Brady Grant worked in relief. Frederica Academy used Wensel, White, and Howes on the mound and held the Lions to one hit.\n\nRiver Reeves recorded St. Andrew's lone hit, while Isaac Wrieden scored the team's only run. The Lions turned a double play in the field but could not recover after Frederica's big fourth inning.\n\nHowes led Frederica Academy with two hits, while White, Adams, Durken, and Wensel each drove in two runs. Frederica Academy also showed patience at the plate, drawing 13 walks and stealing four bases.",
     "LineScore": {
-      "Innings": [1, 2, 3, 4, 5],
-      "StAndrews": [1, 0, 0, 0, 0],
-      "Opponent": [2, 0, 1, 7, 1],
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "StAndrews": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Opponent": [
+        2,
+        0,
+        1,
+        7,
+        1
+      ],
       "StAndrewsTotals": {
         "R": 1,
         "H": 1,
@@ -1834,9 +2024,27 @@
     "RecapTitle": "Frederica Academy Pulls Away Early In 12-0 Win Over St. Andrew’s",
     "Recap": "Frederica Academy scored six runs in the first inning and never looked back in a 12-0 win over St. Andrew’s on Thursday.\n\nThe hosts broke the game open in the bottom of the first. Howes put down a sacrifice bunt to bring home the opening run, Goff followed with an RBI single, and Frederica Academy took advantage of several St. Andrew’s errors to build a 6-0 lead.\n\nFrederica added another run in the second when Goff grounded out to score White, stretching the advantage to 7-0.\n\nThe hosts put the game out of reach with five more runs in the third. Hayes Carter launched a solo home run to left, Howes lined a two-run single to right, another run scored on an error, and Grantham added an RBI single to push the lead to 12-0.\n\nJhett Reeves took the loss for St. Andrew’s, allowing nine hits and 12 runs, three earned, over four innings. Sammis opened on the mound for Frederica Academy and struck out five over two scoreless innings. Sykes, Walson, and Hayes Carter followed in relief to complete the one-hit shutout.\n\nJack Kelley recorded St. Andrew’s lone hit with a double and also drew a walk. The Lions turned one double play defensively, but Frederica Academy capitalized on nine St. Andrew’s errors to control the game throughout.\n\nGrantham led Frederica Academy with three hits, while Howes drove in three runs. Hayes Carter added a home run and two hits, and Frederica Academy also applied constant pressure on the bases with seven stolen bases.",
     "LineScore": {
-      "Innings": [1, 2, 3, 4, 5],
-      "StAndrews": [0, 0, 0, 0, 0],
-      "Opponent": [6, 1, 5, 0, "X"],
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "StAndrews": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Opponent": [
+        6,
+        1,
+        5,
+        0,
+        "X"
+      ],
       "StAndrewsTotals": {
         "R": 0,
         "H": 1,
@@ -1862,9 +2070,30 @@
     "RecapTitle": "St. Andrew's Varsity Lions Fall After Strong Showing By John Paul II",
     "Recap": "St. Andrew's Varsity Lions had trouble keeping up with John Paul II in a 14-2 loss on Saturday at John Paul II Catholic School.\n\nJohn Paul II opened the scoring in the bottom of the first thanks to two errors. John Paul II first got on the board when an error scored one run.\n\nJohn Paul II extended their early lead with two runs in the bottom of the second thanks to RBI singles by #10 and #9.\n\nSt. Andrew’s broke through in the fifth inning, scoring twice after drawing multiple walks and taking advantage of a hit batter to cut the deficit to 5-2.\n\nJohn Paul II pulled away in the bottom of the fifth, adding three runs on a combination of hits and errors to extend the lead.\n\nThe game was put out of reach in the sixth inning when John Paul II scored six runs on two hits. An error scored one run, #2 lined out to bring home two runs, and #26 hit an inside-the-park home run, driving in three runs.\n\nJacob Navare started on the mound for St. Andrew’s, allowing eight hits and eight runs (two earned) over four and one-third innings while walking five. Rizzo earned the win for John Paul II, giving up zero hits and two runs over four and one-third innings while striking out six and walking seven.\n\nRiver Reeves and Jacob Reeves each drove in a run for the Lions, who showed patience at the plate with nine walks. Reeves and Navare each drew two walks, and St. Andrew’s also turned a double play defensively.\n\nJohn Paul II collected 10 hits in the game. #12, #24, and #10 each recorded two hits, while #26 drove in three runs. The hosts also worked seven walks and turned a double play in the win.",
     "LineScore": {
-      "Innings": [1, 2, 3, 4, 5, 6],
-      "StAndrews": [0, 0, 0, 0, 2, 0],
-      "Opponent": [3, 2, 0, 0, 3, 6],
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "StAndrews": [
+        0,
+        0,
+        0,
+        0,
+        2,
+        0
+      ],
+      "Opponent": [
+        3,
+        2,
+        0,
+        0,
+        3,
+        6
+      ],
       "StAndrewsTotals": {
         "R": 2,
         "H": 0,
@@ -1890,9 +2119,24 @@
     "RecapTitle": "Pinewood Pulls Away From St. Andrew’s In 16-1 Win",
     "Recap": "Pinewood used an early surge and a big fourth inning to defeat St. Andrew’s 16-1 on Thursday at Pinewood Christian Academy.\n\nSt. Andrew’s struck first in the top of the first inning. Isaac Wrieden reached on an error, Jack Kelley followed with a single, and Cam Baizley later drew a bases-loaded walk to force home the game’s first run.\n\nPinewood answered immediately in the bottom half, scoring five runs to take control. A single by #5 drove in two, and the hosts took advantage of a series of St. Andrew’s errors to build a 5-1 lead after one inning.\n\nAfter a scoreless second inning, Pinewood added three more runs in the third. #11 delivered a three-run double to center to stretch the advantage to 8-1.\n\nThe hosts then broke the game open in the fourth, scoring eight runs on six hits. #1 singled home two runs, #15 added an RBI double, #11 brought home another with a single, and #31 capped the outburst with a two-run double as Pinewood extended the margin to 16-1.\n\nJhett Reeves started on the mound for St. Andrew’s and worked three and two-thirds innings, allowing 13 hits and 16 runs, four earned, while striking out two. #4 earned the win for Pinewood, throwing a complete four-inning game while allowing two hits and one unearned run and striking out 10.\n\nKelley led the Lions offensively by going 2-for-2. Wells Searcy also added a hit, while Baizley drove in St. Andrew’s lone run.\n\nPinewood finished with 13 hits in the game. #11 led the way with four RBIs, while #1, #31, #11, #15, and #8 each collected two hits. The hosts also played clean defense, committing just one error.",
     "LineScore": {
-      "Innings": [1, 2, 3, 4],
-      "StAndrews": [1, 0, 0, 0],
-      "Opponent": [5, 0, 3, 8],
+      "Innings": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "StAndrews": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "Opponent": [
+        5,
+        0,
+        3,
+        8
+      ],
       "StAndrewsTotals": {
         "R": 1,
         "H": 2,
@@ -1918,9 +2162,21 @@
     "RecapTitle": "First-Inning Burst Carries Pinewood Past St. Andrew’s",
     "Recap": "Pinewood used a massive first inning to power past St. Andrew’s 15-0 on Thursday.\n\nPinewood erupted for eight runs in the opening frame. An RBI single by #8 got things started, a walk forced in a run, #15 was hit by a pitch to bring home another, #12 drew a bases-loaded walk, #2 added an RBI single, and #8 capped the inning with a three-run single to make it 8-0.\n\nPinewood continued to add on in the second inning. A series of walks, a hit batter, and a defensive error led to five more runs crossing the plate, extending the lead to 13-0.\n\nThe hosts added two more runs in the third. #13 delivered an RBI single, and #12 followed with a run-scoring triple to push the advantage to 15-0.\n\nJacob Navare started on the mound for St. Andrew’s, allowing seven runs, none earned, over two-thirds of an inning. Brady Grant worked in relief as Pinewood continued to apply pressure.\n\nJack Kelley led the Lions offensively, going 2-for-2 at the plate. Wells Searcy also collected a hit as St. Andrew’s finished with three hits in the game.\n\nFor Pinewood, #8 paced the offense with two hits and four RBIs. The hosts showed patience at the plate, drawing eight walks, with #11 and #18 each reaching twice via free passes. Pinewood also played clean defensively, finishing without an error.\n\nSt. Andrew’s looked to regroup in its next contest.",
     "LineScore": {
-      "Innings": [1, 2, 3],
-      "StAndrews": [0, 0, 0],
-      "Opponent": [8, 5, 2],
+      "Innings": [
+        1,
+        2,
+        3
+      ],
+      "StAndrews": [
+        0,
+        0,
+        0
+      ],
+      "Opponent": [
+        8,
+        5,
+        2
+      ],
       "StAndrewsTotals": {
         "R": 0,
         "H": 3,
@@ -1946,9 +2202,21 @@
     "RecapTitle": "Trinity Christian Pulls Away Early In 17-0 Win Over St. Andrew’s",
     "Recap": "Trinity Christian jumped out early and never let up in a 17-0 win over St. Andrew’s on Tuesday.\n\nThe visitors broke the game open in the top of the first inning. An RBI single by #3 started the scoring, a walk forced in another run, #17 followed with a three-run double, and two more runs crossed on defensive miscues as Trinity Christian took a 7-0 lead.\n\nTrinity added four more runs in the second. #11 drove in a run with a single, #9 added a sacrifice fly, and two more runs scored on errors to stretch the advantage to 11-0.\n\nThe visitors finished the scoring with six runs in the third. An error brought home one run, #7 lined an RBI single to left, another error plated a run, #10 drew a bases-loaded walk, and #17 capped the inning with a two-run single to make it 17-0.\n\nBrady Grant started on the mound for St. Andrew’s, allowing 11 runs, six earned, over two innings while striking out one. Cam Baizley worked the third inning in relief.\n\nTrinity Christian’s #12 and #99 combined on the shutout, holding the Lions hitless while striking out six. Jacob Navare drew St. Andrew’s lone walk of the game.\n\nAt the plate, #17 led Trinity Christian by going 3-for-3 with five RBIs. #3 and #11 each collected two hits, and the visitors finished with 10 hits while playing error-free baseball.\n\nSt. Andrew’s traveled to Coastal HomeSchool for its next contest.",
     "LineScore": {
-      "Innings": [1, 2, 3],
-      "StAndrews": [0, 0, 0],
-      "Opponent": [7, 4, 6],
+      "Innings": [
+        1,
+        2,
+        3
+      ],
+      "StAndrews": [
+        0,
+        0,
+        0
+      ],
+      "Opponent": [
+        7,
+        4,
+        6
+      ],
       "StAndrewsTotals": {
         "R": 0,
         "H": 0,
@@ -1974,9 +2242,33 @@
     "RecapTitle": "St. Andrew's Falls To Coastal HomeSchool",
     "Recap": "St. Andrew’s fell to Coastal HomeSchool 9-4 on Thursday.\n\nCoastal HomeSchool opened the scoring in the second inning when Max Myrick grounded out to bring home a run. The hosts added another in the third on an RBI single by Jace Poppell to extend the lead.\n\nCoastal broke the game open in the sixth, scoring five runs on five hits. Troy DeVoe singled to drive in a run, an error brought in another, Poppell added an RBI single, and Saul Issa capped the inning with a two-run single to push the lead to 9-0.\n\nJhett Reeves started on the mound for the Lions, allowing 11 hits and nine runs (four earned) over five and one-third innings while striking out five and walking one. Burke Sullivan earned the win for Coastal HomeSchool, giving up three hits and four runs (none earned) over seven innings while striking out eight and walking two.\n\nSt. Andrew’s made a late push in the seventh inning, scoring four runs. Reeves delivered an RBI single, and Jack Kelley followed with a bases-clearing hit that plated three runs.\n\nKelley led the Lions at the plate with two hits, while Reeves also contributed offensively and stole two bases.\n\nCoastal HomeSchool finished with 11 hits, led by Poppell and J.W. Castongia, who each collected three hits. Poppell drove in a team-high three runs, while Issa added two hits and two RBIs.\n\nSt. Andrew’s returned home to face Coastal HomeSchool in its next contest.",
     "LineScore": {
-      "Innings": [1, 2, 3, 4, 5, 6, 7],
-      "StAndrews": [0, 0, 0, 0, 0, 0, 4],
-      "Opponent": [0, 1, 1, 0, 2, 5, "X"],
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "StAndrews": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4
+      ],
+      "Opponent": [
+        0,
+        1,
+        1,
+        0,
+        2,
+        5,
+        "X"
+      ],
       "StAndrewsTotals": {
         "R": 4,
         "H": 3,
@@ -2002,9 +2294,33 @@
     "RecapTitle": "Kelley’s Big Day Propels St. Andrew’s Past Hardeeville",
     "Recap": "Jack Kelley collected three hits and helped lead St. Andrew’s to a 12-3 win over Hardeeville on Monday. Kelley tripled in the first inning, tripled again in the third, and added a single in the seventh to pace the Lions’ offense.\n\nSt. Andrew’s struck first in the opening inning when Kelley tripled and came home on the play to give the Lions a 1-0 lead. Hardeeville answered in the bottom half, taking advantage of a St. Andrew’s error to tie the game at 1-1.\n\nThe hosts moved in front in the second when Jamison drew a bases-loaded walk and Alston followed with another walk to make it 3-1. But the Lions responded in the third. Kelley tripled to start the inning, Wells Searcy later reached on an error that brought home a run, and Jhett Reeves lined an RBI single to right to even the game at 3-3.\n\nSt. Andrew’s took the lead for good in the fifth when Jacob Navare grounded out to score Isaac Wrieden, putting the Lions in front 4-3. The Lions added another run in the sixth on Pat Jackson’s RBI single before breaking the game open in the seventh.\n\nThe seven-run final inning featured RBI singles from Wrieden, Navare, Reeves, and Kelley, along with a run-scoring walk by Jackson and a series of Hardeeville miscues that allowed St. Andrew’s to pull away.\n\nBrady Grant started on the mound for the Lions and worked four and one-third innings, allowing three runs while striking out eight. Cam Baizley followed in relief and finished the game, giving up just one hit over the final two and two-thirds innings while striking out five.\n\nSt. Andrew’s finished with 10 hits in the win. Kelley and Reeves each had three hits, Navare added two, and Reeves drove in a team-high two runs. The Lions were also aggressive on the bases, piling up eight stolen bases.\n\nFor Hardeeville, Santiago led the way with two hits, while Alston drove in a run. Hardeeville drew six walks and stole four bases, but the Lions held them scoreless over the final five innings.",
     "LineScore": {
-      "Innings": [1, 2, 3, 4, 5, 6, 7],
-      "StAndrews": [1, 0, 2, 0, 1, 1, 7],
-      "Opponent": [1, 2, 0, 0, 0, 0, 0],
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "StAndrews": [
+        1,
+        0,
+        2,
+        0,
+        1,
+        1,
+        7
+      ],
+      "Opponent": [
+        1,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
       "StAndrewsTotals": {
         "R": 12,
         "H": 10,
@@ -2030,9 +2346,33 @@
     "RecapTitle": "St. Andrew's Falls To Coastal HomeSchool",
     "Recap": "St. Andrew's fell to Coastal HomeSchool 13-9 on Tuesday.\n\nCoastal HomeSchool took control early in the top of the first inning, capitalizing on two St. Andrew’s errors along with hits from J. Poppell and Smith to build a 3-0 lead. The visitors added another run in the second on an RBI single by J. Castongia to extend the margin to 4-0.\n\nCoastal continued to add on in the third inning, scoring twice with the help of another error and an RBI single from M. Myrick to make it 6-1. The lead grew to 8-1 in the fourth behind additional hits from Poppell and Smith, and the visitors pushed it to 10-2 in the fifth with RBI singles from Castongia and Poppell.\n\nSt. Andrew’s showed resilience throughout the game. The Lions got on the board in the second on an RBI bunt single by Pat Jackson and added runs in the fourth and fifth innings to stay within striking distance.\n\nThe biggest push came in the sixth inning when the Lions scored four times. Wells Searcy delivered an RBI single, Jacob Reeves followed with another run-scoring hit, and St. Andrew’s capitalized on a double play to trim the deficit to 11-7.\n\nCoastal HomeSchool answered in the final two innings, adding one run in the sixth and two more in the seventh to extend the lead to 13-7.\n\nSt. Andrew’s mounted one final rally in the bottom of the seventh, scoring twice on a walk by Searcy and a fielder’s choice by Jacob Navare, but could not close the gap.\n\nNavare took the loss on the mound, allowing 10 runs (two earned) over five innings while striking out three.\n\nAt the plate, the Lions collected 10 hits. Cam Baizley, Isaac Wrieden, and Brady Grant each had two hits, while Wells Searcy drove in two runs.\n\nCoastal HomeSchool finished with 16 hits, led by Smith, Poppell, and Castongia, who each recorded three hits. The visitors also turned two double plays and applied pressure on the bases throughout the game.\n\nSt. Andrew’s traveled to The Habersham School for its next contest.",
     "LineScore": {
-      "Innings": [1, 2, 3, 4, 5, 6, 7],
-      "StAndrews": [0, 1, 0, 1, 1, 4, 2],
-      "Opponent": [3, 1, 2, 2, 2, 1, 2],
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "StAndrews": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        4,
+        2
+      ],
+      "Opponent": [
+        3,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2
+      ],
       "StAndrewsTotals": {
         "R": 9,
         "H": 10,
@@ -2058,9 +2398,21 @@
     "RecapTitle": "St. Andrew’s Erupts Early In 18-0 Win Over The Habersham School",
     "Recap": "St. Andrew’s broke the game open immediately and rolled to an 18-0 win over The Habersham School on Thursday.\n\nThe Lions jumped in front with four runs in the first inning. Isaac Wrieden delivered an RBI single, Cam Baizley followed with a two-run double, and Brady Grant added an RBI groundout to stake St. Andrew’s to an early lead.\n\nThe advantage grew in the second. Wrieden reached on an error that brought home a run, Jhett Reeves lined an RBI single to right, Jacob Navare added a run-scoring single to center, Grant followed with an RBI single, and Pat Jackson knocked in another run with a single down the right field line as the Lions made it 9-0.\n\nSt. Andrew’s then put the game completely out of reach with nine more runs in the third. Jack Kelley opened the inning with a solo home run to left. Later in the frame, Navare added an RBI single, Lanford Harris brought home a run with a single, Kelley ripped a two-run double, Searcy drove in another run with a single, and Wrieden capped the scoring with an RBI groundout.\n\nReeves earned the win for the Lions, throwing three no-hit innings while striking out six and walking none.\n\nSt. Andrew’s finished with 14 hits in the game. Kelley, Searcy, Wrieden, Grant, and Navare each collected two hits, while Kelley and Baizley drove in three runs apiece. The Lions also pressured the defense with four stolen bases.\n\nThe Habersham School was held hitless, and St. Andrew’s capitalized on five Patriot errors in the victory.",
     "LineScore": {
-      "Innings": [1, 2, 3],
-      "StAndrews": [4, 5, 9],
-      "Opponent": [0, 0, 0],
+      "Innings": [
+        1,
+        2,
+        3
+      ],
+      "StAndrews": [
+        4,
+        5,
+        9
+      ],
+      "Opponent": [
+        0,
+        0,
+        0
+      ],
       "StAndrewsTotals": {
         "R": 18,
         "H": 14,
@@ -2086,9 +2438,27 @@
     "RecapTitle": "Bulloch Academy Builds Early Lead, Defeats St. Andrew’s 10-0",
     "Recap": "Bulloch Academy used steady offense and capitalized on early opportunities to defeat St. Andrew’s 10-0 on Tuesday.\n\nThe hosts got on the board in the first inning when Nathan Newkirk scored on a sacrifice fly by J. Lanier after reaching on an error and advancing to third.\n\nBulloch extended the lead in the second. Welker led off with a double and later scored on an RBI single by West. Additional runs came from RBI singles by Newkirk and errors in the field, allowing Bulloch to build a 6-0 advantage.\n\nAfter a scoreless third inning, Bulloch added to its lead in the fourth when Welker delivered an RBI single to make it 7-0.\n\nThe hosts put the game away in the fifth. R. West singled and scored on an error, and RBI singles from Sam Hubbard and others pushed the final margin to 10-0.\n\nJ. Avery earned the win for Bulloch Academy, throwing five scoreless innings while allowing no hits and striking out multiple batters.\n\nSt. Andrew’s was held without a hit in the game. Wells Searcy reached via walk, while the Lions struggled to generate offense against Avery’s command on the mound.\n\nBulloch finished with multiple hits throughout the lineup, led by Newkirk, Priest, and Hubbard, who each contributed to the offensive effort.",
     "LineScore": {
-      "Innings": [1, 2, 3, 4, 5],
-      "StAndrews": [0, 0, 0, 0, 0],
-      "Opponent": [1, 5, 0, 1, 3],
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "StAndrews": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Opponent": [
+        1,
+        5,
+        0,
+        1,
+        3
+      ],
       "StAndrewsTotals": {
         "R": 0,
         "H": 0,
@@ -2114,9 +2484,24 @@
     "RecapTitle": "Bulloch Academy Pulls Away Early In 15-0 Win Over St. Andrew’s",
     "Recap": "Bulloch Academy struck quickly and never let up in a 15-0 win over St. Andrew’s on Thursday.\n\nThe hosts took control in the first inning, capitalizing on a pair of St. Andrew’s errors and a run-scoring single by Sam Hubbard to build a 4-0 lead.\n\nAfter a scoreless second, Bulloch broke the game open in the third. Welker delivered an RBI single, West added a run-scoring single, TJ Durden followed with an RBI single, Nathan Newkirk brought home a run with a sacrifice fly, Sam Hubbard added another RBI single, and Cole Newman capped the inning with a two-run single as the lead swelled to 12-0.\n\nBulloch added three more runs in the fourth, highlighted by an RBI double from Brenigan Priest and an RBI single by James Lee.\n\nNathan Newkirk earned the win for Bulloch Academy, throwing four scoreless innings while allowing three hits and striking out four.\n\nWells Searcy, Isaac Wrieden, and Jacob Navare accounted for St. Andrew’s three hits. Cam Baizley took the loss after working two and one-third innings, and Brady Grant threw in relief.\n\nBulloch finished with nine hits in the game. Sam Hubbard drove in two runs, while Priest, Cole Newman, and several others contributed to the offensive outburst. The hosts also applied steady pressure on the bases throughout the night.",
     "LineScore": {
-      "Innings": [1, 2, 3, 4],
-      "StAndrews": [0, 0, 0, 0],
-      "Opponent": [4, 0, 8, 3],
+      "Innings": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "StAndrews": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "Opponent": [
+        4,
+        0,
+        8,
+        3
+      ],
       "StAndrewsTotals": {
         "R": 0,
         "H": 3,
@@ -2142,9 +2527,21 @@
     "RecapTitle": "St. Andrew's Surges Past Windsor Forest Thanks To Big Second Inning",
     "Recap": "St. Andrew's scored nine runs in the second inning, which helped them defeat Windsor Forest 15-0 on Thursday at 601 Penn Waller Rd, Savannah, GA 31410. an error scored one run, Grant drew a walk, scoring one run, Martin drew a walk, scoring one run, Kelley drew a walk, scoring one run, Kelley drew a walk, scoring one run, an error scored one run, Harris singled, scoring one run, Wilcox drew a walk, scoring one run, and Navare singled, scoring one run.\n\nSt. Andrew's Varsity Lions got on the board in the bottom of the first inning after Kelley drew a walk, scoring one run, Searcy doubled, scoring one run, Navare drew a walk, scoring one run, Reeves was struck by a pitch, driving in a run, and an error scored two runs.\n\nKelley earned the win for St. Andrew's Varsity Lions. The righty gave up zero hits and zero runs over three innings, striking out eight and walking none.\n\nNavare led St. Andrew's Varsity Lions with three runs batted in. The first baseman went 1-for-2 on the day. Searcy, Navare, and Harris each collected one hit for St. Andrew's Varsity Lions. St. Andrew's Varsity Lions had a strong eye at the plate, piling up nine walks for the game. Kelley, Wilcox, and Kelley led the team with two bases on balls each. Kelley threw two immaculate innings for St. Andrew's Varsity Lions where the hurler struck out the side on nine pitches. Kelley stole two bases. St. Andrew's Varsity Lions were sure-handed in the field and didn't commit a single error. Kelley had the most chances in the field with nine.\n\nNext up for St. Andrew's Varsity Lions is a game against FPCA on Wednesday.",
     "LineScore": {
-      "Innings": [1, 2, 3],
-      "StAndrews": [6, 9, "X"],
-      "Opponent": [0, 0, 0],
+      "Innings": [
+        1,
+        2,
+        3
+      ],
+      "StAndrews": [
+        6,
+        9,
+        "X"
+      ],
+      "Opponent": [
+        0,
+        0,
+        0
+      ],
       "StAndrewsTotals": {
         "R": 15,
         "H": 3,
@@ -2170,9 +2567,33 @@
     "RecapTitle": "3 Pitchers Team Up As St. Andrew's Shuts Out FPCA",
     "Recap": "St. Andrew's defeated FPCA 9-0 on Thursday at 601 Penn Waller Rd, Savannah, GA 31410 as three pitchers combined to throw a shutout. Kelley, Harris, and Reeves each pitched for St. Andrew's Varsity Lions in the game. Harris threw out a runner after a dropped third strike to get the last out.\n\nA ground out by Navare put St. Andrew's Varsity Lions on the board in the bottom of the first.\n\nSt. Andrew's Varsity Lions added to their early lead in the bottom of the second inning after Wilcox singled up the middle, Kelley singled to center field, Searcy walked, and Reeves walked, each scoring one run.\n\nSt. Andrew's Varsity Lions added to their early lead in the bottom of the third inning after Kelley singled to right field, and Kelley popped into a fielder's choice, each scoring one run.\n\nKelley earned the win for St. Andrew's Varsity Lions. The righty gave up zero hits and zero runs over four innings, striking out eight and walking none. Cordero started the game for FPCA. The hurler allowed two hits and five runs (three earned) over one and one-third innings, striking out one and walking three. Harris and Reeves each came on in relief for St. Andrew's Varsity Lions and shutdown FPCA.\n\nNavare drove the middle of the lineup, leading St. Andrew's Varsity Lions with three runs batted in. The infielder went 1-for-2 on the day. Leadoff hitter Kelley led St. Andrew's Varsity Lions with two hits in two at bats. St. Andrew's Varsity Lions had patience at the plate, piling up nine walks for the game. Kelley, Searcy, and Kelley led the team with two bases on balls each. Kelley and Kelley each stole multiple bases for St. Andrew's Varsity Lions. St. Andrew's Varsity Lions ran wild on the base paths, tallying eight stolen bases for the game. St. Andrew's Varsity Lions were sure-handed and didn't commit a single error. Kelley made the most plays with 12.\n\nSt. Andrew's Varsity Lions welcome Colleton Prep on Saturday for their next game.",
     "LineScore": {
-      "Innings": [1, 2, 3, 4, 5, 6, 7],
-      "StAndrews": [1, 4, 2, 0, 2, 0, "X"],
-      "Opponent": [0, 0, 0, 0, 0, 0, 0],
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "StAndrews": [
+        1,
+        4,
+        2,
+        0,
+        2,
+        0,
+        "X"
+      ],
+      "Opponent": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
       "StAndrewsTotals": {
         "R": 9,
         "H": 4,
@@ -2198,9 +2619,33 @@
     "Recap": "Despite trailing by as many as four runs, St. Andrew’s rallied to defeat Colleton Prep 10-7 on Saturday.\n\nJack Kelley showed a strong eye at the plate in the win, drawing three walks in four plate appearances.\n\nColleton Prep struck first in the opening inning when Martin grounded out to bring home a run.\n\nAn error and a single by Terry helped Colleton Prep extend its early lead in the second inning.\n\nThe Lions flipped the game on its head in the bottom of the sixth, erupting for seven runs on three hits to take a 10-7 lead. The biggest blow of the inning came on a two-run double by Jack Kelley.\n\nJacob Navare earned the win for St. Andrew’s, allowing four hits and three runs (one earned) over three innings while striking out one and walking none. Patton Martin got the start for the Lions and gave up two hits and four runs (two earned) over three innings, striking out two and walking three. Terry started on the mound for Colleton Prep and surrendered three hits and two runs over four innings, striking out four and walking four. Ellis Kelley collected the save.\n\nJack Kelley, Wells Searcy, Ellis Kelley, Jacob Navare, and River Reeves each collected one hit for St. Andrew’s. Jack Kelley led the Lions with three RBIs while going 1-for-3 on the day. St. Andrew’s also showed patience at the plate, drawing 11 walks in the game. Jack Kelley and Navare led the way with three walks each. The Lions also turned one double play.\n\nFor Colleton Prep, Martin provided the biggest punch in the middle of the lineup, driving in two runs, while Terry set the tone at the top of the order with four hits in four at-bats. Colleton Prep was also aggressive on the basepaths, finishing with four stolen bases.\n\nSt. Andrew’s will face Colleton Prep again later Saturday.",
     "RecapTitle": "St. Andrew's Rally Defeats Colleton Prep",
     "LineScore": {
-      "Innings": [1, 2, 3, 4, 5, 6, 7],
-      "StAndrews": [0, 2, 0, 0, 1, 7, "X"],
-      "Opponent": [1, 3, 0, 0, 2, 1, 0],
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "StAndrews": [
+        0,
+        2,
+        0,
+        0,
+        1,
+        7,
+        "X"
+      ],
+      "Opponent": [
+        1,
+        3,
+        0,
+        0,
+        2,
+        1,
+        0
+      ],
       "StAndrewsTotals": {
         "R": 10,
         "H": 6,
@@ -2226,9 +2671,33 @@
     "Recap": "Colleton Prep defeated St. Andrew’s 11-2 on Saturday, using a six-run sixth inning to pull away.\n\nColleton Prep opened the scoring in the top of the first with the help of two walks. Smoak brought in the game’s first run after drawing a bases-loaded walk.\n\nColleton Prep broke the game open in the sixth, scoring six runs on three hits. Fisk drew a walk to force in a run, Kinard launched a grand slam to right field, and a passed ball added another run.\n\nRiver Reeves took the loss for the Lions, going three innings while allowing two runs on two hits, striking out one and walking four. Martin started for Colleton Prep and went the distance, allowing four hits and two runs (one earned) over seven innings while striking out two and walking three.\n\nJacob Navare and Harris led St. Andrew’s offensively with two hits each, and both players also drove in a run. Wilcox added two stolen bases for the Lions, who also turned one double play and played a clean game defensively without committing an error. Navare led the way in the field with five chances.\n\nFor Colleton Prep, Kinard delivered the biggest blow from the middle of the lineup, finishing with four RBIs while going 2-for-4. Fisk and Kinard each collected two hits, and Fisk also drew three walks. As a team, Colleton Prep showed patience at the plate, finishing with 11 walks, and also turned two double plays.\n\nSt. Andrew’s returns home Wednesday to face The Habersham School.",
     "RecapTitle": "Big Sixth Inning Leads Colleton Prep Past St. Andrew's",
     "LineScore": {
-      "Innings": [1, 2, 3, 4, 5, 6, 7],
-      "StAndrews": [1, 0, 0, 0, 0, 1, 0],
-      "Opponent": [2, 0, 0, 1, 0, 6, 2],
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "StAndrews": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "Opponent": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        6,
+        2
+      ],
       "StAndrewsTotals": {
         "R": 2,
         "H": 4,
@@ -2254,9 +2723,27 @@
     "RecapTitle": "St. Andrew's Takes Lead And Never Looks Back In Win Over The Habersham School",
     "Recap": "St. Andrew’s rolled to a 12-2 win over The Habersham School on Wednesday.\n\nThe Lions broke the game open in the bottom of the second inning. Ellis Kelley singled to drive in two runs, Isaac Wrieden followed with an RBI single, Jack Kelley added an RBI double, and Jacob Navare capped the inning with a run-scoring single.\n\nSt. Andrew’s added five more runs in the third. Ellis Kelley delivered another RBI single, Wrieden drew a bases-loaded walk, Navare also walked in a run, and the Lions pushed across another run on a double play.\n\nJacob Navare earned the win for St. Andrew’s, allowing no hits and no runs over three innings while striking out three and walking one. Colley started for The Habersham School and surrendered three hits and four runs over one and two-thirds innings. Lanford Harris added a scoreless inning in relief for the Lions, allowing one hit while striking out one.\n\nJack Kelley led the way offensively with three RBIs while going 1-for-2. Ellis Kelley also had a strong day at the plate, finishing 2-for-4 with three RBIs. The Lions showed patience throughout the lineup, drawing 14 walks in the game, with Jack Kelley collecting three of them. St. Andrew’s also ran aggressively on the bases, piling up 11 stolen bases, with Jack Kelley, Isaac Wrieden, and Darius Chapman each swiping multiple bags. The Lions also turned one double play.\n\nFor The Habersham School, Howard went 1-for-2 to lead the team in hits, while Howard and Fowler each drove in a run. The visitors also turned one double play.\n\nSt. Andrew’s will host Lowcountry Leadership on Saturday.",
     "LineScore": {
-      "Innings": [1, 2, 3, 4, 5],
-      "StAndrews": [0, 5, 5, 0, 2],
-      "Opponent": [0, 0, 0, 0, 2],
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "StAndrews": [
+        0,
+        5,
+        5,
+        0,
+        2
+      ],
+      "Opponent": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
       "StAndrewsTotals": {
         "R": 12,
         "H": 6,
@@ -2282,9 +2769,33 @@
     "RecapTitle": "St. Andrew's Rallies From Four Runs Down To Walk Off Lowcountry Leadership",
     "Recap": "St. Andrew's rallied from a four-run deficit to defeat Lowcountry Leadership 5-4 on Saturday.\n\nLowcountry Leadership jumped in front in the top of the first inning. An error helped bring home two runs, and Marhoefer followed with a two-run single to make it 4-0.\n\nThe Lions answered in the bottom of the third. Jacob Navare was hit by a pitch with the bases loaded to force in a run, and Lanford Harris followed with a two-run single to cut the deficit to 4-3.\n\nSt. Andrew's completed the comeback in the bottom of the seventh. After Xavier Wilcox walked and Wells Searcy reached on an error that scored courtesy runner Darius Chapman, another Lowcountry Leadership error allowed Wilcox to cross with the winning run.\n\nJacob Navare earned the win for St. Andrew's with two scoreless innings in relief, allowing no hits while striking out one. Lanford Harris started for the Lions and gave up four runs, none earned, over five innings while striking out two and walking one. Sears opened the game for Lowcountry Leadership and allowed one hit and three runs over two innings, striking out two and walking two. Peeples took the loss after allowing two runs, both unearned, over one and two-thirds innings.\n\nHarris drove in two runs to lead St. Andrew's while going 1-for-4. Harris and Isaac Wrieden each collected a hit for the Lions, who showed patience at the plate by drawing nine walks. Wells Searcy and Xavier Wilcox led the way with two walks apiece.\n\nFor Lowcountry Leadership, Marhoefer drove in two runs from the eighth spot in the lineup while going 1-for-3. Peeples, Peeples, Marhoefer, and Greene each had a hit, and Lowcountry Leadership also turned a triple play.\n\nSt. Andrew's and Lowcountry Leadership met again later Saturday.",
     "LineScore": {
-      "Innings": [1, 2, 3, 4, 5, 6, 7],
-      "StAndrews": [0, 0, 3, 0, 0, 0, 2],
-      "Opponent": [4, 0, 0, 0, 0, 0, 0],
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "StAndrews": [
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        2
+      ],
+      "Opponent": [
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
       "StAndrewsTotals": {
         "R": 5,
         "H": 2,
@@ -2310,9 +2821,33 @@
     "RecapTitle": "Early Deficit Too Much As St. Andrew’s Falls To Lowcountry Leadership",
     "Recap": "Lowcountry Leadership built an early lead and held off a late push from St. Andrew’s to secure a 9-4 win on Saturday.\n\nThe visitors jumped out quickly in the top of the first inning, scoring four runs on a combination of hits, walks, and an error. Trey Wessel delivered an RBI single, Alex Jeffords drew a bases-loaded walk, and Porter Davis followed with a two-run single to give Lowcountry Leadership a 4-0 advantage.\n\nLowcountry Leadership added another run in the second on a sacrifice fly by Wessel to extend the lead to 5-0.\n\nSt. Andrew’s broke through in the third inning. Darius Chapman reached after being hit by a pitch and later scored on a double play off the bat of Jacob Navare to get the Lions on the board.\n\nThe visitors extended their lead in the fifth inning. Jeffords led off with a solo home run, and Caleb Peeples later connected on a two-run homer as part of a four-run frame that pushed the margin to 9-1.\n\nNavare delivered again in the fifth for St. Andrew’s, driving in Isaac Wrieden with an RBI double to make it 9-2.\n\nThe Lions mounted a late rally in the seventh. Wrieden and Jack Kelley reached to start the inning, and after an error loaded the bases, Brady Grant brought home a run with a groundout. Wells Searcy followed with an RBI single to trim the deficit to 9-4, but St. Andrew’s could get no closer.\n\nWells Searcy led the Lions at the plate, going 3-for-3 with an RBI. Isaac Wrieden and Jack Kelley each collected two hits, while Navare drove in a pair of runs.\n\nBrady Grant took the loss for St. Andrew’s, allowing four runs over four innings while striking out two. River Reeves worked three innings in relief, giving up five runs while striking out three.\n\nFor Lowcountry Leadership, Porter Davis led the way with three hits and two RBIs, while Caleb Peeples and Alex Jeffords each drove in two runs. The visitors finished with 11 hits in the win.\n\nSt. Andrew’s travels to Beaufort Academy for its next game.",
     "LineScore": {
-      "Innings": [1, 2, 3, 4, 5, 6, 7],
-      "StAndrews": [0, 0, 1, 0, 1, 0, 2],
-      "Opponent": [4, 1, 0, 0, 4, 0, 0],
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "StAndrews": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        2
+      ],
+      "Opponent": [
+        4,
+        1,
+        0,
+        0,
+        4,
+        0,
+        0
+      ],
       "StAndrewsTotals": {
         "R": 4,
         "H": 8,
@@ -2338,9 +2873,24 @@
     "RecapTitle": "St. Andrew's Varsity Lions Break Game Open With Big Fourth Inning Win Over Beaufort Academy",
     "Recap": "St. Andrew's Varsity Lions used a massive fourth inning to pull away for an 11-1 win over Beaufort Academy on Tuesday.\n\nThe Lions got on the board in the second inning when a wild pitch brought home the game’s first run, but the game turned decisively in the fourth. St. Andrew’s scored 10 runs in the inning, capitalizing on hits, walks, hit batters, and defensive miscues. RBI singles from Jacob Navare, Wells Searcy, Lanford Harris, Xavier Wilcox, and Brady Grant highlighted the surge as the lineup batted around.\n\nXavier Wilcox earned the win on the mound, tossing four no-hit innings while allowing just one unearned run. He struck out five and worked around eight walks to keep Beaufort Academy off the scoreboard through most of the game.\n\nAt the plate, Harris led the way with two hits and two RBIs. Navare and Harris each drove in two runs, while Searcy scored three times. The Lions were aggressive on the bases, swiping multiple bags and applying constant pressure throughout the game.\n\nBeaufort Academy drew eight walks but was held hitless. Their lone run came in the fourth inning on an error.\n\nSt. Andrew's Varsity Lions return home Wednesday to face Westminster Schools of Augusta Varsity Wildcats.",
     "LineScore": {
-      "Innings": [1, 2, 3, 4],
-      "StAndrews": [0, 1, 0, 10],
-      "Opponent": [0, 0, 0, 1],
+      "Innings": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "StAndrews": [
+        0,
+        1,
+        0,
+        10
+      ],
+      "Opponent": [
+        0,
+        0,
+        0,
+        1
+      ],
       "StAndrewsTotals": {
         "R": 11,
         "H": 7,
@@ -2366,9 +2916,27 @@
     "RecapTitle": "Jack Kelley Powers St. Andrew’s To 12-0 Shutout Over Westminster",
     "Recap": "Jack Kelley delivered a dominant performance at the plate and on the mound to lead St. Andrew’s to a 12-0 win over Westminster Schools of Augusta on Wednesday.\n\nKelley set the tone early with a three-run home run in the first inning after Ellis Kelley was hit by a pitch and Isaac Wrieden singled. The Lions added two more runs in the third when Jacob Navare lined an RBI single to right and Lanford Harris followed with a run-scoring groundout to make it 5-0.\n\nSt. Andrew’s broke the game open in the fourth inning. Patrick Martin reached on a walk and eventually scored, and the Lions took advantage of a hit, a walk, and an error to push across three runs and extend the lead to 8-0.\n\nThe Lions added the finishing touches in the fifth. After a walk and another free pass put runners on, Kelley launched his second three-run homer of the game to left, giving him six RBIs and stretching the lead to 12-0.\n\nKelley also earned the win on the mound, throwing a complete-game shutout over five innings. He allowed just two hits while striking out seven and walking one.\n\nAt the plate, Patrick Jackson led the team with two hits, while Navare reached base multiple times and drove in a run. St. Andrew’s showed patience throughout the lineup, drawing several walks and capitalizing on Westminster miscues.\n\nWestminster managed just two hits in the game, with Rogers and Lively each recording one. The Lions also turned a double play defensively.\n\nSt. Andrew’s faced Westminster again later Wednesday in the second game of the doubleheader.",
     "LineScore": {
-      "Innings": [1, 2, 3, 4, 5],
-      "StAndrews": [3, 0, 2, 3, 4],
-      "Opponent": [0, 0, 0, 0, 0],
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "StAndrews": [
+        3,
+        0,
+        2,
+        3,
+        4
+      ],
+      "Opponent": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
       "StAndrewsTotals": {
         "R": 12,
         "H": 8,
@@ -2394,9 +2962,33 @@
     "RecapTitle": "St. Andrew's Takes Control Early, Completes Sweep Of Westminster",
     "Recap": "St. Andrew’s completed the doubleheader sweep with a 10-2 win over Westminster Schools of Augusta on Wednesday.\n\nThe Lions struck first in the opening inning when Jacob Navare lined a single to center that brought home two runs for an early 2-0 lead.\n\nWestminster answered in the third, tying the game on a sacrifice fly and an error, but St. Andrew’s quickly regained control in the bottom half. Lanford Harris delivered an RBI single, Xavier Wilcox followed with a run-scoring fielder’s choice, and Harris later stole home to push the lead to 5-2.\n\nThe Lions continued to add on throughout the game. Isaac Wrieden drove in a run with a single in the fourth, and Wilcox added another run in the fifth by stealing home to extend the lead to 7-2.\n\nSt. Andrew’s put the game away in the sixth when Jack Kelley launched a three-run home run to center, stretching the advantage to 10-2.\n\nHarris earned the win on the mound with a complete-game performance, allowing three hits and two runs (one earned) over seven innings while striking out three and walking three.\n\nAt the plate, the Lions collected 11 hits. Navare, Wells Searcy, Kelley, and Wrieden each recorded two hits, while Kelley led the team with three RBIs. Wilcox was a force on the bases, stealing three bags as St. Andrew’s totaled seven stolen bases in the game.\n\nDefensively, the Lions turned a double play and limited Westminster to just three hits. Rogers led Westminster with two hits, while Lively drove in a run.\n\nSt. Andrew’s returned to action next against Beaufort Academy.",
     "LineScore": {
-      "Innings": [1, 2, 3, 4, 5, 6, 7],
-      "StAndrews": [2, 0, 3, 1, 1, 3, "X"],
-      "Opponent": [0, 0, 2, 0, 0, 0, 0],
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "StAndrews": [
+        2,
+        0,
+        3,
+        1,
+        1,
+        3,
+        "X"
+      ],
+      "Opponent": [
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
       "StAndrewsTotals": {
         "R": 10,
         "H": 11,
@@ -2422,9 +3014,27 @@
     "RecapTitle": "Big Third Inning Sends St. Andrew’s Past Beaufort Academy",
     "Recap": "St. Andrew’s used a seven-run third inning to break open the game and roll to a 13-1 win over Beaufort Academy on Wednesday.\n\nBeaufort Academy struck first in the top of the first when Gogol doubled home a run, but the Lions answered immediately. Ellis Kelley walked to open the bottom half, Isaac Wrieden followed with an RBI single, and Jacob Navare later reached on a bunt single that brought home another run to give St. Andrew’s a 2-1 lead.\n\nThe Lions added two more runs in the second. Navare delivered an RBI single to right, and Wells Searcy followed with an RBI fielder’s choice to make it 4-1.\n\nSt. Andrew’s then put the game away in the third. Wrieden started the rally with an RBI single, Navare brought home another run on a fielder’s choice, Searcy lined a two-run single to center, and the Lions added three more runs on a series of walks and a passed ball to stretch the lead to 11-1.\n\nJack Kelley added a solo home run in the fourth, and Lanford Harris brought home the final run with a groundout later in the inning.\n\nNavare earned the win for the Lions, allowing three hits and one run over three innings while striking out two. Brady Grant and Harris each followed with scoreless relief appearances to finish the game.\n\nAt the plate, Navare led St. Andrew’s by going 3-for-4 with two RBIs, while Wrieden collected two hits and drove in two. Searcy also had two hits and a team-high three RBIs. The Lions finished with nine hits, drew 11 walks, and stole six bases.\n\nFor Beaufort Academy, Gogol drove in the only run, and Paulk collected two hits. The Lions also turned a double play and played error-free defense.\n\nSt. Andrew’s returned home Saturday to face Vidalia Heritage Academy.",
     "LineScore": {
-      "Innings": [1, 2, 3, 4, 5],
-      "StAndrews": [2, 2, 7, 2, "X"],
-      "Opponent": [1, 0, 0, 0, 0],
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "StAndrews": [
+        2,
+        2,
+        7,
+        2,
+        "X"
+      ],
+      "Opponent": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
       "StAndrewsTotals": {
         "R": 13,
         "H": 9,
@@ -2450,9 +3060,33 @@
     "RecapTitle": "Vidalia Heritage Rallies Late To Take Game 1 From St. Andrew’s",
     "Recap": "St. Andrew’s carried a lead into the seventh inning, but Vidalia Heritage Academy scored four times in the final frame to pull out a 7-5 win in the first game of Saturday’s doubleheader.\n\nThe Lions struck first in the second inning when Isaac Wrieden lifted a sacrifice fly to left, scoring Xavier Wilcox for a 1-0 lead.\n\nVidalia Heritage answered in the third on an RBI double by Trevor White, but St. Andrew’s quickly responded in the bottom half. Jacob Navare doubled to start the inning, Lanford Harris walked, and Xavier Wilcox followed with a two-run double to left. Pat Jackson then added an RBI single to give the Lions a 4-1 advantage.\n\nVidalia Heritage chipped away over the next few innings. A two-run single by Hamp McDade in the sixth cut the lead to 4-3, and St. Andrew’s added what looked like an important insurance run in the bottom of the inning when Xavier Wilcox drew a bases-loaded walk.\n\nBut the visitors broke through in the seventh. After a single and a walk to open the inning, Pearson O’Neal reached on an error to bring home one run. Gray McNeal followed with an RBI groundout to tie the game, Bragg Alford delivered a go-ahead RBI single, and another run scored later in the inning as Vidalia Heritage moved in front for good.\n\nWilcox led the St. Andrew’s offense, going 2-for-3 with three RBIs. Navare, Patton Martin, Jack Kelley, and Pat Jackson also recorded hits for the Lions, who drew 10 walks and stole nine bases in the game.\n\nNavare gave St. Andrew’s a solid start, allowing five runs, three earned, over six innings while striking out three. Lanford Harris took the loss in relief. Trevor White earned the win for Vidalia Heritage after allowing four runs over three innings, and Jake Adams picked up the save by closing out the seventh.\n\nFor Vidalia Heritage, White finished with two hits, while Hamp McDade and Alford each drove in two runs. The visitors also showed patience at the plate, drawing six walks and stealing four bases.\n\nThe two teams met again later Saturday for the second game of the doubleheader.",
     "LineScore": {
-      "Innings": [1, 2, 3, 4, 5, 6, 7],
-      "StAndrews": [0, 1, 3, 0, 0, 1, 0],
-      "Opponent": [0, 0, 1, 0, 0, 2, 4],
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "StAndrews": [
+        0,
+        1,
+        3,
+        0,
+        0,
+        1,
+        0
+      ],
+      "Opponent": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        2,
+        4
+      ],
       "StAndrewsTotals": {
         "R": 5,
         "H": 6,
@@ -2478,9 +3112,33 @@
     "RecapTitle": "Vidalia Heritage Pulls Away Early, Holds Off Late St. Andrew’s Rally",
     "Recap": "Vidalia Heritage Academy built an early lead and held off a late St. Andrew’s push to claim a 15-9 win in the second game of Saturday’s doubleheader.\n\nThe visitors jumped in front quickly with four runs in the top of the first. Pearson O’Neal singled in the opening run, Bragg Alford followed with an RBI fielder’s choice, and Levi McDade added a two-run single to make it 4-0.\n\nSt. Andrew’s answered right away in the bottom half when Jack Kelley launched a solo home run to left, but Vidalia Heritage kept the pressure on. The visitors added three more runs in the second with the help of two Lion errors, then tacked on another in the third and one more in the fourth to stretch the lead to 9-2.\n\nThe Lions chipped away in the fifth. After Brady Grant and Darius Chapman reached to open the inning, Jacob Navare, Lanford Harris, and Patton Martin each drew run-scoring walks to cut the deficit to 10-5.\n\nVidalia Heritage responded again in the sixth when Maddyx Herrin blasted a three-run home run to left as part of a four-run inning, pushing the margin to 14-5. The visitors added one more in the seventh before St. Andrew’s made one final push in the bottom half. River Reeves singled home a run, Isaac Wrieden added an RBI groundout, and the Lions drew a pair of bases-loaded walks from Jack Kelley and Jacob Navare to trim the final margin to six.\n\nJack Kelley led the St. Andrew’s offense by going 1-for-2 with a home run, two RBIs, and three walks. Navare also drove in two runs, while Grant reached base four times and scored three runs. The Lions showed excellent patience at the plate, drawing 17 walks in the game.\n\nVidalia Heritage collected 10 hits and was led by Herrin, who went 3-for-5 with a home run and three RBIs. O’Neal and Carter each added two hits, while McDade drove in three runs. The visitors also worked 10 walks and took advantage of six St. Andrew’s errors.\n\nBrady Grant, Wells Searcy, and River Reeves handled the bulk of the pitching for the Lions, who also turned three double plays in the field.\n\nSt. Andrew’s traveled to The Habersham School on Tuesday for its next game.",
     "LineScore": {
-      "Innings": [1, 2, 3, 4, 5, 6, 7],
-      "StAndrews": [1, 0, 1, 0, 3, 0, 4],
-      "Opponent": [4, 3, 1, 1, 1, 4, 1],
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "StAndrews": [
+        1,
+        0,
+        1,
+        0,
+        3,
+        0,
+        4
+      ],
+      "Opponent": [
+        4,
+        3,
+        1,
+        1,
+        1,
+        4,
+        1
+      ],
       "StAndrewsTotals": {
         "R": 9,
         "H": 5,
@@ -2506,9 +3164,27 @@
     "RecapTitle": "St. Andrew’s Breaks It Open Early In 15-4 Win Over The Habersham School",
     "Recap": "St. Andrew’s wasted no time taking control on Tuesday, erupting for seven runs in the first inning on the way to a 15-4 win over The Habersham School.\n\nThe Lions’ big opening frame began when Isaac Wrieden doubled home Ellis Kelley for the game’s first run. St. Andrew’s kept the pressure on from there, scoring on a lineout by Jack Kelley, a groundout by Brady Grant, a dropped third strike, and a hit batter before Wrieden capped the inning with a two-run single to make it 7-0.\n\nThe Habersham School answered with four runs in the bottom of the second, but St. Andrew’s quickly regained control. In the third, Jack Kelley launched a three-run home run to center field to push the lead to 10-4.\n\nThe Lions added one run in the fourth when Ellis Kelley tripled and scored Darius Chapman, then put the game away with four more runs in the fifth. Wells Searcy delivered a two-run single, River Reeves followed with an RBI double, and Pat Jackson added an RBI single.\n\nWrieden earned the win for St. Andrew’s, allowing one hit and one run while striking out four over 1 2/3 innings. The Lions used five pitchers in all, with Wells Searcy, River Reeves, and Ellis Kelley each contributing scoreless relief outings. Kelley finished the game in style, striking out the side in the fifth on just nine pitches.\n\nAt the plate, Wrieden led the way by going 3-for-3 with three RBIs and three runs scored. Jack Kelley added two hits and three RBIs, including the home run, while Searcy and Reeves each collected two hits. The Lions finished with 13 hits, drew six walks, and stole four bases.\n\nFor The Habersham School, Jones drove in two runs and Denmark and Jones each doubled. The hosts drew seven walks, but St. Andrew’s kept them off the board after the second inning.\n\nThe Lions return home Thursday to face Frederica Academy.",
     "LineScore": {
-      "Innings": [1, 2, 3, 4, 5],
-      "StAndrews": [7, 0, 3, 1, 4],
-      "Opponent": [0, 4, 0, 0, 0],
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "StAndrews": [
+        7,
+        0,
+        3,
+        1,
+        4
+      ],
+      "Opponent": [
+        0,
+        4,
+        0,
+        0,
+        0
+      ],
       "StAndrewsTotals": {
         "R": 15,
         "H": 13,
@@ -2534,9 +3210,33 @@
     "RecapTitle": "Frederica Academy Builds Early Lead To Defeat St. Andrew’s",
     "Recap": "Frederica Academy built an early lead and held off St. Andrew’s for an 8-4 win on Thursday.\n\nThe visitors struck quickly in the top of the first inning, scoring three times on a sacrifice fly by Carter, an RBI double from Sykes, and an RBI single by Watson. Frederica added three more runs in the third, highlighted by a two-run home run from Carter, to stretch the lead to 6-1.\n\nSt. Andrew’s answered in spots throughout the game. Wells Searcy drove in the Lions’ first run with an RBI single in the opening inning, and Jack Kelley added a solo home run in the third. Brady Grant later drove in a run with a single in the fifth, and River Reeves knocked in another with an RBI single in the sixth.\n\nEllis Kelley took the loss for St. Andrew’s, allowing six runs, five earned, over three innings while striking out six. Brady Grant worked four innings in relief, giving up two runs on one hit while striking out two. Sykes earned the win for Frederica Academy after allowing two runs over four innings, and White finished the final three innings in relief.\n\nJack Kelley led the Lions with two hits, while Searcy, Grant, and Reeves each drove in a run. St. Andrew’s drew six walks in the game, with Ellis Kelley reaching twice on free passes.\n\nFor Frederica Academy, Carter drove in four runs, while White, Watson, and Sykes each collected two hits. Frederica also stole four bases in the win.\n\nThe two teams met again later Thursday for the second game of the doubleheader.",
     "LineScore": {
-      "Innings": [1, 2, 3, 4, 5, 6, 7],
-      "StAndrews": [1, 0, 1, 0, 1, 1, 0],
-      "Opponent": [3, 0, 3, 0, 0, 2, 0],
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "StAndrews": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "Opponent": [
+        3,
+        0,
+        3,
+        0,
+        0,
+        2,
+        0
+      ],
       "StAndrewsTotals": {
         "R": 4,
         "H": 7,
@@ -2562,9 +3262,33 @@
     "RecapTitle": "Ellis Kelley’s Walk-Off Homer Lifts St. Andrew’s Past Frederica, Snaps 17-Game Skid",
     "Recap": "St. Andrew’s delivered one of its most dramatic wins in recent memory on Thursday, rallying late to stun Frederica Academy 7-6 on a walk-off two-run home run by Ellis Kelley. The victory snapped a 17-game losing streak against Frederica and gave the Lions a memorable split of the doubleheader.\n\nFrederica seized control early, scoring four runs in the top of the first inning with the help of five walks and two hit batters. The visitors added single runs in the fourth and fifth innings to build a 6-2 lead.\n\nSt. Andrew’s chipped away in the third when Jacob Navare was hit by a pitch with the bases loaded and Wells Searcy followed with an RBI fielder’s choice to make it 4-2. The Lions got another run in the sixth when Isaac Wrieden drew a bases-loaded walk, cutting the deficit to 6-3 and setting the stage for the final inning.\n\nThe comeback came all at once in the bottom of the seventh. Wells Searcy opened the inning with a single, and Xavier Wilcox worked a walk. River Reeves brought home the first run with a groundout, and after Darius Chapman struck out, Wilcox raced home on a wild pitch to make it 6-5. That brought Kelley to the plate, and he delivered the decisive swing, lining a two-run homer to left to send the Lions pouring out of the dugout.\n\nKelley led the offense by going 3-for-4 with the game-winning home run and two RBIs. Wrieden also drove in a run and reached base twice, while Searcy added a hit, an RBI, and scored twice.\n\nOn the mound, River Reeves earned the win by recording the final three outs in the seventh, including a pair of strikeouts. Wells Searcy gave the Lions a chance to come back with 4 2/3 innings of relief, allowing just two runs, one earned, while working around traffic all afternoon. Navare started the game and battled through a difficult first inning.\n\nFrederica finished with just five hits but drew 10 walks and was hit by five pitches. White led the Knights with three hits, while Carter, Durkin, Schmidt, Grantham, and Murray each drove in a run.\n\nSt. Andrew’s returned to the field the following week against Savannah Athletic Association, but this one will be remembered as the night the Lions finally broke through against Frederica in unforgettable fashion.",
     "LineScore": {
-      "Innings": [1, 2, 3, 4, 5, 6, 7],
-      "StAndrews": [0, 0, 2, 0, 0, 1, 4],
-      "Opponent": [4, 0, 0, 1, 1, 0, 0],
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "StAndrews": [
+        0,
+        0,
+        2,
+        0,
+        0,
+        1,
+        4
+      ],
+      "Opponent": [
+        4,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
       "StAndrewsTotals": {
         "R": 7,
         "H": 5,
@@ -2590,9 +3314,33 @@
     "RecapTitle": "St. Andrew’s Uses Combined Shutout To Open Doubleheader Sweep",
     "Recap": "St. Andrew’s opened its Thursday doubleheader against Savannah Athletic Association with a 7-0 win behind a combined shutout on the mound.\n\nThe Lions got on the board in the third inning when Ellis Kelley drove in a run on a groundout and Wells Searcy followed with a two-run single to make it 3-0.\n\nSt. Andrew’s put the game away with four more runs in the sixth. Isaac Wrieden delivered the biggest hit of the inning with a two-run single, Jack Kelley added a sacrifice fly, and Jacob Navare followed with an RBI single.\n\nLanford Harris earned the win for the Lions, throwing five scoreless innings while allowing just two hits and striking out one. Isaac Wrieden started the game and tossed two scoreless innings, striking out two and allowing no hits. Together, the pair combined on the shutout.\n\nAt the plate, Wrieden and Navare each collected two hits, while Wrieden and Searcy drove in two runs apiece. Ellis Kelley, Jack Kelley, Pat Jackson, and Xavier Wilcox also added hits as St. Andrew’s finished with nine hits on the afternoon.\n\nThe Lions were also aggressive on the bases, stealing six bags in the win. Navare swiped two bases, while Wrieden, Chapman, Searcy, and Wilcox each added one. St. Andrew’s also turned two double plays in the field.\n\nFor Savannah Athletic Association, Caines led the way with two hits, while Rafael La Sorsa threw five innings and struck out seven.\n\nThe Lions returned to the field later Thursday for the second game of the doubleheader.",
     "LineScore": {
-      "Innings": [1, 2, 3, 4, 5, 6, 7],
-      "StAndrews": [0, 0, 3, 0, 0, 4, "X"],
-      "Opponent": [0, 0, 0, 0, 0, 0, 0],
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "StAndrews": [
+        0,
+        0,
+        3,
+        0,
+        0,
+        4,
+        "X"
+      ],
+      "Opponent": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
       "StAndrewsTotals": {
         "R": 7,
         "H": 9,
@@ -2618,9 +3366,33 @@
     "RecapTitle": "Ellis Kelley Tosses Complete Game As St. Andrew’s Tops Savannah Athletic Association",
     "Recap": "St. Andrew’s rode a strong performance on the mound to a 3–1 win over Savannah Athletic Association on Thursday in the second game of the doubleheader.\n\nEllis Kelley was dominant from start to finish, throwing a complete game while allowing just three hits and one run across seven innings. He struck out four and walked one to secure the win.\n\nThe Lions broke through in the third inning when Kelley helped his own cause with a two-run home run to left field, giving St. Andrew’s a 2–0 lead.\n\nSt. Andrew’s added an insurance run in the fifth, which proved to be enough as Kelley continued to control the game on the mound.\n\nAt the plate, Jack Kelley led the way with two hits and two RBIs, while Isaac Wrieden and Jacob Navare also collected two hits each. The Lions finished with seven hits as a team.\n\nSavannah Athletic Association’s lone run came in the fifth inning. Gabe Smith drove in the run, while Smith, JW Castognia, and Ryker McClaflin each recorded a hit.\n\nTroy Devoe took the loss for Savannah Athletic Association, allowing three runs on seven hits over five innings while striking out seven.\n\nSt. Andrew’s returns to action on Thursday against Pinewood Christian.",
     "LineScore": {
-      "Innings": [1, 2, 3, 4, 5, 6, 7],
-      "StAndrews": [0, 0, 2, 0, 1, 0, "X"],
-      "Opponent": [0, 0, 0, 0, 1, 0, 0],
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "StAndrews": [
+        0,
+        0,
+        2,
+        0,
+        1,
+        0,
+        "X"
+      ],
+      "Opponent": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
       "StAndrewsTotals": {
         "R": 3,
         "H": 7,
@@ -2646,9 +3418,33 @@
     "RecapTitle": "Big First Inning Lifts Pinewood Past St. Andrew’s",
     "Recap": "Pinewood Christian Academy used a five-run first inning to take control early and went on to defeat St. Andrew’s 9-2 on Thursday.\n\nThe visitors wasted no time jumping in front. After a hit batter and a walk put runners on, Hearn doubled to bring home two runs. H. Folsom followed with a two-run double of his own, and Pinewood added two more runs on a groundout, a single, and an error to build a 5-0 lead before the Lions could record the final out of the inning.\n\nSt. Andrew’s settled in after the opening frame and showed signs of life offensively. In the third, Jack Kelley doubled and later scored on a double play off the bat of Wells Searcy to get the Lions on the board.\n\nThe Lions added another run in the fifth in unusual fashion. Ellis Kelley reached on a bunt single and eventually moved to third before stealing home to cut the deficit to 5-2.\n\nPinewood extended its lead in the sixth. The visitors took advantage of a pair of walks, a hit batter, and an error to push across three runs, highlighted by a sacrifice fly from Oates and an RBI single by H. Folsom.\n\nPinewood added one more run in the seventh on an RBI single to make it 9-2.\n\nEllis Kelley led St. Andrew’s at the plate, going 2-for-3, while Jack Kelley added a double. The Lions finished with six hits and drew five walks.\n\nIsaac Wrieden took the loss for St. Andrew’s, allowing five runs, four earned, over three innings while striking out two. Brady Grant and Jacob Navare combined to provide relief out of the bullpen.\n\nFor Pinewood, H. Folsom drove in three runs and collected two hits, while Hearn also added a pair of hits. Pinewood turned two double plays defensively in the win.\n\nThe Lions and Pinewood met again later Thursday for the second game of the doubleheader.",
     "LineScore": {
-      "Innings": [1, 2, 3, 4, 5, 6, 7],
-      "StAndrews": [0, 0, 1, 0, 1, 0, 0],
-      "Opponent": [5, 0, 0, 0, 0, 3, 1],
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "StAndrews": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "Opponent": [
+        5,
+        0,
+        0,
+        0,
+        0,
+        3,
+        1
+      ],
       "StAndrewsTotals": {
         "R": 2,
         "H": 6,
@@ -2674,9 +3470,30 @@
     "RecapTitle": "Pinewood Pulls Away In Fifth And Sixth To Sweep Doubleheader",
     "Recap": "Pinewood Christian Academy broke open a close game with six runs in the fifth inning and added four more in the sixth to defeat St. Andrew’s 11-0 on Thursday in the second game of the doubleheader.\n\nThe game remained scoreless through two innings before Pinewood broke through in the third. Wilson singled to start the frame, moved into scoring position on a sacrifice bunt, and later came home on a groundout by Oates to give the visitors a 1-0 lead.\n\nSt. Andrew’s had its best chance in the bottom of the third. Pat Jackson reached on a hit-by-pitch, Ellis Kelley followed with a single, and Jack Kelley later walked to load traffic on the bases, but Pinewood worked out of the inning without allowing a run.\n\nThe decisive blow came in the fifth. Pinewood scored six times in the inning, beginning with RBI singles by Wasson and Hearn. Oates then delivered the biggest swing of the game, launching a three-run home run to right. Tippet later added an RBI double as Pinewood stretched the lead to 7-0.\n\nThe visitors kept the pressure on in the sixth. Oates drove in another run with an RBI single, Folsom followed with a run-scoring double, and Lewis added a two-run single to push the margin to 11-0.\n\nEllis Kelley took the loss for the Lions, allowing seven runs, six earned, over five innings while striking out three. Lanford Harris worked the final inning in relief and struck out one.\n\nAt the plate, Ellis Kelley and Isaac Wrieden each recorded hits for St. Andrew’s, while Xavier Wilcox and Patton Martin also added singles. The Lions drew seven walks but were unable to break through against Pinewood starter Nobles, who tossed a complete-game shutout.\n\nFor Pinewood, Oates led the way with five RBIs, while Wasson, Hearn, Folsom, and Wilson each collected two hits. Pinewood finished with 12 hits in the win.\n\nSt. Andrew’s travels to Thomas Heyward Academy on Monday.",
     "LineScore": {
-      "Innings": [1, 2, 3, 4, 5, 6],
-      "StAndrews": [0, 0, 0, 0, 0, 0],
-      "Opponent": [0, 0, 1, 0, 6, 4],
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "StAndrews": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Opponent": [
+        0,
+        0,
+        1,
+        0,
+        6,
+        4
+      ],
       "StAndrewsTotals": {
         "R": 0,
         "H": 4,
@@ -2702,16 +3519,40 @@
     "RecapTitle": "St. Andrew’s Jumps Early, Holds Off Late Rally To Defeat Thomas Heyward",
     "Recap": "St. Andrew’s built an early lead and held off a late push from Thomas Heyward Academy to secure a 9-6 win on Monday.\n\nThe Lions wasted no time getting on the board in the first inning. Ellis Kelley and Jack Kelley each drew walks to start the rally, and after another free pass loaded the bases, Xavier Wilcox delivered a two-run single to center. Lanford Harris followed with an RBI bunt single, and additional runs scored on wild pitches and a hit batter as St. Andrew’s jumped out to a 4-0 lead.\n\nSt. Andrew’s added to its advantage in the third inning when Harris worked a walk, advanced on the bases, and eventually scored on a Thomas Heyward error to make it 5-0.\n\nThe Lions extended the lead again in the fifth. Harris singled and later came home on a wild pitch, and Jacob Navare delivered the biggest hit of the inning with a two-run single to push the margin to 9-0.\n\nThomas Heyward began to chip away in the bottom of the fifth, scoring twice on a two-run single by Hair. The hosts added another run in the sixth on a bases-loaded walk and continued to apply pressure in the seventh. An error and a pair of hits helped bring in three runs, and a sacrifice fly cut the deficit to 9-6 before the Lions recorded the final out.\n\nLanford Harris earned the win for St. Andrew’s, allowing just one hit over four scoreless innings while walking two. Brady Grant and Wells Searcy worked in relief to help close out the game.\n\nAt the plate, Harris led the way with two hits and two runs scored. Navare and Wilcox each drove in two runs, while the Lions showed strong plate discipline with nine walks and applied pressure on the bases throughout the game.\n\nThomas Heyward finished with nine hits, led by Stanley with three and Bowers with two. Hair drove in three runs to pace the offense as the hosts mounted a late comeback effort.",
     "LineScore": {
-      "Innings": [1, 2, 3, 4, 5, 6, 7],
-      "StAndrews": [4, 0, 1, 0, 4, 0, 0],
-      "Opponent": [0, 0, 0, 0, 2, 1, 3],
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "StAndrews": [
+        4,
+        0,
+        1,
+        0,
+        4,
+        0,
+        0
+      ],
+      "Opponent": [
+        0,
+        0,
+        0,
+        0,
+        2,
+        1,
+        3
+      ],
       "StAndrewsTotals": {
         "R": 9,
         "H": 5,
         "E": 2
       },
       "OpponentTotals": {
-        "R": 6, 
+        "R": 6,
         "H": 9,
         "E": 1
       }
@@ -2730,9 +3571,33 @@
     "RecapTitle": "Kelley Homers Twice As St. Andrew’s Holds Off Thomas Heyward",
     "Recap": "St. Andrew’s used an early surge and a big day from Jack Kelley to defeat Thomas Heyward Academy 8-5 on Wednesday.\n\nThe Lions got on the board in the first inning, taking advantage of a pair of Thomas Heyward errors. Isaac Wrieden reached and scored on a miscue, and Wells Searcy followed with an RBI single to give St. Andrew’s a 2-0 lead.\n\nThomas Heyward answered with a run in the second, but the Lions responded immediately. Ellis Kelley drove in a run with a single, and Jack Kelley broke the game open with a two-run home run to left, extending the lead to 5-1.\n\nSt. Andrew’s added another run in the fourth when Jacob Navare doubled to drive in Jack Kelley, pushing the advantage to 6-1.\n\nThomas Heyward chipped away in the sixth inning, scoring twice on a double by Smith and a sacrifice fly to cut the deficit to 6-3.\n\nJack Kelley delivered again in the bottom of the sixth, launching his second home run of the game—a solo shot to center—to extend the lead. Later in the inning, Darius Chapman added an RBI single to make it 8-3.\n\nThomas Heyward mounted a late rally in the seventh, scoring twice on a series of hits and taking advantage of an error and a passed ball, but the Lions held on to secure the win.\n\nJacob Navare earned the win for St. Andrew’s, working 4 2/3 innings in relief while allowing three runs. Isaac Wrieden started the game and set the tone early, and the Lions’ pitching staff combined to limit damage in key moments.\n\nAt the plate, St. Andrew’s collected 13 hits. Navare led the way with three, while Searcy, Wilcox, Kelley, and Chapman each recorded multiple hits. Kelley finished with two home runs and three RBIs to pace the offense.\n\nFor Thomas Heyward, Peeples led the team with two hits, while Smith, Peeples, Twinge, and Simcoxs each drove in a run. The visitors also turned a triple play in the fifth inning.",
     "LineScore": {
-      "Innings": [1, 2, 3, 4, 5, 6, 7],
-      "StAndrews": [2, 3, 0, 1, 0, 2, "X"],
-      "Opponent": [0, 1, 0, 0, 0, 2, 2],
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "StAndrews": [
+        2,
+        3,
+        0,
+        1,
+        0,
+        2,
+        "X"
+      ],
+      "Opponent": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        2,
+        2
+      ],
       "StAndrewsTotals": {
         "R": 8,
         "H": 13,
