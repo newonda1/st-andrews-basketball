@@ -444,6 +444,27 @@ function splitNonEmptyLines(text) {
     .filter(Boolean);
 }
 
+function inferTeamBattingHalfFromPlayByPlay(text) {
+  const matches = [];
+
+  splitNonEmptyLines(text).forEach((line) => {
+    const inningMatch = line.match(/^(Top|Bottom)\b.*-\s*(.+)$/i);
+    if (!inningMatch) return;
+
+    const half = inningMatch[1].toLowerCase();
+    const label = normalizeHeader(inningMatch[2]);
+    if (!label.includes("ST ANDREW")) return;
+    matches.push(half);
+  });
+
+  const unique = Array.from(new Set(matches));
+  if (unique.length === 1) {
+    return unique[0];
+  }
+
+  return null;
+}
+
 function escapeRegex(value) {
   return String(value ?? "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
@@ -698,7 +719,12 @@ function parseLegacyPitching(text, indexes, gameId, entriesByPlayerId, warnings)
     if (/^PITCHING\b/i.test(line) || /^TEAM\b/i.test(line)) return;
 
     const match = line.match(pitchingLineRegex);
-    if (!match) return;
+    if (!match) {
+      if (/[A-Za-z]/.test(line) && /\d/.test(line)) {
+        warnings.push(`Legacy pitching line could not be parsed: ${line.trim()}`);
+      }
+      return;
+    }
 
     const [, label, ip, hits, runs, earnedRuns, walks, strikeouts] = match;
     if (/\bTEAM\b/i.test(label)) return;
@@ -967,7 +993,7 @@ function parseLegacyPlayByPlay(text, indexes, gameId, entriesByPlayerId, options
           }
         }
 
-        if (normalizedLine.includes("HIT BY PITCH")) incrementEntryValue(entry, "HBP", 1);
+        if (normalizedLine.includes("HIT BY PITCH") && !shouldBackfillBatting) incrementEntryValue(entry, "HBP", 1);
         if (normalizedLine.includes("REACHES ON AN ERROR")) incrementEntryValue(entry, "ROE", 1);
         if (normalizedLine.includes("REACHED ON AN ERROR")) incrementEntryValue(entry, "ROE", 1);
         if (normalizedLine.includes("FIELDERS CHOICE")) incrementEntryValue(entry, "FC", 1);
@@ -1474,8 +1500,16 @@ export default function BoysBaseballAdmin() {
     const legacyWarnings = [];
     const pitchingDetailLabels = parseLegacyDetailLabels(legacyPitchingDetailText);
     const gameRecord = seasonGames.find((game) => String(game.GameID) === String(gameId)) || null;
-    const teamBattingHalf = gameRecord?.LocationType === "Away" ? "top" : "bottom";
+    const fallbackBattingHalf = gameRecord?.LocationType === "Away" ? "top" : "bottom";
+    const inferredBattingHalf = inferTeamBattingHalfFromPlayByPlay(legacyPlayByPlayText);
+    const teamBattingHalf = inferredBattingHalf || fallbackBattingHalf;
     const catcherIds = parseLegacyCatcherIds(legacyBattingText, playerIndexes);
+
+    if (inferredBattingHalf && inferredBattingHalf !== fallbackBattingHalf) {
+      legacyWarnings.push(
+        `Play-by-play indicates St. Andrew's batted in the ${inferredBattingHalf}; overriding ${gameRecord?.LocationType || "game record"} alignment for this import.`
+      );
+    }
 
     parseLegacyBatting(legacyBattingText, playerIndexes, gameId.trim(), entriesByPlayerId, legacyWarnings);
     parseLegacyDetails(legacyBattingDetailText, playerIndexes, gameId.trim(), entriesByPlayerId, legacyWarnings, "batting");
