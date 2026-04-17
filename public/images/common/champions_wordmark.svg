@@ -2,8 +2,8 @@
   <style>
     :root {
       --champions-fill: #012169;
-      --champions-outline: #000000;
-      --champions-stroke: #000000;
+      --champions-outline: #ffffff;
+      --champions-stroke: #ffffff;
     }
   </style>
   <g fill-rule="evenodd">
