@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { recordTableStyles } from "./recordTableStyles";
 
 // Turn "1978" into "1978–79", leave labels that already have a dash/en dash alone.
 function formatSeasonLabel(rawSeason) {
@@ -348,36 +349,45 @@ function YearlyResults() {
   const coachTotals = calculateCoachTotals();
   const totals = calculateTotals();
 
+  const pageClassName =
+    "mx-auto max-w-6xl space-y-[clamp(1.75rem,4vw,2.5rem)] px-4 pb-10 pt-2 lg:pb-40";
+  const sectionClassName = "space-y-[clamp(0.5rem,1.3vw,0.875rem)]";
+  const sectionTitleClassName =
+    "text-center font-bold text-[clamp(1.25rem,5vw,1.5rem)]";
+  const notesWrapClassName =
+    "flex flex-col items-center justify-center gap-[clamp(0.15rem,0.5vw,0.35rem)]";
+  const totalRowClassName = "bg-gray-100 font-bold";
+
   return (
-    <div className="space-y-10 px-4">
+    <div className={pageClassName}>
       {/* Coaching totals */}
-      <div className="space-y-2">
-        <h1 className="text-2xl font-bold text-center">Coaching Records</h1>
+      <div className={sectionClassName}>
+        <h1 className={sectionTitleClassName}>Coaching Records</h1>
 
         <div className="overflow-x-auto">
-          <table className="min-w-full table-auto text-sm border text-center">
+          <table className={recordTableStyles.outerTable}>
             <thead className="bg-gray-200 font-bold">
               <tr>
-                <th className="border px-2 py-1">Coach</th>
-                <th className="border px-2 py-1">Years</th>
-                <th className="border px-2 py-1">Overall Record</th>
-                <th className="border px-2 py-1">Win %</th>
-                <th className="border px-2 py-1">Notes (Season Results)</th>
+                <th className={recordTableStyles.headerCell}>Coach</th>
+                <th className={recordTableStyles.headerCell}>Years</th>
+                <th className={recordTableStyles.headerCell}>Overall Record</th>
+                <th className={recordTableStyles.headerCell}>Win %</th>
+                <th className={recordTableStyles.headerCell}>Notes (Season Results)</th>
               </tr>
             </thead>
             <tbody>
               {coachTotals.map((coach) => (
                 <tr key={coach.coach}>
-                  <td className="border px-2 py-1">{coach.coach}</td>
-                  <td className="border px-2 py-1">{coach.years}</td>
-                  <td className="border px-2 py-1">
+                  <td className={recordTableStyles.bodyCell}>{coach.coach}</td>
+                  <td className={recordTableStyles.bodyCell}>{coach.years}</td>
+                  <td className={recordTableStyles.bodyCell}>
                     {formatRecord(coach.overallW, coach.overallL)}
                   </td>
-                  <td className="border px-2 py-1">
+                  <td className={recordTableStyles.bodyCell}>
                     {formatWinPct(coach.overallW, coach.overallL)}
                   </td>
-                  <td className="border px-2 py-1 text-center align-middle">
-                    <div className="flex flex-col items-center justify-center">
+                  <td className={recordTableStyles.bodyCell}>
+                    <div className={notesWrapClassName}>
                       {coach.notes.map((note, idx) => (
                         <div key={idx}>{note}</div>
                       ))}
@@ -390,29 +400,29 @@ function YearlyResults() {
         </div>
       </div>
 
-      <h1 className="text-2xl font-bold text-center">
+      <h1 className={sectionTitleClassName}>
         Full Year-by-Year Results
       </h1>
 
       <div className="overflow-x-auto">
-        <table className="min-w-full table-auto text-sm border text-center">
+        <table className={recordTableStyles.outerTable}>
           <thead className="bg-gray-200 font-bold">
             <tr>
-              <th className="border px-2 py-1">Season</th>
-              <th className="border px-2 py-1">Coach</th>
-              <th className="border px-2 py-1">Overall</th>
-              <th className="border px-2 py-1">Region</th>
-              <th className="border px-2 py-1">Home</th>
-              <th className="border px-2 py-1">Away</th>
-              <th className="border px-2 py-1">Other</th>
-              <th className="border px-2 py-1">Playoffs</th>
-              <th className="border px-2 py-1">Season Result</th>
+              <th className={recordTableStyles.headerCell}>Season</th>
+              <th className={recordTableStyles.headerCell}>Coach</th>
+              <th className={recordTableStyles.headerCell}>Overall</th>
+              <th className={recordTableStyles.headerCell}>Region</th>
+              <th className={recordTableStyles.headerCell}>Home</th>
+              <th className={recordTableStyles.headerCell}>Away</th>
+              <th className={recordTableStyles.headerCell}>Other</th>
+              <th className={recordTableStyles.headerCell}>Playoffs</th>
+              <th className={recordTableStyles.headerCell}>Season Result</th>
             </tr>
           </thead>
           <tbody>
             {seasonStats.map((season) => (
               <tr key={season.seasonKey}>
-                <td className="border px-2 py-1">
+                <td className={recordTableStyles.bodyCell}>
                   <Link
                     to={`/athletics/boys/basketball/seasons/${season.routeSlug}`}
                     className="text-blue-600 hover:underline"
@@ -420,51 +430,51 @@ function YearlyResults() {
                     {season.displaySeason}
                   </Link>
                 </td>
-                <td className="border px-2 py-1">{season.coach}</td>
-                <td className="border px-2 py-1">
+                <td className={recordTableStyles.bodyCell}>{season.coach}</td>
+                <td className={recordTableStyles.bodyCell}>
                   {formatRecord(season.overallW, season.overallL)}
                 </td>
-                <td className="border px-2 py-1">
+                <td className={recordTableStyles.bodyCell}>
                   {formatRecord(season.regionW, season.regionL)}
                 </td>
-                <td className="border px-2 py-1">
+                <td className={recordTableStyles.bodyCell}>
                   {formatRecord(season.homeW, season.homeL)}
                 </td>
-                <td className="border px-2 py-1">
+                <td className={recordTableStyles.bodyCell}>
                   {formatRecord(season.awayW, season.awayL)}
                 </td>
-                <td className="border px-2 py-1">
+                <td className={recordTableStyles.bodyCell}>
                   {formatRecord(season.tourneyW, season.tourneyL)}
                 </td>
-                <td className="border px-2 py-1">
+                <td className={recordTableStyles.bodyCell}>
                   {formatRecord(season.playoffW, season.playoffL)}
                 </td>
-                <td className="border px-2 py-1">{season.result}</td>
+                <td className={recordTableStyles.bodyCell}>{season.result}</td>
               </tr>
             ))}
 
-            <tr className="font-bold bg-gray-100">
-              <td className="border px-2 py-1">Totals</td>
-              <td className="border px-2 py-1"></td>
-              <td className="border px-2 py-1">
+            <tr className={totalRowClassName}>
+              <td className={recordTableStyles.bodyCell}>Totals</td>
+              <td className={recordTableStyles.bodyCell}></td>
+              <td className={recordTableStyles.bodyCell}>
                 {formatRecord(totals.overallW, totals.overallL)}
               </td>
-              <td className="border px-2 py-1">
+              <td className={recordTableStyles.bodyCell}>
                 {formatRecord(totals.regionW, totals.regionL)}
               </td>
-              <td className="border px-2 py-1">
+              <td className={recordTableStyles.bodyCell}>
                 {formatRecord(totals.homeW, totals.homeL)}
               </td>
-              <td className="border px-2 py-1">
+              <td className={recordTableStyles.bodyCell}>
                 {formatRecord(totals.awayW, totals.awayL)}
               </td>
-              <td className="border px-2 py-1">
+              <td className={recordTableStyles.bodyCell}>
                 {formatRecord(totals.tourneyW, totals.tourneyL)}
               </td>
-              <td className="border px-2 py-1">
+              <td className={recordTableStyles.bodyCell}>
                 {formatRecord(totals.playoffW, totals.playoffL)}
               </td>
-              <td className="border px-2 py-1"></td>
+              <td className={recordTableStyles.bodyCell}></td>
             </tr>
           </tbody>
         </table>
