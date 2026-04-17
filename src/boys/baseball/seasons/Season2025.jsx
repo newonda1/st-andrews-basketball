@@ -2,6 +2,11 @@ import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 
 const SEASON_ID = 2025;
+const seasonRecapParagraphs = [
+  "The 2025 season marked the beginning of a new chapter for St. Andrew's baseball as Stephen Vaughn took over in his first year as head coach, succeeding long-time coach Scott Abernathy. The record finished at 3-16, but the season was about more than the final results. With only two home games on the schedule while the program's field fell out of use ahead of the school's new multi-purpose turf athletic field project, the Lions spent nearly the entire spring learning on the road and adjusting to a season that rarely felt settled.",
+  "Even through that challenge, there were real signs of growth. St. Andrew's broke through with decisive wins over Hardeeville twice and The Habersham School, including 18-run outbursts in two of those victories, and the Lions showed more fight as the spring moved along. A more competitive stretch in April, highlighted by a 9-4 road game and a 13-9 home game against Coastal HomeSchool, reflected a team that kept pushing even when the scoreboard did not fully reward the effort.",
+  "There were also bright individual sparks that hinted at the future. Jack Kelley provided consistent offense throughout the year, Jhett Reeves delivered one of the season's signature performances with a 15-strikeout outing against Hardeeville, and several younger pieces began to settle into larger roles. Although the year ended with another difficult record, Vaughn's first season still felt like a foundation year, one that offered glimpses of the program the Lions hoped to become in the seasons ahead.",
+];
 
 function baseballInningsToOuts(value) {
   if (value == null || value === "") return 0;
@@ -506,6 +511,15 @@ export default function Season2025() {
   return (
     <div className="pt-2 pb-10 lg:pb-40 space-y-8 max-w-6xl mx-auto">
       <h1 className="text-3xl font-bold text-center mb-2">2025 Season</h1>
+
+      <section>
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Season Recap</h2>
+        <div className="rounded-lg border border-gray-200 bg-white p-5 shadow space-y-4 text-gray-800 leading-7">
+          {seasonRecapParagraphs.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+        </div>
+      </section>
 
       <section>
         <h2 className="text-2xl font-semibold mt-8 mb-4">Schedule &amp; Results</h2>
