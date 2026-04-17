@@ -111,6 +111,25 @@ function totalFieldingInnings(stats) {
   );
 }
 
+function extractGameDateKey(gameId) {
+  const text = String(gameId ?? "");
+  const match = text.match(/^(\d{8})/);
+  return match ? Number(match[1]) : NaN;
+}
+
+function todayDateKey() {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, "0");
+  const day = String(now.getDate()).padStart(2, "0");
+  return Number(`${year}${month}${day}`);
+}
+
+function isFutureGame(game, currentDateKey) {
+  const gameDateKey = extractGameDateKey(game?.GameID);
+  return Number.isFinite(gameDateKey) && gameDateKey > currentDateKey;
+}
+
 function getSeasonKey(game) {
   if (game?.SeasonID != null && String(game.SeasonID).trim() !== "") {
     return String(game.SeasonID).trim();
@@ -409,9 +428,11 @@ export default function FullTeamStats() {
         }
 
         const totalsBySeason = new Map();
+        const currentDateKey = todayDateKey();
 
         for (const game of gamesData) {
           if (!game?.GameID) continue;
+          if (isFutureGame(game, currentDateKey)) continue;
 
           const seasonKey = getSeasonKey(game);
           if (!totalsBySeason.has(seasonKey)) {
