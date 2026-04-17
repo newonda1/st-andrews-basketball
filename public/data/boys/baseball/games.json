@@ -1407,7 +1407,42 @@
     "Result": "L",
     "TeamScore": 0,
     "OpponentScore": 17,
-    "Season": 2022
+    "Season": 2022,
+    "RecapTitle": "Pinewood Christian Pulls Away For 17-0 Playoff Win Over St. Andrew's",
+    "Recap": "Pinewood Christian completed a playoff doubleheader sweep with a 17-0 win over St. Andrew's in the nightcap on Monday. The Patriots scored three runs in the first inning, added three more in the second, broke the game open with eight in the fourth, and closed the scoring with three in the fifth.\n\nSt. Andrew's was limited to two hits, and both came off the bat of Gabe Barnhill, who finished 2-for-2. Andrew Bacon and Alec Waters each drew a walk, and Cameron Helle reached after being hit by a pitch. Barnhill also stole two bases for the Lions.\n\nLuke Peaster started on the mound and worked two innings. Bacon followed in relief before Tripp Jackson recorded the final five outs. Pinewood Christian was aggressive throughout the night, with Banks Booth delivering the biggest blows with an inside-the-park home run in the second inning and a bases-clearing triple in the fourth.\n\nDefensively, the Lions turned in several clean outs in the field, but Pinewood capitalized on five St. Andrew's errors and a string of free passes to create separation. The loss closed out the Lions' 2022 season.",
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "StAndrews": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Opponent": [
+        3,
+        3,
+        0,
+        8,
+        3
+      ],
+      "StAndrewsTotals": {
+        "R": 0,
+        "H": 2,
+        "E": 5
+      },
+      "OpponentTotals": {
+        "R": 17,
+        "H": 7,
+        "E": 0
+      }
+    }
   },
   {
     "GameID": 2023022301,
