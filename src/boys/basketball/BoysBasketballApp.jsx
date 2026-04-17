@@ -137,6 +137,7 @@ export default function BoysBasketballApp() {
       menuTitle="Boys' Basketball"
       menuSections={menuSections}
       athleticsHomePath="/athletics"
+      headerHomePath="/athletics/boys/basketball"
     >
       <div className="pb-12 lg:pb-24">
         <Routes>

@@ -107,6 +107,7 @@ export default function BoysBaseballApp() {
       menuTitle="Boys' Baseball"
       menuSections={menuSections}
       athleticsHomePath="/athletics"
+      headerHomePath="/athletics/boys/baseball"
     >
       <Routes>
         <Route index element={<YearlyResults />} />

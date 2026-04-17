@@ -151,6 +151,7 @@ export default function AthleticsProgramShell({
   menuSections = [],
   children,
   athleticsHomePath = "/athletics",
+  headerHomePath = athleticsHomePath,
   showFooter = true,
 }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -177,7 +178,7 @@ export default function AthleticsProgramShell({
       <header style={styles.header} className="h-20 sm:h-24">
         <div style={styles.topBar} className="h-full px-3 py-3 sm:px-6 sm:py-4">
           <Link
-            to={athleticsHomePath}
+            to={headerHomePath}
             style={styles.logoLink}
             className="min-w-0 gap-2 sm:gap-3"
           >
