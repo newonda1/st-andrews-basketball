@@ -3,7 +3,13 @@ import { Link } from "react-router-dom";
 import AthleticsProgramShell from "./components/AthleticsProgramShell";
 
 const BANNER_SHAPE = {
-  clipPath: "polygon(0 0, 100% 0, 100% calc(100% - 58px), 50% 100%, 0 calc(100% - 58px))",
+  clipPath:
+    "polygon(20px 0, calc(100% - 20px) 0, 100% 24px, 100% calc(100% - 58px), 50% 100%, 0 calc(100% - 58px), 0 24px)",
+};
+
+const HEADER_PLATE_SHAPE = {
+  clipPath:
+    "polygon(16px 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%, 0 16px)",
 };
 
 const SCHOOL_LOGO = "/images/common/logo.png";
@@ -79,22 +85,36 @@ function SportBanner({ sport }) {
 
       <article
         style={BANNER_SHAPE}
-        className="relative flex h-full min-h-[31rem] flex-col overflow-hidden border-[3px] border-slate-200 bg-slate-500 px-3 pb-24 pt-4 text-white shadow-xl transition duration-300 group-hover:-translate-y-1 group-hover:shadow-2xl sm:min-h-[34rem] sm:px-4 sm:pt-5"
+        className="relative flex h-full min-h-[31rem] flex-col overflow-hidden border-[3px] border-slate-200 bg-slate-500 px-3 pb-24 pt-5 text-white shadow-xl transition duration-300 group-hover:-translate-y-1 group-hover:shadow-2xl sm:min-h-[34rem] sm:px-4 sm:pt-6"
       >
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.22),_transparent_42%)]" />
+        <div className="pointer-events-none absolute inset-x-5 top-3 h-[3px] bg-white/75" />
+        <div className="pointer-events-none absolute inset-x-6 top-[1.15rem] h-px bg-slate-900/35" />
+        <div className="pointer-events-none absolute left-4 top-4 h-3.5 w-3.5 rounded-full border border-white/75 bg-slate-900/35 shadow-[inset_0_1px_1px_rgba(255,255,255,0.35)]" />
+        <div className="pointer-events-none absolute right-4 top-4 h-3.5 w-3.5 rounded-full border border-white/75 bg-slate-900/35 shadow-[inset_0_1px_1px_rgba(255,255,255,0.35)]" />
 
-        <header className="relative">
-          <div className="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-x-3 rounded-2xl border border-white/20 bg-white/[0.08] px-[clamp(0.9rem,2vw,1.25rem)] py-[clamp(0.9rem,1.8vw,1.15rem)] shadow-inner shadow-black/10">
-            <img
-              src={sport.icon}
-              alt=""
-              aria-hidden="true"
-              className="h-[clamp(2.8rem,5vw,3.5rem)] w-[clamp(2.8rem,5vw,3.5rem)] shrink-0 object-contain drop-shadow-[0_4px_8px_rgba(15,23,42,0.35)]"
-              loading="lazy"
-            />
-            <h2 className="min-w-0 text-left text-[clamp(0.95rem,0.82rem+0.45vw,1.16rem)] font-black uppercase leading-[1.12] tracking-[0.14em] text-white [text-wrap:balance] sm:tracking-[0.18em]">
-              {sport.name}
-            </h2>
+        <header className="relative pt-5 sm:pt-6">
+          <div
+            style={HEADER_PLATE_SHAPE}
+            className="relative overflow-hidden border border-white/30 bg-[linear-gradient(180deg,rgba(255,255,255,0.22),rgba(255,255,255,0.08)_42%,rgba(15,23,42,0.18))] px-[clamp(0.95rem,2.2vw,1.35rem)] py-[clamp(1rem,2vw,1.3rem)] shadow-[inset_0_1px_0_rgba(255,255,255,0.25),0_12px_24px_rgba(15,23,42,0.16)]"
+          >
+            <div className="pointer-events-none absolute inset-x-0 top-0 h-10 bg-[linear-gradient(180deg,rgba(255,255,255,0.2),transparent)]" />
+            <div className="pointer-events-none absolute inset-x-4 top-3 h-px bg-white/45" />
+            <div className="relative mb-3 text-center text-[0.56rem] font-bold uppercase tracking-[0.34em] text-blue-100/90 sm:text-[0.62rem]">
+              Championship Tradition
+            </div>
+            <div className="relative grid grid-cols-[auto_minmax(0,1fr)] items-center gap-x-3">
+              <img
+                src={sport.icon}
+                alt=""
+                aria-hidden="true"
+                className="h-[clamp(2.8rem,5vw,3.5rem)] w-[clamp(2.8rem,5vw,3.5rem)] shrink-0 object-contain drop-shadow-[0_4px_8px_rgba(15,23,42,0.35)]"
+                loading="lazy"
+              />
+              <h2 className="min-w-0 text-left text-[clamp(0.95rem,0.82rem+0.45vw,1.16rem)] font-black uppercase leading-[1.12] tracking-[0.14em] text-white [text-wrap:balance] sm:tracking-[0.18em]">
+                {sport.name}
+              </h2>
+            </div>
           </div>
         </header>
 
