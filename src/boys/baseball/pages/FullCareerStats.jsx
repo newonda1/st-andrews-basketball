@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
+import { recordTableStyles } from "./recordTableStyles";
 
 function absUrl(path) {
   return new URL(path, window.location.origin).toString();
@@ -422,15 +423,15 @@ export default function FullCareerStats() {
       )}
 
       <div className="overflow-x-auto">
-        <table className="min-w-full table-auto text-xs border text-center">
+        <table className={recordTableStyles.outerTable}>
           <thead className="bg-gray-200 font-bold">
             <tr>
-              <th className="border px-2 py-1">Player</th>
-              <th className="border px-2 py-1">Class</th>
+              <th className={`${recordTableStyles.headerCell} whitespace-nowrap`}>Player</th>
+              <th className={`${recordTableStyles.headerCell} whitespace-nowrap`}>Class</th>
               {activeView.columns.map((column) => (
                 <th
                   key={column.key}
-                  className="border px-2 py-1 cursor-pointer select-none hover:bg-gray-300"
+                  className={`${recordTableStyles.headerCell} cursor-pointer select-none hover:bg-gray-300 whitespace-nowrap`}
                   onClick={() => handleSort(column.key)}
                 >
                   {column.label}
@@ -446,13 +447,13 @@ export default function FullCareerStats() {
                 key={row.playerId}
                 className={`border-t ${index % 2 === 0 ? "bg-white" : "bg-gray-50"}`}
               >
-                <td className="border px-2 py-2">
-                  <div className="flex items-center justify-start gap-2 min-w-[180px]">
+                <td className={`${recordTableStyles.bodyCell} min-w-[180px]`}>
+                  <div className={recordTableStyles.playerWrapStart}>
                     {row.playerImg ? (
                       <img
                         src={row.playerImg}
                         alt={row.playerName}
-                        className="h-8 w-8 rounded-full object-cover"
+                        className={recordTableStyles.headshot}
                         loading="lazy"
                         onError={(e) => {
                           e.currentTarget.onerror = null;
@@ -463,22 +464,22 @@ export default function FullCareerStats() {
                       <img
                         src={FALLBACK_HEADSHOT}
                         alt={row.playerName}
-                        className="h-8 w-8 rounded-full object-cover"
+                        className={recordTableStyles.headshot}
                         loading="lazy"
                       />
                     )}
 
                     <Link
                       to={`/athletics/boys/baseball/players/${row.playerId}`}
-                      className="text-left hover:underline"
+                      className="min-w-0 max-w-full whitespace-normal break-words text-left leading-tight hover:underline"
                     >
                       {row.playerName}
                     </Link>
                   </div>
                 </td>
-                <td className="border px-2 py-2">{row.gradYear ?? "—"}</td>
+                <td className={`${recordTableStyles.bodyCell} whitespace-nowrap`}>{row.gradYear ?? "—"}</td>
                 {activeView.columns.map((column) => (
-                  <td key={column.key} className="border px-2 py-2">
+                  <td key={column.key} className={`${recordTableStyles.bodyCell} whitespace-nowrap`}>
                     {column.render(row)}
                   </td>
                 ))}

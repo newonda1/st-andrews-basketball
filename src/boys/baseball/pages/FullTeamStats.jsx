@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
+import { recordTableStyles } from "./recordTableStyles";
 
 function absUrl(path) {
   return new URL(path, window.location.origin).toString();
@@ -286,7 +287,6 @@ const VIEW_CONFIG = {
       { key: "RunsScored", label: "RS", sortValue: (row) => row.RunsScored, render: (row) => formatValue(row.RunsScored) },
       { key: "RunsAllowed", label: "RA", sortValue: (row) => row.RunsAllowed, render: (row) => formatValue(row.RunsAllowed) },
       { key: "RunDiff", label: "DIFF", sortValue: (row) => row.RunsScored - row.RunsAllowed, render: (row) => formatValue(row.RunsScored - row.RunsAllowed) },
-      { key: "BoxGames", label: "Box G", sortValue: (row) => row.DetailedGames, render: (row) => `${row.DetailedGames}/${row.Games}` },
     ],
   },
   batting: {
@@ -295,7 +295,6 @@ const VIEW_CONFIG = {
     columns: [
       { key: "Season", label: "Season", sortValue: (row) => safeNum(row.Season), render: (row) => row.Season },
       { key: "Games", label: "G", sortValue: (row) => row.Games, render: (row) => formatValue(row.Games) },
-      { key: "BoxGames", label: "Box G", sortValue: (row) => row.DetailedGames, render: (row) => `${row.DetailedGames}/${row.Games}` },
       { key: "PA", label: "PA", sortValue: (row) => numericSortValue(row.DetailedGames > 0 ? row.PA : NaN), render: (row) => renderAvailable(row.PA, row.DetailedGames > 0) },
       { key: "AB", label: "AB", sortValue: (row) => numericSortValue(row.DetailedGames > 0 ? row.AB : NaN), render: (row) => renderAvailable(row.AB, row.DetailedGames > 0) },
       { key: "R", label: "R", sortValue: (row) => row.RunsScored, render: (row) => formatValue(row.RunsScored) },
@@ -327,7 +326,6 @@ const VIEW_CONFIG = {
     columns: [
       { key: "Season", label: "Season", sortValue: (row) => safeNum(row.Season), render: (row) => row.Season },
       { key: "Games", label: "G", sortValue: (row) => row.Games, render: (row) => formatValue(row.Games) },
-      { key: "BoxGames", label: "Box G", sortValue: (row) => row.DetailedGames, render: (row) => `${row.DetailedGames}/${row.Games}` },
       { key: "IP", label: "IP", sortValue: (row) => numericSortValue(row.DetailedGames > 0 ? row.IPOuts : NaN), render: (row) => renderAvailable(outsToBaseballInnings(row.IPOuts), row.DetailedGames > 0, 1) },
       { key: "BF", label: "BF", sortValue: (row) => numericSortValue(row.DetailedGames > 0 ? row.BF : NaN), render: (row) => renderAvailable(row.BF, row.DetailedGames > 0) },
       { key: "Pitches", label: "P", sortValue: (row) => numericSortValue(row.DetailedGames > 0 ? row.Pitches : NaN), render: (row) => renderAvailable(row.Pitches, row.DetailedGames > 0) },
@@ -357,7 +355,6 @@ const VIEW_CONFIG = {
     columns: [
       { key: "Season", label: "Season", sortValue: (row) => safeNum(row.Season), render: (row) => row.Season },
       { key: "Games", label: "G", sortValue: (row) => row.Games, render: (row) => formatValue(row.Games) },
-      { key: "BoxGames", label: "Box G", sortValue: (row) => row.DetailedGames, render: (row) => `${row.DetailedGames}/${row.Games}` },
       { key: "INN", label: "INN", sortValue: (row) => numericSortValue(row.DetailedGames > 0 ? totalFieldingInnings(row) : NaN), render: (row) => renderAvailable(totalFieldingInnings(row), row.DetailedGames > 0, 1) },
       { key: "PO", label: "PO", sortValue: (row) => numericSortValue(row.DetailedGames > 0 ? row.PO : NaN), render: (row) => renderAvailable(row.PO, row.DetailedGames > 0) },
       { key: "A", label: "A", sortValue: (row) => numericSortValue(row.DetailedGames > 0 ? row.A : NaN), render: (row) => renderAvailable(row.A, row.DetailedGames > 0) },
@@ -555,10 +552,6 @@ export default function FullTeamStats() {
         })}
       </div>
 
-      <p className="mx-auto max-w-4xl text-center text-xs italic text-gray-500">
-        `Box G` shows how many games in that season include player box-score detail from `playergamestats.json`. Result columns use all games from `games.json`, counting columns use every available box score with line-score fallbacks for hits and errors when possible, and advanced rate stats only appear when a season has box-score detail for every game.
-      </p>
-
       {error && (
         <div className="rounded border border-red-200 bg-red-50 p-3 whitespace-pre-wrap text-red-700">
           {error}
@@ -566,13 +559,13 @@ export default function FullTeamStats() {
       )}
 
       <div className="overflow-x-auto">
-        <table className="min-w-full table-auto text-xs border text-center">
+        <table className={recordTableStyles.outerTable}>
           <thead className="bg-gray-200 font-bold">
             <tr>
               {activeView.columns.map((column) => (
                 <th
                   key={column.key}
-                  className="border px-2 py-1 cursor-pointer select-none hover:bg-gray-300 whitespace-nowrap"
+                  className={`${recordTableStyles.headerCell} cursor-pointer select-none hover:bg-gray-300 whitespace-nowrap`}
                   onClick={() => handleSort(column.key)}
                 >
                   {column.label}
@@ -589,7 +582,7 @@ export default function FullTeamStats() {
                 className={`border-t ${index % 2 === 0 ? "bg-white" : "bg-gray-50"}`}
               >
                 {activeView.columns.map((column) => (
-                  <td key={column.key} className="border px-2 py-2 whitespace-nowrap">
+                  <td key={column.key} className={`${recordTableStyles.bodyCell} whitespace-nowrap`}>
                     {column.render(row)}
                   </td>
                 ))}
@@ -598,6 +591,10 @@ export default function FullTeamStats() {
           </tbody>
         </table>
       </div>
+
+      <p className="mx-auto max-w-4xl text-center text-xs italic text-gray-500">
+        Totals are calculated from all available season statistics. Some seasons may not include every stat category for every game, so certain totals or rate stats may be based on the available data for that season.
+      </p>
     </div>
   );
 }
