@@ -354,8 +354,19 @@ function YearlyResults() {
   const sectionClassName = "space-y-[clamp(0.5rem,1.3vw,0.875rem)]";
   const sectionTitleClassName =
     "text-center font-bold text-[clamp(1.25rem,5vw,1.5rem)]";
+  const tableClassName =
+    "w-full table-auto border text-center text-[clamp(0.64rem,0.95vw,1rem)] md:mx-auto md:w-max";
+  const headerCellClassName = `${recordTableStyles.headerCell} whitespace-nowrap`;
+  const numericCellClassName = `${recordTableStyles.bodyCell} whitespace-nowrap`;
+  const textCellClassName = `${recordTableStyles.bodyCell} md:text-left`;
+  const compactTextCellClassName =
+    `${recordTableStyles.bodyCell} whitespace-nowrap md:text-left`;
+  const notesCellClassName =
+    `${recordTableStyles.bodyCell} md:min-w-[30rem] md:text-left`;
   const notesWrapClassName =
-    "flex flex-col items-center justify-center gap-[clamp(0.15rem,0.5vw,0.35rem)]";
+    "grid gap-x-[clamp(1rem,2vw,1.75rem)] gap-y-[clamp(0.15rem,0.5vw,0.35rem)] md:text-left lg:grid-cols-2";
+  const resultCellClassName =
+    `${recordTableStyles.bodyCell} md:min-w-[22rem] md:text-left`;
   const totalRowClassName = "bg-gray-100 font-bold";
 
   return (
@@ -365,28 +376,28 @@ function YearlyResults() {
         <h1 className={sectionTitleClassName}>Coaching Records</h1>
 
         <div className="overflow-x-auto">
-          <table className={recordTableStyles.outerTable}>
+          <table className={tableClassName}>
             <thead className="bg-gray-200 font-bold">
               <tr>
-                <th className={recordTableStyles.headerCell}>Coach</th>
-                <th className={recordTableStyles.headerCell}>Years</th>
-                <th className={recordTableStyles.headerCell}>Overall Record</th>
-                <th className={recordTableStyles.headerCell}>Win %</th>
-                <th className={recordTableStyles.headerCell}>Notes (Season Results)</th>
+                <th className={`${headerCellClassName} md:text-left`}>Coach</th>
+                <th className={headerCellClassName}>Years</th>
+                <th className={headerCellClassName}>Overall Record</th>
+                <th className={headerCellClassName}>Win %</th>
+                <th className={`${headerCellClassName} md:text-left`}>Notes (Season Results)</th>
               </tr>
             </thead>
             <tbody>
               {coachTotals.map((coach) => (
                 <tr key={coach.coach}>
-                  <td className={recordTableStyles.bodyCell}>{coach.coach}</td>
-                  <td className={recordTableStyles.bodyCell}>{coach.years}</td>
-                  <td className={recordTableStyles.bodyCell}>
+                  <td className={compactTextCellClassName}>{coach.coach}</td>
+                  <td className={numericCellClassName}>{coach.years}</td>
+                  <td className={numericCellClassName}>
                     {formatRecord(coach.overallW, coach.overallL)}
                   </td>
-                  <td className={recordTableStyles.bodyCell}>
+                  <td className={numericCellClassName}>
                     {formatWinPct(coach.overallW, coach.overallL)}
                   </td>
-                  <td className={recordTableStyles.bodyCell}>
+                  <td className={notesCellClassName}>
                     <div className={notesWrapClassName}>
                       {coach.notes.map((note, idx) => (
                         <div key={idx}>{note}</div>
@@ -405,76 +416,76 @@ function YearlyResults() {
       </h1>
 
       <div className="overflow-x-auto">
-        <table className={recordTableStyles.outerTable}>
+        <table className={tableClassName}>
           <thead className="bg-gray-200 font-bold">
             <tr>
-              <th className={recordTableStyles.headerCell}>Season</th>
-              <th className={recordTableStyles.headerCell}>Coach</th>
-              <th className={recordTableStyles.headerCell}>Overall</th>
-              <th className={recordTableStyles.headerCell}>Region</th>
-              <th className={recordTableStyles.headerCell}>Home</th>
-              <th className={recordTableStyles.headerCell}>Away</th>
-              <th className={recordTableStyles.headerCell}>Other</th>
-              <th className={recordTableStyles.headerCell}>Playoffs</th>
-              <th className={recordTableStyles.headerCell}>Season Result</th>
+              <th className={headerCellClassName}>Season</th>
+              <th className={`${headerCellClassName} md:text-left`}>Coach</th>
+              <th className={headerCellClassName}>Overall</th>
+              <th className={headerCellClassName}>Region</th>
+              <th className={headerCellClassName}>Home</th>
+              <th className={headerCellClassName}>Away</th>
+              <th className={headerCellClassName}>Other</th>
+              <th className={headerCellClassName}>Playoffs</th>
+              <th className={`${headerCellClassName} md:text-left`}>Season Result</th>
             </tr>
           </thead>
           <tbody>
             {seasonStats.map((season) => (
               <tr key={season.seasonKey}>
-                <td className={recordTableStyles.bodyCell}>
+                <td className={numericCellClassName}>
                   <Link
                     to={`/athletics/boys/basketball/seasons/${season.routeSlug}`}
-                    className="text-blue-600 hover:underline"
+                    className="whitespace-nowrap text-blue-600 hover:underline"
                   >
                     {season.displaySeason}
                   </Link>
                 </td>
-                <td className={recordTableStyles.bodyCell}>{season.coach}</td>
-                <td className={recordTableStyles.bodyCell}>
+                <td className={compactTextCellClassName}>{season.coach}</td>
+                <td className={numericCellClassName}>
                   {formatRecord(season.overallW, season.overallL)}
                 </td>
-                <td className={recordTableStyles.bodyCell}>
+                <td className={numericCellClassName}>
                   {formatRecord(season.regionW, season.regionL)}
                 </td>
-                <td className={recordTableStyles.bodyCell}>
+                <td className={numericCellClassName}>
                   {formatRecord(season.homeW, season.homeL)}
                 </td>
-                <td className={recordTableStyles.bodyCell}>
+                <td className={numericCellClassName}>
                   {formatRecord(season.awayW, season.awayL)}
                 </td>
-                <td className={recordTableStyles.bodyCell}>
+                <td className={numericCellClassName}>
                   {formatRecord(season.tourneyW, season.tourneyL)}
                 </td>
-                <td className={recordTableStyles.bodyCell}>
+                <td className={numericCellClassName}>
                   {formatRecord(season.playoffW, season.playoffL)}
                 </td>
-                <td className={recordTableStyles.bodyCell}>{season.result}</td>
+                <td className={resultCellClassName}>{season.result}</td>
               </tr>
             ))}
 
             <tr className={totalRowClassName}>
-              <td className={recordTableStyles.bodyCell}>Totals</td>
-              <td className={recordTableStyles.bodyCell}></td>
-              <td className={recordTableStyles.bodyCell}>
+              <td className={textCellClassName}>Totals</td>
+              <td className={textCellClassName}></td>
+              <td className={numericCellClassName}>
                 {formatRecord(totals.overallW, totals.overallL)}
               </td>
-              <td className={recordTableStyles.bodyCell}>
+              <td className={numericCellClassName}>
                 {formatRecord(totals.regionW, totals.regionL)}
               </td>
-              <td className={recordTableStyles.bodyCell}>
+              <td className={numericCellClassName}>
                 {formatRecord(totals.homeW, totals.homeL)}
               </td>
-              <td className={recordTableStyles.bodyCell}>
+              <td className={numericCellClassName}>
                 {formatRecord(totals.awayW, totals.awayL)}
               </td>
-              <td className={recordTableStyles.bodyCell}>
+              <td className={numericCellClassName}>
                 {formatRecord(totals.tourneyW, totals.tourneyL)}
               </td>
-              <td className={recordTableStyles.bodyCell}>
+              <td className={numericCellClassName}>
                 {formatRecord(totals.playoffW, totals.playoffL)}
               </td>
-              <td className={recordTableStyles.bodyCell}></td>
+              <td className={textCellClassName}></td>
             </tr>
           </tbody>
         </table>
