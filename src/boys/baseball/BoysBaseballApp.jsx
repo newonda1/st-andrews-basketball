@@ -18,6 +18,7 @@ import GameDetail from "./pages/GameDetail";
 import PlayerPage from "./pages/PlayerPage";
 import RecordsVsOpponents from "./pages/RecordsVsOpponents";
 import FullCareerStats from "./pages/FullCareerStats";
+import FullTeamStats from "./pages/FullTeamStats";
 import SingleGameRecords from "./pages/SingleGameRecords";
 import SeasonRecords from "./pages/SeasonRecords";
 import CareerRecords from "./pages/CareerRecords";
@@ -108,6 +109,7 @@ export default function BoysBaseballApp() {
       <Routes>
         <Route index element={<YearlyResults />} />
 
+        <Route path="team/full" element={<FullTeamStats />} />
         <Route path="records/career" element={<FullCareerStats />} />
         <Route path="records/season" element={<SeasonRecords />} />
         <Route path="records/career-records" element={<CareerRecords />} />
