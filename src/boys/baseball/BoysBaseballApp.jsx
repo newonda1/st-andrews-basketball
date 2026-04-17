@@ -19,6 +19,8 @@ import PlayerPage from "./pages/PlayerPage";
 import RecordsVsOpponents from "./pages/RecordsVsOpponents";
 import FullCareerStats from "./pages/FullCareerStats";
 import FullTeamStats from "./pages/FullTeamStats";
+import TeamSingleGameRecords from "./pages/TeamSingleGameRecords";
+import TeamSeasonRecords from "./pages/TeamSeasonRecords";
 import SingleGameRecords from "./pages/SingleGameRecords";
 import SeasonRecords from "./pages/SeasonRecords";
 import CareerRecords from "./pages/CareerRecords";
@@ -58,11 +60,11 @@ const menuSections = [
       },
       {
         to: "/athletics/boys/baseball/records/team",
-        label: "Team Records (Single Game)",
+        label: "Team Single Game Records",
       },
       {
         to: "/athletics/boys/baseball/team/season-records",
-        label: "Team Records (Season)",
+        label: "Team Season Records",
       },
     ],
   },
@@ -110,19 +112,12 @@ export default function BoysBaseballApp() {
         <Route index element={<YearlyResults />} />
 
         <Route path="team/full" element={<FullTeamStats />} />
+        <Route path="team/season-records" element={<TeamSeasonRecords />} />
         <Route path="records/career" element={<FullCareerStats />} />
         <Route path="records/season" element={<SeasonRecords />} />
         <Route path="records/career-records" element={<CareerRecords />} />
         <Route path="records/single-game" element={<SingleGameRecords />} />
-        <Route
-          path="records/team"
-          element={
-            <PlaceholderPage
-              title="Team Records"
-              text="This page will eventually show baseball team records."
-            />
-          }
-        />
+        <Route path="records/team" element={<TeamSingleGameRecords />} />
         <Route path="records/opponents" element={<RecordsVsOpponents />} />
 
         {seasonPages.map(({ slug, Component }) => (
