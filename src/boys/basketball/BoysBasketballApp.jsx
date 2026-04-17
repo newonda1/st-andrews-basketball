@@ -133,26 +133,28 @@ export default function BoysBasketballApp() {
       menuSections={menuSections}
       athleticsHomePath="/athletics"
     >
-      <Routes>
-        <Route index element={<Home />} />
+      <div className="pb-12 lg:pb-24">
+        <Routes>
+          <Route index element={<Home />} />
 
-        <Route path="records/career" element={<FullCareerStats />} />
-        <Route path="records/season" element={<SeasonRecords />} />
-        <Route path="records/single-game" element={<SingleGameRecords />} />
-        <Route path="records/team" element={<TeamRecords />} />
-        <Route path="records/opponents" element={<RecordsVsOpponents />} />
+          <Route path="records/career" element={<FullCareerStats />} />
+          <Route path="records/season" element={<SeasonRecords />} />
+          <Route path="records/single-game" element={<SingleGameRecords />} />
+          <Route path="records/team" element={<TeamRecords />} />
+          <Route path="records/opponents" element={<RecordsVsOpponents />} />
 
-        {seasonPages.map(({ slug, Component }) => (
-          <Route key={slug} path={`seasons/${slug}`} element={<Component />} />
-        ))}
-        <Route path="seasons/:seasonId" element={<SeasonPlaceholder />} />
+          {seasonPages.map(({ slug, Component }) => (
+            <Route key={slug} path={`seasons/${slug}`} element={<Component />} />
+          ))}
+          <Route path="seasons/:seasonId" element={<SeasonPlaceholder />} />
 
-        <Route path="yearly-results" element={<YearlyResults />} />
-        <Route path="games/:gameId" element={<GameDetailRouter />} />
-        <Route path="players/:playerId" element={<PlayerPage />} />
+          <Route path="yearly-results" element={<YearlyResults />} />
+          <Route path="games/:gameId" element={<GameDetailRouter />} />
+          <Route path="players/:playerId" element={<PlayerPage />} />
 
-        <Route path="*" element={<Home />} />
-      </Routes>
+          <Route path="*" element={<Home />} />
+        </Routes>
+      </div>
     </AthleticsProgramShell>
   );
 }
