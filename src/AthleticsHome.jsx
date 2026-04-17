@@ -48,17 +48,17 @@ const menuSections = [
 
 function ChampionshipSection({ title, years }) {
   return (
-    <section className="rounded-2xl border border-white/20 bg-white/[0.08] px-3 py-3 shadow-inner shadow-black/10 backdrop-blur-[1px] sm:px-4">
+    <section className="rounded-2xl border border-white/20 bg-white/[0.08] px-3.5 py-3.5 shadow-inner shadow-black/10 backdrop-blur-[1px] sm:px-4 sm:py-4">
       <h3 className="text-[0.6rem] font-bold uppercase tracking-[0.22em] text-blue-100 sm:text-[0.68rem]">
         {title}
       </h3>
 
       {years.length > 0 ? (
-        <div className="mt-2 grid grid-cols-2 gap-x-3 gap-y-1.5 lg:grid-cols-4">
+        <div className="mt-3 flex flex-wrap justify-center gap-x-[clamp(0.75rem,1.8vw,1.5rem)] gap-y-2">
           {years.map((year) => (
             <div
               key={`${title}-${year}`}
-              className="text-[0.76rem] font-black leading-tight tracking-[0.09em] text-white sm:text-[0.86rem]"
+              className="min-w-[4.1rem] text-center text-[clamp(0.8rem,0.74rem+0.2vw,0.92rem)] font-black leading-none tracking-[0.08em] text-white"
             >
               {year}
             </div>
@@ -84,15 +84,15 @@ function SportBanner({ sport }) {
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.22),_transparent_42%)]" />
 
         <header className="relative">
-          <div className="flex items-center justify-center gap-3 rounded-2xl border border-white/20 bg-white/[0.08] px-3 py-3 shadow-inner shadow-black/10">
+          <div className="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-x-3 rounded-2xl border border-white/20 bg-white/[0.08] px-[clamp(0.9rem,2vw,1.25rem)] py-[clamp(0.9rem,1.8vw,1.15rem)] shadow-inner shadow-black/10">
             <img
               src={sport.icon}
               alt=""
               aria-hidden="true"
-              className="h-12 w-12 shrink-0 object-contain drop-shadow-[0_4px_8px_rgba(15,23,42,0.35)] sm:h-14 sm:w-14"
+              className="h-[clamp(2.8rem,5vw,3.5rem)] w-[clamp(2.8rem,5vw,3.5rem)] shrink-0 object-contain drop-shadow-[0_4px_8px_rgba(15,23,42,0.35)]"
               loading="lazy"
             />
-            <h2 className="text-left text-[0.98rem] font-black uppercase leading-tight tracking-[0.16em] text-white sm:text-[1.08rem]">
+            <h2 className="min-w-0 text-left text-[clamp(0.95rem,0.82rem+0.45vw,1.16rem)] font-black uppercase leading-[1.12] tracking-[0.14em] text-white [text-wrap:balance] sm:tracking-[0.18em]">
               {sport.name}
             </h2>
           </div>
@@ -111,12 +111,12 @@ function SportBanner({ sport }) {
           ) : null}
         </div>
 
-        <div className="relative mt-5 flex justify-center">
+        <div className="relative mt-6 flex justify-center pt-2">
           <img
             src={SCHOOL_LOGO}
             alt=""
             aria-hidden="true"
-            className="w-20 object-contain drop-shadow-[0_10px_18px_rgba(15,23,42,0.38)] transition duration-300 group-hover:scale-105 sm:w-24"
+            className="w-[clamp(5.25rem,18vw,6.25rem)] object-contain drop-shadow-[0_10px_18px_rgba(15,23,42,0.38)] transition duration-300 group-hover:scale-105"
             loading="lazy"
           />
         </div>
@@ -146,7 +146,7 @@ function AthleticsHome() {
               </p>
             </div>
 
-            <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-8 grid grid-cols-[repeat(auto-fit,minmax(min(100%,17rem),1fr))] gap-5">
               {sports.map((sport) => (
                 <SportBanner key={sport.name} sport={sport} />
               ))}
