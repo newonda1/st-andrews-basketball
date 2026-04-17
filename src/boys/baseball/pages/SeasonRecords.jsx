@@ -2,6 +2,7 @@
 
 import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
+import { recordTableStyles } from "./recordTableStyles";
 
 function absUrl(path) {
   return new URL(path, window.location.origin).toString();
@@ -309,13 +310,13 @@ export default function SeasonRecords() {
       )}
 
       <div className="overflow-x-auto">
-        <table className="min-w-full table-auto text-xs border text-center">
+        <table className={recordTableStyles.outerTable}>
           <thead className="bg-gray-200 font-bold">
             <tr>
-              <th className="border px-2 py-1">Record</th>
-              <th className="border px-2 py-1">Player</th>
-              <th className="border px-2 py-1">Value</th>
-              <th className="border px-2 py-1">Season</th>
+              <th className={recordTableStyles.headerCell}>Record</th>
+              <th className={recordTableStyles.headerCell}>Player</th>
+              <th className={recordTableStyles.headerCell}>Value</th>
+              <th className={recordTableStyles.headerCell}>Season</th>
             </tr>
           </thead>
 
@@ -323,7 +324,7 @@ export default function SeasonRecords() {
             {sectionDefs.map((section) => (
               <React.Fragment key={section.title}>
                 <tr className="border-t bg-blue-50">
-                  <td className="border px-2 py-2 text-left font-bold text-blue-900" colSpan={4}>
+                  <td className={recordTableStyles.sectionCell} colSpan={4}>
                     {section.title}
                   </td>
                 </tr>
@@ -343,14 +344,14 @@ export default function SeasonRecords() {
                         onClick={() => toggleExpanded(def.key)}
                         className={`border-t cursor-pointer hover:bg-gray-100 ${isOpen ? "bg-gray-50" : "bg-white"}`}
                       >
-                        <td className="border px-2 py-2 font-semibold">{def.label}</td>
-                        <td className="border px-2 py-2">
-                          <div className="flex items-center justify-center gap-2">
+                        <td className={`${recordTableStyles.bodyCell} font-semibold`}>{def.label}</td>
+                        <td className={recordTableStyles.bodyCell}>
+                          <div className={recordTableStyles.playerWrap}>
                             {top?.playerImg && topPlayer !== "—" && topPlayer !== "Unknown" ? (
                               <img
                                 src={top.playerImg}
                                 alt={topPlayer}
-                                className="h-7 w-7 rounded-full object-cover"
+                                className={recordTableStyles.headshot}
                                 loading="lazy"
                                 onError={(e) => {
                                   e.currentTarget.onerror = null;
@@ -372,23 +373,23 @@ export default function SeasonRecords() {
                             )}
                           </div>
                         </td>
-                        <td className="border px-2 py-2 font-semibold">
+                        <td className={`${recordTableStyles.bodyCell} font-semibold`}>
                           {topValue === "—" ? topValue : formatRecordValue(topValue)}
                         </td>
-                        <td className="border px-2 py-2">{topSeason}</td>
+                        <td className={recordTableStyles.bodyCell}>{topSeason}</td>
                       </tr>
 
                       {isOpen && (
                         <tr className="border-t">
-                          <td className="border px-2 py-2" colSpan={4}>
+                          <td className={recordTableStyles.bodyCell} colSpan={4}>
                             <div className="overflow-x-auto">
-                              <table className="min-w-full table-auto text-xs border text-center">
+                              <table className={recordTableStyles.innerTable}>
                                 <thead className="bg-gray-200 font-bold">
                                   <tr>
-                                    <th className="border px-2 py-1">#</th>
-                                    <th className="border px-2 py-1">Player</th>
-                                    <th className="border px-2 py-1">{def.abbr}</th>
-                                    <th className="border px-2 py-1">Season</th>
+                                    <th className={recordTableStyles.headerCell}>#</th>
+                                    <th className={recordTableStyles.headerCell}>Player</th>
+                                    <th className={recordTableStyles.headerCell}>{def.abbr}</th>
+                                    <th className={recordTableStyles.headerCell}>Season</th>
                                   </tr>
                                 </thead>
                                 <tbody>
@@ -398,19 +399,19 @@ export default function SeasonRecords() {
                                       className={`border-t ${
                                         r._placeholder
                                           ? "bg-white text-gray-400"
-                                          : idx % 2 === 0
+                                        : idx % 2 === 0
                                           ? "bg-white"
                                           : "bg-gray-50"
                                       }`}
                                     >
-                                      <td className="border px-2 py-1 font-semibold">{idx + 1}</td>
-                                      <td className="border px-2 py-1">
-                                        <div className="flex items-center justify-center gap-2">
+                                      <td className={`${recordTableStyles.detailCell} font-semibold`}>{idx + 1}</td>
+                                      <td className={recordTableStyles.detailCell}>
+                                        <div className={recordTableStyles.playerWrap}>
                                           {r.playerImg && r.playerName !== "—" && r.playerName !== "Unknown" ? (
                                             <img
                                               src={r.playerImg}
                                               alt={r.playerName}
-                                              className="h-7 w-7 rounded-full object-cover"
+                                              className={recordTableStyles.headshot}
                                               loading="lazy"
                                               onError={(e) => {
                                                 e.currentTarget.onerror = null;
@@ -432,10 +433,10 @@ export default function SeasonRecords() {
                                           )}
                                         </div>
                                       </td>
-                                      <td className="border px-2 py-1 font-semibold">
+                                      <td className={`${recordTableStyles.detailCell} font-semibold`}>
                                         {r.value === "—" ? r.value : formatRecordValue(r.value)}
                                       </td>
-                                      <td className="border px-2 py-1">{r.season}</td>
+                                      <td className={recordTableStyles.detailCell}>{r.season}</td>
                                     </tr>
                                   ))}
                                 </tbody>
