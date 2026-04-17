@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import FullCareerStats from "./pages/FullCareerStats";
 import SeasonRecords from "./pages/SeasonRecords";
 import SingleGameRecords from "./pages/SingleGameRecords";
+import CareerRecords from "./pages/CareerRecords";
 import TeamRecords from "./pages/TeamRecords";
 import RecordsVsOpponents from "./pages/RecordsVsOpponents";
 import YearlyResults from "./pages/YearlyResults";
@@ -68,6 +69,10 @@ const menuSections = [
       {
         to: "/athletics/boys/basketball/records/season",
         label: "Season Records",
+      },
+      {
+        to: "/athletics/boys/basketball/records/career-records",
+        label: "Career Records",
       },
     ],
   },
@@ -140,6 +145,7 @@ export default function BoysBasketballApp() {
           <Route path="records/career" element={<FullCareerStats />} />
           <Route path="records/season" element={<SeasonRecords />} />
           <Route path="records/single-game" element={<SingleGameRecords />} />
+          <Route path="records/career-records" element={<CareerRecords />} />
           <Route path="records/team" element={<TeamRecords />} />
           <Route path="records/opponents" element={<RecordsVsOpponents />} />
 
