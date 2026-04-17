@@ -79,7 +79,7 @@ function SportBanner({ sport }) {
 
       <article
         style={BANNER_SHAPE}
-        className="relative flex h-full min-h-[31rem] flex-col overflow-hidden border-[3px] border-slate-200 bg-slate-500 px-3 pb-20 pt-4 text-white shadow-xl transition duration-300 group-hover:-translate-y-1 group-hover:shadow-2xl sm:min-h-[34rem] sm:px-4 sm:pt-5"
+        className="relative flex h-full min-h-[31rem] flex-col overflow-hidden border-[3px] border-slate-200 bg-slate-500 px-3 pb-24 pt-4 text-white shadow-xl transition duration-300 group-hover:-translate-y-1 group-hover:shadow-2xl sm:min-h-[34rem] sm:px-4 sm:pt-5"
       >
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.22),_transparent_42%)]" />
 
@@ -111,12 +111,12 @@ function SportBanner({ sport }) {
           ) : null}
         </div>
 
-        <div className="relative mt-6 flex justify-center pt-2">
+        <div className="relative mt-6 flex translate-y-2 justify-center pt-4">
           <img
             src={SCHOOL_LOGO}
             alt=""
             aria-hidden="true"
-            className="w-[clamp(5.25rem,18vw,6.25rem)] object-contain drop-shadow-[0_10px_18px_rgba(15,23,42,0.38)] transition duration-300 group-hover:scale-105"
+            className="w-[clamp(9.2rem,31.5vw,10.95rem)] object-contain drop-shadow-[0_10px_18px_rgba(15,23,42,0.38)] transition duration-300 group-hover:scale-105"
             loading="lazy"
           />
         </div>
