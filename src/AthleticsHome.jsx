@@ -76,12 +76,12 @@ function SportBannerHeader({ sport }) {
     <div className="relative overflow-hidden rounded-[1.8rem] border border-white/18 bg-[linear-gradient(180deg,rgba(255,255,255,0.14),rgba(255,255,255,0.05)_58%,rgba(15,23,42,0.14))] px-4 pb-4 pt-3 shadow-inner shadow-black/10">
       <div className="pointer-events-none absolute inset-x-5 top-0 h-12 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.28),transparent_72%)]" />
 
-      <div className="relative mx-auto h-[11.1rem] w-full max-w-[15rem]">
+      <div className="relative mx-auto h-[11.85rem] w-full max-w-[15.75rem]">
         <img
           src={CHAMPIONS_WORDMARK}
           alt=""
           aria-hidden="true"
-          className="absolute left-1/2 top-0 w-[92%] max-w-[13.4rem] -translate-x-1/2 object-contain drop-shadow-[0_6px_10px_rgba(15,23,42,0.16)]"
+          className="absolute left-1/2 top-[-0.1rem] w-full max-w-[15.25rem] -translate-x-1/2 object-contain drop-shadow-[0_6px_10px_rgba(15,23,42,0.16)]"
           loading="lazy"
         />
 
@@ -116,12 +116,12 @@ function SportBannerHeader({ sport }) {
           src={sport.icon}
           alt=""
           aria-hidden="true"
-          className="absolute left-1/2 top-[5rem] h-[4.8rem] w-[4.8rem] -translate-x-1/2 object-contain drop-shadow-[0_10px_16px_rgba(15,23,42,0.32)]"
+          className="absolute left-1/2 top-[5.35rem] h-[4.8rem] w-[4.8rem] -translate-x-1/2 object-contain drop-shadow-[0_10px_16px_rgba(15,23,42,0.32)]"
           loading="lazy"
         />
       </div>
 
-      <h2 className="relative -mt-1 text-center text-[clamp(1rem,0.86rem+0.52vw,1.24rem)] font-black uppercase leading-[1.08] tracking-[0.16em] text-white [text-wrap:balance]">
+      <h2 className="relative -mt-0.5 text-center text-[clamp(1rem,0.86rem+0.52vw,1.24rem)] font-black uppercase leading-[1.08] tracking-[0.16em] text-white [text-wrap:balance]">
         {sport.name}
       </h2>
     </div>
