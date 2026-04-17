@@ -84,35 +84,46 @@ function SportBannerHeader({ sport }) {
           className="absolute inset-0 h-full w-full overflow-visible"
         >
           <defs>
-            <path id={arcId} d="M 56 116 A 104 104 0 0 1 264 116" />
+            <path id={arcId} d="M 34 126 A 126 126 0 0 1 286 126" />
           </defs>
           <path
-            d="M 56 116 A 104 104 0 0 1 264 116"
+            d="M 34 126 A 126 126 0 0 1 286 126"
             fill="none"
-            stroke="rgba(255,255,255,0.32)"
+            stroke="rgba(255,255,255,0.24)"
             strokeWidth="2"
           />
           <path
-            d="M 74 116 A 86 86 0 0 1 246 116"
+            d="M 52 126 A 108 108 0 0 1 268 126"
             fill="none"
-            stroke="rgba(255,255,255,0.14)"
+            stroke="rgba(255,255,255,0.12)"
             strokeWidth="1"
           />
           <circle
             cx="160"
-            cy="113"
+            cy="117"
             r="45"
             fill="rgba(255,255,255,0.08)"
             stroke="rgba(255,255,255,0.18)"
             strokeWidth="1.5"
           />
           <text
-            fill="rgba(255,255,255,0.97)"
-            fontSize="18"
-            fontWeight="800"
-            letterSpacing="7"
+            fill="rgba(255,255,255,0.98)"
+            stroke="rgba(15,23,42,0.5)"
+            strokeWidth="3.5"
+            paintOrder="stroke fill"
+            fontFamily="Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif"
+            fontSize="30"
+            fontWeight="900"
+            letterSpacing="2"
+            transform="translate(-30 0) scale(1.18 1)"
           >
-            <textPath href={`#${arcId}`} startOffset="50%" textAnchor="middle">
+            <textPath
+              href={`#${arcId}`}
+              startOffset="50%"
+              textAnchor="middle"
+              lengthAdjust="spacingAndGlyphs"
+              textLength="248"
+            >
               CHAMPIONS
             </textPath>
           </text>
@@ -122,7 +133,7 @@ function SportBannerHeader({ sport }) {
           src={sport.icon}
           alt=""
           aria-hidden="true"
-          className="absolute left-1/2 top-[4.25rem] h-[4.8rem] w-[4.8rem] -translate-x-1/2 object-contain drop-shadow-[0_10px_16px_rgba(15,23,42,0.32)]"
+          className="absolute left-1/2 top-[4.55rem] h-[4.8rem] w-[4.8rem] -translate-x-1/2 object-contain drop-shadow-[0_10px_16px_rgba(15,23,42,0.32)]"
           loading="lazy"
         />
       </div>
