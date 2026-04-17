@@ -7,6 +7,7 @@ const BANNER_SHAPE = {
     "polygon(20px 0, calc(100% - 20px) 0, 100% 24px, 100% calc(100% - 58px), 50% 100%, 0 calc(100% - 58px), 0 24px)",
 };
 
+const CHAMPIONS_NAVY = "#012169";
 const CHAMPIONS_WORDMARK = "/images/common/champions_wordmark.svg";
 const SCHOOL_LOGO = "/images/common/logo.png";
 const SPORT_NAME_FONT_FAMILY =
@@ -52,8 +53,8 @@ const menuSections = [
 
 function ChampionshipSection({ title, years }) {
   return (
-    <section className="rounded-2xl border border-white/20 bg-white/[0.08] px-3.5 py-3.5 shadow-inner shadow-black/10 backdrop-blur-[1px] sm:px-4 sm:py-4">
-      <h3 className="text-[0.6rem] font-bold uppercase tracking-[0.22em] text-blue-100 sm:text-[0.68rem]">
+    <section className="mx-1.5 rounded-2xl border border-white/20 bg-white/[0.08] px-3.5 py-3.5 shadow-inner shadow-black/10 backdrop-blur-[1px] sm:mx-2 sm:px-4 sm:py-4">
+      <h3 className="text-center text-[0.6rem] font-bold uppercase tracking-[0.22em] text-blue-100 sm:text-[0.68rem]">
         {title}
       </h3>
 
@@ -75,7 +76,7 @@ function ChampionshipSection({ title, years }) {
 
 function SportBannerHeader({ sport }) {
   return (
-    <div className="relative overflow-hidden rounded-[1.8rem] border border-white/18 bg-[linear-gradient(180deg,rgba(255,255,255,0.14),rgba(255,255,255,0.05)_58%,rgba(15,23,42,0.14))] px-4 pb-3 pt-2.5 shadow-inner shadow-black/10">
+    <div className="relative mx-1.5 overflow-hidden rounded-[1.8rem] border border-white/18 bg-[linear-gradient(180deg,rgba(255,255,255,0.14),rgba(255,255,255,0.05)_58%,rgba(15,23,42,0.14))] px-4 pb-3 pt-2.5 shadow-inner shadow-black/10 sm:mx-2">
       <div className="pointer-events-none absolute inset-x-5 top-0 h-12 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.28),transparent_72%)]" />
 
       <div className="relative mx-auto h-[9.35rem] w-full max-w-[15.75rem]">
@@ -112,24 +113,36 @@ function SportBanner({ sport }) {
       to={sport.to}
       className="group relative block h-full rounded-[2rem] focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-300/60 focus-visible:ring-offset-4"
     >
-      <div className="absolute inset-x-3 bottom-2 top-6 rounded-[2rem] bg-slate-900/10 blur-xl transition duration-300 group-hover:bg-slate-900/20" />
+      <div className="absolute inset-x-2 bottom-1 top-5 rounded-[2rem] bg-slate-900/18 blur-2xl transition duration-300 group-hover:bg-slate-900/28" />
 
       <article
         style={BANNER_SHAPE}
-        className="relative flex h-full min-h-[31rem] flex-col overflow-hidden px-3 pb-24 pt-5 text-white shadow-xl transition duration-300 group-hover:-translate-y-1 group-hover:shadow-2xl sm:min-h-[34rem] sm:px-4 sm:pt-6"
+        className="relative flex h-full min-h-[31rem] flex-col overflow-hidden px-3 pb-24 pt-5 text-white shadow-[0_18px_38px_rgba(15,23,42,0.18),0_6px_14px_rgba(15,23,42,0.1)] transition duration-300 group-hover:-translate-y-1 group-hover:shadow-[0_24px_44px_rgba(15,23,42,0.22),0_10px_18px_rgba(15,23,42,0.14)] sm:min-h-[34rem] sm:px-4 sm:pt-6"
       >
         <div
           style={BANNER_SHAPE}
-          className="pointer-events-none absolute inset-0 bg-black"
-        />
+          className="pointer-events-none absolute inset-0"
+          aria-hidden="true"
+        >
+          <div
+            className="h-full w-full"
+            style={{ ...BANNER_SHAPE, backgroundColor: CHAMPIONS_NAVY }}
+          />
+        </div>
         <div
           style={BANNER_SHAPE}
           className="pointer-events-none absolute inset-[4px] bg-white"
         />
         <div
           style={BANNER_SHAPE}
-          className="pointer-events-none absolute inset-[8px] bg-black"
-        />
+          className="pointer-events-none absolute inset-[8px]"
+          aria-hidden="true"
+        >
+          <div
+            className="h-full w-full"
+            style={{ ...BANNER_SHAPE, backgroundColor: CHAMPIONS_NAVY }}
+          />
+        </div>
         <div
           style={BANNER_SHAPE}
           className="pointer-events-none absolute inset-[12px] bg-slate-500"
