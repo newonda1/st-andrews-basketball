@@ -5,10 +5,12 @@ import AthleticsProgramShell from "../../components/AthleticsProgramShell";
 
 import Home from "./pages/Home";
 import FullCareerStats from "./pages/FullCareerStats";
+import FullTeamStats from "./pages/FullTeamStats";
 import SeasonRecords from "./pages/SeasonRecords";
 import SingleGameRecords from "./pages/SingleGameRecords";
 import CareerRecords from "./pages/CareerRecords";
-import TeamRecords from "./pages/TeamRecords";
+import TeamSingleGameRecords from "./pages/TeamSingleGameRecords";
+import TeamSeasonRecords from "./pages/TeamSeasonRecords";
 import RecordsVsOpponents from "./pages/RecordsVsOpponents";
 import YearlyResults from "./pages/YearlyResults";
 import GameDetail from "./pages/GameDetail";
@@ -50,8 +52,16 @@ const menuSections = [
     title: "Team Stats",
     links: [
       {
+        to: "/athletics/boys/basketball/team/full",
+        label: "Full Team Stats",
+      },
+      {
         to: "/athletics/boys/basketball/records/team",
-        label: "Team Records",
+        label: "Team Single Game Records",
+      },
+      {
+        to: "/athletics/boys/basketball/team/season-records",
+        label: "Team Season Records",
       },
     ],
   },
@@ -143,11 +153,13 @@ export default function BoysBasketballApp() {
         <Routes>
           <Route index element={<Home />} />
 
+          <Route path="team/full" element={<FullTeamStats />} />
+          <Route path="team/season-records" element={<TeamSeasonRecords />} />
           <Route path="records/career" element={<FullCareerStats />} />
           <Route path="records/season" element={<SeasonRecords />} />
           <Route path="records/single-game" element={<SingleGameRecords />} />
           <Route path="records/career-records" element={<CareerRecords />} />
-          <Route path="records/team" element={<TeamRecords />} />
+          <Route path="records/team" element={<TeamSingleGameRecords />} />
           <Route path="records/opponents" element={<RecordsVsOpponents />} />
 
           {seasonPages.map(({ slug, Component }) => (
