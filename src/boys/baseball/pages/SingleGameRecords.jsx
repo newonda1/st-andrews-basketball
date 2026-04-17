@@ -342,13 +342,13 @@ export default function SingleGameRecords() {
                             {topPlayerId && topPlayer !== "—" && topPlayer !== "Unknown" ? (
                               <Link
                                 to={`/athletics/boys/baseball/players/${topPlayerId}`}
-                                className="hover:underline"
+                                className={recordTableStyles.playerLink}
                                 onClick={(e) => e.stopPropagation()}
                               >
                                 {topPlayer}
                               </Link>
                             ) : (
-                              <span>{topPlayer}</span>
+                              <span className={recordTableStyles.playerText}>{topPlayer}</span>
                             )}
                           </div>
                         </td>
@@ -404,13 +404,13 @@ export default function SingleGameRecords() {
                                           {r.playerId && r.playerName !== "—" && r.playerName !== "Unknown" ? (
                                             <Link
                                               to={`/athletics/boys/baseball/players/${r.playerId}`}
-                                              className="hover:underline"
+                                              className={recordTableStyles.playerLink}
                                               onClick={(e) => e.stopPropagation()}
                                             >
                                               {r.playerName}
                                             </Link>
                                           ) : (
-                                            <span>{r.playerName}</span>
+                                            <span className={recordTableStyles.playerText}>{r.playerName}</span>
                                           )}
                                         </div>
                                       </td>
