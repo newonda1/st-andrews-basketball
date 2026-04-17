@@ -116,8 +116,20 @@ function SportBanner({ sport }) {
 
       <article
         style={BANNER_SHAPE}
-        className="relative flex h-full min-h-[31rem] flex-col overflow-hidden border-[3px] border-slate-200 bg-slate-500 px-3 pb-24 pt-5 text-white shadow-xl transition duration-300 group-hover:-translate-y-1 group-hover:shadow-2xl sm:min-h-[34rem] sm:px-4 sm:pt-6"
+        className="relative flex h-full min-h-[31rem] flex-col overflow-hidden bg-slate-500 px-3 pb-24 pt-5 text-white shadow-xl transition duration-300 group-hover:-translate-y-1 group-hover:shadow-2xl sm:min-h-[34rem] sm:px-4 sm:pt-6"
       >
+        <div
+          style={BANNER_SHAPE}
+          className="pointer-events-none absolute inset-0 border border-black/90"
+        />
+        <div
+          style={BANNER_SHAPE}
+          className="pointer-events-none absolute inset-[4px] border border-white/95"
+        />
+        <div
+          style={BANNER_SHAPE}
+          className="pointer-events-none absolute inset-[8px] border border-black/90"
+        />
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.22),_transparent_42%)]" />
 
         <header className="relative pt-2 sm:pt-3">
