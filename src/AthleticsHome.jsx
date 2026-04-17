@@ -7,6 +7,7 @@ const BANNER_SHAPE = {
     "polygon(20px 0, calc(100% - 20px) 0, 100% 24px, 100% calc(100% - 58px), 50% 100%, 0 calc(100% - 58px), 0 24px)",
 };
 
+const CHAMPIONS_WORDMARK = "/images/common/champions_wordmark.svg";
 const SCHOOL_LOGO = "/images/common/logo.png";
 
 const sports = [
@@ -71,69 +72,51 @@ function ChampionshipSection({ title, years }) {
 }
 
 function SportBannerHeader({ sport }) {
-  const arcId = `champions-arc-${sport.to.replace(/[^a-z0-9]+/gi, "-")}`;
-
   return (
     <div className="relative overflow-hidden rounded-[1.8rem] border border-white/18 bg-[linear-gradient(180deg,rgba(255,255,255,0.14),rgba(255,255,255,0.05)_58%,rgba(15,23,42,0.14))] px-4 pb-4 pt-3 shadow-inner shadow-black/10">
       <div className="pointer-events-none absolute inset-x-5 top-0 h-12 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.28),transparent_72%)]" />
 
-      <div className="relative mx-auto h-[10.75rem] w-full max-w-[15rem]">
+      <div className="relative mx-auto h-[11.1rem] w-full max-w-[15rem]">
+        <img
+          src={CHAMPIONS_WORDMARK}
+          alt=""
+          aria-hidden="true"
+          className="absolute left-1/2 top-0 w-[92%] max-w-[13.4rem] -translate-x-1/2 object-contain drop-shadow-[0_6px_10px_rgba(15,23,42,0.16)]"
+          loading="lazy"
+        />
+
         <svg
           viewBox="0 0 320 180"
           aria-hidden="true"
           className="absolute inset-0 h-full w-full overflow-visible"
         >
-          <defs>
-            <path id={arcId} d="M 34 126 A 126 126 0 0 1 286 126" />
-          </defs>
           <path
-            d="M 34 126 A 126 126 0 0 1 286 126"
+            d="M 34 132 A 126 126 0 0 1 286 132"
             fill="none"
             stroke="rgba(255,255,255,0.24)"
             strokeWidth="2"
           />
           <path
-            d="M 52 126 A 108 108 0 0 1 268 126"
+            d="M 52 132 A 108 108 0 0 1 268 132"
             fill="none"
             stroke="rgba(255,255,255,0.12)"
             strokeWidth="1"
           />
           <circle
             cx="160"
-            cy="117"
+            cy="122"
             r="45"
             fill="rgba(255,255,255,0.08)"
             stroke="rgba(255,255,255,0.18)"
             strokeWidth="1.5"
           />
-          <text
-            fill="rgba(255,255,255,0.98)"
-            stroke="rgba(15,23,42,0.5)"
-            strokeWidth="3.5"
-            paintOrder="stroke fill"
-            fontFamily="Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif"
-            fontSize="30"
-            fontWeight="900"
-            letterSpacing="2"
-            transform="translate(-30 0) scale(1.18 1)"
-          >
-            <textPath
-              href={`#${arcId}`}
-              startOffset="50%"
-              textAnchor="middle"
-              lengthAdjust="spacingAndGlyphs"
-              textLength="248"
-            >
-              CHAMPIONS
-            </textPath>
-          </text>
         </svg>
 
         <img
           src={sport.icon}
           alt=""
           aria-hidden="true"
-          className="absolute left-1/2 top-[4.55rem] h-[4.8rem] w-[4.8rem] -translate-x-1/2 object-contain drop-shadow-[0_10px_16px_rgba(15,23,42,0.32)]"
+          className="absolute left-1/2 top-[5rem] h-[4.8rem] w-[4.8rem] -translate-x-1/2 object-contain drop-shadow-[0_10px_16px_rgba(15,23,42,0.32)]"
           loading="lazy"
         />
       </div>

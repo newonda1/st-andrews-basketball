@@ -1,0 +1,26 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 520 240"
+  role="img"
+  aria-label="Champions"
+>
+  <title>Champions</title>
+  <g
+    fill="#f8fafc"
+    stroke="#64748b"
+    stroke-width="8"
+    stroke-linejoin="round"
+    paint-order="stroke fill"
+    style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 112px; font-weight: 900;"
+  >
+    <text x="64" y="194" text-anchor="middle" transform="rotate(-31 64 194) scale(1.08 1.46)">C</text>
+    <text x="115" y="149" text-anchor="middle" transform="rotate(-24 115 149) scale(1.06 1.48)">H</text>
+    <text x="172" y="116" text-anchor="middle" transform="rotate(-17 172 116) scale(1.08 1.5)">A</text>
+    <text x="237" y="95" text-anchor="middle" transform="rotate(-9 237 95) scale(1.12 1.52)">M</text>
+    <text x="301" y="92" text-anchor="middle" transform="rotate(0 301 92) scale(1.08 1.52)">P</text>
+    <text x="356" y="103" text-anchor="middle" transform="rotate(8 356 103) scale(0.88 1.52)">I</text>
+    <text x="409" y="129" text-anchor="middle" transform="rotate(16 409 129) scale(1.08 1.5)">O</text>
+    <text x="459" y="168" text-anchor="middle" transform="rotate(24 459 168) scale(1.06 1.48)">N</text>
+    <text x="493" y="211" text-anchor="middle" transform="rotate(31 493 211) scale(1.08 1.46)">S</text>
+  </g>
+</svg>
