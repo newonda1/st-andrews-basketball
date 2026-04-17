@@ -351,7 +351,7 @@ function Season2025_26() {
 
       {/* 1. SEASON RECAP */}
       <section className="space-y-4">
-        <h2 className="text-2xl font-semibold text-center mt-4 mb-3">Final Four Bound!!</h2>
+        <h2 className="text-2xl font-semibold mt-4 mb-3">Season Recap</h2>
 
         <div className="text-gray-800 leading-relaxed">
           <a
@@ -367,11 +367,11 @@ function Season2025_26() {
           </a>
 
           <p className="mb-3 leading-relaxed">
-            The 2025–26 season has been a long, winding run that began with early questions and has
-            grown into another deep postseason push. From the first weekend in November through the
-            state quarterfinal in Macon, St. Andrew’s has had to find answers in tight finishes,
-            respond to midseason setbacks, and carry the weight of high expectations that come with
-            the program’s recent history.
+            The 2025–26 season has been a long, winding run that began with early questions and grew
+            into another deep postseason push. From the first weekend in November through the final
+            weekend in Columbus, St. Andrew’s had to find answers in tight finishes, respond to
+            midseason setbacks, and carry the weight of high expectations that come with the
+            program’s recent history.
           </p>
 
           <p className="mb-3 leading-relaxed">
@@ -468,28 +468,41 @@ function Season2025_26() {
           </p>
 
           <p className="mb-3 leading-relaxed">
-            Wednesday brings a familiar opponent. This will be the fourth straight year that St.
-            Andrew’s and Lakeview Academy meet in the semifinals. On facing Lakeview again, Abrams
-            noted, “When you play someone as many times as we have, there is a level of familiarity
-            that creates challenges. It becomes similar to playing a region opponent.”
+            The semifinal brought another familiar challenge. It marked the fourth straight year
+            that St. Andrew’s and Lakeview Academy had met in the playoffs, and the third straight
+            time the two programs had squared off in the state semifinals. After falling behind by
+            13 at halftime, the Lions delivered one of their best second-half responses of the year,
+            rallying for a 58–50 win to reach the state championship game. Glover was perfect from
+            the field and scored 18 points, Getter added 17, and the defensive intensity that has
+            defined the program over the last several seasons once again changed the course of the
+            game.
           </p>
 
           <p className="mb-3 leading-relaxed">
-            The Lions won the matchup in 2023 and 2025, while Lakeview claimed it in 2024. In each of
-            the past three seasons, the winner of that game has gone on to win the state championship.
-            As for the historical weight surrounding the matchup, Abrams keeps it simple. “Honestly, it
-            means nothing. Both teams are different. The approach is still to win and advance.”
+            That comeback sent St. Andrew’s into a championship matchup with Brookwood Academy and
+            brought another strong start. The Lions raced ahead 11–2 in the opening minutes and led
+            27–22 at halftime, looking every bit ready to defend their crown. But the game turned in
+            the third quarter, when Brookwood found driving lanes, tightened its coverage around
+            Glover, and flipped a five-point deficit into an eight-point lead. St. Andrew’s never
+            found the same offensive rhythm after the break and ultimately fell 61–46 in the title
+            game, with Cook scoring 14 points and Brown and Getter adding 12 apiece.
           </p>
 
           <p className="mb-3 leading-relaxed">
-            However this season concludes, Abrams hopes this era will be remembered for more than
-            banners. “That we played defense at an elite level and that we played unselfishly on
-            offense,” he said. “But more importantly, that as coaches we used the game to impact lives
-            and develop high-character, hard-working young men.”
+            Even in defeat, the season reinforced what this era of St. Andrew’s basketball has come
+            to represent. Over the past five years, the Lions have won three state championships,
+            reached five straight Final Fours, and in the two seasons they did not finish on top,
+            their postseason runs ended against the eventual champion. That consistency is a product
+            of talent, but also of identity.
           </p>
 
           <p className="mb-3 leading-relaxed">
-            And with that standard in place, the next chapter awaits.
+            Abrams still hopes this group will be remembered for more than banners. “That we played
+            defense at an elite level and that we played unselfishly on offense,” he said. “But more
+            importantly, that as coaches we used the game to impact lives and develop high-character,
+            hard-working young men.” With a strong core returning, this season now reads not just as
+            the end of another deep run, but as the latest chapter in a program that expects to be
+            back.
           </p>
 
           <div className="clear-both" />
@@ -499,7 +512,7 @@ function Season2025_26() {
       {/* 2. SCHEDULE */}
       <section>
         <div className="flex items-center justify-between mt-8 mb-4">
-          <h2 className="text-2xl font-semibold">📅 Schedule &amp; Results</h2>
+          <h2 className="text-2xl font-semibold">Schedule &amp; Results</h2>
 
           <div className="flex items-center gap-2 text-xs sm:text-sm">
             <span
@@ -759,7 +772,7 @@ function Season2025_26() {
 
       {/* 2.5 REGION TOURNAMENT BRACKET */}
       <section className="space-y-3">
-        <h2 className="text-2xl font-semibold">🏆 Region Tournament Bracket</h2>
+        <h2 className="text-2xl font-semibold">Region Tournament Bracket</h2>
 
         {bracketsData === null ? (
           <p className="text-gray-600">Loading region bracket…</p>
@@ -775,7 +788,7 @@ function Season2025_26() {
 
       {/* 2.6 STATE TOURNAMENT BRACKET */}
       <section className="space-y-3">
-        <h2 className="text-2xl font-semibold">🏆 State Tournament Bracket</h2>
+        <h2 className="text-2xl font-semibold">State Tournament Bracket</h2>
 
         {bracketsData === null ? (
           <p className="text-gray-600">Loading state bracket…</p>
@@ -793,7 +806,7 @@ function Season2025_26() {
       <section>
         <div className="flex items-center justify-between mt-8 mb-4">
           <h2 className="text-2xl font-semibold">
-            📊 Player Statistics for the Season
+            Player Statistics for the Season
           </h2>
 
           <div className="flex items-center space-x-2 text-xs sm:text-sm">
