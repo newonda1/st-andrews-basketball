@@ -135,7 +135,7 @@ function SportBanner({ sport }) {
         />
         <div
           style={BANNER_SHAPE}
-          className="pointer-events-none absolute inset-[8px]"
+          className="pointer-events-none absolute inset-[6px]"
           aria-hidden="true"
         >
           <div
@@ -145,11 +145,11 @@ function SportBanner({ sport }) {
         </div>
         <div
           style={BANNER_SHAPE}
-          className="pointer-events-none absolute inset-[12px] bg-slate-500"
+          className="pointer-events-none absolute inset-[10px] bg-slate-500"
         />
         <div
           style={BANNER_SHAPE}
-          className="pointer-events-none absolute inset-[12px] bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.22),_transparent_42%)]"
+          className="pointer-events-none absolute inset-[10px] bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.22),_transparent_42%)]"
         />
 
         <header className="relative pt-2 sm:pt-3">
