@@ -9,7 +9,7 @@ const BANNER_SHAPE = {
 
 const CHAMPIONS_NAVY = "#012169";
 const CHAMPIONS_WORDMARK = "/images/common/champions_wordmark.svg";
-const SCHOOL_LOGO = "/images/common/logo.png";
+const BANNER_SCHOOL_LOGO = "/images/common/logo_banner_navy.png";
 const SPORT_NAME_FONT_FAMILY =
   "'Rockwell Extra Bold', Rockwell, 'Arial Black', Impact, sans-serif";
 
@@ -171,7 +171,7 @@ function SportBanner({ sport }) {
 
         <div className="relative z-20 mt-6 flex translate-y-2 justify-center pt-4">
           <img
-            src={SCHOOL_LOGO}
+            src={BANNER_SCHOOL_LOGO}
             alt=""
             aria-hidden="true"
             className="w-[clamp(9.2rem,31.5vw,10.95rem)] object-contain drop-shadow-[0_10px_18px_rgba(15,23,42,0.38)] transition duration-300 group-hover:scale-105"
