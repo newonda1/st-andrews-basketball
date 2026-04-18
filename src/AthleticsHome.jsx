@@ -121,7 +121,7 @@ function SportBanner({ sport }) {
       >
         <div
           style={BANNER_SHAPE}
-          className="pointer-events-none absolute inset-0"
+          className="pointer-events-none absolute inset-0 z-0"
           aria-hidden="true"
         >
           <div
@@ -131,11 +131,11 @@ function SportBanner({ sport }) {
         </div>
         <div
           style={BANNER_SHAPE}
-          className="pointer-events-none absolute inset-[4px] bg-white"
+          className="pointer-events-none absolute inset-[4px] z-0 bg-white"
         />
         <div
           style={BANNER_SHAPE}
-          className="pointer-events-none absolute inset-[6px]"
+          className="pointer-events-none absolute inset-[6px] z-0"
           aria-hidden="true"
         >
           <div
@@ -145,18 +145,18 @@ function SportBanner({ sport }) {
         </div>
         <div
           style={BANNER_SHAPE}
-          className="pointer-events-none absolute inset-[10px] bg-slate-500"
+          className="pointer-events-none absolute inset-[10px] z-0 bg-slate-500"
         />
         <div
           style={BANNER_SHAPE}
-          className="pointer-events-none absolute inset-[10px] bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.22),_transparent_42%)]"
+          className="pointer-events-none absolute inset-x-[10px] bottom-28 top-[10px] z-10 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.22),_transparent_42%)] sm:bottom-32"
         />
 
-        <header className="relative pt-2 sm:pt-3">
+        <header className="relative z-20 pt-2 sm:pt-3">
           <SportBannerHeader sport={sport} />
         </header>
 
-        <div className="relative mt-5 flex-1 space-y-3">
+        <div className="relative z-20 mt-5 flex-1 space-y-3">
           <ChampionshipSection
             title="Region Championships"
             years={sport.regionYears}
@@ -169,7 +169,7 @@ function SportBanner({ sport }) {
           ) : null}
         </div>
 
-        <div className="relative mt-6 flex translate-y-2 justify-center pt-4">
+        <div className="relative z-20 mt-6 flex translate-y-2 justify-center pt-4">
           <img
             src={SCHOOL_LOGO}
             alt=""
