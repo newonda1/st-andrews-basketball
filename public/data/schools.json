@@ -1,5 +1,41 @@
 [
   {
+    "SchoolID": "fl-episcopal-school-of-jacksonville-jacksonville",
+    "Name": "Episcopal School of Jacksonville",
+    "City": "Jacksonville",
+    "State": "FL"
+  },
+  {
+    "SchoolID": "fl-father-lopez-catholic-high-school-daytona-beach",
+    "Name": "Father Lopez Catholic High School",
+    "City": "Daytona Beach",
+    "State": "FL"
+  },
+  {
+    "SchoolID": "fl-gibbs-high-school-st-petersburg",
+    "Name": "Gibbs High School",
+    "City": "St. Petersburg",
+    "State": "FL"
+  },
+  {
+    "SchoolID": "fl-ponte-vedra-high-school-ponte-vedra",
+    "Name": "Ponte Vedra High School",
+    "City": "Ponte Vedra",
+    "State": "FL"
+  },
+  {
+    "SchoolID": "fl-raines-high-school-jacksonville",
+    "Name": "Raines High School",
+    "City": "Jacksonville",
+    "State": "FL"
+  },
+  {
+    "SchoolID": "fl-trinity-preparatory-school-winter-park",
+    "Name": "Trinity Prep School",
+    "City": "Winter Park",
+    "State": "FL"
+  },
+  {
     "SchoolID": "ga-abundant-life-christian-academy-savannah",
     "Name": "Abundant Life Christian Academy",
     "City": "Savannah",
@@ -10,18 +46,6 @@
     "Name": "Academy of Richmond County",
     "City": "Augusta",
     "State": "GA"
-  },
-  {
-    "SchoolID": "sc-andrew-jackson-academy-ehrhardt",
-    "Name": "Andrew Jackson Academy",
-    "City": "Ehrhardt",
-    "State": "SC"
-  },
-  {
-    "SchoolID": "sc-archibald-rutledge-academy-mcclellanville",
-    "Name": "Archibald Rutledge Academy",
-    "City": "McClellanville",
-    "State": "SC"
   },
   {
     "SchoolID": "ga-arlington-christian-school-fairburn",
@@ -48,12 +72,6 @@
     "State": "GA"
   },
   {
-    "SchoolID": "sc-beaufort-academy-beaufort",
-    "Name": "Beaufort Academy",
-    "City": "Beaufort",
-    "State": "SC"
-  },
-  {
     "SchoolID": "ga-benedictine-military-school-savannah",
     "Name": "Benedictine Military School",
     "City": "Savannah",
@@ -76,36 +94,6 @@
     "Name": "Bradwell Institute",
     "City": "Hinesville",
     "State": "GA"
-  },
-  {
-    "SchoolID": "sc-heathwood-hall-episcopal-school-columbia",
-    "Name": "Heathwood Hall Episcopal School",
-    "City": "Columbia",
-    "State": "SC"
-  },
-  {
-    "SchoolID": "sc-lord-berkeley-academy-moncks-corner",
-    "Name": "Lord Berkeley Academy",
-    "City": "Moncks Corner",
-    "State": "SC"
-  },
-  {
-    "SchoolID": "sc-st-jude-sumter",
-    "Name": "St. Jude (Sumter)",
-    "City": "Sumter",
-    "State": "SC"
-  },
-  {
-    "SchoolID": "sc-thomas-sumter-academy-rembert",
-    "Name": "Thomas Sumter Academy",
-    "City": "Rembert",
-    "State": "SC"
-  },
-  {
-    "SchoolID": "tn-brentwood-high-school-brentwood",
-    "Name": "Brentwood High School",
-    "City": "Brentwood",
-    "State": "TN"
   },
   {
     "SchoolID": "ga-brookwood-academy-thomasville",
@@ -132,24 +120,6 @@
     "State": "GA"
   },
   {
-    "SchoolID": "sc-cardinal-newman-school-columbia",
-    "Name": "Cardinal Newman School",
-    "City": "Columbia",
-    "State": "SC"
-  },
-  {
-    "SchoolID": "sc-carolina-academy-lake-city",
-    "Name": "Carolina Academy",
-    "City": "Lake City",
-    "State": "SC"
-  },
-  {
-    "SchoolID": "sc-cathedral-academy-north-charleston",
-    "Name": "Cathedral Academy",
-    "City": "North Charleston",
-    "State": "SC"
-  },
-  {
     "SchoolID": "ga-cedar-grove-high-school-ellenwood",
     "Name": "Cedar Grove High School",
     "City": "Ellenwood",
@@ -162,28 +132,10 @@
     "State": "GA"
   },
   {
-    "SchoolID": "il-centennial-high-school-champaign",
-    "Name": "Centennial High School",
-    "City": "Champaign",
-    "State": "IL"
-  },
-  {
-    "SchoolID": "sc-charleston-collegiate-school-johns-island",
-    "Name": "Charleston Collegiate School",
-    "City": "Johns Island",
-    "State": "SC"
-  },
-  {
     "SchoolID": "ga-charlton-county-high-school-folkston",
     "Name": "Charlton County High School",
     "City": "Folkston",
     "State": "GA"
-  },
-  {
-    "SchoolID": "sc-christian-academy-myrtle-beach",
-    "Name": "Christian Academy",
-    "City": "Myrtle Beach",
-    "State": "SC"
   },
   {
     "SchoolID": "ga-citizens-christian-academy-douglas",
@@ -196,12 +148,6 @@
     "Name": "Coastal HomeSchool",
     "City": "Pembroke",
     "State": "GA"
-  },
-  {
-    "SchoolID": "sc-colleton-prep-academy-walterboro",
-    "Name": "Colleton Prep Academy",
-    "City": "Walterboro",
-    "State": "SC"
   },
   {
     "SchoolID": "ga-creekside-christian-academy-mcdonough",
@@ -246,18 +192,6 @@
     "State": "GA"
   },
   {
-    "SchoolID": "sc-dorchester-academy-st-george",
-    "Name": "Dorchester Academy",
-    "City": "St. George",
-    "State": "SC"
-  },
-  {
-    "SchoolID": "ny-east-rockaway-high-school-east-rockaway",
-    "Name": "East Rockaway High School",
-    "City": "East Rockaway",
-    "State": "NY"
-  },
-  {
     "SchoolID": "ga-edmund-burke-academy-waynesboro",
     "Name": "Edmund Burke Academy",
     "City": "Waynesboro",
@@ -276,40 +210,10 @@
     "State": "GA"
   },
   {
-    "SchoolID": "fl-episcopal-school-of-jacksonville-jacksonville",
-    "Name": "Episcopal School of Jacksonville",
-    "City": "Jacksonville",
-    "State": "FL"
-  },
-  {
     "SchoolID": "ga-evans-high-school-evans",
     "Name": "Evans High School",
     "City": "Evans",
     "State": "GA"
-  },
-  {
-    "SchoolID": "sc-faith-christian-school-summerville",
-    "Name": "Faith Christian School",
-    "City": "Summerville",
-    "State": "SC"
-  },
-  {
-    "SchoolID": "fl-father-lopez-catholic-high-school-daytona-beach",
-    "Name": "Father Lopez Catholic High School",
-    "City": "Daytona Beach",
-    "State": "FL"
-  },
-  {
-    "SchoolID": "sc-first-baptist-school-of-charleston-charleston",
-    "Name": "First Baptist School of Charleston",
-    "City": "Charleston",
-    "State": "SC"
-  },
-  {
-    "SchoolID": "tn-first-christian-of-memphis-memphis",
-    "Name": "First Christian of Memphis",
-    "City": "Memphis",
-    "State": "TN"
   },
   {
     "SchoolID": "ga-first-preparatory-christian-academy-hinesville",
@@ -360,18 +264,6 @@
     "State": "GA"
   },
   {
-    "SchoolID": "fl-gibbs-high-school-st-petersburg",
-    "Name": "Gibbs High School",
-    "City": "St. Petersburg",
-    "State": "FL"
-  },
-  {
-    "SchoolID": "md-glenelg-country-school-ellicott-city",
-    "Name": "Glenelg Country School",
-    "City": "Ellicott City",
-    "State": "MD"
-  },
-  {
     "SchoolID": "ga-glynn-academy-brunswick",
     "Name": "Glynn Academy",
     "City": "Brunswick",
@@ -402,12 +294,6 @@
     "State": "GA"
   },
   {
-    "SchoolID": "sc-hampton-county-high-school-varnville",
-    "Name": "Hampton County High School",
-    "City": "Varnville",
-    "State": "SC"
-  },
-  {
     "SchoolID": "ga-hampton-high-school-hampton",
     "Name": "Hampton High School",
     "City": "Hampton",
@@ -418,12 +304,6 @@
     "Name": "Hancock Day School",
     "City": "Savannah",
     "State": "GA"
-  },
-  {
-    "SchoolID": "sc-hardeeville-high-school-hardeeville",
-    "Name": "Hardeeville High School",
-    "City": "Hardeeville",
-    "State": "SC"
   },
   {
     "SchoolID": "ga-hebron-christian-academy-dacula",
@@ -438,24 +318,6 @@
     "State": "GA"
   },
   {
-    "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island",
-    "Name": "Hilton Head Christian Academy",
-    "City": "Hilton Head Island",
-    "State": "SC"
-  },
-  {
-    "SchoolID": "sc-hilton-head-island-high-school-hilton-head-island",
-    "Name": "Hilton Head Island High School",
-    "City": "Hilton Head Island",
-    "State": "SC"
-  },
-  {
-    "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island",
-    "Name": "Hilton Head Preparatory School",
-    "City": "Hilton Head Island",
-    "State": "SC"
-  },
-  {
     "SchoolID": "ga-hiram-high-school-hiram",
     "Name": "Hiram High School",
     "City": "Hiram",
@@ -468,22 +330,10 @@
     "State": "GA"
   },
   {
-    "SchoolID": "sc-holy-trinity-classical-christian-school-beaufort",
-    "Name": "Holy Trinity Classical Christian School",
-    "City": "Beaufort",
-    "State": "SC"
-  },
-  {
     "SchoolID": "ga-islands-high-school-savannah",
     "Name": "Islands High School",
     "City": "Savannah",
     "State": "GA"
-  },
-  {
-    "SchoolID": "sc-james-island-christian-school-charleston",
-    "Name": "James Island Christian School",
-    "City": "Charleston",
-    "State": "SC"
   },
   {
     "SchoolID": "ga-jenkins-high-school-savannah",
@@ -492,22 +342,10 @@
     "State": "GA"
   },
   {
-    "SchoolID": "sc-john-c-calhoun-academy-st-matthews",
-    "Name": "John C. Calhoun Academy",
-    "City": "St. Matthews",
-    "State": "SC"
-  },
-  {
     "SchoolID": "ga-john-milledge-academy-milledgeville",
     "Name": "John Milledge Academy",
     "City": "Milledgeville",
     "State": "GA"
-  },
-  {
-    "SchoolID": "sc-john-paul-ii-catholic-school-ridgeland",
-    "Name": "John Paul II Catholic School",
-    "City": "Ridgeland",
-    "State": "SC"
   },
   {
     "SchoolID": "ga-johnson-high-school-savannah",
@@ -520,12 +358,6 @@
     "Name": "Kennesaw Mountain High School",
     "City": "Kennesaw",
     "State": "GA"
-  },
-  {
-    "SchoolID": "sc-the-kings-academy-florence",
-    "Name": "The King's Academy",
-    "City": "Florence",
-    "State": "SC"
   },
   {
     "SchoolID": "ga-kings-ridge-christian-school-alpharetta",
@@ -550,18 +382,6 @@
     "Name": "Long County High School",
     "City": "Ludowici",
     "State": "GA"
-  },
-  {
-    "SchoolID": "sc-lowcountry-leadership-charter-school-meggett",
-    "Name": "Lowcountry Leadership Charter School",
-    "City": "Meggett",
-    "State": "SC"
-  },
-  {
-    "SchoolID": "sc-may-river-academy-bluffton",
-    "Name": "May River Academy",
-    "City": "Bluffton",
-    "State": "SC"
   },
   {
     "SchoolID": "ga-memorial-day-school-savannah",
@@ -612,18 +432,6 @@
     "State": "GA"
   },
   {
-    "SchoolID": "sc-newberry-academy-newberry",
-    "Name": "Newberry Academy",
-    "City": "Newberry",
-    "State": "SC"
-  },
-  {
-    "SchoolID": "sc-northwood-academy-summerville",
-    "Name": "Northwood Academy",
-    "City": "Summerville",
-    "State": "SC"
-  },
-  {
     "SchoolID": "ga-ocmulgee-academy-lumber-city",
     "Name": "Ocmulgee Academy",
     "City": "Lumber City",
@@ -636,28 +444,10 @@
     "State": "GA"
   },
   {
-    "SchoolID": "sc-orangeburg-preparatory-school-orangeburg",
-    "Name": "Orangeburg Preparatory School",
-    "City": "Orangeburg",
-    "State": "SC"
-  },
-  {
     "SchoolID": "ga-pathway-day-school-savannah",
     "Name": "Pathway Day School",
     "City": "Savannah",
     "State": "GA"
-  },
-  {
-    "SchoolID": "sc-patrick-henry-academy-estill",
-    "Name": "Patrick Henry Academy",
-    "City": "Estill",
-    "State": "SC"
-  },
-  {
-    "SchoolID": "sc-pee-dee-academy-mullins",
-    "Name": "Pee Dee Academy",
-    "City": "Mullins",
-    "State": "SC"
   },
   {
     "SchoolID": "ga-piedmont-academy-monticello",
@@ -678,28 +468,10 @@
     "State": "GA"
   },
   {
-    "SchoolID": "fl-ponte-vedra-high-school-ponte-vedra",
-    "Name": "Ponte Vedra High School",
-    "City": "Ponte Vedra",
-    "State": "FL"
-  },
-  {
     "SchoolID": "ga-providence-christian-school-savannah",
     "Name": "Providence Christian School",
     "City": "Savannah",
     "State": "GA"
-  },
-  {
-    "SchoolID": "fl-raines-high-school-jacksonville",
-    "Name": "Raines High School",
-    "City": "Jacksonville",
-    "State": "FL"
-  },
-  {
-    "SchoolID": "tn-ravenwood-high-school-brentwood",
-    "Name": "Ravenwood High School",
-    "City": "Brentwood",
-    "State": "TN"
   },
   {
     "SchoolID": "ga-riverside-military-academy-gainesville",
@@ -712,12 +484,6 @@
     "Name": "Riverview Academy",
     "City": "Albany",
     "State": "GA"
-  },
-  {
-    "SchoolID": "sc-robert-e-lee-academy-bishopville",
-    "Name": "Robert E. Lee Academy",
-    "City": "Bishopville",
-    "State": "SC"
   },
   {
     "SchoolID": "ga-robert-toombs-christian-academy-lyons",
@@ -756,18 +522,6 @@
     "State": "GA"
   },
   {
-    "SchoolID": "sc-sea-island-academy-johns-island",
-    "Name": "Sea Island Academy",
-    "City": "Johns Island",
-    "State": "SC"
-  },
-  {
-    "SchoolID": "sc-sea-pines-academy-hilton-head-island",
-    "Name": "Sea Pines Academy",
-    "City": "Hilton Head Island",
-    "State": "SC"
-  },
-  {
     "SchoolID": "ga-solid-rock-academy-fayetteville",
     "Name": "Solid Rock Academy",
     "City": "Fayetteville",
@@ -798,28 +552,10 @@
     "State": "GA"
   },
   {
-    "SchoolID": "sc-spartanburg-christian-academy-spartanburg",
-    "Name": "Spartanburg Christian Academy",
-    "City": "Spartanburg",
-    "State": "SC"
-  },
-  {
-    "SchoolID": "sc-spartanburg-day-school-spartanburg",
-    "Name": "Spartanburg Day School",
-    "City": "Spartanburg",
-    "State": "SC"
-  },
-  {
     "SchoolID": "ga-st-andrews-school-savannah",
     "Name": "St. Andrew's School",
     "City": "Savannah",
     "State": "GA"
-  },
-  {
-    "SchoolID": "sc-st-johns-christian-academy-moncks-corner",
-    "Name": "St. John's Christian Academy",
-    "City": "Moncks Corner",
-    "State": "SC"
   },
   {
     "SchoolID": "ga-st-paul-academy-for-boys-savannah",
@@ -852,22 +588,10 @@
     "State": "GA"
   },
   {
-    "SchoolID": "ga-walker-school-marietta",
-    "Name": "The Walker School",
-    "City": "Marietta",
-    "State": "GA"
-  },
-  {
     "SchoolID": "ga-the-weber-school-atlanta",
     "Name": "The Weber School",
     "City": "Atlanta",
     "State": "GA"
-  },
-  {
-    "SchoolID": "sc-thomas-heyward-academy-ridgeland",
-    "Name": "Thomas Heyward Academy",
-    "City": "Ridgeland",
-    "State": "SC"
   },
   {
     "SchoolID": "ga-thomas-jefferson-academy-louisville",
@@ -888,22 +612,10 @@
     "State": "GA"
   },
   {
-    "SchoolID": "fl-trinity-preparatory-school-winter-park",
-    "Name": "Trinity Prep School",
-    "City": "Winter Park",
-    "State": "FL"
-  },
-  {
     "SchoolID": "ga-twiggs-academy-jeffersonville",
     "Name": "Twiggs Academy",
     "City": "Jeffersonville",
     "State": "GA"
-  },
-  {
-    "SchoolID": "ny-valley-stream-north-high-school-franklin-square",
-    "Name": "Valley Stream North High School",
-    "City": "Franklin Square",
-    "State": "NY"
   },
   {
     "SchoolID": "ga-valwood-school-hahira",
@@ -915,6 +627,12 @@
     "SchoolID": "ga-vidalia-heritage-academy-vidalia",
     "Name": "Vidalia Heritage Academy",
     "City": "Vidalia",
+    "State": "GA"
+  },
+  {
+    "SchoolID": "ga-walker-school-marietta",
+    "Name": "The Walker School",
+    "City": "Marietta",
     "State": "GA"
   },
   {
@@ -940,5 +658,293 @@
     "Name": "Young Americans Christian School",
     "City": "Conyers",
     "State": "GA"
+  },
+  {
+    "SchoolID": "il-centennial-high-school-champaign",
+    "Name": "Centennial High School",
+    "City": "Champaign",
+    "State": "IL"
+  },
+  {
+    "SchoolID": "md-glenelg-country-school-ellicott-city",
+    "Name": "Glenelg Country School",
+    "City": "Ellicott City",
+    "State": "MD"
+  },
+  {
+    "SchoolID": "ny-east-rockaway-high-school-east-rockaway",
+    "Name": "East Rockaway High School",
+    "City": "East Rockaway",
+    "State": "NY"
+  },
+  {
+    "SchoolID": "ny-valley-stream-north-high-school-franklin-square",
+    "Name": "Valley Stream North High School",
+    "City": "Franklin Square",
+    "State": "NY"
+  },
+  {
+    "SchoolID": "sc-andrew-jackson-academy-ehrhardt",
+    "Name": "Andrew Jackson Academy",
+    "City": "Ehrhardt",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-archibald-rutledge-academy-mcclellanville",
+    "Name": "Archibald Rutledge Academy",
+    "City": "McClellanville",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-beaufort-academy-beaufort",
+    "Name": "Beaufort Academy",
+    "City": "Beaufort",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-cardinal-newman-school-columbia",
+    "Name": "Cardinal Newman School",
+    "City": "Columbia",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-carolina-academy-lake-city",
+    "Name": "Carolina Academy",
+    "City": "Lake City",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-cathedral-academy-north-charleston",
+    "Name": "Cathedral Academy",
+    "City": "North Charleston",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-charleston-collegiate-school-johns-island",
+    "Name": "Charleston Collegiate School",
+    "City": "Johns Island",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-christian-academy-myrtle-beach",
+    "Name": "Christian Academy",
+    "City": "Myrtle Beach",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-colleton-prep-academy-walterboro",
+    "Name": "Colleton Prep Academy",
+    "City": "Walterboro",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-dorchester-academy-st-george",
+    "Name": "Dorchester Academy",
+    "City": "St. George",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-faith-christian-school-summerville",
+    "Name": "Faith Christian School",
+    "City": "Summerville",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-first-baptist-school-of-charleston-charleston",
+    "Name": "First Baptist School of Charleston",
+    "City": "Charleston",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-hampton-county-high-school-varnville",
+    "Name": "Hampton County High School",
+    "City": "Varnville",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-hardeeville-high-school-hardeeville",
+    "Name": "Hardeeville High School",
+    "City": "Hardeeville",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-heathwood-hall-episcopal-school-columbia",
+    "Name": "Heathwood Hall Episcopal School",
+    "City": "Columbia",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island",
+    "Name": "Hilton Head Christian Academy",
+    "City": "Hilton Head Island",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-hilton-head-island-high-school-hilton-head-island",
+    "Name": "Hilton Head Island High School",
+    "City": "Hilton Head Island",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island",
+    "Name": "Hilton Head Preparatory School",
+    "City": "Hilton Head Island",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-holy-trinity-classical-christian-school-beaufort",
+    "Name": "Holy Trinity Classical Christian School",
+    "City": "Beaufort",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-james-island-christian-school-charleston",
+    "Name": "James Island Christian School",
+    "City": "Charleston",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-john-c-calhoun-academy-st-matthews",
+    "Name": "John C. Calhoun Academy",
+    "City": "St. Matthews",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-john-paul-ii-catholic-school-ridgeland",
+    "Name": "John Paul II Catholic School",
+    "City": "Ridgeland",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-lord-berkeley-academy-moncks-corner",
+    "Name": "Lord Berkeley Academy",
+    "City": "Moncks Corner",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-lowcountry-leadership-charter-school-meggett",
+    "Name": "Lowcountry Leadership Charter School",
+    "City": "Meggett",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-may-river-academy-bluffton",
+    "Name": "May River Academy",
+    "City": "Bluffton",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-newberry-academy-newberry",
+    "Name": "Newberry Academy",
+    "City": "Newberry",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-northwood-academy-summerville",
+    "Name": "Northwood Academy",
+    "City": "Summerville",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-orangeburg-preparatory-school-orangeburg",
+    "Name": "Orangeburg Preparatory School",
+    "City": "Orangeburg",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-patrick-henry-academy-estill",
+    "Name": "Patrick Henry Academy",
+    "City": "Estill",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-pee-dee-academy-mullins",
+    "Name": "Pee Dee Academy",
+    "City": "Mullins",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-robert-e-lee-academy-bishopville",
+    "Name": "Robert E. Lee Academy",
+    "City": "Bishopville",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-sea-island-academy-johns-island",
+    "Name": "Sea Island Academy",
+    "City": "Johns Island",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-sea-pines-academy-hilton-head-island",
+    "Name": "Sea Pines Academy",
+    "City": "Hilton Head Island",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-spartanburg-christian-academy-spartanburg",
+    "Name": "Spartanburg Christian Academy",
+    "City": "Spartanburg",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-spartanburg-day-school-spartanburg",
+    "Name": "Spartanburg Day School",
+    "City": "Spartanburg",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-st-johns-christian-academy-moncks-corner",
+    "Name": "St. John's Christian Academy",
+    "City": "Moncks Corner",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-st-jude-sumter",
+    "Name": "St. Jude (Sumter)",
+    "City": "Sumter",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-st-pauls-country-day-school-hollywood",
+    "Name": "St. Paul's Country Day School",
+    "City": "Hollywood",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-the-kings-academy-florence",
+    "Name": "The King's Academy",
+    "City": "Florence",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-thomas-heyward-academy-ridgeland",
+    "Name": "Thomas Heyward Academy",
+    "City": "Ridgeland",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-thomas-sumter-academy-rembert",
+    "Name": "Thomas Sumter Academy",
+    "City": "Rembert",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "tn-brentwood-high-school-brentwood",
+    "Name": "Brentwood High School",
+    "City": "Brentwood",
+    "State": "TN"
+  },
+  {
+    "SchoolID": "tn-first-christian-of-memphis-memphis",
+    "Name": "First Christian of Memphis",
+    "City": "Memphis",
+    "State": "TN"
+  },
+  {
+    "SchoolID": "tn-ravenwood-high-school-brentwood",
+    "Name": "Ravenwood High School",
+    "City": "Brentwood",
+    "State": "TN"
   }
 ]
