@@ -243,22 +243,25 @@ function Season1978_79() {
         <div className="grid gap-4 md:grid-cols-[1fr_auto] md:items-start">
           <div className="space-y-3 text-gray-800 leading-relaxed">
             <p>
-              The 1978-79 season was the first boys basketball season played under the
-              St. Andrew's name. The program began in the gym on the new Wilmington Island
-              campus after the previous school dissolved, and the team competed as the
-              Saints in this early chapter of the school's history.
+              The 1978-79 season marked the first winter of boys basketball under the
+              St. Andrew's name. After the final class graduated from Independent
+              Presbyterian Day School in 1978, the new St. Andrew's on the Marsh began
+              building its own identity on Wilmington Island. The basketball team was
+              part of that first wave, playing as the Saints before the school later
+              adopted the Lions mascot.
             </p>
             <p>
-              Dave Clay's first St. Andrew's team finished 10-11, opening with promise
-              before the schedule turned more difficult in the second half. The Saints
-              were 8-4 after a Jan. 13 win over Robert Toombs Christian Academy, but
-              dropped seven of their final nine games.
+              Dave Clay's team gave the young program a strong start. The Saints won
+              six of their first eight games and stood at 8-4 after beating Robert
+              Toombs Christian Academy on Jan. 13, but the back half of the schedule
+              proved much tougher. St. Andrew's lost seven of its final nine games and
+              finished the inaugural season at 10-11.
             </p>
             <p>
-              Jim Sharpley gave the new program its first major scoring benchmark,
-              finishing with 420 points. That season total stood as the school record
-              for more than a decade before Ray Rogers surpassed it during the 1988-89
-              season.
+              Even in a season of firsts, Jim Sharpley's scoring stood out. His 420
+              points became the first major benchmark in the boys basketball record
+              book, and it remained the school record for more than a decade before
+              Ray Rogers passed it during the 1988-89 season.
             </p>
           </div>
 
