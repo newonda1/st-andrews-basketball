@@ -24,6 +24,7 @@ import Season1981_82 from "./seasons/Season1981_82";
 import Season1982_83 from "./seasons/Season1982_83";
 import Season1983_84 from "./seasons/Season1983_84";
 import Season1984_85 from "./seasons/Season1984_85";
+import Season1985_86 from "./seasons/Season1985_86";
 import Season1992_93 from "./seasons/Season1992_93";
 import Season2022_23 from "./seasons/Season2022_23";
 import Season2023_24 from "./seasons/Season2023_24";
@@ -39,6 +40,7 @@ const seasonPages = [
   { slug: "1982-83", Component: Season1982_83 },
   { slug: "1983-84", Component: Season1983_84 },
   { slug: "1984-85", Component: Season1984_85 },
+  { slug: "1985-86", Component: Season1985_86 },
   { slug: "1992-93", Component: Season1992_93 },
   { slug: "2022-23", Component: Season2022_23 },
   { slug: "2023-24", Component: Season2023_24 },

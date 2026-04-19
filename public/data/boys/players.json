@@ -270,6 +270,36 @@
     "GradYear": null
   },
   {
+    "PlayerID": 198501,
+    "FirstName": "George",
+    "LastName": "Eubank",
+    "GradYear": null
+  },
+  {
+    "PlayerID": 198502,
+    "FirstName": "Robert",
+    "LastName": "Gephart",
+    "GradYear": null
+  },
+  {
+    "PlayerID": 198503,
+    "FirstName": "Scott",
+    "LastName": "Jarrett",
+    "GradYear": null
+  },
+  {
+    "PlayerID": 198504,
+    "FirstName": "Ralph",
+    "LastName": "Kuhn",
+    "GradYear": null
+  },
+  {
+    "PlayerID": 198505,
+    "FirstName": "Thomas",
+    "LastName": "Woelber",
+    "GradYear": null
+  },
+  {
     "PlayerID": 198903,
     "FirstName": "Jonathan",
     "LastName": "Gephart",
