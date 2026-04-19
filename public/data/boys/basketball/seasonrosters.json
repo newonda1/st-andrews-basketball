@@ -405,5 +405,58 @@
         "JerseyNumber": 33
       }
     ]
+  },
+  {
+    "SeasonID": "1980-81",
+    "Players": [
+      {
+        "PlayerID": 198001,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 197901,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198002,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198003,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198004,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 197904,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198005,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 197905,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 197809,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198006,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 197906,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198007,
+        "JerseyNumber": null
+      }
+    ]
   }
 ]

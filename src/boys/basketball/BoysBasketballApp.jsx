@@ -19,6 +19,7 @@ import PlayerPage from "./pages/PlayerPage";
 
 import Season1978_79 from "./seasons/Season1978_79";
 import Season1979_80 from "./seasons/Season1979_80";
+import Season1980_81 from "./seasons/Season1980_81";
 import Season1992_93 from "./seasons/Season1992_93";
 import Season2022_23 from "./seasons/Season2022_23";
 import Season2023_24 from "./seasons/Season2023_24";
@@ -29,6 +30,7 @@ import SeasonPlaceholder from "./seasons/SeasonPlaceholder";
 const seasonPages = [
   { slug: "1978-79", Component: Season1978_79 },
   { slug: "1979-80", Component: Season1979_80 },
+  { slug: "1980-81", Component: Season1980_81 },
   { slug: "1992-93", Component: Season1992_93 },
   { slug: "2022-23", Component: Season2022_23 },
   { slug: "2023-24", Component: Season2023_24 },
