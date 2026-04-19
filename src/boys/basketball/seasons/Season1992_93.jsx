@@ -1,14 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { SCHOOLS_PATH, hydrateGamesWithSchools } from "../dataUtils";
 
 function Season1992_93() {
   const [games, setGames] = useState([]);
 
   useEffect(() => {
-    fetch("/data/boys/basketball/games.json")
-      .then((res) => res.json())
-      .then((data) => {
-        const filtered = data.filter((g) => g.Season === 1992);
+    Promise.all([
+      fetch("/data/boys/basketball/games.json").then((res) => res.json()),
+      fetch(SCHOOLS_PATH).then((res) => res.json()),
+    ])
+      .then(([gamesData, schoolsData]) => {
+        const filtered = hydrateGamesWithSchools(gamesData, schoolsData).filter(
+          (g) => g.Season === 1992
+        );
         filtered.sort(
           (a, b) => (Number(a.GameID) || 0) - (Number(b.GameID) || 0)
         );

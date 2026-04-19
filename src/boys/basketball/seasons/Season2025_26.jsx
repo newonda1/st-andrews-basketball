@@ -2,11 +2,19 @@ import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import RegionBracket5SVG from "../components/RegionBracket5SVG";
 import StateBracket12SVG from "../components/StateBracket12SVG";
+import {
+  BOYS_BASKETBALL_ROSTERS_PATH,
+  SCHOOLS_PATH,
+  getRosterEntriesForSeason,
+  getRosterJerseyNumber,
+  hydrateGamesWithSchools,
+} from "../dataUtils";
 
 function Season2025_26() {
   const [games, setGames] = useState([]);
   const [playerStats, setPlayerStats] = useState([]);
   const [players, setPlayers] = useState([]);
+  const [rosterEntries, setRosterEntries] = useState([]);
   const [seasonTotals, setSeasonTotals] = useState([]);
   const [sortConfig, setSortConfig] = useState({
     key: "jersey",
@@ -21,17 +29,25 @@ function Season2025_26() {
   // 1. Fetch data
   useEffect(() => {
     async function fetchData() {
-      const gamesRes = await fetch("/data/boys/basketball/games.json");
-      const statsRes = await fetch("/data/boys/basketball/playergamestats.json");
-      const playersRes = await fetch("/data/boys/basketball/players.json");
-      const bracketsRes = await fetch("/data/boys/basketball/brackets.json");
+      const [gamesRes, statsRes, playersRes, bracketsRes, rostersRes, schoolsRes] = await Promise.all([
+        fetch("/data/boys/basketball/games.json"),
+        fetch("/data/boys/basketball/playergamestats.json"),
+        fetch("/data/boys/players.json"),
+        fetch("/data/boys/basketball/brackets.json"),
+        fetch(BOYS_BASKETBALL_ROSTERS_PATH),
+        fetch(SCHOOLS_PATH),
+      ]);
 
-      const gamesData = await gamesRes.json();
-      const statsData = await statsRes.json();
-      const playersData = await playersRes.json();
-      const bracketsJson = await bracketsRes.json();
+      const [gamesDataRaw, statsData, playersData, bracketsJson, rostersData, schoolsData] = await Promise.all([
+        gamesRes.json(),
+        statsRes.json(),
+        playersRes.json(),
+        bracketsRes.json(),
+        rostersRes.json(),
+        schoolsRes.json(),
+      ]);
 
-      const seasonGames = gamesData
+      const seasonGames = hydrateGamesWithSchools(gamesDataRaw, schoolsData)
         .filter((g) => g.Season === SEASON_ID)
         .sort((a, b) => (Number(a.GameID) || 0) - (Number(b.GameID) || 0));
 
@@ -41,6 +57,7 @@ function Season2025_26() {
       setGames(seasonGames);
       setPlayerStats(seasonStats);
       setPlayers(playersData);
+      setRosterEntries(getRosterEntriesForSeason(rostersData, SEASON_ID));
       setBracketsData(bracketsJson);
     }
 
@@ -125,10 +142,7 @@ function Season2025_26() {
     return player ? `${player.FirstName} ${player.LastName}` : "Unknown Player";
   };
 
-  const getJerseyNumber = (id) => {
-    const player = players.find((p) => p.PlayerID === id);
-    return player && player.JerseyNumber != null ? player.JerseyNumber : "";
-  };
+  const getJerseyNumber = (id) => getRosterJerseyNumber(rosterEntries, id);
 
   const getPlayerPhotoUrl = (playerId) => {
     return `/images/boys/basketball/players/${playerId}.jpg`;

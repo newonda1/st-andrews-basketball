@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { recordTableStyles } from "./recordTableStyles";
+import { SCHOOLS_PATH, hydrateGamesWithSchools } from "../dataUtils";
 
 function absUrl(path) {
   return new URL(path, window.location.origin).toString();
@@ -192,15 +193,16 @@ export default function SingleGameRecords() {
       try {
         setError("");
 
-        const [playerStatsDataRaw, playersDataRaw, gamesDataRaw] = await Promise.all([
+        const [playerStatsDataRaw, playersDataRaw, gamesDataRaw, schoolsDataRaw] = await Promise.all([
           fetchJson("playergamestats.json", "/data/boys/basketball/playergamestats.json"),
-          fetchJson("players.json", "/data/boys/basketball/players.json"),
+          fetchJson("players.json", "/data/boys/players.json"),
           fetchJson("games.json", "/data/boys/basketball/games.json"),
+          fetchJson("schools.json", SCHOOLS_PATH),
         ]);
 
         const playerStatsData = Array.isArray(playerStatsDataRaw) ? playerStatsDataRaw : [];
         const playersData = Array.isArray(playersDataRaw) ? playersDataRaw : [];
-        const gamesData = Array.isArray(gamesDataRaw) ? gamesDataRaw : [];
+        const gamesData = hydrateGamesWithSchools(gamesDataRaw, schoolsDataRaw);
 
         const playerMap = new Map(playersData.map((p) => [String(p.PlayerID), p]));
         const gameMap = new Map(gamesData.map((g) => [String(g.GameID), g]));

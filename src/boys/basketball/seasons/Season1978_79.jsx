@@ -1,10 +1,18 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
+import {
+  BOYS_BASKETBALL_ROSTERS_PATH,
+  SCHOOLS_PATH,
+  getRosterEntriesForSeason,
+  getRosterJerseyNumber,
+  hydrateGamesWithSchools,
+} from "../dataUtils";
 
 function Season1978_79() {
   const [games, setGames] = useState([]);
   const [playerStats, setPlayerStats] = useState([]);
   const [players, setPlayers] = useState([]);
+  const [rosterEntries, setRosterEntries] = useState([]);
   const [seasonTotals, setSeasonTotals] = useState([]);
 
   const [sortConfig, setSortConfig] = useState({ key: "jersey", direction: "asc" });
@@ -25,15 +33,23 @@ function Season1978_79() {
   // ---------- Fetch data ----------
   useEffect(() => {
     async function fetchData() {
-      const gamesRes = await fetch("/data/boys/basketball/games.json");
-      const statsRes = await fetch("/data/boys/basketball/playergamestats.json");
-      const playersRes = await fetch("/data/boys/basketball/players.json");
+      const [gamesRes, statsRes, playersRes, rostersRes, schoolsRes] = await Promise.all([
+        fetch("/data/boys/basketball/games.json"),
+        fetch("/data/boys/basketball/playergamestats.json"),
+        fetch("/data/boys/players.json"),
+        fetch(BOYS_BASKETBALL_ROSTERS_PATH),
+        fetch(SCHOOLS_PATH),
+      ]);
 
-      const gamesData = await gamesRes.json();
-      const statsData = await statsRes.json();
-      const playersData = await playersRes.json();
+      const [gamesDataRaw, statsData, playersData, rostersData, schoolsData] = await Promise.all([
+        gamesRes.json(),
+        statsRes.json(),
+        playersRes.json(),
+        rostersRes.json(),
+        schoolsRes.json(),
+      ]);
 
-      const seasonGames = gamesData
+      const seasonGames = hydrateGamesWithSchools(gamesDataRaw, schoolsData)
         .filter((g) => Number(g.Season) === Number(SEASON_ID))
         .sort(
           (a, b) => (Number(a.GameID) || 0) - (Number(b.GameID) || 0)
@@ -45,6 +61,7 @@ function Season1978_79() {
       setGames(seasonGames);
       setPlayerStats(seasonStats);
       setPlayers(playersData);
+      setRosterEntries(getRosterEntriesForSeason(rostersData, SEASON_ID));
     }
 
     fetchData();
@@ -58,10 +75,7 @@ function Season1978_79() {
     return p ? `${p.FirstName} ${p.LastName}` : "Unknown Player";
   };
 
-  const getJerseyNumber = (id) => {
-    const p = getPlayer(id);
-    return p && p.JerseyNumber != null ? p.JerseyNumber : "";
-  };
+  const getJerseyNumber = (id) => getRosterJerseyNumber(rosterEntries, id);
 
   const getPlayerPhotoUrl = (playerId) => `/images/boys/basketball/players/${playerId}.jpg`;
 

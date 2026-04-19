@@ -1,3 +1,5 @@
+import { buildIdMap, getOpponentName } from "../dataUtils";
+
 export function absUrl(path) {
   return new URL(path, window.location.origin).toString();
 }
@@ -183,9 +185,10 @@ function applyOfficialGameFallbacks(total, game) {
   else if (result === "T") total.Ties = 1;
 }
 
-export function buildTeamGameTotals(gamesDataRaw, playerStatsDataRaw) {
+export function buildTeamGameTotals(gamesDataRaw, playerStatsDataRaw, schoolsDataRaw = []) {
   const gamesData = Array.isArray(gamesDataRaw) ? gamesDataRaw : [];
   const playerStatsData = Array.isArray(playerStatsDataRaw) ? playerStatsDataRaw : [];
+  const schoolMap = buildIdMap(schoolsDataRaw, "SchoolID");
   const currentDateKey = todayDateKey();
 
   const statsByGame = new Map();
@@ -213,7 +216,7 @@ export function buildTeamGameTotals(gamesDataRaw, playerStatsDataRaw) {
         GameID: String(game.GameID),
         SeasonKey: getSeasonKey(game),
         date: formatDateFromGame(game),
-        opponent: game?.Opponent ?? "Unknown Opponent",
+        opponent: getOpponentName(game, schoolMap),
         gameResult: getGameResult(game),
       };
     });

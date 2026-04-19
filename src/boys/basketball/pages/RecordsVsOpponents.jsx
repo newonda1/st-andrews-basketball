@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
+import { SCHOOLS_PATH, hydrateGamesWithSchools } from "../dataUtils";
 
 function RecordsVsOpponents() {
   const [games, setGames] = useState([]);
@@ -100,9 +101,12 @@ function RecordsVsOpponents() {
     Promise.all([
       fetch("/data/boys/basketball/games.json").then((r) => r.json()),
       fetch("/data/boys/basketball/playergamestats.json").then((r) => r.json()),
-      fetch("/data/boys/basketball/players.json").then((r) => r.json()),
+      fetch("/data/boys/players.json").then((r) => r.json()),
+      fetch(SCHOOLS_PATH).then((r) => r.json()),
     ])
-      .then(([gamesData, statsData, playersData]) => {
+      .then(([gamesDataRaw, statsData, playersData, schoolsData]) => {
+        const gamesData = hydrateGamesWithSchools(gamesDataRaw, schoolsData);
+
         // Remove "Unknown" opponent games from this page entirely
         const filteredGames = (gamesData || []).filter((g) => {
           const opp = (g?.Opponent ?? "").toString().trim();

@@ -6,6 +6,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "audit:boys-basketball": "node scripts/auditBoysBasketballData.js",
     "import:baseball:gamechanger": "node scripts/importBaseballGameChanger.js"
   },
   "dependencies": {

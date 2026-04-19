@@ -12,7 +12,7 @@ import React, { useEffect, useMemo, useState } from "react";
  *
  * Game Builder:
  * - Creates a single games.json object using:
- *   GameID (from date, YYYYMMDD), Opponent, LocationType, GameType,
+ *   GameID (from date, YYYYMMDD), OpponentID, Opponent, LocationType, GameType,
  *   Result, TeamScore, OpponentScore, Season, IsComplete.
  * - Does NOT use or export Date or ResultMargin fields.
  */
@@ -222,9 +222,19 @@ function intOrNull(v) {
   return Math.trunc(n);
 }
 
+function slugifySchoolId(name) {
+  return `legacy-${String(name || "")
+    .trim()
+    .toLowerCase()
+    .replace(/&/g, " and ")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")}`;
+}
+
 export default function BoysBasketballAdmin() {
   const PATHS = {
-    players: "/data/boys/basketball/players.json",
+    players: "/data/boys/players.json",
+    schools: "/data/schools.json",
     seasonRosters: "/data/boys/basketball/seasonrosters.json",
     games: "/data/boys/basketball/games.json",
     playerGameStats: "/data/boys/basketball/playergamestats.json",
@@ -232,6 +242,7 @@ export default function BoysBasketballAdmin() {
   };
 
   const [players, setPlayers] = useState([]);
+  const [schools, setSchools] = useState([]);
   const [seasonRosters, setSeasonRosters] = useState([]);
   const [games, setGames] = useState([]);
   const [playerGameStats, setPlayerGameStats] = useState([]);
@@ -255,7 +266,7 @@ export default function BoysBasketballAdmin() {
   const [gameDateStr, setGameDateStr] = useState("");
 
   // Opponent dropdown + "create new" option
-  const [opponentSelectValue, setOpponentSelectValue] = useState(""); // either existing opponent name or "__NEW__"
+  const [opponentSelectValue, setOpponentSelectValue] = useState(""); // either SchoolID or "__NEW__"
   const [gameOpponentNew, setGameOpponentNew] = useState("");
 
   const [gameLocationType, setGameLocationType] = useState("Home");
@@ -273,14 +284,16 @@ export default function BoysBasketballAdmin() {
         setLoading(true);
         setError("");
 
-        const [p, r, g, s] = await Promise.all([
+        const [p, schoolData, r, g, s] = await Promise.all([
           fetchJson("players.json", PATHS.players),
+          fetchJson("schools.json", PATHS.schools),
           fetchJson("seasonrosters.json", PATHS.seasonRosters),
           fetchJson("games.json", PATHS.games),
           fetchJson("playergamestats.json", PATHS.playerGameStats),
         ]);
 
         setPlayers(Array.isArray(p) ? p : []);
+        setSchools(Array.isArray(schoolData) ? schoolData : []);
         setSeasonRosters(Array.isArray(r) ? r : []);
         setGames(Array.isArray(g) ? g : []);
         setPlayerGameStats(Array.isArray(s) ? s : []);
@@ -492,19 +505,33 @@ export default function BoysBasketballAdmin() {
      Builders computed JSON
   -------------------------- */
 
-  // Build list of existing opponents from games.json
-  const opponentOptions = useMemo(() => {
-    const set = new Set();
-    for (const g of games || []) {
-      const name = String(g?.Opponent ?? "").trim();
-      if (name) set.add(name);
+  const schoolsById = useMemo(() => {
+    const map = new Map();
+    for (const school of schools || []) {
+      if (school?.SchoolID) map.set(String(school.SchoolID), school);
     }
-    return Array.from(set).sort((a, b) => a.localeCompare(b));
-  }, [games]);
+    return map;
+  }, [schools]);
+
+  // Build list of master schools for the opponent dropdown.
+  const opponentOptions = useMemo(() => {
+    return (schools || [])
+      .filter((school) => school?.SchoolID && school?.Name)
+      .slice()
+      .sort((a, b) => String(a.Name).localeCompare(String(b.Name)));
+  }, [schools]);
 
   const gameOpponentResolved = useMemo(() => {
     if (opponentSelectValue === "__NEW__") return String(gameOpponentNew || "").trim();
-    return String(opponentSelectValue || "").trim();
+    return schoolsById.get(String(opponentSelectValue))?.Name || "";
+  }, [opponentSelectValue, gameOpponentNew, schoolsById]);
+
+  const gameOpponentIdResolved = useMemo(() => {
+    if (opponentSelectValue === "__NEW__") {
+      const name = String(gameOpponentNew || "").trim();
+      return name ? slugifySchoolId(name) : null;
+    }
+    return String(opponentSelectValue || "").trim() || null;
   }, [opponentSelectValue, gameOpponentNew]);
 
   // Game object (games.json schema) — GameID is ALWAYS derived from date string (YYYYMMDD)
@@ -521,13 +548,14 @@ const gameObj = useMemo(() => {
   const Season = intOrNull(gameSeason);
   const IsComplete = gameIsComplete === "Yes" ? "Yes" : "No";
 
-  // Require at least GameID, Opponent, Season
-  if (!GameID || !Opponent || !Season) return null;
+  // Require at least GameID, OpponentID, Opponent, Season
+  if (!GameID || !gameOpponentIdResolved || !Opponent || !Season) return null;
 
   const Result = computeResult(TeamScore, OpponentScore, IsComplete);
 
   return {
     GameID,
+    OpponentID: gameOpponentIdResolved,
     Opponent,
     LocationType,
     GameType,
@@ -539,6 +567,7 @@ const gameObj = useMemo(() => {
   };
 }, [
   gameDateStr,
+  gameOpponentIdResolved,
   gameOpponentResolved,
   gameLocationType,
   gameGameType,
@@ -654,9 +683,9 @@ const gameObj = useMemo(() => {
               >
                 <option value="">Select opponent…</option>
                 <option value="__NEW__">+ Create new opponent…</option>
-                {opponentOptions.map((name) => (
-                  <option key={name} value={name}>
-                    {name}
+                {opponentOptions.map((school) => (
+                  <option key={school.SchoolID} value={school.SchoolID}>
+                    {school.Name}
                   </option>
                 ))}
               </select>
@@ -675,6 +704,12 @@ const gameObj = useMemo(() => {
 
               <div style={{ marginTop: 6, color: "#555", fontSize: 12 }}>
                 Final Opponent: <strong>{gameOpponentResolved || "—"}</strong>
+                {gameOpponentIdResolved ? (
+                  <>
+                    {" "}
+                    • ID: <strong>{gameOpponentIdResolved}</strong>
+                  </>
+                ) : null}
               </div>
             </div>
 

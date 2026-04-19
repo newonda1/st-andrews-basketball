@@ -1,5 +1,10 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { useParams, Link } from "react-router-dom";
+import {
+  BOYS_BASKETBALL_ROSTERS_PATH,
+  SCHOOLS_PATH,
+  hydrateGamesWithSchools,
+} from "../dataUtils";
 
 // These must match the *field names* in playergamestats.json
 const statKeys = [
@@ -116,6 +121,7 @@ function PlayerPage() {
 
   const [players, setPlayers] = useState([]);
   const [games, setGames] = useState([]);
+  const [seasonRosters, setSeasonRosters] = useState([]);
   const [playerStats, setPlayerStats] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -126,24 +132,31 @@ function PlayerPage() {
   useEffect(() => {
     async function loadData() {
       try {
-        const [playersRes, gamesRes, statsRes] = await Promise.all([
-          fetch("/data/boys/basketball/players.json"),
+        const [playersRes, gamesRes, statsRes, rostersRes, schoolsRes] = await Promise.all([
+          fetch("/data/boys/players.json"),
           fetch("/data/boys/basketball/games.json"),
           fetch("/data/boys/basketball/playergamestats.json"),
+          fetch(BOYS_BASKETBALL_ROSTERS_PATH),
+          fetch(SCHOOLS_PATH),
         ]);
 
         if (!playersRes.ok) throw new Error(`players.json ${playersRes.status}`);
         if (!gamesRes.ok) throw new Error(`games.json ${gamesRes.status}`);
         if (!statsRes.ok) throw new Error(`playergamestats.json ${statsRes.status}`);
+        if (!rostersRes.ok) throw new Error(`seasonrosters.json ${rostersRes.status}`);
+        if (!schoolsRes.ok) throw new Error(`schools.json ${schoolsRes.status}`);
 
-        const [playersData, gamesData, statsData] = await Promise.all([
+        const [playersData, gamesDataRaw, statsData, rostersData, schoolsData] = await Promise.all([
           playersRes.json(),
           gamesRes.json(),
           statsRes.json(),
+          rostersRes.json(),
+          schoolsRes.json(),
         ]);
 
         setPlayers(playersData);
-        setGames(gamesData);
+        setGames(hydrateGamesWithSchools(gamesDataRaw, schoolsData));
+        setSeasonRosters(Array.isArray(rostersData) ? rostersData : []);
         setPlayerStats(statsData);
       } catch (err) {
         console.error("Error loading player page data:", err);
@@ -317,7 +330,14 @@ function PlayerPage() {
       : `Player ${playerId}`);
 
   const jerseyNumber =
-    player.JerseyNumber ?? player.Number ?? player.Jersey ?? null;
+    [...seasonRosters]
+      .reverse()
+      .flatMap((roster) => roster.Players || [])
+      .find((entry) => String(entry.PlayerID) === String(playerId))?.JerseyNumber ??
+    player.JerseyNumber ??
+    player.Number ??
+    player.Jersey ??
+    null;
 
   const gradYear =
     player.ClassOf ??

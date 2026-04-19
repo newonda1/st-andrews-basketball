@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { recordTableStyles } from "./recordTableStyles";
+import { SCHOOLS_PATH } from "../dataUtils";
 import {
   assistTurnoverRatio,
   buildTeamGameTotals,
@@ -262,12 +263,13 @@ export default function TeamSingleGameRecords() {
       try {
         setError("");
 
-        const [gamesDataRaw, playerStatsDataRaw] = await Promise.all([
+        const [gamesDataRaw, playerStatsDataRaw, schoolsDataRaw] = await Promise.all([
           fetchJson("games.json", "/data/boys/basketball/games.json"),
           fetchJson("playergamestats.json", "/data/boys/basketball/playergamestats.json"),
+          fetchJson("schools.json", SCHOOLS_PATH),
         ]);
 
-        const teamGames = buildTeamGameTotals(gamesDataRaw, playerStatsDataRaw);
+        const teamGames = buildTeamGameTotals(gamesDataRaw, playerStatsDataRaw, schoolsDataRaw);
         const next = {};
 
         for (const def of recordDefs) {

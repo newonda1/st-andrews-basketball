@@ -1,6 +1,7 @@
 [
   {
     "GameID": 19781201,
+    "OpponentID": "ga-pathway-day-school-savannah",
     "Opponent": "Pathway Day School",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -12,6 +13,7 @@
   },
   {
     "GameID": 19781202,
+    "OpponentID": "ga-memorial-day-school-savannah",
     "Opponent": "Memorial Day School",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -23,6 +25,7 @@
   },
   {
     "GameID": 19781209,
+    "OpponentID": "ga-hancock-day-school-savannah",
     "Opponent": "Hancock Day School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -34,6 +37,7 @@
   },
   {
     "GameID": 19781216,
+    "OpponentID": "ga-pathway-day-school-savannah",
     "Opponent": "Pathway Day School",
     "LocationType": "Away",
     "GameType": "Region",
@@ -45,6 +49,7 @@
   },
   {
     "GameID": 19781226,
+    "OpponentID": "sc-may-river-academy-bluffton",
     "Opponent": "May River Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -56,6 +61,7 @@
   },
   {
     "GameID": 19781228,
+    "OpponentID": "sc-beaufort-academy-beaufort",
     "Opponent": "Beaufort Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -67,6 +73,7 @@
   },
   {
     "GameID": 19781229,
+    "OpponentID": "ga-hancock-day-school-savannah",
     "Opponent": "Hancock Day School",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -78,6 +85,7 @@
   },
   {
     "GameID": 19790102,
+    "OpponentID": "ga-hancock-day-school-savannah",
     "Opponent": "Hancock Day School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -89,6 +97,7 @@
   },
   {
     "GameID": 19790105,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons",
     "Opponent": "Robert Toombs Christian Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -100,6 +109,7 @@
   },
   {
     "GameID": 19790106,
+    "OpponentID": "ga-citizens-christian-academy-douglas",
     "Opponent": "Citizens Christian",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -111,6 +121,7 @@
   },
   {
     "GameID": 19790112,
+    "OpponentID": "ga-oglethorpe-academy-savannah",
     "Opponent": "Oglethorpe Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -122,6 +133,7 @@
   },
   {
     "GameID": 19790113,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons",
     "Opponent": "Robert Toombs Christian Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -133,6 +145,7 @@
   },
   {
     "GameID": 19790116,
+    "OpponentID": "sc-sea-pines-academy-hilton-head-island",
     "Opponent": "Sea Pines Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -144,6 +157,7 @@
   },
   {
     "GameID": 19790119,
+    "OpponentID": "ga-david-emanuel-academy-stillmore",
     "Opponent": "David Emanuel Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -155,6 +169,7 @@
   },
   {
     "GameID": 19790126,
+    "OpponentID": "ga-memorial-day-school-savannah",
     "Opponent": "Memorial Day School",
     "LocationType": "Home",
     "GameType": "Region",
@@ -166,6 +181,7 @@
   },
   {
     "GameID": 19790130,
+    "OpponentID": "ga-oglethorpe-academy-savannah",
     "Opponent": "Oglethorpe Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -177,6 +193,7 @@
   },
   {
     "GameID": 19790201,
+    "OpponentID": "ga-memorial-day-school-savannah",
     "Opponent": "Memorial Day School",
     "LocationType": "Away",
     "GameType": "Region",
@@ -188,6 +205,7 @@
   },
   {
     "GameID": 19790202,
+    "OpponentID": "sc-sea-pines-academy-hilton-head-island",
     "Opponent": "Sea Pines Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -199,6 +217,7 @@
   },
   {
     "GameID": 19790205,
+    "OpponentID": "ga-pathway-day-school-savannah",
     "Opponent": "Pathway Day School",
     "LocationType": "Home",
     "GameType": "Region",
@@ -210,6 +229,7 @@
   },
   {
     "GameID": 19790209,
+    "OpponentID": "ga-david-emanuel-academy-stillmore",
     "Opponent": "David Emanuel Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -221,6 +241,7 @@
   },
   {
     "GameID": 19790210,
+    "OpponentID": "ga-memorial-day-school-savannah",
     "Opponent": "Memorial Day School",
     "LocationType": "Home",
     "GameType": "Region",
@@ -232,6 +253,7 @@
   },
   {
     "GameID": 19791130,
+    "OpponentID": "sc-beaufort-academy-beaufort",
     "Opponent": "Beaufort Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -243,6 +265,7 @@
   },
   {
     "GameID": 19791201,
+    "OpponentID": "ga-memorial-day-school-savannah",
     "Opponent": "Memorial Day School",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -254,6 +277,7 @@
   },
   {
     "GameID": 19791207,
+    "OpponentID": "sc-may-river-academy-bluffton",
     "Opponent": "May River Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -276,6 +300,7 @@
   },
   {
     "GameID": 19791211,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons",
     "Opponent": "Robert Toombs Christian Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -287,6 +312,7 @@
   },
   {
     "GameID": 19791214,
+    "OpponentID": "ga-pathway-day-school-savannah",
     "Opponent": "Pathway Day School",
     "LocationType": "Home",
     "GameType": "Region",
@@ -298,6 +324,7 @@
   },
   {
     "GameID": 19791217,
+    "OpponentID": "sc-sea-island-academy-johns-island",
     "Opponent": "Sea Island Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -309,6 +336,7 @@
   },
   {
     "GameID": 19791228,
+    "OpponentID": "ga-oglethorpe-academy-savannah",
     "Opponent": "Oglethorpe Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -320,6 +348,7 @@
   },
   {
     "GameID": 19791229,
+    "OpponentID": "sc-sea-pines-academy-hilton-head-island",
     "Opponent": "Sea Pines Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -331,6 +360,7 @@
   },
   {
     "GameID": 19800105,
+    "OpponentID": "ga-bulloch-academy-statesboro",
     "Opponent": "Bulloch Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -342,6 +372,7 @@
   },
   {
     "GameID": 19800111,
+    "OpponentID": "sc-sea-pines-academy-hilton-head-island",
     "Opponent": "Sea Pines Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -353,6 +384,7 @@
   },
   {
     "GameID": 19800112,
+    "OpponentID": "sc-may-river-academy-bluffton",
     "Opponent": "May River Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -364,6 +396,7 @@
   },
   {
     "GameID": 19800118,
+    "OpponentID": "ga-david-emanuel-academy-stillmore",
     "Opponent": "David Emanuel Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -375,6 +408,7 @@
   },
   {
     "GameID": 19800119,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons",
     "Opponent": "Robert Toombs Christian Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -386,6 +420,7 @@
   },
   {
     "GameID": 19800126,
+    "OpponentID": "ga-memorial-day-school-savannah",
     "Opponent": "Memorial Day School",
     "LocationType": "Home",
     "GameType": "Region",
@@ -397,6 +432,7 @@
   },
   {
     "GameID": 19800129,
+    "OpponentID": "ga-bulloch-academy-statesboro",
     "Opponent": "Bulloch Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -408,6 +444,7 @@
   },
   {
     "GameID": 19800202,
+    "OpponentID": "ga-effingham-academy-springfield",
     "Opponent": "Effingham Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -419,6 +456,7 @@
   },
   {
     "GameID": 19800205,
+    "OpponentID": "ga-pathway-day-school-savannah",
     "Opponent": "Pathway Day School",
     "LocationType": "Away",
     "GameType": "Region",
@@ -430,6 +468,7 @@
   },
   {
     "GameID": 19800208,
+    "OpponentID": "ga-david-emanuel-academy-stillmore",
     "Opponent": "David Emanuel Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -441,6 +480,7 @@
   },
   {
     "GameID": 19800209,
+    "OpponentID": "ga-effingham-academy-springfield",
     "Opponent": "Effingham Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -452,6 +492,7 @@
   },
   {
     "GameID": 19800215,
+    "OpponentID": "sc-sea-pines-academy-hilton-head-island",
     "Opponent": "Sea Pines Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -463,6 +504,7 @@
   },
   {
     "GameID": 19800216,
+    "OpponentID": "ga-memorial-day-school-savannah",
     "Opponent": "Memorial Day School",
     "LocationType": "Away",
     "GameType": "Region",
@@ -474,6 +516,7 @@
   },
   {
     "GameID": 19800219,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons",
     "Opponent": "Robert Toombs Christian Academy",
     "LocationType": "Neutral",
     "GameType": "Region Tournament",
@@ -485,6 +528,7 @@
   },
   {
     "GameID": 19800221,
+    "OpponentID": "ga-david-emanuel-academy-stillmore",
     "Opponent": "David Emanuel Academy",
     "LocationType": "Neutral",
     "GameType": "Region Tournament",
@@ -496,6 +540,7 @@
   },
   {
     "GameID": 19800222,
+    "OpponentID": "ga-memorial-day-school-savannah",
     "Opponent": "Memorial Day School",
     "LocationType": "Neutral",
     "GameType": "Region Tournament",
@@ -507,6 +552,7 @@
   },
   {
     "GameID": 19800226,
+    "OpponentID": "ga-crisp-academy-cordele",
     "Opponent": "Crisp Academy",
     "LocationType": "Neutral",
     "GameType": "State Tournament",
@@ -518,6 +564,7 @@
   },
   {
     "GameID": 19801202,
+    "OpponentID": "ga-screven-academy-sylvania",
     "Opponent": "Screven Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -529,6 +576,7 @@
   },
   {
     "GameID": 19801205,
+    "OpponentID": "sc-beaufort-academy-beaufort",
     "Opponent": "Beaufort Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -540,6 +588,7 @@
   },
   {
     "GameID": 19801206,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
     "Opponent": "Thomas Heyward Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -551,6 +600,7 @@
   },
   {
     "GameID": 19801212,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
     "Opponent": "Thomas Heyward Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -562,6 +612,7 @@
   },
   {
     "GameID": 19801213,
+    "OpponentID": "sc-may-river-academy-bluffton",
     "Opponent": "May River Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -573,6 +624,7 @@
   },
   {
     "GameID": 19801223,
+    "OpponentID": "ga-bible-baptist-school-savannah",
     "Opponent": "Bible Baptist School",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -584,6 +636,7 @@
   },
   {
     "GameID": 19801226,
+    "OpponentID": "sc-sea-pines-academy-hilton-head-island",
     "Opponent": "Sea Pines Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -595,6 +648,7 @@
   },
   {
     "GameID": 19801227,
+    "OpponentID": "sc-may-river-academy-bluffton",
     "Opponent": "May River Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -606,6 +660,7 @@
   },
   {
     "GameID": 19810103,
+    "OpponentID": "sc-may-river-academy-bluffton",
     "Opponent": "May River Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -617,6 +672,7 @@
   },
   {
     "GameID": 19810106,
+    "OpponentID": "ga-memorial-day-school-savannah",
     "Opponent": "Memorial Day School",
     "LocationType": "Away",
     "GameType": "Region",
@@ -628,6 +684,7 @@
   },
   {
     "GameID": 19810109,
+    "OpponentID": "ga-bulloch-academy-statesboro",
     "Opponent": "Bulloch Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -639,6 +696,7 @@
   },
   {
     "GameID": 19810110,
+    "OpponentID": "sc-sea-pines-academy-hilton-head-island",
     "Opponent": "Sea Pines Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -650,6 +708,7 @@
   },
   {
     "GameID": 19810112,
+    "OpponentID": "ga-oglethorpe-academy-savannah",
     "Opponent": "Oglethorpe Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -661,6 +720,7 @@
   },
   {
     "GameID": 19810116,
+    "OpponentID": "ga-david-emanuel-academy-stillmore",
     "Opponent": "David Emanuel Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -683,6 +743,7 @@
   },
   {
     "GameID": 19810120,
+    "OpponentID": "ga-screven-academy-sylvania",
     "Opponent": "Screven Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -694,6 +755,7 @@
   },
   {
     "GameID": 19810123,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons",
     "Opponent": "Robert Toombs Christian Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -705,6 +767,7 @@
   },
   {
     "GameID": 19810124,
+    "OpponentID": "ga-screven-academy-sylvania",
     "Opponent": "Screven Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -716,6 +779,7 @@
   },
   {
     "GameID": 19810127,
+    "OpponentID": "ga-memorial-day-school-savannah",
     "Opponent": "Memorial Day School",
     "LocationType": "Home",
     "GameType": "Region",
@@ -727,6 +791,7 @@
   },
   {
     "GameID": 19810130,
+    "OpponentID": "ga-bulloch-academy-statesboro",
     "Opponent": "Bulloch Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -738,6 +803,7 @@
   },
   {
     "GameID": 19810131,
+    "OpponentID": "sc-sea-pines-academy-hilton-head-island",
     "Opponent": "Sea Pines Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -749,6 +815,7 @@
   },
   {
     "GameID": 19810203,
+    "OpponentID": "ga-oglethorpe-academy-savannah",
     "Opponent": "Oglethorpe Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -760,6 +827,7 @@
   },
   {
     "GameID": 19810206,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons",
     "Opponent": "Robert Toombs Christian Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -771,6 +839,7 @@
   },
   {
     "GameID": 19810210,
+    "OpponentID": "ga-david-emanuel-academy-stillmore",
     "Opponent": "David Emanuel Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -793,6 +862,7 @@
   },
   {
     "GameID": 19810214,
+    "OpponentID": "ga-curtis-baptist-school-augusta",
     "Opponent": "Curtis Baptist School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -804,6 +874,7 @@
   },
   {
     "GameID": 19810220,
+    "OpponentID": "ga-memorial-day-school-savannah",
     "Opponent": "Memorial Day School",
     "LocationType": "Neutral",
     "GameType": "Region Tournament",
@@ -815,6 +886,7 @@
   },
   {
     "GameID": 19810221,
+    "OpponentID": "ga-bulloch-academy-statesboro",
     "Opponent": "Bulloch Academy",
     "LocationType": "Neutral",
     "GameType": "Region Tournament",
@@ -826,6 +898,7 @@
   },
   {
     "GameID": 19811201,
+    "OpponentID": "ga-bible-baptist-school-savannah",
     "Opponent": "Bible Baptist School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -837,6 +910,7 @@
   },
   {
     "GameID": 19811204,
+    "OpponentID": "sc-beaufort-academy-beaufort",
     "Opponent": "Beaufort Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -848,6 +922,7 @@
   },
   {
     "GameID": 19811205,
+    "OpponentID": "ga-effingham-academy-springfield",
     "Opponent": "Effingham Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -859,6 +934,7 @@
   },
   {
     "GameID": 19811208,
+    "OpponentID": "sc-may-river-academy-bluffton",
     "Opponent": "May River Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -881,6 +957,7 @@
   },
   {
     "GameID": 19811229,
+    "OpponentID": "ga-derenne-christian-savannah",
     "Opponent": "Derenne Christian",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -892,6 +969,7 @@
   },
   {
     "GameID": 19811230,
+    "OpponentID": "sc-sea-pines-academy-hilton-head-island",
     "Opponent": "Sea Pines Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -903,6 +981,7 @@
   },
   {
     "GameID": 19820105,
+    "OpponentID": "ga-memorial-day-school-savannah",
     "Opponent": "Memorial Day School",
     "LocationType": "Away",
     "GameType": "Region",
@@ -925,6 +1004,7 @@
   },
   {
     "GameID": 19820109,
+    "OpponentID": "ga-screven-academy-sylvania",
     "Opponent": "Screven Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -936,6 +1016,7 @@
   },
   {
     "GameID": 19820112,
+    "OpponentID": "sc-may-river-academy-bluffton",
     "Opponent": "May River Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -947,6 +1028,7 @@
   },
   {
     "GameID": 19820115,
+    "OpponentID": "ga-david-emanuel-academy-stillmore",
     "Opponent": "David Emanuel Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -958,6 +1040,7 @@
   },
   {
     "GameID": 19820116,
+    "OpponentID": "sc-sea-pines-academy-hilton-head-island",
     "Opponent": "Sea Pines Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -969,6 +1052,7 @@
   },
   {
     "GameID": 19820122,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons",
     "Opponent": "Robert Toombs Christian Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -980,6 +1064,7 @@
   },
   {
     "GameID": 19820123,
+    "OpponentID": "ga-screven-academy-sylvania",
     "Opponent": "Screven Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -991,6 +1076,7 @@
   },
   {
     "GameID": 19820126,
+    "OpponentID": "ga-memorial-day-school-savannah",
     "Opponent": "Memorial Day School",
     "LocationType": "Home",
     "GameType": "Region",
@@ -1002,6 +1088,7 @@
   },
   {
     "GameID": 19820129,
+    "OpponentID": "ga-trinity-christian-academy-dublin",
     "Opponent": "Trinity Christian Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -1013,6 +1100,7 @@
   },
   {
     "GameID": 19820202,
+    "OpponentID": "sc-beaufort-academy-beaufort",
     "Opponent": "Beaufort Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -1024,6 +1112,7 @@
   },
   {
     "GameID": 19820204,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons",
     "Opponent": "Robert Toombs Christian Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -1057,6 +1146,7 @@
   },
   {
     "GameID": 19820209,
+    "OpponentID": "ga-david-emanuel-academy-stillmore",
     "Opponent": "David Emanuel Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -1079,6 +1169,7 @@
   },
   {
     "GameID": 19820219,
+    "OpponentID": "ga-david-emanuel-academy-stillmore",
     "Opponent": "David Emanuel Academy",
     "LocationType": "Neutral",
     "GameType": "Region Tournament",
@@ -1090,6 +1181,7 @@
   },
   {
     "GameID": 19820220,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons",
     "Opponent": "Robert Toombs Christian Academy",
     "LocationType": "Neutral",
     "GameType": "Region Tournament",
@@ -1101,6 +1193,7 @@
   },
   {
     "GameID": 19821130,
+    "OpponentID": "ga-screven-academy-sylvania",
     "Opponent": "Screven Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -1112,6 +1205,7 @@
   },
   {
     "GameID": 19821203,
+    "OpponentID": "ga-effingham-academy-springfield",
     "Opponent": "Effingham Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -1123,6 +1217,7 @@
   },
   {
     "GameID": 19821204,
+    "OpponentID": "sc-beaufort-academy-beaufort",
     "Opponent": "Beaufort Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -1134,6 +1229,7 @@
   },
   {
     "GameID": 19821207,
+    "OpponentID": "sc-may-river-academy-bluffton",
     "Opponent": "May River Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -1145,6 +1241,7 @@
   },
   {
     "GameID": 19821211,
+    "OpponentID": "ga-bible-baptist-school-savannah",
     "Opponent": "Bible Baptist School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -1156,6 +1253,7 @@
   },
   {
     "GameID": 19821214,
+    "OpponentID": "ga-screven-academy-sylvania",
     "Opponent": "Screven Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -1167,6 +1265,7 @@
   },
   {
     "GameID": 19821220,
+    "OpponentID": "ga-pinewood-christian-academy-bellville",
     "Opponent": "Pinewood Christian Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -1178,6 +1277,7 @@
   },
   {
     "GameID": 19821227,
+    "OpponentID": "sc-may-river-academy-bluffton",
     "Opponent": "May River Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -1189,6 +1289,7 @@
   },
   {
     "GameID": 19830104,
+    "OpponentID": "ga-memorial-day-school-savannah",
     "Opponent": "Memorial Day School",
     "LocationType": "Away",
     "GameType": "Region",
@@ -1200,6 +1301,7 @@
   },
   {
     "GameID": 19830107,
+    "OpponentID": "ga-trinity-christian-academy-dublin",
     "Opponent": "Trinity Christian Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -1211,6 +1313,7 @@
   },
   {
     "GameID": 19830114,
+    "OpponentID": "ga-david-emanuel-academy-stillmore",
     "Opponent": "David Emanuel Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -1222,6 +1325,7 @@
   },
   {
     "GameID": 19830121,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons",
     "Opponent": "Robert Toombs Christian Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -1233,6 +1337,7 @@
   },
   {
     "GameID": 19830126,
+    "OpponentID": "ga-memorial-day-school-savannah",
     "Opponent": "Memorial Day School",
     "LocationType": "Home",
     "GameType": "Region",
@@ -1266,6 +1371,7 @@
   },
   {
     "GameID": 19830204,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons",
     "Opponent": "Robert Toombs Christian Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -1299,6 +1405,7 @@
   },
   {
     "GameID": 19830211,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
     "Opponent": "Frederica Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -1310,6 +1417,7 @@
   },
   {
     "GameID": 19830217,
+    "OpponentID": "ga-trinity-christian-academy-dublin",
     "Opponent": "Trinity Christian Academy",
     "LocationType": "Neutral",
     "GameType": "Region Tournament",
@@ -1321,6 +1429,7 @@
   },
   {
     "GameID": 19831129,
+    "OpponentID": "ga-effingham-academy-springfield",
     "Opponent": "Effingham Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -1332,6 +1441,7 @@
   },
   {
     "GameID": 19831202,
+    "OpponentID": "ga-memorial-day-school-savannah",
     "Opponent": "Memorial Day School",
     "LocationType": "Away",
     "GameType": "Region",
@@ -1343,6 +1453,7 @@
   },
   {
     "GameID": 19831206,
+    "OpponentID": "ga-screven-academy-sylvania",
     "Opponent": "Screven Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -1354,6 +1465,7 @@
   },
   {
     "GameID": 19831209,
+    "OpponentID": "ga-augusta-christian-martinez",
     "Opponent": "Augusta Christian",
     "LocationType": "Away",
     "GameType": "Region",
@@ -1365,6 +1477,7 @@
   },
   {
     "GameID": 19831213,
+    "OpponentID": "ga-screven-academy-sylvania",
     "Opponent": "Screven Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -1376,6 +1489,7 @@
   },
   {
     "GameID": 19831216,
+    "OpponentID": "ga-calvary-day-school-savannah",
     "Opponent": "Calvary Day School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -1387,6 +1501,7 @@
   },
   {
     "GameID": 19840103,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons",
     "Opponent": "Robert Toombs Christian Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -1398,6 +1513,7 @@
   },
   {
     "GameID": 19840106,
+    "OpponentID": "ga-trinity-christian-academy-dublin",
     "Opponent": "Trinity Christian Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -1409,6 +1525,7 @@
   },
   {
     "GameID": 19840110,
+    "OpponentID": "ga-derenne-christian-savannah",
     "Opponent": "Derenne Christian",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -1420,6 +1537,7 @@
   },
   {
     "GameID": 19840113,
+    "OpponentID": "ga-thomas-jefferson-academy-louisville",
     "Opponent": "Thomas Jefferson Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -1431,6 +1549,7 @@
   },
   {
     "GameID": 19840117,
+    "OpponentID": "ga-memorial-day-school-savannah",
     "Opponent": "Memorial Day School",
     "LocationType": "Away",
     "GameType": "Region",
@@ -1442,6 +1561,7 @@
   },
   {
     "GameID": 19840120,
+    "OpponentID": "ga-trinity-christian-academy-dublin",
     "Opponent": "Trinity Christian Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -1453,6 +1573,7 @@
   },
   {
     "GameID": 19840127,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons",
     "Opponent": "Robert Toombs Christian Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -1464,6 +1585,7 @@
   },
   {
     "GameID": 19840128,
+    "OpponentID": "ga-thomas-jefferson-academy-louisville",
     "Opponent": "Thomas Jefferson Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -1475,6 +1597,7 @@
   },
   {
     "GameID": 19840131,
+    "OpponentID": "ga-memorial-day-school-savannah",
     "Opponent": "Memorial Day School",
     "LocationType": "Home",
     "GameType": "Region",
@@ -1486,6 +1609,7 @@
   },
   {
     "GameID": 19840203,
+    "OpponentID": "ga-augusta-christian-martinez",
     "Opponent": "Augusta Christian",
     "LocationType": "Home",
     "GameType": "Region",
@@ -1497,6 +1621,7 @@
   },
   {
     "GameID": 19840207,
+    "OpponentID": "ga-calvary-day-school-savannah",
     "Opponent": "Calvary Day School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -1508,6 +1633,7 @@
   },
   {
     "GameID": 19840210,
+    "OpponentID": "ga-effingham-academy-springfield",
     "Opponent": "Effingham Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -1519,6 +1645,7 @@
   },
   {
     "GameID": 19840216,
+    "OpponentID": "ga-augusta-christian-martinez",
     "Opponent": "Augusta Christian",
     "LocationType": "Neutral",
     "GameType": "Region Tournament",
@@ -1530,6 +1657,7 @@
   },
   {
     "GameID": 19841204,
+    "OpponentID": "ga-calvary-day-school-savannah",
     "Opponent": "Calvary Day School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -1541,6 +1669,7 @@
   },
   {
     "GameID": 19841208,
+    "OpponentID": "ga-memorial-day-school-savannah",
     "Opponent": "Memorial Day School",
     "LocationType": "Home",
     "GameType": "Region",
@@ -1552,6 +1681,7 @@
   },
   {
     "GameID": 19841211,
+    "OpponentID": "ga-david-emanuel-academy-stillmore",
     "Opponent": "David Emanuel Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -1563,6 +1693,7 @@
   },
   {
     "GameID": 19841214,
+    "OpponentID": "ga-bulloch-academy-statesboro",
     "Opponent": "Bulloch Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -1574,6 +1705,7 @@
   },
   {
     "GameID": 19841215,
+    "OpponentID": "ga-screven-academy-sylvania",
     "Opponent": "Screven Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -1585,6 +1717,7 @@
   },
   {
     "GameID": 19841218,
+    "OpponentID": "ga-pineland-christian-academy-savannah",
     "Opponent": "Pineland Christian Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -1596,6 +1729,7 @@
   },
   {
     "GameID": 19841226,
+    "OpponentID": "ga-edmund-burke-academy-waynesboro",
     "Opponent": "Edmund Burke Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -1607,6 +1741,7 @@
   },
   {
     "GameID": 19850104,
+    "OpponentID": "ga-citizens-christian-academy-douglas",
     "Opponent": "Citizens Christian Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -1618,6 +1753,7 @@
   },
   {
     "GameID": 19850108,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
     "Opponent": "Frederica Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -1629,6 +1765,7 @@
   },
   {
     "GameID": 19850118,
+    "OpponentID": "ga-pinewood-christian-academy-bellville",
     "Opponent": "Pinewood Christian Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -1640,6 +1777,7 @@
   },
   {
     "GameID": 19850119,
+    "OpponentID": "ga-trinity-christian-academy-dublin",
     "Opponent": "Trinity Christian Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -1651,6 +1789,7 @@
   },
   {
     "GameID": 19850122,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
     "Opponent": "Frederica Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -1660,8 +1799,9 @@
     "Season": 1984,
     "IsComplete": "Yes"
   },
-    {
+  {
     "GameID": 19850125,
+    "OpponentID": "ga-fullington-academy-pinehurst",
     "Opponent": "Fullington Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -1673,6 +1813,7 @@
   },
   {
     "GameID": 19850126,
+    "OpponentID": "ga-memorial-day-school-savannah",
     "Opponent": "Memorial Day School",
     "LocationType": "Away",
     "GameType": "Region",
@@ -1684,6 +1825,7 @@
   },
   {
     "GameID": 19850129,
+    "OpponentID": "ga-screven-academy-sylvania",
     "Opponent": "Screven Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -1695,6 +1837,7 @@
   },
   {
     "GameID": 19850131,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons",
     "Opponent": "Robert Toombs Christian Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -1706,6 +1849,7 @@
   },
   {
     "GameID": 19850201,
+    "OpponentID": "ga-citizens-christian-academy-douglas",
     "Opponent": "Citizens Christian Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -1717,6 +1861,7 @@
   },
   {
     "GameID": 19850205,
+    "OpponentID": "ga-david-emanuel-academy-stillmore",
     "Opponent": "David Emanuel Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -1728,6 +1873,7 @@
   },
   {
     "GameID": 19850208,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons",
     "Opponent": "Robert Toombs Christian Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -1739,6 +1885,7 @@
   },
   {
     "GameID": 19850209,
+    "OpponentID": "ga-trinity-christian-academy-dublin",
     "Opponent": "Trinity Christian Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -1750,6 +1897,7 @@
   },
   {
     "GameID": 19850212,
+    "OpponentID": "ga-calvary-day-school-savannah",
     "Opponent": "Calvary Day School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -1761,6 +1909,7 @@
   },
   {
     "GameID": 19850215,
+    "OpponentID": "ga-fullington-academy-pinehurst",
     "Opponent": "Fullington Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -1771,7 +1920,8 @@
     "IsComplete": "No"
   },
   {
-  "GameID": 19850220,
+    "GameID": 19850220,
+    "OpponentID": "ga-david-emanuel-academy-stillmore",
     "Opponent": "David Emanuel Academy",
     "LocationType": "Neutral",
     "GameType": "Region Tournament",
@@ -1782,7 +1932,7 @@
     "IsComplete": "Yes"
   },
   {
-  "GameID": 19851129,
+    "GameID": 19851129,
     "Opponent": "Unknown",
     "LocationType": null,
     "GameType": null,
@@ -1793,7 +1943,7 @@
     "IsComplete": "No"
   },
   {
-  "GameID": 19851203,
+    "GameID": 19851203,
     "Opponent": "Unknown",
     "LocationType": null,
     "GameType": null,
@@ -1804,7 +1954,7 @@
     "IsComplete": "No"
   },
   {
-  "GameID": 19851206,
+    "GameID": 19851206,
     "Opponent": "Unknown",
     "LocationType": null,
     "GameType": null,
@@ -1815,7 +1965,8 @@
     "IsComplete": "No"
   },
   {
-  "GameID": 19851210,
+    "GameID": 19851210,
+    "OpponentID": "ga-david-emanuel-academy-stillmore",
     "Opponent": "David Emanuel Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -1826,7 +1977,8 @@
     "IsComplete": "Yes"
   },
   {
-  "GameID": 19851213,
+    "GameID": 19851213,
+    "OpponentID": "ga-bulloch-academy-statesboro",
     "Opponent": "Bulloch Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -1837,7 +1989,8 @@
     "IsComplete": "Yes"
   },
   {
-  "GameID": 19851214,
+    "GameID": 19851214,
+    "OpponentID": "ga-memorial-day-school-savannah",
     "Opponent": "Memorial Day School",
     "LocationType": "Away",
     "GameType": "Region",
@@ -1848,7 +2001,8 @@
     "IsComplete": "Yes"
   },
   {
-  "GameID": 19851217,
+    "GameID": 19851217,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons",
     "Opponent": "Robert Toombs Christian Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -1859,7 +2013,8 @@
     "IsComplete": "Yes"
   },
   {
-  "GameID": 19851226,
+    "GameID": 19851226,
+    "OpponentID": "tn-first-christian-of-memphis-memphis",
     "Opponent": "First Christian of Memphis",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -1870,7 +2025,8 @@
     "IsComplete": "Yes"
   },
   {
-  "GameID": 19851227,
+    "GameID": 19851227,
+    "OpponentID": "ga-pineland-christian-academy-savannah",
     "Opponent": "Pineland Christian Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -1881,7 +2037,8 @@
     "IsComplete": "Yes"
   },
   {
-  "GameID": 19851228,
+    "GameID": 19851228,
+    "OpponentID": "sc-cardinal-newman-school-columbia",
     "Opponent": "Cardinal Newman School",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -1892,7 +2049,8 @@
     "IsComplete": "Yes"
   },
   {
-  "GameID": 19860103,
+    "GameID": 19860103,
+    "OpponentID": "ga-citizens-christian-academy-douglas",
     "Opponent": "Citizens Christian Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -1903,7 +2061,8 @@
     "IsComplete": "Yes"
   },
   {
-  "GameID": 19860107,
+    "GameID": 19860107,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
     "Opponent": "Frederica Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -1914,7 +2073,8 @@
     "IsComplete": "Yes"
   },
   {
-  "GameID": 19860116,
+    "GameID": 19860116,
+    "OpponentID": "ga-pineland-christian-academy-savannah",
     "Opponent": "Pineland Christian Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -1925,7 +2085,8 @@
     "IsComplete": "Yes"
   },
   {
-  "GameID": 19860118,
+    "GameID": 19860118,
+    "OpponentID": "ga-trinity-christian-academy-dublin",
     "Opponent": "Trinity Christian Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -1936,7 +2097,8 @@
     "IsComplete": "Yes"
   },
   {
-  "GameID": 19860121,
+    "GameID": 19860121,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
     "Opponent": "Frederica Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -1947,7 +2109,8 @@
     "IsComplete": "Yes"
   },
   {
-  "GameID": 19860124,
+    "GameID": 19860124,
+    "OpponentID": "ga-fullington-academy-pinehurst",
     "Opponent": "Fullington Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -1958,7 +2121,8 @@
     "IsComplete": "Yes"
   },
   {
-  "GameID": 19860125,
+    "GameID": 19860125,
+    "OpponentID": "ga-trinity-christian-academy-dublin",
     "Opponent": "Trinity Christian Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -1969,7 +2133,8 @@
     "IsComplete": "Yes"
   },
   {
-  "GameID": 19860128,
+    "GameID": 19860128,
+    "OpponentID": "ga-bulloch-academy-statesboro",
     "Opponent": "Bulloch Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -1980,7 +2145,8 @@
     "IsComplete": "Yes"
   },
   {
-  "GameID": 19860131,
+    "GameID": 19860131,
+    "OpponentID": "ga-citizens-christian-academy-douglas",
     "Opponent": "Citizens Christian Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -1991,7 +2157,8 @@
     "IsComplete": "Yes"
   },
   {
-  "GameID": 19860204,
+    "GameID": 19860204,
+    "OpponentID": "ga-david-emanuel-academy-stillmore",
     "Opponent": "David Emanuel Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -2002,7 +2169,8 @@
     "IsComplete": "Yes"
   },
   {
-  "GameID": 19860207,
+    "GameID": 19860207,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons",
     "Opponent": "Robert Toombs Christian Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -2013,7 +2181,8 @@
     "IsComplete": "Yes"
   },
   {
-  "GameID": 19860211,
+    "GameID": 19860211,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
     "Opponent": "Hilton Head Preparatory School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -2024,7 +2193,7 @@
     "IsComplete": "Yes"
   },
   {
-  "GameID": 19861121,
+    "GameID": 19861121,
     "Opponent": "Unknown",
     "LocationType": null,
     "GameType": null,
@@ -2035,7 +2204,7 @@
     "IsComplete": "No"
   },
   {
-  "GameID": 19861128,
+    "GameID": 19861128,
     "Opponent": "Unknown",
     "LocationType": null,
     "GameType": null,
@@ -2046,7 +2215,7 @@
     "IsComplete": "No"
   },
   {
-  "GameID": 19861129,
+    "GameID": 19861129,
     "Opponent": "Unknown",
     "LocationType": null,
     "GameType": null,
@@ -2057,7 +2226,8 @@
     "IsComplete": "No"
   },
   {
-  "GameID": 19861202,
+    "GameID": 19861202,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
     "Opponent": "Hilton Head Preparatory School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -2068,664 +2238,723 @@
     "IsComplete": "Yes"
   },
   {
-  "GameID": 19861205,
-  "Opponent": "Memorial Day School",
-  "LocationType": "Away",
-  "GameType": "Region",
-  "Result": "L",
-  "TeamScore": 43,
-  "OpponentScore": 53,
-  "Season": 1986,
-  "IsComplete": "Yes"
+    "GameID": 19861205,
+    "OpponentID": "ga-memorial-day-school-savannah",
+    "Opponent": "Memorial Day School",
+    "LocationType": "Away",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 43,
+    "OpponentScore": 53,
+    "Season": 1986,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19861206,
-  "Opponent": "Bulloch Academy",
-  "LocationType": "Home",
-  "GameType": "Non-Region",
-  "Result": "L",
-  "TeamScore": null,
-  "OpponentScore": null,
-  "Season": 1986,
-  "IsComplete": "No"
+    "GameID": 19861206,
+    "OpponentID": "ga-bulloch-academy-statesboro",
+    "Opponent": "Bulloch Academy",
+    "LocationType": "Home",
+    "GameType": "Non-Region",
+    "Result": "L",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 1986,
+    "IsComplete": "No"
   },
   {
-  "GameID": 19861209,
-  "Opponent": "Pathway Day School",
-  "LocationType": "Home",
-  "GameType": "Region",
-  "Result": "W",
-  "TeamScore": 25,
-  "OpponentScore": 22,
-  "Season": 1986,
-  "IsComplete": "Yes"
+    "GameID": 19861209,
+    "OpponentID": "ga-pathway-day-school-savannah",
+    "Opponent": "Pathway Day School",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 25,
+    "OpponentScore": 22,
+    "Season": 1986,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19861212,
-  "Opponent": "Hilton Head Preparatory School",
-  "LocationType": "Home",
-  "GameType": "Non-Region",
-  "Result": "L",
-  "TeamScore": 33,
-  "OpponentScore": 53,
-  "Season": 1986,
-  "IsComplete": "Yes"
+    "GameID": 19861212,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
+    "Opponent": "Hilton Head Preparatory School",
+    "LocationType": "Home",
+    "GameType": "Non-Region",
+    "Result": "L",
+    "TeamScore": 33,
+    "OpponentScore": 53,
+    "Season": 1986,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19861213,
-  "Opponent": "Memorial Day School",
-  "LocationType": "Home",
-  "GameType": "Region",
-  "Result": "L",
-  "TeamScore": null,
-  "OpponentScore": null,
-  "Season": 1986,
-  "IsComplete": "No"
+    "GameID": 19861213,
+    "OpponentID": "ga-memorial-day-school-savannah",
+    "Opponent": "Memorial Day School",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 1986,
+    "IsComplete": "No"
   },
   {
-  "GameID": 19861216,
-  "Opponent": "David Emanuel Academy",
-  "LocationType": "Away",
-  "GameType": "Region",
-  "Result": "W",
-  "TeamScore": null,
-  "OpponentScore": null,
-  "Season": 1986,
-  "IsComplete": "No"
+    "GameID": 19861216,
+    "OpponentID": "ga-david-emanuel-academy-stillmore",
+    "Opponent": "David Emanuel Academy",
+    "LocationType": "Away",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 1986,
+    "IsComplete": "No"
   },
   {
-  "GameID": 19861226,
-  "Opponent": "Edmund Burke Academy",
-  "LocationType": "Neutral",
-  "GameType": "Tournament",
-  "Result": "L",
-  "TeamScore": 36,
-  "OpponentScore": 49,
-  "Season": 1986,
-  "IsComplete": "Yes"
+    "GameID": 19861226,
+    "OpponentID": "ga-edmund-burke-academy-waynesboro",
+    "Opponent": "Edmund Burke Academy",
+    "LocationType": "Neutral",
+    "GameType": "Tournament",
+    "Result": "L",
+    "TeamScore": 36,
+    "OpponentScore": 49,
+    "Season": 1986,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19870103,
-  "Opponent": "Bulloch Academy",
-  "LocationType": "Away",
-  "GameType": "Non-Region",
-  "Result": "L",
-  "TeamScore": null,
-  "OpponentScore": null,
-  "Season": 1986,
-  "IsComplete": "No"
+    "GameID": 19870103,
+    "OpponentID": "ga-bulloch-academy-statesboro",
+    "Opponent": "Bulloch Academy",
+    "LocationType": "Away",
+    "GameType": "Non-Region",
+    "Result": "L",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 1986,
+    "IsComplete": "No"
   },
   {
-  "GameID": 19870106,
-  "Opponent": "David Emanuel Academy",
-  "LocationType": "Home",
-  "GameType": "Region",
-  "Result": "W",
-  "TeamScore": 26,
-  "OpponentScore": 22,
-  "Season": 1986,
-  "IsComplete": "Yes"
+    "GameID": 19870106,
+    "OpponentID": "ga-david-emanuel-academy-stillmore",
+    "Opponent": "David Emanuel Academy",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 26,
+    "OpponentScore": 22,
+    "Season": 1986,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19870116,
-  "Opponent": "Trinity Christian Academy",
-  "LocationType": "Home",
-  "GameType": "Region",
-  "Result": "L",
-  "TeamScore": 35,
-  "OpponentScore": 39,
-  "Season": 1986,
-  "IsComplete": "Yes"
+    "GameID": 19870116,
+    "OpponentID": "ga-trinity-christian-academy-dublin",
+    "Opponent": "Trinity Christian Academy",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 35,
+    "OpponentScore": 39,
+    "Season": 1986,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19870117,
-  "Opponent": "Savannah Christian Preparatory School",
-  "LocationType": "Home",
-  "GameType": "Non-Region",
-  "Result": "L",
-  "TeamScore": 25,
-  "OpponentScore": 46,
-  "Season": 1986,
-  "IsComplete": "Yes"
+    "GameID": 19870117,
+    "OpponentID": "ga-savannah-christian-preparatory-school-savannah",
+    "Opponent": "Savannah Christian Preparatory School",
+    "LocationType": "Home",
+    "GameType": "Non-Region",
+    "Result": "L",
+    "TeamScore": 25,
+    "OpponentScore": 46,
+    "Season": 1986,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19870120,
-  "Opponent": "Pinewood Christian Academy",
-  "LocationType": "Away",
-  "GameType": "Region",
-  "Result": "L",
-  "TeamScore": null,
-  "OpponentScore": null,
-  "Season": 1986,
-  "IsComplete": "No"
+    "GameID": 19870120,
+    "OpponentID": "ga-pinewood-christian-academy-bellville",
+    "Opponent": "Pinewood Christian Academy",
+    "LocationType": "Away",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 1986,
+    "IsComplete": "No"
   },
   {
-  "GameID": 19870123,
-  "Opponent": "Robert Toombs Christian Academy",
-  "LocationType": "Away",
-  "GameType": "Region",
-  "Result": "L",
-  "TeamScore": 44,
-  "OpponentScore": 50,
-  "Season": 1986,
-  "IsComplete": "Yes"
+    "GameID": 19870123,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons",
+    "Opponent": "Robert Toombs Christian Academy",
+    "LocationType": "Away",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 44,
+    "OpponentScore": 50,
+    "Season": 1986,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19870127,
-  "Opponent": "Frederica Academy",
-  "LocationType": "Home",
-  "GameType": "Region",
-  "Result": "L",
-  "TeamScore": null,
-  "OpponentScore": null,
-  "Season": 1986,
-  "IsComplete": "No"
+    "GameID": 19870127,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
+    "Opponent": "Frederica Academy",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 1986,
+    "IsComplete": "No"
   },
   {
-  "GameID": 19870130,
-  "Opponent": "Trinity Christian Academy",
-  "LocationType": "Away",
-  "GameType": "Region",
-  "Result": "L",
-  "TeamScore": 41,
-  "OpponentScore": 50,
-  "Season": 1986,
-  "IsComplete": "Yes"
+    "GameID": 19870130,
+    "OpponentID": "ga-trinity-christian-academy-dublin",
+    "Opponent": "Trinity Christian Academy",
+    "LocationType": "Away",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 41,
+    "OpponentScore": 50,
+    "Season": 1986,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19870203,
-  "Opponent": "Pathway Day School",
-  "LocationType": "Away",
-  "GameType": "Region",
-  "Result": "W",
-  "TeamScore": 39,
-  "OpponentScore": 27,
-  "Season": 1986,
-  "IsComplete": "Yes"
+    "GameID": 19870203,
+    "OpponentID": "ga-pathway-day-school-savannah",
+    "Opponent": "Pathway Day School",
+    "LocationType": "Away",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 39,
+    "OpponentScore": 27,
+    "Season": 1986,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19870206,
-  "Opponent": "Robert Toombs Christian Academy",
-  "LocationType": "Home",
-  "GameType": "Region",
-  "Result": "W",
-  "TeamScore": 49,
-  "OpponentScore": 41,
-  "Season": 1986,
-  "IsComplete": "Yes"
+    "GameID": 19870206,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons",
+    "Opponent": "Robert Toombs Christian Academy",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 49,
+    "OpponentScore": 41,
+    "Season": 1986,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19870210,
-  "Opponent": "Frederica Academy",
-  "LocationType": "Away",
-  "GameType": "Region",
-  "Result": "L",
-  "TeamScore": null,
-  "OpponentScore": null,
-  "Season": 1986,
-  "IsComplete": "No"
+    "GameID": 19870210,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
+    "Opponent": "Frederica Academy",
+    "LocationType": "Away",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 1986,
+    "IsComplete": "No"
   },
   {
-  "GameID": 19870213,
-  "Opponent": "Pinewood Christian Academy",
-  "LocationType": "Home",
-  "GameType": "Region",
-  "Result": "W",
-  "TeamScore": 54,
-  "OpponentScore": 34,
-  "Season": 1986,
-  "IsComplete": "Yes"
+    "GameID": 19870213,
+    "OpponentID": "ga-pinewood-christian-academy-bellville",
+    "Opponent": "Pinewood Christian Academy",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 54,
+    "OpponentScore": 34,
+    "Season": 1986,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19871201,
-  "Opponent": "Hilton Head Preparatory School",
-  "LocationType": "Away",
-  "GameType": "Non-Region",
-  "Result": "L",
-  "TeamScore": 48,
-  "OpponentScore": 50,
-  "Season": 1987,
-  "IsComplete": "Yes"
+    "GameID": 19871201,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
+    "Opponent": "Hilton Head Preparatory School",
+    "LocationType": "Away",
+    "GameType": "Non-Region",
+    "Result": "L",
+    "TeamScore": 48,
+    "OpponentScore": 50,
+    "Season": 1987,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19871205,
-  "Opponent": "Bulloch Academy",
-  "LocationType": "Away",
-  "GameType": "Non-Region",
-  "Result": "W",
-  "TeamScore": 38,
-  "OpponentScore": 34,
-  "Season": 1987,
-  "IsComplete": "Yes"
+    "GameID": 19871205,
+    "OpponentID": "ga-bulloch-academy-statesboro",
+    "Opponent": "Bulloch Academy",
+    "LocationType": "Away",
+    "GameType": "Non-Region",
+    "Result": "W",
+    "TeamScore": 38,
+    "OpponentScore": 34,
+    "Season": 1987,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19871211,
-  "Opponent": "Memorial Day School",
-  "LocationType": "Home",
-  "GameType": "Non-Region",
-  "Result": "L",
-  "TeamScore": 41,
-  "OpponentScore": 66,
-  "Season": 1987,
-  "IsComplete": "Yes"
+    "GameID": 19871211,
+    "OpponentID": "ga-memorial-day-school-savannah",
+    "Opponent": "Memorial Day School",
+    "LocationType": "Home",
+    "GameType": "Non-Region",
+    "Result": "L",
+    "TeamScore": 41,
+    "OpponentScore": 66,
+    "Season": 1987,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19871215,
-  "Opponent": "David Emanuel Academy",
-  "LocationType": "Home",
-  "GameType": "Region",
-  "Result": "W",
-  "TeamScore": 53,
-  "OpponentScore": 47,
-  "Season": 1987,
-  "IsComplete": "Yes"
+    "GameID": 19871215,
+    "OpponentID": "ga-david-emanuel-academy-stillmore",
+    "Opponent": "David Emanuel Academy",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 53,
+    "OpponentScore": 47,
+    "Season": 1987,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19871218,
-  "Opponent": "Unknown",
-  "LocationType": "Neutral",
-  "GameType": "Tournament",
-  "Result": "W",
-  "TeamScore": null,
-  "OpponentScore": null,
-  "Season": 1987,
-  "IsComplete": "No"
+    "GameID": 19871218,
+    "Opponent": "Unknown",
+    "LocationType": "Neutral",
+    "GameType": "Tournament",
+    "Result": "W",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 1987,
+    "IsComplete": "No"
   },
   {
-  "GameID": 19871219,
-  "Opponent": "John C. Calhoun Academy",
-  "LocationType": "Neutral",
-  "GameType": "Tournament",
-  "Result": "W",
-  "TeamScore": 62,
-  "OpponentScore": 49,
-  "Season": 1987,
-  "IsComplete": "Yes"
+    "GameID": 19871219,
+    "OpponentID": "sc-john-c-calhoun-academy-st-matthews",
+    "Opponent": "John C. Calhoun Academy",
+    "LocationType": "Neutral",
+    "GameType": "Tournament",
+    "Result": "W",
+    "TeamScore": 62,
+    "OpponentScore": 49,
+    "Season": 1987,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19871228,
-  "Opponent": "Edmund Burke Academy",
-  "LocationType": "Neutral",
-  "GameType": "Tournament",
-  "Result": "L",
-  "TeamScore": 31,
-  "OpponentScore": 51,
-  "Season": 1987,
-  "IsComplete": "Yes"
+    "GameID": 19871228,
+    "OpponentID": "ga-edmund-burke-academy-waynesboro",
+    "Opponent": "Edmund Burke Academy",
+    "LocationType": "Neutral",
+    "GameType": "Tournament",
+    "Result": "L",
+    "TeamScore": 31,
+    "OpponentScore": 51,
+    "Season": 1987,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19871229,
-  "Opponent": "Riverview (Albany)",
-  "LocationType": "Neutral",
-  "GameType": "Tournament",
-  "Result": "L",
-  "TeamScore": 28,
-  "OpponentScore": 70,
-  "Season": 1987,
-  "IsComplete": "Yes"
+    "GameID": 19871229,
+    "OpponentID": "ga-riverview-academy-albany",
+    "Opponent": "Riverview (Albany)",
+    "LocationType": "Neutral",
+    "GameType": "Tournament",
+    "Result": "L",
+    "TeamScore": 28,
+    "OpponentScore": 70,
+    "Season": 1987,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19871230,
-  "Opponent": "Pathway Day School",
-  "LocationType": "Neutral",
-  "GameType": "Tournament",
-  "Result": "W",
-  "TeamScore": 57,
-  "OpponentScore": 47,
-  "Season": 1987,
-  "IsComplete": "Yes"
+    "GameID": 19871230,
+    "OpponentID": "ga-pathway-day-school-savannah",
+    "Opponent": "Pathway Day School",
+    "LocationType": "Neutral",
+    "GameType": "Tournament",
+    "Result": "W",
+    "TeamScore": 57,
+    "OpponentScore": 47,
+    "Season": 1987,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19880105,
-  "Opponent": "David Emanuel Academy",
-  "LocationType": "Away",
-  "GameType": "Region",
-  "Result": "W",
-  "TeamScore": 56,
-  "OpponentScore": 37,
-  "Season": 1987,
-  "IsComplete": "Yes"
+    "GameID": 19880105,
+    "OpponentID": "ga-david-emanuel-academy-stillmore",
+    "Opponent": "David Emanuel Academy",
+    "LocationType": "Away",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 56,
+    "OpponentScore": 37,
+    "Season": 1987,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19880108,
-  "Opponent": "Pathway Day School",
-  "LocationType": "Away",
-  "GameType": "Region",
-  "Result": "L",
-  "TeamScore": 57,
-  "OpponentScore": 64,
-  "Season": 1987,
-  "IsComplete": "Yes"
+    "GameID": 19880108,
+    "OpponentID": "ga-pathway-day-school-savannah",
+    "Opponent": "Pathway Day School",
+    "LocationType": "Away",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 57,
+    "OpponentScore": 64,
+    "Season": 1987,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19880115,
-  "Opponent": "Trinity Christian Academy",
-  "LocationType": "Home",
-  "GameType": "Region",
-  "Result": "W",
-  "TeamScore": 62,
-  "OpponentScore": 57,
-  "Season": 1987,
-  "IsComplete": "Yes"
+    "GameID": 19880115,
+    "OpponentID": "ga-trinity-christian-academy-dublin",
+    "Opponent": "Trinity Christian Academy",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 62,
+    "OpponentScore": 57,
+    "Season": 1987,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19880119,
-  "Opponent": "Pinewood Christian Academy",
-  "LocationType": "Home",
-  "GameType": "Region",
-  "Result": "W",
-  "TeamScore": 56,
-  "OpponentScore": 43,
-  "Season": 1987,
-  "IsComplete": "Yes"
+    "GameID": 19880119,
+    "OpponentID": "ga-pinewood-christian-academy-bellville",
+    "Opponent": "Pinewood Christian Academy",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 56,
+    "OpponentScore": 43,
+    "Season": 1987,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19880122,
-  "Opponent": "Robert Toombs Christian Academy",
-  "LocationType": "Home",
-  "GameType": "Region",
-  "Result": "W",
-  "TeamScore": 66,
-  "OpponentScore": 37,
-  "Season": 1987,
-  "IsComplete": "Yes"
+    "GameID": 19880122,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons",
+    "Opponent": "Robert Toombs Christian Academy",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 66,
+    "OpponentScore": 37,
+    "Season": 1987,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19880126,
-  "Opponent": "Frederica Academy",
-  "LocationType": "Away",
-  "GameType": "Region",
-  "Result": "L",
-  "TeamScore": 43,
-  "OpponentScore": 53,
-  "Season": 1987,
-  "IsComplete": "Yes"
+    "GameID": 19880126,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
+    "Opponent": "Frederica Academy",
+    "LocationType": "Away",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 43,
+    "OpponentScore": 53,
+    "Season": 1987,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19880129,
-  "Opponent": "Trinity Christian Academy",
-  "LocationType": "Away",
-  "GameType": "Region",
-  "Result": "L",
-  "TeamScore": null,
-  "OpponentScore": null,
-  "Season": 1987,
-  "IsComplete": "No"
+    "GameID": 19880129,
+    "OpponentID": "ga-trinity-christian-academy-dublin",
+    "Opponent": "Trinity Christian Academy",
+    "LocationType": "Away",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 1987,
+    "IsComplete": "No"
   },
   {
-  "GameID": 19880202,
-  "Opponent": "Pathway Day School",
-  "LocationType": "Home",
-  "GameType": "Region",
-  "Result": "W",
-  "TeamScore": 41,
-  "OpponentScore": 39,
-  "Season": 1987,
-  "IsComplete": "Yes"
+    "GameID": 19880202,
+    "OpponentID": "ga-pathway-day-school-savannah",
+    "Opponent": "Pathway Day School",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 41,
+    "OpponentScore": 39,
+    "Season": 1987,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19880209,
-  "Opponent": "Frederica Academy",
-  "LocationType": "Home",
-  "GameType": "Region",
-  "Result": "W",
-  "TeamScore": 64,
-  "OpponentScore": 50,
-  "Season": 1987,
-  "IsComplete": "Yes"
+    "GameID": 19880209,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
+    "Opponent": "Frederica Academy",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 64,
+    "OpponentScore": 50,
+    "Season": 1987,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19880212,
-  "Opponent": "Pinewood Christian Academy",
-  "LocationType": "Away",
-  "GameType": "Region",
-  "Result": "W",
-  "TeamScore": 57,
-  "OpponentScore": 48,
-  "Season": 1987,
-  "IsComplete": "Yes"
+    "GameID": 19880212,
+    "OpponentID": "ga-pinewood-christian-academy-bellville",
+    "Opponent": "Pinewood Christian Academy",
+    "LocationType": "Away",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 57,
+    "OpponentScore": 48,
+    "Season": 1987,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19880213,
-  "Opponent": "Robert Toombs Christian Academy",
-  "LocationType": "Away",
-  "GameType": "Region",
-  "Result": "W",
-  "TeamScore": 55,
-  "OpponentScore": 40,
-  "Season": 1987,
-  "IsComplete": "Yes"
+    "GameID": 19880213,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons",
+    "Opponent": "Robert Toombs Christian Academy",
+    "LocationType": "Away",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 55,
+    "OpponentScore": 40,
+    "Season": 1987,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19880218,
-  "Opponent": "Pathway Day School",
-  "LocationType": "Neutral",
-  "GameType": "Region Tournament",
-  "Result": "W",
-  "TeamScore": 51,
-  "OpponentScore": 26,
-  "Season": 1987,
-  "IsComplete": "Yes"
+    "GameID": 19880218,
+    "OpponentID": "ga-pathway-day-school-savannah",
+    "Opponent": "Pathway Day School",
+    "LocationType": "Neutral",
+    "GameType": "Region Tournament",
+    "Result": "W",
+    "TeamScore": 51,
+    "OpponentScore": 26,
+    "Season": 1987,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19880219,
-  "Opponent": "Trinity Christian Academy",
-  "LocationType": "Neutral",
-  "GameType": "Region Tournament",
-  "Result": "L",
-  "TeamScore": 49,
-  "OpponentScore": 73,
-  "Season": 1987,
-  "IsComplete": "Yes"
+    "GameID": 19880219,
+    "OpponentID": "ga-trinity-christian-academy-dublin",
+    "Opponent": "Trinity Christian Academy",
+    "LocationType": "Neutral",
+    "GameType": "Region Tournament",
+    "Result": "L",
+    "TeamScore": 49,
+    "OpponentScore": 73,
+    "Season": 1987,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19881129,
-  "Opponent": "Hilton Head Preparatory School",
-  "LocationType": "Home",
-  "GameType": "Non-Region",
-  "Result": "L",
-  "TeamScore": 24,
-  "OpponentScore": 76,
-  "Season": 1988,
-  "IsComplete": "Yes"
+    "GameID": 19881129,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
+    "Opponent": "Hilton Head Preparatory School",
+    "LocationType": "Home",
+    "GameType": "Non-Region",
+    "Result": "L",
+    "TeamScore": 24,
+    "OpponentScore": 76,
+    "Season": 1988,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19881202,
-  "Opponent": "Ocmulgee Academy",
-  "LocationType": "Neutral",
-  "GameType": "Tournament",
-  "Result": "L",
-  "TeamScore": 52,
-  "OpponentScore": 59,
-  "Season": 1988,
-  "IsComplete": "Yes"
+    "GameID": 19881202,
+    "OpponentID": "ga-ocmulgee-academy-lumber-city",
+    "Opponent": "Ocmulgee Academy",
+    "LocationType": "Neutral",
+    "GameType": "Tournament",
+    "Result": "L",
+    "TeamScore": 52,
+    "OpponentScore": 59,
+    "Season": 1988,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19881203,
-  "Opponent": "Westbrook",
-  "LocationType": "Neutral",
-  "GameType": "Tournament",
-  "Result": "L",
-  "TeamScore": 39,
-  "OpponentScore": 42,
-  "Season": 1988,
-  "IsComplete": "Yes"
+    "GameID": 19881203,
+    "OpponentID": "ga-westbrook-school-dixie",
+    "Opponent": "Westbrook School",
+    "LocationType": "Neutral",
+    "GameType": "Tournament",
+    "Result": "L",
+    "TeamScore": 39,
+    "OpponentScore": 42,
+    "Season": 1988,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19881206,
-  "Opponent": "Bulloch Academy",
-  "LocationType": "Home",
-  "GameType": "Region",
-  "Result": "W",
-  "TeamScore": 43,
-  "OpponentScore": 36,
-  "Season": 1988,
-  "IsComplete": "Yes"
+    "GameID": 19881206,
+    "OpponentID": "ga-bulloch-academy-statesboro",
+    "Opponent": "Bulloch Academy",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 43,
+    "OpponentScore": 36,
+    "Season": 1988,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19881209,
-  "Opponent": "Memorial Day School",
-  "LocationType": "Away",
-  "GameType": "Region",
-  "Result": "L",
-  "TeamScore": 50,
-  "OpponentScore": 80,
-  "Season": 1988,
-  "IsComplete": "Yes"
+    "GameID": 19881209,
+    "OpponentID": "ga-memorial-day-school-savannah",
+    "Opponent": "Memorial Day School",
+    "LocationType": "Away",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 50,
+    "OpponentScore": 80,
+    "Season": 1988,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19881210,
-  "Opponent": "David Emanuel Academy",
-  "LocationType": "Away",
-  "GameType": "Region",
-  "Result": "L",
-  "TeamScore": 42,
-  "OpponentScore": 57,
-  "Season": 1988,
-  "IsComplete": "Yes"
+    "GameID": 19881210,
+    "OpponentID": "ga-david-emanuel-academy-stillmore",
+    "Opponent": "David Emanuel Academy",
+    "LocationType": "Away",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 42,
+    "OpponentScore": 57,
+    "Season": 1988,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19890106,
-  "Opponent": "Pathway Day School",
-  "LocationType": "Home",
-  "GameType": "Region",
-  "Result": "L",
-  "TeamScore": 43,
-  "OpponentScore": 53,
-  "Season": 1988,
-  "IsComplete": "Yes"
+    "GameID": 19890106,
+    "OpponentID": "ga-pathway-day-school-savannah",
+    "Opponent": "Pathway Day School",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 43,
+    "OpponentScore": 53,
+    "Season": 1988,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19890107,
-  "Opponent": "Bulloch Academy",
-  "LocationType": "Away",
-  "GameType": "Region",
-  "Result": "W",
-  "TeamScore": 53,
-  "OpponentScore": 38,
-  "Season": 1988,
-  "IsComplete": "Yes"
+    "GameID": 19890107,
+    "OpponentID": "ga-bulloch-academy-statesboro",
+    "Opponent": "Bulloch Academy",
+    "LocationType": "Away",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 53,
+    "OpponentScore": 38,
+    "Season": 1988,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19890110,
-  "Opponent": "Pinewood Christian Academy",
-  "LocationType": "Home",
-  "GameType": "Region",
-  "Result": "L",
-  "TeamScore": 56,
-  "OpponentScore": 67,
-  "Season": 1988,
-  "IsComplete": "Yes"
+    "GameID": 19890110,
+    "OpponentID": "ga-pinewood-christian-academy-bellville",
+    "Opponent": "Pinewood Christian Academy",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 56,
+    "OpponentScore": 67,
+    "Season": 1988,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19890117,
-  "Opponent": "Pinewood Christian Academy",
-  "LocationType": "Home",
-  "GameType": "Region",
-  "Result": "L",
-  "TeamScore": 61,
-  "OpponentScore": 74,
-  "Season": 1988,
-  "IsComplete": "Yes"
+    "GameID": 19890117,
+    "OpponentID": "ga-pinewood-christian-academy-bellville",
+    "Opponent": "Pinewood Christian Academy",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 61,
+    "OpponentScore": 74,
+    "Season": 1988,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19890120,
-  "Opponent": "Frederica Academy",
-  "LocationType": "Away",
-  "GameType": "Region",
-  "Result": "L",
-  "TeamScore": 46,
-  "OpponentScore": 64,
-  "Season": 1988,
-  "IsComplete": "Yes"
+    "GameID": 19890120,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
+    "Opponent": "Frederica Academy",
+    "LocationType": "Away",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 46,
+    "OpponentScore": 64,
+    "Season": 1988,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19890121,
-  "Opponent": "Memorial Day School",
-  "LocationType": "Home",
-  "GameType": "Region",
-  "Result": "L",
-  "TeamScore": 48,
-  "OpponentScore": 69,
-  "Season": 1988,
-  "IsComplete": "Yes"
+    "GameID": 19890121,
+    "OpponentID": "ga-memorial-day-school-savannah",
+    "Opponent": "Memorial Day School",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 48,
+    "OpponentScore": 69,
+    "Season": 1988,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19890127,
-  "Opponent": "Trinity Christian Academy",
-  "LocationType": "Home",
-  "GameType": "Region",
-  "Result": "L",
-  "TeamScore": 43,
-  "OpponentScore": 77,
-  "Season": 1988,
-  "IsComplete": "Yes"
+    "GameID": 19890127,
+    "OpponentID": "ga-trinity-christian-academy-dublin",
+    "Opponent": "Trinity Christian Academy",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 43,
+    "OpponentScore": 77,
+    "Season": 1988,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19890131,
-  "Opponent": "Pathway Day School",
-  "LocationType": "Away",
-  "GameType": "Region",
-  "Result": "L",
-  "TeamScore": 43,
-  "OpponentScore": 67,
-  "Season": 1988,
-  "IsComplete": "Yes"
+    "GameID": 19890131,
+    "OpponentID": "ga-pathway-day-school-savannah",
+    "Opponent": "Pathway Day School",
+    "LocationType": "Away",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 43,
+    "OpponentScore": 67,
+    "Season": 1988,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19890203,
-  "Opponent": "Frederica Academy",
-  "LocationType": "Home",
-  "GameType": "Region",
-  "Result": "L",
-  "TeamScore": 28,
-  "OpponentScore": 50,
-  "Season": 1988,
-  "IsComplete": "Yes"
+    "GameID": 19890203,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
+    "Opponent": "Frederica Academy",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 28,
+    "OpponentScore": 50,
+    "Season": 1988,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19890207,
-  "Opponent": "Hilton Head Preparatory School",
-  "LocationType": "Away",
-  "GameType": "Non-Region",
-  "Result": "L",
-  "TeamScore": null,
-  "OpponentScore": null,
-  "Season": 1988,
-  "IsComplete": "No"
+    "GameID": 19890207,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
+    "Opponent": "Hilton Head Preparatory School",
+    "LocationType": "Away",
+    "GameType": "Non-Region",
+    "Result": "L",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 1988,
+    "IsComplete": "No"
   },
   {
-  "GameID": 19890210,
-  "Opponent": "Pinewood Christian Academy",
-  "LocationType": "Home",
-  "GameType": "Region",
-  "Result": "L",
-  "TeamScore": 57,
-  "OpponentScore": 64,
-  "Season": 1988,
-  "IsComplete": "Yes"
+    "GameID": 19890210,
+    "OpponentID": "ga-pinewood-christian-academy-bellville",
+    "Opponent": "Pinewood Christian Academy",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 57,
+    "OpponentScore": 64,
+    "Season": 1988,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19890211,
-  "Opponent": "David Emanuel Academy",
-  "LocationType": "Away",
-  "GameType": "Region",
-  "Result": "L",
-  "TeamScore": 50,
-  "OpponentScore": 51,
-  "Season": 1988,
-  "IsComplete": "Yes"
+    "GameID": 19890211,
+    "OpponentID": "ga-david-emanuel-academy-stillmore",
+    "Opponent": "David Emanuel Academy",
+    "LocationType": "Away",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 50,
+    "OpponentScore": 51,
+    "Season": 1988,
+    "IsComplete": "Yes"
   },
   {
-  "GameID": 19890221,
-  "Opponent": "Pathway Day School",
-  "LocationType": "Neutral",
-  "GameType": "Region Tournament",
-  "Result": "L",
-  "TeamScore": 52,
-  "OpponentScore": 56,
-  "Season": 1988,
-  "IsComplete": "Yes"
+    "GameID": 19890221,
+    "OpponentID": "ga-pathway-day-school-savannah",
+    "Opponent": "Pathway Day School",
+    "LocationType": "Neutral",
+    "GameType": "Region Tournament",
+    "Result": "L",
+    "TeamScore": 52,
+    "OpponentScore": 56,
+    "Season": 1988,
+    "IsComplete": "Yes"
   },
   {
     "GameID": 19921115,
@@ -2751,6 +2980,7 @@
   },
   {
     "GameID": 19921201,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
     "Opponent": "Thomas Heyward Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -2773,6 +3003,7 @@
   },
   {
     "GameID": 19921205,
+    "OpponentID": "ga-greater-atlanta-christian-school-norcross",
     "Opponent": "Greater Atlanta Christian School",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -2784,6 +3015,7 @@
   },
   {
     "GameID": 19921208,
+    "OpponentID": "sc-beaufort-academy-beaufort",
     "Opponent": "Beaufort Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -2795,6 +3027,7 @@
   },
   {
     "GameID": 19921211,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
     "Opponent": "Hilton Head Preparatory School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -2806,6 +3039,7 @@
   },
   {
     "GameID": 19921212,
+    "OpponentID": "ny-valley-stream-north-high-school-franklin-square",
     "Opponent": "Valley Stream North (New York)",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -2817,6 +3051,7 @@
   },
   {
     "GameID": 19930108,
+    "OpponentID": "ga-david-emanuel-academy-stillmore",
     "Opponent": "David Emanuel Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -2828,6 +3063,7 @@
   },
   {
     "GameID": 19930109,
+    "OpponentID": "ga-bulloch-academy-statesboro",
     "Opponent": "Bulloch Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -2839,6 +3075,7 @@
   },
   {
     "GameID": 19930112,
+    "OpponentID": "ga-ocmulgee-academy-lumber-city",
     "Opponent": "Ocmulgee Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -2850,6 +3087,7 @@
   },
   {
     "GameID": 19930115,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons",
     "Opponent": "Robert Toombs Christian Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -2861,6 +3099,7 @@
   },
   {
     "GameID": 19930116,
+    "OpponentID": "ga-trinity-christian-academy-dublin",
     "Opponent": "Trinity Christian Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -2872,6 +3111,7 @@
   },
   {
     "GameID": 19930119,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
     "Opponent": "Frederica Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -2883,6 +3123,7 @@
   },
   {
     "GameID": 19930122,
+    "OpponentID": "ga-citizens-christian-academy-douglas",
     "Opponent": "Citizens Christian Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -2894,6 +3135,7 @@
   },
   {
     "GameID": 19930123,
+    "OpponentID": "ga-memorial-day-school-savannah",
     "Opponent": "Memorial Day School",
     "LocationType": "Away",
     "GameType": "Region",
@@ -2905,6 +3147,7 @@
   },
   {
     "GameID": 19930129,
+    "OpponentID": "ga-bulloch-academy-statesboro",
     "Opponent": "Bulloch Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -2916,6 +3159,7 @@
   },
   {
     "GameID": 19930130,
+    "OpponentID": "ga-bible-baptist-school-savannah",
     "Opponent": "Bible Baptist School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -2927,6 +3171,7 @@
   },
   {
     "GameID": 19930202,
+    "OpponentID": "ga-memorial-day-school-savannah",
     "Opponent": "Memorial Day School",
     "LocationType": "Home",
     "GameType": "Region",
@@ -2938,6 +3183,7 @@
   },
   {
     "GameID": 19930206,
+    "OpponentID": "ga-trinity-christian-academy-dublin",
     "Opponent": "Trinity Christian Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -2949,6 +3195,7 @@
   },
   {
     "GameID": 19930209,
+    "OpponentID": "ga-david-emanuel-academy-stillmore",
     "Opponent": "David Emanuel Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -2960,6 +3207,7 @@
   },
   {
     "GameID": 19930212,
+    "OpponentID": "ga-citizens-christian-academy-douglas",
     "Opponent": "Citizens Christian Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -2971,6 +3219,7 @@
   },
   {
     "GameID": 19930213,
+    "OpponentID": "ga-ocmulgee-academy-lumber-city",
     "Opponent": "Ocmulgee Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -2982,6 +3231,7 @@
   },
   {
     "GameID": 19930216,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons",
     "Opponent": "Robert Toombs Christian Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -2993,6 +3243,7 @@
   },
   {
     "GameID": 19930219,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
     "Opponent": "Frederica Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -3004,6 +3255,7 @@
   },
   {
     "GameID": 19930224,
+    "OpponentID": "ga-bulloch-academy-statesboro",
     "Opponent": "Bulloch Academy",
     "LocationType": "Neutral",
     "GameType": "Region Tournament",
@@ -3015,6 +3267,7 @@
   },
   {
     "GameID": 19930225,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
     "Opponent": "Frederica Academy",
     "LocationType": "Neutral",
     "GameType": "Region Tournament",
@@ -3026,6 +3279,7 @@
   },
   {
     "GameID": 19930226,
+    "OpponentID": "ga-memorial-day-school-savannah",
     "Opponent": "Memorial Day School",
     "LocationType": "Neutral",
     "GameType": "Region Tournament",
@@ -3037,6 +3291,7 @@
   },
   {
     "GameID": 19930302,
+    "OpponentID": "ga-cross-keys-christian-academy-macon",
     "Opponent": "Cross Keys Christian Academy",
     "LocationType": "Neutral",
     "GameType": "State Tournament",
@@ -3048,6 +3303,7 @@
   },
   {
     "GameID": 19930304,
+    "OpponentID": "ga-southwest-georgia-academy-damascus",
     "Opponent": "Southwest Georgia Academy",
     "LocationType": "Neutral",
     "GameType": "State Tournament",
@@ -3059,6 +3315,7 @@
   },
   {
     "GameID": 19930305,
+    "OpponentID": "ga-riverview-academy-albany",
     "Opponent": "Riverview Academy",
     "LocationType": "Neutral",
     "GameType": "State Tournament",
@@ -3070,6 +3327,7 @@
   },
   {
     "GameID": 19930306,
+    "OpponentID": "ga-georgia-christian-school-valdosta",
     "Opponent": "Georgia Christian School",
     "LocationType": "Neutral",
     "GameType": "State Tournament",
@@ -3081,6 +3339,7 @@
   },
   {
     "GameID": 20001201,
+    "OpponentID": "ga-abundant-life-christian-academy-savannah",
     "Opponent": "Abundant Life Christian Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -3092,6 +3351,7 @@
   },
   {
     "GameID": 20001205,
+    "OpponentID": "ga-abundant-life-christian-academy-savannah",
     "Opponent": "Abundant Life Christian Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -3103,6 +3363,7 @@
   },
   {
     "GameID": 20001208,
+    "OpponentID": "sc-sea-island-academy-johns-island",
     "Opponent": "Sea Island Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -3114,6 +3375,7 @@
   },
   {
     "GameID": 20001209,
+    "OpponentID": "ny-east-rockaway-high-school-east-rockaway",
     "Opponent": "East Rockaway (New York)",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -3125,6 +3387,7 @@
   },
   {
     "GameID": 20001215,
+    "OpponentID": "ga-memorial-day-school-savannah",
     "Opponent": "Memorial Day School",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -3136,6 +3399,7 @@
   },
   {
     "GameID": 20001216,
+    "OpponentID": "ga-pinewood-christian-academy-bellville",
     "Opponent": "Pinewood Christian Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -3147,6 +3411,7 @@
   },
   {
     "GameID": 20010102,
+    "OpponentID": "ga-bible-baptist-school-savannah",
     "Opponent": "Bible Baptist School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -3158,6 +3423,7 @@
   },
   {
     "GameID": 20010105,
+    "OpponentID": "sc-sea-island-academy-johns-island",
     "Opponent": "Sea Island Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -3169,6 +3435,7 @@
   },
   {
     "GameID": 20010106,
+    "OpponentID": "sc-archibald-rutledge-academy-mcclellanville",
     "Opponent": "Archibald Rutledge Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -3180,6 +3447,7 @@
   },
   {
     "GameID": 20010110,
+    "OpponentID": "sc-sea-island-academy-johns-island",
     "Opponent": "Sea Island Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -3191,6 +3459,7 @@
   },
   {
     "GameID": 20010112,
+    "OpponentID": "sc-colleton-prep-academy-walterboro",
     "Opponent": "Colleton Preparatory Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -3202,6 +3471,7 @@
   },
   {
     "GameID": 20010113,
+    "OpponentID": "sc-st-johns-christian-academy-moncks-corner",
     "Opponent": "St. John's Christian Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -3213,6 +3483,7 @@
   },
   {
     "GameID": 20010116,
+    "OpponentID": "sc-beaufort-academy-beaufort",
     "Opponent": "Beaufort Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -3224,6 +3495,7 @@
   },
   {
     "GameID": 20010119,
+    "OpponentID": "sc-james-island-christian-school-charleston",
     "Opponent": "James Island Christian School",
     "LocationType": "Away",
     "GameType": "Region",
@@ -3235,6 +3507,7 @@
   },
   {
     "GameID": 20010120,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
     "Opponent": "Hilton Head Preparatory School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -3246,6 +3519,7 @@
   },
   {
     "GameID": 20010123,
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
     "Opponent": "Hilton Head Christian Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -3257,6 +3531,7 @@
   },
   {
     "GameID": 20010126,
+    "OpponentID": "ga-bible-baptist-school-savannah",
     "Opponent": "Bible Baptist School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -3268,6 +3543,7 @@
   },
   {
     "GameID": 20010129,
+    "OpponentID": "sc-james-island-christian-school-charleston",
     "Opponent": "James Island Christian School",
     "LocationType": "Home",
     "GameType": "Region",
@@ -3279,6 +3555,7 @@
   },
   {
     "GameID": 20010202,
+    "OpponentID": "sc-colleton-prep-academy-walterboro",
     "Opponent": "Colleton Preparatory Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -3290,6 +3567,7 @@
   },
   {
     "GameID": 20010209,
+    "OpponentID": "sc-beaufort-academy-beaufort",
     "Opponent": "Beaufort Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -3301,6 +3579,7 @@
   },
   {
     "GameID": 20010210,
+    "OpponentID": "ga-memorial-day-school-savannah",
     "Opponent": "Memorial Day School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -3312,6 +3591,7 @@
   },
   {
     "GameID": 20010213,
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
     "Opponent": "Hilton Head Christian Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -3323,6 +3603,7 @@
   },
   {
     "GameID": 20010220,
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
     "Opponent": "Hilton Head Christian Academy",
     "LocationType": "Neutral",
     "GameType": "Region Tournament",
@@ -3334,6 +3615,7 @@
   },
   {
     "GameID": 20010223,
+    "OpponentID": "sc-colleton-prep-academy-walterboro",
     "Opponent": "Colleton Preparatory Academy",
     "LocationType": "Neutral",
     "GameType": "Region Tournament",
@@ -3345,6 +3627,7 @@
   },
   {
     "GameID": 20010226,
+    "OpponentID": "sc-sea-island-academy-johns-island",
     "Opponent": "Sea Island Academy",
     "LocationType": "Neutral",
     "GameType": "Region Tournament",
@@ -3356,6 +3639,7 @@
   },
   {
     "GameID": 20010228,
+    "OpponentID": "sc-carolina-academy-lake-city",
     "Opponent": "Carolina Academy",
     "LocationType": "Neutral",
     "GameType": "State Tournament",
@@ -3367,6 +3651,7 @@
   },
   {
     "GameID": 20010302,
+    "OpponentID": "sc-pee-dee-academy-mullins",
     "Opponent": "Pee Dee Academy",
     "LocationType": "Neutral",
     "GameType": "State Tournament",
@@ -3378,6 +3663,7 @@
   },
   {
     "GameID": 20071119,
+    "OpponentID": "sc-beaufort-academy-beaufort",
     "Opponent": "Beaufort Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -3389,6 +3675,7 @@
   },
   {
     "GameID": 20071120,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
     "Opponent": "Thomas Heyward Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -3400,6 +3687,7 @@
   },
   {
     "GameID": 20071127,
+    "OpponentID": "sc-patrick-henry-academy-estill",
     "Opponent": "Patrick Henry Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -3411,6 +3699,7 @@
   },
   {
     "GameID": 20071130,
+    "OpponentID": "ga-memorial-day-school-savannah",
     "Opponent": "Memorial Day School",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -3422,6 +3711,7 @@
   },
   {
     "GameID": 20071201,
+    "OpponentID": "ga-bible-baptist-school-savannah",
     "Opponent": "Bible Baptist School",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -3433,6 +3723,7 @@
   },
   {
     "GameID": 20071203,
+    "OpponentID": "ga-memorial-day-school-savannah",
     "Opponent": "Memorial Day School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -3444,7 +3735,8 @@
   },
   {
     "GameID": 20071207,
-    "Opponent": "Providence Christian Academy",
+    "OpponentID": "ga-providence-christian-school-savannah",
+    "Opponent": "Providence Christian School",
     "LocationType": "Home",
     "GameType": "Non-Region",
     "Result": "W",
@@ -3455,6 +3747,7 @@
   },
   {
     "GameID": 20071210,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
     "Opponent": "Frederica Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -3466,6 +3759,7 @@
   },
   {
     "GameID": 20071211,
+    "OpponentID": "sc-cathedral-academy-north-charleston",
     "Opponent": "Cathedral Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -3477,6 +3771,7 @@
   },
   {
     "GameID": 20071214,
+    "OpponentID": "ga-abundant-life-christian-academy-savannah",
     "Opponent": "Abundant Life Christian Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -3488,6 +3783,7 @@
   },
   {
     "GameID": 20071218,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
     "Opponent": "Frederica Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -3499,6 +3795,7 @@
   },
   {
     "GameID": 20080104,
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
     "Opponent": "Hilton Head Christian Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -3510,6 +3807,7 @@
   },
   {
     "GameID": 20080107,
+    "OpponentID": "ga-abundant-life-christian-academy-savannah",
     "Opponent": "Abundant Life Christian Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -3521,6 +3819,7 @@
   },
   {
     "GameID": 20080108,
+    "OpponentID": "sc-colleton-prep-academy-walterboro",
     "Opponent": "Colleton Preparatory Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -3532,6 +3831,7 @@
   },
   {
     "GameID": 20080111,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
     "Opponent": "Hilton Head Preparatory School",
     "LocationType": "Away",
     "GameType": "Region",
@@ -3543,6 +3843,7 @@
   },
   {
     "GameID": 20080115,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
     "Opponent": "Thomas Heyward Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -3554,6 +3855,7 @@
   },
   {
     "GameID": 20080118,
+    "OpponentID": "ga-bible-baptist-school-savannah",
     "Opponent": "Bible Baptist School",
     "LocationType": "Away",
     "GameType": "Region",
@@ -3565,6 +3867,7 @@
   },
   {
     "GameID": 20080122,
+    "OpponentID": "sc-beaufort-academy-beaufort",
     "Opponent": "Beaufort Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -3576,6 +3879,7 @@
   },
   {
     "GameID": 20080123,
+    "OpponentID": "sc-patrick-henry-academy-estill",
     "Opponent": "Patrick Henry Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -3587,6 +3891,7 @@
   },
   {
     "GameID": 20080125,
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
     "Opponent": "Hilton Head Christian Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -3598,6 +3903,7 @@
   },
   {
     "GameID": 20080129,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
     "Opponent": "Hilton Head Preparatory School",
     "LocationType": "Home",
     "GameType": "Region",
@@ -3609,6 +3915,7 @@
   },
   {
     "GameID": 20080201,
+    "OpponentID": "ga-bible-baptist-school-savannah",
     "Opponent": "Bible Baptist School",
     "LocationType": "Home",
     "GameType": "Region",
@@ -3620,6 +3927,7 @@
   },
   {
     "GameID": 20080204,
+    "OpponentID": "ga-pinewood-christian-academy-bellville",
     "Opponent": "Pinewood Christian Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -3631,6 +3939,7 @@
   },
   {
     "GameID": 20080205,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
     "Opponent": "Thomas Heyward Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -3642,6 +3951,7 @@
   },
   {
     "GameID": 20080208,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
     "Opponent": "Thomas Heyward Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -3653,6 +3963,7 @@
   },
   {
     "GameID": 20080211,
+    "OpponentID": "sc-beaufort-academy-beaufort",
     "Opponent": "Beaufort Academy",
     "LocationType": "Away",
     "GameType": "State Tournament",
@@ -3664,6 +3975,7 @@
   },
   {
     "GameID": 20081121,
+    "OpponentID": "ga-pinewood-christian-academy-bellville",
     "Opponent": "Pinewood Christian Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -3675,6 +3987,7 @@
   },
   {
     "GameID": 20081122,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
     "Opponent": "Frederica Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -3686,6 +3999,7 @@
   },
   {
     "GameID": 20081124,
+    "OpponentID": "sc-beaufort-academy-beaufort",
     "Opponent": "Beaufort Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -3697,6 +4011,7 @@
   },
   {
     "GameID": 20081125,
+    "OpponentID": "sc-colleton-prep-academy-walterboro",
     "Opponent": "Colleton Preparatory Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -3708,6 +4023,7 @@
   },
   {
     "GameID": 20081202,
+    "OpponentID": "sc-colleton-prep-academy-walterboro",
     "Opponent": "Colleton Preparatory Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -3719,7 +4035,8 @@
   },
   {
     "GameID": 20081205,
-    "Opponent": "Providence Christian Academy",
+    "OpponentID": "ga-providence-christian-school-savannah",
+    "Opponent": "Providence Christian School",
     "LocationType": "Neutral",
     "GameType": "Tournament",
     "Result": "W",
@@ -3730,6 +4047,7 @@
   },
   {
     "GameID": 20081206,
+    "OpponentID": "ga-bible-baptist-school-savannah",
     "Opponent": "Bible Baptist School",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -3741,6 +4059,7 @@
   },
   {
     "GameID": 20081208,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
     "Opponent": "Hilton Head Preparatory School",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -3752,6 +4071,7 @@
   },
   {
     "GameID": 20081209,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
     "Opponent": "Thomas Heyward Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -3763,6 +4083,7 @@
   },
   {
     "GameID": 20081212,
+    "OpponentID": "sc-andrew-jackson-academy-ehrhardt",
     "Opponent": "Andrew Jackson Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -3774,6 +4095,7 @@
   },
   {
     "GameID": 20090102,
+    "OpponentID": "sc-charleston-collegiate-school-johns-island",
     "Opponent": "Charleston Collegiate",
     "LocationType": "Home",
     "GameType": "Region",
@@ -3785,6 +4107,7 @@
   },
   {
     "GameID": 20090106,
+    "OpponentID": "ga-bible-baptist-school-savannah",
     "Opponent": "Bible Baptist School",
     "LocationType": "Away",
     "GameType": "Region",
@@ -3796,6 +4119,7 @@
   },
   {
     "GameID": 20090108,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
     "Opponent": "Thomas Heyward Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -3807,6 +4131,7 @@
   },
   {
     "GameID": 20090109,
+    "OpponentID": "sc-cathedral-academy-north-charleston",
     "Opponent": "Cathedral Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -3818,6 +4143,7 @@
   },
   {
     "GameID": 20090113,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
     "Opponent": "Hilton Head Preparatory School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -3829,6 +4155,7 @@
   },
   {
     "GameID": 20090115,
+    "OpponentID": "ga-abundant-life-christian-academy-savannah",
     "Opponent": "Abundant Life Christian Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -3840,6 +4167,7 @@
   },
   {
     "GameID": 20090116,
+    "OpponentID": "sc-first-baptist-school-of-charleston-charleston",
     "Opponent": "First Baptist School",
     "LocationType": "Away",
     "GameType": "Region",
@@ -3851,6 +4179,7 @@
   },
   {
     "GameID": 20090120,
+    "OpponentID": "sc-beaufort-academy-beaufort",
     "Opponent": "Beaufort Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -3862,6 +4191,7 @@
   },
   {
     "GameID": 20090122,
+    "OpponentID": "ga-abundant-life-christian-academy-savannah",
     "Opponent": "Abundant Life Christian Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -3873,6 +4203,7 @@
   },
   {
     "GameID": 20090123,
+    "OpponentID": "sc-charleston-collegiate-school-johns-island",
     "Opponent": "Charleston Collegiate",
     "LocationType": "Away",
     "GameType": "Region",
@@ -3884,6 +4215,7 @@
   },
   {
     "GameID": 20090127,
+    "OpponentID": "ga-bible-baptist-school-savannah",
     "Opponent": "Bible Baptist School",
     "LocationType": "Home",
     "GameType": "Region",
@@ -3895,6 +4227,7 @@
   },
   {
     "GameID": 20090129,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
     "Opponent": "Thomas Heyward Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -3906,6 +4239,7 @@
   },
   {
     "GameID": 20090130,
+    "OpponentID": "sc-cathedral-academy-north-charleston",
     "Opponent": "Cathedral Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -3917,6 +4251,7 @@
   },
   {
     "GameID": 20090203,
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
     "Opponent": "Hilton Head Christian Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -3928,6 +4263,7 @@
   },
   {
     "GameID": 20090206,
+    "OpponentID": "sc-first-baptist-school-of-charleston-charleston",
     "Opponent": "First Baptist School",
     "LocationType": "Home",
     "GameType": "Region",
@@ -3939,6 +4275,7 @@
   },
   {
     "GameID": 20090207,
+    "OpponentID": "sc-beaufort-academy-beaufort",
     "Opponent": "Beaufort Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -3950,6 +4287,7 @@
   },
   {
     "GameID": 20090210,
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
     "Opponent": "Hilton Head Christian Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -3961,6 +4299,7 @@
   },
   {
     "GameID": 20091117,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
     "Opponent": "Thomas Heyward Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -3972,6 +4311,7 @@
   },
   {
     "GameID": 20091120,
+    "OpponentID": "ga-pinewood-christian-academy-bellville",
     "Opponent": "Pinewood Christian Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -3983,6 +4323,7 @@
   },
   {
     "GameID": 20091123,
+    "OpponentID": "sc-colleton-prep-academy-walterboro",
     "Opponent": "Colleton Preparatory Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -3994,6 +4335,7 @@
   },
   {
     "GameID": 20091125,
+    "OpponentID": "sc-dorchester-academy-st-george",
     "Opponent": "Dorchester Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -4005,6 +4347,7 @@
   },
   {
     "GameID": 20091130,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
     "Opponent": "Hilton Head Preparatory School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -4016,6 +4359,7 @@
   },
   {
     "GameID": 20091211,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
     "Opponent": "Thomas Heyward Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -4027,6 +4371,7 @@
   },
   {
     "GameID": 20091212,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
     "Opponent": "Hilton Head Preparatory School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -4038,6 +4383,7 @@
   },
   {
     "GameID": 20091218,
+    "OpponentID": "ga-thomas-jefferson-academy-louisville",
     "Opponent": "Thomas Jefferson Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -4049,6 +4395,7 @@
   },
   {
     "GameID": 20091219,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons",
     "Opponent": "Robert Toombs Christian Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -4060,7 +4407,8 @@
   },
   {
     "GameID": 20100105,
-    "Opponent": "Providence Christian Academy",
+    "OpponentID": "ga-providence-christian-school-savannah",
+    "Opponent": "Providence Christian School",
     "LocationType": "Home",
     "GameType": "Non-Region",
     "Result": "W",
@@ -4071,6 +4419,7 @@
   },
   {
     "GameID": 20100107,
+    "OpponentID": "ga-abundant-life-christian-academy-savannah",
     "Opponent": "Abundant Life Christian Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -4082,6 +4431,7 @@
   },
   {
     "GameID": 20100109,
+    "OpponentID": "sc-cathedral-academy-north-charleston",
     "Opponent": "Cathedral Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -4093,6 +4443,7 @@
   },
   {
     "GameID": 20100112,
+    "OpponentID": "ga-bible-baptist-school-savannah",
     "Opponent": "Bible Baptist School",
     "LocationType": "Home",
     "GameType": "Region",
@@ -4104,6 +4455,7 @@
   },
   {
     "GameID": 20100115,
+    "OpponentID": "sc-first-baptist-school-of-charleston-charleston",
     "Opponent": "First Baptist School",
     "LocationType": "Home",
     "GameType": "Region",
@@ -4115,6 +4467,7 @@
   },
   {
     "GameID": 20100116,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
     "Opponent": "Frederica Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -4126,6 +4479,7 @@
   },
   {
     "GameID": 20100119,
+    "OpponentID": "sc-beaufort-academy-beaufort",
     "Opponent": "Beaufort Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -4137,6 +4491,7 @@
   },
   {
     "GameID": 20100122,
+    "OpponentID": "sc-charleston-collegiate-school-johns-island",
     "Opponent": "Charleston Collegiate",
     "LocationType": "Home",
     "GameType": "Region",
@@ -4148,6 +4503,7 @@
   },
   {
     "GameID": 20100126,
+    "OpponentID": "ga-bible-baptist-school-savannah",
     "Opponent": "Bible Baptist School",
     "LocationType": "Away",
     "GameType": "Region",
@@ -4159,6 +4515,7 @@
   },
   {
     "GameID": 20100129,
+    "OpponentID": "sc-cathedral-academy-north-charleston",
     "Opponent": "Cathedral Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -4170,6 +4527,7 @@
   },
   {
     "GameID": 20100130,
+    "OpponentID": "sc-charleston-collegiate-school-johns-island",
     "Opponent": "Charleston Collegiate",
     "LocationType": "Away",
     "GameType": "Region",
@@ -4181,6 +4539,7 @@
   },
   {
     "GameID": 20100202,
+    "OpponentID": "sc-beaufort-academy-beaufort",
     "Opponent": "Beaufort Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -4192,6 +4551,7 @@
   },
   {
     "GameID": 20100204,
+    "OpponentID": "ga-abundant-life-christian-academy-savannah",
     "Opponent": "Abundant Life Christian Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -4203,6 +4563,7 @@
   },
   {
     "GameID": 20100205,
+    "OpponentID": "sc-first-baptist-school-of-charleston-charleston",
     "Opponent": "First Baptist School",
     "LocationType": "Away",
     "GameType": "Region",
@@ -4214,6 +4575,7 @@
   },
   {
     "GameID": 20100209,
+    "OpponentID": "sc-cathedral-academy-north-charleston",
     "Opponent": "Cathedral Academy",
     "LocationType": "Neutral",
     "GameType": "Region Tournament",
@@ -4225,6 +4587,7 @@
   },
   {
     "GameID": 20100211,
+    "OpponentID": "sc-first-baptist-school-of-charleston-charleston",
     "Opponent": "First Baptist School",
     "LocationType": "Neutral",
     "GameType": "Region Tournament",
@@ -4236,7 +4599,8 @@
   },
   {
     "GameID": 20100216,
-    "Opponent": "Providence Christian Academy",
+    "OpponentID": "ga-providence-christian-school-savannah",
+    "Opponent": "Providence Christian School",
     "LocationType": "Neutral",
     "GameType": "State Tournament",
     "Result": "W",
@@ -4247,7 +4611,8 @@
   },
   {
     "GameID": 20100220,
-    "Opponent": "King's Academy",
+    "OpponentID": "sc-the-kings-academy-florence",
+    "Opponent": "The King's Academy",
     "LocationType": "Neutral",
     "GameType": "State Tournament",
     "Result": "L",
@@ -4258,6 +4623,7 @@
   },
   {
     "GameID": 20101119,
+    "OpponentID": "ga-abundant-life-christian-academy-savannah",
     "Opponent": "Abundant Life Christian Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -4269,6 +4635,7 @@
   },
   {
     "GameID": 20101122,
+    "OpponentID": "sc-dorchester-academy-st-george",
     "Opponent": "Dorchester Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -4280,6 +4647,7 @@
   },
   {
     "GameID": 20101123,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
     "Opponent": "Thomas Heyward Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -4291,6 +4659,7 @@
   },
   {
     "GameID": 20101130,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
     "Opponent": "Frederica Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -4302,7 +4671,8 @@
   },
   {
     "GameID": 20101203,
-    "Opponent": "Providence Christian Academy",
+    "OpponentID": "ga-providence-christian-school-savannah",
+    "Opponent": "Providence Christian School",
     "LocationType": "Home",
     "GameType": "Non-Region",
     "Result": "W",
@@ -4313,7 +4683,8 @@
   },
   {
     "GameID": 20101210,
-    "Opponent": "Providence Christian Academy",
+    "OpponentID": "ga-providence-christian-school-savannah",
+    "Opponent": "Providence Christian School",
     "LocationType": "Away",
     "GameType": "Non-Region",
     "Result": "W",
@@ -4324,6 +4695,7 @@
   },
   {
     "GameID": 20101211,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons",
     "Opponent": "Robert Toombs Christian Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -4335,6 +4707,7 @@
   },
   {
     "GameID": 20101217,
+    "OpponentID": "ga-citizens-christian-academy-douglas",
     "Opponent": "Citizens Christian Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -4346,6 +4719,7 @@
   },
   {
     "GameID": 20101218,
+    "OpponentID": "ga-edmund-burke-academy-waynesboro",
     "Opponent": "Edmund Burke Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -4357,6 +4731,7 @@
   },
   {
     "GameID": 20101220,
+    "OpponentID": "sc-colleton-prep-academy-walterboro",
     "Opponent": "Colleton Preparatory Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -4368,6 +4743,7 @@
   },
   {
     "GameID": 20110104,
+    "OpponentID": "ga-abundant-life-christian-academy-savannah",
     "Opponent": "Abundant Life Christian Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -4379,6 +4755,7 @@
   },
   {
     "GameID": 20110107,
+    "OpponentID": "sc-charleston-collegiate-school-johns-island",
     "Opponent": "Charleston Collegiate",
     "LocationType": "Home",
     "GameType": "Region",
@@ -4390,6 +4767,7 @@
   },
   {
     "GameID": 20110108,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
     "Opponent": "Frederica Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -4401,6 +4779,7 @@
   },
   {
     "GameID": 20110111,
+    "OpponentID": "ga-bible-baptist-school-savannah",
     "Opponent": "Bible Baptist School",
     "LocationType": "Home",
     "GameType": "Region",
@@ -4412,6 +4791,7 @@
   },
   {
     "GameID": 20110114,
+    "OpponentID": "sc-first-baptist-school-of-charleston-charleston",
     "Opponent": "First Baptist School",
     "LocationType": "Away",
     "GameType": "Region",
@@ -4423,6 +4803,7 @@
   },
   {
     "GameID": 20110118,
+    "OpponentID": "ga-st-paul-academy-for-boys-savannah",
     "Opponent": "St. Paul Academy for Boys",
     "LocationType": "Away",
     "GameType": "Region",
@@ -4434,6 +4815,7 @@
   },
   {
     "GameID": 20110121,
+    "OpponentID": "sc-beaufort-academy-beaufort",
     "Opponent": "Beaufort Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -4445,6 +4827,7 @@
   },
   {
     "GameID": 20110125,
+    "OpponentID": "ga-st-paul-academy-for-boys-savannah",
     "Opponent": "St. Paul Academy for Boys",
     "LocationType": "Home",
     "GameType": "Region",
@@ -4456,6 +4839,7 @@
   },
   {
     "GameID": 20110128,
+    "OpponentID": "sc-cathedral-academy-north-charleston",
     "Opponent": "Cathedral Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -4467,6 +4851,7 @@
   },
   {
     "GameID": 20110129,
+    "OpponentID": "sc-charleston-collegiate-school-johns-island",
     "Opponent": "Charleston Collegiate",
     "LocationType": "Away",
     "GameType": "Region",
@@ -4478,6 +4863,7 @@
   },
   {
     "GameID": 20110201,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
     "Opponent": "Thomas Heyward Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -4489,6 +4875,7 @@
   },
   {
     "GameID": 20110204,
+    "OpponentID": "sc-beaufort-academy-beaufort",
     "Opponent": "Beaufort Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -4500,6 +4887,7 @@
   },
   {
     "GameID": 20110208,
+    "OpponentID": "ga-bible-baptist-school-savannah",
     "Opponent": "Bible Baptist School",
     "LocationType": "Away",
     "GameType": "Region",
@@ -4511,6 +4899,7 @@
   },
   {
     "GameID": 20110211,
+    "OpponentID": "sc-cathedral-academy-north-charleston",
     "Opponent": "Cathedral Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -4522,6 +4911,7 @@
   },
   {
     "GameID": 20110212,
+    "OpponentID": "sc-first-baptist-school-of-charleston-charleston",
     "Opponent": "First Baptist School",
     "LocationType": "Home",
     "GameType": "Region",
@@ -4533,6 +4923,7 @@
   },
   {
     "GameID": 20110215,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
     "Opponent": "Thomas Heyward Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -4544,7 +4935,8 @@
   },
   {
     "GameID": 20110219,
-    "Opponent": "King's Academy",
+    "OpponentID": "sc-the-kings-academy-florence",
+    "Opponent": "The King's Academy",
     "LocationType": "Neutral",
     "GameType": "State Tournament",
     "Result": "W",
@@ -4555,6 +4947,7 @@
   },
   {
     "GameID": 20110222,
+    "OpponentID": "sc-spartanburg-christian-academy-spartanburg",
     "Opponent": "Spartanburg Christian Academy",
     "LocationType": "Neutral",
     "GameType": "State Tournament",
@@ -4566,7 +4959,8 @@
   },
   {
     "GameID": 20111117,
-    "Opponent": "Providence Christian Academy",
+    "OpponentID": "ga-providence-christian-school-savannah",
+    "Opponent": "Providence Christian School",
     "LocationType": "Home",
     "GameType": "Non-Region",
     "Result": "W",
@@ -4577,6 +4971,7 @@
   },
   {
     "GameID": 20111121,
+    "OpponentID": "sc-orangeburg-preparatory-school-orangeburg",
     "Opponent": "Orangeburg Preparatory School",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -4588,6 +4983,7 @@
   },
   {
     "GameID": 20111122,
+    "OpponentID": "sc-colleton-prep-academy-walterboro",
     "Opponent": "Colleton Preparatory Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -4599,6 +4995,7 @@
   },
   {
     "GameID": 20111129,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
     "Opponent": "Frederica Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -4610,6 +5007,7 @@
   },
   {
     "GameID": 20111202,
+    "OpponentID": "ga-abundant-life-christian-academy-savannah",
     "Opponent": "Abundant Life Christian Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -4621,6 +5019,7 @@
   },
   {
     "GameID": 20111207,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
     "Opponent": "Frederica Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -4632,7 +5031,8 @@
   },
   {
     "GameID": 20111209,
-    "Opponent": "Providence Christian Academy",
+    "OpponentID": "ga-providence-christian-school-savannah",
+    "Opponent": "Providence Christian School",
     "LocationType": "Away",
     "GameType": "Non-Region",
     "Result": "W",
@@ -4643,7 +5043,8 @@
   },
   {
     "GameID": 20111216,
-    "Opponent": "Providence Homeschool",
+    "OpponentID": "ga-providence-christian-school-savannah",
+    "Opponent": "Providence Christian School",
     "LocationType": "Neutral",
     "GameType": "Tournament",
     "Result": "W",
@@ -4654,6 +5055,7 @@
   },
   {
     "GameID": 20111217,
+    "OpponentID": "ga-greater-augusta-independent-school-augusta",
     "Opponent": "Greater Augusta Independent School",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -4665,6 +5067,7 @@
   },
   {
     "GameID": 20111228,
+    "OpponentID": "sc-northwood-academy-summerville",
     "Opponent": "Northwood Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -4676,6 +5079,7 @@
   },
   {
     "GameID": 20111229,
+    "OpponentID": "sc-newberry-academy-newberry",
     "Opponent": "Newberry Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -4687,6 +5091,7 @@
   },
   {
     "GameID": 20120103,
+    "OpponentID": "ga-coastal-homeschool-pembroke",
     "Opponent": "Coastal Homeschool Athletic Association",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -4698,6 +5103,7 @@
   },
   {
     "GameID": 20120106,
+    "OpponentID": "sc-charleston-collegiate-school-johns-island",
     "Opponent": "Charleston Collegiate",
     "LocationType": "Home",
     "GameType": "Region",
@@ -4709,6 +5115,7 @@
   },
   {
     "GameID": 20120110,
+    "OpponentID": "ga-bible-baptist-school-savannah",
     "Opponent": "Bible Baptist School",
     "LocationType": "Home",
     "GameType": "Region",
@@ -4720,6 +5127,7 @@
   },
   {
     "GameID": 20120113,
+    "OpponentID": "sc-first-baptist-school-of-charleston-charleston",
     "Opponent": "First Baptist School",
     "LocationType": "Away",
     "GameType": "Region",
@@ -4731,6 +5139,7 @@
   },
   {
     "GameID": 20120117,
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
     "Opponent": "Hilton Head Christian Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -4742,6 +5151,7 @@
   },
   {
     "GameID": 20120120,
+    "OpponentID": "sc-beaufort-academy-beaufort",
     "Opponent": "Beaufort Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -4753,6 +5163,7 @@
   },
   {
     "GameID": 20120124,
+    "OpponentID": "ga-abundant-life-christian-academy-savannah",
     "Opponent": "Abundant Life Christian Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -4764,6 +5175,7 @@
   },
   {
     "GameID": 20120127,
+    "OpponentID": "sc-cathedral-academy-north-charleston",
     "Opponent": "Cathedral Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -4775,6 +5187,7 @@
   },
   {
     "GameID": 20120128,
+    "OpponentID": "sc-charleston-collegiate-school-johns-island",
     "Opponent": "Charleston Collegiate",
     "LocationType": "Away",
     "GameType": "Region",
@@ -4786,6 +5199,7 @@
   },
   {
     "GameID": 20120131,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
     "Opponent": "Thomas Heyward Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -4797,6 +5211,7 @@
   },
   {
     "GameID": 20120203,
+    "OpponentID": "sc-beaufort-academy-beaufort",
     "Opponent": "Beaufort Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -4808,6 +5223,7 @@
   },
   {
     "GameID": 20120207,
+    "OpponentID": "ga-bible-baptist-school-savannah",
     "Opponent": "Bible Baptist School",
     "LocationType": "Away",
     "GameType": "Region",
@@ -4819,6 +5235,7 @@
   },
   {
     "GameID": 20120210,
+    "OpponentID": "sc-cathedral-academy-north-charleston",
     "Opponent": "Cathedral Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -4830,6 +5247,7 @@
   },
   {
     "GameID": 20120211,
+    "OpponentID": "sc-first-baptist-school-of-charleston-charleston",
     "Opponent": "First Baptist School",
     "LocationType": "Home",
     "GameType": "Region",
@@ -4841,6 +5259,7 @@
   },
   {
     "GameID": 20120214,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
     "Opponent": "Thomas Heyward Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -4852,7 +5271,8 @@
   },
   {
     "GameID": 20121113,
-    "Opponent": "Providence Christian Academy",
+    "OpponentID": "ga-providence-christian-school-savannah",
+    "Opponent": "Providence Christian School",
     "LocationType": "Home",
     "GameType": "Non-Region",
     "Result": "W",
@@ -4863,6 +5283,7 @@
   },
   {
     "GameID": 20121117,
+    "OpponentID": "ga-coastal-homeschool-pembroke",
     "Opponent": "Coastal Homeschool Athletic Association",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -4874,6 +5295,7 @@
   },
   {
     "GameID": 20121119,
+    "OpponentID": "sc-orangeburg-preparatory-school-orangeburg",
     "Opponent": "Orangeburg Preparatory School",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -4885,6 +5307,7 @@
   },
   {
     "GameID": 20121120,
+    "OpponentID": "sc-colleton-prep-academy-walterboro",
     "Opponent": "Colleton Preparatory Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -4896,6 +5319,7 @@
   },
   {
     "GameID": 20121128,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
     "Opponent": "Frederica Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -4907,6 +5331,7 @@
   },
   {
     "GameID": 20121130,
+    "OpponentID": "ga-abundant-life-christian-academy-savannah",
     "Opponent": "Abundant Life Christian Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -4918,6 +5343,7 @@
   },
   {
     "GameID": 20121204,
+    "OpponentID": "ga-bulloch-academy-statesboro",
     "Opponent": "Bulloch Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -4929,6 +5355,7 @@
   },
   {
     "GameID": 20121207,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
     "Opponent": "Hilton Head Preparatory School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -4940,6 +5367,7 @@
   },
   {
     "GameID": 20121210,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
     "Opponent": "Frederica Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -4951,7 +5379,8 @@
   },
   {
     "GameID": 20121211,
-    "Opponent": "Providence Christian Academy",
+    "OpponentID": "ga-providence-christian-school-savannah",
+    "Opponent": "Providence Christian School",
     "LocationType": "Home",
     "GameType": "Non-Region",
     "Result": "W",
@@ -4962,6 +5391,7 @@
   },
   {
     "GameID": 20121215,
+    "OpponentID": "ga-edmund-burke-academy-waynesboro",
     "Opponent": "Edmund Burke Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -4973,6 +5403,7 @@
   },
   {
     "GameID": 20121218,
+    "OpponentID": "ga-coastal-homeschool-pembroke",
     "Opponent": "Coastal Homeschool Athletic Association",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -4984,6 +5415,7 @@
   },
   {
     "GameID": 20121220,
+    "OpponentID": "sc-faith-christian-school-summerville",
     "Opponent": "Faith Christian School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -4995,6 +5427,7 @@
   },
   {
     "GameID": 20130104,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
     "Opponent": "Thomas Heyward Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -5006,6 +5439,7 @@
   },
   {
     "GameID": 20130107,
+    "OpponentID": "ga-bible-baptist-school-savannah",
     "Opponent": "Bible Baptist School",
     "LocationType": "Away",
     "GameType": "Region",
@@ -5017,6 +5451,7 @@
   },
   {
     "GameID": 20130111,
+    "OpponentID": "sc-charleston-collegiate-school-johns-island",
     "Opponent": "Charleston Collegiate",
     "LocationType": "Home",
     "GameType": "Region",
@@ -5028,6 +5463,7 @@
   },
   {
     "GameID": 20130112,
+    "OpponentID": "ga-bulloch-academy-statesboro",
     "Opponent": "Bulloch Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -5039,6 +5475,7 @@
   },
   {
     "GameID": 20130116,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
     "Opponent": "Hilton Head Preparatory School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -5050,6 +5487,7 @@
   },
   {
     "GameID": 20130118,
+    "OpponentID": "sc-beaufort-academy-beaufort",
     "Opponent": "Beaufort Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -5061,6 +5499,7 @@
   },
   {
     "GameID": 20130122,
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
     "Opponent": "Hilton Head Christian Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -5072,6 +5511,7 @@
   },
   {
     "GameID": 20130125,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
     "Opponent": "Thomas Heyward Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -5083,6 +5523,7 @@
   },
   {
     "GameID": 20130129,
+    "OpponentID": "sc-beaufort-academy-beaufort",
     "Opponent": "Beaufort Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -5094,6 +5535,7 @@
   },
   {
     "GameID": 20130131,
+    "OpponentID": "ga-bible-baptist-school-savannah",
     "Opponent": "Bible Baptist School",
     "LocationType": "Home",
     "GameType": "Region",
@@ -5105,6 +5547,7 @@
   },
   {
     "GameID": 20130202,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
     "Opponent": "Thomas Heyward Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -5116,6 +5559,7 @@
   },
   {
     "GameID": 20130205,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
     "Opponent": "Thomas Heyward Academy",
     "LocationType": "Neutral",
     "GameType": "State Tournament",
@@ -5127,6 +5571,7 @@
   },
   {
     "GameID": 20131119,
+    "OpponentID": "ga-coastal-homeschool-pembroke",
     "Opponent": "Coastal Homeschool Athletic Association",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -5138,6 +5583,7 @@
   },
   {
     "GameID": 20131122,
+    "OpponentID": "ga-coastal-homeschool-pembroke",
     "Opponent": "Coastal Homeschool Athletic Association",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -5149,6 +5595,7 @@
   },
   {
     "GameID": 20131125,
+    "OpponentID": "ga-abundant-life-christian-academy-savannah",
     "Opponent": "Abundant Life Christian Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -5160,6 +5607,7 @@
   },
   {
     "GameID": 20131126,
+    "OpponentID": "ga-david-emanuel-academy-stillmore",
     "Opponent": "David Emanuel Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -5171,6 +5619,7 @@
   },
   {
     "GameID": 20131203,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
     "Opponent": "Frederica Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -5182,6 +5631,7 @@
   },
   {
     "GameID": 20131206,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
     "Opponent": "Hilton Head Preparatory School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -5193,6 +5643,7 @@
   },
   {
     "GameID": 20131209,
+    "OpponentID": "sc-colleton-prep-academy-walterboro",
     "Opponent": "Colleton Preparatory Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -5204,6 +5655,7 @@
   },
   {
     "GameID": 20131212,
+    "OpponentID": "sc-dorchester-academy-st-george",
     "Opponent": "Dorchester Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -5215,6 +5667,7 @@
   },
   {
     "GameID": 20131213,
+    "OpponentID": "sc-colleton-prep-academy-walterboro",
     "Opponent": "Colleton Preparatory Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -5226,6 +5679,7 @@
   },
   {
     "GameID": 20131219,
+    "OpponentID": "ga-david-emanuel-academy-stillmore",
     "Opponent": "David Emanuel Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -5237,6 +5691,7 @@
   },
   {
     "GameID": 20140103,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
     "Opponent": "Frederica Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -5248,6 +5703,7 @@
   },
   {
     "GameID": 20140107,
+    "OpponentID": "ga-bible-baptist-school-savannah",
     "Opponent": "Bible Baptist School",
     "LocationType": "Away",
     "GameType": "Region",
@@ -5259,6 +5715,7 @@
   },
   {
     "GameID": 20140110,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
     "Opponent": "Thomas Heyward Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -5270,6 +5727,7 @@
   },
   {
     "GameID": 20140114,
+    "OpponentID": "ga-bible-baptist-school-savannah",
     "Opponent": "Bible Baptist School",
     "LocationType": "Home",
     "GameType": "Region",
@@ -5281,6 +5739,7 @@
   },
   {
     "GameID": 20140116,
+    "OpponentID": "ga-abundant-life-christian-academy-savannah",
     "Opponent": "Abundant Life Christian Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -5292,6 +5751,7 @@
   },
   {
     "GameID": 20140118,
+    "OpponentID": "sc-charleston-collegiate-school-johns-island",
     "Opponent": "Charleston Collegiate",
     "LocationType": "Away",
     "GameType": "Region",
@@ -5303,6 +5763,7 @@
   },
   {
     "GameID": 20140121,
+    "OpponentID": "ga-coastal-homeschool-pembroke",
     "Opponent": "Coastal Homeschool Athletic Association",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -5314,6 +5775,7 @@
   },
   {
     "GameID": 20140124,
+    "OpponentID": "sc-beaufort-academy-beaufort",
     "Opponent": "Beaufort Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -5325,6 +5787,7 @@
   },
   {
     "GameID": 20140131,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
     "Opponent": "Thomas Heyward Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -5336,6 +5799,7 @@
   },
   {
     "GameID": 20140204,
+    "OpponentID": "sc-beaufort-academy-beaufort",
     "Opponent": "Beaufort Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -5347,6 +5811,7 @@
   },
   {
     "GameID": 20140207,
+    "OpponentID": "ga-the-habersham-school-savannah",
     "Opponent": "The Habersham School",
     "LocationType": "Home",
     "GameType": "Region",
@@ -5358,6 +5823,7 @@
   },
   {
     "GameID": 20140208,
+    "OpponentID": "sc-charleston-collegiate-school-johns-island",
     "Opponent": "Charleston Collegiate",
     "LocationType": "Home",
     "GameType": "Region",
@@ -5369,6 +5835,7 @@
   },
   {
     "GameID": 20140210,
+    "OpponentID": "sc-beaufort-academy-beaufort",
     "Opponent": "Beaufort Academy",
     "LocationType": "Neutral",
     "GameType": "Region Tournament",
@@ -5380,6 +5847,7 @@
   },
   {
     "GameID": 20140211,
+    "OpponentID": "sc-charleston-collegiate-school-johns-island",
     "Opponent": "Charleston Collegiate",
     "LocationType": "Neutral",
     "GameType": "Region Tournament",
@@ -5391,6 +5859,7 @@
   },
   {
     "GameID": 20141114,
+    "OpponentID": "ga-the-habersham-school-savannah",
     "Opponent": "The Habersham School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -5402,6 +5871,7 @@
   },
   {
     "GameID": 20141121,
+    "OpponentID": "ga-coastal-homeschool-pembroke",
     "Opponent": "Coastal Homeschool Athletic Association",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -5413,6 +5883,7 @@
   },
   {
     "GameID": 20141125,
+    "OpponentID": "ga-david-emanuel-academy-stillmore",
     "Opponent": "David Emanuel Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -5424,6 +5895,7 @@
   },
   {
     "GameID": 20141202,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
     "Opponent": "Frederica Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -5435,6 +5907,7 @@
   },
   {
     "GameID": 20141205,
+    "OpponentID": "sc-patrick-henry-academy-estill",
     "Opponent": "Patrick Henry Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -5446,6 +5919,7 @@
   },
   {
     "GameID": 20141211,
+    "OpponentID": "sc-dorchester-academy-st-george",
     "Opponent": "Dorchester Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -5457,6 +5931,7 @@
   },
   {
     "GameID": 20141212,
+    "OpponentID": "sc-beaufort-academy-beaufort",
     "Opponent": "Beaufort Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -5468,6 +5943,7 @@
   },
   {
     "GameID": 20141218,
+    "OpponentID": "ga-david-emanuel-academy-stillmore",
     "Opponent": "David Emanuel Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -5479,6 +5955,7 @@
   },
   {
     "GameID": 20150106,
+    "OpponentID": "sc-beaufort-academy-beaufort",
     "Opponent": "Beaufort Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -5490,6 +5967,7 @@
   },
   {
     "GameID": 20150109,
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
     "Opponent": "Hilton Head Christian Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -5501,6 +5979,7 @@
   },
   {
     "GameID": 20150110,
+    "OpponentID": "ga-the-habersham-school-savannah",
     "Opponent": "The Habersham School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -5512,6 +5991,7 @@
   },
   {
     "GameID": 20150115,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
     "Opponent": "Thomas Heyward Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -5523,6 +6003,7 @@
   },
   {
     "GameID": 20150116,
+    "OpponentID": "ga-bethesda-academy-savannah",
     "Opponent": "Bethesda Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -5534,6 +6015,7 @@
   },
   {
     "GameID": 20150120,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
     "Opponent": "Hilton Head Preparatory School",
     "LocationType": "Away",
     "GameType": "Region",
@@ -5545,6 +6027,7 @@
   },
   {
     "GameID": 20150123,
+    "OpponentID": "ga-bible-baptist-school-savannah",
     "Opponent": "Bible Baptist School",
     "LocationType": "Home",
     "GameType": "Region",
@@ -5556,6 +6039,7 @@
   },
   {
     "GameID": 20150127,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
     "Opponent": "Thomas Heyward Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -5567,6 +6051,7 @@
   },
   {
     "GameID": 20150130,
+    "OpponentID": "sc-beaufort-academy-beaufort",
     "Opponent": "Beaufort Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -5578,6 +6063,7 @@
   },
   {
     "GameID": 20150131,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
     "Opponent": "Frederica Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -5589,6 +6075,7 @@
   },
   {
     "GameID": 20150203,
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
     "Opponent": "Hilton Head Christian Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -5600,6 +6087,7 @@
   },
   {
     "GameID": 20150206,
+    "OpponentID": "sc-patrick-henry-academy-estill",
     "Opponent": "Patrick Henry Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -5611,6 +6099,7 @@
   },
   {
     "GameID": 20150213,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
     "Opponent": "Hilton Head Preparatory School",
     "LocationType": "Home",
     "GameType": "Region",
@@ -5622,6 +6111,7 @@
   },
   {
     "GameID": 20150214,
+    "OpponentID": "ga-coastal-homeschool-pembroke",
     "Opponent": "Coastal Homeschool Athletic Association",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -5633,6 +6123,7 @@
   },
   {
     "GameID": 20150217,
+    "OpponentID": "ga-bible-baptist-school-savannah",
     "Opponent": "Bible Baptist School",
     "LocationType": "Away",
     "GameType": "Region",
@@ -5644,6 +6135,7 @@
   },
   {
     "GameID": 20150218,
+    "OpponentID": "ga-bethesda-academy-savannah",
     "Opponent": "Bethesda Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -5655,6 +6147,7 @@
   },
   {
     "GameID": 20150221,
+    "OpponentID": "sc-christian-academy-myrtle-beach",
     "Opponent": "Christian Academy",
     "LocationType": "Neutral",
     "GameType": "State Tournament",
@@ -5666,6 +6159,7 @@
   },
   {
     "GameID": 20151201,
+    "OpponentID": "sc-john-paul-ii-catholic-school-ridgeland",
     "Opponent": "John Paul II Catholic School",
     "LocationType": "Home",
     "GameType": "Region",
@@ -5677,6 +6171,7 @@
   },
   {
     "GameID": 20151203,
+    "OpponentID": "sc-patrick-henry-academy-estill",
     "Opponent": "Patrick Henry Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -5688,6 +6183,7 @@
   },
   {
     "GameID": 20151208,
+    "OpponentID": "sc-patrick-henry-academy-estill",
     "Opponent": "Patrick Henry Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -5699,6 +6195,7 @@
   },
   {
     "GameID": 20151210,
+    "OpponentID": "sc-beaufort-academy-beaufort",
     "Opponent": "Beaufort Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -5710,6 +6207,7 @@
   },
   {
     "GameID": 20151211,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
     "Opponent": "Thomas Heyward Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -5721,6 +6219,7 @@
   },
   {
     "GameID": 20151217,
+    "OpponentID": "ga-david-emanuel-academy-stillmore",
     "Opponent": "David Emanuel Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -5732,6 +6231,7 @@
   },
   {
     "GameID": 20160105,
+    "OpponentID": "sc-beaufort-academy-beaufort",
     "Opponent": "Beaufort Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -5743,6 +6243,7 @@
   },
   {
     "GameID": 20160108,
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
     "Opponent": "Hilton Head Christian Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -5754,6 +6255,7 @@
   },
   {
     "GameID": 20160114,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
     "Opponent": "Thomas Heyward Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -5765,6 +6267,7 @@
   },
   {
     "GameID": 20160115,
+    "OpponentID": "ga-bethesda-academy-savannah",
     "Opponent": "Bethesda Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -5776,6 +6279,7 @@
   },
   {
     "GameID": 20160116,
+    "OpponentID": "ga-bible-baptist-school-savannah",
     "Opponent": "Bible Baptist School",
     "LocationType": "Away",
     "GameType": "Region",
@@ -5787,6 +6291,7 @@
   },
   {
     "GameID": 20160119,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
     "Opponent": "Hilton Head Preparatory School",
     "LocationType": "Home",
     "GameType": "Region",
@@ -5798,6 +6303,7 @@
   },
   {
     "GameID": 20160122,
+    "OpponentID": "ga-coastal-homeschool-pembroke",
     "Opponent": "Coastal Homeschool Athletic Association",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -5809,6 +6315,7 @@
   },
   {
     "GameID": 20160123,
+    "OpponentID": "sc-john-paul-ii-catholic-school-ridgeland",
     "Opponent": "John Paul II Catholic School",
     "LocationType": "Away",
     "GameType": "Region",
@@ -5820,6 +6327,7 @@
   },
   {
     "GameID": 20160126,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
     "Opponent": "Thomas Heyward Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -5831,6 +6339,7 @@
   },
   {
     "GameID": 20160129,
+    "OpponentID": "sc-beaufort-academy-beaufort",
     "Opponent": "Beaufort Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -5842,6 +6351,7 @@
   },
   {
     "GameID": 20160130,
+    "OpponentID": "ga-heritage-christian-academy-brunswick",
     "Opponent": "Heritage Christian Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -5853,6 +6363,7 @@
   },
   {
     "GameID": 20160202,
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
     "Opponent": "Hilton Head Christian Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -5864,6 +6375,7 @@
   },
   {
     "GameID": 20160205,
+    "OpponentID": "ga-coastal-homeschool-pembroke",
     "Opponent": "Coastal Homeschool Athletic Association",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -5875,6 +6387,7 @@
   },
   {
     "GameID": 20160209,
+    "OpponentID": "ga-bethesda-academy-savannah",
     "Opponent": "Bethesda Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -5886,6 +6399,7 @@
   },
   {
     "GameID": 20160212,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
     "Opponent": "Hilton Head Preparatory School",
     "LocationType": "Away",
     "GameType": "Region",
@@ -5897,6 +6411,7 @@
   },
   {
     "GameID": 20160216,
+    "OpponentID": "ga-bible-baptist-school-savannah",
     "Opponent": "Bible Baptist School",
     "LocationType": "Home",
     "GameType": "Region",
@@ -5908,6 +6423,7 @@
   },
   {
     "GameID": 20161129,
+    "OpponentID": "ga-david-emanuel-academy-stillmore",
     "Opponent": "David Emanuel Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -5919,6 +6435,7 @@
   },
   {
     "GameID": 20161201,
+    "OpponentID": "sc-patrick-henry-academy-estill",
     "Opponent": "Patrick Henry Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -5930,6 +6447,7 @@
   },
   {
     "GameID": 20161206,
+    "OpponentID": "ga-heritage-christian-academy-brunswick",
     "Opponent": "Heritage Christian Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -5941,6 +6459,7 @@
   },
   {
     "GameID": 20161208,
+    "OpponentID": "ga-david-emanuel-academy-stillmore",
     "Opponent": "David Emanuel Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -5952,6 +6471,7 @@
   },
   {
     "GameID": 20161209,
+    "OpponentID": "sc-beaufort-academy-beaufort",
     "Opponent": "Beaufort Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -5963,6 +6483,7 @@
   },
   {
     "GameID": 20170103,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
     "Opponent": "Hilton Head Preparatory School",
     "LocationType": "Home",
     "GameType": "Region",
@@ -5974,6 +6495,7 @@
   },
   {
     "GameID": 20170106,
+    "OpponentID": "ga-bible-baptist-school-savannah",
     "Opponent": "Bible Baptist School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -5985,6 +6507,7 @@
   },
   {
     "GameID": 20170110,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
     "Opponent": "Thomas Heyward Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -5996,6 +6519,7 @@
   },
   {
     "GameID": 20170113,
+    "OpponentID": "sc-john-paul-ii-catholic-school-ridgeland",
     "Opponent": "John Paul II Catholic School",
     "LocationType": "Away",
     "GameType": "Region",
@@ -6007,6 +6531,7 @@
   },
   {
     "GameID": 20170114,
+    "OpponentID": "ga-heritage-christian-academy-brunswick",
     "Opponent": "Heritage Christian Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -6018,6 +6543,7 @@
   },
   {
     "GameID": 20170117,
+    "OpponentID": "ga-bethesda-academy-savannah",
     "Opponent": "Bethesda Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -6029,6 +6555,7 @@
   },
   {
     "GameID": 20170120,
+    "OpponentID": "sc-colleton-prep-academy-walterboro",
     "Opponent": "Colleton Preparatory Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -6040,6 +6567,7 @@
   },
   {
     "GameID": 20170124,
+    "OpponentID": "sc-beaufort-academy-beaufort",
     "Opponent": "Beaufort Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -6051,6 +6579,7 @@
   },
   {
     "GameID": 20170127,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
     "Opponent": "Hilton Head Preparatory School",
     "LocationType": "Away",
     "GameType": "Region",
@@ -6062,6 +6591,7 @@
   },
   {
     "GameID": 20170131,
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
     "Opponent": "Hilton Head Christian Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -6073,6 +6603,7 @@
   },
   {
     "GameID": 20170203,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
     "Opponent": "Thomas Heyward Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -6084,6 +6615,7 @@
   },
   {
     "GameID": 20170204,
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
     "Opponent": "Hilton Head Christian Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -6095,6 +6627,7 @@
   },
   {
     "GameID": 20170207,
+    "OpponentID": "sc-john-paul-ii-catholic-school-ridgeland",
     "Opponent": "John Paul II Catholic School",
     "LocationType": "Home",
     "GameType": "Region",
@@ -6106,6 +6639,7 @@
   },
   {
     "GameID": 20170210,
+    "OpponentID": "ga-bethesda-academy-savannah",
     "Opponent": "Bethesda Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -6117,6 +6651,7 @@
   },
   {
     "GameID": 20170214,
+    "OpponentID": "sc-colleton-prep-academy-walterboro",
     "Opponent": "Colleton Preparatory Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -6128,6 +6663,7 @@
   },
   {
     "GameID": 20170218,
+    "OpponentID": "sc-pee-dee-academy-mullins",
     "Opponent": "Pee Dee Academy",
     "LocationType": "Neutral",
     "GameType": "State Tournament",
@@ -6139,6 +6675,7 @@
   },
   {
     "GameID": 20171128,
+    "OpponentID": "ga-bulloch-academy-statesboro",
     "Opponent": "Bulloch Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -6150,6 +6687,7 @@
   },
   {
     "GameID": 20171207,
+    "OpponentID": "ga-first-preparatory-christian-academy-hinesville",
     "Opponent": "First Presbyterian Christian Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -6161,6 +6699,7 @@
   },
   {
     "GameID": 20171215,
+    "OpponentID": "sc-john-paul-ii-catholic-school-ridgeland",
     "Opponent": "John Paul II Catholic School",
     "LocationType": "Home",
     "GameType": "Region",
@@ -6172,6 +6711,7 @@
   },
   {
     "GameID": 20180106,
+    "OpponentID": "ga-the-habersham-school-savannah",
     "Opponent": "The Habersham School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -6183,6 +6723,7 @@
   },
   {
     "GameID": 20180109,
+    "OpponentID": "ga-bethesda-academy-savannah",
     "Opponent": "Bethesda Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -6194,6 +6735,7 @@
   },
   {
     "GameID": 20180112,
+    "OpponentID": "sc-colleton-prep-academy-walterboro",
     "Opponent": "Colleton Preparatory Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -6205,6 +6747,7 @@
   },
   {
     "GameID": 20180113,
+    "OpponentID": "ga-bulloch-academy-statesboro",
     "Opponent": "Bulloch Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -6216,6 +6759,7 @@
   },
   {
     "GameID": 20180116,
+    "OpponentID": "sc-beaufort-academy-beaufort",
     "Opponent": "Beaufort Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -6227,6 +6771,7 @@
   },
   {
     "GameID": 20180118,
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
     "Opponent": "Hilton Head Christian Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -6238,6 +6783,7 @@
   },
   {
     "GameID": 20180120,
+    "OpponentID": "ga-first-preparatory-christian-academy-hinesville",
     "Opponent": "First Presbyterian Christian Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -6249,6 +6795,7 @@
   },
   {
     "GameID": 20180123,
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
     "Opponent": "Hilton Head Christian Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -6260,6 +6807,7 @@
   },
   {
     "GameID": 20180124,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
     "Opponent": "Hilton Head Preparatory School",
     "LocationType": "Home",
     "GameType": "Region",
@@ -6271,6 +6819,7 @@
   },
   {
     "GameID": 20180126,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
     "Opponent": "Thomas Heyward Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -6282,6 +6831,7 @@
   },
   {
     "GameID": 20180130,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
     "Opponent": "Hilton Head Preparatory School",
     "LocationType": "Away",
     "GameType": "Region",
@@ -6293,6 +6843,7 @@
   },
   {
     "GameID": 20180202,
+    "OpponentID": "sc-colleton-prep-academy-walterboro",
     "Opponent": "Colleton Preparatory Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -6304,6 +6855,7 @@
   },
   {
     "GameID": 20180209,
+    "OpponentID": "sc-beaufort-academy-beaufort",
     "Opponent": "Beaufort Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -6315,6 +6867,7 @@
   },
   {
     "GameID": 20180210,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
     "Opponent": "Thomas Heyward Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -6326,6 +6879,7 @@
   },
   {
     "GameID": 20180213,
+    "OpponentID": "sc-john-paul-ii-catholic-school-ridgeland",
     "Opponent": "John Paul II Catholic School",
     "LocationType": "Away",
     "GameType": "Region",
@@ -6337,6 +6891,7 @@
   },
   {
     "GameID": 20180217,
+    "OpponentID": "sc-spartanburg-day-school-spartanburg",
     "Opponent": "Spartanburg Day School",
     "LocationType": "Neutral",
     "GameType": "State Tournament",
@@ -6348,6 +6903,7 @@
   },
   {
     "GameID": 20181117,
+    "OpponentID": "ga-the-habersham-school-savannah",
     "Opponent": "The Habersham School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -6359,6 +6915,7 @@
   },
   {
     "GameID": 20181119,
+    "OpponentID": "sc-john-paul-ii-catholic-school-ridgeland",
     "Opponent": "John Paul II Catholic School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -6370,6 +6927,7 @@
   },
   {
     "GameID": 20181127,
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
     "Opponent": "Hilton Head Christian Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -6381,6 +6939,7 @@
   },
   {
     "GameID": 20181130,
+    "OpponentID": "ga-heritage-christian-academy-brunswick",
     "Opponent": "Heritage Christian Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -6392,6 +6951,7 @@
   },
   {
     "GameID": 20181204,
+    "OpponentID": "ga-heritage-christian-academy-brunswick",
     "Opponent": "Heritage Christian Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -6403,6 +6963,7 @@
   },
   {
     "GameID": 20181207,
+    "OpponentID": "ga-pinewood-christian-academy-bellville",
     "Opponent": "Pinewood Christian Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -6414,6 +6975,7 @@
   },
   {
     "GameID": 20181211,
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
     "Opponent": "Hilton Head Christian Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -6425,6 +6987,7 @@
   },
   {
     "GameID": 20181214,
+    "OpponentID": "ga-savannah-christian-preparatory-school-savannah",
     "Opponent": "Savannah Christian Preparatory School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -6436,6 +6999,7 @@
   },
   {
     "GameID": 20181218,
+    "OpponentID": "ga-pinewood-christian-academy-bellville",
     "Opponent": "Pinewood Christian Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -6447,6 +7011,7 @@
   },
   {
     "GameID": 20181220,
+    "OpponentID": "ga-bethesda-academy-savannah",
     "Opponent": "Bethesda Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -6458,6 +7023,7 @@
   },
   {
     "GameID": 20181221,
+    "OpponentID": "ga-the-habersham-school-savannah",
     "Opponent": "The Habersham School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -6469,6 +7035,7 @@
   },
   {
     "GameID": 20181227,
+    "OpponentID": "ga-bulloch-academy-statesboro",
     "Opponent": "Bulloch Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -6480,6 +7047,7 @@
   },
   {
     "GameID": 20181228,
+    "OpponentID": "ga-coastal-homeschool-pembroke",
     "Opponent": "Coastal Homeschool Athletic Association",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -6491,6 +7059,7 @@
   },
   {
     "GameID": 20190104,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
     "Opponent": "Hilton Head Preparatory School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -6502,6 +7071,7 @@
   },
   {
     "GameID": 20190108,
+    "OpponentID": "ga-first-preparatory-christian-academy-hinesville",
     "Opponent": "First Presbyterian Christian Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -6513,6 +7083,7 @@
   },
   {
     "GameID": 20190111,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons",
     "Opponent": "Robert Toombs Christian Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -6524,6 +7095,7 @@
   },
   {
     "GameID": 20190112,
+    "OpponentID": "ga-twiggs-academy-jeffersonville",
     "Opponent": "Twiggs Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -6535,6 +7107,7 @@
   },
   {
     "GameID": 20190116,
+    "OpponentID": "sc-john-paul-ii-catholic-school-ridgeland",
     "Opponent": "John Paul II Catholic School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -6546,6 +7119,7 @@
   },
   {
     "GameID": 20190118,
+    "OpponentID": "ga-memorial-day-school-savannah",
     "Opponent": "Memorial Day School",
     "LocationType": "Home",
     "GameType": "Region",
@@ -6557,6 +7131,7 @@
   },
   {
     "GameID": 20190119,
+    "OpponentID": "ga-the-habersham-school-savannah",
     "Opponent": "The Habersham School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -6568,6 +7143,7 @@
   },
   {
     "GameID": 20190122,
+    "OpponentID": "ga-first-preparatory-christian-academy-hinesville",
     "Opponent": "First Presbyterian Christian Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -6579,6 +7155,7 @@
   },
   {
     "GameID": 20190125,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons",
     "Opponent": "Robert Toombs Christian Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -6590,6 +7167,7 @@
   },
   {
     "GameID": 20190126,
+    "OpponentID": "ga-twiggs-academy-jeffersonville",
     "Opponent": "Twiggs Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -6601,6 +7179,7 @@
   },
   {
     "GameID": 20190130,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
     "Opponent": "Hilton Head Preparatory School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -6612,6 +7191,7 @@
   },
   {
     "GameID": 20190201,
+    "OpponentID": "ga-memorial-day-school-savannah",
     "Opponent": "Memorial Day School",
     "LocationType": "Away",
     "GameType": "Region",
@@ -6623,6 +7203,7 @@
   },
   {
     "GameID": 20190207,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons",
     "Opponent": "Robert Toombs Christian Academy",
     "LocationType": "Home",
     "GameType": "Region Tournament",
@@ -6634,6 +7215,7 @@
   },
   {
     "GameID": 20190208,
+    "OpponentID": "ga-memorial-day-school-savannah",
     "Opponent": "Memorial Day School",
     "LocationType": "Home",
     "GameType": "Region Tournament",
@@ -6645,6 +7227,7 @@
   },
   {
     "GameID": 20190213,
+    "OpponentID": "ga-gatewood-schools-eatonton",
     "Opponent": "Gatewood Schools",
     "LocationType": "Neutral",
     "GameType": "State Tournament",
@@ -6656,6 +7239,7 @@
   },
   {
     "GameID": 20190216,
+    "OpponentID": "ga-piedmont-academy-monticello",
     "Opponent": "Piedmont Academy",
     "LocationType": "Neutral",
     "GameType": "State Tournament",
@@ -6667,6 +7251,7 @@
   },
   {
     "GameID": 20190222,
+    "OpponentID": "ga-furtah-preparatory-school-acworth",
     "Opponent": "Furtah Preparatory School",
     "LocationType": "Neutral",
     "GameType": "State Tournament",
@@ -6678,6 +7263,7 @@
   },
   {
     "GameID": 20191206,
+    "OpponentID": "ga-pinewood-christian-academy-bellville",
     "Opponent": "Pinewood Christian Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -6689,6 +7275,7 @@
   },
   {
     "GameID": 20191210,
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
     "Opponent": "Hilton Head Christian Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -6700,6 +7287,7 @@
   },
   {
     "GameID": 20191213,
+    "OpponentID": "ga-southwest-georgia-academy-damascus",
     "Opponent": "Southwest Georgia Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -6711,6 +7299,7 @@
   },
   {
     "GameID": 20191214,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
     "Opponent": "Frederica Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -6722,6 +7311,7 @@
   },
   {
     "GameID": 20191217,
+    "OpponentID": "ga-pinewood-christian-academy-bellville",
     "Opponent": "Pinewood Christian Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -6733,6 +7323,7 @@
   },
   {
     "GameID": 20191219,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
     "Opponent": "Hilton Head Preparatory School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -6744,6 +7335,7 @@
   },
   {
     "GameID": 20191220,
+    "OpponentID": "ga-coastal-homeschool-pembroke",
     "Opponent": "Coastal Homeschool Athletic Association",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -6755,6 +7347,7 @@
   },
   {
     "GameID": 20200104,
+    "OpponentID": "ga-the-habersham-school-savannah",
     "Opponent": "The Habersham School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -6766,6 +7359,7 @@
   },
   {
     "GameID": 20200107,
+    "OpponentID": "ga-first-preparatory-christian-academy-hinesville",
     "Opponent": "First Presbyterian Christian Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -6777,6 +7371,7 @@
   },
   {
     "GameID": 20200110,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons",
     "Opponent": "Robert Toombs Christian Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -6788,6 +7383,7 @@
   },
   {
     "GameID": 20200113,
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
     "Opponent": "Hilton Head Christian Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -6799,6 +7395,7 @@
   },
   {
     "GameID": 20200116,
+    "OpponentID": "ga-savannah-country-day-school-savannah",
     "Opponent": "Savannah Country Day School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -6810,6 +7407,7 @@
   },
   {
     "GameID": 20200118,
+    "OpponentID": "ga-twiggs-academy-jeffersonville",
     "Opponent": "Twiggs Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -6821,6 +7419,7 @@
   },
   {
     "GameID": 20200121,
+    "OpponentID": "ga-memorial-day-school-savannah",
     "Opponent": "Memorial Day School",
     "LocationType": "Away",
     "GameType": "Region",
@@ -6832,6 +7431,7 @@
   },
   {
     "GameID": 20200124,
+    "OpponentID": "ga-first-preparatory-christian-academy-hinesville",
     "Opponent": "First Presbyterian Christian Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -6843,6 +7443,7 @@
   },
   {
     "GameID": 20200125,
+    "OpponentID": "ga-savannah-christian-preparatory-school-savannah",
     "Opponent": "Savannah Christian Preparatory School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -6854,6 +7455,7 @@
   },
   {
     "GameID": 20200128,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons",
     "Opponent": "Robert Toombs Christian Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -6865,6 +7467,7 @@
   },
   {
     "GameID": 20200131,
+    "OpponentID": "ga-twiggs-academy-jeffersonville",
     "Opponent": "Twiggs Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -6876,6 +7479,7 @@
   },
   {
     "GameID": 20200201,
+    "OpponentID": "ga-the-habersham-school-savannah",
     "Opponent": "The Habersham School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -6887,6 +7491,7 @@
   },
   {
     "GameID": 20200204,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
     "Opponent": "Hilton Head Preparatory School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -6898,6 +7503,7 @@
   },
   {
     "GameID": 20200207,
+    "OpponentID": "ga-memorial-day-school-savannah",
     "Opponent": "Memorial Day School",
     "LocationType": "Home",
     "GameType": "Region",
@@ -6909,6 +7515,7 @@
   },
   {
     "GameID": 20200213,
+    "OpponentID": "ga-twiggs-academy-jeffersonville",
     "Opponent": "Twiggs Academy",
     "LocationType": "Neutral",
     "GameType": "Region Tournament",
@@ -6920,6 +7527,7 @@
   },
   {
     "GameID": 20200214,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons",
     "Opponent": "Robert Toombs Christian Academy",
     "LocationType": "Neutral",
     "GameType": "Region Tournament",
@@ -6931,6 +7539,7 @@
   },
   {
     "GameID": 20200219,
+    "OpponentID": "ga-solid-rock-academy-fayetteville",
     "Opponent": "Solid Rock Academy",
     "LocationType": "Neutral",
     "GameType": "State Tournament",
@@ -6942,6 +7551,7 @@
   },
   {
     "GameID": 20200222,
+    "OpponentID": "ga-edmund-burke-academy-waynesboro",
     "Opponent": "Edmund Burke Academy",
     "LocationType": "Neutral",
     "GameType": "State Tournament",
@@ -6953,6 +7563,7 @@
   },
   {
     "GameID": 20200227,
+    "OpponentID": "ga-memorial-day-school-savannah",
     "Opponent": "Memorial Day School",
     "LocationType": "Neutral",
     "GameType": "State Tournament",
@@ -6964,6 +7575,7 @@
   },
   {
     "GameID": 20200229,
+    "OpponentID": "ga-furtah-preparatory-school-acworth",
     "Opponent": "Furtah Preparatory School",
     "LocationType": "Neutral",
     "GameType": "State Tournament",
@@ -6975,6 +7587,7 @@
   },
   {
     "GameID": 20201120,
+    "OpponentID": "ga-jenkins-high-school-savannah",
     "Opponent": "Jenkins High School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -6986,6 +7599,7 @@
   },
   {
     "GameID": 20201121,
+    "OpponentID": "ga-islands-high-school-savannah",
     "Opponent": "Islands High School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -6997,6 +7611,7 @@
   },
   {
     "GameID": 20201211,
+    "OpponentID": "ga-savannah-christian-preparatory-school-savannah",
     "Opponent": "Savannah Christian Preparatory School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -7008,6 +7623,7 @@
   },
   {
     "GameID": 20201217,
+    "OpponentID": "ga-memorial-day-school-savannah",
     "Opponent": "Memorial Day School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -7019,6 +7635,7 @@
   },
   {
     "GameID": 20210108,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
     "Opponent": "Frederica Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -7030,6 +7647,7 @@
   },
   {
     "GameID": 20210112,
+    "OpponentID": "ga-bulloch-academy-statesboro",
     "Opponent": "Bulloch Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -7041,6 +7659,7 @@
   },
   {
     "GameID": 20210113,
+    "OpponentID": "ga-savannah-country-day-school-savannah",
     "Opponent": "Savannah Country Day School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -7052,6 +7671,7 @@
   },
   {
     "GameID": 20210115,
+    "OpponentID": "ga-pinewood-christian-academy-bellville",
     "Opponent": "Pinewood Christian Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -7063,6 +7683,7 @@
   },
   {
     "GameID": 20210118,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons",
     "Opponent": "Robert Toombs Christian Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -7074,6 +7695,7 @@
   },
   {
     "GameID": 20210120,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
     "Opponent": "Hilton Head Preparatory School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -7085,6 +7707,7 @@
   },
   {
     "GameID": 20210121,
+    "OpponentID": "ga-islands-high-school-savannah",
     "Opponent": "Islands High School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -7096,6 +7719,7 @@
   },
   {
     "GameID": 20210212,
+    "OpponentID": "ga-pinewood-christian-academy-bellville",
     "Opponent": "Pinewood Christian Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -7107,6 +7731,7 @@
   },
   {
     "GameID": 20210213,
+    "OpponentID": "ga-trinity-christian-academy-dublin",
     "Opponent": "Trinity Christian Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -7118,6 +7743,7 @@
   },
   {
     "GameID": 20210218,
+    "OpponentID": "ga-pinewood-christian-academy-bellville",
     "Opponent": "Pinewood Christian Academy",
     "LocationType": "Neutral",
     "GameType": "Region Tournament",
@@ -7129,6 +7755,7 @@
   },
   {
     "GameID": 20210220,
+    "OpponentID": "ga-bulloch-academy-statesboro",
     "Opponent": "Bulloch Academy",
     "LocationType": "Neutral",
     "GameType": "Region Tournament",
@@ -7140,6 +7767,7 @@
   },
   {
     "GameID": 20210224,
+    "OpponentID": "ga-valwood-school-hahira",
     "Opponent": "Valwood School",
     "LocationType": "Neutral",
     "GameType": "State Tournament",
@@ -7151,6 +7779,7 @@
   },
   {
     "GameID": 20210227,
+    "OpponentID": "ga-john-milledge-academy-milledgeville",
     "Opponent": "John Milledge Academy",
     "LocationType": "Neutral",
     "GameType": "State Tournament",
@@ -7162,6 +7791,7 @@
   },
   {
     "GameID": 20211113,
+    "OpponentID": "ga-jenkins-high-school-savannah",
     "Opponent": "Jenkins High School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -7173,6 +7803,7 @@
   },
   {
     "GameID": 20211119,
+    "OpponentID": "ga-islands-high-school-savannah",
     "Opponent": "Islands High School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -7184,6 +7815,7 @@
   },
   {
     "GameID": 20211203,
+    "OpponentID": "ga-south-effingham-high-school-guyton",
     "Opponent": "South Effingham High School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -7195,6 +7827,7 @@
   },
   {
     "GameID": 20211204,
+    "OpponentID": "ga-savannah-christian-preparatory-school-savannah",
     "Opponent": "Savannah Christian Preparatory School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -7206,6 +7839,7 @@
   },
   {
     "GameID": 20211207,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
     "Opponent": "Hilton Head Preparatory School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -7217,6 +7851,7 @@
   },
   {
     "GameID": 20211210,
+    "OpponentID": "ga-savannah-country-day-school-savannah",
     "Opponent": "Savannah Country Day School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -7228,6 +7863,7 @@
   },
   {
     "GameID": 20211211,
+    "OpponentID": "ga-new-hampstead-high-school-savannah",
     "Opponent": "New Hampstead High School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -7239,6 +7875,7 @@
   },
   {
     "GameID": 20211217,
+    "OpponentID": "ga-the-habersham-school-savannah",
     "Opponent": "The Habersham School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -7250,6 +7887,7 @@
   },
   {
     "GameID": 20211218,
+    "OpponentID": "ga-savannah-christian-preparatory-school-savannah",
     "Opponent": "Savannah Christian Preparatory School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -7261,6 +7899,7 @@
   },
   {
     "GameID": 20211228,
+    "OpponentID": "ga-evans-high-school-evans",
     "Opponent": "Evans High School",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -7272,6 +7911,7 @@
   },
   {
     "GameID": 20211229,
+    "OpponentID": "ga-academy-of-richmond-county-augusta",
     "Opponent": "Academy of Richmond County",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -7283,6 +7923,7 @@
   },
   {
     "GameID": 20211230,
+    "OpponentID": "ga-burke-county-high-school-waynesboro",
     "Opponent": "Burke County High School",
     "LocationType": "Neutral",
     "GameType": "Tournament",
@@ -7294,6 +7935,7 @@
   },
   {
     "GameID": 20220106,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
     "Opponent": "Hilton Head Preparatory School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -7305,6 +7947,7 @@
   },
   {
     "GameID": 20220107,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
     "Opponent": "Frederica Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -7316,6 +7959,7 @@
   },
   {
     "GameID": 20220108,
+    "OpponentID": "fl-episcopal-school-of-jacksonville-jacksonville",
     "Opponent": "Episcopal School of Jacksonville",
     "LocationType": "Neutral",
     "GameType": "Showcase",
@@ -7327,6 +7971,7 @@
   },
   {
     "GameID": 20220111,
+    "OpponentID": "ga-bulloch-academy-statesboro",
     "Opponent": "Bulloch Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -7338,6 +7983,7 @@
   },
   {
     "GameID": 20220114,
+    "OpponentID": "ga-pinewood-christian-academy-bellville",
     "Opponent": "Pinewood Christian Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -7349,6 +7995,7 @@
   },
   {
     "GameID": 20220125,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
     "Opponent": "Frederica Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -7360,6 +8007,7 @@
   },
   {
     "GameID": 20220128,
+    "OpponentID": "ga-bulloch-academy-statesboro",
     "Opponent": "Bulloch Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -7371,6 +8019,7 @@
   },
   {
     "GameID": 20220129,
+    "OpponentID": "ga-trinity-christian-academy-dublin",
     "Opponent": "Trinity Christian Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -7382,6 +8031,7 @@
   },
   {
     "GameID": 20220201,
+    "OpponentID": "ga-pinewood-christian-academy-bellville",
     "Opponent": "Pinewood Christian Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -7393,6 +8043,7 @@
   },
   {
     "GameID": 20220204,
+    "OpponentID": "ga-trinity-christian-academy-dublin",
     "Opponent": "Trinity Christian Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -7404,6 +8055,7 @@
   },
   {
     "GameID": 20220205,
+    "OpponentID": "ga-south-effingham-high-school-guyton",
     "Opponent": "South Effingham High School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -7415,6 +8067,7 @@
   },
   {
     "GameID": 20220210,
+    "OpponentID": "ga-pinewood-christian-academy-bellville",
     "Opponent": "Pinewood Christian Academy",
     "LocationType": "Neutral",
     "GameType": "Region Tournament",
@@ -7426,6 +8079,7 @@
   },
   {
     "GameID": 20220211,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
     "Opponent": "Frederica Academy",
     "LocationType": "Neutral",
     "GameType": "Region Tournament",
@@ -7437,6 +8091,7 @@
   },
   {
     "GameID": 20220216,
+    "OpponentID": "ga-young-americans-christian-school-conyers",
     "Opponent": "Young Americans Christian School",
     "LocationType": "Home",
     "GameType": "State Tournament",
@@ -7448,6 +8103,7 @@
   },
   {
     "GameID": 20220219,
+    "OpponentID": "ga-holy-spirit-preparatory-school-atlanta",
     "Opponent": "Holy Spirit Preparatory School",
     "LocationType": "Neutral",
     "GameType": "State Tournament",
@@ -7459,6 +8115,7 @@
   },
   {
     "GameID": 20220224,
+    "OpponentID": "ga-southland-academy-americus",
     "Opponent": "Southland Academy",
     "LocationType": "Neutral",
     "GameType": "State Tournament",
@@ -7470,6 +8127,7 @@
   },
   {
     "GameID": 20220226,
+    "OpponentID": "ga-john-milledge-academy-milledgeville",
     "Opponent": "John Milledge Academy",
     "LocationType": "Neutral",
     "GameType": "State Tournament",
@@ -7481,6 +8139,7 @@
   },
   {
     "GameID": 20221115,
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
     "Opponent": "Hilton Head Christian Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -7492,6 +8151,7 @@
   },
   {
     "GameID": 20221119,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
     "Opponent": "Hilton Head Preparatory School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -7503,6 +8163,7 @@
   },
   {
     "GameID": 20221129,
+    "OpponentID": "ga-islands-high-school-savannah",
     "Opponent": "Islands High School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -7514,6 +8175,7 @@
   },
   {
     "GameID": 20221203,
+    "OpponentID": "ga-westminster-schools-of-augusta-augusta",
     "Opponent": "Westminster Schools of Augusta",
     "LocationType": "Away",
     "GameType": "Region",
@@ -7525,6 +8187,7 @@
   },
   {
     "GameID": 20221206,
+    "OpponentID": "ga-jenkins-high-school-savannah",
     "Opponent": "Jenkins High School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -7536,6 +8199,7 @@
   },
   {
     "GameID": 20221209,
+    "OpponentID": "ga-riverside-military-academy-gainesville",
     "Opponent": "Riverside Military Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -7547,6 +8211,7 @@
   },
   {
     "GameID": 20221210,
+    "OpponentID": "ga-first-presbyterian-day-school-macon",
     "Opponent": "First Presbyterian Day School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -7558,6 +8223,7 @@
   },
   {
     "GameID": 20221216,
+    "OpponentID": "ga-centennial-high-school-roswell",
     "Opponent": "Centennial High School",
     "LocationType": "Neutral",
     "GameType": "Showcase",
@@ -7569,6 +8235,7 @@
   },
   {
     "GameID": 20221217,
+    "OpponentID": "ga-hiram-high-school-hiram",
     "Opponent": "Hiram High School",
     "LocationType": "Neutral",
     "GameType": "Showcase",
@@ -7580,6 +8247,7 @@
   },
   {
     "GameID": 20221228,
+    "OpponentID": "ga-augusta-preparatory-day-school-augusta",
     "Opponent": "Augusta Preparatory Day School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -7591,6 +8259,7 @@
   },
   {
     "GameID": 20221230,
+    "OpponentID": "fl-ponte-vedra-high-school-ponte-vedra",
     "Opponent": "Ponte Vedra High School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -7602,6 +8271,7 @@
   },
   {
     "GameID": 20230106,
+    "OpponentID": "fl-raines-high-school-jacksonville",
     "Opponent": "Raines High School",
     "LocationType": "Neutral",
     "GameType": "Showcase",
@@ -7613,6 +8283,7 @@
   },
   {
     "GameID": 20230107,
+    "OpponentID": "fl-gibbs-high-school-st-petersburg",
     "Opponent": "Gibbs High School",
     "LocationType": "Neutral",
     "GameType": "Showcase",
@@ -7624,6 +8295,7 @@
   },
   {
     "GameID": 20230111,
+    "OpponentID": "ga-islands-high-school-savannah",
     "Opponent": "Islands High School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -7635,6 +8307,7 @@
   },
   {
     "GameID": 20230113,
+    "OpponentID": "sc-john-paul-ii-catholic-school-ridgeland",
     "Opponent": "John Paul II Catholic School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -7646,6 +8319,7 @@
   },
   {
     "GameID": 20230117,
+    "OpponentID": "ga-bulloch-academy-statesboro",
     "Opponent": "Bulloch Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -7657,6 +8331,7 @@
   },
   {
     "GameID": 20230120,
+    "OpponentID": "ga-pinewood-christian-academy-bellville",
     "Opponent": "Pinewood Christian Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -7668,6 +8343,7 @@
   },
   {
     "GameID": 20230121,
+    "OpponentID": "sc-john-paul-ii-catholic-school-ridgeland",
     "Opponent": "John Paul II Catholic School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -7679,6 +8355,7 @@
   },
   {
     "GameID": 20230124,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
     "Opponent": "Frederica Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -7690,6 +8367,7 @@
   },
   {
     "GameID": 20230127,
+    "OpponentID": "ga-bulloch-academy-statesboro",
     "Opponent": "Bulloch Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -7701,6 +8379,7 @@
   },
   {
     "GameID": 20230128,
+    "OpponentID": "ga-savannah-country-day-school-savannah",
     "Opponent": "Savannah Country Day School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -7712,6 +8391,7 @@
   },
   {
     "GameID": 20230131,
+    "OpponentID": "ga-pinewood-christian-academy-bellville",
     "Opponent": "Pinewood Christian Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -7723,6 +8403,7 @@
   },
   {
     "GameID": 20230203,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
     "Opponent": "Frederica Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -7734,6 +8415,7 @@
   },
   {
     "GameID": 20230204,
+    "OpponentID": "ga-westminster-schools-of-augusta-augusta",
     "Opponent": "Westminster Schools of Augusta",
     "LocationType": "Home",
     "GameType": "Region",
@@ -7745,6 +8427,7 @@
   },
   {
     "GameID": 20230216,
+    "OpponentID": "ga-bulloch-academy-statesboro",
     "Opponent": "Bulloch Academy",
     "LocationType": "Neutral",
     "GameType": "Region Tournament",
@@ -7756,6 +8439,7 @@
   },
   {
     "GameID": 20230217,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
     "Opponent": "Frederica Academy",
     "LocationType": "Neutral",
     "GameType": "Region Tournament",
@@ -7767,6 +8451,7 @@
   },
   {
     "GameID": 20230225,
+    "OpponentID": "ga-lakeview-academy-gainesville",
     "Opponent": "Lakeview Academy",
     "LocationType": "Neutral",
     "GameType": "State Tournament",
@@ -7778,6 +8463,7 @@
   },
   {
     "GameID": 20230302,
+    "OpponentID": "ga-dominion-christian-academy-marietta",
     "Opponent": "Dominion Christian Academy",
     "LocationType": "Neutral",
     "GameType": "State Tournament",
@@ -7789,6 +8475,7 @@
   },
   {
     "GameID": 20230304,
+    "OpponentID": "ga-the-heritage-school-newnan",
     "Opponent": "The Heritage School",
     "LocationType": "Neutral",
     "GameType": "State Tournament",
@@ -7800,6 +8487,7 @@
   },
   {
     "GameID": 20231120,
+    "OpponentID": "ga-glynn-academy-brunswick",
     "Opponent": "Glynn Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -7811,6 +8499,7 @@
   },
   {
     "GameID": 20231124,
+    "OpponentID": "ga-groves-high-school-garden-city",
     "Opponent": "Groves High School",
     "LocationType": "Neutral",
     "GameType": "Showcase",
@@ -7822,6 +8511,7 @@
   },
   {
     "GameID": 20231128,
+    "OpponentID": "ga-islands-high-school-savannah",
     "Opponent": "Islands High School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -7833,6 +8523,7 @@
   },
   {
     "GameID": 20231201,
+    "OpponentID": "ga-statesboro-high-school-statesboro",
     "Opponent": "Statesboro High School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -7844,6 +8535,7 @@
   },
   {
     "GameID": 20231202,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
     "Opponent": "Hilton Head Preparatory School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -7855,6 +8547,7 @@
   },
   {
     "GameID": 20231205,
+    "OpponentID": "ga-beach-high-school-savannah",
     "Opponent": "Beach High School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -7866,6 +8559,7 @@
   },
   {
     "GameID": 20231208,
+    "OpponentID": "ga-furtah-preparatory-school-acworth",
     "Opponent": "Furtah Preparatory School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -7877,6 +8571,7 @@
   },
   {
     "GameID": 20231209,
+    "OpponentID": "ga-kennesaw-mountain-high-school-kennesaw",
     "Opponent": "Kennesaw Mountain High School",
     "LocationType": "Neutral",
     "GameType": "Showcase",
@@ -7888,6 +8583,7 @@
   },
   {
     "GameID": 20231215,
+    "OpponentID": "ga-south-forsyth-high-school-cumming",
     "Opponent": "South Forsyth High School",
     "LocationType": "Neutral",
     "GameType": "Showcase",
@@ -7899,6 +8595,7 @@
   },
   {
     "GameID": 20231216,
+    "OpponentID": "fl-trinity-preparatory-school-winter-park",
     "Opponent": "Trinity Prep School",
     "LocationType": "Neutral",
     "GameType": "Showcase",
@@ -7910,6 +8607,7 @@
   },
   {
     "GameID": 20231227,
+    "OpponentID": "ga-south-effingham-high-school-guyton",
     "Opponent": "South Effingham High School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -7921,6 +8619,7 @@
   },
   {
     "GameID": 20231229,
+    "OpponentID": "ga-mt-bethel-christian-academy-marietta",
     "Opponent": "Mt. Bethel Christian Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -7932,6 +8631,7 @@
   },
   {
     "GameID": 20240105,
+    "OpponentID": "ga-cedar-grove-high-school-ellenwood",
     "Opponent": "Cedar Grove High School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -7943,6 +8643,7 @@
   },
   {
     "GameID": 20240106,
+    "OpponentID": "ga-kings-ridge-christian-school-alpharetta",
     "Opponent": "King's Ridge Christian School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -7954,6 +8655,7 @@
   },
   {
     "GameID": 20240110,
+    "OpponentID": "ga-islands-high-school-savannah",
     "Opponent": "Islands High School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -7965,6 +8667,7 @@
   },
   {
     "GameID": 20240112,
+    "OpponentID": "ga-westminster-schools-of-augusta-augusta",
     "Opponent": "Westminster Schools of Augusta",
     "LocationType": "Home",
     "GameType": "Region",
@@ -7976,6 +8679,7 @@
   },
   {
     "GameID": 20240113,
+    "OpponentID": "ga-johnson-high-school-savannah",
     "Opponent": "Johnson High School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -7987,6 +8691,7 @@
   },
   {
     "GameID": 20240116,
+    "OpponentID": "ga-bulloch-academy-statesboro",
     "Opponent": "Bulloch Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -7998,6 +8703,7 @@
   },
   {
     "GameID": 20240119,
+    "OpponentID": "ga-pinewood-christian-academy-bellville",
     "Opponent": "Pinewood Christian Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -8009,6 +8715,7 @@
   },
   {
     "GameID": 20240120,
+    "OpponentID": "ga-hebron-christian-academy-dacula",
     "Opponent": "Hebron Christian Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -8020,6 +8727,7 @@
   },
   {
     "GameID": 20240123,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
     "Opponent": "Frederica Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -8031,6 +8739,7 @@
   },
   {
     "GameID": 20240126,
+    "OpponentID": "ga-bulloch-academy-statesboro",
     "Opponent": "Bulloch Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -8042,6 +8751,7 @@
   },
   {
     "GameID": 20240130,
+    "OpponentID": "ga-pinewood-christian-academy-bellville",
     "Opponent": "Pinewood Christian Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -8053,6 +8763,7 @@
   },
   {
     "GameID": 20240202,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
     "Opponent": "Frederica Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -8064,6 +8775,7 @@
   },
   {
     "GameID": 20240203,
+    "OpponentID": "ga-westminster-schools-of-augusta-augusta",
     "Opponent": "Westminster Schools of Augusta",
     "LocationType": "Away",
     "GameType": "Region",
@@ -8075,6 +8787,7 @@
   },
   {
     "GameID": 20240206,
+    "OpponentID": "ga-savannah-high-school-savannah",
     "Opponent": "Savannah High School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -8086,6 +8799,7 @@
   },
   {
     "GameID": 20240215,
+    "OpponentID": "ga-pinewood-christian-academy-bellville",
     "Opponent": "Pinewood Christian Academy",
     "LocationType": "Neutral",
     "GameType": "Region Tournament",
@@ -8097,6 +8811,7 @@
   },
   {
     "GameID": 20240216,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
     "Opponent": "Frederica Academy",
     "LocationType": "Neutral",
     "GameType": "Region Tournament",
@@ -8108,6 +8823,7 @@
   },
   {
     "GameID": 20240224,
+    "OpponentID": "ga-dominion-christian-academy-marietta",
     "Opponent": "Dominion Christian Academy",
     "LocationType": "Neutral",
     "GameType": "State Tournament",
@@ -8119,6 +8835,7 @@
   },
   {
     "GameID": 20240228,
+    "OpponentID": "ga-lakeview-academy-gainesville",
     "Opponent": "Lakeview Academy",
     "LocationType": "Neutral",
     "GameType": "State Tournament",
@@ -8130,6 +8847,7 @@
   },
   {
     "GameID": 20241115,
+    "OpponentID": "ga-hampton-high-school-hampton",
     "Opponent": "Hampton High School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -8141,6 +8859,7 @@
   },
   {
     "GameID": 20241116,
+    "OpponentID": "ga-locust-grove-high-school-locust-grove",
     "Opponent": "Locust Grove High School",
     "LocationType": "Neutral",
     "GameType": "Showcase",
@@ -8152,6 +8871,7 @@
   },
   {
     "GameID": 20241123,
+    "OpponentID": "ga-charlton-county-high-school-folkston",
     "Opponent": "Charlton County High School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -8163,6 +8883,7 @@
   },
   {
     "GameID": 20241125,
+    "OpponentID": "ga-miller-grove-high-school-lithonia",
     "Opponent": "Miller Grove High School",
     "LocationType": "Neutral",
     "GameType": "Showcase",
@@ -8174,6 +8895,7 @@
   },
   {
     "GameID": 20241130,
+    "OpponentID": "ga-beach-high-school-savannah",
     "Opponent": "Beach High School",
     "LocationType": "Neutral",
     "GameType": "Showcase",
@@ -8185,6 +8907,7 @@
   },
   {
     "GameID": 20241210,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
     "Opponent": "Hilton Head Preparatory School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -8196,6 +8919,7 @@
   },
   {
     "GameID": 20241214,
+    "OpponentID": "ga-long-county-high-school-ludowici",
     "Opponent": "Long County High School",
     "LocationType": "Neutral",
     "GameType": "Showcase",
@@ -8207,6 +8931,7 @@
   },
   {
     "GameID": 20241220,
+    "OpponentID": "fl-episcopal-school-of-jacksonville-jacksonville",
     "Opponent": "Episcopal School of Jacksonville",
     "LocationType": "Neutral",
     "GameType": "Showcase",
@@ -8218,6 +8943,7 @@
   },
   {
     "GameID": 20241221,
+    "OpponentID": "ga-benedictine-military-school-savannah",
     "Opponent": "Benedictine Military School",
     "LocationType": "Neutral",
     "GameType": "Showcase",
@@ -8229,6 +8955,7 @@
   },
   {
     "GameID": 20241227,
+    "OpponentID": "ga-the-weber-school-atlanta",
     "Opponent": "The Weber School",
     "LocationType": "Neutral",
     "GameType": "Showcase",
@@ -8240,6 +8967,7 @@
   },
   {
     "GameID": 20241228,
+    "OpponentID": "ga-starrs-mill-high-school-fayetteville",
     "Opponent": "Starr's Mill High School",
     "LocationType": "Neutral",
     "GameType": "Showcase",
@@ -8251,6 +8979,7 @@
   },
   {
     "GameID": 20250103,
+    "OpponentID": "ga-creekside-christian-academy-mcdonough",
     "Opponent": "Creekside Christian Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -8262,6 +8991,7 @@
   },
   {
     "GameID": 20250104,
+    "OpponentID": "ga-hiram-high-school-hiram",
     "Opponent": "Hiram High School",
     "LocationType": "Neutral",
     "GameType": "Showcase",
@@ -8273,6 +9003,7 @@
   },
   {
     "GameID": 20250108,
+    "OpponentID": "ga-new-hampstead-high-school-savannah",
     "Opponent": "New Hampstead High School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -8284,6 +9015,7 @@
   },
   {
     "GameID": 20250110,
+    "OpponentID": "ga-pinewood-christian-academy-bellville",
     "Opponent": "Pinewood Christian Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -8295,6 +9027,7 @@
   },
   {
     "GameID": 20250111,
+    "OpponentID": "sc-hilton-head-island-high-school-hilton-head-island",
     "Opponent": "Hilton Head Island High School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -8306,6 +9039,7 @@
   },
   {
     "GameID": 20250114,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
     "Opponent": "Frederica Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -8317,6 +9051,7 @@
   },
   {
     "GameID": 20250117,
+    "OpponentID": "ga-westminster-schools-of-augusta-augusta",
     "Opponent": "Westminster Schools of Augusta",
     "LocationType": "Home",
     "GameType": "Region",
@@ -8328,6 +9063,7 @@
   },
   {
     "GameID": 20250118,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
     "Opponent": "Hilton Head Preparatory School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -8339,6 +9075,7 @@
   },
   {
     "GameID": 20250128,
+    "OpponentID": "ga-westminster-schools-of-augusta-augusta",
     "Opponent": "Westminster Schools of Augusta",
     "LocationType": "Away",
     "GameType": "Region",
@@ -8350,6 +9087,7 @@
   },
   {
     "GameID": 20250131,
+    "OpponentID": "ga-pinewood-christian-academy-bellville",
     "Opponent": "Pinewood Christian Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -8361,6 +9099,7 @@
   },
   {
     "GameID": 20250204,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
     "Opponent": "Frederica Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -8372,6 +9111,7 @@
   },
   {
     "GameID": 20250205,
+    "OpponentID": "ga-bulloch-academy-statesboro",
     "Opponent": "Bulloch Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -8383,6 +9123,7 @@
   },
   {
     "GameID": 20250207,
+    "OpponentID": "ga-bulloch-academy-statesboro",
     "Opponent": "Bulloch Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -8394,6 +9135,7 @@
   },
   {
     "GameID": 20250213,
+    "OpponentID": "ga-bulloch-academy-statesboro",
     "Opponent": "Bulloch Academy",
     "LocationType": "Away",
     "GameType": "Region Tournament",
@@ -8405,6 +9147,7 @@
   },
   {
     "GameID": 20250214,
+    "OpponentID": "ga-westminster-schools-of-augusta-augusta",
     "Opponent": "Westminster Schools of Augusta",
     "LocationType": "Neutral",
     "GameType": "Region Tournament",
@@ -8416,6 +9159,7 @@
   },
   {
     "GameID": 20250222,
+    "OpponentID": "ga-tiftarea-academy-chula",
     "Opponent": "Tiftarea Academy",
     "LocationType": "Neutral",
     "GameType": "State Tournament",
@@ -8427,6 +9171,7 @@
   },
   {
     "GameID": 20250226,
+    "OpponentID": "ga-lakeview-academy-gainesville",
     "Opponent": "Lakeview Academy",
     "LocationType": "Neutral",
     "GameType": "State Tournament",
@@ -8438,6 +9183,7 @@
   },
   {
     "GameID": 20250228,
+    "OpponentID": "ga-brookwood-academy-thomasville",
     "Opponent": "Brookwood Academy",
     "LocationType": "Neutral",
     "GameType": "State Tournament",
@@ -8449,6 +9195,7 @@
   },
   {
     "GameID": 20251115,
+    "OpponentID": "ga-morgan-county-high-school-madison",
     "Opponent": "Morgan County High School",
     "LocationType": "Neutral",
     "GameType": "Showcase",
@@ -8461,6 +9208,7 @@
   },
   {
     "GameID": 20251118,
+    "OpponentID": "ga-south-effingham-high-school-guyton",
     "Opponent": "South Effingham High School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -8473,6 +9221,7 @@
   },
   {
     "GameID": 20251121,
+    "OpponentID": "ga-bradwell-institute-hinesville",
     "Opponent": "Bradwell Institute",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -8485,6 +9234,7 @@
   },
   {
     "GameID": 20251202,
+    "OpponentID": "sc-hilton-head-island-high-school-hilton-head-island",
     "Opponent": "Hilton Head Island High School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -8497,6 +9247,7 @@
   },
   {
     "GameID": 20251205,
+    "OpponentID": "ga-new-faith-christian-academy-riverdale",
     "Opponent": "New Faith Christian Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -8508,6 +9259,7 @@
   },
   {
     "GameID": 20251206,
+    "OpponentID": "ga-furtah-preparatory-school-acworth",
     "Opponent": "Furtah Preparatory School",
     "LocationType": "Neutral",
     "GameType": "Showcase",
@@ -8519,6 +9271,7 @@
   },
   {
     "GameID": 20251209,
+    "OpponentID": "ga-south-effingham-high-school-guyton",
     "Opponent": "South Effingham High School",
     "LocationType": "Away",
     "GameType": "Non-Region",
@@ -8530,6 +9283,7 @@
   },
   {
     "GameID": 20251212,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
     "Opponent": "Hilton Head Preparatory School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -8542,6 +9296,7 @@
   },
   {
     "GameID": 20251213,
+    "OpponentID": "ga-johnson-high-school-savannah",
     "Opponent": "Johnson High School",
     "LocationType": "Neutral",
     "GameType": "Showcase",
@@ -8553,6 +9308,7 @@
   },
   {
     "GameID": 20251219,
+    "OpponentID": "ga-mount-paran-christian-school-kennesaw",
     "Opponent": "Mount Paran Christian School",
     "LocationType": "Neutral",
     "GameType": "Showcase",
@@ -8566,6 +9322,7 @@
   },
   {
     "GameID": 20251220,
+    "OpponentID": "ga-effingham-county-high-school-springfield",
     "Opponent": "Effingham County High School",
     "LocationType": "Neutral",
     "GameType": "Showcase",
@@ -8579,6 +9336,7 @@
   },
   {
     "GameID": 20251229,
+    "OpponentID": "ga-arlington-christian-school-fairburn",
     "Opponent": "Arlington Christian School",
     "LocationType": "Neutral",
     "GameType": "Showcase",
@@ -8592,6 +9350,7 @@
   },
   {
     "GameID": 20251230,
+    "OpponentID": "ga-midtown-high-school-atlanta",
     "Opponent": "Midtown High School",
     "LocationType": "Neutral",
     "GameType": "Showcase",
@@ -8605,6 +9364,7 @@
   },
   {
     "GameID": 20260109,
+    "OpponentID": "ga-pinewood-christian-academy-bellville",
     "Opponent": "Pinewood Christian Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -8618,6 +9378,7 @@
   },
   {
     "GameID": 20260110,
+    "OpponentID": "ga-savannah-high-school-savannah",
     "Opponent": "Savannah High School",
     "LocationType": "Home",
     "GameType": "Non-Region",
@@ -8631,6 +9392,7 @@
   },
   {
     "GameID": 20260113,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
     "Opponent": "Frederica Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -8644,6 +9406,7 @@
   },
   {
     "GameID": 20260116,
+    "OpponentID": "ga-westminster-schools-of-augusta-augusta",
     "Opponent": "Westminster Schools of Augusta",
     "LocationType": "Away",
     "GameType": "Region",
@@ -8657,6 +9420,7 @@
   },
   {
     "GameID": 20260119,
+    "OpponentID": "ga-grovetown-high-school-grovetown",
     "Opponent": "Grovetown High School",
     "LocationType": "Neutral",
     "GameType": "Showcase",
@@ -8670,6 +9434,7 @@
   },
   {
     "GameID": 20260120,
+    "OpponentID": "ga-bulloch-academy-statesboro",
     "Opponent": "Bulloch Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -8683,6 +9448,7 @@
   },
   {
     "GameID": 20260127,
+    "OpponentID": "ga-westminster-schools-of-augusta-augusta",
     "Opponent": "Westminster Schools of Augusta",
     "LocationType": "Home",
     "GameType": "Region",
@@ -8696,6 +9462,7 @@
   },
   {
     "GameID": 20260130,
+    "OpponentID": "ga-pinewood-christian-academy-bellville",
     "Opponent": "Pinewood Christian Academy",
     "LocationType": "Home",
     "GameType": "Region",
@@ -8705,10 +9472,11 @@
     "Season": 2025,
     "IsComplete": "Yes",
     "RecapTitle": "Lions Explode for 90 on Senior Night, Extend Streak Over Pinewood",
-    "Recap":"St. Andrew’s closed out its home schedule in emphatic fashion Friday night, defeating Pinewood Christian 90–46 on Senior Night at St. Andrew’s. The victory marked the Lions’ 19th consecutive win over Pinewood, a streak that now dates back to 2018, and represented the first time St. Andrew’s has reached 90 points in a game since 2023, when the Lions scored 100 at Pinewood.\n\nFrom the opening minutes, the Lions set a fast tempo and established control on both ends of the floor. St. Andrew’s scored efficiently inside and from the perimeter, steadily stretching the margin throughout the first half before pulling away decisively after the break. The offensive balance and defensive pressure prevented Pinewood from finding any sustained rhythm as the Lions maintained control for all four quarters.\n\nJa’Cari Glover led the way with 22 points and 9 rebounds, scoring efficiently around the basket and anchoring the Lions inside. Amari Cook delivered a strong all-around performance with 17 points, 7 assists, and 6 steals, while consistently pushing the pace. Page Getter added 12 points, as St. Andrew’s depth was on full display with 13 different Lions finding the scoring column, allowing the team to maintain its intensity throughout the night.\n\nThe milestone performance carried added significance as St. Andrew’s honored its seniors in their final home appearance of the season. The Lions will now have the weekend off as they prepare for their next big region game when they travel to Frederica on Tuesday."
+    "Recap": "St. Andrew’s closed out its home schedule in emphatic fashion Friday night, defeating Pinewood Christian 90–46 on Senior Night at St. Andrew’s. The victory marked the Lions’ 19th consecutive win over Pinewood, a streak that now dates back to 2018, and represented the first time St. Andrew’s has reached 90 points in a game since 2023, when the Lions scored 100 at Pinewood.\n\nFrom the opening minutes, the Lions set a fast tempo and established control on both ends of the floor. St. Andrew’s scored efficiently inside and from the perimeter, steadily stretching the margin throughout the first half before pulling away decisively after the break. The offensive balance and defensive pressure prevented Pinewood from finding any sustained rhythm as the Lions maintained control for all four quarters.\n\nJa’Cari Glover led the way with 22 points and 9 rebounds, scoring efficiently around the basket and anchoring the Lions inside. Amari Cook delivered a strong all-around performance with 17 points, 7 assists, and 6 steals, while consistently pushing the pace. Page Getter added 12 points, as St. Andrew’s depth was on full display with 13 different Lions finding the scoring column, allowing the team to maintain its intensity throughout the night.\n\nThe milestone performance carried added significance as St. Andrew’s honored its seniors in their final home appearance of the season. The Lions will now have the weekend off as they prepare for their next big region game when they travel to Frederica on Tuesday."
   },
   {
     "GameID": 20260203,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
     "Opponent": "Frederica Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -8722,6 +9490,7 @@
   },
   {
     "GameID": 20260206,
+    "OpponentID": "ga-bulloch-academy-statesboro",
     "Opponent": "Bulloch Academy",
     "LocationType": "Away",
     "GameType": "Region",
@@ -8735,6 +9504,7 @@
   },
   {
     "GameID": 20260212,
+    "OpponentID": "ga-pinewood-christian-academy-bellville",
     "Opponent": "Pinewood Christian Academy",
     "LocationType": "Away",
     "GameType": "Region Tournament",
@@ -8748,6 +9518,7 @@
   },
   {
     "GameID": 20260213,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
     "Opponent": "Frederica Academy",
     "LocationType": "Neutral",
     "GameType": "Region Tournament",
@@ -8761,6 +9532,7 @@
   },
   {
     "GameID": 20260221,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
     "Opponent": "Frederica Academy",
     "LocationType": "Neutral",
     "GameType": "State Tournament",
@@ -8774,6 +9546,7 @@
   },
   {
     "GameID": 20260225,
+    "OpponentID": "ga-lakeview-academy-gainesville",
     "Opponent": "Lakeview Academy",
     "LocationType": "Neutral",
     "GameType": "State Tournament",
@@ -8785,8 +9558,9 @@
     "RecapTitle": "St. Andrew’s Rallies Past Lakeview to Reach State Final",
     "Recap": "For the fourth straight season, St. Andrew’s and Lakeview Academy met in the state semifinals. And once again, the game required adjustment and composure.\n\nAfter trailing by 13 at halftime, St. Andrew’s delivered a decisive second-half response, erasing the deficit and pulling away late for a 58–50 victory that sends the program back to the state championship game.\n\nThe first half belonged to Lakeview, and it started immediately. Lakeview controlled the opening quarter and carried that momentum into the second. A three-pointer on the first possession of the second quarter pushed the lead to 22–7, giving Lakeview a commanding early advantage.\n\nThe early margin was fueled by pressure on both ends. Defensively, Lakeview crowded ball handlers and contested perimeter looks, disrupting St. Andrew’s rhythm and contributing to a sluggish start from the field. Offensively, Lakeview attacked off the dribble, driving into the lane and forcing St. Andrew’s to defend in rotation.\n\nBy halftime, Lakeview held a 32–19 lead, and St. Andrew’s was still searching for answers.\n\nThose answers came in the third quarter.\n\nSt. Andrew’s tightened its defense, cut off driving lanes, and began to control the glass. The offensive approach shifted inward, and the deficit slowly shrank. Midway through the quarter, the game was tied. Minutes later, St. Andrew’s had the lead — and the momentum.\n\nJa’Cari Glover anchored the turnaround. The forward was perfect from the field, finishing 7-for-7 and scoring 18 points, 14 of them in the paint. His efficiency stabilized the offense during a stretch when perimeter shots were inconsistent and provided a reliable scoring option against Lakeview’s pressure.\n\nPage Getter added 17 points, including key free throws in the final minutes to extend the margin. Amari Cook contributed 12 points and helped spark several defensive possessions that shifted the pace of the game, while Milos Copic added timely rebounds and assists during critical stretches.\n\nAfter entering the fourth quarter ahead 41–38, St. Andrew’s gradually pushed the lead to nine. Lakeview cut the deficit to five late, but St. Andrew’s answered at the free-throw line and managed the closing possessions with control.\n\nNeither team shot particularly well from beyond the arc, but the difference emerged in defensive execution and second-half adjustments. St. Andrew’s limited Lakeview to 50 points and held a clear edge in defensive stops over the final two quarters.\n\nWith the win, St. Andrew’s improves to 20–7, marking the fifth straight season the program has reached 20 victories and positioning it to compete for its fourth state title in five years."
   },
-  { 
+  {
     "GameID": 20260227,
+    "OpponentID": "ga-brookwood-academy-thomasville",
     "Opponent": "Brookwood Academy",
     "LocationType": "Neutral",
     "GameType": "State Tournament",

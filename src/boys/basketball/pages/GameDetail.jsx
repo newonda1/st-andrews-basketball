@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { useParams, Link } from "react-router-dom";
+import { SCHOOLS_PATH, hydrateGamesWithSchools } from "../dataUtils";
 
 function GameDetail() {
   const { gameId } = useParams();
@@ -19,23 +20,27 @@ function GameDetail() {
       setLoading(true);
 
       try {
-        const [gamesRes, statsRes, playersRes] = await Promise.all([
+        const [gamesRes, statsRes, playersRes, schoolsRes] = await Promise.all([
           fetch(`${DATA_BASE}games.json`),
           fetch(`${DATA_BASE}playergamestats.json`),
-          fetch(`${DATA_BASE}players.json`),
+          fetch("/data/boys/players.json"),
+          fetch(SCHOOLS_PATH),
         ]);
 
-        if (!gamesRes.ok || !statsRes.ok || !playersRes.ok) {
+        if (!gamesRes.ok || !statsRes.ok || !playersRes.ok || !schoolsRes.ok) {
           throw new Error(
-            `Fetch failed: games(${gamesRes.status}) stats(${statsRes.status}) players(${playersRes.status})`
+            `Fetch failed: games(${gamesRes.status}) stats(${statsRes.status}) players(${playersRes.status}) schools(${schoolsRes.status})`
           );
         }
 
-        const [gamesData, statsData, playersData] = await Promise.all([
+        const [gamesDataRaw, statsData, playersData, schoolsData] = await Promise.all([
           gamesRes.json(),
           statsRes.json(),
           playersRes.json(),
+          schoolsRes.json(),
         ]);
+
+        const gamesData = hydrateGamesWithSchools(gamesDataRaw, schoolsData);
 
         const idNum = Number(gameId);
 
