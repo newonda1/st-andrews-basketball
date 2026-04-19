@@ -217,8 +217,8 @@ function Season1990_91() {
               That firepower showed up all winter. The Saints won a dozen games,
               pushed deep into the postseason, and produced the first 40-point game
               in school history when Ray Rogers poured in 43 against Trinity
-              Christian Academy in the playoffs. St. Andrew&apos;s also became the first
-              team in school history to have more than one 300-point scorer in a
+              Christian Academy in the playoffs. This season&apos;s team also became the
+              first in school history to have more than one 300-point scorer in a
               season, and it did not stop at two: Ray Rogers, Brooks Lane, and Ted
               Saunders all cleared that mark.
             </p>
@@ -226,9 +226,12 @@ function Season1990_91() {
               Rogers stood at the center of it all. His 473 points broke his own
               school record from the previous season, extending the mark he had just
               taken from Jim Sharpley&apos;s 420-point total in the inaugural 1978-79
-              season. Brooks Lane added 337 points and Ted Saunders scored 300,
-              giving Strange&apos;s 1990-91 team a level of top-end scoring depth St.
-              Andrew&apos;s had never had before.
+              season. Ted Saunders also made his own mark early in the year, scoring
+              37 against Memorial Day School on Dec. 4 to break Frank Bendin&apos;s
+              long-standing single-game school record of 35 from 1978-79 before
+              Rogers later raised it to 43. Brooks Lane added 337 points and
+              Saunders scored 300, giving Strange&apos;s 1990-91 team a level of
+              top-end scoring depth St. Andrew&apos;s had never had before.
             </p>
           </div>
 

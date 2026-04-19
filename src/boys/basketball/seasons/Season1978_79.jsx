@@ -261,7 +261,9 @@ function Season1978_79() {
               Even in a season of firsts, Jim Sharpley's scoring stood out. His 420
               points became the first major benchmark in the boys basketball record
               book, and it remained the school record for more than a decade before
-              Ray Rogers passed it during the 1988-89 season.
+              Ray Rogers passed it during the 1988-89 season. Frank Bendin also set
+              an early standard with his 35-point game against Oglethorpe Academy, a
+              single-game record that stood until Ted Saunders broke it in 1990.
             </p>
           </div>
 
