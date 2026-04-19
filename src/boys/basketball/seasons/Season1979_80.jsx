@@ -250,12 +250,8 @@ function Season1979_80() {
       <section className="space-y-3">
         <h2 className="text-2xl font-semibold mt-2 mb-2">Season Images</h2>
         <div className="rounded-lg border border-dashed border-gray-300 bg-gray-50 px-6 py-10 text-center">
-          <div className="mx-auto max-w-2xl space-y-2">
-            <p className="text-base font-semibold text-gray-900">Archive images coming later</p>
-            <p className="text-sm leading-relaxed text-gray-600">
-              This season page is ready for photos whenever you have them. Once images
-              are added, this section can use the same gallery treatment as 1978-79.
-            </p>
+          <div className="mx-auto max-w-2xl">
+            <p className="text-base font-semibold text-gray-900">Archive images coming soon</p>
           </div>
         </div>
       </section>
