@@ -238,7 +238,7 @@ function Season2000_01() {
               St. Andrew&apos;s. It was Karl Demasi&apos;s first of two years as head coach,
               and his first team quickly pushed the program back into the center of
               the SCISA postseason picture. The Lions finished 16-11, claimed a
-              third straight region championship, and made a return run to the state
+              fifth straight region championship, and made a return run to the state
               final four.
             </p>
             <p>
@@ -251,20 +251,18 @@ function Season2000_01() {
             </p>
             <p>
               The postseason made the year stand out. By winning the region title
-              for the third consecutive season, the Lions showed that the program&apos;s
+              for the fifth consecutive season, the Lions showed that the program&apos;s
               late-1990s rise had not faded after the 1997-98 state championship.
               The playoff push carried them all the way to the state final four,
               the third such appearance in school history and the first since that
               title-winning 1997-98 team.
             </p>
             <p>
-              This season also feels like a reset in the archive itself. For
-              2000-01, the surviving source preserves player scoring for every game
-              on the schedule but does not carry the fuller box-score detail that
-              exists for some later seasons. Even with that lighter record, Demasi&apos;s
-              debut season still comes through clearly as one of the stronger years
-              of the era and an important bridge between the championship teams of
-              the late 1990s and the next phase of the program.
+              Demasi&apos;s debut season still stands as an important bridge between the
+              championship teams of the late 1990s and the next phase of the
+              program. A region title, a final four berth, and a balanced offense
+              made 2000-01 one of the strongest seasons of that stretch, and it set
+              the tone for the second half of Demasi&apos;s two-year run.
             </p>
           </div>
 

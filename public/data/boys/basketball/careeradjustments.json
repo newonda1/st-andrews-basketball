@@ -34,6 +34,23 @@
     "Source": "Handed-down career total"
   },
   {
+    "PlayerID": 198903,
+    "Points": 70,
+    "Rebounds": null,
+    "Assists": null,
+    "Steals": null,
+    "Blocks": null,
+    "Turnovers": null,
+    "TwoPM": null,
+    "TwoPA": null,
+    "ThreePM": null,
+    "ThreePA": null,
+    "FTM": null,
+    "FTA": null,
+    "AdjustmentType": "Career",
+    "Source": "Handed-down career total"
+  },
+  {
     "PlayerID": 199601,
     "Points": 1650,
     "Rebounds": null,
