@@ -308,87 +308,93 @@ function Season1981_82() {
           {seasonTotals.length === 0 ? (
             <p className="text-gray-600">No player statistics are available yet for this season.</p>
           ) : (
-            <div className="overflow-x-auto">
-              <table className="w-full min-w-[420px] table-auto border text-xs sm:text-sm text-center whitespace-nowrap">
-                <thead className="bg-gray-100">
-                  <tr>
-                    <th
-                      className="border px-2 py-1 cursor-pointer sticky left-0 z-40 bg-gray-100 border-r text-center"
-                      onClick={() => handleSort("name")}
-                    >
-                      Player{sortArrow("name")}
-                    </th>
-                    <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("jersey")}>
-                      #{sortArrow("jersey")}
-                    </th>
-                    <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("GP")}>
-                      GP{sortArrow("GP")}
-                    </th>
-                    <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("PTS")}>
-                      PTS{sortArrow("PTS")}
-                    </th>
-                    <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("PPG")}>
-                      PPG{sortArrow("PPG")}
-                    </th>
-                  </tr>
-                </thead>
-
-                <tbody>
-                  {sortedSeasonTotals.map((player, idx) => {
-                    const name = getPlayerName(player.PlayerID);
-                    const jersey = getJerseyNumber(player.PlayerID);
-                    const photoUrl = getPlayerPhotoUrl(player.PlayerID);
-                    const rowBg = idx % 2 === 0 ? "bg-white" : "bg-gray-50";
-                    const gp = Number(player.GamesPlayed || 0);
-                    const ppg = gp ? (Number(player.Points || 0) / gp).toFixed(1) : "—";
-
-                    return (
-                      <tr key={player.PlayerID} className={rowBg}>
-                        <td className={`border px-2 py-1 text-left align-middle sticky left-0 z-20 ${rowBg} border-r`}>
-                          <div className="flex items-center justify-start gap-2">
-                            <img
-                              src={photoUrl}
-                              alt={name}
-                              onError={(e) => {
-                                e.currentTarget.src = "/images/common/logo.png";
-                              }}
-                              className="w-8 h-8 rounded-full object-cover border"
-                            />
-                            <Link
-                              to={`/athletics/boys/basketball/players/${player.PlayerID}`}
-                              className="text-blue-600 underline hover:text-blue-800"
-                            >
-                              {name}
-                            </Link>
-                          </div>
-                        </td>
-
-                        <td className="border px-2 py-1 align-middle">{jersey}</td>
-                        <td className="border px-2 py-1 align-middle">{player.GamesPlayed}</td>
-                        <td className="border px-2 py-1 align-middle">{player.Points}</td>
-                        <td className="border px-2 py-1 align-middle">{ppg}</td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-
-                {teamTotalsRow && (
-                  <tfoot>
-                    <tr className="bg-gray-200 font-semibold">
-                      <td className="border px-2 py-1 text-left sticky left-0 z-30 bg-gray-200 border-r">
-                        Team Totals
-                      </td>
-                      <td className="border px-2 py-1">—</td>
-                      <td className="border px-2 py-1">{teamTotalsRow.GP}</td>
-                      <td className="border px-2 py-1">{teamTotalsRow.PTS}</td>
-                      <td className="border px-2 py-1">
-                        {teamTotalsRow.GP ? teamTotalsRow.PPG.toFixed(1) : "—"}
-                      </td>
+            <>
+              <div className="overflow-x-auto">
+                <table className="w-full min-w-[420px] table-auto border text-xs sm:text-sm text-center whitespace-nowrap">
+                  <thead className="bg-gray-100">
+                    <tr>
+                      <th
+                        className="border px-2 py-1 cursor-pointer sticky left-0 z-40 bg-gray-100 border-r text-center"
+                        onClick={() => handleSort("name")}
+                      >
+                        Player{sortArrow("name")}
+                      </th>
+                      <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("jersey")}>
+                        #{sortArrow("jersey")}
+                      </th>
+                      <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("GP")}>
+                        GP{sortArrow("GP")}
+                      </th>
+                      <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("PTS")}>
+                        PTS{sortArrow("PTS")}
+                      </th>
+                      <th className="border px-2 py-1 cursor-pointer" onClick={() => handleSort("PPG")}>
+                        PPG{sortArrow("PPG")}
+                      </th>
                     </tr>
-                  </tfoot>
-                )}
-              </table>
-            </div>
+                  </thead>
+
+                  <tbody>
+                    {sortedSeasonTotals.map((player, idx) => {
+                      const name = getPlayerName(player.PlayerID);
+                      const jersey = getJerseyNumber(player.PlayerID);
+                      const photoUrl = getPlayerPhotoUrl(player.PlayerID);
+                      const rowBg = idx % 2 === 0 ? "bg-white" : "bg-gray-50";
+                      const gp = Number(player.GamesPlayed || 0);
+                      const ppg = gp ? (Number(player.Points || 0) / gp).toFixed(1) : "—";
+
+                      return (
+                        <tr key={player.PlayerID} className={rowBg}>
+                          <td className={`border px-2 py-1 text-left align-middle sticky left-0 z-20 ${rowBg} border-r`}>
+                            <div className="flex items-center justify-start gap-2">
+                              <img
+                                src={photoUrl}
+                                alt={name}
+                                onError={(e) => {
+                                  e.currentTarget.src = "/images/common/logo.png";
+                                }}
+                                className="w-8 h-8 rounded-full object-cover border"
+                              />
+                              <Link
+                                to={`/athletics/boys/basketball/players/${player.PlayerID}`}
+                                className="text-blue-600 underline hover:text-blue-800"
+                              >
+                                {name}
+                              </Link>
+                            </div>
+                          </td>
+
+                          <td className="border px-2 py-1 align-middle">{jersey}</td>
+                          <td className="border px-2 py-1 align-middle">{player.GamesPlayed}</td>
+                          <td className="border px-2 py-1 align-middle">{player.Points}</td>
+                          <td className="border px-2 py-1 align-middle">{ppg}</td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+
+                  {teamTotalsRow && (
+                    <tfoot>
+                      <tr className="bg-gray-200 font-semibold">
+                        <td className="border px-2 py-1 text-left sticky left-0 z-30 bg-gray-200 border-r">
+                          Team Totals
+                        </td>
+                        <td className="border px-2 py-1">—</td>
+                        <td className="border px-2 py-1">{teamTotalsRow.GP}</td>
+                        <td className="border px-2 py-1">{teamTotalsRow.PTS}</td>
+                        <td className="border px-2 py-1">
+                          {teamTotalsRow.GP ? teamTotalsRow.PPG.toFixed(1) : "—"}
+                        </td>
+                      </tr>
+                    </tfoot>
+                  )}
+                </table>
+              </div>
+              <p className="mt-2 text-xs leading-relaxed text-gray-600">
+                GP reflects the number of games with surviving box score records for that player, not
+                necessarily the total number of games played.
+              </p>
+            </>
           )}
         </section>
       </div>
