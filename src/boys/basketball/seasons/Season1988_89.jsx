@@ -9,7 +9,7 @@ import {
   hydrateGamesWithSchools,
 } from "../dataUtils";
 
-function Season1987_88() {
+function Season1988_89() {
   const [games, setGames] = useState([]);
   const [playerStats, setPlayerStats] = useState([]);
   const [players, setPlayers] = useState([]);
@@ -18,7 +18,7 @@ function Season1987_88() {
 
   const [sortConfig, setSortConfig] = useState({ key: "jersey", direction: "asc" });
 
-  const SEASON_ID = 1987; // 1987–88 season (games.json Season field should be 1987)
+  const SEASON_ID = 1988; // 1988–89 season (games.json Season field should be 1988)
 
   useEffect(() => {
     async function fetchData() {
@@ -202,40 +202,40 @@ function Season1987_88() {
 
   return (
     <div className="pt-1 pb-4 space-y-6 max-w-6xl mx-auto">
-      <h1 className="text-3xl font-bold text-center mb-0">1987–88 Season</h1>
+      <h1 className="text-3xl font-bold text-center mb-0">1988–89 Season</h1>
 
       <section className="max-w-4xl mx-auto space-y-3">
         <h2 className="text-2xl font-semibold">Season Recap</h2>
         <div className="grid gap-4 md:grid-cols-[1fr_auto] md:items-start">
           <div className="space-y-3 text-gray-800 leading-relaxed">
             <p>
-              The 1987-88 season brought a clear turn for the program. In Em
-              Hubbard&apos;s first of two years as head coach, St. Andrew&apos;s climbed
-              to a 14-8 record and put together one of the school&apos;s strongest
-              seasons of the 1980s. The Saints were steadier from the start,
-              tougher in region play, and much more comfortable winning games in a
-              variety of ways.
+              The 1988-89 season was Em Hubbard&apos;s second and final year as head
+              coach, and it proved to be a much tougher follow-up to the winning
+              season that came before it. St. Andrew&apos;s finished 2-17, with a young
+              group trying to find enough offense and consistency to stay afloat in
+              a demanding region schedule.
             </p>
             <p>
-              St. Andrew&apos;s swept David Emanuel, Pinewood Christian, and Robert
-              Toombs Christian Academy, split with Frederica and Pathway Day, and
-              collected tournament wins over John C. Calhoun Academy and Pathway
-              in February. There were still a few rough nights, including losses to
-              Memorial Day and Trinity Christian, but the overall shape of the year
-              was much stronger than the season before.
+              The Saints&apos; two wins both came against Bulloch Academy, and several
+              other games stayed within reach, including a one-point loss at David
+              Emanuel and a four-point defeat against Pathway Day in the region
+              tournament. Even so, most of the winter was spent chasing stronger,
+              older opponents, and the record never gave St. Andrew&apos;s much room to
+              recover.
             </p>
             <p>
-              Scott Jarrett led the attack with 233 points, while Bennett Toole
-              added 196, Ed Johns scored 186, and George Eubank finished with 148.
-              That balanced core helped push the Saints back into winning form and
-              gave Hubbard a strong foundation in his first year on the sideline.
+              Dereck Blackmon carried the biggest scoring load with 229 points, while
+              Robert Gephart added 153, Chris Blackmon scored 125, and Ray Rogers
+              finished with 94. Their totals do not fully capture the season because
+              one game box score is missing and the opener survives only as a partial
+              line, but they mark the core contributors from Hubbard&apos;s final team.
             </p>
           </div>
 
           <dl className="grid grid-cols-3 gap-3 text-center md:w-64 md:grid-cols-1">
             <div className="border border-gray-200 rounded-lg px-3 py-2">
               <dt className="text-xs font-semibold uppercase tracking-wide text-gray-500">Record</dt>
-              <dd className="text-xl font-bold text-gray-900">14-8</dd>
+              <dd className="text-xl font-bold text-gray-900">2-17</dd>
             </div>
             <div className="border border-gray-200 rounded-lg px-3 py-2">
               <dt className="text-xs font-semibold uppercase tracking-wide text-gray-500">Coach</dt>
@@ -405,4 +405,4 @@ function Season1987_88() {
   );
 }
 
-export default Season1987_88;
+export default Season1988_89;

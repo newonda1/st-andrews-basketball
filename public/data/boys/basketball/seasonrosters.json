@@ -789,5 +789,54 @@
         "JerseyNumber": null
       }
     ]
+  },
+  {
+    "SeasonID": "1988-89",
+    "Players": [
+      {
+        "PlayerID": 198801,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198802,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198803,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198502,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198804,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198805,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198703,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198806,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198807,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198808,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198809,
+        "JerseyNumber": null
+      }
+    ]
   }
 ]
