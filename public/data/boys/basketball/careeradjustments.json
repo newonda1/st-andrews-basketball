@@ -1,0 +1,53 @@
+[
+  {
+    "PlayerID": 198806,
+    "Points": 26,
+    "Rebounds": null,
+    "Assists": null,
+    "Steals": null,
+    "Blocks": null,
+    "Turnovers": null,
+    "TwoPM": null,
+    "TwoPA": null,
+    "ThreePM": null,
+    "ThreePA": null,
+    "FTM": null,
+    "FTA": null,
+    "AdjustmentType": "Career",
+    "Source": "Handed-down career total"
+  },
+  {
+    "PlayerID": 199301,
+    "Points": 410,
+    "Rebounds": null,
+    "Assists": null,
+    "Steals": null,
+    "Blocks": null,
+    "Turnovers": null,
+    "TwoPM": null,
+    "TwoPA": null,
+    "ThreePM": null,
+    "ThreePA": null,
+    "FTM": null,
+    "FTA": null,
+    "AdjustmentType": "Career",
+    "Source": "Handed-down career total"
+  },
+  {
+    "PlayerID": 199601,
+    "Points": 1650,
+    "Rebounds": null,
+    "Assists": null,
+    "Steals": null,
+    "Blocks": null,
+    "Turnovers": null,
+    "TwoPM": null,
+    "TwoPA": null,
+    "ThreePM": null,
+    "ThreePA": null,
+    "FTM": null,
+    "FTA": null,
+    "AdjustmentType": "Career",
+    "Source": "Handed-down career total"
+  }
+]

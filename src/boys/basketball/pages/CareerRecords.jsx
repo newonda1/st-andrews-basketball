@@ -276,15 +276,17 @@ export default function CareerRecords() {
       try {
         setError("");
 
-        const [playerStatsRaw, playersRaw, adjustmentsRaw] = await Promise.all([
+        const [playerStatsRaw, playersRaw, adjustmentsRaw, careerAdjustmentsRaw] = await Promise.all([
           fetchJson("playergamestats.json", "/data/boys/basketball/playergamestats.json"),
           fetchJson("players.json", "/data/boys/players.json"),
           fetchJsonOptional("adjustments.json", "/data/boys/basketball/adjustments.json"),
+          fetchJsonOptional("careeradjustments.json", "/data/boys/basketball/careeradjustments.json"),
         ]);
 
         const playerStats = Array.isArray(playerStatsRaw) ? playerStatsRaw : [];
         const players = Array.isArray(playersRaw) ? playersRaw : [];
         const adjustments = Array.isArray(adjustmentsRaw) ? adjustmentsRaw : [];
+        const careerAdjustments = Array.isArray(careerAdjustmentsRaw) ? careerAdjustmentsRaw : [];
 
         const playerMap = new Map(players.map((player) => [String(player.PlayerID), player]));
         const careerMap = new Map();
@@ -374,6 +376,26 @@ export default function CareerRecords() {
           totals.Assists += safeNum(row.Assists);
           totals.Steals += safeNum(row.Steals);
           totals.Blocks += safeNum(row.Blocks);
+          totals.TwoPM += safeNum(row.TwoPM);
+          totals.TwoPA += safeNum(row.TwoPA);
+          totals.ThreePM += safeNum(row.ThreePM);
+          totals.ThreePA += safeNum(row.ThreePA);
+          totals.FTM += safeNum(row.FTM);
+          totals.FTA += safeNum(row.FTA);
+        }
+
+        for (const row of careerAdjustments) {
+          if (!row || row.PlayerID == null) continue;
+
+          const playerId = String(row.PlayerID);
+          const totals = ensurePlayer(playerId);
+
+          totals.Points += safeNum(row.Points);
+          totals.Rebounds += safeNum(row.Rebounds);
+          totals.Assists += safeNum(row.Assists);
+          totals.Steals += safeNum(row.Steals);
+          totals.Blocks += safeNum(row.Blocks);
+          totals.Turnovers += safeNum(row.Turnovers);
           totals.TwoPM += safeNum(row.TwoPM);
           totals.TwoPA += safeNum(row.TwoPA);
           totals.ThreePM += safeNum(row.ThreePM);
@@ -606,7 +628,8 @@ export default function CareerRecords() {
       </div>
 
       <p className="text-center text-xs italic text-gray-500">
-        Historical adjustment rows are included in career counting totals where available. Career rate stats and milestone-game counts use tracked game logs only.
+        Historical season and career adjustment rows are included in career counting totals where available. Career
+        rate stats and milestone-game counts use tracked game logs only.
       </p>
     </div>
   );

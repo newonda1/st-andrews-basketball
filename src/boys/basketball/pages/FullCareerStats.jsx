@@ -285,18 +285,20 @@ export default function FullCareerStats() {
       try {
         setError("");
 
-        const [statsDataRaw, playersDataRaw, seasonRostersDataRaw, adjustmentsDataRaw] =
+        const [statsDataRaw, playersDataRaw, seasonRostersDataRaw, adjustmentsDataRaw, careerAdjustmentsDataRaw] =
           await Promise.all([
             fetchJson("playergamestats.json", "/data/boys/basketball/playergamestats.json"),
             fetchJson("players.json", "/data/boys/players.json"),
             fetchJson("seasonrosters.json", "/data/boys/basketball/seasonrosters.json"),
             fetchJsonOptional("adjustments.json", "/data/boys/basketball/adjustments.json"),
+            fetchJsonOptional("careeradjustments.json", "/data/boys/basketball/careeradjustments.json"),
           ]);
 
         const statsData = Array.isArray(statsDataRaw) ? statsDataRaw : [];
         const playersData = Array.isArray(playersDataRaw) ? playersDataRaw : [];
         const seasonRostersData = Array.isArray(seasonRostersDataRaw) ? seasonRostersDataRaw : [];
         const adjustmentsData = Array.isArray(adjustmentsDataRaw) ? adjustmentsDataRaw : [];
+        const careerAdjustmentsData = Array.isArray(careerAdjustmentsDataRaw) ? careerAdjustmentsDataRaw : [];
 
         const playerMap = new Map(playersData.map((player) => [String(player.PlayerID), player]));
         const totalsMap = new Map();
@@ -431,6 +433,66 @@ export default function FullCareerStats() {
           if (hasValue(adjustment.Blocks)) {
             total.Blocks += safeNum(adjustment.Blocks);
             markHas(total, "Blocks");
+          }
+          if (hasValue(adjustment.TwoPM)) {
+            total.TwoPM += safeNum(adjustment.TwoPM);
+            markHas(total, "TwoPM");
+          }
+          if (hasValue(adjustment.TwoPA)) {
+            total.TwoPA += safeNum(adjustment.TwoPA);
+            markHas(total, "TwoPA");
+          }
+          if (hasValue(adjustment.ThreePM)) {
+            total.ThreePM += safeNum(adjustment.ThreePM);
+            markHas(total, "ThreePM");
+          }
+          if (hasValue(adjustment.ThreePA)) {
+            total.ThreePA += safeNum(adjustment.ThreePA);
+            markHas(total, "ThreePA");
+          }
+          if (hasValue(adjustment.FTM)) {
+            total.FTM += safeNum(adjustment.FTM);
+            markHas(total, "FTM");
+          }
+          if (hasValue(adjustment.FTA)) {
+            total.FTA += safeNum(adjustment.FTA);
+            markHas(total, "FTA");
+          }
+        }
+
+        for (const adjustment of careerAdjustmentsData) {
+          const playerId = String(adjustment?.PlayerID ?? "");
+          if (!playerId) continue;
+
+          if (!totalsMap.has(playerId)) {
+            totalsMap.set(playerId, createEmptyTotals(playerId));
+          }
+
+          const total = totalsMap.get(playerId);
+
+          if (hasValue(adjustment.Points)) {
+            total.Points += safeNum(adjustment.Points);
+            markHas(total, "Points");
+          }
+          if (hasValue(adjustment.Rebounds)) {
+            total.Rebounds += safeNum(adjustment.Rebounds);
+            markHas(total, "Rebounds");
+          }
+          if (hasValue(adjustment.Assists)) {
+            total.Assists += safeNum(adjustment.Assists);
+            markHas(total, "Assists");
+          }
+          if (hasValue(adjustment.Steals)) {
+            total.Steals += safeNum(adjustment.Steals);
+            markHas(total, "Steals");
+          }
+          if (hasValue(adjustment.Blocks)) {
+            total.Blocks += safeNum(adjustment.Blocks);
+            markHas(total, "Blocks");
+          }
+          if (hasValue(adjustment.Turnovers)) {
+            total.Turnovers += safeNum(adjustment.Turnovers);
+            markHas(total, "Turnovers");
           }
           if (hasValue(adjustment.TwoPM)) {
             total.TwoPM += safeNum(adjustment.TwoPM);
@@ -619,7 +681,8 @@ export default function FullCareerStats() {
       </div>
 
       <p className="text-center text-xs italic text-gray-500">
-        Historical adjustment rows are included in career counting totals where available. Per-game and milestone-game columns are based on tracked game logs.
+        Historical season and career adjustment rows are included in career counting totals where available. Per-game
+        and milestone-game columns are based on tracked game logs.
       </p>
     </div>
   );
