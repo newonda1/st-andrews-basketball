@@ -1200,5 +1200,58 @@
         "JerseyNumber": null
       }
     ]
+  },
+  {
+    "SeasonID": "2000-01",
+    "Players": [
+      {
+        "PlayerID": 200001,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200002,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200003,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200004,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200005,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200006,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200007,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200008,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200009,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200010,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200011,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200012,
+        "JerseyNumber": null
+      }
+    ]
   }
 ]
