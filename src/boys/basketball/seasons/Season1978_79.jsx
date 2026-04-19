@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import {
   BOYS_BASKETBALL_ROSTERS_PATH,
   SCHOOLS_PATH,
+  countsAsPlayerGame,
   getRosterEntriesForSeason,
   getRosterJerseyNumber,
   hydrateGamesWithSchools,
@@ -17,17 +18,29 @@ function Season1978_79() {
 
   const [sortConfig, setSortConfig] = useState({ key: "jersey", direction: "asc" });
 
-  // Carousel
   const [slideIndex, setSlideIndex] = useState(0);
 
   const SEASON_ID = 1978; // 1978–79 season (games.json Season field should be 1978)
 
-  const carouselImages = useMemo(() => {
+  const galleryImages = useMemo(() => {
     const base = "/images/boys/basketball/seasons/1978-79";
-    return Array.from({ length: 10 }, (_, i) => {
+    const seasonPhotos = Array.from({ length: 10 }, (_, i) => {
       const n = String(i + 1).padStart(2, "0");
-      return `${base}/1978_79_${n}.png`;
+      return {
+        src: `${base}/1978_79_${n}.png`,
+        alt: `1978-79 season archive image ${i + 1}`,
+        caption: `Archive image ${i + 1}`,
+      };
     });
+
+    return [
+      {
+        src: `${base}/first_team_1978.png`,
+        alt: "1978-79 St. Andrew's boys basketball team",
+        caption: "First St. Andrew's boys basketball team",
+      },
+      ...seasonPhotos,
+    ];
   }, []);
 
   // ---------- Fetch data ----------
@@ -138,7 +151,7 @@ function Season1978_79() {
 
       totalsMap[pid].Points += safeNum(stat.Points);
 
-      if (stat.GameID != null) {
+      if (stat.GameID != null && countsAsPlayerGame(stat)) {
         totalsMap[pid].GamesPlayedSet.add(Number(stat.GameID));
       }
     }
@@ -199,7 +212,7 @@ function Season1978_79() {
     let pts = 0;
 
     for (const s of playerStats) {
-      if (s.GameID != null) gameSet.add(Number(s.GameID));
+      if (s.GameID != null && countsAsPlayerGame(s)) gameSet.add(Number(s.GameID));
       pts += safeNum(s.Points);
     }
 
@@ -211,37 +224,77 @@ function Season1978_79() {
     };
   }, [playerStats]);
 
+  const selectedImage = galleryImages[slideIndex] || galleryImages[0];
+
   const sortArrow = (key) => {
     if (sortConfig.key !== key) return "";
     return sortConfig.direction === "desc" ? " ↓" : " ↑";
   };
 
-  // ---------- Carousel controls ----------
-  const goPrev = () => setSlideIndex((i) => (i - 1 + carouselImages.length) % carouselImages.length);
-  const goNext = () => setSlideIndex((i) => (i + 1) % carouselImages.length);
+  const goPrev = () => setSlideIndex((i) => (i - 1 + galleryImages.length) % galleryImages.length);
+  const goNext = () => setSlideIndex((i) => (i + 1) % galleryImages.length);
 
   return (
     <div className="pt-1 pb-4 space-y-6 max-w-6xl mx-auto">
-      {/* 1) Reduced title spacing */}
       <h1 className="text-3xl font-bold text-center mb-0">1978–79 Season</h1>
 
-      {/* 2) SEASON IMAGES (Carousel) */}
+      <section className="max-w-4xl mx-auto space-y-3">
+        <h2 className="text-2xl font-semibold">Season Recap</h2>
+        <div className="grid gap-4 md:grid-cols-[1fr_auto] md:items-start">
+          <div className="space-y-3 text-gray-800 leading-relaxed">
+            <p>
+              The 1978-79 season was the first boys basketball season played under the
+              St. Andrew's name. The program began in the gym on the new Wilmington Island
+              campus after the previous school dissolved, and the team competed as the
+              Saints in this early chapter of the school's history.
+            </p>
+            <p>
+              Dave Clay's first St. Andrew's team finished 10-11, opening with promise
+              before the schedule turned more difficult in the second half. The Saints
+              were 8-4 after a Jan. 13 win over Robert Toombs Christian Academy, but
+              dropped seven of their final nine games.
+            </p>
+            <p>
+              Jim Sharpley gave the new program its first major scoring benchmark,
+              finishing with 420 points. That season total stood as the school record
+              for more than a decade before Ray Rogers surpassed it during the 1988-89
+              season.
+            </p>
+          </div>
+
+          <dl className="grid grid-cols-3 gap-3 text-center md:w-64 md:grid-cols-1">
+            <div className="border border-gray-200 rounded-lg px-3 py-2">
+              <dt className="text-xs font-semibold uppercase tracking-wide text-gray-500">Record</dt>
+              <dd className="text-xl font-bold text-gray-900">10-11</dd>
+            </div>
+            <div className="border border-gray-200 rounded-lg px-3 py-2">
+              <dt className="text-xs font-semibold uppercase tracking-wide text-gray-500">Coach</dt>
+              <dd className="text-lg font-semibold text-gray-900">Dave Clay</dd>
+            </div>
+            <div className="border border-gray-200 rounded-lg px-3 py-2">
+              <dt className="text-xs font-semibold uppercase tracking-wide text-gray-500">Mascot</dt>
+              <dd className="text-lg font-semibold text-gray-900">Saints</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
       <section className="space-y-3">
         <h2 className="text-2xl font-semibold mt-2 mb-2">Season Images</h2>
 
-        <div className="border rounded-xl bg-white shadow-sm overflow-hidden">
-          <div className="relative">
+        <div className="border border-gray-200 rounded-lg bg-white overflow-hidden">
+          <div className="relative bg-gray-50">
             <img
-              src={carouselImages[slideIndex]}
-              alt={`1978–79 season photo ${slideIndex + 1}`}
-              className="w-full max-h-[520px] object-contain bg-gray-50"
+              src={selectedImage.src}
+              alt={selectedImage.alt}
+              className="w-full max-h-[620px] object-contain"
               loading="lazy"
             />
 
             <button
               type="button"
               onClick={goPrev}
-              className="absolute left-3 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white border border-gray-200 rounded-full w-10 h-10 flex items-center justify-center shadow"
+              className="absolute left-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200 bg-white/90 shadow hover:bg-white"
               aria-label="Previous image"
               title="Previous"
             >
@@ -251,42 +304,53 @@ function Season1978_79() {
             <button
               type="button"
               onClick={goNext}
-              className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white border border-gray-200 rounded-full w-10 h-10 flex items-center justify-center shadow"
+              className="absolute right-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200 bg-white/90 shadow hover:bg-white"
               aria-label="Next image"
               title="Next"
             >
               ›
             </button>
 
-            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 text-white text-xs px-3 py-1 rounded-full">
-              {slideIndex + 1} / {carouselImages.length}
+            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-black/65 px-3 py-1 text-xs text-white">
+              {slideIndex + 1} / {galleryImages.length}
             </div>
           </div>
 
-          <div className="flex items-center justify-center gap-2 py-3 bg-white">
-            {carouselImages.map((_, i) => (
+          <div className="border-t border-gray-200 bg-white px-4 py-3">
+            <div className="mb-3 flex items-center justify-between gap-3">
+              <p className="text-sm font-medium text-gray-900">{selectedImage.caption}</p>
+              <p className="text-xs text-gray-500">
+                Image {slideIndex + 1} of {galleryImages.length}
+              </p>
+            </div>
+
+            <div className="grid grid-cols-4 gap-2 sm:grid-cols-6 md:grid-cols-11">
+              {galleryImages.map((image, i) => (
               <button
                 key={i}
                 type="button"
                 onClick={() => setSlideIndex(i)}
-                className={`w-2.5 h-2.5 rounded-full ${
-                  i === slideIndex ? "bg-gray-900" : "bg-gray-300 hover:bg-gray-400"
+                  className={`aspect-square overflow-hidden rounded-md border bg-gray-50 ${
+                    i === slideIndex
+                      ? "border-gray-900 ring-2 ring-gray-900"
+                      : "border-gray-200 hover:border-gray-500"
                 }`}
                 aria-label={`Go to image ${i + 1}`}
-                title={`Image ${i + 1}`}
-              />
+                  title={image.caption}
+              >
+                  <img src={image.src} alt="" className="h-full w-full object-cover" loading="lazy" />
+              </button>
             ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* 3) SCHEDULE (reduced width) */}
       <section>
         <div className="flex items-center justify-between mt-6 mb-3">
-          <h2 className="text-2xl font-semibold">📅 Schedule &amp; Results</h2>
+          <h2 className="text-2xl font-semibold">Schedule &amp; Results</h2>
         </div>
 
-        {/* Reduced width wrapper */}
         <div className="overflow-x-auto max-w-3xl mx-auto">
           <table className="w-full border text-xs sm:text-sm text-center">
             <thead className="bg-gray-100">
@@ -328,17 +392,15 @@ function Season1978_79() {
         </div>
       </section>
 
-            {/* 4) PLAYER POINTS TABLE (reduced width) */}
       <section>
         <div className="flex items-center justify-between mt-6 mb-3">
-          <h2 className="text-2xl font-semibold">📊 Player Statistics for the Season</h2>
+          <h2 className="text-2xl font-semibold">Player Statistics for the Season</h2>
         </div>
 
         {seasonTotals.length === 0 ? (
           <p className="text-gray-600 text-center">No player statistics are available yet for this season.</p>
         ) : (
           <div className="overflow-x-auto">
-            {/* shrink-wrap wrapper */}
             <div className="mx-auto w-fit">
               <table className="w-auto table-auto border text-xs sm:text-sm text-center whitespace-nowrap">
                 <thead className="bg-gray-100">
@@ -403,7 +465,6 @@ function Season1978_79() {
                   })}
                 </tbody>
 
-                {/* Team totals row */}
                 {teamTotalsRow && (
                   <tfoot>
                     <tr className="bg-gray-200 font-semibold">

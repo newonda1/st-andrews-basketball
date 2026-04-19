@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 
+import { countsAsPlayerGame } from "../dataUtils";
 import { recordTableStyles } from "./recordTableStyles";
 
 function absUrl(path) {
@@ -272,18 +273,7 @@ export default function SeasonRecords() {
           }
 
           const entry = seasonMap[key];
-          const participationSum =
-            safeNum(gameStat.Points) +
-            safeNum(gameStat.Rebounds) +
-            safeNum(gameStat.Assists) +
-            safeNum(gameStat.Steals) +
-            safeNum(gameStat.Blocks) +
-            safeNum(gameStat.Turnovers) +
-            safeNum(gameStat.TwoPA) +
-            safeNum(gameStat.ThreePA) +
-            safeNum(gameStat.FTA) +
-            safeNum(gameStat.FTM);
-          const played = participationSum > 0;
+          const played = countsAsPlayerGame(gameStat);
 
           if (played) entry.GamesPlayed += 1;
 

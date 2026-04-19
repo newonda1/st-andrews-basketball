@@ -3,6 +3,21 @@ export const SCHOOLS_PATH = "/data/schools.json";
 export const BOYS_BASKETBALL_DATA_BASE = "/data/boys/basketball/";
 export const BOYS_BASKETBALL_ROSTERS_PATH = `${BOYS_BASKETBALL_DATA_BASE}seasonrosters.json`;
 
+export const PLAYER_GAME_STAT_FIELDS = [
+  "Points",
+  "Rebounds",
+  "Assists",
+  "Turnovers",
+  "Steals",
+  "Blocks",
+  "ThreePM",
+  "ThreePA",
+  "TwoPM",
+  "TwoPA",
+  "FTM",
+  "FTA",
+];
+
 export function buildIdMap(items, key) {
   const map = new Map();
   for (const item of Array.isArray(items) ? items : []) {
@@ -11,6 +26,13 @@ export function buildIdMap(items, key) {
     map.set(String(value), item);
   }
   return map;
+}
+
+export function countsAsPlayerGame(stat) {
+  return PLAYER_GAME_STAT_FIELDS.some((field) => {
+    const value = Number(stat?.[field]);
+    return Number.isFinite(value) && value !== 0;
+  });
 }
 
 export function getPlayerName(playersOrMap, playerId) {

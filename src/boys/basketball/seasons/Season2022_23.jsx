@@ -5,6 +5,7 @@ import StateBracket12SVG from "../components/StateBracket12SVG";
 import {
   BOYS_BASKETBALL_ROSTERS_PATH,
   SCHOOLS_PATH,
+  countsAsPlayerGame,
   getRosterEntriesForSeason,
   getRosterJerseyNumber,
   hydrateGamesWithSchools,
@@ -111,7 +112,7 @@ function Season2022_23() {
       t.FTM += stat.FTM || 0;
       t.FTA += stat.FTA || 0;
 
-      if (stat.GameID != null) {
+      if (stat.GameID != null && countsAsPlayerGame(stat)) {
         t.GamesPlayedSet.add(stat.GameID);
       }
     });

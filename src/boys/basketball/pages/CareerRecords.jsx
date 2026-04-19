@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 
+import { countsAsPlayerGame } from "../dataUtils";
 import { recordTableStyles } from "./recordTableStyles";
 
 function absUrl(path) {
@@ -325,18 +326,7 @@ export default function CareerRecords() {
 
           const playerId = String(row.PlayerID);
           const totals = ensurePlayer(playerId);
-          const participationSum =
-            safeNum(row.Points) +
-            safeNum(row.Rebounds) +
-            safeNum(row.Assists) +
-            safeNum(row.Steals) +
-            safeNum(row.Blocks) +
-            safeNum(row.Turnovers) +
-            safeNum(row.TwoPA) +
-            safeNum(row.ThreePA) +
-            safeNum(row.FTA) +
-            safeNum(row.FTM);
-          const played = participationSum > 0;
+          const played = countsAsPlayerGame(row);
 
           if (played) totals.GamesPlayed += 1;
 

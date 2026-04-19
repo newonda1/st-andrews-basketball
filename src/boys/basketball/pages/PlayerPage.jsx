@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import {
   BOYS_BASKETBALL_ROSTERS_PATH,
   SCHOOLS_PATH,
+  countsAsPlayerGame,
   hydrateGamesWithSchools,
 } from "../dataUtils";
 
@@ -225,7 +226,9 @@ function PlayerPage() {
         statKeys.forEach((key) => (seasonMap[seasonKey][key] = 0));
       }
 
-      seasonMap[seasonKey].gamesPlayed += 1;
+      if (countsAsPlayerGame(stat)) {
+        seasonMap[seasonKey].gamesPlayed += 1;
+      }
       statKeys.forEach((key) => {
         seasonMap[seasonKey][key] += Number(stat[key]) || 0;
       });
@@ -263,7 +266,9 @@ function PlayerPage() {
         statKeys.forEach((key) => (seasonMap[seasonKey][key] = 0));
       }
 
-      seasonMap[seasonKey].gamesPlayed += 1;
+      if (countsAsPlayerGame(stat)) {
+        seasonMap[seasonKey].gamesPlayed += 1;
+      }
       statKeys.forEach((key) => {
         seasonMap[seasonKey][key] += Number(stat[key]) || 0;
       });
