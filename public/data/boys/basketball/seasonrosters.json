@@ -1098,5 +1098,107 @@
         "JerseyNumber": 33
       }
     ]
+  },
+  {
+    "SeasonID": "1994-95",
+    "Players": [
+      {
+        "PlayerID": 199401,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199402,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199102,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199301,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199303,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199403,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199404,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199405,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199406,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199105,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199304,
+        "JerseyNumber": null
+      }
+    ]
+  },
+  {
+    "SeasonID": "1995-96",
+    "Players": [
+      {
+        "PlayerID": 199401,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199402,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199301,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199501,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199502,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199503,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199504,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199404,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199505,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199405,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199506,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199304,
+        "JerseyNumber": null
+      }
+    ]
   }
 ]

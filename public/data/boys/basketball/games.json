@@ -4350,6 +4350,72 @@
     "IsComplete": "Yes"
   },
   {
+    "GameID": 19940001,
+    "Opponent": "Unknown",
+    "LocationType": null,
+    "GameType": null,
+    "Result": "L",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 1994,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19940002,
+    "Opponent": "Unknown",
+    "LocationType": null,
+    "GameType": null,
+    "Result": "L",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 1994,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19940003,
+    "Opponent": "Unknown",
+    "LocationType": null,
+    "GameType": null,
+    "Result": "L",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 1994,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19940004,
+    "Opponent": "Unknown",
+    "LocationType": null,
+    "GameType": null,
+    "Result": "L",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 1994,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19940005,
+    "Opponent": "Unknown",
+    "LocationType": null,
+    "GameType": null,
+    "Result": "W",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 1994,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19940006,
+    "Opponent": "Unknown",
+    "LocationType": null,
+    "GameType": null,
+    "Result": "L",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 1994,
+    "IsComplete": "Yes"
+  },
+  {
     "GameID": 19940107,
     "OpponentID": "ga-david-emanuel-academy-stillmore",
     "Opponent": "David Emanuel Academy",
@@ -4563,6 +4629,475 @@
     "TeamScore": 34,
     "OpponentScore": 43,
     "Season": 1993,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19950001,
+    "Opponent": "Unknown",
+    "LocationType": null,
+    "GameType": null,
+    "Result": "L",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 1995,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19950002,
+    "Opponent": "Unknown",
+    "LocationType": null,
+    "GameType": null,
+    "Result": "L",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 1995,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19950003,
+    "Opponent": "Unknown",
+    "LocationType": null,
+    "GameType": null,
+    "Result": "L",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 1995,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19950004,
+    "Opponent": "Unknown",
+    "LocationType": null,
+    "GameType": null,
+    "Result": "L",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 1995,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19950005,
+    "Opponent": "Unknown",
+    "LocationType": null,
+    "GameType": null,
+    "Result": "L",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 1995,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19950006,
+    "Opponent": "Unknown",
+    "LocationType": null,
+    "GameType": null,
+    "Result": "L",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 1995,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19950007,
+    "Opponent": "Unknown",
+    "LocationType": null,
+    "GameType": null,
+    "Result": "W",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 1995,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19950008,
+    "Opponent": "Unknown",
+    "LocationType": null,
+    "GameType": null,
+    "Result": "W",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 1995,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19950009,
+    "Opponent": "Unknown",
+    "LocationType": null,
+    "GameType": null,
+    "Result": "W",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 1995,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19950010,
+    "Opponent": "Unknown",
+    "LocationType": null,
+    "GameType": null,
+    "Result": "W",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 1995,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19950011,
+    "Opponent": "Unknown",
+    "LocationType": null,
+    "GameType": null,
+    "Result": "W",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 1995,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19950106,
+    "OpponentID": "ga-david-emanuel-academy-stillmore",
+    "Opponent": "David Emanuel Academy",
+    "LocationType": "Away",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 64,
+    "OpponentScore": 54,
+    "Season": 1994,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19950107,
+    "OpponentID": "ga-bulloch-academy-statesboro",
+    "Opponent": "Bulloch Academy",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 64,
+    "OpponentScore": 65,
+    "Season": 1994,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19950110,
+    "OpponentID": "ga-ocmulgee-academy-lumber-city",
+    "Opponent": "Ocmulgee Academy",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 90,
+    "OpponentScore": 72,
+    "Season": 1994,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19950113,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons",
+    "Opponent": "Robert Toombs Christian Academy",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 60,
+    "OpponentScore": 82,
+    "Season": 1994,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19950114,
+    "OpponentID": "ga-trinity-christian-academy-dublin",
+    "Opponent": "Trinity Christian Academy",
+    "LocationType": "Away",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 69,
+    "OpponentScore": 102,
+    "Season": 1994,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19950117,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
+    "Opponent": "Frederica Academy",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 46,
+    "OpponentScore": 67,
+    "Season": 1994,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19950120,
+    "OpponentID": "ga-citizens-christian-academy-douglas",
+    "Opponent": "Citizens Christian Academy",
+    "LocationType": "Away",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 43,
+    "OpponentScore": 117,
+    "Season": 1994,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19950121,
+    "OpponentID": "ga-memorial-day-school-savannah",
+    "Opponent": "Memorial Day School",
+    "LocationType": "Away",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 52,
+    "OpponentScore": 67,
+    "Season": 1994,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19950127,
+    "OpponentID": "ga-bulloch-academy-statesboro",
+    "Opponent": "Bulloch Academy",
+    "LocationType": "Away",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 51,
+    "OpponentScore": 64,
+    "Season": 1994,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19950128,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
+    "Opponent": "Frederica Academy",
+    "LocationType": "Away",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 63,
+    "OpponentScore": 81,
+    "Season": 1994,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19950131,
+    "OpponentID": "ga-memorial-day-school-savannah",
+    "Opponent": "Memorial Day School",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 53,
+    "OpponentScore": 101,
+    "Season": 1994,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19950204,
+    "OpponentID": "ga-trinity-christian-academy-dublin",
+    "Opponent": "Trinity Christian Academy",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 51,
+    "OpponentScore": 75,
+    "Season": 1994,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19950207,
+    "OpponentID": "ga-david-emanuel-academy-stillmore",
+    "Opponent": "David Emanuel Academy",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 73,
+    "OpponentScore": 57,
+    "Season": 1994,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19950210,
+    "OpponentID": "ga-citizens-christian-academy-douglas",
+    "Opponent": "Citizens Christian Academy",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 76,
+    "OpponentScore": 83,
+    "Season": 1994,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19950211,
+    "OpponentID": "ga-ocmulgee-academy-lumber-city",
+    "Opponent": "Ocmulgee Academy",
+    "LocationType": "Away",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 1994,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19950215,
+    "OpponentID": "ga-trinity-christian-academy-dublin",
+    "Opponent": "Trinity Christian Academy",
+    "LocationType": "Neutral",
+    "GameType": "Playoffs",
+    "Result": "L",
+    "TeamScore": 55,
+    "OpponentScore": 69,
+    "Season": 1994,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19960102,
+    "OpponentID": "ga-pineland-christian-academy-savannah",
+    "Opponent": "Pineland Christian Academy",
+    "LocationType": "Away",
+    "GameType": "Non-Region",
+    "Result": "L",
+    "TeamScore": 68,
+    "OpponentScore": 73,
+    "Season": 1995,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19960105,
+    "OpponentID": "ga-david-emanuel-academy-stillmore",
+    "Opponent": "David Emanuel Academy",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 84,
+    "OpponentScore": 47,
+    "Season": 1995,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19960109,
+    "OpponentID": "ga-ocmulgee-academy-lumber-city",
+    "Opponent": "Ocmulgee Academy",
+    "LocationType": "Away",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 63,
+    "OpponentScore": 65,
+    "Season": 1995,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19960112,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons",
+    "Opponent": "Robert Toombs Christian Academy",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 65,
+    "OpponentScore": 53,
+    "Season": 1995,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19960119,
+    "OpponentID": "ga-citizens-christian-academy-douglas",
+    "Opponent": "Citizens Christian Academy",
+    "LocationType": null,
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 65,
+    "OpponentScore": 82,
+    "Season": 1995,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19960126,
+    "OpponentID": "ga-bulloch-academy-statesboro",
+    "Opponent": "Bulloch Academy",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 71,
+    "OpponentScore": 44,
+    "Season": 1995,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19960130,
+    "OpponentID": "ga-memorial-day-school-savannah",
+    "Opponent": "Memorial Day School",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 43,
+    "OpponentScore": 86,
+    "Season": 1995,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19960202,
+    "OpponentID": "sc-beaufort-academy-beaufort",
+    "Opponent": "Beaufort Academy",
+    "LocationType": "Home",
+    "GameType": "Non-Region",
+    "Result": "W",
+    "TeamScore": 70,
+    "OpponentScore": 40,
+    "Season": 1995,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19960203,
+    "OpponentID": "ga-trinity-christian-academy-dublin",
+    "Opponent": "Trinity Christian Academy",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 62,
+    "OpponentScore": 64,
+    "Season": 1995,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19960206,
+    "OpponentID": "ga-david-emanuel-academy-stillmore",
+    "Opponent": "David Emanuel Academy",
+    "LocationType": "Away",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 65,
+    "OpponentScore": 41,
+    "Season": 1995,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19960210,
+    "OpponentID": "ga-ocmulgee-academy-lumber-city",
+    "Opponent": "Ocmulgee Academy",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 84,
+    "OpponentScore": 52,
+    "Season": 1995,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19960212,
+    "OpponentID": "ga-memorial-day-school-savannah",
+    "Opponent": "Memorial Day School",
+    "LocationType": "Away",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 40,
+    "OpponentScore": 73,
+    "Season": 1995,
+    "IsComplete": "Yes"
+  },
+  {
+    "GameID": 19960216,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons",
+    "Opponent": "Robert Toombs Christian Academy",
+    "LocationType": "Away",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 50,
+    "OpponentScore": 71,
+    "Season": 1995,
     "IsComplete": "Yes"
   },
   {
@@ -10445,7 +10980,7 @@
     "OpponentScore": 46,
     "Season": 2025,
     "IsComplete": "Yes",
-    "Recap": "St. Andrew\u2019s moved to 2\u20130 on the season with an emphatic 77\u201346 win over the South Effingham Mustangs on Tuesday night at home. The Lions wasted no time asserting control, scoring the first 11 points of the game and racing out to a commanding 51\u201318 halftime lead. \n\nSouth Effingham showed some energy coming out of the break, putting together a brief third-quarter run, but the Lions maintained full control and never allowed the margin to shrink below 27 points in the second half. \n\nJa\u2019Cari Glover delivered another standout performance, leading all scorers with 27 points while pulling down 11 rebounds, completing his second double-double in as many games. Chase Brown provided a major spark off the bench, knocking down three 3-pointers on his way to 13 points and adding 9 rebounds, finishing just shy of the first double-double of his career. Page Getter contributed 8 points and 5 rebounds, while Milos Copic and Guus Blom chipped in 7 points apiece. \n\nSouth Effingham was led by Michael Hall, who scored 21 points. \n\nWith the win, the Lions improve to 2\u20130 on the season, while the Mustangs fall to 1\u20132. St. Andrew\u2019s will be back in action on Friday when they host Bradwell Institute at 7 p.m."
+    "Recap": "St. Andrew’s moved to 2–0 on the season with an emphatic 77–46 win over the South Effingham Mustangs on Tuesday night at home. The Lions wasted no time asserting control, scoring the first 11 points of the game and racing out to a commanding 51–18 halftime lead. \n\nSouth Effingham showed some energy coming out of the break, putting together a brief third-quarter run, but the Lions maintained full control and never allowed the margin to shrink below 27 points in the second half. \n\nJa’Cari Glover delivered another standout performance, leading all scorers with 27 points while pulling down 11 rebounds, completing his second double-double in as many games. Chase Brown provided a major spark off the bench, knocking down three 3-pointers on his way to 13 points and adding 9 rebounds, finishing just shy of the first double-double of his career. Page Getter contributed 8 points and 5 rebounds, while Milos Copic and Guus Blom chipped in 7 points apiece. \n\nSouth Effingham was led by Michael Hall, who scored 21 points. \n\nWith the win, the Lions improve to 2–0 on the season, while the Mustangs fall to 1–2. St. Andrew’s will be back in action on Friday when they host Bradwell Institute at 7 p.m."
   },
   {
     "GameID": 20251121,
@@ -10458,7 +10993,7 @@
     "OpponentScore": 68,
     "Season": 2025,
     "IsComplete": "Yes",
-    "Recap": "St. Andrew\u2019s battled hard but ultimately came up short on Friday night, falling 68\u201350 to the Bradwell Institute Tigers. The Lions kept the game tight through much of the first half, trailing just 21\u201318 with four minutes remaining in the second quarter. However, Bradwell closed the half on a decisive 10\u20130 run, seizing momentum and controlling the game from that point forward. \n\nThe Tigers showcased a balanced offensive attack, with four players finishing in double figures. Christopher Perry led the way for Bradwell with 22 points, pacing an offense that proved difficult for the Lions to slow down. \n\nDespite the loss, Ja\u2019Cari Glover delivered another standout performance, finishing with 21 points and 13 rebounds to record his third double-double of the season. His strong effort kept St. Andrew\u2019s within reach early, but the Lions were unable to overcome Bradwell\u2019s late-half surge and second-half control. \n\nWith the loss, the Lions move to 2\u20131 on the season. St. Andrew\u2019s now turns its attention to a road matchup on December 2nd, when they travel to South Carolina to take on Hilton Head Island High School."
+    "Recap": "St. Andrew’s battled hard but ultimately came up short on Friday night, falling 68–50 to the Bradwell Institute Tigers. The Lions kept the game tight through much of the first half, trailing just 21–18 with four minutes remaining in the second quarter. However, Bradwell closed the half on a decisive 10–0 run, seizing momentum and controlling the game from that point forward. \n\nThe Tigers showcased a balanced offensive attack, with four players finishing in double figures. Christopher Perry led the way for Bradwell with 22 points, pacing an offense that proved difficult for the Lions to slow down. \n\nDespite the loss, Ja’Cari Glover delivered another standout performance, finishing with 21 points and 13 rebounds to record his third double-double of the season. His strong effort kept St. Andrew’s within reach early, but the Lions were unable to overcome Bradwell’s late-half surge and second-half control. \n\nWith the loss, the Lions move to 2–1 on the season. St. Andrew’s now turns its attention to a road matchup on December 2nd, when they travel to South Carolina to take on Hilton Head Island High School."
   },
   {
     "GameID": 20251202,
@@ -10471,7 +11006,7 @@
     "OpponentScore": 53,
     "Season": 2025,
     "IsComplete": "Yes",
-    "Recap": "Lions Earn Gritty Road-Style Win Over Hilton Head Island, Improve to 3\u20131 \n\nSt. Andrew\u2019s earned its toughest victory of the young season on Tuesday night, holding off the Hilton Head Island Seahawks 56\u201353 in a tense finish that wasn\u2019t secure until the final buzzer. The win moves the Lions to 3\u20131, while the Seahawks drop to 1\u20131.  \ufffc\n\nThe Lions opened strong and held a 17\u201311 lead after the first quarter, then pushed the margin to 30\u201324 by halftime. Hilton Head responded in the third period, using a strong run to take a 39\u201337 lead into the fourth quarter. The final period featured multiple ties and lead changes as both teams traded defensive stops and key plays. \n\nWith the game tied at 45\u201345, St. Andrew\u2019s produced several crucial stops and surged ahead 52\u201347 entering the closing minutes. Hilton Head continued to battle and trimmed the deficit to one possession in the final seconds. The Seahawks called timeout with 2.6 seconds remaining, set up a final sideline inbound, and advanced the ball into the frontcourt\u2014but were unable to get a shot off before the buzzer, securing the Lions\u2019 56\u201353 win. \n\nJa\u2019Cari Glover led the Lions with 16 points and 10 rebounds, earning his fourth double-double of the season. Page Getter delivered a strong all-around effort with 10 points and 8 rebounds, giving St. Andrew\u2019s consistent lift throughout the night. Amari Cook added 9 points, 4 rebounds, and 4 assists from the point guard position. Chase Brown contributed 6 points and 5 rebounds, while Patrick Jackson chipped in 6 points to add a spark off the bench. \n\nA defining factor in the victory was St. Andrew\u2019s dominance inside. The Lions held a 36\u201332 advantage in points in the paint and controlled the boards with a decisive 38\u201322 rebounding edge, including 18 offensive rebounds that generated key second-chance opportunities. That interior presence proved critical in a tight, possession-by-possession battle. \n\nSt. Andrew\u2019s will next be in action on Friday when they travel to Riverdale, GA, to take on New Faith Christian Academy."
+    "Recap": "Lions Earn Gritty Road-Style Win Over Hilton Head Island, Improve to 3–1 \n\nSt. Andrew’s earned its toughest victory of the young season on Tuesday night, holding off the Hilton Head Island Seahawks 56–53 in a tense finish that wasn’t secure until the final buzzer. The win moves the Lions to 3–1, while the Seahawks drop to 1–1.  ￼\n\nThe Lions opened strong and held a 17–11 lead after the first quarter, then pushed the margin to 30–24 by halftime. Hilton Head responded in the third period, using a strong run to take a 39–37 lead into the fourth quarter. The final period featured multiple ties and lead changes as both teams traded defensive stops and key plays. \n\nWith the game tied at 45–45, St. Andrew’s produced several crucial stops and surged ahead 52–47 entering the closing minutes. Hilton Head continued to battle and trimmed the deficit to one possession in the final seconds. The Seahawks called timeout with 2.6 seconds remaining, set up a final sideline inbound, and advanced the ball into the frontcourt—but were unable to get a shot off before the buzzer, securing the Lions’ 56–53 win. \n\nJa’Cari Glover led the Lions with 16 points and 10 rebounds, earning his fourth double-double of the season. Page Getter delivered a strong all-around effort with 10 points and 8 rebounds, giving St. Andrew’s consistent lift throughout the night. Amari Cook added 9 points, 4 rebounds, and 4 assists from the point guard position. Chase Brown contributed 6 points and 5 rebounds, while Patrick Jackson chipped in 6 points to add a spark off the bench. \n\nA defining factor in the victory was St. Andrew’s dominance inside. The Lions held a 36–32 advantage in points in the paint and controlled the boards with a decisive 38–22 rebounding edge, including 18 offensive rebounds that generated key second-chance opportunities. That interior presence proved critical in a tight, possession-by-possession battle. \n\nSt. Andrew’s will next be in action on Friday when they travel to Riverdale, GA, to take on New Faith Christian Academy."
   },
   {
     "GameID": 20251205,
@@ -10520,7 +11055,7 @@
     "OpponentScore": 42,
     "Season": 2025,
     "IsComplete": "Yes",
-    "Recap": "Playing at home in the annual Gray Solana Memorial Game, St. Andrew\u2019s delivered a strong response on Friday night, pulling away after halftime for a 66\u201342 win over Hilton Head Prep. \n\nThe Dolphins kept the game tight early, matching the Lions\u2019 physicality in a low-scoring first quarter. Hilton Head Prep trailed by just one after the opening period, but St. Andrew\u2019s began to assert itself in the second quarter, tightening defensively and finding success inside to take control heading into the break. \n\nThat momentum carried into the second half, where the Lions steadily widened the gap. St. Andrew\u2019s dominated the paint and controlled the glass, wearing down the Dolphins as the lead grew throughout the third and fourth quarters. \n\nJa\u2019Cari Glover led the way with a dominant interior performance, finishing with 30 points while shooting 75 percent from two-point range. Glover was a constant presence around the basket and added nine rebounds, finishing just one board shy of what would have been his seventh double-double of the season  . Page Getter provided a balanced scoring punch, knocking down timely perimeter shots and finishing with 15 points, while Milos Copic made the most of his opportunities, scoring nine points on efficient shooting and adding five assists to help facilitate the Lions\u2019 offense. \n\nThe win marked an important bounce-back effort for St. Andrew\u2019s after dropping its previous two games. With the victory, the Lions improve to 4\u20133 on the season, while Hilton Head Prep falls to 3\u20132. \n\nSt. Andrew\u2019s will be back on the court quickly, returning to action Saturday afternoon against Johnson High School in the Southeast Standoff Showcase at Bryan County High School."
+    "Recap": "Playing at home in the annual Gray Solana Memorial Game, St. Andrew’s delivered a strong response on Friday night, pulling away after halftime for a 66–42 win over Hilton Head Prep. \n\nThe Dolphins kept the game tight early, matching the Lions’ physicality in a low-scoring first quarter. Hilton Head Prep trailed by just one after the opening period, but St. Andrew’s began to assert itself in the second quarter, tightening defensively and finding success inside to take control heading into the break. \n\nThat momentum carried into the second half, where the Lions steadily widened the gap. St. Andrew’s dominated the paint and controlled the glass, wearing down the Dolphins as the lead grew throughout the third and fourth quarters. \n\nJa’Cari Glover led the way with a dominant interior performance, finishing with 30 points while shooting 75 percent from two-point range. Glover was a constant presence around the basket and added nine rebounds, finishing just one board shy of what would have been his seventh double-double of the season  . Page Getter provided a balanced scoring punch, knocking down timely perimeter shots and finishing with 15 points, while Milos Copic made the most of his opportunities, scoring nine points on efficient shooting and adding five assists to help facilitate the Lions’ offense. \n\nThe win marked an important bounce-back effort for St. Andrew’s after dropping its previous two games. With the victory, the Lions improve to 4–3 on the season, while Hilton Head Prep falls to 3–2. \n\nSt. Andrew’s will be back on the court quickly, returning to action Saturday afternoon against Johnson High School in the Southeast Standoff Showcase at Bryan County High School."
   },
   {
     "GameID": 20251213,
@@ -10545,8 +11080,8 @@
     "OpponentScore": 59,
     "Season": 2025,
     "IsComplete": "Yes",
-    "RecapTitle": "Balanced Attack Lifts St. Andrew\u2019s Past Mount Paran at Christmas Classic",
-    "Recap": "St. Andrew\u2019s turned in a balanced, team-oriented performance at the Savannah Christian Christmas Classic, defeating Mount Paran 67\u201359 behind a collective offensive effort that saw four Lions reach double figures in scoring. Despite several Mount Paran pushes, St. Andrew\u2019s consistently answered and never relinquished control of the game. \n\nSt. Andrew\u2019s built an early advantage and carried a 41\u201333 lead into halftime, fueled by strong ball movement and high-percentage looks inside. Mount Paran threatened in the third quarter, trimming the margin to just two possessions, but each surge was met with a timely response. The Lions maintained their poise in the fourth quarter, managing possessions and closing out the game with discipline. \n\nOffensively, St. Andrew\u2019s was highly effective around the rim, shooting over 62% from two-point range and scoring 36 points in the paint. Milos Copic led the way with 18 points, pairing efficient scoring with smart decision-making. Ja\u2019Cari Glover matched him with 18 points, converting repeatedly inside and providing a strong physical presence in the paint. \n\nChase Brown added 11 points, knocking down three three-pointers to stretch the defense, while Amari Cook delivered a standout performance at the point guard position with 13 points and 7 assists. Cook\u2019s leadership and control of tempo were key strengths for the Lions, particularly during moments when Mount Paran looked to shift momentum. \n\nIn the end, efficiency, composure, and strong guard play guided St. Andrew\u2019s to a solid neutral-site victory. The win improved the Lions\u2019 record to 5\u20134 on the season, while Mount Paran falls to 7\u20135. St. Andrew\u2019s will be back in action tomorrow night at the Savannah Christian Christmas Classic, taking on Effingham County at 6:00 p.m."
+    "RecapTitle": "Balanced Attack Lifts St. Andrew’s Past Mount Paran at Christmas Classic",
+    "Recap": "St. Andrew’s turned in a balanced, team-oriented performance at the Savannah Christian Christmas Classic, defeating Mount Paran 67–59 behind a collective offensive effort that saw four Lions reach double figures in scoring. Despite several Mount Paran pushes, St. Andrew’s consistently answered and never relinquished control of the game. \n\nSt. Andrew’s built an early advantage and carried a 41–33 lead into halftime, fueled by strong ball movement and high-percentage looks inside. Mount Paran threatened in the third quarter, trimming the margin to just two possessions, but each surge was met with a timely response. The Lions maintained their poise in the fourth quarter, managing possessions and closing out the game with discipline. \n\nOffensively, St. Andrew’s was highly effective around the rim, shooting over 62% from two-point range and scoring 36 points in the paint. Milos Copic led the way with 18 points, pairing efficient scoring with smart decision-making. Ja’Cari Glover matched him with 18 points, converting repeatedly inside and providing a strong physical presence in the paint. \n\nChase Brown added 11 points, knocking down three three-pointers to stretch the defense, while Amari Cook delivered a standout performance at the point guard position with 13 points and 7 assists. Cook’s leadership and control of tempo were key strengths for the Lions, particularly during moments when Mount Paran looked to shift momentum. \n\nIn the end, efficiency, composure, and strong guard play guided St. Andrew’s to a solid neutral-site victory. The win improved the Lions’ record to 5–4 on the season, while Mount Paran falls to 7–5. St. Andrew’s will be back in action tomorrow night at the Savannah Christian Christmas Classic, taking on Effingham County at 6:00 p.m."
   },
   {
     "GameID": 20251220,
@@ -10559,8 +11094,8 @@
     "OpponentScore": 46,
     "Season": 2025,
     "IsComplete": "Yes",
-    "RecapTitle": "Lions Grind Out 50\u201346 Win Over Effingham County",
-    "Recap": "St. Andrew\u2019s followed up its opening-night win with another hard-fought performance at the Savannah Christian Christmas Classic, edging Effingham County 50\u201346 in a defensive, physical contest that was decided in the final minutes. The Lions showed resilience and composure, grinding out a victory in a game where points were difficult to come by on both ends. \n\nThe opening half set the tone for a low-scoring affair, with neither team able to establish consistent offensive rhythm. St. Andrew\u2019s held a slim 15\u201313 lead after the first quarter, but momentum swung back and forth throughout the second. Despite long scoreless stretches and missed opportunities at the free-throw line, the Lions remained patient and stayed within striking distance as the game tightened heading into halftime. \n\nEffingham County briefly seized control in the third quarter, pushing ahead 35\u201331, but St. Andrew\u2019s responded with a timely run to pull even and prevent the game from slipping away. That response proved pivotal, as the Lions entered the fourth quarter with renewed energy and focus. \n\nSt. Andrew\u2019s defense and execution carried the final period. The Lions opened the quarter with a strong stretch on both ends, extending the lead to 46\u201338 and forcing Effingham County into contested shots. Although the Rebels mounted a late push, cutting the margin to just five points in the final seconds, St. Andrew\u2019s remained composed and closed out the game. \n\nOffensively, the Lions leaned heavily on their interior attack, scoring 32 points in the paint and shooting over 51% on two-point attempts. Getter led the way with 15 points, while Ja\u2019Cari Glover added 12 points and 8 rebounds, providing a physical presence throughout the night. Amari Cook guided the offense with poise, finishing with 7 assists, and Chase Brown made a major impact on the glass, pulling down 10 rebounds to help secure the win. \n\nIn the end, this was a victory defined by toughness and response. Less fluid than the night before, St. Andrew\u2019s nevertheless found a way to execute when it mattered most, securing a second straight win in tournament play."
+    "RecapTitle": "Lions Grind Out 50–46 Win Over Effingham County",
+    "Recap": "St. Andrew’s followed up its opening-night win with another hard-fought performance at the Savannah Christian Christmas Classic, edging Effingham County 50–46 in a defensive, physical contest that was decided in the final minutes. The Lions showed resilience and composure, grinding out a victory in a game where points were difficult to come by on both ends. \n\nThe opening half set the tone for a low-scoring affair, with neither team able to establish consistent offensive rhythm. St. Andrew’s held a slim 15–13 lead after the first quarter, but momentum swung back and forth throughout the second. Despite long scoreless stretches and missed opportunities at the free-throw line, the Lions remained patient and stayed within striking distance as the game tightened heading into halftime. \n\nEffingham County briefly seized control in the third quarter, pushing ahead 35–31, but St. Andrew’s responded with a timely run to pull even and prevent the game from slipping away. That response proved pivotal, as the Lions entered the fourth quarter with renewed energy and focus. \n\nSt. Andrew’s defense and execution carried the final period. The Lions opened the quarter with a strong stretch on both ends, extending the lead to 46–38 and forcing Effingham County into contested shots. Although the Rebels mounted a late push, cutting the margin to just five points in the final seconds, St. Andrew’s remained composed and closed out the game. \n\nOffensively, the Lions leaned heavily on their interior attack, scoring 32 points in the paint and shooting over 51% on two-point attempts. Getter led the way with 15 points, while Ja’Cari Glover added 12 points and 8 rebounds, providing a physical presence throughout the night. Amari Cook guided the offense with poise, finishing with 7 assists, and Chase Brown made a major impact on the glass, pulling down 10 rebounds to help secure the win. \n\nIn the end, this was a victory defined by toughness and response. Less fluid than the night before, St. Andrew’s nevertheless found a way to execute when it mattered most, securing a second straight win in tournament play."
   },
   {
     "GameID": 20251229,
@@ -10573,8 +11108,8 @@
     "OpponentScore": 48,
     "Season": 2025,
     "IsComplete": "Yes",
-    "RecapTitle": "Glover\u2019s Double-Double Powers Lions to Third Straight Win",
-    "Recap": "St. Andrew\u2019s continued its holiday surge Monday with a 56\u201348 win over Arlington Christian at the Saint Francis Holiday Shootout, securing its third straight victory behind strong defense and second-half control. \n\nThe Lions carried a narrow 27\u201325 halftime lead before creating separation after the break, using disciplined defense and improved shot selection to pull away in the third quarter. St. Andrew\u2019s maintained that advantage throughout the final period, closing out a composed road victory. \n\nJa\u2019Cari Glover led the way with a dominant double-double of 19 points and a season-high 15 rebounds, marking his seventh double-double of the season and the fifth time over the past two years he has reached the 15-rebound mark. Getter added 16 points, while Amari Cook delivered a steady performance at point guard, finishing with a season-high 8 assists. \n\nSt. Andrew\u2019s will be back in action tomorrow, traveling to Marietta, GA, to face the Midtown Knights in the Lemon Street Classic."
+    "RecapTitle": "Glover’s Double-Double Powers Lions to Third Straight Win",
+    "Recap": "St. Andrew’s continued its holiday surge Monday with a 56–48 win over Arlington Christian at the Saint Francis Holiday Shootout, securing its third straight victory behind strong defense and second-half control. \n\nThe Lions carried a narrow 27–25 halftime lead before creating separation after the break, using disciplined defense and improved shot selection to pull away in the third quarter. St. Andrew’s maintained that advantage throughout the final period, closing out a composed road victory. \n\nJa’Cari Glover led the way with a dominant double-double of 19 points and a season-high 15 rebounds, marking his seventh double-double of the season and the fifth time over the past two years he has reached the 15-rebound mark. Getter added 16 points, while Amari Cook delivered a steady performance at point guard, finishing with a season-high 8 assists. \n\nSt. Andrew’s will be back in action tomorrow, traveling to Marietta, GA, to face the Midtown Knights in the Lemon Street Classic."
   },
   {
     "GameID": 20251230,
@@ -10601,8 +11136,8 @@
     "OpponentScore": 21,
     "Season": 2025,
     "IsComplete": "Yes",
-    "RecapTitle": "St. Andrew\u2019s Rolls Past Pinewood in Region Opener",
-    "Recap": "St. Andrew\u2019s opened region play in dominant fashion Friday night, rolling past Pinewood Christian 68\u201321 in an away contest to begin the region schedule with authority. The win marked the Lions\u2019 opening region game of the season, as they look to extend a remarkable run of four consecutive undefeated region campaigns and keep their region record spotless for a fifth straight year.\n\nFrom the opening tip, St. Andrew\u2019s set the tone on both ends of the floor. The Lions jumped out quickly, applying defensive pressure and converting high-percentage looks to build a commanding early lead. Pinewood struggled to find offensive rhythm against the Lions\u2019 disciplined defense, and St. Andrew\u2019s steadily extended the margin throughout the first half, taking full control of the game before the break.\n\nThe Lions maintained their intensity after halftime, continuing to defend, rebound, and share the ball effectively. Even with rotations and balanced lineups, St. Andrew\u2019s never let the pace slip, closing out a complete wire-to-wire performance on the road.\n\nOffensively, the Lions were led by Ja\u2019Cari Glover, Amari Cook, and Chase Brown, each of whom finished in double figures. Glover and Brown added six rebounds apiece, providing a strong presence on the glass, while Cook contributed five assists, directing the offense and creating opportunities for teammates throughout the night.\n\nPerhaps most telling of the Lions\u2019 performance was their balance, as 10 different players found the scoring column. The depth and unselfish play underscored a true team effort, with St. Andrew\u2019s combining efficient shooting, interior dominance, and defensive consistency to open region play in emphatic fashion.\n\nWith the victory, the Lions took another confident step toward maintaining their region dominance, setting the tone early as they pursue yet another undefeated run through region competition."
+    "RecapTitle": "St. Andrew’s Rolls Past Pinewood in Region Opener",
+    "Recap": "St. Andrew’s opened region play in dominant fashion Friday night, rolling past Pinewood Christian 68–21 in an away contest to begin the region schedule with authority. The win marked the Lions’ opening region game of the season, as they look to extend a remarkable run of four consecutive undefeated region campaigns and keep their region record spotless for a fifth straight year.\n\nFrom the opening tip, St. Andrew’s set the tone on both ends of the floor. The Lions jumped out quickly, applying defensive pressure and converting high-percentage looks to build a commanding early lead. Pinewood struggled to find offensive rhythm against the Lions’ disciplined defense, and St. Andrew’s steadily extended the margin throughout the first half, taking full control of the game before the break.\n\nThe Lions maintained their intensity after halftime, continuing to defend, rebound, and share the ball effectively. Even with rotations and balanced lineups, St. Andrew’s never let the pace slip, closing out a complete wire-to-wire performance on the road.\n\nOffensively, the Lions were led by Ja’Cari Glover, Amari Cook, and Chase Brown, each of whom finished in double figures. Glover and Brown added six rebounds apiece, providing a strong presence on the glass, while Cook contributed five assists, directing the offense and creating opportunities for teammates throughout the night.\n\nPerhaps most telling of the Lions’ performance was their balance, as 10 different players found the scoring column. The depth and unselfish play underscored a true team effort, with St. Andrew’s combining efficient shooting, interior dominance, and defensive consistency to open region play in emphatic fashion.\n\nWith the victory, the Lions took another confident step toward maintaining their region dominance, setting the tone early as they pursue yet another undefeated run through region competition."
   },
   {
     "GameID": 20260110,
@@ -10616,7 +11151,7 @@
     "Season": 2025,
     "IsComplete": "Yes",
     "RecapTitle": "Lions Stay Hot With Win Over Savannah High",
-    "Recap": "St. Andrew\u2019s continued its strong stretch of play Saturday night with a 69\u201349 home victory over Savannah High, improving to 9\u20135 on the season and earning its fifth win in the past six games. The Savannah High Bluejackets entered the night with momentum of their own after winning five of their previous six contests, but the Lions were able to seize control early and manage the game down the stretch.\n\nThe Lions built separation quickly, using efficient offense and disciplined defense to establish a commanding 43\u201321 halftime lead. Despite the sizable margin, Savannah refused to go away quietly. The Bluejackets continued to compete in the second half, cutting into the deficit and keeping pressure on the Lions with timely baskets and defensive energy.\n\nWhile Savannah never trimmed the lead to fewer than 11 points after halftime, St. Andrew\u2019s was unable to fully relax until the closing minutes of the fourth quarter. Each Bluejacket push was met with an answer, as the Lions stayed composed and executed when necessary to prevent any late momentum shift.\n\nJa\u2019Cari Glover delivered a dominant performance, finishing with 21 points and 10 rebounds to record his 9th double-double of the season while anchoring the Lions inside. Page Getter provided a strong scoring presence as well, pouring in 20 points and stretching the defense with his perimeter shooting. Amari Cook guided the offense with poise, adding 13 points and 8 assists, consistently creating opportunities and helping the Lions maintain control during key stretches.\n\nThe win dropped Savannah High to 10\u20136 on the season and reinforced St. Andrew\u2019s growing confidence as the schedule intensifies. The Lions will be back in action Tuesday night, returning home to face region rival Frederica Academy in another key matchup."
+    "Recap": "St. Andrew’s continued its strong stretch of play Saturday night with a 69–49 home victory over Savannah High, improving to 9–5 on the season and earning its fifth win in the past six games. The Savannah High Bluejackets entered the night with momentum of their own after winning five of their previous six contests, but the Lions were able to seize control early and manage the game down the stretch.\n\nThe Lions built separation quickly, using efficient offense and disciplined defense to establish a commanding 43–21 halftime lead. Despite the sizable margin, Savannah refused to go away quietly. The Bluejackets continued to compete in the second half, cutting into the deficit and keeping pressure on the Lions with timely baskets and defensive energy.\n\nWhile Savannah never trimmed the lead to fewer than 11 points after halftime, St. Andrew’s was unable to fully relax until the closing minutes of the fourth quarter. Each Bluejacket push was met with an answer, as the Lions stayed composed and executed when necessary to prevent any late momentum shift.\n\nJa’Cari Glover delivered a dominant performance, finishing with 21 points and 10 rebounds to record his 9th double-double of the season while anchoring the Lions inside. Page Getter provided a strong scoring presence as well, pouring in 20 points and stretching the defense with his perimeter shooting. Amari Cook guided the offense with poise, adding 13 points and 8 assists, consistently creating opportunities and helping the Lions maintain control during key stretches.\n\nThe win dropped Savannah High to 10–6 on the season and reinforced St. Andrew’s growing confidence as the schedule intensifies. The Lions will be back in action Tuesday night, returning home to face region rival Frederica Academy in another key matchup."
   },
   {
     "GameID": 20260113,
@@ -10630,7 +11165,7 @@
     "Season": 2025,
     "IsComplete": "Yes",
     "RecapTitle": "Glover Dominates as Lions Extend Streak Against Frederica",
-    "Recap": "St. Andrew\u2019s continued its strong run in region play Tuesday night, defeating Frederica 58\u201346 at home to improve to 10\u20135 overall and 2\u20130 in the region. The victory marked the Lions\u2019 14th consecutive win over Frederica, a streak that now dates back to 2019. Frederica fell to 6\u20137 overall and 2\u20131 in region play with the loss.\n\nThe game opened with a physical, half-court feel, as Frederica looked to slow the pace and keep the contest close early. St. Andrew\u2019s gradually asserted control behind interior scoring and disciplined defense, building a 30\u201318 halftime lead by consistently finishing in the paint and limiting Frederica\u2019s perimeter looks.\n\nSt. Andrew\u2019s took firm control in the third quarter, pushing the lead to 22 points by the end of the period with a decisive stretch on both ends of the floor. The highlight of the quarter came when Ja\u2019Cari Glover secured a defensive rebound, went coast-to-coast, and finished with a one-handed dunk over Frederica\u2019s big man, igniting the home crowd and punctuating the Lions\u2019 dominance. Frederica continued to battle in the fourth quarter, chipping away at the deficit and narrowing the final margin, but St. Andrew\u2019s never allowed the outcome to come into question as the Lions closed out the victory.\n\nGlover delivered a dominant performance, finishing with 25 points and 13 rebounds for his 10th double-double of the season, anchoring the Lions on both ends of the floor. His efficiency and physical presence set the tone throughout the night. Page Getter added 13 points, providing spacing and timely perimeter shooting, while Amari Cook guided the offense with poise, contributing 11 points and 9 assists as he consistently created opportunities for teammates.\n\nWith the win, the Lions strengthened their position in the region standings and continued a stretch of confident play. St. Andrew\u2019s will be back in action Friday night, traveling to Augusta to take on Westminster in another key region matchup."
+    "Recap": "St. Andrew’s continued its strong run in region play Tuesday night, defeating Frederica 58–46 at home to improve to 10–5 overall and 2–0 in the region. The victory marked the Lions’ 14th consecutive win over Frederica, a streak that now dates back to 2019. Frederica fell to 6–7 overall and 2–1 in region play with the loss.\n\nThe game opened with a physical, half-court feel, as Frederica looked to slow the pace and keep the contest close early. St. Andrew’s gradually asserted control behind interior scoring and disciplined defense, building a 30–18 halftime lead by consistently finishing in the paint and limiting Frederica’s perimeter looks.\n\nSt. Andrew’s took firm control in the third quarter, pushing the lead to 22 points by the end of the period with a decisive stretch on both ends of the floor. The highlight of the quarter came when Ja’Cari Glover secured a defensive rebound, went coast-to-coast, and finished with a one-handed dunk over Frederica’s big man, igniting the home crowd and punctuating the Lions’ dominance. Frederica continued to battle in the fourth quarter, chipping away at the deficit and narrowing the final margin, but St. Andrew’s never allowed the outcome to come into question as the Lions closed out the victory.\n\nGlover delivered a dominant performance, finishing with 25 points and 13 rebounds for his 10th double-double of the season, anchoring the Lions on both ends of the floor. His efficiency and physical presence set the tone throughout the night. Page Getter added 13 points, providing spacing and timely perimeter shooting, while Amari Cook guided the offense with poise, contributing 11 points and 9 assists as he consistently created opportunities for teammates.\n\nWith the win, the Lions strengthened their position in the region standings and continued a stretch of confident play. St. Andrew’s will be back in action Friday night, traveling to Augusta to take on Westminster in another key region matchup."
   },
   {
     "GameID": 20260116,
@@ -10644,7 +11179,7 @@
     "Season": 2025,
     "IsComplete": "Yes",
     "RecapTitle": "Lions Make Statement on the Road, Take Firm Control of Region Race",
-    "Recap": "St. Andrew\u2019s delivered a decisive performance Friday night, rolling to a 77\u201329 road victory over Westminster to improve to 11\u20135 overall and 3\u20130 in region play. The win gives the Lions strong control of the region standings, while Westminster dropped to 6\u201310 overall and 1\u20132 in the region.\n\nFrom the opening tip, St. Andrew\u2019s asserted itself on both ends of the floor. The Lions raced out to an early lead and held Westminster scoreless for extended stretches of the first quarter. By halftime, St. Andrew\u2019s had already built a commanding advantage, setting the tone for a wire-to-wire road win.\n\nThe second half followed a similar script, as the Lions continued to dominate the paint, control the glass, and share the ball effectively. St. Andrew\u2019s finished the night shooting over 50 percent from the field, repeatedly converting high-percentage looks while limiting Westminster to just 29 points for the game.\n\nOffensively, St. Andrew\u2019s was led by Ja\u2019Cari Glover who anchored the interior with 20 points while pulling down 8 rebounds. Milos Copic added a strong all-around performance with 17 points, 6 rebounds and 3 assists. Page Getter made his mark by chipping in 10 points while also grabbing 6 rebounds. Multiple Lions contributed throughout the lineup, underscoring a team-first approach that allowed St. Andrew\u2019s to maintain its intensity for all four quarters.\n\nWith the convincing victory, the Lions continued their momentum in region play and will look to build on this performance as they head back to Augusta on Monday to take GHSA 6A Grovetown in the MLK Classic at Cross Creek High School."
+    "Recap": "St. Andrew’s delivered a decisive performance Friday night, rolling to a 77–29 road victory over Westminster to improve to 11–5 overall and 3–0 in region play. The win gives the Lions strong control of the region standings, while Westminster dropped to 6–10 overall and 1–2 in the region.\n\nFrom the opening tip, St. Andrew’s asserted itself on both ends of the floor. The Lions raced out to an early lead and held Westminster scoreless for extended stretches of the first quarter. By halftime, St. Andrew’s had already built a commanding advantage, setting the tone for a wire-to-wire road win.\n\nThe second half followed a similar script, as the Lions continued to dominate the paint, control the glass, and share the ball effectively. St. Andrew’s finished the night shooting over 50 percent from the field, repeatedly converting high-percentage looks while limiting Westminster to just 29 points for the game.\n\nOffensively, St. Andrew’s was led by Ja’Cari Glover who anchored the interior with 20 points while pulling down 8 rebounds. Milos Copic added a strong all-around performance with 17 points, 6 rebounds and 3 assists. Page Getter made his mark by chipping in 10 points while also grabbing 6 rebounds. Multiple Lions contributed throughout the lineup, underscoring a team-first approach that allowed St. Andrew’s to maintain its intensity for all four quarters.\n\nWith the convincing victory, the Lions continued their momentum in region play and will look to build on this performance as they head back to Augusta on Monday to take GHSA 6A Grovetown in the MLK Classic at Cross Creek High School."
   },
   {
     "GameID": 20260119,
@@ -10658,7 +11193,7 @@
     "Season": 2025,
     "IsComplete": "Yes",
     "RecapTitle": "Strong First Half Not Enough as Lions Fall to Grovetown",
-    "Recap": "St. Andrew\u2019s went toe-to-toe with GHSA 6A opponent Grovetown on Monday at the MLK Classic at Cross Creek High School, holding a halftime advantage before ultimately falling 67\u201352 in Augusta. The Lions competed for four quarters against a larger classification opponent in a game that swung in the second half.\n\nThe Lions controlled the early tempo and executed well on both ends of the floor in the opening half, using disciplined defense and strong interior play to build a 30\u201328 lead at halftime. St. Andrew\u2019s limited Grovetown\u2019s transition opportunities and established an inside presence that kept the game tight against the physically imposing Warriors.\n\nJa\u2019Cari Glover was dominant in the paint, scoring 24 points and grabbing 11 rebounds while repeatedly finishing through contact. Glover\u2019s impact was felt on both ends, though foul trouble in the third quarter limited his minutes and disrupted the Lions\u2019 offensive rhythm during a key stretch.\n\nGrovetown took advantage in the second half, using its depth and size to generate extended runs and create separation. Despite the shift in momentum, St. Andrew\u2019s continued to compete and look for answers offensively. Page Getter provided a major scoring boost, finishing with 19 points, including timely perimeter baskets that kept the Lions within striking distance.\n\nThe Lions will be back in action tomorrow night, returning home to take on region opponent Bulloch Academy, as St. Andrew\u2019s looks to quickly turn the page and continue its push through region play."
+    "Recap": "St. Andrew’s went toe-to-toe with GHSA 6A opponent Grovetown on Monday at the MLK Classic at Cross Creek High School, holding a halftime advantage before ultimately falling 67–52 in Augusta. The Lions competed for four quarters against a larger classification opponent in a game that swung in the second half.\n\nThe Lions controlled the early tempo and executed well on both ends of the floor in the opening half, using disciplined defense and strong interior play to build a 30–28 lead at halftime. St. Andrew’s limited Grovetown’s transition opportunities and established an inside presence that kept the game tight against the physically imposing Warriors.\n\nJa’Cari Glover was dominant in the paint, scoring 24 points and grabbing 11 rebounds while repeatedly finishing through contact. Glover’s impact was felt on both ends, though foul trouble in the third quarter limited his minutes and disrupted the Lions’ offensive rhythm during a key stretch.\n\nGrovetown took advantage in the second half, using its depth and size to generate extended runs and create separation. Despite the shift in momentum, St. Andrew’s continued to compete and look for answers offensively. Page Getter provided a major scoring boost, finishing with 19 points, including timely perimeter baskets that kept the Lions within striking distance.\n\nThe Lions will be back in action tomorrow night, returning home to take on region opponent Bulloch Academy, as St. Andrew’s looks to quickly turn the page and continue its push through region play."
   },
   {
     "GameID": 20260120,
@@ -10672,7 +11207,7 @@
     "Season": 2025,
     "IsComplete": "Yes",
     "RecapTitle": "Lions Roll Past Bulloch Academy, Remain Perfect in Region Play",
-    "Recap": "St. Andrew\u2019s continued its dominant run through region play Tuesday night, defeating Bulloch Academy 77\u201332 at home to improve to 12\u20136 overall and 4\u20130 in the region. With the win, the Lions have now completed half of their region schedule and remain on pace to go undefeated in regular-season region play for the sixth consecutive year. The loss dropped Bulloch Academy to 10\u20137 overall and 1\u20133 in the region.\n\nThe Lions set the tone early, using defensive pressure and efficient offense to build separation from the opening tip. St. Andrew\u2019s steadily extended the margin throughout the first half, taking a comfortable lead into the break and never allowing Bulloch Academy to find an offensive rhythm.\n\nJa\u2019Cari Glover finished with 15 points and 14 rebounds, recording his 12th double-double of the season. Chase Brown led the Lions in scoring with 16 points, knocking down 4-of-6 shots from beyond the arc. Milos Copic added 12 points, 6 rebounds, and 4 assists.\n\nSt. Andrew\u2019s balance was evident throughout the night, as 12 different Lions found the scoring column. The victory also marked St. Andrew\u2019s 11th straight win over Bulloch Academy, a streak that now dates back to 2021.\n\nWith region momentum firmly on their side, the Lions will now enjoy a week off before returning to action next Tuesday, when they host Westminster in another key region matchup."
+    "Recap": "St. Andrew’s continued its dominant run through region play Tuesday night, defeating Bulloch Academy 77–32 at home to improve to 12–6 overall and 4–0 in the region. With the win, the Lions have now completed half of their region schedule and remain on pace to go undefeated in regular-season region play for the sixth consecutive year. The loss dropped Bulloch Academy to 10–7 overall and 1–3 in the region.\n\nThe Lions set the tone early, using defensive pressure and efficient offense to build separation from the opening tip. St. Andrew’s steadily extended the margin throughout the first half, taking a comfortable lead into the break and never allowing Bulloch Academy to find an offensive rhythm.\n\nJa’Cari Glover finished with 15 points and 14 rebounds, recording his 12th double-double of the season. Chase Brown led the Lions in scoring with 16 points, knocking down 4-of-6 shots from beyond the arc. Milos Copic added 12 points, 6 rebounds, and 4 assists.\n\nSt. Andrew’s balance was evident throughout the night, as 12 different Lions found the scoring column. The victory also marked St. Andrew’s 11th straight win over Bulloch Academy, a streak that now dates back to 2021.\n\nWith region momentum firmly on their side, the Lions will now enjoy a week off before returning to action next Tuesday, when they host Westminster in another key region matchup."
   },
   {
     "GameID": 20260127,
@@ -10686,7 +11221,7 @@
     "Season": 2025,
     "IsComplete": "Yes",
     "RecapTitle": "Lions Stay Perfect in Region Play With Home Win Over Westminster",
-    "Recap": "St. Andrew\u2019s continued its dominance in region play Tuesday night, defeating Westminster 75\u201339 at home to improve to 13\u20136 overall and 5\u20130 in the region. The Lions remain unbeaten in conference action, while Westminster dropped to 6\u201313 overall and 1\u20135 in the region.\n\nThe Lions set the tone early and never looked back, building steady separation behind efficient offense and consistent defensive pressure. St. Andrew\u2019s controlled the paint and the glass throughout the night, limiting Westminster to 28.6% shooting and holding the visitors to just 39 points for the game.\n\nPage Getter delivered one of the most complete performances of the season, finishing with 13 points, 14 rebounds, 5 assists, and 5 steals. Ja\u2019Cari Glover continued his strong play inside with 17 points and 10 rebounds, while Milos Copic added 13 points and 5 assists as the Lions showcased their balance and depth on the offensive end.\n\nSt. Andrew\u2019s efficiency was evident across the box score, as the Lions shot 48.3% from the field, won the rebounding battle decisively, and generated consistent scoring opportunities in both transition and the half court. The margin continued to grow in the second half as the Lions maintained their intensity and execution.\n\nWith the victory, St. Andrew\u2019s strengthened its hold atop the region standings. The Lions will return to action Friday night for their final home game of the season, hosting Pinewood Christian and celebrating Senior Night."
+    "Recap": "St. Andrew’s continued its dominance in region play Tuesday night, defeating Westminster 75–39 at home to improve to 13–6 overall and 5–0 in the region. The Lions remain unbeaten in conference action, while Westminster dropped to 6–13 overall and 1–5 in the region.\n\nThe Lions set the tone early and never looked back, building steady separation behind efficient offense and consistent defensive pressure. St. Andrew’s controlled the paint and the glass throughout the night, limiting Westminster to 28.6% shooting and holding the visitors to just 39 points for the game.\n\nPage Getter delivered one of the most complete performances of the season, finishing with 13 points, 14 rebounds, 5 assists, and 5 steals. Ja’Cari Glover continued his strong play inside with 17 points and 10 rebounds, while Milos Copic added 13 points and 5 assists as the Lions showcased their balance and depth on the offensive end.\n\nSt. Andrew’s efficiency was evident across the box score, as the Lions shot 48.3% from the field, won the rebounding battle decisively, and generated consistent scoring opportunities in both transition and the half court. The margin continued to grow in the second half as the Lions maintained their intensity and execution.\n\nWith the victory, St. Andrew’s strengthened its hold atop the region standings. The Lions will return to action Friday night for their final home game of the season, hosting Pinewood Christian and celebrating Senior Night."
   },
   {
     "GameID": 20260130,
@@ -10700,7 +11235,7 @@
     "Season": 2025,
     "IsComplete": "Yes",
     "RecapTitle": "Lions Explode for 90 on Senior Night, Extend Streak Over Pinewood",
-    "Recap": "St. Andrew\u2019s closed out its home schedule in emphatic fashion Friday night, defeating Pinewood Christian 90\u201346 on Senior Night at St. Andrew\u2019s. The victory marked the Lions\u2019 19th consecutive win over Pinewood, a streak that now dates back to 2018, and represented the first time St. Andrew\u2019s has reached 90 points in a game since 2023, when the Lions scored 100 at Pinewood.\n\nFrom the opening minutes, the Lions set a fast tempo and established control on both ends of the floor. St. Andrew\u2019s scored efficiently inside and from the perimeter, steadily stretching the margin throughout the first half before pulling away decisively after the break. The offensive balance and defensive pressure prevented Pinewood from finding any sustained rhythm as the Lions maintained control for all four quarters.\n\nJa\u2019Cari Glover led the way with 22 points and 9 rebounds, scoring efficiently around the basket and anchoring the Lions inside. Amari Cook delivered a strong all-around performance with 17 points, 7 assists, and 6 steals, while consistently pushing the pace. Page Getter added 12 points, as St. Andrew\u2019s depth was on full display with 13 different Lions finding the scoring column, allowing the team to maintain its intensity throughout the night.\n\nThe milestone performance carried added significance as St. Andrew\u2019s honored its seniors in their final home appearance of the season. The Lions will now have the weekend off as they prepare for their next big region game when they travel to Frederica on Tuesday."
+    "Recap": "St. Andrew’s closed out its home schedule in emphatic fashion Friday night, defeating Pinewood Christian 90–46 on Senior Night at St. Andrew’s. The victory marked the Lions’ 19th consecutive win over Pinewood, a streak that now dates back to 2018, and represented the first time St. Andrew’s has reached 90 points in a game since 2023, when the Lions scored 100 at Pinewood.\n\nFrom the opening minutes, the Lions set a fast tempo and established control on both ends of the floor. St. Andrew’s scored efficiently inside and from the perimeter, steadily stretching the margin throughout the first half before pulling away decisively after the break. The offensive balance and defensive pressure prevented Pinewood from finding any sustained rhythm as the Lions maintained control for all four quarters.\n\nJa’Cari Glover led the way with 22 points and 9 rebounds, scoring efficiently around the basket and anchoring the Lions inside. Amari Cook delivered a strong all-around performance with 17 points, 7 assists, and 6 steals, while consistently pushing the pace. Page Getter added 12 points, as St. Andrew’s depth was on full display with 13 different Lions finding the scoring column, allowing the team to maintain its intensity throughout the night.\n\nThe milestone performance carried added significance as St. Andrew’s honored its seniors in their final home appearance of the season. The Lions will now have the weekend off as they prepare for their next big region game when they travel to Frederica on Tuesday."
   },
   {
     "GameID": 20260203,
@@ -10714,7 +11249,7 @@
     "Season": 2025,
     "IsComplete": "Yes",
     "RecapTitle": "Lions Hold Off Late Surge at Frederica, Extend Streak",
-    "Recap": "St. Andrew\u2019s School earned a hard-fought road victory Tuesday night, holding off a late Frederica Academy surge to secure a 66\u201358 win in a hostile environment. The victory improved the Lions to 15\u20136 overall and 7\u20130 in region play, while extending their winning streak over Frederica to 15 straight games dating back to 2018.\n\nThe Lions built control early, taking an 18-point lead into halftime behind balanced scoring and efficient offense. Frederica responded after the break, trimming the margin in the third quarter and feeding off the home crowd\u2019s energy. After St. Andrew\u2019s led 54\u201337 near the end of the third, Frederica rattled off a 21\u20135 run over the next several minutes, cutting the deficit to just 59\u201358 with under two minutes remaining and bringing the gym to a full roar.\n\nIn the game\u2019s final moments, St. Andrew\u2019s showed poise on both ends of the floor. The Lions clamped down defensively, denying Frederica any clean looks, and executed at the free-throw line to close out the win. Page Getter knocked down five of six free throws, while Milo\u0161 Copic added two more, accounting for the final seven points of the game as Frederica was held scoreless the rest of the way.\n\nFive Lions finished in double figures, led by Milos Copic\u2019s 17 points to go along with 5 rebounds, 5 assists, and 3 steals in an all-around performance. Ja\u2019Cari Glover added 14 points and a team-high 9 rebounds, providing a steady presence inside. Page Getter and Chase Brown both scored 11, while Amari Cook contributed 10 points and 5 assists, consistently setting up teammates and keeping the offense organized.\n\nSt. Andrew\u2019s will close out the regular season Friday night when the Lions travel to Bulloch Academy, where they will look to finish 8\u20130 in region play for the fifth consecutive season."
+    "Recap": "St. Andrew’s School earned a hard-fought road victory Tuesday night, holding off a late Frederica Academy surge to secure a 66–58 win in a hostile environment. The victory improved the Lions to 15–6 overall and 7–0 in region play, while extending their winning streak over Frederica to 15 straight games dating back to 2018.\n\nThe Lions built control early, taking an 18-point lead into halftime behind balanced scoring and efficient offense. Frederica responded after the break, trimming the margin in the third quarter and feeding off the home crowd’s energy. After St. Andrew’s led 54–37 near the end of the third, Frederica rattled off a 21–5 run over the next several minutes, cutting the deficit to just 59–58 with under two minutes remaining and bringing the gym to a full roar.\n\nIn the game’s final moments, St. Andrew’s showed poise on both ends of the floor. The Lions clamped down defensively, denying Frederica any clean looks, and executed at the free-throw line to close out the win. Page Getter knocked down five of six free throws, while Miloš Copic added two more, accounting for the final seven points of the game as Frederica was held scoreless the rest of the way.\n\nFive Lions finished in double figures, led by Milos Copic’s 17 points to go along with 5 rebounds, 5 assists, and 3 steals in an all-around performance. Ja’Cari Glover added 14 points and a team-high 9 rebounds, providing a steady presence inside. Page Getter and Chase Brown both scored 11, while Amari Cook contributed 10 points and 5 assists, consistently setting up teammates and keeping the offense organized.\n\nSt. Andrew’s will close out the regular season Friday night when the Lions travel to Bulloch Academy, where they will look to finish 8–0 in region play for the fifth consecutive season."
   },
   {
     "GameID": 20260206,
@@ -10728,7 +11263,7 @@
     "Season": 2025,
     "IsComplete": "Yes",
     "RecapTitle": "Lions Close Regular Season Perfect in Region Play With Road Win at Bulloch",
-    "Recap": "St. Andrew\u2019s closed out the regular season Friday night with a 76\u201361 road victory at Bulloch Academy, finishing the year 16\u20136 overall and a perfect 8\u20130 in region play. With the win, the Lions completed their sixth consecutive season of going undefeated in regular-season region competition, while also extending their winning streak over Bulloch Academy to 12 straight games, dating back to 2022.\n\nThe game featured a competitive opening half, with Bulloch using energy on its home floor to keep the contest tight. St. Andrew\u2019s responded with steady execution and strong rebounding, gradually building control as the game progressed and pulling away in the second half with a balanced offensive attack.\n\nChase Brown once again found his rhythm against Bulloch Academy, continuing a trend that has followed him throughout the season. After leading the Lions with 16 points in the teams\u2019 meeting two weeks earlier, Brown elevated his performance even further on Friday, pouring in 26 points and grabbing 12 rebounds to record a double-double and lead all scorers. Ja\u2019Cari Glover added another dominant interior showing, finishing with 20 points and 15 rebounds to notch his 14th double-double of the season.\n\nSt. Andrew\u2019s balance was evident throughout the night, as Page Getter contributed 13 points, 5 rebounds, and 3 assists, while Milos Copic added 12 points, 5 rebounds, and 4 assists. After having five players reach double figures earlier in the week against Frederica, the Lions saw four players score in double digits on Friday, underscoring an offensive approach that does not rely on any single option.\n\nWith the regular season complete, the Lions now turn their attention to the region tournament, which begins next week at Pinewood Christian Academy. As the No. 1 seed, St. Andrew\u2019s will receive a first-round bye and will face the winner of Westminster and Pinewood Christian in the semifinals next Thursday night, looking to carry their momentum into postseason play."
+    "Recap": "St. Andrew’s closed out the regular season Friday night with a 76–61 road victory at Bulloch Academy, finishing the year 16–6 overall and a perfect 8–0 in region play. With the win, the Lions completed their sixth consecutive season of going undefeated in regular-season region competition, while also extending their winning streak over Bulloch Academy to 12 straight games, dating back to 2022.\n\nThe game featured a competitive opening half, with Bulloch using energy on its home floor to keep the contest tight. St. Andrew’s responded with steady execution and strong rebounding, gradually building control as the game progressed and pulling away in the second half with a balanced offensive attack.\n\nChase Brown once again found his rhythm against Bulloch Academy, continuing a trend that has followed him throughout the season. After leading the Lions with 16 points in the teams’ meeting two weeks earlier, Brown elevated his performance even further on Friday, pouring in 26 points and grabbing 12 rebounds to record a double-double and lead all scorers. Ja’Cari Glover added another dominant interior showing, finishing with 20 points and 15 rebounds to notch his 14th double-double of the season.\n\nSt. Andrew’s balance was evident throughout the night, as Page Getter contributed 13 points, 5 rebounds, and 3 assists, while Milos Copic added 12 points, 5 rebounds, and 4 assists. After having five players reach double figures earlier in the week against Frederica, the Lions saw four players score in double digits on Friday, underscoring an offensive approach that does not rely on any single option.\n\nWith the regular season complete, the Lions now turn their attention to the region tournament, which begins next week at Pinewood Christian Academy. As the No. 1 seed, St. Andrew’s will receive a first-round bye and will face the winner of Westminster and Pinewood Christian in the semifinals next Thursday night, looking to carry their momentum into postseason play."
   },
   {
     "GameID": 20260212,
@@ -10742,7 +11277,7 @@
     "Season": 2025,
     "IsComplete": "Yes",
     "RecapTitle": "Lions Advance to Region Finals, Extend Dominance Over Pinewood",
-    "Recap": "St. Andrew\u2019s punched its ticket to the region championship game Thursday night with a 75\u201344 victory over Pinewood Christian in the semifinals of the region tournament at Pinewood Christian Academy. The win marked the Lions\u2019 20th consecutive victory over Pinewood, a streak dating back to 2018, and extended St. Andrew\u2019s remarkable run to 49 straight wins over region opponents. A victory in the finals would push that streak to a perfect 50.\n\nPage Getter delivered a career performance, pouring in a career-high 25 points while adding 6 rebounds to lead all scorers. Chase Brown carried his momentum from last week\u2019s game at Bulloch Academy into the semifinal, finishing with 14 points. Amari Cook added 12 points, 4 assists, 4 rebounds, and 3 steals, while Milos Copic contributed 9 points and 7 assists as the Lions showcased their balance and depth.\n\nWith the victory, St. Andrew\u2019s advances to the region championship game tomorrow at 7 p.m., where the Lions will face Frederica in a rematch for the title. St. Andrew\u2019s will be seeking its fifth consecutive region championship, looking to continue both its region dominance and its historic winning streak within region play."
+    "Recap": "St. Andrew’s punched its ticket to the region championship game Thursday night with a 75–44 victory over Pinewood Christian in the semifinals of the region tournament at Pinewood Christian Academy. The win marked the Lions’ 20th consecutive victory over Pinewood, a streak dating back to 2018, and extended St. Andrew’s remarkable run to 49 straight wins over region opponents. A victory in the finals would push that streak to a perfect 50.\n\nPage Getter delivered a career performance, pouring in a career-high 25 points while adding 6 rebounds to lead all scorers. Chase Brown carried his momentum from last week’s game at Bulloch Academy into the semifinal, finishing with 14 points. Amari Cook added 12 points, 4 assists, 4 rebounds, and 3 steals, while Milos Copic contributed 9 points and 7 assists as the Lions showcased their balance and depth.\n\nWith the victory, St. Andrew’s advances to the region championship game tomorrow at 7 p.m., where the Lions will face Frederica in a rematch for the title. St. Andrew’s will be seeking its fifth consecutive region championship, looking to continue both its region dominance and its historic winning streak within region play."
   },
   {
     "GameID": 20260213,
@@ -10756,7 +11291,7 @@
     "Season": 2025,
     "IsComplete": "Yes",
     "RecapTitle": "Lions Capture Region Title, Earn 50th Straight Region Win and 200th for Abrams",
-    "Recap": "St. Andrew\u2019s claimed its fifth consecutive region championship Friday night with a 61\u201348 victory over Frederica in the title game at Pinewood Christian Academy. The win improved the Lions to 18\u20137 on the season, extended their remarkable run to 50 consecutive victories over region opponents, and marked the 200th career win for head coach Mel Abrams in his 11th season at St. Andrew\u2019s.\n\nThe Lions set the tone early, controlling the tempo in the opening quarter and frustrating Frederica\u2019s offense. St. Andrew\u2019s held the Knights to just six first-quarter points and carried a 14\u20136 lead into the second period. Frederica responded in the second quarter, heating up offensively while the Lions\u2019 shots stopped falling. The Knights grabbed their first lead of the night with 38 seconds remaining in the half and entered the break with a 22\u201321 advantage.\n\nFrederica maintained that momentum early in the third quarter before St. Andrew\u2019s began to swing the game back in its favor. Ja\u2019Cari Glover and Milos Copic each scored four quick points to knot the score at 29\u201329 midway through the period. The highlight of the run came when Copic missed on a driving layup, but Glover trailed the play, snatched the rebound with one hand, and finished with an emphatic dunk to energize the Lions.\n\nAfter Frederica answered with a three-pointer, Page Getter responded with one of his own to tie the game at 32\u201332 with 3:19 left in the quarter. What followed was the decisive stretch of the night. Chase Brown, quiet through the first half, ignited an 11\u20130 run to close the third quarter. Brown drilled a three while being fouled and converted the free throw for a four-point play, then followed a Glover layup with a driving score of his own. Moments later, Guus Blom secured an offensive rebound and kicked it out to Brown on the perimeter, where he buried another three to send the Lions into the fourth quarter with a commanding 43\u201332 lead .\n\nFrederica attempted one final push early in the fourth quarter, but Brown stayed hot. He connected on two more three-pointers and was fouled on another long-range attempt, calmly converting all three free throws to stretch the margin to 54\u201339 with 4:51 remaining. The Knights never trimmed the deficit to fewer than 11 points the rest of the way.\n\nBrown finished with 20 points, punctuating his explosive second half. Glover dominated the interior with 17 points and 16 rebounds, anchoring the Lions inside. Getter added 10 points, while Copic contributed 7 points, 7 rebounds, and 5 assists, helping steady the offense throughout the game.\n\nWith the championship secured, St. Andrew\u2019s now turns its focus to the state tournament. The Lions have earned a first-round bye and will await their quarterfinal opponent next Saturday in Macon, as they look to carry their momentum beyond region play and into the state bracket."
+    "Recap": "St. Andrew’s claimed its fifth consecutive region championship Friday night with a 61–48 victory over Frederica in the title game at Pinewood Christian Academy. The win improved the Lions to 18–7 on the season, extended their remarkable run to 50 consecutive victories over region opponents, and marked the 200th career win for head coach Mel Abrams in his 11th season at St. Andrew’s.\n\nThe Lions set the tone early, controlling the tempo in the opening quarter and frustrating Frederica’s offense. St. Andrew’s held the Knights to just six first-quarter points and carried a 14–6 lead into the second period. Frederica responded in the second quarter, heating up offensively while the Lions’ shots stopped falling. The Knights grabbed their first lead of the night with 38 seconds remaining in the half and entered the break with a 22–21 advantage.\n\nFrederica maintained that momentum early in the third quarter before St. Andrew’s began to swing the game back in its favor. Ja’Cari Glover and Milos Copic each scored four quick points to knot the score at 29–29 midway through the period. The highlight of the run came when Copic missed on a driving layup, but Glover trailed the play, snatched the rebound with one hand, and finished with an emphatic dunk to energize the Lions.\n\nAfter Frederica answered with a three-pointer, Page Getter responded with one of his own to tie the game at 32–32 with 3:19 left in the quarter. What followed was the decisive stretch of the night. Chase Brown, quiet through the first half, ignited an 11–0 run to close the third quarter. Brown drilled a three while being fouled and converted the free throw for a four-point play, then followed a Glover layup with a driving score of his own. Moments later, Guus Blom secured an offensive rebound and kicked it out to Brown on the perimeter, where he buried another three to send the Lions into the fourth quarter with a commanding 43–32 lead .\n\nFrederica attempted one final push early in the fourth quarter, but Brown stayed hot. He connected on two more three-pointers and was fouled on another long-range attempt, calmly converting all three free throws to stretch the margin to 54–39 with 4:51 remaining. The Knights never trimmed the deficit to fewer than 11 points the rest of the way.\n\nBrown finished with 20 points, punctuating his explosive second half. Glover dominated the interior with 17 points and 16 rebounds, anchoring the Lions inside. Getter added 10 points, while Copic contributed 7 points, 7 rebounds, and 5 assists, helping steady the offense throughout the game.\n\nWith the championship secured, St. Andrew’s now turns its focus to the state tournament. The Lions have earned a first-round bye and will await their quarterfinal opponent next Saturday in Macon, as they look to carry their momentum beyond region play and into the state bracket."
   },
   {
     "GameID": 20260221,
@@ -10770,7 +11305,7 @@
     "Season": 2025,
     "IsComplete": "Yes",
     "RecapTitle": "Lions Surge Past Frederica in Second-Half Explosion, Advance to State Final Four",
-    "Recap": "St. Andrew\u2019s advanced to the State Final Four in dominant fashion Saturday night, pulling away in the second half to defeat Frederica 72\u201355 at First Presbyterian Day School in Macon. The Lions used a decisive third-quarter surge to turn a tightly contested game into a commanding victory and punch its ticket to a fifth consecutive Final Four appearance.\n\nThe matchup marked the fourth meeting between the two teams this season, and St. Andrew\u2019s completed the season sweep while extending its winning streak over Frederica to 17 consecutive games dating back to 2019. The Knights came out energized, feeding off a loud home crowd and controlling much of the first half. Frederica led for the majority of the opening two quarters, but the Lions stayed composed and never trailed by more than six points. The Knights carried a narrow 29\u201326 advantage into halftime.\n\nFrederica scored the first basket of the third quarter to push the margin to five, but that would be the last time momentum was clearly on their side. What followed was a stunning 30\u20134 run by the Lions over the remainder of the period. St. Andrew\u2019s locked in defensively, controlled the glass, and began to find its rhythm offensively, turning a deficit into a 21-point lead by the end of the quarter. Page Getter put an exclamation point on the run by drilling a buzzer beating 3-pointer to end the period. The explosive stretch completely shifted the tone of the game and left Frederica scrambling to recover.\n\nPage Getter led all scorers with 23 points and added five steals, consistently creating offense on both ends of the floor. Ja\u2019Cari Glover battled Frederica\u2019s big man all night and delivered another dominant interior performance with 19 points and 18 rebounds, recording his 16th double-double of the season. Milos Copic orchestrated the offense effectively, finishing with 9 points, 7 rebounds and 8 assists.\n\nFrederica continued to compete in the fourth quarter, but the deficit proved too large to overcome as St. Andrew\u2019s maintained control down the stretch.\n\nWith the victory, the Lions move on to the State Final Four next week at Columbus State, where they will face Lakeview Academy with a trip to the state championship game on the line."
+    "Recap": "St. Andrew’s advanced to the State Final Four in dominant fashion Saturday night, pulling away in the second half to defeat Frederica 72–55 at First Presbyterian Day School in Macon. The Lions used a decisive third-quarter surge to turn a tightly contested game into a commanding victory and punch its ticket to a fifth consecutive Final Four appearance.\n\nThe matchup marked the fourth meeting between the two teams this season, and St. Andrew’s completed the season sweep while extending its winning streak over Frederica to 17 consecutive games dating back to 2019. The Knights came out energized, feeding off a loud home crowd and controlling much of the first half. Frederica led for the majority of the opening two quarters, but the Lions stayed composed and never trailed by more than six points. The Knights carried a narrow 29–26 advantage into halftime.\n\nFrederica scored the first basket of the third quarter to push the margin to five, but that would be the last time momentum was clearly on their side. What followed was a stunning 30–4 run by the Lions over the remainder of the period. St. Andrew’s locked in defensively, controlled the glass, and began to find its rhythm offensively, turning a deficit into a 21-point lead by the end of the quarter. Page Getter put an exclamation point on the run by drilling a buzzer beating 3-pointer to end the period. The explosive stretch completely shifted the tone of the game and left Frederica scrambling to recover.\n\nPage Getter led all scorers with 23 points and added five steals, consistently creating offense on both ends of the floor. Ja’Cari Glover battled Frederica’s big man all night and delivered another dominant interior performance with 19 points and 18 rebounds, recording his 16th double-double of the season. Milos Copic orchestrated the offense effectively, finishing with 9 points, 7 rebounds and 8 assists.\n\nFrederica continued to compete in the fourth quarter, but the deficit proved too large to overcome as St. Andrew’s maintained control down the stretch.\n\nWith the victory, the Lions move on to the State Final Four next week at Columbus State, where they will face Lakeview Academy with a trip to the state championship game on the line."
   },
   {
     "GameID": 20260225,
@@ -10783,8 +11318,8 @@
     "OpponentScore": 50,
     "Season": 2025,
     "IsComplete": "Yes",
-    "RecapTitle": "St. Andrew\u2019s Rallies Past Lakeview to Reach State Final",
-    "Recap": "For the fourth straight season, St. Andrew\u2019s and Lakeview Academy met in the state semifinals. And once again, the game required adjustment and composure.\n\nAfter trailing by 13 at halftime, St. Andrew\u2019s delivered a decisive second-half response, erasing the deficit and pulling away late for a 58\u201350 victory that sends the program back to the state championship game.\n\nThe first half belonged to Lakeview, and it started immediately. Lakeview controlled the opening quarter and carried that momentum into the second. A three-pointer on the first possession of the second quarter pushed the lead to 22\u20137, giving Lakeview a commanding early advantage.\n\nThe early margin was fueled by pressure on both ends. Defensively, Lakeview crowded ball handlers and contested perimeter looks, disrupting St. Andrew\u2019s rhythm and contributing to a sluggish start from the field. Offensively, Lakeview attacked off the dribble, driving into the lane and forcing St. Andrew\u2019s to defend in rotation.\n\nBy halftime, Lakeview held a 32\u201319 lead, and St. Andrew\u2019s was still searching for answers.\n\nThose answers came in the third quarter.\n\nSt. Andrew\u2019s tightened its defense, cut off driving lanes, and began to control the glass. The offensive approach shifted inward, and the deficit slowly shrank. Midway through the quarter, the game was tied. Minutes later, St. Andrew\u2019s had the lead \u2014 and the momentum.\n\nJa\u2019Cari Glover anchored the turnaround. The forward was perfect from the field, finishing 7-for-7 and scoring 18 points, 14 of them in the paint. His efficiency stabilized the offense during a stretch when perimeter shots were inconsistent and provided a reliable scoring option against Lakeview\u2019s pressure.\n\nPage Getter added 17 points, including key free throws in the final minutes to extend the margin. Amari Cook contributed 12 points and helped spark several defensive possessions that shifted the pace of the game, while Milos Copic added timely rebounds and assists during critical stretches.\n\nAfter entering the fourth quarter ahead 41\u201338, St. Andrew\u2019s gradually pushed the lead to nine. Lakeview cut the deficit to five late, but St. Andrew\u2019s answered at the free-throw line and managed the closing possessions with control.\n\nNeither team shot particularly well from beyond the arc, but the difference emerged in defensive execution and second-half adjustments. St. Andrew\u2019s limited Lakeview to 50 points and held a clear edge in defensive stops over the final two quarters.\n\nWith the win, St. Andrew\u2019s improves to 20\u20137, marking the fifth straight season the program has reached 20 victories and positioning it to compete for its fourth state title in five years."
+    "RecapTitle": "St. Andrew’s Rallies Past Lakeview to Reach State Final",
+    "Recap": "For the fourth straight season, St. Andrew’s and Lakeview Academy met in the state semifinals. And once again, the game required adjustment and composure.\n\nAfter trailing by 13 at halftime, St. Andrew’s delivered a decisive second-half response, erasing the deficit and pulling away late for a 58–50 victory that sends the program back to the state championship game.\n\nThe first half belonged to Lakeview, and it started immediately. Lakeview controlled the opening quarter and carried that momentum into the second. A three-pointer on the first possession of the second quarter pushed the lead to 22–7, giving Lakeview a commanding early advantage.\n\nThe early margin was fueled by pressure on both ends. Defensively, Lakeview crowded ball handlers and contested perimeter looks, disrupting St. Andrew’s rhythm and contributing to a sluggish start from the field. Offensively, Lakeview attacked off the dribble, driving into the lane and forcing St. Andrew’s to defend in rotation.\n\nBy halftime, Lakeview held a 32–19 lead, and St. Andrew’s was still searching for answers.\n\nThose answers came in the third quarter.\n\nSt. Andrew’s tightened its defense, cut off driving lanes, and began to control the glass. The offensive approach shifted inward, and the deficit slowly shrank. Midway through the quarter, the game was tied. Minutes later, St. Andrew’s had the lead — and the momentum.\n\nJa’Cari Glover anchored the turnaround. The forward was perfect from the field, finishing 7-for-7 and scoring 18 points, 14 of them in the paint. His efficiency stabilized the offense during a stretch when perimeter shots were inconsistent and provided a reliable scoring option against Lakeview’s pressure.\n\nPage Getter added 17 points, including key free throws in the final minutes to extend the margin. Amari Cook contributed 12 points and helped spark several defensive possessions that shifted the pace of the game, while Milos Copic added timely rebounds and assists during critical stretches.\n\nAfter entering the fourth quarter ahead 41–38, St. Andrew’s gradually pushed the lead to nine. Lakeview cut the deficit to five late, but St. Andrew’s answered at the free-throw line and managed the closing possessions with control.\n\nNeither team shot particularly well from beyond the arc, but the difference emerged in defensive execution and second-half adjustments. St. Andrew’s limited Lakeview to 50 points and held a clear edge in defensive stops over the final two quarters.\n\nWith the win, St. Andrew’s improves to 20–7, marking the fifth straight season the program has reached 20 victories and positioning it to compete for its fourth state title in five years."
   },
   {
     "GameID": 20260227,
@@ -10797,7 +11332,7 @@
     "OpponentScore": 61,
     "Season": 2025,
     "IsComplete": "Yes",
-    "RecapTitle": "Brookwood Rallies in Second Half to Deny St. Andrew\u2019s Title Defense",
-    "Recap": "St. Andrew\u2019s could not have scripted a better opening five minutes.\n\nSenior Amari Cook buried a three-pointer on the game\u2019s first possession, Chase Brown followed with one of his own, and Cook added five more points \u2014 including his second three of the night \u2014 as St. Andrew\u2019s surged to an early 11\u20132 lead.\n\nFor a moment, it looked like the Lions were poised to carry the momentum of their previous two state tournament games into another championship performance.\n\nBrookwood answered.\n\nThe Warriors settled in with an 8\u20132 run to cut the margin to 13\u201310 early in the second quarter, but Brown connected on his second three-pointer to push the lead back to six. St. Andrew\u2019s maintained control through the remainder of the half, defending with discipline and sharing the ball offensively to take a 27\u201322 lead into the break.\n\nAfter trailing at halftime in each of their previous two tournament games, the Lions felt confident entering the locker room with the advantage.\n\nThe third quarter flipped everything.\n\nBrookwood outscored St. Andrew\u2019s 20\u20137 in the period, turning a five-point deficit into a 42\u201334 lead heading into the fourth. The Warriors began finding seams in the defense, attacking off the dribble and forcing rotations that had not been there in the first half. As the quarter progressed, those gaps widened.\n\nDefensively, Brookwood made a concerted effort to limit Ja\u2019Cari Glover, one of the anchors of St. Andrew\u2019s offense. Frequent double teams on the interior made entry passes difficult and disrupted the flow of the offense. Glover finished with six points and 10 rebounds, a sharp contrast from his dominant semifinal performance.\n\nThe perimeter rhythm cooled as well. After knocking down six three-pointers in the first half, St. Andrew\u2019s managed just two in the second. The offensive efficiency that fueled the early lead never returned.\n\nCook finished with 14 points and five assists to lead St. Andrew\u2019s, while Brown and Page Getter each added 12. But the sustained surge that had defined earlier tournament games did not materialize this time.\n\nBrookwood, which fell to St. Andrew\u2019s in last season\u2019s championship, remained composed after the early deficit and executed with balance throughout the second half. The Warriors\u2019 collective effort and defensive adjustments ultimately proved decisive.\n\nThe loss closes another deep postseason run for St. Andrew\u2019s, which has now won three state championships in the past five seasons and fallen only to the eventual champion in the other two. If anything, the past five years have reinforced a familiar truth: the road to the state title continues to run through St. Andrew\u2019s.\n\nWith a strong core returning next season, the Lions will absorb the lessons of this night and prepare for another run."
+    "RecapTitle": "Brookwood Rallies in Second Half to Deny St. Andrew’s Title Defense",
+    "Recap": "St. Andrew’s could not have scripted a better opening five minutes.\n\nSenior Amari Cook buried a three-pointer on the game’s first possession, Chase Brown followed with one of his own, and Cook added five more points — including his second three of the night — as St. Andrew’s surged to an early 11–2 lead.\n\nFor a moment, it looked like the Lions were poised to carry the momentum of their previous two state tournament games into another championship performance.\n\nBrookwood answered.\n\nThe Warriors settled in with an 8–2 run to cut the margin to 13–10 early in the second quarter, but Brown connected on his second three-pointer to push the lead back to six. St. Andrew’s maintained control through the remainder of the half, defending with discipline and sharing the ball offensively to take a 27–22 lead into the break.\n\nAfter trailing at halftime in each of their previous two tournament games, the Lions felt confident entering the locker room with the advantage.\n\nThe third quarter flipped everything.\n\nBrookwood outscored St. Andrew’s 20–7 in the period, turning a five-point deficit into a 42–34 lead heading into the fourth. The Warriors began finding seams in the defense, attacking off the dribble and forcing rotations that had not been there in the first half. As the quarter progressed, those gaps widened.\n\nDefensively, Brookwood made a concerted effort to limit Ja’Cari Glover, one of the anchors of St. Andrew’s offense. Frequent double teams on the interior made entry passes difficult and disrupted the flow of the offense. Glover finished with six points and 10 rebounds, a sharp contrast from his dominant semifinal performance.\n\nThe perimeter rhythm cooled as well. After knocking down six three-pointers in the first half, St. Andrew’s managed just two in the second. The offensive efficiency that fueled the early lead never returned.\n\nCook finished with 14 points and five assists to lead St. Andrew’s, while Brown and Page Getter each added 12. But the sustained surge that had defined earlier tournament games did not materialize this time.\n\nBrookwood, which fell to St. Andrew’s in last season’s championship, remained composed after the early deficit and executed with balance throughout the second half. The Warriors’ collective effort and defensive adjustments ultimately proved decisive.\n\nThe loss closes another deep postseason run for St. Andrew’s, which has now won three state championships in the past five seasons and fallen only to the eventual champion in the other two. If anything, the past five years have reinforced a familiar truth: the road to the state title continues to run through St. Andrew’s.\n\nWith a strong core returning next season, the Lions will absorb the lessons of this night and prepare for another run."
   }
 ]
