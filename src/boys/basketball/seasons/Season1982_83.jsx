@@ -390,7 +390,7 @@ function Season1982_83() {
                   )}
                 </table>
               </div>
-              <p className="mt-2 text-xs leading-relaxed text-gray-600">
+              <p className="mt-2 text-center text-xs leading-relaxed text-gray-600">
                 GP reflects the number of games with surviving box score records for that player, not
                 necessarily the total number of games played.
               </p>
