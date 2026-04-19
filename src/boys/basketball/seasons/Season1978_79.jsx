@@ -329,83 +329,88 @@ function Season1978_79() {
 
             <div className="grid grid-cols-4 gap-2 sm:grid-cols-6 md:grid-cols-11">
               {galleryImages.map((image, i) => (
-              <button
-                key={i}
-                type="button"
-                onClick={() => setSlideIndex(i)}
+                <button
+                  key={i}
+                  type="button"
+                  onClick={() => setSlideIndex(i)}
                   className={`aspect-square overflow-hidden rounded-md border bg-gray-50 ${
                     i === slideIndex
                       ? "border-gray-900 ring-2 ring-gray-900"
                       : "border-gray-200 hover:border-gray-500"
-                }`}
-                aria-label={`Go to image ${i + 1}`}
+                  }`}
+                  aria-label={`Go to image ${i + 1}`}
                   title={image.caption}
-              >
-                  <img src={image.src} alt="" className="h-full w-full object-cover" loading="lazy" />
-              </button>
-            ))}
+                >
+                  <img
+                    src={image.src}
+                    alt=""
+                    className="h-full w-full object-cover"
+                    loading="lazy"
+                  />
+                </button>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      <section>
-        <div className="flex items-center justify-between mt-6 mb-3">
-          <h2 className="text-2xl font-semibold">Schedule &amp; Results</h2>
-        </div>
+      <div className="grid gap-8 xl:grid-cols-[minmax(0,1.1fr)_minmax(420px,0.9fr)] xl:items-start">
+        <section className="min-w-0">
+          <div className="mb-3 mt-6">
+            <h2 className="text-2xl font-semibold">Schedule &amp; Results</h2>
+          </div>
 
-        <div className="overflow-x-auto max-w-3xl mx-auto">
-          <table className="w-full border text-xs sm:text-sm text-center">
-            <thead className="bg-gray-100">
-              <tr>
-                <th className="border px-2 py-1">Date</th>
-                <th className="border px-2 py-1">Opponent</th>
-                <th className="border px-2 py-1">Result</th>
-                <th className="border px-2 py-1">Score</th>
-              </tr>
-            </thead>
-            <tbody>
-              {games.map((game, idx) => {
-                const hasResult = game.Result === "W" || game.Result === "L";
-
-                const opponentCell = hasResult ? (
-                  <Link
-                    to={`/athletics/boys/basketball/games/${game.GameID}`}
-                    className="text-blue-600 underline hover:text-blue-800"
-                  >
-                    {game.Opponent}
-                  </Link>
-                ) : (
-                  game.Opponent
-                );
-
-                return (
-                  <tr key={game.GameID || idx} className={idx % 2 ? "bg-gray-50" : "bg-white"}>
-                    <td className="border px-2 py-1">
-                      {formatDateFromGameID(game.GameID)}
-                    </td>
-                    <td className="border px-2 py-1">{opponentCell}</td>
-                    <td className="border px-2 py-1">{formatResult(game)}</td>
-                    <td className="border px-2 py-1 whitespace-nowrap">{formatScore(game)}</td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <section>
-        <div className="flex items-center justify-between mt-6 mb-3">
-          <h2 className="text-2xl font-semibold">Player Statistics for the Season</h2>
-        </div>
-
-        {seasonTotals.length === 0 ? (
-          <p className="text-gray-600 text-center">No player statistics are available yet for this season.</p>
-        ) : (
           <div className="overflow-x-auto">
-            <div className="mx-auto w-fit">
-              <table className="w-auto table-auto border text-xs sm:text-sm text-center whitespace-nowrap">
+            <table className="w-full min-w-[520px] border text-xs sm:text-sm text-center">
+              <thead className="bg-gray-100">
+                <tr>
+                  <th className="border px-2 py-1">Date</th>
+                  <th className="border px-2 py-1">Opponent</th>
+                  <th className="border px-2 py-1">Result</th>
+                  <th className="border px-2 py-1">Score</th>
+                </tr>
+              </thead>
+              <tbody>
+                {games.map((game, idx) => {
+                  const hasResult = game.Result === "W" || game.Result === "L";
+
+                  const opponentCell = hasResult ? (
+                    <Link
+                      to={`/athletics/boys/basketball/games/${game.GameID}`}
+                      className="text-blue-600 underline hover:text-blue-800"
+                    >
+                      {game.Opponent}
+                    </Link>
+                  ) : (
+                    game.Opponent
+                  );
+
+                  return (
+                    <tr key={game.GameID || idx} className={idx % 2 ? "bg-gray-50" : "bg-white"}>
+                      <td className="border px-2 py-1">
+                        {formatDateFromGameID(game.GameID)}
+                      </td>
+                      <td className="border px-2 py-1">{opponentCell}</td>
+                      <td className="border px-2 py-1">{formatResult(game)}</td>
+                      <td className="border px-2 py-1 whitespace-nowrap">{formatScore(game)}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section className="min-w-0">
+          <div className="mb-3 mt-6">
+            <h2 className="text-2xl font-semibold">Player Statistics for the Season</h2>
+          </div>
+
+          {seasonTotals.length === 0 ? (
+            <p className="text-gray-600">No player statistics are available yet for this season.</p>
+          ) : (
+            <div className="overflow-x-auto">
+              <table className="w-full min-w-[420px] table-auto border text-xs sm:text-sm text-center whitespace-nowrap">
                 <thead className="bg-gray-100">
                   <tr>
                     <th
@@ -477,15 +482,17 @@ function Season1978_79() {
                       <td className="border px-2 py-1">—</td>
                       <td className="border px-2 py-1">{teamTotalsRow.GP}</td>
                       <td className="border px-2 py-1">{teamTotalsRow.PTS}</td>
-                      <td className="border px-2 py-1">{teamTotalsRow.GP ? teamTotalsRow.PPG.toFixed(1) : "—"}</td>
+                      <td className="border px-2 py-1">
+                        {teamTotalsRow.GP ? teamTotalsRow.PPG.toFixed(1) : "—"}
+                      </td>
                     </tr>
                   </tfoot>
                 )}
               </table>
             </div>
-          </div>
-        )}
-      </section>
+          )}
+        </section>
+      </div>
     </div>
   );
 }
