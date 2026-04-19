@@ -564,5 +564,46 @@
         "JerseyNumber": null
       }
     ]
+  },
+  {
+    "SeasonID": "1983-84",
+    "Players": [
+      {
+        "PlayerID": 198301,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198203,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198302,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198303,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198206,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198103,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198207,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198208,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198005,
+        "JerseyNumber": null
+      }
+    ]
   }
 ]
