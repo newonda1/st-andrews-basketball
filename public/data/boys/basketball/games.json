@@ -3934,14 +3934,15 @@
   },
   {
     "GameID": 19921204,
-    "Opponent": "Unknown",
+    "OpponentID": "sc-beaufort-academy-beaufort",
+    "Opponent": "Beaufort Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
     "Result": "W",
-    "TeamScore": null,
-    "OpponentScore": null,
+    "TeamScore": 62,
+    "OpponentScore": 33,
     "Season": 1992,
-    "IsComplete": "No"
+    "IsComplete": "Yes"
   },
   {
     "GameID": 19921205,

@@ -27,6 +27,23 @@ async function fetchJson(label, path) {
   }
 }
 
+async function fetchJsonOptional(label, path) {
+  try {
+    const url = absUrl(path);
+    const res = await fetch(url, { cache: "no-store" });
+    if (!res.ok) return [];
+
+    const text = await res.text();
+    const trimmed = text.trim();
+    if (trimmed.startsWith("<!DOCTYPE") || trimmed.startsWith("<html")) return [];
+
+    const data = JSON.parse(text);
+    return Array.isArray(data) ? data : [];
+  } catch {
+    return [];
+  }
+}
+
 function safeNum(x) {
   const n = Number(x);
   return Number.isFinite(n) ? n : 0;
@@ -218,17 +235,19 @@ export default function SeasonRecords() {
       try {
         setError("");
 
-        const [playerStatsRaw, playersRaw, seasonsRaw, gamesRaw] = await Promise.all([
+        const [playerStatsRaw, playersRaw, seasonsRaw, gamesRaw, adjustmentsRaw] = await Promise.all([
           fetchJson("playergamestats.json", "/data/boys/basketball/playergamestats.json"),
           fetchJson("players.json", "/data/boys/players.json"),
           fetchJson("seasons.json", "/data/boys/basketball/seasons.json"),
           fetchJson("games.json", "/data/boys/basketball/games.json"),
+          fetchJsonOptional("adjustments.json", "/data/boys/basketball/adjustments.json"),
         ]);
 
         const playerStats = Array.isArray(playerStatsRaw) ? playerStatsRaw : [];
         const players = Array.isArray(playersRaw) ? playersRaw : [];
         const seasons = Array.isArray(seasonsRaw) ? seasonsRaw : [];
         const games = Array.isArray(gamesRaw) ? gamesRaw : [];
+        const adjustments = Array.isArray(adjustmentsRaw) ? adjustmentsRaw : [];
 
         const seasonsMap = new Map(seasons.map((s) => [String(s.SeasonID), s]));
         const gameToSeasonMap = new Map(
@@ -302,6 +321,50 @@ export default function SeasonRecords() {
             if (doubleDigitCategories >= 2) entry.DoubleDoubles += 1;
             if (doubleDigitCategories >= 3) entry.TripleDoubles += 1;
           }
+        }
+
+        for (const adjustment of adjustments) {
+          if (!adjustment || adjustment.PlayerID == null || adjustment.SeasonID == null) continue;
+
+          const playerId = String(adjustment.PlayerID);
+          const season = String(adjustment.SeasonID);
+          const key = `${playerId}-${season}`;
+
+          if (!seasonMap[key]) {
+            seasonMap[key] = {
+              PlayerID: playerId,
+              Season: season,
+              GamesPlayed: 0,
+              Points: 0,
+              Rebounds: 0,
+              Assists: 0,
+              Steals: 0,
+              Blocks: 0,
+              Turnovers: 0,
+              TwoPM: 0,
+              TwoPA: 0,
+              ThreePM: 0,
+              ThreePA: 0,
+              FTM: 0,
+              FTA: 0,
+              DoubleDoubles: 0,
+              TripleDoubles: 0,
+            };
+          }
+
+          const entry = seasonMap[key];
+          entry.Points += safeNum(adjustment.Points);
+          entry.Rebounds += safeNum(adjustment.Rebounds);
+          entry.Assists += safeNum(adjustment.Assists);
+          entry.Steals += safeNum(adjustment.Steals);
+          entry.Blocks += safeNum(adjustment.Blocks);
+          entry.Turnovers += safeNum(adjustment.Turnovers);
+          entry.TwoPM += safeNum(adjustment.TwoPM);
+          entry.TwoPA += safeNum(adjustment.TwoPA);
+          entry.ThreePM += safeNum(adjustment.ThreePM);
+          entry.ThreePA += safeNum(adjustment.ThreePA);
+          entry.FTM += safeNum(adjustment.FTM);
+          entry.FTA += safeNum(adjustment.FTA);
         }
 
         const seasonTotals = Object.values(seasonMap).map((total) => {
