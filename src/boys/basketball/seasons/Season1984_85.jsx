@@ -9,7 +9,7 @@ import {
   hydrateGamesWithSchools,
 } from "../dataUtils";
 
-function Season1983_84() {
+function Season1984_85() {
   const [games, setGames] = useState([]);
   const [playerStats, setPlayerStats] = useState([]);
   const [players, setPlayers] = useState([]);
@@ -18,7 +18,7 @@ function Season1983_84() {
 
   const [sortConfig, setSortConfig] = useState({ key: "jersey", direction: "asc" });
 
-  const SEASON_ID = 1983; // 1983–84 season (games.json Season field should be 1983)
+  const SEASON_ID = 1984; // 1984–85 season (games.json Season field should be 1984)
 
   useEffect(() => {
     async function fetchData() {
@@ -202,41 +202,42 @@ function Season1983_84() {
 
   return (
     <div className="pt-1 pb-4 space-y-6 max-w-6xl mx-auto">
-      <h1 className="text-3xl font-bold text-center mb-0">1983–84 Season</h1>
+      <h1 className="text-3xl font-bold text-center mb-0">1984–85 Season</h1>
 
       <section className="max-w-4xl mx-auto space-y-3">
         <h2 className="text-2xl font-semibold">Season Recap</h2>
         <div className="grid gap-4 md:grid-cols-[1fr_auto] md:items-start">
           <div className="space-y-3 text-gray-800 leading-relaxed">
             <p>
-              The 1983-84 season marked another coaching change for St. Andrew&apos;s, and
-              it turned out to be Joel Smoker&apos;s only year leading the Saints. The team
-              opened the winter with real momentum, winning four of its first five
-              games and looking capable of carrying that start deep into region play.
+              The 1984-85 season opened the Don Sherwood era, the first of his three
+              years leading St. Andrew&apos;s boys basketball. The Saints finished 11-12
+              overall and looked a little sturdier than the year before, especially
+              once the calendar turned to January.
             </p>
             <p>
-              The middle of the season proved much tougher. St. Andrew&apos;s dropped a string
-              of close games, including narrow losses to Robert Toombs Christian Academy
-              and Augusta Christian, and finished 7-12 overall. Even so, the Saints
-              still produced some strong wins over Memorial Day, Screven Academy,
-              Derenne Christian, Thomas Jefferson, and Effingham Academy.
+              St. Andrew&apos;s never fully pulled away from the pack, but it put together
+              a solid collection of wins. The Saints beat David Emanuel twice, swept
+              Memorial Day, split with Frederica and Trinity Christian, and knocked off
+              Screven Academy by 37 points late in January. A handful of tight losses,
+              including one-point and two-point results against Screven, Pineland, and
+              David Emanuel, kept the record from climbing higher.
             </p>
             <p>
-              John Strickland again led the offense with 191 points, while Jeff Beasley
-              scored 139 and Chris Jenkins added 137. Rob Carlyle also finished in
-              double figures often enough to reach 109 points, giving St. Andrew&apos;s a
-              steady four-man scoring group in Smoker&apos;s first season.
+              Stewart Helmly carried the offense with 355 points, while Jeff Beasley
+              added 277 and Sean Gibson scored 141. Thomas Stetson also reached 101
+              points, giving Sherwood a dependable scoring nucleus in his first season
+              on the sideline.
             </p>
           </div>
 
           <dl className="grid grid-cols-3 gap-3 text-center md:w-64 md:grid-cols-1">
             <div className="border border-gray-200 rounded-lg px-3 py-2">
               <dt className="text-xs font-semibold uppercase tracking-wide text-gray-500">Record</dt>
-              <dd className="text-xl font-bold text-gray-900">7-12</dd>
+              <dd className="text-xl font-bold text-gray-900">11-12</dd>
             </div>
             <div className="border border-gray-200 rounded-lg px-3 py-2">
               <dt className="text-xs font-semibold uppercase tracking-wide text-gray-500">Coach</dt>
-              <dd className="text-lg font-semibold text-gray-900">Joel Smoker</dd>
+              <dd className="text-lg font-semibold text-gray-900">Don Sherwood</dd>
             </div>
             <div className="border border-gray-200 rounded-lg px-3 py-2">
               <dt className="text-xs font-semibold uppercase tracking-wide text-gray-500">Mascot</dt>
@@ -402,4 +403,4 @@ function Season1983_84() {
   );
 }
 
-export default Season1983_84;
+export default Season1984_85;
