@@ -78,9 +78,27 @@
     "State": "GA"
   },
   {
+    "SchoolID": "sc-heathwood-hall-episcopal-school-columbia",
+    "Name": "Heathwood Hall Episcopal School",
+    "City": "Columbia",
+    "State": "SC"
+  },
+  {
     "SchoolID": "sc-lord-berkeley-academy-moncks-corner",
     "Name": "Lord Berkeley Academy",
     "City": "Moncks Corner",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-st-jude-sumter",
+    "Name": "St. Jude (Sumter)",
+    "City": "Sumter",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-thomas-sumter-academy-rembert",
+    "Name": "Thomas Sumter Academy",
+    "City": "Rembert",
     "State": "SC"
   },
   {

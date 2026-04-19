@@ -964,5 +964,70 @@
         "JerseyNumber": null
       }
     ]
+  },
+  {
+    "SeasonID": "1991-92",
+    "Players": [
+      {
+        "PlayerID": 199101,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199102,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199001,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199103,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199003,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198903,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198905,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198906,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199004,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199104,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198806,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198807,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199105,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198908,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199106,
+        "JerseyNumber": null
+      }
+    ]
   }
 ]
