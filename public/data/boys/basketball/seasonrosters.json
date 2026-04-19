@@ -838,5 +838,66 @@
         "JerseyNumber": null
       }
     ]
+  },
+  {
+    "SeasonID": "1989-90",
+    "Players": [
+      {
+        "PlayerID": 198801,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198901,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198902,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198903,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198904,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198905,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198906,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198805,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198907,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198806,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198807,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198908,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198808,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198809,
+        "JerseyNumber": null
+      }
+    ]
   }
 ]

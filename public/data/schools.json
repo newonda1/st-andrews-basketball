@@ -78,6 +78,12 @@
     "State": "GA"
   },
   {
+    "SchoolID": "sc-lord-berkeley-academy-moncks-corner",
+    "Name": "Lord Berkeley Academy",
+    "City": "Moncks Corner",
+    "State": "SC"
+  },
+  {
     "SchoolID": "tn-brentwood-high-school-brentwood",
     "Name": "Brentwood High School",
     "City": "Brentwood",

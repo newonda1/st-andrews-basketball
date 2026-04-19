@@ -9,7 +9,7 @@ import {
   hydrateGamesWithSchools,
 } from "../dataUtils";
 
-function Season1985_86() {
+function Season1989_90() {
   const [games, setGames] = useState([]);
   const [playerStats, setPlayerStats] = useState([]);
   const [players, setPlayers] = useState([]);
@@ -18,9 +18,10 @@ function Season1985_86() {
 
   const [sortConfig, setSortConfig] = useState({ key: "jersey", direction: "asc" });
 
-  const SEASON_ID = 1985; // 1985–86 season (games.json Season field should be 1985)
+  const SEASON_ID = 1989; // 1989–90 season (games.json Season field should be 1989)
   const DISPLAY_POINT_OVERRIDES = {
-    198206: 332,
+    198806: 425,
+    198809: 323,
   };
 
   useEffect(() => {
@@ -83,7 +84,7 @@ function Season1985_86() {
     const day = n % 100;
 
     if (year < 1900 || month < 1 || month > 12 || day < 1 || day > 31) {
-      return "";
+      return "Unknown";
     }
 
     const d = new Date(Date.UTC(year, month - 1, day));
@@ -207,44 +208,45 @@ function Season1985_86() {
 
   return (
     <div className="pt-1 pb-4 space-y-6 max-w-6xl mx-auto">
-      <h1 className="text-3xl font-bold text-center mb-0">1985–86 Season</h1>
+      <h1 className="text-3xl font-bold text-center mb-0">1989–90 Season</h1>
 
       <section className="max-w-4xl mx-auto space-y-3">
         <h2 className="text-2xl font-semibold">Season Recap</h2>
         <div className="grid gap-4 md:grid-cols-[1fr_auto] md:items-start">
           <div className="space-y-3 text-gray-800 leading-relaxed">
             <p>
-              Don Sherwood&apos;s second season brought another competitive St. Andrew&apos;s
-              team, even if the final record settled just below .500 at 10-12. The
-              Saints had to absorb some gaps in the surviving record from the opening
-              stretch of the year, but once the full box scores appear they show a team
-              that stayed in the fight across most of the winter.
+              The 1989-90 season opened a new chapter under head coach Michael
+              Strange, but it was a difficult winter in the win-loss column.
+              St. Andrew&apos;s finished 3-21 and spent most of the year trying to keep
+              pace with older, deeper opponents across both tournament and region
+              play.
             </p>
             <p>
-              St. Andrew&apos;s won back-to-back holiday tournament games over First
-              Christian of Memphis and Pineland Christian Academy, split with Frederica
-              and Trinity Christian, and beat David Emanuel, Citizens Christian, and
-              Bulloch Academy late in the season. Several close losses, including
-              one-point, two-point, and five-point margins, kept the Saints from
-              turning a solid year into a winning one.
+              The Saints did manage wins over an unknown early opponent, David
+              Emanuel Academy, and Robert Toombs Christian Academy, and they also
+              pushed a few games deep into the fourth quarter, including a one-point
+              loss at David Emanuel and a four-point playoff loss to Pinewood
+              Christian Academy. Even in a season with far more losses than wins,
+              St. Andrew&apos;s kept showing enough scoring punch to stay dangerous.
             </p>
             <p>
-              Stewart Helmly remained the offensive centerpiece. The surviving game
-              records account for 289 of his points, while a contemporary newspaper
-              note indicates his season total should be adjusted to 332. George Eubank
-              added 106 points, Stephen Goggans scored 140, and Scott Jarrett finished
-              with 81 as Sherwood&apos;s second team continued to lean on a compact core.
+              Ray Rogers was the centerpiece of that offense. His adjusted season
+              total of 425 points broke Jim Sharpley&apos;s 420-point school record from
+              the inaugural 1978-79 season, ending a mark that had stood for more
+              than a decade. Matt Young added an adjusted 323 points, while Dereck
+              Blackmon scored 229 and Robert Gephart finished with 74 in the
+              surviving box score record.
             </p>
           </div>
 
           <dl className="grid grid-cols-3 gap-3 text-center md:w-64 md:grid-cols-1">
             <div className="border border-gray-200 rounded-lg px-3 py-2">
               <dt className="text-xs font-semibold uppercase tracking-wide text-gray-500">Record</dt>
-              <dd className="text-xl font-bold text-gray-900">10-12</dd>
+              <dd className="text-xl font-bold text-gray-900">3-21</dd>
             </div>
             <div className="border border-gray-200 rounded-lg px-3 py-2">
               <dt className="text-xs font-semibold uppercase tracking-wide text-gray-500">Coach</dt>
-              <dd className="text-lg font-semibold text-gray-900">Don Sherwood</dd>
+              <dd className="text-lg font-semibold text-gray-900">Michael Strange</dd>
             </div>
             <div className="border border-gray-200 rounded-lg px-3 py-2">
               <dt className="text-xs font-semibold uppercase tracking-wide text-gray-500">Mascot</dt>
@@ -407,9 +409,9 @@ function Season1985_86() {
                 necessarily the total number of games played.
               </p>
               <p className="mt-1 text-center text-xs leading-relaxed text-gray-600">
-                Stewart Helmly&apos;s season total is shown as 332 points based on a newspaper
-                article published on December 28, 1985. His points per game still reflect only
-                the surviving game-by-game box score data.
+                Ray Rogers&apos; displayed 425 points and Matt Young&apos;s displayed 323 points
+                reflect a newspaper adjustment published on January 30, 1990. Their points per
+                game still use only the surviving game-by-game box score data.
               </p>
             </>
           )}
@@ -419,4 +421,4 @@ function Season1985_86() {
   );
 }
 
-export default Season1985_86;
+export default Season1989_90;
