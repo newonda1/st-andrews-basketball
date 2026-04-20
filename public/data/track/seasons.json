@@ -1,5 +1,29 @@
 [
   {
+    "SeasonID": 2023,
+    "SeasonLabel": "2022-23",
+    "HeadCoach": "Wes Worthington",
+    "AssistantCoach": "Russell Wilson",
+    "Classification": "GIAA AAA",
+    "Region": "Region 2",
+    "StatusBadge": "verified",
+    "StatusNote": "The 2022-23 season currently includes four archived meets from the team schedule screenshots, and results will be added meet by meet as the source pages are confirmed.",
+    "FirstRegularSeasonMeet": "2023-03-01",
+    "RegionDeadline": "2023-04-19",
+    "StateMeetStart": "2023-04-27",
+    "StateMeetEnd": "2023-04-27",
+    "StateMeetLocation": "Locust Grove, GA",
+    "RecapParagraphs": [
+      "The 2022-23 season is now set up in the track archive and ready for meet-by-meet result imports.",
+      "At the moment, the season page includes two Savannah Country Day regular-season meets along with the region and state championship meets identified from the archived schedule screenshots.",
+      "This gives the track section another year of structure without forcing us to guess at marks before the source pages are checked."
+    ],
+    "HighlightNotes": [
+      "Two Savannah Country Day regular-season meets and the region and state championship meets have been identified for the 2022-23 season.",
+      "Detailed athlete results for those meets are the next layer to import."
+    ]
+  },
+  {
     "SeasonID": 2024,
     "SeasonLabel": "2023-24",
     "HeadCoach": "Wes Worthington",
