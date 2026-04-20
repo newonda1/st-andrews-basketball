@@ -81,7 +81,7 @@
     "PlayerID": 197904,
     "FirstName": "Bill",
     "LastName": "Sharpley",
-    "GradYear": null
+    "GradYear": 1982
   },
   {
     "PlayerID": 197905,
@@ -93,13 +93,13 @@
     "PlayerID": 197906,
     "FirstName": "Danny",
     "LastName": "Wall",
-    "GradYear": null
+    "GradYear": 1982
   },
   {
     "PlayerID": 197907,
     "FirstName": "Garrett",
     "LastName": "Weeks",
-    "GradYear": null
+    "GradYear": 1980
   },
   {
     "PlayerID": 198001,
