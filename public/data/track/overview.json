@@ -1,0 +1,35 @@
+{
+  "pageTitle": "St. Andrew's Track & Field",
+  "pageIntro": "The St. Andrew's track & field page is built around marks, placements, qualifiers, relays, and postseason finishes. It combines boys and girls results into one program hub while leaving space for the championship history that the section will grow into over time.",
+  "trackedSince": "2018-19",
+  "classification": "GIAA AAA",
+  "region": "Region 2",
+  "location": "Savannah, Georgia",
+  "coaches": {
+    "headCoach": "Wes Worthington",
+    "assistantCoach": "Russell Wilson"
+  },
+  "programSnapshot": [
+    "Track & field gives the site a different kind of story to tell than baseball or basketball. Instead of wins and losses, the strongest snapshots are season-best marks, relay progress, qualifiers, podium finishes, and the athletes who steadily move up the all-time lists.",
+    "The program's public results become much more visible starting with the 2018-19 school year and then expand through GISA and GIAA archives, St. Andrew's athletics pages, and Georgia MileSplit meet pages. That makes the track section a good fit for year-by-year summaries, event leaders, and meet logs.",
+    "This first version of the page focuses on a strong landing experience and a clean data structure. It keeps the same overall feel as the other sports pages while making room for the kind of track-specific views we will want next."
+  ],
+  "nextSections": [
+    {
+      "title": "Year-by-Year Results",
+      "description": "Season cards with team finish notes, qualifying performances, and direct links into individual meets."
+    },
+    {
+      "title": "School Records",
+      "description": "All-time top marks by event for boys, girls, and relays with season and athlete context."
+    },
+    {
+      "title": "Season Leaders",
+      "description": "Current-year best marks by event group so the page can feel active even without a win-loss record."
+    },
+    {
+      "title": "Championship History",
+      "description": "Region and state appearances, medalists, qualifiers, and notable relay finishes."
+    }
+  ]
+}
