@@ -102,7 +102,7 @@ function RecordsVsOpponents() {
     Promise.all([
       fetch("/data/boys/baseball/games.json").then((r) => r.json()),
       fetch("/data/boys/baseball/playergamestats.json").then((r) => r.json()),
-      fetch("/data/boys/players.json").then((r) => r.json()),
+      fetch("/data/players.json").then((r) => r.json()),
       fetch("/data/schools.json").then((r) => r.json()),
     ])
       .then(([gamesData, statsData, playersData, schoolsData]) => {

@@ -113,7 +113,7 @@ export default function GameDetail() {
         const [gamesRes, statsRes, playersRes, rostersRes] = await Promise.all([
           fetch("/data/boys/baseball/games.json"),
           fetch("/data/boys/baseball/playergamestats.json"),
-          fetch("/data/boys/players.json"),
+          fetch("/data/players.json"),
           fetch("/data/boys/baseball/seasonrosters.json"),
         ]);
 

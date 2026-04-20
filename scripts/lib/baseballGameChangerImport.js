@@ -5,7 +5,7 @@ const { execFileSync } = require("child_process");
 function getProjectPaths(projectRoot = process.cwd()) {
   return {
     PROJECT_ROOT: projectRoot,
-    PLAYERS_PATH: path.join(projectRoot, "public/data/boys/players.json"),
+    PLAYERS_PATH: path.join(projectRoot, "public/data/players.json"),
     STATS_PATH: path.join(projectRoot, "public/data/boys/baseball/playergamestats.json"),
     GAMES_PATH: path.join(projectRoot, "public/data/boys/baseball/games.json"),
   };

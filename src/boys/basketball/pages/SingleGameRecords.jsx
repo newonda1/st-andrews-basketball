@@ -195,7 +195,7 @@ export default function SingleGameRecords() {
 
         const [playerStatsDataRaw, playersDataRaw, gamesDataRaw, schoolsDataRaw] = await Promise.all([
           fetchJson("playergamestats.json", "/data/boys/basketball/playergamestats.json"),
-          fetchJson("players.json", "/data/boys/players.json"),
+          fetchJson("players.json", "/data/players.json"),
           fetchJson("games.json", "/data/boys/basketball/games.json"),
           fetchJson("schools.json", SCHOOLS_PATH),
         ]);

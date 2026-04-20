@@ -1459,7 +1459,7 @@ export default function BoysBaseballAdmin() {
   useEffect(() => {
     async function loadData() {
       try {
-        const playersPath = "/data/boys/players.json";
+        const playersPath = "/data/players.json";
         const rostersPath = "/data/boys/baseball/seasonrosters.json";
         const seasonsPath = "/data/boys/baseball/seasons.json";
         const gamesPath = "/data/boys/baseball/games.json";

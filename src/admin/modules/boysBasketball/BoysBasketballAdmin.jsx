@@ -233,7 +233,7 @@ function slugifySchoolId(name) {
 
 export default function BoysBasketballAdmin() {
   const PATHS = {
-    players: "/data/boys/players.json",
+    players: "/data/players.json",
     schools: "/data/schools.json",
     seasonRosters: "/data/boys/basketball/seasonrosters.json",
     games: "/data/boys/basketball/games.json",

@@ -27,7 +27,7 @@ function seasonYearFromRosterId(seasonId) {
 }
 
 function main() {
-  const players = readJson("public/data/boys/players.json");
+  const players = readJson("public/data/players.json");
   const schools = readJson("public/data/schools.json");
   const games = readJson("public/data/boys/basketball/games.json");
   const rosters = readJson("public/data/boys/basketball/seasonrosters.json");

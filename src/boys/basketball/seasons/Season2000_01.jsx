@@ -26,7 +26,7 @@ function Season2000_01() {
         await Promise.all([
           fetch("/data/boys/basketball/games.json"),
           fetch("/data/boys/basketball/playergamestats.json"),
-          fetch("/data/boys/players.json"),
+          fetch("/data/players.json"),
           fetch(BOYS_BASKETBALL_ROSTERS_PATH),
           fetch(SCHOOLS_PATH),
           fetch("/data/boys/basketball/adjustments.json").catch(() => null),

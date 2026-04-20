@@ -33,7 +33,7 @@ function Season2025_26() {
       const [gamesRes, statsRes, playersRes, bracketsRes, rostersRes, schoolsRes] = await Promise.all([
         fetch("/data/boys/basketball/games.json"),
         fetch("/data/boys/basketball/playergamestats.json"),
-        fetch("/data/boys/players.json"),
+        fetch("/data/players.json"),
         fetch("/data/boys/basketball/brackets.json"),
         fetch(BOYS_BASKETBALL_ROSTERS_PATH),
         fetch(SCHOOLS_PATH),

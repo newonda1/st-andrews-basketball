@@ -1,0 +1,74 @@
+[
+  {
+    "MeetID": 2026021101,
+    "Season": 2026,
+    "Date": "2026-02-11",
+    "Name": "Savannah Country Day School Varsity Meet #1",
+    "Location": "Savannah, GA",
+    "Level": "Varsity",
+    "MeetType": "Regular Season",
+    "Status": "Complete",
+    "Notes": "Results loaded from MileSplit team results page.",
+    "SourceUrl": "https://ga.milesplit.com/meets/718237-savannah-country-day-school-varsity-meet-1-2026/teams/28890"
+  },
+  {
+    "MeetID": 2026030401,
+    "Season": 2026,
+    "Date": "2026-03-04",
+    "Name": "Savannah Country Day School Varsity Meet #3",
+    "Location": "Savannah, GA",
+    "Level": "Varsity",
+    "MeetType": "Regular Season",
+    "Status": "Complete",
+    "Notes": "Results loaded from MileSplit team results page. The 4x800 relay mark is verified, but the public formatted page did not expose the St. Andrew's relay lineup.",
+    "SourceUrl": "https://ga.milesplit.com/meets/718241-savannah-country-day-school-varsity-meet-3-2026/teams/28890"
+  },
+  {
+    "MeetID": 2026031101,
+    "Season": 2026,
+    "Date": "2026-03-11",
+    "Name": "Savannah Country Day School Varsity Meet #4",
+    "Location": "Savannah, GA",
+    "Level": "Varsity",
+    "MeetType": "Regular Season",
+    "Status": "Complete",
+    "Notes": "Results loaded from MileSplit team results page.",
+    "SourceUrl": "https://ga.milesplit.com/meets/718242-savannah-country-day-school-varsity-meet-4-2026/teams/28890"
+  },
+  {
+    "MeetID": 2026040102,
+    "Season": 2026,
+    "Date": "2026-04-01",
+    "Name": "Bulloch Academy #4",
+    "Location": "Statesboro, GA",
+    "Level": "Varsity",
+    "MeetType": "Regular Season",
+    "Status": "Scheduled",
+    "Notes": "Scheduled varsity meet.",
+    "SourceUrl": null
+  },
+  {
+    "MeetID": 2026040801,
+    "Season": 2026,
+    "Date": "2026-04-08",
+    "Name": "Savannah Country Day School Varsity Meet #5",
+    "Location": "Savannah, GA",
+    "Level": "Varsity",
+    "MeetType": "Regular Season",
+    "Status": "Complete",
+    "Notes": "Results loaded from MileSplit team results page. Relay marks are verified, but the public formatted page did not expose the St. Andrew's relay lineups.",
+    "SourceUrl": "https://ga.milesplit.com/meets/718244-savannah-country-day-school-varsity-meet-5-2026/teams/28890"
+  },
+  {
+    "MeetID": 2026042201,
+    "Season": 2026,
+    "Date": "2026-04-22",
+    "Name": "GIAA Region 2 AAA",
+    "Location": "Statesboro, GA",
+    "Level": "Varsity",
+    "MeetType": "Region",
+    "Status": "Scheduled",
+    "Notes": "Region championship meet.",
+    "SourceUrl": null
+  }
+]

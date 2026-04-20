@@ -347,7 +347,7 @@ function PlayerPage() {
         setError("");
 
         const [playersRes, gamesRes, statsRes, rostersRes] = await Promise.all([
-          fetch(`/data/boys/players.json`),
+          fetch(`/data/players.json`),
           fetch(`${DATA_BASE}/games.json`),
           fetch(`${DATA_BASE}/playergamestats.json`),
           fetch(`${DATA_BASE}/seasonrosters.json`),
