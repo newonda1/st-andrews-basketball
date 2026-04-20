@@ -42,7 +42,7 @@ const sports = [
     name: "Track & Field",
     to: "/athletics/track/records/school",
     icon: "/images/track/track_icon.png",
-    regionYears: [],
+    regionYears: [2024],
     stateYears: [],
     showStateSectionWhenEmpty: true,
   },
