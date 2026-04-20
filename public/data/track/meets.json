@@ -44,8 +44,8 @@
     "Level": "Varsity",
     "MeetType": "State",
     "Status": "Complete",
-    "Notes": "Archived postseason meet identified from the 2022-23 team schedule screenshot. Detailed St. Andrew's results have not been imported yet.",
-    "SourceUrl": null
+    "Notes": "Results loaded from the MileSplit raw complete results page for the state championships. The public raw page included St. Andrew's finals results, Andrew Futch's sprint prelims, and a girls 4x800 relay mark without the relay lineup.",
+    "SourceUrl": "https://ga.milesplit.com/meets/544745-giaa-state-championships-2023/results/915719/raw"
   },
   {
     "MeetID": 2024041701,

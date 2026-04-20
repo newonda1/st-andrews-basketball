@@ -42,9 +42,22 @@ const sports = [
     name: "Track & Field",
     to: "/athletics/track/records/school",
     icon: "/images/track/track_icon.png",
-    regionYears: [2024],
-    stateYears: [],
-    showStateSectionWhenEmpty: true,
+    championshipGroups: [
+      {
+        title: "Team Championships",
+        sections: [
+          { title: "Region Championships", years: [] },
+          { title: "State Championships", years: [] },
+        ],
+      },
+      {
+        title: "Individual Championships",
+        sections: [
+          { title: "Region Championships", years: [2024] },
+          { title: "State Championships", years: [] },
+        ],
+      },
+    ],
   },
 ];
 
@@ -85,6 +98,26 @@ function ChampionshipSection({ title, years }) {
   );
 }
 
+function ChampionshipGroup({ title, sections }) {
+  return (
+    <section className="rounded-[1.7rem] border border-white/16 bg-white/[0.06] px-2.5 py-3 shadow-inner shadow-black/10">
+      <h3 className="px-2 text-center text-[0.64rem] font-black uppercase tracking-[0.24em] text-white/90 sm:text-[0.7rem]">
+        {title}
+      </h3>
+
+      <div className="mt-3 space-y-3">
+        {sections.map((section) => (
+          <ChampionshipSection
+            key={`${title}-${section.title}`}
+            title={section.title}
+            years={section.years}
+          />
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function SportBannerHeader({ sport }) {
   return (
     <div className="relative mx-1.5 overflow-hidden rounded-[1.8rem] border border-white/18 bg-[linear-gradient(180deg,rgba(255,255,255,0.14),rgba(255,255,255,0.05)_58%,rgba(15,23,42,0.14))] px-4 pb-3 pt-2.5 shadow-inner shadow-black/10 sm:mx-2">
@@ -119,6 +152,29 @@ function SportBannerHeader({ sport }) {
 }
 
 function SportBanner({ sport }) {
+  const championshipContent = sport.championshipGroups ? (
+    sport.championshipGroups.map((group) => (
+      <ChampionshipGroup
+        key={`${sport.name}-${group.title}`}
+        title={group.title}
+        sections={group.sections}
+      />
+    ))
+  ) : (
+    <>
+      <ChampionshipSection
+        title="Region Championships"
+        years={sport.regionYears}
+      />
+      {sport.stateYears.length > 0 || sport.showStateSectionWhenEmpty ? (
+        <ChampionshipSection
+          title="State Championships"
+          years={sport.stateYears}
+        />
+      ) : null}
+    </>
+  );
+
   return (
     <Link
       to={sport.to}
@@ -167,18 +223,7 @@ function SportBanner({ sport }) {
           <SportBannerHeader sport={sport} />
         </header>
 
-        <div className="relative z-20 mt-5 flex-1 space-y-3">
-          <ChampionshipSection
-            title="Region Championships"
-            years={sport.regionYears}
-          />
-          {sport.stateYears.length > 0 || sport.showStateSectionWhenEmpty ? (
-            <ChampionshipSection
-              title="State Championships"
-              years={sport.stateYears}
-            />
-          ) : null}
-        </div>
+        <div className="relative z-20 mt-5 flex-1 space-y-3">{championshipContent}</div>
 
         <div className="relative z-20 mt-6 flex translate-y-2 justify-center pt-4">
           <img

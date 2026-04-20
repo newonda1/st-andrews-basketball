@@ -4061,5 +4061,113 @@
     "Round": "Finals",
     "Heat": "H1",
     "Status": "Complete"
+  },
+  {
+    "StatID": "2023042701-202319-shot-put",
+    "MeetID": 2023042701,
+    "PlayerID": 202319,
+    "Gender": "Girls",
+    "Event": "Shot Put",
+    "Mark": "28-2.75",
+    "Place": "11th",
+    "Round": "Finals",
+    "Heat": "H1",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2023042701-202418-long-jump",
+    "MeetID": 2023042701,
+    "PlayerID": 202418,
+    "Gender": "Boys",
+    "Event": "Long Jump",
+    "Mark": "16-4.50",
+    "Place": "19th",
+    "Round": "Finals",
+    "Heat": "H1",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2023042701-202418-100m",
+    "MeetID": 2023042701,
+    "PlayerID": 202418,
+    "Gender": "Boys",
+    "Event": "100 Meter Dash",
+    "Mark": "11.75",
+    "Place": "16th",
+    "Round": "Prelims",
+    "Heat": "H1",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2023042701-2026021-1600m",
+    "MeetID": 2023042701,
+    "PlayerID": 2026021,
+    "Gender": "Girls",
+    "Event": "1600 Meter Run",
+    "Mark": "5:55.51",
+    "Place": "10th",
+    "Round": "Finals",
+    "Heat": "H1",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2023042701-2026006-1600m",
+    "MeetID": 2023042701,
+    "PlayerID": 2026006,
+    "Gender": "Boys",
+    "Event": "1600 Meter Run",
+    "Mark": "5:12.82",
+    "Place": "16th",
+    "Round": "Finals",
+    "Heat": "H1",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2023042701-202418-200m",
+    "MeetID": 2023042701,
+    "PlayerID": 202418,
+    "Gender": "Boys",
+    "Event": "200 Meter Dash",
+    "Mark": "23.58",
+    "Place": "10th",
+    "Round": "Prelims",
+    "Heat": "H1",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2023042701-2026021-3200m",
+    "MeetID": 2023042701,
+    "PlayerID": 2026021,
+    "Gender": "Girls",
+    "Event": "3200 Meter Run",
+    "Mark": "13:15.45",
+    "Place": "10th",
+    "Round": "Finals",
+    "Heat": "H1",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2023042701-2026010-3200m",
+    "MeetID": 2023042701,
+    "PlayerID": 2026010,
+    "Gender": "Boys",
+    "Event": "3200 Meter Run",
+    "Mark": "11:51.75",
+    "Place": "16th",
+    "Round": "Finals",
+    "Heat": "H1",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2023042701-girls-relay-4x800m",
+    "MeetID": 2023042701,
+    "PlayerID": null,
+    "Gender": "Girls",
+    "Event": "4x800 Meter Relay",
+    "Mark": "11:32.33",
+    "Place": "10th",
+    "Round": "Finals",
+    "Heat": "H2",
+    "Status": "Complete"
   }
 ]
