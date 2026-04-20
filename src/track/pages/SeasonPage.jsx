@@ -6,7 +6,6 @@ import {
   buildTrackRoster,
   buildTrackSeasonList,
   formatTrackDate,
-  formatTrackDateRange,
   getTrackSeasonLabel,
   resolveTrackAthleteName,
   sortTrackResults,
@@ -109,11 +108,6 @@ export default function SeasonPage({
   }, [playerMap, seasonEntries, seasonMeets]);
 
   const seasonLabel = getTrackSeasonLabel(season || seasonId);
-  const firstMeetDate = seasonMeets[0]?.Date || null;
-  const lastMeetDate = seasonMeets[seasonMeets.length - 1]?.Date || null;
-  const notableText = Array.isArray(season?.HighlightNotes) && season.HighlightNotes.length
-    ? season.HighlightNotes[0]
-    : season?.Region || "Track & Field";
 
   useEffect(() => {
     setExpandedMeetId((current) => {
@@ -154,44 +148,6 @@ export default function SeasonPage({
 
       <h1 className="text-3xl font-bold text-center mb-0">{seasonLabel} Season</h1>
 
-      <section className="max-w-4xl mx-auto space-y-3">
-        <h2 className="text-2xl font-semibold">Season Recap</h2>
-        <div className="grid gap-4 md:grid-cols-[1fr_auto] md:items-start">
-          <div className="space-y-3 text-gray-800 leading-relaxed">
-            {(season.RecapParagraphs || []).map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
-          </div>
-
-          <dl className="grid grid-cols-3 gap-3 text-center md:w-72 md:grid-cols-1">
-            <div className="border border-gray-200 rounded-lg px-3 py-2">
-              <dt className="text-xs font-semibold uppercase tracking-wide text-gray-500">
-                Coach
-              </dt>
-              <dd className="text-lg font-semibold text-gray-900">
-                {season.HeadCoach || "—"}
-              </dd>
-            </div>
-            <div className="border border-gray-200 rounded-lg px-3 py-2">
-              <dt className="text-xs font-semibold uppercase tracking-wide text-gray-500">
-                Region
-              </dt>
-              <dd className="text-lg font-semibold text-gray-900">
-                {season.Region || "—"}
-              </dd>
-            </div>
-            <div className="border border-gray-200 rounded-lg px-3 py-2">
-              <dt className="text-xs font-semibold uppercase tracking-wide text-gray-500">
-                Notable
-              </dt>
-              <dd className="text-sm font-semibold text-gray-900">
-                {notableText}
-              </dd>
-            </div>
-          </dl>
-        </div>
-      </section>
-
       <section className="space-y-3">
         <h2 className="text-2xl font-semibold mt-2 mb-2">Season Images</h2>
         <div className="rounded-lg border border-dashed border-gray-300 bg-gray-50 px-6 py-10 text-center">
@@ -205,24 +161,32 @@ export default function SeasonPage({
       </section>
 
       <section className="space-y-3">
-        <h2 className="text-2xl font-semibold mt-2 mb-2">Athletes and Events</h2>
+        <h2 className="text-2xl font-semibold mt-2 mb-2">Athletes &amp; Events</h2>
         {roster.length ? (
           <div className="overflow-x-auto">
-            <div className="flex min-w-max gap-3 pb-2">
-              {roster.map((entry) => (
-                <article
-                  key={entry.athleteName}
-                  className="w-72 shrink-0 rounded-lg border border-gray-200 bg-white px-4 py-4"
-                >
-                  <h3 className="text-base font-semibold text-gray-900">
-                    {entry.athleteName}
-                  </h3>
-                  <p className="mt-2 text-sm leading-6 text-gray-700">
-                    {entry.events.join(" | ")}
-                  </p>
-                </article>
-              ))}
-            </div>
+            <table className="w-full min-w-[640px] border text-xs sm:text-sm">
+              <thead className="bg-gray-100">
+                <tr>
+                  <th className="border px-3 py-2 text-left">Athlete</th>
+                  <th className="border px-3 py-2 text-left">Events</th>
+                </tr>
+              </thead>
+              <tbody>
+                {roster.map((entry, idx) => (
+                  <tr
+                    key={entry.athleteName}
+                    className={idx % 2 ? "bg-gray-50" : "bg-white"}
+                  >
+                    <td className="border px-3 py-2 align-top font-semibold text-gray-900">
+                      {entry.athleteName}
+                    </td>
+                    <td className="border px-3 py-2 align-top text-gray-700">
+                      {entry.events.join(" | ")}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         ) : (
           <div className="rounded-lg border border-dashed border-gray-300 bg-gray-50 px-6 py-8 text-center text-sm text-gray-600">
@@ -302,13 +266,6 @@ export default function SeasonPage({
             No meets are attached to this season yet.
           </div>
         )}
-      </section>
-
-      <section className="max-w-4xl mx-auto text-center text-sm text-gray-600">
-        <p>
-          {formatTrackDateRange(firstMeetDate, lastMeetDate)}
-          {season.StateMeetLocation ? ` | State meet: ${season.StateMeetLocation}` : ""}
-        </p>
       </section>
     </div>
   );
