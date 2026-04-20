@@ -1076,6 +1076,67 @@
     ]
   },
   {
+    "SeasonID": "2002-03",
+    "Players": [
+      {
+        "PlayerID": 200001,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200002,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200003,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200201,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200202,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200101,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200203,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200204,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200205,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200206,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200207,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200010,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200011,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200208,
+        "JerseyNumber": null
+      }
+    ]
+  },
+  {
     "SeasonID": "2022-23",
     "Players": [
       {
