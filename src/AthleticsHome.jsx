@@ -40,7 +40,7 @@ const sports = [
   },
   {
     name: "Track & Field",
-    to: "/athletics/track",
+    to: "/athletics/track/records/school",
     icon: "/images/track/track_icon.png",
     regionYears: [],
     stateYears: [],
@@ -55,7 +55,7 @@ const menuSections = [
       { to: "/athletics/boys/basketball", label: "Boys Basketball" },
       { to: "/athletics/girls/basketball", label: "Girls Basketball" },
       { to: "/athletics/boys/baseball", label: "Boys Baseball" },
-      { to: "/athletics/track", label: "Track & Field" },
+      { to: "/athletics/track/records/school", label: "Track & Field" },
     ],
   },
 ];

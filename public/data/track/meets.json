@@ -32,8 +32,8 @@
     "Level": "Varsity",
     "MeetType": "Regular Season",
     "Status": "Complete",
-    "Notes": "Meet confirmed from the 2025 varsity schedule. Individual St. Andrew's results have not been loaded yet.",
-    "SourceUrl": null
+    "Notes": "Results loaded from the MileSplit raw results page. Relay marks are verified, but the public results did not expose the St. Andrew's relay lineups.",
+    "SourceUrl": "https://ga.milesplit.com/meets/647589-savannah-country-day-school-varsity-meet-6-2025/results/1141149/raw"
   },
   {
     "MeetID": 2025041601,
@@ -44,8 +44,8 @@
     "Level": "Varsity",
     "MeetType": "Region",
     "Status": "Complete",
-    "Notes": "Meet confirmed from the 2025 varsity schedule. Individual St. Andrew's results have not been loaded yet.",
-    "SourceUrl": null
+    "Notes": "Results loaded from the MileSplit raw results page for the region championships. The public raw file exposed the St. Andrew's relay lineups for the completed relay races.",
+    "SourceUrl": "https://ga.milesplit.com/meets/661736-giaa-region-2-aaa-championships-2025/results/1149392/raw"
   },
   {
     "MeetID": 2025050101,
@@ -56,8 +56,8 @@
     "Level": "Varsity",
     "MeetType": "State",
     "Status": "Complete",
-    "Notes": "Meet confirmed from the 2025 varsity schedule. Individual St. Andrew's results have not been loaded yet.",
-    "SourceUrl": null
+    "Notes": "Results loaded from the MileSplit raw AAA complete results page for the state championships. The public raw file exposed the St. Andrew's 4x800 relay lineup and also listed one SCR and one DNS for St. Andrew's individual entries.",
+    "SourceUrl": "https://ga.milesplit.com/meets/686028-giaa-state-track-field-championships-class-aa-aaa-2025/results/1166061/raw"
   },
   {
     "MeetID": 2026021101,

@@ -1,5 +1,31 @@
 [
   {
+    "SeasonID": 2025,
+    "SeasonLabel": "2024-25",
+    "HeadCoach": "Wes Worthington",
+    "AssistantCoach": "Russell Wilson",
+    "Classification": "GIAA AAA",
+    "Region": "Region 2",
+    "StatusBadge": "verified",
+    "StatusNote": "The 2024-25 season currently includes five verified St. Andrew's meets, ending with the April 16, 2025 region championships and the May 1-3, 2025 state championships.",
+    "FirstRegularSeasonMeet": "2025-02-26",
+    "RegionDeadline": "2025-04-16",
+    "StateMeetStart": "2025-05-01",
+    "StateMeetEnd": "2025-05-03",
+    "StateMeetLocation": "Strong Rock Christian School, Locust Grove",
+    "RecapParagraphs": [
+      "The 2024-25 season is the first St. Andrew's track year currently loaded meet-by-meet in the site, and it already shows the identity of the program clearly: distance depth, developing relay chemistry, and throws groups that kept adding points as the spring moved along.",
+      "Grace Dare opened the year with a runner-up finish in the girls 800, Lily McAtee advanced to the state meet in the 200, and Ellie Waldron gave the girls side a steady presence in the throws. On the boys side, Miles Cummings kept improving in the shot put, and the 4x800 relay turned into one of the season's clearest progression stories.",
+      "By postseason, the archive shows St. Andrew's athletes competing in distance races, sprints, jumps, throws, and relays at both region and state. That gives the section a strong first season page and a useful base for future event-group and championship-history additions."
+    ],
+    "HighlightNotes": [
+      "Grace Dare placed 2nd in the girls 800 meters with a 2:34.51 at Savannah Country Day School Varsity Meet #2.",
+      "Miles Cummings closed the season with a 42-6.25 shot put at the GIAA state meet.",
+      "The boys 4x800 relay improved from 9:37.88 at the first loaded meet to 9:10.25 at state.",
+      "State-meet entries are loaded for Lily McAtee, Ryder Small, Miles Cummings, Ellie Waldron, Grace Dare, and the boys 4x800 relay."
+    ]
+  },
+  {
     "SeasonID": 2026,
     "SeasonLabel": "2025-26",
     "HeadCoach": "Wes Worthington",
@@ -12,6 +38,17 @@
     "RegionDeadline": "2026-04-23",
     "StateMeetStart": "2026-04-30",
     "StateMeetEnd": "2026-05-02",
-    "StateMeetLocation": "Strong Rock Christian School, Locust Grove"
+    "StateMeetLocation": "Strong Rock Christian School, Locust Grove",
+    "RecapParagraphs": [
+      "The 2025-26 season file is still growing, but the first four completed meets already show more event coverage across both the girls and boys groups. The section now has enough data to track weekly progress instead of only listing a schedule.",
+      "Aubri Rutledge has supplied the headline sprint marks so far on the girls side, while Janiyah Johnson has anchored the throws with strong discus and shot put performances. The distance group has also stayed active every week, with Lane Mandel and Nick Brown providing the most visible middle-distance and distance marks in the current file.",
+      "On the boys side, the 4x100 relay is already down to 45.70, Luke Nelson has paired sprint speed with a strong discus mark, and Josiah Bowers has contributed in both the high jump and triple jump. With region and state still ahead on the calendar, this page is designed to keep filling in as postseason results are added."
+    ],
+    "HighlightNotes": [
+      "Aubri Rutledge has posted the team's best girls sprint marks so far with a 13.32 in the 100 and a 27.09 in the 200.",
+      "The boys 4x100 relay has already reached 45.70 through the first four completed meets.",
+      "Lane Mandel's 13:08.48 in the 3200 and Nick Brown's 5:11.95 in the 1600 lead the loaded distance results.",
+      "Region and state dates are already on the timeline, so the meet-by-meet archive can keep growing through postseason."
+    ]
   }
 ]

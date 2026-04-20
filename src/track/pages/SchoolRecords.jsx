@@ -133,6 +133,7 @@ export default function SchoolRecords({
   playerMeetStats = [],
   players = [],
   meets = [],
+  status = "",
 }) {
   const [expandedKey, setExpandedKey] = useState(null);
 
@@ -207,6 +208,12 @@ export default function SchoolRecords({
 
   return (
     <div className="pt-2 pb-10 lg:pb-40 space-y-6 px-4 max-w-6xl mx-auto">
+      {status ? (
+        <div className="rounded-2xl border border-slate-200 bg-white px-5 py-4 text-center text-sm text-slate-600 shadow-sm">
+          {status}
+        </div>
+      ) : null}
+
       <h1 className="text-2xl font-bold text-center">School Records</h1>
       <p className="-mt-1.5 text-center text-sm italic text-gray-600">
         Select any event to see the top 20 St. Andrew&apos;s performances currently
