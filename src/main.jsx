@@ -8,6 +8,7 @@ import AthleticsHome from "./AthleticsHome.jsx";
 import BoysBasketballApp from "./boys/basketball/BoysBasketballApp.jsx";
 import BoysBaseballApp from "./boys/baseball/BoysBaseballApp.jsx";
 import GirlsBasketballApp from "./girls/basketball/GirlsBasketballApp.jsx";
+import TrackApp from "./track/TrackApp.jsx";
 import AdminApp from "./admin/AdminApp.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -31,6 +32,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           path="/athletics/girls/basketball/*"
           element={<GirlsBasketballApp />}
         />
+
+        <Route path="/athletics/track/*" element={<TrackApp />} />
 
         <Route path="/admin/*" element={<AdminApp />} />
       </Routes>

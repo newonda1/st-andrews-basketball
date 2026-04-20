@@ -38,6 +38,14 @@ const sports = [
     regionYears: [2019],
     stateYears: [],
   },
+  {
+    name: "Track & Field",
+    to: "/athletics/track",
+    icon: "/images/common/st_andrews_athletics_logo.png",
+    regionYears: [],
+    stateYears: [],
+    showStateSectionWhenEmpty: true,
+  },
 ];
 
 const menuSections = [
@@ -47,6 +55,7 @@ const menuSections = [
       { to: "/athletics/boys/basketball", label: "Boys Basketball" },
       { to: "/athletics/girls/basketball", label: "Girls Basketball" },
       { to: "/athletics/boys/baseball", label: "Boys Baseball" },
+      { to: "/athletics/track", label: "Track & Field" },
     ],
   },
 ];
@@ -69,7 +78,9 @@ function ChampionshipSection({ title, years }) {
             </div>
           ))}
         </div>
-      ) : null}
+      ) : (
+        <div className="mt-3 min-h-[2.25rem] sm:min-h-[2.5rem]" aria-hidden="true" />
+      )}
     </section>
   );
 }
@@ -161,7 +172,7 @@ function SportBanner({ sport }) {
             title="Region Championships"
             years={sport.regionYears}
           />
-          {sport.stateYears.length > 0 ? (
+          {sport.stateYears.length > 0 || sport.showStateSectionWhenEmpty ? (
             <ChampionshipSection
               title="State Championships"
               years={sport.stateYears}
