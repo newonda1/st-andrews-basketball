@@ -4,7 +4,6 @@ import AthleticsProgramShell from "../components/AthleticsProgramShell";
 import SchoolRecords from "./pages/SchoolRecords";
 import SeasonPage from "./pages/SeasonPage";
 import YearlyResults from "./pages/YearlyResults";
-import { buildTrackSeasonList, getTrackSeasonLabel } from "./trackPageUtils";
 
 export default function TrackApp() {
   const [seasons, setSeasons] = useState([]);
@@ -76,11 +75,6 @@ export default function TrackApp() {
   }, []);
 
   const menuSections = useMemo(() => {
-    const seasonLinks = buildTrackSeasonList(seasons, meets).map((season) => ({
-      to: `/athletics/track/seasons/${season.SeasonID}`,
-      label: getTrackSeasonLabel(season),
-    }));
-
     return [
       {
         title: "Track & Field",
@@ -95,16 +89,8 @@ export default function TrackApp() {
           },
         ],
       },
-      ...(seasonLinks.length
-        ? [
-            {
-              title: "Seasons",
-              links: seasonLinks,
-            },
-          ]
-        : []),
     ];
-  }, [meets, seasons]);
+  }, []);
 
   return (
     <AthleticsProgramShell

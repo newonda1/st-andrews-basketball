@@ -1,5 +1,29 @@
 [
   {
+    "MeetID": 2024041701,
+    "Season": 2024,
+    "Date": "2024-04-17",
+    "Name": "GIAA Region 2AAA Championships",
+    "Location": "Statesboro, GA",
+    "Level": "Varsity",
+    "MeetType": "Region",
+    "Status": "Complete",
+    "Notes": "Results loaded from the MileSplit raw region results pages. The event-level raw file exposed the St. Andrew's relay lineups and listed several DNS entries.",
+    "SourceUrl": "https://ga.milesplit.com/meets/611976-giaa-region-2aaa-championships-2024/results/1028188/raw"
+  },
+  {
+    "MeetID": 2024042501,
+    "Season": 2024,
+    "Date": "2024-04-25",
+    "Name": "GIAA AAA State Meet",
+    "Location": "Columbus, GA",
+    "Level": "Varsity",
+    "MeetType": "State",
+    "Status": "Complete",
+    "Notes": "Results loaded from the MileSplit raw results page for the GIAA AAA state meet.",
+    "SourceUrl": "https://ga.milesplit.com/meets/606560-giaa-aaa-state-meet-2024/results/1038995/raw"
+  },
+  {
     "MeetID": 2025022601,
     "Season": 2025,
     "Date": "2025-02-26",

@@ -1,10 +1,7 @@
 import React, { useMemo } from "react";
 import { Link } from "react-router-dom";
 import {
-  buildTrackPlayerMap,
-  buildTrackRoster,
   buildTrackSeasonList,
-  formatTrackDate,
   getTrackSeasonLabel,
 } from "../trackPageUtils";
 
@@ -78,27 +75,18 @@ const styles = {
 export default function YearlyResults({
   seasons = [],
   meets = [],
-  playerMeetStats = [],
-  players = [],
   status = "",
 }) {
-  const playerMap = useMemo(() => buildTrackPlayerMap(players), [players]);
-
   const seasonRows = useMemo(() => {
-    return buildTrackSeasonList(seasons, meets).map((season) => {
+    return buildTrackSeasonList(seasons, meets)
+      .slice()
+      .sort((a, b) => Number(a.SeasonID) - Number(b.SeasonID))
+      .map((season) => {
       const seasonMeets = meets
         .filter((meet) => Number(meet.Season) === Number(season.SeasonID))
         .slice()
         .sort((a, b) => String(a.Date || "").localeCompare(String(b.Date || "")));
 
-      const meetIds = new Set(seasonMeets.map((meet) => meet.MeetID));
-      const seasonEntries = playerMeetStats.filter((entry) => meetIds.has(entry.MeetID));
-      const roster = buildTrackRoster(seasonEntries, playerMap);
-      const completedMeets = seasonMeets.filter(
-        (meet) => String(meet.Status).toLowerCase() === "complete"
-      );
-
-      const latestMeet = seasonMeets[seasonMeets.length - 1] || null;
       const highlightText = Array.isArray(season.HighlightNotes)
         ? season.HighlightNotes.slice(0, 2).join(" ")
         : "";
@@ -108,14 +96,10 @@ export default function YearlyResults({
         seasonLabel: getTrackSeasonLabel(season),
         coach: season.HeadCoach || "—",
         meetCount: seasonMeets.length,
-        completedCount: completedMeets.length,
-        athleteCount: roster.length,
-        resultCount: seasonEntries.length,
-        latestMeetDate: latestMeet?.Date || null,
         note: highlightText || season.StatusNote || "—",
       };
-    });
-  }, [meets, playerMap, playerMeetStats, seasons]);
+      });
+  }, [meets, seasons]);
 
   return (
     <div style={styles.page}>
@@ -135,17 +119,13 @@ export default function YearlyResults({
               <th style={styles.th}>Season</th>
               <th style={styles.th}>Coach</th>
               <th style={styles.th}>Meets</th>
-              <th style={styles.th}>Completed</th>
-              <th style={styles.th}>Athletes</th>
-              <th style={styles.th}>Results</th>
-              <th style={styles.th}>Latest Meet</th>
               <th style={styles.th}>Season Snapshot</th>
             </tr>
           </thead>
           <tbody>
             {seasonRows.length === 0 ? (
               <tr>
-                <td style={styles.td} colSpan={8}>
+                <td style={styles.td} colSpan={4}>
                   <span style={styles.muted}>No track seasons are available yet.</span>
                 </td>
               </tr>
@@ -162,10 +142,6 @@ export default function YearlyResults({
                   </td>
                   <td style={styles.td}>{row.coach}</td>
                   <td style={styles.td}>{row.meetCount}</td>
-                  <td style={styles.td}>{row.completedCount}</td>
-                  <td style={styles.td}>{row.athleteCount}</td>
-                  <td style={styles.td}>{row.resultCount}</td>
-                  <td style={styles.td}>{formatTrackDate(row.latestMeetDate)}</td>
                   <td style={{ ...styles.td, ...styles.leftTd }}>{row.note}</td>
                 </tr>
               ))

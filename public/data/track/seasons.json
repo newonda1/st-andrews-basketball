@@ -1,5 +1,31 @@
 [
   {
+    "SeasonID": 2024,
+    "SeasonLabel": "2023-24",
+    "HeadCoach": "Wes Worthington",
+    "AssistantCoach": "Russell Wilson",
+    "Classification": "GIAA AAA",
+    "Region": "Region 2",
+    "StatusBadge": "verified",
+    "StatusNote": "The 2023-24 season currently includes the two postseason meets St. Andrew's contested in the public archive: the April 17, 2024 GIAA Region 2AAA Championships and the April 25-27, 2024 GIAA AAA State Meet.",
+    "FirstRegularSeasonMeet": "2024-04-17",
+    "RegionDeadline": "2024-04-17",
+    "StateMeetStart": "2024-04-25",
+    "StateMeetEnd": "2024-04-27",
+    "StateMeetLocation": "Brookstone School, Columbus",
+    "RecapParagraphs": [
+      "The 2023-24 track season currently appears in the public archive as a short postseason run, with St. Andrew's results loaded from the Region 2AAA championships and the GIAA AAA state meet. Even with just those two meets, the file already shows the shape of the team clearly: throws points, distance entries, and sprint-relay depth on the boys side.",
+      "Tripp Jackson delivered the headline region result by winning the boys shot put and placing fourth in discus, while Nick Brown and Ryder Small gave the team scoring and state-level presence in the distance races. Ellie Waldron also scored in the girls shot put at region before advancing to the state meet.",
+      "Because the loaded season is concentrated in championship competition, the 2023-24 page reads as a postseason snapshot rather than a full week-to-week schedule. It still adds an important earlier chapter to the track archive and pushes the section back one more school year."
+    ],
+    "HighlightNotes": [
+      "Tripp Jackson won the boys shot put at the Region 2AAA championships with a 43-1.50 and also placed 4th in discus.",
+      "Nick Brown placed 2nd in the boys 3200 at region and returned to the GIAA AAA state meet in the same event.",
+      "Ellie Waldron scored in the girls shot put at region and later competed at state.",
+      "The boys 4x100, 4x400, and 4x800 relays all appear in the region results, with the 4x100 relay placing 4th."
+    ]
+  },
+  {
     "SeasonID": 2025,
     "SeasonLabel": "2024-25",
     "HeadCoach": "Wes Worthington",
