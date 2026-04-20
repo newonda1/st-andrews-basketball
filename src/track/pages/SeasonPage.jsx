@@ -139,7 +139,7 @@ export default function SeasonPage({
   }
 
   return (
-    <div className="pt-1 pb-4 space-y-6 max-w-6xl mx-auto px-4 sm:px-6">
+    <div className="pt-2 pb-10 lg:pb-40 space-y-6 max-w-6xl mx-auto px-4 sm:px-6">
       {status ? (
         <div className="rounded-2xl border border-slate-200 bg-white px-5 py-4 text-center text-sm text-slate-600 shadow-sm">
           {status}
