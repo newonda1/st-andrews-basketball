@@ -116,6 +116,19 @@ function resolveAthleteName(entry, playerMap) {
   return entry.AthleteName || "St. Andrew's Relay Team";
 }
 
+function formatMeetDate(value) {
+  if (!value) return "—";
+
+  const date = new Date(`${value}T12:00:00`);
+  if (Number.isNaN(date.getTime())) return value;
+
+  return date.toLocaleDateString("en-US", {
+    month: "numeric",
+    day: "numeric",
+    year: "2-digit",
+  });
+}
+
 export default function SchoolRecords({
   playerMeetStats = [],
   players = [],
@@ -207,14 +220,15 @@ export default function SchoolRecords({
               <th className={recordTableStyles.headerCell}>Event</th>
               <th className={recordTableStyles.headerCell}>Athlete / Team</th>
               <th className={recordTableStyles.headerCell}>Best Mark</th>
+              <th className={recordTableStyles.headerCell}>Date</th>
               <th className={recordTableStyles.headerCell}>Meet</th>
             </tr>
           </thead>
           <tbody>
             {sections.map((section) => (
               <React.Fragment key={section.title}>
-                <tr>
-                  <td className={recordTableStyles.sectionCell} colSpan={4}>
+                <tr className="border-t bg-blue-50">
+                  <td className={recordTableStyles.sectionCell} colSpan={5}>
                     {section.title}
                   </td>
                 </tr>
@@ -223,15 +237,22 @@ export default function SchoolRecords({
                   const isExpanded = expandedKey === record.key;
                   return (
                     <React.Fragment key={record.key}>
-                      <tr className="hover:bg-slate-50">
-                        <td className={recordTableStyles.bodyCell}>
-                          <button
-                            type="button"
-                            className="w-full text-left font-semibold text-blue-900 hover:underline"
-                            onClick={() => toggleExpanded(record.key)}
-                          >
-                            {record.event}
-                          </button>
+                      <tr
+                        role="button"
+                        tabIndex={0}
+                        onClick={() => toggleExpanded(record.key)}
+                        onKeyDown={(event) => {
+                          if (event.key === "Enter" || event.key === " ") {
+                            event.preventDefault();
+                            toggleExpanded(record.key);
+                          }
+                        }}
+                        className={`cursor-pointer border-t hover:bg-gray-100 ${
+                          isExpanded ? "bg-gray-50" : "bg-white"
+                        }`}
+                      >
+                        <td className={`${recordTableStyles.bodyCell} text-center font-semibold text-blue-900`}>
+                          {record.event}
                         </td>
                         <td className={recordTableStyles.bodyCell}>
                           <div className={recordTableStyles.playerWrap}>
@@ -241,12 +262,15 @@ export default function SchoolRecords({
                           </div>
                         </td>
                         <td className={recordTableStyles.bodyCell}>{record.best.Mark}</td>
+                        <td className={recordTableStyles.bodyCell}>
+                          {formatMeetDate(record.best.meetDate)}
+                        </td>
                         <td className={recordTableStyles.bodyCell}>{record.best.meetName}</td>
                       </tr>
 
                       {isExpanded ? (
                         <tr>
-                          <td className="border p-0" colSpan={4}>
+                          <td className="border p-0" colSpan={5}>
                             <div className="overflow-x-auto">
                               <table className={recordTableStyles.innerTable}>
                                 <thead className="bg-gray-100">
@@ -275,7 +299,7 @@ export default function SchoolRecords({
                                       <td className={recordTableStyles.detailCell}>{row.Mark}</td>
                                       <td className={recordTableStyles.detailCell}>{row.meetName}</td>
                                       <td className={recordTableStyles.detailCell}>
-                                        {row.meetDate || "—"}
+                                        {formatMeetDate(row.meetDate)}
                                       </td>
                                       <td className={recordTableStyles.detailCell}>{row.Place}</td>
                                     </tr>
