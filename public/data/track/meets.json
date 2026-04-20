@@ -1,5 +1,65 @@
 [
   {
+    "MeetID": 2025022601,
+    "Season": 2025,
+    "Date": "2025-02-26",
+    "Name": "Savannah Country Day School Varsity Meet #2",
+    "Location": "Savannah, GA",
+    "Level": "Varsity",
+    "MeetType": "Regular Season",
+    "Status": "Complete",
+    "Notes": "Results loaded from the MileSplit raw results page. The boys 4x800 relay mark is verified, but the public results did not expose the St. Andrew's relay lineup.",
+    "SourceUrl": "https://ga.milesplit.com/meets/647584-savannah-country-day-school-varsity-meet-2-2025/results/1117227/raw"
+  },
+  {
+    "MeetID": 2025031201,
+    "Season": 2025,
+    "Date": "2025-03-12",
+    "Name": "Savannah Country Day School Varsity Meet #4",
+    "Location": "Savannah, GA",
+    "Level": "Varsity",
+    "MeetType": "Regular Season",
+    "Status": "Complete",
+    "Notes": "Results loaded from the MileSplit team results page. Relay marks are verified, but the public results did not expose the St. Andrew's relay lineups.",
+    "SourceUrl": "https://ga.milesplit.com/meets/647587-savannah-country-day-school-varsity-meet-4-2025/teams/28890"
+  },
+  {
+    "MeetID": 2025040901,
+    "Season": 2025,
+    "Date": "2025-04-09",
+    "Name": "Savannah Country Day School Varsity Meet #6",
+    "Location": "Savannah, GA",
+    "Level": "Varsity",
+    "MeetType": "Regular Season",
+    "Status": "Complete",
+    "Notes": "Meet confirmed from the 2025 varsity schedule. Individual St. Andrew's results have not been loaded yet.",
+    "SourceUrl": null
+  },
+  {
+    "MeetID": 2025041601,
+    "Season": 2025,
+    "Date": "2025-04-16",
+    "Name": "GIAA Region 2-AAA Championships",
+    "Location": "Statesboro, GA",
+    "Level": "Varsity",
+    "MeetType": "Region",
+    "Status": "Complete",
+    "Notes": "Meet confirmed from the 2025 varsity schedule. Individual St. Andrew's results have not been loaded yet.",
+    "SourceUrl": null
+  },
+  {
+    "MeetID": 2025050101,
+    "Season": 2025,
+    "Date": "2025-05-01",
+    "Name": "GIAA State Track Field Championships - Class AA, AAA",
+    "Location": "Locust Grove, GA",
+    "Level": "Varsity",
+    "MeetType": "State",
+    "Status": "Complete",
+    "Notes": "Meet confirmed from the 2025 varsity schedule. Individual St. Andrew's results have not been loaded yet.",
+    "SourceUrl": null
+  },
+  {
     "MeetID": 2026021101,
     "Season": 2026,
     "Date": "2026-02-11",
