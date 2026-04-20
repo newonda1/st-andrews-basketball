@@ -2529,10 +2529,19 @@
     "Opponent": "Savannah Country Day School",
     "LocationType": "Away",
     "GameType": "Non-Region",
-    "Result": null,
-    "TeamScore": null,
-    "OpponentScore": null,
-    "Season": 2026
+    "Result": "W",
+    "TeamScore": 6,
+    "OpponentScore": 1,
+    "Season": 2026,
+    "RecapTitle": "Ellis Kelley Goes Distance, Jack Kelley Homers As St. Andrew’s Beats Savannah Country Day",
+    "Recap": "St. Andrew’s opened Saturday’s doubleheader with a 6-1 win over Savannah Country Day School behind a complete-game effort from Ellis Kelley and a timely home run from Jack Kelley.\n\nThe Lions struck first in the opening inning without recording a hit. Ellis Kelley and Jack Kelley each worked walks to put pressure on the hosts, Isaac Wrieden entered as a courtesy runner, and both runners moved into scoring position on steals. Ellis Kelley came home on a passed ball, and Wells Searcy followed with a sacrifice bunt that brought Wrieden in for a 2-0 lead.\n\nSavannah Country Day answered in the bottom of the second when Allen connected for a solo home run to center, trimming the margin to 2-1.\n\nThat score held until the fifth. Ellis Kelley lined a single to right, stole second, and came home moments later when Jack Kelley launched a two-run home run to left to stretch the lead to 4-1.\n\nSt. Andrew’s added two more in the seventh to put the game away. Ellis Kelley singled again and eventually scored on Jacob Navare’s line-drive single to center. After Navare advanced to third on a wild pitch, Searcy lifted a sacrifice fly to center to make it 6-1.\n\nEllis Kelley earned the win with a dominant all-around performance, allowing just three hits and one run over seven innings while striking out six and walking one. He also went 2-for-3 at the plate, scored three runs, and stole four bases.\n\nJack Kelley finished 1-for-2 with the two-run homer and two walks, while Searcy drove in two runs on a sacrifice bunt and a sacrifice fly. St. Andrew’s totaled six stolen bases and six walks, using patience and pressure on the bases to control the game.\n\nFor Savannah Country Day, Allen’s home run provided the only run, while Wynn and Sammons added the other hits. The hosts played error-free defense, but the Lions kept creating enough traffic to stay in front throughout the opener.",
+    "LineScore": {
+      "Innings": [1, 2, 3, 4, 5, 6, 7],
+      "StAndrews": [2, 0, 0, 0, 2, 0, 2],
+      "Opponent": [0, 1, 0, 0, 0, 0, 0],
+      "StAndrewsTotals": { "R": 6, "H": 5, "E": 1 },
+      "OpponentTotals": { "R": 1, "H": 3, "E": 0 }
+    }
   },
   {
     "GameID": 2026041902,
@@ -2540,10 +2549,19 @@
     "Opponent": "Savannah Country Day School",
     "LocationType": "Away",
     "GameType": "Non-Region",
-    "Result": null,
-    "TeamScore": null,
-    "OpponentScore": null,
-    "Season": 2026
+    "Result": "L",
+    "TeamScore": 5,
+    "OpponentScore": 9,
+    "Season": 2026,
+    "RecapTitle": "Seven-Run Fifth Sends Savannah Country Day Past St. Andrew’s In Nightcap",
+    "Recap": "Savannah Country Day used a seven-run fifth inning to pull away from St. Andrew’s and claim a 9-5 win in the second game of Saturday’s doubleheader.\n\nThe Lions threatened immediately in the top of the first when Jack Kelley tripled to right after Ellis Kelley grounded out, but Savannah Country Day starter Sammons stranded him there to keep the game scoreless.\n\nSavannah Country Day broke through in the second. Sammons drew a walk, Wilkes lined a single to center, and a throwing error on the play allowed the first run to score for a 1-0 lead. The hosts added another run in the third when Pannell walked, moved up on a sacrifice bunt and a balk, and came home on Baiad’s single to center.\n\nSt. Andrew’s answered in the fifth and briefly moved in front. Darius Chapman opened the inning with a single, Ellis Kelley was hit by a pitch, and Jack Kelley’s fly ball was dropped by the shortstop, allowing both runners to score as Kelley reached second. Jacob Navare followed with a hard-hit RBI single to center to give the Lions a 3-2 lead.\n\nThe game turned quickly in the bottom half. Savannah Country Day sent 10 hitters to the plate and scored seven runs despite recording only three hits in the inning. Wynn delivered the biggest blow with a two-run double to left, Lynch reached on an error that brought in two more, Motil added a single, Pannell reached on another miscue that plated a run, and Cervini capped the surge with an RBI double to right.\n\nSt. Andrew’s kept fighting. Ellis Kelley singled to open the seventh, stole second, and scored when Navare launched a two-run home run to left to cut the deficit to 9-5. Wells Searcy and Lanford Harris followed with singles, and Brady Grant was hit by a pitch to load the bases, but Savannah Country Day closed the door before the Lions could draw any closer.\n\nNavare led the St. Andrew’s offense by going 2-for-4 with a home run and three RBIs. Chapman also finished 2-for-4 and stole two bases, while the Lions totaled nine hits in the loss. Ellis Kelley reached base three times and scored twice, and Jack Kelley added a triple and a run scored.\n\nLanford Harris gave the Lions a chance early, allowing two runs over four innings while striking out one. Wells Searcy provided scoreless relief late, but the seven-error game proved too much to overcome.\n\nSavannah Country Day managed six hits but consistently created pressure with walks, hit batters, and aggressive baserunning. Wynn and Cervini delivered the key extra-base hits, and the hosts took advantage of the decisive fifth inning to salvage the split.",
+    "LineScore": {
+      "Innings": [1, 2, 3, 4, 5, 6, 7],
+      "StAndrews": [0, 0, 0, 0, 3, 0, 2],
+      "Opponent": [0, 1, 1, 0, 7, 0, "X"],
+      "StAndrewsTotals": { "R": 5, "H": 9, "E": 7 },
+      "OpponentTotals": { "R": 9, "H": 6, "E": 1 }
+    }
   },
   {
     "GameID": 2026042101,
