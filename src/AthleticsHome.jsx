@@ -41,7 +41,7 @@ const sports = [
   {
     name: "Track & Field",
     to: "/athletics/track",
-    icon: "/images/common/st_andrews_athletics_logo.png",
+    icon: "/images/track/track_icon.png",
     regionYears: [],
     stateYears: [],
     showStateSectionWhenEmpty: true,
