@@ -8,6 +8,7 @@ import {
 const styles = {
   page: {
     width: "100%",
+    paddingBottom: "12rem",
   },
   title: {
     textAlign: "center",

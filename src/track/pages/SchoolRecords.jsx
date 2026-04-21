@@ -308,11 +308,6 @@ export default function SchoolRecords({
         Select any event to see the top 20 St. Andrew&apos;s performances currently
         loaded for that event
       </p>
-      <p className="-mt-3 text-center text-xs text-gray-500">
-        Legacy coach-provided records with only a known year are kept as
-        year-only archive entries rather than being assigned a made-up meet or
-        date.
-      </p>
 
       <div className="overflow-x-auto">
         <table className={recordTableStyles.outerTable}>
