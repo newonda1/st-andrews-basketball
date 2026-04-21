@@ -1,5 +1,41 @@
 [
   {
+    "MeetID": 2019042501,
+    "Season": 2019,
+    "Date": "2019-04-25",
+    "Name": "GISA State Championship",
+    "Location": "Albany, GA",
+    "Level": "Varsity",
+    "MeetType": "State",
+    "Status": "Complete",
+    "Notes": "Results loaded from the MileSplit raw complete results page for the GISA state championships. The public raw page listed individual St. Andrew's entries only.",
+    "SourceUrl": "https://ga.milesplit.com/meets/357222-gisa-state-championship-2019/results/648429/raw"
+  },
+  {
+    "MeetID": 2021042101,
+    "Season": 2021,
+    "Date": "2021-04-21",
+    "Name": "GISA Region 2AAA Championship",
+    "Location": "Statesboro, GA",
+    "Level": "Varsity",
+    "MeetType": "Region",
+    "Status": "Complete",
+    "Notes": "Results loaded from the MileSplit raw complete results page for the region championships. The public raw page listed individual St. Andrew's results and did not show any St. Andrew's relay entries.",
+    "SourceUrl": "https://ga.milesplit.com/meets/420229-gisa-region-2aaa-championship-2021/results/735209/raw"
+  },
+  {
+    "MeetID": 2021042901,
+    "Season": 2021,
+    "Date": "2021-04-29",
+    "Name": "GISA State Championship",
+    "Location": "Locust Grove, GA",
+    "Level": "Varsity",
+    "MeetType": "State",
+    "Status": "Complete",
+    "Notes": "Results loaded from the MileSplit raw complete results page for the GISA state championships. The public raw page listed only Phoebe Mayo's individual St. Andrew's distance results.",
+    "SourceUrl": "https://ga.milesplit.com/meets/413105-gisa-state-championship-2021/results/740693/raw"
+  },
+  {
     "MeetID": 2022030201,
     "Season": 2022,
     "Date": "2022-03-02",

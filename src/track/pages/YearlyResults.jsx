@@ -111,6 +111,10 @@ export default function YearlyResults({
         full team page, see the athletes with loaded results, and expand each meet
         for the complete St. Andrew&apos;s results table.
       </p>
+      <p style={styles.subtitle}>
+        There is no 2019-20 season page because the program did not have any
+        recorded meets during the Covid-19 shutdown.
+      </p>
 
       <div style={styles.tableWrap}>
         <table style={styles.table}>

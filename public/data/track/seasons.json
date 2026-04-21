@@ -1,8 +1,60 @@
 [
   {
+    "SeasonID": 2019,
+    "SeasonLabel": "2018-19",
+    "HeadCoach": "Michael Bennet",
+    "AssistantCoach": "Russell Wilson",
+    "Classification": "GISA 2AAA",
+    "Region": "Region 2",
+    "StatusBadge": "verified",
+    "StatusNote": "The 2018-19 season currently includes the one confirmed high-school meet still in the archive: the April 25-27, 2019 GISA state championship.",
+    "FirstRegularSeasonMeet": "2019-04-25",
+    "RegionDeadline": "2019-04-25",
+    "StateMeetStart": "2019-04-25",
+    "StateMeetEnd": "2019-04-27",
+    "StateMeetLocation": "Albany, GA",
+    "RecapParagraphs": [
+      "The 2018-19 season now appears in the track archive as a single-meet postseason snapshot after the April 2 event was identified as middle school only and removed from the varsity record. That leaves the GISA state championship as the lone confirmed high-school meet currently attached to the season.",
+      "Even with just one meet, the state results still give the season a recognizable shape. Phoebe Mayo represented the girls distance group in the 800 and 1600, while the boys side brought distance entries plus a throws group that scored in both shot put and discus.",
+      "Jack Hagan delivered the top point totals for St. Andrew's at state by placing fourth in shot put and fourth in discus, and the rest of the loaded results preserve a small but varied roster across distance and field events."
+    ],
+    "HighlightNotes": [
+      "Jack Hagan placed 4th in both boys shot put and boys discus at the 2019 GISA state championship.",
+      "Phoebe Mayo represented St. Andrew's in the girls 800 and 1600 at state.",
+      "Tate Dixon added a scoring finish in boys shot put with 5th place.",
+      "Victor Balboni, Aiden Luther, and Erickson Rasplica gave the boys distance group three separate state entries."
+    ]
+  },
+  {
+    "SeasonID": 2021,
+    "SeasonLabel": "2020-21",
+    "HeadCoach": "Michael Bennet",
+    "AssistantCoach": "Russell Wilson",
+    "Classification": "GISA 2AAA",
+    "Region": "Region 2",
+    "StatusBadge": "verified",
+    "StatusNote": "The 2020-21 season now includes the two confirmed high-school postseason meets visible in the archived schedule: the April 21 GISA Region 2AAA Championship and the April 29-May 1 GISA state championship.",
+    "FirstRegularSeasonMeet": "2021-04-21",
+    "RegionDeadline": "2021-04-21",
+    "StateMeetStart": "2021-04-29",
+    "StateMeetEnd": "2021-05-01",
+    "StateMeetLocation": "Locust Grove, GA",
+    "RecapParagraphs": [
+      "The 2020-21 season reads as a compact postseason chapter in the track archive, with St. Andrew's public results appearing only at the GISA Region 2AAA Championship and the GISA state meet. Even with just those two meets, the season still shows a clear profile: girls distance strength led by Phoebe Mayo, supporting sprint and throws entries, and a small boys group competing in distance and discus.",
+      "Mayo supplied the season's biggest result by winning the girls 3200 at region and then returning to place fifth in the same event at state. She also placed third in the region 1600 and finished 11th at state, giving the season page a strong through-line from regional success into state-level competition.",
+      "Around that distance core, Morgan Rule scored in girls shot put at region, Ella McWhorter added sprint entries, and Victor Balboni, Ajay Watson, and Ben Bingley gave the boys side distance, sprint, and discus results. It is a short season in the archive, but it still adds another early track year with identifiable postseason performances."
+    ],
+    "HighlightNotes": [
+      "Phoebe Mayo won the girls 3200 at the 2021 GISA Region 2AAA Championship in 14:11.36 and followed it with a 5th-place finish at the GISA state meet.",
+      "Mayo also placed 3rd in the girls 1600 at region and competed in the same event at state.",
+      "Morgan Rule scored in girls shot put at the region championship with a 4th-place finish.",
+      "Victor Balboni gave the boys side region entries in both the 1600 and 3200."
+    ]
+  },
+  {
     "SeasonID": 2022,
     "SeasonLabel": "2021-22",
-    "HeadCoach": "Wes Worthington",
+    "HeadCoach": "Michael Bennet",
     "AssistantCoach": "Russell Wilson",
     "Classification": "GISA 2AAA",
     "Region": "Region 2",
@@ -28,7 +80,7 @@
   {
     "SeasonID": 2023,
     "SeasonLabel": "2022-23",
-    "HeadCoach": "Wes Worthington",
+    "HeadCoach": "Michael Bennet",
     "AssistantCoach": "Russell Wilson",
     "Classification": "GIAA AAA",
     "Region": "Region 2",
@@ -54,7 +106,7 @@
   {
     "SeasonID": 2024,
     "SeasonLabel": "2023-24",
-    "HeadCoach": "Wes Worthington",
+    "HeadCoach": "Kevin Prisant",
     "AssistantCoach": "Russell Wilson",
     "Classification": "GIAA AAA",
     "Region": "Region 2",
