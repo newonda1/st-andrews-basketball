@@ -514,7 +514,14 @@
     "Result": "L",
     "TeamScore": 4,
     "OpponentScore": 8,
-    "Season": 2021
+    "Season": 2021,
+    "LineScore": {
+      "Innings": [1, 2, 3, 4, 5, 6, 7],
+      "StAndrews": [0, 3, 0, 1, 0, 0, 0],
+      "Opponent": [0, 0, 0, 0, 4, 4, "X"],
+      "StAndrewsTotals": { "R": 4, "H": 7, "E": 1 },
+      "OpponentTotals": { "R": 8, "H": 6, "E": 0 }
+    }
   },
   {
     "GameID": 2021031301,
@@ -525,7 +532,14 @@
     "Result": "W",
     "TeamScore": 7,
     "OpponentScore": 5,
-    "Season": 2021
+    "Season": 2021,
+    "LineScore": {
+      "Innings": [1, 2, 3, 4, 5, 6, 7],
+      "StAndrews": [2, 0, 0, 0, 2, 3, 0],
+      "Opponent": [1, 0, 0, 0, 2, 2, 0],
+      "StAndrewsTotals": { "R": 7, "H": 6, "E": 0 },
+      "OpponentTotals": { "R": 5, "H": 14, "E": 1 }
+    }
   },
   {
     "GameID": 2021031601,

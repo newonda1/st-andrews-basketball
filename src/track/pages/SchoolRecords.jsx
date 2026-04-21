@@ -14,14 +14,18 @@ const EVENT_ORDER = [
   "200 Meter Dash",
   "400 Meter Dash",
   "800 Meter Run",
+  "Mile Run",
   "1600 Meter Run",
   "3200 Meter Run",
+  "2 Mile Run",
   "100 Meter Hurdles",
   "110 Meter Hurdles",
+  "330 Intermediate Hurdles",
   "300 Meter Hurdles",
   "4x100 Meter Relay",
   "4x400 Meter Relay",
   "4x800 Meter Relay",
+  "Mile Relay",
   "Long Jump",
   "Triple Jump",
   "High Jump",
@@ -64,7 +68,48 @@ function parseDistanceMark(mark) {
     return Number(feetInches[1]) * 12 + Number(feetInches[2]);
   }
 
+  const feetQuote = value.match(/^(\d+)'\s*(\d+)(?:\s+(\d+)\/(\d+))?"$/);
+  if (feetQuote) {
+    const feet = Number(feetQuote[1]);
+    const inches = Number(feetQuote[2]);
+    const numerator = feetQuote[3] ? Number(feetQuote[3]) : 0;
+    const denominator = feetQuote[4] ? Number(feetQuote[4]) : 1;
+    const fractionalInches =
+      numerator && denominator ? numerator / denominator : 0;
+
+    return feet * 12 + inches + fractionalInches;
+  }
+
   return safeNum(value);
+}
+
+function normalizeEventName(event) {
+  const value = String(event || "").trim();
+
+  switch (value) {
+    case "100m Dash":
+      return "100 Meter Dash";
+    case "200m Dash":
+      return "200 Meter Dash";
+    case "400m Dash":
+      return "400 Meter Dash";
+    case "800m Run":
+      return "800 Meter Run";
+    case "1600m Run":
+      return "1600 Meter Run";
+    case "3200m Run":
+      return "3200 Meter Run";
+    case "100m Hurdles":
+      return "100 Meter Hurdles";
+    case "330 Int. Hurdles":
+      return "330 Intermediate Hurdles";
+    case "4x100 Relay":
+      return "4x100 Meter Relay";
+    case "4x400 Relay":
+      return "4x400 Meter Relay";
+    default:
+      return value;
+  }
 }
 
 function getEventCategory(event) {
@@ -131,6 +176,7 @@ function formatMeetDate(value) {
 
 export default function SchoolRecords({
   playerMeetStats = [],
+  legacySchoolRecords = [],
   players = [],
   meets = [],
   status = "",
@@ -138,29 +184,58 @@ export default function SchoolRecords({
   const [expandedKey, setExpandedKey] = useState(null);
 
   const sections = useMemo(() => {
-    const playerMap = new Map(players.map((player) => [String(player.PlayerID), player]));
+    const playerMap = new Map(
+      players.map((player) => [String(player.PlayerID), player])
+    );
     const meetMap = new Map(meets.map((meet) => [String(meet.MeetID), meet]));
     const grouped = new Map();
 
     playerMeetStats.forEach((entry) => {
       if (!entry?.Event || !entry?.Gender || !entry?.Mark) return;
 
-      const comparableValue = getComparableValue(entry.Event, entry.Mark);
+      const eventName = normalizeEventName(entry.Event);
+      const comparableValue = getComparableValue(eventName, entry.Mark);
       if (comparableValue == null) return;
 
       const meet = meetMap.get(String(entry.MeetID));
-      const category = getEventCategory(entry.Event);
-      const key = `${entry.Gender}__${category}__${entry.Event}`;
+      const category = getEventCategory(eventName);
+      const key = `${entry.Gender}__${category}__${eventName}`;
 
       if (!grouped.has(key)) grouped.set(key, []);
 
       grouped.get(key).push({
         ...entry,
+        Event: eventName,
         category,
         comparableValue,
         athleteName: resolveAthleteName(entry, playerMap),
         meetName: meet?.Name || "Unknown Meet",
         meetDate: meet?.Date || null,
+        dateLabel: null,
+      });
+    });
+
+    legacySchoolRecords.forEach((entry) => {
+      if (!entry?.Event || !entry?.Gender || !entry?.Mark) return;
+
+      const eventName = normalizeEventName(entry.Event);
+      const comparableValue = getComparableValue(eventName, entry.Mark);
+      if (comparableValue == null) return;
+
+      const category = getEventCategory(eventName);
+      const key = `${entry.Gender}__${category}__${eventName}`;
+
+      if (!grouped.has(key)) grouped.set(key, []);
+
+      grouped.get(key).push({
+        ...entry,
+        Event: eventName,
+        category,
+        comparableValue,
+        athleteName: entry.AthleteName || "Legacy Relay Team",
+        meetName: entry.MeetName || "Legacy coach record",
+        meetDate: null,
+        dateLabel: entry.Year ? String(entry.Year) : "—",
       });
     });
 
@@ -168,7 +243,13 @@ export default function SchoolRecords({
 
     grouped.forEach((entries, key) => {
       const [gender, category, event] = key.split("__");
-      const title = `${gender} ${category === "field" ? "Field Events" : category === "relay" ? "Relays" : "Running Events"}`;
+      const title = `${gender} ${
+        category === "field"
+          ? "Field Events"
+          : category === "relay"
+            ? "Relays"
+            : "Running Events"
+      }`;
       const sortedEntries = entries.slice().sort(compareMarks).slice(0, 20);
 
       if (!sortedEntries.length) return;
@@ -194,13 +275,21 @@ export default function SchoolRecords({
         if (aGender !== bGender) return aGender.localeCompare(bGender);
 
         const aCategory =
-          aCategoryText === "Field" ? "field" : aCategoryText === "Relays" ? "relay" : "running";
+          aCategoryText === "Field"
+            ? "field"
+            : aCategoryText === "Relays"
+              ? "relay"
+              : "running";
         const bCategory =
-          bCategoryText === "Field" ? "field" : bCategoryText === "Relays" ? "relay" : "running";
+          bCategoryText === "Field"
+            ? "field"
+            : bCategoryText === "Relays"
+              ? "relay"
+              : "running";
 
         return CATEGORY_ORDER[aCategory] - CATEGORY_ORDER[bCategory];
       });
-  }, [meets, playerMeetStats, players]);
+  }, [legacySchoolRecords, meets, playerMeetStats, players]);
 
   const toggleExpanded = (key) => {
     setExpandedKey((prev) => (prev === key ? null : key));
@@ -218,6 +307,11 @@ export default function SchoolRecords({
       <p className="-mt-1.5 text-center text-sm italic text-gray-600">
         Select any event to see the top 20 St. Andrew&apos;s performances currently
         loaded for that event
+      </p>
+      <p className="-mt-3 text-center text-xs text-gray-500">
+        Legacy coach-provided records with only a known year are kept as
+        year-only archive entries rather than being assigned a made-up meet or
+        date.
       </p>
 
       <div className="overflow-x-auto">
@@ -258,7 +352,9 @@ export default function SchoolRecords({
                           isExpanded ? "bg-gray-50" : "bg-white"
                         }`}
                       >
-                        <td className={`${recordTableStyles.bodyCell} text-center font-semibold text-blue-900`}>
+                        <td
+                          className={`${recordTableStyles.bodyCell} text-center font-semibold text-blue-900`}
+                        >
                           {record.event}
                         </td>
                         <td className={recordTableStyles.bodyCell}>
@@ -268,11 +364,16 @@ export default function SchoolRecords({
                             </span>
                           </div>
                         </td>
-                        <td className={recordTableStyles.bodyCell}>{record.best.Mark}</td>
                         <td className={recordTableStyles.bodyCell}>
-                          {formatMeetDate(record.best.meetDate)}
+                          {record.best.Mark}
                         </td>
-                        <td className={recordTableStyles.bodyCell}>{record.best.meetName}</td>
+                        <td className={recordTableStyles.bodyCell}>
+                          {record.best.dateLabel ||
+                            formatMeetDate(record.best.meetDate)}
+                        </td>
+                        <td className={recordTableStyles.bodyCell}>
+                          {record.best.meetName}
+                        </td>
                       </tr>
 
                       {isExpanded ? (
@@ -282,12 +383,24 @@ export default function SchoolRecords({
                               <table className={recordTableStyles.innerTable}>
                                 <thead className="bg-gray-100">
                                   <tr>
-                                    <th className={recordTableStyles.headerCell}>Rank</th>
-                                    <th className={recordTableStyles.headerCell}>Athlete / Team</th>
-                                    <th className={recordTableStyles.headerCell}>Mark</th>
-                                    <th className={recordTableStyles.headerCell}>Meet</th>
-                                    <th className={recordTableStyles.headerCell}>Date</th>
-                                    <th className={recordTableStyles.headerCell}>Place</th>
+                                    <th className={recordTableStyles.headerCell}>
+                                      Rank
+                                    </th>
+                                    <th className={recordTableStyles.headerCell}>
+                                      Athlete / Team
+                                    </th>
+                                    <th className={recordTableStyles.headerCell}>
+                                      Mark
+                                    </th>
+                                    <th className={recordTableStyles.headerCell}>
+                                      Meet
+                                    </th>
+                                    <th className={recordTableStyles.headerCell}>
+                                      Date
+                                    </th>
+                                    <th className={recordTableStyles.headerCell}>
+                                      Place
+                                    </th>
                                   </tr>
                                 </thead>
                                 <tbody>
@@ -303,12 +416,18 @@ export default function SchoolRecords({
                                           </span>
                                         </div>
                                       </td>
-                                      <td className={recordTableStyles.detailCell}>{row.Mark}</td>
-                                      <td className={recordTableStyles.detailCell}>{row.meetName}</td>
                                       <td className={recordTableStyles.detailCell}>
-                                        {formatMeetDate(row.meetDate)}
+                                        {row.Mark}
                                       </td>
-                                      <td className={recordTableStyles.detailCell}>{row.Place}</td>
+                                      <td className={recordTableStyles.detailCell}>
+                                        {row.meetName}
+                                      </td>
+                                      <td className={recordTableStyles.detailCell}>
+                                        {row.dateLabel || formatMeetDate(row.meetDate)}
+                                      </td>
+                                      <td className={recordTableStyles.detailCell}>
+                                        {row.Place}
+                                      </td>
                                     </tr>
                                   ))}
                                 </tbody>

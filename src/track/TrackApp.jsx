@@ -10,6 +10,7 @@ export default function TrackApp() {
   const [meets, setMeets] = useState([]);
   const [players, setPlayers] = useState([]);
   const [playerMeetStats, setPlayerMeetStats] = useState([]);
+  const [legacySchoolRecords, setLegacySchoolRecords] = useState([]);
   const [status, setStatus] = useState("Loading track & field data...");
 
   useEffect(() => {
@@ -17,12 +18,19 @@ export default function TrackApp() {
 
     async function loadData() {
       try {
-        const [seasonsRes, meetsRes, playersRes, playerMeetStatsRes] =
+        const [
+          seasonsRes,
+          meetsRes,
+          playersRes,
+          playerMeetStatsRes,
+          legacySchoolRecordsRes,
+        ] =
           await Promise.all([
             fetch("/data/track/seasons.json"),
             fetch("/data/track/meets.json"),
             fetch("/data/players.json"),
             fetch("/data/track/playermeetstats.json"),
+            fetch("/data/track/legacySchoolRecords.json"),
           ]);
 
         if (!seasonsRes.ok) {
@@ -43,12 +51,25 @@ export default function TrackApp() {
           );
         }
 
-        const [seasonsData, meetsData, playersData, playerMeetStatsData] =
+        if (!legacySchoolRecordsRes.ok) {
+          throw new Error(
+            `Could not load track legacy school records (${legacySchoolRecordsRes.status}).`
+          );
+        }
+
+        const [
+          seasonsData,
+          meetsData,
+          playersData,
+          playerMeetStatsData,
+          legacySchoolRecordsData,
+        ] =
           await Promise.all([
             seasonsRes.json(),
             meetsRes.json(),
             playersRes.json(),
             playerMeetStatsRes.json(),
+            legacySchoolRecordsRes.json(),
           ]);
 
         if (!cancelled) {
@@ -57,6 +78,9 @@ export default function TrackApp() {
           setPlayers(Array.isArray(playersData) ? playersData : []);
           setPlayerMeetStats(
             Array.isArray(playerMeetStatsData) ? playerMeetStatsData : []
+          );
+          setLegacySchoolRecords(
+            Array.isArray(legacySchoolRecordsData) ? legacySchoolRecordsData : []
           );
           setStatus("");
         }
@@ -107,6 +131,7 @@ export default function TrackApp() {
           element={
             <SchoolRecords
               playerMeetStats={playerMeetStats}
+              legacySchoolRecords={legacySchoolRecords}
               players={players}
               meets={meets}
               status={status}
