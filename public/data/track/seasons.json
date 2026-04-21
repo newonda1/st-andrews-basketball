@@ -1,5 +1,31 @@
 [
   {
+    "SeasonID": 2022,
+    "SeasonLabel": "2021-22",
+    "HeadCoach": "Wes Worthington",
+    "AssistantCoach": "Russell Wilson",
+    "Classification": "GISA 2AAA",
+    "Region": "Region 2",
+    "StatusBadge": "verified",
+    "StatusNote": "The 2021-22 season now includes all four confirmed high-school meets from the archived schedule, from the March 2 Savannah Country Day home meet through the April 22-23 GISA state championships.",
+    "FirstRegularSeasonMeet": "2022-03-02",
+    "RegionDeadline": "2022-04-13",
+    "StateMeetStart": "2022-04-22",
+    "StateMeetEnd": "2022-04-23",
+    "StateMeetLocation": "Locust Grove, GA",
+    "RecapParagraphs": [
+      "The 2021-22 season now gives the track archive another full four-meet year, beginning with two Savannah Country Day home meets and closing with the GISA region and state championship meets. Even in a compact schedule, the results show a team built around sprint points, a few dependable middle-distance efforts, and girls throws production that carried into championship season.",
+      "Anthony Kusilka supplied the biggest postseason breakthrough by winning the boys 400 at the Region 2AAA championships and then returning to score again with a fourth-place finish in the state final. Andrew Futch added speed across the spring with scoring runs in the short sprints, a region bronze in the 100, and state-meet appearances in the 100 and long jump.",
+      "On the girls side, Morgan Rule anchored the throws group by scoring in shot put at both region and state, while Gray Holmes reached the state meet in the 800 after a third-place region finish. The season page also preserves the boys 4x100 and 4x400 relay groups from both championship meets, giving the 2021-22 archive a clearer picture of the team beyond individual entries."
+    ],
+    "HighlightNotes": [
+      "Anthony Kusilka won the boys 400 at the 2022 GISA Region 2AAA meet in 54.09 and followed it with a 53.29 for 4th at the GISA state championships.",
+      "Morgan Rule scored in girls shot put at both championship meets, placing 4th at region and 7th at state.",
+      "Gray Holmes advanced from a 3rd-place finish in the girls 800 at region to a state-meet berth in the same event.",
+      "The boys 4x100 and 4x400 relays both reached the state meet after placing 2nd and 4th, respectively, at the region championships."
+    ]
+  },
+  {
     "SeasonID": 2023,
     "SeasonLabel": "2022-23",
     "HeadCoach": "Wes Worthington",
