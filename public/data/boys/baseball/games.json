@@ -536,7 +536,14 @@
     "Result": "L",
     "TeamScore": 3,
     "OpponentScore": 9,
-    "Season": 2021
+    "Season": 2021,
+    "LineScore": {
+      "Innings": [1, 2, 3, 4, 5, 6, 7, 8],
+      "StAndrews": [1, 0, 0, 0, 0, 2, 0, "X"],
+      "Opponent": [1, 0, 0, 0, 2, 3, 2, 1],
+      "StAndrewsTotals": { "R": 3, "H": 3, "E": 8 },
+      "OpponentTotals": { "R": 9, "H": 7, "E": 1 }
+    }
   },
   {
     "GameID": 2021032501,
@@ -547,7 +554,14 @@
     "Result": "L",
     "TeamScore": 0,
     "OpponentScore": 8,
-    "Season": 2021
+    "Season": 2021,
+    "LineScore": {
+      "Innings": [1, 2, 3, 4, 5, 6, 7],
+      "StAndrews": [0, 0, 0, 0, 0, 0, 0],
+      "Opponent": [0, 0, 1, 4, 3, 0, "X"],
+      "StAndrewsTotals": { "R": 0, "H": 3, "E": 4 },
+      "OpponentTotals": { "R": 8, "H": 7, "E": 0 }
+    }
   },
   {
     "GameID": 2021032601,
@@ -558,7 +572,32 @@
     "Result": "L",
     "TeamScore": 4,
     "OpponentScore": 8,
-    "Season": 2021
+    "Season": 2021,
+    "LineScore": {
+      "Innings": [1, 2, 3, 4, 5, 6, 7],
+      "StAndrews": [1, 0, 0, 0, 3, 0, 0],
+      "Opponent": [0, 2, 0, 4, 2, 0, "X"],
+      "StAndrewsTotals": { "R": 4, "H": 6, "E": 4 },
+      "OpponentTotals": { "R": 8, "H": 6, "E": 4 }
+    }
+  },
+  {
+    "GameID": 2021033101,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
+    "Opponent": "Frederica Academy",
+    "LocationType": "Home",
+    "GameType": "Non-Region",
+    "Result": "L",
+    "TeamScore": 3,
+    "OpponentScore": 5,
+    "Season": 2021,
+    "LineScore": {
+      "Innings": [1, 2, 3, 4, 5, 6, 7],
+      "StAndrews": [0, 3, 0, 0, 0, 0, 0],
+      "Opponent": [0, 0, 0, 0, 0, 0, 5],
+      "StAndrewsTotals": { "R": 3, "H": 6, "E": 1 },
+      "OpponentTotals": { "R": 5, "H": 6, "E": 3 }
+    }
   },
   {
     "GameID": 2021040101,
@@ -569,7 +608,14 @@
     "Result": "L",
     "TeamScore": 0,
     "OpponentScore": 18,
-    "Season": 2021
+    "Season": 2021,
+    "LineScore": {
+      "Innings": [1, 2, 3],
+      "StAndrews": [0, 0, 0],
+      "Opponent": [18, 0, "X"],
+      "StAndrewsTotals": { "R": 0, "H": 2, "E": 3 },
+      "OpponentTotals": { "R": 18, "H": 8, "E": 0 }
+    }
   },
   {
     "GameID": 2021040501,
@@ -577,10 +623,35 @@
     "Opponent": "Hilton Head Christian Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
+    "Result": "W",
+    "TeamScore": 9,
+    "OpponentScore": 8,
+    "Season": 2021,
+    "LineScore": {
+      "Innings": [1, 2, 3, 4, 5, 6, 7, 8],
+      "StAndrews": [2, 0, 0, 4, 2, 0, 0, 1],
+      "Opponent": [2, 0, 0, 3, 1, 0, 2, 0],
+      "StAndrewsTotals": { "R": 9, "H": 10, "E": 5 },
+      "OpponentTotals": { "R": 8, "H": 9, "E": 2 }
+    }
+  },
+  {
+    "GameID": 2021040601,
+    "OpponentID": "ga-frederica-academy-st-simons-island",
+    "Opponent": "Frederica Academy",
+    "LocationType": "Home",
+    "GameType": "Non-Region",
     "Result": "L",
     "TeamScore": 7,
     "OpponentScore": 9,
-    "Season": 2021
+    "Season": 2021,
+    "LineScore": {
+      "Innings": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+      "StAndrews": [0, 2, 0, 0, 1, 2, 2, 0, "X"],
+      "Opponent": [2, 1, 2, 1, 0, 0, 1, 2, 0],
+      "StAndrewsTotals": { "R": 7, "H": 10, "E": 4 },
+      "OpponentTotals": { "R": 9, "H": 7, "E": 4 }
+    }
   },
   {
     "GameID": 2021040701,
@@ -591,7 +662,14 @@
     "Result": "L",
     "TeamScore": 3,
     "OpponentScore": 19,
-    "Season": 2021
+    "Season": 2021,
+    "LineScore": {
+      "Innings": [1, 2, 3, 4],
+      "StAndrews": [0, 0, 3, "X"],
+      "Opponent": [1, 6, 12, 0],
+      "StAndrewsTotals": { "R": 3, "H": 2, "E": 3 },
+      "OpponentTotals": { "R": 19, "H": 11, "E": 0 }
+    }
   },
   {
     "GameID": 2021040702,
@@ -602,7 +680,14 @@
     "Result": "L",
     "TeamScore": 2,
     "OpponentScore": 12,
-    "Season": 2021
+    "Season": 2021,
+    "LineScore": {
+      "Innings": [1, 2, 3, 4, 5, 6],
+      "StAndrews": [0, 1, 1, 0, 0, 0],
+      "Opponent": [2, 0, 6, 2, 1, 1],
+      "StAndrewsTotals": { "R": 2, "H": 4, "E": 6 },
+      "OpponentTotals": { "R": 12, "H": 8, "E": 1 }
+    }
   },
   {
     "GameID": 2021041201,
@@ -613,7 +698,14 @@
     "Result": "L",
     "TeamScore": 0,
     "OpponentScore": 16,
-    "Season": 2021
+    "Season": 2021,
+    "LineScore": {
+      "Innings": [1, 2, 3, 4],
+      "StAndrews": [0, 0, 0, 0],
+      "Opponent": [1, 7, 6, 2],
+      "StAndrewsTotals": { "R": 0, "H": 0, "E": 3 },
+      "OpponentTotals": { "R": 16, "H": 8, "E": 0 }
+    }
   },
   {
     "GameID": 2021041301,
