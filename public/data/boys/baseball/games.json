@@ -484,6 +484,24 @@
     "Season": 2021
   },
   {
+    "GameID": 2021030301,
+    "OpponentID": "ga-coastal-homeschool-pembroke",
+    "Opponent": "Coastal HomeSchool",
+    "LocationType": "Home",
+    "GameType": "Non-Region",
+    "Result": "L",
+    "TeamScore": 1,
+    "OpponentScore": 12,
+    "Season": 2021,
+    "LineScore": {
+      "Innings": [1, 2, 3, 4, 5, 6, 7],
+      "StAndrews": [0, 0, 0, 0, 1, 0, 0],
+      "Opponent": [2, 1, 0, 5, 1, 1, 2],
+      "StAndrewsTotals": { "R": 1, "H": 2, "E": 0 },
+      "OpponentTotals": { "R": 12, "H": 16, "E": 0 }
+    }
+  },
+  {
     "GameID": 2021030601,
     "OpponentID": "ga-coastal-homeschool-pembroke",
     "Opponent": "Coastal HomeSchool",
@@ -503,7 +521,14 @@
     "Result": "W",
     "TeamScore": 4,
     "OpponentScore": 1,
-    "Season": 2021
+    "Season": 2021,
+    "LineScore": {
+      "Innings": [1, 2, 3, 4, 5, 6, 7],
+      "StAndrews": [0, 2, 0, 2, 0, 0, "X"],
+      "Opponent": [0, 0, 0, 0, 0, 0, 1],
+      "StAndrewsTotals": { "R": 4, "H": 9, "E": 0 },
+      "OpponentTotals": { "R": 1, "H": 1, "E": 0 }
+    }
   },
   {
     "GameID": 2021031101,
