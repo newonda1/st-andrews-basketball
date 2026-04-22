@@ -12,6 +12,18 @@
     "SourceUrl": "https://www.ptgrouponline.com/Live/2014/HS/SCISA/TF/"
   },
   {
+    "MeetID": 2015042401,
+    "Season": 2015,
+    "Date": "2015-04-24",
+    "Name": "RCA A and AA SCISA Regional Qualifier",
+    "Location": "Charleston, SC",
+    "Level": "Varsity",
+    "MeetType": "Qualifier",
+    "Status": "Complete",
+    "Notes": "Results loaded from the MileSplit raw complete results page for the SCISA regional qualifier. The public raw page exposed 26 completed St. Andrew's results and included the girls 4x100 and 4x400 relay lineups.",
+    "SourceUrl": "https://sc.milesplit.com/meets/201175-rca-a-and-aa-scisa-regional-qualifier-2015/results/367765?type=raw"
+  },
+  {
     "MeetID": 2015050201,
     "Season": 2015,
     "Date": "2015-05-02",
@@ -24,6 +36,78 @@
     "SourceUrl": "https://sc.milesplit.com/meets/193174-scisa-championships-2015/results/372572/raw"
   },
   {
+    "MeetID": 2016030901,
+    "Season": 2016,
+    "Date": "2016-03-09",
+    "Name": "Porter-Gaud meet",
+    "Location": "Charleston, SC",
+    "Level": "Varsity",
+    "MeetType": "Regular Season",
+    "Status": "Complete",
+    "Notes": "Results loaded from the public MileSplit St. Andrew's team results page for the meet. The page exposed 35 completed St. Andrew's results, including one girls 4x800 relay mark without a public lineup.",
+    "SourceUrl": "https://sc.milesplit.com/meets/228045-porter-gaud-meet-2016/teams/20895"
+  },
+  {
+    "MeetID": 2016042001,
+    "Season": 2016,
+    "Date": "2016-04-20",
+    "Name": "Porter-Gaud Home Meet 3",
+    "Location": "Charleston, SC",
+    "Level": "Varsity",
+    "MeetType": "Regular Season",
+    "Status": "Complete",
+    "Notes": "Results loaded from the public MileSplit St. Andrew's team results page for the meet. The page exposed 12 completed St. Andrew's results and did not list any St. Andrew's relay lineups.",
+    "SourceUrl": "https://sc.milesplit.com/meets/228048-porter-gaud-home-meet-3-2016/teams/20895"
+  },
+  {
+    "MeetID": 2017030801,
+    "Season": 2017,
+    "Date": "2017-03-08",
+    "Name": "Porter Gaud Home Meet #1",
+    "Location": "Charleston, SC",
+    "Level": "Varsity",
+    "MeetType": "Regular Season",
+    "Status": "Complete",
+    "Notes": "Results loaded from the public MileSplit St. Andrew's team results page for the meet. The page exposed 31 completed St. Andrew's results, including one boys 4x400 relay mark without a public lineup.",
+    "SourceUrl": "https://sc.milesplit.com/meets/265769-porter-gaud-home-meet-1-2017/teams/20895"
+  },
+  {
+    "MeetID": 2017032201,
+    "Season": 2017,
+    "Date": "2017-03-22",
+    "Name": "Orangeburg Prep meet",
+    "Location": "Orangeburg, SC",
+    "Level": "Varsity",
+    "MeetType": "Regular Season",
+    "Status": "Complete",
+    "Notes": "Results loaded from the public MileSplit St. Andrew's team results page for the meet. The page exposed 46 completed St. Andrew's results, including boys relay marks without public lineups.",
+    "SourceUrl": "https://sc.milesplit.com/meets/266134-orangeburg-prep-meet-2017/teams/20895"
+  },
+  {
+    "MeetID": 2017032901,
+    "Season": 2017,
+    "Date": "2017-03-29",
+    "Name": "Porter-Gaud Home Meet #2",
+    "Location": "Charleston, SC",
+    "Level": "Varsity",
+    "MeetType": "Regular Season",
+    "Status": "Complete",
+    "Notes": "Results loaded from the public MileSplit St. Andrew's team results page for the meet. The page exposed 34 completed St. Andrew's results, including one boys 4x400 relay mark without a public lineup.",
+    "SourceUrl": "https://sc.milesplit.com/meets/265772-porter-gaud-home-meet-2-2017/teams/20895"
+  },
+  {
+    "MeetID": 2017041201,
+    "Season": 2017,
+    "Date": "2017-04-12",
+    "Name": "Porter Gaud Home Meet #3",
+    "Location": "Charleston, SC",
+    "Level": "Varsity",
+    "MeetType": "Regular Season",
+    "Status": "Complete",
+    "Notes": "Results loaded from the public MileSplit St. Andrew's team results page for the meet. The page exposed 33 completed St. Andrew's results, including boys and girls relay marks without public lineups.",
+    "SourceUrl": "https://sc.milesplit.com/meets/265777-porter-gaud-home-meet-3-2017/teams/20895"
+  },
+  {
     "MeetID": 2017050601,
     "Season": 2017,
     "Date": "2017-05-06",
@@ -34,6 +118,42 @@
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit raw boys results page for the SCISA state championships. The public raw file exposed five St. Andrew's boys entries: two 200-meter results, one 4x100 relay, one long jump result, and one shot put result.",
     "SourceUrl": "https://sc.milesplit.com/meets/278275-scisa-championships-2017/results/522637/raw"
+  },
+  {
+    "MeetID": 2018030701,
+    "Season": 2018,
+    "Date": "2018-03-07",
+    "Name": "Porter Gaud Home Meet #1",
+    "Location": "Charleston, SC",
+    "Level": "Varsity",
+    "MeetType": "Regular Season",
+    "Status": "Complete",
+    "Notes": "Results loaded from the public MileSplit St. Andrew's team results page for the meet. The page exposed 24 completed St. Andrew's results and did not list any relay lineups.",
+    "SourceUrl": "https://sc.milesplit.com/meets/304993-porter-gaud-home-meet-1-2018/teams/20895"
+  },
+  {
+    "MeetID": 2018032101,
+    "Season": 2018,
+    "Date": "2018-03-21",
+    "Name": "Porter Gaud Home Meet #2",
+    "Location": "Charleston, SC",
+    "Level": "Varsity",
+    "MeetType": "Regular Season",
+    "Status": "Complete",
+    "Notes": "Results loaded from the public MileSplit St. Andrew's team results page for the meet. The page exposed 20 completed St. Andrew's results and did not list any relay lineups.",
+    "SourceUrl": "https://sc.milesplit.com/meets/304994-porter-gaud-home-meet-2-2018/teams/20895"
+  },
+  {
+    "MeetID": 2018041101,
+    "Season": 2018,
+    "Date": "2018-04-11",
+    "Name": "Porter Gaud Home Meet #3",
+    "Location": "Charleston, SC",
+    "Level": "Varsity",
+    "MeetType": "Regular Season",
+    "Status": "Complete",
+    "Notes": "Results loaded from the public MileSplit St. Andrew's team results page for the meet. The page exposed 26 completed St. Andrew's results and did not list any relay lineups.",
+    "SourceUrl": "https://sc.milesplit.com/meets/304995-porter-gaud-home-meet-3-2018/teams/20895"
   },
   {
     "MeetID": 2018050501,

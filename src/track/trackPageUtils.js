@@ -9,6 +9,7 @@ export const TRACK_EVENT_ORDER = [
   "3200 Meter Run",
   "100 Meter Hurdles",
   "110 Meter Hurdles",
+  "400 Meter Hurdles",
   "300 Meter Hurdles",
   "4x100 Meter Relay",
   "4x400 Meter Relay",

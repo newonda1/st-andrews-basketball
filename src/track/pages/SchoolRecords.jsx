@@ -21,6 +21,7 @@ const EVENT_ORDER = [
   "100 Meter Hurdles",
   "110 Meter Hurdles",
   "330 Intermediate Hurdles",
+  "400 Meter Hurdles",
   "300 Meter Hurdles",
   "4x100 Meter Relay",
   "4x400 Meter Relay",
@@ -43,7 +44,7 @@ function safeNum(value) {
 function parseTimeMark(mark) {
   if (!mark) return null;
 
-  const value = String(mark).trim();
+  const value = String(mark).trim().replace(/[a-zA-Z]+$/, "");
   if (!value) return null;
 
   const parts = value.split(":");
@@ -63,6 +64,11 @@ function parseDistanceMark(mark) {
   if (!mark) return null;
 
   const value = String(mark).trim();
+  const metric = value.match(/^(\d+(?:\.\d+)?)m$/i);
+  if (metric) {
+    return Number(metric[1]) * 39.3700787402;
+  }
+
   const feetInches = value.match(/^(\d+)-(\d+(?:\.\d+)?)$/);
   if (feetInches) {
     return Number(feetInches[1]) * 12 + Number(feetInches[2]);
@@ -101,6 +107,8 @@ function normalizeEventName(event) {
       return "3200 Meter Run";
     case "100m Hurdles":
       return "100 Meter Hurdles";
+    case "400m Hurdles":
+      return "400 Meter Hurdles";
     case "330 Int. Hurdles":
       return "330 Intermediate Hurdles";
     case "4x100 Relay":
