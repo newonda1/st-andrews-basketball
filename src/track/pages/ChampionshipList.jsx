@@ -10,6 +10,21 @@ const CHAMPIONSHIP_TYPE_ORDER = {
   Region: 1,
 };
 
+function isWinningPlace(place) {
+  const value = String(place || "").trim().toLowerCase();
+  return value === "1st" || value === "1";
+}
+
+function isChampionshipFinal(entry, meet) {
+  if (!meet) return false;
+  if (meet.MeetType !== "State" && meet.MeetType !== "Region") return false;
+  if (meet.Status !== "Complete") return false;
+  if (!isWinningPlace(entry?.Place)) return false;
+
+  const round = String(entry?.Round || "").trim().toLowerCase();
+  return round === "" || round === "final" || round === "finals";
+}
+
 function buildChampionshipRows({
   playerMeetStats = [],
   meets = [],
@@ -23,12 +38,9 @@ function buildChampionshipRows({
   );
 
   return (playerMeetStats || [])
-    .filter((entry) => /^1/.test(String(entry?.Place || "").trim()))
     .map((entry) => {
       const meet = meetMap.get(Number(entry.MeetID));
-      if (!meet) return null;
-
-      if (meet.MeetType !== "State" && meet.MeetType !== "Region") return null;
+      if (!isChampionshipFinal(entry, meet)) return null;
 
       const season = seasonMap.get(Number(meet.Season)) || null;
       const athleteName = resolveTrackAthleteName(entry, playerMap);
