@@ -3,13 +3,13 @@
     "LegacyRecordID": "girls-100-meter-dash-1984-mique-mcarthur",
     "Gender": "Girls",
     "Event": "100 Meter Dash",
-    "Mark": "11.88",
+    "Mark": "12.78",
     "AthleteName": "Mique McArthur",
     "Year": 1984,
     "Place": "Legacy Record",
-    "MeetName": null,
+    "MeetName": "Legacy coach record (original event: 100-yard dash)",
     "SourceType": "Coach Record List",
-    "SourceNote": "Legacy girls track record list shared by a former coach. Year is known, but the exact meet and date are unknown."
+    "SourceNote": "Legacy girls track record list shared by a former coach. Year is known, but the exact meet and date are unknown. Original coach-provided mark was 11.88 in the 100-yard dash; converted to 12.78 for the 100 Meter Dash using the NFHS yard-to-metric table."
   },
   {
     "LegacyRecordID": "girls-400-meter-dash-2003-sarah-lundgren",
@@ -189,13 +189,13 @@
     "LegacyRecordID": "boys-100-meter-dash-1980-miller-cook",
     "Gender": "Boys",
     "Event": "100 Meter Dash",
-    "Mark": "10.55",
+    "Mark": "11.45",
     "AthleteName": "Miller Cook",
     "Year": 1980,
     "Place": "Legacy Record",
-    "MeetName": null,
+    "MeetName": "Legacy coach record (original event: 100-yard dash)",
     "SourceType": "Coach Record List",
-    "SourceNote": "Legacy boys track record list shared by a former coach. Year is known, but the exact meet and date are unknown."
+    "SourceNote": "Legacy boys track record list shared by a former coach. Year is known, but the exact meet and date are unknown. Original coach-provided mark was 10.55 in the 100-yard dash; converted to 11.45 for the 100 Meter Dash using the NFHS yard-to-metric table."
   },
   {
     "LegacyRecordID": "boys-200-meter-dash-2011-andrew-smith",
@@ -213,13 +213,13 @@
     "LegacyRecordID": "boys-400-meter-dash-1980-mike-bennett",
     "Gender": "Boys",
     "Event": "400 Meter Dash",
-    "Mark": "53.09",
+    "Mark": "52.79",
     "AthleteName": "Mike Bennett",
     "Year": 1980,
     "Place": "Legacy Record",
-    "MeetName": null,
+    "MeetName": "Legacy coach record (original event: 440-yard dash)",
     "SourceType": "Coach Record List",
-    "SourceNote": "Legacy boys track record list shared by a former coach. Year is known, but the exact meet and date are unknown."
+    "SourceNote": "Legacy boys track record list shared by a former coach. Year is known, but the exact meet and date are unknown. Original coach-provided mark was 53.09 in the 440-yard dash; converted to 52.79 for the 400 Meter Dash using the NFHS yard-to-metric table."
   },
   {
     "LegacyRecordID": "boys-800-meter-run-1990-terry-ishihara",
