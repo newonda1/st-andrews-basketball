@@ -5211,6 +5211,75 @@
     "Status": "Complete"
   },
   {
+    "StatID": "2014050301-201401-100h",
+    "MeetID": 2014050301,
+    "PlayerID": 201401,
+    "Gender": "Girls",
+    "Event": "100 Meter Hurdles",
+    "Mark": "18.77",
+    "Place": "3rd",
+    "Round": "Finals",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2014050301-girls-relay-4x100m",
+    "MeetID": 2014050301,
+    "PlayerID": null,
+    "Gender": "Girls",
+    "Event": "4x100 Meter Relay",
+    "Mark": "53.02",
+    "Place": "1st",
+    "Round": "Finals",
+    "Status": "Complete",
+    "AthleteName": "Marie Solitario / Georgia Miller / Rebecca Suh / Morgan Bennet"
+  },
+  {
+    "StatID": "2014050301-201402-800m",
+    "MeetID": 2014050301,
+    "PlayerID": 201402,
+    "Gender": "Girls",
+    "Event": "800 Meter Run",
+    "Mark": "2:36.97",
+    "Place": "3rd",
+    "Round": "Finals",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2014050301-201501-200m",
+    "MeetID": 2014050301,
+    "PlayerID": 201501,
+    "Gender": "Girls",
+    "Event": "200 Meter Dash",
+    "Mark": "26.85",
+    "Place": "1st",
+    "Round": "Finals",
+    "Heat": "H2",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2014050301-girls-relay-4x400m",
+    "MeetID": 2014050301,
+    "PlayerID": null,
+    "Gender": "Girls",
+    "Event": "4x400 Meter Relay",
+    "Mark": "4:18.93",
+    "Place": "1st",
+    "Round": "Finals",
+    "Status": "Complete",
+    "AthleteName": "Georgia Miller / Marie Solitario / Morgan Bennet / Morgan Randolph"
+  },
+  {
+    "StatID": "2014050301-201701-100m",
+    "MeetID": 2014050301,
+    "PlayerID": 201701,
+    "Gender": "Boys",
+    "Event": "100 Meter Dash",
+    "Mark": "12.09",
+    "Place": "5th",
+    "Round": "Finals",
+    "Status": "Complete"
+  },
+  {
     "StatID": "2015050201-201501-100m",
     "MeetID": 2015050201,
     "PlayerID": 201501,

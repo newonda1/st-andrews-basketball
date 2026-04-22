@@ -12,18 +12,6 @@
     "SourceNote": "Legacy girls track record list shared by a former coach. Year is known, but the exact meet and date are unknown."
   },
   {
-    "LegacyRecordID": "girls-200-meter-dash-2014-rebecca-suh",
-    "Gender": "Girls",
-    "Event": "200 Meter Dash",
-    "Mark": "26.85",
-    "AthleteName": "Rebecca Suh",
-    "Year": 2014,
-    "Place": "Legacy Record",
-    "MeetName": null,
-    "SourceType": "Coach Record List",
-    "SourceNote": "Legacy girls track record list shared by a former coach. Year is known, but the exact meet and date are unknown."
-  },
-  {
     "LegacyRecordID": "girls-400-meter-dash-2003-sarah-lundgren",
     "Gender": "Girls",
     "Event": "400 Meter Dash",
@@ -174,42 +162,6 @@
     "Mark": "30' 2\"",
     "AthleteName": "Mary Wilkowski",
     "Year": 2007,
-    "Place": "Legacy Record",
-    "MeetName": null,
-    "SourceType": "Coach Record List",
-    "SourceNote": "Legacy girls track record list shared by a former coach. Year is known, but the exact meet and date are unknown."
-  },
-  {
-    "LegacyRecordID": "girls-4x100-meter-relay-2014",
-    "Gender": "Girls",
-    "Event": "4x100 Meter Relay",
-    "Mark": "53.02",
-    "AthleteName": "Georgia Miller / Rebecca Suh / Morgan Bennett / Reagan Sadowski",
-    "RelayMembers": [
-      "Georgia Miller",
-      "Rebecca Suh",
-      "Morgan Bennett",
-      "Reagan Sadowski"
-    ],
-    "Year": 2014,
-    "Place": "Legacy Record",
-    "MeetName": null,
-    "SourceType": "Coach Record List",
-    "SourceNote": "Legacy girls track record list shared by a former coach. Year is known, but the exact meet and date are unknown."
-  },
-  {
-    "LegacyRecordID": "girls-4x400-meter-relay-2014",
-    "Gender": "Girls",
-    "Event": "4x400 Meter Relay",
-    "Mark": "4:18.93",
-    "AthleteName": "Marie Solitario / Morgan Bennett / Morgan Randolph / Rebecca Suh",
-    "RelayMembers": [
-      "Marie Solitario",
-      "Morgan Bennett",
-      "Morgan Randolph",
-      "Rebecca Suh"
-    ],
-    "Year": 2014,
     "Place": "Legacy Record",
     "MeetName": null,
     "SourceType": "Coach Record List",

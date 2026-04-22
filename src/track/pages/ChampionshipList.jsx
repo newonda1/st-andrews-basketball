@@ -11,6 +11,12 @@ const CHAMPIONSHIP_TYPE_ORDER = {
   Region: 1,
 };
 
+const FEATURED_CHAMPION_KEYS = new Set([
+  "2014-05-03|200 Meter Dash|26.85|State",
+  "2014-05-03|4x100 Meter Relay|53.02|State",
+  "2014-05-03|4x400 Meter Relay|4:18.93|State",
+]);
+
 function isWinningPlace(place) {
   const value = String(place || "").trim().toLowerCase();
   return value === "1st" || value === "1";
@@ -24,6 +30,12 @@ function isChampionshipFinal(entry, meet) {
 
   const round = String(entry?.Round || "").trim().toLowerCase();
   return round === "" || round === "final" || round === "finals";
+}
+
+function isFeaturedChampion(row) {
+  return FEATURED_CHAMPION_KEYS.has(
+    `${row.date || ""}|${row.event || ""}|${row.mark || ""}|${row.championshipType || ""}`
+  );
 }
 
 function buildChampionshipRows({
@@ -44,11 +56,17 @@ function buildChampionshipRows({
       if (!isChampionshipFinal(entry, meet)) return null;
 
       const season = seasonMap.get(Number(meet.Season)) || null;
-      const athleteName = resolveTrackAthleteName(entry, playerMap);
-      const championshipYear = String(meet.Date || "").slice(0, 4) || String(meet.Season);
+                      const athleteName = resolveTrackAthleteName(entry, playerMap);
+                      const championshipYear = String(meet.Date || "").slice(0, 4) || String(meet.Season);
+                      const featured = isFeaturedChampion({
+                        date: meet.Date || "",
+                        event: entry.Event || "",
+                        mark: entry.Mark || "",
+                        championshipType: meet.MeetType,
+                      });
 
-      return {
-        key: entry.StatID || `${entry.MeetID}-${entry.Event}-${athleteName}`,
+                      return {
+                        key: entry.StatID || `${entry.MeetID}-${entry.Event}-${athleteName}`,
         championshipType: meet.MeetType,
         year: championshipYear,
         athleteName,
@@ -59,6 +77,7 @@ function buildChampionshipRows({
         dateLabel: formatTrackDate(meet.Date),
         championshipName: meet.Name || "Unknown Championship",
         classification: season?.Classification || "",
+        featured,
       };
     })
     .filter(Boolean)
@@ -125,6 +144,9 @@ export default function ChampionshipList({
         State champions are listed first, followed by region champions, with one
         winning result per line
       </p>
+      <p className="-mt-3 text-center text-xs font-semibold uppercase tracking-[0.14em] text-amber-700">
+        Highlighted rows mark the verified 2014 state-title entries that replaced older legacy coach records
+      </p>
 
       <div className="overflow-x-auto">
         <table className={recordTableStyles.outerTable}>
@@ -149,13 +171,24 @@ export default function ChampionshipList({
 
                 {section.rows.length ? (
                   section.rows.map((row) => (
-                    <tr key={row.key} className="border-t bg-white hover:bg-gray-50">
+                    <tr
+                      key={row.key}
+                      className={
+                        row.featured
+                          ? "border-t bg-amber-50 hover:bg-amber-100"
+                          : "border-t bg-white hover:bg-gray-50"
+                      }
+                    >
                       <td className={`${recordTableStyles.bodyCell} text-center font-semibold`}>
                         {row.year || "—"}
                       </td>
                       <td className={recordTableStyles.bodyCell}>
                         <div className={recordTableStyles.playerWrap}>
-                          <span className={recordTableStyles.playerText}>
+                          <span
+                            className={`${recordTableStyles.playerText} ${
+                              row.featured ? "font-semibold text-amber-900" : ""
+                            }`}
+                          >
                             {row.athleteName}
                           </span>
                         </div>
@@ -174,6 +207,11 @@ export default function ChampionshipList({
                           <span className="text-center font-semibold">
                             {row.championshipName}
                           </span>
+                          {row.featured ? (
+                            <span className="rounded-full bg-amber-200 px-2 py-0.5 text-center text-[0.68em] font-bold uppercase tracking-[0.08em] text-amber-900">
+                              Verified 2014 title
+                            </span>
+                          ) : null}
                           {row.classification ? (
                             <span className="text-center text-[0.72em] uppercase tracking-[0.08em] text-gray-500">
                               {row.classification}
