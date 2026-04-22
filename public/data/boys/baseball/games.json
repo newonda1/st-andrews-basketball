@@ -521,7 +521,22 @@
     "Result": "W",
     "TeamScore": 7,
     "OpponentScore": 0,
-    "Season": 2019
+    "Season": 2019,
+    "LineScore": {
+      "Innings": [1, 2, 3, 4, 5, 6, 7],
+      "StAndrews": [0, 0, 4, 0, 0, 2, 1],
+      "Opponent": [0, 0, 0, 0, 0, 0, 0],
+      "StAndrewsTotals": {
+        "R": 7,
+        "H": 9,
+        "E": 0
+      },
+      "OpponentTotals": {
+        "R": 0,
+        "H": 0,
+        "E": 1
+      }
+    }
   },
   {
     "GameID": 2019040801,
