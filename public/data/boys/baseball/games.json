@@ -547,7 +547,134 @@
     "Result": "W",
     "TeamScore": 14,
     "OpponentScore": 3,
-    "Season": 2019
+    "Season": 2019,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "StAndrews": [
+        1,
+        0,
+        2,
+        0,
+        0,
+        0,
+        11
+      ],
+      "Opponent": [
+        0,
+        0,
+        1,
+        2,
+        0,
+        0,
+        0
+      ],
+      "StAndrewsTotals": {
+        "R": 14,
+        "H": 12,
+        "E": 4
+      },
+      "OpponentTotals": {
+        "R": 3,
+        "H": 2,
+        "E": 3
+      }
+    }
+  },
+  {
+    "GameID": 2019041001,
+    "OpponentID": "tn-brentwood-high-school-brentwood",
+    "Opponent": "Brentwood",
+    "LocationType": "Home",
+    "GameType": "Non-Region",
+    "Result": "L",
+    "TeamScore": 12,
+    "OpponentScore": 17,
+    "Season": 2019,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "StAndrews": [
+        2,
+        0,
+        0,
+        6,
+        0,
+        0,
+        4
+      ],
+      "Opponent": [
+        0,
+        0,
+        2,
+        4,
+        0,
+        2,
+        9
+      ],
+      "StAndrewsTotals": {
+        "R": 12,
+        "H": 15,
+        "E": 7
+      },
+      "OpponentTotals": {
+        "R": 17,
+        "H": 17,
+        "E": 1
+      }
+    }
+  },
+  {
+    "GameID": 2019041501,
+    "OpponentID": "ga-twiggs-academy-jeffersonville",
+    "Opponent": "Twiggs Academy",
+    "LocationType": "Home",
+    "GameType": "Non-Region",
+    "Result": "W",
+    "TeamScore": 18,
+    "OpponentScore": 1,
+    "Season": 2019,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3
+      ],
+      "StAndrews": [
+        5,
+        4,
+        9
+      ],
+      "Opponent": [
+        0,
+        0,
+        1
+      ],
+      "StAndrewsTotals": {
+        "R": 18,
+        "H": 12,
+        "E": 1
+      },
+      "OpponentTotals": {
+        "R": 1,
+        "H": 2,
+        "E": 6
+      }
+    }
   },
   {
     "GameID": 2019041601,
