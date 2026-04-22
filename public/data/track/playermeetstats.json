@@ -4168,7 +4168,8 @@
     "Place": "10th",
     "Round": "Finals",
     "Heat": "H2",
-    "Status": "Complete"
+    "Status": "Complete",
+    "AthleteName": "Gray Holmes / Maren Wrieden / Sydney Mims / Grace Dare"
   },
   {
     "StatID": "2022030201-202117-100m",
@@ -5207,6 +5208,18 @@
     "Place": "4th",
     "Round": "Finals",
     "Heat": "H2",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2018050501-201903-shot-put",
+    "MeetID": 2018050501,
+    "PlayerID": 201903,
+    "Gender": "Boys",
+    "Event": "Shot Put",
+    "Mark": "43-08.50",
+    "Place": "1st",
+    "Round": "Finals",
+    "Heat": "H1",
     "Status": "Complete"
   }
 ]

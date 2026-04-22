@@ -1,5 +1,17 @@
 [
   {
+    "MeetID": 2018050501,
+    "Season": 2018,
+    "Date": "2018-05-05",
+    "Name": "SCISA Championships",
+    "Location": "Charleston, SC",
+    "Level": "Varsity",
+    "MeetType": "State",
+    "Status": "Complete",
+    "Notes": "Results loaded from the MileSplit raw complete results page for the SCISA state championships. The public raw page listed one St. Andrew's entry: Jack Hagan's winning boys shot put result.",
+    "SourceUrl": "https://sc.milesplit.com/meets/298497-scisa-championships-2018/results/591575/raw"
+  },
+  {
     "MeetID": 2019042501,
     "Season": 2019,
     "Date": "2019-04-25",
@@ -128,7 +140,7 @@
     "Level": "Varsity",
     "MeetType": "State",
     "Status": "Complete",
-    "Notes": "Results loaded from the MileSplit raw complete results page for the state championships. The public raw page included St. Andrew's finals results, Andrew Futch's sprint prelims, and a girls 4x800 relay mark without the relay lineup.",
+    "Notes": "Results loaded from the MileSplit raw complete results page for the state championships. The public raw page included St. Andrew's finals results and Andrew Futch's sprint prelims, while the official state-meet PDF supplied the girls 4x800 relay lineup.",
     "SourceUrl": "https://ga.milesplit.com/meets/544745-giaa-state-championships-2023/results/915719/raw"
   },
   {

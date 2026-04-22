@@ -1,5 +1,45 @@
 [
   {
+    "SeasonID": 2012,
+    "HeadCoach": "Scott Abernathy",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
+    "SeasonID": 2013,
+    "HeadCoach": "Scott Abernathy",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
+    "SeasonID": 2014,
+    "HeadCoach": "Scott Abernathy",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },    
+  {
+    "SeasonID": 2015,
+    "HeadCoach": "Scott Abernathy",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },  
+  {
+    "SeasonID": 2016,
+    "HeadCoach": "Scott Abernathy",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
     "SeasonID": 2017,
     "HeadCoach": "Scott Abernathy",
     "RegionSeed": null,
@@ -21,7 +61,7 @@
     "RegionSeed": null,
     "RegionFinish": "Region Champion",
     "StateSeed": null,
-    "StateFinish": null
+    "StateFinish": "State Final Four"
   },
   {
     "SeasonID": 2020,

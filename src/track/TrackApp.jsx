@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import AthleticsProgramShell from "../components/AthleticsProgramShell";
+import ChampionshipList from "./pages/ChampionshipList";
 import SchoolRecords from "./pages/SchoolRecords";
 import SeasonPage from "./pages/SeasonPage";
 import YearlyResults from "./pages/YearlyResults";
@@ -104,6 +105,10 @@ export default function TrackApp() {
         title: "Track & Field",
         links: [
           {
+            to: "/athletics/track/champions",
+            label: "List of Champions",
+          },
+          {
             to: "/athletics/track/records/school",
             label: "School Records",
           },
@@ -126,6 +131,18 @@ export default function TrackApp() {
     >
       <Routes>
         <Route index element={<Navigate to="records/school" replace />} />
+        <Route
+          path="champions"
+          element={
+            <ChampionshipList
+              seasons={seasons}
+              meets={meets}
+              playerMeetStats={playerMeetStats}
+              players={players}
+              status={status}
+            />
+          }
+        />
         <Route
           path="records/school"
           element={
