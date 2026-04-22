@@ -1,5 +1,28 @@
 [
   {
+    "SeasonID": 2015,
+    "SeasonLabel": "2014-15",
+    "Classification": "SCISA A & AA",
+    "StatusBadge": "verified",
+    "StatusNote": "The 2014-15 season currently includes the one confirmed high-school meet visible in the public archive: the May 2, 2015 SCISA state championships.",
+    "FirstRegularSeasonMeet": "2015-05-02",
+    "RegionDeadline": "2015-05-02",
+    "StateMeetStart": "2015-05-02",
+    "StateMeetEnd": "2015-05-02",
+    "StateMeetLocation": "Charleston, SC",
+    "RecapParagraphs": [
+      "The 2014-15 season is now the earliest year attached to the St. Andrew's track archive, and the public file currently narrows to one confirmed postseason appearance at the May 2, 2015 SCISA championships at Porter-Gaud.",
+      "That one meet still preserves a recognizable team profile. Rebecca Suh led the girls side with sprint points in both the 100 and 200, and the St. Andrew's girls 4x100 and 4x400 relays each finished second to build the team's 10-point total in Class A & AA.",
+      "On the boys side, Malcolm Williams-Green scored in the 100 and added another finals appearance in the 200. Until more 2015 meets surface, the season reads as a compact state-meet snapshot, but it now gives the archive one more early SCISA chapter."
+    ],
+    "HighlightNotes": [
+      "Rebecca Suh scored in both the girls 100 and 200 at the 2015 SCISA Championships, placing 3rd and 4th.",
+      "The girls 4x100 and 4x400 relays each finished 2nd at state with Rebecca Suh, Morgan Bennet, Georgia Miller, and Marie Solitario.",
+      "Malcolm Williams-Green scored in the boys 100 with a 3rd-place 11.41 and later added an 8th-place finish in the 200.",
+      "The 2014-15 season is now the earliest year attached to the St. Andrew's track section."
+    ]
+  },
+  {
     "SeasonID": 2017,
     "SeasonLabel": "2016-17",
     "Classification": "SCISA A & AA",
@@ -11,9 +34,9 @@
     "StateMeetEnd": "2017-05-06",
     "StateMeetLocation": "Charleston, SC",
     "RecapParagraphs": [
-      "The 2016-17 season now becomes the earliest year currently attached to the St. Andrew's track archive, and the public record is a single confirmed postseason stop at the May 6, 2017 SCISA championships at Porter-Gaud.",
+      "The 2016-17 season currently appears in the St. Andrew's track archive as a single confirmed postseason stop at the May 6, 2017 SCISA championships at Porter-Gaud.",
       "Even in that one-meet snapshot, the results show a compact but competitive boys group. Jack Hagan led the team by placing third in the boys Class A & AA shot put, Malcolm Williams-Green added a sixth-place finish in the 200, and the boys 4x100 relay scored with a fifth-place run.",
-      "Cameron Parker and Cole Becker added non-scoring finals appearances in the 200 and long jump, which helps the season read as more than a one-athlete file. Until more 2017 meets surface, this page serves as a focused state-meet snapshot and pushes the archive back one more school year."
+      "Cameron Parker and Cole Becker added non-scoring finals appearances in the 200 and long jump, which helps the season read as more than a one-athlete file. Until more 2017 meets surface, this page serves as a focused state-meet snapshot from the program's early SCISA years."
     ],
     "HighlightNotes": [
       "Jack Hagan placed 3rd in the boys shot put at the 2017 SCISA Championships with a 39-07.00.",
@@ -34,14 +57,14 @@
     "StateMeetEnd": "2018-05-05",
     "StateMeetLocation": "Charleston, SC",
     "RecapParagraphs": [
-      "The 2017-18 season now becomes the earliest year currently loaded into the St. Andrew's track archive, and the public record is concise: one confirmed appearance at the May 5, 2018 SCISA championships at Porter-Gaud.",
+      "The 2017-18 season remains a concise public record: one confirmed appearance at the May 5, 2018 SCISA championships at Porter-Gaud.",
       "Even with only one visible result, the meet still matters because it preserves an outright state-meet win. Jack Hagan won the boys Class A & AA shot put with a 43-08.50, giving the archive its earliest documented St. Andrew's championship mark.",
       "Until additional 2018 meet files surface, this season page reads as a one-meet postseason snapshot, but it now anchors the section one school year earlier and adds another notable throws result to the program history."
     ],
     "HighlightNotes": [
       "Jack Hagan won the boys shot put at the 2018 SCISA Championships with a 43-08.50.",
       "That May 5, 2018 result is currently the only confirmed St. Andrew's entry visible in the public SCISA state-meet raw results.",
-      "The 2017-18 season is now the earliest year attached to the track section.",
+      "The 2017-18 season adds another early SCISA state-meet chapter to the track section.",
       "Hagan's winning mark now precedes his later 2019 state scoring results in the archive."
     ]
   },
