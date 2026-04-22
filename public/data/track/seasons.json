@@ -1,5 +1,28 @@
 [
   {
+    "SeasonID": 2017,
+    "SeasonLabel": "2016-17",
+    "Classification": "SCISA A & AA",
+    "StatusBadge": "verified",
+    "StatusNote": "The 2016-17 season currently includes the one confirmed high-school meet visible in the public archive: the May 6, 2017 SCISA state championships.",
+    "FirstRegularSeasonMeet": "2017-05-06",
+    "RegionDeadline": "2017-05-06",
+    "StateMeetStart": "2017-05-06",
+    "StateMeetEnd": "2017-05-06",
+    "StateMeetLocation": "Charleston, SC",
+    "RecapParagraphs": [
+      "The 2016-17 season now becomes the earliest year currently attached to the St. Andrew's track archive, and the public record is a single confirmed postseason stop at the May 6, 2017 SCISA championships at Porter-Gaud.",
+      "Even in that one-meet snapshot, the results show a compact but competitive boys group. Jack Hagan led the team by placing third in the boys Class A & AA shot put, Malcolm Williams-Green added a sixth-place finish in the 200, and the boys 4x100 relay scored with a fifth-place run.",
+      "Cameron Parker and Cole Becker added non-scoring finals appearances in the 200 and long jump, which helps the season read as more than a one-athlete file. Until more 2017 meets surface, this page serves as a focused state-meet snapshot and pushes the archive back one more school year."
+    ],
+    "HighlightNotes": [
+      "Jack Hagan placed 3rd in the boys shot put at the 2017 SCISA Championships with a 39-07.00.",
+      "Malcolm Williams-Green scored in the boys 200 with a 6th-place 23.95.",
+      "The boys 4x100 relay placed 5th at state in 47.83.",
+      "Cole Becker reached the boys long jump final, and Cameron Parker added another St. Andrew's entry in the boys 200."
+    ]
+  },
+  {
     "SeasonID": 2018,
     "SeasonLabel": "2017-18",
     "Classification": "SCISA A & AA",

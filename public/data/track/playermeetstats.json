@@ -5211,6 +5211,67 @@
     "Status": "Complete"
   },
   {
+    "StatID": "2017050601-201701-200m",
+    "MeetID": 2017050601,
+    "PlayerID": 201701,
+    "Gender": "Boys",
+    "Event": "200 Meter Dash",
+    "Mark": "23.95",
+    "Place": "6th",
+    "Round": "Finals",
+    "Heat": "H1",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2017050601-201702-200m",
+    "MeetID": 2017050601,
+    "PlayerID": 201702,
+    "Gender": "Boys",
+    "Event": "200 Meter Dash",
+    "Mark": "24.84",
+    "Place": "9th",
+    "Round": "Finals",
+    "Heat": "H1",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2017050601-boys-relay-4x100m",
+    "MeetID": 2017050601,
+    "PlayerID": null,
+    "Gender": "Boys",
+    "Event": "4x100 Meter Relay",
+    "Mark": "47.83",
+    "Place": "5th",
+    "Round": "Finals",
+    "Heat": "H1",
+    "Status": "Complete",
+    "AthleteName": "Conner Dodge / Cameron Parker / Andrew Longwater / Malcolm Williams-Green"
+  },
+  {
+    "StatID": "2017050601-201704-long-jump",
+    "MeetID": 2017050601,
+    "PlayerID": 201704,
+    "Gender": "Boys",
+    "Event": "Long Jump",
+    "Mark": "17-08.50",
+    "Place": "8th",
+    "Round": "Finals",
+    "Heat": "H1",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2017050601-201903-shot-put",
+    "MeetID": 2017050601,
+    "PlayerID": 201903,
+    "Gender": "Boys",
+    "Event": "Shot Put",
+    "Mark": "39-07.00",
+    "Place": "3rd",
+    "Round": "Finals",
+    "Heat": "H1",
+    "Status": "Complete"
+  },
+  {
     "StatID": "2018050501-201903-shot-put",
     "MeetID": 2018050501,
     "PlayerID": 201903,

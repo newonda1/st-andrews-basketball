@@ -1,9 +1,21 @@
 [
   {
+    "MeetID": 2017050601,
+    "Season": 2017,
+    "Date": "2017-05-06",
+    "Name": "SCISA State Championship",
+    "Location": "Charleston, SC",
+    "Level": "Varsity",
+    "MeetType": "State",
+    "Status": "Complete",
+    "Notes": "Results loaded from the MileSplit raw boys results page for the SCISA state championships. The public raw file exposed five St. Andrew's boys entries: two 200-meter results, one 4x100 relay, one long jump result, and one shot put result.",
+    "SourceUrl": "https://sc.milesplit.com/meets/278275-scisa-championships-2017/results/522637/raw"
+  },
+  {
     "MeetID": 2018050501,
     "Season": 2018,
     "Date": "2018-05-05",
-    "Name": "SCISA Championships",
+    "Name": "SCISA State Championship",
     "Location": "Charleston, SC",
     "Level": "Varsity",
     "MeetType": "State",
