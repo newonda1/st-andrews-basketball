@@ -1,4 +1,5 @@
 import React, { useMemo } from "react";
+import { recordTableStyles } from "./recordTableStyles";
 import {
   buildTrackPlayerMap,
   formatTrackDate,
@@ -77,100 +78,6 @@ function buildChampionshipRows({
     });
 }
 
-function ChampionshipTable({ rows = [] }) {
-  return (
-    <div className="overflow-x-auto rounded-[1.5rem] border border-slate-200 bg-white shadow-sm">
-      <table className="w-full min-w-[860px] border-collapse text-sm">
-        <thead className="bg-slate-100">
-          <tr>
-            <th className="border-b border-slate-200 px-4 py-3 text-left font-semibold text-slate-700">
-              Year
-            </th>
-            <th className="border-b border-slate-200 px-4 py-3 text-left font-semibold text-slate-700">
-              Athlete
-            </th>
-            <th className="border-b border-slate-200 px-4 py-3 text-left font-semibold text-slate-700">
-              Event
-            </th>
-            <th className="border-b border-slate-200 px-4 py-3 text-left font-semibold text-slate-700">
-              Mark
-            </th>
-            <th className="border-b border-slate-200 px-4 py-3 text-left font-semibold text-slate-700">
-              Championship Date
-            </th>
-            <th className="border-b border-slate-200 px-4 py-3 text-left font-semibold text-slate-700">
-              Championship
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {rows.map((row, index) => (
-            <tr
-              key={row.key}
-              className={index % 2 ? "bg-slate-50/80" : "bg-white"}
-            >
-              <td className="border-b border-slate-100 px-4 py-3 align-top font-semibold text-slate-900">
-                {row.year || "—"}
-              </td>
-              <td className="border-b border-slate-100 px-4 py-3 align-top">
-                <div className="font-semibold text-slate-900">{row.athleteName}</div>
-                <div className="text-xs uppercase tracking-[0.16em] text-slate-500">
-                  {row.gender}
-                </div>
-              </td>
-              <td className="border-b border-slate-100 px-4 py-3 align-top text-slate-700">
-                {row.event}
-              </td>
-              <td className="border-b border-slate-100 px-4 py-3 align-top font-semibold text-slate-900">
-                {row.mark}
-              </td>
-              <td className="border-b border-slate-100 px-4 py-3 align-top text-slate-700">
-                {row.dateLabel}
-              </td>
-              <td className="border-b border-slate-100 px-4 py-3 align-top">
-                <div className="font-semibold text-slate-900">{row.championshipName}</div>
-                {row.classification ? (
-                  <div className="text-xs text-slate-500">{row.classification}</div>
-                ) : null}
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  );
-}
-
-function ChampionshipSection({
-  title,
-  description,
-  rows = [],
-}) {
-  return (
-    <section className="space-y-4">
-      <div className="rounded-[1.6rem] border border-slate-200 bg-white/90 px-5 py-5 shadow-sm">
-        <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <h2 className="text-2xl font-bold text-slate-900">{title}</h2>
-            <p className="mt-1 text-sm leading-6 text-slate-600">{description}</p>
-          </div>
-          <div className="inline-flex w-fit rounded-full bg-[#012169] px-4 py-2 text-sm font-semibold text-white">
-            {rows.length} {rows.length === 1 ? "champion" : "champions"}
-          </div>
-        </div>
-      </div>
-
-      {rows.length ? (
-        <ChampionshipTable rows={rows} />
-      ) : (
-        <div className="rounded-[1.5rem] border border-dashed border-slate-300 bg-slate-50 px-6 py-8 text-center text-sm text-slate-600">
-          No championship winners are loaded in this section yet.
-        </div>
-      )}
-    </section>
-  );
-}
-
 export default function ChampionshipList({
   seasons = [],
   meets = [],
@@ -197,62 +104,99 @@ export default function ChampionshipList({
     () => championshipRows.filter((row) => row.championshipType === "Region"),
     [championshipRows]
   );
-
-  const championCount = championshipRows.length;
-  const uniqueChampionCount = new Set(
-    championshipRows.map((row) => row.athleteName)
-  ).size;
+  const sections = useMemo(
+    () => [
+      { title: "State Champions", rows: stateChampions },
+      { title: "Region Champions", rows: regionChampions },
+    ],
+    [regionChampions, stateChampions]
+  );
 
   return (
-    <div className="mx-auto max-w-6xl space-y-6 px-4 pb-10 pt-2 sm:px-6 lg:pb-40">
+    <div className="pt-2 pb-10 lg:pb-40 space-y-6 px-4 max-w-6xl mx-auto">
       {status ? (
         <div className="rounded-2xl border border-slate-200 bg-white px-5 py-4 text-center text-sm text-slate-600 shadow-sm">
           {status}
         </div>
       ) : null}
 
-      <section className="rounded-[2rem] border border-slate-200 bg-[linear-gradient(135deg,#eff6ff,#ffffff_48%,#e0f2fe)] px-6 py-7 shadow-sm">
-        <div className="max-w-4xl">
-          <h1 className="text-3xl font-bold text-slate-900">List of Champions</h1>
-          <p className="mt-3 text-sm leading-7 text-slate-600 sm:text-base">
-            This page collects every loaded St. Andrew&apos;s region and state
-            championship result in track &amp; field. State champions appear first,
-            followed by region champions, with the winning mark and the meet where
-            the title was earned.
-          </p>
-        </div>
+      <h1 className="text-2xl font-bold text-center">List of Champions</h1>
+      <p className="-mt-1.5 text-center text-sm italic text-gray-600">
+        State champions are listed first, followed by region champions, with one
+        winning result per line
+      </p>
 
-        <div className="mt-5 flex flex-wrap gap-3">
-          <div className="rounded-2xl bg-white/85 px-4 py-3 shadow-sm ring-1 ring-slate-200">
-            <div className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
-              Loaded Titles
-            </div>
-            <div className="mt-1 text-2xl font-black text-[#012169]">
-              {championCount}
-            </div>
-          </div>
-          <div className="rounded-2xl bg-white/85 px-4 py-3 shadow-sm ring-1 ring-slate-200">
-            <div className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
-              Unique Champions
-            </div>
-            <div className="mt-1 text-2xl font-black text-[#012169]">
-              {uniqueChampionCount}
-            </div>
-          </div>
-        </div>
-      </section>
+      <div className="overflow-x-auto">
+        <table className={recordTableStyles.outerTable}>
+          <thead className="bg-gray-200 font-bold">
+            <tr>
+              <th className={recordTableStyles.headerCell}>Year</th>
+              <th className={recordTableStyles.headerCell}>Athlete</th>
+              <th className={recordTableStyles.headerCell}>Event</th>
+              <th className={recordTableStyles.headerCell}>Mark</th>
+              <th className={recordTableStyles.headerCell}>Date</th>
+              <th className={recordTableStyles.headerCell}>Championship</th>
+            </tr>
+          </thead>
+          <tbody>
+            {sections.map((section) => (
+              <React.Fragment key={section.title}>
+                <tr className="border-t bg-blue-50">
+                  <td className={recordTableStyles.sectionCell} colSpan={6}>
+                    {section.title}
+                  </td>
+                </tr>
 
-      <ChampionshipSection
-        title="State Champions"
-        description="State-meet titles are listed first so the top championship finishes stay front and center."
-        rows={stateChampions}
-      />
-
-      <ChampionshipSection
-        title="Region Champions"
-        description="Region winners appear below the state champions in reverse chronological order."
-        rows={regionChampions}
-      />
+                {section.rows.length ? (
+                  section.rows.map((row) => (
+                    <tr key={row.key} className="border-t bg-white hover:bg-gray-50">
+                      <td className={`${recordTableStyles.bodyCell} text-center font-semibold`}>
+                        {row.year || "—"}
+                      </td>
+                      <td className={recordTableStyles.bodyCell}>
+                        <div className={recordTableStyles.playerWrap}>
+                          <span className={recordTableStyles.playerText}>
+                            {row.athleteName}
+                          </span>
+                        </div>
+                      </td>
+                      <td className={`${recordTableStyles.bodyCell} text-center text-blue-900 font-semibold`}>
+                        {row.event}
+                      </td>
+                      <td className={`${recordTableStyles.bodyCell} text-center font-semibold`}>
+                        {row.mark}
+                      </td>
+                      <td className={`${recordTableStyles.bodyCell} text-center`}>
+                        {row.dateLabel}
+                      </td>
+                      <td className={recordTableStyles.bodyCell}>
+                        <div className="flex min-w-0 flex-col items-center justify-center gap-1 leading-tight">
+                          <span className="text-center font-semibold">
+                            {row.championshipName}
+                          </span>
+                          {row.classification ? (
+                            <span className="text-center text-[0.72em] uppercase tracking-[0.08em] text-gray-500">
+                              {row.classification}
+                            </span>
+                          ) : null}
+                        </div>
+                      </td>
+                    </tr>
+                  ))
+                ) : (
+                  <tr className="border-t bg-white">
+                    <td className={recordTableStyles.bodyCell} colSpan={6}>
+                      <span className="text-gray-500">
+                        No championship winners are loaded in this section yet.
+                      </span>
+                    </td>
+                  </tr>
+                )}
+              </React.Fragment>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
