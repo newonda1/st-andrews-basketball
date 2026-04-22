@@ -685,7 +685,37 @@
     "Result": "W",
     "TeamScore": 15,
     "OpponentScore": 0,
-    "Season": 2019
+    "Season": 2019,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "StAndrews": [
+        3,
+        9,
+        2,
+        1
+      ],
+      "Opponent": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "StAndrewsTotals": {
+        "R": 15,
+        "H": 10,
+        "E": 0
+      },
+      "OpponentTotals": {
+        "R": 0,
+        "H": 0,
+        "E": 6
+      }
+    }
   },
   {
     "GameID": 2019041801,
@@ -696,7 +726,137 @@
     "Result": "W",
     "TeamScore": 15,
     "OpponentScore": 4,
-    "Season": 2019
+    "Season": 2019,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "StAndrews": [
+        4,
+        2,
+        4,
+        1,
+        1,
+        3
+      ],
+      "Opponent": [
+        2,
+        0,
+        0,
+        0,
+        2,
+        0
+      ],
+      "StAndrewsTotals": {
+        "R": 15,
+        "H": 16,
+        "E": 3
+      },
+      "OpponentTotals": {
+        "R": 4,
+        "H": 6,
+        "E": 2
+      }
+    }
+  },
+  {
+    "GameID": 2019042201,
+    "OpponentID": "ga-twiggs-academy-jeffersonville",
+    "Opponent": "Twiggs Academy",
+    "LocationType": "Away",
+    "GameType": "Non-Region",
+    "Result": "W",
+    "TeamScore": 19,
+    "OpponentScore": 0,
+    "Season": 2019,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "StAndrews": [
+        3,
+        0,
+        8,
+        2,
+        6
+      ],
+      "Opponent": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "StAndrewsTotals": {
+        "R": 19,
+        "H": 14,
+        "E": 1
+      },
+      "OpponentTotals": {
+        "R": 0,
+        "H": 2,
+        "E": 5
+      }
+    }
+  },
+  {
+    "GameID": 2019042301,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons",
+    "Opponent": "Robert Toombs Christian Academy",
+    "LocationType": "Away",
+    "GameType": "Non-Region",
+    "Result": "W",
+    "TeamScore": 6,
+    "OpponentScore": 3,
+    "Season": 2019,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "StAndrews": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        3,
+        0
+      ],
+      "Opponent": [
+        0,
+        0,
+        0,
+        2,
+        1,
+        0,
+        0
+      ],
+      "StAndrewsTotals": {
+        "R": 6,
+        "H": 10,
+        "E": 2
+      },
+      "OpponentTotals": {
+        "R": 3,
+        "H": 4,
+        "E": 1
+      }
+    }
   },
   {
     "GameID": 2019050301,
@@ -707,7 +867,46 @@
     "Result": "L",
     "TeamScore": 4,
     "OpponentScore": 5,
-    "Season": 2019
+    "Season": 2019,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "StAndrews": [
+        0,
+        1,
+        0,
+        0,
+        3,
+        0,
+        0
+      ],
+      "Opponent": [
+        2,
+        2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "StAndrewsTotals": {
+        "R": 4,
+        "H": 7,
+        "E": 4
+      },
+      "OpponentTotals": {
+        "R": 5,
+        "H": 3,
+        "E": 0
+      }
+    }
   },
   {
     "GameID": 2019050302,
@@ -718,7 +917,46 @@
     "Result": "W",
     "TeamScore": 15,
     "OpponentScore": 7,
-    "Season": 2019
+    "Season": 2019,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "StAndrews": [
+        0,
+        1,
+        3,
+        2,
+        1,
+        0,
+        8
+      ],
+      "Opponent": [
+        1,
+        0,
+        2,
+        2,
+        2,
+        0,
+        0
+      ],
+      "StAndrewsTotals": {
+        "R": 15,
+        "H": 14,
+        "E": 2
+      },
+      "OpponentTotals": {
+        "R": 7,
+        "H": 11,
+        "E": 1
+      }
+    }
   },
   {
     "GameID": 2019050401,
@@ -729,7 +967,46 @@
     "Result": "W",
     "TeamScore": 9,
     "OpponentScore": 0,
-    "Season": 2019
+    "Season": 2019,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "StAndrews": [
+        2,
+        3,
+        1,
+        2,
+        0,
+        1,
+        0
+      ],
+      "Opponent": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "StAndrewsTotals": {
+        "R": 9,
+        "H": 5,
+        "E": 0
+      },
+      "OpponentTotals": {
+        "R": 0,
+        "H": 5,
+        "E": 3
+      }
+    }
   },
   {
     "GameID": 2019051001,
