@@ -286,7 +286,22 @@
     "Result": "L",
     "TeamScore": 0,
     "OpponentScore": 12,
-    "Season": 2018
+    "Season": 2018,
+    "LineScore": {
+      "Innings": [1, 2, 3, 4, 5],
+      "StAndrews": [0, 0, 0, 0, 0],
+      "Opponent": [3, 2, 3, 4, 0],
+      "StAndrewsTotals": {
+        "R": 0,
+        "H": 2,
+        "E": 1
+      },
+      "OpponentTotals": {
+        "R": 12,
+        "H": 16,
+        "E": 0
+      }
+    }
   },
   {
     "GameID": 2018032802,

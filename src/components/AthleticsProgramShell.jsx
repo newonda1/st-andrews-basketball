@@ -189,6 +189,9 @@ const styles = {
     borderTop: "1px solid #efefef",
     borderBottom: "1px solid #e5e5e5",
   },
+  navShell: {
+    position: "relative",
+  },
   navInner: {
     maxWidth: "1300px",
     margin: "0 auto",
@@ -203,13 +206,13 @@ const styles = {
     justifyContent: "center",
     flexWrap: "nowrap",
     width: "100%",
-    gap: "clamp(1.75rem, 5vw, 6rem)",
   },
   navItem: {
     position: "relative",
     display: "flex",
     alignItems: "stretch",
-    flexShrink: 0,
+    flex: "1 1 0",
+    minWidth: 0,
   },
   navItemButton: {
     display: "inline-flex",
@@ -232,35 +235,54 @@ const styles = {
   },
   navItemActive: {
     background: "transparent",
-    color: "#151515",
+    color: "#002169",
+  },
+  navItemIndicator: {
+    position: "absolute",
+    left: 0,
+    right: 0,
+    bottom: 0,
+    height: "11px",
+    background: "#9b9b9b",
+    transform: "scaleX(0)",
+    transformOrigin: "center center",
+    transition: "transform 220ms cubic-bezier(0.22, 1, 0.36, 1)",
   },
   navDropdown: {
     position: "absolute",
     top: "100%",
-    left: 0,
+    left: "50%",
+    transform: "translateX(-50%)",
     zIndex: 35,
-    paddingTop: "6px",
+    width: "min(1040px, calc(100vw - 3rem))",
   },
   navDropdownInner: {
-    minWidth: "220px",
-    background: "#ffffff",
-    border: "1px solid #d8d8d8",
-    boxShadow: "0 14px 30px rgba(15, 23, 42, 0.12)",
+    background: "#002169",
+    boxShadow: "0 28px 42px rgba(15, 23, 42, 0.28)",
+    padding: "34px 40px 40px",
+  },
+  navDropdownColumns: {
+    display: "grid",
+    gap: "38px",
+  },
+  navDropdownColumn: {
+    display: "flex",
+    flexDirection: "column",
   },
   navDropdownLink: {
     display: "block",
-    padding: "10px 14px",
-    color: "#242424",
+    padding: "14px 0",
+    color: "#ffffff",
     textDecoration: "none",
     fontFamily: '"Questrial", Arial, Helvetica, sans-serif',
-    fontSize: "0.96rem",
-    lineHeight: 1.2,
-    whiteSpace: "nowrap",
-    transition: "background-color 160ms ease, color 160ms ease",
+    fontSize: "1.02rem",
+    lineHeight: 1.18,
+    whiteSpace: "normal",
+    borderBottom: "1px solid rgba(255, 255, 255, 0.35)",
+    transition: "opacity 160ms ease",
   },
   navDropdownLinkActive: {
-    background: "#fafafa",
-    color: "#151515",
+    color: "#ffffff",
   },
   content: {
     maxWidth: "1300px",
@@ -384,6 +406,16 @@ export default function AthleticsProgramShell({
       .map((entry) => entry.item);
   }, [featuredSearchItems, searchQuery]);
 
+  const openDropdownSection = useMemo(
+    () =>
+      navSections.find(
+        (section) =>
+          section.title === openDropdownTitle &&
+          (section.links || []).length > 1
+      ) || null,
+    [navSections, openDropdownTitle]
+  );
+
   useEffect(() => {
     setOpenDropdownTitle(null);
     setSearchOpen(false);
@@ -431,14 +463,6 @@ export default function AthleticsProgramShell({
   const isSectionActive = (section) =>
     (section.links || []).some((item) => isLinkActive(item));
 
-  const handleDropdownBlur = (event, sectionTitle) => {
-    if (!event.currentTarget.contains(event.relatedTarget)) {
-      setOpenDropdownTitle((current) =>
-        current === sectionTitle ? null : current
-      );
-    }
-  };
-
   const handleSearchSubmit = (event) => {
     event.preventDefault();
 
@@ -447,24 +471,58 @@ export default function AthleticsProgramShell({
     }
   };
 
+  const closeNavMenus = () => {
+    setOpenDropdownTitle(null);
+  };
+
+  const handleNavShellBlur = (event) => {
+    if (!event.currentTarget.contains(event.relatedTarget)) {
+      closeNavMenus();
+    }
+  };
+
+  const getDropdownColumns = (links) => {
+    const columnCount = links.length > 3 ? 2 : 1;
+    const chunkSize = Math.ceil(links.length / columnCount);
+
+    return Array.from({ length: columnCount }, (_, index) =>
+      links.slice(index * chunkSize, index * chunkSize + chunkSize)
+    ).filter((column) => column.length > 0);
+  };
+
   const renderNavItem = (section) => {
     const links = section.links || [];
+    const showIndicator =
+      openDropdownTitle === section.title ||
+      (openDropdownTitle === null && isSectionActive(section));
 
     if (links.length === 1) {
       const item = links[0];
       return (
-        <NavLink
-          key={section.title}
-          to={item.to}
-          end={item.end}
-          style={({ isActive }) => ({
-            ...styles.navItemButton,
-            ...(isActive ? styles.navItemActive : {}),
-          })}
-          className="px-2.5 text-[0.96rem] transition-colors hover:text-[#111111] sm:px-3 sm:text-[1.05rem] lg:text-[1.12rem]"
-        >
-          {section.title}
-        </NavLink>
+        <div key={section.title} style={styles.navItem}>
+          <NavLink
+            to={item.to}
+            end={item.end}
+            onMouseEnter={() => setOpenDropdownTitle(section.title)}
+            onFocus={() => setOpenDropdownTitle(section.title)}
+            style={({ isActive }) => ({
+              ...styles.navItemButton,
+              ...(isActive || openDropdownTitle === section.title
+                ? styles.navItemActive
+                : {}),
+            })}
+            className="px-2.5 text-[0.96rem] transition-colors hover:text-[#002169] sm:px-3 sm:text-[1.05rem] lg:text-[1.12rem]"
+          >
+            {section.title}
+          </NavLink>
+          <span
+            aria-hidden="true"
+            style={{
+              ...styles.navItemIndicator,
+              transform: showIndicator ? "scaleX(1)" : "scaleX(0)",
+            }}
+          />
+        </div>
       );
     }
 
@@ -476,12 +534,6 @@ export default function AthleticsProgramShell({
         key={section.title}
         style={styles.navItem}
         onMouseEnter={() => setOpenDropdownTitle(section.title)}
-        onMouseLeave={() =>
-          setOpenDropdownTitle((current) =>
-            current === section.title ? null : current
-          )
-        }
-        onBlur={(event) => handleDropdownBlur(event, section.title)}
       >
         <button
           type="button"
@@ -491,7 +543,7 @@ export default function AthleticsProgramShell({
             ...styles.navItemButton,
             ...(isActive || isOpen ? styles.navItemActive : {}),
           }}
-          className="px-2.5 text-[0.96rem] transition-colors hover:text-[#111111] sm:px-3 sm:text-[1.05rem] lg:text-[1.12rem]"
+          className="w-full px-2.5 text-[0.96rem] transition-colors hover:text-[#002169] sm:px-3 sm:text-[1.05rem] lg:text-[1.12rem]"
           onFocus={() => setOpenDropdownTitle(section.title)}
           onClick={() =>
             setOpenDropdownTitle((current) =>
@@ -501,31 +553,13 @@ export default function AthleticsProgramShell({
         >
           {section.title}
         </button>
-
-        {isOpen ? (
-          <div
-            style={styles.navDropdown}
-            className="w-max max-w-[calc(100vw-1.5rem)]"
-          >
-            <div style={styles.navDropdownInner}>
-              {links.map((item) => (
-                <NavLink
-                  key={`${section.title}-${item.to}`}
-                  to={item.to}
-                  end={item.end}
-                  onClick={() => setOpenDropdownTitle(null)}
-                  style={({ isActive }) => ({
-                    ...styles.navDropdownLink,
-                    ...(isActive ? styles.navDropdownLinkActive : {}),
-                  })}
-                  className="hover:bg-[#fafafa]"
-                >
-                  {item.label}
-                </NavLink>
-              ))}
-            </div>
-          </div>
-        ) : null}
+        <span
+          aria-hidden="true"
+          style={{
+            ...styles.navItemIndicator,
+            transform: showIndicator ? "scaleX(1)" : "scaleX(0)",
+          }}
+        />
       </div>
     );
   };
@@ -662,15 +696,65 @@ export default function AthleticsProgramShell({
         </div>
 
         <div style={styles.navBar}>
-          <nav
-            aria-label={menuTitle || title}
-            style={styles.navInner}
-            className="overflow-x-auto overflow-y-visible px-2 sm:px-6 lg:overflow-visible"
+          <div
+            style={styles.navShell}
+            onMouseLeave={closeNavMenus}
+            onBlur={handleNavShellBlur}
           >
-            <div style={styles.navList}>
-              {navSections.map(renderNavItem)}
-            </div>
-          </nav>
+            <nav
+              aria-label={menuTitle || title}
+              style={styles.navInner}
+              className="overflow-x-auto overflow-y-visible px-2 sm:px-6 lg:overflow-visible"
+            >
+              <div style={styles.navList}>
+                {navSections.map(renderNavItem)}
+              </div>
+            </nav>
+
+            {openDropdownSection ? (
+              <div style={styles.navDropdown}>
+                <div style={styles.navDropdownInner}>
+                  <div
+                    style={{
+                      ...styles.navDropdownColumns,
+                      gridTemplateColumns: `repeat(${getDropdownColumns(
+                        openDropdownSection.links
+                      ).length}, minmax(0, 1fr))`,
+                    }}
+                  >
+                    {getDropdownColumns(openDropdownSection.links).map(
+                      (column, columnIndex) => (
+                        <div
+                          key={`${openDropdownSection.title}-column-${columnIndex}`}
+                          style={styles.navDropdownColumn}
+                        >
+                          {column.map((item, itemIndex) => (
+                            <NavLink
+                              key={`${openDropdownSection.title}-${item.to}`}
+                              to={item.to}
+                              end={item.end}
+                              onClick={closeNavMenus}
+                              style={({ isActive }) => ({
+                                ...styles.navDropdownLink,
+                                ...(isActive ? styles.navDropdownLinkActive : {}),
+                                borderBottom:
+                                  itemIndex === column.length - 1
+                                    ? "none"
+                                    : styles.navDropdownLink.borderBottom,
+                              })}
+                              className="hover:opacity-80"
+                            >
+                              {item.label}
+                            </NavLink>
+                          ))}
+                        </div>
+                      )
+                    )}
+                  </div>
+                </div>
+              </div>
+            ) : null}
+          </div>
         </div>
       </header>
 
