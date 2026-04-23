@@ -176,6 +176,7 @@ export default function AthleticsProgramShell({
   children,
   athleticsHomePath = "/athletics",
   headerHomePath = athleticsHomePath,
+  homeLabel = "Home",
   showFooter = true,
 }) {
   const location = useLocation();
@@ -192,12 +193,12 @@ export default function AthleticsProgramShell({
   const navSections = useMemo(
     () => [
       {
-        title: "Home",
-        links: [{ to: headerHomePath, label: "Home", end: true }],
+        title: homeLabel,
+        links: [{ to: headerHomePath, label: homeLabel, end: true }],
       },
       ...normalizedSections,
     ],
-    [headerHomePath, normalizedSections]
+    [headerHomePath, homeLabel, normalizedSections]
   );
 
   useEffect(() => {

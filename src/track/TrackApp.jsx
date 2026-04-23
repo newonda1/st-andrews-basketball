@@ -102,16 +102,26 @@ export default function TrackApp() {
   const menuSections = useMemo(() => {
     return [
       {
-        title: "Track & Field",
+        title: "List of Champions",
         links: [
           {
             to: "/athletics/track/champions",
             label: "List of Champions",
           },
+        ],
+      },
+      {
+        title: "School Records",
+        links: [
           {
             to: "/athletics/track/records/school",
             label: "School Records",
           },
+        ],
+      },
+      {
+        title: "Season Results",
+        links: [
           {
             to: "/athletics/track/yearly-results",
             label: "Season Results",
@@ -128,6 +138,7 @@ export default function TrackApp() {
       menuSections={menuSections}
       athleticsHomePath="/athletics"
       headerHomePath="/athletics/track/records/school"
+      homeLabel="Menu"
     >
       <Routes>
         <Route index element={<Navigate to="records/school" replace />} />

@@ -77,12 +77,17 @@ export default function SwimmingApp() {
   const menuSections = useMemo(() => {
     return [
       {
-        title: "Swimming",
+        title: "School Records",
         links: [
           {
             to: "/athletics/swimming/records/school",
             label: "School Records",
           },
+        ],
+      },
+      {
+        title: "Season Results",
+        links: [
           {
             to: "/athletics/swimming/yearly-results",
             label: "Season Results",
