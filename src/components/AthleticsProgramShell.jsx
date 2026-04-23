@@ -38,6 +38,7 @@ const styles = {
     width: "auto",
     display: "block",
     flexShrink: 0,
+    filter: "brightness(0.82) saturate(1.08) contrast(1.04)",
   },
   titleDivider: {
     width: "2px",
