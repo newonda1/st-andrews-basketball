@@ -1,5 +1,28 @@
 [
   {
+    "SeasonID": 2010,
+    "SeasonLabel": "2009-10",
+    "Classification": "SCISA A & AA",
+    "StatusBadge": "verified",
+    "StatusNote": "The 2009-10 season currently includes the one confirmed high-school meet visible in the public archive: the May 1, 2010 SCISA state championships.",
+    "FirstRegularSeasonMeet": "2010-05-01",
+    "RegionDeadline": "2010-05-01",
+    "StateMeetStart": "2010-05-01",
+    "StateMeetEnd": "2010-05-01",
+    "StateMeetLocation": "Columbia, SC",
+    "RecapParagraphs": [
+      "The 2009-10 season now opens the St. Andrew's track archive with the earliest confirmed SCISA postseason snapshot currently visible in the public results: the May 1, 2010 state championships at Heathwood Hall in Columbia.",
+      "The boys side supplied most of the points. Andrew Smith led the way by winning shot put and discus while also taking second in high jump and long jump, Grant Little scored in both short sprints, the boys 4x400 relay placed second, and Jay Jenkins added a third-place finish in the 1600. Together those results pushed St. Andrew's to ninth in the boys team standings with 22 points.",
+      "The girls file is smaller but still strong. Rachel Huncke placed second in the girls 400, Ciara Brown scored in both jumps and won the girls long jump, Maggie Solitario placed second in the girls discus, and Addison Randolph reached the girls 800 final. The girls totaled 16 points and finished 10th in the team standings."
+    ],
+    "HighlightNotes": [
+      "Andrew Smith won the boys shot put at 42-07.00 and the boys discus at 121-10 at the 2010 SCISA Championships.",
+      "Smith also added runner-up finishes in boys high jump and boys long jump.",
+      "Ciara Brown won the girls long jump at 14-11.75 and also scored in the girls high jump.",
+      "Rachel Huncke placed 2nd in the girls 400, while Grant Little scored in both the boys 100 and 200."
+    ]
+  },
+  {
     "SeasonID": 2011,
     "SeasonLabel": "2010-11",
     "Classification": "SCISA A & AA",
@@ -11,7 +34,7 @@
     "StateMeetEnd": "2011-05-07",
     "StateMeetLocation": "Sumter, SC",
     "RecapParagraphs": [
-      "The 2010-11 season now opens the St. Andrew's track archive with a substantial SCISA postseason snapshot from the May 7, 2011 state championships at Wilson Hall in Sumter.",
+      "The 2010-11 season adds the next early SCISA postseason snapshot in the St. Andrew's track archive, built around the May 7, 2011 state championships at Wilson Hall in Sumter.",
       "The boys side carried the biggest headline. Andrew Smith won four Class A & AA state titles by taking the boys 100, boys 200, shot put, and discus, while Danny Kirkconnell added sprint points in both short dashes and Tucker Whitton, Jay Jenkins, and the relay groups pushed the boys to ninth in the team standings with 33 points.",
       "The girls file also shows a real team presence instead of a one-athlete cameo. Rachel Huncke placed second in both the girls 100 and 400, Klara Hodges finished third in the girls 800 and 1600, Maggie Solitario won the girls shot put, and the girls 4x100 relay took second with Huncke, Rebecca Suh, Halen Waters, and Hodges. Those results lifted St. Andrew's to 11th in the girls standings with 16 points."
     ],

@@ -1,5 +1,17 @@
 [
   {
+    "MeetID": 2010050101,
+    "Season": 2010,
+    "Date": "2010-05-01",
+    "Name": "SCISA State Championships",
+    "Location": "Columbia, SC",
+    "Level": "Varsity",
+    "MeetType": "State",
+    "Status": "Complete",
+    "Notes": "Results loaded from the MileSplit raw A-AA boys page shared by the user and the linked A-AA girls split for the 2010 SCISA state championships. The public files exposed 15 St. Andrew's entries and verified team finishes of 10th for the girls and 9th for the boys. The girls high-jump row for Ciara Brown shows a malformed place field in the raw export, so the winning place was inferred from the listed five points and the girls team total.",
+    "SourceUrl": "https://sc.milesplit.com/meets/66738-scisa-championships-2010/results/120874/raw"
+  },
+  {
     "MeetID": 2011050701,
     "Season": 2011,
     "Date": "2011-05-07",
