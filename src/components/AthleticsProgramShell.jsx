@@ -66,21 +66,25 @@ const styles = {
     color: "#808184",
   },
   navBar: {
-    background: "#f2f2f2",
-    borderTop: "1px solid #ececec",
-    borderBottom: "1px solid #dadada",
+    background: "#f8f8f8",
+    borderTop: "1px solid #efefef",
+    borderBottom: "1px solid #e5e5e5",
   },
   navInner: {
     maxWidth: "1300px",
     margin: "0 auto",
     display: "flex",
     alignItems: "center",
+    justifyContent: "center",
     boxSizing: "border-box",
   },
   navList: {
     display: "flex",
     alignItems: "stretch",
+    justifyContent: "center",
     flexWrap: "nowrap",
+    width: "100%",
+    gap: "clamp(1.75rem, 5vw, 6rem)",
   },
   navItem: {
     position: "relative",
@@ -92,23 +96,24 @@ const styles = {
     display: "inline-flex",
     alignItems: "center",
     justifyContent: "center",
-    minHeight: "42px",
-    padding: "0 14px",
+    minHeight: "54px",
+    padding: "0 8px",
     border: "none",
     background: "transparent",
-    color: "#002169",
+    color: "#242424",
     cursor: "pointer",
     textDecoration: "none",
     fontFamily: '"Questrial", Arial, Helvetica, sans-serif',
-    fontSize: "0.95rem",
+    fontSize: "1.08rem",
     fontWeight: 400,
-    letterSpacing: "0.015em",
+    letterSpacing: "0",
+    lineHeight: 1.15,
     whiteSpace: "nowrap",
     transition: "background-color 160ms ease, color 160ms ease",
   },
   navItemActive: {
-    background: "rgba(255, 255, 255, 0.88)",
-    color: "#00174e",
+    background: "transparent",
+    color: "#151515",
   },
   navDropdown: {
     position: "absolute",
@@ -126,17 +131,17 @@ const styles = {
   navDropdownLink: {
     display: "block",
     padding: "10px 14px",
-    color: "#1f2937",
+    color: "#242424",
     textDecoration: "none",
     fontFamily: '"Questrial", Arial, Helvetica, sans-serif',
-    fontSize: "0.92rem",
+    fontSize: "0.96rem",
     lineHeight: 1.2,
     whiteSpace: "nowrap",
     transition: "background-color 160ms ease, color 160ms ease",
   },
   navDropdownLinkActive: {
-    background: "#f5f5f5",
-    color: "#002169",
+    background: "#fafafa",
+    color: "#151515",
   },
   content: {
     maxWidth: "1300px",
@@ -227,7 +232,7 @@ export default function AthleticsProgramShell({
             ...styles.navItemButton,
             ...(isActive ? styles.navItemActive : {}),
           })}
-          className="px-3 text-[0.78rem] transition-colors hover:bg-white/70 sm:px-4 sm:text-[0.92rem]"
+          className="px-2.5 text-[0.96rem] transition-colors hover:text-[#111111] sm:px-3 sm:text-[1.05rem] lg:text-[1.12rem]"
         >
           {section.title}
         </NavLink>
@@ -257,7 +262,7 @@ export default function AthleticsProgramShell({
             ...styles.navItemButton,
             ...(isActive || isOpen ? styles.navItemActive : {}),
           }}
-          className="px-3 text-[0.78rem] transition-colors hover:bg-white/70 sm:px-4 sm:text-[0.92rem]"
+          className="px-2.5 text-[0.96rem] transition-colors hover:text-[#111111] sm:px-3 sm:text-[1.05rem] lg:text-[1.12rem]"
           onFocus={() => setOpenDropdownTitle(section.title)}
           onClick={() =>
             setOpenDropdownTitle((current) =>
@@ -284,7 +289,7 @@ export default function AthleticsProgramShell({
                     ...styles.navDropdownLink,
                     ...(isActive ? styles.navDropdownLinkActive : {}),
                   })}
-                  className="hover:bg-[#f8f8f8]"
+                  className="hover:bg-[#fafafa]"
                 >
                   {item.label}
                 </NavLink>
@@ -336,7 +341,7 @@ export default function AthleticsProgramShell({
           <nav
             aria-label={menuTitle || title}
             style={styles.navInner}
-            className="px-2 sm:px-6"
+            className="overflow-x-auto overflow-y-visible px-2 sm:px-6 lg:overflow-visible"
           >
             <div style={styles.navList}>
               {navSections.map(renderNavItem)}
