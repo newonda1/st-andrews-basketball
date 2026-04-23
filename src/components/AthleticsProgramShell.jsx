@@ -38,7 +38,6 @@ const styles = {
     width: "auto",
     display: "block",
     flexShrink: 0,
-    filter: "brightness(0.82) saturate(1.08) contrast(1.04)",
   },
   titleDivider: {
     width: "2px",
@@ -195,7 +194,7 @@ export default function AthleticsProgramShell({
             className="min-w-0 flex-1 pr-3 sm:pr-5"
           >
             <img
-              src="/images/common/st_andrews_athletics_horizontal_logo.png"
+              src="/images/common/st_andrews_athletics_horizontal_logo_dark.png"
               alt="St. Andrew's Athletics"
               style={styles.logo}
               className="h-7 sm:h-8 md:h-9 lg:h-[39px]"
