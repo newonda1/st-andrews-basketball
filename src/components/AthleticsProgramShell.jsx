@@ -40,7 +40,7 @@ const styles = {
     flexShrink: 0,
   },
   titleDivider: {
-    width: "2px",
+    width: "1px",
     background: "#808184",
     flexShrink: 0,
   },
@@ -202,7 +202,7 @@ export default function AthleticsProgramShell({
             <span
               aria-hidden="true"
               style={styles.titleDivider}
-              className="mx-1 h-7 sm:mx-1.5 sm:h-8 md:h-9 lg:mx-2 lg:h-[39px]"
+              className="mx-0.5 h-7 sm:mx-1 sm:h-8 md:mx-1.5 md:h-9 lg:mx-1.5 lg:h-[39px]"
             />
             <div style={styles.titleWrap}>
               <h1
