@@ -197,17 +197,17 @@ export default function AthleticsProgramShell({
               src="/images/common/st_andrews_athletics_horizontal_logo.png"
               alt="St. Andrew's Athletics"
               style={styles.logo}
-              className="h-9 sm:h-11 md:h-12 lg:h-[52px]"
+              className="h-7 sm:h-8 md:h-9 lg:h-[39px]"
             />
             <span
               aria-hidden="true"
               style={styles.titleDivider}
-              className="mx-2 h-9 sm:mx-3 sm:h-11 md:h-12 lg:mx-4 lg:h-[52px]"
+              className="mx-1 h-7 sm:mx-1.5 sm:h-8 md:h-9 lg:mx-2 lg:h-[39px]"
             />
             <div style={styles.titleWrap}>
               <h1
                 style={styles.title}
-                className="text-[0.78rem] sm:text-[1.05rem] md:text-[1.3rem] lg:text-[1.58rem]"
+                className="text-[0.6rem] sm:text-[0.8rem] md:text-[0.98rem] lg:text-[1.18rem]"
               >
                 {title}
               </h1>
