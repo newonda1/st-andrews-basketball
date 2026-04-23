@@ -186,5 +186,47 @@
       "The boys meet was built on balance. Ian Given scored in three events by taking third in the 200 IM, seventh in the 100 freestyle, and fourth in the 100 backstroke, while Tristan Tsang reached the podium in both distance and butterfly with a fifth-place 500 freestyle and an eighth-place 100 butterfly.",
       "St. Andrew's also scored in both varsity boys relays. The 200 medley relay of James Crake, Ian Given, Tristan Tsang, and Ian Willis finished sixth, and the 200 freestyle relay of Tate Salter, Ian Willis, Ian Given, and Tristan Tsang finished seventh, helping the boys team close the meet in sixth place overall."
     ]
+  },
+  {
+    "MeetID": 2026020901,
+    "Season": 2026,
+    "Date": "2026-02-09",
+    "Name": "GIAA State Championship (Varsity)",
+    "Location": "McAuley Aquatic Center, Georgia Tech, Atlanta, GA",
+    "Level": "Varsity",
+    "MeetType": "State",
+    "Status": "Complete",
+    "GirlsTeamPlace": "5th",
+    "GirlsTeamPoints": 36,
+    "BoysTeamPlace": "8th",
+    "BoysTeamPoints": 25,
+    "Notes": "Results loaded from the official 2026 GIAA state-meet PDF. The varsity file showed two St. Andrew's girls individual state titles from Jossy Thompson, three scoring girls swims from Mabyl Jefferson, and boys scoring from Tristan Tsang plus the fourth-place 200 freestyle relay that lifted the Lions into a tie for eighth.",
+    "SourceUrl": "https://www.giaasports.org/wp-content/uploads/2026/02/2026-giaa-final-results.pdf",
+    "RecapTitle": "Thompson and Tsang lead a balanced 2026 varsity finish",
+    "RecapParagraphs": [
+      "Jossy Thompson again supplied the headline moments for St. Andrew's at the 2026 GIAA State Championship. Thompson won the girls 50 freestyle in 24.25 and the girls 100 butterfly in 58.68, then added a runner-up finish in the 100 breaststroke.",
+      "Mabyl Jefferson gave the varsity girls the rest of their scoring by finishing fifth in the 200 freestyle, fourth in the 500 freestyle, and seventh in the 100 backstroke. Those swims pushed St. Andrew's to fifth in the girls standings with 36 points.",
+      "On the boys side, Tristan Tsang placed third in both the 200 freestyle and 100 breaststroke and added a sixth-place finish in the 100 butterfly, while Oliver Kovel, Tsang, Ian Willis, and Reefe Reiter finished fourth in the 200 freestyle relay to help the Lions tie for eighth with 25 points."
+    ]
+  },
+  {
+    "MeetID": 2026020902,
+    "Season": 2026,
+    "Date": "2026-02-09",
+    "Name": "GIAA State Championship (Middle School)",
+    "Location": "McAuley Aquatic Center, Georgia Tech, Atlanta, GA",
+    "Level": "Middle School",
+    "MeetType": "State",
+    "Status": "Complete",
+    "GirlsTeamPlace": "2nd",
+    "GirlsTeamPoints": 46,
+    "Notes": "Results loaded from the official 2026 GIAA state-meet PDF. The middle-school file showed a runner-up St. Andrew's girls team finish with 46 points, second-place finishes in both girls relays, and a full boys relay and individual slate that included breaststroke, backstroke, freestyle, and IM entries.",
+    "SourceUrl": "https://www.giaasports.org/wp-content/uploads/2026/02/2026-giaa-final-results.pdf",
+    "RecapTitle": "Runner-up middle school girls add real 2026 depth",
+    "RecapParagraphs": [
+      "The St. Andrew's middle-school girls produced one of the best team finishes in the swim archive by taking second in the GIAA standings with 46 points. The Lions opened with a runner-up finish in the 200 medley relay from Anna Neufeld, Presley Hall, Hazel Jefferson, and Addie Kovel.",
+      "Neufeld then scored in the 100 IM, 100 freestyle, and 50 backstroke, while Jefferson added points in the 50 freestyle, 50 butterfly, and 100 freestyle. Charlotte Gotwalt, Hall, Grace Irwin, and Kovel filled out the rest of the girls individual slate.",
+      "St. Andrew's closed the girls meet with another runner-up relay, as Neufeld, Jefferson, Gotwalt, and Kovel finished second in the 200 freestyle relay. The boys side added individual swims from Jake Gitelman, Seungjae Lee, and Koa Karabelas plus relay entries in both medley and freestyle."
+    ]
   }
 ]
