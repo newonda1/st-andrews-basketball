@@ -96,7 +96,7 @@ const styles = {
     color: "#002169",
     textDecoration: "none",
     fontFamily: '"Questrial", Arial, Helvetica, sans-serif',
-    fontSize: "1rem",
+    fontSize: "0.92rem",
     fontWeight: 500,
     lineHeight: 1,
     whiteSpace: "nowrap",
@@ -106,8 +106,8 @@ const styles = {
     display: "inline-flex",
     alignItems: "center",
     justifyContent: "center",
-    width: "40px",
-    height: "40px",
+    width: "36px",
+    height: "36px",
     border: "none",
     background: "transparent",
     color: "#7c7c7c",
@@ -543,7 +543,7 @@ export default function AthleticsProgramShell({
               src="/images/common/st_andrews_athletics_horizontal_logo_dark.png"
               alt="St. Andrew's Athletics"
               style={styles.logo}
-              className="h-[35px] sm:h-[40px] md:h-[45px] lg:h-[49px]"
+              className="translate-y-[2px] h-[35px] sm:h-[40px] md:h-[45px] lg:h-[49px]"
             />
             <span
               aria-hidden="true"
@@ -578,7 +578,7 @@ export default function AthleticsProgramShell({
                   target="_blank"
                   rel="noreferrer"
                   style={styles.utilityLink}
-                  className="transition-colors hover:text-[#00174e]"
+                  className="text-[0.92rem] transition-colors hover:text-[#00174e]"
                 >
                   {item.label}
                 </a>
@@ -597,7 +597,7 @@ export default function AthleticsProgramShell({
                 aria-hidden="true"
                 viewBox="0 0 24 24"
                 fill="none"
-                className="h-6 w-6"
+                className="h-[1.35rem] w-[1.35rem]"
               >
                 <circle
                   cx="11"

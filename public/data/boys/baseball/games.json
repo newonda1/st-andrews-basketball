@@ -252,6 +252,32 @@
     }
   },
   {
+    "GameID": 2018032701,
+    "OpponentID": "oh-southview-high-school-sylvania",
+    "Opponent": "Southview",
+    "LocationType": "Home",
+    "GameType": "Non-Region",
+    "Result": "L",
+    "TeamScore": 1,
+    "OpponentScore": 13,
+    "Season": 2018,
+    "LineScore": {
+      "Innings": [1, 2, 3, 4, 5, 6],
+      "StAndrews": [0, 0, 0, 0, 1, "X"],
+      "Opponent": [6, 0, 6, 1, 0, 0],
+      "StAndrewsTotals": {
+        "R": 1,
+        "H": 5,
+        "E": 2
+      },
+      "OpponentTotals": {
+        "R": 13,
+        "H": 9,
+        "E": 0
+      }
+    }
+  },
+  {
     "GameID": 2018032801,
     "OpponentID": "tn-brentwood-high-school-brentwood",
     "Opponent": "Brentwood",
