@@ -53,7 +53,7 @@ const sports = [
       {
         title: "Individual Championships",
         sections: [
-          { title: "Region Championships", years: [2021, 2022, 2024] },
+          { title: "Region Championships", years: [2021, 2022, 2024, 2026] },
           { title: "State Championships", years: [2011, 2014, 2018] },
         ],
       },

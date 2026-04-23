@@ -1,5 +1,28 @@
 [
   {
+    "SeasonID": 2005,
+    "SeasonLabel": "2004-05",
+    "Classification": "SCISA",
+    "StatusBadge": "verified",
+    "StatusNote": "The 2004-05 season currently includes the one confirmed high-school meet visible in the public archive: the April 30, 2005 SCISA state championships.",
+    "FirstRegularSeasonMeet": "2005-04-30",
+    "RegionDeadline": "2005-04-30",
+    "StateMeetStart": "2005-04-30",
+    "StateMeetEnd": "2005-04-30",
+    "StateMeetLocation": "Sumter, SC",
+    "RecapParagraphs": [
+      "The 2004-05 season now opens the St. Andrew's track archive with the earliest confirmed SCISA postseason snapshot currently visible in the public results: the April 30, 2005 state championships at Memorial Stadium in Sumter.",
+      "The girls side supplied the scoring. Sarah Lundgren placed fourth in the girls 400, Ann Kingston finished fourth in the girls 100 hurdles and also appeared in the girls 100, and the girls 4x400 relay reached the final with a partially published lineup of M. Griffin, S. Griffin, Lundgren, and Kingston. Those results lifted St. Andrew's to 11th in the girls standings with eight points.",
+      "The boys file is much smaller. Remy Thurston appeared in the boys 100 dash, but St. Andrew's did not place in the published boys team standings. Even so, the meet gives the archive one more verified SCISA season at the very front of the timeline."
+    ],
+    "HighlightNotes": [
+      "Sarah Lundgren placed 4th in the girls 400 at the 2005 SCISA Championships in 1:04.64.",
+      "Ann Kingston placed 4th in the girls 100-meter hurdles in 18.73 and also reached the girls 100 final.",
+      "The girls 4x400 relay finished 7th in 4:46.03 with a partially published lineup.",
+      "The girls team finished 11th in the SCISA standings with eight points."
+    ]
+  },
+  {
     "SeasonID": 2006,
     "SeasonLabel": "2005-06",
     "Classification": "SCISA",
@@ -11,7 +34,7 @@
     "StateMeetEnd": "2006-04-29",
     "StateMeetLocation": "Columbia, SC",
     "RecapParagraphs": [
-      "The 2005-06 season now opens the St. Andrew's track archive with the earliest confirmed SCISA postseason snapshot currently visible in the public results: the April 29, 2006 state championships at Heathwood Hall in Columbia.",
+      "The 2005-06 season adds the next early SCISA postseason snapshot in the St. Andrew's track archive, built around the April 29, 2006 state championships at Heathwood Hall in Columbia.",
       "The public file is small, but it shows both sides of the program. On the girls side, Ann Kingston reached the 100 hurdles final and also appeared in the 100 dash, Sarah Lundgren ran the 400, and Grace Wilkowski logged throws marks in both shot put and discus. On the boys side, Javier Gutierrez represented St. Andrew's in the long jump.",
       "None of those marks reached the scoring positions, and St. Andrew's did not appear in the published team standings. Even so, the meet gives the track archive one more verified SCISA season at the front end of the timeline."
     ],
@@ -19,7 +42,7 @@
       "Ann Kingston placed 7th in the girls 100-meter hurdles at the 2006 SCISA Championships in 18.62.",
       "Grace Wilkowski placed 7th in the girls shot put at 27-08.50 and also competed in the discus.",
       "Javier Gutierrez placed 10th in the boys long jump at 18-01.00.",
-      "The meet pushes the public track archive back to the 2005-06 school year."
+      "The season preserves the next earliest verified SCISA postseason snapshot in the archive."
     ]
   },
   {
@@ -409,23 +432,23 @@
     "AssistantCoach": "Russell Wilson",
     "Classification": "GIAA AAA",
     "Region": "Region 2",
-    "StatusBadge": "scheduled",
-    "StatusNote": "As of April 20, 2026, the season meet list below has been confirmed from the current team schedule. The April 15, 2026 Savannah Country Day School Varsity Meet #6 has been intentionally omitted because St. Andrew's did not participate.",
+    "StatusBadge": "verified",
+    "StatusNote": "As of April 23, 2026, the season includes five completed varsity meets through the GIAA Region 2-AAA Championships on April 22. The April 15, 2026 Savannah Country Day School Varsity Meet #6 remains omitted because MileSplit lists no St. Andrew's performances for that event, and the GIAA AAA state meet is still ahead on April 30-May 2.",
     "FirstRegularSeasonMeet": "2026-01-26",
     "RegionDeadline": "2026-04-23",
     "StateMeetStart": "2026-04-30",
     "StateMeetEnd": "2026-05-02",
     "StateMeetLocation": "Strong Rock Christian School, Locust Grove",
     "RecapParagraphs": [
-      "The 2025-26 season file is still growing, but the first four completed meets already show more event coverage across both the girls and boys groups. The section now has enough data to track weekly progress instead of only listing a schedule.",
-      "Aubri Rutledge has supplied the headline sprint marks so far on the girls side, while Janiyah Johnson has anchored the throws with strong discus and shot put performances. The distance group has also stayed active every week, with Lane Mandel and Nick Brown providing the most visible middle-distance and distance marks in the current file.",
-      "On the boys side, the 4x100 relay is already down to 45.70, Luke Nelson has paired sprint speed with a strong discus mark, and Josiah Bowers has contributed in both the high jump and triple jump. With region and state still ahead on the calendar, this page is designed to keep filling in as postseason results are added."
+      "The 2025-26 season file now stretches from the opening January meets through the April 22 GIAA Region 2-AAA Championships, so the page has moved well beyond a schedule-only snapshot. St. Andrew's finished fourth in the girls standings with 62 points and third in the boys standings with 88.5 at region, giving the season its clearest team-performance anchor so far.",
+      "That region meet also produced five individual titles from four athletes. Aubri Rutledge won the girls 200, Lane Mandel won the girls 1600, Amari Cook swept the boys 100 and 200, and Josiah Bowers won the boys high jump. Around those champions, Janiyah Johnson added a runner-up finish in the girls shot put, Pat Jackson placed second in the boys long jump, and the boys relays scored in all three events.",
+      "Historically, the region marks give the season real weight. Cook's 23.03 in the boys 200 moved within 0.15 of Andrew Smith's school record 22.88 from 2011, and his 11.44 in the boys 100 edged past the 11.45 mark credited to Miller Cook in 1980. Bowers' 5-8 in the high jump moved beyond Stephen Todd's school mark of 5-6, Mandel's 5:48.51 earlier in April brought her close to Sarah Rodenberry's 5:42.00 in the 1600, and Rutledge's 27.11 in the 200 gave the girls side another headline sprint mark. With state still ahead at the end of April, the season already has a much stronger historical profile than a growing weekly log."
     ],
     "HighlightNotes": [
-      "Aubri Rutledge has posted the team's best girls sprint marks so far with a 13.32 in the 100 and a 27.09 in the 200.",
-      "The boys 4x100 relay has already reached 45.70 through the first four completed meets.",
-      "Lane Mandel's 13:08.48 in the 3200 and Nick Brown's 5:11.95 in the 1600 lead the loaded distance results.",
-      "Region and state dates are already on the timeline, so the meet-by-meet archive can keep growing through postseason."
+      "Amari Cook swept the boys 100 and 200 at the GIAA Region 2-AAA Championships in 11.44 and 23.03.",
+      "Lane Mandel and Aubri Rutledge added girls region titles in the 1600 and 200, while Josiah Bowers won the boys high jump at 5-8.00.",
+      "The girls finished 4th at region with 62 points and the boys finished 3rd with 88.5.",
+      "Cook's 23.03 in the boys 200 and Bowers' 5-8 in the boys high jump both moved into elite historical territory on the St. Andrew's track page."
     ]
   }
 ]

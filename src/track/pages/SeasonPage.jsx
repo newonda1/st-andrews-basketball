@@ -56,6 +56,35 @@ function MeetResultsTable({ rows, playerMap }) {
   );
 }
 
+function MeetRecapCard({ meet }) {
+  const title = String(meet?.RecapTitle || "").trim();
+  const paragraphs = Array.isArray(meet?.RecapParagraphs)
+    ? meet.RecapParagraphs.map((paragraph) => String(paragraph || "").trim()).filter(Boolean)
+    : [];
+
+  if (!title && !paragraphs.length) {
+    return null;
+  }
+
+  return (
+    <section className="rounded-[1.4rem] border border-slate-200 bg-slate-50 px-4 py-4 text-left shadow-sm">
+      <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-slate-500">
+        Meet Recap
+      </p>
+      {title ? (
+        <h3 className="mt-2 text-lg font-semibold text-slate-900">{title}</h3>
+      ) : null}
+      <div className="mt-3 space-y-3">
+        {paragraphs.map((paragraph, index) => (
+          <p key={`${meet?.MeetID || "meet"}-recap-${index}`} className="text-sm leading-7 text-slate-700">
+            {paragraph}
+          </p>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 export default function SeasonPage({
   seasons = [],
   meets = [],
@@ -250,6 +279,7 @@ export default function SeasonPage({
                         <tr>
                           <td className="border p-0" colSpan={3}>
                             <div className="space-y-4 px-4 py-4 sm:px-5">
+                              <MeetRecapCard meet={meet} />
                               <MeetResultsTable rows={meetRows} playerMap={playerMap} />
                             </div>
                           </td>

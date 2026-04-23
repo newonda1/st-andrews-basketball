@@ -1,5 +1,17 @@
 [
   {
+    "MeetID": 2005043001,
+    "Season": 2005,
+    "Date": "2005-04-30",
+    "Name": "SCISA State Championships",
+    "Location": "Sumter, SC",
+    "Level": "Varsity",
+    "MeetType": "State",
+    "Status": "Complete",
+    "Notes": "Results loaded from the MileSplit raw boys results page shared by the user and the linked girls split for the 2005 SCISA state championships. The public files exposed five St. Andrew's entries, including a girls 4x400 relay lineup with two athletes listed only by initials, and verified an 11th-place girls team finish with eight points. St. Andrew's did not appear in the published boys team standings.",
+    "SourceUrl": "https://sc.milesplit.com/meets/11181-scisa-championships-2005/results/23991/raw"
+  },
+  {
     "MeetID": 2006042901,
     "Season": 2006,
     "Date": "2006-04-29",
@@ -523,8 +535,15 @@
     "Location": "Statesboro, GA",
     "Level": "Varsity",
     "MeetType": "Region",
-    "Status": "Scheduled",
-    "Notes": "Region championship meet.",
-    "SourceUrl": null
+    "Status": "Complete",
+    "Notes": "Results loaded from the MileSplit St. Andrew's team page shared by the user and cross-checked against the linked raw complete-results page. The public files exposed 42 St. Andrew's rows, including five individual region titles, a fourth-place girls team finish with 62 points, and a third-place boys team finish with 88.5 points.",
+    "SourceUrl": "https://ga.milesplit.com/meets/744044-giaa-region-2-aaa-2026/teams/28890",
+    "RecapTitle": "Five Individual Titles Lead Strong Region Finish",
+    "RecapParagraphs": [
+      "St. Andrew's turned the GIAA Region 2-AAA Championships on April 22, 2026 into its strongest postseason snapshot of the spring so far, finishing fourth in the girls standings with 62 points and third in the boys standings with 88.5 at Georgia Southern Eagle Field in Statesboro. The biggest headline was the five individual region titles won by four athletes: Aubri Rutledge in the girls 200, Lane Mandel in the girls 1600, Amari Cook in the boys 100 and 200, and Josiah Bowers in the boys high jump.",
+      "Cook's sprint double gave the meet a place in school history. His 23.03 in the 200 moved within 0.15 of Andrew Smith's school record 22.88 from 2011, and his 11.44 in the 100 edged past the 11.45 mark credited to Miller Cook in 1980.",
+      "The other champions added their own history. Bowers' 5-8 high-jump clearance moved past Stephen Todd's school mark of 5-6 from 1981, Rutledge's 27.11 in the 200 gave St. Andrew's another standout sprint performance in the tradition of Rebecca Suh, and Mandel's 1600 title came after she had already run 5:48.51 earlier in April to move within sight of Sarah Rodenberry's school record 5:42.00 from 2002.",
+      "The supporting points made the team finishes possible. Janiyah Johnson placed second in the girls shot put at 29-1.50, just 8.5 inches shy of Mary Wilkowski's school record. Carson Brown finished third in the girls 3200, Pat Jackson took second in the boys long jump, Nick Brown and Ian Willis both scored in distance events, and the boys relays added second in the 4x100, third in the 4x800, and fourth in the 4x400."
+    ]
   }
 ]
