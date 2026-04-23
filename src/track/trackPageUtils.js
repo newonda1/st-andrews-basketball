@@ -60,7 +60,7 @@ export function getTrackSeasonLabel(seasonOrId) {
 
   if (!Number.isFinite(seasonId)) return String(seasonOrId ?? "Unknown Season");
 
-  return `${seasonId - 1}-${String(seasonId).slice(-2)}`;
+  return `Spring ${seasonId}`;
 }
 
 export function buildTrackPlayerMap(players = []) {

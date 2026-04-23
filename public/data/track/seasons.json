@@ -1,7 +1,7 @@
 [
   {
     "SeasonID": 2005,
-    "SeasonLabel": "2004-05",
+    "SeasonLabel": "Spring 2005",
     "Classification": "SCISA",
     "StatusBadge": "verified",
     "StatusNote": "The 2004-05 season currently includes the one confirmed high-school meet visible in the public archive: the April 30, 2005 SCISA state championships.",
@@ -24,7 +24,7 @@
   },
   {
     "SeasonID": 2006,
-    "SeasonLabel": "2005-06",
+    "SeasonLabel": "Spring 2006",
     "Classification": "SCISA",
     "StatusBadge": "verified",
     "StatusNote": "The 2005-06 season currently includes the one confirmed high-school meet visible in the public archive: the April 29, 2006 SCISA state championships.",
@@ -47,7 +47,7 @@
   },
   {
     "SeasonID": 2007,
-    "SeasonLabel": "2006-07",
+    "SeasonLabel": "Spring 2007",
     "Classification": "SCISA",
     "StatusBadge": "verified",
     "StatusNote": "The 2006-07 season currently includes the one confirmed high-school meet visible in the public archive: the April 28, 2007 SCISA state championships.",
@@ -70,7 +70,7 @@
   },
   {
     "SeasonID": 2009,
-    "SeasonLabel": "2008-09",
+    "SeasonLabel": "Spring 2009",
     "Classification": "SCISA A & AA",
     "StatusBadge": "verified",
     "StatusNote": "The 2008-09 season currently includes the one confirmed high-school meet visible in the public archive: the May 2, 2009 SCISA state championships.",
@@ -93,7 +93,7 @@
   },
   {
     "SeasonID": 2010,
-    "SeasonLabel": "2009-10",
+    "SeasonLabel": "Spring 2010",
     "Classification": "SCISA A & AA",
     "StatusBadge": "verified",
     "StatusNote": "The 2009-10 season currently includes the one confirmed high-school meet visible in the public archive: the May 1, 2010 SCISA state championships.",
@@ -116,7 +116,7 @@
   },
   {
     "SeasonID": 2011,
-    "SeasonLabel": "2010-11",
+    "SeasonLabel": "Spring 2011",
     "Classification": "SCISA A & AA",
     "StatusBadge": "verified",
     "StatusNote": "The 2010-11 season currently includes the one confirmed high-school meet visible in the public archive: the May 7, 2011 SCISA state championships.",
@@ -139,7 +139,7 @@
   },
   {
     "SeasonID": 2012,
-    "SeasonLabel": "2011-12",
+    "SeasonLabel": "Spring 2012",
     "Classification": "SCISA A & AA",
     "StatusBadge": "verified",
     "StatusNote": "The 2011-12 season currently includes the one confirmed high-school meet visible in the public archive: the May 5, 2012 SCISA state championships.",
@@ -162,7 +162,7 @@
   },
   {
     "SeasonID": 2014,
-    "SeasonLabel": "2013-14",
+    "SeasonLabel": "Spring 2014",
     "Classification": "SCISA A & AA",
     "StatusBadge": "verified",
     "StatusNote": "The 2013-14 season currently includes the one confirmed high-school meet visible in the public archive: the May 3, 2014 SCISA state championships.",
@@ -185,7 +185,7 @@
   },
   {
     "SeasonID": 2015,
-    "SeasonLabel": "2014-15",
+    "SeasonLabel": "Spring 2015",
     "Classification": "SCISA A & AA",
     "StatusBadge": "verified",
     "StatusNote": "The 2014-15 season now includes two verified St. Andrew's meets: the April 24 RCA A and AA SCISA Regional Qualifier and the May 2 SCISA state championships.",
@@ -208,7 +208,7 @@
   },
   {
     "SeasonID": 2016,
-    "SeasonLabel": "2015-16",
+    "SeasonLabel": "Spring 2016",
     "Classification": "SCISA A & AA",
     "StatusBadge": "verified",
     "StatusNote": "The 2015-16 season now includes two verified St. Andrew's regular-season meets, from the March 9 Porter-Gaud meet through the April 20 Porter-Gaud Home Meet 3. No public postseason file has been attached yet.",
@@ -231,7 +231,7 @@
   },
   {
     "SeasonID": 2017,
-    "SeasonLabel": "2016-17",
+    "SeasonLabel": "Spring 2017",
     "Classification": "SCISA A & AA",
     "StatusBadge": "verified",
     "StatusNote": "The 2016-17 season now includes five verified meets, from four regular-season stops through the May 6 SCISA state championships.",
@@ -254,7 +254,7 @@
   },
   {
     "SeasonID": 2018,
-    "SeasonLabel": "2017-18",
+    "SeasonLabel": "Spring 2018",
     "Classification": "SCISA A & AA",
     "StatusBadge": "verified",
     "StatusNote": "The 2017-18 season now includes four verified meets, from three Porter Gaud regular-season meets through the May 5 SCISA championships.",
@@ -277,7 +277,7 @@
   },
   {
     "SeasonID": 2019,
-    "SeasonLabel": "2018-19",
+    "SeasonLabel": "Spring 2019",
     "HeadCoach": "Michael Bennet",
     "Classification": "GISA 2AAA",
     "Region": "Region 2",
@@ -302,7 +302,7 @@
   },
   {
     "SeasonID": 2021,
-    "SeasonLabel": "2020-21",
+    "SeasonLabel": "Spring 2021",
     "HeadCoach": "Michael Bennet",
     "Classification": "GISA 2AAA",
     "Region": "Region 2",
@@ -327,7 +327,7 @@
   },
   {
     "SeasonID": 2022,
-    "SeasonLabel": "2021-22",
+    "SeasonLabel": "Spring 2022",
     "HeadCoach": "Michael Bennet",
     "Classification": "GISA 2AAA",
     "Region": "Region 2",
@@ -352,7 +352,7 @@
   },
   {
     "SeasonID": 2023,
-    "SeasonLabel": "2022-23",
+    "SeasonLabel": "Spring 2023",
     "HeadCoach": "Kevin Prisant",
     "Classification": "GIAA AAA",
     "Region": "Region 2",
@@ -377,7 +377,7 @@
   },
   {
     "SeasonID": 2024,
-    "SeasonLabel": "2023-24",
+    "SeasonLabel": "Spring 2024",
     "HeadCoach": "Kevin Prisant",
     "Classification": "GIAA AAA",
     "Region": "Region 2",
@@ -402,7 +402,7 @@
   },
   {
     "SeasonID": 2025,
-    "SeasonLabel": "2024-25",
+    "SeasonLabel": "Spring 2025",
     "HeadCoach": "Wes Worthington",
     "Classification": "GIAA AAA",
     "Region": "Region 2",
@@ -427,7 +427,7 @@
   },
   {
     "SeasonID": 2026,
-    "SeasonLabel": "2025-26",
+    "SeasonLabel": "Spring 2026",
     "HeadCoach": "Wes Worthington",
     "AssistantCoach": "Russell Wilson",
     "Classification": "GIAA AAA",
