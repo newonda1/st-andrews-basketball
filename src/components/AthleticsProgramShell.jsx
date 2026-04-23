@@ -248,7 +248,7 @@ const styles = {
     transformOrigin: "center center",
     opacity: 0,
     transition:
-      "transform 260ms cubic-bezier(0.23, 1, 0.32, 1), opacity 160ms ease",
+      "transform 380ms cubic-bezier(0.22, 1, 0.36, 1), opacity 240ms ease",
   },
   navDropdown: {
     position: "absolute",
@@ -494,8 +494,16 @@ export default function AthleticsProgramShell({
   const getDropdownWidth = (links) => {
     const columnCount = getDropdownColumns(links).length;
 
+    if (columnCount === 1) {
+      return "min(470px, calc(100vw - 7rem))";
+    }
+
+    if (links.length <= 4) {
+      return "min(760px, calc(100vw - 7rem))";
+    }
+
     return columnCount > 1
-      ? "min(920px, calc(100vw - 7rem))"
+      ? "min(860px, calc(100vw - 7rem))"
       : "min(470px, calc(100vw - 7rem))";
   };
 
@@ -518,7 +526,7 @@ export default function AthleticsProgramShell({
                 ? styles.navItemActive
                 : {}),
             })}
-            className="px-2.5 text-[0.96rem] transition-colors hover:text-[#002169] sm:px-3 sm:text-[1.05rem] lg:text-[1.12rem]"
+            className="w-full px-2.5 text-[0.96rem] transition-colors hover:text-[#002169] sm:px-3 sm:text-[1.05rem] lg:text-[1.12rem]"
           >
             {section.title}
           </NavLink>
