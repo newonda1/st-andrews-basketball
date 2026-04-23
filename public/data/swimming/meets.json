@@ -1,5 +1,125 @@
 [
   {
+    "MeetID": 2019012601,
+    "Season": 2019,
+    "Date": "2019-01-26",
+    "Name": "GISA State Championship (Varsity)",
+    "Location": "McAuley Aquatic Center, Georgia Tech, Atlanta, GA",
+    "Level": "Varsity",
+    "MeetType": "State",
+    "Status": "Complete",
+    "GirlsTeamPlace": "4th",
+    "GirlsTeamPoints": 43,
+    "BoysTeamPlace": "12th",
+    "BoysTeamPoints": 4,
+    "Notes": "Results loaded from the official 2019 GISA state-meet PDF shared by the user. The varsity file showed three St. Andrew's girls individual state titles from Gaby Van Brunt, two scoring girls relays, a fourth-place girls team finish with 43 points, and a seventh-place boys medley relay that produced the program's four boys team points.",
+    "SourceUrl": "https://www.giaasports.org/wp-content/uploads/2022/05/2019-GISA-State-Championship-Results.pdf",
+    "RecapTitle": "Van Brunt's three titles launch the loaded 2019 archive",
+    "RecapParagraphs": [
+      "Gaby Van Brunt headlined St. Andrew's at the 2019 GISA State Championship by winning the girls 50 freestyle in a record 23.75, the 100 freestyle in 52.40, and the 100 backstroke in a record 58.20.",
+      "The girls also scored in both varsity relays. Marie Audebert, Libby Peaster, Van Brunt, and Molly Fox-Marrs finished fifth in the 200 medley relay, and Fox-Marrs, Audebert, Sarah Rowland, and Van Brunt took fifth in the 200 freestyle relay.",
+      "Those relay points helped St. Andrew's finish fourth in the girls varsity standings with 43 points, while Tyler Awad, Sumter Archer, Noah Linfoot, and Matt Eling added a seventh-place boys 200 medley relay to put the Lions 12th on the boys side."
+    ]
+  },
+  {
+    "MeetID": 2019012602,
+    "Season": 2019,
+    "Date": "2019-01-26",
+    "Name": "GISA State Championship (Middle School)",
+    "Location": "McAuley Aquatic Center, Georgia Tech, Atlanta, GA",
+    "Level": "Middle School",
+    "MeetType": "State",
+    "Status": "Complete",
+    "Notes": "Results loaded from the official 2019 GISA state-meet PDF shared by the user. The middle-school file showed sprint, backstroke, and breaststroke entries from Luke Peaster and Ian Given, but no St. Andrew's middle-school team points.",
+    "SourceUrl": "https://www.giaasports.org/wp-content/uploads/2022/05/2019-GISA-State-Championship-Results.pdf",
+    "RecapTitle": "Peaster and Given carry the 2019 middle school entries",
+    "RecapParagraphs": [
+      "St. Andrew's middle-school results in 2019 came entirely from Luke Peaster and Ian Given on the boys side.",
+      "Peaster swam the 50 freestyle, 50 backstroke, and 50 breaststroke, while Given matched that same three-event slate at the state meet.",
+      "Neither swimmer reached the team scoring range, but the archive now preserves the full middle-school St. Andrew's presence from January 26, 2019."
+    ]
+  },
+  {
+    "MeetID": 2020012501,
+    "Season": 2020,
+    "Date": "2020-01-25",
+    "Name": "GISA State Championship (Varsity)",
+    "Location": "McAuley Aquatic Center, Georgia Tech, Atlanta, GA",
+    "Level": "Varsity",
+    "MeetType": "State",
+    "Status": "Complete",
+    "GirlsTeamPlace": "3rd",
+    "GirlsTeamPoints": 47,
+    "Notes": "Results loaded from the official 2020 GISA state-meet PDF shared by the user. The varsity file showed two St. Andrew's girls individual state titles from Gaby Van Brunt, a third-place girls team finish with 47 points, and full boys varsity relay and individual entries.",
+    "SourceUrl": "https://www.giaasports.org/wp-content/uploads/2022/05/2020-GISA-State-Swim-Meet-RESULTS.pdf",
+    "RecapTitle": "Third-place girls finish powers the loaded 2020 varsity meet",
+    "RecapParagraphs": [
+      "St. Andrew's rose to third in the girls varsity standings at the 2020 GISA State Championship behind another big day from Gaby Van Brunt. Van Brunt placed second in the 50 freestyle, then won the 100 butterfly in 57.05 and the 100 freestyle in 54.06.",
+      "Addy Sy added the rest of the individual varsity girls scoring by placing seventh in the 200 IM and fifth in the 100 backstroke. The girls also scored in both relays, with Marie Audebert, Sy, Van Brunt, and Molly Fox-Marrs finishing fifth in the 200 medley relay and Sy, Fox-Marrs, Sarah Rowland, and Van Brunt taking fifth in the 200 freestyle relay.",
+      "The boys varsity group did not score as a team, but St. Andrew's still logged full relay entries plus sprint and stroke swims from Matt Eling, Noah Linfoot, Will Ashton, Tyler Awad, and Sumter Archer."
+    ]
+  },
+  {
+    "MeetID": 2020012502,
+    "Season": 2020,
+    "Date": "2020-01-25",
+    "Name": "GISA State Championship (Middle School)",
+    "Location": "McAuley Aquatic Center, Georgia Tech, Atlanta, GA",
+    "Level": "Middle School",
+    "MeetType": "State",
+    "Status": "Complete",
+    "BoysTeamPlace": "15th",
+    "BoysTeamPoints": 1,
+    "Notes": "Results loaded from the official 2020 GISA state-meet PDF shared by the user. The middle-school file showed Ian Given's entries across three boys events and Sierra Abbasi's girls entries, with Given's eighth-place 50 breaststroke earning the lone St. Andrew's team point and a 15th-place boys finish.",
+    "SourceUrl": "https://www.giaasports.org/wp-content/uploads/2022/05/2020-GISA-State-Swim-Meet-RESULTS.pdf",
+    "RecapTitle": "Given scores the lone 2020 middle school team point",
+    "RecapParagraphs": [
+      "Ian Given and Sierra Abbasi carried the St. Andrew's middle-school results at the 2020 state meet.",
+      "Given swam the boys 50 freestyle, 50 backstroke, and 50 breaststroke, finishing eighth in the breaststroke to account for the team's lone point and a 15th-place boys finish.",
+      "Abbasi represented the girls in the 50 butterfly, 100 freestyle, and 50 breaststroke, giving the archive a full picture of the younger St. Andrew's group from January 25, 2020."
+    ]
+  },
+  {
+    "MeetID": 2022012901,
+    "Season": 2022,
+    "Date": "2022-01-29",
+    "Name": "GISA State Championship (Varsity)",
+    "Location": "McAuley Aquatic Center, Georgia Tech, Atlanta, GA",
+    "Level": "Varsity",
+    "MeetType": "State",
+    "Status": "Complete",
+    "GirlsTeamPlace": "6th",
+    "GirlsTeamPoints": 27,
+    "BoysTeamPlace": "7th",
+    "BoysTeamPoints": 20,
+    "Notes": "Results loaded from the official 2022 GISA state-meet PDF shared by the user. The varsity file showed three St. Andrew's girls individual state titles from Gaby Van Brunt, a sixth-place girls finish with 27 points, and strong boys scoring from Caden Cahill and Ian Given that produced a seventh-place boys finish with 20 points.",
+    "SourceUrl": "https://www.giaasports.org/wp-content/uploads/2022/05/2022-GISA-Championship-RESULTS.pdf",
+    "RecapTitle": "Van Brunt sweeps three more titles in the 2022 varsity meet",
+    "RecapParagraphs": [
+      "Gaby Van Brunt again dominated the girls state meet for St. Andrew's, winning the 50 freestyle in a record 22.99, the 100 butterfly in a record 54.13, and the 100 backstroke in a record 54.17.",
+      "Those three wins accounted for all 27 girls points and pushed the Lions to sixth in the varsity standings. Caden Cahill powered the boys side with third-place finishes in the 200 freestyle, 100 butterfly, and 100 backstroke.",
+      "Ian Given added seventh-place points in the 200 IM, giving St. Andrew's 20 boys points and a seventh-place team finish."
+    ]
+  },
+  {
+    "MeetID": 2022012902,
+    "Season": 2022,
+    "Date": "2022-01-29",
+    "Name": "GISA State Championship (Middle School)",
+    "Location": "McAuley Aquatic Center, Georgia Tech, Atlanta, GA",
+    "Level": "Middle School",
+    "MeetType": "State",
+    "Status": "Complete",
+    "Notes": "Results loaded from the official 2022 GISA state-meet PDF shared by the user. The middle-school file showed Sydney Linfoot on the girls side and Austin Waters, Robert Federal, and Eli Rall on the boys side across sprint, butterfly, backstroke, and breaststroke events, but no St. Andrew's team scoring.",
+    "SourceUrl": "https://www.giaasports.org/wp-content/uploads/2022/05/2022-GISA-Championship-RESULTS.pdf",
+    "RecapTitle": "A small 2022 middle school group extends the archive",
+    "RecapParagraphs": [
+      "Sydney Linfoot gave St. Andrew's a girls middle-school entry in the 50 freestyle at the 2022 state meet.",
+      "Austin Waters and Robert Federal added boys sprint and breaststroke swims, while Eli Rall appeared in the boys 50 freestyle, 50 butterfly, and 50 backstroke.",
+      "The younger Lions did not place into the team-scoring range, but their entries now round out the program's 2022 state-meet archive."
+    ]
+  },
+  {
     "MeetID": 2023020201,
     "Season": 2023,
     "Date": "2023-02-02",
