@@ -1,5 +1,27 @@
 [
   {
+    "MeetID": 2017101401,
+    "Season": 2018,
+    "Date": "2017-10-14",
+    "Name": "SCISA State Championship (Varsity)",
+    "Location": "Augusta Aquatic Center, Augusta, GA",
+    "Level": "Varsity",
+    "MeetType": "State",
+    "Status": "Complete",
+    "GirlsTeamPlace": "4th",
+    "GirlsTeamPoints": 91,
+    "BoysTeamPlace": "11th",
+    "BoysTeamPoints": 30,
+    "Notes": "Results loaded from SwimMeet.com's archived 2017 SCISA results site. Individual and relay results came from the St. Andrew's school-summary and event XML pages, and the girls and boys team finishes came from the SCISA 2A team-score XML pages. Relay names were expanded from the initials listed in the archived event XML when possible.",
+    "SourceUrl": "https://www.swimmeet.com/scisa17/results.html",
+    "RecapTitle": "Recovered 2017 SCISA state meet extends the archive into the fall-era seasons",
+    "RecapParagraphs": [
+      "St. Andrew's now has a SCISA-era season in the swim archive. At the October 14, 2017 SCISA State Championship, the girls placed fourth in the 2A standings with 91 points after scoring in six separate events.",
+      "Gaby Vanbrunt won the girls 50 freestyle and finished second in the 100 butterfly, while Grace Vanbrunt won the girls 100 backstroke and added a third-place finish in the 50 freestyle. The girls 200 medley relay took third and the 400 freestyle relay finished second.",
+      "The boys finished 11th with 30 points behind Jack Fox-Marrs, who placed fifth in both the 200 freestyle and 100 freestyle, plus relay scoring from the boys 200 freestyle and 200 medley relays."
+    ]
+  },
+  {
     "MeetID": 2019012601,
     "Season": 2019,
     "Date": "2019-01-26",
@@ -185,6 +207,48 @@
       "The first loaded St. Andrew's swim meet already reads like a breakthrough day. Jossy Thompson won the girls 50 freestyle in 24.45, the girls 100 butterfly in 58.33, and the girls 100 breaststroke in 1:08.15 to give the Lions three varsity individual state championships in one afternoon.",
       "The boys meet was built on balance. Ian Given scored in three events by taking third in the 200 IM, seventh in the 100 freestyle, and fourth in the 100 backstroke, while Tristan Tsang reached the podium in both distance and butterfly with a fifth-place 500 freestyle and an eighth-place 100 butterfly.",
       "St. Andrew's also scored in both varsity boys relays. The 200 medley relay of James Crake, Ian Given, Tristan Tsang, and Ian Willis finished sixth, and the 200 freestyle relay of Tate Salter, Ian Willis, Ian Given, and Tristan Tsang finished seventh, helping the boys team close the meet in sixth place overall."
+    ]
+  },
+  {
+    "MeetID": 2025020101,
+    "Season": 2025,
+    "Date": "2025-02-01",
+    "Name": "GIAA State Championship (Varsity)",
+    "Location": "McAuley Aquatic Center, Georgia Tech, Atlanta, GA",
+    "Level": "Varsity",
+    "MeetType": "State",
+    "Status": "Complete",
+    "GirlsTeamPlace": "5th",
+    "GirlsTeamPoints": 23,
+    "BoysTeamPlace": "10th",
+    "BoysTeamPoints": 15,
+    "Notes": "Results loaded from the official 2025 GIAA state-meet PDF shared by the user. The varsity file showed Jossy Thompson's girls 100 breaststroke state title plus two runner-up finishes, all 15 boys points from Tristan Tsang, and additional St. Andrew's varsity entries from Ian Willis, James Crake, and Eli Rall.",
+    "SourceUrl": "https://www.giaasports.org/wp-content/uploads/2025/02/2025-giaa-results-2-1-25.pdf",
+    "RecapTitle": "Thompson title and Tsang scoring carry the 2025 varsity meet",
+    "RecapParagraphs": [
+      "Jossy Thompson gave St. Andrew's its varsity championship moment at the 2025 GIAA State Championship by winning the girls 100 breaststroke in 1:06.65. Thompson also finished second in the 50 freestyle and second in the 100 butterfly, producing all 23 girls points and a fifth-place team finish.",
+      "The boys scoring came entirely from Tristan Tsang, who placed fourth in the 200 IM, third in the 100 butterfly, and fifth in the 100 breaststroke. Those three swims totaled 15 points and lifted St. Andrew's to 10th in the varsity boys standings.",
+      "Ian Willis and James Crake added individual freestyle and backstroke entries, while Eli Rall was entered in the 200 freestyle, 100 butterfly, and 500 freestyle and the boys 200 freestyle relay was listed but did not post a result."
+    ]
+  },
+  {
+    "MeetID": 2025020102,
+    "Season": 2025,
+    "Date": "2025-02-01",
+    "Name": "GIAA State Championship (Middle School)",
+    "Location": "McAuley Aquatic Center, Georgia Tech, Atlanta, GA",
+    "Level": "Middle School",
+    "MeetType": "State",
+    "Status": "Complete",
+    "GirlsTeamPlace": "3rd",
+    "GirlsTeamPoints": 40,
+    "Notes": "Results loaded from the official 2025 GIAA state-meet PDF shared by the user. The middle-school file showed a third-place St. Andrew's girls finish with 40 points, third-place finishes in both girls relays, and a full boys relay and individual slate across IM, freestyle, butterfly, backstroke, and breaststroke events.",
+    "SourceUrl": "https://www.giaasports.org/wp-content/uploads/2025/02/2025-giaa-results-2-1-25.pdf",
+    "RecapTitle": "Third-place middle school girls deepen the 2025 archive",
+    "RecapParagraphs": [
+      "The middle-school girls powered St. Andrew's best 2025 team result by finishing third in the GIAA standings with 40 points. The Lions opened with a third-place 200 medley relay from Mabyl Jefferson, Charlotte Gotwalt, Hazel Jefferson, and Anna Neufeld and closed with another third-place finish in the 200 freestyle relay from Mabyl Jefferson, Hazel Jefferson, Anna Neufeld, and Addie Kovel.",
+      "Mabyl Jefferson led the individual scoring with a fourth-place finish in the 50 backstroke plus sixth-place finishes in both the 50 and 100 freestyles. Hazel Jefferson added sixth-place points in the 50 butterfly, and Anna Neufeld scored in the 50 backstroke.",
+      "The boys side rounded out the meet with relay entries and individual swims from Miles Glienke, Zac Berwitz, Nouh Siddiqi, and Hank Tucker, giving the archive a complete middle-school snapshot from February 1, 2025."
     ]
   },
   {

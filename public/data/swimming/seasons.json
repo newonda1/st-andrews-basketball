@@ -1,5 +1,27 @@
 [
   {
+    "SeasonID": 2018,
+    "SeasonLabel": "2017-18",
+    "Classification": "SCISA",
+    "StatusBadge": "verified",
+    "StatusNote": "The 2017-18 swimming archive now includes the fully loaded October 14, 2017 SCISA State Championship at the Augusta Aquatic Center in Augusta, Georgia, using SwimMeet.com's archived St. Andrew's school-summary, event, and team-score pages.",
+    "FirstRegularSeasonMeet": "2017-10-14",
+    "StateMeetStart": "2017-10-14",
+    "StateMeetEnd": "2017-10-14",
+    "StateMeetLocation": "Augusta Aquatic Center, Augusta, GA",
+    "RecapParagraphs": [
+      "The recovered 2017-18 SCISA archive adds an earlier championship season for St. Andrew's. The varsity girls finished fourth in the SCISA 2A standings with 91 points behind two individual state titles and two scoring relays at the October 14, 2017 state meet in Augusta.",
+      "Gaby Vanbrunt won the girls 50 freestyle in 25.10 and added a runner-up finish in the 100 butterfly, while Grace Vanbrunt won the girls 100 backstroke and took third in the 50 freestyle. The girls 200 medley relay finished third and the 400 freestyle relay finished second to round out the scoring core.",
+      "The boys side finished 11th in SCISA 2A with 30 points. Jack Fox-Marrs placed fifth in both the 200 freestyle and 100 freestyle, Jonathan Young finished ninth in the 50 freestyle, and the boys freestyle and medley relays added top-nine finishes."
+    ],
+    "HighlightNotes": [
+      "Gaby Vanbrunt won the girls SCISA 2A 50 freestyle state title in 25.10.",
+      "Grace Vanbrunt won the girls SCISA 2A 100 backstroke state title in 1:01.46.",
+      "The girls varsity team finished 4th in the SCISA 2A standings with 91 points.",
+      "The boys varsity team finished 11th in the SCISA 2A standings with 30 points."
+    ]
+  },
+  {
     "SeasonID": 2019,
     "SeasonLabel": "2018-19",
     "Classification": "GISA",
@@ -107,6 +129,28 @@
       "The girls team finished 7th in the GIAA varsity standings with 27 points.",
       "Ian Given placed 3rd in the boys 200 IM and 4th in the boys 100 backstroke.",
       "The boys team finished 6th in the GIAA varsity standings with 28 points."
+    ]
+  },
+  {
+    "SeasonID": 2025,
+    "SeasonLabel": "2024-25",
+    "Classification": "GIAA",
+    "StatusBadge": "verified",
+    "StatusNote": "The 2024-25 swimming archive now includes the fully loaded February 1, 2025 GIAA State Championship at the McAuley Aquatic Center at Georgia Tech in Atlanta, including both varsity and middle school St. Andrew's results from the official meet PDF.",
+    "FirstRegularSeasonMeet": "2025-02-01",
+    "StateMeetStart": "2025-02-01",
+    "StateMeetEnd": "2025-02-01",
+    "StateMeetLocation": "McAuley Aquatic Center, Georgia Tech, Atlanta, GA",
+    "RecapParagraphs": [
+      "The 2024-25 state meet centered on Jossy Thompson again for St. Andrew's. Thompson finished second in the girls 50 freestyle in 24.27, added another runner-up finish in the 100 butterfly at 58.28, and then won the girls 100 breaststroke in 1:06.65 to lift the varsity girls to fifth in the GIAA standings with 23 points.",
+      "The boys varsity side scored entirely through Tristan Tsang. Tsang placed fourth in the 200 IM, third in the 100 butterfly, and fifth in the 100 breaststroke to account for all 15 Lions points and a 10th-place team finish, while Ian Willis and James Crake added sprint and backstroke depth.",
+      "The middle-school girls added the broader team result by finishing third with 40 points. St. Andrew's took third in both middle-school girls relays, got individual scoring swims from Mabyl Jefferson, Hazel Jefferson, and Anna Neufeld, and rounded out the archive with a full boys middle-school relay and stroke slate from Miles Glienke, Zac Berwitz, Nouh Siddiqi, and Hank Tucker."
+    ],
+    "HighlightNotes": [
+      "Jossy Thompson won the girls varsity 100 breaststroke state title and finished 2nd in both the 50 freestyle and 100 butterfly.",
+      "The varsity girls team finished 5th in the GIAA standings with 23 points.",
+      "Tristan Tsang scored in all three of his varsity boys events and led the Lions to 10th place with 15 points.",
+      "The middle-school girls team finished 3rd in the GIAA standings with 40 points behind two third-place relays and scoring swims from Mabyl Jefferson, Hazel Jefferson, and Anna Neufeld."
     ]
   },
   {
