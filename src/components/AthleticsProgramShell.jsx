@@ -1,6 +1,22 @@
-import React, { useEffect, useMemo, useState } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import React, { useEffect, useMemo, useRef, useState } from "react";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import Footer from "./Footer";
+import { statsSearchItems } from "./statsSearchIndex";
+
+const utilityLinks = [
+  {
+    label: "Tickets",
+    href: "https://gofan.co/app/school/GA23139",
+  },
+  {
+    label: "Livestream",
+    href: "https://fan.hudl.com/usa/ga/savannah/organization/31104/st-andrews-high-school",
+  },
+  {
+    label: "Booster Club",
+    href: "https://sasboosterclub.boosterhub.com/register/11952",
+  },
+];
 
 const styles = {
   page: {
@@ -64,6 +80,109 @@ const styles = {
     fontSize: "0.82rem",
     lineHeight: 1.15,
     color: "#808184",
+  },
+  utilityGroup: {
+    position: "relative",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "flex-end",
+    flexShrink: 0,
+  },
+  utilityLinks: {
+    display: "flex",
+    alignItems: "center",
+  },
+  utilityLink: {
+    color: "#002169",
+    textDecoration: "none",
+    fontFamily: '"Questrial", Arial, Helvetica, sans-serif',
+    fontSize: "1rem",
+    fontWeight: 500,
+    lineHeight: 1,
+    whiteSpace: "nowrap",
+    transition: "color 160ms ease",
+  },
+  searchButton: {
+    display: "inline-flex",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "40px",
+    height: "40px",
+    border: "none",
+    background: "transparent",
+    color: "#7c7c7c",
+    cursor: "pointer",
+    padding: 0,
+  },
+  searchPopover: {
+    position: "absolute",
+    top: "calc(100% + 12px)",
+    right: 0,
+    zIndex: 45,
+    width: "min(92vw, 420px)",
+    background: "#ffffff",
+    border: "1px solid #dedede",
+    boxShadow: "0 18px 36px rgba(15, 23, 42, 0.16)",
+  },
+  searchForm: {
+    padding: "16px 16px 12px",
+    borderBottom: "1px solid #efefef",
+  },
+  searchInput: {
+    width: "100%",
+    border: "1px solid #d7d7d7",
+    borderRadius: 0,
+    padding: "10px 12px",
+    fontFamily: '"Questrial", Arial, Helvetica, sans-serif',
+    fontSize: "0.98rem",
+    lineHeight: 1.2,
+    color: "#1f2937",
+    outline: "none",
+    boxSizing: "border-box",
+  },
+  searchResults: {
+    maxHeight: "360px",
+    overflowY: "auto",
+    padding: "8px 0",
+  },
+  searchSectionLabel: {
+    margin: 0,
+    padding: "0 16px 8px",
+    fontFamily: '"Questrial", Arial, Helvetica, sans-serif',
+    fontSize: "0.72rem",
+    lineHeight: 1.1,
+    letterSpacing: "0.08em",
+    textTransform: "uppercase",
+    color: "#6b7280",
+  },
+  searchResultLink: {
+    display: "block",
+    padding: "10px 16px",
+    textDecoration: "none",
+    color: "#111827",
+    transition: "background-color 160ms ease",
+  },
+  searchResultTitle: {
+    margin: 0,
+    fontFamily: '"Questrial", Arial, Helvetica, sans-serif',
+    fontSize: "0.98rem",
+    fontWeight: 500,
+    lineHeight: 1.15,
+  },
+  searchResultMeta: {
+    margin: "4px 0 0",
+    fontFamily: '"Questrial", Arial, Helvetica, sans-serif',
+    fontSize: "0.8rem",
+    lineHeight: 1.15,
+    color: "#6b7280",
+  },
+  searchEmpty: {
+    margin: 0,
+    padding: "4px 16px 12px",
+    fontFamily: '"Questrial", Arial, Helvetica, sans-serif',
+    fontSize: "0.92rem",
+    lineHeight: 1.35,
+    color: "#6b7280",
   },
   navBar: {
     background: "#f8f8f8",
@@ -168,6 +287,42 @@ function isPathCurrent(pathname, target, end = false) {
   return pathname === target || pathname.startsWith(`${target}/`);
 }
 
+function getSearchScore(item, query) {
+  const label = item.label.toLowerCase();
+  const description = (item.description || "").toLowerCase();
+  const keywords = (item.keywords || []).join(" ").toLowerCase();
+  const haystack = `${label} ${description} ${keywords}`.trim();
+  const terms = query.split(/\s+/).filter(Boolean);
+
+  if (terms.length === 0) {
+    return item.featured ? 1 : 0;
+  }
+
+  if (terms.some((term) => !haystack.includes(term))) {
+    return 0;
+  }
+
+  let score = 20;
+
+  if (label === query) {
+    score += 100;
+  } else if (label.startsWith(query)) {
+    score += 50;
+  } else if (haystack.includes(query)) {
+    score += 25;
+  }
+
+  if (description.includes(query)) {
+    score += 10;
+  }
+
+  if (item.featured) {
+    score += 4;
+  }
+
+  return score;
+}
+
 export default function AthleticsProgramShell({
   title,
   subtitle,
@@ -180,7 +335,12 @@ export default function AthleticsProgramShell({
   showFooter = true,
 }) {
   const location = useLocation();
+  const navigate = useNavigate();
+  const searchContainerRef = useRef(null);
+  const searchInputRef = useRef(null);
   const [openDropdownTitle, setOpenDropdownTitle] = useState(null);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
 
   const normalizedSections = useMemo(
     () =>
@@ -201,9 +361,69 @@ export default function AthleticsProgramShell({
     [headerHomePath, homeLabel, normalizedSections]
   );
 
+  const featuredSearchItems = useMemo(
+    () => statsSearchItems.filter((item) => item.featured).slice(0, 7),
+    []
+  );
+
+  const visibleSearchItems = useMemo(() => {
+    const normalizedQuery = searchQuery.trim().toLowerCase();
+
+    if (!normalizedQuery) {
+      return featuredSearchItems;
+    }
+
+    return statsSearchItems
+      .map((item) => ({ item, score: getSearchScore(item, normalizedQuery) }))
+      .filter((entry) => entry.score > 0)
+      .sort(
+        (a, b) =>
+          b.score - a.score || a.item.label.localeCompare(b.item.label)
+      )
+      .slice(0, 8)
+      .map((entry) => entry.item);
+  }, [featuredSearchItems, searchQuery]);
+
   useEffect(() => {
     setOpenDropdownTitle(null);
+    setSearchOpen(false);
+    setSearchQuery("");
   }, [location.pathname]);
+
+  useEffect(() => {
+    if (!searchOpen) {
+      return undefined;
+    }
+
+    const handlePointerDown = (event) => {
+      if (
+        searchContainerRef.current &&
+        !searchContainerRef.current.contains(event.target)
+      ) {
+        setSearchOpen(false);
+      }
+    };
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        setSearchOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handlePointerDown);
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("mousedown", handlePointerDown);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [searchOpen]);
+
+  useEffect(() => {
+    if (searchOpen && searchInputRef.current) {
+      searchInputRef.current.focus();
+    }
+  }, [searchOpen]);
 
   const isLinkActive = (item) =>
     isPathCurrent(location.pathname, item?.to, Boolean(item?.end));
@@ -216,6 +436,14 @@ export default function AthleticsProgramShell({
       setOpenDropdownTitle((current) =>
         current === sectionTitle ? null : current
       );
+    }
+  };
+
+  const handleSearchSubmit = (event) => {
+    event.preventDefault();
+
+    if (visibleSearchItems.length > 0) {
+      navigate(visibleSearchItems[0].to);
     }
   };
 
@@ -336,6 +564,101 @@ export default function AthleticsProgramShell({
               ) : null}
             </div>
           </Link>
+
+          <div
+            ref={searchContainerRef}
+            style={styles.utilityGroup}
+            className="ml-3 gap-1.5 sm:ml-5 sm:gap-2.5"
+          >
+            <div style={styles.utilityLinks} className="hidden lg:flex lg:gap-10">
+              {utilityLinks.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  style={styles.utilityLink}
+                  className="transition-colors hover:text-[#00174e]"
+                >
+                  {item.label}
+                </a>
+              ))}
+            </div>
+
+            <button
+              type="button"
+              aria-label="Search the stats site"
+              aria-expanded={searchOpen}
+              onClick={() => setSearchOpen((current) => !current)}
+              style={styles.searchButton}
+              className="rounded-full transition-colors hover:text-[#5e5e5e]"
+            >
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                fill="none"
+                className="h-6 w-6"
+              >
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="6.5"
+                  stroke="currentColor"
+                  strokeWidth="2.2"
+                />
+                <path
+                  d="M16 16L21 21"
+                  stroke="currentColor"
+                  strokeWidth="2.2"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </button>
+
+            {searchOpen ? (
+              <div style={styles.searchPopover}>
+                <form style={styles.searchForm} onSubmit={handleSearchSubmit}>
+                  <input
+                    ref={searchInputRef}
+                    type="search"
+                    value={searchQuery}
+                    onChange={(event) => setSearchQuery(event.target.value)}
+                    placeholder="Search the stats site"
+                    style={styles.searchInput}
+                  />
+                </form>
+
+                <div style={styles.searchResults}>
+                  <p style={styles.searchSectionLabel}>
+                    {searchQuery.trim() ? "Results" : "Popular Pages"}
+                  </p>
+
+                  {visibleSearchItems.length > 0 ? (
+                    visibleSearchItems.map((item) => (
+                      <Link
+                        key={`${item.to}-${item.label}`}
+                        to={item.to}
+                        style={styles.searchResultLink}
+                        className="hover:bg-[#fafafa]"
+                        onClick={() => {
+                          setSearchOpen(false);
+                          setSearchQuery("");
+                        }}
+                      >
+                        <p style={styles.searchResultTitle}>{item.label}</p>
+                        <p style={styles.searchResultMeta}>{item.description}</p>
+                      </Link>
+                    ))
+                  ) : (
+                    <p style={styles.searchEmpty}>
+                      No matching stats pages found. Try a sport, result type, or
+                      record category.
+                    </p>
+                  )}
+                </div>
+              </div>
+            ) : null}
+          </div>
         </div>
 
         <div style={styles.navBar}>
