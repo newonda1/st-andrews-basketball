@@ -11,6 +11,11 @@ import {
   sortSwimResults,
 } from "../swimmingPageUtils";
 
+const LEVEL_ORDER = {
+  Varsity: 0,
+  "Middle School": 1,
+};
+
 function MeetResultsTable({ rows, playerMap }) {
   if (!rows.length) {
     return (
@@ -108,7 +113,16 @@ export default function SeasonPage({
     return meets
       .filter((meet) => Number(meet.Season) === Number(seasonId))
       .slice()
-      .sort((a, b) => String(a.Date || "").localeCompare(String(b.Date || "")));
+      .sort((a, b) => {
+        const dateDiff = String(a.Date || "").localeCompare(String(b.Date || ""));
+        if (dateDiff !== 0) return dateDiff;
+
+        const levelDiff =
+          (LEVEL_ORDER[a.Level] ?? 99) - (LEVEL_ORDER[b.Level] ?? 99);
+        if (levelDiff !== 0) return levelDiff;
+
+        return String(a.Name || "").localeCompare(String(b.Name || ""));
+      });
   }, [meets, seasonId]);
 
   const seasonMeetIds = useMemo(

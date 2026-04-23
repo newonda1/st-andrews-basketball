@@ -1,5 +1,27 @@
 [
   {
+    "SeasonID": 2023,
+    "SeasonLabel": "2022-23",
+    "Classification": "GIAA",
+    "StatusBadge": "verified",
+    "StatusNote": "The 2022-23 swimming archive begins with the fully loaded February 2, 2023 GIAA State Championship in Atlanta, including both varsity and middle school St. Andrew's results from the official meet PDF.",
+    "FirstRegularSeasonMeet": "2023-02-02",
+    "StateMeetStart": "2023-02-02",
+    "StateMeetEnd": "2023-02-02",
+    "StateMeetLocation": "Atlanta, GA",
+    "RecapParagraphs": [
+      "The St. Andrew's swim archive now reaches back to February 2, 2023, when the Lions competed in the GIAA State Championship in Atlanta. The varsity girls side delivered the defining moment of the season through Gaby Van Brunt, who won the 100 butterfly, 100 freestyle, and 100 backstroke, including a state-record 53.03 in the butterfly.",
+      "Those three wins accounted for all 27 varsity girls points and pushed St. Andrew's to seventh in the girls standings. Ian Given supplied the entire boys varsity scoring by placing seventh in the 100 freestyle, fourth in the 100 backstroke, and seventh in the 100 breaststroke, helping the boys finish ninth with nine points and lifting the combined varsity team to ninth overall with 36 points.",
+      "The middle school side adds meaningful program depth to the archive. Tristan Tsang scored in both the 50 and 100 freestyle, the boys 200 freestyle relay finished ninth, the boys 200 medley relay also completed the meet, and several additional St. Andrew's swims, disqualifications, and no-starts now preserve a fuller picture of the 2022-23 roster."
+    ],
+    "HighlightNotes": [
+      "Gaby Van Brunt won three girls varsity state titles in the 100 butterfly, 100 freestyle, and 100 backstroke.",
+      "Van Brunt set the GIAA girls 100 butterfly record at 53.03 on February 2, 2023.",
+      "Ian Given scored in three boys varsity events and helped the boys finish 9th with nine points.",
+      "Tristan Tsang placed 3rd in the boys middle school 100 freestyle and 4th in the 50 freestyle."
+    ]
+  },
+  {
     "SeasonID": 2024,
     "SeasonLabel": "2023-24",
     "Classification": "GIAA",

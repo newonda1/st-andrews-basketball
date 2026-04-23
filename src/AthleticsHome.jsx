@@ -62,7 +62,7 @@ const sports = [
   {
     name: "Swimming",
     to: "/athletics/swimming/records/school",
-    icon: "/images/swimming/swimming_icon.svg",
+    icon: "/images/swimming/swimming_icon.png",
     championshipGroups: [
       {
         title: "Team Championships",
@@ -75,7 +75,7 @@ const sports = [
         title: "Individual Championships",
         sections: [
           { title: "Region Championships", years: [] },
-          { title: "State Championships", years: [2024] },
+          { title: "State Championships", years: [2023, 2024] },
         ],
       },
     ],

@@ -12,6 +12,11 @@ const GENDER_ORDER = {
   Boys: 1,
 };
 
+const LEVEL_ORDER = {
+  Varsity: 0,
+  "Middle School": 1,
+};
+
 function parseSwimTimeMark(mark) {
   if (!mark) return null;
 
@@ -67,13 +72,15 @@ export default function SchoolRecords({
       if (comparableValue == null) return;
 
       const meet = meetMap.get(String(entry.MeetID));
+      const level = entry.Level || meet?.Level || "Varsity";
       const category = getEventCategory(entry.Event);
-      const key = `${entry.Gender}__${category}__${entry.Event}`;
+      const key = `${entry.Gender}__${level}__${category}__${entry.Event}`;
 
       if (!grouped.has(key)) grouped.set(key, []);
 
       grouped.get(key).push({
         ...entry,
+        level,
         category,
         comparableValue,
         athleteName: entry.AthleteName || "St. Andrew's Relay Team",
@@ -85,8 +92,8 @@ export default function SchoolRecords({
     const bySection = new Map();
 
     grouped.forEach((entries, key) => {
-      const [gender, category, event] = key.split("__");
-      const title = `${gender} ${
+      const [gender, level, category, event] = key.split("__");
+      const title = `${gender} ${level} ${
         category === "relay" ? "Relays" : "Individual Events"
       }`;
       const sortedEntries = entries.slice().sort(compareMarks).slice(0, 20);
@@ -97,6 +104,9 @@ export default function SchoolRecords({
 
       bySection.get(title).push({
         key,
+        gender,
+        level,
+        category,
         event,
         best: sortedEntries[0],
         rows: sortedEntries,
@@ -106,20 +116,21 @@ export default function SchoolRecords({
     return Array.from(bySection.entries())
       .map(([title, records]) => ({
         title,
+        gender: records[0]?.gender,
+        level: records[0]?.level,
+        category: records[0]?.category,
         records: records.sort((a, b) => sortSwimEventNames(a.event, b.event)),
       }))
       .sort((a, b) => {
-        const [aGender, aCategoryText] = a.title.split(" ", 2);
-        const [bGender, bCategoryText] = b.title.split(" ", 2);
-
-        if (aGender !== bGender) {
-          return (GENDER_ORDER[aGender] ?? 99) - (GENDER_ORDER[bGender] ?? 99);
+        if (a.gender !== b.gender) {
+          return (GENDER_ORDER[a.gender] ?? 99) - (GENDER_ORDER[b.gender] ?? 99);
         }
 
-        const aCategory = aCategoryText === "Relays" ? "relay" : "individual";
-        const bCategory = bCategoryText === "Relays" ? "relay" : "individual";
+        if (a.level !== b.level) {
+          return (LEVEL_ORDER[a.level] ?? 99) - (LEVEL_ORDER[b.level] ?? 99);
+        }
 
-        return CATEGORY_ORDER[aCategory] - CATEGORY_ORDER[bCategory];
+        return CATEGORY_ORDER[a.category] - CATEGORY_ORDER[b.category];
       });
   }, [meets, playerMeetStats]);
 

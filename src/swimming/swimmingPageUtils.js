@@ -2,13 +2,17 @@ export const SWIMMING_EVENT_ORDER = [
   "200 Yard Medley Relay",
   "200 Yard Freestyle",
   "200 Yard IM",
+  "100 Yard IM",
   "50 Yard Freestyle",
   "100 Yard Butterfly",
+  "50 Yard Butterfly",
   "100 Yard Freestyle",
   "500 Yard Freestyle",
   "200 Yard Freestyle Relay",
   "100 Yard Backstroke",
+  "50 Yard Backstroke",
   "100 Yard Breaststroke",
+  "50 Yard Breaststroke",
   "400 Yard Freestyle Relay",
 ];
 

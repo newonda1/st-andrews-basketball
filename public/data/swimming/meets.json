@@ -1,9 +1,55 @@
 [
   {
+    "MeetID": 2023020201,
+    "Season": 2023,
+    "Date": "2023-02-02",
+    "Name": "GIAA State Championship (Varsity)",
+    "Location": "Atlanta, GA",
+    "Level": "Varsity",
+    "MeetType": "State",
+    "Status": "Complete",
+    "GirlsTeamPlace": "7th",
+    "GirlsTeamPoints": 27,
+    "BoysTeamPlace": "9th",
+    "BoysTeamPoints": 9,
+    "CombinedTeamPlace": "9th",
+    "CombinedTeamPoints": 36,
+    "Notes": "Results loaded from the official 2023 GIAA state-meet PDF shared by the user. The varsity file showed three St. Andrew's girls individual state titles from Gaby Van Brunt, a seventh-place girls team finish with 27 points, a ninth-place boys finish with nine points, and a ninth-place combined team finish with 36 points.",
+    "SourceUrl": "https://www.giaasports.org/wp-content/uploads/2023/02/2023-GIAA-State-Swim-Meet-RESULTS.pdf",
+    "RecapTitle": "Van Brunt's triple-title day anchors the first loaded 2023 season",
+    "RecapParagraphs": [
+      "Gaby Van Brunt gave St. Andrew's one of the strongest single-meet performances in the swim archive by winning the girls 100 butterfly in a record 53.03, the girls 100 freestyle in 51.10, and the girls 100 backstroke in 54.57.",
+      "Those three titles produced all 27 girls points and carried the Lions to seventh in the varsity girls standings. Ian Given supplied the boys scoring by finishing seventh in the 100 freestyle, fourth in the 100 backstroke, and seventh in the 100 breaststroke.",
+      "With Given's nine points added to Van Brunt's 27, St. Andrew's finished ninth in the combined varsity standings with 36 points."
+    ]
+  },
+  {
+    "MeetID": 2023020202,
+    "Season": 2023,
+    "Date": "2023-02-02",
+    "Name": "GIAA State Championship (Middle School)",
+    "Location": "Atlanta, GA",
+    "Level": "Middle School",
+    "MeetType": "State",
+    "Status": "Complete",
+    "BoysTeamPlace": "12th",
+    "BoysTeamPoints": 11,
+    "CombinedTeamPlace": "20th",
+    "CombinedTeamPoints": 11,
+    "Notes": "Results loaded from the official 2023 GIAA state-meet PDF shared by the user. The middle-school file showed scoring freestyle swims from Tristan Tsang, a ninth-place boys 200 freestyle relay, a completed boys 200 medley relay, and an overall St. Andrew's combined middle-school finish of 20th with 11 points.",
+    "SourceUrl": "https://www.giaasports.org/wp-content/uploads/2023/02/2023-GIAA-State-Swim-Meet-RESULTS.pdf",
+    "RecapTitle": "Middle school freestyle points and relay depth extend the archive",
+    "RecapParagraphs": [
+      "The middle-school St. Andrew's group contributed the rest of the program's 2023 state-meet archive. Tristan Tsang placed fourth in the boys 50 freestyle and third in the boys 100 freestyle to account for the team's scoring points.",
+      "The boys 200 freestyle relay of Tristan Tsang, Eli Rall, Oliver Kovel, and Robert Federal IV finished ninth in 2:13.28, and the boys 200 medley relay of Miles Glienke, Robert Federal IV, Eli Rall, and Oliver Kovel also completed the meet.",
+      "The middle-school archive also preserves additional St. Andrew's entries across girls freestyle, backstroke, and breaststroke plus several disqualifications and no-starts, helping the combined middle-school team finish 20th overall with 11 points."
+    ]
+  },
+  {
     "MeetID": 2024012701,
     "Season": 2024,
     "Date": "2024-01-27",
-    "Name": "GIAA State Championship",
+    "Name": "GIAA State Championship (Varsity)",
     "Location": "McAuley Aquatic Center, Georgia Tech, Atlanta, GA",
     "Level": "Varsity",
     "MeetType": "State",
