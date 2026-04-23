@@ -37,6 +37,12 @@ const styles = {
   logo: {
     width: "auto",
     display: "block",
+    flexShrink: 0,
+  },
+  titleDivider: {
+    width: "2px",
+    background: "#808184",
+    flexShrink: 0,
   },
   titleWrap: {
     display: "flex",
@@ -45,14 +51,19 @@ const styles = {
   },
   title: {
     margin: 0,
-    fontWeight: 700,
-    lineHeight: 1.1,
-    color: "#012169",
+    fontFamily: '"Questrial", Arial, Helvetica, sans-serif',
+    fontWeight: 400,
+    lineHeight: 1.02,
+    color: "#002169",
+    textTransform: "uppercase",
+    letterSpacing: "0.02em",
   },
   subtitle: {
     margin: 0,
-    fontSize: "0.95rem",
-    color: "#475569",
+    fontFamily: '"Questrial", Arial, Helvetica, sans-serif',
+    fontSize: "0.82rem",
+    lineHeight: 1.15,
+    color: "#808184",
   },
   menuButton: {
     border: "none",
@@ -180,22 +191,31 @@ export default function AthleticsProgramShell({
           <Link
             to={headerHomePath}
             style={styles.logoLink}
-            className="min-w-0 gap-2 sm:gap-3"
+            className="min-w-0 flex-1 pr-3 sm:pr-5"
           >
             <img
-              src="/images/common/logo.png"
+              src="/images/common/st_andrews_athletics_horizontal_logo.png"
               alt="St. Andrew's Athletics"
               style={styles.logo}
-              className="h-12 sm:h-20"
+              className="h-9 sm:h-11 md:h-12 lg:h-[52px]"
+            />
+            <span
+              aria-hidden="true"
+              style={styles.titleDivider}
+              className="mx-2 h-9 sm:mx-3 sm:h-11 md:h-12 lg:mx-4 lg:h-[52px]"
             />
             <div style={styles.titleWrap}>
               <h1
                 style={styles.title}
-                className="text-[0.95rem] leading-[0.96] sm:text-[1.8rem]"
+                className="text-[0.78rem] sm:text-[1.05rem] md:text-[1.3rem] lg:text-[1.58rem]"
               >
                 {title}
               </h1>
-              {subtitle ? <p style={styles.subtitle}>{subtitle}</p> : null}
+              {subtitle ? (
+                <p style={styles.subtitle} className="mt-1 hidden md:block">
+                  {subtitle}
+                </p>
+              ) : null}
             </div>
           </Link>
 
