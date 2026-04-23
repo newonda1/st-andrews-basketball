@@ -3491,10 +3491,19 @@
     "Opponent": "Bulloch Academy",
     "LocationType": "Home",
     "GameType": "Region",
-    "Result": null,
-    "TeamScore": null,
-    "OpponentScore": null,
-    "Season": 2026
+    "Result": "L",
+    "TeamScore": 5,
+    "OpponentScore": 17,
+    "Season": 2026,
+    "RecapTitle": "Bulloch Academy Uses Big First And Third Innings To Beat St. Andrew’s",
+    "Recap": "Bulloch Academy struck early and never let St. Andrew’s fully recover in a 17-5 region win in Wednesday’s nightcap.\n\nThe visitors wasted no time in the top of the first. West singled home the opening run, Huggins followed with a three-run homer to left, and Priest added an RBI single to give Bulloch Academy a 5-0 lead.\n\nSt. Andrew’s answered with two runs in the bottom half. Ellis Kelley opened the inning with a double to center, Jack Kelley followed with an RBI double to left, and Isaac Wrieden lined a single to left to score another run. The Lions added single runs in the second and third when Darius Chapman scored on Ellis Kelley’s RBI single and Jacob Navare came home on Xavier Wilcox’s sacrifice fly to trim the deficit to 11-4.\n\nBulloch Academy broke the game open in the third, scoring six times despite recording only two hits in the inning. Priest drew a bases-loaded walk, Grams reached on an error that brought in a run, Mccoy followed with another RBI walk, Lanier doubled home two, and Hubbard added an RBI single.\n\nThe visitors added two more unearned runs in the fourth and put the game away in the sixth when Grams launched a three-run homer to left and West drew a bases-loaded walk.\n\nEllis Kelley led the Lions at the plate by going 2-for-3 with a double, an RBI, and a walk from the leadoff spot. Jack Kelley added a double, two RBIs, and a walk, while Wrieden chipped in a single and an RBI. St. Andrew’s also showed patience throughout the lineup with six walks and turned a double play defensively.\n\nLanford Harris took the loss after working 2 1/3 innings. Wells Searcy and Jacob Navare followed in relief, with Navare covering the final three innings. Eight St. Andrew’s errors allowed Bulloch Academy to score all 17 of its runs unearned.\n\nBulloch Academy collected 10 hits in the win. Hubbard went 3-for-5, Lanier and Priest each recorded two hits, and Grams drove in four runs, including the three-run homer in the sixth.",
+    "LineScore": {
+      "Innings": [1, 2, 3, 4, 5, 6],
+      "StAndrews": [2, 1, 1, 0, 0, 1],
+      "Opponent": [5, 0, 6, 2, 0, 4],
+      "StAndrewsTotals": { "R": 5, "H": 4, "E": 8 },
+      "OpponentTotals": { "R": 17, "H": 10, "E": 1 }
+    }
   },
   {
     "GameID": 2026042901,
