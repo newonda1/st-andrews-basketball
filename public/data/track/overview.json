@@ -1,7 +1,7 @@
 {
   "pageTitle": "St. Andrew's Track & Field",
   "pageIntro": "The St. Andrew's track & field page is built around marks, placements, qualifiers, relays, and postseason finishes. It combines boys and girls results into one program hub while leaving space for the championship history that the section will grow into over time.",
-  "trackedSince": "2009-10",
+  "trackedSince": "2006-07",
   "classification": "GIAA AAA",
   "region": "Region 2",
   "location": "Savannah, Georgia",
@@ -11,7 +11,7 @@
   },
   "programSnapshot": [
     "Track & field gives the site a different kind of story to tell than baseball or basketball. Instead of wins and losses, the strongest snapshots are season-best marks, relay progress, qualifiers, podium finishes, and the athletes who steadily move up the all-time lists.",
-    "The program's public results now reach back to the 2009-10 school year and then expand through SCISA, GISA, and GIAA archives, St. Andrew's athletics pages, MileSplit meet pages, and archived live-results sites. That makes the track section a good fit for year-by-year summaries, event leaders, and meet logs.",
+    "The program's public results now reach back to the 2006-07 school year and then expand through SCISA, GISA, and GIAA archives, St. Andrew's athletics pages, MileSplit meet pages, and archived live-results sites. That makes the track section a good fit for year-by-year summaries, event leaders, and meet logs.",
     "This first version of the page focuses on a strong landing experience and a clean data structure. It keeps the same overall feel as the other sports pages while making room for the kind of track-specific views we will want next."
   ],
   "nextSections": [

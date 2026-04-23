@@ -1,5 +1,29 @@
 [
   {
+    "MeetID": 2007042801,
+    "Season": 2007,
+    "Date": "2007-04-28",
+    "Name": "SCISA State Championships",
+    "Location": "Columbia, SC",
+    "Level": "Varsity",
+    "MeetType": "State",
+    "Status": "Complete",
+    "Notes": "Results loaded from the MileSplit raw boys results page shared by the user and the linked girls raw page for the 2007 SCISA state championships. The public files exposed one St. Andrew's result: a boys 4x800 relay mark without a published lineup. No St. Andrew's girls entries were visible in the linked girls raw page.",
+    "SourceUrl": "https://sc.milesplit.com/meets/21682-scisa-championships-2007/results/46698/raw"
+  },
+  {
+    "MeetID": 2009050201,
+    "Season": 2009,
+    "Date": "2009-05-02",
+    "Name": "SCISA State Championships",
+    "Location": "Columbia, SC",
+    "Level": "Varsity",
+    "MeetType": "State",
+    "Status": "Complete",
+    "Notes": "Results loaded from the MileSplit raw boys Class A-AA page shared by the user, along with the linked girls split and team-scores page for the 2009 SCISA state championships. The public files exposed four St. Andrew's boys entries, no St. Andrew's girls entries, and a verified fourth-place boys team finish with eight points.",
+    "SourceUrl": "https://sc.milesplit.com/meets/44529-scisa-championships-2009/results/90475/raw"
+  },
+  {
     "MeetID": 2010050101,
     "Season": 2010,
     "Date": "2010-05-01",

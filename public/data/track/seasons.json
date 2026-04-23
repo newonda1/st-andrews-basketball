@@ -1,5 +1,51 @@
 [
   {
+    "SeasonID": 2007,
+    "SeasonLabel": "2006-07",
+    "Classification": "SCISA",
+    "StatusBadge": "verified",
+    "StatusNote": "The 2006-07 season currently includes the one confirmed high-school meet visible in the public archive: the April 28, 2007 SCISA state championships.",
+    "FirstRegularSeasonMeet": "2007-04-28",
+    "RegionDeadline": "2007-04-28",
+    "StateMeetStart": "2007-04-28",
+    "StateMeetEnd": "2007-04-28",
+    "StateMeetLocation": "Columbia, SC",
+    "RecapParagraphs": [
+      "The 2006-07 season now opens the St. Andrew's track archive with the earliest confirmed SCISA postseason snapshot currently visible in the public results: the April 28, 2007 state championships at Heathwood Hall in Columbia.",
+      "The public file is extremely small for St. Andrew's. The only visible result is the boys 4x800 relay, which finished seventh in 10:13.63. No St. Andrew's scoring marks appeared in the boys raw page, and the team was not listed in the published boys standings.",
+      "The linked girls raw page did not show any St. Andrew's entries, so the season reads as a narrow relay-only postseason snapshot rather than a full team record. Even so, it gives the track archive one more confirmed early SCISA chapter."
+    ],
+    "HighlightNotes": [
+      "The boys 4x800 relay finished 7th at the 2007 SCISA Championships in 10:13.63.",
+      "No St. Andrew's scoring finishes were visible in the public boys raw file.",
+      "No St. Andrew's girls entries were visible in the linked public girls raw file.",
+      "The meet pushes the public track archive back to the 2006-07 school year."
+    ]
+  },
+  {
+    "SeasonID": 2009,
+    "SeasonLabel": "2008-09",
+    "Classification": "SCISA A & AA",
+    "StatusBadge": "verified",
+    "StatusNote": "The 2008-09 season currently includes the one confirmed high-school meet visible in the public archive: the May 2, 2009 SCISA state championships.",
+    "FirstRegularSeasonMeet": "2009-05-02",
+    "RegionDeadline": "2009-05-02",
+    "StateMeetStart": "2009-05-02",
+    "StateMeetEnd": "2009-05-02",
+    "StateMeetLocation": "Columbia, SC",
+    "RecapParagraphs": [
+      "The 2008-09 season adds the next early SCISA postseason snapshot in the St. Andrew's track archive, built around the May 2, 2009 state championships at Heathwood Hall in Columbia.",
+      "The file is compact and boys-only, but it still preserves a clear team identity. Ikaika Kapu won the boys shot put, Lee Smith followed in second to give St. Andrew's a one-two finish in the event, and those throws points carried the team to fourth in the Class A & AA boys standings with eight total points.",
+      "Outside the throws ring, Jay Jenkins reached the boys 3200 state final and the boys 4x100 relay appears with Danny Kirkconnell, Jon Hope, Harry Jozefczyk, and Don Tomberlin before a disqualification wiped out the result. No St. Andrew's girls entries were visible in the public Class A & AA girls raw file, so the season reads as a narrow but meaningful boys postseason snapshot."
+    ],
+    "HighlightNotes": [
+      "Ikaika Kapu won the boys shot put at the 2009 SCISA Championships with a 42-03.00.",
+      "Lee Smith finished 2nd in the boys shot put at 40-10.00 to complete a St. Andrew's one-two finish.",
+      "Jay Jenkins reached the boys 3200 state final and placed 5th in 11:30.46.",
+      "The boys team finished 4th in Class A & AA with eight points."
+    ]
+  },
+  {
     "SeasonID": 2010,
     "SeasonLabel": "2009-10",
     "Classification": "SCISA A & AA",
@@ -11,7 +57,7 @@
     "StateMeetEnd": "2010-05-01",
     "StateMeetLocation": "Columbia, SC",
     "RecapParagraphs": [
-      "The 2009-10 season now opens the St. Andrew's track archive with the earliest confirmed SCISA postseason snapshot currently visible in the public results: the May 1, 2010 state championships at Heathwood Hall in Columbia.",
+      "The 2009-10 season adds the next early SCISA postseason snapshot in the St. Andrew's track archive, built around the May 1, 2010 state championships at Heathwood Hall in Columbia.",
       "The boys side supplied most of the points. Andrew Smith led the way by winning shot put and discus while also taking second in high jump and long jump, Grant Little scored in both short sprints, the boys 4x400 relay placed second, and Jay Jenkins added a third-place finish in the 1600. Together those results pushed St. Andrew's to ninth in the boys team standings with 22 points.",
       "The girls file is smaller but still strong. Rachel Huncke placed second in the girls 400, Ciara Brown scored in both jumps and won the girls long jump, Maggie Solitario placed second in the girls discus, and Addison Randolph reached the girls 800 final. The girls totaled 16 points and finished 10th in the team standings."
     ],
