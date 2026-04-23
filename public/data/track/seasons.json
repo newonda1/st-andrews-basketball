@@ -1,5 +1,28 @@
 [
   {
+    "SeasonID": 2012,
+    "SeasonLabel": "2011-12",
+    "Classification": "SCISA A & AA",
+    "StatusBadge": "verified",
+    "StatusNote": "The 2011-12 season currently includes the one confirmed high-school meet visible in the public archive: the May 5, 2012 SCISA state championships.",
+    "FirstRegularSeasonMeet": "2012-05-05",
+    "RegionDeadline": "2012-05-05",
+    "StateMeetStart": "2012-05-05",
+    "StateMeetEnd": "2012-05-05",
+    "StateMeetLocation": "Charleston, SC",
+    "RecapParagraphs": [
+      "The 2011-12 season now opens the St. Andrew's track archive with an earlier SCISA postseason snapshot from the May 5, 2012 state championships at Porter-Gaud in Charleston.",
+      "The girls side supplied nearly all of the scoring. Rebecca Suh placed second in both the girls 100 and 200, Morgan Bennet tied for second in the high jump, and Morgan Randolph added a fourth-place finish in the 800 plus a third-place finish in the 1600. Those results pushed St. Andrew's to 15th in the girls team standings with nine points.",
+      "The boys file is smaller but still meaningful. Jay Jenkins finished fourth in the boys 1600 and second in the 3200 to account for the team's three points and a 17th-place finish in the boys standings. The girls 4x100 relay also appears in the archive with Rachel Huncke, Victoria McLaren, Rebecca Suh, and Morgan Bennet before a disqualification kept it off the final podium."
+    ],
+    "HighlightNotes": [
+      "Rebecca Suh placed 2nd in the girls 100 at the 2012 SCISA Championships in 13.25 and 2nd again in the girls 200 in 27.93.",
+      "Morgan Bennet tied for 2nd in the girls high jump at 4-04.00.",
+      "Morgan Randolph placed 3rd in the girls 1600 and 4th in the girls 800 at state.",
+      "Jay Jenkins placed 2nd in the boys 3200 in 10:36.16 and also finished 4th in the boys 1600."
+    ]
+  },
+  {
     "SeasonID": 2014,
     "SeasonLabel": "2013-14",
     "Classification": "SCISA A & AA",
@@ -11,7 +34,7 @@
     "StateMeetEnd": "2014-05-03",
     "StateMeetLocation": "Columbia, SC",
     "RecapParagraphs": [
-      "The 2013-14 season now opens the St. Andrew's track archive with a compact but meaningful postseason snapshot from the May 3, 2014 SCISA championships at Heathwood Hall.",
+      "The 2013-14 season provides the next SCISA postseason snapshot in the St. Andrew's track archive, built around the May 3, 2014 championships at Heathwood Hall.",
       "The girls side supplied the biggest results. Rebecca Suh won the girls Class A & AA 200, the girls 4x100 relay won in 53.02, and the girls 4x400 relay followed with another title in 4:18.93. Kaylin Rogers added a third-place finish in the girls 100 hurdles, and Morgan Randolph placed third in the girls 800.",
       "The boys file is smaller, with Malcolm Williams-Green currently showing as the lone confirmed St. Andrew's boys result after placing fifth in the Class A & AA 100. The archived live-results pages also list St. Andrew's entries in the girls 100, but that event page only preserved the meet-program heat sheet rather than final marks."
     ],

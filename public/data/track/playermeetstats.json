@@ -1,5 +1,105 @@
 [
   {
+    "StatID": "2012050501-201501-100m",
+    "MeetID": 2012050501,
+    "PlayerID": 201501,
+    "Gender": "Girls",
+    "Event": "100 Meter Dash",
+    "Mark": "13.25",
+    "Place": "2nd",
+    "Round": "Finals",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2012050501-201201-100m",
+    "MeetID": 2012050501,
+    "PlayerID": 201201,
+    "Gender": "Girls",
+    "Event": "100 Meter Dash",
+    "Mark": "13.74",
+    "Place": "4th",
+    "Round": "Finals",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2012050501-201501-200m",
+    "MeetID": 2012050501,
+    "PlayerID": 201501,
+    "Gender": "Girls",
+    "Event": "200 Meter Dash",
+    "Mark": "27.93",
+    "Place": "2nd",
+    "Round": "Finals",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2012050501-201402-800m",
+    "MeetID": 2012050501,
+    "PlayerID": 201402,
+    "Gender": "Girls",
+    "Event": "800 Meter Run",
+    "Mark": "2:45.06",
+    "Place": "4th",
+    "Round": "Finals",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2012050501-201402-1600m",
+    "MeetID": 2012050501,
+    "PlayerID": 201402,
+    "Gender": "Girls",
+    "Event": "1600 Meter Run",
+    "Mark": "6:01.88",
+    "Place": "3rd",
+    "Round": "Finals",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2012050501-girls-relay-4x100m",
+    "MeetID": 2012050501,
+    "PlayerID": null,
+    "Gender": "Girls",
+    "Event": "4x100 Meter Relay",
+    "Mark": null,
+    "Place": "DQ",
+    "Round": "Finals",
+    "Status": "DQ",
+    "AthleteName": "Rachel Huncke / Victoria McLaren / Rebecca Suh / Morgan Bennet"
+  },
+  {
+    "StatID": "2012050501-201512-high-jump",
+    "MeetID": 2012050501,
+    "PlayerID": 201512,
+    "Gender": "Girls",
+    "Event": "High Jump",
+    "Mark": "4-04.00",
+    "Place": "2nd",
+    "Round": "Finals",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2012050501-201202-1600m",
+    "MeetID": 2012050501,
+    "PlayerID": 201202,
+    "Gender": "Boys",
+    "Event": "1600 Meter Run",
+    "Mark": "5:01.57",
+    "Place": "4th",
+    "Round": "Finals",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2012050501-201202-3200m",
+    "MeetID": 2012050501,
+    "PlayerID": 201202,
+    "Gender": "Boys",
+    "Event": "3200 Meter Run",
+    "Mark": "10:36.16",
+    "Place": "2nd",
+    "Round": "Finals",
+    "Status": "Complete"
+  },
+  {
     "StatID": "2014050301-201401-100h",
     "MeetID": 2014050301,
     "PlayerID": 201401,
