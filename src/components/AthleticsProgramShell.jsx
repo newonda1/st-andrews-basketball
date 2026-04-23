@@ -52,7 +52,7 @@ const styles = {
   title: {
     margin: 0,
     fontFamily: '"Questrial", Arial, Helvetica, sans-serif',
-    fontWeight: 500,
+    fontWeight: 600,
     lineHeight: 1.02,
     color: "#002169",
     textTransform: "uppercase",
@@ -105,7 +105,7 @@ const styles = {
     textDecoration: "none",
     fontFamily: '"Questrial", Arial, Helvetica, sans-serif',
     fontSize: "1.08rem",
-    fontWeight: 500,
+    fontWeight: 600,
     letterSpacing: "0",
     lineHeight: 1.15,
     whiteSpace: "nowrap",
