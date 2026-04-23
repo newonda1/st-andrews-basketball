@@ -197,7 +197,7 @@ export default function AthleticsProgramShell({
               src="/images/common/st_andrews_athletics_horizontal_logo_dark.png"
               alt="St. Andrew's Athletics"
               style={styles.logo}
-              className="h-7 sm:h-8 md:h-9 lg:h-[39px]"
+              className="h-[35px] sm:h-[40px] md:h-[45px] lg:h-[49px]"
             />
             <span
               aria-hidden="true"
