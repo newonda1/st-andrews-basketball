@@ -229,8 +229,8 @@
     "GameID": 2018032601,
     "OpponentID": "fl-father-lopez-catholic-high-school-daytona-beach",
     "Opponent": "Father Lopez",
-    "LocationType": "Away",
-    "GameType": "Non-Region",
+    "LocationType": "Neutral",
+    "GameType": "Tournament",
     "Result": "L",
     "TeamScore": 2,
     "OpponentScore": 10,
@@ -255,8 +255,8 @@
     "GameID": 2018032701,
     "OpponentID": "oh-southview-high-school-sylvania",
     "Opponent": "Southview",
-    "LocationType": "Home",
-    "GameType": "Non-Region",
+    "LocationType": "Neutral",
+    "GameType": "Tournament",
     "Result": "L",
     "TeamScore": 1,
     "OpponentScore": 13,
@@ -307,12 +307,27 @@
     "GameID": 2018032802,
     "OpponentID": "tn-ravenwood-high-school-brentwood",
     "Opponent": "Ravenwood",
-    "LocationType": "Home",
-    "GameType": "Non-Region",
+    "LocationType": "Neutral",
+    "GameType": "Tournament",
     "Result": "L",
     "TeamScore": 4,
     "OpponentScore": 8,
-    "Season": 2018
+    "Season": 2018,
+    "LineScore": {
+      "Innings": [1, 2, 3, 4, 5, 6],
+      "StAndrews": [0, 0, 3, 0, 1, 0],
+      "Opponent": [1, 0, 4, 2, 7, "X"],
+      "StAndrewsTotals": {
+        "R": 4,
+        "H": 7,
+        "E": 1
+      },
+      "OpponentTotals": {
+        "R": 14,
+        "H": 12,
+        "E": 1
+      }
+    }
   },
   {
     "GameID": 2018040501,

@@ -239,14 +239,16 @@ const styles = {
   },
   navItemIndicator: {
     position: "absolute",
-    left: 0,
-    right: 0,
+    left: "7%",
+    right: "7%",
     bottom: 0,
-    height: "11px",
-    background: "#9b9b9b",
+    height: "10px",
+    background: "#989898",
     transform: "scaleX(0)",
     transformOrigin: "center center",
-    transition: "transform 220ms cubic-bezier(0.22, 1, 0.36, 1)",
+    opacity: 0,
+    transition:
+      "transform 260ms cubic-bezier(0.23, 1, 0.32, 1), opacity 160ms ease",
   },
   navDropdown: {
     position: "absolute",
@@ -254,16 +256,15 @@ const styles = {
     left: "50%",
     transform: "translateX(-50%)",
     zIndex: 35,
-    width: "min(1040px, calc(100vw - 3rem))",
   },
   navDropdownInner: {
     background: "#002169",
     boxShadow: "0 28px 42px rgba(15, 23, 42, 0.28)",
-    padding: "34px 40px 40px",
+    padding: "31px 36px 36px",
   },
   navDropdownColumns: {
     display: "grid",
-    gap: "38px",
+    gap: "34px",
   },
   navDropdownColumn: {
     display: "flex",
@@ -490,11 +491,17 @@ export default function AthleticsProgramShell({
     ).filter((column) => column.length > 0);
   };
 
+  const getDropdownWidth = (links) => {
+    const columnCount = getDropdownColumns(links).length;
+
+    return columnCount > 1
+      ? "min(920px, calc(100vw - 7rem))"
+      : "min(470px, calc(100vw - 7rem))";
+  };
+
   const renderNavItem = (section) => {
     const links = section.links || [];
-    const showIndicator =
-      openDropdownTitle === section.title ||
-      (openDropdownTitle === null && isSectionActive(section));
+    const showIndicator = openDropdownTitle === section.title;
 
     if (links.length === 1) {
       const item = links[0];
@@ -519,7 +526,8 @@ export default function AthleticsProgramShell({
             aria-hidden="true"
             style={{
               ...styles.navItemIndicator,
-              transform: showIndicator ? "scaleX(1)" : "scaleX(0)",
+              transform: showIndicator ? "scaleX(1)" : "scaleX(0.2)",
+              opacity: showIndicator ? 1 : 0,
             }}
           />
         </div>
@@ -557,7 +565,8 @@ export default function AthleticsProgramShell({
           aria-hidden="true"
           style={{
             ...styles.navItemIndicator,
-            transform: showIndicator ? "scaleX(1)" : "scaleX(0)",
+            transform: showIndicator ? "scaleX(1)" : "scaleX(0.2)",
+            opacity: showIndicator ? 1 : 0,
           }}
         />
       </div>
@@ -712,7 +721,12 @@ export default function AthleticsProgramShell({
             </nav>
 
             {openDropdownSection ? (
-              <div style={styles.navDropdown}>
+              <div
+                style={{
+                  ...styles.navDropdown,
+                  width: getDropdownWidth(openDropdownSection.links),
+                }}
+              >
                 <div style={styles.navDropdownInner}>
                   <div
                     style={{
