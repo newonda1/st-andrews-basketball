@@ -1,5 +1,28 @@
 [
   {
+    "SeasonID": 2011,
+    "SeasonLabel": "2010-11",
+    "Classification": "SCISA A & AA",
+    "StatusBadge": "verified",
+    "StatusNote": "The 2010-11 season currently includes the one confirmed high-school meet visible in the public archive: the May 7, 2011 SCISA state championships.",
+    "FirstRegularSeasonMeet": "2011-05-07",
+    "RegionDeadline": "2011-05-07",
+    "StateMeetStart": "2011-05-07",
+    "StateMeetEnd": "2011-05-07",
+    "StateMeetLocation": "Sumter, SC",
+    "RecapParagraphs": [
+      "The 2010-11 season now opens the St. Andrew's track archive with a substantial SCISA postseason snapshot from the May 7, 2011 state championships at Wilson Hall in Sumter.",
+      "The boys side carried the biggest headline. Andrew Smith won four Class A & AA state titles by taking the boys 100, boys 200, shot put, and discus, while Danny Kirkconnell added sprint points in both short dashes and Tucker Whitton, Jay Jenkins, and the relay groups pushed the boys to ninth in the team standings with 33 points.",
+      "The girls file also shows a real team presence instead of a one-athlete cameo. Rachel Huncke placed second in both the girls 100 and 400, Klara Hodges finished third in the girls 800 and 1600, Maggie Solitario won the girls shot put, and the girls 4x100 relay took second with Huncke, Rebecca Suh, Halen Waters, and Hodges. Those results lifted St. Andrew's to 11th in the girls standings with 16 points."
+    ],
+    "HighlightNotes": [
+      "Andrew Smith won the boys 100 and 200 at the 2011 SCISA Championships in 11.46 and 23.38.",
+      "Smith also swept the boys throws by winning shot put at 43-05.50 and discus at 125-02.",
+      "Rachel Huncke placed 2nd in both the girls 100 and girls 400, then helped the girls 4x100 relay finish 2nd.",
+      "Klara Hodges placed 3rd in both the girls 800 and 1600, and Maggie Solitario won the girls shot put."
+    ]
+  },
+  {
     "SeasonID": 2012,
     "SeasonLabel": "2011-12",
     "Classification": "SCISA A & AA",
@@ -11,7 +34,7 @@
     "StateMeetEnd": "2012-05-05",
     "StateMeetLocation": "Charleston, SC",
     "RecapParagraphs": [
-      "The 2011-12 season now opens the St. Andrew's track archive with an earlier SCISA postseason snapshot from the May 5, 2012 state championships at Porter-Gaud in Charleston.",
+      "The 2011-12 season adds the next early SCISA postseason snapshot in the St. Andrew's track archive, built around the May 5, 2012 state championships at Porter-Gaud in Charleston.",
       "The girls side supplied nearly all of the scoring. Rebecca Suh placed second in both the girls 100 and 200, Morgan Bennet tied for second in the high jump, and Morgan Randolph added a fourth-place finish in the 800 plus a third-place finish in the 1600. Those results pushed St. Andrew's to 15th in the girls team standings with nine points.",
       "The boys file is smaller but still meaningful. Jay Jenkins finished fourth in the boys 1600 and second in the 3200 to account for the team's three points and a 17th-place finish in the boys standings. The girls 4x100 relay also appears in the archive with Rachel Huncke, Victoria McLaren, Rebecca Suh, and Morgan Bennet before a disqualification kept it off the final podium."
     ],
