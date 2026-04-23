@@ -1,5 +1,17 @@
 [
   {
+    "MeetID": 2006042901,
+    "Season": 2006,
+    "Date": "2006-04-29",
+    "Name": "SCISA State Championships",
+    "Location": "Columbia, SC",
+    "Level": "Varsity",
+    "MeetType": "State",
+    "Status": "Complete",
+    "Notes": "Results loaded from the MileSplit raw boys results page shared by the user, along with the linked girls split and team-scores page for the 2006 SCISA state championships. The public files exposed six St. Andrew's individual entries and did not list a St. Andrew's team finish in the published standings.",
+    "SourceUrl": "https://sc.milesplit.com/meets/15283-scisa-championships-2006/results/34487/raw"
+  },
+  {
     "MeetID": 2007042801,
     "Season": 2007,
     "Date": "2007-04-28",

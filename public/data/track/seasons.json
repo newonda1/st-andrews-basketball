@@ -1,5 +1,28 @@
 [
   {
+    "SeasonID": 2006,
+    "SeasonLabel": "2005-06",
+    "Classification": "SCISA",
+    "StatusBadge": "verified",
+    "StatusNote": "The 2005-06 season currently includes the one confirmed high-school meet visible in the public archive: the April 29, 2006 SCISA state championships.",
+    "FirstRegularSeasonMeet": "2006-04-29",
+    "RegionDeadline": "2006-04-29",
+    "StateMeetStart": "2006-04-29",
+    "StateMeetEnd": "2006-04-29",
+    "StateMeetLocation": "Columbia, SC",
+    "RecapParagraphs": [
+      "The 2005-06 season now opens the St. Andrew's track archive with the earliest confirmed SCISA postseason snapshot currently visible in the public results: the April 29, 2006 state championships at Heathwood Hall in Columbia.",
+      "The public file is small, but it shows both sides of the program. On the girls side, Ann Kingston reached the 100 hurdles final and also appeared in the 100 dash, Sarah Lundgren ran the 400, and Grace Wilkowski logged throws marks in both shot put and discus. On the boys side, Javier Gutierrez represented St. Andrew's in the long jump.",
+      "None of those marks reached the scoring positions, and St. Andrew's did not appear in the published team standings. Even so, the meet gives the track archive one more verified SCISA season at the front end of the timeline."
+    ],
+    "HighlightNotes": [
+      "Ann Kingston placed 7th in the girls 100-meter hurdles at the 2006 SCISA Championships in 18.62.",
+      "Grace Wilkowski placed 7th in the girls shot put at 27-08.50 and also competed in the discus.",
+      "Javier Gutierrez placed 10th in the boys long jump at 18-01.00.",
+      "The meet pushes the public track archive back to the 2005-06 school year."
+    ]
+  },
+  {
     "SeasonID": 2007,
     "SeasonLabel": "2006-07",
     "Classification": "SCISA",
@@ -11,7 +34,7 @@
     "StateMeetEnd": "2007-04-28",
     "StateMeetLocation": "Columbia, SC",
     "RecapParagraphs": [
-      "The 2006-07 season now opens the St. Andrew's track archive with the earliest confirmed SCISA postseason snapshot currently visible in the public results: the April 28, 2007 state championships at Heathwood Hall in Columbia.",
+      "The 2006-07 season adds the next early SCISA postseason snapshot in the St. Andrew's track archive, built around the April 28, 2007 state championships at Heathwood Hall in Columbia.",
       "The public file is extremely small for St. Andrew's. The only visible result is the boys 4x800 relay, which finished seventh in 10:13.63. No St. Andrew's scoring marks appeared in the boys raw page, and the team was not listed in the published boys standings.",
       "The linked girls raw page did not show any St. Andrew's entries, so the season reads as a narrow relay-only postseason snapshot rather than a full team record. Even so, it gives the track archive one more confirmed early SCISA chapter."
     ],
@@ -19,7 +42,7 @@
       "The boys 4x800 relay finished 7th at the 2007 SCISA Championships in 10:13.63.",
       "No St. Andrew's scoring finishes were visible in the public boys raw file.",
       "No St. Andrew's girls entries were visible in the linked public girls raw file.",
-      "The meet pushes the public track archive back to the 2006-07 school year."
+      "The season preserves a relay-only postseason snapshot from the early SCISA years."
     ]
   },
   {

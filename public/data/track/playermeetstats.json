@@ -1,5 +1,71 @@
 [
   {
+    "StatID": "2006042901-200601-100m",
+    "MeetID": 2006042901,
+    "PlayerID": 200601,
+    "Gender": "Girls",
+    "Event": "100 Meter Dash",
+    "Mark": "14.34",
+    "Place": "16th",
+    "Round": "Finals",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2006042901-200602-400m",
+    "MeetID": 2006042901,
+    "PlayerID": 200602,
+    "Gender": "Girls",
+    "Event": "400 Meter Run",
+    "Mark": "1:08.04",
+    "Place": "12th",
+    "Round": "Finals",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2006042901-200601-100mh",
+    "MeetID": 2006042901,
+    "PlayerID": 200601,
+    "Gender": "Girls",
+    "Event": "100 Meter Hurdles",
+    "Mark": "18.62",
+    "Place": "7th",
+    "Round": "Finals",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2006042901-200603-shot-put",
+    "MeetID": 2006042901,
+    "PlayerID": 200603,
+    "Gender": "Girls",
+    "Event": "Shot Put",
+    "Mark": "27-08.50",
+    "Place": "7th",
+    "Round": "Finals",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2006042901-200603-discus",
+    "MeetID": 2006042901,
+    "PlayerID": 200603,
+    "Gender": "Girls",
+    "Event": "Discus Throw",
+    "Mark": "66-00.00",
+    "Place": "16th",
+    "Round": "Finals",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2006042901-200604-long-jump",
+    "MeetID": 2006042901,
+    "PlayerID": 200604,
+    "Gender": "Boys",
+    "Event": "Long Jump",
+    "Mark": "18-01.00",
+    "Place": "10th",
+    "Round": "Finals",
+    "Status": "Complete"
+  },
+  {
     "StatID": "2007042801-boys-relay-4x800m",
     "MeetID": 2007042801,
     "PlayerID": null,
