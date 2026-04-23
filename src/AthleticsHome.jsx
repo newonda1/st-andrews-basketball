@@ -59,6 +59,27 @@ const sports = [
       },
     ],
   },
+  {
+    name: "Swimming",
+    to: "/athletics/swimming/records/school",
+    icon: "/images/swimming/swimming_icon.svg",
+    championshipGroups: [
+      {
+        title: "Team Championships",
+        sections: [
+          { title: "Region Championships", years: [] },
+          { title: "State Championships", years: [] },
+        ],
+      },
+      {
+        title: "Individual Championships",
+        sections: [
+          { title: "Region Championships", years: [] },
+          { title: "State Championships", years: [2024] },
+        ],
+      },
+    ],
+  },
 ];
 
 const menuSections = [
@@ -69,6 +90,7 @@ const menuSections = [
       { to: "/athletics/girls/basketball", label: "Girls Basketball" },
       { to: "/athletics/boys/baseball", label: "Boys Baseball" },
       { to: "/athletics/track/records/school", label: "Track & Field" },
+      { to: "/athletics/swimming/records/school", label: "Swimming" },
     ],
   },
 ];
