@@ -80,6 +80,31 @@ const sports = [
       },
     ],
   },
+  {
+    name: "Tennis",
+    to: "/athletics/tennis",
+    icon: "/images/tennis/tennis_icon.png",
+    bannerNote: "Coed Program",
+    iconFrameClassName:
+      "overflow-hidden rounded-full bg-black/15 ring-2 ring-white/18",
+    iconClassName: "rounded-full",
+    championshipGroups: [
+      {
+        title: "Team Championships",
+        sections: [
+          { title: "Region Championships", years: [] },
+          { title: "State Championships", years: [] },
+        ],
+      },
+      {
+        title: "Individual Champions",
+        sections: [
+          { title: "Region Championships", years: [] },
+          { title: "State Championships", years: [] },
+        ],
+      },
+    ],
+  },
 ];
 
 const menuSections = [
@@ -91,6 +116,7 @@ const menuSections = [
       { to: "/athletics/boys/baseball", label: "Boys Baseball" },
       { to: "/athletics/track/records/school", label: "Track & Field" },
       { to: "/athletics/swimming/records/school", label: "Swimming" },
+      { to: "/athletics/tennis", label: "Tennis" },
     ],
   },
 ];
@@ -154,13 +180,17 @@ function SportBannerHeader({ sport }) {
           loading="lazy"
         />
 
-        <img
-          src={sport.icon}
-          alt=""
-          aria-hidden="true"
-          className="absolute left-1/2 top-[4.45rem] h-[4.7rem] w-[4.7rem] -translate-x-1/2 object-contain drop-shadow-[0_10px_16px_rgba(15,23,42,0.32)]"
-          loading="lazy"
-        />
+        <div
+          className={`absolute left-1/2 top-[4.45rem] h-[4.7rem] w-[4.7rem] -translate-x-1/2 ${sport.iconFrameClassName || ""}`}
+        >
+          <img
+            src={sport.icon}
+            alt=""
+            aria-hidden="true"
+            className={`h-full w-full object-contain drop-shadow-[0_10px_16px_rgba(15,23,42,0.32)] ${sport.iconClassName || ""}`}
+            loading="lazy"
+          />
+        </div>
       </div>
 
       <h2
@@ -169,6 +199,11 @@ function SportBannerHeader({ sport }) {
       >
         {sport.name}
       </h2>
+      {sport.bannerNote ? (
+        <p className="relative mt-2 text-center text-[0.62rem] font-bold uppercase tracking-[0.24em] text-blue-100/90 sm:text-[0.66rem]">
+          {sport.bannerNote}
+        </p>
+      ) : null}
     </div>
   );
 }

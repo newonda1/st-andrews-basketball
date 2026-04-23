@@ -200,6 +200,32 @@
     }
   },
   {
+    "GameID": 2018032201,
+    "OpponentID": "sc-colleton-prep-academy-walterboro",
+    "Opponent": "Colleton Prep Academy",
+    "LocationType": "Home",
+    "GameType": "Non-Region",
+    "Result": "W",
+    "TeamScore": 3,
+    "OpponentScore": 2,
+    "Season": 2018,
+    "LineScore": {
+      "Innings": [1, 2, 3, 4, 5, 6, 7],
+      "StAndrews": [0, 2, 0, 0, 1, 0, "X"],
+      "Opponent": [0, 0, 0, 2, 0, 0, 0],
+      "StAndrewsTotals": {
+        "R": 3,
+        "H": 1,
+        "E": 0
+      },
+      "OpponentTotals": {
+        "R": 2,
+        "H": 5,
+        "E": 0
+      }
+    }
+  },
+  {
     "GameID": 2018032601,
     "OpponentID": "fl-father-lopez-catholic-high-school-daytona-beach",
     "Opponent": "Father Lopez",

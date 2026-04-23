@@ -10,6 +10,7 @@ import BoysBaseballApp from "./boys/baseball/BoysBaseballApp.jsx";
 import GirlsBasketballApp from "./girls/basketball/GirlsBasketballApp.jsx";
 import TrackApp from "./track/TrackApp.jsx";
 import SwimmingApp from "./swimming/SwimmingApp.jsx";
+import TennisApp from "./tennis/TennisApp.jsx";
 import AdminApp from "./admin/AdminApp.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -36,6 +37,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 
         <Route path="/athletics/track/*" element={<TrackApp />} />
         <Route path="/athletics/swimming/*" element={<SwimmingApp />} />
+        <Route path="/athletics/tennis/*" element={<TennisApp />} />
 
         <Route path="/admin/*" element={<AdminApp />} />
       </Routes>
