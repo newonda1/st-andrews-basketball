@@ -520,7 +520,7 @@ export default function AthleticsProgramShell({
     <div className="stats-site-shell">
       <header className="fixed inset-x-0 top-0 z-40 bg-white">
         <div className="hidden lg:block border-b border-white/10 bg-[var(--stats-dark)]">
-          <div className="mx-auto flex min-h-[40px] max-w-[1180px] items-center justify-between px-5">
+          <div className="flex min-h-[40px] w-full items-center justify-between px-6 lg:px-8 xl:px-10 2xl:px-12">
             <a
               href="https://saslions.myschoolapp.com/"
               target="_blank"
@@ -575,7 +575,7 @@ export default function AthleticsProgramShell({
         </div>
 
         <div className="border-b border-[var(--stats-line-soft)] bg-white">
-          <div className="mx-auto flex max-w-[1180px] items-center justify-between px-4 py-4 lg:px-5 lg:py-5">
+          <div className="flex w-full items-center justify-between px-4 py-4 lg:px-8 lg:py-5 xl:px-10 2xl:px-12">
             <Link
               to={headerHomePath}
               className="flex min-w-0 items-center gap-3 text-[var(--stats-navy)] no-underline lg:gap-4"
@@ -584,6 +584,10 @@ export default function AthleticsProgramShell({
                 src="/images/common/st_andrews_athletics_horizontal_logo_dark.png"
                 alt="St. Andrew's Athletics"
                 className="h-[32px] w-auto sm:h-[38px] lg:h-[48px]"
+              />
+              <span
+                aria-hidden="true"
+                className="hidden h-8 w-px bg-[var(--stats-gray)] md:block lg:h-[39px]"
               />
               <div className="hidden min-w-0 md:flex md:flex-col">
                 <span className="text-[0.94rem] font-semibold uppercase tracking-[0.01em] text-[var(--stats-navy)] lg:text-[1.12rem]">
@@ -727,7 +731,7 @@ export default function AthleticsProgramShell({
           >
             <nav
               aria-label={menuTitle || title}
-              className="mx-auto flex max-w-[1180px] items-center justify-center px-5"
+              className="flex w-full items-center justify-center px-6 lg:px-8 xl:px-10 2xl:px-12"
             >
               <div className="flex w-full items-stretch justify-between">
                 {navSections.map(renderNavItem)}
