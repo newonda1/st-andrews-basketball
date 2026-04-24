@@ -85,18 +85,18 @@ function ParticipantLogo({ participant }) {
       <img
         src={participant.logoPath}
         alt=""
-        className="h-9 w-9 shrink-0 object-contain"
+        className="h-8 w-8 shrink-0 object-contain"
       />
     );
   }
 
   if (participant.isBye) {
-    return <span className="h-9 w-9 shrink-0" aria-hidden="true" />;
+    return <span className="h-8 w-8 shrink-0" aria-hidden="true" />;
   }
 
   return (
     <span
-      className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-slate-200 bg-slate-100 text-xs font-bold text-slate-500"
+      className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-slate-200 bg-slate-100 text-xs font-bold text-slate-500"
       aria-hidden="true"
     >
       {participant.name.slice(0, 1)}
@@ -106,12 +106,12 @@ function ParticipantLogo({ participant }) {
 
 function ParticipantRow({ participant, scores, isWinner }) {
   return (
-    <div className="relative grid min-h-[70px] grid-cols-[1fr_auto] items-center gap-3 px-4 py-3">
-      <div className="flex min-w-0 items-center gap-3">
+    <div className="relative grid h-[58px] grid-cols-[minmax(0,1fr)_auto] items-center gap-2 px-3 py-2">
+      <div className="flex min-w-0 items-center gap-2.5">
         <ParticipantLogo participant={participant} />
         <div className="min-w-0">
           <p
-            className={`truncate text-base font-bold ${
+            className={`truncate text-[0.92rem] font-bold leading-5 ${
               participant.isBye
                 ? "text-slate-800"
                 : isWinner
@@ -122,7 +122,7 @@ function ParticipantRow({ participant, scores, isWinner }) {
             {participant.name}
           </p>
           {participant.classLabel || participant.schoolName ? (
-            <p className="mt-1 truncate text-sm font-semibold text-slate-500">
+            <p className="mt-0.5 truncate text-[0.76rem] font-semibold leading-4 text-slate-500">
               {participant.classLabel}
               {participant.classLabel && participant.schoolName ? " • " : ""}
               {participant.schoolName}
@@ -132,7 +132,7 @@ function ParticipantRow({ participant, scores, isWinner }) {
       </div>
 
       {scores.length ? (
-        <div className="flex items-center gap-3 pr-3 text-lg font-bold tabular-nums">
+        <div className="flex items-center gap-2 pr-2 text-base font-bold tabular-nums">
           {scores.map((score, index) => (
             <span
               key={`${participant.name}-score-${index}`}
@@ -146,7 +146,7 @@ function ParticipantRow({ participant, scores, isWinner }) {
 
       {isWinner && !participant.isBye ? (
         <span
-          className="absolute right-0 top-1/2 h-0 w-0 -translate-y-1/2 border-y-[9px] border-r-[12px] border-y-transparent border-r-black"
+          className="absolute right-0 top-1/2 h-0 w-0 -translate-y-1/2 border-y-[8px] border-r-[10px] border-y-transparent border-r-black"
           aria-label="Winner"
         />
       ) : null}
@@ -163,7 +163,7 @@ function MatchCard({ match, playerMap, opponentMap, schoolMap }) {
   const bottom = resolveParticipant(bottomEntry, playerMap, opponentMap, schoolMap);
 
   return (
-    <article className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm">
+    <article className="h-full overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm">
       <ParticipantRow
         participant={top}
         scores={scoreForSide(match, "top")}
@@ -176,6 +176,105 @@ function MatchCard({ match, playerMap, opponentMap, schoolMap }) {
         isWinner={match.WinnerSide === "bottom"}
       />
     </article>
+  );
+}
+
+const BRACKET_LAYOUT = {
+  cardW: 270,
+  cardH: 117,
+  colGap: 56,
+  rowGap: 22,
+  headerH: 34,
+};
+
+function makeLayout(rounds) {
+  const { cardW, cardH, colGap, rowGap, headerH } = BRACKET_LAYOUT;
+  const xByRound = {
+    R16: 0,
+    QF: cardW + colGap,
+    SF: 2 * (cardW + colGap),
+    F: 3 * (cardW + colGap),
+  };
+  const matchPositions = new Map();
+  const matchesByRound = new Map(
+    rounds.map((round) => [round.code, round.matches])
+  );
+
+  const setPosition = (match, roundCode, y) => {
+    if (!match) return null;
+    const position = {
+      x: xByRound[roundCode],
+      y,
+      w: cardW,
+      h: cardH,
+    };
+    matchPositions.set(match.TennisMatchID, position);
+    return position;
+  };
+
+  const r16 = matchesByRound.get("R16") || [];
+  r16.forEach((match, index) => {
+    setPosition(match, "R16", headerH + index * (cardH + rowGap));
+  });
+
+  const setFromPair = (roundCode, match, sourceA, sourceB) => {
+    const a = sourceA ? matchPositions.get(sourceA.TennisMatchID) : null;
+    const b = sourceB ? matchPositions.get(sourceB.TennisMatchID) : null;
+    if (!a || !b) return null;
+
+    const centerY = (a.y + a.h / 2 + b.y + b.h / 2) / 2;
+    return setPosition(match, roundCode, centerY - cardH / 2);
+  };
+
+  const qf = matchesByRound.get("QF") || [];
+  qf.forEach((match, index) => {
+    setFromPair("QF", match, r16[index * 2], r16[index * 2 + 1]);
+  });
+
+  const sf = matchesByRound.get("SF") || [];
+  sf.forEach((match, index) => {
+    setFromPair("SF", match, qf[index * 2], qf[index * 2 + 1]);
+  });
+
+  const finalMatches = matchesByRound.get("F") || [];
+  setFromPair("F", finalMatches[0], sf[0], sf[1]);
+
+  const canvasWidth = xByRound.F + cardW;
+  const canvasHeight =
+    headerH + Math.max(1, r16.length) * cardH + Math.max(0, r16.length - 1) * rowGap;
+
+  return {
+    canvasWidth,
+    canvasHeight,
+    matchPositions,
+    xByRound,
+  };
+}
+
+function Connector({ fromA, fromB, to, positions }) {
+  const posA = positions.get(fromA?.TennisMatchID);
+  const posB = positions.get(fromB?.TennisMatchID);
+  const posTo = positions.get(to?.TennisMatchID);
+
+  if (!posA || !posB || !posTo) return null;
+
+  const startX = posA.x + posA.w;
+  const targetX = posTo.x;
+  const midX = startX + (targetX - startX) / 2;
+  const yA = posA.y + posA.h / 2;
+  const yB = posB.y + posB.h / 2;
+  const yTo = posTo.y + posTo.h / 2;
+
+  return (
+    <path
+      d={`M ${startX} ${yA} H ${midX} V ${yB} M ${startX} ${yB} H ${midX} M ${midX} ${yTo} H ${targetX}`}
+      fill="none"
+      stroke="#94a3b8"
+      strokeWidth="1.5"
+      strokeLinejoin="round"
+      strokeLinecap="round"
+      opacity="0.75"
+    />
   );
 }
 
@@ -204,6 +303,41 @@ export default function TennisTournamentBracket({
     })).filter((round) => round.matches.length);
   }, [bracket.BracketID, matches]);
 
+  const layout = useMemo(() => makeLayout(rounds), [rounds]);
+
+  const roundByCode = useMemo(() => {
+    const map = new Map();
+    for (const round of rounds) {
+      map.set(round.code, round);
+    }
+    return map;
+  }, [rounds]);
+
+  const connectorGroups = useMemo(() => {
+    const r16 = roundByCode.get("R16")?.matches || [];
+    const qf = roundByCode.get("QF")?.matches || [];
+    const sf = roundByCode.get("SF")?.matches || [];
+    const finalMatches = roundByCode.get("F")?.matches || [];
+
+    return [
+      ...qf.map((match, index) => ({
+        fromA: r16[index * 2],
+        fromB: r16[index * 2 + 1],
+        to: match,
+      })),
+      ...sf.map((match, index) => ({
+        fromA: qf[index * 2],
+        fromB: qf[index * 2 + 1],
+        to: match,
+      })),
+      {
+        fromA: sf[0],
+        fromB: sf[1],
+        to: finalMatches[0],
+      },
+    ];
+  }, [roundByCode]);
+
   if (!rounds.length) {
     return (
       <div className="mt-4 rounded-lg border border-dashed border-slate-300 bg-slate-50 px-4 py-8 text-center text-sm text-slate-500">
@@ -214,35 +348,67 @@ export default function TennisTournamentBracket({
 
   return (
     <div className="mt-4 overflow-x-auto pb-3">
-      <div className="grid min-w-[1480px] grid-cols-4 gap-8">
+      <div
+        className="relative min-w-[1030px]"
+        style={{
+          width: `${layout.canvasWidth}px`,
+          height: `${layout.canvasHeight}px`,
+        }}
+      >
+        <svg
+          className="pointer-events-none absolute inset-0 z-0"
+          width={layout.canvasWidth}
+          height={layout.canvasHeight}
+          viewBox={`0 0 ${layout.canvasWidth} ${layout.canvasHeight}`}
+          aria-hidden="true"
+        >
+          {connectorGroups.map((connector, index) => (
+            <Connector
+              key={`connector-${index}`}
+              fromA={connector.fromA}
+              fromB={connector.fromB}
+              to={connector.to}
+              positions={layout.matchPositions}
+            />
+          ))}
+        </svg>
+
         {rounds.map((round) => (
-          <div key={round.code} className="space-y-4">
-            <h4 className="text-sm font-bold uppercase tracking-[0.14em] text-slate-500">
-              {round.label}
-            </h4>
-            <div
-              className={
-                round.code === "QF"
-                  ? "space-y-16 pt-[74px]"
-                  : round.code === "SF"
-                    ? "space-y-40 pt-[228px]"
-                    : round.code === "F"
-                      ? "space-y-4 pt-[474px]"
-                      : "space-y-4"
-              }
-            >
-              {round.matches.map((match) => (
+          <h4
+            key={`${round.code}-heading`}
+            className="absolute top-0 z-10 text-xs font-bold uppercase tracking-[0.14em] text-slate-500"
+            style={{ left: `${layout.xByRound[round.code]}px` }}
+          >
+            {round.label}
+          </h4>
+        ))}
+
+        {rounds.flatMap((round) =>
+          round.matches.map((match) => {
+            const position = layout.matchPositions.get(match.TennisMatchID);
+            if (!position) return null;
+
+            return (
+              <div
+                key={match.TennisMatchID}
+                className="absolute z-10"
+                style={{
+                  left: `${position.x}px`,
+                  top: `${position.y}px`,
+                  width: `${position.w}px`,
+                  height: `${position.h}px`,
+                }}
+              >
                 <MatchCard
-                  key={match.TennisMatchID}
                   match={match}
                   playerMap={playerMap}
                   opponentMap={opponentMap}
                   schoolMap={schoolMap}
                 />
-              ))}
-            </div>
-          </div>
-        ))}
+              </div>
+            );
+          })
+        )}
       </div>
     </div>
   );
