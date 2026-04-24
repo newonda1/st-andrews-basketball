@@ -169,18 +169,19 @@ function RegionBracket5SVG({ bracket, schools = [] }) {
     const stroke = highlight ? meta.primaryColor : "rgba(120,130,140,0.45)";
     const strokeW = highlight ? 2.5 : 1.25;
 
-    // Bubble geometry (seed + score INSIDE the card)
+    // Bubble geometry for the score; seed is a plain bracket-style label.
     const bubbleW = 34;
     const bubbleH = 32;
     const bubbleR = 10;
     const bubbleY = y + (cardH - bubbleH) / 2;
 
-    // Reserve space inside the card so bubbles don't overlap the team-card image/text.
-    const leftInset = bubbleW + 18;   // space for seed bubble + gap
-    const rightInset = bubbleW + 18;  // space for score bubble + gap
+    // Reserve space inside the card so labels don't overlap the team-card image/text.
+    const leftInset = 42;             // seed label + gap
+    const rightInset = bubbleW + 18;  // score bubble + gap
 
-    // Seed bubble: inside card, left of logo
-    const seedX = x + 10;
+    // Seed label: inside card, left of logo
+    const seedX = x + 14;
+    const seedY = y + cardH / 2 + 5;
 
     // Score bubble: inside card, flush-right
     const scoreX = x + cardW - 10 - bubbleW;
@@ -188,10 +189,11 @@ function RegionBracket5SVG({ bracket, schools = [] }) {
     // Team-card image is shifted/shrunk to avoid overlapping bubbles
     const imgX = x + leftInset;
     const imgW = cardW - leftInset - rightInset;
-    const logoSize = 44;
+    const logoW = 64;
+    const logoH = 54;
     const logoX = imgX;
-    const logoY = y + (cardH - logoSize) / 2;
-    const nameX = logoX + logoSize + 12;
+    const logoY = y + (cardH - logoH) / 2;
+    const nameX = logoX + logoW + 12;
 
     return (
       <g>
@@ -223,22 +225,12 @@ function RegionBracket5SVG({ bracket, schools = [] }) {
 
         {usesSchoolLogo ? (
           <g>
-            <rect
-              x={logoX}
-              y={logoY}
-              width={logoSize}
-              height={logoSize}
-              rx={10}
-              fill="rgba(248,250,252,0.9)"
-              stroke="rgba(120,130,140,0.18)"
-              strokeWidth="1"
-            />
             <image
               href={href}
-              x={logoX + 4}
-              y={logoY + 4}
-              width={logoSize - 8}
-              height={logoSize - 8}
+              x={logoX}
+              y={logoY}
+              width={logoW}
+              height={logoH}
               preserveAspectRatio="xMidYMid meet"
             />
             <text
@@ -269,30 +261,17 @@ function RegionBracket5SVG({ bracket, schools = [] }) {
           </g>
         )}
 
-        {/* Seed bubble (inside card, left of logo) */}
+        {/* Seed label (inside card, left of logo) */}
         {seed !== null && seed !== undefined && seed !== "" && (
-          <g>
-            <rect
-              x={seedX}
-              y={bubbleY}
-              width={bubbleW}
-              height={bubbleH}
-              rx={bubbleR}
-              fill="rgba(255,255,255,0.9)"
-              stroke="rgba(120,130,140,0.35)"
-              strokeWidth="1"
-            />
-            <text
-              x={seedX + bubbleW / 2}
-              y={bubbleY + bubbleH / 2 + 5}
-              textAnchor="middle"
-              fontSize="14"
-              fontWeight="700"
-              fill="rgba(30,34,40,0.95)"
-            >
-              {seed}
-            </text>
-          </g>
+          <text
+            x={seedX}
+            y={seedY}
+            fontSize="14"
+            fontWeight="800"
+            fill="rgba(30,34,40,0.95)"
+          >
+            #{seed}
+          </text>
         )}
 
         {/* Score bubble (inside card, right of team name) */}

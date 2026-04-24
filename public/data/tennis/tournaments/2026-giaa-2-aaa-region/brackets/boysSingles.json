@@ -1,0 +1,12 @@
+{
+  "BracketID": "boys-singles",
+  "Name": "Boys Singles",
+  "Gender": "Boys",
+  "EventType": "Singles",
+  "Status": "Source Parsed",
+  "SourceFile": "boys singles.pdf",
+  "PlayersDataPath": "/data/players.json",
+  "OpponentAthletesDataPath": "/data/tennis/opponentAthletes.json",
+  "Rounds": [],
+  "Matches": []
+}

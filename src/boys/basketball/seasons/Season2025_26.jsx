@@ -813,7 +813,10 @@ function Season2025_26() {
         {bracketsData === null ? (
           <p className="text-gray-600">Loading state bracket…</p>
         ) : bracketsData?.[String(SEASON_ID)]?.state ? (
-          <StateBracket12SVG bracket={bracketsData[String(SEASON_ID)].state} />
+          <StateBracket12SVG
+            bracket={bracketsData[String(SEASON_ID)].state}
+            schools={schoolsData}
+          />
         ) : (
           <p className="text-gray-600">
             State bracket data is not available for this season (missing key "

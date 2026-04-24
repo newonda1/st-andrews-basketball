@@ -1,0 +1,40 @@
+{
+  "TournamentID": "2026-giaa-2-aaa-region",
+  "Name": "2026 GIAA 2-AAA Region Tournament",
+  "Season": 2026,
+  "StartDate": "2026-04-14",
+  "EndDate": "2026-04-14",
+  "Classification": "GIAA 2-AAA",
+  "Status": "In Progress",
+  "Source": "User-provided UTR Sports bracket PDFs",
+  "Brackets": [
+    {
+      "BracketID": "boys-singles",
+      "Name": "Boys Singles",
+      "Gender": "Boys",
+      "EventType": "Singles",
+      "DataPath": "/data/tennis/tournaments/2026-giaa-2-aaa-region/brackets/boysSingles.json"
+    },
+    {
+      "BracketID": "girls-singles",
+      "Name": "Girls Singles",
+      "Gender": "Girls",
+      "EventType": "Singles",
+      "DataPath": "/data/tennis/tournaments/2026-giaa-2-aaa-region/brackets/girlsSingles.json"
+    },
+    {
+      "BracketID": "boys-doubles",
+      "Name": "Boys Doubles",
+      "Gender": "Boys",
+      "EventType": "Doubles",
+      "DataPath": "/data/tennis/tournaments/2026-giaa-2-aaa-region/brackets/boysDoubles.json"
+    },
+    {
+      "BracketID": "girls-doubles",
+      "Name": "Girls Doubles",
+      "Gender": "Girls",
+      "EventType": "Doubles",
+      "DataPath": "/data/tennis/tournaments/2026-giaa-2-aaa-region/brackets/girlsDoubles.json"
+    }
+  ]
+}

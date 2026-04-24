@@ -505,7 +505,22 @@
     "Result": "L",
     "TeamScore": 7,
     "OpponentScore": 9,
-    "Season": 2018
+    "Season": 2018,
+    "LineScore": {
+      "Innings": [1, 2, 3, 4, 5, 6, 7],
+      "StAndrews": [0, 1, 2, 0, 0, 3, 1],
+      "Opponent": [3, 0, 0, 0, 6, 0, 0],
+      "StAndrewsTotals": {
+        "R": 7,
+        "H": 9,
+        "E": 5
+      },
+      "OpponentTotals": {
+        "R": 9,
+        "H": 5,
+        "E": 2
+      }
+    }
   },
   {
     "GameID": 2018043001,
@@ -516,7 +531,22 @@
     "Result": "L",
     "TeamScore": 0,
     "OpponentScore": 15,
-    "Season": 2018
+    "Season": 2018,
+    "LineScore": {
+      "Innings": [1, 2, 3, 4],
+      "StAndrews": [0, 0, 0, 0],
+      "Opponent": [2, 0, 2, 11],
+      "StAndrewsTotals": {
+        "R": 0,
+        "H": 3,
+        "E": 2
+      },
+      "OpponentTotals": {
+        "R": 15,
+        "H": 9,
+        "E": 0
+      }
+    }
   },
   {
     "GameID": 2018050101,

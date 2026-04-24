@@ -10,7 +10,7 @@ import React, { useMemo } from "react";
  * {
  *   title: "2025 State Tournament",
  *   teams: {
- *     standrews: { name: "St. Andrew’s", seed: 1, card: "/images/.../standrews.svg" },
+ *     standrews: { name: "St. Andrew’s", seed: 1, schoolId: "...", card: "/images/.../standrews.svg" },
  *     ...
  *   },
  *   games: {
@@ -38,11 +38,12 @@ import React, { useMemo } from "react";
  * Notes:
  * - Seeds are displayed from teams[teamId].seed (preferred). If seed is missing, it will be blank.
  * - Seed and score are INSIDE the rounded rectangle:
- *   - seed: left side (inside)
- *   - score: right side (inside)
- * - The team-card image is inset so it doesn't overlap the seed/score pills.
+ *   - seed: left side as a bracket-style # label
+ *   - score: right side inside a pill
+ * - If a team has a `schoolId`, the bracket can use the school's shared LogoPath.
+ *   Team "card" remains the fallback basketball-specific SVG card path.
  */
-function StateBracket12SVG({ bracket }) {
+function StateBracket12SVG({ bracket, schools = [] }) {
   // --- Layout constants (smaller than the region bracket; 4 columns) ---
   const cardW = 270;
   const cardH = 58;
@@ -95,6 +96,14 @@ function StateBracket12SVG({ bracket }) {
   const teams = bracket?.teams ?? {};
   const games = bracket?.games ?? {};
 
+  const schoolsById = useMemo(() => {
+    const map = new Map();
+    for (const school of Array.isArray(schools) ? schools : []) {
+      if (school?.SchoolID) map.set(String(school.SchoolID), school);
+    }
+    return map;
+  }, [schools]);
+
   const seedOf = (teamId) => {
     if (!teamId) return null;
     const s = teams?.[teamId]?.seed;
@@ -133,7 +142,22 @@ function StateBracket12SVG({ bracket }) {
     };
   }, [games]);
 
-  const cardPath = (teamId) => (teamId && teams[teamId]?.card ? teams[teamId].card : null);
+  const getTeamMeta = (teamId) => {
+    const team = teamId ? teams[teamId] : null;
+    const school = team?.schoolId ? schoolsById.get(String(team.schoolId)) : null;
+    const logoPath = school?.LogoPath || team?.logo || null;
+
+    return {
+      name:
+        team?.name ||
+        school?.ShortName ||
+        school?.Name ||
+        (teamId ? String(teamId) : "TBD"),
+      logoPath,
+      legacyCardPath: logoPath ? null : team?.card ?? null,
+      primaryColor: school?.PrimaryColor || team?.primaryColor || "#1973E8",
+    };
+  };
 
   const scoreFor = (gameKey, side) => {
     const g = games?.[gameKey];
@@ -149,72 +173,97 @@ function StateBracket12SVG({ bracket }) {
   };
 
   const Card = ({ x, y, teamId, seed, score, highlight }) => {
-    const href = cardPath(teamId);
+    const meta = getTeamMeta(teamId);
+    const href = meta.logoPath || meta.legacyCardPath;
+    const usesSchoolLogo = Boolean(meta.logoPath);
 
-    const stroke = highlight ? "rgba(25,115,232,0.9)" : "rgba(120,130,140,0.45)";
+    const stroke = highlight ? meta.primaryColor : "rgba(120,130,140,0.45)";
     const strokeW = highlight ? 2.3 : 1.2;
-    const winnerFill = highlight ? "rgba(25,115,232,0.08)" : "transparent";
 
-    // Pills (inside the card)
+    // Bubble geometry for the score; seed is a plain bracket-style label.
     const bubbleW = 32;
     const bubbleH = 30;
     const bubbleR = 10;
     const bubbleY = y + (cardH - bubbleH) / 2;
 
-    // Reserve space so pills don't overlap the team-card image/text.
-    const leftInset = bubbleW + 16;   // seed pill + gap
-    const rightInset = bubbleW + 16;  // score pill + gap
+    // Reserve space so labels don't overlap the team-card image/text.
+    const leftInset = 40;             // seed label + gap
+    const rightInset = bubbleW + 16;  // score bubble + gap
 
-    const seedX = x + 10;                    // inside left
+    const seedX = x + 13;                    // inside left
+    const seedY = y + cardH / 2 + 5;
     const scoreX = x + cardW - 10 - bubbleW; // inside right
 
     const imgX = x + leftInset;
     const imgW = cardW - leftInset - rightInset;
+    const logoW = 56;
+    const logoH = 46;
+    const logoX = imgX;
+    const logoY = y + (cardH - logoH) / 2;
+    const nameX = logoX + logoW + 10;
+    const nameFontSize = meta.name.length > 16 ? 12 : 13.5;
 
     return (
       <g>
-        {/* subtle winner background */}
-        <rect x={x} y={y} width={cardW} height={cardH} rx={14} fill={winnerFill} />
+        <rect x={x} y={y} width={cardW} height={cardH} rx={14} fill="rgba(255,255,255,0.96)" />
+
+        {highlight && (
+          <rect
+            x={x}
+            y={y}
+            width={cardW}
+            height={cardH}
+            rx={14}
+            fill={meta.primaryColor}
+            opacity="0.08"
+          />
+        )}
 
         {/* outline */}
         <rect x={x} y={y} width={cardW} height={cardH} rx={14} fill="transparent" stroke={stroke} strokeWidth={strokeW} />
 
-        {/* team card image (inset so pills don't overlap) */}
-        {href ? (
+        {usesSchoolLogo ? (
+          <g>
+            <image
+              href={href}
+              x={logoX}
+              y={logoY}
+              width={logoW}
+              height={logoH}
+              preserveAspectRatio="xMidYMid meet"
+            />
+            <text
+              x={nameX}
+              y={y + cardH / 2 + 5}
+              fontSize={nameFontSize}
+              fontWeight="700"
+              fill="rgba(30,34,40,0.95)"
+            >
+              {meta.name}
+            </text>
+          </g>
+        ) : href ? (
           <image href={href} x={imgX} y={y} width={imgW} height={cardH} preserveAspectRatio="xMidYMid meet" />
         ) : (
           <g>
             <rect x={x} y={y} width={cardW} height={cardH} rx={14} fill="rgba(245,247,250,1)" />
             <text x={imgX + 8} y={y + 36} fontSize="15" fill="rgba(40,44,52,0.9)">
-              {teamId ? teams[teamId]?.name ?? teamId : "TBD"}
+              {meta.name}
             </text>
           </g>
         )}
 
-        {/* Seed pill (inside card, left) */}
+        {/* Seed label (inside card, left) */}
         {seed !== null && seed !== undefined && seed !== "" && (
-          <g>
-            <rect
-              x={seedX}
-              y={bubbleY}
-              width={bubbleW}
-              height={bubbleH}
-              rx={bubbleR}
-              fill="rgba(255,255,255,0.92)"
-              stroke="rgba(120,130,140,0.35)"
-              strokeWidth="1"
-            />
-            <text
-              x={seedX + bubbleW / 2}
-              y={bubbleY + bubbleH / 2 + 5}
-              textAnchor="middle"
-              fontSize="13"
-              fontWeight="700"
-              fill="rgba(30,34,40,0.95)"
-            >
-              {seed}
-            </text>
-          </g>
+          <text
+            x={seedX}
+            y={seedY}
+            fontSize="13"
+            fontWeight="800"
+            fill="rgba(30,34,40,0.95)"
+          >
+            #{seed}
+          </text>
         )}
 
         {/* Score pill (inside card, right) */}
