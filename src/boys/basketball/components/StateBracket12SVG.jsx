@@ -40,7 +40,8 @@ import React, { useMemo } from "react";
  * - Seed and score are INSIDE the rounded rectangle:
  *   - seed: left side as a bracket-style # label
  *   - score: right side inside a pill
- * - If a team has a `schoolId`, the bracket can use the school's shared LogoPath.
+ * - If a team has a `schoolId`, the bracket can use the school's BracketLogoPath
+ *   or shared LogoPath.
  *   Team "card" remains the fallback basketball-specific SVG card path.
  */
 function StateBracket12SVG({ bracket, schools = [] }) {
@@ -145,7 +146,7 @@ function StateBracket12SVG({ bracket, schools = [] }) {
   const getTeamMeta = (teamId) => {
     const team = teamId ? teams[teamId] : null;
     const school = team?.schoolId ? schoolsById.get(String(team.schoolId)) : null;
-    const logoPath = school?.LogoPath || team?.logo || null;
+    const logoPath = school?.BracketLogoPath || school?.LogoPath || team?.logo || null;
 
     return {
       name:

@@ -113,6 +113,7 @@
     "WebsiteUrl": "https://www.brookwoodschool.org/",
     "AthleticsUrl": "https://www.brookwoodschool.org/athletics",
     "LogoPath": "/images/schools/logos/ga-brookwood-academy-thomasville.png",
+    "BracketLogoPath": "/images/schools/logos/ga-brookwood-academy-thomasville-bracket.png",
     "LogoSourceUrl": "https://bbk12e1-cdn.myschoolcdn.com/ftpimages/1041/logo/BW-White-on-Blue-Updated-600.png"
   },
   {
@@ -219,6 +220,7 @@
     "WebsiteUrl": "https://www.deerfieldwindsor.com/",
     "AthleticsUrl": "https://www.deerfieldwindsor.com/athletics",
     "LogoPath": "/images/schools/logos/ga-deerfield-windsor-school-albany.png",
+    "BracketLogoPath": "/images/schools/logos/ga-deerfield-windsor-school-albany-bracket.png",
     "LogoSourceUrl": "https://resources.finalsite.net/images/f_auto,q_auto/v1597074902/deerfieldwindsor/np8iozok3p1xwyjaza2c/DWSforWebsitewhitebkgd.png"
   },
   {
@@ -233,6 +235,7 @@
     "WebsiteUrl": "https://dominionchristian.org/",
     "AthleticsUrl": "https://dominionchristian.org/athletics",
     "LogoPath": "/images/schools/logos/ga-dominion-christian-academy-marietta.png",
+    "BracketLogoPath": "/images/schools/logos/ga-dominion-christian-academy-marietta-bracket.png",
     "LogoSourceUrl": "https://dominionchristian.org/wp-content/uploads/2019/03/dcs-logo-small.png"
   },
   {
@@ -405,6 +408,7 @@
     "WebsiteUrl": "https://www.johnmilledge.org/",
     "AthleticsUrl": "https://www.johnmilledge.org/athletics",
     "LogoPath": "/images/schools/logos/ga-john-milledge-academy-milledgeville.webp",
+    "BracketLogoPath": "/images/schools/logos/ga-john-milledge-academy-milledgeville-bracket.png",
     "LogoSourceUrl": "https://www.johnmilledge.org/wp-content/uploads/2020/10/JM-logo-new.png_pp.webp"
   },
   {
@@ -437,6 +441,7 @@
     "WebsiteUrl": "https://www.lakeviewacademy.com/",
     "AthleticsUrl": "https://www.lakeviewacademy.com/athletics",
     "LogoPath": "/images/schools/logos/ga-lakeview-academy-gainesville.png",
+    "BracketLogoPath": "/images/schools/logos/ga-lakeview-academy-gainesville-bracket.png",
     "LogoSourceUrl": "https://bbk12e1-cdn.myschoolcdn.com/ftpimages/259/logo/2023%20Crest%20with%20Stacked%20Logo%20on%20Transparent-More%20Bold.png"
   },
   {
