@@ -18,505 +18,31 @@ const utilityLinks = [
   },
 ];
 
+const mobileBottomLinks = [
+  ...utilityLinks,
+  {
+    label: "Admissions",
+    href: "https://saslions.com/admissions/",
+  },
+];
+
 const socialLinks = [
   {
     label: "Facebook",
-    href: "https://www.facebook.com/staslionsathletics",
+    href: "https://www.facebook.com/share/g/1TEwk2QGWu/",
     icon: "facebook",
   },
   {
     label: "X",
-    href: "https://x.com/staslions",
+    href: "https://x.com/sassportsinfo",
     icon: "x",
   },
   {
     label: "Instagram",
-    href: "https://www.instagram.com/staslionsathletics/",
+    href: "https://www.instagram.com/saslions.athletics/",
     icon: "instagram",
   },
 ];
-
-const styles = {
-  page: {
-    minHeight: "100vh",
-    background: "#f8fafc",
-    color: "#0f172a",
-    fontFamily: "Arial, Helvetica, sans-serif",
-    display: "flex",
-    flexDirection: "column",
-  },
-  header: {
-    position: "fixed",
-    top: 0,
-    left: 0,
-    right: 0,
-    background: "#ffffff",
-    borderBottom: "1px solid #e2e8f0",
-    zIndex: 30,
-  },
-  topBar: {
-    maxWidth: "1300px",
-    margin: "0 auto",
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    boxSizing: "border-box",
-  },
-  logoLink: {
-    display: "flex",
-    alignItems: "center",
-    textDecoration: "none",
-    color: "#0f172a",
-  },
-  logo: {
-    width: "auto",
-    display: "block",
-    flexShrink: 0,
-  },
-  titleDivider: {
-    width: "1px",
-    background: "#808184",
-    flexShrink: 0,
-  },
-  titleWrap: {
-    display: "flex",
-    flexDirection: "column",
-    minWidth: 0,
-  },
-  title: {
-    margin: 0,
-    fontFamily: '"Questrial", Arial, Helvetica, sans-serif',
-    fontWeight: 600,
-    lineHeight: 1.02,
-    color: "#002169",
-    textTransform: "uppercase",
-    letterSpacing: "0.02em",
-  },
-  subtitle: {
-    margin: 0,
-    fontFamily: '"Questrial", Arial, Helvetica, sans-serif',
-    fontSize: "0.82rem",
-    lineHeight: 1.15,
-    color: "#808184",
-  },
-  mobileUtilityBar: {
-    background: "#242424",
-  },
-  mobileUtilityInner: {
-    position: "relative",
-    maxWidth: "1300px",
-    margin: "0 auto",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    minHeight: "46px",
-    padding: "0 16px",
-    boxSizing: "border-box",
-  },
-  mobileLoginLink: {
-    position: "absolute",
-    left: "16px",
-    color: "#97a0b5",
-    textDecoration: "none",
-    fontFamily: '"Questrial", Arial, Helvetica, sans-serif',
-    fontSize: "0.88rem",
-    lineHeight: 1,
-    whiteSpace: "nowrap",
-  },
-  mobileSocialLinks: {
-    display: "flex",
-    alignItems: "center",
-    gap: "30px",
-  },
-  mobileSocialLink: {
-    display: "inline-flex",
-    alignItems: "center",
-    justifyContent: "center",
-    color: "#ffffff",
-    textDecoration: "none",
-  },
-  mobileMenuBar: {
-    background: "#ffffff",
-    borderBottom: "1px solid #e6e6e6",
-  },
-  mobileMenuBarInner: {
-    maxWidth: "1300px",
-    margin: "0 auto",
-    display: "flex",
-    justifyContent: "flex-end",
-  },
-  mobileMenuButton: {
-    display: "inline-flex",
-    alignItems: "center",
-    justifyContent: "center",
-    width: "74px",
-    height: "58px",
-    border: "none",
-    borderLeft: "1px solid #d7d7d7",
-    background: "transparent",
-    color: "#6e6e6e",
-    cursor: "pointer",
-    padding: 0,
-  },
-  mobileLogoRow: {
-    background: "#ffffff",
-  },
-  mobileLogoLink: {
-    display: "flex",
-    justifyContent: "center",
-    padding: "20px 16px 18px",
-    textDecoration: "none",
-  },
-  mobileLogoImage: {
-    display: "block",
-    width: "min(68vw, 300px)",
-    height: "auto",
-  },
-  mobileOverlay: {
-    position: "fixed",
-    inset: 0,
-    zIndex: 70,
-    background: "#ffffff",
-    overflowY: "auto",
-  },
-  mobileOverlayInner: {
-    minHeight: "100%",
-    padding: "34px 20px 56px",
-    boxSizing: "border-box",
-  },
-  mobileOverlayTop: {
-    display: "flex",
-    justifyContent: "flex-end",
-  },
-  mobileOverlayClose: {
-    display: "inline-flex",
-    alignItems: "center",
-    justifyContent: "center",
-    width: "52px",
-    height: "52px",
-    border: "none",
-    background: "transparent",
-    color: "#222222",
-    cursor: "pointer",
-    padding: 0,
-  },
-  mobileSearchBar: {
-    display: "flex",
-    alignItems: "center",
-    gap: "16px",
-    background: "#002169",
-    padding: "16px 20px",
-    marginTop: "24px",
-  },
-  mobileSearchInput: {
-    flex: 1,
-    border: "none",
-    background: "transparent",
-    color: "#ffffff",
-    fontFamily: '"Questrial", Arial, Helvetica, sans-serif',
-    fontSize: "1.06rem",
-    lineHeight: 1.2,
-    outline: "none",
-    padding: 0,
-  },
-  mobileSearchResults: {
-    marginTop: "14px",
-  },
-  mobileSearchResultLink: {
-    display: "block",
-    padding: "12px 0",
-    textDecoration: "none",
-    borderBottom: "1px solid #ececec",
-  },
-  mobileSearchResultTitle: {
-    margin: 0,
-    color: "#111827",
-    fontFamily: '"Questrial", Arial, Helvetica, sans-serif',
-    fontSize: "1rem",
-    lineHeight: 1.15,
-  },
-  mobileSearchResultMeta: {
-    margin: "3px 0 0",
-    color: "#6b7280",
-    fontFamily: '"Questrial", Arial, Helvetica, sans-serif',
-    fontSize: "0.82rem",
-    lineHeight: 1.15,
-  },
-  mobileMenuList: {
-    marginTop: "24px",
-    borderTop: "1px solid #e6e6e6",
-  },
-  mobileMenuRow: {
-    width: "100%",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between",
-    padding: "24px 0",
-    border: "none",
-    borderBottom: "1px solid #e6e6e6",
-    background: "transparent",
-    color: "#242424",
-    textDecoration: "none",
-    fontFamily: '"Questrial", Arial, Helvetica, sans-serif',
-    fontSize: "1.2rem",
-    lineHeight: 1.12,
-    textAlign: "left",
-    cursor: "pointer",
-  },
-  mobileMenuRowActive: {
-    color: "#002169",
-  },
-  mobileMenuExpand: {
-    color: "#7a7a7a",
-    fontFamily: '"Questrial", Arial, Helvetica, sans-serif',
-    fontSize: "1.95rem",
-    lineHeight: 1,
-    flexShrink: 0,
-    marginLeft: "16px",
-  },
-  mobileSubmenu: {
-    paddingBottom: "8px",
-    borderBottom: "1px solid #e6e6e6",
-  },
-  mobileSubmenuLink: {
-    display: "block",
-    padding: "14px 0 14px 18px",
-    textDecoration: "none",
-    color: "#44506a",
-    fontFamily: '"Questrial", Arial, Helvetica, sans-serif',
-    fontSize: "0.98rem",
-    lineHeight: 1.2,
-    borderTop: "1px solid #f1f1f1",
-  },
-  mobileUtilityLinksBlock: {
-    marginTop: "38px",
-    display: "flex",
-    flexDirection: "column",
-    gap: "24px",
-  },
-  mobileUtilityBottomLink: {
-    color: "#002169",
-    textDecoration: "none",
-    fontFamily: '"Questrial", Arial, Helvetica, sans-serif',
-    fontSize: "1.05rem",
-    lineHeight: 1.1,
-  },
-  utilityGroup: {
-    position: "relative",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "flex-end",
-    flexShrink: 0,
-  },
-  utilityLinks: {
-    display: "flex",
-    alignItems: "center",
-  },
-  utilityLink: {
-    color: "#002169",
-    textDecoration: "none",
-    fontFamily: '"Questrial", Arial, Helvetica, sans-serif',
-    fontSize: "0.92rem",
-    fontWeight: 500,
-    lineHeight: 1,
-    whiteSpace: "nowrap",
-    transition: "color 160ms ease",
-  },
-  searchButton: {
-    display: "inline-flex",
-    alignItems: "center",
-    justifyContent: "center",
-    width: "36px",
-    height: "36px",
-    border: "none",
-    background: "transparent",
-    color: "#7c7c7c",
-    cursor: "pointer",
-    padding: 0,
-  },
-  searchPopover: {
-    position: "absolute",
-    top: "calc(100% + 12px)",
-    right: 0,
-    zIndex: 45,
-    width: "min(92vw, 420px)",
-    background: "#ffffff",
-    border: "1px solid #dedede",
-    boxShadow: "0 18px 36px rgba(15, 23, 42, 0.16)",
-  },
-  searchForm: {
-    padding: "16px 16px 12px",
-    borderBottom: "1px solid #efefef",
-  },
-  searchInput: {
-    width: "100%",
-    border: "1px solid #d7d7d7",
-    borderRadius: 0,
-    padding: "10px 12px",
-    fontFamily: '"Questrial", Arial, Helvetica, sans-serif',
-    fontSize: "0.98rem",
-    lineHeight: 1.2,
-    color: "#1f2937",
-    outline: "none",
-    boxSizing: "border-box",
-  },
-  searchResults: {
-    maxHeight: "360px",
-    overflowY: "auto",
-    padding: "8px 0",
-  },
-  searchSectionLabel: {
-    margin: 0,
-    padding: "0 16px 8px",
-    fontFamily: '"Questrial", Arial, Helvetica, sans-serif',
-    fontSize: "0.72rem",
-    lineHeight: 1.1,
-    letterSpacing: "0.08em",
-    textTransform: "uppercase",
-    color: "#6b7280",
-  },
-  searchResultLink: {
-    display: "block",
-    padding: "10px 16px",
-    textDecoration: "none",
-    color: "#111827",
-    transition: "background-color 160ms ease",
-  },
-  searchResultTitle: {
-    margin: 0,
-    fontFamily: '"Questrial", Arial, Helvetica, sans-serif',
-    fontSize: "0.98rem",
-    fontWeight: 500,
-    lineHeight: 1.15,
-  },
-  searchResultMeta: {
-    margin: "4px 0 0",
-    fontFamily: '"Questrial", Arial, Helvetica, sans-serif',
-    fontSize: "0.8rem",
-    lineHeight: 1.15,
-    color: "#6b7280",
-  },
-  searchEmpty: {
-    margin: 0,
-    padding: "4px 16px 12px",
-    fontFamily: '"Questrial", Arial, Helvetica, sans-serif',
-    fontSize: "0.92rem",
-    lineHeight: 1.35,
-    color: "#6b7280",
-  },
-  navBar: {
-    background: "#f8f8f8",
-    borderTop: "1px solid #efefef",
-    borderBottom: "1px solid #e5e5e5",
-  },
-  navShell: {
-    position: "relative",
-  },
-  navInner: {
-    maxWidth: "1300px",
-    margin: "0 auto",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    boxSizing: "border-box",
-  },
-  navList: {
-    display: "flex",
-    alignItems: "stretch",
-    justifyContent: "center",
-    flexWrap: "nowrap",
-    width: "100%",
-  },
-  navItem: {
-    position: "relative",
-    display: "flex",
-    alignItems: "stretch",
-    flex: "1 1 0",
-    minWidth: 0,
-  },
-  navItemButton: {
-    display: "inline-flex",
-    alignItems: "center",
-    justifyContent: "center",
-    minHeight: "54px",
-    padding: "0 8px",
-    border: "none",
-    background: "transparent",
-    color: "#242424",
-    cursor: "pointer",
-    textDecoration: "none",
-    fontFamily: '"Questrial", Arial, Helvetica, sans-serif',
-    fontSize: "1.08rem",
-    fontWeight: 600,
-    letterSpacing: "0",
-    lineHeight: 1.15,
-    whiteSpace: "nowrap",
-    transition: "background-color 160ms ease, color 160ms ease",
-  },
-  navItemActive: {
-    background: "transparent",
-    color: "#002169",
-  },
-  navItemIndicator: {
-    position: "absolute",
-    left: "7%",
-    right: "7%",
-    bottom: 0,
-    height: "10px",
-    background: "#989898",
-    transform: "scaleX(0)",
-    transformOrigin: "center center",
-    opacity: 0,
-    transition:
-      "transform 380ms cubic-bezier(0.22, 1, 0.36, 1), opacity 240ms ease",
-  },
-  navDropdown: {
-    position: "absolute",
-    top: "100%",
-    left: "50%",
-    transform: "translateX(-50%)",
-    zIndex: 35,
-  },
-  navDropdownInner: {
-    background: "#002169",
-    boxShadow: "0 28px 42px rgba(15, 23, 42, 0.28)",
-    padding: "31px 36px 36px",
-  },
-  navDropdownColumns: {
-    display: "grid",
-    gap: "34px",
-  },
-  navDropdownColumn: {
-    display: "flex",
-    flexDirection: "column",
-  },
-  navDropdownLink: {
-    display: "block",
-    padding: "14px 0",
-    color: "#ffffff",
-    textDecoration: "none",
-    fontFamily: '"Questrial", Arial, Helvetica, sans-serif',
-    fontSize: "1.02rem",
-    lineHeight: 1.18,
-    whiteSpace: "normal",
-    borderBottom: "1px solid rgba(255, 255, 255, 0.35)",
-    transition: "opacity 160ms ease",
-  },
-  navDropdownLinkActive: {
-    color: "#ffffff",
-  },
-  content: {
-    maxWidth: "1300px",
-    width: "100%",
-    margin: "0 auto",
-    padding: "0 16px 32px",
-    boxSizing: "border-box",
-    flex: 1,
-  },
-  main: {
-    minHeight: "520px",
-  },
-};
 
 function isPathCurrent(pathname, target, end = false) {
   if (!target) {
@@ -586,7 +112,12 @@ function getVisibleSearchItems(searchQuery, fallbackItems = []) {
 function renderSocialIcon(icon) {
   if (icon === "facebook") {
     return (
-      <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 24 24"
+        className="h-4 w-4"
+        fill="currentColor"
+      >
         <path d="M13.5 21V12.8H16l.4-3H13.5V7.9c0-.9.3-1.6 1.6-1.6h1.4V3.6c-.2 0-1.1-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.5H8.2v3h2.4V21h2.9Z" />
       </svg>
     );
@@ -594,19 +125,77 @@ function renderSocialIcon(icon) {
 
   if (icon === "instagram") {
     return (
-      <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">
-        <rect x="3.5" y="3.5" width="17" height="17" rx="4.5" />
-        <circle cx="12" cy="12" r="4" />
-        <circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none" />
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 24 24"
+        className="h-4 w-4"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+      >
+        <rect x="4" y="4" width="16" height="16" rx="4.2" />
+        <circle cx="12" cy="12" r="3.8" />
+        <circle cx="17" cy="7" r="1" fill="currentColor" stroke="none" />
       </svg>
     );
   }
 
   return (
-    <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round">
-      <path d="M5 4L19 20" />
-      <path d="M19 4L5 20" />
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      className="h-4 w-4"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+    >
+      <path d="M6 5L18 19" />
+      <path d="M18 5L6 19" />
     </svg>
+  );
+}
+
+function SearchResults({ items, query, onSelect, compact = false }) {
+  if (items.length === 0) {
+    return (
+      <p
+        className={`m-0 text-[0.9rem] leading-[1.45] text-white/72 ${
+          compact ? "px-0 py-2" : "px-6 py-4"
+        }`}
+      >
+        No matching stats pages found. Try a sport, record type, or player.
+      </p>
+    );
+  }
+
+  return (
+    <>
+      <p
+        className={`m-0 text-[0.72rem] font-bold uppercase tracking-[0.18em] text-white/60 ${
+          compact ? "pb-3" : "px-6 pb-3 pt-5"
+        }`}
+      >
+        {query.trim() ? "Results" : "Popular Pages"}
+      </p>
+      <div className={compact ? "space-y-0" : "pb-2"}>
+        {items.map((item) => (
+          <Link
+            key={`${item.to}-${item.label}`}
+            to={item.to}
+            onClick={onSelect}
+            className={`block border-t border-white/10 text-white no-underline transition hover:bg-white/[0.04] ${
+              compact ? "py-3" : "px-6 py-4"
+            }`}
+          >
+            <p className="m-0 text-[1rem] leading-[1.2]">{item.label}</p>
+            <p className="m-0 mt-1 text-[0.82rem] leading-[1.3] text-white/68">
+              {item.description}
+            </p>
+          </Link>
+        ))}
+      </div>
+    </>
   );
 }
 
@@ -636,7 +225,10 @@ export default function AthleticsProgramShell({
   const normalizedSections = useMemo(
     () =>
       (menuSections || []).filter(
-        (section) => section?.title && Array.isArray(section.links) && section.links.length > 0
+        (section) =>
+          section?.title &&
+          Array.isArray(section.links) &&
+          section.links.length > 0
       ),
     [menuSections]
   );
@@ -657,9 +249,10 @@ export default function AthleticsProgramShell({
     []
   );
 
-  const visibleSearchItems = useMemo(() => {
-    return getVisibleSearchItems(searchQuery, featuredSearchItems);
-  }, [featuredSearchItems, searchQuery]);
+  const visibleSearchItems = useMemo(
+    () => getVisibleSearchItems(searchQuery, featuredSearchItems),
+    [featuredSearchItems, searchQuery]
+  );
 
   const mobileVisibleSearchItems = useMemo(
     () => getVisibleSearchItems(mobileSearchQuery, []),
@@ -736,6 +329,10 @@ export default function AthleticsProgramShell({
     document.body.style.overflow = "hidden";
     document.addEventListener("keydown", handleKeyDown);
 
+    if (mobileSearchInputRef.current) {
+      mobileSearchInputRef.current.focus();
+    }
+
     return () => {
       document.body.style.overflow = previousOverflow;
       document.removeEventListener("keydown", handleKeyDown);
@@ -748,22 +345,22 @@ export default function AthleticsProgramShell({
   const isSectionActive = (section) =>
     (section.links || []).some((item) => isLinkActive(item));
 
-  const handleSearchSubmit = (event) => {
-    event.preventDefault();
-
-    if (visibleSearchItems.length > 0) {
-      navigate(visibleSearchItems[0].to);
-    }
-  };
-
-  const closeNavMenus = () => {
-    setOpenDropdownTitle(null);
-  };
+  const closeNavMenus = () => setOpenDropdownTitle(null);
 
   const closeMobileMenu = () => {
     setMobileMenuOpen(false);
     setMobileExpandedTitle(null);
     setMobileSearchQuery("");
+  };
+
+  const handleSearchSubmit = (event) => {
+    event.preventDefault();
+
+    if (visibleSearchItems.length > 0) {
+      navigate(visibleSearchItems[0].to);
+      setSearchOpen(false);
+      setSearchQuery("");
+    }
   };
 
   const handleMobileSearchSubmit = (event) => {
@@ -782,7 +379,7 @@ export default function AthleticsProgramShell({
   };
 
   const getDropdownColumns = (links) => {
-    const columnCount = links.length > 3 ? 2 : 1;
+    const columnCount = links.length > 5 ? 2 : 1;
     const chunkSize = Math.ceil(links.length / columnCount);
 
     return Array.from({ length: columnCount }, (_, index) =>
@@ -792,18 +389,9 @@ export default function AthleticsProgramShell({
 
   const getDropdownWidth = (links) => {
     const columnCount = getDropdownColumns(links).length;
-
-    if (columnCount === 1) {
-      return "min(470px, calc(100vw - 7rem))";
-    }
-
-    if (links.length <= 4) {
-      return "min(760px, calc(100vw - 7rem))";
-    }
-
     return columnCount > 1
-      ? "min(860px, calc(100vw - 7rem))"
-      : "min(470px, calc(100vw - 7rem))";
+      ? "min(760px, calc(100vw - 6rem))"
+      : "min(420px, calc(100vw - 6rem))";
   };
 
   const renderMobileMenuItem = (section) => {
@@ -818,11 +406,10 @@ export default function AthleticsProgramShell({
         <Link
           key={section.title}
           to={item.to}
-          style={{
-            ...styles.mobileMenuRow,
-            ...(isActive ? styles.mobileMenuRowActive : {}),
-          }}
           onClick={closeMobileMenu}
+          className={`flex items-center justify-between border-b border-[#e5e5e5] py-5 text-[1.16rem] leading-[1.15] no-underline ${
+            isActive ? "text-[var(--stats-navy)]" : "text-[#242424]"
+          }`}
         >
           <span>{section.title}</span>
         </Link>
@@ -833,10 +420,9 @@ export default function AthleticsProgramShell({
       <div key={section.title}>
         <button
           type="button"
-          style={{
-            ...styles.mobileMenuRow,
-            ...(isExpanded || isActive ? styles.mobileMenuRowActive : {}),
-          }}
+          className={`flex w-full items-center justify-between border-b border-[#e5e5e5] bg-transparent py-5 text-left text-[1.16rem] leading-[1.15] ${
+            isExpanded || isActive ? "text-[var(--stats-navy)]" : "text-[#242424]"
+          }`}
           onClick={() =>
             setMobileExpandedTitle((current) =>
               current === section.title ? null : section.title
@@ -844,19 +430,19 @@ export default function AthleticsProgramShell({
           }
         >
           <span>{section.title}</span>
-          <span aria-hidden="true" style={styles.mobileMenuExpand}>
+          <span aria-hidden="true" className="ml-4 text-[1.8rem] leading-none text-[#7a7a7a]">
             {isExpanded ? "−" : "+"}
           </span>
         </button>
 
         {isExpanded ? (
-          <div style={styles.mobileSubmenu}>
+          <div className="border-b border-[#e5e5e5] pb-3">
             {links.map((item) => (
               <Link
                 key={`${section.title}-${item.to}`}
                 to={item.to}
-                style={styles.mobileSubmenuLink}
                 onClick={closeMobileMenu}
+                className="block border-t border-[#f1f1f1] py-3 pl-4 text-[0.98rem] leading-[1.25] text-[#44506a] no-underline"
               >
                 {item.label}
               </Link>
@@ -869,197 +455,160 @@ export default function AthleticsProgramShell({
 
   const renderNavItem = (section) => {
     const links = section.links || [];
-    const showIndicator = openDropdownTitle === section.title;
+    const active = isSectionActive(section);
+    const open = openDropdownTitle === section.title;
+    const textClass = active || open ? "text-[var(--stats-navy)]" : "text-[#242424]";
 
     if (links.length === 1) {
       const item = links[0];
       return (
-        <div key={section.title} style={styles.navItem}>
+        <div key={section.title} className="relative flex flex-1 items-stretch">
           <NavLink
             to={item.to}
             end={item.end}
             onMouseEnter={() => setOpenDropdownTitle(section.title)}
             onFocus={() => setOpenDropdownTitle(section.title)}
-            style={({ isActive }) => ({
-              ...styles.navItemButton,
-              ...(isActive || openDropdownTitle === section.title
-                ? styles.navItemActive
-                : {}),
-            })}
-            className="w-full px-2.5 text-[0.96rem] transition-colors hover:text-[#002169] sm:px-3 sm:text-[1.05rem] lg:text-[1.12rem]"
+            className={({ isActive }) =>
+              `relative inline-flex min-h-[54px] w-full items-center justify-center px-3 py-[15px] text-center text-[1.02rem] font-semibold leading-[1.15] no-underline transition-colors ${
+                isActive ? "text-[var(--stats-navy)]" : textClass
+              }`
+            }
           >
             {section.title}
           </NavLink>
           <span
             aria-hidden="true"
-            style={{
-              ...styles.navItemIndicator,
-              transform: showIndicator ? "scaleX(1)" : "scaleX(0.2)",
-              opacity: showIndicator ? 1 : 0,
-            }}
+            className={`absolute inset-x-[12%] bottom-0 h-[3px] origin-center bg-[var(--stats-gray)] transition ${
+              active || open ? "scale-x-100 opacity-100" : "scale-x-50 opacity-0"
+            }`}
           />
         </div>
       );
     }
 
-    const isOpen = openDropdownTitle === section.title;
-    const isActive = isSectionActive(section);
-
     return (
       <div
         key={section.title}
-        style={styles.navItem}
+        className="relative flex flex-1 items-stretch"
         onMouseEnter={() => setOpenDropdownTitle(section.title)}
       >
         <button
           type="button"
           aria-haspopup="menu"
-          aria-expanded={isOpen}
-          style={{
-            ...styles.navItemButton,
-            ...(isActive || isOpen ? styles.navItemActive : {}),
-          }}
-          className="w-full px-2.5 text-[0.96rem] transition-colors hover:text-[#002169] sm:px-3 sm:text-[1.05rem] lg:text-[1.12rem]"
+          aria-expanded={open}
           onFocus={() => setOpenDropdownTitle(section.title)}
           onClick={() =>
             setOpenDropdownTitle((current) =>
               current === section.title ? null : section.title
             )
           }
+          className={`relative inline-flex min-h-[54px] w-full items-center justify-center bg-transparent px-3 py-[15px] text-center text-[1.02rem] font-semibold leading-[1.15] transition-colors ${textClass}`}
         >
           {section.title}
         </button>
         <span
           aria-hidden="true"
-          style={{
-            ...styles.navItemIndicator,
-            transform: showIndicator ? "scaleX(1)" : "scaleX(0.2)",
-            opacity: showIndicator ? 1 : 0,
-          }}
+          className={`absolute inset-x-[12%] bottom-0 h-[3px] origin-center bg-[var(--stats-gray)] transition ${
+            active || open ? "scale-x-100 opacity-100" : "scale-x-50 opacity-0"
+          }`}
         />
       </div>
     );
   };
 
   return (
-    <div style={styles.page}>
-      <header style={styles.header}>
-        <div className="lg:hidden">
-          <div style={styles.mobileUtilityBar}>
-            <div style={styles.mobileUtilityInner}>
-              <a
-                href="https://saslions.myschoolapp.com/app#login"
-                target="_blank"
-                rel="noreferrer"
-                style={styles.mobileLoginLink}
-              >
-                LMS LOGIN &gt;
-              </a>
-
-              <div style={styles.mobileSocialLinks}>
-                {socialLinks.map((item) => (
-                  <a
-                    key={item.label}
-                    href={item.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label={item.label}
-                    style={styles.mobileSocialLink}
-                  >
-                    {renderSocialIcon(item.icon)}
-                  </a>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div style={styles.mobileMenuBar}>
-            <div style={styles.mobileMenuBarInner}>
-              <button
-                type="button"
-                aria-label="Open navigation menu"
-                style={styles.mobileMenuButton}
-                onClick={() => {
-                  setSearchOpen(false);
-                  setMobileMenuOpen(true);
-                }}
-              >
-                <svg
-                  aria-hidden="true"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  className="h-8 w-8"
-                >
-                  <path d="M4 7H20" stroke="currentColor" strokeWidth="2.2" />
-                  <path d="M4 12H20" stroke="currentColor" strokeWidth="2.2" />
-                  <path d="M4 17H20" stroke="currentColor" strokeWidth="2.2" />
-                </svg>
-              </button>
-            </div>
-          </div>
-
-          <div style={styles.mobileLogoRow}>
-            <Link
-              to={headerHomePath}
-              style={styles.mobileLogoLink}
-              onClick={() => setMobileMenuOpen(false)}
+    <div className="stats-site-shell">
+      <header className="fixed inset-x-0 top-0 z-40 bg-white">
+        <div className="hidden lg:block border-b border-white/10 bg-[var(--stats-dark)]">
+          <div className="mx-auto flex min-h-[40px] max-w-[1180px] items-center justify-between px-5">
+            <a
+              href="https://saslions.myschoolapp.com/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-[11px] font-bold uppercase tracking-[0.02em] text-white no-underline transition hover:underline"
             >
-              <img
-                src="/images/common/st_andrews_athletics_horizontal_logo_dark.png"
-                alt="St. Andrew's Athletics"
-                style={styles.mobileLogoImage}
-              />
-            </Link>
+              LMS LOGIN &gt;
+            </a>
+
+            <div className="flex items-center">
+              {socialLinks.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={item.label}
+                  className="inline-flex h-10 w-10 items-center justify-center text-white transition hover:bg-white hover:text-[var(--stats-navy)]"
+                >
+                  {renderSocialIcon(item.icon)}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
 
-        <div className="hidden lg:block">
-          <div style={styles.topBar} className="h-20 px-3 py-3 sm:h-24 sm:px-6 sm:py-4">
+        <div className="lg:hidden border-b border-white/10 bg-[var(--stats-dark)]">
+          <div className="relative mx-auto flex min-h-[46px] max-w-[1180px] items-center justify-center px-4">
+            <a
+              href="https://saslions.myschoolapp.com/"
+              target="_blank"
+              rel="noreferrer"
+              className="absolute left-4 text-[11px] font-bold uppercase tracking-[0.02em] text-white/80 no-underline"
+            >
+              LMS LOGIN &gt;
+            </a>
+            <div className="flex items-center">
+              {socialLinks.map((item) => (
+                <a
+                  key={`mobile-social-${item.label}`}
+                  href={item.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={item.label}
+                  className="inline-flex h-10 w-10 items-center justify-center text-white"
+                >
+                  {renderSocialIcon(item.icon)}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="border-b border-[var(--stats-line-soft)] bg-white">
+          <div className="mx-auto flex max-w-[1180px] items-center justify-between px-4 py-4 lg:px-5 lg:py-5">
             <Link
               to={headerHomePath}
-              style={styles.logoLink}
-              className="min-w-0 flex-1 pr-3 sm:pr-5"
+              className="flex min-w-0 items-center gap-3 text-[var(--stats-navy)] no-underline lg:gap-4"
             >
               <img
                 src="/images/common/st_andrews_athletics_horizontal_logo_dark.png"
                 alt="St. Andrew's Athletics"
-                style={styles.logo}
-                className="translate-y-[2px] h-[35px] sm:h-[40px] md:h-[45px] lg:h-[49px]"
+                className="h-[32px] w-auto sm:h-[38px] lg:h-[48px]"
               />
-              <span
-                aria-hidden="true"
-                style={styles.titleDivider}
-                className="mx-0.5 h-7 sm:mx-1 sm:h-8 md:mx-1.5 md:h-9 lg:mx-1.5 lg:h-[39px]"
-              />
-              <div style={styles.titleWrap}>
-                <h1
-                  style={styles.title}
-                  className="text-[0.6rem] sm:text-[0.8rem] md:text-[0.98rem] lg:text-[1.18rem]"
-                >
+              <div className="hidden min-w-0 md:flex md:flex-col">
+                <span className="text-[0.94rem] font-semibold uppercase tracking-[0.01em] text-[var(--stats-navy)] lg:text-[1.12rem]">
                   {title}
-                </h1>
+                </span>
                 {subtitle ? (
-                  <p style={styles.subtitle} className="mt-1 hidden md:block">
+                  <span className="text-[0.82rem] leading-[1.2] text-[var(--stats-gray)]">
                     {subtitle}
-                  </p>
+                  </span>
                 ) : null}
               </div>
             </Link>
 
             <div
               ref={searchContainerRef}
-              style={styles.utilityGroup}
-              className="ml-3 gap-1.5 sm:ml-5 sm:gap-2.5"
+              className="relative hidden items-center gap-1 lg:flex"
             >
-              <div style={styles.utilityLinks} className="hidden lg:flex lg:gap-10">
+              <div className="flex items-center">
                 {utilityLinks.map((item) => (
                   <a
                     key={item.label}
                     href={item.href}
                     target="_blank"
                     rel="noreferrer"
-                    style={styles.utilityLink}
-                    className="text-[0.92rem] transition-colors hover:text-[#00174e]"
+                    className="px-[10px] py-[10px] text-[0.875rem] font-semibold leading-[1.25] text-[var(--stats-gray)] no-underline transition hover:text-[var(--stats-navy)] hover:underline"
                   >
                     {item.label}
                   </a>
@@ -1071,238 +620,258 @@ export default function AthleticsProgramShell({
                 aria-label="Search the stats site"
                 aria-expanded={searchOpen}
                 onClick={() => setSearchOpen((current) => !current)}
-                style={styles.searchButton}
-                className="rounded-full transition-colors hover:text-[#5e5e5e]"
+                className="ml-2 inline-flex h-10 w-10 items-center justify-center rounded-full text-[var(--stats-gray)] transition hover:text-[var(--stats-navy)]"
               >
                 <svg
                   aria-hidden="true"
                   viewBox="0 0 24 24"
                   fill="none"
-                  className="h-[1.35rem] w-[1.35rem]"
+                  className="h-[1.1rem] w-[1.1rem]"
                 >
                   <circle
                     cx="11"
                     cy="11"
                     r="6.5"
                     stroke="currentColor"
-                    strokeWidth="2.2"
+                    strokeWidth="2"
                   />
                   <path
                     d="M16 16L21 21"
                     stroke="currentColor"
-                    strokeWidth="2.2"
+                    strokeWidth="2"
                     strokeLinecap="round"
                   />
                 </svg>
               </button>
 
               {searchOpen ? (
-                <div style={styles.searchPopover}>
-                  <form style={styles.searchForm} onSubmit={handleSearchSubmit}>
-                    <input
-                      ref={searchInputRef}
-                      type="search"
-                      value={searchQuery}
-                      onChange={(event) => setSearchQuery(event.target.value)}
-                      placeholder="Search the stats site"
-                      style={styles.searchInput}
-                      className="stats-desktop-search-input"
-                    />
+                <div className="absolute right-0 top-[calc(100%+12px)] z-50 w-[min(420px,92vw)] border border-[var(--stats-navy)] bg-[var(--stats-navy)] shadow-[0_18px_36px_rgba(15,23,42,0.22)]">
+                  <form onSubmit={handleSearchSubmit} className="border-b border-white/15 p-5">
+                    <div className="flex items-center border-b border-white/35">
+                      <button
+                        type="submit"
+                        className="inline-flex h-10 w-10 items-center justify-center text-white/85"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          className="h-[1rem] w-[1rem]"
+                        >
+                          <circle
+                            cx="11"
+                            cy="11"
+                            r="6.5"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                          />
+                          <path
+                            d="M16 16L21 21"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                          />
+                        </svg>
+                      </button>
+                      <input
+                        ref={searchInputRef}
+                        type="search"
+                        value={searchQuery}
+                        onChange={(event) => setSearchQuery(event.target.value)}
+                        placeholder="Search the stats site"
+                        className="stats-desktop-search-input h-10 w-full border-none bg-transparent px-1 text-[0.95rem] text-white outline-none"
+                      />
+                    </div>
                   </form>
 
-                  <div style={styles.searchResults}>
-                    <p style={styles.searchSectionLabel}>
-                      {searchQuery.trim() ? "Results" : "Popular Pages"}
-                    </p>
+                  <SearchResults
+                    items={visibleSearchItems}
+                    query={searchQuery}
+                    onSelect={() => {
+                      setSearchOpen(false);
+                      setSearchQuery("");
+                    }}
+                  />
+                </div>
+              ) : null}
+            </div>
 
-                    {visibleSearchItems.length > 0 ? (
-                      visibleSearchItems.map((item) => (
-                        <Link
-                          key={`${item.to}-${item.label}`}
-                          to={item.to}
-                          style={styles.searchResultLink}
-                          className="hover:bg-[#fafafa]"
-                          onClick={() => {
-                            setSearchOpen(false);
-                            setSearchQuery("");
-                          }}
+            <button
+              type="button"
+              aria-label="Open navigation menu"
+              onClick={() => {
+                setSearchOpen(false);
+                setMobileMenuOpen(true);
+              }}
+              className="inline-flex h-[46px] w-[54px] items-center justify-center border-l border-[var(--stats-line)] text-[#6e6e6e] lg:hidden"
+            >
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                fill="none"
+                className="h-7 w-7"
+              >
+                <path d="M4 7H20" stroke="currentColor" strokeWidth="2.1" />
+                <path d="M4 12H20" stroke="currentColor" strokeWidth="2.1" />
+                <path d="M4 17H20" stroke="currentColor" strokeWidth="2.1" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div className="hidden border-y border-[var(--stats-line-soft)] bg-[var(--stats-panel-muted)] lg:block">
+          <div
+            className="relative"
+            onMouseLeave={closeNavMenus}
+            onBlur={handleNavShellBlur}
+          >
+            <nav
+              aria-label={menuTitle || title}
+              className="mx-auto flex max-w-[1180px] items-center justify-center px-5"
+            >
+              <div className="flex w-full items-stretch justify-between">
+                {navSections.map(renderNavItem)}
+              </div>
+            </nav>
+
+            {openDropdownSection ? (
+              <div
+                className="absolute left-1/2 top-full z-50 -translate-x-1/2"
+                style={{ width: getDropdownWidth(openDropdownSection.links) }}
+              >
+                <div className="bg-[var(--stats-navy)] px-9 py-8 shadow-[0_28px_42px_rgba(15,23,42,0.28)]">
+                  <div
+                    className="grid gap-8"
+                    style={{
+                      gridTemplateColumns: `repeat(${getDropdownColumns(
+                        openDropdownSection.links
+                      ).length}, minmax(0, 1fr))`,
+                    }}
+                  >
+                    {getDropdownColumns(openDropdownSection.links).map(
+                      (column, columnIndex) => (
+                        <div
+                          key={`${openDropdownSection.title}-column-${columnIndex}`}
+                          className="flex flex-col"
                         >
-                          <p style={styles.searchResultTitle}>{item.label}</p>
-                          <p style={styles.searchResultMeta}>{item.description}</p>
-                        </Link>
-                      ))
-                    ) : (
-                      <p style={styles.searchEmpty}>
-                        No matching stats pages found. Try a sport, result type, or
-                        record category.
-                      </p>
+                          {column.map((item, itemIndex) => (
+                            <NavLink
+                              key={`${openDropdownSection.title}-${item.to}`}
+                              to={item.to}
+                              end={item.end}
+                              onClick={closeNavMenus}
+                              className="block border-b border-white/35 py-[14px] text-[1rem] leading-[1.2] text-white no-underline transition hover:opacity-80"
+                              style={{
+                                borderBottom:
+                                  itemIndex === column.length - 1
+                                    ? "none"
+                                    : undefined,
+                              }}
+                            >
+                              {item.label}
+                            </NavLink>
+                          ))}
+                        </div>
+                      )
                     )}
                   </div>
                 </div>
-              ) : null}
-            </div>
-          </div>
-
-          <div style={styles.navBar}>
-            <div
-              style={styles.navShell}
-              onMouseLeave={closeNavMenus}
-              onBlur={handleNavShellBlur}
-            >
-              <nav
-                aria-label={menuTitle || title}
-                style={styles.navInner}
-                className="overflow-x-auto overflow-y-visible px-2 sm:px-6 lg:overflow-visible"
-              >
-                <div style={styles.navList}>
-                  {navSections.map(renderNavItem)}
-                </div>
-              </nav>
-
-              {openDropdownSection ? (
-                <div
-                  style={{
-                    ...styles.navDropdown,
-                    width: getDropdownWidth(openDropdownSection.links),
-                  }}
-                >
-                  <div style={styles.navDropdownInner}>
-                    <div
-                      style={{
-                        ...styles.navDropdownColumns,
-                        gridTemplateColumns: `repeat(${getDropdownColumns(
-                          openDropdownSection.links
-                        ).length}, minmax(0, 1fr))`,
-                      }}
-                    >
-                      {getDropdownColumns(openDropdownSection.links).map(
-                        (column, columnIndex) => (
-                          <div
-                            key={`${openDropdownSection.title}-column-${columnIndex}`}
-                            style={styles.navDropdownColumn}
-                          >
-                            {column.map((item, itemIndex) => (
-                              <NavLink
-                                key={`${openDropdownSection.title}-${item.to}`}
-                                to={item.to}
-                                end={item.end}
-                                onClick={closeNavMenus}
-                                style={({ isActive }) => ({
-                                  ...styles.navDropdownLink,
-                                  ...(isActive ? styles.navDropdownLinkActive : {}),
-                                  borderBottom:
-                                    itemIndex === column.length - 1
-                                      ? "none"
-                                      : styles.navDropdownLink.borderBottom,
-                                })}
-                                className="hover:opacity-80"
-                              >
-                                {item.label}
-                              </NavLink>
-                            ))}
-                          </div>
-                        )
-                      )}
-                    </div>
-                  </div>
-                </div>
-              ) : null}
-            </div>
+              </div>
+            ) : null}
           </div>
         </div>
       </header>
 
       {mobileMenuOpen ? (
-        <div style={styles.mobileOverlay} className="lg:hidden">
-          <div style={styles.mobileOverlayInner}>
-            <div style={styles.mobileOverlayTop}>
+        <div className="fixed inset-0 z-[80] overflow-y-auto bg-white lg:hidden">
+          <div className="min-h-full px-5 pb-12 pt-8">
+            <div className="flex justify-end">
               <button
                 type="button"
                 aria-label="Close navigation menu"
-                style={styles.mobileOverlayClose}
                 onClick={closeMobileMenu}
+                className="inline-flex h-11 w-11 items-center justify-center text-[#242424]"
               >
                 <svg
                   aria-hidden="true"
                   viewBox="0 0 24 24"
                   fill="none"
-                  className="h-10 w-10"
+                  className="h-8 w-8"
                 >
-                  <path d="M5 5L19 19" stroke="currentColor" strokeWidth="1.9" />
-                  <path d="M19 5L5 19" stroke="currentColor" strokeWidth="1.9" />
+                  <path d="M5 5L19 19" stroke="currentColor" strokeWidth="1.8" />
+                  <path d="M19 5L5 19" stroke="currentColor" strokeWidth="1.8" />
                 </svg>
               </button>
             </div>
 
-            <form style={styles.mobileSearchBar} onSubmit={handleMobileSearchSubmit}>
-              <svg
-                aria-hidden="true"
-                viewBox="0 0 24 24"
-                fill="none"
-                className="h-8 w-8 shrink-0 text-white"
-              >
-                <circle
-                  cx="11"
-                  cy="11"
-                  r="6.5"
-                  stroke="currentColor"
-                  strokeWidth="2.2"
-                />
-                <path
-                  d="M16 16L21 21"
-                  stroke="currentColor"
-                  strokeWidth="2.2"
-                  strokeLinecap="round"
-                />
-              </svg>
-              <input
-                ref={mobileSearchInputRef}
-                type="search"
-                value={mobileSearchQuery}
-                onChange={(event) => setMobileSearchQuery(event.target.value)}
-                placeholder="Search"
-                style={styles.mobileSearchInput}
-                className="stats-mobile-search-input"
-              />
-            </form>
+            <form
+              onSubmit={handleMobileSearchSubmit}
+              className="mt-5 bg-[var(--stats-navy)] px-5 py-4"
+            >
+              <div className="flex items-center gap-3">
+                <button
+                  type="submit"
+                  className="inline-flex h-8 w-8 shrink-0 items-center justify-center text-white"
+                >
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    className="h-5 w-5"
+                  >
+                    <circle
+                      cx="11"
+                      cy="11"
+                      r="6.5"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    />
+                    <path
+                      d="M16 16L21 21"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                </button>
 
-            {mobileSearchQuery.trim() ? (
-              <div style={styles.mobileSearchResults}>
-                {mobileVisibleSearchItems.length > 0 ? (
-                  mobileVisibleSearchItems.map((item) => (
-                    <Link
-                      key={`mobile-search-${item.to}-${item.label}`}
-                      to={item.to}
-                      style={styles.mobileSearchResultLink}
-                      onClick={closeMobileMenu}
-                    >
-                      <p style={styles.mobileSearchResultTitle}>{item.label}</p>
-                      <p style={styles.mobileSearchResultMeta}>{item.description}</p>
-                    </Link>
-                  ))
-                ) : (
-                  <p style={styles.searchEmpty}>
-                    No matching stats pages found. Try a sport or record category.
-                  </p>
-                )}
+                <input
+                  ref={mobileSearchInputRef}
+                  type="search"
+                  value={mobileSearchQuery}
+                  onChange={(event) => setMobileSearchQuery(event.target.value)}
+                  placeholder="Search"
+                  className="stats-mobile-search-input h-8 w-full border-none bg-transparent p-0 text-[1rem] text-white outline-none"
+                />
               </div>
-            ) : null}
+
+              {mobileSearchQuery.trim() ? (
+                <div className="mt-4 border-t border-white/15 pt-2">
+                  <SearchResults
+                    items={mobileVisibleSearchItems}
+                    query={mobileSearchQuery}
+                    compact
+                    onSelect={closeMobileMenu}
+                  />
+                </div>
+              ) : null}
+            </form>
 
             <nav
               aria-label={`${menuTitle || title} mobile navigation`}
-              style={styles.mobileMenuList}
+              className="mt-6 border-t border-[#e6e6e6]"
             >
               {navSections.map(renderMobileMenuItem)}
             </nav>
 
-            <div style={styles.mobileUtilityLinksBlock}>
-              {utilityLinks.map((item) => (
+            <div className="mt-10 flex flex-col gap-5">
+              {mobileBottomLinks.map((item) => (
                 <a
                   key={`mobile-${item.label}`}
                   href={item.href}
                   target="_blank"
                   rel="noreferrer"
-                  style={styles.mobileUtilityBottomLink}
+                  className="text-[1rem] leading-[1.1] text-[var(--stats-navy)] no-underline"
                 >
                   {item.label}
                 </a>
@@ -1312,20 +881,8 @@ export default function AthleticsProgramShell({
         </div>
       ) : null}
 
-      <div style={styles.content} className="pb-8 lg:pb-[144px]">
-        <main
-          style={{
-            ...styles.main,
-            paddingBottom: showFooter ? "32px" : 0,
-          }}
-          className={
-            showFooter
-              ? "pt-[224px] sm:pt-[232px] lg:pt-[162px] lg:pb-[144px]"
-              : "pt-[224px] sm:pt-[232px] lg:pt-[162px]"
-          }
-        >
-          {children}
-        </main>
+      <div className="mx-auto w-full max-w-[1180px] px-4 pb-14 pt-[132px] sm:px-5 sm:pt-[142px] lg:pt-[166px]">
+        <main className="min-h-[520px]">{children}</main>
       </div>
 
       {showFooter ? <Footer /> : null}

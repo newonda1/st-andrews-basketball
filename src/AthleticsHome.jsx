@@ -75,7 +75,10 @@ const sports = [
         title: "Individual Champions",
         sections: [
           { title: "Region Championships", years: [] },
-          { title: "State Championships", years: [2017, 2019, 2020, 2022, 2023, 2024, 2025, 2026] },
+          {
+            title: "State Championships",
+            years: [2017, 2019, 2020, 2022, 2023, 2024, 2025, 2026],
+          },
         ],
       },
     ],
@@ -136,7 +139,10 @@ function ChampionshipSection({ title, years }) {
           ))}
         </div>
       ) : (
-        <div className="mt-3 min-h-[2.25rem] sm:min-h-[2.5rem]" aria-hidden="true" />
+        <div
+          className="mt-3 min-h-[2.25rem] sm:min-h-[2.5rem]"
+          aria-hidden="true"
+        />
       )}
     </section>
   );
@@ -272,7 +278,9 @@ function SportBanner({ sport }) {
           <SportBannerHeader sport={sport} />
         </header>
 
-        <div className="relative z-20 mt-5 flex-1 space-y-3">{championshipContent}</div>
+        <div className="relative z-20 mt-5 flex-1 space-y-3">
+          {championshipContent}
+        </div>
 
         <div className="relative z-20 mt-6 flex translate-y-2 justify-center pt-4">
           <img
