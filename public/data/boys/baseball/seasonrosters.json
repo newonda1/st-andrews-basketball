@@ -1,5 +1,20 @@
 [
     {
+        "SeasonID": "2017",
+        "Players": [
+            { "PlayerID": 201712, "JerseyNumber": 3 },
+            { "PlayerID": 2026038, "JerseyNumber": 6 },
+            { "PlayerID": 201811, "JerseyNumber": 9 },
+            { "PlayerID": 202109, "JerseyNumber": 11 },
+            { "PlayerID": 201713, "JerseyNumber": 12 },
+            { "PlayerID": 201714, "JerseyNumber": 13 },
+            { "PlayerID": 2026039, "JerseyNumber": 19 },
+            { "PlayerID": 201809, "JerseyNumber": 22 },
+            { "PlayerID": 201808, "JerseyNumber": 24 },
+            { "PlayerID": 2026037, "JerseyNumber": 36 }
+        ]
+    },
+    {
         "SeasonID": "2018",
         "Players": [
             { "PlayerID": 2026031, "JerseyNumber": 2 },

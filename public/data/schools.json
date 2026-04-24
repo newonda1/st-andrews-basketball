@@ -90,6 +90,12 @@
     "State": "GA"
   },
   {
+    "SchoolID": "ga-bethlehem-christian-academy-bethlehem",
+    "Name": "Bethlehem Christian Academy",
+    "City": "Bethlehem",
+    "State": "GA"
+  },
+  {
     "SchoolID": "ga-bible-baptist-school-savannah",
     "Name": "Bible Baptist School",
     "City": "Savannah",
@@ -114,6 +120,7 @@
     "AthleticsUrl": "https://www.brookwoodschool.org/athletics",
     "LogoPath": "/images/schools/logos/ga-brookwood-academy-thomasville.png",
     "BracketLogoPath": "/images/schools/logos/ga-brookwood-academy-thomasville-bracket.png",
+    "BracketLogoSourceUrl": "https://bbk12e1-cdn.myschoolcdn.com/ftpimages/1041/logo/BWS_Athletic_Warrior_3color.png",
     "LogoSourceUrl": "https://bbk12e1-cdn.myschoolcdn.com/ftpimages/1041/logo/BW-White-on-Blue-Updated-600.png"
   },
   {
@@ -442,6 +449,7 @@
     "AthleticsUrl": "https://www.lakeviewacademy.com/athletics",
     "LogoPath": "/images/schools/logos/ga-lakeview-academy-gainesville.png",
     "BracketLogoPath": "/images/schools/logos/ga-lakeview-academy-gainesville-bracket.png",
+    "BracketLogoSourceUrl": "https://bbk12e1-cdn.myschoolcdn.com/ftpimages/259/link/large_link4966092_180376.png",
     "LogoSourceUrl": "https://bbk12e1-cdn.myschoolcdn.com/ftpimages/259/logo/2023%20Crest%20with%20Stacked%20Logo%20on%20Transparent-More%20Bold.png"
   },
   {
