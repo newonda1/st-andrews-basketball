@@ -364,7 +364,22 @@
     "Result": "W",
     "TeamScore": 12,
     "OpponentScore": 4,
-    "Season": 2018
+    "Season": 2018,
+    "LineScore": {
+      "Innings": [1, 2, 3, 4, 5, 6, 7],
+      "StAndrews": [1, 2, 2, 3, 1, 3, 0],
+      "Opponent": [1, 0, 0, 0, 3, 0, 0],
+      "StAndrewsTotals": {
+        "R": 12,
+        "H": 8,
+        "E": 2
+      },
+      "OpponentTotals": {
+        "R": 4,
+        "H": 1,
+        "E": 1
+      }
+    }
   },
   {
     "GameID": 2018041201,
@@ -386,7 +401,74 @@
     "Result": "W",
     "TeamScore": 8,
     "OpponentScore": 0,
-    "Season": 2018
+    "Season": 2018,
+    "LineScore": {
+      "Innings": [1, 2, 3, 4, 5, 6, 7, 8],
+      "StAndrews": [1, 0, 0, 0, 2, 1, 4, 0],
+      "Opponent": [0, 0, 0, 0, 0, 0, 0, "X"],
+      "StAndrewsTotals": {
+        "R": 8,
+        "H": 7,
+        "E": 1
+      },
+      "OpponentTotals": {
+        "R": 0,
+        "H": 1,
+        "E": 3
+      }
+    }
+  },
+  {
+    "GameID": 2018041701,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
+    "Opponent": "Hilton Head Prep",
+    "LocationType": "Home",
+    "GameType": "Non-Region",
+    "Result": "W",
+    "TeamScore": 8,
+    "OpponentScore": 2,
+    "Season": 2018,
+    "LineScore": {
+      "Innings": [1, 2, 3, 4, 5, 6, 7],
+      "StAndrews": [1, 5, 0, 0, 2, 0, "X"],
+      "Opponent": [0, 0, 2, 0, 0, 0, 0],
+      "StAndrewsTotals": {
+        "R": 8,
+        "H": 12,
+        "E": 5
+      },
+      "OpponentTotals": {
+        "R": 2,
+        "H": 7,
+        "E": 0
+      }
+    }
+  },
+  {
+    "GameID": 2018041901,
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
+    "Opponent": "Hilton Head Christian Academy",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 5,
+    "OpponentScore": 0,
+    "Season": 2018,
+    "LineScore": {
+      "Innings": [1, 2, 3, 4, 5, 6, 7],
+      "StAndrews": [0, 0, 3, 0, 0, 2, 0],
+      "Opponent": [0, 0, 0, 0, 0, 0, 0],
+      "StAndrewsTotals": {
+        "R": 5,
+        "H": 6,
+        "E": 2
+      },
+      "OpponentTotals": {
+        "R": 0,
+        "H": 7,
+        "E": 0
+      }
+    }
   },
   {
     "GameID": 2018042401,
@@ -397,7 +479,22 @@
     "Result": "W",
     "TeamScore": 5,
     "OpponentScore": 2,
-    "Season": 2018
+    "Season": 2018,
+    "LineScore": {
+      "Innings": [1, 2, 3, 4, 5, 6, 7],
+      "StAndrews": [0, 2, 2, 1, 0, 0, 0],
+      "Opponent": [0, 0, 2, 0, 0, 0, 0],
+      "StAndrewsTotals": {
+        "R": 5,
+        "H": 8,
+        "E": 1
+      },
+      "OpponentTotals": {
+        "R": 2,
+        "H": 4,
+        "E": 2
+      }
+    }
   },
   {
     "GameID": 2018042601,

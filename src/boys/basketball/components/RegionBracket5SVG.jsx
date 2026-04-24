@@ -10,7 +10,7 @@ import React, { useMemo } from "react";
  * Expects a `bracket` object shaped like:
  * {
  *   title: "2025 Region Tournament",
- *   teams: { teamId: { name, card } },
+ *   teams: { teamId: { name, schoolId, card } },
  *   games: {
  *     playIn: { top:{teamId,score}, bottom:{teamId,score}, winner },
  *     semi1:  { top:{teamId,score}, bottom:{teamId,score}, winner },
@@ -19,10 +19,10 @@ import React, { useMemo } from "react";
  *   }
  * }
  *
- * Team "card" should be a public URL path, e.g.:
- * "/images/boys/basketball/teams/standrews.svg"
+ * If a team has a `schoolId`, the bracket can use the school's shared LogoPath.
+ * Team "card" remains the fallback basketball-specific SVG card path.
  */
-function RegionBracket5SVG({ bracket }) {
+function RegionBracket5SVG({ bracket, schools = [] }) {
   // --- Layout constants (tweak once; every season stays consistent) ---
   const cardW = 320;
   const cardH = 64;
@@ -61,6 +61,14 @@ function RegionBracket5SVG({ bracket }) {
 
   const teams = bracket?.teams ?? {};
   const games = bracket?.games ?? {};
+
+  const schoolsById = useMemo(() => {
+    const map = new Map();
+    for (const school of Array.isArray(schools) ? schools : []) {
+      if (school?.SchoolID) map.set(String(school.SchoolID), school);
+    }
+    return map;
+  }, [schools]);
 
   // Helper: resolve winner teamId for a given game key
   const winnerOf = (gameKey) => {
@@ -123,7 +131,22 @@ function RegionBracket5SVG({ bracket }) {
     };
   }, [games]);
 
-  const cardPath = (teamId) => (teamId && teams[teamId]?.card ? teams[teamId].card : null);
+  const getTeamMeta = (teamId) => {
+    const team = teamId ? teams[teamId] : null;
+    const school = team?.schoolId ? schoolsById.get(String(team.schoolId)) : null;
+    const logoPath = school?.LogoPath || team?.logo || null;
+
+    return {
+      name:
+        team?.name ||
+        school?.ShortName ||
+        school?.Name ||
+        (teamId ? String(teamId) : "TBD"),
+      logoPath,
+      legacyCardPath: logoPath ? null : team?.card ?? null,
+      primaryColor: school?.PrimaryColor || team?.primaryColor || "#1973E8",
+    };
+  };
 
   const scoreFor = (gameKey, side) => {
     const g = games?.[gameKey];
@@ -139,12 +162,12 @@ function RegionBracket5SVG({ bracket }) {
   };
 
   const Card = ({ x, y, teamId, seed, score, highlight }) => {
-    const href = cardPath(teamId);
+    const meta = getTeamMeta(teamId);
+    const href = meta.logoPath || meta.legacyCardPath;
+    const usesSchoolLogo = Boolean(meta.logoPath);
 
-    const stroke = highlight ? "rgba(25,115,232,0.9)" : "rgba(120,130,140,0.45)";
+    const stroke = highlight ? meta.primaryColor : "rgba(120,130,140,0.45)";
     const strokeW = highlight ? 2.5 : 1.25;
-
-    const winnerFill = highlight ? "rgba(25,115,232,0.08)" : "transparent";
 
     // Bubble geometry (seed + score INSIDE the card)
     const bubbleW = 34;
@@ -165,11 +188,26 @@ function RegionBracket5SVG({ bracket }) {
     // Team-card image is shifted/shrunk to avoid overlapping bubbles
     const imgX = x + leftInset;
     const imgW = cardW - leftInset - rightInset;
+    const logoSize = 44;
+    const logoX = imgX;
+    const logoY = y + (cardH - logoSize) / 2;
+    const nameX = logoX + logoSize + 12;
 
     return (
       <g>
-        {/* subtle winner background */}
-        <rect x={x} y={y} width={cardW} height={cardH} rx={14} fill={winnerFill} />
+        <rect x={x} y={y} width={cardW} height={cardH} rx={14} fill="rgba(255,255,255,0.96)" />
+
+        {highlight && (
+          <rect
+            x={x}
+            y={y}
+            width={cardW}
+            height={cardH}
+            rx={14}
+            fill={meta.primaryColor}
+            opacity="0.08"
+          />
+        )}
 
         {/* outline */}
         <rect
@@ -183,7 +221,37 @@ function RegionBracket5SVG({ bracket }) {
           strokeWidth={strokeW}
         />
 
-        {href ? (
+        {usesSchoolLogo ? (
+          <g>
+            <rect
+              x={logoX}
+              y={logoY}
+              width={logoSize}
+              height={logoSize}
+              rx={10}
+              fill="rgba(248,250,252,0.9)"
+              stroke="rgba(120,130,140,0.18)"
+              strokeWidth="1"
+            />
+            <image
+              href={href}
+              x={logoX + 4}
+              y={logoY + 4}
+              width={logoSize - 8}
+              height={logoSize - 8}
+              preserveAspectRatio="xMidYMid meet"
+            />
+            <text
+              x={nameX}
+              y={y + cardH / 2 + 6}
+              fontSize="16"
+              fontWeight="700"
+              fill="rgba(30,34,40,0.95)"
+            >
+              {meta.name}
+            </text>
+          </g>
+        ) : href ? (
           <image
             href={href}
             x={imgX}
@@ -196,7 +264,7 @@ function RegionBracket5SVG({ bracket }) {
           <g>
             <rect x={x} y={y} width={cardW} height={cardH} rx={14} fill="rgba(245,247,250,1)" />
             <text x={imgX + 10} y={y + 38} fontSize="16" fill="rgba(40,44,52,0.9)">
-              {teamId ? teams[teamId]?.name ?? teamId : "TBD"}
+              {meta.name}
             </text>
           </g>
         )}

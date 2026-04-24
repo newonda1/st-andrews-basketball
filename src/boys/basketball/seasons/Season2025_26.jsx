@@ -17,6 +17,7 @@ function Season2025_26() {
   const [players, setPlayers] = useState([]);
   const [rosterEntries, setRosterEntries] = useState([]);
   const [seasonTotals, setSeasonTotals] = useState([]);
+  const [schoolsData, setSchoolsData] = useState([]);
   const [sortConfig, setSortConfig] = useState({
     key: "jersey",
     direction: "asc",
@@ -60,6 +61,7 @@ function Season2025_26() {
       setPlayers(playersData);
       setRosterEntries(getRosterEntriesForSeason(rostersData, SEASON_ID));
       setBracketsData(bracketsJson);
+      setSchoolsData(schoolsData);
     }
 
     fetchData();
@@ -792,7 +794,10 @@ function Season2025_26() {
         {bracketsData === null ? (
           <p className="text-gray-600">Loading region bracket…</p>
         ) : bracketsData?.[String(SEASON_ID)]?.region ? (
-          <RegionBracket5SVG bracket={bracketsData[String(SEASON_ID)].region} />
+          <RegionBracket5SVG
+            bracket={bracketsData[String(SEASON_ID)].region}
+            schools={schoolsData}
+          />
         ) : (
           <p className="text-gray-600">
             Region bracket data is not available for this season (missing key "

@@ -105,13 +105,29 @@
     "SchoolID": "ga-brookwood-academy-thomasville",
     "Name": "Brookwood Academy",
     "City": "Thomasville",
-    "State": "GA"
+    "State": "GA",
+    "ShortName": "Brookwood",
+    "Mascot": "Warriors",
+    "PrimaryColor": "#1B4B8F",
+    "SecondaryColor": "#FFFFFF",
+    "WebsiteUrl": "https://www.brookwoodschool.org/",
+    "AthleticsUrl": "https://www.brookwoodschool.org/athletics",
+    "LogoPath": "/images/schools/logos/ga-brookwood-academy-thomasville.png",
+    "LogoSourceUrl": "https://bbk12e1-cdn.myschoolcdn.com/ftpimages/1041/logo/BW-White-on-Blue-Updated-600.png"
   },
   {
     "SchoolID": "ga-bulloch-academy-statesboro",
     "Name": "Bulloch Academy",
     "City": "Statesboro",
-    "State": "GA"
+    "State": "GA",
+    "ShortName": "Bulloch",
+    "Mascot": "Gators",
+    "PrimaryColor": "#124734",
+    "SecondaryColor": "#B0A96F",
+    "WebsiteUrl": "https://www.bullochacademy.com/",
+    "AthleticsUrl": "https://www.bullochacademy.com/athletics",
+    "LogoPath": "/images/schools/logos/ga-bulloch-academy-statesboro.png",
+    "LogoSourceUrl": "https://resources.finalsite.net/images/f_auto,q_auto/v1742307461/bullochacademycom/q7dqzdqmlbizbmvzzdxo/BA-Crest.png"
   },
   {
     "SchoolID": "ga-burke-county-high-school-waynesboro",
@@ -192,10 +208,32 @@
     "State": "GA"
   },
   {
+    "SchoolID": "ga-deerfield-windsor-school-albany",
+    "Name": "Deerfield-Windsor School",
+    "City": "Albany",
+    "State": "GA",
+    "ShortName": "Deerfield-Windsor",
+    "Mascot": "Knights",
+    "PrimaryColor": "#0B4B36",
+    "SecondaryColor": "#C7A95A",
+    "WebsiteUrl": "https://www.deerfieldwindsor.com/",
+    "AthleticsUrl": "https://www.deerfieldwindsor.com/athletics",
+    "LogoPath": "/images/schools/logos/ga-deerfield-windsor-school-albany.png",
+    "LogoSourceUrl": "https://resources.finalsite.net/images/f_auto,q_auto/v1597074902/deerfieldwindsor/np8iozok3p1xwyjaza2c/DWSforWebsitewhitebkgd.png"
+  },
+  {
     "SchoolID": "ga-dominion-christian-academy-marietta",
     "Name": "Dominion Christian Academy",
     "City": "Marietta",
-    "State": "GA"
+    "State": "GA",
+    "ShortName": "Dominion Christian",
+    "Mascot": "Knights",
+    "PrimaryColor": "#0E3D6D",
+    "SecondaryColor": "#BFA46A",
+    "WebsiteUrl": "https://dominionchristian.org/",
+    "AthleticsUrl": "https://dominionchristian.org/athletics",
+    "LogoPath": "/images/schools/logos/ga-dominion-christian-academy-marietta.png",
+    "LogoSourceUrl": "https://dominionchristian.org/wp-content/uploads/2019/03/dcs-logo-small.png"
   },
   {
     "SchoolID": "ga-edmund-burke-academy-waynesboro",
@@ -237,7 +275,15 @@
     "SchoolID": "ga-frederica-academy-st-simons-island",
     "Name": "Frederica Academy",
     "City": "St. Simons Island",
-    "State": "GA"
+    "State": "GA",
+    "ShortName": "Frederica",
+    "Mascot": "Knights",
+    "PrimaryColor": "#007363",
+    "SecondaryColor": "#F7BC60",
+    "WebsiteUrl": "https://www.fredericaacademy.org/",
+    "AthleticsUrl": "https://www.fredericaacademy.org/athletics",
+    "LogoPath": "/images/schools/logos/ga-frederica-academy-st-simons-island.svg",
+    "LogoSourceUrl": "https://resources.finalsite.net/images/v1695336904/fredericaacademyorg/o2ajohyrpzjgc2vc7mgo/FA-logo.svg"
   },
   {
     "SchoolID": "ga-fullington-academy-pinehurst",
@@ -351,7 +397,15 @@
     "SchoolID": "ga-john-milledge-academy-milledgeville",
     "Name": "John Milledge Academy",
     "City": "Milledgeville",
-    "State": "GA"
+    "State": "GA",
+    "ShortName": "John Milledge",
+    "Mascot": "Trojans",
+    "PrimaryColor": "#123C73",
+    "SecondaryColor": "#C41230",
+    "WebsiteUrl": "https://www.johnmilledge.org/",
+    "AthleticsUrl": "https://www.johnmilledge.org/athletics",
+    "LogoPath": "/images/schools/logos/ga-john-milledge-academy-milledgeville.webp",
+    "LogoSourceUrl": "https://www.johnmilledge.org/wp-content/uploads/2020/10/JM-logo-new.png_pp.webp"
   },
   {
     "SchoolID": "ga-johnson-high-school-savannah",
@@ -375,7 +429,15 @@
     "SchoolID": "ga-lakeview-academy-gainesville",
     "Name": "Lakeview Academy",
     "City": "Gainesville",
-    "State": "GA"
+    "State": "GA",
+    "ShortName": "Lakeview",
+    "Mascot": "Lions",
+    "PrimaryColor": "#003B79",
+    "SecondaryColor": "#F47721",
+    "WebsiteUrl": "https://www.lakeviewacademy.com/",
+    "AthleticsUrl": "https://www.lakeviewacademy.com/athletics",
+    "LogoPath": "/images/schools/logos/ga-lakeview-academy-gainesville.png",
+    "LogoSourceUrl": "https://bbk12e1-cdn.myschoolcdn.com/ftpimages/259/logo/2023%20Crest%20with%20Stacked%20Logo%20on%20Transparent-More%20Bold.png"
   },
   {
     "SchoolID": "ga-locust-grove-high-school-locust-grove",
@@ -459,7 +521,15 @@
     "SchoolID": "ga-piedmont-academy-monticello",
     "Name": "Piedmont Academy",
     "City": "Monticello",
-    "State": "GA"
+    "State": "GA",
+    "ShortName": "Piedmont",
+    "Mascot": "Cougars",
+    "PrimaryColor": "#183F80",
+    "SecondaryColor": "#D8DCE3",
+    "WebsiteUrl": "https://www.piedmontacademy.com/",
+    "AthleticsUrl": "https://www.piedmontacademy.com/athletics",
+    "LogoPath": "/images/schools/logos/ga-piedmont-academy-monticello.png",
+    "LogoSourceUrl": "https://irp.cdn-website.com/91003d08/dms3rep/multi/crestlogoBLUEnotitle.png"
   },
   {
     "SchoolID": "ga-pineland-christian-academy-savannah",
@@ -471,7 +541,15 @@
     "SchoolID": "ga-pinewood-christian-academy-bellville",
     "Name": "Pinewood Christian Academy",
     "City": "Bellville",
-    "State": "GA"
+    "State": "GA",
+    "ShortName": "Pinewood",
+    "Mascot": "Patriots",
+    "PrimaryColor": "#2D4423",
+    "SecondaryColor": "#C16629",
+    "WebsiteUrl": "https://pinewoodchristian.org/",
+    "AthleticsUrl": "https://pinewoodchristian.org/athletics/",
+    "LogoPath": "/images/schools/logos/ga-pinewood-christian-academy-bellville.png",
+    "LogoSourceUrl": "https://pinewoodchristian.org/wp-content/uploads/2021/11/cropped-cropped-PCA-Logo-Update-270x270.png"
   },
   {
     "SchoolID": "ga-providence-christian-school-savannah",
@@ -561,7 +639,15 @@
     "SchoolID": "ga-st-andrews-school-savannah",
     "Name": "St. Andrew's School",
     "City": "Savannah",
-    "State": "GA"
+    "State": "GA",
+    "ShortName": "St. Andrew's",
+    "Mascot": "Lions",
+    "PrimaryColor": "#004C93",
+    "SecondaryColor": "#8A8D8F",
+    "WebsiteUrl": "https://www.saslions.com/",
+    "AthleticsUrl": "https://www.saslionsathletics.com/",
+    "LogoPath": "/images/schools/logos/ga-st-andrews-school-savannah.png",
+    "LogoSourceUrl": "/images/common/st_andrews_athletics_logo.png"
   },
   {
     "SchoolID": "ga-st-paul-academy-for-boys-savannah",
@@ -609,7 +695,15 @@
     "SchoolID": "ga-tiftarea-academy-chula",
     "Name": "Tiftarea Academy",
     "City": "Chula",
-    "State": "GA"
+    "State": "GA",
+    "ShortName": "Tiftarea",
+    "Mascot": "Panthers",
+    "PrimaryColor": "#0B2D5B",
+    "SecondaryColor": "#D0A64B",
+    "WebsiteUrl": "https://www.tiftareaacademy.com/",
+    "AthleticsUrl": "https://www.tiftareaacademy.com/athletics",
+    "LogoPath": "/images/schools/logos/ga-tiftarea-academy-chula.png",
+    "LogoSourceUrl": "https://resources.finalsite.net/images/f_auto,q_auto/v1751655637/tiftareaacademycom/n9drrh1r8uz9ncqkg2nn/TiftareaAcademyPrimaryLogoImage.png"
   },
   {
     "SchoolID": "ga-trinity-christian-academy-dublin",
@@ -627,7 +721,15 @@
     "SchoolID": "ga-valwood-school-hahira",
     "Name": "Valwood School",
     "City": "Hahira",
-    "State": "GA"
+    "State": "GA",
+    "ShortName": "Valwood",
+    "Mascot": "Valiants",
+    "PrimaryColor": "#123D2A",
+    "SecondaryColor": "#F47721",
+    "WebsiteUrl": "https://www.valwood.org/",
+    "AthleticsUrl": "https://www.valwood.org/athletics",
+    "LogoPath": "/images/schools/logos/ga-valwood-school-hahira.svg",
+    "LogoSourceUrl": "https://www.valwood.org/hubfs/theme/logos/logo-dark.svg"
   },
   {
     "SchoolID": "ga-vidalia-heritage-academy-vidalia",
@@ -648,10 +750,32 @@
     "State": "GA"
   },
   {
+    "SchoolID": "ga-westfield-school-perry",
+    "Name": "The Westfield School",
+    "City": "Perry",
+    "State": "GA",
+    "ShortName": "Westfield",
+    "Mascot": "Hornets",
+    "PrimaryColor": "#06412F",
+    "SecondaryColor": "#B6A269",
+    "WebsiteUrl": "https://www.westfieldschool.org/",
+    "AthleticsUrl": "https://www.westfieldschool.org/athletics",
+    "LogoPath": "/images/schools/logos/ga-westfield-school-perry.png",
+    "LogoSourceUrl": "https://thewestfieldschool.static.amais.com/westfieldlogocrest-134-optimized.png?version=638314062133430000"
+  },
+  {
     "SchoolID": "ga-westminster-schools-of-augusta-augusta",
     "Name": "Westminster Schools of Augusta",
     "City": "Augusta",
-    "State": "GA"
+    "State": "GA",
+    "ShortName": "Westminster",
+    "Mascot": "Wildcats",
+    "PrimaryColor": "#003181",
+    "SecondaryColor": "#FEFEFE",
+    "WebsiteUrl": "https://www.wsa.net/",
+    "AthleticsUrl": "https://www.wsawildcatsathletics.com/",
+    "LogoPath": "/images/schools/logos/ga-westminster-schools-of-augusta-augusta.png",
+    "LogoSourceUrl": "https://logos.vnn-prod.zone/21253.png"
   },
   {
     "SchoolID": "ga-windsor-forest-high-school-savannah",
