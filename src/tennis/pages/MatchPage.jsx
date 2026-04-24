@@ -1,29 +1,46 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import TennisTournamentBracket from "../components/TennisTournamentBracket";
 import { formatTennisDate } from "../tennisPageUtils";
 
-function BracketPlaceholder({ bracket }) {
+function BracketSection({
+  bracket,
+  bracketMatches,
+  players,
+  opponentAthletes,
+  schools,
+}) {
+  const hasMatches = bracketMatches.some(
+    (match) => match.BracketID === bracket.BracketID
+  );
+
   return (
     <section className="rounded-lg border border-slate-200 bg-white px-4 py-4 shadow-sm">
-      <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-        <div>
-          <h3 className="text-lg font-bold text-slate-900">{bracket.Name}</h3>
-          <p className="mt-1 text-sm text-slate-500">
-            {bracket.Gender || "—"} {bracket.EventType || "Bracket"}
-          </p>
+      <h3 className="text-lg font-bold text-slate-900">{bracket.Name}</h3>
+      {hasMatches ? (
+        <TennisTournamentBracket
+          bracket={bracket}
+          matches={bracketMatches}
+          players={players}
+          opponentAthletes={opponentAthletes}
+          schools={schools}
+        />
+      ) : (
+        <div className="mt-4 rounded-lg border border-dashed border-slate-300 bg-slate-50 px-4 py-8 text-center text-sm text-slate-500">
+          Awaiting bracket data.
         </div>
-        <span className="inline-flex w-fit rounded-full border border-slate-200 px-3 py-1 text-xs font-bold uppercase tracking-[0.12em] text-slate-500">
-          {bracket.Status || "Ready"}
-        </span>
-      </div>
-      <div className="mt-4 rounded-lg border border-dashed border-slate-300 bg-slate-50 px-4 py-8 text-center text-sm text-slate-500">
-        Bracket renderer will mount here.
-      </div>
+      )}
     </section>
   );
 }
 
-export default function MatchPage({ matches = [], status = "" }) {
+export default function MatchPage({
+  matches = [],
+  players = [],
+  opponentAthletes = [],
+  schools = [],
+  status = "",
+}) {
   const { matchId } = useParams();
   const [tournament, setTournament] = useState(null);
   const [tournamentStatus, setTournamentStatus] = useState("");
@@ -90,6 +107,9 @@ export default function MatchPage({ matches = [], status = "" }) {
   }
 
   const brackets = tournament?.Brackets || match.Brackets || [];
+  const bracketMatches = Array.isArray(match.BracketMatches)
+    ? match.BracketMatches
+    : [];
 
   return (
     <div className="mx-auto max-w-6xl space-y-6 px-4 pb-24 pt-2 sm:px-6">
@@ -115,9 +135,6 @@ export default function MatchPage({ matches = [], status = "" }) {
             <h2 className="text-2xl font-semibold text-slate-900">
               Tournament Brackets
             </h2>
-            <p className="mt-1 text-sm text-slate-600">
-              Singles and doubles brackets can live together on this page.
-            </p>
           </div>
           <span className="text-sm font-semibold text-slate-500">
             {brackets.length} brackets
@@ -127,7 +144,14 @@ export default function MatchPage({ matches = [], status = "" }) {
         {brackets.length ? (
           <div className="space-y-4">
             {brackets.map((bracket) => (
-              <BracketPlaceholder key={bracket.BracketID} bracket={bracket} />
+              <BracketSection
+                key={bracket.BracketID}
+                bracket={bracket}
+                bracketMatches={bracketMatches}
+                players={players}
+                opponentAthletes={opponentAthletes}
+                schools={schools}
+              />
             ))}
           </div>
         ) : (

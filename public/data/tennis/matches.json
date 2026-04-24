@@ -31,6 +31,514 @@
         "DataPath": "/data/tennis/tournaments/2026-giaa-2-aaa-region/brackets/girlsDoubles.json"
       }
     ],
+    "BracketMatches": [
+      {
+        "TennisMatchID": "2026-giaa-2-aaa-region-bs-r16-m1",
+        "BracketID": "boys-singles",
+        "Round": "Round of 16",
+        "RoundCode": "R16",
+        "MatchNumber": 1,
+        "Status": "Bye",
+        "Date": "2026-04-14",
+        "StartTime": null,
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026056,
+            "DisplayName": "E. Berwitz",
+            "RatingLabel": "7.xx"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "bye",
+            "DisplayName": "Bye"
+          }
+        ],
+        "Sets": [],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "WinnerPlayerID": 2026056
+      },
+      {
+        "TennisMatchID": "2026-giaa-2-aaa-region-bs-r16-m2",
+        "BracketID": "boys-singles",
+        "Round": "Round of 16",
+        "RoundCode": "R16",
+        "MatchNumber": 2,
+        "Status": "Completed",
+        "Date": "2026-04-14",
+        "StartTime": "16:59",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-bulloch-h-deal",
+            "DisplayName": "H. Deal",
+            "RatingLabel": "3.xx"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-unknown-j-lee",
+            "DisplayName": "J. Lee",
+            "RatingLabel": "4.xx"
+          }
+        ],
+        "Sets": [
+          { "SetNumber": 1, "top": 4, "bottom": 6 },
+          { "SetNumber": 2, "top": 4, "bottom": 6 }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2026-boys-unknown-j-lee",
+        "SourceScoreLabel": "6/4 6/4"
+      },
+      {
+        "TennisMatchID": "2026-giaa-2-aaa-region-bs-r16-m3",
+        "BracketID": "boys-singles",
+        "Round": "Round of 16",
+        "RoundCode": "R16",
+        "MatchNumber": 3,
+        "Status": "Completed",
+        "Date": "2026-04-14",
+        "StartTime": "17:39",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-westminster-p-martino",
+            "DisplayName": "P. Martino",
+            "RatingLabel": "2.xx"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-pinewood-l-cloud",
+            "DisplayName": "L. Cloud",
+            "RatingLabel": "2.xx"
+          }
+        ],
+        "Sets": [
+          { "SetNumber": 1, "top": 1, "bottom": 6 },
+          { "SetNumber": 2, "top": 1, "bottom": 6 }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2026-boys-pinewood-l-cloud",
+        "SourceScoreLabel": "6/1 6/1"
+      },
+      {
+        "TennisMatchID": "2026-giaa-2-aaa-region-bs-r16-m4",
+        "BracketID": "boys-singles",
+        "Round": "Round of 16",
+        "RoundCode": "R16",
+        "MatchNumber": 4,
+        "Status": "Completed",
+        "Date": "2026-04-14",
+        "StartTime": "17:40",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-frederica-j-tronolone",
+            "DisplayName": "J. Tronolone",
+            "RatingLabel": "3.xx"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-pinewood-w-hall",
+            "DisplayName": "W. Hall",
+            "RatingLabel": "1.xx"
+          }
+        ],
+        "Sets": [
+          { "SetNumber": 1, "top": 6, "bottom": 3 },
+          { "SetNumber": 2, "top": 6, "bottom": 4 }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2026-boys-frederica-j-tronolone",
+        "SourceScoreLabel": "6/3 6/4"
+      },
+      {
+        "TennisMatchID": "2026-giaa-2-aaa-region-bs-r16-m5",
+        "BracketID": "boys-singles",
+        "Round": "Round of 16",
+        "RoundCode": "R16",
+        "MatchNumber": 5,
+        "Status": "Completed",
+        "Date": "2026-04-14",
+        "StartTime": "17:40",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026055,
+            "DisplayName": "W. Apt",
+            "RatingLabel": "3.xx"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-frederica-c-kazimir",
+            "DisplayName": "C. Kazimir",
+            "RatingLabel": "2.xx"
+          }
+        ],
+        "Sets": [
+          { "SetNumber": 1, "top": 6, "bottom": 4 },
+          { "SetNumber": 2, "top": 6, "bottom": 2 }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "WinnerPlayerID": 2026055,
+        "SourceScoreLabel": "6/4 6/2"
+      },
+      {
+        "TennisMatchID": "2026-giaa-2-aaa-region-bs-r16-m6",
+        "BracketID": "boys-singles",
+        "Round": "Round of 16",
+        "RoundCode": "R16",
+        "MatchNumber": 6,
+        "Status": "Completed",
+        "Date": "2026-04-14",
+        "StartTime": "17:41",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-bulloch-j-lanier",
+            "DisplayName": "J. Lanier",
+            "RatingLabel": "5.xx"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-pinewood-m-akins",
+            "DisplayName": "M. Akins",
+            "RatingLabel": "2.xx"
+          }
+        ],
+        "Sets": [
+          { "SetNumber": 1, "top": 6, "bottom": 0 },
+          { "SetNumber": 2, "top": 6, "bottom": 0 }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2026-boys-bulloch-j-lanier",
+        "SourceScoreLabel": "6/0 6/0"
+      },
+      {
+        "TennisMatchID": "2026-giaa-2-aaa-region-bs-r16-m7",
+        "BracketID": "boys-singles",
+        "Round": "Round of 16",
+        "RoundCode": "R16",
+        "MatchNumber": 7,
+        "Status": "Completed",
+        "Date": "2026-04-14",
+        "StartTime": "17:41",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-bulloch-c-townsend",
+            "DisplayName": "C. Townsend",
+            "RatingLabel": "2.xx"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-frederica-n-reinshagen",
+            "DisplayName": "N. Reinshagen",
+            "RatingLabel": "2.xx"
+          }
+        ],
+        "Sets": [
+          { "SetNumber": 1, "top": 6, "bottom": 4 },
+          { "SetNumber": 2, "top": 6, "bottom": 4 }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2026-boys-bulloch-c-townsend",
+        "SourceScoreLabel": "6/4 6/4"
+      },
+      {
+        "TennisMatchID": "2026-giaa-2-aaa-region-bs-r16-m8",
+        "BracketID": "boys-singles",
+        "Round": "Round of 16",
+        "RoundCode": "R16",
+        "MatchNumber": 8,
+        "Status": "Completed",
+        "Date": "2026-04-14",
+        "StartTime": "17:42",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 202504,
+            "DisplayName": "M. Ammon",
+            "RatingLabel": "3.xx"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-westminster-e-mclean",
+            "DisplayName": "E. Mclean",
+            "RatingLabel": "4.xx"
+          }
+        ],
+        "Sets": [
+          { "SetNumber": 1, "top": 2, "bottom": 6 },
+          { "SetNumber": 2, "top": 3, "bottom": 6 }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2026-boys-westminster-e-mclean",
+        "SourceScoreLabel": "6/2 6/3"
+      },
+      {
+        "TennisMatchID": "2026-giaa-2-aaa-region-bs-qf-m1",
+        "BracketID": "boys-singles",
+        "Round": "Quarterfinals",
+        "RoundCode": "QF",
+        "MatchNumber": 1,
+        "Status": "Completed",
+        "Date": "2026-04-14",
+        "StartTime": "17:45",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026056,
+            "DisplayName": "E. Berwitz",
+            "RatingLabel": "7.xx"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-unknown-j-lee",
+            "DisplayName": "J. Lee",
+            "RatingLabel": "4.xx"
+          }
+        ],
+        "Sets": [
+          { "SetNumber": 1, "top": 6, "bottom": 3 },
+          { "SetNumber": 2, "top": 6, "bottom": 0 }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "WinnerPlayerID": 2026056,
+        "SourceScoreLabel": "6/3 6/0"
+      },
+      {
+        "TennisMatchID": "2026-giaa-2-aaa-region-bs-qf-m2",
+        "BracketID": "boys-singles",
+        "Round": "Quarterfinals",
+        "RoundCode": "QF",
+        "MatchNumber": 2,
+        "Status": "Completed",
+        "Date": "2026-04-14",
+        "StartTime": "17:45",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-pinewood-l-cloud",
+            "DisplayName": "L. Cloud",
+            "RatingLabel": "2.xx"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-frederica-j-tronolone",
+            "DisplayName": "J. Tronolone",
+            "RatingLabel": "3.xx"
+          }
+        ],
+        "Sets": [
+          { "SetNumber": 1, "top": 4, "bottom": 6 },
+          { "SetNumber": 2, "top": 7, "bottom": 5 },
+          { "SetNumber": 3, "top": 0, "bottom": 1 }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2026-boys-frederica-j-tronolone",
+        "SourceScoreLabel": "6/4 5/7 1/0"
+      },
+      {
+        "TennisMatchID": "2026-giaa-2-aaa-region-bs-qf-m3",
+        "BracketID": "boys-singles",
+        "Round": "Quarterfinals",
+        "RoundCode": "QF",
+        "MatchNumber": 3,
+        "Status": "Completed",
+        "Date": "2026-04-14",
+        "StartTime": "17:44",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026055,
+            "DisplayName": "W. Apt",
+            "RatingLabel": "3.xx"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-bulloch-j-lanier",
+            "DisplayName": "J. Lanier",
+            "RatingLabel": "5.xx"
+          }
+        ],
+        "Sets": [
+          { "SetNumber": 1, "top": 0, "bottom": 6 },
+          { "SetNumber": 2, "top": 0, "bottom": 6 }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2026-boys-bulloch-j-lanier",
+        "SourceScoreLabel": "6/0 6/0"
+      },
+      {
+        "TennisMatchID": "2026-giaa-2-aaa-region-bs-qf-m4",
+        "BracketID": "boys-singles",
+        "Round": "Quarterfinals",
+        "RoundCode": "QF",
+        "MatchNumber": 4,
+        "Status": "Completed",
+        "Date": "2026-04-14",
+        "StartTime": "17:44",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-bulloch-c-townsend",
+            "DisplayName": "C. Townsend",
+            "RatingLabel": "2.xx"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-westminster-e-mclean",
+            "DisplayName": "E. Mclean",
+            "RatingLabel": "4.xx"
+          }
+        ],
+        "Sets": [
+          { "SetNumber": 1, "top": 6, "bottom": 4 },
+          { "SetNumber": 2, "top": 2, "bottom": 6 },
+          { "SetNumber": 3, "top": 0, "bottom": 1 }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2026-boys-westminster-e-mclean",
+        "SourceScoreLabel": "4/6 6/2 1/0"
+      },
+      {
+        "TennisMatchID": "2026-giaa-2-aaa-region-bs-sf-m1",
+        "BracketID": "boys-singles",
+        "Round": "Semifinals",
+        "RoundCode": "SF",
+        "MatchNumber": 1,
+        "Status": "Completed",
+        "Date": "2026-04-14",
+        "StartTime": "17:47",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026056,
+            "DisplayName": "E. Berwitz",
+            "RatingLabel": "7.xx"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-frederica-j-tronolone",
+            "DisplayName": "J. Tronolone",
+            "RatingLabel": "3.xx"
+          }
+        ],
+        "Sets": [
+          { "SetNumber": 1, "top": 6, "bottom": 0 },
+          { "SetNumber": 2, "top": 6, "bottom": 0 }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "WinnerPlayerID": 2026056,
+        "SourceScoreLabel": "6/0 6/0"
+      },
+      {
+        "TennisMatchID": "2026-giaa-2-aaa-region-bs-sf-m2",
+        "BracketID": "boys-singles",
+        "Round": "Semifinals",
+        "RoundCode": "SF",
+        "MatchNumber": 2,
+        "Status": "Completed",
+        "Date": "2026-04-14",
+        "StartTime": "17:46",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-bulloch-j-lanier",
+            "DisplayName": "J. Lanier",
+            "RatingLabel": "5.xx"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-westminster-e-mclean",
+            "DisplayName": "E. Mclean",
+            "RatingLabel": "4.xx"
+          }
+        ],
+        "Sets": [
+          { "SetNumber": 1, "top": 6, "bottom": 0 },
+          { "SetNumber": 2, "top": 6, "bottom": 1 }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2026-boys-bulloch-j-lanier",
+        "SourceScoreLabel": "6/0 6/1"
+      },
+      {
+        "TennisMatchID": "2026-giaa-2-aaa-region-bs-final-m1",
+        "BracketID": "boys-singles",
+        "Round": "Finals",
+        "RoundCode": "F",
+        "MatchNumber": 1,
+        "Status": "Completed",
+        "Date": "2026-04-14",
+        "StartTime": "18:15",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026056,
+            "DisplayName": "E. Berwitz",
+            "RatingLabel": "7.xx"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-bulloch-j-lanier",
+            "DisplayName": "J. Lanier",
+            "RatingLabel": "5.xx"
+          }
+        ],
+        "Sets": [
+          { "SetNumber": 1, "top": 6, "bottom": 2 },
+          { "SetNumber": 2, "top": 6, "bottom": 3 }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "WinnerPlayerID": 2026056,
+        "SourceScoreLabel": "6/2 6/3"
+      }
+    ],
     "Source": "User-provided UTR Sports bracket PDFs"
   }
 ]
