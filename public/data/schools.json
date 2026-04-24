@@ -228,6 +228,7 @@
     "AthleticsUrl": "https://www.deerfieldwindsor.com/athletics",
     "LogoPath": "/images/schools/logos/ga-deerfield-windsor-school-albany.png",
     "BracketLogoPath": "/images/schools/logos/ga-deerfield-windsor-school-albany-bracket.png",
+    "BracketLogoSourceUrl": "https://www.deerfieldwindsor.com/uploaded/favicon.ico",
     "LogoSourceUrl": "https://resources.finalsite.net/images/f_auto,q_auto/v1597074902/deerfieldwindsor/np8iozok3p1xwyjaza2c/DWSforWebsitewhitebkgd.png"
   },
   {
@@ -243,6 +244,7 @@
     "AthleticsUrl": "https://dominionchristian.org/athletics",
     "LogoPath": "/images/schools/logos/ga-dominion-christian-academy-marietta.png",
     "BracketLogoPath": "/images/schools/logos/ga-dominion-christian-academy-marietta-bracket.png",
+    "BracketLogoSourceUrl": "https://dominionchristian.org/wp-content/uploads/2019/03/dcs-logo-small.png",
     "LogoSourceUrl": "https://dominionchristian.org/wp-content/uploads/2019/03/dcs-logo-small.png"
   },
   {
@@ -542,7 +544,7 @@
     "WebsiteUrl": "https://www.piedmontacademy.com/",
     "AthleticsUrl": "https://www.piedmontacademy.com/athletics",
     "LogoPath": "/images/schools/logos/ga-piedmont-academy-monticello.png",
-    "LogoSourceUrl": "https://irp.cdn-website.com/91003d08/dms3rep/multi/crestlogoBLUEnotitle.png"
+    "LogoSourceUrl": "https://irp.cdn-website.com/91003d08/dms3rep/multi/Rocker+P+Transparent+Background.png"
   },
   {
     "SchoolID": "ga-pineland-christian-academy-savannah",
@@ -743,8 +745,8 @@
     "SecondaryColor": "#F47721",
     "WebsiteUrl": "https://www.valwood.org/",
     "AthleticsUrl": "https://www.valwood.org/athletics",
-    "LogoPath": "/images/schools/logos/ga-valwood-school-hahira.svg",
-    "LogoSourceUrl": "https://www.valwood.org/hubfs/theme/logos/logo-dark.svg"
+    "LogoPath": "/images/schools/logos/ga-valwood-school-hahira.png",
+    "LogoSourceUrl": "https://s3.amazonaws.com/ballfrog-app/comp-sites/images/b7aff70d81defa6814dda8eb2b52e5ed-94fb9-515734.png"
   },
   {
     "SchoolID": "ga-vidalia-heritage-academy-vidalia",
@@ -776,7 +778,7 @@
     "WebsiteUrl": "https://www.westfieldschool.org/",
     "AthleticsUrl": "https://www.westfieldschool.org/athletics",
     "LogoPath": "/images/schools/logos/ga-westfield-school-perry.png",
-    "LogoSourceUrl": "https://thewestfieldschool.static.amais.com/westfieldlogocrest-134-optimized.png?version=638314062133430000"
+    "LogoSourceUrl": "https://thewestfieldschool.static.amais.com/Combined_Shape-52-optimized.webp?version=638272600075500000"
   },
   {
     "SchoolID": "ga-westminster-schools-of-augusta-augusta",
