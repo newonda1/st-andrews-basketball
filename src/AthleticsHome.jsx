@@ -304,9 +304,9 @@ function AthleticsHome() {
       menuSections={menuSections}
       athleticsHomePath="/athletics"
     >
-      <div className="mx-auto max-w-7xl px-2 py-2 sm:px-4 sm:py-4">
+      <div className="mx-auto w-full px-[clamp(0.5rem,1.25vw,1.5rem)] py-2 sm:py-4">
         <section className="mt-4">
-          <div className="mx-auto max-w-6xl px-3 py-6 sm:px-5 sm:py-8 lg:px-6">
+          <div className="mx-auto w-full max-w-[1920px] px-0 py-6 sm:py-8">
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">
                 Championship Legacy
@@ -317,7 +317,7 @@ function AthleticsHome() {
               </p>
             </div>
 
-            <div className="mt-8 grid grid-cols-[repeat(auto-fit,minmax(min(100%,17rem),1fr))] gap-5">
+            <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 xl:gap-3 2xl:gap-4">
               {sports.map((sport) => (
                 <SportBanner key={sport.name} sport={sport} />
               ))}

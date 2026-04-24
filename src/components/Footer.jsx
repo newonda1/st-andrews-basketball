@@ -115,13 +115,30 @@ export default function Footer() {
                 role="img"
               >
                 <defs>
-                  <filter id="footer-logo-to-white" colorInterpolationFilters="sRGB">
+                  <filter
+                    id="footer-logo-to-white"
+                    colorInterpolationFilters="sRGB"
+                  >
                     <feColorMatrix
+                      in="SourceGraphic"
+                      result="logoAlphaBase"
                       type="matrix"
-                      values="0 0 0 0 1
-                              0 0 0 0 1
-                              0 0 0 0 1
-                              0 0 0 1 0"
+                      values="0 0 0 0 0
+                              0 0 0 0 0
+                              0 0 0 0 0
+                              -0.333 -0.333 -0.333 1 0"
+                    />
+                    <feComponentTransfer
+                      in="logoAlphaBase"
+                      result="logoAlpha"
+                    >
+                      <feFuncA type="linear" slope="3" intercept="-0.08" />
+                    </feComponentTransfer>
+                    <feFlood floodColor="#ffffff" result="whiteLogo" />
+                    <feComposite
+                      in="whiteLogo"
+                      in2="logoAlpha"
+                      operator="in"
                     />
                   </filter>
                 </defs>
