@@ -641,7 +641,7 @@ export default function AthleticsProgramShell({
                     href={item.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="px-[10px] py-[10px] text-[0.875rem] font-semibold leading-[1.25] text-[var(--stats-gray)] no-underline transition hover:text-[var(--stats-navy)] hover:underline"
+                    className="px-[10px] py-[10px] text-[0.875rem] font-semibold leading-[1.25] text-[var(--stats-navy)] no-underline transition hover:underline"
                   >
                     {item.label}
                   </a>
@@ -659,19 +659,19 @@ export default function AthleticsProgramShell({
                   aria-hidden="true"
                   viewBox="0 0 24 24"
                   fill="none"
-                  className="h-[1.1rem] w-[1.1rem]"
+                  className="h-[0.95rem] w-[0.95rem]"
                 >
                   <circle
                     cx="11"
                     cy="11"
                     r="6.5"
                     stroke="currentColor"
-                    strokeWidth="2"
+                    strokeWidth="2.45"
                   />
                   <path
                     d="M16 16L21 21"
                     stroke="currentColor"
-                    strokeWidth="2"
+                    strokeWidth="2.45"
                     strokeLinecap="round"
                   />
                 </svg>
@@ -689,19 +689,19 @@ export default function AthleticsProgramShell({
                           aria-hidden="true"
                           viewBox="0 0 24 24"
                           fill="none"
-                          className="h-[1rem] w-[1rem]"
+                          className="h-[0.95rem] w-[0.95rem]"
                         >
                           <circle
                             cx="11"
                             cy="11"
                             r="6.5"
                             stroke="currentColor"
-                            strokeWidth="2"
+                            strokeWidth="2.45"
                           />
                           <path
                             d="M16 16L21 21"
                             stroke="currentColor"
-                            strokeWidth="2"
+                            strokeWidth="2.45"
                             strokeLinecap="round"
                           />
                         </svg>

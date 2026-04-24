@@ -333,12 +333,27 @@
     "GameID": 2018040501,
     "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
     "Opponent": "Hilton Head Christian Academy",
-    "LocationType": "Home",
+    "LocationType": "Away",
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 2,
     "OpponentScore": 5,
-    "Season": 2018
+    "Season": 2018,
+    "LineScore": {
+      "Innings": [1, 2, 3, 4, 5, 6, 7],
+      "StAndrews": [0, 2, 0, 0, 0, 0, 0],
+      "Opponent": [0, 4, 0, 1, 0, 0, "X"],
+      "StAndrewsTotals": {
+        "R": 2,
+        "H": 6,
+        "E": 1
+      },
+      "OpponentTotals": {
+        "R": 5,
+        "H": 4,
+        "E": 1
+      }
+    }
   },
   {
     "GameID": 2018040901,
