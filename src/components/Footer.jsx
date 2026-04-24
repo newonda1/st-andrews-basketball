@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const socialLinks = [
   {
@@ -104,17 +103,18 @@ function renderSocialIcon(icon) {
 export default function Footer() {
   return (
     <footer className="mt-16 bg-[var(--stats-navy)] text-white">
-      <div className="mx-auto max-w-[1180px] px-8 pb-14 pt-12 sm:px-10 lg:px-12 lg:pb-[46px] lg:pt-[54px]">
-        <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between lg:gap-12">
-          <div className="w-full max-w-[360px] shrink-0">
-            <Link
-              to="/athletics"
-              className="inline-flex items-center gap-2 text-white no-underline"
+      <div className="mx-auto max-w-[1180px] px-8 pb-12 pt-10 sm:px-10 lg:px-0 lg:pb-[40px] lg:pt-[42px]">
+        <div className="grid gap-9 lg:grid-cols-[338px_220px_370px] lg:items-start lg:gap-x-[76px]">
+          <div className="w-full">
+            <a
+              href="https://www.saslionsathletics.com"
+              aria-label="St. Andrew's Athletics"
+              className="inline-flex items-center text-white no-underline"
             >
               <svg
                 aria-label="St. Andrew's Lions"
                 viewBox="0 0 1526 460"
-                className="block h-auto w-[198px] sm:w-[218px]"
+                className="block h-auto w-[188px] shrink-0 sm:w-[204px]"
                 role="img"
               >
                 <defs>
@@ -155,14 +155,14 @@ export default function Footer() {
               </svg>
               <span
                 aria-hidden="true"
-                className="block h-[44px] w-px bg-white/86 sm:h-[50px]"
+                className="mx-[7px] block h-[42px] w-[2px] shrink-0 bg-white sm:h-[48px]"
               />
-              <span className="text-[1.72rem] font-normal uppercase leading-none tracking-[0.03em] text-white sm:text-[2rem]">
+              <span className="shrink-0 text-[1.56rem] font-normal uppercase leading-none tracking-[0.02em] text-white sm:text-[1.82rem]">
                 Athletics
               </span>
-            </Link>
+            </a>
 
-            <div className="mt-[23px] space-y-[4px] text-[0.96rem] leading-[1.45] text-white/95">
+            <div className="mt-[18px] space-y-[4px] text-[0.94rem] leading-[1.45] text-white/95">
               <p className="m-0">601 Penn Waller Rd</p>
               <p className="m-0">Savannah, GA 31410</p>
               <p className="m-0">United States</p>
@@ -175,11 +175,11 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="w-full max-w-[210px] shrink-0 lg:pt-[2px]">
+          <div className="w-full lg:pt-[2px]">
             <h2 className="mb-[21px] text-[1.22rem] font-normal leading-[1.15] text-white sm:text-[1.33rem]">
               Stay Connected
             </h2>
-            <div className="flex flex-wrap gap-[14px]">
+            <div className="flex flex-wrap gap-[12px]">
               {socialLinks.map((item) => (
                 <a
                   key={item.label}
@@ -195,7 +195,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="w-full max-w-[364px] shrink-0 lg:pt-[2px]">
+          <div className="w-full lg:pt-[2px]">
             <h2 className="mb-[21px] text-[1.22rem] font-normal leading-[1.15] text-white sm:text-[1.33rem]">
               Links & Resources
             </h2>
