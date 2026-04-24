@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const { execFileSync } = require("child_process");
+const { splitBaseballPlayerGameStats } = require("../splitBaseballPlayerGameStats");
 
 function getProjectPaths(projectRoot = process.cwd()) {
   return {
@@ -566,6 +567,7 @@ function importGameChangerCsv({ projectRoot = process.cwd(), gameId, filePath, w
 
   if (write) {
     fs.writeFileSync(paths.STATS_PATH, JSON.stringify(updatedStats, null, 2) + "\n", "utf-8");
+    splitBaseballPlayerGameStats({ projectRoot, log: () => {} });
   }
 
   return {

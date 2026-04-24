@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
+import { loadBaseballPlayerGameStatsForSeason } from "../dataLoaders";
 
 const SEASON_ID = 2024;
 
@@ -104,16 +105,15 @@ export default function Season2024() {
 
   useEffect(() => {
     async function fetchData() {
-      const [gamesRes, statsRes, playersRes, rostersRes] = await Promise.all([
+      const [gamesRes, statsData, playersRes, rostersRes] = await Promise.all([
         fetch("/data/boys/baseball/games.json"),
-        fetch("/data/boys/baseball/playergamestats.json"),
+        loadBaseballPlayerGameStatsForSeason(SEASON_ID),
         fetch("/data/players.json"),
         fetch("/data/boys/baseball/seasonrosters.json"),
       ]);
 
-      const [gamesData, statsData, playersData, rostersData] = await Promise.all([
+      const [gamesData, playersData, rostersData] = await Promise.all([
         gamesRes.json(),
-        statsRes.json(),
         playersRes.json(),
         rostersRes.json(),
       ]);

@@ -3,6 +3,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { recordTableStyles } from "./recordTableStyles";
+import { loadAllBaseballPlayerGameStats } from "../dataLoaders";
 
 function absUrl(path) {
   return new URL(path, window.location.origin).toString();
@@ -207,7 +208,7 @@ export default function SingleGameRecords() {
         setError("");
 
         const [playerStatsDataRaw, playersDataRaw, gamesDataRaw] = await Promise.all([
-          fetchJson("playergamestats.json", "/data/boys/baseball/playergamestats.json"),
+          loadAllBaseballPlayerGameStats(),
           fetchJson("players.json", "/data/players.json"),
           fetchJson("games.json", "/data/boys/baseball/games.json"),
         ]);

@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { recordTableStyles } from "./recordTableStyles";
+import { loadAllBaseballPlayerGameStats } from "../dataLoaders";
 
 function absUrl(path) {
   return new URL(path, window.location.origin).toString();
@@ -413,7 +414,7 @@ export default function FullTeamStats() {
 
         const [gamesDataRaw, playerStatsDataRaw] = await Promise.all([
           fetchJson("games.json", "/data/boys/baseball/games.json"),
-          fetchJson("playergamestats.json", "/data/boys/baseball/playergamestats.json"),
+          loadAllBaseballPlayerGameStats(),
         ]);
 
         const gamesData = Array.isArray(gamesDataRaw) ? gamesDataRaw : [];

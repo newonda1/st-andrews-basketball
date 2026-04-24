@@ -1,0 +1,68 @@
+[
+  {
+    "Season": 2016,
+    "Path": "/data/boys/baseball/playergamestats/2016.json",
+    "Rows": 25,
+    "Games": 16
+  },
+  {
+    "Season": 2017,
+    "Path": "/data/boys/baseball/playergamestats/2017.json",
+    "Rows": 10,
+    "Games": 10
+  },
+  {
+    "Season": 2018,
+    "Path": "/data/boys/baseball/playergamestats/2018.json",
+    "Rows": 222,
+    "Games": 25
+  },
+  {
+    "Season": 2019,
+    "Path": "/data/boys/baseball/playergamestats/2019.json",
+    "Rows": 228,
+    "Games": 27
+  },
+  {
+    "Season": 2020,
+    "Path": "/data/boys/baseball/playergamestats/2020.json",
+    "Rows": 44,
+    "Games": 4
+  },
+  {
+    "Season": 2021,
+    "Path": "/data/boys/baseball/playergamestats/2021.json",
+    "Rows": 143,
+    "Games": 27
+  },
+  {
+    "Season": 2022,
+    "Path": "/data/boys/baseball/playergamestats/2022.json",
+    "Rows": 219,
+    "Games": 25
+  },
+  {
+    "Season": 2023,
+    "Path": "/data/boys/baseball/playergamestats/2023.json",
+    "Rows": 350,
+    "Games": 25
+  },
+  {
+    "Season": 2024,
+    "Path": "/data/boys/baseball/playergamestats/2024.json",
+    "Rows": 375,
+    "Games": 26
+  },
+  {
+    "Season": 2025,
+    "Path": "/data/boys/baseball/playergamestats/2025.json",
+    "Rows": 228,
+    "Games": 19
+  },
+  {
+    "Season": 2026,
+    "Path": "/data/boys/baseball/playergamestats/2026.json",
+    "Rows": 288,
+    "Games": 30
+  }
+]

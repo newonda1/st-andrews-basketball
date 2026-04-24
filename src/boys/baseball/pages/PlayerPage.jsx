@@ -2,6 +2,7 @@
 
 import React, { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import { loadAllBaseballPlayerGameStats } from "../dataLoaders";
 
 const DATA_BASE = "/data/boys/baseball";
 const IMAGE_BASE = "/images/boys/baseball/players";
@@ -346,21 +347,20 @@ function PlayerPage() {
         setLoading(true);
         setError("");
 
-        const [playersRes, gamesRes, statsRes, rostersRes] = await Promise.all([
+        const [playersRes, gamesRes, statsData, rostersRes] = await Promise.all([
           fetch(`/data/players.json`),
           fetch(`${DATA_BASE}/games.json`),
-          fetch(`${DATA_BASE}/playergamestats.json`),
+          loadAllBaseballPlayerGameStats(),
           fetch(`${DATA_BASE}/seasonrosters.json`),
         ]);
 
-        if (!playersRes.ok || !gamesRes.ok || !statsRes.ok || !rostersRes.ok) {
+        if (!playersRes.ok || !gamesRes.ok || !rostersRes.ok) {
           throw new Error("Unable to load player page data.");
         }
 
-        const [playersData, gamesData, statsData, rostersData] = await Promise.all([
+        const [playersData, gamesData, rostersData] = await Promise.all([
           playersRes.json(),
           gamesRes.json(),
-          statsRes.json(),
           rostersRes.json(),
         ]);
 

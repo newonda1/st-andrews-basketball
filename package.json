@@ -7,7 +7,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "audit:boys-basketball": "node scripts/auditBoysBasketballData.js",
-    "import:baseball:gamechanger": "node scripts/importBaseballGameChanger.js"
+    "import:baseball:gamechanger": "node scripts/importBaseballGameChanger.js",
+    "split:baseball-stats": "node scripts/splitBaseballPlayerGameStats.js"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

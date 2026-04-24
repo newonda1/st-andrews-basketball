@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { recordTableStyles } from "./recordTableStyles";
+import { loadAllBaseballPlayerGameStats } from "../dataLoaders";
 import {
   buildTeamGameTotals,
   fetchJson,
@@ -88,7 +89,7 @@ export default function TeamSingleGameRecords() {
 
         const [gamesDataRaw, playerStatsDataRaw] = await Promise.all([
           fetchJson("games.json", "/data/boys/baseball/games.json"),
-          fetchJson("playergamestats.json", "/data/boys/baseball/playergamestats.json"),
+          loadAllBaseballPlayerGameStats(),
         ]);
 
         const teamGames = buildTeamGameTotals(gamesDataRaw, playerStatsDataRaw);

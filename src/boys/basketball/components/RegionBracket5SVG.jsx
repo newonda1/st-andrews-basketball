@@ -305,10 +305,17 @@ function RegionBracket5SVG({ bracket, schools = [] }) {
     );
   };
 
-  // connector helper: from right-middle of one card to left-middle of another, with elbow
-  const elbow = (xA, yA, xB, yB) => {
-    const midX = (xA + xB) / 2;
-    return `M ${xA} ${yA} L ${midX} ${yA} L ${midX} ${yB} L ${xB} ${yB}`;
+  // Connector helper: one shared vertical spine per matchup, like a traditional bracket.
+  const connector = (xA, yTop, yBottom, xB, yTarget) => {
+    const spineX = xA + Math.min(42, Math.max(30, (xB - xA) * 0.42));
+    const spineTop = Math.min(yTop, yBottom, yTarget);
+    const spineBottom = Math.max(yTop, yBottom, yTarget);
+    return [
+      `M ${xA} ${yTop} L ${spineX} ${yTop}`,
+      `M ${xA} ${yBottom} L ${spineX} ${yBottom}`,
+      `M ${spineX} ${spineTop} L ${spineX} ${spineBottom}`,
+      `M ${spineX} ${yTarget} L ${xB} ${yTarget}`,
+    ].join(" ");
   };
 
   const lineStyle = {
@@ -412,14 +419,36 @@ function RegionBracket5SVG({ bracket, schools = [] }) {
           />
 
           {/* CONNECTORS */}
-          <path d={elbow(x0 + cardW, yPlayTop + cardH / 2, x1, ySemi1Bot + cardH / 2)} {...lineStyle} />
-          <path d={elbow(x0 + cardW, yPlayBot + cardH / 2, x1, ySemi1Bot + cardH / 2)} {...lineStyle} />
-
-          <path d={elbow(x1 + cardW, ySemi1Top + cardH / 2, x2, yFinalTop + cardH / 2)} {...lineStyle} />
-          <path d={elbow(x1 + cardW, ySemi1Bot + cardH / 2, x2, yFinalTop + cardH / 2)} {...lineStyle} />
-
-          <path d={elbow(x1 + cardW, ySemi2Top + cardH / 2, x2, yFinalBot + cardH / 2)} {...lineStyle} />
-          <path d={elbow(x1 + cardW, ySemi2Bot + cardH / 2, x2, yFinalBot + cardH / 2)} {...lineStyle} />
+          <path
+            d={connector(
+              x0 + cardW,
+              yPlayTop + cardH / 2,
+              yPlayBot + cardH / 2,
+              x1,
+              ySemi1Bot + cardH / 2
+            )}
+            {...lineStyle}
+          />
+          <path
+            d={connector(
+              x1 + cardW,
+              ySemi1Top + cardH / 2,
+              ySemi1Bot + cardH / 2,
+              x2,
+              yFinalTop + cardH / 2
+            )}
+            {...lineStyle}
+          />
+          <path
+            d={connector(
+              x1 + cardW,
+              ySemi2Top + cardH / 2,
+              ySemi2Bot + cardH / 2,
+              x2,
+              yFinalBot + cardH / 2
+            )}
+            {...lineStyle}
+          />
 
           <text x={x0} y={topPad - 14} fontSize="14" fill="rgba(60,70,80,0.85)" fontWeight="700">
             Play-In (4 vs 5)

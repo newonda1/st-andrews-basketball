@@ -297,10 +297,17 @@ function StateBracket12SVG({ bracket, schools = [] }) {
     );
   };
 
-  // Connector helper
-  const elbow = (xA, yA, xB, yB) => {
-    const midX = (xA + xB) / 2;
-    return `M ${xA} ${yA} L ${midX} ${yA} L ${midX} ${yB} L ${xB} ${yB}`;
+  // Connector helper: one shared vertical spine per matchup, like a traditional bracket.
+  const connector = (xA, yTop, yBottom, xB, yTarget) => {
+    const spineX = xA + Math.min(34, Math.max(24, (xB - xA) * 0.42));
+    const spineTop = Math.min(yTop, yBottom, yTarget);
+    const spineBottom = Math.max(yTop, yBottom, yTarget);
+    return [
+      `M ${xA} ${yTop} L ${spineX} ${yTop}`,
+      `M ${xA} ${yBottom} L ${spineX} ${yBottom}`,
+      `M ${spineX} ${spineTop} L ${spineX} ${spineBottom}`,
+      `M ${spineX} ${yTarget} L ${xB} ${yTarget}`,
+    ].join(" ");
   };
 
   const lineStyle = {
@@ -542,45 +549,21 @@ function StateBracket12SVG({ bracket, schools = [] }) {
           />
 
           {/* ---------------- CONNECTORS ---------------- */}
-          {/* R1 -> QF (connect both R1 cards to the QF bottom slot for that pairing) */}
-          {/* r1_8_9 -> qf_1 bottom */}
-          <path d={elbow(x0 + cardW, cy(yR1[0]), x1, cy(yQF[1]))} {...lineStyle} />
-          <path d={elbow(x0 + cardW, cy(yR1[1]), x1, cy(yQF[1]))} {...lineStyle} />
+          {/* R1 -> QF */}
+          <path d={connector(x0 + cardW, cy(yR1[0]), cy(yR1[1]), x1, cy(yQF[1]))} {...lineStyle} />
+          <path d={connector(x0 + cardW, cy(yR1[2]), cy(yR1[3]), x1, cy(yQF[3]))} {...lineStyle} />
+          <path d={connector(x0 + cardW, cy(yR1[4]), cy(yR1[5]), x1, cy(yQF[5]))} {...lineStyle} />
+          <path d={connector(x0 + cardW, cy(yR1[6]), cy(yR1[7]), x1, cy(yQF[7]))} {...lineStyle} />
 
-          {/* r1_5_12 -> qf_4 bottom */}
-          <path d={elbow(x0 + cardW, cy(yR1[2]), x1, cy(yQF[3]))} {...lineStyle} />
-          <path d={elbow(x0 + cardW, cy(yR1[3]), x1, cy(yQF[3]))} {...lineStyle} />
-
-          {/* r1_6_11 -> qf_3 bottom */}
-          <path d={elbow(x0 + cardW, cy(yR1[4]), x1, cy(yQF[5]))} {...lineStyle} />
-          <path d={elbow(x0 + cardW, cy(yR1[5]), x1, cy(yQF[5]))} {...lineStyle} />
-
-          {/* r1_7_10 -> qf_2 bottom */}
-          <path d={elbow(x0 + cardW, cy(yR1[6]), x1, cy(yQF[7]))} {...lineStyle} />
-          <path d={elbow(x0 + cardW, cy(yR1[7]), x1, cy(yQF[7]))} {...lineStyle} />
-
-          {/* QF -> SF (connect both QF cards to their SF slot) */}
-          {/* qf_1 -> sf_top top */}
-          <path d={elbow(x1 + cardW, cy(yQF[0]), x2, cy(ySF[0]))} {...lineStyle} />
-          <path d={elbow(x1 + cardW, cy(yQF[1]), x2, cy(ySF[0]))} {...lineStyle} />
-
-          {/* qf_4 -> sf_top bottom */}
-          <path d={elbow(x1 + cardW, cy(yQF[2]), x2, cy(ySF[1]))} {...lineStyle} />
-          <path d={elbow(x1 + cardW, cy(yQF[3]), x2, cy(ySF[1]))} {...lineStyle} />
-
-          {/* qf_3 -> sf_bot top */}
-          <path d={elbow(x1 + cardW, cy(yQF[4]), x2, cy(ySF[2]))} {...lineStyle} />
-          <path d={elbow(x1 + cardW, cy(yQF[5]), x2, cy(ySF[2]))} {...lineStyle} />
-
-          {/* qf_2 -> sf_bot bottom */}
-          <path d={elbow(x1 + cardW, cy(yQF[6]), x2, cy(ySF[3]))} {...lineStyle} />
-          <path d={elbow(x1 + cardW, cy(yQF[7]), x2, cy(ySF[3]))} {...lineStyle} />
+          {/* QF -> SF */}
+          <path d={connector(x1 + cardW, cy(yQF[0]), cy(yQF[1]), x2, cy(ySF[0]))} {...lineStyle} />
+          <path d={connector(x1 + cardW, cy(yQF[2]), cy(yQF[3]), x2, cy(ySF[1]))} {...lineStyle} />
+          <path d={connector(x1 + cardW, cy(yQF[4]), cy(yQF[5]), x2, cy(ySF[2]))} {...lineStyle} />
+          <path d={connector(x1 + cardW, cy(yQF[6]), cy(yQF[7]), x2, cy(ySF[3]))} {...lineStyle} />
 
           {/* SF -> Final */}
-          <path d={elbow(x2 + cardW, cy(ySF[0]), x3, cy(yFinal[0]))} {...lineStyle} />
-          <path d={elbow(x2 + cardW, cy(ySF[1]), x3, cy(yFinal[0]))} {...lineStyle} />
-          <path d={elbow(x2 + cardW, cy(ySF[2]), x3, cy(yFinal[1]))} {...lineStyle} />
-          <path d={elbow(x2 + cardW, cy(ySF[3]), x3, cy(yFinal[1]))} {...lineStyle} />
+          <path d={connector(x2 + cardW, cy(ySF[0]), cy(ySF[1]), x3, cy(yFinal[0]))} {...lineStyle} />
+          <path d={connector(x2 + cardW, cy(ySF[2]), cy(ySF[3]), x3, cy(yFinal[1]))} {...lineStyle} />
         </svg>
       </div>
     </div>

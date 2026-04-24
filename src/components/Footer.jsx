@@ -222,13 +222,31 @@ export default function Footer() {
           </div>
         </div>
 
-        <p className="mt-[60px] max-w-[1060px] text-[0.93rem] italic leading-[1.72] text-white/84 lg:mt-[68px] lg:text-[0.99rem]">
+        <p className="mx-auto mt-[60px] max-w-[1060px] text-center text-[0.93rem] italic leading-[1.72] text-white/84 lg:mt-[68px] lg:text-[0.99rem]">
           St. Andrew&apos;s School does not discriminate on the basis of sex,
           race, color, disability, sexual orientation, religion, or national
           or ethnic origin in the administration of its education policies,
           admission policies, scholarship or financial aid policies, or
           athletic or other school-administered programs.
         </p>
+      </div>
+
+      <div className="bg-white">
+        <div className="mx-auto flex min-h-[46px] max-w-[1180px] items-center justify-end px-8 sm:px-10 lg:px-0">
+          <a
+            href="https://preplegacy.com"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Powered by PrepLegacy"
+            className="inline-flex items-center no-underline"
+          >
+            <img
+              src="/images/branding/preplegacy-logo.png"
+              alt="Powered by PrepLegacy"
+              className="h-auto w-[138px]"
+            />
+          </a>
+        </div>
       </div>
     </footer>
   );

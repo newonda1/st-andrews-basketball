@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import { loadBaseballPlayerGameStatsForSeason } from "../dataLoaders";
 
 function baseballInningsToOuts(value) {
   if (value == null || value === "") return 0;
@@ -110,19 +111,23 @@ export default function GameDetail() {
     async function fetchData() {
       setLoading(true);
       try {
-        const [gamesRes, statsRes, playersRes, rostersRes] = await Promise.all([
+        const [gamesRes, playersRes, rostersRes] = await Promise.all([
           fetch("/data/boys/baseball/games.json"),
-          fetch("/data/boys/baseball/playergamestats.json"),
           fetch("/data/players.json"),
           fetch("/data/boys/baseball/seasonrosters.json"),
         ]);
 
-        const [gamesData, statsData, playersData, rostersData] = await Promise.all([
+        const [gamesData, playersData, rostersData] = await Promise.all([
           gamesRes.json(),
-          statsRes.json(),
           playersRes.json(),
           rostersRes.json(),
         ]);
+        const gameRecord = (Array.isArray(gamesData) ? gamesData : []).find(
+          (g) => Number(g.GameID) === numericGameId
+        );
+        const statsData = gameRecord
+          ? await loadBaseballPlayerGameStatsForSeason(gameRecord.Season)
+          : [];
 
         setGames(Array.isArray(gamesData) ? gamesData : []);
         setPlayerStats(Array.isArray(statsData) ? statsData : []);
@@ -134,7 +139,7 @@ export default function GameDetail() {
     }
 
     fetchData();
-  }, []);
+  }, [numericGameId]);
 
   const game = useMemo(
     () => games.find((g) => Number(g.GameID) === numericGameId) || null,

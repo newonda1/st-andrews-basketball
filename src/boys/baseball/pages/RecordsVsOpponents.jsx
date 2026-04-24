@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
+import { loadAllBaseballPlayerGameStats } from "../dataLoaders";
 
 function RecordsVsOpponents() {
   const [games, setGames] = useState([]);
@@ -101,7 +102,7 @@ function RecordsVsOpponents() {
   useEffect(() => {
     Promise.all([
       fetch("/data/boys/baseball/games.json").then((r) => r.json()),
-      fetch("/data/boys/baseball/playergamestats.json").then((r) => r.json()),
+      loadAllBaseballPlayerGameStats(),
       fetch("/data/players.json").then((r) => r.json()),
       fetch("/data/schools.json").then((r) => r.json()),
     ])
