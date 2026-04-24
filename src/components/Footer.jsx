@@ -54,21 +54,6 @@ const footerLinkColumns = [
   ],
 ];
 
-const footerBottomLinks = [
-  {
-    label: "Admissions",
-    href: "https://saslions.com/admissions/",
-  },
-  {
-    label: "Athletic Events",
-    href: "https://www.saslionsathletics.com/inside-athletics/athletic-events",
-  },
-  {
-    label: "Booster Club",
-    href: "https://sasboosterclub.boosterhub.com/register/11952",
-  },
-];
-
 function renderSocialIcon(icon) {
   if (icon === "facebook") {
     return (
@@ -119,23 +104,18 @@ function renderSocialIcon(icon) {
 export default function Footer() {
   return (
     <footer className="mt-16 bg-[var(--stats-navy)] text-white">
-      <div className="w-full px-6 py-12 sm:px-8 lg:px-12 xl:px-16 2xl:px-24">
-        <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr_1.45fr] lg:gap-14">
+      <div className="mx-auto max-w-[1120px] px-8 pb-14 pt-12 sm:px-10 lg:px-12 lg:pb-12 lg:pt-14">
+        <div className="grid gap-10 lg:grid-cols-[1.12fr_0.82fr_1.22fr] lg:gap-12 xl:gap-16">
           <div>
             <Link to="/athletics" className="inline-flex no-underline">
-              <span
-                aria-label="St. Andrew's Athletics"
-                className="block h-[58px] w-[340px] bg-white sm:h-[66px] sm:w-[385px]"
-                style={{
-                  WebkitMask:
-                    "url('/images/common/st_andrews_athletics_horizontal_logo_dark.png') center / contain no-repeat",
-                  mask:
-                    "url('/images/common/st_andrews_athletics_horizontal_logo_dark.png') center / contain no-repeat",
-                }}
+              <img
+                src="/images/common/st_andrews_athletics_horizontal_logo_dark.png"
+                alt="St. Andrew's Athletics"
+                className="block h-auto w-[280px] brightness-0 invert sm:w-[315px]"
               />
             </Link>
 
-            <div className="mt-10 space-y-1 text-[0.96rem] leading-[1.65] text-white">
+            <div className="mt-7 space-y-1 text-[0.95rem] leading-[1.65] text-white/94 lg:text-[0.99rem]">
               <p className="m-0">601 Penn Waller Rd</p>
               <p className="m-0">Savannah, GA 31410</p>
               <p className="m-0">United States</p>
@@ -149,10 +129,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <h2 className="mb-8 text-[1.4rem] font-normal leading-[1.2] text-white sm:text-[1.55rem]">
+            <h2 className="mb-6 text-[1.25rem] font-normal leading-[1.2] text-white sm:text-[1.4rem]">
               Stay Connected
             </h2>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-3.5">
               {socialLinks.map((item) => (
                 <a
                   key={item.label}
@@ -160,7 +140,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noreferrer"
                   aria-label={item.label}
-                  className="inline-flex h-[54px] w-[54px] items-center justify-center rounded-full border border-white/28 text-white no-underline transition hover:border-white hover:bg-white hover:text-[var(--stats-navy)]"
+                  className="inline-flex h-[48px] w-[48px] items-center justify-center rounded-full border border-white/30 text-white no-underline transition hover:border-white hover:bg-white hover:text-[var(--stats-navy)]"
                 >
                   {renderSocialIcon(item.icon)}
                 </a>
@@ -169,19 +149,22 @@ export default function Footer() {
           </div>
 
           <div>
-            <h2 className="mb-8 text-[1.4rem] font-normal leading-[1.2] text-white sm:text-[1.55rem]">
+            <h2 className="mb-6 text-[1.25rem] font-normal leading-[1.2] text-white sm:text-[1.4rem]">
               Links & Resources
             </h2>
-            <div className="grid gap-8 sm:grid-cols-2">
+            <div className="grid max-w-[440px] gap-x-8 gap-y-0 sm:grid-cols-2 lg:max-w-[520px]">
               {footerLinkColumns.map((column, columnIndex) => (
-                <div key={`footer-column-${columnIndex}`} className="space-y-0">
+                <div
+                  key={`footer-column-${columnIndex}`}
+                  className="max-w-[220px] space-y-0"
+                >
                   {column.map((item) => (
                     <a
                       key={item.label}
                       href={item.href}
                       target="_blank"
                       rel="noreferrer"
-                      className="block border-b border-white/22 py-3 text-[0.96rem] leading-[1.35] text-white no-underline transition hover:underline"
+                      className="block border-b border-white/24 py-[0.78rem] text-[0.95rem] leading-[1.35] text-white no-underline transition hover:underline"
                     >
                       {item.label}
                     </a>
@@ -191,33 +174,14 @@ export default function Footer() {
             </div>
           </div>
         </div>
-      </div>
 
-      <div className="border-t border-white/14">
-        <div className="flex w-full flex-col gap-3 px-6 py-5 text-[0.82rem] leading-[1.45] text-white/70 sm:px-8 lg:flex-row lg:items-center lg:justify-between lg:px-12 xl:px-16 2xl:px-24">
-          <p className="m-0">St. Andrew&apos;s athletic statistics and archives.</p>
-          <div className="flex flex-wrap gap-x-6 gap-y-2">
-            <a
-              href="https://preplegacy.com"
-              target="_blank"
-              rel="noreferrer"
-              className="text-white/80 no-underline transition hover:text-white hover:underline"
-            >
-              Powered by Prep Legacy
-            </a>
-            {footerBottomLinks.map((item) => (
-              <a
-                key={`footer-bottom-${item.label}`}
-                href={item.href}
-                target="_blank"
-                rel="noreferrer"
-                className="text-white/70 no-underline transition hover:text-white hover:underline"
-              >
-                {item.label}
-              </a>
-            ))}
-          </div>
-        </div>
+        <p className="mx-auto mt-12 max-w-[1120px] text-[0.92rem] italic leading-[1.65] text-white/82 lg:mt-14 lg:text-[1rem]">
+          St. Andrew&apos;s School does not discriminate on the basis of sex,
+          race, color, disability, sexual orientation, religion, or national
+          or ethnic origin in the administration of its education policies,
+          admission policies, scholarship or financial aid policies, or
+          athletic or other school-administered programs.
+        </p>
       </div>
     </footer>
   );
