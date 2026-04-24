@@ -259,16 +259,6 @@ export default function AthleticsProgramShell({
     [mobileSearchQuery]
   );
 
-  const openDropdownSection = useMemo(
-    () =>
-      navSections.find(
-        (section) =>
-          section.title === openDropdownTitle &&
-          (section.links || []).length > 1
-      ) || null,
-    [navSections, openDropdownTitle]
-  );
-
   useEffect(() => {
     setOpenDropdownTitle(null);
     setSearchOpen(false);
@@ -512,6 +502,45 @@ export default function AthleticsProgramShell({
             active || open ? "scale-x-100 opacity-100" : "scale-x-50 opacity-0"
           }`}
         />
+
+        {open ? (
+          <div
+            className="absolute left-1/2 top-full z-50 -translate-x-1/2"
+            style={{ width: getDropdownWidth(links) }}
+          >
+            <div className="bg-[var(--stats-navy)] px-9 py-8 shadow-[0_28px_42px_rgba(15,23,42,0.28)]">
+              <div
+                className="grid gap-8"
+                style={{
+                  gridTemplateColumns: `repeat(${getDropdownColumns(links).length}, minmax(0, 1fr))`,
+                }}
+              >
+                {getDropdownColumns(links).map((column, columnIndex) => (
+                  <div
+                    key={`${section.title}-column-${columnIndex}`}
+                    className="flex flex-col"
+                  >
+                    {column.map((item, itemIndex) => (
+                      <NavLink
+                        key={`${section.title}-${item.to}`}
+                        to={item.to}
+                        end={item.end}
+                        onClick={closeNavMenus}
+                        className="block border-b border-white/35 py-[14px] text-[1rem] leading-[1.2] text-white no-underline transition hover:opacity-80"
+                        style={{
+                          borderBottom:
+                            itemIndex === column.length - 1 ? "none" : undefined,
+                        }}
+                      >
+                        {item.label}
+                      </NavLink>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        ) : null}
       </div>
     );
   };
@@ -578,12 +607,12 @@ export default function AthleticsProgramShell({
           <div className="flex w-full items-center justify-between px-4 py-4 lg:px-8 lg:py-5 xl:px-10 2xl:px-12">
             <Link
               to={headerHomePath}
-              className="flex min-w-0 items-center gap-3 text-[var(--stats-navy)] no-underline lg:gap-4"
+              className="flex min-w-0 items-center gap-1.5 text-[var(--stats-navy)] no-underline lg:gap-2"
             >
               <img
                 src="/images/common/st_andrews_athletics_horizontal_logo_dark.png"
                 alt="St. Andrew's Athletics"
-                className="h-[32px] w-auto sm:h-[38px] lg:h-[48px]"
+                className="translate-y-[3px] h-[32px] w-auto sm:h-[38px] lg:h-[48px]"
               />
               <span
                 aria-hidden="true"
@@ -737,51 +766,6 @@ export default function AthleticsProgramShell({
                 {navSections.map(renderNavItem)}
               </div>
             </nav>
-
-            {openDropdownSection ? (
-              <div
-                className="absolute left-1/2 top-full z-50 -translate-x-1/2"
-                style={{ width: getDropdownWidth(openDropdownSection.links) }}
-              >
-                <div className="bg-[var(--stats-navy)] px-9 py-8 shadow-[0_28px_42px_rgba(15,23,42,0.28)]">
-                  <div
-                    className="grid gap-8"
-                    style={{
-                      gridTemplateColumns: `repeat(${getDropdownColumns(
-                        openDropdownSection.links
-                      ).length}, minmax(0, 1fr))`,
-                    }}
-                  >
-                    {getDropdownColumns(openDropdownSection.links).map(
-                      (column, columnIndex) => (
-                        <div
-                          key={`${openDropdownSection.title}-column-${columnIndex}`}
-                          className="flex flex-col"
-                        >
-                          {column.map((item, itemIndex) => (
-                            <NavLink
-                              key={`${openDropdownSection.title}-${item.to}`}
-                              to={item.to}
-                              end={item.end}
-                              onClick={closeNavMenus}
-                              className="block border-b border-white/35 py-[14px] text-[1rem] leading-[1.2] text-white no-underline transition hover:opacity-80"
-                              style={{
-                                borderBottom:
-                                  itemIndex === column.length - 1
-                                    ? "none"
-                                    : undefined,
-                              }}
-                            >
-                              {item.label}
-                            </NavLink>
-                          ))}
-                        </div>
-                      )
-                    )}
-                  </div>
-                </div>
-              </div>
-            ) : null}
           </div>
         </div>
       </header>
