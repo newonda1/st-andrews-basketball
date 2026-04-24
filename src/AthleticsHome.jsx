@@ -304,7 +304,7 @@ function AthleticsHome() {
       menuSections={menuSections}
       athleticsHomePath="/athletics"
     >
-      <div className="mx-auto w-full px-[clamp(0.5rem,1.25vw,1.5rem)] py-2 sm:py-4">
+      <div className="relative left-1/2 w-screen -translate-x-1/2 px-[clamp(0.5rem,1.25vw,1.5rem)] py-2 sm:py-4">
         <section className="mt-4">
           <div className="mx-auto w-full max-w-[1920px] px-0 py-6 sm:py-8">
             <div className="mx-auto max-w-3xl text-center">

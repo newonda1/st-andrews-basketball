@@ -106,12 +106,15 @@ export default function Footer() {
     <footer className="mt-16 bg-[var(--stats-navy)] text-white">
       <div className="mx-auto max-w-[1180px] px-8 pb-14 pt-12 sm:px-10 lg:px-12 lg:pb-[46px] lg:pt-[54px]">
         <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between lg:gap-12">
-          <div className="w-full max-w-[314px] shrink-0">
-            <Link to="/athletics" className="inline-flex no-underline">
+          <div className="w-full max-w-[360px] shrink-0">
+            <Link
+              to="/athletics"
+              className="inline-flex items-center gap-2 text-white no-underline"
+            >
               <svg
-                aria-label="St. Andrew's Athletics"
+                aria-label="St. Andrew's Lions"
                 viewBox="0 0 1526 460"
-                className="block h-auto w-[286px] sm:w-[304px]"
+                className="block h-auto w-[198px] sm:w-[218px]"
                 role="img"
               >
                 <defs>
@@ -150,6 +153,13 @@ export default function Footer() {
                   filter="url(#footer-logo-to-white)"
                 />
               </svg>
+              <span
+                aria-hidden="true"
+                className="block h-[44px] w-px bg-white/86 sm:h-[50px]"
+              />
+              <span className="text-[1.72rem] font-normal uppercase leading-none tracking-[0.03em] text-white sm:text-[2rem]">
+                Athletics
+              </span>
             </Link>
 
             <div className="mt-[23px] space-y-[4px] text-[0.96rem] leading-[1.45] text-white/95">
