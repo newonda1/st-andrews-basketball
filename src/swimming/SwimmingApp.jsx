@@ -99,7 +99,7 @@ export default function SwimmingApp() {
 
   return (
     <AthleticsProgramShell
-      title="Swimming Statistics"
+      title="Swimming"
       menuTitle="Swimming"
       menuSections={menuSections}
       athleticsHomePath="/athletics"

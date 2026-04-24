@@ -32,7 +32,7 @@ const sports = [
     stateYears: [2003, 2005, 2006],
   },
   {
-    name: "Boys Baseball",
+    name: "Baseball",
     to: "/athletics/boys/baseball",
     icon: "/images/boys/baseball/boys_baseball_icon.png",
     regionYears: [2019],
@@ -112,7 +112,7 @@ const menuSections = [
     links: [
       { to: "/athletics/boys/basketball", label: "Boys Basketball" },
       { to: "/athletics/girls/basketball", label: "Girls Basketball" },
-      { to: "/athletics/boys/baseball", label: "Boys Baseball" },
+      { to: "/athletics/boys/baseball", label: "Baseball" },
       { to: "/athletics/track/records/school", label: "Track & Field" },
       { to: "/athletics/swimming/records/school", label: "Swimming" },
       { to: "/athletics/tennis", label: "Tennis" },

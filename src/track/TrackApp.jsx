@@ -133,7 +133,7 @@ export default function TrackApp() {
 
   return (
     <AthleticsProgramShell
-      title="Track & Field Statistics"
+      title="Track & Field"
       menuTitle="Track & Field"
       menuSections={menuSections}
       athleticsHomePath="/athletics"

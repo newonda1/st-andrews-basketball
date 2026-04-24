@@ -422,7 +422,7 @@ export default function GameDetail() {
         <h1 className="text-3xl font-bold mb-3">Game Not Found</h1>
         <p className="text-gray-600 mb-4">We could not find a baseball game with that ID.</p>
         <Link to="/athletics/boys/baseball" className="text-blue-700 hover:underline">
-          Back to Boys' Baseball
+          Back to Baseball
         </Link>
       </div>
     );
@@ -445,7 +445,7 @@ export default function GameDetail() {
       <div className="space-y-2">
         <div className="text-sm text-gray-600">
           <Link to="/athletics/boys/baseball" className="text-blue-700 hover:underline">
-            Boys' Baseball
+            Baseball
           </Link>
           <span> / </span>
           <Link to={`/athletics/boys/baseball/seasons/${game.Season}`} className="text-blue-700 hover:underline">

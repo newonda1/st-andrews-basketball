@@ -5,6 +5,7 @@
       "teams": {
         "standrews": {
           "name": "St. Andrew’s",
+          "schoolId": "ga-st-andrews-school-savannah",
           "card": "/images/boys/basketball/teams/standrews.svg"
         },
         "westminster": {
@@ -183,6 +184,7 @@
       "teams": {
         "standrews": {
           "name": "St. Andrew’s",
+          "schoolId": "ga-st-andrews-school-savannah",
           "card": "/images/boys/basketball/teams/standrews.svg"
         },
         "westminster": {
@@ -361,6 +363,7 @@
       "teams": {
         "standrews": {
           "name": "St. Andrew’s",
+          "schoolId": "ga-st-andrews-school-savannah",
           "card": "/images/boys/basketball/teams/standrews.svg"
         },
         "westminster": {
@@ -539,6 +542,7 @@
       "teams": {
         "standrews": {
           "name": "St. Andrew’s",
+          "schoolId": "ga-st-andrews-school-savannah",
           "card": "/images/boys/basketball/teams/standrews.svg"
         },
         "westminster": {

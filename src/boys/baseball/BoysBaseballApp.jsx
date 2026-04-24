@@ -103,8 +103,8 @@ function PlaceholderPage({ title, text }) {
 export default function BoysBaseballApp() {
   return (
     <AthleticsProgramShell
-      title="Boys' Baseball"
-      menuTitle="Boys' Baseball"
+      title="Baseball"
+      menuTitle="Baseball"
       menuSections={menuSections}
       athleticsHomePath="/athletics"
       headerHomePath="/athletics/boys/baseball"

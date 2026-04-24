@@ -232,6 +232,7 @@ function RegionBracket5SVG({ bracket, schools = [] }) {
               width={logoW}
               height={logoH}
               preserveAspectRatio="xMidYMid meet"
+              filter="url(#regionLogoShadow)"
             />
             <text
               x={nameX}
@@ -331,6 +332,12 @@ function RegionBracket5SVG({ bracket, schools = [] }) {
           role="img"
           aria-label={bracket?.title ?? "Region Tournament Bracket"}
         >
+          <defs>
+            <filter id="regionLogoShadow" x="-35%" y="-35%" width="170%" height="170%">
+              <feDropShadow dx="0" dy="1" stdDeviation="1.4" floodColor="#0f172a" floodOpacity="0.4" />
+            </filter>
+          </defs>
+
           {/* PLAY-IN (4 vs 5) */}
           <Card
             x={x0}

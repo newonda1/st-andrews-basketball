@@ -108,8 +108,7 @@ export default function TennisApp() {
 
   return (
     <AthleticsProgramShell
-      title="Tennis Statistics"
-      subtitle="Coed varsity program"
+      title="Tennis"
       menuTitle="Tennis"
       menuSections={menuSections}
       athleticsHomePath="/athletics"

@@ -215,12 +215,14 @@ export default function AthleticsProgramShell({
   const searchContainerRef = useRef(null);
   const searchInputRef = useRef(null);
   const mobileSearchInputRef = useRef(null);
+  const headerRef = useRef(null);
   const [openDropdownTitle, setOpenDropdownTitle] = useState(null);
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileExpandedTitle, setMobileExpandedTitle] = useState(null);
   const [mobileSearchQuery, setMobileSearchQuery] = useState("");
+  const [headerOffset, setHeaderOffset] = useState(0);
 
   const normalizedSections = useMemo(
     () =>
@@ -302,6 +304,39 @@ export default function AthleticsProgramShell({
       searchInputRef.current.focus();
     }
   }, [searchOpen]);
+
+  useEffect(() => {
+    const headerElement = headerRef.current;
+
+    if (!headerElement) {
+      return undefined;
+    }
+
+    const updateHeaderOffset = () => {
+      setHeaderOffset(Math.ceil(headerElement.getBoundingClientRect().height));
+    };
+
+    updateHeaderOffset();
+
+    const observer =
+      typeof ResizeObserver !== "undefined"
+        ? new ResizeObserver(updateHeaderOffset)
+        : null;
+
+    if (observer) {
+      observer.observe(headerElement);
+    }
+
+    window.addEventListener("resize", updateHeaderOffset);
+
+    return () => {
+      if (observer) {
+        observer.disconnect();
+      }
+
+      window.removeEventListener("resize", updateHeaderOffset);
+    };
+  }, []);
 
   useEffect(() => {
     if (!mobileMenuOpen) {
@@ -547,7 +582,7 @@ export default function AthleticsProgramShell({
 
   return (
     <div className="stats-site-shell">
-      <header className="fixed inset-x-0 top-0 z-40 bg-white">
+      <header ref={headerRef} className="fixed inset-x-0 top-0 z-40 bg-white">
         <div className="hidden lg:block border-b border-white/10 bg-[var(--stats-dark)]">
           <div className="flex min-h-[40px] w-full items-center justify-between px-6 lg:px-8 xl:px-10 2xl:px-12">
             <a
@@ -869,7 +904,14 @@ export default function AthleticsProgramShell({
         </div>
       ) : null}
 
-      <div className="mx-auto w-full max-w-[1180px] px-4 pb-14 pt-[132px] sm:px-5 sm:pt-[142px] lg:pt-[166px]">
+      <div
+        className="mx-auto w-full max-w-[1180px] px-4 pb-14 pt-[132px] sm:px-5 sm:pt-[142px] lg:pt-[166px]"
+        style={
+          headerOffset
+            ? { paddingTop: `${headerOffset + 16}px` }
+            : undefined
+        }
+      >
         <main className="min-h-[520px]">{children}</main>
       </div>
 

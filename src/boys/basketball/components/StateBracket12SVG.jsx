@@ -231,6 +231,7 @@ function StateBracket12SVG({ bracket, schools = [] }) {
               width={logoW}
               height={logoH}
               preserveAspectRatio="xMidYMid meet"
+              filter="url(#stateLogoShadow)"
             />
             <text
               x={nameX}
@@ -318,6 +319,12 @@ function StateBracket12SVG({ bracket, schools = [] }) {
         <div style={{ fontWeight: 700, marginBottom: 8 }}>{bracket?.title ?? "State Tournament"}</div>
 
         <svg viewBox={`0 0 ${W} ${H}`} width="100%" height="auto" role="img" aria-label={bracket?.title ?? "State Tournament Bracket"}>
+          <defs>
+            <filter id="stateLogoShadow" x="-35%" y="-35%" width="170%" height="170%">
+              <feDropShadow dx="0" dy="1" stdDeviation="1.4" floodColor="#0f172a" floodOpacity="0.4" />
+            </filter>
+          </defs>
+
           {/* Column labels */}
           <text x={x0} y={topPad - 18} fontSize="14" fill="rgba(60,70,80,0.85)" fontWeight="700">
             First Round
