@@ -19,7 +19,7 @@ function classLabelFromGradYear(gradYear, seasonEndYear = 2026) {
   if (diff === 1) return "JR";
   if (diff === 2) return "SO";
   if (diff === 3) return "FR";
-  if (diff === 4) return "P-FR";
+  if (diff === 4) return "8th";
   if (diff > 3) return `${12 - diff}th`;
   return null;
 }
