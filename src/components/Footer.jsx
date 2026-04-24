@@ -104,18 +104,38 @@ function renderSocialIcon(icon) {
 export default function Footer() {
   return (
     <footer className="mt-16 bg-[var(--stats-navy)] text-white">
-      <div className="mx-auto max-w-[1120px] px-8 pb-14 pt-12 sm:px-10 lg:px-12 lg:pb-12 lg:pt-14">
-        <div className="grid gap-10 lg:grid-cols-[1.12fr_0.82fr_1.22fr] lg:gap-12 xl:gap-16">
-          <div>
+      <div className="mx-auto max-w-[1180px] px-8 pb-14 pt-12 sm:px-10 lg:px-12 lg:pb-[46px] lg:pt-[54px]">
+        <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between lg:gap-12">
+          <div className="w-full max-w-[314px] shrink-0">
             <Link to="/athletics" className="inline-flex no-underline">
-              <img
-                src="/images/common/st_andrews_athletics_horizontal_logo_dark.png"
-                alt="St. Andrew's Athletics"
-                className="block h-auto w-[280px] brightness-0 invert sm:w-[315px]"
-              />
+              <svg
+                aria-label="St. Andrew's Athletics"
+                viewBox="0 0 1526 460"
+                className="block h-auto w-[286px] sm:w-[304px]"
+                role="img"
+              >
+                <defs>
+                  <filter id="footer-logo-to-white" colorInterpolationFilters="sRGB">
+                    <feColorMatrix
+                      type="matrix"
+                      values="0 0 0 0 1
+                              0 0 0 0 1
+                              0 0 0 0 1
+                              0 0 0 1 0"
+                    />
+                  </filter>
+                </defs>
+                <image
+                  href="/images/common/st_andrews_athletics_horizontal_logo_dark.png"
+                  width="1526"
+                  height="460"
+                  preserveAspectRatio="xMinYMin meet"
+                  filter="url(#footer-logo-to-white)"
+                />
+              </svg>
             </Link>
 
-            <div className="mt-7 space-y-1 text-[0.95rem] leading-[1.65] text-white/94 lg:text-[0.99rem]">
+            <div className="mt-[23px] space-y-[4px] text-[0.96rem] leading-[1.45] text-white/95">
               <p className="m-0">601 Penn Waller Rd</p>
               <p className="m-0">Savannah, GA 31410</p>
               <p className="m-0">United States</p>
@@ -128,11 +148,11 @@ export default function Footer() {
             </div>
           </div>
 
-          <div>
-            <h2 className="mb-6 text-[1.25rem] font-normal leading-[1.2] text-white sm:text-[1.4rem]">
+          <div className="w-full max-w-[210px] shrink-0 lg:pt-[2px]">
+            <h2 className="mb-[21px] text-[1.22rem] font-normal leading-[1.15] text-white sm:text-[1.33rem]">
               Stay Connected
             </h2>
-            <div className="flex flex-wrap gap-3.5">
+            <div className="flex flex-wrap gap-[14px]">
               {socialLinks.map((item) => (
                 <a
                   key={item.label}
@@ -140,7 +160,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noreferrer"
                   aria-label={item.label}
-                  className="inline-flex h-[48px] w-[48px] items-center justify-center rounded-full border border-white/30 text-white no-underline transition hover:border-white hover:bg-white hover:text-[var(--stats-navy)]"
+                  className="inline-flex h-[43px] w-[43px] items-center justify-center rounded-full border border-white/26 text-white no-underline transition hover:border-white hover:bg-white hover:text-[var(--stats-navy)]"
                 >
                   {renderSocialIcon(item.icon)}
                 </a>
@@ -148,15 +168,15 @@ export default function Footer() {
             </div>
           </div>
 
-          <div>
-            <h2 className="mb-6 text-[1.25rem] font-normal leading-[1.2] text-white sm:text-[1.4rem]">
+          <div className="w-full max-w-[364px] shrink-0 lg:pt-[2px]">
+            <h2 className="mb-[21px] text-[1.22rem] font-normal leading-[1.15] text-white sm:text-[1.33rem]">
               Links & Resources
             </h2>
-            <div className="grid max-w-[440px] gap-x-8 gap-y-0 sm:grid-cols-2 lg:max-w-[520px]">
+            <div className="grid grid-cols-1 gap-x-[20px] gap-y-0 sm:grid-cols-2">
               {footerLinkColumns.map((column, columnIndex) => (
                 <div
                   key={`footer-column-${columnIndex}`}
-                  className="max-w-[220px] space-y-0"
+                  className="max-w-[172px] space-y-[11px]"
                 >
                   {column.map((item) => (
                     <a
@@ -164,7 +184,7 @@ export default function Footer() {
                       href={item.href}
                       target="_blank"
                       rel="noreferrer"
-                      className="block border-b border-white/24 py-[0.78rem] text-[0.95rem] leading-[1.35] text-white no-underline transition hover:underline"
+                      className="block border-b border-white/23 pb-[10px] pt-[3px] text-[0.97rem] leading-[1.32] text-white no-underline transition hover:underline"
                     >
                       {item.label}
                     </a>
@@ -175,7 +195,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <p className="mx-auto mt-12 max-w-[1120px] text-[0.92rem] italic leading-[1.65] text-white/82 lg:mt-14 lg:text-[1rem]">
+        <p className="mt-[60px] max-w-[1060px] text-[0.93rem] italic leading-[1.72] text-white/84 lg:mt-[68px] lg:text-[0.99rem]">
           St. Andrew&apos;s School does not discriminate on the basis of sex,
           race, color, disability, sexual orientation, religion, or national
           or ethnic origin in the administration of its education policies,
