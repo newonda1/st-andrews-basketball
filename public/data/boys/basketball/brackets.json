@@ -237,61 +237,73 @@
     "heritage": {
       "name": "Heritage",
       "seed": 1,
+      "schoolId": "ga-the-heritage-school-newnan",
       "card": "/images/boys/basketball/teams/heritage.svg"
     },
     "standrews": {
       "name": "St. Andrew’s",
       "seed": 2,
+      "schoolId": "ga-st-andrews-school-savannah",
       "card": "/images/boys/basketball/teams/standrews.svg"
     },
     "lakeview": {
       "name": "Lakeview",
       "seed": 3,
+      "schoolId": "ga-lakeview-academy-gainesville",
       "card": "/images/boys/basketball/teams/lakeview.svg"
     },
     "brookwood": {
       "name": "Brookwood",
       "seed": 4,
+      "schoolId": "ga-brookwood-academy-thomasville",
       "card": "/images/boys/basketball/teams/brookwood.svg"
     },
     "frederica": {
       "name": "Frederica",
       "seed": 5,
+      "schoolId": "ga-frederica-academy-st-simons-island",
       "card": "/images/boys/basketball/teams/frederica.svg"
     },
     "johnmilledge": {
       "name": "John Milledge",
       "seed": 6,
+      "schoolId": "ga-john-milledge-academy-milledgeville",
       "card": "/images/boys/basketball/teams/johnmilledge.svg"
     },
     "dominionchristian": {
       "name": "Dominion Christian",
       "seed": 7,
+      "schoolId": "ga-dominion-christian-academy-marietta",
       "card": "/images/boys/basketball/teams/dominionchristian.svg"
     },
     "deerfieldwindsor": {
       "name": "Deerfield-Windsor",
       "seed": 8,
+      "schoolId": "ga-deerfield-windsor-school-albany",
       "card": "/images/boys/basketball/teams/deerfieldwindsor.svg"
     },
     "southland": {
       "name": "Southland",
       "seed": 9,
+      "schoolId": "ga-southland-academy-americus",
       "card": "/images/boys/basketball/teams/southland.svg"
     },
     "pinewood": {
       "name": "Pinewood",
       "seed": 10,
+      "schoolId": "ga-pinewood-christian-academy-bellville",
       "card": "/images/boys/basketball/teams/pinewood.svg"
     },
     "terrell": {
       "name": "Terrell",
       "seed": 11,
+      "schoolId": "ga-terrell-academy-dawson",
       "card": "/images/boys/basketball/teams/terrell.svg"
     },
     "tiftarea": {
       "name": "Tiftarea",
       "seed": 12,
+      "schoolId": "ga-tiftarea-academy-chula",
       "card": "/images/boys/basketball/teams/tiftarea.svg"
     }
   },
@@ -416,61 +428,73 @@
     "brookwood": {
       "name": "Brookwood",
       "seed": 1,
+      "schoolId": "ga-brookwood-academy-thomasville",
       "card": "/images/boys/basketball/teams/brookwood.svg"
     },
     "standrews": {
       "name": "St. Andrew’s",
       "seed": 2,
+      "schoolId": "ga-st-andrews-school-savannah",
       "card": "/images/boys/basketball/teams/standrews.svg"
     },
     "lakeview": {
       "name": "Lakeview",
       "seed": 3,
+      "schoolId": "ga-lakeview-academy-gainesville",
       "card": "/images/boys/basketball/teams/lakeview.svg"
     },
     "deerfieldwindsor": {
       "name": "Deerfield-Windsor",
       "seed": 4,
+      "schoolId": "ga-deerfield-windsor-school-albany",
       "card": "/images/boys/basketball/teams/deerfieldwindsor.svg"
     },
     "frederica": {
       "name": "Frederica",
       "seed": 5,
+      "schoolId": "ga-frederica-academy-st-simons-island",
       "card": "/images/boys/basketball/teams/frederica.svg"
     },
     "westminster": {
       "name": "Westminster",
       "seed": 6,
+      "schoolId": "ga-westminster-schools-of-augusta-augusta",
       "card": "/images/boys/basketball/teams/westminster.svg"
     },
     "tiftarea": {
       "name": "Tiftarea",
       "seed": 7,
+      "schoolId": "ga-tiftarea-academy-chula",
       "card": "/images/boys/basketball/teams/tiftarea.svg"
     },
     "dominionchristian": {
       "name": "Dominion Christian",
       "seed": 8,
+      "schoolId": "ga-dominion-christian-academy-marietta",
       "card": "/images/boys/basketball/teams/dominionchristian.svg"
     },
     "valwood": {
       "name": "Valwood",
       "seed": 9,
+      "schoolId": "ga-valwood-school-hahira",
       "card": "/images/boys/basketball/teams/valwood.svg"
     },
     "westfield": {
       "name": "Westfield",
       "seed": 10,
+      "schoolId": "ga-westfield-school-perry",
       "card": "/images/boys/basketball/teams/westfield.svg"
     },
     "terrell": {
       "name": "Terrell",
       "seed": 11,
+      "schoolId": "ga-terrell-academy-dawson",
       "card": "/images/boys/basketball/teams/terrell.svg"
     },
     "johnmilledge": {
       "name": "John Milledge",
       "seed": 12,
+      "schoolId": "ga-john-milledge-academy-milledgeville",
       "card": "/images/boys/basketball/teams/johnmilledge.svg"
     }
   },

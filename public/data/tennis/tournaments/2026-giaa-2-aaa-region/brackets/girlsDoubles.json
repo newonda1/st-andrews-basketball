@@ -3,7 +3,11 @@
   "Name": "Girls Doubles",
   "Gender": "Girls",
   "EventType": "Doubles",
-  "Status": "Pending Source",
+  "Status": "Source Parsed",
   "Rounds": [],
-  "Matches": []
+  "Matches": [],
+  "SourceFile": "girls doubles.pdf",
+  "PlayersDataPath": "/data/players.json",
+  "OpponentAthletesDataPath": "/data/tennis/opponentAthletes.json",
+  "Notes": "Two additional 1:00pm matches were supplied as a screenshot and are stored with RoundCode ADDITIONAL because they do not appear to feed into the main printed draw."
 }

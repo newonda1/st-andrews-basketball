@@ -3,7 +3,10 @@
   "Name": "Girls Singles",
   "Gender": "Girls",
   "EventType": "Singles",
-  "Status": "Pending Source",
+  "Status": "Source Parsed",
   "Rounds": [],
-  "Matches": []
+  "Matches": [],
+  "SourceFile": "Girls Singles.pdf",
+  "PlayersDataPath": "/data/players.json",
+  "OpponentAthletesDataPath": "/data/tennis/opponentAthletes.json"
 }

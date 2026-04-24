@@ -135,7 +135,7 @@
     "WebsiteUrl": "https://www.bullochacademy.com/",
     "AthleticsUrl": "https://www.bullochacademy.com/athletics",
     "LogoPath": "/images/schools/logos/ga-bulloch-academy-statesboro.png",
-    "LogoSourceUrl": "https://resources.finalsite.net/images/f_auto,q_auto/v1742307461/bullochacademycom/q7dqzdqmlbizbmvzzdxo/BA-Crest.png"
+    "LogoSourceUrl": "https://resources.finalsite.net/images/f_auto,q_auto/v1741957688/bullochacademycom/mlcvs5ppkqwrowalxa0o/BullochAcademySecondaryLogoImage.png"
   },
   {
     "SchoolID": "ga-burke-county-high-school-waynesboro",
@@ -642,7 +642,15 @@
     "SchoolID": "ga-southland-academy-americus",
     "Name": "Southland Academy",
     "City": "Americus",
-    "State": "GA"
+    "State": "GA",
+    "ShortName": "Southland",
+    "Mascot": "Raiders",
+    "PrimaryColor": "#144067",
+    "SecondaryColor": "#B7A35A",
+    "WebsiteUrl": "https://www.southlandacademy.org/",
+    "AthleticsUrl": "https://www.southlandacademy.org/athletics",
+    "LogoPath": "/images/schools/logos/ga-southland-academy-americus.png",
+    "LogoSourceUrl": "https://content.schoolinsites.com/api/documents/3c73c4b1b79f412f97c758e42e2172b9.png"
   },
   {
     "SchoolID": "ga-southwest-georgia-academy-damascus",
@@ -685,6 +693,20 @@
     "State": "GA"
   },
   {
+    "SchoolID": "ga-terrell-academy-dawson",
+    "Name": "Terrell Academy",
+    "City": "Dawson",
+    "State": "GA",
+    "ShortName": "Terrell",
+    "Mascot": "Eagles",
+    "PrimaryColor": "#1B1D5E",
+    "SecondaryColor": "#2B73D9",
+    "WebsiteUrl": "https://terrellacademy.com/",
+    "AthleticsUrl": "https://terrellacademy.com/athletics/",
+    "LogoPath": "/images/schools/logos/ga-terrell-academy-dawson.png",
+    "LogoSourceUrl": "https://terrellacademy.com/wp-content/uploads/2026/02/IMG_6768.jpeg"
+  },
+  {
     "SchoolID": "ga-the-habersham-school-savannah",
     "Name": "The Habersham School",
     "City": "Savannah",
@@ -694,7 +716,14 @@
     "SchoolID": "ga-the-heritage-school-newnan",
     "Name": "The Heritage School",
     "City": "Newnan",
-    "State": "GA"
+    "State": "GA",
+    "ShortName": "Heritage",
+    "Mascot": "Hawks",
+    "PrimaryColor": "#2C5AAA",
+    "SecondaryColor": "#A23134",
+    "WebsiteUrl": "https://www.heritageschool.com/",
+    "LogoPath": "/images/schools/logos/ga-the-heritage-school-newnan.png",
+    "LogoSourceUrl": "/images/boys/basketball/teams/heritage.svg"
   },
   {
     "SchoolID": "ga-the-weber-school-atlanta",
