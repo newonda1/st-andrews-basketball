@@ -1,4 +1,282 @@
 {
+  "2024": {
+    "region": {
+      "title": "2024-25 Region Tournament",
+      "teams": {
+        "frederica": {
+          "name": "Frederica",
+          "schoolId": "ga-frederica-academy-st-simons-island",
+          "card": "/images/boys/basketball/teams/frederica.svg"
+        },
+        "westminster": {
+          "name": "Westminster",
+          "schoolId": "ga-westminster-schools-of-augusta-augusta",
+          "card": "/images/boys/basketball/teams/westminster.svg"
+        },
+        "standrews": {
+          "name": "St. Andrew's",
+          "schoolId": "ga-st-andrews-school-savannah",
+          "card": "/images/boys/basketball/teams/standrews.svg"
+        },
+        "bulloch": {
+          "name": "Bulloch",
+          "schoolId": "ga-bulloch-academy-statesboro",
+          "card": "/images/boys/basketball/teams/bulloch.svg"
+        },
+        "pinewood": {
+          "name": "Pinewood",
+          "schoolId": "ga-pinewood-christian-academy-bellville",
+          "card": "/images/boys/basketball/teams/pinewood.svg"
+        }
+      },
+      "games": {
+        "playIn": {
+          "top": {
+            "teamId": "westminster",
+            "score": 41
+          },
+          "bottom": {
+            "teamId": "standrews",
+            "score": 24
+          },
+          "winner": "westminster"
+        },
+        "semi1": {
+          "top": {
+            "teamId": "frederica",
+            "score": 52
+          },
+          "bottom": {
+            "teamId": null,
+            "score": 55
+          },
+          "winner": "westminster"
+        },
+        "semi2": {
+          "top": {
+            "teamId": "bulloch",
+            "score": 51
+          },
+          "bottom": {
+            "teamId": "pinewood",
+            "score": 41
+          },
+          "winner": "bulloch"
+        },
+        "final": {
+          "top": {
+            "teamId": null,
+            "score": 51
+          },
+          "bottom": {
+            "teamId": null,
+            "score": 41
+          },
+          "winner": "westminster"
+        }
+      }
+    },
+    "state": {
+      "title": "2024-25 State Tournament",
+      "teams": {
+        "lakeview": {
+          "name": "Lakeview Academy",
+          "seed": 1,
+          "schoolId": "ga-lakeview-academy-gainesville",
+          "card": "/images/boys/basketball/teams/lakeview.svg"
+        },
+        "terrell": {
+          "name": "Terrell Academy",
+          "seed": 2,
+          "schoolId": "ga-terrell-academy-dawson",
+          "card": "/images/boys/basketball/teams/terrell.svg"
+        },
+        "piedmont": {
+          "name": "Piedmont Academy",
+          "seed": 3,
+          "schoolId": "ga-piedmont-academy-monticello",
+          "card": "/images/boys/basketball/teams/piedmont.svg"
+        },
+        "frederica": {
+          "name": "Frederica Academy",
+          "seed": 4,
+          "schoolId": "ga-frederica-academy-st-simons-island",
+          "card": "/images/boys/basketball/teams/frederica.svg"
+        },
+        "westfield": {
+          "name": "Westfield School",
+          "seed": 5,
+          "schoolId": "ga-westfield-school-perry",
+          "card": "/images/boys/basketball/teams/westfield.svg"
+        },
+        "westminster": {
+          "name": "Westminster",
+          "seed": 6,
+          "schoolId": "ga-westminster-schools-of-augusta-augusta",
+          "card": "/images/boys/basketball/teams/westminster.svg"
+        },
+        "johnmilledge": {
+          "name": "John Milledge Academy",
+          "seed": 7,
+          "schoolId": "ga-john-milledge-academy-milledgeville",
+          "card": "/images/boys/basketball/teams/johnmilledge.svg"
+        },
+        "pinewood": {
+          "name": "Pinewood Christian",
+          "seed": 8,
+          "schoolId": "ga-pinewood-christian-academy-bellville",
+          "card": "/images/boys/basketball/teams/pinewood.svg"
+        },
+        "brookwood": {
+          "name": "Brookwood",
+          "seed": 9,
+          "schoolId": "ga-brookwood-academy-thomasville",
+          "card": "/images/boys/basketball/teams/brookwood.svg"
+        },
+        "deerfieldwindsor": {
+          "name": "Deerfield-Windsor",
+          "seed": 10,
+          "schoolId": "ga-deerfield-windsor-school-albany",
+          "card": "/images/boys/basketball/teams/deerfieldwindsor.svg"
+        },
+        "dominionchristian": {
+          "name": "Dominion Christian",
+          "seed": 11,
+          "schoolId": "ga-dominion-christian-academy-marietta",
+          "card": "/images/boys/basketball/teams/dominionchristian.svg"
+        },
+        "standrews": {
+          "name": "St. Andrew's",
+          "seed": 12,
+          "schoolId": "ga-st-andrews-school-savannah",
+          "card": "/images/boys/basketball/teams/standrews.svg"
+        }
+      },
+      "games": {
+        "r1_5_12": {
+          "top": {
+            "teamId": "westfield",
+            "score": 47
+          },
+          "bottom": {
+            "teamId": "standrews",
+            "score": 20
+          },
+          "winner": "westfield"
+        },
+        "r1_6_11": {
+          "top": {
+            "teamId": "westminster",
+            "score": 58
+          },
+          "bottom": {
+            "teamId": "dominionchristian",
+            "score": 52
+          },
+          "winner": "westminster"
+        },
+        "r1_7_10": {
+          "top": {
+            "teamId": "johnmilledge",
+            "score": 55
+          },
+          "bottom": {
+            "teamId": "deerfieldwindsor",
+            "score": 39
+          },
+          "winner": "johnmilledge"
+        },
+        "r1_8_9": {
+          "top": {
+            "teamId": "pinewood",
+            "score": 46
+          },
+          "bottom": {
+            "teamId": "brookwood",
+            "score": 44
+          },
+          "winner": "pinewood"
+        },
+        "qf_4": {
+          "top": {
+            "teamId": "frederica",
+            "score": 48
+          },
+          "bottom": {
+            "teamId": "westfield",
+            "score": 35
+          },
+          "winner": "frederica"
+        },
+        "qf_3": {
+          "top": {
+            "teamId": "piedmont",
+            "score": 78
+          },
+          "bottom": {
+            "teamId": "westminster",
+            "score": 86
+          },
+          "winner": "westminster"
+        },
+        "qf_2": {
+          "top": {
+            "teamId": "terrell",
+            "score": 37
+          },
+          "bottom": {
+            "teamId": "johnmilledge",
+            "score": 40
+          },
+          "winner": "johnmilledge"
+        },
+        "qf_1": {
+          "top": {
+            "teamId": "lakeview",
+            "score": 65
+          },
+          "bottom": {
+            "teamId": "pinewood",
+            "score": 37
+          },
+          "winner": "lakeview"
+        },
+        "sf_top": {
+          "top": {
+            "teamId": "lakeview",
+            "score": 47
+          },
+          "bottom": {
+            "teamId": "frederica",
+            "score": 44
+          },
+          "winner": "lakeview"
+        },
+        "sf_bot": {
+          "top": {
+            "teamId": "westminster",
+            "score": 29
+          },
+          "bottom": {
+            "teamId": "johnmilledge",
+            "score": 53
+          },
+          "winner": "johnmilledge"
+        },
+        "final": {
+          "top": {
+            "teamId": "lakeview",
+            "score": 70
+          },
+          "bottom": {
+            "teamId": "johnmilledge",
+            "score": 29
+          },
+          "winner": "lakeview"
+        }
+      }
+    }
+  },
   "2025": {
     "region": {
       "title": "2025-26 Region Tournament",
@@ -31,23 +309,47 @@
       },
       "games": {
         "playIn": {
-          "top": { "teamId": "bulloch", "score": 43 },
-          "bottom": { "teamId": "pinewood", "score": 50 },
+          "top": {
+            "teamId": "bulloch",
+            "score": 43
+          },
+          "bottom": {
+            "teamId": "pinewood",
+            "score": 50
+          },
           "winner": "pinewood"
         },
         "semi1": {
-          "top": { "teamId": "frederica", "score": 57 },
-          "bottom": { "teamId": null, "score": 31 },
+          "top": {
+            "teamId": "frederica",
+            "score": 57
+          },
+          "bottom": {
+            "teamId": null,
+            "score": 31
+          },
           "winner": "frederica"
         },
         "semi2": {
-          "top": { "teamId": "standrews", "score": 48 },
-          "bottom": { "teamId": "westminster", "score": 54 },
+          "top": {
+            "teamId": "standrews",
+            "score": 48
+          },
+          "bottom": {
+            "teamId": "westminster",
+            "score": 54
+          },
           "winner": "westminster"
         },
         "final": {
-          "top": { "teamId": null, "score": 62 },
-          "bottom": { "teamId": null, "score": 42 },
+          "top": {
+            "teamId": null,
+            "score": 62
+          },
+          "bottom": {
+            "teamId": null,
+            "score": 42
+          },
           "winner": "frederica"
         }
       }
@@ -130,58 +432,124 @@
       },
       "games": {
         "r1_5_12": {
-          "top": { "teamId": "westminster", "score": 63 },
-          "bottom": { "teamId": "deerfieldwindsor", "score": 33 },
+          "top": {
+            "teamId": "westminster",
+            "score": 63
+          },
+          "bottom": {
+            "teamId": "deerfieldwindsor",
+            "score": 33
+          },
           "winner": "westminster"
         },
         "r1_6_11": {
-          "top": { "teamId": "johnmilledge", "score": 63 },
-          "bottom": { "teamId": "piedmont", "score": 45 },
+          "top": {
+            "teamId": "johnmilledge",
+            "score": 63
+          },
+          "bottom": {
+            "teamId": "piedmont",
+            "score": 45
+          },
           "winner": "johnmilledge"
         },
         "r1_7_10": {
-          "top": { "teamId": "dominionchristian", "score": 49 },
-          "bottom": { "teamId": "pinewood", "score": 48 },
+          "top": {
+            "teamId": "dominionchristian",
+            "score": 49
+          },
+          "bottom": {
+            "teamId": "pinewood",
+            "score": 48
+          },
           "winner": "dominionchristian"
         },
         "r1_8_9": {
-          "top": { "teamId": "standrews", "score": 59 },
-          "bottom": { "teamId": "tiftarea", "score": 38 },
+          "top": {
+            "teamId": "standrews",
+            "score": 59
+          },
+          "bottom": {
+            "teamId": "tiftarea",
+            "score": 38
+          },
           "winner": "standrews"
         },
         "qf_4": {
-          "top": { "teamId": "lakeview", "score": 59 },
-          "bottom": { "teamId": "westminster", "score": 43 },
+          "top": {
+            "teamId": "lakeview",
+            "score": 59
+          },
+          "bottom": {
+            "teamId": "westminster",
+            "score": 43
+          },
           "winner": "lakeview"
         },
         "qf_3": {
-          "top": { "teamId": "westfield", "score": 50 },
-          "bottom": { "teamId": "johnmilledge", "score": 35 },
+          "top": {
+            "teamId": "westfield",
+            "score": 50
+          },
+          "bottom": {
+            "teamId": "johnmilledge",
+            "score": 35
+          },
           "winner": "westfield"
         },
         "qf_2": {
-          "top": { "teamId": "terrell", "score": 64 },
-          "bottom": { "teamId": "dominionchristian", "score": 36 },
+          "top": {
+            "teamId": "terrell",
+            "score": 64
+          },
+          "bottom": {
+            "teamId": "dominionchristian",
+            "score": 36
+          },
           "winner": "terrell"
         },
         "qf_1": {
-          "top": { "teamId": "frederica", "score": 52 },
-          "bottom": { "teamId": "standrews", "score": 31 },
+          "top": {
+            "teamId": "frederica",
+            "score": 52
+          },
+          "bottom": {
+            "teamId": "standrews",
+            "score": 31
+          },
           "winner": "frederica"
         },
         "sf_top": {
-          "top": { "teamId": "frederica", "score": 38 },
-          "bottom": { "teamId": "lakeview", "score": 51 },
+          "top": {
+            "teamId": "frederica",
+            "score": 38
+          },
+          "bottom": {
+            "teamId": "lakeview",
+            "score": 51
+          },
           "winner": "lakeview"
         },
         "sf_bot": {
-          "top": { "teamId": "westfield", "score": 22 },
-          "bottom": { "teamId": "terrell", "score": 38 },
+          "top": {
+            "teamId": "westfield",
+            "score": 22
+          },
+          "bottom": {
+            "teamId": "terrell",
+            "score": 38
+          },
           "winner": "terrell"
         },
         "final": {
-          "top": { "teamId": "lakeview", "score": 48 },
-          "bottom": { "teamId": "terrell", "score": 51 },
+          "top": {
+            "teamId": "lakeview",
+            "score": 48
+          },
+          "bottom": {
+            "teamId": "terrell",
+            "score": 51
+          },
           "winner": "terrell"
         }
       }

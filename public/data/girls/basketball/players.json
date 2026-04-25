@@ -42,6 +42,41 @@
     "JerseyNumber": 10
   },
   {
+    "PlayerID": 202402,
+    "FirstName": "Gray",
+    "LastName": "Holmes",
+    "GradYear": 2025,
+    "JerseyNumber": 1
+  },
+  {
+    "PlayerID": 202403,
+    "FirstName": "Scarlett",
+    "LastName": "Holmes",
+    "GradYear": 2027,
+    "JerseyNumber": 5
+  },
+  {
+    "PlayerID": 202404,
+    "FirstName": "Addison",
+    "LastName": "Yates",
+    "GradYear": 2025,
+    "JerseyNumber": 11
+  },
+  {
+    "PlayerID": 202405,
+    "FirstName": "Maya",
+    "LastName": "Salter",
+    "GradYear": 2025,
+    "JerseyNumber": 25
+  },
+  {
+    "PlayerID": 202406,
+    "FirstName": "Mackenzie",
+    "LastName": "Mahan",
+    "GradYear": 2027,
+    "JerseyNumber": 35
+  },
+  {
     "PlayerID": 202501,
     "FirstName": "Aubri",
     "LastName": "Rutledge",

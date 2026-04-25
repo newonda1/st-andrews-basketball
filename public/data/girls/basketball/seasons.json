@@ -1,5 +1,15 @@
 [
   {
+    "SeasonID": 2024,
+    "YearStart": 2024,
+    "YearEnd": 2025,
+    "HeadCoach": "Daniel Jackson",
+    "RegionSeed": 5,
+    "RegionFinish": "Region Quarterfinalist",
+    "StateSeed": 12,
+    "StateFinish": "First Round"
+  },
+  {
     "SeasonID": 2025,
     "YearStart": 2025,
     "YearEnd": 2026,

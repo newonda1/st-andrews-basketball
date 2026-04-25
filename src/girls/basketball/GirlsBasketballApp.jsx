@@ -18,9 +18,13 @@ import GameDetailHistorical from "./pages/GameDetailHistorical";
 import PlayerPage from "./pages/PlayerPage";
 
 import Season2025_26 from "./seasons/Season2025_26";
+import Season2024_25 from "./seasons/Season2024_25";
 import SeasonPlaceholder from "./seasons/SeasonPlaceholder";
 
-const seasonPages = [{ slug: "2025-26", Component: Season2025_26 }];
+const seasonPages = [
+  { slug: "2025-26", Component: Season2025_26 },
+  { slug: "2024-25", Component: Season2024_25 },
+];
 
 const menuSections = [
   {
