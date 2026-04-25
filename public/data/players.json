@@ -1474,7 +1474,7 @@
     "PlayerID": 201812,
     "FirstName": "Jude",
     "LastName": "Forti",
-    "GradYear": null,
+    "GradYear": 2021,
     "Gender": "Boys"
   },
   {
@@ -1632,7 +1632,7 @@
     "PlayerID": 202121,
     "FirstName": "Ajay",
     "LastName": "Watson",
-    "GradYear": null
+    "GradYear": 2022
   },
   {
     "PlayerID": 202122,
@@ -1645,19 +1645,19 @@
     "PlayerID": 202123,
     "FirstName": "Ben",
     "LastName": "Bingley",
-    "GradYear": null
+    "GradYear": 2021
   },
   {
     "PlayerID": 202124,
     "FirstName": "Will",
     "LastName": "Livingston",
-    "GradYear": null
+    "GradYear": 2021
   },
   {
     "PlayerID": 202125,
-    "FirstName": "Keagan",
+    "FirstName": "Kegan",
     "LastName": "Kurinij",
-    "GradYear": null
+    "GradYear": 2021
   },
   {
     "PlayerID": 202126,
@@ -1669,13 +1669,13 @@
     "PlayerID": 202127,
     "FirstName": "Grant",
     "LastName": "Viands",
-    "GradYear": null
+    "GradYear": 2021
   },
   {
     "PlayerID": 202128,
     "FirstName": "Matt",
     "LastName": "Licata",
-    "GradYear": null
+    "GradYear": 2024
   },
   {
     "PlayerID": 202129,
@@ -1686,8 +1686,8 @@
   {
     "PlayerID": 202130,
     "FirstName": "Carter",
-    "LastName": "Klienpeter",
-    "GradYear": null
+    "LastName": "Kleinpeter",
+    "GradYear": 2023
   },
   {
     "PlayerID": 202131,
@@ -2403,7 +2403,7 @@
     "PlayerID": 2026041,
     "FirstName": "Price",
     "LastName": "Mahany",
-    "GradYear": null,
+    "GradYear": 2022,
     "Gender": "Boys"
   },
   {
@@ -2860,5 +2860,77 @@
     "LastName": "Leiby-Redden",
     "GradYear": null,
     "Gender": "Girls"
+  },
+  {
+    "PlayerID": 202132,
+    "FirstName": "Wesley",
+    "LastName": "Worsham",
+    "GradYear": 2024
+  },
+  {
+    "PlayerID": 202133,
+    "FirstName": "Zach",
+    "LastName": "Appel",
+    "GradYear": 2024
+  },
+  {
+    "PlayerID": 202134,
+    "FirstName": "Cole",
+    "LastName": "Rychak",
+    "GradYear": 2024
+  },
+  {
+    "PlayerID": 202135,
+    "FirstName": "Jacob",
+    "LastName": "Bazemore",
+    "GradYear": 2025
+  },
+  {
+    "PlayerID": 202136,
+    "FirstName": "Julian",
+    "LastName": "Kraft",
+    "GradYear": 2024
+  },
+  {
+    "PlayerID": 202137,
+    "FirstName": "Adrian",
+    "LastName": "Harwood",
+    "GradYear": 2025
+  },
+  {
+    "PlayerID": 202138,
+    "FirstName": "Will",
+    "LastName": "Rowland",
+    "GradYear": 2024
+  },
+  {
+    "PlayerID": 202139,
+    "FirstName": "Bj",
+    "LastName": "Jallah",
+    "GradYear": 2022
+  },
+  {
+    "PlayerID": 202140,
+    "FirstName": "Justus",
+    "LastName": "Knapp",
+    "GradYear": 2023
+  },
+  {
+    "PlayerID": 202141,
+    "FirstName": "Leroy",
+    "LastName": "Spann",
+    "GradYear": 2024
+  },
+  {
+    "PlayerID": 202142,
+    "FirstName": "Zion",
+    "LastName": "Griffin",
+    "GradYear": 2023
+  },
+  {
+    "PlayerID": 202143,
+    "FirstName": "Samuel",
+    "LastName": "Rolland-mills",
+    "GradYear": 2022
   }
 ]

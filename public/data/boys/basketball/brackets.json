@@ -1,4 +1,399 @@
 {
+  "2020": {
+    "region": {
+      "title": "2020-2021 Region Tournament",
+      "teams": {
+        "standrews": { "name": "St. Andrew's", "schoolId": "ga-st-andrews-school-savannah", "card": "/images/boys/basketball/teams/standrews.svg" },
+        "frederica": { "name": "Frederica", "schoolId": "ga-frederica-academy-st-simons-island", "card": "/images/boys/basketball/teams/frederica.svg" },
+        "bulloch": { "name": "Bulloch", "schoolId": "ga-bulloch-academy-statesboro", "card": "/images/boys/basketball/teams/bulloch.svg" },
+        "pinewood": { "name": "Pinewood", "schoolId": "ga-pinewood-christian-academy-bellville", "card": "/images/boys/basketball/teams/pinewood.svg" },
+        "trinity": { "name": "Trinity Christian", "schoolId": "ga-trinity-christian-academy-dublin" }
+      },
+      "games": {
+        "playIn": { "top": { "teamId": "pinewood", "score": 63 }, "bottom": { "teamId": "trinity", "score": 45 }, "winner": "pinewood" },
+        "semi1": { "top": { "teamId": "standrews", "score": 53 }, "bottom": { "teamId": "pinewood", "score": 49 }, "winner": "standrews" },
+        "semi2": { "top": { "teamId": "frederica", "score": 46 }, "bottom": { "teamId": "bulloch", "score": 52 }, "winner": "bulloch" },
+        "final": { "top": { "teamId": "standrews", "score": 54 }, "bottom": { "teamId": "bulloch", "score": 55 }, "winner": "bulloch" }
+      }
+    },
+    "state": {
+      "format": "16",
+      "title": "2020-2021 State Tournament",
+      "teams": {
+        "creekside": { "name": "Creekside Christian", "seed": 1 },
+        "johnmilledge": { "name": "John Milledge", "seed": 2, "schoolId": "ga-john-milledge-academy-milledgeville", "card": "/images/boys/basketball/teams/johnmilledge.svg" },
+        "southland": { "name": "Southland", "seed": 3, "schoolId": "ga-southland-academy-americus", "card": "/images/boys/basketball/teams/southland.svg" },
+        "cristorey": { "name": "Cristo Rey Atlanta", "seed": 4 },
+        "holyspirit": { "name": "Holy Spirit Prep", "seed": 5, "schoolId": "ga-holy-spirit-preparatory-school-atlanta" },
+        "bulloch": { "name": "Bulloch", "seed": 6, "schoolId": "ga-bulloch-academy-statesboro", "card": "/images/boys/basketball/teams/bulloch.svg" },
+        "standrews": { "name": "St. Andrew's", "seed": 7, "schoolId": "ga-st-andrews-school-savannah", "card": "/images/boys/basketball/teams/standrews.svg" },
+        "brookwood": { "name": "Brookwood", "seed": 8, "schoolId": "ga-brookwood-academy-thomasville", "card": "/images/boys/basketball/teams/brookwood.svg" },
+        "frederica": { "name": "Frederica", "seed": 9, "schoolId": "ga-frederica-academy-st-simons-island", "card": "/images/boys/basketball/teams/frederica.svg" },
+        "valwood": { "name": "Valwood", "seed": 10, "schoolId": "ga-valwood-school-hahira", "card": "/images/boys/basketball/teams/valwood.svg" },
+        "bethlehem": { "name": "Bethlehem Christian", "seed": 11 },
+        "westfield": { "name": "Westfield", "seed": 12, "schoolId": "ga-westfield-school-perry", "card": "/images/boys/basketball/teams/westfield.svg" },
+        "westminster": { "name": "Westminster", "seed": 13, "schoolId": "ga-westminster-schools-of-augusta-augusta", "card": "/images/boys/basketball/teams/westminster.svg" },
+        "trinity": { "name": "Trinity Christian", "seed": 14, "schoolId": "ga-trinity-christian-academy-dublin" },
+        "dominionchristian": { "name": "Dominion Christian", "seed": 15, "schoolId": "ga-dominion-christian-academy-marietta", "card": "/images/boys/basketball/teams/dominionchristian.svg" },
+        "tiftarea": { "name": "Tiftarea", "seed": 16, "schoolId": "ga-tiftarea-academy-chula", "card": "/images/boys/basketball/teams/tiftarea.svg" }
+      },
+      "games": {
+        "r1_1_16": { "top": { "teamId": "creekside", "score": 110 }, "bottom": { "teamId": "tiftarea", "score": 28 }, "winner": "creekside" },
+        "r1_8_9": { "top": { "teamId": "brookwood", "score": 67 }, "bottom": { "teamId": "frederica", "score": 65 }, "winner": "brookwood" },
+        "r1_4_13": { "top": { "teamId": "cristorey", "score": 71 }, "bottom": { "teamId": "westminster", "score": 23 }, "winner": "cristorey" },
+        "r1_5_12": { "top": { "teamId": "holyspirit", "score": 52 }, "bottom": { "teamId": "westfield", "score": 34 }, "winner": "holyspirit" },
+        "r1_2_15": { "top": { "teamId": "johnmilledge", "score": 62 }, "bottom": { "teamId": "dominionchristian", "score": 31 }, "winner": "johnmilledge" },
+        "r1_7_10": { "top": { "teamId": "standrews", "score": 52 }, "bottom": { "teamId": "valwood", "score": 43 }, "winner": "standrews" },
+        "r1_3_14": { "top": { "teamId": "southland", "score": 54 }, "bottom": { "teamId": "trinity", "score": 43 }, "winner": "southland" },
+        "r1_6_11": { "top": { "teamId": "bulloch", "score": 56 }, "bottom": { "teamId": "bethlehem", "score": 53 }, "winner": "bulloch" },
+        "qf_1": { "top": { "teamId": "creekside", "score": 65 }, "bottom": { "teamId": "brookwood", "score": 52 }, "winner": "creekside" },
+        "qf_4": { "top": { "teamId": "cristorey", "score": 59 }, "bottom": { "teamId": "holyspirit", "score": 44 }, "winner": "cristorey" },
+        "qf_2": { "top": { "teamId": "johnmilledge", "score": 64 }, "bottom": { "teamId": "standrews", "score": 39 }, "winner": "johnmilledge" },
+        "qf_3": { "top": { "teamId": "southland", "score": 35 }, "bottom": { "teamId": "bulloch", "score": 53 }, "winner": "bulloch" },
+        "sf_top": { "top": { "teamId": "creekside", "score": 89 }, "bottom": { "teamId": "cristorey", "score": 68 }, "winner": "creekside" },
+        "sf_bot": { "top": { "teamId": "johnmilledge", "score": 40 }, "bottom": { "teamId": "bulloch", "score": 33 }, "winner": "johnmilledge" },
+        "final": { "top": { "teamId": "creekside", "score": 55 }, "bottom": { "teamId": "johnmilledge", "score": 60 }, "winner": "johnmilledge" }
+      }
+    }
+  },
+  "2021": {
+    "region": {
+      "title": "2021-2022 Region Tournament",
+      "teams": {
+        "standrews": {
+          "name": "St. Andrew's",
+          "schoolId": "ga-st-andrews-school-savannah",
+          "card": "/images/boys/basketball/teams/standrews.svg"
+        },
+        "frederica": {
+          "name": "Frederica",
+          "schoolId": "ga-frederica-academy-st-simons-island",
+          "card": "/images/boys/basketball/teams/frederica.svg"
+        },
+        "trinity": {
+          "name": "Trinity Christian",
+          "schoolId": "ga-trinity-christian-academy-dublin"
+        },
+        "pinewood": {
+          "name": "Pinewood",
+          "schoolId": "ga-pinewood-christian-academy-bellville",
+          "card": "/images/boys/basketball/teams/pinewood.svg"
+        },
+        "bulloch": {
+          "name": "Bulloch",
+          "schoolId": "ga-bulloch-academy-statesboro",
+          "card": "/images/boys/basketball/teams/bulloch.svg"
+        }
+      },
+      "games": {
+        "playIn": {
+          "top": {
+            "teamId": "pinewood",
+            "score": 63
+          },
+          "bottom": {
+            "teamId": "bulloch",
+            "score": 51
+          },
+          "winner": "pinewood"
+        },
+        "semi1": {
+          "top": {
+            "teamId": "standrews",
+            "score": 69
+          },
+          "bottom": {
+            "teamId": "pinewood",
+            "score": 42
+          },
+          "winner": "standrews"
+        },
+        "semi2": {
+          "top": {
+            "teamId": "frederica",
+            "score": 78
+          },
+          "bottom": {
+            "teamId": "trinity",
+            "score": 47
+          },
+          "winner": "frederica"
+        },
+        "final": {
+          "top": {
+            "teamId": "standrews",
+            "score": 47
+          },
+          "bottom": {
+            "teamId": "frederica",
+            "score": 44
+          },
+          "winner": "standrews"
+        }
+      }
+    },
+    "state": {
+      "format": "16",
+      "title": "2021-2022 State Tournament",
+      "teams": {
+        "johnmilledge": {
+          "name": "John Milledge",
+          "seed": 1,
+          "schoolId": "ga-john-milledge-academy-milledgeville",
+          "card": "/images/boys/basketball/teams/johnmilledge.svg"
+        },
+        "southland": {
+          "name": "Southland",
+          "seed": 2,
+          "schoolId": "ga-southland-academy-americus",
+          "card": "/images/boys/basketball/teams/southland.svg"
+        },
+        "standrews": {
+          "name": "St. Andrew's",
+          "seed": 3,
+          "schoolId": "ga-st-andrews-school-savannah",
+          "card": "/images/boys/basketball/teams/standrews.svg"
+        },
+        "frederica": {
+          "name": "Frederica",
+          "seed": 4,
+          "schoolId": "ga-frederica-academy-st-simons-island",
+          "card": "/images/boys/basketball/teams/frederica.svg"
+        },
+        "creekside": {
+          "name": "Creekside Christian",
+          "seed": 5
+        },
+        "holyspirit": {
+          "name": "Holy Spirit Prep",
+          "seed": 6,
+          "schoolId": "ga-holy-spirit-preparatory-school-atlanta"
+        },
+        "bethlehem": {
+          "name": "Bethlehem Christian",
+          "seed": 7
+        },
+        "brookwood": {
+          "name": "Brookwood",
+          "seed": 8,
+          "schoolId": "ga-brookwood-academy-thomasville",
+          "card": "/images/boys/basketball/teams/brookwood.svg"
+        },
+        "dominionchristian": {
+          "name": "Dominion Christian",
+          "seed": 9,
+          "schoolId": "ga-dominion-christian-academy-marietta",
+          "card": "/images/boys/basketball/teams/dominionchristian.svg"
+        },
+        "westminster": {
+          "name": "Westminster",
+          "seed": 10,
+          "schoolId": "ga-westminster-schools-of-augusta-augusta",
+          "card": "/images/boys/basketball/teams/westminster.svg"
+        },
+        "pinewood": {
+          "name": "Pinewood",
+          "seed": 11,
+          "schoolId": "ga-pinewood-christian-academy-bellville",
+          "card": "/images/boys/basketball/teams/pinewood.svg"
+        },
+        "valwood": {
+          "name": "Valwood",
+          "seed": 12,
+          "schoolId": "ga-valwood-school-hahira",
+          "card": "/images/boys/basketball/teams/valwood.svg"
+        },
+        "trinity": {
+          "name": "Trinity Christian",
+          "seed": 13,
+          "schoolId": "ga-trinity-christian-academy-dublin"
+        },
+        "youngamericans": {
+          "name": "Young Americans Christian",
+          "seed": 14
+        },
+        "tiftarea": {
+          "name": "Tiftarea",
+          "seed": 15,
+          "schoolId": "ga-tiftarea-academy-chula",
+          "card": "/images/boys/basketball/teams/tiftarea.svg"
+        },
+        "westfield": {
+          "name": "Westfield",
+          "seed": 16,
+          "schoolId": "ga-westfield-school-perry",
+          "card": "/images/boys/basketball/teams/westfield.svg"
+        }
+      },
+      "games": {
+        "r1_1_16": {
+          "top": {
+            "teamId": "johnmilledge",
+            "score": 87
+          },
+          "bottom": {
+            "teamId": "westfield",
+            "score": 28
+          },
+          "winner": "johnmilledge"
+        },
+        "r1_8_9": {
+          "top": {
+            "teamId": "brookwood",
+            "score": 62
+          },
+          "bottom": {
+            "teamId": "dominionchristian",
+            "score": 52
+          },
+          "winner": "brookwood"
+        },
+        "r1_4_13": {
+          "top": {
+            "teamId": "frederica",
+            "score": 32
+          },
+          "bottom": {
+            "teamId": "trinity",
+            "score": 29
+          },
+          "winner": "frederica"
+        },
+        "r1_5_12": {
+          "top": {
+            "teamId": "creekside",
+            "score": 86
+          },
+          "bottom": {
+            "teamId": "valwood",
+            "score": 47
+          },
+          "winner": "creekside"
+        },
+        "r1_2_15": {
+          "top": {
+            "teamId": "southland",
+            "score": 72
+          },
+          "bottom": {
+            "teamId": "tiftarea",
+            "score": 42
+          },
+          "winner": "southland"
+        },
+        "r1_7_10": {
+          "top": {
+            "teamId": "bethlehem",
+            "score": 46
+          },
+          "bottom": {
+            "teamId": "westminster",
+            "score": 42
+          },
+          "winner": "bethlehem"
+        },
+        "r1_3_14": {
+          "top": {
+            "teamId": "standrews",
+            "score": 69
+          },
+          "bottom": {
+            "teamId": "youngamericans",
+            "score": 46
+          },
+          "winner": "standrews"
+        },
+        "r1_6_11": {
+          "top": {
+            "teamId": "holyspirit",
+            "score": 79
+          },
+          "bottom": {
+            "teamId": "pinewood",
+            "score": 49
+          },
+          "winner": "holyspirit"
+        },
+        "qf_1": {
+          "top": {
+            "teamId": "johnmilledge",
+            "score": 68
+          },
+          "bottom": {
+            "teamId": "brookwood",
+            "score": 38
+          },
+          "winner": "johnmilledge"
+        },
+        "qf_4": {
+          "top": {
+            "teamId": "frederica",
+            "score": 39
+          },
+          "bottom": {
+            "teamId": "creekside",
+            "score": 61
+          },
+          "winner": "creekside"
+        },
+        "qf_2": {
+          "top": {
+            "teamId": "southland",
+            "score": 44
+          },
+          "bottom": {
+            "teamId": "bethlehem",
+            "score": 24
+          },
+          "winner": "southland"
+        },
+        "qf_3": {
+          "top": {
+            "teamId": "standrews",
+            "score": 53
+          },
+          "bottom": {
+            "teamId": "holyspirit",
+            "score": 50
+          },
+          "winner": "standrews"
+        },
+        "sf_top": {
+          "top": {
+            "teamId": "johnmilledge",
+            "score": 42
+          },
+          "bottom": {
+            "teamId": "creekside",
+            "score": 40
+          },
+          "winner": "johnmilledge"
+        },
+        "sf_bot": {
+          "top": {
+            "teamId": "southland",
+            "score": 15
+          },
+          "bottom": {
+            "teamId": "standrews",
+            "score": 47
+          },
+          "winner": "standrews"
+        },
+        "final": {
+          "top": {
+            "teamId": "johnmilledge",
+            "score": 47
+          },
+          "bottom": {
+            "teamId": "standrews",
+            "score": 49
+          },
+          "winner": "standrews"
+        }
+      }
+    }
+  },
    "2022": {
     "region": {
       "title": "2022-2023 Region Tournament",

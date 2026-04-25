@@ -326,14 +326,14 @@
     "FirstName": "Rod",
     "LastName": "Conley",
     "GradYear": 2023,
-    "JerseyNumber": null
+    "JerseyNumber": 15
   },
   {
     "PlayerID": 202201,
     "FirstName": "Cullen",
     "LastName": "Conner",
     "GradYear": 2024,
-    "JerseyNumber": null
+    "JerseyNumber": 25
   },
   {
     "PlayerID": 202103,
@@ -361,14 +361,14 @@
     "FirstName": "Kaleb",
     "LastName": "Lofton",
     "GradYear": 2023,
-    "JerseyNumber": null
+    "JerseyNumber": 11
   },
   {
     "PlayerID": 202006,
     "FirstName": "Luke",
     "LastName": "Peaster",
     "GradYear": 2023,
-    "JerseyNumber": null
+    "JerseyNumber": 5
   },
   {
     "PlayerID": 202106,
@@ -403,7 +403,7 @@
     "FirstName": "Coleman",
     "LastName": "Whipple",
     "GradYear": 2023,
-    "JerseyNumber": null
+    "JerseyNumber": 4
   },
   {
     "PlayerID": 202205,
@@ -453,5 +453,201 @@
     "LastName": "Copic",
     "GradYear": 2026,
     "JerseyNumber": 33
+  },
+  {
+    "PlayerID": 202121,
+    "FirstName": "Ajay",
+    "LastName": "Watson",
+    "GradYear": 2022,
+    "JerseyNumber": 34
+  },
+  {
+    "PlayerID": 202211,
+    "FirstName": "Andrew",
+    "LastName": "Bacon",
+    "GradYear": 2023,
+    "JerseyNumber": 13
+  },
+  {
+    "PlayerID": 2026041,
+    "FirstName": "Price",
+    "LastName": "Mahany",
+    "GradYear": 2022,
+    "JerseyNumber": 4
+  },
+  {
+    "PlayerID": 202132,
+    "FirstName": "Wesley",
+    "LastName": "Worsham",
+    "GradYear": 2024,
+    "JerseyNumber": null
+  },
+  {
+    "PlayerID": 202133,
+    "FirstName": "Zach",
+    "LastName": "Appel",
+    "GradYear": 2024,
+    "JerseyNumber": null
+  },
+  {
+    "PlayerID": 202134,
+    "FirstName": "Cole",
+    "LastName": "Rychak",
+    "GradYear": 2024,
+    "JerseyNumber": null
+  },
+  {
+    "PlayerID": 202135,
+    "FirstName": "Jacob",
+    "LastName": "Bazemore",
+    "GradYear": 2025,
+    "JerseyNumber": null
+  },
+  {
+    "PlayerID": 202136,
+    "FirstName": "Julian",
+    "LastName": "Kraft",
+    "GradYear": 2024,
+    "JerseyNumber": null
+  },
+  {
+    "PlayerID": 202137,
+    "FirstName": "Adrian",
+    "LastName": "Harwood",
+    "GradYear": 2025,
+    "JerseyNumber": null
+  },
+  {
+    "PlayerID": 202138,
+    "FirstName": "Will",
+    "LastName": "Rowland",
+    "GradYear": 2024,
+    "JerseyNumber": null
+  },
+  {
+    "PlayerID": 202139,
+    "FirstName": "Bj",
+    "LastName": "Jallah",
+    "GradYear": 2022,
+    "JerseyNumber": null
+  },
+  {
+    "PlayerID": 202140,
+    "FirstName": "Justus",
+    "LastName": "Knapp",
+    "GradYear": 2023,
+    "JerseyNumber": null
+  },
+  {
+    "PlayerID": 201812,
+    "FirstName": "Jude",
+    "LastName": "Forti",
+    "GradYear": 2021,
+    "JerseyNumber": null
+  },
+  {
+    "PlayerID": 202109,
+    "FirstName": "Gabe",
+    "LastName": "Barnhill",
+    "GradYear": 2022,
+    "JerseyNumber": 12
+  },
+  {
+    "PlayerID": 202113,
+    "FirstName": "Ethan",
+    "LastName": "Bland",
+    "GradYear": 2022,
+    "JerseyNumber": 22
+  },
+  {
+    "PlayerID": 202123,
+    "FirstName": "Ben",
+    "LastName": "Bingley",
+    "GradYear": 2021,
+    "JerseyNumber": 34
+  },
+  {
+    "PlayerID": 202124,
+    "FirstName": "Will",
+    "LastName": "Livingston",
+    "GradYear": 2021,
+    "JerseyNumber": 10
+  },
+  {
+    "PlayerID": 202125,
+    "FirstName": "Kegan",
+    "LastName": "Kurinij",
+    "GradYear": 2021,
+    "JerseyNumber": 25
+  },
+  {
+    "PlayerID": 202127,
+    "FirstName": "Grant",
+    "LastName": "Viands",
+    "GradYear": 2021,
+    "JerseyNumber": 24
+  },
+  {
+    "PlayerID": 202128,
+    "FirstName": "Matt",
+    "LastName": "Licata",
+    "GradYear": 2024,
+    "JerseyNumber": null
+  },
+  {
+    "PlayerID": 202130,
+    "FirstName": "Carter",
+    "LastName": "Kleinpeter",
+    "GradYear": 2023,
+    "JerseyNumber": 15
+  },
+  {
+    "PlayerID": 202313,
+    "FirstName": "Tripp",
+    "LastName": "Jackson",
+    "GradYear": 2024,
+    "JerseyNumber": null
+  },
+  {
+    "PlayerID": 202323,
+    "FirstName": "Hayward",
+    "LastName": "Pollard",
+    "GradYear": 2024,
+    "JerseyNumber": null
+  },
+  {
+    "PlayerID": 2026030,
+    "FirstName": "Grayson",
+    "LastName": "Abernathy",
+    "GradYear": null,
+    "JerseyNumber": 15
+  },
+  {
+    "PlayerID": 2026035,
+    "FirstName": "Ben",
+    "LastName": "Jones",
+    "GradYear": null,
+    "JerseyNumber": 5
+  },
+  {
+    "PlayerID": 202141,
+    "FirstName": "Leroy",
+    "LastName": "Spann",
+    "GradYear": 2024,
+    "JerseyNumber": null
+  },
+  {
+    "PlayerID": 202142,
+    "FirstName": "Zion",
+    "LastName": "Griffin",
+    "GradYear": 2023,
+    "JerseyNumber": null
+  },
+  {
+    "PlayerID": 202143,
+    "FirstName": "Samuel",
+    "LastName": "Rolland-mills",
+    "GradYear": 2022,
+    "JerseyNumber": null
   }
 ]
