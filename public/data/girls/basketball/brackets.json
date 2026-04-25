@@ -1,4 +1,282 @@
 {
+  "2022": {
+    "region": {
+      "title": "2022-23 Region Tournament",
+      "teams": {
+        "bulloch": {
+          "name": "Bulloch",
+          "schoolId": "ga-bulloch-academy-statesboro",
+          "card": "/images/boys/basketball/teams/bulloch.svg"
+        },
+        "pinewood": {
+          "name": "Pinewood",
+          "schoolId": "ga-pinewood-christian-academy-bellville",
+          "card": "/images/boys/basketball/teams/pinewood.svg"
+        },
+        "frederica": {
+          "name": "Frederica",
+          "schoolId": "ga-frederica-academy-st-simons-island",
+          "card": "/images/boys/basketball/teams/frederica.svg"
+        },
+        "westminster": {
+          "name": "Westminster",
+          "schoolId": "ga-westminster-schools-of-augusta-augusta",
+          "card": "/images/boys/basketball/teams/westminster.svg"
+        },
+        "standrews": {
+          "name": "St. Andrew's",
+          "schoolId": "ga-st-andrews-school-savannah",
+          "card": "/images/boys/basketball/teams/standrews.svg"
+        }
+      },
+      "games": {
+        "playIn": {
+          "top": {
+            "teamId": "westminster",
+            "score": 42
+          },
+          "bottom": {
+            "teamId": "standrews",
+            "score": 48
+          },
+          "winner": "standrews"
+        },
+        "semi1": {
+          "top": {
+            "teamId": "bulloch",
+            "score": 43
+          },
+          "bottom": {
+            "teamId": null,
+            "score": 18
+          },
+          "winner": "bulloch"
+        },
+        "semi2": {
+          "top": {
+            "teamId": "pinewood",
+            "score": 37
+          },
+          "bottom": {
+            "teamId": "frederica",
+            "score": 33
+          },
+          "winner": "pinewood"
+        },
+        "final": {
+          "top": {
+            "teamId": null,
+            "score": 56
+          },
+          "bottom": {
+            "teamId": null,
+            "score": 26
+          },
+          "winner": "bulloch"
+        }
+      }
+    },
+    "state": {
+      "title": "2022-23 State Tournament",
+      "teams": {
+        "deerfieldwindsor": {
+          "name": "Deerfield-Windsor",
+          "seed": 1,
+          "schoolId": "ga-deerfield-windsor-school-albany",
+          "card": "/images/boys/basketball/teams/deerfieldwindsor.svg"
+        },
+        "southland": {
+          "name": "Southland Academy",
+          "seed": 2,
+          "schoolId": "ga-southland-academy-americus",
+          "card": "/images/boys/basketball/teams/southland.svg"
+        },
+        "tiftarea": {
+          "name": "Tiftarea Academy",
+          "seed": 3,
+          "schoolId": "ga-tiftarea-academy-chula",
+          "card": "/images/boys/basketball/teams/tiftarea.svg"
+        },
+        "johnmilledge": {
+          "name": "John Milledge Academy",
+          "seed": 4,
+          "schoolId": "ga-john-milledge-academy-milledgeville",
+          "card": "/images/boys/basketball/teams/johnmilledge.svg"
+        },
+        "lakeview": {
+          "name": "Lakeview Academy",
+          "seed": 5,
+          "schoolId": "ga-lakeview-academy-gainesville",
+          "card": "/images/boys/basketball/teams/lakeview.svg"
+        },
+        "terrell": {
+          "name": "Terrell Academy",
+          "seed": 6,
+          "schoolId": "ga-terrell-academy-dawson",
+          "card": "/images/boys/basketball/teams/terrell.svg"
+        },
+        "frederica": {
+          "name": "Frederica Academy",
+          "seed": 7,
+          "schoolId": "ga-frederica-academy-st-simons-island",
+          "card": "/images/boys/basketball/teams/frederica.svg"
+        },
+        "pinewood": {
+          "name": "Pinewood Christian",
+          "seed": 8,
+          "schoolId": "ga-pinewood-christian-academy-bellville",
+          "card": "/images/boys/basketball/teams/pinewood.svg"
+        },
+        "dominionchristian": {
+          "name": "Dominion Christian",
+          "seed": 9,
+          "schoolId": "ga-dominion-christian-academy-marietta",
+          "card": "/images/boys/basketball/teams/dominionchristian.svg"
+        },
+        "brookwood": {
+          "name": "Brookwood",
+          "seed": 10,
+          "schoolId": "ga-brookwood-academy-thomasville",
+          "card": "/images/boys/basketball/teams/brookwood.svg"
+        },
+        "westminster": {
+          "name": "Westminster",
+          "seed": 11,
+          "schoolId": "ga-westminster-schools-of-augusta-augusta",
+          "card": "/images/boys/basketball/teams/westminster.svg"
+        },
+        "valwood": {
+          "name": "Valwood",
+          "seed": 12,
+          "schoolId": "ga-valwood-school-hahira",
+          "card": "/images/boys/basketball/teams/valwood.svg"
+        }
+      },
+      "games": {
+        "r1_5_12": {
+          "top": {
+            "teamId": "lakeview",
+            "score": 50
+          },
+          "bottom": {
+            "teamId": "valwood",
+            "score": 18
+          },
+          "winner": "lakeview"
+        },
+        "r1_6_11": {
+          "top": {
+            "teamId": "terrell",
+            "score": 64
+          },
+          "bottom": {
+            "teamId": "westminster",
+            "score": 43
+          },
+          "winner": "terrell"
+        },
+        "r1_7_10": {
+          "top": {
+            "teamId": "frederica",
+            "score": 50
+          },
+          "bottom": {
+            "teamId": "brookwood",
+            "score": 34
+          },
+          "winner": "frederica"
+        },
+        "r1_8_9": {
+          "top": {
+            "teamId": "pinewood",
+            "score": 51
+          },
+          "bottom": {
+            "teamId": "dominionchristian",
+            "score": 34
+          },
+          "winner": "pinewood"
+        },
+        "qf_4": {
+          "top": {
+            "teamId": "johnmilledge",
+            "score": 41
+          },
+          "bottom": {
+            "teamId": "lakeview",
+            "score": 81
+          },
+          "winner": "lakeview"
+        },
+        "qf_3": {
+          "top": {
+            "teamId": "tiftarea",
+            "score": 39
+          },
+          "bottom": {
+            "teamId": "terrell",
+            "score": 29
+          },
+          "winner": "tiftarea"
+        },
+        "qf_2": {
+          "top": {
+            "teamId": "southland",
+            "score": 60
+          },
+          "bottom": {
+            "teamId": "frederica",
+            "score": 33
+          },
+          "winner": "southland"
+        },
+        "qf_1": {
+          "top": {
+            "teamId": "deerfieldwindsor",
+            "score": 49
+          },
+          "bottom": {
+            "teamId": "pinewood",
+            "score": 19
+          },
+          "winner": "deerfieldwindsor"
+        },
+        "sf_top": {
+          "top": {
+            "teamId": "deerfieldwindsor",
+            "score": 67
+          },
+          "bottom": {
+            "teamId": "lakeview",
+            "score": 59
+          },
+          "winner": "deerfieldwindsor"
+        },
+        "sf_bot": {
+          "top": {
+            "teamId": "tiftarea",
+            "score": 41
+          },
+          "bottom": {
+            "teamId": "southland",
+            "score": 37
+          },
+          "winner": "tiftarea"
+        },
+        "final": {
+          "top": {
+            "teamId": "deerfieldwindsor",
+            "score": 61
+          },
+          "bottom": {
+            "teamId": "tiftarea",
+            "score": 34
+          },
+          "winner": "deerfieldwindsor"
+        }
+      }
+    }
+  },
   "2023": {
     "region": {
       "title": "2023-24 Region Tournament",

@@ -1,5 +1,15 @@
 [
   {
+    "SeasonID": 2022,
+    "YearStart": 2022,
+    "YearEnd": 2023,
+    "HeadCoach": "Jimmy Stetler",
+    "RegionSeed": 5,
+    "RegionFinish": "Region Semifinalist",
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
     "SeasonID": 2023,
     "YearStart": 2023,
     "YearEnd": 2024,

@@ -1,10 +1,45 @@
 [
   {
+    "PlayerID": 202001,
+    "FirstName": "Sarah",
+    "LastName": "Koegler",
+    "GradYear": 2023,
+    "JerseyNumber": 5
+  },
+  {
+    "PlayerID": 202002,
+    "FirstName": "Ava",
+    "LastName": "Stillwagon",
+    "GradYear": 2023,
+    "JerseyNumber": 10
+  },
+  {
+    "PlayerID": 202003,
+    "FirstName": "Lizzie",
+    "LastName": "Lank",
+    "GradYear": 2023,
+    "JerseyNumber": 12
+  },
+  {
+    "PlayerID": 202004,
+    "FirstName": "Laura",
+    "LastName": "Jackson",
+    "GradYear": 2023,
+    "JerseyNumber": 15
+  },
+  {
     "PlayerID": 202101,
     "FirstName": "Claire",
     "LastName": "Fleming",
     "GradYear": 2024,
     "JerseyNumber": 21
+  },
+  {
+    "PlayerID": 202102,
+    "FirstName": "Morgan",
+    "LastName": "Rule",
+    "GradYear": 2024,
+    "JerseyNumber": 10
   },
   {
     "PlayerID": 202201,
