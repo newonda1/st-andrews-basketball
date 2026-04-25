@@ -641,7 +641,7 @@ export default function AthleticsProgramShell({
         <div className="border-b border-[var(--stats-line-soft)] bg-white">
           <div className="flex w-full items-center justify-between px-4 py-4 lg:px-8 lg:py-5 xl:px-10 2xl:px-12">
             <Link
-              to={headerHomePath}
+              to={athleticsHomePath}
               className="flex min-w-0 items-center gap-1.5 text-[var(--stats-navy)] no-underline lg:gap-2"
             >
               <img

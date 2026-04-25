@@ -33,16 +33,14 @@
     ],
     "BracketMatches": [
       {
-        "TennisMatchID": "2026-giaa-2-aaa-region-bs-playin-m1",
+        "TennisMatchID": "2026-giaa-2-aaa-region-bs-additional-m1",
         "BracketID": "boys-singles",
-        "Round": "Play-In",
-        "RoundCode": "PLAYIN",
+        "Round": "Additional Match",
+        "RoundCode": "ADDITIONAL",
         "MatchNumber": 1,
         "Status": "Completed",
         "Date": "2026-04-14",
         "StartTime": "13:00",
-        "FeedsIntoMatchID": "2026-giaa-2-aaa-region-bs-r16-m8",
-        "FeedsIntoSide": "top",
         "Participants": [
           {
             "Side": "top",
@@ -74,7 +72,8 @@
         "WinnerSide": "top",
         "WinnerParticipantType": "stAndrewsPlayer",
         "WinnerPlayerID": 202504,
-        "SourceScoreLabel": "6/2 7/6"
+        "SourceScoreLabel": "6/2 7/6",
+        "Notes": "Originally entered as a play-in, later clarified by the user as a standalone additional match that does not feed into the boys singles bracket."
       },
       {
         "TennisMatchID": "2026-giaa-2-aaa-region-bs-r16-m1",
@@ -365,7 +364,6 @@
         "Status": "Completed",
         "Date": "2026-04-14",
         "StartTime": "17:42",
-        "SourceMatchID": "2026-giaa-2-aaa-region-bs-playin-m1",
         "Participants": [
           {
             "Side": "top",

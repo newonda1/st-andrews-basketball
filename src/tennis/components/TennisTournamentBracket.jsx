@@ -604,7 +604,8 @@ export default function TennisTournamentBracket({
             {extraMatches.map((match) => (
               <div
                 key={match.TennisMatchID}
-                className="h-[177px] min-w-0"
+                className="min-w-0"
+                style={{ height: `${layoutConfig.cardH}px` }}
               >
                 <MatchCard
                   match={match}
