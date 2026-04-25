@@ -54,7 +54,7 @@
   {
     "OpponentAthleteID": "tennis-2026-boys-frederica-j-tronolone",
     "DisplayName": "J. Tronolone",
-    "FirstName": null,
+    "FirstName": "John",
     "FirstInitial": "J",
     "LastName": "Tronolone",
     "Gender": "Boys",
@@ -62,7 +62,7 @@
     "SourceSchoolLabel": "Frederica Academy",
     "ClassYearLabel": "JR",
     "GradYear": 2027,
-    "Source": "2026 GIAA 2-AAA Region Tournament boys singles bracket"
+    "Source": "2026 GIAA 2-AAA Region Tournament boys singles bracket; 2026-03-09 boys dual match at St. Andrew's"
   },
   {
     "OpponentAthleteID": "tennis-2026-boys-pinewood-w-hall",
@@ -80,7 +80,7 @@
   {
     "OpponentAthleteID": "tennis-2026-boys-frederica-c-kazimir",
     "DisplayName": "C. Kazimir",
-    "FirstName": null,
+    "FirstName": "Cullen",
     "FirstInitial": "C",
     "LastName": "Kazimir",
     "Gender": "Boys",
@@ -88,7 +88,7 @@
     "SourceSchoolLabel": "Frederica Academy",
     "ClassYearLabel": "SR",
     "GradYear": 2026,
-    "Source": "2026 GIAA 2-AAA Region Tournament boys singles bracket"
+    "Source": "2026 GIAA 2-AAA Region Tournament boys singles bracket; 2026-03-09 boys dual match at St. Andrew's"
   },
   {
     "OpponentAthleteID": "tennis-2026-boys-bulloch-j-lanier",
@@ -132,7 +132,7 @@
   {
     "OpponentAthleteID": "tennis-2026-boys-frederica-n-reinshagen",
     "DisplayName": "N. Reinshagen",
-    "FirstName": null,
+    "FirstName": "Nikolas",
     "FirstInitial": "N",
     "LastName": "Reinshagen",
     "Gender": "Boys",
@@ -140,7 +140,7 @@
     "SourceSchoolLabel": "Frederica Academy",
     "ClassYearLabel": "JR",
     "GradYear": 2027,
-    "Source": "2026 GIAA 2-AAA Region Tournament boys singles bracket"
+    "Source": "2026 GIAA 2-AAA Region Tournament boys singles bracket; 2026-03-09 boys dual match at St. Andrew's"
   },
   {
     "OpponentAthleteID": "tennis-2026-boys-westminster-e-mclean",
@@ -327,7 +327,7 @@
   {
     "OpponentAthleteID": "tennis-2026-boys-frederica-b-evans",
     "DisplayName": "B. Evans",
-    "FirstName": null,
+    "FirstName": "Bryce",
     "FirstInitial": "B",
     "LastName": "Evans",
     "Gender": "Boys",
@@ -335,7 +335,7 @@
     "SourceSchoolLabel": "Frederica Academy",
     "ClassYearLabel": "FR",
     "GradYear": 2029,
-    "Source": "2026 GIAA 2-AAA Region Tournament boys doubles bracket"
+    "Source": "2026 GIAA 2-AAA Region Tournament boys doubles bracket; 2026-03-09 boys dual match at St. Andrew's"
   },
   {
     "OpponentAthleteID": "tennis-2026-boys-bulloch-p-ford",
@@ -444,7 +444,7 @@
   {
     "OpponentAthleteID": "tennis-2026-boys-frederica-w-pope",
     "DisplayName": "W. Pope",
-    "FirstName": null,
+    "FirstName": "William",
     "FirstInitial": "W",
     "LastName": "Pope",
     "Gender": "Boys",
@@ -452,12 +452,12 @@
     "SourceSchoolLabel": "Frederica Academy",
     "ClassYearLabel": "SR",
     "GradYear": 2026,
-    "Source": "2026 GIAA 2-AAA Region Tournament boys doubles bracket"
+    "Source": "2026 GIAA 2-AAA Region Tournament boys doubles bracket; 2026-03-09 boys dual match at St. Andrew's"
   },
   {
     "OpponentAthleteID": "tennis-2026-boys-frederica-w-mccallum",
     "DisplayName": "W. Mccallum",
-    "FirstName": null,
+    "FirstName": "Wilson",
     "FirstInitial": "W",
     "LastName": "Mccallum",
     "Gender": "Boys",
@@ -465,7 +465,7 @@
     "SourceSchoolLabel": "Frederica Academy",
     "ClassYearLabel": "SR",
     "GradYear": 2026,
-    "Source": "2026 GIAA 2-AAA Region Tournament boys doubles bracket"
+    "Source": "2026 GIAA 2-AAA Region Tournament boys doubles bracket; 2026-03-09 boys dual match at St. Andrew's"
   },
   {
     "OpponentAthleteID": "tennis-2026-boys-pinewood-w-mathis",
@@ -804,5 +804,18 @@
     "ClassYearLabel": null,
     "GradYear": null,
     "Source": "2026-03-12 boys dual match at Bulloch Academy"
+  },
+  {
+    "OpponentAthleteID": "tennis-2026-boys-frederica-j-paul",
+    "DisplayName": "James Paul",
+    "FirstName": "James",
+    "FirstInitial": "J",
+    "LastName": "Paul",
+    "Gender": "Boys",
+    "SchoolID": "ga-frederica-academy-st-simons-island",
+    "SourceSchoolLabel": "Frederica Academy",
+    "ClassYearLabel": null,
+    "GradYear": null,
+    "Source": "2026-03-09 boys dual match at St. Andrew's"
   }
 ]

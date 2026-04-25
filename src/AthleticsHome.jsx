@@ -44,13 +44,6 @@ const sports = [
     icon: "/images/track/track_icon.png",
     championshipGroups: [
       {
-        title: "Team Championships",
-        sections: [
-          { title: "Region Championships", years: [] },
-          { title: "State Championships", years: [] },
-        ],
-      },
-      {
         title: "Individual Champions",
         sections: [
           { title: "Region Championships", years: [2021, 2022, 2024, 2026] },
@@ -65,19 +58,14 @@ const sports = [
     icon: "/images/swimming/swimming_icon.png",
     championshipGroups: [
       {
-        title: "Team Championships",
-        sections: [
-          { title: "Region Championships", years: [] },
-          { title: "State Championships", years: [] },
-        ],
-      },
-      {
         title: "Individual Champions",
         sections: [
-          { title: "Region Championships", years: [] },
           {
             title: "State Championships",
-            years: [2017, 2019, 2020, 2022, 2023, 2024, 2025, 2026],
+            years: [
+              2015, 2016, 2017, 2018, 2019, 2020,
+              2022, 2023, 2024, 2025, 2026,
+            ],
           },
         ],
       },
@@ -87,22 +75,8 @@ const sports = [
     name: "Tennis",
     to: "/athletics/tennis",
     icon: "/images/tennis/tennis_icon.png",
-    championshipGroups: [
-      {
-        title: "Team Championships",
-        sections: [
-          { title: "Region Championships", years: [] },
-          { title: "State Championships", years: [] },
-        ],
-      },
-      {
-        title: "Individual Champions",
-        sections: [
-          { title: "Region Championships", years: [] },
-          { title: "State Championships", years: [] },
-        ],
-      },
-    ],
+    regionYears: [],
+    stateYears: [],
   },
 ];
 
@@ -128,11 +102,11 @@ function ChampionshipSection({ title, years }) {
       </h3>
 
       {years.length > 0 ? (
-        <div className="mt-3 flex flex-wrap justify-center gap-x-[clamp(0.75rem,1.8vw,1.5rem)] gap-y-2">
+        <div className="mt-3 grid grid-cols-[repeat(auto-fit,minmax(3.35rem,1fr))] justify-items-center gap-x-1 gap-y-2">
           {years.map((year) => (
             <div
               key={`${title}-${year}`}
-              className="min-w-[4.1rem] text-center text-[clamp(0.8rem,0.74rem+0.2vw,0.92rem)] font-black leading-none tracking-[0.08em] text-white"
+              className="text-center text-[clamp(0.8rem,0.74rem+0.2vw,0.92rem)] font-black leading-none tracking-[0.08em] text-white"
             >
               {year}
             </div>
@@ -149,6 +123,12 @@ function ChampionshipSection({ title, years }) {
 }
 
 function ChampionshipGroup({ title, sections }) {
+  const visibleSections = sections.filter((section) => section.years.length > 0);
+
+  if (visibleSections.length === 0) {
+    return null;
+  }
+
   return (
     <section className="rounded-[1.7rem] border border-white/16 bg-white/[0.06] px-2.5 py-3 shadow-inner shadow-black/10">
       <h3 className="px-2 text-center text-[0.64rem] font-black uppercase tracking-[0.24em] text-white/90 sm:text-[0.7rem]">
@@ -156,7 +136,7 @@ function ChampionshipGroup({ title, sections }) {
       </h3>
 
       <div className="mt-3 space-y-3">
-        {sections.map((section) => (
+        {visibleSections.map((section) => (
           <ChampionshipSection
             key={`${title}-${section.title}`}
             title={section.title}
@@ -215,12 +195,16 @@ function SportBanner({ sport }) {
         sections={group.sections}
       />
     ))
-  ) : (
+  ) : sport.regionYears.length > 0 ||
+    sport.stateYears.length > 0 ||
+    sport.showStateSectionWhenEmpty ? (
     <>
-      <ChampionshipSection
-        title="Region Championships"
-        years={sport.regionYears}
-      />
+      {sport.regionYears.length > 0 ? (
+        <ChampionshipSection
+          title="Region Championships"
+          years={sport.regionYears}
+        />
+      ) : null}
       {sport.stateYears.length > 0 || sport.showStateSectionWhenEmpty ? (
         <ChampionshipSection
           title="State Championships"
@@ -228,6 +212,8 @@ function SportBanner({ sport }) {
         />
       ) : null}
     </>
+  ) : (
+    null
   );
 
   return (

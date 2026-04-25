@@ -3240,6 +3240,262 @@
     "Source": "User-provided bracket PDFs"
   },
   {
+    "MatchID": "2026-03-09-frederica-boys",
+    "Season": 2026,
+    "Date": "2026-03-09",
+    "StartTime": "16:00",
+    "Name": "Frederica at St. Andrew's - Boys",
+    "MatchType": "Dual Match",
+    "Gender": "Boys",
+    "Classification": "GIAA",
+    "Status": "Completed",
+    "Location": "St. Andrew's School, Savannah, GA",
+    "SiteSchoolID": "ga-st-andrews-school-savannah",
+    "OpponentSchoolID": "ga-frederica-academy-st-simons-island",
+    "HomeAway": "Home",
+    "TeamScore": {
+      "StAndrews": 5,
+      "Opponent": 0,
+      "Result": "W"
+    },
+    "LineMatches": [
+      {
+        "TennisMatchID": "2026-03-09-frederica-boys-singles-1",
+        "EventType": "Singles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2026-03-09",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-frederica-j-tronolone",
+            "DisplayName": "John Tronolone",
+            "ClassYearLabel": "JR",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026056,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 1,
+            "bottom": 6
+          },
+          {
+            "SetNumber": 2,
+            "top": 1,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "SourceScoreLabel": "6/1 6/1",
+        "WinnerPlayerID": 2026056
+      },
+      {
+        "TennisMatchID": "2026-03-09-frederica-boys-singles-2",
+        "EventType": "Singles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2026-03-09",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-frederica-n-reinshagen",
+            "DisplayName": "Nikolas Reinshagen",
+            "ClassYearLabel": "JR",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026061,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 3,
+            "bottom": 6
+          },
+          {
+            "SetNumber": 2,
+            "top": 3,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "SourceScoreLabel": "6/3 6/3",
+        "WinnerPlayerID": 2026061
+      },
+      {
+        "TennisMatchID": "2026-03-09-frederica-boys-singles-3",
+        "EventType": "Singles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2026-03-09",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-frederica-c-kazimir",
+            "DisplayName": "Cullen Kazimir",
+            "ClassYearLabel": "SR",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026057,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 0,
+            "bottom": 6
+          },
+          {
+            "SetNumber": 2,
+            "top": 0,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "SourceScoreLabel": "6/0 6/0",
+        "WinnerPlayerID": 2026057
+      },
+      {
+        "TennisMatchID": "2026-03-09-frederica-boys-doubles-1",
+        "EventType": "Doubles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2026-03-09",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-03-09-frederica-mccallum-pope",
+            "DisplayName": "Wilson Mccallum / William Pope",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-frederica-w-mccallum",
+                "DisplayName": "Wilson Mccallum",
+                "ClassYearLabel": "SR"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-frederica-w-pope",
+                "DisplayName": "William Pope",
+                "ClassYearLabel": "SR"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-03-09-sta-ammon-espina",
+            "DisplayName": "Moritz Ammon / Jordan Espina",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 202504
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026060
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 4,
+            "bottom": 6
+          },
+          {
+            "SetNumber": 2,
+            "top": 6,
+            "bottom": 7
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "doublesTeam",
+        "SourceScoreLabel": "6/4 7/6",
+        "WinnerTeamID": "2026-03-09-sta-ammon-espina"
+      },
+      {
+        "TennisMatchID": "2026-03-09-frederica-boys-doubles-2",
+        "EventType": "Doubles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2026-03-09",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-03-09-frederica-paul-evans",
+            "DisplayName": "James Paul / Bryce Evans",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-frederica-j-paul",
+                "DisplayName": "James Paul",
+                "ClassYearLabel": null
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-frederica-b-evans",
+                "DisplayName": "Bryce Evans",
+                "ClassYearLabel": "FR"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-03-09-sta-constas-duke",
+            "DisplayName": "Cosmo Constas / Parley Duke",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026058
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026059
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 3,
+            "bottom": 6
+          },
+          {
+            "SetNumber": 2,
+            "top": 6,
+            "bottom": 7
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "doublesTeam",
+        "SourceScoreLabel": "6/3 7/6",
+        "WinnerTeamID": "2026-03-09-sta-constas-duke"
+      }
+    ],
+    "Source": "User-provided match screenshots"
+  },
+  {
     "MatchID": "2026-03-12-bulloch-boys",
     "Season": 2026,
     "Date": "2026-03-12",
