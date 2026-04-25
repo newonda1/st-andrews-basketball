@@ -1,7 +1,7 @@
 [
   {
     "PlayerID": 202201,
-    "FirstName": "Graci",
+    "FirstName": "Grace",
     "LastName": "Dare",
     "GradYear": 2027,
     "JerseyNumber": 12
@@ -9,7 +9,7 @@
   {
     "PlayerID": 202202,
     "FirstName": "Coco",
-    "LastName": "Carnhan",
+    "LastName": "Carnahan",
     "GradYear": 2026,
     "JerseyNumber": 15
   },
@@ -82,5 +82,12 @@
     "LastName": "Benson",
     "GradYear": 2028,
     "JerseyNumber": 3
+  },
+  {
+    "PlayerID": 202507,
+    "FirstName": "Tallulah",
+    "LastName": "Walz",
+    "GradYear": 2030,
+    "JerseyNumber": 14
   }
 ]

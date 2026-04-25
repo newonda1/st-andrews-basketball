@@ -1,5 +1,8 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
+import RegionBracket5SVG from "../../../boys/basketball/components/RegionBracket5SVG";
+import StateBracket12SVG from "../../../boys/basketball/components/StateBracket12SVG";
+import { SCHOOLS_PATH } from "../dataUtils";
 
 function Season2025_26() {
   const [games, setGames] = useState([]);
@@ -13,6 +16,8 @@ function Season2025_26() {
 
   const [showPerGame, setShowPerGame] = useState(false);
   const [showTeamTotals, setShowTeamTotals] = useState(false);
+  const [bracketsData, setBracketsData] = useState(null);
+  const [schoolsData, setSchoolsData] = useState([]);
 
   const SEASON_ID = 2025; // 2025–26 season
 
@@ -20,13 +25,21 @@ function Season2025_26() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const gamesRes = await fetch("/data/girls/basketball/games.json");
-        const statsRes = await fetch("/data/girls/basketball/playergamestats.json");
-        const playersRes = await fetch("/data/girls/basketball/players.json");
+        const [gamesRes, statsRes, playersRes, bracketsRes, schoolsRes] = await Promise.all([
+          fetch("/data/girls/basketball/games.json"),
+          fetch("/data/girls/basketball/playergamestats.json"),
+          fetch("/data/girls/basketball/players.json"),
+          fetch("/data/girls/basketball/brackets.json"),
+          fetch(SCHOOLS_PATH),
+        ]);
 
-        const gamesData = await gamesRes.json();
-        const statsData = await statsRes.json();
-        const playersData = await playersRes.json();
+        const [gamesData, statsData, playersData, bracketsJson, schoolsJson] = await Promise.all([
+          gamesRes.json(),
+          statsRes.json(),
+          playersRes.json(),
+          bracketsRes.json(),
+          schoolsRes.json(),
+        ]);
 
         const seasonGames = gamesData
           .filter((g) => g.Season === SEASON_ID)
@@ -38,6 +51,8 @@ function Season2025_26() {
         setGames(seasonGames);
         setPlayerStats(seasonStats);
         setPlayers(playersData);
+        setBracketsData(bracketsJson);
+        setSchoolsData(schoolsJson);
       } catch (err) {
         console.error("Error loading girls basketball data", err);
       }
@@ -156,11 +171,28 @@ function Season2025_26() {
     return rawEFG(player).toFixed(1);
   };
 
-  const formatDate = (ms) => {
-    if (ms == null) return "";
-    const d = new Date(Number(ms));
-    if (Number.isNaN(d.getTime())) return "";
-    return d.toLocaleDateString();
+  const formatDateFromGameID = (gameId) => {
+    if (!gameId) return "";
+
+    const n = Number(gameId);
+    if (!Number.isFinite(n)) return "";
+
+    const year = Math.floor(n / 10000);
+    const month = Math.floor(n / 100) % 100;
+    const day = n % 100;
+
+    if (year < 1900 || month < 1 || month > 12 || day < 1 || day > 31) {
+      return "";
+    }
+
+    const d = new Date(Date.UTC(year, month - 1, day));
+
+    return d.toLocaleDateString("en-US", {
+      timeZone: "UTC",
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+    });
   };
 
   const formatResult = (game) => {
@@ -559,7 +591,7 @@ function Season2025_26() {
                           key={game.GameID || idx}
                           className={idx % 2 ? "bg-gray-50" : "bg-white"}
                         >
-                          <td className="border px-2 py-1">{formatDate(game.Date)}</td>
+                          <td className="border px-2 py-1">{formatDateFromGameID(game.GameID)}</td>
                           <td className="border px-2 py-1">{opponentCell}</td>
                           <td className="border px-2 py-1">{formatResult(game)}</td>
                           <td className="border px-2 py-1 whitespace-nowrap">
@@ -619,7 +651,7 @@ function Season2025_26() {
                           key={game.GameID || idx}
                           className={idx % 2 ? "bg-gray-50" : "bg-white"}
                         >
-                          <td className="border px-2 py-1">{formatDate(game.Date)}</td>
+                          <td className="border px-2 py-1">{formatDateFromGameID(game.GameID)}</td>
                           <td className="border px-2 py-1">{opponentCell}</td>
 
                           <td className="border px-2 py-1">{totals ? totals.REB : "—"}</td>
@@ -659,7 +691,43 @@ function Season2025_26() {
         })()}
       </section>
 
-      {/* 3. PLAYER STATS TABLE (matches boys page + toggle + GP + Team Totals row) */}
+      {/* 3. REGION TOURNAMENT BRACKET */}
+      <section className="space-y-3">
+        <h2 className="text-2xl font-semibold">Region Tournament Bracket</h2>
+
+        {bracketsData === null ? (
+          <p className="text-gray-600">Loading region bracket...</p>
+        ) : bracketsData?.[String(SEASON_ID)]?.region ? (
+          <RegionBracket5SVG
+            bracket={bracketsData[String(SEASON_ID)].region}
+            schools={schoolsData}
+          />
+        ) : (
+          <p className="text-gray-600">
+            Region bracket data is not available for this season.
+          </p>
+        )}
+      </section>
+
+      {/* 4. STATE TOURNAMENT BRACKET */}
+      <section className="space-y-3">
+        <h2 className="text-2xl font-semibold">State Tournament Bracket</h2>
+
+        {bracketsData === null ? (
+          <p className="text-gray-600">Loading state bracket...</p>
+        ) : bracketsData?.[String(SEASON_ID)]?.state ? (
+          <StateBracket12SVG
+            bracket={bracketsData[String(SEASON_ID)].state}
+            schools={schoolsData}
+          />
+        ) : (
+          <p className="text-gray-600">
+            State bracket data is not available for this season.
+          </p>
+        )}
+      </section>
+
+      {/* 5. PLAYER STATS TABLE (matches boys page + toggle + GP + Team Totals row) */}
       <section>
         <div className="flex items-center justify-between mt-8 mb-4">
           <h2 className="text-2xl font-semibold">📊 Player Statistics for the Season</h2>
