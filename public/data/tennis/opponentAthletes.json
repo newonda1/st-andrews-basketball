@@ -2,7 +2,7 @@
   {
     "OpponentAthleteID": "tennis-2026-boys-bulloch-h-deal",
     "DisplayName": "H. Deal",
-    "FirstName": null,
+    "FirstName": "Holden",
     "FirstInitial": "H",
     "LastName": "Deal",
     "Gender": "Boys",
@@ -10,12 +10,12 @@
     "SourceSchoolLabel": "Bulloch Academy",
     "ClassYearLabel": "FR",
     "GradYear": 2029,
-    "Source": "2026 GIAA 2-AAA Region Tournament boys singles bracket"
+    "Source": "2026 GIAA 2-AAA Region Tournament boys singles bracket; 2026-03-12 boys dual match at Bulloch Academy"
   },
   {
     "OpponentAthleteID": "tennis-2026-boys-unknown-j-lee",
     "DisplayName": "J. Lee",
-    "FirstName": null,
+    "FirstName": "Jake",
     "FirstInitial": "J",
     "LastName": "Lee",
     "Gender": "Boys",
@@ -23,12 +23,12 @@
     "SourceSchoolLabel": "Westminster Schools of Augusta",
     "ClassYearLabel": "JR",
     "GradYear": 2027,
-    "Source": "2026 GIAA 2-AAA Region Tournament boys singles bracket; 2026 GIAA 2-AAA Region Tournament boys doubles bracket"
+    "Source": "2026 GIAA 2-AAA Region Tournament boys singles bracket; 2026 GIAA 2-AAA Region Tournament boys doubles bracket; 2026-03-25 boys dual match at St. Andrew's"
   },
   {
     "OpponentAthleteID": "tennis-2026-boys-westminster-p-martino",
     "DisplayName": "P. Martino",
-    "FirstName": null,
+    "FirstName": "Patrick",
     "FirstInitial": "P",
     "LastName": "Martino",
     "Gender": "Boys",
@@ -36,7 +36,7 @@
     "SourceSchoolLabel": "Westminster Schools of Augusta",
     "ClassYearLabel": "JR",
     "GradYear": 2027,
-    "Source": "2026 GIAA 2-AAA Region Tournament boys singles bracket"
+    "Source": "2026 GIAA 2-AAA Region Tournament boys singles bracket; 2026-03-25 boys dual match at St. Andrew's"
   },
   {
     "OpponentAthleteID": "tennis-2026-boys-pinewood-l-cloud",
@@ -93,7 +93,7 @@
   {
     "OpponentAthleteID": "tennis-2026-boys-bulloch-j-lanier",
     "DisplayName": "J. Lanier",
-    "FirstName": null,
+    "FirstName": "Joe",
     "FirstInitial": "J",
     "LastName": "Lanier",
     "Gender": "Boys",
@@ -101,7 +101,7 @@
     "SourceSchoolLabel": "Bulloch Academy",
     "ClassYearLabel": "FR",
     "GradYear": 2029,
-    "Source": "2026 GIAA 2-AAA Region Tournament boys singles bracket"
+    "Source": "2026 GIAA 2-AAA Region Tournament boys singles bracket; 2026-03-12 boys dual match at Bulloch Academy"
   },
   {
     "OpponentAthleteID": "tennis-2026-boys-pinewood-m-akins",
@@ -119,7 +119,7 @@
   {
     "OpponentAthleteID": "tennis-2026-boys-bulloch-c-townsend",
     "DisplayName": "C. Townsend",
-    "FirstName": null,
+    "FirstName": "Charlie",
     "FirstInitial": "C",
     "LastName": "Townsend",
     "Gender": "Boys",
@@ -127,7 +127,7 @@
     "SourceSchoolLabel": "Bulloch Academy",
     "ClassYearLabel": "JR",
     "GradYear": 2027,
-    "Source": "2026 GIAA 2-AAA Region Tournament boys singles bracket"
+    "Source": "2026 GIAA 2-AAA Region Tournament boys singles bracket; 2026-03-12 boys dual match at Bulloch Academy"
   },
   {
     "OpponentAthleteID": "tennis-2026-boys-frederica-n-reinshagen",
@@ -145,7 +145,7 @@
   {
     "OpponentAthleteID": "tennis-2026-boys-westminster-e-mclean",
     "DisplayName": "E. Mclean",
-    "FirstName": null,
+    "FirstName": "Eli",
     "FirstInitial": "E",
     "LastName": "Mclean",
     "Gender": "Boys",
@@ -153,7 +153,7 @@
     "SourceSchoolLabel": "Westminster Schools of Augusta",
     "ClassYearLabel": "JR",
     "GradYear": 2027,
-    "Source": "2026 GIAA 2-AAA Region Tournament boys singles bracket"
+    "Source": "2026 GIAA 2-AAA Region Tournament boys singles bracket; 2026-03-25 boys dual match at St. Andrew's"
   },
   {
     "OpponentAthleteID": "tennis-2026-girls-frederica-k-offner",
@@ -171,7 +171,7 @@
   {
     "OpponentAthleteID": "tennis-2026-girls-bulloch-g-uribe",
     "DisplayName": "G. Uribe",
-    "FirstName": null,
+    "FirstName": "Giuliana",
     "FirstInitial": "G",
     "LastName": "Uribe",
     "Gender": "Girls",
@@ -179,12 +179,12 @@
     "SourceSchoolLabel": "Bulloch Academy",
     "ClassYearLabel": "FR",
     "GradYear": 2029,
-    "Source": "2026 GIAA 2-AAA Region Tournament girls singles bracket"
+    "Source": "2026 GIAA 2-AAA Region Tournament girls singles bracket; 2026-03-12 girls dual match at Bulloch Academy"
   },
   {
     "OpponentAthleteID": "tennis-2026-girls-bulloch-j-hanner",
     "DisplayName": "J. Hanner",
-    "FirstName": null,
+    "FirstName": "Julia",
     "FirstInitial": "J",
     "LastName": "Hanner",
     "Gender": "Girls",
@@ -192,7 +192,7 @@
     "SourceSchoolLabel": "Bulloch Academy",
     "ClassYearLabel": "FR",
     "GradYear": 2029,
-    "Source": "2026 GIAA 2-AAA Region Tournament girls singles bracket"
+    "Source": "2026 GIAA 2-AAA Region Tournament girls singles bracket; 2026-03-12 girls dual match at Bulloch Academy"
   },
   {
     "OpponentAthleteID": "tennis-2026-girls-pinewood-h-waters",
@@ -236,7 +236,7 @@
   {
     "OpponentAthleteID": "tennis-2026-girls-frederica-e-barker",
     "DisplayName": "E. Barker",
-    "FirstName": null,
+    "FirstName": "Ella",
     "FirstInitial": "E",
     "LastName": "Barker",
     "Gender": "Girls",
@@ -244,12 +244,12 @@
     "SourceSchoolLabel": "Frederica Academy",
     "ClassYearLabel": "JR",
     "GradYear": 2027,
-    "Source": "2026 GIAA 2-AAA Region Tournament girls singles bracket"
+    "Source": "2026 GIAA 2-AAA Region Tournament girls singles bracket; 2026-03-09 girls dual match at St. Andrew's"
   },
   {
     "OpponentAthleteID": "tennis-2026-girls-bulloch-c-wasden",
     "DisplayName": "C. Wasden",
-    "FirstName": null,
+    "FirstName": "Caroline",
     "FirstInitial": "C",
     "LastName": "Wasden",
     "Gender": "Girls",
@@ -257,7 +257,7 @@
     "SourceSchoolLabel": "Bulloch Academy",
     "ClassYearLabel": "SR",
     "GradYear": 2026,
-    "Source": "2026 GIAA 2-AAA Region Tournament girls singles bracket"
+    "Source": "2026 GIAA 2-AAA Region Tournament girls singles bracket; 2026-03-12 girls dual match at Bulloch Academy"
   },
   {
     "OpponentAthleteID": "tennis-2026-girls-westminster-e-dyches",
@@ -288,7 +288,7 @@
   {
     "OpponentAthleteID": "tennis-2026-girls-frederica-a-wyrick",
     "DisplayName": "A. Wyrick",
-    "FirstName": null,
+    "FirstName": "Ava",
     "FirstInitial": "A",
     "LastName": "Wyrick",
     "Gender": "Girls",
@@ -296,7 +296,7 @@
     "SourceSchoolLabel": "Frederica Academy",
     "ClassYearLabel": "JR",
     "GradYear": 2027,
-    "Source": "2026 GIAA 2-AAA Region Tournament girls singles bracket"
+    "Source": "2026 GIAA 2-AAA Region Tournament girls singles bracket; 2026-03-09 girls dual match at St. Andrew's"
   },
   {
     "OpponentAthleteID": "tennis-2026-girls-pinewood-t-miles",
@@ -353,7 +353,7 @@
   {
     "OpponentAthleteID": "tennis-2026-boys-bulloch-a-bohanan",
     "DisplayName": "A. Bohanan",
-    "FirstName": null,
+    "FirstName": "Andrew",
     "FirstInitial": "A",
     "LastName": "Bohanan",
     "Gender": "Boys",
@@ -361,7 +361,7 @@
     "SourceSchoolLabel": "Bulloch Academy",
     "ClassYearLabel": "FR",
     "GradYear": 2029,
-    "Source": "2026 GIAA 2-AAA Region Tournament boys doubles bracket"
+    "Source": "2026 GIAA 2-AAA Region Tournament boys doubles bracket; 2026-03-12 boys dual match at Bulloch Academy"
   },
   {
     "OpponentAthleteID": "tennis-2026-boys-pinewood-m-tucker",
@@ -392,7 +392,7 @@
   {
     "OpponentAthleteID": "tennis-2026-boys-westminster-g-wells",
     "DisplayName": "G. Wells",
-    "FirstName": null,
+    "FirstName": "Graham",
     "FirstInitial": "G",
     "LastName": "Wells",
     "Gender": "Boys",
@@ -400,12 +400,12 @@
     "SourceSchoolLabel": "Westminster Schools of Augusta",
     "ClassYearLabel": "FR",
     "GradYear": 2029,
-    "Source": "2026 GIAA 2-AAA Region Tournament boys doubles bracket"
+    "Source": "2026 GIAA 2-AAA Region Tournament boys doubles bracket; 2026-03-25 boys dual match at St. Andrew's"
   },
   {
     "OpponentAthleteID": "tennis-2026-boys-westminster-m-hoover",
     "DisplayName": "M. Hoover",
-    "FirstName": null,
+    "FirstName": "Miles",
     "FirstInitial": "M",
     "LastName": "Hoover",
     "Gender": "Boys",
@@ -413,7 +413,7 @@
     "SourceSchoolLabel": "Westminster Schools of Augusta",
     "ClassYearLabel": null,
     "GradYear": null,
-    "Source": "2026 GIAA 2-AAA Region Tournament boys doubles bracket"
+    "Source": "2026 GIAA 2-AAA Region Tournament boys doubles bracket; 2026-03-25 boys dual match at St. Andrew's"
   },
   {
     "OpponentAthleteID": "tennis-2026-boys-bulloch-m-whitener",
@@ -431,7 +431,7 @@
   {
     "OpponentAthleteID": "tennis-2026-boys-bulloch-l-blount",
     "DisplayName": "L. Blount",
-    "FirstName": null,
+    "FirstName": "Leo",
     "FirstInitial": "L",
     "LastName": "Blount",
     "Gender": "Boys",
@@ -439,7 +439,7 @@
     "SourceSchoolLabel": "Bulloch Academy",
     "ClassYearLabel": "FR",
     "GradYear": 2029,
-    "Source": "2026 GIAA 2-AAA Region Tournament boys doubles bracket"
+    "Source": "2026 GIAA 2-AAA Region Tournament boys doubles bracket; 2026-03-12 boys dual match at Bulloch Academy"
   },
   {
     "OpponentAthleteID": "tennis-2026-boys-frederica-w-pope",
@@ -496,7 +496,7 @@
   {
     "OpponentAthleteID": "tennis-2026-boys-westminster-c-jordan",
     "DisplayName": "C. Jordan",
-    "FirstName": null,
+    "FirstName": "Carter",
     "FirstInitial": "C",
     "LastName": "Jordan",
     "Gender": "Boys",
@@ -504,12 +504,12 @@
     "SourceSchoolLabel": "Westminster Schools of Augusta",
     "ClassYearLabel": "FR",
     "GradYear": 2029,
-    "Source": "2026 GIAA 2-AAA Region Tournament boys doubles bracket"
+    "Source": "2026 GIAA 2-AAA Region Tournament boys doubles bracket; 2026-03-25 boys dual match at St. Andrew's"
   },
   {
     "OpponentAthleteID": "tennis-2026-boys-westminster-p-hubley",
     "DisplayName": "P. Hubley",
-    "FirstName": null,
+    "FirstName": "Parker",
     "FirstInitial": "P",
     "LastName": "Hubley",
     "Gender": "Boys",
@@ -517,7 +517,7 @@
     "SourceSchoolLabel": "Westminster Schools of Augusta",
     "ClassYearLabel": null,
     "GradYear": null,
-    "Source": "2026 GIAA 2-AAA Region Tournament boys doubles bracket"
+    "Source": "2026 GIAA 2-AAA Region Tournament boys doubles bracket; 2026-03-25 boys dual match at St. Andrew's"
   },
   {
     "OpponentAthleteID": "tennis-2026-girls-pinewood-r-middleton",
@@ -548,7 +548,7 @@
   {
     "OpponentAthleteID": "tennis-2026-girls-frederica-k-quarterman",
     "DisplayName": "K. Quarterman",
-    "FirstName": null,
+    "FirstName": "Kamaya",
     "FirstInitial": "K",
     "LastName": "Quarterman",
     "Gender": "Girls",
@@ -556,12 +556,12 @@
     "SourceSchoolLabel": "Frederica Academy",
     "ClassYearLabel": "FR",
     "GradYear": 2029,
-    "Source": "2026 GIAA 2-AAA Region Tournament girls doubles bracket"
+    "Source": "2026 GIAA 2-AAA Region Tournament girls doubles bracket; 2026-03-09 girls dual match at St. Andrew's"
   },
   {
     "OpponentAthleteID": "tennis-2026-girls-frederica-r-kelley",
     "DisplayName": "R. Kelley",
-    "FirstName": null,
+    "FirstName": "Ruth",
     "FirstInitial": "R",
     "LastName": "Kelley",
     "Gender": "Girls",
@@ -569,7 +569,7 @@
     "SourceSchoolLabel": "Frederica Academy",
     "ClassYearLabel": "JR",
     "GradYear": 2027,
-    "Source": "2026 GIAA 2-AAA Region Tournament girls doubles bracket"
+    "Source": "2026 GIAA 2-AAA Region Tournament girls doubles bracket; 2026-03-09 girls dual match at St. Andrew's"
   },
   {
     "OpponentAthleteID": "tennis-2026-girls-westminster-e-baggs",
@@ -600,7 +600,7 @@
   {
     "OpponentAthleteID": "tennis-2026-girls-bulloch-m-brown",
     "DisplayName": "M. Brown",
-    "FirstName": null,
+    "FirstName": "Marley",
     "FirstInitial": "M",
     "LastName": "Brown",
     "Gender": "Girls",
@@ -608,7 +608,7 @@
     "SourceSchoolLabel": "Bulloch Academy",
     "ClassYearLabel": "SR",
     "GradYear": 2026,
-    "Source": "2026 GIAA 2-AAA Region Tournament girls doubles bracket"
+    "Source": "2026 GIAA 2-AAA Region Tournament girls doubles bracket; 2026-03-12 girls dual match at Bulloch Academy"
   },
   {
     "OpponentAthleteID": "tennis-2026-girls-bulloch-r-sapp",
@@ -678,7 +678,7 @@
   {
     "OpponentAthleteID": "tennis-2026-girls-frederica-h-caine",
     "DisplayName": "H. Caine",
-    "FirstName": null,
+    "FirstName": "Haseley",
     "FirstInitial": "H",
     "LastName": "Caine",
     "Gender": "Girls",
@@ -686,12 +686,12 @@
     "SourceSchoolLabel": "Frederica Academy",
     "ClassYearLabel": "SR",
     "GradYear": 2026,
-    "Source": "2026 GIAA 2-AAA Region Tournament girls doubles bracket"
+    "Source": "2026 GIAA 2-AAA Region Tournament girls doubles bracket; 2026-03-09 girls dual match at St. Andrew's"
   },
   {
     "OpponentAthleteID": "tennis-2026-girls-frederica-a-hennessy",
     "DisplayName": "A. Hennessy",
-    "FirstName": null,
+    "FirstName": "Addy",
     "FirstInitial": "A",
     "LastName": "Hennessy",
     "Gender": "Girls",
@@ -699,12 +699,12 @@
     "SourceSchoolLabel": "Frederica Academy",
     "ClassYearLabel": "SR",
     "GradYear": 2026,
-    "Source": "2026 GIAA 2-AAA Region Tournament girls doubles bracket"
+    "Source": "2026 GIAA 2-AAA Region Tournament girls doubles bracket; 2026-03-09 girls dual match at St. Andrew's"
   },
   {
     "OpponentAthleteID": "tennis-2026-girls-bulloch-s-vanderloop",
     "DisplayName": "S. Vanderloop",
-    "FirstName": null,
+    "FirstName": "Skylar",
     "FirstInitial": "S",
     "LastName": "Vanderloop",
     "Gender": "Girls",
@@ -712,12 +712,12 @@
     "SourceSchoolLabel": "Bulloch Academy",
     "ClassYearLabel": "FR",
     "GradYear": 2029,
-    "Source": "2026 GIAA 2-AAA Region Tournament girls doubles bracket"
+    "Source": "2026 GIAA 2-AAA Region Tournament girls doubles bracket; 2026-03-12 girls dual match at Bulloch Academy"
   },
   {
     "OpponentAthleteID": "tennis-2026-girls-bulloch-h-whitfield",
     "DisplayName": "H. Whitfield",
-    "FirstName": null,
+    "FirstName": "Harper",
     "FirstInitial": "H",
     "LastName": "Whitfield",
     "Gender": "Girls",
@@ -725,7 +725,7 @@
     "SourceSchoolLabel": "Bulloch Academy",
     "ClassYearLabel": "FR",
     "GradYear": 2029,
-    "Source": "2026 GIAA 2-AAA Region Tournament girls doubles bracket"
+    "Source": "2026 GIAA 2-AAA Region Tournament girls doubles bracket; 2026-03-12 girls dual match at Bulloch Academy"
   },
   {
     "OpponentAthleteID": "tennis-2026-girls-bulloch-j-gaines",
@@ -752,5 +752,57 @@
     "ClassYearLabel": "P-FR",
     "GradYear": 2030,
     "Source": "2026 GIAA 2-AAA Region Tournament girls doubles bracket"
+  },
+  {
+    "OpponentAthleteID": "tennis-2026-girls-bulloch-v-brown",
+    "DisplayName": "Virginia Brown",
+    "FirstName": "Virginia",
+    "FirstInitial": "V",
+    "LastName": "Brown",
+    "Gender": "Girls",
+    "SchoolID": "ga-bulloch-academy-statesboro",
+    "SourceSchoolLabel": "Bulloch Academy",
+    "ClassYearLabel": null,
+    "GradYear": null,
+    "Source": "2026-03-12 girls dual match at Bulloch Academy"
+  },
+  {
+    "OpponentAthleteID": "tennis-2026-girls-frederica-j-baldwin",
+    "DisplayName": "Jada Baldwin",
+    "FirstName": "Jada",
+    "FirstInitial": "J",
+    "LastName": "Baldwin",
+    "Gender": "Girls",
+    "SchoolID": "ga-frederica-academy-st-simons-island",
+    "SourceSchoolLabel": "Frederica Academy",
+    "ClassYearLabel": null,
+    "GradYear": null,
+    "Source": "2026-03-09 girls dual match at St. Andrew's"
+  },
+  {
+    "OpponentAthleteID": "tennis-2026-boys-bulloch-h-wells",
+    "DisplayName": "Henry Wells",
+    "FirstName": "Henry",
+    "FirstInitial": "H",
+    "LastName": "Wells",
+    "Gender": "Boys",
+    "SchoolID": "ga-bulloch-academy-statesboro",
+    "SourceSchoolLabel": "Bulloch Academy",
+    "ClassYearLabel": null,
+    "GradYear": null,
+    "Source": "2026-03-12 boys dual match at Bulloch Academy"
+  },
+  {
+    "OpponentAthleteID": "tennis-2026-boys-bulloch-r-patel",
+    "DisplayName": "Rayan Patel",
+    "FirstName": "Rayan",
+    "FirstInitial": "R",
+    "LastName": "Patel",
+    "Gender": "Boys",
+    "SchoolID": "ga-bulloch-academy-statesboro",
+    "SourceSchoolLabel": "Bulloch Academy",
+    "ClassYearLabel": null,
+    "GradYear": null,
+    "Source": "2026-03-12 boys dual match at Bulloch Academy"
   }
 ]

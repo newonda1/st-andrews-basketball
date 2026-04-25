@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import AthleticsProgramShell from "../components/AthleticsProgramShell";
+import ChampionshipList from "./pages/ChampionshipList";
 import SchoolRecords from "./pages/SchoolRecords";
 import SeasonPage from "./pages/SeasonPage";
 import YearlyResults from "./pages/YearlyResults";
@@ -77,6 +78,15 @@ export default function SwimmingApp() {
   const menuSections = useMemo(() => {
     return [
       {
+        title: "State Champions",
+        links: [
+          {
+            to: "/athletics/swimming/champions",
+            label: "State Champions",
+          },
+        ],
+      },
+      {
         title: "School Records",
         links: [
           {
@@ -107,6 +117,18 @@ export default function SwimmingApp() {
     >
       <Routes>
         <Route index element={<Navigate to="records/school" replace />} />
+        <Route
+          path="champions"
+          element={
+            <ChampionshipList
+              seasons={seasons}
+              meets={meets}
+              playerMeetStats={playerMeetStats}
+              players={players}
+              status={status}
+            />
+          }
+        />
         <Route
           path="records/school"
           element={

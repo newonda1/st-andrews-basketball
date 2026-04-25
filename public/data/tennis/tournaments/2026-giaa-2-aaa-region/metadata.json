@@ -6,7 +6,7 @@
   "EndDate": "2026-04-14",
   "Classification": "GIAA 2-AAA",
   "Status": "In Progress",
-  "Source": "User-provided UTR Sports bracket PDFs",
+  "Source": "User-provided bracket PDFs",
   "Brackets": [
     {
       "BracketID": "boys-singles",

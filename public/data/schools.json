@@ -639,6 +639,12 @@
     "State": "GA"
   },
   {
+    "SchoolID": "ga-southeast-bulloch-high-school-brooklet",
+    "Name": "Southeast Bulloch High School",
+    "City": "Brooklet",
+    "State": "GA"
+  },
+  {
     "SchoolID": "ga-southland-academy-americus",
     "Name": "Southland Academy",
     "City": "Americus",
@@ -677,6 +683,12 @@
   {
     "SchoolID": "ga-st-paul-academy-for-boys-savannah",
     "Name": "St. Paul Academy for Boys",
+    "City": "Savannah",
+    "State": "GA"
+  },
+  {
+    "SchoolID": "ga-st-vincents-academy-savannah",
+    "Name": "St. Vincent's Academy",
     "City": "Savannah",
     "State": "GA"
   },
@@ -830,6 +842,12 @@
     "State": "GA"
   },
   {
+    "SchoolID": "ga-woodville-tompkins-technical-and-career-high-school-savannah",
+    "Name": "Woodville-Tompkins Technical and Career High School",
+    "City": "Savannah",
+    "State": "GA"
+  },
+  {
     "SchoolID": "ga-young-americans-christian-school-conyers",
     "Name": "Young Americans Christian School",
     "City": "Conyers",
@@ -840,6 +858,12 @@
     "Name": "Centennial High School",
     "City": "Champaign",
     "State": "IL"
+  },
+  {
+    "SchoolID": "ky-morgan-county-high-school-west-liberty",
+    "Name": "Morgan County High School",
+    "City": "West Liberty",
+    "State": "KY"
   },
   {
     "SchoolID": "md-glenelg-country-school-ellicott-city",
@@ -875,6 +899,12 @@
     "SchoolID": "sc-beaufort-academy-beaufort",
     "Name": "Beaufort Academy",
     "City": "Beaufort",
+    "State": "SC"
+  },
+  {
+    "SchoolID": "sc-burke-high-school-charleston",
+    "Name": "Burke High School",
+    "City": "Charleston",
     "State": "SC"
   },
   {
@@ -1016,6 +1046,12 @@
     "State": "SC"
   },
   {
+    "SchoolID": "sc-may-river-high-school-bluffton",
+    "Name": "May River High School",
+    "City": "Bluffton",
+    "State": "SC"
+  },
+  {
     "SchoolID": "sc-newberry-academy-newberry",
     "Name": "Newberry Academy",
     "City": "Newberry",
@@ -1121,6 +1157,12 @@
     "SchoolID": "tn-first-christian-of-memphis-memphis",
     "Name": "First Christian of Memphis",
     "City": "Memphis",
+    "State": "TN"
+  },
+  {
+    "SchoolID": "tn-halls-high-school-knoxville",
+    "Name": "Halls High School",
+    "City": "Knoxville",
     "State": "TN"
   },
   {

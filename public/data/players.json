@@ -1108,7 +1108,15 @@
     "PlayerID": 201402,
     "FirstName": "Morgan",
     "LastName": "Randolph",
-    "GradYear": null
+    "GradYear": null,
+    "Gender": "Girls"
+  },
+  {
+    "PlayerID": 201403,
+    "FirstName": "Claire",
+    "LastName": "Turner",
+    "GradYear": null,
+    "Gender": "Girls"
   },
   {
     "PlayerID": 201501,
@@ -1509,7 +1517,8 @@
     "PlayerID": 202006,
     "FirstName": "Luke",
     "LastName": "Peaster",
-    "GradYear": 2023
+    "GradYear": 2023,
+    "Gender": "Boys"
   },
   {
     "PlayerID": 202007,
@@ -1629,7 +1638,8 @@
     "PlayerID": 202122,
     "FirstName": "Phoebe",
     "LastName": "Mayo",
-    "GradYear": null
+    "GradYear": null,
+    "Gender": "Girls"
   },
   {
     "PlayerID": 202123,
@@ -1827,7 +1837,8 @@
     "PlayerID": 202312,
     "FirstName": "Ian",
     "LastName": "Willis",
-    "GradYear": 2026
+    "GradYear": 2026,
+    "Gender": "Boys"
   },
   {
     "PlayerID": 202313,
@@ -1855,9 +1866,10 @@
   },
   {
     "PlayerID": 202317,
-    "FirstName": "Gabby",
+    "FirstName": "Gaby",
     "LastName": "Van Brunt",
-    "GradYear": 2023
+    "GradYear": 2023,
+    "Gender": "Girls"
   },
   {
     "PlayerID": 202318,
@@ -1887,7 +1899,8 @@
     "PlayerID": 202322,
     "FirstName": "Ian",
     "LastName": "Given",
-    "GradYear": 2025
+    "GradYear": 2025,
+    "Gender": "Boys"
   },
   {
     "PlayerID": 202323,
@@ -1912,6 +1925,13 @@
     "FirstName": "Dean",
     "LastName": "Waters",
     "GradYear": 2026
+  },
+  {
+    "PlayerID": 202327,
+    "FirstName": "Grace",
+    "LastName": "Van Brunt",
+    "GradYear": null,
+    "Gender": "Girls"
   },
   {
     "PlayerID": 202401,
@@ -2160,13 +2180,6 @@
     "FirstName": "Charlie",
     "LastName": "Waldron",
     "GradYear": 2027,
-    "Gender": "Boys"
-  },
-  {
-    "PlayerID": 2026009,
-    "FirstName": "Ian",
-    "LastName": "Willis",
-    "GradYear": 2026,
     "Gender": "Boys"
   },
   {
@@ -2532,5 +2545,320 @@
     "LastName": "Reiter",
     "GradYear": 2028,
     "Gender": "Boys"
+  },
+  {
+    "PlayerID": 2026062,
+    "FirstName": "Addie",
+    "LastName": "Kovel",
+    "GradYear": null,
+    "Gender": "Girls"
+  },
+  {
+    "PlayerID": 2026063,
+    "FirstName": "Addie",
+    "LastName": "Nilsen",
+    "GradYear": null,
+    "Gender": "Girls"
+  },
+  {
+    "PlayerID": 2026064,
+    "FirstName": "Addy",
+    "LastName": "Sy",
+    "GradYear": null,
+    "Gender": "Girls"
+  },
+  {
+    "PlayerID": 2026065,
+    "FirstName": "Alex",
+    "LastName": "Awad",
+    "GradYear": null,
+    "Gender": "Girls"
+  },
+  {
+    "PlayerID": 2026066,
+    "FirstName": "Anna",
+    "LastName": "Neufeld",
+    "GradYear": null,
+    "Gender": "Girls"
+  },
+  {
+    "PlayerID": 2026067,
+    "FirstName": "Austin",
+    "LastName": "Waters",
+    "GradYear": null,
+    "Gender": "Boys"
+  },
+  {
+    "PlayerID": 2026068,
+    "FirstName": "Caden",
+    "LastName": "Cahill",
+    "GradYear": null,
+    "Gender": "Boys"
+  },
+  {
+    "PlayerID": 2026069,
+    "FirstName": "Cayleigh",
+    "LastName": "Nicholson",
+    "GradYear": null,
+    "Gender": "Girls"
+  },
+  {
+    "PlayerID": 2026070,
+    "FirstName": "Charlotte",
+    "LastName": "Gotwalt",
+    "GradYear": null,
+    "Gender": "Girls"
+  },
+  {
+    "PlayerID": 2026071,
+    "FirstName": "DJ",
+    "LastName": "DyLong",
+    "GradYear": null,
+    "Gender": "Boys"
+  },
+  {
+    "PlayerID": 2026072,
+    "FirstName": "Dagmawit",
+    "LastName": "Ionno",
+    "GradYear": null,
+    "Gender": "Girls"
+  },
+  {
+    "PlayerID": 2026073,
+    "FirstName": "Eli",
+    "LastName": "Rall",
+    "GradYear": null,
+    "Gender": "Boys"
+  },
+  {
+    "PlayerID": 2026074,
+    "FirstName": "Eric",
+    "LastName": "Warman",
+    "GradYear": null,
+    "Gender": "Boys"
+  },
+  {
+    "PlayerID": 2026075,
+    "FirstName": "Evan",
+    "LastName": "Brown",
+    "GradYear": null,
+    "Gender": "Boys"
+  },
+  {
+    "PlayerID": 2026076,
+    "FirstName": "Grace",
+    "LastName": "Irwin",
+    "GradYear": null,
+    "Gender": "Girls"
+  },
+  {
+    "PlayerID": 2026077,
+    "FirstName": "Hank",
+    "LastName": "Tucker",
+    "GradYear": null,
+    "Gender": "Boys"
+  },
+  {
+    "PlayerID": 2026078,
+    "FirstName": "Hazel",
+    "LastName": "Jefferson",
+    "GradYear": null,
+    "Gender": "Girls"
+  },
+  {
+    "PlayerID": 2026079,
+    "FirstName": "Jack",
+    "LastName": "Fox-Marrs",
+    "GradYear": null,
+    "Gender": "Boys"
+  },
+  {
+    "PlayerID": 2026080,
+    "FirstName": "Jake",
+    "LastName": "Gitelman",
+    "GradYear": null,
+    "Gender": "Boys"
+  },
+  {
+    "PlayerID": 2026081,
+    "FirstName": "James",
+    "LastName": "Crake",
+    "GradYear": null,
+    "Gender": "Boys"
+  },
+  {
+    "PlayerID": 2026082,
+    "FirstName": "Jonathan",
+    "LastName": "Young",
+    "GradYear": null,
+    "Gender": "Boys"
+  },
+  {
+    "PlayerID": 2026083,
+    "FirstName": "Jossy",
+    "LastName": "Thompson",
+    "GradYear": null,
+    "Gender": "Girls"
+  },
+  {
+    "PlayerID": 2026084,
+    "FirstName": "Kamille",
+    "LastName": "Crouch",
+    "GradYear": null,
+    "Gender": "Girls"
+  },
+  {
+    "PlayerID": 2026085,
+    "FirstName": "Koa",
+    "LastName": "Karabelas",
+    "GradYear": null,
+    "Gender": "Boys"
+  },
+  {
+    "PlayerID": 2026086,
+    "FirstName": "Libby",
+    "LastName": "Peaster",
+    "GradYear": null,
+    "Gender": "Girls"
+  },
+  {
+    "PlayerID": 2026087,
+    "FirstName": "Lily",
+    "LastName": "Clark",
+    "GradYear": null,
+    "Gender": "Girls"
+  },
+  {
+    "PlayerID": 2026088,
+    "FirstName": "Marie",
+    "LastName": "Audebert",
+    "GradYear": null,
+    "Gender": "Girls"
+  },
+  {
+    "PlayerID": 2026089,
+    "FirstName": "Matt",
+    "LastName": "Eling",
+    "GradYear": null,
+    "Gender": "Boys"
+  },
+  {
+    "PlayerID": 2026090,
+    "FirstName": "Meghan",
+    "LastName": "Maust",
+    "GradYear": null,
+    "Gender": "Girls"
+  },
+  {
+    "PlayerID": 2026091,
+    "FirstName": "Miles",
+    "LastName": "Glienke",
+    "GradYear": null,
+    "Gender": "Boys"
+  },
+  {
+    "PlayerID": 2026092,
+    "FirstName": "Molly",
+    "LastName": "Fox-Marrs",
+    "GradYear": null,
+    "Gender": "Girls"
+  },
+  {
+    "PlayerID": 2026093,
+    "FirstName": "Nouh",
+    "LastName": "Siddiqi",
+    "GradYear": null,
+    "Gender": "Boys"
+  },
+  {
+    "PlayerID": 2026094,
+    "FirstName": "Oliver",
+    "LastName": "Kovel",
+    "GradYear": null,
+    "Gender": "Boys"
+  },
+  {
+    "PlayerID": 2026095,
+    "FirstName": "Presley",
+    "LastName": "Hall",
+    "GradYear": null,
+    "Gender": "Girls"
+  },
+  {
+    "PlayerID": 2026096,
+    "FirstName": "Robert",
+    "LastName": "Federal IV",
+    "GradYear": null,
+    "Gender": "Boys"
+  },
+  {
+    "PlayerID": 2026097,
+    "FirstName": "Sarah",
+    "LastName": "Rowland",
+    "GradYear": null,
+    "Gender": "Girls"
+  },
+  {
+    "PlayerID": 2026098,
+    "FirstName": "Seungjae",
+    "LastName": "Lee",
+    "GradYear": null,
+    "Gender": "Boys"
+  },
+  {
+    "PlayerID": 2026099,
+    "FirstName": "Sierra",
+    "LastName": "Abbasi",
+    "GradYear": null,
+    "Gender": "Girls"
+  },
+  {
+    "PlayerID": 2026100,
+    "FirstName": "Sumter",
+    "LastName": "Archer",
+    "GradYear": null,
+    "Gender": "Boys"
+  },
+  {
+    "PlayerID": 2026101,
+    "FirstName": "Sydney",
+    "LastName": "Linfoot",
+    "GradYear": null,
+    "Gender": "Girls"
+  },
+  {
+    "PlayerID": 2026102,
+    "FirstName": "Tristan",
+    "LastName": "Tsang",
+    "GradYear": null,
+    "Gender": "Boys"
+  },
+  {
+    "PlayerID": 2026103,
+    "FirstName": "Tyler",
+    "LastName": "Awad",
+    "GradYear": null,
+    "Gender": "Boys"
+  },
+  {
+    "PlayerID": 2026104,
+    "FirstName": "Will",
+    "LastName": "Ashton",
+    "GradYear": null,
+    "Gender": "Boys"
+  },
+  {
+    "PlayerID": 2026105,
+    "FirstName": "Zac",
+    "LastName": "Berwitz",
+    "GradYear": null,
+    "Gender": "Boys"
+  },
+  {
+    "PlayerID": 2026106,
+    "FirstName": "Ayiana",
+    "LastName": "Leiby-Redden",
+    "GradYear": null,
+    "Gender": "Girls"
   }
 ]

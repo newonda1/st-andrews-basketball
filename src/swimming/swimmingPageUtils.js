@@ -48,6 +48,24 @@ export function getSwimSeasonLabel(seasonOrId) {
   return `Winter ${seasonId}`;
 }
 
+export function getSwimBannerYear(seasonOrId) {
+  const season =
+    seasonOrId && typeof seasonOrId === "object" ? seasonOrId : { SeasonID: seasonOrId };
+  const seasonLabel = String(season?.SeasonLabel || "").trim();
+  const seasonMatch = seasonLabel.match(/^(\d{4})-(\d{2})$/);
+
+  // Swimming banners use the school-year ending year, not the meet date.
+  // This keeps fall SCISA meets aligned with their season: 2017-18 -> 2018.
+  if (seasonMatch) {
+    return String(Number(seasonMatch[1]) + 1);
+  }
+
+  const seasonId = Number(season?.SeasonID);
+  if (Number.isFinite(seasonId)) return String(seasonId);
+
+  return "";
+}
+
 export function buildSwimPlayerMap(players = []) {
   return new Map((players || []).map((player) => [String(player.PlayerID), player]));
 }
@@ -108,6 +126,17 @@ export function buildSwimRoster(entries = [], playerMap = new Map()) {
 
     if (entry.PlayerID != null) {
       addAthleteEvent(resolveSwimAthleteName(entry, playerMap), entry.Event);
+      return;
+    }
+
+    if (Array.isArray(entry.RelayPlayerIDs) && entry.RelayPlayerIDs.length) {
+      entry.RelayPlayerIDs.forEach((playerId) => {
+        const player = playerMap.get(String(playerId));
+        const name = player
+          ? `${player.FirstName || ""} ${player.LastName || ""}`.trim()
+          : "";
+        addAthleteEvent(name, entry.Event);
+      });
       return;
     }
 

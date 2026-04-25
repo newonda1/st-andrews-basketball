@@ -1,5 +1,45 @@
 [
   {
+    "MeetID": 2014100401,
+    "Season": 2015,
+    "Date": "2014-10-04",
+    "Name": "SCISA State Championship (Varsity)",
+    "Location": "Augusta Aquatic Center, Augusta, GA",
+    "Level": "Varsity",
+    "MeetType": "State",
+    "Status": "Complete",
+    "GirlsTeamPlace": "10th",
+    "GirlsTeamPoints": 28,
+    "Notes": "Results loaded from Sports Timing's official 2014 SCISA state-meet PDF. St. Andrew's scored 28 points in the AA-A girls standings behind Morgan Randolph's 100 butterfly state title, Randolph's runner-up finish in the 100 freestyle, and Claire Turner's scoring finish in the 50 freestyle.",
+    "SourceUrl": "https://sportstiming.com/wp-content/uploads/2014/09/2014-SCISA-State-Swimming-Final-results.pdf",
+    "RecapTitle": "Randolph title and sprint points recover the 2014 SCISA meet",
+    "RecapParagraphs": [
+      "St. Andrew's girls finished 10th in the SCISA AA-A standings at the October 4, 2014 state meet with 28 points.",
+      "Morgan Randolph won the girls 100 butterfly in 1:01.97 and finished second in the 100 freestyle at 58.54, accounting for 25 of the team's points.",
+      "Claire Turner placed eighth in the girls 50 freestyle at 29.58, while Alex Awad was also listed in the 50 freestyle and was disqualified. No St. Andrew's boys team score or relay entries appeared in the meet PDF."
+    ]
+  },
+  {
+    "MeetID": 2015101001,
+    "Season": 2016,
+    "Date": "2015-10-10",
+    "Name": "SCISA State Championship (Varsity)",
+    "Location": "Augusta Aquatic Center, Augusta, GA",
+    "Level": "Varsity",
+    "MeetType": "State",
+    "Status": "Complete",
+    "GirlsTeamPoints": 52,
+    "BoysTeamPoints": 4,
+    "Notes": "Results loaded from Sports Timing's official Hy-Tek 2015 SCISA state-meet results ZIP. St. Andrew's appeared as GASAS/St Andrews School. The archive lists six individual St. Andrew's swimmers and two girls relay entries.",
+    "SourceUrl": "https://sportstiming.com/wp-content/uploads/2015/07/Meet-Results-2015-SCISA-State-Championships-10Oct2015-001.zip",
+    "RecapTitle": "Grace Van Brunt title anchors the recovered 2015 SCISA meet",
+    "RecapParagraphs": [
+      "St. Andrew's girls scored 52 points in the SCISA AA-A state meet on October 10, 2015. Grace Van Brunt won the 100 freestyle, placed third in the 100 backstroke, and led off the sixth-place 200 freestyle relay.",
+      "Ayiana Leiby-Redden placed sixth in the 100 butterfly and ninth in the 100 breaststroke, and joined Phoebe Mayo, Corinne Standing, and Van Brunt on both scoring relays.",
+      "Jonathan Young supplied the boys points with a seventh-place finish in the 50 freestyle and was also listed as a no-show in the 100 freestyle."
+    ]
+  },
+  {
     "MeetID": 2016101501,
     "Season": 2017,
     "Date": "2016-10-15",
@@ -39,7 +79,7 @@
     "RecapTitle": "Recovered 2017 SCISA state meet extends the archive into the fall-era seasons",
     "RecapParagraphs": [
       "St. Andrew's now has a SCISA-era season in the swim archive. At the October 14, 2017 SCISA State Championship, the girls placed fourth in the 2A standings with 91 points after scoring in six separate events.",
-      "Gaby Vanbrunt won the girls 50 freestyle and finished second in the 100 butterfly, while Grace Vanbrunt won the girls 100 backstroke and added a third-place finish in the 50 freestyle. The girls 200 medley relay took third and the 400 freestyle relay finished second.",
+      "Gaby Van Brunt won the girls 50 freestyle and finished second in the 100 butterfly, while Grace Van Brunt won the girls 100 backstroke and added a third-place finish in the 50 freestyle. The girls 200 medley relay took third and the 400 freestyle relay finished second.",
       "The boys finished 11th with 30 points behind Jack Fox-Marrs, who placed fifth in both the 200 freestyle and 100 freestyle, plus relay scoring from the boys 200 freestyle and 200 medley relays."
     ]
   },

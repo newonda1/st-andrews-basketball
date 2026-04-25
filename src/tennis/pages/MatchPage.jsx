@@ -32,6 +32,10 @@ function buildMap(items, key) {
 function scoreForSide(line, side) {
   return Array.isArray(line?.Sets)
     ? line.Sets.map((set) => set?.[side]).filter((score) => score !== undefined)
+        .map((score, index) => ({
+          score,
+          tiebreak: line.Sets[index]?.[`${side}Tiebreak`],
+        }))
     : [];
 }
 
@@ -53,13 +57,12 @@ function resolveLineMember(member, playerMap, opponentMap, schoolMap) {
 
   return {
     name:
-      member?.DisplayName ||
       (player?.FirstName || player?.LastName
         ? `${player?.FirstName || ""} ${player?.LastName || ""}`.trim()
         : null) ||
+      member?.DisplayName ||
       opponent?.DisplayName ||
       "TBD",
-    ratingLabel: member?.RatingLabel || null,
     classLabel,
     schoolName:
       school?.ShortName ||
@@ -109,11 +112,6 @@ function LineMember({ member, isWinner }) {
           }`}
         >
           {member.name}
-          {member.ratingLabel ? (
-            <span className="ml-2 font-semibold text-slate-500">
-              {member.ratingLabel}
-            </span>
-          ) : null}
         </p>
         {member.classLabel || member.schoolName ? (
           <p className="mt-0.5 truncate text-xs font-semibold text-slate-500">
@@ -141,12 +139,17 @@ function LineSide({ participant, scores, isWinner }) {
       </div>
       {scores.length ? (
         <div className="flex items-center gap-3 pr-2 text-lg font-bold tabular-nums">
-          {scores.map((score, index) => (
+          {scores.map((setScore, index) => (
             <span
               key={`${participant.name}-score-${index}`}
               className={isWinner ? "text-black" : "text-slate-500"}
             >
-              {score}
+              {setScore.score}
+              {setScore.tiebreak !== undefined ? (
+                <sup className="ml-0.5 align-super text-[0.58em] leading-none">
+                  {setScore.tiebreak}
+                </sup>
+              ) : null}
             </span>
           ))}
         </div>

@@ -222,6 +222,12 @@ export const statsSearchItems = [
     keywords: ["swimming", "swim", "home", "program"],
   },
   {
+    label: "State Champions",
+    description: "Swimming",
+    to: "/athletics/swimming/champions",
+    keywords: ["swimming", "swim", "champions", "championships", "banners"],
+  },
+  {
     label: "School Records",
     description: "Swimming",
     to: "/athletics/swimming/records/school",
