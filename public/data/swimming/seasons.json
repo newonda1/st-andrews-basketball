@@ -1,5 +1,27 @@
 [
   {
+    "SeasonID": 2017,
+    "SeasonLabel": "2016-17",
+    "Classification": "SCISA",
+    "StatusBadge": "verified",
+    "StatusNote": "The 2016-17 swimming archive now includes the October 15, 2016 SCISA State Championship results from the official meet PDF shared by the user.",
+    "FirstRegularSeasonMeet": "2016-10-15",
+    "StateMeetStart": "2016-10-15",
+    "StateMeetEnd": "2016-10-15",
+    "StateMeetLocation": "Augusta Aquatic Center, Augusta, GA",
+    "RecapParagraphs": [
+      "The recovered 2016-17 SCISA season adds another fall-era state meet for St. Andrew's. At the October 15, 2016 SCISA State Championship, the girls finished third in the AA-A standings with 101 points behind Grace Van Brunt's two individual state titles and three top-two relay finishes.",
+      "Grace Van Brunt won the girls 200 IM in 2:12.44 and the 100 backstroke in 1:00.80, while Gaby Van Brunt placed second in both the 200 freestyle and 100 butterfly. The girls also finished second in the 200 medley relay and 400 freestyle relay, and added points from the 200 freestyle relay and Corinne Standing's 100 breaststroke.",
+      "The boys finished 11th in the AA-A standings with 25 points. Jack Fox-Marrs placed sixth in the 50 freestyle and fourth in the 100 freestyle, and the boys scored in both the 200 medley and 200 freestyle relays."
+    ],
+    "HighlightNotes": [
+      "Grace Van Brunt won SCISA AA-A state titles in the girls 200 IM and 100 backstroke.",
+      "Gaby Van Brunt finished 2nd in both the girls 200 freestyle and 100 butterfly.",
+      "The girls team finished 3rd in the SCISA AA-A standings with 101 points.",
+      "The boys team finished 11th in the SCISA AA-A standings with 25 points."
+    ]
+  },
+  {
     "SeasonID": 2018,
     "SeasonLabel": "2017-18",
     "Classification": "SCISA",

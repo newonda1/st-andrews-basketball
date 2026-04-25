@@ -3,10 +3,10 @@
     "MatchID": "2026-giaa-2-aaa-region-tournament",
     "Season": 2026,
     "Date": "2026-04-14",
-    "Name": "GIAA 2-AAA Region Tournament",
+    "Name": "GIAA 2-AAA Region Tournament - Boys",
     "MatchType": "Tournament",
     "Classification": "GIAA 2-AAA",
-    "Status": "In Progress",
+    "Status": "Completed",
     "Location": null,
     "TournamentDataPath": "/data/tennis/tournaments/2026-giaa-2-aaa-region/metadata.json",
     "Brackets": [
@@ -16,19 +16,9 @@
         "DataPath": "/data/tennis/tournaments/2026-giaa-2-aaa-region/brackets/boysSingles.json"
       },
       {
-        "BracketID": "girls-singles",
-        "Name": "Girls Singles",
-        "DataPath": "/data/tennis/tournaments/2026-giaa-2-aaa-region/brackets/girlsSingles.json"
-      },
-      {
         "BracketID": "boys-doubles",
         "Name": "Boys Doubles",
         "DataPath": "/data/tennis/tournaments/2026-giaa-2-aaa-region/brackets/boysDoubles.json"
-      },
-      {
-        "BracketID": "girls-doubles",
-        "Name": "Girls Doubles",
-        "DataPath": "/data/tennis/tournaments/2026-giaa-2-aaa-region/brackets/girlsDoubles.json"
       }
     ],
     "BracketMatches": [
@@ -700,627 +690,6 @@
         "WinnerParticipantType": "stAndrewsPlayer",
         "WinnerPlayerID": 2026056,
         "SourceScoreLabel": "6/2 6/3"
-      },
-      {
-        "TennisMatchID": "2026-giaa-2-aaa-region-gs-r16-m1",
-        "BracketID": "girls-singles",
-        "Round": "Round of 16",
-        "RoundCode": "R16",
-        "MatchNumber": 1,
-        "Status": "Bye",
-        "Date": "2026-04-14",
-        "StartTime": null,
-        "Participants": [
-          {
-            "Side": "top",
-            "ParticipantType": "opponentAthlete",
-            "OpponentAthleteID": "tennis-2026-girls-frederica-k-offner",
-            "DisplayName": "K. Offner",
-            "RatingLabel": "3.xx"
-          },
-          {
-            "Side": "bottom",
-            "ParticipantType": "bye",
-            "DisplayName": "Bye"
-          }
-        ],
-        "Sets": [],
-        "WinnerSide": "top",
-        "WinnerParticipantType": "opponentAthlete",
-        "WinnerOpponentAthleteID": "tennis-2026-girls-frederica-k-offner"
-      },
-      {
-        "TennisMatchID": "2026-giaa-2-aaa-region-gs-r16-m2",
-        "BracketID": "girls-singles",
-        "Round": "Round of 16",
-        "RoundCode": "R16",
-        "MatchNumber": 2,
-        "Status": "Completed",
-        "Date": "2026-04-14",
-        "StartTime": "17:47",
-        "Participants": [
-          {
-            "Side": "top",
-            "ParticipantType": "stAndrewsPlayer",
-            "PlayerID": 2026046,
-            "DisplayName": "A. Chu-Pruden",
-            "RatingLabel": "2.xx"
-          },
-          {
-            "Side": "bottom",
-            "ParticipantType": "opponentAthlete",
-            "OpponentAthleteID": "tennis-2026-girls-bulloch-g-uribe",
-            "DisplayName": "G. Uribe",
-            "RatingLabel": "2.xx"
-          }
-        ],
-        "Sets": [
-          {
-            "SetNumber": 1,
-            "top": 6,
-            "bottom": 3
-          },
-          {
-            "SetNumber": 2,
-            "top": 6,
-            "bottom": 1
-          }
-        ],
-        "WinnerSide": "top",
-        "WinnerParticipantType": "stAndrewsPlayer",
-        "SourceScoreLabel": "6/3 6/1",
-        "WinnerPlayerID": 2026046
-      },
-      {
-        "TennisMatchID": "2026-giaa-2-aaa-region-gs-r16-m3",
-        "BracketID": "girls-singles",
-        "Round": "Round of 16",
-        "RoundCode": "R16",
-        "MatchNumber": 3,
-        "Status": "Completed",
-        "Date": "2026-04-14",
-        "StartTime": "17:48",
-        "Participants": [
-          {
-            "Side": "top",
-            "ParticipantType": "opponentAthlete",
-            "OpponentAthleteID": "tennis-2026-girls-bulloch-j-hanner",
-            "DisplayName": "J. Hanner",
-            "RatingLabel": "2.xx"
-          },
-          {
-            "Side": "bottom",
-            "ParticipantType": "opponentAthlete",
-            "OpponentAthleteID": "tennis-2026-girls-pinewood-h-waters",
-            "DisplayName": "H. Waters",
-            "RatingLabel": "1.xx"
-          }
-        ],
-        "Sets": [
-          {
-            "SetNumber": 1,
-            "top": 7,
-            "bottom": 5
-          },
-          {
-            "SetNumber": 2,
-            "top": 6,
-            "bottom": 0
-          }
-        ],
-        "WinnerSide": "top",
-        "WinnerParticipantType": "opponentAthlete",
-        "SourceScoreLabel": "7/5 6/0",
-        "WinnerOpponentAthleteID": "tennis-2026-girls-bulloch-j-hanner"
-      },
-      {
-        "TennisMatchID": "2026-giaa-2-aaa-region-gs-r16-m4",
-        "BracketID": "girls-singles",
-        "Round": "Round of 16",
-        "RoundCode": "R16",
-        "MatchNumber": 4,
-        "Status": "Completed",
-        "Date": "2026-04-14",
-        "StartTime": "17:48",
-        "Participants": [
-          {
-            "Side": "top",
-            "ParticipantType": "opponentAthlete",
-            "OpponentAthleteID": "tennis-2026-girls-westminster-s-rice",
-            "DisplayName": "S. Rice",
-            "RatingLabel": "2.xx"
-          },
-          {
-            "Side": "bottom",
-            "ParticipantType": "stAndrewsPlayer",
-            "PlayerID": 202422,
-            "DisplayName": "N. Kay",
-            "RatingLabel": "1.xx"
-          }
-        ],
-        "Sets": [
-          {
-            "SetNumber": 1,
-            "top": 6,
-            "bottom": 2
-          },
-          {
-            "SetNumber": 2,
-            "top": 6,
-            "bottom": 0
-          }
-        ],
-        "WinnerSide": "top",
-        "WinnerParticipantType": "opponentAthlete",
-        "SourceScoreLabel": "6/2 6/0",
-        "WinnerOpponentAthleteID": "tennis-2026-girls-westminster-s-rice"
-      },
-      {
-        "TennisMatchID": "2026-giaa-2-aaa-region-gs-r16-m5",
-        "BracketID": "girls-singles",
-        "Round": "Round of 16",
-        "RoundCode": "R16",
-        "MatchNumber": 5,
-        "Status": "Completed",
-        "Date": "2026-04-14",
-        "StartTime": "17:49",
-        "Participants": [
-          {
-            "Side": "top",
-            "ParticipantType": "opponentAthlete",
-            "OpponentAthleteID": "tennis-2026-girls-westminster-e-carr",
-            "DisplayName": "E. Carr",
-            "RatingLabel": "3.xx"
-          },
-          {
-            "Side": "bottom",
-            "ParticipantType": "opponentAthlete",
-            "OpponentAthleteID": "tennis-2026-girls-frederica-e-barker",
-            "DisplayName": "E. Barker",
-            "RatingLabel": "2.xx"
-          }
-        ],
-        "Sets": [
-          {
-            "SetNumber": 1,
-            "top": 6,
-            "bottom": 0
-          },
-          {
-            "SetNumber": 2,
-            "top": 6,
-            "bottom": 3
-          }
-        ],
-        "WinnerSide": "top",
-        "WinnerParticipantType": "opponentAthlete",
-        "SourceScoreLabel": "6/0 6/3",
-        "WinnerOpponentAthleteID": "tennis-2026-girls-westminster-e-carr"
-      },
-      {
-        "TennisMatchID": "2026-giaa-2-aaa-region-gs-r16-m6",
-        "BracketID": "girls-singles",
-        "Round": "Round of 16",
-        "RoundCode": "R16",
-        "MatchNumber": 6,
-        "Status": "Completed",
-        "Date": "2026-04-14",
-        "StartTime": "17:49",
-        "Participants": [
-          {
-            "Side": "top",
-            "ParticipantType": "opponentAthlete",
-            "OpponentAthleteID": "tennis-2026-girls-bulloch-c-wasden",
-            "DisplayName": "C. Wasden",
-            "RatingLabel": "3.xx"
-          },
-          {
-            "Side": "bottom",
-            "ParticipantType": "stAndrewsPlayer",
-            "PlayerID": 2026045,
-            "DisplayName": "S. Argentinis",
-            "RatingLabel": "1.xx"
-          }
-        ],
-        "Sets": [
-          {
-            "SetNumber": 1,
-            "top": 6,
-            "bottom": 0
-          },
-          {
-            "SetNumber": 2,
-            "top": 6,
-            "bottom": 0
-          }
-        ],
-        "WinnerSide": "top",
-        "WinnerParticipantType": "opponentAthlete",
-        "SourceScoreLabel": "6/0 6/0",
-        "WinnerOpponentAthleteID": "tennis-2026-girls-bulloch-c-wasden"
-      },
-      {
-        "TennisMatchID": "2026-giaa-2-aaa-region-gs-r16-m7",
-        "BracketID": "girls-singles",
-        "Round": "Round of 16",
-        "RoundCode": "R16",
-        "MatchNumber": 7,
-        "Status": "Completed",
-        "Date": "2026-04-14",
-        "StartTime": "17:49",
-        "Participants": [
-          {
-            "Side": "top",
-            "ParticipantType": "opponentAthlete",
-            "OpponentAthleteID": "tennis-2026-girls-westminster-e-dyches",
-            "DisplayName": "E. Dyches",
-            "RatingLabel": "1.xx"
-          },
-          {
-            "Side": "bottom",
-            "ParticipantType": "opponentAthlete",
-            "OpponentAthleteID": "tennis-2026-girls-pinewood-a-barratta",
-            "DisplayName": "A. Barratta",
-            "RatingLabel": "2.xx"
-          }
-        ],
-        "Sets": [
-          {
-            "SetNumber": 1,
-            "top": 5,
-            "bottom": 7
-          },
-          {
-            "SetNumber": 2,
-            "top": 1,
-            "bottom": 6
-          }
-        ],
-        "WinnerSide": "bottom",
-        "WinnerParticipantType": "opponentAthlete",
-        "SourceScoreLabel": "7/5 6/1",
-        "WinnerOpponentAthleteID": "tennis-2026-girls-pinewood-a-barratta"
-      },
-      {
-        "TennisMatchID": "2026-giaa-2-aaa-region-gs-r16-m8",
-        "BracketID": "girls-singles",
-        "Round": "Round of 16",
-        "RoundCode": "R16",
-        "MatchNumber": 8,
-        "Status": "Completed",
-        "Date": "2026-04-14",
-        "StartTime": "17:51",
-        "Participants": [
-          {
-            "Side": "top",
-            "ParticipantType": "opponentAthlete",
-            "OpponentAthleteID": "tennis-2026-girls-frederica-a-wyrick",
-            "DisplayName": "A. Wyrick",
-            "RatingLabel": "4.xx"
-          },
-          {
-            "Side": "bottom",
-            "ParticipantType": "opponentAthlete",
-            "OpponentAthleteID": "tennis-2026-girls-pinewood-t-miles",
-            "DisplayName": "T. Miles",
-            "RatingLabel": "1.xx"
-          }
-        ],
-        "Sets": [
-          {
-            "SetNumber": 1,
-            "top": 6,
-            "bottom": 0
-          },
-          {
-            "SetNumber": 2,
-            "top": 6,
-            "bottom": 0
-          }
-        ],
-        "WinnerSide": "top",
-        "WinnerParticipantType": "opponentAthlete",
-        "SourceScoreLabel": "6/0 6/0",
-        "WinnerOpponentAthleteID": "tennis-2026-girls-frederica-a-wyrick"
-      },
-      {
-        "TennisMatchID": "2026-giaa-2-aaa-region-gs-qf-m1",
-        "BracketID": "girls-singles",
-        "Round": "Quarterfinals",
-        "RoundCode": "QF",
-        "MatchNumber": 1,
-        "Status": "Completed",
-        "Date": "2026-04-14",
-        "StartTime": "17:50",
-        "Participants": [
-          {
-            "Side": "top",
-            "ParticipantType": "opponentAthlete",
-            "OpponentAthleteID": "tennis-2026-girls-frederica-k-offner",
-            "DisplayName": "K. Offner",
-            "RatingLabel": "3.xx"
-          },
-          {
-            "Side": "bottom",
-            "ParticipantType": "stAndrewsPlayer",
-            "PlayerID": 2026046,
-            "DisplayName": "A. Chu-Pruden",
-            "RatingLabel": "2.xx"
-          }
-        ],
-        "Sets": [
-          {
-            "SetNumber": 1,
-            "top": 6,
-            "bottom": 1
-          },
-          {
-            "SetNumber": 2,
-            "top": 6,
-            "bottom": 2
-          }
-        ],
-        "WinnerSide": "top",
-        "WinnerParticipantType": "opponentAthlete",
-        "SourceScoreLabel": "6/1 6/2",
-        "WinnerOpponentAthleteID": "tennis-2026-girls-frederica-k-offner"
-      },
-      {
-        "TennisMatchID": "2026-giaa-2-aaa-region-gs-qf-m2",
-        "BracketID": "girls-singles",
-        "Round": "Quarterfinals",
-        "RoundCode": "QF",
-        "MatchNumber": 2,
-        "Status": "Completed",
-        "Date": "2026-04-14",
-        "StartTime": "17:50",
-        "Participants": [
-          {
-            "Side": "top",
-            "ParticipantType": "opponentAthlete",
-            "OpponentAthleteID": "tennis-2026-girls-bulloch-j-hanner",
-            "DisplayName": "J. Hanner",
-            "RatingLabel": "2.xx"
-          },
-          {
-            "Side": "bottom",
-            "ParticipantType": "opponentAthlete",
-            "OpponentAthleteID": "tennis-2026-girls-westminster-s-rice",
-            "DisplayName": "S. Rice",
-            "RatingLabel": "2.xx"
-          }
-        ],
-        "Sets": [
-          {
-            "SetNumber": 1,
-            "top": 4,
-            "bottom": 6
-          },
-          {
-            "SetNumber": 2,
-            "top": 6,
-            "bottom": 7
-          }
-        ],
-        "WinnerSide": "bottom",
-        "WinnerParticipantType": "opponentAthlete",
-        "SourceScoreLabel": "6/4 7/6",
-        "WinnerOpponentAthleteID": "tennis-2026-girls-westminster-s-rice"
-      },
-      {
-        "TennisMatchID": "2026-giaa-2-aaa-region-gs-qf-m3",
-        "BracketID": "girls-singles",
-        "Round": "Quarterfinals",
-        "RoundCode": "QF",
-        "MatchNumber": 3,
-        "Status": "Completed",
-        "Date": "2026-04-14",
-        "StartTime": "17:50",
-        "Participants": [
-          {
-            "Side": "top",
-            "ParticipantType": "opponentAthlete",
-            "OpponentAthleteID": "tennis-2026-girls-westminster-e-carr",
-            "DisplayName": "E. Carr",
-            "RatingLabel": "3.xx"
-          },
-          {
-            "Side": "bottom",
-            "ParticipantType": "opponentAthlete",
-            "OpponentAthleteID": "tennis-2026-girls-bulloch-c-wasden",
-            "DisplayName": "C. Wasden",
-            "RatingLabel": "3.xx"
-          }
-        ],
-        "Sets": [
-          {
-            "SetNumber": 1,
-            "top": 6,
-            "bottom": 1
-          },
-          {
-            "SetNumber": 2,
-            "top": 6,
-            "bottom": 4
-          }
-        ],
-        "WinnerSide": "top",
-        "WinnerParticipantType": "opponentAthlete",
-        "SourceScoreLabel": "6/1 6/4",
-        "WinnerOpponentAthleteID": "tennis-2026-girls-westminster-e-carr"
-      },
-      {
-        "TennisMatchID": "2026-giaa-2-aaa-region-gs-qf-m4",
-        "BracketID": "girls-singles",
-        "Round": "Quarterfinals",
-        "RoundCode": "QF",
-        "MatchNumber": 4,
-        "Status": "Completed",
-        "Date": "2026-04-14",
-        "StartTime": "17:52",
-        "Participants": [
-          {
-            "Side": "top",
-            "ParticipantType": "opponentAthlete",
-            "OpponentAthleteID": "tennis-2026-girls-pinewood-a-barratta",
-            "DisplayName": "A. Barratta",
-            "RatingLabel": "2.xx"
-          },
-          {
-            "Side": "bottom",
-            "ParticipantType": "opponentAthlete",
-            "OpponentAthleteID": "tennis-2026-girls-frederica-a-wyrick",
-            "DisplayName": "A. Wyrick",
-            "RatingLabel": "4.xx"
-          }
-        ],
-        "Sets": [
-          {
-            "SetNumber": 1,
-            "top": 0,
-            "bottom": 6
-          },
-          {
-            "SetNumber": 2,
-            "top": 1,
-            "bottom": 6
-          }
-        ],
-        "WinnerSide": "bottom",
-        "WinnerParticipantType": "opponentAthlete",
-        "SourceScoreLabel": "6/0 6/1",
-        "WinnerOpponentAthleteID": "tennis-2026-girls-frederica-a-wyrick"
-      },
-      {
-        "TennisMatchID": "2026-giaa-2-aaa-region-gs-sf-m1",
-        "BracketID": "girls-singles",
-        "Round": "Semifinals",
-        "RoundCode": "SF",
-        "MatchNumber": 1,
-        "Status": "Completed",
-        "Date": "2026-04-14",
-        "StartTime": "18:03",
-        "Participants": [
-          {
-            "Side": "top",
-            "ParticipantType": "opponentAthlete",
-            "OpponentAthleteID": "tennis-2026-girls-frederica-k-offner",
-            "DisplayName": "K. Offner",
-            "RatingLabel": "3.xx"
-          },
-          {
-            "Side": "bottom",
-            "ParticipantType": "opponentAthlete",
-            "OpponentAthleteID": "tennis-2026-girls-westminster-s-rice",
-            "DisplayName": "S. Rice",
-            "RatingLabel": "2.xx"
-          }
-        ],
-        "Sets": [
-          {
-            "SetNumber": 1,
-            "top": 6,
-            "bottom": 1
-          },
-          {
-            "SetNumber": 2,
-            "top": 6,
-            "bottom": 0
-          }
-        ],
-        "WinnerSide": "top",
-        "WinnerParticipantType": "opponentAthlete",
-        "SourceScoreLabel": "6/1 6/0",
-        "WinnerOpponentAthleteID": "tennis-2026-girls-frederica-k-offner"
-      },
-      {
-        "TennisMatchID": "2026-giaa-2-aaa-region-gs-sf-m2",
-        "BracketID": "girls-singles",
-        "Round": "Semifinals",
-        "RoundCode": "SF",
-        "MatchNumber": 2,
-        "Status": "Completed",
-        "Date": "2026-04-14",
-        "StartTime": "17:53",
-        "Participants": [
-          {
-            "Side": "top",
-            "ParticipantType": "opponentAthlete",
-            "OpponentAthleteID": "tennis-2026-girls-westminster-e-carr",
-            "DisplayName": "E. Carr",
-            "RatingLabel": "3.xx"
-          },
-          {
-            "Side": "bottom",
-            "ParticipantType": "opponentAthlete",
-            "OpponentAthleteID": "tennis-2026-girls-frederica-a-wyrick",
-            "DisplayName": "A. Wyrick",
-            "RatingLabel": "4.xx"
-          }
-        ],
-        "Sets": [
-          {
-            "SetNumber": 1,
-            "top": 2,
-            "bottom": 6
-          },
-          {
-            "SetNumber": 2,
-            "top": 3,
-            "bottom": 6
-          }
-        ],
-        "WinnerSide": "bottom",
-        "WinnerParticipantType": "opponentAthlete",
-        "SourceScoreLabel": "6/2 6/3",
-        "WinnerOpponentAthleteID": "tennis-2026-girls-frederica-a-wyrick"
-      },
-      {
-        "TennisMatchID": "2026-giaa-2-aaa-region-gs-final-m1",
-        "BracketID": "girls-singles",
-        "Round": "Finals",
-        "RoundCode": "F",
-        "MatchNumber": 1,
-        "Status": "Completed",
-        "Date": "2026-04-14",
-        "StartTime": "18:04",
-        "Participants": [
-          {
-            "Side": "top",
-            "ParticipantType": "opponentAthlete",
-            "OpponentAthleteID": "tennis-2026-girls-frederica-k-offner",
-            "DisplayName": "K. Offner",
-            "RatingLabel": "3.xx"
-          },
-          {
-            "Side": "bottom",
-            "ParticipantType": "opponentAthlete",
-            "OpponentAthleteID": "tennis-2026-girls-frederica-a-wyrick",
-            "DisplayName": "A. Wyrick",
-            "RatingLabel": "4.xx"
-          }
-        ],
-        "Sets": [
-          {
-            "SetNumber": 1,
-            "top": 3,
-            "bottom": 6
-          },
-          {
-            "SetNumber": 2,
-            "top": 6,
-            "bottom": 4
-          },
-          {
-            "SetNumber": 3,
-            "top": 0,
-            "bottom": 1
-          }
-        ],
-        "WinnerSide": "bottom",
-        "WinnerParticipantType": "opponentAthlete",
-        "SourceScoreLabel": "6/3 4/6 1/0",
-        "WinnerOpponentAthleteID": "tennis-2026-girls-frederica-a-wyrick"
       },
       {
         "TennisMatchID": "2026-giaa-2-aaa-region-bd-r16-m1",
@@ -2378,6 +1747,655 @@
         "WinnerTeamID": "bd-team-westminster-lee-martino",
         "SourceScoreLabel": "7/5 6/1",
         "Notes": "Source screenshot supplied with boys doubles PDF; match does not appear in the printed main draw."
+      }
+    ],
+    "Source": "User-provided UTR Sports bracket PDFs",
+    "Gender": "Boys"
+  },
+  {
+    "MatchID": "2026-giaa-2-aaa-region-tournament-girls",
+    "Season": 2026,
+    "Date": "2026-04-14",
+    "Name": "GIAA 2-AAA Region Tournament - Girls",
+    "MatchType": "Tournament",
+    "Gender": "Girls",
+    "Classification": "GIAA 2-AAA",
+    "Status": "Completed",
+    "Location": null,
+    "TournamentDataPath": "/data/tennis/tournaments/2026-giaa-2-aaa-region/metadata.json",
+    "Brackets": [
+      {
+        "BracketID": "girls-singles",
+        "Name": "Girls Singles",
+        "DataPath": "/data/tennis/tournaments/2026-giaa-2-aaa-region/brackets/girlsSingles.json"
+      },
+      {
+        "BracketID": "girls-doubles",
+        "Name": "Girls Doubles",
+        "DataPath": "/data/tennis/tournaments/2026-giaa-2-aaa-region/brackets/girlsDoubles.json"
+      }
+    ],
+    "BracketMatches": [
+      {
+        "TennisMatchID": "2026-giaa-2-aaa-region-gs-r16-m1",
+        "BracketID": "girls-singles",
+        "Round": "Round of 16",
+        "RoundCode": "R16",
+        "MatchNumber": 1,
+        "Status": "Bye",
+        "Date": "2026-04-14",
+        "StartTime": null,
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-frederica-k-offner",
+            "DisplayName": "K. Offner",
+            "RatingLabel": "3.xx"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "bye",
+            "DisplayName": "Bye"
+          }
+        ],
+        "Sets": [],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2026-girls-frederica-k-offner"
+      },
+      {
+        "TennisMatchID": "2026-giaa-2-aaa-region-gs-r16-m2",
+        "BracketID": "girls-singles",
+        "Round": "Round of 16",
+        "RoundCode": "R16",
+        "MatchNumber": 2,
+        "Status": "Completed",
+        "Date": "2026-04-14",
+        "StartTime": "17:47",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026046,
+            "DisplayName": "A. Chu-Pruden",
+            "RatingLabel": "2.xx"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-bulloch-g-uribe",
+            "DisplayName": "G. Uribe",
+            "RatingLabel": "2.xx"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 6,
+            "bottom": 3
+          },
+          {
+            "SetNumber": 2,
+            "top": 6,
+            "bottom": 1
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "SourceScoreLabel": "6/3 6/1",
+        "WinnerPlayerID": 2026046
+      },
+      {
+        "TennisMatchID": "2026-giaa-2-aaa-region-gs-r16-m3",
+        "BracketID": "girls-singles",
+        "Round": "Round of 16",
+        "RoundCode": "R16",
+        "MatchNumber": 3,
+        "Status": "Completed",
+        "Date": "2026-04-14",
+        "StartTime": "17:48",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-bulloch-j-hanner",
+            "DisplayName": "J. Hanner",
+            "RatingLabel": "2.xx"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-pinewood-h-waters",
+            "DisplayName": "H. Waters",
+            "RatingLabel": "1.xx"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 7,
+            "bottom": 5
+          },
+          {
+            "SetNumber": 2,
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "SourceScoreLabel": "7/5 6/0",
+        "WinnerOpponentAthleteID": "tennis-2026-girls-bulloch-j-hanner"
+      },
+      {
+        "TennisMatchID": "2026-giaa-2-aaa-region-gs-r16-m4",
+        "BracketID": "girls-singles",
+        "Round": "Round of 16",
+        "RoundCode": "R16",
+        "MatchNumber": 4,
+        "Status": "Completed",
+        "Date": "2026-04-14",
+        "StartTime": "17:48",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-westminster-s-rice",
+            "DisplayName": "S. Rice",
+            "RatingLabel": "2.xx"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 202422,
+            "DisplayName": "N. Kay",
+            "RatingLabel": "1.xx"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 6,
+            "bottom": 2
+          },
+          {
+            "SetNumber": 2,
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "SourceScoreLabel": "6/2 6/0",
+        "WinnerOpponentAthleteID": "tennis-2026-girls-westminster-s-rice"
+      },
+      {
+        "TennisMatchID": "2026-giaa-2-aaa-region-gs-r16-m5",
+        "BracketID": "girls-singles",
+        "Round": "Round of 16",
+        "RoundCode": "R16",
+        "MatchNumber": 5,
+        "Status": "Completed",
+        "Date": "2026-04-14",
+        "StartTime": "17:49",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-westminster-e-carr",
+            "DisplayName": "E. Carr",
+            "RatingLabel": "3.xx"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-frederica-e-barker",
+            "DisplayName": "E. Barker",
+            "RatingLabel": "2.xx"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "SetNumber": 2,
+            "top": 6,
+            "bottom": 3
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "SourceScoreLabel": "6/0 6/3",
+        "WinnerOpponentAthleteID": "tennis-2026-girls-westminster-e-carr"
+      },
+      {
+        "TennisMatchID": "2026-giaa-2-aaa-region-gs-r16-m6",
+        "BracketID": "girls-singles",
+        "Round": "Round of 16",
+        "RoundCode": "R16",
+        "MatchNumber": 6,
+        "Status": "Completed",
+        "Date": "2026-04-14",
+        "StartTime": "17:49",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-bulloch-c-wasden",
+            "DisplayName": "C. Wasden",
+            "RatingLabel": "3.xx"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026045,
+            "DisplayName": "S. Argentinis",
+            "RatingLabel": "1.xx"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "SetNumber": 2,
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "SourceScoreLabel": "6/0 6/0",
+        "WinnerOpponentAthleteID": "tennis-2026-girls-bulloch-c-wasden"
+      },
+      {
+        "TennisMatchID": "2026-giaa-2-aaa-region-gs-r16-m7",
+        "BracketID": "girls-singles",
+        "Round": "Round of 16",
+        "RoundCode": "R16",
+        "MatchNumber": 7,
+        "Status": "Completed",
+        "Date": "2026-04-14",
+        "StartTime": "17:49",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-westminster-e-dyches",
+            "DisplayName": "E. Dyches",
+            "RatingLabel": "1.xx"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-pinewood-a-barratta",
+            "DisplayName": "A. Barratta",
+            "RatingLabel": "2.xx"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 5,
+            "bottom": 7
+          },
+          {
+            "SetNumber": 2,
+            "top": 1,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "opponentAthlete",
+        "SourceScoreLabel": "7/5 6/1",
+        "WinnerOpponentAthleteID": "tennis-2026-girls-pinewood-a-barratta"
+      },
+      {
+        "TennisMatchID": "2026-giaa-2-aaa-region-gs-r16-m8",
+        "BracketID": "girls-singles",
+        "Round": "Round of 16",
+        "RoundCode": "R16",
+        "MatchNumber": 8,
+        "Status": "Completed",
+        "Date": "2026-04-14",
+        "StartTime": "17:51",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-frederica-a-wyrick",
+            "DisplayName": "A. Wyrick",
+            "RatingLabel": "4.xx"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-pinewood-t-miles",
+            "DisplayName": "T. Miles",
+            "RatingLabel": "1.xx"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "SetNumber": 2,
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "SourceScoreLabel": "6/0 6/0",
+        "WinnerOpponentAthleteID": "tennis-2026-girls-frederica-a-wyrick"
+      },
+      {
+        "TennisMatchID": "2026-giaa-2-aaa-region-gs-qf-m1",
+        "BracketID": "girls-singles",
+        "Round": "Quarterfinals",
+        "RoundCode": "QF",
+        "MatchNumber": 1,
+        "Status": "Completed",
+        "Date": "2026-04-14",
+        "StartTime": "17:50",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-frederica-k-offner",
+            "DisplayName": "K. Offner",
+            "RatingLabel": "3.xx"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026046,
+            "DisplayName": "A. Chu-Pruden",
+            "RatingLabel": "2.xx"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 6,
+            "bottom": 1
+          },
+          {
+            "SetNumber": 2,
+            "top": 6,
+            "bottom": 2
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "SourceScoreLabel": "6/1 6/2",
+        "WinnerOpponentAthleteID": "tennis-2026-girls-frederica-k-offner"
+      },
+      {
+        "TennisMatchID": "2026-giaa-2-aaa-region-gs-qf-m2",
+        "BracketID": "girls-singles",
+        "Round": "Quarterfinals",
+        "RoundCode": "QF",
+        "MatchNumber": 2,
+        "Status": "Completed",
+        "Date": "2026-04-14",
+        "StartTime": "17:50",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-bulloch-j-hanner",
+            "DisplayName": "J. Hanner",
+            "RatingLabel": "2.xx"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-westminster-s-rice",
+            "DisplayName": "S. Rice",
+            "RatingLabel": "2.xx"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 4,
+            "bottom": 6
+          },
+          {
+            "SetNumber": 2,
+            "top": 6,
+            "bottom": 7
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "opponentAthlete",
+        "SourceScoreLabel": "6/4 7/6",
+        "WinnerOpponentAthleteID": "tennis-2026-girls-westminster-s-rice"
+      },
+      {
+        "TennisMatchID": "2026-giaa-2-aaa-region-gs-qf-m3",
+        "BracketID": "girls-singles",
+        "Round": "Quarterfinals",
+        "RoundCode": "QF",
+        "MatchNumber": 3,
+        "Status": "Completed",
+        "Date": "2026-04-14",
+        "StartTime": "17:50",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-westminster-e-carr",
+            "DisplayName": "E. Carr",
+            "RatingLabel": "3.xx"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-bulloch-c-wasden",
+            "DisplayName": "C. Wasden",
+            "RatingLabel": "3.xx"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 6,
+            "bottom": 1
+          },
+          {
+            "SetNumber": 2,
+            "top": 6,
+            "bottom": 4
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "SourceScoreLabel": "6/1 6/4",
+        "WinnerOpponentAthleteID": "tennis-2026-girls-westminster-e-carr"
+      },
+      {
+        "TennisMatchID": "2026-giaa-2-aaa-region-gs-qf-m4",
+        "BracketID": "girls-singles",
+        "Round": "Quarterfinals",
+        "RoundCode": "QF",
+        "MatchNumber": 4,
+        "Status": "Completed",
+        "Date": "2026-04-14",
+        "StartTime": "17:52",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-pinewood-a-barratta",
+            "DisplayName": "A. Barratta",
+            "RatingLabel": "2.xx"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-frederica-a-wyrick",
+            "DisplayName": "A. Wyrick",
+            "RatingLabel": "4.xx"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 0,
+            "bottom": 6
+          },
+          {
+            "SetNumber": 2,
+            "top": 1,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "opponentAthlete",
+        "SourceScoreLabel": "6/0 6/1",
+        "WinnerOpponentAthleteID": "tennis-2026-girls-frederica-a-wyrick"
+      },
+      {
+        "TennisMatchID": "2026-giaa-2-aaa-region-gs-sf-m1",
+        "BracketID": "girls-singles",
+        "Round": "Semifinals",
+        "RoundCode": "SF",
+        "MatchNumber": 1,
+        "Status": "Completed",
+        "Date": "2026-04-14",
+        "StartTime": "18:03",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-frederica-k-offner",
+            "DisplayName": "K. Offner",
+            "RatingLabel": "3.xx"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-westminster-s-rice",
+            "DisplayName": "S. Rice",
+            "RatingLabel": "2.xx"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 6,
+            "bottom": 1
+          },
+          {
+            "SetNumber": 2,
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "SourceScoreLabel": "6/1 6/0",
+        "WinnerOpponentAthleteID": "tennis-2026-girls-frederica-k-offner"
+      },
+      {
+        "TennisMatchID": "2026-giaa-2-aaa-region-gs-sf-m2",
+        "BracketID": "girls-singles",
+        "Round": "Semifinals",
+        "RoundCode": "SF",
+        "MatchNumber": 2,
+        "Status": "Completed",
+        "Date": "2026-04-14",
+        "StartTime": "17:53",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-westminster-e-carr",
+            "DisplayName": "E. Carr",
+            "RatingLabel": "3.xx"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-frederica-a-wyrick",
+            "DisplayName": "A. Wyrick",
+            "RatingLabel": "4.xx"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 2,
+            "bottom": 6
+          },
+          {
+            "SetNumber": 2,
+            "top": 3,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "opponentAthlete",
+        "SourceScoreLabel": "6/2 6/3",
+        "WinnerOpponentAthleteID": "tennis-2026-girls-frederica-a-wyrick"
+      },
+      {
+        "TennisMatchID": "2026-giaa-2-aaa-region-gs-final-m1",
+        "BracketID": "girls-singles",
+        "Round": "Finals",
+        "RoundCode": "F",
+        "MatchNumber": 1,
+        "Status": "Completed",
+        "Date": "2026-04-14",
+        "StartTime": "18:04",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-frederica-k-offner",
+            "DisplayName": "K. Offner",
+            "RatingLabel": "3.xx"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-frederica-a-wyrick",
+            "DisplayName": "A. Wyrick",
+            "RatingLabel": "4.xx"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 3,
+            "bottom": 6
+          },
+          {
+            "SetNumber": 2,
+            "top": 6,
+            "bottom": 4
+          },
+          {
+            "SetNumber": 3,
+            "top": 0,
+            "bottom": 1
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "opponentAthlete",
+        "SourceScoreLabel": "6/3 4/6 1/0",
+        "WinnerOpponentAthleteID": "tennis-2026-girls-frederica-a-wyrick"
       },
       {
         "TennisMatchID": "2026-giaa-2-aaa-region-gd-r16-m1",
@@ -3448,5 +3466,857 @@
       }
     ],
     "Source": "User-provided UTR Sports bracket PDFs"
+  },
+  {
+    "MatchID": "2026-03-26-pinewood-boys",
+    "Season": 2026,
+    "Date": "2026-03-26",
+    "StartTime": "16:00",
+    "Name": "St. Andrew's at Pinewood Christian - Boys",
+    "MatchType": "Dual Match",
+    "Gender": "Boys",
+    "Classification": "GIAA",
+    "Status": "Completed",
+    "Location": "Pinewood Christian Academy, Bellville, GA",
+    "SiteSchoolID": "ga-pinewood-christian-academy-bellville",
+    "OpponentSchoolID": "ga-pinewood-christian-academy-bellville",
+    "HomeAway": "Away",
+    "TeamScore": {
+      "StAndrews": 4,
+      "Opponent": 1,
+      "Result": "W"
+    },
+    "LineMatches": [
+      {
+        "TennisMatchID": "2026-03-26-pinewood-boys-singles-1",
+        "EventType": "Singles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2026-03-26",
+        "Participants": [
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026056,
+            "DisplayName": "Eli Berwitz",
+            "RatingLabel": "7.xx UTR",
+            "ClassYearLabel": "JR",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-pinewood-l-cloud",
+            "DisplayName": "Layton Cloud",
+            "RatingLabel": "2.xx UTR",
+            "ClassYearLabel": null,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 6,
+            "bottom": 1
+          },
+          {
+            "SetNumber": 2,
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "SourceScoreLabel": "6/1 6/0",
+        "WinnerPlayerID": 2026056
+      },
+      {
+        "TennisMatchID": "2026-03-26-pinewood-boys-singles-2",
+        "EventType": "Singles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2026-03-26",
+        "Participants": [
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026055,
+            "DisplayName": "William Apt",
+            "RatingLabel": "3.xx UTR",
+            "ClassYearLabel": "JR",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-pinewood-w-hall",
+            "DisplayName": "Walker Hall",
+            "RatingLabel": "1.xx UTR",
+            "ClassYearLabel": null,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 6,
+            "bottom": 3
+          },
+          {
+            "SetNumber": 2,
+            "top": 6,
+            "bottom": 2
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "SourceScoreLabel": "6/3 6/2",
+        "WinnerPlayerID": 2026055
+      },
+      {
+        "TennisMatchID": "2026-03-26-pinewood-boys-singles-3",
+        "EventType": "Singles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2026-03-26",
+        "Participants": [
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026059,
+            "DisplayName": "Parley Duke",
+            "RatingLabel": "1.xx Projected",
+            "ClassYearLabel": "8th",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-pinewood-m-akins",
+            "DisplayName": "Maddox Akins",
+            "RatingLabel": "2.xx UTR",
+            "ClassYearLabel": null,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 4,
+            "bottom": 6
+          },
+          {
+            "SetNumber": 2,
+            "top": 1,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "opponentAthlete",
+        "SourceScoreLabel": "6/4 6/1",
+        "WinnerOpponentAthleteID": "tennis-2026-boys-pinewood-m-akins"
+      },
+      {
+        "TennisMatchID": "2026-03-26-pinewood-boys-doubles-1",
+        "EventType": "Doubles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2026-03-26",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-03-26-sta-reiter-carbone",
+            "DisplayName": "Reefe Reiter / Cameron Carbone",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026061,
+                "DisplayName": "Reefe Reiter",
+                "RatingLabel": "2.xx Projected",
+                "ClassYearLabel": "SO"
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026057,
+                "DisplayName": "Cameron Carbone",
+                "RatingLabel": "2.xx Projected",
+                "ClassYearLabel": "JR"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-03-26-pinewood-thompson-tucker",
+            "DisplayName": "Charlie Thompson / Maclain Tucker",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-pinewood-c-thompson",
+                "DisplayName": "Charlie Thompson",
+                "RatingLabel": "1.xx UTR",
+                "ClassYearLabel": null
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-pinewood-m-tucker",
+                "DisplayName": "Maclain Tucker",
+                "RatingLabel": "1.xx UTR",
+                "ClassYearLabel": null
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "SetNumber": 2,
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "doublesTeam",
+        "SourceScoreLabel": "6/0 6/0",
+        "WinnerTeamID": "2026-03-26-sta-reiter-carbone"
+      },
+      {
+        "TennisMatchID": "2026-03-26-pinewood-boys-doubles-2",
+        "EventType": "Doubles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2026-03-26",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-03-26-sta-espina-ammon",
+            "DisplayName": "Jordan Espina / Moritz Ammon",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026060,
+                "DisplayName": "Jordan Espina",
+                "RatingLabel": "2.xx UTR",
+                "ClassYearLabel": "JR"
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 202504,
+                "DisplayName": "Moritz Ammon",
+                "RatingLabel": "1.xx UTR",
+                "ClassYearLabel": "JR"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-03-26-pinewood-mathis-burke",
+            "DisplayName": "Wyatt Mathis / Emmett Burke",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-pinewood-w-mathis",
+                "DisplayName": "Wyatt Mathis",
+                "RatingLabel": "1.xx UTR",
+                "ClassYearLabel": null
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-pinewood-e-burke",
+                "DisplayName": "Emmett Burke",
+                "RatingLabel": "1.xx UTR",
+                "ClassYearLabel": null
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "SetNumber": 2,
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "doublesTeam",
+        "SourceScoreLabel": "6/0 6/0",
+        "WinnerTeamID": "2026-03-26-sta-espina-ammon"
+      }
+    ],
+    "Source": "User-provided UTR Sports screenshots"
+  },
+  {
+    "MatchID": "2026-03-25-westminster-girls",
+    "Season": 2026,
+    "Date": "2026-03-25",
+    "StartTime": "14:00",
+    "Name": "Westminster at St. Andrew's - Girls",
+    "MatchType": "Dual Match",
+    "Gender": "Girls",
+    "Classification": "GIAA",
+    "Status": "Completed",
+    "Location": "St. Andrew's School, Savannah, GA",
+    "SiteSchoolID": "ga-st-andrews-school-savannah",
+    "OpponentSchoolID": "ga-westminster-schools-of-augusta-augusta",
+    "HomeAway": "Home",
+    "TeamScore": {
+      "StAndrews": 0,
+      "Opponent": 5,
+      "Result": "L"
+    },
+    "LineMatches": [
+      {
+        "TennisMatchID": "2026-03-25-westminster-girls-singles-1",
+        "EventType": "Singles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2026-03-25",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-westminster-s-rice",
+            "DisplayName": "Sophie Rice",
+            "RatingLabel": "2.xx UTR",
+            "ClassYearLabel": "SR",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026046,
+            "DisplayName": "Abby Chu-Pruden",
+            "RatingLabel": "2.xx UTR",
+            "ClassYearLabel": "JR",
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 6,
+            "bottom": 1
+          },
+          {
+            "SetNumber": 2,
+            "top": 6,
+            "bottom": 1
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "SourceScoreLabel": "6/1 6/1",
+        "WinnerOpponentAthleteID": "tennis-2026-girls-westminster-s-rice"
+      },
+      {
+        "TennisMatchID": "2026-03-25-westminster-girls-singles-2",
+        "EventType": "Singles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2026-03-25",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-westminster-e-carr",
+            "DisplayName": "Elizabeth Ella Carr",
+            "RatingLabel": "3.xx UTR",
+            "ClassYearLabel": "SR",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026054,
+            "DisplayName": "Sophie Toder",
+            "RatingLabel": "1.xx Projected",
+            "ClassYearLabel": "JR",
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "SetNumber": 2,
+            "top": 6,
+            "bottom": 1
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "SourceScoreLabel": "6/0 6/1",
+        "WinnerOpponentAthleteID": "tennis-2026-girls-westminster-e-carr"
+      },
+      {
+        "TennisMatchID": "2026-03-25-westminster-girls-singles-3",
+        "EventType": "Singles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2026-03-25",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-westminster-e-dyches",
+            "DisplayName": "Emily Dyches",
+            "RatingLabel": "1.xx Projected",
+            "ClassYearLabel": "JR",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026048,
+            "DisplayName": "Zyona Edwards",
+            "RatingLabel": "1.xx Projected",
+            "ClassYearLabel": "8th",
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "SetNumber": 2,
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "SourceScoreLabel": "6/0 6/0",
+        "WinnerOpponentAthleteID": "tennis-2026-girls-westminster-e-dyches"
+      },
+      {
+        "TennisMatchID": "2026-03-25-westminster-girls-doubles-1",
+        "EventType": "Doubles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2026-03-25",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-03-25-westminster-martino-baggs",
+            "DisplayName": "Keira Martino / Ellyn Baggs",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-girls-westminster-k-martino",
+                "DisplayName": "Keira Martino",
+                "RatingLabel": "1.xx UTR",
+                "ClassYearLabel": null
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-girls-westminster-e-baggs",
+                "DisplayName": "Ellyn Baggs",
+                "RatingLabel": "1.xx UTR",
+                "ClassYearLabel": "SR"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-03-25-sta-kay-jackson",
+            "DisplayName": "Natalya Kay / Kate Jackson",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 202422,
+                "DisplayName": "Natalya Kay",
+                "RatingLabel": "1.xx Projected",
+                "ClassYearLabel": "JR"
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026049,
+                "DisplayName": "Kate Jackson",
+                "RatingLabel": "1.xx Projected",
+                "ClassYearLabel": "FR"
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 6,
+            "bottom": 1
+          },
+          {
+            "SetNumber": 2,
+            "top": 6,
+            "bottom": 3
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "doublesTeam",
+        "SourceScoreLabel": "6/1 6/3",
+        "WinnerTeamID": "2026-03-25-westminster-martino-baggs"
+      },
+      {
+        "TennisMatchID": "2026-03-25-westminster-girls-doubles-2",
+        "EventType": "Doubles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2026-03-25",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-03-25-westminster-mackay-drake",
+            "DisplayName": "Sarah Mackay / Cynthia Drake",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-girls-westminster-s-mackay",
+                "DisplayName": "Sarah Mackay",
+                "RatingLabel": "1.xx UTR",
+                "ClassYearLabel": null
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-girls-westminster-c-drake",
+                "DisplayName": "Cynthia Drake",
+                "RatingLabel": "1.xx UTR",
+                "ClassYearLabel": "SR"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-03-25-sta-aiken-argentinis",
+            "DisplayName": "Lily Aiken / Sophia Argentinis",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026044,
+                "DisplayName": "Lily Aiken",
+                "RatingLabel": "1.xx Projected",
+                "ClassYearLabel": "JR"
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026045,
+                "DisplayName": "Sophia Argentinis",
+                "RatingLabel": "1.xx Projected",
+                "ClassYearLabel": "JR"
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 6,
+            "bottom": 4
+          },
+          {
+            "SetNumber": 2,
+            "top": 6,
+            "bottom": 2
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "doublesTeam",
+        "SourceScoreLabel": "6/4 6/2",
+        "WinnerTeamID": "2026-03-25-westminster-mackay-drake"
+      }
+    ],
+    "Source": "User-provided UTR Sports screenshots"
+  },
+  {
+    "MatchID": "2026-03-26-pinewood-girls",
+    "Season": 2026,
+    "Date": "2026-03-26",
+    "StartTime": "16:00",
+    "Name": "St. Andrew's at Pinewood Christian - Girls",
+    "MatchType": "Dual Match",
+    "Gender": "Girls",
+    "Classification": "GIAA",
+    "Status": "Completed",
+    "Location": "Pinewood Christian Academy, Bellville, GA",
+    "SiteSchoolID": "ga-pinewood-christian-academy-bellville",
+    "OpponentSchoolID": "ga-pinewood-christian-academy-bellville",
+    "HomeAway": "Away",
+    "TeamScore": {
+      "StAndrews": 1,
+      "Opponent": 4,
+      "Result": "L"
+    },
+    "LineMatches": [
+      {
+        "TennisMatchID": "2026-03-26-pinewood-girls-singles-1",
+        "EventType": "Singles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2026-03-26",
+        "Participants": [
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026046,
+            "DisplayName": "Abby Chu-Pruden",
+            "RatingLabel": "2.xx UTR",
+            "ClassYearLabel": "JR",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-pinewood-a-barratta",
+            "DisplayName": "Abigail Barratta",
+            "RatingLabel": "2.xx UTR",
+            "ClassYearLabel": "JR",
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 6,
+            "bottom": 1
+          },
+          {
+            "SetNumber": 2,
+            "top": 7,
+            "bottom": 5
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "SourceScoreLabel": "6/1 7/5",
+        "WinnerPlayerID": 2026046
+      },
+      {
+        "TennisMatchID": "2026-03-26-pinewood-girls-singles-2",
+        "EventType": "Singles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2026-03-26",
+        "Participants": [
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026054,
+            "DisplayName": "Sophie Toder",
+            "RatingLabel": "1.xx Projected",
+            "ClassYearLabel": "JR",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-pinewood-h-waters",
+            "DisplayName": "Hadden Waters",
+            "RatingLabel": "1.xx UTR",
+            "ClassYearLabel": "FR",
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 2,
+            "bottom": 6
+          },
+          {
+            "SetNumber": 2,
+            "top": 2,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "opponentAthlete",
+        "SourceScoreLabel": "6/2 6/2",
+        "WinnerOpponentAthleteID": "tennis-2026-girls-pinewood-h-waters"
+      },
+      {
+        "TennisMatchID": "2026-03-26-pinewood-girls-singles-3",
+        "EventType": "Singles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2026-03-26",
+        "Participants": [
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026048,
+            "DisplayName": "Zyona Edwards",
+            "RatingLabel": "1.xx Projected",
+            "ClassYearLabel": "8th",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-pinewood-t-miles",
+            "DisplayName": "Tylee Miles",
+            "RatingLabel": "1.xx UTR",
+            "ClassYearLabel": "JR",
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 0,
+            "bottom": 6
+          },
+          {
+            "SetNumber": 2,
+            "top": 3,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "opponentAthlete",
+        "SourceScoreLabel": "6/0 6/3",
+        "WinnerOpponentAthleteID": "tennis-2026-girls-pinewood-t-miles"
+      },
+      {
+        "TennisMatchID": "2026-03-26-pinewood-girls-doubles-1",
+        "EventType": "Doubles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2026-03-26",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-03-26-sta-jackson-kay",
+            "DisplayName": "Kate Jackson / Natalya Kay",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026049,
+                "DisplayName": "Kate Jackson",
+                "RatingLabel": "1.xx Projected",
+                "ClassYearLabel": "FR"
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 202422,
+                "DisplayName": "Natalya Kay",
+                "RatingLabel": "1.xx Projected",
+                "ClassYearLabel": "JR"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-03-26-pinewood-middleton-massey",
+            "DisplayName": "Ramsey Middleton / Meredith Massey",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-girls-pinewood-r-middleton",
+                "DisplayName": "Ramsey Middleton",
+                "RatingLabel": "2.xx UTR",
+                "ClassYearLabel": "SR"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-girls-pinewood-m-massey",
+                "DisplayName": "Meredith Massey",
+                "RatingLabel": "2.xx UTR",
+                "ClassYearLabel": null
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 1,
+            "bottom": 6
+          },
+          {
+            "SetNumber": 2,
+            "top": 3,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "doublesTeam",
+        "SourceScoreLabel": "6/1 6/3",
+        "WinnerTeamID": "2026-03-26-pinewood-middleton-massey"
+      },
+      {
+        "TennisMatchID": "2026-03-26-pinewood-girls-doubles-2",
+        "EventType": "Doubles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2026-03-26",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-03-26-sta-aiken-argentinis",
+            "DisplayName": "Lily Aiken / Sophia Argentinis",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026044,
+                "DisplayName": "Lily Aiken",
+                "RatingLabel": "1.xx Projected",
+                "ClassYearLabel": "JR"
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026045,
+                "DisplayName": "Sophia Argentinis",
+                "RatingLabel": "1.xx Projected",
+                "ClassYearLabel": "JR"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-03-26-pinewood-hendrix-kirkland",
+            "DisplayName": "Ada Grace Hendrix / Addy Kirkland",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-girls-pinewood-a-hendrix",
+                "DisplayName": "Ada Grace Hendrix",
+                "RatingLabel": "2.xx UTR",
+                "ClassYearLabel": null
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-girls-pinewood-a-kirkland",
+                "DisplayName": "Addy Kirkland",
+                "RatingLabel": "2.xx UTR",
+                "ClassYearLabel": "FR"
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 3,
+            "bottom": 6
+          },
+          {
+            "SetNumber": 2,
+            "top": 1,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "doublesTeam",
+        "SourceScoreLabel": "6/3 6/1",
+        "WinnerTeamID": "2026-03-26-pinewood-hendrix-kirkland"
+      }
+    ],
+    "Source": "User-provided UTR Sports screenshots"
   }
 ]

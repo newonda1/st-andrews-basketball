@@ -21,6 +21,22 @@ export default function SeasonPage({ seasons = [], matches = [], status = "" }) 
     );
   }, [matches, seasonId]);
 
+  const boysMatches = useMemo(
+    () => seasonMatches.filter((match) => match.Gender === "Boys"),
+    [seasonMatches]
+  );
+  const girlsMatches = useMemo(
+    () => seasonMatches.filter((match) => match.Gender === "Girls"),
+    [seasonMatches]
+  );
+  const otherMatches = useMemo(
+    () =>
+      seasonMatches.filter(
+        (match) => match.Gender !== "Boys" && match.Gender !== "Girls"
+      ),
+    [seasonMatches]
+  );
+
   if (!season) {
     return (
       <div className="mx-auto max-w-4xl px-4 py-8 text-center sm:px-6">
@@ -57,71 +73,95 @@ export default function SeasonPage({ seasons = [], matches = [], status = "" }) 
         </p>
       </header>
 
-      <section className="space-y-3">
+      <section className="space-y-4">
         <h2 className="text-2xl font-semibold text-slate-900">
           Matches &amp; Tournaments
         </h2>
 
-        <div className="overflow-x-auto">
-          <table className="w-full min-w-[720px] border-collapse text-sm">
-            <thead>
-              <tr className="bg-slate-100">
-                <th className="border border-slate-300 px-3 py-2 text-center font-bold">
-                  Date
-                </th>
-                <th className="border border-slate-300 px-3 py-2 text-left font-bold">
-                  Event
-                </th>
-                <th className="border border-slate-300 px-3 py-2 text-center font-bold">
-                  Type
-                </th>
-                <th className="border border-slate-300 px-3 py-2 text-center font-bold">
-                  Status
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {seasonMatches.length ? (
-                seasonMatches.map((match) => (
-                  <tr key={match.MatchID} className="bg-white">
-                    <td className="border border-slate-300 px-3 py-2 text-center">
-                      {formatTennisDate(match.Date)}
-                    </td>
-                    <td className="border border-slate-300 px-3 py-2">
-                      <Link
-                        to={`/athletics/tennis/matches/${match.MatchID}`}
-                        className="font-bold text-blue-700 hover:text-blue-900"
-                      >
-                        {match.Name}
-                      </Link>
-                      {match.Location ? (
-                        <div className="mt-1 text-xs text-slate-500">
-                          {match.Location}
-                        </div>
-                      ) : null}
-                    </td>
-                    <td className="border border-slate-300 px-3 py-2 text-center">
-                      {match.MatchType || "Match"}
-                    </td>
-                    <td className="border border-slate-300 px-3 py-2 text-center">
-                      {match.Status || "—"}
-                    </td>
-                  </tr>
-                ))
-              ) : (
-                <tr>
-                  <td
-                    className="border border-slate-300 bg-white px-3 py-8 text-center text-slate-500"
-                    colSpan={4}
-                  >
-                    Matches for this season will appear here when they are added.
+        <SeasonMatchTable title="Boys Matches" matches={boysMatches} />
+        <SeasonMatchTable title="Girls Matches" matches={girlsMatches} />
+        {otherMatches.length ? (
+          <SeasonMatchTable title="Other Events" matches={otherMatches} />
+        ) : null}
+      </section>
+    </div>
+  );
+}
+
+function resultLabel(match) {
+  const score = match.TeamScore;
+  if (!score) return match.Status || "—";
+
+  const result = score.Result ? `${score.Result} ` : "";
+  if (score.StAndrews !== undefined && score.Opponent !== undefined) {
+    return `${result}${score.StAndrews}-${score.Opponent}`.trim();
+  }
+
+  return result.trim() || match.Status || "—";
+}
+
+function SeasonMatchTable({ title, matches = [] }) {
+  return (
+    <div className="rounded-lg border border-slate-200 bg-white shadow-sm">
+      <div className="border-b border-slate-200 px-4 py-3">
+        <h3 className="text-lg font-bold text-slate-900">{title}</h3>
+      </div>
+      <div className="overflow-x-auto">
+        <table className="w-full min-w-[720px] border-collapse text-sm">
+          <thead>
+            <tr className="bg-slate-100">
+              <th className="border-b border-slate-300 px-3 py-2 text-center font-bold">
+                Date
+              </th>
+              <th className="border-b border-slate-300 px-3 py-2 text-left font-bold">
+                Event
+              </th>
+              <th className="border-b border-slate-300 px-3 py-2 text-center font-bold">
+                Type
+              </th>
+              <th className="border-b border-slate-300 px-3 py-2 text-center font-bold">
+                Result
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {matches.length ? (
+              matches.map((match) => (
+                <tr key={match.MatchID}>
+                  <td className="border-b border-slate-200 px-3 py-2 text-center">
+                    {formatTennisDate(match.Date)}
+                  </td>
+                  <td className="border-b border-slate-200 px-3 py-2">
+                    <Link
+                      to={`/athletics/tennis/matches/${match.MatchID}`}
+                      className="font-bold text-blue-700 hover:text-blue-900"
+                    >
+                      {match.Name}
+                    </Link>
+                    {match.Location ? (
+                      <div className="mt-1 text-xs text-slate-500">
+                        {match.Location}
+                      </div>
+                    ) : null}
+                  </td>
+                  <td className="border-b border-slate-200 px-3 py-2 text-center">
+                    {match.MatchType || "Match"}
+                  </td>
+                  <td className="border-b border-slate-200 px-3 py-2 text-center font-semibold">
+                    {resultLabel(match)}
                   </td>
                 </tr>
-              )}
-            </tbody>
-          </table>
-        </div>
-      </section>
+              ))
+            ) : (
+              <tr>
+                <td className="px-3 py-8 text-center text-slate-500" colSpan={4}>
+                  No matches added yet.
+                </td>
+              </tr>
+            )}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }

@@ -1,5 +1,27 @@
 [
   {
+    "MeetID": 2016101501,
+    "Season": 2017,
+    "Date": "2016-10-15",
+    "Name": "SCISA State Championship (Varsity)",
+    "Location": "Augusta Aquatic Center, Augusta, GA",
+    "Level": "Varsity",
+    "MeetType": "State",
+    "Status": "Complete",
+    "GirlsTeamPlace": "3rd",
+    "GirlsTeamPoints": 101,
+    "BoysTeamPlace": "11th",
+    "BoysTeamPoints": 25,
+    "Notes": "Results loaded from the official 2016 SCISA state-meet PDF shared by the user. The St. Andrew's AA-A girls results included two individual state titles from Grace Van Brunt, two runner-up individual finishes from Gaby Van Brunt, second-place finishes in the 200 medley and 400 freestyle relays, and a third-place team finish with 101 points. The boys scored through Jack Fox-Marrs and two relays for an 11th-place finish with 25 points.",
+    "SourceUrl": "2016-10-15-SCISA-State-Championships-Final-Results-1.pdf",
+    "RecapTitle": "Van Brunt titles and relay points anchor the recovered 2016 SCISA meet",
+    "RecapParagraphs": [
+      "St. Andrew's girls finished third in the SCISA AA-A standings at the October 15, 2016 state meet with 101 points. Grace Van Brunt won the 200 IM and 100 backstroke, while Gaby Van Brunt placed second in both the 200 freestyle and 100 butterfly.",
+      "The relay group added a major share of the team result. Grace Van Brunt, Corinne Standing, Phoebe Mayo, and Gaby Van Brunt finished second in the 200 medley relay, while Gaby Van Brunt, Mayo, Molly Fox-Marrs, and Grace Van Brunt took second in the 400 freestyle relay.",
+      "The boys finished 11th with 25 points. Jack Fox-Marrs scored in the 50 freestyle and 100 freestyle, and the Lions added points in both the 200 medley and 200 freestyle relays."
+    ]
+  },
+  {
     "MeetID": 2017101401,
     "Season": 2018,
     "Date": "2017-10-14",

@@ -1,14 +1,15 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { useParams, Link } from "react-router-dom";
+import { SCHOOLS_PATH, hydrateGamesWithSchools } from "../dataUtils";
 
-function GameDetailGirls() {
+function GameDetail() {
   const { gameId } = useParams();
   const [game, setGame] = useState(null);
   const [playerStats, setPlayerStats] = useState([]);
   const [players, setPlayers] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // ✅ Girls basketball paths
+  // public/data/girls/basketball/...
   const DATA_BASE = "/data/girls/basketball/";
   const PLAYER_IMG_BASE = "/images/girls/basketball/players/";
 
@@ -19,23 +20,27 @@ function GameDetailGirls() {
       setLoading(true);
 
       try {
-        const [gamesRes, statsRes, playersRes] = await Promise.all([
+        const [gamesRes, statsRes, playersRes, schoolsRes] = await Promise.all([
           fetch(`${DATA_BASE}games.json`),
           fetch(`${DATA_BASE}playergamestats.json`),
-          fetch(`${DATA_BASE}players.json`),
+          fetch("/data/girls/basketball/players.json"),
+          fetch(SCHOOLS_PATH),
         ]);
 
-        if (!gamesRes.ok || !statsRes.ok || !playersRes.ok) {
+        if (!gamesRes.ok || !statsRes.ok || !playersRes.ok || !schoolsRes.ok) {
           throw new Error(
-            `Fetch failed: games(${gamesRes.status}) stats(${statsRes.status}) players(${playersRes.status})`
+            `Fetch failed: games(${gamesRes.status}) stats(${statsRes.status}) players(${playersRes.status}) schools(${schoolsRes.status})`
           );
         }
 
-        const [gamesData, statsData, playersData] = await Promise.all([
+        const [gamesDataRaw, statsData, playersData, schoolsData] = await Promise.all([
           gamesRes.json(),
           statsRes.json(),
           playersRes.json(),
+          schoolsRes.json(),
         ]);
+
+        const gamesData = hydrateGamesWithSchools(gamesDataRaw, schoolsData);
 
         const idNum = Number(gameId);
 
@@ -48,7 +53,7 @@ function GameDetailGirls() {
           setPlayers(playersData || []);
         }
       } catch (err) {
-        console.error("Failed to load girls game detail data:", err);
+        console.error("Failed to load game detail data:", err);
         if (!cancelled) {
           setGame(null);
           setPlayerStats([]);
@@ -85,12 +90,29 @@ function GameDetailGirls() {
 
   const getPlayerPhotoUrl = (playerId) => `${PLAYER_IMG_BASE}${playerId}.jpg`;
 
-  const formatDate = (ms) =>
-    new Date(ms).toLocaleDateString(undefined, {
+  const formatDate = (gameId) => {
+    if (!gameId) return "";
+
+    const n = Number(gameId);
+    if (!Number.isFinite(n)) return "";
+
+    const year = Math.floor(n / 10000);
+    const month = Math.floor(n / 100) % 100;
+    const day = n % 100;
+
+    if (year < 1900 || month < 1 || month > 12 || day < 1 || day > 31) {
+      return "";
+    }
+
+    const d = new Date(Date.UTC(year, month - 1, day));
+
+    return d.toLocaleDateString(undefined, {
+      timeZone: "UTC",
       month: "short",
       day: "numeric",
       year: "numeric",
     });
+  };
 
   const formatPct = (made, att) => {
     const m = Number(made);
@@ -112,6 +134,7 @@ function GameDetailGirls() {
     return (((fgm + 0.5 * thpm) / fga) * 100).toFixed(1);
   };
 
+  // Build a season slug like "2025-26" from the start year in your games.json ("Season": 2025)
   const seasonSlugFromYearStart = (yearStart) => {
     const ys = Number(yearStart);
     if (!ys || isNaN(ys)) return null;
@@ -148,20 +171,26 @@ function GameDetailGirls() {
     };
   }, [playerStats]);
 
-  if (loading) return <div className="p-4">Loading…</div>;
-  if (!game) return <div className="p-4">Game not found.</div>;
+  if (loading) {
+    return <div className="p-4">Loading…</div>;
+  }
 
-  const seasonSlug = seasonSlugFromYearStart(game.Season);
-  const seasonPath = seasonSlug
-    ? `/athletics/girls/basketball/seasons/${seasonSlug}`
-    : "/athletics/girls/basketball/seasons";
+  if (!game) {
+    return <div className="p-4">Game not found.</div>;
+  }
 
-  // ✅ Header lines (match boys)
   const resultText =
     game.Result === "W" ? "Win" : game.Result === "L" ? "Loss" : "Result pending";
 
   const showScore = game.Result === "W" || game.Result === "L";
 
+  // ✅ Dynamic “Back to Season” link + label (no hard-coded season)
+  const seasonSlug = seasonSlugFromYearStart(game.Season);
+  const seasonPath = seasonSlug
+    ? `/athletics/girls/basketball/seasons/${seasonSlug}`
+    : "/athletics/girls/basketball/seasons";
+
+  // ✅ Recap title from games.json
   const recapTitle =
     game.RecapTitle && String(game.RecapTitle).trim().length > 0
       ? game.RecapTitle
@@ -176,10 +205,9 @@ function GameDetailGirls() {
         {seasonSlug ? `← Back to the ${seasonSlug} Season` : "← Back to Seasons"}
       </Link>
 
-      {/* ✅ Added header block (date/opponent, result, location/type) */}
       <header>
         <h1 className="text-2xl font-bold mb-2">
-          {formatDate(game.Date)} vs {game.Opponent}
+          {formatDate(game.GameID)} vs {game.Opponent}
         </h1>
         <p className="text-lg">
           {resultText}
@@ -202,9 +230,8 @@ function GameDetailGirls() {
 
       <section>
         <h2 className="text-xl font-semibold mb-2">Box Score</h2>
-
         {playerStats.length === 0 ? (
-          <p className="text-gray-600 italic">Box score coming soon.</p>
+          <p className="text-gray-600">No player statistics recorded for this game yet.</p>
         ) : (
           <div className="overflow-x-auto">
             <table className="min-w-full border text-xs sm:text-sm text-center">
@@ -231,56 +258,56 @@ function GameDetailGirls() {
               </thead>
 
               <tbody>
-                {playerStats.map((s) => (
-                  <tr key={s.PlayerGameStatsID ?? `${s.GameID}-${s.PlayerID}`}>
-                    <td className="border px-2 py-1 align-middle text-left">
-                      <div className="flex items-center justify-start gap-2">
-                        <img
-                          src={getPlayerPhotoUrl(s.PlayerID)}
-                          alt={getPlayerName(s.PlayerID)}
-                          onError={(e) => {
-                            e.currentTarget.src = "/images/common/logo.png";
-                          }}
-                          className="w-8 h-8 rounded-full object-cover border"
-                        />
-                        <Link
-                          to={`/athletics/girls/basketball/players/${s.PlayerID}`}
-                          className="text-blue-600 underline hover:text-blue-800"
-                        >
-                          {getPlayerName(s.PlayerID)}
-                        </Link>
-                      </div>
-                    </td>
+                {playerStats.map((s) => {
+                  const threePct = formatPct(s.ThreePM, s.ThreePA);
+                  const twoPct = formatPct(s.TwoPM, s.TwoPA);
+                  const efgPct = calcEFG(s.TwoPM, s.ThreePM, s.TwoPA, s.ThreePA);
+                  const ftPct = formatPct(s.FTM, s.FTA);
 
-                    <td className="border px-2 py-1">{s.Points}</td>
-                    <td className="border px-2 py-1">{s.Rebounds}</td>
-                    <td className="border px-2 py-1">{s.Assists}</td>
-                    <td className="border px-2 py-1">{s.Turnovers}</td>
-                    <td className="border px-2 py-1">{s.Steals}</td>
-                    <td className="border px-2 py-1">{s.Blocks}</td>
-                    <td className="border px-2 py-1">{s.ThreePM}</td>
-                    <td className="border px-2 py-1">{s.ThreePA}</td>
-                    <td className="border px-2 py-1">
-                      {formatPct(s.ThreePM, s.ThreePA)}
-                    </td>
-                    <td className="border px-2 py-1">{s.TwoPM}</td>
-                    <td className="border px-2 py-1">{s.TwoPA}</td>
-                    <td className="border px-2 py-1">
-                      {formatPct(s.TwoPM, s.TwoPA)}
-                    </td>
-                    <td className="border px-2 py-1">
-                      {calcEFG(s.TwoPM, s.ThreePM, s.TwoPA, s.ThreePA)}
-                    </td>
-                    <td className="border px-2 py-1">{s.FTM}</td>
-                    <td className="border px-2 py-1">{s.FTA}</td>
-                    <td className="border px-2 py-1">
-                      {formatPct(s.FTM, s.FTA)}
-                    </td>
-                  </tr>
-                ))}
+                  return (
+                    <tr key={s.PlayerGameStatsID ?? `${s.GameID}-${s.PlayerID}`}>
+                      <td className="border px-2 py-1 align-middle text-left">
+                        <div className="flex items-center justify-start gap-2">
+                          <img
+                            src={getPlayerPhotoUrl(s.PlayerID)}
+                            alt={getPlayerName(s.PlayerID)}
+                            onError={(e) => {
+                              e.currentTarget.src = "/images/common/logo.png";
+                            }}
+                            className="w-8 h-8 rounded-full object-cover border"
+                          />
+                          <Link
+                            to={`/athletics/girls/basketball/players/${s.PlayerID}`}
+                            className="text-blue-600 underline hover:text-blue-800"
+                          >
+                            {getPlayerName(s.PlayerID)}
+                          </Link>
+                        </div>
+                      </td>
 
+                      <td className="border px-2 py-1 align-middle">{s.Points}</td>
+                      <td className="border px-2 py-1 align-middle">{s.Rebounds}</td>
+                      <td className="border px-2 py-1 align-middle">{s.Assists}</td>
+                      <td className="border px-2 py-1 align-middle">{s.Turnovers}</td>
+                      <td className="border px-2 py-1 align-middle">{s.Steals}</td>
+                      <td className="border px-2 py-1 align-middle">{s.Blocks}</td>
+                      <td className="border px-2 py-1 align-middle">{s.ThreePM}</td>
+                      <td className="border px-2 py-1 align-middle">{s.ThreePA}</td>
+                      <td className="border px-2 py-1 align-middle">{threePct}</td>
+                      <td className="border px-2 py-1 align-middle">{s.TwoPM}</td>
+                      <td className="border px-2 py-1 align-middle">{s.TwoPA}</td>
+                      <td className="border px-2 py-1 align-middle">{twoPct}</td>
+                      <td className="border px-2 py-1 align-middle">{efgPct}</td>
+                      <td className="border px-2 py-1 align-middle">{s.FTM}</td>
+                      <td className="border px-2 py-1 align-middle">{s.FTA}</td>
+                      <td className="border px-2 py-1 align-middle">{ftPct}</td>
+                    </tr>
+                  );
+                })}
+
+                {/* ✅ Team Totals row styled like header row */}
                 <tr className="bg-gray-100 font-semibold">
-                  <td className="border px-2 py-1 text-left">Team Totals</td>
+                  <td className="border px-2 py-1 text-center">Team Totals</td>
                   <td className="border px-2 py-1">{teamTotals.Points}</td>
                   <td className="border px-2 py-1">{teamTotals.Rebounds}</td>
                   <td className="border px-2 py-1">{teamTotals.Assists}</td>
@@ -307,4 +334,4 @@ function GameDetailGirls() {
   );
 }
 
-export default GameDetailGirls;
+export default GameDetail;

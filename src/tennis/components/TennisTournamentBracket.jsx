@@ -55,8 +55,8 @@ function resolveMember(member, playerMap, opponentMap, schoolMap) {
       (player?.FirstName || player?.LastName
         ? `${player?.FirstName || ""} ${player?.LastName || ""}`.trim()
         : null) ||
-      opponent?.DisplayName ||
       member?.DisplayName ||
+      opponent?.DisplayName ||
       "TBD",
     classLabel,
     schoolName:
@@ -115,8 +115,8 @@ function resolveParticipant(participant, playerMap, opponentMap, schoolMap) {
       (player?.FirstName || player?.LastName
         ? `${player?.FirstName || ""} ${player?.LastName || ""}`.trim()
         : null) ||
-      opponent?.DisplayName ||
       participant.DisplayName ||
+      opponent?.DisplayName ||
       "TBD",
     classLabel: participant.ClassYearLabel || classLabel,
     schoolName:
