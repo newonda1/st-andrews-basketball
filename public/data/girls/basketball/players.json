@@ -1,5 +1,12 @@
 [
   {
+    "PlayerID": 202101,
+    "FirstName": "Claire",
+    "LastName": "Fleming",
+    "GradYear": 2024,
+    "JerseyNumber": 21
+  },
+  {
     "PlayerID": 202201,
     "FirstName": "Grace",
     "LastName": "Dare",
@@ -33,6 +40,13 @@
     "LastName": "Nein",
     "GradYear": 2027,
     "JerseyNumber": 11
+  },
+  {
+    "PlayerID": 202303,
+    "FirstName": "Vivienne",
+    "LastName": "Carter",
+    "GradYear": 2028,
+    "JerseyNumber": 14
   },
   {
     "PlayerID": 202401,

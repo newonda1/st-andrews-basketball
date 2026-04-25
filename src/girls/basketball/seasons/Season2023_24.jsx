@@ -9,7 +9,7 @@ import {
   getRosterJerseyNumber,
 } from "../dataUtils";
 
-function Season2024_25() {
+function Season2023_24() {
   const [games, setGames] = useState([]);
   const [playerStats, setPlayerStats] = useState([]);
   const [players, setPlayers] = useState([]);
@@ -25,7 +25,7 @@ function Season2024_25() {
   const [schoolsData, setSchoolsData] = useState([]);
   const [seasonRosterEntries, setSeasonRosterEntries] = useState([]);
 
-  const SEASON_ID = 2024; // 2024-25 season
+  const SEASON_ID = 2023; // 2023-24 season
 
   // 1. Fetch data
   useEffect(() => {
@@ -75,7 +75,7 @@ function Season2024_25() {
         setPlayers(playersData);
         setBracketsData(bracketsJson);
         setSchoolsData(schoolsJson);
-        setSeasonRosterEntries(getRosterEntriesForSeason(rostersJson, "2024-25"));
+        setSeasonRosterEntries(getRosterEntriesForSeason(rostersJson, "2023-24"));
       } catch (err) {
         console.error("Error loading girls basketball data", err);
       }
@@ -387,7 +387,7 @@ function Season2024_25() {
 
   return (
     <div className="p-4 space-y-10 max-w-6xl mx-auto">
-      <h1 className="text-3xl font-bold text-center mb-4">2024-25 Season</h1>
+      <h1 className="text-3xl font-bold text-center mb-4">2023-24 Season</h1>
 
       {/* 1. SEASON OVERVIEW */}
       <section className="bg-white rounded-2xl shadow-sm p-6 space-y-4">
@@ -395,31 +395,30 @@ function Season2024_25() {
 
         <div className="text-gray-800 leading-relaxed">
           <h3 className="text-xl font-semibold mb-4">
-            Lions Battle Through a 24-Game 2024-25 Campaign
+            Lions Build Through a 25-Game 2023-24 Campaign
           </h3>
 
           <p className="mb-4 leading-relaxed">
-            St. Andrew’s finished the 2024-25 girls basketball season with a
-            6-18 record, including a 1-7 mark in region play. The Lions opened
-            the year with a win over The Habersham School, added victories over
-            Savannah Christian, New Hampstead, Westminster Schools of Augusta,
-            and completed a three-game sweep of Habersham.
+            St. Andrew's finished the 2023-24 girls basketball season with a
+            6-19 record, including a 1-7 mark in region play. The Lions earned
+            wins over Thomas Heyward Academy, Islands, The Habersham School,
+            and Pinewood Christian while navigating a deep Region 2-AAA slate.
           </p>
 
           <p className="mb-4 leading-relaxed">
             The roster mixed veteran leadership with underclass contributors.
-            Gray Holmes, Addison Yates, and Maya Salter anchored the senior
-            class, while Coco Carnahan, Maren Wrieden, Grace Dare, Avery Nein,
-            Scarlett Holmes, Mackenzie Mahan, Valerie Ward, and Lyleigh Bradshaw
-            all logged varsity statistics during the season.
+            Claire Fleming led the senior class, with Gray Holmes, Addison
+            Yates, Maya Salter, Coco Carnahan, Maren Wrieden, Grace Dare,
+            Scarlett Holmes, Valerie Ward, Avery Nein, and Vivienne Carter all
+            logging varsity statistics during the season.
           </p>
 
           <p className="mb-4 leading-relaxed">
-            In postseason play, St. Andrew’s entered the region tournament as
-            the No. 5 seed and the GIAA Class AAA state tournament as the No. 12
-            seed. The season page below preserves the full schedule, official
-            results, available MaxPreps player box-score data, and both
-            tournament brackets.
+            In postseason play, St. Andrew's entered the region tournament as
+            the No. 5 seed and faced Pinewood Christian in the opening round.
+            The season page below preserves the full schedule, official
+            results, available MaxPreps player box-score data, and the region
+            and state tournament brackets.
           </p>
         </div>
       </section>
@@ -949,4 +948,4 @@ function Season2024_25() {
   );
 }
 
-export default Season2024_25;
+export default Season2023_24;

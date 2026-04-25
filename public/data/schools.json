@@ -1176,5 +1176,11 @@
     "Name": "Ravenwood High School",
     "City": "Brentwood",
     "State": "TN"
+  },
+  {
+    "SchoolID": "sc-cross-high-school-cross",
+    "Name": "Cross High School",
+    "City": "Cross",
+    "State": "SC"
   }
 ]

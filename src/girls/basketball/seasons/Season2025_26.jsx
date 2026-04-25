@@ -464,7 +464,7 @@ function Season2025_26() {
       {/* 2. SCHEDULE (matches boys page + toggle) */}
       <section>
         <div className="flex items-center justify-between mt-8 mb-4">
-          <h2 className="text-2xl font-semibold">📅 Schedule &amp; Results</h2>
+          <h2 className="text-2xl font-semibold">Schedule &amp; Results</h2>
 
           <div className="flex items-center gap-2 text-xs sm:text-sm">
             <span
@@ -730,7 +730,7 @@ function Season2025_26() {
       {/* 5. PLAYER STATS TABLE (matches boys page + toggle + GP + Team Totals row) */}
       <section>
         <div className="flex items-center justify-between mt-8 mb-4">
-          <h2 className="text-2xl font-semibold">📊 Player Statistics for the Season</h2>
+          <h2 className="text-2xl font-semibold">Player Statistics for the Season</h2>
 
           <div className="flex items-center space-x-2 text-xs sm:text-sm">
             <span className={`${showPerGame ? "text-gray-400" : "text-gray-900 font-semibold"}`}>

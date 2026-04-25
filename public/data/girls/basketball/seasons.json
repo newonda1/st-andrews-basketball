@@ -1,9 +1,19 @@
 [
   {
+    "SeasonID": 2023,
+    "YearStart": 2023,
+    "YearEnd": 2024,
+    "HeadCoach": "Jimmy Stetler",
+    "RegionSeed": 5,
+    "RegionFinish": "Region Quarterfinalist",
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
     "SeasonID": 2024,
     "YearStart": 2024,
     "YearEnd": 2025,
-    "HeadCoach": "Daniel Jackson",
+    "HeadCoach": "Jimmy Stetler",
     "RegionSeed": 5,
     "RegionFinish": "Region Quarterfinalist",
     "StateSeed": 12,
