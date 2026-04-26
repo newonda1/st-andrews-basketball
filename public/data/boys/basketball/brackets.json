@@ -264,7 +264,8 @@
         },
         "creekside": {
           "name": "Creekside Christian",
-          "seed": 5
+          "seed": 5,
+          "schoolId": "ga-creekside-christian-academy-mcdonough"
         },
         "holyspirit": {
           "name": "Holy Spirit Prep",
@@ -273,7 +274,8 @@
         },
         "bethlehem": {
           "name": "Bethlehem Christian",
-          "seed": 7
+          "seed": 7,
+          "schoolId": "ga-bethlehem-christian-academy-bethlehem"
         },
         "brookwood": {
           "name": "Brookwood",
@@ -312,7 +314,8 @@
         },
         "youngamericans": {
           "name": "Young Americans Christian",
-          "seed": 14
+          "seed": 14,
+          "schoolId": "ga-young-americans-christian-school-conyers"
         },
         "tiftarea": {
           "name": "Tiftarea",

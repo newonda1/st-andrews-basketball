@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useMemo } from "react";
 
-function StateBracket16SVG({ bracket }) {
+function StateBracket16SVG({ bracket, schools = [] }) {
   const teams = bracket?.teams ?? {};
   const games = bracket?.games ?? {};
 
@@ -29,17 +29,32 @@ function StateBracket16SVG({ bracket }) {
   const isWinner = (gameKey, teamId) => Boolean(teamId && games?.[gameKey]?.winner === teamId);
   const cy = (y) => y + cardH / 2;
 
+  const schoolsById = useMemo(() => {
+    const map = new Map();
+    for (const school of Array.isArray(schools) ? schools : []) {
+      if (school?.SchoolID) map.set(String(school.SchoolID), school);
+    }
+    return map;
+  }, [schools]);
+
   const getTeamMeta = (teamId) => {
     const team = teamId ? teams[teamId] : null;
-    const teamLogo =
+    const school = team?.schoolId ? schoolsById.get(String(team.schoolId)) : null;
+    const logoPath =
+      school?.BracketLogoPath ||
+      school?.LogoPath ||
       team?.logo ||
       (team?.card?.startsWith("/images/schools/logos/") ? team.card : null);
 
     return {
-      name: team?.name || (teamId ? String(teamId) : "TBD"),
-      card: teamLogo ? null : team?.card || null,
-      logo: teamLogo,
-      color: team?.primaryColor || "#1d4ed8",
+      name:
+        team?.name ||
+        school?.ShortName ||
+        school?.Name ||
+        (teamId ? String(teamId) : "TBD"),
+      card: logoPath ? null : team?.card || null,
+      logo: logoPath,
+      color: school?.PrimaryColor || team?.primaryColor || "#1d4ed8",
     };
   };
 

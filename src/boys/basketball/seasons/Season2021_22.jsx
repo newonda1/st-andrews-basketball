@@ -19,6 +19,7 @@ function Season2021_22() {
   const [players, setPlayers] = useState([]);
   const [rosterEntries, setRosterEntries] = useState([]);
   const [bracketsData, setBracketsData] = useState(null);
+  const [schoolsData, setSchoolsData] = useState([]);
   const [showPerGame, setShowPerGame] = useState(false);
 
   useEffect(() => {
@@ -51,6 +52,7 @@ function Season2021_22() {
       setPlayers(playersData);
       setRosterEntries(getRosterEntriesForSeason(rostersData, SEASON_ID));
       setBracketsData(bracketsJson);
+      setSchoolsData(schoolsData);
     }
 
     fetchData();
@@ -240,7 +242,7 @@ function Season2021_22() {
         {bracketsData === null ? (
           <p className="text-gray-600">Loading region bracket...</p>
         ) : bracket?.region ? (
-          <RegionBracket5SVG bracket={bracket.region} />
+          <RegionBracket5SVG bracket={bracket.region} schools={schoolsData} />
         ) : (
           <p className="text-gray-600">Region bracket data is not available for this season.</p>
         )}
@@ -251,7 +253,7 @@ function Season2021_22() {
         {bracketsData === null ? (
           <p className="text-gray-600">Loading state bracket...</p>
         ) : bracket?.state ? (
-          <StateBracket16SVG bracket={bracket.state} />
+          <StateBracket16SVG bracket={bracket.state} schools={schoolsData} />
         ) : (
           <p className="text-gray-600">State bracket data is not available for this season.</p>
         )}
