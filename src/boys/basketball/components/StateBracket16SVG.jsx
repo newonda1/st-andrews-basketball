@@ -23,7 +23,7 @@ function StateBracket16SVG({ bracket }) {
   const yFinal = [yR1[7], yR1[11]];
   const H = yR1[15] + cardH + topPad;
 
-  const seedOf = (teamId) => teams?.[teamId]?.seed ?? null;
+  const seedOf = (teamId) => teams?.[teamId]?.seed ?? teams?.[teamId]?.seedLabel ?? null;
   const winnerOf = (gameKey) => games?.[gameKey]?.winner ?? null;
   const scoreFor = (gameKey, side) => games?.[gameKey]?.[side]?.score ?? null;
   const isWinner = (gameKey, teamId) => Boolean(teamId && games?.[gameKey]?.winner === teamId);
@@ -43,6 +43,8 @@ function StateBracket16SVG({ bracket }) {
     const scoreW = 32;
     const imageX = x + 40;
     const imageW = cardW - 86;
+    const seedValue = String(seed ?? "").match(/#?\s*(\d+)$/)?.[1];
+    const seedText = seedValue ? `#${seedValue}` : null;
 
     return (
       <g>
@@ -60,9 +62,15 @@ function StateBracket16SVG({ bracket }) {
           stroke={highlight ? meta.color : "rgba(120,130,140,0.45)"}
           strokeWidth={highlight ? 2.2 : 1.15}
         />
-        {seed !== null && seed !== undefined && (
-          <text x={x + 12} y={y + 33} fontSize="12.5" fontWeight="800" fill="rgba(30,34,40,0.95)">
-            #{seed}
+        {seedText && (
+          <text
+            x={x + 10}
+            y={y + 33}
+            fontSize={seedText.length > 4 ? 10.5 : 12.5}
+            fontWeight="800"
+            fill="rgba(30,34,40,0.95)"
+          >
+            {seedText}
           </text>
         )}
         {meta.card ? (

@@ -95,7 +95,8 @@ const sports = [
   {
     name: "Golf",
     to: "/athletics/golf",
-    icon: "/images/golf/golf_icon.svg",
+    icon: "/images/golf/golf_icon.png",
+    iconClassName: "rounded-full",
     bannerNote: "State results archive since 2019",
     championshipGroups: [
       {
@@ -198,7 +199,9 @@ function SportBannerHeader({ sport }) {
           src={sport.icon}
           alt=""
           aria-hidden="true"
-          className="absolute left-1/2 top-[4.45rem] h-[4.7rem] w-[4.7rem] -translate-x-1/2 object-contain drop-shadow-[0_10px_16px_rgba(15,23,42,0.32)]"
+          className={`absolute left-1/2 top-[4.45rem] h-[4.7rem] w-[4.7rem] -translate-x-1/2 object-contain drop-shadow-[0_10px_16px_rgba(15,23,42,0.32)] ${
+            sport.iconClassName || ""
+          }`}
           loading="lazy"
         />
       </div>

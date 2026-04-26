@@ -1,4 +1,106 @@
 {
+  "2019": {
+    "state": {
+      "format": "16",
+      "title": "2019-2020 GISA AA State Tournament",
+      "teams": {
+        "furtah": {
+          "name": "Furtah Prep",
+          "seed": 1,
+          "schoolId": "ga-furtah-preparatory-school-acworth"
+        },
+        "fpca": {
+          "name": "First Preparatory Christian Academy",
+          "seed": 4,
+          "schoolId": "ga-first-preparatory-christian-academy-hinesville"
+        },
+        "windsor": {
+          "name": "Windsor Academy",
+          "seed": 2
+        },
+        "gatewood": {
+          "name": "Gatewood",
+          "seed": 3,
+          "schoolId": "ga-gatewood-schools-eatonton"
+        },
+        "roberttoombs": {
+          "name": "Robert Toombs",
+          "seed": 1,
+          "schoolId": "ga-robert-toombs-christian-academy-lyons"
+        },
+        "piedmont": {
+          "name": "Piedmont",
+          "seed": 4,
+          "schoolId": "ga-piedmont-academy-monticello"
+        },
+        "brentwood": {
+          "name": "Brentwood",
+          "seed": 2
+        },
+        "westwood": {
+          "name": "Westwood",
+          "seed": 3
+        },
+        "edmundburke": {
+          "name": "Edmund Burke",
+          "seed": 1,
+          "schoolId": "ga-edmund-burke-academy-waynesboro"
+        },
+        "southwestgeorgia": {
+          "name": "Southwest Georgia",
+          "seed": 4,
+          "schoolId": "ga-southwest-georgia-academy-damascus"
+        },
+        "standrews": {
+          "name": "St. Andrew's",
+          "seed": 2,
+          "schoolId": "ga-st-andrews-school-savannah",
+          "card": "/images/boys/basketball/teams/standrews.svg"
+        },
+        "solidrock": {
+          "name": "Solid Rock Academy",
+          "seed": 3,
+          "schoolId": "ga-solid-rock-academy-fayetteville"
+        },
+        "terrell": {
+          "name": "Terrell",
+          "seed": 1,
+          "schoolId": "ga-terrell-academy-dawson"
+        },
+        "monsignordonovan": {
+          "name": "Monsignor Donovan",
+          "seed": 4
+        },
+        "youngamericans": {
+          "name": "Young Americans Christian",
+          "seed": 2,
+          "schoolId": "ga-young-americans-christian-school-conyers"
+        },
+        "memorial": {
+          "name": "Memorial Day",
+          "seed": 3,
+          "schoolId": "ga-memorial-day-school-savannah"
+        }
+      },
+      "games": {
+        "r1_1_16": { "top": { "teamId": "furtah", "score": 89 }, "bottom": { "teamId": "fpca", "score": 22 }, "winner": "furtah" },
+        "r1_8_9": { "top": { "teamId": "windsor", "score": 45 }, "bottom": { "teamId": "gatewood", "score": 76 }, "winner": "gatewood" },
+        "r1_4_13": { "top": { "teamId": "roberttoombs", "score": 53 }, "bottom": { "teamId": "piedmont", "score": 42 }, "winner": "roberttoombs" },
+        "r1_5_12": { "top": { "teamId": "brentwood", "score": 62 }, "bottom": { "teamId": "westwood", "score": 59 }, "winner": "brentwood" },
+        "r1_2_15": { "top": { "teamId": "edmundburke", "score": 65 }, "bottom": { "teamId": "southwestgeorgia", "score": 48 }, "winner": "edmundburke" },
+        "r1_7_10": { "top": { "teamId": "standrews", "score": 51 }, "bottom": { "teamId": "solidrock", "score": 41 }, "winner": "standrews" },
+        "r1_3_14": { "top": { "teamId": "terrell", "score": 76 }, "bottom": { "teamId": "monsignordonovan", "score": 51 }, "winner": "terrell" },
+        "r1_6_11": { "top": { "teamId": "youngamericans", "score": 65 }, "bottom": { "teamId": "memorial", "score": 66 }, "winner": "memorial" },
+        "qf_1": { "top": { "teamId": "furtah", "score": 54 }, "bottom": { "teamId": "gatewood", "score": 38 }, "winner": "furtah" },
+        "qf_4": { "top": { "teamId": "roberttoombs", "score": 79 }, "bottom": { "teamId": "brentwood", "score": 67 }, "winner": "roberttoombs" },
+        "qf_2": { "top": { "teamId": "edmundburke", "score": 27 }, "bottom": { "teamId": "standrews", "score": 49 }, "winner": "standrews" },
+        "qf_3": { "top": { "teamId": "terrell", "score": 59 }, "bottom": { "teamId": "memorial", "score": 64 }, "winner": "memorial" },
+        "sf_top": { "top": { "teamId": "furtah", "score": 77 }, "bottom": { "teamId": "roberttoombs", "score": 72 }, "winner": "furtah" },
+        "sf_bot": { "top": { "teamId": "standrews", "score": 49 }, "bottom": { "teamId": "memorial", "score": 38 }, "winner": "standrews" },
+        "final": { "top": { "teamId": "furtah", "score": 57 }, "bottom": { "teamId": "standrews", "score": 52 }, "winner": "furtah" }
+      }
+    }
+  },
   "2020": {
     "region": {
       "title": "2020-2021 Region Tournament",
