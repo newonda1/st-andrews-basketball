@@ -75,8 +75,22 @@ const sports = [
     name: "Tennis",
     to: "/athletics/tennis",
     icon: "/images/tennis/tennis_icon.png",
-    regionYears: [],
-    stateYears: [],
+    championshipGroups: [
+      {
+        title: "Team Championships",
+        sections: [
+          { title: "Region Championships", years: [2025, 2026] },
+          { title: "State Championships", years: [] },
+        ],
+      },
+      {
+        title: "Individual Champions",
+        sections: [
+          { title: "Region Championships", years: [2025, 2026] },
+          { title: "State Championships", years: [] },
+        ],
+      },
+    ],
   },
 ];
 
