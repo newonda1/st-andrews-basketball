@@ -93,7 +93,15 @@
     "SchoolID": "ga-bethlehem-christian-academy-bethlehem",
     "Name": "Bethlehem Christian Academy",
     "City": "Bethlehem",
-    "State": "GA"
+    "State": "GA",
+    "ShortName": "Bethlehem Christian",
+    "Mascot": "Knights",
+    "PrimaryColor": "#06143A",
+    "SecondaryColor": "#AEB4BF",
+    "WebsiteUrl": "https://www.bethlehemchristianacademy.org/",
+    "AthleticsUrl": "https://www.bethlehemchristianacademy.org/athletics",
+    "LogoPath": "/images/schools/logos/ga-bethlehem-christian-academy-bethlehem.png",
+    "LogoSourceUrl": "https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_3/v1752510659/bethlehemchristianacademyorg/iafskdlqdmlpjxxcngd3/2025-2026BoosterBrochureCover.png"
   },
   {
     "SchoolID": "ga-bible-baptist-school-savannah",
@@ -391,7 +399,15 @@
     "SchoolID": "ga-holy-spirit-preparatory-school-atlanta",
     "Name": "Holy Spirit Preparatory School",
     "City": "Atlanta",
-    "State": "GA"
+    "State": "GA",
+    "ShortName": "Holy Spirit Prep",
+    "Mascot": "Cougars",
+    "PrimaryColor": "#00704A",
+    "SecondaryColor": "#FFD65A",
+    "WebsiteUrl": "https://holyspiritprep.org/",
+    "AthleticsUrl": "https://holyspiritprep.org/athletics/",
+    "LogoPath": "/images/schools/logos/ga-holy-spirit-preparatory-school-atlanta.png",
+    "LogoSourceUrl": "https://holyspiritprep.org/wp-content/uploads/2022/08/Booster-Club-Logo-No-Year.png"
   },
   {
     "SchoolID": "ga-islands-high-school-savannah",
@@ -851,7 +867,15 @@
     "SchoolID": "ga-young-americans-christian-school-conyers",
     "Name": "Young Americans Christian School",
     "City": "Conyers",
-    "State": "GA"
+    "State": "GA",
+    "ShortName": "Young Americans Christian",
+    "Mascot": "Eagles",
+    "PrimaryColor": "#0054A6",
+    "SecondaryColor": "#E51B23",
+    "WebsiteUrl": "https://yacs.us/",
+    "AthleticsUrl": "https://yacs.us/new-page",
+    "LogoPath": "/images/schools/logos/ga-young-americans-christian-school-conyers.png",
+    "LogoSourceUrl": "https://young-americans-eagle-store.myshopify.com/cdn/shop/files/EagledesignwYACSclear_600x600.png?v=1613156276"
   },
   {
     "SchoolID": "il-centennial-high-school-champaign",
