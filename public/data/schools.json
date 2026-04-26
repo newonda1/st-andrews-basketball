@@ -191,7 +191,15 @@
     "SchoolID": "ga-creekside-christian-academy-mcdonough",
     "Name": "Creekside Christian Academy",
     "City": "McDonough",
-    "State": "GA"
+    "State": "GA",
+    "ShortName": "Creekside Christian",
+    "Mascot": "Cougars",
+    "PrimaryColor": "#0A3DA8",
+    "SecondaryColor": "#F3C02F",
+    "WebsiteUrl": "https://creeksidechristian.academy/",
+    "AthleticsUrl": "http://wearecreekside.com/",
+    "LogoPath": "/images/schools/logos/ga-creekside-christian-academy-mcdonough.png",
+    "LogoSourceUrl": "http://wearecreekside.com/wp-content/uploads/2025/08/CCA-Athletic-Logo-Sticker-3-scaled.png"
   },
   {
     "SchoolID": "ga-crisp-academy-cordele",
@@ -783,7 +791,15 @@
     "SchoolID": "ga-trinity-christian-academy-dublin",
     "Name": "Trinity Christian Academy",
     "City": "Dublin",
-    "State": "GA"
+    "State": "GA",
+    "ShortName": "Trinity Christian",
+    "Mascot": "Crusaders",
+    "PrimaryColor": "#1111A8",
+    "SecondaryColor": "#A8A8A8",
+    "WebsiteUrl": "https://www.tcsweb.org/",
+    "AthleticsUrl": "https://www.tcsweb.org/athletics",
+    "LogoPath": "/images/schools/logos/ga-trinity-christian-academy-dublin.png",
+    "LogoSourceUrl": "https://static.wixstatic.com/media/a08823_c63ddc6dd53640bc810ed21958ae8cbf~mv2.png"
   },
   {
     "SchoolID": "ga-twiggs-academy-jeffersonville",
