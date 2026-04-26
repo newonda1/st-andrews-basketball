@@ -379,7 +379,7 @@
           "name": "Heritage",
           "seed": 4,
           "schoolId": "ga-the-heritage-school-newnan",
-          "card": "/images/boys/basketball/teams/heritage.svg"
+          "logo": "/images/schools/logos/ga-the-heritage-school-newnan.png"
         },
         "terrell": {
           "name": "Terrell Academy",

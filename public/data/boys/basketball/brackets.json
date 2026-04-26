@@ -555,61 +555,73 @@
     "standrews": {
       "name": "St. Andrew's",
       "seed": 1,
+      "schoolId": "ga-st-andrews-school-savannah",
       "card": "/images/boys/basketball/teams/standrews.svg"
     },
     "johnmilledge": {
       "name": "John Milledge",
       "seed": 2,
+      "schoolId": "ga-john-milledge-academy-milledgeville",
       "card": "/images/boys/basketball/teams/johnmilledge.svg"
     },
     "heritage": {
       "name": "Heritage",
       "seed": 3,
-      "card": "/images/boys/basketball/teams/heritage.svg"
+      "schoolId": "ga-the-heritage-school-newnan",
+      "logo": "/images/schools/logos/ga-the-heritage-school-newnan.png"
     },
     "southland": {
       "name": "Southland",
       "seed": 4,
+      "schoolId": "ga-southland-academy-americus",
       "card": "/images/boys/basketball/teams/southland.svg"
     },
     "dominionchristian": {
       "name": "Dominion Christian",
       "seed": 5,
+      "schoolId": "ga-dominion-christian-academy-marietta",
       "card": "/images/boys/basketball/teams/dominionchristian.svg"
     },
     "frederica": {
       "name": "Frederica",
       "seed": 6,
+      "schoolId": "ga-frederica-academy-st-simons-island",
       "card": "/images/boys/basketball/teams/frederica.svg"
     },
     "deerfieldwindsor": {
       "name": "Deerfield-Windsor",
       "seed": 7,
+      "schoolId": "ga-deerfield-windsor-school-albany",
       "card": "/images/boys/basketball/teams/deerfieldwindsor.svg"
     },
     "brookwood": {
       "name": "Brookwood",
       "seed": 8,
+      "schoolId": "ga-brookwood-academy-thomasville",
       "card": "/images/boys/basketball/teams/brookwood.svg"
     },
     "lakeview": {
       "name": "Lakeview",
       "seed": 9,
+      "schoolId": "ga-lakeview-academy-gainesville",
       "card": "/images/boys/basketball/teams/lakeview.svg"
     },
     "terrell": {
       "name": "Terrell",
       "seed": 10,
+      "schoolId": "ga-terrell-academy-dawson",
       "card": "/images/boys/basketball/teams/terrell.svg"
     },
     "pinewood": {
       "name": "Pinewood",
       "seed": 11,
+      "schoolId": "ga-pinewood-christian-academy-bellville",
       "card": "/images/boys/basketball/teams/pinewood.svg"
     },
     "valwood": {
       "name": "Valwood",
       "seed": 12,
+      "schoolId": "ga-valwood-school-hahira",
       "card": "/images/boys/basketball/teams/valwood.svg"
     }
   },
@@ -735,7 +747,7 @@
       "name": "Heritage",
       "seed": 1,
       "schoolId": "ga-the-heritage-school-newnan",
-      "card": "/images/boys/basketball/teams/heritage.svg"
+      "logo": "/images/schools/logos/ga-the-heritage-school-newnan.png"
     },
     "standrews": {
       "name": "St. Andrew’s",

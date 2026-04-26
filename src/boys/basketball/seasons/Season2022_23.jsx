@@ -24,6 +24,7 @@ function Season2022_23() {
   const [showPerGame, setShowPerGame] = useState(false);
   const [showTeamTotals, setShowTeamTotals] = useState(false);
   const [bracketsData, setBracketsData] = useState(null);
+  const [schoolsData, setSchoolsData] = useState([]);
 
   const SEASON_ID = 2022; // 2022–23 season
 
@@ -60,6 +61,7 @@ function Season2022_23() {
       setPlayers(playersData);
       setRosterEntries(getRosterEntriesForSeason(rostersData, SEASON_ID));
       setBracketsData(bracketsJson);
+      setSchoolsData(schoolsData);
     }
 
     fetchData();
@@ -662,12 +664,15 @@ function Season2022_23() {
 
       {/* ---------------- REGION TOURNAMENT BRACKET ---------------- */}
       <section className="space-y-3">
-        <h2 className="text-2xl font-semibold">🏆 Region Tournament Bracket</h2>
+        <h2 className="text-2xl font-semibold">Region Tournament Bracket</h2>
 
         {bracketsData === null ? (
           <p className="text-gray-600">Loading region bracket…</p>
         ) : bracketsData?.[String(SEASON_ID)]?.region ? (
-          <RegionBracket5SVG bracket={bracketsData[String(SEASON_ID)].region} />
+          <RegionBracket5SVG
+            bracket={bracketsData[String(SEASON_ID)].region}
+            schools={schoolsData}
+          />
         ) : (
           <p className="text-gray-600">
             Region bracket data is not available for this season (missing key "
@@ -678,12 +683,15 @@ function Season2022_23() {
 
       {/* ---------------- STATE TOURNAMENT BRACKET ---------------- */}
       <section className="space-y-3">
-        <h2 className="text-2xl font-semibold">🏆 State Tournament Bracket</h2>
+        <h2 className="text-2xl font-semibold">State Tournament Bracket</h2>
 
         {bracketsData === null ? (
           <p className="text-gray-600">Loading state bracket…</p>
         ) : bracketsData?.[String(SEASON_ID)]?.state ? (
-          <StateBracket12SVG bracket={bracketsData[String(SEASON_ID)].state} />
+          <StateBracket12SVG
+            bracket={bracketsData[String(SEASON_ID)].state}
+            schools={schoolsData}
+          />
         ) : (
           <p className="text-gray-600">
             State bracket data is not available for this season (missing key "

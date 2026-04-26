@@ -31,9 +31,14 @@ function StateBracket16SVG({ bracket }) {
 
   const getTeamMeta = (teamId) => {
     const team = teamId ? teams[teamId] : null;
+    const teamLogo =
+      team?.logo ||
+      (team?.card?.startsWith("/images/schools/logos/") ? team.card : null);
+
     return {
       name: team?.name || (teamId ? String(teamId) : "TBD"),
-      card: team?.card || team?.logo || null,
+      card: teamLogo ? null : team?.card || null,
+      logo: teamLogo,
       color: team?.primaryColor || "#1d4ed8",
     };
   };
@@ -73,7 +78,27 @@ function StateBracket16SVG({ bracket }) {
             {seedText}
           </text>
         )}
-        {meta.card ? (
+        {meta.logo ? (
+          <g>
+            <image
+              href={meta.logo}
+              x={imageX}
+              y={y + 6}
+              width={38}
+              height={42}
+              preserveAspectRatio="xMidYMid meet"
+            />
+            <text
+              x={imageX + 46}
+              y={y + 33}
+              fontSize={meta.name.length > 18 ? 12 : 13.5}
+              fontWeight="700"
+              fill="rgba(30,34,40,0.95)"
+            >
+              {meta.name}
+            </text>
+          </g>
+        ) : meta.card ? (
           <image href={meta.card} x={imageX} y={y} width={imageW} height={cardH} preserveAspectRatio="xMidYMid meet" />
         ) : (
           <text x={imageX + 4} y={y + 33} fontSize={meta.name.length > 18 ? 12 : 13.5} fontWeight="700" fill="rgba(30,34,40,0.95)">
