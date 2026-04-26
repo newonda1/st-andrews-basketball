@@ -4,6 +4,7 @@ export const BOYS_BASKETBALL_DATA_BASE = "/data/boys/basketball/";
 export const BOYS_BASKETBALL_ROSTERS_PATH = `${BOYS_BASKETBALL_DATA_BASE}seasonrosters.json`;
 
 export const PLAYER_GAME_STAT_FIELDS = [
+  "Minutes",
   "Points",
   "Rebounds",
   "Assists",

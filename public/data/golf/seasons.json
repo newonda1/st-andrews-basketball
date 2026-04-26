@@ -1,0 +1,62 @@
+[
+  {
+    "SeasonID": 2019,
+    "SeasonLabel": "Spring 2019",
+    "Classification": "Class AA / Class AAA",
+    "StatusBadge": "verified",
+    "StatusNote": "The 2019 archive includes 2 published state tournaments, but no St. Andrew's golfers appear in the posted results.",
+    "ArchivePdfUrl": "https://giaasports.org/wp-content/uploads/2022/05/2019-Golf-Results.pdf",
+    "ArchiveScope": "full",
+    "HighlightNotes": [
+      "No St. Andrew's golfers are visible in the published archive standings for this season."
+    ]
+  },
+  {
+    "SeasonID": 2021,
+    "SeasonLabel": "Spring 2021",
+    "Classification": "Class AA / Class AAA",
+    "StatusBadge": "verified",
+    "StatusNote": "The 2021 archive includes 2 published state tournaments, but no St. Andrew's golfers appear in the posted results.",
+    "ArchivePdfUrl": "https://giaasports.org/wp-content/uploads/2022/05/2021-GISA-State-Golf-RESULTS.pdf",
+    "ArchiveScope": "full",
+    "HighlightNotes": [
+      "No St. Andrew's golfers are visible in the published archive standings for this season."
+    ]
+  },
+  {
+    "SeasonID": 2022,
+    "SeasonLabel": "Spring 2022",
+    "Classification": "Class AA / Class AAA",
+    "StatusBadge": "verified",
+    "StatusNote": "The 2022 archive includes 2 published state tournaments, but no St. Andrew's golfers appear in the posted results.",
+    "ArchivePdfUrl": "https://giaasports.org/wp-content/uploads/2022/05/2022-GISA-State-Golf-RESULTS.pdf",
+    "ArchiveScope": "full",
+    "HighlightNotes": [
+      "No St. Andrew's golfers are visible in the published archive standings for this season."
+    ]
+  },
+  {
+    "SeasonID": 2023,
+    "SeasonLabel": "Spring 2023",
+    "Classification": "Class AA Boys / Class AAA Boys / Girls",
+    "StatusBadge": "verified",
+    "StatusNote": "The 2023 archive includes 3 published state tournaments. St. Andrew's golfers appear in the published standings.",
+    "ArchivePdfUrl": "https://giaasports.org/wp-content/uploads/2023/06/2023-GIAA-Golf.pdf",
+    "ArchiveScope": "full",
+    "HighlightNotes": [
+      "Morris Lane represented St. Andrew's in the 2023 GIAA AAA Boys State Golf Tournament and shot 82."
+    ]
+  },
+  {
+    "SeasonID": 2024,
+    "SeasonLabel": "Spring 2024",
+    "Classification": "Girls / Class AA Boys / Class AAA Boys",
+    "StatusBadge": "verified",
+    "StatusNote": "The 2024 archive includes 3 published state tournaments. St. Andrew's golfers appear in the published standings.",
+    "ArchivePdfUrl": "https://giaasports.org/wp-content/uploads/2024/08/2024-Golf-Results-Archive.pdf",
+    "ArchiveScope": "full",
+    "HighlightNotes": [
+      "Morris Lane represented St. Andrew's in the 2024 GISA State Golf Tournament - Class AAA and shot 83."
+    ]
+  }
+]

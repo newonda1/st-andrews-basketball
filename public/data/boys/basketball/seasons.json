@@ -414,7 +414,7 @@
   "YearStart": 2019,
   "YearEnd": 2020,
   "HeadCoach": "Mel Abrams Jr.",
-  "RegionSeed": null,
+  "RegionSeed": 3,
   "RegionFinish": null,
   "StateSeed": 2,
   "StateFinish": "State Runner-up"

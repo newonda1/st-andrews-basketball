@@ -399,6 +399,28 @@
     ]
   },
   {
+    "SeasonID": "2019-20",
+    "Players": [
+      {"PlayerID": 201812, "JerseyNumber": null},
+      {"PlayerID": 201905, "JerseyNumber": 2},
+      {"PlayerID": 201906, "JerseyNumber": 3},
+      {"PlayerID": 2026041, "JerseyNumber": 4},
+      {"PlayerID": 2026035, "JerseyNumber": 5},
+      {"PlayerID": 202124, "JerseyNumber": 10},
+      {"PlayerID": 202142, "JerseyNumber": 11},
+      {"PlayerID": 202109, "JerseyNumber": 12},
+      {"PlayerID": 202143, "JerseyNumber": 13},
+      {"PlayerID": 2026030, "JerseyNumber": 15},
+      {"PlayerID": 201907, "JerseyNumber": 20},
+      {"PlayerID": 202113, "JerseyNumber": 22},
+      {"PlayerID": 202127, "JerseyNumber": 24},
+      {"PlayerID": 202125, "JerseyNumber": 25},
+      {"PlayerID": 201908, "JerseyNumber": 30},
+      {"PlayerID": 202111, "JerseyNumber": 33},
+      {"PlayerID": 202123, "JerseyNumber": 34}
+    ]
+  },
+  {
     "SeasonID": "2020-21",
     "Players": [
       {"PlayerID": 202141, "JerseyNumber": null},

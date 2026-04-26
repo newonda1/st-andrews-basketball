@@ -1,0 +1,1461 @@
+[
+  {
+    "TournamentID": "2019-aa-state",
+    "Season": 2019,
+    "Name": "2019 GISA AA State Golf Tournament",
+    "GoverningBody": "GISA",
+    "Division": "Class AA",
+    "Date": "2019-04-22",
+    "Course": "Jekyll Island Golf Club",
+    "Location": "Jekyll Island, GA",
+    "SourcePdfUrl": "https://giaasports.org/wp-content/uploads/2022/05/2019-Golf-Results.pdf",
+    "SourcePdfPages": [
+      1,
+      2
+    ],
+    "ArchiveNote": null,
+    "ArchiveDetailLevel": "full",
+    "EntryCount": 37,
+    "TopFinishers": [
+      {
+        "place": 1,
+        "player": "David Ford",
+        "school": "Rivers Academy",
+        "score": 68,
+        "award": "273 | Low Medalist / All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 1,
+        "player": "Maxwell Ford",
+        "school": "Rivers Academy",
+        "score": 68,
+        "award": "Low Medalist / All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 1,
+        "player": "Reed Sweigart",
+        "school": "Rivers Academy",
+        "score": 68,
+        "award": "All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 4,
+        "player": "Will Morlan",
+        "school": "Rivers Academy",
+        "score": 69,
+        "award": "All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 5,
+        "player": "Mark Brown",
+        "school": "Rivers Academy",
+        "score": 74,
+        "award": "Low Medalist / All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 6,
+        "player": "Cooper Folds",
+        "school": "Crisp Academy",
+        "score": 75,
+        "award": "All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 6,
+        "player": "Dylan Humphries",
+        "school": "Gatewood School",
+        "score": 75,
+        "award": "All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 6,
+        "player": "Max Dupree",
+        "school": "Gatewood School",
+        "score": 75,
+        "award": "All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 9,
+        "player": "Lucas Hopkins",
+        "school": "Briarwood Academy",
+        "score": 76,
+        "award": null,
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 10,
+        "player": "Will Bailey",
+        "school": "BRANDON HALL",
+        "score": 77,
+        "award": null,
+        "section": "team",
+        "isStAndrews": false
+      }
+    ],
+    "StAndrewsFinishers": [],
+    "Summary": "Medalist: David Ford (Rivers Academy) shot 68. No published St. Andrew's golfers appear in this event."
+  },
+  {
+    "TournamentID": "2019-aaa-state",
+    "Season": 2019,
+    "Name": "2019 GISA AAA State Golf Tournament",
+    "GoverningBody": "GISA",
+    "Division": "Class AAA",
+    "Date": "2019-04-22",
+    "Course": "Brunswick Country Club",
+    "Location": "Brunswick, GA",
+    "SourcePdfUrl": "https://giaasports.org/wp-content/uploads/2022/05/2019-Golf-Results.pdf",
+    "SourcePdfPages": [
+      3,
+      4,
+      5
+    ],
+    "ArchiveNote": null,
+    "ArchiveDetailLevel": "full",
+    "EntryCount": 61,
+    "TopFinishers": [
+      {
+        "place": 1,
+        "player": "Parker Highsmith",
+        "school": "Valwood School",
+        "score": 72,
+        "award": "Mens Low Medalist/All State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 2,
+        "player": "Ryan McHugh",
+        "school": "Frederica Academy",
+        "score": 73,
+        "award": "ALL-STATE",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 3,
+        "player": "Cason Cavalier",
+        "school": "Frederica Academy",
+        "score": 74,
+        "award": "ALL-STATE",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 3,
+        "player": "George Arline",
+        "school": "Brookwood School",
+        "score": 74,
+        "award": "307 | All State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 3,
+        "player": "Jake Shuman",
+        "school": "Pinewood Christian Academy",
+        "score": 74,
+        "award": "ALL-STATE",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 3,
+        "player": "Lee Baker",
+        "school": "Westminster of Augusta",
+        "score": 74,
+        "award": "All State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 3,
+        "player": "Ty Patterson",
+        "school": "William & Reed Academy",
+        "score": 74,
+        "award": "All State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 8,
+        "player": "Parker Claxton",
+        "school": "Pinewood Christian Academy",
+        "score": 75,
+        "award": null,
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 8,
+        "player": "Sam Barrett",
+        "school": "Brookwood School",
+        "score": 75,
+        "award": null,
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 10,
+        "player": "Andrew Garger",
+        "school": "Heritage",
+        "score": 76,
+        "award": null,
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 10,
+        "player": "Payne Elkins",
+        "school": "Valwood School",
+        "score": 76,
+        "award": null,
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 10,
+        "player": "Ty Hutson",
+        "school": "Pinewood Christian Academy",
+        "score": 76,
+        "award": null,
+        "section": "team",
+        "isStAndrews": false
+      }
+    ],
+    "StAndrewsFinishers": [],
+    "Summary": "Medalist: Parker Highsmith (Valwood School) shot 72. No published St. Andrew's golfers appear in this event."
+  },
+  {
+    "TournamentID": "2021-aa-state",
+    "Season": 2021,
+    "Name": "2021 GISA State Golf Tournament - Class AA",
+    "GoverningBody": "GISA",
+    "Division": "Class AA",
+    "Date": null,
+    "Course": null,
+    "Location": null,
+    "SourcePdfUrl": "https://giaasports.org/wp-content/uploads/2022/05/2021-GISA-State-Golf-RESULTS.pdf",
+    "SourcePdfPages": [
+      1
+    ],
+    "ArchiveNote": null,
+    "ArchiveDetailLevel": "full",
+    "EntryCount": 51,
+    "TopFinishers": [
+      {
+        "place": 1,
+        "player": "Maxwell Ford",
+        "school": "Rivers Academy",
+        "score": 71,
+        "award": "294 | Low Men's Medalist/All State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 2,
+        "player": "Will Morlan",
+        "school": "Rivers Academy",
+        "score": 72,
+        "award": "All State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 3,
+        "player": "Wade Watson",
+        "school": "Rivers Academy",
+        "score": 75,
+        "award": "All State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 4,
+        "player": "Reed Sweigart",
+        "school": "Rivers Academy",
+        "score": 76,
+        "award": "All State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 5,
+        "player": "Chapman Barnett",
+        "school": "Rivers Academy",
+        "score": 77,
+        "award": "All State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 5,
+        "player": "Patrick McArdle",
+        "school": "Augusta Prep",
+        "score": 77,
+        "award": "All State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 7,
+        "player": "Bryce Johnson",
+        "school": "Gatewood School",
+        "score": 79,
+        "award": null,
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 7,
+        "player": "Mia Sessa",
+        "school": "Augusta Prep",
+        "score": 79,
+        "award": "Ladies Low Medalist",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 9,
+        "player": "Ames Johnson",
+        "school": "Gatewood School",
+        "score": 82,
+        "award": "366 | 2nd Place Team",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 10,
+        "player": "Blake Broadaway",
+        "school": "Terrell Academy",
+        "score": 86,
+        "award": "396 | 6th",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 10,
+        "player": "Stone Middlebrooks",
+        "school": "Oak Mountain",
+        "score": 86,
+        "award": "461 | 8th",
+        "section": "team",
+        "isStAndrews": false
+      }
+    ],
+    "StAndrewsFinishers": [],
+    "Summary": "Medalist: Maxwell Ford (Rivers Academy) shot 71. No published St. Andrew's golfers appear in this event."
+  },
+  {
+    "TournamentID": "2021-aaa-state",
+    "Season": 2021,
+    "Name": "2021 GISA State Golf Tournament - Class AAA",
+    "GoverningBody": "GISA",
+    "Division": "Class AAA",
+    "Date": null,
+    "Course": null,
+    "Location": null,
+    "SourcePdfUrl": "https://giaasports.org/wp-content/uploads/2022/05/2021-GISA-State-Golf-RESULTS.pdf",
+    "SourcePdfPages": [
+      2
+    ],
+    "ArchiveNote": null,
+    "ArchiveDetailLevel": "full",
+    "EntryCount": 56,
+    "TopFinishers": [
+      {
+        "place": 1,
+        "player": "Jack Boltja",
+        "school": "Brookwood School",
+        "score": 65,
+        "award": "Mens Low Medalist/All State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 2,
+        "player": "Jack Roberts",
+        "school": "Frederica Academy",
+        "score": 70,
+        "award": "All State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 3,
+        "player": "McCord Grice",
+        "school": "William & Reed Academy",
+        "score": 73,
+        "award": "All State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 3,
+        "player": "Payne Elkins",
+        "school": "Valwood School",
+        "score": 73,
+        "award": "All State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 5,
+        "player": "Jackson Byrd",
+        "school": "Frederica Academy",
+        "score": 74,
+        "award": "298 | All State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 5,
+        "player": "Jay Sanders",
+        "school": "Brookwood School",
+        "score": 74,
+        "award": "All State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 5,
+        "player": "Roy Boyd",
+        "school": "Frederica Academy",
+        "score": 74,
+        "award": "All State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 8,
+        "player": "JD Culbreth",
+        "school": "Brookwood School",
+        "score": 75,
+        "award": "290 | 1st Place Team",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 9,
+        "player": "George Arline",
+        "school": "Brookwood School",
+        "score": 76,
+        "award": null,
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 9,
+        "player": "Griffin Garvin",
+        "school": "Bulloch Academy",
+        "score": 76,
+        "award": "357 | 5th",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 9,
+        "player": "Kat Cook",
+        "school": "Brookwood School",
+        "score": 76,
+        "award": "Ladies Low Medalist",
+        "section": "team",
+        "isStAndrews": false
+      }
+    ],
+    "StAndrewsFinishers": [],
+    "Summary": "Medalist: Jack Boltja (Brookwood School) shot 65. No published St. Andrew's golfers appear in this event."
+  },
+  {
+    "TournamentID": "2022-aa-state",
+    "Season": 2022,
+    "Name": "2022 GISA State Golf Tournament - Class AA",
+    "GoverningBody": "GISA",
+    "Division": "Class AA",
+    "Date": null,
+    "Course": null,
+    "Location": null,
+    "SourcePdfUrl": "https://giaasports.org/wp-content/uploads/2022/05/2022-GISA-State-Golf-RESULTS.pdf",
+    "SourcePdfPages": [
+      1
+    ],
+    "ArchiveNote": null,
+    "ArchiveDetailLevel": "full",
+    "EntryCount": 38,
+    "TopFinishers": [
+      {
+        "place": 1,
+        "player": "Aidan Cohl",
+        "school": "Rivers Academy",
+        "score": 69,
+        "award": "Boys Low Medalist & All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 2,
+        "player": "Dalton Burts",
+        "school": "Rivers Academy",
+        "score": 75,
+        "award": "All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 2,
+        "player": "Joseph Canitano",
+        "school": "Rivers Academy",
+        "score": 75,
+        "award": "All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 4,
+        "player": "William Abdow",
+        "school": "Rivers Academy",
+        "score": 76,
+        "award": "295 | 1st | All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 5,
+        "player": "Reed Sweigart",
+        "school": "Rivers Academy",
+        "score": 78,
+        "award": "All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 6,
+        "player": "Eli Jones",
+        "school": "Thomas Jefferson Academy",
+        "score": 81,
+        "award": "All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 7,
+        "player": "Stone Middlebrooks",
+        "school": "Oak Mountain Academy",
+        "score": 82,
+        "award": null,
+        "section": "individual",
+        "isStAndrews": false
+      },
+      {
+        "place": 8,
+        "player": "Ames Johnson",
+        "school": "Gatewood School",
+        "score": 83,
+        "award": null,
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 9,
+        "player": "Tim Kuebel",
+        "school": "LaGrange Academy",
+        "score": 84,
+        "award": null,
+        "section": "individual",
+        "isStAndrews": false
+      },
+      {
+        "place": 9,
+        "player": "Wyatt Carey",
+        "school": "Edmund Burke Academy",
+        "score": 84,
+        "award": null,
+        "section": "team",
+        "isStAndrews": false
+      }
+    ],
+    "StAndrewsFinishers": [],
+    "Summary": "Medalist: Aidan Cohl (Rivers Academy) shot 69. No published St. Andrew's golfers appear in this event."
+  },
+  {
+    "TournamentID": "2022-aaa-state",
+    "Season": 2022,
+    "Name": "2022 GISA State Golf Tournament - Class AAA",
+    "GoverningBody": "GISA",
+    "Division": "Class AAA",
+    "Date": null,
+    "Course": null,
+    "Location": null,
+    "SourcePdfUrl": "https://giaasports.org/wp-content/uploads/2022/05/2022-GISA-State-Golf-RESULTS.pdf",
+    "SourcePdfPages": [
+      2
+    ],
+    "ArchiveNote": null,
+    "ArchiveDetailLevel": "full",
+    "EntryCount": 66,
+    "TopFinishers": [
+      {
+        "place": 1,
+        "player": "Clayton Couey",
+        "school": "William & Reed Academy",
+        "score": 72,
+        "award": "Boys Low Medalist & All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 2,
+        "player": "Mason Howell",
+        "school": "Brookwood School",
+        "score": 73,
+        "award": "All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 3,
+        "player": "Roy Boyd",
+        "school": "Frederica Academy",
+        "score": 74,
+        "award": "All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 4,
+        "player": "JD Culbreth",
+        "school": "Brookwood School",
+        "score": 75,
+        "award": "All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 5,
+        "player": "Jack Roberts",
+        "school": "Frederica Academy",
+        "score": 76,
+        "award": "All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 5,
+        "player": "Shep Davis",
+        "school": "Brookwood School",
+        "score": 76,
+        "award": "All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 7,
+        "player": "Jackson Byrd",
+        "school": "Frederica Academy",
+        "score": 77,
+        "award": null,
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 7,
+        "player": "Jay Sanders",
+        "school": "Brookwood School",
+        "score": 77,
+        "award": "301 | 1st",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 7,
+        "player": "Parker Claxton",
+        "school": "Pinewood Christian Academy",
+        "score": 77,
+        "award": null,
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 7,
+        "player": "Tucker Jolly",
+        "school": "Bethlehem Christian Academy",
+        "score": 77,
+        "award": null,
+        "section": "team",
+        "isStAndrews": false
+      }
+    ],
+    "StAndrewsFinishers": [],
+    "Summary": "Medalist: Clayton Couey (William & Reed Academy) shot 72. No published St. Andrew's golfers appear in this event."
+  },
+  {
+    "TournamentID": "2023-aa-boys-state",
+    "Season": 2023,
+    "Name": "2023 GIAA AA Boys State Golf Tournament",
+    "GoverningBody": "GIAA",
+    "Division": "Class AA Boys",
+    "Date": null,
+    "Course": null,
+    "Location": null,
+    "SourcePdfUrl": "https://giaasports.org/wp-content/uploads/2023/06/2023-GIAA-Golf.pdf",
+    "SourcePdfPages": [
+      3
+    ],
+    "ArchiveNote": null,
+    "ArchiveDetailLevel": "full",
+    "EntryCount": 46,
+    "TopFinishers": [
+      {
+        "place": 1,
+        "player": "Kolby Pounds",
+        "school": "Piedmont Academy",
+        "score": 82,
+        "award": "362 | 1st | Low Medalist, All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 2,
+        "player": "Eli Jones",
+        "school": "Thomas Jefferson Academy",
+        "score": 83,
+        "award": "367 | 2nd | All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 2,
+        "player": "Henry Hurley",
+        "school": "Heritage Preparatory",
+        "score": 83,
+        "award": "All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 2,
+        "player": "Oliver Jackoniski",
+        "school": "Heritage Preparatory",
+        "score": 83,
+        "award": "374 | 3rd | All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 5,
+        "player": "Mitch Archer",
+        "school": "Brentwood School",
+        "score": 85,
+        "award": "All-State",
+        "section": "individual",
+        "isStAndrews": false
+      },
+      {
+        "place": 6,
+        "player": "Ridge Stroud",
+        "school": "Piedmont Academy",
+        "score": 86,
+        "award": "All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 7,
+        "player": "J.R. Weber",
+        "school": "Augusta Preparatory Day",
+        "score": 88,
+        "award": null,
+        "section": "individual",
+        "isStAndrews": false
+      },
+      {
+        "place": 7,
+        "player": "Jack Durham",
+        "school": "Briarwood Academy",
+        "score": 88,
+        "award": "417 | 6th",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 9,
+        "player": "Ames Johnson",
+        "school": "Gatewood School",
+        "score": 89,
+        "award": null,
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 9,
+        "player": "Jace Brooks",
+        "school": "Thomas Jefferson Academy",
+        "score": 89,
+        "award": null,
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 9,
+        "player": "Kory Winner",
+        "school": "Central Fellowship Christian",
+        "score": 89,
+        "award": null,
+        "section": "individual",
+        "isStAndrews": false
+      }
+    ],
+    "StAndrewsFinishers": [],
+    "Summary": "Medalist: Kolby Pounds (Piedmont Academy) shot 82. No published St. Andrew's golfers appear in this event."
+  },
+  {
+    "TournamentID": "2023-aaa-boys-state",
+    "Season": 2023,
+    "Name": "2023 GIAA AAA Boys State Golf Tournament",
+    "GoverningBody": "GIAA",
+    "Division": "Class AAA Boys",
+    "Date": null,
+    "Course": null,
+    "Location": null,
+    "SourcePdfUrl": "https://giaasports.org/wp-content/uploads/2023/06/2023-GIAA-Golf.pdf",
+    "SourcePdfPages": [
+      4
+    ],
+    "ArchiveNote": null,
+    "ArchiveDetailLevel": "full",
+    "EntryCount": 95,
+    "TopFinishers": [
+      {
+        "place": 1,
+        "player": "Jackson Byrd",
+        "school": "Frederica Academy",
+        "score": 67,
+        "award": "298 | 3rd | Low Medalist & All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 2,
+        "player": "Joseph Canitano",
+        "school": "Rivers Academy",
+        "score": 69,
+        "award": "All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 3,
+        "player": "Griffin Garvin",
+        "school": "Bulloch Academy",
+        "score": 70,
+        "award": "317 | 5th | All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 3,
+        "player": "Mason Howell",
+        "school": "Brookwood School",
+        "score": 70,
+        "award": "All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 5,
+        "player": "Shep Davis",
+        "school": "Brookwood School",
+        "score": 71,
+        "award": "All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 5,
+        "player": "William Easterlin",
+        "school": "Southland Academy",
+        "score": 71,
+        "award": "332 | T-10th | All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 7,
+        "player": "Billy Abdow",
+        "school": "Rivers Academy",
+        "score": 72,
+        "award": null,
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 7,
+        "player": "Thomas Sams",
+        "school": "Frederica Academy",
+        "score": 72,
+        "award": null,
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 9,
+        "player": "Chapman Barnett",
+        "school": "Rivers Academy",
+        "score": 73,
+        "award": "289 | 1st",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 9,
+        "player": "JD Culbreth",
+        "school": "Brookwood School",
+        "score": 73,
+        "award": "292 | 2nd",
+        "section": "team",
+        "isStAndrews": false
+      }
+    ],
+    "StAndrewsFinishers": [
+      {
+        "place": 36,
+        "player": "Morris Lane",
+        "school": "St. Andrew's School",
+        "score": 82,
+        "award": null,
+        "section": "individual",
+        "isStAndrews": true
+      }
+    ],
+    "Summary": "Medalist: Jackson Byrd (Frederica Academy) shot 67. St. Andrew's entries: Morris Lane (82)."
+  },
+  {
+    "TournamentID": "2023-girls-state",
+    "Season": 2023,
+    "Name": "2023 GIAA Girls State Golf Tournament",
+    "GoverningBody": "GIAA",
+    "Division": "Girls",
+    "Date": null,
+    "Course": null,
+    "Location": null,
+    "SourcePdfUrl": "https://giaasports.org/wp-content/uploads/2023/06/2023-GIAA-Golf.pdf",
+    "SourcePdfPages": [
+      1,
+      2
+    ],
+    "ArchiveNote": null,
+    "ArchiveDetailLevel": "full",
+    "EntryCount": 62,
+    "TopFinishers": [
+      {
+        "place": 1,
+        "player": "Leigh Allen",
+        "school": "St. Anne-Pacelli Catholic School",
+        "score": 74,
+        "award": "Low Medalist | All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 2,
+        "player": "Ryleigh Mcdaniel",
+        "school": "Bethlehem Christian",
+        "score": 76,
+        "award": "All-State",
+        "section": "individual",
+        "isStAndrews": false
+      },
+      {
+        "place": 3,
+        "player": "Avery Robinson",
+        "school": "First Presbyterian Day School",
+        "score": 77,
+        "award": "All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 3,
+        "player": "Emerson Elm",
+        "school": "Rivers Academy",
+        "score": 77,
+        "award": "All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 5,
+        "player": "Ira Sivaram",
+        "school": "Fulton Science",
+        "score": 78,
+        "award": "All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 6,
+        "player": "Allison Tsai",
+        "school": "Fulton Science",
+        "score": 79,
+        "award": "157 | 2nd | All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 6,
+        "player": "Annie Veil",
+        "school": "Rivers Academy",
+        "score": 79,
+        "award": "156 | 1st | All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 8,
+        "player": "Emma Veil",
+        "school": "Rivers Academy",
+        "score": 80,
+        "award": null,
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 9,
+        "player": "Katherine Amanthasane",
+        "school": "Fulton Science",
+        "score": 82,
+        "award": null,
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 10,
+        "player": "Addison Ingram",
+        "school": "Terrell Academy",
+        "score": 84,
+        "award": null,
+        "section": "team",
+        "isStAndrews": false
+      }
+    ],
+    "StAndrewsFinishers": [
+      {
+        "place": 42,
+        "player": "Maya Salter",
+        "school": "St. Andrew's School",
+        "score": 121,
+        "award": null,
+        "section": "team",
+        "isStAndrews": true
+      },
+      {
+        "place": 50,
+        "player": "Ella McWhorter",
+        "school": "St. Andrew's School",
+        "score": 125,
+        "award": "246 | 15th",
+        "section": "team",
+        "isStAndrews": true
+      },
+      {
+        "place": 56,
+        "player": "Nataly Taylor",
+        "school": "St. Andrew's School",
+        "score": 130,
+        "award": null,
+        "section": "team",
+        "isStAndrews": true
+      }
+    ],
+    "Summary": "Medalist: Leigh Allen (St. Anne-Pacelli Catholic School) shot 74. St. Andrew's entries: Maya Salter (121), Ella McWhorter (125), Nataly Taylor (130)."
+  },
+  {
+    "TournamentID": "2024-aa-boys-state",
+    "Season": 2024,
+    "Name": "2024 GISA State Golf Tournament - Class AA",
+    "GoverningBody": "GISA",
+    "Division": "Class AA Boys",
+    "Date": null,
+    "Course": null,
+    "Location": null,
+    "SourcePdfUrl": "https://giaasports.org/wp-content/uploads/2024/08/2024-Golf-Results-Archive.pdf",
+    "SourcePdfPages": [
+      3,
+      4
+    ],
+    "ArchiveNote": null,
+    "ArchiveDetailLevel": "full",
+    "EntryCount": 53,
+    "TopFinishers": [
+      {
+        "place": 1,
+        "player": "Oliver Jackoniski",
+        "school": "Heritage Prep",
+        "score": 74,
+        "award": "Boys Low Medalist & All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 2,
+        "player": "Gavin Gignilliat",
+        "school": "Gatewood School",
+        "score": 75,
+        "award": "All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 3,
+        "player": "Eli Jones",
+        "school": "Thomas Jefferson Academy",
+        "score": 77,
+        "award": "360 | 4th | All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 3,
+        "player": "J.P. Spivey",
+        "school": "Citizens Christian Academy",
+        "score": 77,
+        "award": "All-State",
+        "section": "individual",
+        "isStAndrews": false
+      },
+      {
+        "place": 5,
+        "player": "Henry Hurley",
+        "school": "Heritage Prep",
+        "score": 79,
+        "award": "341 | 2nd | All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 6,
+        "player": "Kolby Pounds",
+        "school": "Piedmont Academy",
+        "score": 83,
+        "award": "344 | 3rd | All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 7,
+        "player": "Ames Johnson",
+        "school": "Gatewood School",
+        "score": 85,
+        "award": "332 | 1st",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 7,
+        "player": "Marissa Holder",
+        "school": "Piedmont Academy",
+        "score": 85,
+        "award": null,
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 7,
+        "player": "Mikey Padula",
+        "school": "Gatewood School",
+        "score": 85,
+        "award": null,
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 10,
+        "player": "Jace Brooks",
+        "school": "Thomas Jefferson Academy",
+        "score": 86,
+        "award": null,
+        "section": "team",
+        "isStAndrews": false
+      }
+    ],
+    "StAndrewsFinishers": [],
+    "Summary": "Medalist: Oliver Jackoniski (Heritage Prep) shot 74. No published St. Andrew's golfers appear in this event."
+  },
+  {
+    "TournamentID": "2024-aaa-boys-state",
+    "Season": 2024,
+    "Name": "2024 GISA State Golf Tournament - Class AAA",
+    "GoverningBody": "GISA",
+    "Division": "Class AAA Boys",
+    "Date": null,
+    "Course": null,
+    "Location": null,
+    "SourcePdfUrl": "https://giaasports.org/wp-content/uploads/2024/08/2024-Golf-Results-Archive.pdf",
+    "SourcePdfPages": [
+      5,
+      6
+    ],
+    "ArchiveNote": "The published archive appears to splice the AAA pages differently than the later PDFs, so the event title is normalized from the season file while the player scores are taken directly from the source pages.",
+    "ArchiveDetailLevel": "full",
+    "EntryCount": 93,
+    "TopFinishers": [
+      {
+        "place": 1,
+        "player": "JD Culbreth",
+        "school": "Brookwood School",
+        "score": 64,
+        "award": "Boys Low Medalist & All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 1,
+        "player": "Mason Howell",
+        "school": "Brookwood School",
+        "score": 64,
+        "award": "Boys Low Medalist & All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 3,
+        "player": "Patmon Malcolm",
+        "school": "Rivers Academy",
+        "score": 67,
+        "award": "All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 4,
+        "player": "Kai Marko",
+        "school": "Rivers Academy",
+        "score": 68,
+        "award": "276 | 2nd | All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 5,
+        "player": "Andrew Coey",
+        "school": "William & Reed Academy",
+        "score": 69,
+        "award": "296 | 4th | All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 5,
+        "player": "Charles Beeson",
+        "school": "Rivers Academy",
+        "score": 69,
+        "award": "All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 7,
+        "player": "Campbell Williams",
+        "school": "Frederica Academy",
+        "score": 70,
+        "award": null,
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 7,
+        "player": "Jackson Byrd",
+        "school": "Frederica Academy",
+        "score": 70,
+        "award": null,
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 7,
+        "player": "Thomas Sams",
+        "school": "Frederica Academy",
+        "score": 70,
+        "award": null,
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 10,
+        "player": "Clayton Coey",
+        "school": "William & Reed Academy",
+        "score": 71,
+        "award": null,
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 10,
+        "player": "Harper Staggs",
+        "school": "Frederica Academy",
+        "score": 71,
+        "award": "281 | 3rd",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 10,
+        "player": "James Groves",
+        "school": "Stratford Academy",
+        "score": 71,
+        "award": null,
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 10,
+        "player": "William Easterlin",
+        "school": "Southland Academy",
+        "score": 71,
+        "award": null,
+        "section": "team",
+        "isStAndrews": false
+      }
+    ],
+    "StAndrewsFinishers": [
+      {
+        "place": 53,
+        "player": "Morris Lane",
+        "school": "St. Andrew's School",
+        "score": 83,
+        "award": null,
+        "section": "individual",
+        "isStAndrews": true
+      }
+    ],
+    "Summary": "Medalist: JD Culbreth (Brookwood School) shot 64. St. Andrew's entries: Morris Lane (83)."
+  },
+  {
+    "TournamentID": "2024-girls-state",
+    "Season": 2024,
+    "Name": "2024 GIAA Girls State Golf Tournament",
+    "GoverningBody": "GIAA",
+    "Division": "Girls",
+    "Date": null,
+    "Course": null,
+    "Location": null,
+    "SourcePdfUrl": "https://giaasports.org/wp-content/uploads/2024/08/2024-Golf-Results-Archive.pdf",
+    "SourcePdfPages": [
+      1,
+      2
+    ],
+    "ArchiveNote": null,
+    "ArchiveDetailLevel": "full",
+    "EntryCount": 55,
+    "TopFinishers": [
+      {
+        "place": 1,
+        "player": "Emerson Elm",
+        "school": "Rivers Academy",
+        "score": 73,
+        "award": "Low Medalist | All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 2,
+        "player": "Nina Porcello",
+        "school": "Rivers Academy",
+        "score": 75,
+        "award": "148 | 1st | All-State",
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 3,
+        "player": "Emma Veal",
+        "school": "Rivers Academy",
+        "score": 77,
+        "award": "All-State",
+        "section": "individual",
+        "isStAndrews": false
+      },
+      {
+        "place": 3,
+        "player": "Rebecca Lee",
+        "school": "Rivers Academy",
+        "score": 77,
+        "award": "All-State",
+        "section": "individual",
+        "isStAndrews": false
+      },
+      {
+        "place": 5,
+        "player": "Alice Choi",
+        "school": "William & Reed Academy",
+        "score": 78,
+        "award": "All-State",
+        "section": "individual",
+        "isStAndrews": false
+      },
+      {
+        "place": 5,
+        "player": "Julia Hull",
+        "school": "Rivers Academy",
+        "score": 78,
+        "award": "All-State",
+        "section": "individual",
+        "isStAndrews": false
+      },
+      {
+        "place": 7,
+        "player": "Ira Sivaram",
+        "school": "Fulton Science",
+        "score": 79,
+        "award": null,
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 8,
+        "player": "Annie Veil",
+        "school": "Rivers Academy",
+        "score": 80,
+        "award": null,
+        "section": "team",
+        "isStAndrews": false
+      },
+      {
+        "place": 9,
+        "player": "Katherine Amanthasane",
+        "school": "Fulton Science Academy",
+        "score": 85,
+        "award": null,
+        "section": "individual",
+        "isStAndrews": false
+      },
+      {
+        "place": 10,
+        "player": "Margaret Gandy",
+        "school": "Frederica Academy",
+        "score": 86,
+        "award": null,
+        "section": "team",
+        "isStAndrews": false
+      }
+    ],
+    "StAndrewsFinishers": [],
+    "Summary": "Medalist: Emerson Elm (Rivers Academy) shot 73. No published St. Andrew's golfers appear in this event."
+  }
+]

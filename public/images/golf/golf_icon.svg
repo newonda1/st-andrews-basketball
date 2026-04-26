@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title">
+  <title>Golf icon</title>
+  <defs>
+    <radialGradient id="ball" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="75%" stop-color="#edf3fb" />
+      <stop offset="100%" stop-color="#d8e2ef" />
+    </radialGradient>
+    <linearGradient id="tee" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f97316" />
+      <stop offset="100%" stop-color="#d9480f" />
+    </linearGradient>
+  </defs>
+  <circle cx="128" cy="92" r="62" fill="url(#ball)" stroke="#a7b4c6" stroke-width="7" />
+  <g fill="#c6d1df">
+    <circle cx="103" cy="58" r="5" />
+    <circle cx="129" cy="52" r="5" />
+    <circle cx="153" cy="61" r="5" />
+    <circle cx="88" cy="81" r="5" />
+    <circle cx="115" cy="78" r="5" />
+    <circle cx="141" cy="79" r="5" />
+    <circle cx="167" cy="84" r="5" />
+    <circle cx="97" cy="105" r="5" />
+    <circle cx="124" cy="102" r="5" />
+    <circle cx="151" cy="103" r="5" />
+    <circle cx="177" cy="108" r="5" />
+    <circle cx="108" cy="127" r="5" />
+    <circle cx="136" cy="126" r="5" />
+    <circle cx="162" cy="127" r="5" />
+  </g>
+  <path d="M120 150h16l12 34h-40Z" fill="url(#tee)" />
+  <rect x="114" y="182" width="28" height="16" rx="7" fill="#d9480f" />
+</svg>

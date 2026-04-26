@@ -92,6 +92,23 @@ const sports = [
       },
     ],
   },
+  {
+    name: "Golf",
+    to: "/athletics/golf",
+    icon: "/images/golf/golf_icon.svg",
+    bannerNote: "State results archive since 2019",
+    championshipGroups: [
+      {
+        title: "State Archive",
+        sections: [
+          {
+            title: "Published Results",
+            years: [2019, 2021, 2022, 2023, 2024],
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 const menuSections = [
@@ -104,6 +121,7 @@ const menuSections = [
       { to: "/athletics/track/records/school", label: "Track & Field" },
       { to: "/athletics/swimming/records/school", label: "Swimming" },
       { to: "/athletics/tennis", label: "Tennis" },
+      { to: "/athletics/golf", label: "Golf" },
     ],
   },
 ];

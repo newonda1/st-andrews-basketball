@@ -246,4 +246,17 @@ export const statsSearchItems = [
     featured: true,
     keywords: ["tennis", "home", "overview", "program"],
   },
+  {
+    label: "Golf",
+    description: "Program home",
+    to: "/athletics/golf",
+    featured: true,
+    keywords: ["golf", "home", "overview", "program", "archive"],
+  },
+  {
+    label: "Season Results",
+    description: "Golf",
+    to: "/athletics/golf/yearly-results",
+    keywords: ["golf", "season", "results", "state", "archive"],
+  },
 ];
