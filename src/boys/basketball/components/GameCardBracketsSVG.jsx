@@ -46,8 +46,12 @@ function GameCard({
 }) {
   const topTeamId = game?.top?.teamId ?? null;
   const bottomTeamId = game?.bottom?.teamId ?? null;
-  const top = topTeamId ? getTeam(topTeamId) : { name: game?.top?.name ?? "TBD" };
-  const bottom = bottomTeamId ? getTeam(bottomTeamId) : { name: game?.bottom?.name ?? "TBD" };
+  const top = topTeamId
+    ? { ...getTeam(topTeamId), seed: game?.top?.seed ?? getTeam(topTeamId).seed }
+    : { name: game?.top?.name ?? "TBD", seed: game?.top?.seed ?? null };
+  const bottom = bottomTeamId
+    ? { ...getTeam(bottomTeamId), seed: game?.bottom?.seed ?? getTeam(bottomTeamId).seed }
+    : { name: game?.bottom?.name ?? "TBD", seed: game?.bottom?.seed ?? null };
   const topWins = Boolean(topTeamId && game?.winner === topTeamId);
   const bottomWins = Boolean(bottomTeamId && game?.winner === bottomTeamId);
   const rowY = [y + height / 2 - rowGap / 2, y + height / 2 + rowGap / 2];
@@ -216,11 +220,11 @@ function StateBracket12GameSVG({ bracket, schools = [] }) {
   const schoolsById = useSchoolsById(schools);
   const getTeam = useMemo(() => makeTeamResolver(teams, schoolsById), [teams, schoolsById]);
 
-  const cardW = 300;
+  const cardW = 260;
   const cardH = 74;
-  const colGap = 72;
+  const colGap = 36;
   const rowGap = 24;
-  const leftPad = 40;
+  const leftPad = 32;
   const topPad = 50;
   const labelY = 24;
 
@@ -228,7 +232,7 @@ function StateBracket12GameSVG({ bracket, schools = [] }) {
   const x1 = x0 + cardW + colGap;
   const x2 = x1 + cardW + colGap;
   const x3 = x2 + cardW + colGap;
-  const W = x3 + cardW + 48;
+  const W = x3 + cardW + 40;
 
   const yR1 = Array.from({ length: 8 }, (_, index) => topPad + index * (cardH + rowGap));
   const yQF = [
@@ -272,7 +276,7 @@ function StateBracket12GameSVG({ bracket, schools = [] }) {
 
   return (
     <div style={{ width: "100%", overflowX: "auto" }}>
-      <div style={{ minWidth: 1260, padding: "8px 0" }}>
+      <div style={{ minWidth: 1120, padding: "8px 0" }}>
         <div style={{ fontWeight: 700, marginBottom: 8 }}>{bracket?.title ?? "State Tournament"}</div>
         <svg viewBox={`0 0 ${W} ${H}`} width="100%" height="auto" role="img" aria-label={bracket?.title ?? "State Tournament Bracket"}>
           <BracketDefs />
@@ -315,36 +319,74 @@ function RegionBracket5GameSVG({ bracket, schools = [] }) {
     const playWinner = games.playIn?.winner ?? null;
     const semi1Winner = games.semi1?.winner ?? null;
     const semi2Winner = games.semi2?.winner ?? null;
-    const byeGame = (teamId) => ({
-      top: { teamId },
+    const playTopTeam = games.playIn?.top?.teamId ?? null;
+    const playBottomTeam = games.playIn?.bottom?.teamId ?? null;
+    const playWinnerSeed =
+      playWinner === playTopTeam ? 4 :
+      playWinner === playBottomTeam ? 5 :
+      null;
+    const semi1TopTeam = games.semi1?.top?.teamId ?? null;
+    const semi2TopTeam = games.semi2?.top?.teamId ?? null;
+    const semi2BottomTeam = games.semi2?.bottom?.teamId ?? null;
+    const semi1WinnerSeed =
+      semi1Winner === semi1TopTeam ? 1 :
+      semi1Winner === playWinner ? playWinnerSeed :
+      null;
+    const semi2WinnerSeed =
+      semi2Winner === semi2TopTeam ? 2 :
+      semi2Winner === semi2BottomTeam ? 3 :
+      null;
+    const byeGame = (teamId, seed) => ({
+      top: { teamId, seed },
       bottom: { name: "Bye" },
       winner: teamId,
     });
 
     return {
       firstRound: [
-        ["bye_1", byeGame(games.semi1?.top?.teamId ?? null)],
-        ["playIn", games.playIn],
-        ["bye_2", byeGame(games.semi2?.top?.teamId ?? null)],
-        ["bye_3", byeGame(games.semi2?.bottom?.teamId ?? null)],
+        ["bye_1", byeGame(semi1TopTeam, 1)],
+        ["playIn", {
+          ...games.playIn,
+          top: { ...games.playIn?.top, seed: 4 },
+          bottom: { ...games.playIn?.bottom, seed: 5 },
+        }],
+        ["bye_2", byeGame(semi2TopTeam, 2)],
+        ["bye_3", byeGame(semi2BottomTeam, 3)],
       ],
       semi1: {
         ...games.semi1,
+        top: {
+          ...games.semi1?.top,
+          seed: 1,
+        },
         bottom: {
           ...games.semi1?.bottom,
           teamId: games.semi1?.bottom?.teamId ?? playWinner,
+          seed: games.semi1?.bottom?.seed ?? playWinnerSeed,
         },
       },
-      semi2: games.semi2,
+      semi2: {
+        ...games.semi2,
+        top: {
+          ...games.semi2?.top,
+          seed: 2,
+        },
+        bottom: {
+          ...games.semi2?.bottom,
+          seed: 3,
+        },
+      },
       final: {
         ...games.final,
         top: {
           ...games.final?.top,
           teamId: games.final?.top?.teamId ?? semi1Winner,
+          seed: games.final?.top?.seed ?? semi1WinnerSeed,
         },
         bottom: {
           ...games.final?.bottom,
           teamId: games.final?.bottom?.teamId ?? semi2Winner,
+          seed: games.final?.bottom?.seed ?? semi2WinnerSeed,
         },
       },
     };
