@@ -10,7 +10,7 @@
           "schoolId": "ga-furtah-preparatory-school-acworth"
         },
         "fpca": {
-          "name": "First Preparatory Christian Academy",
+          "name": "FPCA",
           "seed": 4,
           "schoolId": "ga-first-preparatory-christian-academy-hinesville"
         },
@@ -122,17 +122,17 @@
       "format": "16",
       "title": "2020-2021 State Tournament",
       "teams": {
-        "creekside": { "name": "Creekside Christian", "seed": 1 },
+        "creekside": { "name": "Creekside Christian", "seed": 1, "schoolId": "ga-creekside-christian-academy-mcdonough" },
         "johnmilledge": { "name": "John Milledge", "seed": 2, "schoolId": "ga-john-milledge-academy-milledgeville", "card": "/images/boys/basketball/teams/johnmilledge.svg" },
         "southland": { "name": "Southland", "seed": 3, "schoolId": "ga-southland-academy-americus", "card": "/images/boys/basketball/teams/southland.svg" },
-        "cristorey": { "name": "Cristo Rey Atlanta", "seed": 4 },
+        "cristorey": { "name": "Cristo Rey Atlanta", "seed": 4, "schoolId": "ga-cristo-rey-atlanta-jesuit-high-school-atlanta" },
         "holyspirit": { "name": "Holy Spirit Prep", "seed": 5, "schoolId": "ga-holy-spirit-preparatory-school-atlanta" },
         "bulloch": { "name": "Bulloch", "seed": 6, "schoolId": "ga-bulloch-academy-statesboro", "card": "/images/boys/basketball/teams/bulloch.svg" },
         "standrews": { "name": "St. Andrew's", "seed": 7, "schoolId": "ga-st-andrews-school-savannah", "card": "/images/boys/basketball/teams/standrews.svg" },
         "brookwood": { "name": "Brookwood", "seed": 8, "schoolId": "ga-brookwood-academy-thomasville", "card": "/images/boys/basketball/teams/brookwood.svg" },
         "frederica": { "name": "Frederica", "seed": 9, "schoolId": "ga-frederica-academy-st-simons-island", "card": "/images/boys/basketball/teams/frederica.svg" },
         "valwood": { "name": "Valwood", "seed": 10, "schoolId": "ga-valwood-school-hahira", "card": "/images/boys/basketball/teams/valwood.svg" },
-        "bethlehem": { "name": "Bethlehem Christian", "seed": 11 },
+        "bethlehem": { "name": "Bethlehem Christian", "seed": 11, "schoolId": "ga-bethlehem-christian-academy-bethlehem" },
         "westfield": { "name": "Westfield", "seed": 12, "schoolId": "ga-westfield-school-perry", "card": "/images/boys/basketball/teams/westfield.svg" },
         "westminster": { "name": "Westminster", "seed": 13, "schoolId": "ga-westminster-schools-of-augusta-augusta", "card": "/images/boys/basketball/teams/westminster.svg" },
         "trinity": { "name": "Trinity Christian", "seed": 14, "schoolId": "ga-trinity-christian-academy-dublin" },

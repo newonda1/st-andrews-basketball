@@ -202,6 +202,20 @@
     "LogoSourceUrl": "http://wearecreekside.com/wp-content/uploads/2025/08/CCA-Athletic-Logo-Sticker-3-scaled.png"
   },
   {
+    "SchoolID": "ga-cristo-rey-atlanta-jesuit-high-school-atlanta",
+    "Name": "Cristo Rey Atlanta Jesuit High School",
+    "City": "Atlanta",
+    "State": "GA",
+    "ShortName": "Cristo Rey Atlanta",
+    "Mascot": "Flames",
+    "PrimaryColor": "#00517D",
+    "SecondaryColor": "#FDB515",
+    "WebsiteUrl": "https://www.cristoreyatlanta.org/",
+    "AthleticsUrl": "https://www.cristoreyatlanta.org/athletics/flames-athletics",
+    "LogoPath": "/images/schools/logos/ga-cristo-rey-atlanta-jesuit-high-school-atlanta.png",
+    "LogoSourceUrl": "https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_2/v1679505166/cristoreyatlantaorg/psk0udhjeo8omquwm0er/FlamesCR_primary_C.png"
+  },
+  {
     "SchoolID": "ga-crisp-academy-cordele",
     "Name": "Crisp Academy",
     "City": "Cordele",
@@ -291,7 +305,16 @@
     "SchoolID": "ga-first-preparatory-christian-academy-hinesville",
     "Name": "First Preparatory Christian Academy",
     "City": "Hinesville",
-    "State": "GA"
+    "State": "GA",
+    "ShortName": "FPCA",
+    "Abbreviation": "FPCA",
+    "Mascot": "Highlanders",
+    "PrimaryColor": "#002B5C",
+    "SecondaryColor": "#FFFFFF",
+    "WebsiteUrl": "https://fpcahinesville.com/",
+    "AthleticsUrl": "https://fpcahinesville.com/athletics/",
+    "LogoPath": "/images/schools/logos/ga-first-preparatory-christian-academy-hinesville.png",
+    "LogoSourceUrl": "https://fpcahinesville.com/wp-content/uploads/2022/02/FP-Sword-Original-V4-200.png"
   },
   {
     "SchoolID": "ga-first-presbyterian-day-school-macon",
@@ -323,7 +346,15 @@
     "SchoolID": "ga-furtah-preparatory-school-acworth",
     "Name": "Furtah Preparatory School",
     "City": "Acworth",
-    "State": "GA"
+    "State": "GA",
+    "ShortName": "Furtah Prep",
+    "Mascot": "Falcons",
+    "PrimaryColor": "#002B5C",
+    "SecondaryColor": "#00824B",
+    "WebsiteUrl": "https://www.furtahprep.org/",
+    "AthleticsUrl": "https://www.furtahprep.org/athletics/",
+    "LogoPath": "/images/schools/logos/ga-furtah-preparatory-school-acworth.png",
+    "LogoSourceUrl": "https://image.maxpreps.io/school-mascot/b/9/4/b949f6a4-e832-4377-adfe-a984925ad5e0.gif?version=638726329246414050&width=1024&height=1024"
   },
   {
     "SchoolID": "ga-gatewood-schools-eatonton",
@@ -612,7 +643,15 @@
     "SchoolID": "ga-robert-toombs-christian-academy-lyons",
     "Name": "Robert Toombs Christian Academy",
     "City": "Lyons",
-    "State": "GA"
+    "State": "GA",
+    "ShortName": "Robert Toombs",
+    "Mascot": "Crusaders",
+    "PrimaryColor": "#06122D",
+    "SecondaryColor": "#B7D2F0",
+    "WebsiteUrl": "https://www.rtcacrusaders.org/",
+    "AthleticsUrl": "https://www.rtcacrusaders.org/athletics/",
+    "LogoPath": "/images/schools/logos/ga-robert-toombs-christian-academy-lyons.png",
+    "LogoSourceUrl": "https://www.rtcacrusaders.org/editoruploads/images/Logos/footer_logo.png"
   },
   {
     "SchoolID": "ga-savannah-athletic-association-high-school-bloomingdale",
