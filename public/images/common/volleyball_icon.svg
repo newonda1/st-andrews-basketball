@@ -1,0 +1,30 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 512 512"
+  role="img"
+  aria-labelledby="title"
+>
+  <title>Volleyball icon</title>
+  <defs>
+    <radialGradient id="ballFill" cx="38%" cy="32%" r="70%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="78%" stop-color="#f7f7f5" />
+      <stop offset="100%" stop-color="#e8e8e3" />
+    </radialGradient>
+    <clipPath id="ballClip">
+      <circle cx="256" cy="256" r="220" />
+    </clipPath>
+  </defs>
+
+  <circle cx="256" cy="256" r="220" fill="url(#ballFill)" />
+  <circle cx="256" cy="256" r="220" fill="none" stroke="#d6d5cf" stroke-width="4" />
+
+  <g clip-path="url(#ballClip)" fill="none" stroke="#cbc9c2" stroke-linecap="round">
+    <path d="M123 96c68 24 127 68 171 132" stroke-width="11" />
+    <path d="M88 170c89-20 165 7 224 71" stroke-width="11" />
+    <path d="M120 392c-14-101 18-191 93-248" stroke-width="11" />
+    <path d="M215 145c89-39 176-22 245 52" stroke-width="11" />
+    <path d="M188 468c-27-99-18-195 38-273" stroke-width="11" />
+    <path d="M254 201c99-16 177 22 241 102" stroke-width="11" />
+  </g>
+</svg>

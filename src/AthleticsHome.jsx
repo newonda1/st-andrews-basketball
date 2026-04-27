@@ -39,6 +39,42 @@ const sports = [
     stateYears: [],
   },
   {
+    name: "Football",
+    to: "/athletics/football",
+    icon: "/images/common/football_icon.png",
+    bannerNote: "Landing page coming soon",
+    bannerMessage: "This page is under construction and will be up soon.",
+    regionYears: [],
+    stateYears: [],
+  },
+  {
+    name: "Volleyball",
+    to: "/athletics/volleyball",
+    icon: "/images/common/volleyball_icon.svg",
+    bannerNote: "Landing page coming soon",
+    bannerMessage: "This page is under construction and will be up soon.",
+    regionYears: [],
+    stateYears: [],
+  },
+  {
+    name: "Girls Soccer",
+    to: "/athletics/girls/soccer",
+    icon: "/images/common/soccer_icon.png",
+    bannerNote: "Landing page coming soon",
+    bannerMessage: "This page is under construction and will be up soon.",
+    regionYears: [],
+    stateYears: [],
+  },
+  {
+    name: "Boys Soccer",
+    to: "/athletics/boys/soccer",
+    icon: "/images/common/soccer_icon.png",
+    bannerNote: "Landing page coming soon",
+    bannerMessage: "This page is under construction and will be up soon.",
+    regionYears: [],
+    stateYears: [],
+  },
+  {
     name: "Track & Field",
     to: "/athletics/track/records/school",
     icon: "/images/track/track_icon.png",
@@ -117,6 +153,10 @@ const menuSections = [
       { to: "/athletics/boys/basketball", label: "Boys Basketball" },
       { to: "/athletics/girls/basketball", label: "Girls Basketball" },
       { to: "/athletics/boys/baseball", label: "Baseball" },
+      { to: "/athletics/football", label: "Football" },
+      { to: "/athletics/volleyball", label: "Volleyball" },
+      { to: "/athletics/girls/soccer", label: "Girls Soccer" },
+      { to: "/athletics/boys/soccer", label: "Boys Soccer" },
       { to: "/athletics/track/records/school", label: "Track & Field" },
       { to: "/athletics/swimming/records/school", label: "Swimming" },
       { to: "/athletics/tennis", label: "Tennis" },
@@ -180,6 +220,8 @@ function ChampionshipGroup({ title, sections }) {
 }
 
 function SportBannerHeader({ sport }) {
+  const badgeText = sport.badgeText || sport.name;
+
   return (
     <div className="relative mx-1.5 overflow-hidden rounded-[1.8rem] border border-white/18 bg-[linear-gradient(180deg,rgba(255,255,255,0.14),rgba(255,255,255,0.05)_58%,rgba(15,23,42,0.14))] px-4 pb-3 pt-2.5 shadow-inner shadow-black/10 sm:mx-2">
       <div className="pointer-events-none absolute inset-x-5 top-0 h-12 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.28),transparent_72%)]" />
@@ -193,15 +235,21 @@ function SportBannerHeader({ sport }) {
           loading="lazy"
         />
 
-        <img
-          src={sport.icon}
-          alt=""
-          aria-hidden="true"
-          className={`absolute left-1/2 top-[4.45rem] h-[4.7rem] w-[4.7rem] -translate-x-1/2 object-contain drop-shadow-[0_10px_16px_rgba(15,23,42,0.32)] ${
-            sport.iconClassName || ""
-          }`}
-          loading="lazy"
-        />
+        {sport.icon ? (
+          <img
+            src={sport.icon}
+            alt=""
+            aria-hidden="true"
+            className={`absolute left-1/2 top-[4.45rem] h-[4.7rem] w-[4.7rem] -translate-x-1/2 object-contain drop-shadow-[0_10px_16px_rgba(15,23,42,0.32)] ${
+              sport.iconClassName || ""
+            }`}
+            loading="lazy"
+          />
+        ) : (
+          <div className="absolute left-1/2 top-[4.35rem] flex h-[4.9rem] w-[4.9rem] -translate-x-1/2 items-center justify-center rounded-full border border-white/40 bg-white/[0.12] px-2 text-center text-[1.15rem] font-black uppercase tracking-[0.16em] text-white shadow-[0_10px_16px_rgba(15,23,42,0.32)] backdrop-blur-sm">
+            {badgeText}
+          </div>
+        )}
       </div>
 
       <h2
@@ -220,7 +268,13 @@ function SportBannerHeader({ sport }) {
 }
 
 function SportBanner({ sport }) {
-  const championshipContent = sport.championshipGroups ? (
+  const championshipContent = sport.bannerMessage ? (
+    <section className="rounded-[1.7rem] border border-white/16 bg-white/[0.06] px-4 py-5 shadow-inner shadow-black/10">
+      <p className="m-0 text-center text-[0.9rem] leading-[1.6] text-white/92">
+        {sport.bannerMessage}
+      </p>
+    </section>
+  ) : sport.championshipGroups ? (
     sport.championshipGroups.map((group) => (
       <ChampionshipGroup
         key={`${sport.name}-${group.title}`}
@@ -245,9 +299,7 @@ function SportBanner({ sport }) {
         />
       ) : null}
     </>
-  ) : (
-    null
-  );
+  ) : null;
 
   return (
     <Link

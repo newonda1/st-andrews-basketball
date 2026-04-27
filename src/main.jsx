@@ -13,6 +13,7 @@ import SwimmingApp from "./swimming/SwimmingApp.jsx";
 import TennisApp from "./tennis/TennisApp.jsx";
 import GolfApp from "./golf/GolfApp.jsx";
 import AdminApp from "./admin/AdminApp.jsx";
+import UnderConstructionSportPage from "./components/UnderConstructionSportPage.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -34,6 +35,43 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route
           path="/athletics/girls/basketball/*"
           element={<GirlsBasketballApp />}
+        />
+
+        <Route
+          path="/athletics/football"
+          element={
+            <UnderConstructionSportPage
+              sportName="Football"
+              sportPath="/athletics/football"
+            />
+          }
+        />
+        <Route
+          path="/athletics/volleyball"
+          element={
+            <UnderConstructionSportPage
+              sportName="Volleyball"
+              sportPath="/athletics/volleyball"
+            />
+          }
+        />
+        <Route
+          path="/athletics/girls/soccer"
+          element={
+            <UnderConstructionSportPage
+              sportName="Girls Soccer"
+              sportPath="/athletics/girls/soccer"
+            />
+          }
+        />
+        <Route
+          path="/athletics/boys/soccer"
+          element={
+            <UnderConstructionSportPage
+              sportName="Boys Soccer"
+              sportPath="/athletics/boys/soccer"
+            />
+          }
         />
 
         <Route path="/athletics/track/*" element={<TrackApp />} />

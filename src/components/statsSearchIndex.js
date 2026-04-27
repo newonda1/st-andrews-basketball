@@ -136,6 +136,30 @@ export const statsSearchItems = [
     keywords: ["girls", "basketball", "home", "program"],
   },
   {
+    label: "Football",
+    description: "Program home",
+    to: "/athletics/football",
+    keywords: ["football", "home", "program", "coming soon"],
+  },
+  {
+    label: "Volleyball",
+    description: "Program home",
+    to: "/athletics/volleyball",
+    keywords: ["volleyball", "home", "program", "coming soon"],
+  },
+  {
+    label: "Girls Soccer",
+    description: "Program home",
+    to: "/athletics/girls/soccer",
+    keywords: ["girls", "soccer", "home", "program", "coming soon"],
+  },
+  {
+    label: "Boys Soccer",
+    description: "Program home",
+    to: "/athletics/boys/soccer",
+    keywords: ["boys", "soccer", "home", "program", "coming soon"],
+  },
+  {
     label: "Full Year-by-Year Results",
     description: "Girls Basketball",
     to: "/athletics/girls/basketball/yearly-results",
