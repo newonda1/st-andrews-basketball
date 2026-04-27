@@ -29,9 +29,10 @@ function getSearchRoute(query) {
 }
 
 function groupSearchResults(results) {
+  const resultTypes = [...new Set(results.map((result) => result.type).filter(Boolean))];
   const orderedTypes = [
-    ...new Set(results.map((result) => result.type).filter(Boolean)),
-    ...SEARCH_RESULT_TYPE_ORDER,
+    ...SEARCH_RESULT_TYPE_ORDER.filter((type) => resultTypes.includes(type)),
+    ...resultTypes.filter((type) => !SEARCH_RESULT_TYPE_ORDER.includes(type)),
   ];
 
   return orderedTypes

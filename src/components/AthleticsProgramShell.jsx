@@ -562,134 +562,41 @@ export default function AthleticsProgramShell({
 
 	            <div
 	              ref={searchContainerRef}
-	              className="hidden items-center gap-3 lg:flex"
+	              className="relative hidden min-h-[82px] items-center justify-end lg:flex"
 	            >
-	              <div className="flex items-center">
-	                {utilityLinks.map((item) => (
-                  <a
-                    key={item.label}
-                    href={item.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="px-[10px] py-[10px] text-[0.875rem] font-semibold leading-[1.25] text-[var(--stats-navy)] no-underline transition hover:underline"
-                  >
-                    {item.label}
-                  </a>
-	                ))}
-	              </div>
-
 	              <div
-	                className={`overflow-hidden transition-all duration-200 ease-out ${
-	                  searchOpen ? "max-w-[23rem] opacity-100" : "max-w-0 opacity-0"
-	                }`}
-	              >
-	                <form
-	                  onSubmit={handleSearchSubmit}
-	                  role="search"
-	                  className="flex h-11 w-[min(23rem,42vw)] items-center rounded-full border border-[var(--stats-line)] bg-white pl-3 pr-2 shadow-[0_10px_20px_rgba(15,23,42,0.08)]"
-	                >
-	                  <button
-	                    type="submit"
-	                    aria-label="Search the stats site"
-	                    className="inline-flex h-9 w-9 shrink-0 items-center justify-center text-[var(--stats-gray)] transition hover:text-[var(--stats-navy)]"
-	                  >
-	                    <svg
-	                      aria-hidden="true"
-	                      viewBox="0 0 24 24"
-	                      fill="none"
-	                      className="h-[0.92rem] w-[0.92rem]"
-	                    >
-	                      <circle
-	                        cx="11"
-	                        cy="11"
-	                        r="6.5"
-	                        stroke="currentColor"
-	                        strokeWidth="2.25"
-	                      />
-	                      <path
-	                        d="M16 16L21 21"
-	                        stroke="currentColor"
-	                        strokeWidth="2.25"
-	                        strokeLinecap="round"
-	                      />
-	                    </svg>
-	                  </button>
-	                  <input
-	                    ref={searchInputRef}
-	                    type="search"
-	                    value={searchQuery}
-	                    onChange={(event) => setSearchQuery(event.target.value)}
-	                    placeholder="Search athletes or teams"
-	                    className="stats-desktop-search-input h-full w-full border-none bg-transparent px-2 text-[0.95rem] text-[var(--stats-navy)] outline-none"
-	                  />
-	                  {searchQuery.trim() ? (
-	                    <button
-	                      type="button"
-	                      aria-label="Clear search"
-	                      onClick={() => setSearchQuery("")}
-	                      className="inline-flex h-9 w-9 shrink-0 items-center justify-center text-[var(--stats-gray)] transition hover:text-[var(--stats-navy)]"
-	                    >
-	                      <svg
-	                        aria-hidden="true"
-	                        viewBox="0 0 24 24"
-	                        fill="none"
-	                        className="h-[0.9rem] w-[0.9rem]"
-	                      >
-	                        <path
-	                          d="M6 6L18 18"
-	                          stroke="currentColor"
-	                          strokeWidth="2"
-	                          strokeLinecap="round"
-	                        />
-	                        <path
-	                          d="M18 6L6 18"
-	                          stroke="currentColor"
-	                          strokeWidth="2"
-	                          strokeLinecap="round"
-	                        />
-	                      </svg>
-	                    </button>
-	                  ) : null}
-	                </form>
-	              </div>
-
-	              <button
-	                type="button"
-	                aria-label="Search the stats site"
-	                aria-expanded={searchOpen}
-	                onClick={() => setSearchOpen((current) => !current)}
-	                className={`inline-flex h-10 w-10 items-center justify-center rounded-full transition ${
+	                className={`flex items-center transition-all duration-200 ${
 	                  searchOpen
-	                    ? "bg-[var(--stats-navy)] text-white"
-	                    : "text-[var(--stats-gray)] hover:text-[var(--stats-navy)]"
+	                    ? "pointer-events-none translate-x-4 opacity-0"
+	                    : "translate-x-0 opacity-100"
 	                }`}
 	              >
-	                {searchOpen ? (
+	                <div className="flex items-center">
+	                  {utilityLinks.map((item) => (
+                    <a
+                      key={item.label}
+                      href={item.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="px-[10px] py-[10px] text-[0.875rem] font-semibold leading-[1.25] text-[var(--stats-navy)] no-underline transition hover:underline"
+                    >
+                      {item.label}
+                    </a>
+	                  ))}
+	                </div>
+
+	                <button
+	                  type="button"
+	                  aria-label="Search the stats site"
+	                  aria-expanded={searchOpen}
+	                  onClick={() => setSearchOpen(true)}
+	                  className="ml-3 inline-flex h-11 w-11 items-center justify-center text-[var(--stats-gray)] transition hover:text-[var(--stats-navy)]"
+	                >
 	                  <svg
 	                    aria-hidden="true"
 	                    viewBox="0 0 24 24"
 	                    fill="none"
-	                    className="h-[0.95rem] w-[0.95rem]"
-	                  >
-	                    <path
-	                      d="M6 6L18 18"
-	                      stroke="currentColor"
-	                      strokeWidth="2.2"
-	                      strokeLinecap="round"
-	                    />
-	                    <path
-	                      d="M18 6L6 18"
-	                      stroke="currentColor"
-	                      strokeWidth="2.2"
-	                      strokeLinecap="round"
-	                    />
-	                  </svg>
-	                ) : (
-	                  <svg
-	                    aria-hidden="true"
-	                    viewBox="0 0 24 24"
-	                    fill="none"
-	                    className="h-[0.95rem] w-[0.95rem]"
+	                    className="h-[1rem] w-[1rem]"
 	                  >
 	                    <circle
 	                      cx="11"
@@ -705,8 +612,92 @@ export default function AthleticsProgramShell({
 	                      strokeLinecap="round"
 	                    />
 	                  </svg>
-	                )}
-	              </button>
+	                </button>
+	              </div>
+
+	              <div
+	                className={`absolute right-0 top-1/2 -translate-y-1/2 overflow-hidden transition-all duration-300 ease-out ${
+	                  searchOpen
+	                    ? "w-[min(760px,calc(100vw-18rem))] opacity-100"
+	                    : "w-0 opacity-0 pointer-events-none"
+	                }`}
+	              >
+	                <form
+	                  onSubmit={handleSearchSubmit}
+	                  role="search"
+	                  className="flex h-[82px] w-[min(760px,calc(100vw-18rem))] items-stretch bg-[var(--stats-navy)] text-white shadow-[0_18px_34px_rgba(15,23,42,0.2)]"
+	                >
+	                  <button
+	                    type="submit"
+	                    aria-label="Submit search"
+	                    className="inline-flex w-[78px] shrink-0 items-center justify-center border-r-[4px] border-[#0f58c9] text-white transition hover:bg-white/[0.05]"
+	                  >
+	                    <svg
+	                      aria-hidden="true"
+	                      viewBox="0 0 24 24"
+	                      fill="none"
+	                      className="h-[1.55rem] w-[1.55rem]"
+	                    >
+	                      <circle
+	                        cx="11"
+	                        cy="11"
+	                        r="6.25"
+	                        stroke="currentColor"
+	                        strokeWidth="2.3"
+	                      />
+	                      <path
+	                        d="M16 16L20.5 20.5"
+	                        stroke="currentColor"
+	                        strokeWidth="2.3"
+	                        strokeLinecap="round"
+	                      />
+	                    </svg>
+	                  </button>
+
+	                  <label className="sr-only" htmlFor="stats-site-search-input">
+	                    Search the stats site
+	                  </label>
+	                  <input
+	                    id="stats-site-search-input"
+	                    ref={searchInputRef}
+	                    type="search"
+	                    value={searchQuery}
+	                    onChange={(event) => setSearchQuery(event.target.value)}
+	                    placeholder="Search"
+	                    className="stats-desktop-search-input h-full min-w-0 flex-1 border-none bg-transparent px-6 text-[clamp(1.35rem,1.05rem+0.9vw,1.85rem)] font-normal tracking-[-0.03em] text-white outline-none placeholder:text-white/82"
+	                  />
+
+	                  <button
+	                    type="button"
+	                    aria-label="Close search"
+	                    onClick={() => {
+	                      setSearchOpen(false);
+	                      setSearchQuery("");
+	                    }}
+	                    className="inline-flex w-[78px] shrink-0 items-center justify-center border-l-[4px] border-[#0f58c9] text-white transition hover:bg-white/[0.05]"
+	                  >
+	                    <svg
+	                      aria-hidden="true"
+	                      viewBox="0 0 24 24"
+	                      fill="none"
+	                      className="h-[1.45rem] w-[1.45rem]"
+	                    >
+	                      <path
+	                        d="M6 6L18 18"
+	                        stroke="currentColor"
+	                        strokeWidth="2.25"
+	                        strokeLinecap="round"
+	                      />
+	                      <path
+	                        d="M18 6L6 18"
+	                        stroke="currentColor"
+	                        strokeWidth="2.25"
+	                        strokeLinecap="round"
+	                      />
+	                    </svg>
+	                  </button>
+	                </form>
+	              </div>
 	            </div>
 
             <button
