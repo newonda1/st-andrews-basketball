@@ -9,9 +9,9 @@ import {
   hydrateGamesWithSchools,
 } from "../dataUtils";
 
-const SEASON_ID = 2021;
+const SEASON_ID = 2020;
 
-function Season2021_22() {
+function Season2020_21() {
   const [games, setGames] = useState([]);
   const [playerStats, setPlayerStats] = useState([]);
   const [players, setPlayers] = useState([]);
@@ -51,7 +51,7 @@ function Season2021_22() {
         statsData.filter((stat) => seasonGameIds.has(Number(stat.GameID)))
       );
       setPlayers(playersData);
-      setRosterEntries(getRosterEntriesForSeason(rostersData, "2021-22"));
+      setRosterEntries(getRosterEntriesForSeason(rostersData, "2020-21"));
     }
 
     fetchData();
@@ -253,7 +253,7 @@ function Season2021_22() {
 
   return (
     <div className="pt-2 pb-4 space-y-8 max-w-6xl mx-auto">
-      <h1 className="text-3xl font-bold text-center mb-2">2021-22 Season</h1>
+      <h1 className="text-3xl font-bold text-center mb-2">2020-21 Season</h1>
 
       <section>
         <div className="flex items-center justify-between mt-8 mb-4">
@@ -535,4 +535,4 @@ function Season2021_22() {
   );
 }
 
-export default Season2021_22;
+export default Season2020_21;
