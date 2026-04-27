@@ -5,7 +5,7 @@
     "YearEnd": 2023,
     "HeadCoach": "Jimmy Stetler",
     "RegionSeed": 5,
-    "RegionFinish": "Region Semifinalist",
+    "RegionFinish": null,
     "StateSeed": null,
     "StateFinish": null
   },
@@ -15,7 +15,7 @@
     "YearEnd": 2024,
     "HeadCoach": "Jimmy Stetler",
     "RegionSeed": 5,
-    "RegionFinish": "Region Quarterfinalist",
+    "RegionFinish": null,
     "StateSeed": null,
     "StateFinish": null
   },
@@ -25,9 +25,9 @@
     "YearEnd": 2025,
     "HeadCoach": "Jimmy Stetler",
     "RegionSeed": 5,
-    "RegionFinish": "Region Quarterfinalist",
+    "RegionFinish": null,
     "StateSeed": 12,
-    "StateFinish": "First Round"
+    "StateFinish": null
   },
   {
     "SeasonID": 2025,
