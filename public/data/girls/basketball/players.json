@@ -63,6 +63,20 @@
     "JerseyNumber": 22
   },
   {
+    "PlayerID": 202204,
+    "FirstName": "Gabby",
+    "LastName": "Pound",
+    "GradYear": null,
+    "JerseyNumber": 2
+  },
+  {
+    "PlayerID": 202205,
+    "FirstName": "Sage",
+    "LastName": "Lough",
+    "GradYear": null,
+    "JerseyNumber": 12
+  },
+  {
     "PlayerID": 202301,
     "FirstName": "Valerie",
     "LastName": "Ward",

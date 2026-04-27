@@ -395,15 +395,15 @@ function Season2022_23() {
 
         <div className="text-gray-800 leading-relaxed">
           <h3 className="text-xl font-semibold mb-4">
-            Lions Battle Through a 26-Game 2022-23 Campaign
+            Lions Battle Through a 27-Game 2022-23 Campaign
           </h3>
 
           <p className="mb-4 leading-relaxed">
             St. Andrew's finished the 2022-23 girls basketball season with a
-            5-21 record, including an 0-8 mark in region play. The Lions earned
+            5-22 record, including an 0-8 mark in region play. The Lions earned
             wins over Savannah Christian, The Habersham School, Hilton Head
             Prep, and Westminster Schools of Augusta during a demanding
-            26-game schedule.
+            27-game schedule.
           </p>
 
           <p className="mb-4 leading-relaxed">
@@ -411,7 +411,8 @@ function Season2022_23() {
             Sarah Koegler, Ava Stillwagon, Lizzie Lank, and Laura Jackson
             anchored the senior class, while Gray Holmes, Addison Yates, Coco
             Carnahan, Claire Fleming, Maren Wrieden, Maya Salter, Grace Dare,
-            Morgan Rule, and Scarlett Holmes rounded out the varsity roster.
+            Morgan Rule, Gabby Pound, Sage Lough, and Scarlett Holmes rounded
+            out the varsity roster.
           </p>
 
           <p className="mb-4 leading-relaxed">
@@ -419,8 +420,8 @@ function Season2022_23() {
             the No. 5 seed and defeated Westminster Schools of Augusta in the
             opening round before falling to top-seeded Bulloch Academy. The
             season page below preserves the full schedule, official results,
-            available MaxPreps player box-score data, and the region and state
-            tournament brackets.
+            available MaxPreps and Hudl player box-score data, and the region
+            and state tournament brackets.
           </p>
         </div>
       </section>
