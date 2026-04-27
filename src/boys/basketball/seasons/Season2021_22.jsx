@@ -1,7 +1,9 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import RegionBracket5SVG from "../components/RegionBracket5SVG";
-import StateBracket16SVG from "../components/StateBracket16SVG";
+import {
+  RegionBracket5GameSVG,
+  StateBracket16GameSVG,
+} from "../components/GameCardBracketsSVG";
 import {
   BOYS_BASKETBALL_ROSTERS_PATH,
   SCHOOLS_PATH,
@@ -242,7 +244,7 @@ function Season2021_22() {
         {bracketsData === null ? (
           <p className="text-gray-600">Loading region bracket...</p>
         ) : bracket?.region ? (
-          <RegionBracket5SVG bracket={bracket.region} schools={schoolsData} />
+          <RegionBracket5GameSVG bracket={bracket.region} schools={schoolsData} />
         ) : (
           <p className="text-gray-600">Region bracket data is not available for this season.</p>
         )}
@@ -253,7 +255,7 @@ function Season2021_22() {
         {bracketsData === null ? (
           <p className="text-gray-600">Loading state bracket...</p>
         ) : bracket?.state ? (
-          <StateBracket16SVG bracket={bracket.state} schools={schoolsData} />
+          <StateBracket16GameSVG bracket={bracket.state} schools={schoolsData} />
         ) : (
           <p className="text-gray-600">State bracket data is not available for this season.</p>
         )}

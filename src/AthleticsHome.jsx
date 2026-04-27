@@ -96,7 +96,6 @@ const sports = [
     name: "Golf",
     to: "/athletics/golf",
     icon: "/images/golf/golf_icon.png",
-    iconClassName: "rounded-full",
     bannerNote: "State results archive since 2019",
     championshipGroups: [
       {
