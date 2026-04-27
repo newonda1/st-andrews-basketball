@@ -21,6 +21,7 @@ import Season2025_26 from "./seasons/Season2025_26";
 import Season2024_25 from "./seasons/Season2024_25";
 import Season2023_24 from "./seasons/Season2023_24";
 import Season2022_23 from "./seasons/Season2022_23";
+import Season2021_22 from "./seasons/Season2021_22";
 import SeasonPlaceholder from "./seasons/SeasonPlaceholder";
 
 const seasonPages = [
@@ -28,6 +29,7 @@ const seasonPages = [
   { slug: "2024-25", Component: Season2024_25 },
   { slug: "2023-24", Component: Season2023_24 },
   { slug: "2022-23", Component: Season2022_23 },
+  { slug: "2021-22", Component: Season2021_22 },
 ];
 
 const menuSections = [

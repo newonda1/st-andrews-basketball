@@ -8,6 +8,10 @@ function Home() {
       to: "/athletics/girls/basketball/seasons/2025-26",
     },
     {
+      label: "2021-22 Season",
+      to: "/athletics/girls/basketball/seasons/2021-22",
+    },
+    {
       label: "Year-by-Year Results",
       to: "/athletics/girls/basketball/yearly-results",
     },
@@ -40,9 +44,9 @@ function Home() {
             Building the St. Andrew&apos;s girls basketball archive.
           </h1>
           <p className="mb-5 text-[1rem] leading-[1.65] text-[var(--stats-body-color)]">
-            The girls basketball section now begins with the 2025-26 season and
-            is ready to grow as more historical results, rosters, box scores,
-            and records are added.
+            The girls basketball section now connects season pages from 2021-22
+            through the current archive, with historical results, rosters, box
+            scores, and records continuing to grow.
           </p>
           <p className="m-0 text-[1rem] leading-[1.65] text-[var(--stats-body-color)]">
             Current pages connect game recaps, team totals, player pages, and
@@ -59,9 +63,9 @@ function Home() {
           <h2 className="stats-module-title">Current Archive</h2>
           <div className="space-y-5 text-[0.98rem] leading-[1.65] text-[var(--stats-body-color)]">
             <p className="m-0">
-              The first full girls basketball season page is live for 2025-26,
-              with schedule results, recaps, player totals, and box-score links
-              already connected to the larger stats system.
+              Full girls basketball season pages are now live from 2021-22
+              through 2025-26, with schedule results, recaps, player totals, and
+              box-score links connected to the larger stats system.
             </p>
             <p className="m-0">
               As older seasons are added, they will flow into the same year-by-

@@ -2,6 +2,23 @@ import React, { useEffect, useMemo, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { SCHOOLS_PATH, hydrateGamesWithSchools } from "../dataUtils";
 
+const BOX_SCORE_FIELDS = [
+  "Points",
+  "Rebounds",
+  "Assists",
+  "Turnovers",
+  "Steals",
+  "Blocks",
+  "ThreePM",
+  "ThreePA",
+  "TwoPM",
+  "TwoPA",
+  "FTM",
+  "FTA",
+];
+
+const hasStatValue = (value) => value !== null && value !== undefined && value !== "";
+
 function GameDetail() {
   const { gameId } = useParams();
   const [game, setGame] = useState(null);
@@ -121,6 +138,8 @@ function GameDetail() {
     return ((m / a) * 100).toFixed(1);
   };
 
+  const renderStat = (value) => (hasStatValue(value) ? value : "—");
+
   const calcEFG = (twoPM, threePM, twoPA, threePA) => {
     const tpm = Number(twoPM) || 0;
     const thpm = Number(threePM) || 0;
@@ -144,8 +163,18 @@ function GameDetail() {
 
   // ✅ Team totals row (sums across playerStats)
   const teamTotals = useMemo(() => {
+    const has = Object.fromEntries(
+      BOX_SCORE_FIELDS.map((key) => [
+        key,
+        playerStats.some((stat) => hasStatValue(stat?.[key])),
+      ])
+    );
+
     const sum = (key) =>
-      playerStats.reduce((acc, s) => acc + (Number(s?.[key]) || 0), 0);
+      playerStats.reduce((acc, s) => {
+        if (!hasStatValue(s?.[key])) return acc;
+        return acc + (Number(s?.[key]) || 0);
+      }, 0);
 
     const totals = {
       Points: sum("Points"),
@@ -164,12 +193,15 @@ function GameDetail() {
 
     return {
       ...totals,
+      _has: has,
       ThreePct: formatPct(totals.ThreePM, totals.ThreePA),
       TwoPct: formatPct(totals.TwoPM, totals.TwoPA),
       EfgPct: calcEFG(totals.TwoPM, totals.ThreePM, totals.TwoPA, totals.ThreePA),
       FtPct: formatPct(totals.FTM, totals.FTA),
     };
   }, [playerStats]);
+
+  const renderTeamStat = (field) => (teamTotals._has?.[field] ? teamTotals[field] : "—");
 
   if (loading) {
     return <div className="p-4">Loading…</div>;
@@ -285,21 +317,21 @@ function GameDetail() {
                         </div>
                       </td>
 
-                      <td className="border px-2 py-1 align-middle">{s.Points}</td>
-                      <td className="border px-2 py-1 align-middle">{s.Rebounds}</td>
-                      <td className="border px-2 py-1 align-middle">{s.Assists}</td>
-                      <td className="border px-2 py-1 align-middle">{s.Turnovers}</td>
-                      <td className="border px-2 py-1 align-middle">{s.Steals}</td>
-                      <td className="border px-2 py-1 align-middle">{s.Blocks}</td>
-                      <td className="border px-2 py-1 align-middle">{s.ThreePM}</td>
-                      <td className="border px-2 py-1 align-middle">{s.ThreePA}</td>
+                      <td className="border px-2 py-1 align-middle">{renderStat(s.Points)}</td>
+                      <td className="border px-2 py-1 align-middle">{renderStat(s.Rebounds)}</td>
+                      <td className="border px-2 py-1 align-middle">{renderStat(s.Assists)}</td>
+                      <td className="border px-2 py-1 align-middle">{renderStat(s.Turnovers)}</td>
+                      <td className="border px-2 py-1 align-middle">{renderStat(s.Steals)}</td>
+                      <td className="border px-2 py-1 align-middle">{renderStat(s.Blocks)}</td>
+                      <td className="border px-2 py-1 align-middle">{renderStat(s.ThreePM)}</td>
+                      <td className="border px-2 py-1 align-middle">{renderStat(s.ThreePA)}</td>
                       <td className="border px-2 py-1 align-middle">{threePct}</td>
-                      <td className="border px-2 py-1 align-middle">{s.TwoPM}</td>
-                      <td className="border px-2 py-1 align-middle">{s.TwoPA}</td>
+                      <td className="border px-2 py-1 align-middle">{renderStat(s.TwoPM)}</td>
+                      <td className="border px-2 py-1 align-middle">{renderStat(s.TwoPA)}</td>
                       <td className="border px-2 py-1 align-middle">{twoPct}</td>
                       <td className="border px-2 py-1 align-middle">{efgPct}</td>
-                      <td className="border px-2 py-1 align-middle">{s.FTM}</td>
-                      <td className="border px-2 py-1 align-middle">{s.FTA}</td>
+                      <td className="border px-2 py-1 align-middle">{renderStat(s.FTM)}</td>
+                      <td className="border px-2 py-1 align-middle">{renderStat(s.FTA)}</td>
                       <td className="border px-2 py-1 align-middle">{ftPct}</td>
                     </tr>
                   );
@@ -308,21 +340,21 @@ function GameDetail() {
                 {/* ✅ Team Totals row styled like header row */}
                 <tr className="bg-gray-100 font-semibold">
                   <td className="border px-2 py-1 text-center">Team Totals</td>
-                  <td className="border px-2 py-1">{teamTotals.Points}</td>
-                  <td className="border px-2 py-1">{teamTotals.Rebounds}</td>
-                  <td className="border px-2 py-1">{teamTotals.Assists}</td>
-                  <td className="border px-2 py-1">{teamTotals.Turnovers}</td>
-                  <td className="border px-2 py-1">{teamTotals.Steals}</td>
-                  <td className="border px-2 py-1">{teamTotals.Blocks}</td>
-                  <td className="border px-2 py-1">{teamTotals.ThreePM}</td>
-                  <td className="border px-2 py-1">{teamTotals.ThreePA}</td>
+                  <td className="border px-2 py-1">{renderTeamStat("Points")}</td>
+                  <td className="border px-2 py-1">{renderTeamStat("Rebounds")}</td>
+                  <td className="border px-2 py-1">{renderTeamStat("Assists")}</td>
+                  <td className="border px-2 py-1">{renderTeamStat("Turnovers")}</td>
+                  <td className="border px-2 py-1">{renderTeamStat("Steals")}</td>
+                  <td className="border px-2 py-1">{renderTeamStat("Blocks")}</td>
+                  <td className="border px-2 py-1">{renderTeamStat("ThreePM")}</td>
+                  <td className="border px-2 py-1">{renderTeamStat("ThreePA")}</td>
                   <td className="border px-2 py-1">{teamTotals.ThreePct}</td>
-                  <td className="border px-2 py-1">{teamTotals.TwoPM}</td>
-                  <td className="border px-2 py-1">{teamTotals.TwoPA}</td>
+                  <td className="border px-2 py-1">{renderTeamStat("TwoPM")}</td>
+                  <td className="border px-2 py-1">{renderTeamStat("TwoPA")}</td>
                   <td className="border px-2 py-1">{teamTotals.TwoPct}</td>
                   <td className="border px-2 py-1">{teamTotals.EfgPct}</td>
-                  <td className="border px-2 py-1">{teamTotals.FTM}</td>
-                  <td className="border px-2 py-1">{teamTotals.FTA}</td>
+                  <td className="border px-2 py-1">{renderTeamStat("FTM")}</td>
+                  <td className="border px-2 py-1">{renderTeamStat("FTA")}</td>
                   <td className="border px-2 py-1">{teamTotals.FtPct}</td>
                 </tr>
               </tbody>

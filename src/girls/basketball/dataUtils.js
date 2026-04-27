@@ -16,6 +16,7 @@ export const PLAYER_GAME_STAT_FIELDS = [
   "TwoPA",
   "FTM",
   "FTA",
+  "MinutesPlayed",
 ];
 
 export function buildIdMap(items, key) {

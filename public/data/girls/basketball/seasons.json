@@ -1,5 +1,15 @@
 [
   {
+    "SeasonID": 2021,
+    "YearStart": 2021,
+    "YearEnd": 2022,
+    "HeadCoach": "Jimmy Stetler",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
     "SeasonID": 2022,
     "YearStart": 2022,
     "YearEnd": 2023,
