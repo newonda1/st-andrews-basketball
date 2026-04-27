@@ -618,25 +618,25 @@ export default function AthleticsProgramShell({
 	              <div
 	                className={`absolute right-0 top-1/2 -translate-y-1/2 overflow-hidden transition-all duration-300 ease-out ${
 	                  searchOpen
-	                    ? "w-[min(760px,calc(100vw-18rem))] opacity-100"
+	                    ? "w-[min(300px,calc(100vw-28rem))] opacity-100"
 	                    : "w-0 opacity-0 pointer-events-none"
 	                }`}
 	              >
 	                <form
 	                  onSubmit={handleSearchSubmit}
 	                  role="search"
-	                  className="flex h-[82px] w-[min(760px,calc(100vw-18rem))] items-stretch bg-[var(--stats-navy)] text-white shadow-[0_18px_34px_rgba(15,23,42,0.2)]"
+	                  className="flex h-[40px] w-[min(300px,calc(100vw-28rem))] items-stretch bg-[var(--stats-navy)] text-white shadow-[0_10px_20px_rgba(15,23,42,0.16)]"
 	                >
 	                  <button
 	                    type="submit"
 	                    aria-label="Submit search"
-	                    className="inline-flex w-[78px] shrink-0 items-center justify-center border-r-[4px] border-[#0f58c9] text-white transition hover:bg-white/[0.05]"
+	                    className="inline-flex w-[42px] shrink-0 items-center justify-center border-r-[2px] border-[#0f58c9] text-white transition hover:bg-white/[0.05]"
 	                  >
 	                    <svg
 	                      aria-hidden="true"
 	                      viewBox="0 0 24 24"
 	                      fill="none"
-	                      className="h-[1.55rem] w-[1.55rem]"
+	                      className="h-[0.88rem] w-[0.88rem]"
 	                    >
 	                      <circle
 	                        cx="11"
@@ -664,7 +664,7 @@ export default function AthleticsProgramShell({
 	                    value={searchQuery}
 	                    onChange={(event) => setSearchQuery(event.target.value)}
 	                    placeholder="Search"
-	                    className="stats-desktop-search-input h-full min-w-0 flex-1 border-none bg-transparent px-6 text-[clamp(1.35rem,1.05rem+0.9vw,1.85rem)] font-normal tracking-[-0.03em] text-white outline-none placeholder:text-white/82"
+	                    className="stats-desktop-search-input h-full min-w-0 flex-1 border-none bg-transparent px-4 text-[0.84rem] font-normal tracking-[-0.01em] text-white outline-none placeholder:text-white/82"
 	                  />
 
 	                  <button
@@ -674,13 +674,13 @@ export default function AthleticsProgramShell({
 	                      setSearchOpen(false);
 	                      setSearchQuery("");
 	                    }}
-	                    className="inline-flex w-[78px] shrink-0 items-center justify-center border-l-[4px] border-[#0f58c9] text-white transition hover:bg-white/[0.05]"
+	                    className="inline-flex w-[42px] shrink-0 items-center justify-center border-l-[2px] border-[#0f58c9] text-white transition hover:bg-white/[0.05]"
 	                  >
 	                    <svg
 	                      aria-hidden="true"
 	                      viewBox="0 0 24 24"
 	                      fill="none"
-	                      className="h-[1.45rem] w-[1.45rem]"
+	                      className="h-[0.84rem] w-[0.84rem]"
 	                    >
 	                      <path
 	                        d="M6 6L18 18"
