@@ -395,30 +395,31 @@ function Season2023_24() {
 
         <div className="text-gray-800 leading-relaxed">
           <h3 className="text-xl font-semibold mb-4">
-            Lions Build Through a 25-Game 2023-24 Campaign
+            Lions Build Through a 26-Game 2023-24 Campaign
           </h3>
 
           <p className="mb-4 leading-relaxed">
             St. Andrew's finished the 2023-24 girls basketball season with a
-            6-19 record, including a 1-7 mark in region play. The Lions earned
+            7-19 record, including a 1-7 mark in region play. The Lions earned
             wins over Thomas Heyward Academy, Islands, The Habersham School,
-            and Pinewood Christian while navigating a deep Region 2-AAA slate.
+            Effingham County, and Pinewood Christian while navigating a deep
+            Region 2-AAA slate.
           </p>
 
           <p className="mb-4 leading-relaxed">
             The roster mixed veteran leadership with underclass contributors.
             Claire Fleming led the senior class, with Gray Holmes, Addison
             Yates, Maya Salter, Coco Carnahan, Maren Wrieden, Grace Dare,
-            Scarlett Holmes, Valerie Ward, Avery Nein, and Vivienne Carter all
-            logging varsity statistics during the season.
+            Scarlett Holmes, Valerie Ward, Avery Nein, Vivienne Carter, and
+            Livia Joyner all logging varsity statistics during the season.
           </p>
 
           <p className="mb-4 leading-relaxed">
             In postseason play, St. Andrew's entered the region tournament as
             the No. 5 seed and faced Pinewood Christian in the opening round.
             The season page below preserves the full schedule, official
-            results, available MaxPreps player box-score data, and the region
-            and state tournament brackets.
+            results, available player box-score data, and the region and state
+            tournament brackets.
           </p>
         </div>
       </section>
