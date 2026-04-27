@@ -1,7 +1,10 @@
 import React, { useEffect, useMemo, useState } from "react";
+import { Link, useSearchParams } from "react-router-dom";
+import { normalizeSearchText } from "../../../components/search/searchUtils";
 import { SCHOOLS_PATH, hydrateGamesWithSchools } from "../dataUtils";
 
 function RecordsVsOpponents() {
+  const [searchParams] = useSearchParams();
   const [games, setGames] = useState([]);
   const [playerGameStats, setPlayerGameStats] = useState([]);
   const [players, setPlayers] = useState([]);
@@ -10,6 +13,8 @@ function RecordsVsOpponents() {
   const [sortField, setSortField] = useState("Total");
   const [sortDirection, setSortDirection] = useState("desc");
   const [expandedOpponent, setExpandedOpponent] = useState(null);
+  const teamFilter = searchParams.get("team") || "";
+  const normalizedTeamFilter = normalizeSearchText(teamFilter);
 
   // Helpers ---
   const formatDateFromGameID = (gameId) => {
@@ -246,6 +251,34 @@ function RecordsVsOpponents() {
     return map;
   }, [games]);
 
+  const visibleOpponents = useMemo(() => {
+    if (!normalizedTeamFilter) {
+      return sortedOpponents;
+    }
+
+    return sortedOpponents.filter(([opponent]) =>
+      normalizeSearchText(opponent).includes(normalizedTeamFilter)
+    );
+  }, [normalizedTeamFilter, sortedOpponents]);
+
+  useEffect(() => {
+    if (!normalizedTeamFilter) {
+      return;
+    }
+
+    if (visibleOpponents.length === 1) {
+      setExpandedOpponent(visibleOpponents[0][0]);
+      return;
+    }
+
+    if (
+      expandedOpponent &&
+      !visibleOpponents.some(([opponent]) => opponent === expandedOpponent)
+    ) {
+      setExpandedOpponent(null);
+    }
+  }, [expandedOpponent, normalizedTeamFilter, visibleOpponents]);
+
   const leadingScorerByGameId = useMemo(() => {
     const map = new Map();
 
@@ -279,8 +312,24 @@ function RecordsVsOpponents() {
   return (
     <div className="max-w-5xl mx-auto p-6 bg-white shadow rounded-lg">
       <h1 className="text-2xl font-bold mb-4 text-center">
-        Records vs. Opponents
+        {teamFilter.trim()
+          ? `Records vs. ${teamFilter.trim()}`
+          : "Records vs. Opponents"}
       </h1>
+
+      {teamFilter.trim() ? (
+        <div className="mb-4 rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700">
+          Showing {visibleOpponents.length} matching opponent
+          {visibleOpponents.length === 1 ? "" : "s"} for{" "}
+          <span className="font-semibold">{teamFilter.trim()}</span>.{" "}
+          <Link
+            to="/athletics/girls/basketball/records/opponents"
+            className="font-semibold text-[var(--stats-navy)]"
+          >
+            View all opponents
+          </Link>
+        </div>
+      ) : null}
 
       <div className="overflow-x-auto">
         <table className="w-full text-xs sm:text-sm md:text-base text-center border">
@@ -329,7 +378,7 @@ function RecordsVsOpponents() {
           </thead>
 
           <tbody>
-            {sortedOpponents.map(([opponent, record], idx) => {
+            {visibleOpponents.map(([opponent, record], idx) => {
               const isExpanded = expandedOpponent === opponent;
               const gamesAgainst = gamesByOpponent.get(opponent) || [];
 
@@ -427,6 +476,14 @@ function RecordsVsOpponents() {
                 </React.Fragment>
               );
             })}
+
+            {visibleOpponents.length === 0 ? (
+              <tr>
+                <td colSpan={9} className="border px-3 py-6 text-center text-gray-600">
+                  No opponents matched this search.
+                </td>
+              </tr>
+            ) : null}
           </tbody>
         </table>
       </div>

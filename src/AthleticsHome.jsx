@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { athleticsMenuSections } from "./athleticsMenuSections";
 import AthleticsProgramShell from "./components/AthleticsProgramShell";
 
 const BANNER_SHAPE = {
@@ -50,7 +51,7 @@ const sports = [
   {
     name: "Volleyball",
     to: "/athletics/volleyball",
-    icon: "/images/common/volleyball_icon.svg",
+    icon: "/images/common/volleyball_icon.png",
     bannerNote: "Landing page coming soon",
     bannerMessage: "This page is under construction and will be up soon.",
     regionYears: [],
@@ -142,25 +143,6 @@ const sports = [
           },
         ],
       },
-    ],
-  },
-];
-
-const menuSections = [
-  {
-    title: "Sports",
-    links: [
-      { to: "/athletics/boys/basketball", label: "Boys Basketball" },
-      { to: "/athletics/girls/basketball", label: "Girls Basketball" },
-      { to: "/athletics/boys/baseball", label: "Baseball" },
-      { to: "/athletics/football", label: "Football" },
-      { to: "/athletics/volleyball", label: "Volleyball" },
-      { to: "/athletics/girls/soccer", label: "Girls Soccer" },
-      { to: "/athletics/boys/soccer", label: "Boys Soccer" },
-      { to: "/athletics/track/records/school", label: "Track & Field" },
-      { to: "/athletics/swimming/records/school", label: "Swimming" },
-      { to: "/athletics/tennis", label: "Tennis" },
-      { to: "/athletics/golf", label: "Golf" },
     ],
   },
 ];
@@ -372,7 +354,7 @@ function AthleticsHome() {
     <AthleticsProgramShell
       title="St. Andrew's Athletic Statistics"
       menuTitle="Athletics"
-      menuSections={menuSections}
+      menuSections={athleticsMenuSections}
       athleticsHomePath="/athletics"
     >
       <div className="relative left-1/2 w-screen -translate-x-1/2 px-[clamp(1rem,4vw,5rem)] py-2 sm:py-4">

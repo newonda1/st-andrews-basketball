@@ -1,7 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import Footer from "./Footer";
-import { statsSearchItems } from "./statsSearchIndex";
 
 const utilityLinks = [
   {
@@ -56,57 +55,13 @@ function isPathCurrent(pathname, target, end = false) {
   return pathname === target || pathname.startsWith(`${target}/`);
 }
 
-function getSearchScore(item, query) {
-  const label = item.label.toLowerCase();
-  const description = (item.description || "").toLowerCase();
-  const keywords = (item.keywords || []).join(" ").toLowerCase();
-  const haystack = `${label} ${description} ${keywords}`.trim();
-  const terms = query.split(/\s+/).filter(Boolean);
-
-  if (terms.length === 0) {
-    return item.featured ? 1 : 0;
+function getSearchRoute(query) {
+  const trimmedQuery = String(query ?? "").trim();
+  if (!trimmedQuery) {
+    return null;
   }
 
-  if (terms.some((term) => !haystack.includes(term))) {
-    return 0;
-  }
-
-  let score = 20;
-
-  if (label === query) {
-    score += 100;
-  } else if (label.startsWith(query)) {
-    score += 50;
-  } else if (haystack.includes(query)) {
-    score += 25;
-  }
-
-  if (description.includes(query)) {
-    score += 10;
-  }
-
-  if (item.featured) {
-    score += 4;
-  }
-
-  return score;
-}
-
-function getVisibleSearchItems(searchQuery, fallbackItems = []) {
-  const normalizedQuery = searchQuery.trim().toLowerCase();
-
-  if (!normalizedQuery) {
-    return fallbackItems;
-  }
-
-  return statsSearchItems
-    .map((item) => ({ item, score: getSearchScore(item, normalizedQuery) }))
-    .filter((entry) => entry.score > 0)
-    .sort(
-      (a, b) => b.score - a.score || a.item.label.localeCompare(b.item.label)
-    )
-    .slice(0, 8)
-    .map((entry) => entry.item);
+  return `/athletics/search?${new URLSearchParams({ q: trimmedQuery }).toString()}`;
 }
 
 function renderSocialIcon(icon) {
@@ -156,49 +111,6 @@ function renderSocialIcon(icon) {
   );
 }
 
-function SearchResults({ items, query, onSelect, compact = false }) {
-  if (items.length === 0) {
-    return (
-      <p
-        className={`m-0 text-[0.9rem] leading-[1.45] text-white/72 ${
-          compact ? "px-0 py-2" : "px-6 py-4"
-        }`}
-      >
-        No matching stats pages found. Try a sport, record type, or player.
-      </p>
-    );
-  }
-
-  return (
-    <>
-      <p
-        className={`m-0 text-[0.72rem] font-bold uppercase tracking-[0.18em] text-white/60 ${
-          compact ? "pb-3" : "px-6 pb-3 pt-5"
-        }`}
-      >
-        {query.trim() ? "Results" : "Popular Pages"}
-      </p>
-      <div className={compact ? "space-y-0" : "pb-2"}>
-        {items.map((item) => (
-          <Link
-            key={`${item.to}-${item.label}`}
-            to={item.to}
-            onClick={onSelect}
-            className={`block border-t border-white/10 text-white no-underline transition hover:bg-white/[0.04] ${
-              compact ? "py-3" : "px-6 py-4"
-            }`}
-          >
-            <p className="m-0 text-[1rem] leading-[1.2]">{item.label}</p>
-            <p className="m-0 mt-1 text-[0.82rem] leading-[1.3] text-white/68">
-              {item.description}
-            </p>
-          </Link>
-        ))}
-      </div>
-    </>
-  );
-}
-
 export default function AthleticsProgramShell({
   title,
   subtitle,
@@ -244,21 +156,6 @@ export default function AthleticsProgramShell({
       ...normalizedSections,
     ],
     [headerHomePath, homeLabel, normalizedSections]
-  );
-
-  const featuredSearchItems = useMemo(
-    () => statsSearchItems.filter((item) => item.featured).slice(0, 7),
-    []
-  );
-
-  const visibleSearchItems = useMemo(
-    () => getVisibleSearchItems(searchQuery, featuredSearchItems),
-    [featuredSearchItems, searchQuery]
-  );
-
-  const mobileVisibleSearchItems = useMemo(
-    () => getVisibleSearchItems(mobileSearchQuery, []),
-    [mobileSearchQuery]
   );
 
   useEffect(() => {
@@ -380,21 +277,19 @@ export default function AthleticsProgramShell({
 
   const handleSearchSubmit = (event) => {
     event.preventDefault();
-
-    if (visibleSearchItems.length > 0) {
-      navigate(visibleSearchItems[0].to);
-      setSearchOpen(false);
-      setSearchQuery("");
-    }
+    const searchRoute = getSearchRoute(searchQuery);
+    if (!searchRoute) return;
+    navigate(searchRoute);
+    setSearchOpen(false);
+    setSearchQuery("");
   };
 
   const handleMobileSearchSubmit = (event) => {
     event.preventDefault();
-
-    if (mobileVisibleSearchItems.length > 0) {
-      navigate(mobileVisibleSearchItems[0].to);
-      closeMobileMenu();
-    }
+    const searchRoute = getSearchRoute(mobileSearchQuery);
+    if (!searchRoute) return;
+    navigate(searchRoute);
+    closeMobileMenu();
   };
 
   const handleNavShellBlur = (event) => {
@@ -665,12 +560,12 @@ export default function AthleticsProgramShell({
               </div>
             </Link>
 
-            <div
-              ref={searchContainerRef}
-              className="relative hidden items-center gap-1 lg:flex"
-            >
-              <div className="flex items-center">
-                {utilityLinks.map((item) => (
+	            <div
+	              ref={searchContainerRef}
+	              className="hidden items-center gap-3 lg:flex"
+	            >
+	              <div className="flex items-center">
+	                {utilityLinks.map((item) => (
                   <a
                     key={item.label}
                     href={item.href}
@@ -680,89 +575,139 @@ export default function AthleticsProgramShell({
                   >
                     {item.label}
                   </a>
-                ))}
-              </div>
+	                ))}
+	              </div>
 
-              <button
-                type="button"
-                aria-label="Search the stats site"
-                aria-expanded={searchOpen}
-                onClick={() => setSearchOpen((current) => !current)}
-                className="ml-2 inline-flex h-10 w-10 items-center justify-center rounded-full text-[var(--stats-gray)] transition hover:text-[var(--stats-navy)]"
-              >
-                <svg
-                  aria-hidden="true"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  className="h-[0.95rem] w-[0.95rem]"
-                >
-                  <circle
-                    cx="11"
-                    cy="11"
-                    r="6.5"
-                    stroke="currentColor"
-                    strokeWidth="2.45"
-                  />
-                  <path
-                    d="M16 16L21 21"
-                    stroke="currentColor"
-                    strokeWidth="2.45"
-                    strokeLinecap="round"
-                  />
-                </svg>
-              </button>
+	              <div
+	                className={`overflow-hidden transition-all duration-200 ease-out ${
+	                  searchOpen ? "max-w-[23rem] opacity-100" : "max-w-0 opacity-0"
+	                }`}
+	              >
+	                <form
+	                  onSubmit={handleSearchSubmit}
+	                  role="search"
+	                  className="flex h-11 w-[min(23rem,42vw)] items-center rounded-full border border-[var(--stats-line)] bg-white pl-3 pr-2 shadow-[0_10px_20px_rgba(15,23,42,0.08)]"
+	                >
+	                  <button
+	                    type="submit"
+	                    aria-label="Search the stats site"
+	                    className="inline-flex h-9 w-9 shrink-0 items-center justify-center text-[var(--stats-gray)] transition hover:text-[var(--stats-navy)]"
+	                  >
+	                    <svg
+	                      aria-hidden="true"
+	                      viewBox="0 0 24 24"
+	                      fill="none"
+	                      className="h-[0.92rem] w-[0.92rem]"
+	                    >
+	                      <circle
+	                        cx="11"
+	                        cy="11"
+	                        r="6.5"
+	                        stroke="currentColor"
+	                        strokeWidth="2.25"
+	                      />
+	                      <path
+	                        d="M16 16L21 21"
+	                        stroke="currentColor"
+	                        strokeWidth="2.25"
+	                        strokeLinecap="round"
+	                      />
+	                    </svg>
+	                  </button>
+	                  <input
+	                    ref={searchInputRef}
+	                    type="search"
+	                    value={searchQuery}
+	                    onChange={(event) => setSearchQuery(event.target.value)}
+	                    placeholder="Search athletes or teams"
+	                    className="stats-desktop-search-input h-full w-full border-none bg-transparent px-2 text-[0.95rem] text-[var(--stats-navy)] outline-none"
+	                  />
+	                  {searchQuery.trim() ? (
+	                    <button
+	                      type="button"
+	                      aria-label="Clear search"
+	                      onClick={() => setSearchQuery("")}
+	                      className="inline-flex h-9 w-9 shrink-0 items-center justify-center text-[var(--stats-gray)] transition hover:text-[var(--stats-navy)]"
+	                    >
+	                      <svg
+	                        aria-hidden="true"
+	                        viewBox="0 0 24 24"
+	                        fill="none"
+	                        className="h-[0.9rem] w-[0.9rem]"
+	                      >
+	                        <path
+	                          d="M6 6L18 18"
+	                          stroke="currentColor"
+	                          strokeWidth="2"
+	                          strokeLinecap="round"
+	                        />
+	                        <path
+	                          d="M18 6L6 18"
+	                          stroke="currentColor"
+	                          strokeWidth="2"
+	                          strokeLinecap="round"
+	                        />
+	                      </svg>
+	                    </button>
+	                  ) : null}
+	                </form>
+	              </div>
 
-              {searchOpen ? (
-                <div className="absolute right-0 top-[calc(100%+12px)] z-50 w-[min(420px,92vw)] border border-[var(--stats-navy)] bg-[var(--stats-navy)] shadow-[0_18px_36px_rgba(15,23,42,0.22)]">
-                  <form onSubmit={handleSearchSubmit} className="border-b border-white/15 p-5">
-                    <div className="flex items-center border-b border-white/35">
-                      <button
-                        type="submit"
-                        className="inline-flex h-10 w-10 items-center justify-center text-white/85"
-                      >
-                        <svg
-                          aria-hidden="true"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          className="h-[0.95rem] w-[0.95rem]"
-                        >
-                          <circle
-                            cx="11"
-                            cy="11"
-                            r="6.5"
-                            stroke="currentColor"
-                            strokeWidth="2.45"
-                          />
-                          <path
-                            d="M16 16L21 21"
-                            stroke="currentColor"
-                            strokeWidth="2.45"
-                            strokeLinecap="round"
-                          />
-                        </svg>
-                      </button>
-                      <input
-                        ref={searchInputRef}
-                        type="search"
-                        value={searchQuery}
-                        onChange={(event) => setSearchQuery(event.target.value)}
-                        placeholder="Search the stats site"
-                        className="stats-desktop-search-input h-10 w-full border-none bg-transparent px-1 text-[0.95rem] text-white outline-none"
-                      />
-                    </div>
-                  </form>
-
-                  <SearchResults
-                    items={visibleSearchItems}
-                    query={searchQuery}
-                    onSelect={() => {
-                      setSearchOpen(false);
-                      setSearchQuery("");
-                    }}
-                  />
-                </div>
-              ) : null}
-            </div>
+	              <button
+	                type="button"
+	                aria-label="Search the stats site"
+	                aria-expanded={searchOpen}
+	                onClick={() => setSearchOpen((current) => !current)}
+	                className={`inline-flex h-10 w-10 items-center justify-center rounded-full transition ${
+	                  searchOpen
+	                    ? "bg-[var(--stats-navy)] text-white"
+	                    : "text-[var(--stats-gray)] hover:text-[var(--stats-navy)]"
+	                }`}
+	              >
+	                {searchOpen ? (
+	                  <svg
+	                    aria-hidden="true"
+	                    viewBox="0 0 24 24"
+	                    fill="none"
+	                    className="h-[0.95rem] w-[0.95rem]"
+	                  >
+	                    <path
+	                      d="M6 6L18 18"
+	                      stroke="currentColor"
+	                      strokeWidth="2.2"
+	                      strokeLinecap="round"
+	                    />
+	                    <path
+	                      d="M18 6L6 18"
+	                      stroke="currentColor"
+	                      strokeWidth="2.2"
+	                      strokeLinecap="round"
+	                    />
+	                  </svg>
+	                ) : (
+	                  <svg
+	                    aria-hidden="true"
+	                    viewBox="0 0 24 24"
+	                    fill="none"
+	                    className="h-[0.95rem] w-[0.95rem]"
+	                  >
+	                    <circle
+	                      cx="11"
+	                      cy="11"
+	                      r="6.5"
+	                      stroke="currentColor"
+	                      strokeWidth="2.45"
+	                    />
+	                    <path
+	                      d="M16 16L21 21"
+	                      stroke="currentColor"
+	                      strokeWidth="2.45"
+	                      strokeLinecap="round"
+	                    />
+	                  </svg>
+	                )}
+	              </button>
+	            </div>
 
             <button
               type="button"
@@ -827,11 +772,12 @@ export default function AthleticsProgramShell({
               </button>
             </div>
 
-            <form
-              onSubmit={handleMobileSearchSubmit}
-              className="mt-5 bg-[var(--stats-navy)] px-5 py-4"
-            >
-              <div className="flex items-center gap-3">
+	            <form
+	              onSubmit={handleMobileSearchSubmit}
+	              className="mt-5 bg-[var(--stats-navy)] px-5 py-4"
+	              role="search"
+	            >
+	              <div className="flex items-center gap-3">
                 <button
                   type="submit"
                   className="inline-flex h-8 w-8 shrink-0 items-center justify-center text-white"
@@ -858,27 +804,47 @@ export default function AthleticsProgramShell({
                   </svg>
                 </button>
 
-                <input
-                  ref={mobileSearchInputRef}
-                  type="search"
-                  value={mobileSearchQuery}
-                  onChange={(event) => setMobileSearchQuery(event.target.value)}
-                  placeholder="Search"
-                  className="stats-mobile-search-input h-8 w-full border-none bg-transparent p-0 text-[1rem] text-white outline-none"
-                />
-              </div>
-
-              {mobileSearchQuery.trim() ? (
-                <div className="mt-4 border-t border-white/15 pt-2">
-                  <SearchResults
-                    items={mobileVisibleSearchItems}
-                    query={mobileSearchQuery}
-                    compact
-                    onSelect={closeMobileMenu}
-                  />
-                </div>
-              ) : null}
-            </form>
+	                <input
+	                  ref={mobileSearchInputRef}
+	                  type="search"
+	                  value={mobileSearchQuery}
+	                  onChange={(event) => setMobileSearchQuery(event.target.value)}
+	                  placeholder="Search athletes or teams"
+	                  className="stats-mobile-search-input h-8 w-full border-none bg-transparent p-0 text-[1rem] text-white outline-none"
+	                />
+	                {mobileSearchQuery.trim() ? (
+	                  <button
+	                    type="button"
+	                    aria-label="Clear search"
+	                    onClick={() => setMobileSearchQuery("")}
+	                    className="inline-flex h-8 w-8 shrink-0 items-center justify-center text-white/75"
+	                  >
+	                    <svg
+	                      aria-hidden="true"
+	                      viewBox="0 0 24 24"
+	                      fill="none"
+	                      className="h-4 w-4"
+	                    >
+	                      <path
+	                        d="M6 6L18 18"
+	                        stroke="currentColor"
+	                        strokeWidth="2"
+	                        strokeLinecap="round"
+	                      />
+	                      <path
+	                        d="M18 6L6 18"
+	                        stroke="currentColor"
+	                        strokeWidth="2"
+	                        strokeLinecap="round"
+	                      />
+	                    </svg>
+	                  </button>
+	                ) : null}
+	              </div>
+	              <p className="m-0 mt-3 text-[0.78rem] leading-[1.5] text-white/70">
+	                Search athletes, teams, and key stats pages.
+	              </p>
+	            </form>
 
             <nav
               aria-label={`${menuTitle || title} mobile navigation`}

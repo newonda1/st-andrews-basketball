@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
 
 import AthleticsHome from "./AthleticsHome.jsx";
+import AthleticsSearchApp from "./AthleticsSearchApp.jsx";
 import BoysBasketballApp from "./boys/basketball/BoysBasketballApp.jsx";
 import BoysBaseballApp from "./boys/baseball/BoysBaseballApp.jsx";
 import GirlsBasketballApp from "./girls/basketball/GirlsBasketballApp.jsx";
@@ -21,6 +22,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Routes>
         <Route path="/" element={<AthleticsHome />} />
         <Route path="/athletics" element={<AthleticsHome />} />
+        <Route path="/athletics/search" element={<AthleticsSearchApp />} />
 
         <Route
           path="/athletics/boys/basketball/*"
