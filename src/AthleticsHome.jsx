@@ -324,7 +324,7 @@ function AthleticsHome() {
       menuSections={menuSections}
       athleticsHomePath="/athletics"
     >
-      <div className="relative left-1/2 w-screen -translate-x-1/2 px-[clamp(0.5rem,1.25vw,1.5rem)] py-2 sm:py-4">
+      <div className="relative left-1/2 w-screen -translate-x-1/2 px-[clamp(1rem,4vw,5rem)] py-2 sm:py-4">
         <section className="mt-4">
           <div className="mx-auto w-full max-w-[1920px] px-0 py-6 sm:py-8">
             <div className="mx-auto max-w-3xl text-center">
@@ -337,7 +337,7 @@ function AthleticsHome() {
               </p>
             </div>
 
-            <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 xl:gap-3 2xl:gap-4">
+            <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5 2xl:gap-5">
               {sports.map((sport) => (
                 <SportBanner key={sport.name} sport={sport} />
               ))}
