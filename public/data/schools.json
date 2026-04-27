@@ -1262,5 +1262,12 @@
     "Name": "Cross High School",
     "City": "Cross",
     "State": "SC"
+  },
+  {
+    "SchoolID": "ga-savannah-arts-academy-savannah",
+    "Name": "Savannah Arts Academy",
+    "ShortName": "Savannah Arts",
+    "City": "Savannah",
+    "State": "GA"
   }
 ]

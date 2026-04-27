@@ -5304,5 +5304,1399 @@
       }
     ],
     "Source": "User-provided screenshots"
+  },
+  {
+    "MatchID": "2026-03-03-savannah-christian-boys",
+    "Season": 2026,
+    "Date": "2026-03-03",
+    "StartTime": "16:00",
+    "Name": "St. Andrew's vs. Savannah Christian - Boys",
+    "MatchType": "Dual Match",
+    "Gender": "Boys",
+    "Classification": "GIAA",
+    "Status": "Completed",
+    "OpponentSchoolID": "ga-savannah-christian-preparatory-school-savannah",
+    "TeamScore": {
+      "StAndrews": 3,
+      "Opponent": 2,
+      "Result": "W"
+    },
+    "LineMatches": [
+      {
+        "TennisMatchID": "2026-03-03-savannah-christian-boys-singles-1",
+        "EventType": "Singles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2026-03-03",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-savannah-christian-singles-1-1",
+            "DisplayName": "TBD",
+            "SchoolID": "ga-savannah-christian-preparatory-school-savannah",
+            "SourceSchoolLabel": "Savannah Christian Preparatory School",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026056,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 0,
+            "bottom": 6
+          },
+          {
+            "SetNumber": 2,
+            "top": 0,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "SourceScoreLabel": "6/0 6/0",
+        "WinnerPlayerID": 2026056
+      },
+      {
+        "TennisMatchID": "2026-03-03-savannah-christian-boys-singles-2",
+        "EventType": "Singles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2026-03-03",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-savannah-christian-singles-2-1",
+            "DisplayName": "TBD",
+            "SchoolID": "ga-savannah-christian-preparatory-school-savannah",
+            "SourceSchoolLabel": "Savannah Christian Preparatory School",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026055,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 0,
+            "bottom": 6
+          },
+          {
+            "SetNumber": 2,
+            "top": 0,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "SourceScoreLabel": "6/0 6/0",
+        "WinnerPlayerID": 2026055
+      },
+      {
+        "TennisMatchID": "2026-03-03-savannah-christian-boys-singles-3",
+        "EventType": "Singles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2026-03-03",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-savannah-christian-singles-3-1",
+            "DisplayName": "TBD",
+            "SchoolID": "ga-savannah-christian-preparatory-school-savannah",
+            "SourceSchoolLabel": "Savannah Christian Preparatory School",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026057,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 0,
+            "bottom": 6
+          },
+          {
+            "SetNumber": 2,
+            "top": 0,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "SourceScoreLabel": "6/0 6/0",
+        "WinnerPlayerID": 2026057
+      },
+      {
+        "TennisMatchID": "2026-03-03-savannah-christian-boys-doubles-1",
+        "EventType": "Doubles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2026-03-03",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-03-03-savannah-christian-boys-savannah-christian-unknown-doubles-1",
+            "DisplayName": "TBD / TBD",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-savannah-christian-doubles-1-1",
+                "DisplayName": "TBD",
+                "SchoolID": "ga-savannah-christian-preparatory-school-savannah",
+                "SourceSchoolLabel": "Savannah Christian Preparatory School"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-savannah-christian-doubles-1-2",
+                "DisplayName": "TBD",
+                "SchoolID": "ga-savannah-christian-preparatory-school-savannah",
+                "SourceSchoolLabel": "Savannah Christian Preparatory School"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-03-03-savannah-christian-boys-sta-espina-constas",
+            "DisplayName": "Jordan Espina / Cosmo Constas",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026060
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026058
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 7,
+            "bottom": 6
+          },
+          {
+            "SetNumber": 2,
+            "top": 6,
+            "bottom": 2
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "doublesTeam",
+        "SourceScoreLabel": "7/6 6/2",
+        "WinnerTeamID": "2026-03-03-savannah-christian-boys-savannah-christian-unknown-doubles-1"
+      },
+      {
+        "TennisMatchID": "2026-03-03-savannah-christian-boys-doubles-2",
+        "EventType": "Doubles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2026-03-03",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-03-03-savannah-christian-boys-savannah-christian-unknown-doubles-2",
+            "DisplayName": "TBD / TBD",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-savannah-christian-doubles-2-1",
+                "DisplayName": "TBD",
+                "SchoolID": "ga-savannah-christian-preparatory-school-savannah",
+                "SourceSchoolLabel": "Savannah Christian Preparatory School"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-savannah-christian-doubles-2-2",
+                "DisplayName": "TBD",
+                "SchoolID": "ga-savannah-christian-preparatory-school-savannah",
+                "SourceSchoolLabel": "Savannah Christian Preparatory School"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-03-03-savannah-christian-boys-sta-ammon-duke",
+            "DisplayName": "Moritz Heinrich Ammon / Parley Duke",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 202504
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026059
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 6,
+            "bottom": 4
+          },
+          {
+            "SetNumber": 2,
+            "top": 6,
+            "bottom": 3
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "doublesTeam",
+        "SourceScoreLabel": "6/4 6/3",
+        "WinnerTeamID": "2026-03-03-savannah-christian-boys-savannah-christian-unknown-doubles-2"
+      }
+    ],
+    "Source": "User-provided Tennis Stats 2026 workbook; dates and locations cross-checked against the St. Andrew's Athletics varsity boys tennis schedule."
+  },
+  {
+    "MatchID": "2026-03-04-savannah-country-day-boys",
+    "Season": 2026,
+    "Date": "2026-03-04",
+    "StartTime": "16:00",
+    "Name": "St. Andrew's vs. Savannah Country Day - Boys",
+    "MatchType": "Dual Match",
+    "Gender": "Boys",
+    "Classification": "GIAA",
+    "Status": "Completed",
+    "OpponentSchoolID": "ga-savannah-country-day-school-savannah",
+    "TeamScore": {
+      "StAndrews": 2,
+      "Opponent": 3,
+      "Result": "L"
+    },
+    "LineMatches": [
+      {
+        "TennisMatchID": "2026-03-04-savannah-country-day-boys-singles-1",
+        "EventType": "Singles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2026-03-04",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-savannah-country-day-singles-1-1",
+            "DisplayName": "TBD",
+            "SchoolID": "ga-savannah-country-day-school-savannah",
+            "SourceSchoolLabel": "Savannah Country Day School",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026056,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 4,
+            "bottom": 6
+          },
+          {
+            "SetNumber": 2,
+            "top": 4,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "SourceScoreLabel": "6/4 6/4",
+        "WinnerPlayerID": 2026056
+      },
+      {
+        "TennisMatchID": "2026-03-04-savannah-country-day-boys-singles-2",
+        "EventType": "Singles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2026-03-04",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-savannah-country-day-singles-2-1",
+            "DisplayName": "TBD",
+            "SchoolID": "ga-savannah-country-day-school-savannah",
+            "SourceSchoolLabel": "Savannah Country Day School",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026058,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 6,
+            "bottom": 1
+          },
+          {
+            "SetNumber": 2,
+            "top": 6,
+            "bottom": 1
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "SourceScoreLabel": "6/1 6/1",
+        "WinnerOpponentAthleteID": "tennis-2026-boys-savannah-country-day-singles-2-1"
+      },
+      {
+        "TennisMatchID": "2026-03-04-savannah-country-day-boys-singles-3",
+        "EventType": "Singles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2026-03-04",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-savannah-country-day-singles-3-1",
+            "DisplayName": "TBD",
+            "SchoolID": "ga-savannah-country-day-school-savannah",
+            "SourceSchoolLabel": "Savannah Country Day School",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 202504,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "SetNumber": 2,
+            "top": 6,
+            "bottom": 3
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "SourceScoreLabel": "6/0 6/3",
+        "WinnerOpponentAthleteID": "tennis-2026-boys-savannah-country-day-singles-3-1"
+      },
+      {
+        "TennisMatchID": "2026-03-04-savannah-country-day-boys-doubles-1",
+        "EventType": "Doubles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2026-03-04",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-03-04-savannah-country-day-boys-savannah-country-day-unknown-doubles-1",
+            "DisplayName": "TBD / TBD",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-savannah-country-day-doubles-1-1",
+                "DisplayName": "TBD",
+                "SchoolID": "ga-savannah-country-day-school-savannah",
+                "SourceSchoolLabel": "Savannah Country Day School"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-savannah-country-day-doubles-1-2",
+                "DisplayName": "TBD",
+                "SchoolID": "ga-savannah-country-day-school-savannah",
+                "SourceSchoolLabel": "Savannah Country Day School"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-03-04-savannah-country-day-boys-sta-carbone-reiter",
+            "DisplayName": "Cameron Carbone / Reefe Reiter",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026057
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026061
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 6,
+            "bottom": 4
+          },
+          {
+            "SetNumber": 2,
+            "top": 4,
+            "bottom": 6
+          },
+          {
+            "SetNumber": 3,
+            "top": 1,
+            "bottom": 0,
+            "MatchTiebreak": true
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "doublesTeam",
+        "SourceScoreLabel": "6/4 4/6 1/0",
+        "WinnerTeamID": "2026-03-04-savannah-country-day-boys-savannah-country-day-unknown-doubles-1"
+      },
+      {
+        "TennisMatchID": "2026-03-04-savannah-country-day-boys-doubles-2",
+        "EventType": "Doubles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2026-03-04",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-03-04-savannah-country-day-boys-savannah-country-day-unknown-doubles-2",
+            "DisplayName": "TBD / TBD",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-savannah-country-day-doubles-2-1",
+                "DisplayName": "TBD",
+                "SchoolID": "ga-savannah-country-day-school-savannah",
+                "SourceSchoolLabel": "Savannah Country Day School"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-savannah-country-day-doubles-2-2",
+                "DisplayName": "TBD",
+                "SchoolID": "ga-savannah-country-day-school-savannah",
+                "SourceSchoolLabel": "Savannah Country Day School"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-03-04-savannah-country-day-boys-sta-apt-espina",
+            "DisplayName": "William Apt / Jordan Espina",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026055
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026060
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 5,
+            "bottom": 7
+          },
+          {
+            "SetNumber": 2,
+            "top": 3,
+            "bottom": 3
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "doublesTeam",
+        "SourceScoreLabel": "7/5 3/3",
+        "WinnerTeamID": "2026-03-04-savannah-country-day-boys-sta-apt-espina",
+        "Notes": "Workbook records this line at 7-5, 3-3 while the team result implies it counted as St. Andrew's second team point."
+      }
+    ],
+    "Source": "User-provided Tennis Stats 2026 workbook; dates and locations cross-checked against the St. Andrew's Athletics varsity boys tennis schedule."
+  },
+  {
+    "MatchID": "2026-03-10-habersham-boys",
+    "Season": 2026,
+    "Date": "2026-03-10",
+    "StartTime": "16:00",
+    "Location": "Playing Fields - Daffin Park",
+    "Name": "St. Andrew's vs. The Habersham School - Boys",
+    "MatchType": "Dual Match",
+    "Gender": "Boys",
+    "Classification": "GIAA",
+    "Status": "Completed",
+    "OpponentSchoolID": "ga-the-habersham-school-savannah",
+    "TeamScore": {
+      "StAndrews": 5,
+      "Opponent": 0,
+      "Result": "W"
+    },
+    "LineMatches": [
+      {
+        "TennisMatchID": "2026-03-10-habersham-boys-singles-1",
+        "EventType": "Singles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2026-03-10",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-habersham-singles-1-1",
+            "DisplayName": "TBD",
+            "SchoolID": "ga-the-habersham-school-savannah",
+            "SourceSchoolLabel": "The Habersham School",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026056,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 0,
+            "bottom": 6
+          },
+          {
+            "SetNumber": 2,
+            "top": 1,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "SourceScoreLabel": "6/0 6/1",
+        "WinnerPlayerID": 2026056
+      },
+      {
+        "TennisMatchID": "2026-03-10-habersham-boys-singles-2",
+        "EventType": "Singles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2026-03-10",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-habersham-singles-2-1",
+            "DisplayName": "TBD",
+            "SchoolID": "ga-the-habersham-school-savannah",
+            "SourceSchoolLabel": "The Habersham School",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026061,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 6,
+            "bottom": 4
+          },
+          {
+            "SetNumber": 2,
+            "top": 3,
+            "bottom": 6
+          },
+          {
+            "SetNumber": 3,
+            "top": 0,
+            "bottom": 1,
+            "MatchTiebreak": true
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "SourceScoreLabel": "4/6 6/3 1/0",
+        "WinnerPlayerID": 2026061
+      },
+      {
+        "TennisMatchID": "2026-03-10-habersham-boys-singles-3",
+        "EventType": "Singles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2026-03-10",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-habersham-singles-3-1",
+            "DisplayName": "TBD",
+            "SchoolID": "ga-the-habersham-school-savannah",
+            "SourceSchoolLabel": "The Habersham School",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026057,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 5,
+            "bottom": 7
+          },
+          {
+            "SetNumber": 2,
+            "top": 6,
+            "bottom": 3
+          },
+          {
+            "SetNumber": 3,
+            "top": 0,
+            "bottom": 1,
+            "MatchTiebreak": true
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "SourceScoreLabel": "7/5 3/6 1/0",
+        "WinnerPlayerID": 2026057
+      },
+      {
+        "TennisMatchID": "2026-03-10-habersham-boys-doubles-1",
+        "EventType": "Doubles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2026-03-10",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-03-10-habersham-boys-habersham-unknown-doubles-1",
+            "DisplayName": "TBD / TBD",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-habersham-doubles-1-1",
+                "DisplayName": "TBD",
+                "SchoolID": "ga-the-habersham-school-savannah",
+                "SourceSchoolLabel": "The Habersham School"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-habersham-doubles-1-2",
+                "DisplayName": "TBD",
+                "SchoolID": "ga-the-habersham-school-savannah",
+                "SourceSchoolLabel": "The Habersham School"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-03-10-habersham-boys-sta-espina-ammon",
+            "DisplayName": "Jordan Espina / Moritz Heinrich Ammon",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026060
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 202504
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 0,
+            "bottom": 6
+          },
+          {
+            "SetNumber": 2,
+            "top": 4,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "doublesTeam",
+        "SourceScoreLabel": "6/0 6/4",
+        "WinnerTeamID": "2026-03-10-habersham-boys-sta-espina-ammon"
+      },
+      {
+        "TennisMatchID": "2026-03-10-habersham-boys-doubles-2",
+        "EventType": "Doubles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2026-03-10",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-03-10-habersham-boys-habersham-unknown-doubles-2",
+            "DisplayName": "TBD / TBD",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-habersham-doubles-2-1",
+                "DisplayName": "TBD",
+                "SchoolID": "ga-the-habersham-school-savannah",
+                "SourceSchoolLabel": "The Habersham School"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-habersham-doubles-2-2",
+                "DisplayName": "TBD",
+                "SchoolID": "ga-the-habersham-school-savannah",
+                "SourceSchoolLabel": "The Habersham School"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-03-10-habersham-boys-sta-constas-duke",
+            "DisplayName": "Cosmo Constas / Parley Duke",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026058
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026059
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 2,
+            "bottom": 6
+          },
+          {
+            "SetNumber": 2,
+            "top": 4,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "doublesTeam",
+        "SourceScoreLabel": "6/2 6/4",
+        "WinnerTeamID": "2026-03-10-habersham-boys-sta-constas-duke"
+      }
+    ],
+    "Source": "User-provided Tennis Stats 2026 workbook; dates and locations cross-checked against the St. Andrew's Athletics varsity boys tennis schedule."
+  },
+  {
+    "MatchID": "2026-03-31-habersham-boys",
+    "Season": 2026,
+    "Date": "2026-03-31",
+    "StartTime": "16:00",
+    "Location": "Playing Fields - Bacon Park",
+    "Name": "St. Andrew's vs. The Habersham School - Boys",
+    "MatchType": "Dual Match",
+    "Gender": "Boys",
+    "Classification": "GIAA",
+    "Status": "Completed",
+    "OpponentSchoolID": "ga-the-habersham-school-savannah",
+    "TeamScore": {
+      "StAndrews": 4,
+      "Opponent": 1,
+      "Result": "W"
+    },
+    "LineMatches": [
+      {
+        "TennisMatchID": "2026-03-31-habersham-boys-singles-1",
+        "EventType": "Singles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2026-03-31",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-habersham-2-singles-1-1",
+            "DisplayName": "TBD",
+            "SchoolID": "ga-the-habersham-school-savannah",
+            "SourceSchoolLabel": "The Habersham School",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026056,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 0,
+            "bottom": 6
+          },
+          {
+            "SetNumber": 2,
+            "top": 1,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "SourceScoreLabel": "6/0 6/1",
+        "WinnerPlayerID": 2026056
+      },
+      {
+        "TennisMatchID": "2026-03-31-habersham-boys-singles-2",
+        "EventType": "Singles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2026-03-31",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-habersham-2-singles-2-1",
+            "DisplayName": "TBD",
+            "SchoolID": "ga-the-habersham-school-savannah",
+            "SourceSchoolLabel": "The Habersham School",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 202504,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 1,
+            "bottom": 6
+          },
+          {
+            "SetNumber": 2,
+            "top": 1,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "SourceScoreLabel": "6/1 6/1",
+        "WinnerPlayerID": 202504
+      },
+      {
+        "TennisMatchID": "2026-03-31-habersham-boys-doubles-1",
+        "EventType": "Doubles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2026-03-31",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-03-31-habersham-boys-habersham-2-unknown-doubles-1",
+            "DisplayName": "TBD / TBD",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-habersham-2-doubles-1-1",
+                "DisplayName": "TBD",
+                "SchoolID": "ga-the-habersham-school-savannah",
+                "SourceSchoolLabel": "The Habersham School"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-habersham-2-doubles-1-2",
+                "DisplayName": "TBD",
+                "SchoolID": "ga-the-habersham-school-savannah",
+                "SourceSchoolLabel": "The Habersham School"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-03-31-habersham-boys-sta-apt-carbone",
+            "DisplayName": "William Apt / Cameron Carbone",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026055
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026057
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 0,
+            "bottom": 6
+          },
+          {
+            "SetNumber": 2,
+            "top": 4,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "doublesTeam",
+        "SourceScoreLabel": "6/0 6/4",
+        "WinnerTeamID": "2026-03-31-habersham-boys-sta-apt-carbone"
+      },
+      {
+        "TennisMatchID": "2026-03-31-habersham-boys-doubles-2",
+        "EventType": "Doubles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2026-03-31",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-03-31-habersham-boys-habersham-2-unknown-doubles-2",
+            "DisplayName": "TBD / TBD",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-habersham-2-doubles-2-1",
+                "DisplayName": "TBD",
+                "SchoolID": "ga-the-habersham-school-savannah",
+                "SourceSchoolLabel": "The Habersham School"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-habersham-2-doubles-2-2",
+                "DisplayName": "TBD",
+                "SchoolID": "ga-the-habersham-school-savannah",
+                "SourceSchoolLabel": "The Habersham School"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-03-31-habersham-boys-sta-constas-duke",
+            "DisplayName": "Cosmo Constas / Parley Duke",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026058
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026059
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "SetNumber": 2,
+            "top": 6,
+            "bottom": 1
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "doublesTeam",
+        "SourceScoreLabel": "6/0 6/1",
+        "WinnerTeamID": "2026-03-31-habersham-boys-habersham-2-unknown-doubles-2"
+      }
+    ],
+    "Notes": "The public team schedule includes a second Habersham listing on March 11, 2026, but the workbook supplied only two documented Habersham results. This entry uses the later dated result from the schedule order.",
+    "Source": "User-provided Tennis Stats 2026 workbook; dates and locations cross-checked against the St. Andrew's Athletics varsity boys tennis schedule."
+  },
+  {
+    "MatchID": "2026-04-07-savannah-arts-boys",
+    "Season": 2026,
+    "Date": "2026-04-07",
+    "StartTime": "16:00",
+    "Name": "St. Andrew's vs. Savannah Arts Academy - Boys",
+    "MatchType": "Dual Match",
+    "Gender": "Boys",
+    "Classification": "GIAA",
+    "Status": "Completed",
+    "OpponentSchoolID": "ga-savannah-arts-academy-savannah",
+    "TeamScore": {
+      "StAndrews": 4,
+      "Opponent": 1,
+      "Result": "W"
+    },
+    "LineMatches": [
+      {
+        "TennisMatchID": "2026-04-07-savannah-arts-boys-singles-1",
+        "EventType": "Singles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2026-04-07",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-savannah-arts-singles-1-1",
+            "DisplayName": "TBD",
+            "SchoolID": "ga-savannah-arts-academy-savannah",
+            "SourceSchoolLabel": "Savannah Arts Academy",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026056,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 1,
+            "bottom": 6
+          },
+          {
+            "SetNumber": 2,
+            "top": 2,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "SourceScoreLabel": "6/1 6/2",
+        "WinnerPlayerID": 2026056
+      },
+      {
+        "TennisMatchID": "2026-04-07-savannah-arts-boys-singles-2",
+        "EventType": "Singles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2026-04-07",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-savannah-arts-singles-2-1",
+            "DisplayName": "TBD",
+            "SchoolID": "ga-savannah-arts-academy-savannah",
+            "SourceSchoolLabel": "Savannah Arts Academy",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026055,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 1,
+            "bottom": 6
+          },
+          {
+            "SetNumber": 2,
+            "top": 3,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "SourceScoreLabel": "6/1 6/3",
+        "WinnerPlayerID": 2026055
+      },
+      {
+        "TennisMatchID": "2026-04-07-savannah-arts-boys-singles-3",
+        "EventType": "Singles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2026-04-07",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-savannah-arts-singles-3-1",
+            "DisplayName": "TBD",
+            "SchoolID": "ga-savannah-arts-academy-savannah",
+            "SourceSchoolLabel": "Savannah Arts Academy",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 202504,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 6,
+            "bottom": 2
+          },
+          {
+            "SetNumber": 2,
+            "top": 3,
+            "bottom": 6
+          },
+          {
+            "SetNumber": 3,
+            "top": 1,
+            "bottom": 0,
+            "MatchTiebreak": true
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "SourceScoreLabel": "6/2 3/6 1/0",
+        "WinnerOpponentAthleteID": "tennis-2026-boys-savannah-arts-singles-3-1"
+      },
+      {
+        "TennisMatchID": "2026-04-07-savannah-arts-boys-doubles-1",
+        "EventType": "Doubles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2026-04-07",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-04-07-savannah-arts-boys-savannah-arts-unknown-doubles-1",
+            "DisplayName": "TBD / TBD",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-savannah-arts-doubles-1-1",
+                "DisplayName": "TBD",
+                "SchoolID": "ga-savannah-arts-academy-savannah",
+                "SourceSchoolLabel": "Savannah Arts Academy"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-savannah-arts-doubles-1-2",
+                "DisplayName": "TBD",
+                "SchoolID": "ga-savannah-arts-academy-savannah",
+                "SourceSchoolLabel": "Savannah Arts Academy"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-04-07-savannah-arts-boys-sta-carbone-espina",
+            "DisplayName": "Cameron Carbone / Jordan Espina",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026057
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026060
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 6,
+            "bottom": 4
+          },
+          {
+            "SetNumber": 2,
+            "top": 5,
+            "bottom": 7
+          },
+          {
+            "SetNumber": 3,
+            "top": 0,
+            "bottom": 1,
+            "MatchTiebreak": true
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "doublesTeam",
+        "SourceScoreLabel": "4/6 7/5 1/0",
+        "WinnerTeamID": "2026-04-07-savannah-arts-boys-sta-carbone-espina"
+      },
+      {
+        "TennisMatchID": "2026-04-07-savannah-arts-boys-doubles-2",
+        "EventType": "Doubles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2026-04-07",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-04-07-savannah-arts-boys-savannah-arts-unknown-doubles-2",
+            "DisplayName": "TBD / TBD",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-savannah-arts-doubles-2-1",
+                "DisplayName": "TBD",
+                "SchoolID": "ga-savannah-arts-academy-savannah",
+                "SourceSchoolLabel": "Savannah Arts Academy"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-savannah-arts-doubles-2-2",
+                "DisplayName": "TBD",
+                "SchoolID": "ga-savannah-arts-academy-savannah",
+                "SourceSchoolLabel": "Savannah Arts Academy"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-04-07-savannah-arts-boys-sta-reiter-constas",
+            "DisplayName": "Reefe Reiter / Cosmo Constas",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026061
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026058
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 6,
+            "bottom": 7
+          },
+          {
+            "SetNumber": 2,
+            "top": 6,
+            "bottom": 7
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "doublesTeam",
+        "SourceScoreLabel": "7/6 7/6",
+        "WinnerTeamID": "2026-04-07-savannah-arts-boys-sta-reiter-constas"
+      }
+    ],
+    "Source": "User-provided Tennis Stats 2026 workbook; dates and locations cross-checked against the St. Andrew's Athletics varsity boys tennis schedule."
+  },
+  {
+    "MatchID": "2026-04-09-islands-boys",
+    "Season": 2026,
+    "Date": "2026-04-09",
+    "StartTime": "16:00",
+    "Location": "Playing Fields - Daffin Park",
+    "Name": "St. Andrew's vs. Islands High School - Boys",
+    "MatchType": "Dual Match",
+    "Gender": "Boys",
+    "Classification": "GIAA",
+    "Status": "Completed",
+    "OpponentSchoolID": "ga-islands-high-school-savannah",
+    "TeamScore": {
+      "StAndrews": 5,
+      "Opponent": 0,
+      "Result": "W"
+    },
+    "LineMatches": [
+      {
+        "TennisMatchID": "2026-04-09-islands-boys-singles-1",
+        "EventType": "Singles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2026-04-09",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-islands-singles-1-1",
+            "DisplayName": "TBD",
+            "SchoolID": "ga-islands-high-school-savannah",
+            "SourceSchoolLabel": "Islands High School",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026056,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 1,
+            "bottom": 6
+          },
+          {
+            "SetNumber": 2,
+            "top": 1,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "SourceScoreLabel": "6/1 6/1",
+        "WinnerPlayerID": 2026056
+      },
+      {
+        "TennisMatchID": "2026-04-09-islands-boys-singles-3",
+        "EventType": "Singles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2026-04-09",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-islands-singles-3-1",
+            "DisplayName": "TBD",
+            "SchoolID": "ga-islands-high-school-savannah",
+            "SourceSchoolLabel": "Islands High School",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026059,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 1,
+            "bottom": 6
+          },
+          {
+            "SetNumber": 2,
+            "top": 3,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "SourceScoreLabel": "6/1 6/3",
+        "WinnerPlayerID": 2026059
+      }
+    ],
+    "Notes": "The workbook shows a 5-0 team result, but only Singles 1 and Singles 3 included completed line scores and the remaining positions were listed as blank or N/A.",
+    "Source": "User-provided Tennis Stats 2026 workbook; dates and locations cross-checked against the St. Andrew's Athletics varsity boys tennis schedule."
   }
 ]
