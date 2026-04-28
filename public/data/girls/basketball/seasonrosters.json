@@ -1,50 +1,3192 @@
 [
   {
+    "SeasonID": "2006-07",
+    "Players": []
+  },
+  {
+    "SeasonID": "2007-08",
+    "Players": []
+  },
+  {
+    "SeasonID": "2008-09",
+    "Players": [
+      {
+        "PlayerID": 200801,
+        "JerseyNumber": 2,
+        "Grade": 10
+      },
+      {
+        "PlayerID": 200802,
+        "JerseyNumber": 3,
+        "Grade": 11
+      },
+      {
+        "PlayerID": 200803,
+        "JerseyNumber": 5,
+        "Grade": 10
+      },
+      {
+        "PlayerID": 200804,
+        "JerseyNumber": 13,
+        "Grade": 10
+      },
+      {
+        "PlayerID": 200805,
+        "JerseyNumber": 20,
+        "Grade": 12
+      },
+      {
+        "PlayerID": 200806,
+        "JerseyNumber": 21,
+        "Grade": 11
+      },
+      {
+        "PlayerID": 200807,
+        "JerseyNumber": 22,
+        "Grade": 10
+      },
+      {
+        "PlayerID": 200808,
+        "JerseyNumber": 32,
+        "Grade": 10
+      },
+      {
+        "PlayerID": 200809,
+        "JerseyNumber": 35,
+        "Grade": 11
+      },
+      {
+        "PlayerID": 200810,
+        "JerseyNumber": 43,
+        "Grade": 12
+      }
+    ]
+  },
+  {
+    "SeasonID": "2009-10",
+    "Players": [
+      {
+        "PlayerID": 200802,
+        "JerseyNumber": null,
+        "Grade": 12,
+        "GamesPlayed": 2,
+        "SeasonTotals": {
+          "Points": 6,
+          "ThreePA": 0,
+          "TwoPM": 2,
+          "FTM": 2,
+          "FTA": 3,
+          "Rebounds": 4,
+          "Assists": 0,
+          "Steals": 2,
+          "Blocks": 0
+        }
+      },
+      {
+        "PlayerID": 200803,
+        "JerseyNumber": null,
+        "Grade": 11,
+        "GamesPlayed": 16,
+        "SeasonTotals": {
+          "Points": 50,
+          "ThreePM": 1,
+          "ThreePA": 11,
+          "TwoPM": 20,
+          "FTM": 7,
+          "FTA": 16,
+          "Rebounds": 38,
+          "Assists": 13,
+          "Steals": 31,
+          "Blocks": 0
+        }
+      },
+      {
+        "PlayerID": 200809,
+        "JerseyNumber": null,
+        "Grade": 12,
+        "GamesPlayed": 19,
+        "SeasonTotals": {
+          "Points": 82,
+          "ThreePM": 0,
+          "ThreePA": 2,
+          "TwoPM": 31,
+          "FTM": 20,
+          "FTA": 31,
+          "Rebounds": 64,
+          "Assists": 25,
+          "Steals": 18,
+          "Blocks": 1
+        }
+      },
+      {
+        "PlayerID": 200901,
+        "JerseyNumber": null,
+        "Grade": 9,
+        "GamesPlayed": 20,
+        "SeasonTotals": {
+          "Points": 126,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "TwoPM": 47,
+          "FTM": 32,
+          "FTA": 59,
+          "Rebounds": 84,
+          "Assists": 14,
+          "Steals": 28,
+          "Blocks": 1
+        }
+      },
+      {
+        "PlayerID": 200902,
+        "JerseyNumber": null,
+        "Grade": 12,
+        "GamesPlayed": 18,
+        "SeasonTotals": {
+          "Points": 182,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "TwoPM": 67,
+          "FTM": 51,
+          "FTA": 88,
+          "Rebounds": 137,
+          "Assists": 9,
+          "Steals": 24,
+          "Blocks": 15
+        }
+      },
+      {
+        "PlayerID": 200903,
+        "JerseyNumber": null,
+        "Grade": 10,
+        "GamesPlayed": 16,
+        "SeasonTotals": {
+          "Points": 23,
+          "ThreePA": 0,
+          "TwoPM": 11,
+          "FTM": 1,
+          "FTA": 4,
+          "Rebounds": 37,
+          "Assists": 2,
+          "Steals": 10,
+          "Blocks": 7
+        }
+      },
+      {
+        "PlayerID": 200904,
+        "JerseyNumber": null,
+        "Grade": 9,
+        "GamesPlayed": 18,
+        "SeasonTotals": {
+          "Points": 8,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "TwoPM": 4,
+          "FTM": 0,
+          "FTA": 3,
+          "Rebounds": 9,
+          "Assists": 10,
+          "Steals": 4,
+          "Blocks": 0
+        }
+      },
+      {
+        "PlayerID": 200905,
+        "JerseyNumber": null,
+        "Grade": 9,
+        "GamesPlayed": 7,
+        "SeasonTotals": {
+          "Points": 0,
+          "ThreePA": 0,
+          "TwoPM": 0,
+          "FTA": 0,
+          "Rebounds": 1,
+          "Assists": 4,
+          "Steals": 0,
+          "Blocks": 0
+        }
+      },
+      {
+        "PlayerID": 200906,
+        "JerseyNumber": null,
+        "Grade": 10,
+        "GamesPlayed": 20,
+        "SeasonTotals": {
+          "Points": 115,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "TwoPM": 43,
+          "FTM": 29,
+          "FTA": 78,
+          "Rebounds": 128,
+          "Assists": 13,
+          "Steals": 36,
+          "Blocks": 39
+        }
+      },
+      {
+        "PlayerID": 200907,
+        "JerseyNumber": null,
+        "Grade": 10,
+        "GamesPlayed": 15,
+        "SeasonTotals": {
+          "Points": 13,
+          "ThreePM": 0,
+          "ThreePA": 2,
+          "TwoPM": 5,
+          "TwoPA": 1,
+          "FTM": 3,
+          "FTA": 10,
+          "Rebounds": 17,
+          "Assists": 6,
+          "Steals": 17,
+          "Blocks": 1
+        }
+      }
+    ]
+  },
+  {
+    "SeasonID": "2010-11",
+    "Players": [
+      {
+        "PlayerID": 201001,
+        "JerseyNumber": 2,
+        "Grade": 9,
+        "GamesPlayed": 18,
+        "SeasonTotals": {
+          "Points": 46,
+          "TwoPM": 19,
+          "FTM": 9,
+          "FTA": 31,
+          "Rebounds": 61,
+          "Assists": 35,
+          "Steals": 51,
+          "Blocks": 5
+        }
+      },
+      {
+        "PlayerID": 201002,
+        "JerseyNumber": 3,
+        "Grade": 9,
+        "GamesPlayed": 7,
+        "SeasonTotals": {
+          "Points": 2,
+          "TwoPM": 1,
+          "Rebounds": 2,
+          "Steals": 2
+        }
+      },
+      {
+        "PlayerID": 201003,
+        "JerseyNumber": 4,
+        "Grade": 9,
+        "GamesPlayed": 6,
+        "SeasonTotals": {
+          "Points": 0,
+          "FTM": 0,
+          "FTA": 2,
+          "Rebounds": 6,
+          "Steals": 1
+        }
+      },
+      {
+        "PlayerID": 200905,
+        "JerseyNumber": 5,
+        "Grade": 10,
+        "GamesPlayed": 15,
+        "SeasonTotals": {
+          "Points": 12,
+          "ThreePM": 1,
+          "ThreePA": 1,
+          "TwoPM": 2,
+          "FTM": 5,
+          "FTA": 7,
+          "Rebounds": 11,
+          "Assists": 5,
+          "Steals": 1,
+          "Blocks": 1
+        }
+      },
+      {
+        "PlayerID": 200907,
+        "JerseyNumber": 10,
+        "Grade": 11,
+        "GamesPlayed": 18,
+        "SeasonTotals": {
+          "Points": 41,
+          "ThreePM": 1,
+          "TwoPM": 15,
+          "FTM": 8,
+          "FTA": 19,
+          "Rebounds": 58,
+          "Assists": 25,
+          "Steals": 24,
+          "Blocks": 1
+        }
+      },
+      {
+        "PlayerID": 200901,
+        "JerseyNumber": 12,
+        "Grade": 10,
+        "GamesPlayed": 19,
+        "SeasonTotals": {
+          "Points": 174,
+          "TwoPM": 74,
+          "FTM": 26,
+          "FTA": 59,
+          "Rebounds": 97,
+          "Assists": 11,
+          "Steals": 17,
+          "Blocks": 4
+        }
+      },
+      {
+        "PlayerID": 201004,
+        "JerseyNumber": 13,
+        "Grade": 9,
+        "GamesPlayed": 10,
+        "SeasonTotals": {
+          "Points": 19,
+          "TwoPM": 8,
+          "FTM": 3,
+          "FTA": 4,
+          "Rebounds": 26,
+          "Assists": 1,
+          "Steals": 3
+        }
+      },
+      {
+        "PlayerID": 200904,
+        "JerseyNumber": 15,
+        "Grade": 10,
+        "GamesPlayed": 19,
+        "SeasonTotals": {
+          "Points": 62,
+          "ThreePM": 1,
+          "TwoPM": 25,
+          "FTM": 5,
+          "FTA": 13,
+          "Rebounds": 61,
+          "Assists": 15,
+          "Steals": 37,
+          "Blocks": 2
+        }
+      },
+      {
+        "PlayerID": 200903,
+        "JerseyNumber": 24,
+        "Grade": 11,
+        "GamesPlayed": 19,
+        "SeasonTotals": {
+          "Points": 127,
+          "TwoPM": 48,
+          "FTM": 30,
+          "FTA": 64,
+          "Rebounds": 180,
+          "Assists": 10,
+          "Steals": 24,
+          "Blocks": 13
+        }
+      }
+    ]
+  },
+  {
+    "SeasonID": "2011-12",
+    "Players": [
+      {
+        "PlayerID": 201001,
+        "JerseyNumber": 2,
+        "Grade": 10,
+        "Positions": [
+          "PG"
+        ],
+        "GamesPlayed": 20,
+        "SeasonTotals": {
+          "Points": 64,
+          "ThreePM": 1,
+          "TwoPM": 27,
+          "FTM": 9,
+          "FTA": 32,
+          "Rebounds": 57,
+          "Assists": 12,
+          "Steals": 47,
+          "Blocks": 3
+        }
+      },
+      {
+        "PlayerID": 201002,
+        "JerseyNumber": 3,
+        "Grade": 10,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 16,
+        "SeasonTotals": {
+          "Points": 2,
+          "TwoPM": 1,
+          "Rebounds": 7,
+          "Assists": 2,
+          "Steals": 4
+        }
+      },
+      {
+        "PlayerID": 201003,
+        "JerseyNumber": 4,
+        "Grade": 10,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 20,
+        "SeasonTotals": {
+          "Points": 2,
+          "TwoPM": 1,
+          "Rebounds": 42,
+          "Assists": 1,
+          "Steals": 6
+        }
+      },
+      {
+        "PlayerID": 200905,
+        "JerseyNumber": 5,
+        "Grade": 11,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 19,
+        "SeasonTotals": {
+          "Points": 27,
+          "ThreePM": 2,
+          "TwoPM": 10,
+          "FTM": 1,
+          "FTA": 2,
+          "Rebounds": 30,
+          "Assists": 4,
+          "Steals": 9
+        }
+      },
+      {
+        "PlayerID": 200907,
+        "JerseyNumber": 10,
+        "Grade": 12,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 20,
+        "SeasonTotals": {
+          "Points": 32,
+          "ThreePM": 1,
+          "TwoPM": 14,
+          "FTM": 1,
+          "FTA": 3,
+          "Rebounds": 64,
+          "Assists": 5,
+          "Steals": 14,
+          "Blocks": 4
+        }
+      },
+      {
+        "PlayerID": 200901,
+        "JerseyNumber": 12,
+        "Grade": 11,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 19,
+        "SeasonTotals": {
+          "Points": 157,
+          "TwoPM": 70,
+          "FTM": 17,
+          "FTA": 46,
+          "Rebounds": 121,
+          "Assists": 11,
+          "Steals": 10,
+          "Blocks": 4
+        }
+      },
+      {
+        "PlayerID": 201101,
+        "JerseyNumber": 13,
+        "Grade": 9,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 20,
+        "SeasonTotals": {
+          "Points": 37,
+          "TwoPM": 17,
+          "FTM": 1,
+          "FTA": 9,
+          "Rebounds": 47,
+          "Assists": 2,
+          "Steals": 22,
+          "Blocks": 3
+        }
+      },
+      {
+        "PlayerID": 200903,
+        "JerseyNumber": 24,
+        "Grade": 12,
+        "Positions": [
+          "C"
+        ],
+        "GamesPlayed": 19,
+        "SeasonTotals": {
+          "Points": 151,
+          "TwoPM": 58,
+          "FTM": 35,
+          "FTA": 75,
+          "Rebounds": 115,
+          "Assists": 1,
+          "Steals": 21,
+          "Blocks": 25
+        }
+      }
+    ]
+  },
+  {
+    "SeasonID": "2012-13",
+    "Players": [
+      {
+        "PlayerID": 201401,
+        "JerseyNumber": 1,
+        "Grade": 10,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 8,
+        "SeasonTotals": {
+          "Points": 9,
+          "TwoPM": 23,
+          "FTM": 2,
+          "FTA": 4,
+          "Rebounds": 2,
+          "Assists": 1,
+          "Steals": 2,
+          "Blocks": 0
+        }
+      },
+      {
+        "PlayerID": 201001,
+        "JerseyNumber": 2,
+        "Grade": 11,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 19,
+        "SeasonTotals": {
+          "Points": 73,
+          "ThreePM": 1,
+          "TwoPM": 27,
+          "FTM": 16,
+          "FTA": 30,
+          "Rebounds": 37,
+          "Assists": 7,
+          "Steals": 34,
+          "Blocks": 2
+        }
+      },
+      {
+        "PlayerID": 201002,
+        "JerseyNumber": 3,
+        "Grade": 11,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 14,
+        "SeasonTotals": {
+          "Points": 3,
+          "TwoPM": 1,
+          "FTM": 1,
+          "FTA": 2,
+          "Rebounds": 9,
+          "Assists": 2,
+          "Steals": 5,
+          "Blocks": 1
+        }
+      },
+      {
+        "PlayerID": 201003,
+        "JerseyNumber": 4,
+        "Grade": 11,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 11,
+        "SeasonTotals": {
+          "Points": 0,
+          "FTM": 0,
+          "FTA": 2,
+          "Rebounds": 4
+        }
+      },
+      {
+        "PlayerID": 201202,
+        "JerseyNumber": 5,
+        "Grade": 9,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 17,
+        "SeasonTotals": {
+          "Points": 22,
+          "TwoPM": 10,
+          "FTM": 2,
+          "FTA": 4,
+          "Rebounds": 26,
+          "Assists": 0,
+          "Steals": 3,
+          "Blocks": 0
+        }
+      },
+      {
+        "PlayerID": 201203,
+        "JerseyNumber": 10,
+        "Grade": 9,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 20,
+        "SeasonTotals": {
+          "Points": 113,
+          "ThreePM": 3,
+          "TwoPM": 49,
+          "FTM": 6,
+          "FTA": 10,
+          "Rebounds": 32,
+          "Assists": 4,
+          "Steals": 20,
+          "Blocks": 2
+        }
+      },
+      {
+        "PlayerID": 201204,
+        "JerseyNumber": 11,
+        "Grade": 9,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 9,
+        "SeasonTotals": {
+          "Points": 4,
+          "TwoPM": 2,
+          "Rebounds": 7,
+          "Steals": 6
+        }
+      },
+      {
+        "PlayerID": 200901,
+        "JerseyNumber": 12,
+        "Grade": 12,
+        "Positions": [
+          "C"
+        ],
+        "GamesPlayed": 13,
+        "SeasonTotals": {
+          "Points": 55,
+          "TwoPM": 22,
+          "FTM": 11,
+          "FTA": 25,
+          "Rebounds": 36,
+          "Assists": 5,
+          "Steals": 6
+        }
+      },
+      {
+        "PlayerID": 201101,
+        "JerseyNumber": 13,
+        "Grade": 10,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 19,
+        "SeasonTotals": {
+          "Points": 93,
+          "TwoPM": 40,
+          "FTM": 13,
+          "FTA": 28,
+          "Rebounds": 89,
+          "Assists": 6,
+          "Steals": 44,
+          "Blocks": 8,
+          "Deflections": 1
+        }
+      },
+      {
+        "PlayerID": 201205,
+        "JerseyNumber": 14,
+        "Grade": 9,
+        "Positions": [
+          "C"
+        ],
+        "GamesPlayed": 15,
+        "SeasonTotals": {
+          "Points": 30,
+          "TwoPM": 12,
+          "FTM": 6,
+          "FTA": 13,
+          "Rebounds": 19,
+          "Assists": 3,
+          "Steals": 9,
+          "Blocks": 2
+        }
+      },
+      {
+        "PlayerID": 201206,
+        "JerseyNumber": 15,
+        "Grade": 9,
+        "Positions": [
+          "C"
+        ],
+        "GamesPlayed": 17,
+        "SeasonTotals": {
+          "Points": 37,
+          "TwoPM": 14,
+          "FTM": 9,
+          "FTA": 23,
+          "Rebounds": 51,
+          "Assists": 3,
+          "Steals": 6,
+          "Blocks": 0
+        }
+      },
+      {
+        "PlayerID": 201207,
+        "JerseyNumber": 21,
+        "Grade": 9,
+        "GamesPlayed": 21,
+        "SeasonTotals": {
+          "Points": 134,
+          "ThreePM": 4,
+          "TwoPM": 49,
+          "FTM": 24,
+          "FTA": 55,
+          "Rebounds": 61,
+          "Assists": 11,
+          "Steals": 38,
+          "Blocks": 3
+        }
+      },
+      {
+        "PlayerID": 201208,
+        "JerseyNumber": 22,
+        "Grade": 8,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 4,
+        "SeasonTotals": {
+          "Points": 2,
+          "TwoPM": 1,
+          "FTM": 0,
+          "FTA": 2,
+          "Steals": 4
+        }
+      },
+      {
+        "PlayerID": 201209,
+        "JerseyNumber": 24,
+        "Grade": 8,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 3,
+        "SeasonTotals": {
+          "Points": 4,
+          "TwoPM": 2,
+          "Rebounds": 3
+        }
+      },
+      {
+        "PlayerID": 201210,
+        "JerseyNumber": 25,
+        "Grade": 8,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 3,
+        "SeasonTotals": {
+          "Rebounds": 1
+        }
+      },
+      {
+        "PlayerID": 201211,
+        "JerseyNumber": 30,
+        "Grade": 8,
+        "Positions": [
+          "C"
+        ]
+      },
+      {
+        "PlayerID": 201212,
+        "JerseyNumber": 32,
+        "Grade": 9,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 8,
+        "SeasonTotals": {
+          "Points": 8,
+          "TwoPM": 4,
+          "FTM": 0,
+          "FTA": 0,
+          "Rebounds": 4,
+          "Steals": 1
+        }
+      },
+      {
+        "PlayerID": 201402,
+        "JerseyNumber": 33,
+        "Grade": 9,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 20,
+        "SeasonTotals": {
+          "Points": 69,
+          "ThreePM": 2,
+          "TwoPM": 28,
+          "FTM": 5,
+          "FTA": 17,
+          "Rebounds": 60,
+          "Assists": 8,
+          "Steals": 40,
+          "Blocks": 7
+        }
+      }
+    ]
+  },
+  {
+    "SeasonID": "2013-14",
+    "Players": [
+      {
+        "PlayerID": 201001,
+        "JerseyNumber": 2,
+        "Grade": 12,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 17,
+        "SeasonTotals": {
+          "Points": 83,
+          "ThreePM": 1,
+          "ThreePA": 7,
+          "FTM": 22,
+          "FTA": 49,
+          "TwoPM": 29,
+          "TwoPA": 83,
+          "OffensiveRebounds": 9,
+          "DefensiveRebounds": 27,
+          "Rebounds": 36,
+          "Assists": 22,
+          "Steals": 38,
+          "Blocks": 8,
+          "Turnovers": 48,
+          "PersonalFouls": 43,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201002,
+        "JerseyNumber": 3,
+        "Grade": 12,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 18,
+        "SeasonTotals": {
+          "Points": 28,
+          "ThreePM": 0,
+          "ThreePA": 6,
+          "FTM": 4,
+          "FTA": 14,
+          "TwoPM": 12,
+          "TwoPA": 63,
+          "OffensiveRebounds": 16,
+          "DefensiveRebounds": 22,
+          "Rebounds": 38,
+          "Assists": 11,
+          "Steals": 14,
+          "Blocks": 6,
+          "Turnovers": 21,
+          "PersonalFouls": 11,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201003,
+        "JerseyNumber": 4,
+        "Grade": 12,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 20,
+        "SeasonTotals": {
+          "Points": 5,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 1,
+          "FTA": 7,
+          "TwoPM": 2,
+          "TwoPA": 18,
+          "OffensiveRebounds": 15,
+          "DefensiveRebounds": 16,
+          "Rebounds": 31,
+          "Assists": 3,
+          "Steals": 5,
+          "Blocks": 0,
+          "Turnovers": 11,
+          "PersonalFouls": 2,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201202,
+        "JerseyNumber": 5,
+        "Grade": 10,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 20,
+        "SeasonTotals": {
+          "Points": 44,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 6,
+          "FTA": 14,
+          "TwoPM": 19,
+          "TwoPA": 65,
+          "OffensiveRebounds": 27,
+          "DefensiveRebounds": 30,
+          "Rebounds": 57,
+          "Assists": 10,
+          "Steals": 10,
+          "Blocks": 1,
+          "Turnovers": 37,
+          "PersonalFouls": 9,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201203,
+        "JerseyNumber": 10,
+        "Grade": 10,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 18,
+        "SeasonTotals": {
+          "Points": 155,
+          "ThreePM": 20,
+          "ThreePA": 87,
+          "FTM": 9,
+          "FTA": 23,
+          "TwoPM": 43,
+          "TwoPA": 143,
+          "OffensiveRebounds": 23,
+          "DefensiveRebounds": 26,
+          "Rebounds": 48,
+          "Assists": 21,
+          "Steals": 24,
+          "Blocks": 4,
+          "Turnovers": 34,
+          "PersonalFouls": 36,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201204,
+        "JerseyNumber": 11,
+        "Grade": 10,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 3,
+        "SeasonTotals": {
+          "Points": 4,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 0,
+          "FTA": 0,
+          "TwoPM": 2,
+          "TwoPA": 3,
+          "OffensiveRebounds": 0,
+          "DefensiveRebounds": 2,
+          "Rebounds": 2,
+          "Assists": 0,
+          "Steals": 1,
+          "Blocks": 0,
+          "Turnovers": 0,
+          "PersonalFouls": 0,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201301,
+        "JerseyNumber": 12,
+        "Grade": 11,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 10,
+        "SeasonTotals": {
+          "Points": 0,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 0,
+          "FTA": 2,
+          "TwoPM": 0,
+          "TwoPA": 9,
+          "OffensiveRebounds": 3,
+          "DefensiveRebounds": 3,
+          "Rebounds": 6,
+          "Assists": 0,
+          "Steals": 2,
+          "Blocks": 0,
+          "Turnovers": 0,
+          "PersonalFouls": 0,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201101,
+        "JerseyNumber": 13,
+        "Grade": 11,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 20,
+        "SeasonTotals": {
+          "Points": 110,
+          "ThreePM": 1,
+          "ThreePA": 13,
+          "FTM": 25,
+          "FTA": 50,
+          "TwoPM": 41,
+          "TwoPA": 133,
+          "OffensiveRebounds": 73,
+          "DefensiveRebounds": 84,
+          "Rebounds": 157,
+          "Assists": 22,
+          "Steals": 44,
+          "Blocks": 9,
+          "Turnovers": 44,
+          "PersonalFouls": 39,
+          "Charges": 1,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201206,
+        "JerseyNumber": 15,
+        "Grade": 10,
+        "Positions": [
+          "C"
+        ],
+        "GamesPlayed": 19,
+        "SeasonTotals": {
+          "Points": 27,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 9,
+          "FTA": 16,
+          "TwoPM": 9,
+          "TwoPA": 58,
+          "OffensiveRebounds": 27,
+          "DefensiveRebounds": 40,
+          "Rebounds": 67,
+          "Assists": 10,
+          "Steals": 16,
+          "Blocks": 13,
+          "Turnovers": 12,
+          "PersonalFouls": 35,
+          "Charges": 1,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201208,
+        "JerseyNumber": 22,
+        "Grade": 9,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 4,
+        "SeasonTotals": {
+          "Points": 2,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 2,
+          "FTA": 2,
+          "TwoPM": 0,
+          "TwoPA": 2,
+          "OffensiveRebounds": 1,
+          "DefensiveRebounds": 3,
+          "Rebounds": 4,
+          "Assists": 1,
+          "Steals": 2,
+          "Blocks": 0,
+          "Turnovers": 4,
+          "PersonalFouls": 1,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201302,
+        "JerseyNumber": 23,
+        "Grade": 8,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 16,
+        "SeasonTotals": {
+          "Points": 81,
+          "ThreePM": 11,
+          "ThreePA": 66,
+          "FTM": 8,
+          "FTA": 24,
+          "TwoPM": 20,
+          "TwoPA": 76,
+          "OffensiveRebounds": 14,
+          "DefensiveRebounds": 29,
+          "Rebounds": 43,
+          "Assists": 12,
+          "Steals": 13,
+          "Blocks": 3,
+          "Turnovers": 16,
+          "PersonalFouls": 8,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201212,
+        "JerseyNumber": 32,
+        "Grade": 10,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 12,
+        "SeasonTotals": {
+          "Points": 3,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 1,
+          "FTA": 1,
+          "TwoPM": 1,
+          "TwoPA": 16,
+          "OffensiveRebounds": 9,
+          "DefensiveRebounds": 5,
+          "Rebounds": 14,
+          "Assists": 3,
+          "Steals": 6,
+          "Blocks": 2,
+          "Turnovers": 3,
+          "PersonalFouls": 3,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201402,
+        "JerseyNumber": 33,
+        "Grade": 10,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 14,
+        "SeasonTotals": {
+          "Points": 81,
+          "ThreePM": 0,
+          "ThreePA": 2,
+          "FTM": 13,
+          "FTA": 25,
+          "TwoPM": 34,
+          "TwoPA": 97,
+          "OffensiveRebounds": 41,
+          "DefensiveRebounds": 30,
+          "Rebounds": 71,
+          "Assists": 21,
+          "Steals": 23,
+          "Blocks": 7,
+          "Turnovers": 29,
+          "PersonalFouls": 25,
+          "Charges": 1,
+          "Deflections": 0
+        }
+      }
+    ]
+  },
+  {
+    "SeasonID": "2014-15",
+    "Players": [
+      {
+        "PlayerID": 201401,
+        "JerseyNumber": 1,
+        "Grade": 12,
+        "GamesPlayed": 11,
+        "SeasonTotals": {
+          "Points": 5,
+          "ThreePM": 0,
+          "ThreePA": 1,
+          "FTM": 1,
+          "FTA": 2,
+          "TwoPM": 2,
+          "TwoPA": 9,
+          "OffensiveRebounds": 3,
+          "DefensiveRebounds": 0,
+          "Rebounds": 3,
+          "Assists": 3,
+          "Steals": 3,
+          "Blocks": 0,
+          "Turnovers": 5,
+          "PersonalFouls": 3,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201202,
+        "JerseyNumber": 5,
+        "Grade": 11,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 18,
+        "SeasonTotals": {
+          "Points": 27,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 7,
+          "FTA": 9,
+          "TwoPM": 10,
+          "TwoPA": 38,
+          "OffensiveRebounds": 17,
+          "DefensiveRebounds": 14,
+          "Rebounds": 31,
+          "Assists": 4,
+          "Steals": 8,
+          "Blocks": 0,
+          "Turnovers": 22,
+          "PersonalFouls": 19,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201203,
+        "JerseyNumber": 10,
+        "Grade": 11,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 18,
+        "SeasonTotals": {
+          "Points": 211,
+          "ThreePM": 27,
+          "ThreePA": 122,
+          "FTM": 26,
+          "FTA": 45,
+          "TwoPM": 52,
+          "TwoPA": 134,
+          "OffensiveRebounds": 39,
+          "DefensiveRebounds": 38,
+          "Rebounds": 77,
+          "Assists": 26,
+          "Steals": 49,
+          "Blocks": 6,
+          "Turnovers": 44,
+          "PersonalFouls": 43,
+          "Charges": 1,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201301,
+        "JerseyNumber": 12,
+        "Grade": 12,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 7,
+        "SeasonTotals": {
+          "Points": 0,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 0,
+          "FTA": 0,
+          "TwoPM": 0,
+          "TwoPA": 13,
+          "OffensiveRebounds": 2,
+          "DefensiveRebounds": 1,
+          "Rebounds": 3,
+          "Assists": 1,
+          "Steals": 0,
+          "Blocks": 0,
+          "Turnovers": 0,
+          "PersonalFouls": 1,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201101,
+        "JerseyNumber": 13,
+        "Grade": 12,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 18,
+        "SeasonTotals": {
+          "Points": 104,
+          "ThreePM": 0,
+          "ThreePA": 1,
+          "FTM": 24,
+          "FTA": 54,
+          "TwoPM": 40,
+          "TwoPA": 119,
+          "OffensiveRebounds": 75,
+          "DefensiveRebounds": 76,
+          "Rebounds": 151,
+          "Assists": 17,
+          "Steals": 67,
+          "Blocks": 6,
+          "Turnovers": 36,
+          "PersonalFouls": 42,
+          "Charges": 13,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201206,
+        "JerseyNumber": 15,
+        "Grade": 11,
+        "Positions": [
+          "C"
+        ],
+        "GamesPlayed": 18,
+        "SeasonTotals": {
+          "Points": 12,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 0,
+          "FTA": 3,
+          "TwoPM": 6,
+          "TwoPA": 31,
+          "OffensiveRebounds": 44,
+          "DefensiveRebounds": 44,
+          "Rebounds": 88,
+          "Assists": 20,
+          "Steals": 25,
+          "Blocks": 7,
+          "Turnovers": 28,
+          "PersonalFouls": 44,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201302,
+        "JerseyNumber": 21,
+        "Grade": 9,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 16,
+        "SeasonTotals": {
+          "Points": 167,
+          "ThreePM": 27,
+          "ThreePA": 118,
+          "FTM": 14,
+          "FTA": 27,
+          "TwoPM": 36,
+          "TwoPA": 97,
+          "OffensiveRebounds": 33,
+          "DefensiveRebounds": 41,
+          "Rebounds": 74,
+          "Assists": 24,
+          "Steals": 36,
+          "Blocks": 2,
+          "Turnovers": 45,
+          "PersonalFouls": 10,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201208,
+        "JerseyNumber": 22,
+        "Grade": 10,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 18,
+        "SeasonTotals": {
+          "Points": 39,
+          "ThreePM": 5,
+          "ThreePA": 35,
+          "FTM": 8,
+          "FTA": 17,
+          "TwoPM": 8,
+          "TwoPA": 41,
+          "OffensiveRebounds": 16,
+          "DefensiveRebounds": 21,
+          "Rebounds": 37,
+          "Assists": 23,
+          "Steals": 30,
+          "Blocks": 5,
+          "Turnovers": 41,
+          "PersonalFouls": 30,
+          "Charges": 0,
+          "Deflections": 5
+        }
+      },
+      {
+        "PlayerID": 201212,
+        "JerseyNumber": 32,
+        "Grade": 11,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 18,
+        "SeasonTotals": {
+          "Points": 23,
+          "ThreePM": 2,
+          "ThreePA": 12,
+          "FTM": 1,
+          "FTA": 5,
+          "TwoPM": 8,
+          "TwoPA": 65,
+          "OffensiveRebounds": 11,
+          "DefensiveRebounds": 12,
+          "Rebounds": 23,
+          "Assists": 5,
+          "Steals": 11,
+          "Blocks": 0,
+          "Turnovers": 26,
+          "PersonalFouls": 20,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201402,
+        "JerseyNumber": 33,
+        "Grade": 11,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 14,
+        "SeasonTotals": {
+          "Points": 55,
+          "ThreePM": 1,
+          "ThreePA": 12,
+          "FTM": 10,
+          "FTA": 23,
+          "TwoPM": 21,
+          "TwoPA": 70,
+          "OffensiveRebounds": 27,
+          "DefensiveRebounds": 26,
+          "Rebounds": 53,
+          "Assists": 39,
+          "Steals": 60,
+          "Blocks": 12,
+          "Turnovers": 45,
+          "PersonalFouls": 32,
+          "Charges": 1,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201403,
+        "JerseyNumber": 34,
+        "Grade": 9,
+        "GamesPlayed": 2,
+        "SeasonTotals": {
+          "Points": 3,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 1,
+          "FTA": 2,
+          "TwoPM": 1,
+          "TwoPA": 2,
+          "OffensiveRebounds": 2,
+          "DefensiveRebounds": 0,
+          "Rebounds": 2,
+          "Assists": 0,
+          "Steals": 0,
+          "Blocks": 0,
+          "Turnovers": 0,
+          "PersonalFouls": 0,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      }
+    ]
+  },
+  {
+    "SeasonID": "2015-16",
+    "Players": [
+      {
+        "PlayerID": 201208,
+        "JerseyNumber": 2,
+        "Grade": 11,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 20,
+        "SeasonTotals": {
+          "Points": 77,
+          "ThreePM": 1,
+          "ThreePA": 2,
+          "FTM": 18,
+          "FTA": 54,
+          "TwoPM": 28,
+          "TwoPA": 72,
+          "OffensiveRebounds": 34,
+          "DefensiveRebounds": 41,
+          "Rebounds": 75,
+          "Assists": 36,
+          "Steals": 57,
+          "Blocks": 3,
+          "Turnovers": 48,
+          "PersonalFouls": 30,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201403,
+        "JerseyNumber": 4,
+        "Grade": 10,
+        "GamesPlayed": 10,
+        "SeasonTotals": {
+          "Points": 10,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 0,
+          "FTA": 0,
+          "TwoPM": 5,
+          "TwoPA": 20,
+          "OffensiveRebounds": 9,
+          "DefensiveRebounds": 6,
+          "Rebounds": 15,
+          "Assists": 1,
+          "Steals": 1,
+          "Blocks": 1,
+          "Turnovers": 2,
+          "PersonalFouls": 6,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201202,
+        "JerseyNumber": 5,
+        "Grade": 12,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 20,
+        "SeasonTotals": {
+          "Points": 73,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 9,
+          "FTA": 18,
+          "TwoPM": 32,
+          "TwoPA": 93,
+          "OffensiveRebounds": 33,
+          "DefensiveRebounds": 35,
+          "Rebounds": 68,
+          "Assists": 8,
+          "Steals": 22,
+          "Blocks": 0,
+          "Turnovers": 24,
+          "PersonalFouls": 23,
+          "Charges": 1,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201203,
+        "JerseyNumber": 10,
+        "Grade": 12,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 20,
+        "SeasonTotals": {
+          "Points": 265,
+          "ThreePM": 23,
+          "ThreePA": 103,
+          "FTM": 44,
+          "FTA": 86,
+          "TwoPM": 76,
+          "TwoPA": 174,
+          "OffensiveRebounds": 65,
+          "DefensiveRebounds": 62,
+          "Rebounds": 127,
+          "Assists": 38,
+          "Steals": 61,
+          "Blocks": 6,
+          "Turnovers": 55,
+          "PersonalFouls": 57,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201206,
+        "JerseyNumber": 15,
+        "Grade": 12,
+        "Positions": [
+          "C"
+        ],
+        "GamesPlayed": 20,
+        "SeasonTotals": {
+          "Points": 50,
+          "ThreePM": 2,
+          "ThreePA": 8,
+          "FTM": 4,
+          "FTA": 17,
+          "TwoPM": 20,
+          "TwoPA": 57,
+          "OffensiveRebounds": 63,
+          "DefensiveRebounds": 77,
+          "Rebounds": 140,
+          "Assists": 19,
+          "Steals": 39,
+          "Blocks": 4,
+          "Turnovers": 30,
+          "PersonalFouls": 46,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201302,
+        "JerseyNumber": 21,
+        "Grade": 10,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 17,
+        "SeasonTotals": {
+          "Points": 207,
+          "ThreePM": 28,
+          "ThreePA": 103,
+          "FTM": 33,
+          "FTA": 53,
+          "TwoPM": 45,
+          "TwoPA": 94,
+          "OffensiveRebounds": 50,
+          "DefensiveRebounds": 56,
+          "Rebounds": 106,
+          "Assists": 26,
+          "Steals": 59,
+          "Blocks": 4,
+          "Turnovers": 44,
+          "PersonalFouls": 22,
+          "Charges": 2,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201501,
+        "JerseyNumber": 23,
+        "Grade": 9,
+        "GamesPlayed": 13,
+        "SeasonTotals": {
+          "Points": 10,
+          "ThreePM": 0,
+          "ThreePA": 1,
+          "FTM": 0,
+          "FTA": 0,
+          "TwoPM": 5,
+          "TwoPA": 23,
+          "OffensiveRebounds": 6,
+          "DefensiveRebounds": 3,
+          "Rebounds": 9,
+          "Assists": 0,
+          "Steals": 4,
+          "Blocks": 2,
+          "Turnovers": 5,
+          "PersonalFouls": 2,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201502,
+        "JerseyNumber": 30,
+        "Grade": 8,
+        "GamesPlayed": 12,
+        "SeasonTotals": {
+          "Points": 2,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 0,
+          "FTA": 0,
+          "TwoPM": 1,
+          "TwoPA": 7,
+          "OffensiveRebounds": 6,
+          "DefensiveRebounds": 8,
+          "Rebounds": 14,
+          "Assists": 2,
+          "Steals": 2,
+          "Blocks": 2,
+          "Turnovers": 1,
+          "PersonalFouls": 2,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201212,
+        "JerseyNumber": 32,
+        "Grade": 12,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 20,
+        "SeasonTotals": {
+          "Points": 48,
+          "ThreePM": 1,
+          "ThreePA": 3,
+          "FTM": 3,
+          "FTA": 11,
+          "TwoPM": 21,
+          "TwoPA": 82,
+          "OffensiveRebounds": 42,
+          "DefensiveRebounds": 43,
+          "Rebounds": 85,
+          "Assists": 21,
+          "Steals": 28,
+          "Blocks": 8,
+          "Turnovers": 31,
+          "PersonalFouls": 21,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201402,
+        "JerseyNumber": 33,
+        "Grade": 12,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 10,
+        "SeasonTotals": {
+          "Points": 88,
+          "ThreePM": 0,
+          "ThreePA": 1,
+          "FTM": 12,
+          "FTA": 24,
+          "TwoPM": 38,
+          "TwoPA": 74,
+          "OffensiveRebounds": 31,
+          "DefensiveRebounds": 35,
+          "Rebounds": 66,
+          "Assists": 48,
+          "Steals": 30,
+          "Blocks": 11,
+          "Turnovers": 44,
+          "PersonalFouls": 30,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201503,
+        "JerseyNumber": 35,
+        "Grade": 8,
+        "GamesPlayed": 6,
+        "SeasonTotals": {
+          "Points": 2,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 0,
+          "FTA": 2,
+          "TwoPM": 1,
+          "TwoPA": 3,
+          "OffensiveRebounds": 0,
+          "DefensiveRebounds": 0,
+          "Rebounds": 0,
+          "Assists": 0,
+          "Steals": 2,
+          "Blocks": 1,
+          "Turnovers": 7,
+          "PersonalFouls": 0,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      }
+    ]
+  },
+  {
+    "SeasonID": "2016-17",
+    "Players": [
+      {
+        "PlayerID": 201208,
+        "JerseyNumber": 2,
+        "Grade": 12,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 17,
+        "SeasonTotals": {
+          "Points": 127,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 23,
+          "FTA": 64,
+          "TwoPM": 52,
+          "TwoPA": 205,
+          "OffensiveRebounds": 35,
+          "DefensiveRebounds": 35,
+          "Rebounds": 70,
+          "Assists": 38,
+          "Steals": 38,
+          "Blocks": 1,
+          "Turnovers": 43,
+          "PersonalFouls": 19,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201601,
+        "JerseyNumber": 10,
+        "Grade": 11,
+        "GamesPlayed": 17,
+        "SeasonTotals": {
+          "Points": 36,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 6,
+          "FTA": 13,
+          "TwoPM": 15,
+          "TwoPA": 92,
+          "OffensiveRebounds": 34,
+          "DefensiveRebounds": 32,
+          "Rebounds": 66,
+          "Assists": 10,
+          "Steals": 32,
+          "Blocks": 1,
+          "Turnovers": 42,
+          "PersonalFouls": 15,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201602,
+        "JerseyNumber": 11,
+        "Grade": 11,
+        "GamesPlayed": 16,
+        "SeasonTotals": {
+          "Points": 16,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 0,
+          "FTA": 10,
+          "TwoPM": 8,
+          "TwoPA": 46,
+          "OffensiveRebounds": 25,
+          "DefensiveRebounds": 31,
+          "Rebounds": 56,
+          "Assists": 11,
+          "Steals": 19,
+          "Blocks": 1,
+          "Turnovers": 40,
+          "PersonalFouls": 14,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201603,
+        "JerseyNumber": 12,
+        "Grade": 12,
+        "GamesPlayed": 13,
+        "SeasonTotals": {
+          "Points": 26,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 8,
+          "FTA": 16,
+          "TwoPM": 9,
+          "TwoPA": 81,
+          "OffensiveRebounds": 39,
+          "DefensiveRebounds": 42,
+          "Rebounds": 81,
+          "Assists": 5,
+          "Steals": 16,
+          "Blocks": 0,
+          "Turnovers": 26,
+          "PersonalFouls": 12,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201501,
+        "JerseyNumber": 13,
+        "Grade": 10,
+        "GamesPlayed": 16,
+        "SeasonTotals": {
+          "Points": 22,
+          "ThreePM": 0,
+          "ThreePA": 2,
+          "FTM": 2,
+          "FTA": 8,
+          "TwoPM": 10,
+          "TwoPA": 50,
+          "OffensiveRebounds": 9,
+          "DefensiveRebounds": 4,
+          "Rebounds": 13,
+          "Assists": 1,
+          "Steals": 7,
+          "Blocks": 0,
+          "Turnovers": 14,
+          "PersonalFouls": 3,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 202007,
+        "JerseyNumber": 14,
+        "Grade": 8,
+        "GamesPlayed": 12,
+        "SeasonTotals": {
+          "Points": 0,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 0,
+          "FTA": 1,
+          "TwoPM": 0,
+          "TwoPA": 3,
+          "OffensiveRebounds": 1,
+          "DefensiveRebounds": 4,
+          "Rebounds": 5,
+          "Assists": 2,
+          "Steals": 4,
+          "Blocks": 0,
+          "Turnovers": 9,
+          "PersonalFouls": 0,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201604,
+        "JerseyNumber": 15,
+        "Grade": 11,
+        "GamesPlayed": 17,
+        "SeasonTotals": {
+          "Points": 5,
+          "ThreePM": 1,
+          "ThreePA": 2,
+          "FTM": 0,
+          "FTA": 0,
+          "TwoPM": 1,
+          "TwoPA": 29,
+          "OffensiveRebounds": 7,
+          "DefensiveRebounds": 5,
+          "Rebounds": 12,
+          "Assists": 2,
+          "Steals": 6,
+          "Blocks": 0,
+          "Turnovers": 6,
+          "PersonalFouls": 3,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201302,
+        "JerseyNumber": 21,
+        "Grade": 11,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 17,
+        "SeasonTotals": {
+          "Points": 202,
+          "ThreePM": 25,
+          "ThreePA": 95,
+          "FTM": 51,
+          "FTA": 80,
+          "TwoPM": 38,
+          "TwoPA": 217,
+          "OffensiveRebounds": 58,
+          "DefensiveRebounds": 72,
+          "Rebounds": 130,
+          "Assists": 28,
+          "Steals": 36,
+          "Blocks": 24,
+          "Turnovers": 45,
+          "PersonalFouls": 8,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201605,
+        "JerseyNumber": 22,
+        "Grade": 12,
+        "GamesPlayed": 11,
+        "SeasonTotals": {
+          "Points": 6,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 0,
+          "FTA": 0,
+          "TwoPM": 3,
+          "TwoPA": 8,
+          "OffensiveRebounds": 2,
+          "DefensiveRebounds": 8,
+          "Rebounds": 10,
+          "Assists": 1,
+          "Steals": 1,
+          "Blocks": 0,
+          "Turnovers": 4,
+          "PersonalFouls": 2,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 202010,
+        "JerseyNumber": 33,
+        "Grade": 8,
+        "GamesPlayed": 15,
+        "SeasonTotals": {
+          "Points": 6,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 2,
+          "FTA": 4,
+          "TwoPM": 2,
+          "TwoPA": 14,
+          "OffensiveRebounds": 3,
+          "DefensiveRebounds": 7,
+          "Rebounds": 10,
+          "Assists": 2,
+          "Steals": 6,
+          "Blocks": 0,
+          "Turnovers": 2,
+          "PersonalFouls": 6,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201403,
+        "JerseyNumber": 34,
+        "Grade": 11,
+        "GamesPlayed": 6,
+        "SeasonTotals": {
+          "Points": 2,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 0,
+          "FTA": 0,
+          "TwoPM": 1,
+          "TwoPA": 3,
+          "OffensiveRebounds": 1,
+          "DefensiveRebounds": 2,
+          "Rebounds": 3,
+          "Assists": 0,
+          "Steals": 1,
+          "Blocks": 0,
+          "Turnovers": 5,
+          "PersonalFouls": 3,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201502,
+        "JerseyNumber": 35,
+        "Grade": 9,
+        "GamesPlayed": 16,
+        "SeasonTotals": {
+          "Points": 22,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 4,
+          "FTA": 7,
+          "TwoPM": 9,
+          "TwoPA": 61,
+          "OffensiveRebounds": 13,
+          "DefensiveRebounds": 16,
+          "Rebounds": 29,
+          "Assists": 2,
+          "Steals": 2,
+          "Blocks": 4,
+          "Turnovers": 15,
+          "PersonalFouls": 9,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      }
+    ]
+  },
+  {
+    "SeasonID": "2017-18",
+    "Players": [
+      {
+        "PlayerID": 202005,
+        "JerseyNumber": 2,
+        "Grade": 9,
+        "GamesPlayed": 13,
+        "SeasonTotals": {
+          "Points": 25,
+          "ThreePM": 1,
+          "ThreePA": 1,
+          "FTM": 6,
+          "FTA": 19,
+          "TwoPM": 8,
+          "TwoPA": 31,
+          "OffensiveRebounds": 21,
+          "DefensiveRebounds": 25,
+          "Rebounds": 46,
+          "Assists": 4,
+          "Steals": 4,
+          "Blocks": 3,
+          "Turnovers": 18,
+          "PersonalFouls": 13,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 202009,
+        "JerseyNumber": 5,
+        "Grade": 9,
+        "GamesPlayed": 13,
+        "SeasonTotals": {
+          "Points": 2,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 2,
+          "FTA": 2,
+          "TwoPM": 0,
+          "TwoPA": 7,
+          "OffensiveRebounds": 5,
+          "DefensiveRebounds": 9,
+          "Rebounds": 14,
+          "Assists": 0,
+          "Steals": 2,
+          "Blocks": 1,
+          "Turnovers": 10,
+          "PersonalFouls": 4,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201602,
+        "JerseyNumber": 11,
+        "Grade": 12,
+        "GamesPlayed": 11,
+        "SeasonTotals": {
+          "Points": 8,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 2,
+          "FTA": 14,
+          "TwoPM": 3,
+          "TwoPA": 19,
+          "OffensiveRebounds": 10,
+          "DefensiveRebounds": 9,
+          "Rebounds": 19,
+          "Assists": 5,
+          "Steals": 9,
+          "Blocks": 0,
+          "Turnovers": 27,
+          "PersonalFouls": 11,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201701,
+        "JerseyNumber": 12,
+        "Grade": 9,
+        "GamesPlayed": 6,
+        "SeasonTotals": {
+          "Points": 0,
+          "ThreePM": 0,
+          "ThreePA": 2,
+          "FTM": 0,
+          "FTA": 0,
+          "TwoPM": 0,
+          "TwoPA": 1,
+          "OffensiveRebounds": 0,
+          "DefensiveRebounds": 0,
+          "Rebounds": 0,
+          "Assists": 0,
+          "Steals": 0,
+          "Blocks": 0,
+          "Turnovers": 0,
+          "PersonalFouls": 0,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201502,
+        "JerseyNumber": 13,
+        "Grade": 10,
+        "GamesPlayed": 14,
+        "SeasonTotals": {
+          "Points": 52,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 10,
+          "FTA": 18,
+          "TwoPM": 21,
+          "TwoPA": 58,
+          "OffensiveRebounds": 20,
+          "DefensiveRebounds": 22,
+          "Rebounds": 42,
+          "Assists": 4,
+          "Steals": 10,
+          "Blocks": 12,
+          "Turnovers": 20,
+          "PersonalFouls": 11,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 202007,
+        "JerseyNumber": 14,
+        "Grade": 9,
+        "GamesPlayed": 16,
+        "SeasonTotals": {
+          "Points": 22,
+          "ThreePM": 3,
+          "ThreePA": 4,
+          "FTM": 3,
+          "FTA": 9,
+          "TwoPM": 5,
+          "TwoPA": 30,
+          "OffensiveRebounds": 7,
+          "DefensiveRebounds": 7,
+          "Rebounds": 14,
+          "Assists": 4,
+          "Steals": 6,
+          "Blocks": 1,
+          "Turnovers": 26,
+          "PersonalFouls": 7,
+          "Charges": 1,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201604,
+        "JerseyNumber": 15,
+        "Grade": 12,
+        "GamesPlayed": 12,
+        "SeasonTotals": {
+          "Points": 8,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 2,
+          "FTA": 4,
+          "TwoPM": 3,
+          "TwoPA": 15,
+          "OffensiveRebounds": 6,
+          "DefensiveRebounds": 4,
+          "Rebounds": 10,
+          "Assists": 2,
+          "Steals": 2,
+          "Blocks": 0,
+          "Turnovers": 7,
+          "PersonalFouls": 0,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201302,
+        "JerseyNumber": 21,
+        "Grade": 12,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 16,
+        "SeasonTotals": {
+          "Points": 271,
+          "ThreePM": 36,
+          "ThreePA": 89,
+          "FTM": 61,
+          "FTA": 109,
+          "TwoPM": 41,
+          "TwoPA": 128,
+          "OffensiveRebounds": 35,
+          "DefensiveRebounds": 50,
+          "Rebounds": 85,
+          "Assists": 23,
+          "Steals": 22,
+          "Blocks": 20,
+          "Turnovers": 45,
+          "PersonalFouls": 13,
+          "Charges": 1,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201702,
+        "JerseyNumber": 22,
+        "Grade": 10,
+        "GamesPlayed": 15,
+        "SeasonTotals": {
+          "Points": 18,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 6,
+          "FTA": 13,
+          "TwoPM": 6,
+          "TwoPA": 38,
+          "OffensiveRebounds": 15,
+          "DefensiveRebounds": 24,
+          "Rebounds": 38,
+          "Assists": 3,
+          "Steals": 11,
+          "Blocks": 0,
+          "Turnovers": 21,
+          "PersonalFouls": 16,
+          "Charges": 4,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 202010,
+        "JerseyNumber": 33,
+        "Grade": 9,
+        "GamesPlayed": 13,
+        "SeasonTotals": {
+          "Points": 36,
+          "ThreePM": 2,
+          "ThreePA": 6,
+          "FTM": 2,
+          "FTA": 5,
+          "TwoPM": 13,
+          "TwoPA": 42,
+          "OffensiveRebounds": 5,
+          "DefensiveRebounds": 6,
+          "Rebounds": 8,
+          "Assists": 4,
+          "Steals": 6,
+          "Blocks": 2,
+          "Turnovers": 17,
+          "PersonalFouls": 6,
+          "Charges": 0,
+          "Deflections": 6
+        }
+      },
+      {
+        "PlayerID": 201703,
+        "JerseyNumber": 35,
+        "Grade": 9,
+        "GamesPlayed": 1,
+        "SeasonTotals": {
+          "Points": 0,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 0,
+          "FTA": 0,
+          "TwoPM": 0,
+          "TwoPA": 0,
+          "OffensiveRebounds": 0,
+          "DefensiveRebounds": 0,
+          "Rebounds": 0,
+          "Assists": 0,
+          "Steals": 0,
+          "Blocks": 0,
+          "Turnovers": 0,
+          "PersonalFouls": 0,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 201704,
+        "JerseyNumber": null,
+        "Grade": 8,
+        "GamesPlayed": 2,
+        "SeasonTotals": {
+          "Points": 0,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 0,
+          "FTA": 0,
+          "TwoPM": 0,
+          "TwoPA": 2,
+          "OffensiveRebounds": 1,
+          "DefensiveRebounds": 2,
+          "Rebounds": 3,
+          "Assists": 0,
+          "Steals": 0,
+          "Blocks": 0,
+          "Turnovers": 2,
+          "PersonalFouls": 0,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 202103,
+        "JerseyNumber": null,
+        "Grade": 8,
+        "GamesPlayed": 6,
+        "SeasonTotals": {
+          "Points": 9,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 1,
+          "FTA": 4,
+          "TwoPM": 5,
+          "TwoPA": 16,
+          "OffensiveRebounds": 4,
+          "DefensiveRebounds": 6,
+          "Rebounds": 10,
+          "Assists": 0,
+          "Steals": 3,
+          "Blocks": 14,
+          "Turnovers": 9,
+          "PersonalFouls": 1,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 202104,
+        "JerseyNumber": null,
+        "Grade": 8,
+        "GamesPlayed": 3,
+        "SeasonTotals": {
+          "Points": 5,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 1,
+          "FTA": 3,
+          "TwoPM": 2,
+          "TwoPA": 3,
+          "OffensiveRebounds": 1,
+          "DefensiveRebounds": 0,
+          "Rebounds": 1,
+          "Assists": 1,
+          "Steals": 1,
+          "Blocks": 0,
+          "Turnovers": 2,
+          "PersonalFouls": 0,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      }
+    ]
+  },
+  {
+    "SeasonID": "2018-19",
+    "Players": [
+      {
+        "PlayerID": 202005,
+        "JerseyNumber": 2,
+        "Grade": 10
+      },
+      {
+        "PlayerID": 201801,
+        "JerseyNumber": 5,
+        "Grade": 9,
+        "Positions": [
+          "SG"
+        ]
+      },
+      {
+        "PlayerID": 201802,
+        "JerseyNumber": 10,
+        "Grade": 10
+      },
+      {
+        "PlayerID": 201803,
+        "JerseyNumber": 10,
+        "Grade": 12,
+        "Positions": [
+          "SG"
+        ]
+      },
+      {
+        "PlayerID": 202001,
+        "JerseyNumber": 10,
+        "Grade": 8
+      },
+      {
+        "PlayerID": 202002,
+        "JerseyNumber": 10,
+        "Grade": 8,
+        "Positions": [
+          "SG"
+        ]
+      },
+      {
+        "PlayerID": 201702,
+        "JerseyNumber": 11,
+        "Grade": 11,
+        "Positions": [
+          "SG"
+        ]
+      },
+      {
+        "PlayerID": 201701,
+        "JerseyNumber": 12,
+        "Grade": 10
+      },
+      {
+        "PlayerID": 202103,
+        "JerseyNumber": 12,
+        "Grade": 9,
+        "Positions": [
+          "PF"
+        ]
+      },
+      {
+        "PlayerID": 201502,
+        "JerseyNumber": 13,
+        "Grade": 11,
+        "Positions": [
+          "C"
+        ]
+      },
+      {
+        "PlayerID": 201804,
+        "JerseyNumber": 14,
+        "Positions": [
+          "PG",
+          "SG"
+        ]
+      },
+      {
+        "PlayerID": 202007,
+        "JerseyNumber": 14,
+        "Grade": 10,
+        "Positions": [
+          "SG",
+          "PG"
+        ]
+      },
+      {
+        "PlayerID": 202004,
+        "JerseyNumber": 15,
+        "Grade": 8
+      },
+      {
+        "PlayerID": 202104,
+        "JerseyNumber": 22,
+        "Grade": 9,
+        "Positions": [
+          "PG"
+        ]
+      },
+      {
+        "PlayerID": 202009,
+        "JerseyNumber": 25,
+        "Grade": 10,
+        "Positions": [
+          "SF"
+        ]
+      },
+      {
+        "PlayerID": 201805,
+        "JerseyNumber": 30,
+        "Grade": 10
+      },
+      {
+        "PlayerID": 202105,
+        "JerseyNumber": 30,
+        "Grade": 9,
+        "Positions": [
+          "PG"
+        ]
+      },
+      {
+        "PlayerID": 202010,
+        "JerseyNumber": 33,
+        "Grade": 10,
+        "Positions": [
+          "SG"
+        ]
+      },
+      {
+        "PlayerID": 201703,
+        "JerseyNumber": 35,
+        "Grade": 10
+      },
+      {
+        "PlayerID": 202003,
+        "JerseyNumber": 35,
+        "Grade": 8,
+        "Positions": [
+          "C"
+        ]
+      },
+      {
+        "PlayerID": 201704,
+        "JerseyNumber": null,
+        "Grade": 9
+      },
+      {
+        "PlayerID": 201806,
+        "JerseyNumber": null,
+        "Grade": 8,
+        "Positions": [
+          "SF"
+        ]
+      },
+      {
+        "PlayerID": 201807,
+        "JerseyNumber": null,
+        "Grade": 8
+      },
+      {
+        "PlayerID": 201808,
+        "JerseyNumber": null,
+        "Grade": 8,
+        "Positions": [
+          "SG"
+        ]
+      },
+      {
+        "PlayerID": 201809,
+        "JerseyNumber": null,
+        "Grade": 9
+      }
+    ]
+  },
+  {
+    "SeasonID": "2019-20",
+    "Players": [
+      {
+        "PlayerID": 202005,
+        "JerseyNumber": 2,
+        "Grade": 11,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 13,
+        "SeasonTotals": {
+          "Points": 8,
+          "FTM": 0,
+          "FTA": 4,
+          "TwoPM": 4,
+          "TwoPA": 9,
+          "Rebounds": 18,
+          "Assists": 3,
+          "Steals": 1
+        }
+      },
+      {
+        "PlayerID": 201901,
+        "JerseyNumber": 5,
+        "Grade": 9,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 15,
+        "SeasonTotals": {
+          "Points": 6,
+          "FTM": 0,
+          "FTA": 5,
+          "TwoPM": 2,
+          "TwoPA": 18,
+          "Rebounds": 41,
+          "Assists": 4,
+          "Steals": 6
+        }
+      },
+      {
+        "PlayerID": 202001,
+        "JerseyNumber": 5,
+        "Grade": 9,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 14,
+        "SeasonTotals": {
+          "Points": 38,
+          "ThreePM": 4,
+          "ThreePA": 17,
+          "FTM": 2,
+          "FTA": 8,
+          "TwoPM": 11,
+          "TwoPA": 40,
+          "Rebounds": 26,
+          "Assists": 14,
+          "Steals": 17,
+          "Blocks": 2
+        }
+      },
+      {
+        "PlayerID": 202002,
+        "JerseyNumber": 10,
+        "Grade": 9,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 15,
+        "SeasonTotals": {
+          "Points": 69,
+          "ThreePM": 0,
+          "ThreePA": 1,
+          "FTM": 9,
+          "FTA": 16,
+          "TwoPM": 30,
+          "TwoPA": 84,
+          "Rebounds": 55,
+          "Assists": 14,
+          "Steals": 39,
+          "Blocks": 3
+        }
+      },
+      {
+        "PlayerID": 202103,
+        "JerseyNumber": 12,
+        "Grade": 10,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 16,
+        "SeasonTotals": {
+          "Points": 41,
+          "ThreePM": 0,
+          "ThreePA": 2,
+          "FTM": 1,
+          "FTA": 4,
+          "TwoPM": 19,
+          "TwoPA": 56,
+          "Rebounds": 79,
+          "Assists": 17,
+          "Steals": 18,
+          "Blocks": 29
+        }
+      },
+      {
+        "PlayerID": 201502,
+        "JerseyNumber": 13,
+        "Grade": 12,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 16,
+        "SeasonTotals": {
+          "Points": 81,
+          "FTM": 15,
+          "FTA": 39,
+          "TwoPM": 33,
+          "TwoPA": 113,
+          "Rebounds": 89,
+          "Assists": 9,
+          "Steals": 12,
+          "Blocks": 3
+        }
+      },
+      {
+        "PlayerID": 202104,
+        "JerseyNumber": 22,
+        "Grade": 10,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 14,
+        "SeasonTotals": {
+          "Points": 160,
+          "ThreePM": 16,
+          "ThreePA": 69,
+          "FTM": 42,
+          "FTA": 69,
+          "TwoPM": 39,
+          "TwoPA": 118,
+          "Rebounds": 43,
+          "Assists": 24,
+          "Steals": 39,
+          "Blocks": 2
+        }
+      },
+      {
+        "PlayerID": 202105,
+        "JerseyNumber": 30,
+        "Grade": 10,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 16,
+        "SeasonTotals": {
+          "Points": 62,
+          "ThreePM": 9,
+          "ThreePA": 40,
+          "FTM": 5,
+          "FTA": 7,
+          "TwoPM": 16,
+          "TwoPA": 53,
+          "Rebounds": 26,
+          "Assists": 11,
+          "Steals": 20,
+          "Blocks": 3
+        }
+      },
+      {
+        "PlayerID": 202003,
+        "JerseyNumber": 35,
+        "Grade": 9,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 16,
+        "SeasonTotals": {
+          "Points": 21,
+          "ThreePM": 0,
+          "ThreePA": 2,
+          "FTM": 1,
+          "FTA": 7,
+          "TwoPM": 10,
+          "TwoPA": 37,
+          "Rebounds": 63,
+          "Assists": 6,
+          "Steals": 8,
+          "Blocks": 7
+        }
+      }
+    ]
+  },
+  {
     "SeasonID": "2020-21",
     "Players": [
       {
         "PlayerID": 202005,
-        "JerseyNumber": 2
+        "JerseyNumber": 2,
+        "Grade": 12,
+        "Positions": [
+          "F",
+          "C"
+        ],
+        "GamesPlayed": 10,
+        "SeasonTotals": {
+          "Points": 6,
+          "ThreePM": 0,
+          "ThreePA": 1,
+          "FTM": 0,
+          "FTA": 1,
+          "TwoPM": 3,
+          "TwoPA": 13,
+          "OffensiveRebounds": 6,
+          "DefensiveRebounds": 19,
+          "Rebounds": 25,
+          "Assists": 6,
+          "Steals": 3,
+          "Blocks": 1,
+          "Turnovers": 12,
+          "PersonalFouls": 32,
+          "Charges": 0,
+          "Deflections": 7
+        }
       },
       {
         "PlayerID": 202001,
-        "JerseyNumber": 5
+        "JerseyNumber": 5,
+        "Grade": 10,
+        "Positions": [
+          "PG"
+        ],
+        "GamesPlayed": 18,
+        "SeasonTotals": {
+          "Points": 46,
+          "ThreePM": 8,
+          "ThreePA": 33,
+          "FTM": 2,
+          "FTA": 2,
+          "TwoPM": 10,
+          "TwoPA": 28,
+          "OffensiveRebounds": 15,
+          "DefensiveRebounds": 26,
+          "Rebounds": 41,
+          "Assists": 17,
+          "Steals": 29,
+          "Blocks": 1,
+          "Turnovers": 47,
+          "PersonalFouls": 24,
+          "Charges": 3,
+          "Deflections": 25
+        }
       },
       {
         "PlayerID": 202006,
-        "JerseyNumber": 5
+        "JerseyNumber": 5,
+        "Grade": 9,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 9,
+        "SeasonTotals": {
+          "Points": 4,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 0,
+          "FTA": 0,
+          "TwoPM": 2,
+          "TwoPA": 7,
+          "OffensiveRebounds": 3,
+          "DefensiveRebounds": 11,
+          "Rebounds": 14,
+          "Assists": 2,
+          "Steals": 0,
+          "Blocks": 0,
+          "Turnovers": 14,
+          "PersonalFouls": 16,
+          "Charges": 0,
+          "Deflections": 5
+        }
       },
       {
         "PlayerID": 202102,
-        "JerseyNumber": 10
+        "JerseyNumber": 10,
+        "Grade": 9,
+        "Positions": [
+          "SF"
+        ],
+        "GamesPlayed": 17,
+        "SeasonTotals": {
+          "Points": 2,
+          "ThreePM": 0,
+          "ThreePA": 1,
+          "FTM": 0,
+          "FTA": 0,
+          "TwoPM": 1,
+          "TwoPA": 14,
+          "OffensiveRebounds": 9,
+          "DefensiveRebounds": 17,
+          "Rebounds": 26,
+          "Assists": 8,
+          "Steals": 2,
+          "Blocks": 1,
+          "Turnovers": 30,
+          "PersonalFouls": 26,
+          "Charges": 1,
+          "Deflections": 8
+        }
       },
       {
         "PlayerID": 202404,
-        "JerseyNumber": 11
+        "JerseyNumber": 11,
+        "Grade": 8,
+        "Positions": [
+          "PG",
+          "SG"
+        ],
+        "GamesPlayed": 10,
+        "SeasonTotals": {
+          "Points": 10,
+          "ThreePM": 2,
+          "ThreePA": 4,
+          "FTM": 2,
+          "FTA": 4,
+          "TwoPM": 1,
+          "TwoPA": 5,
+          "OffensiveRebounds": 3,
+          "DefensiveRebounds": 3,
+          "Rebounds": 6,
+          "Assists": 1,
+          "Steals": 3,
+          "Blocks": 1,
+          "Turnovers": 3,
+          "PersonalFouls": 3,
+          "Charges": 0,
+          "Deflections": 6
+        }
       },
       {
         "PlayerID": 202103,
-        "JerseyNumber": 12
+        "JerseyNumber": 12,
+        "Grade": 11,
+        "Positions": [
+          "PF"
+        ],
+        "GamesPlayed": 14,
+        "SeasonTotals": {
+          "Points": 46,
+          "ThreePM": 5,
+          "ThreePA": 40,
+          "FTM": 7,
+          "FTA": 11,
+          "TwoPM": 12,
+          "TwoPA": 38,
+          "OffensiveRebounds": 21,
+          "DefensiveRebounds": 53,
+          "Rebounds": 74,
+          "Assists": 19,
+          "Steals": 18,
+          "Blocks": 26,
+          "Turnovers": 53,
+          "PersonalFouls": 23,
+          "Charges": 0,
+          "Deflections": 21
+        }
       },
       {
         "PlayerID": 202007,
-        "JerseyNumber": 14
+        "JerseyNumber": 14,
+        "Grade": 12,
+        "Positions": [
+          "SG",
+          "PG"
+        ],
+        "GamesPlayed": 17,
+        "SeasonTotals": {
+          "Points": 5,
+          "ThreePM": 0,
+          "ThreePA": 5,
+          "FTM": 1,
+          "FTA": 4,
+          "TwoPM": 2,
+          "TwoPA": 22,
+          "OffensiveRebounds": 16,
+          "DefensiveRebounds": 8,
+          "Rebounds": 24,
+          "Assists": 17,
+          "Steals": 14,
+          "Blocks": 3,
+          "Turnovers": 41,
+          "PersonalFouls": 17,
+          "Charges": 1,
+          "Deflections": 15
+        }
       },
       {
         "PlayerID": 202008,
-        "JerseyNumber": 21
+        "JerseyNumber": 21,
+        "Grade": 9,
+        "Positions": [
+          "PG",
+          "SG"
+        ],
+        "GamesPlayed": 19,
+        "SeasonTotals": {
+          "Points": 204,
+          "ThreePM": 33,
+          "ThreePA": 110,
+          "FTM": 11,
+          "FTA": 21,
+          "TwoPM": 47,
+          "TwoPA": 142,
+          "OffensiveRebounds": 27,
+          "DefensiveRebounds": 63,
+          "Rebounds": 90,
+          "Assists": 23,
+          "Steals": 72,
+          "Blocks": 2,
+          "Turnovers": 87,
+          "PersonalFouls": 43,
+          "Charges": 1,
+          "Deflections": 53
+        }
       },
       {
         "PlayerID": 202104,
-        "JerseyNumber": 22
+        "JerseyNumber": 22,
+        "Grade": 11,
+        "Positions": [
+          "PG",
+          "SG"
+        ],
+        "GamesPlayed": 19,
+        "SeasonTotals": {
+          "Points": 198,
+          "ThreePM": 20,
+          "ThreePA": 113,
+          "FTM": 46,
+          "FTA": 65,
+          "TwoPM": 46,
+          "TwoPA": 147,
+          "OffensiveRebounds": 22,
+          "DefensiveRebounds": 50,
+          "Rebounds": 72,
+          "Assists": 29,
+          "Steals": 43,
+          "Blocks": 1,
+          "Turnovers": 140,
+          "PersonalFouls": 31,
+          "Charges": 1,
+          "Deflections": 28
+        }
       },
       {
         "PlayerID": 202009,
-        "JerseyNumber": 25
+        "JerseyNumber": 25,
+        "Grade": 12,
+        "Positions": [
+          "SF"
+        ],
+        "GamesPlayed": 19,
+        "SeasonTotals": {
+          "Points": 26,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 4,
+          "FTA": 16,
+          "TwoPM": 11,
+          "TwoPA": 65,
+          "OffensiveRebounds": 24,
+          "DefensiveRebounds": 44,
+          "Rebounds": 68,
+          "Assists": 9,
+          "Steals": 16,
+          "Blocks": 1,
+          "Turnovers": 55,
+          "PersonalFouls": 46,
+          "Charges": 3,
+          "Deflections": 13
+        }
       },
       {
         "PlayerID": 202010,
-        "JerseyNumber": 33
+        "JerseyNumber": 33,
+        "Grade": 12,
+        "Positions": [
+          "G",
+          "F"
+        ],
+        "GamesPlayed": 16,
+        "SeasonTotals": {
+          "Points": 25,
+          "ThreePM": 0,
+          "ThreePA": 8,
+          "FTM": 3,
+          "FTA": 8,
+          "TwoPM": 11,
+          "TwoPA": 47,
+          "OffensiveRebounds": 13,
+          "DefensiveRebounds": 15,
+          "Rebounds": 28,
+          "Assists": 4,
+          "Steals": 11,
+          "Blocks": 0,
+          "Turnovers": 25,
+          "PersonalFouls": 21,
+          "Charges": 1,
+          "Deflections": 6
+        }
       }
     ]
   },
@@ -53,11 +3195,61 @@
     "Players": [
       {
         "PlayerID": 202402,
-        "JerseyNumber": 1
+        "JerseyNumber": 1,
+        "Grade": 9,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 7,
+        "SeasonTotals": {
+          "MinutesPlayed": 122,
+          "Points": 9,
+          "ThreePM": 2,
+          "ThreePA": 7,
+          "FTM": 3,
+          "FTA": 4,
+          "TwoPM": 0,
+          "TwoPA": 11,
+          "OffensiveRebounds": 1,
+          "DefensiveRebounds": 9,
+          "Rebounds": 10,
+          "Assists": 5,
+          "Steals": 3,
+          "Blocks": 1,
+          "Turnovers": 12,
+          "PersonalFouls": 11,
+          "Charges": 0,
+          "Deflections": 6
+        }
       },
       {
         "PlayerID": 202107,
-        "JerseyNumber": 2
+        "JerseyNumber": 2,
+        "Grade": 9,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 3,
+        "SeasonTotals": {
+          "MinutesPlayed": 32,
+          "Points": 2,
+          "ThreePM": 0,
+          "ThreePA": 2,
+          "FTM": 0,
+          "FTA": 0,
+          "TwoPM": 1,
+          "TwoPA": 3,
+          "OffensiveRebounds": 0,
+          "DefensiveRebounds": 5,
+          "Rebounds": 5,
+          "Assists": 1,
+          "Steals": 2,
+          "Blocks": 0,
+          "Turnovers": 8,
+          "PersonalFouls": 6,
+          "Charges": 0,
+          "Deflections": 1
+        }
       },
       {
         "PlayerID": 202110,
@@ -65,23 +3257,152 @@
       },
       {
         "PlayerID": 202001,
-        "JerseyNumber": 5
+        "JerseyNumber": 5,
+        "Grade": 11,
+        "Positions": [
+          "SG",
+          "PG"
+        ],
+        "GamesPlayed": 5,
+        "SeasonTotals": {
+          "MinutesPlayed": 133,
+          "Points": 21,
+          "ThreePM": 4,
+          "ThreePA": 23,
+          "FTM": 1,
+          "FTA": 3,
+          "TwoPM": 4,
+          "TwoPA": 18,
+          "OffensiveRebounds": 1,
+          "DefensiveRebounds": 14,
+          "Rebounds": 15,
+          "Assists": 2,
+          "Steals": 5,
+          "Blocks": 3,
+          "Turnovers": 20,
+          "PersonalFouls": 12,
+          "Charges": 1,
+          "Deflections": 4
+        }
       },
       {
         "PlayerID": 202102,
-        "JerseyNumber": 10
+        "JerseyNumber": 10,
+        "Grade": 10,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 8,
+        "SeasonTotals": {
+          "MinutesPlayed": 139,
+          "Points": 11,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 3,
+          "FTA": 4,
+          "TwoPM": 4,
+          "TwoPA": 17,
+          "OffensiveRebounds": 5,
+          "DefensiveRebounds": 8,
+          "Rebounds": 13,
+          "Assists": 4,
+          "Steals": 9,
+          "Blocks": 0,
+          "Turnovers": 25,
+          "PersonalFouls": 16,
+          "Charges": 0,
+          "Deflections": 9
+        }
       },
       {
         "PlayerID": 202105,
-        "JerseyNumber": 11
+        "JerseyNumber": 11,
+        "Grade": 12,
+        "Positions": [
+          "SF",
+          "PF"
+        ],
+        "GamesPlayed": 2,
+        "SeasonTotals": {
+          "MinutesPlayed": 41,
+          "Points": 8,
+          "ThreePM": 2,
+          "ThreePA": 10,
+          "FTM": 0,
+          "FTA": 0,
+          "TwoPM": 1,
+          "TwoPA": 6,
+          "OffensiveRebounds": 0,
+          "DefensiveRebounds": 2,
+          "Rebounds": 2,
+          "Assists": 1,
+          "Steals": 5,
+          "Blocks": 1,
+          "Turnovers": 8,
+          "PersonalFouls": 5,
+          "Charges": 0,
+          "Deflections": 4
+        }
       },
       {
         "PlayerID": 202404,
-        "JerseyNumber": 11
+        "JerseyNumber": 11,
+        "Grade": 9,
+        "Positions": [
+          "PG",
+          "SG"
+        ],
+        "GamesPlayed": 4,
+        "SeasonTotals": {
+          "MinutesPlayed": 104,
+          "Points": 17,
+          "ThreePM": 3,
+          "ThreePA": 9,
+          "FTM": 0,
+          "FTA": 2,
+          "TwoPM": 4,
+          "TwoPA": 18,
+          "OffensiveRebounds": 5,
+          "DefensiveRebounds": 10,
+          "Rebounds": 15,
+          "Assists": 2,
+          "Steals": 9,
+          "Blocks": 0,
+          "Turnovers": 16,
+          "PersonalFouls": 13,
+          "Charges": 0,
+          "Deflections": 4
+        }
       },
       {
         "PlayerID": 202103,
-        "JerseyNumber": 12
+        "JerseyNumber": 12,
+        "Grade": 12,
+        "Positions": [
+          "PF",
+          "SG"
+        ],
+        "GamesPlayed": 9,
+        "SeasonTotals": {
+          "MinutesPlayed": 246,
+          "Points": 28,
+          "ThreePM": 2,
+          "ThreePA": 26,
+          "FTM": 0,
+          "FTA": 5,
+          "TwoPM": 11,
+          "TwoPA": 27,
+          "OffensiveRebounds": 8,
+          "DefensiveRebounds": 48,
+          "Rebounds": 56,
+          "Assists": 4,
+          "Steals": 9,
+          "Blocks": 35,
+          "Turnovers": 29,
+          "PersonalFouls": 19,
+          "Charges": 0,
+          "Deflections": 13
+        }
       },
       {
         "PlayerID": 202106,
@@ -89,19 +3410,118 @@
       },
       {
         "PlayerID": 202004,
-        "JerseyNumber": 15
+        "JerseyNumber": 15,
+        "Grade": 11,
+        "GamesPlayed": 8,
+        "SeasonTotals": {
+          "MinutesPlayed": 195,
+          "Points": 17,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 3,
+          "FTA": 6,
+          "TwoPM": 6,
+          "TwoPA": 27,
+          "OffensiveRebounds": 11,
+          "DefensiveRebounds": 24,
+          "Rebounds": 35,
+          "Assists": 1,
+          "Steals": 4,
+          "Blocks": 0,
+          "Turnovers": 14,
+          "PersonalFouls": 9,
+          "Charges": 0,
+          "Deflections": 8
+        }
       },
       {
         "PlayerID": 202104,
-        "JerseyNumber": 22
+        "JerseyNumber": 22,
+        "Grade": 12,
+        "Positions": [
+          "PG",
+          "SG"
+        ],
+        "GamesPlayed": 9,
+        "SeasonTotals": {
+          "MinutesPlayed": 238,
+          "Points": 114,
+          "ThreePM": 13,
+          "ThreePA": 57,
+          "FTM": 26,
+          "FTA": 34,
+          "TwoPM": 20,
+          "TwoPA": 79,
+          "OffensiveRebounds": 14,
+          "DefensiveRebounds": 34,
+          "Rebounds": 48,
+          "Assists": 22,
+          "Steals": 26,
+          "Blocks": 2,
+          "Turnovers": 74,
+          "PersonalFouls": 21,
+          "Charges": 1,
+          "Deflections": 18
+        }
       },
       {
         "PlayerID": 202405,
-        "JerseyNumber": 25
+        "JerseyNumber": 25,
+        "Grade": 9,
+        "Positions": [
+          "SF",
+          "SG"
+        ],
+        "GamesPlayed": 3,
+        "SeasonTotals": {
+          "MinutesPlayed": 3,
+          "Points": 0,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 0,
+          "FTA": 0,
+          "TwoPM": 0,
+          "TwoPA": 0,
+          "OffensiveRebounds": 0,
+          "DefensiveRebounds": 0,
+          "Rebounds": 0,
+          "Assists": 0,
+          "Steals": 0,
+          "Blocks": 0,
+          "Turnovers": 0,
+          "PersonalFouls": 0,
+          "Charges": 0,
+          "Deflections": 0
+        }
       },
       {
         "PlayerID": 202108,
-        "JerseyNumber": 33
+        "JerseyNumber": 33,
+        "Grade": 9,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 5,
+        "SeasonTotals": {
+          "MinutesPlayed": 43,
+          "Points": 4,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 0,
+          "FTA": 0,
+          "TwoPM": 1,
+          "TwoPA": 6,
+          "OffensiveRebounds": 4,
+          "DefensiveRebounds": 4,
+          "Rebounds": 8,
+          "Assists": 1,
+          "Steals": 1,
+          "Blocks": 0,
+          "Turnovers": 2,
+          "PersonalFouls": 2,
+          "Charges": 0,
+          "Deflections": 3
+        }
       },
       {
         "PlayerID": 202109,
@@ -114,7 +3534,29 @@
     "Players": [
       {
         "PlayerID": 202402,
-        "JerseyNumber": 1
+        "JerseyNumber": 1,
+        "Grade": 10,
+        "Positions": [
+          "SG",
+          "PG"
+        ],
+        "GamesPlayed": 4,
+        "SeasonTotals": {
+          "Points": 15,
+          "ThreePM": 0,
+          "ThreePA": 7,
+          "FTM": 5,
+          "FTA": 14,
+          "TwoPM": 3,
+          "TwoPA": 4,
+          "OffensiveRebounds": 1,
+          "DefensiveRebounds": 3,
+          "Rebounds": 4,
+          "Assists": 6,
+          "Steals": 5,
+          "Turnovers": 17,
+          "Deflections": 6
+        }
       },
       {
         "PlayerID": 202204,
@@ -126,11 +3568,55 @@
       },
       {
         "PlayerID": 202001,
-        "JerseyNumber": 5
+        "JerseyNumber": 5,
+        "Grade": 12,
+        "Positions": [
+          "SG",
+          "PG"
+        ],
+        "GamesPlayed": 4,
+        "SeasonTotals": {
+          "Points": 29,
+          "ThreePM": 5,
+          "ThreePA": 15,
+          "FTM": 7,
+          "FTA": 10,
+          "TwoPM": 0,
+          "TwoPA": 9,
+          "OffensiveRebounds": 2,
+          "DefensiveRebounds": 5,
+          "Rebounds": 7,
+          "Assists": 9,
+          "Steals": 5,
+          "Turnovers": 30,
+          "Charges": 1,
+          "Deflections": 15
+        }
       },
       {
         "PlayerID": 202002,
-        "JerseyNumber": 10
+        "JerseyNumber": 10,
+        "Grade": 12,
+        "Positions": [
+          "SG"
+        ],
+        "GamesPlayed": 3,
+        "SeasonTotals": {
+          "Points": 25,
+          "ThreePM": 2,
+          "ThreePA": 16,
+          "FTM": 5,
+          "FTA": 9,
+          "TwoPM": 7,
+          "TwoPA": 22,
+          "OffensiveRebounds": 14,
+          "DefensiveRebounds": 10,
+          "Rebounds": 24,
+          "Assists": 6,
+          "Steals": 17,
+          "Turnovers": 25,
+          "Deflections": 17
+        }
       },
       {
         "PlayerID": 202102,
@@ -138,11 +3624,47 @@
       },
       {
         "PlayerID": 202404,
-        "JerseyNumber": 11
+        "JerseyNumber": 11,
+        "Grade": 10,
+        "Positions": [
+          "PG",
+          "SG"
+        ],
+        "GamesPlayed": 3,
+        "SeasonTotals": {
+          "Points": 22,
+          "ThreePM": 4,
+          "ThreePA": 35,
+          "FTM": 2,
+          "FTA": 6,
+          "TwoPM": 4,
+          "TwoPA": 7,
+          "OffensiveRebounds": 7,
+          "DefensiveRebounds": 14,
+          "Rebounds": 21,
+          "Assists": 0,
+          "Steals": 9,
+          "Turnovers": 12,
+          "Deflections": 7
+        }
       },
       {
         "PlayerID": 202003,
-        "JerseyNumber": 12
+        "JerseyNumber": 12,
+        "Grade": 12,
+        "GamesPlayed": 2,
+        "SeasonTotals": {
+          "Points": 8,
+          "TwoPM": 4,
+          "TwoPA": 8,
+          "OffensiveRebounds": 6,
+          "DefensiveRebounds": 4,
+          "Rebounds": 10,
+          "Steals": 2,
+          "Blocks": 2,
+          "Turnovers": 4,
+          "Deflections": 3
+        }
       },
       {
         "PlayerID": 202205,
@@ -150,19 +3672,78 @@
       },
       {
         "PlayerID": 202004,
-        "JerseyNumber": 15
+        "JerseyNumber": 15,
+        "Grade": 12,
+        "GamesPlayed": 1,
+        "SeasonTotals": {
+          "Points": 2,
+          "TwoPM": 1,
+          "TwoPA": 3,
+          "OffensiveRebounds": 3,
+          "Rebounds": 3,
+          "Turnovers": 1
+        }
       },
       {
         "PlayerID": 202202,
-        "JerseyNumber": 15
+        "JerseyNumber": 15,
+        "Grade": 9,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 3,
+        "SeasonTotals": {
+          "Points": 4,
+          "TwoPM": 1,
+          "TwoPA": 4,
+          "OffensiveRebounds": 3,
+          "DefensiveRebounds": 3,
+          "Rebounds": 6,
+          "Blocks": 1,
+          "Turnovers": 2
+        }
       },
       {
         "PlayerID": 202101,
-        "JerseyNumber": 21
+        "JerseyNumber": 21,
+        "Grade": 11,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 4,
+        "SeasonTotals": {
+          "Points": 8,
+          "FTM": 4,
+          "FTA": 7,
+          "TwoPM": 1,
+          "TwoPA": 2,
+          "OffensiveRebounds": 2,
+          "DefensiveRebounds": 4,
+          "Rebounds": 6,
+          "Steals": 4,
+          "Blocks": 1,
+          "Turnovers": 10,
+          "Deflections": 4
+        }
       },
       {
         "PlayerID": 202203,
-        "JerseyNumber": 22
+        "JerseyNumber": 22,
+        "Grade": 9,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 3,
+        "SeasonTotals": {
+          "Points": 3,
+          "FTM": 1,
+          "FTA": 2,
+          "OffensiveRebounds": 3,
+          "DefensiveRebounds": 3,
+          "Rebounds": 6,
+          "Turnovers": 8,
+          "Charges": 1
+        }
       },
       {
         "PlayerID": 202405,
@@ -179,47 +3760,310 @@
     "Players": [
       {
         "PlayerID": 202402,
-        "JerseyNumber": 1
+        "JerseyNumber": 1,
+        "Grade": 11,
+        "Positions": [
+          "SG",
+          "PG"
+        ],
+        "GamesPlayed": 22,
+        "SeasonTotals": {
+          "Points": 81,
+          "ThreePM": 2,
+          "ThreePA": 24,
+          "FTM": 29,
+          "FTA": 78,
+          "TwoPM": 23,
+          "TwoPA": 70,
+          "OffensiveRebounds": 8,
+          "DefensiveRebounds": 70,
+          "Rebounds": 78,
+          "Assists": 83,
+          "Steals": 46,
+          "Blocks": 6,
+          "Turnovers": 150,
+          "PersonalFouls": 62,
+          "Charges": 2,
+          "Deflections": 71
+        }
       },
       {
         "PlayerID": 202301,
-        "JerseyNumber": 2
+        "JerseyNumber": 2,
+        "Grade": 8,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 19,
+        "SeasonTotals": {
+          "Points": 44,
+          "ThreePM": 6,
+          "ThreePA": 34,
+          "FTM": 2,
+          "FTA": 8,
+          "TwoPM": 12,
+          "TwoPA": 39,
+          "OffensiveRebounds": 6,
+          "DefensiveRebounds": 26,
+          "Rebounds": 32,
+          "Assists": 17,
+          "Steals": 11,
+          "Blocks": 0,
+          "Turnovers": 53,
+          "PersonalFouls": 27,
+          "Charges": 0,
+          "Deflections": 18
+        }
       },
       {
         "PlayerID": 202403,
-        "JerseyNumber": 5
+        "JerseyNumber": 5,
+        "Grade": 9,
+        "Positions": [
+          "F",
+          "G"
+        ],
+        "GamesPlayed": 21,
+        "SeasonTotals": {
+          "Points": 24,
+          "ThreePM": 1,
+          "ThreePA": 10,
+          "FTM": 7,
+          "FTA": 14,
+          "TwoPM": 7,
+          "TwoPA": 30,
+          "OffensiveRebounds": 7,
+          "DefensiveRebounds": 27,
+          "Rebounds": 34,
+          "Assists": 5,
+          "Steals": 13,
+          "Blocks": 2,
+          "Turnovers": 42,
+          "PersonalFouls": 16,
+          "Charges": 0,
+          "Deflections": 19
+        }
       },
       {
         "PlayerID": 202404,
-        "JerseyNumber": 11
+        "JerseyNumber": 11,
+        "Grade": 11,
+        "Positions": [
+          "PG",
+          "SG"
+        ],
+        "GamesPlayed": 23,
+        "SeasonTotals": {
+          "Points": 133,
+          "ThreePM": 27,
+          "ThreePA": 138,
+          "FTM": 20,
+          "FTA": 33,
+          "TwoPM": 16,
+          "TwoPA": 52,
+          "OffensiveRebounds": 10,
+          "DefensiveRebounds": 36,
+          "Rebounds": 46,
+          "Assists": 14,
+          "Steals": 30,
+          "Blocks": 5,
+          "Turnovers": 77,
+          "PersonalFouls": 45,
+          "Charges": 0,
+          "Deflections": 38
+        }
       },
       {
         "PlayerID": 202201,
-        "JerseyNumber": 12
+        "JerseyNumber": 12,
+        "Grade": 9,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 21,
+        "SeasonTotals": {
+          "Points": 69,
+          "ThreePM": 4,
+          "ThreePA": 15,
+          "FTM": 9,
+          "FTA": 13,
+          "TwoPM": 24,
+          "TwoPA": 81,
+          "OffensiveRebounds": 21,
+          "DefensiveRebounds": 38,
+          "Rebounds": 59,
+          "Assists": 9,
+          "Steals": 20,
+          "Blocks": 2,
+          "Turnovers": 68,
+          "PersonalFouls": 29,
+          "Charges": 4,
+          "Deflections": 31
+        }
       },
       {
         "PlayerID": 202303,
-        "JerseyNumber": 14
+        "JerseyNumber": 14,
+        "Grade": 8,
+        "Positions": [
+          "SF",
+          "PF"
+        ],
+        "GamesPlayed": 8,
+        "SeasonTotals": {
+          "Points": 7,
+          "ThreePM": 0,
+          "ThreePA": 1,
+          "FTM": 1,
+          "FTA": 1,
+          "TwoPM": 3,
+          "TwoPA": 13,
+          "OffensiveRebounds": 6,
+          "DefensiveRebounds": 3,
+          "Rebounds": 9,
+          "Assists": 0,
+          "Steals": 2,
+          "Blocks": 0,
+          "Turnovers": 8,
+          "PersonalFouls": 2,
+          "Charges": 0,
+          "Deflections": 0
+        }
       },
       {
         "PlayerID": 202202,
-        "JerseyNumber": 15
+        "JerseyNumber": 15,
+        "Grade": 10,
+        "GamesPlayed": 17,
+        "SeasonTotals": {
+          "Points": 71,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 13,
+          "FTA": 32,
+          "TwoPM": 29,
+          "TwoPA": 76,
+          "OffensiveRebounds": 42,
+          "DefensiveRebounds": 53,
+          "Rebounds": 95,
+          "Assists": 9,
+          "Steals": 26,
+          "Blocks": 1,
+          "Turnovers": 51,
+          "PersonalFouls": 24,
+          "Charges": 2,
+          "Deflections": 37
+        }
       },
       {
         "PlayerID": 202101,
-        "JerseyNumber": 21
+        "JerseyNumber": 21,
+        "Grade": 12,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 23,
+        "SeasonTotals": {
+          "Points": 170,
+          "ThreePM": 1,
+          "ThreePA": 3,
+          "FTM": 28,
+          "FTA": 57,
+          "TwoPM": 70,
+          "TwoPA": 208,
+          "OffensiveRebounds": 66,
+          "DefensiveRebounds": 96,
+          "Rebounds": 162,
+          "Assists": 7,
+          "Steals": 40,
+          "Blocks": 6,
+          "Turnovers": 75,
+          "PersonalFouls": 38,
+          "Charges": 1,
+          "Deflections": 43
+        }
       },
       {
         "PlayerID": 202302,
-        "JerseyNumber": 21
+        "JerseyNumber": 21,
+        "Grade": 9,
+        "GamesPlayed": 13,
+        "SeasonTotals": {
+          "Points": 6,
+          "ThreePM": 1,
+          "ThreePA": 13,
+          "FTM": 1,
+          "FTA": 2,
+          "TwoPM": 1,
+          "TwoPA": 8,
+          "OffensiveRebounds": 2,
+          "DefensiveRebounds": 3,
+          "Rebounds": 5,
+          "Assists": 1,
+          "Steals": 3,
+          "Blocks": 0,
+          "Turnovers": 4,
+          "PersonalFouls": 2,
+          "Charges": 1,
+          "Deflections": 2
+        }
       },
       {
         "PlayerID": 202203,
-        "JerseyNumber": 22
+        "JerseyNumber": 22,
+        "Grade": 10,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 20,
+        "SeasonTotals": {
+          "Points": 80,
+          "ThreePM": 0,
+          "ThreePA": 11,
+          "FTM": 16,
+          "FTA": 30,
+          "TwoPM": 32,
+          "TwoPA": 125,
+          "OffensiveRebounds": 34,
+          "DefensiveRebounds": 40,
+          "Rebounds": 74,
+          "Assists": 10,
+          "Steals": 20,
+          "Blocks": 0,
+          "Turnovers": 74,
+          "PersonalFouls": 14,
+          "Charges": 3,
+          "Deflections": 22
+        }
       },
       {
         "PlayerID": 202405,
-        "JerseyNumber": 25
+        "JerseyNumber": 25,
+        "Grade": 11,
+        "Positions": [
+          "SF",
+          "SG"
+        ],
+        "GamesPlayed": 15,
+        "SeasonTotals": {
+          "Points": 3,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 1,
+          "FTA": 2,
+          "TwoPM": 1,
+          "TwoPA": 9,
+          "OffensiveRebounds": 5,
+          "DefensiveRebounds": 4,
+          "Rebounds": 9,
+          "Assists": 4,
+          "Steals": 6,
+          "Blocks": 0,
+          "Turnovers": 9,
+          "PersonalFouls": 8,
+          "Charges": 0,
+          "Deflections": 2
+        }
       },
       {
         "PlayerID": 202304,
@@ -232,47 +4076,310 @@
     "Players": [
       {
         "PlayerID": 202402,
-        "JerseyNumber": 1
+        "JerseyNumber": 1,
+        "Grade": 12,
+        "Positions": [
+          "G",
+          "F"
+        ],
+        "GamesPlayed": 15,
+        "SeasonTotals": {
+          "Points": 22,
+          "ThreePM": 0,
+          "ThreePA": 8,
+          "FTM": 10,
+          "FTA": 18,
+          "TwoPM": 6,
+          "TwoPA": 39,
+          "OffensiveRebounds": 8,
+          "DefensiveRebounds": 55,
+          "Rebounds": 63,
+          "Assists": 26,
+          "Steals": 20,
+          "Blocks": 3,
+          "Turnovers": 57,
+          "PersonalFouls": 43,
+          "Charges": 1,
+          "Deflections": 33
+        }
       },
       {
         "PlayerID": 202301,
-        "JerseyNumber": 2
+        "JerseyNumber": 2,
+        "Grade": 9,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 22,
+        "SeasonTotals": {
+          "Points": 138,
+          "ThreePM": 10,
+          "ThreePA": 84,
+          "FTM": 44,
+          "FTA": 84,
+          "TwoPM": 32,
+          "TwoPA": 117,
+          "OffensiveRebounds": 16,
+          "DefensiveRebounds": 58,
+          "Rebounds": 74,
+          "Assists": 51,
+          "Steals": 29,
+          "Blocks": 1,
+          "Turnovers": 133,
+          "PersonalFouls": 33,
+          "Charges": 0,
+          "Deflections": 30
+        }
       },
       {
         "PlayerID": 202403,
-        "JerseyNumber": 5
+        "JerseyNumber": 5,
+        "Grade": 10,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 22,
+        "SeasonTotals": {
+          "Points": 68,
+          "ThreePM": 0,
+          "ThreePA": 3,
+          "FTM": 12,
+          "FTA": 39,
+          "TwoPM": 28,
+          "TwoPA": 89,
+          "OffensiveRebounds": 36,
+          "DefensiveRebounds": 59,
+          "Rebounds": 95,
+          "Assists": 22,
+          "Steals": 13,
+          "Blocks": 3,
+          "Turnovers": 86,
+          "PersonalFouls": 45,
+          "Charges": 4,
+          "Deflections": 31
+        }
       },
       {
         "PlayerID": 202401,
-        "JerseyNumber": 10
+        "JerseyNumber": 10,
+        "Grade": 9,
+        "GamesPlayed": 10,
+        "SeasonTotals": {
+          "Points": 10,
+          "ThreePM": 0,
+          "ThreePA": 4,
+          "FTM": 2,
+          "FTA": 7,
+          "TwoPM": 4,
+          "TwoPA": 8,
+          "OffensiveRebounds": 4,
+          "DefensiveRebounds": 3,
+          "Rebounds": 7,
+          "Assists": 1,
+          "Steals": 0,
+          "Blocks": 0,
+          "Turnovers": 7,
+          "PersonalFouls": 0,
+          "Charges": 0,
+          "Deflections": 3
+        }
       },
       {
         "PlayerID": 202404,
-        "JerseyNumber": 11
+        "JerseyNumber": 11,
+        "Grade": 12,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 19,
+        "SeasonTotals": {
+          "Points": 84,
+          "ThreePM": 22,
+          "ThreePA": 98,
+          "FTM": 0,
+          "FTA": 0,
+          "TwoPM": 9,
+          "TwoPA": 24,
+          "OffensiveRebounds": 6,
+          "DefensiveRebounds": 35,
+          "Rebounds": 41,
+          "Assists": 5,
+          "Steals": 23,
+          "Blocks": 1,
+          "Turnovers": 30,
+          "PersonalFouls": 33,
+          "Charges": 1,
+          "Deflections": 18
+        }
       },
       {
         "PlayerID": 202201,
-        "JerseyNumber": 12
+        "JerseyNumber": 12,
+        "Grade": 10,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 21,
+        "SeasonTotals": {
+          "Points": 83,
+          "ThreePM": 0,
+          "ThreePA": 9,
+          "FTM": 11,
+          "FTA": 30,
+          "TwoPM": 36,
+          "TwoPA": 115,
+          "OffensiveRebounds": 28,
+          "DefensiveRebounds": 74,
+          "Rebounds": 102,
+          "Assists": 22,
+          "Steals": 32,
+          "Blocks": 3,
+          "Turnovers": 87,
+          "PersonalFouls": 32,
+          "Charges": 1,
+          "Deflections": 41
+        }
       },
       {
         "PlayerID": 202202,
-        "JerseyNumber": 15
+        "JerseyNumber": 15,
+        "Grade": 11,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 22,
+        "SeasonTotals": {
+          "Points": 86,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 24,
+          "FTA": 50,
+          "TwoPM": 31,
+          "TwoPA": 92,
+          "OffensiveRebounds": 47,
+          "DefensiveRebounds": 64,
+          "Rebounds": 111,
+          "Assists": 21,
+          "Steals": 30,
+          "Blocks": 6,
+          "Turnovers": 57,
+          "PersonalFouls": 47,
+          "Charges": 6,
+          "Deflections": 54
+        }
       },
       {
         "PlayerID": 202302,
-        "JerseyNumber": 21
+        "JerseyNumber": 21,
+        "Grade": 10,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 22,
+        "SeasonTotals": {
+          "Points": 91,
+          "ThreePM": 8,
+          "ThreePA": 60,
+          "FTM": 7,
+          "FTA": 14,
+          "TwoPM": 30,
+          "TwoPA": 77,
+          "OffensiveRebounds": 21,
+          "DefensiveRebounds": 30,
+          "Rebounds": 51,
+          "Assists": 7,
+          "Steals": 13,
+          "Blocks": 0,
+          "Turnovers": 44,
+          "PersonalFouls": 11,
+          "Charges": 1,
+          "Deflections": 14
+        }
       },
       {
         "PlayerID": 202203,
-        "JerseyNumber": 22
+        "JerseyNumber": 22,
+        "Grade": 11,
+        "Positions": [
+          "F",
+          "G"
+        ],
+        "GamesPlayed": 22,
+        "SeasonTotals": {
+          "Points": 80,
+          "ThreePM": 7,
+          "ThreePA": 51,
+          "FTM": 9,
+          "FTA": 17,
+          "TwoPM": 25,
+          "TwoPA": 97,
+          "OffensiveRebounds": 27,
+          "DefensiveRebounds": 43,
+          "Rebounds": 70,
+          "Assists": 17,
+          "Steals": 17,
+          "Blocks": 2,
+          "Turnovers": 74,
+          "PersonalFouls": 13,
+          "Charges": 1,
+          "Deflections": 11
+        }
       },
       {
         "PlayerID": 202405,
-        "JerseyNumber": 25
+        "JerseyNumber": 25,
+        "Grade": 12,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 19,
+        "SeasonTotals": {
+          "Points": 13,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 3,
+          "FTA": 9,
+          "TwoPM": 5,
+          "TwoPA": 14,
+          "OffensiveRebounds": 12,
+          "DefensiveRebounds": 18,
+          "Rebounds": 30,
+          "Assists": 1,
+          "Steals": 6,
+          "Blocks": 0,
+          "Turnovers": 13,
+          "PersonalFouls": 3,
+          "Charges": 0,
+          "Deflections": 4
+        }
       },
       {
         "PlayerID": 202406,
-        "JerseyNumber": 35
+        "JerseyNumber": 35,
+        "Grade": 10,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 10,
+        "SeasonTotals": {
+          "Points": 0,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 0,
+          "FTA": 0,
+          "TwoPM": 0,
+          "TwoPA": 5,
+          "OffensiveRebounds": 2,
+          "DefensiveRebounds": 1,
+          "Rebounds": 3,
+          "Assists": 1,
+          "Steals": 2,
+          "Blocks": 0,
+          "Turnovers": 2,
+          "PersonalFouls": 2,
+          "Charges": 0,
+          "Deflections": 3
+        }
       }
     ]
   },
@@ -280,56 +4387,439 @@
     "SeasonID": "2025-26",
     "Players": [
       {
-        "PlayerID": 202201,
-        "JerseyNumber": 12
-      },
-      {
-        "PlayerID": 202202,
-        "JerseyNumber": 15
-      },
-      {
-        "PlayerID": 202203,
-        "JerseyNumber": 22
+        "PlayerID": 202501,
+        "JerseyNumber": 1,
+        "Grade": 9,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 26,
+        "SeasonTotals": {
+          "MinutesPlayed": 24,
+          "Points": 342,
+          "ThreePM": 21,
+          "ThreePA": 76,
+          "FTM": 80,
+          "FTA": 136,
+          "TwoPM": 89,
+          "TwoPA": 197,
+          "OffensiveRebounds": 38,
+          "DefensiveRebounds": 66,
+          "Rebounds": 122,
+          "Assists": 39,
+          "Steals": 94,
+          "Blocks": 9,
+          "Turnovers": 90,
+          "PersonalFouls": 40,
+          "Charges": 1,
+          "Deflections": 108
+        }
       },
       {
         "PlayerID": 202301,
-        "JerseyNumber": 2
-      },
-      {
-        "PlayerID": 202302,
-        "JerseyNumber": 11
-      },
-      {
-        "PlayerID": 202401,
-        "JerseyNumber": 10
-      },
-      {
-        "PlayerID": 202501,
-        "JerseyNumber": 1
-      },
-      {
-        "PlayerID": 202502,
-        "JerseyNumber": 5
-      },
-      {
-        "PlayerID": 202503,
-        "JerseyNumber": 21
-      },
-      {
-        "PlayerID": 202504,
-        "JerseyNumber": 23
-      },
-      {
-        "PlayerID": 202505,
-        "JerseyNumber": 24
+        "JerseyNumber": 2,
+        "Grade": 10,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 28,
+        "SeasonTotals": {
+          "MinutesPlayed": 35,
+          "Points": 266,
+          "ThreePM": 18,
+          "ThreePA": 106,
+          "FTM": 54,
+          "FTA": 103,
+          "TwoPM": 68,
+          "TwoPA": 162,
+          "OffensiveRebounds": 46,
+          "DefensiveRebounds": 161,
+          "Rebounds": 247,
+          "Assists": 93,
+          "Steals": 66,
+          "Blocks": 3,
+          "Turnovers": 111,
+          "PersonalFouls": 47,
+          "Charges": 0,
+          "Deflections": 69
+        }
       },
       {
         "PlayerID": 202506,
         "JerseyNumber": 3
       },
       {
+        "PlayerID": 202508,
+        "JerseyNumber": 4,
+        "Grade": 8
+      },
+      {
+        "PlayerID": 202502,
+        "JerseyNumber": 5,
+        "Grade": 10,
+        "Positions": [
+          "F",
+          "G"
+        ],
+        "GamesPlayed": 15,
+        "SeasonTotals": {
+          "MinutesPlayed": 27,
+          "Points": 114,
+          "ThreePM": 1,
+          "ThreePA": 8,
+          "FTM": 12,
+          "FTA": 34,
+          "TwoPM": 44,
+          "TwoPA": 97,
+          "OffensiveRebounds": 37,
+          "DefensiveRebounds": 65,
+          "Rebounds": 119,
+          "Assists": 21,
+          "Steals": 29,
+          "Blocks": 17,
+          "Turnovers": 45,
+          "PersonalFouls": 29,
+          "Charges": 1,
+          "Deflections": 30
+        }
+      },
+      {
+        "PlayerID": 202401,
+        "JerseyNumber": 10,
+        "Grade": 10,
+        "Positions": [
+          "G",
+          "F"
+        ],
+        "GamesPlayed": 13,
+        "SeasonTotals": {
+          "Points": 3,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 3,
+          "FTA": 7,
+          "TwoPM": 0,
+          "TwoPA": 8,
+          "OffensiveRebounds": 5,
+          "DefensiveRebounds": 7,
+          "Rebounds": 19,
+          "Assists": 2,
+          "Steals": 5,
+          "Blocks": 0,
+          "Turnovers": 12,
+          "PersonalFouls": 13,
+          "Charges": 0,
+          "Deflections": 10
+        }
+      },
+      {
+        "PlayerID": 202302,
+        "JerseyNumber": 11,
+        "Grade": 11,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 25,
+        "SeasonTotals": {
+          "MinutesPlayed": 16,
+          "Points": 147,
+          "ThreePM": 30,
+          "ThreePA": 115,
+          "FTM": 11,
+          "FTA": 16,
+          "TwoPM": 20,
+          "TwoPA": 64,
+          "OffensiveRebounds": 22,
+          "DefensiveRebounds": 26,
+          "Rebounds": 59,
+          "Assists": 25,
+          "Steals": 16,
+          "Blocks": 0,
+          "Turnovers": 40,
+          "PersonalFouls": 22,
+          "Charges": 0,
+          "Deflections": 17
+        }
+      },
+      {
+        "PlayerID": 202201,
+        "JerseyNumber": 12,
+        "Grade": 11,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 23,
+        "SeasonTotals": {
+          "MinutesPlayed": 14,
+          "Points": 64,
+          "ThreePM": 11,
+          "ThreePA": 35,
+          "FTM": 5,
+          "FTA": 11,
+          "TwoPM": 11,
+          "TwoPA": 41,
+          "OffensiveRebounds": 29,
+          "DefensiveRebounds": 38,
+          "Rebounds": 84,
+          "Assists": 24,
+          "Steals": 32,
+          "Blocks": 3,
+          "Turnovers": 59,
+          "PersonalFouls": 38,
+          "Charges": 1,
+          "Deflections": 36
+        }
+      },
+      {
         "PlayerID": 202507,
-        "JerseyNumber": 14
+        "JerseyNumber": 14,
+        "Grade": 8,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 11,
+        "SeasonTotals": {
+          "MinutesPlayed": 3,
+          "Points": 12,
+          "ThreePM": 0,
+          "ThreePA": 1,
+          "FTM": 4,
+          "FTA": 12,
+          "TwoPM": 4,
+          "TwoPA": 20,
+          "OffensiveRebounds": 22,
+          "DefensiveRebounds": 11,
+          "Rebounds": 33,
+          "Assists": 2,
+          "Steals": 10,
+          "Blocks": 10,
+          "Turnovers": 5,
+          "PersonalFouls": 6,
+          "Charges": 0,
+          "Deflections": 12
+        }
+      },
+      {
+        "PlayerID": 202202,
+        "JerseyNumber": 15,
+        "Grade": 12,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 16,
+        "SeasonTotals": {
+          "MinutesPlayed": 13,
+          "Points": 42,
+          "ThreePM": 0,
+          "ThreePA": 2,
+          "FTM": 12,
+          "FTA": 21,
+          "TwoPM": 15,
+          "TwoPA": 41,
+          "OffensiveRebounds": 29,
+          "DefensiveRebounds": 23,
+          "Rebounds": 48,
+          "Assists": 11,
+          "Steals": 10,
+          "Blocks": 6,
+          "Turnovers": 17,
+          "PersonalFouls": 24,
+          "Charges": 1,
+          "Deflections": 17
+        }
+      },
+      {
+        "PlayerID": 202503,
+        "JerseyNumber": 21,
+        "Grade": 8,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 26,
+        "SeasonTotals": {
+          "MinutesPlayed": 19,
+          "Points": 72,
+          "ThreePM": 14,
+          "ThreePA": 81,
+          "FTM": 4,
+          "FTA": 7,
+          "TwoPM": 9,
+          "TwoPA": 38,
+          "OffensiveRebounds": 12,
+          "DefensiveRebounds": 17,
+          "Rebounds": 32,
+          "Assists": 17,
+          "Steals": 23,
+          "Blocks": 3,
+          "Turnovers": 36,
+          "PersonalFouls": 23,
+          "Charges": 0,
+          "Deflections": 22
+        }
+      },
+      {
+        "PlayerID": 202203,
+        "JerseyNumber": 22,
+        "Grade": 12,
+        "Positions": [
+          "G",
+          "F"
+        ],
+        "GamesPlayed": 28,
+        "SeasonTotals": {
+          "MinutesPlayed": 22,
+          "Points": 164,
+          "ThreePM": 21,
+          "ThreePA": 90,
+          "FTM": 19,
+          "FTA": 34,
+          "TwoPM": 37,
+          "TwoPA": 103,
+          "OffensiveRebounds": 29,
+          "DefensiveRebounds": 47,
+          "Rebounds": 81,
+          "Assists": 17,
+          "Steals": 24,
+          "Blocks": 3,
+          "Turnovers": 68,
+          "PersonalFouls": 35,
+          "Charges": 1,
+          "Deflections": 47
+        }
+      },
+      {
+        "PlayerID": 202504,
+        "JerseyNumber": 23,
+        "Grade": 9,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 22,
+        "SeasonTotals": {
+          "MinutesPlayed": 3,
+          "Points": 23,
+          "ThreePM": 2,
+          "ThreePA": 4,
+          "FTM": 7,
+          "FTA": 9,
+          "TwoPM": 4,
+          "TwoPA": 16,
+          "OffensiveRebounds": 16,
+          "DefensiveRebounds": 23,
+          "Rebounds": 40,
+          "Assists": 1,
+          "Steals": 6,
+          "Blocks": 0,
+          "Turnovers": 26,
+          "PersonalFouls": 9,
+          "Charges": 0,
+          "Deflections": 6
+        }
+      },
+      {
+        "PlayerID": 202505,
+        "JerseyNumber": 24,
+        "Grade": 9,
+        "Positions": [
+          "SG",
+          "W"
+        ],
+        "GamesPlayed": 17,
+        "SeasonTotals": {
+          "MinutesPlayed": 2,
+          "Points": 24,
+          "ThreePM": 5,
+          "ThreePA": 38,
+          "FTM": 3,
+          "FTA": 5,
+          "TwoPM": 3,
+          "TwoPA": 10,
+          "OffensiveRebounds": 3,
+          "DefensiveRebounds": 9,
+          "Rebounds": 13,
+          "Assists": 3,
+          "Steals": 8,
+          "Blocks": 2,
+          "Turnovers": 23,
+          "PersonalFouls": 5,
+          "Charges": 0,
+          "Deflections": 15
+        }
+      },
+      {
+        "PlayerID": 202509,
+        "JerseyNumber": 25,
+        "Grade": 9,
+        "GamesPlayed": 1,
+        "SeasonTotals": {
+          "Points": 0,
+          "ThreePM": 0,
+          "ThreePA": 1,
+          "FTM": 0,
+          "FTA": 0,
+          "TwoPM": 0,
+          "TwoPA": 0,
+          "OffensiveRebounds": 0,
+          "DefensiveRebounds": 0,
+          "Rebounds": 0,
+          "Assists": 0,
+          "Steals": 0,
+          "Blocks": 0,
+          "Turnovers": 0,
+          "PersonalFouls": 0,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 202510,
+        "JerseyNumber": 33,
+        "Grade": 9,
+        "GamesPlayed": 1,
+        "SeasonTotals": {
+          "Points": 0,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 0,
+          "FTA": 0,
+          "TwoPM": 0,
+          "TwoPA": 0,
+          "OffensiveRebounds": 0,
+          "DefensiveRebounds": 1,
+          "Rebounds": 1,
+          "Assists": 0,
+          "Steals": 0,
+          "Blocks": 0,
+          "Turnovers": 0,
+          "PersonalFouls": 0,
+          "Charges": 0,
+          "Deflections": 0
+        }
+      },
+      {
+        "PlayerID": 202511,
+        "JerseyNumber": 34,
+        "Grade": 10,
+        "GamesPlayed": 1,
+        "SeasonTotals": {
+          "Points": 0,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 0,
+          "FTA": 0,
+          "TwoPM": 0,
+          "TwoPA": 0,
+          "OffensiveRebounds": 0,
+          "DefensiveRebounds": 0,
+          "Rebounds": 0,
+          "Assists": 0,
+          "Steals": 0,
+          "Blocks": 0,
+          "Turnovers": 0,
+          "PersonalFouls": 0,
+          "Charges": 0,
+          "Deflections": 0
+        }
       }
     ]
   }

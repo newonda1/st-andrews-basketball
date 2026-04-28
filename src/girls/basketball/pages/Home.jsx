@@ -8,6 +8,18 @@ function Home() {
       to: "/athletics/girls/basketball/seasons/2025-26",
     },
     {
+      label: "2019-20 Season",
+      to: "/athletics/girls/basketball/seasons/2019-20",
+    },
+    {
+      label: "2017-18 Season",
+      to: "/athletics/girls/basketball/seasons/2017-18",
+    },
+    {
+      label: "2009-10 Season",
+      to: "/athletics/girls/basketball/seasons/2009-10",
+    },
+    {
       label: "2021-22 Season",
       to: "/athletics/girls/basketball/seasons/2021-22",
     },
@@ -49,8 +61,8 @@ function Home() {
           </h1>
           <p className="mb-5 text-[1rem] leading-[1.65] text-[var(--stats-body-color)]">
             The girls basketball section now connects season pages from 2020-21
-            through the current archive, with historical results, rosters, box
-            scores, and records continuing to grow.
+            through the current archive, plus MaxPreps historical seasons back
+            to 2006-07 where schedule, roster, and stat data is available.
           </p>
           <p className="m-0 text-[1rem] leading-[1.65] text-[var(--stats-body-color)]">
             Current pages connect game recaps, team totals, player pages, and
@@ -68,8 +80,8 @@ function Home() {
           <div className="space-y-5 text-[0.98rem] leading-[1.65] text-[var(--stats-body-color)]">
             <p className="m-0">
               Full girls basketball season pages are now live from 2020-21
-              through 2025-26, with schedule results, recaps, player totals, and
-              box-score links connected to the larger stats system.
+              through 2025-26, with MaxPreps archive pages now connected for
+              2006-07 through 2019-20.
             </p>
             <p className="m-0">
               As older seasons are added, they will flow into the same year-by-

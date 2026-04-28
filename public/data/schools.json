@@ -1444,5 +1444,186 @@
     "City": "Spartanburg",
     "State": "SC",
     "Mascot": "Griffins"
+  },
+  {
+    "SchoolID": "ga-cathedral-academy-decatur",
+    "Name": "Cathedral Academy",
+    "City": "Decatur",
+    "State": "GA"
+  },
+  {
+    "SchoolID": "sc-thomas-sumter-academy-dalzell",
+    "Name": "Thomas Sumter Academy",
+    "City": "Dalzell",
+    "State": "SC",
+    "Mascot": "Generals"
+  },
+  {
+    "SchoolID": "ga-faith-baptist-christian-academy-ludowici",
+    "Name": "Faith Baptist Christian Academy",
+    "City": "Ludowici",
+    "State": "GA",
+    "Mascot": "Crusaders"
+  },
+  {
+    "SchoolID": "ar-abundant-life-north-little-rock",
+    "Name": "Abundant Life",
+    "City": "North Little Rock",
+    "State": "AR",
+    "Mascot": "Owls"
+  },
+  {
+    "SchoolID": "ga-savannah-christian-savannah",
+    "Name": "Savannah Christian",
+    "City": "Savannah",
+    "State": "GA",
+    "Mascot": "Raiders"
+  },
+  {
+    "SchoolID": "ga-savannah-country-day-savannah",
+    "Name": "Savannah Country Day",
+    "City": "Savannah",
+    "State": "GA",
+    "Mascot": "Hornets"
+  },
+  {
+    "SchoolID": "ga-st-vincent-s-savannah",
+    "Name": "St. Vincent's",
+    "City": "Savannah",
+    "State": "GA",
+    "Mascot": "Saints"
+  },
+  {
+    "SchoolID": "ga-young-americans-christian-conyers",
+    "Name": "Young Americans Christian",
+    "City": "Conyers",
+    "State": "GA",
+    "Mascot": "Eagles"
+  },
+  {
+    "SchoolID": "ga-brentwood-sandersville",
+    "Name": "Brentwood",
+    "City": "Sandersville",
+    "State": "GA",
+    "Mascot": "War Eagles"
+  },
+  {
+    "SchoolID": "ga-islands-savannah",
+    "Name": "Islands",
+    "City": "Savannah",
+    "State": "GA",
+    "Mascot": "Sharks"
+  },
+  {
+    "SchoolID": "ga-trinity-christian-dublin",
+    "Name": "Trinity Christian",
+    "City": "Dublin",
+    "State": "GA",
+    "Mascot": "Crusaders"
+  },
+  {
+    "SchoolID": "ga-westfield-school-perry-2",
+    "Name": "Westfield School",
+    "City": "Perry",
+    "State": "GA",
+    "Mascot": "Hornets"
+  },
+  {
+    "SchoolID": "ga-jenkins-savannah",
+    "Name": "Jenkins",
+    "City": "Savannah",
+    "State": "GA",
+    "Mascot": "Warriors"
+  },
+  {
+    "SchoolID": "ga-south-effingham-guyton",
+    "Name": "South Effingham",
+    "City": "Guyton",
+    "State": "GA",
+    "Mascot": "Mustangs"
+  },
+  {
+    "SchoolID": "ga-new-hampstead-savannah",
+    "Name": "New Hampstead",
+    "City": "Savannah",
+    "State": "GA",
+    "Mascot": "Phoenixes"
+  },
+  {
+    "SchoolID": "sc-may-river-bluffton",
+    "Name": "May River",
+    "City": "Bluffton",
+    "State": "SC",
+    "Mascot": "Sharks"
+  },
+  {
+    "SchoolID": "ga-statesboro-statesboro",
+    "Name": "Statesboro",
+    "City": "Statesboro",
+    "State": "GA",
+    "Mascot": "Blue Devils"
+  },
+  {
+    "SchoolID": "sc-cross-bluffton",
+    "Name": "Cross",
+    "City": "Bluffton",
+    "State": "SC",
+    "Mascot": "Stingrays"
+  },
+  {
+    "SchoolID": "ga-effingham-county-springfield",
+    "Name": "Effingham County",
+    "City": "Springfield",
+    "State": "GA",
+    "Mascot": "Rebels"
+  },
+  {
+    "SchoolID": "ga-charlton-county-folkston",
+    "Name": "Charlton County",
+    "City": "Folkston",
+    "State": "GA",
+    "Mascot": "Indians"
+  },
+  {
+    "SchoolID": "sc-hilton-head-island-hilton-head-island",
+    "Name": "Hilton Head Island",
+    "City": "Hilton Head Island",
+    "State": "SC",
+    "Mascot": "Seahawks"
+  },
+  {
+    "SchoolID": "ga-southeast-bulloch-brooklet",
+    "Name": "Southeast Bulloch",
+    "City": "Brooklet",
+    "State": "GA",
+    "Mascot": "Yellow Jackets"
+  },
+  {
+    "SchoolID": "tn-halls-knoxville",
+    "Name": "Halls",
+    "City": "Knoxville",
+    "State": "TN",
+    "Mascot": "Red Devils"
+  },
+  {
+    "SchoolID": "ky-morgan-county-west-liberty",
+    "Name": "Morgan County",
+    "City": "West Liberty",
+    "State": "KY",
+    "Mascot": "Cougars"
+  },
+  {
+    "SchoolID": "sc-fort-dorchester-north-charleston",
+    "Name": "Fort Dorchester",
+    "City": "North Charleston",
+    "State": "SC",
+    "Mascot": "Patriots"
+  },
+  {
+    "SchoolID": "ga-woodville-tompkins-savannah",
+    "Name": "Woodville-Tompkins",
+    "City": "Savannah",
+    "State": "GA",
+    "Mascot": "-"
   }
 ]

@@ -1,5 +1,145 @@
 [
   {
+    "SeasonID": 2006,
+    "YearStart": 2006,
+    "YearEnd": 2007,
+    "HeadCoach": null,
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
+    "SeasonID": 2007,
+    "YearStart": 2007,
+    "YearEnd": 2008,
+    "HeadCoach": null,
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
+    "SeasonID": 2008,
+    "YearStart": 2008,
+    "YearEnd": 2009,
+    "HeadCoach": null,
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
+    "SeasonID": 2009,
+    "YearStart": 2009,
+    "YearEnd": 2010,
+    "HeadCoach": null,
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
+    "SeasonID": 2010,
+    "YearStart": 2010,
+    "YearEnd": 2011,
+    "HeadCoach": null,
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
+    "SeasonID": 2011,
+    "YearStart": 2011,
+    "YearEnd": 2012,
+    "HeadCoach": null,
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
+    "SeasonID": 2012,
+    "YearStart": 2012,
+    "YearEnd": 2013,
+    "HeadCoach": null,
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
+    "SeasonID": 2013,
+    "YearStart": 2013,
+    "YearEnd": 2014,
+    "HeadCoach": null,
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
+    "SeasonID": 2014,
+    "YearStart": 2014,
+    "YearEnd": 2015,
+    "HeadCoach": null,
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
+    "SeasonID": 2015,
+    "YearStart": 2015,
+    "YearEnd": 2016,
+    "HeadCoach": null,
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
+    "SeasonID": 2016,
+    "YearStart": 2016,
+    "YearEnd": 2017,
+    "HeadCoach": null,
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
+    "SeasonID": 2017,
+    "YearStart": 2017,
+    "YearEnd": 2018,
+    "HeadCoach": null,
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
+    "SeasonID": 2018,
+    "YearStart": 2018,
+    "YearEnd": 2019,
+    "HeadCoach": null,
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
+    "SeasonID": 2019,
+    "YearStart": 2019,
+    "YearEnd": 2020,
+    "HeadCoach": null,
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
     "SeasonID": 2020,
     "YearStart": 2020,
     "YearEnd": 2021,

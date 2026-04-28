@@ -23,6 +23,7 @@ import Season2023_24 from "./seasons/Season2023_24";
 import Season2022_23 from "./seasons/Season2022_23";
 import Season2021_22 from "./seasons/Season2021_22";
 import Season2020_21 from "./seasons/Season2020_21";
+import MaxPrepsSeasonPage from "./seasons/MaxPrepsSeasonPage";
 import SeasonPlaceholder from "./seasons/SeasonPlaceholder";
 
 const seasonPages = [
@@ -32,6 +33,23 @@ const seasonPages = [
   { slug: "2022-23", Component: Season2022_23 },
   { slug: "2021-22", Component: Season2021_22 },
   { slug: "2020-21", Component: Season2020_21 },
+];
+
+const maxPrepsArchiveSeasonPages = [
+  { slug: "2019-20", seasonId: 2019 },
+  { slug: "2018-19", seasonId: 2018 },
+  { slug: "2017-18", seasonId: 2017 },
+  { slug: "2016-17", seasonId: 2016 },
+  { slug: "2015-16", seasonId: 2015 },
+  { slug: "2014-15", seasonId: 2014 },
+  { slug: "2013-14", seasonId: 2013 },
+  { slug: "2012-13", seasonId: 2012 },
+  { slug: "2011-12", seasonId: 2011 },
+  { slug: "2010-11", seasonId: 2010 },
+  { slug: "2009-10", seasonId: 2009 },
+  { slug: "2008-09", seasonId: 2008 },
+  { slug: "2007-08", seasonId: 2007 },
+  { slug: "2006-07", seasonId: 2006 },
 ];
 
 const menuSections = [
@@ -164,6 +182,13 @@ export default function GirlsBasketballApp() {
 
           {seasonPages.map(({ slug, Component }) => (
             <Route key={slug} path={`seasons/${slug}`} element={<Component />} />
+          ))}
+          {maxPrepsArchiveSeasonPages.map(({ slug, seasonId }) => (
+            <Route
+              key={slug}
+              path={`seasons/${slug}`}
+              element={<MaxPrepsSeasonPage seasonId={seasonId} seasonLabel={slug} />}
+            />
           ))}
           <Route path="seasons/:seasonId" element={<SeasonPlaceholder />} />
 
