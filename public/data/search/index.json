@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-28T11:39:34.792Z",
-  "itemCount": 670,
+  "generatedAt": "2026-04-28T12:13:18.988Z",
+  "itemCount": 766,
   "items": [
     {
       "id": "athletics-home",
@@ -2854,7 +2854,7 @@
       "id": "boys-basketball-athlete-200202",
       "type": "athlete",
       "title": "Jamie Cooper",
-      "subtitle": "Boys Basketball athlete",
+      "subtitle": "Boys Basketball athlete - Class of 2006",
       "to": "/athletics/boys/basketball/players/200202",
       "keywords": [
         "Boys Basketball",
@@ -2864,7 +2864,9 @@
         "records",
         "Jamie",
         "Cooper",
-        "Cooper Jamie"
+        "Cooper Jamie",
+        "class of 2006",
+        "grad 2006"
       ]
     },
     {
@@ -2970,6 +2972,595 @@
       ]
     },
     {
+      "id": "boys-basketball-athlete-2026154",
+      "type": "athlete",
+      "title": "Chris Mlller",
+      "subtitle": "Boys Basketball athlete - Class of 2006",
+      "to": "/athletics/boys/basketball/players/2026154",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Chris",
+        "Mlller",
+        "Mlller Chris",
+        "class of 2006",
+        "grad 2006"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026155",
+      "type": "athlete",
+      "title": "Ross Glendye",
+      "subtitle": "Boys Basketball athlete - Class of 2006",
+      "to": "/athletics/boys/basketball/players/2026155",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Ross",
+        "Glendye",
+        "Glendye Ross",
+        "class of 2006",
+        "grad 2006"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026156",
+      "type": "athlete",
+      "title": "Steven Carbone",
+      "subtitle": "Boys Basketball athlete - Class of 2006",
+      "to": "/athletics/boys/basketball/players/2026156",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Steven",
+        "Carbone",
+        "Carbone Steven",
+        "class of 2006",
+        "grad 2006"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026157",
+      "type": "athlete",
+      "title": "Gian Maleki",
+      "subtitle": "Boys Basketball athlete - Class of 2006",
+      "to": "/athletics/boys/basketball/players/2026157",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Gian",
+        "Maleki",
+        "Maleki Gian",
+        "class of 2006",
+        "grad 2006"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026158",
+      "type": "athlete",
+      "title": "Alex Chu",
+      "subtitle": "Boys Basketball athlete - Class of 2006",
+      "to": "/athletics/boys/basketball/players/2026158",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Alex",
+        "Chu",
+        "Chu Alex",
+        "class of 2006",
+        "grad 2006"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026159",
+      "type": "athlete",
+      "title": "Ryan Kirby",
+      "subtitle": "Boys Basketball athlete - Class of 2006",
+      "to": "/athletics/boys/basketball/players/2026159",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Ryan",
+        "Kirby",
+        "Kirby Ryan",
+        "class of 2006",
+        "grad 2006"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026160",
+      "type": "athlete",
+      "title": "Josh Taylor",
+      "subtitle": "Boys Basketball athlete - Class of 2007",
+      "to": "/athletics/boys/basketball/players/2026160",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Josh",
+        "Taylor",
+        "Taylor Josh",
+        "class of 2007",
+        "grad 2007"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026161",
+      "type": "athlete",
+      "title": "Ben Harrison",
+      "subtitle": "Boys Basketball athlete - Class of 2007",
+      "to": "/athletics/boys/basketball/players/2026161",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Ben",
+        "Harrison",
+        "Harrison Ben",
+        "class of 2007",
+        "grad 2007"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026162",
+      "type": "athlete",
+      "title": "Kevin Crouch",
+      "subtitle": "Boys Basketball athlete - Class of 2006",
+      "to": "/athletics/boys/basketball/players/2026162",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Kevin",
+        "Crouch",
+        "Crouch Kevin",
+        "class of 2006",
+        "grad 2006"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026163",
+      "type": "athlete",
+      "title": "Bubby Pavlo",
+      "subtitle": "Boys Basketball athlete - Class of 2008",
+      "to": "/athletics/boys/basketball/players/2026163",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Bubby",
+        "Pavlo",
+        "Pavlo Bubby",
+        "class of 2008",
+        "grad 2008"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026164",
+      "type": "athlete",
+      "title": "Billy Vine",
+      "subtitle": "Boys Basketball athlete - Class of 2006",
+      "to": "/athletics/boys/basketball/players/2026164",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Billy",
+        "Vine",
+        "Vine Billy",
+        "class of 2006",
+        "grad 2006"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026165",
+      "type": "athlete",
+      "title": "Bryan Lee",
+      "subtitle": "Boys Basketball athlete - Class of 2007",
+      "to": "/athletics/boys/basketball/players/2026165",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Bryan",
+        "Lee",
+        "Lee Bryan",
+        "class of 2007",
+        "grad 2007"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026166",
+      "type": "athlete",
+      "title": "Thomas Withers",
+      "subtitle": "Boys Basketball athlete - Class of 2007",
+      "to": "/athletics/boys/basketball/players/2026166",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Thomas",
+        "Withers",
+        "Withers Thomas",
+        "class of 2007",
+        "grad 2007"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-200806",
+      "type": "athlete",
+      "title": "Jon Hope",
+      "subtitle": "Boys Basketball athlete - Class of 2009",
+      "to": "/athletics/boys/basketball/players/200806",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Jon",
+        "Hope",
+        "Hope Jon",
+        "class of 2009",
+        "grad 2009"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-200809",
+      "type": "athlete",
+      "title": "Jim Kingston",
+      "subtitle": "Boys Basketball athlete - Class of 2009",
+      "to": "/athletics/boys/basketball/players/200809",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Jim",
+        "Kingston",
+        "Kingston Jim",
+        "class of 2009",
+        "grad 2009"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026167",
+      "type": "athlete",
+      "title": "Ty Massey",
+      "subtitle": "Boys Basketball athlete - Class of 2008",
+      "to": "/athletics/boys/basketball/players/2026167",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Ty",
+        "Massey",
+        "Massey Ty",
+        "class of 2008",
+        "grad 2008"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026168",
+      "type": "athlete",
+      "title": "Jon Robertson",
+      "subtitle": "Boys Basketball athlete - Class of 2007",
+      "to": "/athletics/boys/basketball/players/2026168",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Jon",
+        "Robertson",
+        "Robertson Jon",
+        "class of 2007",
+        "grad 2007"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026169",
+      "type": "athlete",
+      "title": "Brian Crouch",
+      "subtitle": "Boys Basketball athlete - Class of 2008",
+      "to": "/athletics/boys/basketball/players/2026169",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Brian",
+        "Crouch",
+        "Crouch Brian",
+        "class of 2008",
+        "grad 2008"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026170",
+      "type": "athlete",
+      "title": "Jay Avery",
+      "subtitle": "Boys Basketball athlete - Class of 2008",
+      "to": "/athletics/boys/basketball/players/2026170",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Jay",
+        "Avery",
+        "Avery Jay",
+        "class of 2008",
+        "grad 2008"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026171",
+      "type": "athlete",
+      "title": "Don Don Dodsworth",
+      "subtitle": "Boys Basketball athlete - Class of 2008",
+      "to": "/athletics/boys/basketball/players/2026171",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Don",
+        "Don Dodsworth",
+        "Don Dodsworth Don",
+        "class of 2008",
+        "grad 2008"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-200807",
+      "type": "athlete",
+      "title": "Jared Howard",
+      "subtitle": "Boys Basketball athlete - Class of 2009",
+      "to": "/athletics/boys/basketball/players/200807",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Jared",
+        "Howard",
+        "Howard Jared",
+        "class of 2009",
+        "grad 2009"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-200810",
+      "type": "athlete",
+      "title": "Wesley Knight",
+      "subtitle": "Boys Basketball athlete - Class of 2009",
+      "to": "/athletics/boys/basketball/players/200810",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Wesley",
+        "Knight",
+        "Knight Wesley",
+        "class of 2009",
+        "grad 2009"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-200908",
+      "type": "athlete",
+      "title": "Don Tomberlin",
+      "subtitle": "Boys Basketball athlete - Class of 2009",
+      "to": "/athletics/boys/basketball/players/200908",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Don",
+        "Tomberlin",
+        "Tomberlin Don",
+        "class of 2009",
+        "grad 2009"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-200909",
+      "type": "athlete",
+      "title": "Ikaika Kapu",
+      "subtitle": "Boys Basketball athlete - Class of 2009",
+      "to": "/athletics/boys/basketball/players/200909",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Ikaika",
+        "Kapu",
+        "Kapu Ikaika",
+        "class of 2009",
+        "grad 2009"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026172",
+      "type": "athlete",
+      "title": "Clay Crosby",
+      "subtitle": "Boys Basketball athlete - Class of 2008",
+      "to": "/athletics/boys/basketball/players/2026172",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Clay",
+        "Crosby",
+        "Crosby Clay",
+        "class of 2008",
+        "grad 2008"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026173",
+      "type": "athlete",
+      "title": "Tee Baird",
+      "subtitle": "Boys Basketball athlete - Class of 2010",
+      "to": "/athletics/boys/basketball/players/2026173",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Tee",
+        "Baird",
+        "Baird Tee",
+        "class of 2010",
+        "grad 2010"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026174",
+      "type": "athlete",
+      "title": "Joe Bilton",
+      "subtitle": "Boys Basketball athlete - Class of 2008",
+      "to": "/athletics/boys/basketball/players/2026174",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Joe",
+        "Bilton",
+        "Bilton Joe",
+        "class of 2008",
+        "grad 2008"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026175",
+      "type": "athlete",
+      "title": "Mark Jones",
+      "subtitle": "Boys Basketball athlete - Class of 2010",
+      "to": "/athletics/boys/basketball/players/2026175",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Mark",
+        "Jones",
+        "Jones Mark",
+        "class of 2010",
+        "grad 2010"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026176",
+      "type": "athlete",
+      "title": "Elliot McElhanon",
+      "subtitle": "Boys Basketball athlete - Class of 2010",
+      "to": "/athletics/boys/basketball/players/2026176",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Elliot",
+        "McElhanon",
+        "McElhanon Elliot",
+        "class of 2010",
+        "grad 2010"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026177",
+      "type": "athlete",
+      "title": "Jendrick Haase",
+      "subtitle": "Boys Basketball athlete - Class of 2010",
+      "to": "/athletics/boys/basketball/players/2026177",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Jendrick",
+        "Haase",
+        "Haase Jendrick",
+        "class of 2010",
+        "grad 2010"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026178",
+      "type": "athlete",
+      "title": "Vinnie Curley",
+      "subtitle": "Boys Basketball athlete - Class of 2009",
+      "to": "/athletics/boys/basketball/players/2026178",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Vinnie",
+        "Curley",
+        "Curley Vinnie",
+        "class of 2009",
+        "grad 2009"
+      ]
+    },
+    {
       "id": "boys-basketball-athlete-200801",
       "type": "athlete",
       "title": "Jake Bazemore",
@@ -3063,40 +3654,6 @@
       ]
     },
     {
-      "id": "boys-basketball-athlete-200806",
-      "type": "athlete",
-      "title": "Jon Hope",
-      "subtitle": "Boys Basketball athlete",
-      "to": "/athletics/boys/basketball/players/200806",
-      "keywords": [
-        "Boys Basketball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Jon",
-        "Hope",
-        "Hope Jon"
-      ]
-    },
-    {
-      "id": "boys-basketball-athlete-200807",
-      "type": "athlete",
-      "title": "Jared Howard",
-      "subtitle": "Boys Basketball athlete",
-      "to": "/athletics/boys/basketball/players/200807",
-      "keywords": [
-        "Boys Basketball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Jared",
-        "Howard",
-        "Howard Jared"
-      ]
-    },
-    {
       "id": "boys-basketball-athlete-200808",
       "type": "athlete",
       "title": "Harry Jozefczyk",
@@ -3113,40 +3670,6 @@
         "Jozefczyk Harry",
         "class of 2010",
         "grad 2010"
-      ]
-    },
-    {
-      "id": "boys-basketball-athlete-200809",
-      "type": "athlete",
-      "title": "Jim Kingston",
-      "subtitle": "Boys Basketball athlete",
-      "to": "/athletics/boys/basketball/players/200809",
-      "keywords": [
-        "Boys Basketball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Jim",
-        "Kingston",
-        "Kingston Jim"
-      ]
-    },
-    {
-      "id": "boys-basketball-athlete-200810",
-      "type": "athlete",
-      "title": "Wesley Knight",
-      "subtitle": "Boys Basketball athlete",
-      "to": "/athletics/boys/basketball/players/200810",
-      "keywords": [
-        "Boys Basketball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Wesley",
-        "Knight",
-        "Knight Wesley"
       ]
     },
     {
@@ -3321,6 +3844,880 @@
       ]
     },
     {
+      "id": "boys-basketball-athlete-2026147",
+      "type": "athlete",
+      "title": "Harrison Lindner",
+      "subtitle": "Boys Basketball athlete - Class of 2013",
+      "to": "/athletics/boys/basketball/players/2026147",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Harrison",
+        "Lindner",
+        "Lindner Harrison",
+        "class of 2013",
+        "grad 2013"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026179",
+      "type": "athlete",
+      "title": "Conner Fields",
+      "subtitle": "Boys Basketball athlete - Class of 2013",
+      "to": "/athletics/boys/basketball/players/2026179",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Conner",
+        "Fields",
+        "Fields Conner",
+        "class of 2013",
+        "grad 2013"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-201110",
+      "type": "athlete",
+      "title": "Brandon Miller",
+      "subtitle": "Boys Basketball athlete - Class of 2013",
+      "to": "/athletics/boys/basketball/players/201110",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Brandon",
+        "Miller",
+        "Miller Brandon",
+        "class of 2013",
+        "grad 2013"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026180",
+      "type": "athlete",
+      "title": "Oliver Hubbard",
+      "subtitle": "Boys Basketball athlete - Class of 2011",
+      "to": "/athletics/boys/basketball/players/2026180",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Oliver",
+        "Hubbard",
+        "Hubbard Oliver",
+        "class of 2011",
+        "grad 2011"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026181",
+      "type": "athlete",
+      "title": "Paul Riley",
+      "subtitle": "Boys Basketball athlete - Class of 2012",
+      "to": "/athletics/boys/basketball/players/2026181",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Paul",
+        "Riley",
+        "Riley Paul",
+        "class of 2012",
+        "grad 2012"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026182",
+      "type": "athlete",
+      "title": "James English",
+      "subtitle": "Boys Basketball athlete - Class of 2013",
+      "to": "/athletics/boys/basketball/players/2026182",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "James",
+        "English",
+        "English James",
+        "class of 2013",
+        "grad 2013"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026183",
+      "type": "athlete",
+      "title": "Michael Britt",
+      "subtitle": "Boys Basketball athlete - Class of 2013",
+      "to": "/athletics/boys/basketball/players/2026183",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Michael",
+        "Britt",
+        "Britt Michael",
+        "class of 2013",
+        "grad 2013"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026184",
+      "type": "athlete",
+      "title": "Jake Holliday",
+      "subtitle": "Boys Basketball athlete - Class of 2013",
+      "to": "/athletics/boys/basketball/players/2026184",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Jake",
+        "Holliday",
+        "Holliday Jake",
+        "class of 2013",
+        "grad 2013"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-201202",
+      "type": "athlete",
+      "title": "Jay Jenkins",
+      "subtitle": "Boys Basketball athlete - Class of 2012",
+      "to": "/athletics/boys/basketball/players/201202",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Jay",
+        "Jenkins",
+        "Jenkins Jay",
+        "class of 2012",
+        "grad 2012"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026185",
+      "type": "athlete",
+      "title": "Qadry Brown",
+      "subtitle": "Boys Basketball athlete - Class of 2013",
+      "to": "/athletics/boys/basketball/players/2026185",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Qadry",
+        "Brown",
+        "Brown Qadry",
+        "class of 2013",
+        "grad 2013"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026186",
+      "type": "athlete",
+      "title": "Aaron Solender",
+      "subtitle": "Boys Basketball athlete - Class of 2012",
+      "to": "/athletics/boys/basketball/players/2026186",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Aaron",
+        "Solender",
+        "Solender Aaron",
+        "class of 2012",
+        "grad 2012"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026187",
+      "type": "athlete",
+      "title": "Paul Gunning",
+      "subtitle": "Boys Basketball athlete - Class of 2013",
+      "to": "/athletics/boys/basketball/players/2026187",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Paul",
+        "Gunning",
+        "Gunning Paul",
+        "class of 2013",
+        "grad 2013"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026188",
+      "type": "athlete",
+      "title": "Sasha Tymchyshyn",
+      "subtitle": "Boys Basketball athlete - Class of 2013",
+      "to": "/athletics/boys/basketball/players/2026188",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Sasha",
+        "Tymchyshyn",
+        "Tymchyshyn Sasha",
+        "class of 2013",
+        "grad 2013"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026140",
+      "type": "athlete",
+      "title": "Nate Mayo",
+      "subtitle": "Boys Basketball athlete - Class of 2015",
+      "to": "/athletics/boys/basketball/players/2026140",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Nate",
+        "Mayo",
+        "Mayo Nate",
+        "class of 2015",
+        "grad 2015"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026189",
+      "type": "athlete",
+      "title": "John Winn",
+      "subtitle": "Boys Basketball athlete - Class of 2015",
+      "to": "/athletics/boys/basketball/players/2026189",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "John",
+        "Winn",
+        "Winn John",
+        "class of 2015",
+        "grad 2015"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026142",
+      "type": "athlete",
+      "title": "Thomas Shapard",
+      "subtitle": "Boys Basketball athlete - Class of 2015",
+      "to": "/athletics/boys/basketball/players/2026142",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Thomas",
+        "Shapard",
+        "Shapard Thomas",
+        "class of 2015",
+        "grad 2015"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026191",
+      "type": "athlete",
+      "title": "Zach Chou",
+      "subtitle": "Boys Basketball athlete - Class of 2015",
+      "to": "/athletics/boys/basketball/players/2026191",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Zach",
+        "Chou",
+        "Chou Zach",
+        "class of 2015",
+        "grad 2015"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026192",
+      "type": "athlete",
+      "title": "Caleb Tymchyshyn",
+      "subtitle": "Boys Basketball athlete - Class of 2016",
+      "to": "/athletics/boys/basketball/players/2026192",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Caleb",
+        "Tymchyshyn",
+        "Tymchyshyn Caleb",
+        "class of 2016",
+        "grad 2016"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026193",
+      "type": "athlete",
+      "title": "Matty Powers",
+      "subtitle": "Boys Basketball athlete - Class of 2015",
+      "to": "/athletics/boys/basketball/players/2026193",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Matty",
+        "Powers",
+        "Powers Matty",
+        "class of 2015",
+        "grad 2015"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026148",
+      "type": "athlete",
+      "title": "Connor Fields",
+      "subtitle": "Boys Basketball athlete - Class of 2013",
+      "to": "/athletics/boys/basketball/players/2026148",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Connor",
+        "Fields",
+        "Fields Connor",
+        "class of 2013",
+        "grad 2013"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026194",
+      "type": "athlete",
+      "title": "Nick Dabit",
+      "subtitle": "Boys Basketball athlete - Class of 2015",
+      "to": "/athletics/boys/basketball/players/2026194",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Nick",
+        "Dabit",
+        "Dabit Nick",
+        "class of 2015",
+        "grad 2015"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-201507",
+      "type": "athlete",
+      "title": "J.D. Morgan",
+      "subtitle": "Boys Basketball athlete - Class of 2015",
+      "to": "/athletics/boys/basketball/players/201507",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "J.D.",
+        "Morgan",
+        "Morgan J.D.",
+        "class of 2015",
+        "grad 2015"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026195",
+      "type": "athlete",
+      "title": "Ashton Johnson",
+      "subtitle": "Boys Basketball athlete - Class of 2012",
+      "to": "/athletics/boys/basketball/players/2026195",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Ashton",
+        "Johnson",
+        "Johnson Ashton",
+        "class of 2012",
+        "grad 2012"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026196",
+      "type": "athlete",
+      "title": "Michael Hall",
+      "subtitle": "Boys Basketball athlete - Class of 2015",
+      "to": "/athletics/boys/basketball/players/2026196",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Michael",
+        "Hall",
+        "Hall Michael",
+        "class of 2015",
+        "grad 2015"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-201504",
+      "type": "athlete",
+      "title": "Daniel Chisner",
+      "subtitle": "Boys Basketball athlete - Class of 2015",
+      "to": "/athletics/boys/basketball/players/201504",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Daniel",
+        "Chisner",
+        "Chisner Daniel",
+        "class of 2015",
+        "grad 2015"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026139",
+      "type": "athlete",
+      "title": "Everest White",
+      "subtitle": "Boys Basketball athlete - Class of 2014",
+      "to": "/athletics/boys/basketball/players/2026139",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Everest",
+        "White",
+        "White Everest",
+        "class of 2014",
+        "grad 2014"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026197",
+      "type": "athlete",
+      "title": "Tyler Fields",
+      "subtitle": "Boys Basketball athlete - Class of 2015",
+      "to": "/athletics/boys/basketball/players/2026197",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Tyler",
+        "Fields",
+        "Fields Tyler",
+        "class of 2015",
+        "grad 2015"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026198",
+      "type": "athlete",
+      "title": "Reid Bennett",
+      "subtitle": "Boys Basketball athlete - Class of 2016",
+      "to": "/athletics/boys/basketball/players/2026198",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Reid",
+        "Bennett",
+        "Bennett Reid",
+        "class of 2016",
+        "grad 2016"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026199",
+      "type": "athlete",
+      "title": "Pavle Ilic",
+      "subtitle": "Boys Basketball athlete - Class of 2014",
+      "to": "/athletics/boys/basketball/players/2026199",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Pavle",
+        "Ilic",
+        "Ilic Pavle",
+        "class of 2014",
+        "grad 2014"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026200",
+      "type": "athlete",
+      "title": "Seth Hanberry",
+      "subtitle": "Boys Basketball athlete - Class of 2017",
+      "to": "/athletics/boys/basketball/players/2026200",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Seth",
+        "Hanberry",
+        "Hanberry Seth",
+        "class of 2017",
+        "grad 2017"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026149",
+      "type": "athlete",
+      "title": "Grayson Barnhill",
+      "subtitle": "Boys Basketball athlete - Class of 2017",
+      "to": "/athletics/boys/basketball/players/2026149",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Grayson",
+        "Barnhill",
+        "Barnhill Grayson",
+        "class of 2017",
+        "grad 2017"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-201713",
+      "type": "athlete",
+      "title": "Brooks Vanderlugt",
+      "subtitle": "Boys Basketball athlete - Class of 2017",
+      "to": "/athletics/boys/basketball/players/201713",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Brooks",
+        "Vanderlugt",
+        "Vanderlugt Brooks",
+        "class of 2017",
+        "grad 2017"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026201",
+      "type": "athlete",
+      "title": "Patrick Perrie",
+      "subtitle": "Boys Basketball athlete - Class of 2017",
+      "to": "/athletics/boys/basketball/players/2026201",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Patrick",
+        "Perrie",
+        "Perrie Patrick",
+        "class of 2017",
+        "grad 2017"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026202",
+      "type": "athlete",
+      "title": "Ryan Wollenburg",
+      "subtitle": "Boys Basketball athlete - Class of 2017",
+      "to": "/athletics/boys/basketball/players/2026202",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Ryan",
+        "Wollenburg",
+        "Wollenburg Ryan",
+        "class of 2017",
+        "grad 2017"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026203",
+      "type": "athlete",
+      "title": "David Yang",
+      "subtitle": "Boys Basketball athlete - Class of 2017",
+      "to": "/athletics/boys/basketball/players/2026203",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "David",
+        "Yang",
+        "Yang David",
+        "class of 2017",
+        "grad 2017"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-201707",
+      "type": "athlete",
+      "title": "Erickson Rasplicka",
+      "subtitle": "Boys Basketball athlete - Class of 2019",
+      "to": "/athletics/boys/basketball/players/201707",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Erickson",
+        "Rasplicka",
+        "Rasplicka Erickson",
+        "class of 2019",
+        "grad 2019"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026204",
+      "type": "athlete",
+      "title": "Jordan Benson",
+      "subtitle": "Boys Basketball athlete - Class of 2019",
+      "to": "/athletics/boys/basketball/players/2026204",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Jordan",
+        "Benson",
+        "Benson Jordan",
+        "class of 2019",
+        "grad 2019"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-201613",
+      "type": "athlete",
+      "title": "Robby Livingston",
+      "subtitle": "Boys Basketball athlete - Class of 2018",
+      "to": "/athletics/boys/basketball/players/201613",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Robby",
+        "Livingston",
+        "Livingston Robby",
+        "class of 2018",
+        "grad 2018"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026205",
+      "type": "athlete",
+      "title": "Chase Harper",
+      "subtitle": "Boys Basketball athlete - Class of 2018",
+      "to": "/athletics/boys/basketball/players/2026205",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Chase",
+        "Harper",
+        "Harper Chase",
+        "class of 2018",
+        "grad 2018"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-201813",
+      "type": "athlete",
+      "title": "Nick Tsavaris",
+      "subtitle": "Boys Basketball athlete - Class of 2019",
+      "to": "/athletics/boys/basketball/players/201813",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Nick",
+        "Tsavaris",
+        "Tsavaris Nick",
+        "class of 2019",
+        "grad 2019"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-201714",
+      "type": "athlete",
+      "title": "Ryne Wollenburg",
+      "subtitle": "Boys Basketball athlete - Class of 2017",
+      "to": "/athletics/boys/basketball/players/201714",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Ryne",
+        "Wollenburg",
+        "Wollenburg Ryne",
+        "class of 2017",
+        "grad 2017"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026206",
+      "type": "athlete",
+      "title": "Tripp Flowers",
+      "subtitle": "Boys Basketball athlete - Class of 2019",
+      "to": "/athletics/boys/basketball/players/2026206",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Tripp",
+        "Flowers",
+        "Flowers Tripp",
+        "class of 2019",
+        "grad 2019"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-201703",
+      "type": "athlete",
+      "title": "Andrew Longwater",
+      "subtitle": "Boys Basketball athlete - Class of 2019",
+      "to": "/athletics/boys/basketball/players/201703",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Andrew",
+        "Longwater",
+        "Longwater Andrew",
+        "class of 2019",
+        "grad 2019"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-201808",
+      "type": "athlete",
+      "title": "Jacob Gonzalez",
+      "subtitle": "Boys Basketball athlete - Class of 2018",
+      "to": "/athletics/boys/basketball/players/201808",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Jacob",
+        "Gonzalez",
+        "Gonzalez Jacob",
+        "class of 2018",
+        "grad 2018"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-201612",
+      "type": "athlete",
+      "title": "Joey Gonzalez",
+      "subtitle": "Boys Basketball athlete - Class of 2018",
+      "to": "/athletics/boys/basketball/players/201612",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Joey",
+        "Gonzalez",
+        "Gonzalez Joey",
+        "class of 2018",
+        "grad 2018"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-201809",
+      "type": "athlete",
+      "title": "Jacob Boyd",
+      "subtitle": "Boys Basketball athlete - Class of 2018",
+      "to": "/athletics/boys/basketball/players/201809",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Jacob",
+        "Boyd",
+        "Boyd Jacob",
+        "class of 2018",
+        "grad 2018"
+      ]
+    },
+    {
       "id": "boys-basketball-athlete-2026082",
       "type": "athlete",
       "title": "Jonathan Young",
@@ -3337,6 +4734,63 @@
         "Young Jonathan",
         "class of 2019",
         "grad 2019"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026207",
+      "type": "athlete",
+      "title": "Thomas Bingley",
+      "subtitle": "Boys Basketball athlete - Class of 2018",
+      "to": "/athletics/boys/basketball/players/2026207",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Thomas",
+        "Bingley",
+        "Bingley Thomas",
+        "class of 2018",
+        "grad 2018"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026208",
+      "type": "athlete",
+      "title": "TJ Donahue",
+      "subtitle": "Boys Basketball athlete - Class of 2019",
+      "to": "/athletics/boys/basketball/players/2026208",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "TJ",
+        "Donahue",
+        "Donahue TJ",
+        "class of 2019",
+        "grad 2019"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-201906",
+      "type": "athlete",
+      "title": "Reggie Sheppard",
+      "subtitle": "Boys Basketball athlete - Class of 2020",
+      "to": "/athletics/boys/basketball/players/201906",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Reggie",
+        "Sheppard",
+        "Sheppard Reggie",
+        "class of 2020",
+        "grad 2020"
       ]
     },
     {
@@ -3359,22 +4813,60 @@
       ]
     },
     {
-      "id": "boys-basketball-athlete-201906",
+      "id": "boys-basketball-athlete-2026209",
       "type": "athlete",
-      "title": "Reggie Sheppard",
-      "subtitle": "Boys Basketball athlete - Class of 2020",
-      "to": "/athletics/boys/basketball/players/201906",
+      "title": "Miles McDowell",
+      "subtitle": "Boys Basketball athlete - Class of 2019",
+      "to": "/athletics/boys/basketball/players/2026209",
       "keywords": [
         "Boys Basketball",
         "athlete",
         "player",
         "stats",
         "records",
-        "Reggie",
-        "Sheppard",
-        "Sheppard Reggie",
-        "class of 2020",
-        "grad 2020"
+        "Miles",
+        "McDowell",
+        "McDowell Miles",
+        "class of 2019",
+        "grad 2019"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-202131",
+      "type": "athlete",
+      "title": "Max Forman",
+      "subtitle": "Boys Basketball athlete - Class of 2030",
+      "to": "/athletics/boys/basketball/players/202131",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Max",
+        "Forman",
+        "Forman Max",
+        "class of 2030",
+        "grad 2030"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026210",
+      "type": "athlete",
+      "title": "Jacques Bootsma",
+      "subtitle": "Boys Basketball athlete - Class of 2021",
+      "to": "/athletics/boys/basketball/players/2026210",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Jacques",
+        "Bootsma",
+        "Bootsma Jacques",
+        "class of 2021",
+        "grad 2021"
       ]
     },
     {
@@ -3416,39 +4908,39 @@
       ]
     },
     {
-      "id": "boys-basketball-athlete-201813",
+      "id": "boys-basketball-athlete-2026034",
       "type": "athlete",
-      "title": "Nick Tsavaris",
-      "subtitle": "Boys Basketball athlete - Class of 2019",
-      "to": "/athletics/boys/basketball/players/201813",
+      "title": "Frank Cardillo",
+      "subtitle": "Boys Basketball athlete - Class of 2020",
+      "to": "/athletics/boys/basketball/players/2026034",
       "keywords": [
         "Boys Basketball",
         "athlete",
         "player",
         "stats",
         "records",
-        "Nick",
-        "Tsavaris",
-        "Tsavaris Nick",
-        "class of 2019",
-        "grad 2019"
+        "Frank",
+        "Cardillo",
+        "Cardillo Frank",
+        "class of 2020",
+        "grad 2020"
       ]
     },
     {
-      "id": "boys-basketball-athlete-2026041",
+      "id": "boys-basketball-athlete-202143",
       "type": "athlete",
-      "title": "Price Mahany",
+      "title": "Samuel Rolland-mills",
       "subtitle": "Boys Basketball athlete - Class of 2022",
-      "to": "/athletics/boys/basketball/players/2026041",
+      "to": "/athletics/boys/basketball/players/202143",
       "keywords": [
         "Boys Basketball",
         "athlete",
         "player",
         "stats",
         "records",
-        "Price",
-        "Mahany",
-        "Mahany Price",
+        "Samuel",
+        "Rolland-mills",
+        "Rolland-mills Samuel",
         "class of 2022",
         "grad 2022"
       ]
@@ -3473,6 +4965,215 @@
       ]
     },
     {
+      "id": "boys-basketball-athlete-2026030",
+      "type": "athlete",
+      "title": "Grayson Abernathy",
+      "subtitle": "Boys Basketball athlete - Class of 2020",
+      "to": "/athletics/boys/basketball/players/2026030",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Grayson",
+        "Abernathy",
+        "Abernathy Grayson",
+        "class of 2020",
+        "grad 2020"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-201907",
+      "type": "athlete",
+      "title": "Christian Oelschig",
+      "subtitle": "Boys Basketball athlete - Class of 2021",
+      "to": "/athletics/boys/basketball/players/201907",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Christian",
+        "Oelschig",
+        "Oelschig Christian",
+        "class of 2021",
+        "grad 2021"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026033",
+      "type": "athlete",
+      "title": "Denton Lord",
+      "subtitle": "Boys Basketball athlete - Class of 2020",
+      "to": "/athletics/boys/basketball/players/2026033",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Denton",
+        "Lord",
+        "Lord Denton",
+        "class of 2020",
+        "grad 2020"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026211",
+      "type": "athlete",
+      "title": "Sam Perkins",
+      "subtitle": "Boys Basketball athlete - Class of 2020",
+      "to": "/athletics/boys/basketball/players/2026211",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Sam",
+        "Perkins",
+        "Perkins Sam",
+        "class of 2020",
+        "grad 2020"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-202125",
+      "type": "athlete",
+      "title": "Kegan Kurinij",
+      "subtitle": "Boys Basketball athlete - Class of 2021",
+      "to": "/athletics/boys/basketball/players/202125",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Kegan",
+        "Kurinij",
+        "Kurinij Kegan",
+        "class of 2021",
+        "grad 2021"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-201908",
+      "type": "athlete",
+      "title": "Holland Judkins",
+      "subtitle": "Boys Basketball athlete - Class of 2021",
+      "to": "/athletics/boys/basketball/players/201908",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Holland",
+        "Judkins",
+        "Judkins Holland",
+        "class of 2021",
+        "grad 2021"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-202123",
+      "type": "athlete",
+      "title": "Ben Bingley",
+      "subtitle": "Boys Basketball athlete - Class of 2021",
+      "to": "/athletics/boys/basketball/players/202123",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Ben",
+        "Bingley",
+        "Bingley Ben",
+        "class of 2021",
+        "grad 2021"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-201802",
+      "type": "athlete",
+      "title": "Cade Raeburn",
+      "subtitle": "Boys Basketball athlete - Class of 2030",
+      "to": "/athletics/boys/basketball/players/201802",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Cade",
+        "Raeburn",
+        "Raeburn Cade",
+        "class of 2030",
+        "grad 2030"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026212",
+      "type": "athlete",
+      "title": "Henry Judkins",
+      "subtitle": "Boys Basketball athlete - Class of 2021",
+      "to": "/athletics/boys/basketball/players/2026212",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Henry",
+        "Judkins",
+        "Judkins Henry",
+        "class of 2021",
+        "grad 2021"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026213",
+      "type": "athlete",
+      "title": "Bowen Tan",
+      "subtitle": "Boys Basketball athlete - Class of 2030",
+      "to": "/athletics/boys/basketball/players/2026213",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Bowen",
+        "Tan",
+        "Tan Bowen",
+        "class of 2030",
+        "grad 2030"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026041",
+      "type": "athlete",
+      "title": "Price Mahany",
+      "subtitle": "Boys Basketball athlete - Class of 2022",
+      "to": "/athletics/boys/basketball/players/2026041",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Price",
+        "Mahany",
+        "Mahany Price",
+        "class of 2022",
+        "grad 2022"
+      ]
+    },
+    {
       "id": "boys-basketball-athlete-202113",
       "type": "athlete",
       "title": "Ethan Bland",
@@ -3492,25 +5193,6 @@
       ]
     },
     {
-      "id": "boys-basketball-athlete-201703",
-      "type": "athlete",
-      "title": "Andrew Longwater",
-      "subtitle": "Boys Basketball athlete - Class of 2019",
-      "to": "/athletics/boys/basketball/players/201703",
-      "keywords": [
-        "Boys Basketball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Andrew",
-        "Longwater",
-        "Longwater Andrew",
-        "class of 2019",
-        "grad 2019"
-      ]
-    },
-    {
       "id": "boys-basketball-athlete-202127",
       "type": "athlete",
       "title": "Grant Viands",
@@ -3525,25 +5207,6 @@
         "Grant",
         "Viands",
         "Viands Grant",
-        "class of 2021",
-        "grad 2021"
-      ]
-    },
-    {
-      "id": "boys-basketball-athlete-202125",
-      "type": "athlete",
-      "title": "Kegan Kurinij",
-      "subtitle": "Boys Basketball athlete - Class of 2021",
-      "to": "/athletics/boys/basketball/players/202125",
-      "keywords": [
-        "Boys Basketball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Kegan",
-        "Kurinij",
-        "Kurinij Kegan",
         "class of 2021",
         "grad 2021"
       ]
@@ -3568,25 +5231,6 @@
       ]
     },
     {
-      "id": "boys-basketball-athlete-202123",
-      "type": "athlete",
-      "title": "Ben Bingley",
-      "subtitle": "Boys Basketball athlete - Class of 2021",
-      "to": "/athletics/boys/basketball/players/202123",
-      "keywords": [
-        "Boys Basketball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Ben",
-        "Bingley",
-        "Bingley Ben",
-        "class of 2021",
-        "grad 2021"
-      ]
-    },
-    {
       "id": "boys-basketball-athlete-201814",
       "type": "athlete",
       "title": "Carlos Zobel",
@@ -3603,25 +5247,6 @@
         "Zobel Carlos",
         "class of 2019",
         "grad 2019"
-      ]
-    },
-    {
-      "id": "boys-basketball-athlete-201907",
-      "type": "athlete",
-      "title": "Christian Oelschig",
-      "subtitle": "Boys Basketball athlete - Class of 2021",
-      "to": "/athletics/boys/basketball/players/201907",
-      "keywords": [
-        "Boys Basketball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Christian",
-        "Oelschig",
-        "Oelschig Christian",
-        "class of 2021",
-        "grad 2021"
       ]
     },
     {
@@ -3698,63 +5323,6 @@
         "Barnhill Gabe",
         "class of 2022",
         "grad 2022"
-      ]
-    },
-    {
-      "id": "boys-basketball-athlete-202143",
-      "type": "athlete",
-      "title": "Samuel Rolland-mills",
-      "subtitle": "Boys Basketball athlete - Class of 2022",
-      "to": "/athletics/boys/basketball/players/202143",
-      "keywords": [
-        "Boys Basketball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Samuel",
-        "Rolland-mills",
-        "Rolland-mills Samuel",
-        "class of 2022",
-        "grad 2022"
-      ]
-    },
-    {
-      "id": "boys-basketball-athlete-2026030",
-      "type": "athlete",
-      "title": "Grayson Abernathy",
-      "subtitle": "Boys Basketball athlete - Class of 2020",
-      "to": "/athletics/boys/basketball/players/2026030",
-      "keywords": [
-        "Boys Basketball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Grayson",
-        "Abernathy",
-        "Abernathy Grayson",
-        "class of 2020",
-        "grad 2020"
-      ]
-    },
-    {
-      "id": "boys-basketball-athlete-201908",
-      "type": "athlete",
-      "title": "Holland Judkins",
-      "subtitle": "Boys Basketball athlete - Class of 2021",
-      "to": "/athletics/boys/basketball/players/201908",
-      "keywords": [
-        "Boys Basketball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Holland",
-        "Judkins",
-        "Judkins Holland",
-        "class of 2021",
-        "grad 2021"
       ]
     },
     {
@@ -5585,7 +7153,7 @@
       "id": "baseball-athlete-2026149",
       "type": "athlete",
       "title": "Grayson Barnhill",
-      "subtitle": "Baseball athlete",
+      "subtitle": "Baseball athlete - Class of 2017",
       "to": "/athletics/boys/baseball/players/2026149",
       "keywords": [
         "Baseball",
@@ -5595,7 +7163,9 @@
         "records",
         "Grayson",
         "Barnhill",
-        "Barnhill Grayson"
+        "Barnhill Grayson",
+        "class of 2017",
+        "grad 2017"
       ]
     },
     {
@@ -5619,7 +7189,7 @@
       "id": "baseball-athlete-201714",
       "type": "athlete",
       "title": "Ryne Wollenburg",
-      "subtitle": "Baseball athlete",
+      "subtitle": "Baseball athlete - Class of 2017",
       "to": "/athletics/boys/baseball/players/201714",
       "keywords": [
         "Baseball",
@@ -5629,7 +7199,9 @@
         "records",
         "Ryne",
         "Wollenburg",
-        "Wollenburg Ryne"
+        "Wollenburg Ryne",
+        "class of 2017",
+        "grad 2017"
       ]
     },
     {
@@ -5670,7 +7242,7 @@
       "id": "baseball-athlete-201613",
       "type": "athlete",
       "title": "Robby Livingston",
-      "subtitle": "Baseball athlete",
+      "subtitle": "Baseball athlete - Class of 2018",
       "to": "/athletics/boys/baseball/players/201613",
       "keywords": [
         "Baseball",
@@ -5680,14 +7252,16 @@
         "records",
         "Robby",
         "Livingston",
-        "Livingston Robby"
+        "Livingston Robby",
+        "class of 2018",
+        "grad 2018"
       ]
     },
     {
       "id": "baseball-athlete-201808",
       "type": "athlete",
       "title": "Jacob Gonzalez",
-      "subtitle": "Baseball athlete",
+      "subtitle": "Baseball athlete - Class of 2018",
       "to": "/athletics/boys/baseball/players/201808",
       "keywords": [
         "Baseball",
@@ -5697,7 +7271,9 @@
         "records",
         "Jacob",
         "Gonzalez",
-        "Gonzalez Jacob"
+        "Gonzalez Jacob",
+        "class of 2018",
+        "grad 2018"
       ]
     },
     {
@@ -5721,7 +7297,7 @@
       "id": "baseball-athlete-201612",
       "type": "athlete",
       "title": "Joey Gonzalez",
-      "subtitle": "Baseball athlete",
+      "subtitle": "Baseball athlete - Class of 2018",
       "to": "/athletics/boys/baseball/players/201612",
       "keywords": [
         "Baseball",
@@ -5731,14 +7307,16 @@
         "records",
         "Joey",
         "Gonzalez",
-        "Gonzalez Joey"
+        "Gonzalez Joey",
+        "class of 2018",
+        "grad 2018"
       ]
     },
     {
       "id": "baseball-athlete-201809",
       "type": "athlete",
       "title": "Jacob Boyd",
-      "subtitle": "Baseball athlete",
+      "subtitle": "Baseball athlete - Class of 2018",
       "to": "/athletics/boys/baseball/players/201809",
       "keywords": [
         "Baseball",
@@ -5748,7 +7326,9 @@
         "records",
         "Jacob",
         "Boyd",
-        "Boyd Jacob"
+        "Boyd Jacob",
+        "class of 2018",
+        "grad 2018"
       ]
     },
     {
@@ -5946,7 +7526,7 @@
       "id": "baseball-athlete-202131",
       "type": "athlete",
       "title": "Max Forman",
-      "subtitle": "Baseball athlete",
+      "subtitle": "Baseball athlete - Class of 2030",
       "to": "/athletics/boys/baseball/players/202131",
       "keywords": [
         "Baseball",
@@ -5956,7 +7536,9 @@
         "records",
         "Max",
         "Forman",
-        "Forman Max"
+        "Forman Max",
+        "class of 2030",
+        "grad 2030"
       ]
     },
     {
@@ -6018,7 +7600,7 @@
       "id": "baseball-athlete-2026033",
       "type": "athlete",
       "title": "Denton Lord",
-      "subtitle": "Baseball athlete",
+      "subtitle": "Baseball athlete - Class of 2020",
       "to": "/athletics/boys/baseball/players/2026033",
       "keywords": [
         "Baseball",
@@ -6028,7 +7610,9 @@
         "records",
         "Denton",
         "Lord",
-        "Lord Denton"
+        "Lord Denton",
+        "class of 2020",
+        "grad 2020"
       ]
     },
     {
@@ -6164,7 +7748,7 @@
       "id": "baseball-athlete-2026034",
       "type": "athlete",
       "title": "Frank Cardillo",
-      "subtitle": "Baseball athlete",
+      "subtitle": "Baseball athlete - Class of 2020",
       "to": "/athletics/boys/baseball/players/2026034",
       "keywords": [
         "Baseball",
@@ -6174,7 +7758,9 @@
         "records",
         "Frank",
         "Cardillo",
-        "Cardillo Frank"
+        "Cardillo Frank",
+        "class of 2020",
+        "grad 2020"
       ]
     },
     {
@@ -8645,6 +10231,202 @@
       ]
     },
     {
+      "id": "boys-basketball-team-bible-baptist",
+      "type": "team",
+      "title": "Bible Baptist",
+      "subtitle": "Boys Basketball opponent history - Savannah, GA",
+      "to": "/athletics/boys/basketball/records/opponents?team=Bible+Baptist",
+      "keywords": [
+        "Boys Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Bible Baptist",
+        "Braves",
+        "Savannah",
+        "GA"
+      ]
+    },
+    {
+      "id": "boys-basketball-team-abundant-life-academy",
+      "type": "team",
+      "title": "Abundant Life Academy",
+      "subtitle": "Boys Basketball opponent history - Hardeeville, SC",
+      "to": "/athletics/boys/basketball/records/opponents?team=Abundant+Life+Academy",
+      "keywords": [
+        "Boys Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Abundant Life Academy",
+        "Hardeeville",
+        "SC"
+      ]
+    },
+    {
+      "id": "boys-basketball-team-providence-christian",
+      "type": "team",
+      "title": "Providence Christian",
+      "subtitle": "Boys Basketball opponent history - Savannah, GA",
+      "to": "/athletics/boys/basketball/records/opponents?team=Providence+Christian",
+      "keywords": [
+        "Boys Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Providence Christian",
+        "Lions",
+        "Savannah",
+        "GA"
+      ]
+    },
+    {
+      "id": "boys-basketball-team-jefferson-davis-academy",
+      "type": "team",
+      "title": "Jefferson Davis Academy",
+      "subtitle": "Boys Basketball opponent history - Blackville, SC",
+      "to": "/athletics/boys/basketball/records/opponents?team=Jefferson+Davis+Academy",
+      "keywords": [
+        "Boys Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Jefferson Davis Academy",
+        "Raiders",
+        "Blackville",
+        "SC"
+      ]
+    },
+    {
+      "id": "boys-basketball-team-trinity-collegiate",
+      "type": "team",
+      "title": "Trinity Collegiate",
+      "subtitle": "Boys Basketball opponent history - Darlington, SC",
+      "to": "/athletics/boys/basketball/records/opponents?team=Trinity+Collegiate",
+      "keywords": [
+        "Boys Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Trinity Collegiate",
+        "Titans",
+        "Darlington",
+        "SC"
+      ]
+    },
+    {
+      "id": "boys-basketball-team-hilton-head-prep",
+      "type": "team",
+      "title": "Hilton Head Prep",
+      "subtitle": "Boys Basketball opponent history - Hilton Head Island, SC",
+      "to": "/athletics/boys/basketball/records/opponents?team=Hilton+Head+Prep",
+      "keywords": [
+        "Boys Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Hilton Head Prep",
+        "Dolphins",
+        "Hilton Head Island",
+        "SC"
+      ]
+    },
+    {
+      "id": "boys-basketball-team-pinewood-christian",
+      "type": "team",
+      "title": "Pinewood Christian",
+      "subtitle": "Boys Basketball opponent history - Bellville, GA",
+      "to": "/athletics/boys/basketball/records/opponents?team=Pinewood+Christian",
+      "keywords": [
+        "Boys Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Pinewood Christian",
+        "Patriots",
+        "Bellville",
+        "GA"
+      ]
+    },
+    {
+      "id": "boys-basketball-team-lagrange-academy",
+      "type": "team",
+      "title": "LaGrange Academy",
+      "subtitle": "Boys Basketball opponent history - LaGrange, GA",
+      "to": "/athletics/boys/basketball/records/opponents?team=LaGrange+Academy",
+      "keywords": [
+        "Boys Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "LaGrange Academy",
+        "LaGrange",
+        "GA"
+      ]
+    },
+    {
+      "id": "boys-basketball-team-memorial-day",
+      "type": "team",
+      "title": "Memorial Day",
+      "subtitle": "Boys Basketball opponent history - Savannah, GA",
+      "to": "/athletics/boys/basketball/records/opponents?team=Memorial+Day",
+      "keywords": [
+        "Boys Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Memorial Day",
+        "Matadors",
+        "Savannah",
+        "GA"
+      ]
+    },
+    {
+      "id": "boys-basketball-team-charleston-collegiate",
+      "type": "team",
+      "title": "Charleston Collegiate",
+      "subtitle": "Boys Basketball opponent history - John's Island, SC",
+      "to": "/athletics/boys/basketball/records/opponents?team=Charleston+Collegiate",
+      "keywords": [
+        "Boys Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Charleston Collegiate",
+        "Sundevils",
+        "John's Island",
+        "SC"
+      ]
+    },
+    {
+      "id": "boys-basketball-team-palmetto-christian-academy",
+      "type": "team",
+      "title": "Palmetto Christian Academy",
+      "subtitle": "Boys Basketball opponent history - Mt. Pleasant, SC",
+      "to": "/athletics/boys/basketball/records/opponents?team=Palmetto+Christian+Academy",
+      "keywords": [
+        "Boys Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Palmetto Christian Academy",
+        "Fighting Eagles",
+        "Mt. Pleasant",
+        "SC"
+      ]
+    },
+    {
       "id": "boys-basketball-team-cathedral-academy",
       "type": "team",
       "title": "Cathedral Academy",
@@ -8696,18 +10478,37 @@
       ]
     },
     {
-      "id": "boys-basketball-team-the-king-s-academy",
+      "id": "boys-basketball-team-first-baptist-school",
       "type": "team",
-      "title": "The King's Academy",
-      "subtitle": "Boys Basketball opponent history - Florence, SC",
-      "to": "/athletics/boys/basketball/records/opponents?team=The+King%27s+Academy",
+      "title": "First Baptist School",
+      "subtitle": "Boys Basketball opponent history - Charleston, SC",
+      "to": "/athletics/boys/basketball/records/opponents?team=First+Baptist+School",
       "keywords": [
         "Boys Basketball",
         "team",
         "opponent",
         "history",
         "records",
-        "The King's Academy",
+        "First Baptist School",
+        "Hurricanes",
+        "Charleston",
+        "SC"
+      ]
+    },
+    {
+      "id": "boys-basketball-team-king-s-academy",
+      "type": "team",
+      "title": "King's Academy",
+      "subtitle": "Boys Basketball opponent history - Florence, SC",
+      "to": "/athletics/boys/basketball/records/opponents?team=King%27s+Academy",
+      "keywords": [
+        "Boys Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "King's Academy",
+        "Lions",
         "Florence",
         "SC"
       ]
@@ -8747,19 +10548,38 @@
       ]
     },
     {
-      "id": "boys-basketball-team-orangeburg-preparatory-school",
+      "id": "boys-basketball-team-orangeburg-prep",
       "type": "team",
-      "title": "Orangeburg Preparatory School",
+      "title": "Orangeburg Prep",
       "subtitle": "Boys Basketball opponent history - Orangeburg, SC",
-      "to": "/athletics/boys/basketball/records/opponents?team=Orangeburg+Preparatory+School",
+      "to": "/athletics/boys/basketball/records/opponents?team=Orangeburg+Prep",
       "keywords": [
         "Boys Basketball",
         "team",
         "opponent",
         "history",
         "records",
-        "Orangeburg Preparatory School",
+        "Orangeburg Prep",
+        "Gladiators",
         "Orangeburg",
+        "SC"
+      ]
+    },
+    {
+      "id": "boys-basketball-team-providence-athletic-club",
+      "type": "team",
+      "title": "Providence Athletic Club",
+      "subtitle": "Boys Basketball opponent history - Columbia, SC",
+      "to": "/athletics/boys/basketball/records/opponents?team=Providence+Athletic+Club",
+      "keywords": [
+        "Boys Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Providence Athletic Club",
+        "Panthers",
+        "Columbia",
         "SC"
       ]
     },
@@ -8784,7 +10604,7 @@
       "id": "boys-basketball-team-northwood-academy",
       "type": "team",
       "title": "Northwood Academy",
-      "subtitle": "Boys Basketball opponent history - Summerville, SC",
+      "subtitle": "Boys Basketball opponent history - Charleston, SC",
       "to": "/athletics/boys/basketball/records/opponents?team=Northwood+Academy",
       "keywords": [
         "Boys Basketball",
@@ -8793,7 +10613,8 @@
         "history",
         "records",
         "Northwood Academy",
-        "Summerville",
+        "Chargers",
+        "Charleston",
         "SC"
       ]
     },
@@ -8827,24 +10648,25 @@
         "history",
         "records",
         "Coastal HomeSchool",
-        "Coastal Homeschool Athletic Association",
         "Pembroke",
-        "GA"
+        "GA",
+        "Coastal Homeschool Athletic Association"
       ]
     },
     {
-      "id": "boys-basketball-team-faith-christian-school",
+      "id": "boys-basketball-team-faith-christian",
       "type": "team",
-      "title": "Faith Christian School",
+      "title": "Faith Christian",
       "subtitle": "Boys Basketball opponent history - Summerville, SC",
-      "to": "/athletics/boys/basketball/records/opponents?team=Faith+Christian+School",
+      "to": "/athletics/boys/basketball/records/opponents?team=Faith+Christian",
       "keywords": [
         "Boys Basketball",
         "team",
         "opponent",
         "history",
         "records",
-        "Faith Christian School",
+        "Faith Christian",
+        "Knights",
         "Summerville",
         "SC"
       ]
@@ -8901,18 +10723,19 @@
       ]
     },
     {
-      "id": "boys-basketball-team-john-paul-ii-catholic-school",
+      "id": "boys-basketball-team-john-paul-ii",
       "type": "team",
-      "title": "John Paul II Catholic School",
+      "title": "John Paul II",
       "subtitle": "Boys Basketball opponent history - Ridgeland, SC",
-      "to": "/athletics/boys/basketball/records/opponents?team=John+Paul+II+Catholic+School",
+      "to": "/athletics/boys/basketball/records/opponents?team=John+Paul+II",
       "keywords": [
         "Boys Basketball",
         "team",
         "opponent",
         "history",
         "records",
-        "John Paul II Catholic School",
+        "John Paul II",
+        "Golden Warrriors",
         "Ridgeland",
         "SC"
       ]
@@ -8947,27 +10770,45 @@
         "history",
         "records",
         "First Preparatory Christian Academy",
-        "First Presbyterian Christian Academy",
         "FPCA",
         "Highlanders",
         "Hinesville",
-        "GA"
+        "GA",
+        "First Presbyterian Christian Academy"
       ]
     },
     {
-      "id": "boys-basketball-team-spartanburg-day-school",
+      "id": "boys-basketball-team-spartanburg-day",
       "type": "team",
-      "title": "Spartanburg Day School",
+      "title": "Spartanburg Day",
       "subtitle": "Boys Basketball opponent history - Spartanburg, SC",
-      "to": "/athletics/boys/basketball/records/opponents?team=Spartanburg+Day+School",
+      "to": "/athletics/boys/basketball/records/opponents?team=Spartanburg+Day",
       "keywords": [
         "Boys Basketball",
         "team",
         "opponent",
         "history",
         "records",
-        "Spartanburg Day School",
+        "Spartanburg Day",
+        "Griffins",
         "Spartanburg",
+        "SC"
+      ]
+    },
+    {
+      "id": "boys-basketball-team-john-paul-ii-catholic-school",
+      "type": "team",
+      "title": "John Paul II Catholic School",
+      "subtitle": "Boys Basketball opponent history - Ridgeland, SC",
+      "to": "/athletics/boys/basketball/records/opponents?team=John+Paul+II+Catholic+School",
+      "keywords": [
+        "Boys Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "John Paul II Catholic School",
+        "Ridgeland",
         "SC"
       ]
     },

@@ -38,7 +38,19 @@ import Season1995_96 from "./seasons/Season1995_96";
 import Season2000_01 from "./seasons/Season2000_01";
 import Season2001_02 from "./seasons/Season2001_02";
 import Season2002_03 from "./seasons/Season2002_03";
+import Season2005_06 from "./seasons/Season2005_06";
+import Season2006_07 from "./seasons/Season2006_07";
+import Season2007_08 from "./seasons/Season2007_08";
 import Season2008_09 from "./seasons/Season2008_09";
+import Season2009_10 from "./seasons/Season2009_10";
+import Season2010_11 from "./seasons/Season2010_11";
+import Season2011_12 from "./seasons/Season2011_12";
+import Season2012_13 from "./seasons/Season2012_13";
+import Season2013_14 from "./seasons/Season2013_14";
+import Season2014_15 from "./seasons/Season2014_15";
+import Season2015_16 from "./seasons/Season2015_16";
+import Season2016_17 from "./seasons/Season2016_17";
+import Season2017_18 from "./seasons/Season2017_18";
 import Season2018_19 from "./seasons/Season2018_19";
 import Season2019_20 from "./seasons/Season2019_20";
 import Season2020_21 from "./seasons/Season2020_21";
@@ -71,7 +83,19 @@ const seasonPages = [
   { slug: "2000-01", Component: Season2000_01 },
   { slug: "2001-02", Component: Season2001_02 },
   { slug: "2002-03", Component: Season2002_03 },
+  { slug: "2005-06", Component: Season2005_06 },
+  { slug: "2006-07", Component: Season2006_07 },
+  { slug: "2007-08", Component: Season2007_08 },
   { slug: "2008-09", Component: Season2008_09 },
+  { slug: "2009-10", Component: Season2009_10 },
+  { slug: "2010-11", Component: Season2010_11 },
+  { slug: "2011-12", Component: Season2011_12 },
+  { slug: "2012-13", Component: Season2012_13 },
+  { slug: "2013-14", Component: Season2013_14 },
+  { slug: "2014-15", Component: Season2014_15 },
+  { slug: "2015-16", Component: Season2015_16 },
+  { slug: "2016-17", Component: Season2016_17 },
+  { slug: "2017-18", Component: Season2017_18 },
   { slug: "2018-19", Component: Season2018_19 },
   { slug: "2019-20", Component: Season2019_20 },
   { slug: "2020-21", Component: Season2020_21 },

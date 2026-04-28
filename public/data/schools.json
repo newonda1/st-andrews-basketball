@@ -1305,5 +1305,144 @@
     "Name": "Abundant Life Academy",
     "City": "Hardeeville",
     "State": "SC"
+  },
+  {
+    "SchoolID": "ga-bible-baptist-savannah",
+    "Name": "Bible Baptist",
+    "City": "Savannah",
+    "State": "GA",
+    "Mascot": "Braves"
+  },
+  {
+    "SchoolID": "ga-providence-christian-savannah",
+    "Name": "Providence Christian",
+    "City": "Savannah",
+    "State": "GA",
+    "Mascot": "Lions"
+  },
+  {
+    "SchoolID": "sc-jefferson-davis-academy-blackville",
+    "Name": "Jefferson Davis Academy",
+    "City": "Blackville",
+    "State": "SC",
+    "Mascot": "Raiders"
+  },
+  {
+    "SchoolID": "sc-providence-lexington",
+    "Name": "Providence",
+    "City": "Lexington",
+    "State": "SC",
+    "Mascot": "Panthers"
+  },
+  {
+    "SchoolID": "sc-trinity-collegiate-darlington",
+    "Name": "Trinity Collegiate",
+    "City": "Darlington",
+    "State": "SC",
+    "Mascot": "Titans"
+  },
+  {
+    "SchoolID": "sc-hilton-head-prep-hilton-head-island",
+    "Name": "Hilton Head Prep",
+    "City": "Hilton Head Island",
+    "State": "SC",
+    "Mascot": "Dolphins"
+  },
+  {
+    "SchoolID": "ga-pinewood-christian-bellville",
+    "Name": "Pinewood Christian",
+    "City": "Bellville",
+    "State": "GA",
+    "Mascot": "Patriots"
+  },
+  {
+    "SchoolID": "ga-lagrange-academy-lagrange",
+    "Name": "LaGrange Academy",
+    "City": "LaGrange",
+    "State": "GA"
+  },
+  {
+    "SchoolID": "ga-memorial-day-savannah",
+    "Name": "Memorial Day",
+    "City": "Savannah",
+    "State": "GA",
+    "Mascot": "Matadors"
+  },
+  {
+    "SchoolID": "sc-charleston-collegiate-john-s-island",
+    "Name": "Charleston Collegiate",
+    "City": "John's Island",
+    "State": "SC",
+    "Mascot": "Sundevils"
+  },
+  {
+    "SchoolID": "sc-palmetto-christian-academy-mt-pleasant",
+    "Name": "Palmetto Christian Academy",
+    "City": "Mt. Pleasant",
+    "State": "SC",
+    "Mascot": "Fighting Eagles"
+  },
+  {
+    "SchoolID": "ga-providence-christian-academy-lilburn",
+    "Name": "Providence Christian Academy",
+    "City": "Lilburn",
+    "State": "GA",
+    "Mascot": "Storm"
+  },
+  {
+    "SchoolID": "sc-first-baptist-school-charleston",
+    "Name": "First Baptist School",
+    "City": "Charleston",
+    "State": "SC",
+    "Mascot": "Hurricanes"
+  },
+  {
+    "SchoolID": "sc-king-s-academy-florence",
+    "Name": "King's Academy",
+    "City": "Florence",
+    "State": "SC",
+    "Mascot": "Lions"
+  },
+  {
+    "SchoolID": "sc-orangeburg-prep-orangeburg",
+    "Name": "Orangeburg Prep",
+    "City": "Orangeburg",
+    "State": "SC",
+    "Mascot": "Gladiators"
+  },
+  {
+    "SchoolID": "sc-providence-athletic-club-columbia",
+    "Name": "Providence Athletic Club",
+    "City": "Columbia",
+    "State": "SC",
+    "Mascot": "Panthers"
+  },
+  {
+    "SchoolID": "sc-northwood-academy-charleston",
+    "Name": "Northwood Academy",
+    "City": "Charleston",
+    "State": "SC",
+    "Mascot": "Chargers"
+  },
+  {
+    "SchoolID": "sc-faith-christian-summerville",
+    "Name": "Faith Christian",
+    "City": "Summerville",
+    "State": "SC",
+    "Mascot": "Knights"
+  },
+  {
+    "SchoolID": "sc-john-paul-ii-ridgeland",
+    "Name": "John Paul II",
+    "City": "Ridgeland",
+    "State": "SC",
+    "Mascot": "Golden Warrriors"
+  },
+  {
+    "SchoolID": "sc-spartanburg-day-spartanburg",
+    "Name": "Spartanburg Day",
+    "City": "Spartanburg",
+    "State": "SC",
+    "Mascot": "Griffins"
   }
 ]

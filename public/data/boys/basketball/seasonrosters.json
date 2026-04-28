@@ -2,577 +2,4745 @@
   {
     "SeasonID": "1978-79",
     "Players": [
-      {"PlayerID": 197801, "JerseyNumber": 11},
-      {"PlayerID": 197802, "JerseyNumber": 4},
-      {"PlayerID": 197803, "JerseyNumber": 14},
-      {"PlayerID": 197804, "JerseyNumber": 13},
-      {"PlayerID": 197805, "JerseyNumber": 21},
-      {"PlayerID": 197806, "JerseyNumber": 12},
-      {"PlayerID": 197807, "JerseyNumber": 3},
-      {"PlayerID": 197808, "JerseyNumber": 5},
-      {"PlayerID": 197809, "JerseyNumber": 15},
-      {"PlayerID": 197810, "JerseyNumber": 10}
+      {
+        "PlayerID": 197801,
+        "JerseyNumber": 11
+      },
+      {
+        "PlayerID": 197802,
+        "JerseyNumber": 4
+      },
+      {
+        "PlayerID": 197803,
+        "JerseyNumber": 14
+      },
+      {
+        "PlayerID": 197804,
+        "JerseyNumber": 13
+      },
+      {
+        "PlayerID": 197805,
+        "JerseyNumber": 21
+      },
+      {
+        "PlayerID": 197806,
+        "JerseyNumber": 12
+      },
+      {
+        "PlayerID": 197807,
+        "JerseyNumber": 3
+      },
+      {
+        "PlayerID": 197808,
+        "JerseyNumber": 5
+      },
+      {
+        "PlayerID": 197809,
+        "JerseyNumber": 15
+      },
+      {
+        "PlayerID": 197810,
+        "JerseyNumber": 10
+      }
     ]
   },
   {
     "SeasonID": "1979-80",
     "Players": [
-      {"PlayerID": 197802, "JerseyNumber": null},
-      {"PlayerID": 197803, "JerseyNumber": null},
-      {"PlayerID": 197804, "JerseyNumber": null},
-      {"PlayerID": 197901, "JerseyNumber": null},
-      {"PlayerID": 197806, "JerseyNumber": null},
-      {"PlayerID": 197902, "JerseyNumber": null},
-      {"PlayerID": 197903, "JerseyNumber": null},
-      {"PlayerID": 197807, "JerseyNumber": null},
-      {"PlayerID": 197904, "JerseyNumber": null},
-      {"PlayerID": 197905, "JerseyNumber": null},
-      {"PlayerID": 197809, "JerseyNumber": null},
-      {"PlayerID": 197906, "JerseyNumber": null},
-      {"PlayerID": 197907, "JerseyNumber": null}
+      {
+        "PlayerID": 197802,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 197803,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 197804,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 197901,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 197806,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 197902,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 197903,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 197807,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 197904,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 197905,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 197809,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 197906,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 197907,
+        "JerseyNumber": null
+      }
     ]
   },
   {
     "SeasonID": "1980-81",
     "Players": [
-      {"PlayerID": 198001, "JerseyNumber": null},
-      {"PlayerID": 197901, "JerseyNumber": null},
-      {"PlayerID": 198002, "JerseyNumber": null},
-      {"PlayerID": 198003, "JerseyNumber": null},
-      {"PlayerID": 198004, "JerseyNumber": null},
-      {"PlayerID": 197904, "JerseyNumber": null},
-      {"PlayerID": 198005, "JerseyNumber": null},
-      {"PlayerID": 197905, "JerseyNumber": null},
-      {"PlayerID": 197809, "JerseyNumber": null},
-      {"PlayerID": 198006, "JerseyNumber": null},
-      {"PlayerID": 197906, "JerseyNumber": null},
-      {"PlayerID": 198007, "JerseyNumber": null}
+      {
+        "PlayerID": 198001,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 197901,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198002,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198003,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198004,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 197904,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198005,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 197905,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 197809,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198006,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 197906,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198007,
+        "JerseyNumber": null
+      }
     ]
   },
   {
     "SeasonID": "1981-82",
     "Players": [
-      {"PlayerID": 198101, "JerseyNumber": null},
-      {"PlayerID": 198102, "JerseyNumber": null},
-      {"PlayerID": 198003, "JerseyNumber": null},
-      {"PlayerID": 198103, "JerseyNumber": null},
-      {"PlayerID": 197904, "JerseyNumber": null},
-      {"PlayerID": 198005, "JerseyNumber": null},
-      {"PlayerID": 198104, "JerseyNumber": null},
-      {"PlayerID": 198105, "JerseyNumber": null},
-      {"PlayerID": 197905, "JerseyNumber": null},
-      {"PlayerID": 198006, "JerseyNumber": null},
-      {"PlayerID": 197906, "JerseyNumber": null}
+      {
+        "PlayerID": 198101,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198102,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198003,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198103,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 197904,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198005,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198104,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198105,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 197905,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198006,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 197906,
+        "JerseyNumber": null
+      }
     ]
   },
   {
     "SeasonID": "1982-83",
     "Players": [
-      {"PlayerID": 198201, "JerseyNumber": null},
-      {"PlayerID": 198202, "JerseyNumber": null},
-      {"PlayerID": 198203, "JerseyNumber": null},
-      {"PlayerID": 198204, "JerseyNumber": null},
-      {"PlayerID": 198205, "JerseyNumber": null},
-      {"PlayerID": 198101, "JerseyNumber": null},
-      {"PlayerID": 198206, "JerseyNumber": null},
-      {"PlayerID": 198103, "JerseyNumber": null},
-      {"PlayerID": 198104, "JerseyNumber": null},
-      {"PlayerID": 198207, "JerseyNumber": null},
-      {"PlayerID": 198208, "JerseyNumber": null},
-      {"PlayerID": 198005, "JerseyNumber": null},
-      {"PlayerID": 198105, "JerseyNumber": null}
+      {
+        "PlayerID": 198201,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198202,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198203,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198204,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198205,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198101,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198206,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198103,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198104,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198207,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198208,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198005,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198105,
+        "JerseyNumber": null
+      }
     ]
   },
   {
     "SeasonID": "1983-84",
     "Players": [
-      {"PlayerID": 198301, "JerseyNumber": null},
-      {"PlayerID": 198203, "JerseyNumber": null},
-      {"PlayerID": 198302, "JerseyNumber": null},
-      {"PlayerID": 198303, "JerseyNumber": null},
-      {"PlayerID": 198206, "JerseyNumber": null},
-      {"PlayerID": 198103, "JerseyNumber": null},
-      {"PlayerID": 198207, "JerseyNumber": null},
-      {"PlayerID": 198208, "JerseyNumber": null},
-      {"PlayerID": 198005, "JerseyNumber": null}
+      {
+        "PlayerID": 198301,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198203,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198302,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198303,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198206,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198103,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198207,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198208,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198005,
+        "JerseyNumber": null
+      }
     ]
   },
   {
     "SeasonID": "1984-85",
     "Players": [
-      {"PlayerID": 198301, "JerseyNumber": null},
-      {"PlayerID": 198401, "JerseyNumber": null},
-      {"PlayerID": 198302, "JerseyNumber": null},
-      {"PlayerID": 198303, "JerseyNumber": null},
-      {"PlayerID": 198402, "JerseyNumber": null},
-      {"PlayerID": 198206, "JerseyNumber": null},
-      {"PlayerID": 198403, "JerseyNumber": null},
-      {"PlayerID": 198207, "JerseyNumber": null},
-      {"PlayerID": 198404, "JerseyNumber": null},
-      {"PlayerID": 198405, "JerseyNumber": null}
+      {
+        "PlayerID": 198301,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198401,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198302,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198303,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198402,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198206,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198403,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198207,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198404,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198405,
+        "JerseyNumber": null
+      }
     ]
   },
   {
     "SeasonID": "1985-86",
     "Players": [
-      {"PlayerID": 198501, "JerseyNumber": null},
-      {"PlayerID": 198502, "JerseyNumber": null},
-      {"PlayerID": 198402, "JerseyNumber": null},
-      {"PlayerID": 198206, "JerseyNumber": null},
-      {"PlayerID": 198503, "JerseyNumber": null},
-      {"PlayerID": 198504, "JerseyNumber": null},
-      {"PlayerID": 198403, "JerseyNumber": null},
-      {"PlayerID": 198404, "JerseyNumber": null},
-      {"PlayerID": 198405, "JerseyNumber": null},
-      {"PlayerID": 198505, "JerseyNumber": null}
+      {
+        "PlayerID": 198501,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198502,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198402,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198206,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198503,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198504,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198403,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198404,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198405,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198505,
+        "JerseyNumber": null
+      }
     ]
   },
   {
     "SeasonID": "1986-87",
     "Players": [
-      {"PlayerID": 198502, "JerseyNumber": null},
-      {"PlayerID": 198402, "JerseyNumber": null},
-      {"PlayerID": 198601, "JerseyNumber": null},
-      {"PlayerID": 198602, "JerseyNumber": null},
-      {"PlayerID": 198503, "JerseyNumber": null},
-      {"PlayerID": 198603, "JerseyNumber": null},
-      {"PlayerID": 198604, "JerseyNumber": null},
-      {"PlayerID": 198403, "JerseyNumber": null},
-      {"PlayerID": 198605, "JerseyNumber": null},
-      {"PlayerID": 198404, "JerseyNumber": null}
+      {
+        "PlayerID": 198502,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198402,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198601,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198602,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198503,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198603,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198604,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198403,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198605,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198404,
+        "JerseyNumber": null
+      }
     ]
   },
   {
     "SeasonID": "1987-88",
     "Players": [
-      {"PlayerID": 198701, "JerseyNumber": null},
-      {"PlayerID": 198702, "JerseyNumber": null},
-      {"PlayerID": 198501, "JerseyNumber": null},
-      {"PlayerID": 198502, "JerseyNumber": null},
-      {"PlayerID": 198602, "JerseyNumber": null},
-      {"PlayerID": 198503, "JerseyNumber": null},
-      {"PlayerID": 198603, "JerseyNumber": null},
-      {"PlayerID": 198703, "JerseyNumber": null},
-      {"PlayerID": 198604, "JerseyNumber": null},
-      {"PlayerID": 198605, "JerseyNumber": null},
-      {"PlayerID": 198404, "JerseyNumber": null}
+      {
+        "PlayerID": 198701,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198702,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198501,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198502,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198602,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198503,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198603,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198703,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198604,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198605,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198404,
+        "JerseyNumber": null
+      }
     ]
   },
   {
     "SeasonID": "1988-89",
     "Players": [
-      {"PlayerID": 198801, "JerseyNumber": null},
-      {"PlayerID": 198802, "JerseyNumber": null},
-      {"PlayerID": 198803, "JerseyNumber": null},
-      {"PlayerID": 198502, "JerseyNumber": null},
-      {"PlayerID": 198804, "JerseyNumber": null},
-      {"PlayerID": 198805, "JerseyNumber": null},
-      {"PlayerID": 198703, "JerseyNumber": null},
-      {"PlayerID": 198806, "JerseyNumber": null},
-      {"PlayerID": 198807, "JerseyNumber": null},
-      {"PlayerID": 198808, "JerseyNumber": null},
-      {"PlayerID": 198809, "JerseyNumber": null}
+      {
+        "PlayerID": 198801,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198802,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198803,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198502,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198804,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198805,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198703,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198806,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198807,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198808,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198809,
+        "JerseyNumber": null
+      }
     ]
   },
   {
     "SeasonID": "1989-90",
     "Players": [
-      {"PlayerID": 198801, "JerseyNumber": null},
-      {"PlayerID": 198901, "JerseyNumber": null},
-      {"PlayerID": 198902, "JerseyNumber": null},
-      {"PlayerID": 198903, "JerseyNumber": null},
-      {"PlayerID": 198904, "JerseyNumber": null},
-      {"PlayerID": 198905, "JerseyNumber": null},
-      {"PlayerID": 198906, "JerseyNumber": null},
-      {"PlayerID": 198805, "JerseyNumber": null},
-      {"PlayerID": 198907, "JerseyNumber": null},
-      {"PlayerID": 198806, "JerseyNumber": null},
-      {"PlayerID": 198807, "JerseyNumber": null},
-      {"PlayerID": 198908, "JerseyNumber": null},
-      {"PlayerID": 198808, "JerseyNumber": null},
-      {"PlayerID": 198809, "JerseyNumber": null}
+      {
+        "PlayerID": 198801,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198901,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198902,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198903,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198904,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198905,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198906,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198805,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198907,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198806,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198807,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198908,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198808,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198809,
+        "JerseyNumber": null
+      }
     ]
   },
   {
     "SeasonID": "1990-91",
     "Players": [
-      {"PlayerID": 199001, "JerseyNumber": null},
-      {"PlayerID": 199002, "JerseyNumber": null},
-      {"PlayerID": 199003, "JerseyNumber": null},
-      {"PlayerID": 198903, "JerseyNumber": null},
-      {"PlayerID": 198905, "JerseyNumber": null},
-      {"PlayerID": 198906, "JerseyNumber": null},
-      {"PlayerID": 199004, "JerseyNumber": null},
-      {"PlayerID": 198805, "JerseyNumber": null},
-      {"PlayerID": 199005, "JerseyNumber": null},
-      {"PlayerID": 199006, "JerseyNumber": null},
-      {"PlayerID": 198806, "JerseyNumber": null},
-      {"PlayerID": 198807, "JerseyNumber": null},
-      {"PlayerID": 198908, "JerseyNumber": null},
-      {"PlayerID": 198808, "JerseyNumber": null},
-      {"PlayerID": 198809, "JerseyNumber": null}
+      {
+        "PlayerID": 199001,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199002,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199003,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198903,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198905,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198906,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199004,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198805,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199005,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199006,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198806,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198807,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198908,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198808,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198809,
+        "JerseyNumber": null
+      }
     ]
   },
   {
     "SeasonID": "1991-92",
     "Players": [
-      {"PlayerID": 199101, "JerseyNumber": null},
-      {"PlayerID": 199102, "JerseyNumber": null},
-      {"PlayerID": 199001, "JerseyNumber": null},
-      {"PlayerID": 199103, "JerseyNumber": null},
-      {"PlayerID": 199003, "JerseyNumber": null},
-      {"PlayerID": 198903, "JerseyNumber": null},
-      {"PlayerID": 198905, "JerseyNumber": null},
-      {"PlayerID": 198906, "JerseyNumber": null},
-      {"PlayerID": 199004, "JerseyNumber": null},
-      {"PlayerID": 199104, "JerseyNumber": null},
-      {"PlayerID": 198806, "JerseyNumber": null},
-      {"PlayerID": 198807, "JerseyNumber": null},
-      {"PlayerID": 199105, "JerseyNumber": null},
-      {"PlayerID": 198908, "JerseyNumber": null},
-      {"PlayerID": 199106, "JerseyNumber": null}
+      {
+        "PlayerID": 199101,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199102,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199001,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199103,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199003,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198903,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198905,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198906,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199004,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199104,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198806,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198807,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199105,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198908,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199106,
+        "JerseyNumber": null
+      }
     ]
   },
   {
     "SeasonID": "1992-93",
     "Players": [
-      {"PlayerID": 198903, "JerseyNumber": null},
-      {"PlayerID": 198906, "JerseyNumber": null},
-      {"PlayerID": 199001, "JerseyNumber": null},
-      {"PlayerID": 199003, "JerseyNumber": null},
-      {"PlayerID": 199004, "JerseyNumber": null},
-      {"PlayerID": 199101, "JerseyNumber": null},
-      {"PlayerID": 199102, "JerseyNumber": null},
-      {"PlayerID": 199103, "JerseyNumber": null},
-      {"PlayerID": 199104, "JerseyNumber": null},
-      {"PlayerID": 199105, "JerseyNumber": null},
-      {"PlayerID": 199201, "JerseyNumber": null},
-      {"PlayerID": 199202, "JerseyNumber": null},
-      {"PlayerID": 199203, "JerseyNumber": null},
-      {"PlayerID": 199204, "JerseyNumber": null},
-      {"PlayerID": 199205, "JerseyNumber": null}
+      {
+        "PlayerID": 198903,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 198906,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199001,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199003,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199004,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199101,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199102,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199103,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199104,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199105,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199201,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199202,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199203,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199204,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199205,
+        "JerseyNumber": null
+      }
     ]
   },
   {
     "SeasonID": "1993-94",
     "Players": [
-      {"PlayerID": 199101, "JerseyNumber": null},
-      {"PlayerID": 199102, "JerseyNumber": null},
-      {"PlayerID": 199301, "JerseyNumber": null},
-      {"PlayerID": 199001, "JerseyNumber": null},
-      {"PlayerID": 199103, "JerseyNumber": null},
-      {"PlayerID": 199201, "JerseyNumber": null},
-      {"PlayerID": 199003, "JerseyNumber": null},
-      {"PlayerID": 199302, "JerseyNumber": null},
-      {"PlayerID": 199104, "JerseyNumber": null},
-      {"PlayerID": 199004, "JerseyNumber": null},
-      {"PlayerID": 199204, "JerseyNumber": null},
-      {"PlayerID": 199303, "JerseyNumber": null},
-      {"PlayerID": 199105, "JerseyNumber": null},
-      {"PlayerID": 199304, "JerseyNumber": null},
-      {"PlayerID": 199206, "JerseyNumber": null},
-      {"PlayerID": 199205, "JerseyNumber": null}
+      {
+        "PlayerID": 199101,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199102,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199301,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199001,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199103,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199201,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199003,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199302,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199104,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199004,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199204,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199303,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199105,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199304,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199206,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199205,
+        "JerseyNumber": null
+      }
     ]
   },
   {
     "SeasonID": "1994-95",
     "Players": [
-      {"PlayerID": 199401, "JerseyNumber": null},
-      {"PlayerID": 199402, "JerseyNumber": null},
-      {"PlayerID": 199102, "JerseyNumber": null},
-      {"PlayerID": 199301, "JerseyNumber": null},
-      {"PlayerID": 199303, "JerseyNumber": null},
-      {"PlayerID": 199403, "JerseyNumber": null},
-      {"PlayerID": 199404, "JerseyNumber": null},
-      {"PlayerID": 199405, "JerseyNumber": null},
-      {"PlayerID": 199406, "JerseyNumber": null},
-      {"PlayerID": 199105, "JerseyNumber": null},
-      {"PlayerID": 199304, "JerseyNumber": null}
+      {
+        "PlayerID": 199401,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199402,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199102,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199301,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199303,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199403,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199404,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199405,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199406,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199105,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199304,
+        "JerseyNumber": null
+      }
     ]
   },
   {
     "SeasonID": "1995-96",
     "Players": [
-      {"PlayerID": 199401, "JerseyNumber": null},
-      {"PlayerID": 199402, "JerseyNumber": null},
-      {"PlayerID": 199301, "JerseyNumber": null},
-      {"PlayerID": 199501, "JerseyNumber": null},
-      {"PlayerID": 199502, "JerseyNumber": null},
-      {"PlayerID": 199503, "JerseyNumber": null},
-      {"PlayerID": 199504, "JerseyNumber": null},
-      {"PlayerID": 199404, "JerseyNumber": null},
-      {"PlayerID": 199505, "JerseyNumber": null},
-      {"PlayerID": 199405, "JerseyNumber": null},
-      {"PlayerID": 199506, "JerseyNumber": null},
-      {"PlayerID": 199304, "JerseyNumber": null}
+      {
+        "PlayerID": 199401,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199402,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199301,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199501,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199502,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199503,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199504,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199404,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199505,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199405,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199506,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 199304,
+        "JerseyNumber": null
+      }
     ]
   },
   {
     "SeasonID": "2000-01",
     "Players": [
-      {"PlayerID": 200001, "JerseyNumber": null},
-      {"PlayerID": 200002, "JerseyNumber": null},
-      {"PlayerID": 200003, "JerseyNumber": null},
-      {"PlayerID": 200004, "JerseyNumber": null},
-      {"PlayerID": 200005, "JerseyNumber": null},
-      {"PlayerID": 200006, "JerseyNumber": null},
-      {"PlayerID": 200007, "JerseyNumber": null},
-      {"PlayerID": 200008, "JerseyNumber": null},
-      {"PlayerID": 200009, "JerseyNumber": null},
-      {"PlayerID": 200010, "JerseyNumber": null},
-      {"PlayerID": 200011, "JerseyNumber": null},
-      {"PlayerID": 200012, "JerseyNumber": null}
+      {
+        "PlayerID": 200001,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200002,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200003,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200004,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200005,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200006,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200007,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200008,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200009,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200010,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200011,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200012,
+        "JerseyNumber": null
+      }
     ]
   },
   {
     "SeasonID": "2001-02",
     "Players": [
-      {"PlayerID": 200001, "JerseyNumber": null},
-      {"PlayerID": 200002, "JerseyNumber": null},
-      {"PlayerID": 200003, "JerseyNumber": null},
-      {"PlayerID": 200101, "JerseyNumber": null},
-      {"PlayerID": 200005, "JerseyNumber": null},
-      {"PlayerID": 200102, "JerseyNumber": null},
-      {"PlayerID": 200103, "JerseyNumber": null},
-      {"PlayerID": 200104, "JerseyNumber": null},
-      {"PlayerID": 200105, "JerseyNumber": null},
-      {"PlayerID": 200008, "JerseyNumber": null},
-      {"PlayerID": 200010, "JerseyNumber": null},
-      {"PlayerID": 200106, "JerseyNumber": null},
-      {"PlayerID": 200011, "JerseyNumber": null},
-      {"PlayerID": 200107, "JerseyNumber": null}
+      {
+        "PlayerID": 200001,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200002,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200003,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200101,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200005,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200102,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200103,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200104,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200105,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200008,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200010,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200106,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200011,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200107,
+        "JerseyNumber": null
+      }
     ]
   },
   {
     "SeasonID": "2002-03",
     "Players": [
-      {"PlayerID": 200001, "JerseyNumber": null},
-      {"PlayerID": 200002, "JerseyNumber": null},
-      {"PlayerID": 200003, "JerseyNumber": null},
-      {"PlayerID": 200201, "JerseyNumber": null},
-      {"PlayerID": 200202, "JerseyNumber": null},
-      {"PlayerID": 200101, "JerseyNumber": null},
-      {"PlayerID": 200203, "JerseyNumber": null},
-      {"PlayerID": 200204, "JerseyNumber": null},
-      {"PlayerID": 200205, "JerseyNumber": null},
-      {"PlayerID": 200206, "JerseyNumber": null},
-      {"PlayerID": 200207, "JerseyNumber": null},
-      {"PlayerID": 200010, "JerseyNumber": null},
-      {"PlayerID": 200011, "JerseyNumber": null},
-      {"PlayerID": 200208, "JerseyNumber": null}
+      {
+        "PlayerID": 200001,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200002,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200003,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200201,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200202,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200101,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200203,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200204,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200205,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200206,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200207,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200010,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200011,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200208,
+        "JerseyNumber": null
+      }
+    ]
+  },
+  {
+    "SeasonID": "2005-06",
+    "Players": [
+      {
+        "PlayerID": 200202,
+        "JerseyNumber": null,
+        "Grade": 12,
+        "GamesPlayed": 18,
+        "SeasonTotals": {
+          "Points": 169
+        }
+      },
+      {
+        "PlayerID": 2026154,
+        "JerseyNumber": null,
+        "Grade": 12,
+        "GamesPlayed": 2,
+        "SeasonTotals": {
+          "Points": 5
+        }
+      },
+      {
+        "PlayerID": 2026155,
+        "JerseyNumber": null,
+        "Grade": 12,
+        "GamesPlayed": 23,
+        "SeasonTotals": {
+          "Points": 288
+        }
+      },
+      {
+        "PlayerID": 2026156,
+        "JerseyNumber": null,
+        "Grade": 12,
+        "GamesPlayed": 2,
+        "SeasonTotals": {
+          "Points": 5
+        }
+      },
+      {
+        "PlayerID": 2026157,
+        "JerseyNumber": null,
+        "Grade": 12,
+        "GamesPlayed": 18,
+        "SeasonTotals": {
+          "Points": 142
+        }
+      },
+      {
+        "PlayerID": 2026158,
+        "JerseyNumber": null,
+        "Grade": 12,
+        "GamesPlayed": 10,
+        "SeasonTotals": {
+          "Points": 22
+        }
+      },
+      {
+        "PlayerID": 2026159,
+        "JerseyNumber": null,
+        "Grade": 12,
+        "GamesPlayed": 9,
+        "SeasonTotals": {
+          "Points": 36
+        }
+      },
+      {
+        "PlayerID": 2026160,
+        "JerseyNumber": null,
+        "Grade": 11,
+        "GamesPlayed": 1,
+        "SeasonTotals": {
+          "Points": 2
+        }
+      },
+      {
+        "PlayerID": 2026161,
+        "JerseyNumber": null,
+        "Grade": 11,
+        "GamesPlayed": 4,
+        "SeasonTotals": {
+          "Points": 11
+        }
+      },
+      {
+        "PlayerID": 2026162,
+        "JerseyNumber": null,
+        "Grade": 12,
+        "GamesPlayed": 21,
+        "SeasonTotals": {
+          "Points": 177
+        }
+      },
+      {
+        "PlayerID": 2026163,
+        "JerseyNumber": null,
+        "Grade": 10,
+        "GamesPlayed": 1,
+        "SeasonTotals": {
+          "Points": 3
+        }
+      },
+      {
+        "PlayerID": 2026164,
+        "JerseyNumber": null,
+        "Grade": 12,
+        "GamesPlayed": 10,
+        "SeasonTotals": {
+          "Points": 46
+        }
+      },
+      {
+        "PlayerID": 2026165,
+        "JerseyNumber": null,
+        "Grade": 11,
+        "GamesPlayed": 14,
+        "SeasonTotals": {
+          "Points": 98
+        }
+      },
+      {
+        "PlayerID": 2026166,
+        "JerseyNumber": null,
+        "Grade": 11,
+        "GamesPlayed": 11,
+        "SeasonTotals": {
+          "Points": 113
+        }
+      }
+    ]
+  },
+  {
+    "SeasonID": "2006-07",
+    "Players": [
+      {
+        "PlayerID": 200806,
+        "JerseyNumber": null,
+        "Grade": 10,
+        "GamesPlayed": 7,
+        "SeasonTotals": {
+          "Points": 17
+        }
+      },
+      {
+        "PlayerID": 200809,
+        "JerseyNumber": null,
+        "Grade": 10,
+        "GamesPlayed": 5,
+        "SeasonTotals": {
+          "Points": 14
+        }
+      },
+      {
+        "PlayerID": 2026160,
+        "JerseyNumber": null,
+        "Grade": 12,
+        "GamesPlayed": 1,
+        "SeasonTotals": {
+          "Points": 2
+        }
+      },
+      {
+        "PlayerID": 2026161,
+        "JerseyNumber": null,
+        "Grade": 12,
+        "GamesPlayed": 20,
+        "SeasonTotals": {
+          "Points": 62
+        }
+      },
+      {
+        "PlayerID": 2026163,
+        "JerseyNumber": null,
+        "Grade": 11,
+        "GamesPlayed": 7,
+        "SeasonTotals": {
+          "Points": 23
+        }
+      },
+      {
+        "PlayerID": 2026165,
+        "JerseyNumber": null,
+        "Grade": 12,
+        "GamesPlayed": 23,
+        "SeasonTotals": {
+          "Points": 141
+        }
+      },
+      {
+        "PlayerID": 2026166,
+        "JerseyNumber": null,
+        "Grade": 12,
+        "GamesPlayed": 22,
+        "SeasonTotals": {
+          "Points": 276
+        }
+      },
+      {
+        "PlayerID": 2026167,
+        "JerseyNumber": null,
+        "Grade": 11,
+        "GamesPlayed": 23,
+        "SeasonTotals": {
+          "Points": 140
+        }
+      },
+      {
+        "PlayerID": 2026168,
+        "JerseyNumber": null,
+        "Grade": 12,
+        "GamesPlayed": 13,
+        "SeasonTotals": {
+          "Points": 69
+        }
+      },
+      {
+        "PlayerID": 2026169,
+        "JerseyNumber": null,
+        "Grade": 11,
+        "GamesPlayed": 13,
+        "SeasonTotals": {
+          "Points": 43
+        }
+      },
+      {
+        "PlayerID": 2026170,
+        "JerseyNumber": null,
+        "Grade": 11,
+        "GamesPlayed": 24,
+        "SeasonTotals": {
+          "Points": 247
+        }
+      },
+      {
+        "PlayerID": 2026171,
+        "JerseyNumber": null,
+        "Grade": 11,
+        "GamesPlayed": 2,
+        "SeasonTotals": {
+          "Points": 4
+        }
+      }
+    ]
+  },
+  {
+    "SeasonID": "2007-08",
+    "Players": [
+      {
+        "PlayerID": 200806,
+        "JerseyNumber": null,
+        "Grade": 11,
+        "GamesPlayed": 18,
+        "SeasonTotals": {
+          "Points": 72
+        }
+      },
+      {
+        "PlayerID": 200807,
+        "JerseyNumber": null,
+        "Grade": 11,
+        "GamesPlayed": 5,
+        "SeasonTotals": {
+          "Points": 21
+        }
+      },
+      {
+        "PlayerID": 200809,
+        "JerseyNumber": null,
+        "Grade": 11,
+        "GamesPlayed": 20,
+        "SeasonTotals": {
+          "Points": 128
+        }
+      },
+      {
+        "PlayerID": 200810,
+        "JerseyNumber": null,
+        "Grade": 11,
+        "GamesPlayed": 8,
+        "SeasonTotals": {
+          "Points": 28
+        }
+      },
+      {
+        "PlayerID": 200908,
+        "JerseyNumber": null,
+        "Grade": 11,
+        "GamesPlayed": 2,
+        "SeasonTotals": {
+          "Points": 5
+        }
+      },
+      {
+        "PlayerID": 200909,
+        "JerseyNumber": null,
+        "Grade": 11,
+        "GamesPlayed": 16,
+        "SeasonTotals": {
+          "Points": 63
+        }
+      },
+      {
+        "PlayerID": 2026163,
+        "JerseyNumber": null,
+        "Grade": 12,
+        "GamesPlayed": 11,
+        "SeasonTotals": {
+          "Points": 57
+        }
+      },
+      {
+        "PlayerID": 2026167,
+        "JerseyNumber": null,
+        "Grade": 12,
+        "GamesPlayed": 20,
+        "SeasonTotals": {
+          "Points": 127
+        }
+      },
+      {
+        "PlayerID": 2026169,
+        "JerseyNumber": null,
+        "Grade": 12,
+        "GamesPlayed": 1,
+        "SeasonTotals": {
+          "Points": 4
+        }
+      },
+      {
+        "PlayerID": 2026170,
+        "JerseyNumber": null,
+        "Grade": 12,
+        "GamesPlayed": 23,
+        "SeasonTotals": {
+          "Points": 328
+        }
+      },
+      {
+        "PlayerID": 2026171,
+        "JerseyNumber": null,
+        "Grade": 12,
+        "GamesPlayed": 1,
+        "SeasonTotals": {
+          "Points": 2
+        }
+      },
+      {
+        "PlayerID": 2026172,
+        "JerseyNumber": null,
+        "Grade": 12,
+        "GamesPlayed": 5,
+        "SeasonTotals": {
+          "Points": 12
+        }
+      },
+      {
+        "PlayerID": 2026173,
+        "JerseyNumber": null,
+        "Grade": 10,
+        "GamesPlayed": 8,
+        "SeasonTotals": {
+          "Points": 33
+        }
+      },
+      {
+        "PlayerID": 2026174,
+        "JerseyNumber": null,
+        "Grade": 12,
+        "GamesPlayed": 2,
+        "SeasonTotals": {
+          "Points": 5
+        }
+      },
+      {
+        "PlayerID": 2026175,
+        "JerseyNumber": null,
+        "Grade": 10,
+        "GamesPlayed": 14,
+        "SeasonTotals": {
+          "Points": 80
+        }
+      },
+      {
+        "PlayerID": 2026176,
+        "JerseyNumber": null,
+        "Grade": 10,
+        "GamesPlayed": 21,
+        "SeasonTotals": {
+          "Points": 171
+        }
+      },
+      {
+        "PlayerID": 2026177,
+        "JerseyNumber": null,
+        "Grade": 10,
+        "GamesPlayed": 1,
+        "SeasonTotals": {
+          "Points": 2
+        }
+      },
+      {
+        "PlayerID": 2026178,
+        "JerseyNumber": null,
+        "Grade": 11,
+        "GamesPlayed": 2,
+        "SeasonTotals": {
+          "Points": 3
+        }
+      }
     ]
   },
   {
     "SeasonID": "2008-09",
     "Players": [
-      {"PlayerID": 200801, "JerseyNumber": null},
-      {"PlayerID": 200802, "JerseyNumber": null},
-      {"PlayerID": 200803, "JerseyNumber": null},
-      {"PlayerID": 200804, "JerseyNumber": null},
-      {"PlayerID": 200805, "JerseyNumber": null},
-      {"PlayerID": 200806, "JerseyNumber": null},
-      {"PlayerID": 200807, "JerseyNumber": null},
-      {"PlayerID": 200808, "JerseyNumber": null},
-      {"PlayerID": 200809, "JerseyNumber": null},
-      {"PlayerID": 200810, "JerseyNumber": null},
-      {"PlayerID": 200811, "JerseyNumber": null},
-      {"PlayerID": 200812, "JerseyNumber": null}
+      {
+        "PlayerID": 200801,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200802,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200803,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200804,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200805,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200806,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200807,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200808,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200809,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200810,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200811,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200812,
+        "JerseyNumber": null
+      }
     ]
   },
   {
     "SeasonID": "2009-10",
     "Players": [
-      {"PlayerID": 200808, "JerseyNumber": 3},
-      {"PlayerID": 200903, "JerseyNumber": 4},
-      {"PlayerID": 200904, "JerseyNumber": 11},
-      {"PlayerID": 200812, "JerseyNumber": 12},
-      {"PlayerID": 200801, "JerseyNumber": 14},
-      {"PlayerID": 200901, "JerseyNumber": 21},
-      {"PlayerID": 200905, "JerseyNumber": 22},
-      {"PlayerID": 200906, "JerseyNumber": 23},
-      {"PlayerID": 200805, "JerseyNumber": 24},
-      {"PlayerID": 200907, "JerseyNumber": 31},
-      {"PlayerID": 200804, "JerseyNumber": 32},
-      {"PlayerID": 200811, "JerseyNumber": 33},
-      {"PlayerID": 200902, "JerseyNumber": 34},
-      {"PlayerID": 200803, "JerseyNumber": 40}
+      {
+        "PlayerID": 200808,
+        "JerseyNumber": 3,
+        "Grade": 12,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 27,
+        "SeasonTotals": {
+          "Points": 275,
+          "ThreePM": 20,
+          "ThreePA": 67,
+          "TwoPM": 78,
+          "TwoPA": 157,
+          "FTM": 59,
+          "FTA": 92,
+          "Rebounds": 63,
+          "Assists": 92,
+          "Steals": 45,
+          "Turnovers": 74,
+          "Blocks": 2
+        }
+      },
+      {
+        "PlayerID": 200903,
+        "JerseyNumber": 4,
+        "Grade": 9,
+        "GamesPlayed": 1,
+        "SeasonTotals": {
+          "Points": 4
+        }
+      },
+      {
+        "PlayerID": 200904,
+        "JerseyNumber": 11,
+        "Grade": 11,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 22,
+        "SeasonTotals": {
+          "Points": 101,
+          "ThreePM": 14,
+          "ThreePA": 62,
+          "TwoPM": 25,
+          "TwoPA": 67,
+          "FTM": 9,
+          "FTA": 14,
+          "Rebounds": 52,
+          "Assists": 20,
+          "Steals": 22,
+          "Turnovers": 39,
+          "Blocks": 1
+        }
+      },
+      {
+        "PlayerID": 200812,
+        "JerseyNumber": 12,
+        "Grade": 11,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 26,
+        "SeasonTotals": {
+          "Points": 144,
+          "ThreePM": 21,
+          "ThreePA": 68,
+          "TwoPM": 27,
+          "TwoPA": 72,
+          "FTM": 27,
+          "FTA": 54,
+          "Rebounds": 50,
+          "Assists": 37,
+          "Steals": 36,
+          "Turnovers": 69,
+          "Blocks": 0
+        }
+      },
+      {
+        "PlayerID": 200801,
+        "JerseyNumber": 14,
+        "Grade": 12,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 24,
+        "SeasonTotals": {
+          "Points": 75,
+          "ThreePM": 5,
+          "ThreePA": 24,
+          "TwoPM": 26,
+          "TwoPA": 42,
+          "FTM": 8,
+          "FTA": 20,
+          "Rebounds": 26,
+          "Assists": 18,
+          "Steals": 20,
+          "Turnovers": 25,
+          "Blocks": 0
+        }
+      },
+      {
+        "PlayerID": 200901,
+        "JerseyNumber": 21,
+        "Grade": 10,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 25,
+        "SeasonTotals": {
+          "Points": 116,
+          "ThreePM": 0,
+          "ThreePA": 6,
+          "TwoPM": 53,
+          "TwoPA": 103,
+          "FTM": 10,
+          "FTA": 33,
+          "Rebounds": 115,
+          "Assists": 10,
+          "Steals": 14,
+          "Turnovers": 29,
+          "Blocks": 1
+        }
+      },
+      {
+        "PlayerID": 200905,
+        "JerseyNumber": 22,
+        "Grade": 12,
+        "GamesPlayed": 2,
+        "SeasonTotals": {
+          "Points": 4
+        }
+      },
+      {
+        "PlayerID": 200906,
+        "JerseyNumber": 23,
+        "Grade": 9,
+        "GamesPlayed": 1,
+        "SeasonTotals": {
+          "Points": 2
+        }
+      },
+      {
+        "PlayerID": 200805,
+        "JerseyNumber": 24,
+        "Grade": 12,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 27,
+        "SeasonTotals": {
+          "Points": 221,
+          "ThreePM": 31,
+          "ThreePA": 129,
+          "TwoPM": 50,
+          "TwoPA": 138,
+          "FTM": 28,
+          "FTA": 43,
+          "Rebounds": 71,
+          "Assists": 45,
+          "Steals": 31,
+          "Turnovers": 70,
+          "Blocks": 2
+        }
+      },
+      {
+        "PlayerID": 200907,
+        "JerseyNumber": 31,
+        "Grade": 10,
+        "GamesPlayed": 1,
+        "SeasonTotals": {
+          "Points": 2
+        }
+      },
+      {
+        "PlayerID": 200804,
+        "JerseyNumber": 32,
+        "Grade": 12,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 27,
+        "SeasonTotals": {
+          "Points": 166,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "TwoPM": 71,
+          "TwoPA": 158,
+          "FTM": 24,
+          "FTA": 68,
+          "Rebounds": 135,
+          "Assists": 12,
+          "Steals": 29,
+          "Turnovers": 37,
+          "Blocks": 8
+        }
+      },
+      {
+        "PlayerID": 200811,
+        "JerseyNumber": 33,
+        "Grade": 11,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 26,
+        "SeasonTotals": {
+          "Points": 240,
+          "ThreePM": 5,
+          "ThreePA": 12,
+          "TwoPM": 83,
+          "TwoPA": 168,
+          "FTM": 59,
+          "FTA": 87,
+          "Rebounds": 152,
+          "Assists": 14,
+          "Steals": 17,
+          "Turnovers": 39,
+          "Blocks": 18
+        }
+      },
+      {
+        "PlayerID": 200902,
+        "JerseyNumber": 34,
+        "Grade": 11,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 22,
+        "SeasonTotals": {
+          "Points": 112,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "TwoPM": 40,
+          "TwoPA": 90,
+          "FTM": 32,
+          "FTA": 55,
+          "Rebounds": 86,
+          "Assists": 4,
+          "Steals": 10,
+          "Turnovers": 18,
+          "Blocks": 0
+        }
+      },
+      {
+        "PlayerID": 200803,
+        "JerseyNumber": 40,
+        "Grade": 11,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 23,
+        "SeasonTotals": {
+          "Points": 25,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "TwoPM": 8,
+          "TwoPA": 16,
+          "FTM": 9,
+          "FTA": 14,
+          "Rebounds": 13,
+          "Assists": 0,
+          "Steals": 0,
+          "Turnovers": 4,
+          "Blocks": 0
+        }
+      }
+    ]
+  },
+  {
+    "SeasonID": "2010-11",
+    "Players": [
+      {
+        "PlayerID": 2026147,
+        "JerseyNumber": 2,
+        "Grade": 10,
+        "GamesPlayed": 2,
+        "SeasonTotals": {
+          "Points": 4
+        }
+      },
+      {
+        "PlayerID": 200903,
+        "JerseyNumber": 3,
+        "Grade": 10,
+        "GamesPlayed": 18,
+        "SeasonTotals": {
+          "Points": 51,
+          "ThreePM": 7,
+          "ThreePA": 27,
+          "TwoPM": 4,
+          "TwoPA": 8,
+          "FTM": 0,
+          "FTA": 1,
+          "Rebounds": 11,
+          "Assists": 6,
+          "Steals": 8,
+          "Turnovers": 12
+        }
+      },
+      {
+        "PlayerID": 2026179,
+        "JerseyNumber": 4,
+        "Grade": 10,
+        "GamesPlayed": 1,
+        "SeasonTotals": {
+          "Points": 2
+        }
+      },
+      {
+        "PlayerID": 201110,
+        "JerseyNumber": 10,
+        "Grade": 10,
+        "GamesPlayed": 6,
+        "SeasonTotals": {
+          "Points": 15
+        }
+      },
+      {
+        "PlayerID": 200904,
+        "JerseyNumber": 11,
+        "Grade": 12,
+        "GamesPlayed": 24,
+        "SeasonTotals": {
+          "Points": 252,
+          "ThreePM": 31,
+          "ThreePA": 122,
+          "TwoPM": 59,
+          "TwoPA": 134,
+          "FTM": 20,
+          "FTA": 30,
+          "Rebounds": 74,
+          "Assists": 36,
+          "Steals": 45,
+          "Turnovers": 44,
+          "Blocks": 3
+        }
+      },
+      {
+        "PlayerID": 200812,
+        "JerseyNumber": 12,
+        "Grade": 12,
+        "GamesPlayed": 27,
+        "SeasonTotals": {
+          "Points": 207,
+          "ThreePM": 21,
+          "ThreePA": 85,
+          "TwoPM": 52,
+          "TwoPA": 91,
+          "FTM": 26,
+          "FTA": 51,
+          "Rebounds": 35,
+          "Assists": 62,
+          "Steals": 51,
+          "Turnovers": 73
+        }
+      },
+      {
+        "PlayerID": 2026180,
+        "JerseyNumber": 13,
+        "Grade": 12,
+        "GamesPlayed": 27,
+        "SeasonTotals": {
+          "Points": 280,
+          "ThreePM": 16,
+          "ThreePA": 53,
+          "TwoPM": 74,
+          "TwoPA": 143,
+          "FTM": 62,
+          "FTA": 96,
+          "Rebounds": 122,
+          "Assists": 97,
+          "Steals": 62,
+          "Turnovers": 85,
+          "Blocks": 5
+        }
+      },
+      {
+        "PlayerID": 2026181,
+        "JerseyNumber": 14,
+        "Grade": 11,
+        "GamesPlayed": 11,
+        "SeasonTotals": {
+          "Points": 24,
+          "ThreePM": 0,
+          "ThreePA": 11,
+          "TwoPM": 8,
+          "TwoPA": 24,
+          "FTM": 6,
+          "FTA": 15,
+          "Rebounds": 8,
+          "Assists": 4,
+          "Steals": 5,
+          "Turnovers": 19
+        }
+      },
+      {
+        "PlayerID": 2026182,
+        "JerseyNumber": 15,
+        "Grade": 10,
+        "GamesPlayed": 1,
+        "SeasonTotals": {
+          "Points": 1
+        }
+      },
+      {
+        "PlayerID": 200901,
+        "JerseyNumber": 21,
+        "Grade": 11,
+        "GamesPlayed": 25,
+        "SeasonTotals": {
+          "Points": 230,
+          "ThreePM": 2,
+          "ThreePA": 7,
+          "TwoPM": 89,
+          "TwoPA": 145,
+          "FTM": 33,
+          "FTA": 62,
+          "Rebounds": 134,
+          "Assists": 25,
+          "Steals": 35,
+          "Turnovers": 30,
+          "Blocks": 15
+        }
+      },
+      {
+        "PlayerID": 2026183,
+        "JerseyNumber": 22,
+        "Grade": 10,
+        "GamesPlayed": 6,
+        "SeasonTotals": {
+          "Points": 25
+        }
+      },
+      {
+        "PlayerID": 2026184,
+        "JerseyNumber": 23,
+        "Grade": 10,
+        "GamesPlayed": 2,
+        "SeasonTotals": {
+          "Points": 5
+        }
+      },
+      {
+        "PlayerID": 200811,
+        "JerseyNumber": 24,
+        "Grade": 12,
+        "GamesPlayed": 27,
+        "SeasonTotals": {
+          "Points": 199,
+          "ThreePM": 10,
+          "ThreePA": 37,
+          "TwoPM": 63,
+          "TwoPA": 139,
+          "FTM": 36,
+          "FTA": 57,
+          "Rebounds": 153,
+          "Assists": 13,
+          "Steals": 31,
+          "Turnovers": 34,
+          "Blocks": 18
+        }
+      },
+      {
+        "PlayerID": 201202,
+        "JerseyNumber": 25,
+        "Grade": 11,
+        "GamesPlayed": 11,
+        "SeasonTotals": {
+          "Points": 5,
+          "ThreePA": 2,
+          "TwoPM": 1,
+          "TwoPA": 14,
+          "FTM": 3,
+          "FTA": 7,
+          "Rebounds": 6,
+          "Assists": 1,
+          "Steals": 2,
+          "Turnovers": 5
+        }
+      },
+      {
+        "PlayerID": 2026185,
+        "JerseyNumber": 30,
+        "Grade": 10,
+        "GamesPlayed": 2,
+        "SeasonTotals": {
+          "Points": 4
+        }
+      },
+      {
+        "PlayerID": 2026186,
+        "JerseyNumber": 30,
+        "Grade": 11,
+        "GamesPlayed": 1,
+        "SeasonTotals": {
+          "Points": 7,
+          "TwoPM": 3,
+          "TwoPA": 8,
+          "FTM": 1,
+          "FTA": 2,
+          "Rebounds": 3,
+          "Turnovers": 1
+        }
+      },
+      {
+        "PlayerID": 2026187,
+        "JerseyNumber": 31,
+        "Grade": 10,
+        "GamesPlayed": 1,
+        "SeasonTotals": {
+          "Points": 4
+        }
+      },
+      {
+        "PlayerID": 200906,
+        "JerseyNumber": 32,
+        "Grade": 10,
+        "GamesPlayed": 20,
+        "SeasonTotals": {
+          "Points": 28,
+          "TwoPM": 5,
+          "TwoPA": 10,
+          "FTM": 4,
+          "FTA": 7,
+          "Rebounds": 29,
+          "Assists": 1,
+          "Turnovers": 7
+        }
+      },
+      {
+        "PlayerID": 2026188,
+        "JerseyNumber": 33,
+        "Grade": 10,
+        "GamesPlayed": 2,
+        "SeasonTotals": {
+          "Points": 3
+        }
+      },
+      {
+        "PlayerID": 200902,
+        "JerseyNumber": 34,
+        "Grade": 12,
+        "GamesPlayed": 27,
+        "SeasonTotals": {
+          "Points": 129,
+          "TwoPM": 50,
+          "TwoPA": 121,
+          "FTM": 21,
+          "FTA": 38,
+          "Rebounds": 106,
+          "Assists": 13,
+          "Steals": 30,
+          "Turnovers": 26,
+          "Blocks": 2
+        }
+      },
+      {
+        "PlayerID": 200803,
+        "JerseyNumber": 40,
+        "Grade": 12,
+        "GamesPlayed": 5,
+        "SeasonTotals": {
+          "Points": 7,
+          "TwoPM": 3,
+          "TwoPA": 8,
+          "FTM": 1,
+          "FTA": 2,
+          "Rebounds": 16,
+          "Assists": 1,
+          "Steals": 3,
+          "Turnovers": 2
+        }
+      }
+    ]
+  },
+  {
+    "SeasonID": "2011-12",
+    "Players": [
+      {
+        "PlayerID": 200903,
+        "JerseyNumber": 2,
+        "Grade": 11,
+        "GamesPlayed": 24,
+        "SeasonTotals": {
+          "Points": 298
+        }
+      },
+      {
+        "PlayerID": 2026140,
+        "JerseyNumber": 3,
+        "Grade": 9,
+        "GamesPlayed": 24,
+        "SeasonTotals": {
+          "Points": 81
+        }
+      },
+      {
+        "PlayerID": 2026189,
+        "JerseyNumber": 4,
+        "Grade": 9,
+        "GamesPlayed": 9,
+        "SeasonTotals": {
+          "Points": 5
+        }
+      },
+      {
+        "PlayerID": 2026142,
+        "JerseyNumber": 10,
+        "Grade": 9,
+        "GamesPlayed": 10,
+        "SeasonTotals": {
+          "Points": 0
+        }
+      },
+      {
+        "PlayerID": 2026191,
+        "JerseyNumber": 11,
+        "Grade": 9,
+        "GamesPlayed": 1,
+        "SeasonTotals": {
+          "Points": 0
+        }
+      },
+      {
+        "PlayerID": 2026192,
+        "JerseyNumber": 12,
+        "Grade": 8,
+        "GamesPlayed": 12,
+        "SeasonTotals": {
+          "Points": 8
+        }
+      },
+      {
+        "PlayerID": 2026147,
+        "JerseyNumber": 14,
+        "Grade": 11,
+        "GamesPlayed": 22,
+        "SeasonTotals": {
+          "Points": 73
+        }
+      },
+      {
+        "PlayerID": 2026193,
+        "JerseyNumber": 15,
+        "Grade": 9,
+        "GamesPlayed": 5,
+        "SeasonTotals": {
+          "Points": 0
+        }
+      },
+      {
+        "PlayerID": 200901,
+        "JerseyNumber": 21,
+        "Grade": 12,
+        "GamesPlayed": 25,
+        "SeasonTotals": {
+          "Points": 383
+        }
+      },
+      {
+        "PlayerID": 2026148,
+        "JerseyNumber": 22,
+        "Grade": 11,
+        "GamesPlayed": 23,
+        "SeasonTotals": {
+          "Points": 99
+        }
+      },
+      {
+        "PlayerID": 2026194,
+        "JerseyNumber": 23,
+        "Grade": 9,
+        "GamesPlayed": 3,
+        "SeasonTotals": {
+          "Points": 0
+        }
+      },
+      {
+        "PlayerID": 2026184,
+        "JerseyNumber": 24,
+        "Grade": 11,
+        "GamesPlayed": 24,
+        "SeasonTotals": {
+          "Points": 67
+        }
+      },
+      {
+        "PlayerID": 201507,
+        "JerseyNumber": 30,
+        "Grade": 9,
+        "GamesPlayed": 7,
+        "SeasonTotals": {
+          "Points": 0
+        }
+      },
+      {
+        "PlayerID": 200906,
+        "JerseyNumber": 32,
+        "Grade": 11,
+        "GamesPlayed": 24,
+        "SeasonTotals": {
+          "Points": 106
+        }
+      },
+      {
+        "PlayerID": 2026195,
+        "JerseyNumber": 33,
+        "Grade": 12,
+        "GamesPlayed": 22,
+        "SeasonTotals": {
+          "Points": 74
+        }
+      },
+      {
+        "PlayerID": 2026196,
+        "JerseyNumber": 34,
+        "Grade": 9,
+        "GamesPlayed": 5,
+        "SeasonTotals": {
+          "Points": 0
+        }
+      },
+      {
+        "PlayerID": 201504,
+        "JerseyNumber": 40,
+        "Grade": 9,
+        "GamesPlayed": 10,
+        "SeasonTotals": {
+          "Points": 0
+        }
+      }
+    ]
+  },
+  {
+    "SeasonID": "2012-13",
+    "Players": [
+      {
+        "PlayerID": 200903,
+        "JerseyNumber": 2,
+        "Grade": 12,
+        "GamesPlayed": 25,
+        "SeasonTotals": {
+          "Points": 361,
+          "ThreePM": 32,
+          "ThreePA": 135,
+          "TwoPM": 90,
+          "TwoPA": 182,
+          "FTM": 67,
+          "FTA": 123,
+          "Rebounds": 206,
+          "Assists": 51,
+          "Steals": 36,
+          "Turnovers": 111,
+          "Blocks": 5
+        }
+      },
+      {
+        "PlayerID": 2026140,
+        "JerseyNumber": 10,
+        "Grade": 10,
+        "GamesPlayed": 25,
+        "SeasonTotals": {
+          "Points": 167,
+          "ThreePM": 15,
+          "ThreePA": 56,
+          "TwoPM": 45,
+          "TwoPA": 101,
+          "FTM": 25,
+          "FTA": 50,
+          "Rebounds": 117,
+          "Assists": 24,
+          "Steals": 37,
+          "Turnovers": 73,
+          "Blocks": 1
+        }
+      },
+      {
+        "PlayerID": 2026192,
+        "JerseyNumber": 12,
+        "Grade": 9,
+        "GamesPlayed": 6,
+        "SeasonTotals": {
+          "Points": 10,
+          "ThreePM": 1,
+          "ThreePA": 2,
+          "TwoPM": 3,
+          "TwoPA": 10,
+          "FTM": 1,
+          "FTA": 2,
+          "Rebounds": 10,
+          "Assists": 5,
+          "Steals": 5,
+          "Turnovers": 12,
+          "Blocks": 0
+        }
+      },
+      {
+        "PlayerID": 2026147,
+        "JerseyNumber": 14,
+        "Grade": 12,
+        "GamesPlayed": 25,
+        "SeasonTotals": {
+          "Points": 51,
+          "ThreePM": 7,
+          "ThreePA": 39,
+          "TwoPM": 14,
+          "TwoPA": 39,
+          "FTM": 2,
+          "FTA": 11,
+          "Rebounds": 28,
+          "Assists": 32,
+          "Steals": 20,
+          "Turnovers": 62,
+          "Blocks": 1
+        }
+      },
+      {
+        "PlayerID": 201110,
+        "JerseyNumber": 15,
+        "Grade": 12,
+        "GamesPlayed": 24,
+        "SeasonTotals": {
+          "Points": 123,
+          "ThreePM": 0,
+          "ThreePA": 11,
+          "TwoPM": 44,
+          "TwoPA": 101,
+          "FTM": 35,
+          "FTA": 58,
+          "Rebounds": 110,
+          "Assists": 51,
+          "Steals": 49,
+          "Turnovers": 102,
+          "Blocks": 2
+        }
+      },
+      {
+        "PlayerID": 2026139,
+        "JerseyNumber": 20,
+        "Grade": 11,
+        "GamesPlayed": 8,
+        "SeasonTotals": {
+          "Points": 15,
+          "ThreePM": 2,
+          "ThreePA": 16,
+          "TwoPM": 2,
+          "TwoPA": 11,
+          "FTM": 5,
+          "FTA": 6,
+          "Rebounds": 7,
+          "Assists": 2,
+          "Steals": 8,
+          "Turnovers": 10,
+          "Blocks": 0
+        }
+      },
+      {
+        "PlayerID": 2026148,
+        "JerseyNumber": 22,
+        "Grade": 12,
+        "GamesPlayed": 21,
+        "SeasonTotals": {
+          "Points": 143,
+          "ThreePM": 30,
+          "ThreePA": 108,
+          "TwoPM": 7,
+          "TwoPA": 24,
+          "FTM": 25,
+          "FTA": 40,
+          "Rebounds": 45,
+          "Assists": 14,
+          "Steals": 21,
+          "Turnovers": 54,
+          "Blocks": 1
+        }
+      },
+      {
+        "PlayerID": 2026184,
+        "JerseyNumber": 24,
+        "Grade": 12,
+        "GamesPlayed": 24,
+        "SeasonTotals": {
+          "Points": 71,
+          "ThreePM": 4,
+          "ThreePA": 22,
+          "TwoPM": 22,
+          "TwoPA": 63,
+          "FTM": 13,
+          "FTA": 25,
+          "Rebounds": 58,
+          "Assists": 10,
+          "Steals": 15,
+          "Turnovers": 34,
+          "Blocks": 1
+        }
+      },
+      {
+        "PlayerID": 200906,
+        "JerseyNumber": 32,
+        "Grade": 12,
+        "GamesPlayed": 24,
+        "SeasonTotals": {
+          "Points": 105,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "TwoPM": 43,
+          "TwoPA": 102,
+          "FTM": 13,
+          "FTA": 42,
+          "Rebounds": 99,
+          "Assists": 2,
+          "Steals": 13,
+          "Turnovers": 31,
+          "Blocks": 15
+        }
+      },
+      {
+        "PlayerID": 2026194,
+        "JerseyNumber": 35,
+        "Grade": 10,
+        "GamesPlayed": 1,
+        "SeasonTotals": {
+          "Points": 2
+        }
+      },
+      {
+        "PlayerID": 201504,
+        "JerseyNumber": 50,
+        "Grade": 10,
+        "GamesPlayed": 1,
+        "SeasonTotals": {
+          "Points": 4
+        }
+      }
+    ]
+  },
+  {
+    "SeasonID": "2013-14",
+    "Players": [
+      {
+        "PlayerID": 2026197,
+        "JerseyNumber": 4,
+        "Grade": 11,
+        "GamesPlayed": 7,
+        "SeasonTotals": {
+          "Points": 3,
+          "ThreePM": 1,
+          "ThreePA": 7,
+          "FTM": 0,
+          "FTA": 1,
+          "TwoPM": 0,
+          "TwoPA": 0,
+          "Rebounds": 2,
+          "Assists": 0,
+          "Steals": 0,
+          "Blocks": 1,
+          "Turnovers": 6
+        }
+      },
+      {
+        "PlayerID": 2026140,
+        "JerseyNumber": 10,
+        "Grade": 11,
+        "GamesPlayed": 24,
+        "SeasonTotals": {
+          "Points": 196,
+          "ThreePM": 18,
+          "ThreePA": 66,
+          "FTM": 45,
+          "FTA": 76,
+          "TwoPM": 44,
+          "TwoPA": 108,
+          "Rebounds": 92,
+          "Assists": 59,
+          "Steals": 35,
+          "Blocks": 2,
+          "Turnovers": 97
+        }
+      },
+      {
+        "PlayerID": 2026192,
+        "JerseyNumber": 12,
+        "Grade": 10,
+        "GamesPlayed": 22,
+        "SeasonTotals": {
+          "Points": 34,
+          "ThreePM": 0,
+          "ThreePA": 3,
+          "FTM": 14,
+          "FTA": 22,
+          "TwoPM": 10,
+          "TwoPA": 22,
+          "Rebounds": 46,
+          "Assists": 9,
+          "Steals": 20,
+          "Turnovers": 26
+        }
+      },
+      {
+        "PlayerID": 2026189,
+        "JerseyNumber": 13,
+        "Grade": 11,
+        "GamesPlayed": 24,
+        "SeasonTotals": {
+          "Points": 259,
+          "ThreePM": 70,
+          "ThreePA": 181,
+          "FTM": 18,
+          "FTA": 32,
+          "TwoPM": 13,
+          "TwoPA": 39,
+          "Rebounds": 59,
+          "Assists": 25,
+          "Steals": 36,
+          "Blocks": 1,
+          "Turnovers": 51
+        }
+      },
+      {
+        "PlayerID": 2026142,
+        "JerseyNumber": 15,
+        "Grade": 11,
+        "GamesPlayed": 15,
+        "SeasonTotals": {
+          "Points": 9,
+          "ThreePM": 2,
+          "ThreePA": 17,
+          "FTM": 1,
+          "FTA": 1,
+          "TwoPM": 1,
+          "TwoPA": 10,
+          "Rebounds": 15,
+          "Assists": 3,
+          "Steals": 4,
+          "Turnovers": 20
+        }
+      },
+      {
+        "PlayerID": 2026198,
+        "JerseyNumber": 21,
+        "Grade": 10,
+        "GamesPlayed": 11,
+        "SeasonTotals": {
+          "Points": 75,
+          "ThreePM": 15,
+          "ThreePA": 53,
+          "FTM": 6,
+          "FTA": 14,
+          "TwoPM": 12,
+          "TwoPA": 32,
+          "Rebounds": 42,
+          "Assists": 14,
+          "Steals": 20,
+          "Turnovers": 39
+        }
+      },
+      {
+        "PlayerID": 2026199,
+        "JerseyNumber": 23,
+        "Grade": 12,
+        "GamesPlayed": 24,
+        "SeasonTotals": {
+          "Points": 277,
+          "ThreePM": 11,
+          "ThreePA": 39,
+          "FTM": 43,
+          "FTA": 87,
+          "TwoPM": 95,
+          "TwoPA": 195,
+          "Rebounds": 118,
+          "Assists": 27,
+          "Steals": 21,
+          "Blocks": 2,
+          "Turnovers": 110
+        }
+      },
+      {
+        "PlayerID": 2026196,
+        "JerseyNumber": 24,
+        "Grade": 11,
+        "GamesPlayed": 23,
+        "SeasonTotals": {
+          "Points": 86,
+          "ThreePM": 8,
+          "ThreePA": 27,
+          "FTM": 25,
+          "FTA": 51,
+          "TwoPM": 15,
+          "TwoPA": 50,
+          "Rebounds": 49,
+          "Assists": 43,
+          "Steals": 27,
+          "Turnovers": 79
+        }
+      },
+      {
+        "PlayerID": 2026200,
+        "JerseyNumber": 25,
+        "Grade": 9,
+        "GamesPlayed": 24,
+        "SeasonTotals": {
+          "Points": 94,
+          "ThreePM": 3,
+          "ThreePA": 12,
+          "FTM": 6,
+          "FTA": 17,
+          "TwoPM": 36,
+          "TwoPA": 126,
+          "Rebounds": 122,
+          "Assists": 7,
+          "Steals": 17,
+          "Blocks": 15,
+          "Turnovers": 30
+        }
+      },
+      {
+        "PlayerID": 2026194,
+        "JerseyNumber": 35,
+        "Grade": 11,
+        "GamesPlayed": 23,
+        "SeasonTotals": {
+          "Points": 115,
+          "ThreePM": 0,
+          "ThreePA": 5,
+          "FTM": 10,
+          "FTA": 36,
+          "TwoPM": 50,
+          "TwoPA": 95,
+          "Rebounds": 144,
+          "Assists": 10,
+          "Steals": 29,
+          "Blocks": 6,
+          "Turnovers": 21
+        }
+      },
+      {
+        "PlayerID": 201504,
+        "JerseyNumber": 50,
+        "Grade": 11,
+        "GamesPlayed": 4,
+        "SeasonTotals": {
+          "Points": 0,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 0,
+          "FTA": 2,
+          "TwoPM": 0,
+          "TwoPA": 5,
+          "Rebounds": 6,
+          "Assists": 0,
+          "Steals": 0,
+          "Turnovers": 4
+        }
+      },
+      {
+        "PlayerID": 201507,
+        "JerseyNumber": 52,
+        "Grade": 11,
+        "GamesPlayed": 12,
+        "SeasonTotals": {
+          "Points": 16,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 2,
+          "FTA": 8,
+          "TwoPM": 6,
+          "TwoPA": 13,
+          "Rebounds": 19,
+          "Assists": 0,
+          "Steals": 4,
+          "Turnovers": 1
+        }
+      }
+    ]
+  },
+  {
+    "SeasonID": "2014-15",
+    "Players": [
+      {
+        "PlayerID": 2026149,
+        "JerseyNumber": 2,
+        "Grade": 10,
+        "GamesPlayed": 21,
+        "SeasonTotals": {
+          "Points": 58,
+          "ThreePM": 15,
+          "ThreePA": 39,
+          "FTM": 1,
+          "FTA": 5,
+          "TwoPM": 6,
+          "TwoPA": 7,
+          "Rebounds": 6,
+          "Assists": 13,
+          "Steals": 7,
+          "Blocks": 0,
+          "Turnovers": 20
+        }
+      },
+      {
+        "PlayerID": 2026140,
+        "JerseyNumber": 10,
+        "Grade": 12,
+        "GamesPlayed": 24,
+        "SeasonTotals": {
+          "Points": 201,
+          "ThreePM": 6,
+          "ThreePA": 32,
+          "FTM": 55,
+          "FTA": 80,
+          "TwoPM": 64,
+          "TwoPA": 154,
+          "Rebounds": 78,
+          "Assists": 70,
+          "Steals": 32,
+          "Blocks": 0,
+          "Turnovers": 87
+        }
+      },
+      {
+        "PlayerID": 2026189,
+        "JerseyNumber": 13,
+        "Grade": 12,
+        "GamesPlayed": 25,
+        "SeasonTotals": {
+          "Points": 280,
+          "ThreePM": 65,
+          "ThreePA": 187,
+          "FTM": 21,
+          "FTA": 29,
+          "TwoPM": 32,
+          "TwoPA": 91,
+          "Rebounds": 105,
+          "Assists": 45,
+          "Steals": 28,
+          "Blocks": 2,
+          "Turnovers": 35
+        }
+      },
+      {
+        "PlayerID": 2026142,
+        "JerseyNumber": 15,
+        "Grade": 12,
+        "GamesPlayed": 24,
+        "SeasonTotals": {
+          "Points": 27,
+          "ThreePM": 2,
+          "ThreePA": 17,
+          "FTM": 5,
+          "FTA": 9,
+          "TwoPM": 8,
+          "TwoPA": 25,
+          "Rebounds": 52,
+          "Assists": 12,
+          "Steals": 6,
+          "Blocks": 0,
+          "Turnovers": 22
+        }
+      },
+      {
+        "PlayerID": 201713,
+        "JerseyNumber": 20,
+        "Grade": 10,
+        "GamesPlayed": 10,
+        "SeasonTotals": {
+          "Points": 16,
+          "ThreePM": 1,
+          "ThreePA": 13,
+          "FTM": 1,
+          "FTA": 4,
+          "TwoPM": 6,
+          "TwoPA": 9,
+          "Rebounds": 8,
+          "Assists": 6,
+          "Steals": 2,
+          "Blocks": 0,
+          "Turnovers": 9
+        }
+      },
+      {
+        "PlayerID": 2026201,
+        "JerseyNumber": 21,
+        "Grade": 10,
+        "GamesPlayed": 10,
+        "SeasonTotals": {
+          "Points": 14,
+          "ThreePM": 0,
+          "ThreePA": 2,
+          "FTM": 2,
+          "FTA": 6,
+          "TwoPM": 6,
+          "TwoPA": 13,
+          "Rebounds": 19,
+          "Assists": 0,
+          "Steals": 5,
+          "Blocks": 0,
+          "Turnovers": 9
+        }
+      },
+      {
+        "PlayerID": 2026196,
+        "JerseyNumber": 24,
+        "Grade": 12,
+        "GamesPlayed": 25,
+        "SeasonTotals": {
+          "Points": 74,
+          "ThreePM": 5,
+          "ThreePA": 19,
+          "FTM": 19,
+          "FTA": 36,
+          "TwoPM": 20,
+          "TwoPA": 50,
+          "Rebounds": 73,
+          "Assists": 41,
+          "Steals": 26,
+          "Blocks": 0,
+          "Turnovers": 71
+        }
+      },
+      {
+        "PlayerID": 2026200,
+        "JerseyNumber": 25,
+        "Grade": 10,
+        "GamesPlayed": 25,
+        "SeasonTotals": {
+          "Points": 303,
+          "ThreePM": 49,
+          "ThreePA": 152,
+          "FTM": 24,
+          "FTA": 47,
+          "TwoPM": 66,
+          "TwoPA": 131,
+          "Rebounds": 148,
+          "Assists": 24,
+          "Steals": 27,
+          "Blocks": 20,
+          "Turnovers": 39
+        }
+      },
+      {
+        "PlayerID": 2026202,
+        "JerseyNumber": 32,
+        "Grade": 10,
+        "GamesPlayed": 11,
+        "SeasonTotals": {
+          "Points": 20,
+          "ThreePM": 4,
+          "ThreePA": 18,
+          "FTM": 4,
+          "FTA": 5,
+          "TwoPM": 2,
+          "TwoPA": 7,
+          "Rebounds": 16,
+          "Assists": 3,
+          "Steals": 6,
+          "Blocks": 0,
+          "Turnovers": 4
+        }
+      },
+      {
+        "PlayerID": 2026203,
+        "JerseyNumber": 33,
+        "Grade": 10,
+        "GamesPlayed": 4,
+        "SeasonTotals": {
+          "Points": 6,
+          "ThreePM": 0,
+          "ThreePA": 1,
+          "FTM": 0,
+          "FTA": 0,
+          "TwoPM": 3,
+          "TwoPA": 4,
+          "Rebounds": 5,
+          "Assists": 0,
+          "Steals": 1,
+          "Blocks": 2,
+          "Turnovers": 3
+        }
+      },
+      {
+        "PlayerID": 2026194,
+        "JerseyNumber": 35,
+        "Grade": 12,
+        "GamesPlayed": 24,
+        "SeasonTotals": {
+          "Points": 166,
+          "ThreePM": 0,
+          "ThreePA": 3,
+          "FTM": 24,
+          "FTA": 39,
+          "TwoPM": 71,
+          "TwoPA": 140,
+          "Rebounds": 135,
+          "Assists": 10,
+          "Steals": 35,
+          "Blocks": 15,
+          "Turnovers": 25
+        }
+      },
+      {
+        "PlayerID": 201507,
+        "JerseyNumber": 52,
+        "Grade": 12,
+        "GamesPlayed": 19,
+        "SeasonTotals": {
+          "Points": 28,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 2,
+          "FTA": 7,
+          "TwoPM": 12,
+          "TwoPA": 18,
+          "Rebounds": 23,
+          "Assists": 2,
+          "Steals": 5,
+          "Blocks": 0,
+          "Turnovers": 10
+        }
+      }
+    ]
+  },
+  {
+    "SeasonID": "2015-16",
+    "Players": [
+      {
+        "PlayerID": 2026149,
+        "JerseyNumber": 2,
+        "Grade": 11,
+        "GamesPlayed": 8,
+        "SeasonTotals": {
+          "Minutes": 175,
+          "Points": 36,
+          "ThreePM": 8,
+          "ThreePA": 36,
+          "FTM": 2,
+          "FTA": 2,
+          "TwoPM": 5,
+          "TwoPA": 15,
+          "Rebounds": 14,
+          "Assists": 17,
+          "Steals": 16,
+          "Blocks": 2,
+          "Turnovers": 21
+        }
+      },
+      {
+        "PlayerID": 201707,
+        "JerseyNumber": 4,
+        "Grade": 9,
+        "GamesPlayed": 2,
+        "SeasonTotals": {
+          "Minutes": 1,
+          "Points": 0,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 0,
+          "FTA": 0,
+          "TwoPM": 0,
+          "TwoPA": 0,
+          "Rebounds": 0,
+          "Assists": 0,
+          "Steals": 0,
+          "Blocks": 0,
+          "Turnovers": 0
+        }
+      },
+      {
+        "PlayerID": 2026204,
+        "JerseyNumber": 5,
+        "Grade": 9,
+        "GamesPlayed": 12,
+        "SeasonTotals": {
+          "Minutes": 103,
+          "Points": 51,
+          "ThreePM": 0,
+          "ThreePA": 3,
+          "FTM": 15,
+          "FTA": 25,
+          "TwoPM": 18,
+          "TwoPA": 19,
+          "Rebounds": 30,
+          "Assists": 3,
+          "Steals": 9,
+          "Blocks": 1,
+          "Turnovers": 14
+        }
+      },
+      {
+        "PlayerID": 201613,
+        "JerseyNumber": 10,
+        "Grade": 10,
+        "GamesPlayed": 18,
+        "SeasonTotals": {
+          "Minutes": 143,
+          "Points": 29,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 5,
+          "FTA": 18,
+          "TwoPM": 12,
+          "TwoPA": 21,
+          "Rebounds": 37,
+          "Assists": 2,
+          "Steals": 14,
+          "Blocks": 3,
+          "Turnovers": 13
+        }
+      },
+      {
+        "PlayerID": 2026205,
+        "JerseyNumber": 12,
+        "Grade": 10,
+        "GamesPlayed": 5,
+        "SeasonTotals": {
+          "Minutes": 22,
+          "Points": 3,
+          "ThreePM": 0,
+          "ThreePA": 2,
+          "FTM": 1,
+          "FTA": 4,
+          "TwoPM": 1,
+          "TwoPA": 4,
+          "Rebounds": 6,
+          "Assists": 1,
+          "Steals": 4,
+          "Blocks": 0,
+          "Turnovers": 2
+        }
+      },
+      {
+        "PlayerID": 201813,
+        "JerseyNumber": 13,
+        "Grade": 9,
+        "GamesPlayed": 8,
+        "SeasonTotals": {
+          "Minutes": 54,
+          "Points": 14,
+          "ThreePM": 0,
+          "ThreePA": 5,
+          "FTM": 8,
+          "FTA": 11,
+          "TwoPM": 3,
+          "TwoPA": 7,
+          "Rebounds": 3,
+          "Assists": 4,
+          "Steals": 4,
+          "Blocks": 0,
+          "Turnovers": 6
+        }
+      },
+      {
+        "PlayerID": 201714,
+        "JerseyNumber": 14,
+        "Grade": 11,
+        "GamesPlayed": 2,
+        "SeasonTotals": {
+          "Minutes": 14,
+          "Points": 0,
+          "ThreePM": 0,
+          "ThreePA": 6,
+          "FTM": 0,
+          "FTA": 0,
+          "TwoPM": 0,
+          "TwoPA": 1,
+          "Rebounds": 6,
+          "Assists": 1,
+          "Steals": 1,
+          "Blocks": 0,
+          "Turnovers": 2
+        }
+      },
+      {
+        "PlayerID": 2026206,
+        "JerseyNumber": 15,
+        "Grade": 9,
+        "GamesPlayed": 7,
+        "SeasonTotals": {
+          "Minutes": 31,
+          "Points": 6,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 0,
+          "FTA": 0,
+          "TwoPM": 3,
+          "TwoPA": 7,
+          "Rebounds": 5,
+          "Assists": 0,
+          "Steals": 2,
+          "Blocks": 2,
+          "Turnovers": 4
+        }
+      },
+      {
+        "PlayerID": 201713,
+        "JerseyNumber": 20,
+        "Grade": 11,
+        "GamesPlayed": 21,
+        "SeasonTotals": {
+          "Minutes": 327,
+          "Points": 172,
+          "ThreePM": 18,
+          "ThreePA": 65,
+          "FTM": 62,
+          "FTA": 98,
+          "TwoPM": 28,
+          "TwoPA": 55,
+          "Rebounds": 39,
+          "Assists": 14,
+          "Steals": 19,
+          "Blocks": 2,
+          "Turnovers": 47
+        }
+      },
+      {
+        "PlayerID": 2026201,
+        "JerseyNumber": 21,
+        "Grade": 11,
+        "GamesPlayed": 4,
+        "SeasonTotals": {
+          "Minutes": 47,
+          "Points": 11,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 3,
+          "FTA": 10,
+          "TwoPM": 4,
+          "TwoPA": 12,
+          "Rebounds": 19,
+          "Assists": 2,
+          "Steals": 5,
+          "Blocks": 0,
+          "Turnovers": 4
+        }
+      },
+      {
+        "PlayerID": 201703,
+        "JerseyNumber": 22,
+        "Grade": 9,
+        "GamesPlayed": 21,
+        "SeasonTotals": {
+          "Minutes": 316,
+          "Points": 32,
+          "ThreePM": 0,
+          "ThreePA": 5,
+          "FTM": 12,
+          "FTA": 28,
+          "TwoPM": 10,
+          "TwoPA": 26,
+          "Rebounds": 36,
+          "Assists": 39,
+          "Steals": 27,
+          "Blocks": 1,
+          "Turnovers": 52
+        }
+      },
+      {
+        "PlayerID": 201808,
+        "JerseyNumber": 24,
+        "Grade": 10,
+        "GamesPlayed": 22,
+        "SeasonTotals": {
+          "Minutes": 327,
+          "Points": 89,
+          "ThreePM": 12,
+          "ThreePA": 37,
+          "FTM": 11,
+          "FTA": 20,
+          "TwoPM": 21,
+          "TwoPA": 62,
+          "Rebounds": 36,
+          "Assists": 18,
+          "Steals": 25,
+          "Blocks": 4,
+          "Turnovers": 33
+        }
+      },
+      {
+        "PlayerID": 2026200,
+        "JerseyNumber": 25,
+        "Grade": 11,
+        "GamesPlayed": 11,
+        "SeasonTotals": {
+          "Minutes": 224,
+          "Points": 162,
+          "ThreePM": 9,
+          "ThreePA": 46,
+          "FTM": 15,
+          "FTA": 35,
+          "TwoPM": 60,
+          "TwoPA": 115,
+          "Rebounds": 94,
+          "Assists": 6,
+          "Steals": 20,
+          "Blocks": 6,
+          "Turnovers": 25
+        }
+      },
+      {
+        "PlayerID": 201612,
+        "JerseyNumber": 30,
+        "Grade": 10,
+        "GamesPlayed": 3,
+        "SeasonTotals": {
+          "Minutes": 6,
+          "Points": 0,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 0,
+          "FTA": 2,
+          "TwoPM": 0,
+          "TwoPA": 3,
+          "Rebounds": 1,
+          "Assists": 0,
+          "Steals": 0,
+          "Blocks": 0,
+          "Turnovers": 0
+        }
+      },
+      {
+        "PlayerID": 2026203,
+        "JerseyNumber": 33,
+        "Grade": 11,
+        "GamesPlayed": 21,
+        "SeasonTotals": {
+          "Minutes": 217,
+          "Points": 101,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 9,
+          "FTA": 21,
+          "TwoPM": 46,
+          "TwoPA": 61,
+          "Rebounds": 71,
+          "Assists": 5,
+          "Steals": 7,
+          "Blocks": 4,
+          "Turnovers": 15
+        }
+      },
+      {
+        "PlayerID": 201809,
+        "JerseyNumber": 34,
+        "Grade": 10,
+        "GamesPlayed": 13,
+        "SeasonTotals": {
+          "Minutes": 268,
+          "Points": 109,
+          "ThreePM": 23,
+          "ThreePA": 65,
+          "FTM": 16,
+          "FTA": 30,
+          "TwoPM": 12,
+          "TwoPA": 41,
+          "Rebounds": 48,
+          "Assists": 12,
+          "Steals": 12,
+          "Blocks": 1,
+          "Turnovers": 32
+        }
+      },
+      {
+        "PlayerID": 2026082,
+        "JerseyNumber": 40,
+        "Grade": 9,
+        "GamesPlayed": 3,
+        "SeasonTotals": {
+          "Minutes": 8,
+          "Points": 2,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 0,
+          "FTA": 0,
+          "TwoPM": 1,
+          "TwoPA": 3,
+          "Rebounds": 2,
+          "Assists": 0,
+          "Steals": 1,
+          "Blocks": 1,
+          "Turnovers": 3
+        }
+      },
+      {
+        "PlayerID": 2026207,
+        "JerseyNumber": 52,
+        "Grade": 10,
+        "GamesPlayed": 22,
+        "SeasonTotals": {
+          "Minutes": 299,
+          "Points": 78,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 16,
+          "FTA": 31,
+          "TwoPM": 31,
+          "TwoPA": 74,
+          "Rebounds": 73,
+          "Assists": 5,
+          "Steals": 16,
+          "Blocks": 2,
+          "Turnovers": 18
+        }
+      },
+      {
+        "PlayerID": 2026208,
+        "JerseyNumber": 55,
+        "Grade": 9,
+        "GamesPlayed": 7,
+        "SeasonTotals": {
+          "Minutes": 12,
+          "Points": 14,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 0,
+          "FTA": 2,
+          "TwoPM": 7,
+          "TwoPA": 4,
+          "Rebounds": 3,
+          "Assists": 1,
+          "Steals": 0,
+          "Blocks": 0,
+          "Turnovers": 1
+        }
+      }
+    ]
+  },
+  {
+    "SeasonID": "2016-17",
+    "Players": [
+      {
+        "PlayerID": 2026149,
+        "JerseyNumber": 2,
+        "Grade": 12,
+        "GamesPlayed": 21,
+        "SeasonTotals": {
+          "Minutes": 152,
+          "Points": 141,
+          "ThreePM": 20,
+          "ThreePA": 38,
+          "FTM": 23,
+          "FTA": 38,
+          "TwoPM": 29,
+          "TwoPA": 23,
+          "Rebounds": 13,
+          "Assists": 4,
+          "Steals": 13,
+          "Blocks": 1,
+          "Turnovers": 9
+        }
+      },
+      {
+        "PlayerID": 201906,
+        "JerseyNumber": 3,
+        "Grade": 9,
+        "GamesPlayed": 20,
+        "SeasonTotals": {
+          "Minutes": 160,
+          "Points": 102,
+          "ThreePM": 3,
+          "ThreePA": 9,
+          "FTM": 39,
+          "FTA": 80,
+          "TwoPM": 27,
+          "TwoPA": 29,
+          "Rebounds": 28,
+          "Assists": 22,
+          "Steals": 24,
+          "Blocks": 1,
+          "Turnovers": 18
+        }
+      },
+      {
+        "PlayerID": 201813,
+        "JerseyNumber": 5,
+        "Grade": 10,
+        "GamesPlayed": 5,
+        "SeasonTotals": {
+          "Minutes": 18,
+          "Points": 13,
+          "ThreePM": 2,
+          "ThreePA": 3,
+          "FTM": 1,
+          "FTA": 1,
+          "TwoPM": 3,
+          "TwoPA": 1,
+          "Rebounds": 0,
+          "Assists": 2,
+          "Steals": 1,
+          "Blocks": 0,
+          "Turnovers": 1
+        }
+      },
+      {
+        "PlayerID": 201613,
+        "JerseyNumber": 10,
+        "Grade": 11,
+        "GamesPlayed": 21,
+        "SeasonTotals": {
+          "Minutes": 80,
+          "Points": 55,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 11,
+          "FTA": 27,
+          "TwoPM": 22,
+          "TwoPA": 17,
+          "Rebounds": 27,
+          "Assists": 5,
+          "Steals": 4,
+          "Blocks": 1,
+          "Turnovers": 7
+        }
+      },
+      {
+        "PlayerID": 2026205,
+        "JerseyNumber": 11,
+        "Grade": 11,
+        "GamesPlayed": 14,
+        "SeasonTotals": {
+          "Minutes": 38,
+          "Points": 40,
+          "ThreePM": 0,
+          "ThreePA": 5,
+          "FTM": 18,
+          "FTA": 24,
+          "TwoPM": 11,
+          "TwoPA": 12,
+          "Rebounds": 4,
+          "Assists": 1,
+          "Steals": 2,
+          "Blocks": 0,
+          "Turnovers": 4
+        }
+      },
+      {
+        "PlayerID": 2026082,
+        "JerseyNumber": 12,
+        "Grade": 10,
+        "GamesPlayed": 12,
+        "SeasonTotals": {
+          "Minutes": 38,
+          "Points": 27,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 3,
+          "FTA": 4,
+          "TwoPM": 12,
+          "TwoPA": 9,
+          "Rebounds": 12,
+          "Assists": 1,
+          "Steals": 0,
+          "Blocks": 2,
+          "Turnovers": 2
+        }
+      },
+      {
+        "PlayerID": 201713,
+        "JerseyNumber": 20,
+        "Grade": 12,
+        "GamesPlayed": 11,
+        "SeasonTotals": {
+          "Minutes": 91,
+          "Points": 47,
+          "ThreePM": 9,
+          "ThreePA": 20,
+          "FTM": 8,
+          "FTA": 23,
+          "TwoPM": 6,
+          "TwoPA": 12,
+          "Rebounds": 17,
+          "Assists": 2,
+          "Steals": 6,
+          "Blocks": 0,
+          "Turnovers": 7
+        }
+      },
+      {
+        "PlayerID": 201703,
+        "JerseyNumber": 22,
+        "Grade": 10,
+        "GamesPlayed": 20,
+        "SeasonTotals": {
+          "Minutes": 113,
+          "Points": 31,
+          "ThreePM": 1,
+          "ThreePA": 3,
+          "FTM": 7,
+          "FTA": 17,
+          "TwoPM": 12,
+          "TwoPA": 7,
+          "Rebounds": 16,
+          "Assists": 10,
+          "Steals": 14,
+          "Blocks": 0,
+          "Turnovers": 17
+        }
+      },
+      {
+        "PlayerID": 201808,
+        "JerseyNumber": 24,
+        "Grade": 11,
+        "GamesPlayed": 21,
+        "SeasonTotals": {
+          "Minutes": 150,
+          "Points": 104,
+          "ThreePM": 14,
+          "ThreePA": 19,
+          "FTM": 16,
+          "FTA": 33,
+          "TwoPM": 23,
+          "TwoPA": 23,
+          "Rebounds": 14,
+          "Assists": 10,
+          "Steals": 9,
+          "Blocks": 0,
+          "Turnovers": 18
+        }
+      },
+      {
+        "PlayerID": 2026200,
+        "JerseyNumber": 25,
+        "Grade": 12,
+        "GamesPlayed": 6,
+        "SeasonTotals": {
+          "Minutes": 110,
+          "Points": 82,
+          "ThreePM": 0,
+          "ThreePA": 11,
+          "FTM": 8,
+          "FTA": 14,
+          "TwoPM": 37,
+          "TwoPA": 62,
+          "Rebounds": 37,
+          "Assists": 1,
+          "Steals": 10,
+          "Blocks": 2,
+          "Turnovers": 5
+        }
+      },
+      {
+        "PlayerID": 2026203,
+        "JerseyNumber": 33,
+        "Grade": 12,
+        "GamesPlayed": 9,
+        "SeasonTotals": {
+          "Minutes": 78,
+          "Points": 31,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 5,
+          "FTA": 6,
+          "TwoPM": 13,
+          "TwoPA": 30,
+          "Rebounds": 23,
+          "Assists": 3,
+          "Steals": 7,
+          "Blocks": 3,
+          "Turnovers": 6
+        }
+      },
+      {
+        "PlayerID": 201809,
+        "JerseyNumber": 34,
+        "Grade": 11,
+        "GamesPlayed": 21,
+        "SeasonTotals": {
+          "Minutes": 200,
+          "Points": 268,
+          "ThreePM": 44,
+          "ThreePA": 54,
+          "FTM": 38,
+          "FTA": 59,
+          "TwoPM": 49,
+          "TwoPA": 31,
+          "Rebounds": 40,
+          "Assists": 15,
+          "Steals": 14,
+          "Blocks": 1,
+          "Turnovers": 21
+        }
+      },
+      {
+        "PlayerID": 2026207,
+        "JerseyNumber": 52,
+        "Grade": 11,
+        "GamesPlayed": 21,
+        "SeasonTotals": {
+          "Minutes": 149,
+          "Points": 63,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 9,
+          "FTA": 39,
+          "TwoPM": 27,
+          "TwoPA": 32,
+          "Rebounds": 40,
+          "Assists": 2,
+          "Steals": 15,
+          "Blocks": 2,
+          "Turnovers": 11
+        }
+      }
+    ]
+  },
+  {
+    "SeasonID": "2017-18",
+    "Players": [
+      {
+        "PlayerID": 2026082,
+        "JerseyNumber": 0,
+        "Grade": 11,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 18,
+        "SeasonTotals": {
+          "Minutes": 299,
+          "Points": 154,
+          "ThreePM": 7,
+          "ThreePA": 14,
+          "FTM": 19,
+          "FTA": 41,
+          "TwoPM": 57,
+          "TwoPA": 109,
+          "Rebounds": 83,
+          "Assists": 3,
+          "Steals": 10,
+          "Blocks": 16,
+          "Turnovers": 27
+        }
+      },
+      {
+        "PlayerID": 201905,
+        "JerseyNumber": 2,
+        "Grade": 10,
+        "Positions": [
+          "PG"
+        ]
+      },
+      {
+        "PlayerID": 2026209,
+        "JerseyNumber": 2,
+        "Grade": 11,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 5,
+        "SeasonTotals": {
+          "Minutes": 43,
+          "Points": 38,
+          "ThreePM": 5,
+          "ThreePA": 13,
+          "FTM": 3,
+          "FTA": 4,
+          "TwoPM": 10,
+          "TwoPA": 18,
+          "Rebounds": 10,
+          "Assists": 1,
+          "Steals": 2,
+          "Blocks": 0,
+          "Turnovers": 6
+        }
+      },
+      {
+        "PlayerID": 201906,
+        "JerseyNumber": 3,
+        "Grade": 10,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 19,
+        "SeasonTotals": {
+          "Minutes": 411,
+          "Points": 189,
+          "ThreePM": 8,
+          "ThreePA": 22,
+          "FTM": 37,
+          "FTA": 57,
+          "TwoPM": 64,
+          "TwoPA": 107,
+          "Rebounds": 75,
+          "Assists": 51,
+          "Steals": 50,
+          "Blocks": 3,
+          "Turnovers": 37
+        }
+      },
+      {
+        "PlayerID": 202131,
+        "JerseyNumber": 3
+      },
+      {
+        "PlayerID": 2026210,
+        "JerseyNumber": 4,
+        "Grade": 9,
+        "Positions": [
+          "PG"
+        ]
+      },
+      {
+        "PlayerID": 2026035,
+        "JerseyNumber": 5,
+        "Grade": 10,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 16,
+        "SeasonTotals": {
+          "Minutes": 175,
+          "Points": 73,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 17,
+          "FTA": 36,
+          "TwoPM": 28,
+          "TwoPA": 61,
+          "Rebounds": 41,
+          "Assists": 9,
+          "Steals": 22,
+          "Blocks": 0,
+          "Turnovers": 22
+        }
+      },
+      {
+        "PlayerID": 201613,
+        "JerseyNumber": 10,
+        "Grade": 12,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 15,
+        "SeasonTotals": {
+          "Minutes": 253,
+          "Points": 55,
+          "ThreePM": 0,
+          "ThreePA": 1,
+          "FTM": 15,
+          "FTA": 33,
+          "TwoPM": 20,
+          "TwoPA": 46,
+          "Rebounds": 68,
+          "Assists": 7,
+          "Steals": 20,
+          "Blocks": 6,
+          "Turnovers": 20
+        }
+      },
+      {
+        "PlayerID": 202124,
+        "JerseyNumber": 10,
+        "Grade": 9,
+        "Positions": [
+          "PG"
+        ]
+      },
+      {
+        "PlayerID": 2026205,
+        "JerseyNumber": 11,
+        "Grade": 12,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 16,
+        "SeasonTotals": {
+          "Minutes": 131,
+          "Points": 35,
+          "ThreePM": 1,
+          "ThreePA": 5,
+          "FTM": 11,
+          "FTA": 20,
+          "TwoPM": 10,
+          "TwoPA": 30,
+          "Rebounds": 23,
+          "Assists": 6,
+          "Steals": 8,
+          "Blocks": 0,
+          "Turnovers": 8
+        }
+      },
+      {
+        "PlayerID": 2026034,
+        "JerseyNumber": 12,
+        "Grade": 10,
+        "Positions": [
+          "F"
+        ],
+        "GamesPlayed": 6,
+        "SeasonTotals": {
+          "Minutes": 22,
+          "Points": 6,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 0,
+          "FTA": 0,
+          "TwoPM": 3,
+          "TwoPA": 6,
+          "Rebounds": 3,
+          "Assists": 0,
+          "Steals": 0,
+          "Blocks": 0,
+          "Turnovers": 2
+        }
+      },
+      {
+        "PlayerID": 201813,
+        "JerseyNumber": 13,
+        "Grade": 11,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 8,
+        "SeasonTotals": {
+          "Minutes": 69,
+          "Points": 19,
+          "ThreePM": 3,
+          "ThreePA": 10,
+          "FTM": 6,
+          "FTA": 16,
+          "TwoPM": 2,
+          "TwoPA": 10,
+          "Rebounds": 11,
+          "Assists": 2,
+          "Steals": 1,
+          "Blocks": 1,
+          "Turnovers": 3
+        }
+      },
+      {
+        "PlayerID": 202143,
+        "JerseyNumber": 13,
+        "Grade": 8,
+        "Positions": [
+          "PG"
+        ]
+      },
+      {
+        "PlayerID": 201605,
+        "JerseyNumber": 15,
+        "Grade": 9,
+        "Positions": [
+          "PF"
+        ]
+      },
+      {
+        "PlayerID": 2026030,
+        "JerseyNumber": 15,
+        "Grade": 10,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 4,
+        "SeasonTotals": {
+          "Minutes": 16,
+          "Points": 4,
+          "ThreePM": 0,
+          "ThreePA": 6,
+          "FTM": 2,
+          "FTA": 2,
+          "TwoPM": 1,
+          "TwoPA": 3,
+          "Rebounds": 2,
+          "Assists": 1,
+          "Steals": 0,
+          "Blocks": 0,
+          "Turnovers": 0
+        }
+      },
+      {
+        "PlayerID": 201907,
+        "JerseyNumber": 20,
+        "Grade": 9,
+        "Positions": [
+          "SF"
+        ]
+      },
+      {
+        "PlayerID": 2026033,
+        "JerseyNumber": 20,
+        "Grade": 10,
+        "Positions": [
+          "C"
+        ]
+      },
+      {
+        "PlayerID": 2026211,
+        "JerseyNumber": 21,
+        "Grade": 10,
+        "Positions": [
+          "PF",
+          "C"
+        ]
+      },
+      {
+        "PlayerID": 201703,
+        "JerseyNumber": 22,
+        "Grade": 11,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 19,
+        "SeasonTotals": {
+          "Minutes": 320,
+          "Points": 59,
+          "ThreePM": 1,
+          "ThreePA": 5,
+          "FTM": 12,
+          "FTA": 24,
+          "TwoPM": 22,
+          "TwoPA": 42,
+          "Rebounds": 57,
+          "Assists": 33,
+          "Steals": 33,
+          "Blocks": 4,
+          "Turnovers": 29
+        }
+      },
+      {
+        "PlayerID": 201808,
+        "JerseyNumber": 24,
+        "Grade": 12,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 19,
+        "SeasonTotals": {
+          "Minutes": 437,
+          "Points": 169,
+          "ThreePM": 19,
+          "ThreePA": 74,
+          "FTM": 38,
+          "FTA": 72,
+          "TwoPM": 37,
+          "TwoPA": 92,
+          "Rebounds": 51,
+          "Assists": 24,
+          "Steals": 16,
+          "Blocks": 0,
+          "Turnovers": 30
+        }
+      },
+      {
+        "PlayerID": 202125,
+        "JerseyNumber": 25,
+        "Grade": 9,
+        "Positions": [
+          "PF",
+          "C"
+        ]
+      },
+      {
+        "PlayerID": 201908,
+        "JerseyNumber": 30,
+        "Grade": 9,
+        "Positions": [
+          "PF",
+          "C"
+        ]
+      },
+      {
+        "PlayerID": 201809,
+        "JerseyNumber": 34,
+        "Grade": 12,
+        "Positions": [
+          "G"
+        ],
+        "GamesPlayed": 19,
+        "SeasonTotals": {
+          "Minutes": 415,
+          "Points": 148,
+          "ThreePM": 21,
+          "ThreePA": 106,
+          "FTM": 33,
+          "FTA": 57,
+          "TwoPM": 26,
+          "TwoPA": 80,
+          "Rebounds": 56,
+          "Assists": 34,
+          "Steals": 40,
+          "Blocks": 3,
+          "Turnovers": 42
+        }
+      },
+      {
+        "PlayerID": 202123,
+        "JerseyNumber": 34,
+        "Grade": 9,
+        "Positions": [
+          "PF",
+          "C"
+        ]
+      },
+      {
+        "PlayerID": 2026207,
+        "JerseyNumber": 52,
+        "Grade": 12,
+        "Positions": [
+          "C"
+        ],
+        "GamesPlayed": 19,
+        "SeasonTotals": {
+          "Minutes": 208,
+          "Points": 47,
+          "ThreePM": 0,
+          "ThreePA": 0,
+          "FTM": 5,
+          "FTA": 19,
+          "TwoPM": 21,
+          "TwoPA": 54,
+          "Rebounds": 79,
+          "Assists": 5,
+          "Steals": 16,
+          "Blocks": 10,
+          "Turnovers": 24
+        }
+      },
+      {
+        "PlayerID": 201802,
+        "JerseyNumber": null,
+        "Positions": [
+          "PF"
+        ]
+      },
+      {
+        "PlayerID": 2026212,
+        "JerseyNumber": null,
+        "Grade": 9,
+        "Positions": [
+          "PF",
+          "C"
+        ]
+      },
+      {
+        "PlayerID": 2026213,
+        "JerseyNumber": null
+      }
     ]
   },
   {
     "SeasonID": "2018-19",
     "Players": [
-      {"PlayerID": 2026082, "JerseyNumber": 0, "GamesPlayed": 29},
-      {"PlayerID": 201905, "JerseyNumber": 2, "GamesPlayed": 30},
-      {"PlayerID": 201906, "JerseyNumber": 3, "GamesPlayed": 29},
-      {"PlayerID": 2026035, "JerseyNumber": 5, "GamesPlayed": 28},
-      {"PlayerID": 202124, "JerseyNumber": 10, "GamesPlayed": 1},
-      {"PlayerID": 201813, "JerseyNumber": 13, "GamesPlayed": 29},
-      {"PlayerID": 2026041, "JerseyNumber": 14, "GamesPlayed": 1},
-      {"PlayerID": 201605, "JerseyNumber": 15, "GamesPlayed": 3},
-      {"PlayerID": 202113, "JerseyNumber": 22, "GamesPlayed": 11},
-      {"PlayerID": 201703, "JerseyNumber": 22, "GamesPlayed": 26},
-      {"PlayerID": 202127, "JerseyNumber": 24, "GamesPlayed": 30},
-      {"PlayerID": 202125, "JerseyNumber": 25, "GamesPlayed": 30},
-      {"PlayerID": 201806, "JerseyNumber": 33, "GamesPlayed": 20},
-      {"PlayerID": 202123, "JerseyNumber": 34, "GamesPlayed": 30},
-      {"PlayerID": 201814, "JerseyNumber": 34, "GamesPlayed": 11},
-      {"PlayerID": 201907, "JerseyNumber": 40, "GamesPlayed": 1},
-      {"PlayerID": 201903, "JerseyNumber": 52, "GamesPlayed": 10}
+      {
+        "PlayerID": 2026082,
+        "JerseyNumber": 0,
+        "GamesPlayed": 29
+      },
+      {
+        "PlayerID": 201905,
+        "JerseyNumber": 2,
+        "GamesPlayed": 30
+      },
+      {
+        "PlayerID": 201906,
+        "JerseyNumber": 3,
+        "GamesPlayed": 29
+      },
+      {
+        "PlayerID": 2026035,
+        "JerseyNumber": 5,
+        "GamesPlayed": 28
+      },
+      {
+        "PlayerID": 202124,
+        "JerseyNumber": 10,
+        "GamesPlayed": 1
+      },
+      {
+        "PlayerID": 201813,
+        "JerseyNumber": 13,
+        "GamesPlayed": 29
+      },
+      {
+        "PlayerID": 2026041,
+        "JerseyNumber": 14,
+        "GamesPlayed": 1
+      },
+      {
+        "PlayerID": 201605,
+        "JerseyNumber": 15,
+        "GamesPlayed": 3
+      },
+      {
+        "PlayerID": 202113,
+        "JerseyNumber": 22,
+        "GamesPlayed": 11
+      },
+      {
+        "PlayerID": 201703,
+        "JerseyNumber": 22,
+        "GamesPlayed": 26
+      },
+      {
+        "PlayerID": 202127,
+        "JerseyNumber": 24,
+        "GamesPlayed": 30
+      },
+      {
+        "PlayerID": 202125,
+        "JerseyNumber": 25,
+        "GamesPlayed": 30
+      },
+      {
+        "PlayerID": 201806,
+        "JerseyNumber": 33,
+        "GamesPlayed": 20
+      },
+      {
+        "PlayerID": 202123,
+        "JerseyNumber": 34,
+        "GamesPlayed": 30
+      },
+      {
+        "PlayerID": 201814,
+        "JerseyNumber": 34,
+        "GamesPlayed": 11
+      },
+      {
+        "PlayerID": 201907,
+        "JerseyNumber": 40,
+        "GamesPlayed": 1
+      },
+      {
+        "PlayerID": 201903,
+        "JerseyNumber": 52,
+        "GamesPlayed": 10
+      }
     ]
   },
   {
     "SeasonID": "2019-20",
     "Players": [
-      {"PlayerID": 201812, "JerseyNumber": null},
-      {"PlayerID": 201905, "JerseyNumber": 2},
-      {"PlayerID": 201906, "JerseyNumber": 3},
-      {"PlayerID": 2026041, "JerseyNumber": 4},
-      {"PlayerID": 2026035, "JerseyNumber": 5},
-      {"PlayerID": 202124, "JerseyNumber": 10},
-      {"PlayerID": 202142, "JerseyNumber": 11},
-      {"PlayerID": 202109, "JerseyNumber": 12},
-      {"PlayerID": 202143, "JerseyNumber": 13},
-      {"PlayerID": 2026030, "JerseyNumber": 15},
-      {"PlayerID": 201907, "JerseyNumber": 20},
-      {"PlayerID": 202113, "JerseyNumber": 22},
-      {"PlayerID": 202127, "JerseyNumber": 24},
-      {"PlayerID": 202125, "JerseyNumber": 25},
-      {"PlayerID": 201908, "JerseyNumber": 30},
-      {"PlayerID": 202111, "JerseyNumber": 33},
-      {"PlayerID": 202123, "JerseyNumber": 34}
+      {
+        "PlayerID": 201812,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 201905,
+        "JerseyNumber": 2
+      },
+      {
+        "PlayerID": 201906,
+        "JerseyNumber": 3
+      },
+      {
+        "PlayerID": 2026041,
+        "JerseyNumber": 4
+      },
+      {
+        "PlayerID": 2026035,
+        "JerseyNumber": 5
+      },
+      {
+        "PlayerID": 202124,
+        "JerseyNumber": 10
+      },
+      {
+        "PlayerID": 202142,
+        "JerseyNumber": 11
+      },
+      {
+        "PlayerID": 202109,
+        "JerseyNumber": 12
+      },
+      {
+        "PlayerID": 202143,
+        "JerseyNumber": 13
+      },
+      {
+        "PlayerID": 2026030,
+        "JerseyNumber": 15
+      },
+      {
+        "PlayerID": 201907,
+        "JerseyNumber": 20
+      },
+      {
+        "PlayerID": 202113,
+        "JerseyNumber": 22
+      },
+      {
+        "PlayerID": 202127,
+        "JerseyNumber": 24
+      },
+      {
+        "PlayerID": 202125,
+        "JerseyNumber": 25
+      },
+      {
+        "PlayerID": 201908,
+        "JerseyNumber": 30
+      },
+      {
+        "PlayerID": 202111,
+        "JerseyNumber": 33
+      },
+      {
+        "PlayerID": 202123,
+        "JerseyNumber": 34
+      }
     ]
   },
   {
     "SeasonID": "2020-21",
     "Players": [
-      {"PlayerID": 202141, "JerseyNumber": null},
-      {"PlayerID": 202134, "JerseyNumber": null},
-      {"PlayerID": 202313, "JerseyNumber": null},
-      {"PlayerID": 202323, "JerseyNumber": null},
-      {"PlayerID": 202128, "JerseyNumber": null},
-      {"PlayerID": 202201, "JerseyNumber": null},
-      {"PlayerID": 202138, "JerseyNumber": null},
-      {"PlayerID": 202132, "JerseyNumber": null},
-      {"PlayerID": 201812, "JerseyNumber": null},
-      {"PlayerID": 202007, "JerseyNumber": 2},
-      {"PlayerID": 202003, "JerseyNumber": 3},
-      {"PlayerID": 2026041, "JerseyNumber": 4},
-      {"PlayerID": 202001, "JerseyNumber": 5},
-      {"PlayerID": 202006, "JerseyNumber": 5},
-      {"PlayerID": 2026035, "JerseyNumber": 5},
-      {"PlayerID": 202124, "JerseyNumber": 10},
-      {"PlayerID": 202142, "JerseyNumber": 11},
-      {"PlayerID": 202109, "JerseyNumber": 12},
-      {"PlayerID": 202143, "JerseyNumber": 13},
-      {"PlayerID": 202130, "JerseyNumber": 15},
-      {"PlayerID": 2026030, "JerseyNumber": 15},
-      {"PlayerID": 202113, "JerseyNumber": 22},
-      {"PlayerID": 202139, "JerseyNumber": 24},
-      {"PlayerID": 202127, "JerseyNumber": 24},
-      {"PlayerID": 202125, "JerseyNumber": 25},
-      {"PlayerID": 202123, "JerseyNumber": 34}
+      {
+        "PlayerID": 202141,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 202134,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 202313,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 202323,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 202128,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 202201,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 202138,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 202132,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 201812,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 202007,
+        "JerseyNumber": 2
+      },
+      {
+        "PlayerID": 202003,
+        "JerseyNumber": 3
+      },
+      {
+        "PlayerID": 2026041,
+        "JerseyNumber": 4
+      },
+      {
+        "PlayerID": 202001,
+        "JerseyNumber": 5
+      },
+      {
+        "PlayerID": 202006,
+        "JerseyNumber": 5
+      },
+      {
+        "PlayerID": 2026035,
+        "JerseyNumber": 5
+      },
+      {
+        "PlayerID": 202124,
+        "JerseyNumber": 10
+      },
+      {
+        "PlayerID": 202142,
+        "JerseyNumber": 11
+      },
+      {
+        "PlayerID": 202109,
+        "JerseyNumber": 12
+      },
+      {
+        "PlayerID": 202143,
+        "JerseyNumber": 13
+      },
+      {
+        "PlayerID": 202130,
+        "JerseyNumber": 15
+      },
+      {
+        "PlayerID": 2026030,
+        "JerseyNumber": 15
+      },
+      {
+        "PlayerID": 202113,
+        "JerseyNumber": 22
+      },
+      {
+        "PlayerID": 202139,
+        "JerseyNumber": 24
+      },
+      {
+        "PlayerID": 202127,
+        "JerseyNumber": 24
+      },
+      {
+        "PlayerID": 202125,
+        "JerseyNumber": 25
+      },
+      {
+        "PlayerID": 202123,
+        "JerseyNumber": 34
+      }
     ]
   },
   {
     "SeasonID": "2021-22",
     "Players": [
-      {"PlayerID": 202132, "JerseyNumber": null},
-      {"PlayerID": 202133, "JerseyNumber": null},
-      {"PlayerID": 202134, "JerseyNumber": null},
-      {"PlayerID": 202135, "JerseyNumber": null},
-      {"PlayerID": 202136, "JerseyNumber": null},
-      {"PlayerID": 202137, "JerseyNumber": null},
-      {"PlayerID": 202138, "JerseyNumber": null},
-      {"PlayerID": 202007, "JerseyNumber": 2},
-      {"PlayerID": 202003, "JerseyNumber": 3},
-      {"PlayerID": 202108, "JerseyNumber": 4},
-      {"PlayerID": 2026041, "JerseyNumber": 4},
-      {"PlayerID": 202006, "JerseyNumber": 5},
-      {"PlayerID": 202105, "JerseyNumber": 11},
-      {"PlayerID": 202103, "JerseyNumber": 12},
-      {"PlayerID": 202211, "JerseyNumber": 13},
-      {"PlayerID": 202102, "JerseyNumber": 15},
-      {"PlayerID": 202106, "JerseyNumber": 20},
-      {"PlayerID": 202139, "JerseyNumber": 24},
-      {"PlayerID": 202001, "JerseyNumber": 24},
-      {"PlayerID": 202201, "JerseyNumber": 25},
-      {"PlayerID": 202140, "JerseyNumber": 33},
-      {"PlayerID": 202121, "JerseyNumber": 34}
+      {
+        "PlayerID": 202132,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 202133,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 202134,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 202135,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 202136,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 202137,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 202138,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 202007,
+        "JerseyNumber": 2
+      },
+      {
+        "PlayerID": 202003,
+        "JerseyNumber": 3
+      },
+      {
+        "PlayerID": 202108,
+        "JerseyNumber": 4
+      },
+      {
+        "PlayerID": 2026041,
+        "JerseyNumber": 4
+      },
+      {
+        "PlayerID": 202006,
+        "JerseyNumber": 5
+      },
+      {
+        "PlayerID": 202105,
+        "JerseyNumber": 11
+      },
+      {
+        "PlayerID": 202103,
+        "JerseyNumber": 12
+      },
+      {
+        "PlayerID": 202211,
+        "JerseyNumber": 13
+      },
+      {
+        "PlayerID": 202102,
+        "JerseyNumber": 15
+      },
+      {
+        "PlayerID": 202106,
+        "JerseyNumber": 20
+      },
+      {
+        "PlayerID": 202139,
+        "JerseyNumber": 24
+      },
+      {
+        "PlayerID": 202001,
+        "JerseyNumber": 24
+      },
+      {
+        "PlayerID": 202201,
+        "JerseyNumber": 25
+      },
+      {
+        "PlayerID": 202140,
+        "JerseyNumber": 33
+      },
+      {
+        "PlayerID": 202121,
+        "JerseyNumber": 34
+      }
     ]
   },
   {
     "SeasonID": "2022-23",
     "Players": [
-      {"PlayerID": 202007, "JerseyNumber": 2},
-      {"PlayerID": 202003, "JerseyNumber": 3},
-      {"PlayerID": 202108, "JerseyNumber": 4},
-      {"PlayerID": 202006, "JerseyNumber": 5},
-      {"PlayerID": 202202, "JerseyNumber": 10},
-      {"PlayerID": 202105, "JerseyNumber": 11},
-      {"PlayerID": 202103, "JerseyNumber": 12},
-      {"PlayerID": 202203, "JerseyNumber": 13},
-      {"PlayerID": 202205, "JerseyNumber": 15},
-      {"PlayerID": 202102, "JerseyNumber": 15},
-      {"PlayerID": 202106, "JerseyNumber": 20},
-      {"PlayerID": 202204, "JerseyNumber": 21},
-      {"PlayerID": 202001, "JerseyNumber": 24},
-      {"PlayerID": 202201, "JerseyNumber": 25}
+      {
+        "PlayerID": 202007,
+        "JerseyNumber": 2
+      },
+      {
+        "PlayerID": 202003,
+        "JerseyNumber": 3
+      },
+      {
+        "PlayerID": 202108,
+        "JerseyNumber": 4
+      },
+      {
+        "PlayerID": 202006,
+        "JerseyNumber": 5
+      },
+      {
+        "PlayerID": 202202,
+        "JerseyNumber": 10
+      },
+      {
+        "PlayerID": 202105,
+        "JerseyNumber": 11
+      },
+      {
+        "PlayerID": 202103,
+        "JerseyNumber": 12
+      },
+      {
+        "PlayerID": 202203,
+        "JerseyNumber": 13
+      },
+      {
+        "PlayerID": 202205,
+        "JerseyNumber": 15
+      },
+      {
+        "PlayerID": 202102,
+        "JerseyNumber": 15
+      },
+      {
+        "PlayerID": 202106,
+        "JerseyNumber": 20
+      },
+      {
+        "PlayerID": 202204,
+        "JerseyNumber": 21
+      },
+      {
+        "PlayerID": 202001,
+        "JerseyNumber": 24
+      },
+      {
+        "PlayerID": 202201,
+        "JerseyNumber": 25
+      }
     ]
   },
   {
     "SeasonID": "2023-24",
     "Players": [
-      {"PlayerID": 202001, "JerseyNumber": 24},
-      {"PlayerID": 202007, "JerseyNumber": 2},
-      {"PlayerID": 202103, "JerseyNumber": 12},
-      {"PlayerID": 202106, "JerseyNumber": 20},
-      {"PlayerID": 202202, "JerseyNumber": 10},
-      {"PlayerID": 202204, "JerseyNumber": 21},
-      {"PlayerID": 202205, "JerseyNumber": 15},
-      {"PlayerID": 202301, "JerseyNumber": 13},
-      {"PlayerID": 202302, "JerseyNumber": 4},
-      {"PlayerID": 202303, "JerseyNumber": null},
-      {"PlayerID": 202304, "JerseyNumber": 25}
+      {
+        "PlayerID": 202001,
+        "JerseyNumber": 24
+      },
+      {
+        "PlayerID": 202007,
+        "JerseyNumber": 2
+      },
+      {
+        "PlayerID": 202103,
+        "JerseyNumber": 12
+      },
+      {
+        "PlayerID": 202106,
+        "JerseyNumber": 20
+      },
+      {
+        "PlayerID": 202202,
+        "JerseyNumber": 10
+      },
+      {
+        "PlayerID": 202204,
+        "JerseyNumber": 21
+      },
+      {
+        "PlayerID": 202205,
+        "JerseyNumber": 15
+      },
+      {
+        "PlayerID": 202301,
+        "JerseyNumber": 13
+      },
+      {
+        "PlayerID": 202302,
+        "JerseyNumber": 4
+      },
+      {
+        "PlayerID": 202303,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 202304,
+        "JerseyNumber": 25
+      }
     ]
   },
   {
     "SeasonID": "2024-25",
     "Players": [
-      {"PlayerID": 202410, "JerseyNumber": 2},
-      {"PlayerID": 202302, "JerseyNumber": 4},
-      {"PlayerID": 202401, "JerseyNumber": 5},
-      {"PlayerID": 202402, "JerseyNumber": 10},
-      {"PlayerID": 202412, "JerseyNumber": 11},
-      {"PlayerID": 202103, "JerseyNumber": 12},
-      {"PlayerID": 202301, "JerseyNumber": 13},
-      {"PlayerID": 202411, "JerseyNumber": 15},
-      {"PlayerID": 202303, "JerseyNumber": 20},
-      {"PlayerID": 202405, "JerseyNumber": 21},
-      {"PlayerID": 202406, "JerseyNumber": 23},
-      {"PlayerID": 202407, "JerseyNumber": 24},
-      {"PlayerID": 202408, "JerseyNumber": 25},
-      {"PlayerID": 202404, "JerseyNumber": 34},
-      {"PlayerID": 202403, "JerseyNumber": 42},
-      {"PlayerID": 202409, "JerseyNumber": null}
+      {
+        "PlayerID": 202410,
+        "JerseyNumber": 2
+      },
+      {
+        "PlayerID": 202302,
+        "JerseyNumber": 4
+      },
+      {
+        "PlayerID": 202401,
+        "JerseyNumber": 5
+      },
+      {
+        "PlayerID": 202402,
+        "JerseyNumber": 10
+      },
+      {
+        "PlayerID": 202412,
+        "JerseyNumber": 11
+      },
+      {
+        "PlayerID": 202103,
+        "JerseyNumber": 12
+      },
+      {
+        "PlayerID": 202301,
+        "JerseyNumber": 13
+      },
+      {
+        "PlayerID": 202411,
+        "JerseyNumber": 15
+      },
+      {
+        "PlayerID": 202303,
+        "JerseyNumber": 20
+      },
+      {
+        "PlayerID": 202405,
+        "JerseyNumber": 21
+      },
+      {
+        "PlayerID": 202406,
+        "JerseyNumber": 23
+      },
+      {
+        "PlayerID": 202407,
+        "JerseyNumber": 24
+      },
+      {
+        "PlayerID": 202408,
+        "JerseyNumber": 25
+      },
+      {
+        "PlayerID": 202404,
+        "JerseyNumber": 34
+      },
+      {
+        "PlayerID": 202403,
+        "JerseyNumber": 42
+      },
+      {
+        "PlayerID": 202409,
+        "JerseyNumber": null
+      }
     ]
   },
   {
     "SeasonID": "2025-26",
     "Players": [
-      {"PlayerID": 202501, "JerseyNumber": 3},
-      {"PlayerID": 202302, "JerseyNumber": 4},
-      {"PlayerID": 202401, "JerseyNumber": 5},
-      {"PlayerID": 202402, "JerseyNumber": 10},
-      {"PlayerID": 202502, "JerseyNumber": 11},
-      {"PlayerID": 202301, "JerseyNumber": 13},
-      {"PlayerID": 202506, "JerseyNumber": 15},
-      {"PlayerID": 202503, "JerseyNumber": 20},
-      {"PlayerID": 202405, "JerseyNumber": 21},
-      {"PlayerID": 202504, "JerseyNumber": 22},
-      {"PlayerID": 202406, "JerseyNumber": 23},
-      {"PlayerID": 202407, "JerseyNumber": 24},
-      {"PlayerID": 202408, "JerseyNumber": 25},
-      {"PlayerID": 202505, "JerseyNumber": 33}
+      {
+        "PlayerID": 202501,
+        "JerseyNumber": 3
+      },
+      {
+        "PlayerID": 202302,
+        "JerseyNumber": 4
+      },
+      {
+        "PlayerID": 202401,
+        "JerseyNumber": 5
+      },
+      {
+        "PlayerID": 202402,
+        "JerseyNumber": 10
+      },
+      {
+        "PlayerID": 202502,
+        "JerseyNumber": 11
+      },
+      {
+        "PlayerID": 202301,
+        "JerseyNumber": 13
+      },
+      {
+        "PlayerID": 202506,
+        "JerseyNumber": 15
+      },
+      {
+        "PlayerID": 202503,
+        "JerseyNumber": 20
+      },
+      {
+        "PlayerID": 202405,
+        "JerseyNumber": 21
+      },
+      {
+        "PlayerID": 202504,
+        "JerseyNumber": 22
+      },
+      {
+        "PlayerID": 202406,
+        "JerseyNumber": 23
+      },
+      {
+        "PlayerID": 202407,
+        "JerseyNumber": 24
+      },
+      {
+        "PlayerID": 202408,
+        "JerseyNumber": 25
+      },
+      {
+        "PlayerID": 202505,
+        "JerseyNumber": 33
+      }
     ]
   }
 ]
