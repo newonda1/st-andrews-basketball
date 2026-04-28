@@ -1269,5 +1269,41 @@
     "ShortName": "Savannah Arts",
     "City": "Savannah",
     "State": "GA"
+  },
+  {
+    "SchoolID": "al-st-lukes-episcopal-school-mobile",
+    "Name": "St. Luke's Episcopal School",
+    "City": "Mobile",
+    "State": "AL"
+  },
+  {
+    "SchoolID": "ga-brentwood-school-sandersville",
+    "Name": "Brentwood School",
+    "City": "Sandersville",
+    "State": "GA"
+  },
+  {
+    "SchoolID": "ga-ridgeland-high-school-rossville",
+    "Name": "Ridgeland High School",
+    "City": "Rossville",
+    "State": "GA"
+  },
+  {
+    "SchoolID": "ky-east-carter-high-school-grayson",
+    "Name": "East Carter High School",
+    "City": "Grayson",
+    "State": "KY"
+  },
+  {
+    "SchoolID": "oh-dixie-high-school-new-lebanon",
+    "Name": "Dixie High School",
+    "City": "New Lebanon",
+    "State": "OH"
+  },
+  {
+    "SchoolID": "sc-abundant-life-academy-hardeeville",
+    "Name": "Abundant Life Academy",
+    "City": "Hardeeville",
+    "State": "SC"
   }
 ]

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-27T18:08:36.029Z",
-  "itemCount": 604,
+  "generatedAt": "2026-04-28T11:39:34.792Z",
+  "itemCount": 670,
   "items": [
     {
       "id": "athletics-home",
@@ -3321,22 +3321,22 @@
       ]
     },
     {
-      "id": "boys-basketball-athlete-201812",
+      "id": "boys-basketball-athlete-2026082",
       "type": "athlete",
-      "title": "Jude Forti",
-      "subtitle": "Boys Basketball athlete - Class of 2021",
-      "to": "/athletics/boys/basketball/players/201812",
+      "title": "Jonathan Young",
+      "subtitle": "Boys Basketball athlete - Class of 2019",
+      "to": "/athletics/boys/basketball/players/2026082",
       "keywords": [
         "Boys Basketball",
         "athlete",
         "player",
         "stats",
         "records",
-        "Jude",
-        "Forti",
-        "Forti Jude",
-        "class of 2021",
-        "grad 2021"
+        "Jonathan",
+        "Young",
+        "Young Jonathan",
+        "class of 2019",
+        "grad 2019"
       ]
     },
     {
@@ -3378,25 +3378,6 @@
       ]
     },
     {
-      "id": "boys-basketball-athlete-2026041",
-      "type": "athlete",
-      "title": "Price Mahany",
-      "subtitle": "Boys Basketball athlete - Class of 2022",
-      "to": "/athletics/boys/basketball/players/2026041",
-      "keywords": [
-        "Boys Basketball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Price",
-        "Mahany",
-        "Mahany Price",
-        "class of 2022",
-        "grad 2022"
-      ]
-    },
-    {
       "id": "boys-basketball-athlete-2026035",
       "type": "athlete",
       "title": "Ben Jones",
@@ -3430,6 +3411,253 @@
         "Will",
         "Livingston",
         "Livingston Will",
+        "class of 2021",
+        "grad 2021"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-201813",
+      "type": "athlete",
+      "title": "Nick Tsavaris",
+      "subtitle": "Boys Basketball athlete - Class of 2019",
+      "to": "/athletics/boys/basketball/players/201813",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Nick",
+        "Tsavaris",
+        "Tsavaris Nick",
+        "class of 2019",
+        "grad 2019"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026041",
+      "type": "athlete",
+      "title": "Price Mahany",
+      "subtitle": "Boys Basketball athlete - Class of 2022",
+      "to": "/athletics/boys/basketball/players/2026041",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Price",
+        "Mahany",
+        "Mahany Price",
+        "class of 2022",
+        "grad 2022"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-201605",
+      "type": "athlete",
+      "title": "Connor Dodge",
+      "subtitle": "Boys Basketball athlete - Class of 2021",
+      "to": "/athletics/boys/basketball/players/201605",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Connor",
+        "Dodge",
+        "Dodge Connor",
+        "class of 2021",
+        "grad 2021"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-202113",
+      "type": "athlete",
+      "title": "Ethan Bland",
+      "subtitle": "Boys Basketball athlete - Class of 2022",
+      "to": "/athletics/boys/basketball/players/202113",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Ethan",
+        "Bland",
+        "Bland Ethan",
+        "class of 2022",
+        "grad 2022"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-201703",
+      "type": "athlete",
+      "title": "Andrew Longwater",
+      "subtitle": "Boys Basketball athlete - Class of 2019",
+      "to": "/athletics/boys/basketball/players/201703",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Andrew",
+        "Longwater",
+        "Longwater Andrew",
+        "class of 2019",
+        "grad 2019"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-202127",
+      "type": "athlete",
+      "title": "Grant Viands",
+      "subtitle": "Boys Basketball athlete - Class of 2021",
+      "to": "/athletics/boys/basketball/players/202127",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Grant",
+        "Viands",
+        "Viands Grant",
+        "class of 2021",
+        "grad 2021"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-202125",
+      "type": "athlete",
+      "title": "Kegan Kurinij",
+      "subtitle": "Boys Basketball athlete - Class of 2021",
+      "to": "/athletics/boys/basketball/players/202125",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Kegan",
+        "Kurinij",
+        "Kurinij Kegan",
+        "class of 2021",
+        "grad 2021"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-201806",
+      "type": "athlete",
+      "title": "TJ Donohue",
+      "subtitle": "Boys Basketball athlete - Class of 2019",
+      "to": "/athletics/boys/basketball/players/201806",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "TJ",
+        "Donohue",
+        "Donohue TJ",
+        "class of 2019",
+        "grad 2019"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-202123",
+      "type": "athlete",
+      "title": "Ben Bingley",
+      "subtitle": "Boys Basketball athlete - Class of 2021",
+      "to": "/athletics/boys/basketball/players/202123",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Ben",
+        "Bingley",
+        "Bingley Ben",
+        "class of 2021",
+        "grad 2021"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-201814",
+      "type": "athlete",
+      "title": "Carlos Zobel",
+      "subtitle": "Boys Basketball athlete - Class of 2019",
+      "to": "/athletics/boys/basketball/players/201814",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Carlos",
+        "Zobel",
+        "Zobel Carlos",
+        "class of 2019",
+        "grad 2019"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-201907",
+      "type": "athlete",
+      "title": "Christian Oelschig",
+      "subtitle": "Boys Basketball athlete - Class of 2021",
+      "to": "/athletics/boys/basketball/players/201907",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Christian",
+        "Oelschig",
+        "Oelschig Christian",
+        "class of 2021",
+        "grad 2021"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-201903",
+      "type": "athlete",
+      "title": "Jack Hagan",
+      "subtitle": "Boys Basketball athlete - Class of 2019",
+      "to": "/athletics/boys/basketball/players/201903",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Jack",
+        "Hagan",
+        "Hagan Jack",
+        "class of 2019",
+        "grad 2019"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-201812",
+      "type": "athlete",
+      "title": "Jude Forti",
+      "subtitle": "Boys Basketball athlete - Class of 2021",
+      "to": "/athletics/boys/basketball/players/201812",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Jude",
+        "Forti",
+        "Forti Jude",
         "class of 2021",
         "grad 2021"
       ]
@@ -3511,82 +3739,6 @@
       ]
     },
     {
-      "id": "boys-basketball-athlete-201907",
-      "type": "athlete",
-      "title": "Christian Oelschig",
-      "subtitle": "Boys Basketball athlete - Class of 2021",
-      "to": "/athletics/boys/basketball/players/201907",
-      "keywords": [
-        "Boys Basketball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Christian",
-        "Oelschig",
-        "Oelschig Christian",
-        "class of 2021",
-        "grad 2021"
-      ]
-    },
-    {
-      "id": "boys-basketball-athlete-202113",
-      "type": "athlete",
-      "title": "Ethan Bland",
-      "subtitle": "Boys Basketball athlete - Class of 2022",
-      "to": "/athletics/boys/basketball/players/202113",
-      "keywords": [
-        "Boys Basketball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Ethan",
-        "Bland",
-        "Bland Ethan",
-        "class of 2022",
-        "grad 2022"
-      ]
-    },
-    {
-      "id": "boys-basketball-athlete-202127",
-      "type": "athlete",
-      "title": "Grant Viands",
-      "subtitle": "Boys Basketball athlete - Class of 2021",
-      "to": "/athletics/boys/basketball/players/202127",
-      "keywords": [
-        "Boys Basketball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Grant",
-        "Viands",
-        "Viands Grant",
-        "class of 2021",
-        "grad 2021"
-      ]
-    },
-    {
-      "id": "boys-basketball-athlete-202125",
-      "type": "athlete",
-      "title": "Kegan Kurinij",
-      "subtitle": "Boys Basketball athlete - Class of 2021",
-      "to": "/athletics/boys/basketball/players/202125",
-      "keywords": [
-        "Boys Basketball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Kegan",
-        "Kurinij",
-        "Kurinij Kegan",
-        "class of 2021",
-        "grad 2021"
-      ]
-    },
-    {
       "id": "boys-basketball-athlete-201908",
       "type": "athlete",
       "title": "Holland Judkins",
@@ -3622,25 +3774,6 @@
         "Kusilka Anthony",
         "class of 2022",
         "grad 2022"
-      ]
-    },
-    {
-      "id": "boys-basketball-athlete-202123",
-      "type": "athlete",
-      "title": "Ben Bingley",
-      "subtitle": "Boys Basketball athlete - Class of 2021",
-      "to": "/athletics/boys/basketball/players/202123",
-      "keywords": [
-        "Boys Basketball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Ben",
-        "Bingley",
-        "Bingley Ben",
-        "class of 2021",
-        "grad 2021"
       ]
     },
     {
@@ -4632,6 +4765,1010 @@
       ]
     },
     {
+      "id": "baseball-athlete-2026107",
+      "type": "athlete",
+      "title": "Zack Weber",
+      "subtitle": "Baseball athlete - Class of 2010",
+      "to": "/athletics/boys/baseball/players/2026107",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Zack",
+        "Weber",
+        "Weber Zack",
+        "class of 2010",
+        "grad 2010"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026108",
+      "type": "athlete",
+      "title": "Eb Martin",
+      "subtitle": "Baseball athlete - Class of 2009",
+      "to": "/athletics/boys/baseball/players/2026108",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Eb",
+        "Martin",
+        "Martin Eb",
+        "class of 2009",
+        "grad 2009"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026109",
+      "type": "athlete",
+      "title": "Jerrod Myers",
+      "subtitle": "Baseball athlete - Class of 2009",
+      "to": "/athletics/boys/baseball/players/2026109",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Jerrod",
+        "Myers",
+        "Myers Jerrod",
+        "class of 2009",
+        "grad 2009"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026110",
+      "type": "athlete",
+      "title": "John Sullivan",
+      "subtitle": "Baseball athlete - Class of 2010",
+      "to": "/athletics/boys/baseball/players/2026110",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "John",
+        "Sullivan",
+        "Sullivan John",
+        "class of 2010",
+        "grad 2010"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026111",
+      "type": "athlete",
+      "title": "Austin Poole",
+      "subtitle": "Baseball athlete - Class of 2012",
+      "to": "/athletics/boys/baseball/players/2026111",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Austin",
+        "Poole",
+        "Poole Austin",
+        "class of 2012",
+        "grad 2012"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026112",
+      "type": "athlete",
+      "title": "Josh Scarbrough",
+      "subtitle": "Baseball athlete - Class of 2010",
+      "to": "/athletics/boys/baseball/players/2026112",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Josh",
+        "Scarbrough",
+        "Scarbrough Josh",
+        "class of 2010",
+        "grad 2010"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026113",
+      "type": "athlete",
+      "title": "Robinson Crawford",
+      "subtitle": "Baseball athlete - Class of 2009",
+      "to": "/athletics/boys/baseball/players/2026113",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Robinson",
+        "Crawford",
+        "Crawford Robinson",
+        "class of 2009",
+        "grad 2009"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026114",
+      "type": "athlete",
+      "title": "Reeve Jacobus",
+      "subtitle": "Baseball athlete - Class of 2011",
+      "to": "/athletics/boys/baseball/players/2026114",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Reeve",
+        "Jacobus",
+        "Jacobus Reeve",
+        "class of 2011",
+        "grad 2011"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026115",
+      "type": "athlete",
+      "title": "Davis Woodall",
+      "subtitle": "Baseball athlete - Class of 2010",
+      "to": "/athletics/boys/baseball/players/2026115",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Davis",
+        "Woodall",
+        "Woodall Davis",
+        "class of 2010",
+        "grad 2010"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026116",
+      "type": "athlete",
+      "title": "Charles Woods",
+      "subtitle": "Baseball athlete - Class of 2009",
+      "to": "/athletics/boys/baseball/players/2026116",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Charles",
+        "Woods",
+        "Woods Charles",
+        "class of 2009",
+        "grad 2009"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026117",
+      "type": "athlete",
+      "title": "Chad Smith",
+      "subtitle": "Baseball athlete - Class of 2011",
+      "to": "/athletics/boys/baseball/players/2026117",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Chad",
+        "Smith",
+        "Smith Chad",
+        "class of 2011",
+        "grad 2011"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026118",
+      "type": "athlete",
+      "title": "Walker Blackston",
+      "subtitle": "Baseball athlete - Class of 2011",
+      "to": "/athletics/boys/baseball/players/2026118",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Walker",
+        "Blackston",
+        "Blackston Walker",
+        "class of 2011",
+        "grad 2011"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026119",
+      "type": "athlete",
+      "title": "MacHaria Funches",
+      "subtitle": "Baseball athlete - Class of 2010",
+      "to": "/athletics/boys/baseball/players/2026119",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "MacHaria",
+        "Funches",
+        "Funches MacHaria",
+        "class of 2010",
+        "grad 2010"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026120",
+      "type": "athlete",
+      "title": "David Nicholas",
+      "subtitle": "Baseball athlete - Class of 2012",
+      "to": "/athletics/boys/baseball/players/2026120",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "David",
+        "Nicholas",
+        "Nicholas David",
+        "class of 2012",
+        "grad 2012"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026121",
+      "type": "athlete",
+      "title": "Sam Martin",
+      "subtitle": "Baseball athlete - Class of 2011",
+      "to": "/athletics/boys/baseball/players/2026121",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Sam",
+        "Martin",
+        "Martin Sam",
+        "class of 2011",
+        "grad 2011"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026122",
+      "type": "athlete",
+      "title": "Elliot Varney",
+      "subtitle": "Baseball athlete - Class of 2009",
+      "to": "/athletics/boys/baseball/players/2026122",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Elliot",
+        "Varney",
+        "Varney Elliot",
+        "class of 2009",
+        "grad 2009"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026123",
+      "type": "athlete",
+      "title": "Hiro Teramoto",
+      "subtitle": "Baseball athlete - Class of 2009",
+      "to": "/athletics/boys/baseball/players/2026123",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Hiro",
+        "Teramoto",
+        "Teramoto Hiro",
+        "class of 2009",
+        "grad 2009"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026124",
+      "type": "athlete",
+      "title": "Douglass Peeples",
+      "subtitle": "Baseball athlete - Class of 2011",
+      "to": "/athletics/boys/baseball/players/2026124",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Douglass",
+        "Peeples",
+        "Peeples Douglass",
+        "class of 2011",
+        "grad 2011"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026125",
+      "type": "athlete",
+      "title": "Bennie Jefferson",
+      "subtitle": "Baseball athlete - Class of 2009",
+      "to": "/athletics/boys/baseball/players/2026125",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Bennie",
+        "Jefferson",
+        "Jefferson Bennie",
+        "class of 2009",
+        "grad 2009"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026126",
+      "type": "athlete",
+      "title": "Daniel Sweet",
+      "subtitle": "Baseball athlete - Class of 2012",
+      "to": "/athletics/boys/baseball/players/2026126",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Daniel",
+        "Sweet",
+        "Sweet Daniel",
+        "class of 2012",
+        "grad 2012"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026127",
+      "type": "athlete",
+      "title": "Fulton Cannon",
+      "subtitle": "Baseball athlete - Class of 2009",
+      "to": "/athletics/boys/baseball/players/2026127",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Fulton",
+        "Cannon",
+        "Cannon Fulton",
+        "class of 2009",
+        "grad 2009"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026128",
+      "type": "athlete",
+      "title": "Daniel Gallarno",
+      "subtitle": "Baseball athlete - Class of 2013",
+      "to": "/athletics/boys/baseball/players/2026128",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Daniel",
+        "Gallarno",
+        "Gallarno Daniel",
+        "class of 2013",
+        "grad 2013"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026129",
+      "type": "athlete",
+      "title": "Evan Womack",
+      "subtitle": "Baseball athlete - Class of 2013",
+      "to": "/athletics/boys/baseball/players/2026129",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Evan",
+        "Womack",
+        "Womack Evan",
+        "class of 2013",
+        "grad 2013"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026130",
+      "type": "athlete",
+      "title": "Alex Hamlin",
+      "subtitle": "Baseball athlete - Class of 2013",
+      "to": "/athletics/boys/baseball/players/2026130",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Alex",
+        "Hamlin",
+        "Hamlin Alex",
+        "class of 2013",
+        "grad 2013"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026131",
+      "type": "athlete",
+      "title": "Baylor Obert",
+      "subtitle": "Baseball athlete - Class of 2013",
+      "to": "/athletics/boys/baseball/players/2026131",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Baylor",
+        "Obert",
+        "Obert Baylor",
+        "class of 2013",
+        "grad 2013"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026132",
+      "type": "athlete",
+      "title": "Charles Bowman",
+      "subtitle": "Baseball athlete - Class of 2013",
+      "to": "/athletics/boys/baseball/players/2026132",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Charles",
+        "Bowman",
+        "Bowman Charles",
+        "class of 2013",
+        "grad 2013"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026133",
+      "type": "athlete",
+      "title": "Daniel Briner",
+      "subtitle": "Baseball athlete - Class of 2013",
+      "to": "/athletics/boys/baseball/players/2026133",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Daniel",
+        "Briner",
+        "Briner Daniel",
+        "class of 2013",
+        "grad 2013"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026134",
+      "type": "athlete",
+      "title": "Corban Snider",
+      "subtitle": "Baseball athlete - Class of 2013",
+      "to": "/athletics/boys/baseball/players/2026134",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Corban",
+        "Snider",
+        "Snider Corban",
+        "class of 2013",
+        "grad 2013"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026135",
+      "type": "athlete",
+      "title": "Charlie Scott",
+      "subtitle": "Baseball athlete - Class of 2011",
+      "to": "/athletics/boys/baseball/players/2026135",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Charlie",
+        "Scott",
+        "Scott Charlie",
+        "class of 2011",
+        "grad 2011"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026136",
+      "type": "athlete",
+      "title": "William Rowell",
+      "subtitle": "Baseball athlete - Class of 2013",
+      "to": "/athletics/boys/baseball/players/2026136",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "William",
+        "Rowell",
+        "Rowell William",
+        "class of 2013",
+        "grad 2013"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026137",
+      "type": "athlete",
+      "title": "Max Martin",
+      "subtitle": "Baseball athlete - Class of 2013",
+      "to": "/athletics/boys/baseball/players/2026137",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Max",
+        "Martin",
+        "Martin Max",
+        "class of 2013",
+        "grad 2013"
+      ]
+    },
+    {
+      "id": "baseball-athlete-201713",
+      "type": "athlete",
+      "title": "Brooks Vanderlugt",
+      "subtitle": "Baseball athlete - Class of 2017",
+      "to": "/athletics/boys/baseball/players/201713",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Brooks",
+        "Vanderlugt",
+        "Vanderlugt Brooks",
+        "class of 2017",
+        "grad 2017"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026138",
+      "type": "athlete",
+      "title": "Steven Eckert",
+      "subtitle": "Baseball athlete - Class of 2014",
+      "to": "/athletics/boys/baseball/players/2026138",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Steven",
+        "Eckert",
+        "Eckert Steven",
+        "class of 2014",
+        "grad 2014"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026139",
+      "type": "athlete",
+      "title": "Everest White",
+      "subtitle": "Baseball athlete - Class of 2014",
+      "to": "/athletics/boys/baseball/players/2026139",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Everest",
+        "White",
+        "White Everest",
+        "class of 2014",
+        "grad 2014"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026140",
+      "type": "athlete",
+      "title": "Nate Mayo",
+      "subtitle": "Baseball athlete - Class of 2015",
+      "to": "/athletics/boys/baseball/players/2026140",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Nate",
+        "Mayo",
+        "Mayo Nate",
+        "class of 2015",
+        "grad 2015"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026141",
+      "type": "athlete",
+      "title": "Andrew Adams",
+      "subtitle": "Baseball athlete - Class of 2014",
+      "to": "/athletics/boys/baseball/players/2026141",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Andrew",
+        "Adams",
+        "Adams Andrew",
+        "class of 2014",
+        "grad 2014"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026142",
+      "type": "athlete",
+      "title": "Thomas Shapard",
+      "subtitle": "Baseball athlete - Class of 2015",
+      "to": "/athletics/boys/baseball/players/2026142",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Thomas",
+        "Shapard",
+        "Shapard Thomas",
+        "class of 2015",
+        "grad 2015"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026143",
+      "type": "athlete",
+      "title": "Randolph Solomon",
+      "subtitle": "Baseball athlete - Class of 2014",
+      "to": "/athletics/boys/baseball/players/2026143",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Randolph",
+        "Solomon",
+        "Solomon Randolph",
+        "class of 2014",
+        "grad 2014"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026144",
+      "type": "athlete",
+      "title": "Wright Wallace",
+      "subtitle": "Baseball athlete - Class of 2014",
+      "to": "/athletics/boys/baseball/players/2026144",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Wright",
+        "Wallace",
+        "Wallace Wright",
+        "class of 2014",
+        "grad 2014"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026145",
+      "type": "athlete",
+      "title": "Sascha Tymchyshym",
+      "subtitle": "Baseball athlete - Class of 2013",
+      "to": "/athletics/boys/baseball/players/2026145",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Sascha",
+        "Tymchyshym",
+        "Tymchyshym Sascha",
+        "class of 2013",
+        "grad 2013"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026146",
+      "type": "athlete",
+      "title": "Noah Johnson",
+      "subtitle": "Baseball athlete - Class of 2017",
+      "to": "/athletics/boys/baseball/players/2026146",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Noah",
+        "Johnson",
+        "Johnson Noah",
+        "class of 2017",
+        "grad 2017"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026147",
+      "type": "athlete",
+      "title": "Harrison Lindner",
+      "subtitle": "Baseball athlete - Class of 2013",
+      "to": "/athletics/boys/baseball/players/2026147",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Harrison",
+        "Lindner",
+        "Lindner Harrison",
+        "class of 2013",
+        "grad 2013"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026148",
+      "type": "athlete",
+      "title": "Connor Fields",
+      "subtitle": "Baseball athlete - Class of 2013",
+      "to": "/athletics/boys/baseball/players/2026148",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Connor",
+        "Fields",
+        "Fields Connor",
+        "class of 2013",
+        "grad 2013"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026149",
+      "type": "athlete",
+      "title": "Grayson Barnhill",
+      "subtitle": "Baseball athlete",
+      "to": "/athletics/boys/baseball/players/2026149",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Grayson",
+        "Barnhill",
+        "Barnhill Grayson"
+      ]
+    },
+    {
+      "id": "baseball-athlete-201712",
+      "type": "athlete",
+      "title": "Carter Hubbard",
+      "subtitle": "Baseball athlete",
+      "to": "/athletics/boys/baseball/players/201712",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Carter",
+        "Hubbard",
+        "Hubbard Carter"
+      ]
+    },
+    {
+      "id": "baseball-athlete-201714",
+      "type": "athlete",
+      "title": "Ryne Wollenburg",
+      "subtitle": "Baseball athlete",
+      "to": "/athletics/boys/baseball/players/201714",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Ryne",
+        "Wollenburg",
+        "Wollenburg Ryne"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026150",
+      "type": "athlete",
+      "title": "Peyton Lee",
+      "subtitle": "Baseball athlete",
+      "to": "/athletics/boys/baseball/players/2026150",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Peyton",
+        "Lee",
+        "Lee Peyton"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026151",
+      "type": "athlete",
+      "title": "Alex Dorsey",
+      "subtitle": "Baseball athlete",
+      "to": "/athletics/boys/baseball/players/2026151",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Alex",
+        "Dorsey",
+        "Dorsey Alex"
+      ]
+    },
+    {
+      "id": "baseball-athlete-201613",
+      "type": "athlete",
+      "title": "Robby Livingston",
+      "subtitle": "Baseball athlete",
+      "to": "/athletics/boys/baseball/players/201613",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Robby",
+        "Livingston",
+        "Livingston Robby"
+      ]
+    },
+    {
+      "id": "baseball-athlete-201808",
+      "type": "athlete",
+      "title": "Jacob Gonzalez",
+      "subtitle": "Baseball athlete",
+      "to": "/athletics/boys/baseball/players/201808",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Jacob",
+        "Gonzalez",
+        "Gonzalez Jacob"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026152",
+      "type": "athlete",
+      "title": "Jeremiah Epperley",
+      "subtitle": "Baseball athlete",
+      "to": "/athletics/boys/baseball/players/2026152",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Jeremiah",
+        "Epperley",
+        "Epperley Jeremiah"
+      ]
+    },
+    {
+      "id": "baseball-athlete-201612",
+      "type": "athlete",
+      "title": "Joey Gonzalez",
+      "subtitle": "Baseball athlete",
+      "to": "/athletics/boys/baseball/players/201612",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Joey",
+        "Gonzalez",
+        "Gonzalez Joey"
+      ]
+    },
+    {
+      "id": "baseball-athlete-201809",
+      "type": "athlete",
+      "title": "Jacob Boyd",
+      "subtitle": "Baseball athlete",
+      "to": "/athletics/boys/baseball/players/201809",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Jacob",
+        "Boyd",
+        "Boyd Jacob"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026153",
+      "type": "athlete",
+      "title": "Trevor Senter",
+      "subtitle": "Baseball athlete",
+      "to": "/athletics/boys/baseball/players/2026153",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Trevor",
+        "Senter",
+        "Senter Trevor"
+      ]
+    },
+    {
       "id": "baseball-athlete-202109",
       "type": "athlete",
       "title": "Gabe Barnhill",
@@ -4685,23 +5822,6 @@
       ]
     },
     {
-      "id": "baseball-athlete-201613",
-      "type": "athlete",
-      "title": "Robby Livingston",
-      "subtitle": "Baseball athlete",
-      "to": "/athletics/boys/baseball/players/201613",
-      "keywords": [
-        "Baseball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Robby",
-        "Livingston",
-        "Livingston Robby"
-      ]
-    },
-    {
       "id": "baseball-athlete-2026039",
       "type": "athlete",
       "title": "Ben Epperley",
@@ -4716,40 +5836,6 @@
         "Ben",
         "Epperley",
         "Epperley Ben"
-      ]
-    },
-    {
-      "id": "baseball-athlete-201713",
-      "type": "athlete",
-      "title": "Brooks Vanderlugt",
-      "subtitle": "Baseball athlete",
-      "to": "/athletics/boys/baseball/players/201713",
-      "keywords": [
-        "Baseball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Brooks",
-        "Vanderlugt",
-        "Vanderlugt Brooks"
-      ]
-    },
-    {
-      "id": "baseball-athlete-201714",
-      "type": "athlete",
-      "title": "Ryne Wollenburg",
-      "subtitle": "Baseball athlete",
-      "to": "/athletics/boys/baseball/players/201714",
-      "keywords": [
-        "Baseball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Ryne",
-        "Wollenburg",
-        "Wollenburg Ryne"
       ]
     },
     {
@@ -4787,27 +5873,10 @@
       ]
     },
     {
-      "id": "baseball-athlete-201612",
-      "type": "athlete",
-      "title": "Joey Gonzalez",
-      "subtitle": "Baseball athlete",
-      "to": "/athletics/boys/baseball/players/201612",
-      "keywords": [
-        "Baseball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Joey",
-        "Gonzalez",
-        "Gonzalez Joey"
-      ]
-    },
-    {
       "id": "baseball-athlete-201703",
       "type": "athlete",
       "title": "Andrew Longwater",
-      "subtitle": "Baseball athlete",
+      "subtitle": "Baseball athlete - Class of 2019",
       "to": "/athletics/boys/baseball/players/201703",
       "keywords": [
         "Baseball",
@@ -4817,58 +5886,9 @@
         "records",
         "Andrew",
         "Longwater",
-        "Longwater Andrew"
-      ]
-    },
-    {
-      "id": "baseball-athlete-201808",
-      "type": "athlete",
-      "title": "Jacob Gonzalez",
-      "subtitle": "Baseball athlete",
-      "to": "/athletics/boys/baseball/players/201808",
-      "keywords": [
-        "Baseball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Jacob",
-        "Gonzalez",
-        "Gonzalez Jacob"
-      ]
-    },
-    {
-      "id": "baseball-athlete-201712",
-      "type": "athlete",
-      "title": "Carter Hubbard",
-      "subtitle": "Baseball athlete",
-      "to": "/athletics/boys/baseball/players/201712",
-      "keywords": [
-        "Baseball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Carter",
-        "Hubbard",
-        "Hubbard Carter"
-      ]
-    },
-    {
-      "id": "baseball-athlete-201809",
-      "type": "athlete",
-      "title": "Jacob Boyd",
-      "subtitle": "Baseball athlete",
-      "to": "/athletics/boys/baseball/players/201809",
-      "keywords": [
-        "Baseball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Jacob",
-        "Boyd",
-        "Boyd Jacob"
+        "Longwater Andrew",
+        "class of 2019",
+        "grad 2019"
       ]
     },
     {
@@ -9068,6 +10088,113 @@
       ]
     },
     {
+      "id": "baseball-team-thomas-heyward-academy",
+      "type": "team",
+      "title": "Thomas Heyward Academy",
+      "subtitle": "Baseball opponent history - Ridgeland, SC",
+      "to": "/athletics/boys/baseball/records/opponents?team=Thomas+Heyward+Academy",
+      "keywords": [
+        "Baseball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Thomas Heyward Academy",
+        "Ridgeland",
+        "SC"
+      ]
+    },
+    {
+      "id": "baseball-team-hilton-head-christian-academy",
+      "type": "team",
+      "title": "Hilton Head Christian Academy",
+      "subtitle": "Baseball opponent history - Hilton Head Island, SC",
+      "to": "/athletics/boys/baseball/records/opponents?team=Hilton+Head+Christian+Academy",
+      "keywords": [
+        "Baseball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Hilton Head Christian Academy",
+        "Hilton Head Island",
+        "SC"
+      ]
+    },
+    {
+      "id": "baseball-team-frederica-academy",
+      "type": "team",
+      "title": "Frederica Academy",
+      "subtitle": "Baseball opponent history - St. Simons Island, GA",
+      "to": "/athletics/boys/baseball/records/opponents?team=Frederica+Academy",
+      "keywords": [
+        "Baseball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Frederica Academy",
+        "Frederica",
+        "Knights",
+        "St. Simons Island",
+        "GA"
+      ]
+    },
+    {
+      "id": "baseball-team-bulloch-academy",
+      "type": "team",
+      "title": "Bulloch Academy",
+      "subtitle": "Baseball opponent history - Statesboro, GA",
+      "to": "/athletics/boys/baseball/records/opponents?team=Bulloch+Academy",
+      "keywords": [
+        "Baseball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Bulloch Academy",
+        "Bulloch",
+        "Gators",
+        "Statesboro",
+        "GA"
+      ]
+    },
+    {
+      "id": "baseball-team-cathedral-academy",
+      "type": "team",
+      "title": "Cathedral Academy",
+      "subtitle": "Baseball opponent history - North Charleston, SC",
+      "to": "/athletics/boys/baseball/records/opponents?team=Cathedral+Academy",
+      "keywords": [
+        "Baseball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Cathedral Academy",
+        "North Charleston",
+        "SC"
+      ]
+    },
+    {
+      "id": "baseball-team-bible-baptist-school",
+      "type": "team",
+      "title": "Bible Baptist School",
+      "subtitle": "Baseball opponent history - Savannah, GA",
+      "to": "/athletics/boys/baseball/records/opponents?team=Bible+Baptist+School",
+      "keywords": [
+        "Baseball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Bible Baptist School",
+        "Bible Baptist",
+        "Savannah",
+        "GA"
+      ]
+    },
+    {
       "id": "baseball-team-hilton-head-preparatory-school",
       "type": "team",
       "title": "Hilton Head Preparatory School",
@@ -9086,36 +10213,267 @@
       ]
     },
     {
-      "id": "baseball-team-david-emanuel-academy",
+      "id": "baseball-team-st-john-s-christian-academy",
       "type": "team",
-      "title": "David Emanuel Academy",
-      "subtitle": "Baseball opponent history - Stillmore, GA",
-      "to": "/athletics/boys/baseball/records/opponents?team=David+Emanuel+Academy",
+      "title": "St. John's Christian Academy",
+      "subtitle": "Baseball opponent history - Moncks Corner, SC",
+      "to": "/athletics/boys/baseball/records/opponents?team=St.+John%27s+Christian+Academy",
       "keywords": [
         "Baseball",
         "team",
         "opponent",
         "history",
         "records",
-        "David Emanuel Academy",
-        "Stillmore",
+        "St. John's Christian Academy",
+        "Moncks Corner",
+        "SC"
+      ]
+    },
+    {
+      "id": "baseball-team-abundant-life-academy",
+      "type": "team",
+      "title": "Abundant Life Academy",
+      "subtitle": "Baseball opponent history - Hardeeville, SC",
+      "to": "/athletics/boys/baseball/records/opponents?team=Abundant+Life+Academy",
+      "keywords": [
+        "Baseball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Abundant Life Academy",
+        "Hardeeville",
+        "SC"
+      ]
+    },
+    {
+      "id": "baseball-team-robert-toombs-christian-academy",
+      "type": "team",
+      "title": "Robert Toombs Christian Academy",
+      "subtitle": "Baseball opponent history - Lyons, GA",
+      "to": "/athletics/boys/baseball/records/opponents?team=Robert+Toombs+Christian+Academy",
+      "keywords": [
+        "Baseball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Robert Toombs Christian Academy",
+        "Robert Toombs",
+        "Crusaders",
+        "Lyons",
         "GA"
       ]
     },
     {
-      "id": "baseball-team-bethesda-academy",
+      "id": "baseball-team-brentwood-school",
       "type": "team",
-      "title": "Bethesda Academy",
-      "subtitle": "Baseball opponent history - Savannah, GA",
-      "to": "/athletics/boys/baseball/records/opponents?team=Bethesda+Academy",
+      "title": "Brentwood School",
+      "subtitle": "Baseball opponent history - Sandersville, GA",
+      "to": "/athletics/boys/baseball/records/opponents?team=Brentwood+School",
       "keywords": [
         "Baseball",
         "team",
         "opponent",
         "history",
         "records",
-        "Bethesda Academy",
+        "Brentwood School",
+        "Brentwood",
+        "Sandersville",
+        "GA"
+      ]
+    },
+    {
+      "id": "baseball-team-memorial-day-school",
+      "type": "team",
+      "title": "Memorial Day School",
+      "subtitle": "Baseball opponent history - Savannah, GA",
+      "to": "/athletics/boys/baseball/records/opponents?team=Memorial+Day+School",
+      "keywords": [
+        "Baseball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Memorial Day School",
+        "Memorial Day",
         "Savannah",
+        "GA"
+      ]
+    },
+    {
+      "id": "baseball-team-patrick-henry-academy",
+      "type": "team",
+      "title": "Patrick Henry Academy",
+      "subtitle": "Baseball opponent history - Estill, SC",
+      "to": "/athletics/boys/baseball/records/opponents?team=Patrick+Henry+Academy",
+      "keywords": [
+        "Baseball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Patrick Henry Academy",
+        "Estill",
+        "SC"
+      ]
+    },
+    {
+      "id": "baseball-team-first-baptist-school-of-charleston",
+      "type": "team",
+      "title": "First Baptist School of Charleston",
+      "subtitle": "Baseball opponent history - Charleston, SC",
+      "to": "/athletics/boys/baseball/records/opponents?team=First+Baptist+School+of+Charleston",
+      "keywords": [
+        "Baseball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "First Baptist School of Charleston",
+        "First Baptist School",
+        "Charleston",
+        "SC"
+      ]
+    },
+    {
+      "id": "baseball-team-east-carter-high-school",
+      "type": "team",
+      "title": "East Carter High School",
+      "subtitle": "Baseball opponent history - Grayson, KY",
+      "to": "/athletics/boys/baseball/records/opponents?team=East+Carter+High+School",
+      "keywords": [
+        "Baseball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "East Carter High School",
+        "East Carter",
+        "Grayson",
+        "KY"
+      ]
+    },
+    {
+      "id": "baseball-team-dixie-high-school",
+      "type": "team",
+      "title": "Dixie High School",
+      "subtitle": "Baseball opponent history - New Lebanon, OH",
+      "to": "/athletics/boys/baseball/records/opponents?team=Dixie+High+School",
+      "keywords": [
+        "Baseball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Dixie High School",
+        "Dixie",
+        "New Lebanon",
+        "OH"
+      ]
+    },
+    {
+      "id": "baseball-team-ridgeland-high-school",
+      "type": "team",
+      "title": "Ridgeland High School",
+      "subtitle": "Baseball opponent history - Rossville, GA",
+      "to": "/athletics/boys/baseball/records/opponents?team=Ridgeland+High+School",
+      "keywords": [
+        "Baseball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Ridgeland High School",
+        "Ridgeland",
+        "Rossville",
+        "GA"
+      ]
+    },
+    {
+      "id": "baseball-team-beaufort-academy",
+      "type": "team",
+      "title": "Beaufort Academy",
+      "subtitle": "Baseball opponent history - Beaufort, SC",
+      "to": "/athletics/boys/baseball/records/opponents?team=Beaufort+Academy",
+      "keywords": [
+        "Baseball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Beaufort Academy",
+        "Beaufort",
+        "SC"
+      ]
+    },
+    {
+      "id": "baseball-team-northwood-academy",
+      "type": "team",
+      "title": "Northwood Academy",
+      "subtitle": "Baseball opponent history - Summerville, SC",
+      "to": "/athletics/boys/baseball/records/opponents?team=Northwood+Academy",
+      "keywords": [
+        "Baseball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Northwood Academy",
+        "Summerville",
+        "SC"
+      ]
+    },
+    {
+      "id": "baseball-team-coastal-homeschool",
+      "type": "team",
+      "title": "Coastal HomeSchool",
+      "subtitle": "Baseball opponent history - Pembroke, GA",
+      "to": "/athletics/boys/baseball/records/opponents?team=Coastal+HomeSchool",
+      "keywords": [
+        "Baseball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Coastal HomeSchool",
+        "Pembroke",
+        "GA"
+      ]
+    },
+    {
+      "id": "baseball-team-st-luke-s-episcopal-school",
+      "type": "team",
+      "title": "St. Luke's Episcopal School",
+      "subtitle": "Baseball opponent history - Mobile, AL",
+      "to": "/athletics/boys/baseball/records/opponents?team=St.+Luke%27s+Episcopal+School",
+      "keywords": [
+        "Baseball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "St. Luke's Episcopal School",
+        "St. Luke's Episcopal",
+        "Mobile",
+        "AL"
+      ]
+    },
+    {
+      "id": "baseball-team-first-presbyterian-day-school",
+      "type": "team",
+      "title": "First Presbyterian Day School",
+      "subtitle": "Baseball opponent history - Macon, GA",
+      "to": "/athletics/boys/baseball/records/opponents?team=First+Presbyterian+Day+School",
+      "keywords": [
+        "Baseball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "First Presbyterian Day School",
+        "First Presbyterian Day",
+        "Macon",
         "GA"
       ]
     },
@@ -9139,72 +10497,37 @@
       ]
     },
     {
-      "id": "baseball-team-thomas-heyward-academy",
+      "id": "baseball-team-bethesda-academy",
       "type": "team",
-      "title": "Thomas Heyward Academy",
-      "subtitle": "Baseball opponent history - Ridgeland, SC",
-      "to": "/athletics/boys/baseball/records/opponents?team=Thomas+Heyward+Academy",
-      "keywords": [
-        "Baseball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Thomas Heyward Academy",
-        "Ridgeland",
-        "SC"
-      ]
-    },
-    {
-      "id": "baseball-team-memorial-day-school",
-      "type": "team",
-      "title": "Memorial Day School",
+      "title": "Bethesda Academy",
       "subtitle": "Baseball opponent history - Savannah, GA",
-      "to": "/athletics/boys/baseball/records/opponents?team=Memorial+Day+School",
+      "to": "/athletics/boys/baseball/records/opponents?team=Bethesda+Academy",
       "keywords": [
         "Baseball",
         "team",
         "opponent",
         "history",
         "records",
-        "Memorial Day School",
+        "Bethesda Academy",
         "Savannah",
-        "GA",
-        "Memorial Day"
-      ]
-    },
-    {
-      "id": "baseball-team-coastal-homeschool",
-      "type": "team",
-      "title": "Coastal HomeSchool",
-      "subtitle": "Baseball opponent history - Pembroke, GA",
-      "to": "/athletics/boys/baseball/records/opponents?team=Coastal+HomeSchool",
-      "keywords": [
-        "Baseball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Coastal HomeSchool",
-        "Pembroke",
         "GA"
       ]
     },
     {
-      "id": "baseball-team-hilton-head-christian-academy",
+      "id": "baseball-team-david-emanuel-academy",
       "type": "team",
-      "title": "Hilton Head Christian Academy",
-      "subtitle": "Baseball opponent history - Hilton Head Island, SC",
-      "to": "/athletics/boys/baseball/records/opponents?team=Hilton+Head+Christian+Academy",
+      "title": "David Emanuel Academy",
+      "subtitle": "Baseball opponent history - Stillmore, GA",
+      "to": "/athletics/boys/baseball/records/opponents?team=David+Emanuel+Academy",
       "keywords": [
         "Baseball",
         "team",
         "opponent",
         "history",
         "records",
-        "Hilton Head Christian Academy",
-        "Hilton Head Island",
-        "SC"
+        "David Emanuel Academy",
+        "Stillmore",
+        "GA"
       ]
     },
     {
@@ -9221,23 +10544,6 @@
         "records",
         "Pee Dee Academy",
         "Mullins",
-        "SC"
-      ]
-    },
-    {
-      "id": "baseball-team-patrick-henry-academy",
-      "type": "team",
-      "title": "Patrick Henry Academy",
-      "subtitle": "Baseball opponent history - Estill, SC",
-      "to": "/athletics/boys/baseball/records/opponents?team=Patrick+Henry+Academy",
-      "keywords": [
-        "Baseball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Patrick Henry Academy",
-        "Estill",
         "SC"
       ]
     },
@@ -9294,25 +10600,6 @@
       ]
     },
     {
-      "id": "baseball-team-frederica-academy",
-      "type": "team",
-      "title": "Frederica Academy",
-      "subtitle": "Baseball opponent history - St. Simons Island, GA",
-      "to": "/athletics/boys/baseball/records/opponents?team=Frederica+Academy",
-      "keywords": [
-        "Baseball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Frederica Academy",
-        "Frederica",
-        "Knights",
-        "St. Simons Island",
-        "GA"
-      ]
-    },
-    {
       "id": "baseball-team-the-habersham-school",
       "type": "team",
       "title": "The Habersham School",
@@ -9345,25 +10632,6 @@
         "John Paul II",
         "Ridgeland",
         "SC"
-      ]
-    },
-    {
-      "id": "baseball-team-robert-toombs-christian-academy",
-      "type": "team",
-      "title": "Robert Toombs Christian Academy",
-      "subtitle": "Baseball opponent history - Lyons, GA",
-      "to": "/athletics/boys/baseball/records/opponents?team=Robert+Toombs+Christian+Academy",
-      "keywords": [
-        "Baseball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Robert Toombs Christian Academy",
-        "Robert Toombs",
-        "Crusaders",
-        "Lyons",
-        "GA"
       ]
     },
     {
@@ -9484,25 +10752,6 @@
         "Hilton Head Island High School",
         "Hilton Head Island",
         "SC"
-      ]
-    },
-    {
-      "id": "baseball-team-bulloch-academy",
-      "type": "team",
-      "title": "Bulloch Academy",
-      "subtitle": "Baseball opponent history - Statesboro, GA",
-      "to": "/athletics/boys/baseball/records/opponents?team=Bulloch+Academy",
-      "keywords": [
-        "Baseball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Bulloch Academy",
-        "Bulloch",
-        "Gators",
-        "Statesboro",
-        "GA"
       ]
     },
     {
@@ -9908,23 +11157,6 @@
         "records",
         "Lowcountry Leadership Charter School",
         "Meggett",
-        "SC"
-      ]
-    },
-    {
-      "id": "baseball-team-beaufort-academy",
-      "type": "team",
-      "title": "Beaufort Academy",
-      "subtitle": "Baseball opponent history - Beaufort, SC",
-      "to": "/athletics/boys/baseball/records/opponents?team=Beaufort+Academy",
-      "keywords": [
-        "Baseball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Beaufort Academy",
-        "Beaufort",
         "SC"
       ]
     },

@@ -99,11 +99,13 @@ function buildRecord(games, filterFn = () => true) {
   const filtered = games.filter(filterFn);
   const wins = filtered.filter((game) => game.Result === "W").length;
   const losses = filtered.filter((game) => game.Result === "L").length;
-  return { wins, losses, text: `${wins}–${losses}` };
+  const ties = filtered.filter((game) => game.Result === "T").length;
+  const text = ties ? `${wins}–${losses}–${ties}` : `${wins}–${losses}`;
+  return { wins, losses, ties, text };
 }
 
 function isCompletedGame(game) {
-  return game?.Result === "W" || game?.Result === "L";
+  return game?.Result === "W" || game?.Result === "L" || game?.Result === "T";
 }
 
 function sortGamesChronologically(games) {
@@ -121,6 +123,7 @@ function computeCoachSummaries(seasonsWithGames) {
         seasons: [],
         wins: 0,
         losses: 0,
+        ties: 0,
         notes: [],
       });
     }
@@ -131,6 +134,7 @@ function computeCoachSummaries(seasonsWithGames) {
     const overall = buildRecord(games);
     entry.wins += overall.wins;
     entry.losses += overall.losses;
+    entry.ties += overall.ties;
 
     const notes = [];
     if (season.RegionFinish) notes.push(season.RegionFinish);
@@ -142,13 +146,16 @@ function computeCoachSummaries(seasonsWithGames) {
 
   return Array.from(coachMap.values())
     .map((entry) => {
-      const totalGames = entry.wins + entry.losses;
+      const totalGames = entry.wins + entry.losses + entry.ties;
       const winPct = totalGames ? `${((entry.wins / totalGames) * 100).toFixed(1)}%` : "—";
       const minSeason = Math.min(...entry.seasons);
+      const overall = entry.ties
+        ? `${entry.wins}–${entry.losses}–${entry.ties}`
+        : `${entry.wins}–${entry.losses}`;
       return {
         coach: entry.coach,
         years: entry.seasons.length,
-        overall: `${entry.wins}–${entry.losses}`,
+        overall,
         winPct,
         notes: entry.notes.join("\n"),
         sortKey: Number.isFinite(minSeason) ? minSeason : 9999,

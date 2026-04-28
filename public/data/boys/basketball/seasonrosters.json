@@ -399,6 +399,28 @@
     ]
   },
   {
+    "SeasonID": "2018-19",
+    "Players": [
+      {"PlayerID": 2026082, "JerseyNumber": 0, "GamesPlayed": 29},
+      {"PlayerID": 201905, "JerseyNumber": 2, "GamesPlayed": 30},
+      {"PlayerID": 201906, "JerseyNumber": 3, "GamesPlayed": 29},
+      {"PlayerID": 2026035, "JerseyNumber": 5, "GamesPlayed": 28},
+      {"PlayerID": 202124, "JerseyNumber": 10, "GamesPlayed": 1},
+      {"PlayerID": 201813, "JerseyNumber": 13, "GamesPlayed": 29},
+      {"PlayerID": 2026041, "JerseyNumber": 14, "GamesPlayed": 1},
+      {"PlayerID": 201605, "JerseyNumber": 15, "GamesPlayed": 3},
+      {"PlayerID": 202113, "JerseyNumber": 22, "GamesPlayed": 11},
+      {"PlayerID": 201703, "JerseyNumber": 22, "GamesPlayed": 26},
+      {"PlayerID": 202127, "JerseyNumber": 24, "GamesPlayed": 30},
+      {"PlayerID": 202125, "JerseyNumber": 25, "GamesPlayed": 30},
+      {"PlayerID": 201806, "JerseyNumber": 33, "GamesPlayed": 20},
+      {"PlayerID": 202123, "JerseyNumber": 34, "GamesPlayed": 30},
+      {"PlayerID": 201814, "JerseyNumber": 34, "GamesPlayed": 11},
+      {"PlayerID": 201907, "JerseyNumber": 40, "GamesPlayed": 1},
+      {"PlayerID": 201903, "JerseyNumber": 52, "GamesPlayed": 10}
+    ]
+  },
+  {
     "SeasonID": "2019-20",
     "Players": [
       {"PlayerID": 201812, "JerseyNumber": null},

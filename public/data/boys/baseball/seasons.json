@@ -1,7 +1,39 @@
 [
   {
+    "SeasonID": 2008,
+    "HeadCoach": "Jim Rice",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
+    "SeasonID": 2009,
+    "HeadCoach": "Jim Rice",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
+    "SeasonID": 2010,
+    "HeadCoach": "Jim Rice",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
+    "SeasonID": 2011,
+    "HeadCoach": "Jim Rice",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
     "SeasonID": 2012,
-    "HeadCoach": "Scott Abernathy",
+    "HeadCoach": "Jim Rice",
     "RegionSeed": null,
     "RegionFinish": null,
     "StateSeed": null,
@@ -22,7 +54,7 @@
     "RegionFinish": null,
     "StateSeed": null,
     "StateFinish": null
-  },    
+  },
   {
     "SeasonID": 2015,
     "HeadCoach": "Scott Abernathy",
@@ -30,7 +62,7 @@
     "RegionFinish": null,
     "StateSeed": null,
     "StateFinish": null
-  },  
+  },
   {
     "SeasonID": 2016,
     "HeadCoach": "Scott Abernathy",
