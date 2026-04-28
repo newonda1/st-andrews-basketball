@@ -278,6 +278,7 @@ export default function FullCareerStats() {
   const [selectedView, setSelectedView] = useState("scoring");
   const [sortField, setSortField] = useState(VIEW_CONFIG.scoring.defaultSort);
   const [sortDirection, setSortDirection] = useState("desc");
+  const [playerQuery, setPlayerQuery] = useState("");
   const [error, setError] = useState("");
 
   useEffect(() => {
@@ -285,43 +286,26 @@ export default function FullCareerStats() {
       try {
         setError("");
 
-        const [statsDataRaw, playersDataRaw, seasonRostersDataRaw, adjustmentsDataRaw, careerAdjustmentsDataRaw] =
-          await Promise.all([
-            fetchJson("playergamestats.json", "/data/boys/basketball/playergamestats.json"),
-            fetchJson("players.json", "/data/players.json"),
-            fetchJson("seasonrosters.json", "/data/boys/basketball/seasonrosters.json"),
-            fetchJsonOptional("adjustments.json", "/data/boys/basketball/adjustments.json"),
-            fetchJsonOptional("careeradjustments.json", "/data/boys/basketball/careeradjustments.json"),
-          ]);
+        const [statsDataRaw, playersDataRaw, adjustmentsDataRaw, careerAdjustmentsDataRaw] = await Promise.all([
+          fetchJson("playergamestats.json", "/data/boys/basketball/playergamestats.json"),
+          fetchJson("players.json", "/data/players.json"),
+          fetchJsonOptional("adjustments.json", "/data/boys/basketball/adjustments.json"),
+          fetchJsonOptional("careeradjustments.json", "/data/boys/basketball/careeradjustments.json"),
+        ]);
 
         const statsData = Array.isArray(statsDataRaw) ? statsDataRaw : [];
         const playersData = Array.isArray(playersDataRaw) ? playersDataRaw : [];
-        const seasonRostersData = Array.isArray(seasonRostersDataRaw) ? seasonRostersDataRaw : [];
         const adjustmentsData = Array.isArray(adjustmentsDataRaw) ? adjustmentsDataRaw : [];
         const careerAdjustmentsData = Array.isArray(careerAdjustmentsDataRaw) ? careerAdjustmentsDataRaw : [];
 
         const playerMap = new Map(playersData.map((player) => [String(player.PlayerID), player]));
         const totalsMap = new Map();
-
-        for (const player of playersData) {
-          if (!player?.PlayerID) continue;
-          const playerId = String(player.PlayerID);
-          totalsMap.set(playerId, createEmptyTotals(playerId));
-        }
-
-        for (const season of seasonRostersData) {
-          for (const rosterPlayer of season?.Players || []) {
-            if (!rosterPlayer?.PlayerID) continue;
-            const playerId = String(rosterPlayer.PlayerID);
-            if (!totalsMap.has(playerId)) {
-              totalsMap.set(playerId, createEmptyTotals(playerId));
-            }
-          }
-        }
+        const trackedPlayerIds = new Set();
 
         for (const stat of statsData) {
           const playerId = String(stat?.PlayerID ?? "");
           if (!playerId) continue;
+          trackedPlayerIds.add(playerId);
 
           if (!totalsMap.has(playerId)) {
             totalsMap.set(playerId, createEmptyTotals(playerId));
@@ -406,11 +390,7 @@ export default function FullCareerStats() {
 
         for (const adjustment of adjustmentsData) {
           const playerId = String(adjustment?.PlayerID ?? "");
-          if (!playerId) continue;
-
-          if (!totalsMap.has(playerId)) {
-            totalsMap.set(playerId, createEmptyTotals(playerId));
-          }
+          if (!playerId || !trackedPlayerIds.has(playerId)) continue;
 
           const total = totalsMap.get(playerId);
 
@@ -462,11 +442,7 @@ export default function FullCareerStats() {
 
         for (const adjustment of careerAdjustmentsData) {
           const playerId = String(adjustment?.PlayerID ?? "");
-          if (!playerId) continue;
-
-          if (!totalsMap.has(playerId)) {
-            totalsMap.set(playerId, createEmptyTotals(playerId));
-          }
+          if (!playerId || !trackedPlayerIds.has(playerId)) continue;
 
           const total = totalsMap.get(playerId);
 
@@ -551,6 +527,10 @@ export default function FullCareerStats() {
   }, [selectedView]);
 
   const activeView = VIEW_CONFIG[selectedView];
+  const compactHeaderCellClass = "!px-[clamp(0.2rem,0.5vw,0.8rem)] !py-[clamp(0.18rem,0.32vw,0.38rem)]";
+  const compactBodyCellClass = "!px-[clamp(0.2rem,0.65vw,0.85rem)] !py-[clamp(0.18rem,0.38vw,0.42rem)]";
+  const compactPlayerWrapClass = "!gap-0.5 sm:!gap-[clamp(0.25rem,0.55vw,0.55rem)]";
+  const compactHeadshotClass = "!h-[clamp(1.1rem,3.9vw,2rem)] !w-[clamp(1.1rem,3.9vw,2rem)]";
 
   const sortedRows = useMemo(() => {
     const activeColumn = activeView.columns.find((column) => column.key === sortField);
@@ -570,6 +550,13 @@ export default function FullCareerStats() {
     });
   }, [activeView, careerRows, sortDirection, sortField]);
 
+  const filteredRows = useMemo(() => {
+    const normalizedQuery = playerQuery.trim().toLowerCase();
+    if (!normalizedQuery) return sortedRows;
+
+    return sortedRows.filter((row) => row.playerName.toLowerCase().includes(normalizedQuery));
+  }, [playerQuery, sortedRows]);
+
   const handleSort = (field) => {
     if (field === sortField) {
       setSortDirection((prev) => (prev === "asc" ? "desc" : "asc"));
@@ -584,7 +571,7 @@ export default function FullCareerStats() {
     <div className="pt-2 pb-10 lg:pb-40 space-y-6 px-4 max-w-6xl mx-auto">
       <h1 className="text-2xl font-bold text-center">Full Career Stats</h1>
       <p className="-mt-1.5 text-center text-sm italic text-gray-600">
-        View complete career totals for every St. Andrew&apos;s basketball player in the database
+        View complete career totals for St. Andrew&apos;s boys basketball players with tracked game-log entries
       </p>
 
       <div className="flex flex-wrap justify-center gap-3">
@@ -613,16 +600,57 @@ export default function FullCareerStats() {
         </div>
       )}
 
+      <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+        <div className="w-full max-w-sm">
+          <label htmlFor="boys-basketball-career-player-search" className="sr-only">
+            Search players in the full career stats table
+          </label>
+          <div className="flex items-center gap-2 rounded-full border border-gray-300 bg-white px-3 py-1.5 shadow-sm">
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              fill="none"
+              className="h-4 w-4 shrink-0 text-gray-500"
+            >
+              <circle cx="11" cy="11" r="6.5" stroke="currentColor" strokeWidth="2" />
+              <path d="M16 16L21 21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+            </svg>
+            <input
+              id="boys-basketball-career-player-search"
+              type="search"
+              value={playerQuery}
+              onChange={(event) => setPlayerQuery(event.target.value)}
+              placeholder="Search players"
+              autoComplete="off"
+              className="w-full min-w-0 border-none bg-transparent text-sm text-gray-800 outline-none placeholder:text-gray-400"
+            />
+            {playerQuery.trim() ? (
+              <button
+                type="button"
+                onClick={() => setPlayerQuery("")}
+                className="shrink-0 text-xs font-semibold text-gray-500 transition hover:text-gray-700"
+              >
+                Clear
+              </button>
+            ) : null}
+          </div>
+        </div>
+
+        <p className="text-center text-xs text-gray-500 sm:text-right">
+          Showing {filteredRows.length} of {careerRows.length} players
+        </p>
+      </div>
+
       <div className="overflow-x-auto">
         <table className={recordTableStyles.outerTable}>
           <thead className="bg-gray-200 font-bold">
             <tr>
-              <th className={`${recordTableStyles.headerCell} whitespace-nowrap`}>Player</th>
-              <th className={`${recordTableStyles.headerCell} whitespace-nowrap`}>Class</th>
+              <th className={`${recordTableStyles.headerCell} ${compactHeaderCellClass} whitespace-nowrap`}>Player</th>
+              <th className={`${recordTableStyles.headerCell} ${compactHeaderCellClass} whitespace-nowrap`}>Class</th>
               {activeView.columns.map((column) => (
                 <th
                   key={column.key}
-                  className={`${recordTableStyles.headerCell} cursor-pointer select-none hover:bg-gray-300 whitespace-nowrap`}
+                  className={`${recordTableStyles.headerCell} ${compactHeaderCellClass} cursor-pointer select-none hover:bg-gray-300 whitespace-nowrap`}
                   onClick={() => handleSort(column.key)}
                 >
                   {column.label}
@@ -633,49 +661,65 @@ export default function FullCareerStats() {
           </thead>
 
           <tbody>
-            {sortedRows.map((row, index) => (
-              <tr
-                key={row.playerId}
-                className={`border-t ${index % 2 === 0 ? "bg-white" : "bg-gray-50"}`}
-              >
-                <td className={`${recordTableStyles.bodyCell} min-w-[180px]`}>
-                  <div className={recordTableStyles.playerWrapStart}>
-                    {row.playerImg ? (
-                      <img
-                        src={row.playerImg}
-                        alt={row.playerName}
-                        className={recordTableStyles.headshot}
-                        loading="lazy"
-                        onError={(e) => {
-                          e.currentTarget.onerror = null;
-                          e.currentTarget.src = FALLBACK_HEADSHOT;
-                        }}
-                      />
-                    ) : (
-                      <img
-                        src={FALLBACK_HEADSHOT}
-                        alt={row.playerName}
-                        className={recordTableStyles.headshot}
-                        loading="lazy"
-                      />
-                    )}
+            {filteredRows.length ? (
+              filteredRows.map((row, index) => (
+                <tr
+                  key={row.playerId}
+                  className={`border-t ${index % 2 === 0 ? "bg-white" : "bg-gray-50"}`}
+                >
+                  <td className={`${recordTableStyles.bodyCell} ${compactBodyCellClass} min-w-[180px]`}>
+                    <div className={`${recordTableStyles.playerWrapStart} ${compactPlayerWrapClass}`}>
+                      {row.playerImg ? (
+                        <img
+                          src={row.playerImg}
+                          alt={row.playerName}
+                          className={`${recordTableStyles.headshot} ${compactHeadshotClass}`}
+                          loading="lazy"
+                          onError={(e) => {
+                            e.currentTarget.onerror = null;
+                            e.currentTarget.src = FALLBACK_HEADSHOT;
+                          }}
+                        />
+                      ) : (
+                        <img
+                          src={FALLBACK_HEADSHOT}
+                          alt={row.playerName}
+                          className={`${recordTableStyles.headshot} ${compactHeadshotClass}`}
+                          loading="lazy"
+                        />
+                      )}
 
-                    <Link
-                      to={`/athletics/boys/basketball/players/${row.playerId}`}
-                      className="min-w-0 max-w-full whitespace-normal break-words text-left leading-tight hover:underline"
-                    >
-                      {row.playerName}
-                    </Link>
-                  </div>
-                </td>
-                <td className={`${recordTableStyles.bodyCell} whitespace-nowrap`}>{row.gradYear ?? "—"}</td>
-                {activeView.columns.map((column) => (
-                  <td key={column.key} className={`${recordTableStyles.bodyCell} whitespace-nowrap`}>
-                    {column.render(row)}
+                      <Link
+                        to={`/athletics/boys/basketball/players/${row.playerId}`}
+                        className="min-w-0 max-w-full whitespace-normal break-words text-left leading-tight hover:underline"
+                      >
+                        {row.playerName}
+                      </Link>
+                    </div>
                   </td>
-                ))}
+                  <td className={`${recordTableStyles.bodyCell} ${compactBodyCellClass} whitespace-nowrap`}>
+                    {row.gradYear ?? "—"}
+                  </td>
+                  {activeView.columns.map((column) => (
+                    <td
+                      key={column.key}
+                      className={`${recordTableStyles.bodyCell} ${compactBodyCellClass} whitespace-nowrap`}
+                    >
+                      {column.render(row)}
+                    </td>
+                  ))}
+                </tr>
+              ))
+            ) : (
+              <tr className="border-t bg-white">
+                <td
+                  colSpan={activeView.columns.length + 2}
+                  className={`${recordTableStyles.bodyCell} ${compactBodyCellClass} text-center text-sm text-gray-500`}
+                >
+                  No players match that search.
+                </td>
               </tr>
-            ))}
+            )}
           </tbody>
         </table>
       </div>
