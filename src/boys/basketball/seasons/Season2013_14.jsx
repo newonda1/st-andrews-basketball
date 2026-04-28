@@ -1,3 +1,4 @@
+import React from "react";
 import MaxPrepsSeasonPage from "./MaxPrepsSeasonPage";
 
 export default function Season2013_14() {
