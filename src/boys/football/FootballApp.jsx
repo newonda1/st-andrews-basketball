@@ -5,6 +5,7 @@ import AthleticsProgramShell from "../../components/AthleticsProgramShell";
 
 import FullCareerStats from "./pages/FullCareerStats";
 import CareerRecords from "./pages/CareerRecords";
+import RecordsVsOpponents from "./pages/RecordsVsOpponents";
 import SeasonRecords from "./pages/SeasonRecords";
 import SingleGameRecords from "./pages/SingleGameRecords";
 import TeamSeasonRecords from "./pages/TeamSeasonRecords";
@@ -21,8 +22,8 @@ const menuSections = [
         label: "Full Year-by-Year Results",
       },
       {
-        to: "/athletics/football/seasons/2025",
-        label: "2025-26 Season",
+        to: "/athletics/football/records/opponents",
+        label: "Opponent Game History",
       },
     ],
   },
@@ -60,19 +61,6 @@ const menuSections = [
       },
     ],
   },
-  {
-    title: "Season Data",
-    links: [
-      {
-        to: "/athletics/football/seasons/2025#team-stats",
-        label: "2025-26 Team Stats",
-      },
-      {
-        to: "/athletics/football/seasons/2025#individual-stats",
-        label: "2025-26 Individual Stats",
-      },
-    ],
-  },
 ];
 
 export default function FootballApp() {
@@ -90,6 +78,7 @@ export default function FootballApp() {
           <Route path="team/season-records" element={<TeamSeasonRecords />} />
           <Route path="records/team" element={<TeamSingleGameRecords />} />
           <Route path="records/career" element={<FullCareerStats />} />
+          <Route path="records/opponents" element={<RecordsVsOpponents />} />
           <Route path="records/single-game" element={<SingleGameRecords />} />
           <Route path="records/season" element={<SeasonRecords />} />
           <Route path="records/career-records" element={<CareerRecords />} />

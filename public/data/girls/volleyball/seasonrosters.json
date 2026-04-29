@@ -1,0 +1,148 @@
+[
+  {
+    "SeasonID": 2025,
+    "SourceSeasonLabel": "2025-26",
+    "Players": [
+      {
+        "PlayerID": 2026021,
+        "JerseyNumber": 2,
+        "Grade": 11,
+        "GradeLabel": "Jr.",
+        "Positions": [
+          "S",
+          "RS"
+        ],
+        "MaxPrepsAthleteID": "f6d70e51-91da-4be7-a368-77eaaabe1727",
+        "CanonicalUrl": "https://www.maxpreps.com/ga/savannah/st-andrews-lions/athletes/grace-dare/?careerid=n8tp8uea2tjg0"
+      },
+      {
+        "PlayerID": 2026214,
+        "JerseyNumber": 3,
+        "Grade": 11,
+        "GradeLabel": "Jr.",
+        "Positions": [
+          "OH"
+        ],
+        "MaxPrepsAthleteID": "2828a31b-ff2c-4d2d-a4a7-6a23da538b20",
+        "CanonicalUrl": "https://www.maxpreps.com/ga/savannah/st-andrews-lions/athletes/abby-chu-pruden/?careerid=hei1fmhsiu2k4"
+      },
+      {
+        "PlayerID": 2026215,
+        "JerseyNumber": 4,
+        "Grade": 10,
+        "GradeLabel": "So.",
+        "Positions": [
+          "RS",
+          "S"
+        ],
+        "MaxPrepsAthleteID": "45747eb0-fd31-4b73-8c54-bd21748d7db4",
+        "CanonicalUrl": "https://www.maxpreps.com/ga/savannah/st-andrews-lions/athletes/valerie-ward/?careerid=o704n2ikm1hdd"
+      },
+      {
+        "PlayerID": 2026216,
+        "JerseyNumber": 5,
+        "Grade": 10,
+        "GradeLabel": "So.",
+        "Positions": [
+          "DS",
+          "L",
+          "OH"
+        ],
+        "MaxPrepsAthleteID": "93bff37e-76e1-4ab7-ae83-4533f2ec8789",
+        "CanonicalUrl": "https://www.maxpreps.com/ga/savannah/st-andrews-lions/athletes/lyleigh-bradshaw/?careerid=bnfqfbphh4ej3"
+      },
+      {
+        "PlayerID": 2026052,
+        "JerseyNumber": 7,
+        "Grade": 11,
+        "GradeLabel": "Jr.",
+        "Positions": [
+          "RS"
+        ],
+        "MaxPrepsAthleteID": "d77943b3-b333-4dbf-a96d-de6e3d8e5ab3",
+        "CanonicalUrl": "https://www.maxpreps.com/ga/savannah/st-andrews-lions/athletes/ryan-mcgee/?careerid=bulboko8n09l5"
+      },
+      {
+        "PlayerID": 2026217,
+        "JerseyNumber": 8,
+        "Grade": 11,
+        "GradeLabel": "Jr.",
+        "Positions": [
+          "MH"
+        ],
+        "MaxPrepsAthleteID": "d24f1f9c-6468-4aab-8d37-66bae3c21ff8",
+        "CanonicalUrl": "https://www.maxpreps.com/ga/savannah/st-andrews-lions/athletes/caroline-lawrence/?careerid=qa0e9o7q8as11"
+      },
+      {
+        "PlayerID": 2026218,
+        "JerseyNumber": 9,
+        "Grade": 11,
+        "GradeLabel": "Jr.",
+        "Positions": [
+          "RS",
+          "S"
+        ],
+        "MaxPrepsAthleteID": "277c7090-384b-4667-b590-701f8e86aa85",
+        "CanonicalUrl": "https://www.maxpreps.com/ga/savannah/st-andrews-lions/athletes/avery-nein/?careerid=e2vpprodev666"
+      },
+      {
+        "PlayerID": 2026219,
+        "JerseyNumber": 11,
+        "Grade": 12,
+        "GradeLabel": "Sr.",
+        "Positions": [
+          "OH"
+        ],
+        "MaxPrepsAthleteID": "b16cf52b-2918-4083-af2d-3c39a94c0db6",
+        "CanonicalUrl": "https://www.maxpreps.com/ga/savannah/st-andrews-lions/athletes/sara-carr-macdonald/?careerid=1b2vm3qo155vf"
+      },
+      {
+        "PlayerID": 2026220,
+        "JerseyNumber": 14,
+        "Grade": 11,
+        "GradeLabel": "Jr.",
+        "Positions": [
+          "MH"
+        ],
+        "MaxPrepsAthleteID": "3ddc5d0e-20e9-4a93-8228-f35ee7dcb6cf",
+        "CanonicalUrl": "https://www.maxpreps.com/ga/savannah/st-andrews-lions/athletes/scarlett-holmes/?careerid=juhf87titsr99"
+      },
+      {
+        "PlayerID": 2026221,
+        "JerseyNumber": 15,
+        "Grade": 12,
+        "GradeLabel": "Sr.",
+        "Positions": [
+          "L",
+          "DS",
+          "OH"
+        ],
+        "MaxPrepsAthleteID": "1f3f7a77-4c25-4526-bf85-f897363818f8",
+        "CanonicalUrl": "https://www.maxpreps.com/ga/savannah/st-andrews-lions/athletes/makenna-riley/?careerid=mph0f13i5nqn7"
+      },
+      {
+        "PlayerID": 2026222,
+        "JerseyNumber": 19,
+        "Grade": 10,
+        "GradeLabel": "So.",
+        "Positions": [
+          "OH",
+          "MH"
+        ],
+        "MaxPrepsAthleteID": "b88a4678-1146-49cf-91af-fc2ba5737890",
+        "CanonicalUrl": "https://www.maxpreps.com/ga/savannah/st-andrews-lions/athletes/khloe-jesswein/?careerid=5l81snbni6211"
+      },
+      {
+        "PlayerID": 2026044,
+        "JerseyNumber": 25,
+        "Grade": 11,
+        "GradeLabel": "Jr.",
+        "Positions": [
+          "MH"
+        ],
+        "MaxPrepsAthleteID": "80b82975-dd97-4903-a0b2-0e1514bec753",
+        "CanonicalUrl": "https://www.maxpreps.com/ga/savannah/st-andrews-lions/athletes/lily-aiken/?careerid=0rhdoqdjhaudd"
+      }
+    ]
+  }
+]

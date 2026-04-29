@@ -1625,5 +1625,40 @@
     "City": "Savannah",
     "State": "GA",
     "Mascot": "-"
+  },
+  {
+    "SchoolID": "ga-lanier-sugar-hill",
+    "Name": "Lanier",
+    "City": "Sugar Hill",
+    "State": "GA",
+    "Mascot": "Longhorns"
+  },
+  {
+    "SchoolID": "ga-oglethorpe-county-lexington",
+    "Name": "Oglethorpe County",
+    "City": "Lexington",
+    "State": "GA",
+    "Mascot": "Patriots"
+  },
+  {
+    "SchoolID": "ga-stratford-academy-macon",
+    "Name": "Stratford Academy",
+    "City": "Macon",
+    "State": "GA",
+    "Mascot": "Eagles"
+  },
+  {
+    "SchoolID": "ga-the-king-s-academy-woodstock",
+    "Name": "The King's Academy",
+    "City": "Woodstock",
+    "State": "GA",
+    "Mascot": "Knights"
+  },
+  {
+    "SchoolID": "ga-west-laurens-dexter",
+    "Name": "West Laurens",
+    "City": "Dexter",
+    "State": "GA",
+    "Mascot": "Raiders"
   }
 ]

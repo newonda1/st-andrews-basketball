@@ -2332,7 +2332,7 @@
     "PlayerID": 2026021,
     "FirstName": "Grace",
     "LastName": "Dare",
-    "GradYear": null,
+    "GradYear": 2027,
     "Gender": "Girls"
   },
   {
@@ -3744,5 +3744,68 @@
     "LastName": "Tan",
     "GradYear": 2030,
     "Gender": "Boys"
+  },
+  {
+    "PlayerID": 2026214,
+    "FirstName": "Abby",
+    "LastName": "Chu-Pruden",
+    "GradYear": 2027,
+    "Gender": "Girls"
+  },
+  {
+    "PlayerID": 2026215,
+    "FirstName": "Valerie",
+    "LastName": "Ward",
+    "GradYear": 2028,
+    "Gender": "Girls"
+  },
+  {
+    "PlayerID": 2026216,
+    "FirstName": "Lyleigh",
+    "LastName": "Bradshaw",
+    "GradYear": 2028,
+    "Gender": "Girls"
+  },
+  {
+    "PlayerID": 2026217,
+    "FirstName": "Caroline",
+    "LastName": "Lawrence",
+    "GradYear": 2027,
+    "Gender": "Girls"
+  },
+  {
+    "PlayerID": 2026218,
+    "FirstName": "Avery",
+    "LastName": "Nein",
+    "GradYear": 2027,
+    "Gender": "Girls"
+  },
+  {
+    "PlayerID": 2026219,
+    "FirstName": "Sara Carr",
+    "LastName": "MacDonald",
+    "GradYear": 2026,
+    "Gender": "Girls"
+  },
+  {
+    "PlayerID": 2026220,
+    "FirstName": "Scarlett",
+    "LastName": "Holmes",
+    "GradYear": 2027,
+    "Gender": "Girls"
+  },
+  {
+    "PlayerID": 2026221,
+    "FirstName": "Makenna",
+    "LastName": "Riley",
+    "GradYear": 2026,
+    "Gender": "Girls"
+  },
+  {
+    "PlayerID": 2026222,
+    "FirstName": "Khloe",
+    "LastName": "Jesswein",
+    "GradYear": 2028,
+    "Gender": "Girls"
   }
 ]

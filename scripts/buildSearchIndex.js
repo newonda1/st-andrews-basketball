@@ -291,6 +291,14 @@ const PAGE_ENTRIES = [
     keywords: ["football", "results", "yearly", "history", "records"],
   },
   {
+    id: "football-opponent-history",
+    type: "page",
+    title: "Opponent Game History",
+    subtitle: "Football",
+    to: "/athletics/football/records/opponents",
+    keywords: ["football", "opponents", "team", "games", "history"],
+  },
+  {
     id: "football-2025-season",
     type: "page",
     title: "2025 Season",
@@ -352,7 +360,24 @@ const PAGE_ENTRIES = [
     title: "Volleyball",
     subtitle: "St. Andrew's team home",
     to: "/athletics/volleyball",
-    keywords: ["volleyball", "team", "program", "home", "coming soon"],
+    featured: true,
+    keywords: ["volleyball", "team", "program", "home", "schedule", "roster", "stats"],
+  },
+  {
+    id: "volleyball-yearly-results",
+    type: "page",
+    title: "Season Results",
+    subtitle: "Volleyball",
+    to: "/athletics/volleyball/yearly-results",
+    keywords: ["volleyball", "season", "results", "schedule", "archive"],
+  },
+  {
+    id: "volleyball-2025-season",
+    type: "page",
+    title: "2025 Season",
+    subtitle: "Volleyball",
+    to: "/athletics/volleyball/seasons/2025",
+    keywords: ["volleyball", "2025", "season", "schedule", "roster", "results", "stats"],
   },
   {
     id: "girls-soccer-home",
@@ -485,6 +510,13 @@ const SPORT_PLAYER_CONFIGS = [
     playerRouteBase: "/athletics/girls/basketball/players",
     playersPath: "public/data/girls/basketball/players.json",
     rostersPath: "public/data/girls/basketball/seasonrosters.json",
+  },
+  {
+    key: "volleyball",
+    sportLabel: "Volleyball",
+    playerRouteBase: "/athletics/volleyball/players",
+    playersPath: "public/data/players.json",
+    rostersPath: "public/data/girls/volleyball/seasonrosters.json",
   },
 ];
 

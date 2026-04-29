@@ -1,0 +1,56 @@
+[
+  {
+    "SeasonID": 2025,
+    "Categories": {
+      "Attacking": {
+        "SetsPlayed": 78,
+        "Kills": 703,
+        "KillsPerSet": 9,
+        "KillPct": null,
+        "AttackAttempts": 1831,
+        "AttackErrors": 485,
+        "HittingPct": null
+      },
+      "Serving": {
+        "SetsPlayed": 78,
+        "Aces": 294,
+        "AcesPerSet": 3.8,
+        "AcePct": 19.2,
+        "ServeAttempts": 1534,
+        "ServeErrors": 255,
+        "ServePct": 83.4,
+        "ServingPoints": 847
+      },
+      "Blocking": {
+        "SetsPlayed": 78,
+        "SoloBlocks": 9,
+        "BlockAssists": 50,
+        "TotalBlocks": 34,
+        "BlocksPerSet": 0.4,
+        "BlocksPerMatch": 1.1,
+        "BlockErrors": 0
+      },
+      "Digging": {
+        "SetsPlayed": 78,
+        "Digs": 793,
+        "DigErrors": 0,
+        "DigsPerSet": 10.2,
+        "DigsPerMatch": 25.6
+      },
+      "Ball Handling": {
+        "SetsPlayed": 78,
+        "Assists": 651,
+        "AssistsPerSet": 8.3,
+        "BallHandlingAttempts": 1707,
+        "BallHandlingErrors": 28
+      },
+      "Serve Receiving": {
+        "SetsPlayed": 78,
+        "Receptions": 936,
+        "ReceptionErrors": 136,
+        "ReceptionsPerSet": 12,
+        "ReceptionsPerMatch": 30.2
+      }
+    }
+  }
+]

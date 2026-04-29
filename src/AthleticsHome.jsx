@@ -51,9 +51,12 @@ const sports = [
     to: "/athletics/volleyball",
     icon: "/images/common/volleyball_icon.png",
     iconClassName: "scale-[0.82]",
-    bannerMessage: "This page is under construction and will be up soon.",
-    regionYears: [],
-    stateYears: [],
+    championshipGroups: [
+      {
+        title: "Program Archive",
+        sections: [{ title: "Published Results", years: [2025] }],
+      },
+    ],
   },
   {
     name: "Girls Soccer",

@@ -1,0 +1,25 @@
+[
+  {
+    "SeasonID": 2025,
+    "YearStart": 2025,
+    "YearEnd": 2026,
+    "DisplaySeason": "2025",
+    "SourceSeasonLabel": "2025-26",
+    "HeadCoach": "Bobbi Mock",
+    "AssistantCoaches": [
+      "Amber McCaw",
+      "J. Wheelock"
+    ],
+    "OverallWins": 19,
+    "OverallLosses": 12,
+    "RegionWins": 0,
+    "RegionLosses": 0,
+    "RegionFinish": "3rd",
+    "League": "GIAA 2AAA",
+    "StateRank": 143,
+    "StateDivision": "GIAA Class AAA",
+    "SourceUrl": "https://www.maxpreps.com/ga/savannah/st-andrews-lions/volleyball/",
+    "StatsUpdatedAt": "2025-10-07T07:01:00Z",
+    "ScheduleUpdatedAt": "2025-10-08T16:54:00Z"
+  }
+]
