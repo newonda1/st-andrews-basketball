@@ -101,11 +101,6 @@ export default function YearlyResults() {
       entry.wins += overall.wins;
       entry.losses += overall.losses;
       entry.ties += overall.ties;
-
-      const note = season.SeasonResult || season.League || "";
-      if (note) {
-        entry.notes.push(`${formatSeasonLabel(season)}: ${note}`);
-      }
     });
 
     return Array.from(coachMap.values()).sort((a, b) => {
@@ -149,7 +144,7 @@ export default function YearlyResults() {
           away: away.text,
           pointsFor,
           pointsAgainst,
-          seasonResult: season.SeasonResult || season.League || "",
+          notes: "",
         };
       }),
     [seasonsWithGames]
@@ -219,8 +214,10 @@ export default function YearlyResults() {
   const textCellClassName = `${recordTableStyles.bodyCell} md:text-left`;
   const compactTextCellClassName =
     `${recordTableStyles.bodyCell} whitespace-nowrap md:text-left`;
+  const notesHeaderCellClassName =
+    `${headerCellClassName} w-[7.5rem] min-w-[7.5rem] md:w-[11rem] md:min-w-[11rem] md:text-left`;
   const notesCellClassName =
-    `${recordTableStyles.bodyCell} md:min-w-[24rem] md:text-left`;
+    `${recordTableStyles.bodyCell} w-[7.5rem] min-w-[7.5rem] md:w-[11rem] md:min-w-[11rem] md:text-left`;
   const totalRowClassName = "bg-gray-100 font-bold";
 
   return (
@@ -238,7 +235,7 @@ export default function YearlyResults() {
                 <th className={headerCellClassName}>Years</th>
                 <th className={headerCellClassName}>Overall Record</th>
                 <th className={headerCellClassName}>Win %</th>
-                <th className={`${headerCellClassName} md:text-left`}>Notes (Season Results)</th>
+                <th className={notesHeaderCellClassName}>Notes</th>
               </tr>
             </thead>
             <tbody>
@@ -259,13 +256,7 @@ export default function YearlyResults() {
                     <td className={numericCellClassName}>
                       {formatWinningPct(coach.wins, coach.losses, coach.ties)}
                     </td>
-                    <td className={notesCellClassName}>
-                      <div className="grid gap-y-1 md:text-left">
-                        {coach.notes.map((note) => (
-                          <div key={note}>{note}</div>
-                        ))}
-                      </div>
-                    </td>
+                    <td className={notesCellClassName}></td>
                   </tr>
                 ))
               )}
@@ -289,7 +280,7 @@ export default function YearlyResults() {
                 <th className={headerCellClassName}>Away</th>
                 <th className={headerCellClassName}>PF</th>
                 <th className={headerCellClassName}>PA</th>
-                <th className={`${headerCellClassName} md:text-left`}>Season Result</th>
+                <th className={notesHeaderCellClassName}>Notes</th>
               </tr>
             </thead>
             <tbody>
@@ -317,7 +308,7 @@ export default function YearlyResults() {
                     <td className={numericCellClassName}>{row.away}</td>
                     <td className={numericCellClassName}>{row.pointsFor}</td>
                     <td className={numericCellClassName}>{row.pointsAgainst}</td>
-                    <td className={textCellClassName}>{row.seasonResult}</td>
+                    <td className={notesCellClassName}>{row.notes}</td>
                   </tr>
                 ))
               )}
@@ -340,7 +331,7 @@ export default function YearlyResults() {
                   </td>
                   <td className={numericCellClassName}>{totals.pointsFor}</td>
                   <td className={numericCellClassName}>{totals.pointsAgainst}</td>
-                  <td className={textCellClassName}></td>
+                  <td className={notesCellClassName}></td>
                 </tr>
               ) : null}
             </tbody>

@@ -3,8 +3,14 @@ import { Route, Routes } from "react-router-dom";
 
 import AthleticsProgramShell from "../../components/AthleticsProgramShell";
 
+import FullCareerStats from "./pages/FullCareerStats";
+import CareerRecords from "./pages/CareerRecords";
+import SeasonRecords from "./pages/SeasonRecords";
+import SingleGameRecords from "./pages/SingleGameRecords";
+import TeamSeasonRecords from "./pages/TeamSeasonRecords";
+import TeamSingleGameRecords from "./pages/TeamSingleGameRecords";
 import YearlyResults from "./pages/YearlyResults";
-import Season2025 from "./seasons/Season2025";
+import FootballSeasonPage from "./seasons/FootballSeasonPage";
 
 const menuSections = [
   {
@@ -16,25 +22,54 @@ const menuSections = [
       },
       {
         to: "/athletics/football/seasons/2025",
-        label: "2025 Season",
+        label: "2025-26 Season",
       },
     ],
   },
   {
-    title: "Team Stats",
+    title: "Team Records",
+    links: [
+      {
+        to: "/athletics/football/records/team",
+        label: "Team Single Game Records",
+      },
+      {
+        to: "/athletics/football/team/season-records",
+        label: "Team Season Records",
+      },
+    ],
+  },
+  {
+    title: "Individual Records",
+    links: [
+      {
+        to: "/athletics/football/records/career",
+        label: "Full Career Stats",
+      },
+      {
+        to: "/athletics/football/records/single-game",
+        label: "Single Game Records",
+      },
+      {
+        to: "/athletics/football/records/season",
+        label: "Season Records",
+      },
+      {
+        to: "/athletics/football/records/career-records",
+        label: "Career Records",
+      },
+    ],
+  },
+  {
+    title: "Season Data",
     links: [
       {
         to: "/athletics/football/seasons/2025#team-stats",
-        label: "2025 Team Stats",
+        label: "2025-26 Team Stats",
       },
-    ],
-  },
-  {
-    title: "Individual Stats",
-    links: [
       {
         to: "/athletics/football/seasons/2025#individual-stats",
-        label: "2025 Individual Stats",
+        label: "2025-26 Individual Stats",
       },
     ],
   },
@@ -52,8 +87,14 @@ export default function FootballApp() {
       <div className="pb-12 lg:pb-24">
         <Routes>
           <Route index element={<YearlyResults />} />
+          <Route path="team/season-records" element={<TeamSeasonRecords />} />
+          <Route path="records/team" element={<TeamSingleGameRecords />} />
+          <Route path="records/career" element={<FullCareerStats />} />
+          <Route path="records/single-game" element={<SingleGameRecords />} />
+          <Route path="records/season" element={<SeasonRecords />} />
+          <Route path="records/career-records" element={<CareerRecords />} />
           <Route path="yearly-results" element={<YearlyResults />} />
-          <Route path="seasons/2025" element={<Season2025 />} />
+          <Route path="seasons/:seasonId" element={<FootballSeasonPage />} />
           <Route path="*" element={<YearlyResults />} />
         </Routes>
       </div>

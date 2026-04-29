@@ -4,9 +4,10 @@ export const FOOTBALL_DATA_PATHS = {
   players: "/data/boys/football/players.json",
   rosters: "/data/boys/football/seasonrosters.json",
   stats: "/data/boys/football/seasonstats.json",
+  playerGameLogs: "/data/boys/football/playergamelogs.json",
 };
 
-async function fetchJson(path, label) {
+export async function fetchJson(path, label) {
   const response = await fetch(path);
   if (!response.ok) {
     throw new Error(`Could not load ${label} (${response.status}).`);
@@ -40,7 +41,23 @@ export async function loadFootballSeasonPageData() {
     seasons: Array.isArray(seasons) ? seasons : [],
     players: Array.isArray(players) ? players : [],
     rosters: Array.isArray(rosters) ? rosters : [],
-    seasonStats: stats && typeof stats === "object" ? stats : null,
+    seasonStats: Array.isArray(stats) ? stats : stats && typeof stats === "object" ? [stats] : [],
+  };
+}
+
+export async function loadFootballRecordsData() {
+  const [games, seasons, players, playerGameLogs] = await Promise.all([
+    fetchJson(FOOTBALL_DATA_PATHS.games, "football games"),
+    fetchJson(FOOTBALL_DATA_PATHS.seasons, "football seasons"),
+    fetchJson(FOOTBALL_DATA_PATHS.players, "football players"),
+    fetchJson(FOOTBALL_DATA_PATHS.playerGameLogs, "football player game logs"),
+  ]);
+
+  return {
+    games: Array.isArray(games) ? games : [],
+    seasons: Array.isArray(seasons) ? seasons : [],
+    players: Array.isArray(players) ? players : [],
+    playerGameLogs: Array.isArray(playerGameLogs) ? playerGameLogs : [],
   };
 }
 
@@ -82,6 +99,7 @@ export function formatGameDate(game) {
 }
 
 export function formatSeasonLabel(season) {
+  if (season?.SourceSeasonLabel) return String(season.SourceSeasonLabel);
   if (season?.DisplaySeason) return String(season.DisplaySeason);
   if (season?.SeasonID != null) return String(season.SeasonID);
   return "—";
@@ -149,6 +167,14 @@ export function formatNumber(value, options = {}) {
 
 export function getSeasonStatSections(seasonStats) {
   return Array.isArray(seasonStats?.Sections) ? seasonStats.Sections : [];
+}
+
+export function getSeasonStatsForSeason(allSeasonStats, seasonId) {
+  return (
+    (allSeasonStats || []).find(
+      (entry) => Number(entry?.SeasonID) === Number(seasonId)
+    ) || null
+  );
 }
 
 export function getSeasonStatTable(seasonStats, title) {

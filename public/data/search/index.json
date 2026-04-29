@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-29T13:47:57.254Z",
-  "itemCount": 866,
+  "generatedAt": "2026-04-29T15:14:56.533Z",
+  "itemCount": 872,
   "items": [
     {
       "id": "athletics-home",
@@ -477,6 +477,80 @@
         "roster",
         "results",
         "stats"
+      ]
+    },
+    {
+      "id": "football-team-single-game-records",
+      "type": "page",
+      "title": "Team Single Game Records",
+      "subtitle": "Football",
+      "to": "/athletics/football/records/team",
+      "keywords": [
+        "football",
+        "team",
+        "single game",
+        "records"
+      ]
+    },
+    {
+      "id": "football-team-season-records",
+      "type": "page",
+      "title": "Team Season Records",
+      "subtitle": "Football",
+      "to": "/athletics/football/team/season-records",
+      "keywords": [
+        "football",
+        "team",
+        "season",
+        "records"
+      ]
+    },
+    {
+      "id": "football-full-career-stats",
+      "type": "page",
+      "title": "Full Career Stats",
+      "subtitle": "Football",
+      "to": "/athletics/football/records/career",
+      "keywords": [
+        "football",
+        "career",
+        "stats"
+      ]
+    },
+    {
+      "id": "football-single-game-records",
+      "type": "page",
+      "title": "Single Game Records",
+      "subtitle": "Football",
+      "to": "/athletics/football/records/single-game",
+      "keywords": [
+        "football",
+        "single game",
+        "records"
+      ]
+    },
+    {
+      "id": "football-season-records",
+      "type": "page",
+      "title": "Season Records",
+      "subtitle": "Football",
+      "to": "/athletics/football/records/season",
+      "keywords": [
+        "football",
+        "season",
+        "records"
+      ]
+    },
+    {
+      "id": "football-career-records",
+      "type": "page",
+      "title": "Career Records",
+      "subtitle": "Football",
+      "to": "/athletics/football/records/career-records",
+      "keywords": [
+        "football",
+        "career",
+        "records"
       ]
     },
     {

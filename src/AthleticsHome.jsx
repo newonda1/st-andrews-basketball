@@ -43,8 +43,8 @@ const sports = [
     name: "Football",
     to: "/athletics/football",
     icon: "/images/common/football_icon.png",
-    regionYears: [],
-    stateYears: [],
+    regionYears: [2002],
+    stateYears: [1998],
   },
   {
     name: "Volleyball",
@@ -93,6 +93,12 @@ const sports = [
     icon: "/images/swimming/swimming_icon.png",
     championshipGroups: [
       {
+        title: "Team Championships",
+        sections: [
+          { title: "State Championships", years: [2008, 2009] },
+        ],
+      },
+      {
         title: "Individual Champions",
         sections: [
           {
@@ -114,8 +120,8 @@ const sports = [
       {
         title: "Team Championships",
         sections: [
-          { title: "Region Championships", years: [2025, 2026] },
-          { title: "State Championships", years: [] },
+          { title: "Region Championships", years: [1981, 2019, 2025, 2026] },
+          { title: "State Championships", years: [1981] },
         ],
       },
       {
