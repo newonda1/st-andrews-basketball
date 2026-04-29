@@ -1,0 +1,366 @@
+[
+  {
+    "PlayerID": "1306f3b3-9720-42fa-a0ea-2086f3aa4f6e",
+    "FirstName": "Landen",
+    "LastName": "Buchmann",
+    "PlayerName": "Landen Buchmann",
+    "ClassYear": 12,
+    "Grade": "Sr.",
+    "CanonicalUrl": "https://www.maxpreps.com/ga/savannah/st-andrews-lions/athletes/landen-buchmann/?careerid=qkp6lgm3tij99",
+    "MaxPrepsAthleteId": "1306f3b3-9720-42fa-a0ea-2086f3aa4f6e",
+    "Positions": [
+      "RB",
+      "WR"
+    ],
+    "Height": "5'10\"",
+    "Weight": 150,
+    "Captain": true,
+    "HasStats": true
+  },
+  {
+    "PlayerID": "b2fe009a-cbbe-45d2-97f0-b7cb8e5679df",
+    "FirstName": "Amari",
+    "LastName": "Cook",
+    "PlayerName": "Amari Cook",
+    "ClassYear": 12,
+    "Grade": "Sr.",
+    "CanonicalUrl": "https://www.maxpreps.com/ga/savannah/st-andrews-lions/athletes/amari-cook/?careerid=5tc471sb4rqff",
+    "MaxPrepsAthleteId": "b2fe009a-cbbe-45d2-97f0-b7cb8e5679df",
+    "Positions": [
+      "CB",
+      "RB"
+    ],
+    "Height": "5'7\"",
+    "Weight": 140,
+    "Captain": true,
+    "HasStats": true
+  },
+  {
+    "PlayerID": "c2e11f9b-c860-44bc-aa29-637bb8cb6241",
+    "FirstName": "Josiah",
+    "LastName": "Bowers",
+    "PlayerName": "Josiah Bowers",
+    "ClassYear": 11,
+    "Grade": "Jr.",
+    "CanonicalUrl": "https://www.maxpreps.com/ga/savannah/st-andrews-lions/athletes/josiah-bowers/?careerid=v6kllji2fnug0",
+    "MaxPrepsAthleteId": "c2e11f9b-c860-44bc-aa29-637bb8cb6241",
+    "Positions": [
+      "WR",
+      "CB"
+    ],
+    "Height": "5'9\"",
+    "Weight": 145,
+    "Captain": false,
+    "HasStats": true
+  },
+  {
+    "PlayerID": "b9c90094-67a7-4c06-9c77-abb6087bb57c",
+    "FirstName": "Joe",
+    "LastName": "Frazar",
+    "PlayerName": "Joe Frazar",
+    "ClassYear": 12,
+    "Grade": "Sr.",
+    "CanonicalUrl": "https://www.maxpreps.com/ga/savannah/st-andrews-lions/athletes/joe-frazar/?careerid=e3qavo6ibbhbb",
+    "MaxPrepsAthleteId": "b9c90094-67a7-4c06-9c77-abb6087bb57c",
+    "Positions": [
+      "FB",
+      "MLB",
+      "OT"
+    ],
+    "Height": "5'10\"",
+    "Weight": 175,
+    "Captain": false,
+    "HasStats": true
+  },
+  {
+    "PlayerID": "324ec420-4f6e-425b-aeab-9f5d9097b59a",
+    "FirstName": "Addison",
+    "LastName": "Solomon",
+    "PlayerName": "Addison Solomon",
+    "ClassYear": 11,
+    "Grade": "Jr.",
+    "CanonicalUrl": "https://www.maxpreps.com/ga/savannah/st-andrews-lions/athletes/addison-solomon/?careerid=4qlretv29gmsc",
+    "MaxPrepsAthleteId": "324ec420-4f6e-425b-aeab-9f5d9097b59a",
+    "Positions": [
+      "C",
+      "DE"
+    ],
+    "Height": "5'11\"",
+    "Weight": 160,
+    "Captain": false,
+    "HasStats": true
+  },
+  {
+    "PlayerID": "46bf57c3-d46c-4448-b8e5-45c8957fb591",
+    "FirstName": "Luke",
+    "LastName": "Nelson",
+    "PlayerName": "Luke Nelson",
+    "ClassYear": 9,
+    "Grade": "Fr.",
+    "CanonicalUrl": "https://www.maxpreps.com/ga/savannah/st-andrews-lions/athletes/luke-nelson/?careerid=m3j6c86t5pkrb",
+    "MaxPrepsAthleteId": "46bf57c3-d46c-4448-b8e5-45c8957fb591",
+    "Positions": [
+      "WB",
+      "DB"
+    ],
+    "Height": "5'7\"",
+    "Weight": 155,
+    "Captain": false,
+    "HasStats": true
+  },
+  {
+    "PlayerID": "22fa5501-a67a-4b18-af3b-97e3ab5e750c",
+    "FirstName": "Mitchell",
+    "LastName": "Scott",
+    "PlayerName": "Mitchell Scott",
+    "ClassYear": 11,
+    "Grade": "Jr.",
+    "CanonicalUrl": "https://www.maxpreps.com/ga/savannah/st-andrews-lions/athletes/mitchell-scott/?careerid=k71aht5bq8laa",
+    "MaxPrepsAthleteId": "22fa5501-a67a-4b18-af3b-97e3ab5e750c",
+    "Positions": [
+      "WR",
+      "QB",
+      "SS"
+    ],
+    "Height": "",
+    "Weight": null,
+    "Captain": false,
+    "HasStats": true
+  },
+  {
+    "PlayerID": "f8910cc1-b68b-456a-ac9c-5d38e146e3db",
+    "FirstName": "Patton",
+    "LastName": "Martin",
+    "PlayerName": "Patton Martin",
+    "ClassYear": 9,
+    "Grade": "Fr.",
+    "CanonicalUrl": "https://www.maxpreps.com/ga/savannah/st-andrews-lions/athletes/patton-martin/?careerid=el64kvsl61d55",
+    "MaxPrepsAthleteId": "f8910cc1-b68b-456a-ac9c-5d38e146e3db",
+    "Positions": [
+      "ATH",
+      "WR",
+      "DB"
+    ],
+    "Height": "5'7\"",
+    "Weight": 140,
+    "Captain": false,
+    "HasStats": true
+  },
+  {
+    "PlayerID": "57c5369d-b623-4d8f-94cd-88fde2eed90c",
+    "FirstName": "Patrick",
+    "LastName": "Jackson",
+    "PlayerName": "Patrick Jackson",
+    "ClassYear": 10,
+    "Grade": "So.",
+    "CanonicalUrl": "https://www.maxpreps.com/ga/savannah/st-andrews-lions/athletes/patrick-jackson/?careerid=at2luc2qejl00",
+    "MaxPrepsAthleteId": "57c5369d-b623-4d8f-94cd-88fde2eed90c",
+    "Positions": [
+      "QB",
+      "FS"
+    ],
+    "Height": "5'11\"",
+    "Weight": 175,
+    "Captain": false,
+    "HasStats": true
+  },
+  {
+    "PlayerID": "ae0b921a-9b46-49a9-8430-01783e942434",
+    "FirstName": "Sam",
+    "LastName": "Davidson",
+    "PlayerName": "Sam Davidson",
+    "ClassYear": 9,
+    "Grade": "Fr.",
+    "CanonicalUrl": "https://www.maxpreps.com/ga/savannah/st-andrews-lions/athletes/sam-davidson/?careerid=b8t07ea75h200",
+    "MaxPrepsAthleteId": "ae0b921a-9b46-49a9-8430-01783e942434",
+    "Positions": [
+      "WR",
+      "DB"
+    ],
+    "Height": "5'9\"",
+    "Weight": 150,
+    "Captain": false,
+    "HasStats": true
+  },
+  {
+    "PlayerID": "9933151d-f6b3-48ac-bb3e-81bf78c59745",
+    "FirstName": "Henry",
+    "LastName": "Walcoff",
+    "PlayerName": "Henry Walcoff",
+    "ClassYear": 9,
+    "Grade": "Fr.",
+    "CanonicalUrl": "https://www.maxpreps.com/ga/savannah/st-andrews-lions/athletes/henry-walcoff/?careerid=aoj27h75fs8ee",
+    "MaxPrepsAthleteId": "9933151d-f6b3-48ac-bb3e-81bf78c59745",
+    "Positions": [
+      "WR",
+      "DB"
+    ],
+    "Height": "5'5\"",
+    "Weight": 135,
+    "Captain": false,
+    "HasStats": true
+  },
+  {
+    "PlayerID": "35e3ec6a-cd80-4522-95ac-8628629e1df9",
+    "FirstName": "Luke",
+    "LastName": "Bowen",
+    "PlayerName": "Luke Bowen",
+    "ClassYear": 9,
+    "Grade": "Fr.",
+    "CanonicalUrl": "https://www.maxpreps.com/ga/savannah/st-andrews-lions/athletes/luke-bowen/?careerid=tg10beaqamrue",
+    "MaxPrepsAthleteId": "35e3ec6a-cd80-4522-95ac-8628629e1df9",
+    "Positions": [
+      "WR",
+      "DB",
+      "K"
+    ],
+    "Height": "5'9\"",
+    "Weight": 155,
+    "Captain": false,
+    "HasStats": true
+  },
+  {
+    "PlayerID": "d3fad56f-1001-45ba-bd66-b68750650033",
+    "FirstName": "Darius",
+    "LastName": "Chapman",
+    "PlayerName": "Darius Chapman",
+    "ClassYear": 10,
+    "Grade": "So.",
+    "CanonicalUrl": "https://www.maxpreps.com/ga/savannah/st-andrews-lions/athletes/darius-chapman/?careerid=i8lau04rd74k4",
+    "MaxPrepsAthleteId": "d3fad56f-1001-45ba-bd66-b68750650033",
+    "Positions": [
+      "SS",
+      "P",
+      "RB"
+    ],
+    "Height": "5'5\"",
+    "Weight": 155,
+    "Captain": false,
+    "HasStats": true
+  },
+  {
+    "PlayerID": "7fe5de08-b459-46f9-a857-da19b3c47455",
+    "FirstName": "Matt",
+    "LastName": "Enus",
+    "PlayerName": "Matt Enus",
+    "ClassYear": 10,
+    "Grade": "So.",
+    "CanonicalUrl": "https://www.maxpreps.com/ga/savannah/st-andrews-lions/athletes/matt-enus/?careerid=l5eclv4pbj7td",
+    "MaxPrepsAthleteId": "7fe5de08-b459-46f9-a857-da19b3c47455",
+    "Positions": [
+      "C",
+      "DT"
+    ],
+    "Height": "5'10\"",
+    "Weight": 200,
+    "Captain": false,
+    "HasStats": true
+  },
+  {
+    "PlayerID": "e28fde28-5d81-4545-92ab-e6de553cb4b6",
+    "FirstName": "Jacob",
+    "LastName": "Navare",
+    "PlayerName": "Jacob Navare",
+    "ClassYear": 12,
+    "Grade": "Sr.",
+    "CanonicalUrl": "https://www.maxpreps.com/ga/savannah/st-andrews-lions/athletes/jacob-navare/?careerid=443u9n4ldham6",
+    "MaxPrepsAthleteId": "e28fde28-5d81-4545-92ab-e6de553cb4b6",
+    "Positions": [
+      "C",
+      "DE",
+      "G"
+    ],
+    "Height": "5'10\"",
+    "Weight": 215,
+    "Captain": false,
+    "HasStats": true
+  },
+  {
+    "PlayerID": "fd54bbb5-2a24-442d-9b91-eb48a17f085a",
+    "FirstName": "Thomas",
+    "LastName": "Kirk",
+    "PlayerName": "Thomas Kirk",
+    "ClassYear": 11,
+    "Grade": "Jr.",
+    "CanonicalUrl": "https://www.maxpreps.com/ga/savannah/st-andrews-lions/athletes/thomas-kirk/?careerid=or66cv878v8i2",
+    "MaxPrepsAthleteId": "fd54bbb5-2a24-442d-9b91-eb48a17f085a",
+    "Positions": [
+      "G",
+      "DE"
+    ],
+    "Height": "6'0\"",
+    "Weight": 210,
+    "Captain": false,
+    "HasStats": true
+  },
+  {
+    "PlayerID": "f43a7180-5075-4ea4-8954-78c8599937e1",
+    "FirstName": "Daniel",
+    "LastName": "Weeks",
+    "PlayerName": "Daniel Weeks",
+    "ClassYear": 11,
+    "Grade": "Jr.",
+    "CanonicalUrl": "https://www.maxpreps.com/ga/savannah/st-andrews-lions/athletes/daniel-weeks/?careerid=2h2m4pl505hee",
+    "MaxPrepsAthleteId": "f43a7180-5075-4ea4-8954-78c8599937e1",
+    "Positions": [],
+    "Height": "",
+    "Weight": null,
+    "Captain": false,
+    "HasStats": false
+  },
+  {
+    "PlayerID": "6acef575-dc32-4594-b48f-8f3f1cf8b42f",
+    "FirstName": "Nicholas",
+    "LastName": "Wine",
+    "PlayerName": "Nicholas Wine",
+    "ClassYear": 9,
+    "Grade": "Fr.",
+    "CanonicalUrl": "https://www.maxpreps.com/ga/savannah/st-andrews-lions/athletes/nicholas-wine/?careerid=clrbfku79eudd",
+    "MaxPrepsAthleteId": "6acef575-dc32-4594-b48f-8f3f1cf8b42f",
+    "Positions": [
+      "G",
+      "DT"
+    ],
+    "Height": "5'9\"",
+    "Weight": 215,
+    "Captain": false,
+    "HasStats": true
+  },
+  {
+    "PlayerID": "ad86cde7-72c0-4562-a198-66d1b782f875",
+    "FirstName": "Owen",
+    "LastName": "Nein",
+    "PlayerName": "Owen Nein",
+    "ClassYear": 9,
+    "Grade": "Fr.",
+    "CanonicalUrl": "https://www.maxpreps.com/ga/savannah/st-andrews-lions/athletes/owen-nein/?careerid=3mjaitq6446i2",
+    "MaxPrepsAthleteId": "ad86cde7-72c0-4562-a198-66d1b782f875",
+    "Positions": [
+      "OT",
+      "DT",
+      "WR"
+    ],
+    "Height": "5'8\"",
+    "Weight": 155,
+    "Captain": false,
+    "HasStats": true
+  },
+  {
+    "PlayerID": "6d02f3db-a3fe-487a-869c-307b6e5d8569",
+    "FirstName": "Jack",
+    "LastName": "Kelley",
+    "PlayerName": "Jack Kelley",
+    "ClassYear": 11,
+    "Grade": "Jr.",
+    "CanonicalUrl": "https://www.maxpreps.com/ga/savannah/st-andrews-lions/athletes/jack-kelley/?careerid=qui6be1krvlrb",
+    "MaxPrepsAthleteId": "6d02f3db-a3fe-487a-869c-307b6e5d8569",
+    "Positions": [
+      "DE",
+      "G"
+    ],
+    "Height": "6'1\"",
+    "Weight": 220,
+    "Captain": true,
+    "HasStats": true
+  }
+]

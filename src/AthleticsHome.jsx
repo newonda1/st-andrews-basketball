@@ -43,7 +43,6 @@ const sports = [
     name: "Football",
     to: "/athletics/football",
     icon: "/images/common/football_icon.png",
-    bannerMessage: "This page is under construction and will be up soon.",
     regionYears: [],
     stateYears: [],
   },
