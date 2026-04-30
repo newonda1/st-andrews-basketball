@@ -1298,5 +1298,18 @@
     "ClassYearLabel": "SO",
     "GradYear": 2028,
     "Source": "2026 GIAA State Individual Tennis UTR event"
+  },
+  {
+    "OpponentAthleteID": "tennis-2012-girls-beaufort-academy-unknown-singles",
+    "DisplayName": "Beaufort Academy singles player",
+    "FirstName": null,
+    "FirstInitial": null,
+    "LastName": null,
+    "Gender": "Girls",
+    "SchoolID": "sc-beaufort-academy-beaufort",
+    "SourceSchoolLabel": "Beaufort Academy",
+    "ClassYearLabel": null,
+    "GradYear": null,
+    "Source": "SavannahNow Sports Briefs, Oct. 4, 2012"
   }
 ]

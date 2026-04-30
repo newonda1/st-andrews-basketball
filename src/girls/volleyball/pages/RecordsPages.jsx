@@ -21,13 +21,13 @@ const h1Class = "text-2xl font-bold text-center";
 const sublineClass = "-mt-1.5 text-center text-sm italic text-gray-600";
 const recordTableStyles = {
   outerTable:
-    "min-w-full table-fixed sm:table-auto border text-center text-[clamp(0.64rem,0.95vw,1rem)]",
+    "min-w-full table-fixed sm:table-auto border text-center text-[clamp(0.8rem,1.05vw,1.05rem)]",
   innerTable:
-    "min-w-full table-fixed sm:table-auto border text-center text-[clamp(0.62rem,0.9vw,0.95rem)]",
+    "min-w-full table-fixed sm:table-auto border text-center text-[clamp(0.76rem,1vw,1rem)]",
   headerCell:
     "border px-[clamp(0.2rem,0.6vw,0.9rem)] py-[clamp(0.3rem,0.5vw,0.65rem)] leading-tight whitespace-normal break-words",
   sectionCell:
-    "border px-[clamp(0.55rem,0.9vw,0.95rem)] py-[clamp(0.5rem,0.85vw,0.9rem)] text-left font-bold text-blue-900 text-[clamp(0.84rem,1vw,1.05rem)]",
+    "border px-[clamp(0.55rem,0.9vw,0.95rem)] py-[clamp(0.5rem,0.85vw,0.9rem)] text-left font-bold text-blue-900 text-[clamp(0.95rem,1.1vw,1.1rem)]",
   bodyCell:
     "border px-[clamp(0.2rem,0.75vw,0.95rem)] py-[clamp(0.45rem,0.9vw,0.95rem)] align-middle whitespace-normal break-words leading-tight",
   detailCell:
@@ -83,6 +83,28 @@ const DEFAULT_SORT_BY_SECTION = {
   Digging: "Digs",
   "Ball Handling": "Assists",
   "Serve Receiving": "Receptions",
+};
+
+const PERCENTAGE_RECORD_REQUIREMENTS = {
+  KillPct: { denominatorKey: "AttackAttempts", label: "attack attempts" },
+  HittingPct: { denominatorKey: "AttackAttempts", label: "attack attempts" },
+  AcePct: { denominatorKey: "ServeAttempts", label: "serve attempts" },
+  ServePct: { denominatorKey: "ServeAttempts", label: "serve attempts" },
+};
+
+const INDIVIDUAL_PERCENTAGE_MINIMUMS = {
+  singleGame: {
+    AttackAttempts: 5,
+    ServeAttempts: 5,
+  },
+  season: {
+    AttackAttempts: 50,
+    ServeAttempts: 50,
+  },
+  career: {
+    AttackAttempts: 100,
+    ServeAttempts: 100,
+  },
 };
 
 function normalizeText(value) {
@@ -187,7 +209,20 @@ function statLabel(key, fallback) {
   return STAT_LABELS[key] || fallback || key;
 }
 
-function statRecordSections({ includePerMatch = true } = {}) {
+function getRecordMinimum(columnKey, recordScope) {
+  const requirement = PERCENTAGE_RECORD_REQUIREMENTS[columnKey];
+  if (!requirement || !recordScope) return null;
+
+  const minimum = INDIVIDUAL_PERCENTAGE_MINIMUMS[recordScope]?.[requirement.denominatorKey];
+  if (!minimum) return null;
+
+  return {
+    ...requirement,
+    minimum,
+  };
+}
+
+function statRecordSections({ includePerMatch = true, recordScope = null } = {}) {
   return VOLLEYBALL_STAT_SECTIONS.map((section) => ({
     title: section.title,
     records: section.columns
@@ -197,13 +232,21 @@ function statRecordSections({ includePerMatch = true } = {}) {
           includePerMatch ||
           !["BlocksPerMatch", "DigsPerMatch", "ReceptionsPerMatch"].includes(column.key)
       )
-      .map((column) => ({
-        ...column,
-        id: `${section.title}:${column.key}`,
-        label: statLabel(column.key, column.label),
-        abbr: column.label,
-        sectionTitle: section.title,
-      })),
+      .map((column) => {
+        const minimum = getRecordMinimum(column.key, recordScope);
+        const baseLabel = statLabel(column.key, column.label);
+
+        return {
+          ...column,
+          id: `${section.title}:${column.key}`,
+          label: minimum
+            ? `${baseLabel} (min. ${minimum.minimum} ${minimum.label})`
+            : baseLabel,
+          abbr: column.label,
+          sectionTitle: section.title,
+          minimum,
+        };
+      }),
   }));
 }
 
@@ -214,6 +257,11 @@ function formatRecordValue(value, column) {
 function hasRecordValue(value) {
   const number = safeNumber(value);
   return number !== null && number > 0;
+}
+
+function isEligibleForRecord(row, record) {
+  if (!record.minimum) return true;
+  return numberOrZero(row[record.minimum.denominatorKey]) >= record.minimum.minimum;
 }
 
 function sortRecordEntries(a, b) {
@@ -230,6 +278,7 @@ function buildRecordLists(sourceRows, sections, getValue, makeEntry, limit = 20)
         .map((row) => {
           const value = safeNumber(getValue(row, record));
           if (!hasRecordValue(value)) return null;
+          if (!isEligibleForRecord(row, record)) return null;
           return {
             ...makeEntry(row, record),
             record,
@@ -873,7 +922,10 @@ export function TeamSeasonRecords({ data, status = "" }) {
 export function SingleGameRecords({ data, status = "" }) {
   const playerMap = useMemo(() => buildPlayerMap(data.players), [data.players]);
   const games = useMemo(() => gameById(data.games), [data.games]);
-  const sections = useMemo(() => statRecordSections({ includePerMatch: false }), []);
+  const sections = useMemo(
+    () => statRecordSections({ includePerMatch: false, recordScope: "singleGame" }),
+    []
+  );
   const sourceRows = useMemo(
     () =>
       data.playerGameStats.map((row) => {
@@ -931,7 +983,7 @@ export function SingleGameRecords({ data, status = "" }) {
 
 export function SeasonRecords({ data, status = "" }) {
   const rows = useMemo(() => buildPlayerSeasonRows(data), [data]);
-  const sections = useMemo(() => statRecordSections(), []);
+  const sections = useMemo(() => statRecordSections({ recordScope: "season" }), []);
   const rowsByRecord = useMemo(
     () =>
       buildRecordLists(
@@ -972,7 +1024,7 @@ export function SeasonRecords({ data, status = "" }) {
 
 export function CareerRecords({ data, status = "" }) {
   const rows = useMemo(() => buildCareerRows(data), [data]);
-  const sections = useMemo(() => statRecordSections(), []);
+  const sections = useMemo(() => statRecordSections({ recordScope: "career" }), []);
   const rowsByRecord = useMemo(
     () =>
       buildRecordLists(
@@ -1127,7 +1179,7 @@ export function RecordsVsOpponents({ data, status = "" }) {
       </div>
 
       <div className="overflow-x-auto">
-        <table className="w-full text-xs sm:text-sm md:text-base text-center border">
+        <table className="w-full text-sm md:text-base text-center border">
           <thead>
             <tr className="bg-gray-100">
               {columns.map((column) => (
@@ -1186,7 +1238,7 @@ export function RecordsVsOpponents({ data, status = "" }) {
                       <tr>
                         <td colSpan={9} className="bg-gray-50 px-3 py-3">
                           <div className="overflow-x-auto">
-                            <table className="w-full text-xs sm:text-sm text-center border bg-white rounded">
+                            <table className="w-full text-sm md:text-base text-center border bg-white rounded">
                               <thead className="bg-gray-100">
                                 <tr>
                                   <th className="border px-2 py-1">Date</th>

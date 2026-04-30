@@ -1,5 +1,33 @@
 [
   {
+    "SeasonID": 2012,
+    "SeasonLabel": "2012",
+    "Classification": "SCISA",
+    "StatusBadge": "archived",
+    "StatusNote": "SavannahNow archive adds an Oct. 3 match result against Beaufort Academy, including Paige Edwards winning a singles match for St. Andrew's."
+  },
+  {
+    "SeasonID": 2017,
+    "SeasonLabel": "2016-17",
+    "Classification": null,
+    "StatusBadge": "archived",
+    "StatusNote": "SavannahNow archive identifies Jack Wylly as a first-team All-Greater Savannah boys tennis selection after a 7-1 season."
+  },
+  {
+    "SeasonID": 2018,
+    "SeasonLabel": "2017-18",
+    "Classification": null,
+    "StatusBadge": "archived",
+    "StatusNote": "SavannahNow archive identifies Jack Wylly as a first-team All-Greater Savannah boys tennis selection after a 10-2 season."
+  },
+  {
+    "SeasonID": 2019,
+    "SeasonLabel": "2018-19",
+    "Classification": "GISA",
+    "StatusBadge": "archived",
+    "StatusNote": "SavannahNow archive confirms Jack Wylly as a GISA individual state champion and the boys team as GISA state runner-up."
+  },
+  {
     "SeasonID": 2026,
     "SeasonLabel": "2025-26",
     "Classification": "GIAA",

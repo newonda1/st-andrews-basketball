@@ -53,6 +53,11 @@ export default function SportHomePage({
   linksTitle = "Archive Entry Points",
   links = [],
 }) {
+  const hasStory = storyParagraphs.length > 0;
+  const hasHighlights = highlights.length > 0;
+  const detailColumnClass =
+    hasStory && hasHighlights ? "grid gap-5 lg:grid-cols-2" : "grid gap-5";
+
   return (
     <div className="space-y-14 pb-8">
       <section className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
@@ -85,32 +90,38 @@ export default function SportHomePage({
 
       <hr className="stats-page-rule" />
 
-      <section className="grid gap-5 lg:grid-cols-2">
-        <article className="stats-module">
-          <h2 className="stats-module-title">{storyTitle}</h2>
-          <div className="space-y-5 text-[0.98rem] leading-[1.65] text-[var(--stats-body-color)]">
-            {storyParagraphs.map((paragraph) => (
-              <p key={paragraph} className="m-0">
-                {paragraph}
-              </p>
-            ))}
-          </div>
-        </article>
-
-        <article className="stats-module">
-          <h2 className="stats-module-title">{highlightsTitle}</h2>
-          <div className="grid gap-3 sm:grid-cols-2">
-            {highlights.map((item) => (
-              <div
-                key={item}
-                className="border border-[var(--stats-line)] bg-[var(--stats-panel-muted)] px-4 py-4 text-[0.95rem] leading-[1.45] text-[#242424]"
-              >
-                {item}
+      {hasStory || hasHighlights ? (
+        <section className={detailColumnClass}>
+          {hasStory ? (
+            <article className="stats-module">
+              <h2 className="stats-module-title">{storyTitle}</h2>
+              <div className="space-y-5 text-[0.98rem] leading-[1.65] text-[var(--stats-body-color)]">
+                {storyParagraphs.map((paragraph) => (
+                  <p key={paragraph} className="m-0">
+                    {paragraph}
+                  </p>
+                ))}
               </div>
-            ))}
-          </div>
-        </article>
-      </section>
+            </article>
+          ) : null}
+
+          {hasHighlights ? (
+            <article className="stats-module">
+              <h2 className="stats-module-title">{highlightsTitle}</h2>
+              <div className="grid gap-3 sm:grid-cols-2">
+                {highlights.map((item) => (
+                  <div
+                    key={item}
+                    className="border border-[var(--stats-line)] bg-[var(--stats-panel-muted)] px-4 py-4 text-[0.95rem] leading-[1.45] text-[#242424]"
+                  >
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </article>
+          ) : null}
+        </section>
+      ) : null}
 
       {links.length > 0 ? (
         <section className="stats-module">

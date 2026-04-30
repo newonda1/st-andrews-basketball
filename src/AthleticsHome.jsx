@@ -131,7 +131,7 @@ const sports = [
         title: "Individual Champions",
         sections: [
           { title: "Region Championships", years: [2025, 2026] },
-          { title: "State Championships", years: [] },
+          { title: "State Championships", years: [2019] },
         ],
       },
     ],

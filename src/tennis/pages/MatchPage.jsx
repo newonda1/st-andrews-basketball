@@ -175,7 +175,7 @@ function DualLineCard({ line, playerMap, opponentMap, schoolMap }) {
   return (
     <article className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm">
       <div className="border-b border-slate-100 px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-slate-500">
-        {line.EventType} {line.LineNumber}
+        {[line.EventType, line.LineNumber].filter(Boolean).join(" ")}
       </div>
       <LineSide
         participant={top}
@@ -189,6 +189,73 @@ function DualLineCard({ line, playerMap, opponentMap, schoolMap }) {
         isWinner={line.WinnerSide === "bottom"}
       />
     </article>
+  );
+}
+
+function formatHonorSubject(honor, playerMap) {
+  if (honor?.PlayerID) {
+    const player = playerMap.get(String(honor.PlayerID));
+    if (player?.FirstName || player?.LastName) {
+      return `${player?.FirstName || ""} ${player?.LastName || ""}`.trim();
+    }
+  }
+
+  return honor?.Team || honor?.Subject || null;
+}
+
+function MatchNotes({ match, playerMap }) {
+  const honors = Array.isArray(match?.Honors) ? match.Honors : [];
+  const hasNotes = match?.Summary || honors.length || match?.Source;
+
+  if (!hasNotes) return null;
+
+  return (
+    <section className="rounded-lg border border-slate-200 bg-white px-5 py-4 shadow-sm">
+      {match.Summary ? (
+        <p className="text-sm leading-7 text-slate-700">{match.Summary}</p>
+      ) : null}
+
+      {honors.length ? (
+        <div className={match.Summary ? "mt-4" : ""}>
+          <h2 className="text-xs font-bold uppercase tracking-[0.16em] text-slate-500">
+            Archive Notes
+          </h2>
+          <div className="mt-2 grid gap-2">
+            {honors.map((honor, index) => {
+              const subject = formatHonorSubject(honor, playerMap);
+              return (
+                <div
+                  key={`${honor.Title || "Honor"}-${subject || index}`}
+                  className="rounded-md border border-slate-100 bg-slate-50 px-3 py-2 text-sm text-slate-700"
+                >
+                  <span className="font-bold text-slate-900">{honor.Title}</span>
+                  {honor.EventType ? ` (${honor.EventType})` : ""}
+                  {subject ? `: ${subject}` : ""}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      ) : null}
+
+      {match.Source ? (
+        <p className="mt-4 text-xs font-semibold leading-6 text-slate-500">
+          Source:{" "}
+          {match.SourceURL ? (
+            <a
+              href={match.SourceURL}
+              target="_blank"
+              rel="noreferrer"
+              className="text-blue-700 hover:text-blue-900"
+            >
+              {match.Source}
+            </a>
+          ) : (
+            match.Source
+          )}
+        </p>
+      ) : null}
+    </section>
   );
 }
 
@@ -356,6 +423,7 @@ export default function MatchPage({
     ? match.BracketMatches
     : [];
   const lineMatches = Array.isArray(match.LineMatches) ? match.LineMatches : [];
+  const playerMap = buildMap(players, "PlayerID");
 
   return (
     <div className="mx-auto max-w-6xl space-y-6 px-4 pb-24 pt-2 sm:px-6">
@@ -375,6 +443,8 @@ export default function MatchPage({
         </p>
       </header>
 
+      <MatchNotes match={match} playerMap={playerMap} />
+
       {lineMatches.length ? (
         <DualMatchResults
           match={match}
@@ -386,35 +456,35 @@ export default function MatchPage({
 
       {brackets.length ? (
         <section className="space-y-4">
-        <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <h2 className="text-2xl font-semibold text-slate-900">
-              Tournament Brackets
-            </h2>
+          <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <h2 className="text-2xl font-semibold text-slate-900">
+                Tournament Brackets
+              </h2>
+            </div>
+            <span className="text-sm font-semibold text-slate-500">
+              {brackets.length} brackets
+            </span>
           </div>
-          <span className="text-sm font-semibold text-slate-500">
-            {brackets.length} brackets
-          </span>
-        </div>
 
-        {brackets.length ? (
-          <div className="space-y-4">
-            {brackets.map((bracket) => (
-              <BracketSection
-                key={bracket.BracketID}
-                bracket={bracket}
-                bracketMatches={bracketMatches}
-                players={players}
-                opponentAthletes={opponentAthletes}
-                schools={schools}
-              />
-            ))}
-          </div>
-        ) : (
-          <div className="rounded-lg border border-dashed border-slate-300 bg-slate-50 px-6 py-10 text-center text-sm text-slate-500">
-            Bracket data will appear here when it is added.
-          </div>
-        )}
+          {brackets.length ? (
+            <div className="space-y-4">
+              {brackets.map((bracket) => (
+                <BracketSection
+                  key={bracket.BracketID}
+                  bracket={bracket}
+                  bracketMatches={bracketMatches}
+                  players={players}
+                  opponentAthletes={opponentAthletes}
+                  schools={schools}
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="rounded-lg border border-dashed border-slate-300 bg-slate-50 px-6 py-10 text-center text-sm text-slate-500">
+              Bracket data will appear here when it is added.
+            </div>
+          )}
         </section>
       ) : null}
     </div>

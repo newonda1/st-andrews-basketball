@@ -1,5 +1,123 @@
 [
   {
+    "MatchID": "2012-10-03-beaufort-academy-girls",
+    "Season": 2012,
+    "Date": "2012-10-03",
+    "Name": "St. Andrew's vs. Beaufort Academy",
+    "MatchType": "Dual Match",
+    "Gender": "Girls",
+    "Classification": "SCISA",
+    "Status": "Completed",
+    "OpponentSchoolID": "sc-beaufort-academy-beaufort",
+    "TeamScore": {
+      "StAndrews": 2,
+      "Opponent": 8,
+      "Result": "L"
+    },
+    "Summary": "Beaufort Academy defeated St. Andrew's 8-2 in tennis. Paige Edwards won a singles match for St. Andrew's.",
+    "LineMatches": [
+      {
+        "TennisMatchID": "2012-10-03-beaufort-academy-girls-singles-edwards",
+        "EventType": "Singles",
+        "LineNumber": null,
+        "Status": "Completed",
+        "Date": "2012-10-03",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2012-girls-beaufort-academy-unknown-singles",
+            "DisplayName": "Beaufort Academy singles player",
+            "SchoolID": "sc-beaufort-academy-beaufort",
+            "SourceSchoolLabel": "Beaufort Academy",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 201203,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "WinnerPlayerID": 201203,
+        "Notes": "The article identifies Paige Edwards as a singles winner but does not publish the line number, opponent name, or set score."
+      }
+    ],
+    "Source": "SavannahNow Sports Briefs, Oct. 4, 2012",
+    "SourceURL": "https://www.savannahnow.com/story/sports/2012/10/04/sports-briefs/13652487007/"
+  },
+  {
+    "MatchID": "2017-all-greater-savannah-boys-tennis",
+    "Season": 2017,
+    "Date": "2017-05-09",
+    "Name": "2017 All-Greater Savannah Boys Tennis",
+    "MatchType": "Season Summary",
+    "Gender": "Boys",
+    "Classification": null,
+    "Status": "Completed",
+    "Summary": "Jack Wylly was named first-team All-Greater Savannah boys tennis after finishing the season with a 7-1 record.",
+    "Honors": [
+      {
+        "Title": "First-Team All-Greater Savannah",
+        "EventType": "Boys Tennis",
+        "PlayerID": 201909
+      }
+    ],
+    "Source": "SavannahNow 2017 All-Greater Savannah Boys Tennis Team, May 9, 2017",
+    "SourceURL": "https://www.savannahnow.com/story/sports/high-school/2017/05/09/2017-all-greater-savannah-boys-tennis-team/13883659007/"
+  },
+  {
+    "MatchID": "2018-all-greater-savannah-boys-tennis",
+    "Season": 2018,
+    "Date": "2018-05-17",
+    "Name": "2018 All-Greater Savannah Boys Tennis",
+    "MatchType": "Season Summary",
+    "Gender": "Boys",
+    "Classification": null,
+    "Status": "Completed",
+    "Summary": "Jack Wylly was named first-team All-Greater Savannah boys tennis after finishing the season with a 10-2 record for St. Andrew's.",
+    "Honors": [
+      {
+        "Title": "First-Team All-Greater Savannah",
+        "EventType": "Boys Tennis",
+        "PlayerID": 201909
+      }
+    ],
+    "Source": "SavannahNow 2018 All-Greater Savannah Boys Tennis Team, May 17, 2018",
+    "SourceURL": "https://www.savannahnow.com/story/sports/high-school/2018/05/17/2018-all-greater-savannah-boys-tennis-team/12198255007/"
+  },
+  {
+    "MatchID": "2019-gisa-state-boys",
+    "Season": 2019,
+    "Date": "2019-05-08",
+    "Name": "2019 GISA State Tennis Tournament - Boys",
+    "MatchType": "Tournament",
+    "Gender": "Boys",
+    "Classification": "GISA",
+    "Status": "Completed",
+    "Summary": "Jack Wylly won the GISA individual state title, and the St. Andrew's boys team finished runner-up in the GISA team state tournament.",
+    "Honors": [
+      {
+        "Title": "GISA Individual State Champion",
+        "EventType": "Boys Singles",
+        "PlayerID": 201909
+      },
+      {
+        "Title": "Savannah Morning News Boys Tennis Player of the Year",
+        "EventType": "Boys Tennis",
+        "PlayerID": 201909
+      },
+      {
+        "Title": "GISA Team State Runner-Up",
+        "EventType": "Boys Team",
+        "Team": "St. Andrew's"
+      }
+    ],
+    "Source": "SavannahNow Boys Tennis Player of the Year article, May 8, 2019",
+    "SourceURL": "https://www.savannahnow.com/story/sports/high-school/2019/05/08/boys-tennis-player-of-year-jack-wylly-st-andrews/5215201007/"
+  },
+  {
     "MatchID": "2026-giaa-2-aaa-region-tournament",
     "Season": 2026,
     "Date": "2026-04-14",
