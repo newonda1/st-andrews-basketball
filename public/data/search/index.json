@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-30T12:34:45.459Z",
+  "generatedAt": "2026-04-30T12:48:08.951Z",
   "itemCount": 973,
   "items": [
     {
@@ -649,7 +649,7 @@
       "type": "team",
       "title": "Track & Field",
       "subtitle": "St. Andrew's team home",
-      "to": "/athletics/track/records/school",
+      "to": "/athletics/track",
       "featured": true,
       "keywords": [
         "track",
@@ -657,7 +657,8 @@
         "team",
         "program",
         "home",
-        "menu"
+        "menu",
+        "archive"
       ]
     },
     {
@@ -704,14 +705,15 @@
       "type": "team",
       "title": "Swimming",
       "subtitle": "St. Andrew's team home",
-      "to": "/athletics/swimming/records/school",
+      "to": "/athletics/swimming",
       "featured": true,
       "keywords": [
         "swimming",
         "swim",
         "team",
         "program",
-        "home"
+        "home",
+        "archive"
       ]
     },
     {

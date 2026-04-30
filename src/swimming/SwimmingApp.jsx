@@ -1,7 +1,8 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import AthleticsProgramShell from "../components/AthleticsProgramShell";
 import ChampionshipList from "./pages/ChampionshipList";
+import Home from "./pages/Home";
 import SchoolRecords from "./pages/SchoolRecords";
 import SeasonPage from "./pages/SeasonPage";
 import YearlyResults from "./pages/YearlyResults";
@@ -113,10 +114,10 @@ export default function SwimmingApp() {
       menuTitle="Swimming"
       menuSections={menuSections}
       athleticsHomePath="/athletics"
-      headerHomePath="/athletics/swimming/records/school"
+      headerHomePath="/athletics/swimming"
     >
       <Routes>
-        <Route index element={<Navigate to="records/school" replace />} />
+        <Route index element={<Home />} />
         <Route
           path="champions"
           element={
@@ -155,7 +156,7 @@ export default function SwimmingApp() {
             />
           }
         />
-        <Route path="*" element={<Navigate to="records/school" replace />} />
+        <Route path="*" element={<Home />} />
       </Routes>
     </AthleticsProgramShell>
   );

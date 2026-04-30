@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 import AthleticsProgramShell from "../../components/AthleticsProgramShell";
 import GameDetail from "./pages/GameDetail";
+import Home from "./pages/Home";
 import PlayerPage from "./pages/PlayerPage";
 import {
   CareerRecords,
@@ -118,7 +119,7 @@ export default function VolleyballApp() {
       headerHomePath="/athletics/volleyball"
     >
       <Routes>
-        <Route index element={<Navigate to="seasons/2025" replace />} />
+        <Route index element={<Home />} />
         <Route
           path="yearly-results"
           element={<YearlyResults data={data} status={status} />}
@@ -167,7 +168,7 @@ export default function VolleyballApp() {
           path="players/:playerId"
           element={<PlayerPage data={data} status={status} />}
         />
-        <Route path="*" element={<Navigate to="seasons/2025" replace />} />
+        <Route path="*" element={<Home />} />
       </Routes>
     </AthleticsProgramShell>
   );

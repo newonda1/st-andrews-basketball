@@ -1,7 +1,8 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import AthleticsProgramShell from "../components/AthleticsProgramShell";
 import ChampionshipList from "./pages/ChampionshipList";
+import Home from "./pages/Home";
 import SchoolRecords from "./pages/SchoolRecords";
 import SeasonPage from "./pages/SeasonPage";
 import YearlyResults from "./pages/YearlyResults";
@@ -137,11 +138,10 @@ export default function TrackApp() {
       menuTitle="Track & Field"
       menuSections={menuSections}
       athleticsHomePath="/athletics"
-      headerHomePath="/athletics/track/records/school"
-      homeLabel="Menu"
+      headerHomePath="/athletics/track"
     >
       <Routes>
-        <Route index element={<Navigate to="records/school" replace />} />
+        <Route index element={<Home />} />
         <Route
           path="champions"
           element={
@@ -190,7 +190,7 @@ export default function TrackApp() {
             />
           }
         />
-        <Route path="*" element={<Navigate to="records/school" replace />} />
+        <Route path="*" element={<Home />} />
       </Routes>
     </AthleticsProgramShell>
   );

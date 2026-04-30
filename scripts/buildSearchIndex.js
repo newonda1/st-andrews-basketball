@@ -400,9 +400,9 @@ const PAGE_ENTRIES = [
     type: "team",
     title: "Track & Field",
     subtitle: "St. Andrew's team home",
-    to: "/athletics/track/records/school",
+    to: "/athletics/track",
     featured: true,
-    keywords: ["track", "field", "team", "program", "home", "menu"],
+    keywords: ["track", "field", "team", "program", "home", "menu", "archive"],
   },
   {
     id: "track-champions",
@@ -433,9 +433,9 @@ const PAGE_ENTRIES = [
     type: "team",
     title: "Swimming",
     subtitle: "St. Andrew's team home",
-    to: "/athletics/swimming/records/school",
+    to: "/athletics/swimming",
     featured: true,
-    keywords: ["swimming", "swim", "team", "program", "home"],
+    keywords: ["swimming", "swim", "team", "program", "home", "archive"],
   },
   {
     id: "swimming-champions",

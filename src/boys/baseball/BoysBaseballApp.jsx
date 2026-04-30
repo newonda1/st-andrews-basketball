@@ -13,6 +13,7 @@ import Season2020 from "./seasons/Season2020";
 import Season2019 from "./seasons/Season2019";
 import Season2018 from "./seasons/Season2018";
 
+import Home from "./pages/Home";
 import YearlyResults from "./pages/YearlyResults";
 import GameDetail from "./pages/GameDetail";
 import PlayerPage from "./pages/PlayerPage";
@@ -91,15 +92,6 @@ const menuSections = [
   },
 ];
 
-function PlaceholderPage({ title, text }) {
-  return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold mb-3">{title}</h2>
-      <p>{text}</p>
-    </div>
-  );
-}
-
 export default function BoysBaseballApp() {
   return (
     <AthleticsProgramShell
@@ -110,7 +102,7 @@ export default function BoysBaseballApp() {
       headerHomePath="/athletics/boys/baseball"
     >
       <Routes>
-        <Route index element={<YearlyResults />} />
+        <Route index element={<Home />} />
 
         <Route path="team/full" element={<FullTeamStats />} />
         <Route path="team/season-records" element={<TeamSeasonRecords />} />
@@ -129,7 +121,7 @@ export default function BoysBaseballApp() {
         <Route path="games/:gameId" element={<GameDetail />} />
         <Route path="players/:playerId" element={<PlayerPage />} />
 
-        <Route path="*" element={<YearlyResults />} />
+        <Route path="*" element={<Home />} />
       </Routes>
     </AthleticsProgramShell>
   );

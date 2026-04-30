@@ -78,7 +78,7 @@ const sports = [
   },
   {
     name: "Track & Field",
-    to: "/athletics/track/records/school",
+    to: "/athletics/track",
     icon: "/images/track/track_icon.png",
     championshipGroups: [
       {
@@ -92,7 +92,7 @@ const sports = [
   },
   {
     name: "Swimming",
-    to: "/athletics/swimming/records/school",
+    to: "/athletics/swimming",
     icon: "/images/swimming/swimming_icon.png",
     championshipGroups: [
       {

@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import AthleticsProgramShell from "../components/AthleticsProgramShell";
+import Home from "./pages/Home";
 import SeasonPage from "./pages/SeasonPage";
 import YearlyResults from "./pages/YearlyResults";
 
@@ -76,7 +77,7 @@ export default function GolfApp() {
       headerHomePath="/athletics/golf"
     >
       <Routes>
-        <Route index element={<Navigate to="yearly-results" replace />} />
+        <Route index element={<Home />} />
         <Route
           path="yearly-results"
           element={
@@ -97,7 +98,7 @@ export default function GolfApp() {
             />
           }
         />
-        <Route path="*" element={<Navigate to="yearly-results" replace />} />
+        <Route path="*" element={<Home />} />
       </Routes>
     </AthleticsProgramShell>
   );

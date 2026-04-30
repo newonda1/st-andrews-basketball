@@ -11,6 +11,7 @@ import SingleGameRecords from "./pages/SingleGameRecords";
 import TeamSeasonRecords from "./pages/TeamSeasonRecords";
 import TeamSingleGameRecords from "./pages/TeamSingleGameRecords";
 import YearlyResults from "./pages/YearlyResults";
+import Home from "./pages/Home";
 import FootballSeasonPage from "./seasons/FootballSeasonPage";
 
 const menuSections = [
@@ -74,7 +75,7 @@ export default function FootballApp() {
     >
       <div className="pb-12 lg:pb-24">
         <Routes>
-          <Route index element={<YearlyResults />} />
+          <Route index element={<Home />} />
           <Route path="team/season-records" element={<TeamSeasonRecords />} />
           <Route path="records/team" element={<TeamSingleGameRecords />} />
           <Route path="records/career" element={<FullCareerStats />} />
@@ -84,7 +85,7 @@ export default function FootballApp() {
           <Route path="records/career-records" element={<CareerRecords />} />
           <Route path="yearly-results" element={<YearlyResults />} />
           <Route path="seasons/:seasonId" element={<FootballSeasonPage />} />
-          <Route path="*" element={<YearlyResults />} />
+          <Route path="*" element={<Home />} />
         </Routes>
       </div>
     </AthleticsProgramShell>
