@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import { recordTableStyles } from "../../basketball/pages/recordTableStyles";
 import {
@@ -10,6 +10,7 @@ import {
   loadFootballSeasonPageData,
   sortGamesChronologically,
 } from "../footballData";
+import { footballGamePath, footballPlayerPath } from "../pages/footballDetailUtils";
 
 const INDIVIDUAL_STATS_VIEW_CONFIG = [
   {
@@ -51,16 +52,14 @@ function StatsTable({ title, columns, rows }) {
     if (column.key === "jersey") return row.JerseyNumber || "—";
 
     if (column.key === "name") {
-      if (row.CanonicalUrl) {
+      if (row.PlayerID) {
         return (
-          <a
-            href={row.CanonicalUrl}
-            target="_blank"
-            rel="noreferrer"
+          <Link
+            to={footballPlayerPath(row.PlayerID)}
             className="text-blue-600 hover:underline"
           >
             {row.PlayerName || "—"}
-          </a>
+          </Link>
         );
       }
 
@@ -492,20 +491,21 @@ export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
                       index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
                     } hover:bg-gray-100`}
                   >
-                    <td className="px-3 py-2 whitespace-nowrap">{formatGameDate(game)}</td>
                     <td className="px-3 py-2 whitespace-nowrap">
-                      {game.OpponentUrl ? (
-                        <a
-                          href={game.OpponentUrl}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="text-blue-600 hover:underline"
-                        >
-                          {game.Opponent}
-                        </a>
-                      ) : (
-                        game.Opponent
-                      )}
+                      <Link
+                        to={footballGamePath(game.GameID)}
+                        className="text-blue-600 hover:underline"
+                      >
+                        {formatGameDate(game)}
+                      </Link>
+                    </td>
+                    <td className="px-3 py-2 whitespace-nowrap">
+                      <Link
+                        to={footballGamePath(game.GameID)}
+                        className="text-blue-600 hover:underline"
+                      >
+                        {game.Opponent || "—"}
+                      </Link>
                     </td>
                     <td className="px-3 py-2 text-center whitespace-nowrap">
                       {game.LocationType || ""}
@@ -522,7 +522,16 @@ export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
                       {game.Result || ""}
                     </td>
                     <td className="px-3 py-2 text-center whitespace-nowrap">
-                      {game.Result ? `${game.TeamScore} - ${game.OpponentScore}` : ""}
+                      {game.Result ? (
+                        <Link
+                          to={footballGamePath(game.GameID)}
+                          className="text-blue-600 hover:underline"
+                        >
+                          {game.TeamScore} - {game.OpponentScore}
+                        </Link>
+                      ) : (
+                        ""
+                      )}
                     </td>
                   </tr>
                 ))
@@ -562,15 +571,13 @@ export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
                       {player.JerseyNumber || "—"}
                     </td>
                     <td className={`${recordTableStyles.bodyCell} md:text-left`}>
-                      {player.CanonicalUrl ? (
-                        <a
-                          href={player.CanonicalUrl}
-                          target="_blank"
-                          rel="noreferrer"
+                      {player.PlayerID ? (
+                        <Link
+                          to={footballPlayerPath(player.PlayerID)}
                           className="text-blue-600 hover:underline"
                         >
-                          {player.PlayerName}
-                        </a>
+                          {player.PlayerName || "—"}
+                        </Link>
                       ) : (
                         player.PlayerName || "—"
                       )}

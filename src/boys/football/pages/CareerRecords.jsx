@@ -13,6 +13,7 @@ export default function CareerRecords() {
 
     return buildLeaderboardMap(data.playerCareers, INDIVIDUAL_CAREER_SECTIONS, (row) => ({
       sortKey: String(row?.PlayerName || ""),
+      playerId: row?.PlayerID || "",
       playerName: row?.PlayerName || "—",
       gamesTracked: trackedGames(row),
       seasonsTracked: row?.SeasonsTracked || 0,

@@ -1,9 +1,21 @@
 import React, { useMemo } from "react";
+import { Link } from "react-router-dom";
 
 import { INDIVIDUAL_SEASON_SECTIONS } from "../footballRecordConfigs";
 import { buildLeaderboardMap, trackedGames, usePreparedFootballRecordsData } from "../footballRecordsData";
 
 import FootballRecordsTablePage, { renderPlayerColumn } from "./FootballRecordsTablePage";
+
+function renderSeasonLink(row) {
+  const label = row?.season || "—";
+  if (row?._placeholder || !row?.seasonId) return label;
+
+  return (
+    <Link to={`/athletics/football/seasons/${row.seasonId}`} className="text-blue-700 hover:underline">
+      {label}
+    </Link>
+  );
+}
 
 export default function SeasonRecords() {
   const { data, error } = usePreparedFootballRecordsData();
@@ -13,7 +25,9 @@ export default function SeasonRecords() {
 
     return buildLeaderboardMap(data.playerSeasons, INDIVIDUAL_SEASON_SECTIONS, (row) => ({
       sortKey: `${String(row?.SeasonID || "")}-${String(row?.PlayerName || "")}`,
+      playerId: row?.PlayerID || "",
       playerName: row?.PlayerName || "—",
+      seasonId: row?.SeasonID || "",
       season: row?.SeasonLabel || "—",
       gamesTracked: trackedGames(row),
     }));
@@ -33,12 +47,12 @@ export default function SeasonRecords() {
       summaryColumns={[
         { header: "Player", render: renderPlayerColumn },
         { header: "Value", emphasize: true, render: (row) => row?.displayValue || "—" },
-        { header: "Season", render: (row) => row?.season || "—" },
+        { header: "Season", render: renderSeasonLink },
       ]}
       detailColumns={[
         { header: "Player", render: renderPlayerColumn },
         { header: "Value", emphasize: true, render: (row) => row?.displayValue || "—" },
-        { header: "Season", render: (row) => row?.season || "—" },
+        { header: "Season", render: renderSeasonLink },
         {
           header: "Tracked G",
           render: (row) =>

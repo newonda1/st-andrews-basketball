@@ -5,6 +5,8 @@ import { normalizeSearchText } from "../../../components/search/searchUtils";
 import { formatGameDate, formatSeasonLabel } from "../footballData";
 import { totalPoints, usePreparedFootballRecordsData } from "../footballRecordsData";
 
+import { footballGamePath, footballPlayerPath } from "./footballDetailUtils";
+
 function safeNum(value) {
   const number = Number(value);
   return Number.isFinite(number) ? number : 0;
@@ -225,6 +227,7 @@ export default function RecordsVsOpponents() {
       const existing = map.get(gameId);
       if (!existing || points > existing.points) {
         map.set(gameId, {
+          playerId: row?.PlayerID || "",
           playerName: row?.PlayerName || "Unknown",
           points,
         });
@@ -237,7 +240,18 @@ export default function RecordsVsOpponents() {
   const leadingScorerLabel = (game) => {
     const leader = leadingScorerByGameId.get(String(game?.GameID || ""));
     if (!leader) return "—";
-    return `${leader.playerName} - ${leader.points} points`;
+    return (
+      <>
+        {leader.playerId ? (
+          <Link to={footballPlayerPath(leader.playerId)} className="text-blue-700 hover:underline">
+            {leader.playerName}
+          </Link>
+        ) : (
+          leader.playerName
+        )}{" "}
+        - {leader.points} points
+      </>
+    );
   };
 
   const handleSort = (field) => {
@@ -394,10 +408,20 @@ export default function RecordsVsOpponents() {
                                   className={gameIndex % 2 ? "bg-gray-50" : "bg-white"}
                                 >
                                   <td className="border px-2 py-1 whitespace-nowrap">
-                                    {formatGameDate(game)}
+                                    <Link
+                                      to={footballGamePath(game.GameID)}
+                                      className="text-blue-700 hover:underline"
+                                    >
+                                      {formatGameDate(game)}
+                                    </Link>
                                   </td>
                                   <td className="border px-2 py-1 whitespace-nowrap">
-                                    {formatSeasonLabel(game)}
+                                    <Link
+                                      to={`/athletics/football/seasons/${game.SeasonID || game.Season}`}
+                                      className="text-blue-700 hover:underline"
+                                    >
+                                      {formatSeasonLabel(game)}
+                                    </Link>
                                   </td>
                                   <td className="border px-2 py-1 whitespace-nowrap">
                                     {locationLabel(game)}
@@ -409,7 +433,12 @@ export default function RecordsVsOpponents() {
                                     {resultLabel(game)}
                                   </td>
                                   <td className="border px-2 py-1 whitespace-nowrap">
-                                    {scoreLabel(game)}
+                                    <Link
+                                      to={footballGamePath(game.GameID)}
+                                      className="text-blue-700 hover:underline"
+                                    >
+                                      {scoreLabel(game)}
+                                    </Link>
                                   </td>
                                   <td className="border px-2 py-1 text-left">
                                     {leadingScorerLabel(game)}

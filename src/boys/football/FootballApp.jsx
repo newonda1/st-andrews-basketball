@@ -5,6 +5,7 @@ import AthleticsProgramShell from "../../components/AthleticsProgramShell";
 
 import FullCareerStats from "./pages/FullCareerStats";
 import CareerRecords from "./pages/CareerRecords";
+import GameDetail from "./pages/GameDetail";
 import RecordsVsOpponents from "./pages/RecordsVsOpponents";
 import SeasonRecords from "./pages/SeasonRecords";
 import SingleGameRecords from "./pages/SingleGameRecords";
@@ -12,6 +13,7 @@ import TeamSeasonRecords from "./pages/TeamSeasonRecords";
 import TeamSingleGameRecords from "./pages/TeamSingleGameRecords";
 import YearlyResults from "./pages/YearlyResults";
 import Home from "./pages/Home";
+import PlayerPage from "./pages/PlayerPage";
 import FootballSeasonPage from "./seasons/FootballSeasonPage";
 
 const menuSections = [
@@ -85,6 +87,9 @@ export default function FootballApp() {
           <Route path="records/career-records" element={<CareerRecords />} />
           <Route path="yearly-results" element={<YearlyResults />} />
           <Route path="seasons/:seasonId" element={<FootballSeasonPage />} />
+          <Route path="games/:gameId" element={<GameDetail />} />
+          <Route path="players/:playerId" element={<PlayerPage />} />
+          <Route path="athletes/:playerId" element={<PlayerPage />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </div>

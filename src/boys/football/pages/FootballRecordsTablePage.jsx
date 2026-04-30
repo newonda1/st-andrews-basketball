@@ -1,11 +1,23 @@
 import React, { useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 
 import { recordTableStyles } from "../../basketball/pages/recordTableStyles";
+
+import { footballPlayerPath } from "./footballDetailUtils";
 
 function PlayerNameCell({ row }) {
   return (
     <div className={recordTableStyles.playerWrap}>
-      <span className={recordTableStyles.playerText}>{row?.playerName || "—"}</span>
+      {row?.playerId ? (
+        <Link
+          to={footballPlayerPath(row.playerId)}
+          className={`${recordTableStyles.playerLink} text-blue-700`}
+        >
+          {row?.playerName || "—"}
+        </Link>
+      ) : (
+        <span className={recordTableStyles.playerText}>{row?.playerName || "—"}</span>
+      )}
     </div>
   );
 }

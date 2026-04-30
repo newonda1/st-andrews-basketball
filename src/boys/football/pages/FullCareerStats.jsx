@@ -1,8 +1,11 @@
 import React, { useEffect, useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 
 import { recordTableStyles } from "../../basketball/pages/recordTableStyles";
 import { FULL_CAREER_VIEW_CONFIG } from "../footballRecordConfigs";
 import { usePreparedFootballRecordsData } from "../footballRecordsData";
+
+import { footballPlayerPath } from "./footballDetailUtils";
 
 export default function FullCareerStats() {
   const { data, error } = usePreparedFootballRecordsData();
@@ -171,7 +174,16 @@ export default function FullCareerStats() {
               >
                 <td className={`${recordTableStyles.bodyCell} ${compactBodyCellClass}`}>
                   <div className={recordTableStyles.playerWrap}>
-                    <span className={recordTableStyles.playerText}>{row?.PlayerName || "—"}</span>
+                    {row?.PlayerID ? (
+                      <Link
+                        to={footballPlayerPath(row.PlayerID)}
+                        className={`${recordTableStyles.playerLink} text-blue-700`}
+                      >
+                        {row?.PlayerName || "—"}
+                      </Link>
+                    ) : (
+                      <span className={recordTableStyles.playerText}>{row?.PlayerName || "—"}</span>
+                    )}
                   </div>
                 </td>
 

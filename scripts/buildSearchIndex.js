@@ -512,6 +512,13 @@ const SPORT_PLAYER_CONFIGS = [
     rostersPath: "public/data/girls/basketball/seasonrosters.json",
   },
   {
+    key: "football",
+    sportLabel: "Football",
+    playerRouteBase: "/athletics/football/players",
+    playersPath: "public/data/boys/football/players.json",
+    rostersPath: "public/data/boys/football/seasonrosters.json",
+  },
+  {
     key: "volleyball",
     sportLabel: "Volleyball",
     playerRouteBase: "/athletics/volleyball/players",
@@ -538,6 +545,12 @@ const SPORT_TEAM_CONFIGS = [
     sportLabel: "Girls Basketball",
     teamRouteBase: "/athletics/girls/basketball/records/opponents",
     gamesPath: "public/data/girls/basketball/games.json",
+  },
+  {
+    key: "football",
+    sportLabel: "Football",
+    teamRouteBase: "/athletics/football/records/opponents",
+    gamesPath: "public/data/boys/football/games.json",
   },
 ];
 

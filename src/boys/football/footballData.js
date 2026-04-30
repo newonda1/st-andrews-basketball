@@ -46,10 +46,11 @@ export async function loadFootballSeasonPageData() {
 }
 
 export async function loadFootballRecordsData() {
-  const [games, seasons, players, playerGameLogs] = await Promise.all([
+  const [games, seasons, players, rosters, playerGameLogs] = await Promise.all([
     fetchJson(FOOTBALL_DATA_PATHS.games, "football games"),
     fetchJson(FOOTBALL_DATA_PATHS.seasons, "football seasons"),
     fetchJson(FOOTBALL_DATA_PATHS.players, "football players"),
+    fetchJson(FOOTBALL_DATA_PATHS.rosters, "football rosters"),
     fetchJson(FOOTBALL_DATA_PATHS.playerGameLogs, "football player game logs"),
   ]);
 
@@ -57,6 +58,7 @@ export async function loadFootballRecordsData() {
     games: Array.isArray(games) ? games : [],
     seasons: Array.isArray(seasons) ? seasons : [],
     players: Array.isArray(players) ? players : [],
+    rosters: Array.isArray(rosters) ? rosters : [],
     playerGameLogs: Array.isArray(playerGameLogs) ? playerGameLogs : [],
   };
 }
