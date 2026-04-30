@@ -1,0 +1,12 @@
+{
+  "BracketID": "state-aaa-boys-singles",
+  "Name": "Class AAA Boys Singles",
+  "Gender": "Boys",
+  "EventType": "Singles",
+  "Status": "Source Parsed",
+  "SourceUrl": "https://app.utrsports.net/events/370886?d=c6a263d8-1192-443b-a6be-5103eb176fdb&r=0&t=4",
+  "PlayersDataPath": "/data/players.json",
+  "OpponentAthletesDataPath": "/data/tennis/opponentAthletes.json",
+  "Rounds": [],
+  "Matches": []
+}

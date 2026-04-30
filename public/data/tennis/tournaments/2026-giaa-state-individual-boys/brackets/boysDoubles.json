@@ -1,0 +1,12 @@
+{
+  "BracketID": "state-aaa-boys-doubles",
+  "Name": "Class AAA Boys Doubles",
+  "Gender": "Boys",
+  "EventType": "Doubles",
+  "Status": "Source Parsed",
+  "SourceUrl": "https://app.utrsports.net/events/370886?d=f1f6cd75-8cf2-40e5-94ef-f0086765a4c1&r=0&t=4",
+  "PlayersDataPath": "/data/players.json",
+  "OpponentAthletesDataPath": "/data/tennis/opponentAthletes.json",
+  "Rounds": [],
+  "Matches": []
+}

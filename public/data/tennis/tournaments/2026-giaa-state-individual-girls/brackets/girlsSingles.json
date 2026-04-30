@@ -1,0 +1,12 @@
+{
+  "BracketID": "state-aaa-girls-singles",
+  "Name": "Class AAA Girls Singles",
+  "Gender": "Girls",
+  "EventType": "Singles",
+  "Status": "Source Parsed",
+  "SourceUrl": "https://app.utrsports.net/events/370885?d=ccbd8ae6-2fde-4e0c-b104-7d80a5993e0e&r=0&t=4",
+  "PlayersDataPath": "/data/players.json",
+  "OpponentAthletesDataPath": "/data/tennis/opponentAthletes.json",
+  "Rounds": [],
+  "Matches": []
+}

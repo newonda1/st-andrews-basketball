@@ -8638,10 +8638,45 @@
     "Opponent": "Hampton County High School",
     "LocationType": "Home",
     "GameType": "Non-Region",
-    "Result": null,
-    "TeamScore": null,
-    "OpponentScore": null,
-    "Season": 2026
+    "Result": "W",
+    "TeamScore": 13,
+    "OpponentScore": 1,
+    "Season": 2026,
+    "RecapTitle": "Wilcox Drives In Five As St. Andrew’s Rolls Past Hampton County",
+    "Recap": "St. Andrew’s turned early baserunners into a runaway lead Wednesday, scoring 10 runs across the first two innings and beating Hampton County 13-1 in five innings.\n\nThe Lions opened the scoring in the bottom of the first after Ellis Kelley worked a walk and stole second. Jacob Navare lined a run-scoring single to right, Isaac Wrieden followed with a walk, Wells Searcy was hit by a pitch, and Xavier Wilcox delivered the big swing of the inning with a two-run single to center for a 3-0 lead.\n\nSt. Andrew’s broke the game open in the second. Lanford Harris walked and stole second, Ellis Kelley was hit by a pitch, and Jack Kelley walked to load the bases. Navare doubled to center to bring home two runs, Wrieden added a two-run single to right, River Reeves singled, Wilcox doubled home two more, and Wilcox later scored on a wild pitch to make it 10-0.\n\nHampton County got on the board in the third when Terry walked and Shaffer doubled to center, but the Lions answered immediately in the bottom half. Ellis Kelley was hit by a pitch for the second time, Jack Kelley reached on an error, Wrieden walked, and Searcy and Reeves each singled in a run. Wilcox then drew a bases-loaded walk for his fifth RBI of the night, stretching the lead to 13-1.\n\nWilcox finished 2-for-2 with a double, a walk, a run scored, and five RBIs. Navare went 2-for-4 with a double, two runs, three RBIs, and a stolen base, while Reeves added two hits and an RBI. Ellis Kelley doubled, reached base four times, stole a base, and scored three runs, and Wrieden scored three times while driving in two.\n\nNavare earned the win on the mound with two scoreless innings, allowing one hit while striking out two. Searcy worked the third, and Jack Kelley closed with two no-hit innings, striking out four and walking one. St. Andrew’s did not commit an error and held Hampton County to two hits.\n\nShaffer drove in Hampton County’s lone run with a third-inning double, and Brinson added the visitors’ other hit.",
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "StAndrews": [
+        3,
+        7,
+        3,
+        0,
+        "X"
+      ],
+      "Opponent": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "StAndrewsTotals": {
+        "R": 13,
+        "H": 9,
+        "E": 0
+      },
+      "OpponentTotals": {
+        "R": 1,
+        "H": 2,
+        "E": 2
+      }
+    }
   },
   {
     "GameID": 2026050201,

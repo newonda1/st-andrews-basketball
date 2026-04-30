@@ -1,0 +1,27 @@
+{
+  "TournamentID": "2026-giaa-state-individual-boys",
+  "Name": "2026 GIAA State Individual Tennis - Boys",
+  "Season": 2026,
+  "StartDate": "2026-04-20",
+  "EndDate": "2026-04-21",
+  "Location": "Macon, GA",
+  "Classification": "GIAA AAA",
+  "Status": "Completed",
+  "Source": "UTR Sports event 370886",
+  "Brackets": [
+    {
+      "BracketID": "state-aaa-boys-singles",
+      "Name": "Class AAA Boys Singles",
+      "Gender": "Boys",
+      "EventType": "Singles",
+      "DataPath": "/data/tennis/tournaments/2026-giaa-state-individual-boys/brackets/boysSingles.json"
+    },
+    {
+      "BracketID": "state-aaa-boys-doubles",
+      "Name": "Class AAA Boys Doubles",
+      "Gender": "Boys",
+      "EventType": "Doubles",
+      "DataPath": "/data/tennis/tournaments/2026-giaa-state-individual-boys/brackets/boysDoubles.json"
+    }
+  ]
+}

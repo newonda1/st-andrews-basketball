@@ -1,0 +1,20 @@
+{
+  "TournamentID": "2026-giaa-state-individual-girls",
+  "Name": "2026 GIAA State Individual Tennis - Girls",
+  "Season": 2026,
+  "StartDate": "2026-04-20",
+  "EndDate": "2026-04-21",
+  "Location": "Macon, GA",
+  "Classification": "GIAA AAA",
+  "Status": "Completed",
+  "Source": "UTR Sports event 370885",
+  "Brackets": [
+    {
+      "BracketID": "state-aaa-girls-singles",
+      "Name": "Class AAA Girls Singles",
+      "Gender": "Girls",
+      "EventType": "Singles",
+      "DataPath": "/data/tennis/tournaments/2026-giaa-state-individual-girls/brackets/girlsSingles.json"
+    }
+  ]
+}

@@ -1,5 +1,18 @@
 [
   {
+    "SchoolID": "al-st-lukes-episcopal-school-mobile",
+    "Name": "St. Luke's Episcopal School",
+    "City": "Mobile",
+    "State": "AL"
+  },
+  {
+    "SchoolID": "ar-abundant-life-north-little-rock",
+    "Name": "Abundant Life",
+    "City": "North Little Rock",
+    "State": "AR",
+    "Mascot": "Owls"
+  },
+  {
     "SchoolID": "fl-episcopal-school-of-jacksonville-jacksonville",
     "Name": "Episcopal School of Jacksonville",
     "City": "Jacksonville",
@@ -60,6 +73,13 @@
     "State": "GA"
   },
   {
+    "SchoolID": "ga-atlanta-girls-school-atlanta",
+    "Name": "Atlanta Girls' School",
+    "City": "Atlanta",
+    "State": "GA",
+    "Mascot": "Hurricanes"
+  },
+  {
     "SchoolID": "ga-augusta-christian-martinez",
     "Name": "Augusta Christian",
     "City": "Martinez",
@@ -76,6 +96,13 @@
     "Name": "Beach High School",
     "City": "Savannah",
     "State": "GA"
+  },
+  {
+    "SchoolID": "ga-beach-savannah",
+    "Name": "Beach",
+    "City": "Savannah",
+    "State": "GA",
+    "Mascot": "Bulldogs"
   },
   {
     "SchoolID": "ga-benedictine-military-school-savannah",
@@ -104,6 +131,13 @@
     "LogoSourceUrl": "https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_3/v1752510659/bethlehemchristianacademyorg/iafskdlqdmlpjxxcngd3/2025-2026BoosterBrochureCover.png"
   },
   {
+    "SchoolID": "ga-bible-baptist-savannah",
+    "Name": "Bible Baptist",
+    "City": "Savannah",
+    "State": "GA",
+    "Mascot": "Braves"
+  },
+  {
     "SchoolID": "ga-bible-baptist-school-savannah",
     "Name": "Bible Baptist School",
     "City": "Savannah",
@@ -113,6 +147,19 @@
     "SchoolID": "ga-bradwell-institute-hinesville",
     "Name": "Bradwell Institute",
     "City": "Hinesville",
+    "State": "GA"
+  },
+  {
+    "SchoolID": "ga-brentwood-sandersville",
+    "Name": "Brentwood",
+    "City": "Sandersville",
+    "State": "GA",
+    "Mascot": "War Eagles"
+  },
+  {
+    "SchoolID": "ga-brentwood-school-sandersville",
+    "Name": "Brentwood School",
+    "City": "Sandersville",
     "State": "GA"
   },
   {
@@ -130,6 +177,13 @@
     "BracketLogoPath": "/images/schools/logos/ga-brookwood-academy-thomasville-bracket.png",
     "BracketLogoSourceUrl": "https://bbk12e1-cdn.myschoolcdn.com/ftpimages/1041/logo/BWS_Athletic_Warrior_3color.png",
     "LogoSourceUrl": "https://bbk12e1-cdn.myschoolcdn.com/ftpimages/1041/logo/BW-White-on-Blue-Updated-600.png"
+  },
+  {
+    "SchoolID": "ga-brunswick-brunswick",
+    "Name": "Brunswick",
+    "City": "Brunswick",
+    "State": "GA",
+    "Mascot": "Pirates"
   },
   {
     "SchoolID": "ga-bulloch-academy-statesboro",
@@ -158,6 +212,12 @@
     "State": "GA"
   },
   {
+    "SchoolID": "ga-cathedral-academy-decatur",
+    "Name": "Cathedral Academy",
+    "City": "Decatur",
+    "State": "GA"
+  },
+  {
     "SchoolID": "ga-cedar-grove-high-school-ellenwood",
     "Name": "Cedar Grove High School",
     "City": "Ellenwood",
@@ -168,6 +228,13 @@
     "Name": "Centennial High School",
     "City": "Roswell",
     "State": "GA"
+  },
+  {
+    "SchoolID": "ga-charlton-county-folkston",
+    "Name": "Charlton County",
+    "City": "Folkston",
+    "State": "GA",
+    "Mascot": "Indians"
   },
   {
     "SchoolID": "ga-charlton-county-high-school-folkston",
@@ -202,6 +269,12 @@
     "LogoSourceUrl": "http://wearecreekside.com/wp-content/uploads/2025/08/CCA-Athletic-Logo-Sticker-3-scaled.png"
   },
   {
+    "SchoolID": "ga-crisp-academy-cordele",
+    "Name": "Crisp Academy",
+    "City": "Cordele",
+    "State": "GA"
+  },
+  {
     "SchoolID": "ga-cristo-rey-atlanta-jesuit-high-school-atlanta",
     "Name": "Cristo Rey Atlanta Jesuit High School",
     "City": "Atlanta",
@@ -214,12 +287,6 @@
     "AthleticsUrl": "https://www.cristoreyatlanta.org/athletics/flames-athletics",
     "LogoPath": "/images/schools/logos/ga-cristo-rey-atlanta-jesuit-high-school-atlanta.png",
     "LogoSourceUrl": "https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_2/v1679505166/cristoreyatlantaorg/psk0udhjeo8omquwm0er/FlamesCR_primary_C.png"
-  },
-  {
-    "SchoolID": "ga-crisp-academy-cordele",
-    "Name": "Crisp Academy",
-    "City": "Cordele",
-    "State": "GA"
   },
   {
     "SchoolID": "ga-cross-keys-christian-academy-macon",
@@ -240,12 +307,6 @@
     "State": "GA"
   },
   {
-    "SchoolID": "ga-derenne-christian-savannah",
-    "Name": "Derenne Christian",
-    "City": "Savannah",
-    "State": "GA"
-  },
-  {
     "SchoolID": "ga-deerfield-windsor-school-albany",
     "Name": "Deerfield-Windsor School",
     "City": "Albany",
@@ -262,6 +323,12 @@
     "LogoSourceUrl": "https://resources.finalsite.net/images/f_auto,q_auto/v1597074902/deerfieldwindsor/np8iozok3p1xwyjaza2c/DWSforWebsitewhitebkgd.png"
   },
   {
+    "SchoolID": "ga-derenne-christian-savannah",
+    "Name": "Derenne Christian",
+    "City": "Savannah",
+    "State": "GA"
+  },
+  {
     "SchoolID": "ga-dominion-christian-academy-marietta",
     "Name": "Dominion Christian Academy",
     "City": "Marietta",
@@ -276,6 +343,13 @@
     "BracketLogoPath": "/images/schools/logos/ga-dominion-christian-academy-marietta-bracket.png",
     "BracketLogoSourceUrl": "https://dominionchristian.org/wp-content/uploads/2019/03/dcs-logo-small.png",
     "LogoSourceUrl": "https://dominionchristian.org/wp-content/uploads/2019/03/dcs-logo-small.png"
+  },
+  {
+    "SchoolID": "ga-dominion-christian-marietta",
+    "Name": "Dominion Christian",
+    "City": "Marietta",
+    "State": "GA",
+    "Mascot": "Knights"
   },
   {
     "SchoolID": "ga-edmund-burke-academy-waynesboro",
@@ -296,10 +370,24 @@
     "State": "GA"
   },
   {
+    "SchoolID": "ga-effingham-county-springfield",
+    "Name": "Effingham County",
+    "City": "Springfield",
+    "State": "GA",
+    "Mascot": "Rebels"
+  },
+  {
     "SchoolID": "ga-evans-high-school-evans",
     "Name": "Evans High School",
     "City": "Evans",
     "State": "GA"
+  },
+  {
+    "SchoolID": "ga-faith-baptist-christian-academy-ludowici",
+    "Name": "Faith Baptist Christian Academy",
+    "City": "Ludowici",
+    "State": "GA",
+    "Mascot": "Crusaders"
   },
   {
     "SchoolID": "ga-first-preparatory-christian-academy-hinesville",
@@ -393,6 +481,13 @@
     "State": "GA"
   },
   {
+    "SchoolID": "ga-groves-garden-city",
+    "Name": "Groves",
+    "City": "Garden City",
+    "State": "GA",
+    "Mascot": "Rebels"
+  },
+  {
     "SchoolID": "ga-groves-high-school-garden-city",
     "Name": "Groves High School",
     "City": "Garden City",
@@ -421,6 +516,13 @@
     "Name": "Hebron Christian Academy",
     "City": "Dacula",
     "State": "GA"
+  },
+  {
+    "SchoolID": "ga-heirway-christian-academy-douglasville",
+    "Name": "Heirway Christian Academy",
+    "City": "Douglasville",
+    "State": "GA",
+    "Mascot": "Eagles"
   },
   {
     "SchoolID": "ga-heritage-christian-academy-brunswick",
@@ -455,10 +557,24 @@
     "State": "GA"
   },
   {
+    "SchoolID": "ga-islands-savannah",
+    "Name": "Islands",
+    "City": "Savannah",
+    "State": "GA",
+    "Mascot": "Sharks"
+  },
+  {
     "SchoolID": "ga-jenkins-high-school-savannah",
     "Name": "Jenkins High School",
     "City": "Savannah",
     "State": "GA"
+  },
+  {
+    "SchoolID": "ga-jenkins-savannah",
+    "Name": "Jenkins",
+    "City": "Savannah",
+    "State": "GA",
+    "Mascot": "Warriors"
   },
   {
     "SchoolID": "ga-john-milledge-academy-milledgeville",
@@ -482,6 +598,13 @@
     "State": "GA"
   },
   {
+    "SchoolID": "ga-johnson-savannah",
+    "Name": "Johnson",
+    "City": "Savannah",
+    "State": "GA",
+    "Mascot": "Atomsmashers"
+  },
+  {
     "SchoolID": "ga-kennesaw-mountain-high-school-kennesaw",
     "Name": "Kennesaw Mountain High School",
     "City": "Kennesaw",
@@ -491,6 +614,12 @@
     "SchoolID": "ga-kings-ridge-christian-school-alpharetta",
     "Name": "King's Ridge Christian School",
     "City": "Alpharetta",
+    "State": "GA"
+  },
+  {
+    "SchoolID": "ga-lagrange-academy-lagrange",
+    "Name": "LaGrange Academy",
+    "City": "LaGrange",
     "State": "GA"
   },
   {
@@ -510,16 +639,51 @@
     "LogoSourceUrl": "https://bbk12e1-cdn.myschoolcdn.com/ftpimages/259/logo/2023%20Crest%20with%20Stacked%20Logo%20on%20Transparent-More%20Bold.png"
   },
   {
+    "SchoolID": "ga-lanier-sugar-hill",
+    "Name": "Lanier",
+    "City": "Sugar Hill",
+    "State": "GA",
+    "Mascot": "Longhorns"
+  },
+  {
+    "SchoolID": "ga-liberty-county-hinesville",
+    "Name": "Liberty County",
+    "City": "Hinesville",
+    "State": "GA",
+    "Mascot": "Panthers"
+  },
+  {
     "SchoolID": "ga-locust-grove-high-school-locust-grove",
     "Name": "Locust Grove High School",
     "City": "Locust Grove",
     "State": "GA"
   },
   {
+    "SchoolID": "ga-loganville-christian-academy-loganville",
+    "Name": "Loganville Christian Academy",
+    "City": "Loganville",
+    "State": "GA",
+    "Mascot": "Lions"
+  },
+  {
     "SchoolID": "ga-long-county-high-school-ludowici",
     "Name": "Long County High School",
     "City": "Ludowici",
     "State": "GA"
+  },
+  {
+    "SchoolID": "ga-long-county-ludowici",
+    "Name": "Long County",
+    "City": "Ludowici",
+    "State": "GA",
+    "Mascot": "Blue Tide"
+  },
+  {
+    "SchoolID": "ga-memorial-day-savannah",
+    "Name": "Memorial Day",
+    "City": "Savannah",
+    "State": "GA",
+    "Mascot": "Matadors"
   },
   {
     "SchoolID": "ga-memorial-day-school-savannah",
@@ -570,6 +734,13 @@
     "State": "GA"
   },
   {
+    "SchoolID": "ga-new-hampstead-savannah",
+    "Name": "New Hampstead",
+    "City": "Savannah",
+    "State": "GA",
+    "Mascot": "Phoenixes"
+  },
+  {
     "SchoolID": "ga-ocmulgee-academy-lumber-city",
     "Name": "Ocmulgee Academy",
     "City": "Lumber City",
@@ -580,6 +751,13 @@
     "Name": "Oglethorpe Academy",
     "City": "Savannah",
     "State": "GA"
+  },
+  {
+    "SchoolID": "ga-oglethorpe-county-lexington",
+    "Name": "Oglethorpe County",
+    "City": "Lexington",
+    "State": "GA",
+    "Mascot": "Patriots"
   },
   {
     "SchoolID": "ga-pathway-day-school-savannah",
@@ -622,10 +800,52 @@
     "LogoSourceUrl": "https://pinewoodchristian.org/wp-content/uploads/2021/11/cropped-cropped-PCA-Logo-Update-270x270.png"
   },
   {
+    "SchoolID": "ga-pinewood-christian-bellville",
+    "Name": "Pinewood Christian",
+    "City": "Bellville",
+    "State": "GA",
+    "Mascot": "Patriots"
+  },
+  {
+    "SchoolID": "ga-providence-christian-academy-lilburn",
+    "Name": "Providence Christian Academy",
+    "City": "Lilburn",
+    "State": "GA",
+    "Mascot": "Storm"
+  },
+  {
+    "SchoolID": "ga-providence-christian-savannah",
+    "Name": "Providence Christian",
+    "City": "Savannah",
+    "State": "GA",
+    "Mascot": "Lions"
+  },
+  {
     "SchoolID": "ga-providence-christian-school-savannah",
     "Name": "Providence Christian School",
     "City": "Savannah",
     "State": "GA"
+  },
+  {
+    "SchoolID": "ga-richmond-hill-richmond-hill",
+    "Name": "Richmond Hill",
+    "City": "Richmond Hill",
+    "State": "GA",
+    "Mascot": "Wildcats"
+  },
+  {
+    "SchoolID": "ga-ridgeland-high-school-rossville",
+    "Name": "Ridgeland High School",
+    "City": "Rossville",
+    "State": "GA"
+  },
+  {
+    "SchoolID": "ga-rivers-academy-alpharetta",
+    "Name": "Rivers Academy Private School",
+    "City": "Alpharetta",
+    "State": "GA",
+    "ShortName": "Rivers Academy",
+    "WebsiteUrl": "https://riversacademy.com/"
   },
   {
     "SchoolID": "ga-riverside-military-academy-gainesville",
@@ -654,6 +874,13 @@
     "LogoSourceUrl": "https://www.rtcacrusaders.org/editoruploads/images/Logos/footer_logo.png"
   },
   {
+    "SchoolID": "ga-savannah-arts-academy-savannah",
+    "Name": "Savannah Arts Academy",
+    "ShortName": "Savannah Arts",
+    "City": "Savannah",
+    "State": "GA"
+  },
+  {
     "SchoolID": "ga-savannah-athletic-association-high-school-bloomingdale",
     "Name": "Savannah Athletic Association High School",
     "City": "Bloomingdale",
@@ -664,6 +891,20 @@
     "Name": "Savannah Christian Preparatory School",
     "City": "Savannah",
     "State": "GA"
+  },
+  {
+    "SchoolID": "ga-savannah-christian-savannah",
+    "Name": "Savannah Christian",
+    "City": "Savannah",
+    "State": "GA",
+    "Mascot": "Raiders"
+  },
+  {
+    "SchoolID": "ga-savannah-country-day-savannah",
+    "Name": "Savannah Country Day",
+    "City": "Savannah",
+    "State": "GA",
+    "Mascot": "Hornets"
   },
   {
     "SchoolID": "ga-savannah-country-day-school-savannah",
@@ -690,6 +931,13 @@
     "State": "GA"
   },
   {
+    "SchoolID": "ga-south-effingham-guyton",
+    "Name": "South Effingham",
+    "City": "Guyton",
+    "State": "GA",
+    "Mascot": "Mustangs"
+  },
+  {
     "SchoolID": "ga-south-effingham-high-school-guyton",
     "Name": "South Effingham High School",
     "City": "Guyton",
@@ -700,6 +948,13 @@
     "Name": "South Forsyth High School",
     "City": "Cumming",
     "State": "GA"
+  },
+  {
+    "SchoolID": "ga-southeast-bulloch-brooklet",
+    "Name": "Southeast Bulloch",
+    "City": "Brooklet",
+    "State": "GA",
+    "Mascot": "Yellow Jackets"
   },
   {
     "SchoolID": "ga-southeast-bulloch-high-school-brooklet",
@@ -744,10 +999,24 @@
     "WordmarkSourceUrl": "https://resources.finalsite.net/images/f_auto,q_auto/v1752076989/saslionscom/mlsq9zml4aydsasxv2pu/StAndrewsAthleticsPrimaryLogoImage.png"
   },
   {
+    "SchoolID": "ga-st-anne-pacelli-columbus",
+    "Name": "St. Anne-Pacelli",
+    "City": "Columbus",
+    "State": "GA",
+    "Mascot": "Vikings"
+  },
+  {
     "SchoolID": "ga-st-paul-academy-for-boys-savannah",
     "Name": "St. Paul Academy for Boys",
     "City": "Savannah",
     "State": "GA"
+  },
+  {
+    "SchoolID": "ga-st-vincent-s-savannah",
+    "Name": "St. Vincent's",
+    "City": "Savannah",
+    "State": "GA",
+    "Mascot": "Saints"
   },
   {
     "SchoolID": "ga-st-vincents-academy-savannah",
@@ -766,6 +1035,20 @@
     "Name": "Statesboro High School",
     "City": "Statesboro",
     "State": "GA"
+  },
+  {
+    "SchoolID": "ga-statesboro-statesboro",
+    "Name": "Statesboro",
+    "City": "Statesboro",
+    "State": "GA",
+    "Mascot": "Blue Devils"
+  },
+  {
+    "SchoolID": "ga-stratford-academy-macon",
+    "Name": "Stratford Academy",
+    "City": "Macon",
+    "State": "GA",
+    "Mascot": "Eagles"
   },
   {
     "SchoolID": "ga-terrell-academy-dawson",
@@ -799,6 +1082,13 @@
     "WebsiteUrl": "https://www.heritageschool.com/",
     "LogoPath": "/images/schools/logos/ga-the-heritage-school-newnan.png",
     "LogoSourceUrl": "https://resources.finalsite.net/images/v1755714001/heritageschoolcom/owjzpmnq91tq1ed3wmu2/HawkHeadPNG.png"
+  },
+  {
+    "SchoolID": "ga-the-king-s-academy-woodstock",
+    "Name": "The King's Academy",
+    "City": "Woodstock",
+    "State": "GA",
+    "Mascot": "Knights"
   },
   {
     "SchoolID": "ga-the-weber-school-atlanta",
@@ -841,6 +1131,20 @@
     "LogoSourceUrl": "https://static.wixstatic.com/media/a08823_c63ddc6dd53640bc810ed21958ae8cbf~mv2.png"
   },
   {
+    "SchoolID": "ga-trinity-christian-dublin",
+    "Name": "Trinity Christian",
+    "City": "Dublin",
+    "State": "GA",
+    "Mascot": "Crusaders"
+  },
+  {
+    "SchoolID": "ga-trinity-christian-sharpsburg",
+    "Name": "Trinity Christian",
+    "City": "Sharpsburg",
+    "State": "GA",
+    "Mascot": "Lions"
+  },
+  {
     "SchoolID": "ga-twiggs-academy-jeffersonville",
     "Name": "Twiggs Academy",
     "City": "Jeffersonville",
@@ -861,6 +1165,20 @@
     "LogoSourceUrl": "https://s3.amazonaws.com/ballfrog-app/comp-sites/images/b7aff70d81defa6814dda8eb2b52e5ed-94fb9-515734.png"
   },
   {
+    "SchoolID": "ga-valwood-valdosta",
+    "Name": "Valwood",
+    "City": "Valdosta",
+    "State": "GA",
+    "Mascot": "Valiants"
+  },
+  {
+    "SchoolID": "ga-veritas-academy-savannah",
+    "Name": "Veritas Academy",
+    "City": "Savannah",
+    "State": "GA",
+    "Mascot": "Gryphon"
+  },
+  {
     "SchoolID": "ga-vidalia-heritage-academy-vidalia",
     "Name": "Vidalia Heritage Academy",
     "City": "Vidalia",
@@ -871,6 +1189,13 @@
     "Name": "The Walker School",
     "City": "Marietta",
     "State": "GA"
+  },
+  {
+    "SchoolID": "ga-west-laurens-dexter",
+    "Name": "West Laurens",
+    "City": "Dexter",
+    "State": "GA",
+    "Mascot": "Raiders"
   },
   {
     "SchoolID": "ga-westbrook-school-dixie",
@@ -893,6 +1218,13 @@
     "LogoSourceUrl": "https://thewestfieldschool.static.amais.com/Combined_Shape-52-optimized.webp?version=638272600075500000"
   },
   {
+    "SchoolID": "ga-westfield-school-perry-2",
+    "Name": "Westfield School",
+    "City": "Perry",
+    "State": "GA",
+    "Mascot": "Hornets"
+  },
+  {
     "SchoolID": "ga-westminster-schools-of-augusta-augusta",
     "Name": "Westminster Schools of Augusta",
     "City": "Augusta",
@@ -907,16 +1239,46 @@
     "LogoSourceUrl": "https://logos.vnn-prod.zone/21253.png"
   },
   {
+    "SchoolID": "ga-william-and-reed-academy-johns-creek",
+    "Name": "William & Reed Academy",
+    "City": "Johns Creek",
+    "State": "GA",
+    "ShortName": "William & Reed",
+    "Mascot": "Warriors",
+    "WebsiteUrl": "https://www.williamandreed.com/"
+  },
+  {
     "SchoolID": "ga-windsor-forest-high-school-savannah",
     "Name": "Windsor Forest High School",
     "City": "Savannah",
     "State": "GA"
   },
   {
+    "SchoolID": "ga-windsor-forest-savannah",
+    "Name": "Windsor Forest",
+    "City": "Savannah",
+    "State": "GA",
+    "Mascot": "Knights"
+  },
+  {
+    "SchoolID": "ga-woodville-tompkins-savannah",
+    "Name": "Woodville-Tompkins",
+    "City": "Savannah",
+    "State": "GA",
+    "Mascot": "-"
+  },
+  {
     "SchoolID": "ga-woodville-tompkins-technical-and-career-high-school-savannah",
     "Name": "Woodville-Tompkins Technical and Career High School",
     "City": "Savannah",
     "State": "GA"
+  },
+  {
+    "SchoolID": "ga-young-americans-christian-conyers",
+    "Name": "Young Americans Christian",
+    "City": "Conyers",
+    "State": "GA",
+    "Mascot": "Eagles"
   },
   {
     "SchoolID": "ga-young-americans-christian-school-conyers",
@@ -940,10 +1302,23 @@
     "State": "IL"
   },
   {
+    "SchoolID": "ky-east-carter-high-school-grayson",
+    "Name": "East Carter High School",
+    "City": "Grayson",
+    "State": "KY"
+  },
+  {
     "SchoolID": "ky-morgan-county-high-school-west-liberty",
     "Name": "Morgan County High School",
     "City": "West Liberty",
     "State": "KY"
+  },
+  {
+    "SchoolID": "ky-morgan-county-west-liberty",
+    "Name": "Morgan County",
+    "City": "West Liberty",
+    "State": "KY",
+    "Mascot": "Cougars"
   },
   {
     "SchoolID": "md-glenelg-country-school-ellicott-city",
@@ -964,6 +1339,18 @@
     "State": "NY"
   },
   {
+    "SchoolID": "oh-dixie-high-school-new-lebanon",
+    "Name": "Dixie High School",
+    "City": "New Lebanon",
+    "State": "OH"
+  },
+  {
+    "SchoolID": "sc-abundant-life-academy-hardeeville",
+    "Name": "Abundant Life Academy",
+    "City": "Hardeeville",
+    "State": "SC"
+  },
+  {
     "SchoolID": "sc-andrew-jackson-academy-ehrhardt",
     "Name": "Andrew Jackson Academy",
     "City": "Ehrhardt",
@@ -980,6 +1367,13 @@
     "Name": "Beaufort Academy",
     "City": "Beaufort",
     "State": "SC"
+  },
+  {
+    "SchoolID": "sc-bluffton-bluffton",
+    "Name": "Bluffton",
+    "City": "Bluffton",
+    "State": "SC",
+    "Mascot": "Bobcats"
   },
   {
     "SchoolID": "sc-burke-high-school-charleston",
@@ -1006,6 +1400,13 @@
     "State": "SC"
   },
   {
+    "SchoolID": "sc-charleston-collegiate-john-s-island",
+    "Name": "Charleston Collegiate",
+    "City": "John's Island",
+    "State": "SC",
+    "Mascot": "Sundevils"
+  },
+  {
     "SchoolID": "sc-charleston-collegiate-school-johns-island",
     "Name": "Charleston Collegiate School",
     "City": "Johns Island",
@@ -1024,6 +1425,19 @@
     "State": "SC"
   },
   {
+    "SchoolID": "sc-cross-bluffton",
+    "Name": "Cross",
+    "City": "Bluffton",
+    "State": "SC",
+    "Mascot": "Stingrays"
+  },
+  {
+    "SchoolID": "sc-cross-high-school-cross",
+    "Name": "Cross High School",
+    "City": "Cross",
+    "State": "SC"
+  },
+  {
     "SchoolID": "sc-dorchester-academy-st-george",
     "Name": "Dorchester Academy",
     "City": "St. George",
@@ -1036,6 +1450,20 @@
     "State": "SC"
   },
   {
+    "SchoolID": "sc-faith-christian-summerville",
+    "Name": "Faith Christian",
+    "City": "Summerville",
+    "State": "SC",
+    "Mascot": "Knights"
+  },
+  {
+    "SchoolID": "sc-first-baptist-school-charleston",
+    "Name": "First Baptist School",
+    "City": "Charleston",
+    "State": "SC",
+    "Mascot": "Hurricanes"
+  },
+  {
     "SchoolID": "sc-first-baptist-school-of-charleston-charleston",
     "Name": "First Baptist School of Charleston",
     "City": "Charleston",
@@ -1046,6 +1474,13 @@
     "Name": "Fort Dorchester High School",
     "City": "North Charleston",
     "State": "SC"
+  },
+  {
+    "SchoolID": "sc-fort-dorchester-north-charleston",
+    "Name": "Fort Dorchester",
+    "City": "North Charleston",
+    "State": "SC",
+    "Mascot": "Patriots"
   },
   {
     "SchoolID": "sc-hampton-county-high-school-varnville",
@@ -1066,6 +1501,13 @@
     "State": "SC"
   },
   {
+    "SchoolID": "sc-heritage-academy-hilton-head-island",
+    "Name": "Heritage Academy",
+    "City": "Hilton Head Island",
+    "State": "SC",
+    "Mascot": "Hurricanes"
+  },
+  {
     "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island",
     "Name": "Hilton Head Christian Academy",
     "City": "Hilton Head Island",
@@ -1076,6 +1518,20 @@
     "Name": "Hilton Head Island High School",
     "City": "Hilton Head Island",
     "State": "SC"
+  },
+  {
+    "SchoolID": "sc-hilton-head-island-hilton-head-island",
+    "Name": "Hilton Head Island",
+    "City": "Hilton Head Island",
+    "State": "SC",
+    "Mascot": "Seahawks"
+  },
+  {
+    "SchoolID": "sc-hilton-head-prep-hilton-head-island",
+    "Name": "Hilton Head Prep",
+    "City": "Hilton Head Island",
+    "State": "SC",
+    "Mascot": "Dolphins"
   },
   {
     "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island",
@@ -1102,6 +1558,13 @@
     "State": "SC"
   },
   {
+    "SchoolID": "sc-jefferson-davis-academy-blackville",
+    "Name": "Jefferson Davis Academy",
+    "City": "Blackville",
+    "State": "SC",
+    "Mascot": "Raiders"
+  },
+  {
     "SchoolID": "sc-john-c-calhoun-academy-st-matthews",
     "Name": "John C. Calhoun Academy",
     "City": "St. Matthews",
@@ -1112,6 +1575,20 @@
     "Name": "John Paul II Catholic School",
     "City": "Ridgeland",
     "State": "SC"
+  },
+  {
+    "SchoolID": "sc-john-paul-ii-ridgeland",
+    "Name": "John Paul II",
+    "City": "Ridgeland",
+    "State": "SC",
+    "Mascot": "Golden Warrriors"
+  },
+  {
+    "SchoolID": "sc-king-s-academy-florence",
+    "Name": "King's Academy",
+    "City": "Florence",
+    "State": "SC",
+    "Mascot": "Lions"
   },
   {
     "SchoolID": "sc-lord-berkeley-academy-moncks-corner",
@@ -1132,6 +1609,13 @@
     "State": "SC"
   },
   {
+    "SchoolID": "sc-may-river-bluffton",
+    "Name": "May River",
+    "City": "Bluffton",
+    "State": "SC",
+    "Mascot": "Sharks"
+  },
+  {
     "SchoolID": "sc-may-river-high-school-bluffton",
     "Name": "May River High School",
     "City": "Bluffton",
@@ -1144,16 +1628,44 @@
     "State": "SC"
   },
   {
+    "SchoolID": "sc-northside-christian-school-north-charleston",
+    "Name": "Northside Christian School",
+    "City": "North Charleston",
+    "State": "SC",
+    "Mascot": "Eagles"
+  },
+  {
+    "SchoolID": "sc-northwood-academy-charleston",
+    "Name": "Northwood Academy",
+    "City": "Charleston",
+    "State": "SC",
+    "Mascot": "Chargers"
+  },
+  {
     "SchoolID": "sc-northwood-academy-summerville",
     "Name": "Northwood Academy",
     "City": "Summerville",
     "State": "SC"
   },
   {
+    "SchoolID": "sc-orangeburg-prep-orangeburg",
+    "Name": "Orangeburg Prep",
+    "City": "Orangeburg",
+    "State": "SC",
+    "Mascot": "Gladiators"
+  },
+  {
     "SchoolID": "sc-orangeburg-preparatory-school-orangeburg",
     "Name": "Orangeburg Preparatory School",
     "City": "Orangeburg",
     "State": "SC"
+  },
+  {
+    "SchoolID": "sc-palmetto-christian-academy-mt-pleasant",
+    "Name": "Palmetto Christian Academy",
+    "City": "Mt. Pleasant",
+    "State": "SC",
+    "Mascot": "Fighting Eagles"
   },
   {
     "SchoolID": "sc-patrick-henry-academy-estill",
@@ -1166,6 +1678,27 @@
     "Name": "Pee Dee Academy",
     "City": "Mullins",
     "State": "SC"
+  },
+  {
+    "SchoolID": "sc-providence-athletic-club-columbia",
+    "Name": "Providence Athletic Club",
+    "City": "Columbia",
+    "State": "SC",
+    "Mascot": "Panthers"
+  },
+  {
+    "SchoolID": "sc-providence-lexington",
+    "Name": "Providence",
+    "City": "Lexington",
+    "State": "SC",
+    "Mascot": "Panthers"
+  },
+  {
+    "SchoolID": "sc-richard-winn-academy-winnsboro",
+    "Name": "Richard Winn Academy",
+    "City": "Winnsboro",
+    "State": "SC",
+    "Mascot": "Eagles"
   },
   {
     "SchoolID": "sc-robert-e-lee-academy-bishopville",
@@ -1198,6 +1731,20 @@
     "State": "SC"
   },
   {
+    "SchoolID": "sc-spartanburg-day-spartanburg",
+    "Name": "Spartanburg Day",
+    "City": "Spartanburg",
+    "State": "SC",
+    "Mascot": "Griffins"
+  },
+  {
+    "SchoolID": "sc-st-john-s-john-s-island",
+    "Name": "St. John's",
+    "City": "John's Island",
+    "State": "SC",
+    "Mascot": "Islanders"
+  },
+  {
     "SchoolID": "sc-st-johns-christian-academy-moncks-corner",
     "Name": "St. John's Christian Academy",
     "City": "Moncks Corner",
@@ -1228,10 +1775,24 @@
     "State": "SC"
   },
   {
+    "SchoolID": "sc-thomas-sumter-academy-dalzell",
+    "Name": "Thomas Sumter Academy",
+    "City": "Dalzell",
+    "State": "SC",
+    "Mascot": "Generals"
+  },
+  {
     "SchoolID": "sc-thomas-sumter-academy-rembert",
     "Name": "Thomas Sumter Academy",
     "City": "Rembert",
     "State": "SC"
+  },
+  {
+    "SchoolID": "sc-trinity-collegiate-darlington",
+    "Name": "Trinity Collegiate",
+    "City": "Darlington",
+    "State": "SC",
+    "Mascot": "Titans"
   },
   {
     "SchoolID": "tn-brentwood-high-school-brentwood",
@@ -1252,353 +1813,6 @@
     "State": "TN"
   },
   {
-    "SchoolID": "tn-ravenwood-high-school-brentwood",
-    "Name": "Ravenwood High School",
-    "City": "Brentwood",
-    "State": "TN"
-  },
-  {
-    "SchoolID": "sc-cross-high-school-cross",
-    "Name": "Cross High School",
-    "City": "Cross",
-    "State": "SC"
-  },
-  {
-    "SchoolID": "ga-savannah-arts-academy-savannah",
-    "Name": "Savannah Arts Academy",
-    "ShortName": "Savannah Arts",
-    "City": "Savannah",
-    "State": "GA"
-  },
-  {
-    "SchoolID": "al-st-lukes-episcopal-school-mobile",
-    "Name": "St. Luke's Episcopal School",
-    "City": "Mobile",
-    "State": "AL"
-  },
-  {
-    "SchoolID": "ga-brentwood-school-sandersville",
-    "Name": "Brentwood School",
-    "City": "Sandersville",
-    "State": "GA"
-  },
-  {
-    "SchoolID": "ga-ridgeland-high-school-rossville",
-    "Name": "Ridgeland High School",
-    "City": "Rossville",
-    "State": "GA"
-  },
-  {
-    "SchoolID": "ky-east-carter-high-school-grayson",
-    "Name": "East Carter High School",
-    "City": "Grayson",
-    "State": "KY"
-  },
-  {
-    "SchoolID": "oh-dixie-high-school-new-lebanon",
-    "Name": "Dixie High School",
-    "City": "New Lebanon",
-    "State": "OH"
-  },
-  {
-    "SchoolID": "sc-abundant-life-academy-hardeeville",
-    "Name": "Abundant Life Academy",
-    "City": "Hardeeville",
-    "State": "SC"
-  },
-  {
-    "SchoolID": "ga-bible-baptist-savannah",
-    "Name": "Bible Baptist",
-    "City": "Savannah",
-    "State": "GA",
-    "Mascot": "Braves"
-  },
-  {
-    "SchoolID": "ga-providence-christian-savannah",
-    "Name": "Providence Christian",
-    "City": "Savannah",
-    "State": "GA",
-    "Mascot": "Lions"
-  },
-  {
-    "SchoolID": "sc-jefferson-davis-academy-blackville",
-    "Name": "Jefferson Davis Academy",
-    "City": "Blackville",
-    "State": "SC",
-    "Mascot": "Raiders"
-  },
-  {
-    "SchoolID": "sc-providence-lexington",
-    "Name": "Providence",
-    "City": "Lexington",
-    "State": "SC",
-    "Mascot": "Panthers"
-  },
-  {
-    "SchoolID": "sc-trinity-collegiate-darlington",
-    "Name": "Trinity Collegiate",
-    "City": "Darlington",
-    "State": "SC",
-    "Mascot": "Titans"
-  },
-  {
-    "SchoolID": "sc-hilton-head-prep-hilton-head-island",
-    "Name": "Hilton Head Prep",
-    "City": "Hilton Head Island",
-    "State": "SC",
-    "Mascot": "Dolphins"
-  },
-  {
-    "SchoolID": "ga-pinewood-christian-bellville",
-    "Name": "Pinewood Christian",
-    "City": "Bellville",
-    "State": "GA",
-    "Mascot": "Patriots"
-  },
-  {
-    "SchoolID": "ga-lagrange-academy-lagrange",
-    "Name": "LaGrange Academy",
-    "City": "LaGrange",
-    "State": "GA"
-  },
-  {
-    "SchoolID": "ga-memorial-day-savannah",
-    "Name": "Memorial Day",
-    "City": "Savannah",
-    "State": "GA",
-    "Mascot": "Matadors"
-  },
-  {
-    "SchoolID": "sc-charleston-collegiate-john-s-island",
-    "Name": "Charleston Collegiate",
-    "City": "John's Island",
-    "State": "SC",
-    "Mascot": "Sundevils"
-  },
-  {
-    "SchoolID": "sc-palmetto-christian-academy-mt-pleasant",
-    "Name": "Palmetto Christian Academy",
-    "City": "Mt. Pleasant",
-    "State": "SC",
-    "Mascot": "Fighting Eagles"
-  },
-  {
-    "SchoolID": "ga-providence-christian-academy-lilburn",
-    "Name": "Providence Christian Academy",
-    "City": "Lilburn",
-    "State": "GA",
-    "Mascot": "Storm"
-  },
-  {
-    "SchoolID": "sc-first-baptist-school-charleston",
-    "Name": "First Baptist School",
-    "City": "Charleston",
-    "State": "SC",
-    "Mascot": "Hurricanes"
-  },
-  {
-    "SchoolID": "sc-king-s-academy-florence",
-    "Name": "King's Academy",
-    "City": "Florence",
-    "State": "SC",
-    "Mascot": "Lions"
-  },
-  {
-    "SchoolID": "sc-orangeburg-prep-orangeburg",
-    "Name": "Orangeburg Prep",
-    "City": "Orangeburg",
-    "State": "SC",
-    "Mascot": "Gladiators"
-  },
-  {
-    "SchoolID": "sc-providence-athletic-club-columbia",
-    "Name": "Providence Athletic Club",
-    "City": "Columbia",
-    "State": "SC",
-    "Mascot": "Panthers"
-  },
-  {
-    "SchoolID": "sc-northwood-academy-charleston",
-    "Name": "Northwood Academy",
-    "City": "Charleston",
-    "State": "SC",
-    "Mascot": "Chargers"
-  },
-  {
-    "SchoolID": "sc-faith-christian-summerville",
-    "Name": "Faith Christian",
-    "City": "Summerville",
-    "State": "SC",
-    "Mascot": "Knights"
-  },
-  {
-    "SchoolID": "sc-john-paul-ii-ridgeland",
-    "Name": "John Paul II",
-    "City": "Ridgeland",
-    "State": "SC",
-    "Mascot": "Golden Warrriors"
-  },
-  {
-    "SchoolID": "sc-spartanburg-day-spartanburg",
-    "Name": "Spartanburg Day",
-    "City": "Spartanburg",
-    "State": "SC",
-    "Mascot": "Griffins"
-  },
-  {
-    "SchoolID": "ga-cathedral-academy-decatur",
-    "Name": "Cathedral Academy",
-    "City": "Decatur",
-    "State": "GA"
-  },
-  {
-    "SchoolID": "sc-thomas-sumter-academy-dalzell",
-    "Name": "Thomas Sumter Academy",
-    "City": "Dalzell",
-    "State": "SC",
-    "Mascot": "Generals"
-  },
-  {
-    "SchoolID": "ga-faith-baptist-christian-academy-ludowici",
-    "Name": "Faith Baptist Christian Academy",
-    "City": "Ludowici",
-    "State": "GA",
-    "Mascot": "Crusaders"
-  },
-  {
-    "SchoolID": "ar-abundant-life-north-little-rock",
-    "Name": "Abundant Life",
-    "City": "North Little Rock",
-    "State": "AR",
-    "Mascot": "Owls"
-  },
-  {
-    "SchoolID": "ga-savannah-christian-savannah",
-    "Name": "Savannah Christian",
-    "City": "Savannah",
-    "State": "GA",
-    "Mascot": "Raiders"
-  },
-  {
-    "SchoolID": "ga-savannah-country-day-savannah",
-    "Name": "Savannah Country Day",
-    "City": "Savannah",
-    "State": "GA",
-    "Mascot": "Hornets"
-  },
-  {
-    "SchoolID": "ga-st-vincent-s-savannah",
-    "Name": "St. Vincent's",
-    "City": "Savannah",
-    "State": "GA",
-    "Mascot": "Saints"
-  },
-  {
-    "SchoolID": "ga-young-americans-christian-conyers",
-    "Name": "Young Americans Christian",
-    "City": "Conyers",
-    "State": "GA",
-    "Mascot": "Eagles"
-  },
-  {
-    "SchoolID": "ga-brentwood-sandersville",
-    "Name": "Brentwood",
-    "City": "Sandersville",
-    "State": "GA",
-    "Mascot": "War Eagles"
-  },
-  {
-    "SchoolID": "ga-islands-savannah",
-    "Name": "Islands",
-    "City": "Savannah",
-    "State": "GA",
-    "Mascot": "Sharks"
-  },
-  {
-    "SchoolID": "ga-trinity-christian-dublin",
-    "Name": "Trinity Christian",
-    "City": "Dublin",
-    "State": "GA",
-    "Mascot": "Crusaders"
-  },
-  {
-    "SchoolID": "ga-westfield-school-perry-2",
-    "Name": "Westfield School",
-    "City": "Perry",
-    "State": "GA",
-    "Mascot": "Hornets"
-  },
-  {
-    "SchoolID": "ga-jenkins-savannah",
-    "Name": "Jenkins",
-    "City": "Savannah",
-    "State": "GA",
-    "Mascot": "Warriors"
-  },
-  {
-    "SchoolID": "ga-south-effingham-guyton",
-    "Name": "South Effingham",
-    "City": "Guyton",
-    "State": "GA",
-    "Mascot": "Mustangs"
-  },
-  {
-    "SchoolID": "ga-new-hampstead-savannah",
-    "Name": "New Hampstead",
-    "City": "Savannah",
-    "State": "GA",
-    "Mascot": "Phoenixes"
-  },
-  {
-    "SchoolID": "sc-may-river-bluffton",
-    "Name": "May River",
-    "City": "Bluffton",
-    "State": "SC",
-    "Mascot": "Sharks"
-  },
-  {
-    "SchoolID": "ga-statesboro-statesboro",
-    "Name": "Statesboro",
-    "City": "Statesboro",
-    "State": "GA",
-    "Mascot": "Blue Devils"
-  },
-  {
-    "SchoolID": "sc-cross-bluffton",
-    "Name": "Cross",
-    "City": "Bluffton",
-    "State": "SC",
-    "Mascot": "Stingrays"
-  },
-  {
-    "SchoolID": "ga-effingham-county-springfield",
-    "Name": "Effingham County",
-    "City": "Springfield",
-    "State": "GA",
-    "Mascot": "Rebels"
-  },
-  {
-    "SchoolID": "ga-charlton-county-folkston",
-    "Name": "Charlton County",
-    "City": "Folkston",
-    "State": "GA",
-    "Mascot": "Indians"
-  },
-  {
-    "SchoolID": "sc-hilton-head-island-hilton-head-island",
-    "Name": "Hilton Head Island",
-    "City": "Hilton Head Island",
-    "State": "SC",
-    "Mascot": "Seahawks"
-  },
-  {
-    "SchoolID": "ga-southeast-bulloch-brooklet",
-    "Name": "Southeast Bulloch",
-    "City": "Brooklet",
-    "State": "GA",
-    "Mascot": "Yellow Jackets"
-  },
-  {
     "SchoolID": "tn-halls-knoxville",
     "Name": "Halls",
     "City": "Knoxville",
@@ -1606,59 +1820,15 @@
     "Mascot": "Red Devils"
   },
   {
-    "SchoolID": "ky-morgan-county-west-liberty",
-    "Name": "Morgan County",
-    "City": "West Liberty",
-    "State": "KY",
-    "Mascot": "Cougars"
+    "SchoolID": "tn-ravenwood-high-school-brentwood",
+    "Name": "Ravenwood High School",
+    "City": "Brentwood",
+    "State": "TN"
   },
   {
-    "SchoolID": "sc-fort-dorchester-north-charleston",
-    "Name": "Fort Dorchester",
-    "City": "North Charleston",
-    "State": "SC",
-    "Mascot": "Patriots"
-  },
-  {
-    "SchoolID": "ga-woodville-tompkins-savannah",
-    "Name": "Woodville-Tompkins",
-    "City": "Savannah",
-    "State": "GA",
-    "Mascot": "-"
-  },
-  {
-    "SchoolID": "ga-lanier-sugar-hill",
-    "Name": "Lanier",
-    "City": "Sugar Hill",
-    "State": "GA",
-    "Mascot": "Longhorns"
-  },
-  {
-    "SchoolID": "ga-oglethorpe-county-lexington",
-    "Name": "Oglethorpe County",
-    "City": "Lexington",
-    "State": "GA",
-    "Mascot": "Patriots"
-  },
-  {
-    "SchoolID": "ga-stratford-academy-macon",
-    "Name": "Stratford Academy",
-    "City": "Macon",
-    "State": "GA",
-    "Mascot": "Eagles"
-  },
-  {
-    "SchoolID": "ga-the-king-s-academy-woodstock",
-    "Name": "The King's Academy",
-    "City": "Woodstock",
-    "State": "GA",
-    "Mascot": "Knights"
-  },
-  {
-    "SchoolID": "ga-west-laurens-dexter",
-    "Name": "West Laurens",
-    "City": "Dexter",
-    "State": "GA",
-    "Mascot": "Raiders"
+    "SchoolID": "varsity-opponent",
+    "Name": "Varsity Opponent",
+    "City": "",
+    "State": ""
   }
 ]

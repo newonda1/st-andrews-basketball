@@ -6698,5 +6698,2114 @@
     ],
     "Notes": "The workbook shows a 5-0 team result, but only Singles 1 and Singles 3 included completed line scores and the remaining positions were listed as blank or N/A.",
     "Source": "User-provided Tennis Stats 2026 workbook; dates and locations cross-checked against the St. Andrew's Athletics varsity boys tennis schedule."
+  },
+  {
+    "MatchID": "2026-giaa-state-individual-boys",
+    "Season": 2026,
+    "Date": "2026-04-20",
+    "Location": "Macon, GA",
+    "Name": "GIAA State Individual Tennis - Boys",
+    "MatchType": "Tournament",
+    "Gender": "Boys",
+    "Classification": "GIAA AAA",
+    "Status": "Completed",
+    "SourceUrl": "https://app.utrsports.net/events/370886",
+    "Brackets": [
+      {
+        "BracketID": "state-aaa-boys-singles",
+        "Name": "Class AAA Boys Singles",
+        "Gender": "Boys",
+        "EventType": "Singles",
+        "DataPath": "/data/tennis/tournaments/2026-giaa-state-individual-boys/brackets/boysSingles.json"
+      },
+      {
+        "BracketID": "state-aaa-boys-doubles",
+        "Name": "Class AAA Boys Doubles",
+        "Gender": "Boys",
+        "EventType": "Doubles",
+        "DataPath": "/data/tennis/tournaments/2026-giaa-state-individual-boys/brackets/boysDoubles.json"
+      }
+    ],
+    "BracketMatches": [
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-bs-r16-m1",
+        "BracketID": "state-aaa-boys-singles",
+        "Round": "Round of 16",
+        "RoundCode": "R16",
+        "MatchNumber": 1,
+        "Status": "Completed",
+        "Date": "2026-04-20",
+        "StartTime": "08:00",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-william-reed-a-todorov",
+            "DisplayName": "A. Todorov"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-deerfield-e-kunkle",
+            "DisplayName": "E. Kunkle"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 8,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2026-boys-william-reed-a-todorov",
+        "SourceScoreLabel": "8/0"
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-bs-r16-m2",
+        "BracketID": "state-aaa-boys-singles",
+        "Round": "Round of 16",
+        "RoundCode": "R16",
+        "MatchNumber": 2,
+        "Status": "Completed",
+        "Date": "2026-04-20",
+        "StartTime": "08:00",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-westminster-j-lee-state",
+            "DisplayName": "J. Lee"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-frederica-j-tronolone"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 6,
+            "bottom": 8
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2026-boys-frederica-j-tronolone",
+        "SourceScoreLabel": "6/8"
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-bs-r16-m3",
+        "BracketID": "state-aaa-boys-singles",
+        "Round": "Round of 16",
+        "RoundCode": "R16",
+        "MatchNumber": 3,
+        "Status": "Completed",
+        "Date": "2026-04-20",
+        "StartTime": "08:00",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-william-reed-b-gravel",
+            "DisplayName": "B. Gravel"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-pinewood-l-cloud"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 8,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2026-boys-william-reed-b-gravel",
+        "SourceScoreLabel": "8/0"
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-bs-r16-m4",
+        "BracketID": "state-aaa-boys-singles",
+        "Round": "Round of 16",
+        "RoundCode": "R16",
+        "MatchNumber": 4,
+        "Status": "Completed",
+        "Date": "2026-04-20",
+        "StartTime": "08:00",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-valwood-e-gaskins"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026056
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 0,
+            "bottom": 8
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "WinnerPlayerID": 2026056,
+        "SourceScoreLabel": "0/8"
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-bs-r16-m5",
+        "BracketID": "state-aaa-boys-singles",
+        "Round": "Round of 16",
+        "RoundCode": "R16",
+        "MatchNumber": 5,
+        "Status": "Completed",
+        "Date": "2026-04-20",
+        "StartTime": "08:00",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-william-reed-t-reddy",
+            "DisplayName": "T. Reddy"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-frederica-n-reinshagen"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 8,
+            "bottom": 1
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2026-boys-william-reed-t-reddy",
+        "SourceScoreLabel": "8/1"
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-bs-r16-m6",
+        "BracketID": "state-aaa-boys-singles",
+        "Round": "Round of 16",
+        "RoundCode": "R16",
+        "MatchNumber": 6,
+        "Status": "Completed",
+        "Date": "2026-04-20",
+        "StartTime": "08:00",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-brookwood-j-quinones",
+            "DisplayName": "J. Quinones"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-westminster-e-mclean"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 5,
+            "bottom": 8
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2026-boys-westminster-e-mclean",
+        "SourceScoreLabel": "5/8"
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-bs-r16-m7",
+        "BracketID": "state-aaa-boys-singles",
+        "Round": "Round of 16",
+        "RoundCode": "R16",
+        "MatchNumber": 7,
+        "Status": "Completed",
+        "Date": "2026-04-20",
+        "StartTime": "08:00",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-dominion-c-hicks",
+            "DisplayName": "C. Hicks"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-valwood-j-dean",
+            "DisplayName": "J. Dean"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 8,
+            "bottom": 2
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2026-boys-dominion-c-hicks",
+        "SourceScoreLabel": "8/2"
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-bs-r16-m8",
+        "BracketID": "state-aaa-boys-singles",
+        "Round": "Round of 16",
+        "RoundCode": "R16",
+        "MatchNumber": 8,
+        "Status": "Completed",
+        "Date": "2026-04-20",
+        "StartTime": "08:00",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-westminster-p-martino"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-rivers-h-lummus",
+            "DisplayName": "H. Lummus"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 0,
+            "bottom": 8
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2026-boys-rivers-h-lummus",
+        "SourceScoreLabel": "0/8"
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-bs-qf-m1",
+        "BracketID": "state-aaa-boys-singles",
+        "Round": "Quarterfinals",
+        "RoundCode": "QF",
+        "MatchNumber": 1,
+        "Status": "Completed",
+        "Date": "2026-04-20",
+        "StartTime": "13:00",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-william-reed-a-todorov",
+            "DisplayName": "A. Todorov"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-frederica-j-tronolone"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "SetNumber": 2,
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2026-boys-william-reed-a-todorov",
+        "SourceScoreLabel": "6/0 6/0"
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-bs-qf-m2",
+        "BracketID": "state-aaa-boys-singles",
+        "Round": "Quarterfinals",
+        "RoundCode": "QF",
+        "MatchNumber": 2,
+        "Status": "Completed",
+        "Date": "2026-04-20",
+        "StartTime": "13:00",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-william-reed-b-gravel",
+            "DisplayName": "B. Gravel"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026056
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 3,
+            "bottom": 6
+          },
+          {
+            "SetNumber": 2,
+            "top": 3,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "WinnerPlayerID": 2026056,
+        "SourceScoreLabel": "3/6 3/6"
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-bs-qf-m3",
+        "BracketID": "state-aaa-boys-singles",
+        "Round": "Quarterfinals",
+        "RoundCode": "QF",
+        "MatchNumber": 3,
+        "Status": "Completed",
+        "Date": "2026-04-20",
+        "StartTime": "13:00",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-william-reed-t-reddy",
+            "DisplayName": "T. Reddy"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-westminster-e-mclean"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "SetNumber": 2,
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2026-boys-william-reed-t-reddy",
+        "SourceScoreLabel": "6/0 6/0"
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-bs-qf-m4",
+        "BracketID": "state-aaa-boys-singles",
+        "Round": "Quarterfinals",
+        "RoundCode": "QF",
+        "MatchNumber": 4,
+        "Status": "Completed",
+        "Date": "2026-04-20",
+        "StartTime": "13:00",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-dominion-c-hicks",
+            "DisplayName": "C. Hicks"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-rivers-h-lummus",
+            "DisplayName": "H. Lummus"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 0,
+            "bottom": 6
+          },
+          {
+            "SetNumber": 2,
+            "top": 1,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2026-boys-rivers-h-lummus",
+        "SourceScoreLabel": "0/6 1/6"
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-bs-sf-m1",
+        "BracketID": "state-aaa-boys-singles",
+        "Round": "Semifinals",
+        "RoundCode": "SF",
+        "MatchNumber": 1,
+        "Status": "Completed",
+        "Date": "2026-04-21",
+        "StartTime": "14:34",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-william-reed-a-todorov",
+            "DisplayName": "A. Todorov"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026056
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 3,
+            "bottom": 6
+          },
+          {
+            "SetNumber": 2,
+            "top": 6,
+            "bottom": 3
+          },
+          {
+            "SetNumber": 3,
+            "top": 1,
+            "bottom": 0,
+            "topTiebreak": 10,
+            "bottomTiebreak": 5,
+            "MatchTiebreak": true
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2026-boys-william-reed-a-todorov",
+        "SourceScoreLabel": "3/6 6/3 1/0(10-5)"
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-bs-sf-m2",
+        "BracketID": "state-aaa-boys-singles",
+        "Round": "Semifinals",
+        "RoundCode": "SF",
+        "MatchNumber": 2,
+        "Status": "Completed",
+        "Date": "2026-04-21",
+        "StartTime": "14:34",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-william-reed-t-reddy",
+            "DisplayName": "T. Reddy"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-rivers-h-lummus",
+            "DisplayName": "H. Lummus"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 1,
+            "bottom": 6
+          },
+          {
+            "SetNumber": 2,
+            "top": 1,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2026-boys-rivers-h-lummus",
+        "SourceScoreLabel": "1/6 1/6"
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-bs-final-m1",
+        "BracketID": "state-aaa-boys-singles",
+        "Round": "Final",
+        "RoundCode": "F",
+        "MatchNumber": 1,
+        "Status": "Completed",
+        "Date": "2026-04-21",
+        "StartTime": "14:34",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-william-reed-a-todorov",
+            "DisplayName": "A. Todorov"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-boys-rivers-h-lummus",
+            "DisplayName": "H. Lummus"
+          }
+        ],
+        "Sets": [],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2026-boys-rivers-h-lummus",
+        "SourceScoreLabel": "Withdrew",
+        "Notes": "UTR lists the final as a withdrawal without set scores."
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-bd-r16-m1",
+        "BracketID": "state-aaa-boys-doubles",
+        "Round": "Round of 16",
+        "RoundCode": "R16",
+        "MatchNumber": 1,
+        "Status": "Bye",
+        "Date": "2026-04-20",
+        "StartTime": null,
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-giaa-state-aaa-bd-rivers-riggs-greene",
+            "DisplayName": "Riley Riggs / Hudson Greene",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-rivers-r-riggs",
+                "DisplayName": "Riley Riggs",
+                "ClassYearLabel": "FR"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-rivers-h-greene",
+                "DisplayName": "Hudson Greene",
+                "ClassYearLabel": "SO"
+              }
+            ]
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "bye",
+            "DisplayName": "Bye"
+          }
+        ],
+        "Sets": [],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2026-giaa-state-aaa-bd-rivers-riggs-greene"
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-bd-r16-m2",
+        "BracketID": "state-aaa-boys-doubles",
+        "Round": "Round of 16",
+        "RoundCode": "R16",
+        "MatchNumber": 2,
+        "Status": "Completed",
+        "Date": "2026-04-20",
+        "StartTime": "08:00",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-giaa-state-aaa-bd-brookwood-desantis-clay",
+            "DisplayName": "P. Desantis / B. Clay",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-brookwood-p-desantis",
+                "DisplayName": "P. Desantis",
+                "ClassYearLabel": "SO"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-brookwood-b-clay",
+                "DisplayName": "B. Clay",
+                "ClassYearLabel": "JR"
+              }
+            ]
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-giaa-state-aaa-bd-william-reed-lukkani-taiana",
+            "DisplayName": "V. Lukkani / B. Taiana",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-william-reed-v-lukkani",
+                "DisplayName": "V. Lukkani",
+                "ClassYearLabel": "SR"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-william-reed-b-taiana",
+                "DisplayName": "B. Taiana",
+                "ClassYearLabel": "JR"
+              }
+            ]
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 0,
+            "bottom": 8
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2026-giaa-state-aaa-bd-william-reed-lukkani-taiana",
+        "SourceScoreLabel": "0/8"
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-bd-r16-m3",
+        "BracketID": "state-aaa-boys-doubles",
+        "Round": "Round of 16",
+        "RoundCode": "R16",
+        "MatchNumber": 3,
+        "Status": "Completed",
+        "Date": "2026-04-20",
+        "StartTime": "08:00",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-giaa-state-aaa-bd-sta-espina-carbone",
+            "DisplayName": "Jordan Espina / Cameron Carbone",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026060
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026057
+              }
+            ]
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-giaa-state-aaa-bd-pinewood-tucker-thompson",
+            "DisplayName": "M. Tucker / C. Thompson",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-pinewood-m-tucker"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-pinewood-c-thompson",
+                "DisplayName": "C. Thompson",
+                "ClassYearLabel": "FR"
+              }
+            ]
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 8,
+            "bottom": 2
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2026-giaa-state-aaa-bd-sta-espina-carbone",
+        "SourceScoreLabel": "8/2"
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-bd-r16-m4",
+        "BracketID": "state-aaa-boys-doubles",
+        "Round": "Round of 16",
+        "RoundCode": "R16",
+        "MatchNumber": 4,
+        "Status": "Completed",
+        "Date": "2026-04-20",
+        "StartTime": "08:00",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-giaa-state-aaa-bd-terrell-crosson-hall",
+            "DisplayName": "A. Crosson / J. Hall",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-terrell-a-crosson",
+                "DisplayName": "A. Crosson",
+                "ClassYearLabel": "JR"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-terrell-j-hall",
+                "DisplayName": "J. Hall",
+                "ClassYearLabel": "JR"
+              }
+            ]
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-giaa-state-aaa-bd-terrell-martin-henley",
+            "DisplayName": "Z. Martin / W. Henley",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-terrell-z-martin"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-terrell-w-henley"
+              }
+            ]
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 3,
+            "bottom": 8
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2026-giaa-state-aaa-bd-terrell-martin-henley",
+        "SourceScoreLabel": "3/8"
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-bd-r16-m5",
+        "BracketID": "state-aaa-boys-doubles",
+        "Round": "Round of 16",
+        "RoundCode": "R16",
+        "MatchNumber": 5,
+        "Status": "Completed",
+        "Date": "2026-04-20",
+        "StartTime": "08:00",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-giaa-state-aaa-bd-brookwood-huffman-brunson",
+            "DisplayName": "M. Huffman / M. Brunson",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-brookwood-m-huffman",
+                "DisplayName": "M. Huffman",
+                "ClassYearLabel": "SO"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-brookwood-m-brunson",
+                "DisplayName": "M. Brunson",
+                "ClassYearLabel": "SR"
+              }
+            ]
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-giaa-state-aaa-bd-frederica-gilbert-evans",
+            "DisplayName": "C. Gilbert / B. Evans",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-frederica-c-gilbert"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-frederica-b-evans"
+              }
+            ]
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 8,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2026-giaa-state-aaa-bd-brookwood-huffman-brunson",
+        "SourceScoreLabel": "8/0"
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-bd-r16-m6",
+        "BracketID": "state-aaa-boys-doubles",
+        "Round": "Round of 16",
+        "RoundCode": "R16",
+        "MatchNumber": 6,
+        "Status": "Completed",
+        "Date": "2026-04-20",
+        "StartTime": "08:00",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-giaa-state-aaa-bd-frederica-mccallum-pope",
+            "DisplayName": "W. Mccallum / W. Pope",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-frederica-w-mccallum"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-frederica-w-pope"
+              }
+            ]
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-giaa-state-aaa-bd-westminster-hubley-jordan",
+            "DisplayName": "P. Hubley / C. Jordan",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-westminster-p-hubley",
+                "DisplayName": "P. Hubley",
+                "ClassYearLabel": "JR"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-westminster-c-jordan"
+              }
+            ]
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 4,
+            "bottom": 8
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2026-giaa-state-aaa-bd-westminster-hubley-jordan",
+        "SourceScoreLabel": "4/8"
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-bd-r16-m7",
+        "BracketID": "state-aaa-boys-doubles",
+        "Round": "Round of 16",
+        "RoundCode": "R16",
+        "MatchNumber": 7,
+        "Status": "Completed",
+        "Date": "2026-04-20",
+        "StartTime": "08:00",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-giaa-state-aaa-bd-westminster-wells-hoover",
+            "DisplayName": "G. Wells / M. Hoover",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-westminster-g-wells"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-westminster-m-hoover",
+                "DisplayName": "M. Hoover",
+                "ClassYearLabel": "FR"
+              }
+            ]
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-giaa-state-aaa-bd-tiftarea-paulk-downing",
+            "DisplayName": "N. Paulk / Z. Downing",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-tiftarea-n-paulk",
+                "DisplayName": "N. Paulk",
+                "ClassYearLabel": "P-FR"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-tiftarea-z-downing",
+                "DisplayName": "Z. Downing",
+                "ClassYearLabel": "P-FR"
+              }
+            ]
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 8,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2026-giaa-state-aaa-bd-westminster-wells-hoover",
+        "SourceScoreLabel": "8/0"
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-bd-r16-m8",
+        "BracketID": "state-aaa-boys-doubles",
+        "Round": "Round of 16",
+        "RoundCode": "R16",
+        "MatchNumber": 8,
+        "Status": "Completed",
+        "Date": "2026-04-20",
+        "StartTime": "08:00",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-giaa-state-aaa-bd-pinewood-burke-mathis",
+            "DisplayName": "E. Burke / W. Mathis",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-pinewood-e-burke",
+                "DisplayName": "E. Burke",
+                "ClassYearLabel": "JR"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-pinewood-w-mathis"
+              }
+            ]
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-giaa-state-aaa-bd-william-reed-montgomery-galvis",
+            "DisplayName": "L. Montgomery / M. Galvis",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-william-reed-l-montgomery",
+                "DisplayName": "L. Montgomery",
+                "ClassYearLabel": "P-FR"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-william-reed-m-galvis",
+                "DisplayName": "M. Galvis",
+                "ClassYearLabel": "JR"
+              }
+            ]
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 0,
+            "bottom": 8
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2026-giaa-state-aaa-bd-william-reed-montgomery-galvis",
+        "SourceScoreLabel": "0/8"
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-bd-qf-m1",
+        "BracketID": "state-aaa-boys-doubles",
+        "Round": "Quarterfinals",
+        "RoundCode": "QF",
+        "MatchNumber": 1,
+        "Status": "Completed",
+        "Date": "2026-04-20",
+        "StartTime": "13:00",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-giaa-state-aaa-bd-rivers-riggs-greene",
+            "DisplayName": "Riley Riggs / Hudson Greene",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-rivers-r-riggs",
+                "DisplayName": "Riley Riggs",
+                "ClassYearLabel": "FR"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-rivers-h-greene",
+                "DisplayName": "Hudson Greene",
+                "ClassYearLabel": "SO"
+              }
+            ]
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-giaa-state-aaa-bd-william-reed-lukkani-taiana",
+            "DisplayName": "V. Lukkani / B. Taiana",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-william-reed-v-lukkani",
+                "DisplayName": "V. Lukkani",
+                "ClassYearLabel": "SR"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-william-reed-b-taiana",
+                "DisplayName": "B. Taiana",
+                "ClassYearLabel": "JR"
+              }
+            ]
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "SetNumber": 2,
+            "top": 6,
+            "bottom": 2
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2026-giaa-state-aaa-bd-rivers-riggs-greene",
+        "SourceScoreLabel": "6/0 6/2"
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-bd-qf-m2",
+        "BracketID": "state-aaa-boys-doubles",
+        "Round": "Quarterfinals",
+        "RoundCode": "QF",
+        "MatchNumber": 2,
+        "Status": "Completed",
+        "Date": "2026-04-20",
+        "StartTime": "13:00",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-giaa-state-aaa-bd-sta-espina-carbone",
+            "DisplayName": "Jordan Espina / Cameron Carbone",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026060
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026057
+              }
+            ]
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-giaa-state-aaa-bd-terrell-martin-henley",
+            "DisplayName": "Z. Martin / W. Henley",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-terrell-z-martin"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-terrell-w-henley"
+              }
+            ]
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 6,
+            "bottom": 4
+          },
+          {
+            "SetNumber": 2,
+            "top": 1,
+            "bottom": 6
+          },
+          {
+            "SetNumber": 3,
+            "top": 0,
+            "bottom": 1,
+            "topTiebreak": 8,
+            "bottomTiebreak": 10,
+            "MatchTiebreak": true
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2026-giaa-state-aaa-bd-terrell-martin-henley",
+        "SourceScoreLabel": "6/4 1/6 0/1(8-10)"
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-bd-qf-m3",
+        "BracketID": "state-aaa-boys-doubles",
+        "Round": "Quarterfinals",
+        "RoundCode": "QF",
+        "MatchNumber": 3,
+        "Status": "Completed",
+        "Date": "2026-04-20",
+        "StartTime": "13:00",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-giaa-state-aaa-bd-brookwood-huffman-brunson",
+            "DisplayName": "M. Huffman / M. Brunson",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-brookwood-m-huffman",
+                "DisplayName": "M. Huffman",
+                "ClassYearLabel": "SO"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-brookwood-m-brunson",
+                "DisplayName": "M. Brunson",
+                "ClassYearLabel": "SR"
+              }
+            ]
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-giaa-state-aaa-bd-westminster-hubley-jordan",
+            "DisplayName": "P. Hubley / C. Jordan",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-westminster-p-hubley",
+                "DisplayName": "P. Hubley",
+                "ClassYearLabel": "JR"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-westminster-c-jordan"
+              }
+            ]
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "SetNumber": 2,
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2026-giaa-state-aaa-bd-brookwood-huffman-brunson",
+        "SourceScoreLabel": "6/0 6/0"
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-bd-qf-m4",
+        "BracketID": "state-aaa-boys-doubles",
+        "Round": "Quarterfinals",
+        "RoundCode": "QF",
+        "MatchNumber": 4,
+        "Status": "Completed",
+        "Date": "2026-04-20",
+        "StartTime": "13:00",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-giaa-state-aaa-bd-westminster-wells-hoover",
+            "DisplayName": "G. Wells / M. Hoover",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-westminster-g-wells"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-westminster-m-hoover",
+                "DisplayName": "M. Hoover",
+                "ClassYearLabel": "FR"
+              }
+            ]
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-giaa-state-aaa-bd-william-reed-montgomery-galvis",
+            "DisplayName": "L. Montgomery / M. Galvis",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-william-reed-l-montgomery",
+                "DisplayName": "L. Montgomery",
+                "ClassYearLabel": "P-FR"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-william-reed-m-galvis",
+                "DisplayName": "M. Galvis",
+                "ClassYearLabel": "JR"
+              }
+            ]
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 0,
+            "bottom": 6
+          },
+          {
+            "SetNumber": 2,
+            "top": 0,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2026-giaa-state-aaa-bd-william-reed-montgomery-galvis",
+        "SourceScoreLabel": "0/6 0/6"
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-bd-sf-m1",
+        "BracketID": "state-aaa-boys-doubles",
+        "Round": "Semifinals",
+        "RoundCode": "SF",
+        "MatchNumber": 1,
+        "Status": "Completed",
+        "Date": "2026-04-21",
+        "StartTime": "15:33",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-giaa-state-aaa-bd-rivers-riggs-greene",
+            "DisplayName": "Riley Riggs / Hudson Greene",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-rivers-r-riggs",
+                "DisplayName": "Riley Riggs",
+                "ClassYearLabel": "FR"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-rivers-h-greene",
+                "DisplayName": "Hudson Greene",
+                "ClassYearLabel": "SO"
+              }
+            ]
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-giaa-state-aaa-bd-terrell-martin-henley",
+            "DisplayName": "Z. Martin / W. Henley",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-terrell-z-martin"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-terrell-w-henley"
+              }
+            ]
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 6,
+            "bottom": 1
+          },
+          {
+            "SetNumber": 2,
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2026-giaa-state-aaa-bd-rivers-riggs-greene",
+        "SourceScoreLabel": "6/1 6/0"
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-bd-sf-m2",
+        "BracketID": "state-aaa-boys-doubles",
+        "Round": "Semifinals",
+        "RoundCode": "SF",
+        "MatchNumber": 2,
+        "Status": "Completed",
+        "Date": "2026-04-21",
+        "StartTime": "15:34",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-giaa-state-aaa-bd-brookwood-huffman-brunson",
+            "DisplayName": "M. Huffman / M. Brunson",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-brookwood-m-huffman",
+                "DisplayName": "M. Huffman",
+                "ClassYearLabel": "SO"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-brookwood-m-brunson",
+                "DisplayName": "M. Brunson",
+                "ClassYearLabel": "SR"
+              }
+            ]
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-giaa-state-aaa-bd-william-reed-montgomery-galvis",
+            "DisplayName": "L. Montgomery / M. Galvis",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-william-reed-l-montgomery",
+                "DisplayName": "L. Montgomery",
+                "ClassYearLabel": "P-FR"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-william-reed-m-galvis",
+                "DisplayName": "M. Galvis",
+                "ClassYearLabel": "JR"
+              }
+            ]
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 4,
+            "bottom": 6
+          },
+          {
+            "SetNumber": 2,
+            "top": 6,
+            "bottom": 4
+          },
+          {
+            "SetNumber": 3,
+            "top": 0,
+            "bottom": 1,
+            "topTiebreak": 9,
+            "bottomTiebreak": 11,
+            "MatchTiebreak": true
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2026-giaa-state-aaa-bd-william-reed-montgomery-galvis",
+        "SourceScoreLabel": "4/6 6/4 0/1(9-11)"
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-bd-final-m1",
+        "BracketID": "state-aaa-boys-doubles",
+        "Round": "Final",
+        "RoundCode": "F",
+        "MatchNumber": 1,
+        "Status": "Completed",
+        "Date": "2026-04-21",
+        "StartTime": "15:34",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-giaa-state-aaa-bd-rivers-riggs-greene",
+            "DisplayName": "Riley Riggs / Hudson Greene",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-rivers-r-riggs",
+                "DisplayName": "Riley Riggs",
+                "ClassYearLabel": "FR"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-rivers-h-greene",
+                "DisplayName": "Hudson Greene",
+                "ClassYearLabel": "SO"
+              }
+            ]
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2026-giaa-state-aaa-bd-william-reed-montgomery-galvis",
+            "DisplayName": "L. Montgomery / M. Galvis",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-william-reed-l-montgomery",
+                "DisplayName": "L. Montgomery",
+                "ClassYearLabel": "P-FR"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2026-boys-william-reed-m-galvis",
+                "DisplayName": "M. Galvis",
+                "ClassYearLabel": "JR"
+              }
+            ]
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 6,
+            "bottom": 4
+          },
+          {
+            "SetNumber": 2,
+            "top": 1,
+            "bottom": 6
+          },
+          {
+            "SetNumber": 3,
+            "top": 1,
+            "bottom": 0,
+            "topTiebreak": 10,
+            "bottomTiebreak": 8,
+            "MatchTiebreak": true
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2026-giaa-state-aaa-bd-rivers-riggs-greene",
+        "SourceScoreLabel": "6/4 1/6 1/0(10-8)"
+      }
+    ],
+    "Source": "UTR Sports event 370886; full Class AAA boys singles and doubles state brackets captured for St. Andrew's participants.",
+    "TournamentDataPath": "/data/tennis/tournaments/2026-giaa-state-individual-boys/metadata.json"
+  },
+  {
+    "MatchID": "2026-giaa-state-individual-girls",
+    "Season": 2026,
+    "Date": "2026-04-20",
+    "Location": "Macon, GA",
+    "Name": "GIAA State Individual Tennis - Girls",
+    "MatchType": "Tournament",
+    "Gender": "Girls",
+    "Classification": "GIAA AAA",
+    "Status": "Completed",
+    "SourceUrl": "https://app.utrsports.net/events/370885",
+    "Brackets": [
+      {
+        "BracketID": "state-aaa-girls-singles",
+        "Name": "Class AAA Girls Singles",
+        "Gender": "Girls",
+        "EventType": "Singles",
+        "DataPath": "/data/tennis/tournaments/2026-giaa-state-individual-girls/brackets/girlsSingles.json"
+      }
+    ],
+    "BracketMatches": [
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-gs-r16-m1",
+        "BracketID": "state-aaa-girls-singles",
+        "Round": "Round of 16",
+        "RoundCode": "R16",
+        "MatchNumber": 1,
+        "Status": "Completed",
+        "Date": "2026-04-20",
+        "StartTime": "08:00",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-rivers-j-brushaber",
+            "DisplayName": "J. Brushaber"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-tiftarea-c-joyner",
+            "DisplayName": "C. Joyner"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 8,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2026-girls-rivers-j-brushaber",
+        "SourceScoreLabel": "8/0"
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-gs-r16-m2",
+        "BracketID": "state-aaa-girls-singles",
+        "Round": "Round of 16",
+        "RoundCode": "R16",
+        "MatchNumber": 2,
+        "Status": "Completed",
+        "Date": "2026-04-20",
+        "StartTime": "08:00",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-terrell-c-joiner",
+            "DisplayName": "C. Joiner"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-dominion-a-kakaty",
+            "DisplayName": "A. Kakaty"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 8,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2026-girls-terrell-c-joiner",
+        "SourceScoreLabel": "8/0"
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-gs-r16-m3",
+        "BracketID": "state-aaa-girls-singles",
+        "Round": "Round of 16",
+        "RoundCode": "R16",
+        "MatchNumber": 3,
+        "Status": "Completed",
+        "Date": "2026-04-20",
+        "StartTime": "08:00",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-brookwood-g-quinones",
+            "DisplayName": "G. Quinones"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-tiftarea-m-graham",
+            "DisplayName": "M. Graham"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 8,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2026-girls-brookwood-g-quinones",
+        "SourceScoreLabel": "8/6"
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-gs-r16-m4",
+        "BracketID": "state-aaa-girls-singles",
+        "Round": "Round of 16",
+        "RoundCode": "R16",
+        "MatchNumber": 4,
+        "Status": "Completed",
+        "Date": "2026-04-20",
+        "StartTime": "08:00",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-westminster-s-rice"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-frederica-a-wyrick"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 3,
+            "bottom": 8
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2026-girls-frederica-a-wyrick",
+        "SourceScoreLabel": "3/8"
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-gs-r16-m5",
+        "BracketID": "state-aaa-girls-singles",
+        "Round": "Round of 16",
+        "RoundCode": "R16",
+        "MatchNumber": 5,
+        "Status": "Completed",
+        "Date": "2026-04-20",
+        "StartTime": "08:00",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-dominion-g-rowell",
+            "DisplayName": "G. Rowell"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-brookwood-c-cobb",
+            "DisplayName": "C. Cobb"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 8,
+            "bottom": 1
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2026-girls-dominion-g-rowell",
+        "SourceScoreLabel": "8/1"
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-gs-r16-m6",
+        "BracketID": "state-aaa-girls-singles",
+        "Round": "Round of 16",
+        "RoundCode": "R16",
+        "MatchNumber": 6,
+        "Status": "Completed",
+        "Date": "2026-04-20",
+        "StartTime": "08:00",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-valwood-m-perry",
+            "DisplayName": "M. Perry"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-frederica-k-offner"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 5,
+            "bottom": 8
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2026-girls-frederica-k-offner",
+        "SourceScoreLabel": "5/8"
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-gs-r16-m7",
+        "BracketID": "state-aaa-girls-singles",
+        "Round": "Round of 16",
+        "RoundCode": "R16",
+        "MatchNumber": 7,
+        "Status": "Completed",
+        "Date": "2026-04-20",
+        "StartTime": "08:00",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-terrell-l-walters",
+            "DisplayName": "L. Walters"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-westminster-e-carr"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 8,
+            "bottom": 9,
+            "topTiebreak": 2,
+            "bottomTiebreak": 7
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2026-girls-westminster-e-carr",
+        "SourceScoreLabel": "8/9(2-7)"
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-gs-r16-m8",
+        "BracketID": "state-aaa-girls-singles",
+        "Round": "Round of 16",
+        "RoundCode": "R16",
+        "MatchNumber": 8,
+        "Status": "Completed",
+        "Date": "2026-04-20",
+        "StartTime": "08:00",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026046
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-rivers-p-pouatcha",
+            "DisplayName": "P. Pouatcha"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 0,
+            "bottom": 8
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2026-girls-rivers-p-pouatcha",
+        "SourceScoreLabel": "0/8"
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-gs-qf-m1",
+        "BracketID": "state-aaa-girls-singles",
+        "Round": "Quarterfinals",
+        "RoundCode": "QF",
+        "MatchNumber": 1,
+        "Status": "Completed",
+        "Date": "2026-04-20",
+        "StartTime": "13:00",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-rivers-j-brushaber",
+            "DisplayName": "J. Brushaber"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-terrell-c-joiner",
+            "DisplayName": "C. Joiner"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "SetNumber": 2,
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2026-girls-rivers-j-brushaber",
+        "SourceScoreLabel": "6/0 6/0"
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-gs-qf-m2",
+        "BracketID": "state-aaa-girls-singles",
+        "Round": "Quarterfinals",
+        "RoundCode": "QF",
+        "MatchNumber": 2,
+        "Status": "Completed",
+        "Date": "2026-04-20",
+        "StartTime": "13:00",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-brookwood-g-quinones",
+            "DisplayName": "G. Quinones"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-frederica-a-wyrick"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 7,
+            "bottom": 6,
+            "topTiebreak": 7,
+            "bottomTiebreak": 4
+          },
+          {
+            "SetNumber": 2,
+            "top": 5,
+            "bottom": 7
+          },
+          {
+            "SetNumber": 3,
+            "top": 1,
+            "bottom": 0,
+            "MatchTiebreak": true
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2026-girls-brookwood-g-quinones",
+        "SourceScoreLabel": "7/6(7-4) 5/7 1/0"
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-gs-qf-m3",
+        "BracketID": "state-aaa-girls-singles",
+        "Round": "Quarterfinals",
+        "RoundCode": "QF",
+        "MatchNumber": 3,
+        "Status": "Completed",
+        "Date": "2026-04-20",
+        "StartTime": "13:00",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-dominion-g-rowell",
+            "DisplayName": "G. Rowell"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-frederica-k-offner"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 6,
+            "bottom": 7,
+            "topTiebreak": 4,
+            "bottomTiebreak": 7
+          },
+          {
+            "SetNumber": 2,
+            "top": 5,
+            "bottom": 7
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2026-girls-frederica-k-offner",
+        "SourceScoreLabel": "6/7(4-7) 5/7"
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-gs-qf-m4",
+        "BracketID": "state-aaa-girls-singles",
+        "Round": "Quarterfinals",
+        "RoundCode": "QF",
+        "MatchNumber": 4,
+        "Status": "Completed",
+        "Date": "2026-04-20",
+        "StartTime": "13:00",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-westminster-e-carr"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-rivers-p-pouatcha",
+            "DisplayName": "P. Pouatcha"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 0,
+            "bottom": 6
+          },
+          {
+            "SetNumber": 2,
+            "top": 0,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2026-girls-rivers-p-pouatcha",
+        "SourceScoreLabel": "0/6 0/6"
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-gs-sf-m1",
+        "BracketID": "state-aaa-girls-singles",
+        "Round": "Semifinals",
+        "RoundCode": "SF",
+        "MatchNumber": 1,
+        "Status": "Completed",
+        "Date": "2026-04-21",
+        "StartTime": "14:35",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-rivers-j-brushaber",
+            "DisplayName": "J. Brushaber"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-brookwood-g-quinones",
+            "DisplayName": "G. Quinones"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "SetNumber": 2,
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2026-girls-rivers-j-brushaber",
+        "SourceScoreLabel": "6/0 6/0"
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-gs-sf-m2",
+        "BracketID": "state-aaa-girls-singles",
+        "Round": "Semifinals",
+        "RoundCode": "SF",
+        "MatchNumber": 2,
+        "Status": "Completed",
+        "Date": "2026-04-21",
+        "StartTime": "14:36",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-frederica-k-offner"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-rivers-p-pouatcha",
+            "DisplayName": "P. Pouatcha"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 0,
+            "bottom": 6
+          },
+          {
+            "SetNumber": 2,
+            "top": 0,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2026-girls-rivers-p-pouatcha",
+        "SourceScoreLabel": "0/6 0/6"
+      },
+      {
+        "TennisMatchID": "2026-giaa-state-aaa-gs-final-m1",
+        "BracketID": "state-aaa-girls-singles",
+        "Round": "Final",
+        "RoundCode": "F",
+        "MatchNumber": 1,
+        "Status": "Completed",
+        "Date": "2026-04-21",
+        "StartTime": "14:36",
+        "Participants": [
+          {
+            "Side": "top",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-rivers-j-brushaber",
+            "DisplayName": "J. Brushaber"
+          },
+          {
+            "Side": "bottom",
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2026-girls-rivers-p-pouatcha",
+            "DisplayName": "P. Pouatcha"
+          }
+        ],
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "SetNumber": 2,
+            "top": 6,
+            "bottom": 4
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2026-girls-rivers-j-brushaber",
+        "SourceScoreLabel": "6/0 6/4"
+      }
+    ],
+    "Source": "UTR Sports event 370885; full Class AAA girls singles state bracket captured for St. Andrew's participant.",
+    "TournamentDataPath": "/data/tennis/tournaments/2026-giaa-state-individual-girls/metadata.json"
   }
 ]

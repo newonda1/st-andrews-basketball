@@ -1,12 +1,76 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 
 import AthleticsProgramShell from "../../components/AthleticsProgramShell";
 import GameDetail from "./pages/GameDetail";
 import PlayerPage from "./pages/PlayerPage";
+import {
+  CareerRecords,
+  FullCareerStats,
+  FullTeamStats,
+  RecordsVsOpponents,
+  SeasonRecords,
+  SingleGameRecords,
+  TeamSeasonRecords,
+  TeamSingleGameRecords,
+} from "./pages/RecordsPages";
 import SeasonPage from "./pages/SeasonPage";
 import YearlyResults from "./pages/YearlyResults";
 import { loadVolleyballData } from "./volleyballData";
+
+const menuSections = [
+  {
+    title: "Results",
+    links: [
+      {
+        to: "/athletics/volleyball/yearly-results",
+        label: "Full Year-by-Year Results",
+      },
+      {
+        to: "/athletics/volleyball/records/opponents",
+        label: "Opponent Game History",
+      },
+    ],
+  },
+  {
+    title: "Team Stats",
+    links: [
+      {
+        to: "/athletics/volleyball/team/full",
+        label: "Full Team Stats",
+      },
+      {
+        to: "/athletics/volleyball/records/team",
+        label: "Team Single Game Records",
+      },
+      {
+        to: "/athletics/volleyball/team/season-records",
+        label: "Team Season Records",
+      },
+    ],
+  },
+  {
+    title: "Individual Stats",
+    links: [
+      {
+        to: "/athletics/volleyball/records/career",
+        label: "Full Career Stats",
+      },
+      {
+        to: "/athletics/volleyball/records/single-game",
+        label: "Single Game Records",
+      },
+      {
+        to: "/athletics/volleyball/records/season",
+        label: "Season Records",
+      },
+      {
+        to: "/athletics/volleyball/records/career-records",
+        label: "Career Records",
+      },
+    ],
+  },
+];
 
 export default function VolleyballApp() {
   const [data, setData] = useState({
@@ -45,27 +109,6 @@ export default function VolleyballApp() {
     };
   }, []);
 
-  const menuSections = useMemo(
-    () => [
-      {
-        title: "Results",
-        links: [
-          { to: "/athletics/volleyball/yearly-results", label: "Season Results" },
-          { to: "/athletics/volleyball/seasons/2025", label: "2025 Season" },
-        ],
-      },
-      {
-        title: "Season",
-        links: [
-          { to: "/athletics/volleyball/seasons/2025#schedule", label: "Schedule" },
-          { to: "/athletics/volleyball/seasons/2025#roster", label: "Roster" },
-          { to: "/athletics/volleyball/seasons/2025#stats", label: "Stats" },
-        ],
-      },
-    ],
-    []
-  );
-
   return (
     <AthleticsProgramShell
       title="Volleyball"
@@ -79,6 +122,38 @@ export default function VolleyballApp() {
         <Route
           path="yearly-results"
           element={<YearlyResults data={data} status={status} />}
+        />
+        <Route
+          path="team/full"
+          element={<FullTeamStats data={data} status={status} />}
+        />
+        <Route
+          path="team/season-records"
+          element={<TeamSeasonRecords data={data} status={status} />}
+        />
+        <Route
+          path="records/career"
+          element={<FullCareerStats data={data} status={status} />}
+        />
+        <Route
+          path="records/season"
+          element={<SeasonRecords data={data} status={status} />}
+        />
+        <Route
+          path="records/career-records"
+          element={<CareerRecords data={data} status={status} />}
+        />
+        <Route
+          path="records/single-game"
+          element={<SingleGameRecords data={data} status={status} />}
+        />
+        <Route
+          path="records/team"
+          element={<TeamSingleGameRecords data={data} status={status} />}
+        />
+        <Route
+          path="records/opponents"
+          element={<RecordsVsOpponents data={data} status={status} />}
         />
         <Route
           path="seasons/:seasonId"

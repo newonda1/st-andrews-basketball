@@ -312,6 +312,7 @@ function applyDerivedStats(target, matchesPlayed) {
 function createEmptyStatRow(seed = {}) {
   return {
     ...seed,
+    Games: 0,
     SetsPlayed: 0,
     Kills: 0,
     KillsPerSet: null,
@@ -347,6 +348,25 @@ function createEmptyStatRow(seed = {}) {
   };
 }
 
+export function aggregateVolleyballStatRows(rows = [], seed = {}) {
+  const aggregate = createEmptyStatRow(seed);
+  const games = new Set();
+
+  rows.forEach((row) => {
+    games.add(String(row.GameID));
+    if (aggregate.JerseyNumber == null && row.JerseyNumber != null) {
+      aggregate.JerseyNumber = row.JerseyNumber;
+    }
+    if (!aggregate.PlayerName && row.PlayerName) {
+      aggregate.PlayerName = row.PlayerName;
+    }
+    addCountingStats(aggregate, row);
+  });
+
+  aggregate.Games = games.size;
+  return applyDerivedStats(aggregate, games.size);
+}
+
 export function aggregatePlayerSeasonStatsFromGames(playerGameStats = [], seasonId) {
   const playerRows = new Map();
 
@@ -354,31 +374,19 @@ export function aggregatePlayerSeasonStatsFromGames(playerGameStats = [], season
     .filter((row) => Number(row.Season) === Number(seasonId))
     .forEach((row) => {
       const playerId = String(row.PlayerID);
-      if (!playerRows.has(playerId)) {
-        playerRows.set(playerId, {
-          row: createEmptyStatRow({
-            Season: Number(seasonId),
-            PlayerID: row.PlayerID,
-            JerseyNumber: row.JerseyNumber,
-            PlayerName: row.PlayerName,
-          }),
-          games: new Set(),
-        });
-      }
-
-      const aggregate = playerRows.get(playerId);
-      aggregate.games.add(String(row.GameID));
-      if (aggregate.row.JerseyNumber == null && row.JerseyNumber != null) {
-        aggregate.row.JerseyNumber = row.JerseyNumber;
-      }
-      if (!aggregate.row.PlayerName && row.PlayerName) {
-        aggregate.row.PlayerName = row.PlayerName;
-      }
-      addCountingStats(aggregate.row, row);
+      if (!playerRows.has(playerId)) playerRows.set(playerId, []);
+      playerRows.get(playerId).push(row);
     });
 
-  return Array.from(playerRows.values())
-    .map(({ row, games }) => applyDerivedStats(row, games.size))
+  return Array.from(playerRows.entries())
+    .map(([, rows]) =>
+      aggregateVolleyballStatRows(rows, {
+        Season: Number(seasonId),
+        PlayerID: rows[0]?.PlayerID,
+        JerseyNumber: rows[0]?.JerseyNumber,
+        PlayerName: rows[0]?.PlayerName,
+      })
+    )
     .sort((a, b) => {
       const jerseyDiff = Number(a.JerseyNumber || 999) - Number(b.JerseyNumber || 999);
       if (jerseyDiff !== 0) return jerseyDiff;

@@ -280,6 +280,41 @@ const DOUBLES_LAYOUT = {
   headerH: 34,
 };
 
+function formatShortMatchDate(dateValue) {
+  if (!dateValue) return null;
+
+  const date = new Date(`${dateValue}T12:00:00`);
+  if (Number.isNaN(date.getTime())) return String(dateValue);
+
+  return date.toLocaleDateString(undefined, {
+    month: "short",
+    day: "numeric",
+  });
+}
+
+function formatMatchTime(timeValue) {
+  if (!timeValue) return null;
+
+  const [hourPart, minutePart = "00"] = String(timeValue).split(":");
+  const hour = Number(hourPart);
+  const minute = Number(minutePart);
+  if (!Number.isFinite(hour) || !Number.isFinite(minute)) return String(timeValue);
+
+  const suffix = hour >= 12 ? "PM" : "AM";
+  const hour12 = hour % 12 || 12;
+  return `${hour12}:${String(minute).padStart(2, "0")} ${suffix}`;
+}
+
+function extraMatchMeta(match) {
+  return [
+    match.Round,
+    formatShortMatchDate(match.Date),
+    formatMatchTime(match.StartTime),
+  ]
+    .filter(Boolean)
+    .join(" • ");
+}
+
 function layoutForBracket(bracket) {
   return bracket?.EventType === "Doubles" ? DOUBLES_LAYOUT : SINGLES_LAYOUT;
 }
@@ -605,14 +640,20 @@ export default function TennisTournamentBracket({
               <div
                 key={match.TennisMatchID}
                 className="min-w-0"
-                style={{ height: `${layoutConfig.cardH}px` }}
               >
-                <MatchCard
-                  match={match}
-                  playerMap={playerMap}
-                  opponentMap={opponentMap}
-                  schoolMap={schoolMap}
-                />
+                {extraMatchMeta(match) ? (
+                  <p className="mb-2 text-xs font-bold uppercase tracking-[0.14em] text-slate-500">
+                    {extraMatchMeta(match)}
+                  </p>
+                ) : null}
+                <div style={{ height: `${layoutConfig.cardH}px` }}>
+                  <MatchCard
+                    match={match}
+                    playerMap={playerMap}
+                    opponentMap={opponentMap}
+                    schoolMap={schoolMap}
+                  />
+                </div>
               </div>
             ))}
           </div>

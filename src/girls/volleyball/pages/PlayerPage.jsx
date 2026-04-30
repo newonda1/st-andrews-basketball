@@ -1,219 +1,338 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import {
   VOLLEYBALL_STAT_SECTIONS,
-  aggregatePlayerSeasonStatsFromGames,
+  aggregateVolleyballStatRows,
   buildPlayerMap,
   formatDate,
   formatStat,
   getPlayerName,
   getRosterForSeason,
   getSeasonGames,
+  getSeasonLabel,
 } from "../volleyballData";
 
-const LEADER_FIELDS = [
-  { key: "SetsPlayed", label: "SP" },
-  { key: "Kills", label: "Kills" },
-  { key: "Aces", label: "Aces" },
-  { key: "Digs", label: "Digs" },
-  { key: "Assists", label: "Assists" },
-  { key: "TotalBlocks", label: "Blocks" },
-];
+function statViewKey(title) {
+  return String(title || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
+function getLogColumns(section) {
+  return section.columns.filter(
+    (column) =>
+      !["BlocksPerMatch", "DigsPerMatch", "ReceptionsPerMatch"].includes(column.key)
+  );
+}
+
+const STAT_VIEWS = Object.fromEntries(
+  VOLLEYBALL_STAT_SECTIONS.map((section) => [
+    statViewKey(section.title),
+    {
+      label: section.title,
+      summaryColumns: [
+        { key: "Games", label: "M", render: (stats) => formatStat(stats.Games) },
+        ...section.columns.map((column) => ({
+          ...column,
+          render: (stats) => formatStat(stats[column.key], column),
+        })),
+      ],
+      logColumns: getLogColumns(section).map((column) => ({
+        ...column,
+        render: (row) => formatStat(row[column.key], column),
+      })),
+    },
+  ])
+);
+
+const DEFAULT_VIEW = statViewKey(VOLLEYBALL_STAT_SECTIONS[0]?.title || "Attacking");
+
+function getSeasonMeta(seasons, seasonId) {
+  return seasons.find((season) => Number(season.SeasonID) === Number(seasonId)) || {
+    SeasonID: seasonId,
+  };
+}
+
+function getSeasonDisplay(seasons, seasonId) {
+  return getSeasonLabel(getSeasonMeta(seasons, seasonId));
+}
+
+function groupRowsBySeason(rows, seasons) {
+  const grouped = new Map();
+
+  rows.forEach((row) => {
+    const season = Number(row.Season);
+    if (!grouped.has(season)) grouped.set(season, []);
+    grouped.get(season).push(row);
+  });
+
+  return [...grouped.entries()]
+    .sort((a, b) => Number(a[0]) - Number(b[0]))
+    .map(([season, seasonRows]) => ({
+      season,
+      label: getSeasonDisplay(seasons, season),
+      totals: aggregateVolleyballStatRows(seasonRows, {
+        Season: season,
+        PlayerID: seasonRows[0]?.PlayerID,
+        JerseyNumber: seasonRows[0]?.JerseyNumber,
+        PlayerName: seasonRows[0]?.PlayerName,
+      }),
+    }));
+}
+
+function groupGamesBySeason(rows, seasons) {
+  const grouped = new Map();
+
+  rows.forEach((row) => {
+    const season = Number(row.Season);
+    if (!grouped.has(season)) grouped.set(season, []);
+    grouped.get(season).push(row);
+  });
+
+  return [...grouped.entries()]
+    .sort((a, b) => Number(b[0]) - Number(a[0]))
+    .map(([season, seasonRows]) => ({
+      season,
+      label: getSeasonDisplay(seasons, season),
+      rows: seasonRows.sort((a, b) =>
+        String(b.game?.Date || "").localeCompare(String(a.game?.Date || ""))
+      ),
+    }));
+}
 
 export default function PlayerPage({ data, status = "" }) {
   const { playerId } = useParams();
   const resolvedPlayerId = Number(playerId);
+  const [selectedView, setSelectedView] = useState(DEFAULT_VIEW);
+
   const playerMap = useMemo(() => buildPlayerMap(data.players), [data.players]);
   const player = playerMap.get(String(resolvedPlayerId));
   const rosterEntry = useMemo(() => {
-    for (const roster of data.rosters) {
-      const match = (roster.Players || []).find(
+    const sortedRosters = [...data.rosters].sort(
+      (a, b) => Number(b.SeasonID || 0) - Number(a.SeasonID || 0)
+    );
+
+    for (const roster of sortedRosters) {
+      const match = getRosterForSeason([roster], roster.SeasonID).Players.find(
         (entry) => Number(entry.PlayerID) === resolvedPlayerId
       );
       if (match) return { ...match, SeasonID: roster.SeasonID };
     }
+
     return null;
   }, [data.rosters, resolvedPlayerId]);
-  const seasonStats = useMemo(
-    () =>
-      aggregatePlayerSeasonStatsFromGames(
-        data.playerGameStats,
-        rosterEntry?.SeasonID || 2025
-      ).find((entry) => Number(entry.PlayerID) === resolvedPlayerId) || null,
-    [data.playerGameStats, resolvedPlayerId, rosterEntry]
-  );
-  const seasonGames = useMemo(
-    () => getSeasonGames(data.games, rosterEntry?.SeasonID || 2025),
-    [data.games, rosterEntry]
-  );
-  const gameRows = useMemo(
+  const playerGameRows = useMemo(
     () =>
       data.playerGameStats
         .filter((entry) => Number(entry.PlayerID) === resolvedPlayerId)
-        .map((entry) => ({
-          ...entry,
-          game: seasonGames.find((game) => String(game.GameID) === String(entry.GameID)),
-        }))
-        .filter((entry) => entry.game)
-        .sort((a, b) => String(a.game.Date || "").localeCompare(String(b.game.Date || ""))),
-    [data.playerGameStats, resolvedPlayerId, seasonGames]
+        .map((entry) => {
+          const seasonGames = getSeasonGames(data.games, entry.Season);
+          const game = seasonGames.find(
+            (gameEntry) => String(gameEntry.GameID) === String(entry.GameID)
+          );
+          return game ? { ...entry, game } : null;
+        })
+        .filter(Boolean),
+    [data.games, data.playerGameStats, resolvedPlayerId]
   );
+  const careerTotalsBySeason = useMemo(
+    () => groupRowsBySeason(playerGameRows, data.seasons),
+    [data.seasons, playerGameRows]
+  );
+  const careerTotals = useMemo(
+    () =>
+      aggregateVolleyballStatRows(playerGameRows, {
+        PlayerID: resolvedPlayerId,
+        JerseyNumber: rosterEntry?.JerseyNumber,
+        PlayerName: player ? getPlayerName(player) : "",
+      }),
+    [player, playerGameRows, resolvedPlayerId, rosterEntry]
+  );
+  const gamesBySeason = useMemo(
+    () => groupGamesBySeason(playerGameRows, data.seasons),
+    [data.seasons, playerGameRows]
+  );
+
+  const activeView = STAT_VIEWS[selectedView] || STAT_VIEWS[DEFAULT_VIEW];
+  const thClass =
+    "px-2 py-2 text-center text-[11px] font-bold uppercase tracking-wide text-slate-600 bg-slate-100 border-b border-slate-200 whitespace-nowrap";
+  const tdClass =
+    "px-2 py-1.5 text-[15px] text-slate-800 text-center border-b border-slate-100 whitespace-nowrap";
 
   if (status) {
     return (
-      <div className="mx-auto max-w-4xl px-4 py-8 text-center text-sm text-slate-600">
+      <div className="mx-auto max-w-6xl px-4 py-8 text-slate-600">
         {status}
       </div>
     );
   }
 
   if (!player) {
-    return <div className="p-4 text-center text-slate-600">Player not found.</div>;
+    return <div className="mx-auto max-w-6xl px-4 py-8 text-slate-600">Player not found.</div>;
   }
 
   return (
-    <div className="mx-auto max-w-6xl space-y-8 px-4 pb-24 pt-2 sm:px-6">
+    <div className="mx-auto max-w-6xl px-4 py-8 md:py-10">
       <Link
         to={`/athletics/volleyball/seasons/${rosterEntry?.SeasonID || 2025}`}
-        className="text-sm font-semibold text-blue-700 hover:text-blue-900"
+        className="mb-8 inline-block text-sm font-semibold text-blue-700 hover:text-blue-900"
       >
         Back to Season
       </Link>
 
-      <header>
-        <p className="text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">
-          Volleyball Athlete
-        </p>
-        <h1 className="mt-1 text-3xl font-bold text-slate-900">{getPlayerName(player)}</h1>
-        <p className="mt-2 text-sm text-slate-500">
-          #{rosterEntry?.JerseyNumber ?? "—"} • {(rosterEntry?.Positions || []).join(", ") || "—"} •{" "}
-          {rosterEntry?.GradeLabel || "—"} • Class of {player.GradYear || "—"}
-        </p>
-      </header>
-
-      <section className="grid gap-3 sm:grid-cols-2 lg:grid-cols-6">
-        {LEADER_FIELDS.map((field) => (
-          <div
-            key={field.key}
-            className="rounded-lg border border-slate-200 bg-white px-4 py-3 shadow-sm"
-          >
-            <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-slate-500">
-              {field.label}
-            </p>
-            <p className="mt-1 text-2xl font-bold text-slate-900">
-              {formatStat(seasonStats?.[field.key])}
-            </p>
+      <section className="mb-10">
+        <div className="flex items-center gap-4 md:gap-5">
+          <div className="flex h-20 w-20 shrink-0 items-center justify-center overflow-hidden rounded-full border border-slate-200 bg-slate-100 text-lg font-black text-slate-500 md:h-24 md:w-24">
+            {rosterEntry?.JerseyNumber != null ? `#${rosterEntry.JerseyNumber}` : "SA"}
           </div>
-        ))}
+
+          <div className="min-w-0">
+            <h1 className="mb-1 text-2xl font-black leading-tight text-black md:text-3xl">
+              {getPlayerName(player)}
+            </h1>
+            <div className="text-lg font-medium text-slate-700 md:text-xl">
+              {[
+                rosterEntry?.JerseyNumber != null ? `#${rosterEntry.JerseyNumber}` : null,
+                (rosterEntry?.Positions || []).join(", ") || null,
+                rosterEntry?.GradeLabel || null,
+                `Class of ${player.GradYear ?? "-"}`,
+              ]
+                .filter(Boolean)
+                .join(" / ")}
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold text-slate-900">Season Stats</h2>
-        {VOLLEYBALL_STAT_SECTIONS.map((section) => (
-          <div key={section.title} className="overflow-x-auto rounded-lg border border-slate-200 bg-white shadow-sm">
-            <table className="w-full min-w-[620px] border-collapse text-sm">
-              <thead>
-                <tr className="bg-slate-100">
-                  <th
-                    className="border-b border-slate-300 px-3 py-2 text-left font-bold"
-                    colSpan={section.columns.length}
-                  >
-                    {section.title}
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  {section.columns.map((column) => (
-                    <td
-                      key={`${section.title}-${column.key}`}
-                      className="border-b border-slate-200 px-3 py-2 text-center"
-                    >
-                      <div className="text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">
-                        {column.label}
-                      </div>
-                      <div className="mt-1 font-semibold text-slate-900">
-                        {formatStat(seasonStats?.[column.key], column)}
-                      </div>
-                    </td>
-                  ))}
-                </tr>
-              </tbody>
-            </table>
+      <section className="mb-10">
+        <div className="mb-3 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+          <h2 className="text-xl font-black text-black md:text-2xl">Career Totals</h2>
+          <div className="flex flex-wrap gap-3 md:justify-end">
+            {Object.entries(STAT_VIEWS).map(([key, value]) => {
+              const active = selectedView === key;
+              return (
+                <button
+                  key={key}
+                  type="button"
+                  onClick={() => setSelectedView(key)}
+                  className={`rounded-full border px-3 py-1.5 text-sm font-bold transition ${
+                    active
+                      ? "border-slate-900 bg-slate-900 text-white"
+                      : "border-slate-300 bg-white text-slate-700 hover:border-slate-400"
+                  }`}
+                >
+                  {value.label}
+                </button>
+              );
+            })}
           </div>
-        ))}
-      </section>
+        </div>
 
-      <section className="space-y-4">
-        <h2 className="text-2xl font-semibold text-slate-900">Match Log</h2>
-        <div className="overflow-x-auto rounded-lg border border-slate-200 bg-white shadow-sm">
-          <table className="w-full min-w-[860px] border-collapse text-sm">
+        <div className="overflow-x-auto border border-slate-200">
+          <table className="min-w-full">
             <thead>
-              <tr className="bg-slate-100">
-                <th className="border-b border-slate-300 px-3 py-2 text-left font-bold">
-                  Date
-                </th>
-                <th className="border-b border-slate-300 px-3 py-2 text-left font-bold">
-                  Opponent
-                </th>
-                <th className="border-b border-slate-300 px-3 py-2 text-center font-bold">
-                  Result
-                </th>
-                {LEADER_FIELDS.map((field) => (
-                  <th
-                    key={`log-${field.key}`}
-                    className="border-b border-slate-300 px-3 py-2 text-center font-bold"
-                  >
-                    {field.label}
+              <tr>
+                <th className={thClass}>Season</th>
+                {activeView.summaryColumns.map((column) => (
+                  <th key={column.key} className={thClass}>
+                    {column.label}
                   </th>
                 ))}
               </tr>
             </thead>
             <tbody>
-              {gameRows.length ? (
-                gameRows.map((row) => (
-                  <tr key={row.GameID} className="odd:bg-white even:bg-slate-50">
-                    <td className="border-b border-slate-200 px-3 py-2 whitespace-nowrap">
-                      {formatDate(row.game.Date)}
-                    </td>
-                    <td className="border-b border-slate-200 px-3 py-2">
-                      <Link
-                        to={`/athletics/volleyball/games/${row.GameID}`}
-                        className="font-semibold text-blue-700 hover:text-blue-900"
-                      >
-                        {row.game.Opponent}
-                      </Link>
-                    </td>
-                    <td
-                      className={`border-b border-slate-200 px-3 py-2 text-center font-bold ${
-                        row.game.Result === "W" ? "text-emerald-700" : "text-rose-700"
-                      }`}
-                    >
-                      {row.game.Result} {row.game.TeamScore}-{row.game.OpponentScore}
-                    </td>
-                    {LEADER_FIELDS.map((field) => (
-                      <td
-                        key={`${row.GameID}-${field.key}`}
-                        className="border-b border-slate-200 px-3 py-2 text-center"
-                      >
-                        {formatStat(row[field.key])}
+              {careerTotalsBySeason.length === 0 ? (
+                <tr className="bg-white">
+                  <td
+                    className={tdClass}
+                    colSpan={activeView.summaryColumns.length + 1}
+                  >
+                    -
+                  </td>
+                </tr>
+              ) : (
+                careerTotalsBySeason.map(({ season, label, totals }, index) => (
+                  <tr
+                    key={season}
+                    className={`${index % 2 === 0 ? "bg-white" : "bg-gray-50/70"} hover:bg-gray-100`}
+                  >
+                    <td className={`${tdClass} font-semibold`}>{label}</td>
+                    {activeView.summaryColumns.map((column) => (
+                      <td key={column.key} className={tdClass}>
+                        {column.render(totals)}
                       </td>
                     ))}
                   </tr>
                 ))
-              ) : (
-                <tr>
-                  <td
-                    className="border-b border-slate-200 px-3 py-4 text-center text-slate-500"
-                    colSpan={LEADER_FIELDS.length + 3}
-                  >
-                    No match log entries are available for this player.
-                  </td>
-                </tr>
               )}
+              <tr className="bg-slate-100 font-semibold">
+                <td className={`${tdClass} font-bold`}>Total</td>
+                {activeView.summaryColumns.map((column) => (
+                  <td key={column.key} className={`${tdClass} font-bold`}>
+                    {column.render(careerTotals)}
+                  </td>
+                ))}
+              </tr>
             </tbody>
           </table>
         </div>
+      </section>
+
+      <section className="mb-10">
+        <h2 className="mb-3 text-xl font-black text-black md:text-2xl">Match Logs</h2>
+
+        {gamesBySeason.length === 0 ? (
+          <div className="text-slate-600">No matches found for this player.</div>
+        ) : (
+          gamesBySeason.map(({ season, label, rows }) => (
+            <div key={season} className="mb-8 last:mb-0">
+              <div className="mb-3 text-lg font-black text-black md:text-xl">{label}</div>
+              <div className="overflow-x-auto border border-slate-200">
+                <table className="min-w-full">
+                  <thead>
+                    <tr>
+                      <th className={thClass}>Date</th>
+                      <th className={thClass}>Opponent</th>
+                      <th className={thClass}>Result</th>
+                      {activeView.logColumns.map((column) => (
+                        <th key={column.key} className={thClass}>
+                          {column.label}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {rows.map((row, index) => (
+                      <tr
+                        key={row.GameID}
+                        className={`${index % 2 === 0 ? "bg-white" : "bg-gray-50/70"} hover:bg-gray-100`}
+                      >
+                        <td className={tdClass}>{formatDate(row.game.Date)}</td>
+                        <td className={tdClass}>
+                          <Link
+                            to={`/athletics/volleyball/games/${row.GameID}`}
+                            className="text-blue-700 hover:text-blue-900"
+                          >
+                            {row.game.Opponent}
+                          </Link>
+                        </td>
+                        <td className={tdClass}>
+                          {row.game.Result} {row.game.TeamScore}-{row.game.OpponentScore}
+                        </td>
+                        {activeView.logColumns.map((column) => (
+                          <td key={column.key} className={tdClass}>
+                            {column.render(row)}
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          ))
+        )}
       </section>
     </div>
   );

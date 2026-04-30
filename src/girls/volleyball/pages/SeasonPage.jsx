@@ -1,7 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
-import { recordTableStyles } from "../../../boys/basketball/pages/recordTableStyles";
 import {
   VOLLEYBALL_STAT_SECTIONS,
   aggregatePlayerSeasonStatsFromGames,
@@ -37,15 +36,6 @@ const INDIVIDUAL_STATS_VIEW_CONFIG = [
   },
 ];
 
-const STAT_PRIMARY_SORT_KEYS = {
-  Attacking: "Kills",
-  Serving: "Aces",
-  Blocking: "TotalBlocks",
-  Digging: "Digs",
-  "Ball Handling": "Assists",
-  "Serve Receiving": "Receptions",
-};
-
 function hasMeaningfulValue(value) {
   const text = String(value ?? "").trim();
   return text !== "" && text !== "—" && text !== "-" && text.toLowerCase() !== "n/a";
@@ -76,15 +66,44 @@ function hasPlayerStatInSection(row, section) {
   });
 }
 
-function sortRowsForSection(rows, section) {
-  const sortKey = STAT_PRIMARY_SORT_KEYS[section.title] || section.columns[0]?.key;
+function getSortValue(row, column, playerMap) {
+  if (column.key === "jersey") return Number(row.JerseyNumber || 999);
+  if (column.key === "name") {
+    const player = playerMap.get(String(row.PlayerID));
+    return getPlayerName(player) || row.PlayerName || "";
+  }
+
+  const value = row[column.key];
+  const number = Number(value);
+  return Number.isFinite(number) ? number : null;
+}
+
+function sortRowsForSection(rows, section, sortConfig, playerMap) {
+  const directionMultiplier = sortConfig.direction === "asc" ? 1 : -1;
+  const sortColumn =
+    [{ key: "jersey", label: "No." }, { key: "name", label: "Player" }, ...section.columns].find(
+      (column) => column.key === sortConfig.key
+    ) || { key: "jersey", label: "No." };
 
   return rows
     .filter((row) => hasPlayerStatInSection(row, section))
     .slice()
     .sort((a, b) => {
-      const valueDiff = Number(b[sortKey] || 0) - Number(a[sortKey] || 0);
-      if (valueDiff !== 0) return valueDiff;
+      const valueA = getSortValue(a, sortColumn, playerMap);
+      const valueB = getSortValue(b, sortColumn, playerMap);
+
+      if (typeof valueA === "string" || typeof valueB === "string") {
+        const textDiff = String(valueA || "").localeCompare(String(valueB || ""));
+        if (textDiff !== 0) return textDiff * directionMultiplier;
+      } else {
+        const missingA = valueA === null || valueA === undefined;
+        const missingB = valueB === null || valueB === undefined;
+
+        if (missingA !== missingB) return missingA ? 1 : -1;
+        if (!missingA && !missingB && valueA !== valueB) {
+          return (Number(valueA) - Number(valueB)) * directionMultiplier;
+        }
+      }
 
       const jerseyDiff = Number(a.JerseyNumber || 999) - Number(b.JerseyNumber || 999);
       if (jerseyDiff !== 0) return jerseyDiff;
@@ -95,14 +114,31 @@ function sortRowsForSection(rows, section) {
 
 function StatsTable({ title, rows, playerMap }) {
   const section = getStatSection(title);
+  const [sortConfig, setSortConfig] = useState({ key: "jersey", direction: "asc" });
   if (!section) return null;
 
-  const displayRows = sortRowsForSection(rows, section);
   const columns = [
     { key: "jersey", label: "No." },
     { key: "name", label: "Player" },
     ...section.columns,
   ];
+  const displayRows = sortRowsForSection(rows, section, sortConfig, playerMap);
+
+  const updateSort = (column) => {
+    setSortConfig((current) => {
+      if (current.key === column.key) {
+        return {
+          key: column.key,
+          direction: current.direction === "asc" ? "desc" : "asc",
+        };
+      }
+
+      return {
+        key: column.key,
+        direction: column.key === "name" || column.key === "jersey" ? "asc" : "desc",
+      };
+    });
+  };
 
   const renderCell = (row, column) => {
     if (column.key === "jersey") return row.JerseyNumber || "—";
@@ -136,7 +172,19 @@ function StatsTable({ title, rows, playerMap }) {
                     column.key === "name" ? "md:text-left" : ""
                   }`}
                 >
-                  {column.label}
+                  <button
+                    type="button"
+                    onClick={() => updateSort(column)}
+                    className={`inline-flex items-center gap-1 font-semibold hover:text-blue-900 ${
+                      column.key === "name" ? "justify-start" : "justify-center"
+                    }`}
+                    aria-label={`Sort ${title} by ${column.label}`}
+                  >
+                    <span>{column.label}</span>
+                    {sortConfig.key === column.key ? (
+                      <span aria-hidden="true">{sortConfig.direction === "asc" ? "^" : "v"}</span>
+                    ) : null}
+                  </button>
                 </th>
               ))}
             </tr>
@@ -455,7 +503,6 @@ export default function SeasonPage({ data, status = "" }) {
     [individualStatsViews, selectedStatsView]
   );
 
-  const emptyStateClassName = `${recordTableStyles.bodyCell} text-center text-slate-600`;
   const missingSeasonStatus =
     !status && !season && seasonGames.length === 0
       ? `No volleyball data is available for the ${seasonLabel} season.`
@@ -470,6 +517,64 @@ export default function SeasonPage({ data, status = "" }) {
 
       <section className="space-y-2 text-center">
         <h1 className="text-3xl font-bold">{seasonLabel} Season</h1>
+      </section>
+
+      <section id="roster" className="space-y-4">
+        <h2 className="text-2xl font-semibold">Roster</h2>
+
+        <div className="max-w-3xl overflow-hidden rounded-lg border border-gray-200 bg-white shadow">
+          <div className="overflow-x-auto">
+            <table className="w-full min-w-[620px] table-auto text-center text-sm">
+              <thead className="bg-gray-100 text-xs text-gray-700 uppercase tracking-wide">
+                <tr>
+                  <th className="px-3 py-2 text-center whitespace-nowrap">No.</th>
+                  <th className="px-3 py-2 text-left">Player</th>
+                  <th className="px-3 py-2 text-center whitespace-nowrap">Grade</th>
+                  <th className="px-3 py-2 text-left">Pos.</th>
+                </tr>
+              </thead>
+              <tbody className="text-sm text-gray-800">
+                {roster.length === 0 ? (
+                  <tr>
+                    <td
+                      className="border-t border-gray-200 px-3 py-4 text-center text-slate-600"
+                      colSpan={4}
+                    >
+                      No MaxPreps roster data is available for this season yet.
+                    </td>
+                  </tr>
+                ) : (
+                  roster.map((player, index) => (
+                    <tr
+                      key={player.PlayerID}
+                      className={`border-t border-gray-200 ${
+                        index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
+                      } hover:bg-gray-100`}
+                    >
+                      <td className="px-3 py-2 text-center whitespace-nowrap">
+                        {player.JerseyNumber || "—"}
+                      </td>
+                      <td className="px-3 py-2 text-left">
+                        <Link
+                          to={`/athletics/volleyball/players/${player.PlayerID}`}
+                          className="text-blue-600 hover:underline"
+                        >
+                          {getPlayerName(player) || player.PlayerName || "—"}
+                        </Link>
+                      </td>
+                      <td className="px-3 py-2 text-center whitespace-nowrap">
+                        {player.GradeLabel || player.Grade || "—"}
+                      </td>
+                      <td className="px-3 py-2 text-left">
+                        {(player.Positions || []).join(", ") || "—"}
+                      </td>
+                    </tr>
+                  ))
+                )}
+              </tbody>
+            </table>
+          </div>
+        </div>
       </section>
 
       <section id="schedule-results" className="space-y-4">
@@ -526,54 +631,6 @@ export default function SeasonPage({ data, status = "" }) {
                     </td>
                     <td className="px-3 py-2 text-center whitespace-nowrap">
                       {game.Result ? `${game.TeamScore} - ${game.OpponentScore}` : ""}
-                    </td>
-                  </tr>
-                ))
-              )}
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <section id="roster" className="space-y-4">
-        <h2 className="text-2xl font-semibold">Roster</h2>
-
-        <div className="overflow-x-auto">
-          <table className="w-full table-auto border text-center text-sm">
-            <thead className="bg-gray-200 font-bold">
-              <tr>
-                <th className={`${recordTableStyles.headerCell} whitespace-nowrap`}>No.</th>
-                <th className={`${recordTableStyles.headerCell} md:text-left`}>Player</th>
-                <th className={`${recordTableStyles.headerCell} whitespace-nowrap`}>Grade</th>
-                <th className={`${recordTableStyles.headerCell} md:text-left`}>Pos.</th>
-              </tr>
-            </thead>
-            <tbody>
-              {roster.length === 0 ? (
-                <tr>
-                  <td className={emptyStateClassName} colSpan={4}>
-                    No MaxPreps roster data is available for this season yet.
-                  </td>
-                </tr>
-              ) : (
-                roster.map((player) => (
-                  <tr key={player.PlayerID}>
-                    <td className={`${recordTableStyles.bodyCell} whitespace-nowrap`}>
-                      {player.JerseyNumber || "—"}
-                    </td>
-                    <td className={`${recordTableStyles.bodyCell} md:text-left`}>
-                      <Link
-                        to={`/athletics/volleyball/players/${player.PlayerID}`}
-                        className="text-blue-600 hover:underline"
-                      >
-                        {getPlayerName(player) || player.PlayerName || "—"}
-                      </Link>
-                    </td>
-                    <td className={`${recordTableStyles.bodyCell} whitespace-nowrap`}>
-                      {player.GradeLabel || player.Grade || "—"}
-                    </td>
-                    <td className={`${recordTableStyles.bodyCell} md:text-left`}>
-                      {(player.Positions || []).join(", ") || "—"}
                     </td>
                   </tr>
                 ))
