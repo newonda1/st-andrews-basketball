@@ -16,11 +16,13 @@ import SwimmingApp from "./swimming/SwimmingApp.jsx";
 import TennisApp from "./tennis/TennisApp.jsx";
 import GolfApp from "./golf/GolfApp.jsx";
 import AdminApp from "./admin/AdminApp.jsx";
+import ScrollToTop from "./components/ScrollToTop.jsx";
 import UnderConstructionSportPage from "./components/UnderConstructionSportPage.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<AthleticsHome />} />
         <Route path="/athletics" element={<AthleticsHome />} />
