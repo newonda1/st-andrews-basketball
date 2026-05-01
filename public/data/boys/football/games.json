@@ -11,7 +11,7 @@
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
     "Opponent": "Jefferson Davis Academy",
-    "OpponentLocation": "",
+    "OpponentLocation": "Blackville, SC",
     "OpponentSlug": "jefferson-davis-academy",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -21,7 +21,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 21,
-    "OpponentScore": 0
+    "OpponentScore": 0,
+    "OpponentID": "sc-jefferson-davis-academy-blackville"
   },
   {
     "GameID": 19960830,
@@ -35,7 +36,7 @@
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
     "Opponent": "Sea Island Academy",
-    "OpponentLocation": "",
+    "OpponentLocation": "Johns Island, SC",
     "OpponentSlug": "sea-island-academy",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -45,7 +46,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 59,
-    "OpponentScore": 0
+    "OpponentScore": 0,
+    "OpponentID": "sc-sea-island-academy-johns-island"
   },
   {
     "GameID": 19960906,
@@ -59,7 +61,7 @@
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
     "Opponent": "Abundant Life Academy",
-    "OpponentLocation": "",
+    "OpponentLocation": "Hardeeville, SC",
     "OpponentSlug": "abundant-life-academy",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -69,7 +71,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 28,
-    "OpponentScore": 24
+    "OpponentScore": 24,
+    "OpponentID": "sc-abundant-life-academy-hardeeville"
   },
   {
     "GameID": 19960913,
@@ -83,7 +86,7 @@
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
     "Opponent": "Holly Hill Academy",
-    "OpponentLocation": "",
+    "OpponentLocation": "Holly Hill, SC",
     "OpponentSlug": "holly-hill-academy",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -93,7 +96,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 22,
-    "OpponentScore": 7
+    "OpponentScore": 7,
+    "OpponentID": "sc-holly-hill-academy-holly-hill"
   },
   {
     "GameID": 19960927,
@@ -107,7 +111,7 @@
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
     "Opponent": "Colleton Prep Academy",
-    "OpponentLocation": "",
+    "OpponentLocation": "Walterboro, SC",
     "OpponentSlug": "colleton-prep-academy",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -117,7 +121,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 35,
-    "OpponentScore": 0
+    "OpponentScore": 0,
+    "OpponentID": "sc-colleton-prep-academy-walterboro"
   },
   {
     "GameID": 19961004,
@@ -130,18 +135,19 @@
     "SourceEventTime": "",
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
-    "Opponent": "Bible Baptist",
-    "OpponentLocation": "",
+    "Opponent": "Bible Baptist School",
+    "OpponentLocation": "Savannah, GA",
     "OpponentSlug": "bible-baptist",
     "OpponentUrl": "",
     "GameUrl": "",
     "LocationType": "Away",
-    "Venue": "Bible Baptist",
+    "Venue": "Bible Baptist School",
     "Notes": "",
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 54,
-    "OpponentScore": 6
+    "OpponentScore": 6,
+    "OpponentID": "ga-bible-baptist-school-savannah"
   },
   {
     "GameID": 19961011,
@@ -154,8 +160,8 @@
     "SourceEventTime": "",
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
-    "Opponent": "Pinewood Prep",
-    "OpponentLocation": "",
+    "Opponent": "Pinewood Preparatory School",
+    "OpponentLocation": "Summerville, SC",
     "OpponentSlug": "pinewood-prep",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -165,7 +171,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 35,
-    "OpponentScore": 8
+    "OpponentScore": 8,
+    "OpponentID": "sc-pinewood-preparatory-school-summerville"
   },
   {
     "GameID": 19961018,
@@ -178,8 +185,8 @@
     "SourceEventTime": "",
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
-    "Opponent": "Hilton Head Prep",
-    "OpponentLocation": "",
+    "Opponent": "Hilton Head Preparatory School",
+    "OpponentLocation": "Hilton Head Island, SC",
     "OpponentSlug": "hilton-head-prep",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -189,7 +196,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 21,
-    "OpponentScore": 11
+    "OpponentScore": 11,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island"
   },
   {
     "GameID": 19961025,
@@ -203,7 +211,7 @@
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
     "Opponent": "Patrick Henry Academy",
-    "OpponentLocation": "",
+    "OpponentLocation": "Estill, SC",
     "OpponentSlug": "patrick-henry-academy",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -213,7 +221,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 61,
-    "OpponentScore": 20
+    "OpponentScore": 20,
+    "OpponentID": "sc-patrick-henry-academy-estill"
   },
   {
     "GameID": 19961101,
@@ -227,7 +236,7 @@
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
     "Opponent": "Pee Dee Academy",
-    "OpponentLocation": "",
+    "OpponentLocation": "Mullins, SC",
     "OpponentSlug": "pee-dee-academy",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -237,7 +246,8 @@
     "GameType": "Playoff",
     "Result": "W",
     "TeamScore": 12,
-    "OpponentScore": 7
+    "OpponentScore": 7,
+    "OpponentID": "sc-pee-dee-academy-mullins"
   },
   {
     "GameID": 19961108,
@@ -251,7 +261,7 @@
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
     "Opponent": "Calhoun Academy",
-    "OpponentLocation": "",
+    "OpponentLocation": "St. Matthews, SC",
     "OpponentSlug": "calhoun-academy",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -261,7 +271,8 @@
     "GameType": "Playoff",
     "Result": "W",
     "TeamScore": 10,
-    "OpponentScore": 7
+    "OpponentScore": 7,
+    "OpponentID": "sc-john-c-calhoun-academy-st-matthews"
   },
   {
     "GameID": 19961115,
@@ -275,7 +286,7 @@
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
     "Opponent": "Richard Winn Academy",
-    "OpponentLocation": "",
+    "OpponentLocation": "Winnsboro, SC",
     "OpponentSlug": "richard-winn-academy",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -285,7 +296,8 @@
     "GameType": "Playoff",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 52
+    "OpponentScore": 52,
+    "OpponentID": "sc-richard-winn-academy-winnsboro"
   },
   {
     "GameID": 19970829,
@@ -299,7 +311,7 @@
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
     "Opponent": "Jefferson Davis Academy",
-    "OpponentLocation": "",
+    "OpponentLocation": "Blackville, SC",
     "OpponentSlug": "jefferson-davis-academy",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -309,7 +321,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 39,
-    "OpponentScore": 0
+    "OpponentScore": 0,
+    "OpponentID": "sc-jefferson-davis-academy-blackville"
   },
   {
     "GameID": 19970905,
@@ -323,7 +336,7 @@
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
     "Opponent": "First Baptist School",
-    "OpponentLocation": "",
+    "OpponentLocation": "Charleston, SC",
     "OpponentSlug": "first-baptist-school",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -333,7 +346,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 20,
-    "OpponentScore": 17
+    "OpponentScore": 17,
+    "OpponentID": "sc-first-baptist-school-charleston"
   },
   {
     "GameID": 19970912,
@@ -346,8 +360,8 @@
     "SourceEventTime": "",
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
-    "Opponent": "Pinewood Prep",
-    "OpponentLocation": "",
+    "Opponent": "Pinewood Preparatory School",
+    "OpponentLocation": "Summerville, SC",
     "OpponentSlug": "pinewood-prep",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -357,7 +371,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 26,
-    "OpponentScore": 7
+    "OpponentScore": 7,
+    "OpponentID": "sc-pinewood-preparatory-school-summerville"
   },
   {
     "GameID": 19970919,
@@ -370,8 +385,8 @@
     "SourceEventTime": "",
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
-    "Opponent": "Aiken Christian",
-    "OpponentLocation": "",
+    "Opponent": "Aiken Christian School",
+    "OpponentLocation": "Aiken, SC",
     "OpponentSlug": "aiken-christian",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -381,7 +396,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 1,
-    "OpponentScore": 0
+    "OpponentScore": 0,
+    "OpponentID": "sc-aiken-christian-school-aiken"
   },
   {
     "GameID": 19970926,
@@ -395,7 +411,7 @@
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
     "Opponent": "Colleton Prep Academy",
-    "OpponentLocation": "",
+    "OpponentLocation": "Walterboro, SC",
     "OpponentSlug": "colleton-prep-academy",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -405,7 +421,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 21,
-    "OpponentScore": 12
+    "OpponentScore": 12,
+    "OpponentID": "sc-colleton-prep-academy-walterboro"
   },
   {
     "GameID": 19971003,
@@ -418,18 +435,19 @@
     "SourceEventTime": "",
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
-    "Opponent": "Hilton Head Prep",
-    "OpponentLocation": "",
+    "Opponent": "Hilton Head Preparatory School",
+    "OpponentLocation": "Hilton Head Island, SC",
     "OpponentSlug": "hilton-head-prep",
     "OpponentUrl": "",
     "GameUrl": "",
     "LocationType": "Away",
-    "Venue": "Hilton Head Prep",
+    "Venue": "Hilton Head Preparatory School",
     "Notes": "",
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 14,
-    "OpponentScore": 16
+    "OpponentScore": 16,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island"
   },
   {
     "GameID": 19971010,
@@ -443,7 +461,7 @@
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
     "Opponent": "Patrick Henry Academy",
-    "OpponentLocation": "",
+    "OpponentLocation": "Estill, SC",
     "OpponentSlug": "patrick-henry-academy",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -453,7 +471,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 40,
-    "OpponentScore": 0
+    "OpponentScore": 0,
+    "OpponentID": "sc-patrick-henry-academy-estill"
   },
   {
     "GameID": 19971017,
@@ -467,7 +486,7 @@
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
     "Opponent": "Thomas Heyward Academy",
-    "OpponentLocation": "",
+    "OpponentLocation": "Ridgeland, SC",
     "OpponentSlug": "thomas-heyward-academy",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -477,7 +496,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 14,
-    "OpponentScore": 29
+    "OpponentScore": 29,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland"
   },
   {
     "GameID": 19971024,
@@ -491,7 +511,7 @@
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
     "Opponent": "Clarendon Hall",
-    "OpponentLocation": "",
+    "OpponentLocation": "Summerton, SC",
     "OpponentSlug": "clarendon-hall",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -501,7 +521,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 26,
-    "OpponentScore": 0
+    "OpponentScore": 0,
+    "OpponentID": "sc-clarendon-hall-summerton"
   },
   {
     "GameID": 19971031,
@@ -515,7 +536,7 @@
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
     "Opponent": "Sea Island Academy",
-    "OpponentLocation": "",
+    "OpponentLocation": "Johns Island, SC",
     "OpponentSlug": "sea-island-academy",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -525,7 +546,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 47,
-    "OpponentScore": 7
+    "OpponentScore": 7,
+    "OpponentID": "sc-sea-island-academy-johns-island"
   },
   {
     "GameID": 19971107,
@@ -539,7 +561,7 @@
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
     "Opponent": "Richard Winn Academy",
-    "OpponentLocation": "",
+    "OpponentLocation": "Winnsboro, SC",
     "OpponentSlug": "richard-winn-academy",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -549,7 +571,8 @@
     "GameType": "Playoff",
     "Result": "W",
     "TeamScore": 27,
-    "OpponentScore": 0
+    "OpponentScore": 0,
+    "OpponentID": "sc-richard-winn-academy-winnsboro"
   },
   {
     "GameID": 19971114,
@@ -563,7 +586,7 @@
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
     "Opponent": "Calhoun Academy",
-    "OpponentLocation": "",
+    "OpponentLocation": "St. Matthews, SC",
     "OpponentSlug": "calhoun-academy",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -573,7 +596,8 @@
     "GameType": "Playoff",
     "Result": "W",
     "TeamScore": 15,
-    "OpponentScore": 14
+    "OpponentScore": 14,
+    "OpponentID": "sc-john-c-calhoun-academy-st-matthews"
   },
   {
     "GameID": 19971121,
@@ -586,18 +610,19 @@
     "SourceEventTime": "",
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
-    "Opponent": "Hilton Head Prep",
-    "OpponentLocation": "",
+    "Opponent": "Hilton Head Preparatory School",
+    "OpponentLocation": "Hilton Head Island, SC",
     "OpponentSlug": "hilton-head-prep",
     "OpponentUrl": "",
     "GameUrl": "",
     "LocationType": "Away",
-    "Venue": "Hilton Head Prep",
+    "Venue": "Hilton Head Preparatory School",
     "Notes": "SCISA AA state championship",
     "GameType": "Playoff",
     "Result": "L",
     "TeamScore": 6,
-    "OpponentScore": 35
+    "OpponentScore": 35,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island"
   },
   {
     "GameID": 19980828,
@@ -611,7 +636,7 @@
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
     "Opponent": "James F. Byrnes Academy",
-    "OpponentLocation": "",
+    "OpponentLocation": "Quinby, SC",
     "OpponentSlug": "james-f-byrnes-academy",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -621,7 +646,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 34,
-    "OpponentScore": 6
+    "OpponentScore": 6,
+    "OpponentID": "sc-james-f-byrnes-academy-quinby"
   },
   {
     "GameID": 19980904,
@@ -635,7 +661,7 @@
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
     "Opponent": "Dorchester Academy",
-    "OpponentLocation": "",
+    "OpponentLocation": "St. George, SC",
     "OpponentSlug": "dorchester-academy",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -645,7 +671,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 7,
-    "OpponentScore": 18
+    "OpponentScore": 18,
+    "OpponentID": "sc-dorchester-academy-st-george"
   },
   {
     "GameID": 19980911,
@@ -659,7 +686,7 @@
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
     "Opponent": "Thomas Heyward Academy",
-    "OpponentLocation": "",
+    "OpponentLocation": "Ridgeland, SC",
     "OpponentSlug": "thomas-heyward-academy",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -669,7 +696,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 7,
-    "OpponentScore": 6
+    "OpponentScore": 6,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland"
   },
   {
     "GameID": 19980918,
@@ -683,7 +711,7 @@
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
     "Opponent": "Thomas Sumter Academy",
-    "OpponentLocation": "",
+    "OpponentLocation": "Dalzell, SC",
     "OpponentSlug": "thomas-sumter-academy",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -695,7 +723,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 40,
-    "OpponentScore": 3
+    "OpponentScore": 3,
+    "OpponentID": "sc-thomas-sumter-academy-dalzell"
   },
   {
     "GameID": 19980925,
@@ -709,7 +738,7 @@
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
     "Opponent": "Colleton Prep Academy",
-    "OpponentLocation": "",
+    "OpponentLocation": "Walterboro, SC",
     "OpponentSlug": "colleton-prep-academy",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -719,7 +748,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 60,
-    "OpponentScore": 8
+    "OpponentScore": 8,
+    "OpponentID": "sc-colleton-prep-academy-walterboro"
   },
   {
     "GameID": 19981002,
@@ -733,7 +763,7 @@
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
     "Opponent": "Sea Island Academy",
-    "OpponentLocation": "",
+    "OpponentLocation": "Johns Island, SC",
     "OpponentSlug": "sea-island-academy",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -743,7 +773,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 31,
-    "OpponentScore": 10
+    "OpponentScore": 10,
+    "OpponentID": "sc-sea-island-academy-johns-island"
   },
   {
     "GameID": 19981009,
@@ -757,7 +788,7 @@
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
     "Opponent": "Williamsburg Academy",
-    "OpponentLocation": "",
+    "OpponentLocation": "Kingstree, SC",
     "OpponentSlug": "williamsburg-academy",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -767,7 +798,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 54,
-    "OpponentScore": 6
+    "OpponentScore": 6,
+    "OpponentID": "sc-williamsburg-academy-kingstree"
   },
   {
     "GameID": 19981016,
@@ -781,7 +813,7 @@
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
     "Opponent": "Calhoun Academy",
-    "OpponentLocation": "",
+    "OpponentLocation": "St. Matthews, SC",
     "OpponentSlug": "calhoun-academy",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -791,7 +823,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 21,
-    "OpponentScore": 6
+    "OpponentScore": 6,
+    "OpponentID": "sc-john-c-calhoun-academy-st-matthews"
   },
   {
     "GameID": 19981023,
@@ -805,7 +838,7 @@
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
     "Opponent": "Patrick Henry Academy",
-    "OpponentLocation": "",
+    "OpponentLocation": "Estill, SC",
     "OpponentSlug": "patrick-henry-academy",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -815,7 +848,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 61,
-    "OpponentScore": 6
+    "OpponentScore": 6,
+    "OpponentID": "sc-patrick-henry-academy-estill"
   },
   {
     "GameID": 19981030,
@@ -828,8 +862,8 @@
     "SourceEventTime": "",
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
-    "Opponent": "Hilton Head Prep",
-    "OpponentLocation": "",
+    "Opponent": "Hilton Head Preparatory School",
+    "OpponentLocation": "Hilton Head Island, SC",
     "OpponentSlug": "hilton-head-prep",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -839,7 +873,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 33,
-    "OpponentScore": 6
+    "OpponentScore": 6,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island"
   },
   {
     "GameID": 19981106,
@@ -853,7 +888,7 @@
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
     "Opponent": "Williamsburg Academy",
-    "OpponentLocation": "",
+    "OpponentLocation": "Kingstree, SC",
     "OpponentSlug": "williamsburg-academy",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -863,7 +898,8 @@
     "GameType": "Playoff",
     "Result": "W",
     "TeamScore": 51,
-    "OpponentScore": 0
+    "OpponentScore": 0,
+    "OpponentID": "sc-williamsburg-academy-kingstree"
   },
   {
     "GameID": 19981113,
@@ -877,7 +913,7 @@
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
     "Opponent": "Roy Hudgens Academy",
-    "OpponentLocation": "",
+    "OpponentLocation": "Lynchburg, SC",
     "OpponentSlug": "roy-hudgens-academy",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -887,7 +923,8 @@
     "GameType": "Playoff",
     "Result": "W",
     "TeamScore": 12,
-    "OpponentScore": 6
+    "OpponentScore": 6,
+    "OpponentID": "sc-roy-hudgens-academy-lynchburg"
   },
   {
     "GameID": 19981120,
@@ -901,7 +938,7 @@
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
     "Opponent": "Calhoun Academy",
-    "OpponentLocation": "",
+    "OpponentLocation": "St. Matthews, SC",
     "OpponentSlug": "calhoun-academy",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -911,7 +948,8 @@
     "GameType": "State Championship",
     "Result": "W",
     "TeamScore": 27,
-    "OpponentScore": 19
+    "OpponentScore": 19,
+    "OpponentID": "sc-john-c-calhoun-academy-st-matthews"
   },
   {
     "GameID": 19990827,
@@ -925,7 +963,7 @@
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
     "Opponent": "James F. Byrnes Academy",
-    "OpponentLocation": "",
+    "OpponentLocation": "Quinby, SC",
     "OpponentSlug": "james-f-byrnes-academy",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -935,7 +973,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 6
+    "OpponentScore": 6,
+    "OpponentID": "sc-james-f-byrnes-academy-quinby"
   },
   {
     "GameID": 19990903,
@@ -949,7 +988,7 @@
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
     "Opponent": "Dorchester Academy",
-    "OpponentLocation": "",
+    "OpponentLocation": "St. George, SC",
     "OpponentSlug": "dorchester-academy",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -959,7 +998,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 3,
-    "OpponentScore": 27
+    "OpponentScore": 27,
+    "OpponentID": "sc-dorchester-academy-st-george"
   },
   {
     "GameID": 19990910,
@@ -973,7 +1013,7 @@
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
     "Opponent": "Thomas Heyward Academy",
-    "OpponentLocation": "",
+    "OpponentLocation": "Ridgeland, SC",
     "OpponentSlug": "thomas-heyward-academy",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -983,7 +1023,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 13,
-    "OpponentScore": 6
+    "OpponentScore": 6,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland"
   },
   {
     "GameID": 19990917,
@@ -997,7 +1038,7 @@
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
     "Opponent": "Thomas Sumter Academy",
-    "OpponentLocation": "",
+    "OpponentLocation": "Dalzell, SC",
     "OpponentSlug": "thomas-sumter-academy",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -1007,7 +1048,8 @@
     "GameType": "Regular Season",
     "Result": "",
     "TeamScore": null,
-    "OpponentScore": null
+    "OpponentScore": null,
+    "OpponentID": "sc-thomas-sumter-academy-dalzell"
   },
   {
     "GameID": 19990924,
@@ -1021,7 +1063,7 @@
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
     "Opponent": "Colleton Prep Academy",
-    "OpponentLocation": "",
+    "OpponentLocation": "Walterboro, SC",
     "OpponentSlug": "colleton-prep-academy",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -1031,7 +1073,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 55,
-    "OpponentScore": 25
+    "OpponentScore": 25,
+    "OpponentID": "sc-colleton-prep-academy-walterboro"
   },
   {
     "GameID": 19991001,
@@ -1045,7 +1088,7 @@
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
     "Opponent": "Sea Island Academy",
-    "OpponentLocation": "",
+    "OpponentLocation": "Johns Island, SC",
     "OpponentSlug": "sea-island-academy",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -1055,7 +1098,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 28,
-    "OpponentScore": 21
+    "OpponentScore": 21,
+    "OpponentID": "sc-sea-island-academy-johns-island"
   },
   {
     "GameID": 19991008,
@@ -1069,7 +1113,7 @@
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
     "Opponent": "Williamsburg Academy",
-    "OpponentLocation": "",
+    "OpponentLocation": "Kingstree, SC",
     "OpponentSlug": "williamsburg-academy",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -1079,7 +1123,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 20
+    "OpponentScore": 20,
+    "OpponentID": "sc-williamsburg-academy-kingstree"
   },
   {
     "GameID": 19991015,
@@ -1093,7 +1138,7 @@
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
     "Opponent": "Calhoun Academy",
-    "OpponentLocation": "",
+    "OpponentLocation": "St. Matthews, SC",
     "OpponentSlug": "calhoun-academy",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -1103,7 +1148,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 12,
-    "OpponentScore": 35
+    "OpponentScore": 35,
+    "OpponentID": "sc-john-c-calhoun-academy-st-matthews"
   },
   {
     "GameID": 19991022,
@@ -1117,7 +1163,7 @@
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
     "Opponent": "Patrick Henry Academy",
-    "OpponentLocation": "",
+    "OpponentLocation": "Estill, SC",
     "OpponentSlug": "patrick-henry-academy",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -1127,7 +1173,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 47,
-    "OpponentScore": 12
+    "OpponentScore": 12,
+    "OpponentID": "sc-patrick-henry-academy-estill"
   },
   {
     "GameID": 19991029,
@@ -1140,18 +1187,19 @@
     "SourceEventTime": "",
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
-    "Opponent": "Hilton Head Prep",
-    "OpponentLocation": "",
+    "Opponent": "Hilton Head Preparatory School",
+    "OpponentLocation": "Hilton Head Island, SC",
     "OpponentSlug": "hilton-head-prep",
     "OpponentUrl": "",
     "GameUrl": "",
     "LocationType": "Away",
-    "Venue": "Hilton Head Prep",
+    "Venue": "Hilton Head Preparatory School",
     "Notes": "",
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 20,
-    "OpponentScore": 23
+    "OpponentScore": 23,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island"
   },
   {
     "GameID": 19991105,
@@ -1165,7 +1213,7 @@
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
     "Opponent": "Thomas Sumter Academy",
-    "OpponentLocation": "",
+    "OpponentLocation": "Dalzell, SC",
     "OpponentSlug": "thomas-sumter-academy",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -1175,7 +1223,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 39,
-    "OpponentScore": 8
+    "OpponentScore": 8,
+    "OpponentID": "sc-thomas-sumter-academy-dalzell"
   },
   {
     "GameID": 19991112,
@@ -1189,7 +1238,7 @@
     "TeamID": "ga-savannah-st-andrews-saints-football",
     "Team": "St. Andrew's Saints",
     "Opponent": "Williamsburg Academy",
-    "OpponentLocation": "",
+    "OpponentLocation": "Kingstree, SC",
     "OpponentSlug": "williamsburg-academy",
     "OpponentUrl": "",
     "GameUrl": "",
@@ -1199,7 +1248,8 @@
     "GameType": "Playoff",
     "Result": "L",
     "TeamScore": 22,
-    "OpponentScore": 27
+    "OpponentScore": 27,
+    "OpponentID": "sc-williamsburg-academy-kingstree"
   },
   {
     "GameID": 20040820,
@@ -1223,7 +1273,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 34
+    "OpponentScore": 34,
+    "OpponentID": "sc-williamsburg-academy-kingstree"
   },
   {
     "GameID": 20040827,
@@ -1236,7 +1287,7 @@
     "SourceEventTime": "To be Announced",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Memorial Day",
+    "Opponent": "Memorial Day School",
     "OpponentLocation": "Savannah, GA",
     "OpponentSlug": "memorial-day-savannah-ga",
     "OpponentUrl": "https://www.maxpreps.com/ga/savannah/memorial-day-matadors/football/04-05/schedule/",
@@ -1247,7 +1298,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 6
+    "OpponentScore": 6,
+    "OpponentID": "ga-memorial-day-school-savannah"
   },
   {
     "GameID": 20040903,
@@ -1271,7 +1323,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 42
+    "OpponentScore": 42,
+    "OpponentID": "sc-dorchester-academy-st-george"
   },
   {
     "GameID": 20040917,
@@ -1295,7 +1348,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 40
+    "OpponentScore": 40,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland"
   },
   {
     "GameID": 20040924,
@@ -1308,18 +1362,19 @@
     "SourceEventTime": "To be Announced",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Pinewood Prep",
+    "Opponent": "Pinewood Preparatory School",
     "OpponentLocation": "Summerville, SC",
     "OpponentSlug": "pinewood-prep-summerville-sc",
     "OpponentUrl": "https://www.maxpreps.com/sc/summerville/pinewood-prep-panthers/football/04-05/schedule/",
     "GameUrl": "https://www.maxpreps.com/games/9-24-2004/football-04/pinewood-prep-vs-st-andrews.htm?c=xLLfbfjrE0Kn23qpNq0R9w",
     "LocationType": "Away",
-    "Venue": "Pinewood Prep",
+    "Venue": "Pinewood Preparatory School",
     "Notes": "",
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 49
+    "OpponentScore": 49,
+    "OpponentID": "sc-pinewood-preparatory-school-summerville"
   },
   {
     "GameID": 20041001,
@@ -1343,7 +1398,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 42
+    "OpponentScore": 42,
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island"
   },
   {
     "GameID": 20041008,
@@ -1356,7 +1412,7 @@
     "SourceEventTime": "To be Announced",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Hilton Head Prep",
+    "Opponent": "Hilton Head Preparatory School",
     "OpponentLocation": "Hilton Head Island, SC",
     "OpponentSlug": "hilton-head-prep-hilton-head-island-sc",
     "OpponentUrl": "https://www.maxpreps.com/sc/hilton-head-island/hilton-head-prep-dolphins/football/04-05/schedule/",
@@ -1367,7 +1423,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 40
+    "OpponentScore": 40,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island"
   },
   {
     "GameID": 20041015,
@@ -1391,7 +1448,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 49
+    "OpponentScore": 49,
+    "OpponentID": "sc-first-baptist-school-charleston"
   },
   {
     "GameID": 20041022,
@@ -1415,7 +1473,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 14,
-    "OpponentScore": 48
+    "OpponentScore": 48,
+    "OpponentID": "sc-colleton-prep-academy-walterboro"
   },
   {
     "GameID": 20041029,
@@ -1428,7 +1487,7 @@
     "SourceEventTime": "To be Announced",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Dillon Christian",
+    "Opponent": "Dillon Christian School",
     "OpponentLocation": "Dillon, SC",
     "OpponentSlug": "dillon-christian-dillon-sc",
     "OpponentUrl": "https://www.maxpreps.com/sc/dillon/dillon-christian-warriors/football/04-05/schedule/",
@@ -1439,7 +1498,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 7,
-    "OpponentScore": 33
+    "OpponentScore": 33,
+    "OpponentID": "sc-dillon-christian-school-dillon"
   },
   {
     "GameID": 20050819,
@@ -1463,7 +1523,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 41
+    "OpponentScore": 41,
+    "OpponentID": "sc-williamsburg-academy-kingstree"
   },
   {
     "GameID": 20050826,
@@ -1476,7 +1537,7 @@
     "SourceEventTime": "To be Announced",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Memorial Day",
+    "Opponent": "Memorial Day School",
     "OpponentLocation": "Savannah, GA",
     "OpponentSlug": "memorial-day-savannah-ga",
     "OpponentUrl": "https://www.maxpreps.com/ga/savannah/memorial-day-matadors/football/05-06/schedule/",
@@ -1487,7 +1548,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 22,
-    "OpponentScore": 8
+    "OpponentScore": 8,
+    "OpponentID": "ga-memorial-day-school-savannah"
   },
   {
     "GameID": 20050902,
@@ -1511,7 +1573,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 60
+    "OpponentScore": 60,
+    "OpponentID": "sc-dorchester-academy-st-george"
   },
   {
     "GameID": 20050916,
@@ -1535,7 +1598,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 7,
-    "OpponentScore": 64
+    "OpponentScore": 64,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland"
   },
   {
     "GameID": 20050923,
@@ -1548,7 +1612,7 @@
     "SourceEventTime": "To be Announced",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Pinewood Prep",
+    "Opponent": "Pinewood Preparatory School",
     "OpponentLocation": "Summerville, SC",
     "OpponentSlug": "pinewood-prep-summerville-sc",
     "OpponentUrl": "https://www.maxpreps.com/sc/summerville/pinewood-prep-panthers/football/05-06/schedule/",
@@ -1559,7 +1623,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 55
+    "OpponentScore": 55,
+    "OpponentID": "sc-pinewood-preparatory-school-summerville"
   },
   {
     "GameID": 20050930,
@@ -1583,7 +1648,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 56
+    "OpponentScore": 56,
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island"
   },
   {
     "GameID": 20051007,
@@ -1596,18 +1662,19 @@
     "SourceEventTime": "To be Announced",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Hilton Head Prep",
+    "Opponent": "Hilton Head Preparatory School",
     "OpponentLocation": "Hilton Head Island, SC",
     "OpponentSlug": "hilton-head-prep-hilton-head-island-sc",
     "OpponentUrl": "https://www.maxpreps.com/sc/hilton-head-island/hilton-head-prep-dolphins/football/05-06/schedule/",
     "GameUrl": "https://www.maxpreps.com/games/10-7-2005/football-05/hilton-head-prep-vs-st-andrews.htm?c=daFF7OAnK0qKWdSH1Ne9uQ",
     "LocationType": "Away",
-    "Venue": "Hilton Head Prep",
+    "Venue": "Hilton Head Preparatory School",
     "Notes": "",
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 68
+    "OpponentScore": 68,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island"
   },
   {
     "GameID": 20051014,
@@ -1631,7 +1698,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 33
+    "OpponentScore": 33,
+    "OpponentID": "sc-first-baptist-school-charleston"
   },
   {
     "GameID": 20051021,
@@ -1655,7 +1723,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 55
+    "OpponentScore": 55,
+    "OpponentID": "sc-colleton-prep-academy-walterboro"
   },
   {
     "GameID": 20051028,
@@ -1668,7 +1737,7 @@
     "SourceEventTime": "To be Announced",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Dillon Christian",
+    "Opponent": "Dillon Christian School",
     "OpponentLocation": "Dillon, SC",
     "OpponentSlug": "dillon-christian-dillon-sc",
     "OpponentUrl": "https://www.maxpreps.com/sc/dillon/dillon-christian-warriors/football/05-06/schedule/",
@@ -1679,7 +1748,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 49
+    "OpponentScore": 49,
+    "OpponentID": "sc-dillon-christian-school-dillon"
   },
   {
     "GameID": 20060818,
@@ -1692,7 +1762,7 @@
     "SourceEventTime": "To be Announced",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Charleston Collegiate",
+    "Opponent": "Charleston Collegiate School",
     "OpponentLocation": "John's Island, SC",
     "OpponentSlug": "charleston-collegiate-john-s-island-sc",
     "OpponentUrl": "https://www.maxpreps.com/sc/johns-island/charleston-collegiate-sundevils/football/06-07/schedule/",
@@ -1703,7 +1773,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 26,
-    "OpponentScore": 6
+    "OpponentScore": 6,
+    "OpponentID": "sc-charleston-collegiate-school-johns-island"
   },
   {
     "GameID": 20060825,
@@ -1727,7 +1798,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 13,
-    "OpponentScore": 38
+    "OpponentScore": 38,
+    "OpponentID": "sc-williamsburg-academy-kingstree"
   },
   {
     "GameID": 20060901,
@@ -1740,7 +1812,7 @@
     "SourceEventTime": "To be Announced",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Memorial Day",
+    "Opponent": "Memorial Day School",
     "OpponentLocation": "Savannah, GA",
     "OpponentSlug": "memorial-day-savannah-ga",
     "OpponentUrl": "https://www.maxpreps.com/ga/savannah/memorial-day-matadors/football/06-07/schedule/",
@@ -1751,7 +1823,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 14,
-    "OpponentScore": 18
+    "OpponentScore": 18,
+    "OpponentID": "ga-memorial-day-school-savannah"
   },
   {
     "GameID": 20060908,
@@ -1775,7 +1848,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 14,
-    "OpponentScore": 26
+    "OpponentScore": 26,
+    "OpponentID": "sc-first-baptist-school-charleston"
   },
   {
     "GameID": 20060915,
@@ -1799,7 +1873,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 17,
-    "OpponentScore": 7
+    "OpponentScore": 7,
+    "OpponentID": "sc-cathedral-academy-north-charleston"
   },
   {
     "GameID": 20060929,
@@ -1823,7 +1898,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 21,
-    "OpponentScore": 48
+    "OpponentScore": 48,
+    "OpponentID": "sc-colleton-prep-academy-walterboro"
   },
   {
     "GameID": 20061006,
@@ -1847,7 +1923,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 6,
-    "OpponentScore": 47
+    "OpponentScore": 47,
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island"
   },
   {
     "GameID": 20061013,
@@ -1860,7 +1937,7 @@
     "SourceEventTime": "To be Announced",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Hilton Head Prep",
+    "Opponent": "Hilton Head Preparatory School",
     "OpponentLocation": "Hilton Head Island, SC",
     "OpponentSlug": "hilton-head-prep-hilton-head-island-sc",
     "OpponentUrl": "https://www.maxpreps.com/sc/hilton-head-island/hilton-head-prep-dolphins/football/06-07/schedule/",
@@ -1871,7 +1948,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 47
+    "OpponentScore": 47,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island"
   },
   {
     "GameID": 20061020,
@@ -1895,7 +1973,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 43
+    "OpponentScore": 43,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland"
   },
   {
     "GameID": 20061027,
@@ -1908,18 +1987,19 @@
     "SourceEventTime": "To be Announced",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Bible Baptist Christian",
+    "Opponent": "Bible Baptist Christian School",
     "OpponentLocation": "Hampton, GA",
     "OpponentSlug": "bible-baptist-christian-hampton-ga",
     "OpponentUrl": "https://www.maxpreps.com/ga/hampton/bible-baptist-christian-eagles/football/06-07/schedule/",
     "GameUrl": "https://www.maxpreps.com/games/10-27-2006/football-06/bible-baptist-christian-vs-st-andrews.htm?c=ZUmEjxI4pkeHvMoaZOqlnQ",
     "LocationType": "Away",
-    "Venue": "Bible Baptist Christian High School",
+    "Venue": "Bible Baptist Christian School",
     "Notes": "",
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 27,
-    "OpponentScore": 0
+    "OpponentScore": 0,
+    "OpponentID": "ga-bible-baptist-christian-school-hampton"
   },
   {
     "GameID": 20070817,
@@ -1932,18 +2012,19 @@
     "SourceEventTime": "2007-08-18T02:30:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Charleston Collegiate",
+    "Opponent": "Charleston Collegiate School",
     "OpponentLocation": "John's Island, SC",
     "OpponentSlug": "charleston-collegiate-john-s-island-sc",
     "OpponentUrl": "https://www.maxpreps.com/sc/johns-island/charleston-collegiate-sundevils/football/07-08/schedule/",
     "GameUrl": "https://www.maxpreps.com/games/8-17-2007/football-07/charleston-collegiate-vs-st-andrews.htm?c=-IJfL4JLQE-vTbhYy7STaw",
     "LocationType": "Away",
-    "Venue": "Charleston Collegiate High School",
+    "Venue": "Charleston Collegiate School",
     "Notes": "",
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 7,
-    "OpponentScore": 21
+    "OpponentScore": 21,
+    "OpponentID": "sc-charleston-collegiate-school-johns-island"
   },
   {
     "GameID": 20070824,
@@ -1967,7 +2048,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 20
+    "OpponentScore": 20,
+    "OpponentID": "sc-williamsburg-academy-kingstree"
   },
   {
     "GameID": 20070831,
@@ -1980,18 +2062,19 @@
     "SourceEventTime": "2007-09-01T02:30:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Memorial Day",
+    "Opponent": "Memorial Day School",
     "OpponentLocation": "Savannah, GA",
     "OpponentSlug": "memorial-day-savannah-ga",
     "OpponentUrl": "https://www.maxpreps.com/ga/savannah/memorial-day-matadors/football/07-08/schedule/",
     "GameUrl": "https://www.maxpreps.com/games/8-31-2007/football-07/memorial-day-vs-st-andrews.htm?c=wm1v9AGQJUGevUmT5ZXsTw",
     "LocationType": "Away",
-    "Venue": "Memorial Day High School",
+    "Venue": "Memorial Day School",
     "Notes": "",
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 28,
-    "OpponentScore": 20
+    "OpponentScore": 20,
+    "OpponentID": "ga-memorial-day-school-savannah"
   },
   {
     "GameID": 20070907,
@@ -2015,7 +2098,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 19,
-    "OpponentScore": 20
+    "OpponentScore": 20,
+    "OpponentID": "sc-first-baptist-school-charleston"
   },
   {
     "GameID": 20070914,
@@ -2039,7 +2123,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 21,
-    "OpponentScore": 14
+    "OpponentScore": 14,
+    "OpponentID": "sc-cathedral-academy-north-charleston"
   },
   {
     "GameID": 20070928,
@@ -2063,7 +2148,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 20
+    "OpponentScore": 20,
+    "OpponentID": "sc-colleton-prep-academy-walterboro"
   },
   {
     "GameID": 20071005,
@@ -2087,7 +2173,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 14
+    "OpponentScore": 14,
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island"
   },
   {
     "GameID": 20071012,
@@ -2100,18 +2187,19 @@
     "SourceEventTime": "2007-10-12T22:30:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Hilton Head Prep",
+    "Opponent": "Hilton Head Preparatory School",
     "OpponentLocation": "Hilton Head Island, SC",
     "OpponentSlug": "hilton-head-prep-hilton-head-island-sc",
     "OpponentUrl": "https://www.maxpreps.com/sc/hilton-head-island/hilton-head-prep-dolphins/football/07-08/schedule/",
     "GameUrl": "https://www.maxpreps.com/games/10-12-2007/football-07/hilton-head-prep-vs-st-andrews.htm?c=Q8S6NilnjEKhzJKnz9rC9g",
     "LocationType": "Away",
-    "Venue": "Hilton Head Prep",
+    "Venue": "Hilton Head Preparatory School",
     "Notes": "",
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 41,
-    "OpponentScore": 20
+    "OpponentScore": 20,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island"
   },
   {
     "GameID": 20071019,
@@ -2135,7 +2223,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 7,
-    "OpponentScore": 38
+    "OpponentScore": 38,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland"
   },
   {
     "GameID": 20071026,
@@ -2148,7 +2237,7 @@
     "SourceEventTime": "2007-10-27T02:30:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Bible Baptist",
+    "Opponent": "Bible Baptist School",
     "OpponentLocation": "Savannah, GA",
     "OpponentSlug": "bible-baptist-savannah-ga",
     "OpponentUrl": "https://www.maxpreps.com/ga/savannah/bible-baptist-braves/football/07-08/schedule/",
@@ -2159,7 +2248,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 49,
-    "OpponentScore": 0
+    "OpponentScore": 0,
+    "OpponentID": "ga-bible-baptist-school-savannah"
   },
   {
     "GameID": 20080822,
@@ -2172,7 +2262,7 @@
     "SourceEventTime": "2008-08-23T02:30:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Memorial Day",
+    "Opponent": "Memorial Day School",
     "OpponentLocation": "Savannah, GA",
     "OpponentSlug": "memorial-day-savannah-ga",
     "OpponentUrl": "https://www.maxpreps.com/ga/savannah/memorial-day-matadors/football/08-09/schedule/",
@@ -2183,7 +2273,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 14,
-    "OpponentScore": 27
+    "OpponentScore": 27,
+    "OpponentID": "ga-memorial-day-school-savannah"
   },
   {
     "GameID": 20080829,
@@ -2196,18 +2287,19 @@
     "SourceEventTime": "2008-08-30T02:30:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Bible Baptist",
+    "Opponent": "Bible Baptist School",
     "OpponentLocation": "Savannah, GA",
     "OpponentSlug": "bible-baptist-savannah-ga",
     "OpponentUrl": "https://www.maxpreps.com/ga/savannah/bible-baptist-braves/football/08-09/schedule/",
     "GameUrl": "https://www.maxpreps.com/games/8-29-2008/football-08/bible-baptist-vs-st-andrews.htm?c=U0qGC8OxqEK3T0wOqo0KDg",
     "LocationType": "Away",
-    "Venue": "Bible Baptist High School",
+    "Venue": "Bible Baptist School",
     "Notes": "",
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 23,
-    "OpponentScore": 6
+    "OpponentScore": 6,
+    "OpponentID": "ga-bible-baptist-school-savannah"
   },
   {
     "GameID": 20080905,
@@ -2231,7 +2323,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 14,
-    "OpponentScore": 35
+    "OpponentScore": 35,
+    "OpponentID": "sc-northwood-academy-charleston"
   },
   {
     "GameID": 20080912,
@@ -2255,7 +2348,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 20,
-    "OpponentScore": 21
+    "OpponentScore": 21,
+    "OpponentID": "sc-colleton-prep-academy-walterboro"
   },
   {
     "GameID": 20080926,
@@ -2279,7 +2373,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 19,
-    "OpponentScore": 35
+    "OpponentScore": 35,
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island"
   },
   {
     "GameID": 20081003,
@@ -2303,7 +2398,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 35,
-    "OpponentScore": 14
+    "OpponentScore": 14,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland"
   },
   {
     "GameID": 20081010,
@@ -2327,7 +2423,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 54,
-    "OpponentScore": 7
+    "OpponentScore": 7,
+    "OpponentID": "sc-beaufort-academy-beaufort"
   },
   {
     "GameID": 20081017,
@@ -2351,7 +2448,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 38,
-    "OpponentScore": 7
+    "OpponentScore": 7,
+    "OpponentID": "sc-first-baptist-school-charleston"
   },
   {
     "GameID": 20081024,
@@ -2364,7 +2462,7 @@
     "SourceEventTime": "2008-10-25T02:30:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Hilton Head Prep",
+    "Opponent": "Hilton Head Preparatory School",
     "OpponentLocation": "Hilton Head Island, SC",
     "OpponentSlug": "hilton-head-prep-hilton-head-island-sc",
     "OpponentUrl": "https://www.maxpreps.com/sc/hilton-head-island/hilton-head-prep-dolphins/football/08-09/schedule/",
@@ -2375,7 +2473,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 20,
-    "OpponentScore": 0
+    "OpponentScore": 0,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island"
   },
   {
     "GameID": 20081031,
@@ -2399,7 +2498,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 42,
-    "OpponentScore": 0
+    "OpponentScore": 0,
+    "OpponentID": "sc-st-johns-christian-academy-moncks-corner"
   },
   {
     "GameID": 20081107,
@@ -2423,7 +2523,8 @@
     "GameType": "Playoff",
     "Result": "W",
     "TeamScore": 24,
-    "OpponentScore": 21
+    "OpponentScore": 21,
+    "OpponentID": "sc-john-c-calhoun-academy-st-matthews"
   },
   {
     "GameID": 20081114,
@@ -2447,7 +2548,8 @@
     "GameType": "Playoff",
     "Result": "L",
     "TeamScore": 24,
-    "OpponentScore": 42
+    "OpponentScore": 42,
+    "OpponentID": "sc-northwood-academy-charleston"
   },
   {
     "GameID": 20090828,
@@ -2460,7 +2562,7 @@
     "SourceEventTime": "2009-08-29T02:30:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Bible Baptist",
+    "Opponent": "Bible Baptist School",
     "OpponentLocation": "Savannah, GA",
     "OpponentSlug": "bible-baptist-savannah-ga",
     "OpponentUrl": "https://www.maxpreps.com/ga/savannah/bible-baptist-braves/football/09-10/schedule/",
@@ -2471,7 +2573,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 18,
-    "OpponentScore": 38
+    "OpponentScore": 38,
+    "OpponentID": "ga-bible-baptist-school-savannah"
   },
   {
     "GameID": 20090904,
@@ -2495,7 +2598,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 42
+    "OpponentScore": 42,
+    "OpponentID": "sc-northwood-academy-charleston"
   },
   {
     "GameID": 20090911,
@@ -2519,7 +2623,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 17,
-    "OpponentScore": 49
+    "OpponentScore": 49,
+    "OpponentID": "sc-colleton-prep-academy-walterboro"
   },
   {
     "GameID": 20090925,
@@ -2543,7 +2648,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 19,
-    "OpponentScore": 33
+    "OpponentScore": 33,
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island"
   },
   {
     "GameID": 20091002,
@@ -2567,7 +2673,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 14,
-    "OpponentScore": 20
+    "OpponentScore": 20,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland"
   },
   {
     "GameID": 20091009,
@@ -2580,7 +2687,7 @@
     "SourceEventTime": "2009-10-10T02:30:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Memorial Day",
+    "Opponent": "Memorial Day School",
     "OpponentLocation": "Savannah, GA",
     "OpponentSlug": "memorial-day-savannah-ga",
     "OpponentUrl": "https://www.maxpreps.com/ga/savannah/memorial-day-matadors/football/09-10/schedule/",
@@ -2591,7 +2698,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 3,
-    "OpponentScore": 22
+    "OpponentScore": 22,
+    "OpponentID": "ga-memorial-day-school-savannah"
   },
   {
     "GameID": 20091016,
@@ -2615,7 +2723,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 35,
-    "OpponentScore": 0
+    "OpponentScore": 0,
+    "OpponentID": "sc-first-baptist-school-charleston"
   },
   {
     "GameID": 20091023,
@@ -2628,18 +2737,19 @@
     "SourceEventTime": "2009-10-23T22:30:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Hilton Head Prep",
+    "Opponent": "Hilton Head Preparatory School",
     "OpponentLocation": "Hilton Head Island, SC",
     "OpponentSlug": "hilton-head-prep-hilton-head-island-sc",
     "OpponentUrl": "https://www.maxpreps.com/sc/hilton-head-island/hilton-head-prep-dolphins/football/09-10/schedule/",
     "GameUrl": "https://www.maxpreps.com/games/10-23-2009/football-09/hilton-head-prep-vs-st-andrews.htm?c=Ltge5KMli0KyNOEzioQZ9g",
     "LocationType": "Away",
-    "Venue": "Hilton Head Prep",
+    "Venue": "Hilton Head Preparatory School",
     "Notes": "",
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 21,
-    "OpponentScore": 33
+    "OpponentScore": 33,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island"
   },
   {
     "GameID": 20091030,
@@ -2663,7 +2773,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 28,
-    "OpponentScore": 7
+    "OpponentScore": 7,
+    "OpponentID": "sc-st-johns-christian-academy-moncks-corner"
   },
   {
     "GameID": 20091106,
@@ -2759,7 +2870,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 14,
-    "OpponentScore": 12
+    "OpponentScore": 12,
+    "OpponentID": "sc-dorchester-academy-st-george"
   },
   {
     "GameID": 20100827,
@@ -2783,7 +2895,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 53,
-    "OpponentScore": 20
+    "OpponentScore": 20,
+    "OpponentID": "sc-cathedral-academy-north-charleston"
   },
   {
     "GameID": 20100903,
@@ -2796,7 +2909,7 @@
     "SourceEventTime": "2010-09-04T02:00:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Hilton Head Prep",
+    "Opponent": "Hilton Head Preparatory School",
     "OpponentLocation": "Hilton Head Island, SC",
     "OpponentSlug": "hilton-head-prep-hilton-head-island-sc",
     "OpponentUrl": "https://www.maxpreps.com/sc/hilton-head-island/hilton-head-prep-dolphins/football/10-11/schedule/",
@@ -2807,7 +2920,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 36,
-    "OpponentScore": 26
+    "OpponentScore": 26,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island"
   },
   {
     "GameID": 20100910,
@@ -2820,18 +2934,19 @@
     "SourceEventTime": "2010-09-11T02:30:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Bible Baptist",
+    "Opponent": "Bible Baptist School",
     "OpponentLocation": "Savannah, GA",
     "OpponentSlug": "bible-baptist-savannah-ga",
     "OpponentUrl": "https://www.maxpreps.com/ga/savannah/bible-baptist-braves/football/10-11/schedule/",
     "GameUrl": "https://www.maxpreps.com/games/9-10-2010/football-10/bible-baptist-vs-st-andrews.htm?c=RVXISZ8TZ06DwmjyOlE2YA",
     "LocationType": "Away",
-    "Venue": "Bible Baptist High School",
+    "Venue": "Bible Baptist School",
     "Notes": "",
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 28,
-    "OpponentScore": 18
+    "OpponentScore": 18,
+    "OpponentID": "ga-bible-baptist-school-savannah"
   },
   {
     "GameID": 20100916,
@@ -2855,7 +2970,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 56,
-    "OpponentScore": 12
+    "OpponentScore": 12,
+    "OpponentID": "ga-st-paul-academy-for-boys-savannah"
   },
   {
     "GameID": 20101001,
@@ -2879,7 +2995,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 33,
-    "OpponentScore": 46
+    "OpponentScore": 46,
+    "OpponentID": "ga-edmund-burke-academy-waynesboro"
   },
   {
     "GameID": 20101008,
@@ -2903,7 +3020,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 26,
-    "OpponentScore": 44
+    "OpponentScore": 44,
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island"
   },
   {
     "GameID": 20101015,
@@ -2927,7 +3045,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 41,
-    "OpponentScore": 20
+    "OpponentScore": 20,
+    "OpponentID": "sc-first-baptist-school-charleston"
   },
   {
     "GameID": 20101022,
@@ -2951,7 +3070,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 35,
-    "OpponentScore": 13
+    "OpponentScore": 13,
+    "OpponentID": "sc-northwood-academy-charleston"
   },
   {
     "GameID": 20101029,
@@ -2975,7 +3095,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 35,
-    "OpponentScore": 42
+    "OpponentScore": 42,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland"
   },
   {
     "GameID": 20101105,
@@ -2999,7 +3120,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 42,
-    "OpponentScore": 20
+    "OpponentScore": 20,
+    "OpponentID": "sc-john-c-calhoun-academy-st-matthews"
   },
   {
     "GameID": 20101112,
@@ -3023,7 +3145,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 24,
-    "OpponentScore": 48
+    "OpponentScore": 48,
+    "OpponentID": "sc-thomas-sumter-academy-dalzell"
   },
   {
     "GameID": 20110819,
@@ -3047,7 +3170,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 6,
-    "OpponentScore": 25
+    "OpponentScore": 25,
+    "OpponentID": "sc-dorchester-academy-st-george"
   },
   {
     "GameID": 20110826,
@@ -3071,7 +3195,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 6,
-    "OpponentScore": 44
+    "OpponentScore": 44,
+    "OpponentID": "sc-laurence-manning-academy-manning"
   },
   {
     "GameID": 20110902,
@@ -3084,18 +3209,19 @@
     "SourceEventTime": "2011-09-03T00:00:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Hilton Head Prep",
+    "Opponent": "Hilton Head Preparatory School",
     "OpponentLocation": "Hilton Head Island, SC",
     "OpponentSlug": "hilton-head-prep-hilton-head-island-sc",
     "OpponentUrl": "https://www.maxpreps.com/sc/hilton-head-island/hilton-head-prep-dolphins/football/11-12/schedule/",
     "GameUrl": "https://www.maxpreps.com/games/9-2-2011/football-11/hilton-head-prep-vs-st-andrews.htm?c=jo1jySBx0Ei4oJ39dYvzpA",
     "LocationType": "Away",
-    "Venue": "Hilton Head Prep",
+    "Venue": "Hilton Head Preparatory School",
     "Notes": "",
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 12,
-    "OpponentScore": 30
+    "OpponentScore": 30,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island"
   },
   {
     "GameID": 20110909,
@@ -3108,7 +3234,7 @@
     "SourceEventTime": "2011-09-10T02:00:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Bible Baptist",
+    "Opponent": "Bible Baptist School",
     "OpponentLocation": "Savannah, GA",
     "OpponentSlug": "bible-baptist-savannah-ga",
     "OpponentUrl": "https://www.maxpreps.com/ga/savannah/bible-baptist-braves/football/11-12/schedule/",
@@ -3119,7 +3245,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 8,
-    "OpponentScore": 38
+    "OpponentScore": 38,
+    "OpponentID": "ga-bible-baptist-school-savannah"
   },
   {
     "GameID": 20110916,
@@ -3143,7 +3270,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 43
+    "OpponentScore": 43,
+    "OpponentID": "ga-edmund-burke-academy-waynesboro"
   },
   {
     "GameID": 20110930,
@@ -3167,7 +3295,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 39
+    "OpponentScore": 39,
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island"
   },
   {
     "GameID": 20111014,
@@ -3191,7 +3320,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 32,
-    "OpponentScore": 0
+    "OpponentScore": 0,
+    "OpponentID": "sc-first-baptist-school-charleston"
   },
   {
     "GameID": 20111021,
@@ -3215,7 +3345,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 14,
-    "OpponentScore": 27
+    "OpponentScore": 27,
+    "OpponentID": "sc-northwood-academy-charleston"
   },
   {
     "GameID": 20111028,
@@ -3239,7 +3370,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 14,
-    "OpponentScore": 48
+    "OpponentScore": 48,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland"
   },
   {
     "GameID": 20120817,
@@ -3252,18 +3384,19 @@
     "SourceEventTime": "To be Announced",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Bible Baptist",
+    "Opponent": "Bible Baptist School",
     "OpponentLocation": "Savannah, GA",
     "OpponentSlug": "bible-baptist-savannah-ga",
     "OpponentUrl": "https://www.maxpreps.com/ga/savannah/bible-baptist-braves/football/12-13/schedule/",
     "GameUrl": "https://www.maxpreps.com/games/8-17-2012/football-12/bible-baptist-vs-st-andrews.htm?c=JlX-qA1bQEGPwvqZZgMKFA",
     "LocationType": "Away",
-    "Venue": "Bible Baptist High School",
+    "Venue": "Bible Baptist School",
     "Notes": "",
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 18,
-    "OpponentScore": 42
+    "OpponentScore": 42,
+    "OpponentID": "ga-bible-baptist-school-savannah"
   },
   {
     "GameID": 20120824,
@@ -3276,7 +3409,7 @@
     "SourceEventTime": "2012-08-25T02:00:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Southside Christian",
+    "Opponent": "Southside Christian School",
     "OpponentLocation": "Simpsonville, SC",
     "OpponentSlug": "southside-christian-simpsonville-sc",
     "OpponentUrl": "https://www.maxpreps.com/sc/simpsonville/southside-christian-sabres/football/12-13/schedule/",
@@ -3287,7 +3420,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 14,
-    "OpponentScore": 25
+    "OpponentScore": 25,
+    "OpponentID": "sc-southside-christian-school-simpsonville"
   },
   {
     "GameID": 20120831,
@@ -3311,7 +3445,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 35,
-    "OpponentScore": 52
+    "OpponentScore": 52,
+    "OpponentID": "ga-bulloch-academy-statesboro"
   },
   {
     "GameID": 20120907,
@@ -3335,7 +3470,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 35,
-    "OpponentScore": 28
+    "OpponentScore": 28,
+    "OpponentID": "ga-first-preparatory-christian-academy-hinesville"
   },
   {
     "GameID": 20120914,
@@ -3359,7 +3495,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 14,
-    "OpponentScore": 40
+    "OpponentScore": 40,
+    "OpponentID": "ga-frederica-academy-st-simons-island"
   },
   {
     "GameID": 20120928,
@@ -3383,7 +3520,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 12,
-    "OpponentScore": 49
+    "OpponentScore": 49,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland"
   },
   {
     "GameID": 20121005,
@@ -3407,7 +3545,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 24,
-    "OpponentScore": 3
+    "OpponentScore": 3,
+    "OpponentID": "sc-holly-hill-academy-holly-hill"
   },
   {
     "GameID": 20121012,
@@ -3431,7 +3570,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 8,
-    "OpponentScore": 7
+    "OpponentScore": 7,
+    "OpponentID": "sc-dorchester-academy-st-george"
   },
   {
     "GameID": 20121019,
@@ -3444,7 +3584,7 @@
     "SourceEventTime": "To be Announced",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Hilton Head Prep",
+    "Opponent": "Hilton Head Preparatory School",
     "OpponentLocation": "Hilton Head Island, SC",
     "OpponentSlug": "hilton-head-prep-hilton-head-island-sc",
     "OpponentUrl": "https://www.maxpreps.com/sc/hilton-head-island/hilton-head-prep-dolphins/football/12-13/schedule/",
@@ -3455,7 +3595,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 14,
-    "OpponentScore": 35
+    "OpponentScore": 35,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island"
   },
   {
     "GameID": 20121026,
@@ -3479,7 +3620,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 12,
-    "OpponentScore": 42
+    "OpponentScore": 42,
+    "OpponentID": "sc-colleton-prep-academy-walterboro"
   },
   {
     "GameID": 20121102,
@@ -3503,7 +3645,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 20,
-    "OpponentScore": 44
+    "OpponentScore": 44,
+    "OpponentID": "sc-trinity-collegiate-darlington"
   },
   {
     "GameID": 20130823,
@@ -3516,18 +3659,19 @@
     "SourceEventTime": "2013-08-24T02:30:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Bible Baptist",
+    "Opponent": "Bible Baptist School",
     "OpponentLocation": "Savannah, GA",
     "OpponentSlug": "bible-baptist-savannah-ga",
     "OpponentUrl": "https://www.maxpreps.com/ga/savannah/bible-baptist-braves/football/13-14/schedule/",
     "GameUrl": "https://www.maxpreps.com/games/8-23-2013/football-13/bible-baptist-vs-st-andrews.htm?c=c1XRaxz-kkCXj19TmW8ogw",
     "LocationType": "Away",
-    "Venue": "Bible Baptist High School",
+    "Venue": "Bible Baptist School",
     "Notes": "",
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 6,
-    "OpponentScore": 60
+    "OpponentScore": 60,
+    "OpponentID": "ga-bible-baptist-school-savannah"
   },
   {
     "GameID": 20130829,
@@ -3551,7 +3695,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 45
+    "OpponentScore": 45,
+    "OpponentID": "ga-bulloch-academy-statesboro"
   },
   {
     "GameID": 20130906,
@@ -3575,7 +3720,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 36,
-    "OpponentScore": 20
+    "OpponentScore": 20,
+    "OpponentID": "ga-first-preparatory-christian-academy-hinesville"
   },
   {
     "GameID": 20130913,
@@ -3599,7 +3745,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 3,
-    "OpponentScore": 40
+    "OpponentScore": 40,
+    "OpponentID": "ga-frederica-academy-st-simons-island"
   },
   {
     "GameID": 20130920,
@@ -3623,7 +3770,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 28
+    "OpponentScore": 28,
+    "OpponentID": "ga-bethesda-academy-savannah"
   },
   {
     "GameID": 20131004,
@@ -3647,7 +3795,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 12,
-    "OpponentScore": 28
+    "OpponentScore": 28,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland"
   },
   {
     "GameID": 20131011,
@@ -3671,7 +3820,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 14,
-    "OpponentScore": 33
+    "OpponentScore": 33,
+    "OpponentID": "sc-holly-hill-academy-holly-hill"
   },
   {
     "GameID": 20131018,
@@ -3695,7 +3845,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 3,
-    "OpponentScore": 30
+    "OpponentScore": 30,
+    "OpponentID": "sc-dorchester-academy-st-george"
   },
   {
     "GameID": 20131025,
@@ -3708,18 +3859,19 @@
     "SourceEventTime": "2013-10-25T23:00:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Hilton Head Prep",
+    "Opponent": "Hilton Head Preparatory School",
     "OpponentLocation": "Hilton Head Island, SC",
     "OpponentSlug": "hilton-head-prep-hilton-head-island-sc",
     "OpponentUrl": "https://www.maxpreps.com/sc/hilton-head-island/hilton-head-prep-dolphins/football/13-14/schedule/",
     "GameUrl": "https://www.maxpreps.com/games/10-25-2013/football-13/hilton-head-prep-vs-st-andrews.htm?c=Mfbhtio2B061zr20KJr9Pw",
     "LocationType": "Away",
-    "Venue": "Hilton Head Prep",
+    "Venue": "Hilton Head Preparatory School",
     "Notes": "",
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 9,
-    "OpponentScore": 41
+    "OpponentScore": 41,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island"
   },
   {
     "GameID": 20140822,
@@ -3732,7 +3884,7 @@
     "SourceEventTime": "2014-08-23T02:00:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Bible Baptist",
+    "Opponent": "Bible Baptist School",
     "OpponentLocation": "Savannah, GA",
     "OpponentSlug": "bible-baptist-savannah-ga",
     "OpponentUrl": "https://www.maxpreps.com/ga/savannah/bible-baptist-braves/football/14-15/schedule/",
@@ -3743,7 +3895,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 6,
-    "OpponentScore": 19
+    "OpponentScore": 19,
+    "OpponentID": "ga-bible-baptist-school-savannah"
   },
   {
     "GameID": 20140829,
@@ -3767,7 +3920,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 35
+    "OpponentScore": 35,
+    "OpponentID": "ga-frederica-academy-st-simons-island"
   },
   {
     "GameID": 20140905,
@@ -3791,7 +3945,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 28
+    "OpponentScore": 28,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland"
   },
   {
     "GameID": 20140912,
@@ -3815,7 +3970,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 36,
-    "OpponentScore": 22
+    "OpponentScore": 22,
+    "OpponentID": "sc-first-baptist-school-charleston"
   },
   {
     "GameID": 20140926,
@@ -3839,7 +3995,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 24,
-    "OpponentScore": 36
+    "OpponentScore": 36,
+    "OpponentID": "sc-colleton-prep-academy-walterboro"
   },
   {
     "GameID": 20141003,
@@ -3863,7 +4020,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 41
+    "OpponentScore": 41,
+    "OpponentID": "sc-northwood-academy-charleston"
   },
   {
     "GameID": 20141010,
@@ -3887,7 +4045,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 7,
-    "OpponentScore": 40
+    "OpponentScore": 40,
+    "OpponentID": "ga-bethesda-academy-savannah"
   },
   {
     "GameID": 20141017,
@@ -3900,7 +4059,7 @@
     "SourceEventTime": "2014-10-18T02:00:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Hilton Head Prep",
+    "Opponent": "Hilton Head Preparatory School",
     "OpponentLocation": "Hilton Head Island, SC",
     "OpponentSlug": "hilton-head-prep-hilton-head-island-sc",
     "OpponentUrl": "https://www.maxpreps.com/sc/hilton-head-island/hilton-head-prep-dolphins/football/14-15/schedule/",
@@ -3911,7 +4070,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 20
+    "OpponentScore": 20,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island"
   },
   {
     "GameID": 20141024,
@@ -3935,7 +4095,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 14,
-    "OpponentScore": 24
+    "OpponentScore": 24,
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island"
   },
   {
     "GameID": 20141031,
@@ -3959,7 +4120,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 24,
-    "OpponentScore": 13
+    "OpponentScore": 13,
+    "OpponentID": "sc-palmetto-christian-academy-mt-pleasant"
   },
   {
     "GameID": 20141107,
@@ -3972,7 +4134,7 @@
     "SourceEventTime": "To be Announced",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Florence Christian",
+    "Opponent": "Florence Christian School",
     "OpponentLocation": "Florence, SC",
     "OpponentSlug": "florence-christian-florence-sc",
     "OpponentUrl": "https://www.maxpreps.com/sc/florence/florence-christian-eagles/football/14-15/schedule/",
@@ -3983,7 +4145,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 14,
-    "OpponentScore": 41
+    "OpponentScore": 41,
+    "OpponentID": "sc-florence-christian-school-florence"
   },
   {
     "GameID": 20150821,
@@ -3996,18 +4159,19 @@
     "SourceEventTime": "To be Announced",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Bible Baptist",
+    "Opponent": "Bible Baptist School",
     "OpponentLocation": "Savannah, GA",
     "OpponentSlug": "bible-baptist-savannah-ga",
     "OpponentUrl": "https://www.maxpreps.com/ga/savannah/bible-baptist-braves/football/15-16/schedule/",
     "GameUrl": "https://www.maxpreps.com/games/8-21-2015/football-15/bible-baptist-vs-st-andrews.htm?c=LyRCmzLL_02JJkZiyaAq8g",
     "LocationType": "Away",
-    "Venue": "Bible Baptist High School",
+    "Venue": "Bible Baptist School",
     "Notes": "",
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 63,
-    "OpponentScore": 0
+    "OpponentScore": 0,
+    "OpponentID": "ga-bible-baptist-school-savannah"
   },
   {
     "GameID": 20150828,
@@ -4031,7 +4195,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 7,
-    "OpponentScore": 34
+    "OpponentScore": 34,
+    "OpponentID": "ga-frederica-academy-st-simons-island"
   },
   {
     "GameID": 20150904,
@@ -4055,7 +4220,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 7,
-    "OpponentScore": 28
+    "OpponentScore": 28,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland"
   },
   {
     "GameID": 20150911,
@@ -4079,7 +4245,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 42,
-    "OpponentScore": 12
+    "OpponentScore": 12,
+    "OpponentID": "sc-first-baptist-school-charleston"
   },
   {
     "GameID": 20150925,
@@ -4103,7 +4270,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 6,
-    "OpponentScore": 20
+    "OpponentScore": 20,
+    "OpponentID": "sc-colleton-prep-academy-walterboro"
   },
   {
     "GameID": 20151002,
@@ -4127,7 +4295,8 @@
     "GameType": "Region",
     "Result": "",
     "TeamScore": null,
-    "OpponentScore": null
+    "OpponentScore": null,
+    "OpponentID": "sc-northwood-academy-charleston"
   },
   {
     "GameID": 20151009,
@@ -4147,11 +4316,12 @@
     "GameUrl": "https://www.maxpreps.com/games/10-9-2015/football-15/bethesda-academy-vs-st-andrews.htm?c=aoi5-DAB90Wh_pVmpwfMOw",
     "LocationType": "Away",
     "Venue": "",
-    "Notes": "The Game will be played at Bible Baptist",
+    "Notes": "The Game will be played at Bible Baptist School",
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 6,
-    "OpponentScore": 34
+    "OpponentScore": 34,
+    "OpponentID": "ga-bethesda-academy-savannah"
   },
   {
     "GameID": 20151016,
@@ -4164,7 +4334,7 @@
     "SourceEventTime": "2015-10-16T23:00:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Hilton Head Prep",
+    "Opponent": "Hilton Head Preparatory School",
     "OpponentLocation": "Hilton Head Island, SC",
     "OpponentSlug": "hilton-head-prep-hilton-head-island-sc",
     "OpponentUrl": "https://www.maxpreps.com/sc/hilton-head-island/hilton-head-prep-dolphins/football/15-16/schedule/",
@@ -4175,7 +4345,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 20,
-    "OpponentScore": 28
+    "OpponentScore": 28,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island"
   },
   {
     "GameID": 20151023,
@@ -4199,7 +4370,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 34,
-    "OpponentScore": 6
+    "OpponentScore": 6,
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island"
   },
   {
     "GameID": 20151030,
@@ -4223,7 +4395,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 42,
-    "OpponentScore": 6
+    "OpponentScore": 6,
+    "OpponentID": "sc-palmetto-christian-academy-mt-pleasant"
   },
   {
     "GameID": 20151106,
@@ -4236,7 +4409,7 @@
     "SourceEventTime": "To be Announced",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Florence Christian",
+    "Opponent": "Florence Christian School",
     "OpponentLocation": "Florence, SC",
     "OpponentSlug": "florence-christian-florence-sc",
     "OpponentUrl": "https://www.maxpreps.com/sc/florence/florence-christian-eagles/football/15-16/schedule/",
@@ -4247,7 +4420,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 14,
-    "OpponentScore": 42
+    "OpponentScore": 42,
+    "OpponentID": "sc-florence-christian-school-florence"
   },
   {
     "GameID": 0,
@@ -4260,7 +4434,7 @@
     "SourceEventTime": "To be Announced",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Hilton Head Prep",
+    "Opponent": "Hilton Head Preparatory School",
     "OpponentLocation": "Hilton Head Island, SC",
     "OpponentSlug": "hilton-head-prep-hilton-head-island-sc",
     "OpponentUrl": "https://www.maxpreps.com/sc/hilton-head-island/hilton-head-prep-dolphins/football/16-17/schedule/",
@@ -4271,7 +4445,8 @@
     "GameType": "Region",
     "Result": "",
     "TeamScore": null,
-    "OpponentScore": null
+    "OpponentScore": null,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island"
   },
   {
     "GameID": 20160819,
@@ -4295,7 +4470,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 27,
-    "OpponentScore": 0
+    "OpponentScore": 0,
+    "OpponentID": "sc-palmetto-christian-academy-mt-pleasant"
   },
   {
     "GameID": 20160826,
@@ -4308,18 +4484,19 @@
     "SourceEventTime": "2016-08-27T02:30:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "John Paul II",
+    "Opponent": "John Paul II Catholic School",
     "OpponentLocation": "Ridgeland, SC",
     "OpponentSlug": "john-paul-ii-ridgeland-sc",
     "OpponentUrl": "https://www.maxpreps.com/sc/ridgeland/john-paul-ii-golden-warrriors/football/16-17/schedule/",
     "GameUrl": "https://www.maxpreps.com/games/8-26-2016/football-16/john-paul-ii-vs-st-andrews.htm?c=V-U_mS7BD0uoZzEp2hh7-A",
     "LocationType": "Away",
-    "Venue": "John Paul II High School",
+    "Venue": "John Paul II Catholic School",
     "Notes": "",
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 62,
-    "OpponentScore": 6
+    "OpponentScore": 6,
+    "OpponentID": "sc-john-paul-ii-catholic-school-ridgeland"
   },
   {
     "GameID": 20160909,
@@ -4343,7 +4520,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 47,
-    "OpponentScore": 12
+    "OpponentScore": 12,
+    "OpponentID": "ga-first-preparatory-christian-academy-hinesville"
   },
   {
     "GameID": 20160916,
@@ -4367,7 +4545,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 33,
-    "OpponentScore": 31
+    "OpponentScore": 31,
+    "OpponentID": "sc-northwood-academy-charleston"
   },
   {
     "GameID": 20160930,
@@ -4391,7 +4570,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 21,
-    "OpponentScore": 12
+    "OpponentScore": 12,
+    "OpponentID": "sc-colleton-prep-academy-walterboro"
   },
   {
     "GameID": 20161021,
@@ -4415,7 +4595,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 13,
-    "OpponentScore": 49
+    "OpponentScore": 49,
+    "OpponentID": "sc-first-baptist-school-charleston"
   },
   {
     "GameID": 20161028,
@@ -4439,7 +4620,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 7,
-    "OpponentScore": 0
+    "OpponentScore": 0,
+    "OpponentID": "ga-bethesda-academy-savannah"
   },
   {
     "GameID": 20161104,
@@ -4463,7 +4645,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 21,
-    "OpponentScore": 14
+    "OpponentScore": 14,
+    "OpponentID": "sc-thomas-sumter-academy-dalzell"
   },
   {
     "GameID": 20161111,
@@ -4476,7 +4659,7 @@
     "SourceEventTime": "2016-11-12T03:30:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Lee Academy",
+    "Opponent": "Robert E. Lee Academy",
     "OpponentLocation": "Bishopville, SC",
     "OpponentSlug": "lee-academy-bishopville-sc",
     "OpponentUrl": "https://www.maxpreps.com/sc/bishopville/lee-academy-cavaliers/football/16-17/schedule/",
@@ -4487,7 +4670,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 7,
-    "OpponentScore": 28
+    "OpponentScore": 28,
+    "OpponentID": "sc-robert-e-lee-academy-bishopville"
   },
   {
     "GameID": 20170818,
@@ -4511,7 +4695,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 56,
-    "OpponentScore": 6
+    "OpponentScore": 6,
+    "OpponentID": "sc-palmetto-christian-academy-mt-pleasant"
   },
   {
     "GameID": 20170825,
@@ -4524,7 +4709,7 @@
     "SourceEventTime": "2017-08-26T02:30:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "John Paul II",
+    "Opponent": "John Paul II Catholic School",
     "OpponentLocation": "Ridgeland, SC",
     "OpponentSlug": "john-paul-ii-ridgeland-sc",
     "OpponentUrl": "https://www.maxpreps.com/sc/ridgeland/john-paul-ii-golden-warrriors/football/17-18/schedule/",
@@ -4535,7 +4720,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 42,
-    "OpponentScore": 0
+    "OpponentScore": 0,
+    "OpponentID": "sc-john-paul-ii-catholic-school-ridgeland"
   },
   {
     "GameID": 20170901,
@@ -4559,7 +4745,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 33,
-    "OpponentScore": 0
+    "OpponentScore": 0,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland"
   },
   {
     "GameID": 20170908,
@@ -4583,7 +4770,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 47,
-    "OpponentScore": 0
+    "OpponentScore": 0,
+    "OpponentID": "ga-first-preparatory-christian-academy-hinesville"
   },
   {
     "GameID": 20170915,
@@ -4607,7 +4795,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 42,
-    "OpponentScore": 0
+    "OpponentScore": 0,
+    "OpponentID": "sc-northwood-academy-charleston"
   },
   {
     "GameID": 20170929,
@@ -4631,7 +4820,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 49,
-    "OpponentScore": 0
+    "OpponentScore": 0,
+    "OpponentID": "sc-colleton-prep-academy-walterboro"
   },
   {
     "GameID": 20171006,
@@ -4644,18 +4834,19 @@
     "SourceEventTime": "2017-10-06T23:00:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Hilton Head Prep",
+    "Opponent": "Hilton Head Preparatory School",
     "OpponentLocation": "Hilton Head Island, SC",
     "OpponentSlug": "hilton-head-prep-hilton-head-island-sc",
     "OpponentUrl": "https://www.maxpreps.com/sc/hilton-head-island/hilton-head-prep-dolphins/football/17-18/schedule/",
     "GameUrl": "https://www.maxpreps.com/games/10-6-2017/football-17/hilton-head-prep-vs-st-andrews.htm?c=tGrRhMmw40qr6stMswDMdQ",
     "LocationType": "Away",
-    "Venue": "Hilton Head Prep",
+    "Venue": "Hilton Head Preparatory School",
     "Notes": "",
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 63,
-    "OpponentScore": 0
+    "OpponentScore": 0,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island"
   },
   {
     "GameID": 20171013,
@@ -4679,7 +4870,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 44,
-    "OpponentScore": 0
+    "OpponentScore": 0,
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island"
   },
   {
     "GameID": 20171020,
@@ -4703,7 +4895,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 7,
-    "OpponentScore": 38
+    "OpponentScore": 38,
+    "OpponentID": "sc-first-baptist-school-charleston"
   },
   {
     "GameID": 20171027,
@@ -4727,7 +4920,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 28,
-    "OpponentScore": 0
+    "OpponentScore": 0,
+    "OpponentID": "ga-bethesda-academy-savannah"
   },
   {
     "GameID": 20171103,
@@ -4740,7 +4934,7 @@
     "SourceEventTime": "2017-11-04T02:30:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Florence Christian",
+    "Opponent": "Florence Christian School",
     "OpponentLocation": "Florence, SC",
     "OpponentSlug": "florence-christian-florence-sc",
     "OpponentUrl": "https://www.maxpreps.com/sc/florence/florence-christian-eagles/football/17-18/schedule/",
@@ -4751,7 +4945,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 22,
-    "OpponentScore": 24
+    "OpponentScore": 24,
+    "OpponentID": "sc-florence-christian-school-florence"
   },
   {
     "GameID": 20171110,
@@ -4775,7 +4970,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 6,
-    "OpponentScore": 19
+    "OpponentScore": 19,
+    "OpponentID": "sc-trinity-collegiate-darlington"
   },
   {
     "GameID": 20180824,
@@ -4799,7 +4995,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 34
+    "OpponentScore": 34,
+    "OpponentID": "ga-bethesda-academy-savannah"
   },
   {
     "GameID": 20180831,
@@ -4812,7 +5009,7 @@
     "SourceEventTime": "2018-09-01T02:30:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "John Paul II",
+    "Opponent": "John Paul II Catholic School",
     "OpponentLocation": "Ridgeland, SC",
     "OpponentSlug": "john-paul-ii-ridgeland-sc",
     "OpponentUrl": "https://www.maxpreps.com/sc/ridgeland/john-paul-ii-golden-warrriors/football/18-19/schedule/",
@@ -4823,7 +5020,8 @@
     "GameType": "Regular Season",
     "Result": "",
     "TeamScore": null,
-    "OpponentScore": null
+    "OpponentScore": null,
+    "OpponentID": "sc-john-paul-ii-catholic-school-ridgeland"
   },
   {
     "GameID": 20180921,
@@ -4836,7 +5034,7 @@
     "SourceEventTime": "To be Announced",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Brentwood",
+    "Opponent": "Brentwood School",
     "OpponentLocation": "Sandersville, GA",
     "OpponentSlug": "brentwood-sandersville-ga",
     "OpponentUrl": "https://www.maxpreps.com/ga/sandersville/brentwood-war-eagles/football/18-19/schedule/",
@@ -4847,7 +5045,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 14,
-    "OpponentScore": 42
+    "OpponentScore": 42,
+    "OpponentID": "ga-brentwood-school-sandersville"
   },
   {
     "GameID": 20180928,
@@ -4871,7 +5070,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 21,
-    "OpponentScore": 28
+    "OpponentScore": 28,
+    "OpponentID": "ga-edmund-burke-academy-waynesboro"
   },
   {
     "GameID": 20181005,
@@ -4884,7 +5084,7 @@
     "SourceEventTime": "To be Announced",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Memorial Day",
+    "Opponent": "Memorial Day School",
     "OpponentLocation": "Savannah, GA",
     "OpponentSlug": "memorial-day-savannah-ga",
     "OpponentUrl": "https://www.maxpreps.com/ga/savannah/memorial-day-matadors/football/18-19/schedule/",
@@ -4895,7 +5095,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 14,
-    "OpponentScore": 28
+    "OpponentScore": 28,
+    "OpponentID": "ga-memorial-day-school-savannah"
   },
   {
     "GameID": 20181019,
@@ -4919,7 +5120,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 7,
-    "OpponentScore": 21
+    "OpponentScore": 21,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons"
   },
   {
     "GameID": 20181026,
@@ -4943,7 +5145,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 42,
-    "OpponentScore": 14
+    "OpponentScore": 14,
+    "OpponentID": "ga-briarwood-academy-warrenton"
   },
   {
     "GameID": 20181102,
@@ -4956,7 +5159,7 @@
     "SourceEventTime": "To be Announced",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Monsignor Donovan Catholic",
+    "Opponent": "Monsignor Donovan Catholic High School",
     "OpponentLocation": "Athens, GA",
     "OpponentSlug": "monsignor-donovan-catholic-athens-ga",
     "OpponentUrl": "https://www.maxpreps.com/ga/athens/monsignor-donovan-catholic-rams/football/18-19/schedule/",
@@ -4967,7 +5170,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 45,
-    "OpponentScore": 0
+    "OpponentScore": 0,
+    "OpponentID": "ga-monsignor-donovan-catholic-high-school-athens"
   },
   {
     "GameID": 20181109,
@@ -4991,7 +5195,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 28,
-    "OpponentScore": 0
+    "OpponentScore": 0,
+    "OpponentID": "ga-piedmont-academy-monticello"
   },
   {
     "GameID": 20181116,
@@ -5015,7 +5220,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 17,
-    "OpponentScore": 21
+    "OpponentScore": 21,
+    "OpponentID": "ga-terrell-academy-dawson"
   },
   {
     "GameID": 20190830,
@@ -5039,7 +5245,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 28,
-    "OpponentScore": 32
+    "OpponentScore": 32,
+    "OpponentID": "ga-bethesda-academy-savannah"
   },
   {
     "GameID": 20190906,
@@ -5052,18 +5259,19 @@
     "SourceEventTime": "2019-09-07T02:30:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "John Paul II",
+    "Opponent": "John Paul II Catholic School",
     "OpponentLocation": "Ridgeland, SC",
     "OpponentSlug": "john-paul-ii-ridgeland-sc",
     "OpponentUrl": "https://www.maxpreps.com/sc/ridgeland/john-paul-ii-golden-warrriors/football/19-20/schedule/",
     "GameUrl": "",
     "LocationType": "Away",
-    "Venue": "John Paul II High School",
+    "Venue": "John Paul II Catholic School",
     "Notes": "",
     "GameType": "Regular Season",
     "Result": "",
     "TeamScore": null,
-    "OpponentScore": null
+    "OpponentScore": null,
+    "OpponentID": "sc-john-paul-ii-catholic-school-ridgeland"
   },
   {
     "GameID": 20190920,
@@ -5087,7 +5295,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 13,
-    "OpponentScore": 39
+    "OpponentScore": 39,
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island"
   },
   {
     "GameID": 20190927,
@@ -5100,7 +5309,7 @@
     "SourceEventTime": "2019-09-28T02:30:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Brentwood",
+    "Opponent": "Brentwood School",
     "OpponentLocation": "Sandersville, GA",
     "OpponentSlug": "brentwood-sandersville-ga",
     "OpponentUrl": "https://www.maxpreps.com/ga/sandersville/brentwood-war-eagles/football/19-20/schedule/",
@@ -5111,7 +5320,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 21,
-    "OpponentScore": 55
+    "OpponentScore": 55,
+    "OpponentID": "ga-brentwood-school-sandersville"
   },
   {
     "GameID": 20191004,
@@ -5135,7 +5345,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 24,
-    "OpponentScore": 6
+    "OpponentScore": 6,
+    "OpponentID": "ga-edmund-burke-academy-waynesboro"
   },
   {
     "GameID": 20191011,
@@ -5148,7 +5359,7 @@
     "SourceEventTime": "2019-10-12T02:30:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Memorial Day",
+    "Opponent": "Memorial Day School",
     "OpponentLocation": "Savannah, GA",
     "OpponentSlug": "memorial-day-savannah-ga",
     "OpponentUrl": "https://www.maxpreps.com/ga/savannah/memorial-day-matadors/football/19-20/schedule/",
@@ -5159,7 +5370,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 34,
-    "OpponentScore": 28
+    "OpponentScore": 28,
+    "OpponentID": "ga-memorial-day-school-savannah"
   },
   {
     "GameID": 20191018,
@@ -5172,7 +5384,7 @@
     "SourceEventTime": "2019-10-19T02:30:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Westwood",
+    "Opponent": "Westwood School",
     "OpponentLocation": "Camilla, GA",
     "OpponentSlug": "westwood-camilla-ga",
     "OpponentUrl": "https://www.maxpreps.com/ga/camilla/westwood-wildcats/football/19-20/schedule/",
@@ -5183,7 +5395,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 37,
-    "OpponentScore": 13
+    "OpponentScore": 13,
+    "OpponentID": "ga-westwood-school-camilla"
   },
   {
     "GameID": 20191025,
@@ -5207,7 +5420,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 37,
-    "OpponentScore": 14
+    "OpponentScore": 14,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons"
   },
   {
     "GameID": 20191101,
@@ -5231,7 +5445,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 7,
-    "OpponentScore": 14
+    "OpponentScore": 14,
+    "OpponentID": "ga-briarwood-academy-warrenton"
   },
   {
     "GameID": 20191108,
@@ -5244,7 +5459,7 @@
     "SourceEventTime": "2019-11-09T03:30:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Monsignor Donovan Catholic",
+    "Opponent": "Monsignor Donovan Catholic High School",
     "OpponentLocation": "Athens, GA",
     "OpponentSlug": "monsignor-donovan-catholic-athens-ga",
     "OpponentUrl": "https://www.maxpreps.com/ga/athens/monsignor-donovan-catholic-rams/football/19-20/schedule/",
@@ -5255,7 +5470,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 41,
-    "OpponentScore": 7
+    "OpponentScore": 7,
+    "OpponentID": "ga-monsignor-donovan-catholic-high-school-athens"
   },
   {
     "GameID": 20191122,
@@ -5279,7 +5495,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 3,
-    "OpponentScore": 20
+    "OpponentScore": 20,
+    "OpponentID": "ga-briarwood-academy-warrenton"
   },
   {
     "GameID": 20200904,
@@ -5292,7 +5509,7 @@
     "SourceEventTime": "2020-09-05T02:30:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "John Paul II",
+    "Opponent": "John Paul II Catholic School",
     "OpponentLocation": "Ridgeland, SC",
     "OpponentSlug": "john-paul-ii-ridgeland-sc",
     "OpponentUrl": "https://www.maxpreps.com/sc/ridgeland/john-paul-ii-golden-warrriors/football/20-21/schedule/",
@@ -5303,7 +5520,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 6
+    "OpponentScore": 6,
+    "OpponentID": "sc-john-paul-ii-catholic-school-ridgeland"
   },
   {
     "GameID": 20200911,
@@ -5316,18 +5534,19 @@
     "SourceEventTime": "2020-09-12T00:00:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Hilton Head Prep",
+    "Opponent": "Hilton Head Preparatory School",
     "OpponentLocation": "Hilton Head Island, SC",
     "OpponentSlug": "hilton-head-prep-hilton-head-island-sc",
     "OpponentUrl": "https://www.maxpreps.com/sc/hilton-head-island/hilton-head-prep-dolphins/football/20-21/schedule/",
     "GameUrl": "https://www.maxpreps.com/games/9-11-2020/football-20/hilton-head-prep-vs-st-andrews.htm?c=OKMw885A-USARzreMod7zQ",
     "LocationType": "Away",
-    "Venue": "Hilton Head Prep",
+    "Venue": "Hilton Head Preparatory School",
     "Notes": "",
     "GameType": "Regular Season",
     "Result": "T",
     "TeamScore": 14,
-    "OpponentScore": 14
+    "OpponentScore": 14,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island"
   },
   {
     "GameID": 20201001,
@@ -5364,7 +5583,7 @@
     "SourceEventTime": "2020-10-03T02:30:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Memorial Day",
+    "Opponent": "Memorial Day School",
     "OpponentLocation": "Savannah, GA",
     "OpponentSlug": "memorial-day-savannah-ga",
     "OpponentUrl": "https://www.maxpreps.com/ga/savannah/memorial-day-matadors/football/20-21/schedule/",
@@ -5375,7 +5594,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 7
+    "OpponentScore": 7,
+    "OpponentID": "ga-memorial-day-school-savannah"
   },
   {
     "GameID": 20201016,
@@ -5399,7 +5619,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 69,
-    "OpponentScore": 0
+    "OpponentScore": 0,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons"
   },
   {
     "GameID": 20201023,
@@ -5412,7 +5633,7 @@
     "SourceEventTime": "2020-10-24T02:30:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Pinewood Christian",
+    "Opponent": "Pinewood Christian Academy",
     "OpponentLocation": "Bellville, GA",
     "OpponentSlug": "pinewood-christian-bellville-ga",
     "OpponentUrl": "https://www.maxpreps.com/ga/bellville/pinewood-christian-patriots/football/20-21/schedule/",
@@ -5423,7 +5644,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 38
+    "OpponentScore": 38,
+    "OpponentID": "ga-pinewood-christian-academy-bellville"
   },
   {
     "GameID": 20201030,
@@ -5436,7 +5658,7 @@
     "SourceEventTime": "2020-10-31T02:30:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Trinity Christian",
+    "Opponent": "Trinity Christian Academy",
     "OpponentLocation": "Dublin, GA",
     "OpponentSlug": "trinity-christian-dublin-ga",
     "OpponentUrl": "https://www.maxpreps.com/ga/dublin/trinity-christian-crusaders/football/20-21/schedule/",
@@ -5447,7 +5669,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 3,
-    "OpponentScore": 0
+    "OpponentScore": 0,
+    "OpponentID": "ga-trinity-christian-academy-dublin"
   },
   {
     "GameID": 20201106,
@@ -5471,7 +5694,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 7
+    "OpponentScore": 7,
+    "OpponentID": "ga-frederica-academy-st-simons-island"
   },
   {
     "GameID": 20201113,
@@ -5495,7 +5719,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 35
+    "OpponentScore": 35,
+    "OpponentID": "ga-bulloch-academy-statesboro"
   },
   {
     "GameID": 20210827,
@@ -5519,7 +5744,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 27,
-    "OpponentScore": 20
+    "OpponentScore": 20,
+    "OpponentID": "ga-bethesda-academy-savannah"
   },
   {
     "GameID": 20210910,
@@ -5532,7 +5758,7 @@
     "SourceEventTime": "2021-09-10T14:30:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Hilton Head Prep",
+    "Opponent": "Hilton Head Preparatory School",
     "OpponentLocation": "Hilton Head Island, SC",
     "OpponentSlug": "hilton-head-prep-hilton-head-island-sc",
     "OpponentUrl": "https://www.maxpreps.com/sc/hilton-head-island/hilton-head-prep-dolphins/football/21-22/schedule/",
@@ -5543,7 +5769,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 14
+    "OpponentScore": 14,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island"
   },
   {
     "GameID": 20210924,
@@ -5556,7 +5783,7 @@
     "SourceEventTime": "2021-09-25T02:30:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Memorial Day",
+    "Opponent": "Memorial Day School",
     "OpponentLocation": "Savannah, GA",
     "OpponentSlug": "memorial-day-savannah-ga",
     "OpponentUrl": "https://www.maxpreps.com/ga/savannah/memorial-day-matadors/football/21-22/schedule/",
@@ -5567,7 +5794,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 35,
-    "OpponentScore": 14
+    "OpponentScore": 14,
+    "OpponentID": "ga-memorial-day-school-savannah"
   },
   {
     "GameID": 20211001,
@@ -5591,7 +5819,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 20,
-    "OpponentScore": 12
+    "OpponentScore": 12,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons"
   },
   {
     "GameID": 20211008,
@@ -5604,7 +5833,7 @@
     "SourceEventTime": "2021-10-09T02:30:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Pinewood Christian",
+    "Opponent": "Pinewood Christian Academy",
     "OpponentLocation": "Bellville, GA",
     "OpponentSlug": "pinewood-christian-bellville-ga",
     "OpponentUrl": "https://www.maxpreps.com/ga/bellville/pinewood-christian-patriots/football/21-22/schedule/",
@@ -5615,7 +5844,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 19,
-    "OpponentScore": 50
+    "OpponentScore": 50,
+    "OpponentID": "ga-pinewood-christian-academy-bellville"
   },
   {
     "GameID": 20211015,
@@ -5628,7 +5858,7 @@
     "SourceEventTime": "2021-10-16T02:30:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Trinity Christian",
+    "Opponent": "Trinity Christian Academy",
     "OpponentLocation": "Dublin, GA",
     "OpponentSlug": "trinity-christian-dublin-ga",
     "OpponentUrl": "https://www.maxpreps.com/ga/dublin/trinity-christian-crusaders/football/21-22/schedule/",
@@ -5639,7 +5869,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 14,
-    "OpponentScore": 21
+    "OpponentScore": 21,
+    "OpponentID": "ga-trinity-christian-academy-dublin"
   },
   {
     "GameID": 20211022,
@@ -5663,7 +5894,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 6,
-    "OpponentScore": 43
+    "OpponentScore": 43,
+    "OpponentID": "ga-frederica-academy-st-simons-island"
   },
   {
     "GameID": 20211029,
@@ -5687,7 +5919,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 42
+    "OpponentScore": 42,
+    "OpponentID": "ga-bulloch-academy-statesboro"
   },
   {
     "GameID": 20211105,
@@ -5711,7 +5944,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 42,
-    "OpponentScore": 0
+    "OpponentScore": 0,
+    "OpponentID": "ga-notre-dame-academy-duluth"
   },
   {
     "GameID": 20220819,
@@ -5735,7 +5969,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 21,
-    "OpponentScore": 47
+    "OpponentScore": 47,
+    "OpponentID": "ga-thomas-jefferson-academy-louisville"
   },
   {
     "GameID": 20220826,
@@ -5748,18 +5983,19 @@
     "SourceEventTime": "2022-08-27T02:30:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Valwood",
+    "Opponent": "Valwood School",
     "OpponentLocation": "Valdosta, GA",
     "OpponentSlug": "valwood-valdosta-ga",
     "OpponentUrl": "https://www.maxpreps.com/ga/valdosta/valwood-valiants/football/22-23/schedule/",
     "GameUrl": "https://www.maxpreps.com/games/8-26-2022/football-22/st-andrews-vs-valwood.htm?c=tA7YhxlMWkaoxkoLQR_DPw",
     "LocationType": "Away",
-    "Venue": "Valwood High School",
+    "Venue": "Valwood School",
     "Notes": "",
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 7,
-    "OpponentScore": 30
+    "OpponentScore": 30,
+    "OpponentID": "ga-valwood-school-hahira"
   },
   {
     "GameID": 20220902,
@@ -5772,7 +6008,7 @@
     "SourceEventTime": "2022-09-03T02:30:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "John Paul II",
+    "Opponent": "John Paul II Catholic School",
     "OpponentLocation": "Ridgeland, SC",
     "OpponentSlug": "john-paul-ii-ridgeland-sc",
     "OpponentUrl": "https://www.maxpreps.com/sc/ridgeland/john-paul-ii-golden-warrriors/football/22-23/schedule/",
@@ -5783,7 +6019,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 25,
-    "OpponentScore": 46
+    "OpponentScore": 46,
+    "OpponentID": "sc-john-paul-ii-catholic-school-ridgeland"
   },
   {
     "GameID": 20220909,
@@ -5796,18 +6033,19 @@
     "SourceEventTime": "2022-09-10T00:00:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Hilton Head Prep",
+    "Opponent": "Hilton Head Preparatory School",
     "OpponentLocation": "Hilton Head Island, SC",
     "OpponentSlug": "hilton-head-prep-hilton-head-island-sc",
     "OpponentUrl": "https://www.maxpreps.com/sc/hilton-head-island/hilton-head-prep-dolphins/football/22-23/schedule/",
     "GameUrl": "https://www.maxpreps.com/games/9-9-2022/football-22/hilton-head-prep-vs-st-andrews.htm?c=Uv5a_D-vr0a5-StuBHMprA",
     "LocationType": "Away",
-    "Venue": "Hilton Head Prep",
+    "Venue": "Hilton Head Preparatory School",
     "Notes": "",
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 31,
-    "OpponentScore": 19
+    "OpponentScore": 19,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island"
   },
   {
     "GameID": 20220923,
@@ -5820,7 +6058,7 @@
     "SourceEventTime": "2022-09-24T02:30:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Memorial Day",
+    "Opponent": "Memorial Day School",
     "OpponentLocation": "Savannah, GA",
     "OpponentSlug": "memorial-day-savannah-ga",
     "OpponentUrl": "https://www.maxpreps.com/ga/savannah/memorial-day-matadors/football/22-23/schedule/",
@@ -5831,7 +6069,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 43,
-    "OpponentScore": 0
+    "OpponentScore": 0,
+    "OpponentID": "ga-memorial-day-school-savannah"
   },
   {
     "GameID": 20220930,
@@ -5855,7 +6094,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 28,
-    "OpponentScore": 21
+    "OpponentScore": 21,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons"
   },
   {
     "GameID": 20221007,
@@ -5868,7 +6108,7 @@
     "SourceEventTime": "2022-10-07T23:00:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Trinity Christian",
+    "Opponent": "Trinity Christian Academy",
     "OpponentLocation": "Dublin, GA",
     "OpponentSlug": "trinity-christian-dublin-ga",
     "OpponentUrl": "https://www.maxpreps.com/ga/dublin/trinity-christian-crusaders/football/22-23/schedule/",
@@ -5879,7 +6119,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 48,
-    "OpponentScore": 8
+    "OpponentScore": 8,
+    "OpponentID": "ga-trinity-christian-academy-dublin"
   },
   {
     "GameID": 20221021,
@@ -5892,7 +6133,7 @@
     "SourceEventTime": "2022-10-22T02:30:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Pinewood Christian",
+    "Opponent": "Pinewood Christian Academy",
     "OpponentLocation": "Bellville, GA",
     "OpponentSlug": "pinewood-christian-bellville-ga",
     "OpponentUrl": "https://www.maxpreps.com/ga/bellville/pinewood-christian-patriots/football/22-23/schedule/",
@@ -5903,7 +6144,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 26,
-    "OpponentScore": 30
+    "OpponentScore": 30,
+    "OpponentID": "ga-pinewood-christian-academy-bellville"
   },
   {
     "GameID": 20221028,
@@ -5927,7 +6169,8 @@
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 30,
-    "OpponentScore": 26
+    "OpponentScore": 26,
+    "OpponentID": "ga-bulloch-academy-statesboro"
   },
   {
     "GameID": 20221104,
@@ -5951,7 +6194,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 7,
-    "OpponentScore": 42
+    "OpponentScore": 42,
+    "OpponentID": "ga-frederica-academy-st-simons-island"
   },
   {
     "GameID": 20230818,
@@ -5975,7 +6219,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 34,
-    "OpponentScore": 0
+    "OpponentScore": 0,
+    "OpponentID": "ga-thomas-jefferson-academy-louisville"
   },
   {
     "GameID": 20230825,
@@ -5988,7 +6233,7 @@
     "SourceEventTime": "2023-08-26T02:30:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Valwood",
+    "Opponent": "Valwood School",
     "OpponentLocation": "Valdosta, GA",
     "OpponentSlug": "valwood-valdosta-ga",
     "OpponentUrl": "https://www.maxpreps.com/ga/valdosta/valwood-valiants/football/23-24/schedule/",
@@ -5999,7 +6244,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 29,
-    "OpponentScore": 50
+    "OpponentScore": 50,
+    "OpponentID": "ga-valwood-school-hahira"
   },
   {
     "GameID": 20230901,
@@ -6012,7 +6258,7 @@
     "SourceEventTime": "2023-09-02T02:30:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "John Paul II",
+    "Opponent": "John Paul II Catholic School",
     "OpponentLocation": "Ridgeland, SC",
     "OpponentSlug": "john-paul-ii-ridgeland-sc",
     "OpponentUrl": "https://www.maxpreps.com/sc/ridgeland/john-paul-ii-golden-warrriors/football/23-24/schedule/",
@@ -6023,7 +6269,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 36,
-    "OpponentScore": 7
+    "OpponentScore": 7,
+    "OpponentID": "sc-john-paul-ii-catholic-school-ridgeland"
   },
   {
     "GameID": 20230908,
@@ -6036,7 +6283,7 @@
     "SourceEventTime": "2023-09-09T02:30:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Hilton Head Prep",
+    "Opponent": "Hilton Head Preparatory School",
     "OpponentLocation": "Hilton Head Island, SC",
     "OpponentSlug": "hilton-head-prep-hilton-head-island-sc",
     "OpponentUrl": "https://www.maxpreps.com/sc/hilton-head-island/hilton-head-prep-dolphins/football/23-24/schedule/",
@@ -6047,7 +6294,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 44,
-    "OpponentScore": 0
+    "OpponentScore": 0,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island"
   },
   {
     "GameID": 20230922,
@@ -6060,18 +6308,19 @@
     "SourceEventTime": "2023-09-23T02:30:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Memorial Day",
+    "Opponent": "Memorial Day School",
     "OpponentLocation": "Savannah, GA",
     "OpponentSlug": "memorial-day-savannah-ga",
     "OpponentUrl": "https://www.maxpreps.com/ga/savannah/memorial-day-matadors/football/23-24/schedule/",
     "GameUrl": "https://www.maxpreps.com/games/9-22-2023/football-23/memorial-day-vs-st-andrews.htm?c=gQDrdxKeNUaC5OLcDmp5yQ",
     "LocationType": "Away",
-    "Venue": "Memorial Day High School",
+    "Venue": "Memorial Day School",
     "Notes": "",
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 41,
-    "OpponentScore": 12
+    "OpponentScore": 12,
+    "OpponentID": "ga-memorial-day-school-savannah"
   },
   {
     "GameID": 20230929,
@@ -6095,7 +6344,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 29,
-    "OpponentScore": 42
+    "OpponentScore": 42,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons"
   },
   {
     "GameID": 20231006,
@@ -6108,7 +6358,7 @@
     "SourceEventTime": "2023-10-07T02:30:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Trinity Christian",
+    "Opponent": "Trinity Christian Academy",
     "OpponentLocation": "Dublin, GA",
     "OpponentSlug": "trinity-christian-dublin-ga",
     "OpponentUrl": "https://www.maxpreps.com/ga/dublin/trinity-christian-crusaders/football/23-24/schedule/",
@@ -6119,7 +6369,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 42,
-    "OpponentScore": 0
+    "OpponentScore": 0,
+    "OpponentID": "ga-trinity-christian-academy-dublin"
   },
   {
     "GameID": 20231020,
@@ -6132,7 +6383,7 @@
     "SourceEventTime": "2023-10-21T02:30:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Pinewood Christian",
+    "Opponent": "Pinewood Christian Academy",
     "OpponentLocation": "Bellville, GA",
     "OpponentSlug": "pinewood-christian-bellville-ga",
     "OpponentUrl": "https://www.maxpreps.com/ga/bellville/pinewood-christian-patriots/football/23-24/schedule/",
@@ -6143,7 +6394,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 27,
-    "OpponentScore": 35
+    "OpponentScore": 35,
+    "OpponentID": "ga-pinewood-christian-academy-bellville"
   },
   {
     "GameID": 20231027,
@@ -6167,7 +6419,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 7,
-    "OpponentScore": 42
+    "OpponentScore": 42,
+    "OpponentID": "ga-bulloch-academy-statesboro"
   },
   {
     "GameID": 20231103,
@@ -6191,7 +6444,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 13,
-    "OpponentScore": 49
+    "OpponentScore": 49,
+    "OpponentID": "ga-frederica-academy-st-simons-island"
   },
   {
     "GameID": 20231110,
@@ -6215,7 +6469,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 27,
-    "OpponentScore": 49
+    "OpponentScore": 49,
+    "OpponentID": "ga-tiftarea-academy-chula"
   },
   {
     "GameID": 20240816,
@@ -6239,7 +6494,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 42
+    "OpponentScore": 42,
+    "OpponentID": "ga-edmund-burke-academy-waynesboro"
   },
   {
     "GameID": 20240823,
@@ -6252,18 +6508,19 @@
     "SourceEventTime": "2024-08-24T00:00:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Hilton Head Prep",
+    "Opponent": "Hilton Head Preparatory School",
     "OpponentLocation": "Hilton Head Island, SC",
     "OpponentSlug": "hilton-head-prep-hilton-head-island-sc",
     "OpponentUrl": "https://www.maxpreps.com/sc/hilton-head-island/hilton-head-prep-dolphins/football/24-25/schedule/",
     "GameUrl": "https://www.maxpreps.com/games/8-23-2024/football-24/hilton-head-prep-vs-st-andrews.htm?c=FuHE4VdBvUahYKJ52_NLxg",
     "LocationType": "Away",
-    "Venue": "Hilton Head Prep",
+    "Venue": "Hilton Head Preparatory School",
     "Notes": "",
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 13,
-    "OpponentScore": 19
+    "OpponentScore": 19,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island"
   },
   {
     "GameID": 20240830,
@@ -6287,7 +6544,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 20,
-    "OpponentScore": 24
+    "OpponentScore": 24,
+    "OpponentID": "ga-central-fellowship-christian-academy-macon"
   },
   {
     "GameID": 20240906,
@@ -6311,7 +6569,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 12,
-    "OpponentScore": 46
+    "OpponentScore": 46,
+    "OpponentID": "ga-briarwood-academy-warrenton"
   },
   {
     "GameID": 20240914,
@@ -6324,7 +6583,7 @@
     "SourceEventTime": "2024-09-14T20:00:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Augusta Prep",
+    "Opponent": "Augusta Preparatory Day School",
     "OpponentLocation": "Augusta, GA",
     "OpponentSlug": "augusta-prep-augusta-ga",
     "OpponentUrl": "https://www.maxpreps.com/ga/augusta/augusta-prep-cavaliers/football/24-25/schedule/",
@@ -6335,7 +6594,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 39,
-    "OpponentScore": 21
+    "OpponentScore": 21,
+    "OpponentID": "ga-augusta-preparatory-day-school-augusta"
   },
   {
     "GameID": 20241004,
@@ -6348,7 +6608,7 @@
     "SourceEventTime": "2024-10-05T02:00:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Harvest Community",
+    "Opponent": "Harvest Community School",
     "OpponentLocation": "Jacksonville, FL",
     "OpponentSlug": "harvest-community-jacksonville-fl",
     "OpponentUrl": "https://www.maxpreps.com/fl/jacksonville/harvest-community-warriors/football/24-25/schedule/",
@@ -6359,7 +6619,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 41,
-    "OpponentScore": 7
+    "OpponentScore": 7,
+    "OpponentID": "fl-harvest-community-school-jacksonville"
   },
   {
     "GameID": 20241011,
@@ -6372,7 +6633,7 @@
     "SourceEventTime": "2024-10-12T02:30:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Pinewood Christian",
+    "Opponent": "Pinewood Christian Academy",
     "OpponentLocation": "Bellville, GA",
     "OpponentSlug": "pinewood-christian-bellville-ga",
     "OpponentUrl": "https://www.maxpreps.com/ga/bellville/pinewood-christian-patriots/football/24-25/schedule/",
@@ -6383,7 +6644,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 36,
-    "OpponentScore": 64
+    "OpponentScore": 64,
+    "OpponentID": "ga-pinewood-christian-academy-bellville"
   },
   {
     "GameID": 20241018,
@@ -6407,7 +6669,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 55
+    "OpponentScore": 55,
+    "OpponentID": "ga-bulloch-academy-statesboro"
   },
   {
     "GameID": 20241025,
@@ -6431,7 +6694,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 2,
-    "OpponentScore": 25
+    "OpponentScore": 25,
+    "OpponentID": "ga-frederica-academy-st-simons-island"
   },
   {
     "GameID": 20250815,
@@ -6455,7 +6719,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 6,
-    "OpponentScore": 30
+    "OpponentScore": 30,
+    "OpponentID": "ga-edmund-burke-academy-waynesboro"
   },
   {
     "GameID": 20250821,
@@ -6468,18 +6733,19 @@
     "SourceEventTime": "2025-08-22T00:00:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Hilton Head Prep",
+    "Opponent": "Hilton Head Preparatory School",
     "OpponentLocation": "Hilton Head Island, SC",
     "OpponentSlug": "hilton-head-prep-hilton-head-island-sc",
     "OpponentUrl": "https://www.maxpreps.com/sc/hilton-head-island/hilton-head-prep-dolphins/football/",
     "GameUrl": "https://www.maxpreps.com/games/8-21-2025/football-25/hilton-head-prep-vs-st-andrews.htm?c=_LP5YsB9DU6FuW5dS1rnow",
     "LocationType": "Away",
-    "Venue": "Hilton Head Prep",
+    "Venue": "Hilton Head Preparatory School",
     "Notes": "",
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 28,
-    "OpponentScore": 14
+    "OpponentScore": 14,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island"
   },
   {
     "GameID": 20250829,
@@ -6503,7 +6769,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 26,
-    "OpponentScore": 32
+    "OpponentScore": 32,
+    "OpponentID": "ga-central-fellowship-christian-academy-macon"
   },
   {
     "GameID": 20250905,
@@ -6527,7 +6794,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 22,
-    "OpponentScore": 48
+    "OpponentScore": 48,
+    "OpponentID": "ga-briarwood-academy-warrenton"
   },
   {
     "GameID": 20250912,
@@ -6540,7 +6808,7 @@
     "SourceEventTime": "2025-09-13T02:00:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Augusta Prep",
+    "Opponent": "Augusta Preparatory Day School",
     "OpponentLocation": "Augusta, GA",
     "OpponentSlug": "augusta-prep-augusta-ga",
     "OpponentUrl": "https://www.maxpreps.com/ga/augusta/augusta-prep-cavaliers/football/",
@@ -6551,7 +6819,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 24,
-    "OpponentScore": 22
+    "OpponentScore": 22,
+    "OpponentID": "ga-augusta-preparatory-day-school-augusta"
   },
   {
     "GameID": 20250926,
@@ -6575,7 +6844,8 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 8,
-    "OpponentScore": 41
+    "OpponentScore": 41,
+    "OpponentID": "ga-robert-toombs-christian-academy-lyons"
   },
   {
     "GameID": 20251003,
@@ -6588,7 +6858,7 @@
     "SourceEventTime": "2025-10-04T02:00:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Harvest Community",
+    "Opponent": "Harvest Community School",
     "OpponentLocation": "Jacksonville, FL",
     "OpponentSlug": "harvest-community-jacksonville-fl",
     "OpponentUrl": "https://www.maxpreps.com/fl/jacksonville/harvest-community-warriors/football/",
@@ -6599,7 +6869,8 @@
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 42,
-    "OpponentScore": 0
+    "OpponentScore": 0,
+    "OpponentID": "fl-harvest-community-school-jacksonville"
   },
   {
     "GameID": 20251010,
@@ -6612,7 +6883,7 @@
     "SourceEventTime": "2025-10-11T02:00:00",
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Pinewood Christian",
+    "Opponent": "Pinewood Christian Academy",
     "OpponentLocation": "Bellville, GA",
     "OpponentSlug": "pinewood-christian-bellville-ga",
     "OpponentUrl": "https://www.maxpreps.com/ga/bellville/pinewood-christian-patriots/football/",
@@ -6623,7 +6894,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 12,
-    "OpponentScore": 39
+    "OpponentScore": 39,
+    "OpponentID": "ga-pinewood-christian-academy-bellville"
   },
   {
     "GameID": 20251017,
@@ -6647,7 +6919,8 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 6,
-    "OpponentScore": 45
+    "OpponentScore": 45,
+    "OpponentID": "ga-bulloch-academy-statesboro"
   },
   {
     "GameID": 20251024,
@@ -6671,6 +6944,7 @@
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 16,
-    "OpponentScore": 49
+    "OpponentScore": 49,
+    "OpponentID": "ga-frederica-academy-st-simons-island"
   }
 ]

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-01T12:35:21.477Z",
-  "itemCount": 1472,
+  "generatedAt": "2026-05-01T14:25:58.025Z",
+  "itemCount": 1462,
   "items": [
     {
       "id": "athletics-home",
@@ -19935,6 +19935,8 @@
         "history",
         "records",
         "Memorial Day School",
+        "Memorial Day",
+        "Matadors",
         "Savannah",
         "GA"
       ]
@@ -20022,7 +20024,6 @@
         "history",
         "records",
         "Citizens Christian Academy",
-        "Citizens Christian",
         "Douglas",
         "GA"
       ]
@@ -20195,6 +20196,8 @@
         "history",
         "records",
         "Bible Baptist School",
+        "Bible Baptist",
+        "Braves",
         "Savannah",
         "GA"
       ]
@@ -20265,7 +20268,7 @@
         "history",
         "records",
         "Pinewood Christian Academy",
-        "Pinewood",
+        "Pinewood Christian",
         "Patriots",
         "Bellville",
         "GA"
@@ -20439,6 +20442,8 @@
         "history",
         "records",
         "Hilton Head Preparatory School",
+        "Hilton Head Prep",
+        "Dolphins",
         "Hilton Head Island",
         "SC"
       ]
@@ -20461,18 +20466,20 @@
       ]
     },
     {
-      "id": "boys-basketball-team-john-c-calhoun-academy",
+      "id": "boys-basketball-team-calhoun-academy",
       "type": "team",
-      "title": "John C. Calhoun Academy",
+      "title": "Calhoun Academy",
       "subtitle": "Boys Basketball opponent history - St. Matthews, SC",
-      "to": "/athletics/boys/basketball/records/opponents?team=John+C.+Calhoun+Academy",
+      "to": "/athletics/boys/basketball/records/opponents?team=Calhoun+Academy",
       "keywords": [
         "Boys Basketball",
         "team",
         "opponent",
         "history",
         "records",
-        "John C. Calhoun Academy",
+        "Calhoun Academy",
+        "Calhoun",
+        "Cavaliers",
         "St. Matthews",
         "SC"
       ]
@@ -20490,7 +20497,6 @@
         "history",
         "records",
         "Riverview Academy",
-        "Riverview (Albany)",
         "Albany",
         "GA"
       ]
@@ -20542,7 +20548,6 @@
         "history",
         "records",
         "First Baptist School of Charleston",
-        "First Baptist School",
         "Charleston",
         "SC"
       ]
@@ -20679,7 +20684,6 @@
         "history",
         "records",
         "Valley Stream North High School",
-        "Valley Stream North (New York)",
         "Franklin Square",
         "NY"
       ]
@@ -20765,7 +20769,6 @@
         "history",
         "records",
         "East Rockaway High School",
-        "East Rockaway (New York)",
         "East Rockaway",
         "NY"
       ]
@@ -20800,7 +20803,6 @@
         "history",
         "records",
         "Colleton Prep Academy",
-        "Colleton Preparatory Academy",
         "Walterboro",
         "SC"
       ]
@@ -20886,9 +20888,10 @@
         "history",
         "records",
         "Charleston Collegiate School",
+        "Charleston Collegiate",
+        "Sun Devils",
         "Johns Island",
-        "SC",
-        "Charleston Collegiate"
+        "SC"
       ]
     },
     {
@@ -20904,7 +20907,6 @@
         "history",
         "records",
         "St. Paul's Country Day School",
-        "St. Paul's Country Day",
         "Hollywood",
         "SC"
       ]
@@ -20922,7 +20924,6 @@
         "history",
         "records",
         "Providence Christian School",
-        "Providence Christian Academy",
         "Savannah",
         "GA"
       ]
@@ -20942,24 +20943,6 @@
         "Holly Hill Academy",
         "Holly Hill",
         "SC"
-      ]
-    },
-    {
-      "id": "boys-basketball-team-bible-baptist",
-      "type": "team",
-      "title": "Bible Baptist",
-      "subtitle": "Boys Basketball opponent history - Savannah, GA",
-      "to": "/athletics/boys/basketball/records/opponents?team=Bible+Baptist",
-      "keywords": [
-        "Boys Basketball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Bible Baptist",
-        "Braves",
-        "Savannah",
-        "GA"
       ]
     },
     {
@@ -21034,42 +21017,6 @@
       ]
     },
     {
-      "id": "boys-basketball-team-hilton-head-prep",
-      "type": "team",
-      "title": "Hilton Head Prep",
-      "subtitle": "Boys Basketball opponent history - Hilton Head Island, SC",
-      "to": "/athletics/boys/basketball/records/opponents?team=Hilton+Head+Prep",
-      "keywords": [
-        "Boys Basketball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Hilton Head Prep",
-        "Dolphins",
-        "Hilton Head Island",
-        "SC"
-      ]
-    },
-    {
-      "id": "boys-basketball-team-pinewood-christian",
-      "type": "team",
-      "title": "Pinewood Christian",
-      "subtitle": "Boys Basketball opponent history - Bellville, GA",
-      "to": "/athletics/boys/basketball/records/opponents?team=Pinewood+Christian",
-      "keywords": [
-        "Boys Basketball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Pinewood Christian",
-        "Patriots",
-        "Bellville",
-        "GA"
-      ]
-    },
-    {
       "id": "boys-basketball-team-lagrange-academy",
       "type": "team",
       "title": "LaGrange Academy",
@@ -21084,42 +21031,6 @@
         "LaGrange Academy",
         "LaGrange",
         "GA"
-      ]
-    },
-    {
-      "id": "boys-basketball-team-memorial-day",
-      "type": "team",
-      "title": "Memorial Day",
-      "subtitle": "Boys Basketball opponent history - Savannah, GA",
-      "to": "/athletics/boys/basketball/records/opponents?team=Memorial+Day",
-      "keywords": [
-        "Boys Basketball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Memorial Day",
-        "Matadors",
-        "Savannah",
-        "GA"
-      ]
-    },
-    {
-      "id": "boys-basketball-team-charleston-collegiate",
-      "type": "team",
-      "title": "Charleston Collegiate",
-      "subtitle": "Boys Basketball opponent history - John's Island, SC",
-      "to": "/athletics/boys/basketball/records/opponents?team=Charleston+Collegiate",
-      "keywords": [
-        "Boys Basketball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Charleston Collegiate",
-        "Sundevils",
-        "John's Island",
-        "SC"
       ]
     },
     {
@@ -21363,8 +21274,7 @@
         "records",
         "Coastal HomeSchool",
         "Pembroke",
-        "GA",
-        "Coastal Homeschool Athletic Association"
+        "GA"
       ]
     },
     {
@@ -21437,19 +21347,20 @@
       ]
     },
     {
-      "id": "boys-basketball-team-john-paul-ii",
+      "id": "boys-basketball-team-john-paul-ii-catholic-school",
       "type": "team",
-      "title": "John Paul II",
+      "title": "John Paul II Catholic School",
       "subtitle": "Boys Basketball opponent history - Ridgeland, SC",
-      "to": "/athletics/boys/basketball/records/opponents?team=John+Paul+II",
+      "to": "/athletics/boys/basketball/records/opponents?team=John+Paul+II+Catholic+School",
       "keywords": [
         "Boys Basketball",
         "team",
         "opponent",
         "history",
         "records",
+        "John Paul II Catholic School",
         "John Paul II",
-        "Golden Warrriors",
+        "Golden Warriors",
         "Ridgeland",
         "SC"
       ]
@@ -21487,8 +21398,7 @@
         "FPCA",
         "Highlanders",
         "Hinesville",
-        "GA",
-        "First Presbyterian Christian Academy"
+        "GA"
       ]
     },
     {
@@ -21506,23 +21416,6 @@
         "Spartanburg Day",
         "Griffins",
         "Spartanburg",
-        "SC"
-      ]
-    },
-    {
-      "id": "boys-basketball-team-john-paul-ii-catholic-school",
-      "type": "team",
-      "title": "John Paul II Catholic School",
-      "subtitle": "Boys Basketball opponent history - Ridgeland, SC",
-      "to": "/athletics/boys/basketball/records/opponents?team=John+Paul+II+Catholic+School",
-      "keywords": [
-        "Boys Basketball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "John Paul II Catholic School",
-        "Ridgeland",
         "SC"
       ]
     },
@@ -21963,6 +21856,8 @@
         "history",
         "records",
         "Augusta Preparatory Day School",
+        "Augusta Prep",
+        "Cavaliers",
         "Augusta",
         "GA"
       ]
@@ -22745,6 +22640,7 @@
         "records",
         "Bible Baptist School",
         "Bible Baptist",
+        "Braves",
         "Savannah",
         "GA"
       ]
@@ -22763,6 +22659,7 @@
         "records",
         "Hilton Head Preparatory School",
         "Hilton Head Prep",
+        "Dolphins",
         "Hilton Head Island",
         "SC"
       ]
@@ -22834,6 +22731,7 @@
         "records",
         "Brentwood School",
         "Brentwood",
+        "War Eagles",
         "Sandersville",
         "GA"
       ]
@@ -22852,6 +22750,7 @@
         "records",
         "Memorial Day School",
         "Memorial Day",
+        "Matadors",
         "Savannah",
         "GA"
       ]
@@ -22886,7 +22785,6 @@
         "history",
         "records",
         "First Baptist School of Charleston",
-        "First Baptist School",
         "Charleston",
         "SC"
       ]
@@ -22904,7 +22802,6 @@
         "history",
         "records",
         "East Carter High School",
-        "East Carter",
         "Grayson",
         "KY"
       ]
@@ -22922,7 +22819,6 @@
         "history",
         "records",
         "Dixie High School",
-        "Dixie",
         "New Lebanon",
         "OH"
       ]
@@ -22940,7 +22836,6 @@
         "history",
         "records",
         "Ridgeland High School",
-        "Ridgeland",
         "Rossville",
         "GA"
       ]
@@ -23009,7 +22904,6 @@
         "history",
         "records",
         "St. Luke's Episcopal School",
-        "St. Luke's Episcopal",
         "Mobile",
         "AL"
       ]
@@ -23027,7 +22921,6 @@
         "history",
         "records",
         "First Presbyterian Day School",
-        "First Presbyterian Day",
         "Macon",
         "GA"
       ]
@@ -23115,7 +23008,6 @@
         "history",
         "records",
         "Father Lopez Catholic High School",
-        "Father Lopez",
         "Daytona Beach",
         "FL"
       ]
@@ -23140,18 +23032,20 @@
       ]
     },
     {
-      "id": "baseball-team-canterbury",
+      "id": "baseball-team-canterbury-school",
       "type": "team",
-      "title": "Canterbury",
-      "subtitle": "Baseball opponent history",
-      "to": "/athletics/boys/baseball/records/opponents?team=Canterbury",
+      "title": "Canterbury School",
+      "subtitle": "Baseball opponent history - St. Petersburg, FL",
+      "to": "/athletics/boys/baseball/records/opponents?team=Canterbury+School",
       "keywords": [
         "Baseball",
         "team",
         "opponent",
         "history",
         "records",
-        "Canterbury"
+        "Canterbury School",
+        "St. Petersburg",
+        "FL"
       ]
     },
     {
@@ -23185,6 +23079,7 @@
         "records",
         "John Paul II Catholic School",
         "John Paul II",
+        "Golden Warriors",
         "Ridgeland",
         "SC"
       ]
@@ -23202,7 +23097,6 @@
         "history",
         "records",
         "Jenkins High School",
-        "Jenkins",
         "Savannah",
         "GA"
       ]
@@ -23225,18 +23119,20 @@
       ]
     },
     {
-      "id": "baseball-team-southview",
+      "id": "baseball-team-southview-high-school",
       "type": "team",
-      "title": "Southview",
-      "subtitle": "Baseball opponent history",
-      "to": "/athletics/boys/baseball/records/opponents?team=Southview",
+      "title": "Southview High School",
+      "subtitle": "Baseball opponent history - Sylvania, OH",
+      "to": "/athletics/boys/baseball/records/opponents?team=Southview+High+School",
       "keywords": [
         "Baseball",
         "team",
         "opponent",
         "history",
         "records",
-        "Southview"
+        "Southview High School",
+        "Sylvania",
+        "OH"
       ]
     },
     {
@@ -23269,7 +23165,6 @@
         "history",
         "records",
         "Ravenwood High School",
-        "Ravenwood",
         "Brentwood",
         "TN"
       ]
@@ -23287,7 +23182,8 @@
         "history",
         "records",
         "Robert E. Lee Academy",
-        "Robert E Lee",
+        "Lee Academy",
+        "Cavaliers",
         "Bishopville",
         "SC"
       ]
@@ -23322,7 +23218,6 @@
         "history",
         "records",
         "Glenelg Country School",
-        "Glenelg Country",
         "Ellicott City",
         "MD"
       ]
@@ -23340,7 +23235,6 @@
         "history",
         "records",
         "Ransom Everglades High School",
-        "Ransom Everglades",
         "Miami",
         "FL"
       ]
@@ -23358,7 +23252,6 @@
         "history",
         "records",
         "Centennial High School",
-        "Centennial",
         "Champaign",
         "IL"
       ]
@@ -23427,7 +23320,6 @@
         "history",
         "records",
         "Calvary Day School",
-        "Calvary Day",
         "Savannah",
         "GA"
       ]
@@ -23446,7 +23338,6 @@
         "records",
         "Pinewood Christian Academy",
         "Pinewood Christian",
-        "Pinewood",
         "Patriots",
         "Bellville",
         "GA"
@@ -23484,7 +23375,6 @@
         "history",
         "records",
         "Savannah Country Day School",
-        "Savannah Country Day",
         "Savannah",
         "GA"
       ]
@@ -23502,7 +23392,6 @@
         "history",
         "records",
         "The Walker School",
-        "Walker",
         "Marietta",
         "GA"
       ]
@@ -23547,7 +23436,7 @@
       "id": "baseball-team-norfolk-academy",
       "type": "team",
       "title": "Norfolk Academy",
-      "subtitle": "Baseball opponent history",
+      "subtitle": "Baseball opponent history - Norfolk, VA",
       "to": "/athletics/boys/baseball/records/opponents?team=Norfolk+Academy",
       "keywords": [
         "Baseball",
@@ -23555,7 +23444,9 @@
         "opponent",
         "history",
         "records",
-        "Norfolk Academy"
+        "Norfolk Academy",
+        "Norfolk",
+        "VA"
       ]
     },
     {
@@ -23607,7 +23498,6 @@
         "history",
         "records",
         "Holy Trinity Classical Christian School",
-        "Holy Trinity Classical Christian",
         "Beaufort",
         "SC"
       ]
@@ -23659,7 +23549,6 @@
         "history",
         "records",
         "Islands High School",
-        "Islands",
         "Savannah",
         "GA"
       ]
@@ -23767,17 +23656,18 @@
       ]
     },
     {
-      "id": "girls-basketball-team-memorial-day",
+      "id": "girls-basketball-team-memorial-day-school",
       "type": "team",
-      "title": "Memorial Day",
+      "title": "Memorial Day School",
       "subtitle": "Girls Basketball opponent history - Savannah, GA",
-      "to": "/athletics/girls/basketball/records/opponents?team=Memorial+Day",
+      "to": "/athletics/girls/basketball/records/opponents?team=Memorial+Day+School",
       "keywords": [
         "Girls Basketball",
         "team",
         "opponent",
         "history",
         "records",
+        "Memorial Day School",
         "Memorial Day",
         "Matadors",
         "Savannah",
@@ -23802,17 +23692,18 @@
       ]
     },
     {
-      "id": "girls-basketball-team-hilton-head-prep",
+      "id": "girls-basketball-team-hilton-head-preparatory-school",
       "type": "team",
-      "title": "Hilton Head Prep",
+      "title": "Hilton Head Preparatory School",
       "subtitle": "Girls Basketball opponent history - Hilton Head Island, SC",
-      "to": "/athletics/girls/basketball/records/opponents?team=Hilton+Head+Prep",
+      "to": "/athletics/girls/basketball/records/opponents?team=Hilton+Head+Preparatory+School",
       "keywords": [
         "Girls Basketball",
         "team",
         "opponent",
         "history",
         "records",
+        "Hilton Head Preparatory School",
         "Hilton Head Prep",
         "Dolphins",
         "Hilton Head Island",
@@ -23820,20 +23711,21 @@
       ]
     },
     {
-      "id": "girls-basketball-team-charleston-collegiate",
+      "id": "girls-basketball-team-charleston-collegiate-school",
       "type": "team",
-      "title": "Charleston Collegiate",
-      "subtitle": "Girls Basketball opponent history - John's Island, SC",
-      "to": "/athletics/girls/basketball/records/opponents?team=Charleston+Collegiate",
+      "title": "Charleston Collegiate School",
+      "subtitle": "Girls Basketball opponent history - Johns Island, SC",
+      "to": "/athletics/girls/basketball/records/opponents?team=Charleston+Collegiate+School",
       "keywords": [
         "Girls Basketball",
         "team",
         "opponent",
         "history",
         "records",
+        "Charleston Collegiate School",
         "Charleston Collegiate",
-        "Sundevils",
-        "John's Island",
+        "Sun Devils",
+        "Johns Island",
         "SC"
       ]
     },
@@ -23855,17 +23747,18 @@
       ]
     },
     {
-      "id": "girls-basketball-team-pinewood-christian",
+      "id": "girls-basketball-team-pinewood-christian-academy",
       "type": "team",
-      "title": "Pinewood Christian",
+      "title": "Pinewood Christian Academy",
       "subtitle": "Girls Basketball opponent history - Bellville, GA",
-      "to": "/athletics/girls/basketball/records/opponents?team=Pinewood+Christian",
+      "to": "/athletics/girls/basketball/records/opponents?team=Pinewood+Christian+Academy",
       "keywords": [
         "Girls Basketball",
         "team",
         "opponent",
         "history",
         "records",
+        "Pinewood Christian Academy",
         "Pinewood Christian",
         "Patriots",
         "Bellville",
@@ -24033,17 +23926,18 @@
       ]
     },
     {
-      "id": "girls-basketball-team-bible-baptist",
+      "id": "girls-basketball-team-bible-baptist-school",
       "type": "team",
-      "title": "Bible Baptist",
+      "title": "Bible Baptist School",
       "subtitle": "Girls Basketball opponent history - Savannah, GA",
-      "to": "/athletics/girls/basketball/records/opponents?team=Bible+Baptist",
+      "to": "/athletics/girls/basketball/records/opponents?team=Bible+Baptist+School",
       "keywords": [
         "Girls Basketball",
         "team",
         "opponent",
         "history",
         "records",
+        "Bible Baptist School",
         "Bible Baptist",
         "Braves",
         "Savannah",
@@ -24283,19 +24177,20 @@
       ]
     },
     {
-      "id": "girls-basketball-team-john-paul-ii",
+      "id": "girls-basketball-team-john-paul-ii-catholic-school",
       "type": "team",
-      "title": "John Paul II",
+      "title": "John Paul II Catholic School",
       "subtitle": "Girls Basketball opponent history - Ridgeland, SC",
-      "to": "/athletics/girls/basketball/records/opponents?team=John+Paul+II",
+      "to": "/athletics/girls/basketball/records/opponents?team=John+Paul+II+Catholic+School",
       "keywords": [
         "Girls Basketball",
         "team",
         "opponent",
         "history",
         "records",
+        "John Paul II Catholic School",
         "John Paul II",
-        "Golden Warrriors",
+        "Golden Warriors",
         "Ridgeland",
         "SC"
       ]
@@ -24443,17 +24338,18 @@
       ]
     },
     {
-      "id": "girls-basketball-team-brentwood",
+      "id": "girls-basketball-team-brentwood-school",
       "type": "team",
-      "title": "Brentwood",
+      "title": "Brentwood School",
       "subtitle": "Girls Basketball opponent history - Sandersville, GA",
-      "to": "/athletics/girls/basketball/records/opponents?team=Brentwood",
+      "to": "/athletics/girls/basketball/records/opponents?team=Brentwood+School",
       "keywords": [
         "Girls Basketball",
         "team",
         "opponent",
         "history",
         "records",
+        "Brentwood School",
         "Brentwood",
         "War Eagles",
         "Sandersville",
@@ -24473,7 +24369,6 @@
         "history",
         "records",
         "Savannah Christian Preparatory School",
-        "Savannah Christian",
         "Savannah",
         "GA"
       ]
@@ -24491,7 +24386,6 @@
         "history",
         "records",
         "Islands High School",
-        "Islands",
         "Savannah",
         "GA"
       ]
@@ -24509,7 +24403,6 @@
         "history",
         "records",
         "St. Vincent's Academy",
-        "St. Vincent's",
         "Savannah",
         "GA"
       ]
@@ -24527,47 +24420,8 @@
         "history",
         "records",
         "Savannah Country Day School",
-        "Savannah Country Day",
         "Savannah",
         "GA"
-      ]
-    },
-    {
-      "id": "girls-basketball-team-pinewood-christian-academy",
-      "type": "team",
-      "title": "Pinewood Christian Academy",
-      "subtitle": "Girls Basketball opponent history - Bellville, GA",
-      "to": "/athletics/girls/basketball/records/opponents?team=Pinewood+Christian+Academy",
-      "keywords": [
-        "Girls Basketball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Pinewood Christian Academy",
-        "Pinewood Christian",
-        "Pinewood",
-        "Patriots",
-        "Bellville",
-        "GA"
-      ]
-    },
-    {
-      "id": "girls-basketball-team-hilton-head-preparatory-school",
-      "type": "team",
-      "title": "Hilton Head Preparatory School",
-      "subtitle": "Girls Basketball opponent history - Hilton Head Island, SC",
-      "to": "/athletics/girls/basketball/records/opponents?team=Hilton+Head+Preparatory+School",
-      "keywords": [
-        "Girls Basketball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Hilton Head Preparatory School",
-        "Hilton Head Prep",
-        "Hilton Head Island",
-        "SC"
       ]
     },
     {
@@ -24602,7 +24456,6 @@
         "history",
         "records",
         "The Westfield School",
-        "Westfield School",
         "Westfield",
         "Hornets",
         "Perry",
@@ -24697,23 +24550,6 @@
       ]
     },
     {
-      "id": "girls-basketball-team-john-paul-ii-catholic-school",
-      "type": "team",
-      "title": "John Paul II Catholic School",
-      "subtitle": "Girls Basketball opponent history - Ridgeland, SC",
-      "to": "/athletics/girls/basketball/records/opponents?team=John+Paul+II+Catholic+School",
-      "keywords": [
-        "Girls Basketball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "John Paul II Catholic School",
-        "Ridgeland",
-        "SC"
-      ]
-    },
-    {
       "id": "girls-basketball-team-statesboro-high-school",
       "type": "team",
       "title": "Statesboro High School",
@@ -24761,23 +24597,6 @@
         "records",
         "Effingham County High School",
         "Springfield",
-        "GA"
-      ]
-    },
-    {
-      "id": "girls-basketball-team-memorial-day-school",
-      "type": "team",
-      "title": "Memorial Day School",
-      "subtitle": "Girls Basketball opponent history - Savannah, GA",
-      "to": "/athletics/girls/basketball/records/opponents?team=Memorial+Day+School",
-      "keywords": [
-        "Girls Basketball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Memorial Day School",
-        "Savannah",
         "GA"
       ]
     },
@@ -24957,7 +24776,7 @@
       "id": "football-team-jefferson-davis-academy",
       "type": "team",
       "title": "Jefferson Davis Academy",
-      "subtitle": "Football opponent history",
+      "subtitle": "Football opponent history - Blackville, SC",
       "to": "/athletics/football/records/opponents?team=Jefferson+Davis+Academy",
       "keywords": [
         "Football",
@@ -24965,14 +24784,17 @@
         "opponent",
         "history",
         "records",
-        "Jefferson Davis Academy"
+        "Jefferson Davis Academy",
+        "Raiders",
+        "Blackville",
+        "SC"
       ]
     },
     {
       "id": "football-team-sea-island-academy",
       "type": "team",
       "title": "Sea Island Academy",
-      "subtitle": "Football opponent history",
+      "subtitle": "Football opponent history - Johns Island, SC",
       "to": "/athletics/football/records/opponents?team=Sea+Island+Academy",
       "keywords": [
         "Football",
@@ -24980,14 +24802,16 @@
         "opponent",
         "history",
         "records",
-        "Sea Island Academy"
+        "Sea Island Academy",
+        "Johns Island",
+        "SC"
       ]
     },
     {
       "id": "football-team-abundant-life-academy",
       "type": "team",
       "title": "Abundant Life Academy",
-      "subtitle": "Football opponent history",
+      "subtitle": "Football opponent history - Hardeeville, SC",
       "to": "/athletics/football/records/opponents?team=Abundant+Life+Academy",
       "keywords": [
         "Football",
@@ -24995,14 +24819,16 @@
         "opponent",
         "history",
         "records",
-        "Abundant Life Academy"
+        "Abundant Life Academy",
+        "Hardeeville",
+        "SC"
       ]
     },
     {
       "id": "football-team-holly-hill-academy",
       "type": "team",
       "title": "Holly Hill Academy",
-      "subtitle": "Football opponent history",
+      "subtitle": "Football opponent history - Holly Hill, SC",
       "to": "/athletics/football/records/opponents?team=Holly+Hill+Academy",
       "keywords": [
         "Football",
@@ -25010,14 +24836,16 @@
         "opponent",
         "history",
         "records",
-        "Holly Hill Academy"
+        "Holly Hill Academy",
+        "Holly Hill",
+        "SC"
       ]
     },
     {
       "id": "football-team-colleton-prep-academy",
       "type": "team",
       "title": "Colleton Prep Academy",
-      "subtitle": "Football opponent history",
+      "subtitle": "Football opponent history - Walterboro, SC",
       "to": "/athletics/football/records/opponents?team=Colleton+Prep+Academy",
       "keywords": [
         "Football",
@@ -25025,59 +24853,73 @@
         "opponent",
         "history",
         "records",
-        "Colleton Prep Academy"
+        "Colleton Prep Academy",
+        "Walterboro",
+        "SC"
       ]
     },
     {
-      "id": "football-team-bible-baptist",
+      "id": "football-team-bible-baptist-school",
       "type": "team",
-      "title": "Bible Baptist",
-      "subtitle": "Football opponent history",
-      "to": "/athletics/football/records/opponents?team=Bible+Baptist",
+      "title": "Bible Baptist School",
+      "subtitle": "Football opponent history - Savannah, GA",
+      "to": "/athletics/football/records/opponents?team=Bible+Baptist+School",
       "keywords": [
         "Football",
         "team",
         "opponent",
         "history",
         "records",
-        "Bible Baptist"
+        "Bible Baptist School",
+        "Bible Baptist",
+        "Braves",
+        "Savannah",
+        "GA"
       ]
     },
     {
-      "id": "football-team-pinewood-prep",
+      "id": "football-team-pinewood-preparatory-school",
       "type": "team",
-      "title": "Pinewood Prep",
-      "subtitle": "Football opponent history",
-      "to": "/athletics/football/records/opponents?team=Pinewood+Prep",
+      "title": "Pinewood Preparatory School",
+      "subtitle": "Football opponent history - Summerville, SC",
+      "to": "/athletics/football/records/opponents?team=Pinewood+Preparatory+School",
       "keywords": [
         "Football",
         "team",
         "opponent",
         "history",
         "records",
-        "Pinewood Prep"
+        "Pinewood Preparatory School",
+        "Pinewood Prep",
+        "Panthers",
+        "Summerville",
+        "SC"
       ]
     },
     {
-      "id": "football-team-hilton-head-prep",
+      "id": "football-team-hilton-head-preparatory-school",
       "type": "team",
-      "title": "Hilton Head Prep",
-      "subtitle": "Football opponent history",
-      "to": "/athletics/football/records/opponents?team=Hilton+Head+Prep",
+      "title": "Hilton Head Preparatory School",
+      "subtitle": "Football opponent history - Hilton Head Island, SC",
+      "to": "/athletics/football/records/opponents?team=Hilton+Head+Preparatory+School",
       "keywords": [
         "Football",
         "team",
         "opponent",
         "history",
         "records",
-        "Hilton Head Prep"
+        "Hilton Head Preparatory School",
+        "Hilton Head Prep",
+        "Dolphins",
+        "Hilton Head Island",
+        "SC"
       ]
     },
     {
       "id": "football-team-patrick-henry-academy",
       "type": "team",
       "title": "Patrick Henry Academy",
-      "subtitle": "Football opponent history",
+      "subtitle": "Football opponent history - Estill, SC",
       "to": "/athletics/football/records/opponents?team=Patrick+Henry+Academy",
       "keywords": [
         "Football",
@@ -25085,14 +24927,16 @@
         "opponent",
         "history",
         "records",
-        "Patrick Henry Academy"
+        "Patrick Henry Academy",
+        "Estill",
+        "SC"
       ]
     },
     {
       "id": "football-team-pee-dee-academy",
       "type": "team",
       "title": "Pee Dee Academy",
-      "subtitle": "Football opponent history",
+      "subtitle": "Football opponent history - Mullins, SC",
       "to": "/athletics/football/records/opponents?team=Pee+Dee+Academy",
       "keywords": [
         "Football",
@@ -25100,14 +24944,16 @@
         "opponent",
         "history",
         "records",
-        "Pee Dee Academy"
+        "Pee Dee Academy",
+        "Mullins",
+        "SC"
       ]
     },
     {
       "id": "football-team-calhoun-academy",
       "type": "team",
       "title": "Calhoun Academy",
-      "subtitle": "Football opponent history",
+      "subtitle": "Football opponent history - St. Matthews, SC",
       "to": "/athletics/football/records/opponents?team=Calhoun+Academy",
       "keywords": [
         "Football",
@@ -25115,14 +24961,18 @@
         "opponent",
         "history",
         "records",
-        "Calhoun Academy"
+        "Calhoun Academy",
+        "Calhoun",
+        "Cavaliers",
+        "St. Matthews",
+        "SC"
       ]
     },
     {
       "id": "football-team-richard-winn-academy",
       "type": "team",
       "title": "Richard Winn Academy",
-      "subtitle": "Football opponent history",
+      "subtitle": "Football opponent history - Winnsboro, SC",
       "to": "/athletics/football/records/opponents?team=Richard+Winn+Academy",
       "keywords": [
         "Football",
@@ -25130,14 +24980,17 @@
         "opponent",
         "history",
         "records",
-        "Richard Winn Academy"
+        "Richard Winn Academy",
+        "Eagles",
+        "Winnsboro",
+        "SC"
       ]
     },
     {
       "id": "football-team-first-baptist-school",
       "type": "team",
       "title": "First Baptist School",
-      "subtitle": "Football opponent history",
+      "subtitle": "Football opponent history - Charleston, SC",
       "to": "/athletics/football/records/opponents?team=First+Baptist+School",
       "keywords": [
         "Football",
@@ -25145,29 +24998,35 @@
         "opponent",
         "history",
         "records",
-        "First Baptist School"
+        "First Baptist School",
+        "Hurricanes",
+        "Charleston",
+        "SC"
       ]
     },
     {
-      "id": "football-team-aiken-christian",
+      "id": "football-team-aiken-christian-school",
       "type": "team",
-      "title": "Aiken Christian",
-      "subtitle": "Football opponent history",
-      "to": "/athletics/football/records/opponents?team=Aiken+Christian",
+      "title": "Aiken Christian School",
+      "subtitle": "Football opponent history - Aiken, SC",
+      "to": "/athletics/football/records/opponents?team=Aiken+Christian+School",
       "keywords": [
         "Football",
         "team",
         "opponent",
         "history",
         "records",
-        "Aiken Christian"
+        "Aiken Christian School",
+        "Aiken Christian",
+        "Aiken",
+        "SC"
       ]
     },
     {
       "id": "football-team-thomas-heyward-academy",
       "type": "team",
       "title": "Thomas Heyward Academy",
-      "subtitle": "Football opponent history",
+      "subtitle": "Football opponent history - Ridgeland, SC",
       "to": "/athletics/football/records/opponents?team=Thomas+Heyward+Academy",
       "keywords": [
         "Football",
@@ -25175,14 +25034,16 @@
         "opponent",
         "history",
         "records",
-        "Thomas Heyward Academy"
+        "Thomas Heyward Academy",
+        "Ridgeland",
+        "SC"
       ]
     },
     {
       "id": "football-team-clarendon-hall",
       "type": "team",
       "title": "Clarendon Hall",
-      "subtitle": "Football opponent history",
+      "subtitle": "Football opponent history - Summerton, SC",
       "to": "/athletics/football/records/opponents?team=Clarendon+Hall",
       "keywords": [
         "Football",
@@ -25190,14 +25051,17 @@
         "opponent",
         "history",
         "records",
-        "Clarendon Hall"
+        "Clarendon Hall",
+        "Saints",
+        "Summerton",
+        "SC"
       ]
     },
     {
       "id": "football-team-james-f-byrnes-academy",
       "type": "team",
       "title": "James F. Byrnes Academy",
-      "subtitle": "Football opponent history",
+      "subtitle": "Football opponent history - Quinby, SC",
       "to": "/athletics/football/records/opponents?team=James+F.+Byrnes+Academy",
       "keywords": [
         "Football",
@@ -25205,14 +25069,16 @@
         "opponent",
         "history",
         "records",
-        "James F. Byrnes Academy"
+        "James F. Byrnes Academy",
+        "Quinby",
+        "SC"
       ]
     },
     {
       "id": "football-team-dorchester-academy",
       "type": "team",
       "title": "Dorchester Academy",
-      "subtitle": "Football opponent history",
+      "subtitle": "Football opponent history - St. George, SC",
       "to": "/athletics/football/records/opponents?team=Dorchester+Academy",
       "keywords": [
         "Football",
@@ -25220,14 +25086,16 @@
         "opponent",
         "history",
         "records",
-        "Dorchester Academy"
+        "Dorchester Academy",
+        "St. George",
+        "SC"
       ]
     },
     {
       "id": "football-team-thomas-sumter-academy",
       "type": "team",
       "title": "Thomas Sumter Academy",
-      "subtitle": "Football opponent history",
+      "subtitle": "Football opponent history - Dalzell, SC",
       "to": "/athletics/football/records/opponents?team=Thomas+Sumter+Academy",
       "keywords": [
         "Football",
@@ -25235,14 +25103,17 @@
         "opponent",
         "history",
         "records",
-        "Thomas Sumter Academy"
+        "Thomas Sumter Academy",
+        "Generals",
+        "Dalzell",
+        "SC"
       ]
     },
     {
       "id": "football-team-williamsburg-academy",
       "type": "team",
       "title": "Williamsburg Academy",
-      "subtitle": "Football opponent history",
+      "subtitle": "Football opponent history - Kingstree, SC",
       "to": "/athletics/football/records/opponents?team=Williamsburg+Academy",
       "keywords": [
         "Football",
@@ -25250,14 +25121,17 @@
         "opponent",
         "history",
         "records",
-        "Williamsburg Academy"
+        "Williamsburg Academy",
+        "Stallions",
+        "Kingstree",
+        "SC"
       ]
     },
     {
       "id": "football-team-roy-hudgens-academy",
       "type": "team",
       "title": "Roy Hudgens Academy",
-      "subtitle": "Football opponent history",
+      "subtitle": "Football opponent history - Lynchburg, SC",
       "to": "/athletics/football/records/opponents?team=Roy+Hudgens+Academy",
       "keywords": [
         "Football",
@@ -25265,29 +25139,36 @@
         "opponent",
         "history",
         "records",
-        "Roy Hudgens Academy"
+        "Roy Hudgens Academy",
+        "Cougars",
+        "Lynchburg",
+        "SC"
       ]
     },
     {
-      "id": "football-team-memorial-day",
+      "id": "football-team-memorial-day-school",
       "type": "team",
-      "title": "Memorial Day",
-      "subtitle": "Football opponent history",
-      "to": "/athletics/football/records/opponents?team=Memorial+Day",
+      "title": "Memorial Day School",
+      "subtitle": "Football opponent history - Savannah, GA",
+      "to": "/athletics/football/records/opponents?team=Memorial+Day+School",
       "keywords": [
         "Football",
         "team",
         "opponent",
         "history",
         "records",
-        "Memorial Day"
+        "Memorial Day School",
+        "Memorial Day",
+        "Matadors",
+        "Savannah",
+        "GA"
       ]
     },
     {
       "id": "football-team-hilton-head-christian-academy",
       "type": "team",
       "title": "Hilton Head Christian Academy",
-      "subtitle": "Football opponent history",
+      "subtitle": "Football opponent history - Hilton Head Island, SC",
       "to": "/athletics/football/records/opponents?team=Hilton+Head+Christian+Academy",
       "keywords": [
         "Football",
@@ -25295,44 +25176,54 @@
         "opponent",
         "history",
         "records",
-        "Hilton Head Christian Academy"
+        "Hilton Head Christian Academy",
+        "Hilton Head Island",
+        "SC"
       ]
     },
     {
-      "id": "football-team-dillon-christian",
+      "id": "football-team-dillon-christian-school",
       "type": "team",
-      "title": "Dillon Christian",
-      "subtitle": "Football opponent history",
-      "to": "/athletics/football/records/opponents?team=Dillon+Christian",
+      "title": "Dillon Christian School",
+      "subtitle": "Football opponent history - Dillon, SC",
+      "to": "/athletics/football/records/opponents?team=Dillon+Christian+School",
       "keywords": [
         "Football",
         "team",
         "opponent",
         "history",
         "records",
-        "Dillon Christian"
+        "Dillon Christian School",
+        "Dillon Christian",
+        "Warriors",
+        "Dillon",
+        "SC"
       ]
     },
     {
-      "id": "football-team-charleston-collegiate",
+      "id": "football-team-charleston-collegiate-school",
       "type": "team",
-      "title": "Charleston Collegiate",
-      "subtitle": "Football opponent history",
-      "to": "/athletics/football/records/opponents?team=Charleston+Collegiate",
+      "title": "Charleston Collegiate School",
+      "subtitle": "Football opponent history - Johns Island, SC",
+      "to": "/athletics/football/records/opponents?team=Charleston+Collegiate+School",
       "keywords": [
         "Football",
         "team",
         "opponent",
         "history",
         "records",
-        "Charleston Collegiate"
+        "Charleston Collegiate School",
+        "Charleston Collegiate",
+        "Sun Devils",
+        "Johns Island",
+        "SC"
       ]
     },
     {
       "id": "football-team-cathedral-academy",
       "type": "team",
       "title": "Cathedral Academy",
-      "subtitle": "Football opponent history",
+      "subtitle": "Football opponent history - North Charleston, SC",
       "to": "/athletics/football/records/opponents?team=Cathedral+Academy",
       "keywords": [
         "Football",
@@ -25340,29 +25231,35 @@
         "opponent",
         "history",
         "records",
-        "Cathedral Academy"
+        "Cathedral Academy",
+        "North Charleston",
+        "SC"
       ]
     },
     {
-      "id": "football-team-bible-baptist-christian",
+      "id": "football-team-bible-baptist-christian-school",
       "type": "team",
-      "title": "Bible Baptist Christian",
-      "subtitle": "Football opponent history",
-      "to": "/athletics/football/records/opponents?team=Bible+Baptist+Christian",
+      "title": "Bible Baptist Christian School",
+      "subtitle": "Football opponent history - Hampton, GA",
+      "to": "/athletics/football/records/opponents?team=Bible+Baptist+Christian+School",
       "keywords": [
         "Football",
         "team",
         "opponent",
         "history",
         "records",
-        "Bible Baptist Christian"
+        "Bible Baptist Christian School",
+        "Bible Baptist Christian",
+        "Eagles",
+        "Hampton",
+        "GA"
       ]
     },
     {
       "id": "football-team-northwood-academy",
       "type": "team",
       "title": "Northwood Academy",
-      "subtitle": "Football opponent history",
+      "subtitle": "Football opponent history - Charleston, SC",
       "to": "/athletics/football/records/opponents?team=Northwood+Academy",
       "keywords": [
         "Football",
@@ -25370,14 +25267,17 @@
         "opponent",
         "history",
         "records",
-        "Northwood Academy"
+        "Northwood Academy",
+        "Chargers",
+        "Charleston",
+        "SC"
       ]
     },
     {
       "id": "football-team-beaufort-academy",
       "type": "team",
       "title": "Beaufort Academy",
-      "subtitle": "Football opponent history",
+      "subtitle": "Football opponent history - Beaufort, SC",
       "to": "/athletics/football/records/opponents?team=Beaufort+Academy",
       "keywords": [
         "Football",
@@ -25385,14 +25285,16 @@
         "opponent",
         "history",
         "records",
-        "Beaufort Academy"
+        "Beaufort Academy",
+        "Beaufort",
+        "SC"
       ]
     },
     {
       "id": "football-team-st-john-s-christian-academy",
       "type": "team",
       "title": "St. John's Christian Academy",
-      "subtitle": "Football opponent history",
+      "subtitle": "Football opponent history - Moncks Corner, SC",
       "to": "/athletics/football/records/opponents?team=St.+John%27s+Christian+Academy",
       "keywords": [
         "Football",
@@ -25400,14 +25302,16 @@
         "opponent",
         "history",
         "records",
-        "St. John's Christian Academy"
+        "St. John's Christian Academy",
+        "Moncks Corner",
+        "SC"
       ]
     },
     {
       "id": "football-team-st-paul-academy-for-boys",
       "type": "team",
       "title": "St. Paul Academy for Boys",
-      "subtitle": "Football opponent history",
+      "subtitle": "Football opponent history - Savannah, GA",
       "to": "/athletics/football/records/opponents?team=St.+Paul+Academy+for+Boys",
       "keywords": [
         "Football",
@@ -25415,14 +25319,16 @@
         "opponent",
         "history",
         "records",
-        "St. Paul Academy for Boys"
+        "St. Paul Academy for Boys",
+        "Savannah",
+        "GA"
       ]
     },
     {
       "id": "football-team-edmund-burke-academy",
       "type": "team",
       "title": "Edmund Burke Academy",
-      "subtitle": "Football opponent history",
+      "subtitle": "Football opponent history - Waynesboro, GA",
       "to": "/athletics/football/records/opponents?team=Edmund+Burke+Academy",
       "keywords": [
         "Football",
@@ -25430,14 +25336,16 @@
         "opponent",
         "history",
         "records",
-        "Edmund Burke Academy"
+        "Edmund Burke Academy",
+        "Waynesboro",
+        "GA"
       ]
     },
     {
       "id": "football-team-laurence-manning-academy",
       "type": "team",
       "title": "Laurence Manning Academy",
-      "subtitle": "Football opponent history",
+      "subtitle": "Football opponent history - Manning, SC",
       "to": "/athletics/football/records/opponents?team=Laurence+Manning+Academy",
       "keywords": [
         "Football",
@@ -25445,29 +25353,36 @@
         "opponent",
         "history",
         "records",
-        "Laurence Manning Academy"
+        "Laurence Manning Academy",
+        "Swampcats",
+        "Manning",
+        "SC"
       ]
     },
     {
-      "id": "football-team-southside-christian",
+      "id": "football-team-southside-christian-school",
       "type": "team",
-      "title": "Southside Christian",
-      "subtitle": "Football opponent history",
-      "to": "/athletics/football/records/opponents?team=Southside+Christian",
+      "title": "Southside Christian School",
+      "subtitle": "Football opponent history - Simpsonville, SC",
+      "to": "/athletics/football/records/opponents?team=Southside+Christian+School",
       "keywords": [
         "Football",
         "team",
         "opponent",
         "history",
         "records",
-        "Southside Christian"
+        "Southside Christian School",
+        "Southside Christian",
+        "Sabres",
+        "Simpsonville",
+        "SC"
       ]
     },
     {
       "id": "football-team-bulloch-academy",
       "type": "team",
       "title": "Bulloch Academy",
-      "subtitle": "Football opponent history",
+      "subtitle": "Football opponent history - Statesboro, GA",
       "to": "/athletics/football/records/opponents?team=Bulloch+Academy",
       "keywords": [
         "Football",
@@ -25475,14 +25390,18 @@
         "opponent",
         "history",
         "records",
-        "Bulloch Academy"
+        "Bulloch Academy",
+        "Bulloch",
+        "Gators",
+        "Statesboro",
+        "GA"
       ]
     },
     {
       "id": "football-team-first-preparatory-christian-academy",
       "type": "team",
       "title": "First Preparatory Christian Academy",
-      "subtitle": "Football opponent history",
+      "subtitle": "Football opponent history - Hinesville, GA",
       "to": "/athletics/football/records/opponents?team=First+Preparatory+Christian+Academy",
       "keywords": [
         "Football",
@@ -25490,14 +25409,18 @@
         "opponent",
         "history",
         "records",
-        "First Preparatory Christian Academy"
+        "First Preparatory Christian Academy",
+        "FPCA",
+        "Highlanders",
+        "Hinesville",
+        "GA"
       ]
     },
     {
       "id": "football-team-frederica-academy",
       "type": "team",
       "title": "Frederica Academy",
-      "subtitle": "Football opponent history",
+      "subtitle": "Football opponent history - St. Simons Island, GA",
       "to": "/athletics/football/records/opponents?team=Frederica+Academy",
       "keywords": [
         "Football",
@@ -25505,14 +25428,18 @@
         "opponent",
         "history",
         "records",
-        "Frederica Academy"
+        "Frederica Academy",
+        "Frederica",
+        "Knights",
+        "St. Simons Island",
+        "GA"
       ]
     },
     {
       "id": "football-team-trinity-collegiate",
       "type": "team",
       "title": "Trinity Collegiate",
-      "subtitle": "Football opponent history",
+      "subtitle": "Football opponent history - Darlington, SC",
       "to": "/athletics/football/records/opponents?team=Trinity+Collegiate",
       "keywords": [
         "Football",
@@ -25520,14 +25447,17 @@
         "opponent",
         "history",
         "records",
-        "Trinity Collegiate"
+        "Trinity Collegiate",
+        "Titans",
+        "Darlington",
+        "SC"
       ]
     },
     {
       "id": "football-team-bethesda-academy",
       "type": "team",
       "title": "Bethesda Academy",
-      "subtitle": "Football opponent history",
+      "subtitle": "Football opponent history - Savannah, GA",
       "to": "/athletics/football/records/opponents?team=Bethesda+Academy",
       "keywords": [
         "Football",
@@ -25535,14 +25465,16 @@
         "opponent",
         "history",
         "records",
-        "Bethesda Academy"
+        "Bethesda Academy",
+        "Savannah",
+        "GA"
       ]
     },
     {
       "id": "football-team-palmetto-christian-academy",
       "type": "team",
       "title": "Palmetto Christian Academy",
-      "subtitle": "Football opponent history",
+      "subtitle": "Football opponent history - Mt. Pleasant, SC",
       "to": "/athletics/football/records/opponents?team=Palmetto+Christian+Academy",
       "keywords": [
         "Football",
@@ -25550,74 +25482,93 @@
         "opponent",
         "history",
         "records",
-        "Palmetto Christian Academy"
+        "Palmetto Christian Academy",
+        "Fighting Eagles",
+        "Mt. Pleasant",
+        "SC"
       ]
     },
     {
-      "id": "football-team-florence-christian",
+      "id": "football-team-florence-christian-school",
       "type": "team",
-      "title": "Florence Christian",
-      "subtitle": "Football opponent history",
-      "to": "/athletics/football/records/opponents?team=Florence+Christian",
+      "title": "Florence Christian School",
+      "subtitle": "Football opponent history - Florence, SC",
+      "to": "/athletics/football/records/opponents?team=Florence+Christian+School",
       "keywords": [
         "Football",
         "team",
         "opponent",
         "history",
         "records",
-        "Florence Christian"
+        "Florence Christian School",
+        "Florence Christian",
+        "Eagles",
+        "Florence",
+        "SC"
       ]
     },
     {
-      "id": "football-team-john-paul-ii",
+      "id": "football-team-john-paul-ii-catholic-school",
       "type": "team",
-      "title": "John Paul II",
-      "subtitle": "Football opponent history",
-      "to": "/athletics/football/records/opponents?team=John+Paul+II",
+      "title": "John Paul II Catholic School",
+      "subtitle": "Football opponent history - Ridgeland, SC",
+      "to": "/athletics/football/records/opponents?team=John+Paul+II+Catholic+School",
       "keywords": [
         "Football",
         "team",
         "opponent",
         "history",
         "records",
-        "John Paul II"
+        "John Paul II Catholic School",
+        "John Paul II",
+        "Golden Warriors",
+        "Ridgeland",
+        "SC"
       ]
     },
     {
-      "id": "football-team-lee-academy",
+      "id": "football-team-robert-e-lee-academy",
       "type": "team",
-      "title": "Lee Academy",
-      "subtitle": "Football opponent history",
-      "to": "/athletics/football/records/opponents?team=Lee+Academy",
+      "title": "Robert E. Lee Academy",
+      "subtitle": "Football opponent history - Bishopville, SC",
+      "to": "/athletics/football/records/opponents?team=Robert+E.+Lee+Academy",
       "keywords": [
         "Football",
         "team",
         "opponent",
         "history",
         "records",
-        "Lee Academy"
+        "Robert E. Lee Academy",
+        "Lee Academy",
+        "Cavaliers",
+        "Bishopville",
+        "SC"
       ]
     },
     {
-      "id": "football-team-brentwood",
+      "id": "football-team-brentwood-school",
       "type": "team",
-      "title": "Brentwood",
-      "subtitle": "Football opponent history",
-      "to": "/athletics/football/records/opponents?team=Brentwood",
+      "title": "Brentwood School",
+      "subtitle": "Football opponent history - Sandersville, GA",
+      "to": "/athletics/football/records/opponents?team=Brentwood+School",
       "keywords": [
         "Football",
         "team",
         "opponent",
         "history",
         "records",
-        "Brentwood"
+        "Brentwood School",
+        "Brentwood",
+        "War Eagles",
+        "Sandersville",
+        "GA"
       ]
     },
     {
       "id": "football-team-robert-toombs-christian-academy",
       "type": "team",
       "title": "Robert Toombs Christian Academy",
-      "subtitle": "Football opponent history",
+      "subtitle": "Football opponent history - Lyons, GA",
       "to": "/athletics/football/records/opponents?team=Robert+Toombs+Christian+Academy",
       "keywords": [
         "Football",
@@ -25625,14 +25576,18 @@
         "opponent",
         "history",
         "records",
-        "Robert Toombs Christian Academy"
+        "Robert Toombs Christian Academy",
+        "Robert Toombs",
+        "Crusaders",
+        "Lyons",
+        "GA"
       ]
     },
     {
       "id": "football-team-briarwood-academy",
       "type": "team",
       "title": "Briarwood Academy",
-      "subtitle": "Football opponent history",
+      "subtitle": "Football opponent history - Warrenton, GA",
       "to": "/athletics/football/records/opponents?team=Briarwood+Academy",
       "keywords": [
         "Football",
@@ -25640,29 +25595,36 @@
         "opponent",
         "history",
         "records",
-        "Briarwood Academy"
+        "Briarwood Academy",
+        "Buccaneers",
+        "Warrenton",
+        "GA"
       ]
     },
     {
-      "id": "football-team-monsignor-donovan-catholic",
+      "id": "football-team-monsignor-donovan-catholic-high-school",
       "type": "team",
-      "title": "Monsignor Donovan Catholic",
-      "subtitle": "Football opponent history",
-      "to": "/athletics/football/records/opponents?team=Monsignor+Donovan+Catholic",
+      "title": "Monsignor Donovan Catholic High School",
+      "subtitle": "Football opponent history - Athens, GA",
+      "to": "/athletics/football/records/opponents?team=Monsignor+Donovan+Catholic+High+School",
       "keywords": [
         "Football",
         "team",
         "opponent",
         "history",
         "records",
-        "Monsignor Donovan Catholic"
+        "Monsignor Donovan Catholic High School",
+        "Monsignor Donovan Catholic",
+        "Rams",
+        "Athens",
+        "GA"
       ]
     },
     {
       "id": "football-team-piedmont-academy",
       "type": "team",
       "title": "Piedmont Academy",
-      "subtitle": "Football opponent history",
+      "subtitle": "Football opponent history - Monticello, GA",
       "to": "/athletics/football/records/opponents?team=Piedmont+Academy",
       "keywords": [
         "Football",
@@ -25670,14 +25632,18 @@
         "opponent",
         "history",
         "records",
-        "Piedmont Academy"
+        "Piedmont Academy",
+        "Piedmont",
+        "Cougars",
+        "Monticello",
+        "GA"
       ]
     },
     {
       "id": "football-team-terrell-academy",
       "type": "team",
       "title": "Terrell Academy",
-      "subtitle": "Football opponent history",
+      "subtitle": "Football opponent history - Dawson, GA",
       "to": "/athletics/football/records/opponents?team=Terrell+Academy",
       "keywords": [
         "Football",
@@ -25685,59 +25651,75 @@
         "opponent",
         "history",
         "records",
-        "Terrell Academy"
+        "Terrell Academy",
+        "Terrell",
+        "Eagles",
+        "Dawson",
+        "GA"
       ]
     },
     {
-      "id": "football-team-westwood",
+      "id": "football-team-westwood-school",
       "type": "team",
-      "title": "Westwood",
-      "subtitle": "Football opponent history",
-      "to": "/athletics/football/records/opponents?team=Westwood",
+      "title": "Westwood School",
+      "subtitle": "Football opponent history - Camilla, GA",
+      "to": "/athletics/football/records/opponents?team=Westwood+School",
       "keywords": [
         "Football",
         "team",
         "opponent",
         "history",
         "records",
-        "Westwood"
+        "Westwood School",
+        "Westwood",
+        "Wildcats",
+        "Camilla",
+        "GA"
       ]
     },
     {
-      "id": "football-team-pinewood-christian",
+      "id": "football-team-pinewood-christian-academy",
       "type": "team",
-      "title": "Pinewood Christian",
-      "subtitle": "Football opponent history",
-      "to": "/athletics/football/records/opponents?team=Pinewood+Christian",
+      "title": "Pinewood Christian Academy",
+      "subtitle": "Football opponent history - Bellville, GA",
+      "to": "/athletics/football/records/opponents?team=Pinewood+Christian+Academy",
       "keywords": [
         "Football",
         "team",
         "opponent",
         "history",
         "records",
-        "Pinewood Christian"
+        "Pinewood Christian Academy",
+        "Pinewood Christian",
+        "Patriots",
+        "Bellville",
+        "GA"
       ]
     },
     {
-      "id": "football-team-trinity-christian",
+      "id": "football-team-trinity-christian-academy",
       "type": "team",
-      "title": "Trinity Christian",
-      "subtitle": "Football opponent history",
-      "to": "/athletics/football/records/opponents?team=Trinity+Christian",
+      "title": "Trinity Christian Academy",
+      "subtitle": "Football opponent history - Dublin, GA",
+      "to": "/athletics/football/records/opponents?team=Trinity+Christian+Academy",
       "keywords": [
         "Football",
         "team",
         "opponent",
         "history",
         "records",
-        "Trinity Christian"
+        "Trinity Christian Academy",
+        "Trinity Christian",
+        "Crusaders",
+        "Dublin",
+        "GA"
       ]
     },
     {
       "id": "football-team-notre-dame-academy",
       "type": "team",
       "title": "Notre Dame Academy",
-      "subtitle": "Football opponent history",
+      "subtitle": "Football opponent history - Duluth, GA",
       "to": "/athletics/football/records/opponents?team=Notre+Dame+Academy",
       "keywords": [
         "Football",
@@ -25745,14 +25727,17 @@
         "opponent",
         "history",
         "records",
-        "Notre Dame Academy"
+        "Notre Dame Academy",
+        "Irish Wolfhounds",
+        "Duluth",
+        "GA"
       ]
     },
     {
       "id": "football-team-thomas-jefferson-academy",
       "type": "team",
       "title": "Thomas Jefferson Academy",
-      "subtitle": "Football opponent history",
+      "subtitle": "Football opponent history - Louisville, GA",
       "to": "/athletics/football/records/opponents?team=Thomas+Jefferson+Academy",
       "keywords": [
         "Football",
@@ -25760,29 +25745,35 @@
         "opponent",
         "history",
         "records",
-        "Thomas Jefferson Academy"
+        "Thomas Jefferson Academy",
+        "Louisville",
+        "GA"
       ]
     },
     {
-      "id": "football-team-valwood",
+      "id": "football-team-valwood-school",
       "type": "team",
-      "title": "Valwood",
-      "subtitle": "Football opponent history",
-      "to": "/athletics/football/records/opponents?team=Valwood",
+      "title": "Valwood School",
+      "subtitle": "Football opponent history - Hahira, GA",
+      "to": "/athletics/football/records/opponents?team=Valwood+School",
       "keywords": [
         "Football",
         "team",
         "opponent",
         "history",
         "records",
-        "Valwood"
+        "Valwood School",
+        "Valwood",
+        "Valiants",
+        "Hahira",
+        "GA"
       ]
     },
     {
       "id": "football-team-tiftarea-academy",
       "type": "team",
       "title": "Tiftarea Academy",
-      "subtitle": "Football opponent history",
+      "subtitle": "Football opponent history - Chula, GA",
       "to": "/athletics/football/records/opponents?team=Tiftarea+Academy",
       "keywords": [
         "Football",
@@ -25790,14 +25781,18 @@
         "opponent",
         "history",
         "records",
-        "Tiftarea Academy"
+        "Tiftarea Academy",
+        "Tiftarea",
+        "Panthers",
+        "Chula",
+        "GA"
       ]
     },
     {
       "id": "football-team-central-fellowship-christian-academy",
       "type": "team",
       "title": "Central Fellowship Christian Academy",
-      "subtitle": "Football opponent history",
+      "subtitle": "Football opponent history - Macon, GA",
       "to": "/athletics/football/records/opponents?team=Central+Fellowship+Christian+Academy",
       "keywords": [
         "Football",
@@ -25805,37 +25800,48 @@
         "opponent",
         "history",
         "records",
-        "Central Fellowship Christian Academy"
+        "Central Fellowship Christian Academy",
+        "Lancers",
+        "Macon",
+        "GA"
       ]
     },
     {
-      "id": "football-team-augusta-prep",
+      "id": "football-team-augusta-preparatory-day-school",
       "type": "team",
-      "title": "Augusta Prep",
-      "subtitle": "Football opponent history",
-      "to": "/athletics/football/records/opponents?team=Augusta+Prep",
+      "title": "Augusta Preparatory Day School",
+      "subtitle": "Football opponent history - Augusta, GA",
+      "to": "/athletics/football/records/opponents?team=Augusta+Preparatory+Day+School",
       "keywords": [
         "Football",
         "team",
         "opponent",
         "history",
         "records",
-        "Augusta Prep"
+        "Augusta Preparatory Day School",
+        "Augusta Prep",
+        "Cavaliers",
+        "Augusta",
+        "GA"
       ]
     },
     {
-      "id": "football-team-harvest-community",
+      "id": "football-team-harvest-community-school",
       "type": "team",
-      "title": "Harvest Community",
-      "subtitle": "Football opponent history",
-      "to": "/athletics/football/records/opponents?team=Harvest+Community",
+      "title": "Harvest Community School",
+      "subtitle": "Football opponent history - Jacksonville, FL",
+      "to": "/athletics/football/records/opponents?team=Harvest+Community+School",
       "keywords": [
         "Football",
         "team",
         "opponent",
         "history",
         "records",
-        "Harvest Community"
+        "Harvest Community School",
+        "Harvest Community",
+        "Warriors",
+        "Jacksonville",
+        "FL"
       ]
     }
   ]

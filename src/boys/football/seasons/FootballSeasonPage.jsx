@@ -220,7 +220,9 @@ function formatSeasonSummaryValue(value) {
 }
 
 function isStAndrewsTeamName(teamName) {
-  return /^st\s*andrew['’]?s?$/i.test(String(teamName ?? "").replace(/\./g, "").trim());
+  return /^st\s*andrew['’]?s?(?:\s*school)?$/i.test(
+    String(teamName ?? "").replace(/\./g, "").trim()
+  );
 }
 
 function RegionStandingsTable({ standings }) {
