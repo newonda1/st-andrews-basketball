@@ -12,6 +12,7 @@ import FootballApp from "./boys/football/FootballApp.jsx";
 import GirlsBasketballApp from "./girls/basketball/GirlsBasketballApp.jsx";
 import VolleyballApp from "./girls/volleyball/VolleyballApp.jsx";
 import TrackApp from "./track/TrackApp.jsx";
+import CrossCountryApp from "./cross-country/CrossCountryApp.jsx";
 import SwimmingApp from "./swimming/SwimmingApp.jsx";
 import TennisApp from "./tennis/TennisApp.jsx";
 import GolfApp from "./golf/GolfApp.jsx";
@@ -63,6 +64,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             />
           }
         />
+        <Route path="/athletics/cross-country/*" element={<CrossCountryApp />} />
 
         <Route path="/athletics/track/*" element={<TrackApp />} />
         <Route path="/athletics/swimming/*" element={<SwimmingApp />} />

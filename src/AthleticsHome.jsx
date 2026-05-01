@@ -77,9 +77,19 @@ const sports = [
     stateYears: [],
   },
   {
+    name: "Cross Country",
+    to: "/athletics/cross-country",
+    icon: "/images/cross-country/cross_country_icon.png",
+    iconClassName: "scale-[1.45]",
+    bannerMessage: "This page is under construction and will be up soon.",
+    regionYears: [],
+    stateYears: [],
+  },
+  {
     name: "Track & Field",
     to: "/athletics/track",
     icon: "/images/track/track_icon.png",
+    iconClassName: "scale-[1.35]",
     championshipGroups: [
       {
         title: "Individual Champions",

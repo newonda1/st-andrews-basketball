@@ -1443,7 +1443,11 @@
     "City": "Johns Island",
     "State": "SC",
     "ShortName": "Charleston Collegiate",
-    "Mascot": "Sun Devils"
+    "Mascot": "Sun Devils",
+    "WebsiteUrl": "https://charlestoncollegiate.org/",
+    "AthleticsUrl": "https://charlestoncollegiate.org/experience/athletics/",
+    "LogoPath": "/images/schools/logos/sc-charleston-collegiate-school-johns-island.png",
+    "LogoSourceUrl": "https://image.maxpreps.io/school-mascot/7/1/a/71a7995e-f654-4aaf-9a96-b80c3a757c2d.gif?version=635957913000000000&width=1024&height=1024"
   },
   {
     "SchoolID": "sc-christian-academy-myrtle-beach",
@@ -1456,13 +1460,20 @@
     "Name": "Clarendon Hall",
     "City": "Summerton",
     "State": "SC",
-    "Mascot": "Saints"
+    "Mascot": "Saints",
+    "LogoPath": "/images/schools/logos/sc-clarendon-hall-summerton.png",
+    "LogoSourceUrl": "https://image.maxpreps.io/school-mascot/f/7/d/f7d3ceac-8911-4b1b-817a-0e5f10bc3fe1.gif?version=635321794200000000&width=1024&height=1024"
   },
   {
     "SchoolID": "sc-colleton-prep-academy-walterboro",
     "Name": "Colleton Prep Academy",
     "City": "Walterboro",
-    "State": "SC"
+    "State": "SC",
+    "Mascot": "War Hawks",
+    "WebsiteUrl": "https://www.colletonprep.org/",
+    "AthleticsUrl": "https://www.colletonprep.org/athletics/",
+    "LogoPath": "/images/schools/logos/sc-colleton-prep-academy-walterboro.png",
+    "LogoSourceUrl": "https://www.colletonprep.org/editoruploads/images/Logos/footer_logo.png"
   },
   {
     "SchoolID": "sc-cross-bluffton",
@@ -1588,13 +1599,21 @@
     "City": "Hilton Head Island",
     "State": "SC",
     "ShortName": "Hilton Head Prep",
-    "Mascot": "Dolphins"
+    "Mascot": "Dolphins",
+    "WebsiteUrl": "https://www.hhprep.org/",
+    "AthleticsUrl": "https://www.hhprep.org/athletics",
+    "LogoPath": "/images/schools/logos/sc-hilton-head-preparatory-school-hilton-head-island.png",
+    "LogoSourceUrl": "https://bbk12e1-cdn.myschoolcdn.com/1454/photo/orig_photo2160222_9868458.png"
   },
   {
     "SchoolID": "sc-holly-hill-academy-holly-hill",
     "Name": "Holly Hill Academy",
     "City": "Holly Hill",
-    "State": "SC"
+    "State": "SC",
+    "Mascot": "Raiders",
+    "WebsiteUrl": "https://www.hollyhillacademy.org/",
+    "LogoPath": "/images/schools/logos/sc-holly-hill-academy-holly-hill.png",
+    "LogoSourceUrl": "https://www.hollyhillacademy.org/_files/ugd/f928b0_1099e5a29aed41a7ae0031cc393879a5.pdf"
   },
   {
     "SchoolID": "sc-holy-trinity-classical-christian-school-beaufort",
@@ -1619,7 +1638,9 @@
     "Name": "Jefferson Davis Academy",
     "City": "Blackville",
     "State": "SC",
-    "Mascot": "Raiders"
+    "Mascot": "Raiders",
+    "LogoPath": "/images/schools/logos/sc-jefferson-davis-academy-blackville.png",
+    "LogoSourceUrl": "https://image.maxpreps.io/school-mascot/4/9/f/49f4b8ec-8b65-4e3f-8b18-376a88945041.gif?version=637187684400000000&width=1024&height=1024"
   },
   {
     "SchoolID": "sc-john-c-calhoun-academy-st-matthews",
@@ -1627,7 +1648,9 @@
     "City": "St. Matthews",
     "State": "SC",
     "ShortName": "Calhoun",
-    "Mascot": "Cavaliers"
+    "Mascot": "Cavaliers",
+    "LogoPath": "/images/schools/logos/sc-john-c-calhoun-academy-st-matthews.png",
+    "LogoSourceUrl": "https://image.maxpreps.io/school-mascot/5/d/b/5dbe0e71-afc8-4b12-8bd1-8a3cecbadc51.gif?version=637045863000000000&width=1024&height=1024"
   },
   {
     "SchoolID": "sc-john-paul-ii-catholic-school-ridgeland",
@@ -1732,13 +1755,23 @@
     "SchoolID": "sc-patrick-henry-academy-estill",
     "Name": "Patrick Henry Academy",
     "City": "Estill",
-    "State": "SC"
+    "State": "SC",
+    "Mascot": "Patriots",
+    "PrimaryColor": "#5A1731",
+    "SecondaryColor": "#F2BF2D",
+    "WebsiteUrl": "https://www.patrickhenryacademy.org/",
+    "AthleticsUrl": "https://www.patrickhenryacademy.org/athletics/",
+    "LogoPath": "/images/schools/logos/sc-patrick-henry-academy-estill.png",
+    "LogoSourceUrl": "https://www.patrickhenryacademy.org/editoruploads/images/LOGO/Patriot.png"
   },
   {
     "SchoolID": "sc-pee-dee-academy-mullins",
     "Name": "Pee Dee Academy",
     "City": "Mullins",
-    "State": "SC"
+    "State": "SC",
+    "Mascot": "Golden Eagles",
+    "LogoPath": "/images/schools/logos/sc-pee-dee-academy-mullins.png",
+    "LogoSourceUrl": "https://image.maxpreps.io/school-mascot/7/2/a/72a4c7a4-b334-472e-8574-995519c7e239.gif?version=638957842509534320&width=1024&height=1024"
   },
   {
     "SchoolID": "sc-pinewood-preparatory-school-summerville",
@@ -1746,7 +1779,13 @@
     "City": "Summerville",
     "State": "SC",
     "ShortName": "Pinewood Prep",
-    "Mascot": "Panthers"
+    "Mascot": "Panthers",
+    "PrimaryColor": "#002F63",
+    "SecondaryColor": "#79A8D8",
+    "WebsiteUrl": "https://www.pinewoodprep.com/",
+    "AthleticsUrl": "https://www.pinewoodprep.com/athletics/",
+    "LogoPath": "/images/schools/logos/sc-pinewood-preparatory-school-summerville.png",
+    "LogoSourceUrl": "https://cache.bsnsports.com/comp/sls/get/43/19169?f=png&sid=19169&ts=1770904330"
   },
   {
     "SchoolID": "sc-providence-athletic-club-columbia",
@@ -1767,7 +1806,9 @@
     "Name": "Richard Winn Academy",
     "City": "Winnsboro",
     "State": "SC",
-    "Mascot": "Eagles"
+    "Mascot": "Eagles",
+    "LogoPath": "/images/schools/logos/sc-richard-winn-academy-winnsboro.png",
+    "LogoSourceUrl": "https://image.maxpreps.io/school-mascot/6/d/e/6de152e2-2bf2-4d42-a905-c55f28ce0352.gif?version=637519872000000000&width=1024&height=1024"
   },
   {
     "SchoolID": "sc-robert-e-lee-academy-bishopville",
@@ -1788,7 +1829,13 @@
     "SchoolID": "sc-sea-island-academy-johns-island",
     "Name": "Sea Island Academy",
     "City": "Johns Island",
-    "State": "SC"
+    "State": "SC",
+    "ShortName": "Sea Island",
+    "Mascot": "Sun Devils",
+    "CurrentName": "Charleston Collegiate School",
+    "SuccessorSchoolID": "sc-charleston-collegiate-school-johns-island",
+    "LogoPath": "/images/schools/logos/sc-charleston-collegiate-school-johns-island.png",
+    "LogoSourceUrl": "https://image.maxpreps.io/school-mascot/7/1/a/71a7995e-f654-4aaf-9a96-b80c3a757c2d.gif?version=635957913000000000&width=1024&height=1024"
   },
   {
     "SchoolID": "sc-sea-pines-academy-hilton-head-island",
@@ -1879,6 +1926,26 @@
     "City": "Darlington",
     "State": "SC",
     "Mascot": "Titans"
+  },
+  {
+    "SchoolID": "sc-w-wyman-king-academy-batesburg-leesville",
+    "Name": "W. Wyman King Academy",
+    "City": "Batesburg-Leesville",
+    "State": "SC",
+    "ShortName": "W.W. King",
+    "CurrentName": "King Academy",
+    "Mascot": "Knights",
+    "LogoPath": "/images/schools/logos/sc-w-wyman-king-academy-batesburg-leesville.png",
+    "LogoSourceUrl": "https://image.maxpreps.io/school-mascot/a/4/b/a4b0de8b-157f-49cf-bdf9-3ba9a09578a0.gif?version=635940684000000000&width=1024&height=1024"
+  },
+  {
+    "SchoolID": "sc-wardlaw-academy-johnston",
+    "Name": "Wardlaw Academy",
+    "City": "Johnston",
+    "State": "SC",
+    "Mascot": "Patriots",
+    "LogoPath": "/images/schools/logos/sc-wardlaw-academy-johnston.png",
+    "LogoSourceUrl": "https://image.maxpreps.io/school-mascot/3/9/9/399767fc-1c4d-4ac8-866c-b9d61e70c9aa.gif?version=638076790200000000&width=1024&height=1024"
   },
   {
     "SchoolID": "sc-williamsburg-academy-kingstree",

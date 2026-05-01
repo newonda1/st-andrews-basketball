@@ -5,6 +5,7 @@ export const FOOTBALL_DATA_PATHS = {
   rosters: "/data/boys/football/seasonrosters.json",
   stats: "/data/boys/football/seasonstats.json",
   playerGameLogs: "/data/boys/football/playergamelogs.json",
+  schools: "/data/schools.json",
 };
 
 export async function fetchJson(path, label) {
@@ -28,12 +29,13 @@ export async function loadFootballResultsData() {
 }
 
 export async function loadFootballSeasonPageData() {
-  const [games, seasons, players, rosters, stats] = await Promise.all([
+  const [games, seasons, players, rosters, stats, schools] = await Promise.all([
     fetchJson(FOOTBALL_DATA_PATHS.games, "football games"),
     fetchJson(FOOTBALL_DATA_PATHS.seasons, "football seasons"),
     fetchJson(FOOTBALL_DATA_PATHS.players, "football players"),
     fetchJson(FOOTBALL_DATA_PATHS.rosters, "football rosters"),
     fetchJson(FOOTBALL_DATA_PATHS.stats, "football stats"),
+    fetchJson(FOOTBALL_DATA_PATHS.schools, "schools"),
   ]);
 
   return {
@@ -42,6 +44,7 @@ export async function loadFootballSeasonPageData() {
     players: Array.isArray(players) ? players : [],
     rosters: Array.isArray(rosters) ? rosters : [],
     seasonStats: Array.isArray(stats) ? stats : stats && typeof stats === "object" ? [stats] : [],
+    schools: Array.isArray(schools) ? schools : [],
   };
 }
 

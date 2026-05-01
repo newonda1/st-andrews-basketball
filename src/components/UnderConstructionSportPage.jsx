@@ -6,6 +6,9 @@ import AthleticsProgramShell from "./AthleticsProgramShell";
 export default function UnderConstructionSportPage({
   sportName,
   sportPath,
+  icon,
+  iconAlt,
+  iconClassName = "",
 }) {
   return (
     <AthleticsProgramShell
@@ -19,11 +22,19 @@ export default function UnderConstructionSportPage({
           <div className="stats-offset-media">
             <div className="flex aspect-[1.15/1] w-full items-center justify-center border border-[var(--stats-line)] bg-[linear-gradient(135deg,#eef3fb_0%,#d6deef_100%)] p-6 sm:p-8">
               <div className="flex h-full w-full flex-col items-center justify-center border border-white/70 bg-white/80 px-6 py-8 text-center shadow-[0_18px_32px_rgba(0,33,105,0.08)]">
-                <img
-                  src="/images/common/st_andrews_athletics_logo.png"
-                  alt="St. Andrew's athletics logo"
-                  className="w-full max-w-[16rem] object-contain"
-                />
+                {icon ? (
+                  <img
+                    src={icon}
+                    alt={iconAlt || `${sportName} icon`}
+                    className={`h-24 w-24 object-contain sm:h-32 sm:w-32 ${iconClassName}`}
+                  />
+                ) : (
+                  <img
+                    src="/images/common/st_andrews_athletics_logo.png"
+                    alt="St. Andrew's athletics logo"
+                    className="w-full max-w-[16rem] object-contain"
+                  />
+                )}
                 <p className="mb-0 mt-6 text-[0.82rem] font-bold uppercase tracking-[0.18em] text-[var(--stats-gray)]">
                   {sportName}
                 </p>

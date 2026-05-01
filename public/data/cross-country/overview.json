@@ -1,0 +1,15 @@
+{
+  "pageIntro": "The St. Andrew's cross country archive is organized around MileSplit Georgia schedule entries, MileSplit South Carolina SCISA result files, meet pages, and team-filtered result rows for the St. Andrews School team profile.",
+  "trackedSince": "1996-97",
+  "sourceSummary": "Historical data now combines MileSplit South Carolina SCISA raw result files, MileSplit Georgia team schedules, and the existing MileSplit Georgia team ID 28890 archive through the current season.",
+  "notes": [
+    "MileSplit's team schedule contains both high-school and middle-school cross country entries; Level and MeetType preserve meet-level context when the meet name makes it clear.",
+    "Athlete-result rows include a Division field so mixed meet pages can keep high-school and middle-school performances separate even when both appear in the same MileSplit result page.",
+    "Rows are loaded from each meet's St. Andrew's team results page when public rows are visible. Meets with no public result link, or with a team page reporting no performances found, are kept as empty meet records.",
+    "Athlete rows currently preserve public athlete names directly in the cross-country result record instead of assigning new shared PlayerID values."
+  ],
+  "dataNotes": [
+    "SCISA-era seasons before the first public MileSplit result files are kept as visible season shells with no result rows.",
+    "Older South Carolina result files sometimes list St. Andrew's as plain text rather than attaching rows to the current MileSplit team profile, so the importer reads raw files as well as team-filtered pages."
+  ]
+}

@@ -219,61 +219,181 @@ function formatSeasonSummaryValue(value) {
   return text ? text : "—";
 }
 
+function formatStandingsPct(value, wins, losses, ties = 0) {
+  const text = String(value ?? "").trim();
+  if (text) return text;
+
+  const winValue = toFiniteNumber(wins);
+  const lossValue = toFiniteNumber(losses);
+  const tieValue = toFiniteNumber(ties) ?? 0;
+
+  if (winValue === null || lossValue === null) return "—";
+
+  const totalGames = winValue + lossValue + tieValue;
+  if (!totalGames) return "—";
+
+  return (winValue / totalGames).toFixed(3);
+}
+
+function getStandingsRegions(standings) {
+  const regions = Array.isArray(standings?.Regions) ? standings.Regions : [];
+  if (regions.length) {
+    return regions
+      .map((region, index) => ({
+        title: region.Title || `Region ${index + 1}`,
+        rows: Array.isArray(region.Rows) ? region.Rows : [],
+      }))
+      .filter((region) => region.rows.length > 0);
+  }
+
+  const rows = Array.isArray(standings?.Rows) ? standings.Rows : [];
+  if (!rows.length) return [];
+
+  return [
+    {
+      title: standings?.Title || "Region Standings",
+      rows,
+    },
+  ];
+}
+
+function getSchoolLogoPath(school, row) {
+  return school?.BracketLogoPath || school?.LogoPath || row?.LogoPath || "";
+}
+
 function isStAndrewsTeamName(teamName) {
   return /^st\s*andrew['’]?s?(?:\s*school)?$/i.test(
     String(teamName ?? "").replace(/\./g, "").trim()
   );
 }
 
-function RegionStandingsTable({ standings }) {
-  const rows = Array.isArray(standings?.Rows) ? standings.Rows : [];
-  if (!rows.length) return null;
+function formatFootballGameType(game) {
+  const gameType = String(game?.GameType ?? "").trim().toLowerCase();
+  if (gameType === "region") return "Region";
+  if (gameType === "playoff" || gameType === "playoffs" || gameType === "postseason") {
+    return "Playoffs";
+  }
+  if (gameType === "regular season" || gameType === "non-region" || gameType === "nonregion") {
+    return "Non-Region";
+  }
+  return game?.GameType || "—";
+}
+
+function RegionStandingsTable({ standings, schoolsById }) {
+  const regions = getStandingsRegions(standings);
+  if (!regions.length) return null;
 
   return (
-    <div className="overflow-x-auto rounded-lg border border-gray-200 shadow">
-      <table className="min-w-full bg-white text-sm">
-        <thead className="bg-gray-100 text-xs text-gray-700 uppercase tracking-wide">
-          <tr>
-            <th className="px-3 py-2 text-left">Team</th>
-            <th className="px-3 py-2 text-center">Region</th>
-            <th className="px-3 py-2 text-center">Overall</th>
-            <th className="px-3 py-2 text-left">Notes</th>
-          </tr>
-        </thead>
-        <tbody className="text-sm text-gray-800">
-          {rows.map((row, index) => {
-            const isStAndrews = isStAndrewsTeamName(row.Team);
+    <div className="grid gap-6">
+      {regions.map((region) => (
+        <div key={region.title} className="space-y-3">
+          <h3 className="text-lg font-semibold text-slate-800">{region.title}</h3>
+          <div className="overflow-x-auto">
+            <div className="mx-auto w-max overflow-hidden rounded-lg border border-gray-200 shadow">
+              <table className="w-[880px] bg-white text-sm">
+                <thead className="bg-gray-100 text-xs text-gray-700 uppercase tracking-wide">
+                  <tr>
+                    <th rowSpan={2} className="w-72 px-3 py-2 text-center">
+                      Team
+                    </th>
+                    <th colSpan={4} className="border-l border-gray-200 px-3 py-2 text-center">
+                      Overall
+                    </th>
+                    <th colSpan={4} className="border-l border-gray-200 px-3 py-2 text-center">
+                      Region
+                    </th>
+                  </tr>
+                  <tr className="border-t border-gray-200">
+                    <th className="border-l border-gray-200 px-3 py-2 text-center">Record</th>
+                    <th className="px-3 py-2 text-center">Win %</th>
+                    <th className="px-3 py-2 text-center">PF</th>
+                    <th className="px-3 py-2 text-center">PA</th>
+                    <th className="border-l border-gray-200 px-3 py-2 text-center">Record</th>
+                    <th className="px-3 py-2 text-center">Win %</th>
+                    <th className="px-3 py-2 text-center">PF</th>
+                    <th className="px-3 py-2 text-center">PA</th>
+                  </tr>
+                </thead>
+                <tbody className="text-sm text-gray-800">
+                  {region.rows.map((row, index) => {
+                    const school = row.SchoolID ? schoolsById.get(String(row.SchoolID)) : null;
+                    const logoPath = getSchoolLogoPath(school, row);
+                    const teamName = row.Team || school?.Name || "—";
+                    const isStAndrews = isStAndrewsTeamName(teamName);
 
-            return (
-              <tr
-                key={`${standings.Title || "region"}-${row.Team || index}`}
-                className={`border-t border-gray-200 ${
-                  isStAndrews
-                    ? "bg-blue-50"
-                    : index % 2 === 0
-                      ? "bg-white"
-                      : "bg-gray-50/70"
-                } hover:bg-gray-100`}
-              >
-                <td
-                  className={`px-3 py-2 whitespace-nowrap ${
-                    isStAndrews ? "font-semibold text-blue-900" : "font-medium"
-                  }`}
-                >
-                  {row.Team || "—"}
-                </td>
-                <td className="px-3 py-2 text-center whitespace-nowrap">
-                  {formatSeasonRecordFromFields(row, "Region")}
-                </td>
-                <td className="px-3 py-2 text-center whitespace-nowrap">
-                  {formatSeasonRecordFromFields(row, "Overall")}
-                </td>
-                <td className="px-3 py-2">{formatSeasonSummaryValue(row.Notes)}</td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
+                    return (
+                      <tr
+                        key={`${region.title}-${teamName}-${index}`}
+                        className={`border-t border-gray-200 ${
+                          isStAndrews
+                            ? "bg-blue-50"
+                            : index % 2 === 0
+                              ? "bg-white"
+                              : "bg-gray-50/70"
+                        } hover:bg-gray-100`}
+                      >
+                        <td
+                          className={`w-72 px-3 py-2 text-center align-middle ${
+                            isStAndrews ? "font-semibold text-blue-900" : "font-medium"
+                          }`}
+                        >
+                          <div className="mx-auto flex items-center justify-center gap-2 whitespace-nowrap leading-tight">
+                            {logoPath ? (
+                              <img
+                                src={logoPath}
+                                alt=""
+                                loading="lazy"
+                                className="h-6 w-6 shrink-0 object-contain"
+                              />
+                            ) : (
+                              <span className="h-6 w-6 shrink-0" aria-hidden="true" />
+                            )}
+                            <span className="text-center">{teamName}</span>
+                          </div>
+                        </td>
+                        <td className="border-l border-gray-200 px-3 py-2 text-center whitespace-nowrap">
+                          {formatSeasonRecordFromFields(row, "Overall")}
+                        </td>
+                        <td className="px-3 py-2 text-center whitespace-nowrap">
+                          {formatStandingsPct(
+                            row.OverallPct,
+                            row.OverallWins,
+                            row.OverallLosses,
+                            row.OverallTies
+                          )}
+                        </td>
+                        <td className="px-3 py-2 text-center whitespace-nowrap">
+                          {formatSeasonSummaryValue(row.OverallPointsFor)}
+                        </td>
+                        <td className="px-3 py-2 text-center whitespace-nowrap">
+                          {formatSeasonSummaryValue(row.OverallPointsAgainst)}
+                        </td>
+                        <td className="border-l border-gray-200 px-3 py-2 text-center whitespace-nowrap">
+                          {formatSeasonRecordFromFields(row, "Region")}
+                        </td>
+                        <td className="px-3 py-2 text-center whitespace-nowrap">
+                          {formatStandingsPct(
+                            row.RegionPct,
+                            row.RegionWins,
+                            row.RegionLosses,
+                            row.RegionTies
+                          )}
+                        </td>
+                        <td className="px-3 py-2 text-center whitespace-nowrap">
+                          {formatSeasonSummaryValue(row.RegionPointsFor)}
+                        </td>
+                        <td className="px-3 py-2 text-center whitespace-nowrap">
+                          {formatSeasonSummaryValue(row.RegionPointsAgainst)}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      ))}
     </div>
   );
 }
@@ -287,6 +407,7 @@ export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
   const [rosters, setRosters] = useState([]);
   const [seasons, setSeasons] = useState([]);
   const [seasonStatsCollection, setSeasonStatsCollection] = useState([]);
+  const [schools, setSchools] = useState([]);
   const [selectedStatsView, setSelectedStatsView] = useState(
     INDIVIDUAL_STATS_VIEW_CONFIG[0].key
   );
@@ -305,6 +426,7 @@ export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
         setRosters(data.rosters);
         setSeasons(data.seasons);
         setSeasonStatsCollection(data.seasonStats);
+        setSchools(data.schools);
         setStatus("");
       } catch (error) {
         if (cancelled) return;
@@ -330,28 +452,20 @@ export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
     return "Football";
   }, [resolvedSeasonId, season]);
 
-  const seasonSummaryRows = useMemo(() => {
-    if (!season) return [];
-
-    return [
-      { label: "Coach", value: formatSeasonSummaryValue(season.HeadCoach) },
-      { label: "League", value: formatSeasonSummaryValue(season.League) },
-      { label: "Overall Record", value: formatSeasonRecordFromFields(season, "Overall") },
-      { label: "Region Record", value: formatSeasonRecordFromFields(season, "Region") },
-      { label: "Points For", value: formatSeasonSummaryValue(season.PointsFor) },
-      { label: "Points Against", value: formatSeasonSummaryValue(season.PointsAgainst) },
-      { label: "Season Result", value: formatSeasonSummaryValue(season.SeasonResult) },
-    ];
-  }, [season]);
-
   const regionStandings = useMemo(() => {
-    const rows = Array.isArray(season?.RegionStandings?.Rows)
-      ? season.RegionStandings.Rows
-      : [];
-
-    if (!rows.length) return null;
+    if (!getStandingsRegions(season?.RegionStandings).length) return null;
     return season.RegionStandings;
   }, [season]);
+
+  const schoolsById = useMemo(() => {
+    const map = new Map();
+    schools.forEach((school) => {
+      if (school?.SchoolID) {
+        map.set(String(school.SchoolID), school);
+      }
+    });
+    return map;
+  }, [schools]);
 
   const rosterSeason = useMemo(
     () => rosters.find((entry) => Number(entry.SeasonID) === resolvedSeasonId) || null,
@@ -565,51 +679,10 @@ export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
         <h1 className="text-3xl font-bold">{seasonLabel} Season</h1>
       </section>
 
-      {seasonSummaryRows.length || regionStandings ? (
-        <section
-          id="season-summary"
-          className={`grid gap-6 ${
-            regionStandings ? "lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)]" : ""
-          }`}
-        >
-          {seasonSummaryRows.length ? (
-            <div className="space-y-4">
-              <h2 className="text-2xl font-semibold">Season Summary</h2>
-
-              <div className="overflow-x-auto rounded-lg border border-gray-200 shadow">
-                <table className="min-w-full bg-white text-sm">
-                  <thead className="bg-gray-100 text-xs text-gray-700 uppercase tracking-wide">
-                    <tr>
-                      <th className="px-3 py-2 text-left">Metric</th>
-                      <th className="px-3 py-2 text-left">Value</th>
-                    </tr>
-                  </thead>
-                  <tbody className="text-sm text-gray-800">
-                    {seasonSummaryRows.map((row, index) => (
-                      <tr
-                        key={row.label}
-                        className={`border-t border-gray-200 ${
-                          index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
-                        } hover:bg-gray-100`}
-                      >
-                        <td className="px-3 py-2 font-medium whitespace-nowrap">
-                          {row.label}
-                        </td>
-                        <td className="px-3 py-2">{row.value}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          ) : null}
-
-          {regionStandings ? (
-            <div id="region-standings" className="space-y-4">
-              <h2 className="text-2xl font-semibold">Region Standings</h2>
-              <RegionStandingsTable standings={regionStandings} />
-            </div>
-          ) : null}
+      {regionStandings ? (
+        <section id="region-standings" className="space-y-4">
+          <h2 className="text-2xl font-semibold">Region Standings</h2>
+          <RegionStandingsTable standings={regionStandings} schoolsById={schoolsById} />
         </section>
       ) : null}
 
@@ -623,6 +696,7 @@ export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
                 <th className="px-3 py-2 text-left">Date</th>
                 <th className="px-3 py-2 text-left">Opponent</th>
                 <th className="px-3 py-2 text-center">Site</th>
+                <th className="px-3 py-2 text-center">Type</th>
                 <th className="px-3 py-2 text-center">Result</th>
                 <th className="px-3 py-2 text-center">Score</th>
               </tr>
@@ -630,7 +704,7 @@ export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
             <tbody className="text-sm text-gray-800">
               {seasonGames.length === 0 ? (
                 <tr>
-                  <td colSpan={5} className="px-3 py-4 text-center text-slate-600">
+                  <td colSpan={6} className="px-3 py-4 text-center text-slate-600">
                     No schedule data is available for this season yet.
                   </td>
                 </tr>
@@ -660,6 +734,9 @@ export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
                     </td>
                     <td className="px-3 py-2 text-center whitespace-nowrap">
                       {game.LocationType || ""}
+                    </td>
+                    <td className="px-3 py-2 text-center whitespace-nowrap">
+                      {formatFootballGameType(game)}
                     </td>
                     <td
                       className={`px-3 py-2 text-center font-semibold whitespace-nowrap ${

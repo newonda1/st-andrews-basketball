@@ -9,6 +9,7 @@ export const athleticsMenuSections = [
       { to: "/athletics/volleyball", label: "Volleyball" },
       { to: "/athletics/girls/soccer", label: "Girls Soccer" },
       { to: "/athletics/boys/soccer", label: "Boys Soccer" },
+      { to: "/athletics/cross-country", label: "Cross Country" },
       { to: "/athletics/track", label: "Track & Field" },
       { to: "/athletics/swimming", label: "Swimming" },
       { to: "/athletics/tennis", label: "Tennis" },

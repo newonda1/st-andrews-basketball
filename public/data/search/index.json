@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-01T14:25:58.025Z",
-  "itemCount": 1462,
+  "generatedAt": "2026-05-01T17:13:43.937Z",
+  "itemCount": 1466,
   "items": [
     {
       "id": "athletics-home",
@@ -772,6 +772,67 @@
         "program",
         "home",
         "coming soon"
+      ]
+    },
+    {
+      "id": "cross-country-home",
+      "type": "team",
+      "title": "Cross Country",
+      "subtitle": "St. Andrew's team home",
+      "to": "/athletics/cross-country",
+      "featured": true,
+      "keywords": [
+        "cross country",
+        "xc",
+        "team",
+        "program",
+        "home",
+        "menu",
+        "archive",
+        "running"
+      ]
+    },
+    {
+      "id": "cross-country-champions",
+      "type": "page",
+      "title": "List of Champions",
+      "subtitle": "Cross Country",
+      "to": "/athletics/cross-country/champions",
+      "keywords": [
+        "cross country",
+        "xc",
+        "champions",
+        "championships",
+        "running"
+      ]
+    },
+    {
+      "id": "cross-country-school-records",
+      "type": "page",
+      "title": "School Records",
+      "subtitle": "Cross Country",
+      "to": "/athletics/cross-country/records/school",
+      "keywords": [
+        "cross country",
+        "xc",
+        "school",
+        "records",
+        "top times"
+      ]
+    },
+    {
+      "id": "cross-country-season-results",
+      "type": "page",
+      "title": "Season Results",
+      "subtitle": "Cross Country",
+      "to": "/athletics/cross-country/yearly-results",
+      "keywords": [
+        "cross country",
+        "xc",
+        "season",
+        "results",
+        "schedule",
+        "meets"
       ]
     },
     {
@@ -20092,6 +20153,8 @@
         "history",
         "records",
         "Sea Island Academy",
+        "Sea Island",
+        "Sun Devils",
         "Johns Island",
         "SC"
       ]
@@ -20616,6 +20679,7 @@
         "history",
         "records",
         "Patrick Henry Academy",
+        "Patriots",
         "Estill",
         "SC"
       ]
@@ -20803,6 +20867,7 @@
         "history",
         "records",
         "Colleton Prep Academy",
+        "War Hawks",
         "Walterboro",
         "SC"
       ]
@@ -20871,6 +20936,7 @@
         "history",
         "records",
         "Pee Dee Academy",
+        "Golden Eagles",
         "Mullins",
         "SC"
       ]
@@ -20941,6 +21007,7 @@
         "history",
         "records",
         "Holly Hill Academy",
+        "Raiders",
         "Holly Hill",
         "SC"
       ]
@@ -22768,6 +22835,7 @@
         "history",
         "records",
         "Patrick Henry Academy",
+        "Patriots",
         "Estill",
         "SC"
       ]
@@ -22991,6 +23059,7 @@
         "history",
         "records",
         "Pee Dee Academy",
+        "Golden Eagles",
         "Mullins",
         "SC"
       ]
@@ -23114,6 +23183,7 @@
         "history",
         "records",
         "Colleton Prep Academy",
+        "War Hawks",
         "Walterboro",
         "SC"
       ]
@@ -23778,6 +23848,7 @@
         "history",
         "records",
         "Patrick Henry Academy",
+        "Patriots",
         "Estill",
         "SC"
       ]
@@ -23904,6 +23975,7 @@
         "history",
         "records",
         "Colleton Prep Academy",
+        "War Hawks",
         "Walterboro",
         "SC"
       ]
@@ -24803,6 +24875,8 @@
         "history",
         "records",
         "Sea Island Academy",
+        "Sea Island",
+        "Sun Devils",
         "Johns Island",
         "SC"
       ]
@@ -24837,6 +24911,7 @@
         "history",
         "records",
         "Holly Hill Academy",
+        "Raiders",
         "Holly Hill",
         "SC"
       ]
@@ -24854,6 +24929,7 @@
         "history",
         "records",
         "Colleton Prep Academy",
+        "War Hawks",
         "Walterboro",
         "SC"
       ]
@@ -24928,6 +25004,7 @@
         "history",
         "records",
         "Patrick Henry Academy",
+        "Patriots",
         "Estill",
         "SC"
       ]
@@ -24945,6 +25022,7 @@
         "history",
         "records",
         "Pee Dee Academy",
+        "Golden Eagles",
         "Mullins",
         "SC"
       ]
