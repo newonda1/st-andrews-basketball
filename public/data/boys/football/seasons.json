@@ -272,6 +272,125 @@
         }
       ]
     },
+    "StatePlayoffBracket": {
+      "format": "8",
+      "title": "1996-97 SCISA AA State Playoffs",
+      "SourceUrl": "https://docs.google.com/spreadsheets/d/1Lu2mYlvzREfBVnqmgalsXroMswKEWCmPqkhtYdsmIb0/htmlembed/sheet?headers=false&gid=26",
+      "teams": {
+        "richardwinn": {
+          "name": "Richard Winn",
+          "schoolId": "sc-richard-winn-academy-winnsboro"
+        },
+        "jeffersondavis": {
+          "name": "Jefferson Davis",
+          "schoolId": "sc-jefferson-davis-academy-blackville"
+        },
+        "wwking": {
+          "name": "W.W. King",
+          "schoolId": "sc-w-wyman-king-academy-batesburg-leesville"
+        },
+        "hiltonheadprep": {
+          "name": "Hilton Head Prep",
+          "schoolId": "sc-hilton-head-preparatory-school-hilton-head-island"
+        },
+        "calhoun": {
+          "name": "Calhoun",
+          "schoolId": "sc-john-c-calhoun-academy-st-matthews"
+        },
+        "hollyhill": {
+          "name": "Holly Hill",
+          "schoolId": "sc-holly-hill-academy-holly-hill"
+        },
+        "peede": {
+          "name": "Pee Dee",
+          "schoolId": "sc-pee-dee-academy-mullins"
+        },
+        "standrews": {
+          "name": "St. Andrew's",
+          "schoolId": "ga-st-andrews-school-savannah"
+        }
+      },
+      "games": {
+        "qf_1": {
+          "top": {
+            "teamId": "richardwinn",
+            "score": 39
+          },
+          "bottom": {
+            "teamId": "jeffersondavis",
+            "score": 0
+          },
+          "winner": "richardwinn"
+        },
+        "qf_2": {
+          "top": {
+            "teamId": "wwking",
+            "score": 12
+          },
+          "bottom": {
+            "teamId": "hiltonheadprep",
+            "score": 13
+          },
+          "winner": "hiltonheadprep"
+        },
+        "qf_3": {
+          "top": {
+            "teamId": "calhoun",
+            "score": 47
+          },
+          "bottom": {
+            "teamId": "hollyhill",
+            "score": 0
+          },
+          "winner": "calhoun"
+        },
+        "qf_4": {
+          "top": {
+            "teamId": "peede",
+            "score": 7
+          },
+          "bottom": {
+            "teamId": "standrews",
+            "score": 12
+          },
+          "winner": "standrews"
+        },
+        "sf_top": {
+          "top": {
+            "teamId": "richardwinn",
+            "score": 63
+          },
+          "bottom": {
+            "teamId": "hiltonheadprep",
+            "score": 6
+          },
+          "winner": "richardwinn"
+        },
+        "sf_bot": {
+          "top": {
+            "teamId": "calhoun",
+            "score": 7
+          },
+          "bottom": {
+            "teamId": "standrews",
+            "score": 10
+          },
+          "winner": "standrews",
+          "note": "OT"
+        },
+        "final": {
+          "top": {
+            "teamId": "richardwinn",
+            "score": 52
+          },
+          "bottom": {
+            "teamId": "standrews",
+            "score": 0
+          },
+          "winner": "richardwinn"
+        }
+      }
+    },
     "SourceUrls": {
       "schedule": "https://docs.google.com/spreadsheets/d/12_KL42vph9R9RxIQ7Jn_BFkrtV9HLI1sym0ntHZReEU/htmlembed/sheet?headers=false&gid=6",
       "stats": "https://docs.google.com/spreadsheets/d/1XL5VrGsFQXz0ezl-EGCMfHTMMAcu6j5tdltStxssJAk/htmlembed",
@@ -312,6 +431,206 @@
     "RegionFinish": null,
     "StateFinish": "State Runner-up",
     "SeasonResult": "SCISA AA Region II • State runner-up vs. Hilton Head Preparatory School • 5-1 region record",
+    "RegionStandings": {
+      "Title": "SCISA AA",
+      "SourceUrl": "https://docs.google.com/spreadsheets/d/1pTXBCIxf2RIoffWpP-VZCdBUVwoZH2ED-Abrvadb6xc/htmlembed/sheet?headers=false&gid=28",
+      "Regions": [
+        {
+          "Title": "AA Region 1",
+          "Rows": [
+            {
+              "Team": "Calhoun Academy",
+              "OverallWins": 9,
+              "OverallLosses": 3,
+              "OverallTies": 0,
+              "OverallPct": "0.750",
+              "RegionWins": 7,
+              "RegionLosses": 0,
+              "RegionTies": 0,
+              "RegionPct": "1.000",
+              "SchoolID": "sc-john-c-calhoun-academy-st-matthews"
+            },
+            {
+              "Team": "Roy Hudgens Academy",
+              "OverallWins": 7,
+              "OverallLosses": 5,
+              "OverallTies": 0,
+              "OverallPct": "0.583",
+              "RegionWins": 5,
+              "RegionLosses": 2,
+              "RegionTies": 0,
+              "RegionPct": "0.714",
+              "SchoolID": "sc-roy-hudgens-academy-lynchburg"
+            },
+            {
+              "Team": "Richard Winn Academy",
+              "OverallWins": 5,
+              "OverallLosses": 6,
+              "OverallTies": 0,
+              "OverallPct": "0.455",
+              "RegionWins": 5,
+              "RegionLosses": 2,
+              "RegionTies": 0,
+              "RegionPct": "0.714",
+              "SchoolID": "sc-richard-winn-academy-winnsboro"
+            },
+            {
+              "Team": "Jefferson Davis Academy",
+              "OverallWins": 5,
+              "OverallLosses": 5,
+              "OverallTies": 0,
+              "OverallPct": "0.500",
+              "RegionWins": 4,
+              "RegionLosses": 3,
+              "RegionTies": 0,
+              "RegionPct": "0.571",
+              "SchoolID": "sc-jefferson-davis-academy-blackville"
+            },
+            {
+              "Team": "James F. Byrnes Academy",
+              "OverallWins": 5,
+              "OverallLosses": 5,
+              "OverallTies": 0,
+              "OverallPct": "0.500",
+              "RegionWins": 3,
+              "RegionLosses": 4,
+              "RegionTies": 0,
+              "RegionPct": "0.429",
+              "SchoolID": "sc-james-f-byrnes-academy-quinby"
+            },
+            {
+              "Team": "W. Wyman King Academy",
+              "OverallWins": 4,
+              "OverallLosses": 7,
+              "OverallTies": 0,
+              "OverallPct": "0.364",
+              "RegionWins": 3,
+              "RegionLosses": 5,
+              "RegionTies": 0,
+              "RegionPct": "0.375",
+              "SchoolID": "sc-w-wyman-king-academy-batesburg-leesville"
+            },
+            {
+              "Team": "Pee Dee Academy",
+              "OverallWins": 4,
+              "OverallLosses": 6,
+              "OverallTies": 0,
+              "OverallPct": "0.400",
+              "RegionWins": 2,
+              "RegionLosses": 4,
+              "RegionTies": 0,
+              "RegionPct": "0.333",
+              "SchoolID": "sc-pee-dee-academy-mullins"
+            },
+            {
+              "Team": "Wardlaw Academy",
+              "OverallWins": 5,
+              "OverallLosses": 6,
+              "OverallTies": 0,
+              "OverallPct": "0.455",
+              "RegionWins": 2,
+              "RegionLosses": 5,
+              "RegionTies": 0,
+              "RegionPct": "0.286",
+              "SchoolID": "sc-wardlaw-academy-johnston"
+            }
+          ]
+        },
+        {
+          "Title": "AA Region 2",
+          "Rows": [
+            {
+              "Team": "Hilton Head Preparatory School",
+              "OverallWins": 11,
+              "OverallLosses": 1,
+              "OverallTies": 0,
+              "OverallPct": "0.917",
+              "RegionWins": 6,
+              "RegionLosses": 0,
+              "RegionTies": 0,
+              "RegionPct": "1.000",
+              "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+            },
+            {
+              "Team": "St. Andrew's School",
+              "OverallWins": 10,
+              "OverallLosses": 3,
+              "OverallTies": 0,
+              "OverallPct": "0.769",
+              "OverallPointsFor": 296,
+              "OverallPointsAgainst": 137,
+              "RegionWins": 5,
+              "RegionLosses": 1,
+              "RegionTies": 0,
+              "RegionPct": "0.833",
+              "RegionPointsFor": 174,
+              "RegionPointsAgainst": 42,
+              "SchoolID": "ga-st-andrews-school-savannah"
+            },
+            {
+              "Team": "Colleton Prep Academy",
+              "OverallWins": 5,
+              "OverallLosses": 6,
+              "OverallTies": 0,
+              "OverallPct": "0.455",
+              "RegionWins": 4,
+              "RegionLosses": 2,
+              "RegionTies": 0,
+              "RegionPct": "0.667",
+              "SchoolID": "sc-colleton-prep-academy-walterboro"
+            },
+            {
+              "Team": "Clarendon Hall",
+              "OverallWins": 5,
+              "OverallLosses": 6,
+              "OverallTies": 0,
+              "OverallPct": "0.455",
+              "RegionWins": 3,
+              "RegionLosses": 3,
+              "RegionTies": 0,
+              "RegionPct": "0.500",
+              "SchoolID": "sc-clarendon-hall-summerton"
+            },
+            {
+              "Team": "Patrick Henry Academy",
+              "OverallWins": 3,
+              "OverallLosses": 7,
+              "OverallTies": 0,
+              "OverallPct": "0.300",
+              "RegionWins": 2,
+              "RegionLosses": 4,
+              "RegionTies": 0,
+              "RegionPct": "0.333",
+              "SchoolID": "sc-patrick-henry-academy-estill"
+            },
+            {
+              "Team": "Sea Island Academy",
+              "OverallWins": 4,
+              "OverallLosses": 6,
+              "OverallTies": 0,
+              "OverallPct": "0.400",
+              "RegionWins": 1,
+              "RegionLosses": 4,
+              "RegionTies": 0,
+              "RegionPct": "0.200",
+              "SchoolID": "sc-sea-island-academy-johns-island"
+            },
+            {
+              "Team": "Pinewood Preparatory School",
+              "OverallWins": 0,
+              "OverallLosses": 11,
+              "OverallTies": 0,
+              "OverallPct": "0.000",
+              "RegionWins": 0,
+              "RegionLosses": 6,
+              "RegionTies": 0,
+              "RegionPct": "0.000",
+              "SchoolID": "sc-pinewood-preparatory-school-summerville"
+            }
+          ]
+        }
+      ]
+    },
     "SourceUrls": {
       "schedule": "https://docs.google.com/spreadsheets/d/12_KL42vph9R9RxIQ7Jn_BFkrtV9HLI1sym0ntHZReEU/htmlembed/sheet?headers=false&gid=7",
       "stats": "https://docs.google.com/spreadsheets/d/1XL5VrGsFQXz0ezl-EGCMfHTMMAcu6j5tdltStxssJAk/htmlembed",
@@ -352,6 +671,170 @@
     "RegionFinish": "Region Champion",
     "StateFinish": "State Champion",
     "SeasonResult": "SCISA AA Region II • State champion vs. Calhoun Academy • 5-0 region record",
+    "RegionStandings": {
+      "Title": "SCISA AA",
+      "SourceUrl": "https://docs.google.com/spreadsheets/d/1pTXBCIxf2RIoffWpP-VZCdBUVwoZH2ED-Abrvadb6xc/htmlembed/sheet?headers=false&gid=29",
+      "Regions": [
+        {
+          "Title": "AA Region 1",
+          "Rows": [
+            {
+              "Team": "Roy Hudgens Academy",
+              "OverallWins": 10,
+              "OverallLosses": 2,
+              "OverallTies": 0,
+              "OverallPct": "0.833",
+              "RegionWins": 4,
+              "RegionLosses": 1,
+              "RegionTies": 0,
+              "RegionPct": "0.800",
+              "SchoolID": "sc-roy-hudgens-academy-lynchburg"
+            },
+            {
+              "Team": "Richard Winn Academy",
+              "OverallWins": 9,
+              "OverallLosses": 3,
+              "OverallTies": 0,
+              "OverallPct": "0.750",
+              "RegionWins": 4,
+              "RegionLosses": 1,
+              "RegionTies": 0,
+              "RegionPct": "0.800",
+              "SchoolID": "sc-richard-winn-academy-winnsboro"
+            },
+            {
+              "Team": "Thomas Sumter Academy",
+              "OverallWins": 8,
+              "OverallLosses": 3,
+              "OverallTies": 0,
+              "OverallPct": "0.727",
+              "RegionWins": 4,
+              "RegionLosses": 1,
+              "RegionTies": 0,
+              "RegionPct": "0.800",
+              "SchoolID": "sc-thomas-sumter-academy-dalzell"
+            },
+            {
+              "Team": "Williamsburg Academy",
+              "OverallWins": 4,
+              "OverallLosses": 7,
+              "OverallTies": 0,
+              "OverallPct": "0.364",
+              "RegionWins": 2,
+              "RegionLosses": 3,
+              "RegionTies": 0,
+              "RegionPct": "0.400",
+              "SchoolID": "sc-williamsburg-academy-kingstree"
+            },
+            {
+              "Team": "Clarendon Hall",
+              "OverallWins": 3,
+              "OverallLosses": 7,
+              "OverallTies": 0,
+              "OverallPct": "0.300",
+              "RegionWins": 1,
+              "RegionLosses": 4,
+              "RegionTies": 0,
+              "RegionPct": "0.200",
+              "SchoolID": "sc-clarendon-hall-summerton"
+            },
+            {
+              "Team": "James F. Byrnes Academy",
+              "OverallWins": 2,
+              "OverallLosses": 9,
+              "OverallTies": 0,
+              "OverallPct": "0.182",
+              "RegionWins": 0,
+              "RegionLosses": 5,
+              "RegionTies": 0,
+              "RegionPct": "0.000",
+              "SchoolID": "sc-james-f-byrnes-academy-quinby"
+            }
+          ]
+        },
+        {
+          "Title": "AA Region 2",
+          "Rows": [
+            {
+              "Team": "St. Andrew's School",
+              "OverallWins": 12,
+              "OverallLosses": 1,
+              "OverallTies": 0,
+              "OverallPct": "0.923",
+              "OverallPointsFor": 438,
+              "OverallPointsAgainst": 100,
+              "RegionWins": 5,
+              "RegionLosses": 0,
+              "RegionTies": 0,
+              "RegionPct": "1.000",
+              "RegionPointsFor": 206,
+              "RegionPointsAgainst": 36,
+              "SchoolID": "ga-st-andrews-school-savannah"
+            },
+            {
+              "Team": "Calhoun Academy",
+              "OverallWins": 10,
+              "OverallLosses": 3,
+              "OverallTies": 0,
+              "OverallPct": "0.769",
+              "RegionWins": 4,
+              "RegionLosses": 1,
+              "RegionTies": 0,
+              "RegionPct": "0.800",
+              "SchoolID": "sc-john-c-calhoun-academy-st-matthews"
+            },
+            {
+              "Team": "Sea Island Academy",
+              "OverallWins": 6,
+              "OverallLosses": 6,
+              "OverallTies": 0,
+              "OverallPct": "0.500",
+              "RegionWins": 2,
+              "RegionLosses": 3,
+              "RegionTies": 0,
+              "RegionPct": "0.400",
+              "SchoolID": "sc-sea-island-academy-johns-island"
+            },
+            {
+              "Team": "Hilton Head Preparatory School",
+              "OverallWins": 2,
+              "OverallLosses": 8,
+              "OverallTies": 0,
+              "OverallPct": "0.200",
+              "RegionWins": 2,
+              "RegionLosses": 3,
+              "RegionTies": 0,
+              "RegionPct": "0.400",
+              "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+            },
+            {
+              "Team": "Colleton Prep Academy",
+              "OverallWins": 4,
+              "OverallLosses": 7,
+              "OverallTies": 0,
+              "OverallPct": "0.364",
+              "RegionWins": 1,
+              "RegionLosses": 3,
+              "RegionTies": 0,
+              "RegionPct": "0.250",
+              "SchoolID": "sc-colleton-prep-academy-walterboro"
+            },
+            {
+              "Team": "Patrick Henry Academy",
+              "OverallWins": 0,
+              "OverallLosses": 11,
+              "OverallTies": 0,
+              "OverallPct": "0.000",
+              "RegionWins": 0,
+              "RegionLosses": 5,
+              "RegionTies": 0,
+              "RegionPct": "0.000",
+              "SchoolID": "sc-patrick-henry-academy-estill"
+            }
+          ]
+        }
+      ]
+    },
     "SourceUrls": {
       "schedule": "https://docs.google.com/spreadsheets/d/12_KL42vph9R9RxIQ7Jn_BFkrtV9HLI1sym0ntHZReEU/htmlembed/sheet?headers=false&gid=8",
       "stats": "https://docs.google.com/spreadsheets/d/1XL5VrGsFQXz0ezl-EGCMfHTMMAcu6j5tdltStxssJAk/htmlembed",
@@ -392,6 +875,182 @@
     "RegionFinish": null,
     "StateFinish": null,
     "SeasonResult": "SCISA AA Region II • Lost in first round vs. Williamsburg • 3-2 region record",
+    "RegionStandings": {
+      "Title": "SCISA AA",
+      "SourceUrl": "https://docs.google.com/spreadsheets/d/1pTXBCIxf2RIoffWpP-VZCdBUVwoZH2ED-Abrvadb6xc/htmlembed/sheet?headers=false&gid=30",
+      "Regions": [
+        {
+          "Title": "AA Region 1",
+          "Rows": [
+            {
+              "Team": "Richard Winn Academy",
+              "OverallWins": 12,
+              "OverallLosses": 1,
+              "OverallTies": 0,
+              "OverallPct": "0.923",
+              "RegionWins": 5,
+              "RegionLosses": 0,
+              "RegionTies": 0,
+              "RegionPct": "1.000",
+              "SchoolID": "sc-richard-winn-academy-winnsboro"
+            },
+            {
+              "Team": "Williamsburg Academy",
+              "OverallWins": 8,
+              "OverallLosses": 4,
+              "OverallTies": 0,
+              "OverallPct": "0.667",
+              "RegionWins": 4,
+              "RegionLosses": 1,
+              "RegionTies": 0,
+              "RegionPct": "0.800",
+              "SchoolID": "sc-williamsburg-academy-kingstree"
+            },
+            {
+              "Team": "James F. Byrnes Academy",
+              "OverallWins": 8,
+              "OverallLosses": 5,
+              "OverallTies": 0,
+              "OverallPct": "0.615",
+              "RegionWins": 3,
+              "RegionLosses": 2,
+              "RegionTies": 0,
+              "RegionPct": "0.600",
+              "SchoolID": "sc-james-f-byrnes-academy-quinby"
+            },
+            {
+              "Team": "Clarendon Hall",
+              "OverallWins": 4,
+              "OverallLosses": 7,
+              "OverallTies": 0,
+              "OverallPct": "0.364",
+              "RegionWins": 2,
+              "RegionLosses": 2,
+              "RegionTies": 0,
+              "RegionPct": "0.500",
+              "SchoolID": "sc-clarendon-hall-summerton"
+            },
+            {
+              "Team": "Roy Hudgens Academy",
+              "OverallWins": 2,
+              "OverallLosses": 8,
+              "OverallTies": 0,
+              "OverallPct": "0.200",
+              "RegionWins": 1,
+              "RegionLosses": 4,
+              "RegionTies": 0,
+              "RegionPct": "0.200",
+              "SchoolID": "sc-roy-hudgens-academy-lynchburg"
+            },
+            {
+              "Team": "Thomas Sumter Academy",
+              "OverallWins": 0,
+              "OverallLosses": 10,
+              "OverallTies": 0,
+              "OverallPct": "0.000",
+              "RegionWins": 0,
+              "RegionLosses": 5,
+              "RegionTies": 0,
+              "RegionPct": "0.000",
+              "SchoolID": "sc-thomas-sumter-academy-dalzell"
+            }
+          ]
+        },
+        {
+          "Title": "AA Region 2",
+          "Rows": [
+            {
+              "Team": "Sea Island Academy",
+              "OverallWins": 9,
+              "OverallLosses": 2,
+              "OverallTies": 0,
+              "OverallPct": "0.818",
+              "RegionWins": 5,
+              "RegionLosses": 1,
+              "RegionTies": 0,
+              "RegionPct": "0.833",
+              "SchoolID": "sc-sea-island-academy-johns-island"
+            },
+            {
+              "Team": "Calhoun Academy",
+              "OverallWins": 8,
+              "OverallLosses": 5,
+              "OverallTies": 0,
+              "OverallPct": "0.615",
+              "RegionWins": 4,
+              "RegionLosses": 1,
+              "RegionTies": 0,
+              "RegionPct": "0.800",
+              "SchoolID": "sc-john-c-calhoun-academy-st-matthews"
+            },
+            {
+              "Team": "Hilton Head Preparatory School",
+              "OverallWins": 6,
+              "OverallLosses": 5,
+              "OverallTies": 0,
+              "OverallPct": "0.545",
+              "RegionWins": 3,
+              "RegionLosses": 2,
+              "RegionTies": 0,
+              "RegionPct": "0.600",
+              "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+            },
+            {
+              "Team": "St. Andrew's School",
+              "OverallWins": 5,
+              "OverallLosses": 6,
+              "OverallTies": 0,
+              "OverallPct": "0.455",
+              "OverallPointsFor": 239,
+              "OverallPointsAgainst": 210,
+              "RegionWins": 3,
+              "RegionLosses": 2,
+              "RegionTies": 0,
+              "RegionPct": "0.600",
+              "RegionPointsFor": 162,
+              "RegionPointsAgainst": 116,
+              "SchoolID": "ga-st-andrews-school-savannah"
+            },
+            {
+              "Team": "Colleton Prep Academy",
+              "OverallWins": 3,
+              "OverallLosses": 8,
+              "OverallTies": 0,
+              "OverallPct": "0.273",
+              "RegionWins": 2,
+              "RegionLosses": 4,
+              "RegionTies": 0,
+              "RegionPct": "0.333",
+              "SchoolID": "sc-colleton-prep-academy-walterboro"
+            },
+            {
+              "Team": "Pinewood Preparatory School",
+              "OverallWins": 1,
+              "OverallLosses": 8,
+              "OverallTies": 0,
+              "OverallPct": "0.111",
+              "RegionWins": 0,
+              "RegionLosses": 1,
+              "RegionTies": 0,
+              "RegionPct": "0.000",
+              "SchoolID": "sc-pinewood-preparatory-school-summerville"
+            },
+            {
+              "Team": "Patrick Henry Academy",
+              "OverallWins": 0,
+              "OverallLosses": 11,
+              "OverallTies": 0,
+              "OverallPct": "0.000",
+              "RegionWins": 0,
+              "RegionLosses": 5,
+              "RegionTies": 0,
+              "RegionPct": "0.000",
+              "SchoolID": "sc-patrick-henry-academy-estill"
+            }
+          ]
+        }
+      ]
+    },
     "SourceUrls": {
       "schedule": "https://docs.google.com/spreadsheets/d/12_KL42vph9R9RxIQ7Jn_BFkrtV9HLI1sym0ntHZReEU/htmlembed/sheet?headers=false&gid=9",
       "stats": "https://docs.google.com/spreadsheets/d/1XL5VrGsFQXz0ezl-EGCMfHTMMAcu6j5tdltStxssJAk/htmlembed",

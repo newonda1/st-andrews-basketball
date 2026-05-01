@@ -136,19 +136,24 @@
     "SeasonID": 2004,
     "SeasonLabel": "2003-04",
     "Classification": "SCISA",
-    "StatusBadge": "not-found",
-    "StatusNote": "No public MileSplit Georgia or South Carolina result files were found for St. Andrew's during this crawl. Season shell retained for 2003-04 so the SCISA-era range stays visible.",
-    "FirstRegularSeasonMeet": "",
+    "StatusBadge": "verified",
+    "StatusNote": "MileSplit Georgia/South Carolina exposes 1 St. Andrew's cross country schedule or SCISA result entry for 2003-04, including 1 meet with public St. Andrew's result rows.",
+    "FirstRegularSeasonMeet": "2003-10-18",
     "RegionMeetDate": "",
-    "StateMeetStart": "",
-    "StateMeetEnd": "",
-    "StateMeetLocation": "",
+    "StateMeetStart": "2003-10-18",
+    "StateMeetEnd": "2003-10-18",
+    "StateMeetLocation": "Heathwood Hall, Columbia, SC",
     "RecapParagraphs": [
-      "No public MileSplit Georgia or South Carolina result files were found for St. Andrew's during this crawl. The season remains listed because the requested SCISA-era crawl covers 2003-04."
+      "The 2003-04 cross country archive is built from MileSplit Georgia team schedule pages and MileSplit South Carolina SCISA raw result files where St. Andrew's appeared.",
+      "The loaded data includes 1 schedule/result entry, 1 meet with public St. Andrew's performances, 14 result rows, and 14 named athletes."
     ],
     "HighlightNotes": [
-      "No public St. Andrew's MileSplit result rows were found.",
-      "Georgia and South Carolina MileSplit pages were checked for this crawl."
+      "1 meet includes public St. Andrew's performance rows on MileSplit.",
+      "14 athlete-result rows are loaded for 14 named athletes.",
+      "Rose Wilkowski placed 11th in Girls A/AA (24:18).",
+      "Ryan Kirby placed 16th in Boys A/AA (19:54).",
+      "Michelle Griffin placed 22nd in Girls A/AA (25:43).",
+      "Stephanie Griffin placed 26th in Girls A/AA (25:58)."
     ]
   },
   {
@@ -156,7 +161,7 @@
     "SeasonLabel": "2004-05",
     "Classification": "SCISA",
     "StatusBadge": "verified",
-    "StatusNote": "MileSplit Georgia/South Carolina exposes 1 St. Andrew's cross country schedule or SCISA result entries for 2004-05, including 1 meets with public St. Andrew's result rows.",
+    "StatusNote": "MileSplit Georgia/South Carolina exposes 1 St. Andrew's cross country schedule or SCISA result entry for 2004-05, including 1 meet with public St. Andrew's result rows.",
     "FirstRegularSeasonMeet": "2004-10-16",
     "RegionMeetDate": "",
     "StateMeetStart": "2004-10-16",
@@ -164,10 +169,10 @@
     "StateMeetLocation": "Heathwood Hall, Columbia, SC",
     "RecapParagraphs": [
       "The 2004-05 cross country archive is built from MileSplit Georgia team schedule pages and MileSplit South Carolina SCISA raw result files where St. Andrew's appeared.",
-      "The loaded data includes 1 schedule/result entries, 1 meets with public St. Andrew's performances, 5 result rows, and 5 named athletes."
+      "The loaded data includes 1 schedule/result entry, 1 meet with public St. Andrew's performances, 5 result rows, and 5 named athletes."
     ],
     "HighlightNotes": [
-      "1 meets include public St. Andrew's performance rows on MileSplit.",
+      "1 meet includes public St. Andrew's performance rows on MileSplit.",
       "5 athlete-result rows are loaded for 5 named athletes.",
       "Maggie Samons placed 9th in Girls 1A/2A (23:12).",
       "Jessica Topolewski placed 34th in Girls 1A/2A (27:28).",
@@ -180,7 +185,7 @@
     "SeasonLabel": "2005-06",
     "Classification": "SCISA",
     "StatusBadge": "partial",
-    "StatusNote": "MileSplit Georgia/South Carolina exposes 1 St. Andrew's cross country schedule or SCISA result entries for 2005-06, including 0 meets with public St. Andrew's result rows.",
+    "StatusNote": "MileSplit Georgia/South Carolina exposes 1 St. Andrew's cross country schedule or SCISA result entry for 2005-06, including 0 meets with public St. Andrew's result rows.",
     "FirstRegularSeasonMeet": "2005-10-29",
     "RegionMeetDate": "",
     "StateMeetStart": "2005-10-29",
@@ -199,7 +204,7 @@
     "SeasonLabel": "2006-07",
     "Classification": "SCISA",
     "StatusBadge": "partial",
-    "StatusNote": "MileSplit Georgia/South Carolina exposes 1 St. Andrew's cross country schedule or SCISA result entries for 2006-07, including 0 meets with public St. Andrew's result rows.",
+    "StatusNote": "MileSplit Georgia/South Carolina exposes 1 St. Andrew's cross country schedule or SCISA result entry for 2006-07, including 0 meets with public St. Andrew's result rows.",
     "FirstRegularSeasonMeet": "2006-10-28",
     "RegionMeetDate": "",
     "StateMeetStart": "2006-10-28",
@@ -218,7 +223,7 @@
     "SeasonLabel": "2007-08",
     "Classification": "SCISA",
     "StatusBadge": "verified",
-    "StatusNote": "MileSplit Georgia/South Carolina exposes 1 St. Andrew's cross country schedule or SCISA result entries for 2007-08, including 1 meets with public St. Andrew's result rows.",
+    "StatusNote": "MileSplit Georgia/South Carolina exposes 1 St. Andrew's cross country schedule or SCISA result entry for 2007-08, including 1 meet with public St. Andrew's result rows.",
     "FirstRegularSeasonMeet": "2007-10-27",
     "RegionMeetDate": "",
     "StateMeetStart": "2007-10-27",
@@ -226,10 +231,10 @@
     "StateMeetLocation": "Heathwood Hall, Columbia, SC",
     "RecapParagraphs": [
       "The 2007-08 cross country archive is built from MileSplit Georgia team schedule pages and MileSplit South Carolina SCISA raw result files where St. Andrew's appeared.",
-      "The loaded data includes 1 schedule/result entries, 1 meets with public St. Andrew's performances, 6 result rows, and 6 named athletes."
+      "The loaded data includes 1 schedule/result entry, 1 meet with public St. Andrew's performances, 6 result rows, and 6 named athletes."
     ],
     "HighlightNotes": [
-      "1 meets include public St. Andrew's performance rows on MileSplit.",
+      "1 meet includes public St. Andrew's performance rows on MileSplit.",
       "6 athlete-result rows are loaded for 6 named athletes.",
       "Joe Bilton placed 16th in Boys A/2A (20:00.28).",
       "Jeffrey Gonzalez placed 42nd in Boys A/2A (22:22.88).",
@@ -242,7 +247,7 @@
     "SeasonLabel": "2008-09",
     "Classification": "SCISA",
     "StatusBadge": "verified",
-    "StatusNote": "MileSplit Georgia/South Carolina exposes 1 St. Andrew's cross country schedule or SCISA result entries for 2008-09, including 1 meets with public St. Andrew's result rows.",
+    "StatusNote": "MileSplit Georgia/South Carolina exposes 1 St. Andrew's cross country schedule or SCISA result entry for 2008-09, including 1 meet with public St. Andrew's result rows.",
     "FirstRegularSeasonMeet": "2008-10-18",
     "RegionMeetDate": "",
     "StateMeetStart": "2008-10-18",
@@ -250,10 +255,10 @@
     "StateMeetLocation": "Heathwood Hall, Columbia, SC",
     "RecapParagraphs": [
       "The 2008-09 cross country archive is built from MileSplit Georgia team schedule pages and MileSplit South Carolina SCISA raw result files where St. Andrew's appeared.",
-      "The loaded data includes 1 schedule/result entries, 1 meets with public St. Andrew's performances, 6 result rows, and 6 named athletes."
+      "The loaded data includes 1 schedule/result entry, 1 meet with public St. Andrew's performances, 6 result rows, and 6 named athletes."
     ],
     "HighlightNotes": [
-      "1 meets include public St. Andrew's performance rows on MileSplit.",
+      "1 meet includes public St. Andrew's performance rows on MileSplit.",
       "6 athlete-result rows are loaded for 6 named athletes.",
       "Phil Lucas placed 16th in Boys A and AA (20:19.72).",
       "Jeffrey Gonzalez placed 17th in Boys A and AA (20:32.02).",
@@ -266,7 +271,7 @@
     "SeasonLabel": "2009-10",
     "Classification": "SCISA",
     "StatusBadge": "verified",
-    "StatusNote": "MileSplit Georgia/South Carolina exposes 2 St. Andrew's cross country schedule or SCISA result entries for 2009-10, including 1 meets with public St. Andrew's result rows.",
+    "StatusNote": "MileSplit Georgia/South Carolina exposes 2 St. Andrew's cross country schedule or SCISA result entries for 2009-10, including 1 meet with public St. Andrew's result rows.",
     "FirstRegularSeasonMeet": "2009-10-21",
     "RegionMeetDate": "2009-10-21",
     "StateMeetStart": "2009-10-31",
@@ -274,10 +279,10 @@
     "StateMeetLocation": "Heathwood Hall, Columbia, SC",
     "RecapParagraphs": [
       "The 2009-10 cross country archive is built from MileSplit Georgia team schedule pages and MileSplit South Carolina SCISA raw result files where St. Andrew's appeared.",
-      "The loaded data includes 2 schedule/result entries, 1 meets with public St. Andrew's performances, 7 result rows, and 7 named athletes."
+      "The loaded data includes 2 schedule/result entries, 1 meet with public St. Andrew's performances, 7 result rows, and 7 named athletes."
     ],
     "HighlightNotes": [
-      "1 meets include public St. Andrew's performance rows on MileSplit.",
+      "1 meet includes public St. Andrew's performance rows on MileSplit.",
       "7 athlete-result rows are loaded for 7 named athletes.",
       "Phillip Lucas placed 11th in Class A/AA boys (19:30.11).",
       "Jay Jenkins placed 12th in Class A/AA boys (19:51.08).",
@@ -290,7 +295,7 @@
     "SeasonLabel": "2010-11",
     "Classification": "SCISA",
     "StatusBadge": "verified",
-    "StatusNote": "MileSplit Georgia/South Carolina exposes 1 St. Andrew's cross country schedule or SCISA result entries for 2010-11, including 1 meets with public St. Andrew's result rows.",
+    "StatusNote": "MileSplit Georgia/South Carolina exposes 1 St. Andrew's cross country schedule or SCISA result entry for 2010-11, including 1 meet with public St. Andrew's result rows.",
     "FirstRegularSeasonMeet": "2010-10-30",
     "RegionMeetDate": "",
     "StateMeetStart": "2010-10-30",
@@ -298,10 +303,10 @@
     "StateMeetLocation": "Heathwood Hall, Columbia, SC",
     "RecapParagraphs": [
       "The 2010-11 cross country archive is built from MileSplit Georgia team schedule pages and MileSplit South Carolina SCISA raw result files where St. Andrew's appeared.",
-      "The loaded data includes 1 schedule/result entries, 1 meets with public St. Andrew's performances, 6 result rows, and 6 named athletes."
+      "The loaded data includes 1 schedule/result entry, 1 meet with public St. Andrew's performances, 6 result rows, and 6 named athletes."
     ],
     "HighlightNotes": [
-      "1 meets include public St. Andrew's performance rows on MileSplit.",
+      "1 meet includes public St. Andrew's performance rows on MileSplit.",
       "6 athlete-result rows are loaded for 6 named athletes.",
       "Jay Jenkins placed 5th in Class A and AA boys (17:49.12).",
       "Phillip Lucas placed 12th in Class A and AA boys (18:59.22).",
@@ -314,7 +319,7 @@
     "SeasonLabel": "2011-12",
     "Classification": "SCISA",
     "StatusBadge": "verified",
-    "StatusNote": "MileSplit Georgia/South Carolina exposes 1 St. Andrew's cross country schedule or SCISA result entries for 2011-12, including 1 meets with public St. Andrew's result rows.",
+    "StatusNote": "MileSplit Georgia/South Carolina exposes 1 St. Andrew's cross country schedule or SCISA result entry for 2011-12, including 1 meet with public St. Andrew's result rows.",
     "FirstRegularSeasonMeet": "2011-10-29",
     "RegionMeetDate": "",
     "StateMeetStart": "2011-10-29",
@@ -322,10 +327,10 @@
     "StateMeetLocation": "Heathwood Hall, Columbia, SC",
     "RecapParagraphs": [
       "The 2011-12 cross country archive is built from MileSplit Georgia team schedule pages and MileSplit South Carolina SCISA raw result files where St. Andrew's appeared.",
-      "The loaded data includes 1 schedule/result entries, 1 meets with public St. Andrew's performances, 8 result rows, and 8 named athletes."
+      "The loaded data includes 1 schedule/result entry, 1 meet with public St. Andrew's performances, 8 result rows, and 8 named athletes."
     ],
     "HighlightNotes": [
-      "1 meets include public St. Andrew's performance rows on MileSplit.",
+      "1 meet includes public St. Andrew's performance rows on MileSplit.",
       "8 athlete-result rows are loaded for 8 named athletes.",
       "Jay Jenkins placed 1st in Boys 5k - A-AA (17:12.68).",
       "Tucker Whitton placed 9th in Boys 5k - A-AA (17:51.04).",
@@ -338,7 +343,7 @@
     "SeasonLabel": "2012-13",
     "Classification": "SCISA",
     "StatusBadge": "partial",
-    "StatusNote": "MileSplit Georgia/South Carolina exposes 1 St. Andrew's cross country schedule or SCISA result entries for 2012-13, including 0 meets with public St. Andrew's result rows.",
+    "StatusNote": "MileSplit Georgia/South Carolina exposes 1 St. Andrew's cross country schedule or SCISA result entry for 2012-13, including 0 meets with public St. Andrew's result rows.",
     "FirstRegularSeasonMeet": "2012-10-27",
     "RegionMeetDate": "",
     "StateMeetStart": "2012-10-27",
@@ -357,7 +362,7 @@
     "SeasonLabel": "2013-14",
     "Classification": "SCISA",
     "StatusBadge": "partial",
-    "StatusNote": "MileSplit Georgia/South Carolina exposes 1 St. Andrew's cross country schedule or SCISA result entries for 2013-14, including 0 meets with public St. Andrew's result rows.",
+    "StatusNote": "MileSplit Georgia/South Carolina exposes 1 St. Andrew's cross country schedule or SCISA result entry for 2013-14, including 0 meets with public St. Andrew's result rows.",
     "FirstRegularSeasonMeet": "2013-10-26",
     "RegionMeetDate": "",
     "StateMeetStart": "2013-10-26",
@@ -376,7 +381,7 @@
     "SeasonLabel": "2014-15",
     "Classification": "SCISA",
     "StatusBadge": "verified",
-    "StatusNote": "MileSplit Georgia/South Carolina exposes 1 St. Andrew's cross country schedule or SCISA result entries for 2014-15, including 1 meets with public St. Andrew's result rows.",
+    "StatusNote": "MileSplit Georgia/South Carolina exposes 1 St. Andrew's cross country schedule or SCISA result entry for 2014-15, including 1 meet with public St. Andrew's result rows.",
     "FirstRegularSeasonMeet": "2014-10-25",
     "RegionMeetDate": "",
     "StateMeetStart": "2014-10-25",
@@ -384,10 +389,10 @@
     "StateMeetLocation": "Heathwood Hall, Columbia, SC",
     "RecapParagraphs": [
       "The 2014-15 cross country archive is built from MileSplit Georgia team schedule pages and MileSplit South Carolina SCISA raw result files where St. Andrew's appeared.",
-      "The loaded data includes 1 schedule/result entries, 1 meets with public St. Andrew's performances, 13 result rows, and 13 named athletes."
+      "The loaded data includes 1 schedule/result entry, 1 meet with public St. Andrew's performances, 13 result rows, and 13 named athletes."
     ],
     "HighlightNotes": [
-      "1 meets include public St. Andrew's performance rows on MileSplit.",
+      "1 meet includes public St. Andrew's performance rows on MileSplit.",
       "13 athlete-result rows are loaded for 13 named athletes.",
       "Rebecca Suh placed 6th in AA girls (20:40.08).",
       "Ben Mayo placed 17th in AA boys (18:53.49).",

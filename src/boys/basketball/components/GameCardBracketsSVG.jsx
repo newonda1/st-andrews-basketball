@@ -55,6 +55,7 @@ function GameCard({
   const topWins = Boolean(topTeamId && game?.winner === topTeamId);
   const bottomWins = Boolean(bottomTeamId && game?.winner === bottomTeamId);
   const rowY = [y + height / 2 - rowGap / 2, y + height / 2 + rowGap / 2];
+  const note = String(game?.note ?? "").trim();
 
   const TeamRow = ({ team, teamId, score, rowCenterY, winner }) => {
     const seed = team.seed;
@@ -168,6 +169,18 @@ function GameCard({
         rowCenterY={rowY[1]}
         winner={bottomWins}
       />
+      {note ? (
+        <text
+          x={x + width - 22}
+          y={y + height - 7}
+          textAnchor="end"
+          fontSize="10"
+          fontWeight="700"
+          fill="rgba(100,116,139,0.86)"
+        >
+          {note}
+        </text>
+      ) : null}
     </g>
   );
 }
@@ -399,6 +412,64 @@ function StateBracket16GameSVG({ bracket, schools = [] }) {
   );
 }
 
+function StateBracket8GameSVG({ bracket, schools = [] }) {
+  const teams = bracket?.teams ?? {};
+  const games = bracket?.games ?? {};
+  const schoolsById = useSchoolsById(schools);
+  const getTeam = useMemo(() => makeTeamResolver(teams, schoolsById), [teams, schoolsById]);
+
+  const cardW = 320;
+  const cardH = 78;
+  const colGap = 82;
+  const rowGap = 28;
+  const leftPad = 40;
+  const topPad = 50;
+  const labelY = 24;
+
+  const x0 = leftPad;
+  const x1 = x0 + cardW + colGap;
+  const x2 = x1 + cardW + colGap;
+  const W = x2 + cardW + 48;
+
+  const yQF = Array.from({ length: 4 }, (_, index) => topPad + index * (cardH + rowGap));
+  const ySemi1 = (centerY(yQF[0], cardH) + centerY(yQF[1], cardH)) / 2 - cardH / 2;
+  const ySemi2 = (centerY(yQF[2], cardH) + centerY(yQF[3], cardH)) / 2 - cardH / 2;
+  const yFinal = (centerY(ySemi1, cardH) + centerY(ySemi2, cardH)) / 2 - cardH / 2;
+  const H = yQF[3] + cardH + topPad;
+
+  const qf = [
+    ["qf_1", yQF[0]],
+    ["qf_2", yQF[1]],
+    ["qf_3", yQF[2]],
+    ["qf_4", yQF[3]],
+  ];
+
+  return (
+    <div style={{ width: "100%", overflowX: "auto" }}>
+      <div style={{ minWidth: 1040, padding: "8px 0" }}>
+        <div style={{ fontWeight: 700, marginBottom: 8 }}>{bracket?.title ?? "State Tournament"}</div>
+        <svg viewBox={`0 0 ${W} ${H}`} width="100%" height="auto" role="img" aria-label={bracket?.title ?? "State Tournament Bracket"}>
+          <BracketDefs />
+          <text x={x0} y={labelY} fontSize="14" fill="rgba(60,70,80,0.85)" fontWeight="700">Quarterfinals</text>
+          <text x={x1} y={labelY} fontSize="14" fill="rgba(60,70,80,0.85)" fontWeight="700">Semifinals</text>
+          <text x={x2} y={labelY} fontSize="14" fill="rgba(60,70,80,0.85)" fontWeight="700">Championship</text>
+
+          <path d={pairConnector(x0 + cardW, centerY(yQF[0], cardH), centerY(yQF[1], cardH), x1, centerY(ySemi1, cardH))} {...lineStyle} />
+          <path d={pairConnector(x0 + cardW, centerY(yQF[2], cardH), centerY(yQF[3], cardH), x1, centerY(ySemi2, cardH))} {...lineStyle} />
+          <path d={pairConnector(x1 + cardW, centerY(ySemi1, cardH), centerY(ySemi2, cardH), x2, centerY(yFinal, cardH))} {...lineStyle} />
+
+          {qf.map(([key, y]) => (
+            <GameCard key={key} x={x0} y={y} width={cardW} height={cardH} game={games[key]} getTeam={getTeam} />
+          ))}
+          <GameCard x={x1} y={ySemi1} width={cardW} height={cardH} game={games.sf_top} getTeam={getTeam} />
+          <GameCard x={x1} y={ySemi2} width={cardW} height={cardH} game={games.sf_bot} getTeam={getTeam} />
+          <GameCard x={x2} y={yFinal} width={cardW} height={cardH} game={games.final} getTeam={getTeam} />
+        </svg>
+      </div>
+    </div>
+  );
+}
+
 function RegionBracket5GameSVG({ bracket, schools = [] }) {
   const teams = bracket?.teams ?? {};
   const games = bracket?.games ?? {};
@@ -527,4 +598,4 @@ function RegionBracket5GameSVG({ bracket, schools = [] }) {
   );
 }
 
-export { RegionBracket5GameSVG, StateBracket12GameSVG, StateBracket16GameSVG };
+export { RegionBracket5GameSVG, StateBracket8GameSVG, StateBracket12GameSVG, StateBracket16GameSVG };

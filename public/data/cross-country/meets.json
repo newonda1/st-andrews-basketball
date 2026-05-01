@@ -1,5 +1,17 @@
 [
   {
+    "MeetID": 5290,
+    "Season": 2004,
+    "Date": "2003-10-18",
+    "Name": "SCISA Championships",
+    "Location": "Heathwood Hall, Columbia, SC",
+    "Level": "Varsity",
+    "MeetType": "State",
+    "Status": "Complete",
+    "Notes": "Results loaded from MileSplit South Carolina raw result files. The public source exposed 14 St. Andrew's cross country result rows.",
+    "SourceUrl": "https://sc.milesplit.com/meets/5290-scisa-championships-2003/results"
+  },
+  {
     "MeetID": 8786,
     "Season": 2005,
     "Date": "2004-10-16",

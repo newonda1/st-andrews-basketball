@@ -28,10 +28,10 @@ export default function Home() {
       ]}
       highlights={[
         "30 archived seasons",
-        "105 schedule entries",
-        "535 high-school result rows",
+        "106 schedule entries",
+        "549 high-school result rows",
         "551 middle-school result rows",
-        "80 meets with public performances",
+        "81 meets with public performances",
         "Row-level division split",
         "SCISA, region, and state meet snapshots",
       ]}

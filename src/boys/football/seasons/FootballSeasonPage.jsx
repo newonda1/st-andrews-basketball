@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
+import { StateBracket8GameSVG } from "../../basketball/components/GameCardBracketsSVG";
 import { recordTableStyles } from "../../basketball/pages/recordTableStyles";
 import {
   formatGameDate,
@@ -270,7 +271,12 @@ function isStAndrewsTeamName(teamName) {
 function formatFootballGameType(game) {
   const gameType = String(game?.GameType ?? "").trim().toLowerCase();
   if (gameType === "region") return "Region";
-  if (gameType === "playoff" || gameType === "playoffs" || gameType === "postseason") {
+  if (
+    gameType === "playoff" ||
+    gameType === "playoffs" ||
+    gameType === "postseason" ||
+    gameType === "state championship"
+  ) {
     return "Playoffs";
   }
   if (gameType === "regular season" || gameType === "non-region" || gameType === "nonregion") {
@@ -456,6 +462,8 @@ export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
     if (!getStandingsRegions(season?.RegionStandings).length) return null;
     return season.RegionStandings;
   }, [season]);
+
+  const playoffBracket = season?.StatePlayoffBracket || null;
 
   const schoolsById = useMemo(() => {
     const map = new Map();
@@ -683,6 +691,13 @@ export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
         <section id="region-standings" className="space-y-4">
           <h2 className="text-2xl font-semibold">Region Standings</h2>
           <RegionStandingsTable standings={regionStandings} schoolsById={schoolsById} />
+        </section>
+      ) : null}
+
+      {playoffBracket ? (
+        <section id="state-playoff-bracket" className="space-y-4">
+          <h2 className="text-2xl font-semibold">State Playoff Bracket</h2>
+          <StateBracket8GameSVG bracket={playoffBracket} schools={schools} />
         </section>
       ) : null}
 

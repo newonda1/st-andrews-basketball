@@ -9,12 +9,20 @@ const SCHEDULE_YEARS = [2015, 2016, 2017];
 const SCHEDULE_HOSTS = ["ga", "sc"];
 const SCISA_HISTORY_SOURCE =
   "https://sc.milesplit.com/meets/291024-scisa-championships-2017/results";
+const MANUAL_SCISA_MEETS = [
+  {
+    meetId: 5290,
+    url: "https://sc.milesplit.com/meets/5290-scisa-championships-2003",
+    date: "2003-10-18",
+  },
+];
 
 const SCHOOL_PATTERNS = [
   /\bst\.?\s*andrew'?s\b/i,
   /\bst\.?\s*andrews\b/i,
+  /\bst\.?\s*andrw\b/i,
 ];
-const SCHOOL_NAME_SOURCE = String.raw`st\.?\s*andrew'?s|st\.?\s*andrews`;
+const SCHOOL_NAME_SOURCE = String.raw`st\.?\s*andrew'?s|st\.?\s*andrews|st\.?\s*andrw`;
 const TIME_SOURCE = String.raw`\d{1,2}:\d{2}(?::\d{2})?(?:\.\d+)?|\d{1,2}\.\d+`;
 
 const MONTHS = {
@@ -101,6 +109,10 @@ function seasonIdFromDate(date) {
 
 function seasonLabel(seasonId) {
   return `${seasonId - 1}-${String(seasonId).slice(-2)}`;
+}
+
+function plural(count, singular, pluralValue = `${singular}s`) {
+  return Number(count) === 1 ? singular : pluralValue;
 }
 
 function normalizeEventName(value = "") {
@@ -483,7 +495,13 @@ async function collectScheduleMeets() {
 
 async function collectScisaHistoryMeets() {
   const historyHtml = await fetchText(SCISA_HISTORY_SOURCE);
-  const pastMeets = extractPastMeets(historyHtml);
+  const pastMeetsById = new Map();
+  for (const pastMeet of [...extractPastMeets(historyHtml), ...MANUAL_SCISA_MEETS]) {
+    pastMeetsById.set(Number(pastMeet.meetId), pastMeet);
+  }
+  const pastMeets = Array.from(pastMeetsById.values()).sort((a, b) =>
+    a.date.localeCompare(b.date)
+  );
   const collected = [];
 
   for (const pastMeet of pastMeets) {
@@ -682,7 +700,7 @@ function buildSeasons(existingSeasons, importedMeets, importedStats) {
     const noData =
       "No public MileSplit Georgia or South Carolina result files were found for St. Andrew's during this crawl.";
     const statusNote = seasonMeets.length
-      ? `MileSplit Georgia/South Carolina exposes ${seasonMeets.length} St. Andrew's cross country schedule or SCISA result entries for ${seasonLabel(seasonId)}, including ${resultMeetCount} meets with public St. Andrew's result rows.`
+      ? `MileSplit Georgia/South Carolina exposes ${seasonMeets.length} St. Andrew's cross country ${plural(seasonMeets.length, "schedule or SCISA result entry", "schedule or SCISA result entries")} for ${seasonLabel(seasonId)}, including ${resultMeetCount} ${plural(resultMeetCount, "meet")} with public St. Andrew's result rows.`
       : `${noData} Season shell retained for ${seasonLabel(seasonId)} so the SCISA-era range stays visible.`;
 
     archiveSeasons.push({
@@ -699,14 +717,14 @@ function buildSeasons(existingSeasons, importedMeets, importedStats) {
       RecapParagraphs: rowCount
         ? [
             `The ${seasonLabel(seasonId)} cross country archive is built from MileSplit Georgia team schedule pages and MileSplit South Carolina SCISA raw result files where St. Andrew's appeared.`,
-            `The loaded data includes ${seasonMeets.length} schedule/result entries, ${resultMeetCount} meets with public St. Andrew's performances, ${rowCount} result rows, and ${athleteCount} named athletes.`,
+            `The loaded data includes ${seasonMeets.length} ${plural(seasonMeets.length, "schedule/result entry", "schedule/result entries")}, ${resultMeetCount} ${plural(resultMeetCount, "meet")} with public St. Andrew's performances, ${rowCount} result rows, and ${athleteCount} named ${plural(athleteCount, "athlete")}.`,
           ]
         : [
             `${noData} The season remains listed because the requested SCISA-era crawl covers ${seasonLabel(seasonId)}.`,
           ],
       HighlightNotes: [
         rowCount
-          ? `${resultMeetCount} meets include public St. Andrew's performance rows on MileSplit.`
+          ? `${resultMeetCount} ${plural(resultMeetCount, "meet")} ${resultMeetCount === 1 ? "includes" : "include"} public St. Andrew's performance rows on MileSplit.`
           : "No public St. Andrew's MileSplit result rows were found.",
         rowCount
           ? `${rowCount} athlete-result rows are loaded for ${athleteCount} named athletes.`
