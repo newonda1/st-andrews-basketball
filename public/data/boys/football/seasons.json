@@ -631,6 +631,124 @@
         }
       ]
     },
+    "StatePlayoffBracket": {
+      "format": "8",
+      "title": "1997-98 SCISA AA State Playoffs",
+      "SourceUrl": "https://docs.google.com/spreadsheets/d/1Lu2mYlvzREfBVnqmgalsXroMswKEWCmPqkhtYdsmIb0/htmlembed/sheet?headers=false&gid=27",
+      "teams": {
+        "hiltonheadprep": {
+          "name": "Hilton Head Prep",
+          "schoolId": "sc-hilton-head-preparatory-school-hilton-head-island"
+        },
+        "peede": {
+          "name": "Pee Dee",
+          "schoolId": "sc-pee-dee-academy-mullins"
+        },
+        "colletonprep": {
+          "name": "Colleton Prep",
+          "schoolId": "sc-colleton-prep-academy-walterboro"
+        },
+        "royhudgens": {
+          "name": "Roy Hudgens",
+          "schoolId": "sc-roy-hudgens-academy-lynchburg"
+        },
+        "calhoun": {
+          "name": "Calhoun",
+          "schoolId": "sc-john-c-calhoun-academy-st-matthews"
+        },
+        "clarendonhall": {
+          "name": "Clarendon Hall",
+          "schoolId": "sc-clarendon-hall-summerton"
+        },
+        "richardwinn": {
+          "name": "Richard Winn",
+          "schoolId": "sc-richard-winn-academy-winnsboro"
+        },
+        "standrews": {
+          "name": "St. Andrew's",
+          "schoolId": "ga-st-andrews-school-savannah"
+        }
+      },
+      "games": {
+        "qf_1": {
+          "top": {
+            "teamId": "hiltonheadprep",
+            "score": 35
+          },
+          "bottom": {
+            "teamId": "peede",
+            "score": 14
+          },
+          "winner": "hiltonheadprep"
+        },
+        "qf_2": {
+          "top": {
+            "teamId": "colletonprep",
+            "score": 6
+          },
+          "bottom": {
+            "teamId": "royhudgens",
+            "score": 24
+          },
+          "winner": "royhudgens"
+        },
+        "qf_3": {
+          "top": {
+            "teamId": "calhoun",
+            "score": 42
+          },
+          "bottom": {
+            "teamId": "clarendonhall",
+            "score": 0
+          },
+          "winner": "calhoun"
+        },
+        "qf_4": {
+          "top": {
+            "teamId": "richardwinn",
+            "score": 0
+          },
+          "bottom": {
+            "teamId": "standrews",
+            "score": 27
+          },
+          "winner": "standrews"
+        },
+        "sf_top": {
+          "top": {
+            "teamId": "hiltonheadprep",
+            "score": 13
+          },
+          "bottom": {
+            "teamId": "royhudgens",
+            "score": 7
+          },
+          "winner": "hiltonheadprep"
+        },
+        "sf_bot": {
+          "top": {
+            "teamId": "calhoun",
+            "score": 14
+          },
+          "bottom": {
+            "teamId": "standrews",
+            "score": 15
+          },
+          "winner": "standrews"
+        },
+        "final": {
+          "top": {
+            "teamId": "hiltonheadprep",
+            "score": 35
+          },
+          "bottom": {
+            "teamId": "standrews",
+            "score": 6
+          },
+          "winner": "hiltonheadprep"
+        }
+      }
+    },
     "SourceUrls": {
       "schedule": "https://docs.google.com/spreadsheets/d/12_KL42vph9R9RxIQ7Jn_BFkrtV9HLI1sym0ntHZReEU/htmlembed/sheet?headers=false&gid=7",
       "stats": "https://docs.google.com/spreadsheets/d/1XL5VrGsFQXz0ezl-EGCMfHTMMAcu6j5tdltStxssJAk/htmlembed",
@@ -834,6 +952,124 @@
           ]
         }
       ]
+    },
+    "StatePlayoffBracket": {
+      "format": "8",
+      "title": "1998-99 SCISA AA State Playoffs",
+      "SourceUrl": "https://docs.google.com/spreadsheets/d/1Lu2mYlvzREfBVnqmgalsXroMswKEWCmPqkhtYdsmIb0/htmlembed/sheet?headers=false&gid=28",
+      "teams": {
+        "standrews": {
+          "name": "St. Andrew's",
+          "schoolId": "ga-st-andrews-school-savannah"
+        },
+        "williamsburg": {
+          "name": "Williamsburg",
+          "schoolId": "sc-williamsburg-academy-kingstree"
+        },
+        "colletonprep": {
+          "name": "Colleton Prep",
+          "schoolId": "sc-colleton-prep-academy-walterboro"
+        },
+        "royhudgens": {
+          "name": "Roy Hudgens",
+          "schoolId": "sc-roy-hudgens-academy-lynchburg"
+        },
+        "richardwinn": {
+          "name": "Richard Winn",
+          "schoolId": "sc-richard-winn-academy-winnsboro"
+        },
+        "seaisland": {
+          "name": "Sea Island",
+          "schoolId": "sc-sea-island-academy-johns-island"
+        },
+        "thomassumter": {
+          "name": "Thomas Sumter",
+          "schoolId": "sc-thomas-sumter-academy-dalzell"
+        },
+        "calhoun": {
+          "name": "Calhoun",
+          "schoolId": "sc-john-c-calhoun-academy-st-matthews"
+        }
+      },
+      "games": {
+        "qf_1": {
+          "top": {
+            "teamId": "standrews",
+            "score": 51
+          },
+          "bottom": {
+            "teamId": "williamsburg",
+            "score": 0
+          },
+          "winner": "standrews"
+        },
+        "qf_2": {
+          "top": {
+            "teamId": "colletonprep",
+            "score": 7
+          },
+          "bottom": {
+            "teamId": "royhudgens",
+            "score": 18
+          },
+          "winner": "royhudgens"
+        },
+        "qf_3": {
+          "top": {
+            "teamId": "richardwinn",
+            "score": 28
+          },
+          "bottom": {
+            "teamId": "seaisland",
+            "score": 13
+          },
+          "winner": "richardwinn"
+        },
+        "qf_4": {
+          "top": {
+            "teamId": "thomassumter",
+            "score": 7
+          },
+          "bottom": {
+            "teamId": "calhoun",
+            "score": 34
+          },
+          "winner": "calhoun"
+        },
+        "sf_top": {
+          "top": {
+            "teamId": "standrews",
+            "score": 12
+          },
+          "bottom": {
+            "teamId": "royhudgens",
+            "score": 6
+          },
+          "winner": "standrews"
+        },
+        "sf_bot": {
+          "top": {
+            "teamId": "richardwinn",
+            "score": 0
+          },
+          "bottom": {
+            "teamId": "calhoun",
+            "score": 17
+          },
+          "winner": "calhoun"
+        },
+        "final": {
+          "top": {
+            "teamId": "standrews",
+            "score": 27
+          },
+          "bottom": {
+            "teamId": "calhoun",
+            "score": 19
+          },
+          "winner": "standrews"
+        }
+      }
     },
     "SourceUrls": {
       "schedule": "https://docs.google.com/spreadsheets/d/12_KL42vph9R9RxIQ7Jn_BFkrtV9HLI1sym0ntHZReEU/htmlembed/sheet?headers=false&gid=8",
@@ -1050,6 +1286,124 @@
           ]
         }
       ]
+    },
+    "StatePlayoffBracket": {
+      "format": "8",
+      "title": "1999-2000 SCISA AA State Playoffs",
+      "SourceUrl": "https://docs.google.com/spreadsheets/d/1Lu2mYlvzREfBVnqmgalsXroMswKEWCmPqkhtYdsmIb0/htmlembed/sheet?headers=false&gid=29",
+      "teams": {
+        "richardwinn": {
+          "name": "Richard Winn",
+          "schoolId": "sc-richard-winn-academy-winnsboro"
+        },
+        "hiltonheadprep": {
+          "name": "Hilton Head Prep",
+          "schoolId": "sc-hilton-head-preparatory-school-hilton-head-island"
+        },
+        "seaisland": {
+          "name": "Sea Island",
+          "schoolId": "sc-sea-island-academy-johns-island"
+        },
+        "jamesfbyrnes": {
+          "name": "James F. Byrnes",
+          "schoolId": "sc-james-f-byrnes-academy-quinby"
+        },
+        "williamsburg": {
+          "name": "Williamsburg",
+          "schoolId": "sc-williamsburg-academy-kingstree"
+        },
+        "standrews": {
+          "name": "St. Andrew's",
+          "schoolId": "ga-st-andrews-school-savannah"
+        },
+        "clarendonhall": {
+          "name": "Clarendon Hall",
+          "schoolId": "sc-clarendon-hall-summerton"
+        },
+        "calhoun": {
+          "name": "Calhoun",
+          "schoolId": "sc-john-c-calhoun-academy-st-matthews"
+        }
+      },
+      "games": {
+        "qf_1": {
+          "top": {
+            "teamId": "richardwinn",
+            "score": 25
+          },
+          "bottom": {
+            "teamId": "hiltonheadprep",
+            "score": 12
+          },
+          "winner": "richardwinn"
+        },
+        "qf_2": {
+          "top": {
+            "teamId": "seaisland",
+            "score": 20
+          },
+          "bottom": {
+            "teamId": "jamesfbyrnes",
+            "score": 21
+          },
+          "winner": "jamesfbyrnes"
+        },
+        "qf_3": {
+          "top": {
+            "teamId": "williamsburg",
+            "score": 27
+          },
+          "bottom": {
+            "teamId": "standrews",
+            "score": 22
+          },
+          "winner": "williamsburg"
+        },
+        "qf_4": {
+          "top": {
+            "teamId": "clarendonhall",
+            "score": 8
+          },
+          "bottom": {
+            "teamId": "calhoun",
+            "score": 39
+          },
+          "winner": "calhoun"
+        },
+        "sf_top": {
+          "top": {
+            "teamId": "richardwinn",
+            "score": 47
+          },
+          "bottom": {
+            "teamId": "jamesfbyrnes",
+            "score": 21
+          },
+          "winner": "richardwinn"
+        },
+        "sf_bot": {
+          "top": {
+            "teamId": "williamsburg",
+            "score": 14
+          },
+          "bottom": {
+            "teamId": "calhoun",
+            "score": 34
+          },
+          "winner": "calhoun"
+        },
+        "final": {
+          "top": {
+            "teamId": "richardwinn",
+            "score": 14
+          },
+          "bottom": {
+            "teamId": "calhoun",
+            "score": 12
+          },
+          "winner": "richardwinn"
+        }
+      }
     },
     "SourceUrls": {
       "schedule": "https://docs.google.com/spreadsheets/d/12_KL42vph9R9RxIQ7Jn_BFkrtV9HLI1sym0ntHZReEU/htmlembed/sheet?headers=false&gid=9",
