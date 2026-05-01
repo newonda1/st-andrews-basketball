@@ -45,6 +45,41 @@ function DetailCard({ label, value }) {
   );
 }
 
+function getYouTubeEmbedUrl(videoUrl) {
+  const match = String(videoUrl || "").match(
+    /(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/
+  );
+
+  return match ? `https://www.youtube.com/embed/${match[1]}` : "";
+}
+
+function GameVideo({ game }) {
+  const embedUrl = getYouTubeEmbedUrl(game?.VideoUrl);
+
+  if (!embedUrl) return null;
+
+  const title =
+    String(game?.VideoTitle || "").trim() ||
+    `Game video: St. Andrew's vs. ${game?.Opponent || "opponent"}`;
+
+  return (
+    <section className="space-y-4">
+      <h2 className="text-2xl font-semibold text-slate-950">Game Video</h2>
+      <div className="overflow-hidden rounded-lg border border-slate-200 bg-black shadow-sm">
+        <iframe
+          className="block aspect-video w-full border-0"
+          src={embedUrl}
+          title={title}
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        />
+      </div>
+    </section>
+  );
+}
+
 function TeamStatTable({ title, columns, row }) {
   if (!columns.length) return null;
 
@@ -217,6 +252,8 @@ export default function GameDetail() {
           <DetailCard key={card.label} label={card.label} value={card.value} />
         ))}
       </section>
+
+      <GameVideo game={game} />
 
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold text-slate-950">Team Stats</h2>

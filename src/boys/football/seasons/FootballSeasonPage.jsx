@@ -480,7 +480,7 @@ export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
               {seasonGames.length === 0 ? (
                 <tr>
                   <td colSpan={5} className="px-3 py-4 text-center text-slate-600">
-                    No MaxPreps schedule data is available for this season yet.
+                    No schedule data is available for this season yet.
                   </td>
                 </tr>
               ) : (
@@ -561,7 +561,7 @@ export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
               {rosterRows.length === 0 ? (
                 <tr>
                   <td className={emptyStateClassName} colSpan={7}>
-                    No MaxPreps roster data is available for this season yet.
+                    No roster data is available for this season yet.
                   </td>
                 </tr>
               ) : (
@@ -611,7 +611,7 @@ export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
         {hasTeamStats ? (
           <CombinedTeamStatsTable sections={combinedTeamStatsSections} />
         ) : (
-          <p className="text-slate-600">No MaxPreps team stats are available for this season.</p>
+          <p className="text-slate-600">No team stats are available for this season.</p>
         )}
       </section>
 

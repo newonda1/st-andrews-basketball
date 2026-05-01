@@ -15,6 +15,13 @@ function isCompletedGame(game) {
   return game?.Result === "W" || game?.Result === "L" || game?.Result === "T";
 }
 
+function formatSeasonNotes(season) {
+  return [season?.RegionFinish, season?.StateFinish]
+    .map((value) => String(value ?? "").trim())
+    .filter(Boolean)
+    .join("\n");
+}
+
 export default function YearlyResults() {
   const [games, setGames] = useState([]);
   const [seasons, setSeasons] = useState([]);
@@ -144,7 +151,7 @@ export default function YearlyResults() {
           away: away.text,
           pointsFor,
           pointsAgainst,
-          notes: "",
+          notes: formatSeasonNotes(season),
         };
       }),
     [seasonsWithGames]
@@ -217,7 +224,7 @@ export default function YearlyResults() {
   const notesHeaderCellClassName =
     `${headerCellClassName} w-[7.5rem] min-w-[7.5rem] md:w-[11rem] md:min-w-[11rem] md:text-left`;
   const notesCellClassName =
-    `${recordTableStyles.bodyCell} w-[7.5rem] min-w-[7.5rem] md:w-[11rem] md:min-w-[11rem] md:text-left`;
+    `${recordTableStyles.bodyCell} w-[7.5rem] min-w-[7.5rem] whitespace-pre-line md:w-[11rem] md:min-w-[11rem] md:text-left`;
   const totalRowClassName = "bg-gray-100 font-bold";
 
   return (

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-01T11:36:10.689Z",
-  "itemCount": 1454,
+  "generatedAt": "2026-05-01T12:20:05.726Z",
+  "itemCount": 1468,
   "items": [
     {
       "id": "athletics-home",
@@ -491,6 +491,74 @@
         "roster",
         "results",
         "stats"
+      ]
+    },
+    {
+      "id": "football-1998-season",
+      "type": "page",
+      "title": "1998-99 Championship Season",
+      "subtitle": "Football",
+      "to": "/athletics/football/seasons/1998",
+      "keywords": [
+        "football",
+        "1998",
+        "season",
+        "championship",
+        "state champion",
+        "SCISA",
+        "saints",
+        "schedule",
+        "results"
+      ]
+    },
+    {
+      "id": "football-1997-season",
+      "type": "page",
+      "title": "1997-98 Season",
+      "subtitle": "Football",
+      "to": "/athletics/football/seasons/1997",
+      "keywords": [
+        "football",
+        "1997",
+        "season",
+        "state runner-up",
+        "SCISA",
+        "saints",
+        "schedule",
+        "results"
+      ]
+    },
+    {
+      "id": "football-1996-season",
+      "type": "page",
+      "title": "1996-97 Season",
+      "subtitle": "Football",
+      "to": "/athletics/football/seasons/1996",
+      "keywords": [
+        "football",
+        "1996",
+        "season",
+        "state runner-up",
+        "SCISA",
+        "saints",
+        "schedule",
+        "results"
+      ]
+    },
+    {
+      "id": "football-1999-season",
+      "type": "page",
+      "title": "1999-00 Season",
+      "subtitle": "Football",
+      "to": "/athletics/football/seasons/1999",
+      "keywords": [
+        "football",
+        "1999",
+        "season",
+        "SCISA",
+        "saints",
+        "schedule",
+        "results"
       ]
     },
     {
@@ -24824,63 +24892,93 @@
       ]
     },
     {
-      "id": "football-team-williamsburg-academy",
+      "id": "football-team-jefferson-davis-academy",
       "type": "team",
-      "title": "Williamsburg Academy",
+      "title": "Jefferson Davis Academy",
       "subtitle": "Football opponent history",
-      "to": "/athletics/football/records/opponents?team=Williamsburg+Academy",
+      "to": "/athletics/football/records/opponents?team=Jefferson+Davis+Academy",
       "keywords": [
         "Football",
         "team",
         "opponent",
         "history",
         "records",
-        "Williamsburg Academy"
+        "Jefferson Davis Academy"
       ]
     },
     {
-      "id": "football-team-memorial-day",
+      "id": "football-team-sea-island-academy",
       "type": "team",
-      "title": "Memorial Day",
+      "title": "Sea Island Academy",
       "subtitle": "Football opponent history",
-      "to": "/athletics/football/records/opponents?team=Memorial+Day",
+      "to": "/athletics/football/records/opponents?team=Sea+Island+Academy",
       "keywords": [
         "Football",
         "team",
         "opponent",
         "history",
         "records",
-        "Memorial Day"
+        "Sea Island Academy"
       ]
     },
     {
-      "id": "football-team-dorchester-academy",
+      "id": "football-team-abundant-life-academy",
       "type": "team",
-      "title": "Dorchester Academy",
+      "title": "Abundant Life Academy",
       "subtitle": "Football opponent history",
-      "to": "/athletics/football/records/opponents?team=Dorchester+Academy",
+      "to": "/athletics/football/records/opponents?team=Abundant+Life+Academy",
       "keywords": [
         "Football",
         "team",
         "opponent",
         "history",
         "records",
-        "Dorchester Academy"
+        "Abundant Life Academy"
       ]
     },
     {
-      "id": "football-team-thomas-heyward-academy",
+      "id": "football-team-holly-hill-academy",
       "type": "team",
-      "title": "Thomas Heyward Academy",
+      "title": "Holly Hill Academy",
       "subtitle": "Football opponent history",
-      "to": "/athletics/football/records/opponents?team=Thomas+Heyward+Academy",
+      "to": "/athletics/football/records/opponents?team=Holly+Hill+Academy",
       "keywords": [
         "Football",
         "team",
         "opponent",
         "history",
         "records",
-        "Thomas Heyward Academy"
+        "Holly Hill Academy"
+      ]
+    },
+    {
+      "id": "football-team-colleton-prep-academy",
+      "type": "team",
+      "title": "Colleton Prep Academy",
+      "subtitle": "Football opponent history",
+      "to": "/athletics/football/records/opponents?team=Colleton+Prep+Academy",
+      "keywords": [
+        "Football",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Colleton Prep Academy"
+      ]
+    },
+    {
+      "id": "football-team-bible-baptist",
+      "type": "team",
+      "title": "Bible Baptist",
+      "subtitle": "Football opponent history",
+      "to": "/athletics/football/records/opponents?team=Bible+Baptist",
+      "keywords": [
+        "Football",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Bible Baptist"
       ]
     },
     {
@@ -24899,21 +24997,6 @@
       ]
     },
     {
-      "id": "football-team-hilton-head-christian-academy",
-      "type": "team",
-      "title": "Hilton Head Christian Academy",
-      "subtitle": "Football opponent history",
-      "to": "/athletics/football/records/opponents?team=Hilton+Head+Christian+Academy",
-      "keywords": [
-        "Football",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Hilton Head Christian Academy"
-      ]
-    },
-    {
       "id": "football-team-hilton-head-prep",
       "type": "team",
       "title": "Hilton Head Prep",
@@ -24926,6 +25009,66 @@
         "history",
         "records",
         "Hilton Head Prep"
+      ]
+    },
+    {
+      "id": "football-team-patrick-henry-academy",
+      "type": "team",
+      "title": "Patrick Henry Academy",
+      "subtitle": "Football opponent history",
+      "to": "/athletics/football/records/opponents?team=Patrick+Henry+Academy",
+      "keywords": [
+        "Football",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Patrick Henry Academy"
+      ]
+    },
+    {
+      "id": "football-team-pee-dee-academy",
+      "type": "team",
+      "title": "Pee Dee Academy",
+      "subtitle": "Football opponent history",
+      "to": "/athletics/football/records/opponents?team=Pee+Dee+Academy",
+      "keywords": [
+        "Football",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Pee Dee Academy"
+      ]
+    },
+    {
+      "id": "football-team-calhoun-academy",
+      "type": "team",
+      "title": "Calhoun Academy",
+      "subtitle": "Football opponent history",
+      "to": "/athletics/football/records/opponents?team=Calhoun+Academy",
+      "keywords": [
+        "Football",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Calhoun Academy"
+      ]
+    },
+    {
+      "id": "football-team-richard-winn-academy",
+      "type": "team",
+      "title": "Richard Winn Academy",
+      "subtitle": "Football opponent history",
+      "to": "/athletics/football/records/opponents?team=Richard+Winn+Academy",
+      "keywords": [
+        "Football",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Richard Winn Academy"
       ]
     },
     {
@@ -24944,18 +25087,153 @@
       ]
     },
     {
-      "id": "football-team-colleton-prep-academy",
+      "id": "football-team-aiken-christian",
       "type": "team",
-      "title": "Colleton Prep Academy",
+      "title": "Aiken Christian",
       "subtitle": "Football opponent history",
-      "to": "/athletics/football/records/opponents?team=Colleton+Prep+Academy",
+      "to": "/athletics/football/records/opponents?team=Aiken+Christian",
       "keywords": [
         "Football",
         "team",
         "opponent",
         "history",
         "records",
-        "Colleton Prep Academy"
+        "Aiken Christian"
+      ]
+    },
+    {
+      "id": "football-team-thomas-heyward-academy",
+      "type": "team",
+      "title": "Thomas Heyward Academy",
+      "subtitle": "Football opponent history",
+      "to": "/athletics/football/records/opponents?team=Thomas+Heyward+Academy",
+      "keywords": [
+        "Football",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Thomas Heyward Academy"
+      ]
+    },
+    {
+      "id": "football-team-clarendon-hall",
+      "type": "team",
+      "title": "Clarendon Hall",
+      "subtitle": "Football opponent history",
+      "to": "/athletics/football/records/opponents?team=Clarendon+Hall",
+      "keywords": [
+        "Football",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Clarendon Hall"
+      ]
+    },
+    {
+      "id": "football-team-james-f-byrnes-academy",
+      "type": "team",
+      "title": "James F. Byrnes Academy",
+      "subtitle": "Football opponent history",
+      "to": "/athletics/football/records/opponents?team=James+F.+Byrnes+Academy",
+      "keywords": [
+        "Football",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "James F. Byrnes Academy"
+      ]
+    },
+    {
+      "id": "football-team-dorchester-academy",
+      "type": "team",
+      "title": "Dorchester Academy",
+      "subtitle": "Football opponent history",
+      "to": "/athletics/football/records/opponents?team=Dorchester+Academy",
+      "keywords": [
+        "Football",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Dorchester Academy"
+      ]
+    },
+    {
+      "id": "football-team-thomas-sumter-academy",
+      "type": "team",
+      "title": "Thomas Sumter Academy",
+      "subtitle": "Football opponent history",
+      "to": "/athletics/football/records/opponents?team=Thomas+Sumter+Academy",
+      "keywords": [
+        "Football",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Thomas Sumter Academy"
+      ]
+    },
+    {
+      "id": "football-team-williamsburg-academy",
+      "type": "team",
+      "title": "Williamsburg Academy",
+      "subtitle": "Football opponent history",
+      "to": "/athletics/football/records/opponents?team=Williamsburg+Academy",
+      "keywords": [
+        "Football",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Williamsburg Academy"
+      ]
+    },
+    {
+      "id": "football-team-roy-hudgens-academy",
+      "type": "team",
+      "title": "Roy Hudgens Academy",
+      "subtitle": "Football opponent history",
+      "to": "/athletics/football/records/opponents?team=Roy+Hudgens+Academy",
+      "keywords": [
+        "Football",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Roy Hudgens Academy"
+      ]
+    },
+    {
+      "id": "football-team-memorial-day",
+      "type": "team",
+      "title": "Memorial Day",
+      "subtitle": "Football opponent history",
+      "to": "/athletics/football/records/opponents?team=Memorial+Day",
+      "keywords": [
+        "Football",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Memorial Day"
+      ]
+    },
+    {
+      "id": "football-team-hilton-head-christian-academy",
+      "type": "team",
+      "title": "Hilton Head Christian Academy",
+      "subtitle": "Football opponent history",
+      "to": "/athletics/football/records/opponents?team=Hilton+Head+Christian+Academy",
+      "keywords": [
+        "Football",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Hilton Head Christian Academy"
       ]
     },
     {
@@ -25019,21 +25297,6 @@
       ]
     },
     {
-      "id": "football-team-bible-baptist",
-      "type": "team",
-      "title": "Bible Baptist",
-      "subtitle": "Football opponent history",
-      "to": "/athletics/football/records/opponents?team=Bible+Baptist",
-      "keywords": [
-        "Football",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Bible Baptist"
-      ]
-    },
-    {
       "id": "football-team-northwood-academy",
       "type": "team",
       "title": "Northwood Academy",
@@ -25079,21 +25342,6 @@
       ]
     },
     {
-      "id": "football-team-calhoun-academy",
-      "type": "team",
-      "title": "Calhoun Academy",
-      "subtitle": "Football opponent history",
-      "to": "/athletics/football/records/opponents?team=Calhoun+Academy",
-      "keywords": [
-        "Football",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Calhoun Academy"
-      ]
-    },
-    {
       "id": "football-team-st-paul-academy-for-boys",
       "type": "team",
       "title": "St. Paul Academy for Boys",
@@ -25121,21 +25369,6 @@
         "history",
         "records",
         "Edmund Burke Academy"
-      ]
-    },
-    {
-      "id": "football-team-thomas-sumter-academy",
-      "type": "team",
-      "title": "Thomas Sumter Academy",
-      "subtitle": "Football opponent history",
-      "to": "/athletics/football/records/opponents?team=Thomas+Sumter+Academy",
-      "keywords": [
-        "Football",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Thomas Sumter Academy"
       ]
     },
     {
@@ -25211,21 +25444,6 @@
         "history",
         "records",
         "Frederica Academy"
-      ]
-    },
-    {
-      "id": "football-team-holly-hill-academy",
-      "type": "team",
-      "title": "Holly Hill Academy",
-      "subtitle": "Football opponent history",
-      "to": "/athletics/football/records/opponents?team=Holly+Hill+Academy",
-      "keywords": [
-        "Football",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Holly Hill Academy"
       ]
     },
     {

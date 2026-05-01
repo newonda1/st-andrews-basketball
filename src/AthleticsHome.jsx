@@ -43,7 +43,7 @@ const sports = [
     name: "Football",
     to: "/athletics/football",
     icon: "/images/common/football_icon.png",
-    regionYears: [2002],
+    regionYears: [1996, 1998, 2002],
     stateYears: [1998],
   },
   {
