@@ -649,5 +649,103 @@
     "LastName": "Rolland-mills",
     "GradYear": 2022,
     "JerseyNumber": null
+  },
+  {
+    "PlayerID": 200301,
+    "FirstName": "Daryl",
+    "LastName": "Lasky",
+    "GradYear": null,
+    "JerseyNumber": 3
+  },
+  {
+    "PlayerID": 200003,
+    "FirstName": "Davy",
+    "LastName": "Clay",
+    "GradYear": null,
+    "JerseyNumber": 5
+  },
+  {
+    "PlayerID": 200101,
+    "FirstName": "Andy",
+    "LastName": "Crouch",
+    "GradYear": null,
+    "JerseyNumber": 10
+  },
+  {
+    "PlayerID": 200203,
+    "FirstName": "Beau",
+    "LastName": "Hinton",
+    "GradYear": null,
+    "JerseyNumber": 11
+  },
+  {
+    "PlayerID": 200208,
+    "FirstName": "Josh",
+    "LastName": "Smith",
+    "GradYear": null,
+    "JerseyNumber": 14
+  },
+  {
+    "PlayerID": 200207,
+    "FirstName": "Jacob",
+    "LastName": "Ravers",
+    "GradYear": null,
+    "JerseyNumber": 15
+  },
+  {
+    "PlayerID": 200307,
+    "FirstName": "Omar",
+    "LastName": "Glenn",
+    "GradYear": null,
+    "JerseyNumber": 21
+  },
+  {
+    "PlayerID": 200204,
+    "FirstName": "Matt",
+    "LastName": "Knight",
+    "GradYear": null,
+    "JerseyNumber": 23
+  },
+  {
+    "PlayerID": 200309,
+    "FirstName": "David",
+    "LastName": "Stubbs",
+    "GradYear": null,
+    "JerseyNumber": 31
+  },
+  {
+    "PlayerID": 2026164,
+    "FirstName": "Billy",
+    "LastName": "Vine",
+    "GradYear": 2006,
+    "JerseyNumber": 41
+  },
+  {
+    "PlayerID": 200311,
+    "FirstName": "Chris",
+    "LastName": "Ravers",
+    "GradYear": null,
+    "JerseyNumber": 42
+  },
+  {
+    "PlayerID": 200312,
+    "FirstName": "Cass",
+    "LastName": "Sawyer",
+    "GradYear": null,
+    "JerseyNumber": 45
+  },
+  {
+    "PlayerID": 200313,
+    "FirstName": "Daniel",
+    "LastName": "Eschholz",
+    "GradYear": null,
+    "JerseyNumber": 50
+  },
+  {
+    "PlayerID": 200201,
+    "FirstName": "Jesse",
+    "LastName": "Coleman",
+    "GradYear": null,
+    "JerseyNumber": 52
   }
 ]

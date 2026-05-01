@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-01T17:13:43.937Z",
-  "itemCount": 1466,
+  "generatedAt": "2026-05-01T19:23:23.316Z",
+  "itemCount": 1475,
   "items": [
     {
       "id": "athletics-home",
@@ -3321,6 +3321,127 @@
       ]
     },
     {
+      "id": "boys-basketball-athlete-200301",
+      "type": "athlete",
+      "title": "Daryl Lasky",
+      "subtitle": "Boys Basketball athlete",
+      "to": "/athletics/boys/basketball/players/200301",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Daryl",
+        "Lasky",
+        "Lasky Daryl"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-200307",
+      "type": "athlete",
+      "title": "Omar Glenn",
+      "subtitle": "Boys Basketball athlete",
+      "to": "/athletics/boys/basketball/players/200307",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Omar",
+        "Glenn",
+        "Glenn Omar"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-200309",
+      "type": "athlete",
+      "title": "David Stubbs",
+      "subtitle": "Boys Basketball athlete",
+      "to": "/athletics/boys/basketball/players/200309",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "David",
+        "Stubbs",
+        "Stubbs David"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2026164",
+      "type": "athlete",
+      "title": "Billy Vine",
+      "subtitle": "Boys Basketball athlete - Class of 2006",
+      "to": "/athletics/boys/basketball/players/2026164",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Billy",
+        "Vine",
+        "Vine Billy",
+        "class of 2006",
+        "grad 2006"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-200311",
+      "type": "athlete",
+      "title": "Chris Ravers",
+      "subtitle": "Boys Basketball athlete",
+      "to": "/athletics/boys/basketball/players/200311",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Chris",
+        "Ravers",
+        "Ravers Chris"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-200312",
+      "type": "athlete",
+      "title": "Cass Sawyer",
+      "subtitle": "Boys Basketball athlete",
+      "to": "/athletics/boys/basketball/players/200312",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Cass",
+        "Sawyer",
+        "Sawyer Cass"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-200313",
+      "type": "athlete",
+      "title": "Daniel Eschholz",
+      "subtitle": "Boys Basketball athlete",
+      "to": "/athletics/boys/basketball/players/200313",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Daniel",
+        "Eschholz",
+        "Eschholz Daniel"
+      ]
+    },
+    {
       "id": "boys-basketball-athlete-2026154",
       "type": "athlete",
       "title": "Chris Mlller",
@@ -3508,25 +3629,6 @@
         "Pavlo Bubby",
         "class of 2008",
         "grad 2008"
-      ]
-    },
-    {
-      "id": "boys-basketball-athlete-2026164",
-      "type": "athlete",
-      "title": "Billy Vine",
-      "subtitle": "Boys Basketball athlete - Class of 2006",
-      "to": "/athletics/boys/basketball/players/2026164",
-      "keywords": [
-        "Boys Basketball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Billy",
-        "Vine",
-        "Vine Billy",
-        "class of 2006",
-        "grad 2006"
       ]
     },
     {
@@ -21009,6 +21111,59 @@
         "Holly Hill Academy",
         "Raiders",
         "Holly Hill",
+        "SC"
+      ]
+    },
+    {
+      "id": "boys-basketball-team-hilton-head-academy",
+      "type": "team",
+      "title": "Hilton Head Academy",
+      "subtitle": "Boys Basketball opponent history - Hilton Head Island, SC",
+      "to": "/athletics/boys/basketball/records/opponents?team=Hilton+Head+Academy",
+      "keywords": [
+        "Boys Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Hilton Head Academy",
+        "Hilton Head Island",
+        "SC"
+      ]
+    },
+    {
+      "id": "boys-basketball-team-greenwood-christian-school",
+      "type": "team",
+      "title": "Greenwood Christian School",
+      "subtitle": "Boys Basketball opponent history - Greenwood, SC",
+      "to": "/athletics/boys/basketball/records/opponents?team=Greenwood+Christian+School",
+      "keywords": [
+        "Boys Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Greenwood Christian School",
+        "Greenwood Christian",
+        "Greenwood",
+        "SC"
+      ]
+    },
+    {
+      "id": "boys-basketball-team-wardlaw-academy",
+      "type": "team",
+      "title": "Wardlaw Academy",
+      "subtitle": "Boys Basketball opponent history - Johnston, SC",
+      "to": "/athletics/boys/basketball/records/opponents?team=Wardlaw+Academy",
+      "keywords": [
+        "Boys Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Wardlaw Academy",
+        "Patriots",
+        "Johnston",
         "SC"
       ]
     },

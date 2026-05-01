@@ -1550,6 +1550,13 @@
     "Mascot": "Patriots"
   },
   {
+    "SchoolID": "sc-greenwood-christian-school-greenwood",
+    "Name": "Greenwood Christian School",
+    "City": "Greenwood",
+    "State": "SC",
+    "ShortName": "Greenwood Christian"
+  },
+  {
     "SchoolID": "sc-hampton-county-high-school-varnville",
     "Name": "Hampton County High School",
     "City": "Varnville",
@@ -1573,6 +1580,12 @@
     "City": "Hilton Head Island",
     "State": "SC",
     "Mascot": "Hurricanes"
+  },
+  {
+    "SchoolID": "sc-hilton-head-academy-hilton-head-island",
+    "Name": "Hilton Head Academy",
+    "City": "Hilton Head Island",
+    "State": "SC"
   },
   {
     "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island",
