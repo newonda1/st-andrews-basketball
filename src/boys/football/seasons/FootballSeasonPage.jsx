@@ -219,6 +219,63 @@ function formatSeasonSummaryValue(value) {
   return text ? text : "—";
 }
 
+function isStAndrewsTeamName(teamName) {
+  return /^st\s*andrew['’]?s?$/i.test(String(teamName ?? "").replace(/\./g, "").trim());
+}
+
+function RegionStandingsTable({ standings }) {
+  const rows = Array.isArray(standings?.Rows) ? standings.Rows : [];
+  if (!rows.length) return null;
+
+  return (
+    <div className="overflow-x-auto rounded-lg border border-gray-200 shadow">
+      <table className="min-w-full bg-white text-sm">
+        <thead className="bg-gray-100 text-xs text-gray-700 uppercase tracking-wide">
+          <tr>
+            <th className="px-3 py-2 text-left">Team</th>
+            <th className="px-3 py-2 text-center">Region</th>
+            <th className="px-3 py-2 text-center">Overall</th>
+            <th className="px-3 py-2 text-left">Notes</th>
+          </tr>
+        </thead>
+        <tbody className="text-sm text-gray-800">
+          {rows.map((row, index) => {
+            const isStAndrews = isStAndrewsTeamName(row.Team);
+
+            return (
+              <tr
+                key={`${standings.Title || "region"}-${row.Team || index}`}
+                className={`border-t border-gray-200 ${
+                  isStAndrews
+                    ? "bg-blue-50"
+                    : index % 2 === 0
+                      ? "bg-white"
+                      : "bg-gray-50/70"
+                } hover:bg-gray-100`}
+              >
+                <td
+                  className={`px-3 py-2 whitespace-nowrap ${
+                    isStAndrews ? "font-semibold text-blue-900" : "font-medium"
+                  }`}
+                >
+                  {row.Team || "—"}
+                </td>
+                <td className="px-3 py-2 text-center whitespace-nowrap">
+                  {formatSeasonRecordFromFields(row, "Region")}
+                </td>
+                <td className="px-3 py-2 text-center whitespace-nowrap">
+                  {formatSeasonRecordFromFields(row, "Overall")}
+                </td>
+                <td className="px-3 py-2">{formatSeasonSummaryValue(row.Notes)}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
 export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
   const params = useParams();
   const resolvedSeasonId = Number(seasonIdProp ?? params.seasonId);
@@ -283,6 +340,15 @@ export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
       { label: "Points Against", value: formatSeasonSummaryValue(season.PointsAgainst) },
       { label: "Season Result", value: formatSeasonSummaryValue(season.SeasonResult) },
     ];
+  }, [season]);
+
+  const regionStandings = useMemo(() => {
+    const rows = Array.isArray(season?.RegionStandings?.Rows)
+      ? season.RegionStandings.Rows
+      : [];
+
+    if (!rows.length) return null;
+    return season.RegionStandings;
   }, [season]);
 
   const rosterSeason = useMemo(
@@ -497,33 +563,51 @@ export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
         <h1 className="text-3xl font-bold">{seasonLabel} Season</h1>
       </section>
 
-      {seasonSummaryRows.length ? (
-        <section id="season-summary" className="space-y-4">
-          <h2 className="text-2xl font-semibold">Season Summary</h2>
+      {seasonSummaryRows.length || regionStandings ? (
+        <section
+          id="season-summary"
+          className={`grid gap-6 ${
+            regionStandings ? "lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)]" : ""
+          }`}
+        >
+          {seasonSummaryRows.length ? (
+            <div className="space-y-4">
+              <h2 className="text-2xl font-semibold">Season Summary</h2>
 
-          <div className="overflow-x-auto rounded-lg border border-gray-200 shadow">
-            <table className="min-w-full bg-white text-sm">
-              <thead className="bg-gray-100 text-xs text-gray-700 uppercase tracking-wide">
-                <tr>
-                  <th className="px-3 py-2 text-left">Metric</th>
-                  <th className="px-3 py-2 text-left">Value</th>
-                </tr>
-              </thead>
-              <tbody className="text-sm text-gray-800">
-                {seasonSummaryRows.map((row, index) => (
-                  <tr
-                    key={row.label}
-                    className={`border-t border-gray-200 ${
-                      index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
-                    } hover:bg-gray-100`}
-                  >
-                    <td className="px-3 py-2 font-medium whitespace-nowrap">{row.label}</td>
-                    <td className="px-3 py-2">{row.value}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+              <div className="overflow-x-auto rounded-lg border border-gray-200 shadow">
+                <table className="min-w-full bg-white text-sm">
+                  <thead className="bg-gray-100 text-xs text-gray-700 uppercase tracking-wide">
+                    <tr>
+                      <th className="px-3 py-2 text-left">Metric</th>
+                      <th className="px-3 py-2 text-left">Value</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-sm text-gray-800">
+                    {seasonSummaryRows.map((row, index) => (
+                      <tr
+                        key={row.label}
+                        className={`border-t border-gray-200 ${
+                          index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
+                        } hover:bg-gray-100`}
+                      >
+                        <td className="px-3 py-2 font-medium whitespace-nowrap">
+                          {row.label}
+                        </td>
+                        <td className="px-3 py-2">{row.value}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          ) : null}
+
+          {regionStandings ? (
+            <div id="region-standings" className="space-y-4">
+              <h2 className="text-2xl font-semibold">Region Standings</h2>
+              <RegionStandingsTable standings={regionStandings} />
+            </div>
+          ) : null}
         </section>
       ) : null}
 

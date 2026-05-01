@@ -32,6 +32,89 @@
     "RegionFinish": "Region Champion",
     "StateFinish": "State Runner-up",
     "SeasonResult": "SCISA AA Region II • State runner-up vs. Richard Winn • 6-0 region record",
+    "RegionStandings": {
+      "Title": "SCISA AA Region II",
+      "SourceUrl": "https://docs.google.com/spreadsheets/d/1pTXBCIxf2RIoffWpP-VZCdBUVwoZH2ED-Abrvadb6xc/htmlembed/sheet?headers=false&gid=27",
+      "Rows": [
+        {
+          "Team": "St. Andrew's",
+          "OverallWins": 11,
+          "OverallLosses": 1,
+          "OverallTies": 0,
+          "RegionWins": 6,
+          "RegionLosses": 0,
+          "RegionTies": 0,
+          "RegionPct": "1.000",
+          "Notes": "Runner-up vs. Richard Winn"
+        },
+        {
+          "Team": "Hilton Head Prep",
+          "OverallWins": 7,
+          "OverallLosses": 5,
+          "OverallTies": 0,
+          "RegionWins": 5,
+          "RegionLosses": 1,
+          "RegionTies": 0,
+          "RegionPct": "0.833",
+          "Notes": "Lost in second round vs. Richard Winn"
+        },
+        {
+          "Team": "Holly Hill",
+          "OverallWins": 5,
+          "OverallLosses": 6,
+          "OverallTies": 0,
+          "RegionWins": 4,
+          "RegionLosses": 2,
+          "RegionTies": 0,
+          "RegionPct": "0.667",
+          "Notes": "Lost in first round vs. Calhoun"
+        },
+        {
+          "Team": "Colleton Prep",
+          "OverallWins": 4,
+          "OverallLosses": 6,
+          "OverallTies": 0,
+          "RegionWins": 3,
+          "RegionLosses": 3,
+          "RegionTies": 0,
+          "RegionPct": "0.500",
+          "Notes": ""
+        },
+        {
+          "Team": "Patrick Henry",
+          "OverallWins": 3,
+          "OverallLosses": 7,
+          "OverallTies": 0,
+          "RegionWins": 2,
+          "RegionLosses": 4,
+          "RegionTies": 0,
+          "RegionPct": "0.333",
+          "Notes": ""
+        },
+        {
+          "Team": "Pinewood Prep",
+          "OverallWins": 3,
+          "OverallLosses": 8,
+          "OverallTies": 0,
+          "RegionWins": 2,
+          "RegionLosses": 4,
+          "RegionTies": 0,
+          "RegionPct": "0.333",
+          "Notes": ""
+        },
+        {
+          "Team": "Sea Island",
+          "OverallWins": 0,
+          "OverallLosses": 10,
+          "OverallTies": 0,
+          "RegionWins": 0,
+          "RegionLosses": 6,
+          "RegionTies": 0,
+          "RegionPct": "0.000",
+          "Notes": ""
+        }
+      ]
+    },
     "SourceUrls": {
       "schedule": "https://docs.google.com/spreadsheets/d/12_KL42vph9R9RxIQ7Jn_BFkrtV9HLI1sym0ntHZReEU/htmlembed/sheet?headers=false&gid=6",
       "stats": "https://docs.google.com/spreadsheets/d/1XL5VrGsFQXz0ezl-EGCMfHTMMAcu6j5tdltStxssJAk/htmlembed",
