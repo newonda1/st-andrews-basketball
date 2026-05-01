@@ -10033,5 +10033,65 @@
     "Round": "Finals",
     "Heat": "H1",
     "Status": "Complete"
+  },
+  {
+    "StatID": "2026043001-2026018-100m-prelims",
+    "MeetID": 2026043001,
+    "PlayerID": 2026018,
+    "Gender": "Girls",
+    "Event": "100 Meter Dash",
+    "Mark": "12.86",
+    "Place": "8th",
+    "Round": "Preliminaries",
+    "Heat": "H1",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2026043001-202302-100m-prelims",
+    "MeetID": 2026043001,
+    "PlayerID": 202302,
+    "Gender": "Boys",
+    "Event": "100 Meter Dash",
+    "Mark": "11.39",
+    "Place": "11th",
+    "Round": "Preliminaries",
+    "Heat": "H1",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2026043001-2026001-800m-prelims",
+    "MeetID": 2026043001,
+    "PlayerID": 2026001,
+    "Gender": "Girls",
+    "Event": "800 Meter Run",
+    "Mark": "2:39.23",
+    "Place": "13th",
+    "Round": "Preliminaries",
+    "Heat": "H2",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2026043001-2026018-200m-prelims",
+    "MeetID": 2026043001,
+    "PlayerID": 2026018,
+    "Gender": "Girls",
+    "Event": "200 Meter Dash",
+    "Mark": "26.50",
+    "Place": "5th",
+    "Round": "Preliminaries",
+    "Heat": "H3",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2026043001-202302-200m-prelims",
+    "MeetID": 2026043001,
+    "PlayerID": 202302,
+    "Gender": "Boys",
+    "Event": "200 Meter Dash",
+    "Mark": "23.26",
+    "Place": "5th",
+    "Round": "Preliminaries",
+    "Heat": "H1",
+    "Status": "Complete"
   }
 ]
