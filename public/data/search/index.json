@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-01T12:20:05.726Z",
-  "itemCount": 1468,
+  "generatedAt": "2026-05-01T12:35:21.477Z",
+  "itemCount": 1472,
   "items": [
     {
       "id": "athletics-home",
@@ -558,6 +558,68 @@
         "SCISA",
         "saints",
         "schedule",
+        "results"
+      ]
+    },
+    {
+      "id": "football-2000-season",
+      "type": "page",
+      "title": "2000-01 Season",
+      "subtitle": "Football",
+      "to": "/athletics/football/seasons/2000",
+      "keywords": [
+        "football",
+        "2000",
+        "season",
+        "SCISA",
+        "saints",
+        "results"
+      ]
+    },
+    {
+      "id": "football-2001-season",
+      "type": "page",
+      "title": "2001-02 Season",
+      "subtitle": "Football",
+      "to": "/athletics/football/seasons/2001",
+      "keywords": [
+        "football",
+        "2001",
+        "season",
+        "SCISA",
+        "saints",
+        "results"
+      ]
+    },
+    {
+      "id": "football-2002-season",
+      "type": "page",
+      "title": "2002-03 State Runner-up Season",
+      "subtitle": "Football",
+      "to": "/athletics/football/seasons/2002",
+      "keywords": [
+        "football",
+        "2002",
+        "season",
+        "region champion",
+        "state runner-up",
+        "SCISA",
+        "saints",
+        "results"
+      ]
+    },
+    {
+      "id": "football-2003-season",
+      "type": "page",
+      "title": "2003-04 Season",
+      "subtitle": "Football",
+      "to": "/athletics/football/seasons/2003",
+      "keywords": [
+        "football",
+        "2003",
+        "season",
+        "SCISA",
+        "saints",
         "results"
       ]
     },

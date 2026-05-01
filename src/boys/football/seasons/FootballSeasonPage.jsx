@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import { recordTableStyles } from "../../basketball/pages/recordTableStyles";
 import {
   formatGameDate,
+  formatRecord,
   formatSeasonLabel,
   getSeasonStatTable,
   getSeasonStatsForSeason,
@@ -198,6 +199,26 @@ function formatWeight(value) {
   return Number.isFinite(Number(value)) ? `${Number(value)} lbs` : "—";
 }
 
+function toFiniteNumber(value) {
+  if (value == null || String(value).trim() === "") return null;
+  const number = Number(value);
+  return Number.isFinite(number) ? number : null;
+}
+
+function formatSeasonRecordFromFields(season, prefix) {
+  const wins = toFiniteNumber(season?.[`${prefix}Wins`]);
+  const losses = toFiniteNumber(season?.[`${prefix}Losses`]);
+  const ties = toFiniteNumber(season?.[`${prefix}Ties`]) ?? 0;
+
+  if (wins === null || losses === null) return "—";
+  return formatRecord(wins, losses, ties);
+}
+
+function formatSeasonSummaryValue(value) {
+  const text = String(value ?? "").trim();
+  return text ? text : "—";
+}
+
 export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
   const params = useParams();
   const resolvedSeasonId = Number(seasonIdProp ?? params.seasonId);
@@ -249,6 +270,20 @@ export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
     if (Number.isFinite(resolvedSeasonId)) return `${resolvedSeasonId}`;
     return "Football";
   }, [resolvedSeasonId, season]);
+
+  const seasonSummaryRows = useMemo(() => {
+    if (!season) return [];
+
+    return [
+      { label: "Coach", value: formatSeasonSummaryValue(season.HeadCoach) },
+      { label: "League", value: formatSeasonSummaryValue(season.League) },
+      { label: "Overall Record", value: formatSeasonRecordFromFields(season, "Overall") },
+      { label: "Region Record", value: formatSeasonRecordFromFields(season, "Region") },
+      { label: "Points For", value: formatSeasonSummaryValue(season.PointsFor) },
+      { label: "Points Against", value: formatSeasonSummaryValue(season.PointsAgainst) },
+      { label: "Season Result", value: formatSeasonSummaryValue(season.SeasonResult) },
+    ];
+  }, [season]);
 
   const rosterSeason = useMemo(
     () => rosters.find((entry) => Number(entry.SeasonID) === resolvedSeasonId) || null,
@@ -461,6 +496,36 @@ export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
       <section className="space-y-2 text-center">
         <h1 className="text-3xl font-bold">{seasonLabel} Season</h1>
       </section>
+
+      {seasonSummaryRows.length ? (
+        <section id="season-summary" className="space-y-4">
+          <h2 className="text-2xl font-semibold">Season Summary</h2>
+
+          <div className="overflow-x-auto rounded-lg border border-gray-200 shadow">
+            <table className="min-w-full bg-white text-sm">
+              <thead className="bg-gray-100 text-xs text-gray-700 uppercase tracking-wide">
+                <tr>
+                  <th className="px-3 py-2 text-left">Metric</th>
+                  <th className="px-3 py-2 text-left">Value</th>
+                </tr>
+              </thead>
+              <tbody className="text-sm text-gray-800">
+                {seasonSummaryRows.map((row, index) => (
+                  <tr
+                    key={row.label}
+                    className={`border-t border-gray-200 ${
+                      index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
+                    } hover:bg-gray-100`}
+                  >
+                    <td className="px-3 py-2 font-medium whitespace-nowrap">{row.label}</td>
+                    <td className="px-3 py-2">{row.value}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      ) : null}
 
       <section id="schedule-results" className="space-y-4">
         <h2 className="text-2xl font-semibold">Schedule &amp; Results</h2>

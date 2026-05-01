@@ -1556,7 +1556,7 @@
     "LocationType": "Home",
     "Venue": "St. Andrew's High School",
     "Notes": "",
-    "GameType": "Regular Season",
+    "GameType": "Region",
     "Result": "L",
     "TeamScore": 0,
     "OpponentScore": 55
@@ -1580,7 +1580,7 @@
     "LocationType": "Away",
     "Venue": "Hilton Head Christian Academy",
     "Notes": "",
-    "GameType": "Regular Season",
+    "GameType": "Region",
     "Result": "L",
     "TeamScore": 0,
     "OpponentScore": 56
@@ -1604,7 +1604,7 @@
     "LocationType": "Away",
     "Venue": "Hilton Head Prep",
     "Notes": "",
-    "GameType": "Regular Season",
+    "GameType": "Region",
     "Result": "L",
     "TeamScore": 0,
     "OpponentScore": 68
@@ -1628,7 +1628,7 @@
     "LocationType": "Home",
     "Venue": "St. Andrew's High School",
     "Notes": "",
-    "GameType": "Regular Season",
+    "GameType": "Region",
     "Result": "L",
     "TeamScore": 0,
     "OpponentScore": 33
@@ -1655,7 +1655,7 @@
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 0,
-    "OpponentScore": 1
+    "OpponentScore": 55
   },
   {
     "GameID": 20051028,
@@ -1916,7 +1916,7 @@
     "LocationType": "Away",
     "Venue": "Bible Baptist Christian High School",
     "Notes": "",
-    "GameType": "Regular Season",
+    "GameType": "Region",
     "Result": "W",
     "TeamScore": 27,
     "OpponentScore": 0
@@ -2419,8 +2419,8 @@
     "GameUrl": "https://www.maxpreps.com/games/11-7-2008/football-08/calhoun-academy-vs-st-andrews.htm?c=Yd16HDTU-0aibqp8INpB-g",
     "LocationType": "Away",
     "Venue": "Calhoun Academy",
-    "Notes": "",
-    "GameType": "Regular Season",
+    "Notes": "SCISA AA first round",
+    "GameType": "Playoff",
     "Result": "W",
     "TeamScore": 24,
     "OpponentScore": 21
@@ -2443,8 +2443,8 @@
     "GameUrl": "https://www.maxpreps.com/games/11-14-2008/football-08/northwood-academy-vs-st-andrews.htm?c=cfa_6eIkBkWc2kd8Q-6kww",
     "LocationType": "Away",
     "Venue": "Northwood Academy",
-    "Notes": "",
-    "GameType": "Regular Season",
+    "Notes": "SCISA AA second round",
+    "GameType": "Playoff",
     "Result": "L",
     "TeamScore": 24,
     "OpponentScore": 42

@@ -15,6 +15,27 @@ function isCompletedGame(game) {
   return game?.Result === "W" || game?.Result === "L" || game?.Result === "T";
 }
 
+function toFiniteNumber(value) {
+  if (value == null || String(value).trim() === "") return null;
+  const number = Number(value);
+  return Number.isFinite(number) ? number : null;
+}
+
+function recordFromSeasonFields(season, prefix) {
+  const wins = toFiniteNumber(season?.[`${prefix}Wins`]);
+  const losses = toFiniteNumber(season?.[`${prefix}Losses`]);
+  const ties = toFiniteNumber(season?.[`${prefix}Ties`]) ?? 0;
+
+  if (wins === null || losses === null) return null;
+
+  return {
+    wins,
+    losses,
+    ties,
+    text: formatRecord(wins, losses, ties),
+  };
+}
+
 function formatSeasonNotes(season) {
   return [season?.RegionFinish, season?.StateFinish]
     .map((value) => String(value ?? "").trim())
@@ -89,7 +110,7 @@ export default function YearlyResults() {
 
     seasonsWithGames.forEach(({ season, games: seasonGames }) => {
       const completedGames = seasonGames.filter(isCompletedGame);
-      const overall = buildRecord(completedGames);
+      const overall = recordFromSeasonFields(season, "Overall") || buildRecord(completedGames);
       const coach = season.HeadCoach || "Unknown";
 
       if (!coachMap.has(coach)) {
@@ -120,26 +141,43 @@ export default function YearlyResults() {
     () =>
       seasonsWithGames.map(({ season, games: seasonGames }) => {
         const completedGames = seasonGames.filter(isCompletedGame);
-        const overall = buildRecord(completedGames);
-        const region = buildRecord(
-          completedGames,
-          (game) => String(game.GameType ?? "").toLowerCase() === "region"
+        const overall =
+          recordFromSeasonFields(season, "Overall") || buildRecord(completedGames);
+        const region =
+          recordFromSeasonFields(season, "Region") ||
+          buildRecord(
+            completedGames,
+            (game) => String(game.GameType ?? "").toLowerCase() === "region"
+          );
+        const homeFromGames = completedGames.length
+          ? buildRecord(
+              completedGames,
+              (game) => String(game.LocationType ?? "") === "Home"
+            )
+          : null;
+        const awayFromGames = completedGames.length
+          ? buildRecord(
+              completedGames,
+              (game) => String(game.LocationType ?? "") === "Away"
+            )
+          : null;
+        const home = recordFromSeasonFields(season, "Home") || homeFromGames;
+        const away = recordFromSeasonFields(season, "Away") || awayFromGames;
+
+        const gamePointsFor = completedGames.reduce(
+          (sum, game) => sum + Number(game.TeamScore || 0),
+          0
         );
-        const home = buildRecord(
-          completedGames,
-          (game) => String(game.LocationType ?? "") === "Home"
-        );
-        const away = buildRecord(
-          completedGames,
-          (game) => String(game.LocationType ?? "") === "Away"
+        const gamePointsAgainst = completedGames.reduce(
+          (sum, game) => sum + Number(game.OpponentScore || 0),
+          0
         );
 
         const pointsFor =
-          season.PointsFor ??
-          completedGames.reduce((sum, game) => sum + Number(game.TeamScore || 0), 0);
+          season.PointsFor ?? (completedGames.length > 0 ? gamePointsFor : null);
         const pointsAgainst =
           season.PointsAgainst ??
-          completedGames.reduce((sum, game) => sum + Number(game.OpponentScore || 0), 0);
+          (completedGames.length > 0 ? gamePointsAgainst : null);
 
         return {
           seasonId: season.SeasonID,
@@ -147,8 +185,8 @@ export default function YearlyResults() {
           coach: season.HeadCoach || "—",
           overall: overall.text,
           region: region.text,
-          home: home.text,
-          away: away.text,
+          home: home?.text || "—",
+          away: away?.text || "—",
           pointsFor,
           pointsAgainst,
           notes: formatSeasonNotes(season),
@@ -313,8 +351,8 @@ export default function YearlyResults() {
                     <td className={numericCellClassName}>{row.region}</td>
                     <td className={numericCellClassName}>{row.home}</td>
                     <td className={numericCellClassName}>{row.away}</td>
-                    <td className={numericCellClassName}>{row.pointsFor}</td>
-                    <td className={numericCellClassName}>{row.pointsAgainst}</td>
+                    <td className={numericCellClassName}>{row.pointsFor ?? "—"}</td>
+                    <td className={numericCellClassName}>{row.pointsAgainst ?? "—"}</td>
                     <td className={notesCellClassName}>{row.notes}</td>
                   </tr>
                 ))
