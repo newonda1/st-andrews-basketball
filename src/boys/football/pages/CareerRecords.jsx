@@ -53,7 +53,7 @@ export default function CareerRecords() {
                 : "—",
         },
       ]}
-      footnote="Career records combine every available MaxPreps football game log for each player career, grouped across season-specific athlete IDs with the shared MaxPreps career identifier."
+      footnote="Career records combine available game logs and newspaper season-total adjustments for each player career. Adjustment rows override matching season totals when preserved newspaper totals are available."
     />
   );
 }

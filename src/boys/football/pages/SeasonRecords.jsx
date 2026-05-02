@@ -59,7 +59,7 @@ export default function SeasonRecords() {
             row?._placeholder ? "—" : Number.isFinite(Number(row?.gamesTracked)) ? String(row.gamesTracked) : "—",
         },
       ]}
-      footnote="Season records are based on tracked MaxPreps football game logs. Rate stats use tracked-game qualifiers so partial-stat seasons do not distort the leaderboards."
+      footnote="Season records use available MaxPreps football game logs and newspaper season-total adjustments. Adjustment rows override matching season totals when preserved newspaper totals are available."
     />
   );
 }

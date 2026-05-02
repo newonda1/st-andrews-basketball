@@ -1,5 +1,88 @@
 [
   {
+    "SeasonID": "2003",
+    "DisplaySeason": "2003",
+    "SourceSeasonLabel": "2003-04",
+    "TeamLevel": "Varsity",
+    "TeamName": "St. Andrew's Saints",
+    "HeadCoach": "Kevin Kunst",
+    "Staff": [],
+    "Players": [
+      {
+        "PlayerID": 200003,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [
+          "QB"
+        ],
+        "PlayerName": "Davy Clay",
+        "Distinctions": [
+          "All-Coastal Empire Team Honorable Mention"
+        ]
+      },
+      {
+        "PlayerID": 200011,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [
+          "WR"
+        ],
+        "PlayerName": "Jeff Smith",
+        "Distinctions": [
+          "All-Coastal Empire Team Honorable Mention"
+        ]
+      },
+      {
+        "PlayerID": 200208,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [
+          "WR"
+        ],
+        "PlayerName": "Josh Smith",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200307,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [
+          "RB"
+        ],
+        "PlayerName": "Omer Glenn",
+        "Distinctions": [
+          "All-Coastal Empire Team Honorable Mention"
+        ]
+      },
+      {
+        "PlayerID": 200203,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Beau Hinton",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200105,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [
+          "P"
+        ],
+        "PlayerName": "Will Massey",
+        "Distinctions": [
+          "All-Coastal Empire Team Honorable Mention"
+        ]
+      }
+    ]
+  },
+  {
     "SeasonID": "2004",
     "DisplaySeason": "2004",
     "SourceSeasonLabel": "2004-05",

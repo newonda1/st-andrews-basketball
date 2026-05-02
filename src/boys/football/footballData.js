@@ -5,6 +5,7 @@ export const FOOTBALL_DATA_PATHS = {
   rosters: "/data/boys/football/seasonrosters.json",
   stats: "/data/boys/football/seasonstats.json",
   playerGameLogs: "/data/boys/football/playergamelogs.json",
+  playerSeasonAdjustments: "/data/boys/football/playerseasonadjustments.json",
   schools: "/data/schools.json",
 };
 
@@ -14,6 +15,16 @@ export async function fetchJson(path, label) {
     throw new Error(`Could not load ${label} (${response.status}).`);
   }
   return response.json();
+}
+
+export async function fetchJsonOptional(path) {
+  try {
+    const response = await fetch(path);
+    if (!response.ok) return [];
+    return response.json();
+  } catch {
+    return [];
+  }
 }
 
 export async function loadFootballResultsData() {
@@ -49,13 +60,15 @@ export async function loadFootballSeasonPageData() {
 }
 
 export async function loadFootballRecordsData() {
-  const [games, seasons, players, rosters, playerGameLogs] = await Promise.all([
-    fetchJson(FOOTBALL_DATA_PATHS.games, "football games"),
-    fetchJson(FOOTBALL_DATA_PATHS.seasons, "football seasons"),
-    fetchJson(FOOTBALL_DATA_PATHS.players, "football players"),
-    fetchJson(FOOTBALL_DATA_PATHS.rosters, "football rosters"),
-    fetchJson(FOOTBALL_DATA_PATHS.playerGameLogs, "football player game logs"),
-  ]);
+  const [games, seasons, players, rosters, playerGameLogs, playerSeasonAdjustments] =
+    await Promise.all([
+      fetchJson(FOOTBALL_DATA_PATHS.games, "football games"),
+      fetchJson(FOOTBALL_DATA_PATHS.seasons, "football seasons"),
+      fetchJson(FOOTBALL_DATA_PATHS.players, "football players"),
+      fetchJson(FOOTBALL_DATA_PATHS.rosters, "football rosters"),
+      fetchJson(FOOTBALL_DATA_PATHS.playerGameLogs, "football player game logs"),
+      fetchJsonOptional(FOOTBALL_DATA_PATHS.playerSeasonAdjustments),
+    ]);
 
   return {
     games: Array.isArray(games) ? games : [],
@@ -63,6 +76,9 @@ export async function loadFootballRecordsData() {
     players: Array.isArray(players) ? players : [],
     rosters: Array.isArray(rosters) ? rosters : [],
     playerGameLogs: Array.isArray(playerGameLogs) ? playerGameLogs : [],
+    playerSeasonAdjustments: Array.isArray(playerSeasonAdjustments)
+      ? playerSeasonAdjustments
+      : [],
   };
 }
 

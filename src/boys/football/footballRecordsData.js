@@ -8,11 +8,13 @@ import {
 } from "./footballData";
 
 const META_KEYS = new Set([
+  "Season",
   "SeasonID",
   "DisplaySeason",
   "SourceSeasonLabel",
   "PlayerID",
   "PlayerName",
+  "SourcePlayerName",
   "CanonicalUrl",
   "CareerID",
   "CareerKey",
@@ -24,16 +26,32 @@ const META_KEYS = new Set([
   "OpponentShortName",
   "Opponent",
   "OpponentID",
+  "OpponentLocation",
+  "OpponentSlug",
   "OpponentUrl",
   "GameUrl",
   "SourceUrl",
   "SeasonLabel",
+  "Time",
+  "SourceEventTime",
+  "TeamID",
+  "Team",
   "GameType",
   "LocationType",
   "Venue",
   "Notes",
+  "Recap",
+  "RecapTitle",
+  "SourceDate",
+  "SourcePublication",
+  "SourceCitation",
+  "SourceNote",
+  "SeasonAdjustment",
   "VideoTitle",
   "VideoUrl",
+  "LineScore",
+  "ScoringPlays",
+  "TeamComparisonStats",
   "GameResultText",
   "TeamScore",
   "OpponentScore",
@@ -77,6 +95,9 @@ function careerIdFromCanonicalUrl(canonicalUrl) {
 }
 
 function isFiniteNumber(value) {
+  if (value == null) return false;
+  if (typeof value === "boolean") return false;
+  if (typeof value === "string" && !value.trim()) return false;
   return Number.isFinite(Number(value));
 }
 
@@ -84,6 +105,18 @@ function statOrNull(row, key) {
   const actualKey = STAT_ALIASES[key] || key;
   const value = Number(row?.[actualKey]);
   return Number.isFinite(value) ? value : null;
+}
+
+function collectNumericStats(row) {
+  const numericStats = {};
+
+  Object.entries(row || {}).forEach(([key, value]) => {
+    if (META_KEYS.has(key)) return;
+    if (!isFiniteNumber(value)) return;
+    numericStats[key] = Number(value);
+  });
+
+  return numericStats;
 }
 
 export function stat(row, key) {
@@ -166,13 +199,7 @@ function normalizePlayerGameRow(rawRow, playersById, seasonMap, gamesById) {
   const dateText = String(rawRow?.Date || "").trim();
   const gameId = Number(rawRow?.GameID) || gameIdFromDate(dateText);
   const matchedGame = gamesById.get(gameId) || null;
-  const numericStats = {};
-
-  Object.entries(rawRow || {}).forEach(([key, value]) => {
-    if (META_KEYS.has(key)) return;
-    if (!isFiniteNumber(value)) return;
-    numericStats[key] = Number(value);
-  });
+  const numericStats = collectNumericStats(rawRow);
 
   return {
     ...numericStats,
@@ -195,6 +222,11 @@ function normalizePlayerGameRow(rawRow, playersById, seasonMap, gamesById) {
     LocationType: String(rawRow?.LocationType || matchedGame?.LocationType || "").trim(),
     Venue: String(rawRow?.Venue || matchedGame?.Venue || "").trim(),
     Notes: String(rawRow?.Notes || matchedGame?.Notes || "").trim(),
+    Recap: String(rawRow?.Recap || matchedGame?.Recap || "").trim(),
+    RecapTitle: String(rawRow?.RecapTitle || matchedGame?.RecapTitle || "").trim(),
+    SourceDate: String(rawRow?.SourceDate || matchedGame?.SourceDate || "").trim(),
+    SourcePublication: String(rawRow?.SourcePublication || matchedGame?.SourcePublication || "").trim(),
+    SourceCitation: String(rawRow?.SourceCitation || matchedGame?.SourceCitation || "").trim(),
     VideoTitle: String(rawRow?.VideoTitle || matchedGame?.VideoTitle || "").trim(),
     VideoUrl: String(rawRow?.VideoUrl || matchedGame?.VideoUrl || "").trim(),
     Result: String(rawRow?.Result || matchedGame?.Result || "").trim(),
@@ -202,6 +234,44 @@ function normalizePlayerGameRow(rawRow, playersById, seasonMap, gamesById) {
     TeamScore: toNumber(matchedGame?.TeamScore),
     OpponentScore: toNumber(matchedGame?.OpponentScore),
     GameResultText: formatGameResultText(matchedGame || rawRow),
+  };
+}
+
+function normalizePlayerSeasonAdjustment(rawRow, playersById, seasonMap) {
+  const playerId = String(rawRow?.PlayerID || "");
+  const player = playersById.get(playerId) || {};
+  const careerId =
+    String(rawRow?.CareerID || "") ||
+    careerIdFromCanonicalUrl(rawRow?.CanonicalUrl) ||
+    careerIdFromCanonicalUrl(player?.CanonicalUrl);
+  const careerKey = careerId || `player:${playerId}`;
+  const playerName =
+    String(rawRow?.PlayerName || "").trim() ||
+    String(player?.PlayerName || "").trim() ||
+    `${String(player?.FirstName || "").trim()} ${String(player?.LastName || "").trim()}`.trim() ||
+    "Unknown";
+  const seasonId = Number(rawRow?.SeasonID || rawRow?.Season) || null;
+  const numericStats = collectNumericStats(rawRow);
+  const gamesTracked = toNumber(rawRow?.GamesTracked ?? rawRow?.TrackedGames ?? rawRow?.G);
+
+  return {
+    ...numericStats,
+    SeasonID: seasonId,
+    SeasonLabel: seasonLabelForRow(rawRow, seasonMap),
+    DisplaySeason: String(rawRow?.DisplaySeason || seasonId || ""),
+    SourceSeasonLabel: String(rawRow?.SourceSeasonLabel || ""),
+    PlayerID: playerId,
+    PlayerName: playerName,
+    SourcePlayerName: String(rawRow?.SourcePlayerName || "").trim(),
+    CanonicalUrl: String(rawRow?.CanonicalUrl || player?.CanonicalUrl || ""),
+    CareerID: careerId,
+    CareerKey: careerKey,
+    GamesTracked: gamesTracked ?? 0,
+    SourceDate: String(rawRow?.SourceDate || "").trim(),
+    SourcePublication: String(rawRow?.SourcePublication || "").trim(),
+    SourceCitation: String(rawRow?.SourceCitation || "").trim(),
+    SourceNote: String(rawRow?.SourceNote || "").trim(),
+    SeasonAdjustment: true,
   };
 }
 
@@ -273,10 +343,69 @@ function aggregatePlayerSeasons(playerGameRows) {
   });
 }
 
-function aggregatePlayerCareers(playerGameRows) {
+function playerSeasonKey(row) {
+  const seasonId = Number(row?.SeasonID);
+  const careerKey = String(row?.CareerKey || (row?.PlayerID ? `player:${row.PlayerID}` : ""));
+  return careerKey && seasonId ? `${careerKey}::${seasonId}` : "";
+}
+
+function applyPlayerSeasonAdjustments(playerSeasons, playerSeasonAdjustments) {
+  const seasonMap = new Map(
+    (playerSeasons || []).map((row) => [playerSeasonKey(row), { ...row }]).filter(([key]) => key)
+  );
+
+  (playerSeasonAdjustments || []).forEach((adjustment) => {
+    const key = playerSeasonKey(adjustment);
+    if (!key) return;
+
+    const current =
+      seasonMap.get(key) ||
+      createAggregateBase({
+        CareerKey: adjustment.CareerKey,
+        CareerID: adjustment.CareerID,
+        PlayerID: adjustment.PlayerID,
+        PlayerName: adjustment.PlayerName,
+        CanonicalUrl: adjustment.CanonicalUrl,
+        SeasonID: adjustment.SeasonID,
+        SeasonLabel: adjustment.SeasonLabel,
+      });
+
+    Object.entries(adjustment || {}).forEach(([statKey, value]) => {
+      if (META_KEYS.has(statKey)) return;
+      if (!isFiniteNumber(value)) return;
+      current[statKey] = Number(value);
+    });
+
+    current.PlayerName = adjustment.PlayerName || current.PlayerName;
+    current.SourcePlayerName = adjustment.SourcePlayerName || current.SourcePlayerName || "";
+    current.SeasonLabel = adjustment.SeasonLabel || current.SeasonLabel;
+    current.DisplaySeason = adjustment.DisplaySeason || current.DisplaySeason || "";
+    current.SourceSeasonLabel = adjustment.SourceSeasonLabel || current.SourceSeasonLabel || "";
+    current.SourceDate = adjustment.SourceDate || current.SourceDate || "";
+    current.SourcePublication = adjustment.SourcePublication || current.SourcePublication || "";
+    current.SourceCitation = adjustment.SourceCitation || current.SourceCitation || "";
+    current.SourceNote = adjustment.SourceNote || current.SourceNote || "";
+    current.SeasonAdjustment = true;
+
+    if (Number.isFinite(Number(adjustment.GamesTracked))) {
+      current.GamesTracked = Number(adjustment.GamesTracked);
+    }
+
+    seasonMap.set(key, current);
+  });
+
+  return Array.from(seasonMap.values()).sort((a, b) => {
+    if (Number(a.SeasonID) !== Number(b.SeasonID)) {
+      return Number(a.SeasonID) - Number(b.SeasonID);
+    }
+    return String(a.PlayerName || "").localeCompare(String(b.PlayerName || ""));
+  });
+}
+
+function aggregatePlayerCareers(playerSeasonRows) {
   const careerMap = new Map();
 
-  playerGameRows.forEach((row) => {
+  playerSeasonRows.forEach((row) => {
     const key = row.CareerKey;
     if (!careerMap.has(key)) {
       careerMap.set(
@@ -294,10 +423,9 @@ function aggregatePlayerCareers(playerGameRows) {
     }
 
     const total = careerMap.get(key);
-    total.GamesTracked += 1;
+    total.GamesTracked += trackedGames(row);
     total._seasonIds.add(row.SeasonID);
     mergeStatValues(total, row);
-    applyMilestones(total, row);
   });
 
   return Array.from(careerMap.values())
@@ -314,8 +442,10 @@ function aggregateTeamGames(games, playerGameRows, seasonMap) {
   (games || []).forEach((game) => {
     const gameId = Number(game?.GameID);
     if (!gameId) return;
+    const numericStats = collectNumericStats(game);
 
     gameMap.set(gameId, {
+      ...numericStats,
       GameID: gameId,
       SeasonID: Number(game?.SeasonID || game?.Season) || null,
       SeasonLabel: seasonLabelForRow(game, seasonMap),
@@ -328,13 +458,23 @@ function aggregateTeamGames(games, playerGameRows, seasonMap) {
       LocationType: String(game?.LocationType || ""),
       Venue: String(game?.Venue || ""),
       Notes: String(game?.Notes || ""),
+      Recap: String(game?.Recap || ""),
+      RecapTitle: String(game?.RecapTitle || ""),
+      SourceDate: String(game?.SourceDate || ""),
+      SourcePublication: String(game?.SourcePublication || ""),
+      SourceCitation: String(game?.SourceCitation || ""),
       VideoTitle: String(game?.VideoTitle || ""),
       VideoUrl: String(game?.VideoUrl || ""),
+      LineScore: Array.isArray(game?.LineScore) ? game.LineScore : [],
+      ScoringPlays: Array.isArray(game?.ScoringPlays) ? game.ScoringPlays : [],
+      TeamComparisonStats: Array.isArray(game?.TeamComparisonStats)
+        ? game.TeamComparisonStats
+        : [],
       Result: String(game?.Result || ""),
       TeamScore: toNumber(game?.TeamScore),
       OpponentScore: toNumber(game?.OpponentScore),
       GameResultText: formatGameResultText(game),
-      TrackedStatGames: 0,
+      TrackedStatGames: Object.keys(numericStats).length ? 1 : 0,
     });
   });
 
@@ -356,8 +496,18 @@ function aggregateTeamGames(games, playerGameRows, seasonMap) {
         LocationType: String(row?.LocationType || ""),
         Venue: String(row?.Venue || ""),
         Notes: String(row?.Notes || ""),
+        Recap: String(row?.Recap || ""),
+        RecapTitle: String(row?.RecapTitle || ""),
+        SourceDate: String(row?.SourceDate || ""),
+        SourcePublication: String(row?.SourcePublication || ""),
+        SourceCitation: String(row?.SourceCitation || ""),
         VideoTitle: String(row?.VideoTitle || ""),
         VideoUrl: String(row?.VideoUrl || ""),
+        LineScore: Array.isArray(row?.LineScore) ? row.LineScore : [],
+        ScoringPlays: Array.isArray(row?.ScoringPlays) ? row.ScoringPlays : [],
+        TeamComparisonStats: Array.isArray(row?.TeamComparisonStats)
+          ? row.TeamComparisonStats
+          : [],
         Result: String(row?.Result || ""),
         TeamScore: null,
         OpponentScore: null,
@@ -441,8 +591,14 @@ function prepareFootballRecordsData(raw) {
       return String(a.PlayerName || "").localeCompare(String(b.PlayerName || ""));
     });
 
-  const playerSeasons = aggregatePlayerSeasons(playerGameRows);
-  const playerCareers = aggregatePlayerCareers(playerGameRows);
+  const playerSeasonAdjustments = (raw.playerSeasonAdjustments || [])
+    .map((row) => normalizePlayerSeasonAdjustment(row, playersById, seasonMap))
+    .filter((row) => row.PlayerID && row.SeasonID);
+  const playerSeasons = applyPlayerSeasonAdjustments(
+    aggregatePlayerSeasons(playerGameRows),
+    playerSeasonAdjustments
+  );
+  const playerCareers = aggregatePlayerCareers(playerSeasons);
   const teamGames = aggregateTeamGames(raw.games, playerGameRows, seasonMap);
   const teamSeasons = aggregateTeamSeasons(raw.seasons, teamGames, seasonMap);
 
@@ -452,6 +608,7 @@ function prepareFootballRecordsData(raw) {
     players: raw.players || [],
     rosters: raw.rosters || [],
     playerGameRows,
+    playerSeasonAdjustments,
     playerSeasons,
     playerCareers,
     teamGames,

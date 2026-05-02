@@ -663,19 +663,19 @@
     "PlayerID": 200001,
     "FirstName": "Cam",
     "LastName": "Aldrich",
-    "GradYear": null
+    "GradYear": 2003
   },
   {
     "PlayerID": 200002,
     "FirstName": "Patrick",
     "LastName": "Burns",
-    "GradYear": null
+    "GradYear": 2003
   },
   {
     "PlayerID": 200003,
     "FirstName": "Davy",
     "LastName": "Clay",
-    "GradYear": null
+    "GradYear": 2004
   },
   {
     "PlayerID": 200004,
@@ -723,7 +723,7 @@
     "PlayerID": 200011,
     "FirstName": "Jeff",
     "LastName": "Smith",
-    "GradYear": null
+    "GradYear": 2003
   },
   {
     "PlayerID": 200012,
@@ -759,7 +759,8 @@
     "PlayerID": 200105,
     "FirstName": "Will",
     "LastName": "Massey",
-    "GradYear": null
+    "GradYear": null,
+    "Gender": "Boys"
   },
   {
     "PlayerID": 200106,
@@ -820,7 +821,7 @@
     "PlayerID": 200208,
     "FirstName": "Josh",
     "LastName": "Smith",
-    "GradYear": null
+    "GradYear": 2004
   },
   {
     "PlayerID": 200501,
@@ -4084,14 +4085,14 @@
   },
   {
     "PlayerID": 2026260,
-    "FirstName": "gracen",
-    "LastName": "amerson",
+    "FirstName": "Gracen",
+    "LastName": "Amerson",
     "GradYear": 2030,
     "Gender": "Girls"
   },
   {
     "PlayerID": 2026261,
-    "FirstName": "ava",
+    "FirstName": "Ava",
     "LastName": "Stillwagon",
     "GradYear": 2030,
     "Gender": "Girls"
@@ -4112,8 +4113,8 @@
   },
   {
     "PlayerID": 2026264,
-    "FirstName": "sarah",
-    "LastName": "molnar",
+    "FirstName": "Sarah",
+    "LastName": "Molnar",
     "GradYear": 2030,
     "Gender": "Girls"
   },
@@ -4378,7 +4379,7 @@
   },
   {
     "PlayerID": 200307,
-    "FirstName": "Omar",
+    "FirstName": "Omer",
     "LastName": "Glenn",
     "GradYear": null,
     "Gender": "Boys"
@@ -4437,8 +4438,8 @@
   },
   {
     "PlayerID": 200403,
-    "PlayerName": "Hinchey",
-    "FirstName": "",
+    "PlayerName": "Maggie Hinchey",
+    "FirstName": "Maggie",
     "LastName": "Hinchey",
     "GradYear": null,
     "Gender": "Girls"

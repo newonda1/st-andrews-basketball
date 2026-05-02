@@ -67,7 +67,7 @@ export default function FullCareerStats() {
     <div className="space-y-6 px-4 pt-2 pb-10 mx-auto max-w-7xl lg:pb-40">
       <h1 className="text-2xl font-bold text-center">Full Career Stats</h1>
       <p className="-mt-1.5 text-center text-sm italic text-gray-600">
-        View complete tracked football career totals for St. Andrew&apos;s players across every available MaxPreps game log
+        View complete tracked football career totals for St. Andrew&apos;s players across available game logs and newspaper season-total adjustments
       </p>
 
       <div className="flex flex-wrap justify-center gap-3">

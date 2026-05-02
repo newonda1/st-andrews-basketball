@@ -14,6 +14,13 @@
         ]
       },
       {
+        "PlayerID": 200403,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": []
+      },
+      {
         "PlayerID": 200404,
         "JerseyNumber": null,
         "Grade": 12,

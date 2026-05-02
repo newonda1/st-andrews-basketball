@@ -29,6 +29,21 @@ const STAT_FIELDS = [
   "FTA",
 ];
 
+const TOTAL_COLUMNS = [
+  "Points",
+  "Rebounds",
+  "Assists",
+  "Turnovers",
+  "Steals",
+  "Blocks",
+  "ThreePM",
+  "ThreePA",
+  "TwoPM",
+  "TwoPA",
+  "FTM",
+  "FTA",
+];
+
 function emptyTotals(playerId) {
   return {
     PlayerID: Number(playerId),
@@ -66,6 +81,8 @@ function MaxPrepsSeasonPage({
   recapContent = null,
   scoringOnly = false,
   statSourceLabel = "MaxPreps",
+  trimShootingColumns = false,
+  hidePlayerStatsToggle = false,
 }) {
   const [games, setGames] = useState([]);
   const [playerStats, setPlayerStats] = useState([]);
@@ -173,6 +190,12 @@ function MaxPrepsSeasonPage({
     return map;
   }, [players]);
 
+  const schoolById = useMemo(() => {
+    const map = new Map();
+    for (const school of schoolsData) map.set(String(school.SchoolID), school);
+    return map;
+  }, [schoolsData]);
+
   const playerName = (playerId) => {
     const player = playerById.get(Number(playerId));
     return player ? `${player.FirstName} ${player.LastName}` : "Unknown Player";
@@ -258,6 +281,43 @@ function MaxPrepsSeasonPage({
       });
   }, [adjustmentMap, calculatedTotals, rosterEntries, playerById]);
 
+  const teamTotals = useMemo(() => {
+    if (!seasonTotals.length) return null;
+
+    const totals = {
+      PlayerID: "team",
+      GamesPlayed: 0,
+      Points: 0,
+      Rebounds: 0,
+      Assists: 0,
+      Turnovers: 0,
+      Steals: 0,
+      Blocks: 0,
+      ThreePM: 0,
+      ThreePA: 0,
+      TwoPM: 0,
+      TwoPA: 0,
+      FTM: 0,
+      FTA: 0,
+    };
+
+    for (const stat of playerStats) {
+      if (countsAsPlayerGame(stat)) totals.GamesPlayed += 1;
+    }
+
+    for (const total of seasonTotals) {
+      for (const field of TOTAL_COLUMNS) {
+        totals[field] += Number(total[field] || 0);
+      }
+    }
+
+    totals.GamesPlayed =
+      seasonTotals.reduce((max, total) => Math.max(max, Number(total.GamesPlayed || 0)), 0) ||
+      totals.GamesPlayed;
+
+    return totals;
+  }, [playerStats, seasonTotals]);
+
   const leaders = useMemo(() => {
     const byStat = (key) =>
       seasonTotals
@@ -296,6 +356,15 @@ function MaxPrepsSeasonPage({
       day: "numeric",
       year: "numeric",
     });
+  };
+
+  const formatLocation = (game) => {
+    return game.LocationType || game.Location || game.Site || "Unknown";
+  };
+
+  const opponentLogoPath = (game) => {
+    const school = schoolById.get(String(game?.OpponentID ?? ""));
+    return school?.LogoPath || school?.BracketLogoPath || null;
   };
 
   const pct = (made, attempts) => {
@@ -368,38 +437,66 @@ function MaxPrepsSeasonPage({
               <tr>
                 <th className="border px-3 py-2 text-left">Date</th>
                 <th className="border px-3 py-2 text-left">Opponent</th>
+                <th className="border px-3 py-2">Location</th>
                 <th className="border px-3 py-2">Result</th>
                 <th className="border px-3 py-2">Score</th>
                 <th className="border px-3 py-2">Type</th>
               </tr>
             </thead>
             <tbody>
-              {games.map((game, index) => (
-                <tr key={game.GameID} className={index % 2 ? "bg-gray-50" : "bg-white"}>
-                  <td className="border px-3 py-2">{formatDate(game.GameID)}</td>
-                  <td className="border px-3 py-2">
-                    <Link
-                      to={`/athletics/boys/basketball/games/${game.GameID}`}
-                      className="text-blue-700 underline hover:text-blue-900"
+              {games.map((game, index) => {
+                const logoPath = opponentLogoPath(game);
+
+                return (
+                  <tr key={game.GameID} className={index % 2 ? "bg-gray-50" : "bg-white"}>
+                    <td className="border px-3 py-2">{formatDate(game.GameID)}</td>
+                    <td className="border px-3 py-2">
+                      <div className="flex items-center gap-3">
+                        <div className="flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden">
+                          {logoPath ? (
+                            <img
+                              src={logoPath}
+                              alt=""
+                              className="h-full w-full object-contain"
+                              loading="lazy"
+                              onError={(event) => {
+                                event.currentTarget.style.display = "none";
+                              }}
+                            />
+                          ) : null}
+                        </div>
+                        <div className="min-w-0">
+                          <Link
+                            to={`/athletics/boys/basketball/games/${game.GameID}`}
+                            className="text-blue-700 underline hover:text-blue-900"
+                          >
+                            {game.Opponent}
+                          </Link>
+                          {game.Tournament && (
+                            <div className="mt-0.5 text-xs leading-tight text-gray-500">
+                              {game.Tournament}
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    </td>
+                    <td className="border px-3 py-2 text-center">{formatLocation(game)}</td>
+                    <td
+                      className={`border px-3 py-2 text-center font-bold ${
+                        game.Result === "W" ? "text-green-700" : "text-red-700"
+                      }`}
                     >
-                      {game.Opponent}
-                    </Link>
-                  </td>
-                  <td
-                    className={`border px-3 py-2 text-center font-bold ${
-                      game.Result === "W" ? "text-green-700" : "text-red-700"
-                    }`}
-                  >
-                    {game.Result}
-                  </td>
-                  <td className="border px-3 py-2 text-center">
-                    {game.TeamScore}-{game.OpponentScore}
-                  </td>
-                  <td className="border px-3 py-2 text-center">
-                    {game.Tournament || game.GameType || "Regular Season"}
-                  </td>
-                </tr>
-              ))}
+                      {game.Result}
+                    </td>
+                    <td className="border px-3 py-2 text-center">
+                      {game.TeamScore}-{game.OpponentScore}
+                    </td>
+                    <td className="border px-3 py-2 text-center">
+                      {game.GameType || "Regular Season"}
+                    </td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>
@@ -431,7 +528,7 @@ function MaxPrepsSeasonPage({
         <div className="flex items-center justify-between mt-8 mb-4">
           <h2 className="text-2xl font-semibold">Player Statistics</h2>
 
-          {!scoringOnly && (
+          {!scoringOnly && !hidePlayerStatsToggle && (
             <div className="flex items-center space-x-2 text-xs sm:text-sm">
               <span
                 className={`${
@@ -485,18 +582,22 @@ function MaxPrepsSeasonPage({
                   <>
                     <th className="border px-2 py-1">REB</th>
                     <th className="border px-2 py-1">AST</th>
-                    <th className="border px-2 py-1">TO</th>
                     <th className="border px-2 py-1">STL</th>
                     <th className="border px-2 py-1">BLK</th>
-                    <th className="border px-2 py-1">3PM</th>
-                    <th className="border px-2 py-1">3PA</th>
-                    <th className="border px-2 py-1">3P%</th>
-                    <th className="border px-2 py-1">2PM</th>
-                    <th className="border px-2 py-1">2PA</th>
-                    <th className="border px-2 py-1">2P%</th>
-                    <th className="border px-2 py-1">FTM</th>
-                    <th className="border px-2 py-1">FTA</th>
-                    <th className="border px-2 py-1">FT%</th>
+                    {!trimShootingColumns && (
+                      <>
+                        <th className="border px-2 py-1">TO</th>
+                        <th className="border px-2 py-1">3PM</th>
+                        <th className="border px-2 py-1">3PA</th>
+                        <th className="border px-2 py-1">3P%</th>
+                        <th className="border px-2 py-1">2PM</th>
+                        <th className="border px-2 py-1">2PA</th>
+                        <th className="border px-2 py-1">2P%</th>
+                        <th className="border px-2 py-1">FTM</th>
+                        <th className="border px-2 py-1">FTA</th>
+                        <th className="border px-2 py-1">FT%</th>
+                      </>
+                    )}
                   </>
                 )}
               </tr>
@@ -529,24 +630,62 @@ function MaxPrepsSeasonPage({
                       <>
                         <td className="border px-2 py-1">{valueFor(player, "Rebounds")}</td>
                         <td className="border px-2 py-1">{valueFor(player, "Assists")}</td>
-                        <td className="border px-2 py-1">{valueFor(player, "Turnovers")}</td>
                         <td className="border px-2 py-1">{valueFor(player, "Steals")}</td>
                         <td className="border px-2 py-1">{valueFor(player, "Blocks")}</td>
-                        <td className="border px-2 py-1">{valueFor(player, "ThreePM")}</td>
-                        <td className="border px-2 py-1">{valueFor(player, "ThreePA")}</td>
-                        <td className="border px-2 py-1">{pct(player.ThreePM, player.ThreePA)}</td>
-                        <td className="border px-2 py-1">{valueFor(player, "TwoPM")}</td>
-                        <td className="border px-2 py-1">{valueFor(player, "TwoPA")}</td>
-                        <td className="border px-2 py-1">{pct(player.TwoPM, player.TwoPA)}</td>
-                        <td className="border px-2 py-1">{valueFor(player, "FTM")}</td>
-                        <td className="border px-2 py-1">{valueFor(player, "FTA")}</td>
-                        <td className="border px-2 py-1">{pct(player.FTM, player.FTA)}</td>
+                        {!trimShootingColumns && (
+                          <>
+                            <td className="border px-2 py-1">{valueFor(player, "Turnovers")}</td>
+                            <td className="border px-2 py-1">{valueFor(player, "ThreePM")}</td>
+                            <td className="border px-2 py-1">{valueFor(player, "ThreePA")}</td>
+                            <td className="border px-2 py-1">
+                              {pct(player.ThreePM, player.ThreePA)}
+                            </td>
+                            <td className="border px-2 py-1">{valueFor(player, "TwoPM")}</td>
+                            <td className="border px-2 py-1">{valueFor(player, "TwoPA")}</td>
+                            <td className="border px-2 py-1">{pct(player.TwoPM, player.TwoPA)}</td>
+                            <td className="border px-2 py-1">{valueFor(player, "FTM")}</td>
+                            <td className="border px-2 py-1">{valueFor(player, "FTA")}</td>
+                            <td className="border px-2 py-1">{pct(player.FTM, player.FTA)}</td>
+                          </>
+                        )}
                       </>
                     )}
                   </tr>
                 );
               })}
             </tbody>
+            {!scoringOnly && teamTotals && (
+              <tfoot className="bg-gray-100 font-semibold">
+                <tr>
+                  <td className="border px-2 py-1 text-left sticky left-0 bg-gray-100 z-10">
+                    Team totals
+                  </td>
+                  <td className="border px-2 py-1">-</td>
+                  <td className="border px-2 py-1">{teamTotals.GamesPlayed || "-"}</td>
+                  <td className="border px-2 py-1">{valueFor(teamTotals, "Points")}</td>
+                  <td className="border px-2 py-1">{valueFor(teamTotals, "Rebounds")}</td>
+                  <td className="border px-2 py-1">{valueFor(teamTotals, "Assists")}</td>
+                  <td className="border px-2 py-1">{valueFor(teamTotals, "Steals")}</td>
+                  <td className="border px-2 py-1">{valueFor(teamTotals, "Blocks")}</td>
+                  {!trimShootingColumns && (
+                    <>
+                      <td className="border px-2 py-1">{valueFor(teamTotals, "Turnovers")}</td>
+                      <td className="border px-2 py-1">{valueFor(teamTotals, "ThreePM")}</td>
+                      <td className="border px-2 py-1">{valueFor(teamTotals, "ThreePA")}</td>
+                      <td className="border px-2 py-1">
+                        {pct(teamTotals.ThreePM, teamTotals.ThreePA)}
+                      </td>
+                      <td className="border px-2 py-1">{valueFor(teamTotals, "TwoPM")}</td>
+                      <td className="border px-2 py-1">{valueFor(teamTotals, "TwoPA")}</td>
+                      <td className="border px-2 py-1">{pct(teamTotals.TwoPM, teamTotals.TwoPA)}</td>
+                      <td className="border px-2 py-1">{valueFor(teamTotals, "FTM")}</td>
+                      <td className="border px-2 py-1">{valueFor(teamTotals, "FTA")}</td>
+                      <td className="border px-2 py-1">{pct(teamTotals.FTM, teamTotals.FTA)}</td>
+                    </>
+                  )}
+                </tr>
+              </tfoot>
+            )}
           </table>
         </div>
 
@@ -554,6 +693,13 @@ function MaxPrepsSeasonPage({
           <p className="mt-2 text-center text-xs leading-relaxed text-gray-600">
             This season currently includes scoring by game only. GP reflects games
             in which a player recorded points in the surviving scoring archive.
+          </p>
+        )}
+        {trimShootingColumns && !scoringOnly && (
+          <p className="mt-2 text-center text-xs leading-relaxed text-gray-600">
+            Points are the most complete totals for this season. Other categories may be
+            incomplete because rebounds, assists, steals, blocks, and related stats were not
+            consistently reported in newspaper recaps.
           </p>
         )}
       </section>

@@ -19,6 +19,8 @@ import {
   getVisibleRowsForColumns,
 } from "./footballDetailUtils";
 
+const ST_ANDREWS_LOGO = "/images/schools/logos/ga-st-andrews-school-savannah.png";
+
 function rawWhole(row, key) {
   const value = row?.[key];
   return Number.isFinite(Number(value)) ? formatWhole(Number(value)) : "—";
@@ -77,6 +79,224 @@ function GameVideo({ game }) {
         />
       </div>
     </section>
+  );
+}
+
+function GameRecap({ game }) {
+  const recap = String(game?.Recap || "").trim();
+  const title = String(game?.RecapTitle || "").trim();
+  if (!recap && !title) return null;
+
+  const sourceText =
+    String(game?.SourceCitation || "").trim() ||
+    [game?.SourcePublication, game?.SourceDate].filter(Boolean).join(", ");
+
+  return (
+    <section className="rounded-lg border border-slate-200 bg-white p-5 shadow-sm md:p-6">
+      <div className="mb-4 border-b border-slate-200 pb-3">
+        <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">
+          Game Recap
+        </p>
+        {title ? (
+          <h2 className="mt-2 text-2xl font-semibold text-slate-950">{title}</h2>
+        ) : null}
+        {sourceText ? <p className="mt-2 text-sm text-slate-500">{sourceText}</p> : null}
+      </div>
+      {recap ? (
+        <div className="space-y-4 text-base leading-7 text-slate-700">
+          {recap
+            .split("\n\n")
+            .filter(Boolean)
+            .map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+        </div>
+      ) : null}
+    </section>
+  );
+}
+
+function GameLineScore({ game }) {
+  const lineScore = Array.isArray(game?.LineScore) ? game.LineScore : [];
+  if (!lineScore.length) return null;
+
+  const periodCount = Math.max(
+    4,
+    ...lineScore.map((row) => (Array.isArray(row?.Scores) ? row.Scores.length : 0))
+  );
+  const periodLabels = Array.from({ length: periodCount }, (_, index) => String(index + 1));
+
+  return (
+    <div className="overflow-x-auto rounded-lg border border-slate-200 bg-white shadow-sm">
+      <table className="w-full min-w-[420px] border-collapse text-sm">
+        <thead className="bg-slate-100 text-xs uppercase tracking-wide text-slate-600">
+          <tr>
+            <th className="border-b border-slate-200 px-3 py-2 text-left">Team</th>
+            {periodLabels.map((label) => (
+              <th key={label} className="border-b border-slate-200 px-3 py-2 text-center">
+                {label}
+              </th>
+            ))}
+            <th className="border-b border-slate-200 px-3 py-2 text-center">Final</th>
+          </tr>
+        </thead>
+        <tbody>
+          {lineScore.map((row, index) => {
+            const scores = Array.isArray(row?.Scores) ? row.Scores : [];
+            return (
+              <tr
+                key={`${row?.Team || "team"}-${index}`}
+                className={index % 2 === 0 ? "bg-white" : "bg-slate-50"}
+              >
+                <td className="border-b border-slate-200 px-3 py-2 font-semibold text-slate-900">
+                  {row?.Team || row?.Abbr || "—"}
+                </td>
+                {periodLabels.map((label, scoreIndex) => (
+                  <td
+                    key={`${row?.Team || index}-${label}`}
+                    className="border-b border-slate-200 px-3 py-2 text-center text-slate-700"
+                  >
+                    {Number.isFinite(Number(scores[scoreIndex])) ? scores[scoreIndex] : "—"}
+                  </td>
+                ))}
+                <td className="border-b border-slate-200 px-3 py-2 text-center font-bold text-slate-950">
+                  {Number.isFinite(Number(row?.Total)) ? row.Total : "—"}
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function ScoringSummary({ game }) {
+  const scoringPlays = Array.isArray(game?.ScoringPlays) ? game.ScoringPlays : [];
+  if (!scoringPlays.length) return null;
+
+  return (
+    <div className="overflow-x-auto rounded-lg border border-slate-200 bg-white shadow-sm">
+      <table className="w-full min-w-[620px] border-collapse text-sm">
+        <thead className="bg-slate-100 text-xs uppercase tracking-wide text-slate-600">
+          <tr>
+            <th className="border-b border-slate-200 px-3 py-2 text-left">Qtr</th>
+            <th className="border-b border-slate-200 px-3 py-2 text-center">Team</th>
+            <th className="border-b border-slate-200 px-3 py-2 text-left">Scoring Play</th>
+            <th className="border-b border-slate-200 px-3 py-2 text-left">PAT</th>
+            <th className="border-b border-slate-200 px-3 py-2 text-right">Pts</th>
+          </tr>
+        </thead>
+        <tbody>
+          {scoringPlays.map((play, index) => (
+            <tr
+              key={`${play?.Quarter || "q"}-${play?.Play || index}`}
+              className="odd:bg-white even:bg-slate-50"
+            >
+              <td className="border-b border-slate-200 px-3 py-2 font-semibold text-slate-700">
+                {play?.Quarter || "—"}
+              </td>
+              <td className="border-b border-slate-200 px-3 py-2 text-center text-slate-700">
+                {String(play?.Team || "").toLowerCase().includes("andrew") ||
+                String(play?.TeamAbbr || "").toUpperCase() === "S" ? (
+                  <img
+                    src={ST_ANDREWS_LOGO}
+                    alt="St. Andrew's"
+                    className="mx-auto h-7 w-7 object-contain"
+                  />
+                ) : (
+                  play?.TeamAbbr || play?.Team || "—"
+                )}
+              </td>
+              <td className="border-b border-slate-200 px-3 py-2 font-semibold text-slate-900">
+                {play?.Play || "—"}
+              </td>
+              <td className="border-b border-slate-200 px-3 py-2 text-slate-700">
+                {play?.Conversion || "—"}
+              </td>
+              <td className="border-b border-slate-200 px-3 py-2 text-right font-semibold text-slate-900">
+                {Number.isFinite(Number(play?.Points)) ? play.Points : "—"}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function TeamComparisonTable({ game }) {
+  const rows = Array.isArray(game?.TeamComparisonStats) ? game.TeamComparisonStats : [];
+  if (!rows.length) return null;
+
+  const lineScore = Array.isArray(game?.LineScore) ? game.LineScore : [];
+  const homeLabel = lineScore[0]?.Abbr || "SA";
+  const opponentLabel = lineScore[1]?.Abbr || "Opp";
+
+  return (
+    <div className="overflow-x-auto rounded-lg border border-slate-200 bg-white shadow-sm">
+      <table className="w-full min-w-[420px] border-collapse text-sm">
+        <thead className="bg-slate-100 text-xs uppercase tracking-wide text-slate-600">
+          <tr>
+            <th className="border-b border-slate-200 px-3 py-2 text-left">Statistic</th>
+            <th className="border-b border-slate-200 px-3 py-2 text-right">{homeLabel}</th>
+            <th className="border-b border-slate-200 px-3 py-2 text-right">{opponentLabel}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((row, index) => (
+            <tr
+              key={`${row?.Label || "stat"}-${index}`}
+              className="odd:bg-white even:bg-slate-50"
+            >
+              <td className="border-b border-slate-200 px-3 py-2 font-semibold text-slate-700">
+                {row?.Label || "—"}
+              </td>
+              <td className="border-b border-slate-200 px-3 py-2 text-right font-semibold text-slate-900">
+                {row?.StAndrews || "—"}
+              </td>
+              <td className="border-b border-slate-200 px-3 py-2 text-right text-slate-700">
+                {row?.Opponent || "—"}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function GameBoxScore({ game }) {
+  const hasLineScore = Array.isArray(game?.LineScore) && game.LineScore.length > 0;
+  const hasScoringPlays = Array.isArray(game?.ScoringPlays) && game.ScoringPlays.length > 0;
+  const hasTeamStats =
+    Array.isArray(game?.TeamComparisonStats) && game.TeamComparisonStats.length > 0;
+
+  if (!hasLineScore && !hasScoringPlays && !hasTeamStats) return null;
+
+  return (
+    <div className="space-y-8">
+      {hasLineScore ? (
+        <section className="space-y-4">
+          <h2 className="text-2xl font-semibold text-slate-950">Score</h2>
+          <GameLineScore game={game} />
+        </section>
+      ) : null}
+
+      {hasScoringPlays ? (
+        <section className="space-y-4">
+          <h2 className="text-2xl font-semibold text-slate-950">Scoring Plays</h2>
+          <ScoringSummary game={game} />
+        </section>
+      ) : null}
+
+      {hasTeamStats ? (
+        <section className="space-y-4">
+          <h2 className="text-2xl font-semibold text-slate-950">Team Totals</h2>
+          <TeamComparisonTable game={game} />
+        </section>
+      ) : null}
+    </div>
   );
 }
 
@@ -204,6 +424,47 @@ export default function GameDetail() {
     );
   }
 
+  const useNewspaperLayout =
+    (game?.Recap ||
+      game?.RecapTitle ||
+      (Array.isArray(game?.LineScore) && game.LineScore.length) ||
+      (Array.isArray(game?.ScoringPlays) && game.ScoringPlays.length) ||
+      (Array.isArray(game?.TeamComparisonStats) && game.TeamComparisonStats.length));
+
+  if (useNewspaperLayout) {
+    return (
+      <div className="mx-auto max-w-6xl space-y-8 px-4 pb-10 pt-2 lg:pb-40">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <Link
+            to={`/athletics/football/seasons/${game.SeasonID || game.Season}`}
+            className="text-sm font-semibold text-blue-700 hover:underline"
+          >
+            Back to {formatSeasonLabel(game)}
+          </Link>
+
+          {game.GameUrl ? (
+            <a
+              href={game.GameUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm font-semibold text-blue-700 hover:underline"
+            >
+              MaxPreps box score
+            </a>
+          ) : null}
+        </div>
+
+        {error ? (
+          <div className="rounded border border-red-200 bg-red-50 p-3 text-red-700">{error}</div>
+        ) : null}
+
+        <GameRecap game={game} />
+        <GameBoxScore game={game} />
+        <GameVideo game={game} />
+      </div>
+    );
+  }
+
   return (
     <div className="mx-auto max-w-6xl space-y-8 px-4 pb-10 pt-2 lg:pb-40">
       <div className="flex flex-wrap items-center justify-between gap-3">
@@ -253,7 +514,11 @@ export default function GameDetail() {
         ))}
       </section>
 
+      <GameBoxScore game={game} />
+
       <GameVideo game={game} />
+
+      <GameRecap game={game} />
 
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold text-slate-950">Team Stats</h2>

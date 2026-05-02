@@ -170,12 +170,18 @@ export function resolvePlayerCareerKey(data, playerId) {
   if (playerCareerKey) return playerCareerKey;
 
   const gameRow = (data?.playerGameRows || []).find((row) => String(row?.PlayerID || "") === id);
-  return String(gameRow?.CareerKey || "");
+  if (gameRow?.CareerKey) return String(gameRow.CareerKey);
+
+  const seasonRow = (data?.playerSeasons || []).find((row) => String(row?.PlayerID || "") === id);
+  if (seasonRow?.CareerKey) return String(seasonRow.CareerKey);
+
+  const careerRow = (data?.playerCareers || []).find((row) => String(row?.PlayerID || "") === id);
+  return String(careerRow?.CareerKey || "");
 }
 
 export function getRelatedPlayersForCareer(data, careerKey) {
   const relatedIds = new Set(
-    (data?.playerGameRows || [])
+    [...(data?.playerGameRows || []), ...(data?.playerSeasons || []), ...(data?.playerCareers || [])]
       .filter((row) => String(row?.CareerKey || "") === String(careerKey || ""))
       .map((row) => String(row?.PlayerID || ""))
       .filter(Boolean)

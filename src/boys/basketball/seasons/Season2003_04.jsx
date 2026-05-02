@@ -36,8 +36,9 @@ export default function Season2003_04() {
       seasonId={2003}
       seasonLabel="2003-04"
       recapContent={recapContent}
-      scoringOnly
       statSourceLabel="Archive"
+      trimShootingColumns
+      hidePlayerStatsToggle
     />
   );
 }

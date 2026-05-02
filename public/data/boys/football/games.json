@@ -1252,6 +1252,288 @@
     "OpponentID": "sc-williamsburg-academy-kingstree"
   },
   {
+    "GameID": 20031031,
+    "Season": 2003,
+    "SeasonID": 2003,
+    "DisplaySeason": "2003",
+    "SourceSeasonLabel": "2003-04",
+    "Date": "2003-10-31",
+    "Time": "TBA",
+    "SourceEventTime": "",
+    "TeamID": "ga-savannah-st-andrews-saints-football",
+    "Team": "St. Andrew's Saints",
+    "Opponent": "Holly Hill Academy",
+    "OpponentLocation": "Holly Hill, SC",
+    "OpponentSlug": "holly-hill-academy",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "Away",
+    "Venue": "Holly Hill Academy",
+    "Notes": "",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 41,
+    "OpponentScore": 0,
+    "OpponentID": "sc-holly-hill-academy-holly-hill",
+    "FirstDowns": 8,
+    "RushingYards": 100,
+    "PassingYards": 79,
+    "PassingComp": 6,
+    "PassingAtt": 15,
+    "PassingInt": 0,
+    "OffensiveFumbles": 1,
+    "OffensiveFumblesLost": 0,
+    "PuntNum": 3,
+    "PuntYards": 120,
+    "PuntAverage": 40,
+    "Penalties": 5,
+    "PenaltyYards": 35,
+    "LineScore": [
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [14, 20, 7, 0],
+        "Total": 41
+      },
+      {
+        "Team": "Holly Hill",
+        "Abbr": "HHA",
+        "Scores": [0, 0, 0, 0],
+        "Total": 0
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "1",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "S",
+        "Play": "Davy Clay 3 run",
+        "Conversion": "Will Massey kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "1",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "S",
+        "Play": "Josh Smith 15 pass from Clay",
+        "Conversion": "Will Massey kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "S",
+        "Play": "Josh Smith 34 interception return",
+        "Conversion": "Will Massey kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "S",
+        "Play": "Beau Hinton 3 run",
+        "Conversion": "Will Massey kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "S",
+        "Play": "Will Massey 35 fumble recovery return",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "3",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "S",
+        "Play": "Beau Hinton 19 run",
+        "Conversion": "Will Massey kick",
+        "Points": 7
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "First Downs",
+        "StAndrews": "8",
+        "Opponent": "4"
+      },
+      {
+        "Label": "Rushing",
+        "StAndrews": "100",
+        "Opponent": "72"
+      },
+      {
+        "Label": "Passing",
+        "StAndrews": "79",
+        "Opponent": "46"
+      },
+      {
+        "Label": "Comp-Att-Int.",
+        "StAndrews": "6-15-0",
+        "Opponent": "3-5-3"
+      },
+      {
+        "Label": "Fumbles-Lost",
+        "StAndrews": "1-0",
+        "Opponent": "2-2"
+      },
+      {
+        "Label": "Punts",
+        "StAndrews": "3-40",
+        "Opponent": "4-50"
+      },
+      {
+        "Label": "Penalties",
+        "StAndrews": "5-35",
+        "Opponent": "4-9"
+      }
+    ],
+    "RecapTitle": "St. Andrew's 41, Holly Hill Academy 0",
+    "Recap": "HOLLY HILL, S.C. - St. Andrew's scored 34 points in the first half and coasted to a 41-0 victory over Holly Hill Academy Friday night in a SCISA 2-AA game.\n\nDavy Clay got the Saints off to a fast start, scoring on a 3-yard run and then passing 15 yards to Josh Smith for a 14-0 lead.\n\nSmith scored in the second quarter on a 34-yard interception return, Beau Hinton tallied on a 3-yard run and Will Massey scored on a 35-yard fumble recovery return to put SA up 34-0 at the half.\n\nThe only score in the second half came on Hinton's 19-yard run.\n\nSt. Andrew's is 5-3, 2-2 in region.\n\nHolly Hill is 3-6, 0-4 in region.",
+    "SourceDate": "2003-11-01",
+    "SourcePublication": "Savannah Morning News",
+    "SourceCitation": "Savannah Morning News, Nov. 1, 2003"
+  },
+  {
+    "GameID": 20031107,
+    "Season": 2003,
+    "SeasonID": 2003,
+    "DisplaySeason": "2003",
+    "SourceSeasonLabel": "2003-04",
+    "Date": "2003-11-07",
+    "Time": "TBA",
+    "SourceEventTime": "",
+    "TeamID": "ga-savannah-st-andrews-saints-football",
+    "Team": "St. Andrew's Saints",
+    "Opponent": "Robert E. Lee Academy",
+    "OpponentLocation": "Bishopville, SC",
+    "OpponentSlug": "lee-academy-bishopville-sc",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "Away",
+    "Venue": "Robert E. Lee Academy",
+    "Notes": "",
+    "GameType": "Regular Season",
+    "Result": "L",
+    "TeamScore": 20,
+    "OpponentScore": 21,
+    "OpponentID": "sc-robert-e-lee-academy-bishopville",
+    "FirstDowns": 7,
+    "RushingYards": 191,
+    "PassingYards": 50,
+    "PassingComp": 7,
+    "PassingAtt": 12,
+    "OffensiveFumblesLost": 0,
+    "PuntNum": 7,
+    "PuntYards": 252,
+    "PuntAverage": 36,
+    "Penalties": 6,
+    "PenaltyYards": 30,
+    "LineScore": [
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [7, 0, 7, 6],
+        "Total": 20
+      },
+      {
+        "Team": "Robert Lee",
+        "Abbr": "RL",
+        "Scores": [0, 6, 15, 0],
+        "Total": 21
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "1",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "S",
+        "Play": "Omer Glenn 60 run",
+        "Conversion": "Will Massey kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "Robert E. Lee Academy",
+        "TeamAbbr": "R",
+        "Play": "Trey Taylor 1 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "3",
+        "Team": "Robert E. Lee Academy",
+        "TeamAbbr": "R",
+        "Play": "Brown 64 run",
+        "Conversion": "Matt Beasley kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "3",
+        "Team": "Robert E. Lee Academy",
+        "TeamAbbr": "R",
+        "Play": "Brown 74 run",
+        "Conversion": "Brown run",
+        "Points": 8
+      },
+      {
+        "Quarter": "3",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "S",
+        "Play": "Beau Hinton 15 run",
+        "Conversion": "Will Massey kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "4",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "S",
+        "Play": "Josh Smith 2 pass from Davy Clay",
+        "Conversion": "kick failed",
+        "Points": 6
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "First Downs",
+        "StAndrews": "7",
+        "Opponent": "11"
+      },
+      {
+        "Label": "Rushing",
+        "StAndrews": "191",
+        "Opponent": "408"
+      },
+      {
+        "Label": "Passing",
+        "StAndrews": "50",
+        "Opponent": "54"
+      },
+      {
+        "Label": "Comp-Att-Int.",
+        "StAndrews": "7-12",
+        "Opponent": "4-9"
+      },
+      {
+        "Label": "Fumbles-Lost",
+        "StAndrews": "0",
+        "Opponent": "3"
+      },
+      {
+        "Label": "Punts",
+        "StAndrews": "7-36",
+        "Opponent": "4-35"
+      },
+      {
+        "Label": "Penalties",
+        "StAndrews": "6-30",
+        "Opponent": "7-40"
+      }
+    ],
+    "RecapTitle": "Robert Lee 21, St. Andrew's 20"
+  },
+  {
     "GameID": 20040820,
     "Season": 2004,
     "SeasonID": 2004,

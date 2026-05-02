@@ -639,7 +639,7 @@ export default function SeasonPage({ data, status = "" }) {
               {seasonGames.length === 0 ? (
                 <tr>
                   <td colSpan={5} className="px-3 py-4 text-center text-slate-600">
-                    No MaxPreps schedule data is available for this season yet.
+                    No schedule data is available for this season yet.
                   </td>
                 </tr>
               ) : (

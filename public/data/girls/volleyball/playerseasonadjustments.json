@@ -5,15 +5,112 @@
     "PlayerName": "Mary Wilkowski",
     "Games": 22,
     "Kills": 175,
-    "Source": "Savannah Morning News, Dec. 9, 2003"
+    "Aces": 79,
+    "TotalBlocks": 26,
+    "Source": "Savannah Morning News, Nov. 21, 2003; Savannah Morning News, Dec. 9, 2003",
+    "SourceStats": {
+      "Hitting": {
+        "MP": 22,
+        "Kills": 175,
+        "KPG": 7.95
+      },
+      "Aces": {
+        "MP": 22,
+        "Aces": 79,
+        "APG": 3.59
+      },
+      "Blocks": {
+        "MP": 22,
+        "Blocks": 26,
+        "BPG": 1.18
+      }
+    }
+  },
+  {
+    "Season": 2003,
+    "PlayerID": 200403,
+    "PlayerName": "Maggie Hinchey",
+    "Games": 14,
+    "Kills": 47,
+    "Source": "Savannah Morning News, Nov. 21, 2003",
+    "SourceStats": {
+      "Hitting": {
+        "MP": 14,
+        "Kills": 47,
+        "KPG": 3.36
+      }
+    }
   },
   {
     "Season": 2003,
     "PlayerID": 200404,
     "PlayerName": "Carie Bugos",
     "Games": 22,
+    "Kills": 114,
+    "Aces": 48,
     "Assists": 195,
     "ServingPoints": 145,
-    "Source": "Savannah Morning News, Dec. 9, 2003"
+    "Digs": 57,
+    "Source": "Savannah Morning News, Nov. 21, 2003; Savannah Morning News, Dec. 9, 2003",
+    "SourceNotes": "Nov. 21, 2003 final statistics list 17 MP for Carie Bugos in hitting, aces, and digs; Dec. 9, 2003 article lists 22 matches for assists and serving points.",
+    "SourceStats": {
+      "Hitting": {
+        "MP": 17,
+        "Kills": 114,
+        "KPG": 6.71
+      },
+      "Aces": {
+        "MP": 17,
+        "Aces": 48,
+        "APG": 2.82
+      },
+      "Digs": {
+        "MP": 17,
+        "Digs": 57,
+        "DPG": 3.353
+      }
+    }
+  },
+  {
+    "Season": 2003,
+    "PlayerID": 200405,
+    "PlayerName": "Leighanne Evans",
+    "Games": 22,
+    "Aces": 35,
+    "Assists": 204,
+    "Source": "Savannah Morning News, Nov. 21, 2003",
+    "SourceStats": {
+      "Assists": {
+        "MP": 22,
+        "Assists": 204,
+        "APG": 9.27
+      },
+      "Aces": {
+        "MP": 22,
+        "Aces": 35,
+        "APG": 1.59
+      }
+    }
+  },
+  {
+    "Season": 2003,
+    "PlayerID": 200406,
+    "PlayerName": "Becca Cooper",
+    "Games": 22,
+    "Kills": 143,
+    "TotalBlocks": 27,
+    "Source": "Savannah Morning News, Nov. 21, 2003",
+    "SourceStats": {
+      "Hitting": {
+        "MP": 22,
+        "Kills": 143,
+        "KPG": 6.5
+      },
+      "Blocks": {
+        "MP": 22,
+        "Blocks": 27,
+        "BPG": 1.23
+      }
+    }
   }
 ]

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-02T14:39:53.817Z",
-  "itemCount": 1486,
+  "generatedAt": "2026-05-02T16:04:12.567Z",
+  "itemCount": 1488,
   "items": [
     {
       "id": "athletics-home",
@@ -2897,7 +2897,7 @@
       "id": "boys-basketball-athlete-200003",
       "type": "athlete",
       "title": "Davy Clay",
-      "subtitle": "Boys Basketball athlete",
+      "subtitle": "Boys Basketball athlete - Class of 2004",
       "to": "/athletics/boys/basketball/players/200003",
       "keywords": [
         "Boys Basketball",
@@ -2907,7 +2907,9 @@
         "records",
         "Davy",
         "Clay",
-        "Clay Davy"
+        "Clay Davy",
+        "class of 2004",
+        "grad 2004"
       ]
     },
     {
@@ -3307,7 +3309,7 @@
       "id": "boys-basketball-athlete-200208",
       "type": "athlete",
       "title": "Josh Smith",
-      "subtitle": "Boys Basketball athlete",
+      "subtitle": "Boys Basketball athlete - Class of 2004",
       "to": "/athletics/boys/basketball/players/200208",
       "keywords": [
         "Boys Basketball",
@@ -3317,7 +3319,9 @@
         "records",
         "Josh",
         "Smith",
-        "Smith Josh"
+        "Smith Josh",
+        "class of 2004",
+        "grad 2004"
       ]
     },
     {
@@ -3340,7 +3344,7 @@
     {
       "id": "boys-basketball-athlete-200307",
       "type": "athlete",
-      "title": "Omar Glenn",
+      "title": "Omer Glenn",
       "subtitle": "Boys Basketball athlete",
       "to": "/athletics/boys/basketball/players/200307",
       "keywords": [
@@ -3349,9 +3353,9 @@
         "player",
         "stats",
         "records",
-        "Omar",
+        "Omer",
         "Glenn",
-        "Glenn Omar"
+        "Glenn Omer"
       ]
     },
     {
@@ -8935,8 +8939,8 @@
     {
       "id": "girls-basketball-athlete-200404",
       "type": "athlete",
-      "title": "Bugos",
-      "subtitle": "Girls Basketball athlete",
+      "title": "Carie Bugos",
+      "subtitle": "Girls Basketball athlete - Class of 2004",
       "to": "/athletics/girls/basketball/players/200404",
       "keywords": [
         "Girls Basketball",
@@ -8944,13 +8948,17 @@
         "player",
         "stats",
         "records",
-        "Bugos"
+        "Carie",
+        "Bugos",
+        "Bugos Carie",
+        "class of 2004",
+        "grad 2004"
       ]
     },
     {
       "id": "girls-basketball-athlete-200405",
       "type": "athlete",
-      "title": "Evans",
+      "title": "Leighanne Evans",
       "subtitle": "Girls Basketball athlete",
       "to": "/athletics/girls/basketball/players/200405",
       "keywords": [
@@ -8959,14 +8967,16 @@
         "player",
         "stats",
         "records",
-        "Evans"
+        "Leighanne",
+        "Evans",
+        "Evans Leighanne"
       ]
     },
     {
       "id": "girls-basketball-athlete-200406",
       "type": "athlete",
-      "title": "Cooper",
-      "subtitle": "Girls Basketball athlete",
+      "title": "Becca Cooper",
+      "subtitle": "Girls Basketball athlete - Class of 2004",
       "to": "/athletics/girls/basketball/players/200406",
       "keywords": [
         "Girls Basketball",
@@ -8974,7 +8984,11 @@
         "player",
         "stats",
         "records",
-        "Cooper"
+        "Becca",
+        "Cooper",
+        "Cooper Becca",
+        "class of 2004",
+        "grad 2004"
       ]
     },
     {
@@ -18343,6 +18357,23 @@
       ]
     },
     {
+      "id": "volleyball-athlete-200403",
+      "type": "athlete",
+      "title": "Maggie Hinchey",
+      "subtitle": "Volleyball athlete",
+      "to": "/athletics/volleyball/players/200403",
+      "keywords": [
+        "Volleyball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Maggie",
+        "Hinchey",
+        "Hinchey Maggie"
+      ]
+    },
+    {
       "id": "volleyball-athlete-200404",
       "type": "athlete",
       "title": "Carie Bugos",
@@ -24074,6 +24105,61 @@
       ]
     },
     {
+      "id": "girls-basketball-team-providence-christian-school",
+      "type": "team",
+      "title": "Providence Christian School",
+      "subtitle": "Girls Basketball opponent history - Savannah, GA",
+      "to": "/athletics/girls/basketball/records/opponents?team=Providence+Christian+School",
+      "keywords": [
+        "Girls Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Providence Christian School",
+        "Savannah",
+        "GA"
+      ]
+    },
+    {
+      "id": "girls-basketball-team-pinewood-christian-academy",
+      "type": "team",
+      "title": "Pinewood Christian Academy",
+      "subtitle": "Girls Basketball opponent history - Bellville, GA",
+      "to": "/athletics/girls/basketball/records/opponents?team=Pinewood+Christian+Academy",
+      "keywords": [
+        "Girls Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Pinewood Christian Academy",
+        "Pinewood Christian",
+        "Patriots",
+        "Bellville",
+        "GA"
+      ]
+    },
+    {
+      "id": "girls-basketball-team-robert-toombs-christian-academy",
+      "type": "team",
+      "title": "Robert Toombs Christian Academy",
+      "subtitle": "Girls Basketball opponent history - Lyons, GA",
+      "to": "/athletics/girls/basketball/records/opponents?team=Robert+Toombs+Christian+Academy",
+      "keywords": [
+        "Girls Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Robert Toombs Christian Academy",
+        "Robert Toombs",
+        "Crusaders",
+        "Lyons",
+        "GA"
+      ]
+    },
+    {
       "id": "girls-basketball-team-david-emanuel-academy",
       "type": "team",
       "title": "David Emanuel Academy",
@@ -24160,25 +24246,6 @@
         "Beaufort Academy",
         "Beaufort",
         "SC"
-      ]
-    },
-    {
-      "id": "girls-basketball-team-pinewood-christian-academy",
-      "type": "team",
-      "title": "Pinewood Christian Academy",
-      "subtitle": "Girls Basketball opponent history - Bellville, GA",
-      "to": "/athletics/girls/basketball/records/opponents?team=Pinewood+Christian+Academy",
-      "keywords": [
-        "Girls Basketball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Pinewood Christian Academy",
-        "Pinewood Christian",
-        "Patriots",
-        "Bellville",
-        "GA"
       ]
     },
     {
@@ -24411,25 +24478,6 @@
         "records",
         "Thomas Jefferson Academy",
         "Louisville",
-        "GA"
-      ]
-    },
-    {
-      "id": "girls-basketball-team-robert-toombs-christian-academy",
-      "type": "team",
-      "title": "Robert Toombs Christian Academy",
-      "subtitle": "Girls Basketball opponent history - Lyons, GA",
-      "to": "/athletics/girls/basketball/records/opponents?team=Robert+Toombs+Christian+Academy",
-      "keywords": [
-        "Girls Basketball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Robert Toombs Christian Academy",
-        "Robert Toombs",
-        "Crusaders",
-        "Lyons",
         "GA"
       ]
     },
@@ -25570,6 +25618,25 @@
       ]
     },
     {
+      "id": "football-team-robert-e-lee-academy",
+      "type": "team",
+      "title": "Robert E. Lee Academy",
+      "subtitle": "Football opponent history - Bishopville, SC",
+      "to": "/athletics/football/records/opponents?team=Robert+E.+Lee+Academy",
+      "keywords": [
+        "Football",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Robert E. Lee Academy",
+        "Lee Academy",
+        "Cavaliers",
+        "Bishopville",
+        "SC"
+      ]
+    },
+    {
       "id": "football-team-memorial-day-school",
       "type": "team",
       "title": "Memorial Day School",
@@ -25947,25 +26014,6 @@
         "John Paul II",
         "Golden Warriors",
         "Ridgeland",
-        "SC"
-      ]
-    },
-    {
-      "id": "football-team-robert-e-lee-academy",
-      "type": "team",
-      "title": "Robert E. Lee Academy",
-      "subtitle": "Football opponent history - Bishopville, SC",
-      "to": "/athletics/football/records/opponents?team=Robert+E.+Lee+Academy",
-      "keywords": [
-        "Football",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Robert E. Lee Academy",
-        "Lee Academy",
-        "Cavaliers",
-        "Bishopville",
         "SC"
       ]
     },

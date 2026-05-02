@@ -196,10 +196,6 @@ function CombinedTeamStatsTable({ sections }) {
   );
 }
 
-function formatWeight(value) {
-  return Number.isFinite(Number(value)) ? `${Number(value)} lbs` : "—";
-}
-
 function toFiniteNumber(value) {
   if (value == null || String(value).trim() === "") return null;
   const number = Number(value);
@@ -701,6 +697,66 @@ export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
         </section>
       ) : null}
 
+      <section id="roster" className="space-y-4">
+        <h2 className="text-2xl font-semibold">Roster</h2>
+
+        <div className="overflow-x-auto">
+          <table className="w-full table-auto border text-center text-[clamp(0.66rem,0.95vw,0.98rem)]">
+            <thead className="bg-gray-200 font-bold">
+              <tr>
+                <th className={`${recordTableStyles.headerCell} whitespace-nowrap`}>No.</th>
+                <th className={`${recordTableStyles.headerCell} md:text-left`}>Player</th>
+                <th className={`${recordTableStyles.headerCell} whitespace-nowrap`}>Grade</th>
+                <th className={`${recordTableStyles.headerCell} md:text-left`}>Pos.</th>
+              </tr>
+            </thead>
+            <tbody>
+              {rosterRows.length === 0 ? (
+                <tr>
+                  <td className={emptyStateClassName} colSpan={4}>
+                    No roster data is available for this season yet.
+                  </td>
+                </tr>
+              ) : (
+                rosterRows.map((player) => (
+                  <tr key={player.PlayerID}>
+                    <td className={`${recordTableStyles.bodyCell} whitespace-nowrap`}>
+                      {player.JerseyNumber || "—"}
+                    </td>
+                    <td className={`${recordTableStyles.bodyCell} md:text-left`}>
+                      {player.PlayerID ? (
+                        <Link
+                          to={footballPlayerPath(player.PlayerID)}
+                          className="text-blue-600 hover:underline"
+                        >
+                          {player.PlayerName || "—"}
+                        </Link>
+                      ) : (
+                        player.PlayerName || "—"
+                      )}
+                      {(player.Distinctions || []).length > 0 ? (
+                        <>
+                          {" "}
+                          <span className="text-slate-600">
+                            ({player.Distinctions.join("; ")})
+                          </span>
+                        </>
+                      ) : null}
+                    </td>
+                    <td className={`${recordTableStyles.bodyCell} whitespace-nowrap`}>
+                      {player.Grade || "—"}
+                    </td>
+                    <td className={`${recordTableStyles.bodyCell} md:text-left`}>
+                      {(player.Positions || []).join(", ") || "—"}
+                    </td>
+                  </tr>
+                ))
+              )}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
       <section id="schedule-results" className="space-y-4">
         <h2 className="text-2xl font-semibold">Schedule &amp; Results</h2>
 
@@ -775,70 +831,6 @@ export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
                       ) : (
                         ""
                       )}
-                    </td>
-                  </tr>
-                ))
-              )}
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <section id="roster" className="space-y-4">
-        <h2 className="text-2xl font-semibold">Roster</h2>
-
-        <div className="overflow-x-auto">
-          <table className="w-full table-auto border text-center text-[clamp(0.66rem,0.95vw,0.98rem)]">
-            <thead className="bg-gray-200 font-bold">
-              <tr>
-                <th className={`${recordTableStyles.headerCell} whitespace-nowrap`}>No.</th>
-                <th className={`${recordTableStyles.headerCell} md:text-left`}>Player</th>
-                <th className={`${recordTableStyles.headerCell} whitespace-nowrap`}>Grade</th>
-                <th className={`${recordTableStyles.headerCell} md:text-left`}>Pos.</th>
-                <th className={`${recordTableStyles.headerCell} whitespace-nowrap`}>Height</th>
-                <th className={`${recordTableStyles.headerCell} whitespace-nowrap`}>Weight</th>
-                <th className={`${recordTableStyles.headerCell} whitespace-nowrap`}>Captain</th>
-              </tr>
-            </thead>
-            <tbody>
-              {rosterRows.length === 0 ? (
-                <tr>
-                  <td className={emptyStateClassName} colSpan={7}>
-                    No roster data is available for this season yet.
-                  </td>
-                </tr>
-              ) : (
-                rosterRows.map((player) => (
-                  <tr key={player.PlayerID}>
-                    <td className={`${recordTableStyles.bodyCell} whitespace-nowrap`}>
-                      {player.JerseyNumber || "—"}
-                    </td>
-                    <td className={`${recordTableStyles.bodyCell} md:text-left`}>
-                      {player.PlayerID ? (
-                        <Link
-                          to={footballPlayerPath(player.PlayerID)}
-                          className="text-blue-600 hover:underline"
-                        >
-                          {player.PlayerName || "—"}
-                        </Link>
-                      ) : (
-                        player.PlayerName || "—"
-                      )}
-                    </td>
-                    <td className={`${recordTableStyles.bodyCell} whitespace-nowrap`}>
-                      {player.Grade || "—"}
-                    </td>
-                    <td className={`${recordTableStyles.bodyCell} md:text-left`}>
-                      {(player.Positions || []).join(", ") || "—"}
-                    </td>
-                    <td className={`${recordTableStyles.bodyCell} whitespace-nowrap`}>
-                      {player.Height || "—"}
-                    </td>
-                    <td className={`${recordTableStyles.bodyCell} whitespace-nowrap`}>
-                      {formatWeight(player.Weight)}
-                    </td>
-                    <td className={`${recordTableStyles.bodyCell} whitespace-nowrap`}>
-                      {player.Captain ? "Yes" : "—"}
                     </td>
                   </tr>
                 ))
