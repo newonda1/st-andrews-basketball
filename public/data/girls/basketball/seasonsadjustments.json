@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "SeasonID": 2002,
+    "overallW": 23,
+    "overallL": 3,
+    "regionW": null,
+    "regionL": null,
+    "homeW": null,
+    "homeL": null,
+    "awayW": null,
+    "awayL": null,
+    "tourneyW": null,
+    "tourneyL": null,
+    "playoffW": null,
+    "playoffL": null
+  }
+]

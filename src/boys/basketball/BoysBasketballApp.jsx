@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Route, Routes, useParams } from "react-router-dom";
 
 import AthleticsProgramShell from "../../components/AthleticsProgramShell";
+import ArticleDetailPage from "../../components/ArticleDetailPage";
 
 import Home from "./pages/Home";
 import FullCareerStats from "./pages/FullCareerStats";
@@ -242,6 +243,17 @@ export default function BoysBasketballApp() {
           <Route path="seasons/:seasonId" element={<SeasonPlaceholder />} />
 
           <Route path="yearly-results" element={<YearlyResults />} />
+          <Route
+            path="articles/:articleId"
+            element={
+              <ArticleDetailPage
+                articlesPath="/data/boys/basketball/articles.json"
+                basePath="/athletics/boys/basketball"
+                backLabel="boys' basketball"
+                backPath="/athletics/boys/basketball/seasons/1992-93"
+              />
+            }
+          />
           <Route path="games/:gameId" element={<GameDetailRouter />} />
           <Route path="players/:playerId" element={<PlayerPage />} />
 

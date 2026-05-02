@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
+import ArticleFeatureList from "../../../components/ArticleFeatureList";
 import {
   BOYS_BASKETBALL_ROSTERS_PATH,
   SCHOOLS_PATH,
@@ -15,12 +16,12 @@ function Season1992_93() {
   const [players, setPlayers] = useState([]);
   const [rosterEntries, setRosterEntries] = useState([]);
   const [adjustments, setAdjustments] = useState([]);
+  const [articles, setArticles] = useState([]);
   const [seasonTotals, setSeasonTotals] = useState([]);
   const [sortConfig, setSortConfig] = useState({ key: "jersey", direction: "asc" });
   const [slideIndex, setSlideIndex] = useState(0);
 
   const SEASON_ID = 1992; // 1992–93 season (games.json Season field should be 1992)
-  const ARTICLE_PATH = "/documents/boys/basketball/1992-93/chris-haslam-article.pdf";
 
   const galleryImages = useMemo(() => {
     const base = "/images/boys/basketball/seasons/1992-93";
@@ -53,7 +54,7 @@ function Season1992_93() {
 
   useEffect(() => {
     async function fetchData() {
-      const [gamesRes, statsRes, playersRes, rostersRes, schoolsRes, adjustmentsRes] =
+      const [gamesRes, statsRes, playersRes, rostersRes, schoolsRes, adjustmentsRes, articlesRes] =
         await Promise.all([
           fetch("/data/boys/basketball/games.json"),
           fetch("/data/boys/basketball/playergamestats.json"),
@@ -61,9 +62,18 @@ function Season1992_93() {
           fetch(BOYS_BASKETBALL_ROSTERS_PATH),
           fetch(SCHOOLS_PATH),
           fetch("/data/boys/basketball/adjustments.json").catch(() => null),
+          fetch("/data/boys/basketball/articles.json").catch(() => null),
         ]);
 
-      const [gamesDataRaw, statsData, playersData, rostersData, schoolsData, adjustmentsData] =
+      const [
+        gamesDataRaw,
+        statsData,
+        playersData,
+        rostersData,
+        schoolsData,
+        adjustmentsData,
+        articlesData,
+      ] =
         await Promise.all([
           gamesRes.json(),
           statsRes.json(),
@@ -71,6 +81,7 @@ function Season1992_93() {
           rostersRes.json(),
           schoolsRes.json(),
           adjustmentsRes?.ok ? adjustmentsRes.json() : [],
+          articlesRes?.ok ? articlesRes.json() : [],
         ]);
 
       const seasonGames = hydrateGamesWithSchools(gamesDataRaw, schoolsData)
@@ -88,6 +99,11 @@ function Season1992_93() {
       setPlayers(playersData);
       setRosterEntries(getRosterEntriesForSeason(rostersData, SEASON_ID));
       setAdjustments(seasonAdjustments);
+      setArticles(
+        (Array.isArray(articlesData) ? articlesData : []).filter(
+          (article) => Number(article.SeasonID) === Number(SEASON_ID)
+        )
+      );
     }
 
     fetchData();
@@ -293,18 +309,8 @@ function Season1992_93() {
               Georgia Christian.
             </p>
             <p>
-              The surviving archive for this season is unusually rich, and it also
-              includes a newspaper feature on Haslam during the championship run.
-              You can read it here:{" "}
-              <a
-                href={ARTICLE_PATH}
-                target="_blank"
-                rel="noreferrer"
-                className="text-blue-600 underline hover:text-blue-800"
-              >
-                Chris Haslam feature article
-              </a>
-              .
+              The surviving archive for this season is unusually rich, including a
+              newspaper feature on Haslam during the championship run.
             </p>
           </div>
 
@@ -324,6 +330,12 @@ function Season1992_93() {
           </dl>
         </div>
       </section>
+
+      <ArticleFeatureList
+        articles={articles}
+        basePath="/athletics/boys/basketball"
+        heading="Featured Articles"
+      />
 
       <section className="space-y-3">
         <h2 className="text-2xl font-semibold mt-2 mb-2">Season Images</h2>

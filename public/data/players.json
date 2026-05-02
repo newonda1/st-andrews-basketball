@@ -675,7 +675,21 @@
     "PlayerID": 200003,
     "FirstName": "Davy",
     "LastName": "Clay",
-    "GradYear": 2004
+    "GradYear": 2004,
+    "ProfileBlurbs": [
+      {
+        "Sport": "Boys Basketball",
+        "SeasonID": 2003,
+        "SourceDate": "2004-01-23",
+        "SourcePublication": "Savannah Morning News",
+        "SourceTitle": "Athlete Spotlight: Davy Clay",
+        "Headline": "Athlete Spotlight: Davy Clay",
+        "Image": "/images/boys/basketball/seasons/2003-04/davy-clay-athlete-spotlight-2004-01-23.png",
+        "ImageAlt": "Savannah Morning News Athlete Spotlight clipping for Davy Clay from Jan. 23, 2004",
+        "Text": "The Saints point guard averaged an unusual double-double in points and steals, scoring 12.5 points per game while leading the Coastal Empire with 10.5 steals per game. The January 23, 2004 Savannah Morning News spotlight also noted that Clay, a 5-foot-8, 135-pound senior, led the area in assists at 7.4 per game.",
+        "Quote": "Steals are all about being in the right spot at the right time and anticipating passes. I just read people's eyes. And with my size, they always overlook me. Always."
+      }
+    ]
   },
   {
     "PlayerID": 200004,
@@ -4467,7 +4481,7 @@
     "PlayerName": "Leighanne Evans",
     "FirstName": "Leighanne",
     "LastName": "Evans",
-    "GradYear": null,
+    "GradYear": 2004,
     "Gender": "Girls"
   },
   {
@@ -4487,5 +4501,37 @@
         "Text": "Cooper, named to the SCISA AA All-State team, led by example as the strongest hitter on the Saints' court. Her talent made younger players on the St. Andrew's team step up their own performance. St. Andrew's won the SCISA Region IIAA championship (10-0), and finished 19-3 overall and the SCISA AA State championship runner up."
       }
     ]
+  },
+  {
+    "PlayerID": 200407,
+    "PlayerName": "S. Griffin",
+    "FirstName": "S.",
+    "LastName": "Griffin",
+    "GradYear": null,
+    "Gender": "Girls"
+  },
+  {
+    "PlayerID": 200408,
+    "PlayerName": "M. Griffin",
+    "FirstName": "M.",
+    "LastName": "Griffin",
+    "GradYear": null,
+    "Gender": "Girls"
+  },
+  {
+    "PlayerID": 200409,
+    "PlayerName": "Aimone",
+    "FirstName": "",
+    "LastName": "Aimone",
+    "GradYear": null,
+    "Gender": "Girls"
+  },
+  {
+    "PlayerID": 200410,
+    "PlayerName": "Miller",
+    "FirstName": "",
+    "LastName": "Miller",
+    "GradYear": null,
+    "Gender": "Girls"
   }
 ]

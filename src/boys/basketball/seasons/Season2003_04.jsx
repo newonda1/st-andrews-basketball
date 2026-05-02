@@ -27,6 +27,19 @@ const recapContent = (
       table below preserve the game-by-game results and scoring totals currently
       available for the season.
     </p>
+    <figure className="mt-5 overflow-hidden rounded border border-gray-200 bg-gray-50">
+      <img
+        src="/images/boys/basketball/seasons/2003-04/davy-clay-athlete-spotlight-2004-01-23.png"
+        alt="Savannah Morning News Athlete Spotlight clipping for Davy Clay from Jan. 23, 2004"
+        className="w-full object-contain"
+        loading="lazy"
+      />
+      <figcaption className="px-4 py-3 text-sm leading-6 text-gray-700">
+        The Jan. 23, 2004 Savannah Morning News Athlete Spotlight featured senior
+        point guard Davy Clay, noting his unusual points-and-steals double-double
+        average and his place atop the Coastal Empire leaders in steals and assists.
+      </figcaption>
+    </figure>
   </>
 );
 

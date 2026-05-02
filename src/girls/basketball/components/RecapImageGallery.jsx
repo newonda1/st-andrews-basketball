@@ -60,7 +60,7 @@ function RecapImageGallery({ images, title }) {
     <>
       <div className="mt-4 flex flex-wrap justify-center gap-4">
         {normalizedImages.map((image) => (
-          <figure key={image.src} className="mx-auto w-full max-w-5xl space-y-2">
+          <figure key={image.src} className="mx-auto w-full max-w-3xl space-y-2">
             <button
               type="button"
               onClick={() => openImage(image)}

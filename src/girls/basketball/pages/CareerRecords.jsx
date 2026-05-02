@@ -371,6 +371,7 @@ export default function CareerRecords() {
           const playerId = String(row.PlayerID);
           const totals = ensurePlayer(playerId);
 
+          totals.GamesPlayed += safeNum(row.GamesPlayed);
           totals.Points += safeNum(row.Points);
           totals.Rebounds += safeNum(row.Rebounds);
           totals.Assists += safeNum(row.Assists);
@@ -382,6 +383,8 @@ export default function CareerRecords() {
           totals.ThreePA += safeNum(row.ThreePA);
           totals.FTM += safeNum(row.FTM);
           totals.FTA += safeNum(row.FTA);
+          totals.DoubleDoubles += safeNum(row.DoubleDoubles);
+          totals.TripleDoubles += safeNum(row.TripleDoubles);
         }
 
         for (const row of careerAdjustments) {
@@ -390,6 +393,7 @@ export default function CareerRecords() {
           const playerId = String(row.PlayerID);
           const totals = ensurePlayer(playerId);
 
+          totals.GamesPlayed += safeNum(row.GamesPlayed);
           totals.Points += safeNum(row.Points);
           totals.Rebounds += safeNum(row.Rebounds);
           totals.Assists += safeNum(row.Assists);
@@ -402,6 +406,8 @@ export default function CareerRecords() {
           totals.ThreePA += safeNum(row.ThreePA);
           totals.FTM += safeNum(row.FTM);
           totals.FTA += safeNum(row.FTA);
+          totals.DoubleDoubles += safeNum(row.DoubleDoubles);
+          totals.TripleDoubles += safeNum(row.TripleDoubles);
         }
 
         const careerTotals = Array.from(careerMap.values()).map((total) => {

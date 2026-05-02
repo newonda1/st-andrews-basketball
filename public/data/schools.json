@@ -712,7 +712,13 @@
     "City": "Savannah",
     "State": "GA",
     "ShortName": "Memorial Day",
-    "Mascot": "Matadors"
+    "Mascot": "Matadors",
+    "PrimaryColor": "#011689",
+    "SecondaryColor": "#CF152D",
+    "WebsiteUrl": "https://www.memorialdayschool.com/",
+    "AthleticsUrl": "https://www.memorialdayschool.com/athletics/athletics-at-memorial",
+    "LogoPath": "/images/schools/logos/ga-memorial-day-school-savannah.png",
+    "LogoSourceUrl": "https://www.memorialdayschool.com/images/matador-logo.png"
   },
   {
     "SchoolID": "ga-midtown-high-school-atlanta",
@@ -849,13 +855,22 @@
     "Name": "Providence Christian",
     "City": "Savannah",
     "State": "GA",
-    "Mascot": "Lions"
+    "Mascot": "Lions",
+    "PrimaryColor": "#28358B",
+    "SecondaryColor": "#FCBA63",
+    "LogoPath": "/images/schools/logos/ga-providence-christian-school-savannah.png",
+    "LogoSourceUrl": "https://web.archive.org/web/20180903062004im_/http://providencechristian.org/images/logoOnly.gif"
   },
   {
     "SchoolID": "ga-providence-christian-school-savannah",
     "Name": "Providence Christian School",
     "City": "Savannah",
-    "State": "GA"
+    "State": "GA",
+    "Mascot": "Lions",
+    "PrimaryColor": "#28358B",
+    "SecondaryColor": "#FCBA63",
+    "LogoPath": "/images/schools/logos/ga-providence-christian-school-savannah.png",
+    "LogoSourceUrl": "https://web.archive.org/web/20180903062004im_/http://providencechristian.org/images/logoOnly.gif"
   },
   {
     "SchoolID": "ga-richmond-hill-richmond-hill",
@@ -1404,7 +1419,14 @@
     "SchoolID": "sc-beaufort-academy-beaufort",
     "Name": "Beaufort Academy",
     "City": "Beaufort",
-    "State": "SC"
+    "State": "SC",
+    "Mascot": "Eagles",
+    "PrimaryColor": "#6AAFE6",
+    "SecondaryColor": "#063865",
+    "WebsiteUrl": "https://www.beaufortacademy.org/",
+    "AthleticsUrl": "https://www.beaufortacademy.org/athletics/welcome-to-ba-athletics",
+    "LogoPath": "/images/schools/logos/sc-beaufort-academy-beaufort.png",
+    "LogoSourceUrl": "https://bbk12e1-cdn.myschoolcdn.com/ftpimages/2511/logo/BA%20Monogram%20landing%20page%20%281%29.png"
   },
   {
     "SchoolID": "sc-bluffton-bluffton",
@@ -1591,7 +1613,14 @@
     "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island",
     "Name": "Hilton Head Christian Academy",
     "City": "Hilton Head Island",
-    "State": "SC"
+    "State": "SC",
+    "Mascot": "Eagles",
+    "PrimaryColor": "#1C3463",
+    "SecondaryColor": "#C6BF78",
+    "WebsiteUrl": "https://www.hhca.org/",
+    "AthleticsUrl": "https://www.hhca.org/athletics/insideathletics/overview",
+    "LogoPath": "/images/schools/logos/sc-hilton-head-christian-academy-hilton-head-island.png",
+    "LogoSourceUrl": "https://www.hhca.org/fs/resource-manager/view/0e54e90b-68ca-4f56-911b-b7fb12cd830a"
   },
   {
     "SchoolID": "sc-hilton-head-island-high-school-hilton-head-island",
@@ -1644,7 +1673,11 @@
     "SchoolID": "sc-james-island-christian-school-charleston",
     "Name": "James Island Christian School",
     "City": "Charleston",
-    "State": "SC"
+    "State": "SC",
+    "Mascot": "Lions",
+    "PrimaryColor": "#1B1B3F",
+    "SecondaryColor": "#5FB3F8",
+    "LogoPath": "/images/schools/logos/sc-james-island-christian-school-charleston.png"
   },
   {
     "SchoolID": "sc-jefferson-davis-academy-blackville",

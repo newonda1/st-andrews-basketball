@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { useParams, Link } from "react-router-dom";
+import ArticleFeatureList from "../../../components/ArticleFeatureList";
 import {
   BOYS_BASKETBALL_ROSTERS_PATH,
   SCHOOLS_PATH,
@@ -117,6 +118,12 @@ const isRegionGame = (game) => {
   return false;
 };
 
+const getBasketballProfileBlurbs = (player) => {
+  return (player?.ProfileBlurbs || []).filter(
+    (entry) => String(entry?.Sport || "").toLowerCase() === "boys basketball"
+  );
+};
+
 function PlayerPage() {
   const { playerId } = useParams();
 
@@ -124,6 +131,7 @@ function PlayerPage() {
   const [games, setGames] = useState([]);
   const [seasonRosters, setSeasonRosters] = useState([]);
   const [playerStats, setPlayerStats] = useState([]);
+  const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
 
   // Toggle: totals vs per game
@@ -133,12 +141,14 @@ function PlayerPage() {
   useEffect(() => {
     async function loadData() {
       try {
-        const [playersRes, gamesRes, statsRes, rostersRes, schoolsRes] = await Promise.all([
+        const [playersRes, gamesRes, statsRes, rostersRes, schoolsRes, articlesRes] =
+          await Promise.all([
           fetch("/data/players.json"),
           fetch("/data/boys/basketball/games.json"),
           fetch("/data/boys/basketball/playergamestats.json"),
           fetch(BOYS_BASKETBALL_ROSTERS_PATH),
           fetch(SCHOOLS_PATH),
+          fetch("/data/boys/basketball/articles.json").catch(() => null),
         ]);
 
         if (!playersRes.ok) throw new Error(`players.json ${playersRes.status}`);
@@ -147,18 +157,21 @@ function PlayerPage() {
         if (!rostersRes.ok) throw new Error(`seasonrosters.json ${rostersRes.status}`);
         if (!schoolsRes.ok) throw new Error(`schools.json ${schoolsRes.status}`);
 
-        const [playersData, gamesDataRaw, statsData, rostersData, schoolsData] = await Promise.all([
+        const [playersData, gamesDataRaw, statsData, rostersData, schoolsData, articlesData] =
+          await Promise.all([
           playersRes.json(),
           gamesRes.json(),
           statsRes.json(),
           rostersRes.json(),
           schoolsRes.json(),
+          articlesRes?.ok ? articlesRes.json() : Promise.resolve([]),
         ]);
 
         setPlayers(playersData);
         setGames(hydrateGamesWithSchools(gamesDataRaw, schoolsData));
         setSeasonRosters(Array.isArray(rostersData) ? rostersData : []);
         setPlayerStats(statsData);
+        setArticles(Array.isArray(articlesData) ? articlesData : []);
       } catch (err) {
         console.error("Error loading player page data:", err);
       } finally {
@@ -295,6 +308,20 @@ function PlayerPage() {
     return base;
   }, [regionSeasonTotals]);
 
+  const profileBlurbs = useMemo(
+    () => getBasketballProfileBlurbs(player),
+    [player]
+  );
+
+  const relatedArticles = useMemo(() => {
+    const idNum = Number(playerId);
+    if (!Number.isFinite(idNum)) return [];
+
+    return articles.filter((article) =>
+      (article.PlayerIDs || []).some((articlePlayerId) => Number(articlePlayerId) === idNum)
+    );
+  }, [articles, playerId]);
+
   const gameLogsBySeason = useMemo(() => {
     return statsWithGameInfo.reduce((acc, row) => {
       const seasonKey = row.season || "Unknown";
@@ -385,6 +412,55 @@ function PlayerPage() {
           )}
         </div>
       </header>
+
+      <ArticleFeatureList
+        articles={relatedArticles}
+        basePath="/athletics/boys/basketball"
+        heading="Featured Articles"
+      />
+
+      {profileBlurbs.length > 0 && (
+        <section className="space-y-4">
+          {profileBlurbs.map((blurb, index) => (
+            <article
+              key={`${blurb.SourceDate || "source"}-${index}`}
+              className="overflow-hidden rounded border border-blue-100 bg-blue-50 text-slate-800"
+            >
+              {blurb.Image && (
+                <img
+                  src={blurb.Image}
+                  alt={blurb.ImageAlt || blurb.Headline || `${playerName} profile clipping`}
+                  className="w-full border-b border-blue-100 object-contain"
+                  loading="lazy"
+                />
+              )}
+              <div className="px-4 py-4">
+                {blurb.Headline && (
+                  <h2 className="mb-2 text-lg font-bold text-slate-950">
+                    {blurb.Headline}
+                  </h2>
+                )}
+                {blurb.Text && <p className="text-base leading-7">{blurb.Text}</p>}
+                {blurb.Quote && (
+                  <blockquote className="mt-3 border-l-4 border-blue-700 pl-3 text-base italic leading-7 text-slate-700">
+                    &ldquo;{blurb.Quote}&rdquo;
+                  </blockquote>
+                )}
+                {[blurb.SourcePublication, blurb.SourceDate, blurb.SourceTitle]
+                  .filter(Boolean)
+                  .length > 0 && (
+                  <div className="mt-3 text-sm font-medium leading-6 text-slate-600">
+                    Source: {[blurb.SourcePublication, blurb.SourceDate]
+                      .filter(Boolean)
+                      .join(", ")}
+                    {blurb.SourceTitle ? `, "${blurb.SourceTitle}"` : ""}
+                  </div>
+                )}
+              </div>
+            </article>
+          ))}
+        </section>
+      )}
 
       {/* Overall career totals */}
       <section>

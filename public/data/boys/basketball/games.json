@@ -6102,24 +6102,26 @@
     "LocationType": "Unknown",
     "GameType": "Non-Region",
     "Result": "L",
-    "TeamScore": 32,
-    "OpponentScore": 46,
+    "TeamScore": 41,
+    "OpponentScore": 68,
     "Season": 2003,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "RecapTitle": "Hilton Head Prep Stays Unbeaten",
+    "Recap": "Hilton Head Prep defeated St. Andrew's 68-41 in a SCISA matchup reported in the Jan. 8, 2004 Savannah Morning News. Senior forward Dan DiGenova scored 20 points and point guard Niles Murphy added 18 for the undefeated Dolphins, who led 33-17 at halftime and improved to 10-0. Davy Clay led St. Andrew's with 12 points, while Cass Sawyer added 9 as the Saints moved to 2-5."
   },
   {
     "GameID": 20040109,
     "OpponentID": "sc-holly-hill-academy-holly-hill",
     "Opponent": "Holly Hill Academy",
-    "LocationType": "Unknown",
+    "LocationType": "Away",
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 58,
     "OpponentScore": 43,
     "Season": 2003,
     "IsComplete": "Yes",
-    "RecapTitle": "Clay Sparks Holly Hill Win",
-    "Recap": "A Savannah Morning News boys results item credited Davy Clay with 14 points and 15 steals as St. Andrew's beat Holly Hill 58-43 in SCISA Region 2-AA play. The team sheet also shows 19 points from Josh Smith and 22 from Cass Sawyer."
+    "RecapTitle": "Sawyer, Clay Lead Region Win at Holly Hill",
+    "Recap": "Cass Sawyer scored 22 points and grabbed 12 rebounds, while Davy Clay added 14 points and 15 steals as St. Andrew's opened SCISA 2-AA play with a 58-43 road win at Holly Hill. Josh Smith added 19 points for the Saints, who led 28-20 at halftime and improved to 3-5 overall and 1-0 in region play. The recap was reported in the January 10, 2004 Savannah Morning News."
   },
   {
     "GameID": 20040113,
@@ -6132,8 +6134,8 @@
     "OpponentScore": 52,
     "Season": 2003,
     "IsComplete": "Yes",
-    "RecapTitle": "Smith Leads Road Region Win",
-    "Recap": "NewsBank results for a Savannah Morning News prep roundup credited Josh Smith with 15 points and 13 rebounds in a 59-52 St. Andrew's win at Charleston Collegiate. The team scoring sheet matches the 59-52 final."
+    "RecapTitle": "Smith Leads Saints Past Charleston Collegiate",
+    "Recap": "Josh Smith had 15 points and 13 rebounds to pace St. Andrew's to a 59-52 road win at Charleston Collegiate in SCISA 2-AA play. Cass Sawyer added 13 points for the Saints, who led 32-19 at halftime and improved to 4-5 overall and 2-0 in region play. Alston Keith led Charleston Collegiate with 25 points. The recap was reported in the January 10, 2004 Savannah Morning News."
   },
   {
     "GameID": 20040116,
@@ -6146,8 +6148,15 @@
     "OpponentScore": 53,
     "Season": 2003,
     "IsComplete": "Yes",
-    "RecapTitle": "Smith Double-Double Beats James Island",
-    "Recap": "A Savannah Morning News roundup noted Josh Smith led St. Andrew's with 15 points and 15 rebounds in a 71-53 victory over James Island Christian. Cass Sawyer added 22 points according to the team spreadsheet."
+    "RecapTitle": "Sawyer, Smith Lead Region Win Over James Island Christian",
+    "Recap": "Cass Sawyer scored 22 points and Josh Smith added 15 points and 15 rebounds as St. Andrew's defeated James Island Christian 71-53 in SCISA Region 2-AA play. Omar Glenn added 11 points for the Saints, who led 35-17 at halftime and improved to 5-5 overall and 3-0 in region play.",
+    "RecapImages": [
+      {
+        "src": "/images/boys/basketball/seasons/2003-04/james-island-christian-2004-01-16-clipping.png",
+        "alt": "Newspaper clipping for St. Andrew's 71, James Island Christian 53 on Jan. 16, 2004",
+        "caption": "Newspaper clipping covering the Jan. 16, 2004 James Island Christian game."
+      }
+    ]
   },
   {
     "GameID": 20040117,
@@ -6156,12 +6165,19 @@
     "LocationType": "Home",
     "GameType": "Region",
     "Result": "W",
-    "TeamScore": 75,
+    "TeamScore": 76,
     "OpponentScore": 59,
     "Season": 2003,
     "IsComplete": "Yes",
     "RecapTitle": "Saints Move Into Region Lead",
-    "Recap": "The Savannah Morning News reported that St. Andrew's moved to the top of SCISA Region 2-AA with a home win over Charleston Collegiate at Compton Center. The story highlighted a 21-6 third-quarter push fueled by full-court pressure, with Davy Clay finishing near a triple-double and Beau Hinton, Josh Smith and Cass Sawyer also in double figures. The newspaper score differed by one point; the JSON uses the 75-59 final from the team sheet."
+    "Recap": "St. Andrew's moved into the SCISA Region 2-AA lead with a 76-59 win over Charleston Collegiate at the Compton Center, improving to 6-5 overall and 4-0 in region play. Davy Clay led the Saints with 16 points, 10 assists and nine steals, while Beau Hinton scored 15 points and helped spark St. Andrew's before halftime. The Saints led 37-34 at the break, then opened the third quarter on a 21-6 run fueled by full-court pressure. The recap was reported in the January 18, 2004 Savannah Morning News.",
+    "RecapImages": [
+      {
+        "src": "/images/boys/basketball/seasons/2003-04/charleston-collegiate-2004-01-17-clipping.png",
+        "alt": "Newspaper clipping for St. Andrew's 76, Charleston Collegiate 59 on Jan. 17, 2004",
+        "caption": "Savannah Morning News clipping from Jan. 18, 2004, covering the Jan. 17 Charleston Collegiate game."
+      }
+    ]
   },
   {
     "GameID": 20040120,
@@ -6173,7 +6189,16 @@
     "TeamScore": 52,
     "OpponentScore": 57,
     "Season": 2003,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "RecapTitle": "Beaufort Academy Edges Saints in Overtime",
+    "Recap": "Beaufort Academy handed St. Andrew's its first SCISA Region 2-AA loss, beating the Saints 57-52 in overtime in a matchup of region unbeatens. Cass Sawyer led St. Andrew's with 16 points, Davy Clay had 12 points and 16 steals, and Beau Hinton added 10. The game was tied 48-48 at the end of regulation after Beaufort Academy led 36-29 at halftime.",
+    "RecapImages": [
+      {
+        "src": "/images/boys/basketball/seasons/2003-04/beaufort-academy-2004-01-20-clipping.png",
+        "alt": "Newspaper clipping for Beaufort Academy 57, St. Andrew's 52 on Jan. 20, 2004",
+        "caption": "Newspaper clipping covering the Jan. 20, 2004 Beaufort Academy game."
+      }
+    ]
   },
   {
     "GameID": 20040123,
@@ -6185,7 +6210,16 @@
     "TeamScore": 62,
     "OpponentScore": 49,
     "Season": 2003,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "RecapTitle": "Smith Leads Saints Past Colleton Prep",
+    "Recap": "Josh Smith led all scorers with 22 points as St. Andrew's beat Colleton Prep 62-49 in SCISA Region 2-AA play. Cass Sawyer added 14 points and Davy Clay scored 12 for the Saints, who led 29-24 at halftime and improved to 7-6 overall and 5-1 in region play. Josh Gibbs led Colleton Prep with 17 points.",
+    "RecapImages": [
+      {
+        "src": "/images/boys/basketball/seasons/2003-04/colleton-prep-2004-01-23-clipping.png",
+        "alt": "Newspaper clipping for St. Andrew's 62, Colleton Prep 49 on Jan. 23, 2004",
+        "caption": "Newspaper clipping covering the Jan. 23, 2004 Colleton Prep game."
+      }
+    ]
   },
   {
     "GameID": 20040124,
@@ -6197,36 +6231,42 @@
     "TeamScore": 56,
     "OpponentScore": 59,
     "Season": 2003,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "RecapTitle": "Memorial Day Outlasts St. Andrew's",
+    "Recap": "Memorial Day received a combined 40 points from James and Alex Moorman to outlast St. Andrew's 59-56 in a non-region matchup. Beau Hinton led the Saints with 15 points, Josh Smith scored 12, and Davy Clay added 11. Memorial Day led 29-19 at halftime and improved to 18-5.",
+    "RecapImages": [
+      {
+        "src": "/images/boys/basketball/seasons/2003-04/memorial-day-2004-01-24-clipping.png",
+        "alt": "Newspaper clipping for Memorial Day 59, St. Andrew's 56 on Jan. 24, 2004",
+        "caption": "Newspaper clipping covering the Jan. 24, 2004 Memorial Day game."
+      }
+    ]
   },
   {
     "GameID": 20040127,
     "OpponentID": "sc-patrick-henry-academy-estill",
     "Opponent": "Patrick Henry Academy",
     "LocationType": "Unknown",
-    "GameType": "Region",
+    "GameType": "Non-Region",
     "Result": "W",
     "TeamScore": 67,
     "OpponentScore": 57,
     "Season": 2003,
-    "IsComplete": "Yes"
-  },
-  {
-    "GameID": 20040130,
-    "OpponentID": "sc-hilton-head-academy-hilton-head-island",
-    "Opponent": "Hilton Head Academy",
-    "LocationType": "Unknown",
-    "GameType": "Region",
-    "Result": "W",
-    "TeamScore": 71,
-    "OpponentScore": 60,
-    "Season": 2003,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "RecapTitle": "Clay's Six Threes Spark Patrick Henry Win",
+    "Recap": "Davy Clay hit six 3-pointers on his way to 27 points and added 12 steals as St. Andrew's rallied past Patrick Henry 67-57 in a non-region game. Cass Sawyer scored 13 and Beau Hinton added 10 for the Saints, who came back from a four-point deficit with three minutes left and improved to 8-7.",
+    "RecapImages": [
+      {
+        "src": "/images/boys/basketball/seasons/2003-04/patrick-henry-2004-01-27-clipping.png",
+        "alt": "Newspaper clipping for St. Andrew's 67, Patrick Henry 57 on Jan. 27, 2004",
+        "caption": "Newspaper clipping covering the Jan. 27, 2004 Patrick Henry game."
+      }
+    ]
   },
   {
     "GameID": 20040131,
-    "OpponentID": "sc-hilton-head-academy-hilton-head-island",
-    "Opponent": "Hilton Head Academy",
+    "OpponentID": "sc-holly-hill-academy-holly-hill",
+    "Opponent": "Holly Hill Academy",
     "LocationType": "Unknown",
     "GameType": "Region",
     "Result": "L",

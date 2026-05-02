@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { useParams, Link } from "react-router-dom";
+import ArticleFeatureList from "../../../components/ArticleFeatureList";
 import {
   GIRLS_BASKETBALL_ROSTERS_PATH,
   SCHOOLS_PATH,
@@ -124,6 +125,7 @@ function PlayerPage() {
   const [games, setGames] = useState([]);
   const [seasonRosters, setSeasonRosters] = useState([]);
   const [playerStats, setPlayerStats] = useState([]);
+  const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
 
   // Toggle: totals vs per game
@@ -133,12 +135,14 @@ function PlayerPage() {
   useEffect(() => {
     async function loadData() {
       try {
-        const [playersRes, gamesRes, statsRes, rostersRes, schoolsRes] = await Promise.all([
+        const [playersRes, gamesRes, statsRes, rostersRes, schoolsRes, articlesRes] =
+          await Promise.all([
           fetch("/data/girls/basketball/players.json"),
           fetch("/data/girls/basketball/games.json"),
           fetch("/data/girls/basketball/playergamestats.json"),
           fetch(GIRLS_BASKETBALL_ROSTERS_PATH),
           fetch(SCHOOLS_PATH),
+          fetch("/data/girls/basketball/articles.json").catch(() => null),
         ]);
 
         if (!playersRes.ok) throw new Error(`players.json ${playersRes.status}`);
@@ -147,18 +151,21 @@ function PlayerPage() {
         if (!rostersRes.ok) throw new Error(`seasonrosters.json ${rostersRes.status}`);
         if (!schoolsRes.ok) throw new Error(`schools.json ${schoolsRes.status}`);
 
-        const [playersData, gamesDataRaw, statsData, rostersData, schoolsData] = await Promise.all([
+        const [playersData, gamesDataRaw, statsData, rostersData, schoolsData, articlesData] =
+          await Promise.all([
           playersRes.json(),
           gamesRes.json(),
           statsRes.json(),
           rostersRes.json(),
           schoolsRes.json(),
+          articlesRes?.ok ? articlesRes.json() : Promise.resolve([]),
         ]);
 
         setPlayers(playersData);
         setGames(hydrateGamesWithSchools(gamesDataRaw, schoolsData));
         setSeasonRosters(Array.isArray(rostersData) ? rostersData : []);
         setPlayerStats(statsData);
+        setArticles(Array.isArray(articlesData) ? articlesData : []);
       } catch (err) {
         console.error("Error loading player page data:", err);
       } finally {
@@ -251,6 +258,15 @@ function PlayerPage() {
 
     return base;
   }, [seasonTotals]);
+
+  const relatedArticles = useMemo(() => {
+    const idNum = Number(playerId);
+    if (!Number.isFinite(idNum)) return [];
+
+    return articles.filter((article) =>
+      (article.PlayerIDs || []).some((articlePlayerId) => Number(articlePlayerId) === idNum)
+    );
+  }, [articles, playerId]);
 
   // 🔹 NEW: Region-only season & career totals
   const regionSeasonTotals = useMemo(() => {
@@ -385,6 +401,12 @@ function PlayerPage() {
           )}
         </div>
       </header>
+
+      <ArticleFeatureList
+        articles={relatedArticles}
+        basePath="/athletics/girls/basketball"
+        heading="Featured Articles"
+      />
 
       {/* Overall career totals */}
       <section>

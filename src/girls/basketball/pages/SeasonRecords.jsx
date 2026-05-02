@@ -353,6 +353,7 @@ export default function SeasonRecords() {
           }
 
           const entry = seasonMap[key];
+          entry.GamesPlayed += safeNum(adjustment.GamesPlayed);
           entry.Points += safeNum(adjustment.Points);
           entry.Rebounds += safeNum(adjustment.Rebounds);
           entry.Assists += safeNum(adjustment.Assists);
@@ -365,6 +366,8 @@ export default function SeasonRecords() {
           entry.ThreePA += safeNum(adjustment.ThreePA);
           entry.FTM += safeNum(adjustment.FTM);
           entry.FTA += safeNum(adjustment.FTA);
+          entry.DoubleDoubles += safeNum(adjustment.DoubleDoubles);
+          entry.TripleDoubles += safeNum(adjustment.TripleDoubles);
         }
 
         const seasonTotals = Object.values(seasonMap).map((total) => {

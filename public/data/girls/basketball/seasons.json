@@ -1,5 +1,15 @@
 [
   {
+    "SeasonID": 2002,
+    "YearStart": 2002,
+    "YearEnd": 2003,
+    "HeadCoach": "Deb Morrell",
+    "RegionSeed": null,
+    "RegionFinish": "Region Champion",
+    "StateSeed": null,
+    "StateFinish": "State Champion"
+  },
+  {
     "SeasonID": 2003,
     "YearStart": 2003,
     "YearEnd": 2004,

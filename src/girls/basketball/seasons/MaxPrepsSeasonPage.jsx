@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
+import ArticleFeatureList from "../../../components/ArticleFeatureList";
 import {
   GIRLS_BASKETBALL_ROSTERS_PATH,
   SCHOOLS_PATH,
@@ -66,6 +67,7 @@ function emptyTotals(playerId) {
     Deflections: null,
     Charges: null,
     GamesPlayedSet: new Set(),
+    GamesPlayedAdjustment: 0,
   };
 }
 
@@ -150,27 +152,41 @@ function MaxPrepsSeasonPage({
   const [players, setPlayers] = useState([]);
   const [rosterEntries, setRosterEntries] = useState([]);
   const [schoolsData, setSchoolsData] = useState([]);
+  const [seasonAdjustments, setSeasonAdjustments] = useState([]);
+  const [articles, setArticles] = useState([]);
   const [showPerGame, setShowPerGame] = useState(false);
   const [showTeamTotals, setShowTeamTotals] = useState(false);
 
   useEffect(() => {
     async function fetchData() {
-      const [gamesRes, statsRes, playersRes, rostersRes, schoolsRes] =
+      const [gamesRes, statsRes, playersRes, rostersRes, schoolsRes, adjustmentsRes, articlesRes] =
         await Promise.all([
           fetch("/data/girls/basketball/games.json"),
           fetch("/data/girls/basketball/playergamestats.json"),
           fetch("/data/girls/basketball/players.json"),
           fetch(GIRLS_BASKETBALL_ROSTERS_PATH),
           fetch(SCHOOLS_PATH),
+          fetch("/data/girls/basketball/adjustments.json").catch(() => null),
+          fetch("/data/girls/basketball/articles.json").catch(() => null),
         ]);
 
-      const [gamesData, statsData, playersData, rostersData, schoolsData] =
+      const [
+        gamesData,
+        statsData,
+        playersData,
+        rostersData,
+        schoolsData,
+        adjustmentsData,
+        articlesData,
+      ] =
         await Promise.all([
           gamesRes.json(),
           statsRes.json(),
           playersRes.json(),
           rostersRes.json(),
           schoolsRes.json(),
+          adjustmentsRes?.ok ? adjustmentsRes.json() : Promise.resolve([]),
+          articlesRes?.ok ? articlesRes.json() : Promise.resolve([]),
         ]);
 
       const seasonGames = hydrateGamesWithSchools(gamesData, schoolsData)
@@ -187,6 +203,16 @@ function MaxPrepsSeasonPage({
       setPlayers(playersData);
       setRosterEntries(getRosterEntriesForSeason(rostersData, seasonLabel));
       setSchoolsData(schoolsData);
+      setSeasonAdjustments(
+        (Array.isArray(adjustmentsData) ? adjustmentsData : []).filter(
+          (adjustment) => Number(adjustment.SeasonID) === Number(seasonId)
+        )
+      );
+      setArticles(
+        (Array.isArray(articlesData) ? articlesData : []).filter(
+          (article) => Number(article.SeasonID) === Number(seasonId)
+        )
+      );
     }
 
     fetchData();
@@ -216,8 +242,19 @@ function MaxPrepsSeasonPage({
       if (countsAsPlayerGame(stat)) total.GamesPlayedSet.add(Number(stat.GameID));
     }
 
+    for (const adjustment of seasonAdjustments) {
+      const playerId = Number(adjustment.PlayerID);
+      if (!totals.has(playerId)) totals.set(playerId, emptyTotals(playerId));
+
+      const total = totals.get(playerId);
+      addStat(total, adjustment);
+      if (hasValue(adjustment.GamesPlayed)) {
+        total.GamesPlayedAdjustment += Number(adjustment.GamesPlayed || 0);
+      }
+    }
+
     return totals;
-  }, [playerStats]);
+  }, [playerStats, seasonAdjustments]);
 
   const seasonTotals = useMemo(() => {
     const rosterIds = new Set(rosterEntries.map((entry) => Number(entry.PlayerID)));
@@ -235,10 +272,14 @@ function MaxPrepsSeasonPage({
         const importedTotals = rosterEntry?.SeasonTotals || {};
         const total = emptyTotals(playerId);
 
+        const calculatedGamesPlayed =
+          (calculated?.GamesPlayedSet?.size || 0) +
+          Number(calculated?.GamesPlayedAdjustment || 0);
+
         total.GamesPlayed =
           Number.isFinite(Number(rosterEntry?.GamesPlayed)) && rosterEntry?.GamesPlayed !== null
             ? Number(rosterEntry.GamesPlayed)
-            : calculated?.GamesPlayedSet?.size || 0;
+            : calculatedGamesPlayed;
 
         for (const field of STAT_FIELDS) {
           if (hasValue(importedTotals[field])) {
@@ -363,6 +404,12 @@ function MaxPrepsSeasonPage({
   return (
     <div className="pt-2 pb-4 space-y-8 max-w-6xl mx-auto">
       <h1 className="text-3xl font-bold text-center mb-2">{seasonLabel} Season</h1>
+
+      <ArticleFeatureList
+        articles={articles}
+        basePath="/athletics/girls/basketball"
+        heading="Featured Articles"
+      />
 
       <section>
         <div className="mt-8 mb-4 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">

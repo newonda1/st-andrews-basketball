@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-02T16:04:12.567Z",
-  "itemCount": 1488,
+  "generatedAt": "2026-05-02T18:43:08.120Z",
+  "itemCount": 1494,
   "items": [
     {
       "id": "athletics-home",
@@ -2863,7 +2863,7 @@
       "id": "boys-basketball-athlete-200001",
       "type": "athlete",
       "title": "Cam Aldrich",
-      "subtitle": "Boys Basketball athlete",
+      "subtitle": "Boys Basketball athlete - Class of 2003",
       "to": "/athletics/boys/basketball/players/200001",
       "keywords": [
         "Boys Basketball",
@@ -2873,14 +2873,16 @@
         "records",
         "Cam",
         "Aldrich",
-        "Aldrich Cam"
+        "Aldrich Cam",
+        "class of 2003",
+        "grad 2003"
       ]
     },
     {
       "id": "boys-basketball-athlete-200002",
       "type": "athlete",
       "title": "Patrick Burns",
-      "subtitle": "Boys Basketball athlete",
+      "subtitle": "Boys Basketball athlete - Class of 2003",
       "to": "/athletics/boys/basketball/players/200002",
       "keywords": [
         "Boys Basketball",
@@ -2890,7 +2892,9 @@
         "records",
         "Patrick",
         "Burns",
-        "Burns Patrick"
+        "Burns Patrick",
+        "class of 2003",
+        "grad 2003"
       ]
     },
     {
@@ -3035,7 +3039,7 @@
       "id": "boys-basketball-athlete-200011",
       "type": "athlete",
       "title": "Jeff Smith",
-      "subtitle": "Boys Basketball athlete",
+      "subtitle": "Boys Basketball athlete - Class of 2003",
       "to": "/athletics/boys/basketball/players/200011",
       "keywords": [
         "Boys Basketball",
@@ -3045,7 +3049,9 @@
         "records",
         "Jeff",
         "Smith",
-        "Smith Jeff"
+        "Smith Jeff",
+        "class of 2003",
+        "grad 2003"
       ]
     },
     {
@@ -8989,6 +8995,70 @@
         "Cooper Becca",
         "class of 2004",
         "grad 2004"
+      ]
+    },
+    {
+      "id": "girls-basketball-athlete-200407",
+      "type": "athlete",
+      "title": "S. Griffin",
+      "subtitle": "Girls Basketball athlete",
+      "to": "/athletics/girls/basketball/players/200407",
+      "keywords": [
+        "Girls Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "S.",
+        "Griffin",
+        "Griffin S."
+      ]
+    },
+    {
+      "id": "girls-basketball-athlete-200408",
+      "type": "athlete",
+      "title": "M. Griffin",
+      "subtitle": "Girls Basketball athlete",
+      "to": "/athletics/girls/basketball/players/200408",
+      "keywords": [
+        "Girls Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "M.",
+        "Griffin",
+        "Griffin M."
+      ]
+    },
+    {
+      "id": "girls-basketball-athlete-200409",
+      "type": "athlete",
+      "title": "Aimone",
+      "subtitle": "Girls Basketball athlete",
+      "to": "/athletics/girls/basketball/players/200409",
+      "keywords": [
+        "Girls Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Aimone"
+      ]
+    },
+    {
+      "id": "girls-basketball-athlete-200410",
+      "type": "athlete",
+      "title": "Miller",
+      "subtitle": "Girls Basketball athlete",
+      "to": "/athletics/girls/basketball/players/200410",
+      "keywords": [
+        "Girls Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Miller"
       ]
     },
     {
@@ -18396,7 +18466,7 @@
       "id": "volleyball-athlete-200405",
       "type": "athlete",
       "title": "Leighanne Evans",
-      "subtitle": "Volleyball athlete",
+      "subtitle": "Volleyball athlete - Class of 2004",
       "to": "/athletics/volleyball/players/200405",
       "keywords": [
         "Volleyball",
@@ -18406,7 +18476,9 @@
         "records",
         "Leighanne",
         "Evans",
-        "Evans Leighanne"
+        "Evans Leighanne",
+        "class of 2004",
+        "grad 2004"
       ]
     },
     {
@@ -19172,7 +19244,7 @@
     {
       "id": "volleyball-athlete-2026260",
       "type": "athlete",
-      "title": "gracen amerson",
+      "title": "Gracen Amerson",
       "subtitle": "Volleyball athlete - Class of 2030",
       "to": "/athletics/volleyball/players/2026260",
       "keywords": [
@@ -19181,9 +19253,9 @@
         "player",
         "stats",
         "records",
-        "gracen",
-        "amerson",
-        "amerson gracen",
+        "Gracen",
+        "Amerson",
+        "Amerson Gracen",
         "class of 2030",
         "grad 2030"
       ]
@@ -19191,7 +19263,7 @@
     {
       "id": "volleyball-athlete-2026261",
       "type": "athlete",
-      "title": "ava Stillwagon",
+      "title": "Ava Stillwagon",
       "subtitle": "Volleyball athlete - Class of 2030",
       "to": "/athletics/volleyball/players/2026261",
       "keywords": [
@@ -19200,9 +19272,9 @@
         "player",
         "stats",
         "records",
-        "ava",
+        "Ava",
         "Stillwagon",
-        "Stillwagon ava",
+        "Stillwagon Ava",
         "class of 2030",
         "grad 2030"
       ]
@@ -19267,7 +19339,7 @@
     {
       "id": "volleyball-athlete-2026264",
       "type": "athlete",
-      "title": "sarah molnar",
+      "title": "Sarah Molnar",
       "subtitle": "Volleyball athlete - Class of 2030",
       "to": "/athletics/volleyball/players/2026264",
       "keywords": [
@@ -19276,9 +19348,9 @@
         "player",
         "stats",
         "records",
-        "sarah",
-        "molnar",
-        "molnar sarah",
+        "Sarah",
+        "Molnar",
+        "Molnar Sarah",
         "class of 2030",
         "grad 2030"
       ]
@@ -20373,6 +20445,7 @@
         "history",
         "records",
         "Beaufort Academy",
+        "Eagles",
         "Beaufort",
         "SC"
       ]
@@ -20969,6 +21042,7 @@
         "history",
         "records",
         "Hilton Head Christian Academy",
+        "Eagles",
         "Hilton Head Island",
         "SC"
       ]
@@ -21174,6 +21248,7 @@
         "history",
         "records",
         "James Island Christian School",
+        "Lions",
         "Charleston",
         "SC"
       ]
@@ -21314,6 +21389,7 @@
         "history",
         "records",
         "Providence Christian School",
+        "Lions",
         "Savannah",
         "GA"
       ]
@@ -23011,6 +23087,7 @@
         "history",
         "records",
         "Hilton Head Christian Academy",
+        "Eagles",
         "Hilton Head Island",
         "SC"
       ]
@@ -23298,6 +23375,7 @@
         "history",
         "records",
         "Beaufort Academy",
+        "Eagles",
         "Beaufort",
         "SC"
       ]
@@ -24117,6 +24195,7 @@
         "history",
         "records",
         "Providence Christian School",
+        "Lions",
         "Savannah",
         "GA"
       ]
@@ -24160,6 +24239,134 @@
       ]
     },
     {
+      "id": "girls-basketball-team-hilton-head-preparatory-school",
+      "type": "team",
+      "title": "Hilton Head Preparatory School",
+      "subtitle": "Girls Basketball opponent history - Hilton Head Island, SC",
+      "to": "/athletics/girls/basketball/records/opponents?team=Hilton+Head+Preparatory+School",
+      "keywords": [
+        "Girls Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Hilton Head Preparatory School",
+        "Hilton Head Prep",
+        "Dolphins",
+        "Hilton Head Island",
+        "SC"
+      ]
+    },
+    {
+      "id": "girls-basketball-team-holly-hill-academy",
+      "type": "team",
+      "title": "Holly Hill Academy",
+      "subtitle": "Girls Basketball opponent history - Holly Hill, SC",
+      "to": "/athletics/girls/basketball/records/opponents?team=Holly+Hill+Academy",
+      "keywords": [
+        "Girls Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Holly Hill Academy",
+        "Raiders",
+        "Holly Hill",
+        "SC"
+      ]
+    },
+    {
+      "id": "girls-basketball-team-charleston-collegiate-school",
+      "type": "team",
+      "title": "Charleston Collegiate School",
+      "subtitle": "Girls Basketball opponent history - Johns Island, SC",
+      "to": "/athletics/girls/basketball/records/opponents?team=Charleston+Collegiate+School",
+      "keywords": [
+        "Girls Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Charleston Collegiate School",
+        "Charleston Collegiate",
+        "Sun Devils",
+        "Johns Island",
+        "SC"
+      ]
+    },
+    {
+      "id": "girls-basketball-team-james-island-christian-school",
+      "type": "team",
+      "title": "James Island Christian School",
+      "subtitle": "Girls Basketball opponent history - Charleston, SC",
+      "to": "/athletics/girls/basketball/records/opponents?team=James+Island+Christian+School",
+      "keywords": [
+        "Girls Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "James Island Christian School",
+        "Lions",
+        "Charleston",
+        "SC"
+      ]
+    },
+    {
+      "id": "girls-basketball-team-beaufort-academy",
+      "type": "team",
+      "title": "Beaufort Academy",
+      "subtitle": "Girls Basketball opponent history - Beaufort, SC",
+      "to": "/athletics/girls/basketball/records/opponents?team=Beaufort+Academy",
+      "keywords": [
+        "Girls Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Beaufort Academy",
+        "Eagles",
+        "Beaufort",
+        "SC"
+      ]
+    },
+    {
+      "id": "girls-basketball-team-colleton-prep-academy",
+      "type": "team",
+      "title": "Colleton Prep Academy",
+      "subtitle": "Girls Basketball opponent history - Walterboro, SC",
+      "to": "/athletics/girls/basketball/records/opponents?team=Colleton+Prep+Academy",
+      "keywords": [
+        "Girls Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Colleton Prep Academy",
+        "War Hawks",
+        "Walterboro",
+        "SC"
+      ]
+    },
+    {
+      "id": "girls-basketball-team-patrick-henry-academy",
+      "type": "team",
+      "title": "Patrick Henry Academy",
+      "subtitle": "Girls Basketball opponent history - Estill, SC",
+      "to": "/athletics/girls/basketball/records/opponents?team=Patrick+Henry+Academy",
+      "keywords": [
+        "Girls Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Patrick Henry Academy",
+        "Patriots",
+        "Estill",
+        "SC"
+      ]
+    },
+    {
       "id": "girls-basketball-team-david-emanuel-academy",
       "type": "team",
       "title": "David Emanuel Academy",
@@ -24189,80 +24396,8 @@
         "history",
         "records",
         "Hilton Head Christian Academy",
+        "Eagles",
         "Hilton Head Island",
-        "SC"
-      ]
-    },
-    {
-      "id": "girls-basketball-team-hilton-head-preparatory-school",
-      "type": "team",
-      "title": "Hilton Head Preparatory School",
-      "subtitle": "Girls Basketball opponent history - Hilton Head Island, SC",
-      "to": "/athletics/girls/basketball/records/opponents?team=Hilton+Head+Preparatory+School",
-      "keywords": [
-        "Girls Basketball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Hilton Head Preparatory School",
-        "Hilton Head Prep",
-        "Dolphins",
-        "Hilton Head Island",
-        "SC"
-      ]
-    },
-    {
-      "id": "girls-basketball-team-charleston-collegiate-school",
-      "type": "team",
-      "title": "Charleston Collegiate School",
-      "subtitle": "Girls Basketball opponent history - Johns Island, SC",
-      "to": "/athletics/girls/basketball/records/opponents?team=Charleston+Collegiate+School",
-      "keywords": [
-        "Girls Basketball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Charleston Collegiate School",
-        "Charleston Collegiate",
-        "Sun Devils",
-        "Johns Island",
-        "SC"
-      ]
-    },
-    {
-      "id": "girls-basketball-team-beaufort-academy",
-      "type": "team",
-      "title": "Beaufort Academy",
-      "subtitle": "Girls Basketball opponent history - Beaufort, SC",
-      "to": "/athletics/girls/basketball/records/opponents?team=Beaufort+Academy",
-      "keywords": [
-        "Girls Basketball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Beaufort Academy",
-        "Beaufort",
-        "SC"
-      ]
-    },
-    {
-      "id": "girls-basketball-team-patrick-henry-academy",
-      "type": "team",
-      "title": "Patrick Henry Academy",
-      "subtitle": "Girls Basketball opponent history - Estill, SC",
-      "to": "/athletics/girls/basketball/records/opponents?team=Patrick+Henry+Academy",
-      "keywords": [
-        "Girls Basketball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Patrick Henry Academy",
-        "Patriots",
-        "Estill",
         "SC"
       ]
     },
@@ -24372,24 +24507,6 @@
         "records",
         "Abundant Life Academy",
         "Hardeeville",
-        "SC"
-      ]
-    },
-    {
-      "id": "girls-basketball-team-colleton-prep-academy",
-      "type": "team",
-      "title": "Colleton Prep Academy",
-      "subtitle": "Girls Basketball opponent history - Walterboro, SC",
-      "to": "/athletics/girls/basketball/records/opponents?team=Colleton+Prep+Academy",
-      "keywords": [
-        "Girls Basketball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Colleton Prep Academy",
-        "War Hawks",
-        "Walterboro",
         "SC"
       ]
     },
@@ -25668,6 +25785,7 @@
         "history",
         "records",
         "Hilton Head Christian Academy",
+        "Eagles",
         "Hilton Head Island",
         "SC"
       ]
@@ -25777,6 +25895,7 @@
         "history",
         "records",
         "Beaufort Academy",
+        "Eagles",
         "Beaufort",
         "SC"
       ]
