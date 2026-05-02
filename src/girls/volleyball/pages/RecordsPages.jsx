@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 
 import {
   VOLLEYBALL_STAT_SECTIONS,
+  aggregateAllPlayerSeasonStatsFromGames,
   aggregateTeamSeasonStatsFromMatches,
-  aggregateVolleyballStatRows,
+  aggregateVolleyballSeasonStatRows,
   buildGameRecord,
   buildPlayerMap,
   formatDate,
@@ -605,8 +606,12 @@ function getPlayerDisplay(playerMap, row) {
 function buildCareerRows(data) {
   const playerMap = buildPlayerMap(data.players);
   const grouped = new Map();
+  const seasonRows = aggregateAllPlayerSeasonStatsFromGames(
+    data.playerGameStats,
+    data.playerSeasonAdjustments
+  );
 
-  data.playerGameStats.forEach((row) => {
+  seasonRows.forEach((row) => {
     const playerId = String(row.PlayerID);
     if (!grouped.has(playerId)) grouped.set(playerId, []);
     grouped.get(playerId).push(row);
@@ -615,7 +620,7 @@ function buildCareerRows(data) {
   return Array.from(grouped.entries())
     .map(([playerId, rows]) => {
       const player = playerMap.get(playerId);
-      const totals = aggregateVolleyballStatRows(rows, {
+      const totals = aggregateVolleyballSeasonStatRows(rows, {
         PlayerID: Number(playerId),
         PlayerName: player ? getPlayerName(player) : rows[0]?.PlayerName,
         JerseyNumber: rows.find((row) => row.JerseyNumber != null)?.JerseyNumber,
@@ -636,24 +641,14 @@ function buildCareerRows(data) {
 function buildPlayerSeasonRows(data) {
   const playerMap = buildPlayerMap(data.players);
   const seasonMap = seasonById(data.seasons);
-  const grouped = new Map();
+  const seasonRows = aggregateAllPlayerSeasonStatsFromGames(
+    data.playerGameStats,
+    data.playerSeasonAdjustments
+  );
 
-  data.playerGameStats.forEach((row) => {
-    const key = `${row.Season}|${row.PlayerID}`;
-    if (!grouped.has(key)) grouped.set(key, []);
-    grouped.get(key).push(row);
-  });
-
-  return Array.from(grouped.values())
-    .map((rows) => {
-      const seasonId = Number(rows[0]?.Season);
-      const row = aggregateVolleyballStatRows(rows, {
-        Season: seasonId,
-        PlayerID: rows[0]?.PlayerID,
-        JerseyNumber: rows[0]?.JerseyNumber,
-        PlayerName: rows[0]?.PlayerName,
-      });
-      applyTrackedRateStats(row, rows);
+  return seasonRows
+    .map((row) => {
+      const seasonId = Number(row.Season);
       const player = playerMap.get(String(row.PlayerID));
       return {
         ...row,
@@ -828,7 +823,7 @@ export function FullCareerStats({ data, status = "" }) {
   return (
     <FullStatsLayout
       title="Full Career Stats"
-      subtitle="Career totals are calculated from all available individual match logs."
+      subtitle="Career totals include available individual match logs and historical season adjustments."
       status={status}
       sections={VOLLEYBALL_STAT_SECTIONS}
       rows={rows}
@@ -1008,7 +1003,9 @@ export function SeasonRecords({ data, status = "" }) {
     <div className={pageClass}>
       <PageStatus status={status} />
       <h1 className={h1Class}>Season Records</h1>
-      <p className={sublineClass}>Individual season records are calculated from available match logs.</p>
+      <p className={sublineClass}>
+        Individual season records include available match logs and historical season adjustments.
+      </p>
       <RecordsTable
         sections={sections}
         rowsByRecord={rowsByRecord}
@@ -1046,7 +1043,9 @@ export function CareerRecords({ data, status = "" }) {
     <div className={pageClass}>
       <PageStatus status={status} />
       <h1 className={h1Class}>Career Records</h1>
-      <p className={sublineClass}>Career records are calculated from all available individual match logs.</p>
+      <p className={sublineClass}>
+        Career records include available individual match logs and historical season adjustments.
+      </p>
       <RecordsTable
         sections={sections}
         rowsByRecord={rowsByRecord}

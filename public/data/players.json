@@ -4416,7 +4416,17 @@
     "FirstName": "Mary",
     "LastName": "Wilkowski",
     "GradYear": 2007,
-    "Gender": "Girls"
+    "Gender": "Girls",
+    "ProfileBlurbs": [
+      {
+        "Sport": "Girls Volleyball",
+        "SourceDate": "2003-12-09",
+        "SourcePublication": "Savannah Morning News",
+        "SourceTitle": "COASTAL EMPIRE VOLLEYBALL PLAYER OF THE YEAR / CHRISSY BARBEE, ST. VINCENT'S, SR. - BARBEE SETS A GOOD EXAMPLE FOR ST. VINCENT'S THE SAINTS SETTER HELPED LEAD HER TEAM TO THEIR FIRST CLASS AAAAA STATE CHAMPIONSHIP",
+        "Headline": "Mary Wilkowski, Fr. - 2003 Coastal Empire Volleyball Second Team",
+        "Text": "The freshman amazed her coaches with her ability to elevate her game during the season. She finished with 175 kills in 22 matches."
+      }
+    ]
   },
   {
     "PlayerID": 200402,
@@ -4435,16 +4445,26 @@
   },
   {
     "PlayerID": 200404,
-    "PlayerName": "Bugos",
-    "FirstName": "",
+    "PlayerName": "Carie Bugos",
+    "FirstName": "Carie",
     "LastName": "Bugos",
-    "GradYear": null,
-    "Gender": "Girls"
+    "GradYear": 2004,
+    "Gender": "Girls",
+    "ProfileBlurbs": [
+      {
+        "Sport": "Girls Volleyball",
+        "SourceDate": "2003-12-09",
+        "SourcePublication": "Savannah Morning News",
+        "SourceTitle": "COASTAL EMPIRE VOLLEYBALL PLAYER OF THE YEAR / CHRISSY BARBEE, ST. VINCENT'S, SR. - BARBEE SETS A GOOD EXAMPLE FOR ST. VINCENT'S THE SAINTS SETTER HELPED LEAD HER TEAM TO THEIR FIRST CLASS AAAAA STATE CHAMPIONSHIP",
+        "Headline": "Carie Bugos, Sr., Setter - 2003 Coastal Empire Volleyball Second Team",
+        "Text": "Bugos provided leadership and maturity for the young team. She guided them through their 19-3 season with 195 assists and 145 service points in the 22 matches."
+      }
+    ]
   },
   {
     "PlayerID": 200405,
-    "PlayerName": "Evans",
-    "FirstName": "",
+    "PlayerName": "Leighanne Evans",
+    "FirstName": "Leighanne",
     "LastName": "Evans",
     "GradYear": null,
     "Gender": "Girls"
@@ -4462,7 +4482,7 @@
         "SourceDate": "2003-12-09",
         "SourcePublication": "Savannah Morning News",
         "SourceTitle": "COASTAL EMPIRE VOLLEYBALL PLAYER OF THE YEAR / CHRISSY BARBEE, ST. VINCENT'S, SR. - BARBEE SETS A GOOD EXAMPLE FOR ST. VINCENT'S THE SAINTS SETTER HELPED LEAD HER TEAM TO THEIR FIRST CLASS AAAAA STATE CHAMPIONSHIP",
-        "Headline": "Becca Cooper, St. Andrew's, Sr., Middle hitter",
+        "Headline": "Becca Cooper, Sr., Middle hitter - 2003 Coastal Empire Volleyball First Team",
         "Text": "Cooper, named to the SCISA AA All-State team, led by example as the strongest hitter on the Saints' court. Her talent made younger players on the St. Andrew's team step up their own performance. St. Andrew's won the SCISA Region IIAA championship (10-0), and finished 19-3 overall and the SCISA AA State championship runner up."
       }
     ]

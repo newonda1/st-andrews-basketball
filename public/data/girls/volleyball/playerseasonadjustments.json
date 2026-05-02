@@ -1,0 +1,19 @@
+[
+  {
+    "Season": 2003,
+    "PlayerID": 200401,
+    "PlayerName": "Mary Wilkowski",
+    "Games": 22,
+    "Kills": 175,
+    "Source": "Savannah Morning News, Dec. 9, 2003"
+  },
+  {
+    "Season": 2003,
+    "PlayerID": 200404,
+    "PlayerName": "Carie Bugos",
+    "Games": 22,
+    "Assists": 195,
+    "ServingPoints": 145,
+    "Source": "Savannah Morning News, Dec. 9, 2003"
+  }
+]

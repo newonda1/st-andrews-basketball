@@ -80,6 +80,7 @@ export default function VolleyballApp() {
     rosters: [],
     players: [],
     playerSeasonStats: [],
+    playerSeasonAdjustments: [],
     teamSeasonStats: [],
     playerGameStats: [],
     teamMatchStats: [],

@@ -2,6 +2,8 @@ import React, { useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import {
   VOLLEYBALL_STAT_SECTIONS,
+  aggregateAllPlayerSeasonStatsFromGames,
+  aggregateVolleyballSeasonStatRows,
   aggregateVolleyballStatRows,
   buildPlayerMap,
   formatDate,
@@ -142,18 +144,34 @@ export default function PlayerPage({ data, status = "" }) {
         .filter(Boolean),
     [data.games, data.playerGameStats, resolvedPlayerId]
   );
+  const playerSeasonRows = useMemo(
+    () =>
+      aggregateAllPlayerSeasonStatsFromGames(
+        data.playerGameStats,
+        data.playerSeasonAdjustments
+      ).filter((entry) => Number(entry.PlayerID) === resolvedPlayerId),
+    [data.playerGameStats, data.playerSeasonAdjustments, resolvedPlayerId]
+  );
   const careerTotalsBySeason = useMemo(
-    () => groupRowsBySeason(playerGameRows, data.seasons),
-    [data.seasons, playerGameRows]
+    () =>
+      playerSeasonRows
+        .slice()
+        .sort((a, b) => Number(a.Season) - Number(b.Season))
+        .map((row) => ({
+          season: Number(row.Season),
+          label: getSeasonDisplay(data.seasons, row.Season),
+          totals: row,
+        })),
+    [data.seasons, playerSeasonRows]
   );
   const careerTotals = useMemo(
     () =>
-      aggregateVolleyballStatRows(playerGameRows, {
+      aggregateVolleyballSeasonStatRows(playerSeasonRows, {
         PlayerID: resolvedPlayerId,
         JerseyNumber: rosterEntry?.JerseyNumber,
         PlayerName: player ? getPlayerName(player) : "",
       }),
-    [player, playerGameRows, resolvedPlayerId, rosterEntry]
+    [player, playerSeasonRows, resolvedPlayerId, rosterEntry]
   );
   const gamesBySeason = useMemo(
     () => groupGamesBySeason(playerGameRows, data.seasons),

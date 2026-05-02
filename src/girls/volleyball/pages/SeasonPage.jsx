@@ -364,8 +364,13 @@ export default function SeasonPage({ data, status = "" }) {
     [data.rosters, playerMap, resolvedSeasonId]
   );
   const playerStats = useMemo(
-    () => aggregatePlayerSeasonStatsFromGames(data.playerGameStats, resolvedSeasonId),
-    [data.playerGameStats, resolvedSeasonId]
+    () =>
+      aggregatePlayerSeasonStatsFromGames(
+        data.playerGameStats,
+        resolvedSeasonId,
+        data.playerSeasonAdjustments
+      ),
+    [data.playerGameStats, data.playerSeasonAdjustments, resolvedSeasonId]
   );
   const teamStats = useMemo(
     () => aggregateTeamSeasonStatsFromMatches(data.teamMatchStats, resolvedSeasonId),
@@ -592,6 +597,14 @@ export default function SeasonPage({ data, status = "" }) {
                         >
                           {getPlayerName(player) || player.PlayerName || "—"}
                         </Link>
+                        {(player.Distinctions || []).length > 0 ? (
+                          <>
+                            {" "}
+                            <span className="text-slate-600">
+                              ({player.Distinctions.join("; ")})
+                            </span>
+                          </>
+                        ) : null}
                       </td>
                       <td className="px-3 py-2 text-center whitespace-nowrap">
                         {player.GradeLabel || player.Grade || "—"}

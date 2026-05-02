@@ -6024,7 +6024,7 @@
     "Recap": "A Savannah Morning News boys basketball roundup reported that Cass Sawyer led all scorers with 19 points as St. Andrew's opened the region schedule with a 59-53 win over Providence Christian. The scoring totals here are taken from the team spreadsheet."
   },
   {
-    "GameID": 20031209,
+    "GameID": 20031212,
     "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
     "Opponent": "Hilton Head Preparatory School",
     "LocationType": "Unknown",
@@ -6033,10 +6033,17 @@
     "TeamScore": 50,
     "OpponentScore": 67,
     "Season": 2003,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "RecapImages": [
+      {
+        "src": "/images/boys/basketball/seasons/2003-04/hilton-head-prep-2003-12-12-clipping.png",
+        "alt": "Newspaper clipping for Hilton Head Prep 68, St. Andrew's 50 on Dec. 12, 2003",
+        "caption": "Savannah Morning News clipping from Dec. 14, 2003, covering the Dec. 12 Hilton Head Prep game."
+      }
+    ]
   },
   {
-    "GameID": 20031212,
+    "GameID": 20031213,
     "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
     "Opponent": "Hilton Head Christian Academy",
     "LocationType": "Away",
@@ -6047,7 +6054,14 @@
     "Season": 2003,
     "IsComplete": "Yes",
     "RecapTitle": "Clay Nears Triple-Double",
-    "Recap": "NewsBank search results for the Savannah Morning News described Davy Clay as coming within one assist of a triple-double in St. Andrew's 74-49 win over Hilton Head Christian. The team sheet credits Clay with 24 points in the victory."
+    "Recap": "Davy Clay came within one assist of a triple-double as St. Andrew's beat Hilton Head Christian 74-49 in the consolation game of the Ret Thomas Memorial Tournament at Hilton Head Prep. Clay led the Saints with 24 points, 13 steals, and nine assists, while Josh Smith added 17 points. St. Andrew's led 32-31 at halftime and improved to 2-2 with the win.",
+    "RecapImages": [
+      {
+        "src": "/images/boys/basketball/seasons/2003-04/hilton-head-christian-2003-12-13-clipping.png",
+        "alt": "Newspaper clipping for St. Andrew's 74, Hilton Head Christian 49 on Dec. 13, 2003",
+        "caption": "Savannah Morning News clipping covering the Dec. 13, 2003 Hilton Head Christian game."
+      }
+    ]
   },
   {
     "GameID": 20031229,

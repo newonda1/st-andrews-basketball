@@ -3,6 +3,7 @@ export const VOLLEYBALL_DATA_PATHS = {
   games: "/data/girls/volleyball/games.json",
   rosters: "/data/girls/volleyball/seasonrosters.json",
   playerSeasonStats: "/data/girls/volleyball/playerseasonstats.json",
+  playerSeasonAdjustments: "/data/girls/volleyball/playerseasonadjustments.json",
   teamSeasonStats: "/data/girls/volleyball/teamseasonstats.json",
   playerGameStats: "/data/girls/volleyball/playergamestats.json",
   teamMatchStats: "/data/girls/volleyball/teammatchstats.json",
@@ -94,6 +95,7 @@ export async function loadVolleyballData() {
     rosters,
     players,
     playerSeasonStats,
+    playerSeasonAdjustments,
     teamSeasonStats,
     playerGameStats,
     teamMatchStats,
@@ -103,6 +105,10 @@ export async function loadVolleyballData() {
     fetchJson(VOLLEYBALL_DATA_PATHS.rosters, "volleyball rosters"),
     fetchJson(VOLLEYBALL_DATA_PATHS.players, "players"),
     fetchJson(VOLLEYBALL_DATA_PATHS.playerSeasonStats, "volleyball player season stats"),
+    fetchJson(
+      VOLLEYBALL_DATA_PATHS.playerSeasonAdjustments,
+      "volleyball player season adjustments"
+    ),
     fetchJson(VOLLEYBALL_DATA_PATHS.teamSeasonStats, "volleyball team season stats"),
     fetchJson(VOLLEYBALL_DATA_PATHS.playerGameStats, "volleyball player game stats"),
     fetchJson(VOLLEYBALL_DATA_PATHS.teamMatchStats, "volleyball team match stats"),
@@ -114,6 +120,9 @@ export async function loadVolleyballData() {
     rosters: Array.isArray(rosters) ? rosters : [],
     players: Array.isArray(players) ? players : [],
     playerSeasonStats: Array.isArray(playerSeasonStats) ? playerSeasonStats : [],
+    playerSeasonAdjustments: Array.isArray(playerSeasonAdjustments)
+      ? playerSeasonAdjustments
+      : [],
     teamSeasonStats: Array.isArray(teamSeasonStats) ? teamSeasonStats : [],
     playerGameStats: Array.isArray(playerGameStats) ? playerGameStats : [],
     teamMatchStats: Array.isArray(teamMatchStats) ? teamMatchStats : [],
@@ -260,6 +269,29 @@ function hittingPercentage(kills, errors, attempts) {
     : null;
 }
 
+const ADJUSTABLE_STAT_KEYS = [
+  "Games",
+  "SetsPlayed",
+  "Kills",
+  "AttackAttempts",
+  "AttackErrors",
+  "Aces",
+  "ServeAttempts",
+  "ServeErrors",
+  "ServingPoints",
+  "SoloBlocks",
+  "BlockAssists",
+  "TotalBlocks",
+  "BlockErrors",
+  "Digs",
+  "DigErrors",
+  "Assists",
+  "BallHandlingAttempts",
+  "BallHandlingErrors",
+  "Receptions",
+  "ReceptionErrors",
+];
+
 function addCountingStats(target, row) {
   target.SetsPlayed += toNumber(row.SetsPlayed);
   target.Kills += toNumber(row.Kills);
@@ -367,21 +399,111 @@ export function aggregateVolleyballStatRows(rows = [], seed = {}) {
   return applyDerivedStats(aggregate, games.size);
 }
 
-export function aggregatePlayerSeasonStatsFromGames(playerGameStats = [], seasonId) {
+export function aggregateVolleyballSeasonStatRows(rows = [], seed = {}) {
+  const aggregate = createEmptyStatRow(seed);
+
+  rows.forEach((row) => {
+    if (aggregate.JerseyNumber == null && row.JerseyNumber != null) {
+      aggregate.JerseyNumber = row.JerseyNumber;
+    }
+    if (!aggregate.PlayerName && row.PlayerName) {
+      aggregate.PlayerName = row.PlayerName;
+    }
+    aggregate.Games += toNumber(row.Games);
+    addCountingStats(aggregate, row);
+  });
+
+  return applyDerivedStats(aggregate, aggregate.Games);
+}
+
+function adjustmentSeason(adjustment) {
+  return Number(adjustment?.Season ?? adjustment?.SeasonID);
+}
+
+function adjustmentKey(adjustment) {
+  return `${adjustmentSeason(adjustment)}|${adjustment?.PlayerID}`;
+}
+
+function adjustmentOverrides(adjustment) {
+  return adjustment?.Overrides && typeof adjustment.Overrides === "object"
+    ? adjustment.Overrides
+    : adjustment || {};
+}
+
+export function applyVolleyballSeasonAdjustment(row, adjustment) {
+  const adjusted = { ...row };
+  const overrides = adjustmentOverrides(adjustment);
+
+  if (adjusted.Season == null) adjusted.Season = adjustmentSeason(adjustment);
+  if (adjusted.PlayerID == null) adjusted.PlayerID = adjustment.PlayerID;
+  if (adjusted.JerseyNumber == null && adjustment.JerseyNumber != null) {
+    adjusted.JerseyNumber = adjustment.JerseyNumber;
+  }
+  if (!adjusted.PlayerName && adjustment.PlayerName) adjusted.PlayerName = adjustment.PlayerName;
+
+  ADJUSTABLE_STAT_KEYS.forEach((key) => {
+    if (Object.prototype.hasOwnProperty.call(overrides, key)) {
+      adjusted[key] = overrides[key];
+    }
+  });
+
+  return applyDerivedStats(adjusted, adjusted.Games);
+}
+
+export function mergePlayerSeasonAdjustments(rows = [], adjustments = [], seasonId = null) {
+  const byPlayerSeason = new Map();
+
+  rows.forEach((row) => {
+    byPlayerSeason.set(`${Number(row.Season)}|${row.PlayerID}`, { ...row });
+  });
+
+  adjustments
+    .filter((adjustment) => {
+      if (seasonId == null) return true;
+      return Number(adjustmentSeason(adjustment)) === Number(seasonId);
+    })
+    .forEach((adjustment) => {
+      const season = adjustmentSeason(adjustment);
+      const playerId = Number(adjustment.PlayerID);
+      if (!Number.isFinite(season) || !Number.isFinite(playerId)) return;
+
+      const key = adjustmentKey(adjustment);
+      const current =
+        byPlayerSeason.get(key) ||
+        createEmptyStatRow({
+          Season: season,
+          PlayerID: playerId,
+          JerseyNumber: adjustment.JerseyNumber,
+          PlayerName: adjustment.PlayerName,
+        });
+
+      byPlayerSeason.set(key, applyVolleyballSeasonAdjustment(current, adjustment));
+    });
+
+  return Array.from(byPlayerSeason.values()).sort((a, b) => {
+    const seasonDiff = Number(a.Season || 0) - Number(b.Season || 0);
+    if (seasonDiff !== 0) return seasonDiff;
+    const jerseyDiff = Number(a.JerseyNumber || 999) - Number(b.JerseyNumber || 999);
+    if (jerseyDiff !== 0) return jerseyDiff;
+    return String(a.PlayerName || "").localeCompare(String(b.PlayerName || ""));
+  });
+}
+
+function aggregatePlayerSeasonRowsFromGames(playerGameStats = [], seasonId = null) {
   const playerRows = new Map();
 
   playerGameStats
-    .filter((row) => Number(row.Season) === Number(seasonId))
+    .filter((row) => seasonId == null || Number(row.Season) === Number(seasonId))
     .forEach((row) => {
-      const playerId = String(row.PlayerID);
-      if (!playerRows.has(playerId)) playerRows.set(playerId, []);
-      playerRows.get(playerId).push(row);
+      const key = `${Number(row.Season)}|${row.PlayerID}`;
+      if (!playerRows.has(key)) playerRows.set(key, []);
+      playerRows.get(key).push(row);
     });
 
   return Array.from(playerRows.entries())
     .map(([, rows]) =>
       aggregateVolleyballStatRows(rows, {
-        Season: Number(seasonId),
+        Season: Number(rows[0]?.Season),
         PlayerID: rows[0]?.PlayerID,
         JerseyNumber: rows[0]?.JerseyNumber,
         PlayerName: rows[0]?.PlayerName,
@@ -392,6 +514,23 @@ export function aggregatePlayerSeasonStatsFromGames(playerGameStats = [], season
       if (jerseyDiff !== 0) return jerseyDiff;
       return String(a.PlayerName || "").localeCompare(String(b.PlayerName || ""));
     });
+}
+
+export function aggregatePlayerSeasonStatsFromGames(
+  playerGameStats = [],
+  seasonId,
+  playerSeasonAdjustments = []
+) {
+  const rows = aggregatePlayerSeasonRowsFromGames(playerGameStats, seasonId);
+  return mergePlayerSeasonAdjustments(rows, playerSeasonAdjustments, seasonId);
+}
+
+export function aggregateAllPlayerSeasonStatsFromGames(
+  playerGameStats = [],
+  playerSeasonAdjustments = []
+) {
+  const rows = aggregatePlayerSeasonRowsFromGames(playerGameStats);
+  return mergePlayerSeasonAdjustments(rows, playerSeasonAdjustments);
 }
 
 export function aggregateTeamSeasonStatsFromMatches(teamMatchStats = [], seasonId) {
