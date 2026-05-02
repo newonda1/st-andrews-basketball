@@ -5989,7 +5989,7 @@
     "IsComplete": "Yes"
   },
   {
-    "GameID": 20031125,
+    "GameID": 20031202,
     "OpponentID": "ga-memorial-day-school-savannah",
     "Opponent": "Memorial Day School",
     "LocationType": "Unknown",
@@ -5998,7 +5998,16 @@
     "TeamScore": 47,
     "OpponentScore": 64,
     "Season": 2003,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "RecapTitle": "Memorial Day 64, St. Andrew's 47",
+    "Recap": "Memorial Day defeated St. Andrew's 64-47 in a non-region matchup. The newspaper clipping credited James Moorman with 16 points and 10 rebounds for Memorial Day, while Alex Moorman added 14. Beau Hinton paced St. Andrew's with 12 points, with Davy Clay and Josh Smith adding 10 apiece.",
+    "RecapImages": [
+      {
+        "src": "/images/boys/basketball/seasons/2003-04/memorial-day-2003-12-02-clipping.png",
+        "alt": "Newspaper clipping for Memorial Day 64, St. Andrew's 47 on Dec. 2, 2003",
+        "caption": "Newspaper clipping from the Dec. 2, 2003 Memorial Day game."
+      }
+    ]
   },
   {
     "GameID": 20031205,

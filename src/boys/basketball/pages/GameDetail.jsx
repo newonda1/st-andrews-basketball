@@ -199,6 +199,8 @@ function GameDetail() {
   const recapText =
     game.Recap && String(game.Recap).trim().length > 0 ? game.Recap : "Recap coming soon.";
 
+  const recapImages = Array.isArray(game.RecapImages) ? game.RecapImages : [];
+
   return (
     <div className="p-4 space-y-6">
       <Link to={seasonPath} className="text-sm text-blue-600 hover:underline">
@@ -226,6 +228,33 @@ function GameDetail() {
       <section>
         <h2 className="text-xl font-semibold mb-2">{recapTitle}</h2>
         <p className="text-gray-700 leading-relaxed whitespace-pre-line">{recapText}</p>
+        {recapImages.length > 0 && (
+          <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {recapImages.map((image, index) => {
+              const imageSrc = typeof image === "string" ? image : image.src;
+              const imageAlt =
+                typeof image === "string"
+                  ? `${recapTitle} clipping ${index + 1}`
+                  : image.alt || `${recapTitle} clipping ${index + 1}`;
+              const imageCaption = typeof image === "string" ? "" : image.caption;
+
+              if (!imageSrc) return null;
+
+              return (
+                <figure key={imageSrc} className="space-y-2">
+                  <img
+                    src={imageSrc}
+                    alt={imageAlt}
+                    className="max-h-[560px] w-full rounded border border-gray-200 object-contain"
+                  />
+                  {imageCaption && (
+                    <figcaption className="text-sm text-gray-600">{imageCaption}</figcaption>
+                  )}
+                </figure>
+              );
+            })}
+          </div>
+        )}
       </section>
 
       <section>

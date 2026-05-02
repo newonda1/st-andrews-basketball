@@ -60,7 +60,13 @@ function hasValue(value) {
   return value !== null && value !== undefined && value !== "";
 }
 
-function MaxPrepsSeasonPage({ seasonId, seasonLabel }) {
+function MaxPrepsSeasonPage({
+  seasonId,
+  seasonLabel,
+  recapContent = null,
+  scoringOnly = false,
+  statSourceLabel = "MaxPreps",
+}) {
   const [games, setGames] = useState([]);
   const [playerStats, setPlayerStats] = useState([]);
   const [players, setPlayers] = useState([]);
@@ -314,37 +320,41 @@ function MaxPrepsSeasonPage({ seasonId, seasonLabel }) {
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold mt-4 mb-3">Season Recap</h2>
 
-        <div className="text-gray-800 leading-relaxed">
-          <p className="mb-3 leading-relaxed">
-            The {seasonLabel} St. Andrew&apos;s boys basketball team finished{" "}
-            {seasonSummary.wins}-{seasonSummary.losses}
-            {seasonInfo?.HeadCoach ? ` under head coach ${seasonInfo.HeadCoach}` : ""}.
-            The Lions scored {seasonSummary.pointsFor} points and allowed{" "}
-            {seasonSummary.pointsAgainst} across {games.length} games recorded in
-            the archive.
-          </p>
-
-          <p className="mb-3 leading-relaxed">
-            In regular-season region play, St. Andrew&apos;s went{" "}
-            {seasonSummary.regionWins}-{seasonSummary.regionLosses}. The schedule
-            below includes the MaxPreps game results currently available for the
-            season, followed by any tournament brackets that have been entered for
-            that year.
-          </p>
-
-          {leaderParts.length > 0 && (
+        {recapContent ? (
+          <div className="text-gray-800 leading-relaxed">{recapContent}</div>
+        ) : (
+          <div className="text-gray-800 leading-relaxed">
             <p className="mb-3 leading-relaxed">
-              MaxPreps stat leaders for the season were{" "}
-              {leaderParts.map(([label, text], index) => (
-                <React.Fragment key={label}>
-                  {index > 0 && (index === leaderParts.length - 1 ? ", and " : ", ")}
-                  {text} in {label}
-                </React.Fragment>
-              ))}
-              .
+              The {seasonLabel} St. Andrew&apos;s boys basketball team finished{" "}
+              {seasonSummary.wins}-{seasonSummary.losses}
+              {seasonInfo?.HeadCoach ? ` under head coach ${seasonInfo.HeadCoach}` : ""}.
+              The Lions scored {seasonSummary.pointsFor} points and allowed{" "}
+              {seasonSummary.pointsAgainst} across {games.length} games recorded in
+              the archive.
             </p>
-          )}
-        </div>
+
+            <p className="mb-3 leading-relaxed">
+              In regular-season region play, St. Andrew&apos;s went{" "}
+              {seasonSummary.regionWins}-{seasonSummary.regionLosses}. The schedule
+              below includes the game results currently available for the season,
+              followed by any tournament brackets that have been entered for that
+              year.
+            </p>
+
+            {leaderParts.length > 0 && (
+              <p className="mb-3 leading-relaxed">
+                {statSourceLabel} stat leaders for the season were{" "}
+                {leaderParts.map(([label, text], index) => (
+                  <React.Fragment key={label}>
+                    {index > 0 && (index === leaderParts.length - 1 ? ", and " : ", ")}
+                    {text} in {label}
+                  </React.Fragment>
+                ))}
+                .
+              </p>
+            )}
+          </div>
+        )}
       </section>
 
       <section>
@@ -421,40 +431,46 @@ function MaxPrepsSeasonPage({ seasonId, seasonLabel }) {
         <div className="flex items-center justify-between mt-8 mb-4">
           <h2 className="text-2xl font-semibold">Player Statistics</h2>
 
-          <div className="flex items-center space-x-2 text-xs sm:text-sm">
-            <span
-              className={`${
-                showPerGame ? "text-gray-400" : "text-gray-900 font-semibold"
-              }`}
-            >
-              Season totals
-            </span>
-            <button
-              type="button"
-              onClick={() => setShowPerGame((value) => !value)}
-              className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-200 ${
-                showPerGame ? "bg-green-500" : "bg-gray-300"
-              }`}
-              aria-label="Toggle season totals / per game averages"
-            >
+          {!scoringOnly && (
+            <div className="flex items-center space-x-2 text-xs sm:text-sm">
               <span
-                className={`inline-block h-5 w-5 transform rounded-full bg-white shadow transition-transform duration-200 ${
-                  showPerGame ? "translate-x-5" : "translate-x-1"
+                className={`${
+                  showPerGame ? "text-gray-400" : "text-gray-900 font-semibold"
                 }`}
-              />
-            </button>
-            <span
-              className={`${
-                showPerGame ? "text-gray-900 font-semibold" : "text-gray-400"
-              }`}
-            >
-              Per game averages
-            </span>
-          </div>
+              >
+                Season totals
+              </span>
+              <button
+                type="button"
+                onClick={() => setShowPerGame((value) => !value)}
+                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-200 ${
+                  showPerGame ? "bg-green-500" : "bg-gray-300"
+                }`}
+                aria-label="Toggle season totals / per game averages"
+              >
+                <span
+                  className={`inline-block h-5 w-5 transform rounded-full bg-white shadow transition-transform duration-200 ${
+                    showPerGame ? "translate-x-5" : "translate-x-1"
+                  }`}
+                />
+              </button>
+              <span
+                className={`${
+                  showPerGame ? "text-gray-900 font-semibold" : "text-gray-400"
+                }`}
+              >
+                Per game averages
+              </span>
+            </div>
+          )}
         </div>
 
         <div className="overflow-x-auto">
-          <table className="min-w-full border text-xs sm:text-sm text-center whitespace-nowrap">
+          <table
+            className={`border text-xs sm:text-sm text-center whitespace-nowrap ${
+              scoringOnly ? "w-full min-w-[420px]" : "min-w-full"
+            }`}
+          >
             <thead className="bg-gray-100">
               <tr>
                 <th className="border px-2 py-1 text-left sticky left-0 bg-gray-100 z-10">
@@ -463,57 +479,83 @@ function MaxPrepsSeasonPage({ seasonId, seasonLabel }) {
                 <th className="border px-2 py-1">#</th>
                 <th className="border px-2 py-1">GP</th>
                 <th className="border px-2 py-1">PTS</th>
-                <th className="border px-2 py-1">REB</th>
-                <th className="border px-2 py-1">AST</th>
-                <th className="border px-2 py-1">TO</th>
-                <th className="border px-2 py-1">STL</th>
-                <th className="border px-2 py-1">BLK</th>
-                <th className="border px-2 py-1">3PM</th>
-                <th className="border px-2 py-1">3PA</th>
-                <th className="border px-2 py-1">3P%</th>
-                <th className="border px-2 py-1">2PM</th>
-                <th className="border px-2 py-1">2PA</th>
-                <th className="border px-2 py-1">2P%</th>
-                <th className="border px-2 py-1">FTM</th>
-                <th className="border px-2 py-1">FTA</th>
-                <th className="border px-2 py-1">FT%</th>
+                {scoringOnly ? (
+                  <th className="border px-2 py-1">PPG</th>
+                ) : (
+                  <>
+                    <th className="border px-2 py-1">REB</th>
+                    <th className="border px-2 py-1">AST</th>
+                    <th className="border px-2 py-1">TO</th>
+                    <th className="border px-2 py-1">STL</th>
+                    <th className="border px-2 py-1">BLK</th>
+                    <th className="border px-2 py-1">3PM</th>
+                    <th className="border px-2 py-1">3PA</th>
+                    <th className="border px-2 py-1">3P%</th>
+                    <th className="border px-2 py-1">2PM</th>
+                    <th className="border px-2 py-1">2PA</th>
+                    <th className="border px-2 py-1">2P%</th>
+                    <th className="border px-2 py-1">FTM</th>
+                    <th className="border px-2 py-1">FTA</th>
+                    <th className="border px-2 py-1">FT%</th>
+                  </>
+                )}
               </tr>
             </thead>
             <tbody>
-              {seasonTotals.map((player, index) => (
-                <tr key={player.PlayerID} className={index % 2 ? "bg-gray-50" : "bg-white"}>
-                  <td className="border px-2 py-1 text-left sticky left-0 bg-inherit z-10">
-                    <Link
-                      to={`/athletics/boys/basketball/players/${player.PlayerID}`}
-                      className="text-blue-700 underline hover:text-blue-900"
-                    >
-                      {playerName(player.PlayerID)}
-                    </Link>
-                  </td>
-                  <td className="border px-2 py-1">
-                    {getRosterJerseyNumber(rosterEntries, player.PlayerID) ?? "-"}
-                  </td>
-                  <td className="border px-2 py-1">{player.GamesPlayed || "-"}</td>
-                  <td className="border px-2 py-1">{valueFor(player, "Points")}</td>
-                  <td className="border px-2 py-1">{valueFor(player, "Rebounds")}</td>
-                  <td className="border px-2 py-1">{valueFor(player, "Assists")}</td>
-                  <td className="border px-2 py-1">{valueFor(player, "Turnovers")}</td>
-                  <td className="border px-2 py-1">{valueFor(player, "Steals")}</td>
-                  <td className="border px-2 py-1">{valueFor(player, "Blocks")}</td>
-                  <td className="border px-2 py-1">{valueFor(player, "ThreePM")}</td>
-                  <td className="border px-2 py-1">{valueFor(player, "ThreePA")}</td>
-                  <td className="border px-2 py-1">{pct(player.ThreePM, player.ThreePA)}</td>
-                  <td className="border px-2 py-1">{valueFor(player, "TwoPM")}</td>
-                  <td className="border px-2 py-1">{valueFor(player, "TwoPA")}</td>
-                  <td className="border px-2 py-1">{pct(player.TwoPM, player.TwoPA)}</td>
-                  <td className="border px-2 py-1">{valueFor(player, "FTM")}</td>
-                  <td className="border px-2 py-1">{valueFor(player, "FTA")}</td>
-                  <td className="border px-2 py-1">{pct(player.FTM, player.FTA)}</td>
-                </tr>
-              ))}
+              {seasonTotals.map((player, index) => {
+                const scoringGames = Number(player.GamesPlayed || 0);
+                const points = Number(player.Points || 0);
+
+                return (
+                  <tr key={player.PlayerID} className={index % 2 ? "bg-gray-50" : "bg-white"}>
+                    <td className="border px-2 py-1 text-left sticky left-0 bg-inherit z-10">
+                      <Link
+                        to={`/athletics/boys/basketball/players/${player.PlayerID}`}
+                        className="text-blue-700 underline hover:text-blue-900"
+                      >
+                        {playerName(player.PlayerID)}
+                      </Link>
+                    </td>
+                    <td className="border px-2 py-1">
+                      {getRosterJerseyNumber(rosterEntries, player.PlayerID) ?? "-"}
+                    </td>
+                    <td className="border px-2 py-1">{player.GamesPlayed || "-"}</td>
+                    <td className="border px-2 py-1">{valueFor(player, "Points")}</td>
+                    {scoringOnly ? (
+                      <td className="border px-2 py-1">
+                        {scoringGames ? (points / scoringGames).toFixed(1) : "-"}
+                      </td>
+                    ) : (
+                      <>
+                        <td className="border px-2 py-1">{valueFor(player, "Rebounds")}</td>
+                        <td className="border px-2 py-1">{valueFor(player, "Assists")}</td>
+                        <td className="border px-2 py-1">{valueFor(player, "Turnovers")}</td>
+                        <td className="border px-2 py-1">{valueFor(player, "Steals")}</td>
+                        <td className="border px-2 py-1">{valueFor(player, "Blocks")}</td>
+                        <td className="border px-2 py-1">{valueFor(player, "ThreePM")}</td>
+                        <td className="border px-2 py-1">{valueFor(player, "ThreePA")}</td>
+                        <td className="border px-2 py-1">{pct(player.ThreePM, player.ThreePA)}</td>
+                        <td className="border px-2 py-1">{valueFor(player, "TwoPM")}</td>
+                        <td className="border px-2 py-1">{valueFor(player, "TwoPA")}</td>
+                        <td className="border px-2 py-1">{pct(player.TwoPM, player.TwoPA)}</td>
+                        <td className="border px-2 py-1">{valueFor(player, "FTM")}</td>
+                        <td className="border px-2 py-1">{valueFor(player, "FTA")}</td>
+                        <td className="border px-2 py-1">{pct(player.FTM, player.FTA)}</td>
+                      </>
+                    )}
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>
+
+        {scoringOnly && (
+          <p className="mt-2 text-center text-xs leading-relaxed text-gray-600">
+            This season currently includes scoring by game only. GP reflects games
+            in which a player recorded points in the surviving scoring archive.
+          </p>
+        )}
       </section>
     </div>
   );
