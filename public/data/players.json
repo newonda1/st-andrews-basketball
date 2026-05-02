@@ -4451,10 +4451,20 @@
   },
   {
     "PlayerID": 200406,
-    "PlayerName": "Cooper",
-    "FirstName": "",
+    "PlayerName": "Becca Cooper",
+    "FirstName": "Becca",
     "LastName": "Cooper",
-    "GradYear": null,
-    "Gender": "Girls"
+    "GradYear": 2004,
+    "Gender": "Girls",
+    "ProfileBlurbs": [
+      {
+        "Sport": "Girls Volleyball",
+        "SourceDate": "2003-12-09",
+        "SourcePublication": "Savannah Morning News",
+        "SourceTitle": "COASTAL EMPIRE VOLLEYBALL PLAYER OF THE YEAR / CHRISSY BARBEE, ST. VINCENT'S, SR. - BARBEE SETS A GOOD EXAMPLE FOR ST. VINCENT'S THE SAINTS SETTER HELPED LEAD HER TEAM TO THEIR FIRST CLASS AAAAA STATE CHAMPIONSHIP",
+        "Headline": "Becca Cooper, St. Andrew's, Sr., Middle hitter",
+        "Text": "Cooper, named to the SCISA AA All-State team, led by example as the strongest hitter on the Saints' court. Her talent made younger players on the St. Andrew's team step up their own performance. St. Andrew's won the SCISA Region IIAA championship (10-0), and finished 19-3 overall and the SCISA AA State championship runner up."
+      }
+    ]
   }
 ]

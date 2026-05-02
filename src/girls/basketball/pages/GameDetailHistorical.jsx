@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { useParams, Link } from "react-router-dom";
+import RecapImageGallery from "../components/RecapImageGallery";
 import { SCHOOLS_PATH, hydrateGamesWithSchools } from "../dataUtils";
 
 function GameDetailHistorical() {
@@ -222,35 +223,7 @@ function GameDetailHistorical() {
       <section>
         <h2 className="text-xl font-semibold mb-2">{recapTitle}</h2>
         <p className="text-gray-700 leading-relaxed whitespace-pre-line">{recapText}</p>
-        {recapImages.length > 0 && (
-          <div className="mt-4 flex flex-wrap justify-center gap-4">
-            {recapImages.map((image, index) => {
-              const imageSrc = typeof image === "string" ? image : image.src;
-              const imageAlt =
-                typeof image === "string"
-                  ? `${recapTitle} clipping ${index + 1}`
-                  : image.alt || `${recapTitle} clipping ${index + 1}`;
-              const imageCaption = typeof image === "string" ? "" : image.caption;
-
-              if (!imageSrc) return null;
-
-              return (
-                <figure key={imageSrc} className="mx-auto w-full max-w-5xl space-y-2">
-                  <img
-                    src={imageSrc}
-                    alt={imageAlt}
-                    className="block h-auto w-full rounded border border-gray-200"
-                  />
-                  {imageCaption && (
-                    <figcaption className="text-center text-sm text-gray-600">
-                      {imageCaption}
-                    </figcaption>
-                  )}
-                </figure>
-              );
-            })}
-          </div>
-        )}
+        <RecapImageGallery images={recapImages} title={recapTitle} />
       </section>
 
       {/* 3) Trimmed box score columns */}

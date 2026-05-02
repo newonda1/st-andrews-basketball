@@ -309,6 +309,30 @@ function CombinedTeamStatsTable({ sections }) {
   );
 }
 
+function buildSeasonRecord(season, seasonGames) {
+  const completedMatches = seasonGames.filter(
+    (game) => game.Result === "W" || game.Result === "L" || game.Result === "T"
+  );
+
+  if (completedMatches.length > 0) return buildGameRecord(completedMatches);
+
+  const wins = Number(season?.OverallWins);
+  const losses = Number(season?.OverallLosses);
+  const ties = Number(season?.OverallTies || 0);
+
+  if (Number.isFinite(wins) && Number.isFinite(losses)) {
+    return {
+      wins,
+      losses,
+      ties: Number.isFinite(ties) ? ties : 0,
+      setsWon: null,
+      setsLost: null,
+    };
+  }
+
+  return buildGameRecord([]);
+}
+
 export default function SeasonPage({ data, status = "" }) {
   const { seasonId } = useParams();
   const resolvedSeasonId = Number(seasonId);
@@ -330,7 +354,7 @@ export default function SeasonPage({ data, status = "" }) {
     () => getSeasonGames(data.games, resolvedSeasonId),
     [data.games, resolvedSeasonId]
   );
-  const record = useMemo(() => buildGameRecord(seasonGames), [seasonGames]);
+  const record = useMemo(() => buildSeasonRecord(season, seasonGames), [season, seasonGames]);
   const roster = useMemo(
     () =>
       hydrateRosterPlayers(
@@ -449,11 +473,18 @@ export default function SeasonPage({ data, status = "" }) {
       },
       {
         label: "Sets won / lost",
-        value: `${record.setsWon} / ${record.setsLost}`,
+        value:
+          record.setsWon == null || record.setsLost == null
+            ? "—"
+            : `${record.setsWon} / ${record.setsLost}`,
       },
       {
         label: "Region finish",
         value: season?.RegionFinish || "—",
+      },
+      {
+        label: "State finish",
+        value: season?.StateFinish || "—",
       },
       {
         label: "Georgia rank",

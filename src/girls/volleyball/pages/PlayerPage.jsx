@@ -101,6 +101,12 @@ function groupGamesBySeason(rows, seasons) {
     }));
 }
 
+function getVolleyballProfileBlurbs(player) {
+  return (player?.ProfileBlurbs || []).filter(
+    (entry) => String(entry?.Sport || "").toLowerCase() === "girls volleyball"
+  );
+}
+
 export default function PlayerPage({ data, status = "" }) {
   const { playerId } = useParams();
   const resolvedPlayerId = Number(playerId);
@@ -153,6 +159,7 @@ export default function PlayerPage({ data, status = "" }) {
     () => groupGamesBySeason(playerGameRows, data.seasons),
     [data.seasons, playerGameRows]
   );
+  const profileBlurbs = useMemo(() => getVolleyballProfileBlurbs(player), [player]);
 
   const activeView = STAT_VIEWS[selectedView] || STAT_VIEWS[DEFAULT_VIEW];
   const thClass =
@@ -204,6 +211,32 @@ export default function PlayerPage({ data, status = "" }) {
           </div>
         </div>
       </section>
+
+      {profileBlurbs.length > 0 ? (
+        <section className="mb-10 space-y-4">
+          {profileBlurbs.map((blurb, index) => (
+            <article
+              key={`${blurb.SourceDate || "source"}-${index}`}
+              className="border-l-4 border-blue-800 bg-blue-50 px-4 py-4 text-slate-800"
+            >
+              {blurb.Headline ? (
+                <h2 className="mb-2 text-lg font-black text-slate-950">{blurb.Headline}</h2>
+              ) : null}
+              <p className="text-base leading-7">{blurb.Text}</p>
+              {[blurb.SourcePublication, blurb.SourceDate, blurb.SourceTitle]
+                .filter(Boolean)
+                .length > 0 ? (
+                <div className="mt-3 text-sm font-medium leading-6 text-slate-600">
+                  Source: {[blurb.SourcePublication, blurb.SourceDate]
+                    .filter(Boolean)
+                    .join(", ")}
+                  {blurb.SourceTitle ? `, "${blurb.SourceTitle}"` : ""}
+                </div>
+              ) : null}
+            </article>
+          ))}
+        </section>
+      ) : null}
 
       <section className="mb-10">
         <div className="mb-3 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">

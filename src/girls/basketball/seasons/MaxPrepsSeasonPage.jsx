@@ -138,7 +138,7 @@ function resultClassName(result) {
   return "text-gray-500";
 }
 
-function MaxPrepsSeasonPage({ seasonId, seasonLabel }) {
+function MaxPrepsSeasonPage({ seasonId, seasonLabel, trimShootingColumns = false }) {
   const [games, setGames] = useState([]);
   const [playerStats, setPlayerStats] = useState([]);
   const [players, setPlayers] = useState([]);
@@ -450,15 +450,19 @@ function MaxPrepsSeasonPage({ seasonId, seasonLabel }) {
                   <th className="border px-2 py-1">A/T</th>
                   <th className="border px-2 py-1">STL</th>
                   <th className="border px-2 py-1">BLK</th>
-                  <th className="border px-2 py-1">3PM</th>
-                  <th className="border px-2 py-1">3PA</th>
-                  <th className="border px-2 py-1">3P%</th>
-                  <th className="border px-2 py-1">2PM</th>
-                  <th className="border px-2 py-1">2PA</th>
-                  <th className="border px-2 py-1">2P%</th>
-                  <th className="border px-2 py-1">FTM</th>
-                  <th className="border px-2 py-1">FTA</th>
-                  <th className="border px-2 py-1">FT%</th>
+                  {!trimShootingColumns && (
+                    <>
+                      <th className="border px-2 py-1">3PM</th>
+                      <th className="border px-2 py-1">3PA</th>
+                      <th className="border px-2 py-1">3P%</th>
+                      <th className="border px-2 py-1">2PM</th>
+                      <th className="border px-2 py-1">2PA</th>
+                      <th className="border px-2 py-1">2P%</th>
+                      <th className="border px-2 py-1">FTM</th>
+                      <th className="border px-2 py-1">FTA</th>
+                      <th className="border px-2 py-1">FT%</th>
+                    </>
+                  )}
                 </tr>
               </thead>
               <tbody>
@@ -484,21 +488,25 @@ function MaxPrepsSeasonPage({ seasonId, seasonLabel }) {
                       </td>
                       <td className="border px-2 py-1">{totals ? totals.STL : "-"}</td>
                       <td className="border px-2 py-1">{totals ? totals.BLK : "-"}</td>
-                      <td className="border px-2 py-1">{totals ? totals.ThreePM : "-"}</td>
-                      <td className="border px-2 py-1">{totals ? totals.ThreePA : "-"}</td>
-                      <td className="border px-2 py-1">
-                        {totals ? statPct(totals.ThreePM, totals.ThreePA) : "-"}
-                      </td>
-                      <td className="border px-2 py-1">{totals ? totals.TwoPM : "-"}</td>
-                      <td className="border px-2 py-1">{totals ? totals.TwoPA : "-"}</td>
-                      <td className="border px-2 py-1">
-                        {totals ? statPct(totals.TwoPM, totals.TwoPA) : "-"}
-                      </td>
-                      <td className="border px-2 py-1">{totals ? totals.FTM : "-"}</td>
-                      <td className="border px-2 py-1">{totals ? totals.FTA : "-"}</td>
-                      <td className="border px-2 py-1">
-                        {totals ? statPct(totals.FTM, totals.FTA) : "-"}
-                      </td>
+                      {!trimShootingColumns && (
+                        <>
+                          <td className="border px-2 py-1">{totals ? totals.ThreePM : "-"}</td>
+                          <td className="border px-2 py-1">{totals ? totals.ThreePA : "-"}</td>
+                          <td className="border px-2 py-1">
+                            {totals ? statPct(totals.ThreePM, totals.ThreePA) : "-"}
+                          </td>
+                          <td className="border px-2 py-1">{totals ? totals.TwoPM : "-"}</td>
+                          <td className="border px-2 py-1">{totals ? totals.TwoPA : "-"}</td>
+                          <td className="border px-2 py-1">
+                            {totals ? statPct(totals.TwoPM, totals.TwoPA) : "-"}
+                          </td>
+                          <td className="border px-2 py-1">{totals ? totals.FTM : "-"}</td>
+                          <td className="border px-2 py-1">{totals ? totals.FTA : "-"}</td>
+                          <td className="border px-2 py-1">
+                            {totals ? statPct(totals.FTM, totals.FTA) : "-"}
+                          </td>
+                        </>
+                      )}
                     </tr>
                   );
                 })}
@@ -551,15 +559,19 @@ function MaxPrepsSeasonPage({ seasonId, seasonLabel }) {
                   <th className="border px-2 py-1">AST</th>
                   <th className="border px-2 py-1">STL</th>
                   <th className="border px-2 py-1">BLK</th>
-                  <th className="border px-2 py-1">3PM</th>
-                  <th className="border px-2 py-1">3PA</th>
-                  <th className="border px-2 py-1">3P%</th>
-                  <th className="border px-2 py-1">2PM</th>
-                  <th className="border px-2 py-1">2PA</th>
-                  <th className="border px-2 py-1">2P%</th>
-                  <th className="border px-2 py-1">FTM</th>
-                  <th className="border px-2 py-1">FTA</th>
-                  <th className="border px-2 py-1">FT%</th>
+                  {!trimShootingColumns && (
+                    <>
+                      <th className="border px-2 py-1">3PM</th>
+                      <th className="border px-2 py-1">3PA</th>
+                      <th className="border px-2 py-1">3P%</th>
+                      <th className="border px-2 py-1">2PM</th>
+                      <th className="border px-2 py-1">2PA</th>
+                      <th className="border px-2 py-1">2P%</th>
+                      <th className="border px-2 py-1">FTM</th>
+                      <th className="border px-2 py-1">FTA</th>
+                      <th className="border px-2 py-1">FT%</th>
+                    </>
+                  )}
                 </tr>
               </thead>
               <tbody>
@@ -582,15 +594,21 @@ function MaxPrepsSeasonPage({ seasonId, seasonLabel }) {
                     <td className="border px-2 py-1">{valueFor(player, "Assists")}</td>
                     <td className="border px-2 py-1">{valueFor(player, "Steals")}</td>
                     <td className="border px-2 py-1">{valueFor(player, "Blocks")}</td>
-                    <td className="border px-2 py-1">{valueFor(player, "ThreePM")}</td>
-                    <td className="border px-2 py-1">{valueFor(player, "ThreePA")}</td>
-                    <td className="border px-2 py-1">{pct(player.ThreePM, player.ThreePA)}</td>
-                    <td className="border px-2 py-1">{valueFor(player, "TwoPM")}</td>
-                    <td className="border px-2 py-1">{valueFor(player, "TwoPA")}</td>
-                    <td className="border px-2 py-1">{pct(player.TwoPM, player.TwoPA)}</td>
-                    <td className="border px-2 py-1">{valueFor(player, "FTM")}</td>
-                    <td className="border px-2 py-1">{valueFor(player, "FTA")}</td>
-                    <td className="border px-2 py-1">{pct(player.FTM, player.FTA)}</td>
+                    {!trimShootingColumns && (
+                      <>
+                        <td className="border px-2 py-1">{valueFor(player, "ThreePM")}</td>
+                        <td className="border px-2 py-1">{valueFor(player, "ThreePA")}</td>
+                        <td className="border px-2 py-1">
+                          {pct(player.ThreePM, player.ThreePA)}
+                        </td>
+                        <td className="border px-2 py-1">{valueFor(player, "TwoPM")}</td>
+                        <td className="border px-2 py-1">{valueFor(player, "TwoPA")}</td>
+                        <td className="border px-2 py-1">{pct(player.TwoPM, player.TwoPA)}</td>
+                        <td className="border px-2 py-1">{valueFor(player, "FTM")}</td>
+                        <td className="border px-2 py-1">{valueFor(player, "FTA")}</td>
+                        <td className="border px-2 py-1">{pct(player.FTM, player.FTA)}</td>
+                      </>
+                    )}
                   </tr>
                 ))}
               </tbody>
@@ -606,19 +624,23 @@ function MaxPrepsSeasonPage({ seasonId, seasonLabel }) {
                   <td className="border px-2 py-1">{valueFor(teamTotals, "Assists")}</td>
                   <td className="border px-2 py-1">{valueFor(teamTotals, "Steals")}</td>
                   <td className="border px-2 py-1">{valueFor(teamTotals, "Blocks")}</td>
-                  <td className="border px-2 py-1">{valueFor(teamTotals, "ThreePM")}</td>
-                  <td className="border px-2 py-1">{valueFor(teamTotals, "ThreePA")}</td>
-                  <td className="border px-2 py-1">
-                    {pct(teamTotals.ThreePM, teamTotals.ThreePA)}
-                  </td>
-                  <td className="border px-2 py-1">{valueFor(teamTotals, "TwoPM")}</td>
-                  <td className="border px-2 py-1">{valueFor(teamTotals, "TwoPA")}</td>
-                  <td className="border px-2 py-1">
-                    {pct(teamTotals.TwoPM, teamTotals.TwoPA)}
-                  </td>
-                  <td className="border px-2 py-1">{valueFor(teamTotals, "FTM")}</td>
-                  <td className="border px-2 py-1">{valueFor(teamTotals, "FTA")}</td>
-                  <td className="border px-2 py-1">{pct(teamTotals.FTM, teamTotals.FTA)}</td>
+                  {!trimShootingColumns && (
+                    <>
+                      <td className="border px-2 py-1">{valueFor(teamTotals, "ThreePM")}</td>
+                      <td className="border px-2 py-1">{valueFor(teamTotals, "ThreePA")}</td>
+                      <td className="border px-2 py-1">
+                        {pct(teamTotals.ThreePM, teamTotals.ThreePA)}
+                      </td>
+                      <td className="border px-2 py-1">{valueFor(teamTotals, "TwoPM")}</td>
+                      <td className="border px-2 py-1">{valueFor(teamTotals, "TwoPA")}</td>
+                      <td className="border px-2 py-1">
+                        {pct(teamTotals.TwoPM, teamTotals.TwoPA)}
+                      </td>
+                      <td className="border px-2 py-1">{valueFor(teamTotals, "FTM")}</td>
+                      <td className="border px-2 py-1">{valueFor(teamTotals, "FTA")}</td>
+                      <td className="border px-2 py-1">{pct(teamTotals.FTM, teamTotals.FTA)}</td>
+                    </>
+                  )}
                 </tr>
               </tfoot>
             </table>

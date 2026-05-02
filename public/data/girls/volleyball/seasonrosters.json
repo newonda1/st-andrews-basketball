@@ -1,5 +1,20 @@
 [
   {
+    "SeasonID": 2003,
+    "SourceSeasonLabel": "2003-04",
+    "Players": [
+      {
+        "PlayerID": 200406,
+        "JerseyNumber": null,
+        "Grade": 12,
+        "GradeLabel": "Sr.",
+        "Positions": [
+          "MH"
+        ]
+      }
+    ]
+  },
+  {
     "SeasonID": 2007,
     "SourceSeasonLabel": "2007-08",
     "Players": []

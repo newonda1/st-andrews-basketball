@@ -79,6 +79,34 @@ function buildRecord(matches, filterFn = () => true) {
   return buildGameRecord(matches.filter(filterFn));
 }
 
+function hasSeasonRecord(season) {
+  return (
+    Number.isFinite(Number(season?.OverallWins)) &&
+    Number.isFinite(Number(season?.OverallLosses))
+  );
+}
+
+function buildOverallRecord(season, completedMatches) {
+  if (completedMatches.length > 0) return buildRecord(completedMatches);
+
+  if (hasSeasonRecord(season)) {
+    return {
+      wins: Number(season.OverallWins),
+      losses: Number(season.OverallLosses),
+      ties: Number(season.OverallTies || 0),
+      setsWon: 0,
+      setsLost: 0,
+    };
+  }
+
+  return buildRecord([]);
+}
+
+function formatFilteredRecord(matches, filterFn) {
+  const record = buildRecord(matches, filterFn);
+  return formatRecord(record.wins, record.losses, record.ties);
+}
+
 function getRegionRecord(season, completedMatches) {
   const regionMatches = completedMatches.filter((match) =>
     String(match.GameType || "").toLowerCase().includes("region")
@@ -166,7 +194,13 @@ function buildSeasonsWithGames(seasons, games) {
         season,
         games: getSeasonGames(seasonGames, season.SeasonID),
       }))
-      .filter((entry) => entry.games.length > 0)
+      .filter(
+        (entry) =>
+          entry.games.length > 0 ||
+          hasSeasonRecord(entry.season) ||
+          Boolean(entry.season.RegionFinish) ||
+          Boolean(entry.season.StateFinish)
+      )
   );
 }
 
@@ -189,7 +223,8 @@ function computeCoachSummaries(seasonsWithGames) {
     const entry = coachMap.get(coach);
     entry.seasons.push(Number(season.SeasonID));
 
-    const record = buildRecord(games.filter(isCompletedMatch));
+    const completedMatches = games.filter(isCompletedMatch);
+    const record = buildOverallRecord(season, completedMatches);
     entry.wins += record.wins;
     entry.losses += record.losses;
     entry.ties += record.ties;
@@ -231,19 +266,26 @@ export default function YearlyResults({ data, status = "" }) {
     () =>
       seasonsWithGames.map(({ season, games }) => {
         const completedMatches = games.filter(isCompletedMatch);
-        const overall = buildRecord(completedMatches);
-        const home = buildRecord(
-          completedMatches,
-          (match) => String(match.LocationType || "") === "Home"
-        );
-        const away = buildRecord(
-          completedMatches,
-          (match) => String(match.LocationType || "") === "Away"
-        );
-        const playoffs = buildRecord(completedMatches, (match) => {
-          const gameType = String(match.GameType || "").toLowerCase();
-          return gameType.includes("state") || gameType.includes("playoff");
-        });
+        const hasCompletedMatches = completedMatches.length > 0;
+        const overall = buildOverallRecord(season, completedMatches);
+        const home = hasCompletedMatches
+          ? formatFilteredRecord(
+              completedMatches,
+              (match) => String(match.LocationType || "") === "Home"
+            )
+          : "-";
+        const away = hasCompletedMatches
+          ? formatFilteredRecord(
+              completedMatches,
+              (match) => String(match.LocationType || "") === "Away"
+            )
+          : "-";
+        const playoffRecord = hasCompletedMatches
+          ? buildRecord(completedMatches, (match) => {
+              const gameType = String(match.GameType || "").toLowerCase();
+              return gameType.includes("state") || gameType.includes("playoff");
+            })
+          : null;
 
         return {
           seasonId: season.SeasonID,
@@ -251,9 +293,11 @@ export default function YearlyResults({ data, status = "" }) {
           coach: season.HeadCoach || "-",
           overall: formatRecord(overall.wins, overall.losses, overall.ties),
           region: getRegionRecord(season, completedMatches),
-          home: formatRecord(home.wins, home.losses, home.ties),
-          away: formatRecord(away.wins, away.losses, away.ties),
-          playoffs: formatRecord(playoffs.wins, playoffs.losses, playoffs.ties),
+          home,
+          away,
+          playoffs: playoffRecord
+            ? formatRecord(playoffRecord.wins, playoffRecord.losses, playoffRecord.ties)
+            : "-",
           seasonResult: getSeasonResult(season),
         };
       }),

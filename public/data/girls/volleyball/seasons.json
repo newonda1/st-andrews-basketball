@@ -1,5 +1,22 @@
 [
   {
+    "SeasonID": 2003,
+    "YearStart": 2003,
+    "YearEnd": 2004,
+    "DisplaySeason": "2003",
+    "SourceSeasonLabel": "2003-04",
+    "HeadCoach": null,
+    "OverallWins": 19,
+    "OverallLosses": 3,
+    "RegionWins": 10,
+    "RegionLosses": 0,
+    "RegionFinish": "Region Champions",
+    "League": "SCISA Region IIAA",
+    "StateDivision": "SCISA AA",
+    "StateFinish": "State Runner-up",
+    "SourceCitation": "Savannah Morning News, Dec. 9, 2003"
+  },
+  {
     "SeasonID": 2007,
     "YearStart": 2007,
     "YearEnd": 2008,
