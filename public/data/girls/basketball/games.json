@@ -278,6 +278,52 @@
     ]
   },
   {
+    "GameID": 20040131,
+    "Date": 1075507200000,
+    "OpponentID": "sc-holly-hill-academy-holly-hill",
+    "Opponent": "Holly Hill Academy",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 50,
+    "OpponentScore": 38,
+    "Season": 2003,
+    "IsComplete": "Yes",
+    "ResultMargin": 12,
+    "RecapTitle": "Moesch and Grace Wilkowski Spark First-Place Win",
+    "Recap": "Jennifer Moesch and Grace Wilkowski combined for 31 points and 13 steals as St. Andrew's took a 50-38 victory over Holly Hill in a battle for first place in SCISA Region 2-AA. Moesch led the Saints with 20 points and seven steals, while Grace Wilkowski added 11 points and six steals. Becca Cooper scored 8, Mary Wilkowski added 7, and Carie Bugos had 4 as the Saints led 21-17 at halftime and improved to 13-3 overall and 7-0 in SCISA Region 2-AA.",
+    "RecapImages": [
+      {
+        "src": "/images/girls/basketball/seasons/2003-04/holly-hill-2004-01-31-clipping.png",
+        "alt": "Newspaper clipping for St. Andrew's 50, Holly Hill 38 on Jan. 31, 2004",
+        "caption": "Newspaper clipping covering the Jan. 31, 2004 Holly Hill game."
+      }
+    ]
+  },
+  {
+    "GameID": 20040203,
+    "Date": 1075766400000,
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
+    "Opponent": "Hilton Head Christian Academy",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 59,
+    "OpponentScore": 43,
+    "Season": 2003,
+    "IsComplete": "Yes",
+    "ResultMargin": 16,
+    "RecapTitle": "Becca Cooper Controls Glass in Win Over Hilton Head Christian",
+    "Recap": "Senior Becca Cooper had a career-high 21 rebounds and seven points to help lead St. Andrew's past Hilton Head Christian Academy, 59-43. The Saints trailed 24-23 at halftime before outscoring the visitors 36-19 in the second half. Jennifer Moesch and Grace Wilkowski added 18 points apiece, while Mary Wilkowski had 16 as St. Andrew's improved to 14-3.",
+    "RecapImages": [
+      {
+        "src": "/images/girls/basketball/seasons/2003-04/hilton-head-christian-2004-02-03-clipping.png",
+        "alt": "Newspaper clipping for St. Andrew's 59, Hilton Head Christian 43 on Feb. 3, 2004",
+        "caption": "Newspaper clipping covering the Feb. 3, 2004 Hilton Head Christian game."
+      }
+    ]
+  },
+  {
     "GameID": 20061118,
     "Date": 1163808000000,
     "OpponentID": "ga-david-emanuel-academy-stillmore",

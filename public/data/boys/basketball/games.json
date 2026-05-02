@@ -6269,23 +6269,41 @@
     "Opponent": "Holly Hill Academy",
     "LocationType": "Unknown",
     "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 71,
+    "OpponentScore": 60,
+    "Season": 2003,
+    "IsComplete": "Yes",
+    "RecapTitle": "Sawyer, Smith Lead Win Over Holly Hill",
+    "Recap": "Cass Sawyer scored 18 points and Josh Smith added 17 points and 10 rebounds to lead St. Andrew's past Holly Hill 71-60 in SCISA Region 2-AA play. Davy Clay added 12 points and 10 steals for the Saints, who led 32-21 at halftime and improved to 9-7 overall and 6-1 in region play. Daniel Hutto led Holly Hill with a game-high 23 points.",
+    "RecapImages": [
+      {
+        "src": "/images/boys/basketball/seasons/2003-04/holly-hill-2004-01-31-clipping.png",
+        "alt": "Newspaper clipping for St. Andrew's 71, Holly Hill 60 on Jan. 31, 2004",
+        "caption": "Newspaper clipping covering the Jan. 31, 2004 Holly Hill game."
+      }
+    ]
+  },
+  {
+    "GameID": 20040203,
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
+    "Opponent": "Hilton Head Christian Academy",
+    "LocationType": "Home",
+    "GameType": "Region",
     "Result": "L",
     "TeamScore": 61,
     "OpponentScore": 68,
     "Season": 2003,
-    "IsComplete": "Yes"
-  },
-  {
-    "GameID": 20040203,
-    "OpponentID": "sc-james-island-christian-school-charleston",
-    "Opponent": "James Island Christian School",
-    "LocationType": "Unknown",
-    "GameType": "Region",
-    "Result": "W",
-    "TeamScore": 49,
-    "OpponentScore": 38,
-    "Season": 2003,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "RecapTitle": "Smith Triple-Double Not Enough Against Hilton Head Christian",
+    "Recap": "Hilton Head Christian held off St. Andrew's second-half run to win 68-61. Josh Smith led all scorers with 18 points and recorded a triple-double with 11 rebounds and 10 steals, while Beau Hinton added 14 points for the Saints. Grant Brown led four Hilton Head Christian players in double figures with 17 points, and HHCA led 39-24 at halftime.",
+    "RecapImages": [
+      {
+        "src": "/images/boys/basketball/seasons/2003-04/hilton-head-christian-2004-02-03-clipping.png",
+        "alt": "Newspaper clipping for Hilton Head Christian 68, St. Andrew's 61 on Feb. 3, 2004",
+        "caption": "Newspaper clipping covering the Feb. 3, 2004 Hilton Head Christian game."
+      }
+    ]
   },
   {
     "GameID": 20040210,

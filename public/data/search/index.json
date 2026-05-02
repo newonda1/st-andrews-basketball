@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-02T18:43:08.120Z",
-  "itemCount": 1494,
+  "generatedAt": "2026-05-02T23:25:18.125Z",
+  "itemCount": 1493,
   "items": [
     {
       "id": "athletics-home",
@@ -21413,23 +21413,6 @@
       ]
     },
     {
-      "id": "boys-basketball-team-hilton-head-academy",
-      "type": "team",
-      "title": "Hilton Head Academy",
-      "subtitle": "Boys Basketball opponent history - Hilton Head Island, SC",
-      "to": "/athletics/boys/basketball/records/opponents?team=Hilton+Head+Academy",
-      "keywords": [
-        "Boys Basketball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Hilton Head Academy",
-        "Hilton Head Island",
-        "SC"
-      ]
-    },
-    {
       "id": "boys-basketball-team-greenwood-christian-school",
       "type": "team",
       "title": "Greenwood Christian School",
@@ -21443,6 +21426,7 @@
         "records",
         "Greenwood Christian School",
         "Greenwood Christian",
+        "Hawks",
         "Greenwood",
         "SC"
       ]
@@ -24367,23 +24351,6 @@
       ]
     },
     {
-      "id": "girls-basketball-team-david-emanuel-academy",
-      "type": "team",
-      "title": "David Emanuel Academy",
-      "subtitle": "Girls Basketball opponent history - Stillmore, GA",
-      "to": "/athletics/girls/basketball/records/opponents?team=David+Emanuel+Academy",
-      "keywords": [
-        "Girls Basketball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "David Emanuel Academy",
-        "Stillmore",
-        "GA"
-      ]
-    },
-    {
       "id": "girls-basketball-team-hilton-head-christian-academy",
       "type": "team",
       "title": "Hilton Head Christian Academy",
@@ -24399,6 +24366,23 @@
         "Eagles",
         "Hilton Head Island",
         "SC"
+      ]
+    },
+    {
+      "id": "girls-basketball-team-david-emanuel-academy",
+      "type": "team",
+      "title": "David Emanuel Academy",
+      "subtitle": "Girls Basketball opponent history - Stillmore, GA",
+      "to": "/athletics/girls/basketball/records/opponents?team=David+Emanuel+Academy",
+      "keywords": [
+        "Girls Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "David Emanuel Academy",
+        "Stillmore",
+        "GA"
       ]
     },
     {

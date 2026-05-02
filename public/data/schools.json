@@ -1576,7 +1576,14 @@
     "Name": "Greenwood Christian School",
     "City": "Greenwood",
     "State": "SC",
-    "ShortName": "Greenwood Christian"
+    "ShortName": "Greenwood Christian",
+    "Mascot": "Hawks",
+    "PrimaryColor": "#242769",
+    "SecondaryColor": "#9A9B9F",
+    "WebsiteUrl": "https://www.gcshawks.com/",
+    "AthleticsUrl": "https://www.gcshawks.com/",
+    "LogoPath": "/images/schools/logos/sc-greenwood-christian-school-greenwood.png",
+    "LogoSourceUrl": "https://sportshub2-uploads.vnn-prod.zone/files/sites/1405/2019/05/03195336/HawksHeadOnly-GreenEye.png"
   },
   {
     "SchoolID": "sc-hampton-county-high-school-varnville",
