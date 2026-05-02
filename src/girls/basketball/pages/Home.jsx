@@ -20,6 +20,10 @@ function Home() {
       to: "/athletics/girls/basketball/seasons/2009-10",
     },
     {
+      label: "2003-04 Season",
+      to: "/athletics/girls/basketball/seasons/2003-04",
+    },
+    {
       label: "2021-22 Season",
       to: "/athletics/girls/basketball/seasons/2021-22",
     },

@@ -132,6 +132,12 @@ function formatScore(game) {
   return `${game.TeamScore}-${game.OpponentScore}`;
 }
 
+function resultClassName(result) {
+  if (result === "W") return "text-green-700";
+  if (result === "L") return "text-red-700";
+  return "text-gray-500";
+}
+
 function MaxPrepsSeasonPage({ seasonId, seasonLabel }) {
   const [games, setGames] = useState([]);
   const [playerStats, setPlayerStats] = useState([]);
@@ -338,7 +344,7 @@ function MaxPrepsSeasonPage({ seasonId, seasonLabel }) {
       <h1 className="text-3xl font-bold text-center mb-2">{seasonLabel} Season</h1>
 
       <section>
-        <div className="flex items-center justify-between mt-8 mb-4">
+        <div className="mt-8 mb-4 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">
           <h2 className="text-2xl font-semibold">Schedule &amp; Results</h2>
 
           <div className="flex items-center gap-2 text-xs sm:text-sm">
@@ -365,7 +371,35 @@ function MaxPrepsSeasonPage({ seasonId, seasonLabel }) {
           </div>
         </div>
 
-        <div className="overflow-x-auto">
+        {!showTeamTotals && (
+          <div className="grid gap-3 sm:hidden">
+            {games.map((game) => (
+              <Link
+                key={game.GameID}
+                to={`/athletics/girls/basketball/games/${game.GameID}`}
+                className="block border border-gray-200 bg-white p-4 text-gray-900 no-underline shadow-sm transition hover:border-blue-300"
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <p className="mb-1 text-sm text-gray-600">{formatDate(game)}</p>
+                    <h3 className="text-lg font-semibold leading-snug">{game.Opponent}</h3>
+                    <p className="mt-2 text-sm text-gray-600">
+                      {[game.LocationType, game.GameType || "Regular Season"].filter(Boolean).join(" • ")}
+                    </p>
+                  </div>
+                  <div className="shrink-0 text-right">
+                    <p className={`text-lg font-bold ${resultClassName(game.Result)}`}>
+                      {game.Result || "-"}
+                    </p>
+                    <p className="text-sm font-semibold">{formatScore(game)}</p>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        )}
+
+        <div className={`${!showTeamTotals ? "hidden sm:block" : ""} overflow-x-auto`}>
           {!showTeamTotals ? (
             <table className="min-w-full border text-sm">
               <thead className="bg-gray-100">
@@ -390,13 +424,9 @@ function MaxPrepsSeasonPage({ seasonId, seasonLabel }) {
                       </Link>
                     </td>
                     <td
-                      className={`border px-3 py-2 text-center font-bold ${
-                        game.Result === "W"
-                          ? "text-green-700"
-                          : game.Result === "L"
-                            ? "text-red-700"
-                            : "text-gray-500"
-                      }`}
+                      className={`border px-3 py-2 text-center font-bold ${resultClassName(
+                        game.Result
+                      )}`}
                     >
                       {game.Result || "-"}
                     </td>
@@ -479,7 +509,7 @@ function MaxPrepsSeasonPage({ seasonId, seasonLabel }) {
       </section>
 
       <section>
-        <div className="flex items-center justify-between mt-8 mb-4">
+        <div className="mt-8 mb-4 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">
           <h2 className="text-2xl font-semibold">Player Statistics</h2>
 
           <div className="flex items-center space-x-2 text-xs sm:text-sm">
