@@ -1,5 +1,28 @@
 [
   {
+    "GameID": 20031202,
+    "Date": 1070323200000,
+    "OpponentID": "ga-memorial-day-school-savannah",
+    "Opponent": "Memorial Day School",
+    "LocationType": "Home",
+    "GameType": "Non-Region",
+    "Result": "W",
+    "TeamScore": 56,
+    "OpponentScore": 11,
+    "Season": 2003,
+    "IsComplete": "Yes",
+    "ResultMargin": 45,
+    "RecapTitle": "St. Andrew's Takes Down Memorial",
+    "Recap": "First-year head coach Kevin Kunst opened the 2003-04 season with a 56-11 home win over crosstown rival Memorial Day. St. Andrew's broke open a close start with a 29-4 run and led 35-8 at halftime. Mary Wilkowski led the Saints with 18 points and 11 rebounds, Grace Wilkowski added 16 points and 12 rebounds, and Jennifer Moesch finished with 12 points and 12 assists. The Saints' zone forced 37 turnovers and fueled the up-tempo style Kunst wanted to establish.",
+    "RecapImages": [
+      {
+        "src": "/images/girls/basketball/seasons/2003-04/memorial-day-2003-12-02-clipping.png",
+        "alt": "Newspaper clipping for St. Andrew's 56, Memorial Day 11 on Dec. 2, 2003",
+        "caption": "Savannah Morning News clipping from the Dec. 2, 2003 Memorial Day game."
+      }
+    ]
+  },
+  {
     "GameID": 20061118,
     "Date": 1163808000000,
     "OpponentID": "ga-david-emanuel-academy-stillmore",

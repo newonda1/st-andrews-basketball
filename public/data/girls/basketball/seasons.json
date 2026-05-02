@@ -1,5 +1,15 @@
 [
   {
+    "SeasonID": 2003,
+    "YearStart": 2003,
+    "YearEnd": 2004,
+    "HeadCoach": "Kevin Kunst",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
     "SeasonID": 2006,
     "YearStart": 2006,
     "YearEnd": 2007,

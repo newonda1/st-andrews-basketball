@@ -317,7 +317,13 @@ function MaxPrepsSeasonPage({ seasonId, seasonLabel }) {
 
   const playerName = (playerId) => {
     const player = playerById.get(Number(playerId));
-    return player ? `${player.FirstName} ${player.LastName}` : "Unknown Player";
+    if (!player) return "Unknown Player";
+    return (
+      player.PlayerName ||
+      player.Name ||
+      [player.FirstName, player.LastName].filter(Boolean).join(" ") ||
+      "Unknown Player"
+    );
   };
 
   const valueFor = (player, key) => {

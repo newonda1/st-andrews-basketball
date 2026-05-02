@@ -1,5 +1,45 @@
 [
   {
+    "SeasonID": "2003-04",
+    "Players": [
+      {
+        "PlayerID": 200401,
+        "JerseyNumber": null,
+        "Grade": 9
+      },
+      {
+        "PlayerID": 200603,
+        "JerseyNumber": null,
+        "Grade": 10
+      },
+      {
+        "PlayerID": 200402,
+        "JerseyNumber": null,
+        "Grade": 12
+      },
+      {
+        "PlayerID": 200403,
+        "JerseyNumber": null,
+        "Grade": null
+      },
+      {
+        "PlayerID": 200404,
+        "JerseyNumber": null,
+        "Grade": null
+      },
+      {
+        "PlayerID": 200405,
+        "JerseyNumber": null,
+        "Grade": null
+      },
+      {
+        "PlayerID": 200406,
+        "JerseyNumber": null,
+        "Grade": null
+      }
+    ]
+  },
+  {
     "SeasonID": "2006-07",
     "Players": []
   },

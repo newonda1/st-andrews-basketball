@@ -36,6 +36,7 @@ const seasonPages = [
 ];
 
 const maxPrepsArchiveSeasonPages = [
+  { slug: "2003-04", seasonId: 2003 },
   { slug: "2019-20", seasonId: 2019 },
   { slug: "2018-19", seasonId: 2018 },
   { slug: "2017-18", seasonId: 2017 },

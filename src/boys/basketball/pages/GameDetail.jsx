@@ -229,7 +229,7 @@ function GameDetail() {
         <h2 className="text-xl font-semibold mb-2">{recapTitle}</h2>
         <p className="text-gray-700 leading-relaxed whitespace-pre-line">{recapText}</p>
         {recapImages.length > 0 && (
-          <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-4 flex flex-wrap justify-center gap-4">
             {recapImages.map((image, index) => {
               const imageSrc = typeof image === "string" ? image : image.src;
               const imageAlt =
@@ -241,7 +241,7 @@ function GameDetail() {
               if (!imageSrc) return null;
 
               return (
-                <figure key={imageSrc} className="space-y-2">
+                <figure key={imageSrc} className="w-full max-w-sm space-y-2">
                   <img
                     src={imageSrc}
                     alt={imageAlt}
