@@ -33,6 +33,15 @@ export function sortGolfTournaments(tournaments = []) {
   });
 }
 
+export function sortGolfMatches(matches = []) {
+  return matches.slice().sort((a, b) => {
+    const dateDiff = String(a.Date || "").localeCompare(String(b.Date || ""));
+    if (dateDiff !== 0) return dateDiff;
+
+    return String(a.Name || "").localeCompare(String(b.Name || ""));
+  });
+}
+
 export function formatGolfPlace(place) {
   const numeric = Number(place);
   if (!Number.isFinite(numeric)) return "—";

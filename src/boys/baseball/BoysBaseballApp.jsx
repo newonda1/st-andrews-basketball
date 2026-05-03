@@ -101,28 +101,30 @@ export default function BoysBaseballApp() {
       athleticsHomePath="/athletics"
       headerHomePath="/athletics/boys/baseball"
     >
-      <Routes>
-        <Route index element={<Home />} />
+      <div className="baseball-section">
+        <Routes>
+          <Route index element={<Home />} />
 
-        <Route path="team/full" element={<FullTeamStats />} />
-        <Route path="team/season-records" element={<TeamSeasonRecords />} />
-        <Route path="records/career" element={<FullCareerStats />} />
-        <Route path="records/season" element={<SeasonRecords />} />
-        <Route path="records/career-records" element={<CareerRecords />} />
-        <Route path="records/single-game" element={<SingleGameRecords />} />
-        <Route path="records/team" element={<TeamSingleGameRecords />} />
-        <Route path="records/opponents" element={<RecordsVsOpponents />} />
+          <Route path="team/full" element={<FullTeamStats />} />
+          <Route path="team/season-records" element={<TeamSeasonRecords />} />
+          <Route path="records/career" element={<FullCareerStats />} />
+          <Route path="records/season" element={<SeasonRecords />} />
+          <Route path="records/career-records" element={<CareerRecords />} />
+          <Route path="records/single-game" element={<SingleGameRecords />} />
+          <Route path="records/team" element={<TeamSingleGameRecords />} />
+          <Route path="records/opponents" element={<RecordsVsOpponents />} />
 
-        {seasonPages.map(({ slug, Component }) => (
-          <Route key={slug} path={`seasons/${slug}`} element={<Component />} />
-        ))}
+          {seasonPages.map(({ slug, Component }) => (
+            <Route key={slug} path={`seasons/${slug}`} element={<Component />} />
+          ))}
 
-        <Route path="yearly-results" element={<YearlyResults />} />
-        <Route path="games/:gameId" element={<GameDetail />} />
-        <Route path="players/:playerId" element={<PlayerPage />} />
+          <Route path="yearly-results" element={<YearlyResults />} />
+          <Route path="games/:gameId" element={<GameDetail />} />
+          <Route path="players/:playerId" element={<PlayerPage />} />
 
-        <Route path="*" element={<Home />} />
-      </Routes>
+          <Route path="*" element={<Home />} />
+        </Routes>
+      </div>
     </AthleticsProgramShell>
   );
 }

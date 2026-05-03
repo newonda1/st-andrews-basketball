@@ -1,0 +1,133 @@
+[
+  {
+    "MatchID": "20040303-groves",
+    "Season": 2004,
+    "Name": "St. Andrew's vs. Groves",
+    "Date": "2004-03-03",
+    "Course": "Mary Calder Golf Course",
+    "Opponent": "Groves High School",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "2004-03-04",
+    "SourceCitation": "Savannah Morning News, Mar. 4, 2004",
+    "Summary": "St. Andrew's swept Groves at Mary Calder Golf Course, winning the boys' match 185-196 and the girls' match 110-111.",
+    "Divisions": [
+      {
+        "Division": "Boys",
+        "TeamScores": [
+          {
+            "School": "St. Andrew's",
+            "Score": 185,
+            "IsStAndrews": true
+          },
+          {
+            "School": "Groves",
+            "Score": 196,
+            "IsStAndrews": false
+          }
+        ],
+        "Medalist": {
+          "PlayerName": "Steven Fields",
+          "School": "Groves",
+          "Score": 40
+        },
+        "Results": [
+          {
+            "PlayerID": 200411,
+            "PlayerName": "Kevin Kicklighter",
+            "School": "St. Andrew's",
+            "Score": 44,
+            "IsStAndrews": true
+          },
+          {
+            "PlayerID": 200412,
+            "PlayerName": "Zach Inbrogno",
+            "School": "St. Andrew's",
+            "Score": 46,
+            "IsStAndrews": true
+          },
+          {
+            "PlayerID": 200413,
+            "PlayerName": "Ryan Ramsey",
+            "School": "St. Andrew's",
+            "Score": 47,
+            "IsStAndrews": true
+          },
+          {
+            "PlayerID": 200414,
+            "PlayerName": "Brock Prescott",
+            "School": "St. Andrew's",
+            "Score": 48,
+            "IsStAndrews": true
+          },
+          {
+            "PlayerName": "Steven Fields",
+            "School": "Groves",
+            "Score": 40,
+            "IsStAndrews": false
+          },
+          {
+            "PlayerName": "Dustin Fort",
+            "School": "Groves",
+            "Score": 45,
+            "IsStAndrews": false
+          },
+          {
+            "PlayerName": "Ryan Hall",
+            "School": "Groves",
+            "Score": 45,
+            "IsStAndrews": false
+          },
+          {
+            "PlayerName": "Jason Neal",
+            "School": "Groves",
+            "Score": 62,
+            "IsStAndrews": false
+          }
+        ]
+      },
+      {
+        "Division": "Girls",
+        "TeamScores": [
+          {
+            "School": "St. Andrew's",
+            "Score": 110,
+            "IsStAndrews": true
+          },
+          {
+            "School": "Groves",
+            "Score": 111,
+            "IsStAndrews": false
+          }
+        ],
+        "Medalist": {
+          "PlayerName": "Jackie Dyer",
+          "School": "Groves",
+          "Score": 49
+        },
+        "Results": [
+          {
+            "PlayerID": 200415,
+            "PlayerName": "Logan Ferrelle",
+            "School": "St. Andrew's",
+            "Score": 50,
+            "IsStAndrews": true
+          },
+          {
+            "PlayerID": 200416,
+            "PlayerName": "Christine Spain",
+            "School": "St. Andrew's",
+            "Score": 60,
+            "IsStAndrews": true
+          },
+          {
+            "PlayerName": "Jackie Dyer",
+            "School": "Groves",
+            "Score": 49,
+            "IsStAndrews": false
+          }
+        ],
+        "ResultNote": "The published transcript lists Jackie Dyer's 49 as the only Groves individual girls score."
+      }
+    ]
+  }
+]

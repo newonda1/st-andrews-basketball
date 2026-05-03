@@ -2,12 +2,15 @@ import React, { useEffect, useMemo, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import AthleticsProgramShell from "../components/AthleticsProgramShell";
 import Home from "./pages/Home";
+import MatchPage from "./pages/MatchPage";
 import SeasonPage from "./pages/SeasonPage";
 import YearlyResults from "./pages/YearlyResults";
 
 export default function GolfApp() {
   const [seasons, setSeasons] = useState([]);
   const [tournaments, setTournaments] = useState([]);
+  const [matches, setMatches] = useState([]);
+  const [players, setPlayers] = useState([]);
   const [status, setStatus] = useState("Loading golf archive...");
 
   useEffect(() => {
@@ -15,9 +18,11 @@ export default function GolfApp() {
 
     async function loadData() {
       try {
-        const [seasonsRes, tournamentsRes] = await Promise.all([
+        const [seasonsRes, tournamentsRes, matchesRes, playersRes] = await Promise.all([
           fetch("/data/golf/seasons.json"),
           fetch("/data/golf/tournaments.json"),
+          fetch("/data/golf/matches.json"),
+          fetch("/data/players.json"),
         ]);
 
         if (!seasonsRes.ok) {
@@ -30,14 +35,26 @@ export default function GolfApp() {
           );
         }
 
-        const [seasonsData, tournamentsData] = await Promise.all([
+        if (!matchesRes.ok) {
+          throw new Error(`Could not load golf matches (${matchesRes.status}).`);
+        }
+
+        if (!playersRes.ok) {
+          throw new Error(`Could not load players (${playersRes.status}).`);
+        }
+
+        const [seasonsData, tournamentsData, matchesData, playersData] = await Promise.all([
           seasonsRes.json(),
           tournamentsRes.json(),
+          matchesRes.json(),
+          playersRes.json(),
         ]);
 
         if (!cancelled) {
           setSeasons(Array.isArray(seasonsData) ? seasonsData : []);
           setTournaments(Array.isArray(tournamentsData) ? tournamentsData : []);
+          setMatches(Array.isArray(matchesData) ? matchesData : []);
+          setPlayers(Array.isArray(playersData) ? playersData : []);
           setStatus("");
         }
       } catch (error) {
@@ -84,6 +101,7 @@ export default function GolfApp() {
             <YearlyResults
               seasons={seasons}
               tournaments={tournaments}
+              matches={matches}
               status={status}
             />
           }
@@ -94,8 +112,15 @@ export default function GolfApp() {
             <SeasonPage
               seasons={seasons}
               tournaments={tournaments}
+              matches={matches}
               status={status}
             />
+          }
+        />
+        <Route
+          path="matches/:matchId"
+          element={
+            <MatchPage matches={matches} players={players} status={status} />
           }
         />
         <Route path="*" element={<Home />} />

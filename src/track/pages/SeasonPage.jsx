@@ -193,7 +193,7 @@ export default function SeasonPage({
         <h2 className="text-2xl font-semibold mt-2 mb-2">Athletes &amp; Events</h2>
         {roster.length ? (
           <div className="overflow-x-auto">
-            <table className="w-full min-w-[640px] border text-xs sm:text-sm">
+            <table className="w-full min-w-[640px] border text-sm md:text-base">
               <thead className="bg-gray-100">
                 <tr>
                   <th className="border px-3 py-2 text-left">Athlete</th>
@@ -232,7 +232,7 @@ export default function SeasonPage({
 
         {seasonMeets.length ? (
           <div className="overflow-x-auto">
-            <table className="w-full min-w-[640px] border text-xs sm:text-sm text-center">
+            <table className="w-full min-w-[640px] border text-sm text-center md:text-base">
               <thead className="bg-gray-100">
                 <tr>
                   <th className="border px-2 py-1">Date</th>

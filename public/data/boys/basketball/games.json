@@ -6014,7 +6014,7 @@
     "OpponentID": "ga-providence-christian-school-savannah",
     "Opponent": "Providence Christian School",
     "LocationType": "Home",
-    "GameType": "Region",
+    "GameType": "Non-Region",
     "Result": "W",
     "TeamScore": 59,
     "OpponentScore": 53,
@@ -6289,7 +6289,7 @@
     "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
     "Opponent": "Hilton Head Christian Academy",
     "LocationType": "Home",
-    "GameType": "Region",
+    "GameType": "Non-Region",
     "Result": "L",
     "TeamScore": 61,
     "OpponentScore": 68,
@@ -6306,57 +6306,122 @@
     ]
   },
   {
+    "GameID": 20040206,
+    "OpponentID": "sc-james-island-christian-school-charleston",
+    "Opponent": "James Island Christian School",
+    "LocationType": "Away",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 49,
+    "OpponentScore": 38,
+    "Season": 2003,
+    "IsComplete": "Yes",
+    "RecapTitle": "Saints Rally Past James Island Christian",
+    "Recap": "Davy Clay and Josh Smith combined for 29 points as St. Andrew's defeated James Island Christian 49-38 in a SCISA 2-AA road game in Charleston. Clay led the Saints with 15 points and Smith added 14. St. Andrew's trailed 22-18 at halftime, then took control by outscoring James Island Christian 19-9 in the third quarter to improve to 10-8 overall and 7-1 in region play.",
+    "RecapImages": [
+      {
+        "src": "/images/boys/basketball/seasons/2003-04/james-island-christian-2004-02-06-clipping.png",
+        "alt": "Newspaper clipping for St. Andrew's 49, James Island Christian 38 on Feb. 6, 2004",
+        "caption": "Newspaper clipping covering the Feb. 6, 2004 James Island Christian game."
+      }
+    ]
+  },
+  {
     "GameID": 20040210,
     "OpponentID": "sc-beaufort-academy-beaufort",
     "Opponent": "Beaufort Academy",
-    "LocationType": "Unknown",
+    "LocationType": "Away",
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 53,
     "OpponentScore": 47,
     "Season": 2003,
     "IsComplete": "Yes",
-    "RecapTitle": "Saints Clinch Region",
-    "Recap": "A Savannah Morning News notebook item reported that St. Andrew's clinched the SCISA region championship earlier that week by avenging its only region loss against Beaufort Academy. The team spreadsheet supplies the 53-47 final and individual scoring."
+    "RecapTitle": "Saints Clinch No. 1 Region Seed at Beaufort",
+    "Recap": "Cass Sawyer and Josh Smith combined for 30 points as St. Andrew's defeated Beaufort Academy 53-47 in a SCISA 2-AA road game in Beaufort. Sawyer scored 16 points and Smith added 14 points with 10 rebounds, while Davy Clay had seven points and 10 steals. The Saints led 30-17 at halftime and clinched the No. 1 seed in the region tournament, improving to 11-8 overall and 8-1 in region play.",
+    "RecapImages": [
+      {
+        "src": "/images/boys/basketball/seasons/2003-04/beaufort-academy-2004-02-10-clipping.png",
+        "alt": "Newspaper clipping for St. Andrew's 53, Beaufort Academy 47 on Feb. 10, 2004",
+        "caption": "Newspaper clipping covering the Feb. 10, 2004 Beaufort Academy game."
+      }
+    ]
   },
   {
     "GameID": 20040212,
     "OpponentID": "sc-patrick-henry-academy-estill",
     "Opponent": "Patrick Henry Academy",
-    "LocationType": "Unknown",
-    "GameType": "Region",
+    "LocationType": "Away",
+    "GameType": "Non-Region",
     "Result": "W",
     "TeamScore": 55,
     "OpponentScore": 50,
     "Season": 2003,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "RecapTitle": "Smith Leads Saints Past Patrick Henry",
+    "Recap": "Josh Smith scored 17 points to lead St. Andrew's to a 55-50 non-region win over Patrick Henry in Estill. Beau Hinton added 11 points and Cass Sawyer scored 10 for the Saints, while Baring Zurenda led Patrick Henry with 23. St. Andrew's led 36-25 at halftime and improved to 12-8.",
+    "RecapImages": [
+      {
+        "src": "/images/boys/basketball/seasons/2003-04/patrick-henry-2004-02-12-clipping.png",
+        "alt": "Newspaper clipping for St. Andrew's 55, Patrick Henry 50 on Feb. 12, 2004",
+        "caption": "Newspaper clipping covering the Feb. 12, 2004 Patrick Henry game."
+      }
+    ]
   },
   {
     "GameID": 20040213,
     "OpponentID": "sc-colleton-prep-academy-walterboro",
     "Opponent": "Colleton Prep Academy",
-    "LocationType": "Unknown",
+    "LocationType": "Away",
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 64,
     "OpponentScore": 39,
     "Season": 2003,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "RecapTitle": "Saints Clinch Regular-Season Region Title",
+    "Recap": "Davy Clay scored 21 points and had 13 steals as St. Andrew's defeated Colleton Prep 64-39 in Walterboro to clinch the SCISA 2-AA regular-season title. Cass Sawyer added a double-double with 10 points and 13 rebounds, and Beau Hinton scored 14 for the Saints. St. Andrew's led 26-18 at halftime, improved to 13-8 overall and 9-1 in region play, and secured the top seed for the state tournament.",
+    "RecapImages": [
+      {
+        "src": "/images/boys/basketball/seasons/2003-04/colleton-prep-2004-02-13-clipping-1.png",
+        "alt": "Newspaper clipping part 1 for St. Andrew's 64, Colleton Prep 39 on Feb. 13, 2004",
+        "caption": "Newspaper clipping covering the Feb. 13, 2004 Colleton Prep game, part 1."
+      },
+      {
+        "src": "/images/boys/basketball/seasons/2003-04/colleton-prep-2004-02-13-clipping-2.png",
+        "alt": "Newspaper clipping part 2 for St. Andrew's 64, Colleton Prep 39 on Feb. 13, 2004",
+        "caption": "Newspaper clipping covering the Feb. 13, 2004 Colleton Prep game, part 2."
+      }
+    ]
   },
   {
     "GameID": 20040217,
     "OpponentID": "ga-providence-christian-school-savannah",
     "Opponent": "Providence Christian School",
     "LocationType": "Unknown",
-    "GameType": "Region",
+    "GameType": "Non-Region",
     "Result": "W",
     "TeamScore": 69,
     "OpponentScore": 55,
     "Season": 2003,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "RecapTitle": "Sawyer Leads Saints Past Providence Christian",
+    "Recap": "Cass Sawyer scored 24 points, while Josh Smith added 17 and Beau Hinton scored 15 as St. Andrew's defeated Providence Christian 69-55. The Saints, already the No. 1 seed for the upcoming SCISA Region 2-AA Tournament in Charleston, led 30-23 at halftime before pulling away in the second half. Jeremy Brown led Providence Christian with 18 points, and St. Andrew's improved to 14-8.",
+    "RecapImages": [
+      {
+        "src": "/images/boys/basketball/seasons/2003-04/providence-christian-2004-02-17-clipping-1.png",
+        "alt": "Newspaper clipping part 1 for St. Andrew's 69, Providence Christian 55 on Feb. 17, 2004",
+        "caption": "Newspaper clipping covering the Feb. 17, 2004 Providence Christian game, part 1."
+      },
+      {
+        "src": "/images/boys/basketball/seasons/2003-04/providence-christian-2004-02-17-clipping-2.png",
+        "alt": "Newspaper clipping part 2 for St. Andrew's 69, Providence Christian 55 on Feb. 17, 2004",
+        "caption": "Newspaper clipping covering the Feb. 17, 2004 Providence Christian game, part 2."
+      }
+    ]
   },
   {
-    "GameID": 20040226,
+    "GameID": 20040225,
     "OpponentID": "sc-colleton-prep-academy-walterboro",
     "Opponent": "Colleton Prep Academy",
     "LocationType": "Neutral",
@@ -6365,7 +6430,16 @@
     "TeamScore": 68,
     "OpponentScore": 46,
     "Season": 2003,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "RecapTitle": "Smith Leads Saints Into Region Final",
+    "Recap": "Josh Smith scored 22 points to lead St. Andrew's past Colleton Prep 68-46 in a SCISA 2-AA semifinal at Charleston Collegiate. Davy Clay added 14 points and Jacob Ravers scored 10 as the Saints led 44-17 at halftime. St. Andrew's improved to 15-8 and advanced to face Beaufort Academy in the tournament final.",
+    "RecapImages": [
+      {
+        "src": "/images/boys/basketball/seasons/2003-04/colleton-prep-2004-02-25-clipping.png",
+        "alt": "Newspaper clipping for St. Andrew's 68, Colleton Prep 46 on Feb. 25, 2004",
+        "caption": "Newspaper clipping covering the Feb. 25, 2004 Colleton Prep region semifinal."
+      }
+    ]
   },
   {
     "GameID": 20040227,
@@ -6378,8 +6452,20 @@
     "OpponentScore": 51,
     "Season": 2003,
     "IsComplete": "Yes",
-    "RecapTitle": "Saints Win Region Tournament",
-    "Recap": "The Savannah Morning News reported that St. Andrew's won the SCISA Region 2-AA Tournament championship at Charleston Collegiate by beating Beaufort Academy 65-51. Davy Clay was named tournament MVP after a 20-point, 10-steal night, while Cass Sawyer earned all-tournament honors with 19 points and 10 rebounds."
+    "RecapTitle": "Saints Win Region Tournament Championship",
+    "Recap": "Davy Clay and Cass Sawyer posted double-doubles to lead St. Andrew's past Beaufort Academy 65-51 in the SCISA Region 2-AA Tournament championship game at Charleston Collegiate. Clay, named tournament MVP, led the Saints with 20 points and 10 steals. Sawyer, also named to the all-tournament team, had 19 points and 10 rebounds, while Beau Hinton added 13 points and Josh Smith scored 11. St. Andrew's led 27-24 at halftime and improved to 16-8.",
+    "RecapImages": [
+      {
+        "src": "/images/boys/basketball/seasons/2003-04/beaufort-academy-2004-02-27-clipping-1.png",
+        "alt": "Newspaper clipping part 1 for St. Andrew's 65, Beaufort Academy 51 on Feb. 27, 2004",
+        "caption": "Newspaper clipping covering the Feb. 27, 2004 Beaufort Academy region tournament final, part 1."
+      },
+      {
+        "src": "/images/boys/basketball/seasons/2003-04/beaufort-academy-2004-02-27-clipping-2.png",
+        "alt": "Newspaper clipping part 2 for St. Andrew's 65, Beaufort Academy 51 on Feb. 27, 2004",
+        "caption": "Newspaper clipping covering the Feb. 27, 2004 Beaufort Academy region tournament final, part 2."
+      }
+    ]
   },
   {
     "GameID": 20040303,

@@ -152,11 +152,11 @@ const sports = [
     icon: "/images/golf/golf_icon.png",
     championshipGroups: [
       {
-        title: "State Archive",
+        title: "Archive",
         sections: [
           {
             title: "Published Results",
-            years: [2019, 2021, 2022, 2023, 2024],
+            years: [2004, 2019, 2021, 2022, 2023, 2024],
           },
         ],
       },

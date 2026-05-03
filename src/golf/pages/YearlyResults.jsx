@@ -20,6 +20,7 @@ function buildSeasonSnapshot(season) {
 export default function YearlyResults({
   seasons = [],
   tournaments = [],
+  matches = [],
   status = "",
 }) {
   const rows = useMemo(() => {
@@ -30,6 +31,19 @@ export default function YearlyResults({
         const seasonTournaments = tournaments.filter(
           (tournament) => Number(tournament.Season) === Number(season.SeasonID)
         );
+        const seasonMatches = matches.filter(
+          (match) => Number(match.Season) === Number(season.SeasonID)
+        );
+        const coverageParts = [
+          seasonMatches.length
+            ? `${seasonMatches.length} match${seasonMatches.length === 1 ? "" : "es"}`
+            : "",
+          seasonTournaments.length
+            ? `${seasonTournaments.length} tournament${
+                seasonTournaments.length === 1 ? "" : "s"
+              }`
+            : "",
+        ].filter(Boolean);
 
         return {
           seasonId: season.SeasonID,
@@ -38,13 +52,11 @@ export default function YearlyResults({
           coverage:
             season.ArchiveScope === "summary"
               ? "Archive summary"
-              : `${seasonTournaments.length} tournament${
-                  seasonTournaments.length === 1 ? "" : "s"
-                }`,
+              : coverageParts.join(" / ") || "Archive summary",
           snapshot: buildSeasonSnapshot(season),
         };
       });
-  }, [seasons, tournaments]);
+  }, [seasons, tournaments, matches]);
 
   return (
     <div className="mx-auto max-w-6xl px-4 pb-24 pt-2 sm:px-6">
@@ -57,7 +69,8 @@ export default function YearlyResults({
       <header className="text-center">
         <h1 className="text-3xl font-bold text-slate-900">Golf Seasons</h1>
         <p className="mt-2 text-sm text-slate-500">
-          State tournament archive coverage from Spring 2019 onward.
+          Golf archive coverage by season, including match results and state
+          tournament summaries.
         </p>
       </header>
 

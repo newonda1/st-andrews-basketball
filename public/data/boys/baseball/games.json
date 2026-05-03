@@ -8684,10 +8684,51 @@
     "Opponent": "Thomas Jefferson Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
-    "Result": null,
-    "TeamScore": null,
-    "OpponentScore": null,
-    "Season": 2026
+    "Result": "W",
+    "TeamScore": 5,
+    "OpponentScore": 2,
+    "Season": 2026,
+    "RecapTitle": "Kelley, Early Offense Push St. Andrew’s Past Thomas Jefferson",
+    "Recap": "St. Andrew’s built an early cushion and held off Thomas Jefferson Academy late Saturday, earning a 5-2 home win.\n\nThe Lions loaded the bases in the bottom of the first after Jack Kelley walked, Jacob Navare singled to right, and Wells Searcy added a two-out single. Xavier Wilcox and Lanford Harris then drew back-to-back bases-loaded walks, and Searcy scored during a caught-stealing sequence to give St. Andrew’s a 3-0 lead.\n\nEllis Kelley protected that lead on the mound. Thomas Jefferson threatened in the first and second innings, but Kelley stranded traffic both times, then settled in with five straight outs across the third and fourth before striking out the side in the fifth.\n\nSt. Andrew’s added two important insurance runs in the fourth. Searcy opened with his second hit of the game, Wilcox dropped down a bunt single, and Harris was hit by a pitch to load the bases. After two strikeouts, Ellis Kelley lined a two-run single to center to stretch the lead to 5-0.\n\nThomas Jefferson broke through in the sixth, using singles by Ayden Barrow, Luke Bazemore, and Jacob Dixon to load the bases. Grant Gillooly followed with a two-run single to left, but Jacob Navare limited the damage and then worked a clean seventh to close the win.\n\nKelley earned the victory with five innings of one-run baseball, allowing five hits while striking out eight and walking one. Navare finished the final two innings, allowing one run on three hits with one strikeout.\n\nSearcy led the Lions at the plate by going 2-for-2 with two runs scored, a hit by pitch, and a stolen base. Ellis Kelley drove in two runs, while Navare, Wilcox, and River Reeves each added a hit. Jack Kelley reached three times on walks and scored in the first inning.",
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "StAndrews": [
+        3,
+        0,
+        0,
+        2,
+        0,
+        0,
+        "X"
+      ],
+      "Opponent": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0
+      ],
+      "StAndrewsTotals": {
+        "R": 5,
+        "H": 6,
+        "E": 2
+      },
+      "OpponentTotals": {
+        "R": 2,
+        "H": 8,
+        "E": 0
+      }
+    }
   },
   {
     "GameID": 2026050202,
@@ -8695,9 +8736,50 @@
     "Opponent": "Thomas Jefferson Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
-    "Result": null,
-    "TeamScore": null,
-    "OpponentScore": null,
-    "Season": 2026
+    "Result": "W",
+    "TeamScore": 7,
+    "OpponentScore": 2,
+    "Season": 2026,
+    "RecapTitle": "Lions Make History With 20th Win",
+    "Recap": "St. Andrew’s closed a Saturday sweep of Thomas Jefferson Academy with a 7-2 win, giving the baseball program its first 20-win season in school history.\n\nThe Lions took control early. Jack Kelley was hit by a pitch, Jacob Navare and Isaac Wrieden walked, and Wells Searcy reached on an error to bring in the first run. Xavier Wilcox followed with a sacrifice fly to center, giving St. Andrew’s a 2-0 lead after one inning.\n\nThomas Jefferson trimmed the margin to 2-1 in the third, but St. Andrew’s answered immediately. Wrieden and Searcy opened the bottom half with back-to-back bunt singles, Wilcox reached on an error that scored Wrieden, and Lanford Harris laid down a sacrifice bunt after Searcy scored on a passed ball. Wilcox came home on the play to stretch the lead to 5-1.\n\nHarris handled the rest from the mound. He worked through traffic in the third, then used two key double plays to limit Thomas Jefferson’s offense. The first came in the third on a 6-4-3 turn from Ellis Kelley to Searcy to Wrieden, and the second erased a runner in the fifth after Thomas Jefferson had cut the lead to 5-2.\n\nThe Lions added two more runs in the fifth. Harris singled, stole second, and scored when River Reeves reached on an error. Reeves then stole second and scored when Ellis Kelley reached on another error, pushing the lead to 7-2.\n\nJack Kelley finished the game with two scoreless innings in relief, allowing one hit while striking out one. Harris earned the win after allowing two runs, one earned, on five hits over five innings with six strikeouts.\n\nSearcy, Ellis Kelley, Harris, and Wrieden each had a hit for St. Andrew’s. Wilcox and Harris drove in runs, while Ellis Kelley, Jack Kelley, Navare, Harris, and Reeves each stole a base in the milestone victory.",
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "StAndrews": [
+        2,
+        0,
+        3,
+        0,
+        2,
+        0,
+        "X"
+      ],
+      "Opponent": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "StAndrewsTotals": {
+        "R": 7,
+        "H": 4,
+        "E": 1
+      },
+      "OpponentTotals": {
+        "R": 2,
+        "H": 6,
+        "E": 7
+      }
+    }
   }
 ]

@@ -502,7 +502,7 @@ export default function GameDetail() {
 
         {lineScore ? (
           <div className="px-3 md:px-8 py-4 border-b border-gray-200 overflow-x-auto">
-            <table className="min-w-full max-w-4xl mx-auto text-sm md:text-base border-separate border-spacing-0">
+            <table className="baseball-line-score min-w-full max-w-4xl mx-auto text-sm md:text-base border-separate border-spacing-0">
               <thead>
                 <tr>
                   <th className="px-4 py-3 text-left bg-gray-50 text-gray-500 font-semibold border border-gray-200"> </th>

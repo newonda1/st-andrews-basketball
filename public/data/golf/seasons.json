@@ -1,5 +1,16 @@
 [
   {
+    "SeasonID": 2004,
+    "SeasonLabel": "Spring 2004",
+    "Classification": "Boys / Girls",
+    "StatusBadge": "partial",
+    "StatusNote": "The Spring 2004 archive begins with the Savannah Morning News report from Mar. 4, 2004 covering St. Andrew's dual wins over Groves at Mary Calder Golf Course.",
+    "ArchiveScope": "match",
+    "HighlightNotes": [
+      "On Mar. 3, 2004, St. Andrew's boys defeated Groves 185-196 and the girls edged Groves 110-111 at Mary Calder Golf Course."
+    ]
+  },
+  {
     "SeasonID": 2019,
     "SeasonLabel": "Spring 2019",
     "Classification": "Class AA / Class AAA",

@@ -5,6 +5,7 @@ import {
   formatGolfDate,
   formatGolfPlace,
   getGolfSeasonLabel,
+  sortGolfMatches,
   sortGolfTournaments,
 } from "../golfPageUtils";
 
@@ -180,9 +181,90 @@ function TournamentCard({ tournament }) {
   );
 }
 
+function getDivisionResultLabel(division) {
+  const scores = Array.isArray(division.TeamScores) ? division.TeamScores : [];
+  const stAndrews = scores.find((score) => score.IsStAndrews);
+  const opponent = scores.find((score) => !score.IsStAndrews);
+
+  if (!stAndrews || !opponent) return "Result not listed";
+
+  const won = Number(stAndrews.Score) < Number(opponent.Score);
+  return `${won ? "W" : "L"} ${stAndrews.Score}-${opponent.Score}`;
+}
+
+function MatchCard({ match }) {
+  const divisions = Array.isArray(match.Divisions) ? match.Divisions : [];
+
+  return (
+    <section className="rounded-[1.5rem] border border-slate-200 bg-slate-50 px-4 py-4 shadow-sm sm:px-5">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+        <div>
+          <h2 className="text-xl font-bold text-slate-900">
+            <Link
+              to={`/athletics/golf/matches/${match.MatchID}`}
+              className="text-blue-700 hover:text-blue-900"
+            >
+              {match.Name}
+            </Link>
+          </h2>
+          <div className="mt-3 flex flex-wrap gap-2">
+            {[
+              { label: "Date", value: formatGolfDate(match.Date) },
+              { label: "Course", value: match.Course },
+              { label: "Source", value: match.SourceCitation },
+            ]
+              .filter((item) => item.value)
+              .map((item) => (
+                <span
+                  key={`${match.MatchID}-${item.label}`}
+                  className="rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-slate-600"
+                >
+                  {item.label}: {item.value}
+                </span>
+              ))}
+          </div>
+        </div>
+        <Link
+          to={`/athletics/golf/matches/${match.MatchID}`}
+          className="inline-flex rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 no-underline"
+        >
+          Open Match
+        </Link>
+      </div>
+
+      <p className="mt-4 text-sm leading-7 text-slate-700">{match.Summary}</p>
+
+      {divisions.length ? (
+        <div className="mt-5 grid gap-3 sm:grid-cols-2">
+          {divisions.map((division) => (
+            <div
+              key={`${match.MatchID}-${division.Division}`}
+              className="rounded-xl border border-slate-200 bg-white px-4 py-4"
+            >
+              <p className="text-[0.7rem] font-bold uppercase tracking-[0.18em] text-slate-500">
+                {division.Division}
+              </p>
+              <p className="mt-2 text-2xl font-black text-slate-900">
+                {getDivisionResultLabel(division)}
+              </p>
+              {division.Medalist ? (
+                <p className="mt-2 text-sm leading-6 text-slate-600">
+                  Medalist: {division.Medalist.PlayerName} (
+                  {division.Medalist.School}) {division.Medalist.Score}
+                </p>
+              ) : null}
+            </div>
+          ))}
+        </div>
+      ) : null}
+    </section>
+  );
+}
+
 export default function SeasonPage({
   seasons = [],
   tournaments = [],
+  matches = [],
   status = "",
 }) {
   const { seasonId } = useParams();
@@ -198,6 +280,12 @@ export default function SeasonPage({
       tournaments.filter((entry) => Number(entry.Season) === Number(seasonId))
     );
   }, [seasonId, tournaments]);
+
+  const seasonMatches = useMemo(() => {
+    return sortGolfMatches(
+      matches.filter((entry) => Number(entry.Season) === Number(seasonId))
+    );
+  }, [seasonId, matches]);
 
   if (!season) {
     return (
@@ -237,23 +325,36 @@ export default function SeasonPage({
 
       <SummaryCard season={season} />
 
-      <section className="space-y-4">
-        <h2 className="text-2xl font-semibold text-slate-900">State Tournaments</h2>
+      {seasonMatches.length ? (
+        <section className="space-y-4">
+          <h2 className="text-2xl font-semibold text-slate-900">Matches</h2>
+          {seasonMatches.map((match) => (
+            <MatchCard key={match.MatchID} match={match} />
+          ))}
+        </section>
+      ) : null}
 
-        {seasonTournaments.length ? (
-          seasonTournaments.map((tournament) => (
-            <TournamentCard
-              key={tournament.TournamentID}
-              tournament={tournament}
-            />
-          ))
-        ) : (
-          <div className="rounded-lg border border-dashed border-slate-300 bg-slate-50 px-6 py-8 text-center text-sm text-slate-600">
-            This season currently has an archive summary but no cleaned tournament table
-            loaded yet.
-          </div>
-        )}
-      </section>
+      {seasonTournaments.length || !seasonMatches.length ? (
+        <section className="space-y-4">
+          <h2 className="text-2xl font-semibold text-slate-900">
+            State Tournaments
+          </h2>
+
+          {seasonTournaments.length ? (
+            seasonTournaments.map((tournament) => (
+              <TournamentCard
+                key={tournament.TournamentID}
+                tournament={tournament}
+              />
+            ))
+          ) : (
+            <div className="rounded-lg border border-dashed border-slate-300 bg-slate-50 px-6 py-8 text-center text-sm text-slate-600">
+              This season currently has an archive summary but no cleaned tournament
+              table loaded yet.
+            </div>
+          )}
+        </section>
+      ) : null}
     </div>
   );
 }
