@@ -84,6 +84,7 @@ export default function VolleyballApp() {
     teamSeasonStats: [],
     playerGameStats: [],
     teamMatchStats: [],
+    schools: [],
   });
   const [status, setStatus] = useState("Loading volleyball archive...");
 

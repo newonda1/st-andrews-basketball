@@ -15,6 +15,7 @@ export default function GirlsSoccerApp() {
     games: [],
     seasons: [],
     rosters: [],
+    statAdjustments: [],
     players: [],
     schools: [],
   });

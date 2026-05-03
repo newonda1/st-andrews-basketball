@@ -12,6 +12,7 @@ export default function GolfApp() {
   const [matches, setMatches] = useState([]);
   const [seasonRosters, setSeasonRosters] = useState([]);
   const [players, setPlayers] = useState([]);
+  const [schools, setSchools] = useState([]);
   const [status, setStatus] = useState("Loading golf archive...");
 
   useEffect(() => {
@@ -25,12 +26,14 @@ export default function GolfApp() {
           matchesRes,
           seasonRostersRes,
           playersRes,
+          schoolsRes,
         ] = await Promise.all([
           fetch("/data/golf/seasons.json"),
           fetch("/data/golf/tournaments.json"),
           fetch("/data/golf/matches.json"),
           fetch("/data/golf/seasonrosters.json"),
           fetch("/data/players.json"),
+          fetch("/data/schools.json"),
         ]);
 
         if (!seasonsRes.ok) {
@@ -57,18 +60,24 @@ export default function GolfApp() {
           throw new Error(`Could not load players (${playersRes.status}).`);
         }
 
+        if (!schoolsRes.ok) {
+          throw new Error(`Could not load schools (${schoolsRes.status}).`);
+        }
+
         const [
           seasonsData,
           tournamentsData,
           matchesData,
           seasonRostersData,
           playersData,
+          schoolsData,
         ] = await Promise.all([
           seasonsRes.json(),
           tournamentsRes.json(),
           matchesRes.json(),
           seasonRostersRes.json(),
           playersRes.json(),
+          schoolsRes.json(),
         ]);
 
         if (!cancelled) {
@@ -79,6 +88,7 @@ export default function GolfApp() {
             Array.isArray(seasonRostersData) ? seasonRostersData : []
           );
           setPlayers(Array.isArray(playersData) ? playersData : []);
+          setSchools(Array.isArray(schoolsData) ? schoolsData : []);
           setStatus("");
         }
       } catch (error) {
@@ -138,6 +148,9 @@ export default function GolfApp() {
               seasons={seasons}
               tournaments={tournaments}
               matches={matches}
+              seasonRosters={seasonRosters}
+              players={players}
+              schools={schools}
               status={status}
             />
           }

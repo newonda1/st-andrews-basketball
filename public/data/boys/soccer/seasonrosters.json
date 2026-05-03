@@ -90,6 +90,78 @@
         "Distinctions": []
       },
       {
+        "PlayerID": 200204,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Matt Knight",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200311,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Chris Rauers",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200431,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Will Chisholm",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200432,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Kevin Crouch",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200433,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Ben Harrison",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200434,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Joe Bilton",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200501,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Remy Thurston",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200439,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Andy Crouch",
+        "Distinctions": []
+      },
+      {
         "PlayerID": 200424,
         "JerseyNumber": null,
         "Grade": null,
@@ -97,7 +169,18 @@
         "Positions": [
           "GK"
         ],
-        "PlayerName": "Emett Eason",
+        "PlayerName": "Emmett Eason",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200435,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [
+          "GK"
+        ],
+        "PlayerName": "Patrick Maleki",
         "Distinctions": []
       }
     ]

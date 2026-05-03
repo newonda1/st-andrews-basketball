@@ -145,6 +145,8 @@ export default function GameDetail({ data, status = "" }) {
 
   const seasonLabel = season ? getSoccerSeasonLabel(season) : game?.DisplaySeason || "Season";
   const score =
+    game?.TeamScore != null &&
+    game?.OpponentScore != null &&
     Number.isFinite(Number(game?.TeamScore)) &&
     Number.isFinite(Number(game?.OpponentScore))
       ? `${game.TeamScore}-${game.OpponentScore}`

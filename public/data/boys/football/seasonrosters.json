@@ -79,6 +79,35 @@
         "Distinctions": [
           "All-Coastal Empire Team Honorable Mention"
         ]
+      },
+      {
+        "PlayerID": 200440,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Hunter Saussy",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200441,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [
+          "WR"
+        ],
+        "PlayerName": "Jacob Rivers",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200442,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Jesse Hinton",
+        "Distinctions": []
       }
     ]
   },

@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import { Link, useParams } from "react-router-dom";
-import { formatGolfDate } from "../golfPageUtils";
+import { formatGolfDate, formatGolfPlace } from "../golfPageUtils";
 
 function buildPlayerMap(players = []) {
   return new Map(players.map((player) => [Number(player.PlayerID), player]));
@@ -13,6 +13,16 @@ function getPlayerName(row, playerMap) {
     return [player.FirstName, player.LastName].filter(Boolean).join(" ");
   }
   return row.PlayerName || "Unknown golfer";
+}
+
+function formatRoundScores(scores) {
+  return Array.isArray(scores) && scores.length ? scores.join("-") : null;
+}
+
+function formatPlace(place) {
+  if (!place) return null;
+  const numeric = Number(place);
+  return Number.isFinite(numeric) ? formatGolfPlace(numeric) : String(place);
 }
 
 function TeamScores({ scores = [] }) {
@@ -38,10 +48,24 @@ function TeamScores({ scores = [] }) {
               {isWinner ? "Winner" : "Team Score"}
             </p>
             <div className="mt-2 flex items-end justify-between gap-4">
-              <h3 className="text-lg font-bold text-slate-900">{score.School}</h3>
-              <span className="text-3xl font-black text-slate-900">
-                {score.Score}
-              </span>
+              <div>
+                <h3 className="text-lg font-bold text-slate-900">{score.School}</h3>
+                {score.Place ? (
+                  <p className="mt-1 text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">
+                    {formatPlace(score.Place)}
+                  </p>
+                ) : null}
+              </div>
+              <div className="text-right">
+                {formatRoundScores(score.RoundScores) ? (
+                  <p className="text-xs font-semibold text-slate-500">
+                    {formatRoundScores(score.RoundScores)}
+                  </p>
+                ) : null}
+                <span className="text-3xl font-black text-slate-900">
+                  {score.Score}
+                </span>
+              </div>
             </div>
           </div>
         );
@@ -53,17 +77,30 @@ function TeamScores({ scores = [] }) {
 function ResultsTable({ rows = [], playerMap }) {
   if (!rows.length) return null;
 
+  const showPlace = rows.some((row) => row.Place);
+  const showRounds = rows.some((row) => formatRoundScores(row.RoundScores));
+
   return (
     <div className="overflow-x-auto rounded-xl border border-slate-200 bg-white">
       <table className="w-full min-w-[560px] border-collapse text-sm">
         <thead>
           <tr className="bg-slate-100">
+            {showPlace ? (
+              <th className="border-b border-slate-300 px-3 py-2 text-center font-bold">
+                Place
+              </th>
+            ) : null}
             <th className="border-b border-slate-300 px-3 py-2 text-left font-bold">
               Golfer
             </th>
             <th className="border-b border-slate-300 px-3 py-2 text-left font-bold">
               School
             </th>
+            {showRounds ? (
+              <th className="border-b border-slate-300 px-3 py-2 text-center font-bold">
+                Rounds
+              </th>
+            ) : null}
             <th className="border-b border-slate-300 px-3 py-2 text-center font-bold">
               Score
             </th>
@@ -75,6 +112,11 @@ function ResultsTable({ rows = [], playerMap }) {
               key={`${row.School}-${row.PlayerName}-${row.Score}`}
               className={row.IsStAndrews ? "bg-blue-50" : "bg-white"}
             >
+              {showPlace ? (
+                <td className="border-b border-slate-200 px-3 py-2 text-center font-semibold text-slate-900">
+                  {row.Place || "-"}
+                </td>
+              ) : null}
               <td className="border-b border-slate-200 px-3 py-2 font-semibold text-slate-900">
                 <div>{getPlayerName(row, playerMap)}</div>
                 {row.Award ? (
@@ -86,6 +128,11 @@ function ResultsTable({ rows = [], playerMap }) {
               <td className="border-b border-slate-200 px-3 py-2 text-slate-700">
                 {row.School}
               </td>
+              {showRounds ? (
+                <td className="border-b border-slate-200 px-3 py-2 text-center text-slate-700">
+                  {formatRoundScores(row.RoundScores) || "-"}
+                </td>
+              ) : null}
               <td className="border-b border-slate-200 px-3 py-2 text-center font-bold text-slate-900">
                 {row.Score}
               </td>

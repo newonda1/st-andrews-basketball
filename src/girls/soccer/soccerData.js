@@ -2,6 +2,7 @@ export const GIRLS_SOCCER_DATA_PATHS = {
   games: "/data/girls/soccer/games.json",
   seasons: "/data/girls/soccer/seasons.json",
   rosters: "/data/girls/soccer/seasonrosters.json",
+  statAdjustments: "/data/girls/soccer/seasonstatadjustments.json",
   players: "/data/players.json",
   schools: "/data/schools.json",
 };
@@ -15,18 +16,30 @@ export async function fetchJson(path, label) {
 }
 
 export async function loadGirlsSoccerData() {
-  const [games, seasons, rosters, players, schools] = await Promise.all([
+  const [rawGames, seasons, rosters, statAdjustments, players, schools] = await Promise.all([
     fetchJson(GIRLS_SOCCER_DATA_PATHS.games, "girls soccer games"),
     fetchJson(GIRLS_SOCCER_DATA_PATHS.seasons, "girls soccer seasons"),
     fetchJson(GIRLS_SOCCER_DATA_PATHS.rosters, "girls soccer rosters"),
+    fetchJson(GIRLS_SOCCER_DATA_PATHS.statAdjustments, "girls soccer stat adjustments"),
     fetchJson(GIRLS_SOCCER_DATA_PATHS.players, "players"),
     fetchJson(GIRLS_SOCCER_DATA_PATHS.schools, "schools"),
   ]);
+  const schoolMap = new Map(
+    (Array.isArray(schools) ? schools : [])
+      .filter((school) => school?.SchoolID)
+      .map((school) => [String(school.SchoolID), school])
+  );
+  const games = (Array.isArray(rawGames) ? rawGames : []).map((game) => {
+    const school = schoolMap.get(String(game?.OpponentID ?? ""));
+    const opponentName = String(school?.Name || "").trim();
+    return opponentName ? { ...game, Opponent: opponentName } : game;
+  });
 
   return {
-    games: Array.isArray(games) ? games : [],
+    games,
     seasons: Array.isArray(seasons) ? seasons : [],
     rosters: Array.isArray(rosters) ? rosters : [],
+    statAdjustments: Array.isArray(statAdjustments) ? statAdjustments : [],
     players: Array.isArray(players) ? players : [],
     schools: Array.isArray(schools) ? schools : [],
   };

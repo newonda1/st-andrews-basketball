@@ -48,6 +48,65 @@ function addPlayerStat(map, row, gameId, field) {
   entry[field] += Number(row?.[field] || 0);
 }
 
+function safeNumber(value) {
+  const number = Number(value);
+  return Number.isFinite(number) ? number : 0;
+}
+
+function formatStatValue(value) {
+  if (value == null || value === "") return "-";
+  const number = Number(value);
+  if (!Number.isFinite(number) || number === 0) return "-";
+  return value;
+}
+
+function gameIsAfterDate(game, throughDate) {
+  const through = String(throughDate || "").trim();
+  const date = String(game?.Date || "").trim();
+  if (!through || !date) return false;
+  return date > through;
+}
+
+function calculatePlayerStats(games, playerId, filterFn = () => true) {
+  const totals = {
+    GamesPlayedSet: new Set(),
+    Goals: 0,
+    Assists: 0,
+    Saves: 0,
+    Shutouts: 0,
+  };
+
+  games.filter(filterFn).forEach((game) => {
+    let appeared = false;
+    let hadSaves = false;
+
+    (game.GoalScorers || [])
+      .filter((row) => Number(row?.PlayerID) === Number(playerId))
+      .forEach((row) => {
+        totals.Goals += Number(row.Goals || 0);
+        appeared = true;
+      });
+    (game.Assists || [])
+      .filter((row) => Number(row?.PlayerID) === Number(playerId))
+      .forEach((row) => {
+        totals.Assists += Number(row.Assists || 0);
+        appeared = true;
+      });
+    (game.Saves || [])
+      .filter((row) => Number(row?.PlayerID) === Number(playerId))
+      .forEach((row) => {
+        totals.Saves += Number(row.Saves || 0);
+        appeared = true;
+        hadSaves = true;
+      });
+
+    if (appeared) totals.GamesPlayedSet.add(Number(game.GameID));
+    if (hadSaves && Number(game.OpponentScore) === 0) totals.Shutouts += 1;
+  });
+
+  return totals;
+}
+
 export default function SeasonPage({ data, status = "" }) {
   const { seasonId } = useParams();
 
@@ -114,6 +173,19 @@ export default function SeasonPage({ data, status = "" }) {
     return map;
   }, [games]);
 
+  const adjustmentByPlayerId = useMemo(() => {
+    const map = new Map();
+
+    (data?.statAdjustments || [])
+      .filter((adjustment) => Number(adjustment?.SeasonID) === Number(seasonId))
+      .forEach((adjustment) => {
+        const playerId = Number(adjustment?.PlayerID);
+        if (Number.isFinite(playerId)) map.set(playerId, adjustment);
+      });
+
+    return map;
+  }, [data, seasonId]);
+
   const seasonTotals = useMemo(() => {
     const rosterIds = new Set(rosterEntries.map((entry) => Number(entry.PlayerID)));
     const allPlayerIds = [
@@ -125,13 +197,50 @@ export default function SeasonPage({ data, status = "" }) {
       .filter((playerId) => Number.isFinite(playerId))
       .map((playerId) => {
         const calculated = calculatedTotals.get(playerId) || buildEmptyPlayerTotal(playerId);
+        const adjustment = adjustmentByPlayerId.get(playerId) || {};
+        const official = adjustment.OfficialTotals || {};
+        const postAdjustmentStats = adjustment.ThroughDate
+          ? calculatePlayerStats(
+              games,
+              playerId,
+              (game) => gameIsAfterDate(game, adjustment.ThroughDate)
+            )
+          : null;
+        const postGamesPlayed = postAdjustmentStats?.GamesPlayedSet.size || 0;
+        const adjustedGoals =
+          official.Goals != null
+            ? official.Goals + safeNumber(postAdjustmentStats?.Goals)
+            : calculated.Goals + safeNumber(adjustment.GoalsAdjustment);
+        const adjustedAssists =
+          official.Assists != null
+            ? official.Assists + safeNumber(postAdjustmentStats?.Assists)
+            : calculated.Assists + safeNumber(adjustment.AssistsAdjustment);
+        const adjustedSaves =
+          official.Saves != null
+            ? official.Saves + safeNumber(postAdjustmentStats?.Saves)
+            : calculated.Saves + safeNumber(adjustment.SavesAdjustment);
+        const adjustedGamesPlayed =
+          official.GamesPlayed != null
+            ? official.GamesPlayed + postGamesPlayed
+            : calculated.GamesPlayedSet.size + safeNumber(adjustment.GamesPlayedAdjustment);
+        const points =
+          official.Points != null
+            ? official.Points + safeNumber(postAdjustmentStats?.Goals) * 2 + safeNumber(postAdjustmentStats?.Assists)
+            : adjustedGoals * 2 + adjustedAssists;
 
         return {
           PlayerID: playerId,
-          GamesPlayed: calculated.GamesPlayedSet.size,
-          Goals: calculated.Goals,
-          Assists: calculated.Assists,
-          Saves: calculated.Saves,
+          GamesPlayed: adjustedGamesPlayed,
+          Goals: adjustedGoals,
+          Assists: adjustedAssists,
+          Points: points,
+          Saves: adjustedSaves,
+          Shutouts:
+            official.Shutouts != null
+              ? official.Shutouts + safeNumber(postAdjustmentStats?.Shutouts)
+              : adjustment.Shutouts ?? null,
+          GAA: official.GAA ?? adjustment.GAA ?? null,
+          HasAdjustment: Boolean(adjustment.PlayerID),
         };
       })
       .sort((a, b) => {
@@ -142,7 +251,7 @@ export default function SeasonPage({ data, status = "" }) {
         if (jerseyA !== jerseyB) return jerseyA - jerseyB;
         return playerName(a.PlayerID).localeCompare(playerName(b.PlayerID));
       });
-  }, [calculatedTotals, rosterById, rosterEntries]);
+  }, [adjustmentByPlayerId, calculatedTotals, rosterById, rosterEntries]);
 
   const teamTotals = useMemo(
     () =>
@@ -151,9 +260,10 @@ export default function SeasonPage({ data, status = "" }) {
           GamesPlayed: Math.max(totals.GamesPlayed, Number(row.GamesPlayed || 0)),
           Goals: totals.Goals + Number(row.Goals || 0),
           Assists: totals.Assists + Number(row.Assists || 0),
+          Points: totals.Points + Number(row.Points || 0),
           Saves: totals.Saves + Number(row.Saves || 0),
         }),
-        { GamesPlayed: games.length, Goals: 0, Assists: 0, Saves: 0 }
+        { GamesPlayed: games.length, Goals: 0, Assists: 0, Points: 0, Saves: 0 }
       ),
     [games.length, seasonTotals]
   );
@@ -354,7 +464,10 @@ export default function SeasonPage({ data, status = "" }) {
                     <th className="border px-2 py-1">GP</th>
                     <th className="border px-2 py-1">G</th>
                     <th className="border px-2 py-1">A</th>
+                    <th className="border px-2 py-1">Pts</th>
                     <th className="border px-2 py-1">Saves</th>
+                    <th className="border px-2 py-1">SO</th>
+                    <th className="border px-2 py-1">GAA</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -369,10 +482,16 @@ export default function SeasonPage({ data, status = "" }) {
                         </Link>
                       </td>
                       <td className="border px-2 py-1">{rosterJerseyNumber(player.PlayerID)}</td>
-                      <td className="border px-2 py-1">{player.GamesPlayed || "-"}</td>
-                      <td className="border px-2 py-1">{player.Goals || "-"}</td>
-                      <td className="border px-2 py-1">{player.Assists || "-"}</td>
-                      <td className="border px-2 py-1">{player.Saves || "-"}</td>
+                      <td className="border px-2 py-1">
+                        {formatStatValue(player.GamesPlayed)}
+                        {player.HasAdjustment ? <span className="ml-0.5 text-blue-700">*</span> : null}
+                      </td>
+                      <td className="border px-2 py-1">{formatStatValue(player.Goals)}</td>
+                      <td className="border px-2 py-1">{formatStatValue(player.Assists)}</td>
+                      <td className="border px-2 py-1">{formatStatValue(player.Points)}</td>
+                      <td className="border px-2 py-1">{formatStatValue(player.Saves)}</td>
+                      <td className="border px-2 py-1">{formatStatValue(player.Shutouts)}</td>
+                      <td className="border px-2 py-1">{player.GAA ?? "-"}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -383,16 +502,19 @@ export default function SeasonPage({ data, status = "" }) {
                     </td>
                     <td className="border px-2 py-1">-</td>
                     <td className="border px-2 py-1">{teamTotals.GamesPlayed}</td>
-                    <td className="border px-2 py-1">{teamTotals.Goals || "-"}</td>
-                    <td className="border px-2 py-1">{teamTotals.Assists || "-"}</td>
-                    <td className="border px-2 py-1">{teamTotals.Saves || "-"}</td>
+                    <td className="border px-2 py-1">{formatStatValue(teamTotals.Goals)}</td>
+                    <td className="border px-2 py-1">{formatStatValue(teamTotals.Assists)}</td>
+                    <td className="border px-2 py-1">{formatStatValue(teamTotals.Points)}</td>
+                    <td className="border px-2 py-1">{formatStatValue(teamTotals.Saves)}</td>
+                    <td className="border px-2 py-1">-</td>
+                    <td className="border px-2 py-1">-</td>
                   </tr>
                 </tfoot>
               </table>
             </div>
 
             <p className="mt-2 text-center text-xs leading-relaxed text-gray-600">
-              Soccer totals reflect the statistics named in recovered newspaper briefs.
+              Soccer totals reflect recovered newspaper briefs and official published leader adjustments marked with *.
               The Colleton Prep scoring line accounts for eight of St. Andrew&apos;s nine goals.
             </p>
           </>

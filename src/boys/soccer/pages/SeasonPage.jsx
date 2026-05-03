@@ -234,11 +234,6 @@ export default function SeasonPage({ data, status = "" }) {
                         <h3 className="text-lg font-semibold leading-snug">
                           {game.Opponent}
                         </h3>
-                        {game.Tournament ? (
-                          <p className="mt-0.5 text-xs leading-tight text-gray-500">
-                            {game.Tournament}
-                          </p>
-                        ) : null}
                         <p className="mt-2 text-sm text-gray-600">
                           {[formatLocation(game), game.GameType || "Regular Season"]
                             .filter(Boolean)
@@ -301,11 +296,6 @@ export default function SeasonPage({ data, status = "" }) {
                             >
                               {game.Opponent}
                             </Link>
-                            {game.Tournament ? (
-                              <div className="mt-0.5 text-xs leading-tight text-gray-500">
-                                {game.Tournament}
-                              </div>
-                            ) : null}
                           </div>
                         </div>
                       </td>

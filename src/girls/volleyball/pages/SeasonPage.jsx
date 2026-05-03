@@ -309,13 +309,30 @@ function CombinedTeamStatsTable({ sections }) {
   );
 }
 
-function buildSeasonRecord(season, seasonGames) {
-  const completedMatches = seasonGames.filter(
-    (game) => game.Result === "W" || game.Result === "L" || game.Result === "T"
+function buildSchoolMap(schools = []) {
+  return new Map(
+    (Array.isArray(schools) ? schools : [])
+      .filter((school) => school?.SchoolID)
+      .map((school) => [String(school.SchoolID), school])
   );
+}
 
-  if (completedMatches.length > 0) return buildGameRecord(completedMatches);
+function getOpponentSchool(game, schoolMap) {
+  if (!game?.OpponentID) return null;
+  return schoolMap.get(String(game.OpponentID)) || null;
+}
 
+function getOpponentDisplayName(game, schoolMap) {
+  const school = getOpponentSchool(game, schoolMap);
+  return school?.ShortName || school?.Name || game?.Opponent || "Unknown";
+}
+
+function getOpponentLogoPath(game, schoolMap) {
+  const school = getOpponentSchool(game, schoolMap);
+  return school?.LogoPath || school?.BracketLogoPath || null;
+}
+
+function buildSeasonRecord(season, seasonGames) {
   const wins = Number(season?.OverallWins);
   const losses = Number(season?.OverallLosses);
   const ties = Number(season?.OverallTies || 0);
@@ -330,6 +347,12 @@ function buildSeasonRecord(season, seasonGames) {
     };
   }
 
+  const completedMatches = seasonGames.filter(
+    (game) => game.Result === "W" || game.Result === "L" || game.Result === "T"
+  );
+
+  if (completedMatches.length > 0) return buildGameRecord(completedMatches);
+
   return buildGameRecord([]);
 }
 
@@ -341,6 +364,7 @@ export default function SeasonPage({ data, status = "" }) {
   );
 
   const playerMap = useMemo(() => buildPlayerMap(data.players), [data.players]);
+  const schoolMap = useMemo(() => buildSchoolMap(data.schools), [data.schools]);
   const season = useMemo(
     () => data.seasons.find((entry) => Number(entry.SeasonID) === resolvedSeasonId) || null,
     [data.seasons, resolvedSeasonId]
@@ -643,41 +667,65 @@ export default function SeasonPage({ data, status = "" }) {
                   </td>
                 </tr>
               ) : (
-                seasonGames.map((game, index) => (
-                  <tr
-                    key={game.GameID}
-                    className={`border-t border-gray-200 ${
-                      index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
-                    } hover:bg-gray-100`}
-                  >
-                    <td className="px-3 py-2 whitespace-nowrap">{formatDate(game.Date)}</td>
-                    <td className="px-3 py-2 whitespace-nowrap">
-                      <Link
-                        to={`/athletics/volleyball/games/${game.GameID}`}
-                        className="text-blue-600 hover:underline"
-                      >
-                        {game.Opponent}
-                      </Link>
-                    </td>
-                    <td className="px-3 py-2 text-center whitespace-nowrap">
-                      {game.LocationType || ""}
-                    </td>
-                    <td
-                      className={`px-3 py-2 text-center font-semibold whitespace-nowrap ${
-                        game.Result === "W"
-                          ? "text-emerald-700"
-                          : game.Result === "L"
-                            ? "text-rose-700"
-                            : ""
-                      }`}
+                seasonGames.map((game, index) => {
+                  const opponentName = getOpponentDisplayName(game, schoolMap);
+                  const logoPath = getOpponentLogoPath(game, schoolMap);
+
+                  return (
+                    <tr
+                      key={game.GameID}
+                      className={`border-t border-gray-200 ${
+                        index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
+                      } hover:bg-gray-100`}
                     >
-                      {game.Result || ""}
-                    </td>
-                    <td className="px-3 py-2 text-center whitespace-nowrap">
-                      {game.Result ? `${game.TeamScore} - ${game.OpponentScore}` : ""}
-                    </td>
-                  </tr>
-                ))
+                      <td className="px-3 py-2 whitespace-nowrap">
+                        {game.DisplayDate || formatDate(game.Date)}
+                      </td>
+                      <td className="px-3 py-2 whitespace-nowrap">
+                        <div className="flex items-center gap-2">
+                          <span className="flex h-7 w-7 shrink-0 items-center justify-center overflow-hidden">
+                            {logoPath ? (
+                              <img
+                                src={logoPath}
+                                alt=""
+                                className="h-full w-full object-contain"
+                                loading="lazy"
+                                onError={(event) => {
+                                  event.currentTarget.style.display = "none";
+                                }}
+                              />
+                            ) : null}
+                          </span>
+                          <Link
+                            to={`/athletics/volleyball/games/${game.GameID}`}
+                            className="text-blue-600 hover:underline"
+                          >
+                            {opponentName}
+                          </Link>
+                        </div>
+                      </td>
+                      <td className="px-3 py-2 text-center whitespace-nowrap">
+                        {game.LocationType || ""}
+                      </td>
+                      <td
+                        className={`px-3 py-2 text-center font-semibold whitespace-nowrap ${
+                          game.Result === "W"
+                            ? "text-emerald-700"
+                            : game.Result === "L"
+                              ? "text-rose-700"
+                              : ""
+                        }`}
+                      >
+                        {game.Result || "—"}
+                      </td>
+                      <td className="px-3 py-2 text-center whitespace-nowrap">
+                        {game.TeamScore != null && game.OpponentScore != null
+                          ? `${game.TeamScore} - ${game.OpponentScore}`
+                          : "—"}
+                      </td>
+                    </tr>
+                  );
+                })
               )}
             </tbody>
           </table>

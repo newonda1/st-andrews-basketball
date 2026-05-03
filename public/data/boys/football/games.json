@@ -1252,6 +1252,521 @@
     "OpponentID": "sc-williamsburg-academy-kingstree"
   },
   {
+    "GameID": 20030828,
+    "Season": 2003,
+    "SeasonID": 2003,
+    "DisplaySeason": "2003",
+    "SourceSeasonLabel": "2003-04",
+    "Date": "2003-08-28",
+    "Time": "TBA",
+    "SourceEventTime": "",
+    "TeamID": "ga-savannah-st-andrews-saints-football",
+    "Team": "St. Andrew's Saints",
+    "Opponent": "Memorial Day School",
+    "OpponentLocation": "Savannah, GA",
+    "OpponentSlug": "memorial-day-savannah-ga",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "Away",
+    "Venue": "Westside Stadium",
+    "Notes": "",
+    "GameType": "Regular Season",
+    "Result": "L",
+    "TeamScore": 16,
+    "OpponentScore": 20,
+    "OpponentID": "ga-memorial-day-school-savannah",
+    "OpponentLogoPath": "/images/schools/logos/ga-memorial-day-school-savannah.png",
+    "FirstDowns": 9,
+    "RushingYards": 97,
+    "PassingYards": 90,
+    "PassingComp": 3,
+    "PassingAtt": 11,
+    "PassingInt": 2,
+    "OffensiveFumbles": 2,
+    "OffensiveFumblesLost": 1,
+    "PuntNum": 4,
+    "PuntYards": 92,
+    "PuntAverage": 23,
+    "Penalties": 8,
+    "PenaltyYards": 65,
+    "LineScore": [
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [0, 7, 3, 6],
+        "Total": 16
+      },
+      {
+        "Team": "Memorial Day",
+        "Abbr": "MDS",
+        "Scores": [6, 7, 0, 7],
+        "Total": 20
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "1",
+        "Team": "Memorial Day School",
+        "TeamAbbr": "MDS",
+        "Play": "Justin Black 5 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "2",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Davy Clay 25 run",
+        "Conversion": "Will Massey kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "Memorial Day School",
+        "TeamAbbr": "MDS",
+        "Play": "Jimmy Donnelly 19 run",
+        "Conversion": "Andrew Ball kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "3",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Will Massey 40 FG",
+        "Conversion": "",
+        "Points": 3
+      },
+      {
+        "Quarter": "4",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Will Chisholm 1 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "4",
+        "Team": "Memorial Day School",
+        "TeamAbbr": "MDS",
+        "Play": "Justin Black 12 run",
+        "Conversion": "Andrew Ball kick",
+        "Points": 7
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "First Downs",
+        "StAndrews": "9",
+        "Opponent": "7"
+      },
+      {
+        "Label": "Rushing",
+        "StAndrews": "97",
+        "Opponent": "126"
+      },
+      {
+        "Label": "Passing",
+        "StAndrews": "90",
+        "Opponent": "124"
+      },
+      {
+        "Label": "Comp-Att-Int",
+        "StAndrews": "3-11-2",
+        "Opponent": "7-18-3"
+      },
+      {
+        "Label": "Fumbles-Lost",
+        "StAndrews": "2-1",
+        "Opponent": "3-3"
+      },
+      {
+        "Label": "Punts",
+        "StAndrews": "4-23",
+        "Opponent": "3-37"
+      },
+      {
+        "Label": "Penalties",
+        "StAndrews": "8-65",
+        "Opponent": "5-35"
+      }
+    ],
+    "RecapTitle": "MEMORIAL DAY TOPS ST. ANDREW'S",
+    "Recap": "The Memorial Day School football team got a huge scare but was able to pull out a 20-16 win over St. Andrew's on Thursday night at Westside Stadium.\n\nThe Matadors kicked off to the Saints' Beau Hinton with only 21 seconds remaining in the game. Hinton returned the ball from his 5-yard line to his own 38. With 10.8 seconds showing on the clock, Saint quarterback Davey Clay threw the ball 50 yards and tight end Josh Smith hauled it in and raced to the 2-yard line before getting tackled.\n\nUnfortunately for the Saints, they didn't have any more timeouts and the game ended before they could get another play off.\n\nMemorial (2-0) running back Justin Black, who scored what turned out to be the game-winning touchdown - a 13-yard run with 2:28 left - breathed a sigh of relief after the final horn blew.\n\n\"That last play scared me,\" Black said. \"I was getting ready to cry. We had a missed coverage on their tight end. I'm glad we're a fourth-quarter team, though.\"\n\nMemorial first-year coach J.D. Garletts saw his team improve to 2-0. In the opener last week, Memorial rallied to defeat Edmund Burke 39-35.\n\n\"Thank goodness we got away with the win because St. Andrew's outplayed us,\" Garletts said. \"We call ourselves a fourth-quarter team because we have a spectacular two-minute offense we can unleash anytime during the game.\"\n\nFor Garletts, a 1998 Savannah Country Day graduate, it has been a learning experience, especially since he walked into the job as head coach.\n\n\"I played football for four years at Hampden-Sydney College and when our football coach took another job, I was offered the job on the spot,\" Garletts said.\n\nClay, the Saints' senior leader, did everything in his power to keep his team in its 2003 opener. He and Smith almost pulled out a win for St. Andrew's.\n\n\"I was thinking that I had to get (to the goal line) because I knew we needed a touchdown,\" Smith said. \"This is definitely a learning experience for us, and I have to give it to my teammates - we played hard.\"\n\nThe Saints (0-1) led 7-6 at halftime and took a 10-6 lead early in the third quarter when senior kicker Will Massey nailed a 40-yard field goal with room to spare.\n\nSt. Andrew's recovered two fumbles by the Matadors but could not capitalize on the opportunities.\n\nAfter the game, a shoving match broke out between the schools' trainers after an argument. Coaches and Garden City police had to restore order.",
+    "SourceDate": "2003-08-29",
+    "SourcePublication": "Savannah Morning News",
+    "SourceCitation": "Savannah Morning News, Aug. 29, 2003"
+  },
+  {
+    "GameID": 20030905,
+    "Season": 2003,
+    "SeasonID": 2003,
+    "DisplaySeason": "2003",
+    "SourceSeasonLabel": "2003-04",
+    "Date": "2003-09-05",
+    "Time": "TBA",
+    "SourceEventTime": "",
+    "TeamID": "ga-savannah-st-andrews-saints-football",
+    "Team": "St. Andrew's Saints",
+    "Opponent": "Hilton Head Christian Academy",
+    "OpponentLocation": "Hilton Head Island, SC",
+    "OpponentSlug": "hilton-head-christian-academy-hilton-head-island-sc",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "Away",
+    "Venue": "Hilton Head Christian Academy",
+    "Notes": "",
+    "GameType": "Regular Season",
+    "Result": "W",
+    "TeamScore": 27,
+    "OpponentScore": 6,
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
+    "OpponentLogoPath": "/images/schools/logos/sc-hilton-head-christian-academy-hilton-head-island.png",
+    "FirstDowns": 7,
+    "PassingComp": 6,
+    "PassingAtt": 13,
+    "PassingInt": 1,
+    "OffensiveFumbles": 3,
+    "OffensiveFumblesLost": 1,
+    "PuntNum": 1,
+    "PuntYards": 29,
+    "PuntAverage": 29,
+    "Penalties": 8,
+    "PenaltyYards": 90,
+    "LineScore": [
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [0, 14, 6, 7],
+        "Total": 27
+      },
+      {
+        "Team": "Hilton Head Christian",
+        "Abbr": "HHC",
+        "Scores": [0, 0, 0, 6],
+        "Total": 6
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "First Downs",
+        "StAndrews": "7",
+        "Opponent": "4"
+      },
+      {
+        "Label": "Comp.-Att.-Int.",
+        "StAndrews": "6-13-1",
+        "Opponent": "8-18-2"
+      },
+      {
+        "Label": "Fumbles/Lost",
+        "StAndrews": "3-1",
+        "Opponent": "5-3"
+      },
+      {
+        "Label": "Punts",
+        "StAndrews": "1-29",
+        "Opponent": "2-29.5"
+      },
+      {
+        "Label": "Penalties",
+        "StAndrews": "8-90",
+        "Opponent": "6-45"
+      }
+    ],
+    "RecapTitle": "St. Andrew's 27, Hilton Head Christian 6"
+  },
+  {
+    "GameID": 20030912,
+    "Season": 2003,
+    "SeasonID": 2003,
+    "DisplaySeason": "2003",
+    "SourceSeasonLabel": "2003-04",
+    "Date": "2003-09-12",
+    "Time": "TBA",
+    "SourceEventTime": "",
+    "TeamID": "ga-savannah-st-andrews-saints-football",
+    "Team": "St. Andrew's Saints",
+    "Opponent": "Hilton Head Preparatory School",
+    "OpponentLocation": "Hilton Head Island, SC",
+    "OpponentSlug": "hilton-head-prep",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "Home",
+    "Venue": "St. Andrew's School",
+    "Notes": "",
+    "GameType": "Regular Season",
+    "Result": "W",
+    "TeamScore": 36,
+    "OpponentScore": 15,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
+    "OpponentLogoPath": "/images/schools/logos/sc-hilton-head-preparatory-school-hilton-head-island.png",
+    "FirstDowns": 13,
+    "RushingYards": 239,
+    "PassingYards": 91,
+    "PassingComp": 8,
+    "PassingAtt": 16,
+    "PassingInt": 1,
+    "OffensiveFumbles": 2,
+    "OffensiveFumblesLost": 0,
+    "PuntNum": 3,
+    "PuntYards": 96,
+    "PuntAverage": 32,
+    "Penalties": 11,
+    "PenaltyYards": 100,
+    "LineScore": [
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [0, 14, 0, 22],
+        "Total": 36
+      },
+      {
+        "Team": "Hilton Head Prep",
+        "Abbr": "HHP",
+        "Scores": [0, 7, 0, 8],
+        "Total": 15
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "2",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Beau Hinton 1 run",
+        "Conversion": "Will Massey kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Beau Hinton 2 run",
+        "Conversion": "Will Massey kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "Hilton Head Preparatory School",
+        "TeamAbbr": "HHP",
+        "Play": "Mark Finger 33 pass from Charles Scarminach",
+        "Conversion": "Charles Scarminach kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "4",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Hunter Saussy safety",
+        "Conversion": "",
+        "Points": 2
+      },
+      {
+        "Quarter": "4",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Davy Clay 2 run",
+        "Conversion": "Will Massey kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "4",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Beau Hinton 47 run",
+        "Conversion": "Will Massey kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "4",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Jacob Rivers 20 pass from Davy Clay",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "4",
+        "Team": "Hilton Head Preparatory School",
+        "TeamAbbr": "HHP",
+        "Play": "Niles Murphy 99 kickoff return",
+        "Conversion": "Niles Murphy run",
+        "Points": 8
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "First Downs",
+        "StAndrews": "13",
+        "Opponent": "7"
+      },
+      {
+        "Label": "Rushing",
+        "StAndrews": "239",
+        "Opponent": "56"
+      },
+      {
+        "Label": "Passing",
+        "StAndrews": "91",
+        "Opponent": "88"
+      },
+      {
+        "Label": "Comp-Att-Int.",
+        "StAndrews": "8-16-1",
+        "Opponent": "7-16-0"
+      },
+      {
+        "Label": "Fumbles-Lost",
+        "StAndrews": "2-0",
+        "Opponent": "1-1"
+      },
+      {
+        "Label": "Punts",
+        "StAndrews": "3-32",
+        "Opponent": "2-23"
+      },
+      {
+        "Label": "Penalties",
+        "StAndrews": "11-100",
+        "Opponent": "10-70"
+      }
+    ],
+    "RecapTitle": "St. Andrew's 36, Hilton Head Prep 15",
+    "Recap": "Beau Hinton rushed for 133 yards and three touchdowns as St. Andrew's rolled past Hilton Head Prep 36-15 Friday night.\n\nHinton scored on runs of 1, 2 and 47 yards.\n\nDavy Clay ran for a 2-yard touchdowns and threw a 20-yard pass to Jacob Rivers.\n\nFor Hilton Head, Mark Finger scored on a 33-yard pass from Charles Scarminach and Niles Murphy scored on a 99-yard kickoff return. St. Andrew's is 2-1; Hilton Head is 0-3."
+  },
+  {
+    "GameID": 20030926,
+    "Season": 2003,
+    "SeasonID": 2003,
+    "DisplaySeason": "2003",
+    "SourceSeasonLabel": "2003-04",
+    "Date": "2003-09-26",
+    "Time": "TBA",
+    "SourceEventTime": "",
+    "TeamID": "ga-savannah-st-andrews-saints-football",
+    "Team": "St. Andrew's Saints",
+    "Opponent": "Thomas Heyward Academy",
+    "OpponentLocation": "Ridgeland, SC",
+    "OpponentSlug": "thomas-heyward-academy",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "Away",
+    "Venue": "Thomas Heyward Academy",
+    "Notes": "SCISA non-region",
+    "GameType": "Regular Season",
+    "Result": "W",
+    "TeamScore": 19,
+    "OpponentScore": 13,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
+    "FirstDowns": 10,
+    "RushingYards": 115,
+    "PassingYards": 73,
+    "PassingComp": 5,
+    "PassingAtt": 15,
+    "PassingInt": 0,
+    "OffensiveFumbles": 3,
+    "OffensiveFumblesLost": 1,
+    "PuntNum": 6,
+    "PuntYards": 288,
+    "PuntAverage": 48,
+    "Penalties": 6,
+    "PenaltyYards": 60,
+    "LineScore": [
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [0, 6, 13, 0],
+        "Total": 19
+      },
+      {
+        "Team": "Thomas Heyward",
+        "Abbr": "TH",
+        "Scores": [0, 6, 7, 0],
+        "Total": 13
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "2",
+        "Team": "Thomas Heyward Academy",
+        "TeamAbbr": "TH",
+        "Play": "Leon Etheridge 1 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "2",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Beau Hinton 13 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "3",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Beau Hinton 17 run",
+        "Conversion": "Will Massey kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "3",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Davy Clay 1 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "3",
+        "Team": "Thomas Heyward Academy",
+        "TeamAbbr": "TH",
+        "Play": "Dorian Capers 47 pass from Leon Etheridge",
+        "Conversion": "kick good",
+        "Points": 7
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "First Downs",
+        "StAndrews": "10",
+        "Opponent": "12"
+      },
+      {
+        "Label": "Rushing",
+        "StAndrews": "115",
+        "Opponent": "140"
+      },
+      {
+        "Label": "Passing",
+        "StAndrews": "73",
+        "Opponent": "146"
+      },
+      {
+        "Label": "Comp-Att-Int",
+        "StAndrews": "5-15-0",
+        "Opponent": "8-15-2"
+      },
+      {
+        "Label": "Fumbles-Lost",
+        "StAndrews": "3-1",
+        "Opponent": "4-2"
+      },
+      {
+        "Label": "Punts",
+        "StAndrews": "6-48",
+        "Opponent": "4-37"
+      },
+      {
+        "Label": "Penalties",
+        "StAndrews": "6-60",
+        "Opponent": "5-25"
+      }
+    ],
+    "RecapTitle": "St. Andrew's 19, Thomas Heyward 13",
+    "Recap": "RIDGELAND - Beau Hinton's second touchdown of the night, a 17-yard run, gave St. Andrew's the lead for good in the third quarter, and Davy Clay's 1-yard sneak sealed the SCISA non-region win.\n\nHinton's other score, a 13-yard score, tied the score at 6 in the second quarter. The Saints (3-1) then built a 19-6 lead before Thomas Heyward (2-4) capped the scoring on Leon Etheridge's 47-yard touchdown pass to Dorian Capers. Etheridge began the scoring with a 1-yard, second-quarter run for the Rebels, which outgained the Saints 286-188 but committed four turnovers."
+  },
+  {
     "GameID": 20031031,
     "Season": 2003,
     "SeasonID": 2003,

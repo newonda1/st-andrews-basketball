@@ -31,8 +31,8 @@
       {
         "PlayerID": 200403,
         "JerseyNumber": null,
-        "Grade": null,
-        "GradeLabel": null,
+        "Grade": "So.",
+        "GradeLabel": "Sophomore",
         "Positions": [],
         "PlayerName": "Maggie Hinchey",
         "Distinctions": []
@@ -47,6 +47,26 @@
         "Distinctions": []
       },
       {
+        "PlayerID": 200428,
+        "JerseyNumber": null,
+        "Grade": "Sr.",
+        "GradeLabel": "Senior",
+        "Positions": [],
+        "PlayerName": "Layne Haggberg",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200429,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [
+          "GK"
+        ],
+        "PlayerName": "Stephanie Vine",
+        "Distinctions": []
+      },
+      {
         "PlayerID": 200603,
         "JerseyNumber": null,
         "Grade": "So.",
@@ -58,19 +78,37 @@
       {
         "PlayerID": 200409,
         "JerseyNumber": null,
-        "Grade": null,
-        "GradeLabel": null,
+        "Grade": "So.",
+        "GradeLabel": "Sophomore",
         "Positions": [],
         "PlayerName": "Emily Aimone",
         "Distinctions": []
       },
       {
-        "PlayerID": 200419,
+        "PlayerID": 200430,
         "JerseyNumber": null,
-        "Grade": null,
-        "GradeLabel": null,
+        "Grade": "Jr.",
+        "GradeLabel": "Junior",
         "Positions": [],
         "PlayerName": "Megan Johnson",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200438,
+        "JerseyNumber": null,
+        "Grade": "Fr.",
+        "GradeLabel": "Freshman",
+        "Positions": [],
+        "PlayerName": "Claire Oosterhaudt",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200602,
+        "JerseyNumber": null,
+        "Grade": "Fr.",
+        "GradeLabel": "Freshman",
+        "Positions": [],
+        "PlayerName": "Sarah Lundgren",
         "Distinctions": []
       },
       {
@@ -85,10 +123,28 @@
       {
         "PlayerID": 200421,
         "JerseyNumber": null,
+        "Grade": "So.",
+        "GradeLabel": "Sophomore",
+        "Positions": [],
+        "PlayerName": "Becca Timms",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200436,
+        "JerseyNumber": null,
+        "Grade": "Sr.",
+        "GradeLabel": "Senior",
+        "Positions": [],
+        "PlayerName": "Brittany McLaughlin",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200437,
+        "JerseyNumber": null,
         "Grade": null,
         "GradeLabel": null,
         "Positions": [],
-        "PlayerName": "Becca Timms",
+        "PlayerName": "Meghan McCarthey",
         "Distinctions": []
       }
     ]

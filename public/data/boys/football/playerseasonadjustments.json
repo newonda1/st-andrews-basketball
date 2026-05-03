@@ -118,5 +118,47 @@
     "SourcePublication": "Savannah Morning News",
     "SourceCitation": "Savannah Morning News, Nov. 7, 2003",
     "SourceNote": "Coastal Empire football statistics tackles leaders."
+  },
+  {
+    "SeasonID": 2003,
+    "DisplaySeason": "2003",
+    "SourceSeasonLabel": "2003-04",
+    "PlayerID": 200003,
+    "PlayerName": "Davy Clay",
+    "Tackles": 17,
+    "Assists": 13,
+    "TotalTackles": 23.5,
+    "SourceDate": "2003-09-19",
+    "SourcePublication": "Savannah Morning News",
+    "SourceCitation": "Savannah Morning News, Sept. 19, 2003",
+    "SourceNote": "Coastal Empire football statistics tackles leaders."
+  },
+  {
+    "SeasonID": 2003,
+    "DisplaySeason": "2003",
+    "SourceSeasonLabel": "2003-04",
+    "PlayerID": 200442,
+    "PlayerName": "Jesse Hinton",
+    "Tackles": 8,
+    "Assists": 24,
+    "TotalTackles": 20,
+    "SourceDate": "2003-09-19",
+    "SourcePublication": "Savannah Morning News",
+    "SourceCitation": "Savannah Morning News, Sept. 19, 2003",
+    "SourceNote": "Coastal Empire football statistics tackles leaders."
+  },
+  {
+    "SeasonID": 2003,
+    "DisplaySeason": "2003",
+    "SourceSeasonLabel": "2003-04",
+    "PlayerID": 200208,
+    "PlayerName": "Josh Smith",
+    "Tackles": 10,
+    "Assists": 16,
+    "TotalTackles": 18,
+    "SourceDate": "2003-09-19",
+    "SourcePublication": "Savannah Morning News",
+    "SourceCitation": "Savannah Morning News, Sept. 19, 2003",
+    "SourceNote": "Coastal Empire football statistics tackles leaders."
   }
 ]

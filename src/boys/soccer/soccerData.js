@@ -23,8 +23,31 @@ export async function loadBoysSoccerData() {
     fetchJson(BOYS_SOCCER_DATA_PATHS.schools, "schools"),
   ]);
 
+  const schoolMap = new Map(
+    (Array.isArray(schools) ? schools : [])
+      .filter((school) => school?.SchoolID)
+      .map((school) => [String(school.SchoolID), school])
+  );
+
+  const hydratedGames = (Array.isArray(games) ? games : []).map((game) => {
+    const school = schoolMap.get(String(game?.OpponentID ?? ""));
+    if (!school) return game;
+
+    const opponentLocation = [school.City, school.State]
+      .map((part) => String(part || "").trim())
+      .filter(Boolean)
+      .join(", ");
+
+    return {
+      ...game,
+      Opponent: school.Name || game.Opponent,
+      OpponentLocation: opponentLocation || game.OpponentLocation,
+      OpponentSchool: school,
+    };
+  });
+
   return {
-    games: Array.isArray(games) ? games : [],
+    games: hydratedGames,
     seasons: Array.isArray(seasons) ? seasons : [],
     rosters: Array.isArray(rosters) ? rosters : [],
     players: Array.isArray(players) ? players : [],

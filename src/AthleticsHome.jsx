@@ -63,7 +63,7 @@ const sports = [
     to: "/athletics/girls/soccer",
     icon: "/images/common/soccer_icon.png",
     iconClassName: "scale-[0.8]",
-    regionYears: [],
+    regionYears: [2004],
     stateYears: [],
   },
   {
@@ -72,8 +72,8 @@ const sports = [
     icon: "/images/common/soccer_icon.png",
     iconClassName: "scale-[0.8]",
     bannerMessage: "This page is under construction and will be up soon.",
-    regionYears: [],
-    stateYears: [],
+    regionYears: [2004],
+    stateYears: [2003, 2004],
   },
   {
     name: "Cross Country",

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-03T16:03:30.567Z",
-  "itemCount": 1539,
+  "generatedAt": "2026-05-03T19:49:20.089Z",
+  "itemCount": 1584,
   "items": [
     {
       "id": "athletics-home",
@@ -793,6 +793,22 @@
       ]
     },
     {
+      "id": "girls-soccer-2003-season",
+      "type": "page",
+      "title": "Spring 2003 Season",
+      "subtitle": "Girls Soccer",
+      "to": "/athletics/girls/soccer/seasons/2003",
+      "keywords": [
+        "girls",
+        "soccer",
+        "2003",
+        "2002-03",
+        "spring",
+        "season",
+        "mark gibbons"
+      ]
+    },
+    {
       "id": "girls-soccer-20040309-game",
       "type": "page",
       "title": "Frederica Academy 4, St. Andrew's 0",
@@ -913,7 +929,7 @@
     {
       "id": "girls-soccer-20040327-game",
       "type": "page",
-      "title": "St. Andrew's 6, Kings Academy 0",
+      "title": "St. Andrew's 6, The King's Academy 0",
       "subtitle": "Girls Soccer",
       "to": "/athletics/girls/soccer/games/20040327",
       "keywords": [
@@ -922,6 +938,7 @@
         "2004",
         "kings academy",
         "king's academy",
+        "the king's academy",
         "kelme tournament of champions",
         "jennifer moesch",
         "becca timms",
@@ -949,6 +966,205 @@
         "grace wilkowski",
         "mary wilkowski",
         "alyssa pignone",
+        "game",
+        "result"
+      ]
+    },
+    {
+      "id": "girls-soccer-20040329-game",
+      "type": "page",
+      "title": "St. Andrew's 5, Beaufort Academy 0",
+      "subtitle": "Girls Soccer",
+      "to": "/athletics/girls/soccer/games/20040329",
+      "keywords": [
+        "girls",
+        "soccer",
+        "2004",
+        "beaufort academy",
+        "region",
+        "scisa 2-aa",
+        "scisa region 2-aa",
+        "jennifer moesch",
+        "leighanne evans",
+        "mary wilkowski",
+        "game",
+        "result"
+      ]
+    },
+    {
+      "id": "girls-soccer-20040401-game",
+      "type": "page",
+      "title": "St. Andrew's 5, Colleton Prep 1",
+      "subtitle": "Girls Soccer",
+      "to": "/athletics/girls/soccer/games/20040401",
+      "keywords": [
+        "girls",
+        "soccer",
+        "2004",
+        "colleton prep",
+        "colleton prep academy",
+        "region",
+        "gisa region 2-aa",
+        "leighanne evans",
+        "layne haggberg",
+        "jennifer moesch",
+        "becca timms",
+        "rebecca timms",
+        "maggie hinchey",
+        "mary wilkowski",
+        "stephanie vine",
+        "game",
+        "result"
+      ]
+    },
+    {
+      "id": "girls-soccer-20040402-game",
+      "type": "page",
+      "title": "St. Andrew's 5, Trinity Collegiate 1",
+      "subtitle": "Girls Soccer",
+      "to": "/athletics/girls/soccer/games/20040402",
+      "keywords": [
+        "girls",
+        "soccer",
+        "2004",
+        "trinity collegiate",
+        "non-region",
+        "megan johnson",
+        "grace wilkowski",
+        "jennifer moesch",
+        "whitney jenkins",
+        "becca timms",
+        "rebecca timms",
+        "emily aimone",
+        "game",
+        "result"
+      ]
+    },
+    {
+      "id": "girls-soccer-20040406-game",
+      "type": "page",
+      "title": "St. Andrew's 0, Hilton Head Christian 0",
+      "subtitle": "Girls Soccer",
+      "to": "/athletics/girls/soccer/games/20040406",
+      "keywords": [
+        "girls",
+        "soccer",
+        "2004",
+        "hilton head christian",
+        "hilton head christian academy",
+        "hhc",
+        "mary wilkowski",
+        "saves",
+        "tie",
+        "draw",
+        "game",
+        "result"
+      ]
+    },
+    {
+      "id": "girls-soccer-20040429-game",
+      "type": "page",
+      "title": "St. Andrew's 5, Beaufort Academy 0",
+      "subtitle": "Girls Soccer",
+      "to": "/athletics/girls/soccer/games/20040429",
+      "keywords": [
+        "girls",
+        "soccer",
+        "2004",
+        "beaufort academy",
+        "region",
+        "region champion",
+        "scisa region 1-aa",
+        "jennifer moesch",
+        "grace wilkowski",
+        "becca timms",
+        "emily aimone",
+        "mary wilkowski",
+        "game",
+        "result"
+      ]
+    },
+    {
+      "id": "girls-soccer-20040511-game",
+      "type": "page",
+      "title": "St. Andrew's 8, The King's Academy 0",
+      "subtitle": "Girls Soccer",
+      "to": "/athletics/girls/soccer/games/20040511",
+      "keywords": [
+        "girls",
+        "soccer",
+        "2004",
+        "the king's academy",
+        "kings academy",
+        "scisa class aa/a",
+        "state tournament",
+        "quarterfinal",
+        "semifinals",
+        "mark gibbons",
+        "jennifer moesch",
+        "becca timms",
+        "emily aimone",
+        "meghan mccarthey",
+        "brittany mclaughlin",
+        "grace wilkowski",
+        "leighanne evans",
+        "mary wilkowski",
+        "game",
+        "result"
+      ]
+    },
+    {
+      "id": "girls-soccer-20040513-game",
+      "type": "page",
+      "title": "St. Andrew's 5, Lowcountry Day School 0",
+      "subtitle": "Girls Soccer",
+      "to": "/athletics/girls/soccer/games/20040513",
+      "keywords": [
+        "girls",
+        "soccer",
+        "2004",
+        "lowcountry day school",
+        "lowcountry",
+        "scisa class aa/a",
+        "state tournament",
+        "semifinal",
+        "state championship",
+        "mark gibbons",
+        "jennifer moesch",
+        "leighanne evans",
+        "becca timms",
+        "mary wilkowski",
+        "sarah lundgren",
+        "maggie hinchey",
+        "megan johnson",
+        "game",
+        "result"
+      ]
+    },
+    {
+      "id": "girls-soccer-20040515-game",
+      "type": "page",
+      "title": "Greenwood Christian 2, St. Andrew's 1",
+      "subtitle": "Girls Soccer",
+      "to": "/athletics/girls/soccer/games/20040515",
+      "keywords": [
+        "girls",
+        "soccer",
+        "2004",
+        "greenwood christian",
+        "greenwood christian school",
+        "scisa class a/aa",
+        "state tournament",
+        "state final",
+        "state championship",
+        "state runner-up",
+        "penalty kicks",
+        "pks",
+        "jennifer moesch",
+        "mary wilkowski",
+        "joy kane",
+        "mallory rose",
+        "caroline clarke",
         "game",
         "result"
       ]
@@ -1018,7 +1234,7 @@
         "will massey",
         "hamish huntley",
         "beau hinton",
-        "emett eason",
+        "emmett eason",
         "game",
         "result"
       ]
@@ -1045,6 +1261,267 @@
         "freddy presutto",
         "graham rossell",
         "martin sullivan",
+        "game",
+        "result"
+      ]
+    },
+    {
+      "id": "boys-soccer-20040329-game",
+      "type": "page",
+      "title": "St. Andrew's 2, Beaufort Academy 1",
+      "subtitle": "Boys Soccer",
+      "to": "/athletics/boys/soccer/games/20040329",
+      "keywords": [
+        "boys",
+        "soccer",
+        "2004",
+        "beaufort academy",
+        "region",
+        "scisa 2-aa",
+        "beau hinton",
+        "daniel eicholz",
+        "jacob rauers",
+        "emmett eason",
+        "jamie henry",
+        "game",
+        "result"
+      ]
+    },
+    {
+      "id": "boys-soccer-20040402-game",
+      "type": "page",
+      "title": "St. Andrew's 3, James Island Christian 1",
+      "subtitle": "Boys Soccer",
+      "to": "/athletics/boys/soccer/games/20040402",
+      "keywords": [
+        "boys",
+        "soccer",
+        "2004",
+        "james island christian",
+        "region",
+        "scisa 2-aa",
+        "daniel eichholz",
+        "will massey",
+        "jacob rauers",
+        "hamish huntley",
+        "emmett eason",
+        "ben johnson",
+        "game",
+        "result"
+      ]
+    },
+    {
+      "id": "boys-soccer-20040406-game",
+      "type": "page",
+      "title": "St. Andrew's 3, Hilton Head Christian 3",
+      "subtitle": "Boys Soccer",
+      "to": "/athletics/boys/soccer/games/20040406",
+      "keywords": [
+        "boys",
+        "soccer",
+        "2004",
+        "hilton head christian",
+        "hamish huntly",
+        "hamish huntley",
+        "daniel eichholz",
+        "emmett eason",
+        "penalty kick",
+        "pk",
+        "tie",
+        "game",
+        "result"
+      ]
+    },
+    {
+      "id": "boys-soccer-20040429-game",
+      "type": "page",
+      "title": "St. Andrew's 8, Patrick Henry 0",
+      "subtitle": "Boys Soccer",
+      "to": "/athletics/boys/soccer/games/20040429",
+      "keywords": [
+        "boys",
+        "soccer",
+        "2004",
+        "patrick henry",
+        "patrick henry academy",
+        "will massey",
+        "jacob rauers",
+        "hamish huntley",
+        "omar glenn",
+        "beau hinton",
+        "daniel eichholz",
+        "fredy presutto",
+        "emmett eason",
+        "game",
+        "result"
+      ]
+    },
+    {
+      "id": "boys-soccer-20040504-game",
+      "type": "page",
+      "title": "St. Andrew's 4, Cathedral Academy 1",
+      "subtitle": "Boys Soccer",
+      "to": "/athletics/boys/soccer/games/20040504",
+      "keywords": [
+        "boys",
+        "soccer",
+        "2004",
+        "cathedral academy",
+        "cathedral academy of charleston",
+        "region tournament",
+        "playoff",
+        "scisa 2-aa",
+        "will massey",
+        "jacob rauers",
+        "hamish huntley",
+        "omar glenn",
+        "emmett eason",
+        "kenneth chandler",
+        "sean monahan",
+        "game",
+        "result"
+      ]
+    },
+    {
+      "id": "boys-soccer-20040506-game",
+      "type": "page",
+      "title": "St. Andrew's 9, Patrick Henry Academy 0",
+      "subtitle": "Boys Soccer",
+      "to": "/athletics/boys/soccer/games/20040506",
+      "keywords": [
+        "boys",
+        "soccer",
+        "2004",
+        "patrick henry",
+        "patrick henry academy",
+        "region tournament",
+        "playoff",
+        "scisa 2-aa",
+        "will massey",
+        "jacob ravers",
+        "jacob rauers",
+        "beau hinton",
+        "hamish huntley",
+        "omar glenn",
+        "emmett eason",
+        "beaufort academy",
+        "region championship",
+        "championship",
+        "game",
+        "result"
+      ]
+    },
+    {
+      "id": "boys-soccer-20040508-game",
+      "type": "page",
+      "title": "St. Andrew's def. Beaufort Academy",
+      "subtitle": "Boys Soccer",
+      "to": "/athletics/boys/soccer/games/20040508",
+      "keywords": [
+        "boys",
+        "soccer",
+        "2004",
+        "beaufort academy",
+        "region tournament",
+        "region championship",
+        "region champion",
+        "score not reported",
+        "inferred",
+        "playoff",
+        "scisa 2-aa",
+        "game",
+        "result"
+      ]
+    },
+    {
+      "id": "boys-soccer-20040510-game",
+      "type": "page",
+      "title": "St. Andrew's 9, St. Francis Xavier 0",
+      "subtitle": "Boys Soccer",
+      "to": "/athletics/boys/soccer/games/20040510",
+      "keywords": [
+        "boys",
+        "soccer",
+        "2004",
+        "st francis xavier",
+        "state tournament",
+        "quarterfinals",
+        "scisa class aa",
+        "will massey",
+        "jacob rauers",
+        "hamish huntley",
+        "omar glenn",
+        "beau hinton",
+        "daniel eichholz",
+        "will chisholm",
+        "kevin crouch",
+        "remy thurston",
+        "chris rauers",
+        "ben harrison",
+        "matt knight",
+        "joe bilton",
+        "emmett eason",
+        "patrick maleki",
+        "game",
+        "result"
+      ]
+    },
+    {
+      "id": "boys-soccer-20040512-game",
+      "type": "page",
+      "title": "St. Andrew's 7, Cathedral Academy 1",
+      "subtitle": "Boys Soccer",
+      "to": "/athletics/boys/soccer/games/20040512",
+      "keywords": [
+        "boys",
+        "soccer",
+        "2004",
+        "cathedral academy",
+        "state tournament",
+        "semifinals",
+        "scisa class aa/a",
+        "savannah morning news",
+        "may 13 2004",
+        "will massey",
+        "hamish huntley",
+        "jacob rauers",
+        "beau hinton",
+        "daniel eichholz",
+        "andy crouch",
+        "emmett eason",
+        "kenneth chandler",
+        "sean monahan",
+        "mark gibbons",
+        "derek johnson",
+        "championship",
+        "game",
+        "result"
+      ]
+    },
+    {
+      "id": "boys-soccer-20040515-game",
+      "type": "page",
+      "title": "St. Andrew's 5, James Island Christian 1",
+      "subtitle": "Boys Soccer",
+      "to": "/athletics/boys/soccer/games/20040515",
+      "keywords": [
+        "boys",
+        "soccer",
+        "2004",
+        "james island christian",
+        "state tournament",
+        "state championship",
+        "state champion",
+        "scisa class a/aa",
+        "heathwood hall",
+        "daniel eichholz",
+        "omar glenn",
+        "jacob rauers",
+        "hamish huntley",
+        "caleb costa",
+        "emmett eason",
+        "mark gibbons",
+        "second straight title",
         "game",
         "result"
       ]
@@ -18797,6 +19274,40 @@
       ]
     },
     {
+      "id": "girls-soccer-athlete-200428",
+      "type": "athlete",
+      "title": "Layne Haggberg",
+      "subtitle": "Girls Soccer athlete",
+      "to": "/athletics/girls/soccer/players/200428",
+      "keywords": [
+        "Girls Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Layne",
+        "Haggberg",
+        "Haggberg Layne"
+      ]
+    },
+    {
+      "id": "girls-soccer-athlete-200429",
+      "type": "athlete",
+      "title": "Stephanie Vine",
+      "subtitle": "Girls Soccer athlete",
+      "to": "/athletics/girls/soccer/players/200429",
+      "keywords": [
+        "Girls Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Stephanie",
+        "Vine",
+        "Vine Stephanie"
+      ]
+    },
+    {
       "id": "girls-soccer-athlete-200603",
       "type": "athlete",
       "title": "Grace Wilkowski",
@@ -18833,20 +19344,54 @@
       ]
     },
     {
-      "id": "girls-soccer-athlete-200419",
+      "id": "girls-soccer-athlete-200430",
       "type": "athlete",
-      "title": "Steve Carbone",
+      "title": "Megan Johnson",
       "subtitle": "Girls Soccer athlete",
-      "to": "/athletics/girls/soccer/players/200419",
+      "to": "/athletics/girls/soccer/players/200430",
       "keywords": [
         "Girls Soccer",
         "athlete",
         "player",
         "stats",
         "records",
-        "Steve",
-        "Carbone",
-        "Carbone Steve"
+        "Megan",
+        "Johnson",
+        "Johnson Megan"
+      ]
+    },
+    {
+      "id": "girls-soccer-athlete-200438",
+      "type": "athlete",
+      "title": "Claire Oosterhaudt",
+      "subtitle": "Girls Soccer athlete",
+      "to": "/athletics/girls/soccer/players/200438",
+      "keywords": [
+        "Girls Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Claire",
+        "Oosterhaudt",
+        "Oosterhaudt Claire"
+      ]
+    },
+    {
+      "id": "girls-soccer-athlete-200602",
+      "type": "athlete",
+      "title": "Sarah Lundgren",
+      "subtitle": "Girls Soccer athlete",
+      "to": "/athletics/girls/soccer/players/200602",
+      "keywords": [
+        "Girls Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Sarah",
+        "Lundgren",
+        "Lundgren Sarah"
       ]
     },
     {
@@ -18881,6 +19426,40 @@
         "Becca",
         "Timms",
         "Timms Becca"
+      ]
+    },
+    {
+      "id": "girls-soccer-athlete-200436",
+      "type": "athlete",
+      "title": "Brittany McLaughlin",
+      "subtitle": "Girls Soccer athlete",
+      "to": "/athletics/girls/soccer/players/200436",
+      "keywords": [
+        "Girls Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Brittany",
+        "McLaughlin",
+        "McLaughlin Brittany"
+      ]
+    },
+    {
+      "id": "girls-soccer-athlete-200437",
+      "type": "athlete",
+      "title": "Meghan McCarthey",
+      "subtitle": "Girls Soccer athlete",
+      "to": "/athletics/girls/soccer/players/200437",
+      "keywords": [
+        "Girls Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Meghan",
+        "McCarthey",
+        "McCarthey Meghan"
       ]
     },
     {
@@ -19037,9 +19616,145 @@
       ]
     },
     {
+      "id": "boys-soccer-athlete-200204",
+      "type": "athlete",
+      "title": "Matt Knight",
+      "subtitle": "Boys Soccer athlete",
+      "to": "/athletics/boys/soccer/players/200204",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Matt",
+        "Knight",
+        "Knight Matt"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-200311",
+      "type": "athlete",
+      "title": "Chris Ravers",
+      "subtitle": "Boys Soccer athlete",
+      "to": "/athletics/boys/soccer/players/200311",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Chris",
+        "Ravers",
+        "Ravers Chris"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-200431",
+      "type": "athlete",
+      "title": "Will Chisholm",
+      "subtitle": "Boys Soccer athlete",
+      "to": "/athletics/boys/soccer/players/200431",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Will",
+        "Chisholm",
+        "Chisholm Will"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-200432",
+      "type": "athlete",
+      "title": "Kevin Crouch",
+      "subtitle": "Boys Soccer athlete",
+      "to": "/athletics/boys/soccer/players/200432",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Kevin",
+        "Crouch",
+        "Crouch Kevin"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-200433",
+      "type": "athlete",
+      "title": "Ben Harrison",
+      "subtitle": "Boys Soccer athlete",
+      "to": "/athletics/boys/soccer/players/200433",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Ben",
+        "Harrison",
+        "Harrison Ben"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-200434",
+      "type": "athlete",
+      "title": "Joe Bilton",
+      "subtitle": "Boys Soccer athlete",
+      "to": "/athletics/boys/soccer/players/200434",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Joe",
+        "Bilton",
+        "Bilton Joe"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-200501",
+      "type": "athlete",
+      "title": "Remy Thurston",
+      "subtitle": "Boys Soccer athlete",
+      "to": "/athletics/boys/soccer/players/200501",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Remy",
+        "Thurston",
+        "Thurston Remy"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-200439",
+      "type": "athlete",
+      "title": "Andy Crouch",
+      "subtitle": "Boys Soccer athlete",
+      "to": "/athletics/boys/soccer/players/200439",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Andy",
+        "Crouch",
+        "Crouch Andy"
+      ]
+    },
+    {
       "id": "boys-soccer-athlete-200424",
       "type": "athlete",
-      "title": "Emett Eason",
+      "title": "Emmett Eason",
       "subtitle": "Boys Soccer athlete",
       "to": "/athletics/boys/soccer/players/200424",
       "keywords": [
@@ -19048,9 +19763,26 @@
         "player",
         "stats",
         "records",
-        "Emett",
+        "Emmett",
         "Eason",
-        "Eason Emett"
+        "Eason Emmett"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-200435",
+      "type": "athlete",
+      "title": "Patrick Maleki",
+      "subtitle": "Boys Soccer athlete",
+      "to": "/athletics/boys/soccer/players/200435",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Patrick",
+        "Maleki",
+        "Maleki Patrick"
       ]
     },
     {
@@ -19144,6 +19876,42 @@
         "Cooper Becca",
         "class of 2004",
         "grad 2004"
+      ]
+    },
+    {
+      "id": "volleyball-athlete-200421",
+      "type": "athlete",
+      "title": "Becca Timms",
+      "subtitle": "Volleyball athlete",
+      "to": "/athletics/volleyball/players/200421",
+      "keywords": [
+        "Volleyball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Becca",
+        "Timms",
+        "Timms Becca"
+      ]
+    },
+    {
+      "id": "volleyball-athlete-200603",
+      "type": "athlete",
+      "title": "Grace Wilkowski",
+      "subtitle": "Volleyball athlete - Class of 2006",
+      "to": "/athletics/volleyball/players/200603",
+      "keywords": [
+        "Volleyball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Grace",
+        "Wilkowski",
+        "Wilkowski Grace",
+        "class of 2006",
+        "grad 2006"
       ]
     },
     {
@@ -26402,25 +27170,6 @@
       ]
     },
     {
-      "id": "football-team-robert-e-lee-academy",
-      "type": "team",
-      "title": "Robert E. Lee Academy",
-      "subtitle": "Football opponent history - Bishopville, SC",
-      "to": "/athletics/football/records/opponents?team=Robert+E.+Lee+Academy",
-      "keywords": [
-        "Football",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Robert E. Lee Academy",
-        "Lee Academy",
-        "Cavaliers",
-        "Bishopville",
-        "SC"
-      ]
-    },
-    {
       "id": "football-team-memorial-day-school",
       "type": "team",
       "title": "Memorial Day School",
@@ -26454,6 +27203,25 @@
         "Hilton Head Christian Academy",
         "Eagles",
         "Hilton Head Island",
+        "SC"
+      ]
+    },
+    {
+      "id": "football-team-robert-e-lee-academy",
+      "type": "team",
+      "title": "Robert E. Lee Academy",
+      "subtitle": "Football opponent history - Bishopville, SC",
+      "to": "/athletics/football/records/opponents?team=Robert+E.+Lee+Academy",
+      "keywords": [
+        "Football",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Robert E. Lee Academy",
+        "Lee Academy",
+        "Cavaliers",
+        "Bishopville",
         "SC"
       ]
     },
@@ -27134,7 +27902,6 @@
         "history",
         "records",
         "Colleton Prep Academy",
-        "Colleton Prep",
         "War Hawks",
         "Walterboro",
         "SC"
@@ -27172,7 +27939,6 @@
         "history",
         "records",
         "First Presbyterian Day School",
-        "First Presbyterian Day",
         "Macon",
         "GA"
       ]
@@ -27190,27 +27956,24 @@
         "history",
         "records",
         "Central Fellowship Christian Academy",
-        "Fellowship Christian",
         "Lancers",
         "Macon",
         "GA"
       ]
     },
     {
-      "id": "girls-soccer-team-king-s-academy",
+      "id": "girls-soccer-team-the-king-s-academy",
       "type": "team",
-      "title": "King's Academy",
+      "title": "The King's Academy",
       "subtitle": "Girls Soccer opponent history - Florence, SC",
-      "to": "/athletics/girls/soccer/records/opponents?team=King%27s+Academy",
+      "to": "/athletics/girls/soccer/records/opponents?team=The+King%27s+Academy",
       "keywords": [
         "Girls Soccer",
         "team",
         "opponent",
         "history",
         "records",
-        "King's Academy",
-        "Kings Academy",
-        "Lions",
+        "The King's Academy",
         "Florence",
         "SC"
       ]
@@ -27230,6 +27993,79 @@
         "Trinity Collegiate",
         "Titans",
         "Darlington",
+        "SC"
+      ]
+    },
+    {
+      "id": "girls-soccer-team-beaufort-academy",
+      "type": "team",
+      "title": "Beaufort Academy",
+      "subtitle": "Girls Soccer opponent history - Beaufort, SC",
+      "to": "/athletics/girls/soccer/records/opponents?team=Beaufort+Academy",
+      "keywords": [
+        "Girls Soccer",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Beaufort Academy",
+        "Eagles",
+        "Beaufort",
+        "SC"
+      ]
+    },
+    {
+      "id": "girls-soccer-team-hilton-head-christian-academy",
+      "type": "team",
+      "title": "Hilton Head Christian Academy",
+      "subtitle": "Girls Soccer opponent history - Hilton Head Island, SC",
+      "to": "/athletics/girls/soccer/records/opponents?team=Hilton+Head+Christian+Academy",
+      "keywords": [
+        "Girls Soccer",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Hilton Head Christian Academy",
+        "Eagles",
+        "Hilton Head Island",
+        "SC"
+      ]
+    },
+    {
+      "id": "girls-soccer-team-lowcountry-day-school",
+      "type": "team",
+      "title": "Lowcountry Day School",
+      "subtitle": "Girls Soccer opponent history - Pawleys Island, SC",
+      "to": "/athletics/girls/soccer/records/opponents?team=Lowcountry+Day+School",
+      "keywords": [
+        "Girls Soccer",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Lowcountry Day School",
+        "Marlins",
+        "Pawleys Island",
+        "SC"
+      ]
+    },
+    {
+      "id": "girls-soccer-team-greenwood-christian-school",
+      "type": "team",
+      "title": "Greenwood Christian School",
+      "subtitle": "Girls Soccer opponent history - Greenwood, SC",
+      "to": "/athletics/girls/soccer/records/opponents?team=Greenwood+Christian+School",
+      "keywords": [
+        "Girls Soccer",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Greenwood Christian School",
+        "Greenwood Christian",
+        "Hawks",
+        "Greenwood",
         "SC"
       ]
     },
@@ -27266,6 +28102,96 @@
         "Charleston Collegiate",
         "Sun Devils",
         "Johns Island",
+        "SC"
+      ]
+    },
+    {
+      "id": "boys-soccer-team-beaufort-academy",
+      "type": "team",
+      "title": "Beaufort Academy",
+      "subtitle": "Boys Soccer opponent history - Beaufort, SC",
+      "to": "/athletics/boys/soccer/records/opponents?team=Beaufort+Academy",
+      "keywords": [
+        "Boys Soccer",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Beaufort Academy",
+        "Eagles",
+        "Beaufort",
+        "SC"
+      ]
+    },
+    {
+      "id": "boys-soccer-team-james-island-christian-school",
+      "type": "team",
+      "title": "James Island Christian School",
+      "subtitle": "Boys Soccer opponent history - Charleston, SC",
+      "to": "/athletics/boys/soccer/records/opponents?team=James+Island+Christian+School",
+      "keywords": [
+        "Boys Soccer",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "James Island Christian School",
+        "James Island Christian",
+        "Lions",
+        "Charleston",
+        "SC"
+      ]
+    },
+    {
+      "id": "boys-soccer-team-hilton-head-christian-academy",
+      "type": "team",
+      "title": "Hilton Head Christian Academy",
+      "subtitle": "Boys Soccer opponent history - Hilton Head Island, SC",
+      "to": "/athletics/boys/soccer/records/opponents?team=Hilton+Head+Christian+Academy",
+      "keywords": [
+        "Boys Soccer",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Hilton Head Christian Academy",
+        "Hilton Head Christian",
+        "Eagles",
+        "Hilton Head Island",
+        "SC"
+      ]
+    },
+    {
+      "id": "boys-soccer-team-patrick-henry-academy",
+      "type": "team",
+      "title": "Patrick Henry Academy",
+      "subtitle": "Boys Soccer opponent history - Estill, SC",
+      "to": "/athletics/boys/soccer/records/opponents?team=Patrick+Henry+Academy",
+      "keywords": [
+        "Boys Soccer",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Patrick Henry Academy",
+        "Patriots",
+        "Estill",
+        "SC"
+      ]
+    },
+    {
+      "id": "boys-soccer-team-st-francis-xavier",
+      "type": "team",
+      "title": "St. Francis Xavier",
+      "subtitle": "Boys Soccer opponent history - SC",
+      "to": "/athletics/boys/soccer/records/opponents?team=St.+Francis+Xavier",
+      "keywords": [
+        "Boys Soccer",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "St. Francis Xavier",
         "SC"
       ]
     }

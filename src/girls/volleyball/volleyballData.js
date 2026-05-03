@@ -8,6 +8,7 @@ export const VOLLEYBALL_DATA_PATHS = {
   playerGameStats: "/data/girls/volleyball/playergamestats.json",
   teamMatchStats: "/data/girls/volleyball/teammatchstats.json",
   players: "/data/players.json",
+  schools: "/data/schools.json",
 };
 
 export const VOLLEYBALL_STAT_SECTIONS = [
@@ -99,6 +100,7 @@ export async function loadVolleyballData() {
     teamSeasonStats,
     playerGameStats,
     teamMatchStats,
+    schools,
   ] = await Promise.all([
     fetchJson(VOLLEYBALL_DATA_PATHS.seasons, "volleyball seasons"),
     fetchJson(VOLLEYBALL_DATA_PATHS.games, "volleyball games"),
@@ -112,6 +114,7 @@ export async function loadVolleyballData() {
     fetchJson(VOLLEYBALL_DATA_PATHS.teamSeasonStats, "volleyball team season stats"),
     fetchJson(VOLLEYBALL_DATA_PATHS.playerGameStats, "volleyball player game stats"),
     fetchJson(VOLLEYBALL_DATA_PATHS.teamMatchStats, "volleyball team match stats"),
+    fetchJson(VOLLEYBALL_DATA_PATHS.schools, "schools"),
   ]);
 
   return {
@@ -126,6 +129,7 @@ export async function loadVolleyballData() {
     teamSeasonStats: Array.isArray(teamSeasonStats) ? teamSeasonStats : [],
     playerGameStats: Array.isArray(playerGameStats) ? playerGameStats : [],
     teamMatchStats: Array.isArray(teamMatchStats) ? teamMatchStats : [],
+    schools: Array.isArray(schools) ? schools : [],
   };
 }
 
@@ -183,12 +187,21 @@ export function buildPlayerMap(players = []) {
 
 export function sortGames(games = []) {
   return [...games].sort((a, b) => {
-    const dateDiff = String(a.Date || "").localeCompare(String(b.Date || ""));
+    const dateDiff = String(a.SortDate || a.Date || "").localeCompare(
+      String(b.SortDate || b.Date || "")
+    );
     if (dateDiff !== 0) return dateDiff;
+
+    const orderA = Number(a.SortOrder ?? 0);
+    const orderB = Number(b.SortOrder ?? 0);
+    if (Number.isFinite(orderA) && Number.isFinite(orderB) && orderA !== orderB) {
+      return orderA - orderB;
+    }
 
     const suffixA = Number(String(a.GameID || "").split("-")[1] || 0);
     const suffixB = Number(String(b.GameID || "").split("-")[1] || 0);
-    return suffixA - suffixB;
+    if (Number.isFinite(suffixA) && Number.isFinite(suffixB)) return suffixA - suffixB;
+    return String(a.GameID || "").localeCompare(String(b.GameID || ""));
   });
 }
 
@@ -430,6 +443,10 @@ function adjustmentOverrides(adjustment) {
     : adjustment || {};
 }
 
+function isFinalSeasonTotalAdjustment(adjustment) {
+  return adjustment?.IsFinalSeasonTotal === true || adjustment?.FinalSeasonTotal === true;
+}
+
 export function applyVolleyballSeasonAdjustment(row, adjustment) {
   const adjusted = { ...row };
   const overrides = adjustmentOverrides(adjustment);
@@ -469,7 +486,7 @@ export function mergePlayerSeasonAdjustments(rows = [], adjustments = [], season
 
       const key = adjustmentKey(adjustment);
       const current =
-        byPlayerSeason.get(key) ||
+        (isFinalSeasonTotalAdjustment(adjustment) ? null : byPlayerSeason.get(key)) ||
         createEmptyStatRow({
           Season: season,
           PlayerID: playerId,

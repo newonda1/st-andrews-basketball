@@ -17,18 +17,21 @@
           {
             "School": "St. Andrew's",
             "Score": 185,
-            "IsStAndrews": true
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
           },
           {
             "School": "Groves",
             "Score": 196,
-            "IsStAndrews": false
+            "IsStAndrews": false,
+            "SchoolID": "ga-groves-high-school-garden-city"
           }
         ],
         "Medalist": {
           "PlayerName": "Steven Fields",
           "School": "Groves",
-          "Score": 40
+          "Score": 40,
+          "SchoolID": "ga-groves-high-school-garden-city"
         },
         "Results": [
           {
@@ -36,52 +39,60 @@
             "PlayerName": "Kevin Kicklighter",
             "School": "St. Andrew's",
             "Score": 44,
-            "IsStAndrews": true
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
           },
           {
             "PlayerID": 200412,
             "PlayerName": "Zach Inbrogno",
             "School": "St. Andrew's",
             "Score": 46,
-            "IsStAndrews": true
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
           },
           {
             "PlayerID": 200413,
             "PlayerName": "Ryan Ramsey",
             "School": "St. Andrew's",
             "Score": 47,
-            "IsStAndrews": true
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
           },
           {
             "PlayerID": 200414,
             "PlayerName": "Brock Prescott",
             "School": "St. Andrew's",
             "Score": 48,
-            "IsStAndrews": true
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
           },
           {
             "PlayerName": "Steven Fields",
             "School": "Groves",
             "Score": 40,
-            "IsStAndrews": false
+            "IsStAndrews": false,
+            "SchoolID": "ga-groves-high-school-garden-city"
           },
           {
             "PlayerName": "Dustin Fort",
             "School": "Groves",
             "Score": 45,
-            "IsStAndrews": false
+            "IsStAndrews": false,
+            "SchoolID": "ga-groves-high-school-garden-city"
           },
           {
             "PlayerName": "Ryan Hall",
             "School": "Groves",
             "Score": 45,
-            "IsStAndrews": false
+            "IsStAndrews": false,
+            "SchoolID": "ga-groves-high-school-garden-city"
           },
           {
             "PlayerName": "Jason Neal",
             "School": "Groves",
             "Score": 62,
-            "IsStAndrews": false
+            "IsStAndrews": false,
+            "SchoolID": "ga-groves-high-school-garden-city"
           }
         ]
       },
@@ -91,18 +102,21 @@
           {
             "School": "St. Andrew's",
             "Score": 110,
-            "IsStAndrews": true
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
           },
           {
             "School": "Groves",
             "Score": 111,
-            "IsStAndrews": false
+            "IsStAndrews": false,
+            "SchoolID": "ga-groves-high-school-garden-city"
           }
         ],
         "Medalist": {
           "PlayerName": "Jackie Dyer",
           "School": "Groves",
-          "Score": 49
+          "Score": 49,
+          "SchoolID": "ga-groves-high-school-garden-city"
         },
         "Results": [
           {
@@ -110,20 +124,23 @@
             "PlayerName": "Logan Ferrelle",
             "School": "St. Andrew's",
             "Score": 50,
-            "IsStAndrews": true
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
           },
           {
             "PlayerID": 200416,
             "PlayerName": "Christine Spain",
             "School": "St. Andrew's",
             "Score": 60,
-            "IsStAndrews": true
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
           },
           {
             "PlayerName": "Jackie Dyer",
             "School": "Groves",
             "Score": 49,
-            "IsStAndrews": false
+            "IsStAndrews": false,
+            "SchoolID": "ga-groves-high-school-garden-city"
           }
         ],
         "ResultNote": "The published transcript lists Jackie Dyer's 49 as the only Groves individual girls score."
@@ -148,18 +165,21 @@
           {
             "School": "Beaufort Academy",
             "Score": 160,
-            "IsStAndrews": false
+            "IsStAndrews": false,
+            "SchoolID": "sc-beaufort-academy-beaufort"
           },
           {
             "School": "St. Andrew's",
             "Score": 179,
-            "IsStAndrews": true
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
           }
         ],
         "Medalist": {
           "PlayerName": "P.J. Holman",
           "School": "Beaufort Academy",
-          "Score": 38
+          "Score": 38,
+          "SchoolID": "sc-beaufort-academy-beaufort"
         },
         "Results": [
           {
@@ -167,53 +187,61 @@
             "School": "Beaufort Academy",
             "Score": 38,
             "Award": "Medalist",
-            "IsStAndrews": false
+            "IsStAndrews": false,
+            "SchoolID": "sc-beaufort-academy-beaufort"
           },
           {
             "PlayerName": "Mark Anderson",
             "School": "Beaufort Academy",
             "Score": 40,
-            "IsStAndrews": false
+            "IsStAndrews": false,
+            "SchoolID": "sc-beaufort-academy-beaufort"
           },
           {
             "PlayerName": "Blake Johnson",
             "School": "Beaufort Academy",
             "Score": 40,
-            "IsStAndrews": false
+            "IsStAndrews": false,
+            "SchoolID": "sc-beaufort-academy-beaufort"
           },
           {
             "PlayerName": "Brad Trogden",
             "School": "Beaufort Academy",
             "Score": 42,
-            "IsStAndrews": false
+            "IsStAndrews": false,
+            "SchoolID": "sc-beaufort-academy-beaufort"
           },
           {
             "PlayerID": 200208,
             "PlayerName": "Josh Smith",
             "School": "St. Andrew's",
             "Score": 39,
-            "IsStAndrews": true
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
           },
           {
             "PlayerID": 200417,
             "PlayerName": "Drew Aimone",
             "School": "St. Andrew's",
             "Score": 42,
-            "IsStAndrews": true
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
           },
           {
             "PlayerID": 200003,
             "PlayerName": "Davy Clay",
             "School": "St. Andrew's",
             "Score": 48,
-            "IsStAndrews": true
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
           },
           {
             "PlayerID": 200418,
             "PlayerName": "Samantha Long",
             "School": "St. Andrew's",
             "Score": 50,
-            "IsStAndrews": true
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
           }
         ]
       }
@@ -235,29 +263,34 @@
           {
             "School": "Holly Hill Academy",
             "Score": 145,
-            "IsStAndrews": false
+            "IsStAndrews": false,
+            "SchoolID": "sc-holly-hill-academy-holly-hill"
           },
           {
             "School": "Patrick Henry Academy",
             "Score": 165,
-            "IsStAndrews": false
+            "IsStAndrews": false,
+            "SchoolID": "sc-patrick-henry-academy-estill"
           },
           {
             "School": "St. Andrew's",
             "Score": 168,
-            "IsStAndrews": true
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
           },
           {
             "School": "Jefferson Davis",
             "Score": 177,
-            "IsStAndrews": false
+            "IsStAndrews": false,
+            "SchoolID": "sc-jefferson-davis-academy-blackville"
           }
         ],
         "Medalist": {
           "PlayerID": 200208,
           "PlayerName": "Josh Smith",
           "School": "St. Andrew's",
-          "Score": 37
+          "Score": 37,
+          "SchoolID": "ga-st-andrews-school-savannah"
         },
         "Results": [
           {
@@ -266,28 +299,32 @@
             "School": "St. Andrew's",
             "Score": 37,
             "Award": "Medalist",
-            "IsStAndrews": true
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
           },
           {
             "PlayerID": 200003,
             "PlayerName": "Davy Clay",
             "School": "St. Andrew's",
             "Score": 41,
-            "IsStAndrews": true
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
           },
           {
             "PlayerID": 200417,
             "PlayerName": "Drew Aimone",
             "School": "St. Andrew's",
             "Score": 42,
-            "IsStAndrews": true
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
           },
           {
             "PlayerID": 200418,
             "PlayerName": "Samantha Long",
             "School": "St. Andrew's",
             "Score": 48,
-            "IsStAndrews": true
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
           }
         ],
         "ResultNote": "The provided report includes full St. Andrew's individual results; only team scores were available for the other schools."
@@ -309,19 +346,22 @@
           {
             "School": "St. Andrew's",
             "Score": 176,
-            "IsStAndrews": true
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
           },
           {
             "School": "Hilton Head Prep",
             "Score": 183,
-            "IsStAndrews": false
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
           }
         ],
         "Medalist": {
           "PlayerID": 200419,
           "PlayerName": "Steve Carbone",
           "School": "St. Andrew's",
-          "Score": 41
+          "Score": 41,
+          "SchoolID": "ga-st-andrews-school-savannah"
         },
         "Results": [
           {
@@ -330,54 +370,691 @@
             "School": "St. Andrew's",
             "Score": 41,
             "Award": "Medalist",
-            "IsStAndrews": true
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
           },
           {
             "PlayerID": 200208,
             "PlayerName": "Josh Smith",
             "School": "St. Andrew's",
             "Score": 42,
-            "IsStAndrews": true
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
           },
           {
             "PlayerID": 200417,
             "PlayerName": "Drew Aimone",
             "School": "St. Andrew's",
             "Score": 45,
-            "IsStAndrews": true
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
           },
           {
             "PlayerID": 200003,
             "PlayerName": "Davy Clay",
             "School": "St. Andrew's",
             "Score": 48,
-            "IsStAndrews": true
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
           },
           {
             "PlayerName": "Stephanie Brown",
             "School": "Hilton Head Prep",
             "Score": 42,
-            "IsStAndrews": false
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
           },
           {
             "PlayerName": "Mark Finger",
             "School": "Hilton Head Prep",
             "Score": 44,
-            "IsStAndrews": false
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
           },
           {
             "PlayerName": "Zack Turner",
             "School": "Hilton Head Prep",
             "Score": 45,
-            "IsStAndrews": false
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
           },
           {
             "PlayerName": "Joe Ryan",
             "School": "Hilton Head Prep",
             "Score": 52,
-            "IsStAndrews": false
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
           }
         ]
+      }
+    ]
+  },
+  {
+    "MatchID": "20040330-patrick-henry",
+    "Season": 2004,
+    "Name": "St. Andrew's vs. Patrick Henry",
+    "Date": "2004-03-30",
+    "Course": "Wilmington Island Golf Club",
+    "Opponent": "Patrick Henry (Ridgeland)",
+    "Summary": "St. Andrew's defeated Patrick Henry of Ridgeland 179-193 in a par-35 match at Wilmington Island Golf Club. Steve Carbone shot 42 to earn medalist honors.",
+    "Divisions": [
+      {
+        "Division": "Varsity",
+        "TeamScores": [
+          {
+            "School": "St. Andrew's",
+            "Score": 179,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "School": "Patrick Henry (Ridgeland)",
+            "Score": 193,
+            "IsStAndrews": false,
+            "SchoolID": "sc-patrick-henry-academy-estill"
+          }
+        ],
+        "Medalist": {
+          "PlayerID": 200419,
+          "PlayerName": "Steve Carbone",
+          "School": "St. Andrew's",
+          "Score": 42,
+          "SchoolID": "ga-st-andrews-school-savannah"
+        },
+        "Results": [
+          {
+            "PlayerID": 200419,
+            "PlayerName": "Steve Carbone",
+            "School": "St. Andrew's",
+            "Score": 42,
+            "Award": "Medalist",
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerID": 200417,
+            "PlayerName": "Drew Aimone",
+            "School": "St. Andrew's",
+            "Score": 43,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerID": 200003,
+            "PlayerName": "Davy Clay",
+            "School": "St. Andrew's",
+            "Score": 44,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerID": 200208,
+            "PlayerName": "Josh Smith",
+            "School": "St. Andrew's",
+            "Score": 50,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerName": "Branham Gifford",
+            "School": "Patrick Henry (Ridgeland)",
+            "Score": 46,
+            "IsStAndrews": false,
+            "SchoolID": "sc-patrick-henry-academy-estill"
+          },
+          {
+            "PlayerName": "Perry Gifford",
+            "School": "Patrick Henry (Ridgeland)",
+            "Score": 47,
+            "IsStAndrews": false,
+            "SchoolID": "sc-patrick-henry-academy-estill"
+          },
+          {
+            "PlayerName": "Matt MacCary",
+            "School": "Patrick Henry (Ridgeland)",
+            "Score": 50,
+            "IsStAndrews": false,
+            "SchoolID": "sc-patrick-henry-academy-estill"
+          },
+          {
+            "PlayerName": "Vance Millerload",
+            "School": "Patrick Henry (Ridgeland)",
+            "Score": 51,
+            "IsStAndrews": false,
+            "SchoolID": "sc-patrick-henry-academy-estill"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "MatchID": "20040401-santee-national-quad",
+    "Season": 2004,
+    "Name": "Santee National Quad Match",
+    "Date": "2004-04-01",
+    "Course": "Santee National Golf Club",
+    "Opponent": "Holly Hill Academy / Beaufort Academy / Charleston Collegiate",
+    "Summary": "St. Andrew's finished third in a four-team match at par-36 Santee National Golf Club, shooting 167 behind Josh Smith's 39.",
+    "Divisions": [
+      {
+        "Division": "Varsity",
+        "TeamScores": [
+          {
+            "School": "Holly Hill Academy",
+            "Score": 152,
+            "IsStAndrews": false,
+            "SchoolID": "sc-holly-hill-academy-holly-hill"
+          },
+          {
+            "School": "Beaufort Academy",
+            "Score": 164,
+            "IsStAndrews": false,
+            "SchoolID": "sc-beaufort-academy-beaufort"
+          },
+          {
+            "School": "St. Andrew's",
+            "Score": 167,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "School": "Charleston Collegiate",
+            "Score": 188,
+            "IsStAndrews": false,
+            "SchoolID": "sc-charleston-collegiate-school-johns-island"
+          }
+        ],
+        "Results": [
+          {
+            "PlayerID": 200208,
+            "PlayerName": "Josh Smith",
+            "School": "St. Andrew's",
+            "Score": 39,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerID": 200003,
+            "PlayerName": "Davy Clay",
+            "School": "St. Andrew's",
+            "Score": 42,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerID": 200419,
+            "PlayerName": "Steve Carbone",
+            "School": "St. Andrew's",
+            "Score": 43,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerID": 200417,
+            "PlayerName": "Drew Aimone",
+            "School": "St. Andrew's",
+            "Score": 43,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          }
+        ],
+        "ResultNote": "The provided report includes full St. Andrew's individual results; only team scores were available for the other schools."
+      }
+    ]
+  },
+  {
+    "MatchID": "20040402-hilton-head-prep",
+    "Season": 2004,
+    "Name": "St. Andrew's vs. Hilton Head Prep",
+    "Date": "2004-04-02",
+    "Course": "Eagles Point Golf Club",
+    "Location": "Bluffton",
+    "Opponent": "Hilton Head Prep",
+    "Summary": "St. Andrew's defeated Hilton Head Prep 169-194 in a par-35 match at Eagles Point Golf Club in Bluffton. Josh Smith shot 39 to earn medalist honors.",
+    "Divisions": [
+      {
+        "Division": "Varsity",
+        "TeamScores": [
+          {
+            "School": "St. Andrew's",
+            "Score": 169,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "School": "Hilton Head Prep",
+            "Score": 194,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+          }
+        ],
+        "Medalist": {
+          "PlayerID": 200208,
+          "PlayerName": "Josh Smith",
+          "School": "St. Andrew's",
+          "Score": 39,
+          "SchoolID": "ga-st-andrews-school-savannah"
+        },
+        "Results": [
+          {
+            "PlayerID": 200208,
+            "PlayerName": "Josh Smith",
+            "School": "St. Andrew's",
+            "Score": 39,
+            "Award": "Medalist",
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerID": 200003,
+            "PlayerName": "Davy Clay",
+            "School": "St. Andrew's",
+            "Score": 41,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerID": 200417,
+            "PlayerName": "Drew Aimone",
+            "School": "St. Andrew's",
+            "Score": 43,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerID": 200418,
+            "PlayerName": "Samantha Long",
+            "School": "St. Andrew's",
+            "Score": 46,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerName": "Rachel Urenovich",
+            "School": "Hilton Head Prep",
+            "Score": 44,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+          },
+          {
+            "PlayerName": "Mark Finger",
+            "School": "Hilton Head Prep",
+            "Score": 45,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+          },
+          {
+            "PlayerName": "Zach Turner",
+            "School": "Hilton Head Prep",
+            "Score": 47,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+          },
+          {
+            "PlayerName": "Joey Ryan",
+            "School": "Hilton Head Prep",
+            "Score": 58,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "MatchID": "20040406-south-carolina-national-tri",
+    "Season": 2004,
+    "Name": "South Carolina National Tri-Match",
+    "Date": "2004-04-06",
+    "Course": "South Carolina National Golf Club",
+    "Location": "Beaufort",
+    "Opponent": "Beaufort Academy / Thomas Heyward Academy",
+    "Summary": "St. Andrew's finished second in a three-team match at par-35 South Carolina National Golf Club in Beaufort, shooting 172 behind Beaufort Academy's 152.",
+    "Divisions": [
+      {
+        "Division": "Varsity",
+        "TeamScores": [
+          {
+            "School": "Beaufort Academy",
+            "Score": 152,
+            "IsStAndrews": false,
+            "SchoolID": "sc-beaufort-academy-beaufort"
+          },
+          {
+            "School": "St. Andrew's",
+            "Score": 172,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "School": "Thomas Heyward Academy",
+            "Score": 208,
+            "IsStAndrews": false,
+            "SchoolID": "sc-thomas-heyward-academy-ridgeland"
+          }
+        ],
+        "Medalist": {
+          "PlayerName": "Mark Anderson",
+          "School": "Beaufort Academy",
+          "Score": 34,
+          "SchoolID": "sc-beaufort-academy-beaufort"
+        },
+        "Results": [
+          {
+            "PlayerName": "Mark Anderson",
+            "School": "Beaufort Academy",
+            "Score": 34,
+            "Award": "Medalist",
+            "IsStAndrews": false,
+            "SchoolID": "sc-beaufort-academy-beaufort"
+          },
+          {
+            "PlayerName": "T.J. Holiman",
+            "School": "Beaufort Academy",
+            "Score": 36,
+            "IsStAndrews": false,
+            "SchoolID": "sc-beaufort-academy-beaufort"
+          },
+          {
+            "PlayerName": "Blake Johnson",
+            "School": "Beaufort Academy",
+            "Score": 39,
+            "IsStAndrews": false,
+            "SchoolID": "sc-beaufort-academy-beaufort"
+          },
+          {
+            "PlayerName": "Chris Ernestine",
+            "School": "Beaufort Academy",
+            "Score": 43,
+            "IsStAndrews": false,
+            "SchoolID": "sc-beaufort-academy-beaufort"
+          },
+          {
+            "PlayerID": 200003,
+            "PlayerName": "Davy Clay",
+            "School": "St. Andrew's",
+            "Score": 39,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerID": 200208,
+            "PlayerName": "Josh Smith",
+            "School": "St. Andrew's",
+            "Score": 39,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerID": 200417,
+            "PlayerName": "Drew Aimone",
+            "School": "St. Andrew's",
+            "Score": 43,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerID": 200418,
+            "PlayerName": "Samantha Long",
+            "School": "St. Andrew's",
+            "Score": 51,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerName": "Brad Bonds",
+            "School": "Thomas Heyward Academy",
+            "Score": 48,
+            "IsStAndrews": false,
+            "SchoolID": "sc-thomas-heyward-academy-ridgeland"
+          },
+          {
+            "PlayerName": "Jake Littleton",
+            "School": "Thomas Heyward Academy",
+            "Score": 48,
+            "IsStAndrews": false,
+            "SchoolID": "sc-thomas-heyward-academy-ridgeland"
+          },
+          {
+            "PlayerName": "Trey Daniels",
+            "School": "Thomas Heyward Academy",
+            "Score": 55,
+            "IsStAndrews": false,
+            "SchoolID": "sc-thomas-heyward-academy-ridgeland"
+          },
+          {
+            "PlayerName": "Jim Horton",
+            "School": "Thomas Heyward Academy",
+            "Score": 58,
+            "IsStAndrews": false,
+            "SchoolID": "sc-thomas-heyward-academy-ridgeland"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "MatchID": "20040422-scisa-region-2-aa-final",
+    "Season": 2004,
+    "Name": "SCISA Region 2-AA Final",
+    "Date": "2004-04-22",
+    "Course": "Santee National Golf Club",
+    "Location": "South Carolina",
+    "Opponent": "Holly Hill Academy / Beaufort Academy",
+    "MatchType": "Region Tournament",
+    "Summary": "St. Andrew's finished third in the SCISA Region 2-AA Final at Santee National Golf Club, shooting 325 behind Holly Hill's 307 and Beaufort Academy's 315.",
+    "Divisions": [
+      {
+        "Division": "Boys",
+        "TeamScores": [
+          {
+            "School": "Holly Hill Academy",
+            "Score": 307,
+            "IsStAndrews": false,
+            "SchoolID": "sc-holly-hill-academy-holly-hill"
+          },
+          {
+            "School": "Beaufort Academy",
+            "Score": 315,
+            "IsStAndrews": false,
+            "SchoolID": "sc-beaufort-academy-beaufort"
+          },
+          {
+            "School": "St. Andrew's",
+            "Score": 325,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          }
+        ],
+        "Medalist": {
+          "PlayerName": "Mark Anderson",
+          "School": "Beaufort Academy",
+          "Score": 66,
+          "SchoolID": "sc-beaufort-academy-beaufort"
+        },
+        "Results": [
+          {
+            "PlayerName": "Mark Anderson",
+            "School": "Beaufort Academy",
+            "Score": 66,
+            "Award": "Medalist",
+            "IsStAndrews": false,
+            "SchoolID": "sc-beaufort-academy-beaufort"
+          },
+          {
+            "PlayerID": 200003,
+            "PlayerName": "Davy Clay",
+            "School": "St. Andrew's",
+            "Score": 78,
+            "Award": "All-region",
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerID": 200208,
+            "PlayerName": "Josh Smith",
+            "School": "St. Andrew's",
+            "Score": 80,
+            "Award": "All-region",
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerID": 200417,
+            "PlayerName": "Drew Aimone",
+            "School": "St. Andrew's",
+            "Score": 82,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerID": 200419,
+            "PlayerName": "Steve Carbone",
+            "School": "St. Andrew's",
+            "Score": 85,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          }
+        ],
+        "ResultNote": "Samantha Long shot an 86. Davy Clay and Josh Smith made the All-region team. The report noted that the first round of the state tournament would be played Apr. 26-27 at Fripp Island."
+      }
+    ]
+  },
+  {
+    "MatchID": "20040427-scisa-class-aa-state",
+    "Season": 2004,
+    "Name": "SCISA Class AA State Tournament",
+    "Date": "2004-04-27",
+    "Course": "Ocean Point Golf Club",
+    "Location": "Fripp Island, S.C.",
+    "Opponent": "Holly Hill Academy / Beaufort Academy",
+    "MatchType": "State Tournament",
+    "Summary": "St. Andrew's finished fourth in the 12-team SCISA Class AA State Tournament at par-72 Ocean Point Golf Club on Fripp Island, shooting 352-328-680.",
+    "Divisions": [
+      {
+        "Division": "Boys",
+        "TeamFieldSize": 12,
+        "TeamScores": [
+          {
+            "Place": 1,
+            "School": "Holly Hill Academy",
+            "RoundScores": [
+              321,
+              307
+            ],
+            "Score": 628,
+            "IsStAndrews": false,
+            "SchoolID": "sc-holly-hill-academy-holly-hill"
+          },
+          {
+            "Place": 2,
+            "School": "Beaufort Academy",
+            "RoundScores": [
+              327,
+              321
+            ],
+            "Score": 648,
+            "IsStAndrews": false,
+            "SchoolID": "sc-beaufort-academy-beaufort"
+          },
+          {
+            "Place": 4,
+            "School": "St. Andrew's",
+            "RoundScores": [
+              352,
+              328
+            ],
+            "Score": 680,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          }
+        ],
+        "Medalist": {
+          "PlayerName": "Mark Anderson",
+          "School": "Beaufort Academy",
+          "RoundScores": [
+            69,
+            68
+          ],
+          "Score": 137,
+          "SchoolID": "sc-beaufort-academy-beaufort"
+        },
+        "Results": [
+          {
+            "PlayerName": "Mark Anderson",
+            "School": "Beaufort Academy",
+            "RoundScores": [
+              69,
+              68
+            ],
+            "Score": 137,
+            "Award": "Medalist",
+            "IsStAndrews": false,
+            "SchoolID": "sc-beaufort-academy-beaufort"
+          },
+          {
+            "PlayerID": 200003,
+            "PlayerName": "Davy Clay",
+            "School": "St. Andrew's",
+            "Place": "T-5",
+            "RoundScores": [
+              90,
+              70
+            ],
+            "Score": 160,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerID": 200417,
+            "PlayerName": "Drew Aimone",
+            "School": "St. Andrew's",
+            "RoundScores": [
+              80,
+              83
+            ],
+            "Score": 163,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerID": 200418,
+            "PlayerName": "Samantha Long",
+            "School": "St. Andrew's",
+            "RoundScores": [
+              89,
+              91
+            ],
+            "Score": 180,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerID": 200419,
+            "PlayerName": "Steve Carbone",
+            "School": "St. Andrew's",
+            "RoundScores": [
+              93,
+              89
+            ],
+            "Score": 182,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerID": 200208,
+            "PlayerName": "Josh Smith",
+            "School": "St. Andrew's",
+            "RoundScores": [
+              99,
+              86
+            ],
+            "Score": 185,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          }
+        ],
+        "ResultNote": "The published report listed team scores for the top two teams and St. Andrew's from the 12-team field. Davy Clay tied for fifth individually with a 90-70-160."
       }
     ]
   }

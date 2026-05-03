@@ -21,6 +21,47 @@ import {
 
 const ST_ANDREWS_LOGO = "/images/schools/logos/ga-st-andrews-school-savannah.png";
 
+function isStAndrewsTeam(value) {
+  return String(value || "").toLowerCase().includes("andrew");
+}
+
+function isStAndrewsScoringPlay(play) {
+  const abbr = String(play?.TeamAbbr || "").toUpperCase();
+  return isStAndrewsTeam(play?.Team) || abbr === "S" || abbr === "SA";
+}
+
+function isOpponentScoringPlay(play, game) {
+  if (isStAndrewsScoringPlay(play)) return false;
+  const opponentAbbr = Array.isArray(game?.LineScore)
+    ? String(game.LineScore[1]?.Abbr || "").toUpperCase()
+    : "";
+  const playAbbr = String(play?.TeamAbbr || "").toUpperCase();
+  return (
+    Boolean(String(game?.OpponentLogoPath || "").trim()) &&
+    (playAbbr === opponentAbbr || String(play?.Team || "") === String(game?.Opponent || ""))
+  );
+}
+
+function ScoringTeamLogo({ play, game }) {
+  if (isStAndrewsScoringPlay(play)) {
+    return (
+      <img src={ST_ANDREWS_LOGO} alt="St. Andrew's" className="mx-auto h-7 w-7 object-contain" />
+    );
+  }
+
+  if (isOpponentScoringPlay(play, game)) {
+    return (
+      <img
+        src={game.OpponentLogoPath}
+        alt={game.Opponent || play?.Team || "Opponent"}
+        className="mx-auto h-7 w-7 object-contain"
+      />
+    );
+  }
+
+  return play?.TeamAbbr || play?.Team || "—";
+}
+
 function rawWhole(row, key) {
   const value = row?.[key];
   return Number.isFinite(Number(value)) ? formatWhole(Number(value)) : "—";
@@ -197,16 +238,7 @@ function ScoringSummary({ game }) {
                 {play?.Quarter || "—"}
               </td>
               <td className="border-b border-slate-200 px-3 py-2 text-center text-slate-700">
-                {String(play?.Team || "").toLowerCase().includes("andrew") ||
-                String(play?.TeamAbbr || "").toUpperCase() === "S" ? (
-                  <img
-                    src={ST_ANDREWS_LOGO}
-                    alt="St. Andrew's"
-                    className="mx-auto h-7 w-7 object-contain"
-                  />
-                ) : (
-                  play?.TeamAbbr || play?.Team || "—"
-                )}
+                <ScoringTeamLogo play={play} game={game} />
               </td>
               <td className="border-b border-slate-200 px-3 py-2 font-semibold text-slate-900">
                 {play?.Play || "—"}

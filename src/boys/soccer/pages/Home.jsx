@@ -6,6 +6,16 @@ const links = [
   { label: "Spring 2004 Season", to: "/athletics/boys/soccer/seasons/2004" },
   { label: "Cathedral Academy Game", to: "/athletics/boys/soccer/games/20040322" },
   { label: "Charleston Collegiate Game", to: "/athletics/boys/soccer/games/20040323" },
+  { label: "Beaufort Academy Game", to: "/athletics/boys/soccer/games/20040329" },
+  { label: "James Island Christian Game", to: "/athletics/boys/soccer/games/20040402" },
+  { label: "Hilton Head Christian Game", to: "/athletics/boys/soccer/games/20040406" },
+  { label: "Patrick Henry Game", to: "/athletics/boys/soccer/games/20040429" },
+  { label: "Cathedral Academy Region Tournament Game", to: "/athletics/boys/soccer/games/20040504" },
+  { label: "Patrick Henry Region Tournament Game", to: "/athletics/boys/soccer/games/20040506" },
+  { label: "Beaufort Academy Region Championship Game", to: "/athletics/boys/soccer/games/20040508" },
+  { label: "St. Francis Xavier State Tournament Game", to: "/athletics/boys/soccer/games/20040510" },
+  { label: "Cathedral Academy State Semifinal Game", to: "/athletics/boys/soccer/games/20040512" },
+  { label: "James Island Christian State Championship Game", to: "/athletics/boys/soccer/games/20040515" },
   { label: "Year-by-Year Results", to: "/athletics/boys/soccer/yearly-results" },
   { label: "Opponent Game History", to: "/athletics/boys/soccer/records/opponents" },
 ];
@@ -26,12 +36,12 @@ export default function Home() {
         "The pages are intentionally data-ready: once games and seasons are entered, the results tables, detail pages, player pages, and opponent records will fill in automatically.",
       ]}
       highlights={[
-        "2-0 SCISA Region 2-AA",
-        "17 goals in 2 games",
-        "Charleston Collegiate game added",
-        "Hamish Huntley 4 goals",
-        "Omar Glenn 3 assists",
-        "Will Massey 2 assists vs. Charleston Collegiate",
+        "13-1-1 final record",
+        "2004 region champions",
+        "2004 state champions",
+        "Hamish Huntley 19 goals",
+        "Daniel Eichholz final brace",
+        "Second straight state title",
       ]}
       links={links}
     />

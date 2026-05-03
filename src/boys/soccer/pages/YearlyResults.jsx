@@ -120,15 +120,19 @@ export default function YearlyResults({ data, status = "" }) {
         const region =
           recordFromSeasonFields(season, "Region") ||
           buildRecord(completedGames, isRegionGame);
-        const nonRegion = buildRecord(
-          completedGames,
-          (game) => !isRegionGame(game) && !isPlayoffGame(game)
-        );
+        const nonRegion =
+          recordFromSeasonFields(season, "NonRegion") ||
+          buildRecord(
+            completedGames,
+            (game) => !isRegionGame(game) && !isPlayoffGame(game)
+          );
         const home =
           recordFromSeasonFields(season, "Home") || buildRecord(completedGames, isHomeGame);
         const away =
           recordFromSeasonFields(season, "Away") || buildRecord(completedGames, isAwayGame);
-        const playoffs = buildRecord(completedGames, isPlayoffGame);
+        const playoffs =
+          recordFromSeasonFields(season, "Playoff") ||
+          buildRecord(completedGames, isPlayoffGame);
 
         const gameGoalsFor = completedGames.reduce(
           (sum, game) => sum + Number(game.TeamScore || 0),
@@ -242,7 +246,7 @@ export default function YearlyResults({ data, status = "" }) {
   const sectionTitleClassName =
     "text-center font-bold text-[clamp(1.25rem,5vw,1.5rem)]";
   const tableClassName =
-    "w-full table-auto border text-center text-[clamp(0.64rem,0.95vw,1rem)] md:mx-auto md:w-max";
+    "w-full table-auto border text-center text-sm md:mx-auto md:w-max";
   const headerCellClassName = `${recordTableStyles.headerCell} whitespace-nowrap`;
   const numericCellClassName = `${recordTableStyles.bodyCell} whitespace-nowrap`;
   const textCellClassName = `${recordTableStyles.bodyCell} md:text-left`;

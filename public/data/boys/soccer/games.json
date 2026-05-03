@@ -23,7 +23,7 @@
     "TeamScore": 4,
     "OpponentScore": 1,
     "RecapTitle": "St. Andrew's defeats Cathedral Academy in region opener",
-    "Recap": "St. Andrew's defeated Cathedral Academy 4-1 in a SCISA Region 2-AA boys soccer game on March 22, 2004. Will Massey scored once, Hamish Huntley scored twice, and Beau Hinton added a goal.\n\nMassey and Hinton were credited with assists, and Emett Eason made two saves as St. Andrew's improved to 1-0 overall and 1-0 in SCISA Region 2-AA play.",
+    "Recap": "St. Andrew's defeated Cathedral Academy 4-1 in a SCISA Region 2-AA boys soccer game on March 22, 2004. Will Massey scored once, Hamish Huntley scored twice, and Beau Hinton added a goal.\n\nMassey and Hinton were credited with assists, and Emmett Eason made two saves as St. Andrew's improved to 1-0 overall and 1-0 in SCISA Region 2-AA play.",
     "SourceCitation": "Boys' Soccer game brief",
     "SourcePublication": "",
     "SourceDate": "2004-03-22",
@@ -65,7 +65,7 @@
       {
         "Team": "St. Andrew's",
         "PlayerID": 200424,
-        "PlayerName": "Emett Eason",
+        "PlayerName": "Emmett Eason",
         "Saves": 2
       }
     ],
@@ -189,5 +189,849 @@
     ],
     "Saves": [],
     "RecordNote": "Records: St. Andrew's 2-0, 2-0 SCISA Region 2-AA; Charleston Collegiate 1-3"
+  },
+  {
+    "GameID": 20040329,
+    "Season": 2004,
+    "SeasonID": 2004,
+    "DisplaySeason": "Spring 2004",
+    "SourceSeasonLabel": "Spring 2004",
+    "Date": "2004-03-29",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Beaufort Academy",
+    "OpponentLocation": "Beaufort, SC",
+    "OpponentSlug": "beaufort-academy",
+    "OpponentUrl": "",
+    "OpponentID": "sc-beaufort-academy-beaufort",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "Notes": "Published brief did not identify whether the game was home or away.",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 2,
+    "OpponentScore": 1,
+    "RecapTitle": "St. Andrew's edges Beaufort Academy to stay unbeaten in region play",
+    "Recap": "St. Andrew's defeated Beaufort Academy 2-1 in a SCISA Region 2-AA boys soccer game on March 29, 2004. Beau Hinton and Daniel Eicholz scored for St. Andrew's, while Jamie Henry scored for Beaufort Academy.\n\nJacob Rauers was credited with an assist, and Emmett Eason made six saves as St. Andrew's improved to 3-0 overall and 3-0 in SCISA Region 2-AA play. Beaufort Academy moved to 3-3.",
+    "SourceCitation": "Boys' Soccer game brief",
+    "SourcePublication": "",
+    "SourceDate": "2004-03-29",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200203,
+        "PlayerName": "Beau Hinton",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200313,
+        "PlayerName": "Daniel Eicholz",
+        "Goals": 1
+      },
+      {
+        "Team": "Beaufort Academy",
+        "PlayerName": "Jamie Henry",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200207,
+        "PlayerName": "Jacob Rauers",
+        "Assists": 1
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200424,
+        "PlayerName": "Emmett Eason",
+        "Saves": 6
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 3-0, 3-0 SCISA Region 2-AA; Beaufort Academy 3-3"
+  },
+  {
+    "GameID": 20040402,
+    "Season": 2004,
+    "SeasonID": 2004,
+    "DisplaySeason": "Spring 2004",
+    "SourceSeasonLabel": "Spring 2004",
+    "Date": "2004-04-02",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "James Island Christian",
+    "OpponentLocation": "Charleston, SC",
+    "OpponentSlug": "james-island-christian",
+    "OpponentUrl": "",
+    "OpponentID": "sc-james-island-christian-school-charleston",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "Notes": "Published brief listed St. Andrew's region record as 3-0. This game is categorized as a region game in the archive.",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 3,
+    "OpponentScore": 1,
+    "RecapTitle": "St. Andrew's defeats James Island Christian",
+    "Recap": "St. Andrew's defeated James Island Christian 3-1 on April 2, 2004. The game is categorized as a SCISA Region 2-AA boys soccer game in the archive, although the published record line did not change St. Andrew's region record from the previous game.\n\nDaniel Eichholz, Will Massey, and Jacob Rauers scored for St. Andrew's, while Ben Johnson scored for James Island Christian. Rauers and Hamish Huntley were credited with assists, and Emmett Eason made three saves. St. Andrew's improved to 4-0 overall and was listed at 3-0 in SCISA Region 2-AA play. James Island Christian moved to 5-4 overall and 2-1 in SCISA Region 2-AA.",
+    "SourceCitation": "Boys' Soccer game brief",
+    "SourcePublication": "",
+    "SourceDate": "2004-04-02",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200313,
+        "PlayerName": "Daniel Eichholz",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200105,
+        "PlayerName": "Will Massey",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200207,
+        "PlayerName": "Jacob Rauers",
+        "Goals": 1
+      },
+      {
+        "Team": "James Island Christian",
+        "PlayerName": "Ben Johnson",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200207,
+        "PlayerName": "Jacob Rauers",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200423,
+        "PlayerName": "Hamish Huntley",
+        "Assists": 1
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200424,
+        "PlayerName": "Emmett Eason",
+        "Saves": 3
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 4-0, 3-0 SCISA Region 2-AA; James Island Christian 5-4, 2-1 SCISA Region 2-AA"
+  },
+  {
+    "GameID": 20040406,
+    "Season": 2004,
+    "SeasonID": 2004,
+    "DisplaySeason": "Spring 2004",
+    "SourceSeasonLabel": "Spring 2004",
+    "Date": "2004-04-06",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Hilton Head Christian",
+    "OpponentLocation": "Hilton Head Island, SC",
+    "OpponentSlug": "hilton-head-christian",
+    "OpponentUrl": "",
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "Notes": "Published brief did not identify whether the game was home or away.",
+    "GameType": "Non-Region",
+    "Result": "T",
+    "TeamScore": 3,
+    "OpponentScore": 3,
+    "RecapTitle": "St. Andrew's ties Hilton Head Christian",
+    "Recap": "St. Andrew's tied Hilton Head Christian 3-3 in boys soccer on April 6, 2004. Hamish Huntly scored twice for St. Andrew's, and Daniel Eichholz added a penalty-kick goal.\n\nEmmett Eason made six saves for St. Andrew's.",
+    "SourceCitation": "Boys' Soccer game brief",
+    "SourcePublication": "",
+    "SourceDate": "2004-04-06",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200423,
+        "PlayerName": "Hamish Huntly",
+        "Goals": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200313,
+        "PlayerName": "Daniel Eichholz",
+        "Goals": 1,
+        "Detail": "PK"
+      }
+    ],
+    "Assists": [],
+    "Saves": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200424,
+        "PlayerName": "Emmett Eason",
+        "Saves": 6
+      }
+    ],
+    "RecordNote": ""
+  },
+  {
+    "GameID": 20040429,
+    "Season": 2004,
+    "SeasonID": 2004,
+    "DisplaySeason": "Spring 2004",
+    "SourceSeasonLabel": "Spring 2004",
+    "Date": "2004-04-29",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Patrick Henry Academy",
+    "OpponentLocation": "Estill, SC",
+    "OpponentSlug": "patrick-henry-academy",
+    "OpponentUrl": "",
+    "OpponentID": "sc-patrick-henry-academy-estill",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "Notes": "Published brief did not identify whether the game was home or away. The listed St. Andrew's record indicates one additional unrecovered win between April 6 and April 29.",
+    "GameType": "Non-Region",
+    "Result": "W",
+    "TeamScore": 8,
+    "OpponentScore": 0,
+    "RecapTitle": "St. Andrew's shuts out Patrick Henry",
+    "Recap": "St. Andrew's defeated Patrick Henry 8-0 in boys soccer on April 29, 2004. Will Massey, Jacob Rauers, Omar Glenn, Beau Hinton, Daniel Eichholz, and Fredy Presutto scored one goal apiece, while Hamish Huntley scored twice.\n\nRauers, Glenn, and Hinton were credited with two assists apiece, and Eichholz added one assist. Emmett Eason made three saves for St. Andrew's, while Patrick Henry recorded 18 saves. The brief listed St. Andrew's at 6-0-1, indicating one additional unrecovered win between the April 6 tie and this match.",
+    "SourceCitation": "Boys' Soccer game brief",
+    "SourcePublication": "",
+    "SourceDate": "2004-04-29",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200105,
+        "PlayerName": "Will Massey",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200207,
+        "PlayerName": "Jacob Rauers",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200423,
+        "PlayerName": "Hamish Huntley",
+        "Goals": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200307,
+        "PlayerName": "Omar Glenn",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200203,
+        "PlayerName": "Beau Hinton",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200313,
+        "PlayerName": "Daniel Eichholz",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200425,
+        "PlayerName": "Fredy Presutto",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200207,
+        "PlayerName": "Jacob Rauers",
+        "Assists": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200307,
+        "PlayerName": "Omar Glenn",
+        "Assists": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200203,
+        "PlayerName": "Beau Hinton",
+        "Assists": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200313,
+        "PlayerName": "Daniel Eichholz",
+        "Assists": 1
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200424,
+        "PlayerName": "Emmett Eason",
+        "Saves": 3
+      },
+      {
+        "Team": "Patrick Henry Academy",
+        "Saves": 18
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 6-0-1"
+  },
+  {
+    "GameID": 20040504,
+    "Season": 2004,
+    "SeasonID": 2004,
+    "DisplaySeason": "Spring 2004",
+    "SourceSeasonLabel": "Spring 2004",
+    "Date": "2004-05-04",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Cathedral Academy",
+    "OpponentLocation": "North Charleston, SC",
+    "OpponentSlug": "cathedral-academy",
+    "OpponentUrl": "",
+    "OpponentID": "sc-cathedral-academy-north-charleston",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "Notes": "Published brief did not identify whether the game was home or away. This game is categorized as part of the region tournament in the archive. The listed St. Andrew's record indicates additional unrecovered results in the season schedule.",
+    "GameType": "Region Tournament",
+    "Tournament": "SCISA Region 2-AA Tournament",
+    "Result": "W",
+    "TeamScore": 4,
+    "OpponentScore": 1,
+    "RecapTitle": "St. Andrew's defeats Cathedral Academy in region tournament",
+    "Recap": "St. Andrew's defeated Cathedral Academy 4-1 in boys soccer on May 4, 2004. This game is categorized as part of the SCISA Region 2-AA tournament in the archive. Will Massey and Jacob Rauers scored once each, and Hamish Huntley scored twice. Kenneth Chandler scored for Cathedral Academy.\n\nHuntley was credited with one assist, and Omar Glenn had two assists. Emmett Eason made four saves for St. Andrew's, while Sean Monahan made 15 saves for Cathedral Academy. The brief listed St. Andrew's at 8-1-1 overall and 6-1 in region play.",
+    "SourceCitation": "Boys' Soccer game brief",
+    "SourcePublication": "",
+    "SourceDate": "2004-05-04",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200105,
+        "PlayerName": "Will Massey",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200207,
+        "PlayerName": "Jacob Rauers",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200423,
+        "PlayerName": "Hamish Huntley",
+        "Goals": 2
+      },
+      {
+        "Team": "Cathedral Academy",
+        "PlayerName": "Kenneth Chandler",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200423,
+        "PlayerName": "Hamish Huntley",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200307,
+        "PlayerName": "Omar Glenn",
+        "Assists": 2
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200424,
+        "PlayerName": "Emmett Eason",
+        "Saves": 4
+      },
+      {
+        "Team": "Cathedral Academy",
+        "PlayerName": "Sean Monahan",
+        "Saves": 15
+      }
+    ],
+    "RecordNote": "Published records: St. Andrew's 8-1-1, 6-1 region"
+  },
+  {
+    "GameID": 20040506,
+    "Season": 2004,
+    "SeasonID": 2004,
+    "DisplaySeason": "Spring 2004",
+    "SourceSeasonLabel": "Spring 2004",
+    "Date": "2004-05-06",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Patrick Henry Academy",
+    "OpponentLocation": "Estill, SC",
+    "OpponentSlug": "patrick-henry-academy",
+    "OpponentUrl": "",
+    "OpponentID": "sc-patrick-henry-academy-estill",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "Notes": "Published brief did not identify whether the game was home or away. This game was part of the region tournament. St. Andrew's advanced to the region championship game, which was played May 8 against Beaufort Academy.",
+    "GameType": "Region Tournament",
+    "Tournament": "SCISA Region 2-AA Tournament",
+    "Result": "W",
+    "TeamScore": 9,
+    "OpponentScore": 0,
+    "RecapTitle": "St. Andrew's blanks Patrick Henry Academy in region tournament",
+    "Recap": "St. Andrew's defeated Patrick Henry Academy 9-0 in a SCISA Region 2-AA tournament boys soccer game on May 6, 2004. Will Massey and Jacob Ravers scored once each, Beau Hinton scored twice, and Hamish Huntley scored five goals.\n\nMassey was credited with three assists, Ravers had two assists, and Hinton and Omar Glenn each added one assist. Emmett Eason made two saves for St. Andrew's. The brief listed St. Andrew's at 8-1-1.",
+    "SourceCitation": "Boys' Soccer game brief",
+    "SourcePublication": "",
+    "SourceDate": "2004-05-06",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200105,
+        "PlayerName": "Will Massey",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200207,
+        "PlayerName": "Jacob Ravers",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200203,
+        "PlayerName": "Beau Hinton",
+        "Goals": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200423,
+        "PlayerName": "Hamish Huntley",
+        "Goals": 5
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200105,
+        "PlayerName": "Will Massey",
+        "Assists": 3
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200207,
+        "PlayerName": "Jacob Ravers",
+        "Assists": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200203,
+        "PlayerName": "Beau Hinton",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200307,
+        "PlayerName": "Omar Glenn",
+        "Assists": 1
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200424,
+        "PlayerName": "Emmett Eason",
+        "Saves": 2
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 8-1-1"
+  },
+  {
+    "GameID": 20040508,
+    "Season": 2004,
+    "SeasonID": 2004,
+    "DisplaySeason": "Spring 2004",
+    "SourceSeasonLabel": "Spring 2004",
+    "Date": "2004-05-08",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Beaufort Academy",
+    "OpponentLocation": "Beaufort, SC",
+    "OpponentSlug": "beaufort-academy",
+    "OpponentUrl": "",
+    "OpponentID": "sc-beaufort-academy-beaufort",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "Beaufort Academy",
+    "Notes": "The region championship score was not reported in the recovered newspaper brief. The win is inferred from St. Andrew's 10-1-1 record listed after the May 10 state tournament quarterfinal.",
+    "GameType": "Region Tournament",
+    "Tournament": "SCISA Region 2-AA Tournament",
+    "Round": "Region Championship",
+    "Result": "W",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "RecapTitle": "St. Andrew's wins unreported region championship game",
+    "Recap": "St. Andrew's is credited with a win over Beaufort Academy in the SCISA Region 2-AA championship game on May 8, 2004. The score was not reported in the recovered newspaper brief.\n\nThe result is inferred from the May 10 state tournament quarterfinal brief, which listed St. Andrew's at 10-1-1 after the Lions defeated St. Francis Xavier.",
+    "SourceCitation": "Inferred from later published record line",
+    "SourcePublication": "",
+    "SourceDate": "2004-05-10",
+    "GoalScorers": [],
+    "Assists": [],
+    "Saves": [],
+    "RecordNote": "Score not reported"
+  },
+  {
+    "GameID": 20040510,
+    "Season": 2004,
+    "SeasonID": 2004,
+    "DisplaySeason": "Spring 2004",
+    "SourceSeasonLabel": "Spring 2004",
+    "Date": "2004-05-10",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "St. Francis Xavier",
+    "OpponentLocation": "SC",
+    "OpponentSlug": "st-francis-xavier",
+    "OpponentUrl": "",
+    "OpponentID": "sc-st-francis-xavier",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "Notes": "The brief noted St. Andrew's would play either King's Academy or Cathedral Academy in the semifinals at 5 p.m. Wednesday at home.",
+    "GameType": "State Tournament",
+    "Tournament": "SCISA Class AA State Tournament",
+    "Round": "Quarterfinals",
+    "Result": "W",
+    "TeamScore": 9,
+    "OpponentScore": 0,
+    "RecapTitle": "St. Andrew's shuts out St. Francis Xavier in state quarterfinal",
+    "Recap": "St. Andrew's defeated St. Francis Xavier 9-0 in a SCISA Class AA state tournament quarterfinal on May 10, 2004. Will Massey, Jacob Rauers, Hamish Huntley, Omar Glenn, Beau Hinton, Daniel Eichholz, Will Chisholm, Kevin Crouch, and Remy Thurston scored for St. Andrew's.\n\nMassey was credited with two assists, while Huntley, Eichholz, Chris Rauers, Ben Harrison, Matt Knight, and Joe Bilton each added one assist. Emmett Eason and Patrick Maleki made two saves apiece. The brief listed St. Andrew's at 10-1-1.",
+    "SourceCitation": "Boys' Soccer game brief",
+    "SourcePublication": "",
+    "SourceDate": "2004-05-10",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200105,
+        "PlayerName": "Will Massey",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200207,
+        "PlayerName": "Jacob Rauers",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200423,
+        "PlayerName": "Hamish Huntley",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200307,
+        "PlayerName": "Omar Glenn",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200203,
+        "PlayerName": "Beau Hinton",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200313,
+        "PlayerName": "Daniel Eichholz",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200431,
+        "PlayerName": "Will Chisholm",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200432,
+        "PlayerName": "Kevin Crouch",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200501,
+        "PlayerName": "Remy Thurston",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200105,
+        "PlayerName": "Will Massey",
+        "Assists": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200423,
+        "PlayerName": "Hamish Huntley",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200313,
+        "PlayerName": "Daniel Eichholz",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200311,
+        "PlayerName": "Chris Rauers",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200433,
+        "PlayerName": "Ben Harrison",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200204,
+        "PlayerName": "Matt Knight",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200434,
+        "PlayerName": "Joe Bilton",
+        "Assists": 1
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200424,
+        "PlayerName": "Emmett Eason",
+        "Saves": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200435,
+        "PlayerName": "Patrick Maleki",
+        "Saves": 2
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 10-1-1"
+  },
+  {
+    "GameID": 20040512,
+    "Season": 2004,
+    "SeasonID": 2004,
+    "DisplaySeason": "Spring 2004",
+    "SourceSeasonLabel": "Spring 2004",
+    "Date": "2004-05-12",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Cathedral Academy",
+    "OpponentLocation": "North Charleston, SC",
+    "OpponentSlug": "cathedral-academy",
+    "OpponentUrl": "",
+    "OpponentID": "sc-cathedral-academy-north-charleston",
+    "GameUrl": "",
+    "LocationType": "Home",
+    "Venue": "St. Andrew's",
+    "Notes": "The Savannah Morning News recap listed St. Andrew's at 12-1-1 after this state semifinal, indicating at least one additional unreported win in the recovered schedule. The article noted St. Andrew's would play Calhoun Academy or James Island in the state final at 4:30 p.m. Saturday at Heathwood Hall in Columbia, S.C.",
+    "GameType": "State Tournament",
+    "Tournament": "SCISA Class AA/A State Tournament",
+    "Round": "Semifinals",
+    "Result": "W",
+    "TeamScore": 7,
+    "OpponentScore": 1,
+    "RecapTitle": "Saints advance to SCISA Class AA/A championship",
+    "Recap": "SAINTS ADVANCE TO SCISA CLASS AA/A CHAMPIONSHIP - ST. ANDREW'S, WITH A 12-1-1 RECORD, WILL PLAY SATURDAY FOR ITS SECOND STRAIGHT TITLE AND FIFTH IN THE LAST EIGHT YEARS.\n\nSt. Andrew's entered its SCISA Class AA/A soccer semifinal match Wednesday as just another school in Savannah with a decent soccer team.\n\nFollowing their 7-1 victory over Charleston's Cathedral Academy, the Saints (12-1-1) gave notice they may be as good as anyone else in town, and will play Saturday for their second straight title and fifth in the last eight years.\n\nSt. Andrew's will take on Calhoun Academy or James Island in the state final at 4:30 p.m. Saturday at Heathwood Hall in Columbia, S.C.\n\nThe Saints opened the scoring early when senior midfielder Will Massey put a shot over the Generals' defense that sailed under the crossbar by mere inches. Massey had two goals and an assist to lead the Saints' offense.\n\n\"Our guys played brilliant soccer today,\" said Saints coach Derek Johnson. \"They went out and gave it the best effort of the season, and I believe we'll carry this over into the championship match Saturday.\"\n\nTo say the Saints were dominant would be an understatement. They outshot the Generals 16-4 in the first half, and did not allow a shot in the second half while taking 19 of their own.\n\n\"I think we did well with what we had,\" said Cathedral coach Brian Price. \"We're a very young team, and we just played one of the most experienced teams in the state, one that should win the championship.\"\n\nThe only score for the Generals came when a direct kick by Jacob Chinchinsky was deflected back into the box by Saints goalkeeper Emmett Eason, who had three saves, and Kenneth Chandler knocked the loose ball into the net.\n\n\"This is the best we've played all year,\" Saints' soccer coordinator Mark Gibbons said. These kids have a knack for winning the big game, and this was a demonstration of that. We played these guys twice this year, and they gave us fits. So coming out and beating them like this, in the state semifinals, was a big win for us.\"\n\nHamish Huntley, the leading scorer for the Saints, had two goals within a two-minute period of the first half. The first came off an assist by Massey when he lofted the ball into the box and Huntley directed the ball into the goal with a jumping header. The second came off an assist by Andy Crouch, who made a pass in traffic that Huntley smashed into the corner of the net.\n\nSenior midfielder Beau Hinton controlled the game in the middle for the Saints. His persistence pursuit of the ball paid off when he hit a shot from the top of the box with 7:51 left that gave the Saints a 5-1 lead.\n\nDaniel Eichholz closed out the scoring for the Saints when he made a run from the right side into the box and beat Generals' goalkeeper Sean Monahan for the final 7-1 margin.\n\nGoals-CA-Kenneth Chandler; SA-Will Massey 2, Hamish Huntley 2, Jacob Rauers, Beau Hinton, Daniel Eichholz. Assists-SA, Massey, Andy Crouch. Saves-CA, Sean Monahan 10; SA-Emmett Eason 3. Records-CA 10-9, SAA 12-1-1.",
+    "SourceCitation": "Savannah Morning News, May 13, 2004",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "2004-05-13",
+    "GoalScorers": [
+      {
+        "Team": "Cathedral Academy",
+        "PlayerName": "Kenneth Chandler",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200105,
+        "PlayerName": "Will Massey",
+        "Goals": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200423,
+        "PlayerName": "Hamish Huntley",
+        "Goals": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200207,
+        "PlayerName": "Jacob Rauers",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200203,
+        "PlayerName": "Beau Hinton",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200313,
+        "PlayerName": "Daniel Eichholz",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200105,
+        "PlayerName": "Will Massey",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200439,
+        "PlayerName": "Andy Crouch",
+        "Assists": 1
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "Cathedral Academy",
+        "PlayerName": "Sean Monahan",
+        "Saves": 10
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200424,
+        "PlayerName": "Emmett Eason",
+        "Saves": 3
+      }
+    ],
+    "RecordNote": "Records: Cathedral Academy 10-9; St. Andrew's 12-1-1"
+  },
+  {
+    "GameID": 20040515,
+    "Season": 2004,
+    "SeasonID": 2004,
+    "DisplaySeason": "Spring 2004",
+    "SourceSeasonLabel": "Spring 2004",
+    "Date": "2004-05-15",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "James Island Christian School",
+    "OpponentLocation": "Charleston, SC",
+    "OpponentSlug": "james-island-christian-school",
+    "OpponentUrl": "",
+    "OpponentID": "sc-james-island-christian-school-charleston",
+    "GameUrl": "",
+    "LocationType": "Neutral",
+    "Venue": "Heathwood Hall School",
+    "Notes": "St. Andrew's won its second straight SCISA Class A/AA boys soccer championship at Heathwood Hall School in Columbia, S.C.",
+    "GameType": "State Tournament",
+    "Tournament": "SCISA Class A/AA State Tournament",
+    "Round": "State Championship",
+    "Result": "W",
+    "TeamScore": 5,
+    "OpponentScore": 1,
+    "RecapTitle": "Saints win second straight SCISA Class A/AA soccer title",
+    "Recap": "SAINTS WIN SECOND STRAIGHT SCISA CLASS A/AA SOCCER TITLE\n\nSt. Andrew's won its second straight SCISA Class A/AA boys' soccer championship Saturday, steamrolling James Island (S.C.) Christian 5-1 at Heathwood Hall School.\n\nDaniel Eichholz scored two first-half goals and had two assists for the Saints. Omar Glenn scored 30 seconds into the second half to help catapult St. Andrew's to the victory.\n\n\"This is as good a team as I've ever coached,\" said St. Andrew's coach Mark Gibbons, who has coached at public schools Gordon Central and East Paulding, along with private school Darlington. \"The last two games we've been dominant. The thing with us is we can put 11 kids on the field that can play the game.\"\n\nAt Heathwood Hall, Columbia, S.C.\n\nBoys\n\nSt. Andrew's 5, James Island Christian 1\n\nGoals-JIC, Caleb Costa; SA, Daniel Eichholz 2, Omar Glenn, Jacob Rauers, Hamish Huntley. Assists-Huntley 2, Eichholz 2. Saves-SA, Emmett Eason 6. Records-SA 13-1-1.",
+    "SourceCitation": "Boys' Soccer state championship recap",
+    "SourcePublication": "",
+    "SourceDate": "2004-05-15",
+    "GoalScorers": [
+      {
+        "Team": "James Island Christian School",
+        "PlayerName": "Caleb Costa",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200313,
+        "PlayerName": "Daniel Eichholz",
+        "Goals": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200307,
+        "PlayerName": "Omar Glenn",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200207,
+        "PlayerName": "Jacob Rauers",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200423,
+        "PlayerName": "Hamish Huntley",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200423,
+        "PlayerName": "Hamish Huntley",
+        "Assists": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200313,
+        "PlayerName": "Daniel Eichholz",
+        "Assists": 2
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200424,
+        "PlayerName": "Emmett Eason",
+        "Saves": 6
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 13-1-1"
   }
 ]

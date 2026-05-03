@@ -258,6 +258,21 @@ function getSchoolLogoPath(school, row) {
   return school?.BracketLogoPath || school?.LogoPath || row?.LogoPath || "";
 }
 
+function getOpponentSchool(game, schoolsById) {
+  const opponentId = String(game?.OpponentID ?? "").trim();
+  return opponentId ? schoolsById.get(opponentId) || null : null;
+}
+
+function getScheduleOpponentName(game, schoolsById) {
+  const school = getOpponentSchool(game, schoolsById);
+  return school?.Name || game?.Opponent || "—";
+}
+
+function getScheduleOpponentLogoPath(game, schoolsById) {
+  const school = getOpponentSchool(game, schoolsById);
+  return school?.LogoPath || school?.BracketLogoPath || game?.OpponentLogoPath || "";
+}
+
 function isStAndrewsTeamName(teamName) {
   return /^st\s*andrew['’]?s?(?:\s*school)?$/i.test(
     String(teamName ?? "").replace(/\./g, "").trim()
@@ -780,60 +795,73 @@ export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
                   </td>
                 </tr>
               ) : (
-                seasonGames.map((game, index) => (
-                  <tr
-                    key={game.GameID}
-                    className={`border-t border-gray-200 ${
-                      index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
-                    } hover:bg-gray-100`}
-                  >
-                    <td className="px-3 py-2 whitespace-nowrap">
-                      <Link
-                        to={footballGamePath(game.GameID)}
-                        className="text-blue-600 hover:underline"
-                      >
-                        {formatGameDate(game)}
-                      </Link>
-                    </td>
-                    <td className="px-3 py-2 whitespace-nowrap">
-                      <Link
-                        to={footballGamePath(game.GameID)}
-                        className="text-blue-600 hover:underline"
-                      >
-                        {game.Opponent || "—"}
-                      </Link>
-                    </td>
-                    <td className="px-3 py-2 text-center whitespace-nowrap">
-                      {game.LocationType || ""}
-                    </td>
-                    <td className="px-3 py-2 text-center whitespace-nowrap">
-                      {formatFootballGameType(game)}
-                    </td>
-                    <td
-                      className={`px-3 py-2 text-center font-semibold whitespace-nowrap ${
-                        game.Result === "W"
-                          ? "text-emerald-700"
-                          : game.Result === "L"
-                            ? "text-rose-700"
-                            : ""
-                      }`}
+                seasonGames.map((game, index) => {
+                  const opponentName = getScheduleOpponentName(game, schoolsById);
+                  const opponentLogoPath = getScheduleOpponentLogoPath(game, schoolsById);
+
+                  return (
+                    <tr
+                      key={game.GameID}
+                      className={`border-t border-gray-200 ${
+                        index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
+                      } hover:bg-gray-100`}
                     >
-                      {game.Result || ""}
-                    </td>
-                    <td className="px-3 py-2 text-center whitespace-nowrap">
-                      {game.Result ? (
+                      <td className="px-3 py-2 whitespace-nowrap">
                         <Link
                           to={footballGamePath(game.GameID)}
                           className="text-blue-600 hover:underline"
                         >
-                          {game.TeamScore} - {game.OpponentScore}
+                          {formatGameDate(game)}
                         </Link>
-                      ) : (
-                        ""
-                      )}
-                    </td>
-                  </tr>
-                ))
+                      </td>
+                      <td className="px-3 py-2 whitespace-nowrap">
+                        <Link
+                          to={footballGamePath(game.GameID)}
+                          className="inline-flex items-center gap-2 text-blue-600 hover:underline"
+                        >
+                          {opponentLogoPath ? (
+                            <img
+                              src={opponentLogoPath}
+                              alt=""
+                              loading="lazy"
+                              className="h-7 w-7 shrink-0 object-contain"
+                            />
+                          ) : null}
+                          <span>{opponentName}</span>
+                        </Link>
+                      </td>
+                      <td className="px-3 py-2 text-center whitespace-nowrap">
+                        {game.LocationType || ""}
+                      </td>
+                      <td className="px-3 py-2 text-center whitespace-nowrap">
+                        {formatFootballGameType(game)}
+                      </td>
+                      <td
+                        className={`px-3 py-2 text-center font-semibold whitespace-nowrap ${
+                          game.Result === "W"
+                            ? "text-emerald-700"
+                            : game.Result === "L"
+                              ? "text-rose-700"
+                              : ""
+                        }`}
+                      >
+                        {game.Result || ""}
+                      </td>
+                      <td className="px-3 py-2 text-center whitespace-nowrap">
+                        {game.Result ? (
+                          <Link
+                            to={footballGamePath(game.GameID)}
+                            className="text-blue-600 hover:underline"
+                          >
+                            {game.TeamScore} - {game.OpponentScore}
+                          </Link>
+                        ) : (
+                          ""
+                        )}
+                      </td>
+                    </tr>
+                  );
+                })
               )}
             </tbody>
           </table>

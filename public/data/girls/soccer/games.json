@@ -76,7 +76,7 @@
     "Time": "TBA",
     "TeamID": "ga-savannah-st-andrews-lions-girls-soccer",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Colleton Prep",
+    "Opponent": "Colleton Prep Academy",
     "OpponentLocation": "Walterboro, SC",
     "OpponentSlug": "colleton-prep",
     "OpponentUrl": "",
@@ -97,7 +97,7 @@
     "GoalScorers": [
       {
         "Team": "St. Andrew's",
-        "PlayerID": 200419,
+        "PlayerID": 200430,
         "PlayerName": "Megan Johnson",
         "Goals": 1
       },
@@ -160,7 +160,7 @@
     "Time": "TBA",
     "TeamID": "ga-savannah-st-andrews-lions-girls-soccer",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Dominion Christian",
+    "Opponent": "Dominion Christian Academy",
     "OpponentLocation": "Marietta, GA",
     "OpponentSlug": "dominion-christian",
     "OpponentUrl": "",
@@ -215,7 +215,7 @@
     "Time": "TBA",
     "TeamID": "ga-savannah-st-andrews-lions-girls-soccer",
     "Team": "St. Andrew's Lions",
-    "Opponent": "First Presbyterian Day",
+    "Opponent": "First Presbyterian Day School",
     "OpponentLocation": "Macon, GA",
     "OpponentSlug": "first-presbyterian-day",
     "OpponentUrl": "",
@@ -297,7 +297,7 @@
     "Time": "TBA",
     "TeamID": "ga-savannah-st-andrews-lions-girls-soccer",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Fellowship Christian",
+    "Opponent": "Central Fellowship Christian Academy",
     "OpponentLocation": "Macon, GA",
     "OpponentSlug": "fellowship-christian",
     "OpponentUrl": "",
@@ -356,11 +356,11 @@
     "Time": "TBA",
     "TeamID": "ga-savannah-st-andrews-lions-girls-soccer",
     "Team": "St. Andrew's Lions",
-    "Opponent": "Kings Academy",
+    "Opponent": "The King's Academy",
     "OpponentLocation": "Florence, SC",
-    "OpponentSlug": "kings-academy",
+    "OpponentSlug": "the-kings-academy",
     "OpponentUrl": "",
-    "OpponentID": "sc-king-s-academy-florence",
+    "OpponentID": "sc-the-kings-academy-florence",
     "GameUrl": "",
     "LocationType": "Neutral",
     "Venue": "",
@@ -370,8 +370,8 @@
     "Result": "W",
     "TeamScore": 6,
     "OpponentScore": 0,
-    "RecapTitle": "St. Andrew's shuts out Kings Academy in Kelme Tournament",
-    "Recap": "St. Andrew's defeated Kings Academy 6-0 in the Kelme Tournament of Champions. Jennifer Moesch and Becca Timms scored two goals apiece, while Maggie Hinchey and Leighanne Evans added one goal each.\n\nMoesch also recorded an assist, and Mary Wilkowski made two saves for St. Andrew's.",
+    "RecapTitle": "St. Andrew's shuts out The King's Academy in Kelme Tournament",
+    "Recap": "St. Andrew's defeated The King's Academy 6-0 in the Kelme Tournament of Champions. Jennifer Moesch and Becca Timms scored two goals apiece, while Maggie Hinchey and Leighanne Evans added one goal each.\n\nMoesch also recorded an assist, and Mary Wilkowski made two saves for St. Andrew's.",
     "SourceCitation": "Savannah Morning News",
     "SourcePublication": "Savannah Morning News",
     "SourceDate": "",
@@ -490,5 +490,591 @@
       }
     ],
     "RecordNote": "Records: St. Andrew's 6-2"
+  },
+  {
+    "GameID": 20040329,
+    "Season": 2004,
+    "SeasonID": 2004,
+    "DisplaySeason": "Spring 2004",
+    "SourceSeasonLabel": "Spring 2004",
+    "Date": "2004-03-29",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-girls-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Beaufort Academy",
+    "OpponentLocation": "Beaufort, SC",
+    "OpponentSlug": "beaufort-academy",
+    "OpponentUrl": "",
+    "OpponentID": "sc-beaufort-academy-beaufort",
+    "GameUrl": "",
+    "LocationType": "Unknown",
+    "Venue": "",
+    "Tournament": "",
+    "Notes": "SCISA Region 2-AA game.",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 5,
+    "OpponentScore": 0,
+    "RecapTitle": "Moesch hat trick powers region win over Beaufort Academy",
+    "Recap": "St. Andrew's defeated Beaufort Academy 5-0 in a SCISA Region 2-AA match on March 29, 2004. Jennifer Moesch scored three goals and Leighanne Evans scored twice for St. Andrew's.\n\nEvans added one assist, Moesch added two assists, and Mary Wilkowski made two saves as St. Andrew's improved to 7-2 overall and 2-0 in SCISA Region 2-AA.",
+    "SourceCitation": "Savannah Morning News",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200402,
+        "PlayerName": "Jennifer Moesch",
+        "Goals": 3
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200405,
+        "PlayerName": "Leighanne Evans",
+        "Goals": 2
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200405,
+        "PlayerName": "Leighanne Evans",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200402,
+        "PlayerName": "Jennifer Moesch",
+        "Assists": 2
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200401,
+        "PlayerName": "Mary Wilkowski",
+        "Saves": 2
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 7-2, 2-0 SCISA Region 2-AA"
+  },
+  {
+    "GameID": 20040401,
+    "Season": 2004,
+    "SeasonID": 2004,
+    "DisplaySeason": "Spring 2004",
+    "SourceSeasonLabel": "Spring 2004",
+    "Date": "2004-04-01",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-girls-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Colleton Prep Academy",
+    "OpponentLocation": "Walterboro, SC",
+    "OpponentSlug": "colleton-prep",
+    "OpponentUrl": "",
+    "OpponentID": "sc-colleton-prep-academy-walterboro",
+    "GameUrl": "",
+    "LocationType": "Unknown",
+    "Venue": "",
+    "Tournament": "",
+    "Notes": "GISA Region 2-AA game.",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 5,
+    "OpponentScore": 1,
+    "RecapTitle": "Haggberg scores twice as St. Andrew's beats Colleton Prep",
+    "Recap": "St. Andrew's defeated Colleton Prep 5-1 in a GISA Region 2-AA match on April 1, 2004. Layne Haggberg scored twice, and Leighanne Evans, Jennifer Moesch, and Rebecca Timms each added a goal for St. Andrew's. Whitney Smith scored for Colleton Prep.\n\nEvans, Maggie Hinchey, and Moesch recorded assists for St. Andrew's. Mary Wilkowski made two saves and Stephanie Vine made four saves as St. Andrew's improved to 8-2 overall and 3-0 in GISA Region 2-AA.",
+    "SourceCitation": "Savannah Morning News",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200405,
+        "PlayerName": "Leighanne Evans",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200428,
+        "PlayerName": "Layne Haggberg",
+        "Goals": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200402,
+        "PlayerName": "Jennifer Moesch",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200421,
+        "PlayerName": "Becca Timms",
+        "Goals": 1
+      },
+      {
+        "Team": "Colleton Prep",
+        "PlayerName": "Whitney Smith",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200405,
+        "PlayerName": "Leighanne Evans",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200403,
+        "PlayerName": "Maggie Hinchey",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200402,
+        "PlayerName": "Jennifer Moesch",
+        "Assists": 1
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200401,
+        "PlayerName": "Mary Wilkowski",
+        "Saves": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200429,
+        "PlayerName": "Stephanie Vine",
+        "Saves": 4
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 8-2, 3-0 GISA Region 2-AA"
+  },
+  {
+    "GameID": 20040402,
+    "Season": 2004,
+    "SeasonID": 2004,
+    "DisplaySeason": "Spring 2004",
+    "SourceSeasonLabel": "Spring 2004",
+    "Date": "2004-04-02",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-girls-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Trinity Collegiate",
+    "OpponentLocation": "Darlington, SC",
+    "OpponentSlug": "trinity-collegiate",
+    "OpponentUrl": "",
+    "OpponentID": "sc-trinity-collegiate-darlington",
+    "GameUrl": "",
+    "LocationType": "Unknown",
+    "Venue": "",
+    "Tournament": "",
+    "Notes": "Non-region game.",
+    "GameType": "Non-Region",
+    "Result": "W",
+    "TeamScore": 5,
+    "OpponentScore": 1,
+    "RecapTitle": "Moesch scores three as St. Andrew's beats Trinity Collegiate",
+    "Recap": "St. Andrew's defeated Trinity Collegiate 5-1 in a non-region match on April 2, 2004. Jennifer Moesch scored three goals, while Megan Johnson and Grace Wilkowski also scored for St. Andrew's. Whitney Jenkins scored for Trinity Collegiate.\n\nRebecca Timms recorded two assists, Emily Aimone added one, and Moesch added two assists. The published brief listed St. Andrew's at 8-2 and Trinity Collegiate at 4-4.",
+    "SourceCitation": "Savannah Morning News",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200430,
+        "PlayerName": "Megan Johnson",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200603,
+        "PlayerName": "Grace Wilkowski",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200402,
+        "PlayerName": "Jennifer Moesch",
+        "Goals": 3
+      },
+      {
+        "Team": "Trinity Collegiate",
+        "PlayerName": "Whitney Jenkins",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200421,
+        "PlayerName": "Becca Timms",
+        "Assists": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200409,
+        "PlayerName": "Emily Aimone",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200402,
+        "PlayerName": "Jennifer Moesch",
+        "Assists": 2
+      }
+    ],
+    "Saves": [],
+    "RecordNote": "Records: St. Andrew's 8-2, Trinity Collegiate 4-4"
+  },
+  {
+    "GameID": 20040406,
+    "Season": 2004,
+    "SeasonID": 2004,
+    "DisplaySeason": "Spring 2004",
+    "SourceSeasonLabel": "Spring 2004",
+    "Date": "2004-04-06",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-girls-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Hilton Head Christian Academy",
+    "OpponentLocation": "Hilton Head Island, SC",
+    "OpponentSlug": "hilton-head-christian",
+    "OpponentUrl": "",
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
+    "GameUrl": "",
+    "LocationType": "Unknown",
+    "Venue": "",
+    "Tournament": "",
+    "Notes": "",
+    "GameType": "Non-Region",
+    "Result": "T",
+    "TeamScore": 0,
+    "OpponentScore": 0,
+    "RecapTitle": "Wilkowski saves 12 in scoreless draw with Hilton Head Christian",
+    "Recap": "St. Andrew's and Hilton Head Christian played to a 0-0 draw on April 6, 2004.\n\nMary Wilkowski made 12 saves for St. Andrew's as the Lions moved to 9-2-1. Hilton Head Christian was listed at 12-5-1.",
+    "SourceCitation": "Savannah Morning News",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "",
+    "GoalScorers": [],
+    "Assists": [],
+    "Saves": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200401,
+        "PlayerName": "Mary Wilkowski",
+        "Saves": 12
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 9-2-1, Hilton Head Christian 12-5-1"
+  },
+  {
+    "GameID": 20040429,
+    "Season": 2004,
+    "SeasonID": 2004,
+    "DisplaySeason": "Spring 2004",
+    "SourceSeasonLabel": "Spring 2004",
+    "Date": "2004-04-29",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-girls-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Beaufort Academy",
+    "OpponentLocation": "Beaufort, SC",
+    "OpponentSlug": "beaufort-academy",
+    "OpponentUrl": "",
+    "OpponentID": "sc-beaufort-academy-beaufort",
+    "GameUrl": "",
+    "LocationType": "Unknown",
+    "Venue": "",
+    "Tournament": "",
+    "Notes": "St. Andrew's clinched the SCISA Region 1-AA championship.",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 5,
+    "OpponentScore": 0,
+    "RecapTitle": "St. Andrew's clinches region title with shutout of Beaufort Academy",
+    "Recap": "St. Andrew's defeated Beaufort Academy 5-0 on April 29, 2004. Jennifer Moesch scored three goals, while Grace Wilkowski and Becca Timms also scored for St. Andrew's.\n\nEmily Aimone recorded an assist, and Mary Wilkowski made six saves for St. Andrew's. Beaufort Academy was credited with five saves. The report listed St. Andrew's record at 10-3.\n\nSt. Andrew's clinched the SCISA Region 1-AA championship.",
+    "SourceCitation": "Savannah Morning News",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200402,
+        "PlayerName": "Jennifer Moesch",
+        "Goals": 3
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200603,
+        "PlayerName": "Grace Wilkowski",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200421,
+        "PlayerName": "Becca Timms",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200409,
+        "PlayerName": "Emily Aimone",
+        "Assists": 1
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200401,
+        "PlayerName": "Mary Wilkowski",
+        "Saves": 6
+      },
+      {
+        "Team": "Beaufort Academy",
+        "Saves": 5
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 10-3"
+  },
+  {
+    "GameID": 20040511,
+    "Season": 2004,
+    "SeasonID": 2004,
+    "DisplaySeason": "Spring 2004",
+    "SourceSeasonLabel": "Spring 2004",
+    "Date": "2004-05-11",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-girls-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "The King's Academy",
+    "OpponentLocation": "Florence, SC",
+    "OpponentSlug": "the-kings-academy",
+    "OpponentUrl": "",
+    "OpponentID": "sc-the-kings-academy-florence",
+    "GameUrl": "",
+    "LocationType": "Home",
+    "Venue": "",
+    "Tournament": "",
+    "Notes": "SCISA Class AA/A state quarterfinal. St. Andrew's advanced to host Lowcountry Day School in the semifinals.",
+    "GameType": "State Tournament",
+    "Result": "W",
+    "TeamScore": 8,
+    "OpponentScore": 0,
+    "RecapTitle": "St. Andrew's girls in SCISA semifinals",
+    "Recap": "ST. ANDREW'S GIRLS IN SCISA SEMIFINALS\n\nEntering Tuesday's SCISA Class AA/A state girls' soccer quarterfinal, St. Andrew's second-year coach Mark Gibbons was concerned with changing the direction of the ball and better positioning to give his powerful offense more scoring opportunities. His wish was granted as the Saints scored eight goals and attempted 31 shots en route to a 8-0 defeat of The King's Academy, of Florence, S.C.\n\nThe scoring began early as senior Jennifer Moesch took a nice pass from sophomore Grace Wilkowski and found the back of the net four minutes into the match. The bombardment of The King's Academy's goal continued midway through the first half as the Saints scored three goals in a five-minute span. Two were by sophomore Becca Timms, one in the 21st minute and the other off a perfect lead pass from LeighAnne Evans in the 23rd minute.\n\nMoesch added another goal minutes later, giving the Saints a 4-0 lead. Sophomore Emily Aimone added the fifth and final goal of the first half with five minutes remaining.\n\nThe Saints' defense led by senior Layne Haggberg, junior Megan Johnson and freshmen Claire Oosterhaudt and Sarah Lundgren stifled every chance The King's Academy had all afternoon. Not one shot on goal was taken against the Saints' goalkeepers.\n\nThe Saints' scoring continued in the second half as Brittany McLaughlin, Meghan McCarthey and Emily Aimone each tallied a goal.\n\n\"We did what we had to do,\" Gibbons said. \"Now, we have to get past a tough Lowcountry team who we had trouble with last year. Our game Thursday will measure our season for us. We want to have a shot at the state championship.\"\n\nThe Saints will host Lowcountry Day School, of Pawley's Island, S.C., at 5 p.m. Thursday in a semifinal. Lowcountry beat Beaufort Academy in last year's state final after knocking off St. Andrew's 1-0 in a semifinal.",
+    "SourceCitation": "Savannah Morning News, May 12, 2004",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "2004-05-12",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200402,
+        "PlayerName": "Jennifer Moesch",
+        "Goals": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200409,
+        "PlayerName": "Emily Aimone",
+        "Goals": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200421,
+        "PlayerName": "Becca Timms",
+        "Goals": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200437,
+        "PlayerName": "Meghan McCarthey",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200436,
+        "PlayerName": "Brittany McLaughlin",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200603,
+        "PlayerName": "Grace Wilkowski",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200405,
+        "PlayerName": "Leighanne Evans",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200401,
+        "PlayerName": "Mary Wilkowski",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200402,
+        "PlayerName": "Jennifer Moesch",
+        "Assists": 1
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "The King's Academy",
+        "Saves": 19
+      },
+      {
+        "Team": "St. Andrew's",
+        "Saves": 0
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 13-3"
+  },
+  {
+    "GameID": 20040513,
+    "Season": 2004,
+    "SeasonID": 2004,
+    "DisplaySeason": "Spring 2004",
+    "SourceSeasonLabel": "Spring 2004",
+    "Date": "2004-05-13",
+    "Time": "5:00 PM",
+    "TeamID": "ga-savannah-st-andrews-lions-girls-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Lowcountry Day School",
+    "OpponentLocation": "Pawleys Island, SC",
+    "OpponentSlug": "lowcountry-day-school",
+    "OpponentUrl": "",
+    "OpponentID": "sc-lowcountry-day-school-pawleys-island",
+    "GameUrl": "",
+    "LocationType": "Home",
+    "Venue": "",
+    "Tournament": "",
+    "Notes": "SCISA Class AA/A state semifinal. St. Andrew's advanced to the state championship at Heathwood Hall School in Columbia.",
+    "GameType": "State Tournament",
+    "Result": "W",
+    "TeamScore": 5,
+    "OpponentScore": 0,
+    "RecapTitle": "St. Andrew's advances to state championship",
+    "Recap": "St. Andrew's has been known for its physical play all year long. The Saints' toughness had Lowcountry Day coach Danny Ball worried before Thursday's SCISA Class AA/A semifinal contest. His concerns became a reality as St. Andrew's trounced Lowcountry 5-0 to earn a spot in the state championship Saturday in Columbia, S.C.\n\nThe Saints will face the Trinity Christian-Greenwood Christian winner for the state championship at 2:30 p.m. Saturday at Heathwood Hall School.\n\nAgainst Lowcountry Day, St. Andrew's did what Ball feared: dominated the midfield and had the upper hand physically.\n\n\"We have to watch out for Jennifer Moesch, a tough, physical player, and control the midfield,\" Lowcountry's coach said before the match.\n\nBall would not comment after the Saints' victory.\n\nMoesch, a senior, tallied four goals and senior LeighAnne Evans added one as the Saints' dominated possession all afternoon against the visitors from Pawley's Island, S.C., piling up 24 shots.\n\nThe scoring began five minutes into the game as Moesch took an excellent pass from Evans in the Marlins' box and fired it into the right corner of the goal to take a 1-0 lead. Minutes later, the same duo added another goal as Moesch took the ball down the right side and crossed the ball to a waiting Evans.\n\nThe Marlins' slowed down the Saints' attack for nearly 30 minutes until sophomore Becca Timms dropped off a pass to Moesch, who converted her second goal of the day to push the lead to 3-0.\n\nSaints coach Mark Gibbons wanted his team to have a stout midfield presence, and it did. Seniors Brittany McLaughlin and Layne Haggberg controlled the midfield throughout the contest, finding open teammates, which led to numerous scoring opportunities.\n\nThe Saints' defense, which is made up of freshmen Mary Wilkowski and Sarah Lundgren, sophomore Maggie Hinchey and junior Megan Johnson, stifled Lowcountry's offense, holding it to five shots on goal.\n\n\"The first half we played well, but we played with much more confidence in the second half,\" Gibbons said.\n\n\"I am proud of the way our girls came out against a good Lowcountry team. We got ourselves where we wanted. Now, we just have to finish and take home the championship.\"",
+    "SourceCitation": "Savannah Morning News, May 14, 2004",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "2004-05-14",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200402,
+        "PlayerName": "Jennifer Moesch",
+        "Goals": 4
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200405,
+        "PlayerName": "Leighanne Evans",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200405,
+        "PlayerName": "Leighanne Evans",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200402,
+        "PlayerName": "Jennifer Moesch",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200421,
+        "PlayerName": "Becca Timms",
+        "Assists": 1
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "Lowcountry Day School",
+        "Saves": 12
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200401,
+        "PlayerName": "Mary Wilkowski",
+        "Saves": 5
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 14-3"
+  },
+  {
+    "GameID": 20040515,
+    "Season": 2004,
+    "SeasonID": 2004,
+    "DisplaySeason": "Spring 2004",
+    "SourceSeasonLabel": "Spring 2004",
+    "Date": "2004-05-15",
+    "Time": "2:30 PM",
+    "TeamID": "ga-savannah-st-andrews-lions-girls-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Greenwood Christian School",
+    "OpponentLocation": "Greenwood, SC",
+    "OpponentSlug": "greenwood-christian-school",
+    "OpponentUrl": "",
+    "OpponentID": "sc-greenwood-christian-school-greenwood",
+    "GameUrl": "",
+    "LocationType": "Neutral",
+    "Venue": "Heathwood Hall School",
+    "Tournament": "",
+    "Notes": "SCISA Class A/AA state final. Greenwood Christian won on penalty kicks after regulation, two 10-minute overtimes, two five-minute overtimes, and sudden death.",
+    "GameType": "State Tournament",
+    "Result": "L",
+    "TeamScore": 1,
+    "OpponentScore": 2,
+    "RecapTitle": "St. Andrew's finishes as state runner-up",
+    "Recap": "In the SCISA Class A/AA girls' soccer final at the same field, Greenwood Christian beat St. Andrew's 2-1 on penalty kicks.\n\nThe Saints controlled play for most of the match, outshooting Greenwood Christian 36-26, but were unable to put away several good scoring opportunities.\n\nGreenwood Christian took a 1-0 lead when Joy Kane scored with 5:14 remaining in regulation, but St. Andrew's tied the score on Jennifer Moesch's goal with 2:32 left in regulation.\n\nThe teams played a pair of 10-minute and five-minute overtimes before they went to penalty kicks. After the first five penalty kicks, both teams scored twice.\n\nGreenwood Christian's Mallory Rose scored her team's first penalty kick in sudden death. Saints goalkeeper Mary Wilkowski was able to get a hand on the shot, but the officials ruled the ball went over the goal line.",
+    "SourceCitation": "Savannah Morning News",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "",
+    "GoalScorers": [
+      {
+        "Team": "Greenwood Christian School",
+        "PlayerName": "Joy Kane",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200402,
+        "PlayerName": "Jennifer Moesch",
+        "Goals": 1
+      }
+    ],
+    "Assists": [],
+    "Saves": [
+      {
+        "Team": "Greenwood Christian School",
+        "PlayerName": "Caroline Clarke",
+        "Saves": 20
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200401,
+        "PlayerName": "Mary Wilkowski",
+        "Saves": 10
+      }
+    ],
+    "RecordNote": "Records: Greenwood Christian 10-3-2, St. Andrew's 14-3"
   }
 ]

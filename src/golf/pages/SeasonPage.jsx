@@ -10,17 +10,14 @@ import {
 } from "../golfPageUtils";
 
 function SummaryCard({ season }) {
+  const recapParagraphs = Array.isArray(season.HistoricalSummary)
+    ? season.HistoricalSummary
+    : [];
+
   return (
-    <section className="rounded-[1.4rem] border border-slate-200 bg-white px-5 py-5 shadow-sm">
+    <section className="space-y-3">
       <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-        <div>
-          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-slate-500">
-            Archive Status
-          </p>
-          <p className="mt-2 text-sm leading-7 text-slate-700">
-            {season.StatusNote || "State archive summary."}
-          </p>
-        </div>
+        <h2 className="text-2xl font-semibold text-slate-900">Season Recap</h2>
         {season.ArchivePdfUrl ? (
           <a
             href={season.ArchivePdfUrl}
@@ -33,31 +30,24 @@ function SummaryCard({ season }) {
         ) : null}
       </div>
 
-      {Array.isArray(season.HighlightNotes) && season.HighlightNotes.length ? (
-        <div className="mt-4 rounded-xl border border-slate-200 bg-slate-50 px-4 py-4">
-          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-slate-500">
-            Season Highlight
-          </p>
-          <p className="mt-2 text-sm leading-7 text-slate-700">
-            {season.HighlightNotes[0]}
-          </p>
-        </div>
-      ) : null}
-
-      {Array.isArray(season.HistoricalSummary) && season.HistoricalSummary.length ? (
-        <div className="mt-4 space-y-3">
-          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-slate-500">
-            Archive Summary
-          </p>
-          {season.HistoricalSummary.map((paragraph, index) => (
-            <p
-              key={`${season.SeasonID}-summary-${index}`}
-              className="text-sm leading-7 text-slate-700"
-            >
+      <div className="text-gray-800 leading-relaxed">
+        {recapParagraphs.length ? (
+          recapParagraphs.map((paragraph, index) => (
+            <p key={`${season.SeasonID}-summary-${index}`} className="mb-3 leading-relaxed">
               {paragraph}
             </p>
-          ))}
-        </div>
+          ))
+        ) : (
+          <p className="mb-3 leading-relaxed">
+            {season.StatusNote || "State archive summary."}
+          </p>
+        )}
+      </div>
+
+      {Array.isArray(season.HighlightNotes) && season.HighlightNotes.length ? (
+        <p className="rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-sm leading-7 text-slate-700">
+          {season.HighlightNotes[0]}
+        </p>
       ) : null}
     </section>
   );
@@ -202,6 +192,129 @@ function getDivisionResultLabel(division) {
   return `${formatGolfPlace(place)} of ${scores.length} / ${stAndrews.Score}`;
 }
 
+function getPlayerName(player) {
+  if (!player) return "";
+  if (player.PlayerName) return player.PlayerName;
+  return [player.FirstName, player.LastName].filter(Boolean).join(" ");
+}
+
+function buildSchoolMap(schools) {
+  return new Map(
+    (Array.isArray(schools) ? schools : []).map((school) => [
+      String(school.SchoolID),
+      school,
+    ])
+  );
+}
+
+function getSchoolDisplayName(school, fallback = "") {
+  return school?.ShortName || school?.Name || fallback;
+}
+
+function getSchoolLogoPath(school) {
+  return school?.LogoPath || school?.BracketLogoPath || null;
+}
+
+function schoolKey(score) {
+  return String(score?.SchoolID || score?.School || "");
+}
+
+function getPrimaryDivision(match) {
+  const divisions = Array.isArray(match.Divisions) ? match.Divisions : [];
+  return divisions[0] || null;
+}
+
+function getOpponents(match, schoolById) {
+  const opponents = [];
+  const seen = new Set();
+
+  (Array.isArray(match.Divisions) ? match.Divisions : []).forEach((division) => {
+    (Array.isArray(division.TeamScores) ? division.TeamScores : [])
+      .filter((score) => !score.IsStAndrews)
+      .forEach((score) => {
+        const key = schoolKey(score);
+        if (seen.has(key)) return;
+        seen.add(key);
+        opponents.push({
+          score,
+          school: schoolById.get(String(score.SchoolID)),
+        });
+      });
+  });
+
+  return opponents;
+}
+
+function getScheduleResultPieces(match) {
+  const divisions = Array.isArray(match.Divisions) ? match.Divisions : [];
+
+  return divisions
+    .map((division) => {
+      const scores = Array.isArray(division.TeamScores) ? division.TeamScores : [];
+      const stAndrews = scores.find((score) => score.IsStAndrews);
+
+      if (!stAndrews || scores.length < 2) {
+        return null;
+      }
+
+      if (scores.length === 2) {
+        const opponent = scores.find((score) => !score.IsStAndrews);
+        const won = Number(stAndrews.Score) < Number(opponent.Score);
+        return {
+          division: division.Division,
+          result: won ? "W" : "L",
+          score: `${stAndrews.Score}-${opponent.Score}`,
+        };
+      }
+
+      const sortedScores = scores
+        .slice()
+        .sort((a, b) => Number(a.Score) - Number(b.Score));
+      const place =
+        sortedScores.findIndex((score) => schoolKey(score) === schoolKey(stAndrews)) + 1;
+
+      return {
+        division: division.Division,
+        result: `${formatGolfPlace(stAndrews.Place || place)} of ${
+          division.TeamFieldSize || scores.length
+        }`,
+        score: String(stAndrews.Score),
+      };
+    })
+    .filter(Boolean);
+}
+
+function SchoolLogo({ school, fallbackName }) {
+  const logoPath = getSchoolLogoPath(school);
+  const initials = getSchoolDisplayName(school, fallbackName)
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part[0])
+    .join("")
+    .toUpperCase();
+
+  return (
+    <div className="flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden">
+      {logoPath ? (
+        <img
+          src={logoPath}
+          alt=""
+          className="h-full w-full object-contain"
+          loading="lazy"
+          onError={(event) => {
+            event.currentTarget.style.display = "none";
+          }}
+        />
+      ) : (
+        <span className="flex h-8 w-8 items-center justify-center rounded bg-slate-100 text-[0.65rem] font-bold text-slate-500">
+          {initials}
+        </span>
+      )}
+    </div>
+  );
+}
+
 function MatchCard({ match }) {
   const divisions = Array.isArray(match.Divisions) ? match.Divisions : [];
 
@@ -272,63 +385,150 @@ function MatchCard({ match }) {
   );
 }
 
-function SeasonRoster({ roster }) {
+function SeasonRoster({ roster, playersById = new Map() }) {
   const players = Array.isArray(roster?.Players) ? roster.Players : [];
 
   if (!players.length) return null;
 
-  const groupedPlayers = players.reduce((groups, player) => {
-    const key = player.Gender || "Roster";
-    return {
-      ...groups,
-      [key]: [...(groups[key] || []), player],
-    };
-  }, {});
-
   return (
-    <section className="rounded-[1.4rem] border border-slate-200 bg-white px-5 py-5 shadow-sm">
-      <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
-        <div>
-          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-slate-500">
-            Season Roster
-          </p>
-          <h2 className="mt-1 text-2xl font-bold text-slate-900">
-            Recovered St. Andrew's Golfers
-          </h2>
-        </div>
-        <span className="text-sm font-semibold text-slate-500">
-          {players.length} golfers
-        </span>
+    <section>
+      <div className="flex items-center justify-between mt-8 mb-4">
+        <h2 className="text-2xl font-semibold text-slate-900">Roster</h2>
+        <span className="text-sm font-semibold text-slate-500">{players.length} golfers</span>
       </div>
 
-      <div className="mt-4 grid gap-4 sm:grid-cols-2">
-        {Object.entries(groupedPlayers).map(([group, groupPlayers]) => (
-          <div
-            key={group}
-            className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-4"
-          >
-            <h3 className="text-sm font-bold uppercase tracking-[0.18em] text-slate-500">
-              {group}
-            </h3>
-            <div className="mt-3 grid gap-2">
-              {groupPlayers.map((player) => (
-                <div
-                  key={player.PlayerID}
-                  className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-900"
+      <div className="overflow-x-auto">
+        <table className="min-w-full border text-sm">
+          <thead className="bg-gray-100">
+            <tr>
+              <th className="border px-3 py-2 text-left">Golfer</th>
+              <th className="border px-3 py-2 text-center">Class</th>
+              <th className="border px-3 py-2 text-center">Team</th>
+            </tr>
+          </thead>
+          <tbody>
+            {players.map((rosterPlayer, index) => {
+              const masterPlayer = playersById.get(String(rosterPlayer.PlayerID));
+              const displayName =
+                getPlayerName(masterPlayer) || rosterPlayer.PlayerName || "Unknown";
+              const gradYear = masterPlayer?.GradYear || rosterPlayer.GradYear || "-";
+
+              return (
+                <tr
+                  key={rosterPlayer.PlayerID || `${displayName}-${index}`}
+                  className={index % 2 ? "bg-gray-50" : "bg-white"}
                 >
-                  {player.PlayerName}
-                </div>
-              ))}
-            </div>
-          </div>
-        ))}
+                  <td className="border px-3 py-2 font-semibold text-slate-900">
+                    {displayName}
+                  </td>
+                  <td className="border px-3 py-2 text-center text-slate-700">
+                    {gradYear}
+                  </td>
+                  <td className="border px-3 py-2 text-center text-slate-700">
+                    {rosterPlayer.Gender || masterPlayer?.Gender || "Golf"}
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
       </div>
 
       {roster.Source ? (
-        <p className="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">
+        <p className="mt-3 text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">
           Source: {roster.Source}
         </p>
       ) : null}
+    </section>
+  );
+}
+
+function SeasonSchedule({ matches, schoolById }) {
+  if (!matches.length) return null;
+
+  return (
+    <section>
+      <div className="flex items-center justify-between mt-8 mb-4">
+        <h2 className="text-2xl font-semibold text-slate-900">Schedule &amp; Results</h2>
+      </div>
+
+      <div className="overflow-x-auto">
+        <table className="min-w-full border text-sm">
+          <thead className="bg-gray-100">
+            <tr>
+              <th className="border px-3 py-2 text-left">Date</th>
+              <th className="border px-3 py-2 text-left">Opponent</th>
+              <th className="border px-3 py-2">Location</th>
+              <th className="border px-3 py-2">Result</th>
+              <th className="border px-3 py-2">Score</th>
+              <th className="border px-3 py-2">Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            {matches.map((match, index) => {
+              const opponents = getOpponents(match, schoolById);
+              const resultPieces = getScheduleResultPieces(match);
+              const type = match.MatchType || "Regular Season";
+
+              return (
+                <tr key={match.MatchID} className={index % 2 ? "bg-gray-50" : "bg-white"}>
+                  <td className="border px-3 py-2 whitespace-nowrap">
+                    {formatGolfDate(match.Date)}
+                  </td>
+                  <td className="border px-3 py-2">
+                    <div className="space-y-2">
+                      {opponents.map(({ score, school }) => (
+                        <div key={schoolKey(score)} className="flex items-center gap-3">
+                          <SchoolLogo school={school} fallbackName={score.School} />
+                          <Link
+                            to={`/athletics/golf/matches/${match.MatchID}`}
+                            className="min-w-0 text-blue-700 underline hover:text-blue-900"
+                          >
+                            {getSchoolDisplayName(school, score.School)}
+                          </Link>
+                        </div>
+                      ))}
+                    </div>
+                  </td>
+                  <td className="border px-3 py-2 text-center">
+                    {match.Course || match.Location || "Unknown"}
+                  </td>
+                  <td className="border px-3 py-2 text-center font-bold text-slate-900">
+                    <div className="space-y-1">
+                      {resultPieces.map((piece) => (
+                        <div
+                          key={`${match.MatchID}-${piece.division}-result`}
+                          className={
+                            piece.result === "W"
+                              ? "text-green-700"
+                              : piece.result === "L"
+                                ? "text-red-700"
+                                : "text-slate-900"
+                          }
+                        >
+                          {resultPieces.length > 1 ? `${piece.division} ` : ""}
+                          {piece.result}
+                        </div>
+                      ))}
+                    </div>
+                  </td>
+                  <td className="border px-3 py-2 text-center">
+                    <div className="space-y-1">
+                      {resultPieces.map((piece) => (
+                        <div key={`${match.MatchID}-${piece.division}-score`}>
+                          {resultPieces.length > 1 ? `${piece.division} ` : ""}
+                          {piece.score}
+                        </div>
+                      ))}
+                    </div>
+                  </td>
+                  <td className="border px-3 py-2 text-center">{type}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
     </section>
   );
 }
@@ -338,9 +538,22 @@ export default function SeasonPage({
   tournaments = [],
   matches = [],
   seasonRosters = [],
+  players = [],
+  schools = [],
   status = "",
 }) {
   const { seasonId } = useParams();
+
+  const schoolById = useMemo(() => buildSchoolMap(schools), [schools]);
+
+  const playersById = useMemo(() => {
+    return new Map(
+      (Array.isArray(players) ? players : []).map((player) => [
+        String(player.PlayerID),
+        player,
+      ])
+    );
+  }, [players]);
 
   const season = useMemo(() => {
     return (
@@ -404,18 +617,13 @@ export default function SeasonPage({
         </p>
       </header>
 
+      {seasonRoster ? (
+        <SeasonRoster roster={seasonRoster} playersById={playersById} />
+      ) : null}
+
       <SummaryCard season={season} />
 
-      {seasonRoster ? <SeasonRoster roster={seasonRoster} /> : null}
-
-      {seasonMatches.length ? (
-        <section className="space-y-4">
-          <h2 className="text-2xl font-semibold text-slate-900">Matches</h2>
-          {seasonMatches.map((match) => (
-            <MatchCard key={match.MatchID} match={match} />
-          ))}
-        </section>
-      ) : null}
+      <SeasonSchedule matches={seasonMatches} schoolById={schoolById} />
 
       {seasonTournaments.length || !seasonMatches.length ? (
         <section className="space-y-4">

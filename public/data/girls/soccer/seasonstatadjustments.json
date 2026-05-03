@@ -1,0 +1,37 @@
+[
+  {
+    "SeasonID": 2004,
+    "PlayerID": 200402,
+    "PlayerName": "Jennifer Moesch",
+    "ThroughDate": "2004-04-06",
+    "SourceCitation": "Savannah Morning News girls soccer statistical leaders through April 6, 2004",
+    "Reason": "Official Savannah Morning News offensive leaderboard total through April 6.",
+    "GamesPlayedAdjustment": 3,
+    "GoalsAdjustment": -3,
+    "AssistsAdjustment": -2,
+    "OfficialTotals": {
+      "GamesPlayed": 12,
+      "Goals": 18,
+      "Assists": 4,
+      "Points": 40
+    }
+  },
+  {
+    "SeasonID": 2004,
+    "PlayerID": 200401,
+    "PlayerName": "Mary Wilkowski",
+    "ThroughDate": "2004-04-06",
+    "SourceCitation": "Savannah Morning News girls soccer statistical leaders through April 6, 2004",
+    "Reason": "Official Savannah Morning News goalkeeper leaderboard total through April 6.",
+    "GamesPlayedAdjustment": 2,
+    "SavesAdjustment": 8,
+    "Shutouts": 6,
+    "GAA": 0.92,
+    "OfficialTotals": {
+      "GamesPlayed": 12,
+      "Saves": 61,
+      "Shutouts": 6,
+      "GAA": 0.92
+    }
+  }
+]

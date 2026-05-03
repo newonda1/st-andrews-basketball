@@ -1728,6 +1728,13 @@
     "Mascot": "Swampcats"
   },
   {
+    "SchoolID": "sc-lowcountry-day-school-pawleys-island",
+    "Name": "Lowcountry Day School",
+    "City": "Pawleys Island",
+    "State": "SC",
+    "Mascot": "Marlins"
+  },
+  {
     "SchoolID": "sc-lord-berkeley-academy-moncks-corner",
     "Name": "Lord Berkeley Academy",
     "City": "Moncks Corner",
@@ -1816,6 +1823,11 @@
     "AthleticsUrl": "https://www.patrickhenryacademy.org/athletics/",
     "LogoPath": "/images/schools/logos/sc-patrick-henry-academy-estill.png",
     "LogoSourceUrl": "https://www.patrickhenryacademy.org/editoruploads/images/LOGO/Patriot.png"
+  },
+  {
+    "SchoolID": "sc-st-francis-xavier",
+    "Name": "St. Francis Xavier",
+    "State": "SC"
   },
   {
     "SchoolID": "sc-pee-dee-academy-mullins",
