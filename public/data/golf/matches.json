@@ -129,5 +129,256 @@
         "ResultNote": "The published transcript lists Jackie Dyer's 49 as the only Groves individual girls score."
       }
     ]
+  },
+  {
+    "MatchID": "20040318-beaufort-academy",
+    "Season": 2004,
+    "Name": "St. Andrew's vs. Beaufort Academy",
+    "Date": "2004-03-18",
+    "Course": "Wilmington Island Country Club",
+    "Opponent": "Beaufort Academy",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "2004-03-19",
+    "SourceCitation": "Savannah Morning News, Mar. 19, 2004",
+    "Summary": "Beaufort Academy defeated St. Andrew's 160-179 at par-35 Wilmington Island Country Club. Josh Smith led St. Andrew's with a 39.",
+    "Divisions": [
+      {
+        "Division": "Varsity",
+        "TeamScores": [
+          {
+            "School": "Beaufort Academy",
+            "Score": 160,
+            "IsStAndrews": false
+          },
+          {
+            "School": "St. Andrew's",
+            "Score": 179,
+            "IsStAndrews": true
+          }
+        ],
+        "Medalist": {
+          "PlayerName": "P.J. Holman",
+          "School": "Beaufort Academy",
+          "Score": 38
+        },
+        "Results": [
+          {
+            "PlayerName": "P.J. Holman",
+            "School": "Beaufort Academy",
+            "Score": 38,
+            "Award": "Medalist",
+            "IsStAndrews": false
+          },
+          {
+            "PlayerName": "Mark Anderson",
+            "School": "Beaufort Academy",
+            "Score": 40,
+            "IsStAndrews": false
+          },
+          {
+            "PlayerName": "Blake Johnson",
+            "School": "Beaufort Academy",
+            "Score": 40,
+            "IsStAndrews": false
+          },
+          {
+            "PlayerName": "Brad Trogden",
+            "School": "Beaufort Academy",
+            "Score": 42,
+            "IsStAndrews": false
+          },
+          {
+            "PlayerID": 200208,
+            "PlayerName": "Josh Smith",
+            "School": "St. Andrew's",
+            "Score": 39,
+            "IsStAndrews": true
+          },
+          {
+            "PlayerID": 200417,
+            "PlayerName": "Drew Aimone",
+            "School": "St. Andrew's",
+            "Score": 42,
+            "IsStAndrews": true
+          },
+          {
+            "PlayerID": 200003,
+            "PlayerName": "Davy Clay",
+            "School": "St. Andrew's",
+            "Score": 48,
+            "IsStAndrews": true
+          },
+          {
+            "PlayerID": 200418,
+            "PlayerName": "Samantha Long",
+            "School": "St. Andrew's",
+            "Score": 50,
+            "IsStAndrews": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "MatchID": "20040325-penny-branch-quad",
+    "Season": 2004,
+    "Name": "Penny Branch Quad Match",
+    "Date": "2004-03-25",
+    "Course": "Penny Branch Golf Club",
+    "Location": "Estill, S.C.",
+    "Opponent": "Holly Hill Academy / Patrick Henry Academy / Jefferson Davis",
+    "Summary": "St. Andrew's finished third in a four-team match at par-36 Penny Branch Golf Club in Estill, S.C. Josh Smith shot 37 to earn medalist honors.",
+    "Divisions": [
+      {
+        "Division": "Varsity",
+        "TeamScores": [
+          {
+            "School": "Holly Hill Academy",
+            "Score": 145,
+            "IsStAndrews": false
+          },
+          {
+            "School": "Patrick Henry Academy",
+            "Score": 165,
+            "IsStAndrews": false
+          },
+          {
+            "School": "St. Andrew's",
+            "Score": 168,
+            "IsStAndrews": true
+          },
+          {
+            "School": "Jefferson Davis",
+            "Score": 177,
+            "IsStAndrews": false
+          }
+        ],
+        "Medalist": {
+          "PlayerID": 200208,
+          "PlayerName": "Josh Smith",
+          "School": "St. Andrew's",
+          "Score": 37
+        },
+        "Results": [
+          {
+            "PlayerID": 200208,
+            "PlayerName": "Josh Smith",
+            "School": "St. Andrew's",
+            "Score": 37,
+            "Award": "Medalist",
+            "IsStAndrews": true
+          },
+          {
+            "PlayerID": 200003,
+            "PlayerName": "Davy Clay",
+            "School": "St. Andrew's",
+            "Score": 41,
+            "IsStAndrews": true
+          },
+          {
+            "PlayerID": 200417,
+            "PlayerName": "Drew Aimone",
+            "School": "St. Andrew's",
+            "Score": 42,
+            "IsStAndrews": true
+          },
+          {
+            "PlayerID": 200418,
+            "PlayerName": "Samantha Long",
+            "School": "St. Andrew's",
+            "Score": 48,
+            "IsStAndrews": true
+          }
+        ],
+        "ResultNote": "The provided report includes full St. Andrew's individual results; only team scores were available for the other schools."
+      }
+    ]
+  },
+  {
+    "MatchID": "20040326-hilton-head-prep",
+    "Season": 2004,
+    "Name": "St. Andrew's vs. Hilton Head Prep",
+    "Date": "2004-03-26",
+    "Course": "Wilmington Island Golf Club",
+    "Opponent": "Hilton Head Prep",
+    "Summary": "St. Andrew's defeated Hilton Head Prep 176-183 in a par-35 match at Wilmington Island Golf Club. Steve Carbone shot 41 to earn medalist honors.",
+    "Divisions": [
+      {
+        "Division": "Varsity",
+        "TeamScores": [
+          {
+            "School": "St. Andrew's",
+            "Score": 176,
+            "IsStAndrews": true
+          },
+          {
+            "School": "Hilton Head Prep",
+            "Score": 183,
+            "IsStAndrews": false
+          }
+        ],
+        "Medalist": {
+          "PlayerID": 200419,
+          "PlayerName": "Steve Carbone",
+          "School": "St. Andrew's",
+          "Score": 41
+        },
+        "Results": [
+          {
+            "PlayerID": 200419,
+            "PlayerName": "Steve Carbone",
+            "School": "St. Andrew's",
+            "Score": 41,
+            "Award": "Medalist",
+            "IsStAndrews": true
+          },
+          {
+            "PlayerID": 200208,
+            "PlayerName": "Josh Smith",
+            "School": "St. Andrew's",
+            "Score": 42,
+            "IsStAndrews": true
+          },
+          {
+            "PlayerID": 200417,
+            "PlayerName": "Drew Aimone",
+            "School": "St. Andrew's",
+            "Score": 45,
+            "IsStAndrews": true
+          },
+          {
+            "PlayerID": 200003,
+            "PlayerName": "Davy Clay",
+            "School": "St. Andrew's",
+            "Score": 48,
+            "IsStAndrews": true
+          },
+          {
+            "PlayerName": "Stephanie Brown",
+            "School": "Hilton Head Prep",
+            "Score": 42,
+            "IsStAndrews": false
+          },
+          {
+            "PlayerName": "Mark Finger",
+            "School": "Hilton Head Prep",
+            "Score": 44,
+            "IsStAndrews": false
+          },
+          {
+            "PlayerName": "Zack Turner",
+            "School": "Hilton Head Prep",
+            "Score": 45,
+            "IsStAndrews": false
+          },
+          {
+            "PlayerName": "Joe Ryan",
+            "School": "Hilton Head Prep",
+            "Score": 52,
+            "IsStAndrews": false
+          }
+        ]
+      }
+    ]
   }
 ]

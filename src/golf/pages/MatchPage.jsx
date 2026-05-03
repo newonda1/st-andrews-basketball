@@ -76,7 +76,12 @@ function ResultsTable({ rows = [], playerMap }) {
               className={row.IsStAndrews ? "bg-blue-50" : "bg-white"}
             >
               <td className="border-b border-slate-200 px-3 py-2 font-semibold text-slate-900">
-                {getPlayerName(row, playerMap)}
+                <div>{getPlayerName(row, playerMap)}</div>
+                {row.Award ? (
+                  <div className="mt-1 text-xs font-medium text-slate-500">
+                    {row.Award}
+                  </div>
+                ) : null}
               </td>
               <td className="border-b border-slate-200 px-3 py-2 text-slate-700">
                 {row.School}
@@ -172,7 +177,7 @@ export default function MatchPage({ matches = [], players = [], status = "" }) {
         </p>
         <h1 className="mt-2 text-3xl font-bold text-slate-900">{match.Name}</h1>
         <p className="mt-2 text-sm font-medium text-slate-500">
-          {match.Course}
+          {[match.Course, match.Location].filter(Boolean).join(" · ")}
         </p>
       </header>
 

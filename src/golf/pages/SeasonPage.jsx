@@ -184,12 +184,22 @@ function TournamentCard({ tournament }) {
 function getDivisionResultLabel(division) {
   const scores = Array.isArray(division.TeamScores) ? division.TeamScores : [];
   const stAndrews = scores.find((score) => score.IsStAndrews);
-  const opponent = scores.find((score) => !score.IsStAndrews);
 
-  if (!stAndrews || !opponent) return "Result not listed";
+  if (!stAndrews || scores.length < 2) return "Result not listed";
 
-  const won = Number(stAndrews.Score) < Number(opponent.Score);
-  return `${won ? "W" : "L"} ${stAndrews.Score}-${opponent.Score}`;
+  if (scores.length === 2) {
+    const opponent = scores.find((score) => !score.IsStAndrews);
+    const won = Number(stAndrews.Score) < Number(opponent.Score);
+    return `${won ? "W" : "L"} ${stAndrews.Score}-${opponent.Score}`;
+  }
+
+  const sortedScores = scores
+    .slice()
+    .sort((a, b) => Number(a.Score) - Number(b.Score));
+  const place =
+    sortedScores.findIndex((score) => score.School === stAndrews.School) + 1;
+
+  return `${formatGolfPlace(place)} of ${scores.length} / ${stAndrews.Score}`;
 }
 
 function MatchCard({ match }) {
@@ -211,6 +221,7 @@ function MatchCard({ match }) {
             {[
               { label: "Date", value: formatGolfDate(match.Date) },
               { label: "Course", value: match.Course },
+              { label: "Location", value: match.Location },
               { label: "Source", value: match.SourceCitation },
             ]
               .filter((item) => item.value)
@@ -261,10 +272,72 @@ function MatchCard({ match }) {
   );
 }
 
+function SeasonRoster({ roster }) {
+  const players = Array.isArray(roster?.Players) ? roster.Players : [];
+
+  if (!players.length) return null;
+
+  const groupedPlayers = players.reduce((groups, player) => {
+    const key = player.Gender || "Roster";
+    return {
+      ...groups,
+      [key]: [...(groups[key] || []), player],
+    };
+  }, {});
+
+  return (
+    <section className="rounded-[1.4rem] border border-slate-200 bg-white px-5 py-5 shadow-sm">
+      <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+        <div>
+          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-slate-500">
+            Season Roster
+          </p>
+          <h2 className="mt-1 text-2xl font-bold text-slate-900">
+            Recovered St. Andrew's Golfers
+          </h2>
+        </div>
+        <span className="text-sm font-semibold text-slate-500">
+          {players.length} golfers
+        </span>
+      </div>
+
+      <div className="mt-4 grid gap-4 sm:grid-cols-2">
+        {Object.entries(groupedPlayers).map(([group, groupPlayers]) => (
+          <div
+            key={group}
+            className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-4"
+          >
+            <h3 className="text-sm font-bold uppercase tracking-[0.18em] text-slate-500">
+              {group}
+            </h3>
+            <div className="mt-3 grid gap-2">
+              {groupPlayers.map((player) => (
+                <div
+                  key={player.PlayerID}
+                  className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-900"
+                >
+                  {player.PlayerName}
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {roster.Source ? (
+        <p className="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">
+          Source: {roster.Source}
+        </p>
+      ) : null}
+    </section>
+  );
+}
+
 export default function SeasonPage({
   seasons = [],
   tournaments = [],
   matches = [],
+  seasonRosters = [],
   status = "",
 }) {
   const { seasonId } = useParams();
@@ -286,6 +359,14 @@ export default function SeasonPage({
       matches.filter((entry) => Number(entry.Season) === Number(seasonId))
     );
   }, [seasonId, matches]);
+
+  const seasonRoster = useMemo(() => {
+    return (
+      seasonRosters.find(
+        (entry) => Number(entry.SeasonID) === Number(seasonId)
+      ) || null
+    );
+  }, [seasonId, seasonRosters]);
 
   if (!season) {
     return (
@@ -324,6 +405,8 @@ export default function SeasonPage({
       </header>
 
       <SummaryCard season={season} />
+
+      {seasonRoster ? <SeasonRoster roster={seasonRoster} /> : null}
 
       {seasonMatches.length ? (
         <section className="space-y-4">

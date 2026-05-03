@@ -1,0 +1,40 @@
+[
+  {
+    "SeasonID": 2004,
+    "DisplaySeason": "Spring 2004",
+    "SourceSeasonLabel": "Spring 2004",
+    "TeamLevel": "Varsity",
+    "TeamName": "St. Andrew's Lions",
+    "HeadCoach": "",
+    "League": "SCISA 2-AA",
+    "Division": "SCISA Region 2-AA",
+    "OverallRecord": "2-0",
+    "OverallWins": 2,
+    "OverallLosses": 0,
+    "OverallTies": 0,
+    "RegionRecord": "2-0",
+    "RegionWins": 2,
+    "RegionLosses": 0,
+    "RegionTies": 0,
+    "HomeWins": null,
+    "HomeLosses": null,
+    "HomeTies": null,
+    "AwayWins": null,
+    "AwayLosses": null,
+    "AwayTies": null,
+    "PointsFor": 17,
+    "PointsAgainst": 1,
+    "SeasonResult": "St. Andrew's opened the recovered Spring 2004 boys soccer archive with region wins over Cathedral Academy and Charleston Collegiate on March 22-23.",
+    "StatusNote": "Archive build in progress. The season currently includes the March 22 region win over Cathedral Academy and the March 23 region win over Charleston Collegiate.",
+    "HistoricalSummary": [
+      "The Spring 2004 boys soccer archive currently begins with St. Andrew's 4-1 SCISA Region 2-AA win over Cathedral Academy on March 22, 2004, followed by a 13-0 region win over Charleston Collegiate on March 23.",
+      "Hamish Huntley scored twice in each of the first two recovered matches. Will Massey had a goal and assist against Cathedral Academy, then added a goal and two assists against Charleston Collegiate.",
+      "The Charleston Collegiate scoring line names 12 of St. Andrew's 13 goals and credits Omar Glenn with three assists."
+    ],
+    "HighlightNotes": [
+      "St. Andrew's started 2-0 overall and 2-0 in SCISA Region 2-AA play.",
+      "Hamish Huntley scored four goals across the first two recovered games.",
+      "Omar Glenn had two goals and three assists against Charleston Collegiate."
+    ]
+  }
+]

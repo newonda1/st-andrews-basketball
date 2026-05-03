@@ -16,7 +16,7 @@ export default function Home() {
       sportName="Golf"
       headline="Organizing the St. Andrew's golf archive."
       intro="The golf section gives published results a home, connecting season summaries, match pages, source notes, courses, divisions, and visible St. Andrew's entries."
-      secondaryIntro="The current archive now begins with a 2004 dual match from Mary Calder Golf Course and continues through state tournament results from 2019, 2021, 2022, 2023, and 2024."
+      secondaryIntro="The current archive now begins with 2004 match reports from Mary Calder Golf Course and Wilmington Island Country Club, then continues through state tournament results from 2019, 2021, 2022, 2023, and 2024."
       icon="/images/golf/golf_icon.png"
       iconAlt="St. Andrew's golf icon"
       storyTitle="State Archive"
@@ -26,7 +26,7 @@ export default function Home() {
       ]}
       highlights={[
         "6 archive seasons",
-        "2004 Mary Calder dual match",
+        "2 recovered 2004 match pages",
         "12 tournament pages",
         "2019 through 2024 state results",
         "2023 and 2024 St. Andrew's entries",

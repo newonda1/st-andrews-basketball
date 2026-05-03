@@ -332,7 +332,7 @@ function RecordsVsOpponents() {
       ) : null}
 
       <div className="overflow-x-auto">
-        <table className="w-full text-xs sm:text-sm md:text-base text-center border">
+        <table className="w-full text-sm md:text-base text-center border">
           <thead>
             <tr className="bg-gray-100">
               <th
@@ -417,7 +417,7 @@ function RecordsVsOpponents() {
                     <tr>
                       <td colSpan={9} className="bg-gray-50 px-3 py-3">
                         <div className="overflow-x-auto">
-                          <table className="w-full text-xs sm:text-sm text-center border bg-white rounded">
+                          <table className="w-full text-sm md:text-base text-center border bg-white rounded">
                             <thead className="bg-gray-100">
                               <tr>
                                 <th className="border px-2 py-1">Date</th>

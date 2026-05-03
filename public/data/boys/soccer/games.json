@@ -1,0 +1,193 @@
+[
+  {
+    "GameID": 20040322,
+    "Season": 2004,
+    "SeasonID": 2004,
+    "DisplaySeason": "Spring 2004",
+    "SourceSeasonLabel": "Spring 2004",
+    "Date": "2004-03-22",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Cathedral Academy",
+    "OpponentLocation": "North Charleston, SC",
+    "OpponentSlug": "cathedral-academy",
+    "OpponentUrl": "",
+    "OpponentID": "sc-cathedral-academy-north-charleston",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "Notes": "Published brief did not identify whether the game was home or away.",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 4,
+    "OpponentScore": 1,
+    "RecapTitle": "St. Andrew's defeats Cathedral Academy in region opener",
+    "Recap": "St. Andrew's defeated Cathedral Academy 4-1 in a SCISA Region 2-AA boys soccer game on March 22, 2004. Will Massey scored once, Hamish Huntley scored twice, and Beau Hinton added a goal.\n\nMassey and Hinton were credited with assists, and Emett Eason made two saves as St. Andrew's improved to 1-0 overall and 1-0 in SCISA Region 2-AA play.",
+    "SourceCitation": "Boys' Soccer game brief",
+    "SourcePublication": "",
+    "SourceDate": "2004-03-22",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200105,
+        "PlayerName": "Will Massey",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200423,
+        "PlayerName": "Hamish Huntley",
+        "Goals": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200203,
+        "PlayerName": "Beau Hinton",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200105,
+        "PlayerName": "Will Massey",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200203,
+        "PlayerName": "Beau Hinton",
+        "Assists": 1
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200424,
+        "PlayerName": "Emett Eason",
+        "Saves": 2
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 1-0, 1-0 SCISA Region 2-AA"
+  },
+  {
+    "GameID": 20040323,
+    "Season": 2004,
+    "SeasonID": 2004,
+    "DisplaySeason": "Spring 2004",
+    "SourceSeasonLabel": "Spring 2004",
+    "Date": "2004-03-23",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Charleston Collegiate",
+    "OpponentLocation": "Johns Island, SC",
+    "OpponentSlug": "charleston-collegiate",
+    "OpponentUrl": "",
+    "OpponentID": "sc-charleston-collegiate-school-johns-island",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "Notes": "Published brief did not identify whether the game was home or away. The published scoring line accounts for 12 of St. Andrew's 13 goals.",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 13,
+    "OpponentScore": 0,
+    "RecapTitle": "St. Andrew's shuts out Charleston Collegiate in region play",
+    "Recap": "St. Andrew's defeated Charleston Collegiate 13-0 in a SCISA Region 2-AA boys soccer game on March 23, 2004. Beau Hinton, Omar Glenn, and Hamish Huntley scored two goals apiece, while Danny Eichholz, Will Massey, Jacob Rauers, Freddy Presutto, Graham Rossell, and Martin Sullivan also scored. The published scoring line accounts for 12 of St. Andrew's 13 goals.\n\nGlenn was credited with three assists, Massey with two, and Eichholz, Rauers, and Sullivan with one each. St. Andrew's improved to 2-0 overall and 2-0 in SCISA Region 2-AA play, while Charleston Collegiate moved to 1-3.",
+    "SourceCitation": "Boys' Soccer game brief",
+    "SourcePublication": "",
+    "SourceDate": "2004-03-23",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200203,
+        "PlayerName": "Beau Hinton",
+        "Goals": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200307,
+        "PlayerName": "Omar Glenn",
+        "Goals": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200423,
+        "PlayerName": "Hamish Huntley",
+        "Goals": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200313,
+        "PlayerName": "Danny Eichholz",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200105,
+        "PlayerName": "Will Massey",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200207,
+        "PlayerName": "Jacob Rauers",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200425,
+        "PlayerName": "Freddy Presutto",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200426,
+        "PlayerName": "Graham Rossell",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200427,
+        "PlayerName": "Martin Sullivan",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200307,
+        "PlayerName": "Omar Glenn",
+        "Assists": 3
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200313,
+        "PlayerName": "Danny Eichholz",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200105,
+        "PlayerName": "Will Massey",
+        "Assists": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200207,
+        "PlayerName": "Jacob Rauers",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200427,
+        "PlayerName": "Martin Sullivan",
+        "Assists": 1
+      }
+    ],
+    "Saves": [],
+    "RecordNote": "Records: St. Andrew's 2-0, 2-0 SCISA Region 2-AA; Charleston Collegiate 1-3"
+  }
+]

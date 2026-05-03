@@ -9,7 +9,9 @@ import AthleticsSearchApp from "./AthleticsSearchApp.jsx";
 import BoysBasketballApp from "./boys/basketball/BoysBasketballApp.jsx";
 import BoysBaseballApp from "./boys/baseball/BoysBaseballApp.jsx";
 import FootballApp from "./boys/football/FootballApp.jsx";
+import BoysSoccerApp from "./boys/soccer/BoysSoccerApp.jsx";
 import GirlsBasketballApp from "./girls/basketball/GirlsBasketballApp.jsx";
+import GirlsSoccerApp from "./girls/soccer/GirlsSoccerApp.jsx";
 import VolleyballApp from "./girls/volleyball/VolleyballApp.jsx";
 import TrackApp from "./track/TrackApp.jsx";
 import CrossCountryApp from "./cross-country/CrossCountryApp.jsx";
@@ -18,7 +20,6 @@ import TennisApp from "./tennis/TennisApp.jsx";
 import GolfApp from "./golf/GolfApp.jsx";
 import AdminApp from "./admin/AdminApp.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
-import UnderConstructionSportPage from "./components/UnderConstructionSportPage.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -46,24 +47,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 
         <Route path="/athletics/football/*" element={<FootballApp />} />
         <Route path="/athletics/volleyball/*" element={<VolleyballApp />} />
-        <Route
-          path="/athletics/girls/soccer"
-          element={
-            <UnderConstructionSportPage
-              sportName="Girls Soccer"
-              sportPath="/athletics/girls/soccer"
-            />
-          }
-        />
-        <Route
-          path="/athletics/boys/soccer"
-          element={
-            <UnderConstructionSportPage
-              sportName="Boys Soccer"
-              sportPath="/athletics/boys/soccer"
-            />
-          }
-        />
+        <Route path="/athletics/girls/soccer/*" element={<GirlsSoccerApp />} />
+        <Route path="/athletics/boys/soccer/*" element={<BoysSoccerApp />} />
         <Route path="/athletics/cross-country/*" element={<CrossCountryApp />} />
 
         <Route path="/athletics/track/*" element={<TrackApp />} />

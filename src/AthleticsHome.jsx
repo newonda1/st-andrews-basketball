@@ -63,7 +63,6 @@ const sports = [
     to: "/athletics/girls/soccer",
     icon: "/images/common/soccer_icon.png",
     iconClassName: "scale-[0.8]",
-    bannerMessage: "This page is under construction and will be up soon.",
     regionYears: [],
     stateYears: [],
   },

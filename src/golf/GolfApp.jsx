@@ -10,6 +10,7 @@ export default function GolfApp() {
   const [seasons, setSeasons] = useState([]);
   const [tournaments, setTournaments] = useState([]);
   const [matches, setMatches] = useState([]);
+  const [seasonRosters, setSeasonRosters] = useState([]);
   const [players, setPlayers] = useState([]);
   const [status, setStatus] = useState("Loading golf archive...");
 
@@ -18,10 +19,17 @@ export default function GolfApp() {
 
     async function loadData() {
       try {
-        const [seasonsRes, tournamentsRes, matchesRes, playersRes] = await Promise.all([
+        const [
+          seasonsRes,
+          tournamentsRes,
+          matchesRes,
+          seasonRostersRes,
+          playersRes,
+        ] = await Promise.all([
           fetch("/data/golf/seasons.json"),
           fetch("/data/golf/tournaments.json"),
           fetch("/data/golf/matches.json"),
+          fetch("/data/golf/seasonrosters.json"),
           fetch("/data/players.json"),
         ]);
 
@@ -39,14 +47,27 @@ export default function GolfApp() {
           throw new Error(`Could not load golf matches (${matchesRes.status}).`);
         }
 
+        if (!seasonRostersRes.ok) {
+          throw new Error(
+            `Could not load golf season rosters (${seasonRostersRes.status}).`
+          );
+        }
+
         if (!playersRes.ok) {
           throw new Error(`Could not load players (${playersRes.status}).`);
         }
 
-        const [seasonsData, tournamentsData, matchesData, playersData] = await Promise.all([
+        const [
+          seasonsData,
+          tournamentsData,
+          matchesData,
+          seasonRostersData,
+          playersData,
+        ] = await Promise.all([
           seasonsRes.json(),
           tournamentsRes.json(),
           matchesRes.json(),
+          seasonRostersRes.json(),
           playersRes.json(),
         ]);
 
@@ -54,6 +75,9 @@ export default function GolfApp() {
           setSeasons(Array.isArray(seasonsData) ? seasonsData : []);
           setTournaments(Array.isArray(tournamentsData) ? tournamentsData : []);
           setMatches(Array.isArray(matchesData) ? matchesData : []);
+          setSeasonRosters(
+            Array.isArray(seasonRostersData) ? seasonRostersData : []
+          );
           setPlayers(Array.isArray(playersData) ? playersData : []);
           setStatus("");
         }
@@ -102,6 +126,7 @@ export default function GolfApp() {
               seasons={seasons}
               tournaments={tournaments}
               matches={matches}
+              seasonRosters={seasonRosters}
               status={status}
             />
           }

@@ -426,6 +426,113 @@
     ]
   },
   {
+    "GameID": 20040217,
+    "Date": 1076976000000,
+    "OpponentID": "ga-providence-christian-school-savannah",
+    "Opponent": "Providence Christian School",
+    "LocationType": "Away",
+    "GameType": "Non-Region",
+    "Result": "W",
+    "TeamScore": 78,
+    "OpponentScore": 24,
+    "Season": 2003,
+    "IsComplete": "Yes",
+    "ResultMargin": 54,
+    "RecapTitle": "Four Saints Score in Double Figures Against Providence Christian",
+    "Recap": "Four players scored in double figures as St. Andrew's defeated Providence Christian 78-24 on the road. Grace Wilkowski led the Saints with 22 points, Mary Wilkowski added 15, Becca Cooper scored 12, and Jennifer Moesch had 11. Rose Wilkowski added 8, Carie Bugos and Miller scored 3 apiece, and Hinchey and Aimone each added 2. St. Andrew's led 42-9 at halftime and improved to 19-3.",
+    "RecapImages": [
+      {
+        "src": "/images/girls/basketball/seasons/2003-04/providence-christian-2004-02-17-clipping.png",
+        "alt": "Newspaper clipping for St. Andrew's 78, Providence Christian 24 on Feb. 17, 2004",
+        "caption": "Newspaper clipping covering the Feb. 17, 2004 Providence Christian game."
+      }
+    ]
+  },
+  {
+    "GameID": 20040225,
+    "Date": 1077667200000,
+    "OpponentID": "sc-beaufort-academy-beaufort",
+    "Opponent": "Beaufort Academy",
+    "LocationType": "Neutral",
+    "GameType": "Region Tournament",
+    "Result": "W",
+    "TeamScore": 57,
+    "OpponentScore": 20,
+    "Season": 2003,
+    "IsComplete": "Yes",
+    "ResultMargin": 37,
+    "RecapTitle": "Grace Wilkowski Leads Saints Into Region Final",
+    "Recap": "Grace Wilkowski scored 20 points to lead St. Andrew's over Beaufort Academy 57-20 in the semifinal round of the SCISA Region 2-AA Tournament at Charleston Collegiate. Becca Cooper added 14 points, Jennifer Moesch scored 9, Carie Bugos and Mary Wilkowski had 6 apiece, and Hinchey added 2. St. Andrew's led 27-8 at halftime, improved to 20-3, and advanced to play Holly Hill Academy in the region final at Charleston Collegiate.",
+    "RecapImages": [
+      {
+        "src": "/images/girls/basketball/seasons/2003-04/beaufort-academy-2004-02-25-region-semifinal-clipping-1.png",
+        "alt": "Newspaper clipping for St. Andrew's 57, Beaufort Academy 20 on Feb. 25, 2004, part 1",
+        "caption": "Newspaper clipping covering the Feb. 25, 2004 Beaufort Academy region semifinal, part 1."
+      },
+      {
+        "src": "/images/girls/basketball/seasons/2003-04/beaufort-academy-2004-02-25-region-semifinal-clipping-2.png",
+        "alt": "Newspaper clipping for St. Andrew's 57, Beaufort Academy 20 on Feb. 25, 2004, part 2",
+        "caption": "Newspaper clipping covering the Feb. 25, 2004 Beaufort Academy region semifinal, part 2."
+      }
+    ]
+  },
+  {
+    "GameID": 20040227,
+    "Date": 1077840000000,
+    "OpponentID": "sc-holly-hill-academy-holly-hill",
+    "Opponent": "Holly Hill Academy",
+    "LocationType": "Neutral",
+    "GameType": "Region Tournament",
+    "Result": "L",
+    "TeamScore": 40,
+    "OpponentScore": 52,
+    "Season": 2003,
+    "IsComplete": "Yes",
+    "ResultMargin": -12,
+    "RecapTitle": "Saints Fall to Holly Hill in Region Championship",
+    "Recap": "Holly Hill defeated St. Andrew's 52-40 in the SCISA Region 2-AA championship game at Charleston Collegiate. Melissa Lockey scored a game-high 18 points for Holly Hill, while Jennifer Moesch and Grace Wilkowski scored 10 points apiece for the Saints. Mary Wilkowski added 9 points, Becca Cooper scored 8, and Carie Bugos had 3. Holly Hill led 28-22 at halftime, and St. Andrew's moved to 20-4 before beginning SCISA state tournament play in Sumter.",
+    "RecapImages": [
+      {
+        "src": "/images/girls/basketball/seasons/2003-04/holly-hill-2004-02-27-region-championship-clipping.png",
+        "alt": "Newspaper clipping for Holly Hill 52, St. Andrew's 40 on Feb. 27, 2004",
+        "caption": "Newspaper clipping covering the Feb. 27, 2004 SCISA Region 2-AA championship game against Holly Hill."
+      }
+    ]
+  },
+  {
+    "GameID": 20040303,
+    "Date": 1078272000000,
+    "OpponentID": "sc-greenwood-christian-school-greenwood",
+    "Opponent": "Greenwood Christian School",
+    "LocationType": "Neutral",
+    "GameType": "State Tournament",
+    "Result": "W",
+    "TeamScore": 64,
+    "OpponentScore": 34,
+    "Season": 2003,
+    "IsComplete": "Yes",
+    "ResultMargin": 30,
+    "RecapTitle": "Saints Advance Past Greenwood Christian in State Quarterfinal",
+    "Recap": "Grace Wilkowski scored 23 points, pulled down eight rebounds and had four assists as St. Andrew's defeated Greenwood Christian 64-34 in a SCISA State Class AA quarterfinal at the Sumter County Exhibition Center. Becca Cooper added 15 points and 16 rebounds for the Saints, the defending SCISA Class AA champions. Jennifer Moesch scored 14, and Mary Wilkowski put in 12. St. Andrew's led 38-15 at halftime, improved to 21-4, and advanced to face Pee Dee Academy in the state semifinal."
+  },
+  {
+    "GameID": 20040305,
+    "Date": 1078444800000,
+    "OpponentID": "sc-pee-dee-academy-mullins",
+    "Opponent": "Pee Dee Academy",
+    "LocationType": "Neutral",
+    "GameType": "State Tournament",
+    "Result": "L",
+    "TeamScore": 57,
+    "OpponentScore": 69,
+    "Season": 2003,
+    "IsComplete": "Yes",
+    "ResultMargin": -12,
+    "RecapTitle": "St. Andrew's Girls Fall in Semifinal",
+    "Recap": "St. Andrew's saw its hopes of defending the SCISAA Class AA title come to a disappointing end with a 69-57 loss to a powerful Pee Dee Academy squad in the SCISAA semifinals at the Sumter County Exhibition Center on Friday.\n\nThe Saints, who finished the season 21-5, fell behind 7-0 in the early minutes, and to make matters worse, starting forward Mary Wilkowski picked up a pair of fouls in the first two minutes.\n\n\"We did not get off to the kind of start you want,\" said St. Andrew's coach Kevin Kunst. \"It took us a little while to adjust to their pressure, and then Mary, who averages 12 points and 12 rebounds for us, picked up those two fouls, and that made it even tougher.\"\n\nAfter Pee Dee got off to their 7-0 lead, a bucket and a pair of free throws by Grace Wilkowski pulled the Saints to within 7-4. But Pee Dee went on a 13-6 run to claim a 20-10 lead by the time the first quarter ended.\n\n\"We made some adjustments to their press, and actually forced then to get out of it,\" Kunst said. \"That helped us get back in the game.\"\n\nPee Dee stretched its lead to 31-20 with three minutes left in the second quarter before the Saints used a 3-pointer by Jennifer Moesch and a pair of free throws by Maggie Hinchey to trim the margin to 31-25. The quarter ended with Pee Dee's Anne Hunter, who scored 17 points in the half, putting an offensive rebound back in that allowed the Eagles to take a 35-27 lead into the locker room.\n\nPee Dee built its lead up to 17 points in the middle of the third quarter, but the Saints went on a 10-4 run at the end of the third quarter to pull within 42-31. A trey by Carie Bogus got St. Andrew's to within 61-51 with 2:40 left, and Moesch hit a trey with 40 seconds remaining to cut the lead to 66-57, the only time in the second half the Saints managed to reduce Pee Dee's lead to single digits. But the Eagles, who will take a 29-1 record into today's title game, put the game away at the foul line.\n\nKunst had a lot of praise for his four seniors, Moesch, Bogus, Becca Cooper, and Leigh Anne Evans.\n\n\"Our four seniors have meant a tremendous amount to our school's athletic program,\" said Kunst. \"They won a state championship last year, and the only thing they did not achieve this season was defending their state title.\"\n\nPEE DEE ACADEMY (69)\n\nAnne Hunter 24, Bridgett Elvington 17, Katy Padgett 11, Meg McMillan 10, Anderson 7.\n\nST. ANDREW'S (57)\n\nJennifer Moesch 10, M. Wilkowski 9, Grace Wilkowski 17, Cooper 8, Hinchey 4, Miller 3, Bogus 3, Evans 3.\n\nHalftime-PDA, 35-27. Records-SA 21-5, PDA 29-1.\n\nSource: Savannah Morning News, March 6, 2004.",
+    "RecapSource": "Savannah Morning News, March 6, 2004"
+  },
+  {
     "GameID": 20061118,
     "Date": 1163808000000,
     "OpponentID": "ga-david-emanuel-academy-stillmore",

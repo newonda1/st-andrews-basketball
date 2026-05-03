@@ -1,0 +1,64 @@
+[
+  {
+    "SeasonID": 2004,
+    "SeasonLabel": "Spring 2004",
+    "Source": "Recovered 2004 golf match reports from Mar. 3, Mar. 18, Mar. 25, and Mar. 26",
+    "Players": [
+      {
+        "PlayerID": 200411,
+        "PlayerName": "Kevin Kicklighter",
+        "Gender": "Boys"
+      },
+      {
+        "PlayerID": 200412,
+        "PlayerName": "Zach Inbrogno",
+        "Gender": "Boys"
+      },
+      {
+        "PlayerID": 200413,
+        "PlayerName": "Ryan Ramsey",
+        "Gender": "Boys"
+      },
+      {
+        "PlayerID": 200414,
+        "PlayerName": "Brock Prescott",
+        "Gender": "Boys"
+      },
+      {
+        "PlayerID": 200208,
+        "PlayerName": "Josh Smith",
+        "Gender": "Boys"
+      },
+      {
+        "PlayerID": 200417,
+        "PlayerName": "Drew Aimone",
+        "Gender": "Boys"
+      },
+      {
+        "PlayerID": 200003,
+        "PlayerName": "Davy Clay",
+        "Gender": "Boys"
+      },
+      {
+        "PlayerID": 200419,
+        "PlayerName": "Steve Carbone",
+        "Gender": "Boys"
+      },
+      {
+        "PlayerID": 200415,
+        "PlayerName": "Logan Ferrelle",
+        "Gender": "Girls"
+      },
+      {
+        "PlayerID": 200416,
+        "PlayerName": "Christine Spain",
+        "Gender": "Girls"
+      },
+      {
+        "PlayerID": 200418,
+        "PlayerName": "Samantha Long",
+        "Gender": "Girls"
+      }
+    ]
+  }
+]

@@ -8,11 +8,6 @@
         "Grade": 9
       },
       {
-        "PlayerID": 200603,
-        "JerseyNumber": null,
-        "Grade": 10
-      },
-      {
         "PlayerID": 200402,
         "JerseyNumber": null,
         "Grade": 12
@@ -56,6 +51,16 @@
         "PlayerID": 200410,
         "JerseyNumber": null,
         "Grade": null
+      },
+      {
+        "PlayerID": 200422,
+        "JerseyNumber": null,
+        "Grade": 8
+      },
+      {
+        "PlayerID": 200603,
+        "JerseyNumber": null,
+        "Grade": 10
       }
     ]
   },

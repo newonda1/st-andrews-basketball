@@ -1,0 +1,43 @@
+[
+  {
+    "SeasonID": 2004,
+    "DisplaySeason": "Spring 2004",
+    "SourceSeasonLabel": "Spring 2004",
+    "TeamLevel": "Varsity",
+    "TeamName": "St. Andrew's Lions",
+    "HeadCoach": "",
+    "League": "SCISA 2-AA",
+    "Division": "SCISA 2-AA",
+    "OverallRecord": "6-2",
+    "OverallWins": 6,
+    "OverallLosses": 2,
+    "OverallTies": 0,
+    "RegionRecord": "1-0",
+    "RegionWins": 1,
+    "RegionLosses": 0,
+    "RegionTies": 0,
+    "HomeWins": null,
+    "HomeLosses": null,
+    "HomeTies": null,
+    "AwayWins": null,
+    "AwayLosses": null,
+    "AwayTies": null,
+    "PointsFor": 25,
+    "PointsAgainst": 12,
+    "SeasonResult": "St. Andrew's followed a third-place finish in the 16-team Cavalier Classic with two wins in the Kelme Tournament of Champions, and the recovered archive currently has the Lions at 6-2.",
+    "StatusNote": "Archive build in progress. The season currently includes the March 9 Frederica Academy match, the March 11 SCISA 2-AA region win over Colleton Prep, four Cavalier Classic games from March 19-20, and two Kelme Tournament of Champions games from March 27.",
+    "HistoricalSummary": [
+      "The Spring 2004 girls soccer archive currently begins with a March 9 match against Frederica Academy and a March 11 region match against Colleton Prep. Frederica won the opener 4-0, then St. Andrew's answered with a 9-0 SCISA 2-AA region win over Colleton Prep.",
+      "St. Andrew's then posted consecutive shutouts at the Cavalier Classic at Mount De Sales High School in Macon, beating Dominion Christian 2-0 and First Presbyterian Day 1-0. Jennifer Moesch scored all three Cavalier Classic goals listed in the March 20 report, and Mary Wilkowski made 13 saves across the two wins.",
+      "On March 20, St. Andrew's lost 5-0 to Frederica Academy in the Cavalier Classic semifinal, then defeated Fellowship Christian 3-2 in the third-place game. The Lions placed third out of 16 teams, and Jennifer Moesch and Mary Wilkowski were named to the all-tournament team.",
+      "St. Andrew's added two March 27 wins in the Kelme Tournament of Champions, defeating Kings Academy 6-0 and Trinity Collegiate 4-1. Jennifer Moesch scored five goals across the two games, while Mary Wilkowski made five saves."
+    ],
+    "HighlightNotes": [
+      "Jennifer Moesch scored four goals in a 9-0 region win over Colleton Prep.",
+      "Jennifer Moesch scored three goals across Cavalier Classic wins over Dominion Christian and First Presbyterian Day.",
+      "Jennifer Moesch scored twice and Leighanne Evans scored once in the Cavalier Classic third-place game.",
+      "Jennifer Moesch scored three goals in a 4-1 Kelme Tournament of Champions win over Trinity Collegiate.",
+      "Jennifer Moesch and Mary Wilkowski were named to the Cavalier Classic all-tournament team."
+    ]
+  }
+]

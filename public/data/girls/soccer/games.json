@@ -1,0 +1,494 @@
+[
+  {
+    "GameID": 20040309,
+    "Season": 2004,
+    "SeasonID": 2004,
+    "DisplaySeason": "Spring 2004",
+    "SourceSeasonLabel": "Spring 2004",
+    "Date": "2004-03-09",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-girls-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Frederica Academy",
+    "OpponentLocation": "St. Simons Island, GA",
+    "OpponentSlug": "frederica-academy",
+    "OpponentUrl": "",
+    "OpponentID": "ga-frederica-academy-st-simons-island",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "Notes": "Published brief did not identify whether the game was home or away.",
+    "GameType": "Non-Region",
+    "Result": "L",
+    "TeamScore": 0,
+    "OpponentScore": 4,
+    "RecapTitle": "Frederica Academy shuts out St. Andrew's in season opener",
+    "Recap": "Frederica Academy defeated St. Andrew's 4-0 in the first published game of the Spring 2004 girls soccer season. Becca Candler scored twice for Frederica, while Paige Day and Jennifer Brian added goals. Day also recorded an assist.\n\nMary Wilkowski kept St. Andrew's in the match with nine saves. Frederica goalkeeper Shalene Cutia made four saves as the Knights opened 1-0 and St. Andrew's moved to 0-1.",
+    "SourceCitation": "Girls' Soccer game brief",
+    "SourcePublication": "",
+    "SourceDate": "2004-03-09",
+    "GoalScorers": [
+      {
+        "Team": "Frederica Academy",
+        "PlayerName": "Becca Candler",
+        "Goals": 2
+      },
+      {
+        "Team": "Frederica Academy",
+        "PlayerName": "Paige Day",
+        "Goals": 1
+      },
+      {
+        "Team": "Frederica Academy",
+        "PlayerName": "Jennifer Brian",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "Frederica Academy",
+        "PlayerName": "Paige Day",
+        "Assists": 1
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "Frederica Academy",
+        "PlayerName": "Shalene Cutia",
+        "Saves": 4
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200401,
+        "PlayerName": "Mary Wilkowski",
+        "Saves": 9
+      }
+    ],
+    "RecordNote": "Records: Frederica Academy 1-0, St. Andrew's 0-1"
+  },
+  {
+    "GameID": 20040311,
+    "Season": 2004,
+    "SeasonID": 2004,
+    "DisplaySeason": "Spring 2004",
+    "SourceSeasonLabel": "Spring 2004",
+    "Date": "2004-03-11",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-girls-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Colleton Prep",
+    "OpponentLocation": "Walterboro, SC",
+    "OpponentSlug": "colleton-prep",
+    "OpponentUrl": "",
+    "OpponentID": "sc-colleton-prep-academy-walterboro",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "Notes": "Published brief did not identify whether the game was home or away. The published scoring line accounts for eight of St. Andrew's nine goals.",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 9,
+    "OpponentScore": 0,
+    "RecapTitle": "St. Andrew's opens region play with shutout of Colleton Prep",
+    "Recap": "St. Andrew's defeated Colleton Prep 9-0 in a SCISA 2-AA region match on March 11, 2004. Jennifer Moesch scored four goals, while Megan Johnson, Maggie Hinchey, Emily Dunn, and Becca Timms also scored. The published scoring line accounts for eight of St. Andrew's nine goals.\n\nLeighanne Evans supplied three assists, and Emily Aimone added one. Mary Wilkowski made two saves for the shutout as St. Andrew's improved to 1-1 overall and 1-0 in region play.",
+    "SourceCitation": "Girls' Soccer game brief",
+    "SourcePublication": "",
+    "SourceDate": "2004-03-11",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200419,
+        "PlayerName": "Megan Johnson",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200403,
+        "PlayerName": "Maggie Hinchey",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200420,
+        "PlayerName": "Emily Dunn",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200421,
+        "PlayerName": "Becca Timms",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200402,
+        "PlayerName": "Jennifer Moesch",
+        "Goals": 4
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200405,
+        "PlayerName": "Leighanne Evans",
+        "Assists": 3
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200409,
+        "PlayerName": "Emily Aimone",
+        "Assists": 1
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200401,
+        "PlayerName": "Mary Wilkowski",
+        "Saves": 2
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 1-1, 1-0 Region SCISA 2-AA"
+  },
+  {
+    "GameID": 2004031901,
+    "Season": 2004,
+    "SeasonID": 2004,
+    "DisplaySeason": "Spring 2004",
+    "SourceSeasonLabel": "Spring 2004",
+    "Date": "2004-03-19",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-girls-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Dominion Christian",
+    "OpponentLocation": "Marietta, GA",
+    "OpponentSlug": "dominion-christian",
+    "OpponentUrl": "",
+    "OpponentID": "ga-dominion-christian-academy-marietta",
+    "GameUrl": "",
+    "LocationType": "Neutral",
+    "Venue": "Mount De Sales High School, Macon",
+    "Tournament": "Cavalier Classic",
+    "Notes": "Cavalier Classic at Mount De Sales High School in Macon. Reported in the March 20, 2004 Savannah Morning News.",
+    "GameType": "Tournament",
+    "Result": "W",
+    "TeamScore": 2,
+    "OpponentScore": 0,
+    "RecapTitle": "Moesch scores twice as St. Andrew's shuts out Dominion Christian",
+    "Recap": "St. Andrew's defeated Dominion Christian 2-0 at the Cavalier Classic at Mount De Sales High School in Macon. Jennifer Moesch scored both goals for St. Andrew's, Leighanne Evans added an assist, and Mary Wilkowski made three saves in the shutout.\n\nThe result moved St. Andrew's to 2-1, while Dominion Christian fell to 2-2.",
+    "SourceCitation": "Savannah Morning News, March 20, 2004",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "2004-03-20",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200402,
+        "PlayerName": "Jennifer Moesch",
+        "Goals": 2
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200405,
+        "PlayerName": "Leighanne Evans",
+        "Assists": 1
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200401,
+        "PlayerName": "Mary Wilkowski",
+        "Saves": 3
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 2-1, Dominion Christian 2-2"
+  },
+  {
+    "GameID": 20040319,
+    "Season": 2004,
+    "SeasonID": 2004,
+    "DisplaySeason": "Spring 2004",
+    "SourceSeasonLabel": "Spring 2004",
+    "Date": "2004-03-19",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-girls-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "First Presbyterian Day",
+    "OpponentLocation": "Macon, GA",
+    "OpponentSlug": "first-presbyterian-day",
+    "OpponentUrl": "",
+    "OpponentID": "ga-first-presbyterian-day-school-macon",
+    "GameUrl": "",
+    "LocationType": "Neutral",
+    "Venue": "Mount De Sales High School, Macon",
+    "Tournament": "Cavalier Classic",
+    "Notes": "Cavalier Classic at Mount De Sales High School in Macon. Date assigned from the March 20, 2004 Savannah Morning News report sequence.",
+    "GameType": "Tournament",
+    "Result": "W",
+    "TeamScore": 1,
+    "OpponentScore": 0,
+    "RecapTitle": "Moesch goal sends St. Andrew's past First Presbyterian Day",
+    "Recap": "St. Andrew's defeated First Presbyterian Day 1-0 at the Cavalier Classic at Mount De Sales High School in Macon. Jennifer Moesch scored the game's only goal, and Mary Wilkowski made 10 saves for another shutout.\n\nThe win improved St. Andrew's to 3-1 and handed First Presbyterian Day its first listed loss at 4-1.",
+    "SourceCitation": "Savannah Morning News, March 20, 2004",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "2004-03-20",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200402,
+        "PlayerName": "Jennifer Moesch",
+        "Goals": 1
+      }
+    ],
+    "Assists": [],
+    "Saves": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200401,
+        "PlayerName": "Mary Wilkowski",
+        "Saves": 10
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 3-1, First Presbyterian Day 4-1"
+  },
+  {
+    "GameID": 20040320,
+    "Season": 2004,
+    "SeasonID": 2004,
+    "DisplaySeason": "Spring 2004",
+    "SourceSeasonLabel": "Spring 2004",
+    "Date": "2004-03-20",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-girls-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Frederica Academy",
+    "OpponentLocation": "St. Simons Island, GA",
+    "OpponentSlug": "frederica-academy",
+    "OpponentUrl": "",
+    "OpponentID": "ga-frederica-academy-st-simons-island",
+    "GameUrl": "",
+    "LocationType": "Neutral",
+    "Venue": "Mount De Sales High School, Macon",
+    "Tournament": "Cavalier Classic",
+    "Notes": "Mount DeSales Cavalier Classic semifinal at Macon.",
+    "GameType": "Tournament",
+    "Result": "L",
+    "TeamScore": 0,
+    "OpponentScore": 5,
+    "RecapTitle": "Frederica Academy tops St. Andrew's in Cavalier Classic semifinal",
+    "Recap": "Frederica Academy defeated St. Andrew's 5-0 in the Cavalier Classic semifinal at Mount De Sales High School in Macon.\n\nThe March 21 report listed only the final score from the semifinal.",
+    "SourceCitation": "Savannah Morning News, March 21, 2004",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "2004-03-21",
+    "GoalScorers": [],
+    "Assists": [],
+    "Saves": [],
+    "RecordNote": ""
+  },
+  {
+    "GameID": 2004032001,
+    "Season": 2004,
+    "SeasonID": 2004,
+    "DisplaySeason": "Spring 2004",
+    "SourceSeasonLabel": "Spring 2004",
+    "Date": "2004-03-20",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-girls-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Fellowship Christian",
+    "OpponentLocation": "Macon, GA",
+    "OpponentSlug": "fellowship-christian",
+    "OpponentUrl": "",
+    "OpponentID": "ga-central-fellowship-christian-academy-macon",
+    "GameUrl": "",
+    "LocationType": "Neutral",
+    "Venue": "Mount De Sales High School, Macon",
+    "Tournament": "Cavalier Classic",
+    "Notes": "St. Andrew's placed third out of the 16 teams competing in the GISA tournament. Jennifer Moesch and Mary Wilkowski were named to the all-tournament team.",
+    "GameType": "Tournament",
+    "Result": "W",
+    "TeamScore": 3,
+    "OpponentScore": 2,
+    "RecapTitle": "St. Andrew's edges Fellowship Christian for third place",
+    "Recap": "St. Andrew's defeated Fellowship Christian 3-2 in the Cavalier Classic third-place game at Mount De Sales High School in Macon. Jennifer Moesch scored twice and Leighanne Evans added a goal for St. Andrew's.\n\nMary Wilkowski made eight saves for St. Andrew's, while Fellowship Christian goalkeeper Jennifer Wilson made five saves. The March 21 report listed St. Andrew's record at 5-2.\n\nSt. Andrew's placed third out of the 16 teams competing in the GISA tournament. Jennifer Moesch and Mary Wilkowski were named to the all-tournament team.",
+    "SourceCitation": "Savannah Morning News, March 21, 2004",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "2004-03-21",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200402,
+        "PlayerName": "Jennifer Moesch",
+        "Goals": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200405,
+        "PlayerName": "Leighanne Evans",
+        "Goals": 1
+      }
+    ],
+    "Assists": [],
+    "Saves": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200401,
+        "PlayerName": "Mary Wilkowski",
+        "Saves": 8
+      },
+      {
+        "Team": "Fellowship Christian",
+        "PlayerName": "Jennifer Wilson",
+        "Saves": 5
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 5-2"
+  },
+  {
+    "GameID": 20040327,
+    "Season": 2004,
+    "SeasonID": 2004,
+    "DisplaySeason": "Spring 2004",
+    "SourceSeasonLabel": "Spring 2004",
+    "Date": "2004-03-27",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-girls-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Kings Academy",
+    "OpponentLocation": "Florence, SC",
+    "OpponentSlug": "kings-academy",
+    "OpponentUrl": "",
+    "OpponentID": "sc-king-s-academy-florence",
+    "GameUrl": "",
+    "LocationType": "Neutral",
+    "Venue": "",
+    "Tournament": "Kelme Tournament of Champions",
+    "Notes": "Kelme Tournament of Champions.",
+    "GameType": "Tournament",
+    "Result": "W",
+    "TeamScore": 6,
+    "OpponentScore": 0,
+    "RecapTitle": "St. Andrew's shuts out Kings Academy in Kelme Tournament",
+    "Recap": "St. Andrew's defeated Kings Academy 6-0 in the Kelme Tournament of Champions. Jennifer Moesch and Becca Timms scored two goals apiece, while Maggie Hinchey and Leighanne Evans added one goal each.\n\nMoesch also recorded an assist, and Mary Wilkowski made two saves for St. Andrew's.",
+    "SourceCitation": "Savannah Morning News",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200402,
+        "PlayerName": "Jennifer Moesch",
+        "Goals": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200421,
+        "PlayerName": "Becca Timms",
+        "Goals": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200403,
+        "PlayerName": "Maggie Hinchey",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200405,
+        "PlayerName": "Leighanne Evans",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200402,
+        "PlayerName": "Jennifer Moesch",
+        "Assists": 1
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200401,
+        "PlayerName": "Mary Wilkowski",
+        "Saves": 2
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 5-2"
+  },
+  {
+    "GameID": 2004032701,
+    "Season": 2004,
+    "SeasonID": 2004,
+    "DisplaySeason": "Spring 2004",
+    "SourceSeasonLabel": "Spring 2004",
+    "Date": "2004-03-27",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-girls-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Trinity Collegiate",
+    "OpponentLocation": "Darlington, SC",
+    "OpponentSlug": "trinity-collegiate",
+    "OpponentUrl": "",
+    "OpponentID": "sc-trinity-collegiate-darlington",
+    "GameUrl": "",
+    "LocationType": "Neutral",
+    "Venue": "",
+    "Tournament": "Kelme Tournament of Champions",
+    "Notes": "Kelme Tournament of Champions.",
+    "GameType": "Tournament",
+    "Result": "W",
+    "TeamScore": 4,
+    "OpponentScore": 1,
+    "RecapTitle": "Moesch hat trick leads St. Andrew's past Trinity Collegiate",
+    "Recap": "St. Andrew's defeated Trinity Collegiate 4-1 in the Kelme Tournament of Champions. Jennifer Moesch scored three goals and Maggie Hinchey added one for St. Andrew's, while Alyssa Pignone scored for Trinity Collegiate.\n\nHinchey and Grace Wilkowski recorded assists for St. Andrew's, and Mary Wilkowski made three saves.",
+    "SourceCitation": "Savannah Morning News",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200403,
+        "PlayerName": "Maggie Hinchey",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200402,
+        "PlayerName": "Jennifer Moesch",
+        "Goals": 3
+      },
+      {
+        "Team": "Trinity Collegiate",
+        "PlayerName": "Alyssa Pignone",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200403,
+        "PlayerName": "Maggie Hinchey",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200603,
+        "PlayerName": "Grace Wilkowski",
+        "Assists": 1
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200401,
+        "PlayerName": "Mary Wilkowski",
+        "Saves": 3
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 6-2"
+  }
+]

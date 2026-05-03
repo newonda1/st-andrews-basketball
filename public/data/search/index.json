@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-03T12:39:43.539Z",
-  "itemCount": 1493,
+  "generatedAt": "2026-05-03T16:03:30.567Z",
+  "itemCount": 1539,
   "items": [
     {
       "id": "athletics-home",
@@ -750,13 +750,207 @@
       "title": "Girls Soccer",
       "subtitle": "St. Andrew's team home",
       "to": "/athletics/girls/soccer",
+      "featured": true,
       "keywords": [
         "girls",
         "soccer",
         "team",
         "program",
         "home",
-        "coming soon"
+        "archive",
+        "results"
+      ]
+    },
+    {
+      "id": "girls-soccer-yearly-results",
+      "type": "page",
+      "title": "Full Year-by-Year Results",
+      "subtitle": "Girls Soccer",
+      "to": "/athletics/girls/soccer/yearly-results",
+      "keywords": [
+        "girls",
+        "soccer",
+        "season",
+        "results",
+        "yearly",
+        "history"
+      ]
+    },
+    {
+      "id": "girls-soccer-2004-season",
+      "type": "page",
+      "title": "Spring 2004 Season",
+      "subtitle": "Girls Soccer",
+      "to": "/athletics/girls/soccer/seasons/2004",
+      "keywords": [
+        "girls",
+        "soccer",
+        "2004",
+        "spring",
+        "season",
+        "schedule",
+        "roster"
+      ]
+    },
+    {
+      "id": "girls-soccer-20040309-game",
+      "type": "page",
+      "title": "Frederica Academy 4, St. Andrew's 0",
+      "subtitle": "Girls Soccer",
+      "to": "/athletics/girls/soccer/games/20040309",
+      "keywords": [
+        "girls",
+        "soccer",
+        "2004",
+        "frederica",
+        "frederica academy",
+        "mary wilkowski",
+        "saves",
+        "game",
+        "result"
+      ]
+    },
+    {
+      "id": "girls-soccer-20040311-game",
+      "type": "page",
+      "title": "St. Andrew's 9, Colleton Prep 0",
+      "subtitle": "Girls Soccer",
+      "to": "/athletics/girls/soccer/games/20040311",
+      "keywords": [
+        "girls",
+        "soccer",
+        "2004",
+        "colleton",
+        "colleton prep",
+        "region",
+        "scisa 2-aa",
+        "jennifer moesch",
+        "mary wilkowski",
+        "game",
+        "result"
+      ]
+    },
+    {
+      "id": "girls-soccer-2004031901-game",
+      "type": "page",
+      "title": "St. Andrew's 2, Dominion Christian 0",
+      "subtitle": "Girls Soccer",
+      "to": "/athletics/girls/soccer/games/2004031901",
+      "keywords": [
+        "girls",
+        "soccer",
+        "2004",
+        "dominion christian",
+        "cavalier classic",
+        "mount de sales",
+        "jennifer moesch",
+        "mary wilkowski",
+        "game",
+        "result"
+      ]
+    },
+    {
+      "id": "girls-soccer-20040319-game",
+      "type": "page",
+      "title": "St. Andrew's 1, First Presbyterian Day 0",
+      "subtitle": "Girls Soccer",
+      "to": "/athletics/girls/soccer/games/20040319",
+      "keywords": [
+        "girls",
+        "soccer",
+        "2004",
+        "first presbyterian day",
+        "fpd",
+        "cavalier classic",
+        "mount de sales",
+        "jennifer moesch",
+        "mary wilkowski",
+        "game",
+        "result"
+      ]
+    },
+    {
+      "id": "girls-soccer-20040320-game",
+      "type": "page",
+      "title": "Frederica Academy 5, St. Andrew's 0",
+      "subtitle": "Girls Soccer",
+      "to": "/athletics/girls/soccer/games/20040320",
+      "keywords": [
+        "girls",
+        "soccer",
+        "2004",
+        "frederica academy",
+        "cavalier classic",
+        "mount de sales",
+        "semifinal",
+        "game",
+        "result"
+      ]
+    },
+    {
+      "id": "girls-soccer-2004032001-game",
+      "type": "page",
+      "title": "St. Andrew's 3, Fellowship Christian 2",
+      "subtitle": "Girls Soccer",
+      "to": "/athletics/girls/soccer/games/2004032001",
+      "keywords": [
+        "girls",
+        "soccer",
+        "2004",
+        "fellowship christian",
+        "central fellowship christian",
+        "cavalier classic",
+        "mount de sales",
+        "third place",
+        "jennifer moesch",
+        "leighanne evans",
+        "mary wilkowski",
+        "all-tournament",
+        "game",
+        "result"
+      ]
+    },
+    {
+      "id": "girls-soccer-20040327-game",
+      "type": "page",
+      "title": "St. Andrew's 6, Kings Academy 0",
+      "subtitle": "Girls Soccer",
+      "to": "/athletics/girls/soccer/games/20040327",
+      "keywords": [
+        "girls",
+        "soccer",
+        "2004",
+        "kings academy",
+        "king's academy",
+        "kelme tournament of champions",
+        "jennifer moesch",
+        "becca timms",
+        "maggie hinchey",
+        "leighanne evans",
+        "mary wilkowski",
+        "game",
+        "result"
+      ]
+    },
+    {
+      "id": "girls-soccer-2004032701-game",
+      "type": "page",
+      "title": "St. Andrew's 4, Trinity Collegiate 1",
+      "subtitle": "Girls Soccer",
+      "to": "/athletics/girls/soccer/games/2004032701",
+      "keywords": [
+        "girls",
+        "soccer",
+        "2004",
+        "trinity collegiate",
+        "kelme tournament of champions",
+        "jennifer moesch",
+        "maggie hinchey",
+        "grace wilkowski",
+        "mary wilkowski",
+        "alyssa pignone",
+        "game",
+        "result"
       ]
     },
     {
@@ -765,13 +959,109 @@
       "title": "Boys Soccer",
       "subtitle": "St. Andrew's team home",
       "to": "/athletics/boys/soccer",
+      "featured": true,
       "keywords": [
         "boys",
         "soccer",
         "team",
         "program",
         "home",
-        "coming soon"
+        "archive",
+        "results"
+      ]
+    },
+    {
+      "id": "boys-soccer-yearly-results",
+      "type": "page",
+      "title": "Full Year-by-Year Results",
+      "subtitle": "Boys Soccer",
+      "to": "/athletics/boys/soccer/yearly-results",
+      "keywords": [
+        "boys",
+        "soccer",
+        "season",
+        "results",
+        "yearly",
+        "history"
+      ]
+    },
+    {
+      "id": "boys-soccer-2004-season",
+      "type": "page",
+      "title": "Spring 2004 Season",
+      "subtitle": "Boys Soccer",
+      "to": "/athletics/boys/soccer/seasons/2004",
+      "keywords": [
+        "boys",
+        "soccer",
+        "2004",
+        "spring",
+        "season",
+        "schedule",
+        "roster"
+      ]
+    },
+    {
+      "id": "boys-soccer-20040322-game",
+      "type": "page",
+      "title": "St. Andrew's 4, Cathedral Academy 1",
+      "subtitle": "Boys Soccer",
+      "to": "/athletics/boys/soccer/games/20040322",
+      "keywords": [
+        "boys",
+        "soccer",
+        "2004",
+        "cathedral",
+        "cathedral academy",
+        "region",
+        "scisa 2-aa",
+        "will massey",
+        "hamish huntley",
+        "beau hinton",
+        "emett eason",
+        "game",
+        "result"
+      ]
+    },
+    {
+      "id": "boys-soccer-20040323-game",
+      "type": "page",
+      "title": "St. Andrew's 13, Charleston Collegiate 0",
+      "subtitle": "Boys Soccer",
+      "to": "/athletics/boys/soccer/games/20040323",
+      "keywords": [
+        "boys",
+        "soccer",
+        "2004",
+        "charleston collegiate",
+        "region",
+        "scisa 2-aa",
+        "beau hinton",
+        "omar glenn",
+        "hamish huntley",
+        "danny eichholz",
+        "will massey",
+        "jacob rauers",
+        "freddy presutto",
+        "graham rossell",
+        "martin sullivan",
+        "game",
+        "result"
+      ]
+    },
+    {
+      "id": "boys-soccer-opponent-history",
+      "type": "page",
+      "title": "Opponent Game History",
+      "subtitle": "Boys Soccer",
+      "to": "/athletics/boys/soccer/records/opponents",
+      "keywords": [
+        "boys",
+        "soccer",
+        "opponents",
+        "records",
+        "history",
+        "game"
       ]
     },
     {
@@ -8890,25 +9180,6 @@
       ]
     },
     {
-      "id": "girls-basketball-athlete-200603",
-      "type": "athlete",
-      "title": "Grace Wilkowski",
-      "subtitle": "Girls Basketball athlete - Class of 2006",
-      "to": "/athletics/girls/basketball/players/200603",
-      "keywords": [
-        "Girls Basketball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Grace",
-        "Wilkowski",
-        "Wilkowski Grace",
-        "class of 2006",
-        "grad 2006"
-      ]
-    },
-    {
       "id": "girls-basketball-athlete-200402",
       "type": "athlete",
       "title": "Jennifer Moesch",
@@ -8930,7 +9201,7 @@
     {
       "id": "girls-basketball-athlete-200403",
       "type": "athlete",
-      "title": "Hinchey",
+      "title": "Maggie Hinchey",
       "subtitle": "Girls Basketball athlete",
       "to": "/athletics/girls/basketball/players/200403",
       "keywords": [
@@ -8939,7 +9210,9 @@
         "player",
         "stats",
         "records",
-        "Hinchey"
+        "Maggie",
+        "Hinchey",
+        "Hinchey Maggie"
       ]
     },
     {
@@ -8965,7 +9238,7 @@
       "id": "girls-basketball-athlete-200405",
       "type": "athlete",
       "title": "Leighanne Evans",
-      "subtitle": "Girls Basketball athlete",
+      "subtitle": "Girls Basketball athlete - Class of 2004",
       "to": "/athletics/girls/basketball/players/200405",
       "keywords": [
         "Girls Basketball",
@@ -8975,7 +9248,9 @@
         "records",
         "Leighanne",
         "Evans",
-        "Evans Leighanne"
+        "Evans Leighanne",
+        "class of 2004",
+        "grad 2004"
       ]
     },
     {
@@ -9034,7 +9309,7 @@
     {
       "id": "girls-basketball-athlete-200409",
       "type": "athlete",
-      "title": "Aimone",
+      "title": "Emily Aimone",
       "subtitle": "Girls Basketball athlete",
       "to": "/athletics/girls/basketball/players/200409",
       "keywords": [
@@ -9043,7 +9318,9 @@
         "player",
         "stats",
         "records",
-        "Aimone"
+        "Emily",
+        "Aimone",
+        "Aimone Emily"
       ]
     },
     {
@@ -9059,6 +9336,44 @@
         "stats",
         "records",
         "Miller"
+      ]
+    },
+    {
+      "id": "girls-basketball-athlete-200422",
+      "type": "athlete",
+      "title": "Rose Wilkowski",
+      "subtitle": "Girls Basketball athlete - Class of 2008",
+      "to": "/athletics/girls/basketball/players/200422",
+      "keywords": [
+        "Girls Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Rose",
+        "Wilkowski",
+        "Wilkowski Rose",
+        "class of 2008",
+        "grad 2008"
+      ]
+    },
+    {
+      "id": "girls-basketball-athlete-200603",
+      "type": "athlete",
+      "title": "Grace Wilkowski",
+      "subtitle": "Girls Basketball athlete - Class of 2006",
+      "to": "/athletics/girls/basketball/players/200603",
+      "keywords": [
+        "Girls Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Grace",
+        "Wilkowski",
+        "Wilkowski Grace",
+        "class of 2006",
+        "grad 2006"
       ]
     },
     {
@@ -18408,6 +18723,337 @@
       ]
     },
     {
+      "id": "girls-soccer-athlete-200401",
+      "type": "athlete",
+      "title": "Mary Wilkowski",
+      "subtitle": "Girls Soccer athlete - Class of 2007",
+      "to": "/athletics/girls/soccer/players/200401",
+      "keywords": [
+        "Girls Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Mary",
+        "Wilkowski",
+        "Wilkowski Mary",
+        "class of 2007",
+        "grad 2007"
+      ]
+    },
+    {
+      "id": "girls-soccer-athlete-200402",
+      "type": "athlete",
+      "title": "Jennifer Moesch",
+      "subtitle": "Girls Soccer athlete - Class of 2004",
+      "to": "/athletics/girls/soccer/players/200402",
+      "keywords": [
+        "Girls Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Jennifer",
+        "Moesch",
+        "Moesch Jennifer",
+        "class of 2004",
+        "grad 2004"
+      ]
+    },
+    {
+      "id": "girls-soccer-athlete-200403",
+      "type": "athlete",
+      "title": "Maggie Hinchey",
+      "subtitle": "Girls Soccer athlete",
+      "to": "/athletics/girls/soccer/players/200403",
+      "keywords": [
+        "Girls Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Maggie",
+        "Hinchey",
+        "Hinchey Maggie"
+      ]
+    },
+    {
+      "id": "girls-soccer-athlete-200405",
+      "type": "athlete",
+      "title": "Leighanne Evans",
+      "subtitle": "Girls Soccer athlete - Class of 2004",
+      "to": "/athletics/girls/soccer/players/200405",
+      "keywords": [
+        "Girls Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Leighanne",
+        "Evans",
+        "Evans Leighanne",
+        "class of 2004",
+        "grad 2004"
+      ]
+    },
+    {
+      "id": "girls-soccer-athlete-200603",
+      "type": "athlete",
+      "title": "Grace Wilkowski",
+      "subtitle": "Girls Soccer athlete - Class of 2006",
+      "to": "/athletics/girls/soccer/players/200603",
+      "keywords": [
+        "Girls Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Grace",
+        "Wilkowski",
+        "Wilkowski Grace",
+        "class of 2006",
+        "grad 2006"
+      ]
+    },
+    {
+      "id": "girls-soccer-athlete-200409",
+      "type": "athlete",
+      "title": "Emily Aimone",
+      "subtitle": "Girls Soccer athlete",
+      "to": "/athletics/girls/soccer/players/200409",
+      "keywords": [
+        "Girls Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Emily",
+        "Aimone",
+        "Aimone Emily"
+      ]
+    },
+    {
+      "id": "girls-soccer-athlete-200419",
+      "type": "athlete",
+      "title": "Steve Carbone",
+      "subtitle": "Girls Soccer athlete",
+      "to": "/athletics/girls/soccer/players/200419",
+      "keywords": [
+        "Girls Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Steve",
+        "Carbone",
+        "Carbone Steve"
+      ]
+    },
+    {
+      "id": "girls-soccer-athlete-200420",
+      "type": "athlete",
+      "title": "Emily Dunn",
+      "subtitle": "Girls Soccer athlete",
+      "to": "/athletics/girls/soccer/players/200420",
+      "keywords": [
+        "Girls Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Emily",
+        "Dunn",
+        "Dunn Emily"
+      ]
+    },
+    {
+      "id": "girls-soccer-athlete-200421",
+      "type": "athlete",
+      "title": "Becca Timms",
+      "subtitle": "Girls Soccer athlete",
+      "to": "/athletics/girls/soccer/players/200421",
+      "keywords": [
+        "Girls Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Becca",
+        "Timms",
+        "Timms Becca"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-200105",
+      "type": "athlete",
+      "title": "Will Massey",
+      "subtitle": "Boys Soccer athlete",
+      "to": "/athletics/boys/soccer/players/200105",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Will",
+        "Massey",
+        "Massey Will"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-200423",
+      "type": "athlete",
+      "title": "Hamish Huntley",
+      "subtitle": "Boys Soccer athlete",
+      "to": "/athletics/boys/soccer/players/200423",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Hamish",
+        "Huntley",
+        "Huntley Hamish"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-200307",
+      "type": "athlete",
+      "title": "Omer Glenn",
+      "subtitle": "Boys Soccer athlete",
+      "to": "/athletics/boys/soccer/players/200307",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Omer",
+        "Glenn",
+        "Glenn Omer"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-200203",
+      "type": "athlete",
+      "title": "Beau Hinton",
+      "subtitle": "Boys Soccer athlete",
+      "to": "/athletics/boys/soccer/players/200203",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Beau",
+        "Hinton",
+        "Hinton Beau"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-200313",
+      "type": "athlete",
+      "title": "Daniel Eschholz",
+      "subtitle": "Boys Soccer athlete",
+      "to": "/athletics/boys/soccer/players/200313",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Daniel",
+        "Eschholz",
+        "Eschholz Daniel"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-200207",
+      "type": "athlete",
+      "title": "Jacob Ravers",
+      "subtitle": "Boys Soccer athlete",
+      "to": "/athletics/boys/soccer/players/200207",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Jacob",
+        "Ravers",
+        "Ravers Jacob"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-200425",
+      "type": "athlete",
+      "title": "Freddy Presutto",
+      "subtitle": "Boys Soccer athlete",
+      "to": "/athletics/boys/soccer/players/200425",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Freddy",
+        "Presutto",
+        "Presutto Freddy"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-200426",
+      "type": "athlete",
+      "title": "Graham Rossell",
+      "subtitle": "Boys Soccer athlete",
+      "to": "/athletics/boys/soccer/players/200426",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Graham",
+        "Rossell",
+        "Rossell Graham"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-200427",
+      "type": "athlete",
+      "title": "Martin Sullivan",
+      "subtitle": "Boys Soccer athlete",
+      "to": "/athletics/boys/soccer/players/200427",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Martin",
+        "Sullivan",
+        "Sullivan Martin"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-200424",
+      "type": "athlete",
+      "title": "Emett Eason",
+      "subtitle": "Boys Soccer athlete",
+      "to": "/athletics/boys/soccer/players/200424",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Emett",
+        "Eason",
+        "Eason Emett"
+      ]
+    },
+    {
       "id": "volleyball-athlete-200401",
       "type": "athlete",
       "title": "Mary Wilkowski",
@@ -24369,6 +25015,43 @@
       ]
     },
     {
+      "id": "girls-basketball-team-greenwood-christian-school",
+      "type": "team",
+      "title": "Greenwood Christian School",
+      "subtitle": "Girls Basketball opponent history - Greenwood, SC",
+      "to": "/athletics/girls/basketball/records/opponents?team=Greenwood+Christian+School",
+      "keywords": [
+        "Girls Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Greenwood Christian School",
+        "Greenwood Christian",
+        "Hawks",
+        "Greenwood",
+        "SC"
+      ]
+    },
+    {
+      "id": "girls-basketball-team-pee-dee-academy",
+      "type": "team",
+      "title": "Pee Dee Academy",
+      "subtitle": "Girls Basketball opponent history - Mullins, SC",
+      "to": "/athletics/girls/basketball/records/opponents?team=Pee+Dee+Academy",
+      "keywords": [
+        "Girls Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Pee Dee Academy",
+        "Golden Eagles",
+        "Mullins",
+        "SC"
+      ]
+    },
+    {
       "id": "girls-basketball-team-david-emanuel-academy",
       "type": "team",
       "title": "David Emanuel Academy",
@@ -26417,6 +27100,173 @@
         "Warriors",
         "Jacksonville",
         "FL"
+      ]
+    },
+    {
+      "id": "girls-soccer-team-frederica-academy",
+      "type": "team",
+      "title": "Frederica Academy",
+      "subtitle": "Girls Soccer opponent history - St. Simons Island, GA",
+      "to": "/athletics/girls/soccer/records/opponents?team=Frederica+Academy",
+      "keywords": [
+        "Girls Soccer",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Frederica Academy",
+        "Frederica",
+        "Knights",
+        "St. Simons Island",
+        "GA"
+      ]
+    },
+    {
+      "id": "girls-soccer-team-colleton-prep-academy",
+      "type": "team",
+      "title": "Colleton Prep Academy",
+      "subtitle": "Girls Soccer opponent history - Walterboro, SC",
+      "to": "/athletics/girls/soccer/records/opponents?team=Colleton+Prep+Academy",
+      "keywords": [
+        "Girls Soccer",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Colleton Prep Academy",
+        "Colleton Prep",
+        "War Hawks",
+        "Walterboro",
+        "SC"
+      ]
+    },
+    {
+      "id": "girls-soccer-team-dominion-christian-academy",
+      "type": "team",
+      "title": "Dominion Christian Academy",
+      "subtitle": "Girls Soccer opponent history - Marietta, GA",
+      "to": "/athletics/girls/soccer/records/opponents?team=Dominion+Christian+Academy",
+      "keywords": [
+        "Girls Soccer",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Dominion Christian Academy",
+        "Dominion Christian",
+        "Knights",
+        "Marietta",
+        "GA"
+      ]
+    },
+    {
+      "id": "girls-soccer-team-first-presbyterian-day-school",
+      "type": "team",
+      "title": "First Presbyterian Day School",
+      "subtitle": "Girls Soccer opponent history - Macon, GA",
+      "to": "/athletics/girls/soccer/records/opponents?team=First+Presbyterian+Day+School",
+      "keywords": [
+        "Girls Soccer",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "First Presbyterian Day School",
+        "First Presbyterian Day",
+        "Macon",
+        "GA"
+      ]
+    },
+    {
+      "id": "girls-soccer-team-central-fellowship-christian-academy",
+      "type": "team",
+      "title": "Central Fellowship Christian Academy",
+      "subtitle": "Girls Soccer opponent history - Macon, GA",
+      "to": "/athletics/girls/soccer/records/opponents?team=Central+Fellowship+Christian+Academy",
+      "keywords": [
+        "Girls Soccer",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Central Fellowship Christian Academy",
+        "Fellowship Christian",
+        "Lancers",
+        "Macon",
+        "GA"
+      ]
+    },
+    {
+      "id": "girls-soccer-team-king-s-academy",
+      "type": "team",
+      "title": "King's Academy",
+      "subtitle": "Girls Soccer opponent history - Florence, SC",
+      "to": "/athletics/girls/soccer/records/opponents?team=King%27s+Academy",
+      "keywords": [
+        "Girls Soccer",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "King's Academy",
+        "Kings Academy",
+        "Lions",
+        "Florence",
+        "SC"
+      ]
+    },
+    {
+      "id": "girls-soccer-team-trinity-collegiate",
+      "type": "team",
+      "title": "Trinity Collegiate",
+      "subtitle": "Girls Soccer opponent history - Darlington, SC",
+      "to": "/athletics/girls/soccer/records/opponents?team=Trinity+Collegiate",
+      "keywords": [
+        "Girls Soccer",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Trinity Collegiate",
+        "Titans",
+        "Darlington",
+        "SC"
+      ]
+    },
+    {
+      "id": "boys-soccer-team-cathedral-academy",
+      "type": "team",
+      "title": "Cathedral Academy",
+      "subtitle": "Boys Soccer opponent history - North Charleston, SC",
+      "to": "/athletics/boys/soccer/records/opponents?team=Cathedral+Academy",
+      "keywords": [
+        "Boys Soccer",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Cathedral Academy",
+        "North Charleston",
+        "SC"
+      ]
+    },
+    {
+      "id": "boys-soccer-team-charleston-collegiate-school",
+      "type": "team",
+      "title": "Charleston Collegiate School",
+      "subtitle": "Boys Soccer opponent history - Johns Island, SC",
+      "to": "/athletics/boys/soccer/records/opponents?team=Charleston+Collegiate+School",
+      "keywords": [
+        "Boys Soccer",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Charleston Collegiate School",
+        "Charleston Collegiate",
+        "Sun Devils",
+        "Johns Island",
+        "SC"
       ]
     }
   ]

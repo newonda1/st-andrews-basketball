@@ -488,7 +488,7 @@ export default function SeasonRecords() {
                           <div className="leading-tight">
                             <div>{def.label}</div>
                             {def.qualifierText ? (
-                              <div className="mt-1 text-[clamp(0.62rem,0.85vw,0.8rem)] italic font-normal text-gray-600">
+                              <div className="mt-1 text-sm italic font-normal text-gray-600">
                                 {def.qualifierText}
                               </div>
                             ) : null}

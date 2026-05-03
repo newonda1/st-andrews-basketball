@@ -1,0 +1,105 @@
+[
+  {
+    "SeasonID": 2004,
+    "DisplaySeason": "Spring 2004",
+    "SourceSeasonLabel": "Spring 2004",
+    "TeamLevel": "Varsity",
+    "TeamName": "St. Andrew's Lions",
+    "HeadCoach": "",
+    "Staff": [],
+    "Players": [
+      {
+        "PlayerID": 200105,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Will Massey",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200423,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Hamish Huntley",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200307,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Omar Glenn",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200203,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Beau Hinton",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200313,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Danny Eichholz",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200207,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Jacob Rauers",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200425,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Freddy Presutto",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200426,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Graham Rossell",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200427,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Martin Sullivan",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200424,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [
+          "GK"
+        ],
+        "PlayerName": "Emett Eason",
+        "Distinctions": []
+      }
+    ]
+  }
+]

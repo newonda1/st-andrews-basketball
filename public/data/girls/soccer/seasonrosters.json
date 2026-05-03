@@ -1,0 +1,96 @@
+[
+  {
+    "SeasonID": 2004,
+    "DisplaySeason": "Spring 2004",
+    "SourceSeasonLabel": "Spring 2004",
+    "TeamLevel": "Varsity",
+    "TeamName": "St. Andrew's Lions",
+    "HeadCoach": "",
+    "Staff": [],
+    "Players": [
+      {
+        "PlayerID": 200401,
+        "JerseyNumber": null,
+        "Grade": "Fr.",
+        "GradeLabel": "Freshman",
+        "Positions": [
+          "GK"
+        ],
+        "PlayerName": "Mary Wilkowski",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200402,
+        "JerseyNumber": null,
+        "Grade": "Sr.",
+        "GradeLabel": "Senior",
+        "Positions": [],
+        "PlayerName": "Jennifer Moesch",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200403,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Maggie Hinchey",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200405,
+        "JerseyNumber": null,
+        "Grade": "Sr.",
+        "GradeLabel": "Senior",
+        "Positions": [],
+        "PlayerName": "Leighanne Evans",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200603,
+        "JerseyNumber": null,
+        "Grade": "So.",
+        "GradeLabel": "Sophomore",
+        "Positions": [],
+        "PlayerName": "Grace Wilkowski",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200409,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Emily Aimone",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200419,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Megan Johnson",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200420,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Emily Dunn",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200421,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Becca Timms",
+        "Distinctions": []
+      }
+    ]
+  }
+]
