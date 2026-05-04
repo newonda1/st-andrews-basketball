@@ -1869,6 +1869,147 @@
     "Recap": "Will Massey's 30-yard field goal in the third quarter was the lone score in St. Andrew's 3-0 victory over Calhoun.\n\nSaints' Davey Clay preserved the win by falling on a Calhoun fumble in the end zone.\n\nBeau Hinton led the winners with 102 yards on 25 carries. Omar Glenn added 96 yards on 11 carries.\n\nSt. Andrew's raised its record to 4-1 overall, 1-0 in region play."
   },
   {
+    "GameID": 20031010,
+    "Season": 2003,
+    "SeasonID": 2003,
+    "DisplaySeason": "2003",
+    "SourceSeasonLabel": "2003-04",
+    "Date": "2003-10-10",
+    "Time": "TBA",
+    "SourceEventTime": "",
+    "TeamID": "ga-savannah-st-andrews-saints-football",
+    "Team": "St. Andrew's Saints",
+    "Opponent": "Dillon Christian School",
+    "OpponentLocation": "Dillon, SC",
+    "OpponentSlug": "dillon-christian-dillon-sc",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "Away",
+    "Venue": "Dillon Christian School",
+    "Notes": "",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 7,
+    "OpponentScore": 32,
+    "OpponentID": "sc-dillon-christian-school-dillon",
+    "FirstDowns": 5,
+    "RushingYards": 55,
+    "PassingYards": 40,
+    "PassingComp": 3,
+    "PassingAtt": 13,
+    "PassingInt": 2,
+    "OffensiveFumbles": 2,
+    "OffensiveFumblesLost": 0,
+    "PuntNum": 4,
+    "PuntYards": 138,
+    "PuntAverage": 34.5,
+    "Penalties": 13,
+    "PenaltyYards": 105,
+    "LineScore": [
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [7, 0, 0, 0],
+        "Total": 7
+      },
+      {
+        "Team": "Dillon Christian",
+        "Abbr": "DC",
+        "Scores": [7, 12, 0, 13],
+        "Total": 32
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "1",
+        "Team": "Dillon Christian School",
+        "TeamAbbr": "DC",
+        "Play": "Aaron Moody 1 run",
+        "Conversion": "Allen Ware kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "1",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Davy Clay 51 run",
+        "Conversion": "Will Massey kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "Dillon Christian School",
+        "TeamAbbr": "DC",
+        "Play": "Montrice Jones 8 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "2",
+        "Team": "Dillon Christian School",
+        "TeamAbbr": "DC",
+        "Play": "Daniel Thomas 30 run",
+        "Conversion": "run failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "4",
+        "Team": "Dillon Christian School",
+        "TeamAbbr": "DC",
+        "Play": "Montrice Jones 30 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "4",
+        "Team": "Dillon Christian School",
+        "TeamAbbr": "DC",
+        "Play": "Aaron Moody 6 run",
+        "Conversion": "Allen Ware kick",
+        "Points": 7
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "First Downs",
+        "StAndrews": "5",
+        "Opponent": "13"
+      },
+      {
+        "Label": "Rushing",
+        "StAndrews": "55",
+        "Opponent": "351"
+      },
+      {
+        "Label": "Passing",
+        "StAndrews": "40",
+        "Opponent": "7"
+      },
+      {
+        "Label": "Comp.-Att.-Int.",
+        "StAndrews": "3-13-2",
+        "Opponent": "2-6-0"
+      },
+      {
+        "Label": "Fumbles-lost",
+        "StAndrews": "2-0",
+        "Opponent": "1-0"
+      },
+      {
+        "Label": "Punting",
+        "StAndrews": "4-34.5",
+        "Opponent": "1-18"
+      },
+      {
+        "Label": "Penalties",
+        "StAndrews": "13-105",
+        "Opponent": "9-102"
+      }
+    ],
+    "RecapTitle": "Dillon Christian 32, St. Andrew's 7",
+    "Recap": "DILLON, S.C. - Aaron Moody and Montrice Jones each had two touchdowns to lead Dillon Christian to a 32-7 victory over St. Andrew's.\n\nMoody scored on runs of 1 and 6 yards. Jones had touchdown runs of 8 and 30 yards.\n\nDavy Clay had the lone touchdown for the Saints (3-3) in the first quarter.\n\nDillon outgained St. Andrew's, 358-95."
+  },
+  {
     "GameID": 20031031,
     "Season": 2003,
     "SeasonID": 2003,

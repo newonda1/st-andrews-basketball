@@ -225,7 +225,7 @@
     "GameUrl": "",
     "LocationType": "",
     "Venue": "",
-    "GameType": "Regular Season",
+    "GameType": "Region",
     "Result": "W",
     "TeamScore": 3,
     "OpponentScore": 1,
@@ -358,7 +358,7 @@
     "GameUrl": "",
     "LocationType": "",
     "Venue": "",
-    "GameType": "Regular Season",
+    "GameType": "Region",
     "Result": "W",
     "TeamScore": 2,
     "OpponentScore": 1,
@@ -399,7 +399,7 @@
     "GameUrl": "",
     "LocationType": "",
     "Venue": "",
-    "GameType": "Regular Season",
+    "GameType": "Region",
     "Result": "L",
     "TeamScore": 1,
     "OpponentScore": 2,
@@ -461,6 +461,129 @@
         "Set": 3,
         "Team": 25,
         "Opponent": 22
+      }
+    ]
+  },
+  {
+    "GameID": "20031009",
+    "Season": 2003,
+    "SeasonID": 2003,
+    "DisplaySeason": "2003",
+    "SourceSeasonLabel": "2003-04",
+    "Date": "2003-10-09",
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "sc-james-island-christian-school-charleston",
+    "Opponent": "James Island Christian",
+    "OpponentLocation": "Charleston, SC",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 3,
+    "OpponentScore": 0,
+    "Notes": "Savannah Morning News reported St. Andrew's record as 12-2 overall and 7-0 in SCISA Region 2-AA after the match. The reported set scores included a 25-25 first set.",
+    "IsComplete": "Yes",
+    "SetScores": [
+      {
+        "Set": 1,
+        "Team": 25,
+        "Opponent": 25
+      },
+      {
+        "Set": 2,
+        "Team": 25,
+        "Opponent": 9
+      },
+      {
+        "Set": 3,
+        "Team": 25,
+        "Opponent": 23
+      }
+    ]
+  },
+  {
+    "GameID": "20031014",
+    "Season": 2003,
+    "SeasonID": 2003,
+    "DisplaySeason": "2003",
+    "SourceSeasonLabel": "2003-04",
+    "Date": "2003-10-14",
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "ga-providence-christian-savannah",
+    "Opponent": "Providence Christian",
+    "OpponentLocation": "Savannah, GA",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "GameType": "Non-Region",
+    "Result": "W",
+    "TeamScore": 3,
+    "OpponentScore": 0,
+    "Notes": "Savannah Morning News reported St. Andrew's record as 13-2 overall after the match.",
+    "IsComplete": "Yes",
+    "SetScores": [
+      {
+        "Set": 1,
+        "Team": 25,
+        "Opponent": 9
+      },
+      {
+        "Set": 2,
+        "Team": 25,
+        "Opponent": 13
+      },
+      {
+        "Set": 3,
+        "Team": 25,
+        "Opponent": 20
+      }
+    ]
+  },
+  {
+    "GameID": "20031016",
+    "Season": 2003,
+    "SeasonID": 2003,
+    "DisplaySeason": "2003",
+    "SourceSeasonLabel": "2003-04",
+    "Date": "2003-10-16",
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "sc-charleston-collegiate-school-johns-island",
+    "Opponent": "Charleston Collegiate",
+    "OpponentLocation": "Johns Island, SC",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 3,
+    "OpponentScore": 0,
+    "Notes": "Savannah Morning News reported St. Andrew's record as 14-2 overall and 8-0 in SCISA 2-AA after the match.",
+    "IsComplete": "Yes",
+    "SetScores": [
+      {
+        "Set": 1,
+        "Team": 25,
+        "Opponent": 3
+      },
+      {
+        "Set": 2,
+        "Team": 25,
+        "Opponent": 12
+      },
+      {
+        "Set": 3,
+        "Team": 25,
+        "Opponent": 11
       }
     ]
   },
