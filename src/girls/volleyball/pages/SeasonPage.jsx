@@ -332,12 +332,15 @@ function getOpponentLogoPath(game, schoolMap) {
   return school?.LogoPath || school?.BracketLogoPath || null;
 }
 
-function buildSeasonRecord(season, seasonGames) {
-  const wins = Number(season?.OverallWins);
-  const losses = Number(season?.OverallLosses);
-  const ties = Number(season?.OverallTies || 0);
+function hasNumericValue(value) {
+  return value !== null && value !== undefined && value !== "" && Number.isFinite(Number(value));
+}
 
-  if (Number.isFinite(wins) && Number.isFinite(losses)) {
+function buildSeasonRecord(season, seasonGames) {
+  if (hasNumericValue(season?.OverallWins) && hasNumericValue(season?.OverallLosses)) {
+    const wins = Number(season.OverallWins);
+    const losses = Number(season.OverallLosses);
+    const ties = Number(season.OverallTies || 0);
     return {
       wins,
       losses,
@@ -353,7 +356,7 @@ function buildSeasonRecord(season, seasonGames) {
 
   if (completedMatches.length > 0) return buildGameRecord(completedMatches);
 
-  return buildGameRecord([]);
+  return null;
 }
 
 export default function SeasonPage({ data, status = "" }) {
@@ -498,12 +501,12 @@ export default function SeasonPage({ data, status = "" }) {
       },
       {
         label: "Overall record",
-        value: formatRecord(record.wins, record.losses, record.ties),
+        value: record ? formatRecord(record.wins, record.losses, record.ties) : "—",
       },
       {
         label: "Sets won / lost",
         value:
-          record.setsWon == null || record.setsLost == null
+          record == null || record.setsWon == null || record.setsLost == null
             ? "—"
             : `${record.setsWon} / ${record.setsLost}`,
       },

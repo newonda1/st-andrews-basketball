@@ -1,5 +1,22 @@
 [
   {
+    "SeasonID": 2002,
+    "YearStart": 2002,
+    "YearEnd": 2003,
+    "DisplaySeason": "2002",
+    "SourceSeasonLabel": "2002-03",
+    "HeadCoach": "Dawn Odom",
+    "OverallWins": null,
+    "OverallLosses": null,
+    "RegionWins": null,
+    "RegionLosses": null,
+    "RegionFinish": null,
+    "League": null,
+    "StateDivision": null,
+    "StateFinish": null,
+    "SourceCitation": "User-provided coach attribution"
+  },
+  {
     "SeasonID": 2003,
     "YearStart": 2003,
     "YearEnd": 2004,

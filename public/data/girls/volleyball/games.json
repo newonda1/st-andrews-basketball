@@ -1,5 +1,48 @@
 [
   {
+    "GameID": "20020826",
+    "Season": 2002,
+    "SeasonID": 2002,
+    "DisplaySeason": "2002",
+    "SourceSeasonLabel": "2002-03",
+    "Date": "2002-08-26",
+    "SortDate": "2002-08-26",
+    "SortOrder": 1,
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
+    "Opponent": "Thomas Heyward Academy",
+    "OpponentLocation": "Ridgeland, SC",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "GameType": "Non-Region",
+    "Result": "L",
+    "TeamScore": 0,
+    "OpponentScore": 3,
+    "Notes": "Savannah Morning News reported St. Andrew's record as 0-1 after the match.",
+    "IsComplete": "Yes",
+    "SetScores": [
+      {
+        "Set": 1,
+        "Team": 2,
+        "Opponent": 15
+      },
+      {
+        "Set": 2,
+        "Team": 6,
+        "Opponent": 15
+      },
+      {
+        "Set": 3,
+        "Team": 6,
+        "Opponent": 15
+      }
+    ]
+  },
+  {
     "GameID": "2003-placeholder-1",
     "Season": 2003,
     "SeasonID": 2003,

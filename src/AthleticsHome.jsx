@@ -53,8 +53,10 @@ const sports = [
     iconClassName: "scale-[0.82]",
     championshipGroups: [
       {
-        title: "Program Archive",
-        sections: [{ title: "Published Results", years: [2025] }],
+        title: "Team Championships",
+        sections: [
+          { title: "Region Championships", years: [2003, 2022, 2024] },
+        ],
       },
     ],
   },

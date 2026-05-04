@@ -1252,6 +1252,131 @@
     "OpponentID": "sc-williamsburg-academy-kingstree"
   },
   {
+    "GameID": 20020830,
+    "Season": 2002,
+    "SeasonID": 2002,
+    "DisplaySeason": "2002",
+    "SourceSeasonLabel": "2002-03",
+    "Date": "2002-08-30",
+    "Time": "TBA",
+    "SourceEventTime": "",
+    "TeamID": "ga-savannah-st-andrews-saints-football",
+    "Team": "St. Andrew's Saints",
+    "Opponent": "Memorial Day School",
+    "OpponentLocation": "Savannah, GA",
+    "OpponentSlug": "memorial-day-savannah-ga",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "Home",
+    "Venue": "St. Andrew's School",
+    "Notes": "",
+    "GameType": "Non-Region",
+    "Result": "L",
+    "TeamScore": 7,
+    "OpponentScore": 10,
+    "OpponentID": "ga-memorial-day-school-savannah",
+    "OpponentLogoPath": "/images/schools/logos/ga-memorial-day-school-savannah.png",
+    "FirstDowns": 16,
+    "RushingYards": 123,
+    "PassingYards": 21,
+    "PassingComp": 5,
+    "PassingAtt": 10,
+    "PassingInt": 1,
+    "OffensiveFumbles": 7,
+    "OffensiveFumblesLost": 0,
+    "PuntNum": 6,
+    "PuntYards": 210,
+    "PuntAverage": 35,
+    "Penalties": 6,
+    "PenaltyYards": 65,
+    "LineScore": [
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [0, 0, 0, 7, 0],
+        "Total": 7
+      },
+      {
+        "Team": "Memorial Day",
+        "Abbr": "MDS",
+        "Scores": [0, 7, 0, 0, 3],
+        "Total": 10
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "2",
+        "Team": "Memorial Day School",
+        "TeamAbbr": "MDS",
+        "Play": "Justin Black 63 pass from Matt Hunt",
+        "Conversion": "Andrew Ball kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "4",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Jeff Smith 1 run",
+        "Conversion": "Cam Aldrich kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "OT2",
+        "Team": "Memorial Day School",
+        "TeamAbbr": "MDS",
+        "Play": "Andrew Ball 23 FG",
+        "Conversion": "",
+        "Points": 3
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "First Downs",
+        "StAndrews": "16",
+        "Opponent": "15"
+      },
+      {
+        "Label": "Rushing",
+        "StAndrews": "38-123",
+        "Opponent": "40-136"
+      },
+      {
+        "Label": "Passing",
+        "StAndrews": "21",
+        "Opponent": "128"
+      },
+      {
+        "Label": "Comp.-Att.-Int.",
+        "StAndrews": "5-10-1",
+        "Opponent": "6-13-2"
+      },
+      {
+        "Label": "Fumbles-lost",
+        "StAndrews": "7-0",
+        "Opponent": "4-4"
+      },
+      {
+        "Label": "Punting",
+        "StAndrews": "6-35",
+        "Opponent": "4-34"
+      },
+      {
+        "Label": "Penalties",
+        "StAndrews": "6-65",
+        "Opponent": "9-70"
+      }
+    ],
+    "RecapTitle": "FIELD GOAL IN SECOND OT LIFTS MEMORIAL",
+    "Recap": "In the end, after the numerous fumbles and flags, and after 48 minutes of regulation play it came down to the foot of Memorial's Andrew Ball to squeeze the Matadors past the St. Andrew Saints in overtime on Friday.\n\nBall's 23-yard field goal, on fourth down of the Matadors' second overtime possession, lifted Memorial to a 10-7 victory and its first win of the season.\n\nThe heavily favored Matadors were met with a wet field and a stiff Saint defense, making the evening's win more impressive.\n\n\"We just had too many fumbles tonight,\" said Matador coach Seth Gaspin.\n\n\"Our defense really came alive though,\" added Gaspin. \"We're going to have to work on the offensive side of the ball in order to get ready for our region games.\"\n\nThe two teams traded field position throughout the first quarter, which was plagued by penalties.\n\n\"We felt our defense really played well tonight. We just have to cut down on the penalties,\" said Saints coach Kevin Kunst.\n\nAfter a scoreless first quarter, former Saint quarterback Matt Hunt connected with wideout Justin Black for a 63-yard score, giving the Matadors the lead. Ball's extra point put Memorial up by seven, a lead it would carry into halftime.\n\nThe teams then got a case of the fumbles, combining for seven fumbles in the third quarter alone.\n\nSt.Andrew's struck back late in the fourth quarter, tying the game on a Jeff Smith dive from the 1-yard line.\n\nAfter ending the regulation with a tie, Ball came in to finish off the Saints on the Matadors' second overtime possession.",
+    "SourceDate": "2002-08-31",
+    "SourcePublication": "Savannah Morning News",
+    "SourceAuthor": "Chris Mercer",
+    "SourceByline": "Chris Mercer, For the Morning News",
+    "SourcePage": "5D",
+    "SourceSection": "Sports",
+    "SourceCitation": "Chris Mercer, Savannah Morning News, Aug. 31, 2002"
+  },
+  {
     "GameID": 20030828,
     "Season": 2003,
     "SeasonID": 2003,

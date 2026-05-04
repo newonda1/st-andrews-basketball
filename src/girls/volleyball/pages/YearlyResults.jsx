@@ -79,10 +79,19 @@ function buildRecord(matches, filterFn = () => true) {
   return buildGameRecord(matches.filter(filterFn));
 }
 
+function isRegionMatch(match) {
+  const gameType = String(match?.GameType || "").toLowerCase();
+  return gameType.includes("region") && !gameType.includes("non-region");
+}
+
+function hasNumericValue(value) {
+  return value !== null && value !== undefined && value !== "" && Number.isFinite(Number(value));
+}
+
 function hasSeasonRecord(season) {
   return (
-    Number.isFinite(Number(season?.OverallWins)) &&
-    Number.isFinite(Number(season?.OverallLosses))
+    hasNumericValue(season?.OverallWins) &&
+    hasNumericValue(season?.OverallLosses)
   );
 }
 
@@ -99,7 +108,7 @@ function buildOverallRecord(season, completedMatches) {
 
   if (completedMatches.length > 0) return buildRecord(completedMatches);
 
-  return buildRecord([]);
+  return null;
 }
 
 function formatFilteredRecord(matches, filterFn) {
@@ -108,15 +117,13 @@ function formatFilteredRecord(matches, filterFn) {
 }
 
 function getRegionRecord(season, completedMatches) {
-  const wins = Number(season.RegionWins);
-  const losses = Number(season.RegionLosses);
-  if (Number.isFinite(wins) && Number.isFinite(losses)) {
+  if (hasNumericValue(season?.RegionWins) && hasNumericValue(season?.RegionLosses)) {
+    const wins = Number(season.RegionWins);
+    const losses = Number(season.RegionLosses);
     return `${wins}-${losses}`;
   }
 
-  const regionMatches = completedMatches.filter((match) =>
-    String(match.GameType || "").toLowerCase().includes("region")
-  );
+  const regionMatches = completedMatches.filter(isRegionMatch);
 
   if (regionMatches.length > 0) {
     const record = buildRecord(regionMatches);
@@ -198,6 +205,7 @@ function buildSeasonsWithGames(seasons, games) {
         (entry) =>
           entry.games.length > 0 ||
           hasSeasonRecord(entry.season) ||
+          Boolean(entry.season.HeadCoach) ||
           Boolean(entry.season.RegionFinish) ||
           Boolean(entry.season.StateFinish)
       )
@@ -225,9 +233,11 @@ function computeCoachSummaries(seasonsWithGames) {
 
     const completedMatches = games.filter(isCompletedMatch);
     const record = buildOverallRecord(season, completedMatches);
-    entry.wins += record.wins;
-    entry.losses += record.losses;
-    entry.ties += record.ties;
+    if (record) {
+      entry.wins += record.wins;
+      entry.losses += record.losses;
+      entry.ties += record.ties;
+    }
 
     const result = getSeasonResult(season);
     if (result) {
@@ -242,7 +252,7 @@ function computeCoachSummaries(seasonsWithGames) {
       return {
         coach: entry.coach,
         years: entry.seasons.length,
-        overall: formatRecord(entry.wins, entry.losses, entry.ties),
+        overall: totalGames ? formatRecord(entry.wins, entry.losses, entry.ties) : "-",
         winPct: totalGames ? `${((entry.wins / totalGames) * 100).toFixed(1)}%` : "-",
         notes: entry.notes.join("\n"),
         sortKey: Number.isFinite(minSeason) ? minSeason : 9999,
@@ -291,7 +301,9 @@ export default function YearlyResults({ data, status = "" }) {
           seasonId: season.SeasonID,
           seasonLabel: getSeasonLabel(season),
           coach: season.HeadCoach || "-",
-          overall: formatRecord(overall.wins, overall.losses, overall.ties),
+          overall: overall
+            ? formatRecord(overall.wins, overall.losses, overall.ties)
+            : "-",
           region: getRegionRecord(season, completedMatches),
           home,
           away,

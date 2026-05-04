@@ -236,6 +236,12 @@ export default function GameDetail({ data, status = "" }) {
 
   const resultText = game.Result === "W" ? "Win" : game.Result === "L" ? "Loss" : "Tie";
   const opponentName = getOpponentDisplayName(game, schoolMap);
+  const detailItems = [
+    game.DisplayDate || formatDate(game.Date),
+    game.LocationType,
+    game.GameType,
+    game.Notes,
+  ].filter(Boolean);
 
   return (
     <div className="mx-auto max-w-7xl space-y-8 px-4 pb-24 pt-2 sm:px-6">
@@ -254,8 +260,7 @@ export default function GameDetail({ data, status = "" }) {
           {resultText}, {game.TeamScore}-{game.OpponentScore}
         </p>
         <p className="text-sm text-slate-500">
-          {formatDate(game.Date)} • {game.LocationType} • {game.GameType}
-          {game.Notes ? ` • ${game.Notes}` : ""}
+          {detailItems.join(" • ")}
         </p>
       </header>
 
