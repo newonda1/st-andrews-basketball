@@ -1377,6 +1377,495 @@
     "SourceCitation": "Chris Mercer, Savannah Morning News, Aug. 31, 2002"
   },
   {
+    "GameID": 20020906,
+    "Season": 2002,
+    "SeasonID": 2002,
+    "DisplaySeason": "2002",
+    "SourceSeasonLabel": "2002-03",
+    "Date": "2002-09-06",
+    "Time": "TBA",
+    "SourceEventTime": "",
+    "TeamID": "ga-savannah-st-andrews-saints-football",
+    "Team": "St. Andrew's Saints",
+    "Opponent": "Hilton Head Christian Academy",
+    "OpponentLocation": "Hilton Head Island, SC",
+    "OpponentSlug": "hilton-head-christian-academy-hilton-head-island-sc",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "Home",
+    "Venue": "St. Andrew's School",
+    "Notes": "",
+    "GameType": "Non-Region",
+    "Result": "W",
+    "TeamScore": 48,
+    "OpponentScore": 0,
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
+    "OpponentLogoPath": "/images/schools/logos/sc-hilton-head-christian-academy-hilton-head-island.png",
+    "FirstDowns": 10,
+    "RushingYards": 257,
+    "PassingYards": 68,
+    "PassingComp": 4,
+    "PassingAtt": 5,
+    "PassingInt": 0,
+    "OffensiveFumbles": 0,
+    "OffensiveFumblesLost": 0,
+    "PuntNum": 2,
+    "PuntYards": 90,
+    "PuntAverage": 45,
+    "Penalties": 2,
+    "PenaltyYards": 10,
+    "LineScore": [
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [20, 28, 0, 0],
+        "Total": 48
+      },
+      {
+        "Team": "Hilton Head Christian",
+        "Abbr": "HHC",
+        "Scores": [0, 0, 0, 0],
+        "Total": 0
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "1",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Jeff Smith 15 run",
+        "Conversion": "Josh Smith kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "1",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Jeff Smith 45 run",
+        "Conversion": "Josh Smith kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "1",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Cam Aldrich 11 pass from Davy Clay",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "2",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Davy Clay 13 run",
+        "Conversion": "Josh Smith kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Jason Victor 11 run",
+        "Conversion": "Josh Smith kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Beau Hinton 12 pass from Davy Clay",
+        "Conversion": "Josh Smith kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Will Chisholm 6 run",
+        "Conversion": "Josh Smith kick",
+        "Points": 7
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "First Downs",
+        "StAndrews": "10",
+        "Opponent": "4"
+      },
+      {
+        "Label": "Rushing",
+        "StAndrews": "257",
+        "Opponent": "60"
+      },
+      {
+        "Label": "Passing",
+        "StAndrews": "68",
+        "Opponent": "12"
+      },
+      {
+        "Label": "Comp.-Att-Int.",
+        "StAndrews": "4-5-0",
+        "Opponent": "1-9-0"
+      },
+      {
+        "Label": "Fumbles-Lost",
+        "StAndrews": "0",
+        "Opponent": "2"
+      },
+      {
+        "Label": "Punts",
+        "StAndrews": "2-45",
+        "Opponent": "4-30"
+      },
+      {
+        "Label": "Penalties",
+        "StAndrews": "2-10",
+        "Opponent": "3-15"
+      }
+    ],
+    "RecapTitle": "St. Andrew's 48, Hilton Head Christian 0",
+    "Recap": "Jeff Smith rushed for 106 yards on nine carries and scored two touchdowns as St. Andrew's hammered visiting Hilton Head Christian 48-0.\n\nThe Saints (1-1) scored 20 points in the first quarter and 28 in the second.\n\nDavy Clay passed for two touchdowns and ran for another for St. Andrew's.\n\nThe Saints' defense held the visitors to 72 total yards.\n\nHilton Head is 0-2.",
+    "SourceDate": "2002-09-07",
+    "SourcePublication": "Savannah Morning News",
+    "SourceCitation": "Savannah Morning News, Sept. 7, 2002"
+  },
+  {
+    "GameID": 20020916,
+    "Season": 2002,
+    "SeasonID": 2002,
+    "DisplaySeason": "2002",
+    "SourceSeasonLabel": "2002-03",
+    "Date": "2002-09-16",
+    "Time": "TBA",
+    "SourceEventTime": "",
+    "TeamID": "ga-savannah-st-andrews-saints-football",
+    "Team": "St. Andrew's Saints",
+    "Opponent": "Hilton Head Preparatory School",
+    "OpponentLocation": "Hilton Head Island, SC",
+    "OpponentSlug": "hilton-head-prep",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "Home",
+    "Venue": "St. Andrew's School",
+    "Notes": "",
+    "GameType": "Non-Region",
+    "Result": "W",
+    "TeamScore": 49,
+    "OpponentScore": 0,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
+    "OpponentLogoPath": "/images/schools/logos/sc-hilton-head-preparatory-school-hilton-head-island.png",
+    "FirstDowns": 20,
+    "RushingYards": 353,
+    "PassingYards": 72,
+    "PassingComp": 6,
+    "PassingAtt": 8,
+    "PassingInt": 0,
+    "OffensiveFumbles": 2,
+    "OffensiveFumblesLost": 2,
+    "PuntNum": 0,
+    "PuntYards": 0,
+    "PuntAverage": 0,
+    "Penalties": 3,
+    "PenaltyYards": 35,
+    "LineScore": [
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [0, 21, 21, 7],
+        "Total": 49
+      },
+      {
+        "Team": "Hilton Head Prep",
+        "Abbr": "HHP",
+        "Scores": [0, 0, 0, 0],
+        "Total": 0
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "2",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Jeff Smith 16 run",
+        "Conversion": "Josh Smith kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Jeff Smith 1 run",
+        "Conversion": "Josh Smith kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Cam Aldrich 15 pass from Davy Clay",
+        "Conversion": "Josh Smith kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "3",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Jason Victor 3 run",
+        "Conversion": "Josh Smith kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "3",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Cam Aldrich 50 pass interception return",
+        "Conversion": "Josh Smith kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "3",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Cam Aldrich 45 pass interception return",
+        "Conversion": "Josh Smith kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "4",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Matt Knight 40 run",
+        "Conversion": "Josh Smith kick",
+        "Points": 7
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "First Downs",
+        "StAndrews": "20",
+        "Opponent": "2"
+      },
+      {
+        "Label": "Rushing",
+        "StAndrews": "353",
+        "Opponent": "-1"
+      },
+      {
+        "Label": "Comp.-Att.-Int.",
+        "StAndrews": "6-8-0",
+        "Opponent": "3-15-2"
+      },
+      {
+        "Label": "Passing yards",
+        "StAndrews": "72",
+        "Opponent": "45"
+      },
+      {
+        "Label": "Penalties",
+        "StAndrews": "3-35",
+        "Opponent": "6-50"
+      },
+      {
+        "Label": "Fumbles-lost",
+        "StAndrews": "2-2",
+        "Opponent": "1-1"
+      },
+      {
+        "Label": "Punts",
+        "StAndrews": "0-0",
+        "Opponent": "4-34"
+      }
+    ],
+    "RecapTitle": "ST. ANDREW 49, HILTON HEAD PREP 0",
+    "Recap": "Cam Aldrich scored three touchdowns, including two on pass interception returns, to lead St. Andrew's to a 49-0 victory over Hilton Head Prep on Monday.",
+    "SourceDate": "2002-09-17",
+    "SourcePublication": "Savannah Morning News",
+    "SourceCitation": "Savannah Morning News, Sept. 17, 2002"
+  },
+  {
+    "GameID": 20020927,
+    "Season": 2002,
+    "SeasonID": 2002,
+    "DisplaySeason": "2002",
+    "SourceSeasonLabel": "2002-03",
+    "Date": "2002-09-27",
+    "Time": "TBA",
+    "SourceEventTime": "",
+    "TeamID": "ga-savannah-st-andrews-saints-football",
+    "Team": "St. Andrew's Saints",
+    "Opponent": "Thomas Heyward Academy",
+    "OpponentLocation": "Ridgeland, SC",
+    "OpponentSlug": "thomas-heyward-academy",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "Notes": "No team totals or quarter breakdown were provided in the source.",
+    "GameType": "Regular Season",
+    "Result": "W",
+    "TeamScore": 13,
+    "OpponentScore": 7,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
+    "RecapTitle": "St. Andrew's 13, Thomas Heyward Academy 7",
+    "Recap": "Davy Clay led St. Andrews to a 13-7 win over Thomas Heyward Academy Friday night, passing for 85 yards and a touchdown, and picking off an errant pass from Rebels QB Calvin Fayger.\n\nJeff Smith rushed for 78 yards and a touchdown, and Jason Victor led the Saints defense with 13 tackles.\n\nThe Rebels almost pulled off the win, putting together an 11-play drive down to the Saints' 8-yard line, but Michael Shuford fumbled the ball with 1:51 left in the game, ending the Rebels' chance for a win.",
+    "SourceDate": "2002-09-28",
+    "SourcePublication": "Savannah Morning News",
+    "SourceCitation": "Savannah Morning News, Sept. 28, 2002"
+  },
+  {
+    "GameID": 20021004,
+    "Season": 2002,
+    "SeasonID": 2002,
+    "DisplaySeason": "2002",
+    "SourceSeasonLabel": "2002-03",
+    "Date": "2002-10-04",
+    "Time": "TBA",
+    "SourceEventTime": "",
+    "TeamID": "ga-savannah-st-andrews-saints-football",
+    "Team": "St. Andrew's Saints",
+    "Opponent": "Calhoun Academy",
+    "OpponentLocation": "St. Matthews, SC",
+    "OpponentSlug": "calhoun-academy",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "Away",
+    "Venue": "Calhoun Academy",
+    "Notes": "Source did not identify Calhoun's late fourth-quarter touchdown scorer; scoring summary abbreviation corrected for Jeff Smith's third touchdown.",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 22,
+    "OpponentScore": 20,
+    "OpponentID": "sc-john-c-calhoun-academy-st-matthews",
+    "OpponentLogoPath": "/images/schools/logos/sc-john-c-calhoun-academy-st-matthews.png",
+    "FirstDowns": 13,
+    "RushingYards": 193,
+    "PassingYards": 46,
+    "PassingComp": 4,
+    "PassingAtt": 10,
+    "PassingInt": 1,
+    "OffensiveFumbles": 1,
+    "OffensiveFumblesLost": 1,
+    "PuntNum": 5,
+    "PuntYards": 165,
+    "PuntAverage": 33,
+    "Penalties": 3,
+    "PenaltyYards": 30,
+    "LineScore": [
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [6, 6, 7, 3],
+        "Total": 22
+      },
+      {
+        "Team": "Calhoun",
+        "Abbr": "C",
+        "Scores": [7, 0, 0, 13],
+        "Total": 20
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "1",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Jeff Smith 1 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "1",
+        "Team": "Calhoun Academy",
+        "TeamAbbr": "C",
+        "Play": "Clay Quattlebaum 1 run",
+        "Conversion": "John Puckett kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Jeff Smith 23 run",
+        "Conversion": "run failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "3",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Jeff Smith 3 run",
+        "Conversion": "Josh Smith kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "4",
+        "Team": "Calhoun Academy",
+        "TeamAbbr": "C",
+        "Play": "Clay Quattlebaum 3 run",
+        "Conversion": "John Puckett kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "4",
+        "Team": "Calhoun Academy",
+        "TeamAbbr": "C",
+        "Play": "Calhoun touchdown",
+        "Conversion": "conversion failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "4",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Josh Smith 27 FG",
+        "Conversion": "",
+        "Points": 3
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "First Downs",
+        "StAndrews": "13",
+        "Opponent": "13"
+      },
+      {
+        "Label": "Rushing",
+        "StAndrews": "193",
+        "Opponent": "104"
+      },
+      {
+        "Label": "Passing",
+        "StAndrews": "46",
+        "Opponent": "80"
+      },
+      {
+        "Label": "Comp.-Att.-Int.",
+        "StAndrews": "4-10-1",
+        "Opponent": "10-22-1"
+      },
+      {
+        "Label": "Fumbles-lost",
+        "StAndrews": "1",
+        "Opponent": "2"
+      },
+      {
+        "Label": "Punts",
+        "StAndrews": "5-33",
+        "Opponent": "5-41"
+      },
+      {
+        "Label": "Penalties",
+        "StAndrews": "3-30",
+        "Opponent": "4-30"
+      }
+    ],
+    "RecapTitle": "St. Andrew's 22, Calhoun 20",
+    "Recap": "ST. MATTHEW'S - Josh Smith kicked the first field goal of his career, a 27-yarder with 2:17 left in the game, to lift St. Andrew's past Calhoun 22-20 in a SCISA 2-A game here Friday night.\n\nSt. Andrew's had fallen behind 20-19 late in the game, but the Saints drove from their own 29 to the Calhoun 10 before Smith's kick. The drive was sparked by the running of Jeff Smith, who gained 43 yards in the nine-play drive.\n\nJeff Smith ended the night with 141 yards on 25 carries and scored three touchdowns.\n\nSt. Andrew's is 4-1, 1-0 in region. Calhoun is 3-4, 1-1 in region.",
+    "SourceDate": "2002-10-05",
+    "SourcePublication": "Savannah Morning News",
+    "SourceCitation": "Savannah Morning News, Oct. 5, 2002"
+  },
+  {
     "GameID": 20030828,
     "Season": 2003,
     "SeasonID": 2003,

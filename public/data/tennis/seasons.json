@@ -1,5 +1,12 @@
 [
   {
+    "SeasonID": 2003,
+    "SeasonLabel": "2002-03",
+    "Classification": "SCISA",
+    "StatusBadge": "archived",
+    "StatusNote": "Archive data includes 2002 girls match results against Hilton Head Christian Academy, Beaufort Academy, Charleston Collegiate, and Colleton Prep, plus two known losses with unavailable opponent details."
+  },
+  {
     "SeasonID": 2012,
     "SeasonLabel": "2012",
     "Classification": "SCISA",
@@ -31,6 +38,14 @@
     "SeasonID": 2026,
     "SeasonLabel": "2025-26",
     "Classification": "GIAA",
+    "Teams": {
+      "Boys": {
+        "HeadCoach": "Miki Duval"
+      },
+      "Girls": {
+        "HeadCoach": "Miki Duval"
+      }
+    },
     "StatusBadge": "in-progress",
     "StatusNote": "Includes 2026 dual matches, region tournament results, and UTR-confirmed GIAA State Individual appearances."
   }

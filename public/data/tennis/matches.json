@@ -1,5 +1,2554 @@
 [
   {
+    "MatchID": "2002-09-03-hilton-head-christian-girls",
+    "Season": 2003,
+    "Date": "2002-09-03",
+    "Name": "St. Andrew's at Hilton Head Christian - Girls",
+    "MatchType": "Dual Match",
+    "Gender": "Girls",
+    "Classification": "SCISA",
+    "MatchCategory": "Non-Region",
+    "HomeAway": "Away",
+    "Status": "Completed",
+    "OpponentSchoolID": "sc-hilton-head-christian-academy-hilton-head-island",
+    "TeamScore": {
+      "StAndrews": 0,
+      "Opponent": 9,
+      "Result": "L"
+    },
+    "Summary": "Hilton Head Christian defeated St. Andrew's 9-0. The result moved St. Andrew's to 0-1.",
+    "LineMatches": [
+      {
+        "TennisMatchID": "2002-09-03-hilton-head-christian-girls-singles-1",
+        "EventType": "Singles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2002-09-03",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-hilton-head-christian-krystina-sigmon",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200401,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "top": 6,
+            "bottom": 1
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2003-girls-hilton-head-christian-krystina-sigmon"
+      },
+      {
+        "TennisMatchID": "2002-09-03-hilton-head-christian-girls-singles-2",
+        "EventType": "Singles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2002-09-03",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-hilton-head-christian-mary-lafitte",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200603,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "top": 6,
+            "bottom": 3
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2003-girls-hilton-head-christian-mary-lafitte"
+      },
+      {
+        "TennisMatchID": "2002-09-03-hilton-head-christian-girls-singles-3",
+        "EventType": "Singles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2002-09-03",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-hilton-head-christian-cassie-kristoff",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026341,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2003-girls-hilton-head-christian-cassie-kristoff"
+      },
+      {
+        "TennisMatchID": "2002-09-03-hilton-head-christian-girls-singles-4",
+        "EventType": "Singles",
+        "LineNumber": 4,
+        "Status": "Completed",
+        "Date": "2002-09-03",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-hilton-head-christian-kendall-sigmon",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026342,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 2
+          },
+          {
+            "top": 6,
+            "bottom": 2
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2003-girls-hilton-head-christian-kendall-sigmon"
+      },
+      {
+        "TennisMatchID": "2002-09-03-hilton-head-christian-girls-singles-5",
+        "EventType": "Singles",
+        "LineNumber": 5,
+        "Status": "Completed",
+        "Date": "2002-09-03",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-hilton-head-christian-jessie-rose-remigi",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026343,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "top": 6,
+            "bottom": 1
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2003-girls-hilton-head-christian-jessie-rose-remigi"
+      },
+      {
+        "TennisMatchID": "2002-09-03-hilton-head-christian-girls-singles-6",
+        "EventType": "Singles",
+        "LineNumber": 6,
+        "Status": "Completed",
+        "Date": "2002-09-03",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-hilton-head-christian-lindsay-wilburn",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200422,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "top": 6,
+            "bottom": 1
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2003-girls-hilton-head-christian-lindsay-wilburn"
+      },
+      {
+        "TennisMatchID": "2002-09-03-hilton-head-christian-girls-doubles-1",
+        "EventType": "Doubles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2002-09-03",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-09-03-hilton-head-christian-girls-hhca-sigmon-kristoff",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-hilton-head-christian-krystina-sigmon"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-hilton-head-christian-cassie-kristoff"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-09-03-hilton-head-christian-girls-sta-grace-wilkowski-cole",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200603
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026341
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 8,
+            "bottom": 2
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2002-09-03-hilton-head-christian-girls-hhca-sigmon-kristoff"
+      },
+      {
+        "TennisMatchID": "2002-09-03-hilton-head-christian-girls-doubles-2",
+        "EventType": "Doubles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2002-09-03",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-09-03-hilton-head-christian-girls-hhca-remigi-relch",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-hilton-head-christian-jessie-rose-remigi"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-hilton-head-christian-lena-relch"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-09-03-hilton-head-christian-girls-sta-mary-wilkowski-rucker",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200401
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026342
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 8,
+            "bottom": 1
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2002-09-03-hilton-head-christian-girls-hhca-remigi-relch"
+      },
+      {
+        "TennisMatchID": "2002-09-03-hilton-head-christian-girls-doubles-3",
+        "EventType": "Doubles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2002-09-03",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-09-03-hilton-head-christian-girls-hhca-wilburn-bradham",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-hilton-head-christian-lindsay-wilburn"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-hilton-head-christian-sarah-bradham"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-09-03-hilton-head-christian-girls-sta-underwood-rose-wilkowski",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026343
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200422
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 8,
+            "bottom": 5
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2002-09-03-hilton-head-christian-girls-hhca-wilburn-bradham"
+      }
+    ],
+    "Source": "User-provided Savannah Morning News girls tennis results, Sept. 3, 2002"
+  },
+  {
+    "MatchID": "2002-09-05-beaufort-academy-girls",
+    "Season": 2003,
+    "Date": "2002-09-05",
+    "Name": "St. Andrew's at Beaufort Academy - Girls",
+    "MatchType": "Dual Match",
+    "Gender": "Girls",
+    "Classification": "SCISA",
+    "MatchCategory": "Region",
+    "HomeAway": "Away",
+    "Status": "Completed",
+    "OpponentSchoolID": "sc-beaufort-academy-beaufort",
+    "TeamScore": {
+      "StAndrews": 3,
+      "Opponent": 6,
+      "Result": "L"
+    },
+    "LineMatches": [
+      {
+        "TennisMatchID": "2002-09-05-beaufort-academy-girls-singles-1",
+        "EventType": "Singles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2002-09-05",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-beaufort-academy-stacey-inman",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200401,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "top": 6,
+            "bottom": 2
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2003-girls-beaufort-academy-stacey-inman"
+      },
+      {
+        "TennisMatchID": "2002-09-05-beaufort-academy-girls-singles-2",
+        "EventType": "Singles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2002-09-05",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-beaufort-academy-johanna-winkler",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200603,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 2
+          },
+          {
+            "top": 6,
+            "bottom": 1
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2003-girls-beaufort-academy-johanna-winkler"
+      },
+      {
+        "TennisMatchID": "2002-09-05-beaufort-academy-girls-singles-3",
+        "EventType": "Singles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2002-09-05",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-beaufort-academy-allison-neal",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026341,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "top": 6,
+            "bottom": 2
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2003-girls-beaufort-academy-allison-neal"
+      },
+      {
+        "TennisMatchID": "2002-09-05-beaufort-academy-girls-singles-4",
+        "EventType": "Singles",
+        "LineNumber": 4,
+        "Status": "Completed",
+        "Date": "2002-09-05",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-beaufort-academy-megan-deane",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026342,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "top": 2,
+            "bottom": 6
+          },
+          {
+            "top": 4,
+            "bottom": 7
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "WinnerPlayerID": 2026342
+      },
+      {
+        "TennisMatchID": "2002-09-05-beaufort-academy-girls-singles-5",
+        "EventType": "Singles",
+        "LineNumber": 5,
+        "Status": "Completed",
+        "Date": "2002-09-05",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-beaufort-academy-charmian-webb",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026343,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 1
+          },
+          {
+            "top": 6,
+            "bottom": 1
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2003-girls-beaufort-academy-charmian-webb"
+      },
+      {
+        "TennisMatchID": "2002-09-05-beaufort-academy-girls-singles-6",
+        "EventType": "Singles",
+        "LineNumber": 6,
+        "Status": "Completed",
+        "Date": "2002-09-05",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-beaufort-academy-lauren-mims",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200422,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2003-girls-beaufort-academy-lauren-mims",
+        "Notes": "The published result did not include set scores for this line."
+      },
+      {
+        "TennisMatchID": "2002-09-05-beaufort-academy-girls-doubles-1",
+        "EventType": "Doubles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2002-09-05",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-09-05-beaufort-academy-girls-ba-chambers-kern",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-beaufort-academy-shae-chambers"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-beaufort-academy-amanda-kern"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-09-05-beaufort-academy-girls-sta-grace-wilkowski-cole",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200603
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026341
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 8,
+            "bottom": 2
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2002-09-05-beaufort-academy-girls-ba-chambers-kern"
+      },
+      {
+        "TennisMatchID": "2002-09-05-beaufort-academy-girls-doubles-2",
+        "EventType": "Doubles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2002-09-05",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-09-05-beaufort-academy-girls-ba-manos-mitchell",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-beaufort-academy-joni-manos"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-beaufort-academy-ml-mitchell"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-09-05-beaufort-academy-girls-sta-mary-wilkowski-rucker",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200401
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026342
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 0,
+            "bottom": 8
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2002-09-05-beaufort-academy-girls-sta-mary-wilkowski-rucker"
+      },
+      {
+        "TennisMatchID": "2002-09-05-beaufort-academy-girls-doubles-3",
+        "EventType": "Doubles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2002-09-05",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-09-05-beaufort-academy-girls-ba-gambla-chander",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-beaufort-academy-katie-gambla"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-beaufort-academy-megan-chander"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-09-05-beaufort-academy-girls-sta-jaramillo-rose-wilkowski",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026343
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200422
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2002-09-05-beaufort-academy-girls-sta-jaramillo-rose-wilkowski",
+        "Notes": "The published result did not include set scores for this line."
+      }
+    ],
+    "Source": "User-provided girls tennis results, Sept. 5, 2002"
+  },
+  {
+    "MatchID": "2002-09-10-charleston-collegiate-girls",
+    "Season": 2003,
+    "Date": "2002-09-10",
+    "Name": "St. Andrew's vs. Charleston Collegiate - Girls",
+    "MatchType": "Dual Match",
+    "Gender": "Girls",
+    "Classification": "SCISA",
+    "MatchCategory": "Region",
+    "HomeAway": "Home",
+    "Status": "Completed",
+    "OpponentSchoolID": "sc-charleston-collegiate-school-johns-island",
+    "TeamScore": {
+      "StAndrews": 8,
+      "Opponent": 1,
+      "Result": "W"
+    },
+    "LineMatches": [
+      {
+        "TennisMatchID": "2002-09-10-charleston-collegiate-girls-singles-1",
+        "EventType": "Singles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2002-09-10",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-charleston-collegiate-brooke-wooster",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200401,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 4,
+            "bottom": 6
+          },
+          {
+            "top": 7,
+            "bottom": 6
+          },
+          {
+            "top": 7,
+            "bottom": 4
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2003-girls-charleston-collegiate-brooke-wooster",
+        "Notes": "The published result listed the deciding tiebreak in parentheses."
+      },
+      {
+        "TennisMatchID": "2002-09-10-charleston-collegiate-girls-singles-2",
+        "EventType": "Singles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2002-09-10",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-charleston-collegiate-ali-sexton",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200603,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 3,
+            "bottom": 6
+          },
+          {
+            "top": 6,
+            "bottom": 3
+          },
+          {
+            "top": 2,
+            "bottom": 7
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "WinnerPlayerID": 200603,
+        "Notes": "The published result listed the deciding tiebreak in parentheses."
+      },
+      {
+        "TennisMatchID": "2002-09-10-charleston-collegiate-girls-singles-3",
+        "EventType": "Singles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2002-09-10",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-charleston-collegiate-alana-harris",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026341,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 0,
+            "bottom": 6
+          },
+          {
+            "top": 0,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "WinnerPlayerID": 2026341
+      },
+      {
+        "TennisMatchID": "2002-09-10-charleston-collegiate-girls-singles-4",
+        "EventType": "Singles",
+        "LineNumber": 4,
+        "Status": "Completed",
+        "Date": "2002-09-10",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-charleston-collegiate-katie-sutton",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026342,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 1,
+            "bottom": 6
+          },
+          {
+            "top": 3,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "WinnerPlayerID": 2026342
+      },
+      {
+        "TennisMatchID": "2002-09-10-charleston-collegiate-girls-singles-5",
+        "EventType": "Singles",
+        "LineNumber": 5,
+        "Status": "Completed",
+        "Date": "2002-09-10",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-charleston-collegiate-nancy-smythe",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026343,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 1,
+            "bottom": 6
+          },
+          {
+            "top": 1,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "WinnerPlayerID": 2026343
+      },
+      {
+        "TennisMatchID": "2002-09-10-charleston-collegiate-girls-singles-6",
+        "EventType": "Singles",
+        "LineNumber": 6,
+        "Status": "Completed",
+        "Date": "2002-09-10",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-charleston-collegiate-alex-benton",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200422,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 1,
+            "bottom": 6
+          },
+          {
+            "top": 1,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "WinnerPlayerID": 200422
+      },
+      {
+        "TennisMatchID": "2002-09-10-charleston-collegiate-girls-doubles-1",
+        "EventType": "Doubles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2002-09-10",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-09-10-charleston-collegiate-girls-cc-wooster-sexton",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-charleston-collegiate-brooke-wooster"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-charleston-collegiate-ali-sexton"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-09-10-charleston-collegiate-girls-sta-grace-wilkowski-cole",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200603
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026341
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 5,
+            "bottom": 8
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2002-09-10-charleston-collegiate-girls-sta-grace-wilkowski-cole"
+      },
+      {
+        "TennisMatchID": "2002-09-10-charleston-collegiate-girls-doubles-2",
+        "EventType": "Doubles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2002-09-10",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-09-10-charleston-collegiate-girls-cc-sutton-smythe",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-charleston-collegiate-katie-sutton"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-charleston-collegiate-nancy-smythe"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-09-10-charleston-collegiate-girls-sta-mary-wilkowski-rucker",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200401
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026342
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 1,
+            "bottom": 8
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2002-09-10-charleston-collegiate-girls-sta-mary-wilkowski-rucker"
+      },
+      {
+        "TennisMatchID": "2002-09-10-charleston-collegiate-girls-doubles-3",
+        "EventType": "Doubles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2002-09-10",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-09-10-charleston-collegiate-girls-cc-harris-benton",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-charleston-collegiate-alana-harris"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-charleston-collegiate-alex-benton"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-09-10-charleston-collegiate-girls-sta-jaramillo-rose-wilkowski",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026343
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200422
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 1,
+            "bottom": 8
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2002-09-10-charleston-collegiate-girls-sta-jaramillo-rose-wilkowski"
+      }
+    ],
+    "Source": "User-provided girls tennis results, Sept. 10, 2002"
+  },
+  {
+    "MatchID": "2002-09-12-colleton-prep-girls",
+    "Season": 2003,
+    "Date": "2002-09-12",
+    "Name": "St. Andrew's vs. Colleton Prep - Girls",
+    "MatchType": "Dual Match",
+    "Gender": "Girls",
+    "Classification": "SCISA",
+    "MatchCategory": "Region",
+    "HomeAway": "Home",
+    "Status": "Completed",
+    "OpponentSchoolID": "sc-colleton-prep-academy-walterboro",
+    "TeamScore": {
+      "StAndrews": 6,
+      "Opponent": 3,
+      "Result": "W"
+    },
+    "LineMatches": [
+      {
+        "TennisMatchID": "2002-09-12-colleton-prep-girls-singles-1",
+        "EventType": "Singles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2002-09-12",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-colleton-prep-marley-linder",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200401,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 4,
+            "bottom": 6
+          },
+          {
+            "top": 4,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "WinnerPlayerID": 200401
+      },
+      {
+        "TennisMatchID": "2002-09-12-colleton-prep-girls-singles-2",
+        "EventType": "Singles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2002-09-12",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-colleton-prep-kate-cannon",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200603,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 2
+          },
+          {
+            "top": 6,
+            "topTiebreak": 5,
+            "bottom": 7,
+            "bottomTiebreak": 7
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "WinnerPlayerID": 200603,
+        "Notes": "The published result listed this as a St. Andrew's win with a second-set tiebreak but did not include an additional deciding score."
+      },
+      {
+        "TennisMatchID": "2002-09-12-colleton-prep-girls-singles-3",
+        "EventType": "Singles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2002-09-12",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-colleton-prep-lanie-utsey",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026341,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 3
+          },
+          {
+            "top": 6,
+            "bottom": 7
+          },
+          {
+            "top": 8,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2003-girls-colleton-prep-lanie-utsey"
+      },
+      {
+        "TennisMatchID": "2002-09-12-colleton-prep-girls-singles-4",
+        "EventType": "Singles",
+        "LineNumber": 4,
+        "Status": "Completed",
+        "Date": "2002-09-12",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-colleton-prep-elizabeth-smoak",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026342,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 1
+          },
+          {
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2003-girls-colleton-prep-elizabeth-smoak"
+      },
+      {
+        "TennisMatchID": "2002-09-12-colleton-prep-girls-singles-5",
+        "EventType": "Singles",
+        "LineNumber": 5,
+        "Status": "Completed",
+        "Date": "2002-09-12",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-colleton-prep-meredith-drawdy",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026343,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 3,
+            "bottom": 6
+          },
+          {
+            "top": 4,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "WinnerPlayerID": 2026343
+      },
+      {
+        "TennisMatchID": "2002-09-12-colleton-prep-girls-singles-6",
+        "EventType": "Singles",
+        "LineNumber": 6,
+        "Status": "Completed",
+        "Date": "2002-09-12",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-colleton-prep-beena-thomas",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200422,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 3
+          },
+          {
+            "top": 6,
+            "bottom": 4
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2003-girls-colleton-prep-beena-thomas"
+      },
+      {
+        "TennisMatchID": "2002-09-12-colleton-prep-girls-doubles-1",
+        "EventType": "Doubles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2002-09-12",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-09-12-colleton-prep-girls-cp-cannon-utsey",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-colleton-prep-kate-cannon"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-colleton-prep-lanie-utsey"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-09-12-colleton-prep-girls-sta-grace-wilkowski-cole",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200603
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026341
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 3,
+            "bottom": 8
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2002-09-12-colleton-prep-girls-sta-grace-wilkowski-cole"
+      },
+      {
+        "TennisMatchID": "2002-09-12-colleton-prep-girls-doubles-2",
+        "EventType": "Doubles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2002-09-12",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-09-12-colleton-prep-girls-cp-smoak-breland",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-colleton-prep-elizabeth-smoak"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-colleton-prep-mckenzie-breland"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-09-12-colleton-prep-girls-sta-mary-wilkowski-rucker",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200401
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026342
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 1,
+            "bottom": 8
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2002-09-12-colleton-prep-girls-sta-mary-wilkowski-rucker"
+      },
+      {
+        "TennisMatchID": "2002-09-12-colleton-prep-girls-doubles-3",
+        "EventType": "Doubles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2002-09-12",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-09-12-colleton-prep-girls-cp-bishop-hubbard",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-colleton-prep-courtney-bishop"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-colleton-prep-megan-hubbard"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-09-12-colleton-prep-girls-sta-jaramillo-rose-wilkowski",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026343
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200422
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 2,
+            "bottom": 8
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2002-09-12-colleton-prep-girls-sta-jaramillo-rose-wilkowski"
+      }
+    ],
+    "Source": "User-provided girls tennis results, Sept. 12, 2002"
+  },
+  {
+    "MatchID": "2002-before-09-30-missing-loss-1-girls",
+    "Season": 2003,
+    "Date": null,
+    "DateLabel": "Before Sep. 30, 2002",
+    "SortDate": "2002-09-29-1",
+    "Name": "St. Andrew's vs. Unknown Opponent - Girls (Missing Match 1)",
+    "MatchType": "Dual Match",
+    "Gender": "Girls",
+    "Classification": "SCISA",
+    "MatchCategory": "Unknown",
+    "HomeAway": "Unknown",
+    "Status": "Completed",
+    "Opponent": "Unknown opponent",
+    "TeamScore": {
+      "Result": "L"
+    },
+    "LineMatches": [],
+    "Source": "Record reconciliation from user-provided Sept. 30, 2002 girls tennis result; St. Andrew's was 2-5 after the Hilton Head Christian match."
+  },
+  {
+    "MatchID": "2002-before-09-30-missing-loss-2-girls",
+    "Season": 2003,
+    "Date": null,
+    "DateLabel": "Before Sep. 30, 2002",
+    "SortDate": "2002-09-29-2",
+    "Name": "St. Andrew's vs. Unknown Opponent - Girls (Missing Match 2)",
+    "MatchType": "Dual Match",
+    "Gender": "Girls",
+    "Classification": "SCISA",
+    "MatchCategory": "Unknown",
+    "HomeAway": "Unknown",
+    "Status": "Completed",
+    "Opponent": "Unknown opponent",
+    "TeamScore": {
+      "Result": "L"
+    },
+    "LineMatches": [],
+    "Source": "Record reconciliation from user-provided Sept. 30, 2002 girls tennis result; St. Andrew's was 2-5 after the Hilton Head Christian match."
+  },
+  {
+    "MatchID": "2002-09-30-hilton-head-christian-girls",
+    "Season": 2003,
+    "Date": "2002-09-30",
+    "Name": "St. Andrew's vs. Hilton Head Christian - Girls",
+    "MatchType": "Dual Match",
+    "Gender": "Girls",
+    "Classification": "SCISA",
+    "MatchCategory": "Non-Region",
+    "HomeAway": "Unknown",
+    "Status": "Completed",
+    "OpponentSchoolID": "sc-hilton-head-christian-academy-hilton-head-island",
+    "TeamScore": {
+      "StAndrews": 2,
+      "Opponent": 7,
+      "Result": "L"
+    },
+    "LineMatches": [
+      {
+        "TennisMatchID": "2002-09-30-hilton-head-christian-girls-singles-1",
+        "EventType": "Singles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2002-09-30",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-hilton-head-christian-cassie-kristoff",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200401,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 1
+          },
+          {
+            "top": 6,
+            "bottom": 1
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2003-girls-hilton-head-christian-cassie-kristoff"
+      },
+      {
+        "TennisMatchID": "2002-09-30-hilton-head-christian-girls-singles-2",
+        "EventType": "Singles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2002-09-30",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-hilton-head-christian-jessie-rose-remigi",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026341,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 1
+          },
+          {
+            "top": 6,
+            "bottom": 1
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2003-girls-hilton-head-christian-jessie-rose-remigi"
+      },
+      {
+        "TennisMatchID": "2002-09-30-hilton-head-christian-girls-singles-3",
+        "EventType": "Singles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2002-09-30",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-hilton-head-christian-kendall-sigmon",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200603,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 3,
+            "bottom": 6
+          },
+          {
+            "top": 5,
+            "bottom": 7
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "WinnerPlayerID": 200603
+      },
+      {
+        "TennisMatchID": "2002-09-30-hilton-head-christian-girls-singles-4",
+        "EventType": "Singles",
+        "LineNumber": 4,
+        "Status": "Completed",
+        "Date": "2002-09-30",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-hilton-head-christian-lindsay-wilburn",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026342,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2003-girls-hilton-head-christian-lindsay-wilburn"
+      },
+      {
+        "TennisMatchID": "2002-09-30-hilton-head-christian-girls-singles-5",
+        "EventType": "Singles",
+        "LineNumber": 5,
+        "Status": "Completed",
+        "Date": "2002-09-30",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-hilton-head-christian-lena-relch",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026343,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "top": 7,
+            "bottom": 5
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2003-girls-hilton-head-christian-lena-relch"
+      },
+      {
+        "TennisMatchID": "2002-09-30-hilton-head-christian-girls-singles-6",
+        "EventType": "Singles",
+        "LineNumber": 6,
+        "Status": "Completed",
+        "Date": "2002-09-30",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-hilton-head-christian-sarah-bradham",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200422,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 7,
+            "bottom": 6
+          },
+          {
+            "top": 7,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2003-girls-hilton-head-christian-sarah-bradham",
+        "Notes": "The published result did not include tiebreak scores for the 7-6 sets."
+      },
+      {
+        "TennisMatchID": "2002-09-30-hilton-head-christian-girls-doubles-1",
+        "EventType": "Doubles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2002-09-30",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-09-30-hilton-head-christian-girls-hhc-kristoff-remigi",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-hilton-head-christian-cassie-kristoff"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-hilton-head-christian-jessie-rose-remigi"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-09-30-hilton-head-christian-girls-sta-grace-wilkowski-cole",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200603
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026341
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 8,
+            "bottom": 5
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2002-09-30-hilton-head-christian-girls-hhc-kristoff-remigi"
+      },
+      {
+        "TennisMatchID": "2002-09-30-hilton-head-christian-girls-doubles-2",
+        "EventType": "Doubles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2002-09-30",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-09-30-hilton-head-christian-girls-hhc-wilburn-reich",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-hilton-head-christian-lindsay-wilburn"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-hilton-head-christian-lena-relch"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-09-30-hilton-head-christian-girls-sta-mary-wilkowski-rucker",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200401
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026342
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 8,
+            "bottom": 2
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2002-09-30-hilton-head-christian-girls-hhc-wilburn-reich"
+      },
+      {
+        "TennisMatchID": "2002-09-30-hilton-head-christian-girls-doubles-3",
+        "EventType": "Doubles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2002-09-30",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-09-30-hilton-head-christian-girls-hhc-sigmon-bradham",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-hilton-head-christian-kendall-sigmon"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-hilton-head-christian-sarah-bradham"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-09-30-hilton-head-christian-girls-sta-jaramillo-rose-wilkowski",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026343
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200422
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2002-09-30-hilton-head-christian-girls-sta-jaramillo-rose-wilkowski",
+        "Notes": "St. Andrew's won this doubles line by default."
+      }
+    ],
+    "Source": "User-provided girls tennis results, Sept. 30, 2002"
+  },
+  {
+    "MatchID": "2002-10-01-beaufort-academy-girls",
+    "Season": 2003,
+    "Date": "2002-10-01",
+    "Name": "St. Andrew's vs. Beaufort Academy - Girls",
+    "MatchType": "Dual Match",
+    "Gender": "Girls",
+    "Classification": "SCISA",
+    "MatchCategory": "Region",
+    "HomeAway": "Unknown",
+    "Status": "Completed",
+    "OpponentSchoolID": "sc-beaufort-academy-beaufort",
+    "TeamScore": {
+      "StAndrews": 3,
+      "Opponent": 6,
+      "Result": "L"
+    },
+    "LineMatches": [
+      {
+        "TennisMatchID": "2002-10-01-beaufort-academy-girls-singles-1",
+        "EventType": "Singles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2002-10-01",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-beaufort-academy-stacey-inman",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200401,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 4
+          },
+          {
+            "top": 6,
+            "bottom": 1
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2003-girls-beaufort-academy-stacey-inman"
+      },
+      {
+        "TennisMatchID": "2002-10-01-beaufort-academy-girls-singles-2",
+        "EventType": "Singles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2002-10-01",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-beaufort-academy-johanna-winkler",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026341,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "top": 6,
+            "bottom": 3
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2003-girls-beaufort-academy-johanna-winkler"
+      },
+      {
+        "TennisMatchID": "2002-10-01-beaufort-academy-girls-singles-3",
+        "EventType": "Singles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2002-10-01",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-beaufort-academy-allison-neal",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200603,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 2
+          },
+          {
+            "top": 6,
+            "bottom": 3
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2003-girls-beaufort-academy-allison-neal"
+      },
+      {
+        "TennisMatchID": "2002-10-01-beaufort-academy-girls-singles-4",
+        "EventType": "Singles",
+        "LineNumber": 4,
+        "Status": "Completed",
+        "Date": "2002-10-01",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-beaufort-academy-megan-deane",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026342,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 7,
+            "bottom": 6
+          },
+          {
+            "top": 6,
+            "bottom": 4
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2003-girls-beaufort-academy-megan-deane",
+        "Notes": "The published result did not include a tiebreak score for the 7-6 set."
+      },
+      {
+        "TennisMatchID": "2002-10-01-beaufort-academy-girls-singles-5",
+        "EventType": "Singles",
+        "LineNumber": 5,
+        "Status": "Completed",
+        "Date": "2002-10-01",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-beaufort-academy-charmian-webb",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026343,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 1
+          },
+          {
+            "top": 6,
+            "bottom": 3
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2003-girls-beaufort-academy-charmian-webb"
+      },
+      {
+        "TennisMatchID": "2002-10-01-beaufort-academy-girls-singles-6",
+        "EventType": "Singles",
+        "LineNumber": 6,
+        "Status": "Completed",
+        "Date": "2002-10-01",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-beaufort-academy-lauren-mims",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200422,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 1
+          },
+          {
+            "top": 6,
+            "bottom": 2
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2003-girls-beaufort-academy-lauren-mims"
+      },
+      {
+        "TennisMatchID": "2002-10-01-beaufort-academy-girls-doubles-1",
+        "EventType": "Doubles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2002-10-01",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-10-01-beaufort-academy-girls-ba-chambers-kern",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-beaufort-academy-shae-chambers"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-beaufort-academy-amanda-kern"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-10-01-beaufort-academy-girls-sta-grace-wilkowski-cole",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200603
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026341
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 3,
+            "bottom": 8
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2002-10-01-beaufort-academy-girls-sta-grace-wilkowski-cole"
+      },
+      {
+        "TennisMatchID": "2002-10-01-beaufort-academy-girls-doubles-2",
+        "EventType": "Doubles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2002-10-01",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-10-01-beaufort-academy-girls-ba-chandler-manos",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-beaufort-academy-megan-chander"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-beaufort-academy-joni-manos"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-10-01-beaufort-academy-girls-sta-mary-wilkowski-rucker",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200401
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026342
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 3,
+            "bottom": 8
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2002-10-01-beaufort-academy-girls-sta-mary-wilkowski-rucker"
+      },
+      {
+        "TennisMatchID": "2002-10-01-beaufort-academy-girls-doubles-3",
+        "EventType": "Doubles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2002-10-01",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-10-01-beaufort-academy-girls-ba-mitchell-gambla",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-beaufort-academy-ml-mitchell"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-beaufort-academy-katie-gambla"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-10-01-beaufort-academy-girls-sta-jaramillo-rose-wilkowski",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026343
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200422
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 1,
+            "bottom": 8
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2002-10-01-beaufort-academy-girls-sta-jaramillo-rose-wilkowski"
+      }
+    ],
+    "Source": "User-provided girls tennis results, Oct. 1, 2002"
+  },
+  {
+    "MatchID": "2002-10-03-colleton-prep-girls",
+    "Season": 2003,
+    "Date": "2002-10-03",
+    "Name": "St. Andrew's vs. Colleton Prep - Girls",
+    "MatchType": "Dual Match",
+    "Gender": "Girls",
+    "Classification": "SCISA",
+    "MatchCategory": "Region",
+    "HomeAway": "Home",
+    "Status": "Completed",
+    "OpponentSchoolID": "sc-colleton-prep-academy-walterboro",
+    "TeamScore": {
+      "StAndrews": 7,
+      "Opponent": 2,
+      "Result": "W"
+    },
+    "LineMatches": [
+      {
+        "TennisMatchID": "2002-10-03-colleton-prep-girls-singles-1",
+        "EventType": "Singles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2002-10-03",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-colleton-prep-kate-cannon",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200401,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 1,
+            "bottom": 6
+          },
+          {
+            "top": 2,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "WinnerPlayerID": 200401
+      },
+      {
+        "TennisMatchID": "2002-10-03-colleton-prep-girls-singles-2",
+        "EventType": "Singles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2002-10-03",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-colleton-prep-lanie-utsey",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026341,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 3
+          },
+          {
+            "top": 4,
+            "bottom": 6
+          },
+          {
+            "top": 7,
+            "bottom": 2
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2003-girls-colleton-prep-lanie-utsey",
+        "Notes": "The published result listed the deciding tiebreak in parentheses."
+      },
+      {
+        "TennisMatchID": "2002-10-03-colleton-prep-girls-singles-3",
+        "EventType": "Singles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2002-10-03",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-colleton-prep-meredith-drawdy",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200603,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 1,
+            "bottom": 6
+          },
+          {
+            "top": 1,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "WinnerPlayerID": 200603
+      },
+      {
+        "TennisMatchID": "2002-10-03-colleton-prep-girls-singles-4",
+        "EventType": "Singles",
+        "LineNumber": 4,
+        "Status": "Completed",
+        "Date": "2002-10-03",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-colleton-prep-beena-thomas",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026342,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 3
+          },
+          {
+            "top": 3,
+            "bottom": 6
+          },
+          {
+            "top": 11,
+            "bottom": 9
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2003-girls-colleton-prep-beena-thomas",
+        "Notes": "The published result listed the deciding tiebreak in parentheses."
+      },
+      {
+        "TennisMatchID": "2002-10-03-colleton-prep-girls-singles-5",
+        "EventType": "Singles",
+        "LineNumber": 5,
+        "Status": "Completed",
+        "Date": "2002-10-03",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-colleton-prep-mckenzie-breland",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026343,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 4,
+            "bottom": 6
+          },
+          {
+            "top": 0,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "WinnerPlayerID": 2026343
+      },
+      {
+        "TennisMatchID": "2002-10-03-colleton-prep-girls-singles-6",
+        "EventType": "Singles",
+        "LineNumber": 6,
+        "Status": "Completed",
+        "Date": "2002-10-03",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-colleton-prep-elizabeth-smoak",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200422,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "WinnerPlayerID": 200422,
+        "Notes": "St. Andrew's won this singles line by default."
+      },
+      {
+        "TennisMatchID": "2002-10-03-colleton-prep-girls-doubles-1",
+        "EventType": "Doubles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2002-10-03",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-10-03-colleton-prep-girls-cp-smoak-utsey",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-colleton-prep-elizabeth-smoak"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-colleton-prep-lanie-utsey"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-10-03-colleton-prep-girls-sta-grace-wilkowski-cole",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200603
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026341
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 4,
+            "bottom": 8
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2002-10-03-colleton-prep-girls-sta-grace-wilkowski-cole"
+      },
+      {
+        "TennisMatchID": "2002-10-03-colleton-prep-girls-doubles-2",
+        "EventType": "Doubles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2002-10-03",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-10-03-colleton-prep-girls-cp-thomas-cannon",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-colleton-prep-beena-thomas"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-colleton-prep-kate-cannon"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-10-03-colleton-prep-girls-sta-mary-wilkowski-rucker",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200401
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026342
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 1,
+            "bottom": 8
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2002-10-03-colleton-prep-girls-sta-mary-wilkowski-rucker"
+      },
+      {
+        "TennisMatchID": "2002-10-03-colleton-prep-girls-doubles-3",
+        "EventType": "Doubles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2002-10-03",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-10-03-colleton-prep-girls-cp-breland-drawdy",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-colleton-prep-mckenzie-breland"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-colleton-prep-meredith-drawdy"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-10-03-colleton-prep-girls-sta-jaramillo-rose-wilkowski",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026343
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200422
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 8
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2002-10-03-colleton-prep-girls-sta-jaramillo-rose-wilkowski"
+      }
+    ],
+    "Source": "User-provided girls tennis results, Oct. 3, 2002"
+  },
+  {
     "MatchID": "2012-10-03-beaufort-academy-girls",
     "Season": 2012,
     "Date": "2012-10-03",
@@ -5432,6 +7981,7 @@
     "MatchType": "Dual Match",
     "Gender": "Boys",
     "Classification": "GIAA",
+    "MatchCategory": "Non-Region",
     "Status": "Completed",
     "OpponentSchoolID": "ga-savannah-christian-preparatory-school-savannah",
     "TeamScore": {

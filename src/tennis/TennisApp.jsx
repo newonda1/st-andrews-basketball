@@ -120,19 +120,30 @@ export default function TennisApp() {
         <Route
           path="yearly-results"
           element={
-            <YearlyResults seasons={seasons} matches={matches} status={status} />
+            <YearlyResults
+              seasons={seasons}
+              matches={matches}
+              players={players}
+              status={status}
+            />
           }
         />
         <Route
           path="seasons/:seasonId"
           element={
-            <SeasonPage seasons={seasons} matches={matches} status={status} />
+            <SeasonPage
+              seasons={seasons}
+              matches={matches}
+              schools={schools}
+              status={status}
+            />
           }
         />
         <Route
           path="matches/:matchId"
           element={
             <MatchPage
+              seasons={seasons}
               matches={matches}
               players={players}
               opponentAthletes={opponentAthletes}

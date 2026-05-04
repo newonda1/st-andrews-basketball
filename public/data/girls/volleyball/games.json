@@ -43,6 +43,196 @@
     ]
   },
   {
+    "GameID": "2002-placeholder-1",
+    "Season": 2002,
+    "SeasonID": 2002,
+    "DisplaySeason": "2002",
+    "SourceSeasonLabel": "2002-03",
+    "Date": "",
+    "DisplayDate": "Between Aug. 26 and Sep. 3, 2002",
+    "SortDate": "2002-09-02",
+    "SortOrder": 1,
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "",
+    "Opponent": "Unknown",
+    "OpponentLocation": "",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "GameType": "Non-Region",
+    "Result": "W",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Notes": "Placeholder for an unreported second match. Savannah Morning News reported St. Andrew's record as 2-1 after the Sep. 3 match, implying a non-region win between Aug. 26 and Sep. 3.",
+    "IsComplete": "Yes",
+    "SetScores": []
+  },
+  {
+    "GameID": "20020903",
+    "Season": 2002,
+    "SeasonID": 2002,
+    "DisplaySeason": "2002",
+    "SourceSeasonLabel": "2002-03",
+    "Date": "2002-09-03",
+    "SortDate": "2002-09-03",
+    "SortOrder": 1,
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "sc-st-pauls-country-day-school-hollywood",
+    "Opponent": "St. Paul's Country Day School",
+    "OpponentLocation": "Hollywood, SC",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "GameType": "Non-Region",
+    "Result": "W",
+    "TeamScore": 3,
+    "OpponentScore": 1,
+    "Notes": "Savannah Morning News reported St. Andrew's record as 2-1 after the match.",
+    "IsComplete": "Yes",
+    "SetScores": [
+      {
+        "Set": 1,
+        "Team": 15,
+        "Opponent": 4
+      },
+      {
+        "Set": 2,
+        "Team": 12,
+        "Opponent": 15
+      },
+      {
+        "Set": 3,
+        "Team": 15,
+        "Opponent": 9
+      },
+      {
+        "Set": 4,
+        "Team": 15,
+        "Opponent": 11
+      }
+    ]
+  },
+  {
+    "GameID": "2002-placeholder-2",
+    "Season": 2002,
+    "SeasonID": 2002,
+    "DisplaySeason": "2002",
+    "SourceSeasonLabel": "2002-03",
+    "Date": "",
+    "DisplayDate": "Between Sep. 3 and Sep. 10, 2002",
+    "SortDate": "2002-09-09",
+    "SortOrder": 1,
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "",
+    "Opponent": "Unknown",
+    "OpponentLocation": "",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Notes": "Placeholder for an unreported fourth match. Savannah Morning News reported St. Andrew's record as 4-1 overall and 2-0 in SCISA Region 3-AA after the Sep. 10 match, implying a region win between Sep. 3 and Sep. 10.",
+    "IsComplete": "Yes",
+    "SetScores": []
+  },
+  {
+    "GameID": "20020910",
+    "Season": 2002,
+    "SeasonID": 2002,
+    "DisplaySeason": "2002",
+    "SourceSeasonLabel": "2002-03",
+    "Date": "2002-09-10",
+    "SortDate": "2002-09-10",
+    "SortOrder": 1,
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "sc-charleston-collegiate-school-johns-island",
+    "Opponent": "Charleston Collegiate School",
+    "OpponentLocation": "Johns Island, SC",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 3,
+    "OpponentScore": 0,
+    "Notes": "Savannah Morning News reported St. Andrew's record as 4-1 overall and 2-0 in SCISA Region 3-AA after the match.",
+    "IsComplete": "Yes",
+    "SetScores": [
+      {
+        "Set": 1,
+        "Team": 15,
+        "Opponent": 11
+      },
+      {
+        "Set": 2,
+        "Team": 15,
+        "Opponent": 12
+      },
+      {
+        "Set": 3,
+        "Team": 15,
+        "Opponent": 10
+      }
+    ]
+  },
+  {
+    "GameID": "20020912",
+    "Season": 2002,
+    "SeasonID": 2002,
+    "DisplaySeason": "2002",
+    "SourceSeasonLabel": "2002-03",
+    "Date": "2002-09-12",
+    "SortDate": "2002-09-12",
+    "SortOrder": 1,
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "sc-colleton-prep-academy-walterboro",
+    "Opponent": "Colleton Prep Academy",
+    "OpponentLocation": "Walterboro, SC",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 3,
+    "OpponentScore": 0,
+    "Notes": "Savannah Morning News reported St. Andrew's record as 5-1 overall and 3-0 in SCISA Region 3-AA after the match.",
+    "IsComplete": "Yes",
+    "SetScores": [
+      {
+        "Set": 1,
+        "Team": 15,
+        "Opponent": 1
+      },
+      {
+        "Set": 2,
+        "Team": 17,
+        "Opponent": 15
+      },
+      {
+        "Set": 3,
+        "Team": 15,
+        "Opponent": 0
+      }
+    ]
+  },
+  {
     "GameID": "2003-placeholder-1",
     "Season": 2003,
     "SeasonID": 2003,

@@ -11,6 +11,14 @@ export function formatTennisDate(dateValue) {
   });
 }
 
+export function getTennisDateLabel(matchOrDate) {
+  if (matchOrDate && typeof matchOrDate === "object") {
+    return matchOrDate.DateLabel || formatTennisDate(matchOrDate.Date);
+  }
+
+  return formatTennisDate(matchOrDate);
+}
+
 export function getTennisSeasonLabel(season) {
   if (!season) return "—";
   if (typeof season === "object") {
@@ -19,9 +27,37 @@ export function getTennisSeasonLabel(season) {
   return String(season);
 }
 
+const REGION_OPPONENT_IDS_BY_SEASON = {
+  2026: new Set([
+    "ga-bulloch-academy-statesboro",
+    "ga-frederica-academy-st-simons-island",
+    "ga-pinewood-christian-academy-bellville",
+    "ga-westminster-schools-of-augusta-augusta",
+  ]),
+};
+
+export function getTennisMatchCategory(match) {
+  if (match?.MatchCategory) return match.MatchCategory;
+  if (match?.GameType) return match.GameType;
+  if (match?.MatchType === "Tournament") return "Tournament";
+
+  if (match?.MatchType === "Dual Match") {
+    const regionOpponentIds = REGION_OPPONENT_IDS_BY_SEASON[Number(match?.Season)];
+    if (regionOpponentIds) {
+      return regionOpponentIds.has(String(match.OpponentSchoolID))
+        ? "Region"
+        : "Non-Region";
+    }
+  }
+
+  return match?.Classification || match?.MatchType || "Regular Season";
+}
+
 export function sortTennisMatches(matches = []) {
   return matches.slice().sort((a, b) => {
-    const dateDiff = String(a.Date || "").localeCompare(String(b.Date || ""));
+    const dateDiff = String(a.SortDate || a.Date || "").localeCompare(
+      String(b.SortDate || b.Date || "")
+    );
     if (dateDiff !== 0) return dateDiff;
 
     return String(a.Name || "").localeCompare(String(b.Name || ""));

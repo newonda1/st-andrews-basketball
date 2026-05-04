@@ -716,7 +716,7 @@ export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
         <h2 className="text-2xl font-semibold">Roster</h2>
 
         <div className="overflow-x-auto">
-          <table className="w-full table-auto border text-center text-[clamp(0.66rem,0.95vw,0.98rem)]">
+          <table className="w-full table-auto border text-center text-sm">
             <thead className="bg-gray-200 font-bold">
               <tr>
                 <th className={`${recordTableStyles.headerCell} whitespace-nowrap`}>No.</th>

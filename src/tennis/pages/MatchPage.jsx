@@ -1,7 +1,11 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import TennisTournamentBracket from "../components/TennisTournamentBracket";
-import { formatTennisDate } from "../tennisPageUtils";
+import {
+  getTennisDateLabel,
+  getTennisMatchCategory,
+  getTennisSeasonLabel,
+} from "../tennisPageUtils";
 
 const ST_ANDREWS_SCHOOL_ID = "ga-st-andrews-school-savannah";
 
@@ -27,6 +31,82 @@ function buildMap(items, key) {
     }
   }
   return map;
+}
+
+function compactList(items = []) {
+  return Array.from(
+    new Set(
+      items
+        .filter((item) => item !== undefined && item !== null && item !== "")
+        .map((item) => String(item))
+    )
+  );
+}
+
+function schoolDisplayName(school, fallback = "Opponent") {
+  return school?.Name || school?.ShortName || fallback;
+}
+
+function teamResultLabel(score) {
+  if (!score) return null;
+  if (score.Result === "W") return "Win";
+  if (score.Result === "L") return "Loss";
+  if (score.Result === "T") return "Tie";
+  return score.Result || "Final";
+}
+
+function hasTeamScores(score) {
+  return score?.StAndrews !== undefined && score?.Opponent !== undefined;
+}
+
+function MatchHeader({ match, schoolMap, tournament }) {
+  const opponentSchool = match?.OpponentSchoolID
+    ? schoolMap.get(String(match.OpponentSchoolID))
+    : null;
+  const opponentName = schoolDisplayName(
+    opponentSchool,
+    match?.Opponent || "Opponent"
+  );
+  const isDualMatch = match?.MatchType === "Dual Match";
+  const dateLabel = getTennisDateLabel(match);
+  const matchupWord = match?.HomeAway === "Away" ? "at" : "vs";
+  const matchCategory = isDualMatch
+    ? getTennisMatchCategory(match)
+    : match?.MatchCategory ||
+      match?.GameType ||
+      match?.Classification ||
+      tournament?.Classification;
+  const title = isDualMatch
+    ? `${dateLabel} ${matchupWord} ${opponentName}`
+    : match?.Name || "Tennis Match";
+  const contextItems = isDualMatch
+    ? compactList([match.Gender, matchCategory])
+    : compactList([dateLabel, match.Gender, matchCategory, match.MatchType]);
+  const resultLabel = teamResultLabel(match?.TeamScore);
+
+  return (
+    <header className="space-y-2">
+      <h1 className="text-3xl font-semibold leading-tight text-slate-700 sm:text-4xl">
+        {title}
+      </h1>
+      {resultLabel ? (
+        <p className="text-2xl font-medium text-slate-600 sm:text-3xl">
+          {resultLabel}
+          {hasTeamScores(match.TeamScore) ? (
+            <>
+              <span className="mx-2 text-slate-400">&mdash;</span>
+              {match.TeamScore.StAndrews}&ndash;{match.TeamScore.Opponent}
+            </>
+          ) : null}
+        </p>
+      ) : null}
+      {contextItems.length ? (
+        <p className="text-base font-medium text-slate-500 sm:text-lg">
+          {contextItems.join(" • ")}
+        </p>
+      ) : null}
+    </header>
+  );
 }
 
 function scoreForSide(line, side) {
@@ -205,18 +285,14 @@ function formatHonorSubject(honor, playerMap) {
 
 function MatchNotes({ match, playerMap }) {
   const honors = Array.isArray(match?.Honors) ? match.Honors : [];
-  const hasNotes = match?.Summary || honors.length || match?.Source;
+  const hasNotes = honors.length;
 
   if (!hasNotes) return null;
 
   return (
     <section className="rounded-lg border border-slate-200 bg-white px-5 py-4 shadow-sm">
-      {match.Summary ? (
-        <p className="text-sm leading-7 text-slate-700">{match.Summary}</p>
-      ) : null}
-
       {honors.length ? (
-        <div className={match.Summary ? "mt-4" : ""}>
+        <div>
           <h2 className="text-xs font-bold uppercase tracking-[0.16em] text-slate-500">
             Archive Notes
           </h2>
@@ -236,24 +312,6 @@ function MatchNotes({ match, playerMap }) {
             })}
           </div>
         </div>
-      ) : null}
-
-      {match.Source ? (
-        <p className="mt-4 text-xs font-semibold leading-6 text-slate-500">
-          Source:{" "}
-          {match.SourceURL ? (
-            <a
-              href={match.SourceURL}
-              target="_blank"
-              rel="noreferrer"
-              className="text-blue-700 hover:text-blue-900"
-            >
-              {match.Source}
-            </a>
-          ) : (
-            match.Source
-          )}
-        </p>
       ) : null}
     </section>
   );
@@ -276,25 +334,9 @@ function DualMatchResults({ match, players, opponentAthletes, schools }) {
         .sort((a, b) => Number(a.LineNumber) - Number(b.LineNumber)),
     }))
     .filter((group) => group.lines.length);
-  const opponentSchool = schoolMap.get(String(match.OpponentSchoolID));
-  const opponentName =
-    opponentSchool?.ShortName || opponentSchool?.Name || "Opponent";
 
   return (
     <section className="space-y-5">
-      {match.TeamScore ? (
-        <div className="rounded-lg border border-slate-200 bg-white px-5 py-4 text-center shadow-sm">
-          <p className="text-xs font-bold uppercase tracking-[0.16em] text-slate-500">
-            Final
-          </p>
-          <p className="mt-2 text-3xl font-bold text-slate-900">
-            St. Andrew&apos;s {match.TeamScore.StAndrews}
-            <span className="px-3 text-slate-400">-</span>
-            {match.TeamScore.Opponent} {opponentName}
-          </p>
-        </div>
-      ) : null}
-
       {groupedLines.map((group) => (
         <div key={group.eventType}>
           <h2 className="text-xl font-bold text-slate-900">{group.eventType}</h2>
@@ -347,6 +389,7 @@ function BracketSection({
 }
 
 export default function MatchPage({
+  seasons = [],
   matches = [],
   players = [],
   opponentAthletes = [],
@@ -360,6 +403,12 @@ export default function MatchPage({
   const match = useMemo(() => {
     return matches.find((entry) => String(entry.MatchID) === String(matchId)) || null;
   }, [matchId, matches]);
+
+  const season = useMemo(() => {
+    return (
+      seasons.find((entry) => String(entry.SeasonID) === String(match?.Season)) || null
+    );
+  }, [match?.Season, seasons]);
 
   useEffect(() => {
     let cancelled = false;
@@ -424,6 +473,8 @@ export default function MatchPage({
     : [];
   const lineMatches = Array.isArray(match.LineMatches) ? match.LineMatches : [];
   const playerMap = buildMap(players, "PlayerID");
+  const schoolMap = buildMap(schools, "SchoolID");
+  const seasonLabel = getTennisSeasonLabel(season || match.Season);
 
   return (
     <div className="mx-auto max-w-6xl space-y-6 px-4 pb-24 pt-2 sm:px-6">
@@ -433,15 +484,16 @@ export default function MatchPage({
         </div>
       ) : null}
 
-      <header className="text-center">
-        <p className="text-sm font-bold uppercase tracking-[0.18em] text-slate-500">
-          {formatTennisDate(match.Date)}
-        </p>
-        <h1 className="mt-2 text-3xl font-bold text-slate-900">{match.Name}</h1>
-        <p className="mt-2 text-sm font-medium text-slate-500">
-          {match.Classification || tournament?.Classification || match.MatchType}
-        </p>
-      </header>
+      <div>
+        <Link
+          to={`/athletics/tennis/seasons/${match.Season}`}
+          className="text-sm font-semibold text-blue-700 hover:underline"
+        >
+          Back to {seasonLabel} Season
+        </Link>
+      </div>
+
+      <MatchHeader match={match} schoolMap={schoolMap} tournament={tournament} />
 
       <MatchNotes match={match} playerMap={playerMap} />
 
