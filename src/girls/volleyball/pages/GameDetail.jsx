@@ -9,7 +9,7 @@ import {
   getTeamStatCategory,
 } from "../volleyballData";
 
-function SetScoreTable({ game }) {
+function SetScoreTable({ game, opponentName }) {
   return (
     <div className="overflow-x-auto rounded-lg border border-slate-200 bg-white shadow-sm">
       <table className="w-full min-w-[520px] border-collapse text-sm">
@@ -47,7 +47,7 @@ function SetScoreTable({ game }) {
           </tr>
           <tr className="bg-slate-50">
             <td className="border-b border-slate-200 px-3 py-2 font-semibold">
-              {game.Opponent}
+              {opponentName}
             </td>
             {(game.SetScores || []).map((set) => (
               <td
@@ -65,6 +65,19 @@ function SetScoreTable({ game }) {
       </table>
     </div>
   );
+}
+
+function buildSchoolMap(schools = []) {
+  return new Map(
+    (Array.isArray(schools) ? schools : [])
+      .filter((school) => school?.SchoolID)
+      .map((school) => [String(school.SchoolID), school])
+  );
+}
+
+function getOpponentDisplayName(game, schoolMap) {
+  const school = game?.OpponentID ? schoolMap.get(String(game.OpponentID)) : null;
+  return school?.Name || school?.ShortName || game?.Opponent || "Unknown";
 }
 
 function GameStatTable({ title, rows, playerMap }) {
@@ -155,9 +168,41 @@ function TeamTotals({ matchStats }) {
   );
 }
 
+function buildSourceCitation(game) {
+  const explicitCitation = String(game?.SourceCitation || "").trim();
+  if (explicitCitation) return explicitCitation;
+
+  const parts = [game?.SourcePublication, game?.SourceDate].filter(Boolean);
+  return parts.join(", ");
+}
+
+function GameRecap({ game }) {
+  const recapText = String(game?.Recap || "").trim();
+  if (!recapText) return null;
+
+  const recapTitle = String(game?.RecapTitle || "").trim() || "Game Recap";
+  const sourceCitation = buildSourceCitation(game);
+  const sourceTitle = String(game?.SourceTitle || "").trim();
+  const showSourceTitle = sourceTitle && sourceTitle !== recapTitle;
+
+  return (
+    <section className="space-y-3">
+      <h2 className="text-2xl font-semibold text-slate-900">{recapTitle}</h2>
+      <p className="whitespace-pre-line text-slate-700 leading-relaxed">{recapText}</p>
+      {sourceCitation ? (
+        <p className="text-sm text-slate-500">
+          Source: {sourceCitation}
+          {showSourceTitle ? `, "${sourceTitle}"` : ""}
+        </p>
+      ) : null}
+    </section>
+  );
+}
+
 export default function GameDetail({ data, status = "" }) {
   const { gameId } = useParams();
   const playerMap = useMemo(() => buildPlayerMap(data.players), [data.players]);
+  const schoolMap = useMemo(() => buildSchoolMap(data.schools), [data.schools]);
   const game = useMemo(
     () => data.games.find((entry) => String(entry.GameID) === String(gameId)) || null,
     [data.games, gameId]
@@ -190,6 +235,7 @@ export default function GameDetail({ data, status = "" }) {
   }
 
   const resultText = game.Result === "W" ? "Win" : game.Result === "L" ? "Loss" : "Tie";
+  const opponentName = getOpponentDisplayName(game, schoolMap);
 
   return (
     <div className="mx-auto max-w-7xl space-y-8 px-4 pb-24 pt-2 sm:px-6">
@@ -202,7 +248,7 @@ export default function GameDetail({ data, status = "" }) {
 
       <header className="space-y-2">
         <h1 className="text-3xl font-bold text-slate-900">
-          St. Andrew's vs. {game.Opponent}
+          St. Andrew's vs. {opponentName}
         </h1>
         <p className="text-lg font-semibold text-slate-700">
           {resultText}, {game.TeamScore}-{game.OpponentScore}
@@ -213,9 +259,11 @@ export default function GameDetail({ data, status = "" }) {
         </p>
       </header>
 
+      <GameRecap game={game} />
+
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold text-slate-900">Set Scores</h2>
-        <SetScoreTable game={game} />
+        <SetScoreTable game={game} opponentName={opponentName} />
       </section>
 
       <section className="space-y-6">

@@ -1371,7 +1371,7 @@ const SPORT_PLAYER_CONFIGS = [
     key: "girls-basketball",
     sportLabel: "Girls Basketball",
     playerRouteBase: "/athletics/girls/basketball/players",
-    playersPath: "public/data/girls/basketball/players.json",
+    playersPath: "public/data/players.json",
     rostersPath: "public/data/girls/basketball/seasonrosters.json",
   },
   {

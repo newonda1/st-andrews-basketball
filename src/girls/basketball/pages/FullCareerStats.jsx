@@ -289,7 +289,7 @@ export default function FullCareerStats() {
         const [statsDataRaw, playersDataRaw, seasonRostersDataRaw, adjustmentsDataRaw, careerAdjustmentsDataRaw] =
           await Promise.all([
             fetchJson("playergamestats.json", "/data/girls/basketball/playergamestats.json"),
-            fetchJson("players.json", "/data/girls/basketball/players.json"),
+            fetchJson("players.json", "/data/players.json"),
             fetchJson("seasonrosters.json", "/data/girls/basketball/seasonrosters.json"),
             fetchJsonOptional("adjustments.json", "/data/girls/basketball/adjustments.json"),
             fetchJsonOptional("careeradjustments.json", "/data/girls/basketball/careeradjustments.json"),
@@ -303,12 +303,6 @@ export default function FullCareerStats() {
 
         const playerMap = new Map(playersData.map((player) => [String(player.PlayerID), player]));
         const totalsMap = new Map();
-
-        for (const player of playersData) {
-          if (!player?.PlayerID) continue;
-          const playerId = String(player.PlayerID);
-          totalsMap.set(playerId, createEmptyTotals(playerId));
-        }
 
         for (const season of seasonRostersData) {
           for (const rosterPlayer of season?.Players || []) {

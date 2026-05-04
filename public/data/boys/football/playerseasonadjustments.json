@@ -169,12 +169,12 @@
     "PlayerID": 200442,
     "PlayerName": "Jesse Hinton",
     "GamesTracked": 6,
-    "Tackles": 20,
-    "Assists": 47,
-    "TotalTackles": 43.5,
-    "SourceDate": "2003-10-17",
+    "Tackles": 22,
+    "Assists": 61,
+    "TotalTackles": 52.5,
+    "SourceDate": "2003-10-24",
     "SourcePublication": "Savannah Morning News",
-    "SourceCitation": "Savannah Morning News, Oct. 17, 2003",
+    "SourceCitation": "Savannah Morning News, Oct. 24, 2003",
     "SourceNote": "Coastal Empire football statistics tackles leaders."
   },
   {
@@ -183,12 +183,13 @@
     "SourceSeasonLabel": "2003-04",
     "PlayerID": 200208,
     "PlayerName": "Josh Smith",
-    "Tackles": 10,
-    "Assists": 16,
-    "TotalTackles": 18,
-    "SourceDate": "2003-09-19",
+    "GamesTracked": 6,
+    "Tackles": 27,
+    "Assists": 50,
+    "TotalTackles": 52,
+    "SourceDate": "2003-10-24",
     "SourcePublication": "Savannah Morning News",
-    "SourceCitation": "Savannah Morning News, Sept. 19, 2003",
+    "SourceCitation": "Savannah Morning News, Oct. 24, 2003",
     "SourceNote": "Coastal Empire football statistics tackles leaders."
   }
 ]

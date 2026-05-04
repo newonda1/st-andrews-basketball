@@ -137,13 +137,13 @@ function PlayerPage() {
       try {
         const [playersRes, gamesRes, statsRes, rostersRes, schoolsRes, articlesRes] =
           await Promise.all([
-          fetch("/data/girls/basketball/players.json"),
-          fetch("/data/girls/basketball/games.json"),
-          fetch("/data/girls/basketball/playergamestats.json"),
-          fetch(GIRLS_BASKETBALL_ROSTERS_PATH),
-          fetch(SCHOOLS_PATH),
-          fetch("/data/girls/basketball/articles.json").catch(() => null),
-        ]);
+            fetch("/data/players.json"),
+            fetch("/data/girls/basketball/games.json"),
+            fetch("/data/girls/basketball/playergamestats.json"),
+            fetch(GIRLS_BASKETBALL_ROSTERS_PATH),
+            fetch(SCHOOLS_PATH),
+            fetch("/data/girls/basketball/articles.json").catch(() => null),
+          ]);
 
         if (!playersRes.ok) throw new Error(`players.json ${playersRes.status}`);
         if (!gamesRes.ok) throw new Error(`games.json ${gamesRes.status}`);
@@ -153,13 +153,13 @@ function PlayerPage() {
 
         const [playersData, gamesDataRaw, statsData, rostersData, schoolsData, articlesData] =
           await Promise.all([
-          playersRes.json(),
-          gamesRes.json(),
-          statsRes.json(),
-          rostersRes.json(),
-          schoolsRes.json(),
-          articlesRes?.ok ? articlesRes.json() : Promise.resolve([]),
-        ]);
+            playersRes.json(),
+            gamesRes.json(),
+            statsRes.json(),
+            rostersRes.json(),
+            schoolsRes.json(),
+            articlesRes?.ok ? articlesRes.json() : Promise.resolve([]),
+          ]);
 
         setPlayers(playersData);
         setGames(hydrateGamesWithSchools(gamesDataRaw, schoolsData));
@@ -178,9 +178,32 @@ function PlayerPage() {
 
   // ✅ ALWAYS-CALLED memos (no hooks after early returns)
 
+  const basketballPlayerIds = useMemo(() => {
+    const ids = new Set();
+
+    for (const roster of seasonRosters) {
+      for (const entry of roster?.Players || []) {
+        if (entry?.PlayerID != null) ids.add(String(entry.PlayerID));
+      }
+    }
+
+    for (const stat of playerStats) {
+      if (stat?.PlayerID != null) ids.add(String(stat.PlayerID));
+    }
+
+    for (const article of articles) {
+      for (const articlePlayerId of article?.PlayerIDs || []) {
+        if (articlePlayerId != null) ids.add(String(articlePlayerId));
+      }
+    }
+
+    return ids;
+  }, [articles, playerStats, seasonRosters]);
+
   const player = useMemo(() => {
     const idNum = Number(playerId);
     if (!Number.isFinite(idNum)) return null;
+    if (!basketballPlayerIds.has(String(idNum))) return null;
 
     return (
       players.find((p) => Number(p.PlayerID) === idNum) ||
@@ -188,7 +211,7 @@ function PlayerPage() {
       players.find((p) => Number(p.ID) === idNum) ||
       null
     );
-  }, [players, playerId]);
+  }, [basketballPlayerIds, players, playerId]);
 
   const statsWithGameInfo = useMemo(() => {
     const idNum = Number(playerId);

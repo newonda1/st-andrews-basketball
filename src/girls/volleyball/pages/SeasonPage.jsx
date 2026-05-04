@@ -324,7 +324,7 @@ function getOpponentSchool(game, schoolMap) {
 
 function getOpponentDisplayName(game, schoolMap) {
   const school = getOpponentSchool(game, schoolMap);
-  return school?.ShortName || school?.Name || game?.Opponent || "Unknown";
+  return school?.Name || school?.ShortName || game?.Opponent || "Unknown";
 }
 
 function getOpponentLogoPath(game, schoolMap) {

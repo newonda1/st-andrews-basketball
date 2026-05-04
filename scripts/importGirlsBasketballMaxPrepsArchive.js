@@ -14,7 +14,7 @@ const DATA_PATHS = {
     "public/data/girls/basketball/playergamestats.json"
   ),
   rosters: path.join(PROJECT_ROOT, "public/data/girls/basketball/seasonrosters.json"),
-  players: path.join(PROJECT_ROOT, "public/data/girls/basketball/players.json"),
+  players: path.join(PROJECT_ROOT, "public/data/players.json"),
   schools: path.join(PROJECT_ROOT, "public/data/schools.json"),
 };
 
@@ -519,6 +519,11 @@ function pickExistingPlayer(matches, gradYear) {
   if (gradYear) {
     const gradMatch = matches.find((player) => Number(player.GradYear) === Number(gradYear));
     if (gradMatch) return gradMatch;
+    const unknownGradMatch = matches.find(
+      (player) => player.GradYear === null || player.GradYear === undefined
+    );
+    if (unknownGradMatch) return unknownGradMatch;
+    return null;
   }
 
   return (
@@ -546,6 +551,7 @@ function playerForEntry(entry, seasonId, players, playerLookup, idState) {
 
   if (existing) {
     if (existing.GradYear == null && gradYear) existing.GradYear = gradYear;
+    if (!existing.Gender) existing.Gender = "Girls";
     if (Number(existing.GradYear) > 2030 && !gradYear) existing.GradYear = null;
     if (existing.JerseyNumber == null && entry.jersey != null) {
       existing.JerseyNumber = entry.jersey;
@@ -564,6 +570,7 @@ function playerForEntry(entry, seasonId, players, playerLookup, idState) {
     FirstName: firstName,
     LastName: lastName,
     GradYear: gradYear,
+    Gender: "Girls",
   };
 
   if (entry.jersey != null) player.JerseyNumber = entry.jersey;
@@ -827,22 +834,6 @@ function mergeStats(existingStats, importedStats, importedHistoricalGameIds) {
   );
 }
 
-function pruneUnreferencedPlayers(players, rosters, playerStats) {
-  const referencedPlayerIds = new Set();
-
-  for (const roster of rosters) {
-    for (const player of roster?.Players || []) {
-      referencedPlayerIds.add(Number(player.PlayerID));
-    }
-  }
-
-  for (const stat of playerStats) {
-    referencedPlayerIds.add(Number(stat.PlayerID));
-  }
-
-  return players.filter((player) => referencedPlayerIds.has(Number(player.PlayerID)));
-}
-
 function main() {
   const seasons = readJson(DATA_PATHS.seasons);
   const games = readJson(DATA_PATHS.games);
@@ -920,9 +911,7 @@ function main() {
 
   const nextGames = mergeGames(games, importedGames, importedSeasonIds);
   const nextStats = mergeStats(playerStats, importedStats, importedHistoricalGameIds);
-  const nextPlayers = pruneUnreferencedPlayers(players, rosters, nextStats).sort(
-    (a, b) => Number(a.PlayerID) - Number(b.PlayerID)
-  );
+  const nextPlayers = players.sort((a, b) => Number(a.PlayerID) - Number(b.PlayerID));
   const nextSchools = dedupeSchools(schools);
 
   console.table(summary);

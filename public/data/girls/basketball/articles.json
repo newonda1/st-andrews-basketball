@@ -8,7 +8,10 @@
     "Author": "Erin Rossiter",
     "SeasonID": 2003,
     "SeasonLabel": "2003-04",
-    "PlayerIDs": [200603, 200401],
+    "PlayerIDs": [
+      200603,
+      200401
+    ],
     "Summary": "A Savannah Morning News feature on Grace and Mary Wilkowski, their fast-paced 2003-04 St. Andrew's team, and the sisters' role in the Saints' return to the top of SCISA Class AA.",
     "Images": [
       {

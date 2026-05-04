@@ -41,7 +41,7 @@ function GameDetail() {
         const [gamesRes, statsRes, playersRes, schoolsRes] = await Promise.all([
           fetch(`${DATA_BASE}games.json`),
           fetch(`${DATA_BASE}playergamestats.json`),
-          fetch("/data/girls/basketball/players.json"),
+          fetch("/data/players.json"),
           fetch(SCHOOLS_PATH),
         ]);
 

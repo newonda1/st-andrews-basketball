@@ -87,8 +87,6 @@ function hasSeasonRecord(season) {
 }
 
 function buildOverallRecord(season, completedMatches) {
-  if (completedMatches.length > 0) return buildRecord(completedMatches);
-
   if (hasSeasonRecord(season)) {
     return {
       wins: Number(season.OverallWins),
@@ -99,6 +97,8 @@ function buildOverallRecord(season, completedMatches) {
     };
   }
 
+  if (completedMatches.length > 0) return buildRecord(completedMatches);
+
   return buildRecord([]);
 }
 
@@ -108,6 +108,12 @@ function formatFilteredRecord(matches, filterFn) {
 }
 
 function getRegionRecord(season, completedMatches) {
+  const wins = Number(season.RegionWins);
+  const losses = Number(season.RegionLosses);
+  if (Number.isFinite(wins) && Number.isFinite(losses)) {
+    return `${wins}-${losses}`;
+  }
+
   const regionMatches = completedMatches.filter((match) =>
     String(match.GameType || "").toLowerCase().includes("region")
   );
@@ -115,12 +121,6 @@ function getRegionRecord(season, completedMatches) {
   if (regionMatches.length > 0) {
     const record = buildRecord(regionMatches);
     return formatRecord(record.wins, record.losses, record.ties);
-  }
-
-  const wins = Number(season.RegionWins);
-  const losses = Number(season.RegionLosses);
-  if (Number.isFinite(wins) && Number.isFinite(losses)) {
-    return `${wins}-${losses}`;
   }
 
   return "-";

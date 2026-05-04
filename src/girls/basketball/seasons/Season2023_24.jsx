@@ -41,7 +41,7 @@ function Season2023_24() {
         ] = await Promise.all([
           fetch("/data/girls/basketball/games.json"),
           fetch("/data/girls/basketball/playergamestats.json"),
-          fetch("/data/girls/basketball/players.json"),
+          fetch("/data/players.json"),
           fetch("/data/girls/basketball/brackets.json"),
           fetch(SCHOOLS_PATH),
           fetch(GIRLS_BASKETBALL_ROSTERS_PATH),

@@ -1,4 +1,4 @@
-export const GIRLS_PLAYERS_PATH = "/data/girls/basketball/players.json";
+export const GIRLS_PLAYERS_PATH = "/data/players.json";
 export const SCHOOLS_PATH = "/data/schools.json";
 export const GIRLS_BASKETBALL_DATA_BASE = "/data/girls/basketball/";
 export const GIRLS_BASKETBALL_ROSTERS_PATH = `${GIRLS_BASKETBALL_DATA_BASE}seasonrosters.json`;

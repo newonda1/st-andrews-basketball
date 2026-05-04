@@ -4,7 +4,7 @@ import React, { useEffect, useMemo, useState } from "react";
  * Girls Basketball Admin – Box Score Entry UI (full-game at once)
  *
  * Mirrors BoysBasketballAdmin.jsx UI/behavior, but reads from:
- *  /data/girls/basketball/players.json
+ *  /data/players.json
  *  /data/girls/basketball/seasonrosters.json
  *  /data/girls/basketball/games.json
  *  /data/girls/basketball/playergamestats.json
@@ -147,7 +147,7 @@ function makeStatId(gameId, playerId) {
 
 export default function GirlsBasketballAdmin() {
   const PATHS = {
-    players: "/data/girls/basketball/players.json",
+    players: "/data/players.json",
     seasonRosters: "/data/girls/basketball/seasonrosters.json",
     games: "/data/girls/basketball/games.json",
     playerGameStats: "/data/girls/basketball/playergamestats.json",

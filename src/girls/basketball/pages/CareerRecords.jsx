@@ -278,7 +278,7 @@ export default function CareerRecords() {
 
         const [playerStatsRaw, playersRaw, adjustmentsRaw, careerAdjustmentsRaw] = await Promise.all([
           fetchJson("playergamestats.json", "/data/girls/basketball/playergamestats.json"),
-          fetchJson("players.json", "/data/girls/basketball/players.json"),
+          fetchJson("players.json", "/data/players.json"),
           fetchJsonOptional("adjustments.json", "/data/girls/basketball/adjustments.json"),
           fetchJsonOptional("careeradjustments.json", "/data/girls/basketball/careeradjustments.json"),
         ]);

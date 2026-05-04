@@ -188,6 +188,30 @@ function gameById(games) {
   return new Map(games.map((game) => [`${game.Season}|${game.GameID}`, game]));
 }
 
+function buildSchoolMap(schools = []) {
+  return new Map(
+    (Array.isArray(schools) ? schools : [])
+      .filter((school) => school?.SchoolID)
+      .map((school) => [String(school.SchoolID), school])
+  );
+}
+
+function getOpponentSchool(game, schoolMap) {
+  if (!game?.OpponentID) return null;
+  return schoolMap.get(String(game.OpponentID)) || null;
+}
+
+function getOpponentDisplayName(game, schoolMap) {
+  const school = getOpponentSchool(game, schoolMap);
+  return school?.Name || school?.ShortName || game?.Opponent || "Unknown Opponent";
+}
+
+function getOpponentGroupKey(game, schoolMap) {
+  const school = getOpponentSchool(game, schoolMap);
+  if (school?.SchoolID) return String(school.SchoolID);
+  return `name:${String(game?.Opponent || "Unknown Opponent").trim()}`;
+}
+
 function getSeasonDisplay(seasonMap, seasonId) {
   return getSeasonLabel(seasonMap.get(String(seasonId)) || { SeasonID: seasonId });
 }
@@ -1061,15 +1085,17 @@ export function RecordsVsOpponents({ data, status = "" }) {
   const [sortConfig, setSortConfig] = useState({ key: "Total", direction: "desc" });
   const [expandedOpponent, setExpandedOpponent] = useState(null);
   const [filter, setFilter] = useState("");
+  const schoolMap = useMemo(() => buildSchoolMap(data.schools), [data.schools]);
 
   const rows = useMemo(() => {
     const grouped = new Map();
 
     data.games.filter(hasCompletedResult).forEach((game) => {
-      const opponent = game.Opponent || "Unknown Opponent";
-      if (!grouped.has(opponent)) {
-        grouped.set(opponent, {
-          rowKey: opponent,
+      const opponent = getOpponentDisplayName(game, schoolMap);
+      const rowKey = getOpponentGroupKey(game, schoolMap);
+      if (!grouped.has(rowKey)) {
+        grouped.set(rowKey, {
+          rowKey,
           opponent,
           wins: 0,
           losses: 0,
@@ -1084,7 +1110,7 @@ export function RecordsVsOpponents({ data, status = "" }) {
         });
       }
 
-      const row = grouped.get(opponent);
+      const row = grouped.get(rowKey);
       const result = String(game.Result || "").toUpperCase();
       const bucket =
         String(game.LocationType || "").toLowerCase() === "home"
@@ -1112,7 +1138,7 @@ export function RecordsVsOpponents({ data, status = "" }) {
       row.games.sort((a, b) => String(b.Date || "").localeCompare(String(a.Date || "")));
       return row;
     });
-  }, [data.games]);
+  }, [data.games, schoolMap]);
 
   const filteredRows = useMemo(() => {
     const needle = normalizeText(filter);
@@ -1212,14 +1238,14 @@ export function RecordsVsOpponents({ data, status = "" }) {
               </tr>
             ) : (
               filteredRows.map((row) => {
-                const isOpen = expandedOpponent === row.opponent;
+                const isOpen = expandedOpponent === row.rowKey;
                 return (
-                  <React.Fragment key={row.opponent}>
+                  <React.Fragment key={row.rowKey}>
                     <tr
                       className="hover:bg-gray-50 cursor-pointer"
                       onClick={() =>
                         setExpandedOpponent((current) =>
-                          current === row.opponent ? null : row.opponent
+                          current === row.rowKey ? null : row.rowKey
                         )
                       }
                     >

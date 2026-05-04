@@ -588,6 +588,248 @@
     ]
   },
   {
+    "GameID": "20031018",
+    "Season": 2003,
+    "SeasonID": 2003,
+    "DisplaySeason": "2003",
+    "SourceSeasonLabel": "2003-04",
+    "Date": "2003-10-18",
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "sc-charleston-collegiate-school-johns-island",
+    "Opponent": "Charleston Collegiate",
+    "OpponentLocation": "Johns Island, SC",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 3,
+    "OpponentScore": 0,
+    "Notes": "Newspaper report listed St. Andrew's record as 15-2 overall and 9-0 in SCISA 2-AA after the match.",
+    "IsComplete": "Yes",
+    "SetScores": [
+      {
+        "Set": 1,
+        "Team": 25,
+        "Opponent": 20
+      },
+      {
+        "Set": 2,
+        "Team": 25,
+        "Opponent": 9
+      },
+      {
+        "Set": 3,
+        "Team": 25,
+        "Opponent": 21
+      }
+    ]
+  },
+  {
+    "GameID": "20031021",
+    "Season": 2003,
+    "SeasonID": 2003,
+    "DisplaySeason": "2003",
+    "SourceSeasonLabel": "2003-04",
+    "Date": "2003-10-21",
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "sc-holly-hill-academy-holly-hill",
+    "Opponent": "Holly Hill",
+    "OpponentLocation": "Holly Hill, SC",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 3,
+    "OpponentScore": 1,
+    "Notes": "Newspaper report listed St. Andrew's record as 16-2 overall and 10-0 in SCISA Region 2-AA after the match. St. Andrew's won the SCISA 2-AA title and earned the top south seed for the state tournament in Sumter, S.C.",
+    "IsComplete": "Yes",
+    "SetScores": [
+      {
+        "Set": 1,
+        "Team": 25,
+        "Opponent": 9
+      },
+      {
+        "Set": 2,
+        "Team": 6,
+        "Opponent": 25
+      },
+      {
+        "Set": 3,
+        "Team": 25,
+        "Opponent": 21
+      },
+      {
+        "Set": 4,
+        "Team": 25,
+        "Opponent": 14
+      }
+    ]
+  },
+  {
+    "GameID": "20031024",
+    "Season": 2003,
+    "SeasonID": 2003,
+    "DisplaySeason": "2003",
+    "SourceSeasonLabel": "2003-04",
+    "Date": "2003-10-24",
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "sc-greenwood-christian-school-greenwood",
+    "Opponent": "Greenwood Christian Academy",
+    "OpponentLocation": "Greenwood, SC",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "Neutral",
+    "Venue": "",
+    "GameType": "State Tournament",
+    "Result": "W",
+    "TeamScore": 2,
+    "OpponentScore": 0,
+    "Notes": "Newspaper report listed St. Andrew's record as 16-2 after the match. St. Andrew's advanced to play Calhoun at 1 p.m. in the state quarterfinals.",
+    "IsComplete": "Yes",
+    "SetScores": [
+      {
+        "Set": 1,
+        "Team": 25,
+        "Opponent": 10
+      },
+      {
+        "Set": 2,
+        "Team": 25,
+        "Opponent": 13
+      }
+    ]
+  },
+  {
+    "GameID": "20031025-1",
+    "Season": 2003,
+    "SeasonID": 2003,
+    "DisplaySeason": "2003",
+    "SourceSeasonLabel": "2003-04",
+    "Date": "2003-10-25",
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "sc-john-c-calhoun-academy-st-matthews",
+    "Opponent": "Calhoun Academy",
+    "OpponentLocation": "St. Matthews, SC",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "Neutral",
+    "Venue": "",
+    "GameType": "State Tournament",
+    "Result": "W",
+    "TeamScore": 2,
+    "OpponentScore": 0,
+    "Notes": "First of two state tournament wins over Calhoun Academy on Oct. 25.",
+    "IsComplete": "Yes",
+    "SetScores": [
+      {
+        "Set": 1,
+        "Team": 25,
+        "Opponent": 19
+      },
+      {
+        "Set": 2,
+        "Team": 25,
+        "Opponent": 16
+      }
+    ]
+  },
+  {
+    "GameID": "20031025-2",
+    "Season": 2003,
+    "SeasonID": 2003,
+    "DisplaySeason": "2003",
+    "SourceSeasonLabel": "2003-04",
+    "Date": "2003-10-25",
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "sc-john-c-calhoun-academy-st-matthews",
+    "Opponent": "Calhoun Academy",
+    "OpponentLocation": "St. Matthews, SC",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "Neutral",
+    "Venue": "",
+    "GameType": "State Tournament",
+    "Result": "W",
+    "TeamScore": 2,
+    "OpponentScore": 0,
+    "Notes": "Newspaper report listed St. Andrew's record as 19-2 after the match. St. Andrew's advanced to face Pee Dee Academy at 5 p.m. Tuesday in the SCISA Class AA championship in Charleston.",
+    "IsComplete": "Yes",
+    "SetScores": [
+      {
+        "Set": 1,
+        "Team": 27,
+        "Opponent": 25
+      },
+      {
+        "Set": 2,
+        "Team": 25,
+        "Opponent": 21
+      }
+    ]
+  },
+  {
+    "GameID": "20031028",
+    "Season": 2003,
+    "SeasonID": 2003,
+    "DisplaySeason": "2003",
+    "SourceSeasonLabel": "2003-04",
+    "Date": "2003-10-28",
+    "Time": "5:00 PM",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "sc-pee-dee-academy-mullins",
+    "Opponent": "Pee Dee Academy",
+    "OpponentLocation": "Mullins, SC",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "Neutral",
+    "Venue": "Porter-Gaud School",
+    "GameType": "State Championship",
+    "Result": "L",
+    "TeamScore": 0,
+    "OpponentScore": 3,
+    "Notes": "SCISA Class AA state final at Porter-Gaud School. Newspaper report listed Pee Dee Academy's record as 28-0 and St. Andrew's final record as 19-3.",
+    "RecapTitle": "ST. ANDREW'S FALLS IN SCISA CLASS AA VOLLEYBALL FINAL",
+    "Recap": "CHARLESTON - Pee Dee Academy of Mullins, S.C., completed an undefeated volleyball season Tuesday by beating St. Andrew's 25-19, 25-13, 28-26 in the SCISA Class AA state final at Porter-Gaud School. The Eagles finished 28-0, while St. Andrew's completed a 19-3 season under the direction of first-year coach Mandy Stinson.\n\nStinson said her team played well in defeat.\n\n\"We asked them to go out on the court and give everything,'' she said. \"They fought tooth and nail. We couldn't ask for anything more from them.\"\n\nThe Saints won the SCISA Region 2-AA title with a 10-0 mark. They beat Greenwood Christian and Calhoun Academy twice to reach the state championship after making the semifinals last season.",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "2003-10-29",
+    "SourceTitle": "ST. ANDREW'S FALLS IN SCISA CLASS AA VOLLEYBALL FINAL",
+    "SourceCitation": "Savannah Morning News, Oct. 29, 2003",
+    "IsComplete": "Yes",
+    "SetScores": [
+      {
+        "Set": 1,
+        "Team": 19,
+        "Opponent": 25
+      },
+      {
+        "Set": 2,
+        "Team": 13,
+        "Opponent": 25
+      },
+      {
+        "Set": 3,
+        "Team": 26,
+        "Opponent": 28
+      }
+    ]
+  },
+  {
     "GameID": "20070910",
     "Season": 2007,
     "SeasonID": 2007,

@@ -163,7 +163,7 @@ function MaxPrepsSeasonPage({
         await Promise.all([
           fetch("/data/girls/basketball/games.json"),
           fetch("/data/girls/basketball/playergamestats.json"),
-          fetch("/data/girls/basketball/players.json"),
+          fetch("/data/players.json"),
           fetch(GIRLS_BASKETBALL_ROSTERS_PATH),
           fetch(SCHOOLS_PATH),
           fetch("/data/girls/basketball/adjustments.json").catch(() => null),
