@@ -655,6 +655,7 @@ export default function SeasonPage({ data, status = "" }) {
                 <th className="px-3 py-2 text-left">Date</th>
                 <th className="px-3 py-2 text-left">Opponent</th>
                 <th className="px-3 py-2 text-center">Site</th>
+                <th className="px-3 py-2 text-center">Game Type</th>
                 <th className="px-3 py-2 text-center">Result</th>
                 <th className="px-3 py-2 text-center">Score</th>
               </tr>
@@ -662,7 +663,7 @@ export default function SeasonPage({ data, status = "" }) {
             <tbody className="text-sm text-gray-800">
               {seasonGames.length === 0 ? (
                 <tr>
-                  <td colSpan={5} className="px-3 py-4 text-center text-slate-600">
+                  <td colSpan={6} className="px-3 py-4 text-center text-slate-600">
                     No schedule data is available for this season yet.
                   </td>
                 </tr>
@@ -706,6 +707,9 @@ export default function SeasonPage({ data, status = "" }) {
                       </td>
                       <td className="px-3 py-2 text-center whitespace-nowrap">
                         {game.LocationType || ""}
+                      </td>
+                      <td className="px-3 py-2 text-center whitespace-nowrap">
+                        {game.GameType || "Regular Season"}
                       </td>
                       <td
                         className={`px-3 py-2 text-center font-semibold whitespace-nowrap ${

@@ -1767,6 +1767,108 @@
     "Recap": "RIDGELAND - Beau Hinton's second touchdown of the night, a 17-yard run, gave St. Andrew's the lead for good in the third quarter, and Davy Clay's 1-yard sneak sealed the SCISA non-region win.\n\nHinton's other score, a 13-yard score, tied the score at 6 in the second quarter. The Saints (3-1) then built a 19-6 lead before Thomas Heyward (2-4) capped the scoring on Leon Etheridge's 47-yard touchdown pass to Dorian Capers. Etheridge began the scoring with a 1-yard, second-quarter run for the Rebels, which outgained the Saints 286-188 but committed four turnovers."
   },
   {
+    "GameID": 20031003,
+    "Season": 2003,
+    "SeasonID": 2003,
+    "DisplaySeason": "2003",
+    "SourceSeasonLabel": "2003-04",
+    "Date": "2003-10-03",
+    "Time": "TBA",
+    "SourceEventTime": "",
+    "TeamID": "ga-savannah-st-andrews-saints-football",
+    "Team": "St. Andrew's Saints",
+    "Opponent": "Calhoun Academy",
+    "OpponentLocation": "St. Matthews, SC",
+    "OpponentSlug": "calhoun-academy",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "Away",
+    "Venue": "Calhoun Academy",
+    "Notes": "",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 3,
+    "OpponentScore": 0,
+    "OpponentID": "sc-john-c-calhoun-academy-st-matthews",
+    "OpponentLogoPath": "/images/schools/logos/sc-john-c-calhoun-academy-st-matthews.png",
+    "FirstDowns": 12,
+    "RushingYards": 202,
+    "PassingYards": 21,
+    "PassingComp": 2,
+    "PassingAtt": 8,
+    "PassingInt": 0,
+    "OffensiveFumbles": 2,
+    "OffensiveFumblesLost": 0,
+    "PuntNum": 4,
+    "PuntYards": 124,
+    "PuntAverage": 31,
+    "Penalties": 3,
+    "PenaltyYards": 34,
+    "LineScore": [
+      {
+        "Team": "Calhoun",
+        "Abbr": "C",
+        "Scores": [0, 0, 0, 0],
+        "Total": 0
+      },
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [0, 0, 3, 0],
+        "Total": 3
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "3",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Will Massey 30 FG",
+        "Conversion": "",
+        "Points": 3
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "First Downs",
+        "StAndrews": "12",
+        "Opponent": "14"
+      },
+      {
+        "Label": "Rushing",
+        "StAndrews": "202",
+        "Opponent": "195"
+      },
+      {
+        "Label": "Passing",
+        "StAndrews": "21",
+        "Opponent": "78"
+      },
+      {
+        "Label": "Comp.-Att.-Int.",
+        "StAndrews": "2-8-0",
+        "Opponent": "6-17-0"
+      },
+      {
+        "Label": "Fumbles/Lost",
+        "StAndrews": "2-0",
+        "Opponent": "2-1"
+      },
+      {
+        "Label": "Punting",
+        "StAndrews": "4-31",
+        "Opponent": "4-28"
+      },
+      {
+        "Label": "Penalties",
+        "StAndrews": "3-34",
+        "Opponent": "6-39"
+      }
+    ],
+    "RecapTitle": "St. Andrew's 3, Calhoun 0",
+    "Recap": "Will Massey's 30-yard field goal in the third quarter was the lone score in St. Andrew's 3-0 victory over Calhoun.\n\nSaints' Davey Clay preserved the win by falling on a Calhoun fumble in the end zone.\n\nBeau Hinton led the winners with 102 yards on 25 carries. Omar Glenn added 96 yards on 11 carries.\n\nSt. Andrew's raised its record to 4-1 overall, 1-0 in region play."
+  },
+  {
     "GameID": 20031031,
     "Season": 2003,
     "SeasonID": 2003,

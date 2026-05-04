@@ -19,7 +19,7 @@
     "GameUrl": "",
     "LocationType": "",
     "Venue": "",
-    "GameType": "Regular Season",
+    "GameType": "Unknown",
     "Result": "",
     "TeamScore": null,
     "OpponentScore": null,
@@ -47,7 +47,7 @@
     "GameUrl": "",
     "LocationType": "",
     "Venue": "",
-    "GameType": "Regular Season",
+    "GameType": "Unknown",
     "Result": "",
     "TeamScore": null,
     "OpponentScore": null,
@@ -75,7 +75,7 @@
     "GameUrl": "",
     "LocationType": "",
     "Venue": "",
-    "GameType": "Regular Season",
+    "GameType": "Unknown",
     "Result": "",
     "TeamScore": null,
     "OpponentScore": null,
@@ -100,7 +100,7 @@
     "GameUrl": "",
     "LocationType": "",
     "Venue": "",
-    "GameType": "Regular Season",
+    "GameType": "Non-Region",
     "Result": "W",
     "TeamScore": 3,
     "OpponentScore": 0,
@@ -144,7 +144,7 @@
     "GameUrl": "",
     "LocationType": "",
     "Venue": "",
-    "GameType": "Regular Season",
+    "GameType": "Unknown",
     "Result": "",
     "TeamScore": null,
     "OpponentScore": null,
@@ -172,7 +172,7 @@
     "GameUrl": "",
     "LocationType": "",
     "Venue": "",
-    "GameType": "Regular Season",
+    "GameType": "Unknown",
     "Result": "",
     "TeamScore": null,
     "OpponentScore": null,
@@ -200,7 +200,7 @@
     "GameUrl": "",
     "LocationType": "",
     "Venue": "",
-    "GameType": "Regular Season",
+    "GameType": "Unknown",
     "Result": "",
     "TeamScore": null,
     "OpponentScore": null,
@@ -251,6 +251,216 @@
         "Set": 4,
         "Team": 25,
         "Opponent": 15
+      }
+    ]
+  },
+  {
+    "GameID": "20030930",
+    "Season": 2003,
+    "SeasonID": 2003,
+    "DisplaySeason": "2003",
+    "SourceSeasonLabel": "2003-04",
+    "Date": "2003-09-30",
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "sc-beaufort-academy-beaufort",
+    "Opponent": "Beaufort",
+    "OpponentLocation": "Beaufort, SC",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 3,
+    "OpponentScore": 0,
+    "Notes": "Savannah Morning News reported St. Andrew's record as 8-1 overall and 5-0 in SCISA 2-AA after the match.",
+    "IsComplete": "Yes",
+    "SetScores": [
+      {
+        "Set": 1,
+        "Team": 25,
+        "Opponent": 6
+      },
+      {
+        "Set": 2,
+        "Team": 25,
+        "Opponent": 22
+      },
+      {
+        "Set": 3,
+        "Team": 25,
+        "Opponent": 13
+      }
+    ]
+  },
+  {
+    "GameID": "20031002",
+    "Season": 2003,
+    "SeasonID": 2003,
+    "DisplaySeason": "2003",
+    "SourceSeasonLabel": "2003-04",
+    "Date": "2003-10-02",
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "sc-colleton-prep-academy-walterboro",
+    "Opponent": "Colleton Prep",
+    "OpponentLocation": "Walterboro, SC",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 3,
+    "OpponentScore": 1,
+    "Notes": "Savannah Morning News reported St. Andrew's record as 9-1 overall and 6-0 in SCISA 2-AA after the match.",
+    "IsComplete": "Yes",
+    "SetScores": [
+      {
+        "Set": 1,
+        "Team": 25,
+        "Opponent": 17
+      },
+      {
+        "Set": 2,
+        "Team": 21,
+        "Opponent": 25
+      },
+      {
+        "Set": 3,
+        "Team": 25,
+        "Opponent": 8
+      },
+      {
+        "Set": 4,
+        "Team": 25,
+        "Opponent": 19
+      }
+    ]
+  },
+  {
+    "GameID": "20031004",
+    "Season": 2003,
+    "SeasonID": 2003,
+    "DisplaySeason": "2003",
+    "SourceSeasonLabel": "2003-04",
+    "Date": "2003-10-04",
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
+    "Opponent": "Hilton Head Christian",
+    "OpponentLocation": "Hilton Head Island, SC",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "GameType": "Regular Season",
+    "Result": "W",
+    "TeamScore": 2,
+    "OpponentScore": 1,
+    "Notes": "",
+    "IsComplete": "Yes",
+    "SetScores": [
+      {
+        "Set": 1,
+        "Team": 21,
+        "Opponent": 25
+      },
+      {
+        "Set": 2,
+        "Team": 25,
+        "Opponent": 18
+      },
+      {
+        "Set": 3,
+        "Team": 15,
+        "Opponent": 13
+      }
+    ]
+  },
+  {
+    "GameID": "20031004-1",
+    "Season": 2003,
+    "SeasonID": 2003,
+    "DisplaySeason": "2003",
+    "SourceSeasonLabel": "2003-04",
+    "Date": "2003-10-04",
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
+    "Opponent": "Hilton Head Prep",
+    "OpponentLocation": "Hilton Head Island, SC",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "GameType": "Regular Season",
+    "Result": "L",
+    "TeamScore": 1,
+    "OpponentScore": 2,
+    "Notes": "Savannah Morning News reported St. Andrew's record as 10-2 after the match.",
+    "IsComplete": "Yes",
+    "SetScores": [
+      {
+        "Set": 1,
+        "Team": 29,
+        "Opponent": 27
+      },
+      {
+        "Set": 2,
+        "Team": 19,
+        "Opponent": 25
+      },
+      {
+        "Set": 3,
+        "Team": 9,
+        "Opponent": 15
+      }
+    ]
+  },
+  {
+    "GameID": "20031007",
+    "Season": 2003,
+    "SeasonID": 2003,
+    "DisplaySeason": "2003",
+    "SourceSeasonLabel": "2003-04",
+    "Date": "2003-10-07",
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "ga-bible-baptist-school-savannah",
+    "Opponent": "Bible Baptist",
+    "OpponentLocation": "Savannah, GA",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "GameType": "Non-Region",
+    "Result": "W",
+    "TeamScore": 3,
+    "OpponentScore": 0,
+    "Notes": "Savannah Morning News reported St. Andrew's record as 11-2 after the match.",
+    "IsComplete": "Yes",
+    "SetScores": [
+      {
+        "Set": 1,
+        "Team": 25,
+        "Opponent": 11
+      },
+      {
+        "Set": 2,
+        "Team": 25,
+        "Opponent": 18
+      },
+      {
+        "Set": 3,
+        "Team": 25,
+        "Opponent": 22
       }
     ]
   },
