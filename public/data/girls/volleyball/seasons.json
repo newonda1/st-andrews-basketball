@@ -5,7 +5,7 @@
     "YearEnd": 2003,
     "DisplaySeason": "2002",
     "SourceSeasonLabel": "2002-03",
-    "HeadCoach": "Dawn Odom",
+    "HeadCoach": null,
     "OverallWins": null,
     "OverallLosses": null,
     "RegionWins": null,
@@ -14,7 +14,7 @@
     "League": "SCISA Region 3-AA",
     "StateDivision": null,
     "StateFinish": null,
-    "SourceCitation": "User-provided coach attribution"
+    "SourceCitation": null
   },
   {
     "SeasonID": 2003,

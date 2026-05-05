@@ -16,6 +16,13 @@ const SPORT_NAME_FONT_FAMILY =
 
 const sports = [
   {
+    name: "Baseball",
+    to: "/athletics/boys/baseball",
+    icon: "/images/boys/baseball/boys_baseball_icon.png",
+    regionYears: [2019],
+    stateYears: [],
+  },
+  {
     name: "Boys Basketball",
     to: "/athletics/boys/basketball",
     icon: "/images/boys/basketball/boys_basketball_icon.png",
@@ -33,10 +40,12 @@ const sports = [
     stateYears: [2003, 2005, 2006],
   },
   {
-    name: "Baseball",
-    to: "/athletics/boys/baseball",
-    icon: "/images/boys/baseball/boys_baseball_icon.png",
-    regionYears: [2019],
+    name: "Cross Country",
+    to: "/athletics/cross-country",
+    icon: "/images/cross-country/cross_country_icon.png",
+    iconClassName: "scale-[1.45]",
+    bannerMessage: "This page is under construction and will be up soon.",
+    regionYears: [],
     stateYears: [],
   },
   {
@@ -47,26 +56,20 @@ const sports = [
     stateYears: [1998],
   },
   {
-    name: "Volleyball",
-    to: "/athletics/volleyball",
-    icon: "/images/common/volleyball_icon.png",
-    iconClassName: "scale-[0.82]",
+    name: "Golf",
+    to: "/athletics/golf",
+    icon: "/images/golf/golf_icon.png",
     championshipGroups: [
       {
-        title: "Team Championships",
+        title: "Archive",
         sections: [
-          { title: "Region Championships", years: [2003, 2022, 2024] },
+          {
+            title: "Published Results",
+            years: [2004, 2019, 2021, 2022, 2023, 2024],
+          },
         ],
       },
     ],
-  },
-  {
-    name: "Girls Soccer",
-    to: "/athletics/girls/soccer",
-    icon: "/images/common/soccer_icon.png",
-    iconClassName: "scale-[0.8]",
-    regionYears: [2004],
-    stateYears: [],
   },
   {
     name: "Boys Soccer",
@@ -78,28 +81,12 @@ const sports = [
     stateYears: [2003, 2004],
   },
   {
-    name: "Cross Country",
-    to: "/athletics/cross-country",
-    icon: "/images/cross-country/cross_country_icon.png",
-    iconClassName: "scale-[1.45]",
-    bannerMessage: "This page is under construction and will be up soon.",
-    regionYears: [],
+    name: "Girls Soccer",
+    to: "/athletics/girls/soccer",
+    icon: "/images/common/soccer_icon.png",
+    iconClassName: "scale-[0.8]",
+    regionYears: [2004],
     stateYears: [],
-  },
-  {
-    name: "Track & Field",
-    to: "/athletics/track",
-    icon: "/images/track/track_icon.png",
-    iconClassName: "scale-[1.35]",
-    championshipGroups: [
-      {
-        title: "Individual Champions",
-        sections: [
-          { title: "Region Championships", years: [2021, 2022, 2024, 2026] },
-          { title: "State Championships", years: [2011, 2014, 2018] },
-        ],
-      },
-    ],
   },
   {
     name: "Swimming",
@@ -148,17 +135,30 @@ const sports = [
     ],
   },
   {
-    name: "Golf",
-    to: "/athletics/golf",
-    icon: "/images/golf/golf_icon.png",
+    name: "Track & Field",
+    to: "/athletics/track",
+    icon: "/images/track/track_icon.png",
+    iconClassName: "scale-[1.35]",
     championshipGroups: [
       {
-        title: "Archive",
+        title: "Individual Champions",
         sections: [
-          {
-            title: "Published Results",
-            years: [2004, 2019, 2021, 2022, 2023, 2024],
-          },
+          { title: "Region Championships", years: [2021, 2022, 2024, 2026] },
+          { title: "State Championships", years: [2011, 2014, 2018] },
+        ],
+      },
+    ],
+  },
+  {
+    name: "Volleyball",
+    to: "/athletics/volleyball",
+    icon: "/images/common/volleyball_icon.png",
+    iconClassName: "scale-[0.82]",
+    championshipGroups: [
+      {
+        title: "Team Championships",
+        sections: [
+          { title: "Region Championships", years: [2003, 2022, 2024] },
         ],
       },
     ],
