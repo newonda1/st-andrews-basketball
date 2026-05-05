@@ -4,6 +4,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { recordTableStyles } from "./recordTableStyles";
 import { loadAllBaseballPlayerGameStats } from "../dataLoaders";
+import { calculateSasWar, SAS_WAR_NOTE } from "./sasWar";
 
 function absUrl(path) {
   return new URL(path, window.location.origin).toString();
@@ -33,6 +34,35 @@ function safeNum(x) {
   return Number.isFinite(n) ? n : 0;
 }
 
+function battingAverage(stats) {
+  const ab = safeNum(stats?.AB);
+  return ab ? safeNum(stats?.H) / ab : NaN;
+}
+
+function onBasePercentage(stats) {
+  const denominator =
+    safeNum(stats?.AB) + safeNum(stats?.BB) + safeNum(stats?.HBP) + safeNum(stats?.SF);
+  return denominator
+    ? (safeNum(stats?.H) + safeNum(stats?.BB) + safeNum(stats?.HBP)) / denominator
+    : NaN;
+}
+
+function sluggingPercentage(stats) {
+  const ab = safeNum(stats?.AB);
+  return ab ? safeNum(stats?.TB) / ab : NaN;
+}
+
+function ops(stats) {
+  const obp = onBasePercentage(stats);
+  const slg = sluggingPercentage(stats);
+  return Number.isFinite(obp) && Number.isFinite(slg) ? obp + slg : NaN;
+}
+
+function formatRate(value) {
+  if (!Number.isFinite(value)) return value;
+  return value.toFixed(3).replace(/^0(?=\.)/, "");
+}
+
 function formatRecordValue(value) {
   if (!Number.isFinite(value)) return value;
 
@@ -43,6 +73,12 @@ function formatRecordValue(value) {
   }
 
   return roundedToTenth.toFixed(1);
+}
+
+function formatValue(def, value) {
+  if (value === "—") return value;
+  if (def?.format === "rate") return formatRate(value);
+  return formatRecordValue(value);
 }
 
 function hasMinimumNoHitLength(ip) {
@@ -85,6 +121,11 @@ export default function CareerRecords() {
           { key: "ROE", label: "Reached on Error", abbr: "ROE", valueFn: (s) => safeNum(s?.ROE) },
           { key: "FC", label: "Fielder's Choice", abbr: "FC", valueFn: (s) => safeNum(s?.FC) },
           { key: "TB", label: "Total Bases", abbr: "TB", valueFn: (s) => safeNum(s?.TB) },
+          { key: "AVG", label: "Batting Average (min. 75 PA)", abbr: "AVG", format: "rate", derived: true, valueFn: (s) => safeNum(s?.PA) >= 75 ? battingAverage(s) : NaN },
+          { key: "OBP", label: "On Base Percentage (min. 75 PA)", abbr: "OBP", format: "rate", derived: true, valueFn: (s) => safeNum(s?.PA) >= 75 ? onBasePercentage(s) : NaN },
+          { key: "SLG", label: "Slugging Percentage (min. 75 PA)", abbr: "SLG", format: "rate", derived: true, valueFn: (s) => safeNum(s?.PA) >= 75 ? sluggingPercentage(s) : NaN },
+          { key: "OPS", label: "OPS (min. 75 PA)", abbr: "OPS", format: "rate", derived: true, valueFn: (s) => safeNum(s?.PA) >= 75 ? ops(s) : NaN },
+          { key: "SAS_WAR", label: "SAS WAR", abbr: "WAR", valueFn: (s) => calculateSasWar(s) },
         ],
       },
       {
@@ -196,7 +237,12 @@ export default function CareerRecords() {
 
           for (const def of recordDefs) {
             if (def.key === "GamesPlayed" || def.key === "NoHitters" || def.key === "PerfectGames") continue;
-            totals[def.key] = safeNum(totals[def.key]) + def.valueFn(s);
+            if (def.derived) continue;
+
+            const value = def.valueFn(s);
+            if (Number.isFinite(value)) {
+              totals[def.key] = safeNum(totals[def.key]) + value;
+            }
           }
 
           const game = gameMap.get(String(s.GameID));
@@ -345,7 +391,7 @@ export default function CareerRecords() {
                           </div>
                         </td>
                         <td className={`${recordTableStyles.bodyCell} font-semibold`}>
-                          {topValue === "—" ? topValue : formatRecordValue(topValue)}
+                          {formatValue(def, topValue)}
                         </td>
                       </tr>
 
@@ -403,7 +449,7 @@ export default function CareerRecords() {
                                         </div>
                                       </td>
                                       <td className={`${recordTableStyles.detailCell} font-semibold`}>
-                                        {r.value === "—" ? r.value : formatRecordValue(r.value)}
+                                        {formatValue(def, r.value)}
                                       </td>
                                     </tr>
                                   ))}
@@ -424,6 +470,8 @@ export default function CareerRecords() {
 
       <p className="text-center text-xs italic text-gray-500">
         No-hitters and perfect games require a solo pitching effort of at least 5 innings. Perfect games also require 0 hits, 0 walks, 0 hit batters, and 0 St. Andrew&apos;s errors.
+        <br />
+        {SAS_WAR_NOTE}
       </p>
     </div>
   );
