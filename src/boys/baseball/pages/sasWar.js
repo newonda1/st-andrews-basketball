@@ -14,6 +14,17 @@ const battingWeights = {
   replacementPerPlateAppearance: 0.02,
 };
 
+const fieldingWeights = {
+  assist: 0.05,
+  putout: 0.02,
+  error: -0.75,
+  doublePlay: 0.15,
+  triplePlay: 0.3,
+  passedBall: -0.35,
+  pickoff: 0.5,
+  catcherInterference: -0.5,
+};
+
 function safeNum(value) {
   const num = Number(value);
   return Number.isFinite(num) ? num : 0;
@@ -57,7 +68,8 @@ function battingRuns(stats) {
 }
 
 function pitchingRuns(stats) {
-  const outs = baseballInningsToOuts(stats?.IP);
+  const outs =
+    stats?.IPOuts != null ? safeNum(stats.IPOuts) : baseballInningsToOuts(stats?.IP);
   if (!outs) return 0;
 
   const replacementRunsAllowed =
@@ -65,10 +77,23 @@ function pitchingRuns(stats) {
   return replacementRunsAllowed - safeNum(stats?.R_Allowed);
 }
 
+function fieldingRuns(stats) {
+  return (
+    safeNum(stats?.A) * fieldingWeights.assist +
+    safeNum(stats?.PO) * fieldingWeights.putout +
+    safeNum(stats?.E) * fieldingWeights.error +
+    safeNum(stats?.DP) * fieldingWeights.doublePlay +
+    safeNum(stats?.TP) * fieldingWeights.triplePlay +
+    safeNum(stats?.PB) * fieldingWeights.passedBall +
+    safeNum(stats?.PIK_Fielding) * fieldingWeights.pickoff +
+    safeNum(stats?.CI) * fieldingWeights.catcherInterference
+  );
+}
+
 export function calculateSasWar(stats) {
-  const runs = battingRuns(stats) + pitchingRuns(stats);
+  const runs = battingRuns(stats) + pitchingRuns(stats) + fieldingRuns(stats);
   return runs / RUNS_PER_WIN;
 }
 
 export const SAS_WAR_NOTE =
-  "SAS WAR is a St. Andrew's-specific estimate using offensive linear weights, SB/CS, PA replacement credit, and pitching runs prevented versus a replacement-level seven-inning baseline. It does not include a defensive component and is not MLB bWAR/fWAR.";
+  "SAS WAR is a St. Andrew's-specific estimate using offensive linear weights, SB/CS, PA replacement credit, pitching runs prevented versus a replacement-level seven-inning baseline, and a conservative fielding component for PO/A/DP/TP/PIK with penalties for E/PB/CI. It is not MLB bWAR/fWAR.";

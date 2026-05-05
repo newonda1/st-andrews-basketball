@@ -1866,6 +1866,305 @@
     "SourceCitation": "Savannah Morning News, Oct. 5, 2002"
   },
   {
+    "GameID": 20021014,
+    "Season": 2002,
+    "SeasonID": 2002,
+    "DisplaySeason": "2002",
+    "SourceSeasonLabel": "2002-03",
+    "Date": "2002-10-14",
+    "Time": "TBA",
+    "SourceEventTime": "",
+    "TeamID": "ga-savannah-st-andrews-saints-football",
+    "Team": "St. Andrew's Saints",
+    "Opponent": "King's Academy",
+    "OpponentLocation": "Florence, SC",
+    "OpponentSlug": "king-s-academy-florence-sc",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "Home",
+    "Venue": "St. Andrew's School",
+    "Notes": "Scoring summary lists conversions worth 60 total points, while the final score and quarter line report 59.",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 59,
+    "OpponentScore": 0,
+    "OpponentID": "sc-king-s-academy-florence",
+    "FirstDowns": 11,
+    "RushingYards": 288,
+    "PassingYards": 95,
+    "PassingComp": 4,
+    "PassingAtt": 6,
+    "PassingInt": 0,
+    "OffensiveFumbles": 2,
+    "OffensiveFumblesLost": 1,
+    "PuntNum": 1,
+    "PuntYards": 27,
+    "PuntAverage": 27,
+    "Penalties": 4,
+    "PenaltyYards": 45,
+    "LineScore": [
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [39, 7, 6, 7],
+        "Total": 59
+      },
+      {
+        "Team": "King's Academy",
+        "Abbr": "KA",
+        "Scores": [0, 0, 0, 0],
+        "Total": 0
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "1",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Jason Victor 5 run",
+        "Conversion": "Josh Smith kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "1",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Jeff Smith 46 run",
+        "Conversion": "Josh Smith run",
+        "Points": 8
+      },
+      {
+        "Quarter": "1",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Jeff Smith 13 pass from Davy Clay",
+        "Conversion": "Josh Smith kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "1",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Dan Robinson 10 fumble return",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "1",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Jeff Smith 65 punt return",
+        "Conversion": "run failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "1",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Cam Aldrich 30 interception return",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "2",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Davy Clay 15 run",
+        "Conversion": "Josh Smith kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "3",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "William Chisholm 4 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "4",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Omar Glen 46 run",
+        "Conversion": "Josh Smith kick",
+        "Points": 7
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "First Downs",
+        "StAndrews": "11",
+        "Opponent": "4"
+      },
+      {
+        "Label": "Rushing",
+        "StAndrews": "288",
+        "Opponent": "15"
+      },
+      {
+        "Label": "Passing",
+        "StAndrews": "95",
+        "Opponent": "9"
+      },
+      {
+        "Label": "Comp.-Att.-Int.",
+        "StAndrews": "4-6-0",
+        "Opponent": "2-13-2"
+      },
+      {
+        "Label": "Fumbles-lost",
+        "StAndrews": "2-1",
+        "Opponent": "3-3"
+      },
+      {
+        "Label": "Punts",
+        "StAndrews": "1-27",
+        "Opponent": "4-29"
+      },
+      {
+        "Label": "Penalties",
+        "StAndrews": "4-45",
+        "Opponent": "1-5"
+      }
+    ],
+    "RecapTitle": "St. Andrew's 59, King's Academy 0",
+    "Recap": "St. Andrew's defeated King's Academy 59-0 at home on Oct. 14, 2002. The Saints led 39-0 after the first quarter, added touchdowns in each of the final three quarters, and held King's Academy scoreless.",
+    "SourceDate": "2002-10-15",
+    "SourcePublication": "Savannah Morning News",
+    "SourceCitation": "Savannah Morning News, Oct. 15, 2002",
+    "SourceNote": "User-provided box score and scoring summary for the Oct. 14, 2002 King's Academy game; scoring summary conversions add to one point more than the reported 59-0 final."
+  },
+  {
+    "GameID": 20021018,
+    "Season": 2002,
+    "SeasonID": 2002,
+    "DisplaySeason": "2002",
+    "SourceSeasonLabel": "2002-03",
+    "Date": "2002-10-18",
+    "Time": "TBA",
+    "SourceEventTime": "",
+    "TeamID": "ga-savannah-st-andrews-saints-football",
+    "Team": "St. Andrew's Saints",
+    "Opponent": "Roy Hudgens Academy",
+    "OpponentLocation": "Lynchburg, SC",
+    "OpponentSlug": "roy-hudgens-academy",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "Away",
+    "Venue": "",
+    "Notes": "",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 34,
+    "OpponentScore": 0,
+    "OpponentID": "sc-roy-hudgens-academy-lynchburg",
+    "FirstDowns": 17,
+    "RushingYards": 342,
+    "PassingYards": 45,
+    "PassingComp": 3,
+    "PassingAtt": 11,
+    "PassingInt": 3,
+    "OffensiveFumbles": 0,
+    "OffensiveFumblesLost": 0,
+    "PuntNum": 2,
+    "PuntYards": 69,
+    "PuntAverage": 34.5,
+    "LineScore": [
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [7, 14, 0, 13],
+        "Total": 34
+      },
+      {
+        "Team": "Roy Hudgens Academy",
+        "Abbr": "HA",
+        "Scores": [0, 0, 0, 0],
+        "Total": 0
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "1",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Jason Victor 37 run",
+        "Conversion": "Josh Smith kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Davy Clay 14 run",
+        "Conversion": "Josh Smith kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Jeff Smith 60 run",
+        "Conversion": "Josh Smith kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "4",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Michael McLean fumble recovery in end zone",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "4",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Matt Knight 9 run",
+        "Conversion": "Josh Smith kick",
+        "Points": 7
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "First Downs",
+        "StAndrews": "17",
+        "Opponent": "4"
+      },
+      {
+        "Label": "Rushing",
+        "StAndrews": "342",
+        "Opponent": "84"
+      },
+      {
+        "Label": "Passing",
+        "StAndrews": "45",
+        "Opponent": "24"
+      },
+      {
+        "Label": "Comp.-Att.-Int.",
+        "StAndrews": "3-11-3",
+        "Opponent": "3-18-1"
+      },
+      {
+        "Label": "Fumbles-Lost",
+        "StAndrews": "0-0",
+        "Opponent": "1-1"
+      },
+      {
+        "Label": "Punting",
+        "StAndrews": "2-34.5",
+        "Opponent": "3-31"
+      }
+    ],
+    "RecapTitle": "St. Andrew's 34, Hudgens Academy 0",
+    "Recap": "Five different players scored touchdowns for St. Andrew's as the Saints rolled to a 34-0 victory over Hudgens Academy.\n\nSt. Andrew's rushed for 342 yards, and the Saints defense held Hudgens to 108 offensive yards.\n\nRunning back Jeff Smith ran for 220 yards and a touchdown on 21 carries. Teammates Jason Victor, Davy Clay, Michael McLean and Matt Knight also scored for St. Andrew's (6-1, 3-0).",
+    "SourceDate": "2002-10-19",
+    "SourcePublication": "Savannah Morning News",
+    "SourceCitation": "Savannah Morning News, Oct. 19, 2002",
+    "SourceNote": "User-provided recap, box score and scoring summary for the Oct. 18, 2002 Hudgens Academy game."
+  },
+  {
     "GameID": 20030828,
     "Season": 2003,
     "SeasonID": 2003,

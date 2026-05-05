@@ -34,6 +34,26 @@ function safeNum(x) {
   return Number.isFinite(n) ? n : 0;
 }
 
+const CAREER_PITCHING_RATE_MIN_OUTS = 30 * 3;
+
+function baseballInningsToOuts(value) {
+  const innings = safeNum(value);
+  const whole = Math.trunc(innings);
+  const decimal = Math.round((innings - whole) * 10);
+  return whole * 3 + decimal;
+}
+
+function outsToBaseballInnings(outs) {
+  const safeOuts = safeNum(outs);
+  const whole = Math.floor(safeOuts / 3);
+  const remainder = safeOuts % 3;
+  return Number(`${whole}.${remainder}`);
+}
+
+function pitchingOuts(stats) {
+  return stats?.IPOuts != null ? safeNum(stats.IPOuts) : baseballInningsToOuts(stats?.IP);
+}
+
 function battingAverage(stats) {
   const ab = safeNum(stats?.AB);
   return ab ? safeNum(stats?.H) / ab : NaN;
@@ -58,9 +78,35 @@ function ops(stats) {
   return Number.isFinite(obp) && Number.isFinite(slg) ? obp + slg : NaN;
 }
 
+function pitchingEra(stats, minOuts = 0) {
+  const outs = pitchingOuts(stats);
+  return outs >= minOuts && outs > 0 ? (safeNum(stats?.ER) * 21) / outs : NaN;
+}
+
+function pitchingWhip(stats, minOuts = 0) {
+  const outs = pitchingOuts(stats);
+  return outs >= minOuts && outs > 0
+    ? ((safeNum(stats?.H_Allowed) + safeNum(stats?.BB_Allowed)) * 3) / outs
+    : NaN;
+}
+
+function battingAverageAgainst(stats, minOuts = 0) {
+  const outs = pitchingOuts(stats);
+  const atBatsAgainst =
+    safeNum(stats?.BF) - safeNum(stats?.BB_Allowed) - safeNum(stats?.HBP_Pitching);
+  return outs >= minOuts && atBatsAgainst > 0
+    ? safeNum(stats?.H_Allowed) / atBatsAgainst
+    : NaN;
+}
+
 function formatRate(value) {
   if (!Number.isFinite(value)) return value;
   return value.toFixed(3).replace(/^0(?=\.)/, "");
+}
+
+function formatPitchingRate(value) {
+  if (!Number.isFinite(value)) return value;
+  return value.toFixed(2);
 }
 
 function formatRecordValue(value) {
@@ -78,6 +124,7 @@ function formatRecordValue(value) {
 function formatValue(def, value) {
   if (value === "—") return value;
   if (def?.format === "rate") return formatRate(value);
+  if (def?.format === "pitchingRate") return formatPitchingRate(value);
   return formatRecordValue(value);
 }
 
@@ -133,7 +180,7 @@ export default function CareerRecords() {
         records: [
           { key: "NoHitters", label: "No-Hitters", abbr: "NH", valueFn: (s) => safeNum(s?.NoHitters) },
           { key: "PerfectGames", label: "Perfect Games", abbr: "PG", valueFn: (s) => safeNum(s?.PerfectGames) },
-          { key: "IP", label: "Innings Pitched", abbr: "IP", valueFn: (s) => safeNum(s?.IP) },
+          { key: "IP", label: "Innings Pitched", abbr: "IP", valueFn: (s) => s?.IPOuts != null ? outsToBaseballInnings(s.IPOuts) : safeNum(s?.IP) },
           { key: "BF", label: "Batters Faced", abbr: "BF", valueFn: (s) => safeNum(s?.BF) },
           { key: "Pitches", label: "Pitches", abbr: "P", valueFn: (s) => safeNum(s?.Pitches) },
           { key: "W", label: "Wins", abbr: "W", valueFn: (s) => safeNum(s?.W) },
@@ -150,6 +197,9 @@ export default function CareerRecords() {
           { key: "BK", label: "Balks", abbr: "BK", valueFn: (s) => safeNum(s?.BK) },
           { key: "PIK_Allowed", label: "Pickoffs Allowed", abbr: "PIK", valueFn: (s) => safeNum(s?.PIK_Allowed) },
           { key: "WP", label: "Wild Pitches", abbr: "WP", valueFn: (s) => safeNum(s?.WP) },
+          { key: "ERA", label: "Earned Run Average (min. 30 IP)", abbr: "ERA", format: "pitchingRate", derived: true, allowZero: true, lowerIsBetter: true, valueFn: (s) => pitchingEra(s, CAREER_PITCHING_RATE_MIN_OUTS) },
+          { key: "WHIP", label: "WHIP (min. 30 IP)", abbr: "WHIP", format: "pitchingRate", derived: true, allowZero: true, lowerIsBetter: true, valueFn: (s) => pitchingWhip(s, CAREER_PITCHING_RATE_MIN_OUTS) },
+          { key: "BAA", label: "Batting Average Against (min. 30 IP)", abbr: "BAA", format: "rate", derived: true, allowZero: true, lowerIsBetter: true, valueFn: (s) => battingAverageAgainst(s, CAREER_PITCHING_RATE_MIN_OUTS) },
           { key: "P_Innings", label: "Pitcher Innings", abbr: "P INN", valueFn: (s) => safeNum(s?.P_Innings) },
         ],
       },
@@ -229,11 +279,13 @@ export default function CareerRecords() {
               GamesPlayed: 0,
               NoHitters: 0,
               PerfectGames: 0,
+              IPOuts: 0,
             });
           }
 
           const totals = careerTotalsMap.get(playerKey);
           totals.GamesPlayed += 1;
+          totals.IPOuts += baseballInningsToOuts(s?.IP);
 
           for (const def of recordDefs) {
             if (def.key === "GamesPlayed" || def.key === "NoHitters" || def.key === "PerfectGames") continue;
@@ -281,9 +333,9 @@ export default function CareerRecords() {
                 playerImg: player?.PlayerID ? `/images/boys/baseball/players/${player.PlayerID}.jpg` : null,
               };
             })
-            .filter((r) => Number.isFinite(r.value) && r.value > 0)
+            .filter((r) => Number.isFinite(r.value) && (def.allowZero ? r.value >= 0 : r.value > 0))
             .sort((a, b) => {
-              if (b.value !== a.value) return b.value - a.value;
+              if (b.value !== a.value) return def.lowerIsBetter ? a.value - b.value : b.value - a.value;
               return a.playerName.localeCompare(b.playerName);
             })
             .slice(0, 20);

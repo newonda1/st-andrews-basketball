@@ -1,11 +1,99 @@
 import React, { useMemo } from "react";
 import { Link, useParams } from "react-router-dom";
+import { StateBracket8GameSVG } from "../../boys/basketball/components/GameCardBracketsSVG";
 import {
   getTennisDateLabel,
   getTennisMatchCategory,
   getTennisSeasonLabel,
   sortTennisMatches,
 } from "../tennisPageUtils";
+
+const BOYS_STATE_TOURNAMENT_BRACKET = {
+  title: "2026 GIAA Class AAA Boys Tennis State Tournament",
+  layout: {
+    minWidth: 1080,
+    teamNameFontSize: 14,
+  },
+  rounds: {
+    quarterfinals: {
+      label: "Tuesday, April 28, 2026",
+      subtitle: "Quarterfinals",
+    },
+    semifinals: {
+      label: "Wednesday, April 29, 2026",
+      subtitle: "Semifinals",
+    },
+    championship: {
+      label: "Wednesday, April 29, 2026",
+      subtitle: "Championship",
+    },
+  },
+  teams: {
+    rivers: {
+      schoolId: "ga-rivers-academy-alpharetta",
+      seed: 1,
+    },
+    williamReed: {
+      schoolId: "ga-william-and-reed-academy-johns-creek",
+      seed: 2,
+    },
+    brookwood: {
+      schoolId: "ga-brookwood-academy-thomasville",
+      seed: 3,
+    },
+    westminster: {
+      schoolId: "ga-westminster-schools-of-augusta-augusta",
+      seed: 4,
+    },
+    stAndrews: {
+      schoolId: "ga-st-andrews-school-savannah",
+      seed: 5,
+    },
+    terrell: {
+      schoolId: "ga-terrell-academy-dawson",
+      seed: 6,
+    },
+    pinewoodChristian: {
+      schoolId: "ga-pinewood-christian-academy-bellville",
+      seed: 7,
+    },
+  },
+  games: {
+    qf_1: {
+      top: { teamId: "rivers", seed: 1 },
+      bottom: { name: "BYE", seed: 8 },
+      winner: "rivers",
+    },
+    qf_2: {
+      top: { teamId: "westminster", seed: 4 },
+      bottom: { teamId: "stAndrews", seed: 5 },
+      winner: "stAndrews",
+    },
+    qf_3: {
+      top: { teamId: "brookwood", seed: 3 },
+      bottom: { teamId: "terrell", seed: 6 },
+      winner: "brookwood",
+    },
+    qf_4: {
+      top: { teamId: "williamReed", seed: 2 },
+      bottom: { teamId: "pinewoodChristian", seed: 7 },
+      winner: "williamReed",
+    },
+    sf_top: {
+      top: { teamId: "rivers", seed: 1 },
+      bottom: { teamId: "stAndrews", seed: 5 },
+    },
+    sf_bot: {
+      top: { teamId: "brookwood", seed: 3 },
+      bottom: { teamId: "williamReed", seed: 2 },
+      winner: "williamReed",
+    },
+    final: {
+      top: { name: "Semifinal Winner" },
+      bottom: { teamId: "williamReed", seed: 2 },
+    },
+  },
+};
 
 function buildSchoolMap(schools = []) {
   return new Map(
@@ -91,6 +179,7 @@ export default function SeasonPage({
       ),
     [seasonMatches]
   );
+  const showBoysStateTournamentBracket = Number(seasonId) === 2026;
 
   if (!season) {
     return (
@@ -135,6 +224,17 @@ export default function SeasonPage({
           matches={boysMatches}
           schoolMap={schoolMap}
         />
+        {showBoysStateTournamentBracket ? (
+          <section id="boys-state-tournament-bracket" className="space-y-4">
+            <h3 className="text-xl font-bold text-slate-900">
+              Boys State Tournament Bracket
+            </h3>
+            <StateBracket8GameSVG
+              bracket={BOYS_STATE_TOURNAMENT_BRACKET}
+              schools={schools}
+            />
+          </section>
+        ) : null}
         <SeasonMatchTable
           title="Girls Matches"
           matches={girlsMatches}

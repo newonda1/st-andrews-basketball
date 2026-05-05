@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-05T12:17:54.566Z",
-  "itemCount": 1586,
+  "generatedAt": "2026-05-05T13:23:53.878Z",
+  "itemCount": 1587,
   "items": [
     {
       "id": "athletics-home",
@@ -27241,6 +27241,24 @@
         "Hilton Head Christian Academy",
         "Eagles",
         "Hilton Head Island",
+        "SC"
+      ]
+    },
+    {
+      "id": "football-team-king-s-academy",
+      "type": "team",
+      "title": "King's Academy",
+      "subtitle": "Football opponent history - Florence, SC",
+      "to": "/athletics/football/records/opponents?team=King%27s+Academy",
+      "keywords": [
+        "Football",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "King's Academy",
+        "Lions",
+        "Florence",
         "SC"
       ]
     },

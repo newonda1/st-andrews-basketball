@@ -43,6 +43,7 @@ function GameCard({
   game,
   getTeam,
   rowGap = 26,
+  teamNameFontSize,
 }) {
   const topTeamId = game?.top?.teamId ?? null;
   const bottomTeamId = game?.bottom?.teamId ?? null;
@@ -66,7 +67,8 @@ function GameCard({
     const hasSeed = seed !== null && seed !== undefined && seed !== "";
     const nameX = hasSeed ? seedX + 19 : seedX;
     const name = team.name;
-    const nameFontSize = name.length > 18 ? 13 : name.length > 14 ? 14 : 15.5;
+    const nameFontSize =
+      teamNameFontSize ?? (name.length > 18 ? 13 : name.length > 14 ? 14 : 15.5);
     const subdued = !winner && (topWins || bottomWins);
     const isPlaceholder = !teamId;
 
@@ -450,13 +452,19 @@ function StateBracket8GameSVG({ bracket, schools = [] }) {
   const schoolsById = useSchoolsById(schools);
   const getTeam = useMemo(() => makeTeamResolver(teams, schoolsById), [teams, schoolsById]);
 
-  const cardW = 320;
-  const cardH = 78;
-  const colGap = 82;
-  const rowGap = 28;
-  const leftPad = 40;
-  const topPad = 50;
+  const layout = bracket?.layout ?? {};
+  const cardW = layout.cardWidth ?? 320;
+  const cardH = layout.cardHeight ?? 78;
+  const colGap = layout.columnGap ?? 82;
+  const rowGap = layout.rowGap ?? 28;
+  const leftPad = layout.leftPad ?? 40;
+  const hasRoundSubtitles = Object.values(bracket?.rounds ?? {}).some((round) =>
+    typeof round === "object" && round?.subtitle
+  );
+  const topPad = hasRoundSubtitles ? 68 : 50;
   const labelY = 24;
+  const subtitleY = 42;
+  const teamNameFontSize = layout.teamNameFontSize ?? null;
 
   const x0 = leftPad;
   const x1 = x0 + cardW + colGap;
@@ -478,24 +486,57 @@ function StateBracket8GameSVG({ bracket, schools = [] }) {
 
   return (
     <div style={{ width: "100%", overflowX: "auto" }}>
-      <div style={{ minWidth: 1040, padding: "8px 0" }}>
+      <div style={{ minWidth: layout.minWidth ?? 1040, padding: "8px 0" }}>
         <div style={{ fontWeight: 700, marginBottom: 8 }}>{bracket?.title ?? "State Tournament"}</div>
         <svg viewBox={`0 0 ${W} ${H}`} width="100%" height="auto" role="img" aria-label={bracket?.title ?? "State Tournament Bracket"}>
           <BracketDefs />
-          <text x={x0} y={labelY} fontSize="14" fill="rgba(60,70,80,0.85)" fontWeight="700">Quarterfinals</text>
-          <text x={x1} y={labelY} fontSize="14" fill="rgba(60,70,80,0.85)" fontWeight="700">Semifinals</text>
-          <text x={x2} y={labelY} fontSize="14" fill="rgba(60,70,80,0.85)" fontWeight="700">Championship</text>
+          <RoundHeader bracket={bracket} roundKey="quarterfinals" fallbackLabel="Quarterfinals" x={x0} y={labelY} subtitleY={subtitleY} />
+          <RoundHeader bracket={bracket} roundKey="semifinals" fallbackLabel="Semifinals" x={x1} y={labelY} subtitleY={subtitleY} />
+          <RoundHeader bracket={bracket} roundKey="championship" fallbackLabel="Championship" x={x2} y={labelY} subtitleY={subtitleY} />
 
           <path d={pairConnector(x0 + cardW, centerY(yQF[0], cardH), centerY(yQF[1], cardH), x1, centerY(ySemi1, cardH))} {...lineStyle} />
           <path d={pairConnector(x0 + cardW, centerY(yQF[2], cardH), centerY(yQF[3], cardH), x1, centerY(ySemi2, cardH))} {...lineStyle} />
           <path d={pairConnector(x1 + cardW, centerY(ySemi1, cardH), centerY(ySemi2, cardH), x2, centerY(yFinal, cardH))} {...lineStyle} />
 
           {qf.map(([key, y]) => (
-            <GameCard key={key} x={x0} y={y} width={cardW} height={cardH} game={games[key]} getTeam={getTeam} />
+            <GameCard
+              key={key}
+              x={x0}
+              y={y}
+              width={cardW}
+              height={cardH}
+              game={games[key]}
+              getTeam={getTeam}
+              teamNameFontSize={teamNameFontSize}
+            />
           ))}
-          <GameCard x={x1} y={ySemi1} width={cardW} height={cardH} game={games.sf_top} getTeam={getTeam} />
-          <GameCard x={x1} y={ySemi2} width={cardW} height={cardH} game={games.sf_bot} getTeam={getTeam} />
-          <GameCard x={x2} y={yFinal} width={cardW} height={cardH} game={games.final} getTeam={getTeam} />
+          <GameCard
+            x={x1}
+            y={ySemi1}
+            width={cardW}
+            height={cardH}
+            game={games.sf_top}
+            getTeam={getTeam}
+            teamNameFontSize={teamNameFontSize}
+          />
+          <GameCard
+            x={x1}
+            y={ySemi2}
+            width={cardW}
+            height={cardH}
+            game={games.sf_bot}
+            getTeam={getTeam}
+            teamNameFontSize={teamNameFontSize}
+          />
+          <GameCard
+            x={x2}
+            y={yFinal}
+            width={cardW}
+            height={cardH}
+            game={games.final}
+            getTeam={getTeam}
+            teamNameFontSize={teamNameFontSize}
+          />
         </svg>
       </div>
     </div>
