@@ -1,6 +1,13 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { loadBaseballPlayerGameStatsForSeason } from "../dataLoaders";
+import {
+  buildSchoolLookup,
+  getSchoolDisplayName,
+  getSchoolLogoPath,
+  loadBaseballPlayerGameStatsForSeason,
+  loadSchools,
+  resolveSchoolForGame,
+} from "../dataLoaders";
 
 const SEASON_ID = 2023;
 
@@ -98,6 +105,7 @@ export default function Season2023() {
   const [playerStats, setPlayerStats] = useState([]);
   const [players, setPlayers] = useState([]);
   const [rosterEntries, setRosterEntries] = useState([]);
+  const [schools, setSchools] = useState([]);
 
   const [hittingSort, setHittingSort] = useState({ key: "jersey", direction: "asc" });
   const [pitchingSort, setPitchingSort] = useState({ key: "ipOuts", direction: "desc" });
@@ -105,11 +113,12 @@ export default function Season2023() {
 
   useEffect(() => {
     async function fetchData() {
-      const [gamesRes, statsData, playersRes, rostersRes] = await Promise.all([
+      const [gamesRes, statsData, playersRes, rostersRes, schoolsData] = await Promise.all([
         fetch("/data/boys/baseball/games.json"),
         loadBaseballPlayerGameStatsForSeason(SEASON_ID),
         fetch("/data/players.json"),
         fetch("/data/boys/baseball/seasonrosters.json"),
+        loadSchools(),
       ]);
 
       const [gamesData, playersData, rostersData] = await Promise.all([
@@ -135,6 +144,7 @@ export default function Season2023() {
       setPlayerStats(seasonPlayerStats);
       setPlayers(Array.isArray(playersData) ? playersData : []);
       setRosterEntries(Array.isArray(rosterRecord?.Players) ? rosterRecord.Players : []);
+      setSchools(Array.isArray(schoolsData) ? schoolsData : []);
     }
 
     fetchData();
@@ -153,6 +163,8 @@ export default function Season2023() {
     });
     return map;
   }, [rosterEntries]);
+
+  const schoolLookup = useMemo(() => buildSchoolLookup(schools), [schools]);
 
   const playerIdsForSeason = useMemo(() => {
     const rosterIds = rosterEntries.map((entry) => Number(entry.PlayerID));
@@ -506,37 +518,55 @@ export default function Season2023() {
           <table className="min-w-full bg-white text-sm">
             <thead className="bg-gray-100 text-xs text-gray-700 uppercase tracking-wide">
               <tr>
-                <th className="px-3 py-2 text-left">Date</th>
-                <th className="px-3 py-2 text-left">Opponent</th>
-                <th className="px-3 py-2 text-center">Site</th>
-                <th className="px-3 py-2 text-center">Type</th>
-                <th className="px-3 py-2 text-center">Result</th>
-                <th className="px-3 py-2 text-center">Score</th>
+                <th className="px-3 py-1.5 text-left">Date</th>
+                <th className="px-3 py-1.5 text-left">Opponent</th>
+                <th className="px-3 py-1.5 text-center">Site</th>
+                <th className="px-3 py-1.5 text-center">Type</th>
+                <th className="px-3 py-1.5 text-center">Result</th>
+                <th className="px-3 py-1.5 text-center">Score</th>
               </tr>
             </thead>
             <tbody className="text-sm text-gray-800">
               {games.map((game, index) => {
                 const complete = game.Result === "W" || game.Result === "L";
+                const school = resolveSchoolForGame(game, schoolLookup);
+                const opponentName = getSchoolDisplayName(school, game.Opponent);
+                const logoPath = getSchoolLogoPath(school);
                 return (
                   <tr
                     key={game.GameID}
                     className={`border-t border-gray-200 ${index % 2 === 0 ? "bg-white" : "bg-gray-50/70"} hover:bg-gray-100`}
                   >
-                    <td className="px-3 py-2 whitespace-nowrap">{formatDateFromGameID(game.GameID)}</td>
-                    <td className="px-3 py-2 whitespace-nowrap">
-                      <Link
-                        to={`/athletics/boys/baseball/games/${game.GameID}`}
-                        className="text-blue-700 hover:underline"
-                      >
-                        {game.Opponent}
-                      </Link>
+                    <td className="px-3 py-1.5 whitespace-nowrap">{formatDateFromGameID(game.GameID)}</td>
+                    <td className="px-3 py-1.5 whitespace-nowrap">
+                      <div className="flex items-center gap-2">
+                        <div className="flex h-8 w-10 shrink-0 items-center justify-center">
+                          {logoPath ? (
+                            <img
+                              src={logoPath}
+                              alt=""
+                              className="max-h-8 max-w-10 object-contain"
+                              loading="lazy"
+                              onError={(event) => {
+                                event.currentTarget.style.display = "none";
+                              }}
+                            />
+                          ) : null}
+                        </div>
+                        <Link
+                          to={`/athletics/boys/baseball/games/${game.GameID}`}
+                          className="text-blue-700 hover:underline"
+                        >
+                          {opponentName}
+                        </Link>
+                      </div>
                     </td>
-                    <td className="px-3 py-2 text-center whitespace-nowrap">{game.LocationType || ""}</td>
-                    <td className="px-3 py-2 text-center whitespace-nowrap">{game.GameType || ""}</td>
-                    <td className="px-3 py-2 text-center font-semibold whitespace-nowrap">
+                    <td className="px-3 py-1.5 text-center whitespace-nowrap">{game.LocationType || ""}</td>
+                    <td className="px-3 py-1.5 text-center whitespace-nowrap">{game.GameType || ""}</td>
+                    <td className="px-3 py-1.5 text-center font-semibold whitespace-nowrap">
                       {game.Result || ""}
                     </td>
-                    <td className="px-3 py-2 text-center whitespace-nowrap">
+                    <td className="px-3 py-1.5 text-center whitespace-nowrap">
                       {complete && game.TeamScore != null && game.OpponentScore != null
                         ? `${game.TeamScore} - ${game.OpponentScore}`
                         : ""}

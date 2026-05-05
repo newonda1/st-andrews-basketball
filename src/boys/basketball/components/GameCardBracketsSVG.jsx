@@ -227,19 +227,50 @@ function centerY(y, height) {
   return y + height / 2;
 }
 
+function getRoundConfig(bracket, key, fallbackLabel) {
+  const round = bracket?.rounds?.[key];
+  if (typeof round === "string") return { label: round };
+  return {
+    label: round?.label ?? fallbackLabel,
+    subtitle: round?.subtitle ?? "",
+  };
+}
+
+function RoundHeader({ bracket, roundKey, fallbackLabel, x, y, subtitleY }) {
+  const round = getRoundConfig(bracket, roundKey, fallbackLabel);
+
+  return (
+    <g>
+      <text x={x} y={y} fontSize="14" fill="rgba(60,70,80,0.9)" fontWeight="800">
+        {round.label}
+      </text>
+      {round.subtitle ? (
+        <text x={x} y={subtitleY} fontSize="12.5" fill="rgba(75,85,99,0.78)" fontWeight="600">
+          {round.subtitle}
+        </text>
+      ) : null}
+    </g>
+  );
+}
+
 function StateBracket12GameSVG({ bracket, schools = [] }) {
   const teams = bracket?.teams ?? {};
   const games = bracket?.games ?? {};
   const schoolsById = useSchoolsById(schools);
   const getTeam = useMemo(() => makeTeamResolver(teams, schoolsById), [teams, schoolsById]);
 
-  const cardW = 260;
-  const cardH = 74;
-  const colGap = 36;
-  const rowGap = 24;
-  const leftPad = 32;
-  const topPad = 50;
+  const layout = bracket?.layout ?? {};
+  const cardW = layout.cardWidth ?? 260;
+  const cardH = layout.cardHeight ?? 74;
+  const colGap = layout.columnGap ?? 36;
+  const rowGap = layout.rowGap ?? 24;
+  const leftPad = layout.leftPad ?? 32;
+  const hasRoundSubtitles = Object.values(bracket?.rounds ?? {}).some((round) =>
+    typeof round === "object" && round?.subtitle
+  );
+  const topPad = hasRoundSubtitles ? 68 : 50;
   const labelY = 24;
+  const subtitleY = 42;
 
   const x0 = leftPad;
   const x1 = x0 + cardW + colGap;
@@ -266,37 +297,38 @@ function StateBracket12GameSVG({ bracket, schools = [] }) {
     bottom: { name: "Bye" },
     winner: teamId,
   });
-  const r1 = [
-    ["bye_1", yR1[0], byeGame(games.qf_1?.top?.teamId)],
-    ["r1_8_9", yR1[1], games.r1_8_9],
-    ["bye_4", yR1[2], byeGame(games.qf_4?.top?.teamId)],
-    ["r1_5_12", yR1[3], games.r1_5_12],
-    ["bye_3", yR1[4], byeGame(games.qf_3?.top?.teamId)],
-    ["r1_6_11", yR1[5], games.r1_6_11],
-    ["bye_2", yR1[6], byeGame(games.qf_2?.top?.teamId)],
-    ["r1_7_10", yR1[7], games.r1_7_10],
+  const defaultFirstRoundSlots = [
+    { key: "bye_1", type: "bye", gameKey: "qf_1" },
+    { key: "r1_8_9", gameKey: "r1_8_9" },
+    { key: "bye_4", type: "bye", gameKey: "qf_4" },
+    { key: "r1_5_12", gameKey: "r1_5_12" },
+    { key: "bye_3", type: "bye", gameKey: "qf_3" },
+    { key: "r1_6_11", gameKey: "r1_6_11" },
+    { key: "bye_2", type: "bye", gameKey: "qf_2" },
+    { key: "r1_7_10", gameKey: "r1_7_10" },
   ];
-  const qf = [
-    ["qf_1", yQF[0]],
-    ["qf_4", yQF[1]],
-    ["qf_3", yQF[2]],
-    ["qf_2", yQF[3]],
-  ];
+  const firstRoundSlots = bracket?.slots?.firstRound ?? defaultFirstRoundSlots;
+  const quarterfinalSlots = bracket?.slots?.quarterfinals ?? ["qf_1", "qf_4", "qf_3", "qf_2"];
+  const semifinalSlots = bracket?.slots?.semifinals ?? ["sf_top", "sf_bot"];
+  const getSlotGame = (slot) =>
+    slot.type === "bye" ? byeGame(games[slot.gameKey]?.top?.teamId) : games[slot.gameKey ?? slot.key];
+  const r1 = firstRoundSlots.map((slot, index) => [slot.key, yR1[index], getSlotGame(slot)]);
+  const qf = quarterfinalSlots.map((key, index) => [key, yQF[index]]);
   const sf = [
-    ["sf_top", ySF[0]],
-    ["sf_bot", ySF[1]],
+    [semifinalSlots[0], ySF[0]],
+    [semifinalSlots[1], ySF[1]],
   ];
 
   return (
     <div style={{ width: "100%", overflowX: "auto" }}>
-      <div style={{ minWidth: 1120, padding: "8px 0" }}>
+      <div style={{ minWidth: layout.minWidth ?? 1120, padding: "8px 0" }}>
         <div style={{ fontWeight: 700, marginBottom: 8 }}>{bracket?.title ?? "State Tournament"}</div>
         <svg viewBox={`0 0 ${W} ${H}`} width="100%" height="auto" role="img" aria-label={bracket?.title ?? "State Tournament Bracket"}>
           <BracketDefs />
-          <text x={x0} y={labelY} fontSize="14" fill="rgba(60,70,80,0.85)" fontWeight="700">First Round</text>
-          <text x={x1} y={labelY} fontSize="14" fill="rgba(60,70,80,0.85)" fontWeight="700">Quarterfinals</text>
-          <text x={x2} y={labelY} fontSize="14" fill="rgba(60,70,80,0.85)" fontWeight="700">Semifinals</text>
-          <text x={x3} y={labelY} fontSize="14" fill="rgba(60,70,80,0.85)" fontWeight="700">Championship</text>
+          <RoundHeader bracket={bracket} roundKey="firstRound" fallbackLabel="First Round" x={x0} y={labelY} subtitleY={subtitleY} />
+          <RoundHeader bracket={bracket} roundKey="quarterfinals" fallbackLabel="Quarterfinals" x={x1} y={labelY} subtitleY={subtitleY} />
+          <RoundHeader bracket={bracket} roundKey="semifinals" fallbackLabel="Semifinals" x={x2} y={labelY} subtitleY={subtitleY} />
+          <RoundHeader bracket={bracket} roundKey="championship" fallbackLabel="Championship" x={x3} y={labelY} subtitleY={subtitleY} />
 
           <path d={pairConnector(x0 + cardW, centerY(yR1[0], cardH), centerY(yR1[1], cardH), x1, centerY(yQF[0], cardH))} {...lineStyle} />
           <path d={pairConnector(x0 + cardW, centerY(yR1[2], cardH), centerY(yR1[3], cardH), x1, centerY(yQF[1], cardH))} {...lineStyle} />

@@ -1,5 +1,6 @@
 const BASEBALL_DATA_BASE = "/data/boys/baseball";
 const PLAYER_GAME_STATS_BASE = `${BASEBALL_DATA_BASE}/playergamestats`;
+const SCHOOLS_PATH = "/data/schools.json";
 
 export function absUrl(path) {
   return new URL(path, window.location.origin).toString();
@@ -21,6 +22,54 @@ export async function fetchJson(label, path) {
   } catch (error) {
     throw new Error(`${label} returned invalid JSON at ${path}: ${String(error?.message || error)}`);
   }
+}
+
+export async function loadSchools() {
+  const data = await fetchJson("schools.json", SCHOOLS_PATH);
+  return Array.isArray(data) ? data : [];
+}
+
+function normalizeSchoolName(value) {
+  return String(value ?? "")
+    .toLowerCase()
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+}
+
+export function buildSchoolLookup(schools) {
+  const byId = new Map();
+  const byName = new Map();
+
+  (Array.isArray(schools) ? schools : []).forEach((school) => {
+    const id = String(school?.SchoolID ?? "").trim();
+    if (id) byId.set(id, school);
+
+    [school?.Name, school?.ShortName].forEach((name) => {
+      const key = normalizeSchoolName(name);
+      if (key && !byName.has(key)) byName.set(key, school);
+    });
+  });
+
+  return { byId, byName };
+}
+
+export function resolveSchoolForGame(game, schoolLookup) {
+  const id = String(game?.OpponentID ?? "").trim();
+  if (id && schoolLookup?.byId?.has(id)) return schoolLookup.byId.get(id);
+
+  const nameKey = normalizeSchoolName(game?.Opponent);
+  if (nameKey && schoolLookup?.byName?.has(nameKey)) return schoolLookup.byName.get(nameKey);
+
+  return null;
+}
+
+export function getSchoolDisplayName(school, fallback = "") {
+  return school?.Name || fallback;
+}
+
+export function getSchoolLogoPath(school) {
+  return school?.LogoPath || school?.BracketLogoPath || null;
 }
 
 async function loadLegacyPlayerGameStats() {

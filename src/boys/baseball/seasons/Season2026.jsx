@@ -2,9 +2,165 @@
 
 import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { loadBaseballPlayerGameStatsForSeason } from "../dataLoaders";
+import { StateBracket12GameSVG } from "../../basketball/components/GameCardBracketsSVG";
+import {
+  buildSchoolLookup,
+  getSchoolDisplayName,
+  getSchoolLogoPath,
+  loadBaseballPlayerGameStatsForSeason,
+  loadSchools,
+  resolveSchoolForGame,
+} from "../dataLoaders";
 
 const SEASON_ID = 2026;
+
+const STATE_PLAYOFF_BRACKET = {
+  title: "2026 GIAA Class AAA Baseball State Tournament",
+  layout: {
+    cardWidth: 232,
+    columnGap: 24,
+    leftPad: 24,
+    minWidth: 1040,
+  },
+  rounds: {
+    firstRound: {
+      label: "Fri & Sat, May 8 & 9, 2026",
+      subtitle: "at Higher Seed",
+    },
+    quarterfinals: {
+      label: "Fri & Sat, May 15 & 16, 2026",
+      subtitle: "at Higher Seed",
+    },
+    semifinals: {
+      label: "Fri & Sat, May 22 & 23, 2026",
+      subtitle: "at Higher Seed",
+    },
+    championship: {
+      label: "Thur-Sat, May 28-30, 2026",
+      subtitle: "Georgia Southern University",
+    },
+  },
+  slots: {
+    firstRound: [
+      { key: "bye_1", type: "bye", gameKey: "qf_1" },
+      { key: "r1_8_9", gameKey: "r1_8_9" },
+      { key: "bye_4", type: "bye", gameKey: "qf_4" },
+      { key: "r1_5_12", gameKey: "r1_5_12" },
+      { key: "bye_2", type: "bye", gameKey: "qf_2" },
+      { key: "r1_7_10", gameKey: "r1_7_10" },
+      { key: "bye_3", type: "bye", gameKey: "qf_3" },
+      { key: "r1_6_11", gameKey: "r1_6_11" },
+    ],
+    quarterfinals: ["qf_1", "qf_4", "qf_2", "qf_3"],
+  },
+  teams: {
+    valwood: {
+      schoolId: "ga-valwood-school-hahira",
+      seed: 1,
+    },
+    deerfieldWindsor: {
+      schoolId: "ga-deerfield-windsor-school-albany",
+      seed: 2,
+    },
+    frederica: {
+      schoolId: "ga-frederica-academy-st-simons-island",
+      seed: 3,
+    },
+    pinewood: {
+      schoolId: "ga-pinewood-christian-academy-bellville",
+      seed: 4,
+    },
+    piedmont: {
+      schoolId: "ga-piedmont-academy-monticello",
+      seed: 5,
+    },
+    johnMilledge: {
+      schoolId: "ga-john-milledge-academy-milledgeville",
+      seed: 6,
+    },
+    tiftarea: {
+      schoolId: "ga-tiftarea-academy-chula",
+      seed: 7,
+    },
+    westfield: {
+      schoolId: "ga-westfield-school-perry",
+      seed: 8,
+    },
+    brookwood: {
+      schoolId: "ga-brookwood-academy-thomasville",
+      seed: 9,
+    },
+    stAndrews: {
+      schoolId: "ga-st-andrews-school-savannah",
+      seed: 10,
+    },
+    lakeview: {
+      schoolId: "ga-lakeview-academy-gainesville",
+      seed: 11,
+    },
+    dominionChristian: {
+      schoolId: "ga-dominion-christian-academy-marietta",
+      seed: 12,
+    },
+  },
+  games: {
+    r1_8_9: {
+      top: { teamId: "westfield", seed: 8 },
+      bottom: { teamId: "brookwood", seed: 9 },
+      note: "Best of 3",
+    },
+    r1_5_12: {
+      top: { teamId: "piedmont", seed: 5 },
+      bottom: { teamId: "dominionChristian", seed: 12 },
+      note: "Best of 3",
+    },
+    r1_7_10: {
+      top: { teamId: "tiftarea", seed: 7 },
+      bottom: { teamId: "stAndrews", seed: 10 },
+      note: "Best of 3",
+    },
+    r1_6_11: {
+      top: { teamId: "johnMilledge", seed: 6 },
+      bottom: { teamId: "lakeview", seed: 11 },
+      note: "Best of 3",
+    },
+    qf_1: {
+      top: { teamId: "valwood", seed: 1 },
+      bottom: { name: "Winner 8/9" },
+      note: "Best of 3",
+    },
+    qf_4: {
+      top: { teamId: "pinewood", seed: 4 },
+      bottom: { name: "Winner 5/12" },
+      note: "Best of 3",
+    },
+    qf_2: {
+      top: { teamId: "deerfieldWindsor", seed: 2 },
+      bottom: { name: "Winner 7/10" },
+      note: "Best of 3",
+    },
+    qf_3: {
+      top: { teamId: "frederica", seed: 3 },
+      bottom: { name: "Winner 6/11" },
+      note: "Best of 3",
+    },
+    sf_top: {
+      top: { name: "Quarterfinal Winner" },
+      bottom: { name: "Quarterfinal Winner" },
+      note: "Best of 3",
+    },
+    sf_bot: {
+      top: { name: "Quarterfinal Winner" },
+      bottom: { name: "Quarterfinal Winner" },
+      note: "Best of 3",
+    },
+    final: {
+      top: { name: "Semifinal Winner" },
+      bottom: { name: "Semifinal Winner" },
+      note: "Best of 3",
+    },
+  },
+};
 
 function baseballInningsToOuts(value) {
   if (value == null || value === "") return 0;
@@ -100,6 +256,7 @@ export default function Season2026() {
   const [playerStats, setPlayerStats] = useState([]);
   const [players, setPlayers] = useState([]);
   const [rosterEntries, setRosterEntries] = useState([]);
+  const [schools, setSchools] = useState([]);
 
   const [hittingSort, setHittingSort] = useState({ key: "jersey", direction: "asc" });
   const [pitchingSort, setPitchingSort] = useState({ key: "ipOuts", direction: "desc" });
@@ -107,11 +264,12 @@ export default function Season2026() {
 
   useEffect(() => {
     async function fetchData() {
-      const [gamesRes, statsData, playersRes, rostersRes] = await Promise.all([
+      const [gamesRes, statsData, playersRes, rostersRes, schoolsData] = await Promise.all([
         fetch("/data/boys/baseball/games.json"),
         loadBaseballPlayerGameStatsForSeason(SEASON_ID),
         fetch("/data/players.json"),
         fetch("/data/boys/baseball/seasonrosters.json"),
+        loadSchools(),
       ]);
 
       const [gamesData, playersData, rostersData] = await Promise.all([
@@ -137,6 +295,7 @@ export default function Season2026() {
       setPlayerStats(seasonPlayerStats);
       setPlayers(Array.isArray(playersData) ? playersData : []);
       setRosterEntries(Array.isArray(rosterRecord?.Players) ? rosterRecord.Players : []);
+      setSchools(Array.isArray(schoolsData) ? schoolsData : []);
     }
 
     fetchData();
@@ -155,6 +314,8 @@ export default function Season2026() {
     });
     return map;
   }, [rosterEntries]);
+
+  const schoolLookup = useMemo(() => buildSchoolLookup(schools), [schools]);
 
   const playerIdsForSeason = useMemo(() => {
     const rosterIds = rosterEntries.map((entry) => Number(entry.PlayerID));
@@ -508,37 +669,55 @@ export default function Season2026() {
           <table className="min-w-full bg-white text-sm">
             <thead className="bg-gray-100 text-xs text-gray-700 uppercase tracking-wide">
               <tr>
-                <th className="px-3 py-2 text-left">Date</th>
-                <th className="px-3 py-2 text-left">Opponent</th>
-                <th className="px-3 py-2 text-center">Site</th>
-                <th className="px-3 py-2 text-center">Type</th>
-                <th className="px-3 py-2 text-center">Result</th>
-                <th className="px-3 py-2 text-center">Score</th>
+                <th className="px-3 py-1.5 text-left">Date</th>
+                <th className="px-3 py-1.5 text-left">Opponent</th>
+                <th className="px-3 py-1.5 text-center">Site</th>
+                <th className="px-3 py-1.5 text-center">Type</th>
+                <th className="px-3 py-1.5 text-center">Result</th>
+                <th className="px-3 py-1.5 text-center">Score</th>
               </tr>
             </thead>
             <tbody className="text-sm text-gray-800">
               {games.map((game, index) => {
                 const complete = game.Result === "W" || game.Result === "L";
+                const school = resolveSchoolForGame(game, schoolLookup);
+                const opponentName = getSchoolDisplayName(school, game.Opponent);
+                const logoPath = getSchoolLogoPath(school);
                 return (
                   <tr
                     key={game.GameID}
                     className={`border-t border-gray-200 ${index % 2 === 0 ? "bg-white" : "bg-gray-50/70"} hover:bg-gray-100`}
                   >
-                    <td className="px-3 py-2 whitespace-nowrap">{formatDateFromGameID(game.GameID)}</td>
-                    <td className="px-3 py-2 whitespace-nowrap">
-                      <Link
-                        to={`/athletics/boys/baseball/games/${game.GameID}`}
-                        className="text-blue-700 hover:underline"
-                      >
-                        {game.Opponent}
-                      </Link>
+                    <td className="px-3 py-1.5 whitespace-nowrap">{formatDateFromGameID(game.GameID)}</td>
+                    <td className="px-3 py-1.5 whitespace-nowrap">
+                      <div className="flex items-center gap-2">
+                        <div className="flex h-8 w-10 shrink-0 items-center justify-center">
+                          {logoPath ? (
+                            <img
+                              src={logoPath}
+                              alt=""
+                              className="max-h-8 max-w-10 object-contain"
+                              loading="lazy"
+                              onError={(event) => {
+                                event.currentTarget.style.display = "none";
+                              }}
+                            />
+                          ) : null}
+                        </div>
+                        <Link
+                          to={`/athletics/boys/baseball/games/${game.GameID}`}
+                          className="text-blue-700 hover:underline"
+                        >
+                          {opponentName}
+                        </Link>
+                      </div>
                     </td>
-                    <td className="px-3 py-2 text-center whitespace-nowrap">{game.LocationType || ""}</td>
-                    <td className="px-3 py-2 text-center whitespace-nowrap">{game.GameType || ""}</td>
-                    <td className="px-3 py-2 text-center font-semibold whitespace-nowrap">
+                    <td className="px-3 py-1.5 text-center whitespace-nowrap">{game.LocationType || ""}</td>
+                    <td className="px-3 py-1.5 text-center whitespace-nowrap">{game.GameType || ""}</td>
+                    <td className="px-3 py-1.5 text-center font-semibold whitespace-nowrap">
                       {game.Result || ""}
                     </td>
-                    <td className="px-3 py-2 text-center whitespace-nowrap">
+                    <td className="px-3 py-1.5 text-center whitespace-nowrap">
                       {complete && game.TeamScore != null && game.OpponentScore != null
                         ? `${game.TeamScore} - ${game.OpponentScore}`
                         : ""}
@@ -549,6 +728,11 @@ export default function Season2026() {
             </tbody>
           </table>
         </div>
+      </section>
+
+      <section id="state-playoff-bracket" className="space-y-4">
+        <h2 className="text-2xl font-semibold mt-8">State Tournament Bracket</h2>
+        <StateBracket12GameSVG bracket={STATE_PLAYOFF_BRACKET} schools={schools} />
       </section>
 
       <section>

@@ -930,7 +930,9 @@
     "SchoolID": "ga-savannah-athletic-association-high-school-bloomingdale",
     "Name": "Savannah Athletic Association High School",
     "City": "Bloomingdale",
-    "State": "GA"
+    "State": "GA",
+    "LogoPath": "/images/schools/logos/ga-savannah-athletic-association-high-school-bloomingdale.jpg",
+    "LogoSourceUrl": "https://image.maxpreps.io/school-mascot/8/0/c/80cf866c-b35f-4f23-a318-c5b334054709.gif?version=639087887103367580&width=1024&height=1024&auto=webp&format=pjpg"
   },
   {
     "SchoolID": "ga-savannah-christian-preparatory-school-savannah",
@@ -950,13 +952,17 @@
     "Name": "Savannah Country Day",
     "City": "Savannah",
     "State": "GA",
-    "Mascot": "Hornets"
+    "Mascot": "Hornets",
+    "LogoPath": "/images/schools/logos/ga-savannah-country-day-school-savannah.png",
+    "LogoSourceUrl": "https://cache.bsnsports.com/comp/sls/get/43/4694?f=png&sid=4694&ts=1658927874"
   },
   {
     "SchoolID": "ga-savannah-country-day-school-savannah",
     "Name": "Savannah Country Day School",
     "City": "Savannah",
-    "State": "GA"
+    "State": "GA",
+    "LogoPath": "/images/schools/logos/ga-savannah-country-day-school-savannah.png",
+    "LogoSourceUrl": "https://cache.bsnsports.com/comp/sls/get/43/4694?f=png&sid=4694&ts=1658927874"
   },
   {
     "SchoolID": "ga-savannah-high-school-savannah",
@@ -1114,7 +1120,9 @@
     "SchoolID": "ga-the-habersham-school-savannah",
     "Name": "The Habersham School",
     "City": "Savannah",
-    "State": "GA"
+    "State": "GA",
+    "LogoPath": "/images/schools/logos/ga-the-habersham-school-savannah.png",
+    "LogoSourceUrl": "https://thehabershamschool.org/wp-content/uploads/2018/03/logo-02.png"
   },
   {
     "SchoolID": "ga-the-heritage-school-newnan",
@@ -1146,7 +1154,9 @@
     "SchoolID": "ga-thomas-jefferson-academy-louisville",
     "Name": "Thomas Jefferson Academy",
     "City": "Louisville",
-    "State": "GA"
+    "State": "GA",
+    "LogoPath": "/images/schools/logos/ga-thomas-jefferson-academy-louisville.jpg",
+    "LogoSourceUrl": "https://image.maxpreps.io/school-mascot/b/d/5/bd591009-7af2-4b8f-b320-a6bdf8558210.gif?version=638606061597992500&width=1024&height=1024&auto=webp&format=pjpg"
   },
   {
     "SchoolID": "ga-tiftarea-academy-chula",
@@ -1214,7 +1224,9 @@
     "SchoolID": "ga-vidalia-heritage-academy-vidalia",
     "Name": "Vidalia Heritage Academy",
     "City": "Vidalia",
-    "State": "GA"
+    "State": "GA",
+    "LogoPath": "/images/schools/logos/ga-vidalia-heritage-academy-vidalia.png",
+    "LogoSourceUrl": "https://www.vidaliaheritageacademy.com/editoruploads/images/logos/logo.png"
   },
   {
     "SchoolID": "ga-walker-school-marietta",
@@ -1291,14 +1303,18 @@
     "SchoolID": "ga-windsor-forest-high-school-savannah",
     "Name": "Windsor Forest High School",
     "City": "Savannah",
-    "State": "GA"
+    "State": "GA",
+    "LogoPath": "/images/schools/logos/ga-windsor-forest-high-school-savannah.jpg",
+    "LogoSourceUrl": "https://image.maxpreps.io/school-mascot/a/8/a/a8a49212-5788-4b85-a71e-1a3a6750f2a5.gif?version=638651943111585860&width=128&height=128&auto=webp&format=pjpg"
   },
   {
     "SchoolID": "ga-windsor-forest-savannah",
     "Name": "Windsor Forest",
     "City": "Savannah",
     "State": "GA",
-    "Mascot": "Knights"
+    "Mascot": "Knights",
+    "LogoPath": "/images/schools/logos/ga-windsor-forest-high-school-savannah.jpg",
+    "LogoSourceUrl": "https://image.maxpreps.io/school-mascot/a/8/a/a8a49212-5788-4b85-a71e-1a3a6750f2a5.gif?version=638651943111585860&width=128&height=128&auto=webp&format=pjpg"
   },
   {
     "SchoolID": "ga-woodville-tompkins-savannah",
@@ -1589,7 +1605,9 @@
     "SchoolID": "sc-hampton-county-high-school-varnville",
     "Name": "Hampton County High School",
     "City": "Varnville",
-    "State": "SC"
+    "State": "SC",
+    "LogoPath": "/images/schools/logos/sc-hampton-county-high-school-varnville.png",
+    "LogoSourceUrl": "https://resources.finalsite.net/images/f_auto,q_auto/v1693452320/hampton1k12scus/y8dmwez92g2s3cxircyh/AthleticsLogoHCHS-7.png"
   },
   {
     "SchoolID": "sc-hardeeville-high-school-hardeeville",
@@ -1744,7 +1762,9 @@
     "SchoolID": "sc-lowcountry-leadership-charter-school-meggett",
     "Name": "Lowcountry Leadership Charter School",
     "City": "Meggett",
-    "State": "SC"
+    "State": "SC",
+    "LogoPath": "/images/schools/logos/sc-lowcountry-leadership-charter-school-meggett.png",
+    "LogoSourceUrl": "http://www.llboosterclub.org/uploads/1/3/0/1/130190617/editor/llbclogo.png?1758737690"
   },
   {
     "SchoolID": "sc-may-river-academy-bluffton",
@@ -1970,7 +1990,9 @@
     "SchoolID": "sc-thomas-heyward-academy-ridgeland",
     "Name": "Thomas Heyward Academy",
     "City": "Ridgeland",
-    "State": "SC"
+    "State": "SC",
+    "LogoPath": "/images/schools/logos/sc-thomas-heyward-academy-ridgeland.png",
+    "LogoSourceUrl": "https://resources.finalsite.net/images/f_auto,q_auto/v1729515576/thomasheywardorg/qrxpygpjbluziltbentx/Official_THA_Logo.png"
   },
   {
     "SchoolID": "sc-thomas-sumter-academy-dalzell",
