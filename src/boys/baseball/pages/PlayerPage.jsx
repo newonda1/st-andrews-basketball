@@ -58,6 +58,38 @@ function outsToBaseballInnings(outs) {
   return Number(`${whole}.${remainder}`);
 }
 
+const FIELDING_INNING_KEYS = [
+  "P_Innings",
+  "C_Innings",
+  "1B_Innings",
+  "2B_Innings",
+  "3B_Innings",
+  "SS_Innings",
+  "LF_Innings",
+  "CF_Innings",
+  "RF_Innings",
+  "SF_Innings",
+];
+
+function baseballInningOuts(stats, key) {
+  const outsKey = `${key}Outs`;
+  return stats?.[outsKey] != null ? safeNumber(stats[outsKey]) : baseballInningsToOuts(stats?.[key]);
+}
+
+function addBaseballInnings(total, row, key) {
+  const outsKey = `${key}Outs`;
+  total[outsKey] = safeNumber(total[outsKey]) + baseballInningsToOuts(row?.[key]);
+  total[key] = outsToBaseballInnings(total[outsKey]);
+}
+
+function totalFieldingInnings(stats) {
+  const outs = FIELDING_INNING_KEYS.reduce(
+    (sum, key) => sum + baseballInningOuts(stats, key),
+    0
+  );
+  return outsToBaseballInnings(outs);
+}
+
 function battingAverage(stats) {
   return stats.AB > 0 ? stats.H / stats.AB : NaN;
 }
@@ -195,16 +227,7 @@ function addStats(total, row) {
   total.PB += safeNumber(row.PB);
   total.PIK_Fielding += safeNumber(row.PIK_Fielding);
   total.CI += safeNumber(row.CI);
-  total.P_Innings += safeNumber(row.P_Innings);
-  total.C_Innings += safeNumber(row.C_Innings);
-  total["1B_Innings"] += safeNumber(row["1B_Innings"]);
-  total["2B_Innings"] += safeNumber(row["2B_Innings"]);
-  total["3B_Innings"] += safeNumber(row["3B_Innings"]);
-  total.SS_Innings += safeNumber(row.SS_Innings);
-  total.LF_Innings += safeNumber(row.LF_Innings);
-  total.CF_Innings += safeNumber(row.CF_Innings);
-  total.RF_Innings += safeNumber(row.RF_Innings);
-  total.SF_Innings += safeNumber(row.SF_Innings);
+  FIELDING_INNING_KEYS.forEach((key) => addBaseballInnings(total, row, key));
 }
 
 function buildSeasonTotals(rows, filterFn = () => true) {
@@ -269,7 +292,7 @@ const STAT_VIEWS = {
     label: "Fielding",
     summaryColumns: [
       { key: "Games", label: "G", render: (s) => s.Games },
-      { key: "INN", label: "INN", render: (s) => oneDecimal(s.P_Innings + s.C_Innings + s["1B_Innings"] + s["2B_Innings"] + s["3B_Innings"] + s.SS_Innings + s.LF_Innings + s.CF_Innings + s.RF_Innings + s.SF_Innings) },
+      { key: "INN", label: "INN", render: (s) => oneDecimal(totalFieldingInnings(s)) },
       { key: "PO", label: "PO", render: (s) => s.PO },
       { key: "A", label: "A", render: (s) => s.A },
       { key: "E", label: "E", render: (s) => s.E },

@@ -44,6 +44,34 @@ function outsToBaseballInnings(outs) {
   return Number(`${whole}.${remainder}`);
 }
 
+const FIELDING_INNING_KEYS = [
+  "P_Innings",
+  "C_Innings",
+  "1B_Innings",
+  "2B_Innings",
+  "3B_Innings",
+  "SS_Innings",
+  "LF_Innings",
+  "CF_Innings",
+  "RF_Innings",
+  "SF_Innings",
+];
+
+function baseballInningOuts(stats, key) {
+  const outsKey = `${key}Outs`;
+  return stats?.[outsKey] != null ? safeNum(stats[outsKey]) : baseballInningsToOuts(stats?.[key]);
+}
+
+function baseballInningValue(stats, key) {
+  return outsToBaseballInnings(baseballInningOuts(stats, key));
+}
+
+function addBaseballInnings(total, row, key) {
+  const outsKey = `${key}Outs`;
+  total[outsKey] = safeNum(total[outsKey]) + baseballInningsToOuts(row?.[key]);
+  total[key] = outsToBaseballInnings(total[outsKey]);
+}
+
 function formatValue(value, decimals = 0) {
   if (!Number.isFinite(value)) return "—";
   if (decimals === 0) return String(Math.round(value));
@@ -92,24 +120,17 @@ function pitchingWhip(stats) {
   return stats.IPOuts > 0 ? ((stats.H_Allowed + stats.BB_Allowed) * 3) / stats.IPOuts : NaN;
 }
 
-function winPct(stats) {
-  const decisions = stats.Wins + stats.Losses + stats.Ties;
-  return decisions > 0 ? (stats.Wins + stats.Ties * 0.5) / decisions : NaN;
+function totalFieldingOuts(stats) {
+  return FIELDING_INNING_KEYS.reduce((sum, key) => sum + baseballInningOuts(stats, key), 0);
 }
 
 function totalFieldingInnings(stats) {
-  return (
-    stats.P_Innings +
-    stats.C_Innings +
-    stats["1B_Innings"] +
-    stats["2B_Innings"] +
-    stats["3B_Innings"] +
-    stats.SS_Innings +
-    stats.LF_Innings +
-    stats.CF_Innings +
-    stats.RF_Innings +
-    stats.SF_Innings
-  );
+  return outsToBaseballInnings(totalFieldingOuts(stats));
+}
+
+function winPct(stats) {
+  const decisions = stats.Wins + stats.Losses + stats.Ties;
+  return decisions > 0 ? (stats.Wins + stats.Ties * 0.5) / decisions : NaN;
 }
 
 function extractGameDateKey(gameId) {
@@ -262,16 +283,7 @@ function accumulateStats(total, row) {
   total.PB += safeNum(row.PB);
   total.PIK_Fielding += safeNum(row.PIK_Fielding);
   total.CI += safeNum(row.CI);
-  total.P_Innings += safeNum(row.P_Innings);
-  total.C_Innings += safeNum(row.C_Innings);
-  total["1B_Innings"] += safeNum(row["1B_Innings"]);
-  total["2B_Innings"] += safeNum(row["2B_Innings"]);
-  total["3B_Innings"] += safeNum(row["3B_Innings"]);
-  total.SS_Innings += safeNum(row.SS_Innings);
-  total.LF_Innings += safeNum(row.LF_Innings);
-  total.CF_Innings += safeNum(row.CF_Innings);
-  total.RF_Innings += safeNum(row.RF_Innings);
-  total.SF_Innings += safeNum(row.SF_Innings);
+  FIELDING_INNING_KEYS.forEach((key) => addBaseballInnings(total, row, key));
 }
 
 function numericSortValue(value) {
@@ -375,7 +387,7 @@ const VIEW_CONFIG = {
     columns: [
       { key: "Season", label: "Season", sortValue: (row) => safeNum(row.Season), render: (row) => row.Season },
       { key: "Games", label: "G", sortValue: (row) => row.Games, render: (row) => formatValue(row.Games) },
-      { key: "INN", label: "INN", sortValue: (row) => numericSortValue(row.DetailedGames > 0 ? totalFieldingInnings(row) : NaN), render: (row) => renderAvailable(totalFieldingInnings(row), row.DetailedGames > 0, 1) },
+      { key: "INN", label: "INN", sortValue: (row) => numericSortValue(row.DetailedGames > 0 ? totalFieldingOuts(row) : NaN), render: (row) => renderAvailable(totalFieldingInnings(row), row.DetailedGames > 0, 1) },
       { key: "PO", label: "PO", sortValue: (row) => numericSortValue(row.DetailedGames > 0 ? row.PO : NaN), render: (row) => renderAvailable(row.PO, row.DetailedGames > 0) },
       { key: "A", label: "A", sortValue: (row) => numericSortValue(row.DetailedGames > 0 ? row.A : NaN), render: (row) => renderAvailable(row.A, row.DetailedGames > 0) },
       { key: "E", label: "E", sortValue: (row) => numericSortValue(row.ErrorGames > 0 ? row.E : NaN), render: (row) => renderAvailable(row.E, row.ErrorGames > 0) },
@@ -386,16 +398,16 @@ const VIEW_CONFIG = {
       { key: "PIK_Fielding", label: "PIK", sortValue: (row) => numericSortValue(row.DetailedGames > 0 ? row.PIK_Fielding : NaN), render: (row) => renderAvailable(row.PIK_Fielding, row.DetailedGames > 0) },
       { key: "CI", label: "CI", sortValue: (row) => numericSortValue(row.DetailedGames > 0 ? row.CI : NaN), render: (row) => renderAvailable(row.CI, row.DetailedGames > 0) },
       { key: "FLDPCT", label: "FLD%", sortValue: (row) => numericSortValue(row.fullDetailCoverage ? fieldingPct(row) : NaN), render: (row) => renderPctAvailable(fieldingPct(row), row.fullDetailCoverage) },
-      { key: "P_Innings", label: "P INN", sortValue: (row) => numericSortValue(row.DetailedGames > 0 ? row.P_Innings : NaN), render: (row) => renderAvailable(row.P_Innings, row.DetailedGames > 0, 1) },
-      { key: "C_Innings", label: "C INN", sortValue: (row) => numericSortValue(row.DetailedGames > 0 ? row.C_Innings : NaN), render: (row) => renderAvailable(row.C_Innings, row.DetailedGames > 0, 1) },
-      { key: "1B_Innings", label: "1B INN", sortValue: (row) => numericSortValue(row.DetailedGames > 0 ? row["1B_Innings"] : NaN), render: (row) => renderAvailable(row["1B_Innings"], row.DetailedGames > 0, 1) },
-      { key: "2B_Innings", label: "2B INN", sortValue: (row) => numericSortValue(row.DetailedGames > 0 ? row["2B_Innings"] : NaN), render: (row) => renderAvailable(row["2B_Innings"], row.DetailedGames > 0, 1) },
-      { key: "3B_Innings", label: "3B INN", sortValue: (row) => numericSortValue(row.DetailedGames > 0 ? row["3B_Innings"] : NaN), render: (row) => renderAvailable(row["3B_Innings"], row.DetailedGames > 0, 1) },
-      { key: "SS_Innings", label: "SS INN", sortValue: (row) => numericSortValue(row.DetailedGames > 0 ? row.SS_Innings : NaN), render: (row) => renderAvailable(row.SS_Innings, row.DetailedGames > 0, 1) },
-      { key: "LF_Innings", label: "LF INN", sortValue: (row) => numericSortValue(row.DetailedGames > 0 ? row.LF_Innings : NaN), render: (row) => renderAvailable(row.LF_Innings, row.DetailedGames > 0, 1) },
-      { key: "CF_Innings", label: "CF INN", sortValue: (row) => numericSortValue(row.DetailedGames > 0 ? row.CF_Innings : NaN), render: (row) => renderAvailable(row.CF_Innings, row.DetailedGames > 0, 1) },
-      { key: "RF_Innings", label: "RF INN", sortValue: (row) => numericSortValue(row.DetailedGames > 0 ? row.RF_Innings : NaN), render: (row) => renderAvailable(row.RF_Innings, row.DetailedGames > 0, 1) },
-      { key: "SF_Innings", label: "SF INN", sortValue: (row) => numericSortValue(row.DetailedGames > 0 ? row.SF_Innings : NaN), render: (row) => renderAvailable(row.SF_Innings, row.DetailedGames > 0, 1) },
+      { key: "P_Innings", label: "P INN", sortValue: (row) => numericSortValue(row.DetailedGames > 0 ? baseballInningOuts(row, "P_Innings") : NaN), render: (row) => renderAvailable(baseballInningValue(row, "P_Innings"), row.DetailedGames > 0, 1) },
+      { key: "C_Innings", label: "C INN", sortValue: (row) => numericSortValue(row.DetailedGames > 0 ? baseballInningOuts(row, "C_Innings") : NaN), render: (row) => renderAvailable(baseballInningValue(row, "C_Innings"), row.DetailedGames > 0, 1) },
+      { key: "1B_Innings", label: "1B INN", sortValue: (row) => numericSortValue(row.DetailedGames > 0 ? baseballInningOuts(row, "1B_Innings") : NaN), render: (row) => renderAvailable(baseballInningValue(row, "1B_Innings"), row.DetailedGames > 0, 1) },
+      { key: "2B_Innings", label: "2B INN", sortValue: (row) => numericSortValue(row.DetailedGames > 0 ? baseballInningOuts(row, "2B_Innings") : NaN), render: (row) => renderAvailable(baseballInningValue(row, "2B_Innings"), row.DetailedGames > 0, 1) },
+      { key: "3B_Innings", label: "3B INN", sortValue: (row) => numericSortValue(row.DetailedGames > 0 ? baseballInningOuts(row, "3B_Innings") : NaN), render: (row) => renderAvailable(baseballInningValue(row, "3B_Innings"), row.DetailedGames > 0, 1) },
+      { key: "SS_Innings", label: "SS INN", sortValue: (row) => numericSortValue(row.DetailedGames > 0 ? baseballInningOuts(row, "SS_Innings") : NaN), render: (row) => renderAvailable(baseballInningValue(row, "SS_Innings"), row.DetailedGames > 0, 1) },
+      { key: "LF_Innings", label: "LF INN", sortValue: (row) => numericSortValue(row.DetailedGames > 0 ? baseballInningOuts(row, "LF_Innings") : NaN), render: (row) => renderAvailable(baseballInningValue(row, "LF_Innings"), row.DetailedGames > 0, 1) },
+      { key: "CF_Innings", label: "CF INN", sortValue: (row) => numericSortValue(row.DetailedGames > 0 ? baseballInningOuts(row, "CF_Innings") : NaN), render: (row) => renderAvailable(baseballInningValue(row, "CF_Innings"), row.DetailedGames > 0, 1) },
+      { key: "RF_Innings", label: "RF INN", sortValue: (row) => numericSortValue(row.DetailedGames > 0 ? baseballInningOuts(row, "RF_Innings") : NaN), render: (row) => renderAvailable(baseballInningValue(row, "RF_Innings"), row.DetailedGames > 0, 1) },
+      { key: "SF_Innings", label: "SF INN", sortValue: (row) => numericSortValue(row.DetailedGames > 0 ? baseballInningOuts(row, "SF_Innings") : NaN), render: (row) => renderAvailable(baseballInningValue(row, "SF_Innings"), row.DetailedGames > 0, 1) },
     ],
   },
 };

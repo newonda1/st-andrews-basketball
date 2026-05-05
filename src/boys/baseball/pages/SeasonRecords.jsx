@@ -55,6 +55,17 @@ function pitchingOuts(stats) {
   return stats?.IPOuts != null ? safeNum(stats.IPOuts) : baseballInningsToOuts(stats?.IP);
 }
 
+function positionInnings(stats, key) {
+  const outsKey = `${key}Outs`;
+  return stats?.[outsKey] != null ? outsToBaseballInnings(stats[outsKey]) : safeNum(stats?.[key]);
+}
+
+function addBaseballInnings(total, row, key) {
+  const outsKey = `${key}Outs`;
+  total[outsKey] = safeNum(total[outsKey]) + baseballInningsToOuts(row?.[key]);
+  total[key] = outsToBaseballInnings(total[outsKey]);
+}
+
 function battingAverage(stats) {
   const ab = safeNum(stats?.AB);
   return ab ? safeNum(stats?.H) / ab : NaN;
@@ -224,7 +235,7 @@ export default function SeasonRecords() {
           { key: "ERA", label: "Earned Run Average (min. 15 IP)", abbr: "ERA", format: "pitchingRate", derived: true, allowZero: true, lowerIsBetter: true, valueFn: (s) => pitchingEra(s, SEASON_PITCHING_RATE_MIN_OUTS) },
           { key: "WHIP", label: "WHIP (min. 15 IP)", abbr: "WHIP", format: "pitchingRate", derived: true, allowZero: true, lowerIsBetter: true, valueFn: (s) => pitchingWhip(s, SEASON_PITCHING_RATE_MIN_OUTS) },
           { key: "BAA", label: "Batting Average Against (min. 15 IP)", abbr: "BAA", format: "rate", derived: true, allowZero: true, lowerIsBetter: true, valueFn: (s) => battingAverageAgainst(s, SEASON_PITCHING_RATE_MIN_OUTS) },
-          { key: "P_Innings", label: "Pitcher Innings", abbr: "P INN", valueFn: (s) => safeNum(s?.P_Innings) },
+          { key: "P_Innings", label: "Pitcher Innings", abbr: "P INN", baseballInnings: true, valueFn: (s) => positionInnings(s, "P_Innings") },
         ],
       },
       {
@@ -247,15 +258,15 @@ export default function SeasonRecords() {
           { key: "PB", label: "Passed Balls", abbr: "PB", valueFn: (s) => safeNum(s?.PB) },
           { key: "PIK_Fielding", label: "Pickoffs (Fielding)", abbr: "PIK", valueFn: (s) => safeNum(s?.PIK_Fielding) },
           { key: "CI", label: "Catcher's Interference", abbr: "CI", valueFn: (s) => safeNum(s?.CI) },
-          { key: "C_Innings", label: "Catcher Innings", abbr: "C INN", valueFn: (s) => safeNum(s?.C_Innings) },
-          { key: "1B_Innings", label: "1B Innings", abbr: "1B INN", valueFn: (s) => safeNum(s?.["1B_Innings"]) },
-          { key: "2B_Innings", label: "2B Innings", abbr: "2B INN", valueFn: (s) => safeNum(s?.["2B_Innings"]) },
-          { key: "3B_Innings", label: "3B Innings", abbr: "3B INN", valueFn: (s) => safeNum(s?.["3B_Innings"]) },
-          { key: "SS_Innings", label: "SS Innings", abbr: "SS INN", valueFn: (s) => safeNum(s?.SS_Innings) },
-          { key: "LF_Innings", label: "LF Innings", abbr: "LF INN", valueFn: (s) => safeNum(s?.LF_Innings) },
-          { key: "CF_Innings", label: "CF Innings", abbr: "CF INN", valueFn: (s) => safeNum(s?.CF_Innings) },
-          { key: "RF_Innings", label: "RF Innings", abbr: "RF INN", valueFn: (s) => safeNum(s?.RF_Innings) },
-          { key: "SF_Innings", label: "Short Field Innings", abbr: "SF INN", valueFn: (s) => safeNum(s?.SF_Innings) },
+          { key: "C_Innings", label: "Catcher Innings", abbr: "C INN", baseballInnings: true, valueFn: (s) => positionInnings(s, "C_Innings") },
+          { key: "1B_Innings", label: "1B Innings", abbr: "1B INN", baseballInnings: true, valueFn: (s) => positionInnings(s, "1B_Innings") },
+          { key: "2B_Innings", label: "2B Innings", abbr: "2B INN", baseballInnings: true, valueFn: (s) => positionInnings(s, "2B_Innings") },
+          { key: "3B_Innings", label: "3B Innings", abbr: "3B INN", baseballInnings: true, valueFn: (s) => positionInnings(s, "3B_Innings") },
+          { key: "SS_Innings", label: "SS Innings", abbr: "SS INN", baseballInnings: true, valueFn: (s) => positionInnings(s, "SS_Innings") },
+          { key: "LF_Innings", label: "LF Innings", abbr: "LF INN", baseballInnings: true, valueFn: (s) => positionInnings(s, "LF_Innings") },
+          { key: "CF_Innings", label: "CF Innings", abbr: "CF INN", baseballInnings: true, valueFn: (s) => positionInnings(s, "CF_Innings") },
+          { key: "RF_Innings", label: "RF Innings", abbr: "RF INN", baseballInnings: true, valueFn: (s) => positionInnings(s, "RF_Innings") },
+          { key: "SF_Innings", label: "Short Field Innings", abbr: "SF INN", baseballInnings: true, valueFn: (s) => positionInnings(s, "SF_Innings") },
         ],
       },
     ],
@@ -317,6 +328,11 @@ export default function SeasonRecords() {
           for (const def of recordDefs) {
             if (def.key === "GamesPlayed" || def.key === "NoHitters" || def.key === "PerfectGames") continue;
             if (def.derived) continue;
+
+            if (def.baseballInnings) {
+              addBaseballInnings(totals, s, def.key);
+              continue;
+            }
 
             const value = def.valueFn(s);
             if (Number.isFinite(value)) {

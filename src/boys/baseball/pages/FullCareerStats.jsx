@@ -45,6 +45,30 @@ function outsToBaseballInnings(outs) {
   return Number(`${whole}.${remainder}`);
 }
 
+const FIELDING_INNING_KEYS = [
+  "P_Innings",
+  "C_Innings",
+  "1B_Innings",
+  "2B_Innings",
+  "3B_Innings",
+  "SS_Innings",
+  "LF_Innings",
+  "CF_Innings",
+  "RF_Innings",
+  "SF_Innings",
+];
+
+function baseballInningOuts(stats, key) {
+  const outsKey = `${key}Outs`;
+  return stats?.[outsKey] != null ? safeNum(stats[outsKey]) : baseballInningsToOuts(stats?.[key]);
+}
+
+function addBaseballInnings(total, row, key) {
+  const outsKey = `${key}Outs`;
+  total[outsKey] = safeNum(total[outsKey]) + baseballInningsToOuts(row?.[key]);
+  total[key] = outsToBaseballInnings(total[outsKey]);
+}
+
 function formatValue(value, decimals = 0) {
   if (!Number.isFinite(value)) return "—";
   if (decimals === 0) return String(Math.round(value));
@@ -87,19 +111,12 @@ function pitchingWhip(stats) {
   return stats.IPOuts > 0 ? ((stats.H_Allowed + stats.BB_Allowed) * 3) / stats.IPOuts : NaN;
 }
 
+function totalFieldingOuts(stats) {
+  return FIELDING_INNING_KEYS.reduce((sum, key) => sum + baseballInningOuts(stats, key), 0);
+}
+
 function totalFieldingInnings(stats) {
-  return (
-    stats.P_Innings +
-    stats.C_Innings +
-    stats["1B_Innings"] +
-    stats["2B_Innings"] +
-    stats["3B_Innings"] +
-    stats.SS_Innings +
-    stats.LF_Innings +
-    stats.CF_Innings +
-    stats.RF_Innings +
-    stats.SF_Innings
-  );
+  return outsToBaseballInnings(totalFieldingOuts(stats));
 }
 
 function createEmptyTotals(playerId) {
@@ -213,16 +230,7 @@ function accumulateStats(total, row) {
   total.PB += safeNum(row.PB);
   total.PIK_Fielding += safeNum(row.PIK_Fielding);
   total.CI += safeNum(row.CI);
-  total.P_Innings += safeNum(row.P_Innings);
-  total.C_Innings += safeNum(row.C_Innings);
-  total["1B_Innings"] += safeNum(row["1B_Innings"]);
-  total["2B_Innings"] += safeNum(row["2B_Innings"]);
-  total["3B_Innings"] += safeNum(row["3B_Innings"]);
-  total.SS_Innings += safeNum(row.SS_Innings);
-  total.LF_Innings += safeNum(row.LF_Innings);
-  total.CF_Innings += safeNum(row.CF_Innings);
-  total.RF_Innings += safeNum(row.RF_Innings);
-  total.SF_Innings += safeNum(row.SF_Innings);
+  FIELDING_INNING_KEYS.forEach((key) => addBaseballInnings(total, row, key));
 }
 
 const FALLBACK_HEADSHOT = "/images/common/logo.png";
@@ -273,7 +281,7 @@ const VIEW_CONFIG = {
     defaultSort: "PO",
     columns: [
       { key: "GamesPlayed", label: "G", sortValue: (row) => row.GamesPlayed, render: (row) => formatValue(row.GamesPlayed) },
-      { key: "INN", label: "INN", sortValue: (row) => totalFieldingInnings(row), render: (row) => formatValue(totalFieldingInnings(row), 1) },
+      { key: "INN", label: "INN", sortValue: (row) => totalFieldingOuts(row), render: (row) => formatValue(totalFieldingInnings(row), 1) },
       { key: "PO", label: "PO", sortValue: (row) => row.PO, render: (row) => formatValue(row.PO) },
       { key: "A", label: "A", sortValue: (row) => row.A, render: (row) => formatValue(row.A) },
       { key: "E", label: "E", sortValue: (row) => row.E, render: (row) => formatValue(row.E) },

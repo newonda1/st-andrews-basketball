@@ -44,6 +44,41 @@ export function baseballInningsToOuts(value) {
   return whole * 3 + decimal;
 }
 
+export function outsToBaseballInnings(outs) {
+  const safeOuts = safeNum(outs);
+  const whole = Math.floor(safeOuts / 3);
+  const remainder = safeOuts % 3;
+  return Number(`${whole}.${remainder}`);
+}
+
+export const FIELDING_INNING_KEYS = [
+  "P_Innings",
+  "C_Innings",
+  "1B_Innings",
+  "2B_Innings",
+  "3B_Innings",
+  "SS_Innings",
+  "LF_Innings",
+  "CF_Innings",
+  "RF_Innings",
+  "SF_Innings",
+];
+
+export function baseballInningOuts(stats, key) {
+  const outsKey = `${key}Outs`;
+  return stats?.[outsKey] != null ? safeNum(stats[outsKey]) : baseballInningsToOuts(stats?.[key]);
+}
+
+export function baseballInningValue(stats, key) {
+  return outsToBaseballInnings(baseballInningOuts(stats, key));
+}
+
+export function addBaseballInnings(total, row, key) {
+  const outsKey = `${key}Outs`;
+  total[outsKey] = safeNum(total[outsKey]) + baseballInningsToOuts(row?.[key]);
+  total[key] = outsToBaseballInnings(total[outsKey]);
+}
+
 export function getSeasonKey(game) {
   if (!game) return "Unknown Season";
 
@@ -208,8 +243,8 @@ export function accumulateTeamGameStats(total, row) {
   total.SB += safeNum(row.SB);
   total.CS += safeNum(row.CS);
   total.TB += safeNum(row.TB);
-  total.IP += safeNum(row.IP);
   total.IPOuts += baseballInningsToOuts(row.IP);
+  total.IP = outsToBaseballInnings(total.IPOuts);
   total.BF += safeNum(row.BF);
   total.Pitches += safeNum(row.Pitches);
   total.SV += safeNum(row.SV);
@@ -234,16 +269,7 @@ export function accumulateTeamGameStats(total, row) {
   total.PB += safeNum(row.PB);
   total.PIK_Fielding += safeNum(row.PIK_Fielding);
   total.CI += safeNum(row.CI);
-  total.P_Innings += safeNum(row.P_Innings);
-  total.C_Innings += safeNum(row.C_Innings);
-  total["1B_Innings"] += safeNum(row["1B_Innings"]);
-  total["2B_Innings"] += safeNum(row["2B_Innings"]);
-  total["3B_Innings"] += safeNum(row["3B_Innings"]);
-  total.SS_Innings += safeNum(row.SS_Innings);
-  total.LF_Innings += safeNum(row.LF_Innings);
-  total.CF_Innings += safeNum(row.CF_Innings);
-  total.RF_Innings += safeNum(row.RF_Innings);
-  total.SF_Innings += safeNum(row.SF_Innings);
+  FIELDING_INNING_KEYS.forEach((key) => addBaseballInnings(total, row, key));
 }
 
 function applyOfficialGameFallbacks(total, game, hadDetailedRows) {
