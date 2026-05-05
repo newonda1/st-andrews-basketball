@@ -242,7 +242,6 @@ export default function CareerRecords() {
           { key: "LF_Innings", label: "LF Innings", abbr: "LF INN", baseballInnings: true, valueFn: (s) => positionInnings(s, "LF_Innings") },
           { key: "CF_Innings", label: "CF Innings", abbr: "CF INN", baseballInnings: true, valueFn: (s) => positionInnings(s, "CF_Innings") },
           { key: "RF_Innings", label: "RF Innings", abbr: "RF INN", baseballInnings: true, valueFn: (s) => positionInnings(s, "RF_Innings") },
-          { key: "SF_Innings", label: "Short Field Innings", abbr: "SF INN", baseballInnings: true, valueFn: (s) => positionInnings(s, "SF_Innings") },
         ],
       },
     ],

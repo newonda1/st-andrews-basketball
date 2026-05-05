@@ -54,7 +54,6 @@ const FIELDING_INNING_KEYS = [
   "LF_Innings",
   "CF_Innings",
   "RF_Innings",
-  "SF_Innings",
 ];
 
 function baseballInningOuts(stats, key) {
@@ -232,7 +231,6 @@ function createEmptySeasonTotals(season) {
     LF_Innings: 0,
     CF_Innings: 0,
     RF_Innings: 0,
-    SF_Innings: 0,
   };
 }
 
@@ -407,7 +405,6 @@ const VIEW_CONFIG = {
       { key: "LF_Innings", label: "LF INN", sortValue: (row) => numericSortValue(row.DetailedGames > 0 ? baseballInningOuts(row, "LF_Innings") : NaN), render: (row) => renderAvailable(baseballInningValue(row, "LF_Innings"), row.DetailedGames > 0, 1) },
       { key: "CF_Innings", label: "CF INN", sortValue: (row) => numericSortValue(row.DetailedGames > 0 ? baseballInningOuts(row, "CF_Innings") : NaN), render: (row) => renderAvailable(baseballInningValue(row, "CF_Innings"), row.DetailedGames > 0, 1) },
       { key: "RF_Innings", label: "RF INN", sortValue: (row) => numericSortValue(row.DetailedGames > 0 ? baseballInningOuts(row, "RF_Innings") : NaN), render: (row) => renderAvailable(baseballInningValue(row, "RF_Innings"), row.DetailedGames > 0, 1) },
-      { key: "SF_Innings", label: "SF INN", sortValue: (row) => numericSortValue(row.DetailedGames > 0 ? baseballInningOuts(row, "SF_Innings") : NaN), render: (row) => renderAvailable(baseballInningValue(row, "SF_Innings"), row.DetailedGames > 0, 1) },
     ],
   },
 };

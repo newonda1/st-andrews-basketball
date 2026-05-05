@@ -68,7 +68,6 @@ const FIELDING_INNING_KEYS = [
   "LF_Innings",
   "CF_Innings",
   "RF_Innings",
-  "SF_Innings",
 ];
 
 function baseballInningOuts(stats, key) {
@@ -175,7 +174,6 @@ function emptyTotals() {
     LF_Innings: 0,
     CF_Innings: 0,
     RF_Innings: 0,
-    SF_Innings: 0,
     Games: 0,
   };
 }

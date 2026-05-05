@@ -62,7 +62,6 @@ const OUTPUT_FIELDS = [
   "LF_Innings",
   "CF_Innings",
   "RF_Innings",
-  "SF_Innings",
 ];
 
 const BATTING_ALIASES = {
@@ -130,7 +129,6 @@ const POSITION_ALIASES = {
   LF_Innings: ["LF INNINGS", "LF", "LEFT FIELD INNINGS"],
   CF_Innings: ["CF INNINGS", "CF", "CENTER FIELD INNINGS"],
   RF_Innings: ["RF INNINGS", "RF", "RIGHT FIELD INNINGS"],
-  SF_Innings: ["SF INNINGS", "SF", "SHORT FIELD INNINGS"],
 };
 
 const LEGACY_DETAIL_LABELS = ["2B", "3B", "HR", "TB", "SB", "CS", "E", "PITCHES-STRIKES", "BATTERS FACED", "WP"];

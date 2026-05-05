@@ -57,8 +57,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 20170304012026038,
@@ -118,8 +117,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2017030401201811,
@@ -179,8 +177,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2017030401202109,
@@ -240,8 +237,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2017030401201713,
@@ -301,8 +297,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2017030401201714,
@@ -362,8 +357,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 20170304012026039,
@@ -423,8 +417,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2017030401201809,
@@ -484,8 +477,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2017030401201808,
@@ -545,8 +537,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 20170304012026037,
@@ -606,7 +597,6 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   }
 ]

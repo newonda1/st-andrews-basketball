@@ -94,7 +94,6 @@ export default function TeamSeasonRecords() {
           { key: "LF_Innings", label: "LF Innings", abbr: "LF INN", baseballInnings: true, valueFn: (s) => baseballInningValue(s, "LF_Innings") },
           { key: "CF_Innings", label: "CF Innings", abbr: "CF INN", baseballInnings: true, valueFn: (s) => baseballInningValue(s, "CF_Innings") },
           { key: "RF_Innings", label: "RF Innings", abbr: "RF INN", baseballInnings: true, valueFn: (s) => baseballInningValue(s, "RF_Innings") },
-          { key: "SF_Innings", label: "Short Field Innings", abbr: "SF INN", baseballInnings: true, valueFn: (s) => baseballInningValue(s, "SF_Innings") },
         ],
       },
     ],

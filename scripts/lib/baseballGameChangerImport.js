@@ -343,7 +343,6 @@ function makeEmptyStats(gameIdValue, playerId) {
     LF_Innings: 0.0,
     CF_Innings: 0.0,
     RF_Innings: 0.0,
-    SF_Innings: 0.0,
   };
 }
 
@@ -495,7 +494,6 @@ function importGameChangerCsv({ projectRoot = process.cwd(), gameId, filePath, w
     stats.LF_Innings = toNumber(row[169]);
     stats.CF_Innings = toNumber(row[170]);
     stats.RF_Innings = toNumber(row[171]);
-    stats.SF_Innings = toNumber(row[172]);
 
     generatedRows.push({
       jersey: cleanCell(row[0]),

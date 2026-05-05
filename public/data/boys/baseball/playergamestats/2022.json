@@ -57,8 +57,7 @@
     "SS_Innings": 2.2,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 1,
-    "SF_Innings": 0
+    "RF_Innings": 1
   },
 {
     "StatID": 2022022801202109,
@@ -118,8 +117,7 @@
     "SS_Innings": 1.1,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022022801202110,
@@ -179,8 +177,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 3,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022022801202111,
@@ -240,8 +237,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 1,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022022801202112,
@@ -301,8 +297,7 @@
     "SS_Innings": 0,
     "LF_Innings": 4,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022022801202113,
@@ -362,8 +357,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022022801202114,
@@ -423,8 +417,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 3,
-    "SF_Innings": 0
+    "RF_Innings": 3
   },
 {
     "StatID": 2022022801202311,
@@ -484,8 +477,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022022801202313,
@@ -545,8 +537,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022022801202415,
@@ -606,8 +597,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030101202006,
@@ -667,8 +657,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 1,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030101202109,
@@ -728,8 +717,7 @@
     "SS_Innings": 5,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030101202110,
@@ -789,8 +777,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 4,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030101202111,
@@ -850,8 +837,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030101202112,
@@ -911,8 +897,7 @@
     "SS_Innings": 0,
     "LF_Innings": 5,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030101202115,
@@ -972,8 +957,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030101202211,
@@ -1033,8 +1017,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030101202311,
@@ -1094,8 +1077,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030101202313,
@@ -1155,8 +1137,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030101202415,
@@ -1216,8 +1197,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 5,
-    "SF_Innings": 0
+    "RF_Innings": 5
   },
 {
     "StatID": 2022030301202006,
@@ -1277,8 +1257,7 @@
     "SS_Innings": 0,
     "LF_Innings": 1,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030301202109,
@@ -1338,8 +1317,7 @@
     "SS_Innings": 1.1,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030301202110,
@@ -1399,8 +1377,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 3,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030301202111,
@@ -1460,8 +1437,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0.1,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030301202112,
@@ -1521,8 +1497,7 @@
     "SS_Innings": 0,
     "LF_Innings": 3,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030301202115,
@@ -1582,8 +1557,7 @@
     "SS_Innings": 3,
     "LF_Innings": 0,
     "CF_Innings": 0.2,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030301202211,
@@ -1643,8 +1617,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030301202311,
@@ -1704,8 +1677,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030301202313,
@@ -1765,8 +1737,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030301202415,
@@ -1826,8 +1797,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 4,
-    "SF_Innings": 0
+    "RF_Innings": 4
   },
 {
     "StatID": 2022030501202006,
@@ -1887,8 +1857,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 1,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030501202109,
@@ -1948,8 +1917,7 @@
     "SS_Innings": 4,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030501202110,
@@ -2009,8 +1977,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030501202111,
@@ -2070,8 +2037,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 3,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030501202112,
@@ -2131,8 +2097,7 @@
     "SS_Innings": 0,
     "LF_Innings": 4,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030501202113,
@@ -2192,8 +2157,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030501202115,
@@ -2253,8 +2217,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030501202116,
@@ -2314,8 +2277,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030501202206,
@@ -2375,8 +2337,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030501202210,
@@ -2436,8 +2397,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030501202211,
@@ -2497,8 +2457,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030501202311,
@@ -2558,8 +2517,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030501202313,
@@ -2619,8 +2577,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030501202415,
@@ -2680,8 +2637,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 4,
-    "SF_Innings": 0
+    "RF_Innings": 4
   },
 {
     "StatID": 2022030502202006,
@@ -2741,8 +2697,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 4,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030502202109,
@@ -2802,8 +2757,7 @@
     "SS_Innings": 4,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030502202111,
@@ -2863,8 +2817,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030502202112,
@@ -2924,8 +2877,7 @@
     "SS_Innings": 0,
     "LF_Innings": 4,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030502202114,
@@ -2985,8 +2937,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030502202115,
@@ -3046,8 +2997,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030502202116,
@@ -3107,8 +3057,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030502202206,
@@ -3168,8 +3117,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 4,
-    "SF_Innings": 0
+    "RF_Innings": 4
   },
 {
     "StatID": 2022030502202210,
@@ -3229,8 +3177,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030502202211,
@@ -3290,8 +3237,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030502202313,
@@ -3351,8 +3297,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030701202006,
@@ -3412,8 +3357,7 @@
     "SS_Innings": 5,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030701202109,
@@ -3473,8 +3417,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030701202110,
@@ -3534,8 +3477,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 5,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030701202111,
@@ -3595,8 +3537,7 @@
     "SS_Innings": 0,
     "LF_Innings": 3,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030701202112,
@@ -3656,8 +3597,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 5,
-    "SF_Innings": 0
+    "RF_Innings": 5
   },
 {
     "StatID": 2022030701202114,
@@ -3717,8 +3657,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030701202115,
@@ -3778,8 +3717,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030701202116,
@@ -3839,8 +3777,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030701202210,
@@ -3900,8 +3837,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030701202211,
@@ -3961,8 +3897,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030701202311,
@@ -4022,8 +3957,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030701202313,
@@ -4083,8 +4017,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030701202415,
@@ -4144,8 +4077,7 @@
     "SS_Innings": 0,
     "LF_Innings": 2,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030801202006,
@@ -4205,8 +4137,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030801202109,
@@ -4266,8 +4197,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030801202111,
@@ -4327,8 +4257,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030801202112,
@@ -4388,8 +4317,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030801202114,
@@ -4449,8 +4377,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030801202115,
@@ -4510,8 +4437,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030801202116,
@@ -4571,8 +4497,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030801202206,
@@ -4632,8 +4557,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030801202210,
@@ -4693,8 +4617,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030801202211,
@@ -4754,8 +4677,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022030801202313,
@@ -4815,8 +4737,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022031401202006,
@@ -4876,8 +4797,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022031401202109,
@@ -4937,8 +4857,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022031401202111,
@@ -4998,8 +4917,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022031401202112,
@@ -5059,8 +4977,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022031401202113,
@@ -5120,8 +5037,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022031401202115,
@@ -5181,8 +5097,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022031401202116,
@@ -5242,8 +5157,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022031401202210,
@@ -5303,8 +5217,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022031401202211,
@@ -5364,8 +5277,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022031401202313,
@@ -5425,8 +5337,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022031501202006,
@@ -5486,8 +5397,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022031501202109,
@@ -5547,8 +5457,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022031501202111,
@@ -5608,8 +5517,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022031501202112,
@@ -5669,8 +5577,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022031501202115,
@@ -5730,8 +5637,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022031501202116,
@@ -5791,8 +5697,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022031501202210,
@@ -5852,8 +5757,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022031501202211,
@@ -5913,8 +5817,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022031501202313,
@@ -5974,8 +5877,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022031501202415,
@@ -6035,8 +5937,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022032501202006,
@@ -6096,8 +5997,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022032501202109,
@@ -6157,8 +6057,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022032501202110,
@@ -6218,8 +6117,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022032501202111,
@@ -6279,8 +6177,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022032501202112,
@@ -6340,8 +6237,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022032501202115,
@@ -6401,8 +6297,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022032501202210,
@@ -6462,8 +6357,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022032501202211,
@@ -6523,8 +6417,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022032501202313,
@@ -6584,8 +6477,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022032502202006,
@@ -6645,8 +6537,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022032502202109,
@@ -6706,8 +6597,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022032502202110,
@@ -6767,8 +6657,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022032502202111,
@@ -6828,8 +6717,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022032502202112,
@@ -6889,8 +6777,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022032502202115,
@@ -6950,8 +6837,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022032502202116,
@@ -7011,8 +6897,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022032502202206,
@@ -7072,8 +6957,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022032502202210,
@@ -7133,8 +7017,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022032502202211,
@@ -7194,8 +7077,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022032502202313,
@@ -7255,8 +7137,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022032801202006,
@@ -7316,8 +7197,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022032801202109,
@@ -7377,8 +7257,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022032801202110,
@@ -7438,8 +7317,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022032801202111,
@@ -7499,8 +7377,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022032801202112,
@@ -7560,8 +7437,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022032801202115,
@@ -7621,8 +7497,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022032801202211,
@@ -7682,8 +7557,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022032801202311,
@@ -7743,8 +7617,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022032801202313,
@@ -7804,8 +7677,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022032802202006,
@@ -7865,8 +7737,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022032802202109,
@@ -7926,8 +7797,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022032802202110,
@@ -7987,8 +7857,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022032802202111,
@@ -8048,8 +7917,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022032802202112,
@@ -8109,8 +7977,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022032802202115,
@@ -8170,8 +8037,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022032802202211,
@@ -8231,8 +8097,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022032802202313,
@@ -8292,8 +8157,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022032802202415,
@@ -8353,8 +8217,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022033001202006,
@@ -8414,8 +8277,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022033001202109,
@@ -8475,8 +8337,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022033001202110,
@@ -8536,8 +8397,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022033001202111,
@@ -8597,8 +8457,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022033001202112,
@@ -8658,8 +8517,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022033001202115,
@@ -8719,8 +8577,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022033001202116,
@@ -8780,8 +8637,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022033001202206,
@@ -8841,8 +8697,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022033001202210,
@@ -8902,8 +8757,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022033001202211,
@@ -8963,8 +8817,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022033001202311,
@@ -9024,8 +8877,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022033001202313,
@@ -9085,8 +8937,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022033001202415,
@@ -9146,8 +8997,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022040801202006,
@@ -9207,8 +9057,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022040801202109,
@@ -9268,8 +9117,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022040801202110,
@@ -9329,8 +9177,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022040801202111,
@@ -9390,8 +9237,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022040801202112,
@@ -9451,8 +9297,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022040801202115,
@@ -9512,8 +9357,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022040801202206,
@@ -9573,8 +9417,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022040801202210,
@@ -9634,8 +9477,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022040801202211,
@@ -9695,8 +9537,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022040801202313,
@@ -9756,8 +9597,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022040802202006,
@@ -9817,8 +9657,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022040802202109,
@@ -9878,8 +9717,7 @@
     "SS_Innings": 5,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022040802202110,
@@ -9939,8 +9777,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022040802202111,
@@ -10000,8 +9837,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 4,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022040802202112,
@@ -10061,8 +9897,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 3,
-    "SF_Innings": 0
+    "RF_Innings": 3
   },
 {
     "StatID": 2022040802202115,
@@ -10122,8 +9957,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 1,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022040802202116,
@@ -10183,8 +10017,7 @@
     "SS_Innings": 0,
     "LF_Innings": 5,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022040802202211,
@@ -10244,8 +10077,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022040802202311,
@@ -10305,8 +10137,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022040802202313,
@@ -10366,8 +10197,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022040802202415,
@@ -10427,8 +10257,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 2,
-    "SF_Innings": 0
+    "RF_Innings": 2
   },
 {
     "StatID": 2022041401202006,
@@ -10488,8 +10317,7 @@
     "SS_Innings": 0,
     "LF_Innings": 4.1,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022041401202109,
@@ -10549,8 +10377,7 @@
     "SS_Innings": 2.1,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022041401202110,
@@ -10610,8 +10437,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 4.1,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022041401202111,
@@ -10671,8 +10497,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022041401202112,
@@ -10732,8 +10557,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 4,
-    "SF_Innings": 0
+    "RF_Innings": 4
   },
 {
     "StatID": 2022041401202115,
@@ -10793,8 +10617,7 @@
     "SS_Innings": 2,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022041401202211,
@@ -10854,8 +10677,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022041401202311,
@@ -10915,8 +10737,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022041401202313,
@@ -10976,8 +10797,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022041401202415,
@@ -11037,8 +10857,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022041801202006,
@@ -11098,8 +10917,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 3.2,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022041801202109,
@@ -11159,8 +10977,7 @@
     "SS_Innings": 5.1,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022041801202110,
@@ -11220,8 +11037,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022041801202111,
@@ -11281,8 +11097,7 @@
     "SS_Innings": 1.2,
     "LF_Innings": 0,
     "CF_Innings": 3.1,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022041801202112,
@@ -11342,8 +11157,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 7,
-    "SF_Innings": 0
+    "RF_Innings": 7
   },
 {
     "StatID": 2022041801202115,
@@ -11403,8 +11217,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022041801202116,
@@ -11464,8 +11277,7 @@
     "SS_Innings": 0,
     "LF_Innings": 7,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022041801202206,
@@ -11525,8 +11337,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022041801202211,
@@ -11586,8 +11397,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022041801202313,
@@ -11647,8 +11457,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022042201202006,
@@ -11708,8 +11517,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022042201202109,
@@ -11769,8 +11577,7 @@
     "SS_Innings": 7,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022042201202110,
@@ -11830,8 +11637,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022042201202111,
@@ -11891,8 +11697,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 3,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022042201202112,
@@ -11952,8 +11757,7 @@
     "SS_Innings": 0,
     "LF_Innings": 7,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022042201202115,
@@ -12013,8 +11817,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 4,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022042201202206,
@@ -12074,8 +11877,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 4,
-    "SF_Innings": 0
+    "RF_Innings": 4
   },
 {
     "StatID": 2022042201202211,
@@ -12135,8 +11937,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022042201202313,
@@ -12196,8 +11997,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022042201202415,
@@ -12257,8 +12057,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 3,
-    "SF_Innings": 0
+    "RF_Innings": 3
   },
 {
     "StatID": 2022042501202006,
@@ -12318,8 +12117,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022042501202109,
@@ -12379,8 +12177,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022042501202110,
@@ -12440,8 +12237,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022042501202111,
@@ -12501,8 +12297,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 3,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022042501202112,
@@ -12562,8 +12357,7 @@
     "SS_Innings": 0,
     "LF_Innings": 3,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022042501202115,
@@ -12623,8 +12417,7 @@
     "SS_Innings": 3,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022042501202211,
@@ -12684,8 +12477,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022042501202313,
@@ -12745,8 +12537,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022042501202415,
@@ -12806,8 +12597,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 3,
-    "SF_Innings": 0
+    "RF_Innings": 3
   },
 {
     "StatID": 2022042502202006,
@@ -12867,8 +12657,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022042502202109,
@@ -12928,8 +12717,7 @@
     "SS_Innings": 4,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022042502202110,
@@ -12989,8 +12777,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 5,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022042502202111,
@@ -13050,8 +12837,7 @@
     "SS_Innings": 1,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022042502202112,
@@ -13111,8 +12897,7 @@
     "SS_Innings": 0,
     "LF_Innings": 5,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022042502202115,
@@ -13172,8 +12957,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022042502202211,
@@ -13233,8 +13017,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   },
 {
     "StatID": 2022042502202311,
@@ -13294,8 +13077,7 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 5,
-    "SF_Innings": 0
+    "RF_Innings": 5
   },
 {
     "StatID": 2022042502202313,
@@ -13355,7 +13137,6 @@
     "SS_Innings": 0,
     "LF_Innings": 0,
     "CF_Innings": 0,
-    "RF_Innings": 0,
-    "SF_Innings": 0
+    "RF_Innings": 0
   }
 ]

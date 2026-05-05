@@ -61,7 +61,6 @@ export const FIELDING_INNING_KEYS = [
   "LF_Innings",
   "CF_Innings",
   "RF_Innings",
-  "SF_Innings",
 ];
 
 export function baseballInningOuts(stats, key) {
@@ -219,7 +218,6 @@ export function createEmptyTeamGameTotals() {
     LF_Innings: 0,
     CF_Innings: 0,
     RF_Innings: 0,
-    SF_Innings: 0,
   };
 }
 

@@ -401,7 +401,6 @@ export default function Season2025() {
         "LF_Innings",
         "CF_Innings",
         "RF_Innings",
-        "SF_Innings",
       ].reduce((sum, key) => sum + baseballInningsToOuts(stat[key] || 0), 0);
 
       t.defensiveOuts += defensiveOuts;
