@@ -389,7 +389,7 @@ export default function AthleticsProgramShell({
             onMouseEnter={() => setOpenDropdownTitle(section.title)}
             onFocus={() => setOpenDropdownTitle(section.title)}
             className={({ isActive }) =>
-              `relative inline-flex min-h-[54px] w-full items-center justify-center px-3 py-[15px] text-center text-[1.02rem] font-semibold leading-[1.15] no-underline transition-colors ${
+              `relative inline-flex min-h-[50px] w-full items-center justify-center px-3 py-[13px] text-center text-[1rem] font-semibold leading-[1.15] no-underline transition-colors ${
                 isActive ? "text-[var(--stats-navy)]" : textClass
               }`
             }
@@ -422,7 +422,7 @@ export default function AthleticsProgramShell({
               current === section.title ? null : section.title
             )
           }
-          className={`relative inline-flex min-h-[54px] w-full items-center justify-center bg-transparent px-3 py-[15px] text-center text-[1.02rem] font-semibold leading-[1.15] transition-colors ${textClass}`}
+          className={`relative inline-flex min-h-[50px] w-full items-center justify-center bg-transparent px-3 py-[13px] text-center text-[1rem] font-semibold leading-[1.15] transition-colors ${textClass}`}
         >
           {section.title}
         </button>
@@ -534,7 +534,7 @@ export default function AthleticsProgramShell({
         </div>
 
         <div className="border-b border-[var(--stats-line-soft)] bg-white">
-          <div className="flex w-full items-center justify-between px-4 py-4 lg:px-8 lg:py-5 xl:px-10 2xl:px-12">
+          <div className="flex w-full items-center justify-between px-4 py-4 lg:px-8 lg:py-3 xl:px-10 2xl:px-12">
             <Link
               to={athleticsHomePath}
               className="flex min-w-0 items-center gap-1.5 text-[var(--stats-navy)] no-underline lg:gap-2"
@@ -542,14 +542,14 @@ export default function AthleticsProgramShell({
               <img
                 src="/images/common/st_andrews_athletics_horizontal_logo_dark.png"
                 alt="St. Andrew's Athletics"
-                className="translate-y-[3px] h-[32px] w-auto sm:h-[38px] lg:h-[48px]"
+                className="translate-y-[3px] h-[32px] w-auto sm:h-[38px] lg:h-[44px]"
               />
               <span
                 aria-hidden="true"
-                className="hidden h-8 w-px bg-[var(--stats-gray)] md:block lg:h-[39px]"
+                className="hidden h-8 w-px bg-[var(--stats-gray)] md:block lg:h-[36px]"
               />
               <div className="hidden min-w-0 md:flex md:flex-col">
-                <span className="text-[0.94rem] font-semibold uppercase tracking-[0.01em] text-[var(--stats-navy)] lg:text-[1.12rem]">
+                <span className="text-[0.94rem] font-semibold uppercase tracking-[0.01em] text-[var(--stats-navy)] lg:text-[1.06rem]">
                   {title}
                 </span>
                 {subtitle ? (
@@ -562,7 +562,7 @@ export default function AthleticsProgramShell({
 
 	            <div
 	              ref={searchContainerRef}
-	              className="relative hidden min-h-[82px] items-center justify-end lg:flex"
+	              className="relative hidden min-h-[80px] items-center justify-end lg:flex"
 	            >
 	              <div
 	                className={`flex items-center transition-all duration-200 ${
@@ -578,7 +578,7 @@ export default function AthleticsProgramShell({
                       href={item.href}
                       target="_blank"
                       rel="noreferrer"
-                      className="px-[10px] py-[10px] text-[0.875rem] font-semibold leading-[1.25] text-[var(--stats-navy)] no-underline transition hover:underline"
+                      className="px-2 py-2 text-[0.8125rem] font-semibold leading-4 text-[var(--stats-navy)] no-underline transition hover:underline"
                     >
                       {item.label}
                     </a>
@@ -590,13 +590,13 @@ export default function AthleticsProgramShell({
 	                  aria-label="Search the stats site"
 	                  aria-expanded={searchOpen}
 	                  onClick={() => setSearchOpen(true)}
-	                  className="ml-3 inline-flex h-11 w-11 items-center justify-center text-[var(--stats-gray)] transition hover:text-[var(--stats-navy)]"
+	                  className="ml-3 inline-flex h-10 w-10 items-center justify-center text-[var(--stats-gray)] transition hover:text-[var(--stats-navy)]"
 	                >
 	                  <svg
 	                    aria-hidden="true"
 	                    viewBox="0 0 24 24"
 	                    fill="none"
-	                    className="h-[1rem] w-[1rem]"
+	                    className="h-[0.94rem] w-[0.94rem]"
 	                  >
 	                    <circle
 	                      cx="11"
