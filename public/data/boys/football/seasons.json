@@ -1717,6 +1717,71 @@
     "RegionFinish": null,
     "StateFinish": null,
     "SeasonResult": "SCISA AA Region II • Lost in first round vs. Robert E. Lee • 2-2 region record",
+    "SeasonRecapTitle": "Season Recap",
+    "SeasonRecapMedia": [
+      {
+        "src": "/images/boys/football/seasons/2003/2003-football-team.png",
+        "alt": "2003-04 St. Andrew's football team photo",
+        "caption": "The 2003-04 St. Andrew's football team finished 5-4 and reached the SCISA AA first round."
+      },
+      {
+        "src": "/images/boys/football/seasons/2003/2003-football-william-aj-break.png",
+        "alt": "William Chisholm and A.J. Roberts take a break during a game",
+        "caption": "William and A.J. take a break from a challenging game"
+      },
+      {
+        "src": "/images/boys/football/seasons/2003/2003-football-kunst-timeout.png",
+        "alt": "Coach Kevin Kunst talks to Saints players during a timeout",
+        "caption": "Coach Kunst gives advice during a timeout"
+      },
+      {
+        "src": "/images/boys/football/seasons/2003/2003-football-saussy-knight-sideline.png",
+        "alt": "Sam Saussy and Matt Knight wait on the sideline",
+        "caption": "Sam Saussy and Matt Knight anxiously await to go into the game"
+      },
+      {
+        "src": "/images/boys/football/seasons/2003/2003-football-hunter-saussy-run.png",
+        "alt": "Hunter Saussy celebrates after a run",
+        "caption": "Hunter Saussy celebrates another great run"
+      },
+      {
+        "src": "/images/boys/football/seasons/2003/2003-football-aj-roberts-field.png",
+        "alt": "A.J. Roberts runs onto the field",
+        "caption": "A.J. powers onto the field, ready for a win"
+      },
+      {
+        "src": "/images/boys/football/seasons/2003/2003-football-team-field-entrance.png",
+        "alt": "The St. Andrew's Saints run onto the playing field",
+        "caption": "The Saint Andrew's Saints are ready for any team as they come onto the playing field"
+      },
+      {
+        "src": "/images/boys/football/seasons/2003/2003-football-gibbons-clay-benediction.png",
+        "alt": "Coach Mark Gibbons and Davy Clay share a moment during the Benediction",
+        "caption": "Coach Gibbons and Davy Clay share a moment during the Benediction"
+      },
+      {
+        "src": "/images/boys/football/seasons/2003/2003-football-line-contact.png",
+        "alt": "A Saints player blocks an opponent during game action",
+        "caption": "A Saints' player shows the opponent what we are made of on the field"
+      },
+      {
+        "src": "/images/boys/football/seasons/2003/2003-football-pregame-entrance.png",
+        "alt": "The Saints gather under the lights before taking the field",
+        "caption": "The Saints gather under the lights before taking the field."
+      },
+      {
+        "src": "/images/boys/football/seasons/2003/2003-football-sideline-huddle.png",
+        "alt": "The Saints regroup near the sideline during a night game",
+        "caption": "The Saints regroup near the sideline during a tense night game."
+      },
+      {
+        "src": "/images/boys/football/seasons/2003/2003-football-josh-smith-route.png",
+        "alt": "Jessie Hinton holds the ball for a Will Massey kick",
+        "caption": "Jessie Hinton holds the ball for a Will Massey kick"
+      }
+    ],
+    "SeasonRecap": "St. Andrew's 2003 football season had the hard edge of a team trying to follow a state championship run with a smaller, senior-led roster. The Saints finished 5-4, went 2-2 in SCISA AA Region II and reached the SCISA AA first round, but the season was defined as much by its close calls as its wins. The opener at Westside Stadium set the tone: St. Andrew's led Memorial Day in the second half, got a 40-yard field goal from Will Massey and nearly stole the game on the final snap when Davy Clay hit Josh Smith deep before Smith was tackled at the 2-yard line in a 20-16 loss.\n\nThe Saints answered by winning four straight. They handled Hilton Head Christian 27-6, then rolled past Hilton Head Prep 36-15 behind Beau Hinton's 133 rushing yards and three touchdowns. Clay added a rushing touchdown and a touchdown pass to Jacob Rauers, while Hunter Saussy contributed a safety. Two weeks later in Ridgeland, Hinton's 17-yard third-quarter touchdown gave St. Andrew's the lead for good and Clay's 1-yard sneak sealed a 19-13 win at Thomas Heyward.\n\nThe region opener against Calhoun became a defensive test. Massey's 30-yard field goal in the third quarter was the only scoring in a 3-0 St. Andrew's win, and Clay preserved the shutout by falling on a Calhoun fumble in the end zone. Hinton carried for 102 yards, Omar Glenn added 96 more, and the Saints moved to 4-1 overall and 1-0 in region play.\n\nThe middle of the region schedule was less forgiving. Dillon Christian beat St. Andrew's 32-7 despite a 51-yard touchdown run by Clay, and defending Class AA champion Colleton Prep leaned on 380 rushing yards in a 28-14 win over the Saints. Clay kept St. Andrew's throwing back into the game against Colleton, completing 25 of 38 passes for 250 yards and touchdowns to Josh Smith and Hunter Saussy, but the War Hawks controlled the ground game.\n\nSt. Andrew's responded with its cleanest night of the season at Holly Hill. Clay opened the scoring on a 3-yard run, then hit Josh Smith for a 15-yard touchdown. Smith added a 34-yard interception return, Beau Hinton scored twice, and Massey returned a fumble 35 yards as the Saints built a 34-0 halftime lead and finished a 41-0 shutout. In the first round against Robert E. Lee, Glenn broke loose for a 60-yard touchdown, Hinton scored from 15 yards out and Clay found Smith for a fourth-quarter touchdown, but the Saints came up one point short in a 21-20 loss. The final record did not match the previous year's state-final run, but the 2003 team still left a season built on grit, defense, Hinton's running, Clay's playmaking, Massey's kicking and a group of seniors who kept pushing games to the final possession.",
+    "SeasonRecapSourceCitation": "Compiled from the 2003 game recaps and scoring summaries in the football archive, including Savannah Morning News recaps from Aug. 29 and Nov. 1, 2003.",
     "SourceUrls": {
       "stats": "https://docs.google.com/spreadsheets/d/1XL5VrGsFQXz0ezl-EGCMfHTMMAcu6j5tdltStxssJAk/htmlembed"
     }

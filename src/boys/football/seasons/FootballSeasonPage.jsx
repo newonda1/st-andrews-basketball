@@ -913,13 +913,14 @@ function SeasonRecapSection({ season }) {
     season?.OverallRecord ||
     formatRecord(season?.OverallWins, season?.OverallLosses, season?.OverallTies);
   const coach = season?.HeadCoach || "—";
-  const finish = season?.StateFinish || season?.SeasonResult || season?.RegionFinish || "—";
+  const finish = season?.StateFinish || season?.RegionFinish || "";
+  const summaryColumns = finish ? "grid-cols-3" : "grid-cols-2";
 
   return (
     <section id="season-recap" className="mx-auto max-w-4xl space-y-3">
       <h2 className="text-2xl font-semibold">{title}</h2>
       <div className="flow-root text-base leading-7 text-slate-700">
-        <dl className="mb-4 grid grid-cols-3 gap-3 text-center md:float-right md:mb-3 md:ml-6 md:w-64 md:grid-cols-1">
+        <dl className={`mb-4 grid ${summaryColumns} gap-3 text-center md:float-right md:mb-3 md:ml-6 md:w-64 md:grid-cols-1`}>
           <div className="rounded-lg border border-gray-200 px-3 py-2">
             <dt className="text-xs font-semibold uppercase tracking-wide text-gray-500">Record</dt>
             <dd className="text-xl font-bold text-gray-900">{record}</dd>
@@ -928,10 +929,12 @@ function SeasonRecapSection({ season }) {
             <dt className="text-xs font-semibold uppercase tracking-wide text-gray-500">Coach</dt>
             <dd className="text-lg font-semibold text-gray-900">{coach}</dd>
           </div>
-          <div className="rounded-lg border border-gray-200 px-3 py-2">
-            <dt className="text-xs font-semibold uppercase tracking-wide text-gray-500">Finish</dt>
-            <dd className="text-lg font-semibold text-gray-900">{finish}</dd>
-          </div>
+          {finish ? (
+            <div className="rounded-lg border border-gray-200 px-3 py-2">
+              <dt className="text-xs font-semibold uppercase tracking-wide text-gray-500">Finish</dt>
+              <dd className="text-lg font-semibold text-gray-900">{finish}</dd>
+            </div>
+          ) : null}
         </dl>
 
         <div className="space-y-3">
@@ -1067,24 +1070,23 @@ function FootballRosterTable({ rosterRows, emptyStateClassName }) {
                 {player.JerseyNumber || "—"}
               </td>
               <td className={`${recordTableStyles.bodyCell} md:text-left`}>
-                {player.PlayerID ? (
-                  <Link
-                    to={footballPlayerPath(player.PlayerID)}
-                    className="text-blue-600 hover:underline"
-                  >
-                    {player.PlayerName || "—"}
-                  </Link>
-                ) : (
-                  player.PlayerName || "—"
-                )}
-                {(player.Distinctions || []).length > 0 ? (
-                  <>
-                    {" "}
-                    <span className="text-slate-600">
-                      ({player.Distinctions.join("; ")})
+                <div className="flex flex-col items-center gap-0.5 md:items-start">
+                  {player.PlayerID ? (
+                    <Link
+                      to={footballPlayerPath(player.PlayerID)}
+                      className="text-blue-600 hover:underline"
+                    >
+                      {player.PlayerName || "—"}
+                    </Link>
+                  ) : (
+                    <span>{player.PlayerName || "—"}</span>
+                  )}
+                  {(player.Distinctions || []).length > 0 ? (
+                    <span className="text-xs leading-snug text-slate-600">
+                      {player.Distinctions.join("; ")}
                     </span>
-                  </>
-                ) : null}
+                  ) : null}
+                </div>
               </td>
               <td className={`${recordTableStyles.bodyCell} whitespace-nowrap`}>
                 {player.Grade || "—"}

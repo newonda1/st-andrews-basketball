@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-05T19:21:38.063Z",
-  "itemCount": 1587,
+  "generatedAt": "2026-05-06T18:54:58.029Z",
+  "itemCount": 1597,
   "items": [
     {
       "id": "athletics-home",
@@ -4117,7 +4117,7 @@
     {
       "id": "boys-basketball-athlete-200307",
       "type": "athlete",
-      "title": "Omer Glenn",
+      "title": "Omar Glenn",
       "subtitle": "Boys Basketball athlete",
       "to": "/athletics/boys/basketball/players/200307",
       "keywords": [
@@ -4126,9 +4126,9 @@
         "player",
         "stats",
         "records",
-        "Omer",
+        "Omar",
         "Glenn",
-        "Glenn Omer"
+        "Glenn Omar"
       ]
     },
     {
@@ -7558,6 +7558,167 @@
         "Copic Milos",
         "class of 2026",
         "grad 2026"
+      ]
+    },
+    {
+      "id": "baseball-athlete-200806",
+      "type": "athlete",
+      "title": "Jon Hope",
+      "subtitle": "Baseball athlete - Class of 2009",
+      "to": "/athletics/boys/baseball/players/200806",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Jon",
+        "Hope",
+        "Hope Jon",
+        "class of 2009",
+        "grad 2009"
+      ]
+    },
+    {
+      "id": "baseball-athlete-200809",
+      "type": "athlete",
+      "title": "Jim Kingston",
+      "subtitle": "Baseball athlete - Class of 2009",
+      "to": "/athletics/boys/baseball/players/200809",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Jim",
+        "Kingston",
+        "Kingston Jim",
+        "class of 2009",
+        "grad 2009"
+      ]
+    },
+    {
+      "id": "baseball-athlete-200813",
+      "type": "athlete",
+      "title": "Dom DeMasi",
+      "subtitle": "Baseball athlete",
+      "to": "/athletics/boys/baseball/players/200813",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Dom",
+        "DeMasi",
+        "DeMasi Dom"
+      ]
+    },
+    {
+      "id": "baseball-athlete-200814",
+      "type": "athlete",
+      "title": "Matt Landfried",
+      "subtitle": "Baseball athlete",
+      "to": "/athletics/boys/baseball/players/200814",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Matt",
+        "Landfried",
+        "Landfried Matt"
+      ]
+    },
+    {
+      "id": "baseball-athlete-200815",
+      "type": "athlete",
+      "title": "Rob Cantrell",
+      "subtitle": "Baseball athlete",
+      "to": "/athletics/boys/baseball/players/200815",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Rob",
+        "Cantrell",
+        "Cantrell Rob"
+      ]
+    },
+    {
+      "id": "baseball-athlete-200816",
+      "type": "athlete",
+      "title": "Matt Cantrell",
+      "subtitle": "Baseball athlete",
+      "to": "/athletics/boys/baseball/players/200816",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Matt",
+        "Cantrell",
+        "Cantrell Matt"
+      ]
+    },
+    {
+      "id": "baseball-athlete-200817",
+      "type": "athlete",
+      "title": "Casey Kirkconnell",
+      "subtitle": "Baseball athlete",
+      "to": "/athletics/boys/baseball/players/200817",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Casey",
+        "Kirkconnell",
+        "Kirkconnell Casey"
+      ]
+    },
+    {
+      "id": "baseball-athlete-200901",
+      "type": "athlete",
+      "title": "Manning Bath",
+      "subtitle": "Baseball athlete - Class of 2012",
+      "to": "/athletics/boys/baseball/players/200901",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Manning",
+        "Bath",
+        "Bath Manning",
+        "class of 2012",
+        "grad 2012"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2026176",
+      "type": "athlete",
+      "title": "Elliot McElhanon",
+      "subtitle": "Baseball athlete - Class of 2010",
+      "to": "/athletics/boys/baseball/players/2026176",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Elliot",
+        "McElhanon",
+        "McElhanon Elliot",
+        "class of 2010",
+        "grad 2010"
       ]
     },
     {
@@ -19503,7 +19664,7 @@
     {
       "id": "boys-soccer-athlete-200307",
       "type": "athlete",
-      "title": "Omer Glenn",
+      "title": "Omar Glenn",
       "subtitle": "Boys Soccer athlete",
       "to": "/athletics/boys/soccer/players/200307",
       "keywords": [
@@ -19512,9 +19673,9 @@
         "player",
         "stats",
         "records",
-        "Omer",
+        "Omar",
         "Glenn",
-        "Glenn Omer"
+        "Glenn Omar"
       ]
     },
     {
@@ -24494,56 +24655,19 @@
       ]
     },
     {
-      "id": "baseball-team-thomas-heyward-academy",
+      "id": "baseball-team-ridgeland-high-school",
       "type": "team",
-      "title": "Thomas Heyward Academy",
-      "subtitle": "Baseball opponent history - Ridgeland, SC",
-      "to": "/athletics/boys/baseball/records/opponents?team=Thomas+Heyward+Academy",
+      "title": "Ridgeland High School",
+      "subtitle": "Baseball opponent history - Rossville, GA",
+      "to": "/athletics/boys/baseball/records/opponents?team=Ridgeland+High+School",
       "keywords": [
         "Baseball",
         "team",
         "opponent",
         "history",
         "records",
-        "Thomas Heyward Academy",
-        "Ridgeland",
-        "SC"
-      ]
-    },
-    {
-      "id": "baseball-team-hilton-head-christian-academy",
-      "type": "team",
-      "title": "Hilton Head Christian Academy",
-      "subtitle": "Baseball opponent history - Hilton Head Island, SC",
-      "to": "/athletics/boys/baseball/records/opponents?team=Hilton+Head+Christian+Academy",
-      "keywords": [
-        "Baseball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Hilton Head Christian Academy",
-        "Eagles",
-        "Hilton Head Island",
-        "SC"
-      ]
-    },
-    {
-      "id": "baseball-team-frederica-academy",
-      "type": "team",
-      "title": "Frederica Academy",
-      "subtitle": "Baseball opponent history - St. Simons Island, GA",
-      "to": "/athletics/boys/baseball/records/opponents?team=Frederica+Academy",
-      "keywords": [
-        "Baseball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Frederica Academy",
-        "Frederica",
-        "Knights",
-        "St. Simons Island",
+        "Ridgeland High School",
+        "Rossville",
         "GA"
       ]
     },
@@ -24567,23 +24691,6 @@
       ]
     },
     {
-      "id": "baseball-team-cathedral-academy",
-      "type": "team",
-      "title": "Cathedral Academy",
-      "subtitle": "Baseball opponent history - North Charleston, SC",
-      "to": "/athletics/boys/baseball/records/opponents?team=Cathedral+Academy",
-      "keywords": [
-        "Baseball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Cathedral Academy",
-        "North Charleston",
-        "SC"
-      ]
-    },
-    {
       "id": "baseball-team-bible-baptist-school",
       "type": "team",
       "title": "Bible Baptist School",
@@ -24600,6 +24707,23 @@
         "Braves",
         "Savannah",
         "GA"
+      ]
+    },
+    {
+      "id": "baseball-team-thomas-heyward-academy",
+      "type": "team",
+      "title": "Thomas Heyward Academy",
+      "subtitle": "Baseball opponent history - Ridgeland, SC",
+      "to": "/athletics/boys/baseball/records/opponents?team=Thomas+Heyward+Academy",
+      "keywords": [
+        "Baseball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Thomas Heyward Academy",
+        "Ridgeland",
+        "SC"
       ]
     },
     {
@@ -24656,6 +24780,25 @@
       ]
     },
     {
+      "id": "baseball-team-frederica-academy",
+      "type": "team",
+      "title": "Frederica Academy",
+      "subtitle": "Baseball opponent history - St. Simons Island, GA",
+      "to": "/athletics/boys/baseball/records/opponents?team=Frederica+Academy",
+      "keywords": [
+        "Baseball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Frederica Academy",
+        "Frederica",
+        "Knights",
+        "St. Simons Island",
+        "GA"
+      ]
+    },
+    {
       "id": "baseball-team-robert-toombs-christian-academy",
       "type": "team",
       "title": "Robert Toombs Christian Academy",
@@ -24694,6 +24837,24 @@
       ]
     },
     {
+      "id": "baseball-team-hilton-head-christian-academy",
+      "type": "team",
+      "title": "Hilton Head Christian Academy",
+      "subtitle": "Baseball opponent history - Hilton Head Island, SC",
+      "to": "/athletics/boys/baseball/records/opponents?team=Hilton+Head+Christian+Academy",
+      "keywords": [
+        "Baseball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Hilton Head Christian Academy",
+        "Eagles",
+        "Hilton Head Island",
+        "SC"
+      ]
+    },
+    {
       "id": "baseball-team-memorial-day-school",
       "type": "team",
       "title": "Memorial Day School",
@@ -24710,6 +24871,40 @@
         "Matadors",
         "Savannah",
         "GA"
+      ]
+    },
+    {
+      "id": "baseball-team-cathedral-academy",
+      "type": "team",
+      "title": "Cathedral Academy",
+      "subtitle": "Baseball opponent history - North Charleston, SC",
+      "to": "/athletics/boys/baseball/records/opponents?team=Cathedral+Academy",
+      "keywords": [
+        "Baseball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Cathedral Academy",
+        "North Charleston",
+        "SC"
+      ]
+    },
+    {
+      "id": "baseball-team-carolina-academy",
+      "type": "team",
+      "title": "Carolina Academy",
+      "subtitle": "Baseball opponent history - Lake City, SC",
+      "to": "/athletics/boys/baseball/records/opponents?team=Carolina+Academy",
+      "keywords": [
+        "Baseball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Carolina Academy",
+        "Lake City",
+        "SC"
       ]
     },
     {
@@ -24779,23 +24974,6 @@
         "Dixie High School",
         "New Lebanon",
         "OH"
-      ]
-    },
-    {
-      "id": "baseball-team-ridgeland-high-school",
-      "type": "team",
-      "title": "Ridgeland High School",
-      "subtitle": "Baseball opponent history - Rossville, GA",
-      "to": "/athletics/boys/baseball/records/opponents?team=Ridgeland+High+School",
-      "keywords": [
-        "Baseball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Ridgeland High School",
-        "Rossville",
-        "GA"
       ]
     },
     {
