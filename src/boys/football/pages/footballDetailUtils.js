@@ -176,7 +176,16 @@ export function resolvePlayerCareerKey(data, playerId) {
   if (seasonRow?.CareerKey) return String(seasonRow.CareerKey);
 
   const careerRow = (data?.playerCareers || []).find((row) => String(row?.PlayerID || "") === id);
-  return String(careerRow?.CareerKey || "");
+  if (careerRow?.CareerKey) return String(careerRow.CareerKey);
+
+  for (const roster of data?.rosters || []) {
+    const rosterPlayer = (roster?.Players || []).find(
+      (entry) => String(entry?.PlayerID || "") === id
+    );
+    if (rosterPlayer) return getPlayerCareerKey(rosterPlayer);
+  }
+
+  return "";
 }
 
 export function getRelatedPlayersForCareer(data, careerKey) {

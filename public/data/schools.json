@@ -2099,7 +2099,9 @@
     "Name": "Williamsburg Academy",
     "City": "Kingstree",
     "State": "SC",
-    "Mascot": "Stallions"
+    "Mascot": "Stallions",
+    "LogoPath": "/images/schools/logos/sc-williamsburg-academy-kingstree.png",
+    "LogoSourceUrl": "https://image.maxpreps.io/school-mascot/c/9/f/c9fcf50c-2b2f-4c2a-bc38-7d58a902c8e9.gif?version=637045863000000000&width=1024&height=1024"
   },
   {
     "SchoolID": "tn-brentwood-high-school-brentwood",

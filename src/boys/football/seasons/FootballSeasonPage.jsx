@@ -896,25 +896,207 @@ function getSeasonRecapParagraphs(season) {
   return recap.split(/\n{2,}/).map((paragraph) => paragraph.trim()).filter(Boolean);
 }
 
+function getSeasonRecapMedia(season) {
+  const media = season?.SeasonRecapMedia;
+  if (!Array.isArray(media)) return [];
+
+  return media.filter((item) => String(item?.src || "").trim());
+}
+
 function SeasonRecapSection({ season }) {
   const paragraphs = getSeasonRecapParagraphs(season);
   if (!paragraphs.length) return null;
 
   const title = String(season?.SeasonRecapTitle || "").trim() || "Season Recap";
   const sourceCitation = String(season?.SeasonRecapSourceCitation || "").trim();
+  const record =
+    season?.OverallRecord ||
+    formatRecord(season?.OverallWins, season?.OverallLosses, season?.OverallTies);
+  const coach = season?.HeadCoach || "—";
+  const finish = season?.StateFinish || season?.SeasonResult || season?.RegionFinish || "—";
 
   return (
-    <section id="season-recap" className="mx-auto max-w-4xl space-y-4">
+    <section id="season-recap" className="mx-auto max-w-4xl space-y-3">
       <h2 className="text-2xl font-semibold">{title}</h2>
-      <div className="space-y-4 text-base leading-7 text-slate-700">
-        {paragraphs.map((paragraph) => (
-          <p key={paragraph}>{paragraph}</p>
-        ))}
+      <div className="flow-root text-base leading-7 text-slate-700">
+        <dl className="mb-4 grid grid-cols-3 gap-3 text-center md:float-right md:mb-3 md:ml-6 md:w-64 md:grid-cols-1">
+          <div className="rounded-lg border border-gray-200 px-3 py-2">
+            <dt className="text-xs font-semibold uppercase tracking-wide text-gray-500">Record</dt>
+            <dd className="text-xl font-bold text-gray-900">{record}</dd>
+          </div>
+          <div className="rounded-lg border border-gray-200 px-3 py-2">
+            <dt className="text-xs font-semibold uppercase tracking-wide text-gray-500">Coach</dt>
+            <dd className="text-lg font-semibold text-gray-900">{coach}</dd>
+          </div>
+          <div className="rounded-lg border border-gray-200 px-3 py-2">
+            <dt className="text-xs font-semibold uppercase tracking-wide text-gray-500">Finish</dt>
+            <dd className="text-lg font-semibold text-gray-900">{finish}</dd>
+          </div>
+        </dl>
+
+        <div className="space-y-3">
+          {paragraphs.map((paragraph) => (
+            <p key={paragraph}>
+              {paragraph}
+            </p>
+          ))}
+        </div>
       </div>
       {sourceCitation ? (
         <p className="text-sm leading-6 text-slate-500">Source: {sourceCitation}</p>
       ) : null}
     </section>
+  );
+}
+
+function SeasonImagesSection({ season }) {
+  const images = getSeasonRecapMedia(season);
+  const [imageIndex, setImageIndex] = useState(0);
+
+  useEffect(() => {
+    setImageIndex(0);
+  }, [season?.SeasonID]);
+
+  if (!images.length) return null;
+
+  const selectedImage = images[imageIndex] || images[0];
+  const selectedCaption = String(selectedImage?.caption || "").trim();
+  const currentImageNumber = Math.min(imageIndex + 1, images.length);
+  const goPrev = () => setImageIndex((index) => (index - 1 + images.length) % images.length);
+  const goNext = () => setImageIndex((index) => (index + 1) % images.length);
+
+  return (
+    <section className="space-y-3">
+      <h2 className="text-2xl font-semibold">Season Images</h2>
+
+      <div className="overflow-hidden rounded-lg border border-gray-200 bg-white">
+        <div className="relative bg-gray-50">
+          <img
+            src={selectedImage.src}
+            alt={selectedImage.alt || ""}
+            className="w-full max-h-[620px] object-contain"
+            loading="lazy"
+          />
+
+          {images.length > 1 ? (
+            <>
+              <button
+                type="button"
+                onClick={goPrev}
+                className="absolute left-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200 bg-white/90 shadow hover:bg-white"
+                aria-label="Previous image"
+                title="Previous"
+              >
+                {"<"}
+              </button>
+
+              <button
+                type="button"
+                onClick={goNext}
+                className="absolute right-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200 bg-white/90 shadow hover:bg-white"
+                aria-label="Next image"
+                title="Next"
+              >
+                {">"}
+              </button>
+
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-black/65 px-3 py-1 text-xs text-white">
+                {currentImageNumber} / {images.length}
+              </div>
+            </>
+          ) : null}
+        </div>
+
+        <div className="border-t border-gray-200 bg-white px-4 py-3">
+          <div className="mb-3 flex items-center justify-between gap-3">
+            <p className="text-sm font-medium text-gray-900">{selectedCaption}</p>
+            <p className="text-xs text-gray-500">
+              Image {currentImageNumber} of {images.length}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-4 gap-2 sm:grid-cols-6 md:grid-cols-7">
+            {images.map((image, index) => (
+              <button
+                key={image.src}
+                type="button"
+                onClick={() => setImageIndex(index)}
+                className={`aspect-square overflow-hidden rounded-md border bg-gray-50 ${
+                  index === imageIndex
+                    ? "border-gray-900 ring-2 ring-gray-900"
+                    : "border-gray-200 hover:border-gray-500"
+                }`}
+                aria-label={`Go to image ${index + 1}`}
+                title={image.caption || image.alt || `Image ${index + 1}`}
+              >
+                <img src={image.src} alt="" className="h-full w-full object-cover" loading="lazy" />
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function FootballRosterTable({ rosterRows, emptyStateClassName }) {
+  return (
+    <table className="w-full table-auto border text-center text-sm">
+      <thead className="bg-gray-200 font-bold">
+        <tr>
+          <th className={`${recordTableStyles.headerCell} whitespace-nowrap`}>No.</th>
+          <th className={`${recordTableStyles.headerCell} md:text-left`}>Player</th>
+          <th className={`${recordTableStyles.headerCell} whitespace-nowrap`}>Grade</th>
+          <th className={`${recordTableStyles.headerCell} md:text-left`}>Pos.</th>
+        </tr>
+      </thead>
+      <tbody>
+        {rosterRows.length === 0 ? (
+          <tr>
+            <td className={emptyStateClassName} colSpan={4}>
+              No roster data is available for this season yet.
+            </td>
+          </tr>
+        ) : (
+          rosterRows.map((player) => (
+            <tr
+              key={player.PlayerID || player.RowID || player.PlayerName}
+              className={player.RowType === "staff" ? "bg-gray-50" : ""}
+            >
+              <td className={`${recordTableStyles.bodyCell} whitespace-nowrap`}>
+                {player.JerseyNumber || "—"}
+              </td>
+              <td className={`${recordTableStyles.bodyCell} md:text-left`}>
+                {player.PlayerID ? (
+                  <Link
+                    to={footballPlayerPath(player.PlayerID)}
+                    className="text-blue-600 hover:underline"
+                  >
+                    {player.PlayerName || "—"}
+                  </Link>
+                ) : (
+                  player.PlayerName || "—"
+                )}
+                {(player.Distinctions || []).length > 0 ? (
+                  <>
+                    {" "}
+                    <span className="text-slate-600">
+                      ({player.Distinctions.join("; ")})
+                    </span>
+                  </>
+                ) : null}
+              </td>
+              <td className={`${recordTableStyles.bodyCell} whitespace-nowrap`}>
+                {player.Grade || "—"}
+              </td>
+              <td className={`${recordTableStyles.bodyCell} md:text-left`}>
+                {(player.Positions || []).join(", ") || "—"}
+              </td>
+            </tr>
+          ))
+        )}
+      </tbody>
+    </table>
   );
 }
 
@@ -1154,6 +1336,38 @@ export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
         return String(a.PlayerName || "").localeCompare(String(b.PlayerName || ""));
       });
   }, [playerMap, rosterSeason]);
+
+  const staffRows = useMemo(() => {
+    const entries = Array.isArray(rosterSeason?.Staff) ? rosterSeason.Staff : [];
+
+    return entries
+      .map((entry, index) => {
+        const name = String(entry?.Name || "").trim();
+        const position = String(entry?.Position || "").trim();
+        if (!name && !position) return null;
+
+        return {
+          RowID: `staff-${index}-${name || position}`,
+          RowType: "staff",
+          JerseyNumber: null,
+          Grade: null,
+          Positions: position ? [position] : [],
+          PlayerName: name || "—",
+          Distinctions: [],
+        };
+      })
+      .filter(Boolean);
+  }, [rosterSeason]);
+
+  const rosterTableRows = useMemo(
+    () => [...rosterRows, ...staffRows],
+    [rosterRows, staffRows]
+  );
+
+  const desktopRosterColumns = useMemo(() => {
+    const midpoint = Math.ceil(rosterTableRows.length / 2);
+    return [rosterTableRows.slice(0, midpoint), rosterTableRows.slice(midpoint)];
+  }, [rosterTableRows]);
 
   const rosterByPlayerId = useMemo(() => {
     const map = new Map();
@@ -1596,6 +1810,7 @@ export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
       </section>
 
       <SeasonRecapSection season={season} />
+      <SeasonImagesSection season={season} />
 
       {regionStandings ? (
         <section id="region-standings" className="space-y-4">
@@ -1607,61 +1822,35 @@ export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
       <section id="roster" className="space-y-4">
         <h2 className="text-2xl font-semibold">Roster</h2>
 
-        <div className="overflow-x-auto">
-          <table className="w-full table-auto border text-center text-sm">
-            <thead className="bg-gray-200 font-bold">
-              <tr>
-                <th className={`${recordTableStyles.headerCell} whitespace-nowrap`}>No.</th>
-                <th className={`${recordTableStyles.headerCell} md:text-left`}>Player</th>
-                <th className={`${recordTableStyles.headerCell} whitespace-nowrap`}>Grade</th>
-                <th className={`${recordTableStyles.headerCell} md:text-left`}>Pos.</th>
-              </tr>
-            </thead>
-            <tbody>
-              {rosterRows.length === 0 ? (
-                <tr>
-                  <td className={emptyStateClassName} colSpan={4}>
-                    No roster data is available for this season yet.
-                  </td>
-                </tr>
-              ) : (
-                rosterRows.map((player) => (
-                  <tr key={player.PlayerID}>
-                    <td className={`${recordTableStyles.bodyCell} whitespace-nowrap`}>
-                      {player.JerseyNumber || "—"}
-                    </td>
-                    <td className={`${recordTableStyles.bodyCell} md:text-left`}>
-                      {player.PlayerID ? (
-                        <Link
-                          to={footballPlayerPath(player.PlayerID)}
-                          className="text-blue-600 hover:underline"
-                        >
-                          {player.PlayerName || "—"}
-                        </Link>
-                      ) : (
-                        player.PlayerName || "—"
-                      )}
-                      {(player.Distinctions || []).length > 0 ? (
-                        <>
-                          {" "}
-                          <span className="text-slate-600">
-                            ({player.Distinctions.join("; ")})
-                          </span>
-                        </>
-                      ) : null}
-                    </td>
-                    <td className={`${recordTableStyles.bodyCell} whitespace-nowrap`}>
-                      {player.Grade || "—"}
-                    </td>
-                    <td className={`${recordTableStyles.bodyCell} md:text-left`}>
-                      {(player.Positions || []).join(", ") || "—"}
-                    </td>
-                  </tr>
-                ))
+        {rosterTableRows.length === 0 ? (
+          <div className="overflow-x-auto">
+            <FootballRosterTable
+              rosterRows={rosterTableRows}
+              emptyStateClassName={emptyStateClassName}
+            />
+          </div>
+        ) : (
+          <>
+            <div className="overflow-x-auto lg:hidden">
+              <FootballRosterTable
+                rosterRows={rosterTableRows}
+                emptyStateClassName={emptyStateClassName}
+              />
+            </div>
+            <div className="hidden gap-5 lg:grid lg:grid-cols-2">
+              {desktopRosterColumns.map((columnRows, index) =>
+                columnRows.length ? (
+                  <div key={index} className="overflow-x-auto">
+                    <FootballRosterTable
+                      rosterRows={columnRows}
+                      emptyStateClassName={emptyStateClassName}
+                    />
+                  </div>
+                ) : null
               )}
-            </tbody>
-          </table>
-        </div>
+            </div>
+          </>
+        )}
       </section>
 
       <section id="schedule-results" className="space-y-4">
