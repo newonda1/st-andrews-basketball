@@ -296,6 +296,34 @@ function formatFootballGameType(game) {
   return game?.GameType || "—";
 }
 
+function getSeasonRecapParagraphs(season) {
+  const recap = String(season?.SeasonRecap || "").trim();
+  if (!recap) return [];
+  return recap.split(/\n{2,}/).map((paragraph) => paragraph.trim()).filter(Boolean);
+}
+
+function SeasonRecapSection({ season }) {
+  const paragraphs = getSeasonRecapParagraphs(season);
+  if (!paragraphs.length) return null;
+
+  const title = String(season?.SeasonRecapTitle || "").trim() || "Season Recap";
+  const sourceCitation = String(season?.SeasonRecapSourceCitation || "").trim();
+
+  return (
+    <section id="season-recap" className="mx-auto max-w-4xl space-y-4">
+      <h2 className="text-2xl font-semibold">{title}</h2>
+      <div className="space-y-4 text-base leading-7 text-slate-700">
+        {paragraphs.map((paragraph) => (
+          <p key={paragraph}>{paragraph}</p>
+        ))}
+      </div>
+      {sourceCitation ? (
+        <p className="text-sm leading-6 text-slate-500">Source: {sourceCitation}</p>
+      ) : null}
+    </section>
+  );
+}
+
 function RegionStandingsTable({ standings, schoolsById }) {
   const regions = getStandingsRegions(standings);
   if (!regions.length) return null;
@@ -698,17 +726,12 @@ export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
         <h1 className="text-3xl font-bold">{seasonLabel} Season</h1>
       </section>
 
+      <SeasonRecapSection season={season} />
+
       {regionStandings ? (
         <section id="region-standings" className="space-y-4">
           <h2 className="text-2xl font-semibold">Region Standings</h2>
           <RegionStandingsTable standings={regionStandings} schoolsById={schoolsById} />
-        </section>
-      ) : null}
-
-      {playoffBracket ? (
-        <section id="state-playoff-bracket" className="space-y-4">
-          <h2 className="text-2xl font-semibold">State Playoff Bracket</h2>
-          <StateBracket8GameSVG bracket={playoffBracket} schools={schools} />
         </section>
       ) : null}
 
@@ -867,6 +890,13 @@ export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
           </table>
         </div>
       </section>
+
+      {playoffBracket ? (
+        <section id="state-playoff-bracket" className="space-y-4">
+          <h2 className="text-2xl font-semibold">State Playoff Bracket</h2>
+          <StateBracket8GameSVG bracket={playoffBracket} schools={schools} />
+        </section>
+      ) : null}
 
       <section id="team-stats" className="space-y-6">
         <h2 className="text-2xl font-semibold">Team Stats</h2>

@@ -105,7 +105,9 @@
     "City": "Augusta",
     "State": "GA",
     "ShortName": "Augusta Prep",
-    "Mascot": "Cavaliers"
+    "Mascot": "Cavaliers",
+    "LogoPath": "/images/schools/logos/ga-augusta-preparatory-day-school-augusta.png",
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_AugustaPrep_Logo.png"
   },
   {
     "SchoolID": "ga-beach-high-school-savannah",
@@ -144,7 +146,7 @@
     "WebsiteUrl": "https://www.bethlehemchristianacademy.org/",
     "AthleticsUrl": "https://www.bethlehemchristianacademy.org/athletics",
     "LogoPath": "/images/schools/logos/ga-bethlehem-christian-academy-bethlehem.png",
-    "LogoSourceUrl": "https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_3/v1752510659/bethlehemchristianacademyorg/iafskdlqdmlpjxxcngd3/2025-2026BoosterBrochureCover.png"
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2024/08/GIAA_BethlehemChristian_Logo.png"
   },
   {
     "SchoolID": "ga-bible-baptist-christian-school-hampton",
@@ -174,14 +176,18 @@
     "City": "Sandersville",
     "State": "GA",
     "ShortName": "Brentwood",
-    "Mascot": "War Eagles"
+    "Mascot": "War Eagles",
+    "LogoPath": "/images/schools/logos/ga-brentwood-school-sandersville.png",
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_Brentwood_Logo.png"
   },
   {
     "SchoolID": "ga-briarwood-academy-warrenton",
     "Name": "Briarwood Academy",
     "City": "Warrenton",
     "State": "GA",
-    "Mascot": "Buccaneers"
+    "Mascot": "Buccaneers",
+    "LogoPath": "/images/schools/logos/ga-briarwood-academy-warrenton.png",
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2024/08/GIAA_Briarwood_Logo.png"
   },
   {
     "SchoolID": "ga-brookwood-academy-thomasville",
@@ -196,8 +202,8 @@
     "AthleticsUrl": "https://www.brookwoodschool.org/athletics",
     "LogoPath": "/images/schools/logos/ga-brookwood-academy-thomasville.png",
     "BracketLogoPath": "/images/schools/logos/ga-brookwood-academy-thomasville-bracket.png",
-    "BracketLogoSourceUrl": "https://bbk12e1-cdn.myschoolcdn.com/ftpimages/1041/logo/BWS_Athletic_Warrior_3color.png",
-    "LogoSourceUrl": "https://bbk12e1-cdn.myschoolcdn.com/ftpimages/1041/logo/BW-White-on-Blue-Updated-600.png"
+    "BracketLogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_BrookwoodSchool_Logo.png",
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_BrookwoodSchool_Logo.png"
   },
   {
     "SchoolID": "ga-brunswick-brunswick",
@@ -218,7 +224,7 @@
     "WebsiteUrl": "https://www.bullochacademy.com/",
     "AthleticsUrl": "https://www.bullochacademy.com/athletics",
     "LogoPath": "/images/schools/logos/ga-bulloch-academy-statesboro.png",
-    "LogoSourceUrl": "https://resources.finalsite.net/images/f_auto,q_auto/v1741957688/bullochacademycom/mlcvs5ppkqwrowalxa0o/BullochAcademySecondaryLogoImage.png"
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_BullochAcademy_Logo.png"
   },
   {
     "SchoolID": "ga-burke-county-high-school-waynesboro",
@@ -255,7 +261,9 @@
     "Name": "Central Fellowship Christian Academy",
     "City": "Macon",
     "State": "GA",
-    "Mascot": "Lancers"
+    "Mascot": "Lancers",
+    "LogoPath": "/images/schools/logos/ga-central-fellowship-christian-academy-macon.png",
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_CentralFellowshipChristian_Logo.png"
   },
   {
     "SchoolID": "ga-charlton-county-folkston",
@@ -274,7 +282,9 @@
     "SchoolID": "ga-citizens-christian-academy-douglas",
     "Name": "Citizens Christian Academy",
     "City": "Douglas",
-    "State": "GA"
+    "State": "GA",
+    "LogoPath": "/images/schools/logos/ga-citizens-christian-academy-douglas.png",
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_CitizensChristian_Logo.png"
   },
   {
     "SchoolID": "ga-coastal-homeschool-pembroke",
@@ -300,7 +310,9 @@
     "SchoolID": "ga-crisp-academy-cordele",
     "Name": "Crisp Academy",
     "City": "Cordele",
-    "State": "GA"
+    "State": "GA",
+    "LogoPath": "/images/schools/logos/ga-crisp-academy-cordele.png",
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_CrispAcademy_Logo.png"
   },
   {
     "SchoolID": "ga-cristo-rey-atlanta-jesuit-high-school-atlanta",
@@ -314,7 +326,7 @@
     "WebsiteUrl": "https://www.cristoreyatlanta.org/",
     "AthleticsUrl": "https://www.cristoreyatlanta.org/athletics/flames-athletics",
     "LogoPath": "/images/schools/logos/ga-cristo-rey-atlanta-jesuit-high-school-atlanta.png",
-    "LogoSourceUrl": "https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_2/v1679505166/cristoreyatlantaorg/psk0udhjeo8omquwm0er/FlamesCR_primary_C.png"
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_CristoReyATL_Logo.png"
   },
   {
     "SchoolID": "ga-cross-keys-christian-academy-macon",
@@ -332,7 +344,9 @@
     "SchoolID": "ga-david-emanuel-academy-stillmore",
     "Name": "David Emanuel Academy",
     "City": "Stillmore",
-    "State": "GA"
+    "State": "GA",
+    "LogoPath": "/images/schools/logos/ga-david-emanuel-academy-stillmore.png",
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_DavidEmanuel_Logo.png"
   },
   {
     "SchoolID": "ga-deerfield-windsor-school-albany",
@@ -347,8 +361,8 @@
     "AthleticsUrl": "https://www.deerfieldwindsor.com/athletics",
     "LogoPath": "/images/schools/logos/ga-deerfield-windsor-school-albany.png",
     "BracketLogoPath": "/images/schools/logos/ga-deerfield-windsor-school-albany-bracket.png",
-    "BracketLogoSourceUrl": "https://www.deerfieldwindsor.com/uploaded/favicon.ico",
-    "LogoSourceUrl": "https://resources.finalsite.net/images/f_auto,q_auto/v1597074902/deerfieldwindsor/np8iozok3p1xwyjaza2c/DWSforWebsitewhitebkgd.png"
+    "BracketLogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_DeerfieldWindsor_Logo.png",
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_DeerfieldWindsor_Logo.png"
   },
   {
     "SchoolID": "ga-derenne-christian-savannah",
@@ -369,21 +383,25 @@
     "AthleticsUrl": "https://dominionchristian.org/athletics",
     "LogoPath": "/images/schools/logos/ga-dominion-christian-academy-marietta.png",
     "BracketLogoPath": "/images/schools/logos/ga-dominion-christian-academy-marietta-bracket.png",
-    "BracketLogoSourceUrl": "https://dominionchristian.org/wp-content/uploads/2019/03/dcs-logo-small.png",
-    "LogoSourceUrl": "https://dominionchristian.org/wp-content/uploads/2019/03/dcs-logo-small.png"
+    "BracketLogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_DominionChristian_Logo.png",
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_DominionChristian_Logo.png"
   },
   {
     "SchoolID": "ga-dominion-christian-marietta",
     "Name": "Dominion Christian",
     "City": "Marietta",
     "State": "GA",
-    "Mascot": "Knights"
+    "Mascot": "Knights",
+    "LogoPath": "/images/schools/logos/ga-dominion-christian-academy-marietta.png",
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_DominionChristian_Logo.png"
   },
   {
     "SchoolID": "ga-edmund-burke-academy-waynesboro",
     "Name": "Edmund Burke Academy",
     "City": "Waynesboro",
-    "State": "GA"
+    "State": "GA",
+    "LogoPath": "/images/schools/logos/ga-edmund-burke-academy-waynesboro.png",
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_EdmundBurke_Logo.png"
   },
   {
     "SchoolID": "ga-effingham-academy-springfield",
@@ -430,13 +448,15 @@
     "WebsiteUrl": "https://fpcahinesville.com/",
     "AthleticsUrl": "https://fpcahinesville.com/athletics/",
     "LogoPath": "/images/schools/logos/ga-first-preparatory-christian-academy-hinesville.png",
-    "LogoSourceUrl": "https://fpcahinesville.com/wp-content/uploads/2022/02/FP-Sword-Original-V4-200.png"
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_FirstPrepatoryChristian_Logo.png"
   },
   {
     "SchoolID": "ga-first-presbyterian-day-school-macon",
     "Name": "First Presbyterian Day School",
     "City": "Macon",
-    "State": "GA"
+    "State": "GA",
+    "LogoPath": "/images/schools/logos/ga-first-presbyterian-day-school-macon.png",
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_FirstPresbyterianDay_Logo.png"
   },
   {
     "SchoolID": "ga-frederica-academy-st-simons-island",
@@ -449,14 +469,16 @@
     "SecondaryColor": "#F7BC60",
     "WebsiteUrl": "https://www.fredericaacademy.org/",
     "AthleticsUrl": "https://www.fredericaacademy.org/athletics",
-    "LogoPath": "/images/schools/logos/ga-frederica-academy-st-simons-island.svg",
-    "LogoSourceUrl": "https://resources.finalsite.net/images/v1695336904/fredericaacademyorg/o2ajohyrpzjgc2vc7mgo/FA-logo.svg"
+    "LogoPath": "/images/schools/logos/ga-frederica-academy-st-simons-island.png",
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_FredericaAcademy_Logo.png"
   },
   {
     "SchoolID": "ga-fullington-academy-pinehurst",
     "Name": "Fullington Academy",
     "City": "Pinehurst",
-    "State": "GA"
+    "State": "GA",
+    "LogoPath": "/images/schools/logos/ga-fullington-academy-pinehurst.png",
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_FullingtonAcademy_Logo.png"
   },
   {
     "SchoolID": "ga-furtah-preparatory-school-acworth",
@@ -476,19 +498,25 @@
     "SchoolID": "ga-gatewood-schools-eatonton",
     "Name": "Gatewood Schools",
     "City": "Eatonton",
-    "State": "GA"
+    "State": "GA",
+    "LogoPath": "/images/schools/logos/ga-gatewood-schools-eatonton.png",
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_Gatewood_Logo.png"
   },
   {
     "SchoolID": "ga-george-walton-academy-monroe",
     "Name": "George Walton Academy",
     "City": "Monroe",
-    "State": "GA"
+    "State": "GA",
+    "LogoPath": "/images/schools/logos/ga-george-walton-academy-monroe.png",
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_GeorgeWalton_Logo.png"
   },
   {
     "SchoolID": "ga-georgia-christian-school-valdosta",
     "Name": "Georgia Christian School",
     "City": "Valdosta",
-    "State": "GA"
+    "State": "GA",
+    "LogoPath": "/images/schools/logos/ga-georgia-christian-school-valdosta.png",
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_GeorgiaChristian_Logo.png"
   },
   {
     "SchoolID": "ga-glynn-academy-brunswick",
@@ -576,7 +604,7 @@
     "WebsiteUrl": "https://holyspiritprep.org/",
     "AthleticsUrl": "https://holyspiritprep.org/athletics/",
     "LogoPath": "/images/schools/logos/ga-holy-spirit-preparatory-school-atlanta.png",
-    "LogoSourceUrl": "https://holyspiritprep.org/wp-content/uploads/2022/08/Booster-Club-Logo-No-Year.png"
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_HolySpiritPrep_Logo.png"
   },
   {
     "SchoolID": "ga-islands-high-school-savannah",
@@ -615,9 +643,10 @@
     "SecondaryColor": "#C41230",
     "WebsiteUrl": "https://www.johnmilledge.org/",
     "AthleticsUrl": "https://www.johnmilledge.org/athletics",
-    "LogoPath": "/images/schools/logos/ga-john-milledge-academy-milledgeville.webp",
+    "LogoPath": "/images/schools/logos/ga-john-milledge-academy-milledgeville.png",
     "BracketLogoPath": "/images/schools/logos/ga-john-milledge-academy-milledgeville-bracket.png",
-    "LogoSourceUrl": "https://www.johnmilledge.org/wp-content/uploads/2020/10/JM-logo-new.png_pp.webp"
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_JohnMilledge_Logo.png",
+    "BracketLogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_JohnMilledge_Logo.png"
   },
   {
     "SchoolID": "ga-johnson-high-school-savannah",
@@ -648,7 +677,9 @@
     "SchoolID": "ga-lagrange-academy-lagrange",
     "Name": "LaGrange Academy",
     "City": "LaGrange",
-    "State": "GA"
+    "State": "GA",
+    "LogoPath": "/images/schools/logos/ga-lagrange-academy-lagrange.png",
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_LaGrangeAcademy_Logo.png"
   },
   {
     "SchoolID": "ga-lakeview-academy-gainesville",
@@ -663,8 +694,8 @@
     "AthleticsUrl": "https://www.lakeviewacademy.com/athletics",
     "LogoPath": "/images/schools/logos/ga-lakeview-academy-gainesville.png",
     "BracketLogoPath": "/images/schools/logos/ga-lakeview-academy-gainesville-bracket.png",
-    "BracketLogoSourceUrl": "https://bbk12e1-cdn.myschoolcdn.com/ftpimages/259/link/large_link4966092_180376.png",
-    "LogoSourceUrl": "https://bbk12e1-cdn.myschoolcdn.com/ftpimages/259/logo/2023%20Crest%20with%20Stacked%20Logo%20on%20Transparent-More%20Bold.png"
+    "BracketLogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_LakeviewAcademy_Logo.png",
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_LakeviewAcademy_Logo.png"
   },
   {
     "SchoolID": "ga-lanier-sugar-hill",
@@ -691,7 +722,9 @@
     "Name": "Loganville Christian Academy",
     "City": "Loganville",
     "State": "GA",
-    "Mascot": "Lions"
+    "Mascot": "Lions",
+    "LogoPath": "/images/schools/logos/ga-loganville-christian-academy-loganville.png",
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2024/08/GIAA_LoganvilleChristian_Logo.png"
   },
   {
     "SchoolID": "ga-long-county-high-school-ludowici",
@@ -718,7 +751,7 @@
     "WebsiteUrl": "https://www.memorialdayschool.com/",
     "AthleticsUrl": "https://www.memorialdayschool.com/athletics/athletics-at-memorial",
     "LogoPath": "/images/schools/logos/ga-memorial-day-school-savannah.png",
-    "LogoSourceUrl": "https://www.memorialdayschool.com/images/matador-logo.png"
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_MemorialDay_Logo.png"
   },
   {
     "SchoolID": "ga-midtown-high-school-atlanta",
@@ -738,7 +771,9 @@
     "City": "Athens",
     "State": "GA",
     "ShortName": "Monsignor Donovan Catholic",
-    "Mascot": "Rams"
+    "Mascot": "Rams",
+    "LogoPath": "/images/schools/logos/ga-monsignor-donovan-catholic-high-school-athens.png",
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_MonsignorDonovan_Logo.png"
   },
   {
     "SchoolID": "ga-morgan-county-high-school-madison",
@@ -821,7 +856,7 @@
     "WebsiteUrl": "https://www.piedmontacademy.com/",
     "AthleticsUrl": "https://www.piedmontacademy.com/athletics",
     "LogoPath": "/images/schools/logos/ga-piedmont-academy-monticello.png",
-    "LogoSourceUrl": "https://irp.cdn-website.com/91003d08/dms3rep/multi/Rocker+P+Transparent+Background.png"
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_PiedmontAcademy_Logo.png"
   },
   {
     "SchoolID": "ga-pineland-christian-academy-savannah",
@@ -841,7 +876,7 @@
     "WebsiteUrl": "https://pinewoodchristian.org/",
     "AthleticsUrl": "https://pinewoodchristian.org/athletics/",
     "LogoPath": "/images/schools/logos/ga-pinewood-christian-academy-bellville.png",
-    "LogoSourceUrl": "https://pinewoodchristian.org/wp-content/uploads/2021/11/cropped-cropped-PCA-Logo-Update-270x270.png"
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_PinewoodChristian_Logo.png"
   },
   {
     "SchoolID": "ga-providence-christian-academy-lilburn",
@@ -891,13 +926,17 @@
     "City": "Alpharetta",
     "State": "GA",
     "ShortName": "Rivers Academy",
-    "WebsiteUrl": "https://riversacademy.com/"
+    "WebsiteUrl": "https://riversacademy.com/",
+    "LogoPath": "/images/schools/logos/ga-rivers-academy-alpharetta.png",
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_RiversAcademy_Logo.png"
   },
   {
     "SchoolID": "ga-riverside-military-academy-gainesville",
     "Name": "Riverside Military Academy",
     "City": "Gainesville",
-    "State": "GA"
+    "State": "GA",
+    "LogoPath": "/images/schools/logos/ga-riverside-military-academy-gainesville.png",
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_RiversidePrep-Military_Logo.png"
   },
   {
     "SchoolID": "ga-riverview-academy-albany",
@@ -917,7 +956,7 @@
     "WebsiteUrl": "https://www.rtcacrusaders.org/",
     "AthleticsUrl": "https://www.rtcacrusaders.org/athletics/",
     "LogoPath": "/images/schools/logos/ga-robert-toombs-christian-academy-lyons.png",
-    "LogoSourceUrl": "https://www.rtcacrusaders.org/editoruploads/images/Logos/footer_logo.png"
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_RobertToombs_Logo.png"
   },
   {
     "SchoolID": "ga-savannah-arts-academy-savannah",
@@ -974,7 +1013,9 @@
     "SchoolID": "ga-screven-academy-sylvania",
     "Name": "Screven Academy",
     "City": "Sylvania",
-    "State": "GA"
+    "State": "GA",
+    "LogoPath": "/images/schools/logos/ga-screven-academy-sylvania.png",
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_ScrevenChristian_Logo.png"
   },
   {
     "SchoolID": "ga-solid-rock-academy-fayetteville",
@@ -1026,13 +1067,15 @@
     "WebsiteUrl": "https://www.southlandacademy.org/",
     "AthleticsUrl": "https://www.southlandacademy.org/athletics",
     "LogoPath": "/images/schools/logos/ga-southland-academy-americus.png",
-    "LogoSourceUrl": "https://content.schoolinsites.com/api/documents/3c73c4b1b79f412f97c758e42e2172b9.png"
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_SouthlandAcademy_Logo.png"
   },
   {
     "SchoolID": "ga-southwest-georgia-academy-damascus",
     "Name": "Southwest Georgia Academy",
     "City": "Damascus",
-    "State": "GA"
+    "State": "GA",
+    "LogoPath": "/images/schools/logos/ga-southwest-georgia-academy-damascus.png",
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_SouthwestGeorgiaAcademy_Logo.png"
   },
   {
     "SchoolID": "ga-st-andrews-school-savannah",
@@ -1046,7 +1089,7 @@
     "WebsiteUrl": "https://www.saslions.com/",
     "AthleticsUrl": "https://www.saslionsathletics.com/",
     "LogoPath": "/images/schools/logos/ga-st-andrews-school-savannah.png",
-    "LogoSourceUrl": "/images/common/logo_banner_navy.png",
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_StAndrewsSchool_Logo.png",
     "WordmarkPath": "/images/schools/logos/ga-st-andrews-school-savannah-wordmark.png",
     "WordmarkSourceUrl": "https://resources.finalsite.net/images/f_auto,q_auto/v1752076989/saslionscom/mlsq9zml4aydsasxv2pu/StAndrewsAthleticsPrimaryLogoImage.png"
   },
@@ -1055,7 +1098,9 @@
     "Name": "St. Anne-Pacelli",
     "City": "Columbus",
     "State": "GA",
-    "Mascot": "Vikings"
+    "Mascot": "Vikings",
+    "LogoPath": "/images/schools/logos/ga-st-anne-pacelli-columbus.png",
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_StAnnePacelli_Logo.png"
   },
   {
     "SchoolID": "ga-st-paul-academy-for-boys-savannah",
@@ -1100,7 +1145,9 @@
     "Name": "Stratford Academy",
     "City": "Macon",
     "State": "GA",
-    "Mascot": "Eagles"
+    "Mascot": "Eagles",
+    "LogoPath": "/images/schools/logos/ga-stratford-academy-macon.png",
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_StratfordAcademy_Logo.png"
   },
   {
     "SchoolID": "ga-terrell-academy-dawson",
@@ -1114,7 +1161,7 @@
     "WebsiteUrl": "https://terrellacademy.com/",
     "AthleticsUrl": "https://terrellacademy.com/athletics/",
     "LogoPath": "/images/schools/logos/ga-terrell-academy-dawson.png",
-    "LogoSourceUrl": "https://terrellacademy.com/wp-content/uploads/2026/02/IMG_6768.jpeg"
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_TerrellAcademy_Logo.png"
   },
   {
     "SchoolID": "ga-the-habersham-school-savannah",
@@ -1135,14 +1182,16 @@
     "SecondaryColor": "#A23134",
     "WebsiteUrl": "https://www.heritageschool.com/",
     "LogoPath": "/images/schools/logos/ga-the-heritage-school-newnan.png",
-    "LogoSourceUrl": "https://resources.finalsite.net/images/v1755714001/heritageschoolcom/owjzpmnq91tq1ed3wmu2/HawkHeadPNG.png"
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_HeritageNewnan_Logo.png"
   },
   {
     "SchoolID": "ga-the-king-s-academy-woodstock",
     "Name": "The King's Academy",
     "City": "Woodstock",
     "State": "GA",
-    "Mascot": "Knights"
+    "Mascot": "Knights",
+    "LogoPath": "/images/schools/logos/ga-the-king-s-academy-woodstock.png",
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2024/08/GIAA_KingsAcademy_Logo.png"
   },
   {
     "SchoolID": "ga-the-weber-school-atlanta",
@@ -1155,8 +1204,8 @@
     "Name": "Thomas Jefferson Academy",
     "City": "Louisville",
     "State": "GA",
-    "LogoPath": "/images/schools/logos/ga-thomas-jefferson-academy-louisville.jpg",
-    "LogoSourceUrl": "https://image.maxpreps.io/school-mascot/b/d/5/bd591009-7af2-4b8f-b320-a6bdf8558210.gif?version=638606061597992500&width=1024&height=1024&auto=webp&format=pjpg"
+    "LogoPath": "/images/schools/logos/ga-thomas-jefferson-academy-louisville.png",
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_ThomasJefferson_Logo.png"
   },
   {
     "SchoolID": "ga-tiftarea-academy-chula",
@@ -1170,7 +1219,7 @@
     "WebsiteUrl": "https://www.tiftareaacademy.com/",
     "AthleticsUrl": "https://www.tiftareaacademy.com/athletics",
     "LogoPath": "/images/schools/logos/ga-tiftarea-academy-chula.png",
-    "LogoSourceUrl": "https://resources.finalsite.net/images/f_auto,q_auto/v1751655637/tiftareaacademycom/n9drrh1r8uz9ncqkg2nn/TiftareaAcademyPrimaryLogoImage.png"
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_TiftareaAcademy_Logo.png"
   },
   {
     "SchoolID": "ga-trinity-christian-academy-dublin",
@@ -1184,7 +1233,7 @@
     "WebsiteUrl": "https://www.tcsweb.org/",
     "AthleticsUrl": "https://www.tcsweb.org/athletics",
     "LogoPath": "/images/schools/logos/ga-trinity-christian-academy-dublin.png",
-    "LogoSourceUrl": "https://static.wixstatic.com/media/a08823_c63ddc6dd53640bc810ed21958ae8cbf~mv2.png"
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_TrinityChristianDublin_Logo.png"
   },
   {
     "SchoolID": "ga-trinity-christian-sharpsburg",
@@ -1197,7 +1246,9 @@
     "SchoolID": "ga-twiggs-academy-jeffersonville",
     "Name": "Twiggs Academy",
     "City": "Jeffersonville",
-    "State": "GA"
+    "State": "GA",
+    "LogoPath": "/images/schools/logos/ga-twiggs-academy-jeffersonville.png",
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_TwiggsAcademy_Logo.png"
   },
   {
     "SchoolID": "ga-valwood-school-hahira",
@@ -1211,7 +1262,7 @@
     "WebsiteUrl": "https://www.valwood.org/",
     "AthleticsUrl": "https://www.valwood.org/athletics",
     "LogoPath": "/images/schools/logos/ga-valwood-school-hahira.png",
-    "LogoSourceUrl": "https://s3.amazonaws.com/ballfrog-app/comp-sites/images/b7aff70d81defa6814dda8eb2b52e5ed-94fb9-515734.png"
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_Valwood_Logo.png"
   },
   {
     "SchoolID": "ga-veritas-academy-savannah",
@@ -1226,7 +1277,7 @@
     "City": "Vidalia",
     "State": "GA",
     "LogoPath": "/images/schools/logos/ga-vidalia-heritage-academy-vidalia.png",
-    "LogoSourceUrl": "https://www.vidaliaheritageacademy.com/editoruploads/images/logos/logo.png"
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2024/10/VHA-Athletic-logo-1243x382-ai-brush-removebg-8583b577.png"
   },
   {
     "SchoolID": "ga-walker-school-marietta",
@@ -1259,7 +1310,7 @@
     "WebsiteUrl": "https://www.westfieldschool.org/",
     "AthleticsUrl": "https://www.westfieldschool.org/athletics",
     "LogoPath": "/images/schools/logos/ga-westfield-school-perry.png",
-    "LogoSourceUrl": "https://thewestfieldschool.static.amais.com/Combined_Shape-52-optimized.webp?version=638272600075500000"
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_WestfieldSchool_Logo.png"
   },
   {
     "SchoolID": "ga-westfield-school-perry-2",
@@ -1280,7 +1331,7 @@
     "WebsiteUrl": "https://www.wsa.net/",
     "AthleticsUrl": "https://www.wsawildcatsathletics.com/",
     "LogoPath": "/images/schools/logos/ga-westminster-schools-of-augusta-augusta.png",
-    "LogoSourceUrl": "https://logos.vnn-prod.zone/21253.png"
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_WestminsterAugusta_Logo.png"
   },
   {
     "SchoolID": "ga-westwood-school-camilla",
@@ -1288,7 +1339,9 @@
     "City": "Camilla",
     "State": "GA",
     "ShortName": "Westwood",
-    "Mascot": "Wildcats"
+    "Mascot": "Wildcats",
+    "LogoPath": "/images/schools/logos/ga-westwood-school-camilla.png",
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_Westwood_Logo.png"
   },
   {
     "SchoolID": "ga-william-and-reed-academy-johns-creek",
@@ -1297,7 +1350,9 @@
     "State": "GA",
     "ShortName": "William & Reed",
     "Mascot": "Warriors",
-    "WebsiteUrl": "https://www.williamandreed.com/"
+    "WebsiteUrl": "https://www.williamandreed.com/",
+    "LogoPath": "/images/schools/logos/ga-william-and-reed-academy-johns-creek.png",
+    "LogoSourceUrl": "https://giaasports.org/wp-content/uploads/2023/08/GIAA_WilliamReed_Logo.png"
   },
   {
     "SchoolID": "ga-windsor-forest-high-school-savannah",
@@ -1736,7 +1791,9 @@
     "Name": "King's Academy",
     "City": "Florence",
     "State": "SC",
-    "Mascot": "Lions"
+    "Mascot": "Lions",
+    "LogoPath": "/images/schools/logos/sc-king-s-academy-florence.png",
+    "LogoSourceUrl": "https://image.maxpreps.io/school-mascot/3/d/c/3dc5c44f-e383-4319-814a-b76d6c31556a.gif?version=636062519400000000&width=1024&height=1024"
   },
   {
     "SchoolID": "sc-laurence-manning-academy-manning",
@@ -1908,7 +1965,10 @@
     "Name": "Roy Hudgens Academy",
     "City": "Lynchburg",
     "State": "SC",
-    "Mascot": "Cougars"
+    "Mascot": "Cougars",
+    "PrimaryColor": "#071A3D",
+    "SecondaryColor": "#C64832",
+    "LogoPath": "/images/schools/logos/sc-roy-hudgens-academy-lynchburg.png"
   },
   {
     "SchoolID": "sc-sea-island-academy-johns-island",

@@ -2165,6 +2165,744 @@
     "SourceNote": "User-provided recap, box score and scoring summary for the Oct. 18, 2002 Hudgens Academy game."
   },
   {
+    "GameID": 20021025,
+    "Season": 2002,
+    "SeasonID": 2002,
+    "DisplaySeason": "2002",
+    "SourceSeasonLabel": "2002-03",
+    "Date": "2002-10-25",
+    "Time": "TBA",
+    "SourceEventTime": "",
+    "TeamID": "ga-savannah-st-andrews-saints-football",
+    "Team": "St. Andrew's Saints",
+    "Opponent": "Colleton Prep Academy",
+    "OpponentLocation": "Walterboro, SC",
+    "OpponentSlug": "colleton-prep-academy",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "Away",
+    "Venue": "Colleton Prep Academy",
+    "Notes": "",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 17,
+    "OpponentScore": 47,
+    "OpponentID": "sc-colleton-prep-academy-walterboro",
+    "OpponentLogoPath": "/images/schools/logos/sc-colleton-prep-academy-walterboro.png",
+    "FirstDowns": 12,
+    "RushingYards": 57,
+    "PassingYards": 202,
+    "PassingComp": 12,
+    "PassingAtt": 21,
+    "PassingInt": 0,
+    "OffensiveFumbles": 1,
+    "OffensiveFumblesLost": 1,
+    "PuntNum": 6,
+    "PuntYards": 198,
+    "PuntAverage": 33,
+    "Penalties": 5,
+    "PenaltyYards": 55,
+    "LineScore": [
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [3, 7, 0, 7],
+        "Total": 17
+      },
+      {
+        "Team": "Colleton Prep",
+        "Abbr": "CP",
+        "Scores": [14, 14, 13, 6],
+        "Total": 47
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "1",
+        "Team": "Colleton Prep Academy",
+        "TeamAbbr": "CP",
+        "Play": "Pat Hamilton 4 run",
+        "Conversion": "Preston Hogan kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "1",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Josh Smith 30 FG",
+        "Conversion": "",
+        "Points": 3
+      },
+      {
+        "Quarter": "1",
+        "Team": "Colleton Prep Academy",
+        "TeamAbbr": "CP",
+        "Play": "Pat Hamilton 3 run",
+        "Conversion": "Preston Hogan kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "Colleton Prep Academy",
+        "TeamAbbr": "CP",
+        "Play": "Drew Martin 9 pass from Chris Hutto",
+        "Conversion": "Preston Hogan kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "Colleton Prep Academy",
+        "TeamAbbr": "CP",
+        "Play": "Chris Hutto 1 run",
+        "Conversion": "Preston Hogan kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Beau Hinton 75 pass from Davy Clay",
+        "Conversion": "Josh Smith kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "3",
+        "Team": "Colleton Prep Academy",
+        "TeamAbbr": "CP",
+        "Play": "Mike Hawkins 19 run",
+        "Conversion": "Preston Hogan kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "3",
+        "Team": "Colleton Prep Academy",
+        "TeamAbbr": "CP",
+        "Play": "Preston Hogan 14 pass from Chris Hutto",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "4",
+        "Team": "Colleton Prep Academy",
+        "TeamAbbr": "CP",
+        "Play": "Chris Hutto 3 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "4",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Josh Smith 8 run",
+        "Conversion": "Josh Smith kick",
+        "Points": 7
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "First Downs",
+        "StAndrews": "12",
+        "Opponent": "20"
+      },
+      {
+        "Label": "Rushing",
+        "StAndrews": "57",
+        "Opponent": "232"
+      },
+      {
+        "Label": "Passing",
+        "StAndrews": "202",
+        "Opponent": "139"
+      },
+      {
+        "Label": "Comp.-Att.-Int.",
+        "StAndrews": "12-21-0",
+        "Opponent": "10-13-0"
+      },
+      {
+        "Label": "Fumbles-Lost",
+        "StAndrews": "1-1",
+        "Opponent": "1-1"
+      },
+      {
+        "Label": "Punting",
+        "StAndrews": "6-33",
+        "Opponent": "1-34"
+      },
+      {
+        "Label": "Penalties",
+        "StAndrews": "5-55",
+        "Opponent": "3-45"
+      }
+    ],
+    "RecapTitle": "Colleton Prep 47, St. Andrew's 17",
+    "Recap": "WALTERBORO, S.C. - Chris Hutto ran for two touchdowns and passed for two more to lead Colleton Prep to a 47-17 victory over St. Andrew's in a key SCISA Region 2-AA clash.\n\nColleton (10-0, 4-0) built a 28-3 advantage in the first half and breezed the rest of the way. Hutto scored on runs of 1 and 3 yards. He also threw a 9-yard touchdown pass to Drew Martin and a 14-yarder to Preston Hogan.\n\nPat Hamilton also scored twice for the winners.\n\nSt. Andrew's (6-2, 3-1) was led by Josh Smith, who had a touchdown, a field goal and two extra points. Beau Hinton hauled in a 75-yard touchdown pass from Davy Clay for the Saints' other score.",
+    "SourceDate": "2002-10-26",
+    "SourcePublication": "Savannah Morning News",
+    "SourceCitation": "Savannah Morning News, Oct. 26, 2002",
+    "SourceNote": "User-provided recap, box score and scoring summary. Entered as the Oct. 25, 2002 game because the records and weekday fit Oct. 25 rather than the user-supplied Nov. 25 date."
+  },
+  {
+    "GameID": 20021101,
+    "Season": 2002,
+    "SeasonID": 2002,
+    "DisplaySeason": "2002",
+    "SourceSeasonLabel": "2002-03",
+    "Date": "2002-11-01",
+    "Time": "TBA",
+    "SourceEventTime": "",
+    "TeamID": "ga-savannah-st-andrews-saints-football",
+    "Team": "St. Andrew's Saints",
+    "Opponent": "Holly Hill Academy",
+    "OpponentLocation": "Holly Hill, SC",
+    "OpponentSlug": "holly-hill-academy",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "Home",
+    "Venue": "St. Andrew's School",
+    "Notes": "",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 34,
+    "OpponentScore": 0,
+    "OpponentID": "sc-holly-hill-academy-holly-hill",
+    "OpponentLogoPath": "/images/schools/logos/sc-holly-hill-academy-holly-hill.png",
+    "FirstDowns": 16,
+    "RushingYards": 268,
+    "PassingYards": 74,
+    "PassingComp": 6,
+    "PassingAtt": 12,
+    "PassingInt": 0,
+    "OffensiveFumbles": 3,
+    "OffensiveFumblesLost": 1,
+    "PuntNum": 3,
+    "PuntYards": 108,
+    "PuntAverage": 36,
+    "Penalties": 4,
+    "PenaltyYards": 35,
+    "LineScore": [
+      {
+        "Team": "Holly Hill Academy",
+        "Abbr": "HH",
+        "Scores": [0, 0, 0, 0],
+        "Total": 0
+      },
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [7, 7, 13, 7],
+        "Total": 34
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "1",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Jason Victor 6 run",
+        "Conversion": "Josh Smith kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Davy Clay 4 run",
+        "Conversion": "Josh Smith kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "3",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Jeff Smith 63 run",
+        "Conversion": "Josh Smith kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "3",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Jeff Smith 45 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "4",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Jason Victor 10 pass from Davy Clay",
+        "Conversion": "Josh Smith kick",
+        "Points": 7
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "First Downs",
+        "StAndrews": "16",
+        "Opponent": "7"
+      },
+      {
+        "Label": "Rushing",
+        "StAndrews": "268",
+        "Opponent": "80"
+      },
+      {
+        "Label": "Passing",
+        "StAndrews": "74",
+        "Opponent": "85"
+      },
+      {
+        "Label": "Comp-Att-Int",
+        "StAndrews": "6-12-0",
+        "Opponent": "8-22-2"
+      },
+      {
+        "Label": "Fumbles-lost",
+        "StAndrews": "3-1",
+        "Opponent": "1-1"
+      },
+      {
+        "Label": "Punts",
+        "StAndrews": "3-36",
+        "Opponent": "3-34"
+      },
+      {
+        "Label": "Penalties",
+        "StAndrews": "4-35",
+        "Opponent": "2-10"
+      }
+    ],
+    "RecapTitle": "St. Andrew's 34, Holly Hill Academy 0",
+    "Recap": "Jeff Smith rushed for 228 yards and two touchdowns as St. Andrew's completed its regular season with a shutout of Holly Hill Academy.\n\nThe Saints (7-2 overall, 4-1 region) earned a home game in the opening round of the playoffs. Quarterback Davy Clay threw for one touchdown and ran for another in the win over Holly Hill (8-2, 3-2).\n\nA City Player of the Week brief named Jeff Smith, St. Andrew's senior running back, after he eclipsed the 1,000-yard plateau on Friday. Smith shredded Holly Hill Academy's defense for 228 yards and two touchdowns, including a 63-yard scoring run in the second quarter and a 45-yard touchdown in the third to break open a 7-0 lead. Smith entered the state playoffs with 1,056 rushing yards and 16 touchdowns.",
+    "SourceDate": "2002-11-02",
+    "SourcePublication": "Savannah Morning News",
+    "SourceCitation": "Savannah Morning News, Nov. 2, 2002; City Player of the Week brief",
+    "SourceNote": "User-provided recap, box score, scoring summary and City Player of the Week brief for the Nov. 1, 2002 Holly Hill Academy game."
+  },
+  {
+    "GameID": 20021108,
+    "Season": 2002,
+    "SeasonID": 2002,
+    "DisplaySeason": "2002",
+    "SourceSeasonLabel": "2002-03",
+    "Date": "2002-11-08",
+    "Time": "TBA",
+    "SourceEventTime": "",
+    "TeamID": "ga-savannah-st-andrews-saints-football",
+    "Team": "St. Andrew's Saints",
+    "Opponent": "Pee Dee Academy",
+    "OpponentLocation": "Mullins, SC",
+    "OpponentSlug": "pee-dee-academy",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "Home",
+    "Venue": "St. Andrew's School",
+    "Notes": "SCISA State Tournament first round",
+    "GameType": "Playoff",
+    "Result": "W",
+    "TeamScore": 40,
+    "OpponentScore": 12,
+    "OpponentID": "sc-pee-dee-academy-mullins",
+    "OpponentLogoPath": "/images/schools/logos/sc-pee-dee-academy-mullins.png",
+    "RushingYards": 293,
+    "PassingYards": 114,
+    "PassingComp": 7,
+    "PassingAtt": 9,
+    "PassingInt": 1,
+    "OffensiveFumbles": 3,
+    "OffensiveFumblesLost": 1,
+    "PuntNum": 2,
+    "PuntYards": 64,
+    "PuntAverage": 32,
+    "Penalties": 7,
+    "PenaltyYards": 70,
+    "LineScore": [
+      {
+        "Team": "Pee Dee Academy",
+        "Abbr": "PD",
+        "Scores": [0, 12, 0, 0],
+        "Total": 12
+      },
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [13, 7, 0, 20],
+        "Total": 40
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "1",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Jeff Smith 10 pass from Davy Clay",
+        "Conversion": "Josh Smith kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "1",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Jason Victor 15 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "2",
+        "Team": "Pee Dee Academy",
+        "TeamAbbr": "PD",
+        "Play": "Wolansky 53 run",
+        "Conversion": "run failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "2",
+        "Team": "Pee Dee Academy",
+        "TeamAbbr": "PD",
+        "Play": "Richardson 25 pass from Scott Larymore",
+        "Conversion": "run failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "2",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Jeff Smith 1 run",
+        "Conversion": "Josh Smith kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "4",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Jeff Smith 7 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "4",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Josh Smith 9 pass from Clay",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "4",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Cam Aldrich 15 run",
+        "Conversion": "Aldrich kick",
+        "Points": 7
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "Rushing",
+        "StAndrews": "293",
+        "Opponent": "67"
+      },
+      {
+        "Label": "Passing",
+        "StAndrews": "114",
+        "Opponent": "83"
+      },
+      {
+        "Label": "Comp-Att-Int",
+        "StAndrews": "7-9-1",
+        "Opponent": "4-13-1"
+      },
+      {
+        "Label": "Fumbles-Lost",
+        "StAndrews": "3-1",
+        "Opponent": "3-3"
+      },
+      {
+        "Label": "Punts",
+        "StAndrews": "2-32",
+        "Opponent": "7-33.7"
+      },
+      {
+        "Label": "Penalties",
+        "StAndrews": "7-70",
+        "Opponent": "6-30"
+      }
+    ],
+    "RecapTitle": "SMITHS POWER ST. ANDREW'S TO PLAYOFF WIN",
+    "Recap": "The St. Andrew Saints, using a well-balanced rushing attack, cruised by the Pee Dee Academy Golden Eagles 40-12 to win their opening-round game in the SCISA playoffs.\n\nLed by senior Jeff Smith's 117-yard, two-touchdown rushing performance, the Saints amassed a total of 293 yards on the ground.\n\n\"We just had great blocking from our linemen tonight,\" said Smith \"They made running easy.\"\n\nThe Saints opened the scoring in the first quarter when junior quarterback Davy Clay hit Smith for a 10-yard touchdown pass with just under six minutes left in the opening quarter. Josh Smith's extra point put the Saints up by seven.\n\nAfter a brief Golden Eagle drive, the Saints again found their way into the end zone, when senior Jason Victor rumbled in from 15 yards out to give them a 14-0 lead going into the second quarter.\n\n\"We've definitely gotten better since the Memorial game (a loss),\" said first-year St. Andrew's coach Kevin Kunst, whose team improved to 8-2.\n\nThe Golden Eagles (5-6) of Florence, S.C., appeared ready to make a game of it in the second quarter when they scored all 12 of their points to get within two points of the Saints.\n\nHowever St. Andrews capped off the first half with Jeff Smith's second touchdown of the evening - a 1-yard run, which gave the Saints a 21-12 lead going into the half.\n\nThe going only got tougher for the Eagles after the break with the Saints defense holding them to -13 yards rushing the entire second half.\n\nAfter a fumble-plagued third quarter in which neither team scored, the Saints exploded for 19 fourth-quarter points.\n\nJeff Smith capped off his scoring with a 7-yard dive up the middle with less than nine minutes left to give the Saints a 27-12 lead.\n\nJust four minutes later, Clay hit tight end Josh Smith with a 9-yard scoring strike to put the Saints up 33-12.\n\n\"It was a great pass, he just laid it in there.\" Smith said.\n\nSt. Andrew's capped of the evening's scoring with just over a minute to go when Cam Aldrich ran for 15 of his 56 yards for the score.",
+    "SourceDate": "2002-11-09",
+    "SourcePublication": "Savannah Morning News",
+    "SourceCitation": "Chris Mercer, For the Morning News, \"SMITHS POWER ST. ANDREW'S TO PLAYOFF WIN,\" Savannah Morning News, Nov. 9, 2002, Sports, p. 4C",
+    "SourceNote": "User-provided Savannah Morning News recap, box score and scoring summary for the Nov. 8, 2002 Pee Dee Academy SCISA playoff game. The published scoring summary accounts for 39 St. Andrew's points, while the final score and line score report 40-12; the game result preserves the published final and line score. The recap was published Nov. 9, 2002."
+  },
+  {
+    "GameID": 20021115,
+    "Season": 2002,
+    "SeasonID": 2002,
+    "DisplaySeason": "2002",
+    "SourceSeasonLabel": "2002-03",
+    "Date": "2002-11-15",
+    "Time": "TBA",
+    "SourceEventTime": "",
+    "TeamID": "ga-savannah-st-andrews-saints-football",
+    "Team": "St. Andrew's Saints",
+    "Opponent": "Williamsburg Academy",
+    "OpponentLocation": "Kingstree, SC",
+    "OpponentSlug": "williamsburg-academy",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "Away",
+    "Venue": "Williamsburg Academy",
+    "Notes": "SCISA State Tournament semifinal",
+    "GameType": "Playoff",
+    "Result": "W",
+    "TeamScore": 14,
+    "OpponentScore": 9,
+    "OpponentID": "sc-williamsburg-academy-kingstree",
+    "FirstDowns": 11,
+    "RushingYards": 101,
+    "PassingYards": 108,
+    "PassingComp": 11,
+    "PassingAtt": 15,
+    "PassingInt": 0,
+    "OffensiveFumbles": 2,
+    "PuntNum": 5,
+    "PuntYards": 175,
+    "PuntAverage": 35,
+    "Penalties": 5,
+    "PenaltyYards": 35,
+    "LineScore": [
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [0, 6, 2, 6],
+        "Total": 14
+      },
+      {
+        "Team": "Williamsburg Academy",
+        "Abbr": "W",
+        "Scores": [0, 6, 3, 0],
+        "Total": 9
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "2",
+        "Team": "Williamsburg Academy",
+        "TeamAbbr": "W",
+        "Play": "Lee Parrot 10 pass from Conrad Kellahan",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "2",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Jeff Smith 1 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "3",
+        "Team": "Williamsburg Academy",
+        "TeamAbbr": "W",
+        "Play": "Conrad Kellahan 27 FG",
+        "Conversion": "",
+        "Points": 3
+      },
+      {
+        "Quarter": "3",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Tony Sandford safety",
+        "Conversion": "",
+        "Points": 2
+      },
+      {
+        "Quarter": "4",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Jeff Smith 2 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "First Downs",
+        "StAndrews": "11",
+        "Opponent": "7"
+      },
+      {
+        "Label": "Rushes-yards",
+        "StAndrews": "101",
+        "Opponent": "106"
+      },
+      {
+        "Label": "Passing",
+        "StAndrews": "108",
+        "Opponent": "40"
+      },
+      {
+        "Label": "Comp-Att-Int",
+        "StAndrews": "11-15-0",
+        "Opponent": "5-12-3"
+      },
+      {
+        "Label": "Fumbles-Lost",
+        "StAndrews": "2",
+        "Opponent": "1"
+      },
+      {
+        "Label": "Punts-Avg.",
+        "StAndrews": "5-35",
+        "Opponent": "3-43"
+      },
+      {
+        "Label": "Penalties-Yards",
+        "StAndrews": "5-35",
+        "Opponent": "11-75"
+      }
+    ],
+    "RecapTitle": "St. Andrew's 14, Williamsburg 9",
+    "Recap": "KINGSTREE, S.C. - Ben Robertson recovered a fumble at the Williamsburg 17 and St. Andrew's drove in for the winning touchdown with 1:11 left in the game as the Saints advanced to the SCISA Class AA championship with a victory Friday night.\n\nTrailing 9-8, the Saints missed a 27-yard field goal, but on the next play, Robertson scooped up the loose ball. Jeff Smith scored his second touchdown of the game from the 2 for the game-winner.\n\nWilliamsburg's final threat was ended by a Michael McLean interception.\n\nAfter a scoreless first quarter, the home team scored first on a 10-yard pass to Lee Parrot from Conrad Kellahan, but the Saints tied it on a 1-yard run by Smith.\n\nWilliamsburg went ahead 9-6 on a 27-yard field goal by Kellahan in the third quarter, the Saints stayed close when Tony Sandford tackled Chris Hannah in the end zone for a safety to make it 9-8 and set up the Saints' comeback.\n\nSmith had 65 yards on 16 carries, and Davy Clay completed 11 of 15 passes for 108 yards.\n\nSt. Andrew's will play Colleton Prep in the championship next Friday in Sumter, S.C., on a neutral field.",
+    "SourceDate": "2002-11-16",
+    "SourcePublication": "Savannah Morning News",
+    "SourceCitation": "\"St. Andrew's 14, Williamsburg 9,\" Savannah Morning News, Nov. 16, 2002, Sports, p. 5C",
+    "SourceNote": "User-provided Savannah Morning News recap for the Nov. 15, 2002 Williamsburg Academy SCISA playoff semifinal, plus user-provided line score, scoring summary and team comparison statistics. The recap text is preserved separately from the box-score/stat data."
+  },
+  {
+    "GameID": 20021122,
+    "Season": 2002,
+    "SeasonID": 2002,
+    "DisplaySeason": "2002",
+    "SourceSeasonLabel": "2002-03",
+    "Date": "2002-11-22",
+    "Time": "TBA",
+    "SourceEventTime": "",
+    "TeamID": "ga-savannah-st-andrews-saints-football",
+    "Team": "St. Andrew's Saints",
+    "Opponent": "Colleton Prep Academy",
+    "OpponentLocation": "Walterboro, SC",
+    "OpponentSlug": "colleton-prep-academy",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "Neutral",
+    "Venue": "The Citadel",
+    "Notes": "SCISA State Championship",
+    "GameType": "Playoff",
+    "Result": "L",
+    "TeamScore": 7,
+    "OpponentScore": 20,
+    "OpponentID": "sc-colleton-prep-academy-walterboro",
+    "OpponentLogoPath": "/images/schools/logos/sc-colleton-prep-academy-walterboro.png",
+    "FirstDowns": 10,
+    "RushingYards": 91,
+    "PassingYards": 91,
+    "PassingComp": 7,
+    "PassingAtt": 21,
+    "PassingInt": 3,
+    "OffensiveFumbles": 1,
+    "OffensiveFumblesLost": 0,
+    "PuntNum": 2,
+    "PuntYards": 70,
+    "PuntAverage": 35,
+    "Penalties": 4,
+    "PenaltyYards": 40,
+    "LineScore": [
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [0, 7, 0, 0],
+        "Total": 7
+      },
+      {
+        "Team": "Colleton Prep Academy",
+        "Abbr": "CP",
+        "Scores": [6, 0, 14, 0],
+        "Total": 20
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "1",
+        "Team": "Colleton Prep Academy",
+        "TeamAbbr": "CP",
+        "Play": "Gerald Hawkins 4 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "2",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Josh Smith 18 pass from Davy Clay",
+        "Conversion": "Josh Smith kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "3",
+        "Team": "Colleton Prep Academy",
+        "TeamAbbr": "CP",
+        "Play": "Gerald Hawkins 19 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "3",
+        "Team": "Colleton Prep Academy",
+        "TeamAbbr": "CP",
+        "Play": "Patrick Hamilton 7 run",
+        "Conversion": "Wesley Henderson pass from Chris Hutto",
+        "Points": 8
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "First downs",
+        "StAndrews": "10",
+        "Opponent": "13"
+      },
+      {
+        "Label": "Rushing",
+        "StAndrews": "91",
+        "Opponent": "164"
+      },
+      {
+        "Label": "Passing",
+        "StAndrews": "91",
+        "Opponent": "103"
+      },
+      {
+        "Label": "Comp-Att-Int",
+        "StAndrews": "7-21-3",
+        "Opponent": "5-10-1"
+      },
+      {
+        "Label": "Fumbles-lost",
+        "StAndrews": "1-0",
+        "Opponent": "2-2"
+      },
+      {
+        "Label": "Punts",
+        "StAndrews": "2-35",
+        "Opponent": "2-27.5"
+      },
+      {
+        "Label": "Penalties",
+        "StAndrews": "4-40",
+        "Opponent": "6-60"
+      }
+    ],
+    "RecapTitle": "SAINTS FALL SHORT OF SCISA 2-A STATE TITLE - COLLETON PREP USES A LARGER ROSTER TO OUTLAST ST. ANDREW'S IN THE SECOND HALF.",
+    "Recap": "St. Andrew's came into the SCISA 2-A state championship game at The Citadel on Friday as heavy underdogs, and for good reason. Four weeks ago, the Saints were stomped by Colleton Prep, 47-17, the team they went up against in Friday's title game.\n\nThe Saints put up a tougher fight the second time around, taking a 7-6 lead into the locker room. But Colleton Prep of Walterboro, S.C., scored a pair of third-quarter touchdowns to earn a 20-7 victory.\n\nThe Saints finished the season at 9-3, while Colleton Prep went 11-1.\n\n\"We knew we could play with these guys. We played very poorly the first time we played them,\" said St. Andrew's coach Kevin Kunst. \"We fought as hard as we could, but their numbers wore us out in the second half.\"\n\nThe numbers that Kunst spoke of were the 46 players the War Hawks dressed out compared to the 25 the Saints had in uniform.\n\nColleton Prep coach Brock Miller agreed that his team's bigger roster made a difference.\n\n\"I think they wore down in the second half with our bigger squad,\" said Miller. \"We didn't come into this game expecting it to be easy. We knew they were a better team than the one we saw the first time.\"\n\nThe game began with the Warhawks making it look like another rout was in store. They started at their 37 after the opening kickoff and promptly marched 63 yards in 15 plays to take an early lead. Twice, Colleton Price had touchdowns called back on the drive and needed a 9-yard run by Patrick Hamilton on fourth-and-eight from the 17 to keep the drive alive.\n\nTwo plays after Hamilton's run pushed the ball to the 8, Gerald Hawkins scored on a 4-yard run. Jeff Smith blocked Jason Epinette's extra point to keep it 6-0 with 6:13 left in the first quarter.\n\nThe Saints got a big break later in the first quarter when William Chisolm recovered a Colleton Prep fumble at the Warhawks' 33. But the Saints came up empty after Davy Clay's pass in the end zone was intercepted by Jason Brown.\n\nJeff Smith's 55 yard-punt return gave the Saints' offense the ball at the Warhawks' 22 the next time the Saints went to work on offense. Two plays later, Clay tossed an 18-yard touchdown to Josh Smith, and after Josh Smith added the extra point, the Saints took a 7-6 lead with 7:13 left in the second quarter. The score remained 7-6 when the quarter ended.\n\n\"We weren't surprised that we were leading at the half,\" Kunst said.\n\nThe Warhawks took the lead back on their second possession of the second half when Hamilton's 54-yard gain on a screen pass was followed by a 19-yard touchdown run by Hawkins that made it 12-7. The two-point conversion failed, keeping things 12-7.\n\n\"That screen pass got us going,\" said Miller. \"We needed something at that point, and we relaxed and played like we can on offense after that.\"\n\nAfter the Saints were forced to punt the ball away on the ensuing possession, the Warhawks took over at their 49 and drove 51 yards on the strength of seven-straight runs, the last of which was a 7-yard touchdown scamper by Hamilton. Colleton Prep converted the two-point conversion to stretch its lead to 20-7.\n\nA Colleton Prep fumble early in the fourth quarter handed the ball to the Saints at midfield, but after they drove down to the 16, Kyle Strickland intercepted a pass in the end zone and returned it to the 47 to kill the drive. That was the last scoring opportunity for St. Andrew's.\n\n\"We had a lot of chances tonight that we failed to take advantage of,' Kunst said. \"That caught up with us in the end.\"\n\n\"This team has had a great season,\" Kunst added. \"Nobody expected us to be in the championship game. Colleton Prep has a great team and deserved to win, but I'm proud of the season we have had and the way we fought tonight.\"",
+    "SourceDate": "2002-11-23",
+    "SourcePublication": "Savannah Morning News",
+    "SourceCitation": "Tom O'Hare, For the Savannah Morning News, \"SAINTS FALL SHORT OF SCISA 2-A STATE TITLE - COLLETON PREP USES A LARGER ROSTER TO OUTLAST ST. ANDREW'S IN THE SECOND HALF,\" Savannah Morning News, Nov. 23, 2002, Sports, p. 1C",
+    "SourceNote": "User-provided Savannah Morning News recap for the Nov. 22, 2002 Colleton Prep Academy SCISA championship game, plus user-provided line score, scoring summary and team comparison statistics. The recap text excludes the box-score/stat data by request."
+  },
+  {
     "GameID": 20030828,
     "Season": 2003,
     "SeasonID": 2003,
