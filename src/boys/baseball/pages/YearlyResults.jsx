@@ -104,6 +104,17 @@ function buildRecord(games, filterFn = () => true) {
   return { wins, losses, ties, text };
 }
 
+function buildPinnedSeasonRecord(season) {
+  const wins = Number(season?.OverallWins);
+  const losses = Number(season?.OverallLosses);
+  const ties = Number(season?.OverallTies || 0);
+
+  if (!Number.isFinite(wins) || !Number.isFinite(losses)) return null;
+
+  const text = ties ? `${wins}–${losses}–${ties}` : `${wins}–${losses}`;
+  return { wins, losses, ties, text };
+}
+
 function isCompletedGame(game) {
   return game?.Result === "W" || game?.Result === "L" || game?.Result === "T";
 }
@@ -131,7 +142,7 @@ function computeCoachSummaries(seasonsWithGames) {
     const entry = coachMap.get(coach);
     entry.seasons.push(Number(season.SeasonID));
 
-    const overall = buildRecord(games);
+    const overall = buildPinnedSeasonRecord(season) || buildRecord(games);
     entry.wins += overall.wins;
     entry.losses += overall.losses;
     entry.ties += overall.ties;
@@ -247,7 +258,7 @@ export default function YearlyResults() {
     return seasonsWithGames.map(({ season, games: seasonGames }) => {
       const completedGames = seasonGames.filter(isCompletedGame);
 
-      const overall = buildRecord(completedGames).text;
+      const overall = (buildPinnedSeasonRecord(season) || buildRecord(completedGames)).text;
       const region = buildRecord(
         completedGames,
         (game) => String(game.GameType ?? "").toLowerCase() === "region"

@@ -5,7 +5,10 @@
     "RegionSeed": null,
     "RegionFinish": null,
     "StateSeed": null,
-    "StateFinish": null
+    "StateFinish": "State Quarterfinals",
+    "OverallWins": 12,
+    "OverallLosses": 13,
+    "OverallTies": 0
   },
   {
     "SeasonID": 2009,

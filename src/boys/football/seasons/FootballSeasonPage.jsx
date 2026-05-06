@@ -12,6 +12,7 @@ import {
   loadFootballSeasonPageData,
   sortGamesChronologically,
 } from "../footballData";
+import { loadPreparedFootballRecordsData } from "../footballRecordsData";
 import { footballGamePath, footballPlayerPath } from "../pages/footballDetailUtils";
 
 const INDIVIDUAL_STATS_VIEW_CONFIG = [
@@ -49,7 +50,16 @@ function hasMeaningfulValue(value) {
   return text !== "" && text !== "—" && text !== "-" && text.toLowerCase() !== "n/a";
 }
 
-function StatsTable({ title, columns, rows }) {
+function firstMeaningfulValue(...values) {
+  const match = values.find((value) => hasMeaningfulValue(value));
+  return match ?? "";
+}
+
+function tableTotal(table, key) {
+  return table?.Totals?.[key] ?? "";
+}
+
+function StatsTable({ title, columns, rows, totals = null }) {
   const renderCell = (row, column) => {
     if (column.key === "jersey") return row.JerseyNumber || "—";
 
@@ -71,6 +81,15 @@ function StatsTable({ title, columns, rows }) {
     const value = row.Values?.[column.key];
     return value || "—";
   };
+
+  const hasTotals =
+    totals &&
+    columns.some(
+      (column) =>
+        column.key !== "jersey" &&
+        column.key !== "name" &&
+        hasMeaningfulValue(totals[column.key])
+    );
 
   return (
     <div className="space-y-3">
@@ -108,6 +127,24 @@ function StatsTable({ title, columns, rows }) {
               </tr>
             ))}
           </tbody>
+          {hasTotals ? (
+            <tfoot className="border-t-2 border-gray-300 bg-blue-50 font-semibold text-blue-950">
+              <tr>
+                {columns.map((column) => (
+                  <td
+                    key={`${title}-totals-${column.key}`}
+                    className="px-2 py-2 text-center whitespace-nowrap"
+                  >
+                    {column.key === "jersey"
+                      ? ""
+                      : column.key === "name"
+                        ? totals.name || "Season Totals"
+                        : totals[column.key] || "—"}
+                  </td>
+                ))}
+              </tr>
+            </tfoot>
+          ) : null}
         </table>
       </div>
     </div>
@@ -195,6 +232,563 @@ function CombinedTeamStatsTable({ sections }) {
     </>
   );
 }
+
+const DERIVED_META_KEYS = new Set([
+  "CareerID",
+  "CareerKey",
+  "CanonicalUrl",
+  "DisplaySeason",
+  "GamesTracked",
+  "PlayerID",
+  "PlayerName",
+  "SeasonID",
+  "SeasonLabel",
+  "SourceCitation",
+  "SourceDate",
+  "SourceNote",
+  "SourcePlayerName",
+  "SourcePublication",
+  "SourceSeasonLabel",
+  "SeasonAdjustment",
+]);
+
+const DERIVED_STAT_ALIASES = {
+  FgAttempted: "FGAtt",
+  FgAtt: "FGAtt",
+  IntYards: "INTYards",
+  Ints: "INTs",
+  PatKickingAtt: "PATKickingAtt",
+  PatKickingMade: "PATKickingMade",
+  PatKickingPercentage: "PATKickingPercentage",
+  PatReceivingNum: "PATReceivingNum",
+  PatRushingNum: "PATRushingNum",
+};
+
+function getDerivedNumber(row, key) {
+  const actualKey = DERIVED_STAT_ALIASES[key] || key;
+  const value = row?.[actualKey];
+  if (value == null || value === "") return null;
+  const number = Number(value);
+  return Number.isFinite(number) ? number : null;
+}
+
+function hasDerivedStat(row, keys) {
+  return keys.some((key) => getDerivedNumber(row, key) !== null);
+}
+
+function sumDerivedStats(rows) {
+  const total = {};
+
+  rows.forEach((row) => {
+    Object.entries(row || {}).forEach(([key, value]) => {
+      if (DERIVED_META_KEYS.has(key)) return;
+      const number = Number(value);
+      if (!Number.isFinite(number)) return;
+      total[key] = (total[key] || 0) + number;
+    });
+  });
+
+  const maxGamesTracked = Math.max(
+    0,
+    ...rows.map((row) => Number(row?.GamesTracked || row?.TrackedGames || 0)).filter(Number.isFinite)
+  );
+  if (maxGamesTracked) total.GamesTracked = maxGamesTracked;
+
+  return total;
+}
+
+function derivedSum(row, keys) {
+  let total = 0;
+  let found = false;
+
+  keys.forEach((key) => {
+    const value = getDerivedNumber(row, key);
+    if (value === null) return;
+    total += value;
+    found = true;
+  });
+
+  return found ? total : null;
+}
+
+function derivedRatio(numerator, denominator) {
+  if (!Number.isFinite(numerator) || !Number.isFinite(denominator) || denominator <= 0) {
+    return null;
+  }
+  return numerator / denominator;
+}
+
+function hasFiniteDerivedValue(value) {
+  if (value == null) return false;
+  if (typeof value === "string" && !value.trim()) return false;
+  return Number.isFinite(Number(value));
+}
+
+function derivedWhole(value) {
+  return hasFiniteDerivedValue(value) ? Math.round(Number(value)).toLocaleString("en-US") : "";
+}
+
+function derivedDecimal(value, decimals = 1) {
+  return hasFiniteDerivedValue(value) ? Number(value).toFixed(decimals) : "";
+}
+
+function derivedPercent(value) {
+  return hasFiniteDerivedValue(value) ? Number(value).toFixed(3).replace(/^0/, "") : "";
+}
+
+function derivedStatValue(row, key, formatter = derivedWhole) {
+  const value = getDerivedNumber(row, key);
+  return value === null ? "" : formatter(value);
+}
+
+function derivedGamesTracked(row) {
+  return getDerivedNumber(row, "GamesTracked") || getDerivedNumber(row, "TrackedGames") || null;
+}
+
+function derivedCompletionPct(row) {
+  const completions = getDerivedNumber(row, "PassingComp");
+  const attempts = getDerivedNumber(row, "PassingAtt");
+  return derivedRatio(completions, attempts);
+}
+
+function derivedYardsPerCompletion(row) {
+  return derivedRatio(getDerivedNumber(row, "PassingYards"), getDerivedNumber(row, "PassingComp"));
+}
+
+function derivedYardsPerCarry(row) {
+  const computedValue = derivedRatio(
+    getDerivedNumber(row, "RushingYards"),
+    getDerivedNumber(row, "RushingNum")
+  );
+  if (computedValue !== null) return computedValue;
+  return getDerivedNumber(row, "YardsPerCarry");
+}
+
+function derivedYardsPerCatch(row) {
+  return derivedRatio(getDerivedNumber(row, "ReceivingYards"), getDerivedNumber(row, "ReceivingNum"));
+}
+
+function derivedPuntAverage(row) {
+  const computedValue = derivedRatio(
+    getDerivedNumber(row, "PuntYards"),
+    getDerivedNumber(row, "PuntNum")
+  );
+  if (computedValue !== null) return computedValue;
+  return getDerivedNumber(row, "PuntAverage");
+}
+
+function derivedFgPct(row) {
+  const computedValue = derivedRatio(getDerivedNumber(row, "FGMade"), getDerivedNumber(row, "FGAtt"));
+  if (computedValue !== null) return computedValue;
+  return getDerivedNumber(row, "FGPercentage");
+}
+
+function derivedPatPct(row) {
+  const computedValue = derivedRatio(
+    getDerivedNumber(row, "PatKickingMade"),
+    getDerivedNumber(row, "PatKickingAtt")
+  );
+  if (computedValue !== null) return computedValue;
+  return getDerivedNumber(row, "PatKickingPercentage");
+}
+
+function derivedPerGame(value, row) {
+  return derivedRatio(value, derivedGamesTracked(row));
+}
+
+function derivedTotalReturnYards(row) {
+  const directValue = getDerivedNumber(row, "TotalReturnYards");
+  if (directValue !== null) return directValue;
+  return derivedSum(row, ["KickoffReturnYards", "PuntReturnYards"]);
+}
+
+function derivedReturnTouchdowns(row) {
+  return derivedSum(row, ["KickoffReturnedTDNum", "PuntReturnedTDNum"]);
+}
+
+function derivedDefensiveTouchdowns(row) {
+  return derivedSum(row, ["IntReturnedTDNum", "FumbleReturnedTDNum"]);
+}
+
+function derivedTotalKickingPoints(row) {
+  const directValue = getDerivedNumber(row, "TotalKickingPoints");
+  if (directValue !== null) return directValue;
+
+  const pat = getDerivedNumber(row, "PatKickingMade");
+  const fieldGoals = getDerivedNumber(row, "FGMade");
+  if (pat === null && fieldGoals === null) return null;
+  return (pat || 0) + (fieldGoals || 0) * 3;
+}
+
+function derivedTotalTouchdowns(row) {
+  const directValue = getDerivedNumber(row, "TotalTDNum");
+  if (directValue !== null) return directValue;
+  return derivedSum(row, [
+    "RushingTDNum",
+    "ReceivingTDNum",
+    "KickoffReturnedTDNum",
+    "PuntReturnedTDNum",
+    "IntReturnedTDNum",
+    "FumbleReturnedTDNum",
+  ]);
+}
+
+function derivedTotalPoints(row) {
+  const directValue = getDerivedNumber(row, "TotalPoints");
+  if (directValue !== null) return directValue;
+
+  const touchdowns = derivedTotalTouchdowns(row);
+  const kickingPoints = derivedTotalKickingPoints(row);
+  const conversionPoints = getDerivedNumber(row, "TotalConversionPoints");
+  const safeties = getDerivedNumber(row, "Safeties");
+
+  if (
+    touchdowns === null &&
+    kickingPoints === null &&
+    conversionPoints === null &&
+    safeties === null
+  ) {
+    return null;
+  }
+
+  return (
+    (touchdowns || 0) * 6 +
+    (kickingPoints || 0) +
+    (conversionPoints || 0) +
+    (safeties || 0) * 2
+  );
+}
+
+function derivedTotalYards(row) {
+  const directValue = getDerivedNumber(row, "TotalYards");
+  if (directValue !== null) return directValue;
+  return derivedSum(row, ["PassingYards", "RushingYards", "ReceivingYards"]);
+}
+
+function derivedAllPurposeYards(row) {
+  const directValue = getDerivedNumber(row, "AllPurposeYards");
+  if (directValue !== null) return directValue;
+  return derivedSum(row, [
+    "RushingYards",
+    "ReceivingYards",
+    "KickoffReturnYards",
+    "PuntReturnYards",
+  ]);
+}
+
+function derivedDisplay(row, valueFn, formatter = derivedWhole) {
+  const value = valueFn(row);
+  return value === null || value === undefined ? "" : formatter(value);
+}
+
+function getDerivedPlayerMeta(row, rosterByPlayerId) {
+  const roster = rosterByPlayerId.get(String(row?.PlayerID || "")) || {};
+  return {
+    PlayerID: row?.PlayerID || "",
+    PlayerName: row?.PlayerName || roster.PlayerName || "—",
+    JerseyNumber: roster.JerseyNumber || "",
+    Grade: roster.Grade || "",
+  };
+}
+
+function buildDerivedTable({
+  title,
+  tableId,
+  columns,
+  rows,
+  rosterByPlayerId,
+  hasData,
+  sortValue,
+}) {
+  const dataRows = rows
+    .filter(hasData)
+    .sort((a, b) => {
+      const valueA = Number(sortValue(a) || 0);
+      const valueB = Number(sortValue(b) || 0);
+      if (valueA !== valueB) return valueB - valueA;
+      return String(a?.PlayerName || "").localeCompare(String(b?.PlayerName || ""));
+    });
+
+  if (!dataRows.length) return null;
+
+  const totalRow = sumDerivedStats(dataRows);
+
+  return {
+    TableID: `derived_${tableId}`,
+    Title: title,
+    Columns: columns.map(({ key, label }) => ({ key, label })),
+    Totals: columns.reduce(
+      (totals, column) => ({
+        ...totals,
+        [column.key]:
+          column.key === "jersey"
+            ? ""
+            : column.key === "name"
+              ? "Season Totals"
+              : column.value(totalRow),
+      }),
+      {}
+    ),
+    Rows: dataRows.map((row) => ({
+      ...getDerivedPlayerMeta(row, rosterByPlayerId),
+      Values: columns.reduce(
+        (values, column) => ({
+          ...values,
+          [column.key]:
+            column.key === "jersey" || column.key === "name" ? "" : column.value(row),
+        }),
+        {}
+      ),
+    })),
+  };
+}
+
+const derivedColumn = (key, label, value) => ({ key, label, value });
+
+const DERIVED_FOOTBALL_TABLES = [
+  {
+    title: "Passing",
+    tableId: "passing",
+    hasData: (row) => hasDerivedStat(row, ["PassingComp", "PassingAtt", "PassingYards", "PassingTD", "PassingInt"]),
+    sortValue: (row) => getDerivedNumber(row, "PassingYards"),
+    columns: [
+      derivedColumn("jersey", "#", () => ""),
+      derivedColumn("name", "Athlete Name", () => ""),
+      derivedColumn("gamesplayed", "GP", (row) => derivedStatValue(row, "GamesTracked")),
+      derivedColumn("passingcomp", "Comp", (row) => derivedStatValue(row, "PassingComp")),
+      derivedColumn("passingatt", "Att", (row) => derivedStatValue(row, "PassingAtt")),
+      derivedColumn("passingyards", "Yds", (row) => derivedStatValue(row, "PassingYards")),
+      derivedColumn("completionpercentage", "Comp %", (row) => derivedDisplay(row, derivedCompletionPct, derivedPercent)),
+      derivedColumn("ydspercompletion", "Avg", (row) => derivedDisplay(row, derivedYardsPerCompletion, (value) => derivedDecimal(value, 2))),
+      derivedColumn("passingyardspergame", "Y/G", (row) =>
+        derivedDisplay(row, (entry) => derivedPerGame(getDerivedNumber(entry, "PassingYards"), entry), (value) => derivedDecimal(value, 1))
+      ),
+      derivedColumn("passingtd", "TD", (row) => derivedStatValue(row, "PassingTD")),
+      derivedColumn("passingint", "Int", (row) => derivedStatValue(row, "PassingInt")),
+    ],
+  },
+  {
+    title: "Rushing",
+    tableId: "rushing",
+    hasData: (row) => hasDerivedStat(row, ["RushingNum", "RushingYards", "RushingTDNum"]),
+    sortValue: (row) => getDerivedNumber(row, "RushingYards"),
+    columns: [
+      derivedColumn("jersey", "#", () => ""),
+      derivedColumn("name", "Athlete Name", () => ""),
+      derivedColumn("gamesplayed", "GP", (row) => derivedStatValue(row, "GamesTracked")),
+      derivedColumn("rushingnum", "Car", (row) => derivedStatValue(row, "RushingNum")),
+      derivedColumn("rushingyards", "Yds", (row) => derivedStatValue(row, "RushingYards")),
+      derivedColumn("yardspercarry", "Avg", (row) => derivedDisplay(row, derivedYardsPerCarry, (value) => derivedDecimal(value, 2))),
+      derivedColumn("rushingyardspergame", "Y/G", (row) =>
+        derivedDisplay(row, (entry) => derivedPerGame(getDerivedNumber(entry, "RushingYards"), entry), (value) => derivedDecimal(value, 1))
+      ),
+      derivedColumn("rushingtdnum", "TD", (row) => derivedStatValue(row, "RushingTDNum")),
+    ],
+  },
+  {
+    title: "Receiving",
+    tableId: "receiving",
+    hasData: (row) => hasDerivedStat(row, ["ReceivingNum", "ReceivingYards", "ReceivingTDNum"]),
+    sortValue: (row) => getDerivedNumber(row, "ReceivingYards"),
+    columns: [
+      derivedColumn("jersey", "#", () => ""),
+      derivedColumn("name", "Athlete Name", () => ""),
+      derivedColumn("gamesplayed", "GP", (row) => derivedStatValue(row, "GamesTracked")),
+      derivedColumn("receivingnum", "Rec", (row) => derivedStatValue(row, "ReceivingNum")),
+      derivedColumn("receivingyards", "Yds", (row) => derivedStatValue(row, "ReceivingYards")),
+      derivedColumn("yardspercatch", "Avg", (row) => derivedDisplay(row, derivedYardsPerCatch, (value) => derivedDecimal(value, 2))),
+      derivedColumn("receivingyardspergame", "Y/G", (row) =>
+        derivedDisplay(row, (entry) => derivedPerGame(getDerivedNumber(entry, "ReceivingYards"), entry), (value) => derivedDecimal(value, 1))
+      ),
+      derivedColumn("receivingtdnum", "TD", (row) => derivedStatValue(row, "ReceivingTDNum")),
+    ],
+  },
+  {
+    title: "All Purpose Yards",
+    tableId: "all_purpose",
+    hasData: (row) =>
+      hasDerivedStat(row, ["AllPurposeYards", "RushingYards", "ReceivingYards", "KickoffReturnYards", "PuntReturnYards"]),
+    sortValue: derivedAllPurposeYards,
+    columns: [
+      derivedColumn("jersey", "#", () => ""),
+      derivedColumn("name", "Athlete Name", () => ""),
+      derivedColumn("gamesplayed", "GP", (row) => derivedStatValue(row, "GamesTracked")),
+      derivedColumn("rushingyards", "Rush", (row) => derivedStatValue(row, "RushingYards")),
+      derivedColumn("receivingyards", "Rec", (row) => derivedStatValue(row, "ReceivingYards")),
+      derivedColumn("kickoffreturnyards", "KR", (row) => derivedStatValue(row, "KickoffReturnYards")),
+      derivedColumn("puntreturnyards", "PR", (row) => derivedStatValue(row, "PuntReturnYards")),
+      derivedColumn("allpurposeyards", "Total", (row) => derivedDisplay(row, derivedAllPurposeYards)),
+    ],
+  },
+  {
+    title: "Total Yards",
+    tableId: "total_yards",
+    hasData: (row) => hasDerivedStat(row, ["PassingYards", "RushingYards", "ReceivingYards", "TotalYards"]),
+    sortValue: derivedTotalYards,
+    columns: [
+      derivedColumn("jersey", "#", () => ""),
+      derivedColumn("name", "Athlete Name", () => ""),
+      derivedColumn("gamesplayed", "GP", (row) => derivedStatValue(row, "GamesTracked")),
+      derivedColumn("passingyards", "Pass", (row) => derivedStatValue(row, "PassingYards")),
+      derivedColumn("rushingyards", "Rush", (row) => derivedStatValue(row, "RushingYards")),
+      derivedColumn("receivingyards", "Rec", (row) => derivedStatValue(row, "ReceivingYards")),
+      derivedColumn("totalyards", "Total", (row) => derivedDisplay(row, derivedTotalYards)),
+    ],
+  },
+  {
+    title: "Tackles",
+    tableId: "tackles",
+    hasData: (row) => hasDerivedStat(row, ["Tackles", "Assists", "TotalTackles", "TacklesForLoss"]),
+    sortValue: (row) => getDerivedNumber(row, "TotalTackles"),
+    columns: [
+      derivedColumn("jersey", "#", () => ""),
+      derivedColumn("name", "Athlete Name", () => ""),
+      derivedColumn("gamesplayed", "GP", (row) => derivedStatValue(row, "GamesTracked")),
+      derivedColumn("tackles", "Solo", (row) => derivedStatValue(row, "Tackles")),
+      derivedColumn("assists", "Ast", (row) => derivedStatValue(row, "Assists")),
+      derivedColumn("totaltackles", "Total", (row) => derivedStatValue(row, "TotalTackles", (value) => derivedDecimal(value, 1))),
+      derivedColumn("tacklesforloss", "TFL", (row) => derivedStatValue(row, "TacklesForLoss", (value) => derivedDecimal(value, 1))),
+    ],
+  },
+  {
+    title: "Sacks",
+    tableId: "sacks",
+    hasData: (row) => hasDerivedStat(row, ["Sacks", "QBHurries"]),
+    sortValue: (row) => getDerivedNumber(row, "Sacks"),
+    columns: [
+      derivedColumn("jersey", "#", () => ""),
+      derivedColumn("name", "Athlete Name", () => ""),
+      derivedColumn("gamesplayed", "GP", (row) => derivedStatValue(row, "GamesTracked")),
+      derivedColumn("sacks", "Sacks", (row) => derivedStatValue(row, "Sacks", (value) => derivedDecimal(value, 1))),
+      derivedColumn("qbhurries", "QBH", (row) => derivedStatValue(row, "QBHurries")),
+    ],
+  },
+  {
+    title: "Defensive Statistics",
+    tableId: "defense",
+    hasData: (row) => hasDerivedStat(row, ["INTs", "INTYards", "PassesDefensed", "CausedFumbles", "FumbleRecoveries"]),
+    sortValue: (row) => getDerivedNumber(row, "INTs"),
+    columns: [
+      derivedColumn("jersey", "#", () => ""),
+      derivedColumn("name", "Athlete Name", () => ""),
+      derivedColumn("gamesplayed", "GP", (row) => derivedStatValue(row, "GamesTracked")),
+      derivedColumn("ints", "Int", (row) => derivedStatValue(row, "Ints")),
+      derivedColumn("intyards", "Int Yds", (row) => derivedStatValue(row, "IntYards")),
+      derivedColumn("intreturnedtdnum", "Int TD", (row) => derivedStatValue(row, "IntReturnedTDNum")),
+      derivedColumn("passesdefensed", "PD", (row) => derivedStatValue(row, "PassesDefensed")),
+      derivedColumn("causedfumbles", "CF", (row) => derivedStatValue(row, "CausedFumbles")),
+      derivedColumn("fumblerecoveries", "FR", (row) => derivedStatValue(row, "FumbleRecoveries")),
+      derivedColumn("defensivetd", "Def TD", (row) => derivedDisplay(row, derivedDefensiveTouchdowns)),
+    ],
+  },
+  {
+    title: "Punts",
+    tableId: "punts",
+    hasData: (row) => hasDerivedStat(row, ["PuntNum", "PuntYards", "PuntAverage"]),
+    sortValue: (row) => getDerivedNumber(row, "PuntYards") || getDerivedNumber(row, "PuntNum"),
+    columns: [
+      derivedColumn("jersey", "#", () => ""),
+      derivedColumn("name", "Athlete Name", () => ""),
+      derivedColumn("gamesplayed", "GP", (row) => derivedStatValue(row, "GamesTracked")),
+      derivedColumn("puntnum", "Punts", (row) => derivedStatValue(row, "PuntNum")),
+      derivedColumn("puntyards", "Yds", (row) => derivedStatValue(row, "PuntYards")),
+      derivedColumn("puntaverage", "Avg", (row) => derivedDisplay(row, derivedPuntAverage, (value) => derivedDecimal(value, 1))),
+      derivedColumn("puntlong", "Long", (row) => derivedStatValue(row, "PuntLong")),
+    ],
+  },
+  {
+    title: "Kickoff and Punt Returns",
+    tableId: "returns",
+    hasData: (row) =>
+      hasDerivedStat(row, ["KickoffReturnYards", "PuntReturnYards", "KickoffReturnedTDNum", "PuntReturnedTDNum"]),
+    sortValue: derivedTotalReturnYards,
+    columns: [
+      derivedColumn("jersey", "#", () => ""),
+      derivedColumn("name", "Athlete Name", () => ""),
+      derivedColumn("gamesplayed", "GP", (row) => derivedStatValue(row, "GamesTracked")),
+      derivedColumn("kickoffreturnnum", "KR", (row) => derivedStatValue(row, "KickoffReturnNum")),
+      derivedColumn("kickoffreturnyards", "KR Yds", (row) => derivedStatValue(row, "KickoffReturnYards")),
+      derivedColumn("kickoffreturnedtdnum", "KR TD", (row) => derivedStatValue(row, "KickoffReturnedTDNum")),
+      derivedColumn("puntreturnnum", "PR", (row) => derivedStatValue(row, "PuntReturnNum")),
+      derivedColumn("puntreturnyards", "PR Yds", (row) => derivedStatValue(row, "PuntReturnYards")),
+      derivedColumn("puntreturnedtdnum", "PR TD", (row) => derivedStatValue(row, "PuntReturnedTDNum")),
+      derivedColumn("totalreturnyards", "Total", (row) => derivedDisplay(row, derivedTotalReturnYards)),
+      derivedColumn("returntd", "Ret TD", (row) => derivedDisplay(row, derivedReturnTouchdowns)),
+    ],
+  },
+  {
+    title: "PATs and Field Goals",
+    tableId: "kicking",
+    hasData: (row) => hasDerivedStat(row, ["PATKickingMade", "PATKickingAtt", "FGMade", "FGAtt"]),
+    sortValue: derivedTotalKickingPoints,
+    columns: [
+      derivedColumn("jersey", "#", () => ""),
+      derivedColumn("name", "Athlete Name", () => ""),
+      derivedColumn("gamesplayed", "GP", (row) => derivedStatValue(row, "GamesTracked")),
+      derivedColumn("patkickingmade", "PAT", (row) => derivedStatValue(row, "PatKickingMade")),
+      derivedColumn("patkickingatt", "PAT Att", (row) => derivedStatValue(row, "PatKickingAtt")),
+      derivedColumn("patkickingpercentage", "PAT %", (row) => derivedDisplay(row, derivedPatPct, derivedPercent)),
+      derivedColumn("fgmade", "FG", (row) => derivedStatValue(row, "FGMade")),
+      derivedColumn("fgatt", "FG Att", (row) => derivedStatValue(row, "FGAtt")),
+      derivedColumn("fgpercentage", "FG %", (row) => derivedDisplay(row, derivedFgPct, derivedPercent)),
+      derivedColumn("fglong", "Long", (row) => derivedStatValue(row, "FGLong")),
+      derivedColumn("totalkickingpoints", "K Pts", (row) => derivedDisplay(row, derivedTotalKickingPoints)),
+    ],
+  },
+  {
+    title: "Touchdowns",
+    tableId: "touchdowns",
+    hasData: (row) =>
+      hasDerivedStat(row, ["TotalTDNum", "RushingTDNum", "ReceivingTDNum", "PuntReturnedTDNum", "IntReturnedTDNum"]),
+    sortValue: derivedTotalTouchdowns,
+    columns: [
+      derivedColumn("jersey", "#", () => ""),
+      derivedColumn("name", "Athlete Name", () => ""),
+      derivedColumn("gamesplayed", "GP", (row) => derivedStatValue(row, "GamesTracked")),
+      derivedColumn("rushingtdnum", "Rush", (row) => derivedStatValue(row, "RushingTDNum")),
+      derivedColumn("receivingtdnum", "Rec", (row) => derivedStatValue(row, "ReceivingTDNum")),
+      derivedColumn("kickoffreturnedtdnum", "KR", (row) => derivedStatValue(row, "KickoffReturnedTDNum")),
+      derivedColumn("puntreturnedtdnum", "PR", (row) => derivedStatValue(row, "PuntReturnedTDNum")),
+      derivedColumn("intreturnedtdnum", "Int", (row) => derivedStatValue(row, "IntReturnedTDNum")),
+      derivedColumn("fumblereturnedtdnum", "Fum", (row) => derivedStatValue(row, "FumbleReturnedTDNum")),
+      derivedColumn("totaltdnum", "Total", (row) => derivedDisplay(row, derivedTotalTouchdowns)),
+    ],
+  },
+  {
+    title: "Conversions",
+    tableId: "conversions",
+    hasData: (row) => hasDerivedStat(row, ["PATConversions", "PATRushingNum", "PatReceivingNum", "TotalConversionPoints"]),
+    sortValue: (row) => getDerivedNumber(row, "TotalConversionPoints") || getDerivedNumber(row, "PATConversions"),
+    columns: [
+      derivedColumn("jersey", "#", () => ""),
+      derivedColumn("name", "Athlete Name", () => ""),
+      derivedColumn("gamesplayed", "GP", (row) => derivedStatValue(row, "GamesTracked")),
+      derivedColumn("patconversions", "Conv", (row) => derivedStatValue(row, "PATConversions")),
+      derivedColumn("patrushingnum", "Rush", (row) => derivedStatValue(row, "PATRushingNum")),
+      derivedColumn("patreceivingnum", "Rec", (row) => derivedStatValue(row, "PatReceivingNum")),
+      derivedColumn("totalconversionpoints", "Pts", (row) => derivedStatValue(row, "TotalConversionPoints")),
+    ],
+  },
+  {
+    title: "Points",
+    tableId: "points",
+    hasData: (row) => hasDerivedStat(row, ["TotalPoints", "TotalKickingPoints", "TotalConversionPoints", "TotalTDNum"]),
+    sortValue: derivedTotalPoints,
+    columns: [
+      derivedColumn("jersey", "#", () => ""),
+      derivedColumn("name", "Athlete Name", () => ""),
+      derivedColumn("gamesplayed", "GP", (row) => derivedStatValue(row, "GamesTracked")),
+      derivedColumn("totaltdnum", "TD", (row) => derivedDisplay(row, derivedTotalTouchdowns)),
+      derivedColumn("totaltdpoints", "TD Pts", (row) => derivedStatValue(row, "TotalTDPoints")),
+      derivedColumn("totalkickingpoints", "Kick Pts", (row) => derivedDisplay(row, derivedTotalKickingPoints)),
+      derivedColumn("totalconversionpoints", "Conv Pts", (row) => derivedStatValue(row, "TotalConversionPoints")),
+      derivedColumn("totalpoints", "Pts", (row) => derivedDisplay(row, derivedTotalPoints)),
+      derivedColumn("pointspergame", "PPG", (row) =>
+        derivedDisplay(row, (entry) => derivedPerGame(derivedTotalPoints(entry), entry), (value) => derivedDecimal(value, 1))
+      ),
+    ],
+  },
+];
 
 function toFiniteNumber(value) {
   if (value == null || String(value).trim() === "") return null;
@@ -452,6 +1046,7 @@ export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
   const [rosters, setRosters] = useState([]);
   const [seasons, setSeasons] = useState([]);
   const [seasonStatsCollection, setSeasonStatsCollection] = useState([]);
+  const [preparedRecordsData, setPreparedRecordsData] = useState(null);
   const [schools, setSchools] = useState([]);
   const [selectedStatsView, setSelectedStatsView] = useState(
     INDIVIDUAL_STATS_VIEW_CONFIG[0].key
@@ -463,7 +1058,10 @@ export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
 
     async function loadData() {
       try {
-        const data = await loadFootballSeasonPageData();
+        const [data, preparedData] = await Promise.all([
+          loadFootballSeasonPageData(),
+          loadPreparedFootballRecordsData(),
+        ]);
         if (cancelled) return;
 
         setGames(data.games);
@@ -471,6 +1069,7 @@ export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
         setRosters(data.rosters);
         setSeasons(data.seasons);
         setSeasonStatsCollection(data.seasonStats);
+        setPreparedRecordsData(preparedData);
         setSchools(data.schools);
         setStatus("");
       } catch (error) {
@@ -556,115 +1155,385 @@ export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
       });
   }, [playerMap, rosterSeason]);
 
-  const passingTable = useMemo(() => getSeasonStatTable(seasonStats, "Passing"), [seasonStats]);
-  const rushingTable = useMemo(() => getSeasonStatTable(seasonStats, "Rushing"), [seasonStats]);
-  const receivingTable = useMemo(
-    () => getSeasonStatTable(seasonStats, "Receiving"),
-    [seasonStats]
-  );
-  const totalYardsTable = useMemo(
-    () => getSeasonStatTable(seasonStats, "Total Yards"),
-    [seasonStats]
-  );
-  const allPurposeTable = useMemo(
-    () => getSeasonStatTable(seasonStats, "All Purpose Yards"),
-    [seasonStats]
-  );
-  const tacklesTable = useMemo(() => getSeasonStatTable(seasonStats, "Tackles"), [seasonStats]);
-  const sacksTable = useMemo(() => getSeasonStatTable(seasonStats, "Sacks"), [seasonStats]);
-  const defenseTable = useMemo(
-    () => getSeasonStatTable(seasonStats, "Defensive Statistics"),
-    [seasonStats]
-  );
-  const returnsTable = useMemo(
-    () => getSeasonStatTable(seasonStats, "Kickoff and Punt Returns"),
-    [seasonStats]
-  );
-  const puntsTable = useMemo(() => getSeasonStatTable(seasonStats, "Punts"), [seasonStats]);
-  const kickoffsTable = useMemo(
-    () => getSeasonStatTable(seasonStats, "Kickoffs"),
-    [seasonStats]
-  );
-  const touchdownsTable = useMemo(
-    () => getSeasonStatTable(seasonStats, "Touchdowns"),
-    [seasonStats]
-  );
-  const conversionsTable = useMemo(
-    () => getSeasonStatTable(seasonStats, "Conversions"),
-    [seasonStats]
+  const rosterByPlayerId = useMemo(() => {
+    const map = new Map();
+    rosterRows.forEach((row) => {
+      if (row?.PlayerID) map.set(String(row.PlayerID), row);
+    });
+    return map;
+  }, [rosterRows]);
+
+  const preparedPlayerSeasonRows = useMemo(
+    () =>
+      (preparedRecordsData?.playerSeasons || []).filter(
+        (row) => Number(row?.SeasonID) === resolvedSeasonId
+      ),
+    [preparedRecordsData, resolvedSeasonId]
   );
 
-  const offenseRows = useMemo(
-    () => [
+  const preparedTeamTotals = useMemo(
+    () => (preparedPlayerSeasonRows.length ? sumDerivedStats(preparedPlayerSeasonRows) : null),
+    [preparedPlayerSeasonRows]
+  );
+
+  const derivedSeasonStatTables = useMemo(() => {
+    if (!preparedPlayerSeasonRows.length) return [];
+
+    return DERIVED_FOOTBALL_TABLES.map((config) =>
+      buildDerivedTable({
+        ...config,
+        rows: preparedPlayerSeasonRows,
+        rosterByPlayerId,
+      })
+    ).filter(Boolean);
+  }, [preparedPlayerSeasonRows, rosterByPlayerId]);
+
+  const derivedSeasonStatTablesByTitle = useMemo(() => {
+    const map = new Map();
+    derivedSeasonStatTables.forEach((table) => {
+      map.set(String(table?.Title || "").trim().toLowerCase(), table);
+    });
+    return map;
+  }, [derivedSeasonStatTables]);
+
+  const getDisplaySeasonStatTable = (title) =>
+    getSeasonStatTable(seasonStats, title) ||
+    derivedSeasonStatTablesByTitle.get(String(title).trim().toLowerCase()) ||
+    null;
+
+  const passingTable = useMemo(
+    () => getDisplaySeasonStatTable("Passing"),
+    [derivedSeasonStatTablesByTitle, seasonStats]
+  );
+  const rushingTable = useMemo(
+    () => getDisplaySeasonStatTable("Rushing"),
+    [derivedSeasonStatTablesByTitle, seasonStats]
+  );
+  const receivingTable = useMemo(
+    () => getDisplaySeasonStatTable("Receiving"),
+    [derivedSeasonStatTablesByTitle, seasonStats]
+  );
+  const totalYardsTable = useMemo(
+    () => getDisplaySeasonStatTable("Total Yards"),
+    [derivedSeasonStatTablesByTitle, seasonStats]
+  );
+  const allPurposeTable = useMemo(
+    () => getDisplaySeasonStatTable("All Purpose Yards"),
+    [derivedSeasonStatTablesByTitle, seasonStats]
+  );
+  const tacklesTable = useMemo(
+    () => getDisplaySeasonStatTable("Tackles"),
+    [derivedSeasonStatTablesByTitle, seasonStats]
+  );
+  const sacksTable = useMemo(
+    () => getDisplaySeasonStatTable("Sacks"),
+    [derivedSeasonStatTablesByTitle, seasonStats]
+  );
+  const defenseTable = useMemo(
+    () => getDisplaySeasonStatTable("Defensive Statistics"),
+    [derivedSeasonStatTablesByTitle, seasonStats]
+  );
+  const returnsTable = useMemo(
+    () => getDisplaySeasonStatTable("Kickoff and Punt Returns"),
+    [derivedSeasonStatTablesByTitle, seasonStats]
+  );
+  const puntsTable = useMemo(
+    () => getDisplaySeasonStatTable("Punts"),
+    [derivedSeasonStatTablesByTitle, seasonStats]
+  );
+  const kickoffsTable = useMemo(
+    () => getDisplaySeasonStatTable("Kickoffs"),
+    [derivedSeasonStatTablesByTitle, seasonStats]
+  );
+  const touchdownsTable = useMemo(
+    () => getDisplaySeasonStatTable("Touchdowns"),
+    [derivedSeasonStatTablesByTitle, seasonStats]
+  );
+  const conversionsTable = useMemo(
+    () => getDisplaySeasonStatTable("Conversions"),
+    [derivedSeasonStatTablesByTitle, seasonStats]
+  );
+  const kickingTable = useMemo(
+    () => getDisplaySeasonStatTable("PATs and Field Goals"),
+    [derivedSeasonStatTablesByTitle, seasonStats]
+  );
+  const pointsTable = useMemo(
+    () => getDisplaySeasonStatTable("Points"),
+    [derivedSeasonStatTablesByTitle, seasonStats]
+  );
+
+  const offenseRows = useMemo(() => {
+    const passingComp = firstMeaningfulValue(
+      tableTotal(passingTable, "passingcomp"),
+      derivedStatValue(preparedTeamTotals, "PassingComp")
+    );
+    const passingAtt = firstMeaningfulValue(
+      tableTotal(passingTable, "passingatt"),
+      derivedStatValue(preparedTeamTotals, "PassingAtt")
+    );
+    const passingTd = firstMeaningfulValue(
+      tableTotal(passingTable, "passingtd"),
+      derivedStatValue(preparedTeamTotals, "PassingTD")
+    );
+    const passingInt = firstMeaningfulValue(
+      tableTotal(passingTable, "passingint"),
+      derivedStatValue(preparedTeamTotals, "PassingInt")
+    );
+    const passingYards = firstMeaningfulValue(
+      tableTotal(passingTable, "passingyards"),
+      derivedStatValue(preparedTeamTotals, "PassingYards")
+    );
+    const rushingYards = firstMeaningfulValue(
+      tableTotal(rushingTable, "rushingyards"),
+      derivedStatValue(preparedTeamTotals, "RushingYards")
+    );
+    const tableTotalOffense =
+      toFiniteNumber(passingYards) !== null && toFiniteNumber(rushingYards) !== null
+        ? toFiniteNumber(passingYards) + toFiniteNumber(rushingYards)
+        : null;
+    const totalOffense = derivedSum(preparedTeamTotals, ["PassingYards", "RushingYards"]);
+
+    return [
+      {
+        label: "Points scored",
+        value: firstMeaningfulValue(formatSeasonSummaryValue(season?.PointsFor)),
+      },
       {
         label: "Pass completions / attempts",
         value:
-          hasMeaningfulValue(passingTable?.Totals?.passingcomp) &&
-          hasMeaningfulValue(passingTable?.Totals?.passingatt)
-            ? `${passingTable.Totals.passingcomp} / ${passingTable.Totals.passingatt}`
+          hasMeaningfulValue(passingComp) && hasMeaningfulValue(passingAtt)
+            ? `${passingComp} / ${passingAtt}`
             : "—",
       },
-      { label: "Passing yards", value: passingTable?.Totals?.passingyards || "—" },
+      {
+        label: "Passing yards",
+        value: firstMeaningfulValue(passingYards, "—"),
+      },
       {
         label: "Passing TD / INT",
         value:
-          hasMeaningfulValue(passingTable?.Totals?.passingtd) &&
-          hasMeaningfulValue(passingTable?.Totals?.passingint)
-            ? `${passingTable.Totals.passingtd} / ${passingTable.Totals.passingint}`
+          hasMeaningfulValue(passingTd) && hasMeaningfulValue(passingInt)
+            ? `${passingTd} / ${passingInt}`
             : "—",
       },
-      { label: "Rushing attempts", value: rushingTable?.Totals?.rushingnum || "—" },
-      { label: "Rushing yards", value: rushingTable?.Totals?.rushingyards || "—" },
-      { label: "Rushing TD", value: rushingTable?.Totals?.rushingtdnum || "—" },
-      { label: "Receiving yards", value: receivingTable?.Totals?.receivingyards || "—" },
+      {
+        label: "Rushing attempts",
+        value: firstMeaningfulValue(
+          tableTotal(rushingTable, "rushingnum"),
+          derivedStatValue(preparedTeamTotals, "RushingNum"),
+          "—"
+        ),
+      },
+      {
+        label: "Rushing yards",
+        value: firstMeaningfulValue(rushingYards, "—"),
+      },
+      {
+        label: "Rushing TD",
+        value: firstMeaningfulValue(
+          tableTotal(rushingTable, "rushingtdnum"),
+          derivedStatValue(preparedTeamTotals, "RushingTDNum"),
+          "—"
+        ),
+      },
+      {
+        label: "Receiving yards",
+        value: firstMeaningfulValue(
+          tableTotal(receivingTable, "receivingyards"),
+          derivedStatValue(preparedTeamTotals, "ReceivingYards"),
+          "—"
+        ),
+      },
       {
         label: "Total offense",
-        value:
-          hasMeaningfulValue(totalYardsTable?.Totals?.totalyards) &&
-          hasMeaningfulValue(totalYardsTable?.Totals?.totalyardspergame)
-            ? `${totalYardsTable.Totals.totalyards} (${totalYardsTable.Totals.totalyardspergame}/G)`
-            : totalYardsTable?.Totals?.totalyards || "—",
+        value: firstMeaningfulValue(
+          derivedWhole(tableTotalOffense),
+          derivedWhole(totalOffense),
+          tableTotal(totalYardsTable, "totalyards"),
+          "—"
+        ),
       },
       {
         label: "All-purpose yards",
-        value:
-          hasMeaningfulValue(allPurposeTable?.Totals?.allpurposeyards) &&
-          hasMeaningfulValue(allPurposeTable?.Totals?.allpurposeyardspergame)
-            ? `${allPurposeTable.Totals.allpurposeyards} (${allPurposeTable.Totals.allpurposeyardspergame}/G)`
-            : allPurposeTable?.Totals?.allpurposeyards || "—",
+        value: firstMeaningfulValue(
+          tableTotal(allPurposeTable, "allpurposeyards"),
+          derivedDisplay(preparedTeamTotals, derivedAllPurposeYards),
+          "—"
+        ),
       },
-    ],
-    [allPurposeTable, passingTable, receivingTable, rushingTable, totalYardsTable]
-  );
+    ];
+  }, [allPurposeTable, passingTable, preparedTeamTotals, receivingTable, rushingTable, season, totalYardsTable]);
 
   const defenseRows = useMemo(
     () => [
-      { label: "Total tackles", value: tacklesTable?.Totals?.totaltackles || "—" },
-      { label: "Tackles for loss", value: tacklesTable?.Totals?.tacklesforloss || "—" },
-      { label: "Sacks", value: sacksTable?.Totals?.sacks || "—" },
-      { label: "QB hurries", value: sacksTable?.Totals?.qbhurries || "—" },
-      { label: "Interceptions", value: defenseTable?.Totals?.ints || "—" },
-      { label: "INT return yards", value: defenseTable?.Totals?.intyards || "—" },
-      { label: "Passes defensed", value: defenseTable?.Totals?.passesdefensed || "—" },
-      { label: "Fumble recoveries", value: defenseTable?.Totals?.fumblerecoveries || "—" },
-      { label: "Caused fumbles", value: defenseTable?.Totals?.causedfumbles || "—" },
+      {
+        label: "Points allowed",
+        value: firstMeaningfulValue(formatSeasonSummaryValue(season?.PointsAgainst)),
+      },
+      {
+        label: "Total tackles",
+        value: firstMeaningfulValue(
+          tableTotal(tacklesTable, "totaltackles"),
+          derivedStatValue(preparedTeamTotals, "TotalTackles", (value) => derivedDecimal(value, 1))
+        ),
+      },
+      {
+        label: "Tackles for loss",
+        value: firstMeaningfulValue(
+          tableTotal(tacklesTable, "tacklesforloss"),
+          derivedStatValue(preparedTeamTotals, "TacklesForLoss", (value) => derivedDecimal(value, 1))
+        ),
+      },
+      {
+        label: "Sacks",
+        value: firstMeaningfulValue(
+          tableTotal(sacksTable, "sacks"),
+          derivedStatValue(preparedTeamTotals, "Sacks", (value) => derivedDecimal(value, 1))
+        ),
+      },
+      {
+        label: "QB hurries",
+        value: firstMeaningfulValue(
+          tableTotal(sacksTable, "qbhurries"),
+          derivedStatValue(preparedTeamTotals, "QBHurries")
+        ),
+      },
+      {
+        label: "Interceptions",
+        value: firstMeaningfulValue(
+          tableTotal(defenseTable, "ints"),
+          derivedStatValue(preparedTeamTotals, "Ints")
+        ),
+      },
+      {
+        label: "INT return yards",
+        value: firstMeaningfulValue(
+          tableTotal(defenseTable, "intyards"),
+          derivedStatValue(preparedTeamTotals, "IntYards")
+        ),
+      },
+      {
+        label: "Passes defensed",
+        value: firstMeaningfulValue(
+          tableTotal(defenseTable, "passesdefensed"),
+          derivedStatValue(preparedTeamTotals, "PassesDefensed")
+        ),
+      },
+      {
+        label: "Fumble recoveries",
+        value: firstMeaningfulValue(
+          tableTotal(defenseTable, "fumblerecoveries"),
+          derivedStatValue(preparedTeamTotals, "FumbleRecoveries")
+        ),
+      },
+      {
+        label: "Caused fumbles",
+        value: firstMeaningfulValue(
+          tableTotal(defenseTable, "causedfumbles"),
+          derivedStatValue(preparedTeamTotals, "CausedFumbles")
+        ),
+      },
     ],
-    [defenseTable, sacksTable, tacklesTable]
+    [defenseTable, preparedTeamTotals, sacksTable, season, tacklesTable]
   );
 
   const specialTeamsRows = useMemo(
     () => [
-      { label: "Kickoffs", value: kickoffsTable?.Totals?.kickoffnum || "—" },
-      { label: "Punts", value: puntsTable?.Totals?.puntnum || "—" },
-      { label: "Punt average", value: puntsTable?.Totals?.puntaverage || "—" },
-      { label: "Kickoff returns", value: returnsTable?.Totals?.kickoffreturnnum || "—" },
-      { label: "Kickoff return yards", value: returnsTable?.Totals?.kickoffreturnyards || "—" },
-      { label: "Punt returns", value: returnsTable?.Totals?.puntreturnnum || "—" },
-      { label: "Punt return yards", value: returnsTable?.Totals?.puntreturnyards || "—" },
-      { label: "Total touchdowns", value: touchdownsTable?.Totals?.totaltdnum || "—" },
-      { label: "Conversions", value: conversionsTable?.Totals?.patconversions || "—" },
+      {
+        label: "Kickoffs",
+        value: firstMeaningfulValue(
+          tableTotal(kickoffsTable, "kickoffnum"),
+          derivedStatValue(preparedTeamTotals, "KickoffNum")
+        ),
+      },
+      {
+        label: "Punts",
+        value: firstMeaningfulValue(
+          tableTotal(puntsTable, "puntnum"),
+          derivedStatValue(preparedTeamTotals, "PuntNum")
+        ),
+      },
+      {
+        label: "Punt average",
+        value: firstMeaningfulValue(
+          tableTotal(puntsTable, "puntaverage"),
+          derivedDisplay(preparedTeamTotals, derivedPuntAverage, (value) => derivedDecimal(value, 1))
+        ),
+      },
+      {
+        label: "Kickoff returns",
+        value: firstMeaningfulValue(
+          tableTotal(returnsTable, "kickoffreturnnum"),
+          derivedStatValue(preparedTeamTotals, "KickoffReturnNum")
+        ),
+      },
+      {
+        label: "Kickoff return yards",
+        value: firstMeaningfulValue(
+          tableTotal(returnsTable, "kickoffreturnyards"),
+          derivedStatValue(preparedTeamTotals, "KickoffReturnYards")
+        ),
+      },
+      {
+        label: "Punt returns",
+        value: firstMeaningfulValue(
+          tableTotal(returnsTable, "puntreturnnum"),
+          derivedStatValue(preparedTeamTotals, "PuntReturnNum")
+        ),
+      },
+      {
+        label: "Punt return yards",
+        value: firstMeaningfulValue(
+          tableTotal(returnsTable, "puntreturnyards"),
+          derivedStatValue(preparedTeamTotals, "PuntReturnYards")
+        ),
+      },
+      {
+        label: "PAT made",
+        value: firstMeaningfulValue(
+          tableTotal(kickingTable, "patkickingmade"),
+          derivedStatValue(preparedTeamTotals, "PatKickingMade")
+        ),
+      },
+      {
+        label: "Field goals made",
+        value: firstMeaningfulValue(
+          tableTotal(kickingTable, "fgmade"),
+          derivedStatValue(preparedTeamTotals, "FGMade")
+        ),
+      },
+      {
+        label: "Total touchdowns",
+        value: firstMeaningfulValue(
+          tableTotal(touchdownsTable, "totaltdnum"),
+          derivedDisplay(preparedTeamTotals, derivedTotalTouchdowns)
+        ),
+      },
+      {
+        label: "Tracked individual points",
+        value: firstMeaningfulValue(
+          tableTotal(pointsTable, "totalpoints"),
+          derivedDisplay(preparedTeamTotals, derivedTotalPoints)
+        ),
+      },
+      {
+        label: "Conversions",
+        value: firstMeaningfulValue(
+          tableTotal(conversionsTable, "patconversions"),
+          derivedStatValue(preparedTeamTotals, "PATConversions")
+        ),
+      },
     ],
-    [conversionsTable, kickoffsTable, puntsTable, returnsTable, touchdownsTable]
+    [
+      conversionsTable,
+      kickingTable,
+      kickoffsTable,
+      pointsTable,
+      preparedTeamTotals,
+      puntsTable,
+      returnsTable,
+      touchdownsTable,
+    ]
   );
 
   const combinedTeamStatsSections = useMemo(
@@ -689,10 +1558,10 @@ export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
       INDIVIDUAL_STATS_VIEW_CONFIG.map((view) => ({
         ...view,
         tables: view.tableTitles
-          .map((title) => getSeasonStatTable(seasonStats, title))
+          .map((title) => getDisplaySeasonStatTable(title))
           .filter(Boolean),
       })).filter((view) => view.tables.length > 0),
-    [seasonStats]
+    [derivedSeasonStatTablesByTitle, seasonStats]
   );
 
   useEffect(() => {
@@ -949,6 +1818,7 @@ export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
                       title={table.Title}
                       columns={table.Columns || []}
                       rows={table.Rows || []}
+                      totals={table.Totals || null}
                     />
                   ))}
                 </div>
