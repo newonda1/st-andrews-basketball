@@ -2,27 +2,63 @@
   {
     "SeasonID": 2003,
     "SourceSeasonLabel": "2003-04",
+    "HeadCoach": "Mandy Stinson",
+    "Staff": [
+      {
+        "Name": "Mandy Stinson",
+        "Position": "Head Coach"
+      },
+      {
+        "Name": "Randy Bugos",
+        "Position": "Assistant Coach"
+      }
+    ],
     "Players": [
       {
-        "PlayerID": 200401,
-        "JerseyNumber": null,
-        "Grade": 9,
-        "GradeLabel": "Fr.",
-        "Positions": [],
-        "Distinctions": [
-          "2003 Coastal Empire Volleyball Second Team"
-        ]
+        "PlayerID": 200603,
+        "JerseyNumber": 13,
+        "Grade": 10,
+        "GradeLabel": "So.",
+        "Positions": []
+      },
+      {
+        "PlayerID": 200405,
+        "JerseyNumber": 5,
+        "Grade": 12,
+        "GradeLabel": "Sr.",
+        "Positions": []
       },
       {
         "PlayerID": 200403,
-        "JerseyNumber": null,
-        "Grade": null,
-        "GradeLabel": null,
+        "JerseyNumber": 9,
+        "Grade": 10,
+        "GradeLabel": "So.",
+        "Positions": []
+      },
+      {
+        "PlayerID": 200421,
+        "JerseyNumber": 10,
+        "Grade": 10,
+        "GradeLabel": "So.",
+        "Positions": []
+      },
+      {
+        "PlayerID": 200445,
+        "JerseyNumber": 11,
+        "Grade": 12,
+        "GradeLabel": "Sr.",
+        "Positions": []
+      },
+      {
+        "PlayerID": 200444,
+        "JerseyNumber": 12,
+        "Grade": 12,
+        "GradeLabel": "Sr.",
         "Positions": []
       },
       {
         "PlayerID": 200404,
-        "JerseyNumber": null,
+        "JerseyNumber": 14,
         "Grade": 12,
         "GradeLabel": "Sr.",
         "Positions": [
@@ -33,15 +69,22 @@
         ]
       },
       {
-        "PlayerID": 200405,
-        "JerseyNumber": null,
-        "Grade": null,
-        "GradeLabel": null,
+        "PlayerID": 200409,
+        "JerseyNumber": 15,
+        "Grade": 10,
+        "GradeLabel": "So.",
+        "Positions": []
+      },
+      {
+        "PlayerID": 200443,
+        "JerseyNumber": 18,
+        "Grade": 12,
+        "GradeLabel": "Sr.",
         "Positions": []
       },
       {
         "PlayerID": 200406,
-        "JerseyNumber": null,
+        "JerseyNumber": 22,
         "Grade": 12,
         "GradeLabel": "Sr.",
         "Positions": [
@@ -52,32 +95,21 @@
         ]
       },
       {
-        "PlayerID": 200421,
-        "JerseyNumber": null,
-        "Grade": null,
-        "GradeLabel": null,
+        "PlayerID": 200428,
+        "JerseyNumber": 23,
+        "Grade": 12,
+        "GradeLabel": "Sr.",
         "Positions": []
       },
       {
-        "PlayerID": 200603,
-        "JerseyNumber": null,
-        "Grade": 10,
-        "GradeLabel": "So.",
-        "Positions": []
-      },
-      {
-        "PlayerID": 200443,
-        "JerseyNumber": null,
-        "Grade": null,
-        "GradeLabel": null,
-        "Positions": []
-      },
-      {
-        "PlayerID": 200444,
-        "JerseyNumber": null,
-        "Grade": null,
-        "GradeLabel": null,
-        "Positions": []
+        "PlayerID": 200401,
+        "JerseyNumber": 45,
+        "Grade": 9,
+        "GradeLabel": "Fr.",
+        "Positions": [],
+        "Distinctions": [
+          "2003 Coastal Empire Volleyball Second Team"
+        ]
       }
     ]
   },

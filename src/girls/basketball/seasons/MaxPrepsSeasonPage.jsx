@@ -352,7 +352,7 @@ function formatGrade(grade) {
   return String(grade);
 }
 
-function RosterTable({ rows }) {
+function RosterTableBlock({ rows }) {
   return (
     <div className="overflow-x-auto rounded-lg border border-gray-200 bg-white shadow">
       <table className="min-w-full bg-white text-sm text-center">
@@ -361,7 +361,6 @@ function RosterTable({ rows }) {
             <th className={`${recordTableStyles.headerCell} whitespace-nowrap`}>No.</th>
             <th className={`${recordTableStyles.headerCell} text-left`}>Player</th>
             <th className={`${recordTableStyles.headerCell} whitespace-nowrap`}>Grade</th>
-            <th className={`${recordTableStyles.headerCell} text-left`}>Role</th>
           </tr>
         </thead>
         <tbody>
@@ -388,12 +387,11 @@ function RosterTable({ rows }) {
                 <td className={`${recordTableStyles.bodyCell} whitespace-nowrap`}>
                   {formatGrade(row.grade)}
                 </td>
-                <td className={`${recordTableStyles.bodyCell} text-left`}>{row.role || "Player"}</td>
               </tr>
             ))
           ) : (
             <tr>
-              <td className={`${recordTableStyles.bodyCell} text-center text-slate-600`} colSpan={4}>
+              <td className={`${recordTableStyles.bodyCell} text-center text-slate-600`} colSpan={3}>
                 No roster data is available for this season yet.
               </td>
             </tr>
@@ -401,6 +399,28 @@ function RosterTable({ rows }) {
         </tbody>
       </table>
     </div>
+  );
+}
+
+function RosterTable({ rows }) {
+  const splitIndex = Math.ceil(rows.length / 2);
+  const firstColumnRows = rows.slice(0, splitIndex);
+  const secondColumnRows = rows.slice(splitIndex);
+
+  if (rows.length <= 1) {
+    return <RosterTableBlock rows={rows} />;
+  }
+
+  return (
+    <>
+      <div className="lg:hidden">
+        <RosterTableBlock rows={rows} />
+      </div>
+      <div className="hidden gap-4 lg:grid lg:grid-cols-2">
+        <RosterTableBlock rows={firstColumnRows} />
+        <RosterTableBlock rows={secondColumnRows} />
+      </div>
+    </>
   );
 }
 
@@ -680,7 +700,6 @@ function MaxPrepsSeasonPage({
         jersey: entry.JerseyNumber,
         name: playerName(entry.PlayerID),
         grade: entry.Grade,
-        role: "Player",
         path: `/athletics/girls/basketball/players/${entry.PlayerID}`,
       }))
       .sort((a, b) => {
@@ -695,8 +714,7 @@ function MaxPrepsSeasonPage({
         key: `staff-${headCoach}`,
         jersey: "",
         name: headCoach,
-        grade: "",
-        role: "Head Coach",
+        grade: "Head Coach",
         path: "",
       });
     }
@@ -707,6 +725,9 @@ function MaxPrepsSeasonPage({
   const featuredArticle = articles[0] || null;
   const shouldEmbedArticle = embedFeaturedArticleInRecap && featuredArticle;
   const shouldShowRecap = Boolean(splitParagraphs(seasonRecap).length);
+  const statsHeaderCellClassName = "px-2 py-2 text-center text-xs whitespace-nowrap";
+  const statsBodyCellClassName = "px-2 py-1.5 text-center whitespace-nowrap";
+  const statsFooterCellClassName = "px-2 py-2 text-center whitespace-nowrap";
 
   return (
     <div className="mx-auto max-w-6xl space-y-8 px-4 pb-10 pt-2 lg:pb-40">
@@ -988,7 +1009,7 @@ function MaxPrepsSeasonPage({
 
       <section>
         <div className="mt-8 mb-4 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <h2 className="text-2xl font-semibold">Player Statistics</h2>
+          <h2 className="text-2xl font-semibold">Individual Stats</h2>
 
           {!hidePlayerStatsToggle && (
             <div className="flex items-center space-x-2 text-xs sm:text-sm">
@@ -1019,30 +1040,28 @@ function MaxPrepsSeasonPage({
         {seasonTotals.length ? (
           <>
             <div className="overflow-x-auto rounded-lg border border-gray-200 bg-white shadow">
-              <table className="min-w-full bg-white text-xs sm:text-sm text-center whitespace-nowrap">
-                <thead className="bg-gray-100 text-xs uppercase tracking-wide text-gray-700">
+              <table className="min-w-full bg-white text-sm">
+                <thead className="bg-gray-100 text-gray-700">
                   <tr>
-                    <th className="px-2 py-2 text-left sticky left-0 bg-gray-100 z-10">
-                      Player
-                    </th>
-                    <th className="px-2 py-2">#</th>
-                    <th className="px-2 py-2">GP</th>
-                    <th className="px-2 py-2">PTS</th>
-                    <th className="px-2 py-2">REB</th>
-                    <th className="px-2 py-2">AST</th>
-                    <th className="px-2 py-2">STL</th>
-                    <th className="px-2 py-2">BLK</th>
+                    <th className={statsHeaderCellClassName}>#</th>
+                    <th className={statsHeaderCellClassName}>Player</th>
+                    <th className={statsHeaderCellClassName}>GP</th>
+                    <th className={statsHeaderCellClassName}>PTS</th>
+                    <th className={statsHeaderCellClassName}>REB</th>
+                    <th className={statsHeaderCellClassName}>AST</th>
+                    <th className={statsHeaderCellClassName}>STL</th>
+                    <th className={statsHeaderCellClassName}>BLK</th>
                     {!trimShootingColumns && (
                       <>
-                        <th className="px-2 py-2">3PM</th>
-                        <th className="px-2 py-2">3PA</th>
-                        <th className="px-2 py-2">3P%</th>
-                        <th className="px-2 py-2">2PM</th>
-                        <th className="px-2 py-2">2PA</th>
-                        <th className="px-2 py-2">2P%</th>
-                        <th className="px-2 py-2">FTM</th>
-                        <th className="px-2 py-2">FTA</th>
-                        <th className="px-2 py-2">FT%</th>
+                        <th className={statsHeaderCellClassName}>3PM</th>
+                        <th className={statsHeaderCellClassName}>3PA</th>
+                        <th className={statsHeaderCellClassName}>3P%</th>
+                        <th className={statsHeaderCellClassName}>2PM</th>
+                        <th className={statsHeaderCellClassName}>2PA</th>
+                        <th className={statsHeaderCellClassName}>2P%</th>
+                        <th className={statsHeaderCellClassName}>FTM</th>
+                        <th className={statsHeaderCellClassName}>FTA</th>
+                        <th className={statsHeaderCellClassName}>FT%</th>
                       </>
                     )}
                   </tr>
@@ -1055,68 +1074,78 @@ function MaxPrepsSeasonPage({
                         index % 2 ? "bg-gray-50/70" : "bg-white"
                       } hover:bg-gray-100`}
                     >
-                      <td className="px-2 py-1.5 text-left sticky left-0 bg-inherit z-10">
+                      <td className={statsBodyCellClassName}>
+                        {getRosterJerseyNumber(rosterEntries, player.PlayerID) || "-"}
+                      </td>
+                      <td className={statsBodyCellClassName}>
                         <Link
                           to={`/athletics/girls/basketball/players/${player.PlayerID}`}
-                          className="text-blue-700 underline hover:text-blue-900"
+                          className="text-blue-600 hover:underline"
                         >
                           {playerName(player.PlayerID)}
                         </Link>
                       </td>
-                      <td className="px-2 py-1.5">
-                        {getRosterJerseyNumber(rosterEntries, player.PlayerID) || "-"}
-                      </td>
-                      <td className="px-2 py-1.5">{player.GamesPlayed}</td>
-                      <td className="px-2 py-1.5">{valueFor(player, "Points")}</td>
-                      <td className="px-2 py-1.5">{valueFor(player, "Rebounds")}</td>
-                      <td className="px-2 py-1.5">{valueFor(player, "Assists")}</td>
-                      <td className="px-2 py-1.5">{valueFor(player, "Steals")}</td>
-                      <td className="px-2 py-1.5">{valueFor(player, "Blocks")}</td>
+                      <td className={statsBodyCellClassName}>{player.GamesPlayed}</td>
+                      <td className={statsBodyCellClassName}>{valueFor(player, "Points")}</td>
+                      <td className={statsBodyCellClassName}>{valueFor(player, "Rebounds")}</td>
+                      <td className={statsBodyCellClassName}>{valueFor(player, "Assists")}</td>
+                      <td className={statsBodyCellClassName}>{valueFor(player, "Steals")}</td>
+                      <td className={statsBodyCellClassName}>{valueFor(player, "Blocks")}</td>
                       {!trimShootingColumns && (
                         <>
-                          <td className="px-2 py-1.5">{valueFor(player, "ThreePM")}</td>
-                          <td className="px-2 py-1.5">{valueFor(player, "ThreePA")}</td>
-                          <td className="px-2 py-1.5">
+                          <td className={statsBodyCellClassName}>{valueFor(player, "ThreePM")}</td>
+                          <td className={statsBodyCellClassName}>{valueFor(player, "ThreePA")}</td>
+                          <td className={statsBodyCellClassName}>
                             {pct(player.ThreePM, player.ThreePA)}
                           </td>
-                          <td className="px-2 py-1.5">{valueFor(player, "TwoPM")}</td>
-                          <td className="px-2 py-1.5">{valueFor(player, "TwoPA")}</td>
-                          <td className="px-2 py-1.5">{pct(player.TwoPM, player.TwoPA)}</td>
-                          <td className="px-2 py-1.5">{valueFor(player, "FTM")}</td>
-                          <td className="px-2 py-1.5">{valueFor(player, "FTA")}</td>
-                          <td className="px-2 py-1.5">{pct(player.FTM, player.FTA)}</td>
+                          <td className={statsBodyCellClassName}>{valueFor(player, "TwoPM")}</td>
+                          <td className={statsBodyCellClassName}>{valueFor(player, "TwoPA")}</td>
+                          <td className={statsBodyCellClassName}>
+                            {pct(player.TwoPM, player.TwoPA)}
+                          </td>
+                          <td className={statsBodyCellClassName}>{valueFor(player, "FTM")}</td>
+                          <td className={statsBodyCellClassName}>{valueFor(player, "FTA")}</td>
+                          <td className={statsBodyCellClassName}>{pct(player.FTM, player.FTA)}</td>
                         </>
                       )}
                     </tr>
                   ))}
                 </tbody>
-                <tfoot className="border-t-2 border-gray-300 bg-blue-50 font-semibold text-blue-950">
+                <tfoot className="border-t-2 border-gray-300 bg-blue-50 text-blue-950">
                   <tr>
-                    <td className="px-2 py-2 text-left sticky left-0 bg-blue-50 z-10">
-                      Team totals
-                    </td>
-                    <td className="px-2 py-2">-</td>
-                    <td className="px-2 py-2">{teamTotals.GamesPlayed}</td>
-                    <td className="px-2 py-2">{valueFor(teamTotals, "Points")}</td>
-                    <td className="px-2 py-2">{valueFor(teamTotals, "Rebounds")}</td>
-                    <td className="px-2 py-2">{valueFor(teamTotals, "Assists")}</td>
-                    <td className="px-2 py-2">{valueFor(teamTotals, "Steals")}</td>
-                    <td className="px-2 py-2">{valueFor(teamTotals, "Blocks")}</td>
+                    <td className={statsFooterCellClassName}></td>
+                    <td className={statsFooterCellClassName}>Season Totals</td>
+                    <td className={statsFooterCellClassName}>{teamTotals.GamesPlayed}</td>
+                    <td className={statsFooterCellClassName}>{valueFor(teamTotals, "Points")}</td>
+                    <td className={statsFooterCellClassName}>{valueFor(teamTotals, "Rebounds")}</td>
+                    <td className={statsFooterCellClassName}>{valueFor(teamTotals, "Assists")}</td>
+                    <td className={statsFooterCellClassName}>{valueFor(teamTotals, "Steals")}</td>
+                    <td className={statsFooterCellClassName}>{valueFor(teamTotals, "Blocks")}</td>
                     {!trimShootingColumns && (
                       <>
-                        <td className="px-2 py-2">{valueFor(teamTotals, "ThreePM")}</td>
-                        <td className="px-2 py-2">{valueFor(teamTotals, "ThreePA")}</td>
-                        <td className="px-2 py-2">
+                        <td className={statsFooterCellClassName}>
+                          {valueFor(teamTotals, "ThreePM")}
+                        </td>
+                        <td className={statsFooterCellClassName}>
+                          {valueFor(teamTotals, "ThreePA")}
+                        </td>
+                        <td className={statsFooterCellClassName}>
                           {pct(teamTotals.ThreePM, teamTotals.ThreePA)}
                         </td>
-                        <td className="px-2 py-2">{valueFor(teamTotals, "TwoPM")}</td>
-                        <td className="px-2 py-2">{valueFor(teamTotals, "TwoPA")}</td>
-                        <td className="px-2 py-2">
+                        <td className={statsFooterCellClassName}>
+                          {valueFor(teamTotals, "TwoPM")}
+                        </td>
+                        <td className={statsFooterCellClassName}>
+                          {valueFor(teamTotals, "TwoPA")}
+                        </td>
+                        <td className={statsFooterCellClassName}>
                           {pct(teamTotals.TwoPM, teamTotals.TwoPA)}
                         </td>
-                        <td className="px-2 py-2">{valueFor(teamTotals, "FTM")}</td>
-                        <td className="px-2 py-2">{valueFor(teamTotals, "FTA")}</td>
-                        <td className="px-2 py-2">{pct(teamTotals.FTM, teamTotals.FTA)}</td>
+                        <td className={statsFooterCellClassName}>{valueFor(teamTotals, "FTM")}</td>
+                        <td className={statsFooterCellClassName}>{valueFor(teamTotals, "FTA")}</td>
+                        <td className={statsFooterCellClassName}>
+                          {pct(teamTotals.FTM, teamTotals.FTA)}
+                        </td>
                       </>
                     )}
                   </tr>

@@ -1,117 +1,113 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-function Home() {
-  const archiveLinks = [
-    {
-      label: "2025-26 Season",
-      to: "/athletics/girls/basketball/seasons/2025-26",
-    },
-    {
-      label: "2019-20 Season",
-      to: "/athletics/girls/basketball/seasons/2019-20",
-    },
-    {
-      label: "2017-18 Season",
-      to: "/athletics/girls/basketball/seasons/2017-18",
-    },
-    {
-      label: "2009-10 Season",
-      to: "/athletics/girls/basketball/seasons/2009-10",
-    },
-    {
-      label: "2003-04 Season",
-      to: "/athletics/girls/basketball/seasons/2003-04",
-    },
-    {
-      label: "2021-22 Season",
-      to: "/athletics/girls/basketball/seasons/2021-22",
-    },
-    {
-      label: "2020-21 Season",
-      to: "/athletics/girls/basketball/seasons/2020-21",
-    },
-    {
-      label: "Year-by-Year Results",
-      to: "/athletics/girls/basketball/yearly-results",
-    },
-    {
-      label: "Full Team Stats",
-      to: "/athletics/girls/basketball/team/full",
-    },
-    {
-      label: "Career Stats",
-      to: "/athletics/girls/basketball/records/career",
-    },
-  ];
+import SportHomePage from "../../../components/SportHomePage";
 
+const girlsBasketballArchiveImages = [
+  {
+    src: "/images/girls/basketball/girls_basketball_home.jpg",
+    alt: "St. Andrew's girls basketball players gathered at center court",
+    caption: "Girls basketball",
+  },
+  {
+    src: "/images/girls/basketball/seasons/2025-26/Season2025_26_1.png",
+    alt: "St. Andrew's girls basketball players during the 2025-26 season",
+    caption: "2025-26 season",
+  },
+  {
+    src: "/images/girls/basketball/seasons/2003-04/gallery/2003-04-girls-basketball-team.png",
+    alt: "2003-04 St. Andrew's girls basketball team photo",
+    caption: "2003-04 team",
+  },
+  {
+    src: "/images/girls/basketball/seasons/2003-04/gallery/2003-04-girls-basketball-01-leighanne-evans-smile.png",
+    alt: "LeighAnne Evans smiling before a 2003-04 girls basketball game",
+    caption: "2003-04 introductions",
+  },
+  {
+    src: "/images/girls/basketball/seasons/2003-04/gallery/2003-04-girls-basketball-02-becca-cooper-shot.png",
+    alt: "Becca Cooper shooting during the 2003-04 girls basketball season",
+    caption: "2003-04 shot",
+  },
+  {
+    src: "/images/girls/basketball/seasons/2003-04/gallery/2003-04-girls-basketball-03-mary-wilkowski-intro.png",
+    alt: "Mary Wilkowski running onto the court during the 2003-04 season",
+    caption: "2003-04 intro",
+  },
+  {
+    src: "/images/girls/basketball/seasons/2003-04/gallery/2003-04-girls-basketball-04-kunst-timeout.png",
+    alt: "Coach Kevin Kunst talking to the 2003-04 girls basketball team during a timeout",
+    caption: "2003-04 timeout",
+  },
+  {
+    src: "/images/girls/basketball/seasons/2003-04/gallery/2003-04-girls-basketball-05-grace-wilkowski-free-throw.png",
+    alt: "Grace Wilkowski shooting a free throw during the 2003-04 girls basketball season",
+    caption: "2003-04 free throw",
+  },
+  {
+    src: "/images/girls/basketball/seasons/2003-04/gallery/2003-04-girls-basketball-06-michelle-griffin-defense.png",
+    alt: "Michelle Griffin defending during the 2003-04 girls basketball season",
+    caption: "2003-04 defense",
+  },
+  {
+    src: "/images/girls/basketball/seasons/2003-04/gallery/2003-04-girls-basketball-07-jennifer-moesch-free-throw.png",
+    alt: "Jennifer Moesch preparing for a free throw during the 2003-04 season",
+    caption: "2003-04 routine",
+  },
+  {
+    src: "/images/girls/basketball/seasons/2003-04/gallery/2003-04-girls-basketball-08-offensive-rebound.png",
+    alt: "St. Andrew's girls basketball players going for an offensive rebound in 2003-04",
+    caption: "2003-04 rebound",
+  },
+  {
+    src: "/images/girls/basketball/seasons/2003-04/gallery/2003-04-girls-basketball-09-gym-camera.png",
+    alt: "St. Andrew's girls basketball players posing in the gym during the 2003-04 season",
+    caption: "2003-04 gym",
+  },
+  {
+    src: "/images/girls/basketball/seasons/2003-04/gallery/2003-04-girls-basketball-10-defense-memorial.png",
+    alt: "St. Andrew's girls basketball defense against Memorial Day during the 2003-04 season",
+    caption: "2003-04 pressure",
+  },
+  {
+    src: "/images/girls/basketball/seasons/2003-04/gallery/2003-04-girls-basketball-11-mary-rebound-outlet.png",
+    alt: "Mary Wilkowski grabbing a rebound during the 2003-04 girls basketball season",
+    caption: "2003-04 outlet",
+  },
+  {
+    src: "/images/girls/basketball/seasons/2003-04/gallery/2003-04-girls-basketball-12-carie-bugos-ball-fake.png",
+    alt: "Carie Bugos ball faking during the 2003-04 girls basketball season",
+    caption: "2003-04 ball fake",
+  },
+];
+
+export default function Home() {
   return (
-    <div className="space-y-14 pb-8">
-      <section className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-        <div className="stats-offset-media">
-          <img
-            src="/images/girls/basketball/girls_basketball_home.jpg"
-            alt="St. Andrew's girls basketball players gathered at center court"
-            className="block aspect-[1.15/1] w-full object-cover"
-          />
-        </div>
-
-        <div className="stats-editorial-copy">
-          <p className="mb-4 text-[0.82rem] font-bold uppercase tracking-[0.18em] text-[var(--stats-gray)]">
-            Girls&apos; Basketball
-          </p>
-          <h1 className="mb-5 text-[2.2rem] font-bold leading-[1.16] text-[var(--stats-navy)] sm:text-[2.75rem] sm:leading-[1.18]">
-            Building the St. Andrew&apos;s girls basketball archive.
-          </h1>
-          <p className="mb-5 text-[1rem] leading-[1.65] text-[var(--stats-body-color)]">
-            The girls basketball section now connects season pages from 2020-21
-            through the current archive, plus MaxPreps historical seasons back
-            to 2006-07 where schedule, roster, and stat data is available.
-          </p>
-          <p className="m-0 text-[1rem] leading-[1.65] text-[var(--stats-body-color)]">
-            Current pages connect game recaps, team totals, player pages, and
-            record tables so the program history can expand without changing the
-            shape of the section.
-          </p>
-        </div>
-      </section>
-
-      <hr className="stats-page-rule" />
-
-      <section className="grid gap-5 lg:grid-cols-2">
-        <article className="stats-module">
-          <h2 className="stats-module-title">Current Archive</h2>
-          <div className="space-y-5 text-[0.98rem] leading-[1.65] text-[var(--stats-body-color)]">
-            <p className="m-0">
-              Full girls basketball season pages are now live from 2020-21
-              through 2025-26, with MaxPreps archive pages now connected for
-              2006-07 through 2019-20.
-            </p>
-            <p className="m-0">
-              As older seasons are added, they will flow into the same year-by-
-              year tables, opponent records, team records, individual records,
-              and player profiles that support a full program archive.
-            </p>
-          </div>
-        </article>
-
-        <article className="stats-module">
-          <h2 className="stats-module-title">Archive Entry Points</h2>
-          <div className="grid gap-3 sm:grid-cols-2">
-            {archiveLinks.map((item) => (
-              <Link
-                key={item.to}
-                to={item.to}
-                className="border border-[var(--stats-line)] bg-[var(--stats-panel-muted)] px-4 py-4 text-[0.95rem] leading-[1.45] text-[#242424] no-underline transition hover:border-[var(--stats-blue)] hover:bg-white"
-              >
-                {item.label}
-              </Link>
-            ))}
-          </div>
-        </article>
-      </section>
-    </div>
+    <SportHomePage
+      sportName="Girls' Basketball"
+      headline="A growing home for St. Andrew's girls basketball history."
+      intro="The girls basketball archive now connects 22 season records, 432 games, 119 player records, opponent history, team records, individual leaderboards, roster files, and player pages across the site."
+      secondaryIntro="The recovered 2003-04 season adds a 21-5 State Final Four run, full roster details, newspaper recaps, game-by-game scoring, and a newly organized photo gallery to the modern season pages already live from 2020-21 through 2025-26."
+      heroImage="/images/girls/basketball/girls_basketball_home.jpg"
+      heroImageAlt="St. Andrew's girls basketball players gathered at center court"
+      heroImageCaption="Girls Basketball Archive"
+      storyTitle="Program Archive"
+      storyParagraphs={[
+        "The archive now reaches from the 2002-03 state championship marker and the recovered 2003-04 postseason run through the current 2025-26 season. Season pages, game detail pages, record tables, and player profiles share one data structure so new finds can flow into the same historical record.",
+        "The current files include 19 roster seasons, 2,541 player stat rows, 71 recorded opponents, and a 2003-04 archive package with team photos, game clippings, and a feature on Grace and Mary Wilkowski anchoring a faster Saints team under Kevin Kunst.",
+      ]}
+      highlights={[
+        "22 season records",
+        "432 games in the database",
+        "119 player records",
+        "2,541 player stat rows",
+        "71 recorded opponents",
+        "19 roster seasons",
+        "2002-03 state championship",
+        "2003-04 State Final Four",
+        "2020-21 through 2025-26 season pages",
+        "Game recaps, records, and player profiles",
+      ]}
+      archiveImages={girlsBasketballArchiveImages}
+    />
   );
 }
-
-export default Home;

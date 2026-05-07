@@ -23,6 +23,9 @@
     "DisplaySeason": "2003",
     "SourceSeasonLabel": "2003-04",
     "HeadCoach": "Mandy Stinson",
+    "AssistantCoaches": [
+      "Randy Bugos"
+    ],
     "OverallWins": 19,
     "OverallLosses": 3,
     "RegionWins": 10,
@@ -31,7 +34,76 @@
     "League": "SCISA Region IIAA",
     "StateDivision": "SCISA AA",
     "StateFinish": "State Runner-up",
-    "SourceCitation": "Savannah Morning News, Dec. 9, 2003"
+    "SourceCitation": "Savannah Morning News, Dec. 9, 2003",
+    "ShowSeasonImagesPlaceholder": true,
+    "SeasonImages": [
+      {
+        "src": "/images/girls/volleyball/seasons/2003-04/2003-04-volleyball-team.png",
+        "alt": "2003-04 St. Andrew's volleyball team photo",
+        "caption": "2003-04 Lady Saints volleyball team"
+      },
+      {
+        "src": "/images/girls/volleyball/seasons/2003-04/2003-04-volleyball-01-becca-timms-warmup.png",
+        "alt": "Becca Timms warming up before a volleyball game",
+        "caption": "Newcomer Becca Timms warms up before the volleyball game"
+      },
+      {
+        "src": "/images/girls/volleyball/seasons/2003-04/2003-04-volleyball-02-mary-wilkowski-bump.png",
+        "alt": "Mary Wilkowski bumping a volleyball",
+        "caption": "Mary Wilkowski, \"The M-Train\", shows her perfect bumping skills"
+      },
+      {
+        "src": "/images/girls/volleyball/seasons/2003-04/2003-04-volleyball-03-coach-stinson-reminders.png",
+        "alt": "Coach Mandy Stinson talking to the volleyball team before a game",
+        "caption": "Coach Stinson giving the team some final reminders before a game"
+      },
+      {
+        "src": "/images/girls/volleyball/seasons/2003-04/2003-04-volleyball-04-becca-cooper-region.png",
+        "alt": "Becca Cooper playing volleyball during the 2003-04 season",
+        "caption": "Captain Becca Cooper shows why the Lady Saints are 10-0 in the region"
+      },
+      {
+        "src": "/images/girls/volleyball/seasons/2003-04/2003-04-volleyball-05-leighanne-evans-serve.png",
+        "alt": "LeighAnne Evans serving during a volleyball match",
+        "caption": "LeighAnne Evans serves it up in another tough volleyball match"
+      },
+      {
+        "src": "/images/girls/volleyball/seasons/2003-04/2003-04-volleyball-06-team-huddle.png",
+        "alt": "The St. Andrew's volleyball team gathering for a huddle",
+        "caption": "The team comes together for another huddle"
+      },
+      {
+        "src": "/images/girls/volleyball/seasons/2003-04/2003-04-volleyball-07-colleton-prep-block.png",
+        "alt": "The Lady Saints going up for a block against Colleton Prep",
+        "caption": "The Lady Saints go up for a block in a game against Colleton Prep"
+      },
+      {
+        "src": "/images/girls/volleyball/seasons/2003-04/2003-04-volleyball-08-bugos-to-wilkowski.png",
+        "alt": "Carie Bugos setting the ball to Mary Wilkowski",
+        "caption": "Carie Bugos sets up Mary Wilkowski for another unstoppable kill"
+      },
+      {
+        "src": "/images/girls/volleyball/seasons/2003-04/2003-04-volleyball-09-colleton-prep-warmup.png",
+        "alt": "St. Andrew's volleyball players warming up at Colleton Prep",
+        "caption": "Warming up before a game at Colleton Prep"
+      },
+      {
+        "src": "/images/girls/volleyball/seasons/2003-04/2003-04-volleyball-10-layne-haggberg-underhand.png",
+        "alt": "Layne Haggberg preparing an underhand serve",
+        "caption": "Senior Layne Haggberg approaches for another killer underhand"
+      },
+      {
+        "src": "/images/girls/volleyball/seasons/2003-04/2003-04-volleyball-11-team-bench.png",
+        "alt": "The St. Andrew's volleyball team sitting together on the bench",
+        "caption": "The team hanging out on the bench"
+      }
+    ],
+    "SeasonRecapParagraphs": [
+      "St. Andrew's built one of the strongest volleyball seasons in program history in 2003-04, finishing 19-3 under first-year head coach Mandy Stinson. The Saints moved quickly from an early 3-1 record into control of SCISA Region 2-AA, then kept stacking wins through September and October behind a senior-heavy roster and a young core that included freshman Mary Wilkowski.",
+      "The region run became the backbone of the season. After beating Holly Hill on Sept. 23, St. Andrew's swept Beaufort, beat Colleton Prep, shut out James Island Christian, and posted back-to-back wins over Charleston Collegiate. A second victory over Holly Hill on Oct. 21 completed a 10-0 region mark, gave the Saints the SCISA 2-AA title, and secured the top south seed for the state tournament.",
+      "St. Andrew's carried that form into the postseason. The Saints beat Greenwood Christian in the state tournament opener, then defeated Calhoun Academy twice on Oct. 25 to earn a place in the SCISA Class AA championship match. Becca Cooper, Carie Bugos, Mary Wilkowski, LeighAnne Evans, Grace Wilkowski, Becca Timms, Danielle Praino, Jennifer Lee, Maggie Hinchey, and Layne Haggberg all appeared in the recovered state-tournament stat lines.",
+      "The season ended at Porter-Gaud School in Charleston, where undefeated Pee Dee Academy won the Class AA final 25-19, 25-13, 28-26. Even in defeat, the Saints pushed the final set deep and closed the year as SCISA AA State Runner-up after winning the region championship and reaching the state final for the first time after a semifinal finish the year before."
+    ]
   },
   {
     "SeasonID": 2007,

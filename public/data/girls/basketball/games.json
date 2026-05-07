@@ -306,7 +306,7 @@
     "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
     "Opponent": "Hilton Head Christian Academy",
     "LocationType": "Home",
-    "GameType": "Region",
+    "GameType": "Non-Region",
     "Result": "W",
     "TeamScore": 59,
     "OpponentScore": 43,

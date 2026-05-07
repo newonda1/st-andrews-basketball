@@ -235,10 +235,6 @@ export default function SportHomePage({
         </section>
       ) : null}
 
-      {archiveImages.length > 0 ? (
-        <ArchiveImageRotator title={archiveImagesTitle} images={archiveImages} />
-      ) : null}
-
       {links.length > 0 ? (
         <section className="stats-module">
           <h2 className="stats-module-title">{linksTitle}</h2>
@@ -248,6 +244,10 @@ export default function SportHomePage({
             ))}
           </div>
         </section>
+      ) : null}
+
+      {archiveImages.length > 0 ? (
+        <ArchiveImageRotator title={archiveImagesTitle} images={archiveImages} />
       ) : null}
     </div>
   );

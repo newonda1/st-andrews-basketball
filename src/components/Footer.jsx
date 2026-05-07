@@ -46,10 +46,6 @@ const footerLinkColumns = [
       label: "NAIA Eligibility Center",
       href: "https://play.mynaia.org/",
     },
-    {
-      label: "MaxPreps",
-      href: "https://www.maxpreps.com/ga/savannah/st-andrews-lions/",
-    },
   ],
 ];
 

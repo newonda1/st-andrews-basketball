@@ -13,5 +13,12 @@
     "tourneyL": null,
     "playoffW": null,
     "playoffL": null
+  },
+  {
+    "SeasonID": 2003,
+    "overallW": 21,
+    "overallL": 5,
+    "regionW": 10,
+    "regionL": 0
   }
 ]

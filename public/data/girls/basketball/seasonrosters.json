@@ -15,51 +15,51 @@
       {
         "PlayerID": 200403,
         "JerseyNumber": 50,
-        "Grade": null
+        "Grade": 10
       },
       {
         "PlayerID": 200404,
         "JerseyNumber": 23,
-        "Grade": null
+        "Grade": 12
       },
       {
         "PlayerID": 200405,
         "JerseyNumber": 10,
-        "Grade": null
+        "Grade": 12
       },
       {
         "PlayerID": 200406,
         "JerseyNumber": 22,
-        "Grade": null
+        "Grade": 12
       },
       {
         "PlayerID": 200407,
         "JerseyNumber": 11,
-        "Grade": null
+        "Grade": 10
       },
       {
         "PlayerID": 200408,
         "JerseyNumber": 13,
-        "Grade": null
+        "Grade": 10
       },
       {
         "PlayerID": 200409,
         "JerseyNumber": null,
-        "Grade": null
+        "Grade": 10
       },
       {
         "PlayerID": 200410,
         "JerseyNumber": null,
-        "Grade": null
+        "Grade": 10
       },
       {
         "PlayerID": 200421,
         "JerseyNumber": 24,
-        "Grade": null
+        "Grade": 10
       },
       {
         "PlayerID": 200422,
-        "JerseyNumber": null,
+        "JerseyNumber": 33,
         "Grade": 8
       },
       {

@@ -1,20 +1,18 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
+import { recordTableStyles } from "../../basketball/pages/recordTableStyles";
 import {
   VOLLEYBALL_STAT_SECTIONS,
   aggregatePlayerSeasonStatsFromGames,
-  aggregateTeamSeasonStatsFromMatches,
-  buildGameRecord,
+  aggregateVolleyballSeasonStatRows,
   buildPlayerMap,
   formatDate,
-  formatRecord,
   formatStat,
   getPlayerName,
   getRosterForSeason,
   getSeasonGames,
   getSeasonLabel,
-  getTeamStatCategory,
   hydrateRosterPlayers,
 } from "../volleyballData";
 
@@ -36,6 +34,22 @@ const INDIVIDUAL_STATS_VIEW_CONFIG = [
   },
 ];
 
+const DERIVED_TOTAL_COLUMNS = new Set([
+  "KillsPerSet",
+  "KillPct",
+  "HittingPct",
+  "AcesPerSet",
+  "AcePct",
+  "ServePct",
+  "BlocksPerSet",
+  "BlocksPerMatch",
+  "DigsPerSet",
+  "DigsPerMatch",
+  "AssistsPerSet",
+  "ReceptionsPerSet",
+  "ReceptionsPerMatch",
+]);
+
 function hasMeaningfulValue(value) {
   const text = String(value ?? "").trim();
   return text !== "" && text !== "—" && text !== "-" && text.toLowerCase() !== "n/a";
@@ -43,16 +57,6 @@ function hasMeaningfulValue(value) {
 
 function getStatSection(title) {
   return VOLLEYBALL_STAT_SECTIONS.find((entry) => entry.title === title) || null;
-}
-
-function getStatColumn(title, key) {
-  const section = getStatSection(title);
-  return section?.columns.find((column) => column.key === key) || { key, label: key };
-}
-
-function getFormattedTeamStat(teamStats, title, key) {
-  const stats = getTeamStatCategory(teamStats, title);
-  return formatStat(stats[key], getStatColumn(title, key));
 }
 
 function hasPlayerStatInSection(row, section) {
@@ -70,7 +74,7 @@ function getSortValue(row, column, playerMap) {
   if (column.key === "jersey") return Number(row.JerseyNumber || 999);
   if (column.key === "name") {
     const player = playerMap.get(String(row.PlayerID));
-    return getPlayerName(player) || row.PlayerName || "";
+    return player ? getPlayerName(player) : row.PlayerName || "";
   }
 
   const value = row[column.key];
@@ -112,6 +116,32 @@ function sortRowsForSection(rows, section, sortConfig, playerMap) {
     });
 }
 
+function hasNumericStatValue(row, key) {
+  const value = row?.[key];
+  return value !== null && value !== undefined && value !== "" && Number.isFinite(Number(value));
+}
+
+function hasSourceValueForTotal(row, key) {
+  if (key === "TotalBlocks") {
+    return (
+      hasNumericStatValue(row, "TotalBlocks") ||
+      hasNumericStatValue(row, "SoloBlocks") ||
+      hasNumericStatValue(row, "BlockAssists")
+    );
+  }
+
+  return hasNumericStatValue(row, key);
+}
+
+function shouldShowTotalValue(rows, totals, column) {
+  if (!totals || column.key === "jersey" || column.key === "name") return false;
+  const value = totals[column.key];
+  if (value === null || value === undefined || value === "") return false;
+
+  if (DERIVED_TOTAL_COLUMNS.has(column.key)) return true;
+  return rows.some((row) => hasSourceValueForTotal(row, column.key));
+}
+
 function StatsTable({ title, rows, playerMap }) {
   const section = getStatSection(title);
   const [sortConfig, setSortConfig] = useState({ key: "jersey", direction: "asc" });
@@ -123,6 +153,13 @@ function StatsTable({ title, rows, playerMap }) {
     ...section.columns,
   ];
   const displayRows = sortRowsForSection(rows, section, sortConfig, playerMap);
+  const totals =
+    displayRows.length > 0
+      ? aggregateVolleyballSeasonStatRows(displayRows, { PlayerName: "Season Totals" })
+      : null;
+  const hasTotals =
+    totals &&
+    columns.some((column) => shouldShowTotalValue(displayRows, totals, column));
 
   const updateSort = (column) => {
     setSortConfig((current) => {
@@ -145,17 +182,26 @@ function StatsTable({ title, rows, playerMap }) {
 
     if (column.key === "name") {
       const player = playerMap.get(String(row.PlayerID));
+      const playerName = player ? getPlayerName(player) : row.PlayerName || "—";
+
       return (
         <Link
           to={`/athletics/volleyball/players/${row.PlayerID}`}
           className="text-blue-600 hover:underline"
         >
-          {getPlayerName(player) || row.PlayerName || "—"}
+          {playerName}
         </Link>
       );
     }
 
     return formatStat(row[column.key], column);
+  };
+
+  const renderTotalCell = (column) => {
+    if (column.key === "jersey") return "";
+    if (column.key === "name") return totals?.PlayerName || "Season Totals";
+    if (!shouldShowTotalValue(displayRows, totals, column)) return "—";
+    return formatStat(totals[column.key], column);
   };
 
   return (
@@ -221,89 +267,269 @@ function StatsTable({ title, rows, playerMap }) {
               ))
             )}
           </tbody>
+          {hasTotals ? (
+            <tfoot className="border-t-2 border-gray-300 bg-blue-50 font-semibold text-blue-950">
+              <tr>
+                {columns.map((column) => (
+                  <td
+                    key={`${title}-totals-${column.key}`}
+                    className={`px-2 py-2 text-center whitespace-nowrap ${
+                      column.key === "name" ? "md:text-left" : ""
+                    }`}
+                  >
+                    {renderTotalCell(column)}
+                  </td>
+                ))}
+              </tr>
+            </tfoot>
+          ) : null}
         </table>
       </div>
     </div>
   );
 }
 
-function TeamStatsSectionTable({ title, rows }) {
+function splitParagraphs(text) {
+  if (Array.isArray(text)) {
+    return text.map((paragraph) => String(paragraph || "").trim()).filter(Boolean);
+  }
+
+  return String(text || "")
+    .split(/\n{2,}/)
+    .map((paragraph) => paragraph.trim())
+    .filter(Boolean);
+}
+
+function formatSeasonRecord(season) {
+  if (season?.OverallWins == null || season?.OverallLosses == null) return "";
+  const wins = Number(season.OverallWins);
+  const losses = Number(season.OverallLosses);
+  const ties = Number(season.OverallTies || 0);
+  if (!Number.isFinite(wins) || !Number.isFinite(losses)) return "";
+  return ties > 0 ? `${wins}-${losses}-${ties}` : `${wins}-${losses}`;
+}
+
+function buildSeasonBriefItems(season) {
+  if (!season) return [];
+
+  return [
+    { label: "Record", value: formatSeasonRecord(season) },
+    { label: "Coach", value: season.HeadCoach || "" },
+    { label: "Result", value: season.StateFinish || season.RegionFinish || "" },
+  ].filter((item) => item.value);
+}
+
+function SeasonRecapSection({ recap, briefItems = [] }) {
+  const paragraphs = splitParagraphs(recap);
+  if (!paragraphs.length) return null;
+
+  return (
+    <section id="season-recap" className="mx-auto max-w-4xl space-y-3">
+      <h2 className="text-2xl font-semibold">Season Recap</h2>
+      <div className="flow-root text-base leading-7 text-slate-700">
+        {briefItems.length ? (
+          <dl className="mb-4 grid grid-cols-3 gap-3 text-center md:float-right md:mb-3 md:ml-6 md:w-64 md:grid-cols-1">
+            {briefItems.map((item) => (
+              <div key={item.label} className="rounded-lg border border-gray-200 px-3 py-2">
+                <dt className="text-xs font-semibold uppercase tracking-wide text-gray-500">
+                  {item.label}
+                </dt>
+                <dd className="text-lg font-semibold text-gray-900">{item.value}</dd>
+              </div>
+            ))}
+          </dl>
+        ) : null}
+
+        <div className="space-y-3">
+          {paragraphs.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function SeasonImagesSection({ images = [], seasonLabel }) {
+  const [imageIndex, setImageIndex] = useState(0);
+
+  useEffect(() => {
+    setImageIndex(0);
+  }, [images]);
+
+  if (!images.length) {
+    return (
+      <section id="season-images" className="space-y-3">
+        <h2 className="text-2xl font-semibold">Season Images</h2>
+        <div className="rounded-lg border border-dashed border-gray-300 bg-gray-50 px-6 py-12 text-center">
+          <p className="text-base font-semibold text-gray-800">Season photo gallery coming soon</p>
+          <p className="mt-2 text-sm leading-6 text-gray-600">
+            Images from the {seasonLabel} volleyball season will appear here.
+          </p>
+        </div>
+      </section>
+    );
+  }
+
+  const selectedImage = images[imageIndex] || images[0];
+  const selectedCaption = String(selectedImage?.caption || "").trim();
+  const currentImageNumber = Math.min(imageIndex + 1, images.length);
+  const goPrev = () => setImageIndex((index) => (index - 1 + images.length) % images.length);
+  const goNext = () => setImageIndex((index) => (index + 1) % images.length);
+
+  return (
+    <section id="season-images" className="space-y-3">
+      <h2 className="text-2xl font-semibold">Season Images</h2>
+
+      <div className="overflow-hidden rounded-lg border border-gray-200 bg-white">
+        <div className="relative bg-gray-50">
+          <img
+            src={selectedImage.src}
+            alt={selectedImage.alt || ""}
+            className="w-full max-h-[620px] object-contain"
+            loading="lazy"
+          />
+
+          {images.length > 1 ? (
+            <>
+              <button
+                type="button"
+                onClick={goPrev}
+                className="absolute left-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200 bg-white/90 shadow hover:bg-white"
+                aria-label="Previous image"
+                title="Previous"
+              >
+                {"<"}
+              </button>
+
+              <button
+                type="button"
+                onClick={goNext}
+                className="absolute right-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200 bg-white/90 shadow hover:bg-white"
+                aria-label="Next image"
+                title="Next"
+              >
+                {">"}
+              </button>
+
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-black/65 px-3 py-1 text-xs text-white">
+                {currentImageNumber} / {images.length}
+              </div>
+            </>
+          ) : null}
+        </div>
+
+        <div className="border-t border-gray-200 bg-white px-4 py-3">
+          <div className="mb-3 flex items-center justify-between gap-3">
+            <p className="text-sm font-medium text-gray-900">{selectedCaption}</p>
+            <p className="text-xs text-gray-500">
+              Image {currentImageNumber} of {images.length}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-4 gap-2 sm:grid-cols-6 md:grid-cols-7">
+            {images.map((image, index) => (
+              <button
+                key={image.src}
+                type="button"
+                onClick={() => setImageIndex(index)}
+                className={`aspect-square overflow-hidden rounded-md border bg-gray-50 ${
+                  index === imageIndex
+                    ? "border-gray-900 ring-2 ring-gray-900"
+                    : "border-gray-200 hover:border-gray-500"
+                }`}
+                aria-label={`Go to image ${index + 1}`}
+                title={image.caption || image.alt || `Image ${index + 1}`}
+              >
+                <img src={image.src} alt="" className="h-full w-full object-cover" loading="lazy" />
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function formatGrade(grade) {
+  if (grade === null || grade === undefined || grade === "") return "—";
+  const value = Number(grade);
+  if (!Number.isFinite(value)) return String(grade);
+  if (value === 8) return "8th";
+  if (value === 9) return "Fr.";
+  if (value === 10) return "So.";
+  if (value === 11) return "Jr.";
+  if (value === 12) return "Sr.";
+  return String(grade);
+}
+
+function RosterTableBlock({ rows }) {
   return (
     <div className="overflow-x-auto rounded-lg border border-gray-200 bg-white shadow">
-      <table className="min-w-full bg-white text-sm">
-        <thead className="bg-gray-100 text-gray-700">
+      <table className="min-w-full bg-white text-sm text-center">
+        <thead className="bg-gray-100 text-xs uppercase tracking-wide text-gray-700">
           <tr>
-            <th colSpan={2} className="px-3 py-2 text-center text-xs uppercase tracking-wide">
-              {title}
-            </th>
-          </tr>
-          <tr className="border-t border-gray-200">
-            <th className="px-3 py-2 text-left text-xs uppercase tracking-wide">Metric</th>
-            <th className="px-3 py-2 text-center text-xs uppercase tracking-wide">Value</th>
+            <th className={`${recordTableStyles.headerCell} whitespace-nowrap`}>No.</th>
+            <th className={`${recordTableStyles.headerCell} text-left`}>Player</th>
+            <th className={`${recordTableStyles.headerCell} whitespace-nowrap`}>Grade</th>
           </tr>
         </thead>
         <tbody>
-          {rows.map((row, index) => (
-            <tr
-              key={`${title}-${row.label}`}
-              className={`border-t border-gray-200 ${
-                index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
-              } hover:bg-gray-100`}
-            >
-              <td className="px-3 py-2 text-left">{row.label}</td>
-              <td className="px-3 py-2 text-center whitespace-nowrap">
-                {row.value === "" || row.value == null ? "—" : row.value}
+          {rows.length ? (
+            rows.map((row, index) => (
+              <tr
+                key={row.key}
+                className={`border-t border-gray-200 ${
+                  index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
+                } hover:bg-gray-100`}
+              >
+                <td className={`${recordTableStyles.bodyCell} whitespace-nowrap`}>
+                  {row.jersey || "—"}
+                </td>
+                <td className={`${recordTableStyles.bodyCell} text-left`}>
+                  {row.path ? (
+                    <Link to={row.path} className="text-blue-600 hover:underline">
+                      {row.name}
+                    </Link>
+                  ) : (
+                    <span>{row.name}</span>
+                  )}
+                </td>
+                <td className={`${recordTableStyles.bodyCell} whitespace-nowrap`}>
+                  {formatGrade(row.grade)}
+                </td>
+              </tr>
+            ))
+          ) : (
+            <tr>
+              <td className={`${recordTableStyles.bodyCell} text-center text-slate-600`} colSpan={3}>
+                No roster data is available for this season yet.
               </td>
             </tr>
-          ))}
+          )}
         </tbody>
       </table>
     </div>
   );
 }
 
-function CombinedTeamStatsTable({ sections }) {
+function RosterTable({ rows }) {
+  const splitIndex = Math.ceil(rows.length / 2);
+  const firstColumnRows = rows.slice(0, splitIndex);
+  const secondColumnRows = rows.slice(splitIndex);
+
+  if (rows.length <= 1) {
+    return <RosterTableBlock rows={rows} />;
+  }
+
   return (
     <>
-      <div className="overflow-x-auto rounded-lg border border-gray-200 bg-white shadow lg:hidden">
-        <table className="min-w-full bg-white text-sm">
-          <thead className="bg-gray-100 text-gray-700">
-            <tr>
-              <th className="px-3 py-2 text-left text-xs uppercase tracking-wide">Metric</th>
-              <th className="px-3 py-2 text-center text-xs uppercase tracking-wide">Value</th>
-            </tr>
-          </thead>
-          <tbody>
-            {sections.map((section) => (
-              <React.Fragment key={section.title}>
-                <tr className="border-t border-gray-200 bg-gray-100">
-                  <th colSpan={2} className="px-3 py-2 text-center text-xs uppercase tracking-wide">
-                    {section.title}
-                  </th>
-                </tr>
-                {section.rows.map((row, index) => (
-                  <tr
-                    key={`${section.title}-${row.label}`}
-                    className={`border-t border-gray-200 ${
-                      index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
-                    } hover:bg-gray-100`}
-                  >
-                    <td className="px-3 py-2 text-left">{row.label}</td>
-                    <td className="px-3 py-2 text-center whitespace-nowrap">
-                      {row.value === "" || row.value == null ? "—" : row.value}
-                    </td>
-                  </tr>
-                ))}
-              </React.Fragment>
-            ))}
-          </tbody>
-        </table>
+      <div className="lg:hidden">
+        <RosterTableBlock rows={rows} />
       </div>
-
-      <div className="hidden items-start gap-6 lg:grid lg:grid-cols-3">
-        {sections.map((section) => (
-          <TeamStatsSectionTable key={section.title} title={section.title} rows={section.rows} />
-        ))}
+      <div className="hidden gap-4 lg:grid lg:grid-cols-2">
+        <RosterTableBlock rows={firstColumnRows} />
+        <RosterTableBlock rows={secondColumnRows} />
       </div>
     </>
   );
@@ -332,31 +558,21 @@ function getOpponentLogoPath(game, schoolMap) {
   return school?.LogoPath || school?.BracketLogoPath || null;
 }
 
-function hasNumericValue(value) {
-  return value !== null && value !== undefined && value !== "" && Number.isFinite(Number(value));
-}
-
-function buildSeasonRecord(season, seasonGames) {
-  if (hasNumericValue(season?.OverallWins) && hasNumericValue(season?.OverallLosses)) {
-    const wins = Number(season.OverallWins);
-    const losses = Number(season.OverallLosses);
-    const ties = Number(season.OverallTies || 0);
-    return {
-      wins,
-      losses,
-      ties: Number.isFinite(ties) ? ties : 0,
-      setsWon: null,
-      setsLost: null,
-    };
-  }
-
-  const completedMatches = seasonGames.filter(
-    (game) => game.Result === "W" || game.Result === "L" || game.Result === "T"
+function enrichPlayerStatsWithRoster(rows, roster, playerMap) {
+  const rosterByPlayerId = new Map(
+    roster.map((entry) => [String(entry.PlayerID), entry])
   );
 
-  if (completedMatches.length > 0) return buildGameRecord(completedMatches);
+  return rows.map((row) => {
+    const player = playerMap.get(String(row.PlayerID));
+    const rosterEntry = rosterByPlayerId.get(String(row.PlayerID));
 
-  return null;
+    return {
+      ...row,
+      JerseyNumber: row.JerseyNumber ?? rosterEntry?.JerseyNumber ?? player?.JerseyNumber ?? null,
+      PlayerName: player ? getPlayerName(player) : rosterEntry?.PlayerName || row.PlayerName,
+    };
+  });
 }
 
 export default function SeasonPage({ data, status = "" }) {
@@ -381,166 +597,69 @@ export default function SeasonPage({ data, status = "" }) {
     () => getSeasonGames(data.games, resolvedSeasonId),
     [data.games, resolvedSeasonId]
   );
-  const record = useMemo(() => buildSeasonRecord(season, seasonGames), [season, seasonGames]);
-  const roster = useMemo(
-    () =>
-      hydrateRosterPlayers(
-        getRosterForSeason(data.rosters, resolvedSeasonId),
-        playerMap
-      ),
-    [data.rosters, playerMap, resolvedSeasonId]
+  const rosterEntry = useMemo(
+    () => getRosterForSeason(data.rosters, resolvedSeasonId),
+    [data.rosters, resolvedSeasonId]
   );
+  const roster = useMemo(
+    () => hydrateRosterPlayers(rosterEntry, playerMap),
+    [playerMap, rosterEntry]
+  );
+  const coachingStaff = useMemo(() => {
+    const rosterStaff = Array.isArray(rosterEntry?.Staff) ? rosterEntry.Staff : [];
+    if (rosterStaff.length > 0) return rosterStaff;
+
+    const staff = [];
+    if (season?.HeadCoach) staff.push({ Name: season.HeadCoach, Position: "Head Coach" });
+
+    const assistantCoaches = Array.isArray(season?.AssistantCoaches)
+      ? season.AssistantCoaches
+      : [];
+    assistantCoaches.forEach((name) => {
+      if (name) staff.push({ Name: name, Position: "Assistant Coach" });
+    });
+
+    return staff;
+  }, [rosterEntry, season]);
+  const rosterTableRows = useMemo(() => {
+    const playerRows = roster.map((player) => {
+      const canonicalPlayer = playerMap.get(String(player.PlayerID));
+      const playerName = canonicalPlayer
+        ? getPlayerName(canonicalPlayer)
+        : player.PlayerName || getPlayerName(player);
+
+      return {
+        key: `player-${player.PlayerID}`,
+        jersey: player.JerseyNumber,
+        name: playerName,
+        grade: player.GradeLabel || player.Grade,
+        path: `/athletics/volleyball/players/${player.PlayerID}`,
+      };
+    });
+
+    const staffRows = coachingStaff
+      .filter((member) => member?.Name || member?.Position)
+      .map((member, index) => ({
+        key: `staff-${member.Name || index}-${member.Position || ""}`,
+        jersey: "",
+        name: member.Name || "—",
+        grade: member.Position || "Staff",
+        path: "",
+      }));
+
+    return [...playerRows, ...staffRows];
+  }, [coachingStaff, playerMap, roster]);
   const playerStats = useMemo(
-    () =>
-      aggregatePlayerSeasonStatsFromGames(
+    () => {
+      const rows = aggregatePlayerSeasonStatsFromGames(
         data.playerGameStats,
         resolvedSeasonId,
         data.playerSeasonAdjustments
-      ),
-    [data.playerGameStats, data.playerSeasonAdjustments, resolvedSeasonId]
-  );
-  const teamStats = useMemo(
-    () => aggregateTeamSeasonStatsFromMatches(data.teamMatchStats, resolvedSeasonId),
-    [data.teamMatchStats, resolvedSeasonId]
-  );
+      );
 
-  const attackServeRows = useMemo(
-    () => [
-      { label: "Kills", value: getFormattedTeamStat(teamStats, "Attacking", "Kills") },
-      {
-        label: "Kills per set",
-        value: getFormattedTeamStat(teamStats, "Attacking", "KillsPerSet"),
-      },
-      {
-        label: "Attack attempts",
-        value: getFormattedTeamStat(teamStats, "Attacking", "AttackAttempts"),
-      },
-      {
-        label: "Attack errors",
-        value: getFormattedTeamStat(teamStats, "Attacking", "AttackErrors"),
-      },
-      {
-        label: "Hitting pct.",
-        value: getFormattedTeamStat(teamStats, "Attacking", "HittingPct"),
-      },
-      { label: "Aces", value: getFormattedTeamStat(teamStats, "Serving", "Aces") },
-      {
-        label: "Aces per set",
-        value: getFormattedTeamStat(teamStats, "Serving", "AcesPerSet"),
-      },
-      {
-        label: "Serve pct.",
-        value: getFormattedTeamStat(teamStats, "Serving", "ServePct"),
-      },
-      {
-        label: "Serving points",
-        value: getFormattedTeamStat(teamStats, "Serving", "ServingPoints"),
-      },
-    ],
-    [teamStats]
-  );
-  const defenseReceiveRows = useMemo(
-    () => [
-      { label: "Digs", value: getFormattedTeamStat(teamStats, "Digging", "Digs") },
-      {
-        label: "Digs per set",
-        value: getFormattedTeamStat(teamStats, "Digging", "DigsPerSet"),
-      },
-      {
-        label: "Receptions",
-        value: getFormattedTeamStat(teamStats, "Serve Receiving", "Receptions"),
-      },
-      {
-        label: "Reception errors",
-        value: getFormattedTeamStat(teamStats, "Serve Receiving", "ReceptionErrors"),
-      },
-      {
-        label: "Receptions per set",
-        value: getFormattedTeamStat(teamStats, "Serve Receiving", "ReceptionsPerSet"),
-      },
-      {
-        label: "Solo blocks",
-        value: getFormattedTeamStat(teamStats, "Blocking", "SoloBlocks"),
-      },
-      {
-        label: "Block assists",
-        value: getFormattedTeamStat(teamStats, "Blocking", "BlockAssists"),
-      },
-      {
-        label: "Total blocks",
-        value: getFormattedTeamStat(teamStats, "Blocking", "TotalBlocks"),
-      },
-      {
-        label: "Blocks per set",
-        value: getFormattedTeamStat(teamStats, "Blocking", "BlocksPerSet"),
-      },
-    ],
-    [teamStats]
-  );
-  const ballHandlingRows = useMemo(
-    () => [
-      {
-        label: "Sets played",
-        value: getFormattedTeamStat(teamStats, "Ball Handling", "SetsPlayed"),
-      },
-      {
-        label: "Assists",
-        value: getFormattedTeamStat(teamStats, "Ball Handling", "Assists"),
-      },
-      {
-        label: "Assists per set",
-        value: getFormattedTeamStat(teamStats, "Ball Handling", "AssistsPerSet"),
-      },
-      {
-        label: "Ball handling attempts",
-        value: getFormattedTeamStat(teamStats, "Ball Handling", "BallHandlingAttempts"),
-      },
-      {
-        label: "Ball handling errors",
-        value: getFormattedTeamStat(teamStats, "Ball Handling", "BallHandlingErrors"),
-      },
-      {
-        label: "Overall record",
-        value: record ? formatRecord(record.wins, record.losses, record.ties) : "—",
-      },
-      {
-        label: "Sets won / lost",
-        value:
-          record == null || record.setsWon == null || record.setsLost == null
-            ? "—"
-            : `${record.setsWon} / ${record.setsLost}`,
-      },
-      {
-        label: "Region finish",
-        value: season?.RegionFinish || "—",
-      },
-      {
-        label: "State finish",
-        value: season?.StateFinish || "—",
-      },
-      {
-        label: "Georgia rank",
-        value: season?.StateRank ? `#${season.StateRank}` : "—",
-      },
-    ],
-    [record, season, teamStats]
-  );
-
-  const combinedTeamStatsSections = useMemo(
-    () => [
-      { title: "Attack & Serve", rows: attackServeRows },
-      { title: "Defense & Receive", rows: defenseReceiveRows },
-      { title: "Ball Handling & Season", rows: ballHandlingRows },
-    ],
-    [attackServeRows, ballHandlingRows, defenseReceiveRows]
-  );
-
-  const hasTeamStats = useMemo(
-    () =>
-      combinedTeamStatsSections.some((section) =>
-        section.rows.some((row) => hasMeaningfulValue(row.value))
-      ),
-    [combinedTeamStatsSections]
+      return enrichPlayerStatsWithRoster(rows, roster, playerMap);
+    },
+    [data.playerGameStats, data.playerSeasonAdjustments, playerMap, resolvedSeasonId, roster]
   );
 
   const individualStatsViews = useMemo(
@@ -570,6 +689,11 @@ export default function SeasonPage({ data, status = "" }) {
     !status && !season && seasonGames.length === 0
       ? `No volleyball data is available for the ${seasonLabel} season.`
       : "";
+  const seasonRecap = season?.SeasonRecapParagraphs || season?.SeasonRecap || "";
+  const seasonBriefItems = useMemo(() => buildSeasonBriefItems(season), [season]);
+  const seasonImages = Array.isArray(season?.SeasonImages) ? season.SeasonImages : [];
+  const shouldShowSeasonImages =
+    seasonImages.length > 0 || Boolean(season?.ShowSeasonImagesPlaceholder);
 
   return (
     <div className="mx-auto max-w-6xl space-y-8 px-4 pb-10 pt-2 lg:pb-40">
@@ -582,70 +706,17 @@ export default function SeasonPage({ data, status = "" }) {
         <h1 className="text-3xl font-bold">{seasonLabel} Season</h1>
       </section>
 
+      {splitParagraphs(seasonRecap).length ? (
+        <SeasonRecapSection recap={seasonRecap} briefItems={seasonBriefItems} />
+      ) : null}
+
+      {shouldShowSeasonImages ? (
+        <SeasonImagesSection images={seasonImages} seasonLabel={seasonLabel} />
+      ) : null}
+
       <section id="roster" className="space-y-4">
         <h2 className="text-2xl font-semibold">Roster</h2>
-
-        <div className="max-w-3xl overflow-hidden rounded-lg border border-gray-200 bg-white shadow">
-          <div className="overflow-x-auto">
-            <table className="w-full min-w-[620px] table-auto text-center text-sm">
-              <thead className="bg-gray-100 text-xs text-gray-700 uppercase tracking-wide">
-                <tr>
-                  <th className="px-3 py-2 text-center whitespace-nowrap">No.</th>
-                  <th className="px-3 py-2 text-left">Player</th>
-                  <th className="px-3 py-2 text-center whitespace-nowrap">Grade</th>
-                  <th className="px-3 py-2 text-left">Pos.</th>
-                </tr>
-              </thead>
-              <tbody className="text-sm text-gray-800">
-                {roster.length === 0 ? (
-                  <tr>
-                    <td
-                      className="border-t border-gray-200 px-3 py-4 text-center text-slate-600"
-                      colSpan={4}
-                    >
-                      No MaxPreps roster data is available for this season yet.
-                    </td>
-                  </tr>
-                ) : (
-                  roster.map((player, index) => (
-                    <tr
-                      key={player.PlayerID}
-                      className={`border-t border-gray-200 ${
-                        index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
-                      } hover:bg-gray-100`}
-                    >
-                      <td className="px-3 py-2 text-center whitespace-nowrap">
-                        {player.JerseyNumber || "—"}
-                      </td>
-                      <td className="px-3 py-2 text-left">
-                        <Link
-                          to={`/athletics/volleyball/players/${player.PlayerID}`}
-                          className="text-blue-600 hover:underline"
-                        >
-                          {getPlayerName(player) || player.PlayerName || "—"}
-                        </Link>
-                        {(player.Distinctions || []).length > 0 ? (
-                          <>
-                            {" "}
-                            <span className="text-slate-600">
-                              ({player.Distinctions.join("; ")})
-                            </span>
-                          </>
-                        ) : null}
-                      </td>
-                      <td className="px-3 py-2 text-center whitespace-nowrap">
-                        {player.GradeLabel || player.Grade || "—"}
-                      </td>
-                      <td className="px-3 py-2 text-left">
-                        {(player.Positions || []).join(", ") || "—"}
-                      </td>
-                    </tr>
-                  ))
-                )}
-              </tbody>
-            </table>
-          </div>
-        </div>
+        <RosterTable rows={rosterTableRows} />
       </section>
 
       <section id="schedule-results" className="space-y-4">
@@ -737,16 +808,6 @@ export default function SeasonPage({ data, status = "" }) {
             </tbody>
           </table>
         </div>
-      </section>
-
-      <section id="team-stats" className="space-y-6">
-        <h2 className="text-2xl font-semibold">Team Stats</h2>
-
-        {hasTeamStats ? (
-          <CombinedTeamStatsTable sections={combinedTeamStatsSections} />
-        ) : (
-          <p className="text-slate-600">No MaxPreps team stats are available for this season.</p>
-        )}
       </section>
 
       <section id="individual-stats" className="space-y-6">
