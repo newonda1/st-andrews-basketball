@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 import {
   VOLLEYBALL_STAT_SECTIONS,
-  aggregateAllPlayerSeasonStatsFromGames,
   aggregateTeamSeasonStatsFromMatches,
   aggregateVolleyballSeasonStatRows,
+  buildAllVolleyballPlayerSeasonStatRows,
   buildGameRecord,
   buildPlayerMap,
   formatDate,
@@ -630,8 +630,9 @@ function getPlayerDisplay(playerMap, row) {
 function buildCareerRows(data) {
   const playerMap = buildPlayerMap(data.players);
   const grouped = new Map();
-  const seasonRows = aggregateAllPlayerSeasonStatsFromGames(
+  const seasonRows = buildAllVolleyballPlayerSeasonStatRows(
     data.playerGameStats,
+    data.playerSeasonStats,
     data.playerSeasonAdjustments
   );
 
@@ -665,8 +666,9 @@ function buildCareerRows(data) {
 function buildPlayerSeasonRows(data) {
   const playerMap = buildPlayerMap(data.players);
   const seasonMap = seasonById(data.seasons);
-  const seasonRows = aggregateAllPlayerSeasonStatsFromGames(
+  const seasonRows = buildAllVolleyballPlayerSeasonStatRows(
     data.playerGameStats,
+    data.playerSeasonStats,
     data.playerSeasonAdjustments
   );
 
@@ -691,23 +693,40 @@ function buildPlayerSeasonRows(data) {
 
 function buildTeamSeasonRows(data) {
   const seasonMap = seasonById(data.seasons);
-  const seasons = [...new Set(data.teamMatchStats.map((row) => Number(row.Season)))].sort(
-    (a, b) => a - b
+  const explicitSeasonStats = new Map(
+    (Array.isArray(data.teamSeasonStats) ? data.teamSeasonStats : [])
+      .map((row) => [Number(row.SeasonID ?? row.Season), row])
+      .filter(([season]) => Number.isFinite(season))
   );
+  const seasons = [
+    ...new Set([
+      ...data.teamMatchStats.map((row) => Number(row.Season)),
+      ...explicitSeasonStats.keys(),
+    ]),
+  ].sort((a, b) => a - b);
 
   return seasons
     .map((seasonId) => {
       const matchRows = data.teamMatchStats.filter((row) => Number(row.Season) === seasonId);
-      const categories = aggregateTeamSeasonStatsFromMatches(data.teamMatchStats, seasonId);
+      const explicit = explicitSeasonStats.get(seasonId);
+      const categories = explicit?.Categories
+        ? {
+            ...explicit,
+            SeasonID: seasonId,
+            Categories: explicit.Categories,
+          }
+        : aggregateTeamSeasonStatsFromMatches(data.teamMatchStats, seasonId);
       if (!categories) return null;
-      applyTrackedRateStats(
-        getTeamStatCategory(categories, "Attacking"),
-        matchRows.map((row) => getTeamStatCategory(row, "Attacking"))
-      );
-      applyTrackedRateStats(
-        getTeamStatCategory(categories, "Serving"),
-        matchRows.map((row) => getTeamStatCategory(row, "Serving"))
-      );
+      if (!explicit?.Categories) {
+        applyTrackedRateStats(
+          getTeamStatCategory(categories, "Attacking"),
+          matchRows.map((row) => getTeamStatCategory(row, "Attacking"))
+        );
+        applyTrackedRateStats(
+          getTeamStatCategory(categories, "Serving"),
+          matchRows.map((row) => getTeamStatCategory(row, "Serving"))
+        );
+      }
       const games = getSeasonGames(data.games, seasonId).filter(hasCompletedResult);
       const record = buildGameRecord(games);
       return {

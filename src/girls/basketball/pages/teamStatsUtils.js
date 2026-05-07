@@ -123,6 +123,8 @@ export const TEAM_BOX_FIELDS = [
   "FTA",
 ];
 
+const ROSTER_TEAM_BOX_FIELDS = TEAM_BOX_FIELDS.filter((field) => field !== "Points");
+
 function hasRecordedValue(value) {
   return value !== null && value !== undefined && value !== "";
 }
@@ -241,7 +243,61 @@ function createEmptySeasonTotals(seasonKey, coach) {
   };
 }
 
-export function buildTeamSeasonTotals(teamGames, seasonsDataRaw = []) {
+function seasonKeyFromRosterId(seasonId) {
+  const text = String(seasonId ?? "").trim();
+  const match = text.match(/^(\d{4})(?:-\d{2,4})?$/);
+  if (match) return match[1];
+
+  const number = Number(text);
+  return Number.isFinite(number) ? String(number) : null;
+}
+
+function overlayRosterSeasonTotals(seasonTotalsMap, seasonRostersRaw, seasonMeta) {
+  for (const roster of Array.isArray(seasonRostersRaw) ? seasonRostersRaw : []) {
+    const seasonKey = seasonKeyFromRosterId(roster?.SeasonID);
+    if (!seasonKey) continue;
+
+    if (!seasonTotalsMap.has(seasonKey)) {
+      const seasonObj = seasonMeta.get(seasonKey);
+      seasonTotalsMap.set(
+        seasonKey,
+        createEmptySeasonTotals(seasonKey, seasonObj?.HeadCoach)
+      );
+    }
+
+    const totals = seasonTotalsMap.get(seasonKey);
+    const rosterFieldTotals = createFieldMap(0);
+    const rosterFieldCoverage = createFieldMap(0);
+    let maxGamesPlayed = 0;
+
+    for (const player of roster?.Players || []) {
+      maxGamesPlayed = Math.max(maxGamesPlayed, safeNum(player?.GamesPlayed));
+      const seasonTotals = player?.SeasonTotals || {};
+
+      for (const field of ROSTER_TEAM_BOX_FIELDS) {
+        if (!hasRecordedValue(seasonTotals[field])) continue;
+        rosterFieldTotals[field] += safeNum(seasonTotals[field]);
+        rosterFieldCoverage[field] = Math.max(
+          rosterFieldCoverage[field],
+          safeNum(player?.GamesPlayed)
+        );
+      }
+    }
+
+    if (maxGamesPlayed > 0 && totals.GamesPlayed === 0) {
+      totals.GamesPlayed = maxGamesPlayed;
+    }
+
+    for (const field of ROSTER_TEAM_BOX_FIELDS) {
+      if (rosterFieldCoverage[field] <= 0) continue;
+      totals[field] = rosterFieldTotals[field];
+      totals._has[field] = true;
+      totals.Coverage[field] = Math.max(totals.Coverage[field], rosterFieldCoverage[field]);
+    }
+  }
+}
+
+export function buildTeamSeasonTotals(teamGames, seasonsDataRaw = [], seasonRostersRaw = []) {
   const seasonMeta = new Map(
     (Array.isArray(seasonsDataRaw) ? seasonsDataRaw : []).map((season) => [
       String(season.SeasonID),
@@ -277,6 +333,8 @@ export function buildTeamSeasonTotals(teamGames, seasonsDataRaw = []) {
       }
     }
   }
+
+  overlayRosterSeasonTotals(seasonTotalsMap, seasonRostersRaw, seasonMeta);
 
   return Array.from(seasonTotalsMap.values()).sort(
     (a, b) => safeNum(b.SeasonKey) - safeNum(a.SeasonKey)
@@ -349,27 +407,27 @@ export function combinedPoints(row) {
 }
 
 export function reboundsPerGame(row) {
-  const games = safeNum(row?.GamesPlayed);
+  const games = safeNum(row?.Coverage?.Rebounds) || safeNum(row?.GamesPlayed);
   return games > 0 ? safeNum(row?.Rebounds) / games : NaN;
 }
 
 export function assistsPerGame(row) {
-  const games = safeNum(row?.GamesPlayed);
+  const games = safeNum(row?.Coverage?.Assists) || safeNum(row?.GamesPlayed);
   return games > 0 ? safeNum(row?.Assists) / games : NaN;
 }
 
 export function stealsPerGame(row) {
-  const games = safeNum(row?.GamesPlayed);
+  const games = safeNum(row?.Coverage?.Steals) || safeNum(row?.GamesPlayed);
   return games > 0 ? safeNum(row?.Steals) / games : NaN;
 }
 
 export function blocksPerGame(row) {
-  const games = safeNum(row?.GamesPlayed);
+  const games = safeNum(row?.Coverage?.Blocks) || safeNum(row?.GamesPlayed);
   return games > 0 ? safeNum(row?.Blocks) / games : NaN;
 }
 
 export function turnoversPerGame(row) {
-  const games = safeNum(row?.GamesPlayed);
+  const games = safeNum(row?.Coverage?.Turnovers) || safeNum(row?.GamesPlayed);
   return games > 0 ? safeNum(row?.Turnovers) / games : NaN;
 }
 

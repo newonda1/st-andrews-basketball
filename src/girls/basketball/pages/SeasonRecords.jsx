@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 
-import { countsAsPlayerGame } from "../dataUtils";
+import { buildBasketballPlayerSeasonTotals } from "./playerSeasonStatsUtils";
 import { recordTableStyles } from "./recordTableStyles";
 
 function absUrl(path) {
@@ -235,11 +235,19 @@ export default function SeasonRecords() {
       try {
         setError("");
 
-        const [playerStatsRaw, playersRaw, seasonsRaw, gamesRaw, adjustmentsRaw] = await Promise.all([
+        const [
+          playerStatsRaw,
+          playersRaw,
+          seasonsRaw,
+          gamesRaw,
+          seasonRostersRaw,
+          adjustmentsRaw,
+        ] = await Promise.all([
           fetchJson("playergamestats.json", "/data/girls/basketball/playergamestats.json"),
           fetchJson("players.json", "/data/players.json"),
           fetchJson("seasons.json", "/data/girls/basketball/seasons.json"),
           fetchJson("games.json", "/data/girls/basketball/games.json"),
+          fetchJson("seasonrosters.json", "/data/girls/basketball/seasonrosters.json"),
           fetchJsonOptional("adjustments.json", "/data/girls/basketball/adjustments.json"),
         ]);
 
@@ -247,130 +255,19 @@ export default function SeasonRecords() {
         const players = Array.isArray(playersRaw) ? playersRaw : [];
         const seasons = Array.isArray(seasonsRaw) ? seasonsRaw : [];
         const games = Array.isArray(gamesRaw) ? gamesRaw : [];
+        const seasonRosters = Array.isArray(seasonRostersRaw) ? seasonRostersRaw : [];
         const adjustments = Array.isArray(adjustmentsRaw) ? adjustmentsRaw : [];
 
         const seasonsMap = new Map(seasons.map((s) => [String(s.SeasonID), s]));
-        const gameToSeasonMap = new Map(
-          games
-            .filter((g) => g && g.GameID != null && (g.SeasonID != null || g.Season != null))
-            .map((g) => [String(g.GameID), String(g.SeasonID ?? g.Season)])
-        );
-
         const playerMap = new Map(players.map((p) => [String(p.PlayerID), p]));
-        const seasonMap = {};
+        const playerSeasonTotals = buildBasketballPlayerSeasonTotals({
+          playerGameStats: playerStats,
+          games,
+          seasonRosters,
+          adjustments,
+        });
 
-        for (const gameStat of playerStats) {
-          if (!gameStat || gameStat.PlayerID == null) continue;
-
-          const seasonIdRaw = gameToSeasonMap.get(String(gameStat.GameID));
-          if (seasonIdRaw == null) continue;
-
-          const playerId = String(gameStat.PlayerID);
-          const season = String(seasonIdRaw);
-          const key = `${playerId}-${season}`;
-
-          if (!seasonMap[key]) {
-            seasonMap[key] = {
-              PlayerID: playerId,
-              Season: season,
-              GamesPlayed: 0,
-              Points: 0,
-              Rebounds: 0,
-              Assists: 0,
-              Steals: 0,
-              Blocks: 0,
-              Turnovers: 0,
-              TwoPM: 0,
-              TwoPA: 0,
-              ThreePM: 0,
-              ThreePA: 0,
-              FTM: 0,
-              FTA: 0,
-              DoubleDoubles: 0,
-              TripleDoubles: 0,
-            };
-          }
-
-          const entry = seasonMap[key];
-          const played = countsAsPlayerGame(gameStat);
-
-          if (played) entry.GamesPlayed += 1;
-
-          entry.Points += safeNum(gameStat.Points);
-          entry.Rebounds += safeNum(gameStat.Rebounds);
-          entry.Assists += safeNum(gameStat.Assists);
-          entry.Steals += safeNum(gameStat.Steals);
-          entry.Blocks += safeNum(gameStat.Blocks);
-          entry.Turnovers += safeNum(gameStat.Turnovers);
-          entry.TwoPM += safeNum(gameStat.TwoPM);
-          entry.TwoPA += safeNum(gameStat.TwoPA);
-          entry.ThreePM += safeNum(gameStat.ThreePM);
-          entry.ThreePA += safeNum(gameStat.ThreePA);
-          entry.FTM += safeNum(gameStat.FTM);
-          entry.FTA += safeNum(gameStat.FTA);
-
-          if (played) {
-            const categories = [
-              safeNum(gameStat.Points),
-              safeNum(gameStat.Rebounds),
-              safeNum(gameStat.Assists),
-              safeNum(gameStat.Steals),
-              safeNum(gameStat.Blocks),
-            ];
-            const doubleDigitCategories = categories.filter((value) => value >= 10).length;
-            if (doubleDigitCategories >= 2) entry.DoubleDoubles += 1;
-            if (doubleDigitCategories >= 3) entry.TripleDoubles += 1;
-          }
-        }
-
-        for (const adjustment of adjustments) {
-          if (!adjustment || adjustment.PlayerID == null || adjustment.SeasonID == null) continue;
-
-          const playerId = String(adjustment.PlayerID);
-          const season = String(adjustment.SeasonID);
-          const key = `${playerId}-${season}`;
-
-          if (!seasonMap[key]) {
-            seasonMap[key] = {
-              PlayerID: playerId,
-              Season: season,
-              GamesPlayed: 0,
-              Points: 0,
-              Rebounds: 0,
-              Assists: 0,
-              Steals: 0,
-              Blocks: 0,
-              Turnovers: 0,
-              TwoPM: 0,
-              TwoPA: 0,
-              ThreePM: 0,
-              ThreePA: 0,
-              FTM: 0,
-              FTA: 0,
-              DoubleDoubles: 0,
-              TripleDoubles: 0,
-            };
-          }
-
-          const entry = seasonMap[key];
-          entry.GamesPlayed += safeNum(adjustment.GamesPlayed);
-          entry.Points += safeNum(adjustment.Points);
-          entry.Rebounds += safeNum(adjustment.Rebounds);
-          entry.Assists += safeNum(adjustment.Assists);
-          entry.Steals += safeNum(adjustment.Steals);
-          entry.Blocks += safeNum(adjustment.Blocks);
-          entry.Turnovers += safeNum(adjustment.Turnovers);
-          entry.TwoPM += safeNum(adjustment.TwoPM);
-          entry.TwoPA += safeNum(adjustment.TwoPA);
-          entry.ThreePM += safeNum(adjustment.ThreePM);
-          entry.ThreePA += safeNum(adjustment.ThreePA);
-          entry.FTM += safeNum(adjustment.FTM);
-          entry.FTA += safeNum(adjustment.FTA);
-          entry.DoubleDoubles += safeNum(adjustment.DoubleDoubles);
-          entry.TripleDoubles += safeNum(adjustment.TripleDoubles);
-        }
-
-        const seasonTotals = Object.values(seasonMap).map((total) => {
+        const seasonTotals = playerSeasonTotals.map((total) => {
           const player = playerMap.get(String(total.PlayerID));
           const seasonObj = seasonsMap.get(String(total.Season));
 

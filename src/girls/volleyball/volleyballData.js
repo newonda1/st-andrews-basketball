@@ -550,6 +550,67 @@ export function aggregateAllPlayerSeasonStatsFromGames(
   return mergePlayerSeasonAdjustments(rows, playerSeasonAdjustments);
 }
 
+export function buildVolleyballPlayerSeasonStatRows(
+  playerGameStats = [],
+  playerSeasonStats = [],
+  playerSeasonAdjustments = [],
+  seasonId = null
+) {
+  const rowsByPlayerSeason = new Map();
+
+  aggregatePlayerSeasonRowsFromGames(playerGameStats, seasonId).forEach((row) => {
+    rowsByPlayerSeason.set(`${Number(row.Season)}|${row.PlayerID}`, row);
+  });
+
+  (Array.isArray(playerSeasonStats) ? playerSeasonStats : [])
+    .filter((row) => seasonId == null || Number(row.Season) === Number(seasonId))
+    .forEach((row) => {
+      const season = Number(row.Season);
+      const playerId = Number(row.PlayerID);
+      if (!Number.isFinite(season) || !Number.isFinite(playerId)) return;
+
+      const key = `${season}|${playerId}`;
+      const current =
+        rowsByPlayerSeason.get(key) ||
+        createEmptyStatRow({
+          Season: season,
+          PlayerID: playerId,
+          JerseyNumber: row.JerseyNumber,
+          PlayerName: row.PlayerName,
+        });
+
+      const merged = { ...current };
+      if (row.JerseyNumber != null) merged.JerseyNumber = row.JerseyNumber;
+      if (row.PlayerName) merged.PlayerName = row.PlayerName;
+
+      ADJUSTABLE_STAT_KEYS.forEach((statKey) => {
+        if (row[statKey] !== null && row[statKey] !== undefined && row[statKey] !== "") {
+          merged[statKey] = row[statKey];
+        }
+      });
+
+      rowsByPlayerSeason.set(key, applyDerivedStats(merged, merged.Games));
+    });
+
+  return mergePlayerSeasonAdjustments(
+    Array.from(rowsByPlayerSeason.values()),
+    playerSeasonAdjustments,
+    seasonId
+  );
+}
+
+export function buildAllVolleyballPlayerSeasonStatRows(
+  playerGameStats = [],
+  playerSeasonStats = [],
+  playerSeasonAdjustments = []
+) {
+  return buildVolleyballPlayerSeasonStatRows(
+    playerGameStats,
+    playerSeasonStats,
+    playerSeasonAdjustments
+  );
+}
+
 export function aggregateTeamSeasonStatsFromMatches(teamMatchStats = [], seasonId) {
   const rows = teamMatchStats.filter((row) => Number(row.Season) === Number(seasonId));
   if (rows.length === 0) return null;

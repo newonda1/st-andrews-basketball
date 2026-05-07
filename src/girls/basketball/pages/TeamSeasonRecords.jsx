@@ -344,15 +344,26 @@ export default function TeamSeasonRecords() {
       try {
         setError("");
 
-        const [gamesDataRaw, playerStatsDataRaw, seasonsDataRaw, schoolsDataRaw] = await Promise.all([
+        const [
+          gamesDataRaw,
+          playerStatsDataRaw,
+          seasonsDataRaw,
+          seasonRostersDataRaw,
+          schoolsDataRaw,
+        ] = await Promise.all([
           fetchJson("games.json", "/data/girls/basketball/games.json"),
           fetchJson("playergamestats.json", "/data/girls/basketball/playergamestats.json"),
           fetchJson("seasons.json", "/data/girls/basketball/seasons.json"),
+          fetchJson("seasonrosters.json", "/data/girls/basketball/seasonrosters.json"),
           fetchJson("schools.json", SCHOOLS_PATH),
         ]);
 
         const teamGames = buildTeamGameTotals(gamesDataRaw, playerStatsDataRaw, schoolsDataRaw);
-        const seasonTotals = buildTeamSeasonTotals(teamGames, seasonsDataRaw);
+        const seasonTotals = buildTeamSeasonTotals(
+          teamGames,
+          seasonsDataRaw,
+          seasonRostersDataRaw
+        );
         const next = {};
 
         for (const def of recordDefs) {

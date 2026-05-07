@@ -1,7 +1,10 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 
-import { countsAsPlayerGame } from "../dataUtils";
+import {
+  buildBasketballCareerTotals,
+  buildBasketballPlayerSeasonTotals,
+} from "./playerSeasonStatsUtils";
 import { recordTableStyles } from "./recordTableStyles";
 
 function absUrl(path) {
@@ -51,10 +54,6 @@ function safeNum(x) {
   return Number.isFinite(n) ? n : 0;
 }
 
-function hasValue(x) {
-  return x !== null && x !== undefined;
-}
-
 function displayStat(value, hasData, formatter = null) {
   if (!hasData) return "—";
   if (formatter) return formatter(value);
@@ -75,52 +74,6 @@ function formatPercent(value) {
 function formatRatio(value) {
   if (!Number.isFinite(value)) return "—";
   return value.toFixed(2);
-}
-
-function createEmptyTotals(playerId) {
-  return {
-    PlayerID: playerId,
-    GamesPlayed: 0,
-    Points: 0,
-    Rebounds: 0,
-    Assists: 0,
-    Steals: 0,
-    Blocks: 0,
-    Turnovers: 0,
-    TwoPM: 0,
-    TwoPA: 0,
-    ThreePM: 0,
-    ThreePA: 0,
-    FTM: 0,
-    FTA: 0,
-    TwentyPointGames: 0,
-    ThirtyPointGames: 0,
-    FortyPointGames: 0,
-    TenReboundGames: 0,
-    TenAssistGames: 0,
-    FiveStealGames: 0,
-    FiveBlockGames: 0,
-    DoubleDoubles: 0,
-    TripleDoubles: 0,
-    _has: {
-      Points: false,
-      Rebounds: false,
-      Assists: false,
-      Steals: false,
-      Blocks: false,
-      Turnovers: false,
-      TwoPM: false,
-      TwoPA: false,
-      ThreePM: false,
-      ThreePA: false,
-      FTM: false,
-      FTA: false,
-    },
-  };
-}
-
-function markHas(total, key) {
-  total._has[key] = true;
 }
 
 function buildDerivedStats(row) {
@@ -286,254 +239,42 @@ export default function FullCareerStats() {
       try {
         setError("");
 
-        const [statsDataRaw, playersDataRaw, seasonRostersDataRaw, adjustmentsDataRaw, careerAdjustmentsDataRaw] =
-          await Promise.all([
-            fetchJson("playergamestats.json", "/data/girls/basketball/playergamestats.json"),
-            fetchJson("players.json", "/data/players.json"),
-            fetchJson("seasonrosters.json", "/data/girls/basketball/seasonrosters.json"),
-            fetchJsonOptional("adjustments.json", "/data/girls/basketball/adjustments.json"),
-            fetchJsonOptional("careeradjustments.json", "/data/girls/basketball/careeradjustments.json"),
-          ]);
+        const [
+          statsDataRaw,
+          playersDataRaw,
+          gamesDataRaw,
+          seasonRostersDataRaw,
+          adjustmentsDataRaw,
+          careerAdjustmentsDataRaw,
+        ] = await Promise.all([
+          fetchJson("playergamestats.json", "/data/girls/basketball/playergamestats.json"),
+          fetchJson("players.json", "/data/players.json"),
+          fetchJson("games.json", "/data/girls/basketball/games.json"),
+          fetchJson("seasonrosters.json", "/data/girls/basketball/seasonrosters.json"),
+          fetchJsonOptional("adjustments.json", "/data/girls/basketball/adjustments.json"),
+          fetchJsonOptional("careeradjustments.json", "/data/girls/basketball/careeradjustments.json"),
+        ]);
 
         const statsData = Array.isArray(statsDataRaw) ? statsDataRaw : [];
         const playersData = Array.isArray(playersDataRaw) ? playersDataRaw : [];
+        const gamesData = Array.isArray(gamesDataRaw) ? gamesDataRaw : [];
         const seasonRostersData = Array.isArray(seasonRostersDataRaw) ? seasonRostersDataRaw : [];
         const adjustmentsData = Array.isArray(adjustmentsDataRaw) ? adjustmentsDataRaw : [];
         const careerAdjustmentsData = Array.isArray(careerAdjustmentsDataRaw) ? careerAdjustmentsDataRaw : [];
 
         const playerMap = new Map(playersData.map((player) => [String(player.PlayerID), player]));
-        const totalsMap = new Map();
+        const playerSeasonTotals = buildBasketballPlayerSeasonTotals({
+          playerGameStats: statsData,
+          games: gamesData,
+          seasonRosters: seasonRostersData,
+          adjustments: adjustmentsData,
+        });
+        const careerTotals = buildBasketballCareerTotals(
+          playerSeasonTotals,
+          careerAdjustmentsData
+        );
 
-        for (const season of seasonRostersData) {
-          for (const rosterPlayer of season?.Players || []) {
-            if (!rosterPlayer?.PlayerID) continue;
-            const playerId = String(rosterPlayer.PlayerID);
-            if (!totalsMap.has(playerId)) {
-              totalsMap.set(playerId, createEmptyTotals(playerId));
-            }
-          }
-        }
-
-        for (const stat of statsData) {
-          const playerId = String(stat?.PlayerID ?? "");
-          if (!playerId) continue;
-
-          if (!totalsMap.has(playerId)) {
-            totalsMap.set(playerId, createEmptyTotals(playerId));
-          }
-
-          const total = totalsMap.get(playerId);
-
-          const played = countsAsPlayerGame(stat);
-
-          if (played) {
-            total.GamesPlayed += 1;
-          }
-
-          if (hasValue(stat.Points)) {
-            total.Points += safeNum(stat.Points);
-            markHas(total, "Points");
-          }
-          if (hasValue(stat.Rebounds)) {
-            total.Rebounds += safeNum(stat.Rebounds);
-            markHas(total, "Rebounds");
-          }
-          if (hasValue(stat.Assists)) {
-            total.Assists += safeNum(stat.Assists);
-            markHas(total, "Assists");
-          }
-          if (hasValue(stat.Steals)) {
-            total.Steals += safeNum(stat.Steals);
-            markHas(total, "Steals");
-          }
-          if (hasValue(stat.Blocks)) {
-            total.Blocks += safeNum(stat.Blocks);
-            markHas(total, "Blocks");
-          }
-          if (hasValue(stat.Turnovers)) {
-            total.Turnovers += safeNum(stat.Turnovers);
-            markHas(total, "Turnovers");
-          }
-          if (hasValue(stat.TwoPM)) {
-            total.TwoPM += safeNum(stat.TwoPM);
-            markHas(total, "TwoPM");
-          }
-          if (hasValue(stat.TwoPA)) {
-            total.TwoPA += safeNum(stat.TwoPA);
-            markHas(total, "TwoPA");
-          }
-          if (hasValue(stat.ThreePM)) {
-            total.ThreePM += safeNum(stat.ThreePM);
-            markHas(total, "ThreePM");
-          }
-          if (hasValue(stat.ThreePA)) {
-            total.ThreePA += safeNum(stat.ThreePA);
-            markHas(total, "ThreePA");
-          }
-          if (hasValue(stat.FTM)) {
-            total.FTM += safeNum(stat.FTM);
-            markHas(total, "FTM");
-          }
-          if (hasValue(stat.FTA)) {
-            total.FTA += safeNum(stat.FTA);
-            markHas(total, "FTA");
-          }
-
-          if (safeNum(stat.Points) >= 20) total.TwentyPointGames += 1;
-          if (safeNum(stat.Points) >= 30) total.ThirtyPointGames += 1;
-          if (safeNum(stat.Points) >= 40) total.FortyPointGames += 1;
-          if (safeNum(stat.Rebounds) >= 10) total.TenReboundGames += 1;
-          if (safeNum(stat.Assists) >= 10) total.TenAssistGames += 1;
-          if (safeNum(stat.Steals) >= 5) total.FiveStealGames += 1;
-          if (safeNum(stat.Blocks) >= 5) total.FiveBlockGames += 1;
-
-          const doubleDigitCategories = [
-            safeNum(stat.Points),
-            safeNum(stat.Rebounds),
-            safeNum(stat.Assists),
-            safeNum(stat.Steals),
-            safeNum(stat.Blocks),
-          ].filter((value) => value >= 10).length;
-
-          if (doubleDigitCategories >= 2) total.DoubleDoubles += 1;
-          if (doubleDigitCategories >= 3) total.TripleDoubles += 1;
-        }
-
-        for (const adjustment of adjustmentsData) {
-          const playerId = String(adjustment?.PlayerID ?? "");
-          if (!playerId) continue;
-
-          if (!totalsMap.has(playerId)) {
-            totalsMap.set(playerId, createEmptyTotals(playerId));
-          }
-
-          const total = totalsMap.get(playerId);
-
-          if (hasValue(adjustment.GamesPlayed)) {
-            total.GamesPlayed += safeNum(adjustment.GamesPlayed);
-          }
-          if (hasValue(adjustment.Points)) {
-            total.Points += safeNum(adjustment.Points);
-            markHas(total, "Points");
-          }
-          if (hasValue(adjustment.Rebounds)) {
-            total.Rebounds += safeNum(adjustment.Rebounds);
-            markHas(total, "Rebounds");
-          }
-          if (hasValue(adjustment.Assists)) {
-            total.Assists += safeNum(adjustment.Assists);
-            markHas(total, "Assists");
-          }
-          if (hasValue(adjustment.Steals)) {
-            total.Steals += safeNum(adjustment.Steals);
-            markHas(total, "Steals");
-          }
-          if (hasValue(adjustment.Blocks)) {
-            total.Blocks += safeNum(adjustment.Blocks);
-            markHas(total, "Blocks");
-          }
-          if (hasValue(adjustment.TwoPM)) {
-            total.TwoPM += safeNum(adjustment.TwoPM);
-            markHas(total, "TwoPM");
-          }
-          if (hasValue(adjustment.TwoPA)) {
-            total.TwoPA += safeNum(adjustment.TwoPA);
-            markHas(total, "TwoPA");
-          }
-          if (hasValue(adjustment.ThreePM)) {
-            total.ThreePM += safeNum(adjustment.ThreePM);
-            markHas(total, "ThreePM");
-          }
-          if (hasValue(adjustment.ThreePA)) {
-            total.ThreePA += safeNum(adjustment.ThreePA);
-            markHas(total, "ThreePA");
-          }
-          if (hasValue(adjustment.FTM)) {
-            total.FTM += safeNum(adjustment.FTM);
-            markHas(total, "FTM");
-          }
-          if (hasValue(adjustment.FTA)) {
-            total.FTA += safeNum(adjustment.FTA);
-            markHas(total, "FTA");
-          }
-          if (hasValue(adjustment.DoubleDoubles)) {
-            total.DoubleDoubles += safeNum(adjustment.DoubleDoubles);
-          }
-          if (hasValue(adjustment.TripleDoubles)) {
-            total.TripleDoubles += safeNum(adjustment.TripleDoubles);
-          }
-        }
-
-        for (const adjustment of careerAdjustmentsData) {
-          const playerId = String(adjustment?.PlayerID ?? "");
-          if (!playerId) continue;
-
-          if (!totalsMap.has(playerId)) {
-            totalsMap.set(playerId, createEmptyTotals(playerId));
-          }
-
-          const total = totalsMap.get(playerId);
-
-          if (hasValue(adjustment.GamesPlayed)) {
-            total.GamesPlayed += safeNum(adjustment.GamesPlayed);
-          }
-          if (hasValue(adjustment.Points)) {
-            total.Points += safeNum(adjustment.Points);
-            markHas(total, "Points");
-          }
-          if (hasValue(adjustment.Rebounds)) {
-            total.Rebounds += safeNum(adjustment.Rebounds);
-            markHas(total, "Rebounds");
-          }
-          if (hasValue(adjustment.Assists)) {
-            total.Assists += safeNum(adjustment.Assists);
-            markHas(total, "Assists");
-          }
-          if (hasValue(adjustment.Steals)) {
-            total.Steals += safeNum(adjustment.Steals);
-            markHas(total, "Steals");
-          }
-          if (hasValue(adjustment.Blocks)) {
-            total.Blocks += safeNum(adjustment.Blocks);
-            markHas(total, "Blocks");
-          }
-          if (hasValue(adjustment.Turnovers)) {
-            total.Turnovers += safeNum(adjustment.Turnovers);
-            markHas(total, "Turnovers");
-          }
-          if (hasValue(adjustment.TwoPM)) {
-            total.TwoPM += safeNum(adjustment.TwoPM);
-            markHas(total, "TwoPM");
-          }
-          if (hasValue(adjustment.TwoPA)) {
-            total.TwoPA += safeNum(adjustment.TwoPA);
-            markHas(total, "TwoPA");
-          }
-          if (hasValue(adjustment.ThreePM)) {
-            total.ThreePM += safeNum(adjustment.ThreePM);
-            markHas(total, "ThreePM");
-          }
-          if (hasValue(adjustment.ThreePA)) {
-            total.ThreePA += safeNum(adjustment.ThreePA);
-            markHas(total, "ThreePA");
-          }
-          if (hasValue(adjustment.FTM)) {
-            total.FTM += safeNum(adjustment.FTM);
-            markHas(total, "FTM");
-          }
-          if (hasValue(adjustment.FTA)) {
-            total.FTA += safeNum(adjustment.FTA);
-            markHas(total, "FTA");
-          }
-          if (hasValue(adjustment.DoubleDoubles)) {
-            total.DoubleDoubles += safeNum(adjustment.DoubleDoubles);
-          }
-          if (hasValue(adjustment.TripleDoubles)) {
-            total.TripleDoubles += safeNum(adjustment.TripleDoubles);
-          }
-        }
-
-        const rows = Array.from(totalsMap.values())
+        const rows = careerTotals
           .map((totals) => {
             const player = playerMap.get(String(totals.PlayerID));
             const row = buildDerivedStats(totals);
