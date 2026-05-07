@@ -1,7 +1,50 @@
-import React from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 
-function SportHeroVisual({ sportName, icon, iconClassName = "", alt }) {
+function randomIndexes(length, count, previousIndexes = []) {
+  if (length <= 0) return [];
+
+  const previousSet = new Set(previousIndexes);
+  const availableIndexes = Array.from({ length }, (_, index) => index);
+  const primaryPool = availableIndexes.filter((index) => !previousSet.has(index));
+  const pool = primaryPool.length >= count ? primaryPool : availableIndexes;
+
+  for (let index = pool.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(Math.random() * (index + 1));
+    [pool[index], pool[swapIndex]] = [pool[swapIndex], pool[index]];
+  }
+
+  return pool.slice(0, Math.min(count, length));
+}
+
+function SportHeroVisual({
+  sportName,
+  icon,
+  iconClassName = "",
+  alt,
+  image,
+  imageAlt,
+  imageCaption,
+}) {
+  if (image) {
+    return (
+      <figure className="m-0 overflow-hidden border border-[var(--stats-line)] bg-[var(--stats-panel-muted)]">
+        <div className="aspect-[1.15/1] w-full bg-[#eef3fb]">
+          <img
+            src={image}
+            alt={imageAlt || `${sportName} archive image`}
+            className="h-full w-full object-cover"
+          />
+        </div>
+        {imageCaption ? (
+          <figcaption className="border-t border-[var(--stats-line)] bg-white px-4 py-3 text-[0.8rem] font-bold uppercase tracking-[0.14em] text-[var(--stats-gray)]">
+            {imageCaption}
+          </figcaption>
+        ) : null}
+      </figure>
+    );
+  }
+
   return (
     <div className="flex aspect-[1.15/1] w-full items-center justify-center border border-[var(--stats-line)] bg-[linear-gradient(135deg,#eef3fb_0%,#d6deef_100%)] p-6 sm:p-8">
       <div className="flex h-full w-full flex-col items-center justify-center border border-white/70 bg-white/80 px-6 py-8 text-center shadow-[0_18px_32px_rgba(0,33,105,0.08)]">
@@ -26,6 +69,67 @@ function SportHeroVisual({ sportName, icon, iconClassName = "", alt }) {
   );
 }
 
+function ArchiveImage({ image, featured = false }) {
+  return (
+    <figure className={`m-0 ${featured ? "sm:col-span-2 lg:col-span-1" : ""}`}>
+      <div className="aspect-[4/3] overflow-hidden border border-[var(--stats-line)] bg-[var(--stats-panel-muted)]">
+        <img
+          src={image.src}
+          alt={image.alt}
+          className="h-full w-full object-cover transition-opacity duration-500"
+        />
+      </div>
+      {image.caption ? (
+        <figcaption className="mt-3 text-[0.82rem] font-bold uppercase tracking-[0.14em] text-[var(--stats-gray)]">
+          {image.caption}
+        </figcaption>
+      ) : null}
+    </figure>
+  );
+}
+
+function ArchiveImageRotator({
+  title = "Images from the Archive",
+  images = [],
+  visibleCount = 3,
+  intervalMs = 4200,
+}) {
+  const imageCount = images.length;
+  const [activeIndexes, setActiveIndexes] = useState(() => randomIndexes(imageCount, visibleCount));
+
+  useEffect(() => {
+    setActiveIndexes(randomIndexes(imageCount, visibleCount));
+  }, [imageCount, visibleCount]);
+
+  useEffect(() => {
+    if (imageCount <= 1) return undefined;
+
+    const timer = window.setInterval(() => {
+      setActiveIndexes((currentIndexes) => randomIndexes(imageCount, visibleCount, currentIndexes));
+    }, intervalMs);
+
+    return () => window.clearInterval(timer);
+  }, [imageCount, intervalMs, visibleCount]);
+
+  const activeImages = useMemo(
+    () => activeIndexes.map((index) => images[index]).filter(Boolean),
+    [activeIndexes, images],
+  );
+
+  if (activeImages.length === 0) return null;
+
+  return (
+    <section className="stats-module">
+      <h2 className="stats-module-title">{title}</h2>
+      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {activeImages.map((image, index) => (
+          <ArchiveImage key={`${image.src}-${index}`} image={image} featured={index === 0} />
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function ArchiveLink({ label, to }) {
   return (
     <Link
@@ -46,10 +150,15 @@ export default function SportHomePage({
   icon,
   iconClassName,
   iconAlt,
+  heroImage,
+  heroImageAlt,
+  heroImageCaption,
   storyTitle = "Program Archive",
   storyParagraphs = [],
   highlightsTitle = "Archive Highlights",
   highlights = [],
+  archiveImagesTitle = "Images from the Archive",
+  archiveImages = [],
   linksTitle = "Archive Entry Points",
   links = [],
 }) {
@@ -67,6 +176,9 @@ export default function SportHomePage({
             icon={icon}
             iconClassName={iconClassName}
             alt={iconAlt}
+            image={heroImage}
+            imageAlt={heroImageAlt}
+            imageCaption={heroImageCaption}
           />
         </div>
 
@@ -121,6 +233,10 @@ export default function SportHomePage({
             </article>
           ) : null}
         </section>
+      ) : null}
+
+      {archiveImages.length > 0 ? (
+        <ArchiveImageRotator title={archiveImagesTitle} images={archiveImages} />
       ) : null}
 
       {links.length > 0 ? (

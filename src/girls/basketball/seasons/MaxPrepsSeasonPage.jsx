@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import ArticleFeatureList from "../../../components/ArticleFeatureList";
+import { recordTableStyles } from "../../basketball/pages/recordTableStyles";
 import {
   GIRLS_BASKETBALL_ROSTERS_PATH,
   SCHOOLS_PATH,
@@ -140,12 +141,283 @@ function resultClassName(result) {
   return "text-gray-500";
 }
 
+function splitParagraphs(text) {
+  return String(text || "")
+    .split(/\n{2,}/)
+    .map((paragraph) => paragraph.trim())
+    .filter(Boolean);
+}
+
+function formatArticleDate(dateValue) {
+  if (!dateValue) return "";
+  if (/^\d{4}$/.test(String(dateValue))) return String(dateValue);
+
+  const date = new Date(`${dateValue}T00:00:00Z`);
+  if (Number.isNaN(date.getTime())) return String(dateValue);
+
+  return date.toLocaleDateString("en-US", {
+    timeZone: "UTC",
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
+}
+
+function getArticleImage(article) {
+  const firstImage = Array.isArray(article?.Images) ? article.Images[0] : null;
+  if (typeof firstImage === "string") return { src: firstImage, alt: article?.Title || "" };
+  return firstImage || null;
+}
+
+function SeasonRecapSection({
+  title = "Season Recap",
+  recap,
+  briefItems = [],
+  article = null,
+  basePath,
+}) {
+  const paragraphs = splitParagraphs(recap);
+  if (!paragraphs.length) return null;
+
+  const articleImage = getArticleImage(article);
+  const articleDate = formatArticleDate(article?.Date);
+  const articleMeta = [articleDate, article?.Source].filter(Boolean).join(" • ");
+  const articlePath = article?.ArticleID ? `${basePath}/articles/${article.ArticleID}` : "";
+
+  return (
+    <section id="season-recap" className="mx-auto max-w-4xl space-y-3">
+      <h2 className="text-2xl font-semibold">{title}</h2>
+      <div className="flow-root text-base leading-7 text-slate-700">
+        {briefItems.length ? (
+          <dl className="mb-4 grid grid-cols-3 gap-3 text-center md:float-right md:mb-3 md:ml-6 md:w-64 md:grid-cols-1">
+            {briefItems.map((item) => (
+              <div key={item.label} className="rounded-lg border border-gray-200 px-3 py-2">
+                <dt className="text-xs font-semibold uppercase tracking-wide text-gray-500">
+                  {item.label}
+                </dt>
+                <dd className="text-lg font-semibold text-gray-900">{item.value || "—"}</dd>
+              </div>
+            ))}
+          </dl>
+        ) : null}
+
+        {articleImage?.src && articlePath ? (
+          <aside className="mb-4 border border-gray-200 bg-white shadow-sm md:float-left md:mb-3 md:mr-6 md:w-72">
+            <Link to={articlePath} className="block bg-gray-100">
+              <img
+                src={articleImage.src}
+                alt={articleImage.alt || article.Title}
+                className="h-64 w-full object-cover object-top"
+                loading="lazy"
+              />
+            </Link>
+            <div className="space-y-2 p-3">
+              {articleMeta ? (
+                <p className="text-xs font-semibold uppercase tracking-wide text-gray-500">
+                  {articleMeta}
+                </p>
+              ) : null}
+              <h3 className="text-base font-bold leading-snug text-gray-950">
+                <Link to={articlePath} className="text-blue-700 underline hover:text-blue-900">
+                  {article.Title}
+                </Link>
+              </h3>
+              {article.Subtitle ? (
+                <p className="text-sm leading-6 text-gray-600">{article.Subtitle}</p>
+              ) : null}
+            </div>
+          </aside>
+        ) : null}
+
+        <div className="space-y-3">
+          {paragraphs.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function SeasonImagesSection({ images = [] }) {
+  const [imageIndex, setImageIndex] = useState(0);
+
+  useEffect(() => {
+    setImageIndex(0);
+  }, [images]);
+
+  if (!images.length) {
+    return (
+      <section id="season-images" className="space-y-3">
+        <h2 className="text-2xl font-semibold">Season Images</h2>
+        <div className="rounded-lg border border-dashed border-gray-300 bg-gray-50 px-6 py-12 text-center">
+          <p className="text-base font-semibold text-gray-800">Season photo gallery coming soon</p>
+          <p className="mt-2 text-sm leading-6 text-gray-600">
+            Photos from the 2003-04 girls basketball season will be added here.
+          </p>
+        </div>
+      </section>
+    );
+  }
+
+  const selectedImage = images[imageIndex] || images[0];
+  const selectedCaption = String(selectedImage?.caption || "").trim();
+  const currentImageNumber = Math.min(imageIndex + 1, images.length);
+  const goPrev = () => setImageIndex((index) => (index - 1 + images.length) % images.length);
+  const goNext = () => setImageIndex((index) => (index + 1) % images.length);
+
+  return (
+    <section id="season-images" className="space-y-3">
+      <h2 className="text-2xl font-semibold">Season Images</h2>
+
+      <div className="overflow-hidden rounded-lg border border-gray-200 bg-white">
+        <div className="relative bg-gray-50">
+          <img
+            src={selectedImage.src}
+            alt={selectedImage.alt || ""}
+            className="w-full max-h-[620px] object-contain"
+            loading="lazy"
+          />
+
+          {images.length > 1 ? (
+            <>
+              <button
+                type="button"
+                onClick={goPrev}
+                className="absolute left-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200 bg-white/90 shadow hover:bg-white"
+                aria-label="Previous image"
+                title="Previous"
+              >
+                {"<"}
+              </button>
+
+              <button
+                type="button"
+                onClick={goNext}
+                className="absolute right-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200 bg-white/90 shadow hover:bg-white"
+                aria-label="Next image"
+                title="Next"
+              >
+                {">"}
+              </button>
+
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-black/65 px-3 py-1 text-xs text-white">
+                {currentImageNumber} / {images.length}
+              </div>
+            </>
+          ) : null}
+        </div>
+
+        <div className="border-t border-gray-200 bg-white px-4 py-3">
+          <div className="mb-3 flex items-center justify-between gap-3">
+            <p className="text-sm font-medium text-gray-900">{selectedCaption}</p>
+            <p className="text-xs text-gray-500">
+              Image {currentImageNumber} of {images.length}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-4 gap-2 sm:grid-cols-6 md:grid-cols-7">
+            {images.map((image, index) => (
+              <button
+                key={image.src}
+                type="button"
+                onClick={() => setImageIndex(index)}
+                className={`aspect-square overflow-hidden rounded-md border bg-gray-50 ${
+                  index === imageIndex
+                    ? "border-gray-900 ring-2 ring-gray-900"
+                    : "border-gray-200 hover:border-gray-500"
+                }`}
+                aria-label={`Go to image ${index + 1}`}
+                title={image.caption || image.alt || `Image ${index + 1}`}
+              >
+                <img src={image.src} alt="" className="h-full w-full object-cover" loading="lazy" />
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function formatGrade(grade) {
+  if (grade === null || grade === undefined || grade === "") return "—";
+  const value = Number(grade);
+  if (!Number.isFinite(value)) return String(grade);
+  if (value === 8) return "8th";
+  if (value === 9) return "Fr.";
+  if (value === 10) return "So.";
+  if (value === 11) return "Jr.";
+  if (value === 12) return "Sr.";
+  return String(grade);
+}
+
+function RosterTable({ rows }) {
+  return (
+    <div className="overflow-x-auto rounded-lg border border-gray-200 bg-white shadow">
+      <table className="min-w-full bg-white text-sm text-center">
+        <thead className="bg-gray-100 text-xs uppercase tracking-wide text-gray-700">
+          <tr>
+            <th className={`${recordTableStyles.headerCell} whitespace-nowrap`}>No.</th>
+            <th className={`${recordTableStyles.headerCell} text-left`}>Player</th>
+            <th className={`${recordTableStyles.headerCell} whitespace-nowrap`}>Grade</th>
+            <th className={`${recordTableStyles.headerCell} text-left`}>Role</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.length ? (
+            rows.map((row, index) => (
+              <tr
+                key={row.key}
+                className={`border-t border-gray-200 ${
+                  index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
+                } hover:bg-gray-100`}
+              >
+                <td className={`${recordTableStyles.bodyCell} whitespace-nowrap`}>
+                  {row.jersey || "—"}
+                </td>
+                <td className={`${recordTableStyles.bodyCell} text-left`}>
+                  {row.path ? (
+                    <Link to={row.path} className="text-blue-600 hover:underline">
+                      {row.name}
+                    </Link>
+                  ) : (
+                    <span>{row.name}</span>
+                  )}
+                </td>
+                <td className={`${recordTableStyles.bodyCell} whitespace-nowrap`}>
+                  {formatGrade(row.grade)}
+                </td>
+                <td className={`${recordTableStyles.bodyCell} text-left`}>{row.role || "Player"}</td>
+              </tr>
+            ))
+          ) : (
+            <tr>
+              <td className={`${recordTableStyles.bodyCell} text-center text-slate-600`} colSpan={4}>
+                No roster data is available for this season yet.
+              </td>
+            </tr>
+          )}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
 function MaxPrepsSeasonPage({
   seasonId,
   seasonLabel,
   trimShootingColumns = false,
   hideScheduleToggle = false,
   hidePlayerStatsToggle = false,
+  seasonRecapTitle = "Season Recap",
+  seasonRecap = "",
+  seasonBriefs = [],
+  embedFeaturedArticleInRecap = false,
+  showSeasonImagesPlaceholder = false,
+  seasonImages = [],
+  showSeasonRoster = false,
+  headCoach = "",
 }) {
   const [games, setGames] = useState([]);
   const [playerStats, setPlayerStats] = useState([]);
@@ -401,15 +673,73 @@ function MaxPrepsSeasonPage({
     return (value / player.GamesPlayed).toFixed(1);
   };
 
+  const rosterTableRows = useMemo(() => {
+    const rows = rosterEntries
+      .map((entry) => ({
+        key: `player-${entry.PlayerID}`,
+        jersey: entry.JerseyNumber,
+        name: playerName(entry.PlayerID),
+        grade: entry.Grade,
+        role: "Player",
+        path: `/athletics/girls/basketball/players/${entry.PlayerID}`,
+      }))
+      .sort((a, b) => {
+        const jerseyA = Number(a.jersey || 999);
+        const jerseyB = Number(b.jersey || 999);
+        if (jerseyA !== jerseyB) return jerseyA - jerseyB;
+        return a.name.localeCompare(b.name);
+      });
+
+    if (headCoach) {
+      rows.push({
+        key: `staff-${headCoach}`,
+        jersey: "",
+        name: headCoach,
+        grade: "",
+        role: "Head Coach",
+        path: "",
+      });
+    }
+
+    return rows;
+  }, [headCoach, playerById, rosterEntries]);
+
+  const featuredArticle = articles[0] || null;
+  const shouldEmbedArticle = embedFeaturedArticleInRecap && featuredArticle;
+  const shouldShowRecap = Boolean(splitParagraphs(seasonRecap).length);
+
   return (
-    <div className="pt-2 pb-4 space-y-8 max-w-6xl mx-auto">
+    <div className="mx-auto max-w-6xl space-y-8 px-4 pb-10 pt-2 lg:pb-40">
       <h1 className="text-3xl font-bold text-center mb-2">{seasonLabel} Season</h1>
 
-      <ArticleFeatureList
-        articles={articles}
-        basePath="/athletics/girls/basketball"
-        heading="Featured Articles"
-      />
+      {shouldShowRecap ? (
+        <SeasonRecapSection
+          title={seasonRecapTitle}
+          recap={seasonRecap}
+          briefItems={seasonBriefs}
+          article={shouldEmbedArticle ? featuredArticle : null}
+          basePath="/athletics/girls/basketball"
+        />
+      ) : null}
+
+      {!shouldEmbedArticle ? (
+        <ArticleFeatureList
+          articles={articles}
+          basePath="/athletics/girls/basketball"
+          heading="Featured Articles"
+        />
+      ) : null}
+
+      {showSeasonImagesPlaceholder || seasonImages.length ? (
+        <SeasonImagesSection images={seasonImages} />
+      ) : null}
+
+      {showSeasonRoster ? (
+        <section id="roster" className="space-y-4">
+          <h2 className="text-2xl font-semibold">Roster</h2>
+          <RosterTable rows={rosterTableRows} />
+        </section>
+      ) : null}
 
       <section>
         <div className="mt-8 mb-4 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">
@@ -450,7 +780,7 @@ function MaxPrepsSeasonPage({
                 <Link
                   key={game.GameID}
                   to={`/athletics/girls/basketball/games/${game.GameID}`}
-                  className="block border border-gray-200 bg-white p-4 text-gray-900 no-underline shadow-sm transition hover:border-blue-300"
+                  className="block rounded-lg border border-gray-200 bg-white p-4 text-gray-900 no-underline shadow-sm transition hover:border-blue-300"
                 >
                   <div className="flex items-start justify-between gap-4">
                     <div className="min-w-0">
@@ -497,17 +827,21 @@ function MaxPrepsSeasonPage({
           </div>
         )}
 
-        <div className={`${!showTeamTotals ? "hidden sm:block" : ""} overflow-x-auto`}>
+        <div
+          className={`${
+            !showTeamTotals ? "hidden sm:block" : ""
+          } overflow-x-auto rounded-lg border border-gray-200 bg-white shadow`}
+        >
           {!showTeamTotals ? (
-            <table className="min-w-full border text-sm">
-              <thead className="bg-gray-100">
+            <table className="min-w-full bg-white text-sm">
+              <thead className="bg-gray-100 text-xs uppercase tracking-wide text-gray-700">
                 <tr>
-                  <th className="border px-3 py-2 text-left">Date</th>
-                  <th className="border px-3 py-2 text-left">Opponent</th>
-                  <th className="border px-3 py-2">Location</th>
-                  <th className="border px-3 py-2">Result</th>
-                  <th className="border px-3 py-2">Score</th>
-                  <th className="border px-3 py-2">Type</th>
+                  <th className="px-3 py-2 text-left">Date</th>
+                  <th className="px-3 py-2 text-left">Opponent</th>
+                  <th className="px-3 py-2 text-center">Location</th>
+                  <th className="px-3 py-2 text-center">Result</th>
+                  <th className="px-3 py-2 text-center">Score</th>
+                  <th className="px-3 py-2 text-center">Type</th>
                 </tr>
               </thead>
               <tbody>
@@ -515,9 +849,14 @@ function MaxPrepsSeasonPage({
                   const logoPath = opponentLogoPath(game);
 
                   return (
-                    <tr key={game.GameID} className={index % 2 ? "bg-gray-50" : "bg-white"}>
-                      <td className="border px-3 py-2">{formatDate(game)}</td>
-                      <td className="border px-3 py-2">
+                    <tr
+                      key={game.GameID}
+                      className={`border-t border-gray-200 ${
+                        index % 2 ? "bg-gray-50/70" : "bg-white"
+                      } hover:bg-gray-100`}
+                    >
+                      <td className="px-3 py-2 whitespace-nowrap">{formatDate(game)}</td>
+                      <td className="px-3 py-2">
                         <div className="flex items-center gap-3">
                           <div className="flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden">
                             {logoPath ? (
@@ -547,16 +886,16 @@ function MaxPrepsSeasonPage({
                           </div>
                         </div>
                       </td>
-                      <td className="border px-3 py-2 text-center">{formatLocation(game)}</td>
+                      <td className="px-3 py-2 text-center">{formatLocation(game)}</td>
                       <td
-                        className={`border px-3 py-2 text-center font-bold ${resultClassName(
+                        className={`px-3 py-2 text-center font-bold ${resultClassName(
                           game.Result
                         )}`}
                       >
                         {game.Result || "-"}
                       </td>
-                      <td className="border px-3 py-2 text-center">{formatScore(game)}</td>
-                      <td className="border px-3 py-2 text-center">
+                      <td className="px-3 py-2 text-center">{formatScore(game)}</td>
+                      <td className="px-3 py-2 text-center">
                         {game.GameType || "Regular Season"}
                       </td>
                     </tr>
@@ -565,28 +904,28 @@ function MaxPrepsSeasonPage({
               </tbody>
             </table>
           ) : (
-            <table className="min-w-full border text-xs sm:text-sm text-center whitespace-nowrap">
-              <thead className="bg-gray-100">
+            <table className="min-w-full bg-white text-xs sm:text-sm text-center whitespace-nowrap">
+              <thead className="bg-gray-100 text-xs uppercase tracking-wide text-gray-700">
                 <tr>
-                  <th className="border px-2 py-1">Date</th>
-                  <th className="border px-2 py-1">Opponent</th>
-                  <th className="border px-2 py-1">REB</th>
-                  <th className="border px-2 py-1">AST</th>
-                  <th className="border px-2 py-1">TO</th>
-                  <th className="border px-2 py-1">A/T</th>
-                  <th className="border px-2 py-1">STL</th>
-                  <th className="border px-2 py-1">BLK</th>
+                  <th className="px-2 py-2">Date</th>
+                  <th className="px-2 py-2">Opponent</th>
+                  <th className="px-2 py-2">REB</th>
+                  <th className="px-2 py-2">AST</th>
+                  <th className="px-2 py-2">TO</th>
+                  <th className="px-2 py-2">A/T</th>
+                  <th className="px-2 py-2">STL</th>
+                  <th className="px-2 py-2">BLK</th>
                   {!trimShootingColumns && (
                     <>
-                      <th className="border px-2 py-1">3PM</th>
-                      <th className="border px-2 py-1">3PA</th>
-                      <th className="border px-2 py-1">3P%</th>
-                      <th className="border px-2 py-1">2PM</th>
-                      <th className="border px-2 py-1">2PA</th>
-                      <th className="border px-2 py-1">2P%</th>
-                      <th className="border px-2 py-1">FTM</th>
-                      <th className="border px-2 py-1">FTA</th>
-                      <th className="border px-2 py-1">FT%</th>
+                      <th className="px-2 py-2">3PM</th>
+                      <th className="px-2 py-2">3PA</th>
+                      <th className="px-2 py-2">3P%</th>
+                      <th className="px-2 py-2">2PM</th>
+                      <th className="px-2 py-2">2PA</th>
+                      <th className="px-2 py-2">2P%</th>
+                      <th className="px-2 py-2">FTM</th>
+                      <th className="px-2 py-2">FTA</th>
+                      <th className="px-2 py-2">FT%</th>
                     </>
                   )}
                 </tr>
@@ -596,9 +935,14 @@ function MaxPrepsSeasonPage({
                   const totals = teamTotalsByGameId.get(Number(game.GameID));
 
                   return (
-                    <tr key={game.GameID} className={index % 2 ? "bg-gray-50" : "bg-white"}>
-                      <td className="border px-2 py-1">{formatDate(game)}</td>
-                      <td className="border px-2 py-1">
+                    <tr
+                      key={game.GameID}
+                      className={`border-t border-gray-200 ${
+                        index % 2 ? "bg-gray-50/70" : "bg-white"
+                      } hover:bg-gray-100`}
+                    >
+                      <td className="px-2 py-1.5">{formatDate(game)}</td>
+                      <td className="px-2 py-1.5">
                         <Link
                           to={`/athletics/girls/basketball/games/${game.GameID}`}
                           className="text-blue-700 underline hover:text-blue-900"
@@ -606,29 +950,29 @@ function MaxPrepsSeasonPage({
                           {game.Opponent}
                         </Link>
                       </td>
-                      <td className="border px-2 py-1">{totals ? totals.REB : "-"}</td>
-                      <td className="border px-2 py-1">{totals ? totals.AST : "-"}</td>
-                      <td className="border px-2 py-1">{totals ? totals.TO : "-"}</td>
-                      <td className="border px-2 py-1">
+                      <td className="px-2 py-1.5">{totals ? totals.REB : "-"}</td>
+                      <td className="px-2 py-1.5">{totals ? totals.AST : "-"}</td>
+                      <td className="px-2 py-1.5">{totals ? totals.TO : "-"}</td>
+                      <td className="px-2 py-1.5">
                         {totals ? assistToTurnover(totals.AST, totals.TO) : "-"}
                       </td>
-                      <td className="border px-2 py-1">{totals ? totals.STL : "-"}</td>
-                      <td className="border px-2 py-1">{totals ? totals.BLK : "-"}</td>
+                      <td className="px-2 py-1.5">{totals ? totals.STL : "-"}</td>
+                      <td className="px-2 py-1.5">{totals ? totals.BLK : "-"}</td>
                       {!trimShootingColumns && (
                         <>
-                          <td className="border px-2 py-1">{totals ? totals.ThreePM : "-"}</td>
-                          <td className="border px-2 py-1">{totals ? totals.ThreePA : "-"}</td>
-                          <td className="border px-2 py-1">
+                          <td className="px-2 py-1.5">{totals ? totals.ThreePM : "-"}</td>
+                          <td className="px-2 py-1.5">{totals ? totals.ThreePA : "-"}</td>
+                          <td className="px-2 py-1.5">
                             {totals ? statPct(totals.ThreePM, totals.ThreePA) : "-"}
                           </td>
-                          <td className="border px-2 py-1">{totals ? totals.TwoPM : "-"}</td>
-                          <td className="border px-2 py-1">{totals ? totals.TwoPA : "-"}</td>
-                          <td className="border px-2 py-1">
+                          <td className="px-2 py-1.5">{totals ? totals.TwoPM : "-"}</td>
+                          <td className="px-2 py-1.5">{totals ? totals.TwoPA : "-"}</td>
+                          <td className="px-2 py-1.5">
                             {totals ? statPct(totals.TwoPM, totals.TwoPA) : "-"}
                           </td>
-                          <td className="border px-2 py-1">{totals ? totals.FTM : "-"}</td>
-                          <td className="border px-2 py-1">{totals ? totals.FTA : "-"}</td>
-                          <td className="border px-2 py-1">
+                          <td className="px-2 py-1.5">{totals ? totals.FTM : "-"}</td>
+                          <td className="px-2 py-1.5">{totals ? totals.FTA : "-"}</td>
+                          <td className="px-2 py-1.5">
                             {totals ? statPct(totals.FTM, totals.FTA) : "-"}
                           </td>
                         </>
@@ -674,39 +1018,44 @@ function MaxPrepsSeasonPage({
 
         {seasonTotals.length ? (
           <>
-            <div className="overflow-x-auto">
-              <table className="min-w-full border text-xs sm:text-sm text-center whitespace-nowrap">
-                <thead className="bg-gray-100">
+            <div className="overflow-x-auto rounded-lg border border-gray-200 bg-white shadow">
+              <table className="min-w-full bg-white text-xs sm:text-sm text-center whitespace-nowrap">
+                <thead className="bg-gray-100 text-xs uppercase tracking-wide text-gray-700">
                   <tr>
-                    <th className="border px-2 py-1 text-left sticky left-0 bg-gray-100 z-10">
+                    <th className="px-2 py-2 text-left sticky left-0 bg-gray-100 z-10">
                       Player
                     </th>
-                    <th className="border px-2 py-1">#</th>
-                    <th className="border px-2 py-1">GP</th>
-                    <th className="border px-2 py-1">PTS</th>
-                    <th className="border px-2 py-1">REB</th>
-                    <th className="border px-2 py-1">AST</th>
-                    <th className="border px-2 py-1">STL</th>
-                    <th className="border px-2 py-1">BLK</th>
+                    <th className="px-2 py-2">#</th>
+                    <th className="px-2 py-2">GP</th>
+                    <th className="px-2 py-2">PTS</th>
+                    <th className="px-2 py-2">REB</th>
+                    <th className="px-2 py-2">AST</th>
+                    <th className="px-2 py-2">STL</th>
+                    <th className="px-2 py-2">BLK</th>
                     {!trimShootingColumns && (
                       <>
-                        <th className="border px-2 py-1">3PM</th>
-                        <th className="border px-2 py-1">3PA</th>
-                        <th className="border px-2 py-1">3P%</th>
-                        <th className="border px-2 py-1">2PM</th>
-                        <th className="border px-2 py-1">2PA</th>
-                        <th className="border px-2 py-1">2P%</th>
-                        <th className="border px-2 py-1">FTM</th>
-                        <th className="border px-2 py-1">FTA</th>
-                        <th className="border px-2 py-1">FT%</th>
+                        <th className="px-2 py-2">3PM</th>
+                        <th className="px-2 py-2">3PA</th>
+                        <th className="px-2 py-2">3P%</th>
+                        <th className="px-2 py-2">2PM</th>
+                        <th className="px-2 py-2">2PA</th>
+                        <th className="px-2 py-2">2P%</th>
+                        <th className="px-2 py-2">FTM</th>
+                        <th className="px-2 py-2">FTA</th>
+                        <th className="px-2 py-2">FT%</th>
                       </>
                     )}
                   </tr>
                 </thead>
                 <tbody>
                   {seasonTotals.map((player, index) => (
-                    <tr key={player.PlayerID} className={index % 2 ? "bg-gray-50" : "bg-white"}>
-                      <td className="border px-2 py-1 text-left sticky left-0 bg-inherit z-10">
+                    <tr
+                      key={player.PlayerID}
+                      className={`border-t border-gray-200 ${
+                        index % 2 ? "bg-gray-50/70" : "bg-white"
+                      } hover:bg-gray-100`}
+                    >
+                      <td className="px-2 py-1.5 text-left sticky left-0 bg-inherit z-10">
                         <Link
                           to={`/athletics/girls/basketball/players/${player.PlayerID}`}
                           className="text-blue-700 underline hover:text-blue-900"
@@ -714,60 +1063,60 @@ function MaxPrepsSeasonPage({
                           {playerName(player.PlayerID)}
                         </Link>
                       </td>
-                      <td className="border px-2 py-1">
+                      <td className="px-2 py-1.5">
                         {getRosterJerseyNumber(rosterEntries, player.PlayerID) || "-"}
                       </td>
-                      <td className="border px-2 py-1">{player.GamesPlayed}</td>
-                      <td className="border px-2 py-1">{valueFor(player, "Points")}</td>
-                      <td className="border px-2 py-1">{valueFor(player, "Rebounds")}</td>
-                      <td className="border px-2 py-1">{valueFor(player, "Assists")}</td>
-                      <td className="border px-2 py-1">{valueFor(player, "Steals")}</td>
-                      <td className="border px-2 py-1">{valueFor(player, "Blocks")}</td>
+                      <td className="px-2 py-1.5">{player.GamesPlayed}</td>
+                      <td className="px-2 py-1.5">{valueFor(player, "Points")}</td>
+                      <td className="px-2 py-1.5">{valueFor(player, "Rebounds")}</td>
+                      <td className="px-2 py-1.5">{valueFor(player, "Assists")}</td>
+                      <td className="px-2 py-1.5">{valueFor(player, "Steals")}</td>
+                      <td className="px-2 py-1.5">{valueFor(player, "Blocks")}</td>
                       {!trimShootingColumns && (
                         <>
-                          <td className="border px-2 py-1">{valueFor(player, "ThreePM")}</td>
-                          <td className="border px-2 py-1">{valueFor(player, "ThreePA")}</td>
-                          <td className="border px-2 py-1">
+                          <td className="px-2 py-1.5">{valueFor(player, "ThreePM")}</td>
+                          <td className="px-2 py-1.5">{valueFor(player, "ThreePA")}</td>
+                          <td className="px-2 py-1.5">
                             {pct(player.ThreePM, player.ThreePA)}
                           </td>
-                          <td className="border px-2 py-1">{valueFor(player, "TwoPM")}</td>
-                          <td className="border px-2 py-1">{valueFor(player, "TwoPA")}</td>
-                          <td className="border px-2 py-1">{pct(player.TwoPM, player.TwoPA)}</td>
-                          <td className="border px-2 py-1">{valueFor(player, "FTM")}</td>
-                          <td className="border px-2 py-1">{valueFor(player, "FTA")}</td>
-                          <td className="border px-2 py-1">{pct(player.FTM, player.FTA)}</td>
+                          <td className="px-2 py-1.5">{valueFor(player, "TwoPM")}</td>
+                          <td className="px-2 py-1.5">{valueFor(player, "TwoPA")}</td>
+                          <td className="px-2 py-1.5">{pct(player.TwoPM, player.TwoPA)}</td>
+                          <td className="px-2 py-1.5">{valueFor(player, "FTM")}</td>
+                          <td className="px-2 py-1.5">{valueFor(player, "FTA")}</td>
+                          <td className="px-2 py-1.5">{pct(player.FTM, player.FTA)}</td>
                         </>
                       )}
                     </tr>
                   ))}
                 </tbody>
-                <tfoot className="bg-gray-100 font-semibold">
+                <tfoot className="border-t-2 border-gray-300 bg-blue-50 font-semibold text-blue-950">
                   <tr>
-                    <td className="border px-2 py-1 text-left sticky left-0 bg-gray-100 z-10">
+                    <td className="px-2 py-2 text-left sticky left-0 bg-blue-50 z-10">
                       Team totals
                     </td>
-                    <td className="border px-2 py-1">-</td>
-                    <td className="border px-2 py-1">{teamTotals.GamesPlayed}</td>
-                    <td className="border px-2 py-1">{valueFor(teamTotals, "Points")}</td>
-                    <td className="border px-2 py-1">{valueFor(teamTotals, "Rebounds")}</td>
-                    <td className="border px-2 py-1">{valueFor(teamTotals, "Assists")}</td>
-                    <td className="border px-2 py-1">{valueFor(teamTotals, "Steals")}</td>
-                    <td className="border px-2 py-1">{valueFor(teamTotals, "Blocks")}</td>
+                    <td className="px-2 py-2">-</td>
+                    <td className="px-2 py-2">{teamTotals.GamesPlayed}</td>
+                    <td className="px-2 py-2">{valueFor(teamTotals, "Points")}</td>
+                    <td className="px-2 py-2">{valueFor(teamTotals, "Rebounds")}</td>
+                    <td className="px-2 py-2">{valueFor(teamTotals, "Assists")}</td>
+                    <td className="px-2 py-2">{valueFor(teamTotals, "Steals")}</td>
+                    <td className="px-2 py-2">{valueFor(teamTotals, "Blocks")}</td>
                     {!trimShootingColumns && (
                       <>
-                        <td className="border px-2 py-1">{valueFor(teamTotals, "ThreePM")}</td>
-                        <td className="border px-2 py-1">{valueFor(teamTotals, "ThreePA")}</td>
-                        <td className="border px-2 py-1">
+                        <td className="px-2 py-2">{valueFor(teamTotals, "ThreePM")}</td>
+                        <td className="px-2 py-2">{valueFor(teamTotals, "ThreePA")}</td>
+                        <td className="px-2 py-2">
                           {pct(teamTotals.ThreePM, teamTotals.ThreePA)}
                         </td>
-                        <td className="border px-2 py-1">{valueFor(teamTotals, "TwoPM")}</td>
-                        <td className="border px-2 py-1">{valueFor(teamTotals, "TwoPA")}</td>
-                        <td className="border px-2 py-1">
+                        <td className="px-2 py-2">{valueFor(teamTotals, "TwoPM")}</td>
+                        <td className="px-2 py-2">{valueFor(teamTotals, "TwoPA")}</td>
+                        <td className="px-2 py-2">
                           {pct(teamTotals.TwoPM, teamTotals.TwoPA)}
                         </td>
-                        <td className="border px-2 py-1">{valueFor(teamTotals, "FTM")}</td>
-                        <td className="border px-2 py-1">{valueFor(teamTotals, "FTA")}</td>
-                        <td className="border px-2 py-1">{pct(teamTotals.FTM, teamTotals.FTA)}</td>
+                        <td className="px-2 py-2">{valueFor(teamTotals, "FTM")}</td>
+                        <td className="px-2 py-2">{valueFor(teamTotals, "FTA")}</td>
+                        <td className="px-2 py-2">{pct(teamTotals.FTM, teamTotals.FTA)}</td>
                       </>
                     )}
                   </tr>
