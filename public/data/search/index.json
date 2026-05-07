@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-07T14:06:29.390Z",
-  "itemCount": 1601,
+  "generatedAt": "2026-05-07T18:54:22.370Z",
+  "itemCount": 1602,
   "items": [
     {
       "id": "athletics-home",
@@ -3842,7 +3842,7 @@
       "id": "boys-basketball-athlete-200101",
       "type": "athlete",
       "title": "Andy Crouch",
-      "subtitle": "Boys Basketball athlete",
+      "subtitle": "Boys Basketball athlete - Class of 2004",
       "to": "/athletics/boys/basketball/players/200101",
       "keywords": [
         "Boys Basketball",
@@ -3852,7 +3852,9 @@
         "records",
         "Andy",
         "Crouch",
-        "Crouch Andy"
+        "Crouch Andy",
+        "class of 2004",
+        "grad 2004"
       ]
     },
     {
@@ -3961,7 +3963,7 @@
       "id": "boys-basketball-athlete-200201",
       "type": "athlete",
       "title": "Jesse Coleman",
-      "subtitle": "Boys Basketball athlete",
+      "subtitle": "Boys Basketball athlete - Class of 2004",
       "to": "/athletics/boys/basketball/players/200201",
       "keywords": [
         "Boys Basketball",
@@ -3971,7 +3973,9 @@
         "records",
         "Jesse",
         "Coleman",
-        "Coleman Jesse"
+        "Coleman Jesse",
+        "class of 2004",
+        "grad 2004"
       ]
     },
     {
@@ -3997,7 +4001,7 @@
       "id": "boys-basketball-athlete-200203",
       "type": "athlete",
       "title": "Beau Hinton",
-      "subtitle": "Boys Basketball athlete",
+      "subtitle": "Boys Basketball athlete - Class of 2004",
       "to": "/athletics/boys/basketball/players/200203",
       "keywords": [
         "Boys Basketball",
@@ -4007,14 +4011,16 @@
         "records",
         "Beau",
         "Hinton",
-        "Hinton Beau"
+        "Hinton Beau",
+        "class of 2004",
+        "grad 2004"
       ]
     },
     {
       "id": "boys-basketball-athlete-200204",
       "type": "athlete",
       "title": "Matt Knight",
-      "subtitle": "Boys Basketball athlete",
+      "subtitle": "Boys Basketball athlete - Class of 2005",
       "to": "/athletics/boys/basketball/players/200204",
       "keywords": [
         "Boys Basketball",
@@ -4024,7 +4030,9 @@
         "records",
         "Matt",
         "Knight",
-        "Knight Matt"
+        "Knight Matt",
+        "class of 2005",
+        "grad 2005"
       ]
     },
     {
@@ -4064,8 +4072,8 @@
     {
       "id": "boys-basketball-athlete-200207",
       "type": "athlete",
-      "title": "Jacob Ravers",
-      "subtitle": "Boys Basketball athlete",
+      "title": "Jacob Rauers",
+      "subtitle": "Boys Basketball athlete - Class of 2004",
       "to": "/athletics/boys/basketball/players/200207",
       "keywords": [
         "Boys Basketball",
@@ -4074,8 +4082,10 @@
         "stats",
         "records",
         "Jacob",
-        "Ravers",
-        "Ravers Jacob"
+        "Rauers",
+        "Rauers Jacob",
+        "class of 2004",
+        "grad 2004"
       ]
     },
     {
@@ -4098,27 +4108,29 @@
       ]
     },
     {
-      "id": "boys-basketball-athlete-200301",
+      "id": "boys-basketball-athlete-200312",
       "type": "athlete",
-      "title": "Daryl Lasky",
-      "subtitle": "Boys Basketball athlete",
-      "to": "/athletics/boys/basketball/players/200301",
+      "title": "Cass Sawyer",
+      "subtitle": "Boys Basketball athlete - Class of 2004",
+      "to": "/athletics/boys/basketball/players/200312",
       "keywords": [
         "Boys Basketball",
         "athlete",
         "player",
         "stats",
         "records",
-        "Daryl",
-        "Lasky",
-        "Lasky Daryl"
+        "Cass",
+        "Sawyer",
+        "Sawyer Cass",
+        "class of 2004",
+        "grad 2004"
       ]
     },
     {
       "id": "boys-basketball-athlete-200307",
       "type": "athlete",
       "title": "Omar Glenn",
-      "subtitle": "Boys Basketball athlete",
+      "subtitle": "Boys Basketball athlete - Class of 2005",
       "to": "/athletics/boys/basketball/players/200307",
       "keywords": [
         "Boys Basketball",
@@ -4128,14 +4140,16 @@
         "records",
         "Omar",
         "Glenn",
-        "Glenn Omar"
+        "Glenn Omar",
+        "class of 2005",
+        "grad 2005"
       ]
     },
     {
       "id": "boys-basketball-athlete-200309",
       "type": "athlete",
       "title": "David Stubbs",
-      "subtitle": "Boys Basketball athlete",
+      "subtitle": "Boys Basketball athlete - Class of 2005",
       "to": "/athletics/boys/basketball/players/200309",
       "keywords": [
         "Boys Basketball",
@@ -4145,7 +4159,9 @@
         "records",
         "David",
         "Stubbs",
-        "Stubbs David"
+        "Stubbs David",
+        "class of 2005",
+        "grad 2005"
       ]
     },
     {
@@ -4170,8 +4186,8 @@
     {
       "id": "boys-basketball-athlete-200311",
       "type": "athlete",
-      "title": "Chris Ravers",
-      "subtitle": "Boys Basketball athlete",
+      "title": "Chris Rauers",
+      "subtitle": "Boys Basketball athlete - Class of 2005",
       "to": "/athletics/boys/basketball/players/200311",
       "keywords": [
         "Boys Basketball",
@@ -4180,32 +4196,17 @@
         "stats",
         "records",
         "Chris",
-        "Ravers",
-        "Ravers Chris"
-      ]
-    },
-    {
-      "id": "boys-basketball-athlete-200312",
-      "type": "athlete",
-      "title": "Cass Sawyer",
-      "subtitle": "Boys Basketball athlete",
-      "to": "/athletics/boys/basketball/players/200312",
-      "keywords": [
-        "Boys Basketball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Cass",
-        "Sawyer",
-        "Sawyer Cass"
+        "Rauers",
+        "Rauers Chris",
+        "class of 2005",
+        "grad 2005"
       ]
     },
     {
       "id": "boys-basketball-athlete-200313",
       "type": "athlete",
-      "title": "Daniel Eschholz",
-      "subtitle": "Boys Basketball athlete",
+      "title": "Daniel Eichholz",
+      "subtitle": "Boys Basketball athlete - Class of 2005",
       "to": "/athletics/boys/basketball/players/200313",
       "keywords": [
         "Boys Basketball",
@@ -4214,8 +4215,48 @@
         "stats",
         "records",
         "Daniel",
-        "Eschholz",
-        "Eschholz Daniel"
+        "Eichholz",
+        "Eichholz Daniel",
+        "class of 2005",
+        "grad 2005"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-200314",
+      "type": "athlete",
+      "title": "Christian Maleki",
+      "subtitle": "Boys Basketball athlete - Class of 2006",
+      "to": "/athletics/boys/basketball/players/200314",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Christian",
+        "Maleki",
+        "Maleki Christian",
+        "class of 2006",
+        "grad 2006"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-200301",
+      "type": "athlete",
+      "title": "Daryl Lasky",
+      "subtitle": "Boys Basketball athlete - Class of 2005",
+      "to": "/athletics/boys/basketball/players/200301",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Daryl",
+        "Lasky",
+        "Lasky Daryl",
+        "class of 2005",
+        "grad 2005"
       ]
     },
     {
@@ -19698,7 +19739,7 @@
       "id": "boys-soccer-athlete-200307",
       "type": "athlete",
       "title": "Omar Glenn",
-      "subtitle": "Boys Soccer athlete",
+      "subtitle": "Boys Soccer athlete - Class of 2005",
       "to": "/athletics/boys/soccer/players/200307",
       "keywords": [
         "Boys Soccer",
@@ -19708,14 +19749,16 @@
         "records",
         "Omar",
         "Glenn",
-        "Glenn Omar"
+        "Glenn Omar",
+        "class of 2005",
+        "grad 2005"
       ]
     },
     {
       "id": "boys-soccer-athlete-200203",
       "type": "athlete",
       "title": "Beau Hinton",
-      "subtitle": "Boys Soccer athlete",
+      "subtitle": "Boys Soccer athlete - Class of 2004",
       "to": "/athletics/boys/soccer/players/200203",
       "keywords": [
         "Boys Soccer",
@@ -19725,14 +19768,16 @@
         "records",
         "Beau",
         "Hinton",
-        "Hinton Beau"
+        "Hinton Beau",
+        "class of 2004",
+        "grad 2004"
       ]
     },
     {
       "id": "boys-soccer-athlete-200313",
       "type": "athlete",
-      "title": "Daniel Eschholz",
-      "subtitle": "Boys Soccer athlete",
+      "title": "Daniel Eichholz",
+      "subtitle": "Boys Soccer athlete - Class of 2005",
       "to": "/athletics/boys/soccer/players/200313",
       "keywords": [
         "Boys Soccer",
@@ -19741,15 +19786,17 @@
         "stats",
         "records",
         "Daniel",
-        "Eschholz",
-        "Eschholz Daniel"
+        "Eichholz",
+        "Eichholz Daniel",
+        "class of 2005",
+        "grad 2005"
       ]
     },
     {
       "id": "boys-soccer-athlete-200207",
       "type": "athlete",
-      "title": "Jacob Ravers",
-      "subtitle": "Boys Soccer athlete",
+      "title": "Jacob Rauers",
+      "subtitle": "Boys Soccer athlete - Class of 2004",
       "to": "/athletics/boys/soccer/players/200207",
       "keywords": [
         "Boys Soccer",
@@ -19758,8 +19805,10 @@
         "stats",
         "records",
         "Jacob",
-        "Ravers",
-        "Ravers Jacob"
+        "Rauers",
+        "Rauers Jacob",
+        "class of 2004",
+        "grad 2004"
       ]
     },
     {
@@ -19817,7 +19866,7 @@
       "id": "boys-soccer-athlete-200204",
       "type": "athlete",
       "title": "Matt Knight",
-      "subtitle": "Boys Soccer athlete",
+      "subtitle": "Boys Soccer athlete - Class of 2005",
       "to": "/athletics/boys/soccer/players/200204",
       "keywords": [
         "Boys Soccer",
@@ -19827,14 +19876,16 @@
         "records",
         "Matt",
         "Knight",
-        "Knight Matt"
+        "Knight Matt",
+        "class of 2005",
+        "grad 2005"
       ]
     },
     {
       "id": "boys-soccer-athlete-200311",
       "type": "athlete",
-      "title": "Chris Ravers",
-      "subtitle": "Boys Soccer athlete",
+      "title": "Chris Rauers",
+      "subtitle": "Boys Soccer athlete - Class of 2005",
       "to": "/athletics/boys/soccer/players/200311",
       "keywords": [
         "Boys Soccer",
@@ -19843,8 +19894,10 @@
         "stats",
         "records",
         "Chris",
-        "Ravers",
-        "Ravers Chris"
+        "Rauers",
+        "Rauers Chris",
+        "class of 2005",
+        "grad 2005"
       ]
     },
     {

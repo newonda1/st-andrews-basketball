@@ -234,7 +234,7 @@ function Season2002_03() {
         <div className="grid gap-4 md:grid-cols-[1fr_auto] md:items-start">
           <div className="space-y-3 text-gray-800 leading-relaxed">
             <p>
-              The 2002-03 season opened Michael Bennett&apos;s two-year run as the St.
+              The 2002-03 season opened Michael Bennet&apos;s two-year run as the St.
               Andrew&apos;s boys coach, and his first team was good enough to dream
               about much more than a strong regular season. The Lions finished
               19-5, won consistently from December into February, and carried the
@@ -258,7 +258,7 @@ function Season2002_03() {
               great what-ifs in program history.
             </p>
             <p>
-              Bennett&apos;s first team had depth, scoring, and postseason upside, and
+              Bennet&apos;s first team had depth, scoring, and postseason upside, and
               it still managed 19 wins despite the loss of one of its biggest
               weapons. That is what makes Burns&apos;s injury loom so large in the story
               of 2002-03: with a healthy lineup, this season had every reason to
@@ -273,7 +273,7 @@ function Season2002_03() {
             </div>
             <div className="border border-gray-200 rounded-lg px-3 py-2">
               <dt className="text-xs font-semibold uppercase tracking-wide text-gray-500">Coach</dt>
-              <dd className="text-lg font-semibold text-gray-900">Michael Bennett</dd>
+              <dd className="text-lg font-semibold text-gray-900">Michael Bennet</dd>
             </div>
             <div className="border border-gray-200 rounded-lg px-3 py-2">
               <dt className="text-xs font-semibold uppercase tracking-wide text-gray-500">Notable</dt>

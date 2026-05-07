@@ -4,6 +4,7 @@ import {
   RegionBracket5GameSVG,
   StateBracket16GameSVG,
 } from "../components/GameCardBracketsSVG";
+import { recordTableStyles } from "../pages/recordTableStyles";
 import {
   BOYS_BASKETBALL_ROSTERS_PATH,
   SCHOOLS_PATH,
@@ -75,6 +76,233 @@ function hasValue(value) {
   return value !== null && value !== undefined && value !== "";
 }
 
+function splitParagraphs(text) {
+  return String(text || "")
+    .split(/\n{2,}/)
+    .map((paragraph) => paragraph.trim())
+    .filter(Boolean);
+}
+
+function formatGrade(grade) {
+  if (grade === null || grade === undefined || grade === "") return "-";
+  const value = Number(grade);
+  if (!Number.isFinite(value)) return String(grade);
+  if (value === 8) return "8th";
+  if (value === 9) return "Fr.";
+  if (value === 10) return "So.";
+  if (value === 11) return "Jr.";
+  if (value === 12) return "Sr.";
+  return String(grade);
+}
+
+function formatScore(game) {
+  if (game.TeamScore == null || game.OpponentScore == null) return "-";
+  return `${game.TeamScore}-${game.OpponentScore}`;
+}
+
+function resultClassName(result) {
+  if (result === "W") return "text-green-700";
+  if (result === "L") return "text-red-700";
+  return "text-gray-500";
+}
+
+function RosterTableBlock({ rows }) {
+  return (
+    <div className="overflow-x-auto rounded-lg border border-gray-200 bg-white shadow">
+      <table className="min-w-full bg-white text-sm text-center">
+        <thead className="bg-gray-100 text-xs uppercase tracking-wide text-gray-700">
+          <tr>
+            <th className={`${recordTableStyles.headerCell} whitespace-nowrap`}>No.</th>
+            <th className={`${recordTableStyles.headerCell} text-left`}>Player</th>
+            <th className={`${recordTableStyles.headerCell} whitespace-nowrap`}>Grade</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.length ? (
+            rows.map((row, index) => (
+              <tr
+                key={row.key}
+                className={`border-t border-gray-200 ${
+                  index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
+                } hover:bg-gray-100`}
+              >
+                <td className={`${recordTableStyles.bodyCell} whitespace-nowrap`}>
+                  {row.jersey || "-"}
+                </td>
+                <td className={`${recordTableStyles.bodyCell} text-left`}>
+                  {row.path ? (
+                    <Link to={row.path} className="text-blue-600 hover:underline">
+                      {row.name}
+                    </Link>
+                  ) : (
+                    <span>{row.name}</span>
+                  )}
+                </td>
+                <td className={`${recordTableStyles.bodyCell} whitespace-nowrap`}>
+                  {formatGrade(row.grade)}
+                </td>
+              </tr>
+            ))
+          ) : (
+            <tr>
+              <td className={`${recordTableStyles.bodyCell} text-center text-slate-600`} colSpan={3}>
+                No roster data is available for this season yet.
+              </td>
+            </tr>
+          )}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function RosterTable({ rows }) {
+  const splitIndex = Math.ceil(rows.length / 2);
+  const firstColumnRows = rows.slice(0, splitIndex);
+  const secondColumnRows = rows.slice(splitIndex);
+
+  if (rows.length <= 1) {
+    return <RosterTableBlock rows={rows} />;
+  }
+
+  return (
+    <>
+      <div className="lg:hidden">
+        <RosterTableBlock rows={rows} />
+      </div>
+      <div className="hidden gap-4 lg:grid lg:grid-cols-2">
+        <RosterTableBlock rows={firstColumnRows} />
+        <RosterTableBlock rows={secondColumnRows} />
+      </div>
+    </>
+  );
+}
+
+function SeasonRecapSection({
+  title = "Season Recap",
+  recap,
+  briefItems = [],
+  article = null,
+}) {
+  const [isArticleOpen, setIsArticleOpen] = useState(false);
+  const paragraphs = splitParagraphs(recap);
+  const articleInsertIndex = article?.src
+    ? Math.max(0, paragraphs.length > 1 ? paragraphs.length - 2 : 0)
+    : -1;
+  if (!paragraphs.length) return null;
+
+  return (
+    <section id="season-recap" className="mx-auto max-w-4xl space-y-3">
+      <h2 className="text-2xl font-semibold">{title}</h2>
+      <div className="flow-root text-base leading-7 text-slate-700">
+        {briefItems.length ? (
+          <dl className="mb-4 grid grid-cols-3 gap-3 text-center md:float-right md:mb-3 md:ml-6 md:w-64 md:grid-cols-1">
+            {briefItems.map((item) => (
+              <div key={item.label} className="rounded-lg border border-gray-200 px-3 py-2">
+                <dt className="text-xs font-semibold uppercase tracking-wide text-gray-500">
+                  {item.label}
+                </dt>
+                <dd className="text-lg font-semibold text-gray-900">{item.value || "-"}</dd>
+              </div>
+            ))}
+          </dl>
+        ) : null}
+
+        <div className="space-y-3">
+          {paragraphs.map((paragraph, index) => (
+            <React.Fragment key={paragraph}>
+              {index === articleInsertIndex ? (
+                <aside className="mb-3 mt-1 border border-gray-200 bg-white shadow-sm md:float-left md:mr-6 md:w-56">
+                  <button
+                    type="button"
+                    onClick={() => setIsArticleOpen(true)}
+                    className="block w-full bg-gray-100 text-left"
+                    aria-label={`Open full view of ${article.title || "featured article"}`}
+                  >
+                    <img
+                      src={article.src}
+                      alt={article.thumbnailAlt || article.alt || ""}
+                      className="aspect-square w-full object-cover"
+                      style={{ objectPosition: article.thumbnailPosition || "30% 50%" }}
+                      loading="lazy"
+                    />
+                  </button>
+                  <div className="space-y-1.5 p-3">
+                    {article.meta ? (
+                      <p className="text-xs font-semibold uppercase tracking-wide text-gray-500">
+                        {article.meta}
+                      </p>
+                    ) : null}
+                    {article.title ? (
+                      <button
+                        type="button"
+                        onClick={() => setIsArticleOpen(true)}
+                        className="text-left text-sm font-bold leading-snug text-blue-700 underline hover:text-blue-900"
+                      >
+                        {article.title}
+                      </button>
+                    ) : null}
+                  </div>
+                </aside>
+              ) : null}
+              <p>{paragraph}</p>
+            </React.Fragment>
+          ))}
+        </div>
+      </div>
+
+      {isArticleOpen && article?.src ? (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+          role="dialog"
+          aria-modal="true"
+          aria-label={article.title || "Article image"}
+          onClick={() => setIsArticleOpen(false)}
+        >
+          <div
+            className="max-h-[92vh] w-full max-w-6xl overflow-hidden rounded-lg bg-white shadow-2xl"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="flex items-center justify-between border-b border-gray-200 px-4 py-3">
+              <h3 className="text-base font-semibold text-gray-900">
+                {article.title || "Article"}
+              </h3>
+              <button
+                type="button"
+                onClick={() => setIsArticleOpen(false)}
+                className="rounded border border-gray-300 px-3 py-1 text-sm font-semibold text-gray-700 hover:bg-gray-100"
+              >
+                Close
+              </button>
+            </div>
+            <div className="max-h-[82vh] overflow-auto bg-gray-950 p-3">
+              <img
+                src={article.src}
+                alt={article.fullAlt || article.alt || ""}
+                className="mx-auto max-h-[78vh] w-auto max-w-full object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      ) : null}
+    </section>
+  );
+}
+
+function SeasonImagesSection() {
+  return (
+    <section id="season-images" className="space-y-3">
+      <h2 className="text-2xl font-semibold">Season Images</h2>
+      <div className="rounded-lg border border-dashed border-gray-300 bg-gray-50 px-6 py-12 text-center">
+        <p className="text-base font-semibold text-gray-800">Season photo gallery coming soon</p>
+        <p className="mt-2 text-sm leading-6 text-gray-600">
+          Photos from the 2003-04 boys basketball season will be added here.
+        </p>
+      </div>
+    </section>
+  );
+}
+
 function MaxPrepsSeasonPage({
   seasonId,
   seasonLabel,
@@ -82,6 +310,15 @@ function MaxPrepsSeasonPage({
   scoringOnly = false,
   statSourceLabel = "MaxPreps",
   trimShootingColumns = false,
+  seasonRecapTitle = "Season Recap",
+  seasonRecap = "",
+  seasonBriefs = [],
+  recapArticle = null,
+  showSeasonRoster = false,
+  showSeasonImagesPlaceholder = false,
+  rosterTitle = "Season Roster",
+  rosterStaff = [],
+  hideBrackets = false,
   hidePlayerStatsToggle = false,
 }) {
   const [games, setGames] = useState([]);
@@ -274,8 +511,8 @@ function MaxPrepsSeasonPage({
     return Array.from(totals.values())
       .filter((total) => total.GamesPlayed > 0 || STAT_FIELDS.some((field) => hasValue(total[field])))
       .sort((a, b) => {
-        const jerseyA = Number(getRosterJerseyNumber(rosterEntries, a.PlayerID) ?? 999);
-        const jerseyB = Number(getRosterJerseyNumber(rosterEntries, b.PlayerID) ?? 999);
+        const jerseyA = Number(getRosterJerseyNumber(rosterEntries, a.PlayerID) || 999);
+        const jerseyB = Number(getRosterJerseyNumber(rosterEntries, b.PlayerID) || 999);
         if (jerseyA !== jerseyB) return jerseyA - jerseyB;
         return playerName(a.PlayerID).localeCompare(playerName(b.PlayerID));
       });
@@ -380,67 +617,170 @@ function MaxPrepsSeasonPage({
     return (Number(value || 0) / player.GamesPlayed).toFixed(1);
   };
 
+  const rosterTableRows = useMemo(() => {
+    const playerRows = rosterEntries
+      .map((entry) => ({
+        key: `player-${entry.PlayerID}`,
+        jersey: entry.JerseyNumber,
+        name: playerName(entry.PlayerID),
+        grade: entry.Grade,
+        path: playerById.has(Number(entry.PlayerID))
+          ? `/athletics/boys/basketball/players/${entry.PlayerID}`
+          : "",
+      }))
+      .sort((a, b) => {
+        const jerseyA = Number(a.jersey || 999);
+        const jerseyB = Number(b.jersey || 999);
+        if (jerseyA !== jerseyB) return jerseyA - jerseyB;
+        return a.name.localeCompare(b.name);
+      });
+
+    const staffRows = rosterStaff.map((staff, index) => ({
+      key: `staff-${index}-${staff.name}`,
+      jersey: "",
+      name: staff.name,
+      grade: staff.role,
+      path: "",
+    }));
+
+    return [...playerRows, ...staffRows];
+  }, [playerById, rosterEntries, rosterStaff]);
+
   const bracket = bracketsData?.[String(seasonId)];
+  const shouldShowStringRecap = Boolean(splitParagraphs(seasonRecap).length);
+  const statsHeaderCellClassName = "px-2 py-2 text-center text-xs whitespace-nowrap";
+  const statsBodyCellClassName = "px-2 py-1.5 text-center whitespace-nowrap";
+  const statsFooterCellClassName = "px-2 py-2 text-center whitespace-nowrap";
 
   return (
-    <div className="pt-2 pb-4 space-y-8 max-w-6xl mx-auto">
+    <div className="mx-auto max-w-6xl space-y-8 px-4 pb-10 pt-2 lg:pb-40">
       <h1 className="text-3xl font-bold text-center mb-2">{seasonLabel} Season</h1>
 
-      <section className="space-y-4">
-        <h2 className="text-2xl font-semibold mt-4 mb-3">Season Recap</h2>
-
-        {recapContent ? (
-          <div className="text-gray-800 leading-relaxed">{recapContent}</div>
-        ) : (
-          <div className="text-gray-800 leading-relaxed">
-            <p className="mb-3 leading-relaxed">
-              The {seasonLabel} St. Andrew&apos;s boys basketball team finished{" "}
-              {seasonSummary.wins}-{seasonSummary.losses}
-              {seasonInfo?.HeadCoach ? ` under head coach ${seasonInfo.HeadCoach}` : ""}.
-              The Lions scored {seasonSummary.pointsFor} points and allowed{" "}
-              {seasonSummary.pointsAgainst} across {games.length} games recorded in
-              the archive.
-            </p>
-
-            <p className="mb-3 leading-relaxed">
-              In regular-season region play, St. Andrew&apos;s went{" "}
-              {seasonSummary.regionWins}-{seasonSummary.regionLosses}. The schedule
-              below includes the game results currently available for the season,
-              followed by any tournament brackets that have been entered for that
-              year.
-            </p>
-
-            {leaderParts.length > 0 && (
-              <p className="mb-3 leading-relaxed">
-                {statSourceLabel} stat leaders for the season were{" "}
-                {leaderParts.map(([label, text], index) => (
-                  <React.Fragment key={label}>
-                    {index > 0 && (index === leaderParts.length - 1 ? ", and " : ", ")}
-                    {text} in {label}
-                  </React.Fragment>
-                ))}
-                .
+      {shouldShowStringRecap ? (
+        <SeasonRecapSection
+          title={seasonRecapTitle}
+          recap={seasonRecap}
+          briefItems={seasonBriefs}
+          article={recapArticle}
+        />
+      ) : (
+        <section className="mx-auto max-w-4xl space-y-3">
+          <h2 className="text-2xl font-semibold">Season Recap</h2>
+          {recapContent ? (
+            <div className="text-base leading-7 text-slate-700">{recapContent}</div>
+          ) : (
+            <div className="space-y-3 text-base leading-7 text-slate-700">
+              <p>
+                The {seasonLabel} St. Andrew&apos;s boys basketball team finished{" "}
+                {seasonSummary.wins}-{seasonSummary.losses}
+                {seasonInfo?.HeadCoach ? ` under head coach ${seasonInfo.HeadCoach}` : ""}.
+                The Lions scored {seasonSummary.pointsFor} points and allowed{" "}
+                {seasonSummary.pointsAgainst} across {games.length} games recorded in the
+                archive.
               </p>
-            )}
-          </div>
-        )}
-      </section>
+              <p>
+                In regular-season region play, St. Andrew&apos;s went{" "}
+                {seasonSummary.regionWins}-{seasonSummary.regionLosses}. The schedule below
+                includes the game results currently available for the season
+                {hideBrackets
+                  ? "."
+                  : ", followed by any tournament brackets that have been entered for that year."}
+              </p>
+              {leaderParts.length > 0 ? (
+                <p>
+                  {statSourceLabel} stat leaders for the season were{" "}
+                  {leaderParts.map(([label, text], index) => (
+                    <React.Fragment key={label}>
+                      {index > 0 && (index === leaderParts.length - 1 ? ", and " : ", ")}
+                      {text} in {label}
+                    </React.Fragment>
+                  ))}
+                  .
+                </p>
+              ) : null}
+            </div>
+          )}
+        </section>
+      )}
+
+      {showSeasonImagesPlaceholder ? <SeasonImagesSection /> : null}
+
+      {showSeasonRoster ? (
+        <section id="season-roster" className="space-y-4">
+          <h2 className="text-2xl font-semibold">{rosterTitle}</h2>
+          <RosterTable rows={rosterTableRows} />
+        </section>
+      ) : null}
 
       <section>
-        <div className="flex items-center justify-between mt-8 mb-4">
+        <div className="mt-8 mb-4 flex items-center justify-between">
           <h2 className="text-2xl font-semibold">Schedule &amp; Results</h2>
         </div>
 
-        <div className="overflow-x-auto">
-          <table className="min-w-full border text-sm">
-            <thead className="bg-gray-100">
+        <div className="grid gap-3 sm:hidden">
+          {games.map((game) => {
+            const logoPath = opponentLogoPath(game);
+
+            return (
+              <Link
+                key={game.GameID}
+                to={`/athletics/boys/basketball/games/${game.GameID}`}
+                className="block rounded-lg border border-gray-200 bg-white p-4 text-gray-900 no-underline shadow-sm transition hover:border-blue-300"
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="min-w-0">
+                    <p className="mb-2 text-sm text-gray-600">{formatDate(game.GameID)}</p>
+                    <div className="flex items-start gap-3">
+                      <div className="flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden">
+                        {logoPath ? (
+                          <img
+                            src={logoPath}
+                            alt=""
+                            className="h-full w-full object-contain"
+                            loading="lazy"
+                            onError={(event) => {
+                              event.currentTarget.style.display = "none";
+                            }}
+                          />
+                        ) : null}
+                      </div>
+                      <div className="min-w-0">
+                        <h3 className="text-lg font-semibold leading-snug">{game.Opponent}</h3>
+                        {game.Tournament ? (
+                          <p className="mt-0.5 text-xs leading-tight text-gray-500">
+                            {game.Tournament}
+                          </p>
+                        ) : null}
+                        <p className="mt-2 text-sm text-gray-600">
+                          {[formatLocation(game), game.GameType || "Regular Season"]
+                            .filter(Boolean)
+                            .join(" • ")}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="shrink-0 text-right">
+                    <p className={`text-lg font-bold ${resultClassName(game.Result)}`}>
+                      {game.Result || "-"}
+                    </p>
+                    <p className="text-sm font-semibold">{formatScore(game)}</p>
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+
+        <div className="hidden overflow-x-auto rounded-lg border border-gray-200 bg-white shadow sm:block">
+          <table className="min-w-full bg-white text-sm">
+            <thead className="bg-gray-100 text-xs uppercase tracking-wide text-gray-700">
               <tr>
-                <th className="border px-3 py-2 text-left">Date</th>
-                <th className="border px-3 py-2 text-left">Opponent</th>
-                <th className="border px-3 py-2">Location</th>
-                <th className="border px-3 py-2">Result</th>
-                <th className="border px-3 py-2">Score</th>
-                <th className="border px-3 py-2">Type</th>
+                <th className="px-3 py-2 text-left">Date</th>
+                <th className="px-3 py-2 text-left">Opponent</th>
+                <th className="px-3 py-2 text-center">Location</th>
+                <th className="px-3 py-2 text-center">Result</th>
+                <th className="px-3 py-2 text-center">Score</th>
+                <th className="px-3 py-2 text-center">Type</th>
               </tr>
             </thead>
             <tbody>
@@ -448,9 +788,14 @@ function MaxPrepsSeasonPage({
                 const logoPath = opponentLogoPath(game);
 
                 return (
-                  <tr key={game.GameID} className={index % 2 ? "bg-gray-50" : "bg-white"}>
-                    <td className="border px-3 py-2">{formatDate(game.GameID)}</td>
-                    <td className="border px-3 py-2">
+                  <tr
+                    key={game.GameID}
+                    className={`border-t border-gray-200 ${
+                      index % 2 ? "bg-gray-50/70" : "bg-white"
+                    } hover:bg-gray-100`}
+                  >
+                    <td className="px-3 py-2 whitespace-nowrap">{formatDate(game.GameID)}</td>
+                    <td className="px-3 py-2">
                       <div className="flex items-center gap-3">
                         <div className="flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden">
                           {logoPath ? (
@@ -472,28 +817,20 @@ function MaxPrepsSeasonPage({
                           >
                             {game.Opponent}
                           </Link>
-                          {game.Tournament && (
+                          {game.Tournament ? (
                             <div className="mt-0.5 text-xs leading-tight text-gray-500">
                               {game.Tournament}
                             </div>
-                          )}
+                          ) : null}
                         </div>
                       </div>
                     </td>
-                    <td className="border px-3 py-2 text-center">{formatLocation(game)}</td>
-                    <td
-                      className={`border px-3 py-2 text-center font-bold ${
-                        game.Result === "W" ? "text-green-700" : "text-red-700"
-                      }`}
-                    >
-                      {game.Result}
+                    <td className="px-3 py-2 text-center">{formatLocation(game)}</td>
+                    <td className={`px-3 py-2 text-center font-bold ${resultClassName(game.Result)}`}>
+                      {game.Result || "-"}
                     </td>
-                    <td className="border px-3 py-2 text-center">
-                      {game.TeamScore}-{game.OpponentScore}
-                    </td>
-                    <td className="border px-3 py-2 text-center">
-                      {game.GameType || "Regular Season"}
-                    </td>
+                    <td className="px-3 py-2 text-center">{formatScore(game)}</td>
+                    <td className="px-3 py-2 text-center">{game.GameType || "Regular Season"}</td>
                   </tr>
                 );
               })}
@@ -502,39 +839,43 @@ function MaxPrepsSeasonPage({
         </div>
       </section>
 
-      <section className="space-y-3">
-        <h2 className="text-2xl font-semibold">Region Tournament Bracket</h2>
-        {bracketsData === null ? (
-          <p className="text-gray-600">Loading region bracket...</p>
-        ) : bracket?.region ? (
-          <RegionBracket5GameSVG bracket={bracket.region} schools={schoolsData} />
-        ) : (
-          <p className="text-gray-600">Region bracket data is not available for this season.</p>
-        )}
-      </section>
+      {!hideBrackets ? (
+        <>
+          <section className="space-y-3">
+            <h2 className="text-2xl font-semibold">Region Tournament Bracket</h2>
+            {bracketsData === null ? (
+              <p className="text-gray-600">Loading region bracket...</p>
+            ) : bracket?.region ? (
+              <RegionBracket5GameSVG bracket={bracket.region} schools={schoolsData} />
+            ) : (
+              <p className="text-gray-600">
+                Region bracket data is not available for this season.
+              </p>
+            )}
+          </section>
 
-      <section className="space-y-3">
-        <h2 className="text-2xl font-semibold">State Tournament Bracket</h2>
-        {bracketsData === null ? (
-          <p className="text-gray-600">Loading state bracket...</p>
-        ) : bracket?.state ? (
-          <StateBracket16GameSVG bracket={bracket.state} schools={schoolsData} />
-        ) : (
-          <p className="text-gray-600">State bracket data is not available for this season.</p>
-        )}
-      </section>
+          <section className="space-y-3">
+            <h2 className="text-2xl font-semibold">State Tournament Bracket</h2>
+            {bracketsData === null ? (
+              <p className="text-gray-600">Loading state bracket...</p>
+            ) : bracket?.state ? (
+              <StateBracket16GameSVG bracket={bracket.state} schools={schoolsData} />
+            ) : (
+              <p className="text-gray-600">
+                State bracket data is not available for this season.
+              </p>
+            )}
+          </section>
+        </>
+      ) : null}
 
       <section>
-        <div className="flex items-center justify-between mt-8 mb-4">
-          <h2 className="text-2xl font-semibold">Player Statistics</h2>
+        <div className="mt-8 mb-4 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <h2 className="text-2xl font-semibold">Individual Stats</h2>
 
-          {!scoringOnly && !hidePlayerStatsToggle && (
+          {!scoringOnly && !hidePlayerStatsToggle ? (
             <div className="flex items-center space-x-2 text-xs sm:text-sm">
-              <span
-                className={`${
-                  showPerGame ? "text-gray-400" : "text-gray-900 font-semibold"
-                }`}
-              >
+              <span className={showPerGame ? "text-gray-400" : "text-gray-900 font-semibold"}>
                 Season totals
               </span>
               <button
@@ -551,156 +892,209 @@ function MaxPrepsSeasonPage({
                   }`}
                 />
               </button>
-              <span
-                className={`${
-                  showPerGame ? "text-gray-900 font-semibold" : "text-gray-400"
-                }`}
-              >
+              <span className={showPerGame ? "text-gray-900 font-semibold" : "text-gray-400"}>
                 Per game averages
               </span>
             </div>
-          )}
+          ) : null}
         </div>
 
-        <div className="overflow-x-auto">
-          <table
-            className={`border text-xs sm:text-sm text-center whitespace-nowrap ${
-              scoringOnly ? "w-full min-w-[420px]" : "min-w-full"
-            }`}
-          >
-            <thead className="bg-gray-100">
-              <tr>
-                <th className="border px-2 py-1 text-left sticky left-0 bg-gray-100 z-10">
-                  Player
-                </th>
-                <th className="border px-2 py-1">#</th>
-                <th className="border px-2 py-1">GP</th>
-                <th className="border px-2 py-1">PTS</th>
-                {scoringOnly ? (
-                  <th className="border px-2 py-1">PPG</th>
-                ) : (
-                  <>
-                    <th className="border px-2 py-1">REB</th>
-                    <th className="border px-2 py-1">AST</th>
-                    <th className="border px-2 py-1">STL</th>
-                    <th className="border px-2 py-1">BLK</th>
-                    {!trimShootingColumns && (
-                      <>
-                        <th className="border px-2 py-1">TO</th>
-                        <th className="border px-2 py-1">3PM</th>
-                        <th className="border px-2 py-1">3PA</th>
-                        <th className="border px-2 py-1">3P%</th>
-                        <th className="border px-2 py-1">2PM</th>
-                        <th className="border px-2 py-1">2PA</th>
-                        <th className="border px-2 py-1">2P%</th>
-                        <th className="border px-2 py-1">FTM</th>
-                        <th className="border px-2 py-1">FTA</th>
-                        <th className="border px-2 py-1">FT%</th>
-                      </>
-                    )}
-                  </>
-                )}
-              </tr>
-            </thead>
-            <tbody>
-              {seasonTotals.map((player, index) => {
-                const scoringGames = Number(player.GamesPlayed || 0);
-                const points = Number(player.Points || 0);
-
-                return (
-                  <tr key={player.PlayerID} className={index % 2 ? "bg-gray-50" : "bg-white"}>
-                    <td className="border px-2 py-1 text-left sticky left-0 bg-inherit z-10">
-                      <Link
-                        to={`/athletics/boys/basketball/players/${player.PlayerID}`}
-                        className="text-blue-700 underline hover:text-blue-900"
-                      >
-                        {playerName(player.PlayerID)}
-                      </Link>
-                    </td>
-                    <td className="border px-2 py-1">
-                      {getRosterJerseyNumber(rosterEntries, player.PlayerID) ?? "-"}
-                    </td>
-                    <td className="border px-2 py-1">{player.GamesPlayed || "-"}</td>
-                    <td className="border px-2 py-1">{valueFor(player, "Points")}</td>
+        {seasonTotals.length ? (
+          <>
+            <div className="overflow-x-auto rounded-lg border border-gray-200 bg-white shadow">
+              <table className="min-w-full bg-white text-sm">
+                <thead className="bg-gray-100 text-gray-700">
+                  <tr>
+                    <th className={statsHeaderCellClassName}>#</th>
+                    <th className={statsHeaderCellClassName}>Player</th>
+                    <th className={statsHeaderCellClassName}>GP</th>
+                    <th className={statsHeaderCellClassName}>PTS</th>
                     {scoringOnly ? (
-                      <td className="border px-2 py-1">
-                        {scoringGames ? (points / scoringGames).toFixed(1) : "-"}
-                      </td>
+                      <th className={statsHeaderCellClassName}>PPG</th>
                     ) : (
                       <>
-                        <td className="border px-2 py-1">{valueFor(player, "Rebounds")}</td>
-                        <td className="border px-2 py-1">{valueFor(player, "Assists")}</td>
-                        <td className="border px-2 py-1">{valueFor(player, "Steals")}</td>
-                        <td className="border px-2 py-1">{valueFor(player, "Blocks")}</td>
-                        {!trimShootingColumns && (
+                        <th className={statsHeaderCellClassName}>REB</th>
+                        <th className={statsHeaderCellClassName}>AST</th>
+                        <th className={statsHeaderCellClassName}>STL</th>
+                        <th className={statsHeaderCellClassName}>BLK</th>
+                        {!trimShootingColumns ? (
                           <>
-                            <td className="border px-2 py-1">{valueFor(player, "Turnovers")}</td>
-                            <td className="border px-2 py-1">{valueFor(player, "ThreePM")}</td>
-                            <td className="border px-2 py-1">{valueFor(player, "ThreePA")}</td>
-                            <td className="border px-2 py-1">
-                              {pct(player.ThreePM, player.ThreePA)}
-                            </td>
-                            <td className="border px-2 py-1">{valueFor(player, "TwoPM")}</td>
-                            <td className="border px-2 py-1">{valueFor(player, "TwoPA")}</td>
-                            <td className="border px-2 py-1">{pct(player.TwoPM, player.TwoPA)}</td>
-                            <td className="border px-2 py-1">{valueFor(player, "FTM")}</td>
-                            <td className="border px-2 py-1">{valueFor(player, "FTA")}</td>
-                            <td className="border px-2 py-1">{pct(player.FTM, player.FTA)}</td>
+                            <th className={statsHeaderCellClassName}>TO</th>
+                            <th className={statsHeaderCellClassName}>3PM</th>
+                            <th className={statsHeaderCellClassName}>3PA</th>
+                            <th className={statsHeaderCellClassName}>3P%</th>
+                            <th className={statsHeaderCellClassName}>2PM</th>
+                            <th className={statsHeaderCellClassName}>2PA</th>
+                            <th className={statsHeaderCellClassName}>2P%</th>
+                            <th className={statsHeaderCellClassName}>FTM</th>
+                            <th className={statsHeaderCellClassName}>FTA</th>
+                            <th className={statsHeaderCellClassName}>FT%</th>
                           </>
-                        )}
+                        ) : null}
                       </>
                     )}
                   </tr>
-                );
-              })}
-            </tbody>
-            {!scoringOnly && teamTotals && (
-              <tfoot className="bg-gray-100 font-semibold">
-                <tr>
-                  <td className="border px-2 py-1 text-left sticky left-0 bg-gray-100 z-10">
-                    Team totals
-                  </td>
-                  <td className="border px-2 py-1">-</td>
-                  <td className="border px-2 py-1">{teamTotals.GamesPlayed || "-"}</td>
-                  <td className="border px-2 py-1">{valueFor(teamTotals, "Points")}</td>
-                  <td className="border px-2 py-1">{valueFor(teamTotals, "Rebounds")}</td>
-                  <td className="border px-2 py-1">{valueFor(teamTotals, "Assists")}</td>
-                  <td className="border px-2 py-1">{valueFor(teamTotals, "Steals")}</td>
-                  <td className="border px-2 py-1">{valueFor(teamTotals, "Blocks")}</td>
-                  {!trimShootingColumns && (
-                    <>
-                      <td className="border px-2 py-1">{valueFor(teamTotals, "Turnovers")}</td>
-                      <td className="border px-2 py-1">{valueFor(teamTotals, "ThreePM")}</td>
-                      <td className="border px-2 py-1">{valueFor(teamTotals, "ThreePA")}</td>
-                      <td className="border px-2 py-1">
-                        {pct(teamTotals.ThreePM, teamTotals.ThreePA)}
-                      </td>
-                      <td className="border px-2 py-1">{valueFor(teamTotals, "TwoPM")}</td>
-                      <td className="border px-2 py-1">{valueFor(teamTotals, "TwoPA")}</td>
-                      <td className="border px-2 py-1">{pct(teamTotals.TwoPM, teamTotals.TwoPA)}</td>
-                      <td className="border px-2 py-1">{valueFor(teamTotals, "FTM")}</td>
-                      <td className="border px-2 py-1">{valueFor(teamTotals, "FTA")}</td>
-                      <td className="border px-2 py-1">{pct(teamTotals.FTM, teamTotals.FTA)}</td>
-                    </>
-                  )}
-                </tr>
-              </tfoot>
-            )}
-          </table>
-        </div>
+                </thead>
+                <tbody>
+                  {seasonTotals.map((player, index) => {
+                    const scoringGames = Number(player.GamesPlayed || 0);
+                    const points = Number(player.Points || 0);
 
-        {scoringOnly && (
-          <p className="mt-2 text-center text-xs leading-relaxed text-gray-600">
-            This season currently includes scoring by game only. GP reflects games
-            in which a player recorded points in the surviving scoring archive.
-          </p>
-        )}
-        {trimShootingColumns && !scoringOnly && (
-          <p className="mt-2 text-center text-xs leading-relaxed text-gray-600">
-            Points are the most complete totals for this season. Other categories may be
-            incomplete because rebounds, assists, steals, blocks, and related stats were not
-            consistently reported in newspaper recaps.
-          </p>
+                    return (
+                      <tr
+                        key={player.PlayerID}
+                        className={`border-t border-gray-200 ${
+                          index % 2 ? "bg-gray-50/70" : "bg-white"
+                        } hover:bg-gray-100`}
+                      >
+                        <td className={statsBodyCellClassName}>
+                          {getRosterJerseyNumber(rosterEntries, player.PlayerID) || "-"}
+                        </td>
+                        <td className={statsBodyCellClassName}>
+                          <Link
+                            to={`/athletics/boys/basketball/players/${player.PlayerID}`}
+                            className="text-blue-600 hover:underline"
+                          >
+                            {playerName(player.PlayerID)}
+                          </Link>
+                        </td>
+                        <td className={statsBodyCellClassName}>{player.GamesPlayed || "-"}</td>
+                        <td className={statsBodyCellClassName}>{valueFor(player, "Points")}</td>
+                        {scoringOnly ? (
+                          <td className={statsBodyCellClassName}>
+                            {scoringGames ? (points / scoringGames).toFixed(1) : "-"}
+                          </td>
+                        ) : (
+                          <>
+                            <td className={statsBodyCellClassName}>
+                              {valueFor(player, "Rebounds")}
+                            </td>
+                            <td className={statsBodyCellClassName}>
+                              {valueFor(player, "Assists")}
+                            </td>
+                            <td className={statsBodyCellClassName}>
+                              {valueFor(player, "Steals")}
+                            </td>
+                            <td className={statsBodyCellClassName}>
+                              {valueFor(player, "Blocks")}
+                            </td>
+                            {!trimShootingColumns ? (
+                              <>
+                                <td className={statsBodyCellClassName}>
+                                  {valueFor(player, "Turnovers")}
+                                </td>
+                                <td className={statsBodyCellClassName}>
+                                  {valueFor(player, "ThreePM")}
+                                </td>
+                                <td className={statsBodyCellClassName}>
+                                  {valueFor(player, "ThreePA")}
+                                </td>
+                                <td className={statsBodyCellClassName}>
+                                  {pct(player.ThreePM, player.ThreePA)}
+                                </td>
+                                <td className={statsBodyCellClassName}>
+                                  {valueFor(player, "TwoPM")}
+                                </td>
+                                <td className={statsBodyCellClassName}>
+                                  {valueFor(player, "TwoPA")}
+                                </td>
+                                <td className={statsBodyCellClassName}>
+                                  {pct(player.TwoPM, player.TwoPA)}
+                                </td>
+                                <td className={statsBodyCellClassName}>
+                                  {valueFor(player, "FTM")}
+                                </td>
+                                <td className={statsBodyCellClassName}>
+                                  {valueFor(player, "FTA")}
+                                </td>
+                                <td className={statsBodyCellClassName}>
+                                  {pct(player.FTM, player.FTA)}
+                                </td>
+                              </>
+                            ) : null}
+                          </>
+                        )}
+                      </tr>
+                    );
+                  })}
+                </tbody>
+                {!scoringOnly && teamTotals ? (
+                  <tfoot className="border-t-2 border-gray-300 bg-blue-50 text-blue-950">
+                    <tr>
+                      <td className={statsFooterCellClassName}></td>
+                      <td className={statsFooterCellClassName}>Season Totals</td>
+                      <td className={statsFooterCellClassName}>{teamTotals.GamesPlayed || "-"}</td>
+                      <td className={statsFooterCellClassName}>
+                        {valueFor(teamTotals, "Points")}
+                      </td>
+                      <td className={statsFooterCellClassName}>
+                        {valueFor(teamTotals, "Rebounds")}
+                      </td>
+                      <td className={statsFooterCellClassName}>
+                        {valueFor(teamTotals, "Assists")}
+                      </td>
+                      <td className={statsFooterCellClassName}>
+                        {valueFor(teamTotals, "Steals")}
+                      </td>
+                      <td className={statsFooterCellClassName}>
+                        {valueFor(teamTotals, "Blocks")}
+                      </td>
+                      {!trimShootingColumns ? (
+                        <>
+                          <td className={statsFooterCellClassName}>
+                            {valueFor(teamTotals, "Turnovers")}
+                          </td>
+                          <td className={statsFooterCellClassName}>
+                            {valueFor(teamTotals, "ThreePM")}
+                          </td>
+                          <td className={statsFooterCellClassName}>
+                            {valueFor(teamTotals, "ThreePA")}
+                          </td>
+                          <td className={statsFooterCellClassName}>
+                            {pct(teamTotals.ThreePM, teamTotals.ThreePA)}
+                          </td>
+                          <td className={statsFooterCellClassName}>
+                            {valueFor(teamTotals, "TwoPM")}
+                          </td>
+                          <td className={statsFooterCellClassName}>
+                            {valueFor(teamTotals, "TwoPA")}
+                          </td>
+                          <td className={statsFooterCellClassName}>
+                            {pct(teamTotals.TwoPM, teamTotals.TwoPA)}
+                          </td>
+                          <td className={statsFooterCellClassName}>
+                            {valueFor(teamTotals, "FTM")}
+                          </td>
+                          <td className={statsFooterCellClassName}>
+                            {valueFor(teamTotals, "FTA")}
+                          </td>
+                          <td className={statsFooterCellClassName}>
+                            {pct(teamTotals.FTM, teamTotals.FTA)}
+                          </td>
+                        </>
+                      ) : null}
+                    </tr>
+                  </tfoot>
+                ) : null}
+              </table>
+            </div>
+
+            {scoringOnly ? (
+              <p className="mt-2 text-center text-xs leading-relaxed text-gray-600">
+                This season currently includes scoring by game only. GP reflects games in
+                which a player recorded points in the surviving scoring archive.
+              </p>
+            ) : null}
+            {trimShootingColumns && !scoringOnly ? (
+              <p className="mt-2 text-center text-xs leading-relaxed text-gray-600">
+                Points are the most complete totals for this season. Other categories may be
+                incomplete because rebounds, assists, steals, blocks, and related stats were
+                not consistently reported in newspaper recaps.
+              </p>
+            ) : null}
+          </>
+        ) : (
+          <p className="text-gray-600">Player statistics are not available for this season.</p>
         )}
       </section>
     </div>
