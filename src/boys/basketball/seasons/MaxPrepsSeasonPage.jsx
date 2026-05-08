@@ -289,7 +289,94 @@ function SeasonRecapSection({
   );
 }
 
-function SeasonImagesSection() {
+function SeasonImagesSection({ images = [] }) {
+  const [imageIndex, setImageIndex] = useState(0);
+
+  useEffect(() => {
+    setImageIndex(0);
+  }, [images]);
+
+  if (images.length) {
+    const selectedImage = images[imageIndex] || images[0];
+    const selectedCaption = String(selectedImage?.caption || "").trim();
+    const currentImageNumber = Math.min(imageIndex + 1, images.length);
+    const goPrev = () => setImageIndex((index) => (index - 1 + images.length) % images.length);
+    const goNext = () => setImageIndex((index) => (index + 1) % images.length);
+
+    return (
+      <section id="season-images" className="space-y-3">
+        <h2 className="text-2xl font-semibold">Season Images</h2>
+
+        <div className="overflow-hidden rounded-lg border border-gray-200 bg-white">
+          <div className="relative bg-gray-50">
+            <img
+              src={selectedImage.src}
+              alt={selectedImage.alt || ""}
+              className="w-full max-h-[620px] object-contain"
+              loading="lazy"
+            />
+
+            {images.length > 1 ? (
+              <>
+                <button
+                  type="button"
+                  onClick={goPrev}
+                  className="absolute left-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200 bg-white/90 shadow hover:bg-white"
+                  aria-label="Previous image"
+                  title="Previous"
+                >
+                  {"<"}
+                </button>
+
+                <button
+                  type="button"
+                  onClick={goNext}
+                  className="absolute right-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200 bg-white/90 shadow hover:bg-white"
+                  aria-label="Next image"
+                  title="Next"
+                >
+                  {">"}
+                </button>
+
+                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-black/65 px-3 py-1 text-xs text-white">
+                  {currentImageNumber} / {images.length}
+                </div>
+              </>
+            ) : null}
+          </div>
+
+          <div className="border-t border-gray-200 bg-white px-4 py-3">
+            <div className="mb-3 flex items-center justify-between gap-3">
+              <p className="text-sm font-medium text-gray-900">{selectedCaption}</p>
+              <p className="text-xs text-gray-500">
+                Image {currentImageNumber} of {images.length}
+              </p>
+            </div>
+
+            <div className="grid grid-cols-4 gap-2 sm:grid-cols-6 md:grid-cols-7">
+              {images.map((image, index) => (
+                <button
+                  key={image.src}
+                  type="button"
+                  onClick={() => setImageIndex(index)}
+                  className={`aspect-square overflow-hidden rounded-md border bg-gray-50 ${
+                    index === imageIndex
+                      ? "border-gray-900 ring-2 ring-gray-900"
+                      : "border-gray-200 hover:border-gray-500"
+                  }`}
+                  aria-label={`Go to image ${index + 1}`}
+                  title={image.caption || image.alt || `Image ${index + 1}`}
+                >
+                  <img src={image.src} alt="" className="h-full w-full object-cover" loading="lazy" />
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section id="season-images" className="space-y-3">
       <h2 className="text-2xl font-semibold">Season Images</h2>
@@ -316,6 +403,7 @@ function MaxPrepsSeasonPage({
   recapArticle = null,
   showSeasonRoster = false,
   showSeasonImagesPlaceholder = false,
+  seasonImages = [],
   rosterTitle = "Season Roster",
   rosterStaff = [],
   hideBrackets = false,
@@ -703,7 +791,9 @@ function MaxPrepsSeasonPage({
         </section>
       )}
 
-      {showSeasonImagesPlaceholder ? <SeasonImagesSection /> : null}
+      {showSeasonImagesPlaceholder || seasonImages.length ? (
+        <SeasonImagesSection images={seasonImages} />
+      ) : null}
 
       {showSeasonRoster ? (
         <section id="season-roster" className="space-y-4">

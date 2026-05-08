@@ -22,6 +22,78 @@ const recapArticle = {
     "The Athlete Spotlight highlighted Clay's unusual points-and-steals double-double and his place atop the Coastal Empire leaders in steals and assists.",
 };
 
+const seasonImages = [
+  {
+    src: "/images/boys/basketball/seasons/2003-04/gallery/2003-04-boys-basketball-team.png",
+    alt: "2003-04 St. Andrew's boys basketball team photo",
+    caption: "2003-04 St. Andrew's boys basketball team photo",
+  },
+  {
+    src: "/images/boys/basketball/seasons/2003-04/gallery/2003-04-boys-basketball-01-davy-clay-point-guard.png",
+    alt: "Davy Clay bringing the ball down the court",
+    caption:
+      "Senior point guard Davy Clay brings the ball down the court while concentrating on the next play he will call.",
+  },
+  {
+    src: "/images/boys/basketball/seasons/2003-04/gallery/2003-04-boys-basketball-02-beau-hinton-inbounds.png",
+    alt: "Beau Hinton making an inbounds pass",
+    caption: "Beau Hinton makes a strong pass in bounds to get another offensive play started.",
+  },
+  {
+    src: "/images/boys/basketball/seasons/2003-04/gallery/2003-04-boys-basketball-03-daniel-eichholz-ball.png",
+    alt: "Daniel Eichholz fighting for the ball as Jacob Rauers and Davy Clay watch",
+    caption:
+      "Daniel Eichholz fights for the ball while Jacob Rauers and Davy Clay watch with anticipation.",
+  },
+  {
+    src: "/images/boys/basketball/seasons/2003-04/gallery/2003-04-boys-basketball-04-davy-clay-pressure.png",
+    alt: "Davy Clay applying defensive pressure against Beaufort Academy",
+    caption: "Davy Clay puts the pressure on Beaufort Academy.",
+  },
+  {
+    src: "/images/boys/basketball/seasons/2003-04/gallery/2003-04-boys-basketball-05-senior-boys-playful.png",
+    alt: "Senior boys showing their playful sides for the camera",
+    caption: "The Senior boys show the camera their playful sides.",
+  },
+  {
+    src: "/images/boys/basketball/seasons/2003-04/gallery/2003-04-boys-basketball-06-crouch-glenn-free-throw.png",
+    alt: "Andy Crouch and Omar Glenn waiting during a free throw",
+    caption:
+      "Andy Crouch and Omar Glenn catch their breath while they wait for their teammate to sink his foul shot.",
+  },
+  {
+    src: "/images/boys/basketball/seasons/2003-04/gallery/2003-04-boys-basketball-07-josh-smith-defense.png",
+    alt: "Josh Smith sprinting down the court to get back on defense",
+    caption: "Josh Smith sprints down the court to get in position for defense.",
+  },
+  {
+    src: "/images/boys/basketball/seasons/2003-04/gallery/2003-04-boys-basketball-08-bennet-timeout.png",
+    alt: "Coach Bennet giving the boys a pep talk during a timeout",
+    caption: "Coach Bennet gives the boys a quick pep talk during a time out.",
+  },
+  {
+    src: "/images/boys/basketball/seasons/2003-04/gallery/2003-04-boys-basketball-09-andy-crouch-rebound.png",
+    alt: "Andy Crouch reaching for a rebound while Omar Glenn steps in",
+    caption:
+      "Senior Andy Crouch reaches high for the rebound while Junior Omar Glenn steps in to help out.",
+  },
+  {
+    src: "/images/boys/basketball/seasons/2003-04/gallery/2003-04-boys-basketball-10-cass-sawyer-free-throw.png",
+    alt: "Cass Sawyer lining up a free throw",
+    caption: "Cass Sawyer lines up a free throw",
+  },
+  {
+    src: "/images/boys/basketball/seasons/2003-04/gallery/2003-04-boys-basketball-11-sawyer-rauers-sideline.png",
+    alt: "Cass Sawyer and Jacob Rauers looking to the sideline for instructions",
+    caption: "Cass Sawyer and Jacob Rauers look over to the side line for instructions",
+  },
+  {
+    src: "/images/boys/basketball/seasons/2003-04/gallery/2003-04-boys-basketball-12-next-play-plan.png",
+    alt: "The Saints making a plan for the next play",
+    caption: "Making a plan for the next play",
+  },
+];
+
 export default function Season2003_04() {
   return (
     <MaxPrepsSeasonPage
@@ -36,7 +108,7 @@ export default function Season2003_04() {
       recapArticle={recapArticle}
       statSourceLabel="Archive"
       trimShootingColumns
-      showSeasonImagesPlaceholder
+      seasonImages={seasonImages}
       showSeasonRoster
       rosterStaff={[
         { name: "Michael Bennet", role: "Head Coach" },

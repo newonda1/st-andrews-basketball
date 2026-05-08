@@ -1141,7 +1141,7 @@
     "Players": [
       {
         "PlayerID": 200312,
-        "JerseyNumber": 2,
+        "JerseyNumber": 32,
         "Grade": 12
       },
       {
@@ -1156,7 +1156,7 @@
       },
       {
         "PlayerID": 200203,
-        "JerseyNumber": 32,
+        "JerseyNumber": 13,
         "Grade": 12
       },
       {
@@ -1196,7 +1196,7 @@
       },
       {
         "PlayerID": 200313,
-        "JerseyNumber": 13,
+        "JerseyNumber": 2,
         "Grade": 11
       },
       {
