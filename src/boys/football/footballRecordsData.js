@@ -53,6 +53,7 @@ const META_KEYS = new Set([
   "LineScore",
   "ScoringPlays",
   "TeamComparisonStats",
+  "ExcludeFromTeamTotals",
   "GameResultText",
   "TeamScore",
   "OpponentScore",
@@ -228,6 +229,7 @@ function normalizePlayerGameRow(rawRow, playersById, seasonMap, gamesById) {
     SourceDate: String(rawRow?.SourceDate || matchedGame?.SourceDate || "").trim(),
     SourcePublication: String(rawRow?.SourcePublication || matchedGame?.SourcePublication || "").trim(),
     SourceCitation: String(rawRow?.SourceCitation || matchedGame?.SourceCitation || "").trim(),
+    ExcludeFromTeamTotals: Boolean(rawRow?.ExcludeFromTeamTotals),
     VideoTitle: String(rawRow?.VideoTitle || matchedGame?.VideoTitle || "").trim(),
     VideoUrl: String(rawRow?.VideoUrl || matchedGame?.VideoUrl || "").trim(),
     Result: String(rawRow?.Result || matchedGame?.Result || "").trim(),
@@ -518,6 +520,8 @@ function aggregateTeamGames(games, playerGameRows, seasonMap) {
         TrackedStatGames: 0,
       });
     }
+
+    if (row?.ExcludeFromTeamTotals) return;
 
     const total = gameMap.get(key);
     total.TrackedStatGames = 1;

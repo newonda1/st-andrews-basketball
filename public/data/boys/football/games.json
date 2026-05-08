@@ -4358,7 +4358,119 @@
     "Result": "L",
     "TeamScore": 0,
     "OpponentScore": 41,
-    "OpponentID": "sc-williamsburg-academy-kingstree"
+    "OpponentID": "sc-williamsburg-academy-kingstree",
+    "FirstDowns": 6,
+    "RushingYards": 19,
+    "PassingYards": 54,
+    "PassingComp": 5,
+    "PassingAtt": 12,
+    "PassingInt": 1,
+    "OffensiveFumbles": 4,
+    "OffensiveFumblesLost": 2,
+    "PuntNum": 5,
+    "PuntAverage": 25,
+    "LineScore": [
+      {
+        "Team": "Williamsburg Academy",
+        "Abbr": "WA",
+        "Scores": [14, 13, 7, 7],
+        "Total": 41
+      },
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [0, 0, 0, 0],
+        "Total": 0
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "1",
+        "Team": "Williamsburg Academy",
+        "TeamAbbr": "WA",
+        "Play": "Gordon Scott 30 run",
+        "Conversion": "Turner kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "1",
+        "Team": "Williamsburg Academy",
+        "TeamAbbr": "WA",
+        "Play": "Gordon Scott 13 pass from William Walsh",
+        "Conversion": "Turner kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "Williamsburg Academy",
+        "TeamAbbr": "WA",
+        "Play": "Turner 4 run",
+        "Conversion": "Turner kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "Williamsburg Academy",
+        "TeamAbbr": "WA",
+        "Play": "Unreported touchdown",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "3",
+        "Team": "Williamsburg Academy",
+        "TeamAbbr": "WA",
+        "Play": "Brian Wimberly 5 run",
+        "Conversion": "White kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "4",
+        "Team": "Williamsburg Academy",
+        "TeamAbbr": "WA",
+        "Play": "Blake Lamb 18 run",
+        "Conversion": "White kick",
+        "Points": 7
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "First Downs",
+        "StAndrews": "6",
+        "Opponent": "13"
+      },
+      {
+        "Label": "Rushing yards",
+        "StAndrews": "19",
+        "Opponent": "260"
+      },
+      {
+        "Label": "Passing yards",
+        "StAndrews": "54",
+        "Opponent": "102"
+      },
+      {
+        "Label": "Comp.-Att.-Int.",
+        "StAndrews": "5-12-1",
+        "Opponent": "6-9-2"
+      },
+      {
+        "Label": "Fumbles-Lost",
+        "StAndrews": "4-2",
+        "Opponent": "5-2"
+      },
+      {
+        "Label": "Punts",
+        "StAndrews": "5-25",
+        "Opponent": "1-40"
+      }
+    ],
+    "RecapTitle": "Williamsburg Academy 41, St. Andrew's 0",
+    "Recap": "Gordon Scott scored two touchdowns to lead Williamsburg (1-0) over St. Andrews (0-0).\n\nScott scored two touchdowns in the first half on a 40-yard run and 13-yard pass from quarterback William Walsh. Brian Wimberly scored on a 5-yard run in the third, while Blake Lamb rushed 18 yards for a TD in the fourth quarter.\n\nGarrett McCarthy lead the Saints defensively with 10 tackles and one interception.\n\nIn the season opener for each team, Williamsburg rushed for a total of 260 yards, while St. Andrew's ran for 19.",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "SourceDate": "August 20, 2005",
+    "SourceCitation": "\"Williamsburg Academy 41, St. Andrew's 0,\" Savannah Morning News (GA), August 20, 2005, Page 6D, Section: FRIDAY NIGHT BLITZ.",
+    "SourceNote": "User-provided Savannah Morning News recap for the Aug. 19, 2005 Williamsburg Academy game, plus user-provided line score, scoring summary and team comparison statistics. The scoring summary provided five named Williamsburg touchdowns, while the 14-13-7-7 line score requires one additional 6-point Williamsburg scoring play in the second quarter; that missing play is stored as an unreported touchdown. The article recap lists Scott's first touchdown as a 40-yard run, while the scoring summary lists it as a 30-yard run."
   },
   {
     "GameID": 20050826,
@@ -4383,7 +4495,115 @@
     "Result": "W",
     "TeamScore": 22,
     "OpponentScore": 8,
-    "OpponentID": "ga-memorial-day-school-savannah"
+    "OpponentID": "ga-memorial-day-school-savannah",
+    "FirstDowns": 7,
+    "RushingYards": 128,
+    "PassingYards": 11,
+    "PassingComp": 2,
+    "PassingAtt": 11,
+    "PassingInt": 0,
+    "OffensiveFumbles": 4,
+    "OffensiveFumblesLost": 2,
+    "Penalties": 7,
+    "PenaltyYards": 70,
+    "PuntNum": 3,
+    "PuntYards": 84,
+    "PuntAverage": 28,
+    "LineScore": [
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [8, 7, 0, 7],
+        "Total": 22
+      },
+      {
+        "Team": "Memorial",
+        "Abbr": "MD",
+        "Scores": [8, 0, 0, 0],
+        "Total": 8
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "1",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Jim Kingston 25 fumble recovery return",
+        "Conversion": "Patrick Maleki run",
+        "Points": 8
+      },
+      {
+        "Quarter": "1",
+        "Team": "Memorial",
+        "TeamAbbr": "MD",
+        "Play": "Jarrod Dyar 12 run",
+        "Conversion": "Daniel Spell run",
+        "Points": 8
+      },
+      {
+        "Quarter": "2",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Garrett McCarthy 5 run",
+        "Conversion": "Maleki kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "4",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Maleki 2 pass from Bubby Pavlo",
+        "Conversion": "Maleki kick",
+        "Points": 7
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "First Downs",
+        "StAndrews": "7",
+        "Opponent": "8"
+      },
+      {
+        "Label": "Rushing",
+        "StAndrews": "128",
+        "Opponent": "91"
+      },
+      {
+        "Label": "Passing",
+        "StAndrews": "11",
+        "Opponent": "0"
+      },
+      {
+        "Label": "Passes",
+        "StAndrews": "2-11-0",
+        "Opponent": "0-1-0"
+      },
+      {
+        "Label": "Fumbles-lost",
+        "StAndrews": "4-2",
+        "Opponent": "3-1"
+      },
+      {
+        "Label": "Penalties",
+        "StAndrews": "7-70",
+        "Opponent": "5-45"
+      },
+      {
+        "Label": "Punts",
+        "StAndrews": "3-84",
+        "Opponent": "3-93"
+      }
+    ],
+    "RecapTitle": "ST. ANDREW'S SHOWS LONGED-FOR IMPROVEMENT IN VICTORY",
+    "Recap": "The St. Andrew's Saints came into this high school football season hoping for improvement.\n\nThey showed more than hope Friday night, defeating Memorial Day School 22-8.\n\nThe Saints started on defense, but still scored first.\n\nOn the Matadors' first possession, junior running back Jarrod Dyar fumbled at the 25-yard line. Jim Kingston scooped up the loose ball and returned it 25 yards for a touchdown. After a two-point conversion, St. Andrew's led 8-0.\n\nMemorial answered with a score later in the first quarter. With 2:42 showing on the clock, Dyar made amends for his earlier mistake, scoring on a nifty 12-yard scamper. Daniel Spell added a two-point conversion and the score was knotted at 8-8.\n\nThe teams continued to trade possessions until midway though the second quarter.\n\nGarrett McCarthy, who ran for 116 yards and a score, gave the Saints the lead for good on a hard-fought 5-yard scoring run with 8:36 to go in the half.\n\nSt. Andrew's, which went 0-10 last season, dominated the remainder of the half on ball-control runs by McCarthy, but the Saints could not add to their 15-8 lead.\n\nSt. Andrew's controlled the tempo and the game for much of the second half against a tired Memorial squad.\n\nThe Saints completed their first pass of the game at 11:22 left in the fourth quarter. Bubby Palvo hit sophomore Patrick Maleki with a pass to keep a drive alive. Shortly thereafter, the pair connected on a 2-yard scoring pass with 8:14 left.\n\nThe 22 points was one more than the Saints scored all of last season, and gave Curley his first win at the helm.\n\n\"It feels great,\" he said. \"This removes a bad taste from my mouth.\"\n\nSaid his offensive sparkplug McCarthy: \"This was the most fun I've ever had.\"\n\nMemorial fell to 0-2. St. Andrew's raised its record to 1-1.",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "SourceDate": "August 28, 2005",
+    "SourceAuthor": "Jeff LaRoe",
+    "SourceByline": "Jeff LaRoe for the Savannah Morning News",
+    "SourcePage": "7B",
+    "SourceSection": "SPORTS",
+    "SourceCitation": "Jeff LaRoe for the Savannah Morning News, \"ST. ANDREW'S SHOWS LONGED-FOR IMPROVEMENT IN VICTORY,\" Savannah Morning News (GA), August 28, 2005, Page 7B, Section: SPORTS.",
+    "SourceNote": "User-provided Savannah Morning News recap, line score, scoring summary and team comparison statistics for the Aug. 26, 2005 Memorial Day School game."
   },
   {
     "GameID": 20050902,

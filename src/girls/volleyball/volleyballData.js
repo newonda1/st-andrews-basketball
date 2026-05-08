@@ -89,6 +89,38 @@ export async function fetchJson(path, label) {
   return response.json();
 }
 
+function buildSchoolMap(schools = []) {
+  return new Map(
+    (Array.isArray(schools) ? schools : [])
+      .filter((school) => school?.SchoolID)
+      .map((school) => [String(school.SchoolID), school])
+  );
+}
+
+function schoolLocation(school) {
+  return [school?.City, school?.State]
+    .map((part) => String(part || "").trim())
+    .filter(Boolean)
+    .join(", ");
+}
+
+export function hydrateVolleyballGamesWithSchools(games, schools) {
+  const schoolMap = buildSchoolMap(schools);
+
+  return (Array.isArray(games) ? games : []).map((game) => {
+    const school = game?.OpponentID ? schoolMap.get(String(game.OpponentID)) : null;
+    if (!school) return game;
+
+    return {
+      ...game,
+      Opponent: school.Name || game.Opponent,
+      OpponentLocation: schoolLocation(school) || game.OpponentLocation,
+      OpponentLogoPath: school.LogoPath || school.BracketLogoPath || game.OpponentLogoPath,
+      OpponentSchool: school,
+    };
+  });
+}
+
 export async function loadVolleyballData() {
   const [
     seasons,
@@ -119,7 +151,7 @@ export async function loadVolleyballData() {
 
   return {
     seasons: Array.isArray(seasons) ? seasons : [],
-    games: Array.isArray(games) ? games : [],
+    games: hydrateVolleyballGamesWithSchools(games, schools),
     rosters: Array.isArray(rosters) ? rosters : [],
     players: Array.isArray(players) ? players : [],
     playerSeasonStats: Array.isArray(playerSeasonStats) ? playerSeasonStats : [],

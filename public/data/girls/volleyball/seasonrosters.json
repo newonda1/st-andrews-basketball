@@ -114,6 +114,107 @@
     ]
   },
   {
+    "SeasonID": 2005,
+    "SourceSeasonLabel": "2005-06",
+    "HeadCoach": "Mandy Stinson",
+    "Staff": [
+      {
+        "Name": "Mandy Stinson",
+        "Position": "Head Coach"
+      },
+      {
+        "Name": "Kim Riordan",
+        "Position": "Assistant Coach"
+      }
+    ],
+    "Players": [
+      {
+        "PlayerID": 200504,
+        "JerseyNumber": 12,
+        "Grade": 10,
+        "GradeLabel": "So.",
+        "Positions": []
+      },
+      {
+        "PlayerID": 200422,
+        "JerseyNumber": 39,
+        "Grade": 10,
+        "GradeLabel": "So.",
+        "Positions": []
+      },
+      {
+        "PlayerID": 200401,
+        "JerseyNumber": 45,
+        "Grade": 11,
+        "GradeLabel": "Jr.",
+        "Positions": []
+      },
+      {
+        "PlayerID": 200603,
+        "JerseyNumber": 31,
+        "Grade": 12,
+        "GradeLabel": "Sr.",
+        "Positions": []
+      },
+      {
+        "PlayerID": 200505,
+        "JerseyNumber": 22,
+        "Grade": 11,
+        "GradeLabel": "Jr.",
+        "Positions": []
+      },
+      {
+        "PlayerID": 200506,
+        "JerseyNumber": 2,
+        "Grade": 11,
+        "GradeLabel": "Jr.",
+        "Positions": []
+      },
+      {
+        "PlayerID": 200507,
+        "JerseyNumber": 23,
+        "Grade": 11,
+        "GradeLabel": "Jr.",
+        "Positions": []
+      },
+      {
+        "PlayerID": 200508,
+        "JerseyNumber": 14,
+        "Grade": 11,
+        "GradeLabel": "Jr.",
+        "Positions": []
+      },
+      {
+        "PlayerID": 200503,
+        "JerseyNumber": 7,
+        "Grade": 12,
+        "GradeLabel": "Sr.",
+        "Positions": []
+      },
+      {
+        "PlayerID": 200509,
+        "JerseyNumber": 4,
+        "Grade": 12,
+        "GradeLabel": "Sr.",
+        "Positions": []
+      },
+      {
+        "PlayerID": 200502,
+        "JerseyNumber": 5,
+        "Grade": 10,
+        "GradeLabel": "So.",
+        "Positions": []
+      },
+      {
+        "PlayerID": 200409,
+        "JerseyNumber": 15,
+        "Grade": 12,
+        "GradeLabel": "Sr.",
+        "Positions": []
+      }
+    ]
+  },
+  {
     "SeasonID": 2007,
     "SourceSeasonLabel": "2007-08",
     "Players": []

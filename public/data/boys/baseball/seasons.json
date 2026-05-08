@@ -1,5 +1,13 @@
 [
   {
+    "SeasonID": 2006,
+    "HeadCoach": "Jim Rice",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
     "SeasonID": 2008,
     "HeadCoach": "Jim Rice",
     "RegionSeed": null,

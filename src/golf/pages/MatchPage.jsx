@@ -6,6 +6,14 @@ function buildPlayerMap(players = []) {
   return new Map(players.map((player) => [Number(player.PlayerID), player]));
 }
 
+function buildSchoolMap(schools = []) {
+  return new Map(
+    (Array.isArray(schools) ? schools : [])
+      .filter((school) => school?.SchoolID)
+      .map((school) => [String(school.SchoolID), school])
+  );
+}
+
 function getPlayerName(row, playerMap) {
   const player = row.PlayerID ? playerMap.get(Number(row.PlayerID)) : null;
   if (player?.PlayerName) return player.PlayerName;
@@ -13,6 +21,11 @@ function getPlayerName(row, playerMap) {
     return [player.FirstName, player.LastName].filter(Boolean).join(" ");
   }
   return row.PlayerName || "Unknown golfer";
+}
+
+function getSchoolDisplayName(row, schoolMap) {
+  const school = row?.SchoolID ? schoolMap.get(String(row.SchoolID)) : null;
+  return school?.Name || school?.ShortName || row?.School || "Unknown school";
 }
 
 function formatRoundScores(scores) {
@@ -25,7 +38,7 @@ function formatPlace(place) {
   return Number.isFinite(numeric) ? formatGolfPlace(numeric) : String(place);
 }
 
-function TeamScores({ scores = [] }) {
+function TeamScores({ scores = [], schoolMap }) {
   if (!scores.length) return null;
 
   const winningScore = Math.min(...scores.map((score) => Number(score.Score)));
@@ -37,7 +50,7 @@ function TeamScores({ scores = [] }) {
 
         return (
           <div
-            key={`${score.School}-${score.Score}`}
+            key={`${score.SchoolID || score.School}-${score.Score}`}
             className={`rounded-xl border px-4 py-4 ${
               isWinner
                 ? "border-blue-200 bg-blue-50"
@@ -49,7 +62,9 @@ function TeamScores({ scores = [] }) {
             </p>
             <div className="mt-2 flex items-end justify-between gap-4">
               <div>
-                <h3 className="text-lg font-bold text-slate-900">{score.School}</h3>
+                <h3 className="text-lg font-bold text-slate-900">
+                  {getSchoolDisplayName(score, schoolMap)}
+                </h3>
                 {score.Place ? (
                   <p className="mt-1 text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">
                     {formatPlace(score.Place)}
@@ -74,7 +89,7 @@ function TeamScores({ scores = [] }) {
   );
 }
 
-function ResultsTable({ rows = [], playerMap }) {
+function ResultsTable({ rows = [], playerMap, schoolMap }) {
   if (!rows.length) return null;
 
   const showPlace = rows.some((row) => row.Place);
@@ -126,7 +141,7 @@ function ResultsTable({ rows = [], playerMap }) {
                 ) : null}
               </td>
               <td className="border-b border-slate-200 px-3 py-2 text-slate-700">
-                {row.School}
+                {getSchoolDisplayName(row, schoolMap)}
               </td>
               {showRounds ? (
                 <td className="border-b border-slate-200 px-3 py-2 text-center text-slate-700">
@@ -144,7 +159,7 @@ function ResultsTable({ rows = [], playerMap }) {
   );
 }
 
-function DivisionSection({ division, playerMap }) {
+function DivisionSection({ division, playerMap, schoolMap }) {
   return (
     <section className="rounded-[1.5rem] border border-slate-200 bg-slate-50 px-4 py-4 shadow-sm sm:px-5">
       <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
@@ -159,18 +174,23 @@ function DivisionSection({ division, playerMap }) {
         {division.Medalist ? (
           <div className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-950">
             <span className="font-bold">Medalist:</span>{" "}
-            {division.Medalist.PlayerName} ({division.Medalist.School}){" "}
+            {division.Medalist.PlayerName} (
+            {getSchoolDisplayName(division.Medalist, schoolMap)}){" "}
             {division.Medalist.Score}
           </div>
         ) : null}
       </div>
 
       <div className="mt-4">
-        <TeamScores scores={division.TeamScores} />
+        <TeamScores scores={division.TeamScores} schoolMap={schoolMap} />
       </div>
 
       <div className="mt-5">
-        <ResultsTable rows={division.Results} playerMap={playerMap} />
+        <ResultsTable
+          rows={division.Results}
+          playerMap={playerMap}
+          schoolMap={schoolMap}
+        />
       </div>
 
       {division.ResultNote ? (
@@ -182,7 +202,12 @@ function DivisionSection({ division, playerMap }) {
   );
 }
 
-export default function MatchPage({ matches = [], players = [], status = "" }) {
+export default function MatchPage({
+  matches = [],
+  players = [],
+  schools = [],
+  status = "",
+}) {
   const { matchId } = useParams();
 
   const match = useMemo(() => {
@@ -190,6 +215,7 @@ export default function MatchPage({ matches = [], players = [], status = "" }) {
   }, [matchId, matches]);
 
   const playerMap = useMemo(() => buildPlayerMap(players), [players]);
+  const schoolMap = useMemo(() => buildSchoolMap(schools), [schools]);
 
   if (!match) {
     return (
@@ -249,6 +275,7 @@ export default function MatchPage({ matches = [], players = [], status = "" }) {
               key={division.Division}
               division={division}
               playerMap={playerMap}
+              schoolMap={schoolMap}
             />
           ))
         ) : (

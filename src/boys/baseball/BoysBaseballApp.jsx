@@ -13,6 +13,7 @@ import Season2020 from "./seasons/Season2020";
 import Season2019 from "./seasons/Season2019";
 import Season2018 from "./seasons/Season2018";
 import Season2008 from "./seasons/Season2008";
+import Season2006 from "./seasons/Season2006";
 
 import Home from "./pages/Home";
 import YearlyResults from "./pages/YearlyResults";
@@ -38,6 +39,7 @@ const seasonPages = [
   { slug: "2019", Component: Season2019 },
   { slug: "2018", Component: Season2018 },
   { slug: "2008", Component: Season2008 },
+  { slug: "2006", Component: Season2006 },
 ];
 
 const menuSections = [

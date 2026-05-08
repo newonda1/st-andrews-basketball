@@ -24,6 +24,125 @@
     "SourceUrl": "https://sc.milesplit.com/meets/8786-scisa-championships-2004/results"
   },
   {
+    "MeetID": 20050827,
+    "Season": 2006,
+    "Date": "2005-08-27",
+    "Name": "Augusta Prep Mile Relay",
+    "Location": "Augusta Prep, Augusta, GA",
+    "Level": "Varsity",
+    "MeetType": "Regular Season",
+    "Status": "Complete",
+    "Notes": "Archive recap supplied for the Augusta Prep mile relay. Relay times are indexed for each listed St. Andrew's runner.",
+    "RecapParagraphs": [
+      "At Augusta Prep, St. Andrew's entered three boys' mile relay teams and one girls' mile relay team.",
+      "The boys' A team of Ben Harrison, Ryan Kirby, and John Moser placed 5th in 18:42. The boys' B team of Alex Chu, Scott Mullen, and Josh Taylor placed 11th in 20:10, and the boys' C team of Remy Thurston, Justin Hur, and Joe Nodzak placed 12th in 20:54.",
+      "The girls' team of Jessica Topolewski, Stephanie Griffin, and Michelle Griffin placed 11th in 24:00."
+    ],
+    "RelayResults": [
+      {
+        "Gender": "Boys",
+        "Race": "Mile Relay",
+        "Team": "St. Andrew's A",
+        "Place": "5th",
+        "Time": "18:42",
+        "Runners": [
+          "Ben Harrison",
+          "Ryan Kirby",
+          "John Moser"
+        ]
+      },
+      {
+        "Gender": "Boys",
+        "Race": "Mile Relay",
+        "Team": "St. Andrew's B",
+        "Place": "11th",
+        "Time": "20:10",
+        "Runners": [
+          "Alex Chu",
+          "Scott Mullen",
+          "Josh Taylor"
+        ]
+      },
+      {
+        "Gender": "Boys",
+        "Race": "Mile Relay",
+        "Team": "St. Andrew's C",
+        "Place": "12th",
+        "Time": "20:54",
+        "Runners": [
+          "Remy Thurston",
+          "Justin Hur",
+          "Joe Nodzak"
+        ]
+      },
+      {
+        "Gender": "Girls",
+        "Race": "Mile Relay",
+        "Team": "St. Andrew's",
+        "Place": "11th",
+        "Time": "24:00",
+        "Runners": [
+          "Jessica Topolewski",
+          "Stephanie Griffin",
+          "Michelle Griffin"
+        ]
+      }
+    ]
+  },
+  {
+    "MeetID": 20050831,
+    "Season": 2006,
+    "Date": "2005-08-31",
+    "Name": "St. George 3.1 Mile",
+    "Location": "St. George, SC",
+    "Level": "Varsity",
+    "MeetType": "Regular Season",
+    "Status": "Complete",
+    "Notes": "Archive recap supplied for the 3.1-mile meet at St. George, South Carolina.",
+    "RecapParagraphs": [
+      "St. Andrew's won the boys' team race with 49 points, ahead of Thomas Sumter, Orangeburg Prep, and The King's Academy.",
+      "Ben Harrison led the Lions boys with a winning 19:14. Jon Moser placed 8th in 21:56, Bryan Kirby placed 12th in 22:41, Justin Hur placed 13th in 23:12, and Josh Taylor placed 15th in 23:28.",
+      "Thomas Sumter won the girls' team race with 28 points. St. Andrew's did not have enough girls runners to place as a team, but Jessica Topolewski placed 5th in 26:10, Michelle Griffin placed 13th in 28:23, and Lily Adams placed 14th in 28:25."
+    ],
+    "TeamResults": [
+      {
+        "Gender": "Boys",
+        "Place": "1st",
+        "Team": "St. Andrew's",
+        "Points": "49"
+      },
+      {
+        "Gender": "Boys",
+        "Place": "2nd",
+        "Team": "Thomas Sumter (SC)",
+        "Points": "53"
+      },
+      {
+        "Gender": "Boys",
+        "Place": "3rd",
+        "Team": "Orangeburg Prep (SC)",
+        "Points": "62"
+      },
+      {
+        "Gender": "Boys",
+        "Place": "4th",
+        "Team": "The King's Academy (SC)",
+        "Points": "72"
+      },
+      {
+        "Gender": "Girls",
+        "Place": "1st",
+        "Team": "Thomas Sumter (SC)",
+        "Points": "28"
+      },
+      {
+        "Gender": "Girls",
+        "Team": "St. Andrew's",
+        "Note": "Did not have enough runners to place as a team."
+      }
+    ]
+  },
+  {
     "MeetID": 13937,
     "Season": 2006,
     "Date": "2005-10-29",

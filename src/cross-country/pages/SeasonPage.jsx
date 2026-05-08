@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { recordTableStyles } from "./recordTableStyles";
+import { recordTableStyles } from "../../girls/basketball/pages/recordTableStyles";
 import {
   CROSS_COUNTRY_DIVISIONS,
   buildCrossCountryPlayerMap,
@@ -13,6 +13,374 @@ import {
   resolveCrossCountryAthleteName,
   sortCrossCountryResults,
 } from "../crossCountryPageUtils";
+
+const tableFrameClassName =
+  "overflow-x-auto rounded-lg border border-gray-200 bg-white shadow";
+const tableClassName = "min-w-full bg-white text-sm text-center";
+const tableHeadClassName =
+  "bg-gray-100 text-xs uppercase tracking-wide text-gray-700";
+
+function tableRowClassName(index) {
+  return `border-t border-gray-200 ${
+    index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
+  } hover:bg-gray-100`;
+}
+
+function formatRosterGrade(grade) {
+  if (grade === null || grade === undefined || grade === "") return "—";
+
+  const value = Number(grade);
+  if (Number.isFinite(value)) {
+    if (value === 8) return "8th";
+    if (value === 9) return "Fr.";
+    if (value === 10) return "So.";
+    if (value === 11) return "Jr.";
+    if (value === 12) return "Sr.";
+    return String(grade);
+  }
+
+  const normalized = String(grade).trim().toLowerCase();
+  if (normalized === "freshman") return "Fr.";
+  if (normalized === "sophomore") return "So.";
+  if (normalized === "junior") return "Jr.";
+  if (normalized === "senior") return "Sr.";
+
+  return String(grade);
+}
+
+function buildExplicitRosterRows(season, playerMap = new Map()) {
+  return (Array.isArray(season?.Roster) ? season.Roster : [])
+    .map((entry, index) => ({
+      key: `roster-${index}-${entry?.Name || entry?.AthleteName || "row"}`,
+      athleteName: resolveCrossCountryAthleteName(
+        { PlayerID: entry?.PlayerID, AthleteName: entry?.Name || entry?.AthleteName },
+        playerMap
+      ),
+      grade: formatRosterGrade(entry?.Grade),
+    }))
+    .filter((entry) => entry.athleteName);
+}
+
+function RosterTableBlock({ rows }) {
+  return (
+    <div className={tableFrameClassName}>
+      <table className={tableClassName}>
+        <thead className={tableHeadClassName}>
+          <tr>
+            <th className={`${recordTableStyles.headerCell} text-left`}>
+              Athlete
+            </th>
+            <th className={`${recordTableStyles.headerCell} whitespace-nowrap`}>
+              Grade
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((row, index) => (
+            <tr key={row.key} className={tableRowClassName(index)}>
+              <td
+                className={`${recordTableStyles.bodyCell} text-left font-semibold text-gray-900`}
+              >
+                {row.athleteName}
+              </td>
+              <td className={`${recordTableStyles.bodyCell} whitespace-nowrap`}>
+                {row.grade}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function RosterTable({ rows }) {
+  const splitIndex = Math.ceil(rows.length / 2);
+  const firstColumnRows = rows.slice(0, splitIndex);
+  const secondColumnRows = rows.slice(splitIndex);
+
+  if (rows.length <= 1) {
+    return <RosterTableBlock rows={rows} />;
+  }
+
+  return (
+    <>
+      <div className="lg:hidden">
+        <RosterTableBlock rows={rows} />
+      </div>
+      <div className="hidden gap-4 lg:grid lg:grid-cols-2">
+        <RosterTableBlock rows={firstColumnRows} />
+        <RosterTableBlock rows={secondColumnRows} />
+      </div>
+    </>
+  );
+}
+
+function SeasonRecapSection({ season }) {
+  const paragraphs = Array.isArray(season?.RecapParagraphs)
+    ? season.RecapParagraphs
+    : Array.isArray(season?.HistoricalSummary)
+      ? season.HistoricalSummary
+      : [];
+
+  if (!paragraphs.length && !season?.StatusNote) return null;
+
+  return (
+    <section id="season-recap" className="mx-auto max-w-4xl space-y-3">
+      <h2 className="text-2xl font-semibold">Season Recap</h2>
+      <div className="space-y-3 text-base leading-7 text-slate-700">
+        {paragraphs.length ? (
+          paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)
+        ) : (
+          <p>{season.StatusNote}</p>
+        )}
+      </div>
+    </section>
+  );
+}
+
+function SeasonImagesSection({ images = [] }) {
+  const [imageIndex, setImageIndex] = useState(0);
+
+  useEffect(() => {
+    setImageIndex(0);
+  }, [images]);
+
+  if (!images.length) {
+    return (
+      <section className="space-y-3">
+        <h2 className="text-2xl font-semibold mt-2 mb-2">Season Images</h2>
+        <div className="rounded-lg border border-dashed border-gray-300 bg-gray-50 px-6 py-10 text-center">
+          <div className="mx-auto max-w-2xl">
+            <p className="text-base font-semibold text-gray-900">
+              Season images coming soon
+            </p>
+            <p className="mt-2 text-sm text-gray-600">
+              This section is reserved for season photos and other archive images.
+            </p>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  const selectedImage = images[imageIndex] || images[0];
+  const selectedCaption = String(selectedImage?.caption || "").trim();
+  const currentImageNumber = Math.min(imageIndex + 1, images.length);
+  const goPrev = () => setImageIndex((index) => (index - 1 + images.length) % images.length);
+  const goNext = () => setImageIndex((index) => (index + 1) % images.length);
+
+  return (
+    <section className="space-y-3">
+      <h2 className="text-2xl font-semibold mt-2 mb-2">Season Images</h2>
+
+      <div className="overflow-hidden rounded-lg border border-gray-200 bg-white">
+        <div className="relative bg-gray-50">
+          <img
+            src={selectedImage.src}
+            alt={selectedImage.alt || ""}
+            className="w-full max-h-[620px] object-contain"
+            loading="lazy"
+          />
+
+          {images.length > 1 ? (
+            <>
+              <button
+                type="button"
+                onClick={goPrev}
+                className="absolute left-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200 bg-white/90 shadow hover:bg-white"
+                aria-label="Previous image"
+                title="Previous"
+              >
+                {"<"}
+              </button>
+
+              <button
+                type="button"
+                onClick={goNext}
+                className="absolute right-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200 bg-white/90 shadow hover:bg-white"
+                aria-label="Next image"
+                title="Next"
+              >
+                {">"}
+              </button>
+
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-black/65 px-3 py-1 text-xs text-white">
+                {currentImageNumber} / {images.length}
+              </div>
+            </>
+          ) : null}
+        </div>
+
+        <div className="border-t border-gray-200 bg-white px-4 py-3">
+          <div className="mb-3 flex items-center justify-between gap-3">
+            <p className="text-sm font-medium text-gray-900">{selectedCaption}</p>
+            <p className="text-xs text-gray-500">
+              Image {currentImageNumber} of {images.length}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-4 gap-2 sm:grid-cols-6 md:grid-cols-7">
+            {images.map((image, index) => (
+              <button
+                key={image.src}
+                type="button"
+                onClick={() => setImageIndex(index)}
+                className={`aspect-square overflow-hidden rounded-md border bg-gray-50 ${
+                  index === imageIndex
+                    ? "border-gray-900 ring-2 ring-gray-900"
+                    : "border-gray-200 hover:border-gray-500"
+                }`}
+                aria-label={`Go to image ${index + 1}`}
+                title={image.caption || image.alt || `Image ${index + 1}`}
+              >
+                <img
+                  src={image.src}
+                  alt=""
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                />
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function MeetRecapBlock({ meet }) {
+  const paragraphs = Array.isArray(meet?.RecapParagraphs)
+    ? meet.RecapParagraphs.filter(Boolean)
+    : [];
+  const hasContent = meet?.Notes || paragraphs.length || meet?.SourceUrl;
+
+  if (!hasContent) return null;
+
+  return (
+    <div className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-left text-sm text-slate-600">
+      {meet?.Notes ? (
+        <p className="m-0 font-semibold text-slate-900">{meet.Notes}</p>
+      ) : null}
+      {paragraphs.length ? (
+        <div className={`${meet?.Notes ? "mt-2" : ""} space-y-2`}>
+          {paragraphs.map((paragraph) => (
+            <p key={paragraph} className="m-0">
+              {paragraph}
+            </p>
+          ))}
+        </div>
+      ) : !meet?.Notes ? (
+        <p className="m-0">Meet details loaded from MileSplit.</p>
+      ) : null}
+      {meet?.SourceUrl ? (
+        <div className="mt-2">
+          <MeetSourceLink meet={meet} />
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
+function RelayResultsTable({ results = [] }) {
+  const relayResults = Array.isArray(results) ? results.filter(Boolean) : [];
+
+  if (!relayResults.length) return null;
+
+  return (
+    <div className={tableFrameClassName}>
+      <table className={`${tableClassName} min-w-[760px]`}>
+        <thead className={tableHeadClassName}>
+          <tr>
+            <th className={recordTableStyles.headerCell}>Gender</th>
+            <th className={recordTableStyles.headerCell}>Race</th>
+            <th className={recordTableStyles.headerCell}>Team</th>
+            <th className={recordTableStyles.headerCell}>Place</th>
+            <th className={recordTableStyles.headerCell}>Time</th>
+            <th className={`${recordTableStyles.headerCell} text-left`}>
+              Runners
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {relayResults.map((result, index) => (
+            <tr
+              key={`${result?.Gender || "relay"}-${result?.Team || index}`}
+              className={tableRowClassName(index)}
+            >
+              <td className={recordTableStyles.detailCell}>
+                {result.Gender || "—"}
+              </td>
+              <td className={recordTableStyles.detailCell}>
+                {result.Race || "—"}
+              </td>
+              <td className={recordTableStyles.detailCell}>
+                {result.Team || "—"}
+              </td>
+              <td className={recordTableStyles.detailCell}>
+                {result.Place || "—"}
+              </td>
+              <td className={recordTableStyles.detailCell}>
+                {result.Time || "—"}
+              </td>
+              <td className={`${recordTableStyles.detailCell} text-left`}>
+                {Array.isArray(result.Runners)
+                  ? result.Runners.join(" | ")
+                  : result.Runners || "—"}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function TeamResultsTable({ results = [] }) {
+  const teamResults = Array.isArray(results) ? results.filter(Boolean) : [];
+
+  if (!teamResults.length) return null;
+
+  return (
+    <div className={tableFrameClassName}>
+      <table className={`${tableClassName} min-w-[620px]`}>
+        <thead className={tableHeadClassName}>
+          <tr>
+            <th className={recordTableStyles.headerCell}>Gender</th>
+            <th className={recordTableStyles.headerCell}>Place</th>
+            <th className={recordTableStyles.headerCell}>Team</th>
+            <th className={recordTableStyles.headerCell}>Points</th>
+            <th className={`${recordTableStyles.headerCell} text-left`}>Note</th>
+          </tr>
+        </thead>
+        <tbody>
+          {teamResults.map((result, index) => (
+            <tr
+              key={`${result?.Gender || "team"}-${result?.Team || index}`}
+              className={tableRowClassName(index)}
+            >
+              <td className={recordTableStyles.detailCell}>
+                {result.Gender || "—"}
+              </td>
+              <td className={recordTableStyles.detailCell}>
+                {result.Place || "—"}
+              </td>
+              <td className={recordTableStyles.detailCell}>
+                {result.Team || "—"}
+              </td>
+              <td className={recordTableStyles.detailCell}>
+                {result.Points || "—"}
+              </td>
+              <td className={`${recordTableStyles.detailCell} text-left`}>
+                {result.Note || "—"}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
 
 function MeetResultsTable({ rows, playerMap, meet }) {
   if (!rows.length) {
@@ -34,9 +402,9 @@ function MeetResultsTable({ rows, playerMap, meet }) {
   })).filter((section) => section.rows.length > 0);
 
   return (
-    <div className="overflow-x-auto">
-      <table className={recordTableStyles.innerTable}>
-        <thead className="bg-gray-100">
+    <div className={tableFrameClassName}>
+      <table className={`${tableClassName} min-w-[760px]`}>
+        <thead className={tableHeadClassName}>
           <tr>
             <th className={recordTableStyles.headerCell}>Gender</th>
             <th className={recordTableStyles.headerCell}>Distance</th>
@@ -56,7 +424,10 @@ function MeetResultsTable({ rows, playerMap, meet }) {
                 </td>
               </tr>
               {section.rows.map((row, index) => (
-                <tr key={`${row.StatID || row.Event}-${index}`}>
+                <tr
+                  key={`${row.StatID || row.Event}-${index}`}
+                  className={tableRowClassName(index)}
+                >
                   <td className={recordTableStyles.detailCell}>
                     {row.Gender || "—"}
                   </td>
@@ -145,6 +516,16 @@ export default function SeasonPage({
     return playerMeetStats.filter((entry) => seasonMeetIds.has(entry.MeetID));
   }, [playerMeetStats, seasonMeetIds]);
 
+  const explicitRosterRows = useMemo(
+    () => buildExplicitRosterRows(season, playerMap),
+    [playerMap, season]
+  );
+
+  const seasonImages = useMemo(
+    () => (Array.isArray(season?.Images) ? season.Images : []),
+    [season]
+  );
+
   const rosterSections = useMemo(() => {
     return CROSS_COUNTRY_DIVISIONS.map((division) => {
       const entries = seasonEntries.filter((entry) => {
@@ -222,51 +603,57 @@ export default function SeasonPage({
         {seasonLabel} Season
       </h1>
 
-      <section className="space-y-3">
-        <h2 className="text-2xl font-semibold mt-2 mb-2">Season Images</h2>
-        <div className="rounded-lg border border-dashed border-gray-300 bg-gray-50 px-6 py-10 text-center">
-          <div className="mx-auto max-w-2xl">
-            <p className="text-base font-semibold text-gray-900">
-              Season images coming soon
-            </p>
-            <p className="mt-2 text-sm text-gray-600">
-              This section is reserved for season photos and other archive images.
-            </p>
-          </div>
-        </div>
-      </section>
+      <SeasonRecapSection season={season} />
+
+      <SeasonImagesSection images={seasonImages} />
 
       <section className="space-y-3">
-        <h2 className="text-2xl font-semibold mt-2 mb-2">Athletes &amp; Races</h2>
-        {rosterSections.length ? (
+        <h2 className="text-2xl font-semibold mt-2 mb-2">
+          {explicitRosterRows.length ? "Roster" : "Athletes & Races"}
+        </h2>
+        {explicitRosterRows.length ? (
+          <RosterTable rows={explicitRosterRows} />
+        ) : rosterSections.length ? (
           <div className="space-y-5">
             {rosterSections.map((section) => (
               <div key={`${section.key}-roster`} className="space-y-2">
                 <h3 className="text-lg font-semibold text-slate-900">
                   {section.label}
                 </h3>
-                <div className="overflow-x-auto">
-                  <table className="w-full min-w-[640px] border text-xs sm:text-sm">
-                    <thead className="bg-gray-100">
+                <div className={tableFrameClassName}>
+                  <table className={`${tableClassName} min-w-[640px]`}>
+                    <thead className={tableHeadClassName}>
                       <tr>
-                        <th className="border px-3 py-2 text-left">Athlete</th>
-                        <th className="border px-3 py-2 text-left">Distances</th>
-                        <th className="border px-3 py-2 text-left">Race Labels</th>
+                        <th className={`${recordTableStyles.headerCell} text-left`}>
+                          Athlete
+                        </th>
+                        <th className={`${recordTableStyles.headerCell} text-left`}>
+                          Distances
+                        </th>
+                        <th className={`${recordTableStyles.headerCell} text-left`}>
+                          Race Labels
+                        </th>
                       </tr>
                     </thead>
                     <tbody>
                       {section.roster.map((entry, idx) => (
                         <tr
                           key={`${section.key}-${entry.athleteName}`}
-                          className={idx % 2 ? "bg-gray-50" : "bg-white"}
+                          className={tableRowClassName(idx)}
                         >
-                          <td className="border px-3 py-2 align-top font-semibold text-gray-900">
+                          <td
+                            className={`${recordTableStyles.bodyCell} text-left align-top font-semibold text-gray-900`}
+                          >
                             {entry.athleteName}
                           </td>
-                          <td className="border px-3 py-2 align-top text-gray-700">
+                          <td
+                            className={`${recordTableStyles.bodyCell} text-left align-top text-gray-700`}
+                          >
                             {entry.events.join(" | ")}
                           </td>
-                          <td className="border px-3 py-2 align-top text-gray-700">
+                          <td
+                            className={`${recordTableStyles.bodyCell} text-left align-top text-gray-700`}
+                          >
                             {entry.races.slice(0, 5).join(" | ")}
                             {entry.races.length > 5 ? " | ..." : ""}
                           </td>
@@ -298,22 +685,21 @@ export default function SeasonPage({
                 <h3 className="text-lg font-semibold text-slate-900">
                   {section.label}
                 </h3>
-                <div className="overflow-x-auto">
-                  <table className="w-full min-w-[760px] border text-xs sm:text-sm text-center">
-                    <thead className="bg-gray-100">
+                <div className={tableFrameClassName}>
+                  <table className={`${tableClassName} min-w-[760px]`}>
+                    <thead className={tableHeadClassName}>
                       <tr>
-                        <th className="border px-2 py-1">Date</th>
-                        <th className="border px-2 py-1">Meet</th>
-                        <th className="border px-2 py-1">Location</th>
-                        <th className="border px-2 py-1">Level</th>
-                        <th className="border px-2 py-1">Status</th>
+                        <th className={recordTableStyles.headerCell}>Date</th>
+                        <th className={recordTableStyles.headerCell}>Meet</th>
+                        <th className={recordTableStyles.headerCell}>Location</th>
+                        <th className={recordTableStyles.headerCell}>Level</th>
+                        <th className={recordTableStyles.headerCell}>Status</th>
                       </tr>
                     </thead>
                     <tbody>
                       {section.meets.map((meet, idx) => {
                         const isExpanded = expandedMeetId === meet.MeetID;
                         const meetRows = resultsByMeetId.get(meet.MeetID) || [];
-                        const rowBg = idx % 2 ? "bg-gray-50" : "bg-white";
 
                         return (
                           <React.Fragment key={meet.MeetID}>
@@ -333,21 +719,25 @@ export default function SeasonPage({
                                   );
                                 }
                               }}
-                              className={`${rowBg} cursor-pointer hover:bg-gray-100`}
+                              className={`${tableRowClassName(idx)} cursor-pointer`}
                             >
-                              <td className="border px-2 py-2 whitespace-nowrap">
+                              <td
+                                className={`${recordTableStyles.bodyCell} whitespace-nowrap`}
+                              >
                                 {formatCrossCountryDate(meet.Date)}
                               </td>
-                              <td className="border px-2 py-2 font-semibold text-blue-700">
+                              <td
+                                className={`${recordTableStyles.bodyCell} font-semibold text-blue-700`}
+                              >
                                 {meet.Name}
                               </td>
-                              <td className="border px-2 py-2">
+                              <td className={recordTableStyles.bodyCell}>
                                 {meet.Location || "TBD"}
                               </td>
-                              <td className="border px-2 py-2">
+                              <td className={recordTableStyles.bodyCell}>
                                 {meet.Level || "—"}
                               </td>
-                              <td className="border px-2 py-2">
+                              <td className={recordTableStyles.bodyCell}>
                                 {meet.Status || "—"}
                               </td>
                             </tr>
@@ -356,20 +746,18 @@ export default function SeasonPage({
                               <tr>
                                 <td className="border p-0" colSpan={5}>
                                   <div className="space-y-4 px-4 py-4 sm:px-5">
-                                    <div className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-left text-sm text-slate-600">
-                                      <p className="m-0">
-                                        {meet.Notes ||
-                                          "Meet details loaded from MileSplit."}
-                                      </p>
-                                      <div className="mt-2">
-                                        <MeetSourceLink meet={meet} />
-                                      </div>
-                                    </div>
-                                    <MeetResultsTable
-                                      rows={meetRows}
-                                      playerMap={playerMap}
-                                      meet={meet}
-                                    />
+                                    <MeetRecapBlock meet={meet} />
+                                    <TeamResultsTable results={meet.TeamResults} />
+                                    <RelayResultsTable results={meet.RelayResults} />
+                                    {meetRows.length ||
+                                    !Array.isArray(meet.RelayResults) ||
+                                    !meet.RelayResults.length ? (
+                                      <MeetResultsTable
+                                        rows={meetRows}
+                                        playerMap={playerMap}
+                                        meet={meet}
+                                      />
+                                    ) : null}
                                   </div>
                                 </td>
                               </tr>

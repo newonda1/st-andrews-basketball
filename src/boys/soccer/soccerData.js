@@ -164,10 +164,15 @@ export function hydrateRosterPlayers(roster, players = []) {
   const entries = Array.isArray(roster?.Players) ? roster.Players : [];
 
   return entries
-    .map((entry) => ({
-      ...playerMap.get(String(entry?.PlayerID)),
-      ...entry,
-    }))
+    .map((entry) => {
+      const masterPlayer = playerMap.get(String(entry?.PlayerID));
+
+      return {
+        ...entry,
+        ...masterPlayer,
+        PlayerName: masterPlayer ? getPlayerName(masterPlayer) : entry?.PlayerName,
+      };
+    })
     .sort((a, b) => {
       const jerseyA = Number(a.JerseyNumber || 999);
       const jerseyB = Number(b.JerseyNumber || 999);

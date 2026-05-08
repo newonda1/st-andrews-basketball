@@ -160,7 +160,11 @@ export default function GameDetail() {
 
     const map = new Map();
     (roster?.Players || []).forEach((entry) => {
-      map.set(Number(entry.PlayerID), Number(entry.JerseyNumber));
+      if (entry.JerseyNumber == null || entry.JerseyNumber === "") return;
+      const jerseyNumber = Number(entry.JerseyNumber);
+      if (Number.isFinite(jerseyNumber)) {
+        map.set(Number(entry.PlayerID), jerseyNumber);
+      }
     });
     return map;
   }, [seasonRosters, game]);

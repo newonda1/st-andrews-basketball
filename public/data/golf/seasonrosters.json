@@ -7,57 +7,79 @@
       {
         "PlayerID": 200411,
         "PlayerName": "Kevin Kicklighter",
-        "Gender": "Boys"
+        "Gender": "Boys",
+        "Grade": null,
+        "GradeLabel": null
       },
       {
         "PlayerID": 200412,
         "PlayerName": "Zach Inbrogno",
-        "Gender": "Boys"
+        "Gender": "Boys",
+        "Grade": null,
+        "GradeLabel": null
       },
       {
         "PlayerID": 200413,
         "PlayerName": "Ryan Ramsey",
-        "Gender": "Boys"
+        "Gender": "Boys",
+        "Grade": null,
+        "GradeLabel": null
       },
       {
         "PlayerID": 200414,
         "PlayerName": "Brock Prescott",
-        "Gender": "Boys"
+        "Gender": "Boys",
+        "Grade": null,
+        "GradeLabel": null
       },
       {
         "PlayerID": 200208,
         "PlayerName": "Josh Smith",
-        "Gender": "Boys"
+        "Gender": "Boys",
+        "Grade": 12,
+        "GradeLabel": "Sr."
       },
       {
         "PlayerID": 200417,
         "PlayerName": "Drew Aimone",
-        "Gender": "Boys"
+        "Gender": "Boys",
+        "Grade": 7,
+        "GradeLabel": "7th"
       },
       {
         "PlayerID": 200003,
         "PlayerName": "Davy Clay",
-        "Gender": "Boys"
+        "Gender": "Boys",
+        "Grade": 12,
+        "GradeLabel": "Sr."
       },
       {
         "PlayerID": 200419,
         "PlayerName": "Steve Carbone",
-        "Gender": "Boys"
+        "Gender": "Boys",
+        "Grade": 10,
+        "GradeLabel": "So."
       },
       {
         "PlayerID": 200415,
         "PlayerName": "Logan Ferrelle",
-        "Gender": "Girls"
+        "Gender": "Girls",
+        "Grade": null,
+        "GradeLabel": null
       },
       {
         "PlayerID": 200416,
         "PlayerName": "Christine Spain",
-        "Gender": "Girls"
+        "Gender": "Girls",
+        "Grade": null,
+        "GradeLabel": null
       },
       {
         "PlayerID": 200418,
         "PlayerName": "Samantha Long",
-        "Gender": "Girls"
+        "Gender": "Girls",
+        "Grade": 8,
+        "GradeLabel": "8th"
       }
     ]
   }

@@ -158,7 +158,12 @@ export default function GolfApp() {
         <Route
           path="matches/:matchId"
           element={
-            <MatchPage matches={matches} players={players} status={status} />
+            <MatchPage
+              matches={matches}
+              players={players}
+              schools={schools}
+              status={status}
+            />
           }
         />
         <Route path="*" element={<Home />} />

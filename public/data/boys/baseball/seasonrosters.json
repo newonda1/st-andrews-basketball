@@ -1,5 +1,21 @@
 [
     {
+        "SeasonID": "2006",
+        "Players": [
+            { "PlayerID": 2026345, "JerseyNumber": null, "Grade": 8 },
+            { "PlayerID": 2026165, "JerseyNumber": null, "Grade": 11 },
+            { "PlayerID": 200817, "JerseyNumber": null, "Grade": 9 },
+            { "PlayerID": 200910, "JerseyNumber": null, "Grade": 9 },
+            { "PlayerID": 200810, "JerseyNumber": null, "Grade": 9 },
+            { "PlayerID": 2026344, "JerseyNumber": null, "Grade": 8 },
+            { "PlayerID": 200809, "JerseyNumber": null, "Grade": 9 },
+            { "PlayerID": 2026346, "JerseyNumber": null, "Grade": 9 },
+            { "PlayerID": 200806, "JerseyNumber": null, "Grade": 9 },
+            { "PlayerID": 2026347, "JerseyNumber": null, "Grade": 9 },
+            { "PlayerID": 2026348, "JerseyNumber": null, "Grade": 10 }
+        ]
+    },
+    {
         "SeasonID": "2008",
         "Players": [
             { "PlayerID": 200806, "JerseyNumber": null },

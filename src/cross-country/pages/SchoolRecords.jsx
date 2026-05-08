@@ -69,7 +69,7 @@ export default function SchoolRecords({
 
     grouped.forEach((entries, key) => {
       const [division, gender, event] = key.split("__");
-      const sortedEntries = entries.slice().sort(compareTimes).slice(0, 20);
+      const sortedEntries = entries.slice().sort(compareTimes);
 
       if (!sortedEntries.length) return;
 
@@ -123,8 +123,8 @@ export default function SchoolRecords({
         School Records
       </h1>
       <p className="-mt-1.5 text-center text-[clamp(0.9rem,2vw,1rem)] italic text-gray-600">
-        Select any distance to see the top 20 St. Andrew&apos;s times currently
-        loaded for that level, gender, and distance
+        Select any distance to see the St. Andrew&apos;s times currently loaded
+        for that level, gender, and distance
       </p>
 
       <div className="overflow-x-auto">

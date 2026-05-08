@@ -1,5 +1,6 @@
 export const CROSS_COUNTRY_EVENT_ORDER = [
   "One Mile Run",
+  "Mile Relay",
   "3200 Meter Run",
   "Two Mile Run",
   "5K Run",

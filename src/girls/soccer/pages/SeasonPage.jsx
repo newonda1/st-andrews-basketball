@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
 import {
@@ -23,6 +23,200 @@ function resultClassName(result) {
   if (result === "W") return "text-green-700";
   if (result === "L") return "text-red-700";
   return "text-gray-500";
+}
+
+const tableFrameClassName =
+  "overflow-x-auto rounded-lg border border-gray-200 bg-white shadow";
+const tableClassName = "min-w-full bg-white text-sm text-center";
+const tableHeadClassName =
+  "bg-gray-100 text-xs uppercase tracking-wide text-gray-700";
+const tableHeaderCellClassName = "border px-3 py-2 font-bold";
+const tableBodyCellClassName = "border px-3 py-2";
+
+function tableRowClassName(index) {
+  return `border-t border-gray-200 ${
+    index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
+  } hover:bg-gray-100`;
+}
+
+function splitParagraphs(value) {
+  if (Array.isArray(value)) return value.map((item) => String(item || "").trim()).filter(Boolean);
+  return String(value || "")
+    .split(/\n{2,}/)
+    .map((paragraph) => paragraph.trim())
+    .filter(Boolean);
+}
+
+function buildSeasonBriefItems(season) {
+  if (!season) return [];
+  return [
+    { label: "Record", value: season.OverallRecord },
+    { label: "Coach", value: season.HeadCoach },
+    { label: "Finish", value: season.StateFinish || season.RegionFinish },
+  ].filter((item) => item.value);
+}
+
+function SeasonRecapSection({ season }) {
+  const paragraphs = splitParagraphs(season?.HistoricalSummary || season?.SeasonRecap);
+  const briefItems = buildSeasonBriefItems(season);
+
+  if (!paragraphs.length && !season?.StatusNote) return null;
+
+  return (
+    <section id="season-recap" className="mx-auto max-w-4xl space-y-3">
+      <h2 className="text-2xl font-semibold">Season Recap</h2>
+      <div className="flow-root text-base leading-7 text-slate-700">
+        {briefItems.length ? (
+          <dl className="mb-4 grid grid-cols-3 gap-3 text-center md:float-right md:mb-3 md:ml-6 md:w-64 md:grid-cols-1">
+            {briefItems.map((item) => (
+              <div key={item.label} className="rounded-lg border border-gray-200 px-3 py-2">
+                <dt className="text-xs font-semibold uppercase tracking-wide text-gray-500">
+                  {item.label}
+                </dt>
+                <dd className="text-lg font-semibold text-gray-900">{item.value}</dd>
+              </div>
+            ))}
+          </dl>
+        ) : null}
+
+        <div className="space-y-3">
+          {paragraphs.length ? (
+            paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)
+          ) : (
+            <p>{season.StatusNote}</p>
+          )}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function SeasonImagesSection({ images = [], seasonLabel }) {
+  const [imageIndex, setImageIndex] = useState(0);
+
+  useEffect(() => {
+    setImageIndex(0);
+  }, [images]);
+
+  if (!images.length) return null;
+
+  const selectedImage = images[imageIndex] || images[0];
+  const currentImageNumber = Math.min(imageIndex + 1, images.length);
+  const goPrev = () => setImageIndex((index) => (index - 1 + images.length) % images.length);
+  const goNext = () => setImageIndex((index) => (index + 1) % images.length);
+
+  return (
+    <section id="season-images" className="space-y-3">
+      <h2 className="text-2xl font-semibold">Season Images</h2>
+      <div className="overflow-hidden rounded-lg border border-gray-200 bg-white">
+        <div className="relative bg-gray-50">
+          <img
+            src={selectedImage.src}
+            alt={selectedImage.alt || `${seasonLabel} girls soccer season image`}
+            className="w-full max-h-[620px] object-contain"
+            loading="lazy"
+          />
+          {images.length > 1 ? (
+            <>
+              <button
+                type="button"
+                onClick={goPrev}
+                className="absolute left-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200 bg-white/90 shadow hover:bg-white"
+                aria-label="Previous image"
+              >
+                {"<"}
+              </button>
+              <button
+                type="button"
+                onClick={goNext}
+                className="absolute right-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200 bg-white/90 shadow hover:bg-white"
+                aria-label="Next image"
+              >
+                {">"}
+              </button>
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-black/65 px-3 py-1 text-xs text-white">
+                {currentImageNumber} / {images.length}
+              </div>
+            </>
+          ) : null}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function formatRosterGrade(grade) {
+  if (grade === null || grade === undefined || grade === "") return "—";
+  const value = Number(grade);
+  if (Number.isFinite(value)) {
+    if (value === 7) return "7th";
+    if (value === 8) return "8th";
+    if (value === 9) return "Fr.";
+    if (value === 10) return "So.";
+    if (value === 11) return "Jr.";
+    if (value === 12) return "Sr.";
+  }
+  const normalized = String(grade).trim().toLowerCase();
+  if (["freshman", "fr", "fr."].includes(normalized)) return "Fr.";
+  if (["sophomore", "so", "so."].includes(normalized)) return "So.";
+  if (["junior", "jr", "jr."].includes(normalized)) return "Jr.";
+  if (["senior", "sr", "sr."].includes(normalized)) return "Sr.";
+  return String(grade);
+}
+
+function RosterTableBlock({ rows }) {
+  return (
+    <div className={tableFrameClassName}>
+      <table className={tableClassName}>
+        <thead className={tableHeadClassName}>
+          <tr>
+            <th className={`${tableHeaderCellClassName} text-left`}>Player</th>
+            <th className={`${tableHeaderCellClassName} whitespace-nowrap`}>Grade</th>
+            <th className={`${tableHeaderCellClassName} text-left`}>Pos.</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((row, index) => (
+            <tr key={row.key} className={tableRowClassName(index)}>
+              <td className={`${tableBodyCellClassName} text-left font-semibold text-gray-900`}>
+                {row.path ? (
+                  <Link to={row.path} className="text-blue-600 hover:underline">
+                    {row.name}
+                  </Link>
+                ) : (
+                  row.name
+                )}
+              </td>
+              <td className={`${tableBodyCellClassName} whitespace-nowrap`}>{row.grade}</td>
+              <td className={`${tableBodyCellClassName} text-left`}>
+                {row.positions.length ? row.positions.join(", ") : "—"}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function RosterTable({ rows }) {
+  const splitIndex = Math.ceil(rows.length / 2);
+  const firstColumnRows = rows.slice(0, splitIndex);
+  const secondColumnRows = rows.slice(splitIndex);
+
+  if (rows.length <= 1) return <RosterTableBlock rows={rows} />;
+
+  return (
+    <>
+      <div className="lg:hidden">
+        <RosterTableBlock rows={rows} />
+      </div>
+      <div className="hidden gap-4 lg:grid lg:grid-cols-2">
+        <RosterTableBlock rows={firstColumnRows} />
+        <RosterTableBlock rows={secondColumnRows} />
+      </div>
+    </>
+  );
 }
 
 function buildEmptyPlayerTotal(playerId) {
@@ -282,6 +476,18 @@ export default function SeasonPage({ data, status = "" }) {
   }
 
   const seasonLabel = season ? getSoccerSeasonLabel(season) : `Spring ${seasonId}`;
+  const seasonImages = Array.isArray(season?.SeasonImages)
+    ? season.SeasonImages
+    : Array.isArray(season?.Images)
+      ? season.Images
+      : [];
+  const rosterTableRows = rosterEntries.map((entry, index) => ({
+    key: entry.PlayerID || `${getPlayerName(entry)}-${index}`,
+    name: getPlayerName(entry),
+    grade: formatRosterGrade(entry.GradeLabel || entry.Grade),
+    positions: Array.isArray(entry.Positions) ? entry.Positions : [],
+    path: entry.PlayerID ? `/athletics/girls/soccer/players/${entry.PlayerID}` : "",
+  }));
 
   if (!season && !status) {
     return (
@@ -308,7 +514,18 @@ export default function SeasonPage({ data, status = "" }) {
 
       <h1 className="mb-2 text-center text-3xl font-bold">{seasonLabel} Season</h1>
 
-      <section>
+      <SeasonRecapSection season={season} />
+
+      <SeasonImagesSection images={seasonImages} seasonLabel={seasonLabel} />
+
+      {rosterTableRows.length ? (
+        <section id="season-roster" className="space-y-4">
+          <h2 className="text-2xl font-semibold">Roster</h2>
+          <RosterTable rows={rosterTableRows} />
+        </section>
+      ) : null}
+
+      <section id="schedule-results" className="space-y-4">
         <div className="mb-4 mt-8 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">
           <h2 className="text-2xl font-semibold">Schedule &amp; Results</h2>
         </div>
@@ -321,7 +538,7 @@ export default function SeasonPage({ data, status = "" }) {
               <Link
                 key={game.GameID}
                 to={soccerGamePath(game.GameID)}
-                className="block border border-gray-200 bg-white p-4 text-gray-900 no-underline shadow-sm transition hover:border-blue-300"
+                className="block rounded-lg border border-gray-200 bg-white p-4 text-gray-900 no-underline shadow-sm transition hover:border-blue-300"
               >
                 <div className="flex items-start justify-between gap-4">
                   <div className="min-w-0">
@@ -369,9 +586,9 @@ export default function SeasonPage({ data, status = "" }) {
           })}
         </div>
 
-        <div className="hidden overflow-x-auto sm:block">
-          <table className="min-w-full border text-sm">
-            <thead className="bg-gray-100">
+        <div className={`${tableFrameClassName} hidden sm:block`}>
+          <table className="min-w-full bg-white text-sm">
+            <thead className={tableHeadClassName}>
               <tr>
                 <th className="border px-3 py-2 text-left">Date</th>
                 <th className="border px-3 py-2 text-left">Opponent</th>
@@ -387,7 +604,7 @@ export default function SeasonPage({ data, status = "" }) {
                   const logoPath = opponentLogoPath(game);
 
                   return (
-                    <tr key={game.GameID} className={index % 2 ? "bg-gray-50" : "bg-white"}>
+                    <tr key={game.GameID} className={tableRowClassName(index)}>
                       <td className="border px-3 py-2">{formatSoccerDate(game)}</td>
                       <td className="border px-3 py-2">
                         <div className="flex items-center gap-3">
@@ -446,16 +663,16 @@ export default function SeasonPage({ data, status = "" }) {
         </div>
       </section>
 
-      <section>
+      <section id="player-statistics" className="space-y-4">
         <div className="mb-4 mt-8 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">
           <h2 className="text-2xl font-semibold">Player Statistics</h2>
         </div>
 
         {seasonTotals.length ? (
           <>
-            <div className="overflow-x-auto">
-              <table className="min-w-full border text-center text-xs whitespace-nowrap sm:text-sm">
-                <thead className="bg-gray-100">
+            <div className={tableFrameClassName}>
+              <table className="min-w-full bg-white text-center text-xs whitespace-nowrap sm:text-sm">
+                <thead className={tableHeadClassName}>
                   <tr>
                     <th className="sticky left-0 z-10 border bg-gray-100 px-2 py-1 text-left">
                       Player
@@ -472,7 +689,7 @@ export default function SeasonPage({ data, status = "" }) {
                 </thead>
                 <tbody>
                   {seasonTotals.map((player, index) => (
-                    <tr key={player.PlayerID} className={index % 2 ? "bg-gray-50" : "bg-white"}>
+                    <tr key={player.PlayerID} className={tableRowClassName(index)}>
                       <td className="sticky left-0 z-10 border bg-inherit px-2 py-1 text-left">
                         <Link
                           to={`/athletics/girls/soccer/players/${player.PlayerID}`}

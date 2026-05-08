@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
+import ArticleFeatureList from "../../../components/ArticleFeatureList";
 import { StateBracket8GameSVG } from "../../basketball/components/GameCardBracketsSVG";
 import { recordTableStyles } from "../../basketball/pages/recordTableStyles";
 import {
@@ -1044,61 +1045,65 @@ function SeasonImagesSection({ season }) {
 
 function FootballRosterTable({ rosterRows, emptyStateClassName }) {
   return (
-    <table className="w-full table-auto border text-center text-sm">
-      <thead className="bg-gray-200 font-bold">
-        <tr>
-          <th className={`${recordTableStyles.headerCell} whitespace-nowrap`}>No.</th>
-          <th className={`${recordTableStyles.headerCell} md:text-left`}>Player</th>
-          <th className={`${recordTableStyles.headerCell} whitespace-nowrap`}>Grade</th>
-          <th className={`${recordTableStyles.headerCell} md:text-left`}>Pos.</th>
-        </tr>
-      </thead>
-      <tbody>
-        {rosterRows.length === 0 ? (
+    <div className="overflow-x-auto rounded-lg border border-gray-200 bg-white shadow">
+      <table className="min-w-full bg-white text-center text-sm">
+        <thead className="bg-gray-100 text-xs uppercase tracking-wide text-gray-700">
           <tr>
-            <td className={emptyStateClassName} colSpan={4}>
-              No roster data is available for this season yet.
-            </td>
+            <th className={`${recordTableStyles.headerCell} whitespace-nowrap`}>No.</th>
+            <th className={`${recordTableStyles.headerCell} text-left`}>Player</th>
+            <th className={`${recordTableStyles.headerCell} whitespace-nowrap`}>Grade</th>
+            <th className={`${recordTableStyles.headerCell} text-left`}>Pos.</th>
           </tr>
-        ) : (
-          rosterRows.map((player) => (
-            <tr
-              key={player.PlayerID || player.RowID || player.PlayerName}
-              className={player.RowType === "staff" ? "bg-gray-50" : ""}
-            >
-              <td className={`${recordTableStyles.bodyCell} whitespace-nowrap`}>
-                {player.JerseyNumber || "—"}
-              </td>
-              <td className={`${recordTableStyles.bodyCell} md:text-left`}>
-                <div className="flex flex-col items-center gap-0.5 md:items-start">
-                  {player.PlayerID ? (
-                    <Link
-                      to={footballPlayerPath(player.PlayerID)}
-                      className="text-blue-600 hover:underline"
-                    >
-                      {player.PlayerName || "—"}
-                    </Link>
-                  ) : (
-                    <span>{player.PlayerName || "—"}</span>
-                  )}
-                  {(player.Distinctions || []).length > 0 ? (
-                    <span className="text-xs leading-snug text-slate-600">
-                      {player.Distinctions.join("; ")}
-                    </span>
-                  ) : null}
-                </div>
-              </td>
-              <td className={`${recordTableStyles.bodyCell} whitespace-nowrap`}>
-                {player.Grade || "—"}
-              </td>
-              <td className={`${recordTableStyles.bodyCell} md:text-left`}>
-                {(player.Positions || []).join(", ") || "—"}
+        </thead>
+        <tbody>
+          {rosterRows.length === 0 ? (
+            <tr>
+              <td className={emptyStateClassName} colSpan={4}>
+                No roster data is available for this season yet.
               </td>
             </tr>
-          ))
-        )}
-      </tbody>
-    </table>
+          ) : (
+            rosterRows.map((player, index) => (
+              <tr
+                key={player.PlayerID || player.RowID || player.PlayerName}
+                className={`border-t border-gray-200 ${
+                  index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
+                } hover:bg-gray-100`}
+              >
+                <td className={`${recordTableStyles.bodyCell} whitespace-nowrap`}>
+                  {player.JerseyNumber || "—"}
+                </td>
+                <td className={`${recordTableStyles.bodyCell} text-left`}>
+                  <div className="flex flex-col items-start gap-0.5">
+                    {player.PlayerID ? (
+                      <Link
+                        to={footballPlayerPath(player.PlayerID)}
+                        className="text-blue-600 hover:underline"
+                      >
+                        {player.PlayerName || "—"}
+                      </Link>
+                    ) : (
+                      <span>{player.PlayerName || "—"}</span>
+                    )}
+                    {(player.Distinctions || []).length > 0 ? (
+                      <span className="text-xs leading-snug text-slate-600">
+                        {player.Distinctions.join("; ")}
+                      </span>
+                    ) : null}
+                  </div>
+                </td>
+                <td className={`${recordTableStyles.bodyCell} whitespace-nowrap`}>
+                  {player.Grade || "—"}
+                </td>
+                <td className={`${recordTableStyles.bodyCell} text-left`}>
+                  {(player.Positions || []).join(", ") || "—"}
+                </td>
+              </tr>
+            ))
+          )}
+        </tbody>
+      </table>
+    </div>
   );
 }
 
@@ -1230,6 +1235,7 @@ export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
   const [rosters, setRosters] = useState([]);
   const [seasons, setSeasons] = useState([]);
   const [seasonStatsCollection, setSeasonStatsCollection] = useState([]);
+  const [articles, setArticles] = useState([]);
   const [preparedRecordsData, setPreparedRecordsData] = useState(null);
   const [schools, setSchools] = useState([]);
   const [selectedStatsView, setSelectedStatsView] = useState(
@@ -1253,6 +1259,7 @@ export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
         setRosters(data.rosters);
         setSeasons(data.seasons);
         setSeasonStatsCollection(data.seasonStats);
+        setArticles(data.articles);
         setPreparedRecordsData(preparedData);
         setSchools(data.schools);
         setStatus("");
@@ -1315,6 +1322,11 @@ export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
     [resolvedSeasonId, seasonStatsCollection]
   );
 
+  const seasonArticles = useMemo(
+    () => articles.filter((article) => Number(article?.SeasonID) === resolvedSeasonId),
+    [articles, resolvedSeasonId]
+  );
+
   const playerMap = useMemo(() => {
     const map = new Map();
     players.forEach((player) => {
@@ -1327,10 +1339,29 @@ export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
     const entries = Array.isArray(rosterSeason?.Players) ? rosterSeason.Players : [];
 
     return entries
-      .map((entry) => ({
-        ...playerMap.get(String(entry.PlayerID)),
-        ...entry,
-      }))
+      .map((entry) => {
+        const masterPlayer = playerMap.get(String(entry.PlayerID));
+        const masterName = masterPlayer
+          ? [
+              masterPlayer.PlayerName,
+              [masterPlayer.FirstName, masterPlayer.LastName].filter(Boolean).join(" "),
+            ]
+              .map((value) => String(value || "").trim())
+              .find(Boolean)
+          : "";
+        const rosterName = String(entry.PlayerName || "").trim();
+        const namesAlign =
+          !masterName ||
+          !rosterName ||
+          masterName.toLowerCase().replace(/[^a-z0-9]/g, "") ===
+            rosterName.toLowerCase().replace(/[^a-z0-9]/g, "");
+
+        return {
+          ...masterPlayer,
+          ...entry,
+          PlayerName: namesAlign ? rosterName || masterName : rosterName || masterName,
+        };
+      })
       .sort((a, b) => {
         const jerseyA = Number(a.JerseyNumber || 999);
         const jerseyB = Number(b.JerseyNumber || 999);
@@ -1813,6 +1844,11 @@ export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
 
       <SeasonRecapSection season={season} />
       <SeasonImagesSection season={season} />
+      <ArticleFeatureList
+        articles={seasonArticles}
+        basePath="/athletics/football"
+        heading="Season Articles"
+      />
 
       {regionStandings ? (
         <section id="region-standings" className="space-y-4">
@@ -1822,18 +1858,16 @@ export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
       ) : null}
 
       <section id="roster" className="space-y-4">
-        <h2 className="text-2xl font-semibold">Roster</h2>
+        <h2 className="text-2xl font-semibold">Season Roster</h2>
 
         {rosterTableRows.length === 0 ? (
-          <div className="overflow-x-auto">
-            <FootballRosterTable
-              rosterRows={rosterTableRows}
-              emptyStateClassName={emptyStateClassName}
-            />
-          </div>
+          <FootballRosterTable
+            rosterRows={rosterTableRows}
+            emptyStateClassName={emptyStateClassName}
+          />
         ) : (
           <>
-            <div className="overflow-x-auto lg:hidden">
+            <div className="lg:hidden">
               <FootballRosterTable
                 rosterRows={rosterTableRows}
                 emptyStateClassName={emptyStateClassName}
@@ -1842,7 +1876,7 @@ export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
             <div className="hidden gap-5 lg:grid lg:grid-cols-2">
               {desktopRosterColumns.map((columnRows, index) =>
                 columnRows.length ? (
-                  <div key={index} className="overflow-x-auto">
+                  <div key={index}>
                     <FootballRosterTable
                       rosterRows={columnRows}
                       emptyStateClassName={emptyStateClassName}

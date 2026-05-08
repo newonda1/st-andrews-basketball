@@ -4,6 +4,7 @@ export const FOOTBALL_DATA_PATHS = {
   players: "/data/boys/football/players.json",
   rosters: "/data/boys/football/seasonrosters.json",
   stats: "/data/boys/football/seasonstats.json",
+  articles: "/data/boys/football/articles.json",
   playerGameLogs: "/data/boys/football/playergamelogs.json",
   playerSeasonAdjustments: "/data/boys/football/playerseasonadjustments.json",
   schools: "/data/schools.json",
@@ -27,40 +28,75 @@ export async function fetchJsonOptional(path) {
   }
 }
 
+function buildSchoolMap(schools = []) {
+  return new Map(
+    (Array.isArray(schools) ? schools : [])
+      .filter((school) => school?.SchoolID)
+      .map((school) => [String(school.SchoolID), school])
+  );
+}
+
+function schoolLocation(school) {
+  return [school?.City, school?.State]
+    .map((part) => String(part || "").trim())
+    .filter(Boolean)
+    .join(", ");
+}
+
+export function hydrateFootballGamesWithSchools(games, schools) {
+  const schoolMap = buildSchoolMap(schools);
+
+  return (Array.isArray(games) ? games : []).map((game) => {
+    const school = game?.OpponentID ? schoolMap.get(String(game.OpponentID)) : null;
+    if (!school) return game;
+
+    return {
+      ...game,
+      Opponent: school.Name || game.Opponent,
+      OpponentLocation: schoolLocation(school) || game.OpponentLocation,
+      OpponentLogoPath: school.LogoPath || school.BracketLogoPath || game.OpponentLogoPath,
+      OpponentSchool: school,
+    };
+  });
+}
+
 export async function loadFootballResultsData() {
-  const [games, seasons] = await Promise.all([
+  const [games, seasons, schools] = await Promise.all([
     fetchJson(FOOTBALL_DATA_PATHS.games, "football games"),
     fetchJson(FOOTBALL_DATA_PATHS.seasons, "football seasons"),
+    fetchJson(FOOTBALL_DATA_PATHS.schools, "schools"),
   ]);
 
   return {
-    games: Array.isArray(games) ? games : [],
+    games: hydrateFootballGamesWithSchools(games, schools),
     seasons: Array.isArray(seasons) ? seasons : [],
   };
 }
 
 export async function loadFootballSeasonPageData() {
-  const [games, seasons, players, rosters, stats, schools] = await Promise.all([
+  const [games, seasons, players, rosters, stats, articles, schools] = await Promise.all([
     fetchJson(FOOTBALL_DATA_PATHS.games, "football games"),
     fetchJson(FOOTBALL_DATA_PATHS.seasons, "football seasons"),
     fetchJson(FOOTBALL_DATA_PATHS.players, "football players"),
     fetchJson(FOOTBALL_DATA_PATHS.rosters, "football rosters"),
     fetchJson(FOOTBALL_DATA_PATHS.stats, "football stats"),
+    fetchJsonOptional(FOOTBALL_DATA_PATHS.articles),
     fetchJson(FOOTBALL_DATA_PATHS.schools, "schools"),
   ]);
 
   return {
-    games: Array.isArray(games) ? games : [],
+    games: hydrateFootballGamesWithSchools(games, schools),
     seasons: Array.isArray(seasons) ? seasons : [],
     players: Array.isArray(players) ? players : [],
     rosters: Array.isArray(rosters) ? rosters : [],
     seasonStats: Array.isArray(stats) ? stats : stats && typeof stats === "object" ? [stats] : [],
+    articles: Array.isArray(articles) ? articles : [],
     schools: Array.isArray(schools) ? schools : [],
   };
 }
 
 export async function loadFootballRecordsData() {
-  const [games, seasons, players, rosters, playerGameLogs, playerSeasonAdjustments] =
+  const [games, seasons, players, rosters, playerGameLogs, playerSeasonAdjustments, schools] =
     await Promise.all([
       fetchJson(FOOTBALL_DATA_PATHS.games, "football games"),
       fetchJson(FOOTBALL_DATA_PATHS.seasons, "football seasons"),
@@ -68,10 +104,11 @@ export async function loadFootballRecordsData() {
       fetchJson(FOOTBALL_DATA_PATHS.rosters, "football rosters"),
       fetchJson(FOOTBALL_DATA_PATHS.playerGameLogs, "football player game logs"),
       fetchJsonOptional(FOOTBALL_DATA_PATHS.playerSeasonAdjustments),
+      fetchJson(FOOTBALL_DATA_PATHS.schools, "schools"),
     ]);
 
   return {
-    games: Array.isArray(games) ? games : [],
+    games: hydrateFootballGamesWithSchools(games, schools),
     seasons: Array.isArray(seasons) ? seasons : [],
     players: Array.isArray(players) ? players : [],
     rosters: Array.isArray(rosters) ? rosters : [],

@@ -98,6 +98,15 @@ export function getSchoolName(schoolsOrMap, schoolId) {
   return school?.Name || "";
 }
 
+export function getSchool(schoolsOrMap, schoolId) {
+  if (!schoolId) return null;
+  return schoolsOrMap instanceof Map
+    ? schoolsOrMap.get(String(schoolId)) || null
+    : (Array.isArray(schoolsOrMap) ? schoolsOrMap : []).find(
+        (entry) => String(entry.SchoolID) === String(schoolId)
+      ) || null;
+}
+
 export function getOpponentName(game, schoolsOrMap) {
   const fromSchool = getSchoolName(schoolsOrMap, game?.OpponentID);
   return fromSchool || game?.Opponent || "Unknown";
@@ -105,8 +114,18 @@ export function getOpponentName(game, schoolsOrMap) {
 
 export function hydrateGamesWithSchools(games, schools) {
   const schoolMap = buildIdMap(schools, "SchoolID");
-  return (Array.isArray(games) ? games : []).map((game) => ({
-    ...game,
-    Opponent: getOpponentName(game, schoolMap),
-  }));
+  return (Array.isArray(games) ? games : []).map((game) => {
+    const opponentSchool = getSchool(schoolMap, game?.OpponentID);
+    const opponentLocation = [opponentSchool?.City, opponentSchool?.State]
+      .map((part) => String(part || "").trim())
+      .filter(Boolean)
+      .join(", ");
+
+    return {
+      ...game,
+      Opponent: getOpponentName(game, schoolMap),
+      OpponentLocation: opponentLocation || game.OpponentLocation,
+      OpponentSchool: opponentSchool || game.OpponentSchool,
+    };
+  });
 }

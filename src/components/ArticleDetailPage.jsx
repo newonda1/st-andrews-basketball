@@ -81,6 +81,11 @@ function ArticleDetailPage({ articlesPath, basePath, backLabel, backPath }) {
           <p className="text-lg font-medium leading-8 text-gray-700">{article.Subtitle}</p>
         )}
         {article.Summary && <p className="max-w-3xl leading-7 text-gray-600">{article.Summary}</p>}
+        {article.SourceCitation && (
+          <p className="max-w-3xl text-sm leading-6 text-gray-500">
+            Source: {article.SourceCitation}
+          </p>
+        )}
       </header>
 
       {article.DocumentPath && (

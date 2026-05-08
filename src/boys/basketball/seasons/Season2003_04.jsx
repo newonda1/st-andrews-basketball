@@ -105,6 +105,7 @@ export default function Season2003_04() {
         { label: "Coach", value: "Michael Bennet" },
         { label: "Finish", value: "State Champions" },
       ]}
+      rosterTitle="Roster"
       recapArticle={recapArticle}
       statSourceLabel="Archive"
       trimShootingColumns

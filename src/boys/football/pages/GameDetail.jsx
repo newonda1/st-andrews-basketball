@@ -262,8 +262,10 @@ function TeamComparisonTable({ game }) {
   if (!rows.length) return null;
 
   const lineScore = Array.isArray(game?.LineScore) ? game.LineScore : [];
-  const homeLabel = lineScore[0]?.Abbr || "SA";
-  const opponentLabel = lineScore[1]?.Abbr || "Opp";
+  const stAndrewsRow = lineScore.find((row) => isStAndrewsTeam(row?.Team));
+  const opponentRow = lineScore.find((row) => row !== stAndrewsRow);
+  const stAndrewsLabel = stAndrewsRow?.Abbr || "St. Andrew's";
+  const opponentLabel = opponentRow?.Abbr || game?.Opponent || "Opponent";
 
   return (
     <div className="overflow-x-auto rounded-lg border border-slate-200 bg-white shadow-sm">
@@ -271,7 +273,7 @@ function TeamComparisonTable({ game }) {
         <thead className="bg-slate-100 text-xs uppercase tracking-wide text-slate-600">
           <tr>
             <th className="border-b border-slate-200 px-3 py-2 text-left">Statistic</th>
-            <th className="border-b border-slate-200 px-3 py-2 text-right">{homeLabel}</th>
+            <th className="border-b border-slate-200 px-3 py-2 text-right">{stAndrewsLabel}</th>
             <th className="border-b border-slate-200 px-3 py-2 text-right">{opponentLabel}</th>
           </tr>
         </thead>

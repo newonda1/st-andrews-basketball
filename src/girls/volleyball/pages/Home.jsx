@@ -20,7 +20,7 @@ export default function Home() {
       sportName="Volleyball"
       headline="Growing the St. Andrew's volleyball archive."
       intro="The volleyball section now has a home for season results, match detail, team totals, player pages, and record tables."
-      secondaryIntro="The live archive now reaches back to the recovered 2002-03 and 2003-04 entries, then continues through the 2007-08 to 2025-26 seasons."
+      secondaryIntro="The live archive now reaches back to the recovered 2002-03, 2003-04, and 2005-06 entries, then continues through the 2007-08 to 2025-26 seasons."
       icon="/images/common/volleyball_icon.png"
       iconAlt="St. Andrew's volleyball icon"
       storyTitle="Current Archive"
@@ -29,7 +29,7 @@ export default function Home() {
         "The 2003 team won the SCISA 2-AA region title and reached the state final, while the 2022 and 2024 seasons are marked as first-place region finishes in the published data.",
       ]}
       highlights={[
-        "21 seasons in the archive",
+        "22 seasons in the archive",
         "344 matches in the database",
         "2003 region championship",
         "2022 and 2024 region first-place finishes",

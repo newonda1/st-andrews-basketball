@@ -106,6 +106,67 @@
     ]
   },
   {
+    "SeasonID": 2005,
+    "YearStart": 2005,
+    "YearEnd": 2006,
+    "DisplaySeason": "2005",
+    "SourceSeasonLabel": "2005-06",
+    "HeadCoach": "Mandy Stinson",
+    "AssistantCoaches": [
+      "Kim Riordan"
+    ],
+    "OverallWins": null,
+    "OverallLosses": null,
+    "RegionWins": null,
+    "RegionLosses": null,
+    "RegionFinish": null,
+    "League": null,
+    "StateDivision": null,
+    "StateFinish": "State Champions",
+    "SourceCitation": null,
+    "ShowSeasonImagesPlaceholder": true,
+    "SeasonImages": [
+      {
+        "src": "/images/girls/volleyball/seasons/2005-06/2005-06-volleyball-team.png",
+        "alt": "2005-06 St. Andrew's volleyball team photo",
+        "caption": "2005-06 St. Andrew's volleyball team"
+      },
+      {
+        "src": "/images/girls/volleyball/seasons/2005-06/2005-06-volleyball-01-coach-stinson-game-plan.png",
+        "alt": "Coach Mandy Stinson going over the game plan with the St. Andrew's volleyball team",
+        "caption": "Coach Stinson goes over the game plan before a match"
+      },
+      {
+        "src": "/images/girls/volleyball/seasons/2005-06/2005-06-volleyball-02-grace-wilkowski.png",
+        "alt": "Senior Grace Wilkowski in her 2005-06 St. Andrew's volleyball uniform",
+        "caption": "Senior Grace Wilkowski"
+      },
+      {
+        "src": "/images/girls/volleyball/seasons/2005-06/2005-06-volleyball-03-caitlin-webb.png",
+        "alt": "Senior Caitlin Webb in her 2005-06 St. Andrew's volleyball uniform",
+        "caption": "Senior Caitlin Webb"
+      },
+      {
+        "src": "/images/girls/volleyball/seasons/2005-06/2005-06-volleyball-04-emily-aimone.png",
+        "alt": "Senior Emily Aimone in her 2005-06 St. Andrew's volleyball uniform",
+        "caption": "Senior Emily Aimone"
+      },
+      {
+        "src": "/images/girls/volleyball/seasons/2005-06/2005-06-volleyball-05-kristen-albritton.png",
+        "alt": "Senior Kristen Albritton in her 2005-06 St. Andrew's volleyball uniform",
+        "caption": "Senior Kristen Albritton"
+      },
+      {
+        "src": "/images/girls/volleyball/seasons/2005-06/2005-06-volleyball-06-state-champs-hardware.png",
+        "alt": "The 2005-06 St. Andrew's volleyball state champions receiving their trophy",
+        "caption": "The State Champs getting their hardware and being recognized"
+      }
+    ],
+    "SeasonRecapParagraphs": [
+      "The recovered 2005-06 volleyball page now opens with three straight wins: St. Andrew's swept Providence Christian on Aug. 24, defeated Holly Hill Academy on Aug. 25, and outlasted Bible Baptist on Aug. 30 to move to 3-0. Additional schedule results, match notes, and stat rows can be added here as they are recovered."
+    ]
+  },
+  {
     "SeasonID": 2007,
     "YearStart": 2007,
     "YearEnd": 2008,

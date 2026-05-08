@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import {
   buildGolfPdfPagesLabel,
@@ -9,14 +9,32 @@ import {
   sortGolfTournaments,
 } from "../golfPageUtils";
 
+const tableFrameClassName =
+  "overflow-x-auto rounded-lg border border-gray-200 bg-white shadow";
+const tableClassName = "min-w-full bg-white text-sm text-center";
+const tableHeadClassName =
+  "bg-gray-100 text-xs uppercase tracking-wide text-gray-700";
+const headerCellClassName =
+  "border px-3 py-2 font-bold leading-tight whitespace-normal break-words";
+const bodyCellClassName =
+  "border px-3 py-2 align-middle whitespace-normal break-words leading-tight";
+
+function tableRowClassName(index) {
+  return `border-t border-gray-200 ${
+    index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
+  } hover:bg-gray-100`;
+}
+
+const SCISA_LOGO_PATH = "/images/branding/scisa-athletics-footer-logo.png";
+
 function SummaryCard({ season }) {
   const recapParagraphs = Array.isArray(season.HistoricalSummary)
     ? season.HistoricalSummary
     : [];
 
   return (
-    <section className="space-y-3">
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+    <section id="season-recap" className="mx-auto max-w-4xl space-y-3">
+      <div className="space-y-3">
         <h2 className="text-2xl font-semibold text-slate-900">Season Recap</h2>
         {season.ArchivePdfUrl ? (
           <a
@@ -30,25 +48,153 @@ function SummaryCard({ season }) {
         ) : null}
       </div>
 
-      <div className="text-gray-800 leading-relaxed">
+      <div className="space-y-3 text-base leading-7 text-slate-700">
         {recapParagraphs.length ? (
           recapParagraphs.map((paragraph, index) => (
-            <p key={`${season.SeasonID}-summary-${index}`} className="mb-3 leading-relaxed">
+            <p key={`${season.SeasonID}-summary-${index}`}>
               {paragraph}
             </p>
           ))
         ) : (
-          <p className="mb-3 leading-relaxed">
+          <p>
             {season.StatusNote || "State archive summary."}
           </p>
         )}
       </div>
 
-      {Array.isArray(season.HighlightNotes) && season.HighlightNotes.length ? (
-        <p className="rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-sm leading-7 text-slate-700">
-          {season.HighlightNotes[0]}
-        </p>
-      ) : null}
+    </section>
+  );
+}
+
+function normalizeSeasonImages(images = []) {
+  if (!Array.isArray(images)) return [];
+
+  return images
+    .map((image, index) => {
+      if (typeof image === "string") {
+        return {
+          src: image,
+          alt: `Golf season image ${index + 1}`,
+          caption: "",
+        };
+      }
+
+      return {
+        src: image?.src || "",
+        alt: image?.alt || `Golf season image ${index + 1}`,
+        caption: image?.caption || "",
+      };
+    })
+    .filter((image) => image.src);
+}
+
+function SeasonImagesSection({ images = [], seasonLabel }) {
+  const normalizedImages = normalizeSeasonImages(images);
+  const [imageIndex, setImageIndex] = useState(0);
+
+  useEffect(() => {
+    setImageIndex(0);
+  }, [images]);
+
+  if (!normalizedImages.length) {
+    return (
+      <section id="season-images" className="space-y-3">
+        <h2 className="text-2xl font-semibold text-slate-900">Season Images</h2>
+        <div className="rounded-lg border border-dashed border-gray-300 bg-gray-50 px-6 py-12 text-center">
+          <p className="text-base font-semibold text-gray-800">
+            Season photo gallery coming soon
+          </p>
+          <p className="mt-2 text-sm leading-6 text-gray-600">
+            Images from the {seasonLabel} golf season will appear here.
+          </p>
+        </div>
+      </section>
+    );
+  }
+
+  const selectedImage = normalizedImages[imageIndex] || normalizedImages[0];
+  const selectedCaption = String(selectedImage?.caption || "").trim();
+  const currentImageNumber = Math.min(imageIndex + 1, normalizedImages.length);
+  const goPrev = () =>
+    setImageIndex((index) => (index - 1 + normalizedImages.length) % normalizedImages.length);
+  const goNext = () =>
+    setImageIndex((index) => (index + 1) % normalizedImages.length);
+
+  return (
+    <section id="season-images" className="space-y-3">
+      <h2 className="text-2xl font-semibold text-slate-900">Season Images</h2>
+
+      <div className="overflow-hidden rounded-lg border border-gray-200 bg-white">
+        <div className="relative bg-gray-50">
+          <img
+            src={selectedImage.src}
+            alt={selectedImage.alt || ""}
+            className="w-full max-h-[620px] object-contain"
+            loading="lazy"
+          />
+
+          {normalizedImages.length > 1 ? (
+            <>
+              <button
+                type="button"
+                onClick={goPrev}
+                className="absolute left-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200 bg-white/90 shadow hover:bg-white"
+                aria-label="Previous image"
+                title="Previous"
+              >
+                {"<"}
+              </button>
+
+              <button
+                type="button"
+                onClick={goNext}
+                className="absolute right-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200 bg-white/90 shadow hover:bg-white"
+                aria-label="Next image"
+                title="Next"
+              >
+                {">"}
+              </button>
+
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-black/65 px-3 py-1 text-xs text-white">
+                {currentImageNumber} / {normalizedImages.length}
+              </div>
+            </>
+          ) : null}
+        </div>
+
+        <div className="border-t border-gray-200 bg-white px-4 py-3">
+          <div className="mb-3 flex items-center justify-between gap-3">
+            <p className="text-sm font-medium text-gray-900">{selectedCaption}</p>
+            <p className="text-xs text-gray-500">
+              Image {currentImageNumber} of {normalizedImages.length}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-4 gap-2 sm:grid-cols-6 md:grid-cols-7">
+            {normalizedImages.map((image, index) => (
+              <button
+                key={image.src}
+                type="button"
+                onClick={() => setImageIndex(index)}
+                className={`aspect-square overflow-hidden rounded-md border bg-gray-50 ${
+                  index === imageIndex
+                    ? "border-gray-900 ring-2 ring-gray-900"
+                    : "border-gray-200 hover:border-gray-500"
+                }`}
+                aria-label={`Go to image ${index + 1}`}
+                title={image.caption || image.alt || `Image ${index + 1}`}
+              >
+                <img
+                  src={image.src}
+                  alt=""
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                />
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
@@ -225,6 +371,16 @@ function getPrimaryDivision(match) {
 }
 
 function getOpponents(match, schoolById) {
+  if (String(match?.MatchType || "").toLowerCase() === "state tournament") {
+    return [
+      {
+        key: `${match.MatchID}-state-tournament`,
+        label: match.Opponent || `${match.Season} SCISA State Tournament`,
+        logoPath: SCISA_LOGO_PATH,
+      },
+    ];
+  }
+
   const opponents = [];
   const seen = new Set();
 
@@ -236,8 +392,13 @@ function getOpponents(match, schoolById) {
         if (seen.has(key)) return;
         seen.add(key);
         opponents.push({
+          key,
           score,
           school: schoolById.get(String(score.SchoolID)),
+          label: getSchoolDisplayName(
+            schoolById.get(String(score.SchoolID)),
+            score.School
+          ),
         });
       });
   });
@@ -284,8 +445,8 @@ function getScheduleResultPieces(match) {
     .filter(Boolean);
 }
 
-function SchoolLogo({ school, fallbackName }) {
-  const logoPath = getSchoolLogoPath(school);
+function SchoolLogo({ school, fallbackName, logoPath: overrideLogoPath }) {
+  const logoPath = overrideLogoPath || getSchoolLogoPath(school);
   const initials = getSchoolDisplayName(school, fallbackName)
     .split(/\s+/)
     .filter(Boolean)
@@ -385,60 +546,115 @@ function MatchCard({ match }) {
   );
 }
 
+function firstMeaningfulValue(...values) {
+  return values.find(
+    (value) => value !== null && value !== undefined && String(value).trim() !== ""
+  );
+}
+
+function formatRosterGrade(grade) {
+  if (grade === null || grade === undefined || grade === "") return "—";
+
+  const numeric = Number(grade);
+  if (Number.isFinite(numeric)) {
+    if (numeric === 7) return "7th";
+    if (numeric === 8) return "8th";
+    if (numeric === 9) return "Fr.";
+    if (numeric === 10) return "So.";
+    if (numeric === 11) return "Jr.";
+    if (numeric === 12) return "Sr.";
+    return String(grade);
+  }
+
+  const normalized = String(grade).trim().toLowerCase();
+  if (["freshman", "fr", "fr."].includes(normalized)) return "Fr.";
+  if (["sophomore", "so", "so."].includes(normalized)) return "So.";
+  if (["junior", "jr", "jr."].includes(normalized)) return "Jr.";
+  if (["senior", "sr", "sr."].includes(normalized)) return "Sr.";
+
+  return String(grade);
+}
+
+function RosterTableBlock({ rows }) {
+  return (
+    <div className={tableFrameClassName}>
+      <table className={tableClassName}>
+        <thead className={tableHeadClassName}>
+          <tr>
+            <th className={`${headerCellClassName} text-left`}>Name</th>
+            <th className={`${headerCellClassName} whitespace-nowrap`}>Grade</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((row, index) => (
+            <tr key={row.key} className={tableRowClassName(index)}>
+              <td className={`${bodyCellClassName} text-left font-semibold text-gray-900`}>
+                {row.name}
+              </td>
+              <td className={`${bodyCellClassName} whitespace-nowrap`}>
+                {row.grade}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function RosterTable({ rows }) {
+  const splitIndex = Math.ceil(rows.length / 2);
+  const firstColumnRows = rows.slice(0, splitIndex);
+  const secondColumnRows = rows.slice(splitIndex);
+
+  if (rows.length <= 1) {
+    return <RosterTableBlock rows={rows} />;
+  }
+
+  return (
+    <>
+      <div className="lg:hidden">
+        <RosterTableBlock rows={rows} />
+      </div>
+      <div className="hidden gap-4 lg:grid lg:grid-cols-2">
+        <RosterTableBlock rows={firstColumnRows} />
+        <RosterTableBlock rows={secondColumnRows} />
+      </div>
+    </>
+  );
+}
+
 function SeasonRoster({ roster, playersById = new Map() }) {
   const players = Array.isArray(roster?.Players) ? roster.Players : [];
 
   if (!players.length) return null;
 
+  const rows = players.map((rosterPlayer, index) => {
+    const masterPlayer = playersById.get(String(rosterPlayer.PlayerID));
+    const displayName =
+      getPlayerName(masterPlayer) || rosterPlayer.PlayerName || "Unknown";
+    const grade = firstMeaningfulValue(
+      rosterPlayer.GradeLabel,
+      rosterPlayer.Grade,
+      masterPlayer?.GradeLabel,
+      masterPlayer?.Grade
+    );
+
+    return {
+      key: rosterPlayer.PlayerID || `${displayName}-${index}`,
+      name: displayName,
+      grade: formatRosterGrade(grade),
+    };
+  });
+
   return (
-    <section>
-      <div className="flex items-center justify-between mt-8 mb-4">
+    <section id="season-roster" className="space-y-4">
+      <div className="flex items-center justify-between">
         <h2 className="text-2xl font-semibold text-slate-900">Roster</h2>
-        <span className="text-sm font-semibold text-slate-500">{players.length} golfers</span>
       </div>
 
-      <div className="overflow-x-auto">
-        <table className="min-w-full border text-sm">
-          <thead className="bg-gray-100">
-            <tr>
-              <th className="border px-3 py-2 text-left">Golfer</th>
-              <th className="border px-3 py-2 text-center">Class</th>
-              <th className="border px-3 py-2 text-center">Team</th>
-            </tr>
-          </thead>
-          <tbody>
-            {players.map((rosterPlayer, index) => {
-              const masterPlayer = playersById.get(String(rosterPlayer.PlayerID));
-              const displayName =
-                getPlayerName(masterPlayer) || rosterPlayer.PlayerName || "Unknown";
-              const gradYear = masterPlayer?.GradYear || rosterPlayer.GradYear || "-";
+      <RosterTable rows={rows} />
 
-              return (
-                <tr
-                  key={rosterPlayer.PlayerID || `${displayName}-${index}`}
-                  className={index % 2 ? "bg-gray-50" : "bg-white"}
-                >
-                  <td className="border px-3 py-2 font-semibold text-slate-900">
-                    {displayName}
-                  </td>
-                  <td className="border px-3 py-2 text-center text-slate-700">
-                    {gradYear}
-                  </td>
-                  <td className="border px-3 py-2 text-center text-slate-700">
-                    {rosterPlayer.Gender || masterPlayer?.Gender || "Golf"}
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </div>
-
-      {roster.Source ? (
-        <p className="mt-3 text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">
-          Source: {roster.Source}
-        </p>
-      ) : null}
     </section>
   );
 }
@@ -447,14 +663,14 @@ function SeasonSchedule({ matches, schoolById }) {
   if (!matches.length) return null;
 
   return (
-    <section>
-      <div className="flex items-center justify-between mt-8 mb-4">
+    <section id="schedule-results" className="space-y-4">
+      <div className="flex items-center justify-between">
         <h2 className="text-2xl font-semibold text-slate-900">Schedule &amp; Results</h2>
       </div>
 
-      <div className="overflow-x-auto">
-        <table className="min-w-full border text-sm">
-          <thead className="bg-gray-100">
+      <div className={tableFrameClassName}>
+        <table className="min-w-full bg-white text-sm">
+          <thead className={tableHeadClassName}>
             <tr>
               <th className="border px-3 py-2 text-left">Date</th>
               <th className="border px-3 py-2 text-left">Opponent</th>
@@ -471,20 +687,24 @@ function SeasonSchedule({ matches, schoolById }) {
               const type = match.MatchType || "Regular Season";
 
               return (
-                <tr key={match.MatchID} className={index % 2 ? "bg-gray-50" : "bg-white"}>
+                <tr key={match.MatchID} className={tableRowClassName(index)}>
                   <td className="border px-3 py-2 whitespace-nowrap">
                     {formatGolfDate(match.Date)}
                   </td>
                   <td className="border px-3 py-2">
                     <div className="space-y-2">
-                      {opponents.map(({ score, school }) => (
-                        <div key={schoolKey(score)} className="flex items-center gap-3">
-                          <SchoolLogo school={school} fallbackName={score.School} />
+                      {opponents.map(({ key, label, logoPath, score, school }) => (
+                        <div key={key || schoolKey(score)} className="flex items-center gap-3">
+                          <SchoolLogo
+                            school={school}
+                            fallbackName={label || score?.School}
+                            logoPath={logoPath}
+                          />
                           <Link
                             to={`/athletics/golf/matches/${match.MatchID}`}
                             className="min-w-0 text-blue-700 underline hover:text-blue-900"
                           >
-                            {getSchoolDisplayName(school, score.School)}
+                            {label || getSchoolDisplayName(school, score?.School)}
                           </Link>
                         </div>
                       ))}
@@ -581,6 +801,13 @@ export default function SeasonPage({
     );
   }, [seasonId, seasonRosters]);
 
+  const seasonImages = useMemo(
+    () => normalizeSeasonImages(season?.SeasonImages),
+    [season]
+  );
+  const shouldShowSeasonImages =
+    seasonImages.length > 0 || Boolean(season?.ShowSeasonImagesPlaceholder);
+
   if (!season) {
     return (
       <div className="mx-auto max-w-4xl px-4 py-8 text-center sm:px-6">
@@ -610,18 +837,22 @@ export default function SeasonPage({
 
       <header className="text-center">
         <h1 className="text-3xl font-bold text-slate-900">
-          {getGolfSeasonLabel(season)} Golf
+          {getGolfSeasonLabel(season)} Season
         </h1>
-        <p className="mt-2 text-sm font-medium text-slate-500">
-          {season.Classification || "State archive"}
-        </p>
       </header>
+
+      <SummaryCard season={season} />
+
+      {shouldShowSeasonImages ? (
+        <SeasonImagesSection
+          images={seasonImages}
+          seasonLabel={getGolfSeasonLabel(season)}
+        />
+      ) : null}
 
       {seasonRoster ? (
         <SeasonRoster roster={seasonRoster} playersById={playersById} />
       ) : null}
-
-      <SummaryCard season={season} />
 
       <SeasonSchedule matches={seasonMatches} schoolById={schoolById} />
 

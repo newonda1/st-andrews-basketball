@@ -162,7 +162,9 @@
     "City": "Savannah",
     "State": "GA",
     "ShortName": "Bible Baptist",
-    "Mascot": "Braves"
+    "Mascot": "Braves",
+    "LogoPath": "/images/schools/logos/ga-bible-baptist-school-savannah.png",
+    "LogoSourceUrl": "https://web.archive.org/web/20110812065004/http://bbsbraves.org/files/BBS%20Logos/single-arrowhead.gif"
   },
   {
     "SchoolID": "ga-bradwell-institute-hinesville",
@@ -1593,7 +1595,9 @@
     "SchoolID": "sc-dorchester-academy-st-george",
     "Name": "Dorchester Academy",
     "City": "St. George",
-    "State": "SC"
+    "State": "SC",
+    "LogoPath": "/images/schools/logos/sc-dorchester-academy-st-george.png",
+    "LogoSourceUrl": "https://image.maxpreps.io/school-mascot/2/0/5/20525ce8-35bb-480a-8aec-7ffc5f629e26.gif?version=638078601000000000&width=1024&height=1024"
   },
   {
     "SchoolID": "sc-faith-christian-school-summerville",

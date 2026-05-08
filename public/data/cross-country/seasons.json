@@ -154,6 +154,134 @@
       "Ryan Kirby placed 16th in Boys A/AA (19:54).",
       "Michelle Griffin placed 22nd in Girls A/AA (25:43).",
       "Stephanie Griffin placed 26th in Girls A/AA (25:58)."
+    ],
+    "Images": [
+      {
+        "src": "/images/cross-country/seasons/2003-04/gallery/2003-04-cross-country-team.png",
+        "alt": "2003-04 St. Andrew's cross country team photo",
+        "caption": "2003-04 cross country team"
+      },
+      {
+        "src": "/images/cross-country/seasons/2003-04/gallery/2003-04-cross-country-01-michelle-griffin-rose-wilkowski-pack.png",
+        "alt": "Michelle Griffin and Rose Wilkowski running near the front of a cross country pack",
+        "caption": "Michelle Griffin and Rose Wilkowski make an attempt to get to the front of the pack"
+      },
+      {
+        "src": "/images/cross-country/seasons/2003-04/gallery/2003-04-cross-country-02-girls-long-run.png",
+        "alt": "St. Andrew's girls cross country runners on the course",
+        "caption": "The girls' cross country team off to another long run"
+      },
+      {
+        "src": "/images/cross-country/seasons/2003-04/gallery/2003-04-cross-country-03-ryan-kirby-finish.png",
+        "alt": "Ryan Kirby finishing a cross country race",
+        "caption": "Ryan Kirby finishes his long three mile run with his best time of the season"
+      },
+      {
+        "src": "/images/cross-country/seasons/2003-04/gallery/2003-04-cross-country-04-race-pack.png",
+        "alt": "Cross country runners moving across the course",
+        "caption": ""
+      },
+      {
+        "src": "/images/cross-country/seasons/2003-04/gallery/2003-04-cross-country-05-course-finish.png",
+        "alt": "A St. Andrew's cross country runner on the course",
+        "caption": ""
+      }
+    ],
+    "Roster": [
+      {
+        "Name": "Bryan Lee",
+        "Grade": 9,
+        "PlayerID": 2026165
+      },
+      {
+        "Name": "Christian Maleki",
+        "Grade": 10,
+        "PlayerID": 200314
+      },
+      {
+        "Name": "Scott Mullen",
+        "Grade": 10,
+        "PlayerID": 2027000
+      },
+      {
+        "Name": "Billy Vine",
+        "Grade": 10,
+        "PlayerID": 2026164
+      },
+      {
+        "Name": "Trevor Shanklin",
+        "Grade": 9,
+        "PlayerID": 2027001
+      },
+      {
+        "Name": "Ryan Kirby",
+        "Grade": 10,
+        "PlayerID": 2026159
+      },
+      {
+        "Name": "Jenny Wilburn",
+        "Grade": 11,
+        "PlayerID": 2027002
+      },
+      {
+        "Name": "Christy Sullivan",
+        "Grade": 9,
+        "PlayerID": 2027003
+      },
+      {
+        "Name": "Michelle Griffin",
+        "Grade": 10,
+        "PlayerID": 200408
+      },
+      {
+        "Name": "Stephanie Vine",
+        "Grade": 9,
+        "PlayerID": 200429
+      },
+      {
+        "Name": "Ehtan Conlon",
+        "Grade": 9,
+        "PlayerID": 2027004
+      },
+      {
+        "Name": "Maggin Sammons",
+        "Grade": 11,
+        "PlayerID": 2027005
+      },
+      {
+        "Name": "Sara Jones",
+        "Grade": 9,
+        "PlayerID": 2027006
+      },
+      {
+        "Name": "John Moser",
+        "Grade": 9,
+        "PlayerID": 2027007
+      },
+      {
+        "Name": "Stephanie Griffin",
+        "Grade": 10,
+        "PlayerID": 200407
+      },
+      {
+        "Name": "Josh Taylor",
+        "Grade": 9,
+        "PlayerID": 2026160
+      },
+      {
+        "Name": "Ben Harrison",
+        "Grade": 9,
+        "PlayerID": 2026161
+      },
+      {
+        "Name": "Rose Wilkowski",
+        "Grade": 8,
+        "PlayerID": 200422
+      },
+      {
+        "Name": "Andy Miller",
+        "Grade": "Head Coach"
+      }
     ]
   },
   {
@@ -185,18 +313,149 @@
     "SeasonLabel": "2005-06",
     "Classification": "SCISA",
     "StatusBadge": "partial",
-    "StatusNote": "MileSplit Georgia/South Carolina exposes 1 St. Andrew's cross country schedule or SCISA result entry for 2005-06, including 0 meets with public St. Andrew's result rows.",
-    "FirstRegularSeasonMeet": "2005-10-29",
+    "StatusNote": "The 2005-06 archive now includes a supplied Augusta Prep relay recap, roster, and season images. MileSplit Georgia/South Carolina also exposes 1 St. Andrew's cross country schedule or SCISA result entry for 2005-06, including 0 meets with public St. Andrew's result rows.",
+    "FirstRegularSeasonMeet": "2005-08-27",
     "RegionMeetDate": "",
     "StateMeetStart": "2005-10-29",
     "StateMeetEnd": "2005-10-29",
     "StateMeetLocation": "Heathwood Hall, Columbia, SC",
     "RecapParagraphs": [
-      "No public MileSplit Georgia or South Carolina result files were found for St. Andrew's during this crawl. The season remains listed because the requested SCISA-era crawl covers 2005-06."
+      "St. Andrew's opened the available 2005-06 cross country archive at Augusta Prep on August 27, 2005, where the Lions ran mile relay teams in boys' and girls' races.",
+      "The boys' A relay of Ben Harrison, Ryan Kirby, and John Moser placed 5th in 18:42. The boys' B relay of Alex Chu, Scott Mullen, and Josh Taylor placed 11th in 20:10, and the boys' C relay of Remy Thurston, Justin Hur, and Joe Nodzak placed 12th in 20:54.",
+      "The girls' relay of Jessica Topolewski, Stephanie Griffin, and Michelle Griffin placed 11th in 24:00.",
+      "At St. George on August 31, St. Andrew's won the boys' 3.1-mile team race with 49 points. Ben Harrison won the individual race in 19:14, and the Lions also counted top-15 finishes from Jon Moser, Bryan Kirby, Justin Hur, and Josh Taylor.",
+      "The girls did not have enough runners to place as a team at St. George, but Jessica Topolewski, Michelle Griffin, and Lily Adams each logged individual 3.1-mile results. MileSplit lists the later SCISA Championships, but the St. Andrew's team results page or raw files exposed no St. Andrew's performances in that public crawl."
     ],
     "HighlightNotes": [
-      "No public St. Andrew's MileSplit result rows were found.",
+      "16 runners are listed on the supplied roster.",
+      "9 season images are loaded with the team photo first.",
+      "Boys' A mile relay placed 5th at Augusta Prep in 18:42.",
+      "Girls' mile relay placed 11th at Augusta Prep in 24:00.",
+      "St. Andrew's boys won the St. George 3.1-mile team race with 49 points.",
+      "Ben Harrison won the St. George boys' race in 19:14.",
       "Georgia and South Carolina MileSplit pages were checked for this crawl."
+    ],
+    "Images": [
+      {
+        "src": "/images/cross-country/seasons/2005-06/gallery/2005-06-cross-country-team.png",
+        "alt": "2005-06 St. Andrew's cross country team photo",
+        "caption": "2005-06 cross country team"
+      },
+      {
+        "src": "/images/cross-country/seasons/2005-06/gallery/2005-06-cross-country-01-scott-mullen.png",
+        "alt": "Senior Scott Mullen",
+        "caption": "Senior Scott Mullen"
+      },
+      {
+        "src": "/images/cross-country/seasons/2005-06/gallery/2005-06-cross-country-02-michelle-griffin.png",
+        "alt": "Senior Michelle Griffin",
+        "caption": "Senior Michelle Griffin"
+      },
+      {
+        "src": "/images/cross-country/seasons/2005-06/gallery/2005-06-cross-country-03-stephanie-griffin.png",
+        "alt": "Senior Stephanie Griffin",
+        "caption": "Senior Stephanie Griffin"
+      },
+      {
+        "src": "/images/cross-country/seasons/2005-06/gallery/2005-06-cross-country-04-alex-chu.png",
+        "alt": "Senior Alex Chu",
+        "caption": "Senior Alex Chu"
+      },
+      {
+        "src": "/images/cross-country/seasons/2005-06/gallery/2005-06-cross-country-05-ryan-kirby.png",
+        "alt": "Senior Ryan Kirby",
+        "caption": "Senior Ryan Kirby"
+      },
+      {
+        "src": "/images/cross-country/seasons/2005-06/gallery/2005-06-cross-country-06-gian-maleki.png",
+        "alt": "Senior Gian Maleki",
+        "caption": "Senior Gian Maleki"
+      },
+      {
+        "src": "/images/cross-country/seasons/2005-06/gallery/2005-06-cross-country-07.png",
+        "alt": "St. Andrew's cross country season image",
+        "caption": ""
+      },
+      {
+        "src": "/images/cross-country/seasons/2005-06/gallery/2005-06-cross-country-08.png",
+        "alt": "St. Andrew's cross country season image",
+        "caption": ""
+      }
+    ],
+    "Roster": [
+      {
+        "Name": "Thomas Green",
+        "Grade": 9
+      },
+      {
+        "Name": "Ji Hang Hur",
+        "Grade": 9
+      },
+      {
+        "Name": "Lily Adams",
+        "Grade": 10
+      },
+      {
+        "Name": "Scott Mullen",
+        "Grade": 12,
+        "PlayerID": 2027000
+      },
+      {
+        "Name": "Gian Maleki",
+        "Grade": 12,
+        "PlayerID": 2026157
+      },
+      {
+        "Name": "Ben Harrison",
+        "Grade": 11,
+        "PlayerID": 2026161
+      },
+      {
+        "Name": "Josh Taylor",
+        "Grade": 11,
+        "PlayerID": 2026160
+      },
+      {
+        "Name": "Ryan Kirby",
+        "Grade": 12,
+        "PlayerID": 2026159
+      },
+      {
+        "Name": "Alex Chu",
+        "Grade": 12,
+        "PlayerID": 2026158
+      },
+      {
+        "Name": "Remy Thurston",
+        "Grade": 10,
+        "PlayerID": 200501
+      },
+      {
+        "Name": "Stephanie Griffin",
+        "Grade": 12,
+        "PlayerID": 200407
+      },
+      {
+        "Name": "Jessica Topolewski",
+        "Grade": ""
+      },
+      {
+        "Name": "Lizzie Verner",
+        "Grade": 10
+      },
+      {
+        "Name": "Joe Nodzak",
+        "Grade": 11
+      },
+      {
+        "Name": "Jon Moser",
+        "Grade": 11
+      },
+      {
+        "Name": "Michelle Griffin",
+        "Grade": 12,
+        "PlayerID": 200408
+      }
     ]
   },
   {

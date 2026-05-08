@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 
+import ArticleDetailPage from "../../components/ArticleDetailPage";
 import AthleticsProgramShell from "../../components/AthleticsProgramShell";
 
 import FullCareerStats from "./pages/FullCareerStats";
@@ -86,6 +87,17 @@ export default function FootballApp() {
           <Route path="records/season" element={<SeasonRecords />} />
           <Route path="records/career-records" element={<CareerRecords />} />
           <Route path="yearly-results" element={<YearlyResults />} />
+          <Route
+            path="articles/:articleId"
+            element={
+              <ArticleDetailPage
+                articlesPath="/data/boys/football/articles.json"
+                basePath="/athletics/football"
+                backLabel="football"
+                backPath="/athletics/football/seasons/2005"
+              />
+            }
+          />
           <Route path="seasons/:seasonId" element={<FootballSeasonPage />} />
           <Route path="games/:gameId" element={<GameDetail />} />
           <Route path="players/:playerId" element={<PlayerPage />} />

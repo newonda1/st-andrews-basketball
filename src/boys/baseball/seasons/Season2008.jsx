@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
+import { recordTableStyles } from "../pages/recordTableStyles";
 import {
   buildSchoolLookup,
   getSchoolDisplayName,
@@ -9,7 +10,7 @@ import {
   resolveSchoolForGame,
 } from "../dataLoaders";
 
-const SEASON_ID = 2008;
+const DEFAULT_SEASON_ID = 2008;
 
 function baseballInningsToOuts(value) {
   if (value == null || value === "") return 0;
@@ -85,6 +86,191 @@ function hasNonZeroStat(stat, keys) {
   return keys.some((key) => Number(stat[key] || 0) !== 0);
 }
 
+function formatGrade(grade) {
+  if (grade === null || grade === undefined || grade === "") return "-";
+  const value = Number(grade);
+  if (!Number.isFinite(value)) return String(grade);
+  if (value === 8) return "8th";
+  if (value === 9) return "Fr.";
+  if (value === 10) return "So.";
+  if (value === 11) return "Jr.";
+  if (value === 12) return "Sr.";
+  return String(grade);
+}
+
+function SeasonImagesSection({ images = [], seasonLabel }) {
+  const [imageIndex, setImageIndex] = useState(0);
+
+  useEffect(() => {
+    setImageIndex(0);
+  }, [images]);
+
+  if (!images.length) {
+    return (
+      <section id="season-images" className="space-y-3">
+        <h2 className="text-2xl font-semibold">Season Images</h2>
+        <div className="rounded-lg border border-dashed border-gray-300 bg-gray-50 px-6 py-12 text-center">
+          <p className="text-base font-semibold text-gray-800">Season photo gallery coming soon</p>
+          <p className="mt-2 text-sm leading-6 text-gray-600">
+            Photos from the {seasonLabel} baseball season will be added here.
+          </p>
+        </div>
+      </section>
+    );
+  }
+
+  const selectedImage = images[imageIndex] || images[0];
+  const selectedCaption = String(selectedImage?.caption || "").trim();
+  const currentImageNumber = Math.min(imageIndex + 1, images.length);
+  const goPrev = () => setImageIndex((index) => (index - 1 + images.length) % images.length);
+  const goNext = () => setImageIndex((index) => (index + 1) % images.length);
+
+  return (
+    <section id="season-images" className="space-y-3">
+      <h2 className="text-2xl font-semibold">Season Images</h2>
+
+      <div className="overflow-hidden rounded-lg border border-gray-200 bg-white">
+        <div className="relative bg-gray-50">
+          <img
+            src={selectedImage.src}
+            alt={selectedImage.alt || ""}
+            className="w-full max-h-[620px] object-contain"
+            loading="lazy"
+          />
+
+          {images.length > 1 ? (
+            <>
+              <button
+                type="button"
+                onClick={goPrev}
+                className="absolute left-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200 bg-white/90 shadow hover:bg-white"
+                aria-label="Previous image"
+                title="Previous"
+              >
+                {"<"}
+              </button>
+
+              <button
+                type="button"
+                onClick={goNext}
+                className="absolute right-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200 bg-white/90 shadow hover:bg-white"
+                aria-label="Next image"
+                title="Next"
+              >
+                {">"}
+              </button>
+
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-black/65 px-3 py-1 text-xs text-white">
+                {currentImageNumber} / {images.length}
+              </div>
+            </>
+          ) : null}
+        </div>
+
+        <div className="border-t border-gray-200 bg-white px-4 py-3">
+          <div className="mb-3 flex items-center justify-between gap-3">
+            <p className="text-sm font-medium text-gray-900">{selectedCaption}</p>
+            <p className="text-xs text-gray-500">
+              Image {currentImageNumber} of {images.length}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-4 gap-2 sm:grid-cols-6 md:grid-cols-7">
+            {images.map((image, index) => (
+              <button
+                key={image.src}
+                type="button"
+                onClick={() => setImageIndex(index)}
+                className={`aspect-square overflow-hidden rounded-md border bg-gray-50 ${
+                  index === imageIndex
+                    ? "border-gray-900 ring-2 ring-gray-900"
+                    : "border-gray-200 hover:border-gray-500"
+                }`}
+                aria-label={`Go to image ${index + 1}`}
+                title={image.caption || image.alt || `Image ${index + 1}`}
+              >
+                <img src={image.src} alt="" className="h-full w-full object-cover" loading="lazy" />
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function RosterTableBlock({ rows }) {
+  return (
+    <div className="overflow-x-auto rounded-lg border border-gray-200 bg-white shadow">
+      <table className="min-w-full bg-white text-sm text-center">
+        <thead className="bg-gray-100 text-xs uppercase tracking-wide text-gray-700">
+          <tr>
+            <th className={`${recordTableStyles.headerCell} whitespace-nowrap`}>No.</th>
+            <th className={`${recordTableStyles.headerCell} text-left`}>Player</th>
+            <th className={`${recordTableStyles.headerCell} whitespace-nowrap`}>Grade</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.length ? (
+            rows.map((row, index) => (
+              <tr
+                key={row.key}
+                className={`border-t border-gray-200 ${
+                  index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
+                } hover:bg-gray-100`}
+              >
+                <td className={`${recordTableStyles.bodyCell} whitespace-nowrap`}>
+                  {row.jersey || "-"}
+                </td>
+                <td className={`${recordTableStyles.bodyCell} text-left`}>
+                  {row.path ? (
+                    <Link to={row.path} className="text-blue-600 hover:underline">
+                      {row.name}
+                    </Link>
+                  ) : (
+                    <span>{row.name}</span>
+                  )}
+                </td>
+                <td className={`${recordTableStyles.bodyCell} whitespace-nowrap`}>
+                  {formatGrade(row.grade)}
+                </td>
+              </tr>
+            ))
+          ) : (
+            <tr>
+              <td className={`${recordTableStyles.bodyCell} text-center text-slate-600`} colSpan={3}>
+                No roster data is available for this season yet.
+              </td>
+            </tr>
+          )}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function RosterTable({ rows }) {
+  const splitIndex = Math.ceil(rows.length / 2);
+  const firstColumnRows = rows.slice(0, splitIndex);
+  const secondColumnRows = rows.slice(splitIndex);
+
+  if (rows.length <= 1) {
+    return <RosterTableBlock rows={rows} />;
+  }
+
+  return (
+    <>
+      <div className="lg:hidden">
+        <RosterTableBlock rows={rows} />
+      </div>
+      <div className="hidden gap-4 lg:grid lg:grid-cols-2">
+        <RosterTableBlock rows={firstColumnRows} />
+        <RosterTableBlock rows={secondColumnRows} />
+      </div>
+    </>
+  );
+}
+
 function SortableHeader({ label, sortKey, sortConfig, onSort, className = "" }) {
   const arrow =
     sortConfig.key !== sortKey ? "" : sortConfig.direction === "asc" ? " ↑" : " ↓";
@@ -100,7 +286,14 @@ function SortableHeader({ label, sortKey, sortConfig, onSort, className = "" }) 
   );
 }
 
-export default function Season2008() {
+export function BaseballSeasonPage({
+  seasonId = DEFAULT_SEASON_ID,
+  title = `${DEFAULT_SEASON_ID} Season`,
+  showSeasonImagesPlaceholder = false,
+  seasonImages = [],
+  showSeasonRoster = false,
+  rosterStaff = [],
+}) {
   const [games, setGames] = useState([]);
   const [playerStats, setPlayerStats] = useState([]);
   const [players, setPlayers] = useState([]);
@@ -115,7 +308,7 @@ export default function Season2008() {
     async function fetchData() {
       const [gamesRes, statsData, playersRes, rostersRes, schoolsData] = await Promise.all([
         fetch("/data/boys/baseball/games.json"),
-        loadBaseballPlayerGameStatsForSeason(SEASON_ID),
+        loadBaseballPlayerGameStatsForSeason(seasonId),
         fetch("/data/players.json"),
         fetch("/data/boys/baseball/seasonrosters.json"),
         loadSchools(),
@@ -128,7 +321,7 @@ export default function Season2008() {
       ]);
 
       const seasonGames = (Array.isArray(gamesData) ? gamesData : [])
-        .filter((g) => Number(g.Season) === SEASON_ID)
+        .filter((g) => Number(g.Season) === Number(seasonId))
         .sort((a, b) => Number(a.GameID) - Number(b.GameID));
 
       const seasonGameIds = new Set(seasonGames.map((g) => Number(g.GameID)));
@@ -137,7 +330,7 @@ export default function Season2008() {
       );
 
       const rosterRecord = (Array.isArray(rostersData) ? rostersData : []).find(
-        (r) => Number(r.SeasonID) === SEASON_ID || String(r.SeasonID) === String(SEASON_ID)
+        (r) => Number(r.SeasonID) === Number(seasonId) || String(r.SeasonID) === String(seasonId)
       );
 
       setGames(seasonGames);
@@ -148,7 +341,7 @@ export default function Season2008() {
     }
 
     fetchData();
-  }, []);
+  }, [seasonId]);
 
   const playersMap = useMemo(() => {
     const map = new Map();
@@ -159,7 +352,11 @@ export default function Season2008() {
   const jerseyMap = useMemo(() => {
     const map = new Map();
     rosterEntries.forEach((entry) => {
-      map.set(Number(entry.PlayerID), Number(entry.JerseyNumber));
+      if (entry.JerseyNumber == null || entry.JerseyNumber === "") return;
+      const jerseyNumber = Number(entry.JerseyNumber);
+      if (Number.isFinite(jerseyNumber)) {
+        map.set(Number(entry.PlayerID), jerseyNumber);
+      }
     });
     return map;
   }, [rosterEntries]);
@@ -174,6 +371,26 @@ export default function Season2008() {
       new Set(playerStats.map((stat) => Number(stat.PlayerID)).filter((id) => Number.isFinite(id)))
     );
   }, [rosterEntries, playerStats]);
+
+  const rosterTableRows = useMemo(() => {
+    const playerRows = rosterEntries.map((entry, index) => ({
+      key: `player-${entry.PlayerID}-${index}`,
+      jersey: entry.JerseyNumber,
+      name: getPlayerName(playersMap, Number(entry.PlayerID)),
+      grade: entry.Grade,
+      path: `/athletics/boys/baseball/players/${entry.PlayerID}`,
+    }));
+
+    const staffRows = rosterStaff.map((staff) => ({
+      key: `staff-${staff.name}-${staff.role}`,
+      jersey: "",
+      name: staff.name,
+      grade: staff.role,
+      path: "",
+    }));
+
+    return [...playerRows, ...staffRows];
+  }, [playersMap, rosterEntries, rosterStaff]);
 
   const groupedStats = useMemo(() => {
     const map = new Map();
@@ -508,7 +725,18 @@ export default function Season2008() {
 
   return (
     <div className="pt-2 pb-10 lg:pb-40 space-y-8 max-w-6xl mx-auto">
-      <h1 className="text-3xl font-bold text-center mb-2">2008 Season</h1>
+      <h1 className="text-3xl font-bold text-center mb-2">{title}</h1>
+
+      {showSeasonImagesPlaceholder || seasonImages.length ? (
+        <SeasonImagesSection images={seasonImages} seasonLabel={String(seasonId)} />
+      ) : null}
+
+      {showSeasonRoster ? (
+        <section id="roster" className="space-y-4">
+          <h2 className="text-2xl font-semibold">Roster</h2>
+          <RosterTable rows={rosterTableRows} />
+        </section>
+      ) : null}
 
       <section>
         <h2 className="text-2xl font-semibold mt-8 mb-4">Schedule &amp; Results</h2>
@@ -773,4 +1001,8 @@ export default function Season2008() {
       </section>
     </div>
   );
+}
+
+export default function Season2008() {
+  return <BaseballSeasonPage seasonId={DEFAULT_SEASON_ID} title="2008 Season" />;
 }
