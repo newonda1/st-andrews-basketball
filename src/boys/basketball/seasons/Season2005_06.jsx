@@ -9,6 +9,59 @@ Region games became the hardest part of the file. St. Andrew's went 0-8 in regio
 
 The season closed in the state tournament at Thomas Heyward Academy on Feb. 13. The surviving player totals are strongest as a scoring archive, with 14 players identified in the season roster. Ross Glendye leads the surviving totals with 288 points, followed by Kevin Crouch with 177, Jamie Cooper with 169, Gian Maleki with 142, Thomas Withers with 113, and Bryan Lee with 98.`;
 
+const seasonImages = [
+  {
+    src: "/images/boys/basketball/seasons/2005-06/gallery/2005-06-boys-basketball-team.png",
+    alt: "2005-06 St. Andrew's boys basketball team photo",
+    caption: "2005-06 St. Andrew's boys basketball team photo",
+  },
+  {
+    src: "/images/boys/basketball/seasons/2005-06/gallery/2005-06-boys-basketball-01-kevin-crouch.png",
+    alt: "Senior Kevin Crouch holding a basketball overhead",
+    caption: "Senior Kevin Crouch",
+  },
+  {
+    src: "/images/boys/basketball/seasons/2005-06/gallery/2005-06-boys-basketball-02-ross-glendye.png",
+    alt: "Senior Ross Glendye holding a basketball",
+    caption: "Senior Ross Glendye",
+  },
+  {
+    src: "/images/boys/basketball/seasons/2005-06/gallery/2005-06-boys-basketball-03-jamie-cooper.png",
+    alt: "Senior Jamie Cooper posing in uniform",
+    caption: "Senior Jamie Cooper",
+  },
+  {
+    src: "/images/boys/basketball/seasons/2005-06/gallery/2005-06-boys-basketball-04-billy-vine.png",
+    alt: "Senior Billy Vine posing with a basketball",
+    caption: "Senior Billy Vine",
+  },
+  {
+    src: "/images/boys/basketball/seasons/2005-06/gallery/2005-06-boys-basketball-05-chris-miller.png",
+    alt: "Senior Chris Miller dribbling a basketball",
+    caption: "Senior Chris Miller",
+  },
+  {
+    src: "/images/boys/basketball/seasons/2005-06/gallery/2005-06-boys-basketball-06-alex-chu.png",
+    alt: "Senior Alex Chu portrait",
+    caption: "Senior Alex Chu",
+  },
+  {
+    src: "/images/boys/basketball/seasons/2005-06/gallery/2005-06-boys-basketball-07-gian-maleki.png",
+    alt: "Senior Gian Maleki kneeling with a basketball",
+    caption: "Senior Gian Maleki",
+  },
+  {
+    src: "/images/boys/basketball/seasons/2005-06/gallery/2005-06-boys-basketball-08-steven-carbone.png",
+    alt: "Senior Steve Carbone holding a basketball",
+    caption: "Senior Steve Carbone",
+  },
+  {
+    src: "/images/boys/basketball/seasons/2005-06/gallery/2005-06-boys-basketball-09-ryan-kirby.png",
+    alt: "Senior Ryan Kirby holding a basketball overhead",
+    caption: "Senior Ryan Kirby",
+  },
+];
+
 export default function Season2005_06() {
   return (
     <MaxPrepsSeasonPage
@@ -23,8 +76,7 @@ export default function Season2005_06() {
       rosterTitle="Roster"
       statSourceLabel="Archive"
       trimShootingColumns
-      seasonImages={[]}
-      showSeasonImagesPlaceholder
+      seasonImages={seasonImages}
       showSeasonRoster
       rosterStaff={[{ name: "Dave Clay", role: "Head Coach" }]}
       hideBrackets

@@ -64,12 +64,18 @@ function ArticleDetailPage({ articlesPath, basePath, backLabel, backPath }) {
   const meta = [articleDate, article.Source, article.Author ? `By ${article.Author}` : ""]
     .filter(Boolean)
     .join(" • ");
+  const transcriptHeading = article.TranscriptHeading || "Transcript";
+  const emphasizeTranscriptLead = article.EmphasizeTranscriptLead !== false;
   const transcriptParagraphs = splitTranscript(article.Transcript);
+  const articleSeasonPath = article.SeasonLabel
+    ? `${basePath}/seasons/${String(article.SeasonLabel).replace("–", "-")}`
+    : "";
+  const resolvedBackPath = articleSeasonPath || backPath || basePath;
 
   return (
     <article className="mx-auto max-w-5xl space-y-8 p-4">
       <div>
-        <Link to={backPath || basePath} className="text-sm font-semibold text-blue-700 underline">
+        <Link to={resolvedBackPath} className="text-sm font-semibold text-blue-700 underline">
           Back to {backLabel}
         </Link>
       </div>
@@ -84,6 +90,11 @@ function ArticleDetailPage({ articlesPath, basePath, backLabel, backPath }) {
         {article.SourceCitation && (
           <p className="max-w-3xl text-sm leading-6 text-gray-500">
             Source: {article.SourceCitation}
+          </p>
+        )}
+        {article.ArchiveNote && (
+          <p className="max-w-3xl text-sm leading-6 text-gray-500">
+            {article.ArchiveNote}
           </p>
         )}
       </header>
@@ -117,12 +128,12 @@ function ArticleDetailPage({ articlesPath, basePath, backLabel, backPath }) {
 
       {transcriptParagraphs.length > 0 && (
         <section className="space-y-4">
-          <h2 className="text-2xl font-semibold">Transcript</h2>
+          <h2 className="text-2xl font-semibold">{transcriptHeading}</h2>
           <div className="space-y-4 text-base leading-7 text-gray-800">
             {transcriptParagraphs.map((paragraph, index) => (
               <p
                 key={`${article.ArticleID}-paragraph-${index}`}
-                className={index <= 1 ? "font-semibold text-gray-950" : ""}
+                className={emphasizeTranscriptLead && index <= 1 ? "font-semibold text-gray-950" : ""}
               >
                 {paragraph}
               </p>

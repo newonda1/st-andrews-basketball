@@ -1221,7 +1221,7 @@
     "Players": [
       {
         "PlayerID": 200202,
-        "JerseyNumber": null,
+        "JerseyNumber": 40,
         "Grade": 12,
         "GamesPlayed": 18,
         "SeasonTotals": {
@@ -1230,7 +1230,7 @@
       },
       {
         "PlayerID": 2026154,
-        "JerseyNumber": null,
+        "JerseyNumber": 11,
         "Grade": 12,
         "GamesPlayed": 2,
         "SeasonTotals": {
@@ -1239,7 +1239,7 @@
       },
       {
         "PlayerID": 2026155,
-        "JerseyNumber": null,
+        "JerseyNumber": 2,
         "Grade": 12,
         "GamesPlayed": 23,
         "SeasonTotals": {
@@ -1248,7 +1248,7 @@
       },
       {
         "PlayerID": 2026156,
-        "JerseyNumber": null,
+        "JerseyNumber": 30,
         "Grade": 12,
         "GamesPlayed": 2,
         "SeasonTotals": {
@@ -1257,7 +1257,7 @@
       },
       {
         "PlayerID": 2026157,
-        "JerseyNumber": null,
+        "JerseyNumber": 35,
         "Grade": 12,
         "GamesPlayed": 18,
         "SeasonTotals": {
@@ -1266,7 +1266,7 @@
       },
       {
         "PlayerID": 2026158,
-        "JerseyNumber": null,
+        "JerseyNumber": 14,
         "Grade": 12,
         "GamesPlayed": 10,
         "SeasonTotals": {
@@ -1275,7 +1275,7 @@
       },
       {
         "PlayerID": 2026159,
-        "JerseyNumber": null,
+        "JerseyNumber": "?",
         "Grade": 12,
         "GamesPlayed": 9,
         "SeasonTotals": {
@@ -1284,7 +1284,7 @@
       },
       {
         "PlayerID": 2026160,
-        "JerseyNumber": null,
+        "JerseyNumber": 12,
         "Grade": 11,
         "GamesPlayed": 1,
         "SeasonTotals": {
@@ -1293,7 +1293,7 @@
       },
       {
         "PlayerID": 2026161,
-        "JerseyNumber": null,
+        "JerseyNumber": 3,
         "Grade": 11,
         "GamesPlayed": 4,
         "SeasonTotals": {
@@ -1302,7 +1302,7 @@
       },
       {
         "PlayerID": 2026162,
-        "JerseyNumber": null,
+        "JerseyNumber": 10,
         "Grade": 12,
         "GamesPlayed": 21,
         "SeasonTotals": {
@@ -1311,7 +1311,7 @@
       },
       {
         "PlayerID": 2026163,
-        "JerseyNumber": null,
+        "JerseyNumber": "?",
         "Grade": 10,
         "GamesPlayed": 1,
         "SeasonTotals": {
@@ -1320,7 +1320,7 @@
       },
       {
         "PlayerID": 2026164,
-        "JerseyNumber": null,
+        "JerseyNumber": 13,
         "Grade": 12,
         "GamesPlayed": 10,
         "SeasonTotals": {
@@ -1329,7 +1329,7 @@
       },
       {
         "PlayerID": 2026165,
-        "JerseyNumber": null,
+        "JerseyNumber": 24,
         "Grade": 11,
         "GamesPlayed": 14,
         "SeasonTotals": {
@@ -1338,7 +1338,7 @@
       },
       {
         "PlayerID": 2026166,
-        "JerseyNumber": null,
+        "JerseyNumber": 22,
         "Grade": 11,
         "GamesPlayed": 11,
         "SeasonTotals": {

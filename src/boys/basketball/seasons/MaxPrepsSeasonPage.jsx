@@ -76,6 +76,11 @@ function hasValue(value) {
   return value !== null && value !== undefined && value !== "";
 }
 
+function jerseySortValue(value) {
+  const jersey = Number(value);
+  return Number.isFinite(jersey) ? jersey : 999;
+}
+
 function splitParagraphs(text) {
   return String(text || "")
     .split(/\n{2,}/)
@@ -599,8 +604,8 @@ function MaxPrepsSeasonPage({
     return Array.from(totals.values())
       .filter((total) => total.GamesPlayed > 0 || STAT_FIELDS.some((field) => hasValue(total[field])))
       .sort((a, b) => {
-        const jerseyA = Number(getRosterJerseyNumber(rosterEntries, a.PlayerID) || 999);
-        const jerseyB = Number(getRosterJerseyNumber(rosterEntries, b.PlayerID) || 999);
+        const jerseyA = jerseySortValue(getRosterJerseyNumber(rosterEntries, a.PlayerID));
+        const jerseyB = jerseySortValue(getRosterJerseyNumber(rosterEntries, b.PlayerID));
         if (jerseyA !== jerseyB) return jerseyA - jerseyB;
         return playerName(a.PlayerID).localeCompare(playerName(b.PlayerID));
       });
@@ -717,8 +722,8 @@ function MaxPrepsSeasonPage({
           : "",
       }))
       .sort((a, b) => {
-        const jerseyA = Number(a.jersey || 999);
-        const jerseyB = Number(b.jersey || 999);
+        const jerseyA = jerseySortValue(a.jersey);
+        const jerseyB = jerseySortValue(b.jersey);
         if (jerseyA !== jerseyB) return jerseyA - jerseyB;
         return a.name.localeCompare(b.name);
       });

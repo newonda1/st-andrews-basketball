@@ -1396,6 +1396,14 @@
     "Gender": "Girls"
   },
   {
+    "PlayerID": 200510,
+    "PlayerName": "Krista Bisset",
+    "FirstName": "Krista",
+    "LastName": "Bisset",
+    "GradYear": 2007,
+    "Gender": "Girls"
+  },
+  {
     "PlayerID": 200601,
     "FirstName": "Ann",
     "LastName": "Kingston",
@@ -4089,7 +4097,7 @@
   {
     "PlayerID": 2026154,
     "FirstName": "Chris",
-    "LastName": "Mlller",
+    "LastName": "Miller",
     "GradYear": 2006,
     "Gender": "Boys"
   },

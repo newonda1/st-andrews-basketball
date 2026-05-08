@@ -70,6 +70,76 @@
     ]
   },
   {
+    "SeasonID": "2005-06",
+    "Players": [
+      {
+        "PlayerID": 200410,
+        "JerseyNumber": 2,
+        "Grade": 12
+      },
+      {
+        "PlayerID": 200503,
+        "JerseyNumber": 3,
+        "Grade": 12
+      },
+      {
+        "PlayerID": 200409,
+        "JerseyNumber": 15,
+        "Grade": 12
+      },
+      {
+        "PlayerID": 200407,
+        "JerseyNumber": 11,
+        "Grade": 12
+      },
+      {
+        "PlayerID": 200502,
+        "JerseyNumber": 14,
+        "Grade": 10
+      },
+      {
+        "PlayerID": 200408,
+        "JerseyNumber": 13,
+        "Grade": 12
+      },
+      {
+        "PlayerID": 200429,
+        "JerseyNumber": 42,
+        "Grade": 11
+      },
+      {
+        "PlayerID": 200422,
+        "JerseyNumber": 24,
+        "Grade": 10
+      },
+      {
+        "PlayerID": 200401,
+        "JerseyNumber": 45,
+        "Grade": 11
+      },
+      {
+        "PlayerID": 200603,
+        "JerseyNumber": 31,
+        "Grade": 12
+      },
+      {
+        "PlayerID": 200510,
+        "JerseyNumber": 33,
+        "Grade": 11
+      }
+    ],
+    "Staff": [
+      {
+        "Name": "Michael Bennet",
+        "Position": "Head Coach"
+      },
+      {
+        "Name": "Kim Riordan",
+        "Position": "Assistant Coach"
+      }
+    ]
+  },
+  {
     "SeasonID": "2006-07",
     "Players": []
   },

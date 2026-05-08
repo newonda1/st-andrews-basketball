@@ -6,6 +6,7 @@ import {
   GIRLS_BASKETBALL_ROSTERS_PATH,
   SCHOOLS_PATH,
   countsAsPlayerGame,
+  findSeasonRoster,
   getRosterEntriesForSeason,
   getRosterJerseyNumber,
   hydrateGamesWithSchools,
@@ -174,6 +175,7 @@ function SeasonRecapSection({
   recap,
   briefItems = [],
   article = null,
+  recapLinks = [],
   basePath,
 }) {
   const paragraphs = splitParagraphs(recap);
@@ -183,6 +185,48 @@ function SeasonRecapSection({
   const articleDate = formatArticleDate(article?.Date);
   const articleMeta = [articleDate, article?.Source].filter(Boolean).join(" • ");
   const articlePath = article?.ArticleID ? `${basePath}/articles/${article.ArticleID}` : "";
+  const resolvedLinks = (Array.isArray(recapLinks) ? recapLinks : [])
+    .map((link) => {
+      const text = String(link?.Text || link?.text || "").trim();
+      const to = link?.ArticleID
+        ? `${basePath}/articles/${encodeURIComponent(String(link.ArticleID))}`
+        : String(link?.Url || link?.to || "").trim();
+
+      return text && to ? { text, to } : null;
+    })
+    .filter(Boolean);
+
+  const renderLinkedText = (text) => {
+    if (!resolvedLinks.length) return text;
+
+    const matches = resolvedLinks
+      .map((link) => ({ ...link, index: text.indexOf(link.text) }))
+      .filter((link) => link.index >= 0)
+      .sort((a, b) => a.index - b.index);
+
+    if (!matches.length) return text;
+
+    const pieces = [];
+    let cursor = 0;
+
+    matches.forEach((match) => {
+      if (match.index < cursor) return;
+      if (match.index > cursor) pieces.push(text.slice(cursor, match.index));
+      pieces.push(
+        <Link
+          key={`${match.to}-${match.index}`}
+          to={match.to}
+          className="text-blue-700 underline hover:text-blue-900"
+        >
+          {match.text}
+        </Link>
+      );
+      cursor = match.index + match.text.length;
+    });
+
+    if (cursor < text.length) pieces.push(text.slice(cursor));
+    return pieces;
+  };
 
   return (
     <section id="season-recap" className="mx-auto max-w-4xl space-y-3">
@@ -231,7 +275,7 @@ function SeasonRecapSection({
 
         <div className="space-y-3">
           {paragraphs.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
+            <p key={paragraph}>{renderLinkedText(paragraph)}</p>
           ))}
         </div>
       </div>
@@ -433,7 +477,9 @@ function MaxPrepsSeasonPage({
   seasonRecapTitle = "Season Recap",
   seasonRecap = "",
   seasonBriefs = [],
+  seasonRecapLinks = [],
   embedFeaturedArticleInRecap = false,
+  hideSeasonArticles = false,
   showSeasonImagesPlaceholder = false,
   seasonImages = [],
   showSeasonRoster = false,
@@ -442,6 +488,7 @@ function MaxPrepsSeasonPage({
   const [games, setGames] = useState([]);
   const [playerStats, setPlayerStats] = useState([]);
   const [players, setPlayers] = useState([]);
+  const [seasonRoster, setSeasonRoster] = useState(null);
   const [rosterEntries, setRosterEntries] = useState([]);
   const [schoolsData, setSchoolsData] = useState([]);
   const [seasonAdjustments, setSeasonAdjustments] = useState([]);
@@ -493,6 +540,8 @@ function MaxPrepsSeasonPage({
       setGames(seasonGames);
       setPlayerStats(statsData.filter((stat) => seasonGameIds.has(Number(stat.GameID))));
       setPlayers(playersData);
+      const selectedRoster = findSeasonRoster(rostersData, seasonLabel);
+      setSeasonRoster(selectedRoster);
       setRosterEntries(getRosterEntriesForSeason(rostersData, seasonLabel));
       setSchoolsData(schoolsData);
       setSeasonAdjustments(
@@ -709,7 +758,19 @@ function MaxPrepsSeasonPage({
         return a.name.localeCompare(b.name);
       });
 
-    if (headCoach) {
+    const staffRows = Array.isArray(seasonRoster?.Staff)
+      ? seasonRoster.Staff.map((member, index) => ({
+          key: `staff-${member?.Name || index}-${member?.Position || ""}`,
+          jersey: "",
+          name: member?.Name || "",
+          grade: member?.Position || "Staff",
+          path: "",
+        })).filter((member) => member.name)
+      : [];
+
+    if (staffRows.length) {
+      rows.push(...staffRows);
+    } else if (headCoach) {
       rows.push({
         key: `staff-${headCoach}`,
         jersey: "",
@@ -720,7 +781,7 @@ function MaxPrepsSeasonPage({
     }
 
     return rows;
-  }, [headCoach, playerById, rosterEntries]);
+  }, [headCoach, playerById, rosterEntries, seasonRoster]);
 
   const featuredArticle = articles[0] || null;
   const shouldEmbedArticle = embedFeaturedArticleInRecap && featuredArticle;
@@ -739,11 +800,12 @@ function MaxPrepsSeasonPage({
           recap={seasonRecap}
           briefItems={seasonBriefs}
           article={shouldEmbedArticle ? featuredArticle : null}
+          recapLinks={seasonRecapLinks}
           basePath="/athletics/girls/basketball"
         />
       ) : null}
 
-      {!shouldEmbedArticle ? (
+      {!shouldEmbedArticle && !hideSeasonArticles ? (
         <ArticleFeatureList
           articles={articles}
           basePath="/athletics/girls/basketball"
