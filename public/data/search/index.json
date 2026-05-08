@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-08T15:19:41.729Z",
+  "generatedAt": "2026-05-08T18:41:27.733Z",
   "itemCount": 1619,
   "items": [
     {
@@ -12319,6 +12319,23 @@
       ]
     },
     {
+      "id": "football-athlete-2da51a10-f87f-4101-bac4-6920a6c22a42",
+      "type": "athlete",
+      "title": "James Green",
+      "subtitle": "Football athlete",
+      "to": "/athletics/football/players/2da51a10-f87f-4101-bac4-6920a6c22a42",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "James",
+        "Green",
+        "Green James"
+      ]
+    },
+    {
       "id": "football-athlete-a06be719-bfd8-4dff-9af5-9da4ee644f25",
       "type": "athlete",
       "title": "Jim Kingston",
@@ -12724,23 +12741,6 @@
         "Corey",
         "Meyer",
         "Meyer Corey"
-      ]
-    },
-    {
-      "id": "football-athlete-2da51a10-f87f-4101-bac4-6920a6c22a42",
-      "type": "athlete",
-      "title": "James Green",
-      "subtitle": "Football athlete",
-      "to": "/athletics/football/players/2da51a10-f87f-4101-bac4-6920a6c22a42",
-      "keywords": [
-        "Football",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "James",
-        "Green",
-        "Green James"
       ]
     },
     {

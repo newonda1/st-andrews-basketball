@@ -4628,7 +4628,10 @@
     "Result": "L",
     "TeamScore": 0,
     "OpponentScore": 60,
-    "OpponentID": "sc-dorchester-academy-st-george"
+    "OpponentID": "sc-dorchester-academy-st-george",
+    "RecapTitle": "Dorchester 60, St. Andrew's 0",
+    "Recap": "Cody Walker scored four touchdowns as visiting Dorchester downed St. Andrew's Friday night. The Saints were held to minus-9 yards rushing.\n\nDorchester is 2-1; St. Andrew's is 1-2.",
+    "SourceNote": "User-provided recap for the Sept. 2, 2005 Dorchester Academy game. No line score, team comparison statistics, scoring plays or individual statistics were available."
   },
   {
     "GameID": 20050916,
@@ -4653,7 +4656,154 @@
     "Result": "L",
     "TeamScore": 7,
     "OpponentScore": 64,
-    "OpponentID": "sc-thomas-heyward-academy-ridgeland"
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
+    "FirstDowns": 2,
+    "RushingYards": 39,
+    "PassingYards": 8,
+    "PassingComp": 1,
+    "PassingAtt": 10,
+    "PassingInt": 2,
+    "OffensiveFumbles": 0,
+    "OffensiveFumblesLost": 0,
+    "PuntNum": 6,
+    "PuntAverage": 17,
+    "Penalties": 7,
+    "PenaltyYards": 70,
+    "LineScore": [
+      {
+        "Team": "Thomas Heyward",
+        "Abbr": "THA",
+        "Scores": [20, 22, 16, 6],
+        "Total": 64
+      },
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [0, 7, 0, 0],
+        "Total": 7
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "1",
+        "Team": "Thomas Heyward Academy",
+        "TeamAbbr": "THA",
+        "Play": "Sean Draper 11 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "1",
+        "Team": "Thomas Heyward Academy",
+        "TeamAbbr": "THA",
+        "Play": "Taylor Malphrus 11 run",
+        "Conversion": "James Lane pass from Jeff Mingledorff",
+        "Points": 8
+      },
+      {
+        "Quarter": "1",
+        "Team": "Thomas Heyward Academy",
+        "TeamAbbr": "THA",
+        "Play": "Sean Esworth 9 pass from Mingledorff",
+        "Conversion": "",
+        "Points": 6
+      },
+      {
+        "Quarter": "2",
+        "Team": "Thomas Heyward Academy",
+        "TeamAbbr": "THA",
+        "Play": "Mingledorf 30 run",
+        "Conversion": "Jeremy Carbar pass from Mingledorf",
+        "Points": 8
+      },
+      {
+        "Quarter": "2",
+        "Team": "Thomas Heyward Academy",
+        "TeamAbbr": "THA",
+        "Play": "Mingledorf 8 run",
+        "Conversion": "James Lane pass from Mingledorff",
+        "Points": 8
+      },
+      {
+        "Quarter": "2",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Javi Gutierrez 65 kickoff return",
+        "Conversion": "Patrick Maleki kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "Thomas Heyward Academy",
+        "TeamAbbr": "THA",
+        "Play": "Mingledorff 1 run",
+        "Conversion": "Hampton Wall kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "3",
+        "Team": "Thomas Heyward Academy",
+        "TeamAbbr": "THA",
+        "Play": "Safety",
+        "Conversion": "",
+        "Points": 2
+      },
+      {
+        "Quarter": "3",
+        "Team": "Thomas Heyward Academy",
+        "TeamAbbr": "THA",
+        "Play": "Malphrus 65 kickoff return",
+        "Conversion": "kick failed",
+        "Points": 6
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "First Downs",
+        "StAndrews": "2",
+        "Opponent": "15"
+      },
+      {
+        "Label": "Rushing",
+        "StAndrews": "39",
+        "Opponent": "446"
+      },
+      {
+        "Label": "Passing",
+        "StAndrews": "8",
+        "Opponent": "43"
+      },
+      {
+        "Label": "Att.-Comp.-Int.",
+        "StAndrews": "1-10-2",
+        "Opponent": "5-6-0"
+      },
+      {
+        "Label": "Fumbles-lost",
+        "StAndrews": "0-0",
+        "Opponent": "3-1"
+      },
+      {
+        "Label": "Punts",
+        "StAndrews": "6-17",
+        "Opponent": "0"
+      },
+      {
+        "Label": "Penalties",
+        "StAndrews": "7-70",
+        "Opponent": "4-30"
+      }
+    ],
+    "RecapTitle": "THOMAS HEYWARD CRUSHES ST. ANDREW'S",
+    "Recap": "THOMAS HEYWARD 64, ST. ANDREW'S 7\n\nThere wasn't much St. Andrew's coach Bob Curley could say to his team after it fell, 64-7, to visiting Thomas Heyward Academy on Friday night.\n\n\"I tell them that it hurts, that I've been there and I know what it's like,\" Curley said after the Saints fell to 1-3. \"We're a young and inexperienced team that has to break the losing habit we've fallen into.\"\n\nThomas Heyward took the opening kickoff and drove 61 yards in seven plays, scoring on a 10-yard run by Sean Draper.\n\nThe Rebels scored twice more in the first quarter, on an 11-yard run by Taylor Malphrus and a 9-yard pass from Jeffrey Mingledorff to Sean Esworthy.\n\nThe Saints never got on track, managing only 38 yards of total offense.\n\nThe lone bright spot came from the play of Javier Gutierrez, a Venezuelan exchange student playing his first season of football.\n\n\"Javier is very fast, and he's going to be able to help us out a lot once he gets to understand the game better,\" Curley said. \"He missed summer camp and joined us once school started, so he's a little bit behind as far as preparation for games.\"\n\nGutierrez kept the Saints from being shutout by taking a second-quarter kickoff back 75 yards for the score.\n\nWith the exception of that play, it seemed to be the Rebels' night.\n\nThey led at the half, 42-7, and a running second-half clock may have kept the score from being even more lopsided.\n\nThe Rebels rolled up 434 yards of total offense, 409 on the ground.\n\nTaylor Malphrus, coming off a career night versus Hilton Head Christian, had another big night.\n\nThe junior running back had 125 yards and a touchdown on nine carries, and returned a kickoff 65 yards for a touchdown late in the fourth quarter.\n\nThat score came after a safety against the Saints with 24 seconds remaining in the game.\n\n\"This is the first win here in school history,\" said Thomas Heyward coach Harry Sprouse. \"We didn't think we'd win like this, but we were able to substitute liberally and get some of our kids some playing time tonight.\"\n\nThe schedule doesn't get any easier for the Saints, who will be on the road the next two weeks against Hilton Head Christian and Hilton Head Prep.\n\n\"Even though we lost like this, we're not going to give up,\" Curley said. \"We're going to line up and play football, just like we did tonight. I love these kids, and a loss doesn't change that.\"",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "SourceDate": "September 17, 2005",
+    "SourceAuthor": "Chris Lancia",
+    "SourceByline": "Chris Lancia Hardeeville Today",
+    "SourcePage": "6D",
+    "SourceSection": "FRIDAY NIGHT BLITZ",
+    "SourceCitation": "Chris Lancia, Hardeeville Today, \"THOMAS HEYWARD CRUSHES ST. ANDREW'S,\" Savannah Morning News (GA), September 17, 2005, Page 6D, Section: FRIDAY NIGHT BLITZ.",
+    "SourceNote": "User-provided Savannah Morning News recap, line score, scoring summary and team comparison statistics for the Sept. 16, 2005 Thomas Heyward Academy game. The listed scoring plays account for the named scoring events as provided, but their point values do not fully reconcile with the 64-7 final score and 20-22-16-6 Thomas Heyward line score. The recap differs from the scoring summary on Sean Draper's touchdown distance, Sean Esworthy's name spelling, Javier Gutierrez's kickoff return distance, and team offensive yardage."
   },
   {
     "GameID": 20050923,
@@ -4678,7 +4828,83 @@
     "Result": "L",
     "TeamScore": 0,
     "OpponentScore": 55,
-    "OpponentID": "sc-pinewood-preparatory-school-summerville"
+    "OpponentID": "sc-pinewood-preparatory-school-summerville",
+    "LineScore": [
+      {
+        "Team": "Pinewood Prep",
+        "Abbr": "P",
+        "Scores": [34, 15, 0, 6],
+        "Total": 55
+      },
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [0, 0, 0, 0],
+        "Total": 0
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "1",
+        "Team": "Pinewood Prep",
+        "TeamAbbr": "P",
+        "Play": "Ryan Steed 11 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "1",
+        "Team": "Pinewood Prep",
+        "TeamAbbr": "P",
+        "Play": "Alex Bryan 29 pass from Miles Reeves",
+        "Conversion": "Bryan kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "1",
+        "Team": "Pinewood Prep",
+        "TeamAbbr": "P",
+        "Play": "Steed 55 interception return",
+        "Conversion": "Bryan kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "1",
+        "Team": "Pinewood Prep",
+        "TeamAbbr": "P",
+        "Play": "Reeves 35 pass interception return",
+        "Conversion": "Bryan kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "1",
+        "Team": "Pinewood Prep",
+        "TeamAbbr": "P",
+        "Play": "Del Ray Roper 16 run",
+        "Conversion": "Brandon Graham run",
+        "Points": 8
+      },
+      {
+        "Quarter": "2",
+        "Team": "Pinewood Prep",
+        "TeamAbbr": "P",
+        "Play": "Roper 45 run",
+        "Conversion": "Bryan kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "4",
+        "Team": "Pinewood Prep",
+        "TeamAbbr": "P",
+        "Play": "Chris Wiley 50 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      }
+    ],
+    "RecapTitle": "Pinewood Prep 55, St. Andrew's 0",
+    "Recap": "Pinewood Prep scored 34 points in the first quarter and rolled to an easy victory over St. Andrew's on Friday night.\n\nRyan Steed and Del Ray Roper scored two touchdowns each for Pinewood. Miles Reeves passed for one touchdown and returned an interception 35 yards for another.\n\nAlex Bryan and Chris Wiley also scored for the visitors.\n\nPinewood Prep is 4-2. St. Andrew's is 1-4.",
+    "SourceSection": "SCISA",
+    "SourceNote": "User-provided SCISA game summary, line score and scoring summary for the Sept. 23, 2005 Pinewood Prep game. Team comparison statistics were not included. The listed scoring plays account for the named scoring events as provided, but their point values do not fully reconcile with the 55-0 final score and 34-15-0-6 Pinewood Prep line score."
   },
   {
     "GameID": 20050930,
@@ -4703,7 +4929,132 @@
     "Result": "L",
     "TeamScore": 0,
     "OpponentScore": 56,
-    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island"
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
+    "FirstDowns": 3,
+    "RushingYards": 58,
+    "PassingYards": 18,
+    "PassingComp": 2,
+    "PassingAtt": 11,
+    "PassingInt": 5,
+    "PuntNum": 0,
+    "Penalties": 1,
+    "PenaltyYards": 5,
+    "LineScore": [
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [0, 0, 0, 0],
+        "Total": 0
+      },
+      {
+        "Team": "Hilton Head Christian",
+        "Abbr": "HHC",
+        "Scores": [28, 14, 7, 7],
+        "Total": 56
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "1",
+        "Team": "Hilton Head Christian",
+        "TeamAbbr": "HHC",
+        "Play": "Gabe Gilmore 5 run",
+        "Conversion": "Joe McDevitt kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "1",
+        "Team": "Hilton Head Christian",
+        "TeamAbbr": "HHC",
+        "Play": "Jonathan Gort 7 pass from Gilmore",
+        "Conversion": "McDevitt kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "1",
+        "Team": "Hilton Head Christian",
+        "TeamAbbr": "HHC",
+        "Play": "Gort 49 pass from Gilmore",
+        "Conversion": "McDevitt kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "1",
+        "Team": "Hilton Head Christian",
+        "TeamAbbr": "HHC",
+        "Play": "Daniel Pride 3 run",
+        "Conversion": "McDevitt kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "Hilton Head Christian",
+        "TeamAbbr": "HHC",
+        "Play": "Gort 50 run",
+        "Conversion": "McDevitt kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "Hilton Head Christian",
+        "TeamAbbr": "HHC",
+        "Play": "Justin Mann 3 run",
+        "Conversion": "McDevitt kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "3",
+        "Team": "Hilton Head Christian",
+        "TeamAbbr": "HHC",
+        "Play": "Taylor Marcus 35 interception return",
+        "Conversion": "McDevitt kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "4",
+        "Team": "Hilton Head Christian",
+        "TeamAbbr": "HHC",
+        "Play": "Matthew Carrabba 15 run",
+        "Conversion": "McDevitt kick",
+        "Points": 7
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "First Downs",
+        "StAndrews": "3",
+        "Opponent": "13"
+      },
+      {
+        "Label": "Rushing",
+        "StAndrews": "58",
+        "Opponent": "223"
+      },
+      {
+        "Label": "Passing",
+        "StAndrews": "18",
+        "Opponent": "78"
+      },
+      {
+        "Label": "Comp-Att-Int.",
+        "StAndrews": "2-11-5",
+        "Opponent": "4-7-1"
+      },
+      {
+        "Label": "Punts",
+        "StAndrews": "0",
+        "Opponent": "1-34"
+      },
+      {
+        "Label": "Penalties",
+        "StAndrews": "1-5",
+        "Opponent": "5-40"
+      }
+    ],
+    "RecapTitle": "Hilton Head Christian 56, St. Andrew's 0",
+    "Recap": "HILTON HEAD, S.C. - Jonathan Gort scored three touchdowns as Hilton Head Christian trounced St. Andrew's.\n\nGort scored on receptions of 7 and 49 yards, and a 50-yard run.\n\nQuarterback Gabe Gilmore three for both touchdowns to Gort and scored on a 5-yard run.\n\nHilton Head Christian is 8-0; St. Andrew's is 1-5.",
+    "SourceSection": "SCISA",
+    "SourceNote": "User-provided SCISA game summary, line score, scoring summary and team comparison statistics for the Sept. 30, 2005 game. The newspaper text appeared to list Hilton Head Prep, but the opponent was corrected back to Hilton Head Christian per the user and imported schedule."
   },
   {
     "GameID": 20051007,
@@ -4728,7 +5079,11 @@
     "Result": "L",
     "TeamScore": 0,
     "OpponentScore": 68,
-    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island"
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
+    "RecapTitle": "HILTON HEAD PREP 68, ST. ANDREW'S 0",
+    "Recap": "HILTON HEAD, S.C. - Deandre Morrow scored three touchdowns and Niles Murphy and Jeremiah Spires had two apiece to lead undefeated Hilton Head Prep past St. Andrew's in a Friday afternoon SCISA Region 3-AA game.\n\nThe Dolphins, who improved to 8-0 overall, 3-0 in the region, led 47-0 at the half.\n\nMurphy scored on a 70-yard kickoff return and a 35-yard punt return, while Morrow scored on a 30-yard punt return, a 40-yard run and a 2-yard run. Spires scored on runs of 37 and 42 yards.\n\nThe Saints fell to 1-6, 0-2.",
+    "SourceSection": "SCISA",
+    "SourceNote": "User-provided SCISA recap for the Oct. 7, 2005 Hilton Head Prep game. No line score, team comparison statistics or scoring summary were included."
   },
   {
     "GameID": 20051014,
@@ -4753,7 +5108,114 @@
     "Result": "L",
     "TeamScore": 0,
     "OpponentScore": 33,
-    "OpponentID": "sc-first-baptist-school-charleston"
+    "OpponentID": "sc-first-baptist-school-charleston",
+    "FirstDowns": 5,
+    "RushingYards": 65,
+    "PassingYards": 13,
+    "PassingComp": 3,
+    "PassingAtt": 11,
+    "PassingInt": 1,
+    "OffensiveFumbles": 7,
+    "OffensiveFumblesLost": 4,
+    "Penalties": 3,
+    "PenaltyYards": 20,
+    "LineScore": [
+      {
+        "Team": "First Baptist",
+        "Abbr": "FB",
+        "Scores": [14, 13, 6, 0],
+        "Total": 33
+      },
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [0, 0, 0, 0],
+        "Total": 0
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "1",
+        "Team": "First Baptist",
+        "TeamAbbr": "FB",
+        "Play": "Logan Lee 25 pass from Shawn Stuckey",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "1",
+        "Team": "First Baptist",
+        "TeamAbbr": "FB",
+        "Play": "Walter Brown 57 pass from Shawn Stuckey",
+        "Conversion": "John Alfiers kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "First Baptist",
+        "TeamAbbr": "FB",
+        "Play": "Mark Heath 65 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "2",
+        "Team": "First Baptist",
+        "TeamAbbr": "FB",
+        "Play": "J.T. Washington 2 run",
+        "Conversion": "Washington run",
+        "Points": 8
+      },
+      {
+        "Quarter": "3",
+        "Team": "First Baptist",
+        "TeamAbbr": "FB",
+        "Play": "Justin Frazier 19 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "First Downs",
+        "StAndrews": "5",
+        "Opponent": "10"
+      },
+      {
+        "Label": "Rushing",
+        "StAndrews": "65",
+        "Opponent": "140"
+      },
+      {
+        "Label": "Passing",
+        "StAndrews": "13",
+        "Opponent": "122"
+      },
+      {
+        "Label": "Comp.-Att.-Int.",
+        "StAndrews": "3-11-1",
+        "Opponent": "4-13-0"
+      },
+      {
+        "Label": "Fumbles-lost",
+        "StAndrews": "7-4",
+        "Opponent": "0"
+      },
+      {
+        "Label": "Punts",
+        "StAndrews": "NA",
+        "Opponent": "NA"
+      },
+      {
+        "Label": "Penalties",
+        "StAndrews": "3-20",
+        "Opponent": "7-45"
+      }
+    ],
+    "RecapTitle": "First Baptist 33, St. Andrew's 0",
+    "Recap": "Mark Heath rushed for 80 yards on 5 carries to lead First Baptist (2-6) over St. Andrew's (1-7).\n\nOffensively for the Saints, Bubby Pavlo carried the ball 13 times for 35 yards.\n\nFirst Baptist dominated St. Andrew's with 140 total rushing yards and 122 total passing yards and no fumbles.",
+    "SourceSection": "REGION SCISA 2-AA",
+    "SourceNote": "User-provided REGION SCISA 2-AA game summary, line score, scoring summary and team comparison statistics for the Oct. 14, 2005 First Baptist game. The listed scoring plays total 33 points, but their point values do not fully reconcile with the 14-13-6-0 First Baptist line score by quarter."
   },
   {
     "GameID": 20051021,
@@ -4774,11 +5236,143 @@
     "LocationType": "Home",
     "Venue": "St. Andrew's High School",
     "Notes": "",
-    "GameType": "Regular Season",
+    "GameType": "Region",
     "Result": "L",
     "TeamScore": 0,
     "OpponentScore": 55,
-    "OpponentID": "sc-colleton-prep-academy-walterboro"
+    "OpponentID": "sc-colleton-prep-academy-walterboro",
+    "FirstDowns": 5,
+    "RushingYards": 70,
+    "PassingYards": 14,
+    "PassingComp": 3,
+    "PassingAtt": 12,
+    "PassingInt": 3,
+    "OffensiveFumbles": 3,
+    "OffensiveFumblesLost": 1,
+    "PuntNum": 3,
+    "Penalties": 4,
+    "PenaltyYards": 25,
+    "LineScore": [
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [0, 0, 0, 0],
+        "Total": 0
+      },
+      {
+        "Team": "Colleton Prep",
+        "Abbr": "CP",
+        "Scores": [19, 29, 7, 0],
+        "Total": 55
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "1",
+        "Team": "Colleton Prep Academy",
+        "TeamAbbr": "CP",
+        "Play": "Gus White 95-yard kickoff return",
+        "Conversion": "Josh Boyd kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "1",
+        "Team": "Colleton Prep Academy",
+        "TeamAbbr": "CP",
+        "Play": "Parker Hadley 4 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "1",
+        "Team": "Colleton Prep Academy",
+        "TeamAbbr": "CP",
+        "Play": "White 56 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "2",
+        "Team": "Colleton Prep Academy",
+        "TeamAbbr": "CP",
+        "Play": "Ryan Fisk 3 run",
+        "Conversion": "Boyd kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "Colleton Prep Academy",
+        "TeamAbbr": "CP",
+        "Play": "Jeff Ament 55 run",
+        "Conversion": "Boyd kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "Colleton Prep Academy",
+        "TeamAbbr": "CP",
+        "Play": "Quinn McCullom 35 run",
+        "Conversion": "Trey Robertson run",
+        "Points": 8
+      },
+      {
+        "Quarter": "2",
+        "Team": "Colleton Prep Academy",
+        "TeamAbbr": "CP",
+        "Play": "Kendall Hill 34 pass from Trey Hall",
+        "Conversion": "Boyd kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "3",
+        "Team": "Colleton Prep Academy",
+        "TeamAbbr": "CP",
+        "Play": "Unreported touchdown",
+        "Conversion": "kick good",
+        "Points": 7
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "First Downs",
+        "StAndrews": "5",
+        "Opponent": "21"
+      },
+      {
+        "Label": "Rushing",
+        "StAndrews": "70",
+        "Opponent": "253"
+      },
+      {
+        "Label": "Passing",
+        "StAndrews": "14",
+        "Opponent": "70"
+      },
+      {
+        "Label": "Comp.-Att.-Int.",
+        "StAndrews": "3-12-3",
+        "Opponent": "4-8-0"
+      },
+      {
+        "Label": "Fumbles-lost",
+        "StAndrews": "3-1",
+        "Opponent": "0-0"
+      },
+      {
+        "Label": "Punts",
+        "StAndrews": "3",
+        "Opponent": "0"
+      },
+      {
+        "Label": "Penalties",
+        "StAndrews": "4-25",
+        "Opponent": "6-50"
+      }
+    ],
+    "RecapTitle": "Colleton Prep 55, St. Andrew's 0",
+    "Recap": "Gus White's 95-yard kickoff return for a touchdown on the first play of the game set the tone for Colleton Prep's victory over St. Andrew's. White was the leading rusher for Colleton Prep (5-5) with a total of 158 yards and three touchdowns on 10 carries.\n\nFrank Howard led St. Andrew's (1-8) with 30 yards rushing on nine carries. Three fumbles and several penalties hurt the Saints.",
+    "SourceSection": "Region SCISA 2-AA",
+    "SourceNote": "User-provided Region SCISA 2-AA game summary, line score, scoring summary and team comparison statistics for the Oct. 21, 2005 Colleton Prep game. The listed scoring plays total 48 points, so one unreported third-quarter Colleton Prep touchdown was added to reconcile the 55-0 final score and 19-29-7-0 line score."
   },
   {
     "GameID": 20051028,
@@ -4799,11 +5393,137 @@
     "LocationType": "Away",
     "Venue": "Dillon Christian High School",
     "Notes": "",
-    "GameType": "Regular Season",
+    "GameType": "Region",
     "Result": "L",
     "TeamScore": 0,
     "OpponentScore": 49,
-    "OpponentID": "sc-dillon-christian-school-dillon"
+    "OpponentID": "sc-dillon-christian-school-dillon",
+    "FirstDowns": 7,
+    "RushingYards": 64,
+    "PassingYards": 0,
+    "PassingComp": 0,
+    "PassingAtt": 16,
+    "PassingInt": 2,
+    "OffensiveFumbles": 0,
+    "OffensiveFumblesLost": 0,
+    "PuntNum": 5,
+    "PuntYards": 140,
+    "PuntAverage": 28,
+    "Penalties": 4,
+    "PenaltyYards": 40,
+    "LineScore": [
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [0, 0, 0, 0],
+        "Total": 0
+      },
+      {
+        "Team": "Dillon Christian",
+        "Abbr": "DC",
+        "Scores": [37, 6, 0, 6],
+        "Total": 49
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "1",
+        "Team": "Dillon Christian School",
+        "TeamAbbr": "DC",
+        "Play": "Johnell Alford 21 run",
+        "Conversion": "Chris Carmichael kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "1",
+        "Team": "Dillon Christian School",
+        "TeamAbbr": "DC",
+        "Play": "Thomas Wright 35-yard blocked punt return",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "1",
+        "Team": "Dillon Christian School",
+        "TeamAbbr": "DC",
+        "Play": "Kyle Ashley 49 pass from Kyle Johnson",
+        "Conversion": "Ashley pass from Johnson",
+        "Points": 8
+      },
+      {
+        "Quarter": "1",
+        "Team": "Dillon Christian School",
+        "TeamAbbr": "DC",
+        "Play": "Alford 22 pass from Johnson",
+        "Conversion": "Ashley pass from Johnson",
+        "Points": 8
+      },
+      {
+        "Quarter": "1",
+        "Team": "Dillon Christian School",
+        "TeamAbbr": "DC",
+        "Play": "Thomas Wright 65 run",
+        "Conversion": "Garrett Meekins pass from Johnson",
+        "Points": 8
+      },
+      {
+        "Quarter": "2",
+        "Team": "Dillon Christian School",
+        "TeamAbbr": "DC",
+        "Play": "Alford 63 run",
+        "Conversion": "pass failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "4",
+        "Team": "Dillon Christian School",
+        "TeamAbbr": "DC",
+        "Play": "Phillip Price 85-yard fumble return",
+        "Conversion": "Pass failed",
+        "Points": 6
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "First Downs",
+        "StAndrews": "7",
+        "Opponent": "6"
+      },
+      {
+        "Label": "Rushing",
+        "StAndrews": "64",
+        "Opponent": "248"
+      },
+      {
+        "Label": "Passing",
+        "StAndrews": "0",
+        "Opponent": "74"
+      },
+      {
+        "Label": "Comp.-Att.-Int.",
+        "StAndrews": "0-16-2",
+        "Opponent": "3-3-0"
+      },
+      {
+        "Label": "Fumbles-lost",
+        "StAndrews": "0-0",
+        "Opponent": "3-3"
+      },
+      {
+        "Label": "Punts",
+        "StAndrews": "5-28",
+        "Opponent": "n/a"
+      },
+      {
+        "Label": "Penalties",
+        "StAndrews": "4-40",
+        "Opponent": "13-100"
+      }
+    ],
+    "RecapTitle": "Dillon Christian 49, St. Andrew's 0",
+    "Recap": "Dillon, S.C. - Johnnell Alford ran for 106 yards to lead Dillon Christian (6-5) over St. Andrew's (1-9) in the Saints' final game of the season.\n\nSt. Andrew's was lead by Skip McGee with 34 yards rushing. The Saints earned seven first downs and had zero fumbles, but were unable to get the ball in the end zone against Dillon Christian.",
+    "SourceSection": "REGION SCISA 2-AA",
+    "SourceNote": "User-provided REGION SCISA 2-AA game summary, line score, scoring summary and team comparison statistics for the Oct. 28, 2005 Dillon Christian game. The recap spells the Dillon Christian rusher as Johnnell Alford, while the scoring summary spells him Johnell Alford."
   },
   {
     "GameID": 20060818,

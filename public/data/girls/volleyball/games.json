@@ -1591,7 +1591,7 @@
     "GameUrl": "",
     "LocationType": "",
     "Venue": "",
-    "GameType": "Region",
+    "GameType": "Non-Region",
     "Result": "W",
     "TeamScore": 3,
     "OpponentScore": 0,
@@ -1662,6 +1662,654 @@
         "Set": 4,
         "Team": 25,
         "Opponent": 23
+      }
+    ]
+  },
+  {
+    "GameID": "20050906",
+    "Season": 2005,
+    "SeasonID": 2005,
+    "DisplaySeason": "2005",
+    "SourceSeasonLabel": "2005-06",
+    "Date": "2005-09-06",
+    "SortDate": "2005-09-06",
+    "SortOrder": 1,
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "ga-bible-baptist-school-savannah",
+    "Opponent": "Bible Baptist",
+    "OpponentLocation": "Savannah, GA",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "GameType": "Non-Region",
+    "Result": "W",
+    "TeamScore": 3,
+    "OpponentScore": 0,
+    "Notes": "Reported top players: Mary Wilkowski, Grace Wilkowski, Megan Hall, and Kristen Albritton.",
+    "SourceCitation": "User-provided game data",
+    "IsComplete": "Yes",
+    "SetScores": [
+      {
+        "Set": 1,
+        "Team": 25,
+        "Opponent": 14
+      },
+      {
+        "Set": 2,
+        "Team": 25,
+        "Opponent": 16
+      },
+      {
+        "Set": 3,
+        "Team": 25,
+        "Opponent": 13
+      }
+    ]
+  },
+  {
+    "GameID": "20050916",
+    "Season": 2005,
+    "SeasonID": 2005,
+    "DisplaySeason": "2005",
+    "SourceSeasonLabel": "2005-06",
+    "Date": "2005-09-16",
+    "SortDate": "2005-09-16",
+    "SortOrder": 1,
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
+    "Opponent": "Hilton Head Christian",
+    "OpponentLocation": "Hilton Head Island, SC",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 3,
+    "OpponentScore": 2,
+    "Notes": "Reported top players: Mary Wilkowski, Grace Wilkowski, and Courtney Manson. St. Andrew's improved to 5-0 after the match.",
+    "SourceCitation": "User-provided game data",
+    "IsComplete": "Yes",
+    "SetScores": [
+      {
+        "Set": 1,
+        "Team": 19,
+        "Opponent": 25
+      },
+      {
+        "Set": 2,
+        "Team": 25,
+        "Opponent": 12
+      },
+      {
+        "Set": 3,
+        "Team": 17,
+        "Opponent": 25
+      },
+      {
+        "Set": 4,
+        "Team": 25,
+        "Opponent": 19
+      },
+      {
+        "Set": 5,
+        "Team": 15,
+        "Opponent": 13
+      }
+    ]
+  },
+  {
+    "GameID": "20050916-1",
+    "Season": 2005,
+    "SeasonID": 2005,
+    "DisplaySeason": "2005",
+    "SourceSeasonLabel": "2005-06",
+    "Date": "2005-09-16",
+    "SortDate": "2005-09-16",
+    "SortOrder": 2,
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "sc-patrick-henry-academy-estill",
+    "Opponent": "Patrick Henry Academy",
+    "OpponentLocation": "Estill, SC",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "GameType": "Non-Region",
+    "Result": "W",
+    "TeamScore": 3,
+    "OpponentScore": 0,
+    "Notes": "Reported top players: Kristen Albritton, Courtney Johnson, and Megan Hall. St. Andrew's improved to 6-0 after the match.",
+    "SourceCitation": "User-provided game data",
+    "IsComplete": "Yes",
+    "SetScores": [
+      {
+        "Set": 1,
+        "Team": 25,
+        "Opponent": 12
+      },
+      {
+        "Set": 2,
+        "Team": 25,
+        "Opponent": 8
+      },
+      {
+        "Set": 3,
+        "Team": 25,
+        "Opponent": 15
+      }
+    ]
+  },
+  {
+    "GameID": "2005-placeholder-1",
+    "Season": 2005,
+    "SeasonID": 2005,
+    "DisplaySeason": "2005",
+    "SourceSeasonLabel": "2005-06",
+    "Date": "",
+    "DisplayDate": "Between Sep. 16 and Sep. 20, 2005",
+    "SortDate": "2005-09-19",
+    "SortOrder": 1,
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "",
+    "Opponent": "Unknown",
+    "OpponentLocation": "",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "GameType": "-",
+    "Result": "W",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Notes": "Placeholder for an unreported seventh win. The Sept. 20 Providence Christian report listed St. Andrew's at 8-0 after the match, implying one win between Sept. 16 and Sept. 20.",
+    "SourceCitation": "User-provided record note",
+    "IsComplete": "Yes",
+    "SetScores": []
+  },
+  {
+    "GameID": "20050920",
+    "Season": 2005,
+    "SeasonID": 2005,
+    "DisplaySeason": "2005",
+    "SourceSeasonLabel": "2005-06",
+    "Date": "2005-09-20",
+    "SortDate": "2005-09-20",
+    "SortOrder": 1,
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "ga-providence-christian-savannah",
+    "Opponent": "Providence Christian",
+    "OpponentLocation": "Savannah, GA",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "GameType": "Non-Region",
+    "Result": "W",
+    "TeamScore": 3,
+    "OpponentScore": 0,
+    "Notes": "Reported top players: Grace Wilkowski, Rose Wilkowski, and Courtney Johnson. St. Andrew's improved to 8-0 after the match.",
+    "SourceCitation": "User-provided game data",
+    "IsComplete": "Yes",
+    "SetScores": [
+      {
+        "Set": 1,
+        "Team": 25,
+        "Opponent": 7
+      },
+      {
+        "Set": 2,
+        "Team": 25,
+        "Opponent": 18
+      },
+      {
+        "Set": 3,
+        "Team": 25,
+        "Opponent": 10
+      }
+    ]
+  },
+  {
+    "GameID": "20050922",
+    "Season": 2005,
+    "SeasonID": 2005,
+    "DisplaySeason": "2005",
+    "SourceSeasonLabel": "2005-06",
+    "Date": "2005-09-22",
+    "SortDate": "2005-09-22",
+    "SortOrder": 1,
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
+    "Opponent": "Thomas Heyward Academy",
+    "OpponentLocation": "Ridgeland, SC",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 3,
+    "OpponentScore": 0,
+    "Notes": "Reported top players: Mary Wilkowski and Megan Hall. St. Andrew's improved to 9-0 overall and 2-0 in SCISA Region 4-AA after the match.",
+    "SourceCitation": "User-provided game data",
+    "IsComplete": "Yes",
+    "SetScores": [
+      {
+        "Set": 1,
+        "Team": 25,
+        "Opponent": 17
+      },
+      {
+        "Set": 2,
+        "Team": 25,
+        "Opponent": 19
+      },
+      {
+        "Set": 3,
+        "Team": 25,
+        "Opponent": 22
+      }
+    ]
+  },
+  {
+    "GameID": "20050927",
+    "Season": 2005,
+    "SeasonID": 2005,
+    "DisplaySeason": "2005",
+    "SourceSeasonLabel": "2005-06",
+    "Date": "2005-09-27",
+    "SortDate": "2005-09-27",
+    "SortOrder": 1,
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "sc-beaufort-academy-beaufort",
+    "Opponent": "Beaufort Academy",
+    "OpponentLocation": "Beaufort, SC",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 3,
+    "OpponentScore": 0,
+    "Notes": "Reported top players: Megan Hall, Kristen Albritton, and Rose Wilkowski. St. Andrew's improved to 10-0 overall and 3-0 in SCISA Region 4-AA after the match.",
+    "SourceCitation": "User-provided game data",
+    "IsComplete": "Yes",
+    "SetScores": [
+      {
+        "Set": 1,
+        "Team": 25,
+        "Opponent": 7
+      },
+      {
+        "Set": 2,
+        "Team": 25,
+        "Opponent": 11
+      },
+      {
+        "Set": 3,
+        "Team": 25,
+        "Opponent": 10
+      }
+    ]
+  },
+  {
+    "GameID": "20051004",
+    "Season": 2005,
+    "SeasonID": 2005,
+    "DisplaySeason": "2005",
+    "SourceSeasonLabel": "2005-06",
+    "Date": "2005-10-04",
+    "SortDate": "2005-10-04",
+    "SortOrder": 1,
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
+    "Opponent": "Hilton Head Christian",
+    "OpponentLocation": "Hilton Head Island, SC",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 3,
+    "OpponentScore": 1,
+    "Notes": "Reported top players: Mary Wilkowski, Megan Hall, and Kristen Albritton. St. Andrew's improved to 11-0 overall and 4-0 in SCISA Class AA after the match.",
+    "SourceCitation": "User-provided game data; Savannah Morning News blurb, Oct. 6, 2005",
+    "RecapTitle": "St. Andrew's Stays Unbeaten Against Hilton Head Christian",
+    "Recap": "St. Andrew's ran its record to 11-0 with a win over Hilton Head Christian on Tuesday. The defending South Carolina Independent School Association Class AA champs, St. Andrew's may be the best volleyball team in Savannah you've never seen play.",
+    "IsComplete": "Yes",
+    "SetScores": [
+      {
+        "Set": 1,
+        "Team": 18,
+        "Opponent": 25
+      },
+      {
+        "Set": 2,
+        "Team": 25,
+        "Opponent": 21
+      },
+      {
+        "Set": 3,
+        "Team": 25,
+        "Opponent": 19
+      },
+      {
+        "Set": 4,
+        "Team": 25,
+        "Opponent": 17
+      }
+    ]
+  },
+  {
+    "GameID": "20051006",
+    "Season": 2005,
+    "SeasonID": 2005,
+    "DisplaySeason": "2005",
+    "SourceSeasonLabel": "2005-06",
+    "Date": "2005-10-06",
+    "SortDate": "2005-10-06",
+    "SortOrder": 1,
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "ga-bible-baptist-school-savannah",
+    "Opponent": "Bible Baptist",
+    "OpponentLocation": "Savannah, GA",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "GameType": "Non-Region",
+    "Result": "W",
+    "TeamScore": 3,
+    "OpponentScore": 1,
+    "Notes": "Reported top players: Rose Wilkowski, Megan Hall, and Kristen Albritton. St. Andrew's improved to 12-0 overall after the match.",
+    "SourceCitation": "User-provided game data",
+    "IsComplete": "Yes",
+    "SetScores": [
+      {
+        "Set": 1,
+        "Team": 25,
+        "Opponent": 12
+      },
+      {
+        "Set": 2,
+        "Team": 25,
+        "Opponent": 13
+      },
+      {
+        "Set": 3,
+        "Team": 26,
+        "Opponent": 28
+      },
+      {
+        "Set": 4,
+        "Team": 25,
+        "Opponent": 18
+      }
+    ]
+  },
+  {
+    "GameID": "20051013",
+    "Season": 2005,
+    "SeasonID": 2005,
+    "DisplaySeason": "2005",
+    "SourceSeasonLabel": "2005-06",
+    "Date": "2005-10-13",
+    "SortDate": "2005-10-13",
+    "SortOrder": 1,
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "sc-beaufort-academy-beaufort",
+    "Opponent": "Beaufort Academy",
+    "OpponentLocation": "Beaufort, SC",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 3,
+    "OpponentScore": 0,
+    "Notes": "Reported top players: Grace Wilkowski and Kristen Albritton. The report listed St. Andrew's at 13-1 overall and 9-1 in SCISA 4-AA after the match.",
+    "SourceCitation": "User-provided game data",
+    "IsComplete": "Yes",
+    "SetScores": [
+      {
+        "Set": 1,
+        "Team": 25,
+        "Opponent": 11
+      },
+      {
+        "Set": 2,
+        "Team": 25,
+        "Opponent": 12
+      },
+      {
+        "Set": 3,
+        "Team": 25,
+        "Opponent": 8
+      }
+    ]
+  },
+  {
+    "GameID": "20051018",
+    "Season": 2005,
+    "SeasonID": 2005,
+    "DisplaySeason": "2005",
+    "SourceSeasonLabel": "2005-06",
+    "Date": "2005-10-18",
+    "SortDate": "2005-10-18",
+    "SortOrder": 1,
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "sc-patrick-henry-academy-estill",
+    "Opponent": "Patrick Henry Academy",
+    "OpponentLocation": "Estill, SC",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "GameType": "Non-Region",
+    "Result": "W",
+    "TeamScore": 3,
+    "OpponentScore": 0,
+    "Notes": "The report listed St. Andrew's at 14-1 overall and 10-1 in SCISA Region 4-AA after the match.",
+    "SourceCitation": "User-provided game data",
+    "IsComplete": "Yes",
+    "SetScores": [
+      {
+        "Set": 1,
+        "Team": 25,
+        "Opponent": 11
+      },
+      {
+        "Set": 2,
+        "Team": 25,
+        "Opponent": 10
+      },
+      {
+        "Set": 3,
+        "Team": 25,
+        "Opponent": 5
+      }
+    ]
+  },
+  {
+    "GameID": "20051012",
+    "Season": 2005,
+    "SeasonID": 2005,
+    "DisplaySeason": "2005",
+    "SourceSeasonLabel": "2005-06",
+    "Date": "2005-10-12",
+    "SortDate": "2005-10-12",
+    "SortOrder": 1,
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
+    "Opponent": "Hilton Head Prep",
+    "OpponentLocation": "Hilton Head Island, SC",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 0,
+    "OpponentScore": 3,
+    "Notes": "Reported top player: Mary Wilkowski. The report listed St. Andrew's at 11-1 overall and 5-1 in SCISA Region 4-AA after the match.",
+    "SourceCitation": "User-provided game data",
+    "IsComplete": "Yes",
+    "SetScores": [
+      {
+        "Set": 1,
+        "Team": 21,
+        "Opponent": 25
+      },
+      {
+        "Set": 2,
+        "Team": 12,
+        "Opponent": 25
+      },
+      {
+        "Set": 3,
+        "Team": 10,
+        "Opponent": 25
+      }
+    ]
+  },
+  {
+    "GameID": "20051021",
+    "Season": 2005,
+    "SeasonID": 2005,
+    "DisplaySeason": "2005",
+    "SourceSeasonLabel": "2005-06",
+    "Date": "2005-10-21",
+    "SortDate": "2005-10-21",
+    "SortOrder": 1,
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "sc-trinity-collegiate-darlington",
+    "Opponent": "Trinity",
+    "OpponentLocation": "Darlington, SC",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "Neutral",
+    "Venue": "Sumter, SC",
+    "GameType": "State Tournament",
+    "Result": "W",
+    "TeamScore": 2,
+    "OpponentScore": 0,
+    "Notes": "SCISA Class AA State Tournament at Sumter, S.C. Reported top players: Mary Wilkowski and Kristen Albritton. The report listed St. Andrew's at 16-1 after the match and noted that St. Andrew's would play Richard Winn Academy at 12:15 p.m.",
+    "SourceCitation": "User-provided game data",
+    "IsComplete": "Yes",
+    "SetScores": [
+      {
+        "Set": 1,
+        "Team": 25,
+        "Opponent": 8
+      },
+      {
+        "Set": 2,
+        "Team": 25,
+        "Opponent": 16
+      }
+    ]
+  },
+  {
+    "GameID": "20051022",
+    "Season": 2005,
+    "SeasonID": 2005,
+    "DisplaySeason": "2005",
+    "SourceSeasonLabel": "2005-06",
+    "Date": "2005-10-22",
+    "SortDate": "2005-10-22",
+    "SortOrder": 1,
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "sc-richard-winn-academy-winnsboro",
+    "Opponent": "Richard Winn Academy",
+    "OpponentLocation": "Winnsboro, SC",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "Neutral",
+    "Venue": "Sumter, SC",
+    "GameType": "State Tournament",
+    "Result": "W",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Notes": "Placeholder for St. Andrew's SCISA Class AA State Tournament win over Richard Winn Academy on Oct. 22 in Sumter, S.C. The Oct. 25 Savannah Morning News championship preview confirmed St. Andrew's had reached the title match after opening the playoffs as the No. 1 seed in the Upper State Division, but no score details for this match have been recovered.",
+    "SourceCitation": "User-provided Savannah Morning News preview, Oct. 25, 2005",
+    "IsComplete": "No",
+    "SetScores": []
+  },
+  {
+    "GameID": "20051025",
+    "Season": 2005,
+    "SeasonID": 2005,
+    "DisplaySeason": "2005",
+    "SourceSeasonLabel": "2005-06",
+    "Date": "2005-10-25",
+    "SortDate": "2005-10-25",
+    "SortOrder": 1,
+    "Time": "5:15 PM",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "sc-holly-hill-academy-holly-hill",
+    "Opponent": "Holly Hill Academy",
+    "OpponentLocation": "Holly Hill, SC",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "Neutral",
+    "Venue": "John Kresse Arena, College of Charleston",
+    "GameType": "State Tournament",
+    "Result": "W",
+    "TeamScore": 3,
+    "OpponentScore": 0,
+    "Notes": "SCISA Class AA state championship match. Reported top players: Mary Wilkowski, Grace Wilkowski, Megan Hall, Kristen Albritton, Rose Wilkowski, and Courtney Manson. St. Andrew's finished 17-1 and claimed its second consecutive SCISA Class AA state championship.",
+    "SourceCitation": "Savannah Morning News (GA), Oct. 26, 2005, Clay Harris, Page 1D, Sports",
+    "RecapTitle": "ST. ANDREW'S CLAIMS SECOND STRAIGHT VB CHAMPIONSHIP",
+    "Recap": "St. Andrew's repeated as SCISA Class AA volleyball champion by sweeping Holly Hill Academy 25-10, 25-17, 25-12 at John Kresse Arena on the College of Charleston campus. The Savannah Morning News recap described the Saints as in control throughout the match, with coach Mandy Stinson crediting a fundamental, intense approach that let St. Andrew's dictate play and keep the pressure on Holly Hill.\n\nThe story centered much of that intensity around the three Wilkowski sisters. Grace, Mary, and Rose helped set the tone for a team that blended experienced leadership with returning underclass talent. Holly Hill stayed close early in the first game, but sophomore Megan Hall's serving sparked a five-point run that gave the Saints separation. In the second game, Mary Wilkowski's presence in the middle and Grace Wilkowski's serving helped St. Andrew's pull away again.\n\nThe third game followed the same pattern: Holly Hill kept it tight at the start before the Saints' power took over. Eight St. Andrew's players saw action, including all four seniors, and Stinson emphasized how valuable that senior group had been to the championship team. The article also framed the night as the end of an era for the Wilkowski sisters on the court together, while noting that Mary Wilkowski saw enough returning talent for the program to keep building.\n\nMary Wilkowski led the final with 15 kills, 2 assists, and 7 digs, while Grace Wilkowski added 11 kills and 5 digs. Megan Hall had 6 kills, 4 aces, and 3 digs, Kristen Albritton finished with 16 assists, Rose Wilkowski added 3 kills and 5 digs, and Courtney Manson had 11 assists and 2 aces. St. Andrew's closed the season 17-1 with its second consecutive state championship.",
+    "IsComplete": "Yes",
+    "SetScores": [
+      {
+        "Set": 1,
+        "Team": 25,
+        "Opponent": 10
+      },
+      {
+        "Set": 2,
+        "Team": 25,
+        "Opponent": 17
+      },
+      {
+        "Set": 3,
+        "Team": 25,
+        "Opponent": 12
       }
     ]
   },

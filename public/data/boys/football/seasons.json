@@ -1855,6 +1855,58 @@
     "NationalRank": 13688,
     "StateRank": 217,
     "SeasonResult": "SCISA AA Region III • 5th in region • 0-4 region record",
+    "SeasonRecapTitle": "Season Recap",
+    "HideSeasonArticles": true,
+    "SeasonRecapLinks": [
+      {
+        "Text": "\"Every positive is a 100 percent improvement over last year.\"",
+        "ArticleID": "2005-season-preview"
+      }
+    ],
+    "SeasonImages": [
+      {
+        "src": "/images/boys/football/seasons/2005/2005-football-team.png",
+        "alt": "2005-06 St. Andrew's football team photo",
+        "caption": "2005-06 St. Andrew's football team"
+      },
+      {
+        "src": "/images/boys/football/seasons/2005/2005-football-jamie-cooper.png",
+        "alt": "Senior Jamie Cooper in his St. Andrew's football uniform",
+        "caption": "Senior Jamie Cooper"
+      },
+      {
+        "src": "/images/boys/football/seasons/2005/2005-football-frank-howard.png",
+        "alt": "Senior Frank Howard in his St. Andrew's football uniform",
+        "caption": "Senior Frank Howard"
+      },
+      {
+        "src": "/images/boys/football/seasons/2005/2005-football-garrett-mccarthy.png",
+        "alt": "Senior Garrett McCarthy in his St. Andrew's football uniform",
+        "caption": "Senior Garrett McCarthy"
+      },
+      {
+        "src": "/images/boys/football/seasons/2005/2005-football-skip-mcgee.png",
+        "alt": "Senior Skip McGee in his St. Andrew's football uniform",
+        "caption": "Senior Skip McGee"
+      },
+      {
+        "src": "/images/boys/football/seasons/2005/2005-football-javier-gutierrez.png",
+        "alt": "Senior Javier Gutierrez in his St. Andrew's football uniform",
+        "caption": "Senior Javier Gutierrez"
+      },
+      {
+        "src": "/images/boys/football/seasons/2005/2005-football-01.png",
+        "alt": "St. Andrew's football player during the 2005-06 season",
+        "caption": ""
+      },
+      {
+        "src": "/images/boys/football/seasons/2005/2005-football-02.png",
+        "alt": "St. Andrew's football action during the 2005-06 season",
+        "caption": ""
+      }
+    ],
+    "SeasonRecap": "St. Andrew's entered Bob Curley's second season with a young roster, only three seniors and a clear goal after the winless 2004 campaign: improve every week and find a way back into the win column. Curley framed the season in August with a line that became the measure of the fall: \"Every positive is a 100 percent improvement over last year.\" The Saints still had to live through a demanding SCISA AA Region III schedule, but 2005 did bring visible progress. They finished 1-9 overall and 0-4 in region play, scored more points than the year before and built the season around a small group of older leaders surrounded by younger players learning varsity football in real time.\n\nThe season began with a 41-0 loss to Williamsburg Academy, but even that opener showed where the Saints could compete. Garrett McCarthy led the defense with 10 tackles and an interception, while St. Andrew's tried to get its Pro-Set offense moving behind players like Frank Howard, Jeff Howard, Bubby Pavlo and Patrick Maleki. A week later, the breakthrough came at Memorial Day. Jim Kingston scooped up a fumble on the Matadors' opening possession and returned it 25 yards for a touchdown, McCarthy rushed for 116 yards and a 5-yard score, and Pavlo hit Maleki for a fourth-quarter touchdown pass in a 22-8 win. The Saints' 22 points that night topped their entire scoring total from the previous season, and it gave Curley his first victory as head coach.\n\nThe middle of the schedule was much rougher. Dorchester held St. Andrew's to minus-9 rushing yards in a 60-0 loss, and Thomas Heyward pulled away 64-7 despite the brightest special-teams play of the year, Javier Gutierrez's kickoff return touchdown. Pinewood Prep, Hilton Head Christian and Hilton Head Prep then overwhelmed the Saints in consecutive weeks, using quick starts and big plays to keep St. Andrew's from finding much offensive rhythm. Those results left the Saints at 1-6 entering the final stretch, but the season still kept revealing individual pieces for the program to build around: McCarthy's two-way work, Maleki's kicking and receiving, Kingston's defensive touchdown, Gutierrez's speed and a roster that leaned heavily on sophomores and freshmen.\n\nOctober closed with three region losses, but St. Andrew's continued to get flashes from different players. Pavlo carried 13 times for 35 yards against First Baptist, Frank Howard led the Saints with 30 rushing yards against Colleton Prep, and Skip McGee closed the season with 34 rushing yards at Dillon Christian. The finale also gave St. Andrew's seven first downs and no fumbles, a small but meaningful sign for a team that had spent the year trying to clean up mistakes while often playing bigger, deeper opponents.\n\nThe final record was still hard, but the 2005 Saints were not simply another winless team trying to survive Friday nights. They ended the losing streak, found touchdowns on defense, offense and special teams, and gave a young roster a full season of varsity experience. In that sense, the year did what Curley had hoped in August: it moved the program forward, even if the scoreboard did not always show it quickly.",
+    "SeasonRecapSourceCitation": "Compiled from Noell Barnidge, \"ST. ANDREW'S SAINTS - SAINTS PLAYERS ARE MARCHING FOR A VICTORY,\" Savannah Morning News (GA), August 19, 2005, Page 11, Section: HIGH SCHOOL FOOTBALL 2005; Jeff LaRoe for the Savannah Morning News, \"ST. ANDREW'S SHOWS LONGED-FOR IMPROVEMENT IN VICTORY,\" Savannah Morning News (GA), August 28, 2005, Page 7B, Section: SPORTS; Chris Lancia, Hardeeville Today, \"THOMAS HEYWARD CRUSHES ST. ANDREW'S,\" Savannah Morning News (GA), September 17, 2005, Page 6D, Section: FRIDAY NIGHT BLITZ; and user-provided 2005 game recaps, scoring summaries and team statistics.",
     "SourceUrls": {
       "schedule": "https://www.maxpreps.com/print/schedule.aspx?schoolid=1019c441-d956-4e70-a61c-6cbc2ba6e073&ssid=a64eb952-14c9-45bb-aa51-2e09948db58c&print=1",
       "roster": "https://www.maxpreps.com/ga/savannah/st-andrews-lions/football/05-06/roster/print/?print=1",

@@ -898,10 +898,56 @@ function getSeasonRecapParagraphs(season) {
 }
 
 function getSeasonRecapMedia(season) {
-  const media = season?.SeasonRecapMedia;
+  const media = Array.isArray(season?.SeasonImages)
+    ? season.SeasonImages
+    : season?.SeasonRecapMedia;
   if (!Array.isArray(media)) return [];
 
   return media.filter((item) => String(item?.src || "").trim());
+}
+
+function getSeasonRecapLinks(season) {
+  const links = season?.SeasonRecapLinks;
+  if (!Array.isArray(links)) return [];
+
+  return links
+    .map((link) => {
+      const text = String(link?.Text || "").trim();
+      const to = link?.ArticleID
+        ? `/athletics/football/articles/${encodeURIComponent(String(link.ArticleID))}`
+        : String(link?.Url || "").trim();
+
+      return text && to ? { text, to } : null;
+    })
+    .filter(Boolean);
+}
+
+function renderLinkedRecapText(text, links) {
+  if (!links.length) return text;
+
+  const matches = links
+    .map((link) => ({ ...link, index: text.indexOf(link.text) }))
+    .filter((link) => link.index >= 0)
+    .sort((a, b) => a.index - b.index);
+
+  if (!matches.length) return text;
+
+  const pieces = [];
+  let cursor = 0;
+
+  matches.forEach((match) => {
+    if (match.index < cursor) return;
+    if (match.index > cursor) pieces.push(text.slice(cursor, match.index));
+    pieces.push(
+      <Link key={`${match.to}-${match.index}`} to={match.to} className="text-blue-700 underline hover:text-blue-900">
+        {match.text}
+      </Link>
+    );
+    cursor = match.index + match.text.length;
+  });
+
+  if (cursor < text.length) pieces.push(text.slice(cursor));
+  return pieces;
 }
 
 function SeasonRecapSection({ season }) {
@@ -910,6 +956,7 @@ function SeasonRecapSection({ season }) {
 
   const title = String(season?.SeasonRecapTitle || "").trim() || "Season Recap";
   const sourceCitation = String(season?.SeasonRecapSourceCitation || "").trim();
+  const recapLinks = getSeasonRecapLinks(season);
   const record =
     season?.OverallRecord ||
     formatRecord(season?.OverallWins, season?.OverallLosses, season?.OverallTies);
@@ -941,7 +988,7 @@ function SeasonRecapSection({ season }) {
         <div className="space-y-3">
           {paragraphs.map((paragraph) => (
             <p key={paragraph}>
-              {paragraph}
+              {renderLinkedRecapText(paragraph, recapLinks)}
             </p>
           ))}
         </div>
@@ -955,13 +1002,29 @@ function SeasonRecapSection({ season }) {
 
 function SeasonImagesSection({ season }) {
   const images = getSeasonRecapMedia(season);
+  const showPlaceholder = Boolean(season?.ShowSeasonImagesPlaceholder);
+  const seasonLabel = season?.SourceSeasonLabel || season?.DisplaySeason || "this";
   const [imageIndex, setImageIndex] = useState(0);
 
   useEffect(() => {
     setImageIndex(0);
   }, [season?.SeasonID]);
 
-  if (!images.length) return null;
+  if (!images.length && !showPlaceholder) return null;
+
+  if (!images.length) {
+    return (
+      <section id="season-images" className="space-y-3">
+        <h2 className="text-2xl font-semibold">Season Images</h2>
+        <div className="rounded-lg border border-dashed border-gray-300 bg-gray-50 px-6 py-12 text-center">
+          <p className="text-base font-semibold text-gray-800">Season photo gallery coming soon</p>
+          <p className="mt-2 text-sm leading-6 text-gray-600">
+            Photos from the {seasonLabel} football season will be added here.
+          </p>
+        </div>
+      </section>
+    );
+  }
 
   const selectedImage = images[imageIndex] || images[0];
   const selectedCaption = String(selectedImage?.caption || "").trim();
@@ -970,7 +1033,7 @@ function SeasonImagesSection({ season }) {
   const goNext = () => setImageIndex((index) => (index + 1) % images.length);
 
   return (
-    <section className="space-y-3">
+    <section id="season-images" className="space-y-3">
       <h2 className="text-2xl font-semibold">Season Images</h2>
 
       <div className="overflow-hidden rounded-lg border border-gray-200 bg-white">
@@ -1085,11 +1148,6 @@ function FootballRosterTable({ rosterRows, emptyStateClassName }) {
                     ) : (
                       <span>{player.PlayerName || "—"}</span>
                     )}
-                    {(player.Distinctions || []).length > 0 ? (
-                      <span className="text-xs leading-snug text-slate-600">
-                        {player.Distinctions.join("; ")}
-                      </span>
-                    ) : null}
                   </div>
                 </td>
                 <td className={`${recordTableStyles.bodyCell} whitespace-nowrap`}>
@@ -1844,11 +1902,13 @@ export default function FootballSeasonPage({ seasonId: seasonIdProp = null }) {
 
       <SeasonRecapSection season={season} />
       <SeasonImagesSection season={season} />
-      <ArticleFeatureList
-        articles={seasonArticles}
-        basePath="/athletics/football"
-        heading="Season Articles"
-      />
+      {season?.HideSeasonArticles ? null : (
+        <ArticleFeatureList
+          articles={seasonArticles}
+          basePath="/athletics/football"
+          heading="Season Articles"
+        />
+      )}
 
       {regionStandings ? (
         <section id="region-standings" className="space-y-4">

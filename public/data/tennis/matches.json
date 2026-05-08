@@ -2549,6 +2549,1768 @@
     "Source": "User-provided girls tennis results, Oct. 3, 2002"
   },
   {
+    "MatchID": "2005-09-01-beaufort-academy-girls",
+    "Season": 2006,
+    "Date": "2005-09-01",
+    "Name": "St. Andrew's at Beaufort Academy - Girls",
+    "MatchType": "Dual Match",
+    "Gender": "Girls",
+    "Classification": "SCISA",
+    "MatchCategory": "Region",
+    "HomeAway": "Away",
+    "Status": "Completed",
+    "OpponentSchoolID": "sc-beaufort-academy-beaufort",
+    "TeamScore": {
+      "StAndrews": 0,
+      "Opponent": 9,
+      "Result": "L"
+    },
+    "Summary": "Beaufort Academy defeated St. Andrew's 9-0.",
+    "LineMatches": [
+      {
+        "TennisMatchID": "2005-09-01-beaufort-academy-girls-singles-1",
+        "EventType": "Singles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2005-09-01",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2006-girls-beaufort-academy-samantha-sullivan",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "DisplayName": "Christy Sullivan",
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2006-girls-beaufort-academy-samantha-sullivan"
+      },
+      {
+        "TennisMatchID": "2005-09-01-beaufort-academy-girls-singles-2",
+        "EventType": "Singles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2005-09-01",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2006-girls-beaufort-academy-joni-manos",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200506,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2006-girls-beaufort-academy-joni-manos"
+      },
+      {
+        "TennisMatchID": "2005-09-01-beaufort-academy-girls-singles-3",
+        "EventType": "Singles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2005-09-01",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2006-girls-beaufort-academy-chelsea-mixon",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200429,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2006-girls-beaufort-academy-chelsea-mixon"
+      },
+      {
+        "TennisMatchID": "2005-09-01-beaufort-academy-girls-singles-4",
+        "EventType": "Singles",
+        "LineNumber": 4,
+        "Status": "Completed",
+        "Date": "2005-09-01",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2006-girls-beaufort-academy-hannah-werner",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "DisplayName": "Ivey Jenkins",
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 1
+          },
+          {
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2006-girls-beaufort-academy-hannah-werner"
+      },
+      {
+        "TennisMatchID": "2005-09-01-beaufort-academy-girls-singles-5",
+        "EventType": "Singles",
+        "LineNumber": 5,
+        "Status": "Completed",
+        "Date": "2005-09-01",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2006-girls-beaufort-academy-courtney-turcotte",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "DisplayName": "Faith Kuhn",
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2006-girls-beaufort-academy-courtney-turcotte"
+      },
+      {
+        "TennisMatchID": "2005-09-01-beaufort-academy-girls-singles-6",
+        "EventType": "Singles",
+        "LineNumber": 6,
+        "Status": "Completed",
+        "Date": "2005-09-01",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2006-girls-beaufort-academy-sara-parks",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "DisplayName": "Abby Longwater",
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "top": 6,
+            "bottom": 1
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2006-girls-beaufort-academy-sara-parks"
+      },
+      {
+        "TennisMatchID": "2005-09-01-beaufort-academy-girls-doubles-1",
+        "EventType": "Doubles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2005-09-01",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2005-09-01-beaufort-academy-girls-ba-parks-sullivan",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2006-girls-beaufort-academy-sara-parks"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2006-girls-beaufort-academy-samantha-sullivan"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2005-09-01-beaufort-academy-girls-sta-boulware-vine",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "DisplayName": "Ashley Boulware"
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200429
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 8,
+            "bottom": 4
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2005-09-01-beaufort-academy-girls-ba-parks-sullivan"
+      },
+      {
+        "TennisMatchID": "2005-09-01-beaufort-academy-girls-doubles-2",
+        "EventType": "Doubles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2005-09-01",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2005-09-01-beaufort-academy-girls-ba-turcotte-dunn",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2006-girls-beaufort-academy-courtney-turcotte"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2006-girls-beaufort-academy-emily-dunn"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2005-09-01-beaufort-academy-girls-sta-kilgore-manson",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "DisplayName": "Katie Kilgore"
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200506
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 8,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2005-09-01-beaufort-academy-girls-ba-turcotte-dunn"
+      },
+      {
+        "TennisMatchID": "2005-09-01-beaufort-academy-girls-doubles-3",
+        "EventType": "Doubles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2005-09-01",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2005-09-01-beaufort-academy-girls-ba-gambla-jenkins",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2006-girls-beaufort-academy-julia-gambla"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2006-girls-beaufort-academy-jenkins"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2005-09-01-beaufort-academy-girls-sta-spearman-maner",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "DisplayName": "Tori Spearman"
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "DisplayName": "Megan Maner"
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 8,
+            "bottom": 2
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2005-09-01-beaufort-academy-girls-ba-gambla-jenkins"
+      }
+    ],
+    "Source": "User-provided girls tennis results, Sept. 1, 2005"
+  },
+  {
+    "MatchID": "2005-09-08-beaufort-academy-girls",
+    "Season": 2006,
+    "Date": "2005-09-08",
+    "Name": "St. Andrew's vs. Beaufort Academy - Girls",
+    "MatchType": "Dual Match",
+    "Gender": "Girls",
+    "Classification": "SCISA",
+    "MatchCategory": "Region",
+    "HomeAway": "Unknown",
+    "Status": "Completed",
+    "OpponentSchoolID": "sc-beaufort-academy-beaufort",
+    "TeamScore": {
+      "StAndrews": 0,
+      "Opponent": 6,
+      "Result": "L"
+    },
+    "Summary": "Beaufort Academy defeated St. Andrew's 6-0.",
+    "Notes": "The published team score was 6-0; the provided report includes five singles lines and three doubles lines.",
+    "LineMatches": [
+      {
+        "TennisMatchID": "2005-09-08-beaufort-academy-girls-singles-1",
+        "EventType": "Singles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2005-09-08",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2006-girls-beaufort-academy-courtney-turcotte",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "DisplayName": "Christy Sullivan",
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2006-girls-beaufort-academy-courtney-turcotte"
+      },
+      {
+        "TennisMatchID": "2005-09-08-beaufort-academy-girls-singles-2",
+        "EventType": "Singles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2005-09-08",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2006-girls-beaufort-academy-hannah-werner",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200506,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 2
+          },
+          {
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2006-girls-beaufort-academy-hannah-werner"
+      },
+      {
+        "TennisMatchID": "2005-09-08-beaufort-academy-girls-singles-3",
+        "EventType": "Singles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2005-09-08",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2006-girls-beaufort-academy-sarah-parks",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200429,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "top": 6,
+            "bottom": 1
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2006-girls-beaufort-academy-sarah-parks"
+      },
+      {
+        "TennisMatchID": "2005-09-08-beaufort-academy-girls-singles-4",
+        "EventType": "Singles",
+        "LineNumber": 4,
+        "Status": "Completed",
+        "Date": "2005-09-08",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2006-girls-beaufort-academy-julia-gamble",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "DisplayName": "Jessica Long",
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2006-girls-beaufort-academy-julia-gamble"
+      },
+      {
+        "TennisMatchID": "2005-09-08-beaufort-academy-girls-singles-5",
+        "EventType": "Singles",
+        "LineNumber": 5,
+        "Status": "Completed",
+        "Date": "2005-09-08",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2006-girls-beaufort-academy-tori-spearman",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "DisplayName": "Josi Demere",
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "top": 6,
+            "bottom": 1
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2006-girls-beaufort-academy-tori-spearman"
+      },
+      {
+        "TennisMatchID": "2005-09-08-beaufort-academy-girls-doubles-1",
+        "EventType": "Doubles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2005-09-08",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2005-09-08-beaufort-academy-girls-ba-werner-mixson",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2006-girls-beaufort-academy-hannah-werner"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2006-girls-beaufort-academy-chelsea-mixson"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2005-09-08-beaufort-academy-girls-sta-sullivan-vine",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "DisplayName": "Christy Sullivan"
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200429
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 8,
+            "bottom": 1
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2005-09-08-beaufort-academy-girls-ba-werner-mixson"
+      },
+      {
+        "TennisMatchID": "2005-09-08-beaufort-academy-girls-doubles-2",
+        "EventType": "Doubles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2005-09-08",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2005-09-08-beaufort-academy-girls-ba-turcotte-sullivan",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2006-girls-beaufort-academy-courtney-turcotte"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2006-girls-beaufort-academy-samantha-sullivan"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2005-09-08-beaufort-academy-girls-sta-manson-maner",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200506
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "DisplayName": "Megan Maner"
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 8,
+            "bottom": 1
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2005-09-08-beaufort-academy-girls-ba-turcotte-sullivan"
+      },
+      {
+        "TennisMatchID": "2005-09-08-beaufort-academy-girls-doubles-3",
+        "EventType": "Doubles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2005-09-08",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2005-09-08-beaufort-academy-girls-ba-gamble-boulware",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2006-girls-beaufort-academy-julia-gamble"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2006-girls-beaufort-academy-ashley-boulware"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2005-09-08-beaufort-academy-girls-sta-jenkins-dunn",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "DisplayName": "Ivey Jenkins"
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200420
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 8,
+            "bottom": 1
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2005-09-08-beaufort-academy-girls-ba-gamble-boulware"
+      }
+    ],
+    "Source": "User-provided girls tennis results, Sept. 8, 2005"
+  },
+  {
+    "MatchID": "2005-before-09-15-missing-loss-1-girls",
+    "Season": 2006,
+    "Date": null,
+    "DateLabel": "Before Sep. 15, 2005",
+    "SortDate": "2005-09-14-1",
+    "Name": "St. Andrew's vs. Unknown Opponent - Girls (Missing Match 1)",
+    "MatchType": "Dual Match",
+    "Gender": "Girls",
+    "Classification": "SCISA",
+    "MatchCategory": "Unknown",
+    "HomeAway": "Unknown",
+    "Status": "Completed",
+    "Opponent": "Unknown opponent",
+    "TeamScore": {
+      "Result": "L"
+    },
+    "LineMatches": [],
+    "Source": "Record reconciliation from user-provided Sept. 15, 2005 girls tennis result; St. Andrew's was 0-4 after the Charleston Collegiate match."
+  },
+  {
+    "MatchID": "2005-09-15-charleston-collegiate-girls",
+    "Season": 2006,
+    "Date": "2005-09-15",
+    "Name": "St. Andrew's vs. Charleston Collegiate - Girls",
+    "MatchType": "Dual Match",
+    "Gender": "Girls",
+    "Classification": "SCISA",
+    "MatchCategory": "Region",
+    "HomeAway": "Unknown",
+    "Status": "Completed",
+    "OpponentSchoolID": "sc-charleston-collegiate-school-johns-island",
+    "TeamScore": {
+      "StAndrews": 0,
+      "Opponent": 9,
+      "Result": "L"
+    },
+    "Summary": "Charleston Collegiate defeated St. Andrew's 9-0.",
+    "Notes": "The published result listed St. Andrew's record as 0-4 after this match; one additional earlier loss is represented as a placeholder.",
+    "LineMatches": [
+      {
+        "TennisMatchID": "2005-09-15-charleston-collegiate-girls-singles-1",
+        "EventType": "Singles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2005-09-15",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2006-girls-charleston-collegiate-alana-harris",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "DisplayName": "Christy Sullivan",
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 1
+          },
+          {
+            "top": 6,
+            "bottom": 2
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2006-girls-charleston-collegiate-alana-harris"
+      },
+      {
+        "TennisMatchID": "2005-09-15-charleston-collegiate-girls-singles-2",
+        "EventType": "Singles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2005-09-15",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2006-girls-charleston-collegiate-lauren-luciano",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "DisplayName": "St. Andrew's Forfeit",
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2006-girls-charleston-collegiate-lauren-luciano",
+        "SourceScoreLabel": "Forfeit",
+        "Notes": "The published result listed Lauren Luciano winning by forfeit."
+      },
+      {
+        "TennisMatchID": "2005-09-15-charleston-collegiate-girls-singles-3",
+        "EventType": "Singles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2005-09-15",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2006-girls-charleston-collegiate-alex-benton",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200420,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 1
+          },
+          {
+            "top": 6,
+            "bottom": 3
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2006-girls-charleston-collegiate-alex-benton"
+      },
+      {
+        "TennisMatchID": "2005-09-15-charleston-collegiate-girls-singles-4",
+        "EventType": "Singles",
+        "LineNumber": 4,
+        "Status": "Completed",
+        "Date": "2005-09-15",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2006-girls-charleston-collegiate-chelsa-hill",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "DisplayName": "Jessica Long",
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "top": 6,
+            "bottom": 2
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2006-girls-charleston-collegiate-chelsa-hill"
+      },
+      {
+        "TennisMatchID": "2005-09-15-charleston-collegiate-girls-singles-5",
+        "EventType": "Singles",
+        "LineNumber": 5,
+        "Status": "Completed",
+        "Date": "2005-09-15",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2006-girls-charleston-collegiate-sierra-whaley",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "DisplayName": "Abby Longwater",
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 1
+          },
+          {
+            "top": 6,
+            "bottom": 4
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2006-girls-charleston-collegiate-sierra-whaley"
+      },
+      {
+        "TennisMatchID": "2005-09-15-charleston-collegiate-girls-singles-6",
+        "EventType": "Singles",
+        "LineNumber": 6,
+        "Status": "Completed",
+        "Date": "2005-09-15",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2006-girls-charleston-collegiate-christin-mcgary",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "DisplayName": "Megan Maner",
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 3
+          },
+          {
+            "top": 2,
+            "bottom": 6
+          },
+          {
+            "top": 1,
+            "bottom": 0,
+            "topTiebreak": 7,
+            "bottomTiebreak": 5,
+            "MatchTiebreak": true
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2006-girls-charleston-collegiate-christin-mcgary",
+        "SourceScoreLabel": "6-3, 2-6 (7-5)",
+        "Notes": "The published result listed the deciding tiebreak in parentheses."
+      },
+      {
+        "TennisMatchID": "2005-09-15-charleston-collegiate-girls-doubles-1",
+        "EventType": "Doubles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2005-09-15",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2005-09-15-charleston-collegiate-girls-cc-harris-benton",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2006-girls-charleston-collegiate-alana-harris"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2006-girls-charleston-collegiate-alex-benton"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2005-09-15-charleston-collegiate-girls-sta-sullivan-kuhn",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "DisplayName": "Christy Sullivan"
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "DisplayName": "Faith Kuhn"
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 8,
+            "bottom": 2
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2005-09-15-charleston-collegiate-girls-cc-harris-benton"
+      },
+      {
+        "TennisMatchID": "2005-09-15-charleston-collegiate-girls-doubles-2",
+        "EventType": "Doubles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2005-09-15",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2005-09-15-charleston-collegiate-girls-cc-hill-whaley",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2006-girls-charleston-collegiate-chelsa-hill"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2006-girls-charleston-collegiate-sierra-whaley"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2005-09-15-charleston-collegiate-girls-sta-long-maner",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "DisplayName": "Jessica Long"
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "DisplayName": "Megan Maner"
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 8,
+            "bottom": 1
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2005-09-15-charleston-collegiate-girls-cc-hill-whaley"
+      },
+      {
+        "TennisMatchID": "2005-09-15-charleston-collegiate-girls-doubles-3",
+        "EventType": "Doubles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2005-09-15",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2005-09-15-charleston-collegiate-girls-cc-luciano-mcgary",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2006-girls-charleston-collegiate-lauren-luciano"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2006-girls-charleston-collegiate-christin-mcgary"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2005-09-15-charleston-collegiate-girls-sta-longwater-dunn",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "DisplayName": "Abby Longwater"
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200420
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 9,
+            "bottom": 7
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2005-09-15-charleston-collegiate-girls-cc-luciano-mcgary"
+      }
+    ],
+    "Source": "User-provided girls tennis results, Sept. 15, 2005"
+  },
+  {
+    "MatchID": "2005-09-26-charleston-collegiate-girls",
+    "Season": 2006,
+    "Date": "2005-09-26",
+    "Name": "St. Andrew's vs. Charleston Collegiate - Girls",
+    "MatchType": "Dual Match",
+    "Gender": "Girls",
+    "Classification": "SCISA",
+    "MatchCategory": "Region",
+    "HomeAway": "Unknown",
+    "Status": "Completed",
+    "OpponentSchoolID": "sc-charleston-collegiate-school-johns-island",
+    "TeamScore": {
+      "StAndrews": 3,
+      "Opponent": 6,
+      "Result": "L"
+    },
+    "Summary": "Charleston Collegiate defeated St. Andrew's 6-3.",
+    "Notes": "Team score is inferred from six Charleston Collegiate singles wins and three St. Andrew's doubles wins. The published third doubles result is incomplete and does not include the final score.",
+    "LineMatches": [
+      {
+        "TennisMatchID": "2005-09-26-charleston-collegiate-girls-singles-1",
+        "EventType": "Singles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2005-09-26",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2006-girls-charleston-collegiate-alana-harris",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200429,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 7,
+            "bottom": 5
+          },
+          {
+            "top": 5,
+            "bottom": 7
+          },
+          {
+            "top": 7,
+            "bottom": 5
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2006-girls-charleston-collegiate-alana-harris"
+      },
+      {
+        "TennisMatchID": "2005-09-26-charleston-collegiate-girls-singles-2",
+        "EventType": "Singles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2005-09-26",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2006-girls-charleston-collegiate-lauren-luciano",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200420,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 2
+          },
+          {
+            "top": 6,
+            "bottom": 4
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2006-girls-charleston-collegiate-lauren-luciano"
+      },
+      {
+        "TennisMatchID": "2005-09-26-charleston-collegiate-girls-singles-3",
+        "EventType": "Singles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2005-09-26",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2006-girls-charleston-collegiate-alex-benton",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "DisplayName": "Abby Longwater",
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 2
+          },
+          {
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2006-girls-charleston-collegiate-alex-benton"
+      },
+      {
+        "TennisMatchID": "2005-09-26-charleston-collegiate-girls-singles-4",
+        "EventType": "Singles",
+        "LineNumber": 4,
+        "Status": "Completed",
+        "Date": "2005-09-26",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2006-girls-charleston-collegiate-chelsa-hill",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "DisplayName": "Megan Maner",
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2006-girls-charleston-collegiate-chelsa-hill"
+      },
+      {
+        "TennisMatchID": "2005-09-26-charleston-collegiate-girls-singles-5",
+        "EventType": "Singles",
+        "LineNumber": 5,
+        "Status": "Completed",
+        "Date": "2005-09-26",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2006-girls-charleston-collegiate-sierra-whaley",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "DisplayName": "Josi Demere",
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 5,
+            "bottom": 7
+          },
+          {
+            "top": 7,
+            "bottom": 6
+          },
+          {
+            "top": 1,
+            "bottom": 0,
+            "topTiebreak": 10,
+            "bottomTiebreak": 4,
+            "MatchTiebreak": true
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2006-girls-charleston-collegiate-sierra-whaley",
+        "SourceScoreLabel": "5-7, 7-6, 10-4",
+        "Notes": "The published result did not include a tiebreak score for the 7-6 set and listed the deciding match tiebreak as 10-4."
+      },
+      {
+        "TennisMatchID": "2005-09-26-charleston-collegiate-girls-singles-6",
+        "EventType": "Singles",
+        "LineNumber": 6,
+        "Status": "Completed",
+        "Date": "2005-09-26",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2006-girls-charleston-collegiate-christin-mcgary",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "DisplayName": "Jennifer Shin",
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 1
+          },
+          {
+            "top": 6,
+            "bottom": 1
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2006-girls-charleston-collegiate-christin-mcgary"
+      },
+      {
+        "TennisMatchID": "2005-09-26-charleston-collegiate-girls-doubles-1",
+        "EventType": "Doubles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2005-09-26",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2005-09-26-charleston-collegiate-girls-cc-hill-forte",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2006-girls-charleston-collegiate-chelsa-hill"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2006-girls-charleston-collegiate-erin-forte"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2005-09-26-charleston-collegiate-girls-sta-vine-demere",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200429
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "DisplayName": "Josi Demere"
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 2,
+            "bottom": 8
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2005-09-26-charleston-collegiate-girls-sta-vine-demere"
+      },
+      {
+        "TennisMatchID": "2005-09-26-charleston-collegiate-girls-doubles-2",
+        "EventType": "Doubles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2005-09-26",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2005-09-26-charleston-collegiate-girls-cc-mcgary-crank",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2006-girls-charleston-collegiate-christin-mcgary"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2006-girls-charleston-collegiate-casey-crank"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2005-09-26-charleston-collegiate-girls-sta-dunn-longwater",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200420
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "DisplayName": "Abby Longwater"
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 2,
+            "bottom": 8
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2005-09-26-charleston-collegiate-girls-sta-dunn-longwater"
+      },
+      {
+        "TennisMatchID": "2005-09-26-charleston-collegiate-girls-doubles-3",
+        "EventType": "Doubles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2005-09-26",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2005-09-26-charleston-collegiate-girls-cc-rouch-molly",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2006-girls-charleston-collegiate-lilly-rouch"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2006-girls-charleston-collegiate-molly"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2005-09-26-charleston-collegiate-girls-sta-jenkins-maner",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "DisplayName": "Ivey Jenkins"
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "DisplayName": "Megan Maner"
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2005-09-26-charleston-collegiate-girls-sta-jenkins-maner",
+        "SourceScoreLabel": "Score not published",
+        "Notes": "The provided result is incomplete after \"Lilly Rouch-Molly\" and does not include the final score."
+      }
+    ],
+    "Source": "User-provided girls tennis results, Sept. 26, 2005"
+  },
+  {
+    "MatchID": "2005-09-27-hilton-head-christian-girls",
+    "Season": 2006,
+    "Date": "2005-09-27",
+    "Name": "St. Andrew's vs. Hilton Head Christian - Girls",
+    "MatchType": "Dual Match",
+    "Gender": "Girls",
+    "Classification": "SCISA",
+    "MatchCategory": "Non-Region",
+    "HomeAway": "Unknown",
+    "Status": "Completed",
+    "OpponentSchoolID": "sc-hilton-head-christian-academy-hilton-head-island",
+    "TeamScore": {
+      "StAndrews": 0,
+      "Opponent": 8,
+      "Result": "L"
+    },
+    "Summary": "Hilton Head Christian defeated St. Andrew's 8-0. The result moved St. Andrew's to 0-6.",
+    "Notes": "Team score is inferred from five Hilton Head Christian singles wins and three Hilton Head Christian doubles wins.",
+    "LineMatches": [
+      {
+        "TennisMatchID": "2005-09-27-hilton-head-christian-girls-singles-1",
+        "EventType": "Singles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2005-09-27",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2006-girls-hilton-head-christian-kendall-sigmon",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200429,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 1
+          },
+          {
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2006-girls-hilton-head-christian-kendall-sigmon"
+      },
+      {
+        "TennisMatchID": "2005-09-27-hilton-head-christian-girls-singles-2",
+        "EventType": "Singles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2005-09-27",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2006-girls-hilton-head-christian-alison-scharold",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200420,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2006-girls-hilton-head-christian-alison-scharold"
+      },
+      {
+        "TennisMatchID": "2005-09-27-hilton-head-christian-girls-singles-3",
+        "EventType": "Singles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2005-09-27",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2006-girls-hilton-head-christian-jordan-nimmer",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "DisplayName": "Megan Maner",
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2006-girls-hilton-head-christian-jordan-nimmer"
+      },
+      {
+        "TennisMatchID": "2005-09-27-hilton-head-christian-girls-singles-4",
+        "EventType": "Singles",
+        "LineNumber": 4,
+        "Status": "Completed",
+        "Date": "2005-09-27",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2006-girls-hilton-head-christian-jessica-schneider",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "DisplayName": "Abby Longwater",
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 1
+          },
+          {
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2006-girls-hilton-head-christian-jessica-schneider"
+      },
+      {
+        "TennisMatchID": "2005-09-27-hilton-head-christian-girls-singles-5",
+        "EventType": "Singles",
+        "LineNumber": 5,
+        "Status": "Completed",
+        "Date": "2005-09-27",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2006-girls-hilton-head-christian-meredith-lancaster",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "DisplayName": "Ivey Jenkins",
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2006-girls-hilton-head-christian-meredith-lancaster"
+      },
+      {
+        "TennisMatchID": "2005-09-27-hilton-head-christian-girls-doubles-1",
+        "EventType": "Doubles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2005-09-27",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2005-09-27-hilton-head-christian-girls-hhc-nimmer-bundy",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2006-girls-hilton-head-christian-jordan-nimmer"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2006-girls-hilton-head-christian-melissa-bundy"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2005-09-27-hilton-head-christian-girls-sta-vine-jenkins",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200429
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "DisplayName": "Ivey Jenkins"
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 8,
+            "bottom": 2
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2005-09-27-hilton-head-christian-girls-hhc-nimmer-bundy"
+      },
+      {
+        "TennisMatchID": "2005-09-27-hilton-head-christian-girls-doubles-2",
+        "EventType": "Doubles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2005-09-27",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2005-09-27-hilton-head-christian-girls-hhc-lancaster-schneider",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2006-girls-hilton-head-christian-meredith-lancaster"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2006-girls-hilton-head-christian-jessica-schneider"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2005-09-27-hilton-head-christian-girls-sta-dunn-longwater",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200420
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "DisplayName": "Abby Longwater"
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 8,
+            "bottom": 2
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2005-09-27-hilton-head-christian-girls-hhc-lancaster-schneider"
+      },
+      {
+        "TennisMatchID": "2005-09-27-hilton-head-christian-girls-doubles-3",
+        "EventType": "Doubles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2005-09-27",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2005-09-27-hilton-head-christian-girls-hhc-lucas-cranston",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2006-girls-hilton-head-christian-becca-lucas"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2006-girls-hilton-head-christian-emily-cranston"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2005-09-27-hilton-head-christian-girls-sta-long-shin",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "DisplayName": "Jessica Long"
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "DisplayName": "Jennifer Shin"
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 8,
+            "bottom": 1
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2005-09-27-hilton-head-christian-girls-hhc-lucas-cranston"
+      }
+    ],
+    "Source": "User-provided girls tennis results, Sept. 27, 2005"
+  },
+  {
     "MatchID": "2012-10-03-beaufort-academy-girls",
     "Season": 2012,
     "Date": "2012-10-03",

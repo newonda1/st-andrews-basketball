@@ -32,13 +32,16 @@ function isStAndrewsScoringPlay(play) {
 
 function isOpponentScoringPlay(play, game) {
   if (isStAndrewsScoringPlay(play)) return false;
-  const opponentAbbr = Array.isArray(game?.LineScore)
-    ? String(game.LineScore[1]?.Abbr || "").toUpperCase()
-    : "";
+  const lineScore = Array.isArray(game?.LineScore) ? game.LineScore : [];
+  const opponentRow = lineScore.find((row) => !isStAndrewsTeam(row?.Team));
+  const opponentAbbr = String(opponentRow?.Abbr || "").toUpperCase();
   const playAbbr = String(play?.TeamAbbr || "").toUpperCase();
+  const playTeam = String(play?.Team || "");
   return (
     Boolean(String(game?.OpponentLogoPath || "").trim()) &&
-    (playAbbr === opponentAbbr || String(play?.Team || "") === String(game?.Opponent || ""))
+    (playAbbr === opponentAbbr ||
+      playTeam === String(game?.Opponent || "") ||
+      playTeam === String(opponentRow?.Team || ""))
   );
 }
 

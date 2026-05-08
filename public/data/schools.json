@@ -1589,7 +1589,9 @@
     "City": "Dillon",
     "State": "SC",
     "ShortName": "Dillon Christian",
-    "Mascot": "Warriors"
+    "Mascot": "Warriors",
+    "LogoPath": "/images/schools/logos/sc-dillon-christian-school-dillon.png",
+    "LogoSourceUrl": "https://image.maxpreps.io/school-mascot/c/0/1/c013a460-f8d9-436a-90eb-292d84b6cf77.gif?version=638282791800000000&width=1024&height=1024"
   },
   {
     "SchoolID": "sc-dorchester-academy-st-george",
@@ -1617,13 +1619,17 @@
     "Name": "First Baptist School",
     "City": "Charleston",
     "State": "SC",
-    "Mascot": "Hurricanes"
+    "Mascot": "Hurricanes",
+    "LogoPath": "/images/schools/logos/sc-first-baptist-school-charleston.png",
+    "LogoSourceUrl": "https://image.maxpreps.io/school-mascot/d/6/6/d66d398b-9da5-40bb-b95d-0c1c8d22d868.gif?version=633664756800000000&width=1024&height=1024"
   },
   {
     "SchoolID": "sc-first-baptist-school-of-charleston-charleston",
     "Name": "First Baptist School of Charleston",
     "City": "Charleston",
-    "State": "SC"
+    "State": "SC",
+    "LogoPath": "/images/schools/logos/sc-first-baptist-school-charleston.png",
+    "LogoSourceUrl": "https://image.maxpreps.io/school-mascot/d/6/6/d66d398b-9da5-40bb-b95d-0c1c8d22d868.gif?version=633664756800000000&width=1024&height=1024"
   },
   {
     "SchoolID": "sc-florence-christian-school-florence",
@@ -2076,7 +2082,9 @@
     "Name": "Trinity Collegiate",
     "City": "Darlington",
     "State": "SC",
-    "Mascot": "Titans"
+    "Mascot": "Titans",
+    "LogoPath": "/images/schools/logos/sc-trinity-collegiate-darlington.png",
+    "LogoSourceUrl": "https://image.maxpreps.io/school-mascot/d/2/6/d26789a7-2fbb-4ddf-8b37-8aab7f01af7b.gif?version=638948233218665820&width=1024&height=1024"
   },
   {
     "SchoolID": "sc-w-wyman-king-academy-batesburg-leesville",

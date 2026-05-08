@@ -248,17 +248,24 @@ function computeCoachSummaries(seasonsWithGames) {
   return Array.from(coachMap.values())
     .map((entry) => {
       const totalGames = entry.wins + entry.losses + entry.ties;
-      const minSeason = Math.min(...entry.seasons);
+      const winPctValue = totalGames ? entry.wins / totalGames : 0;
       return {
         coach: entry.coach,
         years: entry.seasons.length,
+        wins: entry.wins,
+        totalGames,
         overall: totalGames ? formatRecord(entry.wins, entry.losses, entry.ties) : "-",
-        winPct: totalGames ? `${((entry.wins / totalGames) * 100).toFixed(1)}%` : "-",
+        winPct: totalGames ? `${(winPctValue * 100).toFixed(1)}%` : "-",
+        winPctValue,
         notes: entry.notes.join("\n"),
-        sortKey: Number.isFinite(minSeason) ? minSeason : 9999,
       };
     })
-    .sort((a, b) => b.sortKey - a.sortKey);
+    .sort((a, b) => {
+      if (b.wins !== a.wins) return b.wins - a.wins;
+      if (b.totalGames !== a.totalGames) return b.totalGames - a.totalGames;
+      if (b.winPctValue !== a.winPctValue) return b.winPctValue - a.winPctValue;
+      return a.coach.localeCompare(b.coach);
+    });
 }
 
 export default function YearlyResults({ data, status = "" }) {

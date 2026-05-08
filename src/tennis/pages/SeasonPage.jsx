@@ -108,20 +108,16 @@ function getOpponentSchool(match, schoolMap) {
   return schoolMap.get(String(match.OpponentSchoolID)) || null;
 }
 
-function getOpponentDisplayName(match, schoolMap) {
-  const school = getOpponentSchool(match, schoolMap);
-  return (
-    school?.Name ||
-    school?.ShortName ||
-    match?.Opponent ||
-    match?.Name ||
-    "Opponent"
-  );
+function getSchoolDisplayName(school) {
+  return school?.Name || school?.ShortName || null;
 }
 
-function getOpponentLogoPath(match, schoolMap) {
-  const school = getOpponentSchool(match, schoolMap);
+function getSchoolLogoPath(school) {
   return school?.LogoPath || school?.BracketLogoPath || null;
+}
+
+function getOpponentFallbackName(match) {
+  return match?.Opponent || match?.Name || "Opponent";
 }
 
 function getInitials(label = "") {
@@ -294,14 +290,16 @@ function SeasonMatchTable({ title, matches = [], schoolMap }) {
           <tbody>
             {matches.length ? (
               matches.map((match, index) => {
+                const opponentSchool =
+                  match.MatchType === "Tournament"
+                    ? null
+                    : getOpponentSchool(match, schoolMap);
                 const opponentName =
                   match.MatchType === "Tournament"
                     ? match.Name
-                    : getOpponentDisplayName(match, schoolMap);
-                const logoPath =
-                  match.MatchType === "Tournament"
-                    ? null
-                    : getOpponentLogoPath(match, schoolMap);
+                    : getSchoolDisplayName(opponentSchool) ||
+                      getOpponentFallbackName(match);
+                const logoPath = getSchoolLogoPath(opponentSchool);
                 const result = resultLabel(match);
                 const resultTone = result.startsWith("W")
                   ? "text-emerald-700"
@@ -322,7 +320,7 @@ function SeasonMatchTable({ title, matches = [], schoolMap }) {
                         {logoPath ? (
                           <img
                             src={logoPath}
-                            alt=""
+                            alt={`${opponentName} logo`}
                             className="h-8 w-8 shrink-0 object-contain"
                             loading="lazy"
                           />

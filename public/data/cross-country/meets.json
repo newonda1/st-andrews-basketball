@@ -143,6 +143,144 @@
     ]
   },
   {
+    "MeetID": 20050907,
+    "Season": 2006,
+    "Date": "2005-09-07",
+    "Name": "Augusta Prep Cross Country",
+    "Location": "Augusta Prep, Augusta, GA",
+    "Level": "Varsity",
+    "MeetType": "Regular Season",
+    "Status": "Complete",
+    "Notes": "Archive recap supplied for the September 7 cross country meet at Augusta Prep.",
+    "RecapParagraphs": [
+      "St. Andrew's finished 4th in the boys team standings with 102 points in a seven-team meet won by Aiken.",
+      "Ben Harrison led the boys by placing 9th in 20:33. Jon Moser placed 25th in 23:04, Ryan Kirby placed 33rd in 23:36, Alex Lucas ran 23:47, and Justin Hur placed 42nd in 24:01.",
+      "The St. Andrew's girls finished 5th with 142 points in a seven-team meet won by Aiken. Jessica Topolewski won the girls race in 26:36, followed by Michelle Griffin, Lily Adams, Stephanie Griffin, and Lizzie Verner for St. Andrew's."
+    ],
+    "TeamResults": [
+      {
+        "Gender": "Boys",
+        "Place": "1st",
+        "Team": "Aiken",
+        "Points": "19"
+      },
+      {
+        "Gender": "Boys",
+        "Place": "2nd",
+        "Team": "Augusta Prep",
+        "Points": "46"
+      },
+      {
+        "Gender": "Boys",
+        "Place": "3rd",
+        "Team": "Augusta Christian",
+        "Points": "85"
+      },
+      {
+        "Gender": "Boys",
+        "Place": "4th",
+        "Team": "St. Andrew's",
+        "Points": "102"
+      },
+      {
+        "Gender": "Girls",
+        "Place": "1st",
+        "Team": "Aiken",
+        "Points": "38"
+      },
+      {
+        "Gender": "Girls",
+        "Place": "2nd",
+        "Team": "Heathwood Hall",
+        "Points": "52"
+      },
+      {
+        "Gender": "Girls",
+        "Place": "3rd",
+        "Team": "Augusta Prep",
+        "Points": "53"
+      },
+      {
+        "Gender": "Girls",
+        "Place": "4th",
+        "Team": "Augusta Christian",
+        "Points": "75"
+      },
+      {
+        "Gender": "Girls",
+        "Place": "5th",
+        "Team": "St. Andrew's",
+        "Points": "142"
+      }
+    ]
+  },
+  {
+    "MeetID": 20051004,
+    "Season": 2006,
+    "Date": "2005-10-04",
+    "Name": "Hilton Head Prep 3.1 Mile",
+    "Location": "Hilton Head Prep, Hilton Head Island, SC",
+    "Level": "Varsity",
+    "MeetType": "Regular Season",
+    "Status": "Complete",
+    "Notes": "Archive recap supplied for the 3.1-mile meet at Hilton Head Prep.",
+    "RecapParagraphs": [
+      "St. Andrew's finished 3rd in both team races at Hilton Head Prep. The boys scored 77 points behind Bluffton and Hilton Head Prep, while the girls scored 88 points behind Hilton Head Prep and Hilton Head High.",
+      "Ben Harrison placed 2nd in the boys race in 19:37. John Moser ran 21:00, Alex Lucas ran 22:00, Ryan Kirby ran 22:18, and Scott Mullen ran 23:23.",
+      "Jessica Topolewski led the St. Andrew's girls in 26:17, followed by Michelle Griffin in 26:59, Stephanie Griffin in 27:01, Lily Adams in 28:26, and Lizzie Verner in 31:37."
+    ],
+    "TeamResults": [
+      {
+        "Gender": "Boys",
+        "Place": "1st",
+        "Team": "Bluffton",
+        "Points": "39"
+      },
+      {
+        "Gender": "Boys",
+        "Place": "2nd",
+        "Team": "Hilton Head Prep",
+        "Points": "44"
+      },
+      {
+        "Gender": "Boys",
+        "Place": "3rd",
+        "Team": "St. Andrew's",
+        "Points": "77"
+      },
+      {
+        "Gender": "Boys",
+        "Place": "4th",
+        "Team": "Hilton Head High",
+        "Points": "87"
+      },
+      {
+        "Gender": "Girls",
+        "Place": "1st",
+        "Team": "Hilton Head Prep",
+        "Points": "20"
+      },
+      {
+        "Gender": "Girls",
+        "Place": "2nd",
+        "Team": "Hilton Head High",
+        "Points": "38"
+      },
+      {
+        "Gender": "Girls",
+        "Place": "3rd",
+        "Team": "St. Andrew's",
+        "Points": "88"
+      },
+      {
+        "Gender": "Girls",
+        "Place": "4th",
+        "Team": "Bluffton",
+        "Points": "103"
+      }
+    ]
+  },
+  {
     "MeetID": 13937,
     "Season": 2006,
     "Date": "2005-10-29",

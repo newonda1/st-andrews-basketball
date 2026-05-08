@@ -239,7 +239,7 @@ function SeasonRecapSection({
   );
 }
 
-function SeasonImagesSection({ images = [] }) {
+function SeasonImagesSection({ images = [], seasonLabel = "" }) {
   const [imageIndex, setImageIndex] = useState(0);
 
   useEffect(() => {
@@ -253,7 +253,7 @@ function SeasonImagesSection({ images = [] }) {
         <div className="rounded-lg border border-dashed border-gray-300 bg-gray-50 px-6 py-12 text-center">
           <p className="text-base font-semibold text-gray-800">Season photo gallery coming soon</p>
           <p className="mt-2 text-sm leading-6 text-gray-600">
-            Photos from the 2003-04 girls basketball season will be added here.
+            Photos from the {seasonLabel || "selected"} girls basketball season will be added here.
           </p>
         </div>
       </section>
@@ -752,7 +752,7 @@ function MaxPrepsSeasonPage({
       ) : null}
 
       {showSeasonImagesPlaceholder || seasonImages.length ? (
-        <SeasonImagesSection images={seasonImages} />
+        <SeasonImagesSection images={seasonImages} seasonLabel={seasonLabel} />
       ) : null}
 
       {showSeasonRoster ? (
@@ -792,7 +792,7 @@ function MaxPrepsSeasonPage({
           )}
         </div>
 
-        {!showTeamTotals && (
+        {!showTeamTotals && games.length ? (
           <div className="grid gap-3 sm:hidden">
             {games.map((game) => {
               const logoPath = opponentLogoPath(game);
@@ -846,147 +846,148 @@ function MaxPrepsSeasonPage({
               );
             })}
           </div>
-        )}
+        ) : null}
 
-        <div
-          className={`${
-            !showTeamTotals ? "hidden sm:block" : ""
-          } overflow-x-auto rounded-lg border border-gray-200 bg-white shadow`}
-        >
-          {!showTeamTotals ? (
-            <table className="min-w-full bg-white text-sm">
-              <thead className="bg-gray-100 text-xs uppercase tracking-wide text-gray-700">
-                <tr>
-                  <th className="px-3 py-2 text-left">Date</th>
-                  <th className="px-3 py-2 text-left">Opponent</th>
-                  <th className="px-3 py-2 text-center">Location</th>
-                  <th className="px-3 py-2 text-center">Result</th>
-                  <th className="px-3 py-2 text-center">Score</th>
-                  <th className="px-3 py-2 text-center">Type</th>
-                </tr>
-              </thead>
-              <tbody>
-                {games.map((game, index) => {
-                  const logoPath = opponentLogoPath(game);
+        {games.length ? (
+          <div
+            className={`${
+              !showTeamTotals ? "hidden sm:block" : ""
+            } overflow-x-auto rounded-lg border border-gray-200 bg-white shadow`}
+          >
+            {!showTeamTotals ? (
+              <table className="min-w-full bg-white text-sm">
+                <thead className="bg-gray-100 text-xs uppercase tracking-wide text-gray-700">
+                  <tr>
+                    <th className="px-3 py-2 text-left">Date</th>
+                    <th className="px-3 py-2 text-left">Opponent</th>
+                    <th className="px-3 py-2 text-center">Location</th>
+                    <th className="px-3 py-2 text-center">Result</th>
+                    <th className="px-3 py-2 text-center">Score</th>
+                    <th className="px-3 py-2 text-center">Type</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {games.map((game, index) => {
+                    const logoPath = opponentLogoPath(game);
 
-                  return (
-                    <tr
-                      key={game.GameID}
-                      className={`border-t border-gray-200 ${
-                        index % 2 ? "bg-gray-50/70" : "bg-white"
-                      } hover:bg-gray-100`}
-                    >
-                      <td className="px-3 py-2 whitespace-nowrap">{formatDate(game)}</td>
-                      <td className="px-3 py-2">
-                        <div className="flex items-center gap-3">
-                          <div className="flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden">
-                            {logoPath ? (
-                              <img
-                                src={logoPath}
-                                alt=""
-                                className="h-full w-full object-contain"
-                                loading="lazy"
-                                onError={(event) => {
-                                  event.currentTarget.style.display = "none";
-                                }}
-                              />
-                            ) : null}
-                          </div>
-                          <div className="min-w-0">
-                            <Link
-                              to={`/athletics/girls/basketball/games/${game.GameID}`}
-                              className="text-blue-700 underline hover:text-blue-900"
-                            >
-                              {game.Opponent}
-                            </Link>
-                            {game.Tournament && (
-                              <div className="mt-0.5 text-xs leading-tight text-gray-500">
-                                {game.Tournament}
-                              </div>
-                            )}
-                          </div>
-                        </div>
-                      </td>
-                      <td className="px-3 py-2 text-center">{formatLocation(game)}</td>
-                      <td
-                        className={`px-3 py-2 text-center font-bold ${resultClassName(
-                          game.Result
-                        )}`}
+                    return (
+                      <tr
+                        key={game.GameID}
+                        className={`border-t border-gray-200 ${
+                          index % 2 ? "bg-gray-50/70" : "bg-white"
+                        } hover:bg-gray-100`}
                       >
-                        {game.Result || "-"}
-                      </td>
-                      <td className="px-3 py-2 text-center">{formatScore(game)}</td>
-                      <td className="px-3 py-2 text-center">
-                        {game.GameType || "Regular Season"}
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          ) : (
-            <table className="min-w-full bg-white text-xs sm:text-sm text-center whitespace-nowrap">
-              <thead className="bg-gray-100 text-xs uppercase tracking-wide text-gray-700">
-                <tr>
-                  <th className="px-2 py-2">Date</th>
-                  <th className="px-2 py-2">Opponent</th>
-                  <th className="px-2 py-2">REB</th>
-                  <th className="px-2 py-2">AST</th>
-                  <th className="px-2 py-2">TO</th>
-                  <th className="px-2 py-2">A/T</th>
-                  <th className="px-2 py-2">STL</th>
-                  <th className="px-2 py-2">BLK</th>
-                  {!trimShootingColumns && (
-                    <>
-                      <th className="px-2 py-2">3PM</th>
-                      <th className="px-2 py-2">3PA</th>
-                      <th className="px-2 py-2">3P%</th>
-                      <th className="px-2 py-2">2PM</th>
-                      <th className="px-2 py-2">2PA</th>
-                      <th className="px-2 py-2">2P%</th>
-                      <th className="px-2 py-2">FTM</th>
-                      <th className="px-2 py-2">FTA</th>
-                      <th className="px-2 py-2">FT%</th>
-                    </>
-                  )}
-                </tr>
-              </thead>
-              <tbody>
-                {games.map((game, index) => {
-                  const totals = teamTotalsByGameId.get(Number(game.GameID));
-
-                  return (
-                    <tr
-                      key={game.GameID}
-                      className={`border-t border-gray-200 ${
-                        index % 2 ? "bg-gray-50/70" : "bg-white"
-                      } hover:bg-gray-100`}
-                    >
-                      <td className="px-2 py-1.5">{formatDate(game)}</td>
-                      <td className="px-2 py-1.5">
-                        <Link
-                          to={`/athletics/girls/basketball/games/${game.GameID}`}
-                          className="text-blue-700 underline hover:text-blue-900"
+                        <td className="px-3 py-2 whitespace-nowrap">{formatDate(game)}</td>
+                        <td className="px-3 py-2">
+                          <div className="flex items-center gap-3">
+                            <div className="flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden">
+                              {logoPath ? (
+                                <img
+                                  src={logoPath}
+                                  alt=""
+                                  className="h-full w-full object-contain"
+                                  loading="lazy"
+                                  onError={(event) => {
+                                    event.currentTarget.style.display = "none";
+                                  }}
+                                />
+                              ) : null}
+                            </div>
+                            <div className="min-w-0">
+                              <Link
+                                to={`/athletics/girls/basketball/games/${game.GameID}`}
+                                className="text-blue-700 underline hover:text-blue-900"
+                              >
+                                {game.Opponent}
+                              </Link>
+                              {game.Tournament && (
+                                <div className="mt-0.5 text-xs leading-tight text-gray-500">
+                                  {game.Tournament}
+                                </div>
+                              )}
+                            </div>
+                          </div>
+                        </td>
+                        <td className="px-3 py-2 text-center">{formatLocation(game)}</td>
+                        <td
+                          className={`px-3 py-2 text-center font-bold ${resultClassName(
+                            game.Result
+                          )}`}
                         >
-                          {game.Opponent}
-                        </Link>
-                      </td>
-                      <td className="px-2 py-1.5">{totals ? totals.REB : "-"}</td>
-                      <td className="px-2 py-1.5">{totals ? totals.AST : "-"}</td>
-                      <td className="px-2 py-1.5">{totals ? totals.TO : "-"}</td>
-                      <td className="px-2 py-1.5">
-                        {totals ? assistToTurnover(totals.AST, totals.TO) : "-"}
-                      </td>
-                      <td className="px-2 py-1.5">{totals ? totals.STL : "-"}</td>
-                      <td className="px-2 py-1.5">{totals ? totals.BLK : "-"}</td>
-                      {!trimShootingColumns && (
-                        <>
-                          <td className="px-2 py-1.5">{totals ? totals.ThreePM : "-"}</td>
-                          <td className="px-2 py-1.5">{totals ? totals.ThreePA : "-"}</td>
-                          <td className="px-2 py-1.5">
-                            {totals ? statPct(totals.ThreePM, totals.ThreePA) : "-"}
-                          </td>
-                          <td className="px-2 py-1.5">{totals ? totals.TwoPM : "-"}</td>
+                          {game.Result || "-"}
+                        </td>
+                        <td className="px-3 py-2 text-center">{formatScore(game)}</td>
+                        <td className="px-3 py-2 text-center">
+                          {game.GameType || "Regular Season"}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            ) : (
+              <table className="min-w-full bg-white text-xs sm:text-sm text-center whitespace-nowrap">
+                <thead className="bg-gray-100 text-xs uppercase tracking-wide text-gray-700">
+                  <tr>
+                    <th className="px-2 py-2">Date</th>
+                    <th className="px-2 py-2">Opponent</th>
+                    <th className="px-2 py-2">REB</th>
+                    <th className="px-2 py-2">AST</th>
+                    <th className="px-2 py-2">TO</th>
+                    <th className="px-2 py-2">A/T</th>
+                    <th className="px-2 py-2">STL</th>
+                    <th className="px-2 py-2">BLK</th>
+                    {!trimShootingColumns && (
+                      <>
+                        <th className="px-2 py-2">3PM</th>
+                        <th className="px-2 py-2">3PA</th>
+                        <th className="px-2 py-2">3P%</th>
+                        <th className="px-2 py-2">2PM</th>
+                        <th className="px-2 py-2">2PA</th>
+                        <th className="px-2 py-2">2P%</th>
+                        <th className="px-2 py-2">FTM</th>
+                        <th className="px-2 py-2">FTA</th>
+                        <th className="px-2 py-2">FT%</th>
+                      </>
+                    )}
+                  </tr>
+                </thead>
+                <tbody>
+                  {games.map((game, index) => {
+                    const totals = teamTotalsByGameId.get(Number(game.GameID));
+
+                    return (
+                      <tr
+                        key={game.GameID}
+                        className={`border-t border-gray-200 ${
+                          index % 2 ? "bg-gray-50/70" : "bg-white"
+                        } hover:bg-gray-100`}
+                      >
+                        <td className="px-2 py-1.5">{formatDate(game)}</td>
+                        <td className="px-2 py-1.5">
+                          <Link
+                            to={`/athletics/girls/basketball/games/${game.GameID}`}
+                            className="text-blue-700 underline hover:text-blue-900"
+                          >
+                            {game.Opponent}
+                          </Link>
+                        </td>
+                        <td className="px-2 py-1.5">{totals ? totals.REB : "-"}</td>
+                        <td className="px-2 py-1.5">{totals ? totals.AST : "-"}</td>
+                        <td className="px-2 py-1.5">{totals ? totals.TO : "-"}</td>
+                        <td className="px-2 py-1.5">
+                          {totals ? assistToTurnover(totals.AST, totals.TO) : "-"}
+                        </td>
+                        <td className="px-2 py-1.5">{totals ? totals.STL : "-"}</td>
+                        <td className="px-2 py-1.5">{totals ? totals.BLK : "-"}</td>
+                        {!trimShootingColumns && (
+                          <>
+                            <td className="px-2 py-1.5">{totals ? totals.ThreePM : "-"}</td>
+                            <td className="px-2 py-1.5">{totals ? totals.ThreePA : "-"}</td>
+                            <td className="px-2 py-1.5">
+                              {totals ? statPct(totals.ThreePM, totals.ThreePA) : "-"}
+                            </td>
+                            <td className="px-2 py-1.5">{totals ? totals.TwoPM : "-"}</td>
                           <td className="px-2 py-1.5">{totals ? totals.TwoPA : "-"}</td>
                           <td className="px-2 py-1.5">
                             {totals ? statPct(totals.TwoPM, totals.TwoPA) : "-"}
@@ -996,15 +997,22 @@ function MaxPrepsSeasonPage({
                           <td className="px-2 py-1.5">
                             {totals ? statPct(totals.FTM, totals.FTA) : "-"}
                           </td>
-                        </>
-                      )}
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          )}
-        </div>
+                          </>
+                        )}
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            )}
+          </div>
+        ) : (
+          <div className="rounded-lg border border-dashed border-gray-300 bg-gray-50 px-6 py-10 text-center">
+            <p className="text-base font-semibold text-gray-800">
+              No schedule data is available for this season yet.
+            </p>
+          </div>
+        )}
       </section>
 
       <section>
@@ -1163,7 +1171,7 @@ function MaxPrepsSeasonPage({
           </>
         ) : (
           <p className="text-gray-600">
-            MaxPreps did not list player statistics for this season.
+            No individual stat totals are available for this season yet.
           </p>
         )}
       </section>

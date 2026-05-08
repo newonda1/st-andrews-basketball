@@ -29,6 +29,54 @@ function formatMeetDate(value) {
   return formatCrossCountryDate(value);
 }
 
+function isRelayEvent(event) {
+  return String(event || "").toLowerCase().includes("relay");
+}
+
+function buildRelayPerformanceRows(entries = [], playerMap = new Map(), meetMap = new Map()) {
+  const relayMap = new Map();
+
+  entries.forEach((entry) => {
+    const meet = meetMap.get(String(entry.MeetID));
+    const division = getCrossCountryDivision(entry, meet);
+    const raceLabel = cleanCrossCountryRaceLabel(entry.Race);
+    const comparableValue = parseCrossCountryTime(entry.Mark);
+    if (comparableValue == null) return;
+
+    const relayKey = [
+      division,
+      entry.Gender,
+      entry.Event,
+      entry.MeetID,
+      entry.Mark,
+      entry.Place || "",
+      entry.RelayTeam || raceLabel,
+    ].join("__");
+
+    if (!relayMap.has(relayKey)) {
+      relayMap.set(relayKey, {
+        ...entry,
+        StatID: relayKey,
+        division,
+        comparableValue,
+        raceLabel,
+        meetName: meet?.Name || "Unknown Meet",
+        meetDate: meet?.Date || null,
+        relayMembers: [],
+      });
+    }
+
+    relayMap.get(relayKey).relayMembers.push(
+      resolveCrossCountryAthleteName(entry, playerMap)
+    );
+  });
+
+  return Array.from(relayMap.values()).map((entry) => ({
+    ...entry,
+    athleteName: entry.relayMembers.join(", ") || "St. Andrew's Relay Team",
+  }));
+}
+
 export default function SchoolRecords({
   playerMeetStats = [],
   players = [],
@@ -42,19 +90,23 @@ export default function SchoolRecords({
     const meetMap = new Map(meets.map((meet) => [String(meet.MeetID), meet]));
     const grouped = new Map();
 
+    const individualEntries = [];
+    const relayEntries = [];
+
     playerMeetStats.forEach((entry) => {
       if (!entry?.Event || !entry?.Gender || !entry?.Mark) return;
 
       const comparableValue = parseCrossCountryTime(entry.Mark);
       if (comparableValue == null) return;
 
+      if (isRelayEvent(entry.Event)) {
+        relayEntries.push(entry);
+        return;
+      }
+
       const meet = meetMap.get(String(entry.MeetID));
       const division = getCrossCountryDivision(entry, meet);
-      const key = `${division}__${entry.Gender}__${entry.Event}`;
-
-      if (!grouped.has(key)) grouped.set(key, []);
-
-      grouped.get(key).push({
+      individualEntries.push({
         ...entry,
         division,
         comparableValue,
@@ -63,6 +115,18 @@ export default function SchoolRecords({
         meetName: meet?.Name || "Unknown Meet",
         meetDate: meet?.Date || null,
       });
+    });
+
+    const performanceRows = individualEntries.concat(
+      buildRelayPerformanceRows(relayEntries, playerMap, meetMap)
+    );
+
+    performanceRows.forEach((entry) => {
+      const key = `${entry.division}__${entry.Gender}__${entry.Event}`;
+
+      if (!grouped.has(key)) grouped.set(key, []);
+
+      grouped.get(key).push(entry);
     });
 
     const bySection = new Map();
@@ -123,16 +187,16 @@ export default function SchoolRecords({
         School Records
       </h1>
       <p className="-mt-1.5 text-center text-[clamp(0.9rem,2vw,1rem)] italic text-gray-600">
-        Select any distance to see the St. Andrew&apos;s times currently loaded
-        for that level, gender, and distance
+        Select any distance or relay event to see the St. Andrew&apos;s times
+        currently loaded for that level and gender
       </p>
 
       <div className="overflow-x-auto">
         <table className={recordTableStyles.outerTable}>
           <thead className="bg-gray-200 font-bold">
             <tr>
-              <th className={recordTableStyles.headerCell}>Distance</th>
-              <th className={recordTableStyles.headerCell}>Athlete</th>
+              <th className={recordTableStyles.headerCell}>Distance / Event</th>
+              <th className={recordTableStyles.headerCell}>Athlete / Team</th>
               <th className={recordTableStyles.headerCell}>Best Time</th>
               <th className={recordTableStyles.headerCell}>Date</th>
               <th className={recordTableStyles.headerCell}>Meet</th>
@@ -198,7 +262,7 @@ export default function SchoolRecords({
                                         Rank
                                       </th>
                                       <th className={recordTableStyles.headerCell}>
-                                        Athlete
+                                        Athlete / Team
                                       </th>
                                       <th className={recordTableStyles.headerCell}>
                                         Time

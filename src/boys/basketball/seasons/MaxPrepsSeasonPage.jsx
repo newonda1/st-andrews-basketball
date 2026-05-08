@@ -289,7 +289,7 @@ function SeasonRecapSection({
   );
 }
 
-function SeasonImagesSection({ images = [] }) {
+function SeasonImagesSection({ images = [], seasonLabel = "" }) {
   const [imageIndex, setImageIndex] = useState(0);
 
   useEffect(() => {
@@ -383,7 +383,7 @@ function SeasonImagesSection({ images = [] }) {
       <div className="rounded-lg border border-dashed border-gray-300 bg-gray-50 px-6 py-12 text-center">
         <p className="text-base font-semibold text-gray-800">Season photo gallery coming soon</p>
         <p className="mt-2 text-sm leading-6 text-gray-600">
-          Photos from the 2003-04 boys basketball season will be added here.
+          Photos from the {seasonLabel || "this"} boys basketball season will be added here.
         </p>
       </div>
     </section>
@@ -792,7 +792,7 @@ function MaxPrepsSeasonPage({
       )}
 
       {showSeasonImagesPlaceholder || seasonImages.length ? (
-        <SeasonImagesSection images={seasonImages} />
+        <SeasonImagesSection images={seasonImages} seasonLabel={seasonLabel} />
       ) : null}
 
       {showSeasonRoster ? (

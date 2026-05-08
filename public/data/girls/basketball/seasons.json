@@ -20,6 +20,16 @@
     "StateFinish": "State Final Four"
   },
   {
+    "SeasonID": 2005,
+    "YearStart": 2005,
+    "YearEnd": 2006,
+    "HeadCoach": null,
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
     "SeasonID": 2006,
     "YearStart": 2006,
     "YearEnd": 2007,

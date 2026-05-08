@@ -197,6 +197,25 @@ function YearlyResults() {
       }
     });
 
+    Object.keys(seasonMeta).forEach((seasonKey) => {
+      if (!grouped[seasonKey]) {
+        grouped[seasonKey] = {
+          overallW: null,
+          overallL: null,
+          regionW: null,
+          regionL: null,
+          homeW: null,
+          homeL: null,
+          awayW: null,
+          awayL: null,
+          tourneyW: null,
+          tourneyL: null,
+          playoffW: null,
+          playoffL: null,
+        };
+      }
+    });
+
     // Apply adjustments (numbers override computed values; null forces an unknown "–" display)
     const overrideKeys = [
       "overallW",
