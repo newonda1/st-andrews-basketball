@@ -1484,6 +1484,13 @@
     "State": "SC"
   },
   {
+    "SchoolID": "sc-ashley-hall-charleston",
+    "Name": "Ashley Hall",
+    "City": "Charleston",
+    "State": "SC",
+    "LogoPath": "/images/schools/logos/sc-ashley-hall-charleston.svg"
+  },
+  {
     "SchoolID": "sc-archibald-rutledge-academy-mcclellanville",
     "Name": "Archibald Rutledge Academy",
     "City": "McClellanville",

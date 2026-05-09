@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Ashley Hall Panthers paw logo</title>
+  <desc id="desc">A purple Ashley Hall Panthers paw logo with white AH letters on a transparent background.</desc>
+  <g fill="#7d5bc7" stroke="#ffffff" stroke-linejoin="round" stroke-width="16">
+    <ellipse cx="160" cy="205" rx="58" ry="80" transform="rotate(-18 160 205)" />
+    <ellipse cx="235" cy="148" rx="59" ry="82" transform="rotate(8 235 148)" />
+    <ellipse cx="318" cy="148" rx="59" ry="82" transform="rotate(-8 318 148)" />
+    <ellipse cx="392" cy="205" rx="58" ry="80" transform="rotate(18 392 205)" />
+    <path d="M143 357c0-92 53-156 133-156s133 64 133 156c0 45-25 66-63 60-22-4-44-14-70-14s-48 10-70 14c-38 6-63-15-63-60Z" />
+  </g>
+  <g fill="#ffffff" font-family="Georgia, 'Times New Roman', serif" font-weight="700" text-anchor="middle">
+    <text x="276" y="352" font-size="118" letter-spacing="-7">AH</text>
+  </g>
+</svg>
