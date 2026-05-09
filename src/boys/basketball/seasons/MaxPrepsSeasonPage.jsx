@@ -4,7 +4,6 @@ import {
   RegionBracket5GameSVG,
   StateBracket16GameSVG,
 } from "../components/GameCardBracketsSVG";
-import { recordTableStyles } from "../pages/recordTableStyles";
 import {
   BOYS_BASKETBALL_ROSTERS_PATH,
   SCHOOLS_PATH,
@@ -112,14 +111,19 @@ function resultClassName(result) {
 }
 
 function RosterTableBlock({ rows }) {
+  const rosterHeaderCellClassName =
+    "border px-2 py-2 font-bold leading-tight whitespace-nowrap md:px-3";
+  const rosterBodyCellClassName =
+    "border px-2 py-1.5 align-middle whitespace-nowrap leading-tight md:px-3";
+
   return (
     <div className="overflow-x-auto rounded-lg border border-gray-200 bg-white shadow">
       <table className="min-w-full bg-white text-sm text-center">
         <thead className="bg-gray-100 text-xs uppercase tracking-wide text-gray-700">
           <tr>
-            <th className={`${recordTableStyles.headerCell} whitespace-nowrap`}>No.</th>
-            <th className={`${recordTableStyles.headerCell} text-left`}>Player</th>
-            <th className={`${recordTableStyles.headerCell} whitespace-nowrap`}>Grade</th>
+            <th className={rosterHeaderCellClassName}>No.</th>
+            <th className={`${rosterHeaderCellClassName} text-left`}>Player</th>
+            <th className={rosterHeaderCellClassName}>Grade</th>
           </tr>
         </thead>
         <tbody>
@@ -131,10 +135,8 @@ function RosterTableBlock({ rows }) {
                   index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
                 } hover:bg-gray-100`}
               >
-                <td className={`${recordTableStyles.bodyCell} whitespace-nowrap`}>
-                  {row.jersey || "-"}
-                </td>
-                <td className={`${recordTableStyles.bodyCell} text-left`}>
+                <td className={rosterBodyCellClassName}>{row.jersey || "-"}</td>
+                <td className={`${rosterBodyCellClassName} text-left`}>
                   {row.path ? (
                     <Link to={row.path} className="text-blue-600 hover:underline">
                       {row.name}
@@ -143,14 +145,12 @@ function RosterTableBlock({ rows }) {
                     <span>{row.name}</span>
                   )}
                 </td>
-                <td className={`${recordTableStyles.bodyCell} whitespace-nowrap`}>
-                  {formatGrade(row.grade)}
-                </td>
+                <td className={rosterBodyCellClassName}>{formatGrade(row.grade)}</td>
               </tr>
             ))
           ) : (
             <tr>
-              <td className={`${recordTableStyles.bodyCell} text-center text-slate-600`} colSpan={3}>
+              <td className={`${rosterBodyCellClassName} text-center text-slate-600`} colSpan={3}>
                 No roster data is available for this season yet.
               </td>
             </tr>
@@ -741,6 +741,9 @@ function MaxPrepsSeasonPage({
 
   const bracket = bracketsData?.[String(seasonId)];
   const shouldShowStringRecap = Boolean(splitParagraphs(seasonRecap).length);
+  const scheduleHeaderCellClassName = "px-2 py-2 text-center text-xs whitespace-nowrap";
+  const scheduleBodyCellClassName = "px-2 py-1.5 text-center align-middle whitespace-nowrap";
+  const scheduleOpponentCellClassName = "px-2 py-1.5 align-middle";
   const statsHeaderCellClassName = "px-2 py-2 text-center text-xs whitespace-nowrap";
   const statsBodyCellClassName = "px-2 py-1.5 text-center whitespace-nowrap";
   const statsFooterCellClassName = "px-2 py-2 text-center whitespace-nowrap";
@@ -870,12 +873,12 @@ function MaxPrepsSeasonPage({
           <table className="min-w-full bg-white text-sm">
             <thead className="bg-gray-100 text-xs uppercase tracking-wide text-gray-700">
               <tr>
-                <th className="px-3 py-2 text-left">Date</th>
-                <th className="px-3 py-2 text-left">Opponent</th>
-                <th className="px-3 py-2 text-center">Location</th>
-                <th className="px-3 py-2 text-center">Result</th>
-                <th className="px-3 py-2 text-center">Score</th>
-                <th className="px-3 py-2 text-center">Type</th>
+                <th className={`${scheduleHeaderCellClassName} text-left`}>Date</th>
+                <th className={`${scheduleHeaderCellClassName} text-left`}>Opponent</th>
+                <th className={scheduleHeaderCellClassName}>Location</th>
+                <th className={scheduleHeaderCellClassName}>Result</th>
+                <th className={scheduleHeaderCellClassName}>Score</th>
+                <th className={scheduleHeaderCellClassName}>Type</th>
               </tr>
             </thead>
             <tbody>
@@ -889,10 +892,12 @@ function MaxPrepsSeasonPage({
                       index % 2 ? "bg-gray-50/70" : "bg-white"
                     } hover:bg-gray-100`}
                   >
-                    <td className="px-3 py-2 whitespace-nowrap">{formatDate(game.GameID)}</td>
-                    <td className="px-3 py-2">
-                      <div className="flex items-center gap-3">
-                        <div className="flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden">
+                    <td className={`${scheduleBodyCellClassName} text-left`}>
+                      {formatDate(game.GameID)}
+                    </td>
+                    <td className={scheduleOpponentCellClassName}>
+                      <div className="flex items-center gap-2">
+                        <div className="flex h-6 w-6 shrink-0 items-center justify-center overflow-hidden">
                           {logoPath ? (
                             <img
                               src={logoPath}
@@ -920,12 +925,18 @@ function MaxPrepsSeasonPage({
                         </div>
                       </div>
                     </td>
-                    <td className="px-3 py-2 text-center">{formatLocation(game)}</td>
-                    <td className={`px-3 py-2 text-center font-bold ${resultClassName(game.Result)}`}>
+                    <td className={scheduleBodyCellClassName}>{formatLocation(game)}</td>
+                    <td
+                      className={`${scheduleBodyCellClassName} font-bold ${resultClassName(
+                        game.Result
+                      )}`}
+                    >
                       {game.Result || "-"}
                     </td>
-                    <td className="px-3 py-2 text-center">{formatScore(game)}</td>
-                    <td className="px-3 py-2 text-center">{game.GameType || "Regular Season"}</td>
+                    <td className={scheduleBodyCellClassName}>{formatScore(game)}</td>
+                    <td className={scheduleBodyCellClassName}>
+                      {game.GameType || "Regular Season"}
+                    </td>
                   </tr>
                 );
               })}

@@ -6523,7 +6523,9 @@
     "TeamScore": 61,
     "OpponentScore": 35,
     "Season": 2005,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "RecapTitle": "Cooper's double-double leads St. Andrew's past Bible Baptist",
+    "Recap": "Jamie Cooper posted a double-double with 20 points and 10 rebounds as St. Andrew's opened the 2005-06 season with a 61-35 win over Bible Baptist on Monday night.\n\nRoss Glendye added 13 points and Thomas Withers scored 12 for the Saints, who rolled to a comfortable home victory in non-region play."
   },
   {
     "GameID": 20051129,
@@ -6535,7 +6537,9 @@
     "TeamScore": 55,
     "OpponentScore": 50,
     "Season": 2005,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "RecapTitle": "Withers' late foul shots seal St. Andrew's win over Patrick Henry",
+    "Recap": "Thomas Withers hit three of four foul shots in the final 20 seconds as St. Andrew's held off Patrick Henry 55-50 in a non-region game.\n\nRoss Glendye led St. Andrew's with 21 points, while Withers added 13 and Kevin Crouch scored 10. Jamie Cooper added 6 points, Ryan Kirby had 3, and Bryan Lee scored 2 for the Saints.\n\nPatrick Henry led 31-27 at halftime behind Stan Swofford's 18 points, Perry Gifferd's 13, and Vance Millerloadhat's 12. The win moved St. Andrew's to 2-0, while Patrick Henry fell to 0-1."
   },
   {
     "GameID": 20051201,
@@ -6547,7 +6551,15 @@
     "TeamScore": 67,
     "OpponentScore": 64,
     "Season": 2005,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "RecapTitle": "SAINTS GET CLOSE VICTORY AGAINST ABUNDANT LIFE",
+    "Recap": "ST. ANDREW'S 67, ABUNDANT LIFE 64\n\nSt. Andrew's gave Abundant Life plenty of chances to win Thursday night.\n\nThe Cougars missed six of seven free throws in the last minute, allowing St. Andrew's to walk away with a 67-64 boys' basketball win at home.\n\n\"We've still got a lot of inexperience, and that showed tonight,\" said St. Andrew's coach Dave Clay. \"We're 3-0, so these guys are learning how to win. This is the type of game we would have lost last year, but we pulled this one out.\"\n\nThe smaller Cougars (0-1), of Hardeeville, S.C., had a difficult time in the paint, as St. Andrew's played five players 6-foot-2 or taller.\n\n\"We were a little surprised when we saw them come out for warm-ups, because nothing we'd been told about them indicated they were that big,\" said Abundant Life coach Chris Bowman. \"But our guys battled out there, and we almost came back and got it. It was good to see my guys get back in it.\"\n\nAfter trailing by as much as 15 early in the second half, the Cougars came to life.\n\nThey closed out the last five minutes of the third quarter with a 16-5 run to pull within five, 51-47, entering the final quarter.\n\nDusty Kimberly's 3-pointer just 15 seconds into the fourth quarter pulled the Cougars within one before the Saints put together an 11-2 run for some breathing room.\n\nKimberly finished with a game-high 21 points.\n\n\"Dusty plays like a big man trapped in a little man's body,\" Bowman said. \"He plays tough, he gets knocked down, and he gets right back up and gets at it.\"\n\nKimberly was fouled on a 3-point attempt with 22 seconds left, and a technical foul was called on a St. Andrew's player for arguing the call.\n\nKimberly missed all three of his free throws, and Brent Hayes missed the two for the technical.\n\nIn all, the Cougars were 6-for-16 from the charity stripe in the fourth quarter, and shot only 41 percent from there for the game.\n\n\"We gave them plenty of opportunities to win,\" said Clay. \"We were fortunate they missed those free throws.\"\n\nThe Saints led 16-11 after a quarter, but Kimberly's 3-pointer with four minutes left in the first half gave the Cougars their only lead of the game, 20-19.\n\nSt. Andrew's answered with a 22-8 run, including 10 from Ross Glendye, to go into the half up by 13, 41-28.\n\nGlendye finished with 17; Brian Lee led the Saints with 20.\n\n\"Each game we've had a different young guy step up for us, and that's important right now,\" Clay said. \"We don't have one guy that opponents can concentrate on, and that's going to help us this year.\"\n\nST. ANDREW'S (67)\n\nBrian Lee 20, Ross Glendye 17, Thomas Withers 11, Crouch 9, Malecki 5, Harrison 3, Miller 2.\n\nABUNDANT LIFE (64)\n\nDusty Kimberly 21, Brent Hayes 15, Aaron Ager 13, Kyle Bowman 11, Prichard 4.\n\nHalftime-SA, 41-28. Records-AL 0-1, SA 3-0.",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "SourceDate": "December 2, 2005",
+    "SourceAuthor": "Christopher Lancia",
+    "SourceByline": "Christopher Lancia 912.652.0329 christopher.lancia@savannahnow.com",
+    "SourcePage": "1D",
+    "SourceSection": "SPORTS"
   },
   {
     "GameID": 20051202,
@@ -6555,11 +6567,15 @@
     "Opponent": "Bible Baptist School",
     "LocationType": "Home",
     "GameType": "Tournament",
+    "Tournament": "St. Andrew's Tip-Off Tournament",
     "Result": "W",
     "TeamScore": 66,
     "OpponentScore": 57,
     "Season": 2005,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "RecapTitle": "Vine leads St. Andrew's past Bible Baptist in Tip-Off Tournament",
+    "Recap": "Billy Vine scored 14 points, Ross Glendye and Bryan Lee scored 12 points apiece, and Thomas Withers chipped in 10 as St. Andrew's defeated Bible Baptist 66-57 in the St. Andrew's Tip-Off Tournament.\n\nThe Saints improved to 4-0 after leading 37-25 at halftime. Gian Maleki added 6 points, while Ryan Kirby, Kevin Crouch, Steven Carbone, and Ben Harrison scored 2 apiece.\n\nBible Baptist was led by Rocky Colson's game-high 30 points. Blake Moore added 13 points and Terry Thomas had 10 for the Braves, who fell to 0-3.",
+    "SourceNote": "User-provided box score for Dec. 2, 2005 lists named St. Andrew's scorers totaling 62 points against a reported team score of 66; the named player scoring rows preserve the supplied box score."
   },
   {
     "GameID": 20051203,
@@ -6567,23 +6583,29 @@
     "Opponent": "Providence Christian",
     "LocationType": "Home",
     "GameType": "Tournament",
+    "Tournament": "St. Andrew's Tip-Off Tournament",
     "Result": "L",
     "TeamScore": 54,
     "OpponentScore": 79,
     "Season": 2005,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "RecapTitle": "Providence outruns St. Andrew's in Tip-Off Tournament final",
+    "Recap": "Point guard Justin Gates scored 20 of his 32 points in the first half as Providence Christian out-ran St. Andrew's 79-54 in the championship game of the St. Andrew's Tip-Off Tournament.\n\nAntron Floyd added 15 for Providence, which improved to 8-3 after leading 48-22 at halftime.\n\nThomas Withers scored 20 points and Ross Glendye added 13 for the Saints, who fell to 4-1. Gian Maleki had 5 points, Kevin Crouch scored 6, Billy Vine added 7, Alex Chu had 1, and Bryan Lee scored 2."
   },
   {
     "GameID": 20051206,
     "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
     "Opponent": "Hilton Head Christian Academy",
-    "LocationType": "Away",
+    "LocationType": "Neutral",
     "GameType": "Tournament",
+    "Tournament": "Colleton Prep Holiday Tournament",
     "Result": "L",
     "TeamScore": 38,
     "OpponentScore": 75,
     "Season": 2005,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "RecapTitle": "Hilton Head Christian beats St. Andrew's in Colleton Prep opener",
+    "Recap": "Jonathan Gort led three Hilton Head Christian players in double figures with 14 points as the Eagles beat St. Andrew's 75-38 in the first round of the Colleton Prep Holiday Tournament in Hilton Head Island, S.C.\n\nThomas Withers led the Saints with 11 points. Bryan Lee added 9, Gian Maleki scored 7, Kevin Crouch and Jamie Cooper each had 4, Ross Glendye scored 2, and Billy Vine added 1.\n\nHilton Head Christian led 35-15 at halftime. The loss dropped St. Andrew's to 4-2."
   },
   {
     "GameID": 20051208,
@@ -6591,6 +6613,7 @@
     "Opponent": "Holly Hill Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
+    "Tournament": "Colleton Prep Holiday Tournament",
     "Result": "L",
     "TeamScore": 39,
     "OpponentScore": 57,
@@ -6603,11 +6626,15 @@
     "Opponent": "Jefferson Davis Academy",
     "LocationType": "Neutral",
     "GameType": "Tournament",
+    "Tournament": "Colleton Prep Holiday Tournament",
     "Result": "L",
     "TeamScore": 53,
     "OpponentScore": 60,
     "Season": 2005,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "RecapTitle": "Jeff Davis holds off St. Andrew's in Colleton Prep consolation game",
+    "Recap": "Jeff Davis Academy built a seven-point halftime lead and held on for a 60-53 win over St. Andrew's in a consolation game in the Colleton Prep Holiday Tournament in Walterboro, S.C.\n\nJeremy Roland led the Raiders with 20 points, while Brian Williams added 15 and John Owens scored 12.\n\nRoss Glendye led the Saints with 13 points. Thomas Withers and Jamie Cooper each scored 11, Kevin Crouch added 10, Gian Maleki had 6, and Bryan Lee scored 2. Jeff Davis led 32-25 at halftime. The loss dropped St. Andrew's to 4-4, while Jeff Davis improved to 3-4.",
+    "SourceNote": "User-provided recap text says Ross Glendye led St. Andrew's with 12 points, while the supplied box score lists Glendye with 13. The player stat row and recap scoring line follow the box score so St. Andrew's totals reconcile to 53."
   },
   {
     "GameID": 20051216,

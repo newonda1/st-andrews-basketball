@@ -92283,7 +92283,7 @@
     "StatComplete": "Yes",
     "Minutes": null,
     "Points": 20,
-    "Rebounds": null,
+    "Rebounds": 10,
     "Assists": null,
     "Turnovers": null,
     "Steals": null,

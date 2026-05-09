@@ -1467,7 +1467,8 @@
     "SchoolID": "sc-abundant-life-academy-hardeeville",
     "Name": "Abundant Life Academy",
     "City": "Hardeeville",
-    "State": "SC"
+    "State": "SC",
+    "LogoPath": "/images/schools/logos/sc-abundant-life-academy-hardeeville.svg"
   },
   {
     "SchoolID": "sc-aiken-christian-school-aiken",
