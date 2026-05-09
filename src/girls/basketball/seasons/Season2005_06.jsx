@@ -1,9 +1,15 @@
 import React from "react";
 import MaxPrepsSeasonPage from "./MaxPrepsSeasonPage";
 
-const seasonRecap = `The 2005-06 girls basketball season page is ready for archive work. Results, roster details, articles, photos, and season notes will be added here as they are recovered.
+const seasonRecap = `The 2005-06 St. Andrew's girls basketball team entered the winter as the defending SCISA Class AA champion and built the season around a deep senior group, point guard Meghan Miller, and the frontcourt scoring of Grace, Mary, and Rose Wilkowski. A Savannah Morning News preseason feature framed the year around the three sisters, who gave Michael Bennet's team the scoring balance and championship expectations that followed a state title and a second straight volleyball championship. Read the 2005 Savannah Morning News girls basketball preview.
 
-A Savannah Morning News preseason feature framed the year around Grace, Mary, and Rose Wilkowski, who entered the winter as the core of a St. Andrew's team favored to defend its SCISA Class AA title. Read the 2005 Savannah Morning News girls basketball preview.`;
+The Saints opened 5-0, split their two recovered College Prep Holiday Tournament games, and bounced back from the Ashley Hall loss with an away win at Beaufort Academy. They then moved through January with wins over Trinity Collegiate, Hilton Head Christian, Thomas Heyward, Beaufort Academy, Memorial Day, Pinewood Christian, and Ashley Hall. Grace Wilkowski set the school's career scoring record against Trinity Collegiate, Mary Wilkowski continued to anchor the glass, and Rose Wilkowski gave the Saints a third double-figure scoring option.
+
+By early February, St. Andrew's had secured a state tournament place and reached the SCISA Region 4-AAA tournament final at Hilton Head Christian before falling to Hilton Head Prep. A March 1 Savannah Morning News state tournament preview captured the team's mindset entering the SCISA Class AA quarterfinals, highlighting Miller's MVP season, Bennet's nine-player confidence, and the Saints' goal of cutting down the nets again. Read Noell Barnidge's state tournament preview.
+
+At the Sumter County Exhibition Center, the Saints beat Williamsburg Academy in the quarterfinals, routed Greenwood Christian in the semifinals as Grace Wilkowski reached 2,000 career points, and defeated Trinity Collegiate 54-40 for a second straight SCISA Class AA championship. Mary Wilkowski led the title game with 23 points, Grace Wilkowski, Mary Wilkowski, and Megan Hall earned all-tournament honors, and the six seniors finished with the championship legacy the Savannah Morning News later praised in its opinion pages. Read the post-championship Savannah Morning News opinion piece.
+
+Chris Lancia's post-title feature traced the group back to a sixth-grade SPAL championship team and framed the roster as a true family, with the Wilkowski sisters and Griffin twins surrounded by a senior class that had grown up together. The Senior Speak section gave that bond a chorus of voices, from Kristen Albritton calling the title a fairy tale to Grace Wilkowski saying there was nothing better than winning her last game. Grace finished with a school-record 2,017 points and more than 1,000 rebounds, while Bennet described a program standard built around expecting to play on the last Saturday of the season. Read Chris Lancia's feature on the Saints' championship family.`;
 
 const seasonImages = [
   {
@@ -82,11 +88,23 @@ export default function Season2005_06() {
           Text: "Read the 2005 Savannah Morning News girls basketball preview.",
           ArticleID: "20051119-hardwood-heroines",
         },
+        {
+          Text: "Read Noell Barnidge's state tournament preview.",
+          ArticleID: "20060301-looking-to-climb-ladder-again",
+        },
+        {
+          Text: "Read the post-championship Savannah Morning News opinion piece.",
+          ArticleID: "20060307-champs-on-campus",
+        },
+        {
+          Text: "Read Chris Lancia's feature on the Saints' championship family.",
+          ArticleID: "20060308-family-on-and-off-court",
+        },
       ]}
       seasonBriefs={[
-        { label: "Record", value: "-" },
+        { label: "Record", value: "24-4" },
         { label: "Coach", value: "Michael Bennet" },
-        { label: "Finish", value: "-" },
+        { label: "Finish", value: "SCISA Class AA Champions" },
       ]}
       hideSeasonArticles
       seasonImages={seasonImages}

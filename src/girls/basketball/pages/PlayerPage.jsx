@@ -125,6 +125,8 @@ function PlayerPage() {
   const [games, setGames] = useState([]);
   const [seasonRosters, setSeasonRosters] = useState([]);
   const [playerStats, setPlayerStats] = useState([]);
+  const [seasonAdjustments, setSeasonAdjustments] = useState([]);
+  const [careerAdjustments, setCareerAdjustments] = useState([]);
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -135,13 +137,24 @@ function PlayerPage() {
   useEffect(() => {
     async function loadData() {
       try {
-        const [playersRes, gamesRes, statsRes, rostersRes, schoolsRes, articlesRes] =
+        const [
+          playersRes,
+          gamesRes,
+          statsRes,
+          rostersRes,
+          schoolsRes,
+          adjustmentsRes,
+          careerAdjustmentsRes,
+          articlesRes,
+        ] =
           await Promise.all([
             fetch("/data/players.json"),
             fetch("/data/girls/basketball/games.json"),
             fetch("/data/girls/basketball/playergamestats.json"),
             fetch(GIRLS_BASKETBALL_ROSTERS_PATH),
             fetch(SCHOOLS_PATH),
+            fetch("/data/girls/basketball/adjustments.json").catch(() => null),
+            fetch("/data/girls/basketball/careeradjustments.json").catch(() => null),
             fetch("/data/girls/basketball/articles.json").catch(() => null),
           ]);
 
@@ -151,13 +164,24 @@ function PlayerPage() {
         if (!rostersRes.ok) throw new Error(`seasonrosters.json ${rostersRes.status}`);
         if (!schoolsRes.ok) throw new Error(`schools.json ${schoolsRes.status}`);
 
-        const [playersData, gamesDataRaw, statsData, rostersData, schoolsData, articlesData] =
+        const [
+          playersData,
+          gamesDataRaw,
+          statsData,
+          rostersData,
+          schoolsData,
+          adjustmentsData,
+          careerAdjustmentsData,
+          articlesData,
+        ] =
           await Promise.all([
             playersRes.json(),
             gamesRes.json(),
             statsRes.json(),
             rostersRes.json(),
             schoolsRes.json(),
+            adjustmentsRes?.ok ? adjustmentsRes.json() : Promise.resolve([]),
+            careerAdjustmentsRes?.ok ? careerAdjustmentsRes.json() : Promise.resolve([]),
             articlesRes?.ok ? articlesRes.json() : Promise.resolve([]),
           ]);
 
@@ -165,6 +189,10 @@ function PlayerPage() {
         setGames(hydrateGamesWithSchools(gamesDataRaw, schoolsData));
         setSeasonRosters(Array.isArray(rostersData) ? rostersData : []);
         setPlayerStats(statsData);
+        setSeasonAdjustments(Array.isArray(adjustmentsData) ? adjustmentsData : []);
+        setCareerAdjustments(
+          Array.isArray(careerAdjustmentsData) ? careerAdjustmentsData : []
+        );
         setArticles(Array.isArray(articlesData) ? articlesData : []);
       } catch (err) {
         console.error("Error loading player page data:", err);
@@ -264,10 +292,32 @@ function PlayerPage() {
       });
     });
 
+    seasonAdjustments
+      .filter((adjustment) => Number(adjustment.PlayerID) === Number(playerId))
+      .forEach((adjustment) => {
+        const seasonKey = adjustment.SeasonID || "Unknown";
+
+        if (!seasonMap[seasonKey]) {
+          seasonMap[seasonKey] = { season: seasonKey, gamesPlayed: 0 };
+          statKeys.forEach((key) => (seasonMap[seasonKey][key] = 0));
+        }
+
+        if (adjustment.GamesPlayed !== null && adjustment.GamesPlayed !== undefined) {
+          seasonMap[seasonKey].gamesPlayed += Number(adjustment.GamesPlayed) || 0;
+        }
+
+        statKeys.forEach((key) => {
+          if (adjustment[key] === null || adjustment[key] === undefined || adjustment[key] === "") {
+            return;
+          }
+          seasonMap[seasonKey][key] += Number(adjustment[key]) || 0;
+        });
+      });
+
     return Object.values(seasonMap).sort((a, b) =>
       String(a.season).localeCompare(String(b.season))
     );
-  }, [statsWithGameInfo]);
+  }, [playerId, seasonAdjustments, statsWithGameInfo]);
 
   const careerTotals = useMemo(() => {
     const base = {
@@ -279,8 +329,43 @@ function PlayerPage() {
       base[key] = seasonTotals.reduce((t, s) => t + (s[key] || 0), 0);
     });
 
+    careerAdjustments
+      .filter((adjustment) => Number(adjustment.PlayerID) === Number(playerId))
+      .forEach((adjustment) => {
+        if (adjustment.GamesPlayed !== null && adjustment.GamesPlayed !== undefined) {
+          base.gamesPlayed += Number(adjustment.GamesPlayed) || 0;
+        }
+
+        statKeys.forEach((key) => {
+          const overrideKey = `${key}Override`;
+
+          if (
+            adjustment[key] !== null &&
+            adjustment[key] !== undefined &&
+            adjustment[key] !== ""
+          ) {
+            base[key] += Number(adjustment[key]) || 0;
+          }
+
+          if (
+            adjustment[overrideKey] !== null &&
+            adjustment[overrideKey] !== undefined &&
+            adjustment[overrideKey] !== ""
+          ) {
+            base[key] = Number(adjustment[overrideKey]) || 0;
+          }
+        });
+
+        if (
+          adjustment.GamesPlayedOverride !== null &&
+          adjustment.GamesPlayedOverride !== undefined
+        ) {
+          base.gamesPlayed = Number(adjustment.GamesPlayedOverride) || 0;
+        }
+      });
+
     return base;
-  }, [seasonTotals]);
+  }, [careerAdjustments, playerId, seasonTotals]);
 
   const relatedArticles = useMemo(() => {
     const idNum = Number(playerId);

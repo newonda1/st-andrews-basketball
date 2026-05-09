@@ -156,6 +156,22 @@ function addSeasonAdjustment(total, row) {
   addMilestoneFields(total, row);
 }
 
+function applyCareerOverride(total, row) {
+  if (hasValue(row?.GamesPlayedOverride)) total.GamesPlayed = safeNum(row.GamesPlayedOverride);
+
+  BASKETBALL_TOTAL_FIELDS.forEach((field) => {
+    const overrideKey = `${field}Override`;
+    if (!hasValue(row?.[overrideKey])) return;
+    total[field] = safeNum(row[overrideKey]);
+    total._has[field] = true;
+  });
+
+  BASKETBALL_MILESTONE_FIELDS.forEach((field) => {
+    const overrideKey = `${field}Override`;
+    if (hasValue(row?.[overrideKey])) total[field] = safeNum(row[overrideKey]);
+  });
+}
+
 export function buildBasketballPlayerSeasonTotals({
   playerGameStats = [],
   games = [],
@@ -236,6 +252,7 @@ export function buildBasketballCareerTotals(playerSeasonTotals = [], careerAdjus
     if (!adjustment?.PlayerID) continue;
     const total = ensureCareerTotal(adjustment.PlayerID);
     addSeasonAdjustment(total, adjustment);
+    applyCareerOverride(total, adjustment);
   }
 
   return Array.from(totalsMap.values());

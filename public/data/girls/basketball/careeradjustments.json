@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "AdjustmentID": "mary-wilkowski-career-points-override",
+    "PlayerID": 200401,
+    "PointsOverride": 2017,
+    "Reason": "Hard-coded career scoring total from post-2005-06 state championship coverage.",
+    "StatComplete": "CareerAdjustment"
+  }
+]

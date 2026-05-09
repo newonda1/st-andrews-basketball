@@ -1945,6 +1945,16 @@
     "NationalRank": 13590,
     "StateRank": 216,
     "SeasonResult": "SCISA AA Region II • 5th in region • 1-4 region record",
+    "SeasonRecapTitle": "Season Recap",
+    "HideSeasonArticles": true,
+    "SeasonRecapLinks": [
+      {
+        "Text": "hired the Savannah coaching icon",
+        "ArticleID": "2006-jack-miller-hired"
+      }
+    ],
+    "SeasonRecap": "St. Andrew's began the 2006 season with a major change on the sideline. After the Saints had gone 1-19 across the previous two seasons, the school hired the Savannah coaching icon Jack Miller to revive the football program. Miller arrived with a 50-year coaching career, 153 football wins and a Hall of Fame resume built across stops that included Savannah Christian, where his final team reached the GHSA Class AA playoffs in 2004.\n\nThe results improved immediately, even if the rebuild was still demanding. St. Andrew's finished 3-7 overall and 1-4 in SCISA AA Region II, tripling the program's win total from the year before and raising its scoring from 29 points in 2005 to 138 in 2006. The season still included difficult region nights against deeper opponents, but the Saints were more competitive and began to reset the program under Miller's direction.\n\nThe roster remained young, with a large sophomore group and only a handful of upperclassmen carrying the transition. Bubby Pavlo, Thomas Withers, Andrew Chapman, John Scuderi, Clay Crosby, Alex Lovell, Donald Doddsworth and other returners gave Miller a foundation, while freshmen and sophomores filled many of the two-way roles. The 3-7 record was not a finished product, but it marked the first clear step out of the low point of the 2004 and 2005 seasons.",
+    "SeasonRecapSourceCitation": "Compiled from Sean Coughlin, \"EX-SCPS FOOTBALL COACH MILLER RETURNS TO COACH ST. ANDREW'S,\" Savannah Morning News (GA), February 3, 2006, Page 6D, Section: SPORTS; 2006 MaxPreps schedule, roster and team statistics.",
     "SourceUrls": {
       "schedule": "https://www.maxpreps.com/print/schedule.aspx?schoolid=1019c441-d956-4e70-a61c-6cbc2ba6e073&ssid=d1db68fc-57d1-417d-af94-2a17b0dc8773&print=1",
       "roster": "https://www.maxpreps.com/ga/savannah/st-andrews-lions/football/06-07/roster/print/?print=1",

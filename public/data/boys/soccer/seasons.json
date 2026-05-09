@@ -51,5 +51,51 @@
       "Daniel Eichholz scored twice and had two assists in the state final.",
       "Jacob Rauers scored in the state semifinal and state championship matches."
     ]
+  },
+  {
+    "SeasonID": 2006,
+    "DisplaySeason": "Spring 2006",
+    "SourceSeasonLabel": "Spring 2006",
+    "TeamLevel": "Varsity",
+    "TeamName": "St. Andrew's Lions",
+    "HeadCoach": "",
+    "League": "SCISA",
+    "Division": "SCISA",
+    "OverallRecord": "1-0",
+    "OverallWins": 1,
+    "OverallLosses": 0,
+    "OverallTies": 0,
+    "RegionRecord": null,
+    "RegionWins": null,
+    "RegionLosses": null,
+    "RegionTies": null,
+    "NonRegionRecord": null,
+    "NonRegionWins": null,
+    "NonRegionLosses": null,
+    "NonRegionTies": null,
+    "PlayoffRecord": null,
+    "PlayoffWins": null,
+    "PlayoffLosses": null,
+    "PlayoffTies": null,
+    "RegionFinish": null,
+    "StateFinish": null,
+    "HomeWins": null,
+    "HomeLosses": null,
+    "HomeTies": null,
+    "AwayWins": null,
+    "AwayLosses": null,
+    "AwayTies": null,
+    "PointsFor": 6,
+    "PointsAgainst": 0,
+    "SeasonResult": "St. Andrew's opened the recovered Spring 2006 archive with a 6-0 win over Charleston Collegiate on March 23, 2006.",
+    "StatusNote": "Archive build in progress. The season currently includes one recovered game: a March 23, 2006 win over Charleston Collegiate.",
+    "HistoricalSummary": [
+      "The Spring 2006 boys soccer archive currently begins with St. Andrew's 6-0 win over Charleston Collegiate on March 23, 2006.",
+      "Javier Gutierrez, Ty Massey, and Andrew Chapman each scored twice in the opener. Gutierrez, Garrett McCarthy, and Brian Crouch were credited with assists, and Emmett Eason made 13 saves as St. Andrew's moved to 1-0."
+    ],
+    "HighlightNotes": [
+      "Javier Gutierrez, Ty Massey, and Andrew Chapman scored two goals apiece against Charleston Collegiate.",
+      "Emmett Eason made 13 saves in the shutout."
+    ]
   }
 ]

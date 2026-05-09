@@ -184,5 +184,72 @@
         "Distinctions": []
       }
     ]
+  },
+  {
+    "SeasonID": 2006,
+    "DisplaySeason": "Spring 2006",
+    "SourceSeasonLabel": "Spring 2006",
+    "TeamLevel": "Varsity",
+    "TeamName": "St. Andrew's Lions",
+    "HeadCoach": "",
+    "Staff": [],
+    "Players": [
+      {
+        "PlayerID": 200604,
+        "JerseyNumber": null,
+        "Grade": 12,
+        "GradeLabel": "Senior",
+        "Positions": [],
+        "PlayerName": "Javier Gutierrez",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 2026167,
+        "JerseyNumber": null,
+        "Grade": 10,
+        "GradeLabel": "Sophomore",
+        "Positions": [],
+        "PlayerName": "Ty Massey",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200455,
+        "JerseyNumber": null,
+        "Grade": 10,
+        "GradeLabel": "Sophomore",
+        "Positions": [],
+        "PlayerName": "Andrew Chapman",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200454,
+        "JerseyNumber": null,
+        "Grade": 12,
+        "GradeLabel": "Senior",
+        "Positions": [],
+        "PlayerName": "Garrett McCarthy",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 2026169,
+        "JerseyNumber": null,
+        "Grade": 10,
+        "GradeLabel": "Sophomore",
+        "Positions": [],
+        "PlayerName": "Brian Crouch",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200424,
+        "JerseyNumber": null,
+        "Grade": 12,
+        "GradeLabel": "Senior",
+        "Positions": [
+          "GK"
+        ],
+        "PlayerName": "Emmett Eason",
+        "Distinctions": []
+      }
+    ]
   }
 ]

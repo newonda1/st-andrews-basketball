@@ -3,6 +3,8 @@ import React from "react";
 import SportHomePage from "../../../components/SportHomePage";
 
 const links = [
+  { label: "Spring 2006 Season", to: "/athletics/boys/soccer/seasons/2006" },
+  { label: "Charleston Collegiate 2006 Game", to: "/athletics/boys/soccer/games/20060323" },
   { label: "Spring 2004 Season", to: "/athletics/boys/soccer/seasons/2004" },
   { label: "Cathedral Academy Game", to: "/athletics/boys/soccer/games/20040322" },
   { label: "Charleston Collegiate Game", to: "/athletics/boys/soccer/games/20040323" },
@@ -36,6 +38,7 @@ export default function Home() {
         "The pages are intentionally data-ready: once games and seasons are entered, the results tables, detail pages, player pages, and opponent records will fill in automatically.",
       ]}
       highlights={[
+        "Spring 2006 season shell",
         "13-1-1 final record",
         "2004 region champions",
         "2004 state champions",

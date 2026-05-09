@@ -1,6 +1,7 @@
 [
   {
     "SeasonID": 2004,
+    "SeasonSlug": "2004",
     "SeasonLabel": "Spring 2004",
     "Classification": "Boys / Girls",
     "StatusBadge": "partial",
@@ -18,7 +19,29 @@
     ]
   },
   {
+    "SeasonID": 2006,
+    "SeasonSlug": "2005-06",
+    "SeasonLabel": "Spring 2006",
+    "Classification": "GISA",
+    "StatusBadge": "partial",
+    "StatusNote": "The Spring 2006 archive includes recovered March match reports against Colleton Prep and Patrick Henry, plus the thin 2006 GISA state PDF, which lists team champions and runner-ups by class without full individual score tables.",
+    "ArchivePdfUrl": "https://giaasports.org/wp-content/uploads/2022/05/2006-State-Golf-Results.pdf",
+    "ArchiveScope": "match",
+    "ShowSeasonImagesPlaceholder": true,
+    "HighlightNotes": [
+      "Samantha Long shot 42 as St. Andrew's defeated Patrick Henry 176-193 at Wilmington Island Golf Club on Mar. 22, 2006."
+    ],
+    "HistoricalSummary": [
+      "St. Andrew's defeated Colleton Prep 173-202 on Mar. 7, 2006 at Dogwood Hills Country Club in Walterboro, S.C. Drew Aimone led St. Andrew's with a 38, followed by Samantha Long at 43, Thomas Withers at 44, and Kevin Crouch at 47.",
+      "On Mar. 22, St. Andrew's beat Patrick Henry 176-193 at Wilmington Island Golf Club. Samantha Long led St. Andrew's with a 42, Drew Aimone shot 43, Kevin Crouch shot 44, and Steve Carbone shot 47.",
+      "Class A champion: David Emanuel Academy (303), runner-up Robert Toombs Christian Academy (341).",
+      "Class AA champion: Trinity Christian (313), runner-up Frederica Academy (323).",
+      "Class AAA champion: Augusta Prep. The published file does not preserve the full runner-up line or player-by-player results."
+    ]
+  },
+  {
     "SeasonID": 2019,
+    "SeasonSlug": "2019",
     "SeasonLabel": "Spring 2019",
     "Classification": "Class AA / Class AAA",
     "StatusBadge": "verified",
@@ -31,6 +54,7 @@
   },
   {
     "SeasonID": 2021,
+    "SeasonSlug": "2021",
     "SeasonLabel": "Spring 2021",
     "Classification": "Class AA / Class AAA",
     "StatusBadge": "verified",
@@ -43,6 +67,7 @@
   },
   {
     "SeasonID": 2022,
+    "SeasonSlug": "2022",
     "SeasonLabel": "Spring 2022",
     "Classification": "Class AA / Class AAA",
     "StatusBadge": "verified",
@@ -55,6 +80,7 @@
   },
   {
     "SeasonID": 2023,
+    "SeasonSlug": "2023",
     "SeasonLabel": "Spring 2023",
     "Classification": "Class AA Boys / Class AAA Boys / Girls",
     "StatusBadge": "verified",
@@ -67,6 +93,7 @@
   },
   {
     "SeasonID": 2024,
+    "SeasonSlug": "2024",
     "SeasonLabel": "Spring 2024",
     "Classification": "Girls / Class AA Boys / Class AAA Boys",
     "StatusBadge": "verified",

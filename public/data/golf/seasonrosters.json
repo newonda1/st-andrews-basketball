@@ -82,5 +82,47 @@
         "GradeLabel": "8th"
       }
     ]
+  },
+  {
+    "SeasonID": 2006,
+    "SeasonLabel": "Spring 2006",
+    "Source": "Recovered 2006 golf match reports from Mar. 7 against Colleton Prep and Mar. 22 against Patrick Henry",
+    "Players": [
+      {
+        "PlayerID": 200417,
+        "PlayerName": "Drew Aimone",
+        "Gender": "Boys",
+        "Grade": 9,
+        "GradeLabel": "Fr."
+      },
+      {
+        "PlayerID": 200418,
+        "PlayerName": "Samantha Long",
+        "Gender": "Girls",
+        "Grade": 10,
+        "GradeLabel": "So."
+      },
+      {
+        "PlayerID": 2026166,
+        "PlayerName": "Thomas Withers",
+        "Gender": "Boys",
+        "Grade": 11,
+        "GradeLabel": "Jr."
+      },
+      {
+        "PlayerID": 2026162,
+        "PlayerName": "Kevin Crouch",
+        "Gender": "Boys",
+        "Grade": 12,
+        "GradeLabel": "Sr."
+      },
+      {
+        "PlayerID": 200419,
+        "PlayerName": "Steve Carbone",
+        "Gender": "Boys",
+        "Grade": 12,
+        "GradeLabel": "Sr."
+      }
+    ]
   }
 ]

@@ -1109,7 +1109,13 @@ function SeasonImagesSection({ season }) {
 function FootballRosterTable({ rosterRows, emptyStateClassName }) {
   return (
     <div className="overflow-x-auto rounded-lg border border-gray-200 bg-white shadow">
-      <table className="min-w-full bg-white text-center text-sm">
+      <table className="min-w-full table-fixed bg-white text-center text-sm">
+        <colgroup>
+          <col className="w-9" />
+          <col />
+          <col className="w-11" />
+          <col className="w-16" />
+        </colgroup>
         <thead className="bg-gray-100 text-xs uppercase tracking-wide text-gray-700">
           <tr>
             <th className={`${recordTableStyles.headerCell} whitespace-nowrap`}>No.</th>
@@ -1148,6 +1154,11 @@ function FootballRosterTable({ rosterRows, emptyStateClassName }) {
                     ) : (
                       <span>{player.PlayerName || "—"}</span>
                     )}
+                    {player.Subline ? (
+                      <span className="text-xs font-medium text-slate-500 md:whitespace-nowrap">
+                        {player.Subline}
+                      </span>
+                    ) : null}
                   </div>
                 </td>
                 <td className={`${recordTableStyles.bodyCell} whitespace-nowrap`}>

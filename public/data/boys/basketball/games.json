@@ -6670,7 +6670,9 @@
     "TeamScore": 48,
     "OpponentScore": 67,
     "Season": 2005,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "RecapTitle": "Crouch scores 16 in loss to Trinity",
+    "Recap": "Andrew Rhea scored a game-high 26 points and Phil Hopewell added 25 to lead Trinity past St. Andrew's 67-48 in SCISA action.\n\nKevin Crouch led the Saints with 16 points, while Jamie Cooper added 10. Ross Glendye scored 7, Gian Maleki had 8, Ryan Kirby added 2, Billy Vine scored 4, and Alex Chu added 1.\n\nTrinity led 30-21 at halftime. The loss dropped St. Andrew's to 5-6, while Trinity improved to 4-4."
   },
   {
     "GameID": 20060109,
@@ -6681,8 +6683,12 @@
     "Result": "W",
     "TeamScore": 59,
     "OpponentScore": 54,
+    "FTM": 19,
+    "FTA": 26,
     "Season": 2005,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "RecapTitle": "Saints hit free throws to hold off Providence",
+    "Recap": "St. Andrew's connected on 19 of 26 shots from the foul line and turned back Providence Christian 59-54 in a boys' non-conference game Monday night.\n\nRoss Glendye led the Saints with 16 points, Jamie Cooper had 13, and Gian Maleki added 10. Maleki also stole an inbounds pass late in the game with St. Andrew's up by two, helping the Saints push the lead to four and hold on for the close win.\n\nJebre Rutledge and Chris Shaffell led Providence with 11 points each. St. Andrew's led 28-26 at halftime and improved to 6-6, while Providence fell to 9-8."
   },
   {
     "GameID": 20060110,
@@ -6700,13 +6706,15 @@
     "GameID": 20060113,
     "OpponentID": "ga-bible-baptist-school-savannah",
     "Opponent": "Bible Baptist School",
-    "LocationType": "Away",
+    "LocationType": "Home",
     "GameType": "Non-Region",
     "Result": "W",
     "TeamScore": 48,
     "OpponentScore": 35,
     "Season": 2005,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "RecapTitle": "Crouch double-double leads Saints past Bible Baptist",
+    "Recap": "Kevin Crouch scored 15 points and pulled down 12 rebounds as St. Andrew's defeated Bible Baptist 48-35 in a non-region game.\n\nJamie Cooper and Bryan Lee added 9 points apiece for the Saints, while Gian Maleki scored 8, Alex Chu had 5, and Billy Vine added 2.\n\nBalle Moore and Teron Thomas scored 14 and 13 points, respectively, for Bible Baptist. St. Andrew's led 16-13 at halftime and improved to 7-7, while Bible Baptist fell to 3-11."
   },
   {
     "GameID": 20060117,
@@ -6718,7 +6726,9 @@
     "TeamScore": 65,
     "OpponentScore": 75,
     "Season": 2005,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "RecapTitle": "Thomas Heyward rallies past St. Andrew's in fourth quarter",
+    "Recap": "Jared Cleland scored a game-high 27 points as Thomas Heyward came back to beat St. Andrew's 75-65 in a SCISA Region 4-AAA game in Ridgeland, S.C.\n\nThe Rebels outscored the Saints 25-10 in the fourth quarter and hit 13 of 19 from the foul line in the period to complete the comeback.\n\nRoss Glendye led St. Andrew's with 19 points, while Kevin Crouch and Jamie Cooper contributed 16 apiece. Gian Maleki added 8 points and Bryan Lee scored 6 for the Saints.\n\nSt. Andrew's led 38-33 at halftime. The loss dropped the Saints to 7-8 overall and 0-2 in SCISA Region 4-AAA, while Thomas Heyward improved to 6-2 and 1-1."
   },
   {
     "GameID": 20060120,
@@ -6730,7 +6740,9 @@
     "TeamScore": 38,
     "OpponentScore": 72,
     "Season": 2005,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "RecapTitle": "Beaufort Academy pulls away at St. Andrew's",
+    "Recap": "Kevin Butler scored 22 points to lead three Beaufort Academy players in double figures as the visiting Eagles beat St. Andrew's 72-38 in a SCISA Region 3-AAA game.\n\nRoss Glendye and Jamie Cooper led the Saints with 9 points apiece. Kevin Crouch added 8, Gian Maleki scored 6, Bryan Lee had 5, and Alex Chu added 1.\n\nBeaufort Academy led 42-19 at halftime. The loss dropped St. Andrew's to 7-9 overall and 0-3 in SCISA Region 3-AAA, while Beaufort Academy improved to 9-7 and 2-1."
   },
   {
     "GameID": 20060124,
@@ -6742,7 +6754,9 @@
     "TeamScore": 41,
     "OpponentScore": 72,
     "Season": 2005,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "RecapTitle": "Hilton Head Prep beats St. Andrew's behind Benton",
+    "Recap": "Dalton Benton scored a game-high 23 points and Andrew Hazel added 12 as Hilton Head Prep defeated St. Andrew's 72-41 in a SCISA game.\n\nKevin Crouch led St. Andrew's with 18 points, while Ross Glendye added 15. Jamie Cooper scored 6 and Alex Chu added 2 for the Saints.\n\nHilton Head Prep led 27-19 at halftime. The loss dropped St. Andrew's to 7-10 overall and 0-4 in region play."
   },
   {
     "GameID": 20060127,
@@ -6754,7 +6768,10 @@
     "TeamScore": 26,
     "OpponentScore": 72,
     "Season": 2005,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "RecapTitle": "Hilton Head Christian beats St. Andrew's in region play",
+    "Recap": "Jonathan Gore scored 21 points to lead Hilton Head Christian past St. Andrew's 72-26 in a SCISA Region 4-AAA game in Hilton Head Island.\n\nRoss Glendye led St. Andrew's with 14 points. Gian Maleki added 5, Chris Miller scored 3, and Kevin Crouch, Alex Chu, and Jamie Cooper each scored 2 for the Saints.\n\nHilton Head Christian led 41-10 at halftime. The loss dropped St. Andrew's to 7-11 overall and 0-4 in SCISA Region 4-AAA.",
+    "SourceNote": "The supplied St. Andrew's individual scoring line totals 28 points, while the reported final score lists St. Andrew's with 26. The game record preserves the reported 72-26 final and the supplied individual scoring rows."
   },
   {
     "GameID": 20060128,
@@ -6766,7 +6783,9 @@
     "TeamScore": 30,
     "OpponentScore": 78,
     "Season": 2005,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "RecapTitle": "Pinewood Christian beats St. Andrew's in Bellville",
+    "Recap": "Ric Roderick scored a game-high 19 points to lead Pinewood Christian past St. Andrew's 78-30 in a non-region game in Bellville.\n\nRoss Glendye led the Saints with 13 points. Gian Maleki added 7, Ben Harrison and Bryan Lee scored 4 apiece, and Kevin Crouch had 2.\n\nPinewood Christian led 39-15 at halftime and improved to 17-1."
   },
   {
     "GameID": 20060203,
@@ -6778,7 +6797,10 @@
     "TeamScore": 33,
     "OpponentScore": 58,
     "Season": 2005,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "RecapTitle": "Thomas Heyward wins at St. Andrew's",
+    "Recap": "Alex Cooler scored 21 points to lead visiting Thomas Heyward Academy past St. Andrew's 58-33 in a SCISA region game.\n\nKevin Crouch led the Saints with 10 points. Ross Glendye added 7, Jamie Cooper scored 6, Bryan Lee had 5, Kirby scored 3 and Chu added 2.\n\nThomas Heyward led 23-16 at halftime.",
+    "SourceNote": "The supplied Thomas Heyward individual scoring line totals 57 points, while the reported final score lists Thomas Heyward with 58. The game record preserves the reported 58-33 final."
   },
   {
     "GameID": 20060204,
@@ -6790,7 +6812,9 @@
     "TeamScore": 57,
     "OpponentScore": 55,
     "Season": 2005,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "RecapTitle": "Glendye leads Saints past Patrick Henry",
+    "Recap": "Ross Glendye scored a game-high 20 points as St. Andrew's defeated Patrick Henry 57-55 in a non-region game in Estill, S.C.\n\nRyan Kirby added 17 points and Kevin Crouch scored 11 for the Saints. Jamie Cooper had 5 and Gian Maleki added 4.\n\nVance Miller Lockott led Patrick Henry with 18 points. Patrick Henry led 32-25 at halftime, and St. Andrew's improved to 8-12."
   },
   {
     "GameID": 20060207,
@@ -6802,7 +6826,9 @@
     "TeamScore": 43,
     "OpponentScore": 58,
     "Season": 2005,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "RecapTitle": "Glendye scores 19 in loss at Beaufort Academy",
+    "Recap": "Josh Wegmann scored 16 points to lead Beaufort Academy past St. Andrew's 58-43 in a SCISA 4-AAA game.\n\nSteven Walker added 11 points and Matt Butler chipped in 10 for the Eagles.\n\nRoss Glendye led the Saints with a game-high 19 points, and Jamie Cooper added 13. Gian Maleki scored 5, Billy Vine and Alex Chu had 2 apiece, and Ryan Kirby and Thomas Withers each added 1.\n\nBeaufort Academy led 27-16 at halftime. The loss dropped St. Andrew's to 8-13 overall and 0-6 in SCISA 4-AAA."
   },
   {
     "GameID": 20060210,
@@ -6814,19 +6840,24 @@
     "TeamScore": 50,
     "OpponentScore": 91,
     "Season": 2005,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "RecapTitle": "Maleki scores 28 at Hilton Head Prep",
+    "Recap": "Niles Murphy scored 18 points to lead four Hilton Head Prep players in double figures as the Dolphins beat St. Andrew's 91-50 in a SCISA Region 4-AAA game in Hilton Head Island.\n\nDalton Benton added 17 points, Jeff Breunsbach scored 11 and Michael Reeves had 10 for Hilton Head Prep.\n\nPatrick Maleki was the only St. Andrew's player in double figures with 28 points. Kevin Crouch added 6, Ross Glendye scored 5, Bryan Lee had 4, Bubby Pavlo scored 3, and Thomas Withers and Taylor added 2 apiece.\n\nHilton Head Prep led 48-26 at halftime. The loss dropped St. Andrew's to 8-14 overall and 0-8 in SCISA Region 4-AAA.",
+    "SourceNote": "The supplied Hilton Head Prep individual scoring line totals 77 points, while the reported final score lists Hilton Head Prep with 91. The game record preserves the reported 91-50 final."
   },
   {
     "GameID": 20060213,
     "OpponentID": "sc-thomas-heyward-academy-ridgeland",
     "Opponent": "Thomas Heyward Academy",
     "LocationType": "Away",
-    "GameType": "State Tournament",
+    "GameType": "Region Tournament",
     "Result": "L",
     "TeamScore": 43,
     "OpponentScore": 65,
     "Season": 2005,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "RecapTitle": "Vine scores 11 in region tournament loss",
+    "Recap": "Jared Cleland scored 22 points and Jeremy Garber added 18 to lead Thomas Heyward Academy to a 65-43 victory over St. Andrew's in the first round of the SCISA Region 4-AA/AAA Tournament in Ridgeland, S.C.\n\nBilly Vine led St. Andrew's with 11 points, and Patrick Maleki added 10. Kevin Crouch and Jamie Cooper scored 6 apiece, Ross Glendye had 4, and Ryan Kirby and Steven Carbone each added 3.\n\nThomas Heyward led 31-17 at halftime. The loss dropped St. Andrew's to 8-15."
   },
   {
     "GameID": 20061120,

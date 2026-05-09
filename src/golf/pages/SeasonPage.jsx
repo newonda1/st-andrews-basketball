@@ -753,6 +753,21 @@ function SeasonSchedule({ matches, schoolById }) {
   );
 }
 
+function matchesSeasonRoute(entry, seasonId) {
+  const routeValue = String(seasonId || "").trim().toLowerCase();
+  if (!routeValue) return false;
+
+  const routeCandidates = [
+    entry?.SeasonID,
+    entry?.SeasonSlug,
+    ...(Array.isArray(entry?.SeasonAliases) ? entry.SeasonAliases : []),
+  ]
+    .filter((value) => value !== null && value !== undefined)
+    .map((value) => String(value).trim().toLowerCase());
+
+  return routeCandidates.includes(routeValue);
+}
+
 export default function SeasonPage({
   seasons = [],
   tournaments = [],
@@ -777,29 +792,31 @@ export default function SeasonPage({
 
   const season = useMemo(() => {
     return (
-      seasons.find((entry) => Number(entry.SeasonID) === Number(seasonId)) || null
+      seasons.find((entry) => matchesSeasonRoute(entry, seasonId)) || null
     );
   }, [seasonId, seasons]);
 
+  const activeSeasonId = season?.SeasonID || seasonId;
+
   const seasonTournaments = useMemo(() => {
     return sortGolfTournaments(
-      tournaments.filter((entry) => Number(entry.Season) === Number(seasonId))
+      tournaments.filter((entry) => Number(entry.Season) === Number(activeSeasonId))
     );
-  }, [seasonId, tournaments]);
+  }, [activeSeasonId, tournaments]);
 
   const seasonMatches = useMemo(() => {
     return sortGolfMatches(
-      matches.filter((entry) => Number(entry.Season) === Number(seasonId))
+      matches.filter((entry) => Number(entry.Season) === Number(activeSeasonId))
     );
-  }, [seasonId, matches]);
+  }, [activeSeasonId, matches]);
 
   const seasonRoster = useMemo(() => {
     return (
       seasonRosters.find(
-        (entry) => Number(entry.SeasonID) === Number(seasonId)
+        (entry) => Number(entry.SeasonID) === Number(activeSeasonId)
       ) || null
     );
-  }, [seasonId, seasonRosters]);
+  }, [activeSeasonId, seasonRosters]);
 
   const seasonImages = useMemo(
     () => normalizeSeasonImages(season?.SeasonImages),

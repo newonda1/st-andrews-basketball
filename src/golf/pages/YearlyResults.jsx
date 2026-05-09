@@ -47,6 +47,7 @@ export default function YearlyResults({
 
         return {
           seasonId: season.SeasonID,
+          routeSlug: season.SeasonSlug || season.SeasonID,
           label: getGolfSeasonLabel(season),
           classification: season.Classification || "—",
           coverage:
@@ -98,7 +99,7 @@ export default function YearlyResults({
                 <tr key={row.seasonId} className="bg-white">
                   <td className="border border-slate-300 px-3 py-2 text-center">
                     <Link
-                      to={`/athletics/golf/seasons/${row.seasonId}`}
+                      to={`/athletics/golf/seasons/${row.routeSlug}`}
                       className="font-bold text-blue-700 hover:text-blue-900"
                     >
                       {row.label}

@@ -1033,5 +1033,87 @@
       }
     ],
     "RecordNote": "Records: St. Andrew's 13-1-1"
+  },
+  {
+    "GameID": 20060323,
+    "Season": 2006,
+    "SeasonID": 2006,
+    "DisplaySeason": "Spring 2006",
+    "SourceSeasonLabel": "Spring 2006",
+    "Date": "2006-03-23",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Charleston Collegiate",
+    "OpponentLocation": "Johns Island, SC",
+    "OpponentSlug": "charleston-collegiate",
+    "OpponentUrl": "",
+    "OpponentID": "sc-charleston-collegiate-school-johns-island",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "Notes": "Published brief did not identify whether the game was home or away.",
+    "GameType": "Regular Season",
+    "Result": "W",
+    "TeamScore": 6,
+    "OpponentScore": 0,
+    "RecapTitle": "St. Andrew's shuts out Charleston Collegiate in 2006 opener",
+    "Recap": "St. Andrew's defeated Charleston Collegiate 6-0 in boys soccer on March 23, 2006.\n\nJavier Gutierrez, Ty Massey, and Andrew Chapman scored two goals apiece. Gutierrez, Garrett McCarthy, and Brian Crouch were credited with assists, and Emmett Eason made 13 saves as St. Andrew's improved to 1-0. Charleston Collegiate moved to 0-1.",
+    "SourceCitation": "Boys' Soccer game brief",
+    "SourcePublication": "",
+    "SourceDate": "2006-03-23",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200604,
+        "PlayerName": "Javier Gutierrez",
+        "Goals": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 2026167,
+        "PlayerName": "Ty Massey",
+        "Goals": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200455,
+        "PlayerName": "Andrew Chapman",
+        "Goals": 2
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200604,
+        "PlayerName": "Javier Gutierrez",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200454,
+        "PlayerName": "Garrett McCarthy",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 2026169,
+        "PlayerName": "Brian Crouch",
+        "Assists": 1
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "Charleston Collegiate",
+        "Saves": 18
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200424,
+        "PlayerName": "Emmett Eason",
+        "Saves": 13
+      }
+    ],
+    "RecordNote": "Records: Charleston Collegiate 0-1; St. Andrew's 1-0"
   }
 ]

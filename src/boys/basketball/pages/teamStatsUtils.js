@@ -162,6 +162,13 @@ function applyOfficialGameFallbacks(total, game) {
   const teamScore = Number(game?.TeamScore);
   const opponentScore = Number(game?.OpponentScore);
 
+  for (const field of TEAM_BOX_FIELDS) {
+    if (hasRecordedValue(game?.[field])) {
+      total[field] = safeNum(game[field]);
+      total._has[field] = true;
+    }
+  }
+
   if (Number.isFinite(teamScore)) {
     total.Points = teamScore;
     total._has.Points = true;

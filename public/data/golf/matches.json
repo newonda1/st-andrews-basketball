@@ -1,5 +1,209 @@
 [
   {
+    "MatchID": "20060307-colleton-prep",
+    "Season": 2006,
+    "Name": "St. Andrew's vs. Colleton Prep",
+    "Date": "2006-03-07",
+    "Course": "Dogwood Hills Country Club",
+    "Location": "Walterboro, S.C.",
+    "Opponent": "Colleton Prep Academy",
+    "SourcePublication": "User-provided golf results",
+    "SourceDate": "2006-03-07",
+    "SourceCitation": "User-provided golf results, Mar. 7, 2006",
+    "SourceNote": "The supplied match line reports St. Andrew's with a 173 team score, while the listed St. Andrew's individual scores total 172. The match record preserves the reported 173-202 final score.",
+    "Summary": "St. Andrew's defeated Colleton Prep 173-202 at Dogwood Hills Country Club in Walterboro, S.C. Drew Aimone led St. Andrew's with a 38.",
+    "Divisions": [
+      {
+        "Division": "Varsity",
+        "TeamScores": [
+          {
+            "School": "St. Andrew's",
+            "Score": 173,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "School": "Colleton Prep",
+            "Score": 202,
+            "IsStAndrews": false,
+            "SchoolID": "sc-colleton-prep-academy-walterboro"
+          }
+        ],
+        "Medalist": {
+          "PlayerName": "Dave Salter",
+          "School": "Colleton Prep",
+          "Score": 36,
+          "SchoolID": "sc-colleton-prep-academy-walterboro"
+        },
+        "Results": [
+          {
+            "PlayerName": "Dave Salter",
+            "School": "Colleton Prep",
+            "Score": 36,
+            "Award": "Medalist",
+            "IsStAndrews": false,
+            "SchoolID": "sc-colleton-prep-academy-walterboro"
+          },
+          {
+            "PlayerID": 200417,
+            "PlayerName": "Drew Aimone",
+            "School": "St. Andrew's",
+            "Score": 38,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerID": 200418,
+            "PlayerName": "Samantha Long",
+            "School": "St. Andrew's",
+            "Score": 43,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerID": 2026166,
+            "PlayerName": "Thomas Withers",
+            "School": "St. Andrew's",
+            "Score": 44,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerID": 2026162,
+            "PlayerName": "Kevin Crouch",
+            "School": "St. Andrew's",
+            "Score": 47,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerName": "Jonathan Hill",
+            "School": "Colleton Prep",
+            "Score": 54,
+            "IsStAndrews": false,
+            "SchoolID": "sc-colleton-prep-academy-walterboro"
+          },
+          {
+            "PlayerName": "Zach Gooding",
+            "School": "Colleton Prep",
+            "Score": 54,
+            "IsStAndrews": false,
+            "SchoolID": "sc-colleton-prep-academy-walterboro"
+          },
+          {
+            "PlayerName": "Holden Smith",
+            "School": "Colleton Prep",
+            "Score": 58,
+            "IsStAndrews": false,
+            "SchoolID": "sc-colleton-prep-academy-walterboro"
+          }
+        ],
+        "ResultNote": "The supplied St. Andrew's individual scores total 172, while the reported team score is 173."
+      }
+    ]
+  },
+  {
+    "MatchID": "20060322-patrick-henry",
+    "Season": 2006,
+    "Name": "St. Andrew's vs. Patrick Henry",
+    "Date": "2006-03-22",
+    "Course": "Wilmington Island Golf Club",
+    "Opponent": "Patrick Henry Academy",
+    "SourcePublication": "User-provided golf results",
+    "SourceDate": "2006-03-22",
+    "SourceCitation": "User-provided golf results, Mar. 22, 2006",
+    "Summary": "St. Andrew's defeated Patrick Henry 176-193 at Wilmington Island Golf Club. Samantha Long led St. Andrew's with a 42.",
+    "Divisions": [
+      {
+        "Division": "Varsity",
+        "TeamScores": [
+          {
+            "School": "St. Andrew's",
+            "Score": 176,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "School": "Patrick Henry Academy",
+            "Score": 193,
+            "IsStAndrews": false,
+            "SchoolID": "sc-patrick-henry-academy-estill"
+          }
+        ],
+        "Medalist": {
+          "PlayerID": 200418,
+          "PlayerName": "Samantha Long",
+          "School": "St. Andrew's",
+          "Score": 42,
+          "SchoolID": "ga-st-andrews-school-savannah"
+        },
+        "Results": [
+          {
+            "PlayerID": 200418,
+            "PlayerName": "Samantha Long",
+            "School": "St. Andrew's",
+            "Score": 42,
+            "Award": "Medalist",
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerID": 200417,
+            "PlayerName": "Drew Aimone",
+            "School": "St. Andrew's",
+            "Score": 43,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerID": 2026162,
+            "PlayerName": "Kevin Crouch",
+            "School": "St. Andrew's",
+            "Score": 44,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerID": 200419,
+            "PlayerName": "Steve Carbone",
+            "School": "St. Andrew's",
+            "Score": 47,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerName": "Brandon Gifford",
+            "School": "Patrick Henry Academy",
+            "Score": 43,
+            "IsStAndrews": false,
+            "SchoolID": "sc-patrick-henry-academy-estill"
+          },
+          {
+            "PlayerName": "Perry Gifford",
+            "School": "Patrick Henry Academy",
+            "Score": 48,
+            "IsStAndrews": false,
+            "SchoolID": "sc-patrick-henry-academy-estill"
+          },
+          {
+            "PlayerName": "Vance Miller Loadholt",
+            "School": "Patrick Henry Academy",
+            "Score": 50,
+            "IsStAndrews": false,
+            "SchoolID": "sc-patrick-henry-academy-estill"
+          },
+          {
+            "PlayerName": "Brian Mixson",
+            "School": "Patrick Henry Academy",
+            "Score": 52,
+            "IsStAndrews": false,
+            "SchoolID": "sc-patrick-henry-academy-estill"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "MatchID": "20040303-groves",
     "Season": 2004,
     "Name": "St. Andrew's vs. Groves",
@@ -152,12 +356,12 @@
     "Season": 2004,
     "Name": "St. Andrew's vs. Beaufort Academy",
     "Date": "2004-03-18",
-    "Course": "Wilmington Island Country Club",
+    "Course": "Wilmington Island Golf Club",
     "Opponent": "Beaufort Academy",
     "SourcePublication": "Savannah Morning News",
     "SourceDate": "2004-03-19",
     "SourceCitation": "Savannah Morning News, Mar. 19, 2004",
-    "Summary": "Beaufort Academy defeated St. Andrew's 160-179 at par-35 Wilmington Island Country Club. Josh Smith led St. Andrew's with a 39.",
+    "Summary": "Beaufort Academy defeated St. Andrew's 160-179 at par-35 Wilmington Island Golf Club. Josh Smith led St. Andrew's with a 39.",
     "Divisions": [
       {
         "Division": "Varsity",
