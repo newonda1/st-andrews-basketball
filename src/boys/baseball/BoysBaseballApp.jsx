@@ -1,32 +1,33 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 
 import AthleticsProgramShell from "../../components/AthleticsProgramShell";
 
-import Season2026 from "./seasons/Season2026";
-import Season2025 from "./seasons/Season2025";
-import Season2024 from "./seasons/Season2024";
-import Season2023 from "./seasons/Season2023";
-import Season2022 from "./seasons/Season2022";
-import Season2021 from "./seasons/Season2021";
-import Season2020 from "./seasons/Season2020";
-import Season2019 from "./seasons/Season2019";
-import Season2018 from "./seasons/Season2018";
-import Season2008 from "./seasons/Season2008";
 import Season2006 from "./seasons/Season2006";
 
 import Home from "./pages/Home";
-import YearlyResults from "./pages/YearlyResults";
-import GameDetail from "./pages/GameDetail";
-import PlayerPage from "./pages/PlayerPage";
-import RecordsVsOpponents from "./pages/RecordsVsOpponents";
-import FullCareerStats from "./pages/FullCareerStats";
-import FullTeamStats from "./pages/FullTeamStats";
-import TeamSingleGameRecords from "./pages/TeamSingleGameRecords";
-import TeamSeasonRecords from "./pages/TeamSeasonRecords";
-import SingleGameRecords from "./pages/SingleGameRecords";
-import SeasonRecords from "./pages/SeasonRecords";
-import CareerRecords from "./pages/CareerRecords";
+
+const Season2026 = lazy(() => import("./seasons/Season2026"));
+const Season2025 = lazy(() => import("./seasons/Season2025"));
+const Season2024 = lazy(() => import("./seasons/Season2024"));
+const Season2023 = lazy(() => import("./seasons/Season2023"));
+const Season2022 = lazy(() => import("./seasons/Season2022"));
+const Season2021 = lazy(() => import("./seasons/Season2021"));
+const Season2020 = lazy(() => import("./seasons/Season2020"));
+const Season2019 = lazy(() => import("./seasons/Season2019"));
+const Season2018 = lazy(() => import("./seasons/Season2018"));
+const Season2008 = lazy(() => import("./seasons/Season2008"));
+const YearlyResults = lazy(() => import("./pages/YearlyResults"));
+const GameDetail = lazy(() => import("./pages/GameDetail"));
+const PlayerPage = lazy(() => import("./pages/PlayerPage"));
+const RecordsVsOpponents = lazy(() => import("./pages/RecordsVsOpponents"));
+const FullCareerStats = lazy(() => import("./pages/FullCareerStats"));
+const FullTeamStats = lazy(() => import("./pages/FullTeamStats"));
+const TeamSingleGameRecords = lazy(() => import("./pages/TeamSingleGameRecords"));
+const TeamSeasonRecords = lazy(() => import("./pages/TeamSeasonRecords"));
+const SingleGameRecords = lazy(() => import("./pages/SingleGameRecords"));
+const SeasonRecords = lazy(() => import("./pages/SeasonRecords"));
+const CareerRecords = lazy(() => import("./pages/CareerRecords"));
 
 const seasonPages = [
   { slug: "2026", Component: Season2026 },
@@ -106,28 +107,30 @@ export default function BoysBaseballApp() {
       headerHomePath="/athletics/boys/baseball"
     >
       <div className="baseball-section">
-        <Routes>
-          <Route index element={<Home />} />
+        <Suspense fallback={<div className="py-10 text-center text-sm text-gray-600">Loading baseball page...</div>}>
+          <Routes>
+            <Route index element={<Home />} />
 
-          <Route path="team/full" element={<FullTeamStats />} />
-          <Route path="team/season-records" element={<TeamSeasonRecords />} />
-          <Route path="records/career" element={<FullCareerStats />} />
-          <Route path="records/season" element={<SeasonRecords />} />
-          <Route path="records/career-records" element={<CareerRecords />} />
-          <Route path="records/single-game" element={<SingleGameRecords />} />
-          <Route path="records/team" element={<TeamSingleGameRecords />} />
-          <Route path="records/opponents" element={<RecordsVsOpponents />} />
+            <Route path="team/full" element={<FullTeamStats />} />
+            <Route path="team/season-records" element={<TeamSeasonRecords />} />
+            <Route path="records/career" element={<FullCareerStats />} />
+            <Route path="records/season" element={<SeasonRecords />} />
+            <Route path="records/career-records" element={<CareerRecords />} />
+            <Route path="records/single-game" element={<SingleGameRecords />} />
+            <Route path="records/team" element={<TeamSingleGameRecords />} />
+            <Route path="records/opponents" element={<RecordsVsOpponents />} />
 
-          {seasonPages.map(({ slug, Component }) => (
-            <Route key={slug} path={`seasons/${slug}`} element={<Component />} />
-          ))}
+            {seasonPages.map(({ slug, Component }) => (
+              <Route key={slug} path={`seasons/${slug}`} element={<Component />} />
+            ))}
 
-          <Route path="yearly-results" element={<YearlyResults />} />
-          <Route path="games/:gameId" element={<GameDetail />} />
-          <Route path="players/:playerId" element={<PlayerPage />} />
+            <Route path="yearly-results" element={<YearlyResults />} />
+            <Route path="games/:gameId" element={<GameDetail />} />
+            <Route path="players/:playerId" element={<PlayerPage />} />
 
-          <Route path="*" element={<Home />} />
-        </Routes>
+            <Route path="*" element={<Home />} />
+          </Routes>
+        </Suspense>
       </div>
     </AthleticsProgramShell>
   );

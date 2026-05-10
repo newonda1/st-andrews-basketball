@@ -6,6 +6,7 @@ export const athleticsMenuSections = [
       { to: "/athletics/girls/basketball", label: "Girls Basketball" },
       { to: "/athletics/boys/baseball", label: "Baseball" },
       { to: "/athletics/football", label: "Football" },
+      { to: "/athletics/softball", label: "Softball" },
       { to: "/athletics/volleyball", label: "Volleyball" },
       { to: "/athletics/girls/soccer", label: "Girls Soccer" },
       { to: "/athletics/boys/soccer", label: "Boys Soccer" },

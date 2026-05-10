@@ -89,6 +89,23 @@ const sports = [
     stateYears: [],
   },
   {
+    name: "Softball",
+    to: "/athletics/softball",
+    icon: "/images/girls/softball/softball_icon.svg",
+    iconClassName: "scale-[1.05]",
+    championshipGroups: [
+      {
+        title: "Archive",
+        sections: [
+          {
+            title: "Published Seasons",
+            years: [2006],
+          },
+        ],
+      },
+    ],
+  },
+  {
     name: "Swimming",
     to: "/athletics/swimming",
     icon: "/images/swimming/swimming_icon.png",
