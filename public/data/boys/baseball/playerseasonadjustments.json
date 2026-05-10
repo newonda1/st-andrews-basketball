@@ -1,0 +1,40 @@
+[
+  {
+    "AdjustmentID": "baseball-2006-bryan-lee-through-20060504",
+    "SeasonID": 2006,
+    "ThroughDate": "2006-05-04",
+    "PlayerID": 2026165,
+    "PlayerName": "Bryan Lee",
+    "PA": 29,
+    "AB": 29,
+    "R": 3,
+    "H": 10,
+    "1B": 10,
+    "2B": 0,
+    "3B": 0,
+    "HR": 0,
+    "RBI": 2,
+    "TB": 10,
+    "SourceDate": "2006-05-04",
+    "SourceNote": "Savannah Morning News baseball statistical leaders listed Lee at 35 AB, 14 H, 3 R, 3 RBI, .400 through the May 4, 2006 leaderboard."
+  },
+  {
+    "AdjustmentID": "baseball-2006-jon-hope-through-20060504",
+    "SeasonID": 2006,
+    "ThroughDate": "2006-05-04",
+    "PlayerID": 200806,
+    "PlayerName": "Jon Hope",
+    "PA": 19,
+    "AB": 19,
+    "R": 4,
+    "H": 3,
+    "1B": 3,
+    "2B": 0,
+    "3B": 0,
+    "HR": 0,
+    "RBI": 1,
+    "TB": 3,
+    "SourceDate": "2006-05-04",
+    "SourceNote": "Savannah Morning News baseball statistical leaders listed Hope at 30 AB, 10 H, 6 R, 3 RBI, .333 through the May 4, 2006 leaderboard."
+  }
+]

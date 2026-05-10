@@ -1625,7 +1625,9 @@
     "Name": "Faith Christian",
     "City": "Summerville",
     "State": "SC",
-    "Mascot": "Knights"
+    "Mascot": "Knights",
+    "LogoPath": "/images/schools/logos/sc-faith-christian-summerville.jpg",
+    "LogoSourceUrl": "https://image.maxpreps.io/school-mascot/4/8/c/48c376b2-b5f3-4932-ab6f-8d9008154169.gif?version=638080291800000000&width=128&height=128&auto=webp&format=pjpg"
   },
   {
     "SchoolID": "sc-first-baptist-school-charleston",
@@ -2098,6 +2100,12 @@
     "Mascot": "Titans",
     "LogoPath": "/images/schools/logos/sc-trinity-collegiate-darlington.png",
     "LogoSourceUrl": "https://image.maxpreps.io/school-mascot/d/2/6/d26789a7-2fbb-4ddf-8b37-8aab7f01af7b.gif?version=638948233218665820&width=1024&height=1024"
+  },
+  {
+    "SchoolID": "sc-trident-academy-mount-pleasant",
+    "Name": "Trident Academy",
+    "City": "Mount Pleasant",
+    "State": "SC"
   },
   {
     "SchoolID": "sc-w-wyman-king-academy-batesburg-leesville",

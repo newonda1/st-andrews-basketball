@@ -1,34 +1,47 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link, useLocation, useParams } from "react-router-dom";
 import AthleticsProgramShell from "../components/AthleticsProgramShell";
+import {
+  getSoftballPlayerGameRows,
+  getSoftballPlayerTotals,
+} from "../girls/softball/softballData";
+import { buildVolleyballPlayerSeasonStatRows } from "../girls/volleyball/volleyballData";
 
 const DATA_PATHS = {
   players: "/data/players.json",
   boysBasketballRosters: "/data/boys/basketball/seasonrosters.json",
   boysBasketballGames: "/data/boys/basketball/games.json",
   boysBasketballStats: "/data/boys/basketball/playergamestats.json",
+  boysBasketballAdjustments: "/data/boys/basketball/adjustments.json",
   girlsBasketballRosters: "/data/girls/basketball/seasonrosters.json",
   girlsBasketballGames: "/data/girls/basketball/games.json",
   girlsBasketballStats: "/data/girls/basketball/playergamestats.json",
+  girlsBasketballAdjustments: "/data/girls/basketball/adjustments.json",
   footballRosters: "/data/boys/football/seasonrosters.json",
   footballGameLogs: "/data/boys/football/playergamelogs.json",
+  footballAdjustments: "/data/boys/football/playerseasonadjustments.json",
   boysSoccerRosters: "/data/boys/soccer/seasonrosters.json",
   boysSoccerGames: "/data/boys/soccer/games.json",
+  boysSoccerAdjustments: "/data/boys/soccer/seasonstatadjustments.json",
   girlsSoccerRosters: "/data/girls/soccer/seasonrosters.json",
   girlsSoccerGames: "/data/girls/soccer/games.json",
+  girlsSoccerAdjustments: "/data/girls/soccer/seasonstatadjustments.json",
   golfRosters: "/data/golf/seasonrosters.json",
   golfMatches: "/data/golf/matches.json",
   crossCountrySeasons: "/data/cross-country/seasons.json",
   crossCountryMeets: "/data/cross-country/meets.json",
   crossCountryStats: "/data/cross-country/playermeetstats.json",
   volleyballRosters: "/data/girls/volleyball/seasonrosters.json",
+  volleyballGames: "/data/girls/volleyball/games.json",
   volleyballStats: "/data/girls/volleyball/playerseasonstats.json",
+  volleyballGameStats: "/data/girls/volleyball/playergamestats.json",
   volleyballAdjustments: "/data/girls/volleyball/playerseasonadjustments.json",
 };
 
 const sportOrder = [
   "boys-basketball",
   "girls-basketball",
+  "softball",
   "football",
   "boys-soccer",
   "girls-soccer",
@@ -101,6 +114,10 @@ function numberOrZero(value) {
   return Number.isFinite(number) ? number : 0;
 }
 
+function hasValue(value) {
+  return value !== null && value !== undefined && value !== "";
+}
+
 function sumRows(rows, keys) {
   return rows.reduce((total, row) => {
     keys.forEach((key) => {
@@ -155,10 +172,64 @@ function displayCellValue(value) {
   return value;
 }
 
+function decimalAverage(hits, attempts) {
+  const denominator = numberOrZero(attempts);
+  if (!denominator) return "-";
+  return (numberOrZero(hits) / denominator).toFixed(3).replace(/^0(?=\.)/, "");
+}
+
+function formatSoftballResult(game) {
+  const score =
+    game?.teamScore == null || game?.opponentScore == null
+      ? "-"
+      : `${game.teamScore}-${game.opponentScore}`;
+  const resultLabel =
+    game?.result === "W" ? "Win" : game?.result === "L" ? "Loss" : game?.result === "T" ? "Tie" : "";
+  return [score, resultLabel].filter(Boolean).join(" ");
+}
+
 async function fetchJson(path) {
   const response = await fetch(path);
   if (!response.ok) throw new Error(`Could not load ${path}`);
   return response.json();
+}
+
+async function fetchJsonOptional(path) {
+  try {
+    return await fetchJson(path);
+  } catch {
+    return [];
+  }
+}
+
+function playerSeasonEntry({ season, seasonId, sportLabel, basePath }) {
+  return {
+    sportLabel,
+    season: formatSeasonLabel(season || seasonId),
+    seasonId,
+    jersey: "",
+    grade: "",
+    position: "",
+    seasonPath: basePath && seasonId ? `${basePath}/seasons/${seasonId}` : "",
+  };
+}
+
+function addMissingSeasonEntries(entries, seasonIds, sportLabel, basePath) {
+  const seen = new Set(entries.map((entry) => String(seasonStartValue(entry.seasonId))));
+  const missing = [...seasonIds]
+    .filter((seasonId) => hasValue(seasonId) && !seen.has(String(seasonStartValue(seasonId))))
+    .map((seasonId) =>
+      playerSeasonEntry({
+        season: seasonId,
+        seasonId,
+        sportLabel,
+        basePath,
+      })
+    );
+
+  return [...entries, ...missing].sort(
+    (a, b) => seasonSortValue(a.seasonId || a.season) - seasonSortValue(b.seasonId || b.season)
+  );
 }
 
 function findRosterEntries(rosters, playerId, sportLabel, basePath) {
@@ -179,10 +250,31 @@ function findRosterEntries(rosters, playerId, sportLabel, basePath) {
     .sort((a, b) => String(a.season).localeCompare(String(b.season)));
 }
 
-function buildBasketballSection({ key, label, basePath, rosters, games, stats }, playerId) {
-  const rosterEntries = findRosterEntries(rosters, playerId, label, basePath);
+function basketballStatSeason(row, gameMap) {
+  const directSeason = row?.SeasonID ?? row?.Season;
+  if (directSeason != null && directSeason !== "") return String(directSeason);
+
+  const game = gameMap.get(Number(row?.GameID));
+  return game?.Season ?? game?.SeasonID ?? "";
+}
+
+function buildBasketballSection(
+  { key, label, basePath, rosters, games, stats, adjustments },
+  playerId
+) {
+  const baseRosterEntries = findRosterEntries(rosters, playerId, label, basePath);
   const gameMap = new Map((games || []).map((game) => [Number(game.GameID), game]));
   const statRows = (stats || []).filter((row) => samePlayer(row, playerId));
+  const adjustmentRows = (adjustments || []).filter((row) => samePlayer(row, playerId));
+  const rosterEntries = addMissingSeasonEntries(
+    baseRosterEntries,
+    new Set([
+      ...statRows.map((row) => basketballStatSeason(row, gameMap)).filter(Boolean),
+      ...adjustmentRows.map((row) => row.SeasonID ?? row.Season).filter(hasValue),
+    ]),
+    label,
+    basePath
+  );
   const totalKeys = [
     "Points",
     "Rebounds",
@@ -200,19 +292,23 @@ function buildBasketballSection({ key, label, basePath, rosters, games, stats },
   const seasonRows = rosterEntries
     .map((roster) => {
       const seasonKey = seasonStartValue(roster.seasonId);
-      const rows = statRows.filter((row) => {
-        const game = gameMap.get(Number(row.GameID));
-        return String(game?.Season ?? game?.SeasonID ?? "") === seasonKey;
-      });
+      const rows = statRows.filter((row) => String(basketballStatSeason(row, gameMap)) === seasonKey);
+      const seasonAdjustments = adjustmentRows.filter(
+        (row) => String(row.SeasonID ?? row.Season ?? "") === seasonKey
+      );
+      const gamesPlayedAdjustment = seasonAdjustments.reduce(
+        (total, row) => total + (hasValue(row.GamesPlayed) ? numberOrZero(row.GamesPlayed) : 0),
+        0
+      );
       return addBasketballRates({
         ...roster,
-        games: new Set(rows.map((row) => row.GameID)).size,
-        ...sumRows(rows, totalKeys),
+        games: new Set(rows.map((row) => row.GameID)).size + gamesPlayedAdjustment,
+        ...sumRows([...rows, ...seasonAdjustments], totalKeys),
       });
     })
     .filter((row) => row.games || rosterEntries.length);
 
-  if (!rosterEntries.length && !statRows.length) return null;
+  if (!rosterEntries.length && !statRows.length && !adjustmentRows.length) return null;
 
   const careerTotals = addBasketballRates({
     season: "Career",
@@ -328,17 +424,236 @@ function buildBasketballSection({ key, label, basePath, rosters, games, stats },
   };
 }
 
-function buildSoccerSection({ key, label, basePath, rosters, games }, playerId) {
-  const rosterEntries = findRosterEntries(rosters, playerId, label, basePath);
+function emptySoftballTotals() {
+  return {
+    battingGames: 0,
+    atBats: 0,
+    hits: 0,
+    doubles: 0,
+    triples: 0,
+    homeRuns: 0,
+    rbi: 0,
+    pitchingAppearances: 0,
+    wins: 0,
+    losses: 0,
+    saves: 0,
+  };
+}
+
+function addSoftballGameToTotals(total, game) {
+  if (game.batting) {
+    total.battingGames += 1;
+    total.atBats += numberOrZero(game.batting.atBats);
+    total.hits += numberOrZero(game.batting.hits);
+    total.doubles += numberOrZero(game.batting.doubles);
+    total.triples += numberOrZero(game.batting.triples);
+    total.homeRuns += numberOrZero(game.batting.homeRuns);
+    total.rbi += numberOrZero(game.batting.rbi);
+  }
+
+  if (game.pitching) {
+    total.pitchingAppearances += numberOrZero(game.pitching.appearances);
+    total.wins += numberOrZero(game.pitching.wins);
+    total.losses += numberOrZero(game.pitching.losses);
+    total.saves += numberOrZero(game.pitching.saves);
+  }
+}
+
+function buildSoftballSection(playerId) {
+  const playerGames = getSoftballPlayerGameRows(playerId);
+  if (!playerGames.length) return null;
+
+  const totalsBySeason = new Map();
+  playerGames.forEach((game) => {
+    const season = String(game.season);
+    if (!totalsBySeason.has(season)) totalsBySeason.set(season, emptySoftballTotals());
+    addSoftballGameToTotals(totalsBySeason.get(season), game);
+  });
+
+  const seasonRows = [...totalsBySeason.entries()]
+    .sort((a, b) => Number(a[0]) - Number(b[0]))
+    .map(([season, totals]) => ({
+      season,
+      seasonPath: `/athletics/softball/seasons/${season}`,
+      ...totals,
+      average: decimalAverage(totals.hits, totals.atBats),
+    }));
+
+  const careerTotals = {
+    season: "Career",
+    isTotal: true,
+    ...getSoftballPlayerTotals(playerId),
+  };
+  careerTotals.average = decimalAverage(careerTotals.hits, careerTotals.atBats);
+
+  const battingRows = seasonRows.filter((row) => row.battingGames);
+  const pitchingRows = seasonRows.filter((row) => row.pitchingAppearances);
+  const battingCareerTotals = careerTotals.battingGames ? careerTotals : null;
+  const pitchingCareerTotals = careerTotals.pitchingAppearances ? careerTotals : null;
+
+  const gameRows = playerGames
+    .map((game) => ({
+      season: String(game.season),
+      date: game.displayDate || formatDate(game.date),
+      sortDate: game.date || dateFromGameId(game.id),
+      opponent: game.opponent || "Unknown",
+      gamePath: game.isPlaceholder ? "" : `/athletics/softball/games/${game.id}`,
+      result: formatSoftballResult(game),
+      atBats: game.batting?.atBats ?? "-",
+      hits: game.batting?.hits ?? "-",
+      doubles: game.batting?.doubles ?? "-",
+      triples: game.batting?.triples ?? "-",
+      homeRuns: game.batting?.homeRuns ?? "-",
+      rbi: game.batting?.rbi ?? "-",
+      average: game.batting ? decimalAverage(game.batting.hits, game.batting.atBats) : "-",
+      appearances: game.pitching?.appearances ?? "-",
+      wins: game.pitching?.wins ?? "-",
+      losses: game.pitching?.losses ?? "-",
+      saves: game.pitching?.saves ?? "-",
+    }))
+    .sort(
+      (a, b) =>
+        seasonSortValue(a.season) - seasonSortValue(b.season) ||
+        String(a.sortDate).localeCompare(String(b.sortDate))
+    );
+
+  const battingColumns = [
+    { key: "season", label: "Season", align: "left", link: "seasonPath" },
+    { key: "battingGames", label: "G" },
+    { key: "atBats", label: "AB" },
+    { key: "hits", label: "H" },
+    { key: "doubles", label: "2B" },
+    { key: "triples", label: "3B" },
+    { key: "homeRuns", label: "HR" },
+    { key: "rbi", label: "RBI" },
+    { key: "average", label: "AVG" },
+  ];
+  const pitchingColumns = [
+    { key: "season", label: "Season", align: "left", link: "seasonPath" },
+    { key: "pitchingAppearances", label: "APP" },
+    { key: "wins", label: "W" },
+    { key: "losses", label: "L" },
+    { key: "saves", label: "SV" },
+  ];
+  const gameColumns = [
+    { key: "date", label: "Date" },
+    { key: "opponent", label: "Opponent", align: "left", link: "gamePath" },
+    { key: "result", label: "Result" },
+    { key: "atBats", label: "AB" },
+    { key: "hits", label: "H" },
+    { key: "doubles", label: "2B" },
+    { key: "triples", label: "3B" },
+    { key: "homeRuns", label: "HR" },
+    { key: "rbi", label: "RBI" },
+    { key: "average", label: "AVG" },
+    { key: "appearances", label: "APP" },
+    { key: "wins", label: "W" },
+    { key: "losses", label: "L" },
+    { key: "saves", label: "SV" },
+  ];
+
+  return {
+    key: "softball",
+    label: "Softball",
+    basePath: "/athletics/softball",
+    rosterEntries: seasonRows.map((row) => ({
+      sportLabel: "Softball",
+      season: row.season,
+      seasonId: row.season,
+      seasonPath: row.seasonPath,
+    })),
+    tables: [
+      ...(battingRows.length && battingCareerTotals
+        ? [{ title: "Batting Totals", rows: [...battingRows, battingCareerTotals], columns: battingColumns }]
+        : []),
+      ...(pitchingRows.length && pitchingCareerTotals
+        ? [{ title: "Pitching Totals", rows: [...pitchingRows, pitchingCareerTotals], columns: pitchingColumns }]
+        : []),
+      {
+        title: "Game Logs",
+        rows: gameRows,
+        columns: gameColumns,
+        groupBy: "season",
+      },
+    ],
+  };
+}
+
+function gameIsAfterDate(game, dateText) {
+  const gameDate = String(game?.Date || dateFromGameId(game?.GameID)).replace(/-/g, "");
+  const cutoff = String(dateText || "").replace(/-/g, "");
+  return /^\d{8}$/.test(gameDate) && /^\d{8}$/.test(cutoff) && Number(gameDate) > Number(cutoff);
+}
+
+function calculateSoccerPlayerStats(games, playerId) {
+  const total = {
+    goals: 0,
+    assists: 0,
+    saves: 0,
+    gameIds: new Set(),
+  };
+
+  (games || []).forEach((game) => {
+    let appeared = false;
+
+    (game.GoalScorers || []).filter((row) => samePlayer(row, playerId)).forEach((row) => {
+      total.goals += numberOrZero(row.Goals);
+      appeared = true;
+    });
+    (game.Assists || []).filter((row) => samePlayer(row, playerId)).forEach((row) => {
+      total.assists += numberOrZero(row.Assists);
+      appeared = true;
+    });
+    (game.Saves || []).filter((row) => samePlayer(row, playerId)).forEach((row) => {
+      total.saves += numberOrZero(row.Saves);
+      appeared = true;
+    });
+
+    if (appeared) total.gameIds.add(game.GameID);
+  });
+
+  return total;
+}
+
+function buildSoccerSection({ key, label, basePath, rosters, games, adjustments }, playerId) {
+  const baseRosterEntries = findRosterEntries(rosters, playerId, label, basePath);
+  const adjustmentRows = (adjustments || []).filter((row) => samePlayer(row, playerId));
+  const rosterEntries = addMissingSeasonEntries(
+    baseRosterEntries,
+    new Set(adjustmentRows.map((row) => row.SeasonID ?? row.Season).filter(hasValue)),
+    label,
+    basePath
+  );
   const gameRows = [];
+  const adjustmentBySeason = new Map(
+    adjustmentRows.map((row) => [String(row.SeasonID ?? row.Season), row])
+  );
   const seasonRows = rosterEntries.map((roster) => {
     const seasonGames = (games || []).filter(
       (game) => Number(game.SeasonID ?? game.Season) === Number(roster.seasonId)
     );
-    let goals = 0;
-    let assists = 0;
-    let saves = 0;
-    const gameIds = new Set();
+    const calculated = calculateSoccerPlayerStats(seasonGames, playerId);
+    const adjustment = adjustmentBySeason.get(String(roster.seasonId)) || {};
+    const official = adjustment.OfficialTotals || {};
+    const postAdjustmentStats = adjustment.ThroughDate
+      ? calculateSoccerPlayerStats(
+          seasonGames.filter((game) => gameIsAfterDate(game, adjustment.ThroughDate)),
+          playerId
+        )
+      : null;
+    const postGamesPlayed = postAdjustmentStats?.gameIds.size || 0;
+    const goals = hasValue(official.Goals)
+      ? numberOrZero(official.Goals) + numberOrZero(postAdjustmentStats?.goals)
+      : calculated.goals + numberOrZero(adjustment.GoalsAdjustment);
+    const assists = hasValue(official.Assists)
+      ? numberOrZero(official.Assists) + numberOrZero(postAdjustmentStats?.assists)
+      : calculated.assists + numberOrZero(adjustment.AssistsAdjustment);
+    const saves = hasValue(official.Saves)
+      ? numberOrZero(official.Saves) + numberOrZero(postAdjustmentStats?.saves)
+      : calculated.saves + numberOrZero(adjustment.SavesAdjustment);
+    const gamesPlayed = hasValue(official.GamesPlayed)
+      ? numberOrZero(official.GamesPlayed) + postGamesPlayed
+      : calculated.gameIds.size + numberOrZero(adjustment.GamesPlayedAdjustment);
 
     seasonGames.forEach((game) => {
       let appeared = false;
@@ -347,24 +662,20 @@ function buildSoccerSection({ key, label, basePath, rosters, games }, playerId) 
       let gameSaves = 0;
       (game.GoalScorers || []).filter((row) => samePlayer(row, playerId)).forEach((row) => {
         const value = numberOrZero(row.Goals);
-        goals += value;
         gameGoals += value;
         appeared = true;
       });
       (game.Assists || []).filter((row) => samePlayer(row, playerId)).forEach((row) => {
         const value = numberOrZero(row.Assists);
-        assists += value;
         gameAssists += value;
         appeared = true;
       });
       (game.Saves || []).filter((row) => samePlayer(row, playerId)).forEach((row) => {
         const value = numberOrZero(row.Saves);
-        saves += value;
         gameSaves += value;
         appeared = true;
       });
       if (appeared) {
-        gameIds.add(game.GameID);
         gameRows.push({
           season: roster.season,
           date: formatDate(game.Date, dateFromGameId(game.GameID)),
@@ -381,7 +692,7 @@ function buildSoccerSection({ key, label, basePath, rosters, games }, playerId) 
 
     return {
       ...roster,
-      games: gameIds.size || "-",
+      games: gamesPlayed || "-",
       goals,
       assists,
       saves,
@@ -441,7 +752,88 @@ function buildSoccerSection({ key, label, basePath, rosters, games }, playerId) 
   };
 }
 
-function buildFootballSection({ rosters, gameLogs }, playerId) {
+const FOOTBALL_META_KEYS = new Set([
+  "Season",
+  "SeasonID",
+  "DisplaySeason",
+  "SourceSeasonLabel",
+  "SeasonLabel",
+  "PlayerID",
+  "PlayerName",
+  "SourcePlayerName",
+  "CanonicalUrl",
+  "CareerID",
+  "CareerKey",
+  "Date",
+  "GameID",
+  "Result",
+  "Score",
+  "Opponent",
+  "OpponentShortName",
+  "OpponentUrl",
+  "GameUrl",
+  "SourceUrl",
+  "GameType",
+  "LocationType",
+  "Venue",
+  "Notes",
+  "SourceDate",
+  "SourcePublication",
+  "SourceCitation",
+  "SourceNote",
+  "SeasonAdjustment",
+  "TeamScore",
+  "OpponentScore",
+]);
+
+function normalizeFootballStatKey(key) {
+  if (key === "INTs") return "Ints";
+  if (key === "INTYards") return "IntYards";
+  return key;
+}
+
+function applyFootballSeasonAdjustments(summaryRows, adjustments, playerId) {
+  const rowMap = new Map(
+    summaryRows.map((row) => [String(row.seasonId ?? row.SeasonID ?? row.season), { ...row }])
+  );
+
+  (adjustments || [])
+    .filter((row) => samePlayer(row, playerId))
+    .forEach((adjustment) => {
+      const seasonId = adjustment.SeasonID ?? adjustment.Season;
+      if (!hasValue(seasonId)) return;
+
+      const key = String(seasonId);
+      const current =
+        rowMap.get(key) ||
+        playerSeasonEntry({
+          season: adjustment.SourceSeasonLabel || adjustment.DisplaySeason || seasonId,
+          seasonId,
+          sportLabel: "Football",
+          basePath: "/athletics/football",
+        });
+
+      Object.entries(adjustment || {}).forEach(([statKey, value]) => {
+        if (FOOTBALL_META_KEYS.has(statKey)) return;
+        if (!Number.isFinite(Number(value))) return;
+        current[normalizeFootballStatKey(statKey)] = Number(value);
+      });
+
+      if (hasValue(adjustment.GamesTracked ?? adjustment.TrackedGames ?? adjustment.G)) {
+        current.games = numberOrZero(adjustment.GamesTracked ?? adjustment.TrackedGames ?? adjustment.G);
+      }
+      current.season =
+        adjustment.SourceSeasonLabel || adjustment.DisplaySeason || current.season || String(seasonId);
+      current.seasonId = seasonId;
+      rowMap.set(key, current);
+    });
+
+  return [...rowMap.values()].sort(
+    (a, b) => seasonSortValue(a.seasonId || a.season) - seasonSortValue(b.seasonId || b.season)
+  );
+}
+
+function buildFootballSection({ rosters, gameLogs, adjustments }, playerId) {
   const rosterEntries = findRosterEntries(rosters, playerId, "Football", "/athletics/football");
   const rowsBySeason = new Map();
   const playerLogs = (gameLogs || [])
@@ -453,24 +845,31 @@ function buildFootballSection({ rosters, gameLogs }, playerId) {
     rowsBySeason.get(key).push(row);
   });
 
-  if (!rosterEntries.length && !rowsBySeason.size) return null;
+  const playerAdjustments = (adjustments || []).filter((row) => samePlayer(row, playerId));
+
+  if (!rosterEntries.length && !rowsBySeason.size && !playerAdjustments.length) return null;
 
   const summary = rosterEntries.map((roster) => {
     const rows = rowsBySeason.get(String(roster.seasonId)) || [];
+    const totals = sumRows(rows, [
+      "PassingYards",
+      "PassingTD",
+      "RushingYards",
+      "RushingTDNum",
+      "ReceivingYards",
+      "ReceivingTDNum",
+      "Tackles",
+      "Ints",
+      "INTs",
+      "TotalTDNum",
+    ]);
+    totals.Ints = numberOrZero(totals.Ints) + numberOrZero(totals.INTs);
+    delete totals.INTs;
+
     return {
       ...roster,
       games: new Set(rows.map((row) => row.GameID)).size || "-",
-      ...sumRows(rows, [
-        "PassingYards",
-        "PassingTD",
-        "RushingYards",
-        "RushingTDNum",
-        "ReceivingYards",
-        "ReceivingTDNum",
-        "Tackles",
-        "Ints",
-        "TotalTDNum",
-      ]),
+      ...totals,
     };
   });
 
@@ -485,6 +884,7 @@ function buildFootballSection({ rosters, gameLogs }, playerId) {
     "Ints",
     "TotalTDNum",
   ];
+  const adjustedSummary = applyFootballSeasonAdjustments(summary, playerAdjustments, playerId);
   const seasonColumns = [
     { key: "season", label: "Season", align: "left", link: "seasonPath" },
     { key: "games", label: "G" },
@@ -500,11 +900,12 @@ function buildFootballSection({ rosters, gameLogs }, playerId) {
   const careerTotals = {
     season: "Career",
     isTotal: true,
-    games: summary.reduce((total, row) => total + numberOrZero(row.games), 0),
-    ...sumRows(summary, totalKeys),
+    games: adjustedSummary.reduce((total, row) => total + numberOrZero(row.games), 0),
+    ...sumRows(adjustedSummary, totalKeys),
   };
   const gameRows = playerLogs.map((row) => ({
     ...row,
+    Ints: row.Ints ?? row.INTs,
     season: row.SourceSeasonLabel || row.DisplaySeason || row.SeasonID,
     date: formatDate(row.Date, dateFromGameId(row.GameID)),
     opponent: row.Opponent || "-",
@@ -521,7 +922,7 @@ function buildFootballSection({ rosters, gameLogs }, playerId) {
     tables: [
       {
         title: "Career Totals",
-        rows: [...summary, careerTotals],
+        rows: [...adjustedSummary, careerTotals],
         columns: seasonColumns,
       },
       ...(gameRows.length
@@ -643,25 +1044,60 @@ function buildCrossCountrySection({ seasons, meets, stats }, playerId) {
   };
 }
 
-function buildVolleyballSection({ rosters, stats, adjustments }, playerId) {
+function buildVolleyballSection({ rosters, games, stats, gameStats, adjustments }, playerId) {
   const rosterEntries = findRosterEntries(
     rosters,
     playerId,
     "Volleyball",
     "/athletics/volleyball"
   );
-  const rows = [...(stats || []), ...(adjustments || [])]
+  const gameMap = new Map((games || []).map((game) => [String(game.GameID), game]));
+  const playerGameStats = (gameStats || []).filter((row) => samePlayer(row, playerId));
+  const rows = buildVolleyballPlayerSeasonStatRows(gameStats, stats, adjustments)
     .filter((row) => samePlayer(row, playerId))
     .map((row) => ({
-      season: row.Season,
-      seasonPath: `/athletics/volleyball/seasons/${row.Season}`,
+      season: String(row.Season),
+      seasonPath: row.Season ? `/athletics/volleyball/seasons/${row.Season}` : "",
       games: row.Games || row.Matches || "-",
+      setsPlayed: row.SetsPlayed || "-",
       kills: row.Kills || "-",
       aces: row.Aces || "-",
       blocks: row.TotalBlocks || "-",
       assists: row.Assists || "-",
       digs: row.Digs || "-",
-    }));
+    }))
+    .sort((a, b) => seasonSortValue(a.season) - seasonSortValue(b.season));
+
+  const gameRows = playerGameStats
+    .map((row) => {
+      const game = gameMap.get(String(row.GameID)) || {};
+      const score =
+        game.TeamScore == null || game.OpponentScore == null
+          ? "-"
+          : `${game.TeamScore}-${game.OpponentScore}`;
+      const resultLabel =
+        game.Result === "W" ? "Win" : game.Result === "L" ? "Loss" : game.Result || "";
+
+      return {
+        season: String(row.Season || game.Season || ""),
+        date: formatDate(game.Date, dateFromGameId(row.GameID)),
+        sortDate: game.Date || dateFromGameId(row.GameID),
+        opponent: game.Opponent || "-",
+        gamePath: row.GameID ? `/athletics/volleyball/games/${row.GameID}` : "",
+        result: [score, resultLabel].filter(Boolean).join(" "),
+        setsPlayed: row.SetsPlayed ?? "-",
+        kills: row.Kills ?? "-",
+        aces: row.Aces ?? "-",
+        blocks: row.TotalBlocks ?? "-",
+        assists: row.Assists ?? "-",
+        digs: row.Digs ?? "-",
+      };
+    })
+    .sort(
+      (a, b) =>
+        seasonSortValue(a.season) - seasonSortValue(b.season) ||
+        String(a.sortDate).localeCompare(String(b.sortDate))
+    );
 
   if (!rosterEntries.length && !rows.length) return null;
 
@@ -679,14 +1115,35 @@ function buildVolleyballSection({ rosters, stats, adjustments }, playerId) {
           ? [
               { key: "season", label: "Season", align: "left", link: "seasonPath" },
               { key: "games", label: "G" },
+              { key: "setsPlayed", label: "SP" },
               { key: "kills", label: "Kills" },
               { key: "aces", label: "Aces" },
               { key: "blocks", label: "Blocks" },
               { key: "assists", label: "Ast" },
               { key: "digs", label: "Digs" },
             ]
-          : [{ key: "season", label: "Season", align: "left", link: "seasonPath" }],
+          : [{ key: "season", label: "Season", align: "left" }],
       },
+      ...(gameRows.length
+        ? [
+            {
+              title: "Game Logs",
+              rows: gameRows,
+              columns: [
+                { key: "date", label: "Date" },
+                { key: "opponent", label: "Opponent", align: "left", link: "gamePath" },
+                { key: "result", label: "Result" },
+                { key: "setsPlayed", label: "SP" },
+                { key: "kills", label: "Kills" },
+                { key: "aces", label: "Aces" },
+                { key: "blocks", label: "Blocks" },
+                { key: "assists", label: "Ast" },
+                { key: "digs", label: "Digs" },
+              ],
+              groupBy: "season",
+            },
+          ]
+        : []),
     ],
   };
 }
@@ -701,6 +1158,7 @@ function buildSections(data, playerId) {
         rosters: data.boysBasketballRosters,
         games: data.boysBasketballGames,
         stats: data.boysBasketballStats,
+        adjustments: data.boysBasketballAdjustments,
       },
       playerId
     ),
@@ -712,11 +1170,17 @@ function buildSections(data, playerId) {
         rosters: data.girlsBasketballRosters,
         games: data.girlsBasketballGames,
         stats: data.girlsBasketballStats,
+        adjustments: data.girlsBasketballAdjustments,
       },
       playerId
     ),
+    buildSoftballSection(playerId),
     buildFootballSection(
-      { rosters: data.footballRosters, gameLogs: data.footballGameLogs },
+      {
+        rosters: data.footballRosters,
+        gameLogs: data.footballGameLogs,
+        adjustments: data.footballAdjustments,
+      },
       playerId
     ),
     buildSoccerSection(
@@ -726,6 +1190,7 @@ function buildSections(data, playerId) {
         basePath: "/athletics/boys/soccer",
         rosters: data.boysSoccerRosters,
         games: data.boysSoccerGames,
+        adjustments: data.boysSoccerAdjustments,
       },
       playerId
     ),
@@ -736,6 +1201,7 @@ function buildSections(data, playerId) {
         basePath: "/athletics/girls/soccer",
         rosters: data.girlsSoccerRosters,
         games: data.girlsSoccerGames,
+        adjustments: data.girlsSoccerAdjustments,
       },
       playerId
     ),
@@ -754,7 +1220,9 @@ function buildSections(data, playerId) {
     buildVolleyballSection(
       {
         rosters: data.volleyballRosters,
+        games: data.volleyballGames,
         stats: data.volleyballStats,
+        gameStats: data.volleyballGameStats,
         adjustments: data.volleyballAdjustments,
       },
       playerId
@@ -903,7 +1371,9 @@ export default function AthleteProfilePage() {
         const entries = await Promise.all(
           Object.entries(DATA_PATHS).map(async ([key, path]) => [
             key,
-            await fetchJson(path),
+            key.toLowerCase().includes("adjustments")
+              ? await fetchJsonOptional(path)
+              : await fetchJson(path),
           ])
         );
         if (!cancelled) {

@@ -116,6 +116,8 @@ function RosterTableBlock({ rows }) {
     "border px-2 py-2 font-bold leading-tight whitespace-nowrap md:px-3";
   const rosterBodyCellClassName =
     "border px-2 py-1.5 align-middle whitespace-nowrap leading-tight md:px-3";
+  const rosterPlayerCellClassName =
+    "border px-2 py-1.5 align-middle leading-tight md:px-3 text-left";
 
   return (
     <div className="overflow-x-auto rounded-lg border border-gray-200 bg-white shadow">
@@ -137,7 +139,7 @@ function RosterTableBlock({ rows }) {
                 } hover:bg-gray-100`}
               >
                 <td className={rosterBodyCellClassName}>{row.jersey || "-"}</td>
-                <td className={`${rosterBodyCellClassName} text-left`}>
+                <td className={rosterPlayerCellClassName}>
                   {row.path ? (
                     <Link to={row.path} className="text-blue-600 hover:underline">
                       {row.name}
@@ -145,6 +147,11 @@ function RosterTableBlock({ rows }) {
                   ) : (
                     <span>{row.name}</span>
                   )}
+                  {row.subline ? (
+                    <div className="mt-0.5 max-w-[16rem] whitespace-normal text-xs leading-snug text-slate-500 sm:max-w-none">
+                      {row.subline}
+                    </div>
+                  ) : null}
                 </td>
                 <td className={rosterBodyCellClassName}>{formatGrade(row.grade)}</td>
               </tr>
@@ -719,6 +726,7 @@ function MaxPrepsSeasonPage({
         jersey: entry.JerseyNumber,
         name: playerName(entry.PlayerID),
         grade: entry.Grade,
+        subline: entry.Subline || "",
         path: playerById.has(Number(entry.PlayerID))
           ? useSharedAthletePage
             ? athleteProfilePath(entry.PlayerID, "boys-basketball")

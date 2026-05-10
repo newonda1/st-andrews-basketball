@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 
+import { athleteProfilePath } from "../../../athletes/archiveEra";
 import {
   SOFTBALL_BASE_PATH,
   getSoftballPlayerIdsForSeason,
@@ -23,7 +24,7 @@ function SortableHeader({ label, sortKey, sortConfig, onSort, className = "" }) 
 
   return (
     <th
-      className={`px-2 py-2 ${alignmentClass} text-xs cursor-pointer select-none whitespace-nowrap ${className}`}
+      className={`px-2 py-2 ${alignmentClass} text-xs font-normal cursor-pointer select-none whitespace-nowrap ${className}`}
       onClick={() => onSort(sortKey)}
     >
       {label}
@@ -32,9 +33,9 @@ function SortableHeader({ label, sortKey, sortConfig, onSort, className = "" }) 
   );
 }
 
-function StatTable({ children }) {
+function StatTable({ children, className = "" }) {
   return (
-    <div className="overflow-x-auto rounded-lg shadow border border-gray-200">
+    <div className={`overflow-x-auto rounded-lg border border-gray-200 bg-white shadow ${className}`}>
       <table className="min-w-full bg-white text-sm">{children}</table>
     </div>
   );
@@ -42,12 +43,16 @@ function StatTable({ children }) {
 
 function HeaderCell({ children, className = "" }) {
   const alignmentClass = className.includes("text-left") ? "" : "text-center";
-  return <th className={`px-3 py-1.5 ${alignmentClass} ${className}`}>{children}</th>;
+  return (
+    <th className={`px-2 py-2 text-xs font-normal whitespace-nowrap ${alignmentClass} ${className}`}>
+      {children}
+    </th>
+  );
 }
 
 function BodyCell({ children, className = "" }) {
   const alignmentClass = className.includes("text-left") ? "" : "text-center";
-  return <td className={`px-3 py-1.5 ${alignmentClass} ${className}`}>{children}</td>;
+  return <td className={`px-2 py-1.5 align-middle whitespace-nowrap ${alignmentClass} ${className}`}>{children}</td>;
 }
 
 function rowClass(index) {
@@ -97,7 +102,7 @@ function resolveSchoolForGame(game, schoolLookup) {
 }
 
 function getSchoolDisplayName(school, fallback = "") {
-  return school?.ShortName || school?.Name || fallback;
+  return school?.Name || fallback;
 }
 
 function getSchoolLogoPath(school) {
@@ -112,6 +117,17 @@ function getSchoolInitials(name) {
 
   if (!words.length) return "?";
   return words.slice(0, 2).map((word) => word[0]).join("").toUpperCase();
+}
+
+function formatSoftballScore(game) {
+  if (game.teamScore == null || game.opponentScore == null) return "-";
+  return `${game.teamScore}-${game.opponentScore}`;
+}
+
+function resultClassName(result) {
+  if (result === "W") return "text-green-700";
+  if (result === "L") return "text-red-700";
+  return "text-gray-500";
 }
 
 function gradeFromGradYear(gradYear, seasonId) {
@@ -241,11 +257,13 @@ export function SoftballSeasonPage({
   };
 
   return (
-    <div className="pt-2 pb-10 lg:pb-40 space-y-8 max-w-6xl mx-auto">
+    <div className="mx-auto max-w-6xl space-y-8 px-4 pb-10 pt-2 lg:pb-40">
       <h1 className="text-3xl font-bold text-center mb-2">{title}</h1>
 
       <section>
-        <h2 className="text-2xl font-semibold mt-8 mb-4">Season Recap</h2>
+        <div className="mt-8 mb-4 flex items-center justify-between">
+          <h2 className="text-2xl font-semibold">Season Recap</h2>
+        </div>
         <div className="rounded-lg border border-dashed border-gray-300 bg-gray-50 px-6 py-10 text-center shadow-sm">
           <p className="text-base font-semibold text-gray-800">Season recap not ready yet</p>
           <p className="mt-2 text-sm leading-6 text-gray-600">
@@ -255,7 +273,9 @@ export function SoftballSeasonPage({
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mt-8 mb-4">Season Images</h2>
+        <div className="mt-8 mb-4 flex items-center justify-between">
+          <h2 className="text-2xl font-semibold">Season Images</h2>
+        </div>
         <div className="rounded-lg border border-dashed border-gray-300 bg-gray-50 px-6 py-12 text-center shadow-sm">
           <p className="text-base font-semibold text-gray-800">Season photo gallery coming soon</p>
           <p className="mt-2 text-sm leading-6 text-gray-600">
@@ -265,21 +285,23 @@ export function SoftballSeasonPage({
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mt-8 mb-4">Roster</h2>
+        <div className="mt-8 mb-4 flex items-center justify-between">
+          <h2 className="text-2xl font-semibold">Roster</h2>
+        </div>
         <StatTable>
-          <thead className="bg-gray-100 text-xs uppercase tracking-wide text-gray-700">
+          <thead className="bg-gray-100 text-xs font-normal uppercase tracking-wide text-gray-700">
             <tr>
               <HeaderCell className="text-left">Player</HeaderCell>
               <HeaderCell>Grade</HeaderCell>
             </tr>
           </thead>
-          <tbody className="text-sm text-gray-800">
+          <tbody>
             {rosterRows.map((player, index) => (
               <tr key={player.playerId} className={rowClass(index)}>
-                <BodyCell className="whitespace-nowrap text-left font-medium">
+                <BodyCell className="text-left">
                   <Link
-                    to={`${SOFTBALL_BASE_PATH}/players/${player.playerId}`}
-                    className="text-blue-700 hover:underline"
+                    to={athleteProfilePath(player.playerId, "softball")}
+                    className="text-blue-600 hover:underline"
                   >
                     {player.name}
                   </Link>
@@ -292,68 +314,115 @@ export function SoftballSeasonPage({
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mt-8 mb-4">Schedule &amp; Results</h2>
-        <StatTable>
-          <thead className="bg-gray-100 text-xs uppercase tracking-wide text-gray-700">
-            <tr>
-              <HeaderCell className="text-left">Date</HeaderCell>
-              <HeaderCell className="text-left">Opponent</HeaderCell>
-              <HeaderCell>Site</HeaderCell>
-              <HeaderCell>Type</HeaderCell>
-              <HeaderCell>Result</HeaderCell>
-              <HeaderCell>Score</HeaderCell>
-            </tr>
-          </thead>
-          <tbody className="text-sm text-gray-800">
-            {games.map((game, index) => {
-              const school = resolveSchoolForGame(game, schoolLookup);
-              const opponentName = getSchoolDisplayName(school, game.opponent);
-              const logoPath = getSchoolLogoPath(school);
-              const site = game.locationType || "-";
-              const type = game.gameType || "-";
-              const score =
-                game.teamScore == null || game.opponentScore == null
-                  ? "-"
-                  : `${game.teamScore} - ${game.opponentScore}`;
+        <div className="mt-8 mb-4 flex items-center justify-between">
+          <h2 className="text-2xl font-semibold">Schedule &amp; Results</h2>
+        </div>
 
-              return (
-                <tr key={game.id} className={rowClass(index)}>
-                  <BodyCell className="whitespace-nowrap text-left">{game.displayDate}</BodyCell>
-                  <BodyCell className="whitespace-nowrap text-left">
-                    <div className="flex items-center gap-2">
-                      <div className="flex h-8 w-10 shrink-0 items-center justify-center">
+        <div className="grid gap-3 sm:hidden">
+          {games.map((game) => {
+            const school = resolveSchoolForGame(game, schoolLookup);
+            const opponentName = getSchoolDisplayName(school, game.Opponent || game.opponent || "Unknown");
+            const logoPath = getSchoolLogoPath(school);
+
+            return (
+              <Link
+                key={game.id}
+                to={`${SOFTBALL_BASE_PATH}/games/${game.id}`}
+                className="block rounded-lg border border-gray-200 bg-white p-4 text-gray-900 no-underline shadow-sm transition hover:border-blue-300"
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="min-w-0">
+                    <p className="mb-2 text-sm text-gray-600">{game.displayDate}</p>
+                    <div className="flex items-start gap-3">
+                      <div className="flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden">
                         {logoPath ? (
                           <img
                             src={logoPath}
                             alt=""
-                            className="max-h-8 max-w-10 object-contain"
+                            className="h-full w-full object-contain"
                             loading="lazy"
                             onError={(event) => {
                               event.currentTarget.style.display = "none";
                             }}
                           />
                         ) : game.isPlaceholder ? null : (
-                          <span className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-slate-300 bg-slate-100 text-[0.65rem] font-bold text-slate-600">
+                          <span className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-slate-300 bg-slate-100 text-[0.65rem] text-slate-600">
                             {getSchoolInitials(opponentName)}
                           </span>
                         )}
                       </div>
-                      {game.isPlaceholder ? (
-                        <span className="text-slate-600">Unknown</span>
-                      ) : (
-                        <Link
-                          to={`${SOFTBALL_BASE_PATH}/games/${game.id}`}
-                          className="text-blue-700 hover:underline"
-                        >
-                          {opponentName}
-                        </Link>
-                      )}
+                      <div className="min-w-0">
+                        <h3 className="text-lg leading-snug">{game.isPlaceholder ? "Unknown" : opponentName}</h3>
+                        <p className="mt-2 text-sm text-gray-600">
+                          {[game.locationType || "-", game.gameType || "-"].join(" • ")}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="shrink-0 text-right">
+                    <p className={`text-lg ${resultClassName(game.result)}`}>{game.result || "-"}</p>
+                    <p className="text-sm">{formatSoftballScore(game)}</p>
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+
+        <StatTable className="hidden sm:block">
+          <thead className="bg-gray-100 text-xs font-normal uppercase tracking-wide text-gray-700">
+            <tr>
+              <HeaderCell className="text-left">Date</HeaderCell>
+              <HeaderCell className="text-left">Opponent</HeaderCell>
+              <HeaderCell>Location</HeaderCell>
+              <HeaderCell>Result</HeaderCell>
+              <HeaderCell>Score</HeaderCell>
+              <HeaderCell>Type</HeaderCell>
+            </tr>
+          </thead>
+          <tbody>
+            {games.map((game, index) => {
+              const school = resolveSchoolForGame(game, schoolLookup);
+              const opponentName = getSchoolDisplayName(school, game.Opponent || game.opponent || "Unknown");
+              const logoPath = getSchoolLogoPath(school);
+              const site = game.locationType || "-";
+              const type = game.gameType || "-";
+              const score = formatSoftballScore(game);
+
+              return (
+                <tr key={game.id} className={rowClass(index)}>
+                  <BodyCell className="text-left">{game.displayDate}</BodyCell>
+                  <BodyCell className="text-left">
+                    <div className="flex items-center gap-2">
+                      <div className="flex h-6 w-6 shrink-0 items-center justify-center overflow-hidden">
+                        {logoPath ? (
+                          <img
+                            src={logoPath}
+                            alt=""
+                            className="h-full w-full object-contain"
+                            loading="lazy"
+                            onError={(event) => {
+                              event.currentTarget.style.display = "none";
+                            }}
+                          />
+                        ) : game.isPlaceholder ? null : (
+                          <span className="inline-flex h-6 w-6 items-center justify-center rounded-full border border-slate-300 bg-slate-100 text-[0.65rem] text-slate-600">
+                            {getSchoolInitials(opponentName)}
+                          </span>
+                        )}
+                      </div>
+                      <Link
+                        to={`${SOFTBALL_BASE_PATH}/games/${game.id}`}
+                        className="text-blue-700 underline hover:text-blue-900"
+                      >
+                        {game.isPlaceholder ? "Unknown" : opponentName}
+                      </Link>
                     </div>
                   </BodyCell>
                   <BodyCell>{site}</BodyCell>
+                  <BodyCell className={resultClassName(game.result)}>{game.result || "-"}</BodyCell>
+                  <BodyCell>{score}</BodyCell>
                   <BodyCell>{type}</BodyCell>
-                  <BodyCell className="font-semibold">{game.result}</BodyCell>
-                  <BodyCell className="whitespace-nowrap">{score}</BodyCell>
                 </tr>
               );
             })}
@@ -362,9 +431,11 @@ export function SoftballSeasonPage({
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mt-8 mb-4">Hitting Statistics</h2>
+        <div className="mt-8 mb-4 flex items-center justify-between">
+          <h2 className="text-2xl font-semibold">Hitting Statistics</h2>
+        </div>
         <StatTable>
-          <thead className="bg-gray-100 text-gray-700">
+          <thead className="bg-gray-100 font-normal text-gray-700">
             <tr>
               <SortableHeader label="Player" sortKey="player" sortConfig={hittingSort} onSort={handleSortFactory(setHittingSort)} className="text-left" />
               <SortableHeader label="GP" sortKey="gamesPlayed" sortConfig={hittingSort} onSort={handleSortFactory(setHittingSort)} />
@@ -377,13 +448,13 @@ export function SoftballSeasonPage({
               <SortableHeader label="AVG" sortKey="average" sortConfig={hittingSort} onSort={handleSortFactory(setHittingSort)} />
             </tr>
           </thead>
-          <tbody className="text-sm text-gray-800">
+          <tbody>
             {hittingRows.map((row, index) => (
               <tr key={row.playerId} className={rowClass(index)}>
-                <BodyCell className="whitespace-nowrap text-left font-medium">
+                <BodyCell className="text-left">
                   <Link
-                    to={`${SOFTBALL_BASE_PATH}/players/${row.playerId}`}
-                    className="text-blue-700 hover:underline"
+                    to={athleteProfilePath(row.playerId, "softball")}
+                    className="text-blue-600 hover:underline"
                   >
                     {getStatPlayerName(row)}
                   </Link>
@@ -403,9 +474,11 @@ export function SoftballSeasonPage({
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mt-8 mb-4">Pitching Statistics</h2>
+        <div className="mt-8 mb-4 flex items-center justify-between">
+          <h2 className="text-2xl font-semibold">Pitching Statistics</h2>
+        </div>
         <StatTable>
-          <thead className="bg-gray-100 text-gray-700">
+          <thead className="bg-gray-100 font-normal text-gray-700">
             <tr>
               <SortableHeader label="Player" sortKey="player" sortConfig={pitchingSort} onSort={handleSortFactory(setPitchingSort)} className="text-left" />
               <SortableHeader label="APP" sortKey="appearances" sortConfig={pitchingSort} onSort={handleSortFactory(setPitchingSort)} />
@@ -414,13 +487,13 @@ export function SoftballSeasonPage({
               <SortableHeader label="SV" sortKey="saves" sortConfig={pitchingSort} onSort={handleSortFactory(setPitchingSort)} />
             </tr>
           </thead>
-          <tbody className="text-sm text-gray-800">
+          <tbody>
             {pitchingRows.map((row, index) => (
               <tr key={row.playerId} className={rowClass(index)}>
-                <BodyCell className="whitespace-nowrap text-left font-medium">
+                <BodyCell className="text-left">
                   <Link
-                    to={`${SOFTBALL_BASE_PATH}/players/${row.playerId}`}
-                    className="text-blue-700 hover:underline"
+                    to={athleteProfilePath(row.playerId, "softball")}
+                    className="text-blue-600 hover:underline"
                   >
                     {getStatPlayerName(row)}
                   </Link>

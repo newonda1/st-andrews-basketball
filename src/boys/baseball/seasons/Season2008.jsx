@@ -1,11 +1,11 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { recordTableStyles } from "../pages/recordTableStyles";
 import {
   buildSchoolLookup,
   getSchoolDisplayName,
   getSchoolLogoPath,
   loadBaseballPlayerGameStatsForSeason,
+  loadBaseballPlayerSeasonAdjustmentsForSeason,
   loadSchools,
   resolveSchoolForGame,
 } from "../dataLoaders";
@@ -64,18 +64,20 @@ function formatDecimal(value, digits = 2) {
   return value.toFixed(digits);
 }
 
+function formatBaseballScore(game) {
+  if (game.TeamScore == null || game.OpponentScore == null) return "-";
+  return `${game.TeamScore}-${game.OpponentScore}`;
+}
+
+function resultClassName(result) {
+  if (result === "W") return "text-green-700";
+  if (result === "L") return "text-red-700";
+  return "text-gray-500";
+}
+
 function getPlayerName(playersMap, playerId) {
   const p = playersMap.get(playerId);
   return p ? `${p.FirstName} ${p.LastName}` : "Unknown Player";
-}
-
-function buildPlayerPhotoUrl(playerId) {
-  return `/images/boys/baseball/players/${playerId}.jpg`;
-}
-
-function handlePlayerImageError(e) {
-  e.currentTarget.onerror = null;
-  e.currentTarget.src = "/images/common/logo.png";
 }
 
 function sortableString(value) {
@@ -200,14 +202,21 @@ function SeasonImagesSection({ images = [], seasonLabel }) {
 }
 
 function RosterTableBlock({ rows }) {
+  const rosterHeaderCellClassName =
+    "border px-2 py-2 font-normal leading-tight whitespace-nowrap md:px-3";
+  const rosterBodyCellClassName =
+    "border px-2 py-1.5 align-middle whitespace-nowrap leading-tight md:px-3";
+  const rosterPlayerCellClassName =
+    "border px-2 py-1.5 align-middle leading-tight md:px-3 text-left";
+
   return (
     <div className="overflow-x-auto rounded-lg border border-gray-200 bg-white shadow">
       <table className="min-w-full bg-white text-sm text-center">
-        <thead className="bg-gray-100 text-xs uppercase tracking-wide text-gray-700">
+        <thead className="bg-gray-100 text-xs font-normal uppercase tracking-wide text-gray-700">
           <tr>
-            <th className={`${recordTableStyles.headerCell} whitespace-nowrap`}>No.</th>
-            <th className={`${recordTableStyles.headerCell} text-left`}>Player</th>
-            <th className={`${recordTableStyles.headerCell} whitespace-nowrap`}>Grade</th>
+            <th className={rosterHeaderCellClassName}>No.</th>
+            <th className={`${rosterHeaderCellClassName} text-left`}>Player</th>
+            <th className={rosterHeaderCellClassName}>Grade</th>
           </tr>
         </thead>
         <tbody>
@@ -219,10 +228,8 @@ function RosterTableBlock({ rows }) {
                   index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
                 } hover:bg-gray-100`}
               >
-                <td className={`${recordTableStyles.bodyCell} whitespace-nowrap`}>
-                  {row.jersey || "-"}
-                </td>
-                <td className={`${recordTableStyles.bodyCell} text-left`}>
+                <td className={rosterBodyCellClassName}>{row.jersey || "-"}</td>
+                <td className={rosterPlayerCellClassName}>
                   {row.path ? (
                     <Link to={row.path} className="text-blue-600 hover:underline">
                       {row.name}
@@ -231,14 +238,12 @@ function RosterTableBlock({ rows }) {
                     <span>{row.name}</span>
                   )}
                 </td>
-                <td className={`${recordTableStyles.bodyCell} whitespace-nowrap`}>
-                  {formatGrade(row.grade)}
-                </td>
+                <td className={rosterBodyCellClassName}>{formatGrade(row.grade)}</td>
               </tr>
             ))
           ) : (
             <tr>
-              <td className={`${recordTableStyles.bodyCell} text-center text-slate-600`} colSpan={3}>
+              <td className={`${rosterBodyCellClassName} text-center text-slate-600`} colSpan={3}>
                 No roster data is available for this season yet.
               </td>
             </tr>
@@ -277,7 +282,7 @@ function SortableHeader({ label, sortKey, sortConfig, onSort, className = "" }) 
 
   return (
     <th
-      className={`px-2 py-2 text-xs text-center cursor-pointer select-none whitespace-nowrap ${className}`}
+      className={`px-2 py-2 text-center text-xs font-normal cursor-pointer select-none whitespace-nowrap ${className}`}
       onClick={() => onSort(sortKey)}
     >
       {label}
@@ -296,6 +301,7 @@ export function BaseballSeasonPage({
 }) {
   const [games, setGames] = useState([]);
   const [playerStats, setPlayerStats] = useState([]);
+  const [seasonAdjustments, setSeasonAdjustments] = useState([]);
   const [players, setPlayers] = useState([]);
   const [rosterEntries, setRosterEntries] = useState([]);
   const [schools, setSchools] = useState([]);
@@ -306,9 +312,10 @@ export function BaseballSeasonPage({
 
   useEffect(() => {
     async function fetchData() {
-      const [gamesRes, statsData, playersRes, rostersRes, schoolsData] = await Promise.all([
+      const [gamesRes, statsData, adjustmentsData, playersRes, rostersRes, schoolsData] = await Promise.all([
         fetch("/data/boys/baseball/games.json"),
         loadBaseballPlayerGameStatsForSeason(seasonId),
+        loadBaseballPlayerSeasonAdjustmentsForSeason(seasonId),
         fetch("/data/players.json"),
         fetch("/data/boys/baseball/seasonrosters.json"),
         loadSchools(),
@@ -335,6 +342,7 @@ export function BaseballSeasonPage({
 
       setGames(seasonGames);
       setPlayerStats(seasonPlayerStats);
+      setSeasonAdjustments(Array.isArray(adjustmentsData) ? adjustmentsData : []);
       setPlayers(Array.isArray(playersData) ? playersData : []);
       setRosterEntries(Array.isArray(rosterRecord?.Players) ? rosterRecord.Players : []);
       setSchools(Array.isArray(schoolsData) ? schoolsData : []);
@@ -620,6 +628,81 @@ export function BaseballSeasonPage({
       }
     });
 
+    seasonAdjustments.forEach((adjustment) => {
+      const id = Number(adjustment.PlayerID);
+      if (!Number.isFinite(id)) return;
+      if (!map.has(id)) {
+        map.set(id, {
+          PlayerID: id,
+          jersey: jerseyMap.get(id) ?? 999,
+          name: getPlayerName(playersMap, id),
+          GamesPlayedSet: new Set(),
+          HittingGamesSet: new Set(),
+          PitchingGamesSet: new Set(),
+          FieldingGamesSet: new Set(),
+          PA: 0,
+          AB: 0,
+          R: 0,
+          H: 0,
+          Single: 0,
+          Double: 0,
+          Triple: 0,
+          HR: 0,
+          RBI: 0,
+          BB: 0,
+          SO: 0,
+          HBP: 0,
+          SAC: 0,
+          SF: 0,
+          SB: 0,
+          CS: 0,
+          TB: 0,
+          appearances: 0,
+          ipOuts: 0,
+          BF: 0,
+          Pitches: 0,
+          W: 0,
+          L: 0,
+          SV: 0,
+          HAllowed: 0,
+          RAllowed: 0,
+          ER: 0,
+          BBAllowed: 0,
+          SOPitching: 0,
+          HBPPitching: 0,
+          WP: 0,
+          A: 0,
+          PO: 0,
+          E: 0,
+          DP: 0,
+          PB: 0,
+          CI: 0,
+          defensiveOuts: 0,
+          HasAdjustment: false,
+        });
+      }
+
+      const t = map.get(id);
+      t.PA += Number(adjustment.PA || 0);
+      t.AB += Number(adjustment.AB || 0);
+      t.R += Number(adjustment.R || 0);
+      t.H += Number(adjustment.H || 0);
+      t.Single += Number(adjustment["1B"] || 0);
+      t.Double += Number(adjustment["2B"] || 0);
+      t.Triple += Number(adjustment["3B"] || 0);
+      t.HR += Number(adjustment.HR || 0);
+      t.RBI += Number(adjustment.RBI || 0);
+      t.BB += Number(adjustment.BB || 0);
+      t.SO += Number(adjustment.SO || 0);
+      t.HBP += Number(adjustment.HBP || 0);
+      t.SAC += Number(adjustment.SAC || 0);
+      t.SF += Number(adjustment.SF || 0);
+      t.SB += Number(adjustment.SB || 0);
+      t.CS += Number(adjustment.CS || 0);
+      t.TB += Number(adjustment.TB || 0);
+      t.HasAdjustment = true;
+    });
+
     return Array.from(map.values()).map((player) => {
       const gp = player.GamesPlayedSet.size;
       const avg = player.H / player.AB;
@@ -647,7 +730,7 @@ export function BaseballSeasonPage({
         FPCT: fpct,
       };
     });
-  }, [playerIdsForSeason, playerStats, jerseyMap, playersMap]);
+  }, [playerIdsForSeason, playerStats, seasonAdjustments, jerseyMap, playersMap]);
 
   const handleSortFactory = (setter) => (key) => {
     setter((prev) => {
@@ -723,8 +806,13 @@ export function BaseballSeasonPage({
     });
   }, [groupedStats, fieldingSort]);
 
+  const scheduleHeaderCellClassName = "px-2 py-2 text-center text-xs font-normal whitespace-nowrap";
+  const scheduleBodyCellClassName = "px-2 py-1.5 text-center align-middle whitespace-nowrap";
+  const scheduleOpponentCellClassName = "px-2 py-1.5 align-middle";
+  const statsBodyCellClassName = "px-2 py-1.5 text-center whitespace-nowrap";
+
   return (
-    <div className="pt-2 pb-10 lg:pb-40 space-y-8 max-w-6xl mx-auto">
+    <div className="mx-auto max-w-6xl space-y-8 px-4 pb-10 pt-2 lg:pb-40">
       <h1 className="text-3xl font-bold text-center mb-2">{title}</h1>
 
       {showSeasonImagesPlaceholder || seasonImages.length ? (
@@ -739,23 +827,75 @@ export function BaseballSeasonPage({
       ) : null}
 
       <section>
-        <h2 className="text-2xl font-semibold mt-8 mb-4">Schedule &amp; Results</h2>
+        <div className="mt-8 mb-4 flex items-center justify-between">
+          <h2 className="text-2xl font-semibold">Schedule &amp; Results</h2>
+        </div>
 
-        <div className="overflow-x-auto rounded-lg shadow border border-gray-200">
+        <div className="grid gap-3 sm:hidden">
+          {games.map((game) => {
+            const school = resolveSchoolForGame(game, schoolLookup);
+            const opponentName = getSchoolDisplayName(school, game.Opponent);
+            const logoPath = getSchoolLogoPath(school);
+
+            return (
+              <Link
+                key={game.GameID}
+                to={`/athletics/boys/baseball/games/${game.GameID}`}
+                className="block rounded-lg border border-gray-200 bg-white p-4 text-gray-900 no-underline shadow-sm transition hover:border-blue-300"
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="min-w-0">
+                    <p className="mb-2 text-sm text-gray-600">
+                      {game.DisplayDate || formatDateFromGameID(game.GameID) || "-"}
+                    </p>
+                    <div className="flex items-start gap-3">
+                      <div className="flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden">
+                        {logoPath ? (
+                          <img
+                            src={logoPath}
+                            alt=""
+                            className="h-full w-full object-contain"
+                            loading="lazy"
+                            onError={(event) => {
+                              event.currentTarget.style.display = "none";
+                            }}
+                          />
+                        ) : null}
+                      </div>
+                      <div className="min-w-0">
+                        <h3 className="text-lg font-semibold leading-snug">{opponentName}</h3>
+                        <p className="mt-2 text-sm text-gray-600">
+                          {[game.LocationType || "-", game.GameType || "-"].join(" • ")}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="shrink-0 text-right">
+                    <p className={`text-lg ${resultClassName(game.Result)}`}>
+                      {game.Result || "-"}
+                    </p>
+                    <p className="text-sm">{formatBaseballScore(game)}</p>
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+
+        <div className="hidden overflow-x-auto rounded-lg border border-gray-200 bg-white shadow sm:block">
           <table className="min-w-full bg-white text-sm">
-            <thead className="bg-gray-100 text-xs text-gray-700 uppercase tracking-wide">
+            <thead className="bg-gray-100 text-xs font-normal text-gray-700 uppercase tracking-wide">
               <tr>
-                <th className="px-3 py-1.5 text-left">Date</th>
-                <th className="px-3 py-1.5 text-left">Opponent</th>
-                <th className="px-3 py-1.5 text-center">Site</th>
-                <th className="px-3 py-1.5 text-center">Type</th>
-                <th className="px-3 py-1.5 text-center">Result</th>
-                <th className="px-3 py-1.5 text-center">Score</th>
+                <th className={`${scheduleHeaderCellClassName} text-left`}>Date</th>
+                <th className={`${scheduleHeaderCellClassName} text-left`}>Opponent</th>
+                <th className={scheduleHeaderCellClassName}>Location</th>
+                <th className={scheduleHeaderCellClassName}>Result</th>
+                <th className={scheduleHeaderCellClassName}>Score</th>
+                <th className={scheduleHeaderCellClassName}>Type</th>
               </tr>
             </thead>
-            <tbody className="text-sm text-gray-800">
+            <tbody>
               {games.map((game, index) => {
-                const complete = game.Result === "W" || game.Result === "L";
                 const school = resolveSchoolForGame(game, schoolLookup);
                 const opponentName = getSchoolDisplayName(school, game.Opponent);
                 const logoPath = getSchoolLogoPath(school);
@@ -764,15 +904,17 @@ export function BaseballSeasonPage({
                     key={game.GameID}
                     className={`border-t border-gray-200 ${index % 2 === 0 ? "bg-white" : "bg-gray-50/70"} hover:bg-gray-100`}
                   >
-                    <td className="px-3 py-1.5 whitespace-nowrap">{formatDateFromGameID(game.GameID)}</td>
-                    <td className="px-3 py-1.5 whitespace-nowrap">
+                    <td className={`${scheduleBodyCellClassName} text-left`}>
+                      {game.DisplayDate || formatDateFromGameID(game.GameID) || "-"}
+                    </td>
+                    <td className={scheduleOpponentCellClassName}>
                       <div className="flex items-center gap-2">
-                        <div className="flex h-8 w-10 shrink-0 items-center justify-center">
+                        <div className="flex h-6 w-6 shrink-0 items-center justify-center overflow-hidden">
                           {logoPath ? (
                             <img
                               src={logoPath}
                               alt=""
-                              className="max-h-8 max-w-10 object-contain"
+                              className="h-full w-full object-contain"
                               loading="lazy"
                               onError={(event) => {
                                 event.currentTarget.style.display = "none";
@@ -782,22 +924,18 @@ export function BaseballSeasonPage({
                         </div>
                         <Link
                           to={`/athletics/boys/baseball/games/${game.GameID}`}
-                          className="text-blue-700 hover:underline"
+                          className="text-blue-700 underline hover:text-blue-900"
                         >
                           {opponentName}
                         </Link>
                       </div>
                     </td>
-                    <td className="px-3 py-1.5 text-center whitespace-nowrap">{game.LocationType || ""}</td>
-                    <td className="px-3 py-1.5 text-center whitespace-nowrap">{game.GameType || ""}</td>
-                    <td className="px-3 py-1.5 text-center font-semibold whitespace-nowrap">
-                      {game.Result || ""}
+                    <td className={scheduleBodyCellClassName}>{game.LocationType || "-"}</td>
+                    <td className={`${scheduleBodyCellClassName} ${resultClassName(game.Result)}`}>
+                      {game.Result || "-"}
                     </td>
-                    <td className="px-3 py-1.5 text-center whitespace-nowrap">
-                      {complete && game.TeamScore != null && game.OpponentScore != null
-                        ? `${game.TeamScore} - ${game.OpponentScore}`
-                        : ""}
-                    </td>
+                    <td className={scheduleBodyCellClassName}>{formatBaseballScore(game)}</td>
+                    <td className={scheduleBodyCellClassName}>{game.GameType || "-"}</td>
                   </tr>
                 );
               })}
@@ -807,10 +945,12 @@ export function BaseballSeasonPage({
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mt-8 mb-4">Hitting Statistics</h2>
-        <div className="overflow-x-auto rounded-lg shadow border border-gray-200">
+        <div className="mt-8 mb-4 flex items-center justify-between">
+          <h2 className="text-2xl font-semibold">Hitting Statistics</h2>
+        </div>
+        <div className="overflow-x-auto rounded-lg border border-gray-200 bg-white shadow">
           <table className="min-w-full bg-white text-sm">
-            <thead className="bg-gray-100 text-gray-700">
+            <thead className="bg-gray-100 font-normal text-gray-700">
               <tr>
                 <SortableHeader label="#" sortKey="jersey" sortConfig={hittingSort} onSort={handleSortFactory(setHittingSort)} />
                 <SortableHeader label="Player" sortKey="name" sortConfig={hittingSort} onSort={handleSortFactory(setHittingSort)} className="text-left" />
@@ -838,39 +978,31 @@ export function BaseballSeasonPage({
                   key={player.PlayerID}
                   className={`border-t border-gray-200 ${index % 2 === 0 ? "bg-white" : "bg-gray-50/70"} hover:bg-gray-100`}
                 >
-                  <td className="px-2 py-1.5 text-center">{player.jersey === 999 ? "" : player.jersey}</td>
-                  <td className="px-2 py-1.5 text-left whitespace-nowrap">
-                    <div className="flex items-center gap-2">
-                      <img
-                        src={buildPlayerPhotoUrl(player.PlayerID)}
-                        alt={player.name}
-                        className="w-8 h-8 rounded-full object-cover border border-gray-300"
-                        onError={handlePlayerImageError}
-                      />
-                      <Link
-                        to={`/athletics/boys/baseball/players/${player.PlayerID}`}
-                        className="text-blue-700 hover:underline"
-                      >
-                        {player.name}
-                      </Link>
-                    </div>
+                  <td className={statsBodyCellClassName}>{player.jersey === 999 ? "-" : player.jersey}</td>
+                  <td className={statsBodyCellClassName}>
+                    <Link
+                      to={`/athletics/boys/baseball/players/${player.PlayerID}`}
+                      className="text-blue-600 hover:underline"
+                    >
+                      {player.name}
+                    </Link>
                   </td>
-                  <td className="px-2 py-1.5 text-center">{player.GP}</td>
-                  <td className="px-2 py-1.5 text-center">{player.PA}</td>
-                  <td className="px-2 py-1.5 text-center">{player.AB}</td>
-                  <td className="px-2 py-1.5 text-center">{player.R}</td>
-                  <td className="px-2 py-1.5 text-center">{player.H}</td>
-                  <td className="px-2 py-1.5 text-center">{player.Double}</td>
-                  <td className="px-2 py-1.5 text-center">{player.Triple}</td>
-                  <td className="px-2 py-1.5 text-center">{player.HR}</td>
-                  <td className="px-2 py-1.5 text-center">{player.RBI}</td>
-                  <td className="px-2 py-1.5 text-center">{player.BB}</td>
-                  <td className="px-2 py-1.5 text-center">{player.SO}</td>
-                  <td className="px-2 py-1.5 text-center">{player.SB}</td>
-                  <td className="px-2 py-1.5 text-center">{formatPct(player.H, player.AB)}</td>
-                  <td className="px-2 py-1.5 text-center">{formatPct(player.H + player.BB + player.HBP, player.AB + player.BB + player.HBP + player.SF)}</td>
-                  <td className="px-2 py-1.5 text-center">{formatPct(player.TB, player.AB)}</td>
-                  <td className="px-2 py-1.5 text-center">{Number.isFinite(player.OPS) ? player.OPS.toFixed(3).replace(/^0(?=\.)/, "") : "-"}</td>
+                  <td className={statsBodyCellClassName}>{player.GP}</td>
+                  <td className={statsBodyCellClassName}>{player.PA}</td>
+                  <td className={statsBodyCellClassName}>{player.AB}</td>
+                  <td className={statsBodyCellClassName}>{player.R}</td>
+                  <td className={statsBodyCellClassName}>{player.H}</td>
+                  <td className={statsBodyCellClassName}>{player.Double}</td>
+                  <td className={statsBodyCellClassName}>{player.Triple}</td>
+                  <td className={statsBodyCellClassName}>{player.HR}</td>
+                  <td className={statsBodyCellClassName}>{player.RBI}</td>
+                  <td className={statsBodyCellClassName}>{player.BB}</td>
+                  <td className={statsBodyCellClassName}>{player.SO}</td>
+                  <td className={statsBodyCellClassName}>{player.SB}</td>
+                  <td className={statsBodyCellClassName}>{formatPct(player.H, player.AB)}</td>
+                  <td className={statsBodyCellClassName}>{formatPct(player.H + player.BB + player.HBP, player.AB + player.BB + player.HBP + player.SF)}</td>
+                  <td className={statsBodyCellClassName}>{formatPct(player.TB, player.AB)}</td>
+                  <td className={statsBodyCellClassName}>{Number.isFinite(player.OPS) ? player.OPS.toFixed(3).replace(/^0(?=\.)/, "") : "-"}</td>
                 </tr>
               ))}
             </tbody>
@@ -879,10 +1011,12 @@ export function BaseballSeasonPage({
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mt-8 mb-4">Pitching Statistics</h2>
-        <div className="overflow-x-auto rounded-lg shadow border border-gray-200">
+        <div className="mt-8 mb-4 flex items-center justify-between">
+          <h2 className="text-2xl font-semibold">Pitching Statistics</h2>
+        </div>
+        <div className="overflow-x-auto rounded-lg border border-gray-200 bg-white shadow">
           <table className="min-w-full bg-white text-sm">
-            <thead className="bg-gray-100 text-gray-700">
+            <thead className="bg-gray-100 font-normal text-gray-700">
               <tr>
                 <SortableHeader label="#" sortKey="jersey" sortConfig={pitchingSort} onSort={handleSortFactory(setPitchingSort)} />
                 <SortableHeader label="Player" sortKey="name" sortConfig={pitchingSort} onSort={handleSortFactory(setPitchingSort)} className="text-left" />
@@ -906,35 +1040,27 @@ export function BaseballSeasonPage({
                   key={player.PlayerID}
                   className={`border-t border-gray-200 ${index % 2 === 0 ? "bg-white" : "bg-gray-50/70"} hover:bg-gray-100`}
                 >
-                  <td className="px-2 py-1.5 text-center">{player.jersey === 999 ? "" : player.jersey}</td>
-                  <td className="px-2 py-1.5 text-left whitespace-nowrap">
-                    <div className="flex items-center gap-2">
-                      <img
-                        src={buildPlayerPhotoUrl(player.PlayerID)}
-                        alt={player.name}
-                        className="w-8 h-8 rounded-full object-cover border border-gray-300"
-                        onError={handlePlayerImageError}
-                      />
-                      <Link
-                        to={`/athletics/boys/baseball/players/${player.PlayerID}`}
-                        className="text-blue-700 hover:underline"
-                      >
-                        {player.name}
-                      </Link>
-                    </div>
+                  <td className={statsBodyCellClassName}>{player.jersey === 999 ? "-" : player.jersey}</td>
+                  <td className={statsBodyCellClassName}>
+                    <Link
+                      to={`/athletics/boys/baseball/players/${player.PlayerID}`}
+                      className="text-blue-600 hover:underline"
+                    >
+                      {player.name}
+                    </Link>
                   </td>
-                  <td className="px-2 py-1.5 text-center">{player.appearances}</td>
-                  <td className="px-2 py-1.5 text-center">{formatBaseballInningsFromOuts(player.ipOuts)}</td>
-                  <td className="px-2 py-1.5 text-center">{player.W}</td>
-                  <td className="px-2 py-1.5 text-center">{player.L}</td>
-                  <td className="px-2 py-1.5 text-center">{player.SV}</td>
-                  <td className="px-2 py-1.5 text-center">{player.HAllowed}</td>
-                  <td className="px-2 py-1.5 text-center">{player.RAllowed}</td>
-                  <td className="px-2 py-1.5 text-center">{player.ER}</td>
-                  <td className="px-2 py-1.5 text-center">{player.BBAllowed}</td>
-                  <td className="px-2 py-1.5 text-center">{player.SOPitching}</td>
-                  <td className="px-2 py-1.5 text-center">{formatDecimal(player.ERA)}</td>
-                  <td className="px-2 py-1.5 text-center">{formatDecimal(player.WHIP)}</td>
+                  <td className={statsBodyCellClassName}>{player.appearances}</td>
+                  <td className={statsBodyCellClassName}>{formatBaseballInningsFromOuts(player.ipOuts)}</td>
+                  <td className={statsBodyCellClassName}>{player.W}</td>
+                  <td className={statsBodyCellClassName}>{player.L}</td>
+                  <td className={statsBodyCellClassName}>{player.SV}</td>
+                  <td className={statsBodyCellClassName}>{player.HAllowed}</td>
+                  <td className={statsBodyCellClassName}>{player.RAllowed}</td>
+                  <td className={statsBodyCellClassName}>{player.ER}</td>
+                  <td className={statsBodyCellClassName}>{player.BBAllowed}</td>
+                  <td className={statsBodyCellClassName}>{player.SOPitching}</td>
+                  <td className={statsBodyCellClassName}>{formatDecimal(player.ERA)}</td>
+                  <td className={statsBodyCellClassName}>{formatDecimal(player.WHIP)}</td>
                 </tr>
               ))}
             </tbody>
@@ -943,10 +1069,12 @@ export function BaseballSeasonPage({
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mt-8 mb-4">Fielding Statistics</h2>
-        <div className="overflow-x-auto rounded-lg shadow border border-gray-200">
+        <div className="mt-8 mb-4 flex items-center justify-between">
+          <h2 className="text-2xl font-semibold">Fielding Statistics</h2>
+        </div>
+        <div className="overflow-x-auto rounded-lg border border-gray-200 bg-white shadow">
           <table className="min-w-full bg-white text-sm">
-            <thead className="bg-gray-100 text-gray-700">
+            <thead className="bg-gray-100 font-normal text-gray-700">
               <tr>
                 <SortableHeader label="#" sortKey="jersey" sortConfig={fieldingSort} onSort={handleSortFactory(setFieldingSort)} />
                 <SortableHeader label="Player" sortKey="name" sortConfig={fieldingSort} onSort={handleSortFactory(setFieldingSort)} className="text-left" />
@@ -967,32 +1095,24 @@ export function BaseballSeasonPage({
                   key={player.PlayerID}
                   className={`border-t border-gray-200 ${index % 2 === 0 ? "bg-white" : "bg-gray-50/70"} hover:bg-gray-100`}
                 >
-                  <td className="px-2 py-1.5 text-center">{player.jersey === 999 ? "" : player.jersey}</td>
-                  <td className="px-2 py-1.5 text-left whitespace-nowrap">
-                    <div className="flex items-center gap-2">
-                      <img
-                        src={buildPlayerPhotoUrl(player.PlayerID)}
-                        alt={player.name}
-                        className="w-8 h-8 rounded-full object-cover border border-gray-300"
-                        onError={handlePlayerImageError}
-                      />
-                      <Link
-                        to={`/athletics/boys/baseball/players/${player.PlayerID}`}
-                        className="text-blue-700 hover:underline"
-                      >
-                        {player.name}
-                      </Link>
-                    </div>
+                  <td className={statsBodyCellClassName}>{player.jersey === 999 ? "-" : player.jersey}</td>
+                  <td className={statsBodyCellClassName}>
+                    <Link
+                      to={`/athletics/boys/baseball/players/${player.PlayerID}`}
+                      className="text-blue-600 hover:underline"
+                    >
+                      {player.name}
+                    </Link>
                   </td>
-                  <td className="px-2 py-1.5 text-center">{player.GP}</td>
-                  <td className="px-2 py-1.5 text-center">{formatBaseballInningsFromOuts(player.defensiveOuts)}</td>
-                  <td className="px-2 py-1.5 text-center">{player.PO}</td>
-                  <td className="px-2 py-1.5 text-center">{player.A}</td>
-                  <td className="px-2 py-1.5 text-center">{player.E}</td>
-                  <td className="px-2 py-1.5 text-center">{player.TC}</td>
-                  <td className="px-2 py-1.5 text-center">{player.DP}</td>
-                  <td className="px-2 py-1.5 text-center">{player.PB}</td>
-                  <td className="px-2 py-1.5 text-center">{player.TC ? formatPct(player.PO + player.A, player.TC) : "-"}</td>
+                  <td className={statsBodyCellClassName}>{player.GP}</td>
+                  <td className={statsBodyCellClassName}>{formatBaseballInningsFromOuts(player.defensiveOuts)}</td>
+                  <td className={statsBodyCellClassName}>{player.PO}</td>
+                  <td className={statsBodyCellClassName}>{player.A}</td>
+                  <td className={statsBodyCellClassName}>{player.E}</td>
+                  <td className={statsBodyCellClassName}>{player.TC}</td>
+                  <td className={statsBodyCellClassName}>{player.DP}</td>
+                  <td className={statsBodyCellClassName}>{player.PB}</td>
+                  <td className={statsBodyCellClassName}>{player.TC ? formatPct(player.PO + player.A, player.TC) : "-"}</td>
                 </tr>
               ))}
             </tbody>

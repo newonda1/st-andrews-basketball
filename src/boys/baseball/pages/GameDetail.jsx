@@ -84,7 +84,72 @@ function getDecisionPitcher(rows, key) {
   return rows.find((row) => Number(row[key] || 0) > 0) || null;
 }
 
+function getExplicitDecision(game, key, playersMap) {
+  const decisions = game?.PitchingDecisions;
+  if (!decisions) return null;
+
+  const decision =
+    key === "W"
+      ? decisions.Win || decisions.W
+      : key === "L"
+        ? decisions.Loss || decisions.L
+        : decisions.Save || decisions.SV;
+
+  if (!decision) return null;
+
+  const playerId = Number(decision.PlayerID ?? decision.playerId);
+  const hasPlayerId = Number.isFinite(playerId);
+  const name =
+    decision.PlayerName ||
+    decision.Name ||
+    decision.player ||
+    (hasPlayerId ? getPlayerName(playersMap, playerId) : "Unknown");
+
+  return {
+    PlayerID: hasPlayerId ? playerId : null,
+    name,
+    W: key === "W" ? 1 : 0,
+    L: key === "L" ? 1 : 0,
+    SV: key === "SV" ? 1 : 0,
+    IP: 0,
+    H: 0,
+    R: 0,
+    ER: 0,
+    BB: 0,
+    SO: 0,
+    BF: 0,
+    Pitches: 0,
+    DecisionRecord: decision.Record || "",
+  };
+}
+
+function hasPitchingLine(row) {
+  return Boolean(
+    row?.IP ||
+      row?.BF ||
+      row?.Pitches ||
+      row?.H ||
+      row?.R ||
+      row?.ER ||
+      row?.BB ||
+      row?.SO
+  );
+}
+
+function PitchingLineSummary({ pitcher }) {
+  if (!hasPitchingLine(pitcher)) {
+    return <div className="text-sm text-gray-600 mt-1">Pitching line not available</div>;
+  }
+
+  return (
+    <div className="text-sm text-gray-600 mt-1">
+      {outsToBaseballInnings(pitcher.IP)} IP, {pitcher.H} H, {pitcher.ER} ER, {pitcher.SO} K, {pitcher.BB} BB
+    </div>
+  );
+}
+
 function formatPitcherDecisionSuffix(decisionTotals, key) {
+  if (decisionTotals?.DecisionRecord) return ` (${decisionTotals.DecisionRecord})`;
   if (!decisionTotals) return "";
   if (key === "SV") {
     return decisionTotals.SV > 0 ? ` (${decisionTotals.SV})` : "";
@@ -307,7 +372,7 @@ export default function GameDetail() {
           seasonWHIP: cumulative.ipOuts ? ((cumulative.HAllowed + cumulative.BBAllowed) * 3) / cumulative.ipOuts : NaN,
         };
       })
-      .filter((row) => row.IP > 0 || row.BF > 0)
+      .filter((row) => row.IP > 0 || row.BF > 0 || row.W > 0 || row.L > 0 || row.SV > 0)
       .sort((a, b) => {
         if (b.IP !== a.IP) return b.IP - a.IP;
         if (a.jersey !== b.jersey) return a.jersey - b.jersey;
@@ -444,9 +509,12 @@ export default function GameDetail() {
   const opponentLine = Array.isArray(lineScore?.Opponent) ? lineScore.Opponent : [];
   const opponentAbbr = formatOpponentAbbr(game);
 
-  const winningPitcher = getDecisionPitcher(pitchingRows, "W");
-  const losingPitcher = getDecisionPitcher(pitchingRows, "L");
-  const savePitcher = getDecisionPitcher(pitchingRows, "SV");
+  const winningPitcher =
+    getDecisionPitcher(pitchingRows, "W") || getExplicitDecision(game, "W", playersMap);
+  const losingPitcher =
+    getDecisionPitcher(pitchingRows, "L") || getExplicitDecision(game, "L", playersMap);
+  const savePitcher =
+    getDecisionPitcher(pitchingRows, "SV") || getExplicitDecision(game, "SV", playersMap);
 
   return (
     <div className="max-w-6xl mx-auto pt-4 pb-10 lg:pb-40 space-y-8">
@@ -479,7 +547,7 @@ export default function GameDetail() {
                   </h2>
                 ) : null}
                 <div className="mt-4 text-sm text-gray-500">
-                  {formatDateFromGameID(game.GameID)} • {game.LocationType} • {game.GameType}
+                  {game.DisplayDate || formatDateFromGameID(game.GameID) || "-"} • {game.LocationType || "-"} • {game.GameType || "-"}
                 </div>
               </div>
 
@@ -563,11 +631,14 @@ export default function GameDetail() {
                   <div className="text-sm font-black tracking-wide text-gray-500 uppercase">Win</div>
                   <div className="text-xl font-bold text-gray-900">
                     {winningPitcher.name}
-                    {formatPitcherDecisionSuffix(seasonPitcherDecisionMap.get(winningPitcher.PlayerID), "W")}
+                    {formatPitcherDecisionSuffix(
+                      winningPitcher.DecisionRecord
+                        ? winningPitcher
+                        : seasonPitcherDecisionMap.get(winningPitcher.PlayerID),
+                      "W"
+                    )}
                   </div>
-                  <div className="text-sm text-gray-600 mt-1">
-                    {outsToBaseballInnings(winningPitcher.IP)} IP, {winningPitcher.H} H, {winningPitcher.ER} ER, {winningPitcher.SO} K, {winningPitcher.BB} BB
-                  </div>
+                  <PitchingLineSummary pitcher={winningPitcher} />
                 </div>
               </div>
             ) : <div className="hidden md:block" />}
@@ -586,11 +657,14 @@ export default function GameDetail() {
                   <div className="text-sm font-black tracking-wide text-gray-500 uppercase">Loss</div>
                   <div className="text-xl font-bold text-gray-900">
                     {losingPitcher.name}
-                    {formatPitcherDecisionSuffix(seasonPitcherDecisionMap.get(losingPitcher.PlayerID), "L")}
+                    {formatPitcherDecisionSuffix(
+                      losingPitcher.DecisionRecord
+                        ? losingPitcher
+                        : seasonPitcherDecisionMap.get(losingPitcher.PlayerID),
+                      "L"
+                    )}
                   </div>
-                  <div className="text-sm text-gray-600 mt-1">
-                    {outsToBaseballInnings(losingPitcher.IP)} IP, {losingPitcher.H} H, {losingPitcher.ER} ER, {losingPitcher.SO} K, {losingPitcher.BB} BB
-                  </div>
+                  <PitchingLineSummary pitcher={losingPitcher} />
                 </div>
               </div>
             ) : <div className="hidden md:block" />}
@@ -609,11 +683,14 @@ export default function GameDetail() {
                   <div className="text-sm font-black tracking-wide text-gray-500 uppercase">Save</div>
                   <div className="text-xl font-bold text-gray-900">
                     {savePitcher.name}
-                    {formatPitcherDecisionSuffix(seasonPitcherDecisionMap.get(savePitcher.PlayerID), "SV")}
+                    {formatPitcherDecisionSuffix(
+                      savePitcher.DecisionRecord
+                        ? savePitcher
+                        : seasonPitcherDecisionMap.get(savePitcher.PlayerID),
+                      "SV"
+                    )}
                   </div>
-                  <div className="text-sm text-gray-600 mt-1">
-                    {outsToBaseballInnings(savePitcher.IP)} IP, {savePitcher.H} H, {savePitcher.ER} ER, {savePitcher.SO} K, {savePitcher.BB} BB
-                  </div>
+                  <PitchingLineSummary pitcher={savePitcher} />
                 </div>
               </div>
             ) : <div className="hidden md:block" />}

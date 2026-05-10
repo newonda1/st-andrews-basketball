@@ -1,6 +1,7 @@
 import React, { useMemo } from "react";
 import { Link, useParams } from "react-router-dom";
 
+import { athleteProfilePath } from "../../../athletes/archiveEra";
 import { SOFTBALL_BASE_PATH, getSoftballGameById } from "../softballData";
 
 function formatAverage(hits, atBats) {
@@ -171,7 +172,7 @@ export default function GameDetail() {
           {winningPitcher ? (
             <div className="p-4 flex items-center gap-4">
               <img
-                src="/images/girls/softball/softball_icon.svg"
+                src="/images/girls/softball/softball_icon.png"
                 alt=""
                 className="w-16 h-16 rounded-full object-contain border border-gray-300 bg-gray-50 p-2"
               />
@@ -179,7 +180,7 @@ export default function GameDetail() {
                 <div className="text-sm font-black tracking-wide text-gray-500 uppercase">Win</div>
                 <div className="text-xl font-bold text-gray-900">
                   <Link
-                    to={`${SOFTBALL_BASE_PATH}/players/${winningPitcher.playerId}`}
+                    to={athleteProfilePath(winningPitcher.playerId, "softball")}
                     className="text-blue-700 hover:underline"
                   >
                     {winningPitcher.player}
@@ -228,7 +229,7 @@ export default function GameDetail() {
                 <tr key={row.player} className="hover:bg-gray-50">
                   <td className={`${tdClass} text-left whitespace-nowrap font-bold`}>
                     <Link
-                      to={`${SOFTBALL_BASE_PATH}/players/${row.playerId}`}
+                      to={athleteProfilePath(row.playerId, "softball")}
                       className="text-blue-700 hover:underline"
                     >
                       {row.player}
@@ -278,7 +279,7 @@ export default function GameDetail() {
                   <td className={`${tdClass} text-left font-bold`}>WP</td>
                   <td className={`${tdClass} text-left font-bold`}>
                     <Link
-                      to={`${SOFTBALL_BASE_PATH}/players/${winningPitcher.playerId}`}
+                      to={athleteProfilePath(winningPitcher.playerId, "softball")}
                       className="text-blue-700 hover:underline"
                     >
                       {winningPitcher.player}
@@ -292,7 +293,7 @@ export default function GameDetail() {
                 <td className={`${tdClass} text-left font-bold`}>
                   {losingPitcher?.playerId ? (
                     <Link
-                      to={`${SOFTBALL_BASE_PATH}/players/${losingPitcher.playerId}`}
+                      to={athleteProfilePath(losingPitcher.playerId, "softball")}
                       className="text-blue-700 hover:underline"
                     >
                       {losingPitcher.player}

@@ -1,5 +1,6 @@
 const BASEBALL_DATA_BASE = "/data/boys/baseball";
 const PLAYER_GAME_STATS_BASE = `${BASEBALL_DATA_BASE}/playergamestats`;
+const PLAYER_SEASON_ADJUSTMENTS_PATH = `${BASEBALL_DATA_BASE}/playerseasonadjustments.json`;
 const SCHOOLS_PATH = "/data/schools.json";
 
 export function absUrl(path) {
@@ -98,6 +99,20 @@ export async function loadBaseballPlayerGameStatsForSeason(season) {
   } catch (error) {
     const allStats = await loadLegacyPlayerGameStats();
     return allStats.filter((row) => String(row.GameID || "").startsWith(seasonKey));
+  }
+}
+
+export async function loadBaseballPlayerSeasonAdjustmentsForSeason(season) {
+  const seasonKey = String(season ?? "").trim();
+  if (!seasonKey) return [];
+
+  try {
+    const data = await fetchJson("playerseasonadjustments.json", PLAYER_SEASON_ADJUSTMENTS_PATH);
+    return (Array.isArray(data) ? data : []).filter(
+      (row) => String(row.SeasonID ?? "").trim() === seasonKey
+    );
+  } catch (error) {
+    return [];
   }
 }
 

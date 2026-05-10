@@ -10,6 +10,7 @@ function sportHintFromPath(pathname) {
   if (pathname.includes("/golf/")) return "golf";
   if (pathname.includes("/cross-country/")) return "cross-country";
   if (pathname.includes("/volleyball/")) return "volleyball";
+  if (pathname.includes("/softball/")) return "softball";
   return "";
 }
 

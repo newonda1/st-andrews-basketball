@@ -56,10 +56,11 @@
   {
     "GameID": 2006031501,
     "OpponentID": "",
-    "Opponent": "Unknown Opponent",
+    "Opponent": "Unknown",
     "OpponentAbbr": "UNK",
-    "LocationType": "",
-    "GameType": "",
+    "DisplayDate": "Between March 6 and March 22",
+    "LocationType": "-",
+    "GameType": "-",
     "Result": "L",
     "TeamScore": null,
     "OpponentScore": null,
@@ -124,6 +125,383 @@
         "R": 3,
         "H": 4,
         "E": 7
+      }
+    }
+  },
+  {
+    "GameID": 2006032301,
+    "OpponentID": "",
+    "Opponent": "Unknown",
+    "OpponentAbbr": "UNK",
+    "DisplayDate": "Between March 22 and April 4",
+    "LocationType": "-",
+    "GameType": "-",
+    "Result": "L",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 2006,
+    "IsPlaceholder": true,
+    "Notes": "Placeholder loss retained for one of the four still-unidentified games between March 22 and April 4, 2006. The April 4 Hilton Head Christian box score listed St. Andrew's at 1-7, requiring four missing losses in that span."
+  },
+  {
+    "GameID": 2006032302,
+    "OpponentID": "",
+    "Opponent": "Unknown",
+    "OpponentAbbr": "UNK",
+    "DisplayDate": "Between March 22 and April 4",
+    "LocationType": "-",
+    "GameType": "-",
+    "Result": "L",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 2006,
+    "IsPlaceholder": true,
+    "Notes": "Placeholder loss retained for one of the four still-unidentified games between March 22 and April 4, 2006. The April 4 Hilton Head Christian box score listed St. Andrew's at 1-7, requiring four missing losses in that span."
+  },
+  {
+    "GameID": 2006032303,
+    "OpponentID": "",
+    "Opponent": "Unknown",
+    "OpponentAbbr": "UNK",
+    "DisplayDate": "Between March 22 and April 4",
+    "LocationType": "-",
+    "GameType": "-",
+    "Result": "L",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 2006,
+    "IsPlaceholder": true,
+    "Notes": "Placeholder loss retained for one of the four still-unidentified games between March 22 and April 4, 2006. The April 4 Hilton Head Christian box score listed St. Andrew's at 1-7, requiring four missing losses in that span."
+  },
+  {
+    "GameID": 2006032304,
+    "OpponentID": "",
+    "Opponent": "Unknown",
+    "OpponentAbbr": "UNK",
+    "DisplayDate": "Between March 22 and April 4",
+    "LocationType": "-",
+    "GameType": "-",
+    "Result": "L",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 2006,
+    "IsPlaceholder": true,
+    "Notes": "Placeholder loss retained for one of the four still-unidentified games between March 22 and April 4, 2006. The April 4 Hilton Head Christian box score listed St. Andrew's at 1-7, requiring four missing losses in that span."
+  },
+  {
+    "GameID": 2006040401,
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
+    "Opponent": "Hilton Head Christian Academy",
+    "OpponentAbbr": "HHC",
+    "LocationType": "Away",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 1,
+    "OpponentScore": 16,
+    "Season": 2006,
+    "Notes": "Hilton Head Christian defeated St. Andrew's 16-1 on April 4, 2006. The box score listed John Hope as the losing pitcher, Jonathan Gort as the winning pitcher, and records of St. Andrew's 1-7 and Hilton Head Christian 5-7.",
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "Opponent": [
+        8,
+        7,
+        0,
+        1
+      ],
+      "StAndrews": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "OpponentTotals": {
+        "R": 16,
+        "H": 7,
+        "E": 0
+      },
+      "StAndrewsTotals": {
+        "R": 1,
+        "H": 1,
+        "E": 6
+      }
+    },
+    "PitchingDecisions": {
+      "Win": {
+        "PlayerName": "Jonathan Gort"
+      },
+      "Loss": {
+        "PlayerID": 200806,
+        "PlayerName": "Jon Hope",
+        "Record": "1-4"
+      }
+    }
+  },
+  {
+    "GameID": 2006040601,
+    "OpponentID": "sc-dorchester-academy-st-george",
+    "Opponent": "Dorchester Academy",
+    "OpponentAbbr": "DA",
+    "LocationType": "-",
+    "GameType": "-",
+    "Result": "L",
+    "TeamScore": 1,
+    "OpponentScore": 14,
+    "Season": 2006,
+    "Notes": "Only the final score is currently known: Dorchester Academy defeated St. Andrew's 14-1 on April 6, 2006."
+  },
+  {
+    "GameID": 2006041201,
+    "OpponentID": "ga-bible-baptist-school-savannah",
+    "Opponent": "Bible Baptist School",
+    "OpponentAbbr": "BB",
+    "LocationType": "Away",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 2,
+    "OpponentScore": 5,
+    "Season": 2006,
+    "Notes": "Bible Baptist defeated St. Andrew's 5-2 on April 12, 2006. Justin Remler earned the win for Bible Baptist, and Jon Hope took the loss for St. Andrew's. Hope went 3-for-4 with two home runs; the two home runs are recorded as two RBIs. The published records were St. Andrew's 1-8 overall and Bible Baptist 6-8 overall.",
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "Opponent": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        3,
+        "X"
+      ],
+      "StAndrews": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "OpponentTotals": {
+        "R": 5,
+        "H": 11,
+        "E": 1
+      },
+      "StAndrewsTotals": {
+        "R": 2,
+        "H": 4,
+        "E": 2
+      }
+    },
+    "PitchingDecisions": {
+      "Win": {
+        "PlayerName": "Justin Remler",
+        "Record": "2-1"
+      },
+      "Loss": {
+        "PlayerID": 200806,
+        "PlayerName": "Jon Hope"
+      }
+    }
+  },
+  {
+    "GameID": 2006041301,
+    "OpponentID": "",
+    "Opponent": "Unknown",
+    "OpponentAbbr": "UNK",
+    "DisplayDate": "Between April 12 and April 18",
+    "LocationType": "-",
+    "GameType": "-",
+    "Result": "L",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 2006,
+    "IsPlaceholder": true,
+    "Notes": "Placeholder loss added because the April 18, 2006 Beaufort Academy box score listed St. Andrew's at 1-11, indicating one additional missing loss between the April 12 Bible Baptist game and the April 18 Beaufort Academy game."
+  },
+  {
+    "GameID": 2006041801,
+    "OpponentID": "sc-beaufort-academy-beaufort",
+    "Opponent": "Beaufort Academy",
+    "OpponentAbbr": "BA",
+    "LocationType": "Away",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 4,
+    "OpponentScore": 14,
+    "Season": 2006,
+    "Notes": "Beaufort Academy defeated St. Andrew's 14-4 in five innings on April 18, 2006. Brown earned the win for Beaufort Academy, and John Hope took the loss for St. Andrew's with a published record of 1-5. Jim Kingston led St. Andrew's at the plate, going 1-for-2 with a double and two RBIs. The published record for St. Andrew's after the game was 1-11.",
+    "PitchingDecisions": {
+      "Win": {
+        "PlayerName": "Brown"
+      },
+      "Loss": {
+        "PlayerID": 200806,
+        "PlayerName": "Jon Hope",
+        "Record": "1-5"
+      }
+    },
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "Opponent": [
+        1,
+        1,
+        5,
+        4,
+        3
+      ],
+      "StAndrews": [
+        0,
+        0,
+        0,
+        4,
+        0
+      ],
+      "OpponentTotals": {
+        "R": 14,
+        "H": 13,
+        "E": 0
+      },
+      "StAndrewsTotals": {
+        "R": 4,
+        "H": 5,
+        "E": 4
+      }
+    }
+  },
+  {
+    "GameID": 2006042001,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
+    "Opponent": "Thomas Heyward Academy",
+    "OpponentAbbr": "TH",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 4,
+    "OpponentScore": 10,
+    "Season": 2006,
+    "Notes": "Thomas Heyward defeated St. Andrew's 10-4 on April 20, 2006. Mahan earned the win for Thomas Heyward, and Bryan Lee took the loss for St. Andrew's with a published record of 0-4. Bryan Lee went 2-for-4 with an RBI, Jon Hope went 2-for-4, and Rob Cantrell went 2-for-3. The published record for St. Andrew's after the game was 1-12.",
+    "PitchingDecisions": {
+      "Win": {
+        "PlayerName": "Mahan"
+      },
+      "Loss": {
+        "PlayerID": 2026165,
+        "PlayerName": "Bryan Lee",
+        "Record": "0-4"
+      }
+    },
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "Opponent": [
+        2,
+        1,
+        0,
+        1,
+        6,
+        0,
+        0
+      ],
+      "StAndrews": [
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "OpponentTotals": {
+        "R": 10,
+        "H": 5,
+        "E": 1
+      },
+      "StAndrewsTotals": {
+        "R": 4,
+        "H": 9,
+        "E": 7
+      }
+    }
+  },
+  {
+    "GameID": 2006042401,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
+    "Opponent": "Hilton Head Preparatory School",
+    "OpponentAbbr": "HHP",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 4,
+    "OpponentScore": 19,
+    "Season": 2006,
+    "Notes": "Hilton Head Prep defeated St. Andrew's 19-4 in five innings on April 24, 2006. Quinn earned the win for Hilton Head Prep, and John Hope took the loss for St. Andrew's with a published record of 1-6. Hope led St. Andrew's at the plate, going 2-for-3 with a double. The published records were St. Andrew's 1-13.",
+    "PitchingDecisions": {
+      "Win": {
+        "PlayerName": "Quinn"
+      },
+      "Loss": {
+        "PlayerID": 200806,
+        "PlayerName": "Jon Hope",
+        "Record": "1-6"
+      }
+    },
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "Opponent": [
+        3,
+        13,
+        0,
+        1,
+        2
+      ],
+      "StAndrews": [
+        0,
+        0,
+        0,
+        3,
+        1
+      ],
+      "OpponentTotals": {
+        "R": 19,
+        "H": 17,
+        "E": 1
+      },
+      "StAndrewsTotals": {
+        "R": 4,
+        "H": 6,
+        "E": 6
       }
     }
   },

@@ -1,0 +1,17 @@
+[
+  {
+    "SeasonID": 2006,
+    "PlayerID": 200604,
+    "PlayerName": "Javier Gutierrez",
+    "ThroughDate": "2006-04-05",
+    "SourceCitation": "Savannah Morning News boys soccer statistical leaders through April 5, 2006",
+    "Reason": "Official Savannah Morning News offensive leaderboard total through April 5.",
+    "GamesPlayedAdjustment": 2,
+    "OfficialTotals": {
+      "GamesPlayed": 4,
+      "Goals": 5,
+      "Assists": 3,
+      "Points": 13
+    }
+  }
+]

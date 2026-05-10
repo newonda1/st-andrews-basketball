@@ -149,13 +149,24 @@ export default function GameDetail({ data, status = "" }) {
     game?.OpponentScore != null &&
     Number.isFinite(Number(game?.TeamScore)) &&
     Number.isFinite(Number(game?.OpponentScore))
-      ? `${game.TeamScore}-${game.OpponentScore}`
+      ? `${game.TeamScore}-${game.OpponentScore}${
+          game.PenaltyKicks &&
+          game.TeamPenaltyScore != null &&
+          game.OpponentPenaltyScore != null
+            ? ` (PK ${game.TeamPenaltyScore}-${game.OpponentPenaltyScore})`
+            : game.Overtime
+              ? " (OT)"
+              : ""
+        }`
       : "—";
+  const overtimeLabel = game?.Overtime ? " (OT)" : "";
   const gameTitle =
     game?.Opponent && score !== "—"
-      ? Number(game.TeamScore) >= Number(game.OpponentScore)
-        ? `St. Andrew's ${game.TeamScore}, ${game.Opponent} ${game.OpponentScore}`
-        : `${game.Opponent} ${game.OpponentScore}, St. Andrew's ${game.TeamScore}`
+      ? game.PenaltyKicks && String(game.Result || "").toUpperCase() === "L"
+        ? `${game.Opponent} advances past St. Andrew's, ${score}`
+        : Number(game.TeamScore) >= Number(game.OpponentScore)
+        ? `St. Andrew's ${game.TeamScore}, ${game.Opponent} ${game.OpponentScore}${overtimeLabel}`
+        : `${game.Opponent} ${game.OpponentScore}, St. Andrew's ${game.TeamScore}${overtimeLabel}`
       : game?.RecapTitle || "Boys Soccer Game";
 
   return (
@@ -198,7 +209,7 @@ export default function GameDetail({ data, status = "" }) {
             Site
           </div>
           <div className="mt-2 text-2xl font-black text-slate-900">
-            {game?.LocationType || "Unknown"}
+            {game?.LocationType || "-"}
           </div>
         </div>
         <div className="rounded-lg border border-slate-200 bg-white px-4 py-4 text-center shadow-sm">

@@ -2,6 +2,7 @@ export const BOYS_SOCCER_DATA_PATHS = {
   games: "/data/boys/soccer/games.json",
   seasons: "/data/boys/soccer/seasons.json",
   rosters: "/data/boys/soccer/seasonrosters.json",
+  statAdjustments: "/data/boys/soccer/seasonstatadjustments.json",
   players: "/data/players.json",
   schools: "/data/schools.json",
 };
@@ -15,10 +16,11 @@ export async function fetchJson(path, label) {
 }
 
 export async function loadBoysSoccerData() {
-  const [games, seasons, rosters, players, schools] = await Promise.all([
+  const [games, seasons, rosters, statAdjustments, players, schools] = await Promise.all([
     fetchJson(BOYS_SOCCER_DATA_PATHS.games, "boys soccer games"),
     fetchJson(BOYS_SOCCER_DATA_PATHS.seasons, "boys soccer seasons"),
     fetchJson(BOYS_SOCCER_DATA_PATHS.rosters, "boys soccer rosters"),
+    fetchJson(BOYS_SOCCER_DATA_PATHS.statAdjustments, "boys soccer stat adjustments"),
     fetchJson(BOYS_SOCCER_DATA_PATHS.players, "players"),
     fetchJson(BOYS_SOCCER_DATA_PATHS.schools, "schools"),
   ]);
@@ -50,6 +52,7 @@ export async function loadBoysSoccerData() {
     games: hydratedGames,
     seasons: Array.isArray(seasons) ? seasons : [],
     rosters: Array.isArray(rosters) ? rosters : [],
+    statAdjustments: Array.isArray(statAdjustments) ? statAdjustments : [],
     players: Array.isArray(players) ? players : [],
     schools: Array.isArray(schools) ? schools : [],
   };
@@ -72,6 +75,11 @@ export function sortSoccerGames(games) {
 }
 
 export function formatSoccerDate(gameOrDate) {
+  if (typeof gameOrDate === "object" && gameOrDate !== null) {
+    const displayDate = gameOrDate.DisplayDate || gameOrDate.DateLabel;
+    if (displayDate) return String(displayDate);
+  }
+
   const rawDate =
     typeof gameOrDate === "string" ? gameOrDate : String(gameOrDate?.Date ?? "");
   const normalized = rawDate.replace(/-/g, "");

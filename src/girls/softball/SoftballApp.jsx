@@ -2,12 +2,12 @@ import React, { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 
 import AthleticsProgramShell from "../../components/AthleticsProgramShell";
+import AthleteProfileRedirect from "../../components/AthleteProfileRedirect";
 
 import Home from "./pages/Home";
 import Season2006 from "./seasons/Season2006";
 
 const GameDetail = lazy(() => import("./pages/GameDetail"));
-const PlayerPage = lazy(() => import("./pages/PlayerPage"));
 
 const seasonPages = [
   { slug: "2006", Component: Season2006 },
@@ -110,7 +110,7 @@ export default function SoftballApp() {
             ))}
 
             <Route path="games/:gameId" element={<GameDetail />} />
-            <Route path="players/:playerId" element={<PlayerPage />} />
+            <Route path="players/:playerId" element={<AthleteProfileRedirect />} />
 
             <Route path="*" element={<Home />} />
           </Routes>

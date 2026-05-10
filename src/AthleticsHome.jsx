@@ -91,7 +91,7 @@ const sports = [
   {
     name: "Softball",
     to: "/athletics/softball",
-    icon: "/images/girls/softball/softball_icon.svg",
+    icon: "/images/girls/softball/softball_icon.png",
     iconClassName: "scale-[1.05]",
     championshipGroups: [
       {

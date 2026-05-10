@@ -126,22 +126,6 @@ a {
   margin-bottom: 0;
 }
 
-.baseball-section {
-  font-family: "Questrial", Arial, Helvetica, sans-serif;
-}
-
-.baseball-section table:not(.baseball-line-score) {
-  font-size: clamp(0.94rem, 0.88rem + 0.18vw, 1rem);
-  line-height: 1.45;
-}
-
-.baseball-section table:not(.baseball-line-score) thead,
-.baseball-section table:not(.baseball-line-score) th,
-.baseball-section table:not(.baseball-line-score) td {
-  font-size: inherit;
-  line-height: inherit;
-}
-
 /* Custom Scrollbar */
 .custom-scrollbar::-webkit-scrollbar {
   width: 6px;
@@ -186,7 +170,4 @@ a {
     line-height: 1.55rem;
   }
 
-  .baseball-section table:not(.baseball-line-score) {
-    font-size: 0.92rem;
-  }
 }
