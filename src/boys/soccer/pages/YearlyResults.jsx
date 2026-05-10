@@ -8,9 +8,23 @@ import {
   sortSoccerGames,
 } from "../soccerData";
 
+const knownArchiveCoachesBySeason = new Map([
+  [2004, "Mark Gibbons"],
+  [2006, "Jason Woodbury"],
+]);
+
 function safeNumber(value) {
   const number = Number(value);
   return Number.isFinite(number) ? number : 0;
+}
+
+function firstMeaningfulValue(...values) {
+  return values.find(
+    (value) =>
+      value !== null &&
+      value !== undefined &&
+      String(value).trim() !== ""
+  );
 }
 
 function formatRecord(wins, losses, ties = 0) {
@@ -67,6 +81,26 @@ function recordFromSeasonFields(season, prefix) {
   };
 }
 
+function recordFromText(value) {
+  const text = String(value || "").trim();
+  const match = text.match(/(\d+)\s*[-–]\s*(\d+)(?:\s*[-–]\s*(\d+))?/);
+  if (!match) return null;
+
+  return {
+    wins: safeNumber(match[1]),
+    losses: safeNumber(match[2]),
+    ties: safeNumber(match[3] || 0),
+  };
+}
+
+function recordForSeason(season, prefix, games, filterFn = () => true) {
+  return (
+    recordFromSeasonFields(season, prefix) ||
+    recordFromText(season?.[`${prefix}Record`]) ||
+    buildRecord(games, filterFn)
+  );
+}
+
 function isCompletedGame(game) {
   const result = String(game?.Result || "").toUpperCase();
   return result === "W" || result === "L" || result === "T";
@@ -102,6 +136,44 @@ function formatNotes(season) {
     .join(" & ");
 }
 
+function getSeasonTextValues(season) {
+  return [
+    season?.SeasonResult,
+    season?.StatusNote,
+    ...(Array.isArray(season?.HistoricalSummary) ? season.HistoricalSummary : []),
+  ]
+    .map((value) => String(value || "").trim())
+    .filter(Boolean);
+}
+
+function coachFromSeasonText(season) {
+  const patterns = [
+    /\bhead coach\s+([A-Z][A-Za-z'.-]+(?:\s+[A-Z][A-Za-z'.-]+){1,3})/i,
+    /\bcoached by\s+([A-Z][A-Za-z'.-]+(?:\s+[A-Z][A-Za-z'.-]+){1,3})/i,
+    /\bSt\.?\s*Andrew's coach\s+([A-Z][A-Za-z'.-]+(?:\s+[A-Z][A-Za-z'.-]+){1,3})/i,
+  ];
+
+  for (const text of getSeasonTextValues(season)) {
+    for (const pattern of patterns) {
+      const match = text.match(pattern);
+      if (match?.[1]) return match[1].replace(/[.,;:].*$/, "").trim();
+    }
+  }
+
+  return "";
+}
+
+function coachForSeason(season) {
+  return (
+    firstMeaningfulValue(
+      season?.HeadCoach,
+      season?.Coach,
+      coachFromSeasonText(season),
+      knownArchiveCoachesBySeason.get(Number(season?.SeasonID))
+    ) || "Unknown"
+  );
+}
+
 export default function YearlyResults({ data, status = "" }) {
   const seasonRows = useMemo(() => {
     return (data?.seasons || [])
@@ -115,24 +187,17 @@ export default function YearlyResults({ data, status = "" }) {
         );
         const completedGames = seasonGames.filter(isCompletedGame);
 
-        const overall =
-          recordFromSeasonFields(season, "Overall") || buildRecord(completedGames);
-        const region =
-          recordFromSeasonFields(season, "Region") ||
-          buildRecord(completedGames, isRegionGame);
-        const nonRegion =
-          recordFromSeasonFields(season, "NonRegion") ||
-          buildRecord(
-            completedGames,
-            (game) => !isRegionGame(game) && !isPlayoffGame(game)
-          );
-        const home =
-          recordFromSeasonFields(season, "Home") || buildRecord(completedGames, isHomeGame);
-        const away =
-          recordFromSeasonFields(season, "Away") || buildRecord(completedGames, isAwayGame);
-        const playoffs =
-          recordFromSeasonFields(season, "Playoff") ||
-          buildRecord(completedGames, isPlayoffGame);
+        const overall = recordForSeason(season, "Overall", completedGames);
+        const region = recordForSeason(season, "Region", completedGames, isRegionGame);
+        const nonRegion = recordForSeason(
+          season,
+          "NonRegion",
+          completedGames,
+          (game) => !isRegionGame(game) && !isPlayoffGame(game)
+        );
+        const home = recordForSeason(season, "Home", completedGames, isHomeGame);
+        const away = recordForSeason(season, "Away", completedGames, isAwayGame);
+        const playoffs = recordForSeason(season, "Playoff", completedGames, isPlayoffGame);
 
         const gameGoalsFor = completedGames.reduce(
           (sum, game) => sum + Number(game.TeamScore || 0),
@@ -147,7 +212,7 @@ export default function YearlyResults({ data, status = "" }) {
           season,
           seasonId: season.SeasonID,
           label: getSoccerSeasonLabel(season),
-          coach: season.HeadCoach || season.Coach || "Unknown",
+          coach: coachForSeason(season),
           overall,
           region,
           nonRegion,
