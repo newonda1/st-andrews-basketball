@@ -100,6 +100,20 @@ function formatGrade(grade) {
   return String(grade);
 }
 
+function SeasonRecapSection({ seasonLabel }) {
+  return (
+    <section id="season-recap" className="mx-auto max-w-4xl space-y-3">
+      <h2 className="text-2xl font-semibold">Season Recap</h2>
+      <div className="rounded-lg border border-dashed border-gray-300 bg-gray-50 px-6 py-10 text-center shadow-sm">
+        <p className="text-base font-semibold text-gray-800">Season recap not ready yet</p>
+        <p className="mt-2 text-sm leading-6 text-gray-600">
+          A written recap for the {seasonLabel} baseball season will be added here.
+        </p>
+      </div>
+    </section>
+  );
+}
+
 function SeasonImagesSection({ images = [], seasonLabel }) {
   const [imageIndex, setImageIndex] = useState(0);
 
@@ -814,6 +828,8 @@ export function BaseballSeasonPage({
   return (
     <div className="mx-auto max-w-6xl space-y-8 px-4 pb-10 pt-2 lg:pb-40">
       <h1 className="text-3xl font-bold text-center mb-2">{title}</h1>
+
+      <SeasonRecapSection seasonLabel={title.replace(/\s+Season$/, "")} />
 
       {showSeasonImagesPlaceholder || seasonImages.length ? (
         <SeasonImagesSection images={seasonImages} seasonLabel={String(seasonId)} />

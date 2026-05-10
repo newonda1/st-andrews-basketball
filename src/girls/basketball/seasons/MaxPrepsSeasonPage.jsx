@@ -799,6 +799,8 @@ function MaxPrepsSeasonPage({
   const shouldEmbedArticle = embedFeaturedArticleInRecap && featuredArticle;
   const shouldShowRecap = Boolean(splitParagraphs(seasonRecap).length);
   const scheduleHeaderCellClassName = "px-2 py-2 text-center text-xs whitespace-nowrap";
+  const scheduleOpponentHeaderCellClassName =
+    "px-2 py-2 pl-10 text-left text-xs whitespace-nowrap";
   const scheduleBodyCellClassName = "px-2 py-1.5 text-center align-middle whitespace-nowrap";
   const scheduleOpponentCellClassName = "px-2 py-1.5 align-middle";
   const statsHeaderCellClassName = "px-2 py-2 text-center text-xs whitespace-nowrap";
@@ -936,7 +938,7 @@ function MaxPrepsSeasonPage({
                 <thead className="bg-gray-100 text-xs uppercase tracking-wide text-gray-700">
                   <tr>
                     <th className={`${scheduleHeaderCellClassName} text-left`}>Date</th>
-                    <th className={`${scheduleHeaderCellClassName} text-left`}>Opponent</th>
+                    <th className={scheduleOpponentHeaderCellClassName}>Opponent</th>
                     <th className={scheduleHeaderCellClassName}>Location</th>
                     <th className={scheduleHeaderCellClassName}>Result</th>
                     <th className={scheduleHeaderCellClassName}>Score</th>

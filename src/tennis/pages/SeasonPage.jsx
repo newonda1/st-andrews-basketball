@@ -1,5 +1,6 @@
 import React, { useMemo } from "react";
 import { Link, useParams } from "react-router-dom";
+import { athleteProfilePath } from "../../athletes/archiveEra";
 import { StateBracket8GameSVG } from "../../boys/basketball/components/GameCardBracketsSVG";
 import {
   getTennisDateLabel,
@@ -139,14 +140,147 @@ function getMatchSiteLabel(match) {
   return "—";
 }
 
+function splitParagraphs(value) {
+  if (Array.isArray(value)) {
+    return value.map((paragraph) => String(paragraph || "").trim()).filter(Boolean);
+  }
+
+  return String(value || "")
+    .split(/\n{2,}/)
+    .map((paragraph) => paragraph.trim())
+    .filter(Boolean);
+}
+
+function formatRosterGrade(grade) {
+  if (grade === null || grade === undefined || grade === "") return "-";
+  const value = Number(grade);
+  if (!Number.isFinite(value)) return String(grade);
+  if (value === 8) return "8th";
+  if (value === 9) return "Fr.";
+  if (value === 10) return "So.";
+  if (value === 11) return "Jr.";
+  if (value === 12) return "Sr.";
+  return String(grade);
+}
+
+function gradeFromGradYear(gradYear, seasonId) {
+  const grad = Number(gradYear);
+  const season = Number(seasonId);
+  if (!Number.isFinite(grad) || !Number.isFinite(season)) return null;
+  const grade = 12 + season - grad;
+  return grade >= 7 && grade <= 12 ? grade : null;
+}
+
+function getPlayerDisplayName(player) {
+  return (
+    player?.PlayerName ||
+    [player?.FirstName, player?.LastName].filter(Boolean).join(" ") ||
+    "Unknown Player"
+  );
+}
+
+function SeasonRecapSection({ season }) {
+  const paragraphs = splitParagraphs(
+    season?.SeasonRecapParagraphs || season?.SeasonRecap || season?.StatusNote
+  );
+
+  return (
+    <section id="season-recap" className="mx-auto max-w-4xl space-y-3">
+      <h2 className="text-2xl font-semibold text-slate-900">Season Recap</h2>
+      {paragraphs.length ? (
+        <div className="space-y-3 text-base leading-7 text-slate-700">
+          {paragraphs.map((paragraph, index) => (
+            <p key={`${paragraph}-${index}`}>{paragraph}</p>
+          ))}
+        </div>
+      ) : (
+        <div className="rounded-lg border border-dashed border-slate-300 bg-slate-50 px-6 py-10 text-center">
+          <p className="text-base font-semibold text-slate-900">Season recap not ready yet</p>
+          <p className="mt-2 text-sm leading-6 text-slate-600">
+            A written recap for this tennis season will be added here.
+          </p>
+        </div>
+      )}
+    </section>
+  );
+}
+
+function SeasonImagesSection({ seasonLabel }) {
+  return (
+    <section id="season-images" className="space-y-3">
+      <h2 className="text-2xl font-semibold text-slate-900">Season Images</h2>
+      <div className="rounded-lg border border-dashed border-slate-300 bg-slate-50 px-6 py-12 text-center">
+        <p className="text-base font-semibold text-slate-900">Season photo gallery coming soon</p>
+        <p className="mt-2 text-sm leading-6 text-slate-600">
+          Photos from the {seasonLabel} tennis season will be added here.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+function TennisRosterTable({ rows }) {
+  return (
+    <div className="overflow-x-auto rounded-lg border border-slate-200 bg-white shadow-sm">
+      <table className="min-w-full bg-white text-sm text-center">
+        <thead className="bg-slate-100 text-xs uppercase tracking-wide text-slate-600">
+          <tr>
+            <th className="px-3 py-2 text-left font-normal">Player</th>
+            <th className="px-3 py-2 font-normal">Grade</th>
+            <th className="px-3 py-2 font-normal">Team</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.length ? (
+            rows.map((row, index) => (
+              <tr
+                key={row.playerId}
+                className={`border-t border-slate-200 ${
+                  index % 2 === 0 ? "bg-white" : "bg-slate-50/70"
+                } hover:bg-slate-100`}
+              >
+                <td className="px-3 py-2 text-left">
+                  <Link
+                    to={athleteProfilePath(row.playerId, "tennis")}
+                    className="text-blue-700 underline hover:text-blue-900"
+                  >
+                    {row.name}
+                  </Link>
+                </td>
+                <td className="px-3 py-2 whitespace-nowrap">{formatRosterGrade(row.grade)}</td>
+                <td className="px-3 py-2 whitespace-nowrap">{row.team}</td>
+              </tr>
+            ))
+          ) : (
+            <tr>
+              <td colSpan={3} className="px-3 py-4 text-center text-slate-600">
+                No roster data is available for this season yet.
+              </td>
+            </tr>
+          )}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
 export default function SeasonPage({
   seasons = [],
   matches = [],
+  players = [],
   schools = [],
   status = "",
 }) {
   const { seasonId } = useParams();
   const schoolMap = useMemo(() => buildSchoolMap(schools), [schools]);
+  const playersById = useMemo(() => {
+    return new Map(
+      (Array.isArray(players) ? players : []).map((player) => [
+        String(player.PlayerID),
+        player,
+      ])
+    );
+  }, [players]);
 
   const season = useMemo(() => {
     return (
@@ -175,7 +309,38 @@ export default function SeasonPage({
       ),
     [seasonMatches]
   );
+  const rosterRows = useMemo(() => {
+    const rowsByPlayerId = new Map();
+
+    seasonMatches.forEach((match) => {
+      const lineMatches = Array.isArray(match.LineMatches) ? match.LineMatches : [];
+      lineMatches.forEach((lineMatch) => {
+        const participants = Array.isArray(lineMatch.Participants) ? lineMatch.Participants : [];
+        participants
+          .filter((participant) => participant?.ParticipantType === "stAndrewsPlayer")
+          .forEach((participant) => {
+            const playerId = String(participant.PlayerID || "").trim();
+            if (!playerId || rowsByPlayerId.has(playerId)) return;
+
+            const player = playersById.get(playerId);
+            rowsByPlayerId.set(playerId, {
+              playerId,
+              name: getPlayerDisplayName(player),
+              grade: gradeFromGradYear(player?.GradYear, seasonId),
+              team: match.Gender || "Tennis",
+            });
+          });
+      });
+    });
+
+    return Array.from(rowsByPlayerId.values()).sort((a, b) => {
+      const gradeDiff = Number(b.grade || 0) - Number(a.grade || 0);
+      if (gradeDiff) return gradeDiff;
+      return a.name.localeCompare(b.name);
+    });
+  }, [playersById, seasonId, seasonMatches]);
   const showBoysStateTournamentBracket = Number(seasonId) === 2026;
+  const seasonLabel = getTennisSeasonLabel(season);
 
   if (!season) {
     return (
@@ -206,9 +371,18 @@ export default function SeasonPage({
 
       <header className="text-center">
         <h1 className="text-3xl font-bold text-slate-900">
-          {getTennisSeasonLabel(season)} Season
+          {seasonLabel} Season
         </h1>
       </header>
+
+      <SeasonRecapSection season={season} />
+
+      <SeasonImagesSection seasonLabel={seasonLabel} />
+
+      <section id="season-roster" className="space-y-4">
+        <h2 className="text-2xl font-semibold text-slate-900">Roster</h2>
+        <TennisRosterTable rows={rosterRows} />
+      </section>
 
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold text-slate-900">

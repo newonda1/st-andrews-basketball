@@ -1450,7 +1450,7 @@
     "MatchCategory": "Unknown",
     "HomeAway": "Unknown",
     "Status": "Completed",
-    "Opponent": "Unknown opponent",
+    "Opponent": "Unknown",
     "TeamScore": {
       "Result": "L"
     },
@@ -1470,7 +1470,7 @@
     "MatchCategory": "Unknown",
     "HomeAway": "Unknown",
     "Status": "Completed",
-    "Opponent": "Unknown opponent",
+    "Opponent": "Unknown",
     "TeamScore": {
       "Result": "L"
     },
@@ -3246,7 +3246,7 @@
     "MatchCategory": "Unknown",
     "HomeAway": "Unknown",
     "Status": "Completed",
-    "Opponent": "Unknown opponent",
+    "Opponent": "Unknown",
     "TeamScore": {
       "Result": "L"
     },

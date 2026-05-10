@@ -100,7 +100,9 @@
         ],
         "ResultNote": "The supplied St. Andrew's individual scores total 172, while the reported team score is 173."
       }
-    ]
+    ],
+    "OpponentID": "sc-colleton-prep-academy-walterboro",
+    "OpponentLocation": "Walterboro, SC"
   },
   {
     "MatchID": "20060322-patrick-henry",
@@ -201,7 +203,360 @@
           }
         ]
       }
+    ],
+    "OpponentID": "sc-patrick-henry-academy-estill",
+    "OpponentLocation": "Estill, SC"
+  },
+  {
+    "MatchID": "20060330-colleton-prep",
+    "Season": 2006,
+    "Name": "St. Andrew's vs. Colleton Prep",
+    "Date": "2006-03-30",
+    "Course": "Wilmington Island Golf Club",
+    "Opponent": "Colleton Prep Academy",
+    "SourcePublication": "User-provided golf results",
+    "SourceDate": "2006-03-30",
+    "SourceCitation": "User-provided golf results, Mar. 30, 2006",
+    "SourceNote": "The supplied St. Andrew's line lists five scores. The reported 166 team score is reconciled by counting Drew Aimone 37, Kevin Crouch 42, Ashley Long 43, and one of the two 44s. The supplied Bobby Pavlo name is linked to the existing Bubby Pavlo player record.",
+    "Summary": "St. Andrew's defeated Colleton Prep 166-206 at par-35 Wilmington Island Golf Club. Drew Aimone shot 37 to earn medalist honors.",
+    "Divisions": [
+      {
+        "Division": "Varsity",
+        "TeamScores": [
+          {
+            "School": "St. Andrew's",
+            "Score": 166,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "School": "Colleton Prep",
+            "Score": 206,
+            "IsStAndrews": false,
+            "SchoolID": "sc-colleton-prep-academy-walterboro"
+          }
+        ],
+        "Medalist": {
+          "PlayerID": 200417,
+          "PlayerName": "Drew Aimone",
+          "School": "St. Andrew's",
+          "Score": 37,
+          "SchoolID": "ga-st-andrews-school-savannah"
+        },
+        "Results": [
+          {
+            "PlayerID": 200417,
+            "PlayerName": "Drew Aimone",
+            "School": "St. Andrew's",
+            "Score": 37,
+            "Award": "Medalist",
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerName": "David Salter",
+            "School": "Colleton Prep",
+            "Score": 38,
+            "IsStAndrews": false,
+            "SchoolID": "sc-colleton-prep-academy-walterboro"
+          },
+          {
+            "PlayerID": 2026162,
+            "PlayerName": "Kevin Crouch",
+            "School": "St. Andrew's",
+            "Score": 42,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerID": 2026349,
+            "PlayerName": "Ashley Long",
+            "School": "St. Andrew's",
+            "Score": 43,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerID": 200418,
+            "PlayerName": "Samantha Long",
+            "School": "St. Andrew's",
+            "Score": 44,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerID": 2026163,
+            "PlayerName": "Bubby Pavlo",
+            "School": "St. Andrew's",
+            "Score": 44,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerName": "Jonathan Hill",
+            "School": "Colleton Prep",
+            "Score": 53,
+            "IsStAndrews": false,
+            "SchoolID": "sc-colleton-prep-academy-walterboro"
+          },
+          {
+            "PlayerName": "Zach Gooding",
+            "School": "Colleton Prep",
+            "Score": 57,
+            "IsStAndrews": false,
+            "SchoolID": "sc-colleton-prep-academy-walterboro"
+          },
+          {
+            "PlayerName": "Holden Smith",
+            "School": "Colleton Prep",
+            "Score": 58,
+            "IsStAndrews": false,
+            "SchoolID": "sc-colleton-prep-academy-walterboro"
+          }
+        ],
+        "ResultNote": "St. Andrew's listed five individual scores; the team score is the low four."
+      }
+    ],
+    "OpponentID": "sc-colleton-prep-academy-walterboro",
+    "OpponentLocation": "Walterboro, SC"
+  },
+  {
+    "MatchID": "20060404-beaufort-academy-invitational",
+    "Season": 2006,
+    "Name": "Beaufort Academy Invitational",
+    "Date": "2006-04-04",
+    "Course": "South Carolina National Golf Club",
+    "Location": "Beaufort, S.C.",
+    "Opponent": "Multiple schools",
+    "SourcePublication": "User-provided golf results",
+    "SourceDate": "2006-04-04",
+    "SourceCitation": "User-provided golf results, Apr. 4, 2006",
+    "Summary": "St. Andrew's finished fourth in the Beaufort Academy Invitational at South Carolina National Golf Club, shooting 179 behind Hilton Head Prep's 148.",
+    "Divisions": [
+      {
+        "Division": "Boys",
+        "TeamFieldSize": 5,
+        "TeamScores": [
+          {
+            "School": "Hilton Head Prep",
+            "Score": 148,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+          },
+          {
+            "School": "Hilton Head Christian",
+            "Score": 163,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island"
+          },
+          {
+            "School": "Beaufort Academy",
+            "Score": 166,
+            "IsStAndrews": false,
+            "SchoolID": "sc-beaufort-academy-beaufort"
+          },
+          {
+            "School": "St. Andrew's",
+            "Score": 179,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "School": "Thomas Heyward Academy",
+            "Score": 232,
+            "IsStAndrews": false,
+            "SchoolID": "sc-thomas-heyward-academy-ridgeland"
+          }
+        ],
+        "Medalist": {
+          "PlayerName": "Harrison Bell",
+          "School": "Hilton Head Prep",
+          "Score": 31,
+          "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+        },
+        "Results": [
+          {
+            "PlayerName": "Harrison Bell",
+            "School": "Hilton Head Prep",
+            "Score": 31,
+            "Award": "Medalist",
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+          },
+          {
+            "PlayerName": "Steven Sims",
+            "School": "Hilton Head Christian",
+            "Score": 32,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island"
+          },
+          {
+            "PlayerName": "Adam Johnson",
+            "School": "Beaufort Academy",
+            "Score": 39,
+            "IsStAndrews": false,
+            "SchoolID": "sc-beaufort-academy-beaufort"
+          },
+          {
+            "PlayerID": 200417,
+            "PlayerName": "Drew Aimone",
+            "School": "St. Andrew's",
+            "Score": 39,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerID": 2026166,
+            "PlayerName": "Thomas Withers",
+            "School": "St. Andrew's",
+            "Score": 44,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerID": 2026162,
+            "PlayerName": "Kevin Crouch",
+            "School": "St. Andrew's",
+            "Score": 48,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerID": 2026349,
+            "PlayerName": "Ashley Long",
+            "School": "St. Andrew's",
+            "Score": 48,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerID": 200435,
+            "PlayerName": "Patrick Maleki",
+            "School": "St. Andrew's",
+            "Score": 48,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerName": "Chris Waitt",
+            "School": "Thomas Heyward Academy",
+            "Score": 53,
+            "IsStAndrews": false,
+            "SchoolID": "sc-thomas-heyward-academy-ridgeland"
+          }
+        ],
+        "ResultNote": "The report included one leading individual score for Hilton Head Prep, Hilton Head Christian, Beaufort Academy, and Thomas Heyward Academy, plus the full St. Andrew's line."
+      }
+    ],
+    "OpponentSchoolIDs": [
+      "sc-hilton-head-preparatory-school-hilton-head-island",
+      "sc-hilton-head-christian-academy-hilton-head-island",
+      "sc-beaufort-academy-beaufort",
+      "sc-thomas-heyward-academy-ridgeland"
     ]
+  },
+  {
+    "MatchID": "20060417-patrick-henry",
+    "Season": 2006,
+    "Name": "St. Andrew's vs. Patrick Henry",
+    "Date": "2006-04-17",
+    "Course": "Penny Branch Golf Club",
+    "Location": "Furman, S.C.",
+    "Opponent": "Patrick Henry Academy",
+    "SourcePublication": "User-provided golf results",
+    "SourceDate": "2006-04-17",
+    "SourceCitation": "User-provided golf results, Apr. 17, 2006",
+    "Summary": "Patrick Henry defeated St. Andrew's 172-185 at Penny Branch Golf Club in Furman, S.C. Kevin Crouch led St. Andrew's with a 41.",
+    "Divisions": [
+      {
+        "Division": "Boys",
+        "TeamScores": [
+          {
+            "School": "Patrick Henry Academy",
+            "Score": 172,
+            "IsStAndrews": false,
+            "SchoolID": "sc-patrick-henry-academy-estill"
+          },
+          {
+            "School": "St. Andrew's",
+            "Score": 185,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          }
+        ],
+        "Medalist": {
+          "PlayerName": "Vance Miller Loadholt",
+          "School": "Patrick Henry Academy",
+          "Score": 40,
+          "SchoolID": "sc-patrick-henry-academy-estill"
+        },
+        "Results": [
+          {
+            "PlayerName": "Vance Miller Loadholt",
+            "School": "Patrick Henry Academy",
+            "Score": 40,
+            "Award": "Medalist",
+            "IsStAndrews": false,
+            "SchoolID": "sc-patrick-henry-academy-estill"
+          },
+          {
+            "PlayerName": "Perry Gifford",
+            "School": "Patrick Henry Academy",
+            "Score": 42,
+            "IsStAndrews": false,
+            "SchoolID": "sc-patrick-henry-academy-estill"
+          },
+          {
+            "PlayerName": "Brannan Gifford",
+            "School": "Patrick Henry Academy",
+            "Score": 44,
+            "IsStAndrews": false,
+            "SchoolID": "sc-patrick-henry-academy-estill"
+          },
+          {
+            "PlayerName": "Brian Mixson",
+            "School": "Patrick Henry Academy",
+            "Score": 46,
+            "IsStAndrews": false,
+            "SchoolID": "sc-patrick-henry-academy-estill"
+          },
+          {
+            "PlayerID": 2026162,
+            "PlayerName": "Kevin Crouch",
+            "School": "St. Andrew's",
+            "Score": 41,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerID": 200419,
+            "PlayerName": "Steve Carbone",
+            "School": "St. Andrew's",
+            "Score": 47,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerID": 2026163,
+            "PlayerName": "Bubby Pavlo",
+            "School": "St. Andrew's",
+            "Score": 48,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerID": 200435,
+            "PlayerName": "Patrick Maleki",
+            "School": "St. Andrew's",
+            "Score": 49,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          }
+        ]
+      }
+    ],
+    "OpponentID": "sc-patrick-henry-academy-estill",
+    "OpponentLocation": "Estill, SC"
   },
   {
     "MatchID": "20040303-groves",
@@ -349,7 +704,9 @@
         ],
         "ResultNote": "The published transcript lists Jackie Dyer's 49 as the only Groves individual girls score."
       }
-    ]
+    ],
+    "OpponentID": "ga-groves-high-school-garden-city",
+    "OpponentLocation": "Garden City, GA"
   },
   {
     "MatchID": "20040318-beaufort-academy",
@@ -449,7 +806,9 @@
           }
         ]
       }
-    ]
+    ],
+    "OpponentID": "sc-beaufort-academy-beaufort",
+    "OpponentLocation": "Beaufort, SC"
   },
   {
     "MatchID": "20040325-penny-branch-quad",
@@ -458,7 +817,7 @@
     "Date": "2004-03-25",
     "Course": "Penny Branch Golf Club",
     "Location": "Estill, S.C.",
-    "Opponent": "Holly Hill Academy / Patrick Henry Academy / Jefferson Davis",
+    "Opponent": "Multiple schools",
     "Summary": "St. Andrew's finished third in a four-team match at par-36 Penny Branch Golf Club in Estill, S.C. Josh Smith shot 37 to earn medalist honors.",
     "Divisions": [
       {
@@ -533,6 +892,11 @@
         ],
         "ResultNote": "The provided report includes full St. Andrew's individual results; only team scores were available for the other schools."
       }
+    ],
+    "OpponentSchoolIDs": [
+      "sc-holly-hill-academy-holly-hill",
+      "sc-patrick-henry-academy-estill",
+      "sc-jefferson-davis-academy-blackville"
     ]
   },
   {
@@ -541,7 +905,7 @@
     "Name": "St. Andrew's vs. Hilton Head Prep",
     "Date": "2004-03-26",
     "Course": "Wilmington Island Golf Club",
-    "Opponent": "Hilton Head Prep",
+    "Opponent": "Hilton Head Preparatory School",
     "Summary": "St. Andrew's defeated Hilton Head Prep 176-183 in a par-35 match at Wilmington Island Golf Club. Steve Carbone shot 41 to earn medalist honors.",
     "Divisions": [
       {
@@ -631,7 +995,9 @@
           }
         ]
       }
-    ]
+    ],
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
+    "OpponentLocation": "Hilton Head Island, SC"
   },
   {
     "MatchID": "20040330-patrick-henry",
@@ -639,7 +1005,7 @@
     "Name": "St. Andrew's vs. Patrick Henry",
     "Date": "2004-03-30",
     "Course": "Wilmington Island Golf Club",
-    "Opponent": "Patrick Henry (Ridgeland)",
+    "Opponent": "Patrick Henry Academy",
     "Summary": "St. Andrew's defeated Patrick Henry of Ridgeland 179-193 in a par-35 match at Wilmington Island Golf Club. Steve Carbone shot 42 to earn medalist honors.",
     "Divisions": [
       {
@@ -729,7 +1095,9 @@
           }
         ]
       }
-    ]
+    ],
+    "OpponentID": "sc-patrick-henry-academy-estill",
+    "OpponentLocation": "Estill, SC"
   },
   {
     "MatchID": "20040401-santee-national-quad",
@@ -737,7 +1105,7 @@
     "Name": "Santee National Quad Match",
     "Date": "2004-04-01",
     "Course": "Santee National Golf Club",
-    "Opponent": "Holly Hill Academy / Beaufort Academy / Charleston Collegiate",
+    "Opponent": "Multiple schools",
     "Summary": "St. Andrew's finished third in a four-team match at par-36 Santee National Golf Club, shooting 167 behind Josh Smith's 39.",
     "Divisions": [
       {
@@ -804,6 +1172,11 @@
         ],
         "ResultNote": "The provided report includes full St. Andrew's individual results; only team scores were available for the other schools."
       }
+    ],
+    "OpponentSchoolIDs": [
+      "sc-holly-hill-academy-holly-hill",
+      "sc-beaufort-academy-beaufort",
+      "sc-charleston-collegiate-school-johns-island"
     ]
   },
   {
@@ -813,7 +1186,7 @@
     "Date": "2004-04-02",
     "Course": "Eagles Point Golf Club",
     "Location": "Bluffton",
-    "Opponent": "Hilton Head Prep",
+    "Opponent": "Hilton Head Preparatory School",
     "Summary": "St. Andrew's defeated Hilton Head Prep 169-194 in a par-35 match at Eagles Point Golf Club in Bluffton. Josh Smith shot 39 to earn medalist honors.",
     "Divisions": [
       {
@@ -903,7 +1276,9 @@
           }
         ]
       }
-    ]
+    ],
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
+    "OpponentLocation": "Hilton Head Island, SC"
   },
   {
     "MatchID": "20040406-south-carolina-national-tri",
@@ -912,7 +1287,7 @@
     "Date": "2004-04-06",
     "Course": "South Carolina National Golf Club",
     "Location": "Beaufort",
-    "Opponent": "Beaufort Academy / Thomas Heyward Academy",
+    "Opponent": "Multiple schools",
     "Summary": "St. Andrew's finished second in a three-team match at par-35 South Carolina National Golf Club in Beaufort, shooting 172 behind Beaufort Academy's 152.",
     "Divisions": [
       {
@@ -1035,6 +1410,10 @@
           }
         ]
       }
+    ],
+    "OpponentSchoolIDs": [
+      "sc-beaufort-academy-beaufort",
+      "sc-thomas-heyward-academy-ridgeland"
     ]
   },
   {
@@ -1044,7 +1423,7 @@
     "Date": "2004-04-22",
     "Course": "Santee National Golf Club",
     "Location": "South Carolina",
-    "Opponent": "Holly Hill Academy / Beaufort Academy",
+    "Opponent": "Multiple schools",
     "MatchType": "Region Tournament",
     "Summary": "St. Andrew's finished third in the SCISA Region 2-AA Final at Santee National Golf Club, shooting 325 behind Holly Hill's 307 and Beaufort Academy's 315.",
     "Divisions": [
@@ -1122,6 +1501,10 @@
         ],
         "ResultNote": "Samantha Long shot an 86. Davy Clay and Josh Smith made the All-region team. The report noted that the first round of the state tournament would be played Apr. 26-27 at Fripp Island."
       }
+    ],
+    "OpponentSchoolIDs": [
+      "sc-holly-hill-academy-holly-hill",
+      "sc-beaufort-academy-beaufort"
     ]
   },
   {
@@ -1131,7 +1514,7 @@
     "Date": "2004-04-27",
     "Course": "Ocean Point Golf Club",
     "Location": "Fripp Island, S.C.",
-    "Opponent": "2004 SCISA State Tournament",
+    "Opponent": "SCISA Class AA State Tournament",
     "MatchType": "State Tournament",
     "Summary": "St. Andrew's finished fourth in the 12-team SCISA Class AA State Tournament at par-72 Ocean Point Golf Club on Fripp Island, shooting 352-328-680.",
     "Divisions": [
@@ -1260,6 +1643,10 @@
         ],
         "ResultNote": "The published report listed team scores for the top two teams and St. Andrew's from the 12-team field. Davy Clay tied for fifth individually with a 90-70-160."
       }
+    ],
+    "OpponentSchoolIDs": [
+      "sc-holly-hill-academy-holly-hill",
+      "sc-beaufort-academy-beaufort"
     ]
   }
 ]

@@ -6579,8 +6579,8 @@
   },
   {
     "GameID": 20051203,
-    "OpponentID": "ga-providence-christian-savannah",
-    "Opponent": "Providence Christian",
+    "OpponentID": "ga-providence-christian-school-savannah",
+    "Opponent": "Providence Christian School",
     "LocationType": "Home",
     "GameType": "Tournament",
     "Tournament": "St. Andrew's Tip-Off Tournament",
@@ -6638,8 +6638,8 @@
   },
   {
     "GameID": 20051216,
-    "OpponentID": "ga-providence-christian-savannah",
-    "Opponent": "Providence Christian",
+    "OpponentID": "ga-providence-christian-school-savannah",
+    "Opponent": "Providence Christian School",
     "LocationType": "Away",
     "GameType": "Non-Region",
     "Result": "L",
@@ -6676,8 +6676,8 @@
   },
   {
     "GameID": 20060109,
-    "OpponentID": "ga-providence-christian-savannah",
-    "Opponent": "Providence Christian",
+    "OpponentID": "ga-providence-christian-school-savannah",
+    "Opponent": "Providence Christian School",
     "LocationType": "Home",
     "GameType": "Non-Region",
     "Result": "W",

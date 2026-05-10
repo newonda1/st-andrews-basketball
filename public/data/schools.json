@@ -549,7 +549,9 @@
     "SchoolID": "ga-groves-high-school-garden-city",
     "Name": "Groves High School",
     "City": "Garden City",
-    "State": "GA"
+    "State": "GA",
+    "LogoPath": "/images/schools/logos/ga-groves-high-school-garden-city.png",
+    "LogoSourceUrl": "https://image.maxpreps.io/school-mascot/3/e/0/3e0a2b11-fa25-4fdc-a810-13cca1f16399.gif?version=639129168628334160&width=1024&height=1024"
   },
   {
     "SchoolID": "ga-grovetown-high-school-grovetown",
@@ -1832,7 +1834,9 @@
     "Name": "Lowcountry Day School",
     "City": "Pawleys Island",
     "State": "SC",
-    "Mascot": "Marlins"
+    "Mascot": "Marlins",
+    "LogoPath": "/images/schools/logos/sc-lowcountry-day-school-pawleys-island.png",
+    "LogoSourceUrl": "https://image.maxpreps.io/school-mascot/0/e/4/0e4e44f2-716d-4ec1-a81f-d1d6ac8bf5c4.gif?version=636481492800000000&width=1024&height=1024"
   },
   {
     "SchoolID": "sc-lord-berkeley-academy-moncks-corner",
@@ -1929,7 +1933,11 @@
   {
     "SchoolID": "sc-st-francis-xavier",
     "Name": "St. Francis Xavier",
-    "State": "SC"
+    "City": "Sumter",
+    "State": "SC",
+    "Mascot": "Padres",
+    "LogoPath": "/images/schools/logos/sc-st-francis-xavier.png",
+    "LogoSourceUrl": "https://web.archive.org/web/20110201175044im_/http://sfxhs.com/design/bg_sfxlogo.png"
   },
   {
     "SchoolID": "sc-pee-dee-academy-mullins",
@@ -1983,7 +1991,9 @@
     "City": "Bishopville",
     "State": "SC",
     "ShortName": "Lee Academy",
-    "Mascot": "Cavaliers"
+    "Mascot": "Cavaliers",
+    "LogoPath": "/images/schools/logos/sc-robert-e-lee-academy-bishopville.png",
+    "LogoSourceUrl": "https://image.maxpreps.io/school-mascot/f/6/7/f67d1931-195c-4739-9f7f-9f135b452122.gif?version=638078586600000000&width=1024&height=1024"
   },
   {
     "SchoolID": "sc-roy-hudgens-academy-lynchburg",
@@ -2069,7 +2079,9 @@
     "SchoolID": "sc-the-kings-academy-florence",
     "Name": "The King's Academy",
     "City": "Florence",
-    "State": "SC"
+    "State": "SC",
+    "LogoPath": "/images/schools/logos/sc-king-s-academy-florence.png",
+    "LogoSourceUrl": "https://image.maxpreps.io/school-mascot/3/d/c/3dc5c44f-e383-4319-814a-b76d6c31556a.gif?version=636062519400000000&width=1024&height=1024"
   },
   {
     "SchoolID": "sc-thomas-heyward-academy-ridgeland",
@@ -2084,13 +2096,17 @@
     "Name": "Thomas Sumter Academy",
     "City": "Dalzell",
     "State": "SC",
-    "Mascot": "Generals"
+    "Mascot": "Generals",
+    "LogoPath": "/images/schools/logos/sc-thomas-sumter-academy-dalzell.png",
+    "LogoSourceUrl": "https://image.maxpreps.io/school-mascot/0/8/9/089ad988-f39e-43a2-8d13-f87d438c0fa1.gif?version=638983655168901750&width=1024&height=1024"
   },
   {
     "SchoolID": "sc-thomas-sumter-academy-rembert",
     "Name": "Thomas Sumter Academy",
     "City": "Rembert",
-    "State": "SC"
+    "State": "SC",
+    "LogoPath": "/images/schools/logos/sc-thomas-sumter-academy-dalzell.png",
+    "LogoSourceUrl": "https://image.maxpreps.io/school-mascot/0/8/9/089ad988-f39e-43a2-8d13-f87d438c0fa1.gif?version=638983655168901750&width=1024&height=1024"
   },
   {
     "SchoolID": "sc-trinity-collegiate-darlington",
@@ -2105,7 +2121,9 @@
     "SchoolID": "sc-trident-academy-mount-pleasant",
     "Name": "Trident Academy",
     "City": "Mount Pleasant",
-    "State": "SC"
+    "State": "SC",
+    "LogoPath": "/images/schools/logos/sc-trident-academy-mount-pleasant.png",
+    "LogoSourceUrl": "https://resources.finalsite.net/images/f_auto,q_auto/v1683916093/tridentacademycom/hckfcifmz4tvaplfevqz/favicon_trident-1.ico"
   },
   {
     "SchoolID": "sc-w-wyman-king-academy-batesburg-leesville",

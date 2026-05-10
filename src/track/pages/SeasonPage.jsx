@@ -85,6 +85,54 @@ function MeetRecapCard({ meet }) {
   );
 }
 
+function SeasonRecapSection({ season }) {
+  const paragraphs = Array.isArray(season?.RecapParagraphs)
+    ? season.RecapParagraphs.map((paragraph) => String(paragraph || "").trim()).filter(Boolean)
+    : [];
+  const highlights = Array.isArray(season?.HighlightNotes)
+    ? season.HighlightNotes.map((note) => String(note || "").trim()).filter(Boolean)
+    : [];
+
+  if (!paragraphs.length && !highlights.length) {
+    return (
+      <section id="season-recap" className="mx-auto max-w-4xl space-y-3">
+        <h2 className="text-2xl font-semibold">Season Recap</h2>
+        <div className="rounded-lg border border-dashed border-gray-300 bg-gray-50 px-6 py-10 text-center">
+          <p className="text-base font-semibold text-gray-900">Season recap not ready yet</p>
+          <p className="mt-2 text-sm text-gray-600">
+            A written recap for this track season will be added here.
+          </p>
+        </div>
+      </section>
+    );
+  }
+
+  return (
+    <section id="season-recap" className="mx-auto max-w-4xl space-y-3">
+      <h2 className="text-2xl font-semibold">Season Recap</h2>
+      <div className="flow-root text-base leading-7 text-slate-700">
+        {highlights.length ? (
+          <dl className="mb-4 grid gap-3 text-center md:float-right md:mb-3 md:ml-6 md:w-72">
+            {highlights.slice(0, 4).map((note, index) => (
+              <div key={`${note}-${index}`} className="rounded-lg border border-gray-200 px-3 py-2">
+                <dt className="text-xs font-semibold uppercase tracking-wide text-gray-500">
+                  Highlight
+                </dt>
+                <dd className="text-sm font-semibold leading-5 text-gray-900">{note}</dd>
+              </div>
+            ))}
+          </dl>
+        ) : null}
+        <div className="space-y-3">
+          {paragraphs.map((paragraph, index) => (
+            <p key={`${paragraph}-${index}`}>{paragraph}</p>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function SeasonPage({
   seasons = [],
   meets = [],
@@ -177,6 +225,8 @@ export default function SeasonPage({
 
       <h1 className="text-3xl font-bold text-center mb-0">{seasonLabel} Season</h1>
 
+      <SeasonRecapSection season={season} />
+
       <section className="space-y-3">
         <h2 className="text-2xl font-semibold mt-2 mb-2">Season Images</h2>
         <div className="rounded-lg border border-dashed border-gray-300 bg-gray-50 px-6 py-10 text-center">
@@ -190,7 +240,7 @@ export default function SeasonPage({
       </section>
 
       <section className="space-y-3">
-        <h2 className="text-2xl font-semibold mt-2 mb-2">Athletes &amp; Events</h2>
+        <h2 className="text-2xl font-semibold mt-2 mb-2">Roster</h2>
         {roster.length ? (
           <div className="overflow-x-auto">
             <table className="w-full min-w-[640px] border text-sm md:text-base">

@@ -134,6 +134,7 @@ export default function TennisApp() {
             <SeasonPage
               seasons={seasons}
               matches={matches}
+              players={players}
               schools={schools}
               status={status}
             />

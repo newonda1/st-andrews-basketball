@@ -109,7 +109,19 @@ function SeasonImagesSection({ images = [], seasonLabel }) {
     setImageIndex(0);
   }, [images]);
 
-  if (!images.length) return null;
+  if (!images.length) {
+    return (
+      <section id="season-images" className="space-y-3">
+        <h2 className="text-2xl font-semibold">Season Images</h2>
+        <div className="rounded-lg border border-dashed border-gray-300 bg-gray-50 px-6 py-12 text-center">
+          <p className="text-base font-semibold text-gray-800">Season photo gallery coming soon</p>
+          <p className="mt-2 text-sm leading-6 text-gray-600">
+            Photos from the {seasonLabel} boys soccer season will be added here.
+          </p>
+        </div>
+      </section>
+    );
+  }
 
   const selectedImage = images[imageIndex] || images[0];
   const currentImageNumber = Math.min(imageIndex + 1, images.length);

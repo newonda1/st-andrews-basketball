@@ -1,7 +1,8 @@
 export const FOOTBALL_DATA_PATHS = {
   games: "/data/boys/football/games.json",
   seasons: "/data/boys/football/seasons.json",
-  players: "/data/boys/football/players.json",
+  players: "/data/players.json",
+  footballPlayers: "/data/boys/football/players.json",
   rosters: "/data/boys/football/seasonrosters.json",
   stats: "/data/boys/football/seasonstats.json",
   articles: "/data/boys/football/articles.json",
@@ -43,6 +44,24 @@ function schoolLocation(school) {
     .join(", ");
 }
 
+function mergeFootballPlayers(masterPlayers, footballPlayers) {
+  const merged = [];
+  const seenPlayerIds = new Set();
+
+  for (const collection of [masterPlayers, footballPlayers]) {
+    if (!Array.isArray(collection)) continue;
+
+    collection.forEach((player) => {
+      const playerId = String(player?.PlayerID ?? "").trim();
+      if (!playerId || seenPlayerIds.has(playerId)) return;
+      seenPlayerIds.add(playerId);
+      merged.push(player);
+    });
+  }
+
+  return merged;
+}
+
 export function hydrateFootballGamesWithSchools(games, schools) {
   const schoolMap = buildSchoolMap(schools);
 
@@ -74,10 +93,11 @@ export async function loadFootballResultsData() {
 }
 
 export async function loadFootballSeasonPageData() {
-  const [games, seasons, players, rosters, stats, articles, schools] = await Promise.all([
+  const [games, seasons, players, footballPlayers, rosters, stats, articles, schools] = await Promise.all([
     fetchJson(FOOTBALL_DATA_PATHS.games, "football games"),
     fetchJson(FOOTBALL_DATA_PATHS.seasons, "football seasons"),
     fetchJson(FOOTBALL_DATA_PATHS.players, "football players"),
+    fetchJsonOptional(FOOTBALL_DATA_PATHS.footballPlayers),
     fetchJson(FOOTBALL_DATA_PATHS.rosters, "football rosters"),
     fetchJson(FOOTBALL_DATA_PATHS.stats, "football stats"),
     fetchJsonOptional(FOOTBALL_DATA_PATHS.articles),
@@ -87,7 +107,7 @@ export async function loadFootballSeasonPageData() {
   return {
     games: hydrateFootballGamesWithSchools(games, schools),
     seasons: Array.isArray(seasons) ? seasons : [],
-    players: Array.isArray(players) ? players : [],
+    players: mergeFootballPlayers(players, footballPlayers),
     rosters: Array.isArray(rosters) ? rosters : [],
     seasonStats: Array.isArray(stats) ? stats : stats && typeof stats === "object" ? [stats] : [],
     articles: Array.isArray(articles) ? articles : [],
@@ -96,11 +116,12 @@ export async function loadFootballSeasonPageData() {
 }
 
 export async function loadFootballRecordsData() {
-  const [games, seasons, players, rosters, playerGameLogs, playerSeasonAdjustments, schools] =
+  const [games, seasons, players, footballPlayers, rosters, playerGameLogs, playerSeasonAdjustments, schools] =
     await Promise.all([
       fetchJson(FOOTBALL_DATA_PATHS.games, "football games"),
       fetchJson(FOOTBALL_DATA_PATHS.seasons, "football seasons"),
       fetchJson(FOOTBALL_DATA_PATHS.players, "football players"),
+      fetchJsonOptional(FOOTBALL_DATA_PATHS.footballPlayers),
       fetchJson(FOOTBALL_DATA_PATHS.rosters, "football rosters"),
       fetchJson(FOOTBALL_DATA_PATHS.playerGameLogs, "football player game logs"),
       fetchJsonOptional(FOOTBALL_DATA_PATHS.playerSeasonAdjustments),
@@ -110,7 +131,7 @@ export async function loadFootballRecordsData() {
   return {
     games: hydrateFootballGamesWithSchools(games, schools),
     seasons: Array.isArray(seasons) ? seasons : [],
-    players: Array.isArray(players) ? players : [],
+    players: mergeFootballPlayers(players, footballPlayers),
     rosters: Array.isArray(rosters) ? rosters : [],
     playerGameLogs: Array.isArray(playerGameLogs) ? playerGameLogs : [],
     playerSeasonAdjustments: Array.isArray(playerSeasonAdjustments)
