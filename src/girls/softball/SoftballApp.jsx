@@ -5,6 +5,7 @@ import AthleticsProgramShell from "../../components/AthleticsProgramShell";
 import AthleteProfileRedirect from "../../components/AthleteProfileRedirect";
 
 import Home from "./pages/Home";
+import YearlyResults from "./pages/YearlyResults";
 import Season2006 from "./seasons/Season2006";
 
 const GameDetail = lazy(() => import("./pages/GameDetail"));
@@ -95,7 +96,7 @@ export default function SoftballApp() {
           <Routes>
             <Route index element={<Home />} />
 
-            <Route path="yearly-results" element={<ArchivePlaceholder title="Full Year-by-Year Results" />} />
+            <Route path="yearly-results" element={<YearlyResults />} />
             <Route path="team/full" element={<ArchivePlaceholder title="Full Team Stats" />} />
             <Route path="team/season-records" element={<ArchivePlaceholder title="Team Season Records" />} />
             <Route path="records/career" element={<ArchivePlaceholder title="Full Career Stats" />} />

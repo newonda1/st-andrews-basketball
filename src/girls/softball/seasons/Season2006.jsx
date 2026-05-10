@@ -360,7 +360,7 @@ export function SoftballSeasonPage({
                     </div>
                   </div>
                   <div className="shrink-0 text-right">
-                    <p className={`text-lg ${resultClassName(game.result)}`}>{game.result || "-"}</p>
+                    <p className={`text-lg font-bold ${resultClassName(game.result)}`}>{game.result || "-"}</p>
                     <p className="text-sm">{formatSoftballScore(game)}</p>
                   </div>
                 </div>
@@ -420,7 +420,7 @@ export function SoftballSeasonPage({
                     </div>
                   </BodyCell>
                   <BodyCell>{site}</BodyCell>
-                  <BodyCell className={resultClassName(game.result)}>{game.result || "-"}</BodyCell>
+                  <BodyCell className={`font-bold ${resultClassName(game.result)}`}>{game.result || "-"}</BodyCell>
                   <BodyCell>{score}</BodyCell>
                   <BodyCell>{type}</BodyCell>
                 </tr>

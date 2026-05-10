@@ -889,7 +889,7 @@ export function BaseballSeasonPage({
                     </div>
                   </div>
                   <div className="shrink-0 text-right">
-                    <p className={`text-lg ${resultClassName(game.Result)}`}>
+                    <p className={`text-lg font-bold ${resultClassName(game.Result)}`}>
                       {game.Result || "-"}
                     </p>
                     <p className="text-sm">{formatBaseballScore(game)}</p>
@@ -949,7 +949,7 @@ export function BaseballSeasonPage({
                       </div>
                     </td>
                     <td className={scheduleBodyCellClassName}>{game.LocationType || "-"}</td>
-                    <td className={`${scheduleBodyCellClassName} ${resultClassName(game.Result)}`}>
+                    <td className={`${scheduleBodyCellClassName} font-bold ${resultClassName(game.Result)}`}>
                       {game.Result || "-"}
                     </td>
                     <td className={scheduleBodyCellClassName}>{formatBaseballScore(game)}</td>

@@ -45,6 +45,9 @@ const scheduleOpponentHeaderCellClassName =
   "border px-2 py-2 pl-10 text-left text-xs whitespace-nowrap";
 const scheduleBodyCellClassName = "border px-2 py-1.5 text-center align-middle whitespace-nowrap";
 const scheduleOpponentCellClassName = "border px-2 py-1.5 align-middle";
+const statsHeaderCellClassName = "border px-2 py-2 text-center text-xs whitespace-nowrap";
+const statsBodyCellClassName = "border px-2 py-1.5 text-center whitespace-nowrap";
+const statsFooterCellClassName = "border px-2 py-2 text-center whitespace-nowrap";
 
 function tableRowClassName(index) {
   return `border-t border-gray-200 ${
@@ -682,21 +685,21 @@ export default function SeasonPage({ data, status = "" }) {
               <table className="min-w-full bg-white text-center text-xs whitespace-nowrap sm:text-sm">
                 <thead className={tableHeadClassName}>
                   <tr>
-                    <th className="sticky left-0 z-10 border bg-gray-100 px-2 py-1 text-left">
+                    <th className="sticky left-0 z-10 border bg-gray-100 px-2 py-2 text-left text-xs whitespace-nowrap">
                       Player
                     </th>
-                    <th className="border px-2 py-1">#</th>
-                    <th className="border px-2 py-1">GP</th>
-                    <th className="border px-2 py-1">G</th>
-                    <th className="border px-2 py-1">A</th>
-                    <th className="border px-2 py-1">Pts</th>
-                    <th className="border px-2 py-1">Saves</th>
+                    <th className={statsHeaderCellClassName}>#</th>
+                    <th className={statsHeaderCellClassName}>GP</th>
+                    <th className={statsHeaderCellClassName}>G</th>
+                    <th className={statsHeaderCellClassName}>A</th>
+                    <th className={statsHeaderCellClassName}>Pts</th>
+                    <th className={statsHeaderCellClassName}>Saves</th>
                   </tr>
                 </thead>
                 <tbody>
                   {seasonTotals.map((player, index) => (
                     <tr key={player.PlayerID} className={tableRowClassName(index)}>
-                      <td className="sticky left-0 z-10 border bg-inherit px-2 py-1 text-left">
+                      <td className="sticky left-0 z-10 border bg-inherit px-2 py-1.5 text-left whitespace-nowrap">
                         <Link
                             to={athleteProfilePath(player.PlayerID, "boys-soccer")}
                           className="text-blue-700 underline hover:text-blue-900"
@@ -704,29 +707,29 @@ export default function SeasonPage({ data, status = "" }) {
                           {playerName(player.PlayerID)}
                         </Link>
                       </td>
-                      <td className="border px-2 py-1">{rosterJerseyNumber(player.PlayerID)}</td>
-                      <td className="border px-2 py-1">
+                      <td className={statsBodyCellClassName}>{rosterJerseyNumber(player.PlayerID)}</td>
+                      <td className={statsBodyCellClassName}>
                         {formatStatValue(player.GamesPlayed)}
                         {player.HasAdjustment ? <span className="ml-0.5 text-blue-700">*</span> : null}
                       </td>
-                      <td className="border px-2 py-1">{formatStatValue(player.Goals)}</td>
-                      <td className="border px-2 py-1">{formatStatValue(player.Assists)}</td>
-                      <td className="border px-2 py-1">{formatStatValue(player.Points)}</td>
-                      <td className="border px-2 py-1">{formatStatValue(player.Saves)}</td>
+                      <td className={statsBodyCellClassName}>{formatStatValue(player.Goals)}</td>
+                      <td className={statsBodyCellClassName}>{formatStatValue(player.Assists)}</td>
+                      <td className={statsBodyCellClassName}>{formatStatValue(player.Points)}</td>
+                      <td className={statsBodyCellClassName}>{formatStatValue(player.Saves)}</td>
                     </tr>
                   ))}
                 </tbody>
                 <tfoot className="bg-gray-100 font-semibold">
                   <tr>
-                    <td className="sticky left-0 z-10 border bg-gray-100 px-2 py-1 text-left">
+                    <td className="sticky left-0 z-10 border bg-gray-100 px-2 py-2 text-left whitespace-nowrap">
                       Team totals
                     </td>
-                    <td className="border px-2 py-1">-</td>
-                    <td className="border px-2 py-1">{teamTotals.GamesPlayed}</td>
-                    <td className="border px-2 py-1">{formatStatValue(teamTotals.Goals)}</td>
-                    <td className="border px-2 py-1">{formatStatValue(teamTotals.Assists)}</td>
-                    <td className="border px-2 py-1">{formatStatValue(teamTotals.Points)}</td>
-                    <td className="border px-2 py-1">{formatStatValue(teamTotals.Saves)}</td>
+                    <td className={statsFooterCellClassName}>-</td>
+                    <td className={statsFooterCellClassName}>{teamTotals.GamesPlayed}</td>
+                    <td className={statsFooterCellClassName}>{formatStatValue(teamTotals.Goals)}</td>
+                    <td className={statsFooterCellClassName}>{formatStatValue(teamTotals.Assists)}</td>
+                    <td className={statsFooterCellClassName}>{formatStatValue(teamTotals.Points)}</td>
+                    <td className={statsFooterCellClassName}>{formatStatValue(teamTotals.Saves)}</td>
                   </tr>
                 </tfoot>
               </table>

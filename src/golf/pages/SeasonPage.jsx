@@ -240,16 +240,16 @@ function FinishersTable({ title, finishers = [], compact = false }) {
         <table className="w-full min-w-[620px] border-collapse text-sm">
           <thead>
             <tr className="bg-slate-100">
-              <th className="border-b border-slate-300 px-3 py-2 text-center font-bold">
+              <th className="border-b border-slate-300 px-2 py-2 text-center text-xs font-normal whitespace-nowrap">
                 Place
               </th>
-              <th className="border-b border-slate-300 px-3 py-2 text-left font-bold">
+              <th className="border-b border-slate-300 px-2 py-2 text-left text-xs font-normal whitespace-nowrap">
                 Golfer
               </th>
-              <th className="border-b border-slate-300 px-3 py-2 text-left font-bold">
+              <th className="border-b border-slate-300 px-2 py-2 text-left text-xs font-normal whitespace-nowrap">
                 School
               </th>
-              <th className="border-b border-slate-300 px-3 py-2 text-center font-bold">
+              <th className="border-b border-slate-300 px-2 py-2 text-center text-xs font-normal whitespace-nowrap">
                 Score
               </th>
             </tr>
@@ -260,19 +260,19 @@ function FinishersTable({ title, finishers = [], compact = false }) {
                 key={`${title}-${finisher.place}-${finisher.player}-${finisher.score}`}
                 className={finisher.isStAndrews ? "bg-blue-50" : "bg-white"}
               >
-                <td className="border-b border-slate-200 px-3 py-2 text-center font-semibold text-slate-900">
+                <td className="border-b border-slate-200 px-2 py-1.5 text-center align-middle font-semibold text-slate-900 whitespace-nowrap">
                   {formatGolfPlace(finisher.place)}
                 </td>
-                <td className="border-b border-slate-200 px-3 py-2 text-slate-900">
+                <td className="border-b border-slate-200 px-2 py-1.5 align-middle text-slate-900">
                   <div className="font-semibold">{finisher.player}</div>
                   {!compact && finisher.award ? (
                     <div className="mt-1 text-xs text-slate-500">{finisher.award}</div>
                   ) : null}
                 </td>
-                <td className="border-b border-slate-200 px-3 py-2 text-slate-700">
+                <td className="border-b border-slate-200 px-2 py-1.5 align-middle text-slate-700">
                   {finisher.school}
                 </td>
-                <td className="border-b border-slate-200 px-3 py-2 text-center font-semibold text-slate-900">
+                <td className="border-b border-slate-200 px-2 py-1.5 text-center align-middle font-semibold text-slate-900 whitespace-nowrap">
                   {finisher.score}
                 </td>
               </tr>
