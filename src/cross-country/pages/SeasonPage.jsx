@@ -672,9 +672,7 @@ export default function SeasonPage({
       <SeasonImagesSection images={seasonImages} />
 
       <section className="space-y-3">
-        <h2 className="text-2xl font-semibold mt-2 mb-2">
-          {explicitRosterRows.length ? "Roster" : "Athletes & Races"}
-        </h2>
+        <h2 className="text-2xl font-semibold mt-2 mb-2">Roster</h2>
         {explicitRosterRows.length ? (
           <RosterTable rows={explicitRosterRows} />
         ) : rosterSections.length ? (

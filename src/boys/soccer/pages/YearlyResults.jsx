@@ -13,6 +13,16 @@ const knownArchiveCoachesBySeason = new Map([
   [2006, "Jason Woodbury"],
 ]);
 
+const knownArchiveSeasonOverrides = new Map([
+  [
+    2006,
+    {
+      overall: { wins: 7, losses: 3, ties: 0 },
+      notes: "Region Champion & State Final Four",
+    },
+  ],
+]);
+
 function safeNumber(value) {
   const number = Number(value);
   return Number.isFinite(number) ? number : 0;
@@ -187,7 +197,9 @@ export default function YearlyResults({ data, status = "" }) {
         );
         const completedGames = seasonGames.filter(isCompletedGame);
 
-        const overall = recordForSeason(season, "Overall", completedGames);
+        const seasonOverride = knownArchiveSeasonOverrides.get(Number(season.SeasonID));
+        const overall =
+          seasonOverride?.overall || recordForSeason(season, "Overall", completedGames);
         const region = recordForSeason(season, "Region", completedGames, isRegionGame);
         const nonRegion = recordForSeason(
           season,
@@ -221,7 +233,7 @@ export default function YearlyResults({ data, status = "" }) {
           playoffs,
           goalsFor: season.PointsFor ?? gameGoalsFor,
           goalsAgainst: season.PointsAgainst ?? gameGoalsAgainst,
-          notes: formatNotes(season),
+          notes: seasonOverride?.notes || formatNotes(season),
         };
       });
   }, [data]);

@@ -114,6 +114,13 @@
     ]
   },
   {
+    "SeasonID": 2004,
+    "SourceSeasonLabel": "2004-05",
+    "HeadCoach": null,
+    "Staff": [],
+    "Players": []
+  },
+  {
     "SeasonID": 2005,
     "SourceSeasonLabel": "2005-06",
     "HeadCoach": "Mandy Stinson",

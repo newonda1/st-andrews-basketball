@@ -320,33 +320,42 @@ function buildSeasonBriefItems(season) {
   ].filter((item) => item.value);
 }
 
-function SeasonRecapSection({ recap, briefItems = [] }) {
+function SeasonRecapSection({ recap, briefItems = [], showPlaceholder = false }) {
   const paragraphs = splitParagraphs(recap);
-  if (!paragraphs.length) return null;
+  if (!paragraphs.length && !showPlaceholder) return null;
 
   return (
     <section id="season-recap" className="mx-auto max-w-4xl space-y-3">
       <h2 className="text-2xl font-semibold">Season Recap</h2>
-      <div className="flow-root text-base leading-7 text-slate-700">
-        {briefItems.length ? (
-          <dl className="mb-4 grid grid-cols-3 gap-3 text-center md:float-right md:mb-3 md:ml-6 md:w-64 md:grid-cols-1">
-            {briefItems.map((item) => (
-              <div key={item.label} className="rounded-lg border border-gray-200 px-3 py-2">
-                <dt className="text-xs font-semibold uppercase tracking-wide text-gray-500">
-                  {item.label}
-                </dt>
-                <dd className="text-lg font-semibold text-gray-900">{item.value}</dd>
-              </div>
-            ))}
-          </dl>
-        ) : null}
+      {paragraphs.length ? (
+        <div className="flow-root text-base leading-7 text-slate-700">
+          {briefItems.length ? (
+            <dl className="mb-4 grid grid-cols-3 gap-3 text-center md:float-right md:mb-3 md:ml-6 md:w-64 md:grid-cols-1">
+              {briefItems.map((item) => (
+                <div key={item.label} className="rounded-lg border border-gray-200 px-3 py-2">
+                  <dt className="text-xs font-semibold uppercase tracking-wide text-gray-500">
+                    {item.label}
+                  </dt>
+                  <dd className="text-lg font-semibold text-gray-900">{item.value}</dd>
+                </div>
+              ))}
+            </dl>
+          ) : null}
 
-        <div className="space-y-3">
-          {paragraphs.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
-          ))}
+          <div className="space-y-3">
+            {paragraphs.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
         </div>
-      </div>
+      ) : (
+        <div className="rounded-lg border border-dashed border-gray-300 bg-gray-50 px-6 py-12 text-center">
+          <p className="text-base font-semibold text-gray-800">Season recap not ready yet</p>
+          <p className="mt-2 text-sm leading-6 text-gray-600">
+            This section is reserved for the recovered season summary.
+          </p>
+        </div>
+      )}
     </section>
   );
 }
@@ -695,6 +704,8 @@ export default function SeasonPage({ data, status = "" }) {
   const seasonImages = Array.isArray(season?.SeasonImages) ? season.SeasonImages : [];
   const shouldShowSeasonImages =
     seasonImages.length > 0 || Boolean(season?.ShowSeasonImagesPlaceholder);
+  const shouldShowSeasonRecap =
+    splitParagraphs(seasonRecap).length > 0 || Boolean(season?.ShowSeasonRecapPlaceholder);
 
   return (
     <div className="mx-auto max-w-6xl space-y-8 px-4 pb-10 pt-2 lg:pb-40">
@@ -707,8 +718,12 @@ export default function SeasonPage({ data, status = "" }) {
         <h1 className="text-3xl font-bold">{seasonLabel} Season</h1>
       </section>
 
-      {splitParagraphs(seasonRecap).length ? (
-        <SeasonRecapSection recap={seasonRecap} briefItems={seasonBriefItems} />
+      {shouldShowSeasonRecap ? (
+        <SeasonRecapSection
+          recap={seasonRecap}
+          briefItems={seasonBriefItems}
+          showPlaceholder={Boolean(season?.ShowSeasonRecapPlaceholder)}
+        />
       ) : null}
 
       {shouldShowSeasonImages ? (

@@ -205,6 +205,8 @@ function buildSeasonsWithGames(seasons, games) {
         (entry) =>
           entry.games.length > 0 ||
           hasSeasonRecord(entry.season) ||
+          Boolean(entry.season.ShowSeasonRecapPlaceholder) ||
+          Boolean(entry.season.ShowSeasonImagesPlaceholder) ||
           Boolean(entry.season.HeadCoach) ||
           Boolean(entry.season.RegionFinish) ||
           Boolean(entry.season.StateFinish)
