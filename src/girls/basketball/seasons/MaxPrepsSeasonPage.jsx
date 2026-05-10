@@ -10,6 +10,7 @@ import {
   getRosterJerseyNumber,
   hydrateGamesWithSchools,
 } from "../dataUtils";
+import { athleteProfilePath, isPre2015Season } from "../../../athletes/archiveEra";
 
 const STAT_FIELDS = [
   "MinutesPlayed",
@@ -750,7 +751,7 @@ function MaxPrepsSeasonPage({
   };
 
   const rosterTableRows = useMemo(() => {
-    const useSharedAthletePage = Number(seasonId) === 2003;
+    const useSharedAthletePage = isPre2015Season(seasonId);
     const rows = rosterEntries
       .map((entry) => ({
         key: `player-${entry.PlayerID}`,
@@ -759,7 +760,7 @@ function MaxPrepsSeasonPage({
         grade: entry.Grade,
         subline: entry.Subline || "",
         path: useSharedAthletePage
-          ? `/athletics/players/${entry.PlayerID}`
+          ? athleteProfilePath(entry.PlayerID, "girls-basketball")
           : `/athletics/girls/basketball/players/${entry.PlayerID}`,
       }))
       .sort((a, b) => {
@@ -1166,8 +1167,8 @@ function MaxPrepsSeasonPage({
                       <td className={statsBodyCellClassName}>
                         <Link
                           to={
-                            Number(seasonId) === 2003
-                              ? `/athletics/players/${player.PlayerID}`
+                            isPre2015Season(seasonId)
+                              ? athleteProfilePath(player.PlayerID, "girls-basketball")
                               : `/athletics/girls/basketball/players/${player.PlayerID}`
                           }
                           className="text-blue-600 hover:underline"

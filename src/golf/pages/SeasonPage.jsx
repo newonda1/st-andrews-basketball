@@ -8,6 +8,7 @@ import {
   sortGolfMatches,
   sortGolfTournaments,
 } from "../golfPageUtils";
+import { athleteProfilePath } from "../../athletes/archiveEra";
 
 const tableFrameClassName =
   "overflow-x-auto rounded-lg border border-gray-200 bg-white shadow";
@@ -687,7 +688,7 @@ function SeasonRoster({ roster, playersById = new Map() }) {
       key: rosterPlayer.PlayerID || `${displayName}-${index}`,
       name: displayName,
       path: rosterPlayer.PlayerID
-        ? `/athletics/players/${rosterPlayer.PlayerID}`
+        ? athleteProfilePath(rosterPlayer.PlayerID, "golf")
         : "",
       grade: formatRosterGrade(grade),
     };

@@ -9,6 +9,7 @@ import {
   soccerGamePath,
   sortSoccerGames,
 } from "../soccerData";
+import { athleteProfilePath } from "../../../athletes/archiveEra";
 
 function formatScore(game) {
   if (game.TeamScore == null || game.OpponentScore == null) return "-";
@@ -489,7 +490,7 @@ export default function SeasonPage({ data, status = "" }) {
     name: getPlayerName(entry),
     grade: formatRosterGrade(entry.GradeLabel || entry.Grade),
     positions: Array.isArray(entry.Positions) ? entry.Positions : [],
-    path: entry.PlayerID ? `/athletics/players/${entry.PlayerID}` : "",
+    path: entry.PlayerID ? athleteProfilePath(entry.PlayerID, "girls-soccer") : "",
   }));
 
   if (!season && !status) {
@@ -697,7 +698,7 @@ export default function SeasonPage({ data, status = "" }) {
                     <tr key={player.PlayerID} className={tableRowClassName(index)}>
                       <td className="sticky left-0 z-10 border bg-inherit px-2 py-1 text-left">
                         <Link
-                          to={`/athletics/players/${player.PlayerID}`}
+                          to={athleteProfilePath(player.PlayerID, "girls-soccer")}
                           className="text-blue-700 underline hover:text-blue-900"
                         >
                           {playerName(player.PlayerID)}

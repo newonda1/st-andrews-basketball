@@ -13,6 +13,7 @@ import {
   resolveCrossCountryAthleteName,
   sortCrossCountryResults,
 } from "../crossCountryPageUtils";
+import { athleteProfilePath } from "../../athletes/archiveEra";
 
 const tableFrameClassName =
   "overflow-x-auto rounded-lg border border-gray-200 bg-white shadow";
@@ -60,7 +61,7 @@ function buildExplicitRosterRows(season, playerMap = new Map()) {
       return {
         key: `roster-${index}-${playerId || entry?.Name || entry?.AthleteName || "row"}`,
         athleteName,
-        path: playerId ? `/athletics/players/${playerId}` : "",
+        path: playerId ? athleteProfilePath(playerId, "cross-country") : "",
         grade: formatRosterGrade(entry?.Grade),
       };
     })
@@ -133,7 +134,7 @@ function AthleteNameLink({ row, playerMap }) {
 
   return (
     <Link
-      to={`/athletics/players/${playerId}`}
+      to={athleteProfilePath(playerId, "cross-country")}
       className="font-semibold text-blue-700 hover:text-blue-900"
     >
       {athleteName}

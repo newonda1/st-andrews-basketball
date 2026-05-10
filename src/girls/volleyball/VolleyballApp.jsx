@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 
 import AthleticsProgramShell from "../../components/AthleticsProgramShell";
+import AthleteProfileRedirect from "../../components/AthleteProfileRedirect";
 import GameDetail from "./pages/GameDetail";
 import Home from "./pages/Home";
-import PlayerPage from "./pages/PlayerPage";
 import {
   CareerRecords,
   FullCareerStats,
@@ -168,7 +168,7 @@ export default function VolleyballApp() {
         />
         <Route
           path="players/:playerId"
-          element={<PlayerPage data={data} status={status} />}
+          element={<AthleteProfileRedirect />}
         />
         <Route path="*" element={<Home />} />
       </Routes>

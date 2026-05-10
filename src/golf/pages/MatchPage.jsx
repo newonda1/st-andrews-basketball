@@ -1,6 +1,7 @@
 import React, { useMemo } from "react";
 import { Link, useParams } from "react-router-dom";
 import { formatGolfDate, formatGolfPlace } from "../golfPageUtils";
+import { athleteProfilePath } from "../../athletes/archiveEra";
 
 function buildPlayerMap(players = []) {
   return new Map(players.map((player) => [Number(player.PlayerID), player]));
@@ -30,7 +31,7 @@ function GolferName({ row, playerMap }) {
 
   return (
     <Link
-      to={`/athletics/players/${row.PlayerID}`}
+      to={athleteProfilePath(row.PlayerID, "golf")}
       className="text-blue-700 hover:text-blue-900"
     >
       {name}

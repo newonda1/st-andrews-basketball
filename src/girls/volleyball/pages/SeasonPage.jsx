@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
+import { athleteProfilePath } from "../../../athletes/archiveEra";
 import { recordTableStyles } from "../../basketball/pages/recordTableStyles";
 import {
   VOLLEYBALL_STAT_SECTIONS,
@@ -186,7 +187,7 @@ function StatsTable({ title, rows, playerMap }) {
 
       return (
         <Link
-          to={`/athletics/volleyball/players/${row.PlayerID}`}
+          to={athleteProfilePath(row.PlayerID, "volleyball")}
           className="text-blue-600 hover:underline"
         >
           {playerName}
@@ -633,7 +634,7 @@ export default function SeasonPage({ data, status = "" }) {
         jersey: player.JerseyNumber,
         name: playerName,
         grade: player.GradeLabel || player.Grade,
-        path: `/athletics/volleyball/players/${player.PlayerID}`,
+        path: athleteProfilePath(player.PlayerID, "volleyball"),
       };
     });
 

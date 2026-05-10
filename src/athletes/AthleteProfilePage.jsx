@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import AthleticsProgramShell from "../components/AthleticsProgramShell";
 
 const DATA_PATHS = {
@@ -21,6 +21,7 @@ const DATA_PATHS = {
   crossCountrySeasons: "/data/cross-country/seasons.json",
   crossCountryMeets: "/data/cross-country/meets.json",
   crossCountryStats: "/data/cross-country/playermeetstats.json",
+  volleyballRosters: "/data/girls/volleyball/seasonrosters.json",
   volleyballStats: "/data/girls/volleyball/playerseasonstats.json",
   volleyballAdjustments: "/data/girls/volleyball/playerseasonadjustments.json",
 };
@@ -144,6 +145,11 @@ function addBasketballRates(row) {
   };
 }
 
+function isRegionGame(game) {
+  const type = String(game?.GameType || "").trim().toLowerCase();
+  return type === "region";
+}
+
 function displayCellValue(value) {
   if (value == null || value === "") return "-";
   return value;
@@ -240,7 +246,7 @@ function buildBasketballSection({ key, label, basePath, rosters, games, stats },
         const game = gameMap.get(Number(row.GameID));
         return (
           String(game?.Season ?? game?.SeasonID ?? "") === seasonKey &&
-          String(game?.GameType || "").toLowerCase().includes("region")
+          isRegionGame(game)
         );
       });
       return addBasketballRates({
@@ -552,6 +558,7 @@ function buildGolfSection({ rosters, matches }, playerId) {
             place: row.Place || "-",
             rounds: Array.isArray(row.RoundScores) && row.RoundScores.length ? row.RoundScores.join("-") : "-",
             score: row.Score || "-",
+            course: match.Course || "-",
           }))
       )
     );
@@ -571,7 +578,7 @@ function buildGolfSection({ rosters, matches }, playerId) {
           ? [
               { key: "date", label: "Date" },
               { key: "match", label: "Match", align: "left", link: "matchPath" },
-              { key: "division", label: "Division" },
+              { key: "course", label: "Course", align: "left" },
               { key: "place", label: "Place" },
               { key: "rounds", label: "Rounds" },
               { key: "score", label: "Score" },
@@ -604,6 +611,7 @@ function buildCrossCountrySection({ seasons, meets, stats }, playerId) {
         meet: meet.Name || "Meet",
         meetPath: `/athletics/cross-country/seasons/${meet.Season}`,
         race: row.Race || row.Event || "-",
+        event: row.Event || "-",
         mark: row.Mark || "-",
         place: row.Place || "-",
       };
@@ -624,6 +632,7 @@ function buildCrossCountrySection({ seasons, meets, stats }, playerId) {
           ? [
               { key: "date", label: "Date" },
               { key: "meet", label: "Meet", align: "left", link: "meetPath" },
+              { key: "event", label: "Event" },
               { key: "race", label: "Race", align: "left" },
               { key: "mark", label: "Mark" },
               { key: "place", label: "Place" },
@@ -634,7 +643,13 @@ function buildCrossCountrySection({ seasons, meets, stats }, playerId) {
   };
 }
 
-function buildVolleyballSection({ stats, adjustments }, playerId) {
+function buildVolleyballSection({ rosters, stats, adjustments }, playerId) {
+  const rosterEntries = findRosterEntries(
+    rosters,
+    playerId,
+    "Volleyball",
+    "/athletics/volleyball"
+  );
   const rows = [...(stats || []), ...(adjustments || [])]
     .filter((row) => samePlayer(row, playerId))
     .map((row) => ({
@@ -648,26 +663,29 @@ function buildVolleyballSection({ stats, adjustments }, playerId) {
       digs: row.Digs || "-",
     }));
 
-  if (!rows.length) return null;
+  if (!rosterEntries.length && !rows.length) return null;
 
   return {
     key: "volleyball",
     label: "Volleyball",
     basePath: "/athletics/volleyball",
-    rosterEntries: [],
+    jersey: rosterEntries.find((entry) => entry.jersey)?.jersey,
+    rosterEntries,
     tables: [
       {
-        title: "Season Totals",
-        rows,
-        columns: [
-          { key: "season", label: "Season", align: "left", link: "seasonPath" },
-          { key: "games", label: "G" },
-          { key: "kills", label: "Kills" },
-          { key: "aces", label: "Aces" },
-          { key: "blocks", label: "Blocks" },
-          { key: "assists", label: "Ast" },
-          { key: "digs", label: "Digs" },
-        ],
+        title: rows.length ? "Season Totals" : "Seasons",
+        rows: rows.length ? rows : rosterEntries,
+        columns: rows.length
+          ? [
+              { key: "season", label: "Season", align: "left", link: "seasonPath" },
+              { key: "games", label: "G" },
+              { key: "kills", label: "Kills" },
+              { key: "aces", label: "Aces" },
+              { key: "blocks", label: "Blocks" },
+              { key: "assists", label: "Ast" },
+              { key: "digs", label: "Digs" },
+            ]
+          : [{ key: "season", label: "Season", align: "left", link: "seasonPath" }],
       },
     ],
   };
@@ -734,7 +752,11 @@ function buildSections(data, playerId) {
       playerId
     ),
     buildVolleyballSection(
-      { stats: data.volleyballStats, adjustments: data.volleyballAdjustments },
+      {
+        rosters: data.volleyballRosters,
+        stats: data.volleyballStats,
+        adjustments: data.volleyballAdjustments,
+      },
       playerId
     ),
   ].filter(Boolean);
@@ -869,6 +891,7 @@ function SportTableSection({ table }) {
 
 export default function AthleteProfilePage() {
   const { playerId } = useParams();
+  const location = useLocation();
   const [data, setData] = useState(null);
   const [status, setStatus] = useState("Loading athlete profile...");
 
@@ -907,13 +930,28 @@ export default function AthleteProfilePage() {
     () => (data ? buildSections(data, playerId) : []),
     [data, playerId]
   );
+  const sportHint = useMemo(
+    () => new URLSearchParams(location.search).get("sport") || "",
+    [location.search]
+  );
   const [selectedSport, setSelectedSport] = useState("");
 
   useEffect(() => {
-    if (sections.length && !sections.some((section) => section.key === selectedSport)) {
+    if (!sections.length) return;
+
+    const hintedSection = sportHint
+      ? sections.find((section) => section.key === sportHint)
+      : null;
+
+    if (hintedSection) {
+      setSelectedSport(hintedSection.key);
+      return;
+    }
+
+    if (!sections.some((section) => section.key === selectedSport)) {
       setSelectedSport(sections[0].key);
     }
-  }, [sections, selectedSport]);
+  }, [sections, sportHint]);
 
   const activeSection =
     sections.find((section) => section.key === selectedSport) || sections[0] || null;

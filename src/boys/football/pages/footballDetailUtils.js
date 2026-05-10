@@ -19,8 +19,10 @@ import {
   yardsPerCarry,
   yardsPerCatch,
 } from "../footballRecordsData";
+import { athleteProfilePath } from "../../../athletes/archiveEra";
 
 export const FOOTBALL_PLAYER_ROUTE_BASE = "/athletics/football/players";
+
 export const FOOTBALL_GAME_ROUTE_BASE = "/athletics/football/games";
 
 const whole = (value) => formatWhole(value);
@@ -118,7 +120,7 @@ export const FOOTBALL_DETAIL_VIEWS = {
 export const FOOTBALL_DETAIL_VIEW_ENTRIES = Object.entries(FOOTBALL_DETAIL_VIEWS);
 
 export function footballPlayerPath(playerId) {
-  return `/athletics/players/${encodeURIComponent(String(playerId || ""))}`;
+  return athleteProfilePath(playerId, "football");
 }
 
 export function footballGamePath(gameId) {
