@@ -5,6 +5,7 @@ import {
   buildPlayerMap,
   formatSoccerDate,
   getPlayerName,
+  hydrateRosterPlayers,
   soccerGamePath,
   soccerSeasonPath,
 } from "../soccerData";
@@ -17,15 +18,16 @@ export default function PlayerPage({ data, status = "" }) {
 
   const rosterEntries = useMemo(() => {
     return (data?.rosters || [])
-      .flatMap((roster) =>
-        (roster.Players || [])
+      .flatMap((roster) => {
+        const rosterPlayers = hydrateRosterPlayers(roster, data?.players || []);
+        return rosterPlayers
           .filter((entry) => String(entry.PlayerID) === String(playerId))
           .map((entry) => ({
             ...entry,
             SeasonID: roster.SeasonID,
             SeasonLabel: roster.DisplaySeason || roster.SourceSeasonLabel || roster.SeasonID,
-          }))
-      )
+          }));
+      })
       .sort((a, b) => Number(a.SeasonID) - Number(b.SeasonID));
   }, [data, playerId]);
 
@@ -91,7 +93,10 @@ export default function PlayerPage({ data, status = "" }) {
         </p>
         <h1 className="mt-2 text-3xl font-bold text-slate-900">{displayName}</h1>
         <p className="mt-2 text-sm font-medium text-slate-500">
-          {[latestRosterEntry.Grade, (latestRosterEntry.Positions || []).join(", ")]
+          {[
+            latestRosterEntry.GradeLabel || latestRosterEntry.Grade,
+            (latestRosterEntry.Positions || []).join(", "),
+          ]
             .filter(Boolean)
             .join(" • ") || "St. Andrew's player"}
         </p>
@@ -120,7 +125,7 @@ export default function PlayerPage({ data, status = "" }) {
                     </Link>
                   </td>
                   <td className="border-b border-slate-200 px-3 py-2 text-center text-slate-700">
-                    {entry.Grade || "—"}
+                    {entry.GradeLabel || entry.Grade || "—"}
                   </td>
                   <td className="border-b border-slate-200 px-3 py-2 text-slate-700">
                     {(entry.Positions || []).join(", ") || "—"}

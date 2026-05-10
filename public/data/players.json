@@ -1155,6 +1155,14 @@
     "Gender": "Girls"
   },
   {
+    "PlayerID": 200699,
+    "PlayerName": "Jordan Bazemore",
+    "FirstName": "Jordan",
+    "LastName": "Bazemore",
+    "GradYear": null,
+    "Gender": "Girls"
+  },
+  {
     "PlayerID": 200431,
     "PlayerName": "Will Chisholm",
     "FirstName": "Will",
@@ -1449,7 +1457,8 @@
     "PlayerID": 200604,
     "FirstName": "Javier",
     "LastName": "Gutierrez",
-    "GradYear": null
+    "GradYear": 2006,
+    "Gender": "Boys"
   },
   {
     "PlayerID": 200801,

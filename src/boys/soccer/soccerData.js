@@ -159,6 +159,35 @@ export function buildPlayerMap(players = []) {
   return new Map(players.map((player) => [String(player?.PlayerID), player]));
 }
 
+function firstMeaningfulValue(...values) {
+  return values.find(
+    (value) =>
+      value !== null &&
+      value !== undefined &&
+      String(value).trim() !== ""
+  );
+}
+
+function gradeLabelForGrade(grade) {
+  const value = Number(grade);
+  if (value === 7) return "7th";
+  if (value === 8) return "8th";
+  if (value === 9) return "Freshman";
+  if (value === 10) return "Sophomore";
+  if (value === 11) return "Junior";
+  if (value === 12) return "Senior";
+  return null;
+}
+
+export function deriveRosterGradeFromGradYear(player, seasonId) {
+  const gradYear = Number(player?.GradYear);
+  const seasonYear = Number(seasonId);
+  if (!Number.isFinite(gradYear) || !Number.isFinite(seasonYear)) return null;
+
+  const grade = 12 + seasonYear - gradYear;
+  return grade >= 7 && grade <= 12 ? grade : null;
+}
+
 export function hydrateRosterPlayers(roster, players = []) {
   const playerMap = buildPlayerMap(players);
   const entries = Array.isArray(roster?.Players) ? roster.Players : [];
@@ -166,10 +195,28 @@ export function hydrateRosterPlayers(roster, players = []) {
   return entries
     .map((entry) => {
       const masterPlayer = playerMap.get(String(entry?.PlayerID));
+      const derivedGrade = deriveRosterGradeFromGradYear(
+        masterPlayer,
+        roster?.SeasonID
+      );
+      const grade = firstMeaningfulValue(
+        derivedGrade,
+        entry?.Grade,
+        entry?.ClassYear,
+        masterPlayer?.Grade
+      );
+      const gradeLabel = firstMeaningfulValue(
+        gradeLabelForGrade(derivedGrade),
+        entry?.GradeLabel,
+        masterPlayer?.GradeLabel,
+        gradeLabelForGrade(grade)
+      );
 
       return {
         ...entry,
         ...masterPlayer,
+        Grade: grade ?? null,
+        GradeLabel: gradeLabel ?? null,
         PlayerName: masterPlayer ? getPlayerName(masterPlayer) : entry?.PlayerName,
       };
     })

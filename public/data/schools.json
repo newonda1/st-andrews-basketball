@@ -1468,6 +1468,7 @@
     "Name": "Abundant Life Academy",
     "City": "Hardeeville",
     "State": "SC",
+    "ShortName": "Abundant Life",
     "LogoPath": "/images/schools/logos/sc-abundant-life-academy-hardeeville.svg"
   },
   {
@@ -1538,7 +1539,11 @@
     "SchoolID": "sc-cathedral-academy-north-charleston",
     "Name": "Cathedral Academy",
     "City": "North Charleston",
-    "State": "SC"
+    "State": "SC",
+    "ShortName": "Cathedral",
+    "Mascot": "Generals",
+    "LogoPath": "/images/schools/logos/sc-cathedral-academy-north-charleston.png",
+    "LogoSourceUrl": "https://image.maxpreps.io/school-mascot/b/7/c/b7cc629f-decb-49bf-9671-2324e7073b60.gif?auto=webp&format=pjpg&height=1024&version=637656597600000000&width=1024"
   },
   {
     "SchoolID": "sc-charleston-collegiate-school-johns-island",
