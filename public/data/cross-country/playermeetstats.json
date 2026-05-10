@@ -198,7 +198,7 @@
   {
     "StatID": "8786-001-maggie-samons-5k-run-girls-1a-2a",
     "MeetID": 8786,
-    "PlayerID": null,
+    "PlayerID": 2027005,
     "Gender": "Girls",
     "Event": "5K Run",
     "Race": "Girls 1A/2A",
@@ -212,7 +212,7 @@
   {
     "StatID": "8786-002-jessica-topolewski-5k-run-girls-1a-2a",
     "MeetID": 8786,
-    "PlayerID": null,
+    "PlayerID": 2027008,
     "Gender": "Girls",
     "Event": "5K Run",
     "Race": "Girls 1A/2A",
@@ -226,7 +226,7 @@
   {
     "StatID": "8786-003-michelle-griffin-5k-run-girls-1a-2a",
     "MeetID": 8786,
-    "PlayerID": null,
+    "PlayerID": 200408,
     "Gender": "Girls",
     "Event": "5K Run",
     "Race": "Girls 1A/2A",
@@ -240,7 +240,7 @@
   {
     "StatID": "8786-004-stephanie-griffin-5k-run-girls-1a-2a",
     "MeetID": 8786,
-    "PlayerID": null,
+    "PlayerID": 200407,
     "Gender": "Girls",
     "Event": "5K Run",
     "Race": "Girls 1A/2A",
@@ -254,7 +254,7 @@
   {
     "StatID": "8786-005-jennie-wilburn-5k-run-girls-1a-2a",
     "MeetID": 8786,
-    "PlayerID": null,
+    "PlayerID": 2027002,
     "Gender": "Girls",
     "Event": "5K Run",
     "Race": "Girls 1A/2A",
@@ -403,7 +403,7 @@
   {
     "StatID": "20050827-010-jessica-topolewski-mile-relay-girls",
     "MeetID": 20050827,
-    "PlayerID": null,
+    "PlayerID": 2027008,
     "Gender": "Girls",
     "Event": "Mile Relay",
     "Race": "Girls Mile Relay",
@@ -518,7 +518,7 @@
   {
     "StatID": "20050831-006-jessica-topolewski-5k-run-girls-3-1-mile",
     "MeetID": 20050831,
-    "PlayerID": null,
+    "PlayerID": 2027008,
     "Gender": "Girls",
     "Event": "5K Run",
     "Race": "Girls 3.1 miles",
@@ -630,7 +630,7 @@
   {
     "StatID": "20050907-006-jessica-topolewski-5k-run-girls-3-1-mile",
     "MeetID": 20050907,
-    "PlayerID": null,
+    "PlayerID": 2027008,
     "Gender": "Girls",
     "Event": "5K Run",
     "Race": "Girls 3.1 miles",
@@ -770,7 +770,7 @@
   {
     "StatID": "20051004-006-jessica-topolewski-5k-run-girls-3-1-mile",
     "MeetID": 20051004,
-    "PlayerID": null,
+    "PlayerID": 2027008,
     "Gender": "Girls",
     "Event": "5K Run",
     "Race": "Girls 3.1 miles",

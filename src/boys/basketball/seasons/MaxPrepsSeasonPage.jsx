@@ -711,6 +711,7 @@ function MaxPrepsSeasonPage({
   };
 
   const rosterTableRows = useMemo(() => {
+    const useSharedAthletePage = Number(seasonId) === 2003;
     const playerRows = rosterEntries
       .map((entry) => ({
         key: `player-${entry.PlayerID}`,
@@ -718,7 +719,9 @@ function MaxPrepsSeasonPage({
         name: playerName(entry.PlayerID),
         grade: entry.Grade,
         path: playerById.has(Number(entry.PlayerID))
-          ? `/athletics/boys/basketball/players/${entry.PlayerID}`
+          ? useSharedAthletePage
+            ? `/athletics/players/${entry.PlayerID}`
+            : `/athletics/boys/basketball/players/${entry.PlayerID}`
           : "",
       }))
       .sort((a, b) => {
@@ -737,7 +740,7 @@ function MaxPrepsSeasonPage({
     }));
 
     return [...playerRows, ...staffRows];
-  }, [playerById, rosterEntries, rosterStaff]);
+  }, [playerById, rosterEntries, rosterStaff, seasonId]);
 
   const bracket = bracketsData?.[String(seasonId)];
   const shouldShowStringRecap = Boolean(splitParagraphs(seasonRecap).length);
@@ -1058,7 +1061,11 @@ function MaxPrepsSeasonPage({
                         </td>
                         <td className={statsBodyCellClassName}>
                           <Link
-                            to={`/athletics/boys/basketball/players/${player.PlayerID}`}
+                            to={
+                              Number(seasonId) === 2003
+                                ? `/athletics/players/${player.PlayerID}`
+                                : `/athletics/boys/basketball/players/${player.PlayerID}`
+                            }
                             className="text-blue-600 hover:underline"
                           >
                             {playerName(player.PlayerID)}

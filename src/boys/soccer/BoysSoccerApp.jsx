@@ -2,9 +2,9 @@ import React, { useEffect, useMemo, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 
 import AthleticsProgramShell from "../../components/AthleticsProgramShell";
+import AthleteProfileRedirect from "../../components/AthleteProfileRedirect";
 import GameDetail from "./pages/GameDetail";
 import Home from "./pages/Home";
-import PlayerPage from "./pages/PlayerPage";
 import RecordsVsOpponents from "./pages/RecordsVsOpponents";
 import SeasonPage from "./pages/SeasonPage";
 import YearlyResults from "./pages/YearlyResults";
@@ -87,7 +87,7 @@ export default function BoysSoccerApp() {
         />
         <Route
           path="players/:playerId"
-          element={<PlayerPage data={data} status={status} />}
+          element={<AthleteProfileRedirect />}
         />
         <Route
           path="records/opponents"

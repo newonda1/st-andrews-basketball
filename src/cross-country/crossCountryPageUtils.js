@@ -163,12 +163,14 @@ export function buildCrossCountryRoster(entries = [], playerMap = new Map()) {
     if (!rosterMap.has(athleteName)) {
       rosterMap.set(athleteName, {
         athleteName,
+        playerId: entry?.PlayerID || null,
         events: new Set(),
         races: new Set(),
       });
     }
 
     const rosterEntry = rosterMap.get(athleteName);
+    if (!rosterEntry.playerId && entry?.PlayerID) rosterEntry.playerId = entry.PlayerID;
     if (entry?.Event) rosterEntry.events.add(entry.Event);
     if (entry?.Race) rosterEntry.races.add(cleanCrossCountryRaceLabel(entry.Race));
   });
@@ -176,6 +178,7 @@ export function buildCrossCountryRoster(entries = [], playerMap = new Map()) {
   return Array.from(rosterMap.values())
     .map((entry) => ({
       athleteName: entry.athleteName,
+      playerId: entry.playerId,
       events: Array.from(entry.events).sort(sortCrossCountryEventNames),
       races: Array.from(entry.races).sort((a, b) => a.localeCompare(b)),
     }))

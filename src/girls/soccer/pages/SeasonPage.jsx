@@ -489,7 +489,7 @@ export default function SeasonPage({ data, status = "" }) {
     name: getPlayerName(entry),
     grade: formatRosterGrade(entry.GradeLabel || entry.Grade),
     positions: Array.isArray(entry.Positions) ? entry.Positions : [],
-    path: entry.PlayerID ? `/athletics/girls/soccer/players/${entry.PlayerID}` : "",
+    path: entry.PlayerID ? `/athletics/players/${entry.PlayerID}` : "",
   }));
 
   if (!season && !status) {
@@ -697,7 +697,7 @@ export default function SeasonPage({ data, status = "" }) {
                     <tr key={player.PlayerID} className={tableRowClassName(index)}>
                       <td className="sticky left-0 z-10 border bg-inherit px-2 py-1 text-left">
                         <Link
-                          to={`/athletics/girls/soccer/players/${player.PlayerID}`}
+                          to={`/athletics/players/${player.PlayerID}`}
                           className="text-blue-700 underline hover:text-blue-900"
                         >
                           {playerName(player.PlayerID)}

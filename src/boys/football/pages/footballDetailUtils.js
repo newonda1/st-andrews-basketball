@@ -118,7 +118,7 @@ export const FOOTBALL_DETAIL_VIEWS = {
 export const FOOTBALL_DETAIL_VIEW_ENTRIES = Object.entries(FOOTBALL_DETAIL_VIEWS);
 
 export function footballPlayerPath(playerId) {
-  return `${FOOTBALL_PLAYER_ROUTE_BASE}/${encodeURIComponent(String(playerId || ""))}`;
+  return `/athletics/players/${encodeURIComponent(String(playerId || ""))}`;
 }
 
 export function footballGamePath(gameId) {

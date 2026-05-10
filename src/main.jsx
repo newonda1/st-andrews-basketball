@@ -8,6 +8,7 @@ import AthleticsHome from "./AthleticsHome.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
 
 const AthleticsSearchApp = lazy(() => import("./AthleticsSearchApp.jsx"));
+const AthleteProfilePage = lazy(() => import("./athletes/AthleteProfilePage.jsx"));
 const BoysBasketballApp = lazy(() => import("./boys/basketball/BoysBasketballApp.jsx"));
 const BoysBaseballApp = lazy(() => import("./boys/baseball/BoysBaseballApp.jsx"));
 const FootballApp = lazy(() => import("./boys/football/FootballApp.jsx"));
@@ -32,6 +33,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="/" element={<AthleticsHome />} />
           <Route path="/athletics" element={<AthleticsHome />} />
           <Route path="/athletics/search" element={<AthleticsSearchApp />} />
+          <Route path="/athletics/players/:playerId" element={<AthleteProfilePage />} />
 
           <Route
             path="/athletics/boys/basketball/*"

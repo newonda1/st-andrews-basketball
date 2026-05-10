@@ -50,14 +50,20 @@ function formatRosterGrade(grade) {
 
 function buildExplicitRosterRows(season, playerMap = new Map()) {
   return (Array.isArray(season?.Roster) ? season.Roster : [])
-    .map((entry, index) => ({
-      key: `roster-${index}-${entry?.Name || entry?.AthleteName || "row"}`,
-      athleteName: resolveCrossCountryAthleteName(
+    .map((entry, index) => {
+      const playerId = entry?.PlayerID || null;
+      const athleteName = resolveCrossCountryAthleteName(
         { PlayerID: entry?.PlayerID, AthleteName: entry?.Name || entry?.AthleteName },
         playerMap
-      ),
-      grade: formatRosterGrade(entry?.Grade),
-    }))
+      );
+
+      return {
+        key: `roster-${index}-${playerId || entry?.Name || entry?.AthleteName || "row"}`,
+        athleteName,
+        path: playerId ? `/athletics/players/${playerId}` : "",
+        grade: formatRosterGrade(entry?.Grade),
+      };
+    })
     .filter((entry) => entry.athleteName);
 }
 
@@ -97,7 +103,16 @@ function RosterTableBlock({ rows }) {
               <td
                 className={`${recordTableStyles.bodyCell} text-left font-semibold text-gray-900`}
               >
-                {row.athleteName}
+                {row.path ? (
+                  <Link
+                    to={row.path}
+                    className="text-blue-700 hover:text-blue-900"
+                  >
+                    {row.athleteName}
+                  </Link>
+                ) : (
+                  row.athleteName
+                )}
               </td>
               <td className={`${recordTableStyles.bodyCell} whitespace-nowrap`}>
                 {row.grade}
@@ -107,6 +122,22 @@ function RosterTableBlock({ rows }) {
         </tbody>
       </table>
     </div>
+  );
+}
+
+function AthleteNameLink({ row, playerMap }) {
+  const athleteName = resolveCrossCountryAthleteName(row, playerMap);
+  const playerId = row?.PlayerID || row?.playerId;
+
+  if (!playerId) return athleteName;
+
+  return (
+    <Link
+      to={`/athletics/players/${playerId}`}
+      className="font-semibold text-blue-700 hover:text-blue-900"
+    >
+      {athleteName}
+    </Link>
   );
 }
 
@@ -470,7 +501,7 @@ function MeetResultsTable({ rows, playerMap, meet }) {
                     {cleanCrossCountryRaceLabel(row.Race)}
                   </td>
                   <td className={recordTableStyles.detailCell}>
-                    {resolveCrossCountryAthleteName(row, playerMap)}
+                    <AthleteNameLink row={row} playerMap={playerMap} />
                   </td>
                   <td className={recordTableStyles.detailCell}>{row.Mark || "—"}</td>
                   <td className={recordTableStyles.detailCell}>
@@ -676,7 +707,7 @@ export default function SeasonPage({
                           <td
                             className={`${recordTableStyles.bodyCell} text-left align-top font-semibold text-gray-900`}
                           >
-                            {entry.athleteName}
+                            <AthleteNameLink row={entry} playerMap={playerMap} />
                           </td>
                           <td
                             className={`${recordTableStyles.bodyCell} text-left align-top text-gray-700`}

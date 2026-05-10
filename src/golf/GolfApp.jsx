@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import AthleticsProgramShell from "../components/AthleticsProgramShell";
+import AthleteProfileRedirect from "../components/AthleteProfileRedirect";
 import Home from "./pages/Home";
 import MatchPage from "./pages/MatchPage";
 import SeasonPage from "./pages/SeasonPage";
@@ -165,6 +166,10 @@ export default function GolfApp() {
               status={status}
             />
           }
+        />
+        <Route
+          path="players/:playerId"
+          element={<AthleteProfileRedirect />}
         />
         <Route path="*" element={<Home />} />
       </Routes>

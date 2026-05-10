@@ -623,7 +623,16 @@ function RosterTableBlock({ rows }) {
           {rows.map((row, index) => (
             <tr key={row.key} className={tableRowClassName(index)}>
               <td className={`${bodyCellClassName} text-left font-semibold text-gray-900`}>
-                {row.name}
+                {row.path ? (
+                  <Link
+                    to={row.path}
+                    className="text-blue-700 hover:text-blue-900"
+                  >
+                    {row.name}
+                  </Link>
+                ) : (
+                  row.name
+                )}
               </td>
               <td className={`${bodyCellClassName} whitespace-nowrap`}>
                 {row.grade}
@@ -677,6 +686,9 @@ function SeasonRoster({ roster, playersById = new Map() }) {
     return {
       key: rosterPlayer.PlayerID || `${displayName}-${index}`,
       name: displayName,
+      path: rosterPlayer.PlayerID
+        ? `/athletics/players/${rosterPlayer.PlayerID}`
+        : "",
       grade: formatRosterGrade(grade),
     };
   });

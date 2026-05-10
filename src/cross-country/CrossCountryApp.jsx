@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import AthleticsProgramShell from "../components/AthleticsProgramShell";
+import AthleteProfileRedirect from "../components/AthleteProfileRedirect";
 import ChampionshipList from "./pages/ChampionshipList";
 import Home from "./pages/Home";
 import SchoolRecords from "./pages/SchoolRecords";
@@ -165,6 +166,10 @@ export default function CrossCountryApp() {
               status={status}
             />
           }
+        />
+        <Route
+          path="players/:playerId"
+          element={<AthleteProfileRedirect />}
         />
         <Route path="*" element={<Home />} />
       </Routes>

@@ -23,6 +23,21 @@ function getPlayerName(row, playerMap) {
   return row.PlayerName || "Unknown golfer";
 }
 
+function GolferName({ row, playerMap }) {
+  const name = getPlayerName(row, playerMap);
+
+  if (!row?.PlayerID) return name;
+
+  return (
+    <Link
+      to={`/athletics/players/${row.PlayerID}`}
+      className="text-blue-700 hover:text-blue-900"
+    >
+      {name}
+    </Link>
+  );
+}
+
 function getSchoolDisplayName(row, schoolMap) {
   const school = row?.SchoolID ? schoolMap.get(String(row.SchoolID)) : null;
   return school?.Name || school?.ShortName || row?.School || "Unknown school";
@@ -133,7 +148,9 @@ function ResultsTable({ rows = [], playerMap, schoolMap }) {
                 </td>
               ) : null}
               <td className="border-b border-slate-200 px-3 py-2 font-semibold text-slate-900">
-                <div>{getPlayerName(row, playerMap)}</div>
+                <div>
+                  <GolferName row={row} playerMap={playerMap} />
+                </div>
                 {row.Award ? (
                   <div className="mt-1 text-xs font-medium text-slate-500">
                     {row.Award}
@@ -174,7 +191,7 @@ function DivisionSection({ division, playerMap, schoolMap }) {
         {division.Medalist ? (
           <div className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-950">
             <span className="font-bold">Medalist:</span>{" "}
-            {division.Medalist.PlayerName} (
+            <GolferName row={division.Medalist} playerMap={playerMap} /> (
             {getSchoolDisplayName(division.Medalist, schoolMap)}){" "}
             {division.Medalist.Score}
           </div>
