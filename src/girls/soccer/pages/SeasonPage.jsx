@@ -32,6 +32,9 @@ const tableHeadClassName =
   "bg-gray-100 text-xs uppercase tracking-wide text-gray-700";
 const tableHeaderCellClassName = "border px-3 py-2 font-bold";
 const tableBodyCellClassName = "border px-3 py-2";
+const scheduleHeaderCellClassName = "border px-2 py-2 text-center text-xs whitespace-nowrap";
+const scheduleBodyCellClassName = "border px-2 py-1.5 text-center align-middle whitespace-nowrap";
+const scheduleOpponentCellClassName = "border px-2 py-1.5 align-middle";
 
 function tableRowClassName(index) {
   return `border-t border-gray-200 ${
@@ -590,12 +593,12 @@ export default function SeasonPage({ data, status = "" }) {
           <table className="min-w-full bg-white text-sm">
             <thead className={tableHeadClassName}>
               <tr>
-                <th className="border px-3 py-2 text-left">Date</th>
-                <th className="border px-3 py-2 text-left">Opponent</th>
-                <th className="border px-3 py-2">Location</th>
-                <th className="border px-3 py-2">Result</th>
-                <th className="border px-3 py-2">Score</th>
-                <th className="border px-3 py-2">Type</th>
+                <th className={`${scheduleHeaderCellClassName} text-left`}>Date</th>
+                <th className={`${scheduleHeaderCellClassName} text-left`}>Opponent</th>
+                <th className={scheduleHeaderCellClassName}>Location</th>
+                <th className={scheduleHeaderCellClassName}>Result</th>
+                <th className={scheduleHeaderCellClassName}>Score</th>
+                <th className={scheduleHeaderCellClassName}>Type</th>
               </tr>
             </thead>
             <tbody>
@@ -605,10 +608,12 @@ export default function SeasonPage({ data, status = "" }) {
 
                   return (
                     <tr key={game.GameID} className={tableRowClassName(index)}>
-                      <td className="border px-3 py-2">{formatSoccerDate(game)}</td>
-                      <td className="border px-3 py-2">
-                        <div className="flex items-center gap-3">
-                          <div className="flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden">
+                      <td className={`${scheduleBodyCellClassName} text-left`}>
+                        {formatSoccerDate(game)}
+                      </td>
+                      <td className={scheduleOpponentCellClassName}>
+                        <div className="flex items-center gap-2">
+                          <div className="flex h-6 w-6 shrink-0 items-center justify-center overflow-hidden">
                             {logoPath ? (
                               <img
                                 src={logoPath}
@@ -636,16 +641,16 @@ export default function SeasonPage({ data, status = "" }) {
                           </div>
                         </div>
                       </td>
-                      <td className="border px-3 py-2 text-center">{formatLocation(game)}</td>
+                      <td className={scheduleBodyCellClassName}>{formatLocation(game)}</td>
                       <td
-                        className={`border px-3 py-2 text-center font-bold ${resultClassName(
+                        className={`${scheduleBodyCellClassName} font-bold ${resultClassName(
                           game.Result
                         )}`}
                       >
                         {game.Result || "-"}
                       </td>
-                      <td className="border px-3 py-2 text-center">{formatScore(game)}</td>
-                      <td className="border px-3 py-2 text-center">
+                      <td className={scheduleBodyCellClassName}>{formatScore(game)}</td>
+                      <td className={scheduleBodyCellClassName}>
                         {game.GameType || "Regular Season"}
                       </td>
                     </tr>

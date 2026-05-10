@@ -61,6 +61,22 @@ function buildExplicitRosterRows(season, playerMap = new Map()) {
     .filter((entry) => entry.athleteName);
 }
 
+function formatBadgeText(value) {
+  return String(value || "")
+    .replace(/[-_]+/g, " ")
+    .replace(/\b\w/g, (letter) => letter.toUpperCase());
+}
+
+function buildSeasonBriefItems(season) {
+  if (!season) return [];
+
+  return [
+    { label: "Class", value: season.Classification },
+    { label: "State Meet", value: season.StateMeetStart ? formatCrossCountryDate(season.StateMeetStart) : "" },
+    { label: "Status", value: formatBadgeText(season.StatusBadge) },
+  ].filter((item) => item.value);
+}
+
 function RosterTableBlock({ rows }) {
   return (
     <div className={tableFrameClassName}>
@@ -122,18 +138,34 @@ function SeasonRecapSection({ season }) {
     : Array.isArray(season?.HistoricalSummary)
       ? season.HistoricalSummary
       : [];
+  const briefItems = buildSeasonBriefItems(season);
 
   if (!paragraphs.length && !season?.StatusNote) return null;
 
   return (
     <section id="season-recap" className="mx-auto max-w-4xl space-y-3">
       <h2 className="text-2xl font-semibold">Season Recap</h2>
-      <div className="space-y-3 text-base leading-7 text-slate-700">
-        {paragraphs.length ? (
-          paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)
-        ) : (
-          <p>{season.StatusNote}</p>
-        )}
+      <div className="flow-root text-base leading-7 text-slate-700">
+        {briefItems.length ? (
+          <dl className="mb-4 grid grid-cols-3 gap-3 text-center md:float-right md:mb-3 md:ml-6 md:w-64 md:grid-cols-1">
+            {briefItems.map((item) => (
+              <div key={item.label} className="rounded-lg border border-gray-200 px-3 py-2">
+                <dt className="text-xs font-semibold uppercase tracking-wide text-gray-500">
+                  {item.label}
+                </dt>
+                <dd className="text-lg font-semibold text-gray-900">{item.value}</dd>
+              </div>
+            ))}
+          </dl>
+        ) : null}
+
+        <div className="space-y-3">
+          {paragraphs.length ? (
+            paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)
+          ) : (
+            <p>{season.StatusNote}</p>
+          )}
+        </div>
       </div>
     </section>
   );

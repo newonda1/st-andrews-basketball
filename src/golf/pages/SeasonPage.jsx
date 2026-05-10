@@ -18,6 +18,9 @@ const headerCellClassName =
   "border px-3 py-2 font-bold leading-tight whitespace-normal break-words";
 const bodyCellClassName =
   "border px-3 py-2 align-middle whitespace-normal break-words leading-tight";
+const scheduleHeaderCellClassName = "border px-2 py-2 text-center text-xs whitespace-nowrap";
+const scheduleBodyCellClassName = "border px-2 py-1.5 text-center align-middle whitespace-nowrap";
+const scheduleOpponentCellClassName = "border px-2 py-1.5 align-middle";
 
 function tableRowClassName(index) {
   return `border-t border-gray-200 ${
@@ -27,10 +30,27 @@ function tableRowClassName(index) {
 
 const SCISA_LOGO_PATH = "/images/branding/scisa-athletics-footer-logo.png";
 
+function formatBadgeText(value) {
+  return String(value || "")
+    .replace(/[-_]+/g, " ")
+    .replace(/\b\w/g, (letter) => letter.toUpperCase());
+}
+
+function buildSeasonBriefItems(season) {
+  if (!season) return [];
+
+  return [
+    { label: "Classification", value: season.Classification },
+    { label: "Archive", value: formatBadgeText(season.ArchiveScope) },
+    { label: "Status", value: formatBadgeText(season.StatusBadge) },
+  ].filter((item) => item.value);
+}
+
 function SummaryCard({ season }) {
   const recapParagraphs = Array.isArray(season.HistoricalSummary)
     ? season.HistoricalSummary
     : [];
+  const briefItems = buildSeasonBriefItems(season);
 
   return (
     <section id="season-recap" className="mx-auto max-w-4xl space-y-3">
@@ -48,20 +68,34 @@ function SummaryCard({ season }) {
         ) : null}
       </div>
 
-      <div className="space-y-3 text-base leading-7 text-slate-700">
-        {recapParagraphs.length ? (
-          recapParagraphs.map((paragraph, index) => (
-            <p key={`${season.SeasonID}-summary-${index}`}>
-              {paragraph}
-            </p>
-          ))
-        ) : (
-          <p>
-            {season.StatusNote || "State archive summary."}
-          </p>
-        )}
-      </div>
+      <div className="flow-root text-base leading-7 text-slate-700">
+        {briefItems.length ? (
+          <dl className="mb-4 grid grid-cols-3 gap-3 text-center md:float-right md:mb-3 md:ml-6 md:w-64 md:grid-cols-1">
+            {briefItems.map((item) => (
+              <div key={item.label} className="rounded-lg border border-gray-200 px-3 py-2">
+                <dt className="text-xs font-semibold uppercase tracking-wide text-gray-500">
+                  {item.label}
+                </dt>
+                <dd className="text-lg font-semibold text-gray-900">{item.value}</dd>
+              </div>
+            ))}
+          </dl>
+        ) : null}
 
+        <div className="space-y-3">
+          {recapParagraphs.length ? (
+            recapParagraphs.map((paragraph, index) => (
+              <p key={`${season.SeasonID}-summary-${index}`}>
+                {paragraph}
+              </p>
+            ))
+          ) : (
+            <p>
+              {season.StatusNote || "State archive summary."}
+            </p>
+          )}
+        </div>
+      </div>
     </section>
   );
 }
@@ -456,7 +490,7 @@ function SchoolLogo({ school, fallbackName, logoPath: overrideLogoPath }) {
     .toUpperCase();
 
   return (
-    <div className="flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden">
+    <div className="flex h-6 w-6 shrink-0 items-center justify-center overflow-hidden">
       {logoPath ? (
         <img
           src={logoPath}
@@ -468,7 +502,7 @@ function SchoolLogo({ school, fallbackName, logoPath: overrideLogoPath }) {
           }}
         />
       ) : (
-        <span className="flex h-8 w-8 items-center justify-center rounded bg-slate-100 text-[0.65rem] font-bold text-slate-500">
+        <span className="flex h-6 w-6 items-center justify-center rounded bg-slate-100 text-[0.6rem] font-bold text-slate-500">
           {initials}
         </span>
       )}
@@ -672,12 +706,12 @@ function SeasonSchedule({ matches, schoolById }) {
         <table className="min-w-full bg-white text-sm">
           <thead className={tableHeadClassName}>
             <tr>
-              <th className="border px-3 py-2 text-left">Date</th>
-              <th className="border px-3 py-2 text-left">Opponent</th>
-              <th className="border px-3 py-2">Location</th>
-              <th className="border px-3 py-2">Result</th>
-              <th className="border px-3 py-2">Score</th>
-              <th className="border px-3 py-2">Type</th>
+              <th className={`${scheduleHeaderCellClassName} text-left`}>Date</th>
+              <th className={`${scheduleHeaderCellClassName} text-left`}>Opponent</th>
+              <th className={scheduleHeaderCellClassName}>Location</th>
+              <th className={scheduleHeaderCellClassName}>Result</th>
+              <th className={scheduleHeaderCellClassName}>Score</th>
+              <th className={scheduleHeaderCellClassName}>Type</th>
             </tr>
           </thead>
           <tbody>
@@ -688,13 +722,13 @@ function SeasonSchedule({ matches, schoolById }) {
 
               return (
                 <tr key={match.MatchID} className={tableRowClassName(index)}>
-                  <td className="border px-3 py-2 whitespace-nowrap">
+                  <td className={`${scheduleBodyCellClassName} text-left`}>
                     {formatGolfDate(match.Date)}
                   </td>
-                  <td className="border px-3 py-2">
-                    <div className="space-y-2">
+                  <td className={scheduleOpponentCellClassName}>
+                    <div className="space-y-1.5">
                       {opponents.map(({ key, label, logoPath, score, school }) => (
-                        <div key={key || schoolKey(score)} className="flex items-center gap-3">
+                        <div key={key || schoolKey(score)} className="flex items-center gap-2">
                           <SchoolLogo
                             school={school}
                             fallbackName={label || score?.School}
@@ -710,10 +744,10 @@ function SeasonSchedule({ matches, schoolById }) {
                       ))}
                     </div>
                   </td>
-                  <td className="border px-3 py-2 text-center">
+                  <td className={scheduleBodyCellClassName}>
                     {match.Course || match.Location || "Unknown"}
                   </td>
-                  <td className="border px-3 py-2 text-center font-bold text-slate-900">
+                  <td className={`${scheduleBodyCellClassName} font-bold text-slate-900`}>
                     <div className="space-y-1">
                       {resultPieces.map((piece) => (
                         <div
@@ -732,7 +766,7 @@ function SeasonSchedule({ matches, schoolById }) {
                       ))}
                     </div>
                   </td>
-                  <td className="border px-3 py-2 text-center">
+                  <td className={scheduleBodyCellClassName}>
                     <div className="space-y-1">
                       {resultPieces.map((piece) => (
                         <div key={`${match.MatchID}-${piece.division}-score`}>
@@ -742,7 +776,7 @@ function SeasonSchedule({ matches, schoolById }) {
                       ))}
                     </div>
                   </td>
-                  <td className="border px-3 py-2 text-center">{type}</td>
+                  <td className={scheduleBodyCellClassName}>{type}</td>
                 </tr>
               );
             })}
