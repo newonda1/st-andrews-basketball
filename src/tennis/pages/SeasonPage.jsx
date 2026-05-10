@@ -444,19 +444,19 @@ function SeasonMatchTable({ title, matches = [], schoolMap }) {
         <table className="w-full min-w-[780px] border-collapse text-sm">
           <thead className="bg-slate-100 text-xs uppercase tracking-wide text-slate-600">
             <tr>
-              <th className="border-b border-slate-300 px-3 py-2 text-left font-bold">
+              <th className="border-b border-slate-300 px-2 py-2 text-left text-xs font-normal whitespace-nowrap">
                 Date
               </th>
-              <th className="border-b border-slate-300 px-3 py-2 text-left font-bold">
+              <th className="border-b border-slate-300 px-2 py-2 pl-10 text-left text-xs font-normal whitespace-nowrap">
                 Opponent
               </th>
-              <th className="border-b border-slate-300 px-3 py-2 text-center font-bold">
+              <th className="border-b border-slate-300 px-2 py-2 text-center text-xs font-normal whitespace-nowrap">
                 Home/Away
               </th>
-              <th className="border-b border-slate-300 px-3 py-2 text-center font-bold">
+              <th className="border-b border-slate-300 px-2 py-2 text-center text-xs font-normal whitespace-nowrap">
                 Type
               </th>
-              <th className="border-b border-slate-300 px-3 py-2 text-center font-bold">
+              <th className="border-b border-slate-300 px-2 py-2 text-center text-xs font-normal whitespace-nowrap">
                 Result
               </th>
             </tr>
@@ -486,21 +486,21 @@ function SeasonMatchTable({ title, matches = [], schoolMap }) {
                     key={match.MatchID}
                     className={index % 2 === 0 ? "bg-white" : "bg-slate-50/70"}
                   >
-                    <td className="border-b border-slate-200 px-3 py-2 whitespace-nowrap">
+                    <td className="border-b border-slate-200 px-2 py-1.5 align-middle whitespace-nowrap">
                       {getTennisDateLabel(match)}
                     </td>
-                    <td className="border-b border-slate-200 px-3 py-2">
-                      <div className="flex items-center gap-3">
+                    <td className="border-b border-slate-200 px-2 py-1.5 align-middle">
+                      <div className="flex items-center gap-2">
                         {logoPath ? (
                           <img
                             src={logoPath}
                             alt={`${opponentName} logo`}
-                            className="h-8 w-8 shrink-0 object-contain"
+                            className="h-6 w-6 shrink-0 object-contain"
                             loading="lazy"
                           />
                         ) : (
                           <span
-                            className="flex h-8 w-8 shrink-0 items-center justify-center text-xs font-bold text-slate-500"
+                            className="flex h-6 w-6 shrink-0 items-center justify-center text-xs font-bold text-slate-500"
                             aria-hidden="true"
                           >
                             {getInitials(opponentName)}
@@ -509,21 +509,21 @@ function SeasonMatchTable({ title, matches = [], schoolMap }) {
                         <div className="min-w-0">
                           <Link
                             to={`/athletics/tennis/matches/${match.MatchID}`}
-                            className="font-bold text-blue-700 hover:text-blue-900"
+                            className="text-blue-700 hover:text-blue-900"
                           >
                             {opponentName}
                           </Link>
                         </div>
                       </div>
                     </td>
-                    <td className="border-b border-slate-200 px-3 py-2 text-center whitespace-nowrap">
+                    <td className="border-b border-slate-200 px-2 py-1.5 text-center align-middle whitespace-nowrap">
                       {getMatchSiteLabel(match)}
                     </td>
-                    <td className="border-b border-slate-200 px-3 py-2 text-center whitespace-nowrap">
+                    <td className="border-b border-slate-200 px-2 py-1.5 text-center align-middle whitespace-nowrap">
                       {getTennisMatchCategory(match)}
                     </td>
                     <td
-                      className={`border-b border-slate-200 px-3 py-2 text-center font-bold whitespace-nowrap ${resultTone}`}
+                      className={`border-b border-slate-200 px-2 py-1.5 text-center align-middle font-semibold whitespace-nowrap ${resultTone}`}
                     >
                       {result}
                     </td>

@@ -256,7 +256,7 @@ export default function SeasonPage({
                     key={entry.athleteName}
                     className={idx % 2 ? "bg-gray-50" : "bg-white"}
                   >
-                    <td className="border px-3 py-2 align-top font-semibold text-gray-900">
+                    <td className="border px-3 py-2 align-top text-gray-900">
                       {entry.athleteName}
                     </td>
                     <td className="border px-3 py-2 align-top text-gray-700">

@@ -20,6 +20,8 @@ const headerCellClassName =
 const bodyCellClassName =
   "border px-3 py-2 align-middle whitespace-normal break-words leading-tight";
 const scheduleHeaderCellClassName = "border px-2 py-2 text-center text-xs whitespace-nowrap";
+const scheduleOpponentHeaderCellClassName =
+  "border px-2 py-2 pl-10 text-left text-xs whitespace-nowrap";
 const scheduleBodyCellClassName = "border px-2 py-1.5 text-center align-middle whitespace-nowrap";
 const scheduleOpponentCellClassName = "border px-2 py-1.5 align-middle";
 
@@ -57,16 +59,6 @@ function SummaryCard({ season }) {
     <section id="season-recap" className="mx-auto max-w-4xl space-y-3">
       <div className="space-y-3">
         <h2 className="text-2xl font-semibold text-slate-900">Season Recap</h2>
-        {season.ArchivePdfUrl ? (
-          <a
-            href={season.ArchivePdfUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex rounded-full bg-[#012169] px-4 py-2 text-sm font-semibold text-white no-underline"
-          >
-            Open Official PDF
-          </a>
-        ) : null}
       </div>
 
       <div className="flow-root text-base leading-7 text-slate-700">
@@ -623,7 +615,7 @@ function RosterTableBlock({ rows }) {
         <tbody>
           {rows.map((row, index) => (
             <tr key={row.key} className={tableRowClassName(index)}>
-              <td className={`${bodyCellClassName} text-left font-semibold text-gray-900`}>
+              <td className={`${bodyCellClassName} text-left text-gray-900`}>
                 {row.path ? (
                   <Link
                     to={row.path}
@@ -720,7 +712,7 @@ function SeasonSchedule({ matches, schoolById }) {
           <thead className={tableHeadClassName}>
             <tr>
               <th className={`${scheduleHeaderCellClassName} text-left`}>Date</th>
-              <th className={`${scheduleHeaderCellClassName} text-left`}>Opponent</th>
+              <th className={scheduleOpponentHeaderCellClassName}>Opponent</th>
               <th className={scheduleHeaderCellClassName}>Location</th>
               <th className={scheduleHeaderCellClassName}>Result</th>
               <th className={scheduleHeaderCellClassName}>Score</th>

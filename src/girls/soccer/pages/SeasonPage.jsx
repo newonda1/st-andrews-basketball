@@ -34,6 +34,8 @@ const tableHeadClassName =
 const tableHeaderCellClassName = "border px-3 py-2 font-bold";
 const tableBodyCellClassName = "border px-3 py-2";
 const scheduleHeaderCellClassName = "border px-2 py-2 text-center text-xs whitespace-nowrap";
+const scheduleOpponentHeaderCellClassName =
+  "border px-2 py-2 pl-10 text-left text-xs whitespace-nowrap";
 const scheduleBodyCellClassName = "border px-2 py-1.5 text-center align-middle whitespace-nowrap";
 const scheduleOpponentCellClassName = "border px-2 py-1.5 align-middle";
 
@@ -194,7 +196,7 @@ function RosterTableBlock({ rows }) {
         <tbody>
           {rows.map((row, index) => (
             <tr key={row.key} className={tableRowClassName(index)}>
-              <td className={`${tableBodyCellClassName} text-left font-semibold text-gray-900`}>
+              <td className={`${tableBodyCellClassName} text-left text-gray-900`}>
                 {row.path ? (
                   <Link to={row.path} className="text-blue-600 hover:underline">
                     {row.name}
@@ -607,7 +609,7 @@ export default function SeasonPage({ data, status = "" }) {
             <thead className={tableHeadClassName}>
               <tr>
                 <th className={`${scheduleHeaderCellClassName} text-left`}>Date</th>
-                <th className={`${scheduleHeaderCellClassName} text-left`}>Opponent</th>
+                <th className={scheduleOpponentHeaderCellClassName}>Opponent</th>
                 <th className={scheduleHeaderCellClassName}>Location</th>
                 <th className={scheduleHeaderCellClassName}>Result</th>
                 <th className={scheduleHeaderCellClassName}>Score</th>

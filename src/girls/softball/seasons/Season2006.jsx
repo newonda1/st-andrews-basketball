@@ -373,7 +373,7 @@ export function SoftballSeasonPage({
           <thead className="bg-gray-100 text-xs font-normal uppercase tracking-wide text-gray-700">
             <tr>
               <HeaderCell className="text-left">Date</HeaderCell>
-              <HeaderCell className="text-left">Opponent</HeaderCell>
+              <HeaderCell className="pl-10 text-left">Opponent</HeaderCell>
               <HeaderCell>Location</HeaderCell>
               <HeaderCell>Result</HeaderCell>
               <HeaderCell>Score</HeaderCell>

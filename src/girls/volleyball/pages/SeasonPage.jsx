@@ -727,12 +727,12 @@ export default function SeasonPage({ data, status = "" }) {
           <table className="min-w-full bg-white text-sm">
             <thead className="bg-gray-100 text-xs text-gray-700 uppercase tracking-wide">
               <tr>
-                <th className="px-3 py-2 text-left">Date</th>
-                <th className="px-3 py-2 text-left">Opponent</th>
-                <th className="px-3 py-2 text-center">Site</th>
-                <th className="px-3 py-2 text-center">Game Type</th>
-                <th className="px-3 py-2 text-center">Result</th>
-                <th className="px-3 py-2 text-center">Score</th>
+                <th className="px-2 py-2 text-left text-xs whitespace-nowrap">Date</th>
+                <th className="px-2 py-2 pl-10 text-left text-xs whitespace-nowrap">Opponent</th>
+                <th className="px-2 py-2 text-center text-xs whitespace-nowrap">Location</th>
+                <th className="px-2 py-2 text-center text-xs whitespace-nowrap">Result</th>
+                <th className="px-2 py-2 text-center text-xs whitespace-nowrap">Score</th>
+                <th className="px-2 py-2 text-center text-xs whitespace-nowrap">Type</th>
               </tr>
             </thead>
             <tbody className="text-sm text-gray-800">
@@ -754,12 +754,12 @@ export default function SeasonPage({ data, status = "" }) {
                         index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
                       } hover:bg-gray-100`}
                     >
-                      <td className="px-3 py-2 whitespace-nowrap">
+                      <td className="px-2 py-1.5 text-left align-middle whitespace-nowrap">
                         {game.DisplayDate || formatDate(game.Date)}
                       </td>
-                      <td className="px-3 py-2 whitespace-nowrap">
+                      <td className="px-2 py-1.5 align-middle">
                         <div className="flex items-center gap-2">
-                          <span className="flex h-7 w-7 shrink-0 items-center justify-center overflow-hidden">
+                          <span className="flex h-6 w-6 shrink-0 items-center justify-center overflow-hidden">
                             {logoPath ? (
                               <img
                                 src={logoPath}
@@ -780,14 +780,11 @@ export default function SeasonPage({ data, status = "" }) {
                           </Link>
                         </div>
                       </td>
-                      <td className="px-3 py-2 text-center whitespace-nowrap">
-                        {game.LocationType || ""}
-                      </td>
-                      <td className="px-3 py-2 text-center whitespace-nowrap">
-                        {game.GameType || "Regular Season"}
+                      <td className="px-2 py-1.5 text-center align-middle whitespace-nowrap">
+                        {game.LocationType || "—"}
                       </td>
                       <td
-                        className={`px-3 py-2 text-center font-semibold whitespace-nowrap ${
+                        className={`px-2 py-1.5 text-center align-middle font-semibold whitespace-nowrap ${
                           game.Result === "W"
                             ? "text-emerald-700"
                             : game.Result === "L"
@@ -797,10 +794,13 @@ export default function SeasonPage({ data, status = "" }) {
                       >
                         {game.Result || "—"}
                       </td>
-                      <td className="px-3 py-2 text-center whitespace-nowrap">
+                      <td className="px-2 py-1.5 text-center align-middle whitespace-nowrap">
                         {game.TeamScore != null && game.OpponentScore != null
-                          ? `${game.TeamScore} - ${game.OpponentScore}`
+                          ? `${game.TeamScore}-${game.OpponentScore}`
                           : "—"}
+                      </td>
+                      <td className="px-2 py-1.5 text-center align-middle whitespace-nowrap">
+                        {game.GameType || "Regular Season"}
                       </td>
                     </tr>
                   );

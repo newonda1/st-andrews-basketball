@@ -102,7 +102,7 @@ function RosterTableBlock({ rows }) {
           {rows.map((row, index) => (
             <tr key={row.key} className={tableRowClassName(index)}>
               <td
-                className={`${recordTableStyles.bodyCell} text-left font-semibold text-gray-900`}
+                className={`${recordTableStyles.bodyCell} text-left text-gray-900`}
               >
                 {row.path ? (
                   <Link
@@ -706,7 +706,7 @@ export default function SeasonPage({
                           className={tableRowClassName(idx)}
                         >
                           <td
-                            className={`${recordTableStyles.bodyCell} text-left align-top font-semibold text-gray-900`}
+                            className={`${recordTableStyles.bodyCell} text-left align-top text-gray-900`}
                           >
                             <AthleteNameLink row={entry} playerMap={playerMap} />
                           </td>

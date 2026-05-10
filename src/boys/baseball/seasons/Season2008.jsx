@@ -821,6 +821,8 @@ export function BaseballSeasonPage({
   }, [groupedStats, fieldingSort]);
 
   const scheduleHeaderCellClassName = "px-2 py-2 text-center text-xs font-normal whitespace-nowrap";
+  const scheduleOpponentHeaderCellClassName =
+    "px-2 py-2 pl-10 text-left text-xs font-normal whitespace-nowrap";
   const scheduleBodyCellClassName = "px-2 py-1.5 text-center align-middle whitespace-nowrap";
   const scheduleOpponentCellClassName = "px-2 py-1.5 align-middle";
   const statsBodyCellClassName = "px-2 py-1.5 text-center whitespace-nowrap";
@@ -903,7 +905,7 @@ export function BaseballSeasonPage({
             <thead className="bg-gray-100 text-xs font-normal text-gray-700 uppercase tracking-wide">
               <tr>
                 <th className={`${scheduleHeaderCellClassName} text-left`}>Date</th>
-                <th className={`${scheduleHeaderCellClassName} text-left`}>Opponent</th>
+                <th className={scheduleOpponentHeaderCellClassName}>Opponent</th>
                 <th className={scheduleHeaderCellClassName}>Location</th>
                 <th className={scheduleHeaderCellClassName}>Result</th>
                 <th className={scheduleHeaderCellClassName}>Score</th>

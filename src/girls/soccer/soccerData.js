@@ -174,6 +174,7 @@ export function hydrateRosterPlayers(roster, players = []) {
         PlayerName: masterPlayer ? getPlayerName(masterPlayer) : entry?.PlayerName,
       };
     })
+    .filter((entry) => getPlayerName(entry) !== "Unknown Player")
     .sort((a, b) => {
       const jerseyA = Number(a.JerseyNumber || 999);
       const jerseyB = Number(b.JerseyNumber || 999);
