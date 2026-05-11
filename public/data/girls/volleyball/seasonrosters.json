@@ -118,7 +118,59 @@
     "SourceSeasonLabel": "2004-05",
     "HeadCoach": null,
     "Staff": [],
-    "Players": []
+    "Players": [
+      {
+        "PlayerID": 200401,
+        "JerseyNumber": 45,
+        "Grade": 10,
+        "GradeLabel": "So.",
+        "Positions": []
+      },
+      {
+        "PlayerID": 200403,
+        "JerseyNumber": null,
+        "Grade": 11,
+        "GradeLabel": "Jr.",
+        "Positions": []
+      },
+      {
+        "PlayerID": 200409,
+        "JerseyNumber": 15,
+        "Grade": 11,
+        "GradeLabel": "Jr.",
+        "Positions": []
+      },
+      {
+        "PlayerID": 200421,
+        "JerseyNumber": null,
+        "Grade": 11,
+        "GradeLabel": "Jr.",
+        "Positions": []
+      },
+      {
+        "PlayerID": 200503,
+        "JerseyNumber": null,
+        "Grade": 11,
+        "GradeLabel": "Jr.",
+        "Positions": [
+          "S"
+        ]
+      },
+      {
+        "PlayerID": 200506,
+        "JerseyNumber": null,
+        "Grade": 10,
+        "GradeLabel": "So.",
+        "Positions": []
+      },
+      {
+        "PlayerID": 200603,
+        "JerseyNumber": null,
+        "Grade": 11,
+        "GradeLabel": "Jr.",
+        "Positions": []
+      }
+    ]
   },
   {
     "SeasonID": 2005,

@@ -471,24 +471,13 @@ export default function GameDetail() {
   if (useNewspaperLayout) {
     return (
       <div className="mx-auto max-w-6xl space-y-8 px-4 pb-10 pt-2 lg:pb-40">
-        <div className="flex flex-wrap items-center justify-between gap-3">
+        <div className="flex flex-wrap items-center gap-3">
           <Link
             to={`/athletics/football/seasons/${game.SeasonID || game.Season}`}
             className="text-sm font-semibold text-blue-700 hover:underline"
           >
             Back to {formatSeasonLabel(game)}
           </Link>
-
-          {game.GameUrl ? (
-            <a
-              href={game.GameUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="text-sm font-semibold text-blue-700 hover:underline"
-            >
-              MaxPreps box score
-            </a>
-          ) : null}
         </div>
 
         {error ? (
@@ -504,24 +493,13 @@ export default function GameDetail() {
 
   return (
     <div className="mx-auto max-w-6xl space-y-8 px-4 pb-10 pt-2 lg:pb-40">
-      <div className="flex flex-wrap items-center justify-between gap-3">
+      <div className="flex flex-wrap items-center gap-3">
         <Link
           to={`/athletics/football/seasons/${game.SeasonID || game.Season}`}
           className="text-sm font-semibold text-blue-700 hover:underline"
         >
           Back to {formatSeasonLabel(game)}
         </Link>
-
-        {game.GameUrl ? (
-          <a
-            href={game.GameUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="text-sm font-semibold text-blue-700 hover:underline"
-          >
-            MaxPreps box score
-          </a>
-        ) : null}
       </div>
 
       <section className="space-y-3 text-center">

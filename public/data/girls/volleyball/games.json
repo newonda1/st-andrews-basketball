@@ -1529,6 +1529,226 @@
     ]
   },
   {
+    "GameID": "2004-placeholder-1",
+    "Season": 2004,
+    "SeasonID": 2004,
+    "DisplaySeason": "2004",
+    "SourceSeasonLabel": "2004-05",
+    "Date": "",
+    "DisplayDate": "Before Sep. 2, 2004",
+    "SortDate": "2004-09-01",
+    "SortOrder": 1,
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "",
+    "Opponent": "Unknown",
+    "OpponentLocation": "",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "GameType": "",
+    "Result": "W",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Notes": "Placeholder for St. Andrew's first match of the 2004-05 season, inferred as a win because St. Andrew's was reported at 3-1 after the Sept. 14 Hilton Head Christian match.",
+    "SourceCitation": "Inferred from user-provided Sept. 14, 2004 newspaper game data",
+    "IsComplete": "No",
+    "SetScores": []
+  },
+  {
+    "GameID": "20040902",
+    "Season": 2004,
+    "SeasonID": 2004,
+    "DisplaySeason": "2004",
+    "SourceSeasonLabel": "2004-05",
+    "Date": "2004-09-02",
+    "SortDate": "2004-09-02",
+    "SortOrder": 2,
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "ga-bible-baptist-school-savannah",
+    "Opponent": "Bible Baptist School",
+    "OpponentLocation": "Savannah, GA",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "GameType": "Non-Region",
+    "Result": "W",
+    "TeamScore": 3,
+    "OpponentScore": 1,
+    "Notes": "Placeholder for a recovered early-season 2004-05 match. Reported top players: Mary Wilkowski had 11 kills, 2 blocks, and 8 aces; Becca Timms had 4 digs and 3 aces. The report listed St. Andrew's at 2-0 after the match.",
+    "SourceCitation": "User-provided newspaper game data",
+    "IsComplete": "No",
+    "SetScores": [
+      {
+        "Set": 1,
+        "Team": 25,
+        "Opponent": 11
+      },
+      {
+        "Set": 2,
+        "Team": 19,
+        "Opponent": 25
+      },
+      {
+        "Set": 3,
+        "Team": 25,
+        "Opponent": 13
+      },
+      {
+        "Set": 4,
+        "Team": 25,
+        "Opponent": 23
+      }
+    ]
+  },
+  {
+    "GameID": "20040909",
+    "Season": 2004,
+    "SeasonID": 2004,
+    "DisplaySeason": "2004",
+    "SourceSeasonLabel": "2004-05",
+    "Date": "2004-09-09",
+    "SortDate": "2004-09-09",
+    "SortOrder": 1,
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "ga-providence-christian-school-savannah",
+    "Opponent": "Providence Christian School",
+    "OpponentLocation": "Savannah, GA",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "GameType": "Non-Region",
+    "Result": "W",
+    "TeamScore": 3,
+    "OpponentScore": 0,
+    "Notes": "Reported leading players: Mary Wilkowski had 10 kills and 11 aces; Maggie Hinchey had 5 kills, 7 aces, and 2 digs; Courtney Manson had 8 assists and 1 dig. St. Andrew's was listed at 2-0 after the match.",
+    "SourceCitation": "User-provided newspaper game data",
+    "IsComplete": "Yes",
+    "SetScores": [
+      {
+        "Set": 1,
+        "Team": 25,
+        "Opponent": 11
+      },
+      {
+        "Set": 2,
+        "Team": 25,
+        "Opponent": 17
+      },
+      {
+        "Set": 3,
+        "Team": 25,
+        "Opponent": 13
+      }
+    ]
+  },
+  {
+    "GameID": "20040914",
+    "Season": 2004,
+    "SeasonID": 2004,
+    "DisplaySeason": "2004",
+    "SourceSeasonLabel": "2004-05",
+    "Date": "2004-09-14",
+    "SortDate": "2004-09-14",
+    "SortOrder": 1,
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
+    "Opponent": "Hilton Head Christian Academy",
+    "OpponentLocation": "Hilton Head Island, SC",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 2,
+    "OpponentScore": 3,
+    "Notes": "Reported leading players: Mary Wilkowski had 11 kills, 2 blocks, and 6 digs; Maggie Hinchey had 5 kills and 8 digs; Emily Aimone had 10 digs. The report listed St. Andrew's at 3-1 after the match. The published score line is preserved as a Hilton Head Christian win; set scores are entered from St. Andrew's perspective to match the 3-2 result.",
+    "SourceCitation": "User-provided newspaper game data",
+    "IsComplete": "Yes",
+    "SetScores": [
+      {
+        "Set": 1,
+        "Team": 19,
+        "Opponent": 25
+      },
+      {
+        "Set": 2,
+        "Team": 27,
+        "Opponent": 25
+      },
+      {
+        "Set": 3,
+        "Team": 29,
+        "Opponent": 27
+      },
+      {
+        "Set": 4,
+        "Team": 24,
+        "Opponent": 26
+      },
+      {
+        "Set": 5,
+        "Team": 9,
+        "Opponent": 15
+      }
+    ]
+  },
+  {
+    "GameID": "20040916",
+    "Season": 2004,
+    "SeasonID": 2004,
+    "DisplaySeason": "2004",
+    "SourceSeasonLabel": "2004-05",
+    "Date": "2004-09-16",
+    "SortDate": "2004-09-16",
+    "SortOrder": 1,
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "ga-bible-baptist-school-savannah",
+    "Opponent": "Bible Baptist School",
+    "OpponentLocation": "Savannah, GA",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "GameType": "Non-Region",
+    "Result": "W",
+    "TeamScore": 3,
+    "OpponentScore": 0,
+    "Notes": "Reported leading players: Mary Wilkowski had 5 kills and 2 blocks; Kristen Albritton had 7 assists, 1 ace, and 3 digs. The report listed St. Andrew's at 4-1 after the match.",
+    "SourceCitation": "User-provided newspaper game data",
+    "IsComplete": "Yes",
+    "SetScores": [
+      {
+        "Set": 1,
+        "Team": 25,
+        "Opponent": 12
+      },
+      {
+        "Set": 2,
+        "Team": 25,
+        "Opponent": 16
+      },
+      {
+        "Set": 3,
+        "Team": 25,
+        "Opponent": 18
+      }
+    ]
+  },
+  {
     "GameID": "20050824",
     "Season": 2005,
     "SeasonID": 2005,

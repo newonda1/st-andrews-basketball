@@ -111,7 +111,7 @@
     "YearEnd": 2005,
     "DisplaySeason": "2004",
     "SourceSeasonLabel": "2004-05",
-    "HeadCoach": null,
+    "HeadCoach": "Mandy Stinson",
     "AssistantCoaches": [],
     "OverallWins": null,
     "OverallLosses": null,
@@ -124,9 +124,12 @@
     "StateDivision": null,
     "StateFinish": null,
     "SourceCitation": null,
-    "ShowSeasonRecapPlaceholder": true,
+    "ShowSeasonRecapPlaceholder": false,
     "ShowSeasonImagesPlaceholder": true,
-    "ArchiveStatusNote": "2004-05 volleyball season shell created so recap, images, roster, schedule/results, and individual stats can be filled as source data is recovered."
+    "ArchiveStatusNote": "2004-05 volleyball season shell created so images, schedule/results, and individual stats can be filled as source data is recovered.",
+    "SeasonRecapParagraphs": [
+      "St. Andrew's entered Mandy Stinson's second season as head coach with a rebuilt lineup and a new offense. The Saints had lost four graduates from the previous year's six-player starting group, but a core of underclassmen stepped into larger roles around 6-foot sophomore Mary Wilkowski, who returned after a 175-kill season, juniors Maggie Hinchey and Grace Wilkowski, and new setter Kristen Albritton."
+    ]
   },
   {
     "SeasonID": 2005,

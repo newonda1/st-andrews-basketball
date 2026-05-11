@@ -4108,7 +4108,117 @@
     "Result": "L",
     "TeamScore": 0,
     "OpponentScore": 34,
-    "OpponentID": "sc-williamsburg-academy-kingstree"
+    "OpponentID": "sc-williamsburg-academy-kingstree",
+    "FirstDowns": 5,
+    "RushingYards": 23,
+    "PassingYards": 0,
+    "PassingComp": 0,
+    "PassingAtt": 6,
+    "PassingInt": 1,
+    "OffensiveFumbles": 3,
+    "OffensiveFumblesLost": 2,
+    "PuntNum": 3,
+    "PuntAverage": 38,
+    "Penalties": 5,
+    "PenaltyYards": 45,
+    "LineScore": [
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [0, 0, 0, 0],
+        "Total": 0
+      },
+      {
+        "Team": "Williamsburg Academy",
+        "Abbr": "WA",
+        "Scores": [20, 7, 0, 7],
+        "Total": 34
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "1",
+        "Team": "Williamsburg Academy",
+        "TeamAbbr": "WA",
+        "Play": "Gordon Scot 19 run",
+        "Conversion": "Burt Kallahan kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "1",
+        "Team": "Williamsburg Academy",
+        "TeamAbbr": "WA",
+        "Play": "Jim Hutton 23 run",
+        "Conversion": "Kallahan kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "1",
+        "Team": "Williamsburg Academy",
+        "TeamAbbr": "WA",
+        "Play": "Sam Turner 75 pass from Kallahan",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "2",
+        "Team": "Williamsburg Academy",
+        "TeamAbbr": "WA",
+        "Play": "Hutton 39 run",
+        "Conversion": "Kallahan kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "4",
+        "Team": "Williamsburg Academy",
+        "TeamAbbr": "WA",
+        "Play": "Turner 8 run",
+        "Conversion": "Kallahan kick",
+        "Points": 7
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "First Downs",
+        "StAndrews": "5",
+        "Opponent": "17"
+      },
+      {
+        "Label": "Rushing",
+        "StAndrews": "23",
+        "Opponent": "268"
+      },
+      {
+        "Label": "Passing",
+        "StAndrews": "0",
+        "Opponent": "102"
+      },
+      {
+        "Label": "Comp.-Att.-Int.",
+        "StAndrews": "0-6-1",
+        "Opponent": "2-3-0"
+      },
+      {
+        "Label": "Fumbles-Lost",
+        "StAndrews": "3-2",
+        "Opponent": "2-2"
+      },
+      {
+        "Label": "Punts",
+        "StAndrews": "3-38",
+        "Opponent": "1-25"
+      },
+      {
+        "Label": "Penalties",
+        "StAndrews": "5-45",
+        "Opponent": "10-92"
+      }
+    ],
+    "RecapTitle": "Williamsburg 34, St. Andrew's 0",
+    "Recap": "KINGSTREE, S.C. - Sam Turner and Jim Hutton scored two touchdowns each as Williamsburg defeated St. Andrew's 34-0 in the opening game for both teams Friday night.\n\nTurner scored a 75-yard pass from Burt Kallahan and an 8-yard run.\n\nHutton scored on runs of 23 and 39 yards.\n\nThe visitors also scored on a 19-yard run by Gordon Scot.\n\nDanny Keene led St. Andrew's in rushing with 38 yards.",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "SourceCitation": "\"Williamsburg 34, St. Andrew's 0,\" Savannah Morning News (GA), SCISA roundup.",
+    "SourceNote": "User-provided Savannah Morning News SCISA roundup for the Aug. 20, 2004 Williamsburg Academy game, plus user-provided line score, scoring summary and team comparison statistics."
   },
   {
     "GameID": 20040827,
@@ -4133,7 +4243,15 @@
     "Result": "L",
     "TeamScore": 0,
     "OpponentScore": 6,
-    "OpponentID": "ga-memorial-day-school-savannah"
+    "OpponentID": "ga-memorial-day-school-savannah",
+    "RecapTitle": "MARTINEZ TOUCHDOWN CATCH LEADS MEMORIAL PAST ST. ANDREW'S",
+    "Recap": "Friday night's game between the St. Andrew's School Saints and the Memorial Day School Matadors had more yellow flags than a NFL preseason game.\n\nThe teams combined for 41 penalties during a game that dragged on for just under three hours. In the end, the Matadors came away with a 6-0 win on a 13-yard touchdown pass from quarterback Daniel Haun to wide receiver Lucas Martinez.\n\nThe Saints were happy to have improved following a 35-0 loss to Williamsburg on August 20.\n\n\"We've got a very young team,\" said head coach Bob Curley. \"Last week we played a 7-0 half. This week we played a 6-0 game, so I'd say we've made some great strides with this team.\"\n\nThe biggest obstacle for the Saints was Matadors running back Jimmy Donnelly, who finished the night with 127 yards on 21 carries. He also pulled down three passes for 49 yards.\n\nThe high number of penalties created another problem for the players: cramps. During the fourth quarter, nearly half the plays ended with a player cramping up and lying on the field.\n\nThe Saints had chances to score, but were foiled by penalties. In the first quarter, running back Don Keene ripped off a 36-yard TD run that was negated by a holding call. He was also unable to connect on a field goal, missing an attempt from 32 yards during the second quarter.\n\nThe Matadors also had a score wiped out by a penalty, when a clip penalty took a 52-yard touchdown pass from Haun to Donnelly out of the book.\n\nEven though the Saints are 0-2, they're not worried, said Curley.\n\n\"We've got a couple more games before we get into our region schedule,\" he said. \"So we have a lot of time left before these games count for the playoffs. I think the extra paying time and experience will help these young guys start to click, and then we'll do alright.\"\n\nThe Saints will host Dorchester Academy next week.",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "SourceDate": "August 28, 2004",
+    "SourceAuthor": "Chris Lancia",
+    "SourceByline": "Chris Lancia For the Savannah Morning News",
+    "SourceCitation": "Chris Lancia, For the Savannah Morning News, \"MARTINEZ TOUCHDOWN CATCH LEADS MEMORIAL PAST ST. ANDREW'S,\" Savannah Morning News (GA), August 28, 2004, Page 5C, Section: SPORTS.",
+    "SourceNote": "User-provided Savannah Morning News game recap for the Aug. 27, 2004 Memorial Day School game. Recap text is preserved verbatim from the article."
   },
   {
     "GameID": 20040903,
@@ -4158,7 +4276,125 @@
     "Result": "L",
     "TeamScore": 0,
     "OpponentScore": 42,
-    "OpponentID": "sc-dorchester-academy-st-george"
+    "OpponentID": "sc-dorchester-academy-st-george",
+    "FirstDowns": 2,
+    "RushingYards": 31,
+    "PassingYards": 27,
+    "PassingComp": 1,
+    "PassingAtt": 7,
+    "PassingInt": 2,
+    "OffensiveFumbles": 3,
+    "OffensiveFumblesLost": 0,
+    "PuntNum": 5,
+    "PuntAverage": 34.6,
+    "Penalties": 8,
+    "PenaltyYards": 65,
+    "LineScore": [
+      {
+        "Team": "Dorchester Academy",
+        "Abbr": "DA",
+        "Scores": [7, 14, 7, 14],
+        "Total": 42
+      },
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [0, 0, 0, 0],
+        "Total": 0
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "1",
+        "Team": "Dorchester Academy",
+        "TeamAbbr": "DA",
+        "Play": "Walters 17 run",
+        "Conversion": "Rizzo kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "Dorchester Academy",
+        "TeamAbbr": "DA",
+        "Play": "Jeff Tyner 14 pass from James Horne",
+        "Conversion": "Rizzo kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "Dorchester Academy",
+        "TeamAbbr": "DA",
+        "Play": "Tyner 16 pass from Horne",
+        "Conversion": "Rizzo kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "3",
+        "Team": "Dorchester Academy",
+        "TeamAbbr": "DA",
+        "Play": "Tyner 7 run",
+        "Conversion": "Rizzo kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "4",
+        "Team": "Dorchester Academy",
+        "TeamAbbr": "DA",
+        "Play": "Gibbs 12 run",
+        "Conversion": "Rizzo kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "4",
+        "Team": "Dorchester Academy",
+        "TeamAbbr": "DA",
+        "Play": "Walters 25 run",
+        "Conversion": "Rizzo kick",
+        "Points": 7
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "First Downs",
+        "StAndrews": "2",
+        "Opponent": "17"
+      },
+      {
+        "Label": "Rushing",
+        "StAndrews": "31",
+        "Opponent": "294"
+      },
+      {
+        "Label": "Passing",
+        "StAndrews": "27",
+        "Opponent": "83"
+      },
+      {
+        "Label": "Comp.-Att.-Int.",
+        "StAndrews": "1-7-2",
+        "Opponent": "6-8-0"
+      },
+      {
+        "Label": "Fumbles-Lost",
+        "StAndrews": "3-0",
+        "Opponent": "2-1"
+      },
+      {
+        "Label": "Punting",
+        "StAndrews": "5-34.6",
+        "Opponent": "0-0"
+      },
+      {
+        "Label": "Penalties",
+        "StAndrews": "8-65",
+        "Opponent": "10-85"
+      }
+    ],
+    "RecapTitle": "Dorchester Academy 42, St. Andrew's 0",
+    "Recap": "Jeff Tyner caught two touchdown passes and ran for another touchdown to lead Dorchester Academy to a 42-0 victory over St. Andrew's.\n\nTyner scored on 14 and 16-yard passes from quarterback James Horne in the first half. Tyner added his third score on a 7-yard run in the third quarter.\n\nSt. Andrew's (0-3) struggled offensively, managing only 58 yards in the game.",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "SourceCitation": "\"Dorchester Academy 42, St. Andrew's 0,\" Savannah Morning News (GA), SCISA roundup.",
+    "SourceNote": "User-provided Savannah Morning News SCISA roundup for the Sept. 3, 2004 Dorchester Academy game, plus user-provided line score, scoring summary and team comparison statistics."
   },
   {
     "GameID": 20040917,

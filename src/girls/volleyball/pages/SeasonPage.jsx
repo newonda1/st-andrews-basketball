@@ -243,7 +243,7 @@ function StatsTable({ title, rows, playerMap }) {
                   colSpan={columns.length}
                   className="border-t border-gray-200 px-3 py-4 text-center text-slate-600"
                 >
-                  No MaxPreps player stats are available for this category.
+                  No player stats are available for this category.
                 </td>
               </tr>
             ) : (
@@ -815,7 +815,7 @@ export default function SeasonPage({ data, status = "" }) {
                           : "—"}
                       </td>
                       <td className="px-2 py-1.5 text-center align-middle whitespace-nowrap">
-                        {game.GameType || "Regular Season"}
+                        {game.GameType || (game.IsComplete === "No" && !game.OpponentID ? "—" : "Regular Season")}
                       </td>
                     </tr>
                   );
@@ -831,7 +831,7 @@ export default function SeasonPage({ data, status = "" }) {
 
         {individualStatsViews.length === 0 ? (
           <p className="text-slate-600">
-            No MaxPreps individual stat tables are available for this season.
+            No individual stat tables are available for this season.
           </p>
         ) : (
           <>
