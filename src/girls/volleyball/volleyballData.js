@@ -479,6 +479,10 @@ function isFinalSeasonTotalAdjustment(adjustment) {
   return adjustment?.IsFinalSeasonTotal === true || adjustment?.FinalSeasonTotal === true;
 }
 
+function isAdditiveSeasonAdjustment(adjustment) {
+  return adjustment?.IsAdditive === true || adjustment?.AdjustmentType === "Additive";
+}
+
 export function applyVolleyballSeasonAdjustment(row, adjustment) {
   const adjusted = { ...row };
   const overrides = adjustmentOverrides(adjustment);
@@ -490,11 +494,24 @@ export function applyVolleyballSeasonAdjustment(row, adjustment) {
   }
   if (!adjusted.PlayerName && adjustment.PlayerName) adjusted.PlayerName = adjustment.PlayerName;
 
-  ADJUSTABLE_STAT_KEYS.forEach((key) => {
-    if (Object.prototype.hasOwnProperty.call(overrides, key)) {
-      adjusted[key] = overrides[key];
-    }
-  });
+  if (isAdditiveSeasonAdjustment(adjustment)) {
+    ADJUSTABLE_STAT_KEYS.forEach((key) => {
+      if (
+        Object.prototype.hasOwnProperty.call(overrides, key) &&
+        overrides[key] !== null &&
+        overrides[key] !== undefined &&
+        overrides[key] !== ""
+      ) {
+        adjusted[key] = toNumber(adjusted[key]) + toNumber(overrides[key]);
+      }
+    });
+  } else {
+    ADJUSTABLE_STAT_KEYS.forEach((key) => {
+      if (Object.prototype.hasOwnProperty.call(overrides, key)) {
+        adjusted[key] = overrides[key];
+      }
+    });
+  }
 
   return applyDerivedStats(adjusted, adjusted.Games);
 }

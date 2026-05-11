@@ -4251,7 +4251,14 @@
     "SourceAuthor": "Chris Lancia",
     "SourceByline": "Chris Lancia For the Savannah Morning News",
     "SourceCitation": "Chris Lancia, For the Savannah Morning News, \"MARTINEZ TOUCHDOWN CATCH LEADS MEMORIAL PAST ST. ANDREW'S,\" Savannah Morning News (GA), August 28, 2004, Page 5C, Section: SPORTS.",
-    "SourceNote": "User-provided Savannah Morning News game recap for the Aug. 27, 2004 Memorial Day School game. Recap text is preserved verbatim from the article."
+    "SourceNote": "User-provided Savannah Morning News game recap for the Aug. 27, 2004 Memorial Day School game. Recap text is preserved verbatim from the article.",
+    "AdditionalRecapNotes": [
+      {
+        "Title": "MARATHON GAME",
+        "Text": "St. Andrew's and Memorial combined for 41 penalties in a three-hour game won by Memorial 6-0 on Aug. 27.",
+        "SourceCitation": "Jim Thomas and Erin Rossiter, \"MIDSEASON REPORT - SAVANNAH CHRISTIAN, SOUTH EFFINGHAM, STATESBORO AMONG AREA'S BEST GROVES IS STILL IN THE HUNT FOR A PLAYOFF BERTH, BUT THE SCHEDULE IS MORE DEMANDING IN THE SECOND HALF,\" Savannah Morning News (GA), October 1, 2004, Page 1D, Section: SPORTS."
+      }
+    ]
   },
   {
     "GameID": 20040903,
@@ -4419,7 +4426,125 @@
     "Result": "L",
     "TeamScore": 0,
     "OpponentScore": 40,
-    "OpponentID": "sc-thomas-heyward-academy-ridgeland"
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
+    "FirstDowns": 4,
+    "RushingYards": 39,
+    "PassingYards": 18,
+    "PassingComp": 2,
+    "PassingAtt": 8,
+    "PassingInt": 2,
+    "OffensiveFumbles": 3,
+    "OffensiveFumblesLost": 1,
+    "PuntNum": 4,
+    "PuntAverage": 42,
+    "Penalties": 7,
+    "PenaltyYards": 44,
+    "LineScore": [
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [0, 0, 0, 0],
+        "Total": 0
+      },
+      {
+        "Team": "Thomas Heyward Academy",
+        "Abbr": "TH",
+        "Scores": [20, 20, 0, 0],
+        "Total": 40
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "1",
+        "Team": "Thomas Heyward Academy",
+        "TeamAbbr": "TH",
+        "Play": "Justin Smith 9 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "1",
+        "Team": "Thomas Heyward Academy",
+        "TeamAbbr": "TH",
+        "Play": "Draper 5 run",
+        "Conversion": "Garber pass from Etheridge",
+        "Points": 8
+      },
+      {
+        "Quarter": "1",
+        "Team": "Thomas Heyward Academy",
+        "TeamAbbr": "TH",
+        "Play": "Keefer 5 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "2",
+        "Team": "Thomas Heyward Academy",
+        "TeamAbbr": "TH",
+        "Play": "Garber 29 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "2",
+        "Team": "Thomas Heyward Academy",
+        "TeamAbbr": "TH",
+        "Play": "Etheridge 50 punt return",
+        "Conversion": "Altman kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "Thomas Heyward Academy",
+        "TeamAbbr": "TH",
+        "Play": "Lange 30 pass from Geoffery Mingledo",
+        "Conversion": "Altman kick",
+        "Points": 7
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "First Downs",
+        "StAndrews": "4",
+        "Opponent": "13"
+      },
+      {
+        "Label": "Rushing",
+        "StAndrews": "39",
+        "Opponent": "145"
+      },
+      {
+        "Label": "Passing",
+        "StAndrews": "18",
+        "Opponent": "47"
+      },
+      {
+        "Label": "Comp-Att-Int.",
+        "StAndrews": "2-8-2",
+        "Opponent": "5-7-0"
+      },
+      {
+        "Label": "Fumbles-Lost",
+        "StAndrews": "3-1",
+        "Opponent": "2-2"
+      },
+      {
+        "Label": "Punts",
+        "StAndrews": "4-42",
+        "Opponent": "1-30"
+      },
+      {
+        "Label": "Penalties",
+        "StAndrews": "7-44",
+        "Opponent": "11-105"
+      }
+    ],
+    "RecapTitle": "Thomas Heyward 40, St. Andrew's 0",
+    "Recap": "ESTILL, S.C. - Thomas Heyward scored 40 points in the first half and cruised to the SCISA victory over St. Andrew's.\n\nSix different players scored touchdowns for the Rebels. Thomas Heyward is 2-2; St. Andrew's is 0-4.",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "SourceCitation": "\"Thomas Heyward 40, St. Andrew's 0,\" Savannah Morning News (GA), SCISA roundup.",
+    "SourceNote": "User-provided Savannah Morning News SCISA roundup for the Sept. 17, 2004 Thomas Heyward Academy game, plus user-provided line score, scoring summary and team comparison statistics."
   },
   {
     "GameID": 20040924,
@@ -4444,7 +4569,133 @@
     "Result": "L",
     "TeamScore": 0,
     "OpponentScore": 49,
-    "OpponentID": "sc-pinewood-preparatory-school-summerville"
+    "OpponentID": "sc-pinewood-preparatory-school-summerville",
+    "FirstDowns": 4,
+    "RushingYards": 8,
+    "PassingYards": 4,
+    "PassingComp": 1,
+    "PassingAtt": 10,
+    "PassingInt": 0,
+    "OffensiveFumbles": 3,
+    "OffensiveFumblesLost": 1,
+    "PuntNum": 5,
+    "PuntAverage": 30,
+    "Penalties": 2,
+    "PenaltyYards": 60,
+    "LineScore": [
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [0, 0, 0, 0],
+        "Total": 0
+      },
+      {
+        "Team": "Pinewood Prep",
+        "Abbr": "PP",
+        "Scores": [14, 13, 15, 7],
+        "Total": 49
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "1",
+        "Team": "Pinewood Prep",
+        "TeamAbbr": "PP",
+        "Play": "Smith 4 run",
+        "Conversion": "Reeves kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "1",
+        "Team": "Pinewood Prep",
+        "TeamAbbr": "PP",
+        "Play": "Mac Moore 1 run",
+        "Conversion": "Reeves kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "Pinewood Prep",
+        "TeamAbbr": "PP",
+        "Play": "Moore 10 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "2",
+        "Team": "Pinewood Prep",
+        "TeamAbbr": "PP",
+        "Play": "Brett Gault 1 run",
+        "Conversion": "Reeves kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "3",
+        "Team": "Pinewood Prep",
+        "TeamAbbr": "PP",
+        "Play": "Gault 6 run",
+        "Conversion": "run failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "3",
+        "Team": "Pinewood Prep",
+        "TeamAbbr": "PP",
+        "Play": "Gault 26 run",
+        "Conversion": "Reeves kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "4",
+        "Team": "Pinewood Prep",
+        "TeamAbbr": "PP",
+        "Play": "Dowdy 4 run",
+        "Conversion": "Reeves kick",
+        "Points": 7
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "First Downs",
+        "StAndrews": "4",
+        "Opponent": "18"
+      },
+      {
+        "Label": "Rushing",
+        "StAndrews": "8",
+        "Opponent": "334"
+      },
+      {
+        "Label": "Passing",
+        "StAndrews": "4",
+        "Opponent": "0"
+      },
+      {
+        "Label": "Comp-Att-Int.",
+        "StAndrews": "1-10-0",
+        "Opponent": "0-1-0"
+      },
+      {
+        "Label": "Fumbles-Lost",
+        "StAndrews": "3-1",
+        "Opponent": "3-1"
+      },
+      {
+        "Label": "Punts",
+        "StAndrews": "5-30",
+        "Opponent": "1-30"
+      },
+      {
+        "Label": "Penalties",
+        "StAndrews": "2-60",
+        "Opponent": "8-80"
+      }
+    ],
+    "RecapTitle": "Pinewood Prep 49, St. Andrew's 0",
+    "Recap": "SUMMERVILLE - Brett Gault scored three touchdowns and Mac Moore two as Pinewood Prep defeated St. Andrew's 49-0.\n\nGault scored on runs of 1, 6 and 26 yards.\n\nMoore scored from the 1 and the 10.\n\nSt. Andrew's was held to 12 yards total offense.\n\nPinewood is 3-1. The Saints are 0-5.",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "SourceCitation": "\"Pinewood Prep 49, St. Andrew's 0,\" Savannah Morning News (GA), SCISA roundup.",
+    "SourceNote": "User-provided Savannah Morning News SCISA roundup for the Sept. 24, 2004 Pinewood Prep game, plus user-provided line score, scoring summary and team comparison statistics."
   },
   {
     "GameID": 20041001,
@@ -4469,7 +4720,125 @@
     "Result": "L",
     "TeamScore": 0,
     "OpponentScore": 42,
-    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island"
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
+    "FirstDowns": 1,
+    "RushingYards": -15,
+    "PassingYards": 5,
+    "PassingComp": 1,
+    "PassingAtt": 6,
+    "PassingInt": 0,
+    "OffensiveFumbles": 5,
+    "OffensiveFumblesLost": 4,
+    "PuntNum": 5,
+    "PuntAverage": 33.4,
+    "Penalties": 4,
+    "PenaltyYards": 25,
+    "LineScore": [
+      {
+        "Team": "Hilton Head Christian",
+        "Abbr": "HHC",
+        "Scores": [21, 21, 0, 0],
+        "Total": 42
+      },
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [0, 0, 0, 0],
+        "Total": 0
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "1",
+        "Team": "Hilton Head Christian",
+        "TeamAbbr": "HHC",
+        "Play": "Jeremiah Spires 21 run",
+        "Conversion": "Coleman kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "1",
+        "Team": "Hilton Head Christian",
+        "TeamAbbr": "HHC",
+        "Play": "Spires 20 run",
+        "Conversion": "Coleman kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "1",
+        "Team": "Hilton Head Christian",
+        "TeamAbbr": "HHC",
+        "Play": "Lassitter 3 run",
+        "Conversion": "Coleman kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "Hilton Head Christian",
+        "TeamAbbr": "HHC",
+        "Play": "Spires 20 run",
+        "Conversion": "Coleman kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "Hilton Head Christian",
+        "TeamAbbr": "HHC",
+        "Play": "Spires 36 run",
+        "Conversion": "Coleman kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "Hilton Head Christian",
+        "TeamAbbr": "HHC",
+        "Play": "Cook 30 run",
+        "Conversion": "Coleman kick",
+        "Points": 7
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "First Downs",
+        "StAndrews": "1",
+        "Opponent": "9"
+      },
+      {
+        "Label": "Rushing",
+        "StAndrews": "-15",
+        "Opponent": "208"
+      },
+      {
+        "Label": "Passing",
+        "StAndrews": "5",
+        "Opponent": "20"
+      },
+      {
+        "Label": "Comp.-Att.-Int.",
+        "StAndrews": "1-6-0",
+        "Opponent": "1-4-0"
+      },
+      {
+        "Label": "Fumbles-Lost",
+        "StAndrews": "5-4",
+        "Opponent": "3-1"
+      },
+      {
+        "Label": "Punting",
+        "StAndrews": "5-33.4",
+        "Opponent": "1-35"
+      },
+      {
+        "Label": "Penalties",
+        "StAndrews": "4-25",
+        "Opponent": "8-60"
+      }
+    ],
+    "RecapTitle": "Hilton Head Christian 42, St. Andrew's 0",
+    "Recap": "Jeremiah Spires scored four touchdowns on runs of 21, 20, 20 and 36 yards to lead Hilton Head Christian to a 42-0 victory over St. Andrew's.\n\nHilton Head (6-0) scored all its points in the first half.\n\nSt. Andrew's, which finished with -10 yards of total offense, dropped to 0-6.",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "SourceCitation": "\"Hilton Head Christian 42, St. Andrew's 0,\" Savannah Morning News (GA), SCISA roundup.",
+    "SourceNote": "User-provided Savannah Morning News SCISA roundup for the Oct. 1, 2004 Hilton Head Christian game, plus user-provided line score, scoring summary and team comparison statistics."
   },
   {
     "GameID": 20041008,

@@ -129,7 +129,10 @@ function GameVideo({ game }) {
 function GameRecap({ game }) {
   const recap = String(game?.Recap || "").trim();
   const title = String(game?.RecapTitle || "").trim();
-  if (!recap && !title) return null;
+  const additionalNotes = Array.isArray(game?.AdditionalRecapNotes)
+    ? game.AdditionalRecapNotes.filter((note) => String(note?.Text || "").trim())
+    : [];
+  if (!recap && !title && !additionalNotes.length) return null;
 
   const sourceText =
     String(game?.SourceCitation || "").trim() ||
@@ -154,6 +157,27 @@ function GameRecap({ game }) {
             .map((paragraph, index) => (
               <p key={index}>{paragraph}</p>
             ))}
+        </div>
+      ) : null}
+      {additionalNotes.length ? (
+        <div className="mt-6 space-y-4 border-t border-slate-200 pt-4">
+          {additionalNotes.map((note, index) => {
+            const noteTitle = String(note?.Title || "").trim();
+            const noteText = String(note?.Text || "").trim();
+            const noteSource = String(note?.SourceCitation || "").trim();
+
+            return (
+              <div key={`${noteTitle || "note"}-${index}`} className="space-y-2">
+                {noteTitle ? (
+                  <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">
+                    {noteTitle}
+                  </h3>
+                ) : null}
+                <p className="text-base leading-7 text-slate-700">{noteText}</p>
+                {noteSource ? <p className="text-sm text-slate-500">{noteSource}</p> : null}
+              </div>
+            );
+          })}
         </div>
       ) : null}
     </section>

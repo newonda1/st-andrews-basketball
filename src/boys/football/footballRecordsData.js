@@ -43,6 +43,7 @@ const META_KEYS = new Set([
   "Notes",
   "Recap",
   "RecapTitle",
+  "AdditionalRecapNotes",
   "SourceDate",
   "SourcePublication",
   "SourceCitation",
@@ -464,6 +465,9 @@ function aggregateTeamGames(games, playerGameRows, seasonMap) {
       Notes: String(game?.Notes || ""),
       Recap: String(game?.Recap || ""),
       RecapTitle: String(game?.RecapTitle || ""),
+      AdditionalRecapNotes: Array.isArray(game?.AdditionalRecapNotes)
+        ? game.AdditionalRecapNotes
+        : [],
       SourceDate: String(game?.SourceDate || ""),
       SourcePublication: String(game?.SourcePublication || ""),
       SourceCitation: String(game?.SourceCitation || ""),
@@ -503,6 +507,9 @@ function aggregateTeamGames(games, playerGameRows, seasonMap) {
         Notes: String(row?.Notes || ""),
         Recap: String(row?.Recap || ""),
         RecapTitle: String(row?.RecapTitle || ""),
+        AdditionalRecapNotes: Array.isArray(row?.AdditionalRecapNotes)
+          ? row.AdditionalRecapNotes
+          : [],
         SourceDate: String(row?.SourceDate || ""),
         SourcePublication: String(row?.SourcePublication || ""),
         SourceCitation: String(row?.SourceCitation || ""),
