@@ -4888,7 +4888,132 @@
     "Result": "L",
     "TeamScore": 0,
     "OpponentScore": 49,
-    "OpponentID": "sc-first-baptist-school-charleston"
+    "OpponentID": "sc-first-baptist-school-charleston",
+    "FirstDowns": 8,
+    "RushingYards": 75,
+    "PassingYards": 70,
+    "PassingComp": 9,
+    "PassingAtt": 14,
+    "PassingInt": 0,
+    "OffensiveFumbles": 4,
+    "OffensiveFumblesLost": 2,
+    "PuntNum": 4,
+    "PuntAverage": 33.3,
+    "Penalties": 6,
+    "PenaltyYards": 50,
+    "LineScore": [
+      {
+        "Team": "First Baptist Christian",
+        "Abbr": "FBC",
+        "Scores": [8, 13, 14, 14],
+        "Total": 49
+      },
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "STA",
+        "Scores": [0, 0, 0, 0],
+        "Total": 0
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "1",
+        "Team": "First Baptist Christian",
+        "TeamAbbr": "FBC",
+        "Play": "Kyle Henderson 7 pass from Sam Jervis",
+        "Conversion": "Reggie Stuckey pass from Sam Jervis",
+        "Points": 8
+      },
+      {
+        "Quarter": "2",
+        "Team": "First Baptist Christian",
+        "TeamAbbr": "FBC",
+        "Play": "Reggie Stuckey 9 run",
+        "Conversion": "John Alfieris kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "First Baptist Christian",
+        "TeamAbbr": "FBC",
+        "Play": "Reggie Stuckey 26 pass from Sam Jervis",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "3",
+        "Team": "First Baptist Christian",
+        "TeamAbbr": "FBC",
+        "Play": "Reggie Stuckey 9 run",
+        "Conversion": "John Alfieris kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "3",
+        "Team": "First Baptist Christian",
+        "TeamAbbr": "FBC",
+        "Play": "Mark Heath 15 run",
+        "Conversion": "John Alfieris kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "4",
+        "Team": "First Baptist Christian",
+        "TeamAbbr": "FBC",
+        "Play": "Kyle Henderson 60 fumble return",
+        "Conversion": "John Alfieris kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "4",
+        "Team": "First Baptist Christian",
+        "TeamAbbr": "FBC",
+        "Play": "Taylor Kirkman 10 run",
+        "Conversion": "John Alfieris kick",
+        "Points": 7
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "First Downs",
+        "StAndrews": "8",
+        "Opponent": "10"
+      },
+      {
+        "Label": "Rushing",
+        "StAndrews": "75",
+        "Opponent": "136"
+      },
+      {
+        "Label": "Passing",
+        "StAndrews": "70",
+        "Opponent": "135"
+      },
+      {
+        "Label": "Comp.-Att.-Int.",
+        "StAndrews": "9-14-0",
+        "Opponent": "8-11-0"
+      },
+      {
+        "Label": "Fumbles-Lost",
+        "StAndrews": "4-2",
+        "Opponent": "2-1"
+      },
+      {
+        "Label": "Punts",
+        "StAndrews": "4-33.3",
+        "Opponent": "1-42"
+      },
+      {
+        "Label": "Penalties",
+        "StAndrews": "6-50",
+        "Opponent": "4-45"
+      }
+    ],
+    "RecapTitle": "FIRST BAPTIST CHRISTIAN BLANKS ST. ANDREW'S",
+    "Recap": "Reggie Stuckey scored three touchdowns as First Baptist Christian defeated St. Andrew's 49-0 in SCISA 2-AA play. Stuckey caught a 26-yard touchdown pass from Sam Jervis and added two 9-yard scoring runs, helping First Baptist Christian improve to 3-6 overall and 1-2 in SCISA 2-AA while the Saints fell to 0-8 and 0-2.\n\nKyle Henderson also had two touchdowns, catching a 7-yard pass from Jervis and returning a fumble 60 yards for a score. Mark Heath added a 15-yard touchdown run, Taylor Kirkman scored from 10 yards out and John Alfieris made five extra points.\n\nFirst Baptist Christian finished with a balanced offense, rushing for 136 yards and passing for 135. St. Andrew's also moved the ball through both phases with 75 rushing yards and 70 passing yards, but the Saints lost two fumbles and were held off the scoreboard.",
+    "SourceCitation": "User-provided recap, line score, scoring summary and team comparison statistics for the Oct. 15, 2004 First Baptist Christian game.",
+    "SourceNote": "The opponent is listed in the imported schedule as First Baptist School, while the user-provided recap and box score identify the team as First Baptist Christian."
   },
   {
     "GameID": 20041022,
@@ -4913,7 +5038,150 @@
     "Result": "L",
     "TeamScore": 14,
     "OpponentScore": 48,
-    "OpponentID": "sc-colleton-prep-academy-walterboro"
+    "OpponentID": "sc-colleton-prep-academy-walterboro",
+    "FirstDowns": 10,
+    "RushingYards": 162,
+    "PassingYards": 20,
+    "PassingComp": 4,
+    "PassingAtt": 10,
+    "PassingInt": 2,
+    "OffensiveFumbles": 4,
+    "OffensiveFumblesLost": 1,
+    "PuntNum": 1,
+    "PuntYards": 30,
+    "PuntAverage": 30,
+    "Penalties": 5,
+    "PenaltyYards": 35,
+    "LineScore": [
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [0, 7, 0, 7],
+        "Total": 14
+      },
+      {
+        "Team": "Colleton Prep",
+        "Abbr": "CP",
+        "Scores": [20, 14, 7, 7],
+        "Total": 48
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "1",
+        "Team": "Colleton Prep",
+        "TeamAbbr": "CP",
+        "Play": "Tripp 4 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "1",
+        "Team": "Colleton Prep",
+        "TeamAbbr": "CP",
+        "Play": "Marshall Tillitson 19 run",
+        "Conversion": "John Gibbs pass from Robinson",
+        "Points": 8
+      },
+      {
+        "Quarter": "1",
+        "Team": "Colleton Prep",
+        "TeamAbbr": "CP",
+        "Play": "Aiment 11 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "2",
+        "Team": "Colleton Prep",
+        "TeamAbbr": "CP",
+        "Play": "John Gibbs 24 pass from Smoak",
+        "Conversion": "Bishop run",
+        "Points": 8
+      },
+      {
+        "Quarter": "2",
+        "Team": "Colleton Prep",
+        "TeamAbbr": "CP",
+        "Play": "Marshall Tillitson 21 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "2",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Patrick Maleki 13 pass from Pablo",
+        "Conversion": "Patrick Maleki kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "3",
+        "Team": "Colleton Prep",
+        "TeamAbbr": "CP",
+        "Play": "John Gibbs 19 pass from Robinson",
+        "Conversion": "Purvis kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "4",
+        "Team": "Colleton Prep",
+        "TeamAbbr": "CP",
+        "Play": "Purvis 3 run",
+        "Conversion": "Smoak kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "4",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Matt Knight 29 run",
+        "Conversion": "Patrick Maleki kick",
+        "Points": 7
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "First Downs",
+        "StAndrews": "10",
+        "Opponent": "14"
+      },
+      {
+        "Label": "Rushing",
+        "StAndrews": "162",
+        "Opponent": "419"
+      },
+      {
+        "Label": "Passing",
+        "StAndrews": "20",
+        "Opponent": "67"
+      },
+      {
+        "Label": "Comp.-Att.-Int.",
+        "StAndrews": "4-10-2",
+        "Opponent": "3-6-0"
+      },
+      {
+        "Label": "Fumbles-Lost",
+        "StAndrews": "4-1",
+        "Opponent": "2-2"
+      },
+      {
+        "Label": "Punting",
+        "StAndrews": "1-30",
+        "Opponent": "0-0"
+      },
+      {
+        "Label": "Penalties",
+        "StAndrews": "5-35",
+        "Opponent": "6-66"
+      }
+    ],
+    "RecapTitle": "COLLETON PREP RUNS PAST ST. ANDREW'S",
+    "Recap": "Marshall Tillitson ran for two touchdowns and John Gibbs caught two touchdown passes to lead Colleton Prep to a 48-14 SCISA win over St. Andrew's in Walterboro, S.C.\n\nColleton Prep, which improved to 6-2, finished with 419 rushing yards and built a 20-0 first-quarter lead. The War Hawks also scored through the air, with Gibbs catching touchdown passes from Smoak and Robinson.\n\nSt. Andrew's fell to 0-9 but got second-half scoring from Patrick Maleki and Matt Knight. Maleki caught a 13-yard touchdown pass and made both Saints extra points, while Knight scored on a 29-yard run and led St. Andrew's with 93 rushing yards.",
+    "SourceSection": "SCISA",
+    "SourceCitation": "User-provided SCISA recap, line score, scoring summary and team comparison statistics for the Oct. 22, 2004 Colleton Prep game.",
+    "SourceNote": "The source scoring summary lists the passer on Patrick Maleki's touchdown as Pablo; that spelling is preserved in the scoring play."
   },
   {
     "GameID": 20041029,
@@ -4931,14 +5199,133 @@
     "OpponentSlug": "dillon-christian-dillon-sc",
     "OpponentUrl": "https://www.maxpreps.com/sc/dillon/dillon-christian-warriors/football/04-05/schedule/",
     "GameUrl": "https://www.maxpreps.com/games/10-29-2004/football-04/dillon-christian-vs-st-andrews.htm?c=2jb9xbXvzE2mYGRl87L3qw",
-    "LocationType": "Home",
-    "Venue": "St. Andrew's High School",
+    "LocationType": "Away",
+    "Venue": "Dillon Christian School",
     "Notes": "",
     "GameType": "Regular Season",
     "Result": "L",
     "TeamScore": 7,
     "OpponentScore": 33,
-    "OpponentID": "sc-dillon-christian-school-dillon"
+    "OpponentID": "sc-dillon-christian-school-dillon",
+    "FirstDowns": 10,
+    "RushingYards": 135,
+    "PassingYards": 31,
+    "PassingComp": 3,
+    "PassingAtt": 10,
+    "PassingInt": 3,
+    "OffensiveFumbles": 3,
+    "OffensiveFumblesLost": 2,
+    "PuntNum": 2,
+    "PuntYards": 42,
+    "PuntAverage": 21,
+    "Penalties": 9,
+    "PenaltyYards": 45,
+    "LineScore": [
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "STA",
+        "Scores": [0, 0, 7, 0],
+        "Total": 7
+      },
+      {
+        "Team": "Dillon Christian",
+        "Abbr": "DC",
+        "Scores": [21, 7, 6, 0],
+        "Total": 33
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "1",
+        "Team": "Dillon Christian",
+        "TeamAbbr": "DC",
+        "Play": "Marcus Samson 65 pass from Jordon",
+        "Conversion": "Hayley Williams kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "1",
+        "Team": "Dillon Christian",
+        "TeamAbbr": "DC",
+        "Play": "Thomas Wright 25 run",
+        "Conversion": "Christianberg kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "1",
+        "Team": "Dillon Christian",
+        "TeamAbbr": "DC",
+        "Play": "Aaron Moody 5 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "2",
+        "Team": "Dillon Christian",
+        "TeamAbbr": "DC",
+        "Play": "Joseph Campbell 6 run",
+        "Conversion": "Hayley Williams kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "3",
+        "Team": "Dillon Christian",
+        "TeamAbbr": "DC",
+        "Play": "Lucas Webster 2 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "3",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "STA",
+        "Play": "Matt Knight 43 run",
+        "Conversion": "Keen kick",
+        "Points": 7
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "First Downs",
+        "StAndrews": "10",
+        "Opponent": "10"
+      },
+      {
+        "Label": "Rushing",
+        "StAndrews": "135",
+        "Opponent": "207"
+      },
+      {
+        "Label": "Passing",
+        "StAndrews": "31",
+        "Opponent": "287"
+      },
+      {
+        "Label": "Comp.-Att.-Int.",
+        "StAndrews": "3-10-3",
+        "Opponent": "2-2-0"
+      },
+      {
+        "Label": "Fumbles-Lost",
+        "StAndrews": "3-2",
+        "Opponent": "2-1"
+      },
+      {
+        "Label": "Punts",
+        "StAndrews": "2-21",
+        "Opponent": "0-0"
+      },
+      {
+        "Label": "Penalties",
+        "StAndrews": "9-45",
+        "Opponent": "6-65"
+      }
+    ],
+    "RecapTitle": "DILLON CHRISTIAN DEFEATS ST. ANDREW'S",
+    "Recap": "Matt Knight carried 10 times for 100 yards, including a 43-yard touchdown, but St. Andrew's could not slow Dillon Christian in a 33-7 SCISA 2-AA loss in Dillon, S.C.\n\nDillon Christian, which improved to 8-3, got touchdowns from Marcus Samson, Thomas Wright, Aaron Moody, Joseph Campbell and Lucas Webster. Hayley Williams kicked two extra points.\n\nSt. Andrew's finished 0-10 and ran for 135 yards as a team, with Knight providing the Saints' scoring play and the bulk of the ground production.",
+    "SourceSection": "SCISA 2-AA",
+    "SourceCitation": "User-provided SCISA 2-AA recap, line score, scoring summary and team comparison statistics for the Oct. 29, 2004 Dillon Christian game.",
+    "SourceNote": "The dateline places this game in Dillon, S.C., so the game location is recorded as away. The scoring summary lists Marcus Samson's touchdown as a pass from Jordon, while the recap text groups Dillon Christian's touchdowns as runs."
   },
   {
     "GameID": 20050819,

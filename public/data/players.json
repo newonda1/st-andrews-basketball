@@ -1418,8 +1418,8 @@
   },
   {
     "PlayerID": 200508,
-    "PlayerName": "Kimberly Lucas",
-    "FirstName": "Kimberly",
+    "PlayerName": "Kim Lucas",
+    "FirstName": "Kim",
     "LastName": "Lucas",
     "GradYear": 2007,
     "Gender": "Girls"
@@ -1438,6 +1438,14 @@
     "FirstName": "Krista",
     "LastName": "Bisset",
     "GradYear": 2007,
+    "Gender": "Girls"
+  },
+  {
+    "PlayerID": 200511,
+    "PlayerName": "Maggie de la Sierra",
+    "FirstName": "Maggie",
+    "LastName": "de la Sierra",
+    "GradYear": 2005,
     "Gender": "Girls"
   },
   {
@@ -5569,7 +5577,8 @@
   },
   {
     "PlayerID": 2027002,
-    "FirstName": "Jenny",
+    "PlayerName": "Jennie Wilburn",
+    "FirstName": "Jennie",
     "LastName": "Wilburn",
     "GradYear": 2005,
     "Gender": "Girls"
@@ -5590,8 +5599,9 @@
   },
   {
     "PlayerID": 2027005,
+    "PlayerName": "Maggie Sammons",
     "FirstName": "Maggie",
-    "LastName": "Samons",
+    "LastName": "Sammons",
     "GradYear": 2005,
     "Gender": "Girls"
   },
@@ -5604,7 +5614,8 @@
   },
   {
     "PlayerID": 2027007,
-    "FirstName": "John",
+    "PlayerName": "Jon Moser",
+    "FirstName": "Jon",
     "LastName": "Moser",
     "GradYear": 2007,
     "Gender": "Boys"
@@ -5727,5 +5738,29 @@
     "LastName": "Svoboda",
     "GradYear": 2009,
     "Gender": "Boys"
+  },
+  {
+    "PlayerID": 2027023,
+    "PlayerName": "Kaleb Scroggin",
+    "FirstName": "Kaleb",
+    "LastName": "Scroggin",
+    "GradYear": 2008,
+    "Gender": "Boys"
+  },
+  {
+    "PlayerID": 2027024,
+    "PlayerName": "Alex Lucas",
+    "FirstName": "Alex",
+    "LastName": "Lucas",
+    "GradYear": 2008,
+    "Gender": "Boys"
+  },
+  {
+    "PlayerID": 2027025,
+    "PlayerName": "Lily Adams",
+    "FirstName": "Lily",
+    "LastName": "Adams",
+    "GradYear": 2008,
+    "Gender": "Girls"
   }
 ]

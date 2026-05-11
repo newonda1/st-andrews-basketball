@@ -61,14 +61,25 @@ export function buildCrossCountryPlayerMap(players = []) {
 }
 
 export function resolveCrossCountryAthleteName(entry, playerMap = new Map()) {
-  if (entry?.PlayerID != null) {
-    const player = playerMap.get(String(entry.PlayerID));
+  const playerId = entry?.PlayerID ?? entry?.playerId;
+
+  if (playerId != null) {
+    const player = playerMap.get(String(playerId));
     if (player) {
-      return `${player.FirstName || ""} ${player.LastName || ""}`.trim();
+      const playerName =
+        player.PlayerName ||
+        `${player.FirstName || ""} ${player.LastName || ""}`.trim();
+
+      if (playerName) return playerName;
     }
   }
 
-  return entry?.AthleteName || "St. Andrew's Runner";
+  return (
+    entry?.AthleteName ||
+    entry?.athleteName ||
+    entry?.Name ||
+    "St. Andrew's Runner"
+  );
 }
 
 export function cleanCrossCountryRaceLabel(value) {

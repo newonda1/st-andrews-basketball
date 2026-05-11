@@ -113,22 +113,66 @@
     "SourceSeasonLabel": "2004-05",
     "HeadCoach": "Mandy Stinson",
     "AssistantCoaches": [],
-    "OverallWins": null,
-    "OverallLosses": null,
+    "OverallWins": 16,
+    "OverallLosses": 6,
     "OverallTies": null,
-    "RegionWins": null,
-    "RegionLosses": null,
+    "RegionWins": 1,
+    "RegionLosses": 1,
     "RegionTies": null,
     "RegionFinish": null,
-    "League": null,
-    "StateDivision": null,
-    "StateFinish": null,
+    "League": "SCISA Region 2-AA",
+    "StateDivision": "SCISA AA",
+    "StateFinish": "State Champions",
     "SourceCitation": null,
     "ShowSeasonRecapPlaceholder": false,
     "ShowSeasonImagesPlaceholder": true,
+    "SeasonImages": [
+      {
+        "src": "/images/girls/volleyball/seasons/2004-05/2004-05-volleyball-team.png",
+        "alt": "2004-05 St. Andrew's volleyball team photo",
+        "caption": "2004-05 St. Andrew's volleyball team"
+      },
+      {
+        "src": "/images/girls/volleyball/seasons/2004-05/2004-05-volleyball-01-becca-timms-spike.png",
+        "alt": "Becca Timms jumping up for a spike",
+        "caption": "Becca Timms jumps up for a big spike!"
+      },
+      {
+        "src": "/images/girls/volleyball/seasons/2004-05/2004-05-volleyball-02-grace-wilkowski-spike.png",
+        "alt": "Grace Wilkowski setting up for a spike",
+        "caption": "Grace Wilkowski set up for one of her killer spikes!"
+      },
+      {
+        "src": "/images/girls/volleyball/seasons/2004-05/2004-05-volleyball-03-caitlin-webb-bump.png",
+        "alt": "Caitlin Webb stretching to bump the ball",
+        "caption": "While making a funny face, Caitlin Webb stretches to bump the ball...what form!"
+      },
+      {
+        "src": "/images/girls/volleyball/seasons/2004-05/2004-05-volleyball-04-mary-wilkowski-block.png",
+        "alt": "Mary Wilkowski jumping for a block"
+      },
+      {
+        "src": "/images/girls/volleyball/seasons/2004-05/2004-05-volleyball-05-emily-aimone-spike.png",
+        "alt": "Emily Aimone spiking the ball over the net",
+        "caption": "BAM! Emily Aimone spikes the ball over the net."
+      },
+      {
+        "src": "/images/girls/volleyball/seasons/2004-05/2004-05-volleyball-06-medals.png",
+        "alt": "St. Andrew's volleyball players showing their medals"
+      },
+      {
+        "src": "/images/girls/volleyball/seasons/2004-05/2004-05-volleyball-07-state-championship.png",
+        "alt": "The St. Andrew's volleyball team posing after winning the State Championship",
+        "caption": "The girls pose for a picture after winning the State Championship!"
+      }
+    ],
     "ArchiveStatusNote": "2004-05 volleyball season shell created so images, schedule/results, and individual stats can be filled as source data is recovered.",
     "SeasonRecapParagraphs": [
-      "St. Andrew's entered Mandy Stinson's second season as head coach with a rebuilt lineup and a new offense. The Saints had lost four graduates from the previous year's six-player starting group, but a core of underclassmen stepped into larger roles around 6-foot sophomore Mary Wilkowski, who returned after a 175-kill season, juniors Maggie Hinchey and Grace Wilkowski, and new setter Kristen Albritton."
+      "St. Andrew's entered Mandy Stinson's second season as head coach with a rebuilt lineup and a new offense. The Saints had lost much of the previous year's state runner-up team, but the 2004-05 roster quickly took shape around sophomore Mary Wilkowski, juniors Grace Wilkowski, Maggie Hinchey, Kristen Albritton, Emily Aimone, Caitlin Webb, and Becca Timms, sophomore Courtney Manson and Kim Lucas, and senior Maggie de la Sierra.",
+      "The opening month mixed wins with the tougher schedule that later became part of the team's championship story. St. Andrew's started with early victories over Bible Baptist and Providence Christian, with Mary Wilkowski piling up kills and aces and Manson and Albritton handling setting duties. The Saints also absorbed losses to Hilton Head Christian, Thomas Heyward, and Hilton Head Prep while continuing to pick up wins over Bible Baptist, Beaufort Academy, and several recovered-but-unidentified opponents.",
+      "By mid-October, the Saints were 9-5 after a non-region loss to Thomas Heyward, then opened SCISA Region 2-AA play with a four-set win over Beaufort Academy behind Grace Wilkowski's 8 kills and Mary Wilkowski's 7 kills, 5 blocks, 4 aces, and 7 digs. Hilton Head Prep beat St. Andrew's five days later, but the season's later coverage credited matches against stronger SCISA Class AAA programs such as Hilton Head Prep and Thomas Heyward with sharpening St. Andrew's for the Class AA field.",
+      "The state tournament turned the season. On Oct. 23, St. Andrew's went 5-1 in the double-elimination, eight-team SCISA Class AA tournament, beating Williamsburg Academy, Marlboro Academy, Trinity Collegiate, and W. Wyman King twice after also taking a loss to W. Wyman King. Those back-to-back wins over W. Wyman King in the semifinals sent the Saints to the championship match at the College of Charleston.",
+      "St. Andrew's finished the job against Richard Winn Academy on Oct. 27, rallying after a first-set loss to win 19-25, 25-17, 25-13, 25-9 and capture the SCISA Class AA state championship. Mary Wilkowski led the final with 15 kills, 8 blocks, 7 aces, and 8 digs, while Grace Wilkowski added 11 kills, 2 blocks, 11 aces, and 5 digs. Kristen Albritton set the Saints' attack, Mary and Grace combined for 26 kills, and St. Andrew's closed a rebuilding season as state champion at 16-6."
     ]
   },
   {

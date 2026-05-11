@@ -176,6 +176,7 @@ const sports = [
         title: "Team Championships",
         sections: [
           { title: "Region Championships", years: [2003, 2022, 2024] },
+          { title: "State Championships", years: [2004, 2005] },
         ],
       },
     ],

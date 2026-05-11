@@ -20,7 +20,34 @@
     "Level": "Varsity",
     "MeetType": "State",
     "Status": "Complete",
-    "Notes": "Results loaded from MileSplit South Carolina raw result files. The public source exposed 5 St. Andrew's cross country result rows.",
+    "Notes": "Official individual results loaded from MileSplit South Carolina raw result files. A supplied newspaper SCISA State Meet item adds team placements.",
+    "RecapParagraphs": [
+      "MileSplit's official individual results list Maggie Sammons 9th in Girls 1A/2A in 23:12.",
+      "A supplied newspaper item adds team placements from the same SCISA State Meet: Greenwood Christian won the boys team race and St. Andrew's placed 4th in an 11-team field.",
+      "Cathedral Academy won the girls team race and St. Andrew's placed 6th in an 11-team field."
+    ],
+    "TeamResults": [
+      {
+        "Gender": "Boys",
+        "Place": "1st",
+        "Team": "Greenwood Christian"
+      },
+      {
+        "Gender": "Boys",
+        "Place": "4th",
+        "Team": "St. Andrew's"
+      },
+      {
+        "Gender": "Girls",
+        "Place": "1st",
+        "Team": "Cathedral Academy"
+      },
+      {
+        "Gender": "Girls",
+        "Place": "6th",
+        "Team": "St. Andrew's"
+      }
+    ],
     "SourceUrl": "https://sc.milesplit.com/meets/8786-scisa-championships-2004/results"
   },
   {
@@ -35,7 +62,7 @@
     "Notes": "Archive recap supplied for the Augusta Prep mile relay. Relay times are indexed for each listed St. Andrew's runner.",
     "RecapParagraphs": [
       "At Augusta Prep, St. Andrew's entered three boys' mile relay teams and one girls' mile relay team.",
-      "The boys' A team of Ben Harrison, Ryan Kirby, and John Moser placed 5th in 18:42. The boys' B team of Alex Chu, Scott Mullen, and Josh Taylor placed 11th in 20:10, and the boys' C team of Remy Thurston, Justin Hur, and Joe Nodzak placed 12th in 20:54.",
+      "The boys' A team of Ben Harrison, Ryan Kirby, and Jon Moser placed 5th in 18:42. The boys' B team of Alex Chu, Scott Mullen, and Josh Taylor placed 11th in 20:10, and the boys' C team of Remy Thurston, Justin Hur, and Joe Nodzak placed 12th in 20:54.",
       "The girls' team of Jessica Topolewski, Stephanie Griffin, and Michelle Griffin placed 11th in 24:00."
     ],
     "RelayResults": [
@@ -48,7 +75,7 @@
         "Runners": [
           "Ben Harrison",
           "Ryan Kirby",
-          "John Moser"
+          "Jon Moser"
         ]
       },
       {
@@ -226,7 +253,7 @@
     "Notes": "Archive recap supplied for the 3.1-mile meet at Hilton Head Prep.",
     "RecapParagraphs": [
       "St. Andrew's finished 3rd in both team races at Hilton Head Prep. The boys scored 77 points behind Bluffton and Hilton Head Prep, while the girls scored 88 points behind Hilton Head Prep and Hilton Head High.",
-      "Ben Harrison placed 2nd in the boys race in 19:37. John Moser ran 21:00, Alex Lucas ran 22:00, Ryan Kirby ran 22:18, and Scott Mullen ran 23:23.",
+      "Ben Harrison placed 2nd in the boys race in 19:37. Jon Moser ran 21:00, Alex Lucas ran 22:00, Ryan Kirby ran 22:18, and Scott Mullen ran 23:23.",
       "Jessica Topolewski led the St. Andrew's girls in 26:17, followed by Michelle Griffin in 26:59, Stephanie Griffin in 27:01, Lily Adams in 28:26, and Lizzie Verner in 31:37."
     ],
     "TeamResults": [

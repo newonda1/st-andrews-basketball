@@ -219,7 +219,7 @@
         "PlayerID": 2026159
       },
       {
-        "Name": "Jenny Wilburn",
+        "Name": "Jennie Wilburn",
         "Grade": 11,
         "PlayerID": 2027002
       },
@@ -244,7 +244,7 @@
         "PlayerID": 2027004
       },
       {
-        "Name": "Maggin Sammons",
+        "Name": "Maggie Sammons",
         "Grade": 11,
         "PlayerID": 2027005
       },
@@ -254,7 +254,7 @@
         "PlayerID": 2027006
       },
       {
-        "Name": "John Moser",
+        "Name": "Jon Moser",
         "Grade": 9,
         "PlayerID": 2027007
       },
@@ -289,23 +289,110 @@
     "SeasonLabel": "2004-05",
     "Classification": "SCISA",
     "StatusBadge": "verified",
-    "StatusNote": "MileSplit Georgia/South Carolina exposes 1 St. Andrew's cross country schedule or SCISA result entry for 2004-05, including 1 meet with public St. Andrew's result rows.",
+    "StatusNote": "The 2004-05 archive includes the SCISA Championships with official MileSplit individual rows and supplied newspaper team placements.",
     "FirstRegularSeasonMeet": "2004-10-16",
     "RegionMeetDate": "",
     "StateMeetStart": "2004-10-16",
     "StateMeetEnd": "2004-10-16",
     "StateMeetLocation": "Heathwood Hall, Columbia, SC",
     "RecapParagraphs": [
-      "The 2004-05 cross country archive is built from MileSplit Georgia team schedule pages and MileSplit South Carolina SCISA raw result files where St. Andrew's appeared.",
-      "The loaded data includes 1 schedule/result entry, 1 meet with public St. Andrew's performances, 5 result rows, and 5 named athletes."
+      "The 2004-05 cross country archive includes the SCISA Championships in Columbia, South Carolina, with official MileSplit individual rows and supplied newspaper team placements.",
+      "MileSplit's official individual results list Maggie Sammons 9th in Girls 1A/2A in 23:12.",
+      "A supplied newspaper item adds team placements from the same meet: Greenwood Christian won the boys team race, and St. Andrew's placed 4th in an 11-team field. Cathedral Academy won the girls team race, and St. Andrew's placed 6th in an 11-team field."
     ],
     "HighlightNotes": [
-      "1 meet includes public St. Andrew's performance rows on MileSplit.",
+      "St. Andrew's boys placed 4th at the SCISA State Meet.",
+      "St. Andrew's girls placed 6th at the SCISA State Meet.",
       "5 athlete-result rows are loaded for 5 named athletes.",
-      "Maggie Samons placed 9th in Girls 1A/2A (23:12).",
+      "Maggie Sammons placed 9th in Girls 1A/2A (23:12).",
       "Jessica Topolewski placed 34th in Girls 1A/2A (27:28).",
       "Michelle Griffin placed 36th in Girls 1A/2A (27:57).",
       "Stephanie Griffin placed 39th in Girls 1A/2A (28:38)."
+    ],
+    "Images": [
+      {
+        "src": "/images/cross-country/seasons/2004-05/gallery/2004-05-cross-country-team.png",
+        "alt": "2004-05 St. Andrew's cross country team photo",
+        "caption": "2004-05 cross country team"
+      },
+      {
+        "src": "/images/cross-country/seasons/2004-05/gallery/2004-05-cross-country-01-coach-miller-practice.png",
+        "alt": "Coach Miller smiles for the camera during practice",
+        "caption": "Coach Miller smiles for the camera during practice"
+      },
+      {
+        "src": "/images/cross-country/seasons/2004-05/gallery/2004-05-cross-country-02-maggie-sammons.png",
+        "alt": "Captain Maggie Sammons",
+        "caption": "Captain Maggie Sammons"
+      },
+      {
+        "src": "/images/cross-country/seasons/2004-05/gallery/2004-05-cross-country-03-jon-moser-maggie-sammons.png",
+        "alt": "Jon Moser smiles for the camera while Maggie Sammons speeds past",
+        "caption": "Jon Moser smiles for the camera while Maggie Sammons speeds past"
+      },
+      {
+        "src": "/images/cross-country/seasons/2004-05/gallery/2004-05-cross-country-04-team-scenery-run.png",
+        "alt": "The team enjoys the scenery along the run",
+        "caption": "The team enjoys the scenery along the run"
+      }
+    ],
+    "Roster": [
+      {
+        "PlayerID": 2027007,
+        "Grade": 10
+      },
+      {
+        "PlayerID": 2027023,
+        "Grade": 9
+      },
+      {
+        "PlayerID": 2026161,
+        "Grade": 10
+      },
+      {
+        "PlayerID": 2027000,
+        "Grade": 11
+      },
+      {
+        "PlayerID": 200314,
+        "Grade": 11
+      },
+      {
+        "PlayerID": 2026160,
+        "Grade": 10
+      },
+      {
+        "PlayerID": 2027024,
+        "Grade": 9
+      },
+      {
+        "PlayerID": 2027025,
+        "Grade": 9
+      },
+      {
+        "PlayerID": 200407,
+        "Grade": 11
+      },
+      {
+        "PlayerID": 2027005,
+        "Grade": 12
+      },
+      {
+        "PlayerID": 2027002,
+        "Grade": 12
+      },
+      {
+        "PlayerID": 200408,
+        "Grade": 11
+      },
+      {
+        "PlayerID": 2027008,
+        "Grade": ""
+      },
+      {
+        "Name": "Andy Miller",
+        "Grade": "Head Coach"
+      }
     ]
   },
   {
@@ -321,7 +408,7 @@
     "StateMeetLocation": "Heathwood Hall, Columbia, SC",
     "RecapParagraphs": [
       "St. Andrew's opened the available 2005-06 cross country archive at Augusta Prep on August 27, 2005, where the Lions ran mile relay teams in boys' and girls' races.",
-      "The boys' A relay of Ben Harrison, Ryan Kirby, and John Moser placed 5th in 18:42. The boys' B relay of Alex Chu, Scott Mullen, and Josh Taylor placed 11th in 20:10, and the boys' C relay of Remy Thurston, Justin Hur, and Joe Nodzak placed 12th in 20:54.",
+      "The boys' A relay of Ben Harrison, Ryan Kirby, and Jon Moser placed 5th in 18:42. The boys' B relay of Alex Chu, Scott Mullen, and Josh Taylor placed 11th in 20:10, and the boys' C relay of Remy Thurston, Justin Hur, and Joe Nodzak placed 12th in 20:54.",
       "The girls' relay of Jessica Topolewski, Stephanie Griffin, and Michelle Griffin placed 11th in 24:00.",
       "At St. George on August 31, St. Andrew's won the boys' 3.1-mile team race with 49 points. Ben Harrison won the individual race in 19:14, and the Lions also counted top-15 finishes from Jon Moser, Bryan Kirby, Justin Hur, and Josh Taylor.",
       "The girls did not have enough runners to place as a team at St. George, but Jessica Topolewski, Michelle Griffin, and Lily Adams each logged individual 3.1-mile results.",
@@ -399,7 +486,8 @@
       },
       {
         "Name": "Lily Adams",
-        "Grade": 10
+        "Grade": 10,
+        "PlayerID": 2027025
       },
       {
         "Name": "Scott Mullen",
@@ -456,7 +544,8 @@
       },
       {
         "Name": "Jon Moser",
-        "Grade": 11
+        "Grade": 11,
+        "PlayerID": 2027007
       },
       {
         "Name": "Michelle Griffin",
