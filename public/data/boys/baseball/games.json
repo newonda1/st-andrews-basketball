@@ -9515,5 +9515,116 @@
         "E": 7
       }
     }
+  },
+  {
+    "GameID": 2026050801,
+    "OpponentID": "ga-tiftarea-academy-chula",
+    "Opponent": "Tiftarea Academy",
+    "OpponentAbbr": "TFTR",
+    "LocationType": "Away",
+    "GameType": "State Playoff",
+    "Result": "L",
+    "TeamScore": 7,
+    "OpponentScore": 8,
+    "Season": 2026,
+    "DisplayDate": "May 8-9, 2026",
+    "RecapTitle": "Tiftarea Walks Off St. Andrew’s In Eight-Inning State Opener",
+    "Recap": "Tiftarea Academy walked off St. Andrew’s 8-7 in eight innings in the opening game of the GIAA Class AAA state tournament series, ending a back-and-forth game that stretched from Friday into Saturday.\n\nThe Lions struck first in the top of the first when Jack Kelley drove a solo home run to center field. Tiftarea answered in the bottom half on a bases-loaded walk, then moved in front 2-1 in the second after an error allowed Tanner Ross to score.\n\nSt. Andrew’s jumped back ahead in the third. Ellis Kelley walked, Jack Kelley followed with another walk, Jacob Navare lined an RBI single to right, and Isaac Wrieden’s fielder’s choice brought in Jack Kelley for a 3-2 lead. Tiftarea tied the game in the bottom of the inning, then used Winston Lamb’s two-run single in the fourth to go up 5-3.\n\nThe game was delayed by lightning during the top of the fifth inning and had to be finished the next day. When play resumed, the Lions pulled even. Navare’s groundout scored Ellis Kelley, and Wells Searcy’s sacrifice bunt turned into an error that brought Jack Kelley home to make it 5-5.\n\nSt. Andrew’s took its final lead in the sixth. River Reeves doubled to center, Darius Chapman was hit by a pitch, Jack Kelley was intentionally walked, and Navare punched a two-run single to left to put the Lions ahead 7-5.\n\nTiftarea answered with two runs in the bottom of the sixth, taking advantage of two St. Andrew’s errors before Ridley Monk’s infield single tied the game at 7-7. Neither side scored in the seventh, and Reed Jackson opened the eighth with a double before Monk laid down the sacrifice bunt that ended it.\n\nNavare led the Lions at the plate, going 2-for-4 with four RBIs. Jack Kelley homered, reached base four times, and scored three runs, while Reeves added a double and scored in the sixth-inning rally. St. Andrew’s finished with six hits and five walks.\n\nLanford Harris started and worked four innings, allowing five runs, three earned, on seven hits while striking out two. Jack Kelley took the loss in relief despite allowing just one earned run over 3 1/3 innings, striking out two and walking two.\n\nTiftarea collected 10 hits, with Tripp King leading the Panthers with two. Lamb drove in three runs, and Monk delivered the tying hit in the sixth before bringing home the winning run in the eighth.",
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "StAndrews": [
+        1,
+        0,
+        2,
+        0,
+        2,
+        2,
+        0,
+        0
+      ],
+      "Opponent": [
+        1,
+        1,
+        1,
+        2,
+        0,
+        2,
+        0,
+        1
+      ],
+      "StAndrewsTotals": {
+        "R": 7,
+        "H": 6,
+        "E": 4
+      },
+      "OpponentTotals": {
+        "R": 8,
+        "H": 10,
+        "E": 1
+      }
+    }
+  },
+  {
+    "GameID": 2026050901,
+    "OpponentID": "ga-tiftarea-academy-chula",
+    "Opponent": "Tiftarea Academy",
+    "OpponentAbbr": "TFTR",
+    "LocationType": "Away",
+    "GameType": "State Playoff",
+    "Result": "L",
+    "TeamScore": 4,
+    "OpponentScore": 7,
+    "Season": 2026,
+    "DisplayDate": "May 9, 2026",
+    "RecapTitle": "Tiftarea Pulls Away Late To Complete State Series Sweep",
+    "Recap": "Tiftarea Academy completed a two-game state tournament sweep Saturday, pulling away late for a 7-4 win over St. Andrew’s in the second game of the GIAA Class AAA first-round series.\n\nTiftarea struck first when Tanner Ross tripled to right to open the game and Dawson Butler brought him home with a two-out infield single. St. Andrew’s answered immediately in the bottom half, turning walks, hit batters, and two timely hits into a 3-1 lead.\n\nEllis Kelley opened the Lions’ first inning with a walk, Jack Kelley was hit by a pitch, and Wells Searcy loaded the bases with a single to left. Isaac Wrieden followed with an RBI single to center, Xavier Wilcox lifted a sacrifice fly to right, and Searcy scored on a wild pitch to give St. Andrew’s the early advantage.\n\nTiftarea kept chipping away. Reed Jackson reached on an error and scored on Hayden Matthews’ groundout in the second, Winston Lamb doubled home Jackson Gray in the third to tie the game, and Ross’ sacrifice lineout in the fourth put the Panthers ahead 4-3.\n\nKelley kept St. Andrew’s within reach with a strong start, striking out 10 over six innings while allowing four runs, three earned, on six hits. He worked around traffic in the fifth and escaped the sixth after a hit batter, but Tiftarea finally created separation in the seventh.\n\nJackson Parrish opened the final inning with a double, Butler singled him home, Lamb followed with an RBI double, and Tripp King added another run-scoring double to push the margin to 7-3.\n\nThe Lions made one last push in the bottom of the seventh. Jacob Navare, Searcy, and Wrieden drew three straight walks to load the bases, and Wilcox grounded out to bring Navare home. Tiftarea then recorded back-to-back strikeouts to close the series.\n\nWrieden led St. Andrew’s with two hits and an RBI, while Wilcox drove in two runs. Searcy, Lanford Harris, and Darius Chapman added hits, and the Lions drew eight walks.\n\nTiftarea finished with 10 hits, led by two-hit games from Butler, Lamb, Jackson Gray, and Parrish. Lamb drove in two runs, Butler stole two bases, and the Panthers advanced to the second round with the 2-0 series win.",
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "StAndrews": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "Opponent": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        3
+      ],
+      "StAndrewsTotals": {
+        "R": 4,
+        "H": 5,
+        "E": 3
+      },
+      "OpponentTotals": {
+        "R": 7,
+        "H": 10,
+        "E": 0
+      }
+    }
   }
 ]

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-09T18:34:11.921Z",
-  "itemCount": 1232,
+  "generatedAt": "2026-05-11T14:01:38.616Z",
+  "itemCount": 1268,
   "items": [
     {
       "id": "athletics-home",
@@ -7757,6 +7757,25 @@
       ]
     },
     {
+      "id": "baseball-athlete-2026163",
+      "type": "athlete",
+      "title": "Bubby Pavlo",
+      "subtitle": "Baseball athlete - Class of 2008",
+      "to": "/athletics/boys/baseball/players/2026163",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Bubby",
+        "Pavlo",
+        "Pavlo Bubby",
+        "class of 2008",
+        "grad 2008"
+      ]
+    },
+    {
       "id": "baseball-athlete-200809",
       "type": "athlete",
       "title": "Jim Kingston",
@@ -7889,7 +7908,7 @@
       "id": "baseball-athlete-200815",
       "type": "athlete",
       "title": "Rob Cantrell",
-      "subtitle": "Baseball athlete",
+      "subtitle": "Baseball athlete - Class of 2009",
       "to": "/athletics/boys/baseball/players/200815",
       "keywords": [
         "Baseball",
@@ -7899,7 +7918,9 @@
         "records",
         "Rob",
         "Cantrell",
-        "Cantrell Rob"
+        "Cantrell Rob",
+        "class of 2009",
+        "grad 2009"
       ]
     },
     {
@@ -12684,7 +12705,7 @@
       "id": "football-athlete-200435",
       "type": "athlete",
       "title": "Patrick Maleki",
-      "subtitle": "Football athlete",
+      "subtitle": "Football athlete - Class of 2008",
       "to": "/athletics/football/players/200435",
       "keywords": [
         "Football",
@@ -12694,7 +12715,9 @@
         "records",
         "Patrick",
         "Maleki",
-        "Maleki Patrick"
+        "Maleki Patrick",
+        "class of 2008",
+        "grad 2008"
       ]
     },
     {
@@ -12791,11 +12814,11 @@
       ]
     },
     {
-      "id": "football-athlete-200441",
+      "id": "football-athlete-200207",
       "type": "athlete",
-      "title": "Jacob Rivers",
+      "title": "Jacob Rauers",
       "subtitle": "Football athlete - Class of 2004",
-      "to": "/athletics/football/players/200441",
+      "to": "/athletics/football/players/200207",
       "keywords": [
         "Football",
         "athlete",
@@ -12803,10 +12826,29 @@
         "stats",
         "records",
         "Jacob",
-        "Rivers",
-        "Rivers Jacob",
+        "Rauers",
+        "Rauers Jacob",
         "class of 2004",
         "grad 2004"
+      ]
+    },
+    {
+      "id": "football-athlete-200424",
+      "type": "athlete",
+      "title": "Emmett Eason",
+      "subtitle": "Football athlete - Class of 2006",
+      "to": "/athletics/football/players/200424",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Emmett",
+        "Eason",
+        "Eason Emmett",
+        "class of 2006",
+        "grad 2006"
       ]
     },
     {
@@ -12848,6 +12890,82 @@
       ]
     },
     {
+      "id": "football-athlete-200206",
+      "type": "athlete",
+      "title": "Ross Munro",
+      "subtitle": "Football athlete - Class of 2005",
+      "to": "/athletics/football/players/200206",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Ross",
+        "Munro",
+        "Munro Ross",
+        "class of 2005",
+        "grad 2005"
+      ]
+    },
+    {
+      "id": "football-athlete-200451",
+      "type": "athlete",
+      "title": "Mike Ciccio",
+      "subtitle": "Football athlete - Class of 2004",
+      "to": "/athletics/football/players/200451",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Mike",
+        "Ciccio",
+        "Ciccio Mike",
+        "class of 2004",
+        "grad 2004"
+      ]
+    },
+    {
+      "id": "football-athlete-200309",
+      "type": "athlete",
+      "title": "David Stubbs",
+      "subtitle": "Football athlete - Class of 2005",
+      "to": "/athletics/football/players/200309",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "David",
+        "Stubbs",
+        "Stubbs David",
+        "class of 2005",
+        "grad 2005"
+      ]
+    },
+    {
+      "id": "football-athlete-200202",
+      "type": "athlete",
+      "title": "Jamie Cooper",
+      "subtitle": "Football athlete - Class of 2006",
+      "to": "/athletics/football/players/200202",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Jamie",
+        "Cooper",
+        "Cooper Jamie",
+        "class of 2006",
+        "grad 2006"
+      ]
+    },
+    {
       "id": "football-athlete-200449",
       "type": "athlete",
       "title": "Adam Ball",
@@ -12886,22 +13004,212 @@
       ]
     },
     {
-      "id": "football-athlete-200451",
+      "id": "football-athlete-200201",
       "type": "athlete",
-      "title": "Mike Ciccio",
+      "title": "Jesse Coleman",
       "subtitle": "Football athlete - Class of 2004",
-      "to": "/athletics/football/players/200451",
+      "to": "/athletics/football/players/200201",
       "keywords": [
         "Football",
         "athlete",
         "player",
         "stats",
         "records",
-        "Mike",
-        "Ciccio",
-        "Ciccio Mike",
+        "Jesse",
+        "Coleman",
+        "Coleman Jesse",
         "class of 2004",
         "grad 2004"
+      ]
+    },
+    {
+      "id": "football-athlete-200425",
+      "type": "athlete",
+      "title": "Freddy Presutto",
+      "subtitle": "Football athlete - Class of 2004",
+      "to": "/athletics/football/players/200425",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Freddy",
+        "Presutto",
+        "Presutto Freddy",
+        "class of 2004",
+        "grad 2004"
+      ]
+    },
+    {
+      "id": "football-athlete-200452",
+      "type": "athlete",
+      "title": "Brent Adams",
+      "subtitle": "Football athlete - Class of 2004",
+      "to": "/athletics/football/players/200452",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Brent",
+        "Adams",
+        "Adams Brent",
+        "class of 2004",
+        "grad 2004"
+      ]
+    },
+    {
+      "id": "football-athlete-200910",
+      "type": "athlete",
+      "title": "Lee Smith",
+      "subtitle": "Football athlete - Class of 2009",
+      "to": "/athletics/football/players/200910",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Lee",
+        "Smith",
+        "Smith Lee",
+        "class of 2009",
+        "grad 2009"
+      ]
+    },
+    {
+      "id": "football-athlete-2026346",
+      "type": "athlete",
+      "title": "Ellis Allen",
+      "subtitle": "Football athlete - Class of 2009",
+      "to": "/athletics/football/players/2026346",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Ellis",
+        "Allen",
+        "Allen Ellis",
+        "class of 2009",
+        "grad 2009"
+      ]
+    },
+    {
+      "id": "football-athlete-2027010",
+      "type": "athlete",
+      "title": "John Hope",
+      "subtitle": "Football athlete - Class of 2009",
+      "to": "/athletics/football/players/2027010",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "John",
+        "Hope",
+        "Hope John",
+        "class of 2009",
+        "grad 2009"
+      ]
+    },
+    {
+      "id": "football-athlete-2026163",
+      "type": "athlete",
+      "title": "Bubby Pavlo",
+      "subtitle": "Football athlete - Class of 2008",
+      "to": "/athletics/football/players/2026163",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Bubby",
+        "Pavlo",
+        "Pavlo Bubby",
+        "class of 2008",
+        "grad 2008"
+      ]
+    },
+    {
+      "id": "football-athlete-2027011",
+      "type": "athlete",
+      "title": "James Green",
+      "subtitle": "Football athlete - Class of 2009",
+      "to": "/athletics/football/players/2027011",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "James",
+        "Green",
+        "Green James",
+        "class of 2009",
+        "grad 2009"
+      ]
+    },
+    {
+      "id": "football-athlete-200809",
+      "type": "athlete",
+      "title": "Jim Kingston",
+      "subtitle": "Football athlete - Class of 2009",
+      "to": "/athletics/football/players/200809",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Jim",
+        "Kingston",
+        "Kingston Jim",
+        "class of 2009",
+        "grad 2009"
+      ]
+    },
+    {
+      "id": "football-athlete-200815",
+      "type": "athlete",
+      "title": "Rob Cantrell",
+      "subtitle": "Football athlete - Class of 2009",
+      "to": "/athletics/football/players/200815",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Rob",
+        "Cantrell",
+        "Cantrell Rob",
+        "class of 2009",
+        "grad 2009"
+      ]
+    },
+    {
+      "id": "football-athlete-2026348",
+      "type": "athlete",
+      "title": "Alex Lovell",
+      "subtitle": "Football athlete - Class of 2008",
+      "to": "/athletics/football/players/2026348",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Alex",
+        "Lovell",
+        "Lovell Alex",
+        "class of 2008",
+        "grad 2008"
       ]
     },
     {
@@ -12924,6 +13232,25 @@
       ]
     },
     {
+      "id": "football-athlete-200810",
+      "type": "athlete",
+      "title": "Wesley Knight",
+      "subtitle": "Football athlete - Class of 2009",
+      "to": "/athletics/football/players/200810",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Wesley",
+        "Knight",
+        "Knight Wesley",
+        "class of 2009",
+        "grad 2009"
+      ]
+    },
+    {
       "id": "football-athlete-200455",
       "type": "athlete",
       "title": "Andrew Chapman",
@@ -12943,10 +13270,274 @@
       ]
     },
     {
+      "id": "football-athlete-2027012",
+      "type": "athlete",
+      "title": "Frank Howard",
+      "subtitle": "Football athlete - Class of 2006",
+      "to": "/athletics/football/players/2027012",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Frank",
+        "Howard",
+        "Howard Frank",
+        "class of 2006",
+        "grad 2006"
+      ]
+    },
+    {
+      "id": "football-athlete-2027013",
+      "type": "athlete",
+      "title": "Ben Oliver",
+      "subtitle": "Football athlete",
+      "to": "/athletics/football/players/2027013",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Ben",
+        "Oliver",
+        "Oliver Ben"
+      ]
+    },
+    {
+      "id": "football-athlete-200456",
+      "type": "athlete",
+      "title": "Skip McGee",
+      "subtitle": "Football athlete - Class of 2006",
+      "to": "/athletics/football/players/200456",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Skip",
+        "McGee",
+        "McGee Skip",
+        "class of 2006",
+        "grad 2006"
+      ]
+    },
+    {
+      "id": "football-athlete-2027014",
+      "type": "athlete",
+      "title": "Phil Wagner",
+      "subtitle": "Football athlete - Class of 2009",
+      "to": "/athletics/football/players/2027014",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Phil",
+        "Wagner",
+        "Wagner Phil",
+        "class of 2009",
+        "grad 2009"
+      ]
+    },
+    {
+      "id": "football-athlete-2027015",
+      "type": "athlete",
+      "title": "Jake Burruss",
+      "subtitle": "Football athlete - Class of 2008",
+      "to": "/athletics/football/players/2027015",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Jake",
+        "Burruss",
+        "Burruss Jake",
+        "class of 2008",
+        "grad 2008"
+      ]
+    },
+    {
+      "id": "football-athlete-2027016",
+      "type": "athlete",
+      "title": "Milo Corkey",
+      "subtitle": "Football athlete - Class of 2009",
+      "to": "/athletics/football/players/2027016",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Milo",
+        "Corkey",
+        "Corkey Milo",
+        "class of 2009",
+        "grad 2009"
+      ]
+    },
+    {
+      "id": "football-athlete-2026178",
+      "type": "athlete",
+      "title": "Vinnie Curley",
+      "subtitle": "Football athlete - Class of 2009",
+      "to": "/athletics/football/players/2026178",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Vinnie",
+        "Curley",
+        "Curley Vinnie",
+        "class of 2009",
+        "grad 2009"
+      ]
+    },
+    {
+      "id": "football-athlete-2027017",
+      "type": "athlete",
+      "title": "John Scuderi",
+      "subtitle": "Football athlete - Class of 2008",
+      "to": "/athletics/football/players/2027017",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "John",
+        "Scuderi",
+        "Scuderi John",
+        "class of 2008",
+        "grad 2008"
+      ]
+    },
+    {
+      "id": "football-athlete-2027018",
+      "type": "athlete",
+      "title": "Lane Sampson",
+      "subtitle": "Football athlete - Class of 2009",
+      "to": "/athletics/football/players/2027018",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Lane",
+        "Sampson",
+        "Sampson Lane",
+        "class of 2009",
+        "grad 2009"
+      ]
+    },
+    {
+      "id": "football-athlete-200909",
+      "type": "athlete",
+      "title": "Ikaika Kapu",
+      "subtitle": "Football athlete - Class of 2009",
+      "to": "/athletics/football/players/200909",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Ikaika",
+        "Kapu",
+        "Kapu Ikaika",
+        "class of 2009",
+        "grad 2009"
+      ]
+    },
+    {
+      "id": "football-athlete-2027019",
+      "type": "athlete",
+      "title": "Casey Kirkconnell",
+      "subtitle": "Football athlete - Class of 2009",
+      "to": "/athletics/football/players/2027019",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Casey",
+        "Kirkconnell",
+        "Kirkconnell Casey",
+        "class of 2009",
+        "grad 2009"
+      ]
+    },
+    {
+      "id": "football-athlete-2027020",
+      "type": "athlete",
+      "title": "Donald Doddsworth",
+      "subtitle": "Football athlete - Class of 2008",
+      "to": "/athletics/football/players/2027020",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Donald",
+        "Doddsworth",
+        "Doddsworth Donald",
+        "class of 2008",
+        "grad 2008"
+      ]
+    },
+    {
+      "id": "football-athlete-2027021",
+      "type": "athlete",
+      "title": "Adam Fox",
+      "subtitle": "Football athlete - Class of 2008",
+      "to": "/athletics/football/players/2027021",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Adam",
+        "Fox",
+        "Fox Adam",
+        "class of 2008",
+        "grad 2008"
+      ]
+    },
+    {
+      "id": "football-athlete-2027022",
+      "type": "athlete",
+      "title": "Tim Svoboda",
+      "subtitle": "Football athlete - Class of 2009",
+      "to": "/athletics/football/players/2027022",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Tim",
+        "Svoboda",
+        "Svoboda Tim",
+        "class of 2009",
+        "grad 2009"
+      ]
+    },
+    {
       "id": "football-athlete-200604",
       "type": "athlete",
       "title": "Javier Gutierrez",
-      "subtitle": "Football athlete",
+      "subtitle": "Football athlete - Class of 2006",
       "to": "/athletics/football/players/200604",
       "keywords": [
         "Football",
@@ -12956,7 +13547,9 @@
         "records",
         "Javier",
         "Gutierrez",
-        "Gutierrez Javier"
+        "Gutierrez Javier",
+        "class of 2006",
+        "grad 2006"
       ]
     },
     {
@@ -13570,7 +14163,7 @@
       "id": "boys-soccer-athlete-200435",
       "type": "athlete",
       "title": "Patrick Maleki",
-      "subtitle": "Boys Soccer athlete",
+      "subtitle": "Boys Soccer athlete - Class of 2008",
       "to": "/athletics/boys/soccer/players/200435",
       "keywords": [
         "Boys Soccer",
@@ -13580,14 +14173,16 @@
         "records",
         "Patrick",
         "Maleki",
-        "Maleki Patrick"
+        "Maleki Patrick",
+        "class of 2008",
+        "grad 2008"
       ]
     },
     {
       "id": "boys-soccer-athlete-200604",
       "type": "athlete",
       "title": "Javier Gutierrez",
-      "subtitle": "Boys Soccer athlete",
+      "subtitle": "Boys Soccer athlete - Class of 2006",
       "to": "/athletics/boys/soccer/players/200604",
       "keywords": [
         "Boys Soccer",
@@ -13597,7 +14192,9 @@
         "records",
         "Javier",
         "Gutierrez",
-        "Gutierrez Javier"
+        "Gutierrez Javier",
+        "class of 2006",
+        "grad 2006"
       ]
     },
     {
@@ -13905,6 +14502,44 @@
       ]
     },
     {
+      "id": "volleyball-athlete-200503",
+      "type": "athlete",
+      "title": "Kristen Albritton",
+      "subtitle": "Volleyball athlete - Class of 2006",
+      "to": "/athletics/volleyball/players/200503",
+      "keywords": [
+        "Volleyball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Kristen",
+        "Albritton",
+        "Albritton Kristen",
+        "class of 2006",
+        "grad 2006"
+      ]
+    },
+    {
+      "id": "volleyball-athlete-200506",
+      "type": "athlete",
+      "title": "Courtney Manson",
+      "subtitle": "Volleyball athlete - Class of 2007",
+      "to": "/athletics/volleyball/players/200506",
+      "keywords": [
+        "Volleyball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Courtney",
+        "Manson",
+        "Manson Courtney",
+        "class of 2007",
+        "grad 2007"
+      ]
+    },
+    {
       "id": "volleyball-athlete-200504",
       "type": "athlete",
       "title": "Courtney Johnson",
@@ -13962,25 +14597,6 @@
       ]
     },
     {
-      "id": "volleyball-athlete-200506",
-      "type": "athlete",
-      "title": "Courtney Manson",
-      "subtitle": "Volleyball athlete - Class of 2007",
-      "to": "/athletics/volleyball/players/200506",
-      "keywords": [
-        "Volleyball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Courtney",
-        "Manson",
-        "Manson Courtney",
-        "class of 2007",
-        "grad 2007"
-      ]
-    },
-    {
       "id": "volleyball-athlete-200507",
       "type": "athlete",
       "title": "Kristina Barnette",
@@ -14016,25 +14632,6 @@
         "Lucas Kimberly",
         "class of 2007",
         "grad 2007"
-      ]
-    },
-    {
-      "id": "volleyball-athlete-200503",
-      "type": "athlete",
-      "title": "Kristen Albritton",
-      "subtitle": "Volleyball athlete - Class of 2006",
-      "to": "/athletics/volleyball/players/200503",
-      "keywords": [
-        "Volleyball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Kristen",
-        "Albritton",
-        "Albritton Kristen",
-        "class of 2006",
-        "grad 2006"
       ]
     },
     {
@@ -17037,26 +17634,9 @@
         "history",
         "records",
         "Abundant Life Academy",
+        "Abundant Life",
         "Hardeeville",
         "SC"
-      ]
-    },
-    {
-      "id": "boys-basketball-team-providence-christian",
-      "type": "team",
-      "title": "Providence Christian",
-      "subtitle": "Boys Basketball opponent history - Savannah, GA",
-      "to": "/athletics/boys/basketball/records/opponents?team=Providence+Christian",
-      "keywords": [
-        "Boys Basketball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Providence Christian",
-        "Lions",
-        "Savannah",
-        "GA"
       ]
     },
     {
@@ -17093,6 +17673,24 @@
         "Titans",
         "Darlington",
         "SC"
+      ]
+    },
+    {
+      "id": "boys-basketball-team-providence-christian",
+      "type": "team",
+      "title": "Providence Christian",
+      "subtitle": "Boys Basketball opponent history - Savannah, GA",
+      "to": "/athletics/boys/basketball/records/opponents?team=Providence+Christian",
+      "keywords": [
+        "Boys Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Providence Christian",
+        "Lions",
+        "Savannah",
+        "GA"
       ]
     },
     {
@@ -17143,6 +17741,8 @@
         "history",
         "records",
         "Cathedral Academy",
+        "Cathedral",
+        "Generals",
         "North Charleston",
         "SC"
       ]
@@ -18636,39 +19236,56 @@
       ]
     },
     {
-      "id": "baseball-team-ridgeland-high-school",
+      "id": "baseball-team-beaufort-academy",
       "type": "team",
-      "title": "Ridgeland High School",
-      "subtitle": "Baseball opponent history - Rossville, GA",
-      "to": "/athletics/boys/baseball/records/opponents?team=Ridgeland+High+School",
+      "title": "Beaufort Academy",
+      "subtitle": "Baseball opponent history - Beaufort, SC",
+      "to": "/athletics/boys/baseball/records/opponents?team=Beaufort+Academy",
       "keywords": [
         "Baseball",
         "team",
         "opponent",
         "history",
         "records",
-        "Ridgeland High School",
-        "Rossville",
-        "GA"
+        "Beaufort Academy",
+        "Eagles",
+        "Beaufort",
+        "SC"
       ]
     },
     {
-      "id": "baseball-team-bulloch-academy",
+      "id": "baseball-team-hilton-head-christian-academy",
       "type": "team",
-      "title": "Bulloch Academy",
-      "subtitle": "Baseball opponent history - Statesboro, GA",
-      "to": "/athletics/boys/baseball/records/opponents?team=Bulloch+Academy",
+      "title": "Hilton Head Christian Academy",
+      "subtitle": "Baseball opponent history - Hilton Head Island, SC",
+      "to": "/athletics/boys/baseball/records/opponents?team=Hilton+Head+Christian+Academy",
       "keywords": [
         "Baseball",
         "team",
         "opponent",
         "history",
         "records",
-        "Bulloch Academy",
-        "Bulloch",
-        "Gators",
-        "Statesboro",
-        "GA"
+        "Hilton Head Christian Academy",
+        "Eagles",
+        "Hilton Head Island",
+        "SC"
+      ]
+    },
+    {
+      "id": "baseball-team-dorchester-academy",
+      "type": "team",
+      "title": "Dorchester Academy",
+      "subtitle": "Baseball opponent history - St. George, SC",
+      "to": "/athletics/boys/baseball/records/opponents?team=Dorchester+Academy",
+      "keywords": [
+        "Baseball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Dorchester Academy",
+        "St. George",
+        "SC"
       ]
     },
     {
@@ -18708,6 +19325,42 @@
       ]
     },
     {
+      "id": "baseball-team-ridgeland-high-school",
+      "type": "team",
+      "title": "Ridgeland High School",
+      "subtitle": "Baseball opponent history - Rossville, GA",
+      "to": "/athletics/boys/baseball/records/opponents?team=Ridgeland+High+School",
+      "keywords": [
+        "Baseball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Ridgeland High School",
+        "Rossville",
+        "GA"
+      ]
+    },
+    {
+      "id": "baseball-team-bulloch-academy",
+      "type": "team",
+      "title": "Bulloch Academy",
+      "subtitle": "Baseball opponent history - Statesboro, GA",
+      "to": "/athletics/boys/baseball/records/opponents?team=Bulloch+Academy",
+      "keywords": [
+        "Baseball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Bulloch Academy",
+        "Bulloch",
+        "Gators",
+        "Statesboro",
+        "GA"
+      ]
+    },
+    {
       "id": "baseball-team-st-john-s-christian-academy",
       "type": "team",
       "title": "St. John's Christian Academy",
@@ -18737,6 +19390,7 @@
         "history",
         "records",
         "Abundant Life Academy",
+        "Abundant Life",
         "Hardeeville",
         "SC"
       ]
@@ -18799,24 +19453,6 @@
       ]
     },
     {
-      "id": "baseball-team-hilton-head-christian-academy",
-      "type": "team",
-      "title": "Hilton Head Christian Academy",
-      "subtitle": "Baseball opponent history - Hilton Head Island, SC",
-      "to": "/athletics/boys/baseball/records/opponents?team=Hilton+Head+Christian+Academy",
-      "keywords": [
-        "Baseball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Hilton Head Christian Academy",
-        "Eagles",
-        "Hilton Head Island",
-        "SC"
-      ]
-    },
-    {
       "id": "baseball-team-memorial-day-school",
       "type": "team",
       "title": "Memorial Day School",
@@ -18848,6 +19484,8 @@
         "history",
         "records",
         "Cathedral Academy",
+        "Cathedral",
+        "Generals",
         "North Charleston",
         "SC"
       ]
@@ -18936,24 +19574,6 @@
         "Dixie High School",
         "New Lebanon",
         "OH"
-      ]
-    },
-    {
-      "id": "baseball-team-beaufort-academy",
-      "type": "team",
-      "title": "Beaufort Academy",
-      "subtitle": "Baseball opponent history - Beaufort, SC",
-      "to": "/athletics/boys/baseball/records/opponents?team=Beaufort+Academy",
-      "keywords": [
-        "Baseball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Beaufort Academy",
-        "Eagles",
-        "Beaufort",
-        "SC"
       ]
     },
     {
@@ -19740,6 +20360,25 @@
       ]
     },
     {
+      "id": "baseball-team-tiftarea-academy",
+      "type": "team",
+      "title": "Tiftarea Academy",
+      "subtitle": "Baseball opponent history - Chula, GA",
+      "to": "/athletics/boys/baseball/records/opponents?team=Tiftarea+Academy",
+      "keywords": [
+        "Baseball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Tiftarea Academy",
+        "Tiftarea",
+        "Panthers",
+        "Chula",
+        "GA"
+      ]
+    },
+    {
       "id": "girls-basketball-team-memorial-day-school",
       "type": "team",
       "title": "Memorial Day School",
@@ -20171,6 +20810,8 @@
         "history",
         "records",
         "Cathedral Academy",
+        "Cathedral",
+        "Generals",
         "North Charleston",
         "SC",
         "Decatur",
@@ -20190,6 +20831,7 @@
         "history",
         "records",
         "Abundant Life Academy",
+        "Abundant Life",
         "Hardeeville",
         "SC"
       ]
@@ -21053,6 +21695,7 @@
         "history",
         "records",
         "Abundant Life Academy",
+        "Abundant Life",
         "Hardeeville",
         "SC"
       ]
@@ -21507,6 +22150,8 @@
         "history",
         "records",
         "Cathedral Academy",
+        "Cathedral",
+        "Generals",
         "North Charleston",
         "SC"
       ]
@@ -22193,18 +22838,19 @@
       ]
     },
     {
-      "id": "girls-soccer-team-the-king-s-academy",
+      "id": "girls-soccer-team-king-s-academy",
       "type": "team",
-      "title": "The King's Academy",
+      "title": "King's Academy",
       "subtitle": "Girls Soccer opponent history - Florence, SC",
-      "to": "/athletics/girls/soccer/records/opponents?team=The+King%27s+Academy",
+      "to": "/athletics/girls/soccer/records/opponents?team=King%27s+Academy",
       "keywords": [
         "Girls Soccer",
         "team",
         "opponent",
         "history",
         "records",
-        "The King's Academy",
+        "King's Academy",
+        "Lions",
         "Florence",
         "SC"
       ]
@@ -22313,6 +22959,8 @@
         "history",
         "records",
         "Cathedral Academy",
+        "Cathedral",
+        "Generals",
         "North Charleston",
         "SC"
       ]
@@ -22367,7 +23015,6 @@
         "history",
         "records",
         "James Island Christian School",
-        "James Island Christian",
         "Lions",
         "Charleston",
         "SC"
@@ -22386,7 +23033,6 @@
         "history",
         "records",
         "Hilton Head Christian Academy",
-        "Hilton Head Christian",
         "Eagles",
         "Hilton Head Island",
         "SC"
@@ -22414,7 +23060,7 @@
       "id": "boys-soccer-team-st-francis-xavier",
       "type": "team",
       "title": "St. Francis Xavier",
-      "subtitle": "Boys Soccer opponent history - SC",
+      "subtitle": "Boys Soccer opponent history - Sumter, SC",
       "to": "/athletics/boys/soccer/records/opponents?team=St.+Francis+Xavier",
       "keywords": [
         "Boys Soccer",
@@ -22423,6 +23069,61 @@
         "history",
         "records",
         "St. Francis Xavier",
+        "Padres",
+        "Sumter",
+        "SC"
+      ]
+    },
+    {
+      "id": "boys-soccer-team-trident-academy",
+      "type": "team",
+      "title": "Trident Academy",
+      "subtitle": "Boys Soccer opponent history - Mount Pleasant, SC",
+      "to": "/athletics/boys/soccer/records/opponents?team=Trident+Academy",
+      "keywords": [
+        "Boys Soccer",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Trident Academy",
+        "Mount Pleasant",
+        "SC"
+      ]
+    },
+    {
+      "id": "boys-soccer-team-king-s-academy",
+      "type": "team",
+      "title": "King's Academy",
+      "subtitle": "Boys Soccer opponent history - Florence, SC",
+      "to": "/athletics/boys/soccer/records/opponents?team=King%27s+Academy",
+      "keywords": [
+        "Boys Soccer",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "King's Academy",
+        "Lions",
+        "Florence",
+        "SC"
+      ]
+    },
+    {
+      "id": "boys-soccer-team-thomas-sumter-academy",
+      "type": "team",
+      "title": "Thomas Sumter Academy",
+      "subtitle": "Boys Soccer opponent history - Dalzell, SC",
+      "to": "/athletics/boys/soccer/records/opponents?team=Thomas+Sumter+Academy",
+      "keywords": [
+        "Boys Soccer",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Thomas Sumter Academy",
+        "Generals",
+        "Dalzell",
         "SC"
       ]
     }
