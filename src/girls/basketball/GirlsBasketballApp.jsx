@@ -25,6 +25,7 @@ import Season2022_23 from "./seasons/Season2022_23";
 import Season2021_22 from "./seasons/Season2021_22";
 import Season2020_21 from "./seasons/Season2020_21";
 import Season2005_06 from "./seasons/Season2005_06";
+import Season2004_05 from "./seasons/Season2004_05";
 import Season2003_04 from "./seasons/Season2003_04";
 import MaxPrepsSeasonPage from "./seasons/MaxPrepsSeasonPage";
 import SeasonPlaceholder from "./seasons/SeasonPlaceholder";
@@ -37,6 +38,7 @@ const seasonPages = [
   { slug: "2021-22", Component: Season2021_22 },
   { slug: "2020-21", Component: Season2020_21 },
   { slug: "2005-06", Component: Season2005_06 },
+  { slug: "2004-05", Component: Season2004_05 },
   { slug: "2003-04", Component: Season2003_04 },
 ];
 

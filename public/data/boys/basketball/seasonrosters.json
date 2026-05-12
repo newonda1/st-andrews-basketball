@@ -1217,6 +1217,56 @@
     ]
   },
   {
+    "SeasonID": "2004-05",
+    "Players": [
+      {
+        "PlayerID": 2027001,
+        "JerseyNumber": 12,
+        "Grade": 10
+      },
+      {
+        "PlayerID": 2026154,
+        "JerseyNumber": 4,
+        "Grade": 11
+      },
+      {
+        "PlayerID": 2026155,
+        "JerseyNumber": 21,
+        "Grade": 11
+      },
+      {
+        "PlayerID": 200204,
+        "JerseyNumber": 2,
+        "Grade": 12
+      },
+      {
+        "PlayerID": 200314,
+        "JerseyNumber": 35,
+        "Grade": 11
+      },
+      {
+        "PlayerID": 200202,
+        "JerseyNumber": 40,
+        "Grade": 11
+      },
+      {
+        "PlayerID": 2026166,
+        "JerseyNumber": 22,
+        "Grade": 10
+      },
+      {
+        "PlayerID": 2026164,
+        "JerseyNumber": 13,
+        "Grade": 11
+      },
+      {
+        "PlayerID": 2026162,
+        "JerseyNumber": 10,
+        "Grade": 11
+      }
+    ]
+  },
+  {
     "SeasonID": "2005-06",
     "Players": [
       {

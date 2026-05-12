@@ -830,57 +830,63 @@ function MaxPrepsSeasonPage({
         </div>
 
         <div className="grid gap-3 sm:hidden">
-          {games.map((game) => {
-            const logoPath = opponentLogoPath(game);
+          {games.length ? (
+            games.map((game) => {
+              const logoPath = opponentLogoPath(game);
 
-            return (
-              <Link
-                key={game.GameID}
-                to={`/athletics/boys/basketball/games/${game.GameID}`}
-                className="block rounded-lg border border-gray-200 bg-white p-4 text-gray-900 no-underline shadow-sm transition hover:border-blue-300"
-              >
-                <div className="flex items-start justify-between gap-4">
-                  <div className="min-w-0">
-                    <p className="mb-2 text-sm text-gray-600">{formatDate(game.GameID)}</p>
-                    <div className="flex items-start gap-3">
-                      <div className="flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden">
-                        {logoPath ? (
-                          <img
-                            src={logoPath}
-                            alt=""
-                            className="h-full w-full object-contain"
-                            loading="lazy"
-                            onError={(event) => {
-                              event.currentTarget.style.display = "none";
-                            }}
-                          />
-                        ) : null}
-                      </div>
-                      <div className="min-w-0">
-                        <h3 className="text-lg font-semibold leading-snug">{game.Opponent}</h3>
-                        {game.Tournament ? (
-                          <p className="mt-0.5 text-xs leading-tight text-gray-500">
-                            {game.Tournament}
+              return (
+                <Link
+                  key={game.GameID}
+                  to={`/athletics/boys/basketball/games/${game.GameID}`}
+                  className="block rounded-lg border border-gray-200 bg-white p-4 text-gray-900 no-underline shadow-sm transition hover:border-blue-300"
+                >
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="min-w-0">
+                      <p className="mb-2 text-sm text-gray-600">{formatDate(game.GameID)}</p>
+                      <div className="flex items-start gap-3">
+                        <div className="flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden">
+                          {logoPath ? (
+                            <img
+                              src={logoPath}
+                              alt=""
+                              className="h-full w-full object-contain"
+                              loading="lazy"
+                              onError={(event) => {
+                                event.currentTarget.style.display = "none";
+                              }}
+                            />
+                          ) : null}
+                        </div>
+                        <div className="min-w-0">
+                          <h3 className="text-lg font-semibold leading-snug">{game.Opponent}</h3>
+                          {game.Tournament ? (
+                            <p className="mt-0.5 text-xs leading-tight text-gray-500">
+                              {game.Tournament}
+                            </p>
+                          ) : null}
+                          <p className="mt-2 text-sm text-gray-600">
+                            {[formatLocation(game), game.GameType || "Regular Season"]
+                              .filter(Boolean)
+                              .join(" • ")}
                           </p>
-                        ) : null}
-                        <p className="mt-2 text-sm text-gray-600">
-                          {[formatLocation(game), game.GameType || "Regular Season"]
-                            .filter(Boolean)
-                            .join(" • ")}
-                        </p>
+                        </div>
                       </div>
                     </div>
+                    <div className="shrink-0 text-right">
+                      <p className={`text-lg font-bold ${resultClassName(game.Result)}`}>
+                        {game.Result || "-"}
+                      </p>
+                      <p className="text-sm font-semibold">{formatScore(game)}</p>
+                    </div>
                   </div>
-                  <div className="shrink-0 text-right">
-                    <p className={`text-lg font-bold ${resultClassName(game.Result)}`}>
-                      {game.Result || "-"}
-                    </p>
-                    <p className="text-sm font-semibold">{formatScore(game)}</p>
-                  </div>
-                </div>
-              </Link>
-            );
-          })}
+                </Link>
+              );
+            })
+          ) : (
+            <div className="rounded-lg border border-dashed border-gray-300 bg-gray-50 px-5 py-8 text-center text-sm text-gray-600">
+              No schedule data is available for this season yet.
+            </div>
+          )}
         </div>
 
         <div className="hidden overflow-x-auto rounded-lg border border-gray-200 bg-white shadow sm:block">
@@ -896,64 +902,72 @@ function MaxPrepsSeasonPage({
               </tr>
             </thead>
             <tbody>
-              {games.map((game, index) => {
-                const logoPath = opponentLogoPath(game);
+              {games.length ? (
+                games.map((game, index) => {
+                  const logoPath = opponentLogoPath(game);
 
-                return (
-                  <tr
-                    key={game.GameID}
-                    className={`border-t border-gray-200 ${
-                      index % 2 ? "bg-gray-50/70" : "bg-white"
-                    } hover:bg-gray-100`}
-                  >
-                    <td className={`${scheduleBodyCellClassName} text-left`}>
-                      {formatDate(game.GameID)}
-                    </td>
-                    <td className={scheduleOpponentCellClassName}>
-                      <div className="flex items-center gap-2">
-                        <div className="flex h-6 w-6 shrink-0 items-center justify-center overflow-hidden">
-                          {logoPath ? (
-                            <img
-                              src={logoPath}
-                              alt=""
-                              className="h-full w-full object-contain"
-                              loading="lazy"
-                              onError={(event) => {
-                                event.currentTarget.style.display = "none";
-                              }}
-                            />
-                          ) : null}
-                        </div>
-                        <div className="min-w-0">
-                          <Link
-                            to={`/athletics/boys/basketball/games/${game.GameID}`}
-                            className="text-blue-700 underline hover:text-blue-900"
-                          >
-                            {game.Opponent}
-                          </Link>
-                          {game.Tournament ? (
-                            <div className="mt-0.5 text-xs leading-tight text-gray-500">
-                              {game.Tournament}
-                            </div>
-                          ) : null}
-                        </div>
-                      </div>
-                    </td>
-                    <td className={scheduleBodyCellClassName}>{formatLocation(game)}</td>
-                    <td
-                      className={`${scheduleBodyCellClassName} font-bold ${resultClassName(
-                        game.Result
-                      )}`}
+                  return (
+                    <tr
+                      key={game.GameID}
+                      className={`border-t border-gray-200 ${
+                        index % 2 ? "bg-gray-50/70" : "bg-white"
+                      } hover:bg-gray-100`}
                     >
-                      {game.Result || "-"}
-                    </td>
-                    <td className={scheduleBodyCellClassName}>{formatScore(game)}</td>
-                    <td className={scheduleBodyCellClassName}>
-                      {game.GameType || "Regular Season"}
-                    </td>
-                  </tr>
-                );
-              })}
+                      <td className={`${scheduleBodyCellClassName} text-left`}>
+                        {formatDate(game.GameID)}
+                      </td>
+                      <td className={scheduleOpponentCellClassName}>
+                        <div className="flex items-center gap-2">
+                          <div className="flex h-6 w-6 shrink-0 items-center justify-center overflow-hidden">
+                            {logoPath ? (
+                              <img
+                                src={logoPath}
+                                alt=""
+                                className="h-full w-full object-contain"
+                                loading="lazy"
+                                onError={(event) => {
+                                  event.currentTarget.style.display = "none";
+                                }}
+                              />
+                            ) : null}
+                          </div>
+                          <div className="min-w-0">
+                            <Link
+                              to={`/athletics/boys/basketball/games/${game.GameID}`}
+                              className="text-blue-700 underline hover:text-blue-900"
+                            >
+                              {game.Opponent}
+                            </Link>
+                            {game.Tournament ? (
+                              <div className="mt-0.5 text-xs leading-tight text-gray-500">
+                                {game.Tournament}
+                              </div>
+                            ) : null}
+                          </div>
+                        </div>
+                      </td>
+                      <td className={scheduleBodyCellClassName}>{formatLocation(game)}</td>
+                      <td
+                        className={`${scheduleBodyCellClassName} font-bold ${resultClassName(
+                          game.Result
+                        )}`}
+                      >
+                        {game.Result || "-"}
+                      </td>
+                      <td className={scheduleBodyCellClassName}>{formatScore(game)}</td>
+                      <td className={scheduleBodyCellClassName}>
+                        {game.GameType || "Regular Season"}
+                      </td>
+                    </tr>
+                  );
+                })
+              ) : (
+                <tr>
+                  <td className="px-4 py-8 text-center text-sm text-gray-600" colSpan={6}>
+                    No schedule data is available for this season yet.
+                  </td>
+                </tr>
+              )}
             </tbody>
           </table>
         </div>

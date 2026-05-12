@@ -70,6 +70,66 @@
     ]
   },
   {
+    "SeasonID": "2004-05",
+    "Players": [
+      {
+        "PlayerID": 200512,
+        "JerseyNumber": 32,
+        "Grade": 12
+      },
+      {
+        "PlayerID": 200422,
+        "JerseyNumber": 21,
+        "Grade": 9
+      },
+      {
+        "PlayerID": 200401,
+        "JerseyNumber": 45,
+        "Grade": 10
+      },
+      {
+        "PlayerID": 200603,
+        "JerseyNumber": 31,
+        "Grade": 11
+      },
+      {
+        "PlayerID": 200409,
+        "JerseyNumber": 15,
+        "Grade": 11
+      },
+      {
+        "PlayerID": 200407,
+        "JerseyNumber": 11,
+        "Grade": 11
+      },
+      {
+        "PlayerID": 200410,
+        "JerseyNumber": 2,
+        "Grade": 11
+      },
+      {
+        "PlayerID": 200503,
+        "JerseyNumber": 3,
+        "Grade": 11
+      },
+      {
+        "PlayerID": 200408,
+        "JerseyNumber": 13,
+        "Grade": 11
+      }
+    ],
+    "Staff": [
+      {
+        "Name": "Michael Bennet",
+        "Position": "Head Coach"
+      },
+      {
+        "Name": "Bernie Foran",
+        "Position": "Assistant Coach"
+      }
+    ]
+  },
+  {
     "SeasonID": "2005-06",
     "Players": [
       {

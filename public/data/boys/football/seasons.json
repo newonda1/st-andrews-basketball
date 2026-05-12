@@ -1804,19 +1804,68 @@
     "RegionLosses": 4,
     "RegionTies": 0,
     "HomeWins": 0,
-    "HomeLosses": 5,
+    "HomeLosses": 4,
     "HomeTies": 0,
     "AwayWins": 0,
-    "AwayLosses": 5,
+    "AwayLosses": 6,
     "AwayTies": 0,
     "NeutralWins": 0,
     "NeutralLosses": 0,
     "NeutralTies": 0,
     "PointsFor": 21,
-    "PointsAgainst": 392,
+    "PointsAgainst": 383,
     "NationalRank": 13884,
     "StateRank": 215,
     "SeasonResult": "SCISA AA Region III • 5th in region • 0-4 region record",
+    "SeasonRecapTitle": "Season Recap",
+    "HideSeasonArticles": true,
+    "SeasonRecapLinks": [
+      {
+        "Text": "Read Jim Thomas' 2004 Savannah Morning News football preview.",
+        "ArticleID": "2004-graduation-losses-leave-saints-thin"
+      }
+    ],
+    "SeasonImages": [
+      {
+        "src": "/images/boys/football/seasons/2004/2004-football-team.png",
+        "alt": "2004-05 St. Andrew's football team photo",
+        "caption": "2004-05 St. Andrew's football team"
+      },
+      {
+        "src": "/images/boys/football/seasons/2004/2004-football-01-woodbury-pep-talk.png",
+        "alt": "Coach Woodbury returns to the sidelines after giving the boys a pep talk",
+        "caption": "Coach Woodbury returns to the side lines after giving the boys a pep talk."
+      },
+      {
+        "src": "/images/boys/football/seasons/2004/2004-football-02-pavlo-run.png",
+        "alt": "Buddy Pavlo takes off down the field",
+        "caption": "Buddy Pavlo takes off down the field!"
+      },
+      {
+        "src": "/images/boys/football/seasons/2004/2004-football-03.png",
+        "alt": "St. Andrew's players and coach on the sideline"
+      },
+      {
+        "src": "/images/boys/football/seasons/2004/2004-football-04.png",
+        "alt": "St. Andrew's football player carries the ball"
+      },
+      {
+        "src": "/images/boys/football/seasons/2004/2004-football-05.png",
+        "alt": "St. Andrew's football action against an opponent"
+      },
+      {
+        "src": "/images/boys/football/seasons/2004/2004-football-06-homecoming-entrance.png",
+        "alt": "The football team runs onto the field before the homecoming game",
+        "caption": "The football team runs out enthusiastically before the start of the homecoming game!"
+      },
+      {
+        "src": "/images/boys/football/seasons/2004/2004-football-07-senior-captains-coin-toss.png",
+        "alt": "The senior captains line up for the coin toss",
+        "caption": "The senior captains line up for the coin toss."
+      }
+    ],
+    "SeasonRecap": "St. Andrew's 2004 football season was the hard reset after the Saints' 2003 playoff run. Bob Curley took over for Kevin Kunst with a roster that had lost 13 starters, leaving senior running back-linebacker Matt Knight, senior lineman David Stubbs and junior center-linebacker Jamie Cooper as the only returning starters from the previous year's team. The preseason questions were blunt: Curley needed eight or nine freshmen to play right away, had to settle a quarterback job after Russell DeMasi transferred, and was trying to make a small, inexperienced group competitive in SCISA AA Region III. Read Jim Thomas' 2004 Savannah Morning News football preview.\n\nThe season opened in Kingstree with Williamsburg Academy's 34-0 win, but the next week showed how close the Saints could get when the defense kept them in it. Memorial Day beat St. Andrew's 6-0 in a game defined by 41 combined penalties, cramps and missed chances. Don Keene had a 36-yard touchdown run erased by holding and missed a 32-yard field goal, but Curley still saw progress from a team that had gone from playing Williamsburg to a 7-0 halftime score to pushing Memorial through a one-score game.\n\nSeptember turned that optimism into a weekly test of depth. Dorchester Academy held St. Andrew's to 58 total yards in a 42-0 loss, Thomas Heyward scored 40 first-half points in Estill, Pinewood Prep held the Saints to 12 yards of offense in Summerville and Hilton Head Christian limited St. Andrew's to minus-10 total yards while scoring all its points before halftime. Hilton Head Prep then opened the region stretch with a 40-0 win, leaving the Saints still searching for their first points and trying to keep a young roster together through a schedule full of older, deeper SCISA opponents.\n\nThe final three weeks gave the season its clearest signs of offensive life. At First Baptist Christian, St. Andrew's was still blanked 49-0, but the Saints produced eight first downs and balanced 75 rushing yards with 70 passing yards. A week later in Walterboro, the scoreboard finally changed. Patrick Maleki caught a 13-yard touchdown pass and kicked the extra point, then Knight broke a 29-yard touchdown run in the fourth quarter as St. Andrew's scored twice in a 48-14 loss to Colleton Prep. Knight led the Saints with 93 rushing yards, and St. Andrew's finished with 162 rushing yards against a Colleton team that piled up 419 on the ground.\n\nKnight gave the Saints one more strong night in the finale at Dillon Christian, carrying 10 times for 100 yards and scoring on a 43-yard run in a 33-7 loss. St. Andrew's finished 0-10 and 0-4 in region play, scoring 21 points while allowing 383, but the year was also a full varsity education for the freshmen and sophomores Curley had been forced to lean on from August. The record captured the pain of the rebuild; the late touchdowns from Maleki and Knight, the Memorial Day near-miss and the experience gained by the underclassmen gave the next season something to build from.",
+    "SeasonRecapSourceCitation": "Compiled from Jim Thomas, \"GRADUATION LOSSES LEAVE SAINTS THIN,\" Savannah Morning News (GA), Aug. 20, 2004; Savannah Morning News game recaps from the 2004 season; and user-provided SCISA recaps, scoring summaries and team statistics for the 2004 football archive.",
     "SourceUrls": {
       "schedule": "https://www.maxpreps.com/print/schedule.aspx?schoolid=1019c441-d956-4e70-a61c-6cbc2ba6e073&ssid=aa457e4c-bb59-4abe-b350-10f34b2d5b4b&print=1",
       "roster": "https://www.maxpreps.com/ga/savannah/st-andrews-lions/football/04-05/roster/print/?print=1",

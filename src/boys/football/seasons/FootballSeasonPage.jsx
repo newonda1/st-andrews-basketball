@@ -961,14 +961,12 @@ function SeasonRecapSection({ season }) {
     season?.OverallRecord ||
     formatRecord(season?.OverallWins, season?.OverallLosses, season?.OverallTies);
   const coach = season?.HeadCoach || "—";
-  const finish = season?.StateFinish || season?.RegionFinish || "";
-  const summaryColumns = finish ? "grid-cols-3" : "grid-cols-2";
 
   return (
     <section id="season-recap" className="mx-auto max-w-4xl space-y-3">
       <h2 className="text-2xl font-semibold">{title}</h2>
       <div className="flow-root text-base leading-7 text-slate-700">
-        <dl className={`mb-4 grid ${summaryColumns} gap-3 text-center md:float-right md:mb-3 md:ml-6 md:w-64 md:grid-cols-1`}>
+        <dl className="mb-4 grid grid-cols-2 gap-3 text-center md:float-right md:mb-3 md:ml-6 md:w-64 md:grid-cols-1">
           <div className="rounded-lg border border-gray-200 px-3 py-2">
             <dt className="text-xs font-semibold uppercase tracking-wide text-gray-500">Record</dt>
             <dd className="text-xl font-bold text-gray-900">{record}</dd>
@@ -977,12 +975,6 @@ function SeasonRecapSection({ season }) {
             <dt className="text-xs font-semibold uppercase tracking-wide text-gray-500">Coach</dt>
             <dd className="text-lg font-semibold text-gray-900">{coach}</dd>
           </div>
-          {finish ? (
-            <div className="rounded-lg border border-gray-200 px-3 py-2">
-              <dt className="text-xs font-semibold uppercase tracking-wide text-gray-500">Finish</dt>
-              <dd className="text-lg font-semibold text-gray-900">{finish}</dd>
-            </div>
-          ) : null}
         </dl>
 
         <div className="space-y-3">

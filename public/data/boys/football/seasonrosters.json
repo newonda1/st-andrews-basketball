@@ -518,8 +518,233 @@
     "TeamID": "ga-savannah-st-andrews-lions-football",
     "TeamName": "St. Andrew's Lions",
     "HeadCoach": "Bob Curley",
-    "Staff": [],
-    "Players": [],
+    "Staff": [
+      {
+        "Name": "Bob Curley",
+        "Position": "Head Coach"
+      },
+      {
+        "Name": "Rusty Perry",
+        "Position": "Assistant Coach"
+      },
+      {
+        "Name": "Jason Woodbury",
+        "Position": "Assistant Coach"
+      },
+      {
+        "Name": "Ken Tessier",
+        "Position": "Trainer"
+      }
+    ],
+    "Players": [
+      {
+        "PlayerID": 2027013,
+        "JerseyNumber": "67",
+        "Grade": "Fr.",
+        "GradeLabel": "Freshman",
+        "Positions": [],
+        "PlayerName": "Ben Oliver",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 2027026,
+        "JerseyNumber": "31",
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Justin Redmond",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200435,
+        "JerseyNumber": "3",
+        "Grade": "Fr.",
+        "GradeLabel": "Freshman",
+        "Positions": [],
+        "PlayerName": "Patrick Maleki",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 2026164,
+        "JerseyNumber": "70",
+        "Grade": "Jr.",
+        "GradeLabel": "Junior",
+        "Positions": [],
+        "PlayerName": "Billy Vine",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200202,
+        "JerseyNumber": "72",
+        "Grade": "Jr.",
+        "GradeLabel": "Junior",
+        "Positions": [],
+        "PlayerName": "Jamie Cooper",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200446,
+        "JerseyNumber": "13",
+        "Grade": "So.",
+        "GradeLabel": "Sophomore",
+        "Positions": [],
+        "PlayerName": "Kirk Brooks",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 2027027,
+        "JerseyNumber": "22",
+        "Grade": "Sr.",
+        "GradeLabel": "Senior",
+        "Positions": [],
+        "PlayerName": "Daniel Shey",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 2027021,
+        "JerseyNumber": "77",
+        "Grade": "Fr.",
+        "GradeLabel": "Freshman",
+        "Positions": [],
+        "PlayerName": "Adam Fox",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 2027001,
+        "JerseyNumber": "15",
+        "Grade": "So.",
+        "GradeLabel": "Sophomore",
+        "Positions": [],
+        "PlayerName": "Trevor Shanklin",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200454,
+        "JerseyNumber": "81",
+        "Grade": "Jr.",
+        "GradeLabel": "Junior",
+        "Positions": [],
+        "PlayerName": "Garrett McCarthy",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200424,
+        "JerseyNumber": "33",
+        "Grade": "Jr.",
+        "GradeLabel": "Junior",
+        "Positions": [],
+        "PlayerName": "Emmett Eason",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200447,
+        "JerseyNumber": "20",
+        "Grade": "Sr.",
+        "GradeLabel": "Senior",
+        "Positions": [],
+        "PlayerName": "Sam Saussy",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 2027012,
+        "JerseyNumber": "7",
+        "Grade": "Jr.",
+        "GradeLabel": "Junior",
+        "Positions": [],
+        "PlayerName": "Frank Howard",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 2027028,
+        "JerseyNumber": "1",
+        "Grade": "Sr.",
+        "GradeLabel": "Senior",
+        "Positions": [],
+        "PlayerName": "Donny Keen",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 2027017,
+        "JerseyNumber": "25",
+        "Grade": "Fr.",
+        "GradeLabel": "Freshman",
+        "Positions": [],
+        "PlayerName": "John Scuderi",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 2026348,
+        "JerseyNumber": "21",
+        "Grade": "Fr.",
+        "GradeLabel": "Freshman",
+        "Positions": [],
+        "PlayerName": "Alex Lovell",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 2026171,
+        "JerseyNumber": "50",
+        "Grade": "Fr.",
+        "GradeLabel": "Freshman",
+        "Positions": [],
+        "PlayerName": "Don Don Dodsworth",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 2026163,
+        "JerseyNumber": "8",
+        "Grade": "Fr.",
+        "GradeLabel": "Freshman",
+        "Positions": [],
+        "PlayerName": "Bubby Pavlo",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200501,
+        "JerseyNumber": "10",
+        "Grade": "Fr.",
+        "GradeLabel": "Freshman",
+        "Positions": [],
+        "PlayerName": "Remy Thurston",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200309,
+        "JerseyNumber": "53",
+        "Grade": "Sr.",
+        "GradeLabel": "Senior",
+        "Positions": [],
+        "PlayerName": "David Stubbs",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200204,
+        "JerseyNumber": "2",
+        "Grade": "Sr.",
+        "GradeLabel": "Senior",
+        "Positions": [],
+        "PlayerName": "Matt Knight",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200448,
+        "JerseyNumber": "80",
+        "Grade": "So.",
+        "GradeLabel": "Sophomore",
+        "Positions": [],
+        "PlayerName": "Jeff Howard",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200455,
+        "JerseyNumber": "9",
+        "Grade": "Fr.",
+        "GradeLabel": "Freshman",
+        "Positions": [],
+        "PlayerName": "Andrew Chapman",
+        "Distinctions": []
+      }
+    ],
     "School": {
       "Name": "St. Andrew's (Savannah, GA)",
       "Mascot": "Lions",
