@@ -497,13 +497,24 @@ function RosterTableBlock({ rows }) {
                   {row.jersey || "—"}
                 </td>
                 <td className={`${recordTableStyles.bodyCell} text-left`}>
-                  {row.path ? (
-                    <Link to={row.path} className="text-blue-600 hover:underline">
-                      {row.name}
-                    </Link>
-                  ) : (
-                    <span>{row.name}</span>
-                  )}
+                  <div className="space-y-1">
+                    <div>
+                      {row.path ? (
+                        <Link to={row.path} className="text-blue-600 hover:underline">
+                          {row.name}
+                        </Link>
+                      ) : (
+                        <span>{row.name}</span>
+                      )}
+                    </div>
+                    {row.distinctions?.length ? (
+                      <div className="space-y-0.5 text-xs leading-4 text-slate-500">
+                        {row.distinctions.map((distinction) => (
+                          <div key={distinction}>{distinction}</div>
+                        ))}
+                      </div>
+                    ) : null}
+                  </div>
                 </td>
                 <td className={`${recordTableStyles.bodyCell} whitespace-nowrap`}>
                   {formatGrade(row.grade)}
@@ -643,6 +654,7 @@ export default function SeasonPage({ data, status = "" }) {
         jersey: player.JerseyNumber,
         name: playerName,
         grade: player.GradeLabel || player.Grade,
+        distinctions: Array.isArray(player.Distinctions) ? player.Distinctions : [],
         path: athleteProfilePath(player.PlayerID, "volleyball"),
       };
     });
@@ -654,6 +666,7 @@ export default function SeasonPage({ data, status = "" }) {
         jersey: "",
         name: member.Name || "—",
         grade: member.Position || "Staff",
+        distinctions: [],
         path: "",
       }));
 

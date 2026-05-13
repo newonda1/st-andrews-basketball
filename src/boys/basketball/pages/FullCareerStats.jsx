@@ -394,6 +394,9 @@ export default function FullCareerStats() {
 
           const total = totalsMap.get(playerId);
 
+          if (hasValue(adjustment.GamesPlayed)) {
+            total.GamesPlayed += safeNum(adjustment.GamesPlayed);
+          }
           if (hasValue(adjustment.Points)) {
             total.Points += safeNum(adjustment.Points);
             markHas(total, "Points");
@@ -446,6 +449,9 @@ export default function FullCareerStats() {
 
           const total = totalsMap.get(playerId);
 
+          if (hasValue(adjustment.GamesPlayed)) {
+            total.GamesPlayed += safeNum(adjustment.GamesPlayed);
+          }
           if (hasValue(adjustment.Points)) {
             total.Points += safeNum(adjustment.Points);
             markHas(total, "Points");

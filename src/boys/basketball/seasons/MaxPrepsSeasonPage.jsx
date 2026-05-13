@@ -60,6 +60,7 @@ function emptyTotals(playerId) {
     TwoPA: null,
     FTM: null,
     FTA: null,
+    GamesPlayed: null,
     GamesPlayedSet: new Set(),
   };
 }
@@ -69,6 +70,10 @@ function addStat(total, stat) {
     const value = stat?.[field];
     if (value === null || value === undefined || value === "") continue;
     total[field] = Number(total[field] || 0) + Number(value || 0);
+  }
+
+  if (hasValue(stat?.GamesPlayed)) {
+    total.GamesPlayed = Number(total.GamesPlayed || 0) + Number(stat.GamesPlayed || 0);
   }
 }
 
@@ -581,6 +586,9 @@ function MaxPrepsSeasonPage({
         Number.isFinite(Number(entry.GamesPlayed)) && entry.GamesPlayed !== null
           ? Number(entry.GamesPlayed)
           : calculated?.GamesPlayedSet?.size || 0;
+      if (hasValue(adjusted?.GamesPlayed)) {
+        total.GamesPlayed += Number(adjusted.GamesPlayed || 0);
+      }
 
       for (const field of STAT_FIELDS) {
         if (hasValue(importedTotals[field])) {

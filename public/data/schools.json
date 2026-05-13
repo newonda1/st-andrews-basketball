@@ -1827,7 +1827,9 @@
     "Name": "Laurence Manning Academy",
     "City": "Manning",
     "State": "SC",
-    "Mascot": "Swampcats"
+    "Mascot": "Swampcats",
+    "LogoPath": "/images/schools/logos/sc-laurence-manning-academy-manning.png",
+    "LogoSourceUrl": "https://images.squarespace-cdn.com/content/v1/69332c2d6a5071032b29d237/0584e295-e10c-4f84-a0b4-c7803af8b40e/updated%2B-FOOTER%2BShield%2B%2B%2BLMA%2B2.png"
   },
   {
     "SchoolID": "sc-lowcountry-day-school-pawleys-island",

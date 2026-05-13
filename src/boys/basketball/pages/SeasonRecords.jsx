@@ -353,6 +353,7 @@ export default function SeasonRecords() {
           }
 
           const entry = seasonMap[key];
+          entry.GamesPlayed += safeNum(adjustment.GamesPlayed);
           entry.Points += safeNum(adjustment.Points);
           entry.Rebounds += safeNum(adjustment.Rebounds);
           entry.Assists += safeNum(adjustment.Assists);

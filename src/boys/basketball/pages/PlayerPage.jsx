@@ -131,6 +131,7 @@ function PlayerPage() {
   const [games, setGames] = useState([]);
   const [seasonRosters, setSeasonRosters] = useState([]);
   const [playerStats, setPlayerStats] = useState([]);
+  const [adjustments, setAdjustments] = useState([]);
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -141,14 +142,22 @@ function PlayerPage() {
   useEffect(() => {
     async function loadData() {
       try {
-        const [playersRes, gamesRes, statsRes, rostersRes, schoolsRes, articlesRes] =
-          await Promise.all([
+        const [
+          playersRes,
+          gamesRes,
+          statsRes,
+          rostersRes,
+          schoolsRes,
+          articlesRes,
+          adjustmentsRes,
+        ] = await Promise.all([
           fetch("/data/players.json"),
           fetch("/data/boys/basketball/games.json"),
           fetch("/data/boys/basketball/playergamestats.json"),
           fetch(BOYS_BASKETBALL_ROSTERS_PATH),
           fetch(SCHOOLS_PATH),
           fetch("/data/boys/basketball/articles.json").catch(() => null),
+          fetch("/data/boys/basketball/adjustments.json").catch(() => null),
         ]);
 
         if (!playersRes.ok) throw new Error(`players.json ${playersRes.status}`);
@@ -157,20 +166,29 @@ function PlayerPage() {
         if (!rostersRes.ok) throw new Error(`seasonrosters.json ${rostersRes.status}`);
         if (!schoolsRes.ok) throw new Error(`schools.json ${schoolsRes.status}`);
 
-        const [playersData, gamesDataRaw, statsData, rostersData, schoolsData, articlesData] =
-          await Promise.all([
+        const [
+          playersData,
+          gamesDataRaw,
+          statsData,
+          rostersData,
+          schoolsData,
+          articlesData,
+          adjustmentsData,
+        ] = await Promise.all([
           playersRes.json(),
           gamesRes.json(),
           statsRes.json(),
           rostersRes.json(),
           schoolsRes.json(),
           articlesRes?.ok ? articlesRes.json() : Promise.resolve([]),
+          adjustmentsRes?.ok ? adjustmentsRes.json() : Promise.resolve([]),
         ]);
 
         setPlayers(playersData);
         setGames(hydrateGamesWithSchools(gamesDataRaw, schoolsData));
         setSeasonRosters(Array.isArray(rostersData) ? rostersData : []);
         setPlayerStats(statsData);
+        setAdjustments(Array.isArray(adjustmentsData) ? adjustmentsData : []);
         setArticles(Array.isArray(articlesData) ? articlesData : []);
       } catch (err) {
         console.error("Error loading player page data:", err);
@@ -247,10 +265,26 @@ function PlayerPage() {
       });
     });
 
+    adjustments
+      .filter((adjustment) => Number(adjustment?.PlayerID) === Number(playerId))
+      .forEach((adjustment) => {
+        const seasonKey = adjustment.SeasonID || adjustment.Season || "Unknown";
+
+        if (!seasonMap[seasonKey]) {
+          seasonMap[seasonKey] = { season: seasonKey, gamesPlayed: 0 };
+          statKeys.forEach((key) => (seasonMap[seasonKey][key] = 0));
+        }
+
+        seasonMap[seasonKey].gamesPlayed += Number(adjustment.GamesPlayed) || 0;
+        statKeys.forEach((key) => {
+          seasonMap[seasonKey][key] += Number(adjustment[key]) || 0;
+        });
+      });
+
     return Object.values(seasonMap).sort((a, b) =>
       String(a.season).localeCompare(String(b.season))
     );
-  }, [statsWithGameInfo]);
+  }, [adjustments, playerId, statsWithGameInfo]);
 
   const careerTotals = useMemo(() => {
     const base = {

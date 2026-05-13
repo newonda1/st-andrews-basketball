@@ -371,6 +371,7 @@ export default function CareerRecords() {
           const playerId = String(row.PlayerID);
           const totals = ensurePlayer(playerId);
 
+          totals.GamesPlayed += safeNum(row.GamesPlayed);
           totals.Points += safeNum(row.Points);
           totals.Rebounds += safeNum(row.Rebounds);
           totals.Assists += safeNum(row.Assists);
@@ -390,6 +391,7 @@ export default function CareerRecords() {
           const playerId = String(row.PlayerID);
           const totals = ensurePlayer(playerId);
 
+          totals.GamesPlayed += safeNum(row.GamesPlayed);
           totals.Points += safeNum(row.Points);
           totals.Rebounds += safeNum(row.Rebounds);
           totals.Assists += safeNum(row.Assists);
