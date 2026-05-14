@@ -285,6 +285,9 @@ function FinishersTable({ title, finishers = [], compact = false }) {
 }
 
 function TournamentCard({ tournament }) {
+  const sourceLabel = tournament.SourcePdfUrl
+    ? buildGolfPdfPagesLabel(tournament.SourcePdfPages)
+    : tournament.SourceLabel || "Newspaper source";
   const metaItems = [
     { label: "Date", value: tournament.Date ? formatGolfDate(tournament.Date) : null },
     { label: "Division", value: tournament.Division || "State Tournament" },
@@ -314,17 +317,29 @@ function TournamentCard({ tournament }) {
             ))}
           </div>
         </div>
-        <a
-          href={tournament.SourcePdfUrl}
-          target="_blank"
-          rel="noreferrer"
-          className="inline-flex rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 no-underline"
-        >
-          {buildGolfPdfPagesLabel(tournament.SourcePdfPages)}
-        </a>
+        {tournament.SourcePdfUrl ? (
+          <a
+            href={tournament.SourcePdfUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 no-underline"
+          >
+            {sourceLabel}
+          </a>
+        ) : (
+          <span className="inline-flex rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700">
+            {sourceLabel}
+          </span>
+        )}
       </div>
 
       <p className="mt-4 text-sm leading-7 text-slate-700">{tournament.Summary}</p>
+
+      {tournament.SourceCitation ? (
+        <p className="mt-2 text-xs leading-5 text-slate-500">
+          Source: {tournament.SourceCitation}
+        </p>
+      ) : null}
 
       {tournament.ArchiveNote ? (
         <p className="mt-3 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm leading-7 text-amber-900">
@@ -915,7 +930,7 @@ export default function SeasonPage({
       {seasonTournaments.length || !seasonMatches.length ? (
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold text-slate-900">
-            State Tournaments
+            Tournaments
           </h2>
 
           {seasonTournaments.length ? (

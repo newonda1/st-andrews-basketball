@@ -1035,6 +1035,625 @@
     "RecordNote": "Records: St. Andrew's 13-1-1"
   },
   {
+    "GameID": 20050404,
+    "Season": 2005,
+    "SeasonID": 2005,
+    "DisplaySeason": "Spring 2005",
+    "SourceSeasonLabel": "Spring 2005",
+    "Date": "2005-04-04",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Cathedral Academy",
+    "OpponentLocation": "North Charleston, SC",
+    "OpponentSlug": "cathedral-academy",
+    "OpponentUrl": "",
+    "OpponentID": "sc-cathedral-academy-north-charleston",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "Notes": "",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 3,
+    "OpponentScore": 2,
+    "RecapTitle": "St. Andrew's wins opener over Cathedral Academy on penalty kicks",
+    "Recap": "St. Andrew's opened the recovered Spring 2005 boys soccer archive with a 3-2 region win over Cathedral Academy on April 4. Hamish Huntley scored twice, while Kevin Crouch, Ryan Kirby, and Chris Rauers were credited with assists.\n\nEmmett Eason made six saves, and St. Andrew's outscored Cathedral Academy 3-1 on penalty kicks in overtime to move to 1-0.",
+    "SourceCitation": "\"Spring Sports,\" Savannah Morning News, Apr. 6, 2005, Page 4C.",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "2005-04-06",
+    "GoalScorers": [
+      {
+        "Team": "Cathedral Academy",
+        "PlayerName": "Anson Roberts",
+        "Goals": 1
+      },
+      {
+        "Team": "Cathedral Academy",
+        "PlayerName": "Kenneth Chandler",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200423,
+        "PlayerName": "Hamish Huntley",
+        "Goals": 2
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "Cathedral Academy",
+        "PlayerName": "Kenneth Chandler",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 2026162,
+        "PlayerName": "Kevin Crouch",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 2026159,
+        "PlayerName": "Ryan Kirby",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200311,
+        "PlayerName": "Chris Rauers",
+        "Assists": 1
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "Cathedral Academy",
+        "PlayerName": "Joey Gorman",
+        "Saves": 9
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200424,
+        "PlayerName": "Emmett Eason",
+        "Saves": 6
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 1-0. St. Andrew's outscored Cathedral Academy 3-1 on penalty kicks in overtime.",
+    "Overtime": true,
+    "PenaltyKicks": true
+  },
+  {
+    "GameID": 20050409,
+    "Season": 2005,
+    "SeasonID": 2005,
+    "DisplaySeason": "Spring 2005",
+    "SourceSeasonLabel": "Spring 2005",
+    "Date": "2005-04-09",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Pinewood Preparatory School",
+    "OpponentLocation": "Summerville, SC",
+    "OpponentSlug": "pinewood-prep",
+    "OpponentUrl": "",
+    "OpponentID": "sc-pinewood-preparatory-school-summerville",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "Notes": "",
+    "GameType": "Non-Region",
+    "Result": "L",
+    "TeamScore": 0,
+    "OpponentScore": 12,
+    "RecapTitle": "Pinewood Prep shuts out St. Andrew's",
+    "Recap": "Pinewood Prep defeated St. Andrew's 12-0 on April 9. The result was referenced in the April 14 Savannah Morning News spring sports roundup, which did not include scoring details.",
+    "SourceCitation": "\"Spring Sports,\" Savannah Morning News, Apr. 14, 2005, Page 3D.",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "2005-04-14",
+    "GoalScorers": [],
+    "Assists": [],
+    "Saves": [],
+    "RecordNote": "Referenced in the April 14 report before St. Andrew's was listed at 1-2 overall."
+  },
+  {
+    "GameID": 20050413,
+    "Season": 2005,
+    "SeasonID": 2005,
+    "DisplaySeason": "Spring 2005",
+    "SourceSeasonLabel": "Spring 2005",
+    "Date": "2005-04-13",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Beaufort Academy",
+    "OpponentLocation": "Beaufort, SC",
+    "OpponentSlug": "beaufort-academy",
+    "OpponentUrl": "",
+    "OpponentID": "sc-beaufort-academy-beaufort",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "Notes": "",
+    "GameType": "Non-Region",
+    "Result": "L",
+    "TeamScore": 0,
+    "OpponentScore": 4,
+    "RecapTitle": "Beaufort Academy defeats St. Andrew's",
+    "Recap": "Beaufort Academy defeated St. Andrew's 4-0 in the April 13 boys soccer result. The published brief did not list goal scorers or saves, but it reported St. Andrew's at 1-2 overall and 1-0 in SCISA Region 2-AA.",
+    "SourceCitation": "\"Spring Sports,\" Savannah Morning News, Apr. 14, 2005, Page 3D.",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "2005-04-14",
+    "GoalScorers": [],
+    "Assists": [],
+    "Saves": [],
+    "RecordNote": "Records: St. Andrew's 1-2, 1-0 SCISA Region 2-AA."
+  },
+  {
+    "GameID": 20050419,
+    "Season": 2005,
+    "SeasonID": 2005,
+    "DisplaySeason": "Spring 2005",
+    "SourceSeasonLabel": "Spring 2005",
+    "Date": "2005-04-19",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Beaufort Academy",
+    "OpponentLocation": "Beaufort, SC",
+    "OpponentSlug": "beaufort-academy",
+    "OpponentUrl": "",
+    "OpponentID": "sc-beaufort-academy-beaufort",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "Notes": "",
+    "GameType": "Non-Region",
+    "Result": "L",
+    "TeamScore": 0,
+    "OpponentScore": 3,
+    "RecapTitle": "Beaufort Academy blanks St. Andrew's",
+    "Recap": "Beaufort Academy defeated St. Andrew's 3-0 on April 19. Alex Apps scored once and Nathan Andreport scored twice for Beaufort Academy, while Emmett Eason made 12 saves for St. Andrew's.",
+    "SourceCitation": "\"Spring Sports,\" Savannah Morning News, Apr. 20, 2005, Page 2C.",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "2005-04-20",
+    "GoalScorers": [
+      {
+        "Team": "Beaufort Academy",
+        "PlayerName": "Alex Apps",
+        "Goals": 1
+      },
+      {
+        "Team": "Beaufort Academy",
+        "PlayerName": "Nathan Andreport",
+        "Goals": 2
+      }
+    ],
+    "Assists": [],
+    "Saves": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200424,
+        "PlayerName": "Emmett Eason",
+        "Saves": 12
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 1-3, 1-0 SCISA Region 1-AA; Beaufort Academy 5-5, 3-5 SCISA Region 1-AAA."
+  },
+  {
+    "GameID": 20050423,
+    "Season": 2005,
+    "SeasonID": 2005,
+    "DisplaySeason": "Spring 2005",
+    "SourceSeasonLabel": "Spring 2005",
+    "Date": "2005-04-23",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Pinewood Preparatory School",
+    "OpponentLocation": "Summerville, SC",
+    "OpponentSlug": "pinewood-prep",
+    "OpponentUrl": "",
+    "OpponentID": "sc-pinewood-preparatory-school-summerville",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "Notes": "",
+    "GameType": "Non-Region",
+    "Result": "L",
+    "TeamScore": 1,
+    "OpponentScore": 10,
+    "RecapTitle": "Harrison scores in loss to Pinewood Prep",
+    "Recap": "Pinewood Prep defeated St. Andrew's 10-1 on April 23. Ben Harrison scored for St. Andrew's on an assist from Hamish Huntley, and Emmett Eason made 10 saves.\n\nPinewood Prep's scoring line included three goals from Elliott Hitchcock and two each from Carlos Grover and Joe Kredich.",
+    "SourceCitation": "\"Spring Sports,\" Savannah Morning News, Apr. 24, 2005, Page 7C.",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "2005-04-24",
+    "GoalScorers": [
+      {
+        "Team": "Pinewood Prep",
+        "PlayerName": "Boris Braeuning",
+        "Goals": 1
+      },
+      {
+        "Team": "Pinewood Prep",
+        "PlayerName": "Carlos Grover",
+        "Goals": 2
+      },
+      {
+        "Team": "Pinewood Prep",
+        "PlayerName": "Elliott Hitchcock",
+        "Goals": 3
+      },
+      {
+        "Team": "Pinewood Prep",
+        "PlayerName": "Ian Johnson",
+        "Goals": 1
+      },
+      {
+        "Team": "Pinewood Prep",
+        "PlayerName": "Joe Kredich",
+        "Goals": 2
+      },
+      {
+        "Team": "Pinewood Prep",
+        "PlayerName": "James Stroud",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 2026161,
+        "PlayerName": "Ben Harrison",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200423,
+        "PlayerName": "Hamish Huntley",
+        "Assists": 1
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "Pinewood Prep",
+        "PlayerName": "James Stroud",
+        "Saves": 3
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200424,
+        "PlayerName": "Emmett Eason",
+        "Saves": 10
+      }
+    ],
+    "RecordNote": "Records: Pinewood Prep 12-4-2; St. Andrew's 1-4, 1-0 SCISA 1-AA."
+  },
+  {
+    "GameID": 20050425,
+    "Season": 2005,
+    "SeasonID": 2005,
+    "DisplaySeason": "Spring 2005",
+    "SourceSeasonLabel": "Spring 2005",
+    "Date": "2005-04-25",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Hilton Head Preparatory School",
+    "OpponentLocation": "Hilton Head Island, SC",
+    "OpponentSlug": "hilton-head-prep",
+    "OpponentUrl": "",
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "Notes": "",
+    "GameType": "Non-Region",
+    "Result": "L",
+    "TeamScore": 1,
+    "OpponentScore": 6,
+    "RecapTitle": "Huntley scores against Hilton Head Prep",
+    "Recap": "Hilton Head Prep defeated St. Andrew's 6-1 on April 25. Hamish Huntley scored for St. Andrew's from a Remy Thurston assist. Nick Strimfel scored four goals for Hilton Head Prep.",
+    "SourceCitation": "\"Spring Sports Roundup,\" Savannah Morning News, Apr. 26, 2005, Page 4D.",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "2005-04-26",
+    "GoalScorers": [
+      {
+        "Team": "Hilton Head Prep",
+        "PlayerName": "Nick Strimfel",
+        "Goals": 4
+      },
+      {
+        "Team": "Hilton Head Prep",
+        "PlayerName": "Francis Noonan",
+        "Goals": 1
+      },
+      {
+        "Team": "Hilton Head Prep",
+        "PlayerName": "Alex Mavrogodago",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200423,
+        "PlayerName": "Hamish Huntley",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200501,
+        "PlayerName": "Remy Thurston",
+        "Assists": 1
+      }
+    ],
+    "Saves": [],
+    "RecordNote": "Records: Hilton Head Prep 4-8; St. Andrew's 1-5."
+  },
+  {
+    "GameID": 20050506,
+    "Season": 2005,
+    "SeasonID": 2005,
+    "DisplaySeason": "Spring 2005",
+    "SourceSeasonLabel": "Spring 2005",
+    "Date": "2005-05-06",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Cathedral Academy",
+    "OpponentLocation": "North Charleston, SC",
+    "OpponentSlug": "cathedral-academy",
+    "OpponentUrl": "",
+    "OpponentID": "sc-cathedral-academy-north-charleston",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "Notes": "",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 2,
+    "OpponentScore": 1,
+    "RecapTitle": "St. Andrew's earns Region 1 top seed",
+    "Recap": "St. Andrew's defeated Cathedral Academy 2-1 on May 6 to finish 2-0 in SCISA Region 1-AA. Chris Rauers and Brian Crouch scored for the Saints, Kevin Crouch had an assist, and Emmett Eason made six saves.\n\nThe win gave St. Andrew's the top spot from Region 1 for the SCISA Class AA state tournament and a first-round bye.",
+    "SourceCitation": "\"Spring Sports,\" Savannah Morning News, May 8, 2005, Page 4C.",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "2005-05-08",
+    "GoalScorers": [
+      {
+        "Team": "Cathedral Academy",
+        "PlayerName": "Kenneth Chandler",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200311,
+        "PlayerName": "Chris Rauers",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 2026169,
+        "PlayerName": "Brian Crouch",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 2026162,
+        "PlayerName": "Kevin Crouch",
+        "Assists": 1
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "Cathedral Academy",
+        "PlayerName": "Joey Gorman",
+        "Saves": 7
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200424,
+        "PlayerName": "Emmett Eason",
+        "Saves": 6
+      }
+    ],
+    "RecordNote": "Records: Cathedral Academy 7-5-1; St. Andrew's 2-5, 2-0 SCISA Region 1-AA."
+  },
+  {
+    "GameID": 20050510,
+    "Season": 2005,
+    "SeasonID": 2005,
+    "DisplaySeason": "Spring 2005",
+    "SourceSeasonLabel": "Spring 2005",
+    "Date": "2005-05-10",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Unknown",
+    "OpponentLocation": "",
+    "OpponentSlug": "unknown",
+    "OpponentUrl": "",
+    "OpponentID": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "Notes": "Placeholder added to reconcile the published 3-6 final record. Categorized as non-region until the original competition context is recovered.",
+    "GameType": "Non-Region",
+    "Result": "W",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "RecapTitle": "Unidentified St. Andrew's win before state tournament exit",
+    "Recap": "The May 12 Savannah Morning News listed St. Andrew's at 3-6 after the SCISA Class AA state tournament loss to Byrnes Academy. The recovered game list accounts for a 2-6 record, so this placeholder preserves the missing win until the opponent, date, and score are recovered.",
+    "SourceCitation": "Inferred from \"Spring Sports,\" Savannah Morning News, May 12, 2005, Page 6D.",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "2005-05-12",
+    "GoalScorers": [],
+    "Assists": [],
+    "Saves": [],
+    "RecordNote": "The May 12 state tournament report listed St. Andrew's final record at 3-6.",
+    "isPlaceholder": true,
+    "IsPlaceholder": true
+  },
+  {
+    "GameID": 20050511,
+    "Season": 2005,
+    "SeasonID": 2005,
+    "DisplaySeason": "Spring 2005",
+    "SourceSeasonLabel": "Spring 2005",
+    "Date": "2005-05-11",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "James F. Byrnes Academy",
+    "OpponentLocation": "Quinby, SC",
+    "OpponentSlug": "byrnes-academy",
+    "OpponentUrl": "",
+    "OpponentID": "sc-james-f-byrnes-academy-quinby",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "Notes": "",
+    "GameType": "State Tournament",
+    "Result": "L",
+    "TeamScore": 0,
+    "OpponentScore": 2,
+    "RecapTitle": "Byrnes Academy ends St. Andrew's state tournament run",
+    "Recap": "Byrnes Academy defeated St. Andrew's 2-0 in the SCISA Class AA state tournament. Lucienne LaPiere and Roddy Jordan scored for Byrnes, while Emmett Eason made five saves for St. Andrew's.\n\nThe Savannah Morning News listed St. Andrew's final record at 3-6.",
+    "SourceCitation": "\"Spring Sports,\" Savannah Morning News, May 12, 2005, Page 6D.",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "2005-05-12",
+    "GoalScorers": [
+      {
+        "Team": "Byrnes Academy",
+        "PlayerName": "Lucienne LaPiere",
+        "Goals": 1
+      },
+      {
+        "Team": "Byrnes Academy",
+        "PlayerName": "Roddy Jordan",
+        "Goals": 1
+      }
+    ],
+    "Assists": [],
+    "Saves": [
+      {
+        "Team": "Byrnes Academy",
+        "PlayerName": "Garret Ruth",
+        "Saves": 7
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200424,
+        "PlayerName": "Emmett Eason",
+        "Saves": 5
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 3-6. Byrnes Academy is in Florence, S.C."
+  },
+  {
+    "Season": 2006,
+    "SeasonID": 2006,
+    "DisplaySeason": "Spring 2006",
+    "SourceSeasonLabel": "Spring 2006",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "SourceCitation": "Boys' Soccer game brief",
+    "SourcePublication": "",
+    "GoalScorers": [],
+    "Assists": [],
+    "Saves": [],
+    "GameID": 20060401,
+    "Date": "",
+    "DisplayDate": "Between Mar. 31 and Apr. 5, 2006",
+    "Opponent": "Unknown",
+    "OpponentLocation": "",
+    "OpponentSlug": "unknown-opponent-region-win",
+    "OpponentID": "",
+    "Notes": "Placeholder added to reconcile St. Andrew's published record before the April 5 Trident Academy game. The opponent, date, site, and score are not yet known.",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "RecapTitle": "Missing region win placeholder",
+    "Recap": "St. Andrew's had one additional SCISA Region 4-AAA win before the April 5, 2006 Trident Academy game. The opponent, date, site, and score are not yet known.",
+    "SourceDate": "",
+    "RecordNote": "Published April 5 Trident Academy brief listed St. Andrew's at 4-1 overall and 4-0 in SCISA Region 4-AAA, requiring one additional earlier region win."
+  },
+  {
+    "Season": 2006,
+    "SeasonID": 2006,
+    "DisplaySeason": "Spring 2006",
+    "SourceSeasonLabel": "Spring 2006",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "SourceCitation": "Boys' Soccer game brief",
+    "SourcePublication": "",
+    "GoalScorers": [],
+    "Assists": [],
+    "Saves": [],
+    "GameID": 20060402,
+    "Date": "",
+    "DisplayDate": "Between Mar. 31 and Apr. 5, 2006",
+    "Opponent": "Unknown",
+    "OpponentLocation": "",
+    "OpponentSlug": "unknown-opponent-non-region-loss",
+    "OpponentID": "",
+    "Notes": "Placeholder added to reconcile St. Andrew's published overall record before the April 5 Trident Academy game. The opponent, date, site, and score are not yet known.",
+    "GameType": "Non-Region",
+    "Result": "L",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "RecapTitle": "Missing non-region loss placeholder",
+    "Recap": "St. Andrew's had one additional non-region loss before the April 5, 2006 Trident Academy game. The opponent, date, site, and score are not yet known.",
+    "SourceDate": "",
+    "RecordNote": "Published April 5 Trident Academy brief listed St. Andrew's at 4-1 overall and 4-0 in SCISA Region 4-AAA, requiring one additional earlier non-region loss."
+  },
+  {
+    "Season": 2006,
+    "SeasonID": 2006,
+    "DisplaySeason": "Spring 2006",
+    "SourceSeasonLabel": "Spring 2006",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "SourceCitation": "Boys' Soccer game brief",
+    "SourcePublication": "",
+    "GoalScorers": [],
+    "Assists": [],
+    "Saves": [],
+    "GameID": 20060406,
+    "Date": "",
+    "DisplayDate": "Between Apr. 5 and Apr. 20, 2006",
+    "Opponent": "Unknown",
+    "OpponentLocation": "",
+    "OpponentSlug": "unknown-non-region-loss-after-april-5",
+    "OpponentID": "",
+    "Notes": "Placeholder added to reconcile St. Andrew's published overall record before the April 20 Cathedral Academy game. The opponent, date, site, and score are not yet known.",
+    "GameType": "Non-Region",
+    "Result": "L",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "RecapTitle": "Missing non-region loss placeholder",
+    "Recap": "St. Andrew's had one additional non-region loss between the April 5, 2006 Trident Academy game and the April 20, 2006 Cathedral Academy game. The opponent, date, site, and score are not yet known.",
+    "SourceDate": "",
+    "RecordNote": "Published April 20 Cathedral Academy brief listed St. Andrew's at 5-2 overall and 5-0 in SCISA Region 1-AA, requiring one additional non-region loss after April 5."
+  },
+  {
     "GameID": 20060323,
     "Season": 2006,
     "SeasonID": 2006,
@@ -1117,72 +1736,68 @@
     "RecordNote": "Records: Charleston Collegiate 0-1; St. Andrew's 1-0, 1-0 SCISA Region 4-AAA"
   },
   {
+    "GameID": 2006032301,
     "Season": 2006,
     "SeasonID": 2006,
     "DisplaySeason": "Spring 2006",
     "SourceSeasonLabel": "Spring 2006",
+    "Date": "2006-03-31",
     "Time": "TBA",
     "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
     "Team": "St. Andrew's Lions",
+    "Opponent": "Cathedral Academy",
+    "OpponentLocation": "North Charleston, SC",
+    "OpponentSlug": "cathedral-academy",
     "OpponentUrl": "",
+    "OpponentID": "sc-cathedral-academy-north-charleston",
     "GameUrl": "",
     "LocationType": "",
     "Venue": "",
-    "SourceCitation": "Boys' Soccer game brief",
-    "SourcePublication": "",
-    "GoalScorers": [],
-    "Assists": [],
-    "Saves": [],
-    "GameID": 20060401,
-    "Date": "",
-    "DisplayDate": "Between Mar. 31 and Apr. 5, 2006",
-    "Opponent": "Unknown",
-    "OpponentLocation": "",
-    "OpponentSlug": "unknown-opponent-region-win",
-    "OpponentID": "",
-    "Notes": "Placeholder added to reconcile St. Andrew's published record before the April 5 Trident Academy game. The opponent, date, site, and score are not yet known.",
+    "Notes": "Published brief did not identify whether the game was home or away.",
     "GameType": "Region",
     "Result": "W",
-    "TeamScore": null,
-    "OpponentScore": null,
-    "RecapTitle": "Missing region win placeholder",
-    "Recap": "St. Andrew's had one additional SCISA Region 4-AAA win before the April 5, 2006 Trident Academy game. The opponent, date, site, and score are not yet known.",
-    "SourceDate": "",
-    "RecordNote": "Published April 5 Trident Academy brief listed St. Andrew's at 4-1 overall and 4-0 in SCISA Region 4-AAA, requiring one additional earlier region win."
-  },
-  {
-    "Season": 2006,
-    "SeasonID": 2006,
-    "DisplaySeason": "Spring 2006",
-    "SourceSeasonLabel": "Spring 2006",
-    "Time": "TBA",
-    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
-    "Team": "St. Andrew's Lions",
-    "OpponentUrl": "",
-    "GameUrl": "",
-    "LocationType": "",
-    "Venue": "",
+    "TeamScore": 1,
+    "OpponentScore": 0,
+    "RecapTitle": "St. Andrew's edges Cathedral Academy for second shutout",
+    "Recap": "St. Andrew's defeated Cathedral Academy 1-0 in boys soccer on March 31, 2006.\n\nSteven Carbone scored for St. Andrew's, with Skip McGee credited with the assist. Emmett Eason made eight saves for St. Andrew's. Sean Monahan and Ben Prillaman made four saves apiece for Cathedral Academy. The brief listed Cathedral Academy at 8-2 in SCISA-AA and St. Andrew at 2-0 in SCISA-AA.",
     "SourceCitation": "Boys' Soccer game brief",
     "SourcePublication": "",
-    "GoalScorers": [],
-    "Assists": [],
-    "Saves": [],
-    "GameID": 20060402,
-    "Date": "",
-    "DisplayDate": "Between Mar. 31 and Apr. 5, 2006",
-    "Opponent": "Unknown",
-    "OpponentLocation": "",
-    "OpponentSlug": "unknown-opponent-non-region-loss",
-    "OpponentID": "",
-    "Notes": "Placeholder added to reconcile St. Andrew's published overall record before the April 5 Trident Academy game. The opponent, date, site, and score are not yet known.",
-    "GameType": "Non-Region",
-    "Result": "L",
-    "TeamScore": null,
-    "OpponentScore": null,
-    "RecapTitle": "Missing non-region loss placeholder",
-    "Recap": "St. Andrew's had one additional non-region loss before the April 5, 2006 Trident Academy game. The opponent, date, site, and score are not yet known.",
-    "SourceDate": "",
-    "RecordNote": "Published April 5 Trident Academy brief listed St. Andrew's at 4-1 overall and 4-0 in SCISA Region 4-AAA, requiring one additional earlier non-region loss."
+    "SourceDate": "2006-03-31",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 2026156,
+        "PlayerName": "Steven Carbone",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200456,
+        "PlayerName": "Skip McGee",
+        "Assists": 1
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "Cathedral Academy",
+        "PlayerName": "Sean Monahan",
+        "Saves": 4
+      },
+      {
+        "Team": "Cathedral Academy",
+        "PlayerName": "Ben Prillaman",
+        "Saves": 4
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200424,
+        "PlayerName": "Emmett Eason",
+        "Saves": 8
+      }
+    ],
+    "RecordNote": "Records: Cathedral Academy 8-2 in SCISA Region 4-AAA; St. Andrew's 2-0, 2-0 SCISA Region 4-AAA"
   },
   {
     "Season": 2006,
@@ -1321,104 +1936,6 @@
     "Recap": "St. Andrew's defeated Trident Academy 12-0 in a SCISA Region 4-AAA boys soccer game on April 5, 2006.\n\nJavier Gutierrez scored three goals, Garrett McCarthy and Brian Crouch scored two apiece, and George Hughes, Skip McGee, Ty Massey, Ben Harrison, and Andrew Chapman each added one. Harrison, Chapman, and Gutierrez each had two assists, while Crouch, McCarthy, Steven Carbone, Remy Thurston, and Jamie Cooper added one assist apiece. Emmett Eason made six saves as St. Andrew's moved to 4-1 overall and 4-0 in SCISA Region 4-AAA.",
     "SourceDate": "2006-04-05",
     "RecordNote": "Records: St. Andrew's 4-1 overall, 4-0 SCISA Region 4-AAA"
-  },
-  {
-    "Season": 2006,
-    "SeasonID": 2006,
-    "DisplaySeason": "Spring 2006",
-    "SourceSeasonLabel": "Spring 2006",
-    "Time": "TBA",
-    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
-    "Team": "St. Andrew's Lions",
-    "OpponentUrl": "",
-    "GameUrl": "",
-    "LocationType": "",
-    "Venue": "",
-    "SourceCitation": "Boys' Soccer game brief",
-    "SourcePublication": "",
-    "GoalScorers": [],
-    "Assists": [],
-    "Saves": [],
-    "GameID": 20060406,
-    "Date": "",
-    "DisplayDate": "Between Apr. 5 and Apr. 20, 2006",
-    "Opponent": "Unknown",
-    "OpponentLocation": "",
-    "OpponentSlug": "unknown-non-region-loss-after-april-5",
-    "OpponentID": "",
-    "Notes": "Placeholder added to reconcile St. Andrew's published overall record before the April 20 Cathedral Academy game. The opponent, date, site, and score are not yet known.",
-    "GameType": "Non-Region",
-    "Result": "L",
-    "TeamScore": null,
-    "OpponentScore": null,
-    "RecapTitle": "Missing non-region loss placeholder",
-    "Recap": "St. Andrew's had one additional non-region loss between the April 5, 2006 Trident Academy game and the April 20, 2006 Cathedral Academy game. The opponent, date, site, and score are not yet known.",
-    "SourceDate": "",
-    "RecordNote": "Published April 20 Cathedral Academy brief listed St. Andrew's at 5-2 overall and 5-0 in SCISA Region 1-AA, requiring one additional non-region loss after April 5."
-  },
-  {
-    "GameID": 2006032301,
-    "Season": 2006,
-    "SeasonID": 2006,
-    "DisplaySeason": "Spring 2006",
-    "SourceSeasonLabel": "Spring 2006",
-    "Date": "2006-03-31",
-    "Time": "TBA",
-    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
-    "Team": "St. Andrew's Lions",
-    "Opponent": "Cathedral Academy",
-    "OpponentLocation": "North Charleston, SC",
-    "OpponentSlug": "cathedral-academy",
-    "OpponentUrl": "",
-    "OpponentID": "sc-cathedral-academy-north-charleston",
-    "GameUrl": "",
-    "LocationType": "",
-    "Venue": "",
-    "Notes": "Published brief did not identify whether the game was home or away.",
-    "GameType": "Region",
-    "Result": "W",
-    "TeamScore": 1,
-    "OpponentScore": 0,
-    "RecapTitle": "St. Andrew's edges Cathedral Academy for second shutout",
-    "Recap": "St. Andrew's defeated Cathedral Academy 1-0 in boys soccer on March 31, 2006.\n\nSteven Carbone scored for St. Andrew's, with Skip McGee credited with the assist. Emmett Eason made eight saves for St. Andrew's. Sean Monahan and Ben Prillaman made four saves apiece for Cathedral Academy. The brief listed Cathedral Academy at 8-2 in SCISA-AA and St. Andrew at 2-0 in SCISA-AA.",
-    "SourceCitation": "Boys' Soccer game brief",
-    "SourcePublication": "",
-    "SourceDate": "2006-03-31",
-    "GoalScorers": [
-      {
-        "Team": "St. Andrew's",
-        "PlayerID": 2026156,
-        "PlayerName": "Steven Carbone",
-        "Goals": 1
-      }
-    ],
-    "Assists": [
-      {
-        "Team": "St. Andrew's",
-        "PlayerID": 200456,
-        "PlayerName": "Skip McGee",
-        "Assists": 1
-      }
-    ],
-    "Saves": [
-      {
-        "Team": "Cathedral Academy",
-        "PlayerName": "Sean Monahan",
-        "Saves": 4
-      },
-      {
-        "Team": "Cathedral Academy",
-        "PlayerName": "Ben Prillaman",
-        "Saves": 4
-      },
-      {
-        "Team": "St. Andrew's",
-        "PlayerID": 200424,
-        "PlayerName": "Emmett Eason",
-        "Saves": 8
-      }
-    ],
-    "RecordNote": "Records: Cathedral Academy 8-2 in SCISA Region 4-AAA; St. Andrew's 2-0, 2-0 SCISA Region 4-AAA"
   },
   {
     "GameID": 20060420,

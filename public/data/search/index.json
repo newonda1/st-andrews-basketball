@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-14T13:35:10.717Z",
-  "itemCount": 1283,
+  "generatedAt": "2026-05-14T15:10:18.508Z",
+  "itemCount": 1295,
   "items": [
     {
       "id": "athletics-home",
@@ -14022,6 +14022,59 @@
       ]
     },
     {
+      "id": "girls-soccer-athlete-2027005",
+      "type": "athlete",
+      "title": "Maggie Sammons",
+      "subtitle": "Girls Soccer athlete - Class of 2005",
+      "to": "/athletics/girls/soccer/players/2027005",
+      "keywords": [
+        "Girls Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Maggie",
+        "Sammons",
+        "Sammons Maggie",
+        "class of 2005",
+        "grad 2005"
+      ]
+    },
+    {
+      "id": "girls-soccer-athlete-2026341",
+      "type": "athlete",
+      "title": "Ann Cole",
+      "subtitle": "Girls Soccer athlete",
+      "to": "/athletics/girls/soccer/players/2026341",
+      "keywords": [
+        "Girls Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Ann",
+        "Cole",
+        "Cole Ann"
+      ]
+    },
+    {
+      "id": "girls-soccer-athlete-2026342",
+      "type": "athlete",
+      "title": "Clara Rucker",
+      "subtitle": "Girls Soccer athlete",
+      "to": "/athletics/girls/soccer/players/2026342",
+      "keywords": [
+        "Girls Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Clara",
+        "Rucker",
+        "Rucker Clara"
+      ]
+    },
+    {
       "id": "boys-soccer-athlete-200105",
       "type": "athlete",
       "title": "Will Massey",
@@ -14369,6 +14422,82 @@
       ]
     },
     {
+      "id": "boys-soccer-athlete-2026162",
+      "type": "athlete",
+      "title": "Kevin Crouch",
+      "subtitle": "Boys Soccer athlete - Class of 2006",
+      "to": "/athletics/boys/soccer/players/2026162",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Kevin",
+        "Crouch",
+        "Crouch Kevin",
+        "class of 2006",
+        "grad 2006"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-2026159",
+      "type": "athlete",
+      "title": "Ryan Kirby",
+      "subtitle": "Boys Soccer athlete - Class of 2006",
+      "to": "/athletics/boys/soccer/players/2026159",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Ryan",
+        "Kirby",
+        "Kirby Ryan",
+        "class of 2006",
+        "grad 2006"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-2026161",
+      "type": "athlete",
+      "title": "Ben Harrison",
+      "subtitle": "Boys Soccer athlete - Class of 2007",
+      "to": "/athletics/boys/soccer/players/2026161",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Ben",
+        "Harrison",
+        "Harrison Ben",
+        "class of 2007",
+        "grad 2007"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-2026169",
+      "type": "athlete",
+      "title": "Brian Crouch",
+      "subtitle": "Boys Soccer athlete - Class of 2008",
+      "to": "/athletics/boys/soccer/players/2026169",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Brian",
+        "Crouch",
+        "Crouch Brian",
+        "class of 2008",
+        "grad 2008"
+      ]
+    },
+    {
       "id": "boys-soccer-athlete-200604",
       "type": "athlete",
       "title": "Javier Gutierrez",
@@ -14442,25 +14571,6 @@
         "McCarthy Garrett",
         "class of 2006",
         "grad 2006"
-      ]
-    },
-    {
-      "id": "boys-soccer-athlete-2026169",
-      "type": "athlete",
-      "title": "Brian Crouch",
-      "subtitle": "Boys Soccer athlete - Class of 2008",
-      "to": "/athletics/boys/soccer/players/2026169",
-      "keywords": [
-        "Boys Soccer",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Brian",
-        "Crouch",
-        "Crouch Brian",
-        "class of 2008",
-        "grad 2008"
       ]
     },
     {
@@ -23068,6 +23178,23 @@
       ]
     },
     {
+      "id": "girls-soccer-team-first-presbyterian-day-school",
+      "type": "team",
+      "title": "First Presbyterian Day School",
+      "subtitle": "Girls Soccer opponent history - Macon, GA",
+      "to": "/athletics/girls/soccer/records/opponents?team=First+Presbyterian+Day+School",
+      "keywords": [
+        "Girls Soccer",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "First Presbyterian Day School",
+        "Macon",
+        "GA"
+      ]
+    },
+    {
       "id": "girls-soccer-team-dominion-christian-academy",
       "type": "team",
       "title": "Dominion Christian Academy",
@@ -23083,23 +23210,6 @@
         "Dominion Christian",
         "Knights",
         "Marietta",
-        "GA"
-      ]
-    },
-    {
-      "id": "girls-soccer-team-first-presbyterian-day-school",
-      "type": "team",
-      "title": "First Presbyterian Day School",
-      "subtitle": "Girls Soccer opponent history - Macon, GA",
-      "to": "/athletics/girls/soccer/records/opponents?team=First+Presbyterian+Day+School",
-      "keywords": [
-        "Girls Soccer",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "First Presbyterian Day School",
-        "Macon",
         "GA"
       ]
     },
@@ -23231,6 +23341,62 @@
       ]
     },
     {
+      "id": "girls-soccer-team-pinewood-preparatory-school",
+      "type": "team",
+      "title": "Pinewood Preparatory School",
+      "subtitle": "Girls Soccer opponent history - Summerville, SC",
+      "to": "/athletics/girls/soccer/records/opponents?team=Pinewood+Preparatory+School",
+      "keywords": [
+        "Girls Soccer",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Pinewood Preparatory School",
+        "Pinewood Prep",
+        "Panthers",
+        "Summerville",
+        "SC"
+      ]
+    },
+    {
+      "id": "girls-soccer-team-james-island-christian-school",
+      "type": "team",
+      "title": "James Island Christian School",
+      "subtitle": "Girls Soccer opponent history - Charleston, SC",
+      "to": "/athletics/girls/soccer/records/opponents?team=James+Island+Christian+School",
+      "keywords": [
+        "Girls Soccer",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "James Island Christian School",
+        "Lions",
+        "Charleston",
+        "SC"
+      ]
+    },
+    {
+      "id": "girls-soccer-team-hilton-head-preparatory-school",
+      "type": "team",
+      "title": "Hilton Head Preparatory School",
+      "subtitle": "Girls Soccer opponent history - Hilton Head Island, SC",
+      "to": "/athletics/girls/soccer/records/opponents?team=Hilton+Head+Preparatory+School",
+      "keywords": [
+        "Girls Soccer",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Hilton Head Preparatory School",
+        "Hilton Head Prep",
+        "Dolphins",
+        "Hilton Head Island",
+        "SC"
+      ]
+    },
+    {
       "id": "boys-soccer-team-cathedral-academy",
       "type": "team",
       "title": "Cathedral Academy",
@@ -23355,6 +23521,61 @@
         "St. Francis Xavier",
         "Padres",
         "Sumter",
+        "SC"
+      ]
+    },
+    {
+      "id": "boys-soccer-team-pinewood-preparatory-school",
+      "type": "team",
+      "title": "Pinewood Preparatory School",
+      "subtitle": "Boys Soccer opponent history - Summerville, SC",
+      "to": "/athletics/boys/soccer/records/opponents?team=Pinewood+Preparatory+School",
+      "keywords": [
+        "Boys Soccer",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Pinewood Preparatory School",
+        "Pinewood Prep",
+        "Panthers",
+        "Summerville",
+        "SC"
+      ]
+    },
+    {
+      "id": "boys-soccer-team-hilton-head-preparatory-school",
+      "type": "team",
+      "title": "Hilton Head Preparatory School",
+      "subtitle": "Boys Soccer opponent history - Hilton Head Island, SC",
+      "to": "/athletics/boys/soccer/records/opponents?team=Hilton+Head+Preparatory+School",
+      "keywords": [
+        "Boys Soccer",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Hilton Head Preparatory School",
+        "Hilton Head Prep",
+        "Dolphins",
+        "Hilton Head Island",
+        "SC"
+      ]
+    },
+    {
+      "id": "boys-soccer-team-james-f-byrnes-academy",
+      "type": "team",
+      "title": "James F. Byrnes Academy",
+      "subtitle": "Boys Soccer opponent history - Quinby, SC",
+      "to": "/athletics/boys/soccer/records/opponents?team=James+F.+Byrnes+Academy",
+      "keywords": [
+        "Boys Soccer",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "James F. Byrnes Academy",
+        "Quinby",
         "SC"
       ]
     },

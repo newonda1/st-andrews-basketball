@@ -1,5 +1,63 @@
 [
   {
+    "TournamentID": "2005-wilmington-island-junior-classic",
+    "Season": 2005,
+    "Name": "Wilmington Island Junior Classic",
+    "GoverningBody": "Georgia PGA Junior Tour",
+    "Division": "Boys / Girls Junior",
+    "Date": "2005-03-06",
+    "Course": "Wilmington Island Golf Club",
+    "Location": "Wilmington Island, GA",
+    "SourceLabel": "Savannah Morning News, Mar. 10, 2005",
+    "SourceCitation": "\"JUNIOR SKILLS CHALLENGE RETURNS TO HENDERSON GC,\" Savannah Morning News (GA), Mar. 10, 2005, Page 5D.",
+    "SourcePdfUrl": null,
+    "SourcePdfPages": [],
+    "ArchiveNote": "The newspaper item published hometowns rather than school affiliations for junior golf. Samantha Long is tied to St. Andrew's through the Mar. 4, 2005 Savannah Morning News golf feature. Drew Aimone is included in the St. Andrew's finishers because he appears in the adjacent St. Andrew's golf rosters, though this article listed him only as Savannah.",
+    "ArchiveDetailLevel": "newspaper",
+    "EntryCount": null,
+    "TopFinishers": [
+      {
+        "place": 1,
+        "player": "Louisa Yang",
+        "school": "Suwanee",
+        "score": 151,
+        "award": "Girls: 78-73-151",
+        "section": "girls",
+        "isStAndrews": false
+      },
+      {
+        "place": 2,
+        "player": "Samantha Long",
+        "school": "St. Andrew's",
+        "score": 165,
+        "award": "Girls: 84-81-165",
+        "section": "girls",
+        "isStAndrews": true
+      },
+      {
+        "place": 3,
+        "player": "Katelyn Stanier",
+        "school": "Newnan",
+        "score": 171,
+        "award": "Girls: 85-86-171",
+        "section": "girls",
+        "isStAndrews": false
+      }
+    ],
+    "StAndrewsFinishers": [
+      {
+        "place": 17,
+        "player": "Drew Aimone",
+        "school": "St. Andrew's",
+        "score": 163,
+        "award": "Boys: 88-75-163",
+        "section": "boys",
+        "isStAndrews": true
+      }
+    ],
+    "Summary": "Samantha Long shot 84-81-165 to finish second among girls at the Wilmington Island Junior Classic on Mar. 5-6, 2005. Drew Aimone was listed among boys finishers with rounds of 88 and 75 for a 163 total."
+  },
+  {
     "TournamentID": "2019-aa-state",
     "Season": 2019,
     "Name": "2019 GISA AA State Golf Tournament",

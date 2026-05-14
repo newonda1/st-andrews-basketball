@@ -89,5 +89,47 @@
       "St. Andrew's finished as the SCISA Class A/AA State Runner-up.",
       "Jennifer Moesch and Mary Wilkowski were named to the Cavalier Classic all-tournament team."
     ]
+  },
+  {
+    "SeasonID": 2005,
+    "DisplaySeason": "Spring 2005",
+    "SourceSeasonLabel": "Spring 2005",
+    "TeamLevel": "Varsity",
+    "TeamName": "St. Andrew's Lions",
+    "HeadCoach": "",
+    "League": "SCISA Class AA",
+    "Division": "SCISA Region 1-AA",
+    "OverallRecord": "4-6",
+    "OverallWins": 4,
+    "OverallLosses": 6,
+    "OverallTies": 0,
+    "RegionRecord": "2-2",
+    "RegionWins": 2,
+    "RegionLosses": 2,
+    "RegionTies": 0,
+    "HomeWins": null,
+    "HomeLosses": null,
+    "HomeTies": null,
+    "AwayWins": null,
+    "AwayLosses": null,
+    "AwayTies": null,
+    "PointsFor": 13,
+    "PointsAgainst": 26,
+    "RegionFinish": "Region 1-AA No. 3 seed",
+    "StateFinish": "SCISA Class AA first round",
+    "SeasonResult": "St. Andrew's finished 4-6, took the No. 3 seed from SCISA Region 1-AA, and lost to Trinity Collegiate in the SCISA Class AA first round.",
+    "StatusNote": "Archive build in progress. The season now includes 10 recovered results from Apr. 5-May 10, 2005. A May 8 record line appears inconsistent with the surrounding schedule, so the final record follows the May 12 state-tournament report listing St. Andrew's at 4-6.",
+    "HistoricalSummary": [
+      "St. Andrew's opened the recovered Spring 2005 girls soccer schedule with a 3-2 win over Colleton Prep. Becca Timms, Maggie Sammons, and Emily Dunn scored, and Mary Wilkowski made seven saves.",
+      "The Saints also beat Pinewood Prep and James Island Christian by 2-1 scores before losing 2-1 to Beaufort Academy despite a Timms goal and 21 saves from Wilkowski.",
+      "After losses to Pinewood Prep, Hilton Head Prep, and Beaufort Academy, St. Andrew's beat Colleton Prep 3-1 on April 28. Ann Cole, Emily Dunn, and Becca Timms scored, Clara Rucker assisted all three goals, and Wilkowski made 10 saves.",
+      "St. Andrew's was listed as the No. 3 seed from SCISA Region 1-AA after a May 6 loss to James Island Christian. The Saints then lost 2-0 at Trinity Collegiate in the SCISA Class AA first round and finished 4-6."
+    ],
+    "HighlightNotes": [
+      "Becca Timms scored in wins over Colleton Prep and Colleton Prep again, and assisted Emily Dunn's goal against Pinewood Prep.",
+      "Clara Rucker assisted all three St. Andrew's goals in the April 28 win over Colleton Prep.",
+      "Mary Wilkowski made 70 saves across seven recovered box scores.",
+      "St. Andrew's entered the SCISA Class AA state tournament as the No. 3 seed from Region 1-AA."
+    ]
   }
 ]

@@ -151,6 +151,54 @@
     "RecordNote": "Records: St. Andrew's 1-1, 1-0 Region SCISA 2-AA"
   },
   {
+    "GameID": 20040319,
+    "Season": 2004,
+    "SeasonID": 2004,
+    "DisplaySeason": "Spring 2004",
+    "SourceSeasonLabel": "Spring 2004",
+    "Date": "2004-03-19",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-girls-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "First Presbyterian Day School",
+    "OpponentLocation": "Macon, GA",
+    "OpponentSlug": "first-presbyterian-day",
+    "OpponentUrl": "",
+    "OpponentID": "ga-first-presbyterian-day-school-macon",
+    "GameUrl": "",
+    "LocationType": "Neutral",
+    "Venue": "Mount De Sales High School, Macon",
+    "Tournament": "Cavalier Classic",
+    "Notes": "Cavalier Classic at Mount De Sales High School in Macon. Date assigned from the March 20, 2004 Savannah Morning News report sequence.",
+    "GameType": "Tournament",
+    "Result": "W",
+    "TeamScore": 1,
+    "OpponentScore": 0,
+    "RecapTitle": "Moesch goal sends St. Andrew's past First Presbyterian Day",
+    "Recap": "St. Andrew's defeated First Presbyterian Day 1-0 at the Cavalier Classic at Mount De Sales High School in Macon. Jennifer Moesch scored the game's only goal, and Mary Wilkowski made 10 saves for another shutout.\n\nThe win improved St. Andrew's to 3-1 and handed First Presbyterian Day its first listed loss at 4-1.",
+    "SourceCitation": "Savannah Morning News, March 20, 2004",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "2004-03-20",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200402,
+        "PlayerName": "Jennifer Moesch",
+        "Goals": 1
+      }
+    ],
+    "Assists": [],
+    "Saves": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200401,
+        "PlayerName": "Mary Wilkowski",
+        "Saves": 10
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 3-1, First Presbyterian Day 4-1"
+  },
+  {
     "GameID": 2004031901,
     "Season": 2004,
     "SeasonID": 2004,
@@ -204,54 +252,6 @@
       }
     ],
     "RecordNote": "Records: St. Andrew's 2-1, Dominion Christian 2-2"
-  },
-  {
-    "GameID": 20040319,
-    "Season": 2004,
-    "SeasonID": 2004,
-    "DisplaySeason": "Spring 2004",
-    "SourceSeasonLabel": "Spring 2004",
-    "Date": "2004-03-19",
-    "Time": "TBA",
-    "TeamID": "ga-savannah-st-andrews-lions-girls-soccer",
-    "Team": "St. Andrew's Lions",
-    "Opponent": "First Presbyterian Day School",
-    "OpponentLocation": "Macon, GA",
-    "OpponentSlug": "first-presbyterian-day",
-    "OpponentUrl": "",
-    "OpponentID": "ga-first-presbyterian-day-school-macon",
-    "GameUrl": "",
-    "LocationType": "Neutral",
-    "Venue": "Mount De Sales High School, Macon",
-    "Tournament": "Cavalier Classic",
-    "Notes": "Cavalier Classic at Mount De Sales High School in Macon. Date assigned from the March 20, 2004 Savannah Morning News report sequence.",
-    "GameType": "Tournament",
-    "Result": "W",
-    "TeamScore": 1,
-    "OpponentScore": 0,
-    "RecapTitle": "Moesch goal sends St. Andrew's past First Presbyterian Day",
-    "Recap": "St. Andrew's defeated First Presbyterian Day 1-0 at the Cavalier Classic at Mount De Sales High School in Macon. Jennifer Moesch scored the game's only goal, and Mary Wilkowski made 10 saves for another shutout.\n\nThe win improved St. Andrew's to 3-1 and handed First Presbyterian Day its first listed loss at 4-1.",
-    "SourceCitation": "Savannah Morning News, March 20, 2004",
-    "SourcePublication": "Savannah Morning News",
-    "SourceDate": "2004-03-20",
-    "GoalScorers": [
-      {
-        "Team": "St. Andrew's",
-        "PlayerID": 200402,
-        "PlayerName": "Jennifer Moesch",
-        "Goals": 1
-      }
-    ],
-    "Assists": [],
-    "Saves": [
-      {
-        "Team": "St. Andrew's",
-        "PlayerID": 200401,
-        "PlayerName": "Mary Wilkowski",
-        "Saves": 10
-      }
-    ],
-    "RecordNote": "Records: St. Andrew's 3-1, First Presbyterian Day 4-1"
   },
   {
     "GameID": 20040320,
@@ -1076,5 +1076,534 @@
       }
     ],
     "RecordNote": "Records: Greenwood Christian 10-3-2, St. Andrew's 14-3"
+  },
+  {
+    "GameID": 20050405,
+    "Season": 2005,
+    "SeasonID": 2005,
+    "DisplaySeason": "Spring 2005",
+    "SourceSeasonLabel": "Spring 2005",
+    "Date": "2005-04-05",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-girls-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Colleton Prep Academy",
+    "OpponentLocation": "Walterboro, SC",
+    "OpponentSlug": "colleton-prep",
+    "OpponentUrl": "",
+    "OpponentID": "sc-colleton-prep-academy-walterboro",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "Notes": "",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 3,
+    "OpponentScore": 2,
+    "RecapTitle": "St. Andrew's opens with Colleton Prep win",
+    "Recap": "St. Andrew's defeated Colleton Prep 3-2 in the first recovered Spring 2005 girls soccer result. Becca Timms, Maggie Sammons, and Emily Dunn scored for the Saints, Timms and Maggie Hinchey had assists, and Mary Wilkowski made seven saves.",
+    "SourceCitation": "\"Spring Sports,\" Savannah Morning News, Apr. 6, 2005, Page 4C.",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "2005-04-06",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200421,
+        "PlayerName": "Becca Timms",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 2027005,
+        "PlayerName": "Maggie Sammons",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200420,
+        "PlayerName": "Emily Dunn",
+        "Goals": 1
+      },
+      {
+        "Team": "Colleton Prep",
+        "PlayerName": "Tindall Pryor",
+        "Goals": 1
+      },
+      {
+        "Team": "Colleton Prep",
+        "PlayerName": "Jordan Houck",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200421,
+        "PlayerName": "Becca Timms",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200403,
+        "PlayerName": "Maggie Hinchey",
+        "Assists": 1
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200401,
+        "PlayerName": "Mary Wilkowski",
+        "Saves": 7
+      },
+      {
+        "Team": "Colleton Prep",
+        "PlayerName": "Mary Priester",
+        "Saves": 25
+      }
+    ],
+    "RecordNote": "Record: St. Andrew's 1-0."
+  },
+  {
+    "GameID": 20050409,
+    "Season": 2005,
+    "SeasonID": 2005,
+    "DisplaySeason": "Spring 2005",
+    "SourceSeasonLabel": "Spring 2005",
+    "Date": "2005-04-09",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-girls-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Pinewood Preparatory School",
+    "OpponentLocation": "Summerville, SC",
+    "OpponentSlug": "pinewood-prep",
+    "OpponentUrl": "",
+    "OpponentID": "sc-pinewood-preparatory-school-summerville",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "Notes": "",
+    "GameType": "Non-Region",
+    "Result": "W",
+    "TeamScore": 2,
+    "OpponentScore": 1,
+    "RecapTitle": "St. Andrew's beats Pinewood Prep",
+    "Recap": "St. Andrew's defeated Pinewood Prep 2-1 on April 9. The result was referenced in the April 14 Savannah Morning News report, which did not include scoring details.",
+    "SourceCitation": "\"Spring Sports,\" Savannah Morning News, Apr. 14, 2005, Page 3D.",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "2005-04-14",
+    "GoalScorers": [],
+    "Assists": [],
+    "Saves": [],
+    "RecordNote": ""
+  },
+  {
+    "GameID": 20050411,
+    "Season": 2005,
+    "SeasonID": 2005,
+    "DisplaySeason": "Spring 2005",
+    "SourceSeasonLabel": "Spring 2005",
+    "Date": "2005-04-11",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-girls-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "James Island Christian School",
+    "OpponentLocation": "Charleston, SC",
+    "OpponentSlug": "james-island-christian",
+    "OpponentUrl": "",
+    "OpponentID": "sc-james-island-christian-school-charleston",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "Notes": "",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 2,
+    "OpponentScore": 1,
+    "RecapTitle": "St. Andrew's edges James Island Christian",
+    "Recap": "St. Andrew's defeated James Island Christian 2-1 on April 11. The result was referenced in the April 14 Savannah Morning News report, which did not include scoring details.",
+    "SourceCitation": "\"Spring Sports,\" Savannah Morning News, Apr. 14, 2005, Page 3D.",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "2005-04-14",
+    "GoalScorers": [],
+    "Assists": [],
+    "Saves": [],
+    "RecordNote": ""
+  },
+  {
+    "GameID": 20050413,
+    "Season": 2005,
+    "SeasonID": 2005,
+    "DisplaySeason": "Spring 2005",
+    "SourceSeasonLabel": "Spring 2005",
+    "Date": "2005-04-13",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-girls-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Beaufort Academy",
+    "OpponentLocation": "Beaufort, SC",
+    "OpponentSlug": "beaufort-academy",
+    "OpponentUrl": "",
+    "OpponentID": "sc-beaufort-academy-beaufort",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "Notes": "",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 1,
+    "OpponentScore": 2,
+    "RecapTitle": "Timms scores in Beaufort Academy loss",
+    "Recap": "Beaufort Academy defeated St. Andrew's 2-1 on April 13. Becca Timms scored for St. Andrew's from a Maggie Sammons assist, and Mary Wilkowski made 21 saves.",
+    "SourceCitation": "\"Spring Sports,\" Savannah Morning News, Apr. 14, 2005, Page 3D.",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "2005-04-14",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200421,
+        "PlayerName": "Becca Timms",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 2027005,
+        "PlayerName": "Maggie Sammons",
+        "Assists": 1
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200401,
+        "PlayerName": "Mary Wilkowski",
+        "Saves": 21
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 3-1, 2-1 SCISA Region 2-AA."
+  },
+  {
+    "GameID": 20050423,
+    "Season": 2005,
+    "SeasonID": 2005,
+    "DisplaySeason": "Spring 2005",
+    "SourceSeasonLabel": "Spring 2005",
+    "Date": "2005-04-23",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-girls-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Pinewood Preparatory School",
+    "OpponentLocation": "Summerville, SC",
+    "OpponentSlug": "pinewood-prep",
+    "OpponentUrl": "",
+    "OpponentID": "sc-pinewood-preparatory-school-summerville",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "Notes": "",
+    "GameType": "Non-Region",
+    "Result": "L",
+    "TeamScore": 1,
+    "OpponentScore": 3,
+    "RecapTitle": "Dunn scores against Pinewood Prep",
+    "Recap": "Pinewood Prep defeated St. Andrew's 3-1 on April 23. Emily Dunn scored for St. Andrew's from a Becca Timms assist, and Mary Wilkowski made 12 saves.",
+    "SourceCitation": "\"Spring Sports,\" Savannah Morning News, Apr. 24, 2005, Page 7C.",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "2005-04-24",
+    "GoalScorers": [
+      {
+        "Team": "Pinewood Prep",
+        "PlayerName": "Jessica Jordan",
+        "Goals": 1
+      },
+      {
+        "Team": "Pinewood Prep",
+        "PlayerName": "Allie Kodrzycki",
+        "Goals": 1
+      },
+      {
+        "Team": "Pinewood Prep",
+        "PlayerName": "Heather Bellim",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200420,
+        "PlayerName": "Emily Dunn",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200421,
+        "PlayerName": "Becca Timms",
+        "Assists": 1
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "Pinewood Prep",
+        "PlayerName": "Francesca Kassing",
+        "Saves": 4
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200401,
+        "PlayerName": "Mary Wilkowski",
+        "Saves": 12
+      }
+    ],
+    "RecordNote": "Records: Pinewood Prep 6-5; St. Andrew's 3-2, 2-1 SCISA 1-AA."
+  },
+  {
+    "GameID": 20050425,
+    "Season": 2005,
+    "SeasonID": 2005,
+    "DisplaySeason": "Spring 2005",
+    "SourceSeasonLabel": "Spring 2005",
+    "Date": "2005-04-25",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-girls-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Hilton Head Preparatory School",
+    "OpponentLocation": "Hilton Head Island, SC",
+    "OpponentSlug": "hilton-head-prep",
+    "OpponentUrl": "",
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "Notes": "",
+    "GameType": "Non-Region",
+    "Result": "L",
+    "TeamScore": 0,
+    "OpponentScore": 9,
+    "RecapTitle": "Hilton Head Prep defeats St. Andrew's",
+    "Recap": "Hilton Head Prep defeated St. Andrew's 9-0 on April 25. The report listed Hilton Head Prep at 12-1 and St. Andrew's at 3-3.",
+    "SourceCitation": "\"Spring Sports Roundup,\" Savannah Morning News, Apr. 26, 2005, Page 4D.",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "2005-04-26",
+    "GoalScorers": [],
+    "Assists": [],
+    "Saves": [],
+    "RecordNote": "Records: Hilton Head Prep 12-1; St. Andrew's 3-3."
+  },
+  {
+    "GameID": 20050426,
+    "Season": 2005,
+    "SeasonID": 2005,
+    "DisplaySeason": "Spring 2005",
+    "SourceSeasonLabel": "Spring 2005",
+    "Date": "2005-04-26",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-girls-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Beaufort Academy",
+    "OpponentLocation": "Beaufort, SC",
+    "OpponentSlug": "beaufort-academy",
+    "OpponentUrl": "",
+    "OpponentID": "sc-beaufort-academy-beaufort",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "Notes": "",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 0,
+    "OpponentScore": 1,
+    "RecapTitle": "Beaufort Academy wins on penalty kicks",
+    "Recap": "Beaufort Academy defeated St. Andrew's on penalty kicks in an April 26 report. The published line was internally inconsistent: the headline listed Beaufort Academy 1, St. Andrew's 0 on PKs, while the scoring notes said Maggie Sammons scored in regulation and overtime and that Sammons and Ann Cole converted penalty kicks for St. Andrew's.\n\nBecause the final score line conflicts with the scoring details, the structured score preserves the published 1-0 PK result and the scoring details are kept here in the recap note.",
+    "SourceCitation": "\"Spring Sports,\" Savannah Morning News, Apr. 27, 2005, Page 3C.",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "2005-04-27",
+    "GoalScorers": [],
+    "Assists": [],
+    "Saves": [],
+    "RecordNote": "Record: St. Andrew's 3-4. Source note: score was tied at 1 at the end of regulation and at the end of overtime, but the published final line listed Beaufort Academy 1, St. Andrew's 0 on PKs.",
+    "Overtime": true,
+    "PenaltyKicks": true,
+    "SourceNote": "Published final score conflicts with scoring details; structured scoring preserves the final-score line."
+  },
+  {
+    "GameID": 20050428,
+    "Season": 2005,
+    "SeasonID": 2005,
+    "DisplaySeason": "Spring 2005",
+    "SourceSeasonLabel": "Spring 2005",
+    "Date": "2005-04-28",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-girls-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Colleton Prep Academy",
+    "OpponentLocation": "Walterboro, SC",
+    "OpponentSlug": "colleton-prep",
+    "OpponentUrl": "",
+    "OpponentID": "sc-colleton-prep-academy-walterboro",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "Notes": "",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 3,
+    "OpponentScore": 1,
+    "RecapTitle": "Rucker assists three goals in Colleton Prep win",
+    "Recap": "St. Andrew's defeated Colleton Prep 3-1 on April 28. Ann Cole, Emily Dunn, and Becca Timms scored for St. Andrew's, Clara Rucker assisted all three goals, and Mary Wilkowski made 10 saves.",
+    "SourceCitation": "\"Spring Roundup,\" Savannah Morning News, Apr. 29, 2005, Page 2D.",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "2005-04-29",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 2026341,
+        "PlayerName": "Ann Cole",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200420,
+        "PlayerName": "Emily Dunn",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200421,
+        "PlayerName": "Becca Timms",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 2026342,
+        "PlayerName": "Clara Rucker",
+        "Assists": 3
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200401,
+        "PlayerName": "Mary Wilkowski",
+        "Saves": 10
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 4-4, 2-2 SCISA Region 1-AA."
+  },
+  {
+    "GameID": 20050506,
+    "Season": 2005,
+    "SeasonID": 2005,
+    "DisplaySeason": "Spring 2005",
+    "SourceSeasonLabel": "Spring 2005",
+    "Date": "2005-05-06",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-girls-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "James Island Christian School",
+    "OpponentLocation": "Charleston, SC",
+    "OpponentSlug": "james-island-christian",
+    "OpponentUrl": "",
+    "OpponentID": "sc-james-island-christian-school-charleston",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "Notes": "",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 1,
+    "OpponentScore": 4,
+    "RecapTitle": "Sammons scores in James Island Christian loss",
+    "Recap": "James Island Christian defeated St. Andrew's 4-1 on May 6. Maggie Sammons scored for St. Andrew's, while Mary Wilkowski made 12 saves.\n\nThe report listed St. Andrew's as the No. 3 seed from SCISA Region 1-AA for the SCISA Class AA state tournament, with an away first-round match scheduled for Tuesday.",
+    "SourceCitation": "\"Spring Sports,\" Savannah Morning News, May 8, 2005, Page 4C.",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "2005-05-08",
+    "GoalScorers": [
+      {
+        "Team": "James Island Christian",
+        "PlayerName": "Nicole DuPree",
+        "Goals": 4
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 2027005,
+        "PlayerName": "Maggie Sammons",
+        "Goals": 1
+      }
+    ],
+    "Assists": [],
+    "Saves": [
+      {
+        "Team": "James Island Christian",
+        "PlayerName": "Christen Rentz",
+        "Saves": 4
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200401,
+        "PlayerName": "Mary Wilkowski",
+        "Saves": 12
+      }
+    ],
+    "RecordNote": "The May 8 report printed Records-SA 5-2, but the surrounding recovered schedule and the May 12 final record indicate St. Andrew's was 4-5 after this match."
+  },
+  {
+    "GameID": 20050510,
+    "Season": 2005,
+    "SeasonID": 2005,
+    "DisplaySeason": "Spring 2005",
+    "SourceSeasonLabel": "Spring 2005",
+    "Date": "2005-05-10",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-girls-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Trinity Collegiate",
+    "OpponentLocation": "Darlington, SC",
+    "OpponentSlug": "trinity-collegiate",
+    "OpponentUrl": "",
+    "OpponentID": "sc-trinity-collegiate-darlington",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "Notes": "",
+    "GameType": "State Tournament",
+    "Result": "L",
+    "TeamScore": 0,
+    "OpponentScore": 2,
+    "RecapTitle": "Trinity Collegiate ends St. Andrew's state tournament run",
+    "Recap": "Trinity Collegiate defeated St. Andrew's 2-0 in the first round of the SCISA Class AA state tournament. Alyssa Pignone and Rebecca Levinere scored for Trinity Collegiate, while Mary Wilkowski made eight saves for St. Andrew's.",
+    "SourceCitation": "\"Spring Sports,\" Savannah Morning News, May 12, 2005, Page 6D.",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "2005-05-12",
+    "GoalScorers": [
+      {
+        "Team": "Trinity Collegiate",
+        "PlayerName": "Alyssa Pignone",
+        "Goals": 1
+      },
+      {
+        "Team": "Trinity Collegiate",
+        "PlayerName": "Rebecca Levinere",
+        "Goals": 1
+      }
+    ],
+    "Assists": [],
+    "Saves": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200401,
+        "PlayerName": "Mary Wilkowski",
+        "Saves": 8
+      },
+      {
+        "Team": "Trinity Collegiate",
+        "PlayerName": "Katherine Adams",
+        "Saves": 4
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 4-6; Trinity Collegiate 11-3."
   }
 ]

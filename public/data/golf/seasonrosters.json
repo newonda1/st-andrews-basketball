@@ -84,6 +84,48 @@
     ]
   },
   {
+    "SeasonID": 2005,
+    "SeasonLabel": "Spring 2005",
+    "Source": "Recovered Savannah Morning News golf items from Mar. 4-Apr. 29, 2005",
+    "Players": [
+      {
+        "PlayerID": 200417,
+        "PlayerName": "Drew Aimone",
+        "Gender": "Boys",
+        "Grade": 8,
+        "GradeLabel": "8th"
+      },
+      {
+        "PlayerID": 2026166,
+        "PlayerName": "Thomas Withers",
+        "Gender": "Boys",
+        "Grade": 10,
+        "GradeLabel": "So."
+      },
+      {
+        "PlayerID": 2026162,
+        "PlayerName": "Kevin Crouch",
+        "Gender": "Boys",
+        "Grade": 11,
+        "GradeLabel": "Jr."
+      },
+      {
+        "PlayerID": 200418,
+        "PlayerName": "Samantha Long",
+        "Gender": "Girls",
+        "Grade": 9,
+        "GradeLabel": "Fr."
+      },
+      {
+        "PlayerID": 2026349,
+        "PlayerName": "Ashley Long",
+        "Gender": "Girls",
+        "Grade": null,
+        "GradeLabel": null
+      }
+    ]
+  },
+  {
     "SeasonID": 2006,
     "SeasonLabel": "Spring 2006",
     "Source": "Recovered 2006 golf match reports from Mar. 7 against Colleton Prep and Mar. 22 against Patrick Henry",

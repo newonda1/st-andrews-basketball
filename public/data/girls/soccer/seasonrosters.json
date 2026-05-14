@@ -148,5 +148,81 @@
         "Distinctions": []
       }
     ]
+  },
+  {
+    "SeasonID": 2005,
+    "DisplaySeason": "Spring 2005",
+    "SourceSeasonLabel": "Spring 2005",
+    "TeamLevel": "Varsity",
+    "TeamName": "St. Andrew's Lions",
+    "HeadCoach": "",
+    "Staff": [],
+    "Players": [
+      {
+        "PlayerID": 200401,
+        "JerseyNumber": null,
+        "Grade": "So.",
+        "GradeLabel": "Sophomore",
+        "Positions": [
+          "GK"
+        ],
+        "PlayerName": "Mary Wilkowski",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200421,
+        "JerseyNumber": null,
+        "Grade": "Jr.",
+        "GradeLabel": "Junior",
+        "Positions": [],
+        "PlayerName": "Becca Timms",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 2027005,
+        "JerseyNumber": null,
+        "Grade": "Sr.",
+        "GradeLabel": "Senior",
+        "Positions": [],
+        "PlayerName": "Maggie Sammons",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200420,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Emily Dunn",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200403,
+        "JerseyNumber": null,
+        "Grade": "Jr.",
+        "GradeLabel": "Junior",
+        "Positions": [],
+        "PlayerName": "Maggie Hinchey",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 2026341,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Ann Cole",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 2026342,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Clara Rucker",
+        "Distinctions": []
+      }
+    ]
   }
 ]

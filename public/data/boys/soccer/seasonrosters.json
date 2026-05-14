@@ -186,6 +186,93 @@
     ]
   },
   {
+    "SeasonID": 2005,
+    "DisplaySeason": "Spring 2005",
+    "SourceSeasonLabel": "Spring 2005",
+    "TeamLevel": "Varsity",
+    "TeamName": "St. Andrew's Lions",
+    "HeadCoach": "",
+    "Staff": [],
+    "Players": [
+      {
+        "PlayerID": 200423,
+        "JerseyNumber": null,
+        "Grade": "Sr.",
+        "GradeLabel": "Senior",
+        "Positions": [],
+        "PlayerName": "Hamish Huntley",
+        "Distinctions": [
+          "Savannah Morning News player to watch"
+        ]
+      },
+      {
+        "PlayerID": 2026162,
+        "JerseyNumber": null,
+        "Grade": "Jr.",
+        "GradeLabel": "Junior",
+        "Positions": [],
+        "PlayerName": "Kevin Crouch",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 2026159,
+        "JerseyNumber": null,
+        "Grade": "Jr.",
+        "GradeLabel": "Junior",
+        "Positions": [],
+        "PlayerName": "Ryan Kirby",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200311,
+        "JerseyNumber": null,
+        "Grade": "Sr.",
+        "GradeLabel": "Senior",
+        "Positions": [],
+        "PlayerName": "Chris Rauers",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 2026161,
+        "JerseyNumber": null,
+        "Grade": "So.",
+        "GradeLabel": "Sophomore",
+        "Positions": [],
+        "PlayerName": "Ben Harrison",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200501,
+        "JerseyNumber": null,
+        "Grade": "Fr.",
+        "GradeLabel": "Freshman",
+        "Positions": [],
+        "PlayerName": "Remy Thurston",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 2026169,
+        "JerseyNumber": null,
+        "Grade": "Fr.",
+        "GradeLabel": "Freshman",
+        "Positions": [],
+        "PlayerName": "Brian Crouch",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200424,
+        "JerseyNumber": null,
+        "Grade": "Jr.",
+        "GradeLabel": "Junior",
+        "Positions": [
+          "GK"
+        ],
+        "PlayerName": "Emmett Eason",
+        "Distinctions": []
+      }
+    ]
+  },
+  {
     "SeasonID": 2006,
     "DisplaySeason": "Spring 2006",
     "SourceSeasonLabel": "Spring 2006",

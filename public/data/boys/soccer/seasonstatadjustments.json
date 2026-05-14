@@ -1,5 +1,15 @@
 [
   {
+    "SeasonID": 2004,
+    "PlayerID": 200423,
+    "PlayerName": "Hamish Huntley",
+    "SourceCitation": "Sean Coughlin, \"THE BEST AROUND - STANLEY AND HORNETS AREA'S BEST PLAYER, TEAM,\" Savannah Morning News (GA), Feb. 25, 2005, Page 4D.",
+    "Reason": "The 2005 boys soccer preview identified Huntley as the main scorer on St. Andrew's 2004 SCISA AA/A championship team with 23 goals.",
+    "OfficialTotals": {
+      "Goals": 23
+    }
+  },
+  {
     "SeasonID": 2006,
     "PlayerID": 200604,
     "PlayerName": "Javier Gutierrez",

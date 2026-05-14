@@ -1648,5 +1648,1028 @@
       "sc-holly-hill-academy-holly-hill",
       "sc-beaufort-academy-beaufort"
     ]
+  },
+  {
+    "MatchID": "20050329-belfair",
+    "Season": 2005,
+    "Name": "Hilton Head Prep, St. Andrew's, Beaufort Academy, Hilton Head Christian, Thomas Heyward",
+    "Date": "2005-03-29",
+    "Course": "Belfair Country Club",
+    "Location": "Bluffton, S.C.",
+    "Opponent": "Multiple schools",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "2005-03-30",
+    "SourceCitation": "Savannah Morning News, 2005-03-30, Page 4C",
+    "Summary": "St. Andrew's shot 173 at par-35 Belfair Country Club, finishing behind Hilton Head Prep and tied with Beaufort Academy in the five-team match.",
+    "Divisions": [
+      {
+        "Division": "Varsity",
+        "TeamScores": [
+          {
+            "School": "Hilton Head Prep",
+            "Score": 147,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+          },
+          {
+            "School": "St. Andrew's",
+            "Score": 173,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "School": "Beaufort Academy",
+            "Score": 173,
+            "IsStAndrews": false,
+            "SchoolID": "sc-beaufort-academy-beaufort"
+          },
+          {
+            "School": "Hilton Head Christian",
+            "Score": 178,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island"
+          },
+          {
+            "School": "Thomas Heyward",
+            "Score": 210,
+            "IsStAndrews": false,
+            "SchoolID": "sc-thomas-heyward-academy-ridgeland"
+          }
+        ],
+        "Results": [
+          {
+            "PlayerName": "John Hunter-Bradford",
+            "School": "Hilton Head Prep",
+            "Score": 38,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+          },
+          {
+            "PlayerName": "Kristen Wetzel",
+            "School": "Hilton Head Prep",
+            "Score": 36,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+          },
+          {
+            "PlayerName": "Sean Hogan",
+            "School": "Hilton Head Prep",
+            "Score": 36,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+          },
+          {
+            "PlayerName": "Andy Feree",
+            "School": "Hilton Head Prep",
+            "Score": 37,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+          },
+          {
+            "PlayerName": "Drew Aimone",
+            "School": "St. Andrew's",
+            "Score": 39,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "PlayerID": 200417
+          },
+          {
+            "PlayerName": "Thomas Withers",
+            "School": "St. Andrew's",
+            "Score": 41,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "PlayerID": 2026166
+          },
+          {
+            "PlayerName": "Samantha Long",
+            "School": "St. Andrew's",
+            "Score": 46,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "PlayerID": 200418
+          },
+          {
+            "PlayerName": "Ashley Long",
+            "School": "St. Andrew's",
+            "Score": 47,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "PlayerID": 2026349
+          },
+          {
+            "PlayerName": "Jake Johnson",
+            "School": "Beaufort Academy",
+            "Score": 41,
+            "IsStAndrews": false,
+            "SchoolID": "sc-beaufort-academy-beaufort"
+          },
+          {
+            "PlayerName": "Adam Johnson",
+            "School": "Beaufort Academy",
+            "Score": 43,
+            "IsStAndrews": false,
+            "SchoolID": "sc-beaufort-academy-beaufort"
+          },
+          {
+            "PlayerName": "Richard Malinowski",
+            "School": "Beaufort Academy",
+            "Score": 43,
+            "IsStAndrews": false,
+            "SchoolID": "sc-beaufort-academy-beaufort"
+          },
+          {
+            "PlayerName": "Anthony Aten",
+            "School": "Beaufort Academy",
+            "Score": 46,
+            "IsStAndrews": false,
+            "SchoolID": "sc-beaufort-academy-beaufort"
+          },
+          {
+            "PlayerName": "Matt Raehn",
+            "School": "Hilton Head Christian",
+            "Score": 41,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island"
+          },
+          {
+            "PlayerName": "Bobby Lee",
+            "School": "Hilton Head Christian",
+            "Score": 45,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island"
+          },
+          {
+            "PlayerName": "Jason Ficke",
+            "School": "Hilton Head Christian",
+            "Score": 48,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island"
+          },
+          {
+            "PlayerName": "Drew Vann",
+            "School": "Hilton Head Christian",
+            "Score": 44,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island"
+          },
+          {
+            "PlayerName": "Jake Littleton",
+            "School": "Thomas Heyward",
+            "Score": 46,
+            "IsStAndrews": false,
+            "SchoolID": "sc-thomas-heyward-academy-ridgeland"
+          },
+          {
+            "PlayerName": "Trey Daniel",
+            "School": "Thomas Heyward",
+            "Score": 55,
+            "IsStAndrews": false,
+            "SchoolID": "sc-thomas-heyward-academy-ridgeland"
+          },
+          {
+            "PlayerName": "Colby Richardson",
+            "School": "Thomas Heyward",
+            "Score": 55,
+            "IsStAndrews": false,
+            "SchoolID": "sc-thomas-heyward-academy-ridgeland"
+          },
+          {
+            "PlayerName": "Steve Nimmer",
+            "School": "Thomas Heyward",
+            "Score": 54,
+            "IsStAndrews": false,
+            "SchoolID": "sc-thomas-heyward-academy-ridgeland"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "MatchID": "20050330-patrick-henry",
+    "Season": 2005,
+    "Name": "St. Andrew's vs. Patrick Henry Academy",
+    "Date": "2005-03-30",
+    "Course": "Wilmington Island Club",
+    "Location": "",
+    "Opponent": "Patrick Henry Academy",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "2005-04-01",
+    "SourceCitation": "Savannah Morning News, 2005-04-01, Page 3D",
+    "Summary": "St. Andrew's defeated Patrick Henry Academy 173-185 at Wilmington Island Club. Samantha Long led St. Andrew's with a 41.",
+    "Divisions": [
+      {
+        "Division": "Varsity",
+        "TeamScores": [
+          {
+            "School": "St. Andrew's",
+            "Score": 173,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "School": "Patrick Henry Academy",
+            "Score": 185,
+            "IsStAndrews": false,
+            "SchoolID": "sc-patrick-henry-academy-estill"
+          }
+        ],
+        "Results": [
+          {
+            "PlayerName": "Samantha Long",
+            "School": "St. Andrew's",
+            "Score": 41,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "PlayerID": 200418
+          },
+          {
+            "PlayerName": "Drew Aimone",
+            "School": "St. Andrew's",
+            "Score": 42,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "PlayerID": 200417
+          },
+          {
+            "PlayerName": "Kevin Crouch",
+            "School": "St. Andrew's",
+            "Score": 44,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "PlayerID": 2026162
+          },
+          {
+            "PlayerName": "Ashley Long",
+            "School": "St. Andrew's",
+            "Score": 46,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "PlayerID": 2026349
+          },
+          {
+            "PlayerName": "Mac McCrary",
+            "School": "Patrick Henry Academy",
+            "Score": 43,
+            "IsStAndrews": false,
+            "SchoolID": "sc-patrick-henry-academy-estill"
+          },
+          {
+            "PlayerName": "Perry Gifford",
+            "School": "Patrick Henry Academy",
+            "Score": 44,
+            "IsStAndrews": false,
+            "SchoolID": "sc-patrick-henry-academy-estill"
+          },
+          {
+            "PlayerName": "Vance Loadholt",
+            "School": "Patrick Henry Academy",
+            "Score": 47,
+            "IsStAndrews": false,
+            "SchoolID": "sc-patrick-henry-academy-estill"
+          },
+          {
+            "PlayerName": "Stan Swofford",
+            "School": "Patrick Henry Academy",
+            "Score": 51,
+            "IsStAndrews": false,
+            "SchoolID": "sc-patrick-henry-academy-estill"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "MatchID": "20050405-eagles-point",
+    "Season": 2005,
+    "Name": "Hilton Head Prep, St. Andrew's, Beaufort Academy, Hilton Head Christian, Thomas Heyward",
+    "Date": "2005-04-05",
+    "Course": "Eagle's Point",
+    "Location": "Bluffton, S.C.",
+    "Opponent": "Multiple schools",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "2005-04-06",
+    "SourceCitation": "Savannah Morning News, 2005-04-06, Page 4C",
+    "Summary": "St. Andrew's shot 160 at par-35 Eagle's Point. Samantha Long led St. Andrew's with a 34, one stroke behind medalist Rachel Uremovich of Hilton Head Prep.",
+    "Divisions": [
+      {
+        "Division": "Varsity",
+        "TeamScores": [
+          {
+            "School": "Hilton Head Prep",
+            "Score": 148,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+          },
+          {
+            "School": "St. Andrew's",
+            "Score": 160,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "School": "Beaufort Academy",
+            "Score": 169,
+            "IsStAndrews": false,
+            "SchoolID": "sc-beaufort-academy-beaufort"
+          },
+          {
+            "School": "Hilton Head Christian",
+            "Score": 174,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island"
+          },
+          {
+            "School": "Thomas Heyward",
+            "Score": 215,
+            "IsStAndrews": false,
+            "SchoolID": "sc-thomas-heyward-academy-ridgeland"
+          }
+        ],
+        "Medalist": {
+          "PlayerName": "Rachel Uremovich",
+          "School": "Hilton Head Prep",
+          "Score": 33,
+          "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+        },
+        "Results": [
+          {
+            "PlayerName": "Rachel Uremovich",
+            "School": "Hilton Head Prep",
+            "Score": 33,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island",
+            "Award": "Medalist"
+          },
+          {
+            "PlayerName": "John Hunter Bradford",
+            "School": "Hilton Head Prep",
+            "Score": 37,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+          },
+          {
+            "PlayerName": "Kristen Wetzel",
+            "School": "Hilton Head Prep",
+            "Score": 38,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+          },
+          {
+            "PlayerName": "Sean Hogan",
+            "School": "Hilton Head Prep",
+            "Score": 40,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+          },
+          {
+            "PlayerName": "Samantha Long",
+            "School": "St. Andrew's",
+            "Score": 34,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "PlayerID": 200418
+          },
+          {
+            "PlayerName": "Drew Aimone",
+            "School": "St. Andrew's",
+            "Score": 41,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "PlayerID": 200417
+          },
+          {
+            "PlayerName": "Ashley Long",
+            "School": "St. Andrew's",
+            "Score": 42,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "PlayerID": 2026349
+          },
+          {
+            "PlayerName": "Thomas Withers",
+            "School": "St. Andrew's",
+            "Score": 43,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "PlayerID": 2026166
+          },
+          {
+            "PlayerName": "Jake Johnson",
+            "School": "Beaufort Academy",
+            "Score": 38,
+            "IsStAndrews": false,
+            "SchoolID": "sc-beaufort-academy-beaufort"
+          },
+          {
+            "PlayerName": "Rick Malinowski",
+            "School": "Beaufort Academy",
+            "Score": 42,
+            "IsStAndrews": false,
+            "SchoolID": "sc-beaufort-academy-beaufort"
+          },
+          {
+            "PlayerName": "Chris Ernestine",
+            "School": "Beaufort Academy",
+            "Score": 44,
+            "IsStAndrews": false,
+            "SchoolID": "sc-beaufort-academy-beaufort"
+          },
+          {
+            "PlayerName": "Adam Johnson",
+            "School": "Beaufort Academy",
+            "Score": 45,
+            "IsStAndrews": false,
+            "SchoolID": "sc-beaufort-academy-beaufort"
+          },
+          {
+            "PlayerName": "Jason Fick",
+            "School": "Hilton Head Christian",
+            "Score": 42,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island"
+          },
+          {
+            "PlayerName": "Matt Raehn",
+            "School": "Hilton Head Christian",
+            "Score": 43,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island"
+          },
+          {
+            "PlayerName": "Drew Vann",
+            "School": "Hilton Head Christian",
+            "Score": 44,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island"
+          },
+          {
+            "PlayerName": "Bobby Lee",
+            "School": "Hilton Head Christian",
+            "Score": 45,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island"
+          },
+          {
+            "PlayerName": "Trey Daniel",
+            "School": "Thomas Heyward",
+            "Score": 50,
+            "IsStAndrews": false,
+            "SchoolID": "sc-thomas-heyward-academy-ridgeland"
+          },
+          {
+            "PlayerName": "Jake Littleton",
+            "School": "Thomas Heyward",
+            "Score": 51,
+            "IsStAndrews": false,
+            "SchoolID": "sc-thomas-heyward-academy-ridgeland"
+          },
+          {
+            "PlayerName": "Colby Richardson",
+            "School": "Thomas Heyward",
+            "Score": 53,
+            "IsStAndrews": false,
+            "SchoolID": "sc-thomas-heyward-academy-ridgeland"
+          },
+          {
+            "PlayerName": "Mac Johnson",
+            "School": "Thomas Heyward",
+            "Score": 61,
+            "IsStAndrews": false,
+            "SchoolID": "sc-thomas-heyward-academy-ridgeland"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "MatchID": "20050412-crescent-point",
+    "Season": 2005,
+    "Name": "Hilton Head Prep, St. Andrew's, Hilton Head Christian, Beaufort Academy, Thomas Heyward",
+    "Date": "2005-04-12",
+    "Course": "Crescent Point",
+    "Location": "Bluffton, S.C.",
+    "Opponent": "Multiple schools",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "2005-04-13",
+    "SourceCitation": "Savannah Morning News, 2005-04-13, Page 2C",
+    "Summary": "St. Andrew's shot 163 at par-35 Crescent Point. Drew Aimone and Thomas Withers each shot 39 for the Saints.",
+    "Divisions": [
+      {
+        "Division": "Varsity",
+        "TeamScores": [
+          {
+            "School": "Hilton Head Prep",
+            "Score": 150,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+          },
+          {
+            "School": "St. Andrew's",
+            "Score": 163,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "School": "Hilton Head Christian",
+            "Score": 164,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island"
+          },
+          {
+            "School": "Beaufort Academy",
+            "Score": 173,
+            "IsStAndrews": false,
+            "SchoolID": "sc-beaufort-academy-beaufort"
+          },
+          {
+            "School": "Thomas Heyward",
+            "Score": 205,
+            "IsStAndrews": false,
+            "SchoolID": "sc-thomas-heyward-academy-ridgeland"
+          }
+        ],
+        "Results": [
+          {
+            "PlayerName": "Drew Aimone",
+            "School": "St. Andrew's",
+            "Score": 39,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "PlayerID": 200417
+          },
+          {
+            "PlayerName": "Thomas Withers",
+            "School": "St. Andrew's",
+            "Score": 39,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "PlayerID": 2026166
+          },
+          {
+            "PlayerName": "Ashley Long",
+            "School": "St. Andrew's",
+            "Score": 42,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "PlayerID": 2026349
+          },
+          {
+            "PlayerName": "Samantha Long",
+            "School": "St. Andrew's",
+            "Score": 43,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "PlayerID": 200418
+          }
+        ],
+        "ResultNote": "The report listed only St. Andrew's individual scores for this match."
+      }
+    ]
+  },
+  {
+    "MatchID": "20050421-scisa-2-aa-championship",
+    "Season": 2005,
+    "Name": "SCISA 2-AA Championship",
+    "Date": "2005-04-21",
+    "Course": "Colleton River",
+    "Location": "Bluffton, S.C.",
+    "Opponent": "Multiple schools",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "2005-04-22",
+    "SourceCitation": "Savannah Morning News, 2005-04-22, Page 2D",
+    "Summary": "St. Andrew's finished third in the 18-hole SCISA 2-AA championship at 323. Thomas Withers earned medalist honors with a 75.",
+    "Divisions": [
+      {
+        "Division": "Varsity",
+        "TeamScores": [
+          {
+            "School": "Hilton Head Prep",
+            "Score": 313,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+          },
+          {
+            "School": "Beaufort Academy",
+            "Score": 320,
+            "IsStAndrews": false,
+            "SchoolID": "sc-beaufort-academy-beaufort"
+          },
+          {
+            "School": "St. Andrew's",
+            "Score": 323,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "School": "Hilton Head Christian",
+            "Score": 339,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island"
+          },
+          {
+            "School": "Thomas Heyward",
+            "Score": 419,
+            "IsStAndrews": false,
+            "SchoolID": "sc-thomas-heyward-academy-ridgeland"
+          }
+        ],
+        "Medalist": {
+          "PlayerID": 2026166,
+          "PlayerName": "Thomas Withers",
+          "School": "St. Andrew's",
+          "Score": 75,
+          "SchoolID": "ga-st-andrews-school-savannah"
+        },
+        "Results": [
+          {
+            "PlayerName": "Thomas Withers",
+            "School": "St. Andrew's",
+            "Score": 75,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "PlayerID": 2026166,
+            "Award": "Medalist; All-tournament"
+          },
+          {
+            "PlayerName": "Drew Aimone",
+            "School": "St. Andrew's",
+            "Score": 79,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "PlayerID": 200417,
+            "Award": "All-tournament"
+          },
+          {
+            "PlayerName": "Samantha Long",
+            "School": "St. Andrew's",
+            "Score": 79,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "PlayerID": 200418,
+            "Award": "All-tournament"
+          },
+          {
+            "PlayerName": "Ashley Long",
+            "School": "St. Andrew's",
+            "Score": 90,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "PlayerID": 2026349
+          },
+          {
+            "PlayerName": "Randy Feree",
+            "School": "Hilton Head Prep",
+            "Score": 76,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+          },
+          {
+            "PlayerName": "John Hunter Bradford",
+            "School": "Hilton Head Prep",
+            "Score": 76,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+          },
+          {
+            "PlayerName": "Harrison Bell",
+            "School": "Hilton Head Prep",
+            "Score": 79,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+          },
+          {
+            "PlayerName": "Kristen Wetzel",
+            "School": "Hilton Head Prep",
+            "Score": 82,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+          },
+          {
+            "PlayerName": "Richard Malinowski",
+            "School": "Beaufort Academy",
+            "Score": 76,
+            "IsStAndrews": false,
+            "SchoolID": "sc-beaufort-academy-beaufort"
+          },
+          {
+            "PlayerName": "Chris Ernestine",
+            "School": "Beaufort Academy",
+            "Score": 80,
+            "IsStAndrews": false,
+            "SchoolID": "sc-beaufort-academy-beaufort"
+          },
+          {
+            "PlayerName": "Adam Johnson",
+            "School": "Beaufort Academy",
+            "Score": 81,
+            "IsStAndrews": false,
+            "SchoolID": "sc-beaufort-academy-beaufort"
+          },
+          {
+            "PlayerName": "Jake Johnson",
+            "School": "Beaufort Academy",
+            "Score": 83,
+            "IsStAndrews": false,
+            "SchoolID": "sc-beaufort-academy-beaufort"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "MatchID": "20050421-scisa-2-aa-makeup-region-round",
+    "Season": 2005,
+    "Name": "SCISA 2-AA Makeup Region Round",
+    "Date": "2005-04-21",
+    "Course": "Colleton River",
+    "Location": "Bluffton, S.C.",
+    "Opponent": "Multiple schools",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "2005-04-22",
+    "SourceCitation": "Savannah Morning News, 2005-04-22, Page 2D",
+    "Summary": "The first nine holes of the SCISA 2-AA championship counted as a makeup region round. St. Andrew's shot 162 and qualified for the AA state tournament.",
+    "Divisions": [
+      {
+        "Division": "Varsity",
+        "TeamScores": [
+          {
+            "School": "Hilton Head Prep",
+            "Score": 156,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+          },
+          {
+            "School": "Beaufort Academy",
+            "Score": 158,
+            "IsStAndrews": false,
+            "SchoolID": "sc-beaufort-academy-beaufort"
+          },
+          {
+            "School": "St. Andrew's",
+            "Score": 162,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "School": "Hilton Head Christian",
+            "Score": 164,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island"
+          },
+          {
+            "School": "Thomas Heyward",
+            "Score": 216,
+            "IsStAndrews": false,
+            "SchoolID": "sc-thomas-heyward-academy-ridgeland"
+          }
+        ],
+        "Medalist": {
+          "PlayerID": 200417,
+          "PlayerName": "Drew Aimone",
+          "School": "St. Andrew's",
+          "Score": 36,
+          "SchoolID": "ga-st-andrews-school-savannah"
+        },
+        "Results": [
+          {
+            "PlayerName": "Drew Aimone",
+            "School": "St. Andrew's",
+            "Score": 36,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "PlayerID": 200417,
+            "Award": "Co-medalist"
+          },
+          {
+            "PlayerName": "Matt Raehn",
+            "School": "Hilton Head Christian",
+            "Score": 36,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island",
+            "Award": "Co-medalist"
+          },
+          {
+            "PlayerName": "Thomas Withers",
+            "School": "St. Andrew's",
+            "Score": 39,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "PlayerID": 2026166
+          },
+          {
+            "PlayerName": "Samantha Long",
+            "School": "St. Andrew's",
+            "Score": 42,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "PlayerID": 200418
+          },
+          {
+            "PlayerName": "Kevin Crouch",
+            "School": "St. Andrew's",
+            "Score": 45,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "PlayerID": 2026162
+          },
+          {
+            "PlayerName": "John Hunter Bradford",
+            "School": "Hilton Head Prep",
+            "Score": 37,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+          },
+          {
+            "PlayerName": "Randy Feree",
+            "School": "Hilton Head Prep",
+            "Score": 38,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+          },
+          {
+            "PlayerName": "Harrison Bell",
+            "School": "Hilton Head Prep",
+            "Score": 40,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+          },
+          {
+            "PlayerName": "Kristen Wetzel",
+            "School": "Hilton Head Prep",
+            "Score": 41,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+          },
+          {
+            "PlayerName": "Richard Malinowski",
+            "School": "Beaufort Academy",
+            "Score": 38,
+            "IsStAndrews": false,
+            "SchoolID": "sc-beaufort-academy-beaufort"
+          },
+          {
+            "PlayerName": "Jake Johnson",
+            "School": "Beaufort Academy",
+            "Score": 39,
+            "IsStAndrews": false,
+            "SchoolID": "sc-beaufort-academy-beaufort"
+          },
+          {
+            "PlayerName": "Chris Ernestine",
+            "School": "Beaufort Academy",
+            "Score": 40,
+            "IsStAndrews": false,
+            "SchoolID": "sc-beaufort-academy-beaufort"
+          },
+          {
+            "PlayerName": "Adam Johnson",
+            "School": "Beaufort Academy",
+            "Score": 41,
+            "IsStAndrews": false,
+            "SchoolID": "sc-beaufort-academy-beaufort"
+          }
+        ],
+        "ResultNote": "St. Andrew's and Beaufort Academy qualified for the AA state tournament at Fripp Island."
+      }
+    ]
+  },
+  {
+    "MatchID": "20050425-scisa-aa-state-round-1",
+    "Season": 2005,
+    "Name": "SCISA AA State Tournament - First Round",
+    "Date": "2005-04-25",
+    "Course": "Ocean Creek Course, Fripp Island",
+    "Location": "Fripp Island, S.C.",
+    "Opponent": "Multiple schools",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "2005-04-26",
+    "SourceCitation": "Savannah Morning News, 2005-04-26, Page 4D",
+    "Summary": "St. Andrew's stood second after the first round of the SCISA AA state tournament with a 334 at Fripp Island's Ocean Creek Course.",
+    "Divisions": [
+      {
+        "Division": "Varsity",
+        "TeamScores": [
+          {
+            "School": "Beaufort Academy",
+            "Score": 329,
+            "IsStAndrews": false,
+            "SchoolID": "sc-beaufort-academy-beaufort"
+          },
+          {
+            "School": "St. Andrew's",
+            "Score": 334,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          }
+        ],
+        "Results": [
+          {
+            "PlayerName": "Drew Aimone",
+            "School": "St. Andrew's",
+            "Score": 80,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "PlayerID": 200417
+          },
+          {
+            "PlayerName": "Samantha Long",
+            "School": "St. Andrew's",
+            "Score": 82,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "PlayerID": 200418
+          },
+          {
+            "PlayerName": "Thomas Withers",
+            "School": "St. Andrew's",
+            "Score": 84,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "PlayerID": 2026166
+          },
+          {
+            "PlayerName": "Kevin Crouch",
+            "School": "St. Andrew's",
+            "Score": 88,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "PlayerID": 2026162
+          }
+        ],
+        "ResultNote": "The article identified only the top two team scores and St. Andrew's first-round individual scores from the 12-team field."
+      }
+    ]
+  },
+  {
+    "MatchID": "20050426-scisa-aa-state-final",
+    "Season": 2005,
+    "Name": "SCISA AA State Tournament - Final Round",
+    "Date": "2005-04-26",
+    "Course": "Ocean Creek Course, Fripp Island",
+    "Location": "Fripp Island, S.C.",
+    "Opponent": "Multiple schools",
+    "SourcePublication": "Savannah Morning News",
+    "SourceDate": "2005-04-27",
+    "SourceCitation": "Savannah Morning News, 2005-04-27, Page 3C",
+    "Summary": "St. Andrew's finished fourth at the SCISA AA state tournament with a two-day total of 679.",
+    "Divisions": [
+      {
+        "Division": "Varsity",
+        "TeamScores": [
+          {
+            "School": "St. Andrew's",
+            "Score": 679,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          }
+        ],
+        "Results": [
+          {
+            "PlayerName": "Drew Aimone",
+            "School": "St. Andrew's",
+            "Score": 158,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "PlayerID": 200417
+          },
+          {
+            "PlayerName": "Samantha Long",
+            "School": "St. Andrew's",
+            "Score": 167,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "PlayerID": 200418
+          },
+          {
+            "PlayerName": "Thomas Withers",
+            "School": "St. Andrew's",
+            "Score": 177,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "PlayerID": 2026166
+          },
+          {
+            "PlayerID": 2026162,
+            "PlayerName": "Kevin Crouch",
+            "School": "St. Andrew's",
+            "Round1": 88,
+            "Score": 88,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerID": 2026349,
+            "PlayerName": "Ashley Long",
+            "School": "St. Andrew's",
+            "Round2": 89,
+            "Score": 89,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          }
+        ],
+        "ResultNote": "The final-round brief listed St. Andrew's team finish and second-round scores. Two-day totals are shown where both rounds were recovered."
+      }
+    ]
   }
 ]

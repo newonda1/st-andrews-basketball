@@ -5,6 +5,12 @@ import { SOFTBALL_BASE_PATH, getSoftballSeasonGames } from "../softballData";
 
 const seasons = [
   {
+    seasonId: 2005,
+    schoolYear: "2004-05",
+    label: "Spring 2005",
+    coach: "-",
+  },
+  {
     seasonId: 2006,
     schoolYear: "2005-06",
     label: "Spring 2006",

@@ -15,8 +15,9 @@ function formatBattingLine(row) {
     row.triples ? `${row.triples} 3B` : "",
     row.homeRuns ? `${row.homeRuns} HR` : "",
   ].filter(Boolean);
+  const rbi = row.rbi == null ? "" : `, ${row.rbi} RBI`;
 
-  return `${row.hits}-${row.atBats}${extras.length ? `, ${extras.join(", ")}` : ""}, ${row.rbi} RBI`;
+  return `${row.hits}-${row.atBats}${extras.length ? `, ${extras.join(", ")}` : ""}${rbi}`;
 }
 
 const sectionTitleClass = "text-2xl font-semibold mt-8 mb-4";
@@ -179,13 +180,17 @@ export default function GameDetail() {
               <div>
                 <div className="text-sm font-black tracking-wide text-gray-500 uppercase">Win</div>
                 <div className="text-xl font-bold text-gray-900">
-                  <Link
-                    to={athleteProfilePath(winningPitcher.playerId, "softball")}
-                    className="text-blue-700 hover:underline"
-                  >
-                    {winningPitcher.player}
-                  </Link>{" "}
-                  ({winningPitcher.record})
+                  {winningPitcher.playerId ? (
+                    <Link
+                      to={athleteProfilePath(winningPitcher.playerId, "softball")}
+                      className="text-blue-700 hover:underline"
+                    >
+                      {winningPitcher.player}
+                    </Link>
+                  ) : (
+                    winningPitcher.player
+                  )}
+                  {winningPitcher.record ? ` (${winningPitcher.record})` : ""}
                 </div>
               </div>
             </div>

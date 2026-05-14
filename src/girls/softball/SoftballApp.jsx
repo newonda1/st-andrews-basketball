@@ -6,11 +6,13 @@ import AthleteProfileRedirect from "../../components/AthleteProfileRedirect";
 
 import Home from "./pages/Home";
 import YearlyResults from "./pages/YearlyResults";
+import Season2005 from "./seasons/Season2005";
 import Season2006 from "./seasons/Season2006";
 
 const GameDetail = lazy(() => import("./pages/GameDetail"));
 
 const seasonPages = [
+  { slug: "2005", Component: Season2005 },
   { slug: "2006", Component: Season2006 },
 ];
 
