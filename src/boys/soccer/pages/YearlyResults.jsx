@@ -322,8 +322,10 @@ export default function YearlyResults({ data, status = "" }) {
   const sectionClassName = "space-y-[clamp(0.5rem,1.3vw,0.875rem)]";
   const sectionTitleClassName =
     "text-center font-bold text-[clamp(1.25rem,5vw,1.5rem)]";
+  const tableFrameClassName =
+    "overflow-x-auto rounded-lg border border-gray-200 bg-white shadow";
   const tableClassName =
-    "w-full table-auto border text-center text-[clamp(0.64rem,0.95vw,1rem)] md:mx-auto md:w-max";
+    "w-full table-auto text-center text-[clamp(0.64rem,0.95vw,1rem)] md:mx-auto md:w-max";
   const headerCellClassName = `${recordTableStyles.headerCell} whitespace-nowrap`;
   const numericCellClassName = `${recordTableStyles.bodyCell} whitespace-nowrap`;
   const textCellClassName = `${recordTableStyles.bodyCell} md:text-left`;
@@ -346,7 +348,7 @@ export default function YearlyResults({ data, status = "" }) {
       <div className={sectionClassName}>
         <h1 className={sectionTitleClassName}>Coaching Records</h1>
 
-        <div className="overflow-x-auto">
+        <div className={tableFrameClassName}>
           <table className={tableClassName}>
             <thead className="bg-gray-200 font-bold">
               <tr>
@@ -395,7 +397,7 @@ export default function YearlyResults({ data, status = "" }) {
       <div className={sectionClassName}>
         <h1 className={sectionTitleClassName}>Full Year-by-Year Results</h1>
 
-        <div className="overflow-x-auto">
+        <div className={tableFrameClassName}>
           <table className={tableClassName}>
             <thead className="bg-gray-200 font-bold">
               <tr>

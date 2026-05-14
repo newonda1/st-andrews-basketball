@@ -2202,6 +2202,12 @@
     "State": "VA"
   },
   {
+    "SchoolID": "agape-christian",
+    "Name": "Agape Christian",
+    "City": "",
+    "State": ""
+  },
+  {
     "SchoolID": "varsity-opponent",
     "Name": "Varsity Opponent",
     "City": "",

@@ -478,11 +478,13 @@
     "Roster": [
       {
         "Name": "Thomas Green",
-        "Grade": 9
+        "Grade": 9,
+        "PlayerID": 2027038
       },
       {
         "Name": "Ji Hang Hur",
-        "Grade": 9
+        "Grade": 9,
+        "PlayerID": 2027039
       },
       {
         "Name": "Lily Adams",
@@ -536,11 +538,13 @@
       },
       {
         "Name": "Lizzie Verner",
-        "Grade": 10
+        "Grade": 10,
+        "PlayerID": 2027040
       },
       {
         "Name": "Joe Nodzak",
-        "Grade": 11
+        "Grade": 11,
+        "PlayerID": 2027041
       },
       {
         "Name": "Jon Moser",

@@ -215,7 +215,7 @@ export const softballGames = [
     displayDate: "April 18, 2005",
     opponent: "Agape Christian",
     Opponent: "Agape Christian",
-    OpponentID: "",
+    OpponentID: "agape-christian",
     opponentFullName: "Agape Christian",
     opponentAbbr: "AC",
     stAndrewsRecord: "3-2",

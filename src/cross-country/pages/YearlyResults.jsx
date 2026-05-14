@@ -27,11 +27,15 @@ const styles = {
     width: "100%",
     overflowX: "auto",
     marginTop: "26px",
+    border: "1px solid #e5e7eb",
+    borderRadius: "0.5rem",
+    background: "#fff",
+    boxShadow: "0 1px 3px rgba(15, 23, 42, 0.12)",
   },
   table: {
     width: "100%",
     borderCollapse: "collapse",
-    background: "transparent",
+    background: "#fff",
   },
   th: {
     background: "#dbeafe",

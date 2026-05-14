@@ -23,6 +23,9 @@ export default function YearlyResults({
   matches = [],
   status = "",
 }) {
+  const tableFrameClassName =
+    "mt-6 overflow-x-auto rounded-lg border border-gray-200 bg-white shadow";
+
   const rows = useMemo(() => {
     return seasons
       .slice()
@@ -70,8 +73,8 @@ export default function YearlyResults({
         <h1 className="text-3xl font-bold text-slate-900">Golf Seasons</h1>
       </header>
 
-      <div className="mt-6 overflow-x-auto">
-        <table className="w-full min-w-[640px] border-collapse text-[clamp(0.8rem,2.3vw,0.95rem)]">
+      <div className={tableFrameClassName}>
+        <table className="w-full min-w-[640px] border-collapse bg-white text-[clamp(0.8rem,2.3vw,0.95rem)]">
           <thead>
             <tr className="bg-slate-100">
               <th className="border border-slate-300 px-3 py-2 text-center text-[clamp(0.78rem,2.2vw,0.95rem)] font-bold">

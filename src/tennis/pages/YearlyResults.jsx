@@ -14,8 +14,10 @@ const tableStyles = {
   section: "space-y-[clamp(0.5rem,1.3vw,0.875rem)]",
   pageTitle: "text-center text-3xl font-bold text-slate-900",
   sectionTitle: "text-center font-bold text-[clamp(1.25rem,5vw,1.5rem)]",
+  tableFrame:
+    "overflow-x-auto rounded-lg border border-gray-200 bg-white shadow",
   table:
-    "w-full min-w-[780px] border-collapse text-center text-sm",
+    "w-full min-w-[780px] border-collapse bg-white text-center text-[clamp(0.8rem,2.3vw,0.95rem)]",
   headerCell:
     "border border-slate-300 bg-slate-100 px-3 py-2 font-bold leading-tight whitespace-nowrap",
   bodyCell:
@@ -278,7 +280,7 @@ function CoachingTotalsTable({ rows }) {
   return (
     <section className={tableStyles.section}>
       <h2 className={tableStyles.sectionTitle}>Coaching Totals</h2>
-      <div className="overflow-x-auto">
+      <div className={tableStyles.tableFrame}>
         <table className={tableStyles.table}>
           <thead>
             <tr>
@@ -327,7 +329,7 @@ function TeamResultsTable({ title, rows }) {
   return (
     <section className={tableStyles.section}>
       <h2 className={tableStyles.sectionTitle}>{title}</h2>
-      <div className="overflow-x-auto">
+      <div className={tableStyles.tableFrame}>
         <table className={tableStyles.table}>
           <thead>
             <tr>
