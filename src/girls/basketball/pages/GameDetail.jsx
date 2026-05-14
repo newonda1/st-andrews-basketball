@@ -233,6 +233,8 @@ function GameDetail() {
     game.Recap && String(game.Recap).trim().length > 0 ? game.Recap : "Recap coming soon.";
 
   const recapImages = Array.isArray(game.RecapImages) ? game.RecapImages : [];
+  const recapSource = String(game.RecapSource || game.SourceCitation || "").trim();
+  const sourceNote = String(game.SourceNote || "").trim();
 
   return (
     <div className="p-4 space-y-6">
@@ -261,6 +263,12 @@ function GameDetail() {
       <section>
         <h2 className="text-xl font-semibold mb-2">{recapTitle}</h2>
         <p className="text-gray-700 leading-relaxed whitespace-pre-line">{recapText}</p>
+        {recapSource && (
+          <p className="mt-3 text-sm text-gray-600">Source: {recapSource}</p>
+        )}
+        {sourceNote && (
+          <p className="mt-1 text-sm text-gray-600">Note: {sourceNote}</p>
+        )}
         <RecapImageGallery images={recapImages} title={recapTitle} />
       </section>
 

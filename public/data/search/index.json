@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-14T11:48:11.048Z",
-  "itemCount": 1280,
+  "generatedAt": "2026-05-14T13:35:10.717Z",
+  "itemCount": 1283,
   "items": [
     {
       "id": "athletics-home",
@@ -20932,6 +20932,63 @@
         "records",
         "Thomas Heyward Academy",
         "Ridgeland",
+        "SC"
+      ]
+    },
+    {
+      "id": "girls-basketball-team-calhoun-academy",
+      "type": "team",
+      "title": "Calhoun Academy",
+      "subtitle": "Girls Basketball opponent history - St. Matthews, SC",
+      "to": "/athletics/girls/basketball/records/opponents?team=Calhoun+Academy",
+      "keywords": [
+        "Girls Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Calhoun Academy",
+        "Calhoun",
+        "Cavaliers",
+        "St. Matthews",
+        "SC"
+      ]
+    },
+    {
+      "id": "girls-basketball-team-marlboro-academy",
+      "type": "team",
+      "title": "Marlboro Academy",
+      "subtitle": "Girls Basketball opponent history - Bennettsville, SC",
+      "to": "/athletics/girls/basketball/records/opponents?team=Marlboro+Academy",
+      "keywords": [
+        "Girls Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Marlboro Academy",
+        "Dragons",
+        "Bennettsville",
+        "SC"
+      ]
+    },
+    {
+      "id": "girls-basketball-team-w-wyman-king-academy",
+      "type": "team",
+      "title": "W. Wyman King Academy",
+      "subtitle": "Girls Basketball opponent history - Batesburg-Leesville, SC",
+      "to": "/athletics/girls/basketball/records/opponents?team=W.+Wyman+King+Academy",
+      "keywords": [
+        "Girls Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "W. Wyman King Academy",
+        "W.W. King Academy",
+        "W.W. King",
+        "Knights",
+        "Batesburg-Leesville",
         "SC"
       ]
     },

@@ -1,11 +1,15 @@
 import React from "react";
 import MaxPrepsSeasonPage from "./MaxPrepsSeasonPage";
 
-const seasonRecap = `The 2004-05 St. Andrew's girls basketball season opened with another coaching transition but with a proven core still in place. A newspaper season preview listed Michael Bennet as the Saints' first-year head coach after St. Andrew's finished 21-5 overall and 10-0 in SCISA Region 2-AA in 2003-04. Bennet, a former St. Andrew's boys' basketball coach, inherited a team built around Grace Wilkowski, a 5-foot-10 junior guard/forward; Mary Wilkowski, a 5-foot-11 sophomore center; and Meghan Miller, a 5-foot-3 junior point guard.
+const seasonRecap = `The 2004-05 St. Andrew's girls basketball season became a championship reset. A newspaper preview identified Michael Bennet as the Saints' new head coach after Kevin Kunst left the school, putting the former St. Andrew's boys coach in charge of a program that had won the 2003 SCISA Class AA title and reached the 2004 semifinals. Bennet inherited a team that had graduated major pieces from the 21-5 group, including Carie Bogus, Becca Cooper, Leigh Anne Evans, Maggie Hinchey, and point guard Jennifer Moesch, but the Saints still had a core built around Grace, Mary, and Rose Wilkowski, point guard Meghan Miller, senior transfer Katie Hall, Emily Aimone, Kristen Albritton, and the Griffin twins.
 
-The preview also noted the losses of Carie Bugos, center Becca Cooper, and point guard Jennifer Moesch, while expecting Miller and the Wilkowski sisters to keep helping the Saints bridge coaching changes with wins.
+The early part of the season looked like a team learning how to absorb that change while playing an ambitious schedule. St. Andrew's opened with a 57-27 win over Bible Baptist behind double-doubles from all three Wilkowski sisters, then took a heavy loss to Pinewood Christian, the defending GISA Class AA champion. The Saints stabilized with wins over Colleton Prep, Memorial Day, Frederica Academy, Bible Baptist, Thomas Heyward, Beaufort Academy, Providence Christian, and Hilton Head Christian, while their regular-season losses came against Pinewood, Hilton Head Christian, and a powerful Hilton Head Prep team. By early February, Grace Wilkowski had crossed 1,500 career points, Mary Wilkowski had become a steady interior scorer and rebounder, Rose Wilkowski had grown into a freshman force, and Hall had given St. Andrew's another dependable senior presence.
 
-The first recovered result matched that preview. St. Andrew's opened at home on November 22, 2004, with a 57-27 win over Bible Baptist as all three Wilkowski sisters posted double-doubles. Grace Wilkowski led the Saints with 22 points and 10 rebounds, Rose Wilkowski added 12 points and 13 rebounds, and Mary Wilkowski finished with 10 points and 13 rebounds. Pinewood Christian handed St. Andrew's its first loss eight days later, winning 68-30 at St. Andrew's as Rose Wilkowski led the Saints with 12 points. The Saints answered on December 2 in Walterboro, where Grace Wilkowski had 13 points and 15 rebounds in a 42-37 win at Colleton Prep. One night later, the Wilkowski sisters powered a 52-26 win at Memorial Day as Grace scored 18, Rose scored 16, and Mary added 6 points with 15 rebounds to move St. Andrew's to 3-1. On December 4, Grace and Mary both recorded double-doubles in a 51-31 home win over Frederica Academy, with Grace posting 19 points and 14 rebounds and Mary adding 19 points and 12 rebounds. Grace carried St. Andrew's again on December 7 at Frederica, scoring four of her game-high 26 points in overtime and adding 9 rebounds in a 46-42 non-region win. Three days later at Hilton Head Prep, Mary recorded a 10-point, 15-rebound double-double in a 68-42 loss as the Saints moved to 5-2. The next day, Mary scored a game-high 20 and Grace added 18 in a 47-46 loss at Hilton Head Christian decided by a free throw with two seconds left. St. Andrew's then opened the Bulloch Academy-Pinewood Christian Classic on December 16, falling 63-37 at unbeaten Pinewood Christian despite 15 points from Rose and 10 from Grace. Two days later in the same tournament, Mary and Grace combined for 43 points in a 54-36 neutral-site win over David Emanuel Academy. After the holiday break, Rose posted 16 points and 10 rebounds in a 44-28 home win over Colleton Prep on January 5. St. Andrew's opened SCISA Region 4 play on January 11 with a 50-33 home win over Hilton Head Christian, pulling away after a 22-17 halftime lead as Grace scored 21 points and Mary added 13. Three nights later, all three Wilkowski sisters recorded double-doubles again in a 60-34 non-region home win over Providence Christian, with Grace scoring 19, Rose 16, and Mary 14 while Emily Aimone added 11. The Saints then won 54-43 at Bible Baptist on January 15, jumping out to a 36-15 halftime lead behind 17 points from Grace, 15 from Mary, and 13 from Rose. On January 18 in Ridgeland, Mary added 14 points and 13 rebounds and Grace scored 19 as the Saints beat Thomas Heyward 49-29 in region play. Three days later in Beaufort, Grace scored 16 points, Mary added 12 points and 10 rebounds, and Rose posted 12 points and 17 rebounds as St. Andrew's defeated Beaufort Academy 63-7 to move to 12-4 overall and 3-0 in region play. The next day, Mary scored 20 points as the Saints won 64-38 at Memorial Day, with Grace adding 15 and Rose scoring 13 as St. Andrew's improved to 13-4. On January 25, Hilton Head Prep placed four players in double figures in a 71-48 SCISA win over St. Andrew's despite 16 points from Grace and 11 from Katie Hall. Game-by-game results, final record, and postseason details will continue to be added here as source material is recovered.`;
+The Saints were 17-6 after the regular-season finale at Hilton Head Prep, then split two SCISA Region 4 tournament games. Hall scored 20 points and Rose added 10 in a 50-41 win over Hilton Head Christian, but Hilton Head Prep controlled the region final 52-31 at Estill despite 10 points from Rose. The February 25 Savannah Morning News preview, St. Andrew's in Hunt for Another SCISA State Title, framed the Saints as the highest-ranked SCISA Class AA team entering Sumter and noted that the tournament run was not a title defense after the 2004 semifinal loss, but a chance to win the program's second girls basketball crown in three seasons.
+
+Once the state tournament began, St. Andrew's looked like the team Bennet believed it could be. In the first round, Grace and Rose Wilkowski combined for 37 points and 40 rebounds in a 65-31 win over Calhoun Academy. In the quarterfinals, Rose posted her first career triple-double with 14 points, 15 rebounds, and 10 assists as the Saints beat Marlboro Academy 83-52; Grace scored 29, while Mary and Hall added 18 each. Donald Heath's March 4 feature, Saints March to Semis, captured the larger arc of the season: Bennet had moved from a boys championship into a rebuilt girls roster, and the Saints had navigated a Class AAA-heavy regular-season schedule to get back within reach of the final.
+
+St. Andrew's finished the job with two controlled games in Sumter. The Saints jumped Colleton Prep early in the semifinal, got 11 points apiece from Mary and Rose, and held the War Hawks to 28 points in a 44-28 win. One day later, W.W. King led 29-24 at halftime of the championship game, but St. Andrew's pressed harder, controlled the boards, and outscored the Knights 36-20 after the break. Mary and Rose scored 16 points each, Grace added 12, Hall scored 10, and Miller delivered two critical fourth-quarter baskets after going scoreless through three quarters. The Highs... Saints Take Title chronicled the 60-49 win, the net-cutting celebration, and a 22-7 finish that gave St. Andrew's the 2005 SCISA Class AA state championship.`;
 
 const seasonImages = [
   {
@@ -55,9 +59,23 @@ export default function Season2004_05() {
       hidePlayerStatsToggle
       seasonRecap={seasonRecap}
       seasonBriefs={[
-        { label: "Record", value: "To be added" },
+        { label: "Record", value: "22-7" },
         { label: "Coach", value: "Michael Bennet" },
-        { label: "Finish", value: "To be added" },
+        { label: "Finish", value: "SCISA Class AA State Champion" },
+      ]}
+      seasonRecapLinks={[
+        {
+          Text: "St. Andrew's in Hunt for Another SCISA State Title",
+          ArticleID: "20050225-st-andrews-in-hunt-for-another-scisa-state-title",
+        },
+        {
+          Text: "Saints March to Semis",
+          ArticleID: "20050304-saints-march-to-semis",
+        },
+        {
+          Text: "The Highs... Saints Take Title",
+          ArticleID: "20050306-saints-take-title",
+        },
       ]}
       hideSeasonArticles
       seasonImages={seasonImages}
