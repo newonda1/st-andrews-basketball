@@ -58,11 +58,13 @@ function splitParagraphs(value) {
 
 function buildSeasonBriefItems(season) {
   if (!season) return [];
+  const includeFinish = Number(season.SeasonID) !== 2005;
+
   return [
     { label: "Record", value: season.OverallRecord },
     { label: "Coach", value: season.HeadCoach },
-    { label: "Finish", value: season.StateFinish || season.RegionFinish },
-  ].filter((item) => item.value);
+    includeFinish ? { label: "Finish", value: season.StateFinish || season.RegionFinish } : null,
+  ].filter((item) => item?.value);
 }
 
 function SeasonRecapSection({ season }) {

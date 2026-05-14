@@ -1850,13 +1850,13 @@
     "Season": 2005,
     "Name": "St. Andrew's vs. Patrick Henry Academy",
     "Date": "2005-03-30",
-    "Course": "Wilmington Island Club",
+    "Course": "Wilmington Island Golf Club",
     "Location": "",
     "Opponent": "Patrick Henry Academy",
     "SourcePublication": "Savannah Morning News",
     "SourceDate": "2005-04-01",
     "SourceCitation": "Savannah Morning News, 2005-04-01, Page 3D",
-    "Summary": "St. Andrew's defeated Patrick Henry Academy 173-185 at Wilmington Island Club. Samantha Long led St. Andrew's with a 41.",
+    "Summary": "St. Andrew's defeated Patrick Henry Academy 173-185 at Wilmington Island Golf Club. Samantha Long led St. Andrew's with a 41.",
     "Divisions": [
       {
         "Division": "Varsity",
@@ -1944,13 +1944,13 @@
     "Season": 2005,
     "Name": "Hilton Head Prep, St. Andrew's, Beaufort Academy, Hilton Head Christian, Thomas Heyward",
     "Date": "2005-04-05",
-    "Course": "Eagle's Point",
+    "Course": "Eagles Point Golf Club",
     "Location": "Bluffton, S.C.",
     "Opponent": "Multiple schools",
     "SourcePublication": "Savannah Morning News",
     "SourceDate": "2005-04-06",
     "SourceCitation": "Savannah Morning News, 2005-04-06, Page 4C",
-    "Summary": "St. Andrew's shot 160 at par-35 Eagle's Point. Samantha Long led St. Andrew's with a 34, one stroke behind medalist Rachel Uremovich of Hilton Head Prep.",
+    "Summary": "St. Andrew's shot 160 at par-35 Eagles Point Golf Club. Samantha Long led St. Andrew's with a 34, one stroke behind medalist Rachel Uremovich of Hilton Head Prep.",
     "Divisions": [
       {
         "Division": "Varsity",
@@ -2147,13 +2147,13 @@
     "Season": 2005,
     "Name": "Hilton Head Prep, St. Andrew's, Hilton Head Christian, Beaufort Academy, Thomas Heyward",
     "Date": "2005-04-12",
-    "Course": "Crescent Point",
+    "Course": "Crescent Pointe Golf Club",
     "Location": "Bluffton, S.C.",
     "Opponent": "Multiple schools",
     "SourcePublication": "Savannah Morning News",
     "SourceDate": "2005-04-13",
     "SourceCitation": "Savannah Morning News, 2005-04-13, Page 2C",
-    "Summary": "St. Andrew's shot 163 at par-35 Crescent Point. Drew Aimone and Thomas Withers each shot 39 for the Saints.",
+    "Summary": "St. Andrew's shot 163 at par-35 Crescent Pointe Golf Club. Drew Aimone and Thomas Withers each shot 39 for the Saints.",
     "Divisions": [
       {
         "Division": "Varsity",
@@ -2232,7 +2232,7 @@
     "Season": 2005,
     "Name": "SCISA 2-AA Championship",
     "Date": "2005-04-21",
-    "Course": "Colleton River",
+    "Course": "Colleton River Club",
     "Location": "Bluffton, S.C.",
     "Opponent": "Multiple schools",
     "SourcePublication": "Savannah Morning News",
@@ -2382,7 +2382,7 @@
     "Season": 2005,
     "Name": "SCISA 2-AA Makeup Region Round",
     "Date": "2005-04-21",
-    "Course": "Colleton River",
+    "Course": "Colleton River Club",
     "Location": "Bluffton, S.C.",
     "Opponent": "Multiple schools",
     "SourcePublication": "Savannah Morning News",
@@ -2537,18 +2537,18 @@
   {
     "MatchID": "20050425-scisa-aa-state-round-1",
     "Season": 2005,
-    "Name": "SCISA AA State Tournament - First Round",
+    "Name": "SCISA AA State Tournament",
     "Date": "2005-04-25",
-    "Course": "Ocean Creek Course, Fripp Island",
+    "Course": "Ocean Creek Golf Course",
     "Location": "Fripp Island, S.C.",
-    "Opponent": "Multiple schools",
+    "Opponent": "SCISA AA State Tournament",
     "SourcePublication": "Savannah Morning News",
     "SourceDate": "2005-04-26",
-    "SourceCitation": "Savannah Morning News, 2005-04-26, Page 4D",
-    "Summary": "St. Andrew's stood second after the first round of the SCISA AA state tournament with a 334 at Fripp Island's Ocean Creek Course.",
+    "SourceCitation": "Savannah Morning News, Apr. 26, 2005, Page 4D; Savannah Morning News, Apr. 27, 2005, Page 3C",
+    "Summary": "St. Andrew's stood second after the first round of the SCISA AA state tournament at Ocean Creek Golf Course and finished fourth with a two-day total of 679.",
     "Divisions": [
       {
-        "Division": "Varsity",
+        "Division": "First Round",
         "TeamScores": [
           {
             "School": "Beaufort Academy",
@@ -2560,7 +2560,8 @@
             "School": "St. Andrew's",
             "Score": 334,
             "IsStAndrews": true,
-            "SchoolID": "ga-st-andrews-school-savannah"
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "Place": 2
           }
         ],
         "Results": [
@@ -2597,29 +2598,17 @@
             "PlayerID": 2026162
           }
         ],
-        "ResultNote": "The article identified only the top two team scores and St. Andrew's first-round individual scores from the 12-team field."
-      }
-    ]
-  },
-  {
-    "MatchID": "20050426-scisa-aa-state-final",
-    "Season": 2005,
-    "Name": "SCISA AA State Tournament - Final Round",
-    "Date": "2005-04-26",
-    "Course": "Ocean Creek Course, Fripp Island",
-    "Location": "Fripp Island, S.C.",
-    "Opponent": "Multiple schools",
-    "SourcePublication": "Savannah Morning News",
-    "SourceDate": "2005-04-27",
-    "SourceCitation": "Savannah Morning News, 2005-04-27, Page 3C",
-    "Summary": "St. Andrew's finished fourth at the SCISA AA state tournament with a two-day total of 679.",
-    "Divisions": [
+        "ResultNote": "The April 26 report identified only the top two team scores and St. Andrew's first-round individual scores from the 12-team field.",
+        "TeamFieldSize": 12
+      },
       {
-        "Division": "Varsity",
+        "Division": "Final Results",
+        "TeamFieldSize": 12,
         "TeamScores": [
           {
             "School": "St. Andrew's",
             "Score": 679,
+            "Place": 4,
             "IsStAndrews": true,
             "SchoolID": "ga-st-andrews-school-savannah"
           }
@@ -2628,6 +2617,8 @@
           {
             "PlayerName": "Drew Aimone",
             "School": "St. Andrew's",
+            "Round1": 80,
+            "Round2": 78,
             "Score": 158,
             "IsStAndrews": true,
             "SchoolID": "ga-st-andrews-school-savannah",
@@ -2636,6 +2627,8 @@
           {
             "PlayerName": "Samantha Long",
             "School": "St. Andrew's",
+            "Round1": 82,
+            "Round2": 85,
             "Score": 167,
             "IsStAndrews": true,
             "SchoolID": "ga-st-andrews-school-savannah",
@@ -2644,6 +2637,8 @@
           {
             "PlayerName": "Thomas Withers",
             "School": "St. Andrew's",
+            "Round1": 84,
+            "Round2": 93,
             "Score": 177,
             "IsStAndrews": true,
             "SchoolID": "ga-st-andrews-school-savannah",
@@ -2668,8 +2663,9 @@
             "SchoolID": "ga-st-andrews-school-savannah"
           }
         ],
-        "ResultNote": "The final-round brief listed St. Andrew's team finish and second-round scores. Two-day totals are shown where both rounds were recovered."
+        "ResultNote": "The April 27 final-round brief listed St. Andrew's fourth-place team finish and final-round scores. Two-day totals are shown where both rounds were recovered."
       }
-    ]
+    ],
+    "MatchType": "State Tournament"
   }
 ]

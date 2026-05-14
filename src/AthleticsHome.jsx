@@ -76,8 +76,7 @@ const sports = [
     to: "/athletics/boys/soccer",
     icon: "/images/common/soccer_icon.png",
     iconClassName: "scale-[0.8]",
-    bannerMessage: "This page is under construction and will be up soon.",
-    regionYears: [2004],
+    regionYears: [2004, 2006],
     stateYears: [2003, 2004],
   },
   {

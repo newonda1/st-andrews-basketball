@@ -33,27 +33,10 @@ function tableRowClassName(index) {
 
 const SCISA_LOGO_PATH = "/images/branding/scisa-athletics-footer-logo.png";
 
-function formatBadgeText(value) {
-  return String(value || "")
-    .replace(/[-_]+/g, " ")
-    .replace(/\b\w/g, (letter) => letter.toUpperCase());
-}
-
-function buildSeasonBriefItems(season) {
-  if (!season) return [];
-
-  return [
-    { label: "Classification", value: season.Classification },
-    { label: "Archive", value: formatBadgeText(season.ArchiveScope) },
-    { label: "Status", value: formatBadgeText(season.StatusBadge) },
-  ].filter((item) => item.value);
-}
-
 function SummaryCard({ season }) {
   const recapParagraphs = Array.isArray(season.HistoricalSummary)
     ? season.HistoricalSummary
     : [];
-  const briefItems = buildSeasonBriefItems(season);
 
   return (
     <section id="season-recap" className="mx-auto max-w-4xl space-y-3">
@@ -62,19 +45,6 @@ function SummaryCard({ season }) {
       </div>
 
       <div className="flow-root text-base leading-7 text-slate-700">
-        {briefItems.length ? (
-          <dl className="mb-4 grid grid-cols-3 gap-3 text-center md:float-right md:mb-3 md:ml-6 md:w-64 md:grid-cols-1">
-            {briefItems.map((item) => (
-              <div key={item.label} className="rounded-lg border border-gray-200 px-3 py-2">
-                <dt className="text-xs font-semibold uppercase tracking-wide text-gray-500">
-                  {item.label}
-                </dt>
-                <dd className="text-lg font-semibold text-gray-900">{item.value}</dd>
-              </div>
-            ))}
-          </dl>
-        ) : null}
-
         <div className="space-y-3">
           {recapParagraphs.length ? (
             recapParagraphs.map((paragraph, index) => (
@@ -363,7 +333,15 @@ function getDivisionResultLabel(division) {
   const scores = Array.isArray(division.TeamScores) ? division.TeamScores : [];
   const stAndrews = scores.find((score) => score.IsStAndrews);
 
-  if (!stAndrews || scores.length < 2) return "Result not listed";
+  if (!stAndrews) return "Result not listed";
+
+  if (stAndrews.Place || (division.TeamFieldSize && scores.length < 2)) {
+    return `${formatGolfPlace(stAndrews.Place || 1)} of ${
+      division.TeamFieldSize || scores.length
+    } / ${stAndrews.Score}`;
+  }
+
+  if (scores.length < 2) return "Result not listed";
 
   if (scores.length === 2) {
     const opponent = scores.find((score) => !score.IsStAndrews);
@@ -456,7 +434,21 @@ function getScheduleResultPieces(match) {
       const scores = Array.isArray(division.TeamScores) ? division.TeamScores : [];
       const stAndrews = scores.find((score) => score.IsStAndrews);
 
-      if (!stAndrews || scores.length < 2) {
+      if (!stAndrews) {
+        return null;
+      }
+
+      if (stAndrews.Place || (division.TeamFieldSize && scores.length < 2)) {
+        return {
+          division: division.Division,
+          result: `${formatGolfPlace(stAndrews.Place || 1)} of ${
+            division.TeamFieldSize || scores.length
+          }`,
+          score: String(stAndrews.Score),
+        };
+      }
+
+      if (scores.length < 2) {
         return null;
       }
 
@@ -927,7 +919,7 @@ export default function SeasonPage({
 
       <SeasonSchedule matches={seasonMatches} schoolById={schoolById} />
 
-      {seasonTournaments.length || !seasonMatches.length ? (
+      {!seasonMatches.length ? (
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold text-slate-900">
             Tournaments

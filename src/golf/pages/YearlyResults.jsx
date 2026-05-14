@@ -49,7 +49,6 @@ export default function YearlyResults({
           seasonId: season.SeasonID,
           routeSlug: season.SeasonSlug || season.SeasonID,
           label: getGolfSeasonLabel(season),
-          classification: season.Classification || "—",
           coverage:
             season.ArchiveScope === "summary"
               ? "Archive summary"
@@ -69,26 +68,19 @@ export default function YearlyResults({
 
       <header className="text-center">
         <h1 className="text-3xl font-bold text-slate-900">Golf Seasons</h1>
-        <p className="mt-2 text-sm text-slate-500">
-          Golf archive coverage by season, including match results and state
-          tournament summaries.
-        </p>
       </header>
 
       <div className="mt-6 overflow-x-auto">
-        <table className="w-full min-w-[760px] border-collapse text-sm">
+        <table className="w-full min-w-[640px] border-collapse text-[clamp(0.8rem,2.3vw,0.95rem)]">
           <thead>
             <tr className="bg-slate-100">
-              <th className="border border-slate-300 px-3 py-2 text-center font-bold">
+              <th className="border border-slate-300 px-3 py-2 text-center text-[clamp(0.78rem,2.2vw,0.95rem)] font-bold">
                 Season
               </th>
-              <th className="border border-slate-300 px-3 py-2 text-center font-bold">
-                Classification
-              </th>
-              <th className="border border-slate-300 px-3 py-2 text-center font-bold">
+              <th className="border border-slate-300 px-3 py-2 text-center text-[clamp(0.78rem,2.2vw,0.95rem)] font-bold">
                 Coverage
               </th>
-              <th className="border border-slate-300 px-3 py-2 text-left font-bold">
+              <th className="border border-slate-300 px-3 py-2 text-left text-[clamp(0.78rem,2.2vw,0.95rem)] font-bold">
                 Snapshot
               </th>
             </tr>
@@ -106,9 +98,6 @@ export default function YearlyResults({
                     </Link>
                   </td>
                   <td className="border border-slate-300 px-3 py-2 text-center">
-                    {row.classification}
-                  </td>
-                  <td className="border border-slate-300 px-3 py-2 text-center">
                     {row.coverage}
                   </td>
                   <td className="border border-slate-300 px-3 py-2 leading-6 text-slate-700">
@@ -120,7 +109,7 @@ export default function YearlyResults({
               <tr>
                 <td
                   className="border border-slate-300 bg-white px-3 py-8 text-center text-slate-500"
-                  colSpan={4}
+                  colSpan={3}
                 >
                   Golf seasons will appear here when data is added.
                 </td>

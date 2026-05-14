@@ -65,11 +65,13 @@ function splitParagraphs(value) {
 
 function buildSeasonBriefItems(season) {
   if (!season) return [];
+  const includeFinish = Number(season.SeasonID) !== 2005;
+
   return [
     { label: "Record", value: season.OverallRecord },
     { label: "Coach", value: season.HeadCoach },
-    { label: "Finish", value: season.StateFinish || season.RegionFinish },
-  ].filter((item) => item.value);
+    includeFinish ? { label: "Finish", value: season.StateFinish || season.RegionFinish } : null,
+  ].filter((item) => item?.value);
 }
 
 function SeasonRecapSection({ season }) {
@@ -198,6 +200,7 @@ function RosterTableBlock({ rows }) {
       <table className={tableClassName}>
         <thead className={tableHeadClassName}>
           <tr>
+            <th className={`${tableHeaderCellClassName} whitespace-nowrap`}>No.</th>
             <th className={`${tableHeaderCellClassName} text-left`}>Player</th>
             <th className={`${tableHeaderCellClassName} whitespace-nowrap`}>Grade</th>
             <th className={`${tableHeaderCellClassName} text-left`}>Pos.</th>
@@ -206,6 +209,9 @@ function RosterTableBlock({ rows }) {
         <tbody>
           {rows.map((row, index) => (
             <tr key={row.key} className={tableRowClassName(index)}>
+              <td className={`${tableBodyCellClassName} whitespace-nowrap`}>
+                {row.jersey || "—"}
+              </td>
               <td className={`${tableBodyCellClassName} text-left text-gray-900`}>
                 {row.path ? (
                   <Link to={row.path} className="text-blue-600 hover:underline">
@@ -359,6 +365,24 @@ export default function SeasonPage({ data, status = "" }) {
     [data, roster]
   );
 
+  const coachingStaff = useMemo(() => {
+    const rosterStaff = Array.isArray(roster?.Staff) ? roster.Staff : [];
+    if (rosterStaff.length) return rosterStaff;
+
+    const staff = [];
+    const headCoach = roster?.HeadCoach || season?.HeadCoach;
+    if (headCoach) staff.push({ Name: headCoach, Position: "Head Coach" });
+
+    const assistantCoaches = Array.isArray(season?.AssistantCoaches)
+      ? season.AssistantCoaches
+      : [];
+    assistantCoaches.forEach((name) => {
+      if (name) staff.push({ Name: name, Position: "Assistant Coach" });
+    });
+
+    return staff;
+  }, [roster, season]);
+
   const schoolById = useMemo(() => {
     const map = new Map();
     (data?.schools || []).forEach((school) => {
@@ -500,13 +524,30 @@ export default function SeasonPage({ data, status = "" }) {
     : Array.isArray(season?.Images)
       ? season.Images
       : [];
-  const rosterTableRows = rosterEntries.map((entry, index) => ({
-    key: entry.PlayerID || `${getPlayerName(entry)}-${index}`,
-    name: getPlayerName(entry),
-    grade: formatRosterGrade(entry.GradeLabel || entry.Grade),
-    positions: Array.isArray(entry.Positions) ? entry.Positions : [],
-    path: entry.PlayerID ? athleteProfilePath(entry.PlayerID, "boys-soccer") : "",
-  }));
+  const rosterTableRows = [
+    ...rosterEntries.map((entry, index) => ({
+      key: entry.PlayerID || `${getPlayerName(entry)}-${index}`,
+      jersey: entry.JerseyNumber,
+      name: getPlayerName(entry),
+      grade: formatRosterGrade(entry.GradeLabel || entry.Grade),
+      positions: Array.isArray(entry.Positions) ? entry.Positions : [],
+      path: entry.PlayerID ? athleteProfilePath(entry.PlayerID, "boys-soccer") : "",
+    })),
+    ...coachingStaff
+      .filter((member) => member?.Name || member?.name || member?.Position || member?.role)
+      .map((member, index) => {
+        const name = member.Name || member.name || "—";
+        const role = member.Position || member.role || "Staff";
+        return {
+          key: `staff-${name}-${role}-${index}`,
+          jersey: "",
+          name,
+          grade: role,
+          positions: ["Staff"],
+          path: "",
+        };
+      }),
+  ];
 
   if (!season && !status) {
     return (

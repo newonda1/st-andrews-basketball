@@ -323,7 +323,7 @@ export default function YearlyResults({ data, status = "" }) {
   const sectionTitleClassName =
     "text-center font-bold text-[clamp(1.25rem,5vw,1.5rem)]";
   const tableClassName =
-    "w-full table-auto border text-center text-sm md:mx-auto md:w-max";
+    "w-full table-auto border text-center text-[clamp(0.64rem,0.95vw,1rem)] md:mx-auto md:w-max";
   const headerCellClassName = `${recordTableStyles.headerCell} whitespace-nowrap`;
   const numericCellClassName = `${recordTableStyles.bodyCell} whitespace-nowrap`;
   const textCellClassName = `${recordTableStyles.bodyCell} md:text-left`;

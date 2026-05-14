@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-14T15:10:18.508Z",
-  "itemCount": 1295,
+  "generatedAt": "2026-05-14T16:07:46.984Z",
+  "itemCount": 1302,
   "items": [
     {
       "id": "athletics-home",
@@ -14422,20 +14422,189 @@
       ]
     },
     {
-      "id": "boys-soccer-athlete-2026162",
+      "id": "boys-soccer-athlete-2026156",
       "type": "athlete",
-      "title": "Kevin Crouch",
+      "title": "Steven Carbone",
       "subtitle": "Boys Soccer athlete - Class of 2006",
-      "to": "/athletics/boys/soccer/players/2026162",
+      "to": "/athletics/boys/soccer/players/2026156",
       "keywords": [
         "Boys Soccer",
         "athlete",
         "player",
         "stats",
         "records",
-        "Kevin",
+        "Steven",
+        "Carbone",
+        "Carbone Steven",
+        "class of 2006",
+        "grad 2006"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-200455",
+      "type": "athlete",
+      "title": "Andrew Chapman",
+      "subtitle": "Boys Soccer athlete - Class of 2008",
+      "to": "/athletics/boys/soccer/players/200455",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Andrew",
+        "Chapman",
+        "Chapman Andrew",
+        "class of 2008",
+        "grad 2008"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-2026169",
+      "type": "athlete",
+      "title": "Brian Crouch",
+      "subtitle": "Boys Soccer athlete - Class of 2008",
+      "to": "/athletics/boys/soccer/players/2026169",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Brian",
         "Crouch",
-        "Crouch Kevin",
+        "Crouch Brian",
+        "class of 2008",
+        "grad 2008"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-2026190",
+      "type": "athlete",
+      "title": "George Hughes",
+      "subtitle": "Boys Soccer athlete",
+      "to": "/athletics/boys/soccer/players/2026190",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "George",
+        "Hughes",
+        "Hughes George"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-2026161",
+      "type": "athlete",
+      "title": "Ben Harrison",
+      "subtitle": "Boys Soccer athlete - Class of 2007",
+      "to": "/athletics/boys/soccer/players/2026161",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Ben",
+        "Harrison",
+        "Harrison Ben",
+        "class of 2007",
+        "grad 2007"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-2027023",
+      "type": "athlete",
+      "title": "Kaleb Scroggin",
+      "subtitle": "Boys Soccer athlete - Class of 2008",
+      "to": "/athletics/boys/soccer/players/2027023",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Kaleb",
+        "Scroggin",
+        "Scroggin Kaleb",
+        "class of 2008",
+        "grad 2008"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-2027012",
+      "type": "athlete",
+      "title": "Frank Howard",
+      "subtitle": "Boys Soccer athlete - Class of 2006",
+      "to": "/athletics/boys/soccer/players/2027012",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Frank",
+        "Howard",
+        "Howard Frank",
+        "class of 2006",
+        "grad 2006"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-2027007",
+      "type": "athlete",
+      "title": "Jon Moser",
+      "subtitle": "Boys Soccer athlete - Class of 2007",
+      "to": "/athletics/boys/soccer/players/2027007",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Jon",
+        "Moser",
+        "Moser Jon",
+        "class of 2007",
+        "grad 2007"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-2026167",
+      "type": "athlete",
+      "title": "Ty Massey",
+      "subtitle": "Boys Soccer athlete - Class of 2008",
+      "to": "/athletics/boys/soccer/players/2026167",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Ty",
+        "Massey",
+        "Massey Ty",
+        "class of 2008",
+        "grad 2008"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-2026154",
+      "type": "athlete",
+      "title": "Chris Miller",
+      "subtitle": "Boys Soccer athlete - Class of 2006",
+      "to": "/athletics/boys/soccer/players/2026154",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Chris",
+        "Miller",
+        "Miller Chris",
         "class of 2006",
         "grad 2006"
       ]
@@ -14460,39 +14629,58 @@
       ]
     },
     {
-      "id": "boys-soccer-athlete-2026161",
+      "id": "boys-soccer-athlete-200454",
       "type": "athlete",
-      "title": "Ben Harrison",
-      "subtitle": "Boys Soccer athlete - Class of 2007",
-      "to": "/athletics/boys/soccer/players/2026161",
+      "title": "Garrett McCarthy",
+      "subtitle": "Boys Soccer athlete - Class of 2006",
+      "to": "/athletics/boys/soccer/players/200454",
       "keywords": [
         "Boys Soccer",
         "athlete",
         "player",
         "stats",
         "records",
-        "Ben",
-        "Harrison",
-        "Harrison Ben",
-        "class of 2007",
-        "grad 2007"
+        "Garrett",
+        "McCarthy",
+        "McCarthy Garrett",
+        "class of 2006",
+        "grad 2006"
       ]
     },
     {
-      "id": "boys-soccer-athlete-2026169",
+      "id": "boys-soccer-athlete-2026162",
       "type": "athlete",
-      "title": "Brian Crouch",
-      "subtitle": "Boys Soccer athlete - Class of 2008",
-      "to": "/athletics/boys/soccer/players/2026169",
+      "title": "Kevin Crouch",
+      "subtitle": "Boys Soccer athlete - Class of 2006",
+      "to": "/athletics/boys/soccer/players/2026162",
       "keywords": [
         "Boys Soccer",
         "athlete",
         "player",
         "stats",
         "records",
-        "Brian",
+        "Kevin",
         "Crouch",
-        "Crouch Brian",
+        "Crouch Kevin",
+        "class of 2006",
+        "grad 2006"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-2027021",
+      "type": "athlete",
+      "title": "Adam Fox",
+      "subtitle": "Boys Soccer athlete - Class of 2008",
+      "to": "/athletics/boys/soccer/players/2027021",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Adam",
+        "Fox",
+        "Fox Adam",
         "class of 2008",
         "grad 2008"
       ]
@@ -14512,63 +14700,6 @@
         "Javier",
         "Gutierrez",
         "Gutierrez Javier",
-        "class of 2006",
-        "grad 2006"
-      ]
-    },
-    {
-      "id": "boys-soccer-athlete-2026167",
-      "type": "athlete",
-      "title": "Ty Massey",
-      "subtitle": "Boys Soccer athlete - Class of 2008",
-      "to": "/athletics/boys/soccer/players/2026167",
-      "keywords": [
-        "Boys Soccer",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Ty",
-        "Massey",
-        "Massey Ty",
-        "class of 2008",
-        "grad 2008"
-      ]
-    },
-    {
-      "id": "boys-soccer-athlete-200455",
-      "type": "athlete",
-      "title": "Andrew Chapman",
-      "subtitle": "Boys Soccer athlete - Class of 2008",
-      "to": "/athletics/boys/soccer/players/200455",
-      "keywords": [
-        "Boys Soccer",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Andrew",
-        "Chapman",
-        "Chapman Andrew",
-        "class of 2008",
-        "grad 2008"
-      ]
-    },
-    {
-      "id": "boys-soccer-athlete-200454",
-      "type": "athlete",
-      "title": "Garrett McCarthy",
-      "subtitle": "Boys Soccer athlete - Class of 2006",
-      "to": "/athletics/boys/soccer/players/200454",
-      "keywords": [
-        "Boys Soccer",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Garrett",
-        "McCarthy",
-        "McCarthy Garrett",
         "class of 2006",
         "grad 2006"
       ]
