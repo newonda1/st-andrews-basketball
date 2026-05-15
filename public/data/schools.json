@@ -1500,6 +1500,13 @@
     "State": "SC"
   },
   {
+    "SchoolID": "sc-avalon-academy-dillon",
+    "Name": "Avalon Academy",
+    "City": "Dillon",
+    "State": "SC",
+    "ShortName": "Avalon"
+  },
+  {
     "SchoolID": "sc-beaufort-academy-beaufort",
     "Name": "Beaufort Academy",
     "City": "Beaufort",

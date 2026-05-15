@@ -1,5 +1,23 @@
 [
   {
+    "SeasonID": 2003,
+    "SeasonSlug": "2003",
+    "SeasonLabel": "Spring 2003",
+    "Classification": "Boys",
+    "StatusBadge": "partial",
+    "StatusNote": "The Spring 2003 archive includes two recovered Savannah Morning News match reports from Mar. 4 and Mar. 13, both found during the winter NewsBank sweep.",
+    "ArchiveScope": "match",
+    "ShowSeasonImagesPlaceholder": true,
+    "HighlightNotes": [
+      "Davy Clay shot 36 and Josh Smith shot 38 as St. Andrew's defeated Patrick Henry 165-191 at Estill on Mar. 3, 2003.",
+      "St. Andrew's was 1-1 after falling 184-165 to Thomas Heyward at Wilmington Island Golf Club on Mar. 12, 2003."
+    ],
+    "HistoricalSummary": [
+      "St. Andrew's opened the recovered portion of the 2003 golf archive with a 165-191 win over Patrick Henry Academy at Estill, S.C. Davy Clay led the Saints with a 36, followed by Josh Smith at 38, Andrew Chapman at 43, and Lyle McKenzie at 48.",
+      "On Mar. 12 at Wilmington Island Golf Club, Thomas Heyward defeated St. Andrew's 165-184. Davy Clay shot 42, Josh Smith 43, Travis McGinley 48, and Chris Brinker 51 for St. Andrew's."
+    ]
+  },
+  {
     "SeasonID": 2004,
     "SeasonSlug": "2004",
     "SeasonLabel": "Spring 2004",

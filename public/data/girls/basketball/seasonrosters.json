@@ -1,5 +1,76 @@
 [
   {
+    "SeasonID": "2002-03",
+    "Players": [
+      {
+        "PlayerID": 200315,
+        "JerseyNumber": null,
+        "Grade": 12
+      },
+      {
+        "PlayerID": 200404,
+        "JerseyNumber": null,
+        "Grade": 11
+      },
+      {
+        "PlayerID": 200405,
+        "JerseyNumber": null,
+        "Grade": 11
+      },
+      {
+        "PlayerID": 200406,
+        "JerseyNumber": null,
+        "Grade": 11
+      },
+      {
+        "PlayerID": 200603,
+        "JerseyNumber": null,
+        "Grade": 9
+      },
+      {
+        "PlayerID": 200401,
+        "JerseyNumber": null,
+        "Grade": 8
+      },
+      {
+        "PlayerID": 200403,
+        "JerseyNumber": null,
+        "Grade": 9,
+        "Subline": "state tournament/JV call-up"
+      },
+      {
+        "PlayerID": 200409,
+        "JerseyNumber": null,
+        "Grade": 9,
+        "Subline": "JV call-up"
+      },
+      {
+        "PlayerID": 200410,
+        "JerseyNumber": null,
+        "Grade": 9,
+        "Subline": "JV call-up"
+      },
+      {
+        "PlayerID": 200503,
+        "JerseyNumber": null,
+        "Grade": 9,
+        "Subline": "JV call-up"
+      },
+      {
+        "PlayerID": 200429,
+        "JerseyNumber": null,
+        "Grade": 8,
+        "Subline": "JV call-up"
+      },
+      {
+        "PlayerID": 200316,
+        "JerseyNumber": null,
+        "Grade": null,
+        "Subline": "NewsBank box-score listing"
+      }
+    ]
+  },
+  {
     "SeasonID": "2003-04",
     "Players": [
       {

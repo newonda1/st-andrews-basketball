@@ -1,5 +1,54 @@
 [
   {
+    "SeasonID": 2003,
+    "SeasonLabel": "Spring 2003",
+    "Source": "Recovered Savannah Morning News golf items from Mar. 4 and Mar. 13, 2003",
+    "Players": [
+      {
+        "PlayerID": 200003,
+        "PlayerName": "Davy Clay",
+        "Gender": "Boys",
+        "Grade": 11,
+        "GradeLabel": "Jr."
+      },
+      {
+        "PlayerID": 200208,
+        "PlayerName": "Josh Smith",
+        "Gender": "Boys",
+        "Grade": 11,
+        "GradeLabel": "Jr."
+      },
+      {
+        "PlayerID": 200205,
+        "PlayerName": "Travis McGinley",
+        "Gender": "Boys",
+        "Grade": null,
+        "GradeLabel": null
+      },
+      {
+        "PlayerID": 200455,
+        "PlayerName": "Andrew Chapman",
+        "Gender": "Boys",
+        "Grade": 7,
+        "GradeLabel": "7th"
+      },
+      {
+        "PlayerID": 200209,
+        "PlayerName": "Lyle McKenzie",
+        "Gender": "Boys",
+        "Grade": null,
+        "GradeLabel": null
+      },
+      {
+        "PlayerID": 200210,
+        "PlayerName": "Chris Brinker",
+        "Gender": "Boys",
+        "Grade": null,
+        "GradeLabel": null
+      }
+    ]
+  },
+  {
     "SeasonID": 2004,
     "SeasonLabel": "Spring 2004",
     "Source": "Recovered 2004 golf match reports from Mar. 3, Mar. 18, Mar. 25, Mar. 26, Mar. 30, Apr. 1, Apr. 2, Apr. 6, Apr. 22, and Apr. 27",
