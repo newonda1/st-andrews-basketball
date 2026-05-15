@@ -1,5 +1,30 @@
 [
   {
+    "SeasonID": 2001,
+    "YearStart": 2001,
+    "YearEnd": 2002,
+    "DisplaySeason": "2001",
+    "SourceSeasonLabel": "2001-02",
+    "HeadCoach": null,
+    "OverallWins": 5,
+    "OverallLosses": 1,
+    "RegionWins": null,
+    "RegionLosses": null,
+    "RegionFinish": null,
+    "League": "SCISA",
+    "StateDivision": "SCISA AA",
+    "StateFinish": null,
+    "SourceCitation": "Savannah Morning News, Aug. 22-Oct. 3, 2001",
+    "ShowSeasonRecapPlaceholder": false,
+    "ShowSeasonImagesPlaceholder": true,
+    "ArchiveStatusNote": "NewsBank recovery currently documents five wins and one loss, including two record-path placeholder wins needed to reconcile the 4-1 record published after the Sept. 4 Patrick Henry match.",
+    "SeasonRecapParagraphs": [
+      "The 2001 St. Andrew's volleyball archive now has six documented results from the fall NewsBank sweep. The Saints opened with a straight-set win over Patrick Henry, lost to Hilton Head Prep, and were 4-1 after another Patrick Henry win reported Sept. 5, which requires two unreported wins between Aug. 25 and Sept. 4.",
+      "The surviving match notes highlight a young core that would continue showing up in later seasons. Becca Cooper led the attack in the opener with four kills, Veronica Arenander added kills in three recovered reports, and Kim Cooper, Carie Bugos, Jennifer Lee, Layne Haggberg, LeighAnne Evans, and Teri Bugos all appear in the statistical leaders.",
+      "The final recovered fall result came against Beaufort Academy on Oct. 2, when St. Andrew's won in four sets, 15-12, 4-15, 15-13, 15-12. The article credited Becca Cooper with four kills, Kim Cooper and Veronica Arenander with three kills each, Carie Bugos with six assists, and LeighAnne Evans with four assists."
+    ]
+  },
+  {
     "SeasonID": 2002,
     "YearStart": 2002,
     "YearEnd": 2003,

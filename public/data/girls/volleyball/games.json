@@ -1,5 +1,222 @@
 [
   {
+    "GameID": "20010821",
+    "Season": 2001,
+    "SeasonID": 2001,
+    "DisplaySeason": "2001",
+    "SourceSeasonLabel": "2001-02",
+    "Date": "2001-08-21",
+    "SortDate": "2001-08-21",
+    "SortOrder": 1,
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "sc-patrick-henry-academy-estill",
+    "Opponent": "Patrick Henry Academy",
+    "OpponentLocation": "Estill, SC",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "GameType": "Regular Season",
+    "Result": "W",
+    "TeamScore": 3,
+    "OpponentScore": 0,
+    "Notes": "Savannah Morning News reported St. Andrew's record as 1-0 after the match.",
+    "IsComplete": "Yes",
+    "SetScores": [
+      {
+        "Set": 1,
+        "Team": 15,
+        "Opponent": 7
+      },
+      {
+        "Set": 2,
+        "Team": 15,
+        "Opponent": 5
+      },
+      {
+        "Set": 3,
+        "Team": 15,
+        "Opponent": 7
+      }
+    ]
+  },
+  {
+    "GameID": "20010824",
+    "Season": 2001,
+    "SeasonID": 2001,
+    "DisplaySeason": "2001",
+    "SourceSeasonLabel": "2001-02",
+    "Date": "2001-08-24",
+    "SortDate": "2001-08-24",
+    "SortOrder": 1,
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
+    "Opponent": "Hilton Head Preparatory School",
+    "OpponentLocation": "Hilton Head Island, SC",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "GameType": "Regular Season",
+    "Result": "L",
+    "TeamScore": 0,
+    "OpponentScore": 3,
+    "Notes": "Savannah Morning News reported St. Andrew's record as 1-1 after the match.",
+    "IsComplete": "Yes",
+    "SetScores": [
+      {
+        "Set": 1,
+        "Team": 0,
+        "Opponent": 15
+      },
+      {
+        "Set": 2,
+        "Team": 1,
+        "Opponent": 15
+      },
+      {
+        "Set": 3,
+        "Team": 9,
+        "Opponent": 15
+      }
+    ]
+  },
+  {
+    "GameID": "2001-placeholder-1",
+    "Season": 2001,
+    "SeasonID": 2001,
+    "DisplaySeason": "2001",
+    "SourceSeasonLabel": "2001-02",
+    "Date": "",
+    "DisplayDate": "Between Aug. 25 and Sep. 4, 2001",
+    "SortDate": "2001-08-30",
+    "SortOrder": 1,
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "",
+    "Opponent": "Unknown",
+    "OpponentLocation": "",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "GameType": "Regular Season",
+    "Result": "W",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Notes": "Placeholder for one of two unreported wins required by the 4-1 record published after the Sept. 4 Patrick Henry match.",
+    "IsComplete": "Yes",
+    "SetScores": []
+  },
+  {
+    "GameID": "2001-placeholder-2",
+    "Season": 2001,
+    "SeasonID": 2001,
+    "DisplaySeason": "2001",
+    "SourceSeasonLabel": "2001-02",
+    "Date": "",
+    "DisplayDate": "Between Aug. 25 and Sep. 4, 2001",
+    "SortDate": "2001-09-02",
+    "SortOrder": 1,
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "",
+    "Opponent": "Unknown",
+    "OpponentLocation": "",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "GameType": "Regular Season",
+    "Result": "W",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Notes": "Placeholder for one of two unreported wins required by the 4-1 record published after the Sept. 4 Patrick Henry match.",
+    "IsComplete": "Yes",
+    "SetScores": []
+  },
+  {
+    "GameID": "20010904",
+    "Season": 2001,
+    "SeasonID": 2001,
+    "DisplaySeason": "2001",
+    "SourceSeasonLabel": "2001-02",
+    "Date": "2001-09-04",
+    "SortDate": "2001-09-04",
+    "SortOrder": 1,
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "sc-patrick-henry-academy-estill",
+    "Opponent": "Patrick Henry Academy",
+    "OpponentLocation": "Estill, SC",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "GameType": "Regular Season",
+    "Result": "W",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Notes": "Score not printed. Savannah Morning News reported St. Andrew's record as 4-1 after the match.",
+    "IsComplete": "Yes",
+    "SetScores": []
+  },
+  {
+    "GameID": "20011002",
+    "Season": 2001,
+    "SeasonID": 2001,
+    "DisplaySeason": "2001",
+    "SourceSeasonLabel": "2001-02",
+    "Date": "2001-10-02",
+    "SortDate": "2001-10-02",
+    "SortOrder": 1,
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "sc-beaufort-academy-beaufort",
+    "Opponent": "Beaufort Academy",
+    "OpponentLocation": "Beaufort, SC",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "GameType": "Regular Season",
+    "Result": "W",
+    "TeamScore": 3,
+    "OpponentScore": 1,
+    "Notes": "Recovered from the Oct. 3, 2001 Savannah Morning News volleyball roundup.",
+    "IsComplete": "Yes",
+    "SetScores": [
+      {
+        "Set": 1,
+        "Team": 15,
+        "Opponent": 12
+      },
+      {
+        "Set": 2,
+        "Team": 4,
+        "Opponent": 15
+      },
+      {
+        "Set": 3,
+        "Team": 15,
+        "Opponent": 13
+      },
+      {
+        "Set": 4,
+        "Team": 15,
+        "Opponent": 12
+      }
+    ]
+  },
+  {
     "GameID": "20020826",
     "Season": 2002,
     "SeasonID": 2002,
@@ -497,7 +714,7 @@
     ]
   },
   {
-    "GameID": "2002-placeholder-9",
+    "GameID": "2002-placeholder-10",
     "Season": 2002,
     "SeasonID": 2002,
     "DisplaySeason": "2002",
@@ -505,7 +722,7 @@
     "Date": "",
     "DisplayDate": "Between Oct. 15 and Oct. 17, 2002",
     "SortDate": "2002-10-16",
-    "SortOrder": 1,
+    "SortOrder": 2,
     "Time": "",
     "TeamID": "ga-savannah-st-andrews-lions-volleyball",
     "Team": "St. Andrew's Lions",
@@ -525,7 +742,7 @@
     "SetScores": []
   },
   {
-    "GameID": "2002-placeholder-10",
+    "GameID": "2002-placeholder-9",
     "Season": 2002,
     "SeasonID": 2002,
     "DisplaySeason": "2002",
@@ -533,7 +750,7 @@
     "Date": "",
     "DisplayDate": "Between Oct. 15 and Oct. 17, 2002",
     "SortDate": "2002-10-16",
-    "SortOrder": 2,
+    "SortOrder": 1,
     "Time": "",
     "TeamID": "ga-savannah-st-andrews-lions-volleyball",
     "Team": "St. Andrew's Lions",
@@ -2896,6 +3113,50 @@
     ]
   },
   {
+    "GameID": "20051012",
+    "Season": 2005,
+    "SeasonID": 2005,
+    "DisplaySeason": "2005",
+    "SourceSeasonLabel": "2005-06",
+    "Date": "2005-10-12",
+    "SortDate": "2005-10-12",
+    "SortOrder": 1,
+    "Time": "",
+    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
+    "Team": "St. Andrew's Lions",
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
+    "Opponent": "Hilton Head Preparatory School",
+    "OpponentLocation": "Hilton Head Island, SC",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 0,
+    "OpponentScore": 3,
+    "Notes": "Reported top player: Mary Wilkowski. The report listed St. Andrew's at 11-1 overall and 5-1 in SCISA Region 4-AA after the match.",
+    "SourceCitation": "User-provided game data",
+    "IsComplete": "Yes",
+    "SetScores": [
+      {
+        "Set": 1,
+        "Team": 21,
+        "Opponent": 25
+      },
+      {
+        "Set": 2,
+        "Team": 12,
+        "Opponent": 25
+      },
+      {
+        "Set": 3,
+        "Team": 10,
+        "Opponent": 25
+      }
+    ]
+  },
+  {
     "GameID": "20051013",
     "Season": 2005,
     "SeasonID": 2005,
@@ -2980,50 +3241,6 @@
         "Set": 3,
         "Team": 25,
         "Opponent": 5
-      }
-    ]
-  },
-  {
-    "GameID": "20051012",
-    "Season": 2005,
-    "SeasonID": 2005,
-    "DisplaySeason": "2005",
-    "SourceSeasonLabel": "2005-06",
-    "Date": "2005-10-12",
-    "SortDate": "2005-10-12",
-    "SortOrder": 1,
-    "Time": "",
-    "TeamID": "ga-savannah-st-andrews-lions-volleyball",
-    "Team": "St. Andrew's Lions",
-    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
-    "Opponent": "Hilton Head Preparatory School",
-    "OpponentLocation": "Hilton Head Island, SC",
-    "OpponentUrl": "",
-    "GameUrl": "",
-    "LocationType": "",
-    "Venue": "",
-    "GameType": "Region",
-    "Result": "L",
-    "TeamScore": 0,
-    "OpponentScore": 3,
-    "Notes": "Reported top player: Mary Wilkowski. The report listed St. Andrew's at 11-1 overall and 5-1 in SCISA Region 4-AA after the match.",
-    "SourceCitation": "User-provided game data",
-    "IsComplete": "Yes",
-    "SetScores": [
-      {
-        "Set": 1,
-        "Team": 21,
-        "Opponent": 25
-      },
-      {
-        "Set": 2,
-        "Team": 12,
-        "Opponent": 25
-      },
-      {
-        "Set": 3,
-        "Team": 10,
-        "Opponent": 25
       }
     ]
   },

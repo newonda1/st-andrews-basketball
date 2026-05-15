@@ -1,5 +1,146 @@
 [
   {
+    "SeasonID": "2001",
+    "DisplaySeason": "2001",
+    "SourceSeasonLabel": "2001-02",
+    "TeamLevel": "Varsity",
+    "TeamName": "St. Andrew's Saints",
+    "HeadCoach": "Karl Demasi",
+    "Staff": [
+      {
+        "Name": "Karl Demasi",
+        "Position": "Head Coach"
+      }
+    ],
+    "Players": [
+      {
+        "PlayerID": 200102,
+        "JerseyNumber": "5",
+        "Grade": "Sr.",
+        "GradeLabel": "Senior",
+        "Positions": [
+          "QB",
+          "RB",
+          "LB"
+        ],
+        "PlayerName": "Zack Hillard",
+        "Distinctions": [
+          "SCISA Region 2-AA Player of the Year",
+          "SCISA All-Region 2-AA",
+          "SCISA Senior All-Star Game selection"
+        ]
+      },
+      {
+        "PlayerID": 200003,
+        "JerseyNumber": null,
+        "Grade": "So.",
+        "GradeLabel": "Sophomore",
+        "Positions": [
+          "QB",
+          "DB"
+        ],
+        "PlayerName": "Davy Clay",
+        "Distinctions": [
+          "SCISA All-Region 2-AA"
+        ]
+      },
+      {
+        "PlayerID": 200011,
+        "JerseyNumber": null,
+        "Grade": "Jr.",
+        "GradeLabel": "Junior",
+        "Positions": [
+          "RB",
+          "WR",
+          "S"
+        ],
+        "PlayerName": "Jeff Smith",
+        "Distinctions": [
+          "SCISA All-Region 2-AA"
+        ]
+      },
+      {
+        "PlayerID": 200108,
+        "JerseyNumber": null,
+        "Grade": "Sr.",
+        "GradeLabel": "Senior",
+        "Positions": [
+          "RB",
+          "LB"
+        ],
+        "PlayerName": "Adam Ciccio",
+        "Distinctions": [
+          "SCISA All-Region 2-AA",
+          "SCISA Senior All-Star Game selection",
+          "Savannah Morning News City Player of the Week"
+        ]
+      },
+      {
+        "PlayerID": 200104,
+        "JerseyNumber": "31",
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Matt Hunt",
+        "Distinctions": [
+          "SCISA All-Region 2-AA"
+        ]
+      },
+      {
+        "PlayerID": 200008,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Billy McCarthy",
+        "Distinctions": [
+          "SCISA All-Region 2-AA"
+        ]
+      },
+      {
+        "PlayerID": 200106,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Jake Smith",
+        "Distinctions": [
+          "SCISA All-Region 2-AA",
+          "SCISA Senior All-Star Game selection"
+        ]
+      },
+      {
+        "PlayerID": 200010,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Ben Robertson",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200109,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [
+          "K"
+        ],
+        "PlayerName": "Fred Kryner",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200001,
+        "JerseyNumber": null,
+        "Grade": "Jr.",
+        "GradeLabel": "Junior",
+        "Positions": [],
+        "PlayerName": "Cam Aldrich",
+        "Distinctions": []
+      }
+    ]
+  },
+  {
     "SeasonID": "2002",
     "DisplaySeason": "2002",
     "SourceSeasonLabel": "2002-03",

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-15T13:08:07.531Z",
-  "itemCount": 1323,
+  "generatedAt": "2026-05-15T14:32:17.767Z",
+  "itemCount": 1335,
   "items": [
     {
       "id": "athletics-home",
@@ -10137,6 +10137,63 @@
       ]
     },
     {
+      "id": "girls-basketball-athlete-200317",
+      "type": "athlete",
+      "title": "Kim Cooper",
+      "subtitle": "Girls Basketball athlete - Class of 2002",
+      "to": "/athletics/girls/basketball/players/200317",
+      "keywords": [
+        "Girls Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Kim",
+        "Cooper",
+        "Cooper Kim",
+        "class of 2002",
+        "grad 2002"
+      ]
+    },
+    {
+      "id": "girls-basketball-athlete-200318",
+      "type": "athlete",
+      "title": "Sarah Roddenberry",
+      "subtitle": "Girls Basketball athlete - Class of 2002",
+      "to": "/athletics/girls/basketball/players/200318",
+      "keywords": [
+        "Girls Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Sarah",
+        "Roddenberry",
+        "Roddenberry Sarah",
+        "class of 2002",
+        "grad 2002"
+      ]
+    },
+    {
+      "id": "girls-basketball-athlete-200406",
+      "type": "athlete",
+      "title": "Becca Cooper",
+      "subtitle": "Girls Basketball athlete - Class of 2004",
+      "to": "/athletics/girls/basketball/players/200406",
+      "keywords": [
+        "Girls Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Becca",
+        "Cooper",
+        "Cooper Becca",
+        "class of 2004",
+        "grad 2004"
+      ]
+    },
+    {
       "id": "girls-basketball-athlete-200315",
       "type": "athlete",
       "title": "Meghan Lowe",
@@ -10189,25 +10246,6 @@
         "LeighAnne",
         "Evans",
         "Evans LeighAnne",
-        "class of 2004",
-        "grad 2004"
-      ]
-    },
-    {
-      "id": "girls-basketball-athlete-200406",
-      "type": "athlete",
-      "title": "Becca Cooper",
-      "subtitle": "Girls Basketball athlete - Class of 2004",
-      "to": "/athletics/girls/basketball/players/200406",
-      "keywords": [
-        "Girls Basketball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Becca",
-        "Cooper",
-        "Cooper Becca",
         "class of 2004",
         "grad 2004"
       ]
@@ -12555,6 +12593,184 @@
       ]
     },
     {
+      "id": "football-athlete-200102",
+      "type": "athlete",
+      "title": "Zack Hillard",
+      "subtitle": "Football athlete",
+      "to": "/athletics/football/players/200102",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Zack",
+        "Hillard",
+        "Hillard Zack"
+      ]
+    },
+    {
+      "id": "football-athlete-200003",
+      "type": "athlete",
+      "title": "Davy Clay",
+      "subtitle": "Football athlete - Class of 2004",
+      "to": "/athletics/football/players/200003",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Davy",
+        "Clay",
+        "Clay Davy",
+        "class of 2004",
+        "grad 2004"
+      ]
+    },
+    {
+      "id": "football-athlete-200011",
+      "type": "athlete",
+      "title": "Jeff Smith",
+      "subtitle": "Football athlete - Class of 2003",
+      "to": "/athletics/football/players/200011",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Jeff",
+        "Smith",
+        "Smith Jeff",
+        "class of 2003",
+        "grad 2003"
+      ]
+    },
+    {
+      "id": "football-athlete-200108",
+      "type": "athlete",
+      "title": "Adam Ciccio",
+      "subtitle": "Football athlete - Class of 2002",
+      "to": "/athletics/football/players/200108",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Adam",
+        "Ciccio",
+        "Ciccio Adam",
+        "class of 2002",
+        "grad 2002"
+      ]
+    },
+    {
+      "id": "football-athlete-200104",
+      "type": "athlete",
+      "title": "Matt Hunt",
+      "subtitle": "Football athlete",
+      "to": "/athletics/football/players/200104",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Matt",
+        "Hunt",
+        "Hunt Matt"
+      ]
+    },
+    {
+      "id": "football-athlete-200008",
+      "type": "athlete",
+      "title": "Billy McCarthy",
+      "subtitle": "Football athlete",
+      "to": "/athletics/football/players/200008",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Billy",
+        "McCarthy",
+        "McCarthy Billy"
+      ]
+    },
+    {
+      "id": "football-athlete-200106",
+      "type": "athlete",
+      "title": "Jake Smith",
+      "subtitle": "Football athlete",
+      "to": "/athletics/football/players/200106",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Jake",
+        "Smith",
+        "Smith Jake"
+      ]
+    },
+    {
+      "id": "football-athlete-200010",
+      "type": "athlete",
+      "title": "Ben Robertson",
+      "subtitle": "Football athlete",
+      "to": "/athletics/football/players/200010",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Ben",
+        "Robertson",
+        "Robertson Ben"
+      ]
+    },
+    {
+      "id": "football-athlete-200109",
+      "type": "athlete",
+      "title": "Fred Kryner",
+      "subtitle": "Football athlete",
+      "to": "/athletics/football/players/200109",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Fred",
+        "Kryner",
+        "Kryner Fred"
+      ]
+    },
+    {
+      "id": "football-athlete-200001",
+      "type": "athlete",
+      "title": "Cam Aldrich",
+      "subtitle": "Football athlete - Class of 2003",
+      "to": "/athletics/football/players/200001",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Cam",
+        "Aldrich",
+        "Aldrich Cam",
+        "class of 2003",
+        "grad 2003"
+      ]
+    },
+    {
       "id": "football-athlete-200433",
       "type": "athlete",
       "title": "Ben Harrison",
@@ -12610,25 +12826,6 @@
       ]
     },
     {
-      "id": "football-athlete-200003",
-      "type": "athlete",
-      "title": "Davy Clay",
-      "subtitle": "Football athlete - Class of 2004",
-      "to": "/athletics/football/players/200003",
-      "keywords": [
-        "Football",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Davy",
-        "Clay",
-        "Clay Davy",
-        "class of 2004",
-        "grad 2004"
-      ]
-    },
-    {
       "id": "football-athlete-200307",
       "type": "athlete",
       "title": "Omar Glenn",
@@ -12645,25 +12842,6 @@
         "Glenn Omar",
         "class of 2005",
         "grad 2005"
-      ]
-    },
-    {
-      "id": "football-athlete-200011",
-      "type": "athlete",
-      "title": "Jeff Smith",
-      "subtitle": "Football athlete - Class of 2003",
-      "to": "/athletics/football/players/200011",
-      "keywords": [
-        "Football",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Jeff",
-        "Smith",
-        "Smith Jeff",
-        "class of 2003",
-        "grad 2003"
       ]
     },
     {
@@ -12721,25 +12899,6 @@
         "Hinton Jesse",
         "class of 2006",
         "grad 2006"
-      ]
-    },
-    {
-      "id": "football-athlete-200001",
-      "type": "athlete",
-      "title": "Cam Aldrich",
-      "subtitle": "Football athlete - Class of 2003",
-      "to": "/athletics/football/players/200001",
-      "keywords": [
-        "Football",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Cam",
-        "Aldrich",
-        "Aldrich Cam",
-        "class of 2003",
-        "grad 2003"
       ]
     },
     {
@@ -15027,22 +15186,132 @@
       ]
     },
     {
-      "id": "volleyball-athlete-200603",
+      "id": "volleyball-athlete-200317",
       "type": "athlete",
-      "title": "Grace Wilkowski",
-      "subtitle": "Volleyball athlete - Class of 2006",
-      "to": "/athletics/volleyball/players/200603",
+      "title": "Kim Cooper",
+      "subtitle": "Volleyball athlete - Class of 2002",
+      "to": "/athletics/volleyball/players/200317",
       "keywords": [
         "Volleyball",
         "athlete",
         "player",
         "stats",
         "records",
-        "Grace",
-        "Wilkowski",
-        "Wilkowski Grace",
-        "class of 2006",
-        "grad 2006"
+        "Kim",
+        "Cooper",
+        "Cooper Kim",
+        "class of 2002",
+        "grad 2002"
+      ]
+    },
+    {
+      "id": "volleyball-athlete-200406",
+      "type": "athlete",
+      "title": "Becca Cooper",
+      "subtitle": "Volleyball athlete - Class of 2004",
+      "to": "/athletics/volleyball/players/200406",
+      "keywords": [
+        "Volleyball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Becca",
+        "Cooper",
+        "Cooper Becca",
+        "class of 2004",
+        "grad 2004"
+      ]
+    },
+    {
+      "id": "volleyball-athlete-200320",
+      "type": "athlete",
+      "title": "Teri Bugos",
+      "subtitle": "Volleyball athlete",
+      "to": "/athletics/volleyball/players/200320",
+      "keywords": [
+        "Volleyball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Teri",
+        "Bugos",
+        "Bugos Teri"
+      ]
+    },
+    {
+      "id": "volleyball-athlete-200319",
+      "type": "athlete",
+      "title": "Veronica Arenander",
+      "subtitle": "Volleyball athlete",
+      "to": "/athletics/volleyball/players/200319",
+      "keywords": [
+        "Volleyball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Veronica",
+        "Arenander",
+        "Arenander Veronica"
+      ]
+    },
+    {
+      "id": "volleyball-athlete-200404",
+      "type": "athlete",
+      "title": "Carie Bugos",
+      "subtitle": "Volleyball athlete - Class of 2004",
+      "to": "/athletics/volleyball/players/200404",
+      "keywords": [
+        "Volleyball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Carie",
+        "Bugos",
+        "Bugos Carie",
+        "class of 2004",
+        "grad 2004"
+      ]
+    },
+    {
+      "id": "volleyball-athlete-200444",
+      "type": "athlete",
+      "title": "Jennifer Lee",
+      "subtitle": "Volleyball athlete - Class of 2004",
+      "to": "/athletics/volleyball/players/200444",
+      "keywords": [
+        "Volleyball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Jennifer",
+        "Lee",
+        "Lee Jennifer",
+        "class of 2004",
+        "grad 2004"
+      ]
+    },
+    {
+      "id": "volleyball-athlete-200428",
+      "type": "athlete",
+      "title": "Layne Haggberg",
+      "subtitle": "Volleyball athlete - Class of 2004",
+      "to": "/athletics/volleyball/players/200428",
+      "keywords": [
+        "Volleyball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Layne",
+        "Haggberg",
+        "Haggberg Layne",
+        "class of 2004",
+        "grad 2004"
       ]
     },
     {
@@ -15062,6 +15331,25 @@
         "Evans LeighAnne",
         "class of 2004",
         "grad 2004"
+      ]
+    },
+    {
+      "id": "volleyball-athlete-200603",
+      "type": "athlete",
+      "title": "Grace Wilkowski",
+      "subtitle": "Volleyball athlete - Class of 2006",
+      "to": "/athletics/volleyball/players/200603",
+      "keywords": [
+        "Volleyball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Grace",
+        "Wilkowski",
+        "Wilkowski Grace",
+        "class of 2006",
+        "grad 2006"
       ]
     },
     {
@@ -15122,44 +15410,6 @@
       ]
     },
     {
-      "id": "volleyball-athlete-200444",
-      "type": "athlete",
-      "title": "Jennifer Lee",
-      "subtitle": "Volleyball athlete - Class of 2004",
-      "to": "/athletics/volleyball/players/200444",
-      "keywords": [
-        "Volleyball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Jennifer",
-        "Lee",
-        "Lee Jennifer",
-        "class of 2004",
-        "grad 2004"
-      ]
-    },
-    {
-      "id": "volleyball-athlete-200404",
-      "type": "athlete",
-      "title": "Carie Bugos",
-      "subtitle": "Volleyball athlete - Class of 2004",
-      "to": "/athletics/volleyball/players/200404",
-      "keywords": [
-        "Volleyball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Carie",
-        "Bugos",
-        "Bugos Carie",
-        "class of 2004",
-        "grad 2004"
-      ]
-    },
-    {
       "id": "volleyball-athlete-200409",
       "type": "athlete",
       "title": "Emily Aimone",
@@ -15193,44 +15443,6 @@
         "Danielle",
         "Praino",
         "Praino Danielle",
-        "class of 2004",
-        "grad 2004"
-      ]
-    },
-    {
-      "id": "volleyball-athlete-200406",
-      "type": "athlete",
-      "title": "Becca Cooper",
-      "subtitle": "Volleyball athlete - Class of 2004",
-      "to": "/athletics/volleyball/players/200406",
-      "keywords": [
-        "Volleyball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Becca",
-        "Cooper",
-        "Cooper Becca",
-        "class of 2004",
-        "grad 2004"
-      ]
-    },
-    {
-      "id": "volleyball-athlete-200428",
-      "type": "athlete",
-      "title": "Layne Haggberg",
-      "subtitle": "Volleyball athlete - Class of 2004",
-      "to": "/athletics/volleyball/players/200428",
-      "keywords": [
-        "Volleyball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Layne",
-        "Haggberg",
-        "Haggberg Layne",
         "class of 2004",
         "grad 2004"
       ]

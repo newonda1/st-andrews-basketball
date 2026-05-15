@@ -1,5 +1,69 @@
 [
   {
+    "SeasonID": 2001,
+    "SourceSeasonLabel": "2001-02",
+    "HeadCoach": null,
+    "Staff": [],
+    "Players": [
+      {
+        "PlayerID": 200317,
+        "JerseyNumber": null,
+        "Grade": 12,
+        "GradeLabel": "Sr.",
+        "Positions": []
+      },
+      {
+        "PlayerID": 200406,
+        "JerseyNumber": null,
+        "Grade": 10,
+        "GradeLabel": "So.",
+        "Positions": []
+      },
+      {
+        "PlayerID": 200320,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": []
+      },
+      {
+        "PlayerID": 200319,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": []
+      },
+      {
+        "PlayerID": 200404,
+        "JerseyNumber": null,
+        "Grade": 10,
+        "GradeLabel": "So.",
+        "Positions": []
+      },
+      {
+        "PlayerID": 200444,
+        "JerseyNumber": null,
+        "Grade": 10,
+        "GradeLabel": "So.",
+        "Positions": []
+      },
+      {
+        "PlayerID": 200428,
+        "JerseyNumber": null,
+        "Grade": 10,
+        "GradeLabel": "So.",
+        "Positions": []
+      },
+      {
+        "PlayerID": 200405,
+        "JerseyNumber": null,
+        "Grade": 10,
+        "GradeLabel": "So.",
+        "Positions": []
+      }
+    ]
+  },
+  {
     "SeasonID": 2003,
     "SourceSeasonLabel": "2003-04",
     "HeadCoach": "Mandy Stinson",

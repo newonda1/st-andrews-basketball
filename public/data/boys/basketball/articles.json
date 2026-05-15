@@ -14,6 +14,30 @@
     "DocumentPath": "/documents/boys/basketball/1992-93/chris-haslam-article.pdf"
   },
   {
+    "ArticleID": "20011116-private-schools-basketball-preview",
+    "Title": "Durrence's Pinewood Faces New Challenge",
+    "Subtitle": "The Savannah Morning News private-school basketball preview included St. Andrew's boys basketball returnees for Karl Demasi's second season.",
+    "Date": "2001-11-16",
+    "Source": "Savannah Morning News (GA)",
+    "Author": "C. Edward Wilson",
+    "Byline": "C. Edward Wilson, Savannah Morning News",
+    "Page": "1C",
+    "Section": "Sports",
+    "SeasonID": 2001,
+    "SeasonLabel": "2001-02",
+    "PlayerIDs": [
+      200011,
+      200002,
+      200003
+    ],
+    "Summary": "The private-school basketball preview listed Karl Demasi as St. Andrew's second-year boys basketball coach and identified Jeff Smith, Patrick Burns, and Davy Clay as key returnees after Tobi Specht and Justin Dixon graduated.",
+    "SourceCitation": "C. Edward Wilson, \"DURRENCE'S PINEWOOD FACES NEW CHALLENGE,\" Savannah Morning News (GA), November 16, 2001, Page 1C, Sports.",
+    "ArchiveNote": "This archive page preserves citation details and an original summary. The full newspaper text is not republished here.",
+    "TranscriptHeading": "Archive Summary",
+    "EmphasizeTranscriptLead": false,
+    "Transcript": "The Savannah Morning News private-school basketball preview listed Karl Demasi as St. Andrew's second-year boys basketball coach. The preview said the Saints were coming off a 16-11 season, had lost Tobi Specht and Justin Dixon, and returned junior guard Jeff Smith, junior forward Patrick Burns, and sophomore guard Davy Clay. It described Demasi's teams as quick and tenacious defensively and said the Saints' goal was to return to the state playoffs."
+  },
+  {
     "ArticleID": "20030405-boys-all-coastal-empire-basketball-teams",
     "Title": "Boys All-Coastal Empire Basketball Teams",
     "Subtitle": "Davy Clay and Jeff Smith received honorable mention after St. Andrew's SCISA Class AA runner-up season.",

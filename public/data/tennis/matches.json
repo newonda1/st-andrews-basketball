@@ -13599,5 +13599,1564 @@
     ],
     "Source": "UTR Sports event 370885; full Class AAA girls singles state bracket captured for St. Andrew's participant.",
     "TournamentDataPath": "/data/tennis/tournaments/2026-giaa-state-individual-girls/metadata.json"
+  },
+  {
+    "MatchID": "2001-09-04-patrick-henry-girls",
+    "Season": 2002,
+    "Date": "2001-09-04",
+    "Name": "St. Andrew's vs. Patrick Henry - Girls",
+    "MatchType": "Dual Match",
+    "Gender": "Girls",
+    "Classification": "SCISA",
+    "MatchCategory": "Non-Region",
+    "HomeAway": "",
+    "Status": "Completed",
+    "OpponentSchoolID": "sc-patrick-henry-academy-estill",
+    "TeamScore": {
+      "StAndrews": 5,
+      "Opponent": 2,
+      "Result": "W"
+    },
+    "Summary": "St. Andrew's defeated Patrick Henry 5-2. Jennifer Tyre, Mary Wilkowski, Alicia Jaramillo, Lauren Raebler, and the Tyre/Wilkowski doubles team earned points for the Saints.",
+    "LineMatches": [
+      {
+        "TennisMatchID": "2001-09-04-patrick-henry-girls-singles-1",
+        "EventType": "Singles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2001-09-04",
+        "Participants": [
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200321,
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Mallory Hudson",
+            "SchoolID": "sc-patrick-henry-academy-estill",
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "top": 6,
+            "bottom": 4
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-09-04-patrick-henry-girls-singles-2",
+        "EventType": "Singles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2001-09-04",
+        "Participants": [
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200401,
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Kaitlin Loadholt",
+            "SchoolID": "sc-patrick-henry-academy-estill",
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 7,
+            "bottom": 5
+          },
+          {
+            "top": 6,
+            "bottom": 1
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-09-04-patrick-henry-girls-singles-3",
+        "EventType": "Singles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2001-09-04",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Linda Kirkland",
+            "SchoolID": "sc-patrick-henry-academy-estill",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200603,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 1,
+            "bottom": 6
+          },
+          {
+            "top": 6,
+            "bottom": 4
+          },
+          {
+            "top": 7,
+            "bottom": 4
+          }
+        ],
+        "WinnerSide": "top",
+        "Notes": "Published result listed a deciding tiebreak."
+      },
+      {
+        "TennisMatchID": "2001-09-04-patrick-henry-girls-singles-4",
+        "EventType": "Singles",
+        "LineNumber": 4,
+        "Status": "Completed",
+        "Date": "2001-09-04",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Margaret Bowers",
+            "SchoolID": "sc-patrick-henry-academy-estill",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026341,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 4,
+            "bottom": 6
+          },
+          {
+            "top": 6,
+            "bottom": 1
+          },
+          {
+            "top": 7,
+            "bottom": 4
+          }
+        ],
+        "WinnerSide": "top",
+        "Notes": "Published result listed a deciding tiebreak."
+      },
+      {
+        "TennisMatchID": "2001-09-04-patrick-henry-girls-singles-5",
+        "EventType": "Singles",
+        "LineNumber": 5,
+        "Status": "Completed",
+        "Date": "2001-09-04",
+        "Participants": [
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026343,
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Megan Baker",
+            "SchoolID": "sc-patrick-henry-academy-estill",
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 7,
+            "bottom": 5
+          },
+          {
+            "top": 6,
+            "bottom": 2
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-09-04-patrick-henry-girls-singles-6",
+        "EventType": "Singles",
+        "LineNumber": 6,
+        "Status": "Completed",
+        "Date": "2001-09-04",
+        "Participants": [
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200322,
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Lindsay Gifford",
+            "SchoolID": "sc-patrick-henry-academy-estill",
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 3
+          },
+          {
+            "top": 7,
+            "bottom": 5
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-09-04-patrick-henry-girls-doubles-1",
+        "EventType": "Doubles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2001-09-04",
+        "Participants": [
+          {
+            "ParticipantType": "team",
+            "DisplayName": "Jennifer Tyre / Mary Wilkowski",
+            "Side": "top",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200321
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200401
+              }
+            ]
+          },
+          {
+            "ParticipantType": "team",
+            "DisplayName": "Kirkland / Holt",
+            "Side": "bottom",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Linda Kirkland",
+                "SchoolID": "sc-patrick-henry-academy-estill"
+              },
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Holt",
+                "SchoolID": "sc-patrick-henry-academy-estill"
+              }
+            ]
+          }
+        ],
+        "Sets": [
+          {
+            "top": 8,
+            "bottom": 5
+          }
+        ],
+        "WinnerSide": "top"
+      }
+    ]
+  },
+  {
+    "MatchID": "2001-09-06-hilton-head-christian-girls",
+    "Season": 2002,
+    "Date": "2001-09-06",
+    "Name": "St. Andrew's at Hilton Head Christian - Girls",
+    "MatchType": "Dual Match",
+    "Gender": "Girls",
+    "Classification": "SCISA",
+    "MatchCategory": "Non-Region",
+    "HomeAway": "",
+    "Status": "Completed",
+    "OpponentSchoolID": "sc-hilton-head-christian-academy-hilton-head-island",
+    "TeamScore": {
+      "StAndrews": 2,
+      "Opponent": 7,
+      "Result": "L"
+    },
+    "Summary": "Hilton Head Christian defeated St. Andrew's 7-2. The Saints' points came from Mary Wilkowski/Jennifer Tyre at No. 1 doubles and Clara Rucker/Alicia Jaramillo at No. 3 doubles.",
+    "LineMatches": [
+      {
+        "TennisMatchID": "2001-09-06-hilton-head-christian-girls-singles-1",
+        "EventType": "Singles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2001-09-06",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Krystina Sigmon",
+            "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200321,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 1
+          },
+          {
+            "top": 6,
+            "bottom": 1
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-09-06-hilton-head-christian-girls-singles-2",
+        "EventType": "Singles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2001-09-06",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Morgan Reichel",
+            "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200401,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 2
+          },
+          {
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-09-06-hilton-head-christian-girls-singles-3",
+        "EventType": "Singles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2001-09-06",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Lauren Harris",
+            "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200603,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 2
+          },
+          {
+            "top": 6,
+            "bottom": 1
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-09-06-hilton-head-christian-girls-singles-4",
+        "EventType": "Singles",
+        "LineNumber": 4,
+        "Status": "Completed",
+        "Date": "2001-09-06",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Lizzie Howell",
+            "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026341,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "top": 6,
+            "bottom": 2
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-09-06-hilton-head-christian-girls-singles-5",
+        "EventType": "Singles",
+        "LineNumber": 5,
+        "Status": "Completed",
+        "Date": "2001-09-06",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Ryan Reichel",
+            "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026343,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-09-06-hilton-head-christian-girls-singles-6",
+        "EventType": "Singles",
+        "LineNumber": 6,
+        "Status": "Completed",
+        "Date": "2001-09-06",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Bethany Kronz",
+            "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026342,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 2
+          },
+          {
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-09-06-hilton-head-christian-girls-doubles-1",
+        "EventType": "Doubles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2001-09-06",
+        "Participants": [
+          {
+            "ParticipantType": "team",
+            "DisplayName": "Mary Wilkowski / Jennifer Tyre",
+            "Side": "top",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200401
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200321
+              }
+            ]
+          },
+          {
+            "ParticipantType": "team",
+            "DisplayName": "Kendall Sigmon / Cassie Kristoff",
+            "Side": "bottom",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Kendall Sigmon",
+                "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island"
+              },
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Cassie Kristoff",
+                "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island"
+              }
+            ]
+          }
+        ],
+        "Sets": [
+          {
+            "top": 8,
+            "bottom": 5
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-09-06-hilton-head-christian-girls-doubles-2",
+        "EventType": "Doubles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2001-09-06",
+        "Participants": [
+          {
+            "ParticipantType": "team",
+            "DisplayName": "Jesse Rose Remigi / Lindsay Wilburn",
+            "Side": "top",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Jesse Rose Remigi",
+                "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island"
+              },
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Lindsay Wilburn",
+                "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island"
+              }
+            ]
+          },
+          {
+            "ParticipantType": "team",
+            "DisplayName": "Grace Wilkowski / Ann Cole",
+            "Side": "bottom",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200603
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026341
+              }
+            ]
+          }
+        ],
+        "Sets": [
+          {
+            "top": 8,
+            "bottom": 3
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-09-06-hilton-head-christian-girls-doubles-3",
+        "EventType": "Doubles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2001-09-06",
+        "Participants": [
+          {
+            "ParticipantType": "team",
+            "DisplayName": "Clara Rucker / Alicia Jaramillo",
+            "Side": "top",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026342
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026343
+              }
+            ]
+          },
+          {
+            "ParticipantType": "team",
+            "DisplayName": "Sarah Bradham / Laura Hall",
+            "Side": "bottom",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Sarah Bradham",
+                "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island"
+              },
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Laura Hall",
+                "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island"
+              }
+            ]
+          }
+        ],
+        "Sets": [
+          {
+            "top": 8,
+            "bottom": 5
+          }
+        ],
+        "WinnerSide": "top"
+      }
+    ]
+  },
+  {
+    "MatchID": "2001-placeholder-loss-1-girls",
+    "Season": 2002,
+    "Date": "2001-09-18",
+    "Name": "Unreported St. Andrew's Girls Tennis Loss",
+    "MatchType": "Dual Match",
+    "Gender": "Girls",
+    "Classification": "SCISA",
+    "MatchCategory": "Non-Region",
+    "HomeAway": "",
+    "Status": "Completed",
+    "OpponentSchoolID": "",
+    "TeamScore": {
+      "StAndrews": null,
+      "Opponent": null,
+      "Result": "L"
+    },
+    "Summary": "Placeholder for an unreported loss needed to reconcile St. Andrew's published record path between Sept. 6 and Oct. 2, 2001.",
+    "Honors": [
+      {
+        "Title": "Record-path placeholder",
+        "Subject": "Unreported loss between Sept. 6 and Oct. 2, 2001"
+      }
+    ]
+  },
+  {
+    "MatchID": "2001-placeholder-loss-2-girls",
+    "Season": 2002,
+    "Date": "2001-09-25",
+    "Name": "Unreported St. Andrew's Girls Tennis Loss",
+    "MatchType": "Dual Match",
+    "Gender": "Girls",
+    "Classification": "SCISA",
+    "MatchCategory": "Non-Region",
+    "HomeAway": "",
+    "Status": "Completed",
+    "OpponentSchoolID": "",
+    "TeamScore": {
+      "StAndrews": null,
+      "Opponent": null,
+      "Result": "L"
+    },
+    "Summary": "Placeholder for an unreported loss needed to reconcile St. Andrew's published record path between Sept. 6 and Oct. 2, 2001.",
+    "Honors": [
+      {
+        "Title": "Record-path placeholder",
+        "Subject": "Unreported loss between Sept. 6 and Oct. 2, 2001"
+      }
+    ]
+  },
+  {
+    "MatchID": "2001-10-02-hilton-head-christian-girls",
+    "Season": 2002,
+    "Date": "2001-10-02",
+    "Name": "St. Andrew's vs. Hilton Head Christian - Girls",
+    "MatchType": "Dual Match",
+    "Gender": "Girls",
+    "Classification": "SCISA",
+    "MatchCategory": "Region",
+    "HomeAway": "",
+    "Status": "Completed",
+    "OpponentSchoolID": "sc-hilton-head-christian-academy-hilton-head-island",
+    "TeamScore": {
+      "StAndrews": 0,
+      "Opponent": 9,
+      "Result": "L"
+    },
+    "Summary": "Hilton Head Christian defeated St. Andrew's 9-0. The published record line moved St. Andrew's to 1-4 overall and 0-3 in SCISA play.",
+    "LineMatches": [
+      {
+        "TennisMatchID": "2001-10-02-hilton-head-christian-girls-singles-1",
+        "EventType": "Singles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2001-10-02",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Krystina Sigmon",
+            "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200321,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "top": 6,
+            "bottom": 2
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-10-02-hilton-head-christian-girls-singles-2",
+        "EventType": "Singles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2001-10-02",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Lauren Harris",
+            "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200401,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 1
+          },
+          {
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-10-02-hilton-head-christian-girls-singles-3",
+        "EventType": "Singles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2001-10-02",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Lizzie Howell",
+            "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200603,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 1
+          },
+          {
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-10-02-hilton-head-christian-girls-singles-4",
+        "EventType": "Singles",
+        "LineNumber": 4,
+        "Status": "Completed",
+        "Date": "2001-10-02",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Ryan Reichel",
+            "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026341,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-10-02-hilton-head-christian-girls-singles-5",
+        "EventType": "Singles",
+        "LineNumber": 5,
+        "Status": "Completed",
+        "Date": "2001-10-02",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Kendall Sigmon",
+            "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026342,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 3
+          },
+          {
+            "top": 6,
+            "bottom": 1
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-10-02-hilton-head-christian-girls-doubles-1",
+        "EventType": "Doubles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2001-10-02",
+        "Participants": [
+          {
+            "ParticipantType": "team",
+            "DisplayName": "Krystina Sigmon / Laura Hall",
+            "Side": "top",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Krystina Sigmon",
+                "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island"
+              },
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Laura Hall",
+                "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island"
+              }
+            ]
+          },
+          {
+            "ParticipantType": "team",
+            "DisplayName": "Jennifer Tyre / Mary Wilkowski",
+            "Side": "bottom",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200321
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200401
+              }
+            ]
+          }
+        ],
+        "Sets": [
+          {
+            "top": 8,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-10-02-hilton-head-christian-girls-doubles-2",
+        "EventType": "Doubles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2001-10-02",
+        "Participants": [
+          {
+            "ParticipantType": "team",
+            "DisplayName": "Cassie Kristoff / Lindsay Wilburn",
+            "Side": "top",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Cassie Kristoff",
+                "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island"
+              },
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Lindsay Wilburn",
+                "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island"
+              }
+            ]
+          },
+          {
+            "ParticipantType": "team",
+            "DisplayName": "Grace Wilkowski / Ann Cole",
+            "Side": "bottom",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200603
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026341
+              }
+            ]
+          }
+        ],
+        "Sets": [
+          {
+            "top": 8,
+            "bottom": 3
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-10-02-hilton-head-christian-girls-doubles-3",
+        "EventType": "Doubles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2001-10-02",
+        "Participants": [
+          {
+            "ParticipantType": "team",
+            "DisplayName": "Lizzie Howell / Sarah Bradham",
+            "Side": "top",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Lizzie Howell",
+                "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island"
+              },
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Sarah Bradham",
+                "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island"
+              }
+            ]
+          },
+          {
+            "ParticipantType": "team",
+            "DisplayName": "Alicia Jaramillo / Lauren Raebler",
+            "Side": "bottom",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026343
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200322
+              }
+            ]
+          }
+        ],
+        "Sets": [
+          {
+            "top": 8,
+            "bottom": 5
+          }
+        ],
+        "WinnerSide": "top"
+      }
+    ]
+  },
+  {
+    "MatchID": "2001-10-04-beaufort-academy-girls",
+    "Season": 2002,
+    "Date": "2001-10-04",
+    "Name": "St. Andrew's vs. Beaufort Academy - Girls",
+    "MatchType": "Dual Match",
+    "Gender": "Girls",
+    "Classification": "SCISA",
+    "MatchCategory": "Region",
+    "HomeAway": "",
+    "Status": "Completed",
+    "OpponentSchoolID": "sc-beaufort-academy-beaufort",
+    "TeamScore": {
+      "StAndrews": 3,
+      "Opponent": 6,
+      "Result": "L"
+    },
+    "Summary": "Beaufort Academy defeated St. Andrew's 6-3. The newspaper printed singles results only, with Grace Wilkowski earning a singles win for the Saints.",
+    "LineMatches": [
+      {
+        "TennisMatchID": "2001-10-04-beaufort-academy-girls-singles-1",
+        "EventType": "Singles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2001-10-04",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Caroline Brown",
+            "SchoolID": "sc-beaufort-academy-beaufort",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200321,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 2
+          },
+          {
+            "top": 6,
+            "bottom": 3
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-10-04-beaufort-academy-girls-singles-2",
+        "EventType": "Singles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2001-10-04",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Stacy Inman",
+            "SchoolID": "sc-beaufort-academy-beaufort",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200401,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 4
+          },
+          {
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-10-04-beaufort-academy-girls-singles-3",
+        "EventType": "Singles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2001-10-04",
+        "Participants": [
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200603,
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Megan Deane",
+            "SchoolID": "sc-beaufort-academy-beaufort",
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 1
+          },
+          {
+            "top": 6,
+            "bottom": 2
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-10-04-beaufort-academy-girls-singles-4",
+        "EventType": "Singles",
+        "LineNumber": 4,
+        "Status": "Completed",
+        "Date": "2001-10-04",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Allison Neal",
+            "SchoolID": "sc-beaufort-academy-beaufort",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026341,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 4
+          },
+          {
+            "top": 6,
+            "bottom": 4
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-10-04-beaufort-academy-girls-singles-5",
+        "EventType": "Singles",
+        "LineNumber": 5,
+        "Status": "Completed",
+        "Date": "2001-10-04",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Mary Laffitte",
+            "SchoolID": "sc-beaufort-academy-beaufort",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026343,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 1
+          },
+          {
+            "top": 6,
+            "bottom": 1
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-10-04-beaufort-academy-girls-singles-6",
+        "EventType": "Singles",
+        "LineNumber": 6,
+        "Status": "Completed",
+        "Date": "2001-10-04",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Charmian Webb",
+            "SchoolID": "sc-beaufort-academy-beaufort",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026342,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 1
+          },
+          {
+            "top": 6,
+            "bottom": 1
+          }
+        ],
+        "WinnerSide": "top"
+      }
+    ],
+    "Honors": [
+      {
+        "Title": "Incomplete line score",
+        "Subject": "Published report omitted doubles lines despite a 6-3 team score."
+      }
+    ]
+  },
+  {
+    "MatchID": "2001-10-18-hilton-head-prep-girls",
+    "Season": 2002,
+    "Date": "2001-10-18",
+    "Name": "St. Andrew's vs. Hilton Head Prep - Girls",
+    "MatchType": "Dual Match",
+    "Gender": "Girls",
+    "Classification": "SCISA",
+    "MatchCategory": "Region",
+    "HomeAway": "",
+    "Status": "Completed",
+    "OpponentSchoolID": "sc-hilton-head-preparatory-school-hilton-head-island",
+    "TeamScore": {
+      "StAndrews": 3,
+      "Opponent": 6,
+      "Result": "L"
+    },
+    "Summary": "Hilton Head Prep defeated St. Andrew's 6-3. Alicia Jaramillo won a singles point, while Grace Wilkowski/Ann Cole and Jaramillo/Stephanie Vine won doubles points. The record line listed St. Andrew's as 1-6 overall and 0-4 in SCISA Region 2-AA.",
+    "LineMatches": [
+      {
+        "TennisMatchID": "2001-10-18-hilton-head-prep-girls-singles-1",
+        "EventType": "Singles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2001-10-18",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Rose Ferguson",
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200321,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 4
+          },
+          {
+            "top": 6,
+            "bottom": 1
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-10-18-hilton-head-prep-girls-singles-2",
+        "EventType": "Singles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2001-10-18",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Nicole Piazza",
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200401,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 4
+          },
+          {
+            "top": 6,
+            "bottom": 4
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-10-18-hilton-head-prep-girls-singles-3",
+        "EventType": "Singles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2001-10-18",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Connie Leaf",
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200603,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 7,
+            "bottomTiebreak": 9
+          },
+          {
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "top": 8,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "top",
+        "Notes": "Published result listed first-set tiebreak as 11-9."
+      },
+      {
+        "TennisMatchID": "2001-10-18-hilton-head-prep-girls-singles-4",
+        "EventType": "Singles",
+        "LineNumber": 4,
+        "Status": "Completed",
+        "Date": "2001-10-18",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Sonia Kohli",
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026341,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 1
+          },
+          {
+            "top": 6,
+            "bottom": 4
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-10-18-hilton-head-prep-girls-singles-5",
+        "EventType": "Singles",
+        "LineNumber": 5,
+        "Status": "Completed",
+        "Date": "2001-10-18",
+        "Participants": [
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026343,
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Elizabeth Brown",
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island",
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 1
+          },
+          {
+            "top": 7,
+            "bottom": 6,
+            "topTiebreak": 4
+          }
+        ],
+        "WinnerSide": "top",
+        "Notes": "Published result listed second-set tiebreak as 7-4."
+      },
+      {
+        "TennisMatchID": "2001-10-18-hilton-head-prep-girls-singles-6",
+        "EventType": "Singles",
+        "LineNumber": 6,
+        "Status": "Completed",
+        "Date": "2001-10-18",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Megan Mason",
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026342,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-10-18-hilton-head-prep-girls-doubles-1",
+        "EventType": "Doubles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2001-10-18",
+        "Participants": [
+          {
+            "ParticipantType": "team",
+            "DisplayName": "Rose Ferguson / Nicole Piazza",
+            "Side": "top",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Rose Ferguson",
+                "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+              },
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Nicole Piazza",
+                "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+              }
+            ]
+          },
+          {
+            "ParticipantType": "team",
+            "DisplayName": "Jennifer Tyre / Mary Wilkowski",
+            "Side": "bottom",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200321
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200401
+              }
+            ]
+          }
+        ],
+        "Sets": [
+          {
+            "top": 8,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-10-18-hilton-head-prep-girls-doubles-2",
+        "EventType": "Doubles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2001-10-18",
+        "Participants": [
+          {
+            "ParticipantType": "team",
+            "DisplayName": "Grace Wilkowski / Ann Cole",
+            "Side": "top",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200603
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026341
+              }
+            ]
+          },
+          {
+            "ParticipantType": "team",
+            "DisplayName": "Connie Leaf / Sonia Kohli",
+            "Side": "bottom",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Connie Leaf",
+                "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+              },
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Sonia Kohli",
+                "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+              }
+            ]
+          }
+        ],
+        "Sets": [
+          {
+            "top": 8,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-10-18-hilton-head-prep-girls-doubles-3",
+        "EventType": "Doubles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2001-10-18",
+        "Participants": [
+          {
+            "ParticipantType": "team",
+            "DisplayName": "Alicia Jaramillo / Stephanie Vine",
+            "Side": "top",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026343
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200429
+              }
+            ]
+          },
+          {
+            "ParticipantType": "team",
+            "DisplayName": "Elizabeth Brown / Megan Mason",
+            "Side": "bottom",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Elizabeth Brown",
+                "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+              },
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Megan Mason",
+                "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+              }
+            ]
+          }
+        ],
+        "Sets": [
+          {
+            "top": 7,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "top",
+        "Notes": "Published result did not include a tiebreak score for the 7-6 doubles set."
+      }
+    ]
   }
 ]

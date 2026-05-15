@@ -1,5 +1,15 @@
 [
   {
+    "SeasonID": 2001,
+    "YearStart": 2001,
+    "YearEnd": 2002,
+    "HeadCoach": "Deborah Morell",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null
+  },
+  {
     "SeasonID": 2002,
     "YearStart": 2002,
     "YearEnd": 2003,

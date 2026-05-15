@@ -241,6 +241,15 @@ function Season2001_02() {
               1990s had continued into a new era.
             </p>
             <p>
+              The fall NewsBank sweep added the Savannah Morning News private-school
+              preview for this group. It listed Demasi as a second-year head coach
+              and identified junior guard Jeff Smith, junior forward Patrick Burns,
+              and sophomore guard Davy Clay as the key returnees after the
+              graduation losses of Tobi Specht and Justin Dixon. The preview also
+              described St. Andrew&apos;s as quick, tenacious defensively, and aiming
+              for another state playoff berth.
+            </p>
+            <p>
               Patrick Burns powered the offense with 465 points and gave the team
               a go-to scorer throughout the winter. Jeff Smith added 221 points,
               Cam Aldrich scored 146, and Davy Clay finished with 130, giving the

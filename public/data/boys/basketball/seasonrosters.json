@@ -970,11 +970,15 @@
       },
       {
         "PlayerID": 200002,
-        "JerseyNumber": null
+        "JerseyNumber": null,
+        "Grade": 11,
+        "Subline": "Key returnee in Savannah Morning News preseason preview"
       },
       {
         "PlayerID": 200003,
-        "JerseyNumber": null
+        "JerseyNumber": null,
+        "Grade": 10,
+        "Subline": "Key returnee in Savannah Morning News preseason preview"
       },
       {
         "PlayerID": 200004,
@@ -1006,7 +1010,9 @@
       },
       {
         "PlayerID": 200011,
-        "JerseyNumber": null
+        "JerseyNumber": null,
+        "Grade": 11,
+        "Subline": "Key returnee in Savannah Morning News preseason preview"
       },
       {
         "PlayerID": 200012,

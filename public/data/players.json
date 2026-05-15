@@ -802,6 +802,22 @@
     "GradYear": null
   },
   {
+    "PlayerID": 200108,
+    "PlayerName": "Adam Ciccio",
+    "FirstName": "Adam",
+    "LastName": "Ciccio",
+    "GradYear": 2002,
+    "Gender": "Boys"
+  },
+  {
+    "PlayerID": 200109,
+    "PlayerName": "Fred Kryner",
+    "FirstName": "Fred",
+    "LastName": "Kryner",
+    "GradYear": null,
+    "Gender": "Boys"
+  },
+  {
     "PlayerID": 200201,
     "FirstName": "Jesse",
     "LastName": "Coleman",
@@ -941,6 +957,54 @@
     "PlayerName": "Peisel",
     "FirstName": "Peisel",
     "LastName": "",
+    "GradYear": null,
+    "Gender": "Girls"
+  },
+  {
+    "PlayerID": 200317,
+    "PlayerName": "Kim Cooper",
+    "FirstName": "Kim",
+    "LastName": "Cooper",
+    "GradYear": 2002,
+    "Gender": "Girls"
+  },
+  {
+    "PlayerID": 200318,
+    "PlayerName": "Sarah Roddenberry",
+    "FirstName": "Sarah",
+    "LastName": "Roddenberry",
+    "GradYear": 2002,
+    "Gender": "Girls"
+  },
+  {
+    "PlayerID": 200319,
+    "PlayerName": "Veronica Arenander",
+    "FirstName": "Veronica",
+    "LastName": "Arenander",
+    "GradYear": null,
+    "Gender": "Girls"
+  },
+  {
+    "PlayerID": 200320,
+    "PlayerName": "Teri Bugos",
+    "FirstName": "Teri",
+    "LastName": "Bugos",
+    "GradYear": null,
+    "Gender": "Girls"
+  },
+  {
+    "PlayerID": 200321,
+    "PlayerName": "Jennifer Tyre",
+    "FirstName": "Jennifer",
+    "LastName": "Tyre",
+    "GradYear": null,
+    "Gender": "Girls"
+  },
+  {
+    "PlayerID": 200322,
+    "PlayerName": "Lauren Raebler",
+    "FirstName": "Lauren",
+    "LastName": "Raebler",
     "GradYear": null,
     "Gender": "Girls"
   },
