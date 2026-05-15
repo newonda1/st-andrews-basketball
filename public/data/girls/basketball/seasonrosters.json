@@ -35,38 +35,32 @@
       {
         "PlayerID": 200403,
         "JerseyNumber": null,
-        "Grade": 9,
-        "Subline": "state tournament/JV call-up"
+        "Grade": 9
       },
       {
         "PlayerID": 200409,
         "JerseyNumber": null,
-        "Grade": 9,
-        "Subline": "JV call-up"
+        "Grade": 9
       },
       {
         "PlayerID": 200410,
         "JerseyNumber": null,
-        "Grade": 9,
-        "Subline": "JV call-up"
+        "Grade": 9
       },
       {
         "PlayerID": 200503,
         "JerseyNumber": null,
-        "Grade": 9,
-        "Subline": "JV call-up"
+        "Grade": 9
       },
       {
         "PlayerID": 200429,
         "JerseyNumber": null,
-        "Grade": 8,
-        "Subline": "JV call-up"
+        "Grade": 8
       },
       {
         "PlayerID": 200316,
         "JerseyNumber": null,
-        "Grade": null,
-        "Subline": "NewsBank box-score listing"
+        "Grade": null
       }
     ]
   },
