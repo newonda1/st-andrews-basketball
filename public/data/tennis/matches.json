@@ -2549,6 +2549,330 @@
     "Source": "User-provided girls tennis results, Oct. 3, 2002"
   },
   {
+    "MatchID": "2002-10-17-charleston-collegiate-girls",
+    "Season": 2003,
+    "Date": "2002-10-17",
+    "Name": "St. Andrew's vs. Charleston Collegiate - Girls",
+    "MatchType": "Dual Match",
+    "Gender": "Girls",
+    "Classification": "SCISA",
+    "MatchCategory": "Region",
+    "HomeAway": "Home",
+    "Status": "Completed",
+    "OpponentSchoolID": "sc-charleston-collegiate-school-johns-island",
+    "TeamScore": {
+      "StAndrews": 5,
+      "Opponent": 4,
+      "Result": "W"
+    },
+    "Summary": "St. Andrew's defeated Charleston Collegiate 5-4 and improved to 4-6.",
+    "LineMatches": [
+      {
+        "TennisMatchID": "2002-10-17-charleston-collegiate-girls-singles-1",
+        "EventType": "Singles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2002-10-17",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-charleston-collegiate-brooke-wooster",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200401,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 8,
+            "bottom": 2
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2003-girls-charleston-collegiate-brooke-wooster"
+      },
+      {
+        "TennisMatchID": "2002-10-17-charleston-collegiate-girls-singles-2",
+        "EventType": "Singles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2002-10-17",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-charleston-collegiate-ali-sexton",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026341,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 5,
+            "bottom": 8
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "WinnerPlayerID": 2026341
+      },
+      {
+        "TennisMatchID": "2002-10-17-charleston-collegiate-girls-singles-3",
+        "EventType": "Singles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2002-10-17",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-charleston-collegiate-elaine-roland",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200603,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 1,
+            "bottom": 8
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "WinnerPlayerID": 200603
+      },
+      {
+        "TennisMatchID": "2002-10-17-charleston-collegiate-girls-singles-4",
+        "EventType": "Singles",
+        "LineNumber": 4,
+        "Status": "Completed",
+        "Date": "2002-10-17",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-charleston-collegiate-katie-sutton",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026343,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 3,
+            "bottom": 8
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "WinnerPlayerID": 2026343
+      },
+      {
+        "TennisMatchID": "2002-10-17-charleston-collegiate-girls-singles-5",
+        "EventType": "Singles",
+        "LineNumber": 5,
+        "Status": "Completed",
+        "Date": "2002-10-17",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-charleston-collegiate-nancy-smythe",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200422,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 1,
+            "bottom": 8
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "stAndrewsPlayer",
+        "WinnerPlayerID": 200422
+      },
+      {
+        "TennisMatchID": "2002-10-17-charleston-collegiate-girls-singles-6",
+        "EventType": "Singles",
+        "LineNumber": 6,
+        "Status": "Completed",
+        "Date": "2002-10-17",
+        "Participants": [
+          {
+            "ParticipantType": "opponentAthlete",
+            "OpponentAthleteID": "tennis-2003-girls-charleston-collegiate-alana-harris",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "DisplayName": "St. Andrew's Forfeit",
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "opponentAthlete",
+        "WinnerOpponentAthleteID": "tennis-2003-girls-charleston-collegiate-alana-harris",
+        "SourceScoreLabel": "Forfeit",
+        "Notes": "The published result listed Alana Harris winning by forfeit."
+      },
+      {
+        "TennisMatchID": "2002-10-17-charleston-collegiate-girls-doubles-1",
+        "EventType": "Doubles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2002-10-17",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-10-17-charleston-collegiate-girls-cc-wooster-sexton",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-charleston-collegiate-brooke-wooster"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-charleston-collegiate-ali-sexton"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-10-17-charleston-collegiate-girls-sta-grace-wilkowski-cole",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200603
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026341
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 8,
+            "bottom": 5
+          }
+        ],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2002-10-17-charleston-collegiate-girls-cc-wooster-sexton"
+      },
+      {
+        "TennisMatchID": "2002-10-17-charleston-collegiate-girls-doubles-2",
+        "EventType": "Doubles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2002-10-17",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-10-17-charleston-collegiate-girls-cc-smythe-harris",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-charleston-collegiate-nancy-smythe"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-charleston-collegiate-alana-harris"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-10-17-charleston-collegiate-girls-sta-mary-wilkowski-jaramillo-underwood",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200401
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026343
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 0,
+            "bottom": 8
+          }
+        ],
+        "WinnerSide": "bottom",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2002-10-17-charleston-collegiate-girls-sta-mary-wilkowski-jaramillo-underwood"
+      },
+      {
+        "TennisMatchID": "2002-10-17-charleston-collegiate-girls-doubles-3",
+        "EventType": "Doubles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2002-10-17",
+        "Participants": [
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-10-17-charleston-collegiate-girls-cc-sutton-roland",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-charleston-collegiate-katie-sutton"
+              },
+              {
+                "ParticipantType": "opponentAthlete",
+                "OpponentAthleteID": "tennis-2003-girls-charleston-collegiate-elaine-roland"
+              }
+            ],
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "doublesTeam",
+            "TeamID": "2002-10-17-charleston-collegiate-girls-sta-forfeit",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "DisplayName": "St. Andrew's Forfeit"
+              }
+            ],
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [],
+        "WinnerSide": "top",
+        "WinnerParticipantType": "doublesTeam",
+        "WinnerTeamID": "2002-10-17-charleston-collegiate-girls-cc-sutton-roland",
+        "SourceScoreLabel": "Forfeit",
+        "Notes": "The published result listed Katie Sutton and Elaine Roland winning by forfeit."
+      }
+    ],
+    "Source": "Savannah Morning News, Oct. 18, 2002"
+  },
+  {
     "MatchID": "2005-09-01-beaufort-academy-girls",
     "Season": 2006,
     "Date": "2005-09-01",

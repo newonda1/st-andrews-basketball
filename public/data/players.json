@@ -669,7 +669,18 @@
     "PlayerID": 200002,
     "FirstName": "Patrick",
     "LastName": "Burns",
-    "GradYear": 2003
+    "GradYear": 2003,
+    "ProfileBlurbs": [
+      {
+        "Sport": "Boys Basketball",
+        "SeasonID": 2002,
+        "SourceDate": "2002-11-22",
+        "SourcePublication": "Savannah Morning News",
+        "SourceTitle": "BOYS' PREP BASKETBALL / 10 PLAYERS TO WATCH - WIDE OPEN PARITY SHOULD DOMINATE HIGH SCHOOL BOYS' BASKETBALL IN THE CITY THIS SEASON AS PERENNIAL POWERS LOOK TO MAKE UP FOR KEY LOSSES.",
+        "Headline": "Patrick Burns - 2002 Boys' Prep Basketball Player to Watch",
+        "Text": "The Savannah Morning News listed Burns among its 10 boys' prep basketball players to watch for the 2002-03 season. The preview described him as a 6-foot-1, 170-pound senior forward and noted that he had dominated his competition a year earlier by posting 14 straight double-doubles."
+      }
+    ]
   },
   {
     "PlayerID": 200003,

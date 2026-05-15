@@ -1729,6 +1729,19 @@
     "Source": "User-provided girls tennis results, Sept. 10, 2002"
   },
   {
+    "OpponentAthleteID": "tennis-2003-girls-charleston-collegiate-elaine-roland",
+    "DisplayName": "Elaine Roland",
+    "FirstName": "Elaine",
+    "FirstInitial": "E",
+    "LastName": "Roland",
+    "Gender": "Girls",
+    "SchoolID": "sc-charleston-collegiate-school-johns-island",
+    "SourceSchoolLabel": "Charleston Collegiate",
+    "ClassYearLabel": null,
+    "GradYear": null,
+    "Source": "Savannah Morning News, Oct. 18, 2002"
+  },
+  {
     "OpponentAthleteID": "tennis-2003-girls-charleston-collegiate-nancy-smythe",
     "DisplayName": "Nancy Smythe",
     "FirstName": "Nancy",
