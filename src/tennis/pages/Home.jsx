@@ -27,6 +27,7 @@ export default function Home() {
   return (
     <SportHomePage
       sportName="Tennis"
+      archiveImageKey="tennis"
       headline="A coed tennis program with championship roots."
       intro="The 2025-26 Lions have added another strong chapter, with the boys posting a 9-1 dual-match record and both boys and girls represented in GIAA region and state individual tournament play."
       secondaryIntro="New SavannahNow research adds more shape to the program's recent history: Jack Wylly was a first-team All-Greater Savannah selection in 2017 and 2018, then won a GISA individual state title while leading St. Andrew's to a team state runner-up finish in 2019. The search also recovered Paige Edwards' singles win against Beaufort Academy in 2012."

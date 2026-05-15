@@ -104,6 +104,7 @@ export default function Home() {
   return (
     <SportHomePage
       sportName="Football"
+      archiveImageKey="football"
       headline="A fuller home for St. Andrew's football history."
       intro="The football archive now spans 30 season records from 1996 through 2025, with 299 games, opponent history, team records, rosters, player pages, and individual stat tables connected across the site."
       secondaryIntro="Recovered SCISA-era schedules and playoff brackets now sit alongside MaxPreps-era schedules, scores, rosters, season totals, game logs, and newspaper stat adjustments."

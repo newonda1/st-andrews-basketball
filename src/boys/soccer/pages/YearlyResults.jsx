@@ -325,7 +325,7 @@ export default function YearlyResults({ data, status = "" }) {
   const tableFrameClassName =
     "overflow-x-auto rounded-lg border border-gray-200 bg-white shadow";
   const tableClassName =
-    "w-full table-auto text-center text-[clamp(0.64rem,0.95vw,1rem)] md:mx-auto md:w-max";
+    "w-full table-auto text-center text-[clamp(0.64rem,0.95vw,1rem)]";
   const headerCellClassName = `${recordTableStyles.headerCell} whitespace-nowrap`;
   const numericCellClassName = `${recordTableStyles.bodyCell} whitespace-nowrap`;
   const textCellClassName = `${recordTableStyles.bodyCell} md:text-left`;

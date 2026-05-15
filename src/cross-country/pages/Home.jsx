@@ -14,6 +14,7 @@ export default function Home() {
   return (
     <SportHomePage
       sportName="Cross Country"
+      archiveImageKey="crossCountry"
       eyebrow="Cross Country"
       headline="Mapping races, runners, and season history."
       intro="The cross country section is built around race results: season schedules, team-filtered MileSplit performances, postseason finishes, top times, and runners who appear across the program archive."

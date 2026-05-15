@@ -18,6 +18,7 @@ export default function Home() {
   return (
     <SportHomePage
       sportName="Volleyball"
+      archiveImageKey="volleyball"
       headline="Growing the St. Andrew's volleyball archive."
       intro="The volleyball section now has a home for season results, match detail, team totals, player pages, and record tables."
       secondaryIntro="The live archive now reaches back to the recovered 2002-03, 2003-04, and 2005-06 entries, then continues through the 2007-08 to 2025-26 seasons."

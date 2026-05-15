@@ -15,6 +15,7 @@ export default function Home() {
   return (
     <SportHomePage
       sportName="Golf"
+      archiveImageKey="golf"
       headline="Organizing the St. Andrew's golf archive."
       intro="The golf section gives published results a home, connecting season summaries, match pages, source notes, courses, divisions, and visible St. Andrew's entries."
       secondaryIntro="The current archive now begins with 2004 match reports from Mary Calder Golf Course and Wilmington Island Country Club, adds a Spring 2006 GISA state summary, then continues through state tournament results from 2019, 2021, 2022, 2023, and 2024."

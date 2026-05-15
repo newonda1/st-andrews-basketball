@@ -130,6 +130,50 @@ function ArchiveImageRotator({
   );
 }
 
+function uniqueArchiveImages(images) {
+  const seen = new Set();
+
+  return images.filter((image) => {
+    if (!image?.src || seen.has(image.src)) return false;
+    seen.add(image.src);
+    return true;
+  });
+}
+
+function useSportArchiveImages(archiveImageKey, archiveImages = []) {
+  const [manifestImages, setManifestImages] = useState([]);
+
+  useEffect(() => {
+    if (!archiveImageKey) {
+      setManifestImages([]);
+      return undefined;
+    }
+
+    let isMounted = true;
+
+    window
+      .fetch("/data/archiveImages.json")
+      .then((response) => (response.ok ? response.json() : {}))
+      .then((manifest) => {
+        if (!isMounted) return;
+        const images = manifest?.[archiveImageKey];
+        setManifestImages(Array.isArray(images) ? images : []);
+      })
+      .catch(() => {
+        if (isMounted) setManifestImages([]);
+      });
+
+    return () => {
+      isMounted = false;
+    };
+  }, [archiveImageKey]);
+
+  return useMemo(
+    () => uniqueArchiveImages([...archiveImages, ...manifestImages]),
+    [archiveImages, manifestImages],
+  );
+}
+
 function ArchiveLink({ label, to }) {
   return (
     <Link
@@ -159,9 +203,11 @@ export default function SportHomePage({
   highlights = [],
   archiveImagesTitle = "Images from the Archive",
   archiveImages = [],
+  archiveImageKey,
   linksTitle = "Archive Entry Points",
   links = [],
 }) {
+  const resolvedArchiveImages = useSportArchiveImages(archiveImageKey, archiveImages);
   const hasStory = storyParagraphs.length > 0;
   const hasHighlights = highlights.length > 0;
   const detailColumnClass =
@@ -246,8 +292,8 @@ export default function SportHomePage({
         </section>
       ) : null}
 
-      {archiveImages.length > 0 ? (
-        <ArchiveImageRotator title={archiveImagesTitle} images={archiveImages} />
+      {resolvedArchiveImages.length > 0 ? (
+        <ArchiveImageRotator title={archiveImagesTitle} images={resolvedArchiveImages} />
       ) : null}
     </div>
   );

@@ -25,7 +25,7 @@
     "YearEnd": 2005,
     "HeadCoach": "Michael Bennet",
     "RegionSeed": null,
-    "RegionFinish": "Region Runner-Up",
+    "RegionFinish": null,
     "StateSeed": 1,
     "StateFinish": "State Champion"
   },
@@ -37,7 +37,7 @@
     "RegionSeed": null,
     "RegionFinish": null,
     "StateSeed": null,
-    "StateFinish": null
+    "StateFinish": "State Champion"
   },
   {
     "SeasonID": 2006,

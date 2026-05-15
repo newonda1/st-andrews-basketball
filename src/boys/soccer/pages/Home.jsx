@@ -26,6 +26,7 @@ export default function Home() {
   return (
     <SportHomePage
       sportName="Boys Soccer"
+      archiveImageKey="boysSoccer"
       headline="Building the St. Andrew's boys soccer archive."
       intro="The boys soccer section is ready for recovered schedules, rosters, game briefs, and season records."
       secondaryIntro="This section now has the same archive structure as girls soccer: a landing page, year-by-year results, season pages, game detail pages, player pages, and opponent history."

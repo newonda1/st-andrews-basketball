@@ -24,6 +24,7 @@ export default function Home() {
   return (
     <SportHomePage
       sportName="Baseball"
+      archiveImageKey="boysBaseball"
       headline="Building the St. Andrew's baseball archive."
       intro="The baseball section gathers schedules, game results, season pages, team totals, player pages, and record tables into one home for the program."
       secondaryIntro="The live archive now covers seasons from 2008 through 2026, with full game and player stat detail where source data is available."

@@ -12,6 +12,7 @@ export default function Home() {
   return (
     <SportHomePage
       sportName="Girls Soccer"
+      archiveImageKey="girlsSoccer"
       headline="Building the St. Andrew's girls soccer archive."
       intro="The girls soccer section now begins with the Spring 2004 season, connecting recovered game briefs with season, roster, and game detail pages."
       secondaryIntro="The opening stretch now includes the March 9 Frederica Academy match, the March 11 SCISA 2-AA region win over Colleton Prep, and Cavalier Classic results from Mount De Sales."

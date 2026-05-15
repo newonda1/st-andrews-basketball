@@ -84,6 +84,7 @@ export default function Home() {
   return (
     <SportHomePage
       sportName="Girls' Basketball"
+      archiveImageKey="girlsBasketball"
       headline="A growing home for St. Andrew's girls basketball history."
       intro="The girls basketball archive now connects 22 season records, 432 games, 119 player records, opponent history, team records, individual leaderboards, roster files, and player pages across the site."
       secondaryIntro="The recovered 2003-04 season adds a 21-5 State Final Four run, full roster details, newspaper recaps, game-by-game scoring, and a newly organized photo gallery to the modern season pages already live from 2020-21 through 2025-26."

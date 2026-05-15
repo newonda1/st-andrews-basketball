@@ -14,6 +14,7 @@ export default function Home() {
   return (
     <SportHomePage
       sportName="Track & Field"
+      archiveImageKey="track"
       eyebrow="Track & Field"
       headline="Tracking marks, champions, and season history."
       intro="The track & field section is built around performances: school records, season-best marks, relays, qualifiers, podium finishes, and championship results."

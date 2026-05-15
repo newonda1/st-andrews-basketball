@@ -14,6 +14,7 @@ export default function Home() {
   return (
     <SportHomePage
       sportName="Softball"
+      archiveImageKey="softball"
       headline="Building the St. Andrew's softball archive."
       intro="The softball section now follows the same season and game detail structure used by the baseball archive."
       secondaryIntro="Spring 2006 is the first season in the section, with schedule, line score, published leaders, pitching decisions, and shared athlete profile links connected from the same archive paths."

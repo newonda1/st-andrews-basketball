@@ -14,6 +14,7 @@ export default function Home() {
   return (
     <SportHomePage
       sportName="Swimming"
+      archiveImageKey="swimming"
       headline="Preserving St. Andrew's swimming results."
       intro="The swimming section gives state champions, school records, meet results, athlete entries, and season summaries a single program home."
       secondaryIntro="The live archive currently covers verified meet data from 2014-15 through 2025-26, with room to keep folding in older championship history."
