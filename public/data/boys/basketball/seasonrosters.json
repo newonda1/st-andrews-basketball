@@ -1025,59 +1025,73 @@
     "Players": [
       {
         "PlayerID": 200001,
-        "JerseyNumber": null
+        "JerseyNumber": null,
+        "Grade": 11
       },
       {
         "PlayerID": 200002,
-        "JerseyNumber": null
+        "JerseyNumber": null,
+        "Grade": 11
       },
       {
         "PlayerID": 200003,
-        "JerseyNumber": null
-      },
-      {
-        "PlayerID": 200101,
-        "JerseyNumber": null
+        "JerseyNumber": null,
+        "Grade": 10
       },
       {
         "PlayerID": 200005,
-        "JerseyNumber": null
-      },
-      {
-        "PlayerID": 200102,
-        "JerseyNumber": null
-      },
-      {
-        "PlayerID": 200103,
-        "JerseyNumber": null
-      },
-      {
-        "PlayerID": 200104,
-        "JerseyNumber": null
-      },
-      {
-        "PlayerID": 200105,
-        "JerseyNumber": null
+        "JerseyNumber": null,
+        "Grade": 12
       },
       {
         "PlayerID": 200008,
-        "JerseyNumber": null
+        "JerseyNumber": null,
+        "Grade": null
       },
       {
         "PlayerID": 200010,
-        "JerseyNumber": null
-      },
-      {
-        "PlayerID": 200106,
-        "JerseyNumber": null
+        "JerseyNumber": null,
+        "Grade": null
       },
       {
         "PlayerID": 200011,
-        "JerseyNumber": null
+        "JerseyNumber": null,
+        "Grade": 11
+      },
+      {
+        "PlayerID": 200101,
+        "JerseyNumber": null,
+        "Grade": 10
+      },
+      {
+        "PlayerID": 200102,
+        "JerseyNumber": null,
+        "Grade": null
+      },
+      {
+        "PlayerID": 200103,
+        "JerseyNumber": null,
+        "Grade": 11
+      },
+      {
+        "PlayerID": 200104,
+        "JerseyNumber": null,
+        "Grade": null
+      },
+      {
+        "PlayerID": 200105,
+        "JerseyNumber": null,
+        "Grade": 10
+      },
+      {
+        "PlayerID": 200106,
+        "JerseyNumber": null,
+        "Grade": null
       },
       {
         "PlayerID": 200107,
-        "JerseyNumber": null
+        "JerseyNumber": null,
+        "Grade": null
       }
     ]
   },

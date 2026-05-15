@@ -5173,54 +5173,6 @@
     "IsComplete": "Yes"
   },
   {
-    "GameID": 20010001,
-    "OpponentID": "sc-james-island-christian-school-charleston",
-    "Opponent": "James Island Christian School",
-    "LocationType": "Unknown",
-    "GameType": "Unknown",
-    "Result": "W",
-    "TeamScore": 58,
-    "OpponentScore": 53,
-    "Season": 2001,
-    "IsComplete": "Yes"
-  },
-  {
-    "GameID": 20010002,
-    "OpponentID": "sc-colleton-prep-academy-walterboro",
-    "Opponent": "Colleton Prep Academy",
-    "LocationType": "Unknown",
-    "GameType": "Unknown",
-    "Result": "W",
-    "TeamScore": 67,
-    "OpponentScore": 63,
-    "Season": 2001,
-    "IsComplete": "Yes"
-  },
-  {
-    "GameID": 20010003,
-    "OpponentID": "",
-    "Opponent": "Unknown",
-    "LocationType": "Unknown",
-    "GameType": "Unknown",
-    "Result": "",
-    "TeamScore": null,
-    "OpponentScore": null,
-    "Season": 2001,
-    "IsComplete": "No"
-  },
-  {
-    "GameID": 20010004,
-    "OpponentID": "",
-    "Opponent": "Unknown",
-    "LocationType": "Unknown",
-    "GameType": "Unknown",
-    "Result": "",
-    "TeamScore": null,
-    "OpponentScore": null,
-    "Season": 2001,
-    "IsComplete": "No"
-  },
-  {
     "GameID": 20010102,
     "OpponentID": "ga-bible-baptist-school-savannah",
     "Opponent": "Bible Baptist School",
@@ -5477,12 +5429,72 @@
     "OpponentID": "sc-patrick-henry-academy-estill",
     "Opponent": "Patrick Henry Academy",
     "LocationType": "Unknown",
+    "GameType": "Non-Region",
+    "Result": "W",
+    "TeamScore": 65,
+    "OpponentScore": 45,
+    "Season": 2001,
+    "IsComplete": "Yes",
+    "Recap": "Patrick Burns scored 22 and St. Andrew's opened with a 65-45 non-region win over Patrick Henry.",
+    "ResultMargin": 20
+  },
+  {
+    "GameID": 20011207,
+    "OpponentID": "sc-abundant-life-academy-hardeeville",
+    "Opponent": "Abundant Life Academy",
+    "LocationType": "Home",
+    "GameType": "Tournament",
+    "Tournament": "St. Andrew's Holiday Invitational",
+    "Result": "W",
+    "TeamScore": 76,
+    "OpponentScore": 60,
+    "Season": 2001,
+    "IsComplete": "Yes",
+    "Recap": "Jeff Smith posted a triple-double with 13 points, 10 rebounds, and 11 assists in the Holiday Invitational win.",
+    "ResultMargin": 16
+  },
+  {
+    "GameID": 20011208,
+    "OpponentID": "ga-memorial-day-school-savannah",
+    "Opponent": "Memorial Day School",
+    "LocationType": "Home",
+    "GameType": "Tournament",
+    "Tournament": "St. Andrew's Holiday Invitational",
+    "Result": "L",
+    "TeamScore": 46,
+    "OpponentScore": 53,
+    "Season": 2001,
+    "IsComplete": "Yes",
+    "Recap": "Memorial Day beat St. Andrew's 53-46 in the Holiday Invitational championship game.",
+    "ResultMargin": -7
+  },
+  {
+    "GameID": 20011231,
+    "OpponentID": "",
+    "Opponent": "Unknown opponent",
+    "LocationType": "Unknown",
     "GameType": "Unknown",
     "Result": "",
     "TeamScore": null,
     "OpponentScore": null,
     "Season": 2001,
-    "IsComplete": "No"
+    "IsComplete": "No",
+    "SourceNote": "Published statistical totals imply an additional early-season game before Jan. 8; opponent, result, and box score were not recovered in the NewsBank sweep.",
+    "ResultMargin": null
+  },
+  {
+    "GameID": 20020102,
+    "OpponentID": "",
+    "Opponent": "Unknown opponent",
+    "LocationType": "Unknown",
+    "GameType": "Unknown",
+    "Result": "",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 2001,
+    "IsComplete": "No",
+    "SourceNote": "Published statistical totals imply an additional early-season game before Jan. 8; opponent, result, and box score were not recovered in the NewsBank sweep.",
+    "ResultMargin": null
   },
   {
     "GameID": 20020104,
@@ -5494,7 +5506,9 @@
     "TeamScore": null,
     "OpponentScore": null,
     "Season": 2001,
-    "IsComplete": "No"
+    "IsComplete": "No",
+    "SourceNote": "Scheduled game inferred from the existing archive ledger; box score not recovered in this NewsBank sweep.",
+    "ResultMargin": null
   },
   {
     "GameID": 20020105,
@@ -5506,199 +5520,218 @@
     "TeamScore": null,
     "OpponentScore": null,
     "Season": 2001,
-    "IsComplete": "No"
+    "IsComplete": "No",
+    "SourceNote": "Scheduled game inferred from the existing archive ledger; box score not recovered in this NewsBank sweep.",
+    "ResultMargin": null
   },
   {
     "GameID": 20020108,
     "OpponentID": "sc-james-island-christian-school-charleston",
     "Opponent": "James Island Christian School",
     "LocationType": "Away",
-    "GameType": "Unknown",
+    "GameType": "Region",
     "Result": "W",
     "TeamScore": 58,
     "OpponentScore": 53,
     "Season": 2001,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ResultMargin": 5
   },
   {
     "GameID": 20020111,
     "OpponentID": "sc-colleton-prep-academy-walterboro",
     "Opponent": "Colleton Prep Academy",
     "LocationType": "Home",
-    "GameType": "Unknown",
+    "GameType": "Region",
     "Result": "W",
     "TeamScore": 67,
     "OpponentScore": 63,
     "Season": 2001,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ResultMargin": 4
   },
   {
     "GameID": 20020112,
     "OpponentID": "sc-patrick-henry-academy-estill",
     "Opponent": "Patrick Henry Academy",
     "LocationType": "Unknown",
-    "GameType": "Unknown",
+    "GameType": "Non-Region",
     "Result": "W",
     "TeamScore": 61,
     "OpponentScore": 46,
     "Season": 2001,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ResultMargin": 15
   },
   {
     "GameID": 20020115,
     "OpponentID": "sc-charleston-collegiate-school-johns-island",
     "Opponent": "Charleston Collegiate School",
     "LocationType": "Unknown",
-    "GameType": "Unknown",
+    "GameType": "Non-Region",
     "Result": "W",
     "TeamScore": 58,
     "OpponentScore": 45,
     "Season": 2001,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ResultMargin": 13
   },
   {
     "GameID": 20020118,
     "OpponentID": "sc-beaufort-academy-beaufort",
     "Opponent": "Beaufort Academy",
     "LocationType": "Away",
-    "GameType": "Unknown",
+    "GameType": "Non-Region",
     "Result": "W",
     "TeamScore": 53,
     "OpponentScore": 33,
     "Season": 2001,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ResultMargin": 20
   },
   {
     "GameID": 20020119,
     "OpponentID": "sc-st-johns-christian-academy-moncks-corner",
     "Opponent": "St. John's Christian Academy",
     "LocationType": "Home",
-    "GameType": "Unknown",
+    "GameType": "Non-Region",
     "Result": "W",
     "TeamScore": 61,
     "OpponentScore": 46,
     "Season": 2001,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ResultMargin": 15
   },
   {
     "GameID": 20020122,
     "OpponentID": "sc-st-pauls-country-day-school-hollywood",
     "Opponent": "St. Paul's Country Day School",
     "LocationType": "Away",
-    "GameType": "Unknown",
+    "GameType": "Non-Region",
     "Result": "W",
     "TeamScore": 69,
     "OpponentScore": 32,
     "Season": 2001,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ResultMargin": 37
   },
   {
     "GameID": 20020125,
     "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
     "Opponent": "Hilton Head Christian Academy",
     "LocationType": "Away",
-    "GameType": "Unknown",
+    "GameType": "Region",
     "Result": "L",
     "TeamScore": 58,
     "OpponentScore": 70,
     "Season": 2001,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ResultMargin": -12
   },
   {
     "GameID": 20020126,
     "OpponentID": "ga-providence-christian-school-savannah",
     "Opponent": "Providence Christian School",
     "LocationType": "Home",
-    "GameType": "Unknown",
+    "GameType": "Non-Region",
     "Result": "W",
     "TeamScore": 70,
     "OpponentScore": 36,
     "Season": 2001,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ResultMargin": 34
   },
   {
     "GameID": 20020129,
     "OpponentID": "sc-charleston-collegiate-school-johns-island",
     "Opponent": "Charleston Collegiate School",
     "LocationType": "Unknown",
-    "GameType": "Unknown",
+    "GameType": "Non-Region",
     "Result": "W",
     "TeamScore": 46,
     "OpponentScore": 42,
     "Season": 2001,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ResultMargin": 4
   },
   {
     "GameID": 20020201,
     "OpponentID": "sc-colleton-prep-academy-walterboro",
     "Opponent": "Colleton Prep Academy",
     "LocationType": "Away",
-    "GameType": "Unknown",
+    "GameType": "Region",
     "Result": "W",
     "TeamScore": 69,
     "OpponentScore": 66,
     "Season": 2001,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ResultMargin": 3
   },
   {
     "GameID": 20020202,
     "OpponentID": "sc-st-pauls-country-day-school-hollywood",
     "Opponent": "St. Paul's Country Day School",
     "LocationType": "Home",
-    "GameType": "Unknown",
+    "GameType": "Non-Region",
     "Result": "W",
     "TeamScore": 74,
     "OpponentScore": 37,
     "Season": 2001,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ResultMargin": 37
   },
   {
     "GameID": 20020205,
     "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
     "Opponent": "Hilton Head Christian Academy",
     "LocationType": "Home",
-    "GameType": "Unknown",
+    "GameType": "Region",
     "Result": "L",
     "TeamScore": 48,
     "OpponentScore": 63,
     "Season": 2001,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ResultMargin": -15
   },
   {
     "GameID": 20020209,
     "OpponentID": "ga-memorial-day-school-savannah",
     "Opponent": "Memorial Day School",
     "LocationType": "Away",
-    "GameType": "Unknown",
+    "GameType": "Non-Region",
     "Result": "L",
     "TeamScore": 52,
     "OpponentScore": 56,
     "Season": 2001,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ResultMargin": -4
   },
   {
     "GameID": 20020212,
     "OpponentID": "sc-james-island-christian-school-charleston",
     "Opponent": "James Island Christian School",
     "LocationType": "Home",
-    "GameType": "Unknown",
+    "GameType": "Region",
     "Result": "W",
     "TeamScore": 70,
     "OpponentScore": 61,
     "Season": 2001,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ResultMargin": 9
   },
   {
     "GameID": 20020219,
     "OpponentID": "sc-colleton-prep-academy-walterboro",
     "Opponent": "Colleton Prep Academy",
     "LocationType": "Neutral",
-    "GameType": "Playoffs",
+    "GameType": "Region Tournament",
     "Result": "L",
     "TeamScore": 61,
     "OpponentScore": 66,
     "Season": 2001,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "Recap": "St. Andrew's rallied from a 32-5 deficit but lost to Colleton Prep in the SCISA Region 4-AA Tournament.",
+    "ResultMargin": -5
   },
   {
     "GameID": 20021203,

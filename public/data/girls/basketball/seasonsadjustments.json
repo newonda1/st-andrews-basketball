@@ -1,5 +1,20 @@
 [
   {
+    "SeasonID": 2001,
+    "overallW": 17,
+    "overallL": 7,
+    "regionW": 4,
+    "regionL": 2,
+    "homeW": 7,
+    "homeL": 2,
+    "awayW": 5,
+    "awayL": 2,
+    "tourneyW": 1,
+    "tourneyL": 1,
+    "playoffW": 2,
+    "playoffL": 2
+  },
+  {
     "SeasonID": 2002,
     "overallW": 23,
     "overallL": 3,
