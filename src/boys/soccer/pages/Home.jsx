@@ -3,6 +3,8 @@ import React from "react";
 import SportHomePage from "../../../components/SportHomePage";
 
 const links = [
+  { label: "Spring 2003 Season", to: "/athletics/boys/soccer/seasons/2003" },
+  { label: "2003 State Championship Game", to: "/athletics/boys/soccer/games/20030517" },
   { label: "Spring 2006 Season", to: "/athletics/boys/soccer/seasons/2006" },
   { label: "Charleston Collegiate 2006 Game", to: "/athletics/boys/soccer/games/20060323" },
   { label: "Spring 2004 Season", to: "/athletics/boys/soccer/seasons/2004" },
@@ -35,17 +37,18 @@ export default function Home() {
       iconClassName="scale-[0.8]"
       storyTitle="Program Archive"
       storyParagraphs={[
-        "Boys soccer is set up to preserve scores, goal scorers, assists, goalkeeper saves, tournament context, region context, roster entries, and record notes as source material is added.",
-        "The pages are intentionally data-ready: once games and seasons are entered, the results tables, detail pages, player pages, and opponent records will fill in automatically.",
+        "Boys soccer preserves scores, goal scorers, assists, goalkeeper saves, tournament context, region context, roster entries, and record notes as source material is added.",
+        "The 2003 championship season is now represented alongside the 2004 title run, giving the archive a clearer bridge between the program's late-1990s titles and the mid-2000s state championship teams.",
       ]}
       highlights={[
-        "Spring 2006 season shell",
+        "2003 state champions",
+        "15-1 final record",
+        "84-9 scoring margin",
+        "Jacob Rauers title hat trick",
         "13-1-1 final record",
         "2004 region champions",
         "2004 state champions",
-        "Hamish Huntley 19 goals",
-        "Daniel Eichholz final brace",
-        "Second straight state title",
+        "Hamish Huntley 23 goals",
       ]}
       links={links}
     />

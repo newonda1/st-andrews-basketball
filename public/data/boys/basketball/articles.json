@@ -7,8 +7,31 @@
     "Source": "Newspaper archive",
     "SeasonID": 1992,
     "SeasonLabel": "1992-93",
-    "PlayerIDs": [199203],
+    "PlayerIDs": [
+      199203
+    ],
     "Summary": "A surviving newspaper feature on Chris Haslam from the archive for the 1992-93 boys basketball state championship season.",
     "DocumentPath": "/documents/boys/basketball/1992-93/chris-haslam-article.pdf"
+  },
+  {
+    "ArticleID": "20030405-boys-all-coastal-empire-basketball-teams",
+    "Title": "Boys All-Coastal Empire Basketball Teams",
+    "Subtitle": "Davy Clay and Jeff Smith received honorable mention after St. Andrew's SCISA Class AA runner-up season.",
+    "Date": "2003-04-05",
+    "Source": "Savannah Morning News (GA)",
+    "Page": "2D",
+    "Section": "Sports",
+    "SeasonID": 2002,
+    "SeasonLabel": "2002-03",
+    "PlayerIDs": [
+      200003,
+      200011
+    ],
+    "Summary": "Davy Clay and Jeff Smith were listed as honorable mention selections on the Savannah Morning News Boys All-Coastal Empire basketball teams after St. Andrew's reached the SCISA Class AA championship game.",
+    "SourceCitation": "\"BOYS ALL-COASTAL EMPIRE BASKETBALL TEAMS,\" Savannah Morning News (GA), April 5, 2003, Page 2D, Sports.",
+    "ArchiveNote": "This archive page preserves citation details and an original summary. The full newspaper text is not republished here.",
+    "TranscriptHeading": "Archive Summary",
+    "EmphasizeTranscriptLead": false,
+    "Transcript": "The Savannah Morning News boys All-Coastal Empire basketball package included St. Andrew's Davy Clay and Jeff Smith among its honorable mention selections following the Saints' 2002-03 SCISA Class AA runner-up season."
   }
 ]

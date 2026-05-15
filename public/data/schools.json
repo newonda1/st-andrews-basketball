@@ -2219,5 +2219,12 @@
     "Name": "Varsity Opponent",
     "City": "",
     "State": ""
+  },
+  {
+    "SchoolID": "sc-harvest-baptist-school-charleston",
+    "Name": "Harvest Baptist School",
+    "City": "Charleston",
+    "State": "SC",
+    "ShortName": "Harvest Baptist"
   }
 ]

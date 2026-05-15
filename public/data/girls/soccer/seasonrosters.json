@@ -1,5 +1,115 @@
 [
   {
+    "SeasonID": 2003,
+    "DisplaySeason": "Spring 2003",
+    "SourceSeasonLabel": "2002-03",
+    "TeamLevel": "Varsity",
+    "TeamName": "St. Andrew's Lions",
+    "HeadCoach": "Mark Gibbons",
+    "Staff": [
+      {
+        "Name": "Mark Gibbons",
+        "Position": "Head Coach"
+      }
+    ],
+    "Players": [
+      {
+        "PlayerID": 200315,
+        "JerseyNumber": null,
+        "Grade": 12,
+        "GradeLabel": "Senior",
+        "Positions": [],
+        "PlayerName": "Meghan Lowe",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200405,
+        "JerseyNumber": null,
+        "Grade": 11,
+        "GradeLabel": "Junior",
+        "Positions": [
+          "GK"
+        ],
+        "PlayerName": "LeighAnne Evans",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200406,
+        "JerseyNumber": null,
+        "Grade": 11,
+        "GradeLabel": "Junior",
+        "Positions": [],
+        "PlayerName": "Becca Cooper",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200428,
+        "JerseyNumber": null,
+        "Grade": 11,
+        "GradeLabel": "Junior",
+        "Positions": [],
+        "PlayerName": "Layne Haggberg",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200403,
+        "JerseyNumber": null,
+        "Grade": 9,
+        "GradeLabel": "Freshman",
+        "Positions": [],
+        "PlayerName": "Maggie Hinchey",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200409,
+        "JerseyNumber": null,
+        "Grade": 9,
+        "GradeLabel": "Freshman",
+        "Positions": [
+          "GK"
+        ],
+        "PlayerName": "Emily Aimone",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200503,
+        "JerseyNumber": null,
+        "Grade": 9,
+        "GradeLabel": "Freshman",
+        "Positions": [],
+        "PlayerName": "Kristen Albritton",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200603,
+        "JerseyNumber": null,
+        "Grade": 9,
+        "GradeLabel": "Freshman",
+        "Positions": [],
+        "PlayerName": "Grace Wilkowski",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200460,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Meredith Victor",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200461,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Larkin Butler",
+        "Distinctions": []
+      }
+    ]
+  },
+  {
     "SeasonID": 2004,
     "DisplaySeason": "Spring 2004",
     "SourceSeasonLabel": "Spring 2004",

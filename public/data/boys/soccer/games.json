@@ -1,5 +1,1024 @@
 [
   {
+    "Season": 2006,
+    "SeasonID": 2006,
+    "DisplaySeason": "Spring 2006",
+    "SourceSeasonLabel": "Spring 2006",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "SourceCitation": "Boys' Soccer game brief",
+    "SourcePublication": "",
+    "GoalScorers": [],
+    "Assists": [],
+    "Saves": [],
+    "GameID": 20060401,
+    "Date": "",
+    "DisplayDate": "Between Mar. 31 and Apr. 5, 2006",
+    "Opponent": "Unknown",
+    "OpponentLocation": "",
+    "OpponentSlug": "unknown-opponent-region-win",
+    "OpponentID": "",
+    "Notes": "Placeholder added to reconcile St. Andrew's published record before the April 5 Trident Academy game. The opponent, date, site, and score are not yet known.",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "RecapTitle": "Missing region win placeholder",
+    "Recap": "St. Andrew's had one additional SCISA Region 4-AAA win before the April 5, 2006 Trident Academy game. The opponent, date, site, and score are not yet known.",
+    "SourceDate": "",
+    "RecordNote": "Published April 5 Trident Academy brief listed St. Andrew's at 4-1 overall and 4-0 in SCISA Region 4-AAA, requiring one additional earlier region win."
+  },
+  {
+    "Season": 2006,
+    "SeasonID": 2006,
+    "DisplaySeason": "Spring 2006",
+    "SourceSeasonLabel": "Spring 2006",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "SourceCitation": "Boys' Soccer game brief",
+    "SourcePublication": "",
+    "GoalScorers": [],
+    "Assists": [],
+    "Saves": [],
+    "GameID": 20060402,
+    "Date": "",
+    "DisplayDate": "Between Mar. 31 and Apr. 5, 2006",
+    "Opponent": "Unknown",
+    "OpponentLocation": "",
+    "OpponentSlug": "unknown-opponent-non-region-loss",
+    "OpponentID": "",
+    "Notes": "Placeholder added to reconcile St. Andrew's published overall record before the April 5 Trident Academy game. The opponent, date, site, and score are not yet known.",
+    "GameType": "Non-Region",
+    "Result": "L",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "RecapTitle": "Missing non-region loss placeholder",
+    "Recap": "St. Andrew's had one additional non-region loss before the April 5, 2006 Trident Academy game. The opponent, date, site, and score are not yet known.",
+    "SourceDate": "",
+    "RecordNote": "Published April 5 Trident Academy brief listed St. Andrew's at 4-1 overall and 4-0 in SCISA Region 4-AAA, requiring one additional earlier non-region loss."
+  },
+  {
+    "Season": 2006,
+    "SeasonID": 2006,
+    "DisplaySeason": "Spring 2006",
+    "SourceSeasonLabel": "Spring 2006",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "SourceCitation": "Boys' Soccer game brief",
+    "SourcePublication": "",
+    "GoalScorers": [],
+    "Assists": [],
+    "Saves": [],
+    "GameID": 20060406,
+    "Date": "",
+    "DisplayDate": "Between Apr. 5 and Apr. 20, 2006",
+    "Opponent": "Unknown",
+    "OpponentLocation": "",
+    "OpponentSlug": "unknown-non-region-loss-after-april-5",
+    "OpponentID": "",
+    "Notes": "Placeholder added to reconcile St. Andrew's published overall record before the April 20 Cathedral Academy game. The opponent, date, site, and score are not yet known.",
+    "GameType": "Non-Region",
+    "Result": "L",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "RecapTitle": "Missing non-region loss placeholder",
+    "Recap": "St. Andrew's had one additional non-region loss between the April 5, 2006 Trident Academy game and the April 20, 2006 Cathedral Academy game. The opponent, date, site, and score are not yet known.",
+    "SourceDate": "",
+    "RecordNote": "Published April 20 Cathedral Academy brief listed St. Andrew's at 5-2 overall and 5-0 in SCISA Region 1-AA, requiring one additional non-region loss after April 5."
+  },
+  {
+    "GameID": 20030319,
+    "Season": 2003,
+    "SeasonID": 2003,
+    "DisplaySeason": "Spring 2003",
+    "SourceSeasonLabel": "2002-03",
+    "Date": "2003-03-19",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Jefferson Davis Academy",
+    "OpponentLocation": "Blackville, SC",
+    "OpponentSlug": "jefferson-davis-academy",
+    "OpponentUrl": "",
+    "OpponentID": "sc-jefferson-davis-academy-blackville",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "Notes": "",
+    "GameType": "Region",
+    "Tournament": "",
+    "Round": "",
+    "Result": "W",
+    "TeamScore": 15,
+    "OpponentScore": 0,
+    "Overtime": false,
+    "PenaltyKicks": false,
+    "RecapTitle": "St. Andrew's opens with 15-goal shutout",
+    "Recap": "St. Andrew's defeated Jefferson Davis Academy 15-0 in the first recovered boys soccer result of the Spring 2003 season. Lyle McKenzie scored three goals with three assists, Beau Hinton scored four goals, Kevin Crouch and Will Massey scored two apiece, and Andy Crouch, Jason Victor, and Omar Glenn also scored. Cam Aldrich and Crawford White combined for the shutout with one save each.",
+    "SourceCitation": "\"HIGH SCHOOL SOCCER,\" Savannah Morning News (GA), March 20, 2003, Page 4E, Sports.",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "SourceDate": "2003-03-20",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200209,
+        "PlayerName": "Lyle McKenzie",
+        "Goals": 3
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200432,
+        "PlayerName": "Kevin Crouch",
+        "Goals": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200439,
+        "PlayerName": "Andy Crouch",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200203,
+        "PlayerName": "Beau Hinton",
+        "Goals": 4
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200105,
+        "PlayerName": "Will Massey",
+        "Goals": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200457,
+        "PlayerName": "Jason Victor",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200307,
+        "PlayerName": "Omar Glenn",
+        "Goals": 2
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200209,
+        "PlayerName": "Lyle McKenzie",
+        "Assists": 3
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200457,
+        "PlayerName": "Jason Victor",
+        "Assists": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200307,
+        "PlayerName": "Omar Glenn",
+        "Assists": 2
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200001,
+        "PlayerName": "Cam Aldrich",
+        "Saves": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200459,
+        "PlayerName": "Crawford White",
+        "Saves": 1
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 1-0"
+  },
+  {
+    "GameID": 20030326,
+    "Season": 2003,
+    "SeasonID": 2003,
+    "DisplaySeason": "Spring 2003",
+    "SourceSeasonLabel": "2002-03",
+    "Date": "2003-03-26",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Harvest Baptist School",
+    "OpponentLocation": "Charleston, SC",
+    "OpponentSlug": "harvest-baptist",
+    "OpponentUrl": "",
+    "OpponentID": "sc-harvest-baptist-school-charleston",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "Notes": "",
+    "GameType": "Region",
+    "Tournament": "",
+    "Round": "",
+    "Result": "W",
+    "TeamScore": 4,
+    "OpponentScore": 1,
+    "Overtime": false,
+    "PenaltyKicks": false,
+    "RecapTitle": "Four Saints score in Harvest Baptist win",
+    "Recap": "St. Andrew's defeated Harvest Baptist School of Charleston 4-1. Jacob Rauers, Mike McLean, Beau Hinton, and Will Massey scored for St. Andrew's, while Cam Aldrich, Jesse Hinton, and Jason Victor added assists. Aldrich made eight saves as the Saints improved to 2-0.",
+    "SourceCitation": "\"SOCCER,\" Savannah Morning News (GA), March 27, 2003, Page 4C, Sports.",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "SourceDate": "2003-03-27",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200207,
+        "PlayerName": "Jacob Rauers",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200458,
+        "PlayerName": "Mike McLean",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200203,
+        "PlayerName": "Beau Hinton",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200105,
+        "PlayerName": "Will Massey",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200001,
+        "PlayerName": "Cam Aldrich",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200442,
+        "PlayerName": "Jesse Hinton",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200457,
+        "PlayerName": "Jason Victor",
+        "Assists": 1
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200001,
+        "PlayerName": "Cam Aldrich",
+        "Saves": 8
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 2-0; Harvest Baptist 2-2"
+  },
+  {
+    "GameID": 20030328,
+    "Season": 2003,
+    "SeasonID": 2003,
+    "DisplaySeason": "Spring 2003",
+    "SourceSeasonLabel": "2002-03",
+    "Date": "2003-03-28",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "James Island Christian School",
+    "OpponentLocation": "Charleston, SC",
+    "OpponentSlug": "james-island-christian",
+    "OpponentUrl": "",
+    "OpponentID": "sc-james-island-christian-school-charleston",
+    "GameUrl": "",
+    "LocationType": "Home",
+    "Venue": "",
+    "Notes": "",
+    "GameType": "Region",
+    "Tournament": "",
+    "Round": "",
+    "Result": "W",
+    "TeamScore": 3,
+    "OpponentScore": 1,
+    "Overtime": false,
+    "PenaltyKicks": false,
+    "RecapTitle": "Hinton brace keeps Saints unbeaten",
+    "Recap": "St. Andrew's defeated James Island Christian 3-1 at home. Lyle McKenzie scored once and Beau Hinton scored twice, with Hinton and Omar Glenn recording assists as the Saints moved to 3-0.",
+    "SourceCitation": "\"SOCCER,\" Savannah Morning News (GA), March 29, 2003, Page 3D, Sports.",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "SourceDate": "2003-03-29",
+    "GoalScorers": [
+      {
+        "Team": "James Island Christian School",
+        "PlayerName": "Caleb Costa",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200209,
+        "PlayerName": "Lyle McKenzie",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200203,
+        "PlayerName": "Beau Hinton",
+        "Goals": 2
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200203,
+        "PlayerName": "Beau Hinton",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200307,
+        "PlayerName": "Omar Glenn",
+        "Assists": 1
+      }
+    ],
+    "Saves": [],
+    "RecordNote": "Records: James Island Christian 3-2; St. Andrew's 3-0"
+  },
+  {
+    "GameID": 20030404,
+    "Season": 2003,
+    "SeasonID": 2003,
+    "DisplaySeason": "Spring 2003",
+    "SourceSeasonLabel": "2002-03",
+    "Date": "2003-04-04",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "James Island Christian School",
+    "OpponentLocation": "Charleston, SC",
+    "OpponentSlug": "james-island-christian",
+    "OpponentUrl": "",
+    "OpponentID": "sc-james-island-christian-school-charleston",
+    "GameUrl": "",
+    "LocationType": "Away",
+    "Venue": "",
+    "Notes": "The May 17 Savannah Morning News preview described the loss as a double-overtime match at James Island Christian.",
+    "GameType": "Region",
+    "Tournament": "",
+    "Round": "",
+    "Result": "L",
+    "TeamScore": 2,
+    "OpponentScore": 3,
+    "Overtime": true,
+    "PenaltyKicks": false,
+    "RecapTitle": "James Island Christian hands Saints only loss",
+    "Recap": "James Island Christian defeated St. Andrew's 3-2 in double overtime. Lyle McKenzie and Beau Hinton scored for the Saints, and Cam Aldrich made seven saves. The loss was St. Andrew's only defeat in a 15-1 championship season.",
+    "SourceCitation": "\"SOCCER,\" Savannah Morning News (GA), April 6, 2003, Page 5C, Sports.",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "SourceDate": "2003-04-06",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200209,
+        "PlayerName": "Lyle McKenzie",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200203,
+        "PlayerName": "Beau Hinton",
+        "Goals": 1
+      }
+    ],
+    "Assists": [],
+    "Saves": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200001,
+        "PlayerName": "Cam Aldrich",
+        "Saves": 7
+      }
+    ],
+    "RecordNote": "Records: James Island Christian 3-2; St. Andrew's 3-1"
+  },
+  {
+    "GameID": 20030430,
+    "Season": 2003,
+    "SeasonID": 2003,
+    "DisplaySeason": "Spring 2003",
+    "SourceSeasonLabel": "2002-03",
+    "Date": "2003-04-30",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Patrick Henry Academy",
+    "OpponentLocation": "Estill, SC",
+    "OpponentSlug": "patrick-henry-academy",
+    "OpponentUrl": "",
+    "OpponentID": "sc-patrick-henry-academy-estill",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "Notes": "",
+    "GameType": "Region",
+    "Tournament": "",
+    "Round": "",
+    "Result": "W",
+    "TeamScore": 8,
+    "OpponentScore": 0,
+    "Overtime": false,
+    "PenaltyKicks": false,
+    "RecapTitle": "Aldrich hat trick leads Patrick Henry shutout",
+    "Recap": "St. Andrew's defeated Patrick Henry Academy 8-0. Cam Aldrich scored three goals, Jacob Rauers and Will Massey scored two apiece, and Omar Glenn also scored. Rauers, Glenn, and Martin Sullivan had assists, while Aldrich and Emmett Eason combined for three saves. The brief listed St. Andrew's at 7-1 and in first place in its SCISA region.",
+    "SourceCitation": "\"SOCCER,\" Savannah Morning News (GA), May 1, 2003, Page 2B, Sports.",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "SourceDate": "2003-05-01",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200001,
+        "PlayerName": "Cam Aldrich",
+        "Goals": 3
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200207,
+        "PlayerName": "Jacob Rauers",
+        "Goals": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200105,
+        "PlayerName": "Will Massey",
+        "Goals": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200307,
+        "PlayerName": "Omar Glenn",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200207,
+        "PlayerName": "Jacob Rauers",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200307,
+        "PlayerName": "Omar Glenn",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200427,
+        "PlayerName": "Martin Sullivan",
+        "Assists": 1
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200001,
+        "PlayerName": "Cam Aldrich",
+        "Saves": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200424,
+        "PlayerName": "Emmett Eason",
+        "Saves": 1
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 7-1"
+  },
+  {
+    "GameID": 20030501,
+    "Season": 2003,
+    "SeasonID": 2003,
+    "DisplaySeason": "Spring 2003",
+    "SourceSeasonLabel": "2002-03",
+    "Date": "2003-05-01",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Hilton Head Preparatory School",
+    "OpponentLocation": "Hilton Head Island, SC",
+    "OpponentSlug": "hilton-head-prep",
+    "OpponentUrl": "",
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
+    "GameUrl": "",
+    "LocationType": "Away",
+    "Venue": "",
+    "Notes": "",
+    "GameType": "Region",
+    "Tournament": "",
+    "Round": "",
+    "Result": "W",
+    "TeamScore": 2,
+    "OpponentScore": 1,
+    "Overtime": false,
+    "PenaltyKicks": true,
+    "RecapTitle": "Victor penalty kick lifts Saints past Hilton Head Prep",
+    "Recap": "St. Andrew's defeated Hilton Head Prep 2-1 in a match decided by penalty kicks. Omar Glenn scored in regulation off a Will Massey assist, Cam Aldrich made six saves, and Jason Victor converted the winning penalty kick.",
+    "SourceCitation": "\"SOCCER,\" Savannah Morning News (GA), May 3, 2003, Page 2C, Sports.",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "SourceDate": "2003-05-03",
+    "GoalScorers": [
+      {
+        "Team": "Hilton Head Preparatory School",
+        "PlayerName": "Brian Crawford",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200307,
+        "PlayerName": "Omar Glenn",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200105,
+        "PlayerName": "Will Massey",
+        "Assists": 1
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200001,
+        "PlayerName": "Cam Aldrich",
+        "Saves": 6
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 7-1"
+  },
+  {
+    "GameID": 20030509,
+    "Season": 2003,
+    "SeasonID": 2003,
+    "DisplaySeason": "Spring 2003",
+    "SourceSeasonLabel": "2002-03",
+    "Date": "2003-05-09",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Harvest Baptist School",
+    "OpponentLocation": "Charleston, SC",
+    "OpponentSlug": "harvest-baptist",
+    "OpponentUrl": "",
+    "OpponentID": "sc-harvest-baptist-school-charleston",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "Notes": "",
+    "GameType": "Region",
+    "Tournament": "",
+    "Round": "",
+    "Result": "W",
+    "TeamScore": 2,
+    "OpponentScore": 0,
+    "Overtime": false,
+    "PenaltyKicks": false,
+    "RecapTitle": "Saints blank Harvest Baptist",
+    "Recap": "St. Andrew's defeated Harvest Baptist 2-0. Kevin Crouch and Jacob Rauers scored, Lyle McKenzie recorded an assist, and Cam Aldrich made five saves. The brief listed St. Andrew's at 11-1 heading into the Region 1 title match against Cathedral Academy.",
+    "SourceCitation": "\"SOCCER,\" Savannah Morning News (GA), May 10, 2003, Page 2C, Sports.",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "SourceDate": "2003-05-10",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200432,
+        "PlayerName": "Kevin Crouch",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200207,
+        "PlayerName": "Jacob Rauers",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200209,
+        "PlayerName": "Lyle McKenzie",
+        "Assists": 1
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "Harvest Baptist School",
+        "PlayerName": "Harvest Baptist goalkeeper",
+        "Saves": 11
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200001,
+        "PlayerName": "Cam Aldrich",
+        "Saves": 5
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 11-1"
+  },
+  {
+    "GameID": 20030510,
+    "Season": 2003,
+    "SeasonID": 2003,
+    "DisplaySeason": "Spring 2003",
+    "SourceSeasonLabel": "2002-03",
+    "Date": "2003-05-10",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Cathedral Academy",
+    "OpponentLocation": "North Charleston, SC",
+    "OpponentSlug": "cathedral-academy",
+    "OpponentUrl": "",
+    "OpponentID": "sc-cathedral-academy-north-charleston",
+    "GameUrl": "",
+    "LocationType": "Home",
+    "Venue": "",
+    "Notes": "",
+    "GameType": "Region Tournament",
+    "Tournament": "SCISA Region 1 Tournament",
+    "Round": "Region Championship",
+    "Result": "W",
+    "TeamScore": 6,
+    "OpponentScore": 0,
+    "Overtime": false,
+    "PenaltyKicks": false,
+    "RecapTitle": "Saints win SCISA Region 1 title",
+    "Recap": "St. Andrew's defeated Cathedral Academy 6-0 to win the SCISA Region 1 title and earn the top seed for the state tournament. Lyle McKenzie scored twice, and Beau Hinton, Jason Victor, Omar Glenn, and Jacob Rauers also scored. McKenzie, Hinton, Glenn, and Jesse Hinton provided assists, while Cam Aldrich and Emmett Eason combined for seven saves.",
+    "SourceCitation": "\"SOCCER,\" Savannah Morning News (GA), May 11, 2003, Page 2C, Sports.",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "SourceDate": "2003-05-11",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200209,
+        "PlayerName": "Lyle McKenzie",
+        "Goals": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200203,
+        "PlayerName": "Beau Hinton",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200457,
+        "PlayerName": "Jason Victor",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200307,
+        "PlayerName": "Omar Glenn",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200207,
+        "PlayerName": "Jacob Rauers",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200209,
+        "PlayerName": "Lyle McKenzie",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200203,
+        "PlayerName": "Beau Hinton",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200307,
+        "PlayerName": "Omar Glenn",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200442,
+        "PlayerName": "Jesse Hinton",
+        "Assists": 2
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200001,
+        "PlayerName": "Cam Aldrich",
+        "Saves": 4
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200424,
+        "PlayerName": "Emmett Eason",
+        "Saves": 3
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 12-1"
+  },
+  {
+    "GameID": 20030512,
+    "Season": 2003,
+    "SeasonID": 2003,
+    "DisplaySeason": "Spring 2003",
+    "SourceSeasonLabel": "2002-03",
+    "Date": "2003-05-12",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "King's Academy",
+    "OpponentLocation": "Florence, SC",
+    "OpponentSlug": "king-s-academy",
+    "OpponentUrl": "",
+    "OpponentID": "sc-king-s-academy-florence",
+    "GameUrl": "",
+    "LocationType": "Home",
+    "Venue": "",
+    "Notes": "",
+    "GameType": "State Tournament",
+    "Tournament": "SCISA Class AA State Tournament",
+    "Round": "Quarterfinals",
+    "Result": "W",
+    "TeamScore": 10,
+    "OpponentScore": 1,
+    "Overtime": false,
+    "PenaltyKicks": false,
+    "RecapTitle": "McKenzie scores five in state quarterfinal",
+    "Recap": "St. Andrew's opened the SCISA Class AA state tournament with a 10-1 quarterfinal win over The King's Academy. Lyle McKenzie scored five goals, Omar Glenn scored twice, and Jacob Rauers, Will Chisholm, and Will Massey added goals. Beau Hinton had three assists, while Cam Aldrich and Emmett Eason combined for nine saves.",
+    "SourceCitation": "\"SOCCER,\" Savannah Morning News (GA), May 13, 2003, Page 2C, Sports.",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "SourceDate": "2003-05-13",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200209,
+        "PlayerName": "Lyle McKenzie",
+        "Goals": 5
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200207,
+        "PlayerName": "Jacob Rauers",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200431,
+        "PlayerName": "Will Chisholm",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200105,
+        "PlayerName": "Will Massey",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200307,
+        "PlayerName": "Omar Glenn",
+        "Goals": 2
+      },
+      {
+        "Team": "King's Academy",
+        "PlayerName": "Austin Crane",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200001,
+        "PlayerName": "Cam Aldrich",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200439,
+        "PlayerName": "Andy Crouch",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200207,
+        "PlayerName": "Jacob Rauers",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200203,
+        "PlayerName": "Beau Hinton",
+        "Assists": 3
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200105,
+        "PlayerName": "Will Massey",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200457,
+        "PlayerName": "Jason Victor",
+        "Assists": 1
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200001,
+        "PlayerName": "Cam Aldrich",
+        "Saves": 7
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200424,
+        "PlayerName": "Emmett Eason",
+        "Saves": 2
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 13-1"
+  },
+  {
+    "GameID": 20030514,
+    "Season": 2003,
+    "SeasonID": 2003,
+    "DisplaySeason": "Spring 2003",
+    "SourceSeasonLabel": "2002-03",
+    "Date": "2003-05-14",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Harvest Baptist School",
+    "OpponentLocation": "Charleston, SC",
+    "OpponentSlug": "harvest-baptist",
+    "OpponentUrl": "",
+    "OpponentID": "sc-harvest-baptist-school-charleston",
+    "GameUrl": "",
+    "LocationType": "Home",
+    "Venue": "",
+    "Notes": "",
+    "GameType": "State Tournament",
+    "Tournament": "SCISA Class AA State Tournament",
+    "Round": "Semifinals",
+    "Result": "W",
+    "TeamScore": 2,
+    "OpponentScore": 1,
+    "Overtime": false,
+    "PenaltyKicks": false,
+    "RecapTitle": "Saints edge Harvest Baptist in state semifinal",
+    "Recap": "St. Andrew's beat Harvest Baptist 2-1 in the SCISA Class AA semifinal. Jacob Rauers and Omar Glenn scored for the Saints, with assists from Lyle McKenzie and Will Massey. Cam Aldrich made four saves as St. Andrew's advanced to the state championship match.",
+    "SourceCitation": "\"SOCCER,\" Savannah Morning News (GA), May 15, 2003, Sports.",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "SourceDate": "2003-05-15",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200207,
+        "PlayerName": "Jacob Rauers",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200307,
+        "PlayerName": "Omar Glenn",
+        "Goals": 1
+      },
+      {
+        "Team": "Harvest Baptist School",
+        "PlayerName": "Erik Cobb",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200209,
+        "PlayerName": "Lyle McKenzie",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200105,
+        "PlayerName": "Will Massey",
+        "Assists": 1
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200001,
+        "PlayerName": "Cam Aldrich",
+        "Saves": 4
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 14-1; Harvest Baptist 10-4"
+  },
+  {
+    "GameID": 20030517,
+    "Season": 2003,
+    "SeasonID": 2003,
+    "DisplaySeason": "Spring 2003",
+    "SourceSeasonLabel": "2002-03",
+    "Date": "2003-05-17",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "James Island Christian School",
+    "OpponentLocation": "Charleston, SC",
+    "OpponentSlug": "james-island-christian",
+    "OpponentUrl": "",
+    "OpponentID": "sc-james-island-christian-school-charleston",
+    "GameUrl": "",
+    "LocationType": "Neutral",
+    "Venue": "Porter-Gaud School",
+    "Notes": "",
+    "GameType": "State Tournament",
+    "Tournament": "SCISA Class AA State Tournament",
+    "Round": "State Championship",
+    "Result": "W",
+    "TeamScore": 4,
+    "OpponentScore": 1,
+    "Overtime": false,
+    "PenaltyKicks": false,
+    "RecapTitle": "Rauers hat trick lifts Saints to SCISA title",
+    "Recap": "St. Andrew's defeated James Island Christian 4-1 at Porter-Gaud to win the SCISA Class AA championship. Lyle McKenzie scored in the 10th minute and Jacob Rauers scored three times, including two second-half goals after James Island Christian cut the lead to 2-1. Cam Aldrich made four saves behind a defense led by Mike McLean, Will Massey, Will Chisholm, and Jesse Hinton.",
+    "SourceCitation": "\"HAT TRICK LIFTS ST. ANDREW'S BOYS TO SOCCER TITLE,\" Savannah Morning News (GA), May 18, 2003, Page 1B, Sports.",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "SourceDate": "2003-05-18",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200209,
+        "PlayerName": "Lyle McKenzie",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200207,
+        "PlayerName": "Jacob Rauers",
+        "Goals": 3
+      },
+      {
+        "Team": "James Island Christian School",
+        "PlayerName": "Chris Hostetler",
+        "Goals": 1
+      }
+    ],
+    "Assists": [],
+    "Saves": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200001,
+        "PlayerName": "Cam Aldrich",
+        "Saves": 4
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 15-1"
+  },
+  {
     "GameID": 20040322,
     "Season": 2004,
     "SeasonID": 2004,
@@ -1550,108 +2569,6 @@
       }
     ],
     "RecordNote": "Records: St. Andrew's 3-6. Byrnes Academy is in Florence, S.C."
-  },
-  {
-    "Season": 2006,
-    "SeasonID": 2006,
-    "DisplaySeason": "Spring 2006",
-    "SourceSeasonLabel": "Spring 2006",
-    "Time": "TBA",
-    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
-    "Team": "St. Andrew's Lions",
-    "OpponentUrl": "",
-    "GameUrl": "",
-    "LocationType": "",
-    "Venue": "",
-    "SourceCitation": "Boys' Soccer game brief",
-    "SourcePublication": "",
-    "GoalScorers": [],
-    "Assists": [],
-    "Saves": [],
-    "GameID": 20060401,
-    "Date": "",
-    "DisplayDate": "Between Mar. 31 and Apr. 5, 2006",
-    "Opponent": "Unknown",
-    "OpponentLocation": "",
-    "OpponentSlug": "unknown-opponent-region-win",
-    "OpponentID": "",
-    "Notes": "Placeholder added to reconcile St. Andrew's published record before the April 5 Trident Academy game. The opponent, date, site, and score are not yet known.",
-    "GameType": "Region",
-    "Result": "W",
-    "TeamScore": null,
-    "OpponentScore": null,
-    "RecapTitle": "Missing region win placeholder",
-    "Recap": "St. Andrew's had one additional SCISA Region 4-AAA win before the April 5, 2006 Trident Academy game. The opponent, date, site, and score are not yet known.",
-    "SourceDate": "",
-    "RecordNote": "Published April 5 Trident Academy brief listed St. Andrew's at 4-1 overall and 4-0 in SCISA Region 4-AAA, requiring one additional earlier region win."
-  },
-  {
-    "Season": 2006,
-    "SeasonID": 2006,
-    "DisplaySeason": "Spring 2006",
-    "SourceSeasonLabel": "Spring 2006",
-    "Time": "TBA",
-    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
-    "Team": "St. Andrew's Lions",
-    "OpponentUrl": "",
-    "GameUrl": "",
-    "LocationType": "",
-    "Venue": "",
-    "SourceCitation": "Boys' Soccer game brief",
-    "SourcePublication": "",
-    "GoalScorers": [],
-    "Assists": [],
-    "Saves": [],
-    "GameID": 20060402,
-    "Date": "",
-    "DisplayDate": "Between Mar. 31 and Apr. 5, 2006",
-    "Opponent": "Unknown",
-    "OpponentLocation": "",
-    "OpponentSlug": "unknown-opponent-non-region-loss",
-    "OpponentID": "",
-    "Notes": "Placeholder added to reconcile St. Andrew's published overall record before the April 5 Trident Academy game. The opponent, date, site, and score are not yet known.",
-    "GameType": "Non-Region",
-    "Result": "L",
-    "TeamScore": null,
-    "OpponentScore": null,
-    "RecapTitle": "Missing non-region loss placeholder",
-    "Recap": "St. Andrew's had one additional non-region loss before the April 5, 2006 Trident Academy game. The opponent, date, site, and score are not yet known.",
-    "SourceDate": "",
-    "RecordNote": "Published April 5 Trident Academy brief listed St. Andrew's at 4-1 overall and 4-0 in SCISA Region 4-AAA, requiring one additional earlier non-region loss."
-  },
-  {
-    "Season": 2006,
-    "SeasonID": 2006,
-    "DisplaySeason": "Spring 2006",
-    "SourceSeasonLabel": "Spring 2006",
-    "Time": "TBA",
-    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
-    "Team": "St. Andrew's Lions",
-    "OpponentUrl": "",
-    "GameUrl": "",
-    "LocationType": "",
-    "Venue": "",
-    "SourceCitation": "Boys' Soccer game brief",
-    "SourcePublication": "",
-    "GoalScorers": [],
-    "Assists": [],
-    "Saves": [],
-    "GameID": 20060406,
-    "Date": "",
-    "DisplayDate": "Between Apr. 5 and Apr. 20, 2006",
-    "Opponent": "Unknown",
-    "OpponentLocation": "",
-    "OpponentSlug": "unknown-non-region-loss-after-april-5",
-    "OpponentID": "",
-    "Notes": "Placeholder added to reconcile St. Andrew's published overall record before the April 20 Cathedral Academy game. The opponent, date, site, and score are not yet known.",
-    "GameType": "Non-Region",
-    "Result": "L",
-    "TeamScore": null,
-    "OpponentScore": null,
-    "RecapTitle": "Missing non-region loss placeholder",
-    "Recap": "St. Andrew's had one additional non-region loss between the April 5, 2006 Trident Academy game and the April 20, 2006 Cathedral Academy game. The opponent, date, site, and score are not yet known.",
-    "SourceDate": "",
-    "RecordNote": "Published April 20 Cathedral Academy brief listed St. Andrew's at 5-2 overall and 5-0 in SCISA Region 1-AA, requiring one additional non-region loss after April 5."
   },
   {
     "GameID": 20060323,

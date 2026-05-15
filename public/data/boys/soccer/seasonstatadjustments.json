@@ -1,5 +1,53 @@
 [
   {
+    "SeasonID": 2003,
+    "PlayerID": 200203,
+    "PlayerName": "Beau Hinton",
+    "ThroughDate": "2003-05-16",
+    "SourceCitation": "\"ST. ANDREW'S BOYS SOCCER TEAM SEEKS SCISA TITLE,\" Savannah Morning News (GA), May 17, 2003, Page 3C.",
+    "Reason": "State-title preview listed Hinton with 15 goals and 3 assists entering the championship match.",
+    "OfficialTotals": {
+      "Goals": 15,
+      "Assists": 3
+    }
+  },
+  {
+    "SeasonID": 2003,
+    "PlayerID": 200207,
+    "PlayerName": "Jacob Rauers",
+    "ThroughDate": "2003-05-16",
+    "SourceCitation": "\"HAT TRICK LIFTS ST. ANDREW'S BOYS TO SOCCER TITLE,\" Savannah Morning News (GA), May 18, 2003, Page 1B.",
+    "Reason": "State-title recap said Rauers entered the championship with 7 goals and 10 assists, then scored three goals in the final.",
+    "OfficialTotals": {
+      "Goals": 7,
+      "Assists": 10
+    }
+  },
+  {
+    "SeasonID": 2003,
+    "PlayerID": 200209,
+    "PlayerName": "Lyle McKenzie",
+    "ThroughDate": "2003-05-16",
+    "SourceCitation": "\"ST. ANDREW'S BOYS SOCCER TEAM SEEKS SCISA TITLE,\" Savannah Morning News (GA), May 17, 2003, Page 3C.",
+    "Reason": "State-title preview listed McKenzie with 17 goals and 9 assists entering the championship match.",
+    "OfficialTotals": {
+      "Goals": 17,
+      "Assists": 9
+    }
+  },
+  {
+    "SeasonID": 2003,
+    "PlayerID": 200307,
+    "PlayerName": "Omar Glenn",
+    "ThroughDate": "2003-05-16",
+    "SourceCitation": "\"ST. ANDREW'S BOYS SOCCER TEAM SEEKS SCISA TITLE,\" Savannah Morning News (GA), May 17, 2003, Page 3C.",
+    "Reason": "State-title preview listed Glenn with 12 goals and 6 assists entering the championship match.",
+    "OfficialTotals": {
+      "Goals": 12,
+      "Assists": 6
+    }
+  },
+  {
     "SeasonID": 2004,
     "PlayerID": 200423,
     "PlayerName": "Hamish Huntley",

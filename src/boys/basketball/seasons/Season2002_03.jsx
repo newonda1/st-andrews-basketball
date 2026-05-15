@@ -9,7 +9,9 @@ The Saints kept building through January. They beat Holly Hill, Bible Baptist, C
 
 There were also hard jolts. Colleton Prep handed St. Andrew's two region losses, including a 74-48 defeat in the regular-season finale, and Memorial Day overwhelmed the Saints 92-53 in a Jan. 25 rematch. Those losses gave the season some turbulence, but they did not knock the Saints out of the postseason picture. St. Andrew's answered in the region tournament with a 62-40 win over James Island Christian and a 65-52 win over Colleton Prep, reversing the matchup that had caused the most trouble during the regular season.
 
-The postseason run ended with a 69-57 loss to Pee Dee Academy in the SCISA Class AA state championship game, leaving St. Andrew's as state runner-up. The surviving box scores show how broad the offense became: Josh Smith finished with 285 points, Aldrich had 263, Clay scored 253, Jeff Smith added 233, and Burns still totaled 142 despite the injury that reshaped the year. Clay, Beau Hinton, Jeff Smith, and Josh Smith would become part of the program's next championship core, but this team had already pushed St. Andrew's back to the final weekend.`;
+The postseason run ended with a 69-57 loss to Pee Dee Academy in the SCISA Class AA state championship game, leaving St. Andrew's as state runner-up. The surviving box scores show how broad the offense became: Josh Smith finished with 285 points, Aldrich had 263, Clay scored 253, Jeff Smith added 233, and Burns still totaled 142 despite the injury that reshaped the year. Clay, Beau Hinton, Jeff Smith, and Josh Smith would become part of the program's next championship core, but this team had already pushed St. Andrew's back to the final weekend.
+
+The spring awards sweep added one more note to the year: Davy Clay and Jeff Smith were honorable mention selections on the Savannah Morning News Boys All-Coastal Empire basketball teams after the Saints' state runner-up finish.`;
 
 export default function Season2002_03() {
   return (

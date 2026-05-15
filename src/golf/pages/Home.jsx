@@ -3,6 +3,7 @@ import React from "react";
 import SportHomePage from "../../components/SportHomePage";
 
 const links = [
+  { label: "2003 Season", to: "/athletics/golf/seasons/2003" },
   { label: "2004 Season", to: "/athletics/golf/seasons/2004" },
   { label: "Spring 2006 Season", to: "/athletics/golf/seasons/2005-06" },
   { label: "2024 Season", to: "/athletics/golf/seasons/2024" },
@@ -18,7 +19,7 @@ export default function Home() {
       archiveImageKey="golf"
       headline="Organizing the St. Andrew's golf archive."
       intro="The golf section gives published results a home, connecting season summaries, match pages, source notes, courses, divisions, and visible St. Andrew's entries."
-      secondaryIntro="The current archive now begins with 2004 match reports from Mary Calder Golf Course and Wilmington Island Country Club, adds a Spring 2006 GISA state summary, then continues through state tournament results from 2019, 2021, 2022, 2023, and 2024."
+      secondaryIntro="The current archive now begins with 2003 and 2004 match reports, adds a Spring 2006 GISA state summary, then continues through state tournament results from 2019, 2021, 2022, 2023, and 2024."
       icon="/images/golf/golf_icon.png"
       iconAlt="St. Andrew's golf icon"
       storyTitle="State Archive"
@@ -27,14 +28,13 @@ export default function Home() {
         "The 2023 and 2024 seasons include visible St. Andrew's entries, while the earlier seasons preserve the broader state context from the posted tournament PDFs.",
       ]}
       highlights={[
-        "7 archive seasons",
-        "2 recovered 2004 match pages",
+        "9 archive seasons",
+        "5 recovered 2003 match pages",
+        "SCISA 2003 state sixth",
+        "2004 state fourth",
         "12 tournament pages",
         "Spring 2006 state summary",
         "2019 through 2024 state results",
-        "2023 and 2024 St. Andrew's entries",
-        "Boys and girls state results",
-        "Source PDF context",
       ]}
       links={links}
     />

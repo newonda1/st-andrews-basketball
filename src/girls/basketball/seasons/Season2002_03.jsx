@@ -11,7 +11,9 @@ The short roster forced St. Andrew's to adapt. Grace missed the Jan. 28 Providen
 
 St. Andrew's finished regular-season region play unbeaten at 10-0 after a 60-46 win at Colleton Prep. The available NewsBank box scores document 23 games in detail, while newspaper record lines and the final state-title feature confirm the full 23-3 season record, meaning three regular-season wins remain identified only through the team's published records rather than full box scores. The final regular-season statistics published Feb. 14 listed Grace Wilkowski with 243 points and 209 rebounds through the latest submitted totals, and Lowe with 224 points.
 
-In the Region 2-AA tournament, St. Andrew's beat Beaufort Academy 61-26 in the semifinal before falling 38-35 to Holly Hill in the championship game. The Saints regrouped in the state tournament. Grace Wilkowski scored a career-high 30 points with 15 rebounds in a 54-33 quarterfinal win over Avalon, then had 21 points and nine rebounds as St. Andrew's beat Trinity Collegiate 50-38 in the semifinal. In the championship game, the Saints rallied from a 30-23 halftime deficit to beat Carolina Academy 47-42. Lowe scored 17, Grace Wilkowski added 12, Mary Wilkowski scored 11, and Bugos hit four late free throws before Grace closed out the title at the line.`;
+In the Region 2-AA tournament, St. Andrew's beat Beaufort Academy 61-26 in the semifinal before falling 38-35 to Holly Hill in the championship game. The Saints regrouped in the state tournament. Grace Wilkowski scored a career-high 30 points with 15 rebounds in a 54-33 quarterfinal win over Avalon, then had 21 points and nine rebounds as St. Andrew's beat Trinity Collegiate 50-38 in the semifinal. In the championship game, the Saints rallied from a 30-23 halftime deficit to beat Carolina Academy 47-42. Lowe scored 17, Grace Wilkowski added 12, Mary Wilkowski scored 11, and Bugos hit four late free throws before Grace closed out the title at the line.
+
+The spring postseason honors kept the season in view after the final buzzer. Grace Wilkowski made the Savannah Morning News Girls All-Coastal Empire third team, Meghan Lowe received honorable mention, and High School Sports Report later named Wilkowski the SCISAA Class AA Player of the Year after averaging 14.7 points and 13 rebounds. Deborah Morell was also named Class AA Coach of the Year after guiding St. Andrew's to the 23-3 championship season.`;
 
 export default function Season2002_03() {
   return (
@@ -34,6 +36,14 @@ export default function Season2002_03() {
         {
           Text: "post-title feature",
           ArticleID: "20030311-team-of-six-carried-saints-to-state-title",
+        },
+        {
+          Text: "Girls All-Coastal Empire third team",
+          ArticleID: "20030405-girls-all-coastal-empire-basketball-teams",
+        },
+        {
+          Text: "Class AA Player of the Year",
+          ArticleID: "20030522-sc-publication-honors-st-andrews-coach-athletes",
         },
       ]}
       seasonBriefs={[

@@ -1,5 +1,542 @@
 [
   {
+    "GameID": 20030325,
+    "Season": 2003,
+    "SeasonID": 2003,
+    "DisplaySeason": "Spring 2003",
+    "SourceSeasonLabel": "2002-03",
+    "Date": "2003-03-25",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-girls-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "King's Academy",
+    "OpponentLocation": "Florence, SC",
+    "OpponentSlug": "king-s-academy",
+    "OpponentUrl": "",
+    "OpponentID": "sc-king-s-academy-florence",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "Notes": "",
+    "GameType": "Region",
+    "Tournament": "",
+    "Round": "",
+    "Result": "W",
+    "TeamScore": 1,
+    "OpponentScore": 0,
+    "Overtime": false,
+    "PenaltyKicks": false,
+    "RecapTitle": "Lowe goal gives Saints shutout win",
+    "Recap": "St. Andrew's defeated King's Academy 1-0. Meghan Lowe scored from a Maggie Hinchey assist, and LeighAnne Evans made six saves as the Saints improved to 1-1.",
+    "SourceCitation": "\"SOCCER,\" Savannah Morning News (GA), March 26, 2003, Page 3D, Sports.",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "SourceDate": "2003-03-26",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200315,
+        "PlayerName": "Meghan Lowe",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200403,
+        "PlayerName": "Maggie Hinchey",
+        "Assists": 1
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200405,
+        "PlayerName": "LeighAnne Evans",
+        "Saves": 6
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 1-1"
+  },
+  {
+    "GameID": 20030327,
+    "Season": 2003,
+    "SeasonID": 2003,
+    "DisplaySeason": "Spring 2003",
+    "SourceSeasonLabel": "2002-03",
+    "Date": "2003-03-27",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-girls-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Trinity Collegiate",
+    "OpponentLocation": "Darlington, SC",
+    "OpponentSlug": "trinity-collegiate",
+    "OpponentUrl": "",
+    "OpponentID": "sc-trinity-collegiate-darlington",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "Notes": "",
+    "GameType": "Region",
+    "Tournament": "",
+    "Round": "",
+    "Result": "W",
+    "TeamScore": 4,
+    "OpponentScore": 1,
+    "Overtime": false,
+    "PenaltyKicks": false,
+    "RecapTitle": "Lowe brace leads Trinity Collegiate win",
+    "Recap": "St. Andrew's defeated Trinity Collegiate 4-1. Layne Haggberg, Meghan Lowe, and Grace Wilkowski scored, with Lowe finishing with two goals. LeighAnne Evans, Haggberg, and Wilkowski recorded assists, and Emily Aimone made six saves.",
+    "SourceCitation": "\"GIRLS' SOCCER,\" Savannah Morning News (GA), March 28, 2003, Page 4C, Sports.",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "SourceDate": "2003-03-28",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200428,
+        "PlayerName": "Layne Haggberg",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200315,
+        "PlayerName": "Meghan Lowe",
+        "Goals": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200603,
+        "PlayerName": "Grace Wilkowski",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200405,
+        "PlayerName": "LeighAnne Evans",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200428,
+        "PlayerName": "Layne Haggberg",
+        "Assists": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200603,
+        "PlayerName": "Grace Wilkowski",
+        "Assists": 1
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200409,
+        "PlayerName": "Emily Aimone",
+        "Saves": 6
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 2-1"
+  },
+  {
+    "GameID": 20030404,
+    "Season": 2003,
+    "SeasonID": 2003,
+    "DisplaySeason": "Spring 2003",
+    "SourceSeasonLabel": "2002-03",
+    "Date": "2003-04-04",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-girls-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "King's Academy",
+    "OpponentLocation": "Florence, SC",
+    "OpponentSlug": "king-s-academy",
+    "OpponentUrl": "",
+    "OpponentID": "sc-king-s-academy-florence",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "Notes": "",
+    "GameType": "Region",
+    "Tournament": "",
+    "Round": "",
+    "Result": "W",
+    "TeamScore": 6,
+    "OpponentScore": 2,
+    "Overtime": false,
+    "PenaltyKicks": false,
+    "RecapTitle": "Lowe hat trick powers Saints past King's Academy",
+    "Recap": "St. Andrew's defeated King's Academy 6-2. Meghan Lowe scored three goals, while Kristen Albritton, Larkin Butler, and Grace Wilkowski also scored. Layne Haggberg, LeighAnne Evans, and Lowe had assists, and Emily Aimone and Evans combined for eight saves.",
+    "SourceCitation": "\"SOCCER,\" Savannah Morning News (GA), April 6, 2003, Page 5C, Sports.",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "SourceDate": "2003-04-06",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200315,
+        "PlayerName": "Meghan Lowe",
+        "Goals": 3
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200503,
+        "PlayerName": "Kristen Albritton",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200461,
+        "PlayerName": "Larkin Butler",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200603,
+        "PlayerName": "Grace Wilkowski",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200428,
+        "PlayerName": "Layne Haggberg",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200405,
+        "PlayerName": "LeighAnne Evans",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200315,
+        "PlayerName": "Meghan Lowe",
+        "Assists": 1
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200409,
+        "PlayerName": "Emily Aimone",
+        "Saves": 3
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200405,
+        "PlayerName": "LeighAnne Evans",
+        "Saves": 5
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 3-2; King's Academy 3-3"
+  },
+  {
+    "GameID": 20030430,
+    "Season": 2003,
+    "SeasonID": 2003,
+    "DisplaySeason": "Spring 2003",
+    "SourceSeasonLabel": "2002-03",
+    "Date": "2003-04-30",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-girls-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Beaufort Academy",
+    "OpponentLocation": "Beaufort, SC",
+    "OpponentSlug": "beaufort-academy",
+    "OpponentUrl": "",
+    "OpponentID": "sc-beaufort-academy-beaufort",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "Notes": "",
+    "GameType": "Region",
+    "Tournament": "",
+    "Round": "",
+    "Result": "L",
+    "TeamScore": 0,
+    "OpponentScore": 2,
+    "Overtime": false,
+    "PenaltyKicks": false,
+    "RecapTitle": "Beaufort Academy shuts out St. Andrew's",
+    "Recap": "Beaufort Academy defeated St. Andrew's 2-0. Meredith Andrepont and Olivia Generales scored for Beaufort, while Emily Aimone made eight saves for St. Andrew's. Allison Neal made 11 saves for Beaufort Academy.",
+    "SourceCitation": "\"SOCCER,\" Savannah Morning News (GA), May 1, 2003, Page 2B, Sports.",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "SourceDate": "2003-05-01",
+    "GoalScorers": [
+      {
+        "Team": "Beaufort Academy",
+        "PlayerName": "Meredith Andrepont",
+        "Goals": 1
+      },
+      {
+        "Team": "Beaufort Academy",
+        "PlayerName": "Olivia Generales",
+        "Goals": 1
+      }
+    ],
+    "Assists": [],
+    "Saves": [
+      {
+        "Team": "Beaufort Academy",
+        "PlayerName": "Allison Neal",
+        "Saves": 11
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200409,
+        "PlayerName": "Emily Aimone",
+        "Saves": 8
+      }
+    ],
+    "RecordNote": "Records: Beaufort Academy 7-4, 6-0 SCISA 2-AA; St. Andrew's 3-3 SCISA 2-AA"
+  },
+  {
+    "GameID": 20030501,
+    "Season": 2003,
+    "SeasonID": 2003,
+    "DisplaySeason": "Spring 2003",
+    "SourceSeasonLabel": "2002-03",
+    "Date": "2003-05-01",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-girls-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Hilton Head Preparatory School",
+    "OpponentLocation": "Hilton Head Island, SC",
+    "OpponentSlug": "hilton-head-prep",
+    "OpponentUrl": "",
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
+    "GameUrl": "",
+    "LocationType": "Away",
+    "Venue": "",
+    "Notes": "",
+    "GameType": "Region",
+    "Tournament": "",
+    "Round": "",
+    "Result": "L",
+    "TeamScore": 1,
+    "OpponentScore": 2,
+    "Overtime": false,
+    "PenaltyKicks": false,
+    "RecapTitle": "Hilton Head Prep edges Saints",
+    "Recap": "Hilton Head Prep defeated St. Andrew's 2-1. Meredith Victor scored for St. Andrew's from a Layne Haggberg assist, and LeighAnne Evans made five saves. Jenny Lindgren scored both goals for Hilton Head Prep.",
+    "SourceCitation": "\"SOCCER,\" Savannah Morning News (GA), May 3, 2003, Page 2C, Sports.",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "SourceDate": "2003-05-03",
+    "GoalScorers": [
+      {
+        "Team": "Hilton Head Preparatory School",
+        "PlayerName": "Jenny Lindgren",
+        "Goals": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200460,
+        "PlayerName": "Meredith Victor",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200428,
+        "PlayerName": "Layne Haggberg",
+        "Assists": 1
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200405,
+        "PlayerName": "LeighAnne Evans",
+        "Saves": 5
+      }
+    ],
+    "RecordNote": "Records: Hilton Head Prep 6-2; St. Andrew's 3-4"
+  },
+  {
+    "GameID": 20030509,
+    "Season": 2003,
+    "SeasonID": 2003,
+    "DisplaySeason": "Spring 2003",
+    "SourceSeasonLabel": "2002-03",
+    "Date": "2003-05-09",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-girls-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Trinity Collegiate",
+    "OpponentLocation": "Darlington, SC",
+    "OpponentSlug": "trinity-collegiate",
+    "OpponentUrl": "",
+    "OpponentID": "sc-trinity-collegiate-darlington",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "Notes": "",
+    "GameType": "Region",
+    "Tournament": "",
+    "Round": "",
+    "Result": "W",
+    "TeamScore": 1,
+    "OpponentScore": 0,
+    "Overtime": false,
+    "PenaltyKicks": false,
+    "RecapTitle": "Lowe goal gives Saints Trinity shutout",
+    "Recap": "St. Andrew's defeated Trinity Collegiate 1-0. Meghan Lowe scored from a LeighAnne Evans assist. Evans and Emily Aimone each made four saves for St. Andrew's, and Suiter Coxe made four saves for Trinity Collegiate.",
+    "SourceCitation": "\"SOCCER,\" Savannah Morning News (GA), May 10, 2003, Page 2C, Sports.",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "SourceDate": "2003-05-10",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200315,
+        "PlayerName": "Meghan Lowe",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200405,
+        "PlayerName": "LeighAnne Evans",
+        "Assists": 1
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "Trinity Collegiate",
+        "PlayerName": "Suiter Coxe",
+        "Saves": 4
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200405,
+        "PlayerName": "LeighAnne Evans",
+        "Saves": 4
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200409,
+        "PlayerName": "Emily Aimone",
+        "Saves": 4
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 4-4; Trinity Collegiate 3-5"
+  },
+  {
+    "GameID": 20030510,
+    "Season": 2003,
+    "SeasonID": 2003,
+    "DisplaySeason": "Spring 2003",
+    "SourceSeasonLabel": "2002-03",
+    "Date": "2003-05-10",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-girls-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Lowcountry Day School",
+    "OpponentLocation": "Pawleys Island, SC",
+    "OpponentSlug": "lowcountry-day-school",
+    "OpponentUrl": "",
+    "OpponentID": "sc-lowcountry-day-school-pawleys-island",
+    "GameUrl": "",
+    "LocationType": "Home",
+    "Venue": "",
+    "Notes": "",
+    "GameType": "Region",
+    "Tournament": "",
+    "Round": "",
+    "Result": "L",
+    "TeamScore": 0,
+    "OpponentScore": 2,
+    "Overtime": false,
+    "PenaltyKicks": false,
+    "RecapTitle": "Lowcountry Day takes region seeding game",
+    "Recap": "Lowcountry Day defeated St. Andrew's 2-0 in the final regular-season game. The result gave Lowcountry Day the No. 1 seed from SCISA Region 1 and sent St. Andrew's into the state tournament as the No. 3 seed.",
+    "SourceCitation": "\"SOCCER,\" Savannah Morning News (GA), May 11, 2003, Page 2C, Sports.",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "SourceDate": "2003-05-11",
+    "GoalScorers": [],
+    "Assists": [],
+    "Saves": [],
+    "RecordNote": "Records: St. Andrew's 4-5"
+  },
+  {
+    "GameID": 20030512,
+    "Season": 2003,
+    "SeasonID": 2003,
+    "DisplaySeason": "Spring 2003",
+    "SourceSeasonLabel": "2002-03",
+    "Date": "2003-05-12",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-girls-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Unknown",
+    "OpponentLocation": "",
+    "OpponentSlug": "unknown",
+    "OpponentUrl": "",
+    "OpponentID": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "Notes": "Inferred from St. Andrew's 4-5 record after the regular season and 5-6 final record after the state semifinal loss. Opponent and score were not recovered in the NewsBank sweep.",
+    "GameType": "State Tournament",
+    "Tournament": "SCISA Class AA State Tournament",
+    "Round": "Quarterfinals",
+    "Result": "W",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Overtime": false,
+    "PenaltyKicks": false,
+    "RecapTitle": "State tournament win inferred from final record",
+    "Recap": "St. Andrew's final published record shows the Saints won one SCISA Class AA state tournament match before the semifinal loss to Lowcountry Day. The opponent and score have not been recovered.",
+    "SourceCitation": "Inferred from Savannah Morning News record path, May 11-May 14, 2003.",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "SourceDate": "2003-05-14",
+    "GoalScorers": [],
+    "Assists": [],
+    "Saves": [],
+    "RecordNote": "Record path: St. Andrew's 4-5 after May 10; final record 5-6 after May 13 semifinal"
+  },
+  {
+    "GameID": 20030513,
+    "Season": 2003,
+    "SeasonID": 2003,
+    "DisplaySeason": "Spring 2003",
+    "SourceSeasonLabel": "2002-03",
+    "Date": "2003-05-13",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-girls-soccer",
+    "Team": "St. Andrew's Lions",
+    "Opponent": "Lowcountry Day School",
+    "OpponentLocation": "Pawleys Island, SC",
+    "OpponentSlug": "lowcountry-day-school",
+    "OpponentUrl": "",
+    "OpponentID": "sc-lowcountry-day-school-pawleys-island",
+    "GameUrl": "",
+    "LocationType": "Away",
+    "Venue": "Pawleys Island, SC",
+    "Notes": "",
+    "GameType": "State Tournament",
+    "Tournament": "SCISA Class AA State Tournament",
+    "Round": "Semifinals",
+    "Result": "L",
+    "TeamScore": 0,
+    "OpponentScore": 3,
+    "Overtime": false,
+    "PenaltyKicks": false,
+    "RecapTitle": "Saints finish in SCISA state semifinals",
+    "Recap": "Lowcountry Day defeated St. Andrew's 3-0 in a SCISA Class AA girls soccer semifinal at Pawleys Island. St. Andrew's finished the season 5-6.",
+    "SourceCitation": "\"SOCCER,\" Savannah Morning News (GA), May 14, 2003, Sports.",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "SourceDate": "2003-05-14",
+    "GoalScorers": [],
+    "Assists": [],
+    "Saves": [],
+    "RecordNote": "Records: St. Andrew's 5-6"
+  },
+  {
     "GameID": 20040309,
     "Season": 2004,
     "SeasonID": 2004,

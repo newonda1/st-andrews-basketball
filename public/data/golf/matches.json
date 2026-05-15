@@ -206,6 +206,267 @@
     "OpponentLocation": "Ridgeland, SC"
   },
   {
+    "MatchID": "20030325-indigo-run-tri",
+    "Season": 2003,
+    "Name": "Indigo Run Tri-Match",
+    "Date": "2003-03-25",
+    "Course": "Indigo Run",
+    "Location": "Hilton Head Island, S.C.",
+    "Opponent": "Hilton Head Prep / Hilton Head Christian",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "SourceDate": "2003-03-26",
+    "SourceCitation": "\"GOLF,\" Savannah Morning News (GA), March 26, 2003, Page 3D, Sports.",
+    "Summary": "Hilton Head Prep shot 165, Hilton Head Christian 168, and St. Andrew's 181 in a par-36 match at Indigo Run. Davy Clay led St. Andrew's with a 39 and Josh Smith shot 41.",
+    "Divisions": [
+      {
+        "Division": "Boys",
+        "TeamScores": [
+          {
+            "School": "Hilton Head Preparatory School",
+            "Score": 165,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+          },
+          {
+            "School": "Hilton Head Christian Academy",
+            "Score": 168,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island"
+          },
+          {
+            "School": "St. Andrew's",
+            "Score": 181,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          }
+        ],
+        "Medalist": {
+          "PlayerName": "Ryan Leach",
+          "School": "Hilton Head Christian Academy",
+          "Score": 37,
+          "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island"
+        },
+        "Results": [
+          {
+            "PlayerName": "Ryan Leach",
+            "School": "Hilton Head Christian Academy",
+            "Score": 37,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island",
+            "Award": "Medalist"
+          },
+          {
+            "PlayerName": "Davy Clay",
+            "School": "St. Andrew's",
+            "Score": 39,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "PlayerID": 200003
+          },
+          {
+            "PlayerName": "Josh Smith",
+            "School": "St. Andrew's",
+            "Score": 41,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "PlayerID": 200208
+          },
+          {
+            "PlayerName": "Trevor Furgeson",
+            "School": "Hilton Head Preparatory School",
+            "Score": 42,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+          },
+          {
+            "PlayerName": "Mark Sanger",
+            "School": "Hilton Head Preparatory School",
+            "Score": 42,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+          }
+        ],
+        "ResultNote": "The published brief listed the top five individual scores."
+      }
+    ],
+    "OpponentSchoolIDs": [
+      "sc-hilton-head-preparatory-school-hilton-head-island",
+      "sc-hilton-head-christian-academy-hilton-head-island"
+    ]
+  },
+  {
+    "MatchID": "20030401-scisa-region-santee-national",
+    "Season": 2003,
+    "Name": "SCISA Region Tournament at Santee National",
+    "Date": "2003-04-01",
+    "Course": "Santee National Golf Club",
+    "Location": "Santee, S.C.",
+    "Opponent": "Multiple schools",
+    "MatchType": "Region Tournament",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "SourceDate": "2003-04-02",
+    "SourceCitation": "\"GOLF,\" Savannah Morning News (GA), April 2, 2003, Page 3D, Sports.",
+    "Summary": "St. Andrew's shot 171 in a SCISA region tournament round at Santee National Golf Club, finishing third behind Holly Hill Academy and Beaufort Academy.",
+    "Divisions": [
+      {
+        "Division": "Boys",
+        "TeamScores": [
+          {
+            "School": "Holly Hill Academy",
+            "Score": 158,
+            "IsStAndrews": false,
+            "SchoolID": "sc-holly-hill-academy-holly-hill"
+          },
+          {
+            "School": "Beaufort Academy",
+            "Score": 162,
+            "IsStAndrews": false,
+            "SchoolID": "sc-beaufort-academy-beaufort"
+          },
+          {
+            "School": "St. Andrew's",
+            "Score": 171,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "School": "Charleston Collegiate School",
+            "Score": 194,
+            "IsStAndrews": false,
+            "SchoolID": "sc-charleston-collegiate-school-johns-island"
+          },
+          {
+            "School": "Colleton Prep Academy",
+            "Score": 243,
+            "IsStAndrews": false,
+            "SchoolID": "sc-colleton-prep-academy-walterboro"
+          }
+        ],
+        "Results": [
+          {
+            "PlayerName": "Davy Clay",
+            "School": "St. Andrew's",
+            "Score": 37,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "PlayerID": 200003
+          },
+          {
+            "PlayerName": "Chris Brinker",
+            "School": "St. Andrew's",
+            "Score": 44,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "PlayerID": 200210
+          },
+          {
+            "PlayerName": "Travis McGinley",
+            "School": "St. Andrew's",
+            "Score": 44,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "PlayerID": 200205
+          },
+          {
+            "PlayerName": "Josh Smith",
+            "School": "St. Andrew's",
+            "Score": 46,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "PlayerID": 200208
+          }
+        ],
+        "ResultNote": "The newspaper report included team scores for all five schools and individual scores for St. Andrew's players."
+      }
+    ],
+    "OpponentSchoolIDs": [
+      "sc-holly-hill-academy-holly-hill",
+      "sc-beaufort-academy-beaufort",
+      "sc-charleston-collegiate-school-johns-island",
+      "sc-colleton-prep-academy-walterboro"
+    ]
+  },
+  {
+    "MatchID": "20030429-scisa-class-aa-state",
+    "Season": 2003,
+    "Name": "SCISA State Golf Championship",
+    "Date": "2003-04-29",
+    "Course": null,
+    "Location": "Fripp Island, S.C.",
+    "Opponent": "SCISA State Golf Championship",
+    "MatchType": "State Tournament",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "SourceDate": "2003-04-30",
+    "SourceCitation": "\"BOYS' GOLF,\" Savannah Morning News (GA), April 30, 2003, Page 2C, Sports.",
+    "Summary": "St. Andrew's finished sixth of 12 teams at the SCISA State Golf Championship on Fripp Island with a two-day total of 722.",
+    "Divisions": [
+      {
+        "Division": "Boys",
+        "TeamFieldSize": 12,
+        "TeamScores": [
+          {
+            "School": "St. Andrew's",
+            "Score": 722,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "Place": 6
+          }
+        ],
+        "Results": [
+          {
+            "PlayerName": "Josh Smith",
+            "School": "St. Andrew's",
+            "Score": 168,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "PlayerID": 200208,
+            "RoundScores": [
+              85,
+              83
+            ]
+          },
+          {
+            "PlayerName": "Davy Clay",
+            "School": "St. Andrew's",
+            "Score": 170,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "PlayerID": 200003,
+            "RoundScores": [
+              94,
+              76
+            ]
+          },
+          {
+            "PlayerName": "Travis McGinley",
+            "School": "St. Andrew's",
+            "Score": 191,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "PlayerID": 200205,
+            "RoundScores": [
+              93,
+              98
+            ]
+          },
+          {
+            "PlayerName": "Chris Brinker",
+            "School": "St. Andrew's",
+            "Score": 195,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah",
+            "PlayerID": 200210,
+            "RoundScores": [
+              95,
+              100
+            ]
+          }
+        ],
+        "ResultNote": "The published report listed St. Andrew's team place and St. Andrew's individual two-day scores, but not the full team leaderboard."
+      }
+    ]
+  },
+  {
     "MatchID": "20040303-groves",
     "Season": 2004,
     "Name": "St. Andrew's vs. Groves",

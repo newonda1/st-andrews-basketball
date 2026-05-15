@@ -1,5 +1,202 @@
 [
   {
+    "SeasonID": 2003,
+    "DisplaySeason": "Spring 2003",
+    "SourceSeasonLabel": "2002-03",
+    "TeamLevel": "Varsity",
+    "TeamName": "St. Andrew's Lions",
+    "HeadCoach": "Mark Gibbons",
+    "Staff": [
+      {
+        "Name": "Mark Gibbons",
+        "Position": "Head Coach"
+      }
+    ],
+    "Players": [
+      {
+        "PlayerID": 200001,
+        "JerseyNumber": null,
+        "Grade": 12,
+        "GradeLabel": "Senior",
+        "Positions": [
+          "GK"
+        ],
+        "PlayerName": "Cam Aldrich",
+        "Distinctions": [
+          "Senior"
+        ]
+      },
+      {
+        "PlayerID": 200103,
+        "JerseyNumber": null,
+        "Grade": 12,
+        "GradeLabel": "Senior",
+        "Positions": [
+          "M"
+        ],
+        "PlayerName": "Justin Howard",
+        "Distinctions": [
+          "Senior"
+        ]
+      },
+      {
+        "PlayerID": 200457,
+        "JerseyNumber": null,
+        "Grade": 12,
+        "GradeLabel": "Senior",
+        "Positions": [
+          "M"
+        ],
+        "PlayerName": "Jason Victor",
+        "Distinctions": [
+          "Senior"
+        ]
+      },
+      {
+        "PlayerID": 200458,
+        "JerseyNumber": null,
+        "Grade": 12,
+        "GradeLabel": "Senior",
+        "Positions": [
+          "D"
+        ],
+        "PlayerName": "Mike McLean",
+        "Distinctions": [
+          "Senior"
+        ]
+      },
+      {
+        "PlayerID": 200209,
+        "JerseyNumber": null,
+        "Grade": 12,
+        "GradeLabel": "Senior",
+        "Positions": [
+          "F"
+        ],
+        "PlayerName": "Lyle McKenzie",
+        "Distinctions": [
+          "Senior"
+        ]
+      },
+      {
+        "PlayerID": 200203,
+        "JerseyNumber": null,
+        "Grade": 11,
+        "GradeLabel": "Junior",
+        "Positions": [
+          "M"
+        ],
+        "PlayerName": "Beau Hinton",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200207,
+        "JerseyNumber": null,
+        "Grade": 11,
+        "GradeLabel": "Junior",
+        "Positions": [
+          "F",
+          "M"
+        ],
+        "PlayerName": "Jacob Rauers",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200105,
+        "JerseyNumber": null,
+        "Grade": 11,
+        "GradeLabel": "Junior",
+        "Positions": [
+          "D"
+        ],
+        "PlayerName": "Will Massey",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200439,
+        "JerseyNumber": null,
+        "Grade": 11,
+        "GradeLabel": "Junior",
+        "Positions": [],
+        "PlayerName": "Andy Crouch",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200307,
+        "JerseyNumber": null,
+        "Grade": 10,
+        "GradeLabel": "Sophomore",
+        "Positions": [
+          "F"
+        ],
+        "PlayerName": "Omar Glenn",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200431,
+        "JerseyNumber": null,
+        "Grade": 11,
+        "GradeLabel": "Junior",
+        "Positions": [
+          "D"
+        ],
+        "PlayerName": "Will Chisholm",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200442,
+        "JerseyNumber": null,
+        "Grade": 9,
+        "GradeLabel": "Freshman",
+        "Positions": [
+          "D"
+        ],
+        "PlayerName": "Jesse Hinton",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200432,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Kevin Crouch",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200427,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Martin Sullivan",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200424,
+        "JerseyNumber": null,
+        "Grade": 8,
+        "GradeLabel": "8th",
+        "Positions": [
+          "GK"
+        ],
+        "PlayerName": "Emmett Eason",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200459,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [
+          "GK"
+        ],
+        "PlayerName": "Crawford White",
+        "Distinctions": []
+      }
+    ]
+  },
+  {
     "SeasonID": 2004,
     "DisplaySeason": "Spring 2004",
     "SourceSeasonLabel": "Spring 2004",
