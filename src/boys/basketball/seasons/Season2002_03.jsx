@@ -29,6 +29,10 @@ export default function Season2002_03() {
       rosterTitle="Roster"
       showSeasonImagesPlaceholder
       showSeasonRoster
+      rosterStaff={[
+        { name: "Michael Bennet", role: "Head Coach" },
+        { name: "Dave Clay", role: "Assistant Coach" },
+      ]}
       hideBrackets
     />
   );

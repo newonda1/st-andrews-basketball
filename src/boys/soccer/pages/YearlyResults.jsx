@@ -211,15 +211,6 @@ export default function YearlyResults({ data, status = "" }) {
         const away = recordForSeason(season, "Away", completedGames, isAwayGame);
         const playoffs = recordForSeason(season, "Playoff", completedGames, isPlayoffGame);
 
-        const gameGoalsFor = completedGames.reduce(
-          (sum, game) => sum + Number(game.TeamScore || 0),
-          0
-        );
-        const gameGoalsAgainst = completedGames.reduce(
-          (sum, game) => sum + Number(game.OpponentScore || 0),
-          0
-        );
-
         return {
           season,
           seasonId: season.SeasonID,
@@ -231,8 +222,6 @@ export default function YearlyResults({ data, status = "" }) {
           home,
           away,
           playoffs,
-          goalsFor: season.PointsFor ?? gameGoalsFor,
-          goalsAgainst: season.PointsAgainst ?? gameGoalsAgainst,
           notes: seasonOverride?.notes || formatNotes(season),
         };
       });
@@ -299,8 +288,6 @@ export default function YearlyResults({ data, status = "" }) {
           accumulator.playoffs.wins += row.playoffs.wins;
           accumulator.playoffs.losses += row.playoffs.losses;
           accumulator.playoffs.ties += row.playoffs.ties;
-          accumulator.goalsFor += Number(row.goalsFor || 0);
-          accumulator.goalsAgainst += Number(row.goalsAgainst || 0);
           return accumulator;
         },
         {
@@ -310,8 +297,6 @@ export default function YearlyResults({ data, status = "" }) {
           home: { wins: 0, losses: 0, ties: 0 },
           away: { wins: 0, losses: 0, ties: 0 },
           playoffs: { wins: 0, losses: 0, ties: 0 },
-          goalsFor: 0,
-          goalsAgainst: 0,
         }
       ),
     [seasonRows]
@@ -409,8 +394,6 @@ export default function YearlyResults({ data, status = "" }) {
                 <th className={headerCellClassName}>Home</th>
                 <th className={headerCellClassName}>Away</th>
                 <th className={headerCellClassName}>Playoffs</th>
-                <th className={headerCellClassName}>GF</th>
-                <th className={headerCellClassName}>GA</th>
                 <th className={`${headerCellClassName} md:text-left`}>Notes</th>
               </tr>
             </thead>
@@ -433,14 +416,12 @@ export default function YearlyResults({ data, status = "" }) {
                     <td className={numericCellClassName}>{recordText(row.home)}</td>
                     <td className={numericCellClassName}>{recordText(row.away)}</td>
                     <td className={numericCellClassName}>{recordText(row.playoffs)}</td>
-                    <td className={numericCellClassName}>{row.goalsFor}</td>
-                    <td className={numericCellClassName}>{row.goalsAgainst}</td>
                     <td className={resultCellClassName}>{row.notes}</td>
                   </tr>
                 ))
               ) : (
                 <tr>
-                  <td className={numericCellClassName} colSpan={11}>
+                  <td className={numericCellClassName} colSpan={9}>
                     Boys soccer seasons will appear here when data is added.
                   </td>
                 </tr>
@@ -456,8 +437,6 @@ export default function YearlyResults({ data, status = "" }) {
                   <td className={numericCellClassName}>{recordText(totals.home)}</td>
                   <td className={numericCellClassName}>{recordText(totals.away)}</td>
                   <td className={numericCellClassName}>{recordText(totals.playoffs)}</td>
-                  <td className={numericCellClassName}>{totals.goalsFor}</td>
-                  <td className={numericCellClassName}>{totals.goalsAgainst}</td>
                   <td className={textCellClassName}></td>
                 </tr>
               ) : null}

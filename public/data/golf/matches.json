@@ -4,13 +4,13 @@
     "Season": 2003,
     "Name": "St. Andrew's vs. Patrick Henry",
     "Date": "2003-03-03",
-    "Course": null,
+    "Course": "Penny Branch Golf Club",
     "Location": "Estill, S.C.",
     "Opponent": "Patrick Henry Academy",
     "SourcePublication": "Savannah Morning News (GA)",
     "SourceDate": "2003-03-04",
     "SourceCitation": "\"GOLF,\" Savannah Morning News (GA), March 4, 2003, Page 5D.",
-    "Summary": "St. Andrew's defeated Patrick Henry 165-191 at Estill, S.C. Davy Clay led St. Andrew's with a 36 and Josh Smith shot 38.",
+    "Summary": "St. Andrew's defeated Patrick Henry 165-191 at Penny Branch Golf Club in Estill, S.C. Davy Clay led St. Andrew's with a 36 and Josh Smith shot 38.",
     "Divisions": [
       {
         "Division": "Boys",
@@ -210,13 +210,13 @@
     "Season": 2003,
     "Name": "Indigo Run Tri-Match",
     "Date": "2003-03-25",
-    "Course": "Indigo Run",
+    "Course": "Indigo Run Golf Club",
     "Location": "Hilton Head Island, S.C.",
     "Opponent": "Hilton Head Prep / Hilton Head Christian",
     "SourcePublication": "Savannah Morning News (GA)",
     "SourceDate": "2003-03-26",
     "SourceCitation": "\"GOLF,\" Savannah Morning News (GA), March 26, 2003, Page 3D, Sports.",
-    "Summary": "Hilton Head Prep shot 165, Hilton Head Christian 168, and St. Andrew's 181 in a par-36 match at Indigo Run. Davy Clay led St. Andrew's with a 39 and Josh Smith shot 41.",
+    "Summary": "Hilton Head Prep shot 165, Hilton Head Christian 168, and St. Andrew's 181 in a par-36 match at Indigo Run Golf Club. Davy Clay led St. Andrew's with a 39 and Josh Smith shot 41.",
     "Divisions": [
       {
         "Division": "Boys",
