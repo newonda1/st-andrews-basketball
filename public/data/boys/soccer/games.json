@@ -1,5 +1,874 @@
 [
   {
+    "Season": 2001,
+    "SeasonID": 2001,
+    "DisplaySeason": "Spring 2001",
+    "SourceSeasonLabel": "2000-01",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "GameID": 2001032101,
+    "Date": "",
+    "DisplayDate": "Before Mar. 22, 2001",
+    "Opponent": "Patrick Henry Academy",
+    "OpponentID": "sc-patrick-henry-academy-estill",
+    "OpponentSlug": "patrick-henry-academy",
+    "GameType": "Non-Region",
+    "Result": "W",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "IsPlaceholder": true,
+    "RecapTitle": "Player-of-week notes confirm early Patrick Henry win",
+    "Recap": "Savannah Morning News player-of-the-week notes credited Cam Aldrich with four goals, Fred Krynen with four goals and three assists, and Toni Popovic with five goals against Patrick Henry. The full team score has not yet been recovered.",
+    "SourceCitation": "\"BOYS' PLAYER OF THE WEEK\" Savannah Morning News (GA), March 23, 2001, Page 4B.",
+    "SourceDate": "2001-03-23",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200001,
+        "PlayerName": "Cam Aldrich",
+        "Goals": 4
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 2027043,
+        "PlayerName": "Fred Krynen",
+        "Goals": 4
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 2027042,
+        "PlayerName": "Toni Popovic",
+        "Goals": 5
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 2027043,
+        "PlayerName": "Fred Krynen",
+        "Assists": 3
+      }
+    ],
+    "Saves": [],
+    "RecordNote": "St. Andrew's was 2-0 after the following Sea Island Academy result."
+  },
+  {
+    "Season": 2001,
+    "SeasonID": 2001,
+    "DisplaySeason": "Spring 2001",
+    "SourceSeasonLabel": "2000-01",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "GameID": 2001032201,
+    "Date": "2001-03-22",
+    "DisplayDate": "Mar. 22, 2001",
+    "Opponent": "Sea Island Academy",
+    "OpponentID": "sc-sea-island-academy-johns-island",
+    "OpponentSlug": "sea-island-academy",
+    "GameType": "Non-Region",
+    "Result": "W",
+    "TeamScore": 5,
+    "OpponentScore": 1,
+    "RecapTitle": "Krynens, Popovic pace 5-1 win",
+    "Recap": "Franck Krynen and Toni Popovic scored two goals apiece and Justin Dixon added a goal as St. Andrew's defeated Sea Island Academy 5-1. Cam Aldrich made seven saves as the Saints improved to 2-0.",
+    "SourceCitation": "\"EFFINGHAM CO. BLANKS CALVARY IN GIRLS' SOCCER\" Savannah Morning News (GA), March 23, 2001, Page 4B.",
+    "SourceDate": "2001-03-23",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 2027044,
+        "PlayerName": "Franck Krynen",
+        "Goals": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 2027042,
+        "PlayerName": "Toni Popovic",
+        "Goals": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200004,
+        "PlayerName": "Justin Dixon",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 2027044,
+        "PlayerName": "Franck Krynen",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200105,
+        "PlayerName": "Will Massey",
+        "Assists": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 2027043,
+        "PlayerName": "Fred Krynen",
+        "Assists": 1
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200001,
+        "PlayerName": "Cam Aldrich",
+        "Saves": 7
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 2-0"
+  },
+  {
+    "Season": 2001,
+    "SeasonID": 2001,
+    "DisplaySeason": "Spring 2001",
+    "SourceSeasonLabel": "2000-01",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "GameID": 2001032701,
+    "Date": "2001-03-27",
+    "DisplayDate": "Mar. 27, 2001",
+    "Opponent": "Hilton Head Prep",
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
+    "OpponentSlug": "hilton-head-prep",
+    "GameType": "Non-Region",
+    "Result": "W",
+    "TeamScore": 4,
+    "OpponentScore": 1,
+    "RecapTitle": "Dixon scores twice against Hilton Head Prep",
+    "Recap": "Justin Dixon scored twice and added an assist as St. Andrew's beat Hilton Head Prep 4-1. Franck Krynen and Toni Popovic also scored, and Cam Aldrich made eight saves.",
+    "SourceCitation": "\"SOCCER\" Savannah Morning News (GA), March 28, 2001, Page 4D.",
+    "SourceDate": "2001-03-28",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200004,
+        "PlayerName": "Justin Dixon",
+        "Goals": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 2027044,
+        "PlayerName": "Franck Krynen",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 2027042,
+        "PlayerName": "Toni Popovic",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200004,
+        "PlayerName": "Justin Dixon",
+        "Assists": 1
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200001,
+        "PlayerName": "Cam Aldrich",
+        "Saves": 8
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 3-0"
+  },
+  {
+    "Season": 2001,
+    "SeasonID": 2001,
+    "DisplaySeason": "Spring 2001",
+    "SourceSeasonLabel": "2000-01",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "GameID": 2001040601,
+    "Date": "2001-04-06",
+    "DisplayDate": "Apr. 6, 2001",
+    "Opponent": "James Island Christian School",
+    "OpponentID": "sc-james-island-christian-school-charleston",
+    "OpponentSlug": "james-island-christian",
+    "GameType": "Non-Region",
+    "Result": "L",
+    "TeamScore": 2,
+    "OpponentScore": 5,
+    "RecapTitle": "Dixon and Krynen score in first recovered loss",
+    "Recap": "James Island Christian beat St. Andrew's 5-2. Quint Dixon and Franck Krynen scored for the Saints, with Dixon also credited with an assist.",
+    "SourceCitation": "\"SOCCER\" Savannah Morning News (GA), April 7, 2001, Page 5F.",
+    "SourceDate": "2001-04-07",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200005,
+        "PlayerName": "Quint Dixon",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 2027044,
+        "PlayerName": "Franck Krynen",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200005,
+        "PlayerName": "Quint Dixon",
+        "Assists": 1
+      }
+    ],
+    "Saves": [],
+    "RecordNote": "Records: St. Andrew's 3-1"
+  },
+  {
+    "Season": 2001,
+    "SeasonID": 2001,
+    "DisplaySeason": "Spring 2001",
+    "SourceSeasonLabel": "2000-01",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "GameID": 2001041001,
+    "Date": "",
+    "DisplayDate": "Before Apr. 12, 2001",
+    "Opponent": "Unknown",
+    "OpponentID": "",
+    "OpponentSlug": "unknown",
+    "GameType": "Non-Region",
+    "Result": "L",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "IsPlaceholder": true,
+    "RecapTitle": "Missing loss placeholder",
+    "Recap": "The April 13 Sea Island Academy brief listed St. Andrew's at 4-2 after the win, requiring one additional loss after the April 7 James Island Christian report.",
+    "SourceCitation": "Record-path placeholder from NewsBank boys soccer reports, Spring 2001.",
+    "SourceDate": "",
+    "GoalScorers": [],
+    "Assists": [],
+    "Saves": [],
+    "RecordNote": "April 13 brief listed St. Andrew's at 4-2."
+  },
+  {
+    "Season": 2001,
+    "SeasonID": 2001,
+    "DisplaySeason": "Spring 2001",
+    "SourceSeasonLabel": "2000-01",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "GameID": 2001041201,
+    "Date": "2001-04-12",
+    "DisplayDate": "Apr. 12, 2001",
+    "Opponent": "Sea Island Academy",
+    "OpponentID": "sc-sea-island-academy-johns-island",
+    "OpponentSlug": "sea-island-academy",
+    "GameType": "Non-Region",
+    "Result": "W",
+    "TeamScore": 2,
+    "OpponentScore": 1,
+    "RecapTitle": "Popovic double lifts Saints",
+    "Recap": "Toni Popovic scored both goals in a 2-1 win over Sea Island Academy. Preston Turner and Quint Dixon had assists, and Cam Aldrich made five saves.",
+    "SourceCitation": "\"SOCCER\" Savannah Morning News (GA), April 13, 2001, Page 6C.",
+    "SourceDate": "2001-04-13",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 2027042,
+        "PlayerName": "Toni Popovic",
+        "Goals": 2
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200466,
+        "PlayerName": "Preston Turner",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200005,
+        "PlayerName": "Quint Dixon",
+        "Assists": 1
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200001,
+        "PlayerName": "Cam Aldrich",
+        "Saves": 5
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 4-2"
+  },
+  {
+    "Season": 2001,
+    "SeasonID": 2001,
+    "DisplaySeason": "Spring 2001",
+    "SourceSeasonLabel": "2000-01",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "GameID": 2001041601,
+    "Date": "2001-04-16",
+    "DisplayDate": "Apr. 16, 2001",
+    "Opponent": "James F. Byrnes Academy",
+    "OpponentID": "sc-james-f-byrnes-academy-quinby",
+    "OpponentSlug": "byrnes-academy",
+    "GameType": "Non-Region",
+    "Result": "W",
+    "TeamScore": 8,
+    "OpponentScore": 0,
+    "RecapTitle": "Popovic hat trick leads 8-0 win",
+    "Recap": "Toni Popovic scored three goals, Justin Dixon scored twice, and Franck Krynen, Chris Lowe, and Will Massey also scored as St. Andrew's beat Byrnes Academy 8-0.",
+    "SourceCitation": "\"BOYS SOCCER\" Savannah Morning News (GA), April 17, 2001, Page 4D.",
+    "SourceDate": "2001-04-17",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 2027042,
+        "PlayerName": "Toni Popovic",
+        "Goals": 3
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200004,
+        "PlayerName": "Justin Dixon",
+        "Goals": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 2027044,
+        "PlayerName": "Franck Krynen",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200007,
+        "PlayerName": "Chris Lowe",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200105,
+        "PlayerName": "Will Massey",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 2027042,
+        "PlayerName": "Toni Popovic",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 2027044,
+        "PlayerName": "Franck Krynen",
+        "Assists": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 2027043,
+        "PlayerName": "Fred Krynen",
+        "Assists": 1
+      }
+    ],
+    "Saves": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200001,
+        "PlayerName": "Cam Aldrich",
+        "Saves": 5
+      }
+    ],
+    "RecordNote": "Records: St. Andrew's 5-2"
+  },
+  {
+    "Season": 2001,
+    "SeasonID": 2001,
+    "DisplaySeason": "Spring 2001",
+    "SourceSeasonLabel": "2000-01",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "GameID": 2001041701,
+    "Date": "2001-04-17",
+    "DisplayDate": "Apr. 17, 2001",
+    "Opponent": "Hilton Head Prep",
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
+    "OpponentSlug": "hilton-head-prep",
+    "GameType": "Non-Region",
+    "Result": "L",
+    "TeamScore": 0,
+    "OpponentScore": 1,
+    "Overtime": true,
+    "PenaltyKicks": true,
+    "TeamPenaltyScore": 2,
+    "OpponentPenaltyScore": 4,
+    "RecapTitle": "Hilton Head Prep edges Saints on penalties",
+    "Recap": "Hilton Head Prep and St. Andrew's played through two overtimes before Hilton Head Prep won 4-2 on penalty kicks. The published final listed Hilton Head Prep 1, St. Andrew's 0.",
+    "SourceCitation": "\"SOCCER\" Savannah Morning News (GA), April 19, 2001, Page 4C.",
+    "SourceDate": "2001-04-19",
+    "GoalScorers": [],
+    "Assists": [],
+    "Saves": [],
+    "RecordNote": "Records: St. Andrew's 5-3"
+  },
+  {
+    "Season": 2001,
+    "SeasonID": 2001,
+    "DisplaySeason": "Spring 2001",
+    "SourceSeasonLabel": "2000-01",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "GameID": 2001042601,
+    "Date": "2001-04-26",
+    "DisplayDate": "Apr. 26, 2001",
+    "Opponent": "Patrick Henry Academy",
+    "OpponentID": "sc-patrick-henry-academy-estill",
+    "OpponentSlug": "patrick-henry-academy",
+    "GameType": "Non-Region",
+    "Result": "W",
+    "TeamScore": 11,
+    "OpponentScore": 0,
+    "RecapTitle": "Krynen and Martinez score hat tricks",
+    "Recap": "Fred Krynen and Felix Martinez scored three goals apiece as St. Andrew's beat Patrick Henry 11-0. Toni Popovic and Cam Aldrich each scored twice, and Chris Lowe added a goal.",
+    "SourceCitation": "\"SVA EARNS FIRST REGION 3-AAAAA TITLE WITH 4-0 WIN OVER BEACH\" Savannah Morning News (GA), April 27, 2001, Page 3C.",
+    "SourceDate": "2001-04-27",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 2027043,
+        "PlayerName": "Fred Krynen",
+        "Goals": 3
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 2027045,
+        "PlayerName": "Felix Martinez",
+        "Goals": 3
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 2027042,
+        "PlayerName": "Toni Popovic",
+        "Goals": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200001,
+        "PlayerName": "Cam Aldrich",
+        "Goals": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200007,
+        "PlayerName": "Chris Lowe",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200458,
+        "PlayerName": "Michael McLean",
+        "Assists": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 2027043,
+        "PlayerName": "Fred Krynen",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 2027045,
+        "PlayerName": "Felix Martinez",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200001,
+        "PlayerName": "Cam Aldrich",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200007,
+        "PlayerName": "Chris Lowe",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200431,
+        "PlayerName": "William Chisholm",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 2027049,
+        "PlayerName": "Ryan Haggberg",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200005,
+        "PlayerName": "Quint Dixon",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200450,
+        "PlayerName": "A.J. Roberts",
+        "Assists": 1
+      }
+    ],
+    "Saves": [],
+    "RecordNote": "Records: St. Andrew's 6-3"
+  },
+  {
+    "Season": 2001,
+    "SeasonID": 2001,
+    "DisplaySeason": "Spring 2001",
+    "SourceSeasonLabel": "2000-01",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "GameID": 2001050201,
+    "Date": "2001-05-02",
+    "DisplayDate": "May 2, 2001",
+    "Opponent": "Jefferson Davis Academy",
+    "OpponentID": "sc-jefferson-davis-academy-blackville",
+    "OpponentSlug": "jefferson-davis-academy",
+    "GameType": "Non-Region",
+    "Result": "W",
+    "TeamScore": 13,
+    "OpponentScore": 0,
+    "RecapTitle": "Saints score 13 against Jefferson Davis",
+    "Recap": "Quint Dixon, Toni Popovic, Chris Lowe, and Preston Turner each scored twice in a 13-0 win over Jefferson Davis Academy. Will Massey, Jacob Rauers, Fred Krynen, William Chisholm, and Cam Aldrich also scored.",
+    "SourceCitation": "\"SOCCER\" Savannah Morning News (GA), May 3, 2001, Page 5D.",
+    "SourceDate": "2001-05-03",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200005,
+        "PlayerName": "Quint Dixon",
+        "Goals": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 2027042,
+        "PlayerName": "Toni Popovic",
+        "Goals": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200007,
+        "PlayerName": "Chris Lowe",
+        "Goals": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200466,
+        "PlayerName": "Preston Turner",
+        "Goals": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200105,
+        "PlayerName": "Will Massey",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200207,
+        "PlayerName": "Jacob Rauers",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 2027043,
+        "PlayerName": "Fred Krynen",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200431,
+        "PlayerName": "William Chisholm",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200001,
+        "PlayerName": "Cam Aldrich",
+        "Goals": 1
+      }
+    ],
+    "Assists": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200005,
+        "PlayerName": "Quint Dixon",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 2027042,
+        "PlayerName": "Toni Popovic",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200105,
+        "PlayerName": "Will Massey",
+        "Assists": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200207,
+        "PlayerName": "Jacob Rauers",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200007,
+        "PlayerName": "Chris Lowe",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerName": "Randall Phillips",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200466,
+        "PlayerName": "Preston Turner",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 2027049,
+        "PlayerName": "Ryan Haggberg",
+        "Assists": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200001,
+        "PlayerName": "Cam Aldrich",
+        "Assists": 1
+      }
+    ],
+    "Saves": [],
+    "RecordNote": "Records: St. Andrew's 7-3"
+  },
+  {
+    "Season": 2001,
+    "SeasonID": 2001,
+    "DisplaySeason": "Spring 2001",
+    "SourceSeasonLabel": "2000-01",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "GameID": 2001051001,
+    "Date": "",
+    "DisplayDate": "Before May 15, 2001",
+    "Opponent": "Unknown",
+    "OpponentID": "",
+    "OpponentSlug": "unknown",
+    "GameType": "Non-Region",
+    "Result": "W",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "IsPlaceholder": true,
+    "RecapTitle": "Missing win placeholder",
+    "Recap": "The May 16 Calhoun Academy state quarterfinal listed St. Andrew's at 9-3 after the win, requiring one additional win after the May 3 Jefferson Davis report.",
+    "SourceCitation": "Record-path placeholder from NewsBank boys soccer reports, Spring 2001.",
+    "SourceDate": "",
+    "GoalScorers": [],
+    "Assists": [],
+    "Saves": [],
+    "RecordNote": "May 16 quarterfinal brief listed St. Andrew's at 9-3."
+  },
+  {
+    "Season": 2001,
+    "SeasonID": 2001,
+    "DisplaySeason": "Spring 2001",
+    "SourceSeasonLabel": "2000-01",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "GameID": 2001051501,
+    "Date": "2001-05-15",
+    "DisplayDate": "May 15, 2001",
+    "Opponent": "Calhoun Academy",
+    "OpponentID": "sc-john-c-calhoun-academy-st-matthews",
+    "OpponentSlug": "calhoun-academy",
+    "GameType": "State Tournament",
+    "Round": "SCISA Class AA Quarterfinal",
+    "Result": "W",
+    "TeamScore": 5,
+    "OpponentScore": 1,
+    "RecapTitle": "Saints reach state semifinals",
+    "Recap": "Quint Dixon scored twice, and Jacob Rauers, Chris Lowe, and Michael McLean also scored as St. Andrew's beat Calhoun Academy 5-1 in the SCISA Class AA quarterfinals.",
+    "SourceCitation": "\"BOYS' SOCCER\" Savannah Morning News (GA), May 16, 2001, Page 4D.",
+    "SourceDate": "2001-05-16",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200005,
+        "PlayerName": "Quint Dixon",
+        "Goals": 2
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200207,
+        "PlayerName": "Jacob Rauers",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200007,
+        "PlayerName": "Chris Lowe",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 200458,
+        "PlayerName": "Michael McLean",
+        "Goals": 1
+      }
+    ],
+    "Assists": [],
+    "Saves": [],
+    "RecordNote": "Records: St. Andrew's 9-3"
+  },
+  {
+    "Season": 2001,
+    "SeasonID": 2001,
+    "DisplaySeason": "Spring 2001",
+    "SourceSeasonLabel": "2000-01",
+    "Time": "TBA",
+    "TeamID": "ga-savannah-st-andrews-lions-boys-soccer",
+    "Team": "St. Andrew's Lions",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "",
+    "Venue": "",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "GameID": 2001051801,
+    "Date": "2001-05-18",
+    "DisplayDate": "May 18, 2001",
+    "Opponent": "James F. Byrnes Academy",
+    "OpponentID": "sc-james-f-byrnes-academy-quinby",
+    "OpponentSlug": "byrnes-academy",
+    "GameType": "State Tournament",
+    "Round": "SCISA Class AA Semifinal",
+    "Result": "L",
+    "TeamScore": 2,
+    "OpponentScore": 3,
+    "Overtime": true,
+    "PenaltyKicks": true,
+    "TeamPenaltyScore": 1,
+    "OpponentPenaltyScore": 4,
+    "RecapTitle": "Byrnes ends Saints season in shootout",
+    "Recap": "Byrnes Academy defeated St. Andrew's 3-2 in the SCISA Class AA semifinals after a tie-breaking penalty-kick shootout. Preston White and Toni Popovic scored for St. Andrew's, which finished 9-4.",
+    "SourceCitation": "\"BRIEFLY\" Savannah Morning News (GA), May 19, 2001, Page 2F.",
+    "SourceDate": "2001-05-19",
+    "GoalScorers": [
+      {
+        "Team": "St. Andrew's",
+        "PlayerName": "Preston White",
+        "Goals": 1
+      },
+      {
+        "Team": "St. Andrew's",
+        "PlayerID": 2027042,
+        "PlayerName": "Toni Popovic",
+        "Goals": 1
+      }
+    ],
+    "Assists": [],
+    "Saves": [],
+    "RecordNote": "Records: St. Andrew's 9-4"
+  },
+  {
     "Season": 2002,
     "SeasonID": 2002,
     "DisplaySeason": "Spring 2002",

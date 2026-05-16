@@ -1,5 +1,159 @@
 [
   {
+    "SeasonID": 2001,
+    "DisplaySeason": "Spring 2001",
+    "SourceSeasonLabel": "2000-01",
+    "TeamLevel": "Varsity",
+    "TeamName": "St. Andrew's Lions",
+    "HeadCoach": "",
+    "Staff": [],
+    "Players": [
+      {
+        "PlayerID": 200001,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [
+          "GK"
+        ],
+        "PlayerName": "Cam Aldrich",
+        "Distinctions": [
+          "Ashley Dearing Award candidate"
+        ]
+      },
+      {
+        "PlayerID": 2027042,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Toni Popovic",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 2027044,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Franck Krynen",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 2027043,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Fred Krynen",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200004,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Justin Dixon",
+        "Distinctions": [
+          "Ashley Dearing Award candidate"
+        ]
+      },
+      {
+        "PlayerID": 200005,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Quint Dixon",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200007,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Chris Lowe",
+        "Distinctions": [
+          "Ashley Dearing Award candidate"
+        ]
+      },
+      {
+        "PlayerID": 200105,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Will Massey",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200207,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Jacob Rauers",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200466,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Preston Turner",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 2027045,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Felix Martinez",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200458,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Michael McLean",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200431,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "William Chisholm",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 2027049,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Ryan Haggberg",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200450,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "A.J. Roberts",
+        "Distinctions": []
+      }
+    ]
+  },
+  {
     "SeasonID": 2002,
     "DisplaySeason": "Spring 2002",
     "SourceSeasonLabel": "2001-02",

@@ -6,10 +6,10 @@
     "RegionFinish": null,
     "StateSeed": null,
     "StateFinish": null,
-    "OverallWins": 1,
-    "OverallLosses": 0,
+    "OverallWins": 9,
+    "OverallLosses": 10,
     "OverallTies": 0,
-    "StatusNote": "NewsBank recovery currently includes the March 7, 2001 published opener against Abundant Life Academy only."
+    "StatusNote": "NewsBank recovery now covers 16 scored box scores, three record-path placeholders, and final/statistical-leaderboard notes from March 7-May 11, 2001. The recovered final record path is 9-10; individual stat tables remain limited to published box-score leaders plus noted leaderboard snapshots."
   },
   {
     "SeasonID": 2002,

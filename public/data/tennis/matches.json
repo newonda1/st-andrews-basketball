@@ -352,6 +352,1129 @@
     ]
   },
   {
+    "MatchID": "2001-04-04-beaufort-academy-boys",
+    "Season": 2001,
+    "Date": "2001-04-04",
+    "Name": "St. Andrew's vs. Beaufort Academy - Boys",
+    "MatchType": "Dual Match",
+    "Gender": "Boys",
+    "Classification": "SCISA",
+    "MatchCategory": "Region",
+    "HomeAway": "",
+    "Status": "Completed",
+    "OpponentSchoolID": "sc-beaufort-academy-beaufort",
+    "TeamScore": {
+      "StAndrews": 3,
+      "Opponent": 6,
+      "Result": "L"
+    },
+    "Summary": "Beaufort Academy defeated St. Andrew's 6-3. Toni Popovic, Felix Martinez, and Fred Krynen won singles points for the Saints.",
+    "SourceCitation": "\"TENNIS\" Savannah Morning News (GA), April 5, 2001, Page 7D.",
+    "LineMatches": [
+      {
+        "TennisMatchID": "2001-04-04-beaufort-academy-boys-singles-1",
+        "EventType": "Singles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2001-04-04",
+        "Participants": [
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2027042,
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Brandon Cooper",
+            "SchoolID": "sc-beaufort-academy-beaufort",
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 7,
+            "bottom": 5
+          },
+          {
+            "top": 6,
+            "bottom": 3
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-04-04-beaufort-academy-boys-singles-2",
+        "EventType": "Singles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2001-04-04",
+        "Participants": [
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2027045,
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Jeremy Melville",
+            "SchoolID": "sc-beaufort-academy-beaufort",
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 3
+          },
+          {
+            "top": 6,
+            "bottom": 2
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-04-04-beaufort-academy-boys-singles-3",
+        "EventType": "Singles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2001-04-04",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Leland McElveen",
+            "SchoolID": "sc-beaufort-academy-beaufort",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200012,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 3
+          },
+          {
+            "top": 6,
+            "bottom": 2
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-04-04-beaufort-academy-boys-singles-4",
+        "EventType": "Singles",
+        "LineNumber": 4,
+        "Status": "Completed",
+        "Date": "2001-04-04",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Matthew Wooster",
+            "SchoolID": "sc-beaufort-academy-beaufort",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200103,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 3
+          },
+          {
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-04-04-beaufort-academy-boys-singles-5",
+        "EventType": "Singles",
+        "LineNumber": 5,
+        "Status": "Completed",
+        "Date": "2001-04-04",
+        "Participants": [
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2027043,
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Josh Konoza",
+            "SchoolID": "sc-beaufort-academy-beaufort",
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 2
+          },
+          {
+            "top": 3,
+            "bottom": 6
+          },
+          {
+            "top": 9,
+            "bottom": 7
+          }
+        ],
+        "WinnerSide": "top",
+        "Notes": "Published result listed a deciding tiebreak."
+      },
+      {
+        "TennisMatchID": "2001-04-04-beaufort-academy-boys-singles-6",
+        "EventType": "Singles",
+        "LineNumber": 6,
+        "Status": "Completed",
+        "Date": "2001-04-04",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Alex Runyan",
+            "SchoolID": "sc-beaufort-academy-beaufort",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026164,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 1
+          },
+          {
+            "top": 6,
+            "bottom": 2
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-04-04-beaufort-academy-boys-doubles-1",
+        "EventType": "Doubles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2001-04-04",
+        "Participants": [
+          {
+            "ParticipantType": "team",
+            "DisplayName": "Cooper / Melville",
+            "Side": "top",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Brandon Cooper",
+                "SchoolID": "sc-beaufort-academy-beaufort"
+              },
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Jeremy Melville",
+                "SchoolID": "sc-beaufort-academy-beaufort"
+              }
+            ]
+          },
+          {
+            "ParticipantType": "team",
+            "DisplayName": "Toni Popovic / partner not reported",
+            "Side": "bottom",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2027042
+              }
+            ]
+          }
+        ],
+        "Sets": [
+          {
+            "top": 9,
+            "bottom": 7
+          }
+        ],
+        "WinnerSide": "top",
+        "Notes": "The source line printed only Popovic for the St. Andrew's side."
+      },
+      {
+        "TennisMatchID": "2001-04-04-beaufort-academy-boys-doubles-2",
+        "EventType": "Doubles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2001-04-04",
+        "Participants": [
+          {
+            "ParticipantType": "team",
+            "DisplayName": "Wooster / McElveen",
+            "Side": "top",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Matthew Wooster",
+                "SchoolID": "sc-beaufort-academy-beaufort"
+              },
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Leland McElveen",
+                "SchoolID": "sc-beaufort-academy-beaufort"
+              }
+            ]
+          },
+          {
+            "ParticipantType": "team",
+            "DisplayName": "St. Andrew's doubles team not reported",
+            "Side": "bottom",
+            "TeamMembers": []
+          }
+        ],
+        "Sets": [
+          {
+            "top": 8,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "top",
+        "Notes": "The source line omitted the St. Andrew's doubles pair."
+      },
+      {
+        "TennisMatchID": "2001-04-04-beaufort-academy-boys-doubles-3",
+        "EventType": "Doubles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2001-04-04",
+        "Participants": [
+          {
+            "ParticipantType": "team",
+            "DisplayName": "Bucky Parks / Phil Gurney",
+            "Side": "top",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Bucky Parks",
+                "SchoolID": "sc-beaufort-academy-beaufort"
+              },
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Phil Gurney",
+                "SchoolID": "sc-beaufort-academy-beaufort"
+              }
+            ]
+          },
+          {
+            "ParticipantType": "team",
+            "DisplayName": "Ross Munro / Chris Rauers",
+            "Side": "bottom",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200206
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200311
+              }
+            ]
+          }
+        ],
+        "Sets": [
+          {
+            "top": 8,
+            "bottom": 6
+          }
+        ],
+        "WinnerSide": "top",
+        "Notes": "Source printed Ross Muro; roster identity normalized to Ross Munro."
+      }
+    ]
+  },
+  {
+    "MatchID": "2001-spring-boys-loss-placeholder-1",
+    "Season": 2001,
+    "Date": "",
+    "SortDate": "2001-04-04-01",
+    "DateLabel": "Before Apr. 5, 2001",
+    "Name": "St. Andrew's boys tennis missing loss",
+    "MatchType": "Dual Match",
+    "Gender": "Boys",
+    "Classification": "SCISA",
+    "MatchCategory": "Region",
+    "HomeAway": "",
+    "Status": "Record-path placeholder",
+    "OpponentSchoolID": "",
+    "TeamScore": {
+      "StAndrews": null,
+      "Opponent": null,
+      "Result": "L"
+    },
+    "Summary": "Placeholder loss added because the April 5 Beaufort Academy report listed St. Andrew's at 0-2 after that match.",
+    "LineMatches": []
+  },
+  {
+    "MatchID": "2001-04-12-beaufort-academy-boys",
+    "Season": 2001,
+    "Date": "2001-04-12",
+    "Name": "St. Andrew's vs. Beaufort Academy - Boys",
+    "MatchType": "Dual Match",
+    "Gender": "Boys",
+    "Classification": "SCISA",
+    "MatchCategory": "Region",
+    "HomeAway": "",
+    "Status": "Completed",
+    "OpponentSchoolID": "sc-beaufort-academy-beaufort",
+    "TeamScore": {
+      "StAndrews": 3,
+      "Opponent": 6,
+      "Result": "L"
+    },
+    "Summary": "Beaufort Academy defeated St. Andrew's 6-3. Chris Rauers won at No. 6 singles, and the Popovic/Martinez and Sullivan/Rauers doubles teams won for the Saints.",
+    "SourceCitation": "\"BOYS' TENNIS\" Savannah Morning News (GA), April 13, 2001, Page 6C.",
+    "LineMatches": [
+      {
+        "TennisMatchID": "2001-04-12-beaufort-academy-boys-singles-1",
+        "EventType": "Singles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2001-04-12",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Brandon Cooper",
+            "SchoolID": "sc-beaufort-academy-beaufort",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2027042,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 2,
+            "bottom": 6
+          },
+          {
+            "top": 6,
+            "bottom": 2
+          },
+          {
+            "top": 7,
+            "bottom": 5
+          }
+        ],
+        "WinnerSide": "top",
+        "Notes": "Published result listed a deciding tiebreak."
+      },
+      {
+        "TennisMatchID": "2001-04-12-beaufort-academy-boys-singles-2",
+        "EventType": "Singles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2001-04-12",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Jeremy Melville",
+            "SchoolID": "sc-beaufort-academy-beaufort",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2027045,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 7,
+            "bottom": 5
+          },
+          {
+            "top": 1,
+            "bottom": 6
+          },
+          {
+            "top": 7,
+            "bottom": 1
+          }
+        ],
+        "WinnerSide": "top",
+        "Notes": "Published result listed a deciding tiebreak."
+      },
+      {
+        "TennisMatchID": "2001-04-12-beaufort-academy-boys-singles-3",
+        "EventType": "Singles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2001-04-12",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Leland McElveen",
+            "SchoolID": "sc-beaufort-academy-beaufort",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200103,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 1
+          },
+          {
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-04-12-beaufort-academy-boys-singles-4",
+        "EventType": "Singles",
+        "LineNumber": 4,
+        "Status": "Completed",
+        "Date": "2001-04-12",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Matthew Wooster",
+            "SchoolID": "sc-beaufort-academy-beaufort",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2027043,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "top": 6,
+            "bottom": 1
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-04-12-beaufort-academy-boys-singles-5",
+        "EventType": "Singles",
+        "LineNumber": 5,
+        "Status": "Completed",
+        "Date": "2001-04-12",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Will Trask",
+            "SchoolID": "sc-beaufort-academy-beaufort",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200427,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "top": 6,
+            "bottom": 1
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-04-12-beaufort-academy-boys-singles-6",
+        "EventType": "Singles",
+        "LineNumber": 6,
+        "Status": "Completed",
+        "Date": "2001-04-12",
+        "Participants": [
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200311,
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Josh Konoza",
+            "SchoolID": "sc-beaufort-academy-beaufort",
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 5,
+            "bottom": 7
+          },
+          {
+            "top": 6,
+            "bottom": 2
+          },
+          {
+            "top": 7,
+            "bottom": 2
+          }
+        ],
+        "WinnerSide": "top",
+        "Notes": "Source printed Chris Ravers; roster identity normalized to Chris Rauers."
+      },
+      {
+        "TennisMatchID": "2001-04-12-beaufort-academy-boys-doubles-1",
+        "EventType": "Doubles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2001-04-12",
+        "Participants": [
+          {
+            "ParticipantType": "team",
+            "DisplayName": "Toni Popovic / Felix Martinez",
+            "Side": "top",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2027042
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2027045
+              }
+            ]
+          },
+          {
+            "ParticipantType": "team",
+            "DisplayName": "Cooper / Melville",
+            "Side": "bottom",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Brandon Cooper",
+                "SchoolID": "sc-beaufort-academy-beaufort"
+              },
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Jeremy Melville",
+                "SchoolID": "sc-beaufort-academy-beaufort"
+              }
+            ]
+          }
+        ],
+        "Sets": [
+          {
+            "top": 8,
+            "bottom": 5
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-04-12-beaufort-academy-boys-doubles-2",
+        "EventType": "Doubles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2001-04-12",
+        "Participants": [
+          {
+            "ParticipantType": "team",
+            "DisplayName": "McElveen / Wooster",
+            "Side": "top",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Leland McElveen",
+                "SchoolID": "sc-beaufort-academy-beaufort"
+              },
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Matthew Wooster",
+                "SchoolID": "sc-beaufort-academy-beaufort"
+              }
+            ]
+          },
+          {
+            "ParticipantType": "team",
+            "DisplayName": "Justin Howard / Fred Krynen",
+            "Side": "bottom",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200103
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2027043
+              }
+            ]
+          }
+        ],
+        "Sets": [
+          {
+            "top": 8,
+            "bottom": 3
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-04-12-beaufort-academy-boys-doubles-3",
+        "EventType": "Doubles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2001-04-12",
+        "Participants": [
+          {
+            "ParticipantType": "team",
+            "DisplayName": "Martin Sullivan / Chris Rauers",
+            "Side": "top",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200427
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200311
+              }
+            ]
+          },
+          {
+            "ParticipantType": "team",
+            "DisplayName": "Runyan / Parks",
+            "Side": "bottom",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Alex Runyan",
+                "SchoolID": "sc-beaufort-academy-beaufort"
+              },
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Bucky Parks",
+                "SchoolID": "sc-beaufort-academy-beaufort"
+              }
+            ]
+          }
+        ],
+        "Sets": [
+          {
+            "top": 9,
+            "bottom": 8,
+            "topTiebreak": 7,
+            "bottomTiebreak": 3
+          }
+        ],
+        "WinnerSide": "top"
+      }
+    ]
+  },
+  {
+    "MatchID": "2001-04-18-hilton-head-christian-boys",
+    "Season": 2001,
+    "Date": "2001-04-18",
+    "Name": "St. Andrew's at Hilton Head Christian - Boys",
+    "MatchType": "Dual Match",
+    "Gender": "Boys",
+    "Classification": "SCISA",
+    "MatchCategory": "Region",
+    "HomeAway": "",
+    "Status": "Completed",
+    "OpponentSchoolID": "sc-hilton-head-christian-academy-hilton-head-island",
+    "TeamScore": {
+      "StAndrews": 1,
+      "Opponent": 8,
+      "Result": "L"
+    },
+    "Summary": "Hilton Head Christian defeated St. Andrew's 8-1. The Martinez/Specht No. 1 doubles team earned the Saints' point.",
+    "SourceCitation": "\"BOYS' TENNIS\" Savannah Morning News (GA), April 19, 2001, Page 4C.",
+    "LineMatches": [
+      {
+        "TennisMatchID": "2001-04-18-hilton-head-christian-boys-singles-1",
+        "EventType": "Singles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2001-04-18",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Andrew Reichel",
+            "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2027045,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 3
+          },
+          {
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-04-18-hilton-head-christian-boys-singles-2",
+        "EventType": "Singles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2001-04-18",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Stan Bray",
+            "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200012,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 3
+          },
+          {
+            "top": 4,
+            "bottom": 6
+          },
+          {
+            "top": 7,
+            "bottom": 4
+          }
+        ],
+        "WinnerSide": "top",
+        "Notes": "Published result listed a deciding tiebreak."
+      },
+      {
+        "TennisMatchID": "2001-04-18-hilton-head-christian-boys-singles-3",
+        "EventType": "Singles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2001-04-18",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Jacob Raehn",
+            "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200103,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 1
+          },
+          {
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-04-18-hilton-head-christian-boys-singles-4",
+        "EventType": "Singles",
+        "LineNumber": 4,
+        "Status": "Completed",
+        "Date": "2001-04-18",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Clayton Schmidt",
+            "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200427,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 1
+          },
+          {
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-04-18-hilton-head-christian-boys-singles-5",
+        "EventType": "Singles",
+        "LineNumber": 5,
+        "Status": "Completed",
+        "Date": "2001-04-18",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Erik Daylie",
+            "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200311,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 2
+          },
+          {
+            "top": 6,
+            "bottom": 7,
+            "topTiebreak": 6,
+            "bottomTiebreak": 8
+          },
+          {
+            "top": 10,
+            "bottom": 8
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-04-18-hilton-head-christian-boys-singles-6",
+        "EventType": "Singles",
+        "LineNumber": 6,
+        "Status": "Completed",
+        "Date": "2001-04-18",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Rob Tillison",
+            "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200206,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 1
+          },
+          {
+            "top": 6,
+            "bottom": 4
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-04-18-hilton-head-christian-boys-doubles-1",
+        "EventType": "Doubles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2001-04-18",
+        "Participants": [
+          {
+            "ParticipantType": "team",
+            "DisplayName": "Felix Martinez / Toby Specht",
+            "Side": "top",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2027045
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200012
+              }
+            ]
+          },
+          {
+            "ParticipantType": "team",
+            "DisplayName": "Schmidt / Delph",
+            "Side": "bottom",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Clayton Schmidt",
+                "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island"
+              },
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Delph",
+                "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island"
+              }
+            ]
+          }
+        ],
+        "Sets": [
+          {
+            "top": 8,
+            "bottom": 4
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-04-18-hilton-head-christian-boys-doubles-2",
+        "EventType": "Doubles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2001-04-18",
+        "Participants": [
+          {
+            "ParticipantType": "team",
+            "DisplayName": "Brown / Hyatt",
+            "Side": "top",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Brown",
+                "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island"
+              },
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Hyatt",
+                "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island"
+              }
+            ]
+          },
+          {
+            "ParticipantType": "team",
+            "DisplayName": "Justin Howard / Martin Sullivan",
+            "Side": "bottom",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200103
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200427
+              }
+            ]
+          }
+        ],
+        "Sets": [
+          {
+            "top": 8,
+            "bottom": 2
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2001-04-18-hilton-head-christian-boys-doubles-3",
+        "EventType": "Doubles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2001-04-18",
+        "Participants": [
+          {
+            "ParticipantType": "team",
+            "DisplayName": "Hill / Tillison",
+            "Side": "top",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Hill",
+                "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island"
+              },
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Rob Tillison",
+                "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island"
+              }
+            ]
+          },
+          {
+            "ParticipantType": "team",
+            "DisplayName": "Chris Rauers / Billy Vine",
+            "Side": "bottom",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200311
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026164
+              }
+            ]
+          }
+        ],
+        "Sets": [
+          {
+            "top": 8,
+            "bottom": 2
+          }
+        ],
+        "WinnerSide": "top"
+      }
+    ]
+  },
+  {
+    "MatchID": "2001-spring-boys-loss-placeholder-2",
+    "Season": 2001,
+    "Date": "",
+    "SortDate": "2001-04-18-01",
+    "DateLabel": "Before Apr. 19, 2001",
+    "Name": "St. Andrew's boys tennis missing loss",
+    "MatchType": "Dual Match",
+    "Gender": "Boys",
+    "Classification": "SCISA",
+    "MatchCategory": "Region",
+    "HomeAway": "",
+    "Status": "Record-path placeholder",
+    "OpponentSchoolID": "",
+    "TeamScore": {
+      "StAndrews": null,
+      "Opponent": null,
+      "Result": "L"
+    },
+    "Summary": "Placeholder loss added because the April 19 Hilton Head Christian report listed St. Andrew's at 0-5 after that match.",
+    "LineMatches": []
+  },
+  {
     "MatchID": "2001-09-04-patrick-henry-girls",
     "Season": 2002,
     "Date": "2001-09-04",
@@ -4485,6 +5608,46 @@
     "Source": "User-provided girls tennis results, Sept. 12, 2002"
   },
   {
+    "MatchID": "2002-before-09-30-missing-loss-1-girls",
+    "Season": 2003,
+    "Date": null,
+    "DateLabel": "Before Sep. 30, 2002",
+    "SortDate": "2002-09-29-1",
+    "Name": "St. Andrew's vs. Unknown Opponent - Girls (Missing Match 1)",
+    "MatchType": "Dual Match",
+    "Gender": "Girls",
+    "Classification": "SCISA",
+    "MatchCategory": "Unknown",
+    "HomeAway": "Unknown",
+    "Status": "Completed",
+    "Opponent": "Unknown",
+    "TeamScore": {
+      "Result": "L"
+    },
+    "LineMatches": [],
+    "Source": "Record reconciliation from user-provided Sept. 30, 2002 girls tennis result; St. Andrew's was 2-5 after the Hilton Head Christian match."
+  },
+  {
+    "MatchID": "2002-before-09-30-missing-loss-2-girls",
+    "Season": 2003,
+    "Date": null,
+    "DateLabel": "Before Sep. 30, 2002",
+    "SortDate": "2002-09-29-2",
+    "Name": "St. Andrew's vs. Unknown Opponent - Girls (Missing Match 2)",
+    "MatchType": "Dual Match",
+    "Gender": "Girls",
+    "Classification": "SCISA",
+    "MatchCategory": "Unknown",
+    "HomeAway": "Unknown",
+    "Status": "Completed",
+    "Opponent": "Unknown",
+    "TeamScore": {
+      "Result": "L"
+    },
+    "LineMatches": [],
+    "Source": "Record reconciliation from user-provided Sept. 30, 2002 girls tennis result; St. Andrew's was 2-5 after the Hilton Head Christian match."
+  },
+  {
     "MatchID": "2002-09-30-hilton-head-christian-girls",
     "Season": 2003,
     "Date": "2002-09-30",
@@ -6577,6 +7740,26 @@
       }
     ],
     "Source": "User-provided girls tennis results, Sept. 8, 2005"
+  },
+  {
+    "MatchID": "2005-before-09-15-missing-loss-1-girls",
+    "Season": 2006,
+    "Date": null,
+    "DateLabel": "Before Sep. 15, 2005",
+    "SortDate": "2005-09-14-1",
+    "Name": "St. Andrew's vs. Unknown Opponent - Girls (Missing Match 1)",
+    "MatchType": "Dual Match",
+    "Gender": "Girls",
+    "Classification": "SCISA",
+    "MatchCategory": "Unknown",
+    "HomeAway": "Unknown",
+    "Status": "Completed",
+    "Opponent": "Unknown",
+    "TeamScore": {
+      "Result": "L"
+    },
+    "LineMatches": [],
+    "Source": "Record reconciliation from user-provided Sept. 15, 2005 girls tennis result; St. Andrew's was 0-4 after the Charleston Collegiate match."
   },
   {
     "MatchID": "2005-09-15-charleston-collegiate-girls",
@@ -16586,65 +17769,5 @@
     ],
     "Source": "UTR Sports event 370885; full Class AAA girls singles state bracket captured for St. Andrew's participant.",
     "TournamentDataPath": "/data/tennis/tournaments/2026-giaa-state-individual-girls/metadata.json"
-  },
-  {
-    "MatchID": "2002-before-09-30-missing-loss-1-girls",
-    "Season": 2003,
-    "Date": null,
-    "DateLabel": "Before Sep. 30, 2002",
-    "SortDate": "2002-09-29-1",
-    "Name": "St. Andrew's vs. Unknown Opponent - Girls (Missing Match 1)",
-    "MatchType": "Dual Match",
-    "Gender": "Girls",
-    "Classification": "SCISA",
-    "MatchCategory": "Unknown",
-    "HomeAway": "Unknown",
-    "Status": "Completed",
-    "Opponent": "Unknown",
-    "TeamScore": {
-      "Result": "L"
-    },
-    "LineMatches": [],
-    "Source": "Record reconciliation from user-provided Sept. 30, 2002 girls tennis result; St. Andrew's was 2-5 after the Hilton Head Christian match."
-  },
-  {
-    "MatchID": "2002-before-09-30-missing-loss-2-girls",
-    "Season": 2003,
-    "Date": null,
-    "DateLabel": "Before Sep. 30, 2002",
-    "SortDate": "2002-09-29-2",
-    "Name": "St. Andrew's vs. Unknown Opponent - Girls (Missing Match 2)",
-    "MatchType": "Dual Match",
-    "Gender": "Girls",
-    "Classification": "SCISA",
-    "MatchCategory": "Unknown",
-    "HomeAway": "Unknown",
-    "Status": "Completed",
-    "Opponent": "Unknown",
-    "TeamScore": {
-      "Result": "L"
-    },
-    "LineMatches": [],
-    "Source": "Record reconciliation from user-provided Sept. 30, 2002 girls tennis result; St. Andrew's was 2-5 after the Hilton Head Christian match."
-  },
-  {
-    "MatchID": "2005-before-09-15-missing-loss-1-girls",
-    "Season": 2006,
-    "Date": null,
-    "DateLabel": "Before Sep. 15, 2005",
-    "SortDate": "2005-09-14-1",
-    "Name": "St. Andrew's vs. Unknown Opponent - Girls (Missing Match 1)",
-    "MatchType": "Dual Match",
-    "Gender": "Girls",
-    "Classification": "SCISA",
-    "MatchCategory": "Unknown",
-    "HomeAway": "Unknown",
-    "Status": "Completed",
-    "Opponent": "Unknown",
-    "TeamScore": {
-      "Result": "L"
-    },
-    "LineMatches": [],
-    "Source": "Record reconciliation from user-provided Sept. 15, 2005 girls tennis result; St. Andrew's was 0-4 after the Charleston Collegiate match."
   }
 ]

@@ -1,5 +1,18 @@
 [
   {
+    "MeetID": 2001033101,
+    "Season": 2001,
+    "Date": "2001-03-31",
+    "Name": "SCISA State Qualifying Meet",
+    "Location": "Wilson Hall School, Sumter, SC",
+    "Level": "Varsity",
+    "MeetType": "Qualifier",
+    "Status": "Partial",
+    "DateApproximate": true,
+    "Notes": "The April 5, 2001 Savannah Morning News This and That column reported that Toni Popovic and Tiffany Griffin qualified for the upcoming SCISA state meet at an eight-team event held the previous week at Wilson Hall School in Sumter. The exact meet date is not preserved in the article.",
+    "SourceCitation": "\"TEAMMATES KEEP STEWART'S MEMORY ALIVE AT LIBERTY COUNTY\" Savannah Morning News (GA), April 5, 2001, Page 7D."
+  },
+  {
     "MeetID": 2005043001,
     "Season": 2005,
     "Date": "2005-04-30",

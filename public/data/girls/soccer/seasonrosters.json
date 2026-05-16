@@ -1,5 +1,65 @@
 [
   {
+    "SeasonID": 2001,
+    "DisplaySeason": "Spring 2001",
+    "SourceSeasonLabel": "2000-01",
+    "TeamLevel": "Varsity",
+    "TeamName": "St. Andrew's Lions",
+    "HeadCoach": "",
+    "Staff": [],
+    "Players": [
+      {
+        "PlayerID": 200464,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [
+          "GK"
+        ],
+        "PlayerName": "Klie White",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200405,
+        "JerseyNumber": null,
+        "Grade": 9,
+        "GradeLabel": "Freshman",
+        "Positions": [
+          "GK"
+        ],
+        "PlayerName": "LeighAnne Evans",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200315,
+        "JerseyNumber": null,
+        "Grade": 10,
+        "GradeLabel": "Sophomore",
+        "Positions": [],
+        "PlayerName": "Meghan Lowe",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200318,
+        "JerseyNumber": null,
+        "Grade": 11,
+        "GradeLabel": "Junior",
+        "Positions": [],
+        "PlayerName": "Sarah Roddenberry",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 2026341,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Ann Cole",
+        "Distinctions": []
+      }
+    ]
+  },
+  {
     "SeasonID": 2002,
     "DisplaySeason": "Spring 2002",
     "SourceSeasonLabel": "2001-02",

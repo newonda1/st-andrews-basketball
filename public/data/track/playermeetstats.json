@@ -1,5 +1,29 @@
 [
   {
+    "StatID": "2001033101-2027048-3200m",
+    "MeetID": 2001033101,
+    "PlayerID": 2027048,
+    "Gender": "Girls",
+    "Event": "3200 Meter Run",
+    "Mark": "14:56",
+    "Place": "3rd",
+    "Round": "Finals",
+    "Status": "State qualifier",
+    "SourceCitation": "\"TEAMMATES KEEP STEWART'S MEMORY ALIVE AT LIBERTY COUNTY\" Savannah Morning News (GA), April 5, 2001, Page 7D."
+  },
+  {
+    "StatID": "2001033101-2027042-400m",
+    "MeetID": 2001033101,
+    "PlayerID": 2027042,
+    "Gender": "Boys",
+    "Event": "400 Meter Dash",
+    "Mark": "56.87",
+    "Place": "2nd",
+    "Round": "Finals",
+    "Status": "State qualifier",
+    "SourceCitation": "\"TEAMMATES KEEP STEWART'S MEMORY ALIVE AT LIBERTY COUNTY\" Savannah Morning News (GA), April 5, 2001, Page 7D."
+  },
+  {
     "StatID": "2005043001-200501-100m",
     "MeetID": 2005043001,
     "PlayerID": 200501,

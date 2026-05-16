@@ -3,7 +3,6 @@
     "SeasonID": "2001",
     "Players": [
       {
-        "PlayerID": 200462,
         "JerseyNumber": null
       },
       {
@@ -20,6 +19,26 @@
       },
       {
         "PlayerID": 200203,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200102,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200106,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200452,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200003,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 2027046,
         "JerseyNumber": null
       }
     ]

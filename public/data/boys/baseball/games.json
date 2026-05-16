@@ -51,6 +51,879 @@
     "SourceDate": "2001-03-07"
   },
   {
+    "Season": 2001,
+    "LocationType": "Unknown",
+    "GameType": "Non-Region",
+    "GameID": 2001031501,
+    "DisplayDate": "Before March 24",
+    "OpponentID": "",
+    "Opponent": "Unknown",
+    "OpponentAbbr": "UNK",
+    "Result": "L",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "IsPlaceholder": true,
+    "Notes": "Placeholder loss added because the March 24 Sea Island Academy box score listed St. Andrew's at 1-2 after the known March 6 win and the Sea Island loss.",
+    "SourceCitation": "Record-path placeholder from NewsBank baseball reports, Spring 2001."
+  },
+  {
+    "Season": 2001,
+    "LocationType": "Unknown",
+    "GameType": "Non-Region",
+    "GameID": 2001032301,
+    "Date": "2001-03-23",
+    "OpponentID": "sc-sea-island-academy-johns-island",
+    "Opponent": "Sea Island Academy",
+    "OpponentAbbr": "SIA",
+    "Result": "L",
+    "TeamScore": 3,
+    "OpponentScore": 4,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "Opponent": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3
+      ],
+      "StAndrews": [
+        0,
+        0,
+        0,
+        1,
+        2,
+        0,
+        0
+      ],
+      "OpponentTotals": {
+        "R": 4,
+        "H": 3,
+        "E": 0
+      },
+      "StAndrewsTotals": {
+        "R": 3,
+        "H": 5,
+        "E": 1
+      }
+    },
+    "WinningPitcher": "Carter",
+    "LosingPitcher": "Jeff Smith",
+    "Notes": "A.J. Nichols hit a one-out, two-run double in the bottom of the seventh for Sea Island. Jake Smith went 2-for-3 with a double and Matt Hunt went 1-for-2 with two RBIs for St. Andrew's.",
+    "SourceCitation": "\"HERNDON'S GRAND SLAM RALLIES LONG COUNTY PAST ECI\" Savannah Morning News (GA), March 24, 2001, Page 3F.",
+    "SourceDate": "2001-03-24"
+  },
+  {
+    "Season": 2001,
+    "LocationType": "Unknown",
+    "GameType": "Non-Region",
+    "GameID": 2001032401,
+    "Date": "2001-03-24",
+    "OpponentID": "sc-laurence-manning-academy-manning",
+    "Opponent": "Laurence Manning Academy",
+    "OpponentAbbr": "LMA",
+    "Result": "L",
+    "TeamScore": 1,
+    "OpponentScore": 9,
+    "Tournament": "Williamsburg Tournament",
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "Opponent": [
+        0,
+        1,
+        0,
+        3,
+        5
+      ],
+      "StAndrews": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "OpponentTotals": {
+        "R": 9,
+        "H": 8,
+        "E": 0
+      },
+      "StAndrewsTotals": {
+        "R": 1,
+        "H": 2,
+        "E": 0
+      }
+    },
+    "WinningPitcher": "Rembert",
+    "LosingPitcher": "Zack Hillard",
+    "Notes": "Laurence Manning defeated St. Andrew's in five innings in the opening round at Kingstree. Beau Hinton went 1-for-1 with a walk and a stolen base, and Ryan Stratz doubled and drove in the Saints' run.",
+    "SourceCitation": "\"VIDALIA HOLDS ON TO BEAT SOUTH EFFINGHAM\" Savannah Morning News (GA), March 25, 2001, Page 3B.",
+    "SourceDate": "2001-03-25"
+  },
+  {
+    "Season": 2001,
+    "LocationType": "Unknown",
+    "GameType": "Non-Region",
+    "GameID": 2001032402,
+    "Date": "2001-03-24",
+    "OpponentID": "",
+    "Opponent": "North Myrtle Beach Christian",
+    "OpponentAbbr": "NMBC",
+    "Result": "W",
+    "TeamScore": 18,
+    "OpponentScore": 4,
+    "Tournament": "Williamsburg Tournament",
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "Opponent": [
+        0,
+        0,
+        0,
+        3,
+        1
+      ],
+      "StAndrews": [
+        4,
+        4,
+        3,
+        5,
+        2
+      ],
+      "OpponentTotals": {
+        "R": 4,
+        "H": 7,
+        "E": 7
+      },
+      "StAndrewsTotals": {
+        "R": 18,
+        "H": 19,
+        "E": 2
+      }
+    },
+    "WinningPitcher": "Matt Hunt",
+    "LosingPitcher": "Bost",
+    "Notes": "St. Andrew's won the consolation game in five innings. Ryan Stratz went 4-for-4 with three RBIs, Zack Hillard went 4-for-5 with four RBIs, Matt Hunt went 3-for-5 with three RBIs, Brent Adams went 2-for-2 with three RBIs, and Beau Hinton went 2-for-5 with three RBIs.",
+    "SourceCitation": "\"VIDALIA HOLDS ON TO BEAT SOUTH EFFINGHAM\" Savannah Morning News (GA), March 25, 2001, Page 3B.",
+    "SourceDate": "2001-03-25"
+  },
+  {
+    "Season": 2001,
+    "LocationType": "Unknown",
+    "GameType": "Non-Region",
+    "GameID": 2001032701,
+    "Date": "2001-03-27",
+    "OpponentID": "ga-memorial-day-school-savannah",
+    "Opponent": "Memorial Day School",
+    "OpponentAbbr": "MDS",
+    "Result": "L",
+    "TeamScore": 3,
+    "OpponentScore": 7,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "Opponent": [
+        1,
+        3,
+        0,
+        1,
+        2,
+        0,
+        null
+      ],
+      "StAndrews": [
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        1
+      ],
+      "OpponentTotals": {
+        "R": 7,
+        "H": 6,
+        "E": 4
+      },
+      "StAndrewsTotals": {
+        "R": 3,
+        "H": 6,
+        "E": 3
+      }
+    },
+    "WinningPitcher": "Jordan Moon",
+    "LosingPitcher": "Ryan Stratz",
+    "Notes": "Memorial Day beat St. Andrew's 7-3. The box score did not list St. Andrew's individual hitting leaders.",
+    "SourceCitation": "\"BASEBALL\" Savannah Morning News (GA), March 28, 2001, Page 4D.",
+    "SourceDate": "2001-03-28"
+  },
+  {
+    "Season": 2001,
+    "LocationType": "Unknown",
+    "GameType": "Region",
+    "GameID": 2001040501,
+    "Date": "2001-04-05",
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
+    "Opponent": "Hilton Head Christian Academy",
+    "OpponentAbbr": "HHC",
+    "Result": "W",
+    "TeamScore": 5,
+    "OpponentScore": 0,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "Opponent": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "StAndrews": [
+        1,
+        2,
+        1,
+        0,
+        1,
+        0,
+        null
+      ],
+      "OpponentTotals": {
+        "R": 0,
+        "H": 1,
+        "E": 1
+      },
+      "StAndrewsTotals": {
+        "R": 5,
+        "H": 7,
+        "E": 1
+      }
+    },
+    "WinningPitcher": "Zack Hillard",
+    "LosingPitcher": "Green",
+    "Notes": "Zack Hillard threw a one-hitter, walked two, and struck out five. Ryan Stratz went 2-for-3 with a double and an RBI; Beau Hinton, Hillard, and Victor Evans each drove in a run.",
+    "SourceCitation": "\"BASEBALL\" Savannah Morning News (GA), April 6, 2001, Page 3C.",
+    "SourceDate": "2001-04-06"
+  },
+  {
+    "Season": 2001,
+    "LocationType": "Unknown",
+    "GameType": "Non-Region",
+    "GameID": 2001040601,
+    "Date": "2001-04-06",
+    "OpponentID": "sc-abundant-life-academy-hardeeville",
+    "Opponent": "Abundant Life Academy",
+    "OpponentAbbr": "ALA",
+    "Result": "W",
+    "TeamScore": 5,
+    "OpponentScore": 0,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "Opponent": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "StAndrews": [
+        3,
+        1,
+        0,
+        1,
+        0,
+        0,
+        null
+      ],
+      "OpponentTotals": {
+        "R": 0,
+        "H": 2,
+        "E": 3
+      },
+      "StAndrewsTotals": {
+        "R": 5,
+        "H": 8,
+        "E": 3
+      }
+    },
+    "WinningPitcher": "Matt Hunt",
+    "LosingPitcher": "Abraham",
+    "Notes": "Matt Hunt and Jeff Smith combined for 13 strikeouts. Hunt struck out nine in four innings, Smith struck out four in three innings, Smith went 3-for-4, and Hunt went 2-for-3 with an RBI.",
+    "SourceCitation": "\"MCBRIDE PERFECT IN SCREVEN CO. WIN AGAINST TATTNALL CO.\" Savannah Morning News (GA), April 7, 2001, Page 5F.",
+    "SourceDate": "2001-04-07"
+  },
+  {
+    "Season": 2001,
+    "LocationType": "Unknown",
+    "GameType": "Region",
+    "GameID": 2001041001,
+    "Date": "2001-04-10",
+    "OpponentID": "sc-beaufort-academy-beaufort",
+    "Opponent": "Beaufort Academy",
+    "OpponentAbbr": "BA",
+    "Result": "L",
+    "TeamScore": 6,
+    "OpponentScore": 7,
+    "ExtraInnings": true,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "Opponent": [
+        0,
+        0,
+        2,
+        2,
+        0,
+        0,
+        0,
+        3
+      ],
+      "StAndrews": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        3,
+        0,
+        2
+      ],
+      "OpponentTotals": {
+        "R": 7,
+        "H": 5,
+        "E": 4
+      },
+      "StAndrewsTotals": {
+        "R": 6,
+        "H": 8,
+        "E": 3
+      }
+    },
+    "WinningPitcher": "B. Smith",
+    "LosingPitcher": "Zack Hillard",
+    "Notes": "Beaufort Academy scored three in the eighth to beat St. Andrew's 7-6. Zack Hillard went 3-for-4 with three RBIs.",
+    "SourceCitation": "\"BASEBALL\" Savannah Morning News (GA), April 11, 2001, Page 4D.",
+    "SourceDate": "2001-04-11"
+  },
+  {
+    "Season": 2001,
+    "LocationType": "Unknown",
+    "GameType": "Non-Region",
+    "GameID": 2001041501,
+    "DisplayDate": "Between April 11 and April 19",
+    "OpponentID": "",
+    "Opponent": "Unknown",
+    "OpponentAbbr": "UNK",
+    "Result": "L",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "IsPlaceholder": true,
+    "Notes": "Placeholder loss added because the April 19 Agape Christian doubleheader listed St. Andrew's at 5-6 after the opening win, requiring one additional loss after the April 11 Beaufort Academy report.",
+    "SourceCitation": "Record-path placeholder from NewsBank baseball reports, Spring 2001."
+  },
+  {
+    "Season": 2001,
+    "LocationType": "Unknown",
+    "GameType": "Non-Region",
+    "GameID": 2001041801,
+    "Date": "2001-04-18",
+    "OpponentID": "agape-christian",
+    "Opponent": "Agape Christian",
+    "OpponentAbbr": "AGP",
+    "Result": "W",
+    "TeamScore": 5,
+    "OpponentScore": 4,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "Opponent": [
+        0,
+        0,
+        1,
+        0,
+        3
+      ],
+      "StAndrews": [
+        0,
+        2,
+        0,
+        1,
+        2
+      ],
+      "OpponentTotals": {
+        "R": 4,
+        "H": 7,
+        "E": 2
+      },
+      "StAndrewsTotals": {
+        "R": 5,
+        "H": 5,
+        "E": 1
+      }
+    },
+    "WinningPitcher": "Zack Hillard",
+    "LosingPitcher": "K. Davis",
+    "Notes": "Matt Hunt's two-out single drove in Zack Hillard with the winning run in the bottom of the fifth. Hunt went 2-for-2 with an RBI.",
+    "SourceCitation": "\"HUNT PACES ST. ANDREW'S TO TWINBILL WINS\" Savannah Morning News (GA), April 19, 2001, Page 4C.",
+    "SourceDate": "2001-04-19"
+  },
+  {
+    "Season": 2001,
+    "LocationType": "Unknown",
+    "GameType": "Non-Region",
+    "GameID": 2001041802,
+    "Date": "2001-04-18",
+    "OpponentID": "agape-christian",
+    "Opponent": "Agape Christian",
+    "OpponentAbbr": "AGP",
+    "Result": "W",
+    "TeamScore": 11,
+    "OpponentScore": 3,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "Opponent": [
+        0,
+        0,
+        0,
+        0,
+        3
+      ],
+      "StAndrews": [
+        2,
+        0,
+        8,
+        1,
+        null
+      ],
+      "OpponentTotals": {
+        "R": 3,
+        "H": 4,
+        "E": 4
+      },
+      "StAndrewsTotals": {
+        "R": 11,
+        "H": 10,
+        "E": 1
+      }
+    },
+    "WinningPitcher": "Ryan Stratz",
+    "LosingPitcher": "Brandon Roach",
+    "Notes": "Ryan Stratz struck out eight and went 2-for-2 with an RBI. Matt Hunt went 2-for-3 with two RBIs and Beau Hinton went 2-for-3 with an RBI.",
+    "SourceCitation": "\"HUNT PACES ST. ANDREW'S TO TWINBILL WINS\" Savannah Morning News (GA), April 19, 2001, Page 4C.",
+    "SourceDate": "2001-04-19"
+  },
+  {
+    "Season": 2001,
+    "LocationType": "Unknown",
+    "GameType": "Non-Region",
+    "GameID": 2001042301,
+    "Date": "2001-04-23",
+    "OpponentID": "sc-colleton-prep-academy-walterboro",
+    "Opponent": "Colleton Prep Academy",
+    "OpponentAbbr": "CPA",
+    "Result": "L",
+    "TeamScore": 6,
+    "OpponentScore": 7,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "Opponent": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        6
+      ],
+      "StAndrews": [
+        2,
+        0,
+        1,
+        0,
+        0,
+        2,
+        1
+      ],
+      "OpponentTotals": {
+        "R": 7,
+        "H": 6,
+        "E": 2
+      },
+      "StAndrewsTotals": {
+        "R": 6,
+        "H": 10,
+        "E": 2
+      }
+    },
+    "WinningPitcher": "Tyler White",
+    "LosingPitcher": "Matt Hunt",
+    "Notes": "Colleton Prep scored six runs in the seventh. Zack Hillard went 2-for-3 with a home run and three RBIs; Jeff Smith, Matt Hunt, and Beau Hinton each had two hits.",
+    "SourceCitation": "\"MEMORIAL DAY CLINCHES REGION BASEBALL TITLE\" Savannah Morning News (GA), April 24, 2001, Page 3D.",
+    "SourceDate": "2001-04-24"
+  },
+  {
+    "Season": 2001,
+    "LocationType": "Unknown",
+    "GameType": "Non-Region",
+    "GameID": 2001042401,
+    "DisplayDate": "Before April 25",
+    "OpponentID": "",
+    "Opponent": "Unknown",
+    "OpponentAbbr": "UNK",
+    "Result": "W",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "IsPlaceholder": true,
+    "Notes": "Placeholder win added because the April 25 Beaufort Academy box score listed St. Andrew's at 8-7 after that victory, while the April 24 Colleton Prep report listed the Saints at 6-7.",
+    "SourceCitation": "Record-path placeholder from NewsBank baseball reports, Spring 2001."
+  },
+  {
+    "Season": 2001,
+    "LocationType": "Unknown",
+    "GameType": "Region",
+    "GameID": 2001042402,
+    "Date": "2001-04-24",
+    "OpponentID": "sc-beaufort-academy-beaufort",
+    "Opponent": "Beaufort Academy",
+    "OpponentAbbr": "BA",
+    "Result": "W",
+    "TeamScore": 12,
+    "OpponentScore": 2,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "Opponent": [
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "StAndrews": [
+        1,
+        6,
+        5,
+        0,
+        null
+      ],
+      "OpponentTotals": {
+        "R": 2,
+        "H": 4,
+        "E": 2
+      },
+      "StAndrewsTotals": {
+        "R": 12,
+        "H": 5,
+        "E": 0
+      }
+    },
+    "WinningPitcher": "Ryan Stratz",
+    "LosingPitcher": "B. Smith",
+    "Notes": "St. Andrew's beat Beaufort Academy 12-2 in five innings. Ryan Stratz went 2-for-3 with four RBIs.",
+    "SourceCitation": "\"SOCCER\" Savannah Morning News (GA), April 25, 2001, Page 4D.",
+    "SourceDate": "2001-04-25"
+  },
+  {
+    "Season": 2001,
+    "LocationType": "Unknown",
+    "GameType": "Non-Region",
+    "GameID": 2001042601,
+    "Date": "2001-04-26",
+    "OpponentID": "ga-bible-baptist-school-savannah",
+    "Opponent": "Bible Baptist School",
+    "OpponentAbbr": "BBS",
+    "Result": "W",
+    "TeamScore": 10,
+    "OpponentScore": 0,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "Opponent": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "StAndrews": [
+        1,
+        0,
+        5,
+        1,
+        3
+      ],
+      "OpponentTotals": {
+        "R": 0,
+        "H": 2,
+        "E": 3
+      },
+      "StAndrewsTotals": {
+        "R": 10,
+        "H": 6,
+        "E": 1
+      }
+    },
+    "WinningPitcher": "Jeff Smith",
+    "LosingPitcher": "Warren East",
+    "Notes": "Jeff Smith homered and earned the win. Beau Hinton went 2-for-2 with an RBI, and Jake Smith went 2-for-3 with two RBIs.",
+    "SourceCitation": "\"BASEBALL\" Savannah Morning News (GA), April 27, 2001, Page 3C.",
+    "SourceDate": "2001-04-27"
+  },
+  {
+    "Season": 2001,
+    "LocationType": "Unknown",
+    "GameType": "Region",
+    "GameID": 2001050101,
+    "Date": "2001-05-01",
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
+    "Opponent": "Hilton Head Christian Academy",
+    "OpponentAbbr": "HHC",
+    "Result": "L",
+    "TeamScore": 1,
+    "OpponentScore": 10,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "Opponent": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        9,
+        null
+      ],
+      "StAndrews": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "OpponentTotals": {
+        "R": 10,
+        "H": 11,
+        "E": 1
+      },
+      "StAndrewsTotals": {
+        "R": 1,
+        "H": 4,
+        "E": 1
+      }
+    },
+    "WinningPitcher": "Van Gieson",
+    "LosingPitcher": "Zack Hillard",
+    "Notes": "Hilton Head Christian scored nine in the sixth. Beau Hinton went 2-for-3 for St. Andrew's.",
+    "SourceCitation": "\"OGLESBY KEYS SCREVEN COUNTY IN 7-2 WIN OVER SWAINSBORO\" Savannah Morning News (GA), May 2, 2001, Page 4D.",
+    "SourceDate": "2001-05-02"
+  },
+  {
+    "Season": 2001,
+    "LocationType": "Unknown",
+    "GameType": "Non-Region",
+    "GameID": 2001050201,
+    "Date": "2001-05-02",
+    "OpponentID": "sc-colleton-prep-academy-walterboro",
+    "Opponent": "Colleton Prep Academy",
+    "OpponentAbbr": "CPA",
+    "Result": "L",
+    "TeamScore": 2,
+    "OpponentScore": 9,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "Opponent": [
+        1,
+        1,
+        0,
+        0,
+        5,
+        2,
+        null
+      ],
+      "StAndrews": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "OpponentTotals": {
+        "R": 9,
+        "H": 10,
+        "E": 2
+      },
+      "StAndrewsTotals": {
+        "R": 2,
+        "H": 3,
+        "E": 3
+      }
+    },
+    "WinningPitcher": "Hutto",
+    "LosingPitcher": "Ryan Stratz",
+    "Notes": "Beau Hinton went 1-for-2 with an RBI for St. Andrew's.",
+    "SourceCitation": "\"SOCCER\" Savannah Morning News (GA), May 3, 2001, Page 5D.",
+    "SourceDate": "2001-05-03"
+  },
+  {
+    "Season": 2001,
+    "LocationType": "Unknown",
+    "GameType": "Non-Region",
+    "GameID": 2001050401,
+    "Date": "2001-05-04",
+    "OpponentID": "sc-john-c-calhoun-academy-st-matthews",
+    "Opponent": "Calhoun Academy",
+    "OpponentAbbr": "CAL",
+    "Result": "L",
+    "TeamScore": 1,
+    "OpponentScore": 4,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "Opponent": [
+        2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "StAndrews": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "OpponentTotals": {
+        "R": 4,
+        "H": 6,
+        "E": 0
+      },
+      "StAndrewsTotals": {
+        "R": 1,
+        "H": 4,
+        "E": 3
+      }
+    },
+    "WinningPitcher": "A. Elmore",
+    "LosingPitcher": "Matt Hunt",
+    "Notes": "Jeff Smith went 1-for-3 with a triple. St. Andrew's finished the recovered record path at 9-10.",
+    "SourceCitation": "\"BASEBALL\" Savannah Morning News (GA), May 5, 2001, Page 7F.",
+    "SourceDate": "2001-05-05"
+  },
+  {
     "GameID": 2002030101,
     "OpponentID": "",
     "Opponent": "Unknown",

@@ -1,5 +1,19 @@
 [
   {
+    "SeasonID": 2001,
+    "SeasonLabel": "Spring 2001",
+    "StatusBadge": "partial",
+    "StatusNote": "NewsBank recovery currently documents two St. Andrew's qualifiers from a late-March SCISA state qualifying meet at Wilson Hall School in Sumter.",
+    "RecapParagraphs": [
+      "The Spring 2001 track archive has one recovered Savannah Morning News note. At a SCISA state qualifying meet at Wilson Hall School in Sumter, Toni Popovic and Tiffany Griffin qualified for the upcoming SCISA state meet.",
+      "Popovic placed second in the boys 400 meters in 56.87, while Griffin placed third in the girls 3,200 meters in 14:56."
+    ],
+    "HighlightNotes": [
+      "Toni Popovic qualified for the SCISA state meet in the boys 400 meters.",
+      "Tiffany Griffin qualified for the SCISA state meet in the girls 3,200 meters."
+    ]
+  },
+  {
     "SeasonID": 2005,
     "SeasonLabel": "Spring 2005",
     "Classification": "SCISA",

@@ -4,13 +4,16 @@
     "SeasonLabel": "2000-01",
     "Classification": "SCISA",
     "StatusBadge": "archived",
-    "StatusNote": "NewsBank recovery currently documents one fall 2000 girls dual-match report, a 9-0 Hilton Head Prep result published Sept. 1, 2000.",
+    "StatusNote": "NewsBank recovery now documents one fall 2000 girls dual-match report and the spring 2001 boys record path, including three boys match reports and two boys loss placeholders needed to reconcile the published 0-2 and 0-5 record lines.",
     "SeasonRecapParagraphs": [
-      "The 2000-01 tennis archive begins with a single recovered fall girls dual-match report from the Savannah Morning News. Hilton Head Prep defeated St. Andrew's 9-0 in a match published Sept. 1, 2000.",
-      "The line score identifies Jennifer Tyre, Mary Wilkowski, Brianne Braffin, Grace Wilkowski, Ann Cole, Alicia Jaramillo-Underwood, Clara Rucker, and Lauren Raebler in the St. Andrew's lineup. No additional St. Andrew's tennis reports surfaced in the 8/1/2000-11/30/2000 NewsBank sweep or the player-name broad searches."
+      "The 2000-01 tennis archive now spans the fall 2000 girls season and the spring 2001 boys season. The fall girls archive remains anchored by Hilton Head Prep's 9-0 win published Sept. 1, 2000.",
+      "The spring boys archive includes two 6-3 losses to Beaufort Academy and an 8-1 loss to Hilton Head Christian. Toni Popovic, Felix Martinez, Fred Krynen, Chris Rauers, and the Popovic/Martinez and Sullivan/Rauers doubles teams won recovered lines for St. Andrew's.",
+      "Two boys placeholders reconcile the record path: the April 5 Beaufort Academy report listed St. Andrew's at 0-2, and the April 19 Hilton Head Christian report listed the Saints at 0-5 and 0-4 in SCISA Region 2-AA."
     ],
     "GirlsOverallWins": 0,
-    "GirlsOverallLosses": 1
+    "GirlsOverallLosses": 1,
+    "BoysOverallWins": 0,
+    "BoysOverallLosses": 5
   },
   {
     "SeasonID": 2002,

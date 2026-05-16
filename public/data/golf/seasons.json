@@ -1,5 +1,27 @@
 [
   {
+    "SeasonID": 2001,
+    "SeasonSlug": "2001",
+    "SeasonLabel": "Spring 2001",
+    "Classification": "Boys",
+    "StatusBadge": "partial",
+    "StatusNote": "The Spring 2001 golf archive includes four recovered Savannah Morning News match reports from Mar. 24-Apr. 20, including team scores and individual St. Andrew's cards.",
+    "ArchiveScope": "match",
+    "ShowSeasonImagesPlaceholder": true,
+    "HighlightNotes": [
+      "St. Andrew's defeated Sea Island Academy 190-223 at Oak Point Golf Club on Mar. 23.",
+      "Davy Clay shot 43 as St. Andrew's beat St. Paul's Country Day and Patrick Henry at Wilmington Island Club.",
+      "Davy Clay and Todd Tribble posted the two lowest recovered St. Andrew's scores with 39 and 41 at Dogwood Country Club on Apr. 19.",
+      "Davy Clay, Justin Dixon, and Todd Tribble were also listed as recovered spring athletes in April 2001."
+    ],
+    "HistoricalSummary": [
+      "The recovered Spring 2001 boys golf archive opens with St. Andrew's 190-223 win over Sea Island Academy at Oak Point Golf Club. Todd Tribble led the Saints with a 42, followed by Justin Dixon at 46, Will Massey at 50, and Jacob Rauers at 52.",
+      "Four days later at Stono Ferry, St. Paul's Country Day shot 183, St. Andrew's 195, and St. John's 233. Todd Tribble again led St. Andrew's with a 41, while Jake Smith shot 45.",
+      "At Wilmington Island Club on April 6, St. Andrew's shot 195 to beat St. Paul's Country Day and Patrick Henry. Davy Clay led the Saints with a 43, followed by Matt Hunt at 50 and Todd Tribble and Will Massey at 51.",
+      "The final recovered report came at Dogwood Country Club in Walterboro, where Colleton Prep shot 172, Calhoun Academy 176, and St. Andrew's 189. Davy Clay shot 39 and Todd Tribble 41 for the Saints."
+    ]
+  },
+  {
     "SeasonID": 2002,
     "SeasonSlug": "2002",
     "SeasonLabel": "Spring 2002",
