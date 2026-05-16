@@ -1,5 +1,18 @@
 [
   {
+    "SeasonID": 2001,
+    "SeasonLabel": "2000-01",
+    "Classification": "SCISA",
+    "StatusBadge": "archived",
+    "StatusNote": "NewsBank recovery currently documents one fall 2000 girls dual-match report, a 9-0 Hilton Head Prep result published Sept. 1, 2000.",
+    "SeasonRecapParagraphs": [
+      "The 2000-01 tennis archive begins with a single recovered fall girls dual-match report from the Savannah Morning News. Hilton Head Prep defeated St. Andrew's 9-0 in a match published Sept. 1, 2000.",
+      "The line score identifies Jennifer Tyre, Mary Wilkowski, Brianne Braffin, Grace Wilkowski, Ann Cole, Alicia Jaramillo-Underwood, Clara Rucker, and Lauren Raebler in the St. Andrew's lineup. No additional St. Andrew's tennis reports surfaced in the 8/1/2000-11/30/2000 NewsBank sweep or the player-name broad searches."
+    ],
+    "GirlsOverallWins": 0,
+    "GirlsOverallLosses": 1
+  },
+  {
     "SeasonID": 2002,
     "SeasonLabel": "2001-02",
     "Classification": "SCISA",

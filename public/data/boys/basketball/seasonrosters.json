@@ -971,8 +971,8 @@
       {
         "PlayerID": 200002,
         "JerseyNumber": null,
-        "Grade": 11,
-        "Subline": "Key returnee in Savannah Morning News preseason preview"
+        "Grade": 10,
+        "Subline": "Key player in Savannah Morning News preseason preview"
       },
       {
         "PlayerID": 200003,
@@ -982,7 +982,9 @@
       },
       {
         "PlayerID": 200004,
-        "JerseyNumber": null
+        "JerseyNumber": null,
+        "Grade": 11,
+        "Subline": "Key player in Savannah Morning News preseason preview"
       },
       {
         "PlayerID": 200005,
@@ -994,7 +996,9 @@
       },
       {
         "PlayerID": 200007,
-        "JerseyNumber": null
+        "JerseyNumber": null,
+        "Grade": 12,
+        "Subline": "Key player in Savannah Morning News preseason preview; article printed surname as Love."
       },
       {
         "PlayerID": 200008,
@@ -1002,7 +1006,9 @@
       },
       {
         "PlayerID": 200009,
-        "JerseyNumber": null
+        "JerseyNumber": null,
+        "Grade": 12,
+        "Subline": "Key player in Savannah Morning News preseason preview"
       },
       {
         "PlayerID": 200010,

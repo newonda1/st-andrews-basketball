@@ -1252,6 +1252,1030 @@
     "OpponentID": "sc-williamsburg-academy-kingstree"
   },
   {
+    "GameID": 20000825,
+    "Season": 2000,
+    "SeasonID": 2000,
+    "DisplaySeason": "2000",
+    "SourceSeasonLabel": "2000-01",
+    "Date": "2000-08-25",
+    "Time": "TBA",
+    "SourceEventTime": "",
+    "TeamID": "ga-savannah-st-andrews-saints-football",
+    "Team": "St. Andrew's Saints",
+    "Opponent": "Hilton Head Preparatory School",
+    "OpponentLocation": "Hilton Head Island, SC",
+    "OpponentSlug": "hilton-head-prep",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "Home",
+    "Venue": "St. Andrew's School",
+    "Notes": "Season opener for both teams; Hilton Head Prep scored the deciding touchdown in the third quarter.",
+    "GameType": "Non-Region",
+    "Result": "L",
+    "TeamScore": 7,
+    "OpponentScore": 9,
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
+    "LineScore": [
+      {
+        "Team": "Hilton Head Prep",
+        "Abbr": "HHP",
+        "Scores": [
+          3,
+          0,
+          6,
+          0
+        ],
+        "Total": 9
+      },
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [
+          0,
+          7,
+          0,
+          0
+        ],
+        "Total": 7
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "1",
+        "Team": "Hilton Head Prep",
+        "TeamAbbr": "HHP",
+        "Play": "Darius Bratsafolis field goal",
+        "Conversion": "",
+        "Points": 3
+      },
+      {
+        "Quarter": "2",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Jeff Smith 12 run",
+        "Conversion": "kick good",
+        "Points": 7
+      },
+      {
+        "Quarter": "3",
+        "Team": "Hilton Head Prep",
+        "TeamAbbr": "HHP",
+        "Play": "Brant Walton 11 run",
+        "Conversion": "conversion failed",
+        "Points": 6
+      }
+    ],
+    "RecapTitle": "Hilton Head Prep Edges St. Andrew's in Opener",
+    "Recap": "Jeff Smith ran for a 12-yard touchdown and finished with 66 yards on 10 carries, but Hilton Head Prep's third-quarter touchdown gave the Dolphins a 9-7 win at St. Andrew's. Zack Hillard and Matt Hunt had 10 tackles apiece for the Saints.",
+    "SourceDate": "2000-08-26",
+    "SourcePublication": "Savannah Morning News",
+    "SourceAuthor": "Savannah Morning News",
+    "SourceByline": "Savannah Morning News",
+    "SourcePage": "4F",
+    "SourceSection": "Sports",
+    "SourceCitation": "\"SEB OVERPOWERS COUNTRY DAY IN SEASON OPENER,\" Savannah Morning News, 2000-08-26, Page 4F"
+  },
+  {
+    "GameID": 20000901,
+    "Season": 2000,
+    "SeasonID": 2000,
+    "DisplaySeason": "2000",
+    "SourceSeasonLabel": "2000-01",
+    "Date": "2000-09-01",
+    "Time": "TBA",
+    "SourceEventTime": "",
+    "TeamID": "ga-savannah-st-andrews-saints-football",
+    "Team": "St. Andrew's Saints",
+    "Opponent": "Memorial Day School",
+    "OpponentLocation": "Savannah, GA",
+    "OpponentSlug": "memorial-day-school",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "Home",
+    "Venue": "St. Andrew's School",
+    "Notes": "Memorial Day blocked Franc Krynen's potential game-winning field goal attempt with 37 seconds left.",
+    "GameType": "Non-Region",
+    "Result": "L",
+    "TeamScore": 12,
+    "OpponentScore": 14,
+    "OpponentID": "ga-memorial-day-school-savannah",
+    "LineScore": [
+      {
+        "Team": "Memorial Day",
+        "Abbr": "MD",
+        "Scores": [
+          0,
+          6,
+          8,
+          0
+        ],
+        "Total": 14
+      },
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [
+          0,
+          0,
+          0,
+          12
+        ],
+        "Total": 12
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "2",
+        "Team": "Memorial Day",
+        "TeamAbbr": "MD",
+        "Play": "Michael Thompson 1 run",
+        "Conversion": "conversion failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "3",
+        "Team": "Memorial Day",
+        "TeamAbbr": "MD",
+        "Play": "Michael Thompson 50 interception return",
+        "Conversion": "conversion failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "3",
+        "Team": "Memorial Day",
+        "TeamAbbr": "MD",
+        "Play": "Safety, St. Andrew's snap out of the end zone",
+        "Conversion": "",
+        "Points": 2
+      },
+      {
+        "Quarter": "4",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Adam Ciccio 2 run",
+        "Conversion": "conversion failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "4",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Ryan Stratz 15 pass from Zack Hillard",
+        "Conversion": "conversion failed",
+        "Points": 6
+      }
+    ],
+    "RecapTitle": "Memorial Blocks Late Field Goal to Beat Saints",
+    "Recap": "St. Andrew's rallied from a 14-0 deficit on fourth-quarter touchdowns by Adam Ciccio and Ryan Stratz, then drove inside the Memorial 25 before a potential game-winning field goal was blocked with 37 seconds left.",
+    "SourceDate": "2000-09-02",
+    "SourcePublication": "Savannah Morning News",
+    "SourceAuthor": "Renee Henry",
+    "SourceByline": "Renee Henry",
+    "SourcePage": "6E",
+    "SourceSection": "Sports",
+    "SourceCitation": "Renee Henry, \"MATADORS BLOCK FIELD GOAL TO BEAT SAINTS IN FINAL SECONDS,\" Savannah Morning News, 2000-09-02, Page 6E"
+  },
+  {
+    "GameID": 20000908,
+    "Season": 2000,
+    "SeasonID": 2000,
+    "DisplaySeason": "2000",
+    "SourceSeasonLabel": "2000-01",
+    "Date": "2000-09-08",
+    "Time": "TBA",
+    "SourceEventTime": "",
+    "TeamID": "ga-savannah-st-andrews-saints-football",
+    "Team": "St. Andrew's Saints",
+    "Opponent": "James F. Byrnes Academy",
+    "OpponentLocation": "Quinby, SC",
+    "OpponentSlug": "james-f-byrnes-academy",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "Home",
+    "Venue": "St. Andrew's School",
+    "Notes": "Byrnes scored twice in the first quarter and held St. Andrew's to 13 rushing yards.",
+    "GameType": "Non-Region",
+    "Result": "L",
+    "TeamScore": 6,
+    "OpponentScore": 18,
+    "OpponentID": "sc-james-f-byrnes-academy-quinby",
+    "LineScore": [
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [
+          0,
+          0,
+          6,
+          0
+        ],
+        "Total": 6
+      },
+      {
+        "Team": "James F. Byrnes",
+        "Abbr": "JFB",
+        "Scores": [
+          12,
+          0,
+          6,
+          0
+        ],
+        "Total": 18
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "1",
+        "Team": "James F. Byrnes",
+        "TeamAbbr": "JFB",
+        "Play": "Clay Muench 56 pass from Rush Lowther",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "1",
+        "Team": "James F. Byrnes",
+        "TeamAbbr": "JFB",
+        "Play": "Corey Phillips fumble recovery in end zone",
+        "Conversion": "run failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "3",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Ryan Stratz 58 pass from Justin Dixon",
+        "Conversion": "run failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "3",
+        "Team": "James F. Byrnes",
+        "TeamAbbr": "JFB",
+        "Play": "Rush Lowther 1 run",
+        "Conversion": "run failed",
+        "Points": 6
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "First Downs",
+        "StAndrews": "4",
+        "Opponent": "9"
+      },
+      {
+        "Label": "Rushing",
+        "StAndrews": "13",
+        "Opponent": "256"
+      },
+      {
+        "Label": "Passing",
+        "StAndrews": "58",
+        "Opponent": "56"
+      },
+      {
+        "Label": "Comp.-Att.-Int.",
+        "StAndrews": "1-6-1",
+        "Opponent": "1-8-1"
+      },
+      {
+        "Label": "Fumbles-lost",
+        "StAndrews": "3-1",
+        "Opponent": "4-1"
+      },
+      {
+        "Label": "Penalties",
+        "StAndrews": "5-45",
+        "Opponent": "7-64"
+      }
+    ],
+    "RecapTitle": "Byrnes Academy Defeats St. Andrew's",
+    "Recap": "Justin Dixon connected with Ryan Stratz for a 58-yard touchdown in the third quarter, but Byrnes Academy's two first-quarter touchdowns stood up in an 18-6 result. Zack Hillard later earned honor-roll mention with 19 tackles, and Adam Ciccio had 16.",
+    "SourceDate": "2000-09-09",
+    "SourcePublication": "Savannah Morning News",
+    "SourceAuthor": "Savannah Morning News",
+    "SourceByline": "Savannah Morning News",
+    "SourcePage": "6B",
+    "SourceSection": "Sports",
+    "SourceCitation": "\"BENEDICTINE CRUISES PAST WINDSOR FOREST,\" Savannah Morning News, 2000-09-09, Page 6B"
+  },
+  {
+    "GameID": 20000915,
+    "Season": 2000,
+    "SeasonID": 2000,
+    "DisplaySeason": "2000",
+    "SourceSeasonLabel": "2000-01",
+    "Date": "2000-09-15",
+    "Time": "TBA",
+    "SourceEventTime": "",
+    "TeamID": "ga-savannah-st-andrews-saints-football",
+    "Team": "St. Andrew's Saints",
+    "Opponent": "Thomas Heyward Academy",
+    "OpponentLocation": "Ridgeland, SC",
+    "OpponentSlug": "thomas-heyward-academy",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "Away",
+    "Venue": "Thomas Heyward Academy",
+    "Notes": "Jason Stuckey and Bryant Tillotson scored two touchdowns apiece for Thomas Heyward.",
+    "GameType": "Non-Region",
+    "Result": "L",
+    "TeamScore": 10,
+    "OpponentScore": 40,
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
+    "RecapTitle": "Thomas Heyward Tops St. Andrew's",
+    "Recap": "Thomas Heyward defeated St. Andrew's 40-10 in Ridgeland. The surviving NewsBank roundup credited Jason Stuckey and Bryant Tillotson with two touchdowns each for the Rebels.",
+    "SourceDate": "2000-09-16",
+    "SourcePublication": "Savannah Morning News",
+    "SourceAuthor": "Savannah Morning News",
+    "SourceByline": "Savannah Morning News",
+    "SourcePage": "3F",
+    "SourceSection": "Sports",
+    "SourceCitation": "\"LATE TD LEADS SEB OVER BRYAN COUNTY,\" Savannah Morning News, 2000-09-16, Page 3F"
+  },
+  {
+    "GameID": 20000922,
+    "Season": 2000,
+    "SeasonID": 2000,
+    "DisplaySeason": "2000",
+    "SourceSeasonLabel": "2000-01",
+    "Date": "2000-09-22",
+    "Time": "TBA",
+    "SourceEventTime": "",
+    "TeamID": "ga-savannah-st-andrews-saints-football",
+    "Team": "St. Andrew's Saints",
+    "Opponent": "First Baptist School",
+    "OpponentLocation": "Charleston, SC",
+    "OpponentSlug": "first-baptist-school",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "Away",
+    "Venue": "First Baptist School",
+    "Notes": "Hunt Summerford scored the only touchdown on a 12-yard run.",
+    "GameType": "Non-Region",
+    "Result": "L",
+    "TeamScore": 0,
+    "OpponentScore": 7,
+    "OpponentID": "sc-first-baptist-school-charleston",
+    "RecapTitle": "First Baptist Blanks St. Andrew's",
+    "Recap": "First Baptist of Charleston won a 7-0 game on Hunt Summerford's 12-yard run. Matt Hunt later earned honor-roll mention with 10 tackles and a forced fumble in the loss.",
+    "SourceDate": "2000-09-23",
+    "SourcePublication": "Savannah Morning News",
+    "SourceAuthor": "Savannah Morning News",
+    "SourceByline": "Savannah Morning News",
+    "SourcePage": "",
+    "SourceSection": "Sports",
+    "SourceCitation": "\"SCREVEN COUNTY STUNS NO. 1 SWAINSBORO,\" Savannah Morning News, 2000-09-23"
+  },
+  {
+    "GameID": 20000929,
+    "Season": 2000,
+    "SeasonID": 2000,
+    "DisplaySeason": "2000",
+    "SourceSeasonLabel": "2000-01",
+    "Date": "2000-09-29",
+    "Time": "TBA",
+    "SourceEventTime": "",
+    "TeamID": "ga-savannah-st-andrews-saints-football",
+    "Team": "St. Andrew's Saints",
+    "Opponent": "Dorchester Academy",
+    "OpponentLocation": "St. George, SC",
+    "OpponentSlug": "dorchester-academy",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "Home",
+    "Venue": "St. Andrew's School",
+    "Notes": "SCISA AA Region II opener for both teams.",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 0,
+    "OpponentScore": 14,
+    "OpponentID": "sc-dorchester-academy-st-george",
+    "LineScore": [
+      {
+        "Team": "Dorchester Academy",
+        "Abbr": "DA",
+        "Scores": [
+          0,
+          7,
+          7,
+          0
+        ],
+        "Total": 14
+      },
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "Total": 0
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "2",
+        "Team": "Dorchester Academy",
+        "TeamAbbr": "DA",
+        "Play": "Earl Hartzog 2 run",
+        "Conversion": "kick good",
+        "Points": 7
+      },
+      {
+        "Quarter": "3",
+        "Team": "Dorchester Academy",
+        "TeamAbbr": "DA",
+        "Play": "Brandon McCleary 6 run",
+        "Conversion": "kick good",
+        "Points": 7
+      }
+    ],
+    "RecapTitle": "Dorchester Wins Region Opener",
+    "Recap": "Dorchester scored touchdowns in the second and third quarters to beat St. Andrew's 14-0 on the Saints' field. Adam Ciccio, Zack Hillard, and Chris Lowe drew honor-roll notice from the defensive effort.",
+    "SourceDate": "2000-09-30",
+    "SourcePublication": "Savannah Morning News",
+    "SourceAuthor": "Savannah Morning News",
+    "SourceByline": "Savannah Morning News",
+    "SourcePage": "",
+    "SourceSection": "Sports",
+    "SourceCitation": "\"ANDREWS' 254-YARD NIGHT LIFTS SWAINSBORO,\" Savannah Morning News, 2000-09-30"
+  },
+  {
+    "GameID": 20001006,
+    "Season": 2000,
+    "SeasonID": 2000,
+    "DisplaySeason": "2000",
+    "SourceSeasonLabel": "2000-01",
+    "Date": "2000-10-06",
+    "Time": "TBA",
+    "SourceEventTime": "",
+    "TeamID": "ga-savannah-st-andrews-saints-football",
+    "Team": "St. Andrew's Saints",
+    "Opponent": "Calhoun Academy",
+    "OpponentLocation": "St. Matthews, SC",
+    "OpponentSlug": "calhoun-academy",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "Away",
+    "Venue": "Calhoun Academy",
+    "Notes": "Zack Hillard and Matt Hunt made 13 tackles apiece.",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 0,
+    "OpponentScore": 29,
+    "OpponentID": "sc-john-c-calhoun-academy-st-matthews",
+    "RecapTitle": "Calhoun Academy Defeats St. Andrew's",
+    "Recap": "Zack Hillard and Matt Hunt made 13 tackles apiece, but Calhoun Academy beat St. Andrew's 29-0 in a SCISA Region 2-AA game in St. Matthews.",
+    "SourceDate": "2000-10-08",
+    "SourcePublication": "Savannah Morning News",
+    "SourceAuthor": "Savannah Morning News",
+    "SourceByline": "Savannah Morning News",
+    "SourcePage": "3B",
+    "SourceSection": "Sports",
+    "SourceCitation": "\"MEMORIAL FALLS TO NATHANAEL GREENE, 47-19,\" Savannah Morning News, 2000-10-08, Page 3B"
+  },
+  {
+    "GameID": 20001013,
+    "Season": 2000,
+    "SeasonID": 2000,
+    "DisplaySeason": "2000",
+    "SourceSeasonLabel": "2000-01",
+    "Date": "2000-10-13",
+    "Time": "TBA",
+    "SourceEventTime": "",
+    "TeamID": "ga-savannah-st-andrews-saints-football",
+    "Team": "St. Andrew's Saints",
+    "Opponent": "Sea Island Academy",
+    "OpponentLocation": "Johns Island, SC",
+    "OpponentSlug": "sea-island-academy",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "Home",
+    "Venue": "St. Andrew's School",
+    "Notes": "St. Andrew's held Sea Island to six offensive yards for its first win of the season.",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 36,
+    "OpponentScore": 6,
+    "OpponentID": "sc-sea-island-academy-johns-island",
+    "LineScore": [
+      {
+        "Team": "Sea Island Academy",
+        "Abbr": "SIA",
+        "Scores": [
+          0,
+          6,
+          0,
+          0
+        ],
+        "Total": 6
+      },
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [
+          15,
+          14,
+          0,
+          7
+        ],
+        "Total": 36
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "1",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Zack Hillard 14 run",
+        "Conversion": "Fred Kryner kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "1",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Justin Dixon 35 punt return",
+        "Conversion": "Zack Hillard pass from Cam Aldrich",
+        "Points": 8
+      },
+      {
+        "Quarter": "2",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Jeff Smith 20 run",
+        "Conversion": "Fred Kryner kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Cam Aldrich 55 pass from Matt Hunt",
+        "Conversion": "Fred Kryner kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "Sea Island Academy",
+        "TeamAbbr": "SIA",
+        "Play": "Dawson 36 interception return",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "4",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Adam Ciccio 37 run",
+        "Conversion": "Fred Kryner kick",
+        "Points": 7
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "First Downs",
+        "StAndrews": "6",
+        "Opponent": "1"
+      },
+      {
+        "Label": "Rushing",
+        "StAndrews": "181",
+        "Opponent": "3"
+      },
+      {
+        "Label": "Passing",
+        "StAndrews": "58",
+        "Opponent": "3"
+      },
+      {
+        "Label": "Comp.-Att.-Int.",
+        "StAndrews": "3-8-1",
+        "Opponent": "1-3-0"
+      },
+      {
+        "Label": "Fumbles-lost",
+        "StAndrews": "1-0",
+        "Opponent": "1-1"
+      },
+      {
+        "Label": "Punting",
+        "StAndrews": "2-34",
+        "Opponent": "6-28"
+      },
+      {
+        "Label": "Penalties",
+        "StAndrews": "13-120",
+        "Opponent": "2-10"
+      }
+    ],
+    "RecapTitle": "St. Andrew's Breaks Through Against Sea Island",
+    "Recap": "St. Andrew's held Sea Island to six offensive yards and earned its first win of the season, 36-6. The Saints scored twice in each of the first two quarters, and Matt Hunt led the defense with 12 tackles, a sack, and a fumble recovery.",
+    "SourceDate": "2000-10-14",
+    "SourcePublication": "Savannah Morning News",
+    "SourceAuthor": "Savannah Morning News",
+    "SourceByline": "Savannah Morning News",
+    "SourcePage": "5F",
+    "SourceSection": "Sports",
+    "SourceCitation": "\"LATE FIELD GOAL LIFTS BRUNSWICK,\" Savannah Morning News, 2000-10-14, Page 5F"
+  },
+  {
+    "GameID": 20001020,
+    "Season": 2000,
+    "SeasonID": 2000,
+    "DisplaySeason": "2000",
+    "SourceSeasonLabel": "2000-01",
+    "Date": "2000-10-20",
+    "Time": "TBA",
+    "SourceEventTime": "",
+    "TeamID": "ga-savannah-st-andrews-saints-football",
+    "Team": "St. Andrew's Saints",
+    "Opponent": "Colleton Prep Academy",
+    "OpponentLocation": "Walterboro, SC",
+    "OpponentSlug": "colleton-prep-academy",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "Away",
+    "Venue": "Colleton Prep Academy",
+    "Notes": "Zack Hillard caught Jeff Smith's fourth-quarter two-point conversion pass for the winning points.",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 22,
+    "OpponentScore": 21,
+    "OpponentID": "sc-colleton-prep-academy-walterboro",
+    "LineScore": [
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [
+          7,
+          0,
+          7,
+          8
+        ],
+        "Total": 22
+      },
+      {
+        "Team": "Colleton Prep",
+        "Abbr": "CPA",
+        "Scores": [
+          0,
+          8,
+          6,
+          7
+        ],
+        "Total": 21
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "1",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Jeff Smith 90 run",
+        "Conversion": "Fred Kryner kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "Colleton Prep",
+        "TeamAbbr": "CPA",
+        "Play": "Bucher 40 run",
+        "Conversion": "Zipper run",
+        "Points": 8
+      },
+      {
+        "Quarter": "3",
+        "Team": "Colleton Prep",
+        "TeamAbbr": "CPA",
+        "Play": "Zipper 22 pass from Hutton",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "3",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Jeff Smith 20 run",
+        "Conversion": "Fred Kryner kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "4",
+        "Team": "Colleton Prep",
+        "TeamAbbr": "CPA",
+        "Play": "Hamilton 21 run",
+        "Conversion": "Bernardis kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "4",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Matt Hunt 8 run",
+        "Conversion": "Zack Hillard pass from Jeff Smith",
+        "Points": 8
+      }
+    ],
+    "RecapTitle": "Saints Edge Colleton Prep on Late Conversion",
+    "Recap": "Trailing 21-14 in the fourth quarter, Matt Hunt scored on an 8-yard run and Zack Hillard caught Jeff Smith's two-point conversion pass to beat Colleton Prep 22-21. Smith scored on runs of 90 and 20 yards and finished with 237 rushing yards on 16 carries.",
+    "SourceDate": "2000-10-21",
+    "SourcePublication": "Savannah Morning News",
+    "SourceAuthor": "Savannah Morning News",
+    "SourceByline": "Savannah Morning News",
+    "SourcePage": "5F",
+    "SourceSection": "Sports",
+    "SourceCitation": "\"AUSTIN PACES MCINTOSH COUNTY ACADEMY PAST CALVARY,\" Savannah Morning News, 2000-10-21, Page 5F"
+  },
+  {
+    "GameID": 20001027,
+    "Season": 2000,
+    "SeasonID": 2000,
+    "DisplaySeason": "2000",
+    "SourceSeasonLabel": "2000-01",
+    "Date": "2000-10-27",
+    "Time": "TBA",
+    "SourceEventTime": "",
+    "TeamID": "ga-savannah-st-andrews-saints-football",
+    "Team": "St. Andrew's Saints",
+    "Opponent": "Pinewood Preparatory School",
+    "OpponentLocation": "Summerville, SC",
+    "OpponentSlug": "pinewood-preparatory-school",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "Home",
+    "Venue": "St. Andrew's School",
+    "Notes": "Homecoming; St. Andrew's clinched a SCISA AA playoff berth and forced seven turnovers.",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 24,
+    "OpponentScore": 16,
+    "OpponentID": "sc-pinewood-preparatory-school-summerville",
+    "LineScore": [
+      {
+        "Team": "Pinewood Prep",
+        "Abbr": "PP",
+        "Scores": [
+          0,
+          8,
+          0,
+          8
+        ],
+        "Total": 16
+      },
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [
+          21,
+          0,
+          0,
+          3
+        ],
+        "Total": 24
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "1",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Justin Dixon 29 pass from Matt Hunt",
+        "Conversion": "Fred Kryner kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "1",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Zack Hillard 1 run",
+        "Conversion": "Fred Kryner kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "1",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Jeff Smith 34 run",
+        "Conversion": "Fred Kryner kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "Pinewood Prep",
+        "TeamAbbr": "PP",
+        "Play": "Henry Theiling 3 run",
+        "Conversion": "Blake Boylston run",
+        "Points": 8
+      },
+      {
+        "Quarter": "4",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Fred Kryner 24 field goal",
+        "Conversion": "",
+        "Points": 3
+      },
+      {
+        "Quarter": "4",
+        "Team": "Pinewood Prep",
+        "TeamAbbr": "PP",
+        "Play": "Henry Theiling 76 run",
+        "Conversion": "Theiling run",
+        "Points": 8
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "First Downs",
+        "StAndrews": "10",
+        "Opponent": "6"
+      },
+      {
+        "Label": "Rushing",
+        "StAndrews": "89",
+        "Opponent": "147"
+      },
+      {
+        "Label": "Passing",
+        "StAndrews": "69",
+        "Opponent": "0"
+      },
+      {
+        "Label": "Comp.-Att.-Int.",
+        "StAndrews": "3-8-1",
+        "Opponent": "0-7-4"
+      },
+      {
+        "Label": "Fumbles-lost",
+        "StAndrews": "6-3",
+        "Opponent": "3-3"
+      },
+      {
+        "Label": "Punting",
+        "StAndrews": "5-19.0",
+        "Opponent": "2-34.5"
+      },
+      {
+        "Label": "Penalties",
+        "StAndrews": "6-50",
+        "Opponent": "8-64"
+      }
+    ],
+    "RecapTitle": "St. Andrew's Earns SCISA Playoff Berth",
+    "Recap": "St. Andrew's scored three touchdowns in its first eight offensive plays, forced seven turnovers, and beat Pinewood Prep 24-16 on Homecoming to clinch a SCISA AA playoff berth. Zack Hillard made 12 tackles and Jeff Smith intercepted three passes.",
+    "SourceDate": "2000-10-28",
+    "SourcePublication": "Savannah Morning News",
+    "SourceAuthor": "Donald Heath",
+    "SourceByline": "Donald Heath",
+    "SourcePage": "6B",
+    "SourceSection": "Sports",
+    "SourceCitation": "Donald Heath, \"ST. ANDREW'S EARNS SCISA PLAYOFF BERTH,\" Savannah Morning News, 2000-10-28, Page 6B"
+  },
+  {
+    "GameID": 20001103,
+    "Season": 2000,
+    "SeasonID": 2000,
+    "DisplaySeason": "2000",
+    "SourceSeasonLabel": "2000-01",
+    "Date": "2000-11-03",
+    "Time": "TBA",
+    "SourceEventTime": "",
+    "TeamID": "ga-savannah-st-andrews-saints-football",
+    "Team": "St. Andrew's Saints",
+    "Opponent": "Williamsburg Academy",
+    "OpponentLocation": "Kingstree, SC",
+    "OpponentSlug": "williamsburg-academy",
+    "OpponentUrl": "",
+    "GameUrl": "",
+    "LocationType": "Away",
+    "Venue": "Williamsburg Academy",
+    "Notes": "SCISA AA first round.",
+    "GameType": "Playoff",
+    "Result": "L",
+    "TeamScore": 7,
+    "OpponentScore": 35,
+    "OpponentID": "sc-williamsburg-academy-kingstree",
+    "LineScore": [
+      {
+        "Team": "Williamsburg Academy",
+        "Abbr": "WA",
+        "Scores": [
+          14,
+          7,
+          14,
+          0
+        ],
+        "Total": 35
+      },
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [
+          0,
+          0,
+          0,
+          7
+        ],
+        "Total": 7
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "1",
+        "Team": "Williamsburg Academy",
+        "TeamAbbr": "WA",
+        "Play": "Gause 10 pass from Justin Kellahan",
+        "Conversion": "Newell kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "1",
+        "Team": "Williamsburg Academy",
+        "TeamAbbr": "WA",
+        "Play": "Hanna 1 run",
+        "Conversion": "Newell kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "Williamsburg Academy",
+        "TeamAbbr": "WA",
+        "Play": "Wise 1 run",
+        "Conversion": "Newell kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "3",
+        "Team": "Williamsburg Academy",
+        "TeamAbbr": "WA",
+        "Play": "Justin Kellahan 42 run",
+        "Conversion": "Newell kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "3",
+        "Team": "Williamsburg Academy",
+        "TeamAbbr": "WA",
+        "Play": "Gamble 15 pass from Justin Kellahan",
+        "Conversion": "Newell kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "4",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Davy Clay 27 pass from Matt Hunt",
+        "Conversion": "Fred Kryner kick",
+        "Points": 7
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "First Downs",
+        "StAndrews": "9",
+        "Opponent": "10"
+      },
+      {
+        "Label": "Rushing",
+        "StAndrews": "88",
+        "Opponent": "117"
+      },
+      {
+        "Label": "Passing",
+        "StAndrews": "57",
+        "Opponent": "86"
+      },
+      {
+        "Label": "Fumbles-lost",
+        "StAndrews": "2-2",
+        "Opponent": "1-0"
+      },
+      {
+        "Label": "Punting",
+        "StAndrews": "1-28",
+        "Opponent": "3-36"
+      },
+      {
+        "Label": "Penalties",
+        "StAndrews": "2-10",
+        "Opponent": "7-45"
+      }
+    ],
+    "RecapTitle": "Williamsburg Ends St. Andrew's Season",
+    "Recap": "Williamsburg Academy beat St. Andrew's 35-7 in the first round of the SCISA AA playoffs. Davy Clay scored the Saints' touchdown on a 27-yard pass from Matt Hunt, and St. Andrew's finished 3-8.",
+    "SourceDate": "2000-11-04",
+    "SourcePublication": "Savannah Morning News",
+    "SourceAuthor": "Savannah Morning News",
+    "SourceByline": "Savannah Morning News",
+    "SourcePage": "4F",
+    "SourceSection": "Sports",
+    "SourceCitation": "\"CALVARY HAMMERS BRYAN CO., 67-0,\" Savannah Morning News, 2000-11-04, Page 4F"
+  },
+  {
     "GameID": 20010824,
     "Season": 2001,
     "SeasonID": 2001,

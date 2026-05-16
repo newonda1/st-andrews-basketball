@@ -1,5 +1,357 @@
 [
   {
+    "MatchID": "2000-08-31-hilton-head-prep-girls",
+    "Season": 2001,
+    "Date": "2000-08-31",
+    "Name": "St. Andrew's vs. Hilton Head Prep - Girls",
+    "MatchType": "Dual Match",
+    "Gender": "Girls",
+    "Classification": "SCISA",
+    "MatchCategory": "Non-Region",
+    "HomeAway": "",
+    "Status": "Completed",
+    "OpponentSchoolID": "sc-hilton-head-preparatory-school-hilton-head-island",
+    "TeamScore": {
+      "StAndrews": 0,
+      "Opponent": 9,
+      "Result": "L"
+    },
+    "Summary": "Hilton Head Prep swept St. Andrew's 9-0. The recovered line score includes six singles matches and three doubles matches from the fall girls season.",
+    "SourceCitation": "\"GIRLS TENNIS,\" Savannah Morning News, 2000-09-01",
+    "LineMatches": [
+      {
+        "TennisMatchID": "2000-08-31-hilton-head-prep-girls-singles-1",
+        "EventType": "Singles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2000-08-31",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Helen Stephens",
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200321,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2000-08-31-hilton-head-prep-girls-singles-2",
+        "EventType": "Singles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2000-08-31",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Lynsey Bapcheleor",
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200401,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2000-08-31-hilton-head-prep-girls-singles-3",
+        "EventType": "Singles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2000-08-31",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Anne Barrett",
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200326,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 1
+          },
+          {
+            "top": 6,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2000-08-31-hilton-head-prep-girls-singles-4",
+        "EventType": "Singles",
+        "LineNumber": 4,
+        "Status": "Completed",
+        "Date": "2000-08-31",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Laura Stephens",
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 200603,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 0
+          },
+          {
+            "top": 6,
+            "bottom": 1
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2000-08-31-hilton-head-prep-girls-singles-5",
+        "EventType": "Singles",
+        "LineNumber": 5,
+        "Status": "Completed",
+        "Date": "2000-08-31",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Christine Hopper",
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026341,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 2
+          },
+          {
+            "top": 6,
+            "bottom": 1
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2000-08-31-hilton-head-prep-girls-singles-6",
+        "EventType": "Singles",
+        "LineNumber": 6,
+        "Status": "Completed",
+        "Date": "2000-08-31",
+        "Participants": [
+          {
+            "ParticipantType": "opponentText",
+            "DisplayName": "Aylin Seyalioglu",
+            "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island",
+            "Side": "top"
+          },
+          {
+            "ParticipantType": "stAndrewsPlayer",
+            "PlayerID": 2026343,
+            "Side": "bottom"
+          }
+        ],
+        "Sets": [
+          {
+            "top": 6,
+            "bottom": 2
+          },
+          {
+            "top": 6,
+            "bottom": 1
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2000-08-31-hilton-head-prep-girls-doubles-1",
+        "EventType": "Doubles",
+        "LineNumber": 1,
+        "Status": "Completed",
+        "Date": "2000-08-31",
+        "Participants": [
+          {
+            "ParticipantType": "team",
+            "DisplayName": "Helen Stephens / Anne Barrett",
+            "Side": "top",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Helen Stephens",
+                "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+              },
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Anne Barrett",
+                "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+              }
+            ]
+          },
+          {
+            "ParticipantType": "team",
+            "DisplayName": "Jennifer Tyre / Brianne Braffin",
+            "Side": "bottom",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200321
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200326
+              }
+            ]
+          }
+        ],
+        "Sets": [
+          {
+            "top": 8,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2000-08-31-hilton-head-prep-girls-doubles-2",
+        "EventType": "Doubles",
+        "LineNumber": 2,
+        "Status": "Completed",
+        "Date": "2000-08-31",
+        "Participants": [
+          {
+            "ParticipantType": "team",
+            "DisplayName": "Lynsey Bapcheleor / Christine Hopper",
+            "Side": "top",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Lynsey Bapcheleor",
+                "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+              },
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Christine Hopper",
+                "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+              }
+            ]
+          },
+          {
+            "ParticipantType": "team",
+            "DisplayName": "Ann Cole / Grace Wilkowski",
+            "Side": "bottom",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026341
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200603
+              }
+            ]
+          }
+        ],
+        "Sets": [
+          {
+            "top": 8,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top"
+      },
+      {
+        "TennisMatchID": "2000-08-31-hilton-head-prep-girls-doubles-3",
+        "EventType": "Doubles",
+        "LineNumber": 3,
+        "Status": "Completed",
+        "Date": "2000-08-31",
+        "Participants": [
+          {
+            "ParticipantType": "team",
+            "DisplayName": "Laura Stephens / Nicole Piazza",
+            "Side": "top",
+            "TeamMembers": [
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Laura Stephens",
+                "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+              },
+              {
+                "ParticipantType": "opponentText",
+                "DisplayName": "Nicole Piazza",
+                "SchoolID": "sc-hilton-head-preparatory-school-hilton-head-island"
+              }
+            ]
+          },
+          {
+            "ParticipantType": "team",
+            "DisplayName": "Clara Rucker / Lauren Raebler",
+            "Side": "bottom",
+            "TeamMembers": [
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 2026342
+              },
+              {
+                "ParticipantType": "stAndrewsPlayer",
+                "PlayerID": 200322
+              }
+            ]
+          }
+        ],
+        "Sets": [
+          {
+            "top": 8,
+            "bottom": 0
+          }
+        ],
+        "WinnerSide": "top"
+      }
+    ]
+  },
+  {
     "MatchID": "2001-09-04-patrick-henry-girls",
     "Season": 2002,
     "Date": "2001-09-04",

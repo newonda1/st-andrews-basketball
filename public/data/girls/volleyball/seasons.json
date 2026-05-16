@@ -1,5 +1,30 @@
 [
   {
+    "SeasonID": 2000,
+    "YearStart": 2000,
+    "YearEnd": 2001,
+    "DisplaySeason": "2000",
+    "SourceSeasonLabel": "2000-01",
+    "HeadCoach": null,
+    "OverallWins": 0,
+    "OverallLosses": 5,
+    "RegionWins": 0,
+    "RegionLosses": 2,
+    "RegionFinish": null,
+    "League": "SCISA Region 2AA",
+    "StateDivision": "SCISA AA",
+    "StateFinish": null,
+    "SourceCitation": "Savannah Morning News, Sept. 6-15, 2000",
+    "ShowSeasonRecapPlaceholder": false,
+    "ShowSeasonImagesPlaceholder": true,
+    "ArchiveStatusNote": "NewsBank recovery currently documents four reported losses plus one record-path placeholder loss needed to reconcile the 0-3 record published after the Sept. 7 St. Paul Country Day match.",
+    "SeasonRecapParagraphs": [
+      "The recovered 2000 St. Andrew's volleyball archive covers the opening stretch of the fall season. Four published match reports and one record-path placeholder show the Saints starting 0-5, including SCISA Region 2AA losses to St. Paul Country Day and Colleton Prep.",
+      "The surviving stat lines point to a young roster already featuring several names that would carry into later seasons. Kim Cooper, Becca Cooper, Carie Bugos, Layne Haggberg, Ashley Winston, Ashley McLean, and Megan Loder all appear in September match reports.",
+      "Bible Baptist appeared twice in the recovered window. Becca Cooper had six kills and Kim Cooper added four in the first report, while Ashley Winston had eight kills and Kim Cooper added four when the teams met again on Sept. 14. Carie Bugos also had 10 assists in the first Bible Baptist report."
+    ]
+  },
+  {
     "SeasonID": 2001,
     "YearStart": 2001,
     "YearEnd": 2002,

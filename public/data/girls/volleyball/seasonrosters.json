@@ -1,5 +1,62 @@
 [
   {
+    "SeasonID": 2000,
+    "SourceSeasonLabel": "2000-01",
+    "HeadCoach": null,
+    "Staff": [],
+    "Players": [
+      {
+        "PlayerID": 200317,
+        "JerseyNumber": null,
+        "Grade": 11,
+        "GradeLabel": "Jr.",
+        "Positions": []
+      },
+      {
+        "PlayerID": 200406,
+        "JerseyNumber": null,
+        "Grade": 9,
+        "GradeLabel": "Fr.",
+        "Positions": []
+      },
+      {
+        "PlayerID": 200404,
+        "JerseyNumber": null,
+        "Grade": 9,
+        "GradeLabel": "Fr.",
+        "Positions": []
+      },
+      {
+        "PlayerID": 200428,
+        "JerseyNumber": null,
+        "Grade": 9,
+        "GradeLabel": "Fr.",
+        "Positions": []
+      },
+      {
+        "PlayerID": 200323,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": []
+      },
+      {
+        "PlayerID": 200324,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": []
+      },
+      {
+        "PlayerID": 200325,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": []
+      }
+    ]
+  },
+  {
     "SeasonID": 2001,
     "SourceSeasonLabel": "2001-02",
     "HeadCoach": null,

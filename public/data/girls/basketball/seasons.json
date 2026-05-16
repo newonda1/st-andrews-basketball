@@ -1,5 +1,16 @@
 [
   {
+    "SeasonID": 2000,
+    "YearStart": 2000,
+    "YearEnd": 2001,
+    "HeadCoach": "Deborah Morell",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null,
+    "ArchiveStatusNote": "Savannah Morning News preseason capsule listed Deb Morrell as third-year head coach, a 13-14 prior-year record, and a nine-player roster led by Kim Cooper, Meghan Lowe, Carie Bugos, Sarah Roddenberry, and Becca Cooper."
+  },
+  {
     "SeasonID": 2001,
     "YearStart": 2001,
     "YearEnd": 2002,
