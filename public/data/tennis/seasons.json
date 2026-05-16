@@ -4,12 +4,14 @@
     "SeasonLabel": "2001-02",
     "Classification": "SCISA",
     "StatusBadge": "archived",
-    "StatusNote": "NewsBank recovery documents five girls dual-match reports and two record-path placeholder losses. St. Andrew's was 1-6 overall and 0-4 in SCISA Region 2-AA after the Oct. 18 Hilton Head Prep match.",
+    "StatusNote": "NewsBank recovery documents five fall 2001 girls dual-match reports and three spring 2002 boys dual-match reports, plus boys placeholders needed to reconcile St. Andrew's 0-4 and 0-5 boys record lines.",
     "SeasonRecapParagraphs": [
-      "The 2001 fall tennis archive is now anchored by five published girls dual-match reports. St. Andrew's opened the recovered stretch with a 5-2 win over Patrick Henry before dropping matches to Hilton Head Christian, Beaufort Academy, and Hilton Head Prep.",
-      "The record path leaves two unreported losses between the Sept. 6 Hilton Head Christian match and the early-October rematch with Hilton Head Christian. Those placeholders reconcile the newspaper's 1-4 overall, 0-3 region line before the Oct. 2 Hilton Head Christian result and the 1-6, 0-4 region line after the Oct. 18 Hilton Head Prep match.",
-      "Jennifer Tyre, Mary Wilkowski, Grace Wilkowski, Ann Cole, Alicia Jaramillo, Clara Rucker, Lauren Raebler, and Stephanie Vine all appear in the surviving line scores. Tyre and Mary Wilkowski won singles matches against Patrick Henry, and St. Andrew's also picked up doubles points against Hilton Head Christian and Hilton Head Prep."
-    ]
+      "The 2001-02 tennis archive now spans the fall 2001 girls season and the spring 2002 boys season. The girls archive is anchored by five published dual-match reports and two record-path placeholders.",
+      "The recovered boys spring archive includes three 9-0 losses: Hilton Head Prep on March 15, Hilton Head Prep again on April 9, and Beaufort Academy on April 18. Two boys loss placeholders reconcile the April 10 article's 0-4 record line before the Beaufort Academy result moved St. Andrew's to 0-5.",
+      "Justin Howard, Preston Turner, Billy Vine, Martin Sullivan, Corey Wheeler, Jonathan Helmken, Martin Cooper, and Jonathan Salter appear in the recovered boys line scores."
+    ],
+    "BoysOverallWins": 0,
+    "BoysOverallLosses": 5
   },
   {
     "SeasonID": 2003,

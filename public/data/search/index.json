@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-15T16:23:08.629Z",
-  "itemCount": 1341,
+  "generatedAt": "2026-05-16T14:06:38.421Z",
+  "itemCount": 1359,
   "items": [
     {
       "id": "athletics-home",
@@ -7724,6 +7724,186 @@
       ]
     },
     {
+      "id": "baseball-athlete-200003",
+      "type": "athlete",
+      "title": "Davy Clay",
+      "subtitle": "Baseball athlete - Class of 2004",
+      "to": "/athletics/boys/baseball/players/200003",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Davy",
+        "Clay",
+        "Clay Davy",
+        "class of 2004",
+        "grad 2004"
+      ]
+    },
+    {
+      "id": "baseball-athlete-200005",
+      "type": "athlete",
+      "title": "Quint Dixon",
+      "subtitle": "Baseball athlete",
+      "to": "/athletics/boys/baseball/players/200005",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Quint",
+        "Dixon",
+        "Dixon Quint"
+      ]
+    },
+    {
+      "id": "baseball-athlete-200011",
+      "type": "athlete",
+      "title": "Jeff Smith",
+      "subtitle": "Baseball athlete - Class of 2003",
+      "to": "/athletics/boys/baseball/players/200011",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Jeff",
+        "Smith",
+        "Smith Jeff",
+        "class of 2003",
+        "grad 2003"
+      ]
+    },
+    {
+      "id": "baseball-athlete-200102",
+      "type": "athlete",
+      "title": "Zack Hillard",
+      "subtitle": "Baseball athlete",
+      "to": "/athletics/boys/baseball/players/200102",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Zack",
+        "Hillard",
+        "Hillard Zack"
+      ]
+    },
+    {
+      "id": "baseball-athlete-200104",
+      "type": "athlete",
+      "title": "Matt Hunt",
+      "subtitle": "Baseball athlete",
+      "to": "/athletics/boys/baseball/players/200104",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Matt",
+        "Hunt",
+        "Hunt Matt"
+      ]
+    },
+    {
+      "id": "baseball-athlete-200462",
+      "type": "athlete",
+      "title": "Ryan Stratz",
+      "subtitle": "Baseball athlete",
+      "to": "/athletics/boys/baseball/players/200462",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Ryan",
+        "Stratz",
+        "Stratz Ryan"
+      ]
+    },
+    {
+      "id": "baseball-athlete-200108",
+      "type": "athlete",
+      "title": "Adam Ciccio",
+      "subtitle": "Baseball athlete - Class of 2002",
+      "to": "/athletics/boys/baseball/players/200108",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Adam",
+        "Ciccio",
+        "Ciccio Adam",
+        "class of 2002",
+        "grad 2002"
+      ]
+    },
+    {
+      "id": "baseball-athlete-200203",
+      "type": "athlete",
+      "title": "Beau Hinton",
+      "subtitle": "Baseball athlete - Class of 2004",
+      "to": "/athletics/boys/baseball/players/200203",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Beau",
+        "Hinton",
+        "Hinton Beau",
+        "class of 2004",
+        "grad 2004"
+      ]
+    },
+    {
+      "id": "baseball-athlete-200452",
+      "type": "athlete",
+      "title": "Brent Adams",
+      "subtitle": "Baseball athlete - Class of 2004",
+      "to": "/athletics/boys/baseball/players/200452",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Brent",
+        "Adams",
+        "Adams Brent",
+        "class of 2004",
+        "grad 2004"
+      ]
+    },
+    {
+      "id": "baseball-athlete-200210",
+      "type": "athlete",
+      "title": "Chris Brinker",
+      "subtitle": "Baseball athlete",
+      "to": "/athletics/boys/baseball/players/200210",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Chris",
+        "Brinker",
+        "Brinker Chris"
+      ]
+    },
+    {
       "id": "baseball-athlete-2026345",
       "type": "athlete",
       "title": "Alex Hunt",
@@ -14070,25 +14250,6 @@
       ]
     },
     {
-      "id": "girls-soccer-athlete-200406",
-      "type": "athlete",
-      "title": "Becca Cooper",
-      "subtitle": "Girls Soccer athlete - Class of 2004",
-      "to": "/athletics/girls/soccer/players/200406",
-      "keywords": [
-        "Girls Soccer",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Becca",
-        "Cooper",
-        "Cooper Becca",
-        "class of 2004",
-        "grad 2004"
-      ]
-    },
-    {
       "id": "girls-soccer-athlete-200428",
       "type": "athlete",
       "title": "Layne Haggberg",
@@ -14103,6 +14264,114 @@
         "Layne",
         "Haggberg",
         "Haggberg Layne",
+        "class of 2004",
+        "grad 2004"
+      ]
+    },
+    {
+      "id": "girls-soccer-athlete-200436",
+      "type": "athlete",
+      "title": "Brittany McLaughlin",
+      "subtitle": "Girls Soccer athlete - Class of 2004",
+      "to": "/athletics/girls/soccer/players/200436",
+      "keywords": [
+        "Girls Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Brittany",
+        "McLaughlin",
+        "McLaughlin Brittany",
+        "class of 2004",
+        "grad 2004"
+      ]
+    },
+    {
+      "id": "girls-soccer-athlete-200603",
+      "type": "athlete",
+      "title": "Grace Wilkowski",
+      "subtitle": "Girls Soccer athlete - Class of 2006",
+      "to": "/athletics/girls/soccer/players/200603",
+      "keywords": [
+        "Girls Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Grace",
+        "Wilkowski",
+        "Wilkowski Grace",
+        "class of 2006",
+        "grad 2006"
+      ]
+    },
+    {
+      "id": "girls-soccer-athlete-2026343",
+      "type": "athlete",
+      "title": "Alicia Jaramillo-Underwood",
+      "subtitle": "Girls Soccer athlete",
+      "to": "/athletics/girls/soccer/players/2026343",
+      "keywords": [
+        "Girls Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Alicia",
+        "Jaramillo-Underwood",
+        "Jaramillo-Underwood Alicia"
+      ]
+    },
+    {
+      "id": "girls-soccer-athlete-200465",
+      "type": "athlete",
+      "title": "Ashley Stokes",
+      "subtitle": "Girls Soccer athlete",
+      "to": "/athletics/girls/soccer/players/200465",
+      "keywords": [
+        "Girls Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Ashley",
+        "Stokes",
+        "Stokes Ashley"
+      ]
+    },
+    {
+      "id": "girls-soccer-athlete-200464",
+      "type": "athlete",
+      "title": "Klie White",
+      "subtitle": "Girls Soccer athlete",
+      "to": "/athletics/girls/soccer/players/200464",
+      "keywords": [
+        "Girls Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Klie",
+        "White",
+        "White Klie"
+      ]
+    },
+    {
+      "id": "girls-soccer-athlete-200406",
+      "type": "athlete",
+      "title": "Becca Cooper",
+      "subtitle": "Girls Soccer athlete - Class of 2004",
+      "to": "/athletics/girls/soccer/players/200406",
+      "keywords": [
+        "Girls Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Becca",
+        "Cooper",
+        "Cooper Becca",
         "class of 2004",
         "grad 2004"
       ]
@@ -14160,25 +14429,6 @@
         "Kristen",
         "Albritton",
         "Albritton Kristen",
-        "class of 2006",
-        "grad 2006"
-      ]
-    },
-    {
-      "id": "girls-soccer-athlete-200603",
-      "type": "athlete",
-      "title": "Grace Wilkowski",
-      "subtitle": "Girls Soccer athlete - Class of 2006",
-      "to": "/athletics/girls/soccer/players/200603",
-      "keywords": [
-        "Girls Soccer",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Grace",
-        "Wilkowski",
-        "Wilkowski Grace",
         "class of 2006",
         "grad 2006"
       ]
@@ -14368,25 +14618,6 @@
       ]
     },
     {
-      "id": "girls-soccer-athlete-200436",
-      "type": "athlete",
-      "title": "Brittany McLaughlin",
-      "subtitle": "Girls Soccer athlete - Class of 2004",
-      "to": "/athletics/girls/soccer/players/200436",
-      "keywords": [
-        "Girls Soccer",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Brittany",
-        "McLaughlin",
-        "McLaughlin Brittany",
-        "class of 2004",
-        "grad 2004"
-      ]
-    },
-    {
       "id": "girls-soccer-athlete-200437",
       "type": "athlete",
       "title": "Meghan McCarthey",
@@ -14473,6 +14704,135 @@
         "Aldrich Cam",
         "class of 2003",
         "grad 2003"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-200005",
+      "type": "athlete",
+      "title": "Quint Dixon",
+      "subtitle": "Boys Soccer athlete",
+      "to": "/athletics/boys/soccer/players/200005",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Quint",
+        "Dixon",
+        "Dixon Quint"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-200105",
+      "type": "athlete",
+      "title": "Will Massey",
+      "subtitle": "Boys Soccer athlete - Class of 2004",
+      "to": "/athletics/boys/soccer/players/200105",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Will",
+        "Massey",
+        "Massey Will",
+        "class of 2004",
+        "grad 2004"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-200207",
+      "type": "athlete",
+      "title": "Jacob Rauers",
+      "subtitle": "Boys Soccer athlete - Class of 2004",
+      "to": "/athletics/boys/soccer/players/200207",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Jacob",
+        "Rauers",
+        "Rauers Jacob",
+        "class of 2004",
+        "grad 2004"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-200307",
+      "type": "athlete",
+      "title": "Omar Glenn",
+      "subtitle": "Boys Soccer athlete - Class of 2005",
+      "to": "/athletics/boys/soccer/players/200307",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Omar",
+        "Glenn",
+        "Glenn Omar",
+        "class of 2005",
+        "grad 2005"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-200431",
+      "type": "athlete",
+      "title": "Will Chisholm",
+      "subtitle": "Boys Soccer athlete - Class of 2004",
+      "to": "/athletics/boys/soccer/players/200431",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Will",
+        "Chisholm",
+        "Chisholm Will",
+        "class of 2004",
+        "grad 2004"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-200440",
+      "type": "athlete",
+      "title": "Hunter Saussy",
+      "subtitle": "Boys Soccer athlete - Class of 2004",
+      "to": "/athletics/boys/soccer/players/200440",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Hunter",
+        "Saussy",
+        "Saussy Hunter",
+        "class of 2004",
+        "grad 2004"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-200463",
+      "type": "athlete",
+      "title": "Nick Kenny",
+      "subtitle": "Boys Soccer athlete",
+      "to": "/athletics/boys/soccer/players/200463",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Nick",
+        "Kenny",
+        "Kenny Nick"
       ]
     },
     {
@@ -14569,44 +14929,6 @@
       ]
     },
     {
-      "id": "boys-soccer-athlete-200207",
-      "type": "athlete",
-      "title": "Jacob Rauers",
-      "subtitle": "Boys Soccer athlete - Class of 2004",
-      "to": "/athletics/boys/soccer/players/200207",
-      "keywords": [
-        "Boys Soccer",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Jacob",
-        "Rauers",
-        "Rauers Jacob",
-        "class of 2004",
-        "grad 2004"
-      ]
-    },
-    {
-      "id": "boys-soccer-athlete-200105",
-      "type": "athlete",
-      "title": "Will Massey",
-      "subtitle": "Boys Soccer athlete - Class of 2004",
-      "to": "/athletics/boys/soccer/players/200105",
-      "keywords": [
-        "Boys Soccer",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Will",
-        "Massey",
-        "Massey Will",
-        "class of 2004",
-        "grad 2004"
-      ]
-    },
-    {
       "id": "boys-soccer-athlete-200439",
       "type": "athlete",
       "title": "Andy Crouch",
@@ -14621,44 +14943,6 @@
         "Andy",
         "Crouch",
         "Crouch Andy"
-      ]
-    },
-    {
-      "id": "boys-soccer-athlete-200307",
-      "type": "athlete",
-      "title": "Omar Glenn",
-      "subtitle": "Boys Soccer athlete - Class of 2005",
-      "to": "/athletics/boys/soccer/players/200307",
-      "keywords": [
-        "Boys Soccer",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Omar",
-        "Glenn",
-        "Glenn Omar",
-        "class of 2005",
-        "grad 2005"
-      ]
-    },
-    {
-      "id": "boys-soccer-athlete-200431",
-      "type": "athlete",
-      "title": "Will Chisholm",
-      "subtitle": "Boys Soccer athlete - Class of 2004",
-      "to": "/athletics/boys/soccer/players/200431",
-      "keywords": [
-        "Boys Soccer",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Will",
-        "Chisholm",
-        "Chisholm Will",
-        "class of 2004",
-        "grad 2004"
       ]
     },
     {
@@ -20270,6 +20554,25 @@
       ]
     },
     {
+      "id": "baseball-team-memorial-day-school",
+      "type": "team",
+      "title": "Memorial Day School",
+      "subtitle": "Baseball opponent history - Savannah, GA",
+      "to": "/athletics/boys/baseball/records/opponents?team=Memorial+Day+School",
+      "keywords": [
+        "Baseball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Memorial Day School",
+        "Memorial Day",
+        "Matadors",
+        "Savannah",
+        "GA"
+      ]
+    },
+    {
       "id": "baseball-team-bible-baptist-school",
       "type": "team",
       "title": "Bible Baptist School",
@@ -20289,20 +20592,72 @@
       ]
     },
     {
-      "id": "baseball-team-beaufort-academy",
+      "id": "baseball-team-patrick-henry-academy",
       "type": "team",
-      "title": "Beaufort Academy",
-      "subtitle": "Baseball opponent history - Beaufort, SC",
-      "to": "/athletics/boys/baseball/records/opponents?team=Beaufort+Academy",
+      "title": "Patrick Henry Academy",
+      "subtitle": "Baseball opponent history - Estill, SC",
+      "to": "/athletics/boys/baseball/records/opponents?team=Patrick+Henry+Academy",
       "keywords": [
         "Baseball",
         "team",
         "opponent",
         "history",
         "records",
-        "Beaufort Academy",
-        "Eagles",
-        "Beaufort",
+        "Patrick Henry Academy",
+        "Patriots",
+        "Estill",
+        "SC"
+      ]
+    },
+    {
+      "id": "baseball-team-agape-christian",
+      "type": "team",
+      "title": "Agape Christian",
+      "subtitle": "Baseball opponent history",
+      "to": "/athletics/boys/baseball/records/opponents?team=Agape+Christian",
+      "keywords": [
+        "Baseball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Agape Christian"
+      ]
+    },
+    {
+      "id": "baseball-team-northwood-academy",
+      "type": "team",
+      "title": "Northwood Academy",
+      "subtitle": "Baseball opponent history - Charleston, SC",
+      "to": "/athletics/boys/baseball/records/opponents?team=Northwood+Academy",
+      "keywords": [
+        "Baseball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Northwood Academy",
+        "Chargers",
+        "Charleston",
+        "SC",
+        "Summerville"
+      ]
+    },
+    {
+      "id": "baseball-team-colleton-prep-academy",
+      "type": "team",
+      "title": "Colleton Prep Academy",
+      "subtitle": "Baseball opponent history - Walterboro, SC",
+      "to": "/athletics/boys/baseball/records/opponents?team=Colleton+Prep+Academy",
+      "keywords": [
+        "Baseball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Colleton Prep Academy",
+        "War Hawks",
+        "Walterboro",
         "SC"
       ]
     },
@@ -20321,6 +20676,24 @@
         "Hilton Head Christian Academy",
         "Eagles",
         "Hilton Head Island",
+        "SC"
+      ]
+    },
+    {
+      "id": "baseball-team-beaufort-academy",
+      "type": "team",
+      "title": "Beaufort Academy",
+      "subtitle": "Baseball opponent history - Beaufort, SC",
+      "to": "/athletics/boys/baseball/records/opponents?team=Beaufort+Academy",
+      "keywords": [
+        "Baseball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Beaufort Academy",
+        "Eagles",
+        "Beaufort",
         "SC"
       ]
     },
@@ -20506,25 +20879,6 @@
       ]
     },
     {
-      "id": "baseball-team-memorial-day-school",
-      "type": "team",
-      "title": "Memorial Day School",
-      "subtitle": "Baseball opponent history - Savannah, GA",
-      "to": "/athletics/boys/baseball/records/opponents?team=Memorial+Day+School",
-      "keywords": [
-        "Baseball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Memorial Day School",
-        "Memorial Day",
-        "Matadors",
-        "Savannah",
-        "GA"
-      ]
-    },
-    {
       "id": "baseball-team-cathedral-academy",
       "type": "team",
       "title": "Cathedral Academy",
@@ -20557,24 +20911,6 @@
         "records",
         "Carolina Academy",
         "Lake City",
-        "SC"
-      ]
-    },
-    {
-      "id": "baseball-team-patrick-henry-academy",
-      "type": "team",
-      "title": "Patrick Henry Academy",
-      "subtitle": "Baseball opponent history - Estill, SC",
-      "to": "/athletics/boys/baseball/records/opponents?team=Patrick+Henry+Academy",
-      "keywords": [
-        "Baseball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Patrick Henry Academy",
-        "Patriots",
-        "Estill",
         "SC"
       ]
     },
@@ -20627,23 +20963,6 @@
         "Dixie High School",
         "New Lebanon",
         "OH"
-      ]
-    },
-    {
-      "id": "baseball-team-northwood-academy",
-      "type": "team",
-      "title": "Northwood Academy",
-      "subtitle": "Baseball opponent history - Summerville, SC",
-      "to": "/athletics/boys/baseball/records/opponents?team=Northwood+Academy",
-      "keywords": [
-        "Baseball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Northwood Academy",
-        "Summerville",
-        "SC"
       ]
     },
     {
@@ -20872,24 +21191,6 @@
         "Jenkins High School",
         "Savannah",
         "GA"
-      ]
-    },
-    {
-      "id": "baseball-team-colleton-prep-academy",
-      "type": "team",
-      "title": "Colleton Prep Academy",
-      "subtitle": "Baseball opponent history - Walterboro, SC",
-      "to": "/athletics/boys/baseball/records/opponents?team=Colleton+Prep+Academy",
-      "keywords": [
-        "Baseball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Colleton Prep Academy",
-        "War Hawks",
-        "Walterboro",
-        "SC"
       ]
     },
     {
@@ -23941,6 +24242,42 @@
       ]
     },
     {
+      "id": "girls-soccer-team-jefferson-davis-academy",
+      "type": "team",
+      "title": "Jefferson Davis Academy",
+      "subtitle": "Girls Soccer opponent history - Blackville, SC",
+      "to": "/athletics/girls/soccer/records/opponents?team=Jefferson+Davis+Academy",
+      "keywords": [
+        "Girls Soccer",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Jefferson Davis Academy",
+        "Raiders",
+        "Blackville",
+        "SC"
+      ]
+    },
+    {
+      "id": "girls-soccer-team-beaufort-academy",
+      "type": "team",
+      "title": "Beaufort Academy",
+      "subtitle": "Girls Soccer opponent history - Beaufort, SC",
+      "to": "/athletics/girls/soccer/records/opponents?team=Beaufort+Academy",
+      "keywords": [
+        "Girls Soccer",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Beaufort Academy",
+        "Eagles",
+        "Beaufort",
+        "SC"
+      ]
+    },
+    {
       "id": "girls-soccer-team-king-s-academy",
       "type": "team",
       "title": "King's Academy",
@@ -23973,24 +24310,6 @@
         "Trinity Collegiate",
         "Titans",
         "Darlington",
-        "SC"
-      ]
-    },
-    {
-      "id": "girls-soccer-team-beaufort-academy",
-      "type": "team",
-      "title": "Beaufort Academy",
-      "subtitle": "Girls Soccer opponent history - Beaufort, SC",
-      "to": "/athletics/girls/soccer/records/opponents?team=Beaufort+Academy",
-      "keywords": [
-        "Girls Soccer",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Beaufort Academy",
-        "Eagles",
-        "Beaufort",
         "SC"
       ]
     },
@@ -24086,43 +24405,6 @@
       ]
     },
     {
-      "id": "girls-soccer-team-dominion-christian-academy",
-      "type": "team",
-      "title": "Dominion Christian Academy",
-      "subtitle": "Girls Soccer opponent history - Marietta, GA",
-      "to": "/athletics/girls/soccer/records/opponents?team=Dominion+Christian+Academy",
-      "keywords": [
-        "Girls Soccer",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Dominion Christian Academy",
-        "Dominion Christian",
-        "Knights",
-        "Marietta",
-        "GA"
-      ]
-    },
-    {
-      "id": "girls-soccer-team-central-fellowship-christian-academy",
-      "type": "team",
-      "title": "Central Fellowship Christian Academy",
-      "subtitle": "Girls Soccer opponent history - Macon, GA",
-      "to": "/athletics/girls/soccer/records/opponents?team=Central+Fellowship+Christian+Academy",
-      "keywords": [
-        "Girls Soccer",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Central Fellowship Christian Academy",
-        "Lancers",
-        "Macon",
-        "GA"
-      ]
-    },
-    {
       "id": "girls-soccer-team-hilton-head-christian-academy",
       "type": "team",
       "title": "Hilton Head Christian Academy",
@@ -24197,21 +24479,40 @@
       ]
     },
     {
-      "id": "boys-soccer-team-jefferson-davis-academy",
+      "id": "girls-soccer-team-dominion-christian-academy",
       "type": "team",
-      "title": "Jefferson Davis Academy",
-      "subtitle": "Boys Soccer opponent history - Blackville, SC",
-      "to": "/athletics/boys/soccer/records/opponents?team=Jefferson+Davis+Academy",
+      "title": "Dominion Christian Academy",
+      "subtitle": "Girls Soccer opponent history - Marietta, GA",
+      "to": "/athletics/girls/soccer/records/opponents?team=Dominion+Christian+Academy",
       "keywords": [
-        "Boys Soccer",
+        "Girls Soccer",
         "team",
         "opponent",
         "history",
         "records",
-        "Jefferson Davis Academy",
-        "Raiders",
-        "Blackville",
-        "SC"
+        "Dominion Christian Academy",
+        "Dominion Christian",
+        "Knights",
+        "Marietta",
+        "GA"
+      ]
+    },
+    {
+      "id": "girls-soccer-team-central-fellowship-christian-academy",
+      "type": "team",
+      "title": "Central Fellowship Christian Academy",
+      "subtitle": "Girls Soccer opponent history - Macon, GA",
+      "to": "/athletics/girls/soccer/records/opponents?team=Central+Fellowship+Christian+Academy",
+      "keywords": [
+        "Girls Soccer",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Central Fellowship Christian Academy",
+        "Lancers",
+        "Macon",
+        "GA"
       ]
     },
     {
@@ -24233,6 +24534,24 @@
       ]
     },
     {
+      "id": "boys-soccer-team-jefferson-davis-academy",
+      "type": "team",
+      "title": "Jefferson Davis Academy",
+      "subtitle": "Boys Soccer opponent history - Blackville, SC",
+      "to": "/athletics/boys/soccer/records/opponents?team=Jefferson+Davis+Academy",
+      "keywords": [
+        "Boys Soccer",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Jefferson Davis Academy",
+        "Raiders",
+        "Blackville",
+        "SC"
+      ]
+    },
+    {
       "id": "boys-soccer-team-james-island-christian-school",
       "type": "team",
       "title": "James Island Christian School",
@@ -24247,6 +24566,41 @@
         "James Island Christian School",
         "Lions",
         "Charleston",
+        "SC"
+      ]
+    },
+    {
+      "id": "boys-soccer-team-hilton-head-christian-academy",
+      "type": "team",
+      "title": "Hilton Head Christian Academy",
+      "subtitle": "Boys Soccer opponent history - Hilton Head Island, SC",
+      "to": "/athletics/boys/soccer/records/opponents?team=Hilton+Head+Christian+Academy",
+      "keywords": [
+        "Boys Soccer",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Hilton Head Christian Academy",
+        "Eagles",
+        "Hilton Head Island",
+        "SC"
+      ]
+    },
+    {
+      "id": "boys-soccer-team-james-f-byrnes-academy",
+      "type": "team",
+      "title": "James F. Byrnes Academy",
+      "subtitle": "Boys Soccer opponent history - Quinby, SC",
+      "to": "/athletics/boys/soccer/records/opponents?team=James+F.+Byrnes+Academy",
+      "keywords": [
+        "Boys Soccer",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "James F. Byrnes Academy",
+        "Quinby",
         "SC"
       ]
     },
@@ -24362,24 +24716,6 @@
       ]
     },
     {
-      "id": "boys-soccer-team-hilton-head-christian-academy",
-      "type": "team",
-      "title": "Hilton Head Christian Academy",
-      "subtitle": "Boys Soccer opponent history - Hilton Head Island, SC",
-      "to": "/athletics/boys/soccer/records/opponents?team=Hilton+Head+Christian+Academy",
-      "keywords": [
-        "Boys Soccer",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Hilton Head Christian Academy",
-        "Eagles",
-        "Hilton Head Island",
-        "SC"
-      ]
-    },
-    {
       "id": "boys-soccer-team-st-francis-xavier",
       "type": "team",
       "title": "St. Francis Xavier",
@@ -24413,23 +24749,6 @@
         "Pinewood Prep",
         "Panthers",
         "Summerville",
-        "SC"
-      ]
-    },
-    {
-      "id": "boys-soccer-team-james-f-byrnes-academy",
-      "type": "team",
-      "title": "James F. Byrnes Academy",
-      "subtitle": "Boys Soccer opponent history - Quinby, SC",
-      "to": "/athletics/boys/soccer/records/opponents?team=James+F.+Byrnes+Academy",
-      "keywords": [
-        "Boys Soccer",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "James F. Byrnes Academy",
-        "Quinby",
         "SC"
       ]
     },

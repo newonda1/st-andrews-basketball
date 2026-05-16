@@ -1,5 +1,748 @@
 [
   {
+    "GameID": 2002030101,
+    "OpponentID": "",
+    "Opponent": "Unknown",
+    "OpponentAbbr": "UNK",
+    "DisplayDate": "Before March 19",
+    "LocationType": "-",
+    "GameType": "-",
+    "Result": "W",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 2002,
+    "IsPlaceholder": true,
+    "Notes": "Placeholder win added because the March 22 Bible Baptist box score listed St. Andrew's at 4-5 after the known March 19 loss and March 21 win, indicating seven earlier games are missing."
+  },
+  {
+    "GameID": 2002030102,
+    "OpponentID": "",
+    "Opponent": "Unknown",
+    "OpponentAbbr": "UNK",
+    "DisplayDate": "Before March 19",
+    "LocationType": "-",
+    "GameType": "-",
+    "Result": "L",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 2002,
+    "IsPlaceholder": true,
+    "Notes": "Placeholder loss added to reconcile the March 22 Bible Baptist record line."
+  },
+  {
+    "GameID": 2002030103,
+    "OpponentID": "",
+    "Opponent": "Unknown",
+    "OpponentAbbr": "UNK",
+    "DisplayDate": "Before March 19",
+    "LocationType": "-",
+    "GameType": "-",
+    "Result": "L",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 2002,
+    "IsPlaceholder": true,
+    "Notes": "Placeholder loss added to reconcile the March 22 Bible Baptist record line."
+  },
+  {
+    "GameID": 2002030104,
+    "OpponentID": "",
+    "Opponent": "Unknown",
+    "OpponentAbbr": "UNK",
+    "DisplayDate": "Before March 19",
+    "LocationType": "-",
+    "GameType": "-",
+    "Result": "W",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 2002,
+    "IsPlaceholder": true,
+    "Notes": "Placeholder win added to reconcile the March 22 Bible Baptist record line."
+  },
+  {
+    "GameID": 2002030105,
+    "OpponentID": "",
+    "Opponent": "Unknown",
+    "OpponentAbbr": "UNK",
+    "DisplayDate": "Before March 19",
+    "LocationType": "-",
+    "GameType": "-",
+    "Result": "L",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 2002,
+    "IsPlaceholder": true,
+    "Notes": "Placeholder loss added to reconcile the March 22 Bible Baptist record line."
+  },
+  {
+    "GameID": 2002030106,
+    "OpponentID": "",
+    "Opponent": "Unknown",
+    "OpponentAbbr": "UNK",
+    "DisplayDate": "Before March 19",
+    "LocationType": "-",
+    "GameType": "-",
+    "Result": "W",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 2002,
+    "IsPlaceholder": true,
+    "Notes": "Placeholder win added to reconcile the March 22 Bible Baptist record line."
+  },
+  {
+    "GameID": 2002030107,
+    "OpponentID": "",
+    "Opponent": "Unknown",
+    "OpponentAbbr": "UNK",
+    "DisplayDate": "Before March 19",
+    "LocationType": "-",
+    "GameType": "-",
+    "Result": "L",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 2002,
+    "IsPlaceholder": true,
+    "Notes": "Placeholder loss added to reconcile the March 22 Bible Baptist record line."
+  },
+  {
+    "Season": 2002,
+    "GameID": 2002031901,
+    "Date": "2002-03-19",
+    "OpponentID": "ga-memorial-day-school-savannah",
+    "Opponent": "Memorial Day School",
+    "OpponentAbbr": "MDS",
+    "LocationType": "Home",
+    "GameType": "Non-Region",
+    "Result": "L",
+    "TeamScore": 2,
+    "OpponentScore": 5,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "Opponent": [
+        0,
+        1,
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      "StAndrews": [
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "OpponentTotals": {
+        "R": 5,
+        "H": 8,
+        "E": 1
+      },
+      "StAndrewsTotals": {
+        "R": 2,
+        "H": 5,
+        "E": 2
+      }
+    },
+    "WinningPitcher": "Kevin Edge",
+    "LosingPitcher": "Ryan Stratz",
+    "Notes": "Ryan Stratz and Zack Hillard each went 2-for-3 for St. Andrew's.",
+    "SourceCitation": "\"BASEBALL\" Savannah Morning News (GA), March 20, 2002, Page 4D.",
+    "SourceDate": "2002-03-20"
+  },
+  {
+    "Season": 2002,
+    "GameID": 2002032101,
+    "Date": "2002-03-21",
+    "OpponentID": "ga-bible-baptist-school-savannah",
+    "Opponent": "Bible Baptist School",
+    "OpponentAbbr": "BB",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 15,
+    "OpponentScore": 0,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "Opponent": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "StAndrews": [
+        6,
+        2,
+        2,
+        5
+      ],
+      "OpponentTotals": {
+        "R": 0,
+        "H": 0,
+        "E": 5
+      },
+      "StAndrewsTotals": {
+        "R": 15,
+        "H": 10,
+        "E": 0
+      }
+    },
+    "WinningPitcher": "Zack Hillard",
+    "LosingPitcher": "Aubrey Mixon",
+    "Notes": "Zack Hillard struck out nine and walked two in the four-inning no-hitter. Jeff Smith doubled and Ryan Stratz tripled.",
+    "SourceCitation": "\"BASEBALL\" Savannah Morning News (GA), March 22, 2002, Page 4C.",
+    "SourceDate": "2002-03-22",
+    "RecordNote": "Records: St. Andrew's 4-5"
+  },
+  {
+    "Season": 2002,
+    "GameID": 2002032701,
+    "Date": "2002-03-27",
+    "OpponentID": "sc-patrick-henry-academy-estill",
+    "Opponent": "Patrick Henry Academy",
+    "OpponentAbbr": "PHA",
+    "LocationType": "Away",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 11,
+    "OpponentScore": 5,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "Opponent": [
+        0,
+        0,
+        0,
+        2,
+        0,
+        3,
+        0
+      ],
+      "StAndrews": [
+        0,
+        5,
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "OpponentTotals": {
+        "R": 5,
+        "H": 6,
+        "E": 2
+      },
+      "StAndrewsTotals": {
+        "R": 11,
+        "H": 11,
+        "E": 2
+      }
+    },
+    "WinningPitcher": "Jeff Smith",
+    "LosingPitcher": "Ford",
+    "Notes": "Jeff Smith worked five innings of three-hit ball with eight strikeouts and went 3-for-4 with a double and two RBI.",
+    "SourceCitation": "\"BASEBALL\" Savannah Morning News (GA), March 28, 2002, Page 4D.",
+    "SourceDate": "2002-03-28",
+    "RecordNote": "Records: St. Andrew's 5-5"
+  },
+  {
+    "Season": 2002,
+    "GameID": 2002032801,
+    "Date": "2002-03-28",
+    "OpponentID": "ga-memorial-day-school-savannah",
+    "Opponent": "Memorial Day School",
+    "OpponentAbbr": "MDS",
+    "LocationType": "Away",
+    "GameType": "Non-Region",
+    "Result": "L",
+    "TeamScore": 5,
+    "OpponentScore": 8,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "Opponent": [
+        0,
+        0,
+        1,
+        0,
+        5,
+        2,
+        null
+      ],
+      "StAndrews": [
+        0,
+        0,
+        0,
+        2,
+        0,
+        1,
+        2
+      ],
+      "OpponentTotals": {
+        "R": 8,
+        "H": 6,
+        "E": 3
+      },
+      "StAndrewsTotals": {
+        "R": 5,
+        "H": 6,
+        "E": 1
+      }
+    },
+    "WinningPitcher": "Jordan Moon",
+    "LosingPitcher": "Matt Hunt",
+    "Notes": "Jeff Smith and Ryan Stratz each went 2-for-4 for St. Andrew's.",
+    "SourceCitation": "\"BASEBALL\" Savannah Morning News (GA), March 29, 2002, Page 4D.",
+    "SourceDate": "2002-03-29"
+  },
+  {
+    "GameID": 2002040601,
+    "OpponentID": "",
+    "Opponent": "Unknown",
+    "OpponentAbbr": "UNK",
+    "DisplayDate": "Between March 29 and April 11",
+    "LocationType": "-",
+    "GameType": "-",
+    "Result": "L",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 2002,
+    "IsPlaceholder": true,
+    "Notes": "Placeholder loss added because the April 12 Bible Baptist box score listed St. Andrew's at 6-7 after the known March 28 Memorial Day loss and April 11 Bible Baptist win."
+  },
+  {
+    "Season": 2002,
+    "GameID": 2002041101,
+    "Date": "2002-04-11",
+    "OpponentID": "ga-bible-baptist-school-savannah",
+    "Opponent": "Bible Baptist School",
+    "OpponentAbbr": "BB",
+    "LocationType": "Away",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 12,
+    "OpponentScore": 1,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "Opponent": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "StAndrews": [
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        3
+      ],
+      "OpponentTotals": {
+        "R": 1,
+        "H": 1,
+        "E": 4
+      },
+      "StAndrewsTotals": {
+        "R": 12,
+        "H": 8,
+        "E": 1
+      }
+    },
+    "WinningPitcher": "Zack Hillard",
+    "LosingPitcher": "Shane Johnson",
+    "Notes": "Zack Hillard struck out 15 and allowed one unearned run. Adam Ciccio and Davy Clay homered.",
+    "SourceCitation": "\"BASEBALL\" Savannah Morning News (GA), April 12, 2002, Page 4D.",
+    "SourceDate": "2002-04-12",
+    "RecordNote": "Records: St. Andrew's 6-7"
+  },
+  {
+    "Season": 2002,
+    "GameID": 2002041201,
+    "Date": "2002-04-12",
+    "OpponentID": "agape-christian",
+    "Opponent": "Agape Christian",
+    "OpponentAbbr": "AGP",
+    "LocationType": "Home",
+    "GameType": "Non-Region",
+    "Result": "W",
+    "TeamScore": 5,
+    "OpponentScore": 4,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "Opponent": [
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "StAndrews": [
+        2,
+        0,
+        2,
+        1,
+        null
+      ],
+      "OpponentTotals": {
+        "R": 4,
+        "H": 4,
+        "E": 2
+      },
+      "StAndrewsTotals": {
+        "R": 5,
+        "H": 4,
+        "E": 0
+      }
+    },
+    "WinningPitcher": "Adam Ciccio",
+    "LosingPitcher": "Brian Roach",
+    "Notes": "Ryan Stratz went 2-for-2 with a home run and two RBI, and Zack Hillard doubled in two runs.",
+    "SourceCitation": "\"BASEBALL\" Savannah Morning News (GA), April 13, 2002, Page 6C.",
+    "SourceDate": "2002-04-13"
+  },
+  {
+    "Season": 2002,
+    "GameID": 2002041202,
+    "Date": "2002-04-12",
+    "OpponentID": "agape-christian",
+    "Opponent": "Agape Christian",
+    "OpponentAbbr": "AGP",
+    "LocationType": "Away",
+    "GameType": "Non-Region",
+    "Result": "W",
+    "TeamScore": 12,
+    "OpponentScore": 2,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "Opponent": [
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "StAndrews": [
+        2,
+        3,
+        4,
+        2,
+        1
+      ],
+      "OpponentTotals": {
+        "R": 2,
+        "H": 6,
+        "E": 6
+      },
+      "StAndrewsTotals": {
+        "R": 12,
+        "H": 12,
+        "E": 1
+      }
+    },
+    "WinningPitcher": "Jeff Smith",
+    "LosingPitcher": "Brook Malphrus",
+    "Notes": "Jeff Smith and Beau Hinton each went 3-for-4, and Matt Hunt doubled and drove in three runs.",
+    "SourceCitation": "\"BASEBALL\" Savannah Morning News (GA), April 13, 2002, Page 6C.",
+    "SourceDate": "2002-04-13",
+    "RecordNote": "Records: St. Andrew's 8-7"
+  },
+  {
+    "Season": 2002,
+    "GameID": 2002041301,
+    "Date": "2002-04-13",
+    "OpponentID": "sc-northwood-academy-charleston",
+    "Opponent": "Northwood Academy",
+    "OpponentAbbr": "NA",
+    "LocationType": "Home",
+    "GameType": "Non-Region",
+    "Result": "L",
+    "TeamScore": 1,
+    "OpponentScore": 2,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "Opponent": [
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "StAndrews": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "OpponentTotals": {
+        "R": 2,
+        "H": 5,
+        "E": 2
+      },
+      "StAndrewsTotals": {
+        "R": 1,
+        "H": 4,
+        "E": 2
+      }
+    },
+    "WinningPitcher": "Micah Edgar",
+    "LosingPitcher": "Ryan Stratz",
+    "Notes": "Ryan Stratz threw a five-hitter and struck out 10 at Grayson Stadium. Adam Ciccio and Jeff Smith each doubled.",
+    "SourceCitation": "\"BASEBALL\" Savannah Morning News (GA), April 14, 2002, Page 4C.",
+    "SourceDate": "2002-04-14",
+    "RecordNote": "Records: St. Andrew's 8-8"
+  },
+  {
+    "Season": 2002,
+    "GameID": 2002041601,
+    "Date": "2002-04-16",
+    "OpponentID": "sc-colleton-prep-academy-walterboro",
+    "Opponent": "Colleton Prep Academy",
+    "OpponentAbbr": "CPA",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 4,
+    "OpponentScore": 12,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "Opponent": [
+        1,
+        0,
+        0,
+        7,
+        1,
+        2,
+        1
+      ],
+      "StAndrews": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        1
+      ],
+      "OpponentTotals": {
+        "R": 12,
+        "H": 11,
+        "E": 0
+      },
+      "StAndrewsTotals": {
+        "R": 4,
+        "H": 14,
+        "E": 8
+      }
+    },
+    "WinningPitcher": "Shane Ziegler",
+    "LosingPitcher": "Matt Hunt",
+    "Notes": "Beau Hinton went 3-for-3, Jeff Smith went 3-for-4 with a double, and Matt Hunt had two hits and two RBI.",
+    "SourceCitation": "\"BASEBALL\" Savannah Morning News (GA), April 17, 2002, Page 4C.",
+    "SourceDate": "2002-04-17",
+    "RecordNote": "Records: St. Andrew's 8-9, 0-2 SCISA Region 2-AA"
+  },
+  {
+    "Season": 2002,
+    "GameID": 2002042501,
+    "Date": "2002-04-25",
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
+    "Opponent": "Hilton Head Christian Academy",
+    "OpponentAbbr": "HHCA",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "L",
+    "TeamScore": 2,
+    "OpponentScore": 4,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "Opponent": [
+        0,
+        2,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "StAndrews": [
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "OpponentTotals": {
+        "R": 4,
+        "H": 4,
+        "E": 1
+      },
+      "StAndrewsTotals": {
+        "R": 2,
+        "H": 6,
+        "E": 2
+      }
+    },
+    "WinningPitcher": "Chris Van Grisen",
+    "LosingPitcher": "Zack Hillard",
+    "Notes": "Matt Hunt went 2-for-2 with an RBI. Published record line listed St. Andrew's at 9-9, which conflicts with the surrounding recovered 8-9 and 10-10 record path.",
+    "SourceCitation": "\"BASEBALL\" Savannah Morning News (GA), April 26, 2002, Page 4C.",
+    "SourceDate": "2002-04-26",
+    "RecordNote": "Records: St. Andrew's 9-9 (published; record path remains inconsistent)"
+  },
+  {
+    "GameID": 2002042901,
+    "OpponentID": "",
+    "Opponent": "Unknown",
+    "OpponentAbbr": "UNK",
+    "DisplayDate": "Between April 17 and May 1",
+    "LocationType": "-",
+    "GameType": "-",
+    "Result": "W",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 2002,
+    "IsPlaceholder": true,
+    "Notes": "Placeholder win added to reconcile the known 8-9 Colleton Prep line, the inconsistent 9-9 Hilton Head Christian line, and the May 2 Patrick Henry line listing St. Andrew's at 10-10."
+  },
+  {
+    "Season": 2002,
+    "GameID": 2002050101,
+    "Date": "2002-05-01",
+    "OpponentID": "sc-patrick-henry-academy-estill",
+    "Opponent": "Patrick Henry Academy",
+    "OpponentAbbr": "PHA",
+    "LocationType": "Home",
+    "GameType": "Region",
+    "Result": "W",
+    "TeamScore": 16,
+    "OpponentScore": 2,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "Opponent": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "StAndrews": [
+        7,
+        2,
+        3,
+        4,
+        null
+      ],
+      "OpponentTotals": {
+        "R": 2,
+        "H": 3,
+        "E": 3
+      },
+      "StAndrewsTotals": {
+        "R": 16,
+        "H": 8,
+        "E": 1
+      }
+    },
+    "WinningPitcher": "Ryan Stratz",
+    "LosingPitcher": "Wooten",
+    "Notes": "Ryan Stratz struck out eight in four innings and went 2-for-4 with two RBI. Jeff Smith went 4-for-4, Zack Hillard drove in three runs, and Beau Hinton had two RBI.",
+    "SourceCitation": "\"BASEBALL\" Savannah Morning News (GA), May 2, 2002, Page 5C.",
+    "SourceDate": "2002-05-02",
+    "RecordNote": "Records: St. Andrew's 10-10"
+  },
+  {
     "GameID": 2006030601,
     "OpponentID": "ga-bible-baptist-school-savannah",
     "Opponent": "Bible Baptist School",

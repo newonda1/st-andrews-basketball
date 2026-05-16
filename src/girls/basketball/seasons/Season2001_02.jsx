@@ -11,7 +11,7 @@ Grace Wilkowski became the season's centerpiece. A Jan. 15 Savannah Morning News
 
 The region race came down to Beaufort Academy, Colleton Prep, and Hilton Head Christian. St. Andrew's swept Beaufort and Colleton in regular-season region play, but Hilton Head Christian beat the Saints twice to leave them 4-2. St. Andrew's still answered in the region tournament, beating Colleton Prep 47-35 in the first round behind 12 points from Roddenberry, 11 from Bugos, and 9 from Becca Cooper. Hilton Head Christian won the region final 50-41, but the Saints qualified for the state tournament.
 
-The state tournament opened with a 45-20 win over Charleston Collegiate at Thomas Heyward Academy, led by Lowe's 20 points. Pee Dee Academy ended the run two days later in Sumter, jumping ahead 14-0 and beating St. Andrew's 58-42. Grace Wilkowski scored 15, Roddenberry added 14, Lowe had 7 points and 10 rebounds, and Bugos scored 6 as the Saints closed the year 17-7.`;
+The state tournament opened with a 45-20 win over Charleston Collegiate at Thomas Heyward Academy, led by Lowe's 20 points. Pee Dee Academy ended the run two days later in Sumter, jumping ahead 14-0 and beating St. Andrew's 58-42. Grace Wilkowski scored 15, Roddenberry added 14, Lowe had 7 points and 10 rebounds, and Bugos scored 6 as the Saints closed the year 17-7. The spring awards package later listed Wilkowski and Roddenberry among the Savannah Morning News Girls All-Coastal Empire private-school honorable mention selections.`;
 
 export default function Season2001_02() {
   return (
@@ -54,6 +54,10 @@ export default function Season2001_02() {
         {
           Text: "Pee Dee Academy ended the run",
           ArticleID: "20020228-st-andrews-stumbles-in-scisa-quarterfinal",
+        },
+        {
+          Text: "Girls All-Coastal Empire private-school honorable mention",
+          ArticleID: "20020320-girls-all-coastal-empire",
         },
       ]}
       seasonBriefs={[

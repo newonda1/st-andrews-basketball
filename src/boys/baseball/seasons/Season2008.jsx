@@ -100,7 +100,20 @@ function formatGrade(grade) {
   return String(grade);
 }
 
-function SeasonRecapSection({ seasonLabel }) {
+function SeasonRecapSection({ seasonLabel, paragraphs = [] }) {
+  if (paragraphs.length) {
+    return (
+      <section id="season-recap" className="mx-auto max-w-4xl space-y-3">
+        <h2 className="text-2xl font-semibold">Season Recap</h2>
+        <div className="space-y-4 rounded-lg border border-gray-200 bg-white px-6 py-5 text-base leading-7 text-gray-800 shadow-sm">
+          {paragraphs.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section id="season-recap" className="mx-auto max-w-4xl space-y-3">
       <h2 className="text-2xl font-semibold">Season Recap</h2>
@@ -312,6 +325,7 @@ export function BaseballSeasonPage({
   seasonImages = [],
   showSeasonRoster = false,
   rosterStaff = [],
+  seasonRecapParagraphs = [],
 }) {
   const [games, setGames] = useState([]);
   const [playerStats, setPlayerStats] = useState([]);
@@ -831,7 +845,10 @@ export function BaseballSeasonPage({
     <div className="mx-auto max-w-6xl space-y-8 px-4 pb-10 pt-2 lg:pb-40">
       <h1 className="text-3xl font-bold text-center mb-2">{title}</h1>
 
-      <SeasonRecapSection seasonLabel={title.replace(/\s+Season$/, "")} />
+      <SeasonRecapSection
+        seasonLabel={title.replace(/\s+Season$/, "")}
+        paragraphs={seasonRecapParagraphs}
+      />
 
       {showSeasonImagesPlaceholder || seasonImages.length ? (
         <SeasonImagesSection images={seasonImages} seasonLabel={String(seasonId)} />

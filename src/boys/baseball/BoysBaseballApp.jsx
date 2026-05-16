@@ -17,6 +17,7 @@ const Season2020 = lazy(() => import("./seasons/Season2020"));
 const Season2019 = lazy(() => import("./seasons/Season2019"));
 const Season2018 = lazy(() => import("./seasons/Season2018"));
 const Season2008 = lazy(() => import("./seasons/Season2008"));
+const Season2002 = lazy(() => import("./seasons/Season2002"));
 const YearlyResults = lazy(() => import("./pages/YearlyResults"));
 const GameDetail = lazy(() => import("./pages/GameDetail"));
 const PlayerPage = lazy(() => import("./pages/PlayerPage"));
@@ -41,6 +42,7 @@ const seasonPages = [
   { slug: "2018", Component: Season2018 },
   { slug: "2008", Component: Season2008 },
   { slug: "2006", Component: Season2006 },
+  { slug: "2002", Component: Season2002 },
 ];
 
 const menuSections = [

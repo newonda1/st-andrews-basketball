@@ -1,5 +1,23 @@
 [
   {
+    "SeasonID": 2002,
+    "SeasonSlug": "2002",
+    "SeasonLabel": "Spring 2002",
+    "Classification": "Boys",
+    "StatusBadge": "partial",
+    "StatusNote": "The Spring 2002 golf archive currently includes the SCISA Region 2-AA tournament at Wilmington Island Club and the follow-up all-region listing.",
+    "ArchiveScope": "match",
+    "ShowSeasonImagesPlaceholder": true,
+    "HighlightNotes": [
+      "Davy Clay shot 42 and was later named to the All-SCISA Region 2-AA team.",
+      "St. Andrew's finished fourth at the SCISA Region 2-AA tournament with a team score of 181."
+    ],
+    "HistoricalSummary": [
+      "At the SCISA Region 2-AA tournament at Wilmington Island Club, St. Andrew's shot 181 behind Beaufort Academy, Hilton Head Christian, and Colleton Prep. Davy Clay led the Saints with a 42, followed by Jason Victor and Chris Brinker at 45 and Matt Hunt at 49.",
+      "The next day's Savannah Morning News all-region listing named Davy Clay to the All-SCISA Region 2-AA team."
+    ]
+  },
+  {
     "SeasonID": 2003,
     "SeasonSlug": "2003",
     "SeasonLabel": "Spring 2003",

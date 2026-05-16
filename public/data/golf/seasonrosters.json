@@ -1,5 +1,43 @@
 [
   {
+    "SeasonID": 2002,
+    "SeasonLabel": "Spring 2002",
+    "Source": "Recovered Savannah Morning News golf items from Apr. 26-27, 2002",
+    "Players": [
+      {
+        "PlayerID": 200003,
+        "PlayerName": "Davy Clay",
+        "Gender": "Boys",
+        "Grade": 10,
+        "GradeLabel": "So.",
+        "Distinctions": [
+          "All-SCISA Region 2-AA"
+        ]
+      },
+      {
+        "PlayerID": 200104,
+        "PlayerName": "Matt Hunt",
+        "Gender": "Boys",
+        "Grade": null,
+        "GradeLabel": null
+      },
+      {
+        "PlayerID": 200457,
+        "PlayerName": "Jason Victor",
+        "Gender": "Boys",
+        "Grade": 11,
+        "GradeLabel": "Jr."
+      },
+      {
+        "PlayerID": 200210,
+        "PlayerName": "Chris Brinker",
+        "Gender": "Boys",
+        "Grade": null,
+        "GradeLabel": null
+      }
+    ]
+  },
+  {
     "SeasonID": 2003,
     "SeasonLabel": "Spring 2003",
     "Source": "Recovered Savannah Morning News golf items from Mar. 4-May 2, 2003",

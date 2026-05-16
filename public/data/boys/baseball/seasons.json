@@ -1,5 +1,17 @@
 [
   {
+    "SeasonID": 2002,
+    "HeadCoach": "",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null,
+    "OverallWins": 10,
+    "OverallLosses": 10,
+    "OverallTies": 0,
+    "StatusNote": "NewsBank recovery covers 11 scored games, one record-path win placeholder, and seven early-season placeholders. The April 26 Hilton Head Christian record line conflicts with the surrounding 8-9 and 10-10 record path; the season page notes that inconsistency."
+  },
+  {
     "SeasonID": 2006,
     "HeadCoach": "Jim Rice",
     "RegionSeed": null,

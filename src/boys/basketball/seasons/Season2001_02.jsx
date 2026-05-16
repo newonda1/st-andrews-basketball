@@ -11,7 +11,7 @@ The region record came from a split with Hilton Head Christian and wins over Jam
 
 The final week was demanding. Memorial Day beat St. Andrew's 56-52 on Feb. 9, but the Saints answered with a 70-61 win over James Island Christian on Feb. 12 as Aldrich scored 23 with 13 rebounds, Burns had 19 and 15, Smith scored 14, and Clay added 10. In the SCISA Region 4-AA Tournament, St. Andrew's fell behind Colleton Prep 32-5, rallied back into the game, and lost 66-61. Burns scored 28 in the finale, Smith had 14 points and 10 steals, Matt Hunt and Aldrich scored 8 each, and Robertson added 3.
 
-Two early-season games remain preserved as placeholders because the newspaper statistical totals imply additional contests before Jan. 8, but the NewsBank sweep did not recover opponents, scores, or box scores.`;
+Two early-season games remain preserved as placeholders because the newspaper statistical totals imply additional contests before Jan. 8, but the NewsBank sweep did not recover opponents, scores, or box scores. The spring awards package later named Burns to the Savannah Morning News Boys All-Coastal Empire third team after a junior season of 14 straight double-doubles.`;
 
 export default function Season2001_02() {
   return (
@@ -39,6 +39,10 @@ export default function Season2001_02() {
         {
           Text: "lost 66-61",
           ArticleID: "20020220-loss-to-colleton-prep-ends-saints-season",
+        },
+        {
+          Text: "Boys All-Coastal Empire third team",
+          ArticleID: "20020319-boys-all-coastal-empire",
         },
       ]}
       seasonBriefs={[

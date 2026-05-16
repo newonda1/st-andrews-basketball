@@ -1,5 +1,91 @@
 [
   {
+    "MatchID": "20020425-scisa-region-2aa-wilmington-island",
+    "Season": 2002,
+    "Name": "SCISA Region 2-AA Tournament",
+    "Date": "2002-04-25",
+    "Course": "Wilmington Island Club",
+    "Location": "Savannah, Ga.",
+    "Opponent": "SCISA Region 2-AA field",
+    "SourcePublication": "Savannah Morning News (GA)",
+    "SourceDate": "2002-04-26",
+    "SourceCitation": "\"BOYS' GOLF\" Savannah Morning News (GA), April 26, 2002, Page 4C.",
+    "Summary": "Beaufort Academy won the SCISA Region 2-AA tournament at Wilmington Island Club with a 162, followed by Hilton Head Christian at 163, Colleton Prep at 176, and St. Andrew's at 181. Davy Clay led St. Andrew's with a 42 and was named all-region the next day.",
+    "Divisions": [
+      {
+        "Division": "Boys",
+        "TeamScores": [
+          {
+            "School": "Beaufort Academy",
+            "Score": 162,
+            "IsStAndrews": false,
+            "SchoolID": "sc-beaufort-academy-beaufort"
+          },
+          {
+            "School": "Hilton Head Christian Academy",
+            "Score": 163,
+            "IsStAndrews": false,
+            "SchoolID": "sc-hilton-head-christian-academy-hilton-head-island"
+          },
+          {
+            "School": "Colleton Prep Academy",
+            "Score": 176,
+            "IsStAndrews": false,
+            "SchoolID": "sc-colleton-prep-academy-walterboro"
+          },
+          {
+            "School": "St. Andrew's",
+            "Score": 181,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          }
+        ],
+        "Medalist": null,
+        "Results": [
+          {
+            "PlayerID": 200003,
+            "PlayerName": "Davy Clay",
+            "School": "St. Andrew's",
+            "Score": 42,
+            "Award": "All-Region",
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerID": 200457,
+            "PlayerName": "Jason Victor",
+            "School": "St. Andrew's",
+            "Score": 45,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerID": 200210,
+            "PlayerName": "Chris Brinker",
+            "School": "St. Andrew's",
+            "Score": 45,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          },
+          {
+            "PlayerID": 200104,
+            "PlayerName": "Matt Hunt",
+            "School": "St. Andrew's",
+            "Score": 49,
+            "IsStAndrews": true,
+            "SchoolID": "ga-st-andrews-school-savannah"
+          }
+        ],
+        "ResultNote": "The April 27 all-region listing named Davy Clay to the All-SCISA Region 2-AA team."
+      }
+    ],
+    "OpponentSchoolIDs": [
+      "sc-beaufort-academy-beaufort",
+      "sc-hilton-head-christian-academy-hilton-head-island",
+      "sc-colleton-prep-academy-walterboro"
+    ]
+  },
+  {
     "MatchID": "20030303-patrick-henry",
     "Season": 2003,
     "Name": "St. Andrew's vs. Patrick Henry",

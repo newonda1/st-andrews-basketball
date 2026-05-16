@@ -1,5 +1,90 @@
 [
   {
+    "SeasonID": 2002,
+    "DisplaySeason": "Spring 2002",
+    "SourceSeasonLabel": "2001-02",
+    "TeamLevel": "Varsity",
+    "TeamName": "St. Andrew's Lions",
+    "HeadCoach": "",
+    "Staff": [],
+    "Players": [
+      {
+        "PlayerID": 200001,
+        "JerseyNumber": null,
+        "Grade": 12,
+        "GradeLabel": "Senior",
+        "Positions": [],
+        "PlayerName": "Cam Aldrich",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200005,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Quint Dixon",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200105,
+        "JerseyNumber": null,
+        "Grade": 10,
+        "GradeLabel": "Sophomore",
+        "Positions": [],
+        "PlayerName": "Will Massey",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200207,
+        "JerseyNumber": null,
+        "Grade": 10,
+        "GradeLabel": "Sophomore",
+        "Positions": [],
+        "PlayerName": "Jacob Rauers",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200307,
+        "JerseyNumber": null,
+        "Grade": 9,
+        "GradeLabel": "Freshman",
+        "Positions": [],
+        "PlayerName": "Omar Glenn",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200431,
+        "JerseyNumber": null,
+        "Grade": 10,
+        "GradeLabel": "Sophomore",
+        "Positions": [],
+        "PlayerName": "Will Chisholm",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200440,
+        "JerseyNumber": null,
+        "Grade": 10,
+        "GradeLabel": "Sophomore",
+        "Positions": [],
+        "PlayerName": "Hunter Saussy",
+        "Distinctions": []
+      },
+      {
+        "PlayerID": 200463,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [
+          "GK"
+        ],
+        "PlayerName": "Nick Kenny",
+        "Distinctions": []
+      }
+    ]
+  },
+  {
     "SeasonID": 2003,
     "DisplaySeason": "Spring 2003",
     "SourceSeasonLabel": "2002-03",
