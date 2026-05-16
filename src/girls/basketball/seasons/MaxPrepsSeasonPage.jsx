@@ -106,6 +106,8 @@ function assistToTurnover(assists, turnovers) {
 }
 
 function formatDate(game) {
+  if (game?.DisplayDate) return game.DisplayDate;
+
   const dateValue = Number(game?.Date);
   if (Number.isFinite(dateValue)) {
     return new Date(dateValue).toLocaleDateString("en-US", {

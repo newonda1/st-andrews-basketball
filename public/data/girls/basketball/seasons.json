@@ -5,10 +5,12 @@
     "YearEnd": 2001,
     "HeadCoach": "Deborah Morell",
     "RegionSeed": null,
-    "RegionFinish": null,
+    "RegionFinish": "Region Semifinals",
     "StateSeed": null,
     "StateFinish": null,
-    "ArchiveStatusNote": "Savannah Morning News preseason capsule listed Deb Morrell as third-year head coach, a 13-14 prior-year record, and a nine-player roster led by Kim Cooper, Meghan Lowe, Carie Bugos, Sarah Roddenberry, and Becca Cooper."
+    "ArchiveStatusNote": "NewsBank recovery covers 18 scored games and three record-path placeholders. The Feb. 21 region semifinal article listed St. Andrew's final record at 15-6; placeholders preserve the unrecovered results needed to reconcile that published line.",
+    "OverallWins": 15,
+    "OverallLosses": 6
   },
   {
     "SeasonID": 2001,

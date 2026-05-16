@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-16T14:59:12.782Z",
-  "itemCount": 1365,
+  "generatedAt": "2026-05-16T16:02:31.606Z",
+  "itemCount": 1370,
   "items": [
     {
       "id": "athletics-home",
@@ -7724,39 +7724,20 @@
       ]
     },
     {
-      "id": "baseball-athlete-200003",
+      "id": "baseball-athlete-200462",
       "type": "athlete",
-      "title": "Davy Clay",
-      "subtitle": "Baseball athlete - Class of 2004",
-      "to": "/athletics/boys/baseball/players/200003",
-      "keywords": [
-        "Baseball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Davy",
-        "Clay",
-        "Clay Davy",
-        "class of 2004",
-        "grad 2004"
-      ]
-    },
-    {
-      "id": "baseball-athlete-200005",
-      "type": "athlete",
-      "title": "Quint Dixon",
+      "title": "Ryan Stratz",
       "subtitle": "Baseball athlete",
-      "to": "/athletics/boys/baseball/players/200005",
+      "to": "/athletics/boys/baseball/players/200462",
       "keywords": [
         "Baseball",
         "athlete",
         "player",
         "stats",
         "records",
-        "Quint",
-        "Dixon",
-        "Dixon Quint"
+        "Ryan",
+        "Stratz",
+        "Stratz Ryan"
       ]
     },
     {
@@ -7779,23 +7760,6 @@
       ]
     },
     {
-      "id": "baseball-athlete-200102",
-      "type": "athlete",
-      "title": "Zack Hillard",
-      "subtitle": "Baseball athlete",
-      "to": "/athletics/boys/baseball/players/200102",
-      "keywords": [
-        "Baseball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Zack",
-        "Hillard",
-        "Hillard Zack"
-      ]
-    },
-    {
       "id": "baseball-athlete-200104",
       "type": "athlete",
       "title": "Matt Hunt",
@@ -7810,23 +7774,6 @@
         "Matt",
         "Hunt",
         "Hunt Matt"
-      ]
-    },
-    {
-      "id": "baseball-athlete-200462",
-      "type": "athlete",
-      "title": "Ryan Stratz",
-      "subtitle": "Baseball athlete",
-      "to": "/athletics/boys/baseball/players/200462",
-      "keywords": [
-        "Baseball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Ryan",
-        "Stratz",
-        "Stratz Ryan"
       ]
     },
     {
@@ -7865,6 +7812,59 @@
         "Hinton Beau",
         "class of 2004",
         "grad 2004"
+      ]
+    },
+    {
+      "id": "baseball-athlete-200003",
+      "type": "athlete",
+      "title": "Davy Clay",
+      "subtitle": "Baseball athlete - Class of 2004",
+      "to": "/athletics/boys/baseball/players/200003",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Davy",
+        "Clay",
+        "Clay Davy",
+        "class of 2004",
+        "grad 2004"
+      ]
+    },
+    {
+      "id": "baseball-athlete-200005",
+      "type": "athlete",
+      "title": "Quint Dixon",
+      "subtitle": "Baseball athlete",
+      "to": "/athletics/boys/baseball/players/200005",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Quint",
+        "Dixon",
+        "Dixon Quint"
+      ]
+    },
+    {
+      "id": "baseball-athlete-200102",
+      "type": "athlete",
+      "title": "Zack Hillard",
+      "subtitle": "Baseball athlete",
+      "to": "/athletics/boys/baseball/players/200102",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Zack",
+        "Hillard",
+        "Hillard Zack"
       ]
     },
     {
@@ -10428,6 +10428,59 @@
         "Evans LeighAnne",
         "class of 2004",
         "grad 2004"
+      ]
+    },
+    {
+      "id": "girls-basketball-athlete-200443",
+      "type": "athlete",
+      "title": "Danielle Praino",
+      "subtitle": "Girls Basketball athlete - Class of 2004",
+      "to": "/athletics/girls/basketball/players/200443",
+      "keywords": [
+        "Girls Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Danielle",
+        "Praino",
+        "Praino Danielle",
+        "class of 2004",
+        "grad 2004"
+      ]
+    },
+    {
+      "id": "girls-basketball-athlete-200445",
+      "type": "athlete",
+      "title": "Alysse Longwater",
+      "subtitle": "Girls Basketball athlete - Class of 2004",
+      "to": "/athletics/girls/basketball/players/200445",
+      "keywords": [
+        "Girls Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Alysse",
+        "Longwater",
+        "Longwater Alysse",
+        "class of 2004",
+        "grad 2004"
+      ]
+    },
+    {
+      "id": "girls-basketball-athlete-200327",
+      "type": "athlete",
+      "title": "Herrington",
+      "subtitle": "Girls Basketball athlete",
+      "to": "/athletics/girls/basketball/players/200327",
+      "keywords": [
+        "Girls Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Herrington"
       ]
     },
     {
@@ -18780,20 +18833,21 @@
       ]
     },
     {
-      "id": "boys-basketball-team-abundant-life-christian-academy",
+      "id": "boys-basketball-team-abundant-life-academy",
       "type": "team",
-      "title": "Abundant Life Christian Academy",
-      "subtitle": "Boys Basketball opponent history - Savannah, GA",
-      "to": "/athletics/boys/basketball/records/opponents?team=Abundant+Life+Christian+Academy",
+      "title": "Abundant Life Academy",
+      "subtitle": "Boys Basketball opponent history - Hardeeville, SC",
+      "to": "/athletics/boys/basketball/records/opponents?team=Abundant+Life+Academy",
       "keywords": [
         "Boys Basketball",
         "team",
         "opponent",
         "history",
         "records",
-        "Abundant Life Christian Academy",
-        "Savannah",
-        "GA"
+        "Abundant Life Academy",
+        "Abundant Life",
+        "Hardeeville",
+        "SC"
       ]
     },
     {
@@ -18919,24 +18973,6 @@
       ]
     },
     {
-      "id": "boys-basketball-team-abundant-life-academy",
-      "type": "team",
-      "title": "Abundant Life Academy",
-      "subtitle": "Boys Basketball opponent history - Hardeeville, SC",
-      "to": "/athletics/boys/basketball/records/opponents?team=Abundant+Life+Academy",
-      "keywords": [
-        "Boys Basketball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Abundant Life Academy",
-        "Abundant Life",
-        "Hardeeville",
-        "SC"
-      ]
-    },
-    {
       "id": "boys-basketball-team-unknown-opponent",
       "type": "team",
       "title": "Unknown opponent",
@@ -19001,6 +19037,23 @@
         "records",
         "Providence Christian School",
         "Lions",
+        "Savannah",
+        "GA"
+      ]
+    },
+    {
+      "id": "boys-basketball-team-abundant-life-christian-academy",
+      "type": "team",
+      "title": "Abundant Life Christian Academy",
+      "subtitle": "Boys Basketball opponent history - Savannah, GA",
+      "to": "/athletics/boys/basketball/records/opponents?team=Abundant+Life+Christian+Academy",
+      "keywords": [
+        "Boys Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Abundant Life Christian Academy",
         "Savannah",
         "GA"
       ]
@@ -20656,6 +20709,24 @@
       ]
     },
     {
+      "id": "baseball-team-abundant-life-academy",
+      "type": "team",
+      "title": "Abundant Life Academy",
+      "subtitle": "Baseball opponent history - Hardeeville, SC",
+      "to": "/athletics/boys/baseball/records/opponents?team=Abundant+Life+Academy",
+      "keywords": [
+        "Baseball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Abundant Life Academy",
+        "Abundant Life",
+        "Hardeeville",
+        "SC"
+      ]
+    },
+    {
       "id": "baseball-team-memorial-day-school",
       "type": "team",
       "title": "Memorial Day School",
@@ -20902,24 +20973,6 @@
         "records",
         "St. John's Christian Academy",
         "Moncks Corner",
-        "SC"
-      ]
-    },
-    {
-      "id": "baseball-team-abundant-life-academy",
-      "type": "team",
-      "title": "Abundant Life Academy",
-      "subtitle": "Baseball opponent history - Hardeeville, SC",
-      "to": "/athletics/boys/baseball/records/opponents?team=Abundant+Life+Academy",
-      "keywords": [
-        "Baseball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Abundant Life Academy",
-        "Abundant Life",
-        "Hardeeville",
         "SC"
       ]
     },
@@ -21835,24 +21888,6 @@
       ]
     },
     {
-      "id": "girls-basketball-team-patrick-henry-academy",
-      "type": "team",
-      "title": "Patrick Henry Academy",
-      "subtitle": "Girls Basketball opponent history - Estill, SC",
-      "to": "/athletics/girls/basketball/records/opponents?team=Patrick+Henry+Academy",
-      "keywords": [
-        "Girls Basketball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Patrick Henry Academy",
-        "Patriots",
-        "Estill",
-        "SC"
-      ]
-    },
-    {
       "id": "girls-basketball-team-abundant-life-academy",
       "type": "team",
       "title": "Abundant Life Academy",
@@ -21868,6 +21903,80 @@
         "Abundant Life",
         "Hardeeville",
         "SC"
+      ]
+    },
+    {
+      "id": "girls-basketball-team-sea-island-academy",
+      "type": "team",
+      "title": "Sea Island Academy",
+      "subtitle": "Girls Basketball opponent history - Johns Island, SC",
+      "to": "/athletics/girls/basketball/records/opponents?team=Sea+Island+Academy",
+      "keywords": [
+        "Girls Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Sea Island Academy",
+        "Sea Island",
+        "Sun Devils",
+        "Johns Island",
+        "SC"
+      ]
+    },
+    {
+      "id": "girls-basketball-team-east-rockaway-high-school",
+      "type": "team",
+      "title": "East Rockaway High School",
+      "subtitle": "Girls Basketball opponent history - East Rockaway, NY",
+      "to": "/athletics/girls/basketball/records/opponents?team=East+Rockaway+High+School",
+      "keywords": [
+        "Girls Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "East Rockaway High School",
+        "East Rockaway",
+        "NY"
+      ]
+    },
+    {
+      "id": "girls-basketball-team-memorial-day-school",
+      "type": "team",
+      "title": "Memorial Day School",
+      "subtitle": "Girls Basketball opponent history - Savannah, GA",
+      "to": "/athletics/girls/basketball/records/opponents?team=Memorial+Day+School",
+      "keywords": [
+        "Girls Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Memorial Day School",
+        "Memorial Day",
+        "Matadors",
+        "Savannah",
+        "GA"
+      ]
+    },
+    {
+      "id": "girls-basketball-team-pinewood-christian-academy",
+      "type": "team",
+      "title": "Pinewood Christian Academy",
+      "subtitle": "Girls Basketball opponent history - Bellville, GA",
+      "to": "/athletics/girls/basketball/records/opponents?team=Pinewood+Christian+Academy",
+      "keywords": [
+        "Girls Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Pinewood Christian Academy",
+        "Pinewood Christian",
+        "Patriots",
+        "Bellville",
+        "GA"
       ]
     },
     {
@@ -21890,37 +21999,38 @@
       ]
     },
     {
-      "id": "girls-basketball-team-hilton-head-preparatory-school",
+      "id": "girls-basketball-team-colleton-prep-academy",
       "type": "team",
-      "title": "Hilton Head Preparatory School",
-      "subtitle": "Girls Basketball opponent history - Hilton Head Island, SC",
-      "to": "/athletics/girls/basketball/records/opponents?team=Hilton+Head+Preparatory+School",
+      "title": "Colleton Prep Academy",
+      "subtitle": "Girls Basketball opponent history - Walterboro, SC",
+      "to": "/athletics/girls/basketball/records/opponents?team=Colleton+Prep+Academy",
       "keywords": [
         "Girls Basketball",
         "team",
         "opponent",
         "history",
         "records",
-        "Hilton Head Preparatory School",
-        "Hilton Head Prep",
-        "Dolphins",
-        "Hilton Head Island",
+        "Colleton Prep Academy",
+        "War Hawks",
+        "Walterboro",
         "SC"
       ]
     },
     {
-      "id": "girls-basketball-team-unknown-opponent",
+      "id": "girls-basketball-team-st-john-s-christian-academy",
       "type": "team",
-      "title": "Unknown opponent",
-      "subtitle": "Girls Basketball opponent history",
-      "to": "/athletics/girls/basketball/records/opponents?team=Unknown+opponent",
+      "title": "St. John's Christian Academy",
+      "subtitle": "Girls Basketball opponent history - Moncks Corner, SC",
+      "to": "/athletics/girls/basketball/records/opponents?team=St.+John%27s+Christian+Academy",
       "keywords": [
         "Girls Basketball",
         "team",
         "opponent",
         "history",
         "records",
-        "Unknown opponent"
+        "St. John's Christian Academy",
+        "Moncks Corner",
+        "SC"
       ]
     },
     {
@@ -21960,21 +22070,73 @@
       ]
     },
     {
-      "id": "girls-basketball-team-colleton-prep-academy",
+      "id": "girls-basketball-team-hilton-head-christian-academy",
       "type": "team",
-      "title": "Colleton Prep Academy",
-      "subtitle": "Girls Basketball opponent history - Walterboro, SC",
-      "to": "/athletics/girls/basketball/records/opponents?team=Colleton+Prep+Academy",
+      "title": "Hilton Head Christian Academy",
+      "subtitle": "Girls Basketball opponent history - Hilton Head Island, SC",
+      "to": "/athletics/girls/basketball/records/opponents?team=Hilton+Head+Christian+Academy",
       "keywords": [
         "Girls Basketball",
         "team",
         "opponent",
         "history",
         "records",
-        "Colleton Prep Academy",
-        "War Hawks",
-        "Walterboro",
+        "Hilton Head Christian Academy",
+        "Eagles",
+        "Hilton Head Island",
         "SC"
+      ]
+    },
+    {
+      "id": "girls-basketball-team-patrick-henry-academy",
+      "type": "team",
+      "title": "Patrick Henry Academy",
+      "subtitle": "Girls Basketball opponent history - Estill, SC",
+      "to": "/athletics/girls/basketball/records/opponents?team=Patrick+Henry+Academy",
+      "keywords": [
+        "Girls Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Patrick Henry Academy",
+        "Patriots",
+        "Estill",
+        "SC"
+      ]
+    },
+    {
+      "id": "girls-basketball-team-hilton-head-preparatory-school",
+      "type": "team",
+      "title": "Hilton Head Preparatory School",
+      "subtitle": "Girls Basketball opponent history - Hilton Head Island, SC",
+      "to": "/athletics/girls/basketball/records/opponents?team=Hilton+Head+Preparatory+School",
+      "keywords": [
+        "Girls Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Hilton Head Preparatory School",
+        "Hilton Head Prep",
+        "Dolphins",
+        "Hilton Head Island",
+        "SC"
+      ]
+    },
+    {
+      "id": "girls-basketball-team-unknown-opponent",
+      "type": "team",
+      "title": "Unknown opponent",
+      "subtitle": "Girls Basketball opponent history",
+      "to": "/athletics/girls/basketball/records/opponents?team=Unknown+opponent",
+      "keywords": [
+        "Girls Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Unknown opponent"
       ]
     },
     {
@@ -21997,23 +22159,6 @@
       ]
     },
     {
-      "id": "girls-basketball-team-st-john-s-christian-academy",
-      "type": "team",
-      "title": "St. John's Christian Academy",
-      "subtitle": "Girls Basketball opponent history - Moncks Corner, SC",
-      "to": "/athletics/girls/basketball/records/opponents?team=St.+John%27s+Christian+Academy",
-      "keywords": [
-        "Girls Basketball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "St. John's Christian Academy",
-        "Moncks Corner",
-        "SC"
-      ]
-    },
-    {
       "id": "girls-basketball-team-st-paul-s-country-day-school",
       "type": "team",
       "title": "St. Paul's Country Day School",
@@ -22028,43 +22173,6 @@
         "St. Paul's Country Day School",
         "Hollywood",
         "SC"
-      ]
-    },
-    {
-      "id": "girls-basketball-team-hilton-head-christian-academy",
-      "type": "team",
-      "title": "Hilton Head Christian Academy",
-      "subtitle": "Girls Basketball opponent history - Hilton Head Island, SC",
-      "to": "/athletics/girls/basketball/records/opponents?team=Hilton+Head+Christian+Academy",
-      "keywords": [
-        "Girls Basketball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Hilton Head Christian Academy",
-        "Eagles",
-        "Hilton Head Island",
-        "SC"
-      ]
-    },
-    {
-      "id": "girls-basketball-team-memorial-day-school",
-      "type": "team",
-      "title": "Memorial Day School",
-      "subtitle": "Girls Basketball opponent history - Savannah, GA",
-      "to": "/athletics/girls/basketball/records/opponents?team=Memorial+Day+School",
-      "keywords": [
-        "Girls Basketball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Memorial Day School",
-        "Memorial Day",
-        "Matadors",
-        "Savannah",
-        "GA"
       ]
     },
     {
@@ -22172,25 +22280,6 @@
         "Carolina Academy",
         "Lake City",
         "SC"
-      ]
-    },
-    {
-      "id": "girls-basketball-team-pinewood-christian-academy",
-      "type": "team",
-      "title": "Pinewood Christian Academy",
-      "subtitle": "Girls Basketball opponent history - Bellville, GA",
-      "to": "/athletics/girls/basketball/records/opponents?team=Pinewood+Christian+Academy",
-      "keywords": [
-        "Girls Basketball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Pinewood Christian Academy",
-        "Pinewood Christian",
-        "Patriots",
-        "Bellville",
-        "GA"
       ]
     },
     {

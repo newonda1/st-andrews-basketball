@@ -1,5 +1,17 @@
 [
   {
+    "SeasonID": 2001,
+    "HeadCoach": "",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null,
+    "OverallWins": 1,
+    "OverallLosses": 0,
+    "OverallTies": 0,
+    "StatusNote": "NewsBank recovery currently includes the March 7, 2001 published opener against Abundant Life Academy only."
+  },
+  {
     "SeasonID": 2002,
     "HeadCoach": "",
     "RegionSeed": null,

@@ -18,7 +18,14 @@
         "PlayerID": 200315,
         "JerseyNumber": null,
         "Grade": 10,
-        "Subline": "Key player in Savannah Morning News preseason preview"
+        "Subline": "Final regular-season statistics credited her with 317 points and 57 steals in 20 games",
+        "GamesPlayed": 20,
+        "SeasonTotals": {
+          "Points": 317,
+          "Steals": 57,
+          "FTM": 91,
+          "FTA": 151
+        }
       },
       {
         "PlayerID": 200404,
@@ -30,13 +37,41 @@
         "PlayerID": 200318,
         "JerseyNumber": null,
         "Grade": 11,
-        "Subline": "Savannah Christian transfer and key player in preseason preview"
+        "Subline": "Savannah Christian transfer and final regular-season steals leader with 49 steals",
+        "GamesPlayed": 20,
+        "SeasonTotals": {
+          "Steals": 49
+        }
       },
       {
         "PlayerID": 200406,
         "JerseyNumber": null,
         "Grade": 9,
         "Subline": "Key player in Savannah Morning News preseason preview"
+      },
+      {
+        "PlayerID": 200405,
+        "JerseyNumber": null,
+        "Grade": 9,
+        "Subline": "Listed in the 2001-02 roster path; added to the 2000-01 archive roster from program continuity"
+      },
+      {
+        "PlayerID": 200443,
+        "JerseyNumber": null,
+        "Grade": 9,
+        "Subline": "Scored in the Memorial Christmas Tournament box score"
+      },
+      {
+        "PlayerID": 200445,
+        "JerseyNumber": null,
+        "Grade": 9,
+        "Subline": "Scored in the Memorial Christmas Tournament box score"
+      },
+      {
+        "PlayerID": 200327,
+        "JerseyNumber": null,
+        "Grade": null,
+        "Subline": "Published as Herrington/Harrington in early-season box scores"
       }
     ]
   },

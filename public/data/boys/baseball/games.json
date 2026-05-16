@@ -1,5 +1,56 @@
 [
   {
+    "Season": 2001,
+    "GameID": 2001030601,
+    "Date": "2001-03-06",
+    "OpponentID": "sc-abundant-life-academy-hardeeville",
+    "Opponent": "Abundant Life Academy",
+    "OpponentAbbr": "ALA",
+    "LocationType": "Unknown",
+    "GameType": "Non-Region",
+    "Result": "W",
+    "TeamScore": 17,
+    "OpponentScore": 3,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "Opponent": [
+        0,
+        0,
+        1,
+        2,
+        0
+      ],
+      "StAndrews": [
+        3,
+        5,
+        7,
+        2,
+        0
+      ],
+      "OpponentTotals": {
+        "R": 3,
+        "H": 0,
+        "E": 6
+      },
+      "StAndrewsTotals": {
+        "R": 17,
+        "H": 16,
+        "E": 2
+      }
+    },
+    "WinningPitcher": "Ryan Stratz",
+    "LosingPitcher": "Robert Roper",
+    "Notes": "Ryan Stratz went 2-for-5 with a home run and three RBIs, Matt Hunt homered and drove in three, Adam Ciccio went 3-for-4 with two doubles and three RBIs, Jeff Smith doubled twice, and Beau Hinton added two hits.",
+    "SourceCitation": "\"BASEBALL,\" Savannah Morning News (GA), March 7, 2001, Page 4D.",
+    "SourceDate": "2001-03-07"
+  },
+  {
     "GameID": 2002030101,
     "OpponentID": "",
     "Opponent": "Unknown",

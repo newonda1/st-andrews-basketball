@@ -5102,8 +5102,8 @@
   },
   {
     "GameID": 20001201,
-    "OpponentID": "ga-abundant-life-christian-academy-savannah",
-    "Opponent": "Abundant Life Christian Academy",
+    "OpponentID": "sc-abundant-life-academy-hardeeville",
+    "Opponent": "Abundant Life Academy",
     "LocationType": "Away",
     "GameType": "Non-Region",
     "Result": "W",
@@ -5114,8 +5114,8 @@
   },
   {
     "GameID": 20001205,
-    "OpponentID": "ga-abundant-life-christian-academy-savannah",
-    "Opponent": "Abundant Life Christian Academy",
+    "OpponentID": "sc-abundant-life-academy-hardeeville",
+    "Opponent": "Abundant Life Academy",
     "LocationType": "Home",
     "GameType": "Non-Region",
     "Result": "W",
