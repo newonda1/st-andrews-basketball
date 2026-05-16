@@ -1,5 +1,29 @@
 [
   {
+    "SeasonID": 1999,
+    "YearStart": 1999,
+    "YearEnd": 2000,
+    "DisplaySeason": "1999",
+    "SourceSeasonLabel": "1999-00",
+    "HeadCoach": null,
+    "OverallWins": null,
+    "OverallLosses": null,
+    "RegionWins": null,
+    "RegionLosses": null,
+    "RegionFinish": null,
+    "League": "SCISA",
+    "StateDivision": "SCISA AA",
+    "StateFinish": null,
+    "SourceCitation": "\"CRYSTAL SHINES FOR BEACH,\" Savannah Morning News, 1999-09-24, Page 6D",
+    "ShowSeasonRecapPlaceholder": false,
+    "ShowSeasonImagesPlaceholder": true,
+    "ArchiveStatusNote": "Fall 1999 NewsBank recovery found one schedule listing for St. Andrew's at Williamsburg but no reported match result or player stat line.",
+    "SeasonRecapParagraphs": [
+      "The recovered fall 1999 NewsBank window confirms St. Andrew's had a volleyball date at Williamsburg on Sept. 24, but no score or player statistics were found in the St. Andrew's, Andrews, broad name, or OCR-variant sweeps.",
+      "The season remains a schedule-only shell until a result source is found."
+    ]
+  },
+  {
     "SeasonID": 2000,
     "YearStart": 2000,
     "YearEnd": 2001,

@@ -60,20 +60,23 @@
     "SeasonID": 2000,
     "SeasonLabel": "1999-00",
     "Classification": "SCISA",
-    "StatusBadge": "not-found",
-    "StatusNote": "No public MileSplit Georgia or South Carolina result files were found for St. Andrew's during this crawl. Season shell retained for 1999-00 so the SCISA-era range stays visible.",
-    "FirstRegularSeasonMeet": "",
+    "StatusBadge": "newsbank",
+    "StatusNote": "NewsBank recovery found a St. Andrew's boys team finish at the Seahawk Cross Country Invitational.",
+    "FirstRegularSeasonMeet": "1999-09-04",
     "RegionMeetDate": "",
     "StateMeetStart": "",
     "StateMeetEnd": "",
     "StateMeetLocation": "",
     "RecapParagraphs": [
-      "No public MileSplit Georgia or South Carolina result files were found for St. Andrew's during this crawl. The season remains listed because the requested SCISA-era crawl covers 1999-00."
+      "The fall 1999 NewsBank sweep recovered one St. Andrew's cross country result from the Seahawk Cross Country Invitational at Hilton Head High School.",
+      "St. Andrew's placed 8th in the boys team standings with 219 points in a 3.1-mile meet won by Summerville. No St. Andrew's individual times were printed in the recovered result.",
+      "The girls team standings did not list St. Andrew's."
     ],
     "HighlightNotes": [
-      "No public St. Andrew's MileSplit result rows were found.",
-      "Georgia and South Carolina MileSplit pages were checked for this crawl."
-    ]
+      "Boys: 8th at Seahawk Cross Country Invitational, 219 points.",
+      "Source: Savannah Morning News, Sept. 5, 1999."
+    ],
+    "SourceCitation": "\"SEAHAWK CROSS COUNTRY INVITATIONAL,\" Savannah Morning News, 1999-09-05, Page 4C"
   },
   {
     "SeasonID": 2001,

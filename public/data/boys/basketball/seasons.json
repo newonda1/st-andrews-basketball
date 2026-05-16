@@ -213,11 +213,13 @@
     "SeasonID": 1999,
     "YearStart": 1999,
     "YearEnd": 2000,
-    "HeadCoach": "Clarence Wilson",
+    "HeadCoach": "Dave Clay",
     "RegionSeed": null,
     "RegionFinish": "Region Champion",
     "StateSeed": null,
-    "StateFinish": null
+    "StateFinish": null,
+    "SourceCitation": "\"BOYS PREVIEW,\" Savannah Morning News, 1999-11-23, Page 6D; \"JENKINS SCORES 100 IN VICTORY AT JOE GREENE TIP-OFF,\" Savannah Morning News, 1999-11-24, Page 5D",
+    "ArchiveStatusNote": "Fall 1999 NewsBank recovery added the preseason preview, Evan Aldrich's Coastal Empire second-team note and the Nov. 23 Pinewood Prep result. Full winter sweep can complete the schedule path."
   },
   {
     "SeasonID": 2000,

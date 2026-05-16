@@ -1,5 +1,17 @@
 [
   {
+    "SeasonID": 1999,
+    "YearStart": 1999,
+    "YearEnd": 2000,
+    "HeadCoach": "Deborah Morell",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null,
+    "SourceCitation": "\"GIRLS PREVIEW,\" Savannah Morning News, 1999-11-24, Page 4D",
+    "ArchiveStatusNote": "Fall 1999 NewsBank recovery found the preseason preview. Deb Morell reported only five players combined for varsity and JV and said the first three games had been canceled while the season remained in jeopardy."
+  },
+  {
     "SeasonID": 2000,
     "YearStart": 2000,
     "YearEnd": 2001,

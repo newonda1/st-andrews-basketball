@@ -969,12 +969,72 @@
     "GameUrl": "",
     "LocationType": "Home",
     "Venue": "St. Andrew's School",
-    "Notes": "",
-    "GameType": "Regular Season",
+    "Notes": "Season opener; Byrnes ended St. Andrew's 11-game winning streak.",
+    "GameType": "Non-Region",
     "Result": "L",
     "TeamScore": 0,
     "OpponentScore": 6,
-    "OpponentID": "sc-james-f-byrnes-academy-quinby"
+    "OpponentID": "sc-james-f-byrnes-academy-quinby",
+    "LineScore": [
+      {
+        "Team": "James F. Byrnes",
+        "Abbr": "JFB",
+        "Scores": [
+          0,
+          0,
+          6,
+          0
+        ],
+        "Total": 6
+      },
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "Total": 0
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "3",
+        "Team": "James F. Byrnes",
+        "TeamAbbr": "JFB",
+        "Play": "Clay Munch 8 run",
+        "Conversion": "conversion failed",
+        "Points": 6
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "Total Yards",
+        "StAndrews": "101",
+        "Opponent": "170"
+      },
+      {
+        "Label": "Rushing Yards",
+        "StAndrews": "93",
+        "Opponent": ""
+      },
+      {
+        "Label": "Passing Yards",
+        "StAndrews": "18",
+        "Opponent": ""
+      }
+    ],
+    "RecapTitle": "Byrnes Ends Saints' Winning Streak",
+    "Recap": "Byrnes Academy held St. Andrew's to 101 total yards and beat the defending SCISA AA champions 6-0 in the opener. Michael Paton ran 16 times for 72 yards, Evan Aldrich completed 2 of 9 passes for 18 yards in his first quarterback start, and Justin Dixon returned a kickoff 47 yards after Byrnes' third-quarter touchdown.",
+    "SourceDate": "1999-08-28",
+    "SourcePublication": "Savannah Morning News",
+    "SourceAuthor": "Victor Fernandes",
+    "SourceByline": "Victor Fernandes",
+    "SourcePage": "1F",
+    "SourceSection": "Sports",
+    "SourceCitation": "Victor Fernandes, \"ST. ANDREW'S FALLS TO BYRNE IN SEASON OPENER,\" Savannah Morning News, 1999-08-28, Page 1F"
   },
   {
     "GameID": 19990903,
@@ -994,12 +1054,119 @@
     "GameUrl": "",
     "LocationType": "Away",
     "Venue": "Dorchester Academy",
-    "Notes": "",
-    "GameType": "Regular Season",
+    "Notes": "Matt Mahany's 25-yard field goal gave St. Andrew's an early lead.",
+    "GameType": "Non-Region",
     "Result": "L",
     "TeamScore": 3,
-    "OpponentScore": 27,
-    "OpponentID": "sc-dorchester-academy-st-george"
+    "OpponentScore": 26,
+    "OpponentID": "sc-dorchester-academy-st-george",
+    "LineScore": [
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [
+          3,
+          0,
+          0,
+          0
+        ],
+        "Total": 3
+      },
+      {
+        "Team": "Dorchester",
+        "Abbr": "DOR",
+        "Scores": [
+          7,
+          6,
+          7,
+          6
+        ],
+        "Total": 26
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "1",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Matt Mahany 25 field goal",
+        "Conversion": "",
+        "Points": 3
+      },
+      {
+        "Quarter": "1",
+        "Team": "Dorchester",
+        "TeamAbbr": "DOR",
+        "Play": "Ryan Rice 30 run",
+        "Conversion": "kick good",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "Dorchester",
+        "TeamAbbr": "DOR",
+        "Play": "Rice 62 pass from Dereck Weathers",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "3",
+        "Team": "Dorchester",
+        "TeamAbbr": "DOR",
+        "Play": "Rice 40 pass from Eric Snyder",
+        "Conversion": "kick good",
+        "Points": 7
+      },
+      {
+        "Quarter": "4",
+        "Team": "Dorchester",
+        "TeamAbbr": "DOR",
+        "Play": "Rice 19 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "Rushing Yards",
+        "StAndrews": "182",
+        "Opponent": "123"
+      },
+      {
+        "Label": "Passing Yards",
+        "StAndrews": "16",
+        "Opponent": "127"
+      },
+      {
+        "Label": "Comp.-Att.-Int.",
+        "StAndrews": "2-15-2",
+        "Opponent": "4-10-0"
+      },
+      {
+        "Label": "Fumbles-lost",
+        "StAndrews": "0-0",
+        "Opponent": "2-2"
+      },
+      {
+        "Label": "Punts",
+        "StAndrews": "3-42",
+        "Opponent": "2-35"
+      },
+      {
+        "Label": "Penalties",
+        "StAndrews": "6-45",
+        "Opponent": "4-20"
+      }
+    ],
+    "RecapTitle": "Dorchester Answers Early Field Goal",
+    "Recap": "Matt Mahany opened the scoring with a 25-yard field goal, but Ryan Rice scored four touchdowns for Dorchester in a 26-3 non-region loss. St. Andrew's ran for 182 yards, while Dorchester paired 123 rushing yards with 127 through the air.",
+    "SourceDate": "1999-09-04",
+    "SourcePublication": "Savannah Morning News",
+    "SourceAuthor": "Savannah Morning News",
+    "SourceByline": "Savannah Morning News",
+    "SourcePage": "5F",
+    "SourceSection": "Sports",
+    "SourceCitation": "\"SAMPLES LEADS SWAINSBORO PAST SCREVEN CO.,\" Savannah Morning News, 1999-09-04, Page 5F"
   },
   {
     "GameID": 19990910,
@@ -1019,12 +1186,71 @@
     "GameUrl": "",
     "LocationType": "Away",
     "Venue": "Thomas Heyward Academy",
-    "Notes": "",
-    "GameType": "Regular Season",
+    "Notes": "Evan Aldrich's fourth-quarter touchdown pass to Ryan Stratz decided the game.",
+    "GameType": "Non-Region",
     "Result": "W",
     "TeamScore": 13,
     "OpponentScore": 6,
-    "OpponentID": "sc-thomas-heyward-academy-ridgeland"
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
+    "LineScore": [
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [
+          0,
+          7,
+          0,
+          6
+        ],
+        "Total": 13
+      },
+      {
+        "Team": "Thomas Heyward",
+        "Abbr": "TH",
+        "Scores": [
+          0,
+          0,
+          6,
+          0
+        ],
+        "Total": 6
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "2",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Michael Paton 4 run",
+        "Conversion": "Matt Mahany kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "3",
+        "Team": "Thomas Heyward",
+        "TeamAbbr": "TH",
+        "Play": "Derrick Smith 8 pass from Nick Shuford",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "4",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Ryan Stratz 41 pass from Evan Aldrich",
+        "Conversion": "kick failed",
+        "Points": 6
+      }
+    ],
+    "RecapTitle": "Aldrich-to-Stratz Lifts Saints",
+    "Recap": "Evan Aldrich threw a 41-yard touchdown pass to Ryan Stratz in the fourth quarter to give St. Andrew's a 13-6 road win at Thomas Heyward. Michael Paton, printed as Payton in the roundup, opened the scoring with a 4-yard run and later earned Player of the Week mention with 219 rushing yards.",
+    "SourceDate": "1999-09-11",
+    "SourcePublication": "Savannah Morning News",
+    "SourceAuthor": "Savannah Morning News",
+    "SourceByline": "Savannah Morning News",
+    "SourcePage": "6F",
+    "SourceSection": "Sports",
+    "SourceCitation": "\"PREP ROUNDUP,\" Savannah Morning News, 1999-09-11, Page 6F"
   },
   {
     "GameID": 19990917,
@@ -1044,12 +1270,21 @@
     "GameUrl": "",
     "LocationType": "Home",
     "Venue": "St. Andrew's School",
-    "Notes": "Postponed",
+    "Notes": "Postponed by Hurricane Floyd and later made up on Nov. 5.",
     "GameType": "Regular Season",
     "Result": "",
     "TeamScore": null,
     "OpponentScore": null,
-    "OpponentID": "sc-thomas-sumter-academy-dalzell"
+    "OpponentID": "sc-thomas-sumter-academy-dalzell",
+    "RecapTitle": "Hurricane Floyd Postponement",
+    "Recap": "Hurricane Floyd disrupted the local high school football schedule, pushing St. Andrew's SCISA date into the final week of the regular season.",
+    "SourceDate": "1999-09-17",
+    "SourcePublication": "Savannah Morning News",
+    "SourceAuthor": "Victor Fernandes",
+    "SourceByline": "Victor Fernandes",
+    "SourcePage": "1B",
+    "SourceSection": "Sports",
+    "SourceCitation": "Victor Fernandes, \"FLOYD SCRAMBLES PREP SKED,\" Savannah Morning News, 1999-09-17, Page 1B"
   },
   {
     "GameID": 19990924,
@@ -1069,12 +1304,175 @@
     "GameUrl": "",
     "LocationType": "Home",
     "Venue": "St. Andrew's School",
-    "Notes": "",
+    "Notes": "Michael Paton ran for five touchdowns as St. Andrew's piled up 459 rushing yards.",
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 55,
     "OpponentScore": 25,
-    "OpponentID": "sc-colleton-prep-academy-walterboro"
+    "OpponentID": "sc-colleton-prep-academy-walterboro",
+    "LineScore": [
+      {
+        "Team": "Colleton Prep",
+        "Abbr": "CP",
+        "Scores": [
+          6,
+          12,
+          0,
+          7
+        ],
+        "Total": 25
+      },
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [
+          14,
+          14,
+          13,
+          14
+        ],
+        "Total": 55
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "1",
+        "Team": "Colleton Prep",
+        "TeamAbbr": "CP",
+        "Play": "Hubbard 55 pass to Langdale",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "1",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Michael Paton 71 run",
+        "Conversion": "Matt Mahany kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "1",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Michael Paton 27 run",
+        "Conversion": "Matt Mahany kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Michael Paton 34 run",
+        "Conversion": "Matt Mahany kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Michael Paton 27 run",
+        "Conversion": "Matt Mahany kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "Colleton Prep",
+        "TeamAbbr": "CP",
+        "Play": "Langdale 2 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "2",
+        "Team": "Colleton Prep",
+        "TeamAbbr": "CP",
+        "Play": "Padgett fumble recovery in end zone",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "3",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Evan Aldrich 2 run",
+        "Conversion": "Matt Mahany kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "3",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Adam Ciccio 15 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "4",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Michael Paton 13 run",
+        "Conversion": "Matt Mahany kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "4",
+        "Team": "Colleton Prep",
+        "TeamAbbr": "CP",
+        "Play": "Stokes 40 pass from Langdale",
+        "Conversion": "kick good",
+        "Points": 7
+      },
+      {
+        "Quarter": "4",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Evan Aldrich 51 run",
+        "Conversion": "Matt Mahany kick",
+        "Points": 7
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "Rushing Yards",
+        "StAndrews": "459",
+        "Opponent": "49"
+      },
+      {
+        "Label": "Passing Yards",
+        "StAndrews": "76",
+        "Opponent": "288"
+      },
+      {
+        "Label": "Comp.-Att.-Int.",
+        "StAndrews": "3-6-0",
+        "Opponent": "20-56-3"
+      },
+      {
+        "Label": "Fumbles-lost",
+        "StAndrews": "1-1",
+        "Opponent": "0-0"
+      },
+      {
+        "Label": "Punts",
+        "StAndrews": "0-0",
+        "Opponent": "4-32.5"
+      },
+      {
+        "Label": "Penalties",
+        "StAndrews": "12-100",
+        "Opponent": "8-85"
+      }
+    ],
+    "RecapTitle": "Paton Scores Five in Region Win",
+    "Recap": "Michael Paton ran for 240 yards and five touchdowns, Evan Aldrich added 105 rushing yards and two scores, and Adam Ciccio had 111 rushing yards as St. Andrew's beat Colleton Prep 55-25. Zack Hillard led the defense with nine tackles and an interception.",
+    "SourceDate": "1999-09-25",
+    "SourcePublication": "Savannah Morning News",
+    "SourceAuthor": "Savannah Morning News",
+    "SourceByline": "Savannah Morning News",
+    "SourcePage": "4F",
+    "SourceSection": "Sports",
+    "SourceCitation": "\"TIGERS RUN OVER SCPS,\" Savannah Morning News, 1999-09-25, Page 4F"
   },
   {
     "GameID": 19991001,
@@ -1094,12 +1492,135 @@
     "GameUrl": "",
     "LocationType": "Away",
     "Venue": "Sea Island Academy",
-    "Notes": "",
+    "Notes": "Michael Paton set a school single-game rushing record with 259 yards.",
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 28,
     "OpponentScore": 21,
-    "OpponentID": "sc-sea-island-academy-johns-island"
+    "OpponentID": "sc-sea-island-academy-johns-island",
+    "LineScore": [
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [
+          0,
+          14,
+          6,
+          8
+        ],
+        "Total": 28
+      },
+      {
+        "Team": "Sea Island",
+        "Abbr": "SI",
+        "Scores": [
+          0,
+          7,
+          7,
+          7
+        ],
+        "Total": 21
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "2",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Michael Paton 32 run",
+        "Conversion": "Matt Mahany kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Michael Paton 40 run",
+        "Conversion": "Matt Mahany kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "Sea Island",
+        "TeamAbbr": "SI",
+        "Play": "Simmons 5 run",
+        "Conversion": "Marquez kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "3",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Michael Paton 56 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "3",
+        "Team": "Sea Island",
+        "TeamAbbr": "SI",
+        "Play": "Marquez 1 run",
+        "Conversion": "Marquez kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "4",
+        "Team": "Sea Island",
+        "TeamAbbr": "SI",
+        "Play": "Simmons 25 run",
+        "Conversion": "Marquez kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "4",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Michael Paton 15 run",
+        "Conversion": "Paton run",
+        "Points": 8
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "Rushing Yards",
+        "StAndrews": "307",
+        "Opponent": "297"
+      },
+      {
+        "Label": "Passing Yards",
+        "StAndrews": "43",
+        "Opponent": "106"
+      },
+      {
+        "Label": "Comp.-Att.-Int.",
+        "StAndrews": "1-5-0",
+        "Opponent": "8-16-0"
+      },
+      {
+        "Label": "Fumbles-lost",
+        "StAndrews": "1-1",
+        "Opponent": "2-0"
+      },
+      {
+        "Label": "Punts",
+        "StAndrews": "4-35",
+        "Opponent": "7-32"
+      },
+      {
+        "Label": "Penalties",
+        "StAndrews": "65",
+        "Opponent": "105"
+      }
+    ],
+    "RecapTitle": "Paton Record Carries Saints at Sea Island",
+    "Recap": "Michael Paton ran for 259 yards, scored all four St. Andrew's touchdowns, and added the decisive two-point conversion in a 28-21 region win at Sea Island. The Savannah Morning News feature the next week identified Paton's 259 yards as a school single-game rushing record.",
+    "SourceDate": "1999-10-02",
+    "SourcePublication": "Savannah Morning News",
+    "SourceAuthor": "Savannah Morning News",
+    "SourceByline": "Savannah Morning News",
+    "SourcePage": "4F",
+    "SourceSection": "Sports",
+    "SourceCitation": "\"WOODWARD LEADS CAVS PAST BRYAN CO., 33-6,\" Savannah Morning News, 1999-10-02, Page 4F"
   },
   {
     "GameID": 19991008,
@@ -1119,12 +1640,108 @@
     "GameUrl": "",
     "LocationType": "Away",
     "Venue": "Williamsburg Academy",
-    "Notes": "",
-    "GameType": "Regular Season",
+    "Notes": "Williamsburg held St. Andrew's to 161 total yards.",
+    "GameType": "Non-Region",
     "Result": "L",
     "TeamScore": 0,
     "OpponentScore": 20,
-    "OpponentID": "sc-williamsburg-academy-kingstree"
+    "OpponentID": "sc-williamsburg-academy-kingstree",
+    "LineScore": [
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "Total": 0
+      },
+      {
+        "Team": "Williamsburg",
+        "Abbr": "WA",
+        "Scores": [
+          7,
+          6,
+          0,
+          7
+        ],
+        "Total": 20
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "1",
+        "Team": "Williamsburg",
+        "TeamAbbr": "WA",
+        "Play": "Kee Belue 1 run",
+        "Conversion": "Hansen kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "Williamsburg",
+        "TeamAbbr": "WA",
+        "Play": "Patrick Gause 37 pass from Justin Kellahan",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "4",
+        "Team": "Williamsburg",
+        "TeamAbbr": "WA",
+        "Play": "Belue 3 run",
+        "Conversion": "Hansen kick",
+        "Points": 7
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "First Downs",
+        "StAndrews": "7",
+        "Opponent": "12"
+      },
+      {
+        "Label": "Rushing Yards",
+        "StAndrews": "156",
+        "Opponent": "218"
+      },
+      {
+        "Label": "Passing Yards",
+        "StAndrews": "5",
+        "Opponent": "110"
+      },
+      {
+        "Label": "Comp.-Att.-Int.",
+        "StAndrews": "1-3-2",
+        "Opponent": "6-11-0"
+      },
+      {
+        "Label": "Fumbles-lost",
+        "StAndrews": "2-2",
+        "Opponent": "0-0"
+      },
+      {
+        "Label": "Punts",
+        "StAndrews": "2-26",
+        "Opponent": "3-42"
+      },
+      {
+        "Label": "Penalties",
+        "StAndrews": "5-45",
+        "Opponent": "2-10"
+      }
+    ],
+    "RecapTitle": "Williamsburg Shuts Out Saints",
+    "Recap": "Williamsburg held St. Andrew's to 161 total yards in a 20-0 non-region loss. Michael Paton led the Saints with 105 rushing yards, and Zack Hillard registered 16 tackles.",
+    "SourceDate": "1999-10-09",
+    "SourcePublication": "Savannah Morning News",
+    "SourceAuthor": "Savannah Morning News",
+    "SourceByline": "Savannah Morning News",
+    "SourcePage": "4F",
+    "SourceSection": "Sports",
+    "SourceCitation": "\"WILLIAMSBURG SHUTS OUT ST. ANDREW'S 20-0,\" Savannah Morning News, 1999-10-09, Page 4F"
   },
   {
     "GameID": 19991015,
@@ -1144,12 +1761,115 @@
     "GameUrl": "",
     "LocationType": "Home",
     "Venue": "St. Andrew's School",
-    "Notes": "",
+    "Notes": "St. Andrew's led 12-7 before Calhoun's running game took over.",
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 12,
     "OpponentScore": 35,
-    "OpponentID": "sc-john-c-calhoun-academy-st-matthews"
+    "OpponentID": "sc-john-c-calhoun-academy-st-matthews",
+    "LineScore": [
+      {
+        "Team": "Calhoun",
+        "Abbr": "CA",
+        "Scores": [
+          7,
+          14,
+          14,
+          0
+        ],
+        "Total": 35
+      },
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [
+          12,
+          0,
+          0,
+          0
+        ],
+        "Total": 12
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "1",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Adam Ciccio 20 run",
+        "Conversion": "conversion failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "1",
+        "Team": "Calhoun",
+        "TeamAbbr": "CA",
+        "Play": "Todd Coleman 2 run",
+        "Conversion": "kick good",
+        "Points": 7
+      },
+      {
+        "Quarter": "1",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Evan Aldrich 3 run",
+        "Conversion": "conversion failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "2",
+        "Team": "Calhoun",
+        "TeamAbbr": "CA",
+        "Play": "8-yard run",
+        "Conversion": "fake kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "2",
+        "Team": "Calhoun",
+        "TeamAbbr": "CA",
+        "Play": "Brian Covington run",
+        "Conversion": "two-point conversion",
+        "Points": 8
+      },
+      {
+        "Quarter": "3",
+        "Team": "Calhoun",
+        "TeamAbbr": "CA",
+        "Play": "Josh Sanchez 8 run",
+        "Conversion": "kick good",
+        "Points": 7
+      },
+      {
+        "Quarter": "3",
+        "Team": "Calhoun",
+        "TeamAbbr": "CA",
+        "Play": "Todd Coleman 54 run",
+        "Conversion": "kick good",
+        "Points": 7
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "Calhoun rushing attempts",
+        "StAndrews": "",
+        "Opponent": "49"
+      },
+      {
+        "Label": "Calhoun rushing yards",
+        "StAndrews": "",
+        "Opponent": "336"
+      }
+    ],
+    "RecapTitle": "Calhoun Ground Game Rallies Past Saints",
+    "Recap": "St. Andrew's recovered a short opening kickoff and scored on runs by Adam Ciccio and Evan Aldrich to lead 12-7, but Calhoun Academy rushed 49 times for 336 yards and pulled away for a 35-12 region win. Todd Coleman led Calhoun with 170 yards on 19 carries.",
+    "SourceDate": "1999-10-16",
+    "SourcePublication": "Savannah Morning News",
+    "SourceAuthor": "Brian K. Davis",
+    "SourceByline": "Brian K. Davis",
+    "SourcePage": "6F",
+    "SourceSection": "Sports",
+    "SourceCitation": "Brian K. Davis, \"CALHOUN ACADEMY BEATS HARD-FIGHTING ST. ANDREW'S,\" Savannah Morning News, 1999-10-16, Page 6F"
   },
   {
     "GameID": 19991022,
@@ -1169,12 +1889,21 @@
     "GameUrl": "",
     "LocationType": "Home",
     "Venue": "St. Andrew's School",
-    "Notes": "",
+    "Notes": "Score recovered from the Savannah Morning News statewide scoreboard.",
     "GameType": "Region",
     "Result": "W",
     "TeamScore": 47,
     "OpponentScore": 12,
-    "OpponentID": "sc-patrick-henry-academy-estill"
+    "OpponentID": "sc-patrick-henry-academy-estill",
+    "RecapTitle": "Scoreboard Result",
+    "Recap": "The Savannah Morning News statewide scoreboard listed St. Andrew's 47, Patrick Henry 12. No individual St. Andrew's statistics were printed in the recovered article set.",
+    "SourceDate": "1999-10-23",
+    "SourcePublication": "Savannah Morning News",
+    "SourceAuthor": "Savannah Morning News",
+    "SourceByline": "Savannah Morning News",
+    "SourcePage": "7F",
+    "SourceSection": "Sports",
+    "SourceCitation": "\"FRIDAY'S GAMES GLOVER PACES SOUTH EFFINGHAM OVER TATTNALL,\" Savannah Morning News, 1999-10-23, Page 7F"
   },
   {
     "GameID": 19991029,
@@ -1194,12 +1923,140 @@
     "GameUrl": "",
     "LocationType": "Away",
     "Venue": "Hilton Head Preparatory School",
-    "Notes": "",
+    "Notes": "Hilton Head Prep won on a 27-yard field goal with 2:11 left.",
     "GameType": "Region",
     "Result": "L",
     "TeamScore": 20,
     "OpponentScore": 23,
-    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island"
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
+    "LineScore": [
+      {
+        "Team": "Hilton Head Prep",
+        "Abbr": "HHP",
+        "Scores": [
+          6,
+          6,
+          0,
+          11
+        ],
+        "Total": 23
+      },
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [
+          0,
+          0,
+          12,
+          8
+        ],
+        "Total": 20
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "1",
+        "Team": "Hilton Head Prep",
+        "TeamAbbr": "HHP",
+        "Play": "Bobby Hopper 34 pass from Tanner Ware",
+        "Conversion": "kick blocked",
+        "Points": 6
+      },
+      {
+        "Quarter": "2",
+        "Team": "Hilton Head Prep",
+        "TeamAbbr": "HHP",
+        "Play": "Colin Spar 32 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "3",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Jeff Smith 66 pass from Evan Aldrich",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "3",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Justin Dixon 32 pass from Evan Aldrich",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "4",
+        "Team": "Hilton Head Prep",
+        "TeamAbbr": "HHP",
+        "Play": "Bobby Hopper 76 pass from Tanner Ware",
+        "Conversion": "Ware run",
+        "Points": 8
+      },
+      {
+        "Quarter": "4",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Michael Paton 26 run",
+        "Conversion": "Paton run",
+        "Points": 8
+      },
+      {
+        "Quarter": "4",
+        "Team": "Hilton Head Prep",
+        "TeamAbbr": "HHP",
+        "Play": "Laird Dorsner 27 field goal",
+        "Conversion": "",
+        "Points": 3
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "First Downs",
+        "StAndrews": "8",
+        "Opponent": "11"
+      },
+      {
+        "Label": "Rushing Yards",
+        "StAndrews": "108",
+        "Opponent": "230"
+      },
+      {
+        "Label": "Passing Yards",
+        "StAndrews": "151",
+        "Opponent": "118"
+      },
+      {
+        "Label": "Comp.-Att.-Int.",
+        "StAndrews": "8-17-1",
+        "Opponent": "3-7-1"
+      },
+      {
+        "Label": "Fumbles-lost",
+        "StAndrews": "0-0",
+        "Opponent": "1-1"
+      },
+      {
+        "Label": "Punts",
+        "StAndrews": "5-38",
+        "Opponent": "2-28"
+      },
+      {
+        "Label": "Penalties",
+        "StAndrews": "4-35",
+        "Opponent": "6-60"
+      }
+    ],
+    "RecapTitle": "Late Field Goal Lifts Hilton Head Prep",
+    "Recap": "Michael Paton's 26-yard touchdown run and two-point conversion tied the game at 20, but Laird Dorsner kicked a 27-yard field goal with 2:11 left to give Hilton Head Prep a 23-20 region win. Paton rushed for 115 yards, Evan Aldrich threw for 151 yards and two touchdowns, and Zack Hillard, Matt Hunt and Jeff Smith all had at least 15 tackles.",
+    "SourceDate": "1999-10-30",
+    "SourcePublication": "Savannah Morning News",
+    "SourceAuthor": "Savannah Morning News",
+    "SourceByline": "Savannah Morning News",
+    "SourcePage": "9F",
+    "SourceSection": "Sports",
+    "SourceCitation": "\"FRIDAY'S GAMES / ROBINSON SCORES FOUR TDS IN TOOMBS' GRAVELY WIN,\" Savannah Morning News, 1999-10-30, Page 9F"
   },
   {
     "GameID": 19991105,
@@ -1219,12 +2076,140 @@
     "GameUrl": "",
     "LocationType": "Home",
     "Venue": "St. Andrew's School",
-    "Notes": "",
+    "Notes": "Makeup game after the Hurricane Floyd postponement.",
     "GameType": "Regular Season",
     "Result": "W",
     "TeamScore": 39,
     "OpponentScore": 8,
-    "OpponentID": "sc-thomas-sumter-academy-dalzell"
+    "OpponentID": "sc-thomas-sumter-academy-dalzell",
+    "LineScore": [
+      {
+        "Team": "Thomas Sumter",
+        "Abbr": "TS",
+        "Scores": [
+          0,
+          0,
+          8,
+          0
+        ],
+        "Total": 8
+      },
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [
+          19,
+          14,
+          6,
+          0
+        ],
+        "Total": 39
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "1",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Michael Paton 65 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "1",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Michael Paton 35 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "1",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Michael Paton 12 run",
+        "Conversion": "Matt Mahany kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Zack Hillard 62 interception return",
+        "Conversion": "Matt Mahany kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "2",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Michael Paton 1 run",
+        "Conversion": "Matt Mahany kick",
+        "Points": 7
+      },
+      {
+        "Quarter": "3",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Michael Paton 20 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "3",
+        "Team": "Thomas Sumter",
+        "TeamAbbr": "TS",
+        "Play": "Sherman 2 run",
+        "Conversion": "Butler run",
+        "Points": 8
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "First Downs",
+        "StAndrews": "8",
+        "Opponent": "9"
+      },
+      {
+        "Label": "Rushing Yards",
+        "StAndrews": "325",
+        "Opponent": "90"
+      },
+      {
+        "Label": "Passing Yards",
+        "StAndrews": "56",
+        "Opponent": "109"
+      },
+      {
+        "Label": "Comp.-Att.-Int.",
+        "StAndrews": "1-2-0",
+        "Opponent": "11-21-4"
+      },
+      {
+        "Label": "Fumbles-lost",
+        "StAndrews": "0-0",
+        "Opponent": "0-0"
+      },
+      {
+        "Label": "Punts",
+        "StAndrews": "0-0",
+        "Opponent": "1-19"
+      },
+      {
+        "Label": "Penalties",
+        "StAndrews": "6-70",
+        "Opponent": "3-45"
+      }
+    ],
+    "RecapTitle": "Paton, Defense Send Saints to Playoffs",
+    "Recap": "Michael Paton rushed for 260 yards on 14 carries and scored five touchdowns in a 39-8 win over Thomas Sumter. Zack Hillard and Matt Hunt each intercepted two passes, Hillard returned one 62 yards for a touchdown, and Hunt's tackle total broke the school record.",
+    "SourceDate": "1999-11-06",
+    "SourcePublication": "Savannah Morning News",
+    "SourceAuthor": "Savannah Morning News",
+    "SourceByline": "Savannah Morning News",
+    "SourcePage": "4F",
+    "SourceSection": "Sports",
+    "SourceCitation": "\"SCPS'S COREY FIDLER DOES ALL IN VICTORY OVER BRYAN CO.,\" Savannah Morning News, 1999-11-06, Page 4F"
   },
   {
     "GameID": 19991112,
@@ -1244,12 +2229,135 @@
     "GameUrl": "",
     "LocationType": "Away",
     "Venue": "Williamsburg Academy",
-    "Notes": "",
+    "Notes": "SCISA AA first round.",
     "GameType": "Playoff",
     "Result": "L",
     "TeamScore": 22,
     "OpponentScore": 27,
-    "OpponentID": "sc-williamsburg-academy-kingstree"
+    "OpponentID": "sc-williamsburg-academy-kingstree",
+    "LineScore": [
+      {
+        "Team": "St. Andrew's",
+        "Abbr": "SA",
+        "Scores": [
+          0,
+          6,
+          0,
+          16
+        ],
+        "Total": 22
+      },
+      {
+        "Team": "Williamsburg",
+        "Abbr": "WA",
+        "Scores": [
+          0,
+          14,
+          6,
+          7
+        ],
+        "Total": 27
+      }
+    ],
+    "ScoringPlays": [
+      {
+        "Quarter": "2",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Michael Paton 26 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "2",
+        "Team": "Williamsburg",
+        "TeamAbbr": "WA",
+        "Play": "Patrick Gause 40 pass from Justin Kellahan",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "2",
+        "Team": "Williamsburg",
+        "TeamAbbr": "WA",
+        "Play": "Gause 38 pass from Kee Belue",
+        "Conversion": "Belue run",
+        "Points": 8
+      },
+      {
+        "Quarter": "3",
+        "Team": "Williamsburg",
+        "TeamAbbr": "WA",
+        "Play": "Belue 1 run",
+        "Conversion": "kick failed",
+        "Points": 6
+      },
+      {
+        "Quarter": "4",
+        "Team": "Williamsburg",
+        "TeamAbbr": "WA",
+        "Play": "Gause 17 pass from Kellahan",
+        "Conversion": "kick good",
+        "Points": 7
+      },
+      {
+        "Quarter": "4",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Lee Stubbs 83 fumble recovery return",
+        "Conversion": "Paton run",
+        "Points": 8
+      },
+      {
+        "Quarter": "4",
+        "Team": "St. Andrew's",
+        "TeamAbbr": "SA",
+        "Play": "Michael Paton 79 pass from Evan Aldrich",
+        "Conversion": "Paton run",
+        "Points": 8
+      }
+    ],
+    "TeamComparisonStats": [
+      {
+        "Label": "First Downs",
+        "StAndrews": "11",
+        "Opponent": "11"
+      },
+      {
+        "Label": "Rushing Yards",
+        "StAndrews": "179",
+        "Opponent": "174"
+      },
+      {
+        "Label": "Passing Yards",
+        "StAndrews": "144",
+        "Opponent": "203"
+      },
+      {
+        "Label": "Comp.-Att.-Int.",
+        "StAndrews": "10-14-1",
+        "Opponent": "12-17-0"
+      },
+      {
+        "Label": "Fumbles-lost",
+        "StAndrews": "1-1",
+        "Opponent": "0-0"
+      },
+      {
+        "Label": "Penalties",
+        "StAndrews": "7-55",
+        "Opponent": "3-45"
+      }
+    ],
+    "RecapTitle": "Fourth-Quarter Rally Falls Short",
+    "Recap": "St. Andrew's scored two fourth-quarter touchdowns, including Lee Stubbs' 83-yard fumble return and Michael Paton's 79-yard touchdown catch from Evan Aldrich, but Williamsburg held on 27-22 in the SCISA AA first round. Paton also opened the scoring with a 26-yard run, and the Saints finished 5-6.",
+    "SourceDate": "1999-11-13",
+    "SourcePublication": "Savannah Morning News",
+    "SourceAuthor": "Savannah Morning News",
+    "SourceByline": "Savannah Morning News",
+    "SourcePage": "4F",
+    "SourceSection": "Sports",
+    "SourceCitation": "\"BLOCKED FG ATTEMPTS KEY TO BC VICTORY,\" Savannah Morning News, 1999-11-13, Page 4F"
   },
   {
     "GameID": 20000825,

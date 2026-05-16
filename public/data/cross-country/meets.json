@@ -1,5 +1,114 @@
 [
   {
+    "MeetID": 19990904,
+    "Season": 2000,
+    "Date": "1999-09-04",
+    "Name": "Seahawk Cross Country Invitational",
+    "Location": "Hilton Head High School, Hilton Head Island, SC",
+    "Level": "Varsity",
+    "MeetType": "Regular Season",
+    "Status": "Complete",
+    "Notes": "NewsBank result lists team standings for the 3.1-mile invitational. No St. Andrew's individual runners were printed.",
+    "RecapParagraphs": [
+      "St. Andrew's placed 8th in the boys team standings with 219 points.",
+      "Summerville won the boys race with 32 points, followed by Hilton Head, Stratford, Windsor Forest, Jenkins, Walterboro, and Battery Creek before St. Andrew's.",
+      "The girls team standings did not include St. Andrew's."
+    ],
+    "TeamResults": [
+      {
+        "Gender": "Boys",
+        "Place": "1st",
+        "Team": "Summerville",
+        "Points": "32"
+      },
+      {
+        "Gender": "Boys",
+        "Place": "2nd",
+        "Team": "Hilton Head",
+        "Points": "63"
+      },
+      {
+        "Gender": "Boys",
+        "Place": "3rd",
+        "Team": "Stratford",
+        "Points": "85"
+      },
+      {
+        "Gender": "Boys",
+        "Place": "4th",
+        "Team": "Windsor Forest",
+        "Points": "108"
+      },
+      {
+        "Gender": "Boys",
+        "Place": "5th",
+        "Team": "Jenkins",
+        "Points": "110"
+      },
+      {
+        "Gender": "Boys",
+        "Place": "6th",
+        "Team": "Walterboro",
+        "Points": "129"
+      },
+      {
+        "Gender": "Boys",
+        "Place": "7th",
+        "Team": "Battery Creek",
+        "Points": "176"
+      },
+      {
+        "Gender": "Boys",
+        "Place": "8th",
+        "Team": "St. Andrew's",
+        "Points": "219"
+      },
+      {
+        "Gender": "Boys",
+        "Place": "9th",
+        "Team": "Beaufort",
+        "Points": "233"
+      },
+      {
+        "Gender": "Girls",
+        "Place": "1st",
+        "Team": "Summerville",
+        "Points": "32"
+      },
+      {
+        "Gender": "Girls",
+        "Place": "2nd",
+        "Team": "Hilton Head",
+        "Points": "78"
+      },
+      {
+        "Gender": "Girls",
+        "Place": "3rd",
+        "Team": "Jenkins",
+        "Points": "95"
+      },
+      {
+        "Gender": "Girls",
+        "Place": "4th",
+        "Team": "Beaufort",
+        "Points": "108"
+      },
+      {
+        "Gender": "Girls",
+        "Place": "5th",
+        "Team": "Stratford",
+        "Points": "113"
+      },
+      {
+        "Gender": "Girls",
+        "Place": "6th",
+        "Team": "Battery Creek",
+        "Points": "132"
+      }
+    ],
+    "SourceCitation": "\"SEAHAWK CROSS COUNTRY INVITATIONAL,\" Savannah Morning News, 1999-09-05, Page 4C"
+  },
+  {
     "MeetID": 5290,
     "Season": 2004,
     "Date": "2003-10-18",

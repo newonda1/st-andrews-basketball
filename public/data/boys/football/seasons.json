@@ -1105,7 +1105,7 @@
     "NeutralLosses": 0,
     "NeutralTies": 0,
     "PointsFor": 239,
-    "PointsAgainst": 210,
+    "PointsAgainst": 209,
     "NationalRank": null,
     "StateRank": null,
     "RegionFinish": null,
@@ -1238,7 +1238,7 @@
               "OverallTies": 0,
               "OverallPct": "0.455",
               "OverallPointsFor": 239,
-              "OverallPointsAgainst": 210,
+              "OverallPointsAgainst": 209,
               "RegionWins": 3,
               "RegionLosses": 2,
               "RegionTies": 0,
@@ -1410,7 +1410,11 @@
       "stats": "https://docs.google.com/spreadsheets/d/1XL5VrGsFQXz0ezl-EGCMfHTMMAcu6j5tdltStxssJAk/htmlembed",
       "playoffs": "https://docs.google.com/spreadsheets/d/1Lu2mYlvzREfBVnqmgalsXroMswKEWCmPqkhtYdsmIb0/htmlembed",
       "regions": "https://docs.google.com/spreadsheets/d/1pTXBCIxf2RIoffWpP-VZCdBUVwoZH2ED-Abrvadb6xc/htmlembed"
-    }
+    },
+    "SeasonRecapTitle": "Season Recap",
+    "SeasonRecap": "David Boylston's 1999 Saints were defending SCISA Class AA champions, but the fall became a rebuild around a much younger roster. The preseason preview listed only five returning starters and 20 first-year players, with seniors Michael Paton, Evan Aldrich, Andy Moreland and Joseph Hinely carrying the bridge from the 1998 title team.\n\nThe opening two weeks showed the cost of that turnover. Byrnes Academy ended St. Andrew's 11-game winning streak with a 6-0 win, holding the Saints to 101 total yards, and Dorchester followed with a 26-3 result despite Matt Mahany's first-quarter field goal. St. Andrew's answered at Thomas Heyward, where Paton ran for 219 yards and Evan Aldrich hit Ryan Stratz for a 41-yard fourth-quarter touchdown in a 13-6 win.\n\nPaton's surge became the season's center. He ran for 240 yards and five touchdowns against Colleton Prep, then set a school single-game rushing record with 259 yards and four touchdowns in a 28-21 upset at Sea Island. By the Nov. 10 Coastal Empire leaders, Paton had 1,784 rushing yards and 20 rushing touchdowns through the regular season, while Aldrich had thrown for 656 yards and four scores.\n\nThe Saints stayed in the SCISA AA playoff race despite midseason losses to Williamsburg, Calhoun and Hilton Head Prep. A scoreboard-only Patrick Henry result and the rescheduled Thomas Sumter game completed the regular season, with Paton running for 260 yards and five touchdowns against Thomas Sumter while Zack Hillard returned an interception for a score and Matt Hunt broke the school tackles record. St. Andrew's finished 5-6 after a 27-22 playoff loss at Williamsburg, where Paton scored rushing and receiving touchdowns and Lee Stubbs returned a fumble 83 yards.",
+    "ShowSeasonImagesPlaceholder": true,
+    "SeasonRecapSourceCitation": "\"SCISA REGION 2-AA / ST. ANDREW'S,\" Savannah Morning News, 1999-08-27, Page 21; Victor Fernandes, \"ST. ANDREW'S FALLS TO BYRNE IN SEASON OPENER,\" Savannah Morning News, 1999-08-28, Page 1F; Victor Fernandes, \"PATON PERFORMS MIRACLES FOR SAINTS,\" Savannah Morning News, 1999-10-06, Page 1D; \"STATISTICS,\" Savannah Morning News, 1999-11-10, Page 4D; \"BLOCKED FG ATTEMPTS KEY TO BC VICTORY,\" Savannah Morning News, 1999-11-13, Page 4F"
   },
   {
     "SeasonID": 2000,

@@ -1,5 +1,233 @@
 [
   {
+    "SeasonID": "1999",
+    "DisplaySeason": "1999",
+    "SourceSeasonLabel": "1999-00",
+    "TeamLevel": "Varsity",
+    "TeamName": "St. Andrew's Saints",
+    "HeadCoach": "David Boylston",
+    "Staff": [
+      {
+        "Name": "David Boylston",
+        "Position": "Head Coach"
+      }
+    ],
+    "Players": [
+      {
+        "PlayerID": 199901,
+        "JerseyNumber": null,
+        "Grade": "Sr.",
+        "GradeLabel": "Senior",
+        "Positions": [
+          "FB",
+          "DE"
+        ],
+        "PlayerName": "Michael Paton",
+        "Distinctions": [
+          "Savannah Morning News 25 to Watch selection",
+          "Set school single-game rushing record with 259 yards at Sea Island",
+          "Regular-season rushing leaders line: 1,784 yards and 20 touchdowns"
+        ]
+      },
+      {
+        "PlayerID": 199601,
+        "JerseyNumber": null,
+        "Grade": "Sr.",
+        "GradeLabel": "Senior",
+        "Positions": [
+          "QB",
+          "TE",
+          "DE"
+        ],
+        "PlayerName": "Evan Aldrich",
+        "Distinctions": [
+          "Moved from tight end to starting quarterback",
+          "Passed for 656 yards and four touchdowns through the regular season"
+        ]
+      },
+      {
+        "PlayerID": 199906,
+        "JerseyNumber": null,
+        "Grade": "Sr.",
+        "GradeLabel": "Senior",
+        "Positions": [
+          "OT",
+          "LB"
+        ],
+        "PlayerName": "Andy Moreland",
+        "Distinctions": [
+          "Preseason key player"
+        ]
+      },
+      {
+        "PlayerID": 199905,
+        "JerseyNumber": null,
+        "Grade": "Sr.",
+        "GradeLabel": "Senior",
+        "Positions": [
+          "TB"
+        ],
+        "PlayerName": "Joseph Hinely",
+        "Distinctions": [
+          "Preseason key player"
+        ]
+      },
+      {
+        "PlayerID": 199903,
+        "JerseyNumber": null,
+        "Grade": "Sr.",
+        "GradeLabel": "Senior",
+        "Positions": [
+          "WR",
+          "DB"
+        ],
+        "PlayerName": "Lee Stubbs",
+        "Distinctions": [
+          "83-yard fumble-return touchdown in the SCISA playoff opener"
+        ]
+      },
+      {
+        "PlayerID": 199902,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [
+          "K",
+          "P",
+          "LB"
+        ],
+        "PlayerName": "Matt Mahany",
+        "Distinctions": [
+          "25-yard field goal at Dorchester",
+          "Regular-season punting leader for St. Andrew's"
+        ]
+      },
+      {
+        "PlayerID": 200004,
+        "JerseyNumber": null,
+        "Grade": "So.",
+        "GradeLabel": "Sophomore",
+        "Positions": [
+          "QB",
+          "WR",
+          "DB"
+        ],
+        "PlayerName": "Justin Dixon",
+        "Distinctions": [
+          "Regular-season receiving leaders line: 15 catches for 323 yards"
+        ]
+      },
+      {
+        "PlayerID": 200104,
+        "JerseyNumber": null,
+        "Grade": "Fr.",
+        "GradeLabel": "Freshman",
+        "Positions": [
+          "G",
+          "LB"
+        ],
+        "PlayerName": "Matt Hunt",
+        "Distinctions": [
+          "Broke the school tackles record during the Thomas Sumter win"
+        ]
+      },
+      {
+        "PlayerID": 200108,
+        "JerseyNumber": null,
+        "Grade": "So.",
+        "GradeLabel": "Sophomore",
+        "Positions": [
+          "RB",
+          "LB"
+        ],
+        "PlayerName": "Adam Ciccio",
+        "Distinctions": [
+          "Published as Adam Cisco in the Colleton Prep scoring summary"
+        ]
+      },
+      {
+        "PlayerID": 200102,
+        "JerseyNumber": null,
+        "Grade": "So.",
+        "GradeLabel": "Sophomore",
+        "Positions": [
+          "RB",
+          "LB",
+          "DB"
+        ],
+        "PlayerName": "Zack Hillard",
+        "Distinctions": [
+          "Five interceptions through the regular season",
+          "62-yard interception-return touchdown against Thomas Sumter"
+        ]
+      },
+      {
+        "PlayerID": 200011,
+        "JerseyNumber": null,
+        "Grade": "Fr.",
+        "GradeLabel": "Freshman",
+        "Positions": [
+          "WR",
+          "DB"
+        ],
+        "PlayerName": "Jeff Smith",
+        "Distinctions": [
+          "66-yard touchdown catch at Hilton Head Prep"
+        ]
+      },
+      {
+        "PlayerID": 200462,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [
+          "WR"
+        ],
+        "PlayerName": "Ryan Stratz",
+        "Distinctions": [
+          "41-yard game-winning touchdown catch at Thomas Heyward"
+        ]
+      },
+      {
+        "PlayerID": 199904,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [
+          "LB"
+        ],
+        "PlayerName": "Corey Brinson",
+        "Distinctions": [
+          "Listed in early-season tackle leaders"
+        ]
+      },
+      {
+        "PlayerID": 199907,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [
+          "OT"
+        ],
+        "PlayerName": "Jake Freeman",
+        "Distinctions": [
+          "Opening-game article noted he was sidelined by illness"
+        ]
+      },
+      {
+        "PlayerID": 199908,
+        "JerseyNumber": null,
+        "Grade": null,
+        "GradeLabel": null,
+        "Positions": [],
+        "PlayerName": "Adam Liscio",
+        "Distinctions": [
+          "Savannah Morning News printed a photo-caption name correction after the opener"
+        ]
+      }
+    ]
+  },
+  {
     "SeasonID": "2000",
     "DisplaySeason": "2000",
     "SourceSeasonLabel": "2000-01",

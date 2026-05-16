@@ -1,5 +1,377 @@
 [
   {
+    "SeasonID": 1999,
+    "DisplaySeason": "1999",
+    "SourceSeasonLabel": "1999-00",
+    "SourceUrl": "",
+    "SourceCitation": "\"STATISTICS,\" Savannah Morning News, 1999-11-10, Page 4D",
+    "SourceNote": "Savannah Morning News Coastal Empire leaders through the regular season, after the Nov. 5 Thomas Sumter makeup game and before the SCISA playoff opener.",
+    "Sections": [
+      {
+        "SectionID": "newsbank_regular_season",
+        "Title": "NewsBank Regular-Season Leaders",
+        "Tables": [
+          {
+            "TableID": "offensive_rushing",
+            "Title": "Rushing",
+            "Columns": [
+              {
+                "key": "name",
+                "label": "Athlete Name"
+              },
+              {
+                "key": "rushingnum",
+                "label": "Att"
+              },
+              {
+                "key": "rushingyards",
+                "label": "Yds"
+              },
+              {
+                "key": "yardspercarry",
+                "label": "Avg"
+              },
+              {
+                "key": "rushingtdnum",
+                "label": "TD"
+              }
+            ],
+            "Rows": [
+              {
+                "PlayerID": 199901,
+                "PlayerName": "Michael Paton",
+                "Values": {
+                  "name": "Michael Paton",
+                  "rushingnum": "196",
+                  "rushingyards": "1784",
+                  "yardspercarry": "9.1",
+                  "rushingtdnum": "20"
+                }
+              },
+              {
+                "PlayerID": 199601,
+                "PlayerName": "Evan Aldrich",
+                "Values": {
+                  "name": "Evan Aldrich",
+                  "rushingnum": "64",
+                  "rushingyards": "219",
+                  "yardspercarry": "3.4",
+                  "rushingtdnum": "2"
+                }
+              }
+            ]
+          },
+          {
+            "TableID": "offensive_passing",
+            "Title": "Passing",
+            "Columns": [
+              {
+                "key": "name",
+                "label": "Athlete Name"
+              },
+              {
+                "key": "passingcomp",
+                "label": "Comp"
+              },
+              {
+                "key": "passingatt",
+                "label": "Att"
+              },
+              {
+                "key": "passingyards",
+                "label": "Yds"
+              },
+              {
+                "key": "passingtd",
+                "label": "TD"
+              },
+              {
+                "key": "passingint",
+                "label": "Int"
+              }
+            ],
+            "Rows": [
+              {
+                "PlayerID": 199601,
+                "PlayerName": "Evan Aldrich",
+                "Values": {
+                  "name": "Evan Aldrich",
+                  "passingcomp": "37",
+                  "passingatt": "86",
+                  "passingyards": "656",
+                  "passingtd": "4",
+                  "passingint": "6"
+                }
+              }
+            ]
+          },
+          {
+            "TableID": "offensive_receiving",
+            "Title": "Receiving",
+            "Columns": [
+              {
+                "key": "name",
+                "label": "Athlete Name"
+              },
+              {
+                "key": "receivingnum",
+                "label": "Rec"
+              },
+              {
+                "key": "receivingyards",
+                "label": "Yds"
+              },
+              {
+                "key": "yardspercatch",
+                "label": "Avg"
+              },
+              {
+                "key": "receivingtdnum",
+                "label": "TD"
+              }
+            ],
+            "Rows": [
+              {
+                "PlayerID": 200004,
+                "PlayerName": "Justin Dixon",
+                "Values": {
+                  "name": "Justin Dixon",
+                  "receivingnum": "15",
+                  "receivingyards": "323",
+                  "yardspercatch": "21.5",
+                  "receivingtdnum": ""
+                }
+              },
+              {
+                "PlayerID": 199901,
+                "PlayerName": "Michael Paton",
+                "Values": {
+                  "name": "Michael Paton",
+                  "receivingnum": "7",
+                  "receivingyards": "105",
+                  "yardspercatch": "15.0",
+                  "receivingtdnum": ""
+                }
+              }
+            ]
+          },
+          {
+            "TableID": "scoring",
+            "Title": "Scoring",
+            "Columns": [
+              {
+                "key": "name",
+                "label": "Athlete Name"
+              },
+              {
+                "key": "totaltouchdowns",
+                "label": "TD"
+              },
+              {
+                "key": "fgmade",
+                "label": "FG"
+              },
+              {
+                "key": "patmade",
+                "label": "XP"
+              },
+              {
+                "key": "twopoint",
+                "label": "2PT"
+              },
+              {
+                "key": "totalpoints",
+                "label": "Total"
+              }
+            ],
+            "Rows": [
+              {
+                "PlayerID": 199901,
+                "PlayerName": "Michael Paton",
+                "Values": {
+                  "name": "Michael Paton",
+                  "totaltouchdowns": "20",
+                  "fgmade": "0",
+                  "patmade": "0",
+                  "twopoint": "2",
+                  "totalpoints": "124"
+                }
+              },
+              {
+                "PlayerID": 199601,
+                "PlayerName": "Evan Aldrich",
+                "Values": {
+                  "name": "Evan Aldrich",
+                  "totaltouchdowns": "2",
+                  "fgmade": "0",
+                  "patmade": "0",
+                  "twopoint": "0",
+                  "totalpoints": "12"
+                }
+              }
+            ]
+          },
+          {
+            "TableID": "special_teams_punting",
+            "Title": "Punting",
+            "Columns": [
+              {
+                "key": "name",
+                "label": "Athlete Name"
+              },
+              {
+                "key": "puntnum",
+                "label": "Punts"
+              },
+              {
+                "key": "puntaverage",
+                "label": "Avg"
+              },
+              {
+                "key": "puntlong",
+                "label": "Long"
+              }
+            ],
+            "Rows": [
+              {
+                "PlayerID": 199902,
+                "PlayerName": "Matt Mahany",
+                "Values": {
+                  "name": "Matt Mahany",
+                  "puntnum": "22",
+                  "puntaverage": "34.5",
+                  "puntlong": ""
+                }
+              }
+            ]
+          },
+          {
+            "TableID": "special_teams_kicking",
+            "Title": "Kicking",
+            "Columns": [
+              {
+                "key": "name",
+                "label": "Athlete Name"
+              },
+              {
+                "key": "fgmade",
+                "label": "FG"
+              },
+              {
+                "key": "patmade",
+                "label": "XP"
+              },
+              {
+                "key": "totalpoints",
+                "label": "Total"
+              }
+            ],
+            "Rows": [
+              {
+                "PlayerID": 199902,
+                "PlayerName": "Matt Mahany",
+                "Values": {
+                  "name": "Matt Mahany",
+                  "fgmade": "1",
+                  "patmade": "",
+                  "totalpoints": ""
+                }
+              }
+            ]
+          },
+          {
+            "TableID": "defensive_tackles",
+            "Title": "Tackles",
+            "Columns": [
+              {
+                "key": "name",
+                "label": "Athlete Name"
+              },
+              {
+                "key": "tackles",
+                "label": "Solo"
+              },
+              {
+                "key": "assists",
+                "label": "Asst"
+              },
+              {
+                "key": "totaltackles",
+                "label": "Total"
+              }
+            ],
+            "Rows": [
+              {
+                "PlayerID": 200102,
+                "PlayerName": "Zack Hillard",
+                "Values": {
+                  "name": "Zack Hillard",
+                  "tackles": "29",
+                  "assists": "84",
+                  "totaltackles": "71"
+                }
+              },
+              {
+                "PlayerID": 200104,
+                "PlayerName": "Matt Hunt",
+                "Values": {
+                  "name": "Matt Hunt",
+                  "tackles": "19",
+                  "assists": "97",
+                  "totaltackles": "67.5"
+                }
+              }
+            ]
+          },
+          {
+            "TableID": "defensive_interceptions",
+            "Title": "Interceptions",
+            "Columns": [
+              {
+                "key": "name",
+                "label": "Athlete Name"
+              },
+              {
+                "key": "ints",
+                "label": "Int"
+              },
+              {
+                "key": "intyards",
+                "label": "Ret"
+              },
+              {
+                "key": "intreturnedtdnum",
+                "label": "TD"
+              }
+            ],
+            "Rows": [
+              {
+                "PlayerID": 200102,
+                "PlayerName": "Zack Hillard",
+                "Values": {
+                  "name": "Zack Hillard",
+                  "ints": "5",
+                  "intyards": "",
+                  "intreturnedtdnum": ""
+                }
+              },
+              {
+                "PlayerID": 200104,
+                "PlayerName": "Matt Hunt",
+                "Values": {
+                  "name": "Matt Hunt",
+                  "ints": "4",
+                  "intyards": "",
+                  "intreturnedtdnum": ""
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "SeasonID": 2006,
     "DisplaySeason": "2006",
     "SourceSeasonLabel": "2006-07",

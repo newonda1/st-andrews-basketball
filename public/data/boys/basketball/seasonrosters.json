@@ -962,6 +962,71 @@
     ]
   },
   {
+    "SeasonID": "1999-00",
+    "Staff": [
+      {
+        "Name": "Dave Clay",
+        "Position": "Interim Head Coach"
+      }
+    ],
+    "Players": [
+      {
+        "PlayerID": 199601,
+        "JerseyNumber": null,
+        "Grade": 12,
+        "Subline": "Savannah Morning News Coastal Empire second-team all-star; preseason key player"
+      },
+      {
+        "PlayerID": 199903,
+        "JerseyNumber": null,
+        "Grade": 12,
+        "Subline": "North Carolina transfer and preseason key player"
+      },
+      {
+        "PlayerID": 199909,
+        "JerseyNumber": null,
+        "Grade": 11,
+        "Subline": "German exchange student and preseason starting point guard; printed as Tietz in the Pinewood box score"
+      },
+      {
+        "PlayerID": 2027047,
+        "JerseyNumber": null,
+        "Grade": 11,
+        "Subline": "Preseason key player"
+      },
+      {
+        "PlayerID": 200007,
+        "JerseyNumber": null,
+        "Grade": 11,
+        "Subline": "Preseason key player"
+      },
+      {
+        "PlayerID": 200009,
+        "JerseyNumber": null,
+        "Grade": 11,
+        "Subline": "Preseason key player; preview printed first name as Randall"
+      },
+      {
+        "PlayerID": 199910,
+        "JerseyNumber": null,
+        "Grade": 11,
+        "Subline": "Preseason key player"
+      },
+      {
+        "PlayerID": 200004,
+        "JerseyNumber": null,
+        "Grade": 10,
+        "Subline": "Preseason key player"
+      },
+      {
+        "PlayerID": 200005,
+        "JerseyNumber": null,
+        "Grade": null,
+        "Subline": "Scored in the Pinewood Prep box score"
+      }
+    ]
+  },
+  {
     "SeasonID": "2000-01",
     "Players": [
       {

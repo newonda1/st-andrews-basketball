@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-16T17:03:11.577Z",
-  "itemCount": 1388,
+  "generatedAt": "2026-05-16T19:11:35.622Z",
+  "itemCount": 1405,
   "items": [
     {
       "id": "athletics-home",
@@ -3724,6 +3724,173 @@
       ]
     },
     {
+      "id": "boys-basketball-athlete-199601",
+      "type": "athlete",
+      "title": "Evan Aldrich",
+      "subtitle": "Boys Basketball athlete - Class of 2000",
+      "to": "/athletics/boys/basketball/players/199601",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Evan",
+        "Aldrich",
+        "Aldrich Evan",
+        "class of 2000",
+        "grad 2000"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-199903",
+      "type": "athlete",
+      "title": "Lee Stubbs",
+      "subtitle": "Boys Basketball athlete - Class of 2000",
+      "to": "/athletics/boys/basketball/players/199903",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Lee",
+        "Stubbs",
+        "Stubbs Lee",
+        "class of 2000",
+        "grad 2000"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-199909",
+      "type": "athlete",
+      "title": "Andy Teitz",
+      "subtitle": "Boys Basketball athlete - Class of 2001",
+      "to": "/athletics/boys/basketball/players/199909",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Andy",
+        "Teitz",
+        "Teitz Andy",
+        "class of 2001",
+        "grad 2001"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-2027047",
+      "type": "athlete",
+      "title": "Todd Tribble",
+      "subtitle": "Boys Basketball athlete",
+      "to": "/athletics/boys/basketball/players/2027047",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Todd",
+        "Tribble",
+        "Tribble Todd"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-200007",
+      "type": "athlete",
+      "title": "Chris Lowe",
+      "subtitle": "Boys Basketball athlete - Class of 2001",
+      "to": "/athletics/boys/basketball/players/200007",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Chris",
+        "Lowe",
+        "Lowe Chris",
+        "class of 2001",
+        "grad 2001"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-200009",
+      "type": "athlete",
+      "title": "Randell Phillips",
+      "subtitle": "Boys Basketball athlete - Class of 2001",
+      "to": "/athletics/boys/basketball/players/200009",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Randell",
+        "Phillips",
+        "Phillips Randell",
+        "class of 2001",
+        "grad 2001"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-199910",
+      "type": "athlete",
+      "title": "Jeremy Steinbart",
+      "subtitle": "Boys Basketball athlete - Class of 2001",
+      "to": "/athletics/boys/basketball/players/199910",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Jeremy",
+        "Steinbart",
+        "Steinbart Jeremy",
+        "class of 2001",
+        "grad 2001"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-200004",
+      "type": "athlete",
+      "title": "Justin Dixon",
+      "subtitle": "Boys Basketball athlete - Class of 2002",
+      "to": "/athletics/boys/basketball/players/200004",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Justin",
+        "Dixon",
+        "Dixon Justin",
+        "class of 2002",
+        "grad 2002"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-200005",
+      "type": "athlete",
+      "title": "Quint Dixon",
+      "subtitle": "Boys Basketball athlete",
+      "to": "/athletics/boys/basketball/players/200005",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Quint",
+        "Dixon",
+        "Dixon Quint"
+      ]
+    },
+    {
       "id": "boys-basketball-athlete-200001",
       "type": "athlete",
       "title": "Cam Aldrich",
@@ -3781,40 +3948,6 @@
       ]
     },
     {
-      "id": "boys-basketball-athlete-200004",
-      "type": "athlete",
-      "title": "Justin Dixon",
-      "subtitle": "Boys Basketball athlete",
-      "to": "/athletics/boys/basketball/players/200004",
-      "keywords": [
-        "Boys Basketball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Justin",
-        "Dixon",
-        "Dixon Justin"
-      ]
-    },
-    {
-      "id": "boys-basketball-athlete-200005",
-      "type": "athlete",
-      "title": "Quint Dixon",
-      "subtitle": "Boys Basketball athlete",
-      "to": "/athletics/boys/basketball/players/200005",
-      "keywords": [
-        "Boys Basketball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Quint",
-        "Dixon",
-        "Dixon Quint"
-      ]
-    },
-    {
       "id": "boys-basketball-athlete-200006",
       "type": "athlete",
       "title": "Jose Jaramillo",
@@ -3832,23 +3965,6 @@
       ]
     },
     {
-      "id": "boys-basketball-athlete-200007",
-      "type": "athlete",
-      "title": "Chris Lowe",
-      "subtitle": "Boys Basketball athlete",
-      "to": "/athletics/boys/basketball/players/200007",
-      "keywords": [
-        "Boys Basketball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Chris",
-        "Lowe",
-        "Lowe Chris"
-      ]
-    },
-    {
       "id": "boys-basketball-athlete-200008",
       "type": "athlete",
       "title": "Billy McCarthy",
@@ -3863,23 +3979,6 @@
         "Billy",
         "McCarthy",
         "McCarthy Billy"
-      ]
-    },
-    {
-      "id": "boys-basketball-athlete-200009",
-      "type": "athlete",
-      "title": "Randell Phillips",
-      "subtitle": "Boys Basketball athlete",
-      "to": "/athletics/boys/basketball/players/200009",
-      "keywords": [
-        "Boys Basketball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Randell",
-        "Phillips",
-        "Phillips Randell"
       ]
     },
     {
@@ -3958,7 +4057,7 @@
       "id": "boys-basketball-athlete-200102",
       "type": "athlete",
       "title": "Zack Hillard",
-      "subtitle": "Boys Basketball athlete",
+      "subtitle": "Boys Basketball athlete - Class of 2002",
       "to": "/athletics/boys/basketball/players/200102",
       "keywords": [
         "Boys Basketball",
@@ -3968,7 +4067,9 @@
         "records",
         "Zack",
         "Hillard",
-        "Hillard Zack"
+        "Hillard Zack",
+        "class of 2002",
+        "grad 2002"
       ]
     },
     {
@@ -3994,7 +4095,7 @@
       "id": "boys-basketball-athlete-200104",
       "type": "athlete",
       "title": "Matt Hunt",
-      "subtitle": "Boys Basketball athlete",
+      "subtitle": "Boys Basketball athlete - Class of 2003",
       "to": "/athletics/boys/basketball/players/200104",
       "keywords": [
         "Boys Basketball",
@@ -4004,7 +4105,9 @@
         "records",
         "Matt",
         "Hunt",
-        "Hunt Matt"
+        "Hunt Matt",
+        "class of 2003",
+        "grad 2003"
       ]
     },
     {
@@ -7746,7 +7849,7 @@
       "id": "baseball-athlete-200104",
       "type": "athlete",
       "title": "Matt Hunt",
-      "subtitle": "Baseball athlete",
+      "subtitle": "Baseball athlete - Class of 2003",
       "to": "/athletics/boys/baseball/players/200104",
       "keywords": [
         "Baseball",
@@ -7756,7 +7859,9 @@
         "records",
         "Matt",
         "Hunt",
-        "Hunt Matt"
+        "Hunt Matt",
+        "class of 2003",
+        "grad 2003"
       ]
     },
     {
@@ -7801,7 +7906,7 @@
       "id": "baseball-athlete-200102",
       "type": "athlete",
       "title": "Zack Hillard",
-      "subtitle": "Baseball athlete",
+      "subtitle": "Baseball athlete - Class of 2002",
       "to": "/athletics/boys/baseball/players/200102",
       "keywords": [
         "Baseball",
@@ -7811,7 +7916,9 @@
         "records",
         "Zack",
         "Hillard",
-        "Hillard Zack"
+        "Hillard Zack",
+        "class of 2002",
+        "grad 2002"
       ]
     },
     {
@@ -10348,6 +10455,44 @@
         "Martin Patton",
         "class of 2029",
         "grad 2029"
+      ]
+    },
+    {
+      "id": "girls-basketball-athlete-199911",
+      "type": "athlete",
+      "title": "Adair Johnson",
+      "subtitle": "Girls Basketball athlete - Class of 2000",
+      "to": "/athletics/girls/basketball/players/199911",
+      "keywords": [
+        "Girls Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Adair",
+        "Johnson",
+        "Johnson Adair",
+        "class of 2000",
+        "grad 2000"
+      ]
+    },
+    {
+      "id": "girls-basketball-athlete-199912",
+      "type": "athlete",
+      "title": "Nadine Kaiser",
+      "subtitle": "Girls Basketball athlete - Class of 2001",
+      "to": "/athletics/girls/basketball/players/199912",
+      "keywords": [
+        "Girls Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Nadine",
+        "Kaiser",
+        "Kaiser Nadine",
+        "class of 2001",
+        "grad 2001"
       ]
     },
     {
@@ -12896,37 +13041,151 @@
       ]
     },
     {
-      "id": "football-athlete-200102",
+      "id": "football-athlete-199901",
       "type": "athlete",
-      "title": "Zack Hillard",
-      "subtitle": "Football athlete",
-      "to": "/athletics/football/players/200102",
+      "title": "Michael Paton",
+      "subtitle": "Football athlete - Class of 2000",
+      "to": "/athletics/football/players/199901",
       "keywords": [
         "Football",
         "athlete",
         "player",
         "stats",
         "records",
-        "Zack",
-        "Hillard",
-        "Hillard Zack"
+        "Michael",
+        "Paton",
+        "Paton Michael",
+        "class of 2000",
+        "grad 2000"
       ]
     },
     {
-      "id": "football-athlete-200011",
+      "id": "football-athlete-199601",
       "type": "athlete",
-      "title": "Jeff Smith",
-      "subtitle": "Football athlete - Class of 2003",
-      "to": "/athletics/football/players/200011",
+      "title": "Evan Aldrich",
+      "subtitle": "Football athlete - Class of 2000",
+      "to": "/athletics/football/players/199601",
       "keywords": [
         "Football",
         "athlete",
         "player",
         "stats",
         "records",
-        "Jeff",
-        "Smith",
-        "Smith Jeff",
+        "Evan",
+        "Aldrich",
+        "Aldrich Evan",
+        "class of 2000",
+        "grad 2000"
+      ]
+    },
+    {
+      "id": "football-athlete-199906",
+      "type": "athlete",
+      "title": "Andy Moreland",
+      "subtitle": "Football athlete - Class of 2000",
+      "to": "/athletics/football/players/199906",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Andy",
+        "Moreland",
+        "Moreland Andy",
+        "class of 2000",
+        "grad 2000"
+      ]
+    },
+    {
+      "id": "football-athlete-199905",
+      "type": "athlete",
+      "title": "Joseph Hinely",
+      "subtitle": "Football athlete - Class of 2000",
+      "to": "/athletics/football/players/199905",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Joseph",
+        "Hinely",
+        "Hinely Joseph",
+        "class of 2000",
+        "grad 2000"
+      ]
+    },
+    {
+      "id": "football-athlete-199903",
+      "type": "athlete",
+      "title": "Lee Stubbs",
+      "subtitle": "Football athlete - Class of 2000",
+      "to": "/athletics/football/players/199903",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Lee",
+        "Stubbs",
+        "Stubbs Lee",
+        "class of 2000",
+        "grad 2000"
+      ]
+    },
+    {
+      "id": "football-athlete-199902",
+      "type": "athlete",
+      "title": "Matt Mahany",
+      "subtitle": "Football athlete",
+      "to": "/athletics/football/players/199902",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Matt",
+        "Mahany",
+        "Mahany Matt"
+      ]
+    },
+    {
+      "id": "football-athlete-200004",
+      "type": "athlete",
+      "title": "Justin Dixon",
+      "subtitle": "Football athlete - Class of 2002",
+      "to": "/athletics/football/players/200004",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Justin",
+        "Dixon",
+        "Dixon Justin",
+        "class of 2002",
+        "grad 2002"
+      ]
+    },
+    {
+      "id": "football-athlete-200104",
+      "type": "athlete",
+      "title": "Matt Hunt",
+      "subtitle": "Football athlete - Class of 2003",
+      "to": "/athletics/football/players/200104",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Matt",
+        "Hunt",
+        "Hunt Matt",
         "class of 2003",
         "grad 2003"
       ]
@@ -12951,37 +13210,109 @@
       ]
     },
     {
-      "id": "football-athlete-200104",
+      "id": "football-athlete-200102",
       "type": "athlete",
-      "title": "Matt Hunt",
-      "subtitle": "Football athlete",
-      "to": "/athletics/football/players/200104",
+      "title": "Zack Hillard",
+      "subtitle": "Football athlete - Class of 2002",
+      "to": "/athletics/football/players/200102",
       "keywords": [
         "Football",
         "athlete",
         "player",
         "stats",
         "records",
-        "Matt",
-        "Hunt",
-        "Hunt Matt"
+        "Zack",
+        "Hillard",
+        "Hillard Zack",
+        "class of 2002",
+        "grad 2002"
       ]
     },
     {
-      "id": "football-athlete-200004",
+      "id": "football-athlete-200011",
       "type": "athlete",
-      "title": "Justin Dixon",
-      "subtitle": "Football athlete",
-      "to": "/athletics/football/players/200004",
+      "title": "Jeff Smith",
+      "subtitle": "Football athlete - Class of 2003",
+      "to": "/athletics/football/players/200011",
       "keywords": [
         "Football",
         "athlete",
         "player",
         "stats",
         "records",
-        "Justin",
-        "Dixon",
-        "Dixon Justin"
+        "Jeff",
+        "Smith",
+        "Smith Jeff",
+        "class of 2003",
+        "grad 2003"
+      ]
+    },
+    {
+      "id": "football-athlete-200462",
+      "type": "athlete",
+      "title": "Ryan Stratz",
+      "subtitle": "Football athlete",
+      "to": "/athletics/football/players/200462",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Ryan",
+        "Stratz",
+        "Stratz Ryan"
+      ]
+    },
+    {
+      "id": "football-athlete-199904",
+      "type": "athlete",
+      "title": "Corey Brinson",
+      "subtitle": "Football athlete",
+      "to": "/athletics/football/players/199904",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Corey",
+        "Brinson",
+        "Brinson Corey"
+      ]
+    },
+    {
+      "id": "football-athlete-199907",
+      "type": "athlete",
+      "title": "Jake Freeman",
+      "subtitle": "Football athlete",
+      "to": "/athletics/football/players/199907",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Jake",
+        "Freeman",
+        "Freeman Jake"
+      ]
+    },
+    {
+      "id": "football-athlete-199908",
+      "type": "athlete",
+      "title": "Adam Liscio",
+      "subtitle": "Football athlete",
+      "to": "/athletics/football/players/199908",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Adam",
+        "Liscio",
+        "Liscio Adam"
       ]
     },
     {
@@ -13023,27 +13354,10 @@
       ]
     },
     {
-      "id": "football-athlete-200462",
-      "type": "athlete",
-      "title": "Ryan Stratz",
-      "subtitle": "Football athlete",
-      "to": "/athletics/football/players/200462",
-      "keywords": [
-        "Football",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Ryan",
-        "Stratz",
-        "Stratz Ryan"
-      ]
-    },
-    {
       "id": "football-athlete-200007",
       "type": "athlete",
       "title": "Chris Lowe",
-      "subtitle": "Football athlete",
+      "subtitle": "Football athlete - Class of 2001",
       "to": "/athletics/football/players/200007",
       "keywords": [
         "Football",
@@ -13053,7 +13367,9 @@
         "records",
         "Chris",
         "Lowe",
-        "Lowe Chris"
+        "Lowe Chris",
+        "class of 2001",
+        "grad 2001"
       ]
     },
     {
@@ -14918,7 +15234,7 @@
       "id": "boys-soccer-athlete-200004",
       "type": "athlete",
       "title": "Justin Dixon",
-      "subtitle": "Boys Soccer athlete",
+      "subtitle": "Boys Soccer athlete - Class of 2002",
       "to": "/athletics/boys/soccer/players/200004",
       "keywords": [
         "Boys Soccer",
@@ -14928,7 +15244,9 @@
         "records",
         "Justin",
         "Dixon",
-        "Dixon Justin"
+        "Dixon Justin",
+        "class of 2002",
+        "grad 2002"
       ]
     },
     {
@@ -14952,7 +15270,7 @@
       "id": "boys-soccer-athlete-200007",
       "type": "athlete",
       "title": "Chris Lowe",
-      "subtitle": "Boys Soccer athlete",
+      "subtitle": "Boys Soccer athlete - Class of 2001",
       "to": "/athletics/boys/soccer/players/200007",
       "keywords": [
         "Boys Soccer",
@@ -14962,7 +15280,9 @@
         "records",
         "Chris",
         "Lowe",
-        "Lowe Chris"
+        "Lowe Chris",
+        "class of 2001",
+        "grad 2001"
       ]
     },
     {
@@ -20914,6 +21234,25 @@
         "Grovetown High School",
         "Grovetown",
         "GA"
+      ]
+    },
+    {
+      "id": "boys-basketball-team-pinewood-preparatory-school",
+      "type": "team",
+      "title": "Pinewood Preparatory School",
+      "subtitle": "Boys Basketball opponent history - Summerville, SC",
+      "to": "/athletics/boys/basketball/records/opponents?team=Pinewood+Preparatory+School",
+      "keywords": [
+        "Boys Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Pinewood Preparatory School",
+        "Pinewood Prep",
+        "Panthers",
+        "Summerville",
+        "SC"
       ]
     },
     {
