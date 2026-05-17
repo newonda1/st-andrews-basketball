@@ -1,5 +1,17 @@
 [
   {
+    "SeasonID": 2000,
+    "PlayerID": 2027042,
+    "PlayerName": "Toni Popovic",
+    "ThroughDate": "2000-05-11",
+    "SourceCitation": "\"ST. ANDREW'S TO PLAY FOR STATE SOCCER TITLE,\" Savannah Morning News (GA), May 12, 2000, Page 3B.",
+    "Reason": "The state-title preview reported that Popovic had led St. Andrew's with eight goals in five matches before breaking his left arm during a regular-season win over James Island Christian.",
+    "OfficialTotals": {
+      "GamesPlayed": 5,
+      "Goals": 8
+    }
+  },
+  {
     "SeasonID": 2003,
     "PlayerID": 200203,
     "PlayerName": "Beau Hinton",

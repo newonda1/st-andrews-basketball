@@ -9,7 +9,9 @@ The recovered schedule shows the team growing into February. Kaiser and Lowe wer
 
 The postseason gave the season its best stretch. Kaiser scored 27 and Lowe 21 in a 58-44 region first-round win over St. Paul's, then St. Andrew's beat Patrick Henry 52-41 behind Kaiser, Johnson, and Lowe to clinch a state tournament appearance. Hilton Head Christian won the region final, but Morell told the paper that a team this young had already moved far beyond preseason expectations.
 
-Avalon ended the season in the SCISA tournament, 67-22. The final report listed St. Andrew's at 11-13, and the schedule uses five placeholders to preserve the unrecovered results needed to reconcile that published final record.`;
+Avalon ended the season in the SCISA tournament, 67-22. The final report listed St. Andrew's at 11-13, and the schedule uses five placeholders to preserve the unrecovered results needed to reconcile that published final record.
+
+The spring awards sweep also found St. Andrew's Hollis Stacy Award nominees: Kimberly Cooper and Megan Lowe, matching the basketball archive's Kim Cooper and Meghan Lowe.`;
 
 export default function Season1999_00() {
   return (

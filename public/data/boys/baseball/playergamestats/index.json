@@ -1,5 +1,11 @@
 [
   {
+    "Season": 2000,
+    "Path": "/data/boys/baseball/playergamestats/2000.json",
+    "Rows": 37,
+    "Games": 12
+  },
+  {
     "Season": 2001,
     "Path": "/data/boys/baseball/playergamestats/2001.json",
     "Rows": 43,

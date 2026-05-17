@@ -1,5 +1,21 @@
 [
   {
+    "SeasonID": 2000,
+    "HeadCoach": "Karl DeMasi",
+    "RegionSeed": null,
+    "RegionFinish": null,
+    "StateSeed": null,
+    "StateFinish": null,
+    "OverallWins": 10,
+    "OverallLosses": 7,
+    "OverallTies": 0,
+    "RegionRecord": "5-5",
+    "RegionWins": 5,
+    "RegionLosses": 5,
+    "RegionTies": 0,
+    "StatusNote": "NewsBank recovery covers 13 scored baseball reports, four record-path placeholders, and leaderboard snapshots from March 23-May 4, 2000. The recovered final record path is 10-7 overall and 5-5 in SCISA Region 4-AA; individual stat tables remain limited to published box-score leaders."
+  },
+  {
     "SeasonID": 2001,
     "HeadCoach": "",
     "RegionSeed": null,

@@ -9,7 +9,9 @@ The Feb. 11 Savannah Morning News leaderboard snapshot credited Aldrich with 453
 
 Aldrich's senior finish became the headline. He scored 36 against Patrick Henry on Feb. 18 and passed Ray Rodgers for the school career scoring record with 1,595 points. Teitz and Stubbs then took larger turns in the postseason, with Teitz scoring 18 in the region semifinal against Hilton Head Christian and 19 in the region championship against Sea Island.
 
-St. Andrew's beat Sea Island 54-53 for the region title when Aldrich hit the winner in the closing seconds, then beat Hudgens Academy 63-54 in overtime in the state quarterfinals after Teitz forced overtime with a late 3-pointer. Northwood Academy ended the run in the semifinals, 83-62. The semifinal article printed a 21-4 final record, but the recovered game-by-game record path supports 21-9.`;
+St. Andrew's beat Sea Island 54-53 for the region title when Aldrich hit the winner in the closing seconds, then beat Hudgens Academy 63-54 in overtime in the state quarterfinals after Teitz forced overtime with a late 3-pointer. Northwood Academy ended the run in the semifinals, 83-62. The semifinal article printed a 21-4 final record, but the recovered game-by-game record path supports 21-9.
+
+The spring awards sweep added one postseason honor: Aldrich received honorable mention on the Savannah Morning News Boys All-Coastal Empire basketball team.`;
 
 export default function Season1999_00() {
   return (

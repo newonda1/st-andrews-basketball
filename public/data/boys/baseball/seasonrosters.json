@@ -1,5 +1,50 @@
 [
   {
+    "SeasonID": "2000",
+    "Players": [
+      {
+        "PlayerID": 200011,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200104,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200106,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200108,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200102,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 200462,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 2027051,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 2027052,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 2027053,
+        "JerseyNumber": null
+      },
+      {
+        "PlayerID": 2027054,
+        "JerseyNumber": null
+      }
+    ]
+  },
+  {
     "SeasonID": "2001",
     "Players": [
       {

@@ -1,5 +1,844 @@
 [
   {
+    "Season": 2000,
+    "LocationType": "Unknown",
+    "GameType": "Region",
+    "GameID": 2000031501,
+    "DisplayDate": "Before March 22",
+    "OpponentID": "",
+    "Opponent": "Unknown",
+    "OpponentAbbr": "UNK",
+    "Result": "L",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "IsPlaceholder": true,
+    "Notes": "Placeholder region loss added because the March 29 Patrick Henry box score listed St. Andrew's at 3-3 overall and 1-2 in SCISA Region 4-AA after the known March 22-28 results.",
+    "SourceCitation": "Record-path placeholder from NewsBank baseball reports, Spring 2000."
+  },
+  {
+    "Season": 2000,
+    "LocationType": "Unknown",
+    "GameType": "Region",
+    "GameID": 2000031502,
+    "DisplayDate": "Before March 22",
+    "OpponentID": "",
+    "Opponent": "Unknown",
+    "OpponentAbbr": "UNK",
+    "Result": "L",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "IsPlaceholder": true,
+    "Notes": "Second placeholder region loss needed to reconcile the March 29 Patrick Henry record line of 3-3 overall and 1-2 in SCISA Region 4-AA.",
+    "SourceCitation": "Record-path placeholder from NewsBank baseball reports, Spring 2000."
+  },
+  {
+    "Season": 2000,
+    "LocationType": "Unknown",
+    "GameType": "Non-Region",
+    "GameID": 2000032201,
+    "Date": "2000-03-22",
+    "OpponentID": "agape-christian",
+    "Opponent": "Agape Christian",
+    "OpponentAbbr": "AGP",
+    "Result": "W",
+    "TeamScore": 10,
+    "OpponentScore": 1,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "Opponent": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "StAndrews": [
+        1,
+        1,
+        2,
+        6,
+        "X"
+      ],
+      "OpponentTotals": {
+        "R": 1,
+        "H": 2,
+        "E": 1
+      },
+      "StAndrewsTotals": {
+        "R": 10,
+        "H": 12,
+        "E": 1
+      }
+    },
+    "PitchingDecisions": {
+      "Win": {
+        "PlayerID": 200011,
+        "PlayerName": "Jeff Smith",
+        "Record": "1-0"
+      },
+      "Loss": {
+        "PlayerName": "Cleland"
+      }
+    },
+    "Notes": "Jeff Smith went 2-for-2 with an RBI and earned the win. Matt Hunt went 3-for-3 with three RBIs, Jake Smith went 2-for-2 with two RBIs, and Tyson Lenka went 3-for-3 with an RBI.",
+    "SourceDate": "2000-03-23",
+    "SourceCitation": "\"GROVES RALLIES SEVERAL TIMES TO BEAT WINDSOR FOREST,\" Savannah Morning News (GA), March 23, 2000, Page 4D."
+  },
+  {
+    "Season": 2000,
+    "LocationType": "Unknown",
+    "GameType": "Non-Region",
+    "GameID": 2000032202,
+    "Date": "2000-03-22",
+    "OpponentID": "agape-christian",
+    "Opponent": "Agape Christian",
+    "OpponentAbbr": "AGP",
+    "Result": "W",
+    "TeamScore": 4,
+    "OpponentScore": 1,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "Opponent": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "StAndrews": [
+        1,
+        0,
+        2,
+        1,
+        "X"
+      ],
+      "OpponentTotals": {
+        "R": 1,
+        "H": 0,
+        "E": 2
+      },
+      "StAndrewsTotals": {
+        "R": 4,
+        "H": 5,
+        "E": 1
+      }
+    },
+    "PitchingDecisions": {
+      "Win": {
+        "PlayerID": 200108,
+        "PlayerName": "Adam Ciccio",
+        "Record": "1-0"
+      },
+      "Loss": {
+        "PlayerName": "Brandon"
+      }
+    },
+    "Notes": "Adam Ciccio and Ryan Stratz combined on a no-hitter in the second game of the doubleheader. Zack Hillard went 2-for-2 with three RBIs as St. Andrew's improved to 2-2.",
+    "SourceDate": "2000-03-23",
+    "SourceCitation": "\"GROVES RALLIES SEVERAL TIMES TO BEAT WINDSOR FOREST,\" Savannah Morning News (GA), March 23, 2000, Page 4D."
+  },
+  {
+    "Season": 2000,
+    "LocationType": "Unknown",
+    "GameType": "Non-Region",
+    "GameID": 2000032301,
+    "Date": "2000-03-23",
+    "OpponentID": "ga-memorial-day-school-savannah",
+    "Opponent": "Memorial Day School",
+    "OpponentAbbr": "MDS",
+    "Result": "L",
+    "TeamScore": 4,
+    "OpponentScore": 8,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "Opponent": [
+        1,
+        3,
+        2,
+        0,
+        0,
+        0,
+        2
+      ],
+      "StAndrews": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "OpponentTotals": {
+        "R": 8,
+        "H": 5,
+        "E": 3
+      },
+      "StAndrewsTotals": {
+        "R": 4,
+        "H": 2,
+        "E": 1
+      }
+    },
+    "PitchingDecisions": {
+      "Win": {
+        "PlayerName": "Betz"
+      },
+      "Loss": {
+        "PlayerID": 200102,
+        "PlayerName": "Zack Hillard"
+      }
+    },
+    "Notes": "Memorial Day defeated St. Andrew's 8-4. The box score listed St. Andrew's at 2-3.",
+    "SourceDate": "2000-03-24",
+    "SourceCitation": "\"BASEBALL,\" Savannah Morning News (GA), March 24, 2000, Page 6B."
+  },
+  {
+    "Season": 2000,
+    "LocationType": "Unknown",
+    "GameType": "Region",
+    "GameID": 2000032801,
+    "Date": "2000-03-28",
+    "OpponentID": "sc-patrick-henry-academy-estill",
+    "Opponent": "Patrick Henry Academy",
+    "OpponentAbbr": "PHA",
+    "Result": "W",
+    "TeamScore": 6,
+    "OpponentScore": 3,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "Opponent": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0
+      ],
+      "StAndrews": [
+        0,
+        0,
+        0,
+        0,
+        2,
+        1,
+        0,
+        3
+      ],
+      "OpponentTotals": {
+        "R": 3,
+        "H": 2,
+        "E": 5
+      },
+      "StAndrewsTotals": {
+        "R": 6,
+        "H": 3,
+        "E": 4
+      }
+    },
+    "PitchingDecisions": {
+      "Win": {
+        "PlayerID": 200104,
+        "PlayerName": "Matt Hunt",
+        "Record": "1-0"
+      },
+      "Loss": {
+        "PlayerName": "B. Hightower"
+      }
+    },
+    "Notes": "Adam Ciccio went 2-for-4 and scored the eventual winning run in the eighth inning on a throwing error. St. Andrew's improved to 3-3 overall and 1-2 in SCISA Region 4-AA.",
+    "SourceDate": "2000-03-29",
+    "SourceCitation": "\"BASEBALL,\" Savannah Morning News (GA), March 29, 2000, Page 5D."
+  },
+  {
+    "Season": 2000,
+    "LocationType": "Unknown",
+    "GameType": "Non-Region",
+    "GameID": 2000040101,
+    "DisplayDate": "Between March 29 and April 5",
+    "OpponentID": "",
+    "Opponent": "Unknown",
+    "OpponentAbbr": "UNK",
+    "Result": "W",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "IsPlaceholder": true,
+    "Notes": "Placeholder non-region win added because the April 5 Beaufort Academy report listed St. Andrew's at 5-3 overall and 2-2 in SCISA Region 4-AA after the known March 29 Patrick Henry win and the Beaufort region win.",
+    "SourceCitation": "Record-path placeholder from NewsBank baseball reports, Spring 2000."
+  },
+  {
+    "Season": 2000,
+    "LocationType": "Unknown",
+    "GameType": "Region",
+    "GameID": 2000040401,
+    "Date": "2000-04-04",
+    "OpponentID": "sc-beaufort-academy-beaufort",
+    "Opponent": "Beaufort Academy",
+    "OpponentAbbr": "BA",
+    "Result": "W",
+    "TeamScore": 10,
+    "OpponentScore": 7,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "Opponent": [
+        0,
+        1,
+        2,
+        0,
+        0,
+        4,
+        0
+      ],
+      "StAndrews": [
+        0,
+        3,
+        2,
+        2,
+        2,
+        1,
+        "X"
+      ],
+      "OpponentTotals": {
+        "R": 7,
+        "H": 2,
+        "E": 3
+      },
+      "StAndrewsTotals": {
+        "R": 10,
+        "H": 8,
+        "E": 4
+      }
+    },
+    "PitchingDecisions": {
+      "Win": {
+        "PlayerID": 200102,
+        "PlayerName": "Zack Hillard",
+        "Record": "1-2"
+      },
+      "Save": {
+        "PlayerID": 200104,
+        "PlayerName": "Matt Hunt"
+      },
+      "Loss": {
+        "PlayerName": "Harriot"
+      }
+    },
+    "Notes": "Ryan Stratz went 3-for-4 with an RBI, Jeff Smith went 2-for-4 with two RBIs, and Jake Smith went 2-for-2 with three RBIs. St. Andrew's improved to 5-3 overall and 2-2 in SCISA Region 4-AA.",
+    "SourceDate": "2000-04-05",
+    "SourceCitation": "\"BASEBALL,\" Savannah Morning News (GA), April 5, 2000, Page 5D."
+  },
+  {
+    "Season": 2000,
+    "LocationType": "Unknown",
+    "GameType": "Non-Region",
+    "GameID": 2000040601,
+    "Date": "2000-04-06",
+    "OpponentID": "ga-bible-baptist-school-savannah",
+    "Opponent": "Bible Baptist School",
+    "OpponentAbbr": "BB",
+    "Result": "W",
+    "TeamScore": 10,
+    "OpponentScore": 0,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "Opponent": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "StAndrews": [
+        7,
+        2,
+        0,
+        0,
+        0,
+        1
+      ],
+      "OpponentTotals": {
+        "R": 0,
+        "H": 4,
+        "E": 7
+      },
+      "StAndrewsTotals": {
+        "R": 10,
+        "H": 16,
+        "E": 3
+      }
+    },
+    "PitchingDecisions": {
+      "Win": {
+        "PlayerID": 200108,
+        "PlayerName": "Adam Ciccio",
+        "Record": "2-0"
+      },
+      "Loss": {
+        "PlayerName": "East"
+      }
+    },
+    "Notes": "Zack Hillard went 3-for-5 with five RBIs, Adam Ciccio went 3-for-5 with an RBI and earned the win, Adam Sumers and Stevie Gregory homered, and St. Andrew's improved to 6-3.",
+    "SourceDate": "2000-04-07",
+    "SourceCitation": "\"BASEBALL,\" Savannah Morning News (GA), April 7, 2000, Page 8B."
+  },
+  {
+    "Season": 2000,
+    "LocationType": "Unknown",
+    "GameType": "Region",
+    "GameID": 2000040701,
+    "Date": "2000-04-07",
+    "OpponentID": "sc-sea-island-academy-johns-island",
+    "Opponent": "Sea Island Academy",
+    "OpponentAbbr": "SIA",
+    "Result": "L",
+    "TeamScore": 6,
+    "OpponentScore": 11,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "Opponent": [
+        0,
+        2,
+        0,
+        1,
+        3,
+        3,
+        2
+      ],
+      "StAndrews": [
+        0,
+        3,
+        1,
+        0,
+        0,
+        0,
+        2
+      ],
+      "OpponentTotals": {
+        "R": 11,
+        "H": 11,
+        "E": 0
+      },
+      "StAndrewsTotals": {
+        "R": 6,
+        "H": 7,
+        "E": 5
+      }
+    },
+    "PitchingDecisions": {
+      "Win": {
+        "PlayerName": "Marcus Carter",
+        "Record": "1-1"
+      },
+      "Loss": {
+        "PlayerID": 200462,
+        "PlayerName": "Ryan Stratz",
+        "Record": "0-1"
+      }
+    },
+    "Notes": "Adam Ciccio went 2-for-3 with three RBIs and Adam Sumers went 1-for-3 with two RBIs. This St. Andrew's result was embedded in a Groves playoff article uncovered during the broad sweep. Records: Sea Island 8-2, 4-0 SCISA Region 4-AA; St. Andrew's 6-4, 2-3.",
+    "SourceDate": "2000-04-08",
+    "SourceCitation": "\"CAMDEN COUNTY BLUDGEONS GROVES' PLAYOFF HOPES,\" Savannah Morning News (GA), April 8, 2000, Page 8E."
+  },
+  {
+    "Season": 2000,
+    "LocationType": "Unknown",
+    "GameType": "Region",
+    "GameID": 2000041001,
+    "Date": "2000-04-10",
+    "OpponentID": "sc-st-pauls-country-day-school-hollywood",
+    "Opponent": "St. Paul's Country Day School",
+    "OpponentAbbr": "SPCD",
+    "Result": "W",
+    "TeamScore": 17,
+    "OpponentScore": 1,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "Opponent": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "StAndrews": [
+        2,
+        4,
+        0,
+        10,
+        1
+      ],
+      "OpponentTotals": {
+        "R": 1,
+        "H": 1,
+        "E": 5
+      },
+      "StAndrewsTotals": {
+        "R": 17,
+        "H": 10,
+        "E": 2
+      }
+    },
+    "PitchingDecisions": {
+      "Win": {
+        "PlayerID": 200102,
+        "PlayerName": "Zack Hillard",
+        "Record": "2-2"
+      },
+      "Loss": {
+        "PlayerName": "Inabine"
+      }
+    },
+    "Notes": "Ryan Stratz went 4-for-4 with three RBIs, Jeff Smith went 2-for-3 with three RBIs, Jake Smith went 2-for-2 with two RBIs, and Zack Hillard went 2-for-3 with four RBIs. St. Andrew's improved to 7-4 overall and 3-3 in SCISA Region 4-AA.",
+    "SourceDate": "2000-04-11",
+    "SourceCitation": "\"MEMORIAL'S DENNIS THROWS NO-HITTER,\" Savannah Morning News (GA), April 11, 2000, Page 5D."
+  },
+  {
+    "Season": 2000,
+    "LocationType": "Unknown",
+    "GameType": "Non-Region",
+    "GameID": 2000041101,
+    "Date": "2000-04-11",
+    "OpponentID": "ga-bible-baptist-school-savannah",
+    "Opponent": "Bible Baptist School",
+    "OpponentAbbr": "BB",
+    "Result": "W",
+    "TeamScore": 11,
+    "OpponentScore": 9,
+    "Notes": "Late Tuesday's results listed St. Andrew's 11, Bible Baptist 9. No box score or individual St. Andrew's statistics were printed in the recovered item.",
+    "SourceDate": "2000-04-13",
+    "SourceCitation": "\"CALVARY THROWS A SHOCK AT SAVANNAH CHRISTIAN,\" Savannah Morning News (GA), April 13, 2000, Page 5D."
+  },
+  {
+    "Season": 2000,
+    "LocationType": "Unknown",
+    "GameType": "Region",
+    "GameID": 2000042601,
+    "Date": "2000-04-26",
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
+    "Opponent": "Hilton Head Christian Academy",
+    "OpponentAbbr": "HHCA",
+    "Result": "L",
+    "TeamScore": 0,
+    "OpponentScore": 10,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "Opponent": [
+        1,
+        6,
+        0,
+        0,
+        0,
+        3,
+        "X"
+      ],
+      "StAndrews": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "OpponentTotals": {
+        "R": 10,
+        "H": 5,
+        "E": 3
+      },
+      "StAndrewsTotals": {
+        "R": 0,
+        "H": 3,
+        "E": 5
+      }
+    },
+    "PitchingDecisions": {
+      "Win": {
+        "PlayerName": "Bodine"
+      },
+      "Loss": {
+        "PlayerID": 200102,
+        "PlayerName": "Zack Hillard",
+        "Record": "2-3"
+      }
+    },
+    "Notes": "Adam Ciccio went 1-for-2. St. Andrew's fell to 8-5 overall and 3-4 in SCISA Region 4-AA.",
+    "SourceDate": "2000-04-27",
+    "SourceCitation": "\"BASEBALL,\" Savannah Morning News (GA), April 27, 2000, Page 5D."
+  },
+  {
+    "Season": 2000,
+    "LocationType": "Unknown",
+    "GameType": "Region",
+    "GameID": 2000042701,
+    "Date": "2000-04-27",
+    "OpponentID": "sc-patrick-henry-academy-estill",
+    "Opponent": "Patrick Henry Academy",
+    "OpponentAbbr": "PHA",
+    "Result": "W",
+    "TeamScore": 5,
+    "OpponentScore": 0,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "Opponent": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "StAndrews": [
+        1,
+        0,
+        2,
+        0,
+        0,
+        2,
+        "X"
+      ],
+      "OpponentTotals": {
+        "R": 0,
+        "H": 3,
+        "E": 2
+      },
+      "StAndrewsTotals": {
+        "R": 5,
+        "H": 7,
+        "E": 2
+      }
+    },
+    "PitchingDecisions": {
+      "Win": {
+        "PlayerID": 200104,
+        "PlayerName": "Matt Hunt",
+        "Record": "2-1"
+      },
+      "Loss": {
+        "PlayerName": "Dempsey"
+      }
+    },
+    "Notes": "Jeff Smith went 3-for-4 and scored twice, and Matt Hunt went 2-for-3. St. Andrew's improved to 9-5 overall and 4-4 in SCISA Region 4-AA.",
+    "SourceDate": "2000-04-28",
+    "SourceCitation": "\"ECI BEGINS STATE TOURNEY,\" Savannah Morning News (GA), April 28, 2000, Page 3B."
+  },
+  {
+    "Season": 2000,
+    "LocationType": "Unknown",
+    "GameType": "Non-Region",
+    "GameID": 2000042801,
+    "Date": "2000-04-28",
+    "OpponentID": "ga-memorial-day-school-savannah",
+    "Opponent": "Memorial Day School",
+    "OpponentAbbr": "MDS",
+    "Result": "L",
+    "TeamScore": 0,
+    "OpponentScore": 10,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "Opponent": [
+        2,
+        0,
+        4,
+        1,
+        3
+      ],
+      "StAndrews": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "OpponentTotals": {
+        "R": 10,
+        "H": 8,
+        "E": 2
+      },
+      "StAndrewsTotals": {
+        "R": 0,
+        "H": 2,
+        "E": 2
+      }
+    },
+    "PitchingDecisions": {
+      "Win": {
+        "PlayerName": "Williams"
+      },
+      "Loss": {
+        "PlayerID": 200011,
+        "PlayerName": "Jeff Smith"
+      }
+    },
+    "Notes": "Memorial Day defeated St. Andrew's 10-0 in five innings.",
+    "SourceDate": "2000-04-29",
+    "SourceCitation": "\"BASEBALL,\" Savannah Morning News (GA), April 29, 2000, Page 3F."
+  },
+  {
+    "Season": 2000,
+    "LocationType": "Unknown",
+    "GameType": "Region",
+    "GameID": 2000050101,
+    "DisplayDate": "Between April 29 and May 4",
+    "OpponentID": "",
+    "Opponent": "Unknown",
+    "OpponentAbbr": "UNK",
+    "Result": "L",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "IsPlaceholder": true,
+    "Notes": "Placeholder region loss added because the May 4 Beaufort Academy box score listed St. Andrew's at 10-7 overall and 5-5 in SCISA Region 4-AA after the known April 28 Memorial Day loss and the May 3 Beaufort Academy win.",
+    "SourceCitation": "Record-path placeholder from NewsBank baseball reports, Spring 2000."
+  },
+  {
+    "Season": 2000,
+    "LocationType": "Unknown",
+    "GameType": "Region",
+    "GameID": 2000050301,
+    "Date": "2000-05-03",
+    "OpponentID": "sc-beaufort-academy-beaufort",
+    "Opponent": "Beaufort Academy",
+    "OpponentAbbr": "BA",
+    "Result": "W",
+    "TeamScore": 10,
+    "OpponentScore": 5,
+    "LineScore": {
+      "Innings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "Opponent": [
+        1,
+        0,
+        1,
+        0,
+        2,
+        0,
+        1
+      ],
+      "StAndrews": [
+        4,
+        0,
+        1,
+        0,
+        0,
+        5,
+        0
+      ],
+      "OpponentTotals": {
+        "R": 5,
+        "H": 4,
+        "E": 4
+      },
+      "StAndrewsTotals": {
+        "R": 10,
+        "H": 10,
+        "E": 2
+      }
+    },
+    "PitchingDecisions": {
+      "Win": {
+        "PlayerID": 200102,
+        "PlayerName": "Zack Hillard",
+        "Record": "3-3"
+      },
+      "Loss": {
+        "PlayerName": "B. Davidson"
+      }
+    },
+    "Notes": "Matt Hunt and Ricky Wiggins each hit a three-run home run. Jeff Smith, Jake Smith, Zack Hillard, and Hunt each had two hits as St. Andrew's improved to 10-7 overall and 5-5 in SCISA Region 4-AA.",
+    "SourceDate": "2000-05-04",
+    "SourceCitation": "\"BASEBALL,\" Savannah Morning News (GA), May 4, 2000, Page 5D."
+  },
+  {
     "Season": 2001,
     "GameID": 2001030601,
     "Date": "2001-03-06",
