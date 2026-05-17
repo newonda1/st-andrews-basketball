@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-17T14:50:57.231Z",
-  "itemCount": 1423,
+  "generatedAt": "2026-05-17T18:54:07.520Z",
+  "itemCount": 1427,
   "items": [
     {
       "id": "athletics-home",
@@ -4599,6 +4599,25 @@
       ]
     },
     {
+      "id": "boys-basketball-athlete-2026161",
+      "type": "athlete",
+      "title": "Ben Harrison",
+      "subtitle": "Boys Basketball athlete - Class of 2007",
+      "to": "/athletics/boys/basketball/players/2026161",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Ben",
+        "Harrison",
+        "Harrison Ben",
+        "class of 2007",
+        "grad 2007"
+      ]
+    },
+    {
       "id": "boys-basketball-athlete-2026156",
       "type": "athlete",
       "title": "Steven Carbone",
@@ -4689,25 +4708,6 @@
         "Josh",
         "Taylor",
         "Taylor Josh",
-        "class of 2007",
-        "grad 2007"
-      ]
-    },
-    {
-      "id": "boys-basketball-athlete-2026161",
-      "type": "athlete",
-      "title": "Ben Harrison",
-      "subtitle": "Boys Basketball athlete - Class of 2007",
-      "to": "/athletics/boys/basketball/players/2026161",
-      "keywords": [
-        "Boys Basketball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Ben",
-        "Harrison",
-        "Harrison Ben",
         "class of 2007",
         "grad 2007"
       ]
@@ -13560,6 +13560,25 @@
       ]
     },
     {
+      "id": "football-athlete-200013",
+      "type": "athlete",
+      "title": "Jason Victor",
+      "subtitle": "Football athlete - Class of 2003",
+      "to": "/athletics/football/players/200013",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Jason",
+        "Victor",
+        "Victor Jason",
+        "class of 2003",
+        "grad 2003"
+      ]
+    },
+    {
       "id": "football-athlete-200440",
       "type": "athlete",
       "title": "Hunter Saussy",
@@ -13598,6 +13617,25 @@
       ]
     },
     {
+      "id": "football-athlete-200015",
+      "type": "athlete",
+      "title": "Tony Sandford",
+      "subtitle": "Football athlete - Class of 2003",
+      "to": "/athletics/football/players/200015",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Tony",
+        "Sandford",
+        "Sandford Tony",
+        "class of 2003",
+        "grad 2003"
+      ]
+    },
+    {
       "id": "football-athlete-200431",
       "type": "athlete",
       "title": "Will Chisholm",
@@ -13633,6 +13671,25 @@
         "Smith Josh",
         "class of 2004",
         "grad 2004"
+      ]
+    },
+    {
+      "id": "football-athlete-200016",
+      "type": "athlete",
+      "title": "Ben Robertson",
+      "subtitle": "Football athlete - Class of 2003",
+      "to": "/athletics/football/players/200016",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Ben",
+        "Robertson",
+        "Robertson Ben",
+        "class of 2003",
+        "grad 2003"
       ]
     },
     {
@@ -13705,6 +13762,25 @@
         "Andy",
         "Crouch",
         "Crouch Andy"
+      ]
+    },
+    {
+      "id": "football-athlete-200014",
+      "type": "athlete",
+      "title": "Mike McLean",
+      "subtitle": "Football athlete - Class of 2003",
+      "to": "/athletics/football/players/200014",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Mike",
+        "McLean",
+        "McLean Mike",
+        "class of 2003",
+        "grad 2003"
       ]
     },
     {
@@ -19555,7 +19631,7 @@
       "id": "boys-basketball-team-west-georgia-christian",
       "type": "team",
       "title": "West Georgia Christian",
-      "subtitle": "Boys Basketball opponent history",
+      "subtitle": "Boys Basketball opponent history - GA",
       "to": "/athletics/boys/basketball/records/opponents?team=West+Georgia+Christian",
       "keywords": [
         "Boys Basketball",
@@ -19563,7 +19639,8 @@
         "opponent",
         "history",
         "records",
-        "West Georgia Christian"
+        "West Georgia Christian",
+        "GA"
       ]
     },
     {
@@ -22749,7 +22826,7 @@
       "id": "girls-basketball-team-west-georgia-christian",
       "type": "team",
       "title": "West Georgia Christian",
-      "subtitle": "Girls Basketball opponent history",
+      "subtitle": "Girls Basketball opponent history - GA",
       "to": "/athletics/girls/basketball/records/opponents?team=West+Georgia+Christian",
       "keywords": [
         "Girls Basketball",
@@ -22757,7 +22834,8 @@
         "opponent",
         "history",
         "records",
-        "West Georgia Christian"
+        "West Georgia Christian",
+        "GA"
       ]
     },
     {

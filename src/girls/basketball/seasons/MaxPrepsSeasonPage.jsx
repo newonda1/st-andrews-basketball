@@ -11,6 +11,10 @@ import {
   hydrateGamesWithSchools,
 } from "../dataUtils";
 import { athleteProfilePath, isPre2015Season } from "../../../athletes/archiveEra";
+import {
+  fetchBasketballStats,
+  resolveSeasonBriefs,
+} from "../../../basketball/archive/seasonMeta";
 
 const STAT_FIELDS = [
   "MinutesPlayed",
@@ -500,6 +504,7 @@ function MaxPrepsSeasonPage({
   const [players, setPlayers] = useState([]);
   const [seasonRoster, setSeasonRoster] = useState(null);
   const [rosterEntries, setRosterEntries] = useState([]);
+  const [seasonInfo, setSeasonInfo] = useState(null);
   const [schoolsData, setSchoolsData] = useState([]);
   const [seasonAdjustments, setSeasonAdjustments] = useState([]);
   const [articles, setArticles] = useState([]);
@@ -508,34 +513,44 @@ function MaxPrepsSeasonPage({
 
   useEffect(() => {
     async function fetchData() {
-      const [gamesRes, statsRes, playersRes, rostersRes, schoolsRes, adjustmentsRes, articlesRes] =
+      const [
+        gamesRes,
+        statsData,
+        playersRes,
+        rostersRes,
+        schoolsRes,
+        adjustmentsRes,
+        articlesRes,
+        seasonsRes,
+      ] =
         await Promise.all([
           fetch("/data/girls/basketball/games.json"),
-          fetch("/data/girls/basketball/playergamestats.json"),
+          fetchBasketballStats("/data/girls/basketball/", seasonId),
           fetch("/data/players.json"),
           fetch(GIRLS_BASKETBALL_ROSTERS_PATH),
           fetch(SCHOOLS_PATH),
           fetch("/data/girls/basketball/adjustments.json").catch(() => null),
           fetch("/data/girls/basketball/articles.json").catch(() => null),
+          fetch("/data/girls/basketball/seasons.json"),
         ]);
 
       const [
         gamesData,
-        statsData,
         playersData,
         rostersData,
         schoolsData,
         adjustmentsData,
         articlesData,
+        seasonsData,
       ] =
         await Promise.all([
           gamesRes.json(),
-          statsRes.json(),
           playersRes.json(),
           rostersRes.json(),
           schoolsRes.json(),
           adjustmentsRes?.ok ? adjustmentsRes.json() : Promise.resolve([]),
           articlesRes?.ok ? articlesRes.json() : Promise.resolve([]),
+          seasonsRes.json(),
         ]);
 
       const seasonGames = hydrateGamesWithSchools(gamesData, schoolsData)
@@ -553,6 +568,9 @@ function MaxPrepsSeasonPage({
       const selectedRoster = findSeasonRoster(rostersData, seasonLabel);
       setSeasonRoster(selectedRoster);
       setRosterEntries(getRosterEntriesForSeason(rostersData, seasonLabel));
+      setSeasonInfo(
+        seasonsData.find((season) => Number(season.SeasonID) === Number(seasonId)) || null
+      );
       setSchoolsData(schoolsData);
       setSeasonAdjustments(
         (Array.isArray(adjustmentsData) ? adjustmentsData : []).filter(
@@ -574,6 +592,17 @@ function MaxPrepsSeasonPage({
     for (const player of players) map.set(Number(player.PlayerID), player);
     return map;
   }, [players]);
+
+  const seasonSummary = useMemo(() => {
+    return games.reduce(
+      (summary, game) => {
+        if (game.Result === "W") summary.wins += 1;
+        if (game.Result === "L") summary.losses += 1;
+        return summary;
+      },
+      { wins: 0, losses: 0 }
+    );
+  }, [games]);
 
   const schoolById = useMemo(() => {
     const map = new Map();
@@ -800,6 +829,10 @@ function MaxPrepsSeasonPage({
   const featuredArticle = articles[0] || null;
   const shouldEmbedArticle = embedFeaturedArticleInRecap && featuredArticle;
   const shouldShowRecap = Boolean(splitParagraphs(seasonRecap).length);
+  const resolvedSeasonBriefs = useMemo(
+    () => resolveSeasonBriefs({ seasonInfo, seasonSummary, seasonBriefs }),
+    [seasonInfo, seasonSummary, seasonBriefs]
+  );
   const scheduleHeaderCellClassName = "px-2 py-2 text-center text-xs whitespace-nowrap";
   const scheduleOpponentHeaderCellClassName =
     "px-2 py-2 pl-10 text-left text-xs whitespace-nowrap";
@@ -817,7 +850,7 @@ function MaxPrepsSeasonPage({
         <SeasonRecapSection
           title={seasonRecapTitle}
           recap={seasonRecap}
-          briefItems={seasonBriefs}
+          briefItems={resolvedSeasonBriefs}
           article={shouldEmbedArticle ? featuredArticle : null}
           recapLinks={seasonRecapLinks}
           basePath="/athletics/girls/basketball"

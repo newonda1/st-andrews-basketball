@@ -1,0 +1,98 @@
+[
+  {
+    "StatID": "2019042501-202122-1600m",
+    "MeetID": 2019042501,
+    "PlayerID": 202122,
+    "Gender": "Girls",
+    "Event": "1600 Meter Run",
+    "Mark": "6:43.99",
+    "Place": "9th",
+    "Round": "Finals",
+    "Heat": "H2",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2019042501-202122-800m",
+    "MeetID": 2019042501,
+    "PlayerID": 202122,
+    "Gender": "Girls",
+    "Event": "800 Meter Run",
+    "Mark": "3:01.23",
+    "Place": "13th",
+    "Round": "Finals",
+    "Heat": "H1",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2019042501-202120-1600m",
+    "MeetID": 2019042501,
+    "PlayerID": 202120,
+    "Gender": "Boys",
+    "Event": "1600 Meter Run",
+    "Mark": "5:45.91",
+    "Place": "14th",
+    "Round": "Finals",
+    "Heat": "H1",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2019042501-201901-3200m",
+    "MeetID": 2019042501,
+    "PlayerID": 201901,
+    "Gender": "Boys",
+    "Event": "3200 Meter Run",
+    "Mark": "13:47.31",
+    "Place": "14th",
+    "Round": "Finals",
+    "Heat": "H1",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2019042501-201902-3200m",
+    "MeetID": 2019042501,
+    "PlayerID": 201902,
+    "Gender": "Boys",
+    "Event": "3200 Meter Run",
+    "Mark": "13:55.32",
+    "Place": "15th",
+    "Round": "Finals",
+    "Heat": "H1",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2019042501-201903-discus",
+    "MeetID": 2019042501,
+    "PlayerID": 201903,
+    "Gender": "Boys",
+    "Event": "Discus",
+    "Mark": "119-00",
+    "Place": "4th",
+    "Round": "Finals",
+    "Heat": "H2",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2019042501-201903-shot-put",
+    "MeetID": 2019042501,
+    "PlayerID": 201903,
+    "Gender": "Boys",
+    "Event": "Shot Put",
+    "Mark": "43-06.00",
+    "Place": "4th",
+    "Round": "Finals",
+    "Heat": "H2",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2019042501-201904-shot-put",
+    "MeetID": 2019042501,
+    "PlayerID": 201904,
+    "Gender": "Boys",
+    "Event": "Shot Put",
+    "Mark": "41-01.00",
+    "Place": "5th",
+    "Round": "Finals",
+    "Heat": "H2",
+    "Status": "Complete"
+  }
+]

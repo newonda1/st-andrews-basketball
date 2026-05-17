@@ -11,7 +11,10 @@
     "HighlightNotes": [
       "Toni Popovic qualified for the SCISA state meet in the boys 400 meters.",
       "Tiffany Griffin qualified for the SCISA state meet in the girls 3,200 meters."
-    ]
+    ],
+    "ArchiveStatus": "partial",
+    "ArchiveStatusNote": "NewsBank recovery currently documents two St. Andrew's qualifiers from a late-March SCISA state qualifying meet at Wilson Hall School in Sumter.",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "SeasonID": 2005,
@@ -34,7 +37,10 @@
       "Ann Kingston placed 4th in the girls 100-meter hurdles in 18.73 and also reached the girls 100 final.",
       "The girls 4x400 relay finished 7th in 4:46.03 with a partially published lineup.",
       "The girls team finished 11th in the SCISA standings with eight points."
-    ]
+    ],
+    "ArchiveStatus": "verified",
+    "ArchiveStatusNote": "The 2004-05 season currently includes the one confirmed high-school meet visible in the public archive: the April 30, 2005 SCISA state championships.",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "SeasonID": 2006,
@@ -57,7 +63,10 @@
       "Grace Wilkowski placed 7th in the girls shot put at 27-08.50 and also competed in the discus.",
       "Javier Gutierrez placed 10th in the boys long jump at 18-01.00.",
       "The season preserves the next earliest verified SCISA postseason snapshot in the archive."
-    ]
+    ],
+    "ArchiveStatus": "verified",
+    "ArchiveStatusNote": "The 2005-06 season currently includes the one confirmed high-school meet visible in the public archive: the April 29, 2006 SCISA state championships.",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "SeasonID": 2007,

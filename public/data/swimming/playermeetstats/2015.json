@@ -1,0 +1,54 @@
+[
+  {
+    "StatID": "2014100401-alex-awad-50-free",
+    "MeetID": 2014100401,
+    "PlayerID": 2026065,
+    "AthleteName": "Alex Awad",
+    "Gender": "Girls",
+    "Event": "50 Yard Freestyle",
+    "Mark": null,
+    "Place": "DQ",
+    "Points": null,
+    "Round": "Finals",
+    "Status": "DQ"
+  },
+  {
+    "StatID": "2014100401-claire-turner-50-free",
+    "MeetID": 2014100401,
+    "PlayerID": 201403,
+    "AthleteName": "Claire Turner",
+    "Gender": "Girls",
+    "Event": "50 Yard Freestyle",
+    "Mark": "29.58",
+    "Place": "8th",
+    "Points": 3,
+    "Round": "Finals",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2014100401-morgan-randolph-100-fly",
+    "MeetID": 2014100401,
+    "PlayerID": 201402,
+    "AthleteName": "Morgan Randolph",
+    "Gender": "Girls",
+    "Event": "100 Yard Butterfly",
+    "Mark": "1:01.97",
+    "Place": "1st",
+    "Points": 14,
+    "Round": "Finals",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2014100401-morgan-randolph-100-free",
+    "MeetID": 2014100401,
+    "PlayerID": 201402,
+    "AthleteName": "Morgan Randolph",
+    "Gender": "Girls",
+    "Event": "100 Yard Freestyle",
+    "Mark": "58.54",
+    "Place": "2nd",
+    "Points": 11,
+    "Round": "Finals",
+    "Status": "Complete"
+  }
+]

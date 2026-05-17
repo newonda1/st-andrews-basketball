@@ -8,7 +8,6 @@
     "Date": "2005-03-06",
     "Course": "Wilmington Island Golf Club",
     "Location": "Wilmington Island, GA",
-    "SourceLabel": "Savannah Morning News, Mar. 10, 2005",
     "SourceCitation": "\"JUNIOR SKILLS CHALLENGE RETURNS TO HENDERSON GC,\" Savannah Morning News (GA), Mar. 10, 2005, Page 5D.",
     "SourcePdfUrl": null,
     "SourcePdfPages": [],
@@ -55,7 +54,10 @@
         "isStAndrews": true
       }
     ],
-    "Summary": "Samantha Long shot 84-81-165 to finish second among girls at the Wilmington Island Junior Classic on Mar. 5-6, 2005. Drew Aimone was listed among boys finishers with rounds of 88 and 75 for a 163 total."
+    "Summary": "Samantha Long shot 84-81-165 to finish second among girls at the Wilmington Island Junior Classic on Mar. 5-6, 2005. Drew Aimone was listed among boys finishers with rounds of 88 and 75 for a 163 total.",
+    "ResultCompleteness": "missing",
+    "SourceNote": "The newspaper item published hometowns rather than school affiliations for junior golf. Samantha Long is tied to St. Andrew's through the Mar. 4, 2005 Savannah Morning News golf feature. Drew Aimone is included in the St. Andrew's finishers because he appears in the adjacent St. Andrew's golf rosters, though this article listed him only as Savannah.",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "TournamentID": "2019-aa-state",

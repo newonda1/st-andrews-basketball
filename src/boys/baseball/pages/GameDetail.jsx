@@ -1,5 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import SourceMeta from "../../../archive/SourceMeta";
+import { athleteProfilePath, isPre2015Season } from "../../../athletes/archiveEra";
 import { loadBaseballPlayerGameStatsForSeason } from "../dataLoaders";
 
 function baseballInningsToOuts(value) {
@@ -62,6 +64,22 @@ function getJerseyNumber(jerseyMap, playerId) {
 
 function buildPhotoUrl(playerId) {
   return `/images/boys/baseball/players/${playerId}.jpg`;
+}
+
+function baseballPlayerPath(playerId, season) {
+  if (!playerId) return "";
+  if (isPre2015Season(season)) return athleteProfilePath(playerId, "baseball");
+  return `/athletics/boys/baseball/players/${playerId}`;
+}
+
+function BaseballPlayerLink({ playerId, season, children, className = "" }) {
+  const path = baseballPlayerPath(playerId, season);
+  if (!path) return children;
+  return (
+    <Link to={path} className={className || "text-blue-700 hover:underline"}>
+      {children}
+    </Link>
+  );
 }
 
 function formatOpponentAbbr(game) {
@@ -532,6 +550,7 @@ export default function GameDetail() {
         <h1 className="text-3xl font-bold">
           St. Andrew&apos;s ({game.TeamScore ?? "-"}) vs. {game.Opponent} ({game.OpponentScore ?? "-"})
         </h1>
+        <SourceMeta record={game} />
       </div>
 
       <section className="rounded-2xl shadow border border-gray-200 bg-white overflow-hidden">
@@ -630,7 +649,9 @@ export default function GameDetail() {
                 <div>
                   <div className="text-sm font-black tracking-wide text-gray-500 uppercase">Win</div>
                   <div className="text-xl font-bold text-gray-900">
-                    {winningPitcher.name}
+                    <BaseballPlayerLink playerId={winningPitcher.PlayerID} season={game.Season}>
+                      {winningPitcher.name}
+                    </BaseballPlayerLink>
                     {formatPitcherDecisionSuffix(
                       winningPitcher.DecisionRecord
                         ? winningPitcher
@@ -656,7 +677,9 @@ export default function GameDetail() {
                 <div>
                   <div className="text-sm font-black tracking-wide text-gray-500 uppercase">Loss</div>
                   <div className="text-xl font-bold text-gray-900">
-                    {losingPitcher.name}
+                    <BaseballPlayerLink playerId={losingPitcher.PlayerID} season={game.Season}>
+                      {losingPitcher.name}
+                    </BaseballPlayerLink>
                     {formatPitcherDecisionSuffix(
                       losingPitcher.DecisionRecord
                         ? losingPitcher
@@ -682,7 +705,9 @@ export default function GameDetail() {
                 <div>
                   <div className="text-sm font-black tracking-wide text-gray-500 uppercase">Save</div>
                   <div className="text-xl font-bold text-gray-900">
-                    {savePitcher.name}
+                    <BaseballPlayerLink playerId={savePitcher.PlayerID} season={game.Season}>
+                      {savePitcher.name}
+                    </BaseballPlayerLink>
                     {formatPitcherDecisionSuffix(
                       savePitcher.DecisionRecord
                         ? savePitcher
@@ -735,7 +760,9 @@ export default function GameDetail() {
                           e.currentTarget.style.display = "none";
                         }}
                       />
-                      <span>{row.name}</span>
+                      <BaseballPlayerLink playerId={row.PlayerID} season={game.Season}>
+                        {row.name}
+                      </BaseballPlayerLink>
                     </div>
                   </td>
                   <td className={tdClass}>{row.PA}</td>
@@ -809,7 +836,9 @@ export default function GameDetail() {
                           e.currentTarget.style.display = "none";
                         }}
                       />
-                      <span>{row.name}</span>
+                      <BaseballPlayerLink playerId={row.PlayerID} season={game.Season}>
+                        {row.name}
+                      </BaseballPlayerLink>
                     </div>
                   </td>
                   <td className={tdClass}>{outsToBaseballInnings(row.IP)}</td>
@@ -879,7 +908,9 @@ export default function GameDetail() {
                           e.currentTarget.style.display = "none";
                         }}
                       />
-                      <span>{row.name}</span>
+                      <BaseballPlayerLink playerId={row.PlayerID} season={game.Season}>
+                        {row.name}
+                      </BaseballPlayerLink>
                     </div>
                   </td>
                   <td className={tdClass}>{outsToBaseballInnings(row.INN)}</td>

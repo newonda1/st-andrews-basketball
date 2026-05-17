@@ -1,0 +1,192 @@
+[
+  {
+    "season": 1999,
+    "file": "1999.json",
+    "rows": 33,
+    "games": 10,
+    "Season": 1999,
+    "Path": "/data/boys/football/playergamelogs/1999.json",
+    "Rows": 33,
+    "Games": 10
+  },
+  {
+    "season": 2000,
+    "file": "2000.json",
+    "rows": 36,
+    "games": 10,
+    "Season": 2000,
+    "Path": "/data/boys/football/playergamelogs/2000.json",
+    "Rows": 36,
+    "Games": 10
+  },
+  {
+    "season": 2001,
+    "file": "2001.json",
+    "rows": 20,
+    "games": 9,
+    "Season": 2001,
+    "Path": "/data/boys/football/playergamelogs/2001.json",
+    "Rows": 20,
+    "Games": 9
+  },
+  {
+    "season": 2002,
+    "file": "2002.json",
+    "rows": 61,
+    "games": 12,
+    "Season": 2002,
+    "Path": "/data/boys/football/playergamelogs/2002.json",
+    "Rows": 61,
+    "Games": 12
+  },
+  {
+    "season": 2003,
+    "file": "2003.json",
+    "rows": 18,
+    "games": 6,
+    "Season": 2003,
+    "Path": "/data/boys/football/playergamelogs/2003.json",
+    "Rows": 18,
+    "Games": 6
+  },
+  {
+    "season": 2004,
+    "file": "2004.json",
+    "rows": 3,
+    "games": 2,
+    "Season": 2004,
+    "Path": "/data/boys/football/playergamelogs/2004.json",
+    "Rows": 3,
+    "Games": 2
+  },
+  {
+    "season": 2005,
+    "file": "2005.json",
+    "rows": 9,
+    "games": 5,
+    "Season": 2005,
+    "Path": "/data/boys/football/playergamelogs/2005.json",
+    "Rows": 9,
+    "Games": 5
+  },
+  {
+    "season": 2006,
+    "file": "2006.json",
+    "rows": 50,
+    "games": 3,
+    "Season": 2006,
+    "Path": "/data/boys/football/playergamelogs/2006.json",
+    "Rows": 50,
+    "Games": 3
+  },
+  {
+    "season": 2007,
+    "file": "2007.json",
+    "rows": 178,
+    "games": 10,
+    "Season": 2007,
+    "Path": "/data/boys/football/playergamelogs/2007.json",
+    "Rows": 178,
+    "Games": 10
+  },
+  {
+    "season": 2008,
+    "file": "2008.json",
+    "rows": 199,
+    "games": 12,
+    "Season": 2008,
+    "Path": "/data/boys/football/playergamelogs/2008.json",
+    "Rows": 199,
+    "Games": 12
+  },
+  {
+    "season": 2009,
+    "file": "2009.json",
+    "rows": 128,
+    "games": 9,
+    "Season": 2009,
+    "Path": "/data/boys/football/playergamelogs/2009.json",
+    "Rows": 128,
+    "Games": 9
+  },
+  {
+    "season": 2010,
+    "file": "2010.json",
+    "rows": 217,
+    "games": 12,
+    "Season": 2010,
+    "Path": "/data/boys/football/playergamelogs/2010.json",
+    "Rows": 217,
+    "Games": 12
+  },
+  {
+    "season": 2011,
+    "file": "2011.json",
+    "rows": 26,
+    "games": 3,
+    "Season": 2011,
+    "Path": "/data/boys/football/playergamelogs/2011.json",
+    "Rows": 26,
+    "Games": 3
+  },
+  {
+    "season": 2012,
+    "file": "2012.json",
+    "rows": 153,
+    "games": 11,
+    "Season": 2012,
+    "Path": "/data/boys/football/playergamelogs/2012.json",
+    "Rows": 153,
+    "Games": 11
+  },
+  {
+    "season": 2019,
+    "file": "2019.json",
+    "rows": 53,
+    "games": 4,
+    "Season": 2019,
+    "Path": "/data/boys/football/playergamelogs/2019.json",
+    "Rows": 53,
+    "Games": 4
+  },
+  {
+    "season": 2021,
+    "file": "2021.json",
+    "rows": 93,
+    "games": 9,
+    "Season": 2021,
+    "Path": "/data/boys/football/playergamelogs/2021.json",
+    "Rows": 93,
+    "Games": 9
+  },
+  {
+    "season": 2023,
+    "file": "2023.json",
+    "rows": 139,
+    "games": 11,
+    "Season": 2023,
+    "Path": "/data/boys/football/playergamelogs/2023.json",
+    "Rows": 139,
+    "Games": 11
+  },
+  {
+    "season": 2024,
+    "file": "2024.json",
+    "rows": 119,
+    "games": 9,
+    "Season": 2024,
+    "Path": "/data/boys/football/playergamelogs/2024.json",
+    "Rows": 119,
+    "Games": 9
+  },
+  {
+    "season": 2025,
+    "file": "2025.json",
+    "rows": 116,
+    "games": 10,
+    "Season": 2025,
+    "Path": "/data/boys/football/playergamelogs/2025.json",
+    "Rows": 116,
+    "Games": 10
+  }
+]

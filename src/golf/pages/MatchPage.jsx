@@ -2,6 +2,7 @@ import React, { useMemo } from "react";
 import { Link, useParams } from "react-router-dom";
 import { formatGolfDate, formatGolfPlace } from "../golfPageUtils";
 import { athleteProfilePath } from "../../athletes/archiveEra";
+import SourceMeta from "../../archive/SourceMeta";
 
 function buildPlayerMap(players = []) {
   return new Map(players.map((player) => [Number(player.PlayerID), player]));
@@ -274,8 +275,9 @@ export default function MatchPage({
 
       <section className="rounded-[1.4rem] border border-slate-200 bg-white px-5 py-5 shadow-sm">
         <p className="text-sm leading-7 text-slate-700">{match.Summary}</p>
+        <SourceMeta record={match} className="mt-4" />
         <div className="mt-4 flex flex-wrap gap-2">
-          {[match.SourceCitation, match.Opponent].filter(Boolean).map((item) => (
+          {[match.Opponent].filter(Boolean).map((item) => (
             <span
               key={item}
               className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-slate-600"

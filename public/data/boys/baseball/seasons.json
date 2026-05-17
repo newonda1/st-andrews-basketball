@@ -13,7 +13,11 @@
     "RegionWins": 5,
     "RegionLosses": 5,
     "RegionTies": 0,
-    "StatusNote": "NewsBank recovery covers 13 scored baseball reports, four record-path placeholders, and leaderboard snapshots from March 23-May 4, 2000. The recovered final record path is 10-7 overall and 5-5 in SCISA Region 4-AA; individual stat tables remain limited to published box-score leaders."
+    "StatusNote": "NewsBank recovery covers 13 scored baseball reports, four record-path placeholders, and leaderboard snapshots from March 23-May 4, 2000. The recovered final record path is 10-7 overall and 5-5 in SCISA Region 4-AA; individual stat tables remain limited to published box-score leaders.",
+    "ArchiveStatus": "archived",
+    "ArchiveStatusNote": "NewsBank recovery covers 13 scored baseball reports, four record-path placeholders, and leaderboard snapshots from March 23-May 4, 2000. The recovered final record path is 10-7 overall and 5-5 in SCISA Region 4-AA; individual stat tables remain limited to published box-score leaders.",
+    "RecordSource": "seasons.json source-of-truth row; event pages reconcile to this record.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "SeasonID": 2001,
@@ -25,7 +29,11 @@
     "OverallWins": 9,
     "OverallLosses": 10,
     "OverallTies": 0,
-    "StatusNote": "NewsBank recovery now covers 16 scored box scores, three record-path placeholders, and final/statistical-leaderboard notes from March 7-May 11, 2001. The recovered final record path is 9-10; individual stat tables remain limited to published box-score leaders plus noted leaderboard snapshots."
+    "StatusNote": "NewsBank recovery now covers 16 scored box scores, three record-path placeholders, and final/statistical-leaderboard notes from March 7-May 11, 2001. The recovered final record path is 9-10; individual stat tables remain limited to published box-score leaders plus noted leaderboard snapshots.",
+    "ArchiveStatus": "archived",
+    "ArchiveStatusNote": "NewsBank recovery now covers 16 scored box scores, three record-path placeholders, and final/statistical-leaderboard notes from March 7-May 11, 2001. The recovered final record path is 9-10; individual stat tables remain limited to published box-score leaders plus noted leaderboard snapshots.",
+    "RecordSource": "seasons.json source-of-truth row; event pages reconcile to this record.",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "SeasonID": 2002,
@@ -37,7 +45,11 @@
     "OverallWins": 10,
     "OverallLosses": 10,
     "OverallTies": 0,
-    "StatusNote": "NewsBank recovery covers 11 scored games, one record-path win placeholder, and seven early-season placeholders. The April 26 Hilton Head Christian record line conflicts with the surrounding 8-9 and 10-10 record path; the season page notes that inconsistency."
+    "StatusNote": "NewsBank recovery covers 11 scored games, one record-path win placeholder, and seven early-season placeholders. The April 26 Hilton Head Christian record line conflicts with the surrounding 8-9 and 10-10 record path; the season page notes that inconsistency.",
+    "ArchiveStatus": "archived",
+    "ArchiveStatusNote": "NewsBank recovery covers 11 scored games, one record-path win placeholder, and seven early-season placeholders. The April 26 Hilton Head Christian record line conflicts with the surrounding 8-9 and 10-10 record path; the season page notes that inconsistency.",
+    "RecordSource": "seasons.json source-of-truth row; event pages reconcile to this record.",
+    "SourceSeasonLabel": "2001-02"
   },
   {
     "SeasonID": 2006,
@@ -45,7 +57,10 @@
     "RegionSeed": null,
     "RegionFinish": null,
     "StateSeed": null,
-    "StateFinish": null
+    "StateFinish": null,
+    "SourceSeasonLabel": "2005-06",
+    "ArchiveStatus": "partial",
+    "ArchiveStatusNote": "Boys Baseball 2005-06 remains partial; recovered archive data is limited to the currently documented schedule, result, roster, and newspaper-source material."
   },
   {
     "SeasonID": 2008,

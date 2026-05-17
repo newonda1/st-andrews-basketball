@@ -1,0 +1,202 @@
+[
+  {
+    "season": 2001,
+    "file": "2001.json",
+    "rows": 2,
+    "meets": 1,
+    "Season": 2001,
+    "Path": "/data/track/playermeetstats/2001.json",
+    "Rows": 2,
+    "Meets": 1
+  },
+  {
+    "season": 2005,
+    "file": "2005.json",
+    "rows": 5,
+    "meets": 1,
+    "Season": 2005,
+    "Path": "/data/track/playermeetstats/2005.json",
+    "Rows": 5,
+    "Meets": 1
+  },
+  {
+    "season": 2006,
+    "file": "2006.json",
+    "rows": 6,
+    "meets": 1,
+    "Season": 2006,
+    "Path": "/data/track/playermeetstats/2006.json",
+    "Rows": 6,
+    "Meets": 1
+  },
+  {
+    "season": 2007,
+    "file": "2007.json",
+    "rows": 1,
+    "meets": 1,
+    "Season": 2007,
+    "Path": "/data/track/playermeetstats/2007.json",
+    "Rows": 1,
+    "Meets": 1
+  },
+  {
+    "season": 2009,
+    "file": "2009.json",
+    "rows": 4,
+    "meets": 1,
+    "Season": 2009,
+    "Path": "/data/track/playermeetstats/2009.json",
+    "Rows": 4,
+    "Meets": 1
+  },
+  {
+    "season": 2010,
+    "file": "2010.json",
+    "rows": 15,
+    "meets": 1,
+    "Season": 2010,
+    "Path": "/data/track/playermeetstats/2010.json",
+    "Rows": 15,
+    "Meets": 1
+  },
+  {
+    "season": 2011,
+    "file": "2011.json",
+    "rows": 19,
+    "meets": 1,
+    "Season": 2011,
+    "Path": "/data/track/playermeetstats/2011.json",
+    "Rows": 19,
+    "Meets": 1
+  },
+  {
+    "season": 2012,
+    "file": "2012.json",
+    "rows": 9,
+    "meets": 1,
+    "Season": 2012,
+    "Path": "/data/track/playermeetstats/2012.json",
+    "Rows": 9,
+    "Meets": 1
+  },
+  {
+    "season": 2014,
+    "file": "2014.json",
+    "rows": 6,
+    "meets": 1,
+    "Season": 2014,
+    "Path": "/data/track/playermeetstats/2014.json",
+    "Rows": 6,
+    "Meets": 1
+  },
+  {
+    "season": 2015,
+    "file": "2015.json",
+    "rows": 32,
+    "meets": 2,
+    "Season": 2015,
+    "Path": "/data/track/playermeetstats/2015.json",
+    "Rows": 32,
+    "Meets": 2
+  },
+  {
+    "season": 2016,
+    "file": "2016.json",
+    "rows": 47,
+    "meets": 2,
+    "Season": 2016,
+    "Path": "/data/track/playermeetstats/2016.json",
+    "Rows": 47,
+    "Meets": 2
+  },
+  {
+    "season": 2017,
+    "file": "2017.json",
+    "rows": 149,
+    "meets": 5,
+    "Season": 2017,
+    "Path": "/data/track/playermeetstats/2017.json",
+    "Rows": 149,
+    "Meets": 5
+  },
+  {
+    "season": 2018,
+    "file": "2018.json",
+    "rows": 71,
+    "meets": 4,
+    "Season": 2018,
+    "Path": "/data/track/playermeetstats/2018.json",
+    "Rows": 71,
+    "Meets": 4
+  },
+  {
+    "season": 2019,
+    "file": "2019.json",
+    "rows": 8,
+    "meets": 1,
+    "Season": 2019,
+    "Path": "/data/track/playermeetstats/2019.json",
+    "Rows": 8,
+    "Meets": 1
+  },
+  {
+    "season": 2021,
+    "file": "2021.json",
+    "rows": 14,
+    "meets": 2,
+    "Season": 2021,
+    "Path": "/data/track/playermeetstats/2021.json",
+    "Rows": 14,
+    "Meets": 2
+  },
+  {
+    "season": 2022,
+    "file": "2022.json",
+    "rows": 64,
+    "meets": 4,
+    "Season": 2022,
+    "Path": "/data/track/playermeetstats/2022.json",
+    "Rows": 64,
+    "Meets": 4
+  },
+  {
+    "season": 2023,
+    "file": "2023.json",
+    "rows": 99,
+    "meets": 4,
+    "Season": 2023,
+    "Path": "/data/track/playermeetstats/2023.json",
+    "Rows": 99,
+    "Meets": 4
+  },
+  {
+    "season": 2024,
+    "file": "2024.json",
+    "rows": 36,
+    "meets": 2,
+    "Season": 2024,
+    "Path": "/data/track/playermeetstats/2024.json",
+    "Rows": 36,
+    "Meets": 2
+  },
+  {
+    "season": 2025,
+    "file": "2025.json",
+    "rows": 111,
+    "meets": 5,
+    "Season": 2025,
+    "Path": "/data/track/playermeetstats/2025.json",
+    "Rows": 111,
+    "Meets": 5
+  },
+  {
+    "season": 2026,
+    "file": "2026.json",
+    "rows": 158,
+    "meets": 6,
+    "Season": 2026,
+    "Path": "/data/track/playermeetstats/2026.json",
+    "Rows": 158,
+    "Meets": 6
+  }
+]

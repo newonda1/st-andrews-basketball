@@ -19,7 +19,10 @@
       "Four days later at Stono Ferry, St. Paul's Country Day shot 183, St. Andrew's 195, and St. John's 233. Todd Tribble again led St. Andrew's with a 41, while Jake Smith shot 45.",
       "At Wilmington Island Club on April 6, St. Andrew's shot 195 to beat St. Paul's Country Day and Patrick Henry. Davy Clay led the Saints with a 43, followed by Matt Hunt at 50 and Todd Tribble and Will Massey at 51.",
       "The final recovered report came at Dogwood Country Club in Walterboro, where Colleton Prep shot 172, Calhoun Academy 176, and St. Andrew's 189. Davy Clay shot 39 and Todd Tribble 41 for the Saints."
-    ]
+    ],
+    "ArchiveStatus": "partial",
+    "ArchiveStatusNote": "The Spring 2001 golf archive includes four recovered Savannah Morning News match reports from Mar. 24-Apr. 20, including team scores and individual St. Andrew's cards.",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "SeasonID": 2002,
@@ -37,7 +40,10 @@
     "HistoricalSummary": [
       "At the SCISA Region 2-AA tournament at Wilmington Island Club, St. Andrew's shot 181 behind Beaufort Academy, Hilton Head Christian, and Colleton Prep. Davy Clay led the Saints with a 42, followed by Jason Victor and Chris Brinker at 45 and Matt Hunt at 49.",
       "The next day's Savannah Morning News all-region listing named Davy Clay to the All-SCISA Region 2-AA team."
-    ]
+    ],
+    "ArchiveStatus": "partial",
+    "ArchiveStatusNote": "The Spring 2002 golf archive currently includes the SCISA Region 2-AA tournament at Wilmington Island Club and the follow-up all-region listing.",
+    "SourceSeasonLabel": "2001-02"
   },
   {
     "SeasonID": 2003,
@@ -61,7 +67,10 @@
       "The March 26 Savannah Morning News reported a three-team match at Indigo Run Golf Club: Hilton Head Prep 165, Hilton Head Christian 168, and St. Andrew's 181. Davy Clay shot 39 and Josh Smith 41 for the Saints.",
       "At Santee National Golf Club on Apr. 1, St. Andrew's shot 171 in a SCISA region tournament round behind Holly Hill Academy's 158 and Beaufort Academy's 162. Clay led the Saints with a 37, while Chris Brinker and Travis McGinley shot 44 and Smith shot 46.",
       "At the SCISA State Golf Championship on Fripp Island, St. Andrew's finished sixth in the 12-team field with a two-day score of 722. Josh Smith shot 85-83-168, Davy Clay 94-76-170, Travis McGinley 93-98-191, and Chris Brinker 95-100-195. The final Savannah Morning News 9-hole averages listed Clay at 38.5 over four matches and Smith at 42.0 over four matches."
-    ]
+    ],
+    "ArchiveStatus": "partial",
+    "ArchiveStatusNote": "The Spring 2003 archive now includes recovered Savannah Morning News match reports from Mar. 4-Apr. 30 plus final reported 9-hole averages from May 2. A NewsBank result snippet also surfaced an 18-hole SCISA Region 2-A tournament line, but that entry still needs the exact source citation before it is added as a separate match.",
+    "SourceSeasonLabel": "2002-03"
   },
   {
     "SeasonID": 2004,
@@ -80,7 +89,10 @@
       "Davy Clay led St. Andrew's with a 78, followed by Josh Smith at 80, Drew Aimone at 82, and Steve Carbone at 85. Samantha Long also shot an 86.",
       "Clay and Smith made the All-region team. Beaufort Academy's Mark Anderson was the medalist with a 66, and the report noted that the first round of the state tournament would be played Apr. 26-27 at Fripp Island.",
       "At the SCISA Class AA State Tournament at Ocean Point Golf Club on Fripp Island, St. Andrew's finished fourth in the 12-team field with a two-round 352-328-680. Davy Clay tied for fifth individually at 90-70-160, while Drew Aimone shot 80-83-163, Samantha Long shot 89-91-180, Steve Carbone shot 93-89-182, and Josh Smith shot 99-86-185."
-    ]
+    ],
+    "ArchiveStatus": "partial",
+    "ArchiveStatusNote": "The Spring 2004 archive includes recovered match reports from March and April, with team results and available St. Andrew's individual scores from 10 matches and tournament events.",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "SeasonID": 2005,
@@ -106,7 +118,10 @@
       "At the Apr. 21 SCISA 2-AA championship at Colleton River Club, the first nine holes counted as a makeup region round. Drew Aimone shared medalist honors with Hilton Head Christian's Matt Raehn at 36, and St. Andrew's shot 162 to qualify for the AA state tournament along with Beaufort Academy.",
       "In the 18-hole SCISA 2-AA championship, St. Andrew's finished third at 323 behind Hilton Head Prep and Beaufort Academy. Thomas Withers earned medalist honors with a 75, and Withers, Aimone, and Samantha Long were named all-tournament.",
       "St. Andrew's stood second after the first round of the SCISA AA state tournament at Ocean Creek Golf Course, shooting 334 behind Beaufort Academy's 329. The Saints finished fourth with a two-day total of 679."
-    ]
+    ],
+    "ArchiveStatus": "partial",
+    "ArchiveStatusNote": "The Spring 2005 archive includes recovered Savannah Morning News team match reports from Mar. 30-Apr. 29, including the SCISA 2-AA championship and SCISA AA state tournament results.",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "SeasonID": 2006,
@@ -127,7 +142,10 @@
       "Class A champion: David Emanuel Academy (303), runner-up Robert Toombs Christian Academy (341).",
       "Class AA champion: Trinity Christian (313), runner-up Frederica Academy (323).",
       "Class AAA champion: Augusta Prep. The published file does not preserve the full runner-up line or player-by-player results."
-    ]
+    ],
+    "ArchiveStatus": "partial",
+    "ArchiveStatusNote": "The Spring 2006 archive includes recovered March match reports against Colleton Prep and Patrick Henry, plus the thin 2006 GISA state PDF, which lists team champions and runner-ups by class without full individual score tables.",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "SeasonID": 2019,

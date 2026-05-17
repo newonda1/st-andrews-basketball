@@ -1,6 +1,7 @@
 import React, { useMemo } from "react";
 import { Link, useParams } from "react-router-dom";
 
+import SourceMeta from "../../../archive/SourceMeta";
 import { athleteProfilePath } from "../../../athletes/archiveEra";
 import { SOFTBALL_BASE_PATH, getSoftballGameById } from "../softballData";
 
@@ -85,6 +86,7 @@ export default function GameDetail() {
         </div>
 
         <h1 className="text-3xl font-bold">{scoreTitle}</h1>
+        <SourceMeta record={game} />
       </div>
 
       <section className="rounded-2xl shadow border border-gray-200 bg-white overflow-hidden">

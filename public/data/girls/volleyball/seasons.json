@@ -21,7 +21,8 @@
     "SeasonRecapParagraphs": [
       "The recovered fall 1999 NewsBank window confirms St. Andrew's had a volleyball date at Williamsburg on Sept. 24, but no score or player statistics were found in the St. Andrew's, Andrews, broad name, or OCR-variant sweeps.",
       "The season remains a schedule-only shell until a result source is found."
-    ]
+    ],
+    "ArchiveStatus": "partial"
   },
   {
     "SeasonID": 2000,
@@ -46,7 +47,9 @@
       "The recovered 2000 St. Andrew's volleyball archive covers the opening stretch of the fall season. Four published match reports and one record-path placeholder show the Saints starting 0-5, including SCISA Region 2AA losses to St. Paul Country Day and Colleton Prep.",
       "The surviving stat lines point to a young roster already featuring several names that would carry into later seasons. Kim Cooper, Becca Cooper, Carie Bugos, Layne Haggberg, Ashley Winston, Ashley McLean, and Megan Loder all appear in September match reports.",
       "Bible Baptist appeared twice in the recovered window. Becca Cooper had six kills and Kim Cooper added four in the first report, while Ashley Winston had eight kills and Kim Cooper added four when the teams met again on Sept. 14. Carie Bugos also had 10 assists in the first Bible Baptist report."
-    ]
+    ],
+    "ArchiveStatus": "partial",
+    "RecordSource": "seasons.json source-of-truth row; event pages reconcile to this record."
   },
   {
     "SeasonID": 2001,
@@ -71,7 +74,9 @@
       "The 2001 St. Andrew's volleyball archive now has six documented results from the fall NewsBank sweep. The Saints opened with a straight-set win over Patrick Henry, lost to Hilton Head Prep, and were 4-1 after another Patrick Henry win reported Sept. 5, which requires two unreported wins between Aug. 25 and Sept. 4.",
       "The surviving match notes highlight a young core that would continue showing up in later seasons. Becca Cooper led the attack in the opener with four kills, Veronica Arenander added kills in three recovered reports, and Kim Cooper, Carie Bugos, Jennifer Lee, Layne Haggberg, LeighAnne Evans, and Teri Bugos all appear in the statistical leaders.",
       "The final recovered fall result came against Beaufort Academy on Oct. 2, when St. Andrew's won in four sets, 15-12, 4-15, 15-13, 15-12. The article credited Becca Cooper with four kills, Kim Cooper and Veronica Arenander with three kills each, Carie Bugos with six assists, and LeighAnne Evans with four assists."
-    ]
+    ],
+    "ArchiveStatus": "partial",
+    "RecordSource": "seasons.json source-of-truth row; event pages reconcile to this record."
   },
   {
     "SeasonID": 2002,
@@ -88,7 +93,11 @@
     "League": "SCISA Region 2-AA",
     "StateDivision": "SCISA AA",
     "StateFinish": "State tournament qualifier",
-    "SourceCitation": "Savannah Morning News, Oct. 23, 2002"
+    "SourceCitation": "Savannah Morning News, Oct. 23, 2002",
+    "RecordSource": "seasons.json source-of-truth row; event pages reconcile to this record.",
+    "FinishLabel": "Region No. 2 seed / State tournament qualifier",
+    "ArchiveStatus": "partial",
+    "ArchiveStatusNote": "Girls Volleyball 2002-03 remains partial; recovered archive data is limited to the currently documented schedule, result, roster, and newspaper-source material."
   },
   {
     "SeasonID": 2003,
@@ -177,7 +186,11 @@
       "Region play became the team's signature. St. Andrew's beat Holly Hill on Sept. 23 and then kept rolling through Beaufort, Colleton Prep, James Island Christian, Charleston Collegiate, and Holly Hill again. By the end of the regular season, the Saints were 10-0 in SCISA Region 2-AA, owned the region title, and had earned the top south seed for the state tournament.",
       "The postseason showed how complete the group had become. Becca Cooper gave St. Andrew's a powerful presence at the net, Carie Bugos steadied the Saints from setter, and Mary Wilkowski kept elevating her play as the stage grew. St. Andrew's beat Greenwood Christian in the state tournament opener, then defeated Calhoun Academy twice in one day to earn a place in the SCISA Class AA championship match.",
       "The season ended at Porter-Gaud School in Charleston against undefeated Pee Dee Academy. St. Andrew's dropped the final 25-19, 25-13, 28-26, but pushed the last set deep and left with a 19-3 record, a 10-0 region championship, and a SCISA AA state runner-up finish that moved the program another step forward after the previous year's semifinal run."
-    ]
+    ],
+    "ArchiveStatus": "partial",
+    "ArchiveStatusNote": "St. Andrew's made Mandy Stinson's first season as head coach a breakthrough year, finishing 19-3 and turning a promising roster into a region champion and state finalist. The Saints were already 3-1 by early September, then found the rhythm that carried them through the heart of the schedule behind senior leadership and a freshman surge from Mary Wilkowski. Region play became the team's signature. St. Andrew's beat Holly Hill on Sept. 23 and then kept rolling through Beaufort, Colleton Prep, James Island Christian, Charleston Collegiate, and Holly Hill again. By the end of the regular season, the Saints were 10-0 in SCISA Region 2-AA, owned the region title, and had earned the top south seed for the state tournament. The postseason showed how complete the group had become. Becca Cooper gave St. Andrew's a powerful presence at the net, Carie Bugos steadied the Saints from setter, and Mary Wilkowski kept elevating her play as the stage grew. St. Andrew's beat Greenwood Christian in the state tournament opener, then defeated Calhoun Academy twice in one day to earn a place in the SCISA Class AA championship match. The season ended at Porter-Gaud School in Charleston against undefeated Pee Dee Academy. St. Andrew's dropped the final 25-19, 25-13, 28-26, but pushed the last set deep and left with a 19-3 record, a 10-0 region championship, and a SCISA AA state runner-up finish that moved the program another step forward after the previous year's semifinal run.",
+    "RecordSource": "seasons.json source-of-truth row; event pages reconcile to this record.",
+    "FinishLabel": "Region Champions / State Runner-up"
   },
   {
     "SeasonID": 2004,
@@ -247,7 +260,10 @@
       "By mid-October, the Saints were 9-5 after a non-region loss to Thomas Heyward, then opened SCISA Region 2-AA play with a four-set win over Beaufort Academy behind Grace Wilkowski's 8 kills and Mary Wilkowski's 7 kills, 5 blocks, 4 aces, and 7 digs. Hilton Head Prep beat St. Andrew's five days later, but the season's later coverage credited matches against stronger SCISA Class AAA programs such as Hilton Head Prep and Thomas Heyward with sharpening St. Andrew's for the Class AA field.",
       "The state tournament turned the season. On Oct. 23, St. Andrew's went 5-1 in the double-elimination, eight-team SCISA Class AA tournament, beating Williamsburg Academy, Marlboro Academy, Trinity Collegiate, and W. Wyman King twice after also taking a loss to W. Wyman King. Those back-to-back wins over W. Wyman King in the semifinals sent the Saints to the championship match at the College of Charleston.",
       "St. Andrew's finished the job against Richard Winn Academy on Oct. 27, rallying after a first-set loss to win 19-25, 25-17, 25-13, 25-9 and capture the SCISA Class AA state championship. Mary Wilkowski led the final with 15 kills, 8 blocks, 7 aces, and 8 digs, while Grace Wilkowski added 11 kills, 2 blocks, 11 aces, and 5 digs. Kristen Albritton set the Saints' attack, Mary and Grace combined for 26 kills, and St. Andrew's closed a rebuilding season as state champion at 16-6."
-    ]
+    ],
+    "ArchiveStatus": "partial",
+    "RecordSource": "seasons.json source-of-truth row; event pages reconcile to this record.",
+    "FinishLabel": "State Champions"
   },
   {
     "SeasonID": 2005,
@@ -311,7 +327,11 @@
       "The Saints carried that momentum through the Region 4 race behind the Wilkowski sisters, Megan Hall, Kristen Albritton, Courtney Manson, and a senior group that gave the team balance and leadership. St. Andrew's swept Thomas Heyward and Beaufort, beat Hilton Head Christian again to reach 11-0, and shared the Region 4 crown with Hilton Head Prep after a season that made the defending champions one of Savannah's strongest volleyball teams.",
       "St. Andrew's entered the SCISA Class AA State Tournament as the No. 1 seed in the Upper State Division and played like it. The Saints swept Trinity in Sumter, advanced past Richard Winn Academy, and reached the championship match without dropping a game, setting up a title match with Holly Hill Academy at John Kresse Arena on the College of Charleston campus.",
       "The final was another statement. St. Andrew's beat Holly Hill 25-10, 25-17, 25-12 to win its second consecutive SCISA Class AA championship, with Mary Wilkowski controlling the middle, Grace Wilkowski and Megan Hall sparking runs from the service line, and all four seniors seeing action. The Saints closed the year 17-1, repeating as state champions and sending Grace Wilkowski, Caitlin Webb, Emily Aimone, and Kristen Albritton out with another ring."
-    ]
+    ],
+    "ArchiveStatus": "partial",
+    "ArchiveStatusNote": "St. Andrew's turned the 2005-06 season into a near-perfect championship defense, finishing 17-1 under head coach Mandy Stinson and assistant coach Kim Riordan. The Saints opened fast with early wins over Providence Christian, Holly Hill Academy, and Bible Baptist, then proved they could handle pressure with a five-set region win over Hilton Head Christian. The Saints carried that momentum through the Region 4 race behind the Wilkowski sisters, Megan Hall, Kristen Albritton, Courtney Manson, and a senior group that gave the team balance and leadership. St. Andrew's swept Thomas Heyward and Beaufort, beat Hilton Head Christian again to reach 11-0, and shared the Region 4 crown with Hilton Head Prep after a season that made the defending champions one of Savannah's strongest volleyball teams. St. Andrew's entered the SCISA Class AA State Tournament as the No. 1 seed in the Upper State Division and played like it. The Saints swept Trinity in Sumter, advanced past Richard Winn Academy, and reached the championship match without dropping a game, setting up a title match with Holly Hill Academy at John Kresse Arena on the College of Charleston campus. The final was another statement. St. Andrew's beat Holly Hill 25-10, 25-17, 25-12 to win its second consecutive SCISA Class AA championship, with Mary Wilkowski controlling the middle, Grace Wilkowski and Megan Hall sparking runs from the service line, and all four seniors seeing action. The Saints closed the year 17-1, repeating as state champions and sending Grace Wilkowski, Caitlin Webb, Emily Aimone, and Kristen Albritton out with another ring.",
+    "RecordSource": "seasons.json source-of-truth row; event pages reconcile to this record.",
+    "FinishLabel": "State Champions"
   },
   {
     "SeasonID": 2007,

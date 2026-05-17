@@ -1,5 +1,7 @@
 import React, { useMemo } from "react";
 import { Link, useParams } from "react-router-dom";
+import SourceMeta from "../../../archive/SourceMeta";
+import { athleteProfilePath, isPre2015Season } from "../../../athletes/archiveEra";
 import {
   VOLLEYBALL_STAT_SECTIONS,
   buildPlayerMap,
@@ -80,7 +82,12 @@ function getOpponentDisplayName(game, schoolMap) {
   return school?.Name || school?.ShortName || game?.Opponent || "Unknown";
 }
 
-function GameStatTable({ title, rows, playerMap }) {
+function volleyballPlayerPath(playerId, seasonId) {
+  if (isPre2015Season(seasonId)) return athleteProfilePath(playerId, "volleyball");
+  return `/athletics/volleyball/players/${playerId}`;
+}
+
+function GameStatTable({ title, rows, playerMap, seasonId }) {
   const section = VOLLEYBALL_STAT_SECTIONS.find((entry) => entry.title === title);
   if (!section) return null;
 
@@ -109,7 +116,7 @@ function GameStatTable({ title, rows, playerMap }) {
               <tr key={`${title}-${row.PlayerID}`} className="odd:bg-white even:bg-slate-50">
                 <td className="border-b border-slate-200 px-3 py-2">
                   <Link
-                    to={`/athletics/volleyball/players/${row.PlayerID}`}
+                    to={volleyballPlayerPath(row.PlayerID, seasonId)}
                     className="font-semibold text-blue-700 hover:text-blue-900"
                   >
                     {getPlayerName(player)}
@@ -262,6 +269,7 @@ export default function GameDetail({ data, status = "" }) {
         <p className="text-sm text-slate-500">
           {detailItems.join(" • ")}
         </p>
+        <SourceMeta record={game} />
       </header>
 
       <GameRecap game={game} />
@@ -281,7 +289,12 @@ export default function GameDetail({ data, status = "" }) {
         {VOLLEYBALL_STAT_SECTIONS.map((section) => (
           <div key={section.title} className="space-y-3">
             <h3 className="text-xl font-semibold text-slate-900">{section.title}</h3>
-            <GameStatTable title={section.title} rows={rows} playerMap={playerMap} />
+            <GameStatTable
+              title={section.title}
+              rows={rows}
+              playerMap={playerMap}
+              seasonId={game.SeasonID || game.Season}
+            />
           </div>
         ))}
       </section>

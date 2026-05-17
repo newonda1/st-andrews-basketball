@@ -1034,7 +1034,9 @@
     "SourceByline": "Victor Fernandes",
     "SourcePage": "1F",
     "SourceSection": "Sports",
-    "SourceCitation": "Victor Fernandes, \"ST. ANDREW'S FALLS TO BYRNE IN SEASON OPENER,\" Savannah Morning News, 1999-08-28, Page 1F"
+    "SourceCitation": "Victor Fernandes, \"ST. ANDREW'S FALLS TO BYRNE IN SEASON OPENER,\" Savannah Morning News, 1999-08-28, Page 1F",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Season opener; Byrnes ended St. Andrew's 11-game winning streak."
   },
   {
     "GameID": 19990903,
@@ -1166,7 +1168,9 @@
     "SourceByline": "Savannah Morning News",
     "SourcePage": "5F",
     "SourceSection": "Sports",
-    "SourceCitation": "\"SAMPLES LEADS SWAINSBORO PAST SCREVEN CO.,\" Savannah Morning News, 1999-09-04, Page 5F"
+    "SourceCitation": "\"SAMPLES LEADS SWAINSBORO PAST SCREVEN CO.,\" Savannah Morning News, 1999-09-04, Page 5F",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Matt Mahany's 25-yard field goal gave St. Andrew's an early lead."
   },
   {
     "GameID": 19990910,
@@ -1250,7 +1254,9 @@
     "SourceByline": "Savannah Morning News",
     "SourcePage": "6F",
     "SourceSection": "Sports",
-    "SourceCitation": "\"PREP ROUNDUP,\" Savannah Morning News, 1999-09-11, Page 6F"
+    "SourceCitation": "\"PREP ROUNDUP,\" Savannah Morning News, 1999-09-11, Page 6F",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Evan Aldrich's fourth-quarter touchdown pass to Ryan Stratz decided the game."
   },
   {
     "GameID": 19990917,
@@ -1284,7 +1290,9 @@
     "SourceByline": "Victor Fernandes",
     "SourcePage": "1B",
     "SourceSection": "Sports",
-    "SourceCitation": "Victor Fernandes, \"FLOYD SCRAMBLES PREP SKED,\" Savannah Morning News, 1999-09-17, Page 1B"
+    "SourceCitation": "Victor Fernandes, \"FLOYD SCRAMBLES PREP SKED,\" Savannah Morning News, 1999-09-17, Page 1B",
+    "BoxScoreCompleteness": "missing",
+    "SourceNote": "Postponed by Hurricane Floyd and later made up on Nov. 5."
   },
   {
     "GameID": 19990924,
@@ -1472,7 +1480,9 @@
     "SourceByline": "Savannah Morning News",
     "SourcePage": "4F",
     "SourceSection": "Sports",
-    "SourceCitation": "\"TIGERS RUN OVER SCPS,\" Savannah Morning News, 1999-09-25, Page 4F"
+    "SourceCitation": "\"TIGERS RUN OVER SCPS,\" Savannah Morning News, 1999-09-25, Page 4F",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Michael Paton ran for five touchdowns as St. Andrew's piled up 459 rushing yards."
   },
   {
     "GameID": 19991001,
@@ -1620,7 +1630,9 @@
     "SourceByline": "Savannah Morning News",
     "SourcePage": "4F",
     "SourceSection": "Sports",
-    "SourceCitation": "\"WOODWARD LEADS CAVS PAST BRYAN CO., 33-6,\" Savannah Morning News, 1999-10-02, Page 4F"
+    "SourceCitation": "\"WOODWARD LEADS CAVS PAST BRYAN CO., 33-6,\" Savannah Morning News, 1999-10-02, Page 4F",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Michael Paton set a school single-game rushing record with 259 yards."
   },
   {
     "GameID": 19991008,
@@ -1741,7 +1753,9 @@
     "SourceByline": "Savannah Morning News",
     "SourcePage": "4F",
     "SourceSection": "Sports",
-    "SourceCitation": "\"WILLIAMSBURG SHUTS OUT ST. ANDREW'S 20-0,\" Savannah Morning News, 1999-10-09, Page 4F"
+    "SourceCitation": "\"WILLIAMSBURG SHUTS OUT ST. ANDREW'S 20-0,\" Savannah Morning News, 1999-10-09, Page 4F",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Williamsburg held St. Andrew's to 161 total yards."
   },
   {
     "GameID": 19991015,
@@ -1869,7 +1883,9 @@
     "SourceByline": "Brian K. Davis",
     "SourcePage": "6F",
     "SourceSection": "Sports",
-    "SourceCitation": "Brian K. Davis, \"CALHOUN ACADEMY BEATS HARD-FIGHTING ST. ANDREW'S,\" Savannah Morning News, 1999-10-16, Page 6F"
+    "SourceCitation": "Brian K. Davis, \"CALHOUN ACADEMY BEATS HARD-FIGHTING ST. ANDREW'S,\" Savannah Morning News, 1999-10-16, Page 6F",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "St. Andrew's led 12-7 before Calhoun's running game took over."
   },
   {
     "GameID": 19991022,
@@ -1903,7 +1919,9 @@
     "SourceByline": "Savannah Morning News",
     "SourcePage": "7F",
     "SourceSection": "Sports",
-    "SourceCitation": "\"FRIDAY'S GAMES GLOVER PACES SOUTH EFFINGHAM OVER TATTNALL,\" Savannah Morning News, 1999-10-23, Page 7F"
+    "SourceCitation": "\"FRIDAY'S GAMES GLOVER PACES SOUTH EFFINGHAM OVER TATTNALL,\" Savannah Morning News, 1999-10-23, Page 7F",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Score recovered from the Savannah Morning News statewide scoreboard."
   },
   {
     "GameID": 19991029,
@@ -2056,7 +2074,9 @@
     "SourceByline": "Savannah Morning News",
     "SourcePage": "9F",
     "SourceSection": "Sports",
-    "SourceCitation": "\"FRIDAY'S GAMES / ROBINSON SCORES FOUR TDS IN TOOMBS' GRAVELY WIN,\" Savannah Morning News, 1999-10-30, Page 9F"
+    "SourceCitation": "\"FRIDAY'S GAMES / ROBINSON SCORES FOUR TDS IN TOOMBS' GRAVELY WIN,\" Savannah Morning News, 1999-10-30, Page 9F",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Hilton Head Prep won on a 27-yard field goal with 2:11 left."
   },
   {
     "GameID": 19991105,
@@ -2209,7 +2229,9 @@
     "SourceByline": "Savannah Morning News",
     "SourcePage": "4F",
     "SourceSection": "Sports",
-    "SourceCitation": "\"SCPS'S COREY FIDLER DOES ALL IN VICTORY OVER BRYAN CO.,\" Savannah Morning News, 1999-11-06, Page 4F"
+    "SourceCitation": "\"SCPS'S COREY FIDLER DOES ALL IN VICTORY OVER BRYAN CO.,\" Savannah Morning News, 1999-11-06, Page 4F",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Makeup game after the Hurricane Floyd postponement."
   },
   {
     "GameID": 19991112,
@@ -2357,7 +2379,9 @@
     "SourceByline": "Savannah Morning News",
     "SourcePage": "4F",
     "SourceSection": "Sports",
-    "SourceCitation": "\"BLOCKED FG ATTEMPTS KEY TO BC VICTORY,\" Savannah Morning News, 1999-11-13, Page 4F"
+    "SourceCitation": "\"BLOCKED FG ATTEMPTS KEY TO BC VICTORY,\" Savannah Morning News, 1999-11-13, Page 4F",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "SCISA AA first round."
   },
   {
     "GameID": 20000825,
@@ -2441,7 +2465,9 @@
     "SourceByline": "Savannah Morning News",
     "SourcePage": "4F",
     "SourceSection": "Sports",
-    "SourceCitation": "\"SEB OVERPOWERS COUNTRY DAY IN SEASON OPENER,\" Savannah Morning News, 2000-08-26, Page 4F"
+    "SourceCitation": "\"SEB OVERPOWERS COUNTRY DAY IN SEASON OPENER,\" Savannah Morning News, 2000-08-26, Page 4F",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Season opener for both teams; Hilton Head Prep scored the deciding touchdown in the third quarter."
   },
   {
     "GameID": 20000901,
@@ -2541,7 +2567,9 @@
     "SourceByline": "Renee Henry",
     "SourcePage": "6E",
     "SourceSection": "Sports",
-    "SourceCitation": "Renee Henry, \"MATADORS BLOCK FIELD GOAL TO BEAT SAINTS IN FINAL SECONDS,\" Savannah Morning News, 2000-09-02, Page 6E"
+    "SourceCitation": "Renee Henry, \"MATADORS BLOCK FIELD GOAL TO BEAT SAINTS IN FINAL SECONDS,\" Savannah Morning News, 2000-09-02, Page 6E",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Memorial Day blocked Franc Krynen's potential game-winning field goal attempt with 37 seconds left."
   },
   {
     "GameID": 20000908,
@@ -2665,7 +2693,9 @@
     "SourceByline": "Savannah Morning News",
     "SourcePage": "6B",
     "SourceSection": "Sports",
-    "SourceCitation": "\"BENEDICTINE CRUISES PAST WINDSOR FOREST,\" Savannah Morning News, 2000-09-09, Page 6B"
+    "SourceCitation": "\"BENEDICTINE CRUISES PAST WINDSOR FOREST,\" Savannah Morning News, 2000-09-09, Page 6B",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Byrnes scored twice in the first quarter and held St. Andrew's to 13 rushing yards."
   },
   {
     "GameID": 20000915,
@@ -2699,7 +2729,9 @@
     "SourceByline": "Savannah Morning News",
     "SourcePage": "3F",
     "SourceSection": "Sports",
-    "SourceCitation": "\"LATE TD LEADS SEB OVER BRYAN COUNTY,\" Savannah Morning News, 2000-09-16, Page 3F"
+    "SourceCitation": "\"LATE TD LEADS SEB OVER BRYAN COUNTY,\" Savannah Morning News, 2000-09-16, Page 3F",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Jason Stuckey and Bryant Tillotson scored two touchdowns apiece for Thomas Heyward."
   },
   {
     "GameID": 20000922,
@@ -2733,7 +2765,9 @@
     "SourceByline": "Savannah Morning News",
     "SourcePage": "",
     "SourceSection": "Sports",
-    "SourceCitation": "\"SCREVEN COUNTY STUNS NO. 1 SWAINSBORO,\" Savannah Morning News, 2000-09-23"
+    "SourceCitation": "\"SCREVEN COUNTY STUNS NO. 1 SWAINSBORO,\" Savannah Morning News, 2000-09-23",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Hunt Summerford scored the only touchdown on a 12-yard run."
   },
   {
     "GameID": 20000929,
@@ -2809,7 +2843,9 @@
     "SourceByline": "Savannah Morning News",
     "SourcePage": "",
     "SourceSection": "Sports",
-    "SourceCitation": "\"ANDREWS' 254-YARD NIGHT LIFTS SWAINSBORO,\" Savannah Morning News, 2000-09-30"
+    "SourceCitation": "\"ANDREWS' 254-YARD NIGHT LIFTS SWAINSBORO,\" Savannah Morning News, 2000-09-30",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "SCISA AA Region II opener for both teams."
   },
   {
     "GameID": 20001006,
@@ -2843,7 +2879,9 @@
     "SourceByline": "Savannah Morning News",
     "SourcePage": "3B",
     "SourceSection": "Sports",
-    "SourceCitation": "\"MEMORIAL FALLS TO NATHANAEL GREENE, 47-19,\" Savannah Morning News, 2000-10-08, Page 3B"
+    "SourceCitation": "\"MEMORIAL FALLS TO NATHANAEL GREENE, 47-19,\" Savannah Morning News, 2000-10-08, Page 3B",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Zack Hillard and Matt Hunt made 13 tackles apiece."
   },
   {
     "GameID": 20001013,
@@ -2988,7 +3026,9 @@
     "SourceByline": "Savannah Morning News",
     "SourcePage": "5F",
     "SourceSection": "Sports",
-    "SourceCitation": "\"LATE FIELD GOAL LIFTS BRUNSWICK,\" Savannah Morning News, 2000-10-14, Page 5F"
+    "SourceCitation": "\"LATE FIELD GOAL LIFTS BRUNSWICK,\" Savannah Morning News, 2000-10-14, Page 5F",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "St. Andrew's held Sea Island to six offensive yards for its first win of the season."
   },
   {
     "GameID": 20001020,
@@ -3096,7 +3136,9 @@
     "SourceByline": "Savannah Morning News",
     "SourcePage": "5F",
     "SourceSection": "Sports",
-    "SourceCitation": "\"AUSTIN PACES MCINTOSH COUNTY ACADEMY PAST CALVARY,\" Savannah Morning News, 2000-10-21, Page 5F"
+    "SourceCitation": "\"AUSTIN PACES MCINTOSH COUNTY ACADEMY PAST CALVARY,\" Savannah Morning News, 2000-10-21, Page 5F",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Zack Hillard caught Jeff Smith's fourth-quarter two-point conversion pass for the winning points."
   },
   {
     "GameID": 20001027,
@@ -3241,7 +3283,9 @@
     "SourceByline": "Donald Heath",
     "SourcePage": "6B",
     "SourceSection": "Sports",
-    "SourceCitation": "Donald Heath, \"ST. ANDREW'S EARNS SCISA PLAYOFF BERTH,\" Savannah Morning News, 2000-10-28, Page 6B"
+    "SourceCitation": "Donald Heath, \"ST. ANDREW'S EARNS SCISA PLAYOFF BERTH,\" Savannah Morning News, 2000-10-28, Page 6B",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Homecoming; St. Andrew's clinched a SCISA AA playoff berth and forced seven turnovers."
   },
   {
     "GameID": 20001103,
@@ -3381,7 +3425,9 @@
     "SourceByline": "Savannah Morning News",
     "SourcePage": "4F",
     "SourceSection": "Sports",
-    "SourceCitation": "\"CALVARY HAMMERS BRYAN CO., 67-0,\" Savannah Morning News, 2000-11-04, Page 4F"
+    "SourceCitation": "\"CALVARY HAMMERS BRYAN CO., 67-0,\" Savannah Morning News, 2000-11-04, Page 4F",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "SCISA AA first round."
   },
   {
     "GameID": 20010824,
@@ -3510,7 +3556,9 @@
     "SourceByline": "Stephen Weeks",
     "SourcePage": "4F",
     "SourceSection": "Sports",
-    "SourceCitation": "Stephen Weeks, \"ST. ANDREW'S CLAIMS 24-0 VICTORY OVER HILTON HEAD PREP,\" Savannah Morning News, 2001-08-25, Page 4F"
+    "SourceCitation": "Stephen Weeks, \"ST. ANDREW'S CLAIMS 24-0 VICTORY OVER HILTON HEAD PREP,\" Savannah Morning News, 2001-08-25, Page 4F",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Archive games data is partial; only recovered source details are shown."
   },
   {
     "GameID": 20010830,
@@ -3679,7 +3727,9 @@
     "SourceByline": "Victor Fernandes",
     "SourcePage": "4C",
     "SourceSection": "Sports",
-    "SourceCitation": "Victor Fernandes, \"CICCIO, ST. ANDREW'S TOP MEMORIAL IN ZANY AFFAIR,\" Savannah Morning News, 2001-08-31, Page 4C"
+    "SourceCitation": "Victor Fernandes, \"CICCIO, ST. ANDREW'S TOP MEMORIAL IN ZANY AFFAIR,\" Savannah Morning News, 2001-08-31, Page 4C",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Archive games data is partial; only recovered source details are shown."
   },
   {
     "GameID": 20010907,
@@ -3787,7 +3837,9 @@
     "SourceByline": "",
     "SourcePage": "",
     "SourceSection": "Sports",
-    "SourceCitation": "\"SCREVEN CO. WINS DESPITE SLOW NIGHT BY RUNNING BACK,\" Savannah Morning News, 2001-09-08"
+    "SourceCitation": "\"SCREVEN CO. WINS DESPITE SLOW NIGHT BY RUNNING BACK,\" Savannah Morning News, 2001-09-08",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Archive games data is partial; only recovered source details are shown."
   },
   {
     "GameID": 20010914,
@@ -3950,7 +4002,9 @@
     "SourceByline": "Stephen Weeks",
     "SourcePage": "1B",
     "SourceSection": "Sports",
-    "SourceCitation": "Stephen Weeks, \"CHOICES IN THE FACE OF ADVERSITY / REBELS, SAINTS PLAY WITH THE PAIN THROUGH,\" Savannah Morning News, 2001-09-15, Page 1B"
+    "SourceCitation": "Stephen Weeks, \"CHOICES IN THE FACE OF ADVERSITY / REBELS, SAINTS PLAY WITH THE PAIN THROUGH,\" Savannah Morning News, 2001-09-15, Page 1B",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Overtime"
   },
   {
     "GameID": 20010921,
@@ -3984,7 +4038,9 @@
     "SourceByline": "",
     "SourcePage": "",
     "SourceSection": "Sports",
-    "SourceCitation": "\"BC, SAVANNAH HIGH HOPE TO OVERCOME LONG LAYOFF,\" Savannah Morning News, 2001-09-20"
+    "SourceCitation": "\"BC, SAVANNAH HIGH HOPE TO OVERCOME LONG LAYOFF,\" Savannah Morning News, 2001-09-20",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Forfeit win; First Baptist forfeited because of injuries."
   },
   {
     "GameID": 20010928,
@@ -4018,7 +4074,9 @@
     "SourceByline": "",
     "SourcePage": "",
     "SourceSection": "Sports",
-    "SourceCitation": "\"JONES' FOUR TOUCHDOWNS LIFT MCA OVER ECI,\" Savannah Morning News, 2001-09-29"
+    "SourceCitation": "\"JONES' FOUR TOUCHDOWNS LIFT MCA OVER ECI,\" Savannah Morning News, 2001-09-29",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Archive games data is partial; only recovered source details are shown."
   },
   {
     "GameID": 20011005,
@@ -4113,7 +4171,9 @@
     "SourceByline": "Chris Mercer",
     "SourcePage": "3F",
     "SourceSection": "Sports",
-    "SourceCitation": "Chris Mercer, \"ST. ANDREW'S RUSHES PAST CALHOUN ACADEMY,\" Savannah Morning News, 2001-10-06, Page 3F"
+    "SourceCitation": "Chris Mercer, \"ST. ANDREW'S RUSHES PAST CALHOUN ACADEMY,\" Savannah Morning News, 2001-10-06, Page 3F",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Homecoming"
   },
   {
     "GameID": 20011019,
@@ -4258,7 +4318,9 @@
     "SourceByline": "",
     "SourcePage": "",
     "SourceSection": "Sports",
-    "SourceCitation": "\"PIERCE CO. SLIPS PAST RICHMOND HILL,\" Savannah Morning News, 2001-10-20"
+    "SourceCitation": "\"PIERCE CO. SLIPS PAST RICHMOND HILL,\" Savannah Morning News, 2001-10-20",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Archive games data is partial; only recovered source details are shown."
   },
   {
     "GameID": 20011026,
@@ -4374,7 +4436,9 @@
     "SourceByline": "",
     "SourcePage": "",
     "SourceSection": "Sports",
-    "SourceCitation": "\"JENKINS SURPASSES 100-YARD PLATEAU AS SCD BEATS ECI,\" Savannah Morning News, 2001-10-27"
+    "SourceCitation": "\"JENKINS SURPASSES 100-YARD PLATEAU AS SCD BEATS ECI,\" Savannah Morning News, 2001-10-27",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Archive games data is partial; only recovered source details are shown."
   },
   {
     "GameID": 20011102,
@@ -4506,7 +4570,9 @@
     "SourceByline": "",
     "SourcePage": "",
     "SourceSection": "Sports",
-    "SourceCitation": "\"CAMDEN COUNTY CLINCHES SUB-REGION TITLE,\" Savannah Morning News, 2001-11-03"
+    "SourceCitation": "\"CAMDEN COUNTY CLINCHES SUB-REGION TITLE,\" Savannah Morning News, 2001-11-03",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "SCISA Class AA playoffs, first round"
   },
   {
     "GameID": 20011109,
@@ -4574,7 +4640,9 @@
     "SourceByline": "",
     "SourcePage": "",
     "SourceSection": "Sports",
-    "SourceCitation": "\"APPLING CO. STAYS IN RACE,\" Savannah Morning News, 2001-11-10"
+    "SourceCitation": "\"APPLING CO. STAYS IN RACE,\" Savannah Morning News, 2001-11-10",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "SCISA Class AA playoffs, second round"
   },
   {
     "GameID": 20020830,
@@ -4711,7 +4779,9 @@
     "SourceByline": "Chris Mercer, For the Morning News",
     "SourcePage": "5D",
     "SourceSection": "Sports",
-    "SourceCitation": "Chris Mercer, Savannah Morning News, Aug. 31, 2002"
+    "SourceCitation": "Chris Mercer, Savannah Morning News, Aug. 31, 2002",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Archive games data is partial; only recovered source details are shown."
   },
   {
     "GameID": 20020906,
@@ -4874,7 +4944,9 @@
     "Recap": "Jeff Smith rushed for 106 yards on nine carries and scored two touchdowns as St. Andrew's hammered visiting Hilton Head Christian 48-0.\n\nThe Saints (1-1) scored 20 points in the first quarter and 28 in the second.\n\nDavy Clay passed for two touchdowns and ran for another for St. Andrew's.\n\nThe Saints' defense held the visitors to 72 total yards.\n\nHilton Head is 0-2.",
     "SourceDate": "2002-09-07",
     "SourcePublication": "Savannah Morning News",
-    "SourceCitation": "Savannah Morning News, Sept. 7, 2002"
+    "SourceCitation": "Savannah Morning News, Sept. 7, 2002",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Archive games data is partial; only recovered source details are shown."
   },
   {
     "GameID": 20020916,
@@ -5037,7 +5109,9 @@
     "Recap": "Cam Aldrich scored three touchdowns, including two on pass interception returns, to lead St. Andrew's to a 49-0 victory over Hilton Head Prep on Monday.",
     "SourceDate": "2002-09-17",
     "SourcePublication": "Savannah Morning News",
-    "SourceCitation": "Savannah Morning News, Sept. 17, 2002"
+    "SourceCitation": "Savannah Morning News, Sept. 17, 2002",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Archive games data is partial; only recovered source details are shown."
   },
   {
     "GameID": 20020927,
@@ -5067,7 +5141,9 @@
     "Recap": "Davy Clay led St. Andrews to a 13-7 win over Thomas Heyward Academy Friday night, passing for 85 yards and a touchdown, and picking off an errant pass from Rebels QB Calvin Fayger.\n\nJeff Smith rushed for 78 yards and a touchdown, and Jason Victor led the Saints defense with 13 tackles.\n\nThe Rebels almost pulled off the win, putting together an 11-play drive down to the Saints' 8-yard line, but Michael Shuford fumbled the ball with 1:51 left in the game, ending the Rebels' chance for a win.",
     "SourceDate": "2002-09-28",
     "SourcePublication": "Savannah Morning News",
-    "SourceCitation": "Savannah Morning News, Sept. 28, 2002"
+    "SourceCitation": "Savannah Morning News, Sept. 28, 2002",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "No team totals or quarter breakdown were provided in the source."
   },
   {
     "GameID": 20021004,
@@ -5230,7 +5306,9 @@
     "Recap": "ST. MATTHEW'S - Josh Smith kicked the first field goal of his career, a 27-yarder with 2:17 left in the game, to lift St. Andrew's past Calhoun 22-20 in a SCISA 2-A game here Friday night.\n\nSt. Andrew's had fallen behind 20-19 late in the game, but the Saints drove from their own 29 to the Calhoun 10 before Smith's kick. The drive was sparked by the running of Jeff Smith, who gained 43 yards in the nine-play drive.\n\nJeff Smith ended the night with 141 yards on 25 carries and scored three touchdowns.\n\nSt. Andrew's is 4-1, 1-0 in region. Calhoun is 3-4, 1-1 in region.",
     "SourceDate": "2002-10-05",
     "SourcePublication": "Savannah Morning News",
-    "SourceCitation": "Savannah Morning News, Oct. 5, 2002"
+    "SourceCitation": "Savannah Morning News, Oct. 5, 2002",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Source did not identify Calhoun's late fourth-quarter touchdown scorer; scoring summary abbreviation corrected for Jeff Smith's third touchdown."
   },
   {
     "GameID": 20021014,
@@ -5409,7 +5487,8 @@
     "SourceDate": "2002-10-15",
     "SourcePublication": "Savannah Morning News",
     "SourceCitation": "Savannah Morning News, Oct. 15, 2002",
-    "SourceNote": "User-provided box score and scoring summary for the Oct. 14, 2002 King's Academy game; scoring summary conversions add to one point more than the reported 59-0 final."
+    "SourceNote": "User-provided box score and scoring summary for the Oct. 14, 2002 King's Academy game; scoring summary conversions add to one point more than the reported 59-0 final.",
+    "BoxScoreCompleteness": "partial"
   },
   {
     "GameID": 20021018,
@@ -5549,7 +5628,8 @@
     "SourceDate": "2002-10-19",
     "SourcePublication": "Savannah Morning News",
     "SourceCitation": "Savannah Morning News, Oct. 19, 2002",
-    "SourceNote": "User-provided recap, box score and scoring summary for the Oct. 18, 2002 Hudgens Academy game."
+    "SourceNote": "User-provided recap, box score and scoring summary for the Oct. 18, 2002 Hudgens Academy game.",
+    "BoxScoreCompleteness": "partial"
   },
   {
     "GameID": 20021025,
@@ -5737,7 +5817,8 @@
     "SourceDate": "2002-10-26",
     "SourcePublication": "Savannah Morning News",
     "SourceCitation": "Savannah Morning News, Oct. 26, 2002",
-    "SourceNote": "User-provided recap, box score and scoring summary. Entered as the Oct. 25, 2002 game because the records and weekday fit Oct. 25 rather than the user-supplied Nov. 25 date."
+    "SourceNote": "User-provided recap, box score and scoring summary. Entered as the Oct. 25, 2002 game because the records and weekday fit Oct. 25 rather than the user-supplied Nov. 25 date.",
+    "BoxScoreCompleteness": "partial"
   },
   {
     "GameID": 20021101,
@@ -5885,7 +5966,8 @@
     "SourceDate": "2002-11-02",
     "SourcePublication": "Savannah Morning News",
     "SourceCitation": "Savannah Morning News, Nov. 2, 2002; City Player of the Week brief",
-    "SourceNote": "User-provided recap, box score, scoring summary and City Player of the Week brief for the Nov. 1, 2002 Holly Hill Academy game."
+    "SourceNote": "User-provided recap, box score, scoring summary and City Player of the Week brief for the Nov. 1, 2002 Holly Hill Academy game.",
+    "BoxScoreCompleteness": "partial"
   },
   {
     "GameID": 20021108,
@@ -6051,7 +6133,8 @@
     "SourceDate": "2002-11-09",
     "SourcePublication": "Savannah Morning News",
     "SourceCitation": "Chris Mercer, For the Morning News, \"SMITHS POWER ST. ANDREW'S TO PLAYOFF WIN,\" Savannah Morning News, Nov. 9, 2002, Sports, p. 4C",
-    "SourceNote": "User-provided Savannah Morning News recap, box score and scoring summary for the Nov. 8, 2002 Pee Dee Academy SCISA playoff game. The published scoring summary accounts for 39 St. Andrew's points, while the final score and line score report 40-12; the game result preserves the published final and line score. The recap was published Nov. 9, 2002."
+    "SourceNote": "User-provided Savannah Morning News recap, box score and scoring summary for the Nov. 8, 2002 Pee Dee Academy SCISA playoff game. The published scoring summary accounts for 39 St. Andrew's points, while the final score and line score report 40-12; the game result preserves the published final and line score. The recap was published Nov. 9, 2002.",
+    "BoxScoreCompleteness": "partial"
   },
   {
     "GameID": 20021115,
@@ -6197,7 +6280,8 @@
     "SourceDate": "2002-11-16",
     "SourcePublication": "Savannah Morning News",
     "SourceCitation": "\"St. Andrew's 14, Williamsburg 9,\" Savannah Morning News, Nov. 16, 2002, Sports, p. 5C",
-    "SourceNote": "User-provided Savannah Morning News recap for the Nov. 15, 2002 Williamsburg Academy SCISA playoff semifinal, plus user-provided line score, scoring summary and team comparison statistics. The recap text is preserved separately from the box-score/stat data."
+    "SourceNote": "User-provided Savannah Morning News recap for the Nov. 15, 2002 Williamsburg Academy SCISA playoff semifinal, plus user-provided line score, scoring summary and team comparison statistics. The recap text is preserved separately from the box-score/stat data.",
+    "BoxScoreCompleteness": "partial"
   },
   {
     "GameID": 20021122,
@@ -6337,7 +6421,8 @@
     "SourceDate": "2002-11-23",
     "SourcePublication": "Savannah Morning News",
     "SourceCitation": "Tom O'Hare, For the Savannah Morning News, \"SAINTS FALL SHORT OF SCISA 2-A STATE TITLE - COLLETON PREP USES A LARGER ROSTER TO OUTLAST ST. ANDREW'S IN THE SECOND HALF,\" Savannah Morning News, Nov. 23, 2002, Sports, p. 1C",
-    "SourceNote": "User-provided Savannah Morning News recap for the Nov. 22, 2002 Colleton Prep Academy SCISA championship game, plus user-provided line score, scoring summary and team comparison statistics. The recap text excludes the box-score/stat data by request."
+    "SourceNote": "User-provided Savannah Morning News recap for the Nov. 22, 2002 Colleton Prep Academy SCISA championship game, plus user-provided line score, scoring summary and team comparison statistics. The recap text excludes the box-score/stat data by request.",
+    "BoxScoreCompleteness": "partial"
   },
   {
     "GameID": 20030828,
@@ -6492,7 +6577,9 @@
     "Recap": "The Memorial Day School football team got a huge scare but was able to pull out a 20-16 win over St. Andrew's on Thursday night at Westside Stadium.\n\nThe Matadors kicked off to the Saints' Beau Hinton with only 21 seconds remaining in the game. Hinton returned the ball from his 5-yard line to his own 38. With 10.8 seconds showing on the clock, Saint quarterback Davey Clay threw the ball 50 yards and tight end Josh Smith hauled it in and raced to the 2-yard line before getting tackled.\n\nUnfortunately for the Saints, they didn't have any more timeouts and the game ended before they could get another play off.\n\nMemorial (2-0) running back Justin Black, who scored what turned out to be the game-winning touchdown - a 13-yard run with 2:28 left - breathed a sigh of relief after the final horn blew.\n\n\"That last play scared me,\" Black said. \"I was getting ready to cry. We had a missed coverage on their tight end. I'm glad we're a fourth-quarter team, though.\"\n\nMemorial first-year coach J.D. Garletts saw his team improve to 2-0. In the opener last week, Memorial rallied to defeat Edmund Burke 39-35.\n\n\"Thank goodness we got away with the win because St. Andrew's outplayed us,\" Garletts said. \"We call ourselves a fourth-quarter team because we have a spectacular two-minute offense we can unleash anytime during the game.\"\n\nFor Garletts, a 1998 Savannah Country Day graduate, it has been a learning experience, especially since he walked into the job as head coach.\n\n\"I played football for four years at Hampden-Sydney College and when our football coach took another job, I was offered the job on the spot,\" Garletts said.\n\nClay, the Saints' senior leader, did everything in his power to keep his team in its 2003 opener. He and Smith almost pulled out a win for St. Andrew's.\n\n\"I was thinking that I had to get (to the goal line) because I knew we needed a touchdown,\" Smith said. \"This is definitely a learning experience for us, and I have to give it to my teammates - we played hard.\"\n\nThe Saints (0-1) led 7-6 at halftime and took a 10-6 lead early in the third quarter when senior kicker Will Massey nailed a 40-yard field goal with room to spare.\n\nSt. Andrew's recovered two fumbles by the Matadors but could not capitalize on the opportunities.\n\nAfter the game, a shoving match broke out between the schools' trainers after an argument. Coaches and Garden City police had to restore order.",
     "SourceDate": "2003-08-29",
     "SourcePublication": "Savannah Morning News",
-    "SourceCitation": "Savannah Morning News, Aug. 29, 2003"
+    "SourceCitation": "Savannah Morning News, Aug. 29, 2003",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Archive games data is partial; only recovered source details are shown."
   },
   {
     "GameID": 20030905,
@@ -6581,7 +6668,10 @@
         "Opponent": "6-45"
       }
     ],
-    "RecapTitle": "St. Andrew's 27, Hilton Head Christian 6"
+    "RecapTitle": "St. Andrew's 27, Hilton Head Christian 6",
+    "SourceCitation": "\"St. Andrew's 27, Hilton Head Christian 6\"",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Archive games data is partial; only recovered source details are shown."
   },
   {
     "GameID": 20030912,
@@ -6749,7 +6839,10 @@
       }
     ],
     "RecapTitle": "St. Andrew's 36, Hilton Head Prep 15",
-    "Recap": "Beau Hinton rushed for 133 yards and three touchdowns as St. Andrew's rolled past Hilton Head Prep 36-15 Friday night.\n\nHinton scored on runs of 1, 2 and 47 yards.\n\nDavy Clay ran for a 2-yard touchdowns and threw a 20-yard pass to Jacob Rivers.\n\nFor Hilton Head, Mark Finger scored on a 33-yard pass from Charles Scarminach and Niles Murphy scored on a 99-yard kickoff return. St. Andrew's is 2-1; Hilton Head is 0-3."
+    "Recap": "Beau Hinton rushed for 133 yards and three touchdowns as St. Andrew's rolled past Hilton Head Prep 36-15 Friday night.\n\nHinton scored on runs of 1, 2 and 47 yards.\n\nDavy Clay ran for a 2-yard touchdowns and threw a 20-yard pass to Jacob Rivers.\n\nFor Hilton Head, Mark Finger scored on a 33-yard pass from Charles Scarminach and Niles Murphy scored on a 99-yard kickoff return. St. Andrew's is 2-1; Hilton Head is 0-3.",
+    "SourceCitation": "\"St. Andrew's 36, Hilton Head Prep 15\"",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Archive games data is partial; only recovered source details are shown."
   },
   {
     "GameID": 20030926,
@@ -6892,7 +6985,10 @@
       }
     ],
     "RecapTitle": "St. Andrew's 19, Thomas Heyward 13",
-    "Recap": "RIDGELAND - Beau Hinton's second touchdown of the night, a 17-yard run, gave St. Andrew's the lead for good in the third quarter, and Davy Clay's 1-yard sneak sealed the SCISA non-region win.\n\nHinton's other score, a 13-yard score, tied the score at 6 in the second quarter. The Saints (3-1) then built a 19-6 lead before Thomas Heyward (2-4) capped the scoring on Leon Etheridge's 47-yard touchdown pass to Dorian Capers. Etheridge began the scoring with a 1-yard, second-quarter run for the Rebels, which outgained the Saints 286-188 but committed four turnovers."
+    "Recap": "RIDGELAND - Beau Hinton's second touchdown of the night, a 17-yard run, gave St. Andrew's the lead for good in the third quarter, and Davy Clay's 1-yard sneak sealed the SCISA non-region win.\n\nHinton's other score, a 13-yard score, tied the score at 6 in the second quarter. The Saints (3-1) then built a 19-6 lead before Thomas Heyward (2-4) capped the scoring on Leon Etheridge's 47-yard touchdown pass to Dorian Capers. Etheridge began the scoring with a 1-yard, second-quarter run for the Rebels, which outgained the Saints 286-188 but committed four turnovers.",
+    "SourceCitation": "\"St. Andrew's 19, Thomas Heyward 13\"",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "SCISA non-region"
   },
   {
     "GameID": 20031003,
@@ -7004,7 +7100,10 @@
       }
     ],
     "RecapTitle": "St. Andrew's 3, Calhoun 0",
-    "Recap": "Will Massey's 30-yard field goal in the third quarter was the lone score in St. Andrew's 3-0 victory over Calhoun.\n\nSaints' Davey Clay preserved the win by falling on a Calhoun fumble in the end zone.\n\nBeau Hinton led the winners with 102 yards on 25 carries. Omar Glenn added 96 yards on 11 carries.\n\nSt. Andrew's raised its record to 4-1 overall, 1-0 in region play."
+    "Recap": "Will Massey's 30-yard field goal in the third quarter was the lone score in St. Andrew's 3-0 victory over Calhoun.\n\nSaints' Davey Clay preserved the win by falling on a Calhoun fumble in the end zone.\n\nBeau Hinton led the winners with 102 yards on 25 carries. Omar Glenn added 96 yards on 11 carries.\n\nSt. Andrew's raised its record to 4-1 overall, 1-0 in region play.",
+    "SourceCitation": "\"St. Andrew's 3, Calhoun 0\"",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Archive games data is partial; only recovered source details are shown."
   },
   {
     "GameID": 20031010,
@@ -7155,7 +7254,10 @@
       }
     ],
     "RecapTitle": "Dillon Christian 32, St. Andrew's 7",
-    "Recap": "DILLON, S.C. - Aaron Moody and Montrice Jones each had two touchdowns to lead Dillon Christian to a 32-7 victory over St. Andrew's.\n\nMoody scored on runs of 1 and 6 yards. Jones had touchdown runs of 8 and 30 yards.\n\nDavy Clay had the lone touchdown for the Saints (3-3) in the first quarter.\n\nDillon outgained St. Andrew's, 358-95."
+    "Recap": "DILLON, S.C. - Aaron Moody and Montrice Jones each had two touchdowns to lead Dillon Christian to a 32-7 victory over St. Andrew's.\n\nMoody scored on runs of 1 and 6 yards. Jones had touchdown runs of 8 and 30 yards.\n\nDavy Clay had the lone touchdown for the Saints (3-3) in the first quarter.\n\nDillon outgained St. Andrew's, 358-95.",
+    "SourceCitation": "\"Dillon Christian 32, St. Andrew's 7\"",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Archive games data is partial; only recovered source details are shown."
   },
   {
     "GameID": 20031017,
@@ -7308,7 +7410,9 @@
     ],
     "RecapTitle": "Colleton Prep 28, St. Andrew's 14",
     "Recap": "St. Andrew's quarterback Davy Clay threw for 250 yards but it wasn't enough to offset the running game of defending Class AA state champion Colleton Prep in a 28-14 Saints' loss.\n\nColleton Prep (9-0 overall, 3-0 region) rolled to 380 yards on the ground. Running back Patrick Hamilton scored three touchdowns.\n\nClay completed 25 of 38 passes and threw two touchdowns for St. Andrew's (4-3, 1-2). He also threw three interceptions.",
-    "SourceNote": "User-provided newspaper article for the Oct. 17, 2003 game."
+    "SourceNote": "User-provided newspaper article for the Oct. 17, 2003 game.",
+    "SourceCitation": "\"Colleton Prep 28, St. Andrew's 14\"",
+    "BoxScoreCompleteness": "partial"
   },
   {
     "GameID": 20031031,
@@ -7462,7 +7566,9 @@
     "Recap": "HOLLY HILL, S.C. - St. Andrew's scored 34 points in the first half and coasted to a 41-0 victory over Holly Hill Academy Friday night in a SCISA 2-AA game.\n\nDavy Clay got the Saints off to a fast start, scoring on a 3-yard run and then passing 15 yards to Josh Smith for a 14-0 lead.\n\nSmith scored in the second quarter on a 34-yard interception return, Beau Hinton tallied on a 3-yard run and Will Massey scored on a 35-yard fumble recovery return to put SA up 34-0 at the half.\n\nThe only score in the second half came on Hinton's 19-yard run.\n\nSt. Andrew's is 5-3, 2-2 in region.\n\nHolly Hill is 3-6, 0-4 in region.",
     "SourceDate": "2003-11-01",
     "SourcePublication": "Savannah Morning News",
-    "SourceCitation": "Savannah Morning News, Nov. 1, 2003"
+    "SourceCitation": "Savannah Morning News, Nov. 1, 2003",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Archive games data is partial; only recovered source details are shown."
   },
   {
     "GameID": 20031107,
@@ -7610,7 +7716,10 @@
         "Opponent": "7-40"
       }
     ],
-    "RecapTitle": "Robert Lee 21, St. Andrew's 20"
+    "RecapTitle": "Robert Lee 21, St. Andrew's 20",
+    "SourceCitation": "\"Robert Lee 21, St. Andrew's 20\"",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Archive games data is partial; only recovered source details are shown."
   },
   {
     "GameID": 20040820,
@@ -7755,7 +7864,8 @@
     "Recap": "KINGSTREE, S.C. - Sam Turner and Jim Hutton scored two touchdowns each as Williamsburg defeated St. Andrew's 34-0 in the opening game for both teams Friday night.\n\nTurner scored a 75-yard pass from Burt Kallahan and an 8-yard run.\n\nHutton scored on runs of 23 and 39 yards.\n\nThe visitors also scored on a 19-yard run by Gordon Scot.\n\nDanny Keene led St. Andrew's in rushing with 38 yards.",
     "SourcePublication": "Savannah Morning News (GA)",
     "SourceCitation": "\"Williamsburg 34, St. Andrew's 0,\" Savannah Morning News (GA), SCISA roundup.",
-    "SourceNote": "User-provided Savannah Morning News SCISA roundup for the Aug. 20, 2004 Williamsburg Academy game, plus user-provided line score, scoring summary and team comparison statistics."
+    "SourceNote": "User-provided Savannah Morning News SCISA roundup for the Aug. 20, 2004 Williamsburg Academy game, plus user-provided line score, scoring summary and team comparison statistics.",
+    "BoxScoreCompleteness": "partial"
   },
   {
     "GameID": 20040827,
@@ -7795,7 +7905,8 @@
         "Text": "St. Andrew's and Memorial combined for 41 penalties in a three-hour game won by Memorial 6-0 on Aug. 27.",
         "SourceCitation": "Jim Thomas and Erin Rossiter, \"MIDSEASON REPORT - SAVANNAH CHRISTIAN, SOUTH EFFINGHAM, STATESBORO AMONG AREA'S BEST GROVES IS STILL IN THE HUNT FOR A PLAYOFF BERTH, BUT THE SCHEDULE IS MORE DEMANDING IN THE SECOND HALF,\" Savannah Morning News (GA), October 1, 2004, Page 1D, Section: SPORTS."
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial"
   },
   {
     "GameID": 20040903,
@@ -7948,7 +8059,8 @@
     "Recap": "Jeff Tyner caught two touchdown passes and ran for another touchdown to lead Dorchester Academy to a 42-0 victory over St. Andrew's.\n\nTyner scored on 14 and 16-yard passes from quarterback James Horne in the first half. Tyner added his third score on a 7-yard run in the third quarter.\n\nSt. Andrew's (0-3) struggled offensively, managing only 58 yards in the game.",
     "SourcePublication": "Savannah Morning News (GA)",
     "SourceCitation": "\"Dorchester Academy 42, St. Andrew's 0,\" Savannah Morning News (GA), SCISA roundup.",
-    "SourceNote": "User-provided Savannah Morning News SCISA roundup for the Sept. 3, 2004 Dorchester Academy game, plus user-provided line score, scoring summary and team comparison statistics."
+    "SourceNote": "User-provided Savannah Morning News SCISA roundup for the Sept. 3, 2004 Dorchester Academy game, plus user-provided line score, scoring summary and team comparison statistics.",
+    "BoxScoreCompleteness": "partial"
   },
   {
     "GameID": 20040917,
@@ -8101,7 +8213,8 @@
     "Recap": "ESTILL, S.C. - Thomas Heyward scored 40 points in the first half and cruised to the SCISA victory over St. Andrew's.\n\nSix different players scored touchdowns for the Rebels. Thomas Heyward is 2-2; St. Andrew's is 0-4.",
     "SourcePublication": "Savannah Morning News (GA)",
     "SourceCitation": "\"Thomas Heyward 40, St. Andrew's 0,\" Savannah Morning News (GA), SCISA roundup.",
-    "SourceNote": "User-provided Savannah Morning News SCISA roundup for the Sept. 17, 2004 Thomas Heyward Academy game, plus user-provided line score, scoring summary and team comparison statistics."
+    "SourceNote": "User-provided Savannah Morning News SCISA roundup for the Sept. 17, 2004 Thomas Heyward Academy game, plus user-provided line score, scoring summary and team comparison statistics.",
+    "BoxScoreCompleteness": "partial"
   },
   {
     "GameID": 20040924,
@@ -8262,7 +8375,8 @@
     "Recap": "SUMMERVILLE - Brett Gault scored three touchdowns and Mac Moore two as Pinewood Prep defeated St. Andrew's 49-0.\n\nGault scored on runs of 1, 6 and 26 yards.\n\nMoore scored from the 1 and the 10.\n\nSt. Andrew's was held to 12 yards total offense.\n\nPinewood is 3-1. The Saints are 0-5.",
     "SourcePublication": "Savannah Morning News (GA)",
     "SourceCitation": "\"Pinewood Prep 49, St. Andrew's 0,\" Savannah Morning News (GA), SCISA roundup.",
-    "SourceNote": "User-provided Savannah Morning News SCISA roundup for the Sept. 24, 2004 Pinewood Prep game, plus user-provided line score, scoring summary and team comparison statistics."
+    "SourceNote": "User-provided Savannah Morning News SCISA roundup for the Sept. 24, 2004 Pinewood Prep game, plus user-provided line score, scoring summary and team comparison statistics.",
+    "BoxScoreCompleteness": "partial"
   },
   {
     "GameID": 20041001,
@@ -8415,7 +8529,8 @@
     "Recap": "Jeremiah Spires scored four touchdowns on runs of 21, 20, 20 and 36 yards to lead Hilton Head Christian to a 42-0 victory over St. Andrew's.\n\nHilton Head (6-0) scored all its points in the first half.\n\nSt. Andrew's, which finished with -10 yards of total offense, dropped to 0-6.",
     "SourcePublication": "Savannah Morning News (GA)",
     "SourceCitation": "\"Hilton Head Christian 42, St. Andrew's 0,\" Savannah Morning News (GA), SCISA roundup.",
-    "SourceNote": "User-provided Savannah Morning News SCISA roundup for the Oct. 1, 2004 Hilton Head Christian game, plus user-provided line score, scoring summary and team comparison statistics."
+    "SourceNote": "User-provided Savannah Morning News SCISA roundup for the Oct. 1, 2004 Hilton Head Christian game, plus user-provided line score, scoring summary and team comparison statistics.",
+    "BoxScoreCompleteness": "partial"
   },
   {
     "GameID": 20041008,
@@ -8440,7 +8555,10 @@
     "Result": "L",
     "TeamScore": 0,
     "OpponentScore": 40,
-    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island"
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Archive games data is partial; only recovered source details are shown.",
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2004-10-08."
   },
   {
     "GameID": 20041015,
@@ -8600,7 +8718,8 @@
     "RecapTitle": "FIRST BAPTIST CHRISTIAN BLANKS ST. ANDREW'S",
     "Recap": "Reggie Stuckey scored three touchdowns as First Baptist Christian defeated St. Andrew's 49-0 in SCISA 2-AA play. Stuckey caught a 26-yard touchdown pass from Sam Jervis and added two 9-yard scoring runs, helping First Baptist Christian improve to 3-6 overall and 1-2 in SCISA 2-AA while the Saints fell to 0-8 and 0-2.\n\nKyle Henderson also had two touchdowns, catching a 7-yard pass from Jervis and returning a fumble 60 yards for a score. Mark Heath added a 15-yard touchdown run, Taylor Kirkman scored from 10 yards out and John Alfieris made five extra points.\n\nFirst Baptist Christian finished with a balanced offense, rushing for 136 yards and passing for 135. St. Andrew's also moved the ball through both phases with 75 rushing yards and 70 passing yards, but the Saints lost two fumbles and were held off the scoreboard.",
     "SourceCitation": "User-provided recap, line score, scoring summary and team comparison statistics for the Oct. 15, 2004 First Baptist Christian game.",
-    "SourceNote": "The opponent is listed in the imported schedule as First Baptist School, while the user-provided recap and box score identify the team as First Baptist Christian."
+    "SourceNote": "The opponent is listed in the imported schedule as First Baptist School, while the user-provided recap and box score identify the team as First Baptist Christian.",
+    "BoxScoreCompleteness": "partial"
   },
   {
     "GameID": 20041022,
@@ -8778,7 +8897,8 @@
     "Recap": "Marshall Tillitson ran for two touchdowns and John Gibbs caught two touchdown passes to lead Colleton Prep to a 48-14 SCISA win over St. Andrew's in Walterboro, S.C.\n\nColleton Prep, which improved to 6-2, finished with 419 rushing yards and built a 20-0 first-quarter lead. The War Hawks also scored through the air, with Gibbs catching touchdown passes from Smoak and Robinson.\n\nSt. Andrew's fell to 0-9 but got second-half scoring from Patrick Maleki and Matt Knight. Maleki caught a 13-yard touchdown pass and made both Saints extra points, while Knight scored on a 29-yard run and led St. Andrew's with 93 rushing yards.",
     "SourceSection": "SCISA",
     "SourceCitation": "User-provided SCISA recap, line score, scoring summary and team comparison statistics for the Oct. 22, 2004 Colleton Prep game.",
-    "SourceNote": "The source scoring summary lists the passer on Patrick Maleki's touchdown as Pablo; that spelling is preserved in the scoring play."
+    "SourceNote": "The source scoring summary lists the passer on Patrick Maleki's touchdown as Pablo; that spelling is preserved in the scoring play.",
+    "BoxScoreCompleteness": "partial"
   },
   {
     "GameID": 20041029,
@@ -8932,7 +9052,8 @@
     "Recap": "Matt Knight carried 10 times for 100 yards, including a 43-yard touchdown, but St. Andrew's could not slow Dillon Christian in a 33-7 SCISA 2-AA loss in Dillon, S.C.\n\nDillon Christian, which improved to 8-3, got touchdowns from Marcus Samson, Thomas Wright, Aaron Moody, Joseph Campbell and Lucas Webster. Hayley Williams kicked two extra points.\n\nSt. Andrew's finished 0-10 and ran for 135 yards as a team, with Knight providing the Saints' scoring play and the bulk of the ground production.",
     "SourceSection": "SCISA 2-AA",
     "SourceCitation": "User-provided SCISA 2-AA recap, line score, scoring summary and team comparison statistics for the Oct. 29, 2004 Dillon Christian game.",
-    "SourceNote": "The dateline places this game in Dillon, S.C., so the game location is recorded as away. The scoring summary lists Marcus Samson's touchdown as a pass from Jordon, while the recap text groups Dillon Christian's touchdowns as runs."
+    "SourceNote": "The dateline places this game in Dillon, S.C., so the game location is recorded as away. The scoring summary lists Marcus Samson's touchdown as a pass from Jordon, while the recap text groups Dillon Christian's touchdowns as runs.",
+    "BoxScoreCompleteness": "partial"
   },
   {
     "GameID": 20050819,
@@ -9079,7 +9200,8 @@
     "SourcePublication": "Savannah Morning News (GA)",
     "SourceDate": "August 20, 2005",
     "SourceCitation": "\"Williamsburg Academy 41, St. Andrew's 0,\" Savannah Morning News (GA), August 20, 2005, Page 6D, Section: FRIDAY NIGHT BLITZ.",
-    "SourceNote": "User-provided Savannah Morning News recap for the Aug. 19, 2005 Williamsburg Academy game, plus user-provided line score, scoring summary and team comparison statistics. The scoring summary provided five named Williamsburg touchdowns, while the 14-13-7-7 line score requires one additional 6-point Williamsburg scoring play in the second quarter; that missing play is stored as an unreported touchdown. The article recap lists Scott's first touchdown as a 40-yard run, while the scoring summary lists it as a 30-yard run."
+    "SourceNote": "User-provided Savannah Morning News recap for the Aug. 19, 2005 Williamsburg Academy game, plus user-provided line score, scoring summary and team comparison statistics. The scoring summary provided five named Williamsburg touchdowns, while the 14-13-7-7 line score requires one additional 6-point Williamsburg scoring play in the second quarter; that missing play is stored as an unreported touchdown. The article recap lists Scott's first touchdown as a 40-yard run, while the scoring summary lists it as a 30-yard run.",
+    "BoxScoreCompleteness": "partial"
   },
   {
     "GameID": 20050826,
@@ -9222,7 +9344,8 @@
     "SourcePage": "7B",
     "SourceSection": "SPORTS",
     "SourceCitation": "Jeff LaRoe for the Savannah Morning News, \"ST. ANDREW'S SHOWS LONGED-FOR IMPROVEMENT IN VICTORY,\" Savannah Morning News (GA), August 28, 2005, Page 7B, Section: SPORTS.",
-    "SourceNote": "User-provided Savannah Morning News recap, line score, scoring summary and team comparison statistics for the Aug. 26, 2005 Memorial Day School game."
+    "SourceNote": "User-provided Savannah Morning News recap, line score, scoring summary and team comparison statistics for the Aug. 26, 2005 Memorial Day School game.",
+    "BoxScoreCompleteness": "partial"
   },
   {
     "GameID": 20050902,
@@ -9250,7 +9373,9 @@
     "OpponentID": "sc-dorchester-academy-st-george",
     "RecapTitle": "Dorchester 60, St. Andrew's 0",
     "Recap": "Cody Walker scored four touchdowns as visiting Dorchester downed St. Andrew's Friday night. The Saints were held to minus-9 yards rushing.\n\nDorchester is 2-1; St. Andrew's is 1-2.",
-    "SourceNote": "User-provided recap for the Sept. 2, 2005 Dorchester Academy game. No line score, team comparison statistics, scoring plays or individual statistics were available."
+    "SourceNote": "User-provided recap for the Sept. 2, 2005 Dorchester Academy game. No line score, team comparison statistics, scoring plays or individual statistics were available.",
+    "SourceCitation": "\"Dorchester 60, St. Andrew's 0\"",
+    "BoxScoreCompleteness": "partial"
   },
   {
     "GameID": 20050916,
@@ -9432,7 +9557,8 @@
     "SourcePage": "6D",
     "SourceSection": "FRIDAY NIGHT BLITZ",
     "SourceCitation": "Chris Lancia, Hardeeville Today, \"THOMAS HEYWARD CRUSHES ST. ANDREW'S,\" Savannah Morning News (GA), September 17, 2005, Page 6D, Section: FRIDAY NIGHT BLITZ.",
-    "SourceNote": "User-provided Savannah Morning News recap, line score, scoring summary and team comparison statistics for the Sept. 16, 2005 Thomas Heyward Academy game. The listed scoring plays account for the named scoring events as provided, but their point values do not fully reconcile with the 64-7 final score and 20-22-16-6 Thomas Heyward line score. The recap differs from the scoring summary on Sean Draper's touchdown distance, Sean Esworthy's name spelling, Javier Gutierrez's kickoff return distance, and team offensive yardage."
+    "SourceNote": "User-provided Savannah Morning News recap, line score, scoring summary and team comparison statistics for the Sept. 16, 2005 Thomas Heyward Academy game. The listed scoring plays account for the named scoring events as provided, but their point values do not fully reconcile with the 64-7 final score and 20-22-16-6 Thomas Heyward line score. The recap differs from the scoring summary on Sean Draper's touchdown distance, Sean Esworthy's name spelling, Javier Gutierrez's kickoff return distance, and team offensive yardage.",
+    "BoxScoreCompleteness": "partial"
   },
   {
     "GameID": 20050923,
@@ -9543,7 +9669,9 @@
     "RecapTitle": "Pinewood Prep 55, St. Andrew's 0",
     "Recap": "Pinewood Prep scored 34 points in the first quarter and rolled to an easy victory over St. Andrew's on Friday night.\n\nRyan Steed and Del Ray Roper scored two touchdowns each for Pinewood. Miles Reeves passed for one touchdown and returned an interception 35 yards for another.\n\nAlex Bryan and Chris Wiley also scored for the visitors.\n\nPinewood Prep is 4-2. St. Andrew's is 1-4.",
     "SourceSection": "SCISA",
-    "SourceNote": "User-provided SCISA game summary, line score and scoring summary for the Sept. 23, 2005 Pinewood Prep game. Team comparison statistics were not included. The listed scoring plays account for the named scoring events as provided, but their point values do not fully reconcile with the 55-0 final score and 34-15-0-6 Pinewood Prep line score."
+    "SourceNote": "User-provided SCISA game summary, line score and scoring summary for the Sept. 23, 2005 Pinewood Prep game. Team comparison statistics were not included. The listed scoring plays account for the named scoring events as provided, but their point values do not fully reconcile with the 55-0 final score and 34-15-0-6 Pinewood Prep line score.",
+    "SourceCitation": "\"Pinewood Prep 55, St. Andrew's 0\", SCISA",
+    "BoxScoreCompleteness": "partial"
   },
   {
     "GameID": 20050930,
@@ -9703,7 +9831,9 @@
     "RecapTitle": "Hilton Head Christian 56, St. Andrew's 0",
     "Recap": "HILTON HEAD, S.C. - Jonathan Gort scored three touchdowns as Hilton Head Christian trounced St. Andrew's.\n\nGort scored on receptions of 7 and 49 yards, and a 50-yard run.\n\nQuarterback Gabe Gilmore three for both touchdowns to Gort and scored on a 5-yard run.\n\nHilton Head Christian is 8-0; St. Andrew's is 1-5.",
     "SourceSection": "SCISA",
-    "SourceNote": "User-provided SCISA game summary, line score, scoring summary and team comparison statistics for the Sept. 30, 2005 game. The newspaper text appeared to list Hilton Head Prep, but the opponent was corrected back to Hilton Head Christian per the user and imported schedule."
+    "SourceNote": "User-provided SCISA game summary, line score, scoring summary and team comparison statistics for the Sept. 30, 2005 game. The newspaper text appeared to list Hilton Head Prep, but the opponent was corrected back to Hilton Head Christian per the user and imported schedule.",
+    "SourceCitation": "\"Hilton Head Christian 56, St. Andrew's 0\", SCISA",
+    "BoxScoreCompleteness": "partial"
   },
   {
     "GameID": 20051007,
@@ -9732,7 +9862,9 @@
     "RecapTitle": "HILTON HEAD PREP 68, ST. ANDREW'S 0",
     "Recap": "HILTON HEAD, S.C. - Deandre Morrow scored three touchdowns and Niles Murphy and Jeremiah Spires had two apiece to lead undefeated Hilton Head Prep past St. Andrew's in a Friday afternoon SCISA Region 3-AA game.\n\nThe Dolphins, who improved to 8-0 overall, 3-0 in the region, led 47-0 at the half.\n\nMurphy scored on a 70-yard kickoff return and a 35-yard punt return, while Morrow scored on a 30-yard punt return, a 40-yard run and a 2-yard run. Spires scored on runs of 37 and 42 yards.\n\nThe Saints fell to 1-6, 0-2.",
     "SourceSection": "SCISA",
-    "SourceNote": "User-provided SCISA recap for the Oct. 7, 2005 Hilton Head Prep game. No line score, team comparison statistics or scoring summary were included."
+    "SourceNote": "User-provided SCISA recap for the Oct. 7, 2005 Hilton Head Prep game. No line score, team comparison statistics or scoring summary were included.",
+    "SourceCitation": "\"HILTON HEAD PREP 68, ST. ANDREW'S 0\", SCISA",
+    "BoxScoreCompleteness": "partial"
   },
   {
     "GameID": 20051014,
@@ -9874,7 +10006,9 @@
     "RecapTitle": "First Baptist 33, St. Andrew's 0",
     "Recap": "Mark Heath rushed for 80 yards on 5 carries to lead First Baptist (2-6) over St. Andrew's (1-7).\n\nOffensively for the Saints, Bubby Pavlo carried the ball 13 times for 35 yards.\n\nFirst Baptist dominated St. Andrew's with 140 total rushing yards and 122 total passing yards and no fumbles.",
     "SourceSection": "REGION SCISA 2-AA",
-    "SourceNote": "User-provided REGION SCISA 2-AA game summary, line score, scoring summary and team comparison statistics for the Oct. 14, 2005 First Baptist game. The listed scoring plays total 33 points, but their point values do not fully reconcile with the 14-13-6-0 First Baptist line score by quarter."
+    "SourceNote": "User-provided REGION SCISA 2-AA game summary, line score, scoring summary and team comparison statistics for the Oct. 14, 2005 First Baptist game. The listed scoring plays total 33 points, but their point values do not fully reconcile with the 14-13-6-0 First Baptist line score by quarter.",
+    "SourceCitation": "\"First Baptist 33, St. Andrew's 0\", REGION SCISA 2-AA",
+    "BoxScoreCompleteness": "partial"
   },
   {
     "GameID": 20051021,
@@ -10041,7 +10175,9 @@
     "RecapTitle": "Colleton Prep 55, St. Andrew's 0",
     "Recap": "Gus White's 95-yard kickoff return for a touchdown on the first play of the game set the tone for Colleton Prep's victory over St. Andrew's. White was the leading rusher for Colleton Prep (5-5) with a total of 158 yards and three touchdowns on 10 carries.\n\nFrank Howard led St. Andrew's (1-8) with 30 yards rushing on nine carries. Three fumbles and several penalties hurt the Saints.",
     "SourceSection": "Region SCISA 2-AA",
-    "SourceNote": "User-provided Region SCISA 2-AA game summary, line score, scoring summary and team comparison statistics for the Oct. 21, 2005 Colleton Prep game. The listed scoring plays total 48 points, so one unreported third-quarter Colleton Prep touchdown was added to reconcile the 55-0 final score and 19-29-7-0 line score."
+    "SourceNote": "User-provided Region SCISA 2-AA game summary, line score, scoring summary and team comparison statistics for the Oct. 21, 2005 Colleton Prep game. The listed scoring plays total 48 points, so one unreported third-quarter Colleton Prep touchdown was added to reconcile the 55-0 final score and 19-29-7-0 line score.",
+    "SourceCitation": "\"Colleton Prep 55, St. Andrew's 0\", Region SCISA 2-AA",
+    "BoxScoreCompleteness": "partial"
   },
   {
     "GameID": 20051028,
@@ -10202,7 +10338,9 @@
     "RecapTitle": "Dillon Christian 49, St. Andrew's 0",
     "Recap": "Dillon, S.C. - Johnnell Alford ran for 106 yards to lead Dillon Christian (6-5) over St. Andrew's (1-9) in the Saints' final game of the season.\n\nSt. Andrew's was lead by Skip McGee with 34 yards rushing. The Saints earned seven first downs and had zero fumbles, but were unable to get the ball in the end zone against Dillon Christian.",
     "SourceSection": "REGION SCISA 2-AA",
-    "SourceNote": "User-provided REGION SCISA 2-AA game summary, line score, scoring summary and team comparison statistics for the Oct. 28, 2005 Dillon Christian game. The recap spells the Dillon Christian rusher as Johnnell Alford, while the scoring summary spells him Johnell Alford."
+    "SourceNote": "User-provided REGION SCISA 2-AA game summary, line score, scoring summary and team comparison statistics for the Oct. 28, 2005 Dillon Christian game. The recap spells the Dillon Christian rusher as Johnnell Alford, while the scoring summary spells him Johnell Alford.",
+    "SourceCitation": "\"Dillon Christian 49, St. Andrew's 0\", REGION SCISA 2-AA",
+    "BoxScoreCompleteness": "partial"
   },
   {
     "GameID": 20060818,
@@ -10227,7 +10365,8 @@
     "Result": "W",
     "TeamScore": 26,
     "OpponentScore": 6,
-    "OpponentID": "sc-charleston-collegiate-school-johns-island"
+    "OpponentID": "sc-charleston-collegiate-school-johns-island",
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2006-08-18."
   },
   {
     "GameID": 20060825,
@@ -10252,7 +10391,8 @@
     "Result": "L",
     "TeamScore": 13,
     "OpponentScore": 38,
-    "OpponentID": "sc-williamsburg-academy-kingstree"
+    "OpponentID": "sc-williamsburg-academy-kingstree",
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2006-08-25."
   },
   {
     "GameID": 20060901,
@@ -10277,7 +10417,8 @@
     "Result": "L",
     "TeamScore": 14,
     "OpponentScore": 18,
-    "OpponentID": "ga-memorial-day-school-savannah"
+    "OpponentID": "ga-memorial-day-school-savannah",
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2006-09-01."
   },
   {
     "GameID": 20060908,
@@ -10302,7 +10443,8 @@
     "Result": "L",
     "TeamScore": 14,
     "OpponentScore": 26,
-    "OpponentID": "sc-first-baptist-school-charleston"
+    "OpponentID": "sc-first-baptist-school-charleston",
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2006-09-08."
   },
   {
     "GameID": 20060915,
@@ -10327,7 +10469,8 @@
     "Result": "W",
     "TeamScore": 17,
     "OpponentScore": 7,
-    "OpponentID": "sc-cathedral-academy-north-charleston"
+    "OpponentID": "sc-cathedral-academy-north-charleston",
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2006-09-15."
   },
   {
     "GameID": 20060929,
@@ -10352,7 +10495,8 @@
     "Result": "L",
     "TeamScore": 21,
     "OpponentScore": 48,
-    "OpponentID": "sc-colleton-prep-academy-walterboro"
+    "OpponentID": "sc-colleton-prep-academy-walterboro",
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2006-09-29."
   },
   {
     "GameID": 20061006,
@@ -10377,7 +10521,8 @@
     "Result": "L",
     "TeamScore": 6,
     "OpponentScore": 47,
-    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island"
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2006-10-06."
   },
   {
     "GameID": 20061013,
@@ -10402,7 +10547,8 @@
     "Result": "L",
     "TeamScore": 0,
     "OpponentScore": 47,
-    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island"
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2006-10-13."
   },
   {
     "GameID": 20061020,
@@ -10427,7 +10573,8 @@
     "Result": "L",
     "TeamScore": 0,
     "OpponentScore": 43,
-    "OpponentID": "sc-thomas-heyward-academy-ridgeland"
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2006-10-20."
   },
   {
     "GameID": 20061027,
@@ -10452,7 +10599,8 @@
     "Result": "W",
     "TeamScore": 27,
     "OpponentScore": 0,
-    "OpponentID": "ga-bible-baptist-christian-school-hampton"
+    "OpponentID": "ga-bible-baptist-christian-school-hampton",
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2006-10-27."
   },
   {
     "GameID": 20070817,
@@ -10477,7 +10625,8 @@
     "Result": "L",
     "TeamScore": 7,
     "OpponentScore": 21,
-    "OpponentID": "sc-charleston-collegiate-school-johns-island"
+    "OpponentID": "sc-charleston-collegiate-school-johns-island",
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2007-08-17."
   },
   {
     "GameID": 20070824,
@@ -10502,7 +10651,8 @@
     "Result": "L",
     "TeamScore": 0,
     "OpponentScore": 20,
-    "OpponentID": "sc-williamsburg-academy-kingstree"
+    "OpponentID": "sc-williamsburg-academy-kingstree",
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2007-08-24."
   },
   {
     "GameID": 20070831,
@@ -10527,7 +10677,8 @@
     "Result": "W",
     "TeamScore": 28,
     "OpponentScore": 20,
-    "OpponentID": "ga-memorial-day-school-savannah"
+    "OpponentID": "ga-memorial-day-school-savannah",
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2007-08-31."
   },
   {
     "GameID": 20070907,
@@ -10552,7 +10703,8 @@
     "Result": "L",
     "TeamScore": 19,
     "OpponentScore": 20,
-    "OpponentID": "sc-first-baptist-school-charleston"
+    "OpponentID": "sc-first-baptist-school-charleston",
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2007-09-07."
   },
   {
     "GameID": 20070914,
@@ -10577,7 +10729,8 @@
     "Result": "W",
     "TeamScore": 21,
     "OpponentScore": 14,
-    "OpponentID": "sc-cathedral-academy-north-charleston"
+    "OpponentID": "sc-cathedral-academy-north-charleston",
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2007-09-14."
   },
   {
     "GameID": 20070928,
@@ -10602,7 +10755,8 @@
     "Result": "L",
     "TeamScore": 0,
     "OpponentScore": 20,
-    "OpponentID": "sc-colleton-prep-academy-walterboro"
+    "OpponentID": "sc-colleton-prep-academy-walterboro",
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2007-09-28."
   },
   {
     "GameID": 20071005,
@@ -10627,7 +10781,8 @@
     "Result": "L",
     "TeamScore": 0,
     "OpponentScore": 14,
-    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island"
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2007-10-05."
   },
   {
     "GameID": 20071012,
@@ -10652,7 +10807,8 @@
     "Result": "W",
     "TeamScore": 41,
     "OpponentScore": 20,
-    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island"
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2007-10-12."
   },
   {
     "GameID": 20071019,
@@ -10677,7 +10833,8 @@
     "Result": "L",
     "TeamScore": 7,
     "OpponentScore": 38,
-    "OpponentID": "sc-thomas-heyward-academy-ridgeland"
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2007-10-19."
   },
   {
     "GameID": 20071026,
@@ -10702,7 +10859,8 @@
     "Result": "W",
     "TeamScore": 49,
     "OpponentScore": 0,
-    "OpponentID": "ga-bible-baptist-school-savannah"
+    "OpponentID": "ga-bible-baptist-school-savannah",
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2007-10-26."
   },
   {
     "GameID": 20080822,
@@ -10727,7 +10885,8 @@
     "Result": "L",
     "TeamScore": 14,
     "OpponentScore": 27,
-    "OpponentID": "ga-memorial-day-school-savannah"
+    "OpponentID": "ga-memorial-day-school-savannah",
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2008-08-22."
   },
   {
     "GameID": 20080829,
@@ -10752,7 +10911,8 @@
     "Result": "W",
     "TeamScore": 23,
     "OpponentScore": 6,
-    "OpponentID": "ga-bible-baptist-school-savannah"
+    "OpponentID": "ga-bible-baptist-school-savannah",
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2008-08-29."
   },
   {
     "GameID": 20080905,
@@ -10777,7 +10937,8 @@
     "Result": "L",
     "TeamScore": 14,
     "OpponentScore": 35,
-    "OpponentID": "sc-northwood-academy-charleston"
+    "OpponentID": "sc-northwood-academy-charleston",
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2008-09-05."
   },
   {
     "GameID": 20080912,
@@ -10802,7 +10963,8 @@
     "Result": "L",
     "TeamScore": 20,
     "OpponentScore": 21,
-    "OpponentID": "sc-colleton-prep-academy-walterboro"
+    "OpponentID": "sc-colleton-prep-academy-walterboro",
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2008-09-12."
   },
   {
     "GameID": 20080926,
@@ -10827,7 +10989,8 @@
     "Result": "L",
     "TeamScore": 19,
     "OpponentScore": 35,
-    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island"
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2008-09-26."
   },
   {
     "GameID": 20081003,
@@ -10852,7 +11015,8 @@
     "Result": "W",
     "TeamScore": 35,
     "OpponentScore": 14,
-    "OpponentID": "sc-thomas-heyward-academy-ridgeland"
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2008-10-03."
   },
   {
     "GameID": 20081010,
@@ -10877,7 +11041,8 @@
     "Result": "W",
     "TeamScore": 54,
     "OpponentScore": 7,
-    "OpponentID": "sc-beaufort-academy-beaufort"
+    "OpponentID": "sc-beaufort-academy-beaufort",
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2008-10-10."
   },
   {
     "GameID": 20081017,
@@ -10902,7 +11067,8 @@
     "Result": "W",
     "TeamScore": 38,
     "OpponentScore": 7,
-    "OpponentID": "sc-first-baptist-school-charleston"
+    "OpponentID": "sc-first-baptist-school-charleston",
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2008-10-17."
   },
   {
     "GameID": 20081024,
@@ -10927,7 +11093,8 @@
     "Result": "W",
     "TeamScore": 20,
     "OpponentScore": 0,
-    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island"
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2008-10-24."
   },
   {
     "GameID": 20081031,
@@ -10952,7 +11119,8 @@
     "Result": "W",
     "TeamScore": 42,
     "OpponentScore": 0,
-    "OpponentID": "sc-st-johns-christian-academy-moncks-corner"
+    "OpponentID": "sc-st-johns-christian-academy-moncks-corner",
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2008-10-31."
   },
   {
     "GameID": 20081107,
@@ -10977,7 +11145,8 @@
     "Result": "W",
     "TeamScore": 24,
     "OpponentScore": 21,
-    "OpponentID": "sc-john-c-calhoun-academy-st-matthews"
+    "OpponentID": "sc-john-c-calhoun-academy-st-matthews",
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2008-11-07."
   },
   {
     "GameID": 20081114,
@@ -11002,7 +11171,8 @@
     "Result": "L",
     "TeamScore": 24,
     "OpponentScore": 42,
-    "OpponentID": "sc-northwood-academy-charleston"
+    "OpponentID": "sc-northwood-academy-charleston",
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2008-11-14."
   },
   {
     "GameID": 20090828,
@@ -11027,7 +11197,8 @@
     "Result": "L",
     "TeamScore": 18,
     "OpponentScore": 38,
-    "OpponentID": "ga-bible-baptist-school-savannah"
+    "OpponentID": "ga-bible-baptist-school-savannah",
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2009-08-28."
   },
   {
     "GameID": 20090904,
@@ -11052,7 +11223,8 @@
     "Result": "L",
     "TeamScore": 0,
     "OpponentScore": 42,
-    "OpponentID": "sc-northwood-academy-charleston"
+    "OpponentID": "sc-northwood-academy-charleston",
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2009-09-04."
   },
   {
     "GameID": 20090911,
@@ -11077,7 +11249,8 @@
     "Result": "L",
     "TeamScore": 17,
     "OpponentScore": 49,
-    "OpponentID": "sc-colleton-prep-academy-walterboro"
+    "OpponentID": "sc-colleton-prep-academy-walterboro",
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2009-09-11."
   },
   {
     "GameID": 20090925,
@@ -11102,7 +11275,8 @@
     "Result": "L",
     "TeamScore": 19,
     "OpponentScore": 33,
-    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island"
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2009-09-25."
   },
   {
     "GameID": 20091002,
@@ -11127,7 +11301,8 @@
     "Result": "L",
     "TeamScore": 14,
     "OpponentScore": 20,
-    "OpponentID": "sc-thomas-heyward-academy-ridgeland"
+    "OpponentID": "sc-thomas-heyward-academy-ridgeland",
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2009-10-02."
   },
   {
     "GameID": 20091009,
@@ -11152,7 +11327,8 @@
     "Result": "L",
     "TeamScore": 3,
     "OpponentScore": 22,
-    "OpponentID": "ga-memorial-day-school-savannah"
+    "OpponentID": "ga-memorial-day-school-savannah",
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2009-10-09."
   },
   {
     "GameID": 20091016,
@@ -11177,7 +11353,8 @@
     "Result": "W",
     "TeamScore": 35,
     "OpponentScore": 0,
-    "OpponentID": "sc-first-baptist-school-charleston"
+    "OpponentID": "sc-first-baptist-school-charleston",
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2009-10-16."
   },
   {
     "GameID": 20091023,
@@ -11202,7 +11379,8 @@
     "Result": "L",
     "TeamScore": 21,
     "OpponentScore": 33,
-    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island"
+    "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2009-10-23."
   },
   {
     "GameID": 20091030,
@@ -11227,7 +11405,8 @@
     "Result": "W",
     "TeamScore": 28,
     "OpponentScore": 7,
-    "OpponentID": "sc-st-johns-christian-academy-moncks-corner"
+    "OpponentID": "sc-st-johns-christian-academy-moncks-corner",
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2009-10-30."
   },
   {
     "GameID": 20091106,
@@ -11251,7 +11430,8 @@
     "GameType": "Regular Season",
     "Result": "",
     "TeamScore": null,
-    "OpponentScore": null
+    "OpponentScore": null,
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2009-11-06."
   },
   {
     "GameID": 20091113,
@@ -11275,7 +11455,8 @@
     "GameType": "Regular Season",
     "Result": "",
     "TeamScore": null,
-    "OpponentScore": null
+    "OpponentScore": null,
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2009-11-13."
   },
   {
     "GameID": 20091120,
@@ -11299,7 +11480,8 @@
     "GameType": "Regular Season",
     "Result": "",
     "TeamScore": null,
-    "OpponentScore": null
+    "OpponentScore": null,
+    "SourceCitation": "\"St. Andrew's football report,\" Savannah Morning News archive, event date 2009-11-20."
   },
   {
     "GameID": 20100820,

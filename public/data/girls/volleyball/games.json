@@ -25,7 +25,9 @@
     "Notes": "Schedule listing only; no result was found in the fall 1999 NewsBank sweep.",
     "IsComplete": "No",
     "SetScores": [],
-    "SourceCitation": "\"CRYSTAL SHINES FOR BEACH,\" Savannah Morning News, 1999-09-24, Page 6D"
+    "SourceCitation": "\"CRYSTAL SHINES FOR BEACH,\" Savannah Morning News, 1999-09-24, Page 6D",
+    "BoxScoreCompleteness": "missing",
+    "SourceNote": "Schedule listing only; no result was found in the fall 1999 NewsBank sweep."
   },
   {
     "GameID": "20000905",
@@ -52,7 +54,10 @@
     "OpponentScore": 3,
     "Notes": "Reported in the Sept. 6, 2000 Savannah Morning News; set scores were not printed.",
     "IsComplete": "Yes",
-    "SetScores": []
+    "SetScores": [],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Reported in the Sept. 6, 2000 Savannah Morning News; set scores were not printed.",
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2000-09-05."
   },
   {
     "GameID": "2000-placeholder-1",
@@ -80,7 +85,10 @@
     "OpponentScore": null,
     "Notes": "Placeholder for an unreported loss required by the 0-3 record published after the Sept. 7 St. Paul Country Day match.",
     "IsComplete": "Yes",
-    "SetScores": []
+    "SetScores": [],
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder for an unreported loss required by the 0-3 record published after the Sept. 7 St. Paul Country Day match.",
+    "SourceCitation": "Record-path placeholder from girls volleyball archive reconciliation, 2000-01."
   },
   {
     "GameID": "20000907",
@@ -123,7 +131,10 @@
         "Team": 10,
         "Opponent": 15
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Savannah Morning News reported St. Andrew's record as 0-3 after the match.",
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2000-09-07."
   },
   {
     "GameID": "20000912",
@@ -166,7 +177,10 @@
         "Team": 0,
         "Opponent": 15
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Savannah Morning News reported St. Andrew's record as 0-4 overall and 0-2 in SCISA Region 2AA after the match.",
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2000-09-12."
   },
   {
     "GameID": "20000914",
@@ -209,7 +223,10 @@
         "Team": 4,
         "Opponent": 15
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Savannah Morning News reported St. Andrew's record as 0-5 after the match.",
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2000-09-14."
   },
   {
     "GameID": "20010821",
@@ -252,7 +269,10 @@
         "Team": 15,
         "Opponent": 7
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Savannah Morning News reported St. Andrew's record as 1-0 after the match.",
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2001-08-21."
   },
   {
     "GameID": "20010824",
@@ -295,7 +315,10 @@
         "Team": 9,
         "Opponent": 15
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Savannah Morning News reported St. Andrew's record as 1-1 after the match.",
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2001-08-24."
   },
   {
     "GameID": "2001-placeholder-1",
@@ -323,7 +346,10 @@
     "OpponentScore": null,
     "Notes": "Placeholder for one of two unreported wins required by the 4-1 record published after the Sept. 4 Patrick Henry match.",
     "IsComplete": "Yes",
-    "SetScores": []
+    "SetScores": [],
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder for one of two unreported wins required by the 4-1 record published after the Sept. 4 Patrick Henry match.",
+    "SourceCitation": "Record-path placeholder from girls volleyball archive reconciliation, 2001-02."
   },
   {
     "GameID": "2001-placeholder-2",
@@ -351,7 +377,10 @@
     "OpponentScore": null,
     "Notes": "Placeholder for one of two unreported wins required by the 4-1 record published after the Sept. 4 Patrick Henry match.",
     "IsComplete": "Yes",
-    "SetScores": []
+    "SetScores": [],
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder for one of two unreported wins required by the 4-1 record published after the Sept. 4 Patrick Henry match.",
+    "SourceCitation": "Record-path placeholder from girls volleyball archive reconciliation, 2001-02."
   },
   {
     "GameID": "20010904",
@@ -378,7 +407,10 @@
     "OpponentScore": null,
     "Notes": "Score not printed. Savannah Morning News reported St. Andrew's record as 4-1 after the match.",
     "IsComplete": "Yes",
-    "SetScores": []
+    "SetScores": [],
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Score not printed. Savannah Morning News reported St. Andrew's record as 4-1 after the match.",
+    "SourceCitation": "Record-path placeholder from girls volleyball archive reconciliation, 2001-02."
   },
   {
     "GameID": "20011002",
@@ -426,7 +458,10 @@
         "Team": 15,
         "Opponent": 12
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Recovered from the Oct. 3, 2001 Savannah Morning News volleyball roundup.",
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2001-10-02."
   },
   {
     "GameID": "20020826",
@@ -469,7 +504,10 @@
         "Team": 6,
         "Opponent": 15
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Savannah Morning News reported St. Andrew's record as 0-1 after the match.",
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2002-08-26."
   },
   {
     "GameID": "2002-placeholder-1",
@@ -497,7 +535,10 @@
     "OpponentScore": null,
     "Notes": "Placeholder for an unreported second match. Savannah Morning News reported St. Andrew's record as 2-1 after the Sep. 3 match, implying a non-region win between Aug. 26 and Sep. 3.",
     "IsComplete": "Yes",
-    "SetScores": []
+    "SetScores": [],
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder for an unreported second match. Savannah Morning News reported St. Andrew's record as 2-1 after the Sep. 3 match, implying a non-region win between Aug. 26 and Sep. 3.",
+    "SourceCitation": "Record-path placeholder from girls volleyball archive reconciliation, 2002-03."
   },
   {
     "GameID": "20020903",
@@ -545,7 +586,10 @@
         "Team": 15,
         "Opponent": 11
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Savannah Morning News reported St. Andrew's record as 2-1 after the match.",
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2002-09-03."
   },
   {
     "GameID": "2002-placeholder-2",
@@ -573,7 +617,10 @@
     "OpponentScore": null,
     "Notes": "Placeholder for an unreported fourth match. Savannah Morning News reported St. Andrew's record as 4-1 overall and 2-0 in SCISA Region 3-AA after the Sep. 9 match, implying a region win between Sep. 3 and Sep. 9.",
     "IsComplete": "Yes",
-    "SetScores": []
+    "SetScores": [],
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder for an unreported fourth match. Savannah Morning News reported St. Andrew's record as 4-1 overall and 2-0 in SCISA Region 3-AA after the Sep. 9 match, implying a region win between Sep. 3 and Sep. 9.",
+    "SourceCitation": "Record-path placeholder from girls volleyball archive reconciliation, 2002-03."
   },
   {
     "GameID": "20020909",
@@ -616,7 +663,10 @@
         "Team": 15,
         "Opponent": 10
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Savannah Morning News reported St. Andrew's record as 4-1 overall and 2-0 in SCISA Region 3-AA after the match.",
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2002-09-09."
   },
   {
     "GameID": "20020912",
@@ -659,7 +709,10 @@
         "Team": 15,
         "Opponent": 0
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Savannah Morning News reported St. Andrew's record as 5-1 overall and 3-0 in SCISA Region 3-AA after the match.",
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2002-09-12."
   },
   {
     "GameID": "2002-placeholder-3",
@@ -687,7 +740,10 @@
     "OpponentScore": null,
     "Notes": "Placeholder for one of six unreported matches between Sep. 12 and Oct. 10. The Oct. 10 James Island Christian report listed St. Andrew's at 10-3 overall and 6-2 in GISA Region 3-AA, implying four wins and two losses in this span; this row accounts for an inferred region win.",
     "IsComplete": "Yes",
-    "SetScores": []
+    "SetScores": [],
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder for one of six unreported matches between Sep. 12 and Oct. 10. The Oct. 10 James Island Christian report listed St. Andrew's at 10-3 overall and 6-2 in GISA Region 3-AA, implying four wins and two losses in this span; this row accounts for an inferred region win.",
+    "SourceCitation": "Record-path placeholder from girls volleyball archive reconciliation, 2002-03."
   },
   {
     "GameID": "2002-placeholder-4",
@@ -715,7 +771,10 @@
     "OpponentScore": null,
     "Notes": "Placeholder for one of six unreported matches between Sep. 12 and Oct. 10. The Oct. 10 James Island Christian report listed St. Andrew's at 10-3 overall and 6-2 in GISA Region 3-AA, implying four wins and two losses in this span; this row accounts for an inferred non-region win.",
     "IsComplete": "Yes",
-    "SetScores": []
+    "SetScores": [],
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder for one of six unreported matches between Sep. 12 and Oct. 10. The Oct. 10 James Island Christian report listed St. Andrew's at 10-3 overall and 6-2 in GISA Region 3-AA, implying four wins and two losses in this span; this row accounts for an inferred non-region win.",
+    "SourceCitation": "Record-path placeholder from girls volleyball archive reconciliation, 2002-03."
   },
   {
     "GameID": "2002-placeholder-5",
@@ -743,7 +802,10 @@
     "OpponentScore": null,
     "Notes": "Placeholder for one of six unreported matches between Sep. 12 and Oct. 10. The Oct. 10 James Island Christian report listed St. Andrew's at 10-3 overall and 6-2 in GISA Region 3-AA, implying four wins and two losses in this span; this row accounts for an inferred region loss.",
     "IsComplete": "Yes",
-    "SetScores": []
+    "SetScores": [],
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder for one of six unreported matches between Sep. 12 and Oct. 10. The Oct. 10 James Island Christian report listed St. Andrew's at 10-3 overall and 6-2 in GISA Region 3-AA, implying four wins and two losses in this span; this row accounts for an inferred region loss.",
+    "SourceCitation": "Record-path placeholder from girls volleyball archive reconciliation, 2002-03."
   },
   {
     "GameID": "2002-placeholder-6",
@@ -771,7 +833,10 @@
     "OpponentScore": null,
     "Notes": "Placeholder for one of six unreported matches between Sep. 12 and Oct. 10. The Oct. 10 James Island Christian report listed St. Andrew's at 10-3 overall and 6-2 in GISA Region 3-AA, implying four wins and two losses in this span; this row accounts for an inferred region win.",
     "IsComplete": "Yes",
-    "SetScores": []
+    "SetScores": [],
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder for one of six unreported matches between Sep. 12 and Oct. 10. The Oct. 10 James Island Christian report listed St. Andrew's at 10-3 overall and 6-2 in GISA Region 3-AA, implying four wins and two losses in this span; this row accounts for an inferred region win.",
+    "SourceCitation": "Record-path placeholder from girls volleyball archive reconciliation, 2002-03."
   },
   {
     "GameID": "2002-placeholder-7",
@@ -799,7 +864,10 @@
     "OpponentScore": null,
     "Notes": "Placeholder for one of six unreported matches between Sep. 12 and Oct. 10. The Oct. 10 James Island Christian report listed St. Andrew's at 10-3 overall and 6-2 in GISA Region 3-AA, implying four wins and two losses in this span; this row accounts for an inferred non-region win.",
     "IsComplete": "Yes",
-    "SetScores": []
+    "SetScores": [],
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder for one of six unreported matches between Sep. 12 and Oct. 10. The Oct. 10 James Island Christian report listed St. Andrew's at 10-3 overall and 6-2 in GISA Region 3-AA, implying four wins and two losses in this span; this row accounts for an inferred non-region win.",
+    "SourceCitation": "Record-path placeholder from girls volleyball archive reconciliation, 2002-03."
   },
   {
     "GameID": "2002-placeholder-8",
@@ -827,7 +895,10 @@
     "OpponentScore": null,
     "Notes": "Placeholder for one of six unreported matches between Sep. 12 and Oct. 10. The Oct. 10 James Island Christian report listed St. Andrew's at 10-3 overall and 6-2 in GISA Region 3-AA, implying four wins and two losses in this span; this row accounts for an inferred region loss.",
     "IsComplete": "Yes",
-    "SetScores": []
+    "SetScores": [],
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder for one of six unreported matches between Sep. 12 and Oct. 10. The Oct. 10 James Island Christian report listed St. Andrew's at 10-3 overall and 6-2 in GISA Region 3-AA, implying four wins and two losses in this span; this row accounts for an inferred region loss.",
+    "SourceCitation": "Record-path placeholder from girls volleyball archive reconciliation, 2002-03."
   },
   {
     "GameID": "20021010",
@@ -870,7 +941,10 @@
         "Team": 15,
         "Opponent": 7
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Newspaper report listed St. Andrew's record as 10-3 overall and 6-2 in GISA Region 3-AA after the match.",
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2002-10-10."
   },
   {
     "GameID": "20021015",
@@ -923,7 +997,10 @@
         "Team": 15,
         "Opponent": 12
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Newspaper report listed St. Andrew's record as 11-3 after the match.",
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2002-10-15."
   },
   {
     "GameID": "2002-placeholder-10",
@@ -951,7 +1028,10 @@
     "OpponentScore": null,
     "Notes": "Placeholder for one of two unreported non-region victories between Oct. 15 and Oct. 17. The Oct. 17 Charleston Collegiate report listed St. Andrew's at 14-3 overall and 7-2 in SCISA Region 2-AA, implying two non-region wins in this span.",
     "IsComplete": "Yes",
-    "SetScores": []
+    "SetScores": [],
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder for one of two unreported non-region victories between Oct. 15 and Oct. 17. The Oct. 17 Charleston Collegiate report listed St. Andrew's at 14-3 overall and 7-2 in SCISA Region 2-AA, implying two non-region wins in this span.",
+    "SourceCitation": "Record-path placeholder from girls volleyball archive reconciliation, 2002-03."
   },
   {
     "GameID": "2002-placeholder-9",
@@ -979,7 +1059,10 @@
     "OpponentScore": null,
     "Notes": "Placeholder for one of two unreported non-region victories between Oct. 15 and Oct. 17. The Oct. 17 Charleston Collegiate report listed St. Andrew's at 14-3 overall and 7-2 in SCISA Region 2-AA, implying two non-region wins in this span.",
     "IsComplete": "Yes",
-    "SetScores": []
+    "SetScores": [],
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder for one of two unreported non-region victories between Oct. 15 and Oct. 17. The Oct. 17 Charleston Collegiate report listed St. Andrew's at 14-3 overall and 7-2 in SCISA Region 2-AA, implying two non-region wins in this span.",
+    "SourceCitation": "Record-path placeholder from girls volleyball archive reconciliation, 2002-03."
   },
   {
     "GameID": "20021017",
@@ -1027,7 +1110,10 @@
         "Team": 15,
         "Opponent": 3
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Newspaper report listed St. Andrew's record as 14-3 overall and 7-2 in SCISA Region 2-AA after the match. St. Andrew's clinched its first-ever berth in the SCISA playoffs.",
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2002-10-17."
   },
   {
     "GameID": "2002-placeholder-11",
@@ -1055,7 +1141,10 @@
     "OpponentScore": null,
     "Notes": "Placeholder for an unreported non-region loss between Oct. 17 and Oct. 22. The Oct. 22 Holly Hill Academy report listed St. Andrew's at 14-5 overall and 7-3 in SCISA Region 2-AA, implying one non-region loss in this span.",
     "IsComplete": "Yes",
-    "SetScores": []
+    "SetScores": [],
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder for an unreported non-region loss between Oct. 17 and Oct. 22. The Oct. 22 Holly Hill Academy report listed St. Andrew's at 14-5 overall and 7-3 in SCISA Region 2-AA, implying one non-region loss in this span.",
+    "SourceCitation": "Record-path placeholder from girls volleyball archive reconciliation, 2002-03."
   },
   {
     "GameID": "20021022",
@@ -1098,7 +1187,10 @@
         "Team": 7,
         "Opponent": 15
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Newspaper report listed St. Andrew's record as 14-5 overall and 7-3 in SCISA Region 2-AA after the match. St. Andrew's was scheduled to open state tournament play Saturday in Sumter, S.C. as the No. 2 seed from Region 2-AA against Pee Dee Academy.",
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2002-10-22."
   },
   {
     "GameID": "20021026",
@@ -1125,7 +1217,10 @@
     "OpponentScore": null,
     "Notes": "Placeholder for St. Andrew's SCISA state tournament opener against Pee Dee Academy on Oct. 26 in Sumter, S.C. St. Andrew's entered as the No. 2 seed from Region 2-AA.",
     "IsComplete": "No",
-    "SetScores": []
+    "SetScores": [],
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder for St. Andrew's SCISA state tournament opener against Pee Dee Academy on Oct. 26 in Sumter, S.C. St. Andrew's entered as the No. 2 seed from Region 2-AA.",
+    "SourceCitation": "Record-path placeholder from girls volleyball archive reconciliation, 2002-03."
   },
   {
     "GameID": "2003-placeholder-1",
@@ -1147,13 +1242,16 @@
     "GameUrl": "",
     "LocationType": "",
     "Venue": "",
-    "GameType": "Unknown",
-    "Result": "",
+    "GameType": "Record-path placeholder",
+    "Result": "W",
     "TeamScore": null,
     "OpponentScore": null,
     "Notes": "Placeholder for an unreported early-season match.",
     "IsComplete": "No",
-    "SetScores": []
+    "SetScores": [],
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Win placeholder added to reconcile the published 19-3 final record; opponent, score, and set details remain unrecovered.",
+    "SourceCitation": "Record-path placeholder from girls volleyball archive reconciliation, 2003-04."
   },
   {
     "GameID": "2003-placeholder-2",
@@ -1175,13 +1273,16 @@
     "GameUrl": "",
     "LocationType": "",
     "Venue": "",
-    "GameType": "Unknown",
-    "Result": "",
+    "GameType": "Record-path placeholder",
+    "Result": "W",
     "TeamScore": null,
     "OpponentScore": null,
     "Notes": "Placeholder for an unreported early-season match.",
     "IsComplete": "No",
-    "SetScores": []
+    "SetScores": [],
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Win placeholder added to reconcile the published 19-3 final record; opponent, score, and set details remain unrecovered.",
+    "SourceCitation": "Record-path placeholder from girls volleyball archive reconciliation, 2003-04."
   },
   {
     "GameID": "2003-placeholder-3",
@@ -1203,13 +1304,16 @@
     "GameUrl": "",
     "LocationType": "",
     "Venue": "",
-    "GameType": "Unknown",
-    "Result": "",
+    "GameType": "Record-path placeholder",
+    "Result": "L",
     "TeamScore": null,
     "OpponentScore": null,
     "Notes": "Placeholder for an unreported early-season match.",
     "IsComplete": "No",
-    "SetScores": []
+    "SetScores": [],
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Loss placeholder added to reconcile the published 19-3 final record; opponent, score, and set details remain unrecovered.",
+    "SourceCitation": "Record-path placeholder from girls volleyball archive reconciliation, 2003-04."
   },
   {
     "GameID": "20030902",
@@ -1250,7 +1354,10 @@
         "Team": 25,
         "Opponent": 22
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Savannah Morning News reported St. Andrew's record as 3-1 after the match.",
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2003-09-02."
   },
   {
     "GameID": "2003-placeholder-4",
@@ -1272,13 +1379,16 @@
     "GameUrl": "",
     "LocationType": "",
     "Venue": "",
-    "GameType": "Unknown",
-    "Result": "",
+    "GameType": "Record-path placeholder",
+    "Result": "W",
     "TeamScore": null,
     "OpponentScore": null,
     "Notes": "Placeholder for an unreported match after the Sept. 2 Providence Christian match.",
     "IsComplete": "No",
-    "SetScores": []
+    "SetScores": [],
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Win placeholder added to reconcile the published 19-3 final record; opponent, score, and set details remain unrecovered.",
+    "SourceCitation": "Record-path placeholder from girls volleyball archive reconciliation, 2003-04."
   },
   {
     "GameID": "2003-placeholder-5",
@@ -1300,13 +1410,16 @@
     "GameUrl": "",
     "LocationType": "",
     "Venue": "",
-    "GameType": "Unknown",
-    "Result": "",
+    "GameType": "Record-path placeholder",
+    "Result": "W",
     "TeamScore": null,
     "OpponentScore": null,
     "Notes": "Placeholder for an unreported match after the Sept. 2 Providence Christian match.",
     "IsComplete": "No",
-    "SetScores": []
+    "SetScores": [],
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Win placeholder added to reconcile the published 19-3 final record; opponent, score, and set details remain unrecovered.",
+    "SourceCitation": "Record-path placeholder from girls volleyball archive reconciliation, 2003-04."
   },
   {
     "GameID": "2003-placeholder-6",
@@ -1328,13 +1441,16 @@
     "GameUrl": "",
     "LocationType": "",
     "Venue": "",
-    "GameType": "Unknown",
-    "Result": "",
+    "GameType": "Record-path placeholder",
+    "Result": "W",
     "TeamScore": null,
     "OpponentScore": null,
     "Notes": "Placeholder for an unreported match after the Sept. 2 Providence Christian match.",
     "IsComplete": "No",
-    "SetScores": []
+    "SetScores": [],
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Win placeholder added to reconcile the published 19-3 final record; opponent, score, and set details remain unrecovered.",
+    "SourceCitation": "Record-path placeholder from girls volleyball archive reconciliation, 2003-04."
   },
   {
     "GameID": "20030923",
@@ -1380,7 +1496,10 @@
         "Team": 25,
         "Opponent": 15
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Savannah Morning News reported St. Andrew's record as 7-1 after the match.",
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2003-09-23."
   },
   {
     "GameID": "20030930",
@@ -1421,7 +1540,10 @@
         "Team": 25,
         "Opponent": 13
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Savannah Morning News reported St. Andrew's record as 8-1 overall and 5-0 in SCISA 2-AA after the match.",
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2003-09-30."
   },
   {
     "GameID": "20031002",
@@ -1467,7 +1589,10 @@
         "Team": 25,
         "Opponent": 19
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Savannah Morning News reported St. Andrew's record as 9-1 overall and 6-0 in SCISA 2-AA after the match.",
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2003-10-02."
   },
   {
     "GameID": "20031004",
@@ -1508,7 +1633,10 @@
         "Team": 15,
         "Opponent": 13
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Archive matches data is partial; only recovered source details are shown.",
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2003-10-04."
   },
   {
     "GameID": "20031004-1",
@@ -1549,7 +1677,10 @@
         "Team": 9,
         "Opponent": 15
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Savannah Morning News reported St. Andrew's record as 10-2 after the match.",
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2003-10-04."
   },
   {
     "GameID": "20031007",
@@ -1590,7 +1721,10 @@
         "Team": 25,
         "Opponent": 22
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Savannah Morning News reported St. Andrew's record as 11-2 after the match.",
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2003-10-07."
   },
   {
     "GameID": "20031009",
@@ -1631,7 +1765,10 @@
         "Team": 25,
         "Opponent": 23
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Savannah Morning News reported St. Andrew's record as 12-2 overall and 7-0 in SCISA Region 2-AA after the match. The reported set scores included a 25-25 first set.",
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2003-10-09."
   },
   {
     "GameID": "20031014",
@@ -1672,7 +1809,10 @@
         "Team": 25,
         "Opponent": 20
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Savannah Morning News reported St. Andrew's record as 13-2 overall after the match.",
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2003-10-14."
   },
   {
     "GameID": "20031016",
@@ -1713,7 +1853,10 @@
         "Team": 25,
         "Opponent": 11
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Savannah Morning News reported St. Andrew's record as 14-2 overall and 8-0 in SCISA 2-AA after the match.",
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2003-10-16."
   },
   {
     "GameID": "20031018",
@@ -1754,7 +1897,10 @@
         "Team": 25,
         "Opponent": 21
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Newspaper report listed St. Andrew's record as 15-2 overall and 9-0 in SCISA 2-AA after the match.",
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2003-10-18."
   },
   {
     "GameID": "20031021",
@@ -1800,7 +1946,10 @@
         "Team": 25,
         "Opponent": 14
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Newspaper report listed St. Andrew's record as 16-2 overall and 10-0 in SCISA Region 2-AA after the match. St. Andrew's won the SCISA 2-AA title and earned the top south seed for the state tournament in Sumter, S.C.",
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2003-10-21."
   },
   {
     "GameID": "20031024",
@@ -1836,7 +1985,10 @@
         "Team": 25,
         "Opponent": 13
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Newspaper report listed St. Andrew's record as 16-2 after the match. St. Andrew's advanced to play Calhoun at 1 p.m. in the state quarterfinals.",
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2003-10-24."
   },
   {
     "GameID": "20031025-1",
@@ -1872,7 +2024,10 @@
         "Team": 25,
         "Opponent": 16
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "First of two state tournament wins over Calhoun Academy on Oct. 25.",
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2003-10-25."
   },
   {
     "GameID": "20031025-2",
@@ -1908,7 +2063,10 @@
         "Team": 25,
         "Opponent": 21
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Newspaper report listed St. Andrew's record as 19-2 after the match. St. Andrew's advanced to face Pee Dee Academy at 5 p.m. Tuesday in the SCISA Class AA championship in Charleston.",
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2003-10-25."
   },
   {
     "GameID": "20031028",
@@ -1955,7 +2113,9 @@
         "Team": 26,
         "Opponent": 28
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "SCISA Class AA state final at Porter-Gaud School. Newspaper report listed Pee Dee Academy's record as 28-0 and St. Andrew's final record as 19-3."
   },
   {
     "GameID": "2004-placeholder-1",
@@ -1984,7 +2144,9 @@
     "Notes": "Placeholder for St. Andrew's first match of the 2004-05 season, inferred as a win because St. Andrew's was reported at 3-1 after the Sept. 14 Hilton Head Christian match.",
     "SourceCitation": "Inferred from user-provided Sept. 14, 2004 newspaper game data",
     "IsComplete": "No",
-    "SetScores": []
+    "SetScores": [],
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder for St. Andrew's first match of the 2004-05 season, inferred as a win because St. Andrew's was reported at 3-1 after the Sept. 14 Hilton Head Christian match."
   },
   {
     "GameID": "20040902",
@@ -2033,7 +2195,9 @@
         "Team": 25,
         "Opponent": 23
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Placeholder for a recovered early-season 2004-05 match. Reported top players: Mary Wilkowski had 11 kills, 2 blocks, and 8 aces; Becca Timms had 4 digs and 3 aces. The report listed St. Andrew's at 2-0 after the match."
   },
   {
     "GameID": "20040909",
@@ -2077,7 +2241,9 @@
         "Team": 25,
         "Opponent": 13
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Reported leading players: Mary Wilkowski had 10 kills and 11 aces; Maggie Hinchey had 5 kills, 7 aces, and 2 digs; Courtney Manson had 8 assists and 1 dig. St. Andrew's was listed at 2-0 after the match."
   },
   {
     "GameID": "20040914",
@@ -2131,7 +2297,9 @@
         "Team": 9,
         "Opponent": 15
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Reported leading players: Mary Wilkowski had 11 kills, 2 blocks, and 6 digs; Maggie Hinchey had 5 kills and 8 digs; Emily Aimone had 10 digs. The report listed St. Andrew's at 3-1 after the match. The published score line is preserved as a Hilton Head Christian win; set scores are entered from St. Andrew's perspective to match the 3-2 result."
   },
   {
     "GameID": "20040916",
@@ -2175,7 +2343,9 @@
         "Team": 25,
         "Opponent": 18
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Reported leading players: Mary Wilkowski had 5 kills and 2 blocks; Kristen Albritton had 7 assists, 1 ace, and 3 digs. The report listed St. Andrew's at 4-1 after the match."
   },
   {
     "GameID": "2004-placeholder-2",
@@ -2204,7 +2374,9 @@
     "Notes": "Placeholder for an unreported win between Sept. 16 and Sept. 23, inferred because St. Andrew's was listed at 6-2 after the Sept. 23 Thomas Heyward match.",
     "SourceCitation": "Inferred from user-provided Sept. 23, 2004 newspaper game data",
     "IsComplete": "No",
-    "SetScores": []
+    "SetScores": [],
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder for an unreported win between Sept. 16 and Sept. 23, inferred because St. Andrew's was listed at 6-2 after the Sept. 23 Thomas Heyward match."
   },
   {
     "GameID": "2004-placeholder-3",
@@ -2233,7 +2405,9 @@
     "Notes": "Placeholder for an unreported win between Sept. 16 and Sept. 23, inferred because St. Andrew's was listed at 6-2 after the Sept. 23 Thomas Heyward match.",
     "SourceCitation": "Inferred from user-provided Sept. 23, 2004 newspaper game data",
     "IsComplete": "No",
-    "SetScores": []
+    "SetScores": [],
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder for an unreported win between Sept. 16 and Sept. 23, inferred because St. Andrew's was listed at 6-2 after the Sept. 23 Thomas Heyward match."
   },
   {
     "GameID": "20040923",
@@ -2277,7 +2451,9 @@
         "Team": 21,
         "Opponent": 25
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "The report listed St. Andrew's at 6-2 overall after the match."
   },
   {
     "GameID": "20040928",
@@ -2321,7 +2497,9 @@
         "Team": 26,
         "Opponent": 24
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Reported top players: Mary Wilkowski had 6 kills, 3 blocks, 8 aces, and 2 digs; Emily Aimone had 3 aces and 3 digs. The report listed St. Andrew's at 7-2 after the match."
   },
   {
     "GameID": "20040930",
@@ -2365,7 +2543,9 @@
         "Team": 6,
         "Opponent": 25
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Reported top players: Mary Wilkowski had 3 kills, 3 blocks, 2 aces, and 7 digs; Emily Aimone had 2 kills, 2 blocks, and 10 digs. The report listed St. Andrew's at 7-3 overall after the match. A later Oct. 14 record line identifies that Beaufort Academy match as St. Andrew's first SCISA Region 2-AA game, so this match is classified Non-Region."
   },
   {
     "GameID": "2004-placeholder-4",
@@ -2394,7 +2574,9 @@
     "Notes": "Placeholder for one of two unreported wins after Sept. 30 and before the Oct. 12 Thomas Heyward match. The previously inferred loss in this window was removed to match the Savannah Morning News final season record.",
     "SourceCitation": "Inferred from user-provided Oct. 12, 2004 cumulative volleyball leaders and reconciled to the Savannah Morning News final season record",
     "IsComplete": "No",
-    "SetScores": []
+    "SetScores": [],
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder for one of two unreported wins after Sept. 30 and before the Oct. 12 Thomas Heyward match. The previously inferred loss in this window was removed to match the Savannah Morning News final season record."
   },
   {
     "GameID": "2004-placeholder-5",
@@ -2423,7 +2605,9 @@
     "Notes": "Placeholder for one of two unreported wins after Sept. 30 and before the Oct. 12 Thomas Heyward match. The previously inferred loss in this window was removed to match the Savannah Morning News final season record.",
     "SourceCitation": "Inferred from user-provided Oct. 12, 2004 cumulative volleyball leaders and reconciled to the Savannah Morning News final season record",
     "IsComplete": "No",
-    "SetScores": []
+    "SetScores": [],
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder for one of two unreported wins after Sept. 30 and before the Oct. 12 Thomas Heyward match. The previously inferred loss in this window was removed to match the Savannah Morning News final season record."
   },
   {
     "GameID": "20041012",
@@ -2467,7 +2651,9 @@
         "Team": 25,
         "Opponent": 27
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Reported top players: Grace Wilkowski had 3 kills, 2 blocks, 2 aces, and 3 digs; Mary Wilkowski had 2 kills, 4 blocks, and 4 digs. The report listed St. Andrew's at 9-5 after the match."
   },
   {
     "GameID": "20041014",
@@ -2516,7 +2702,9 @@
         "Team": 25,
         "Opponent": 16
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "First SCISA Region 2-AA match of the 2004-05 season. Reported top players: Grace Wilkowski had 8 kills, 2 blocks, 1 ace, and 5 digs; Mary Wilkowski had 7 kills, 5 blocks, 4 aces, and 7 digs. The report listed St. Andrew's at 10-5 overall and 1-0 in SCISA Region 2-AA after the match."
   },
   {
     "GameID": "20041019",
@@ -2560,7 +2748,9 @@
         "Team": 25,
         "Opponent": 27
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Reported top players: Mary Wilkowski had 3 kills, 3 blocks, 2 aces, and 4 digs; Grace Wilkowski had 3 kills, 5 aces, and 2 digs. The report listed St. Andrew's at 10-6 after the match."
   },
   {
     "GameID": "20041023-1",
@@ -2588,7 +2778,9 @@
     "Notes": "Placeholder for St. Andrew's SCISA Class AA State Tournament win over Williamsburg Academy on Oct. 23, 2004. Score details have not been recovered.",
     "SourceCitation": "User-provided game list",
     "IsComplete": "No",
-    "SetScores": []
+    "SetScores": [],
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder for St. Andrew's SCISA Class AA State Tournament win over Williamsburg Academy on Oct. 23, 2004. Score details have not been recovered."
   },
   {
     "GameID": "20041023-2",
@@ -2616,7 +2808,9 @@
     "Notes": "Placeholder for St. Andrew's SCISA Class AA State Tournament win over Marlboro Academy on Oct. 23, 2004. Score details have not been recovered.",
     "SourceCitation": "User-provided game list",
     "IsComplete": "No",
-    "SetScores": []
+    "SetScores": [],
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder for St. Andrew's SCISA Class AA State Tournament win over Marlboro Academy on Oct. 23, 2004. Score details have not been recovered."
   },
   {
     "GameID": "20041023-3",
@@ -2644,7 +2838,9 @@
     "Notes": "Placeholder for St. Andrew's SCISA Class AA State Tournament loss to W. Wyman King Academy on Oct. 23, 2004. Score details have not been recovered.",
     "SourceCitation": "User-provided game list",
     "IsComplete": "No",
-    "SetScores": []
+    "SetScores": [],
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder for St. Andrew's SCISA Class AA State Tournament loss to W. Wyman King Academy on Oct. 23, 2004. Score details have not been recovered."
   },
   {
     "GameID": "20041023-4",
@@ -2672,7 +2868,9 @@
     "Notes": "Placeholder for St. Andrew's SCISA Class AA State Tournament win over Trinity Collegiate on Oct. 23, 2004. Score details have not been recovered.",
     "SourceCitation": "User-provided game list",
     "IsComplete": "No",
-    "SetScores": []
+    "SetScores": [],
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder for St. Andrew's SCISA Class AA State Tournament win over Trinity Collegiate on Oct. 23, 2004. Score details have not been recovered."
   },
   {
     "GameID": "20041023-5",
@@ -2700,7 +2898,9 @@
     "Notes": "Placeholder for St. Andrew's SCISA Class AA State Tournament win over W. Wyman King Academy on Oct. 23, 2004. Score details have not been recovered.",
     "SourceCitation": "User-provided game list",
     "IsComplete": "No",
-    "SetScores": []
+    "SetScores": [],
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder for St. Andrew's SCISA Class AA State Tournament win over W. Wyman King Academy on Oct. 23, 2004. Score details have not been recovered."
   },
   {
     "GameID": "20041023-6",
@@ -2728,7 +2928,9 @@
     "Notes": "Placeholder for St. Andrew's SCISA Class AA State Tournament win over W. Wyman King Academy on Oct. 23, 2004. Score details have not been recovered.",
     "SourceCitation": "User-provided game list",
     "IsComplete": "No",
-    "SetScores": []
+    "SetScores": [],
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder for St. Andrew's SCISA Class AA State Tournament win over W. Wyman King Academy on Oct. 23, 2004. Score details have not been recovered."
   },
   {
     "GameID": "20041027",
@@ -2782,7 +2984,9 @@
         "Team": 25,
         "Opponent": 9
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "SCISA Class AA state championship match. Reported top players: Mary Wilkowski had 15 kills, 8 blocks, 7 aces, and 8 digs; Grace Wilkowski had 11 kills, 2 blocks, 11 aces, and 5 digs. The Savannah Morning News recap listed St. Andrew's at 16-6 after the match."
   },
   {
     "GameID": "20050824",
@@ -2826,7 +3030,9 @@
         "Team": 25,
         "Opponent": 10
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Reported top players: Mary Wilkowski, Megan Hall, Kristen Albritton, and Grace Wilkowski."
   },
   {
     "GameID": "20050825",
@@ -2870,7 +3076,9 @@
         "Team": 25,
         "Opponent": 13
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Reported top players: Mary Wilkowski, Grace Wilkowski, Megan Hall, and Courtney Manson. St. Andrew's improved to 2-0 after the match."
   },
   {
     "GameID": "20050830",
@@ -2919,7 +3127,9 @@
         "Team": 25,
         "Opponent": 23
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Reported top players: Grace Wilkowski, Mary Wilkowski, and Kristen Albritton. St. Andrew's improved to 3-0 after the match."
   },
   {
     "GameID": "20050906",
@@ -2963,7 +3173,9 @@
         "Team": 25,
         "Opponent": 13
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Reported top players: Mary Wilkowski, Grace Wilkowski, Megan Hall, and Kristen Albritton."
   },
   {
     "GameID": "20050916",
@@ -3017,7 +3229,9 @@
         "Team": 15,
         "Opponent": 13
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Reported top players: Mary Wilkowski, Grace Wilkowski, and Courtney Manson. St. Andrew's improved to 5-0 after the match."
   },
   {
     "GameID": "20050916-1",
@@ -3061,7 +3275,9 @@
         "Team": 25,
         "Opponent": 15
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Reported top players: Kristen Albritton, Courtney Johnson, and Megan Hall. St. Andrew's improved to 6-0 after the match."
   },
   {
     "GameID": "2005-placeholder-1",
@@ -3090,7 +3306,9 @@
     "Notes": "Placeholder for an unreported seventh win. The Sept. 20 Providence Christian report listed St. Andrew's at 8-0 after the match, implying one win between Sept. 16 and Sept. 20.",
     "SourceCitation": "User-provided record note",
     "IsComplete": "Yes",
-    "SetScores": []
+    "SetScores": [],
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder for an unreported seventh win. The Sept. 20 Providence Christian report listed St. Andrew's at 8-0 after the match, implying one win between Sept. 16 and Sept. 20."
   },
   {
     "GameID": "20050920",
@@ -3134,7 +3352,9 @@
         "Team": 25,
         "Opponent": 10
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Reported top players: Grace Wilkowski, Rose Wilkowski, and Courtney Johnson. St. Andrew's improved to 8-0 after the match."
   },
   {
     "GameID": "20050922",
@@ -3178,7 +3398,9 @@
         "Team": 25,
         "Opponent": 22
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Reported top players: Mary Wilkowski and Megan Hall. St. Andrew's improved to 9-0 overall and 2-0 in SCISA Region 4-AA after the match."
   },
   {
     "GameID": "20050927",
@@ -3222,7 +3444,9 @@
         "Team": 25,
         "Opponent": 10
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Reported top players: Megan Hall, Kristen Albritton, and Rose Wilkowski. St. Andrew's improved to 10-0 overall and 3-0 in SCISA Region 4-AA after the match."
   },
   {
     "GameID": "20051004",
@@ -3273,7 +3497,9 @@
         "Team": 25,
         "Opponent": 17
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Reported top players: Mary Wilkowski, Megan Hall, and Kristen Albritton. St. Andrew's improved to 11-0 overall and 4-0 in SCISA Class AA after the match."
   },
   {
     "GameID": "20051006",
@@ -3322,7 +3548,9 @@
         "Team": 25,
         "Opponent": 18
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Reported top players: Rose Wilkowski, Megan Hall, and Kristen Albritton. St. Andrew's improved to 12-0 overall after the match."
   },
   {
     "GameID": "20051012",
@@ -3366,7 +3594,9 @@
         "Team": 10,
         "Opponent": 25
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Reported top player: Mary Wilkowski. The report listed St. Andrew's at 11-1 overall and 5-1 in SCISA Region 4-AA after the match."
   },
   {
     "GameID": "20051013",
@@ -3410,7 +3640,9 @@
         "Team": 25,
         "Opponent": 8
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Reported top players: Grace Wilkowski and Kristen Albritton. The report listed St. Andrew's at 13-1 overall and 9-1 in SCISA 4-AA after the match."
   },
   {
     "GameID": "20051018",
@@ -3454,7 +3686,9 @@
         "Team": 25,
         "Opponent": 5
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "The report listed St. Andrew's at 14-1 overall and 10-1 in SCISA Region 4-AA after the match."
   },
   {
     "GameID": "20051021",
@@ -3493,7 +3727,9 @@
         "Team": 25,
         "Opponent": 16
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "SCISA Class AA State Tournament at Sumter, S.C. Reported top players: Mary Wilkowski and Kristen Albritton. The report listed St. Andrew's at 16-1 after the match and noted that St. Andrew's would play Richard Winn Academy at 12:15 p.m."
   },
   {
     "GameID": "20051022",
@@ -3521,7 +3757,9 @@
     "Notes": "Placeholder for St. Andrew's SCISA Class AA State Tournament win over Richard Winn Academy on Oct. 22 in Sumter, S.C. The Oct. 25 Savannah Morning News championship preview confirmed St. Andrew's had reached the title match after opening the playoffs as the No. 1 seed in the Upper State Division, but no score details for this match have been recovered.",
     "SourceCitation": "User-provided Savannah Morning News preview, Oct. 25, 2005",
     "IsComplete": "No",
-    "SetScores": []
+    "SetScores": [],
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder for St. Andrew's SCISA Class AA State Tournament win over Richard Winn Academy on Oct. 22 in Sumter, S.C. The Oct. 25 Savannah Morning News championship preview confirmed St. Andrew's had reached the title match after opening the playoffs as the No. 1 seed in the Upper State Division, but no score details for this match have been recovered."
   },
   {
     "GameID": "20051025",
@@ -3567,7 +3805,9 @@
         "Team": 25,
         "Opponent": 12
       }
-    ]
+    ],
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "SCISA Class AA state championship match. Reported top players: Mary Wilkowski, Grace Wilkowski, Megan Hall, Kristen Albritton, Rose Wilkowski, and Courtney Manson. St. Andrew's finished 17-1 and claimed its second consecutive SCISA Class AA state championship."
   },
   {
     "GameID": "20070910",
@@ -3592,7 +3832,8 @@
     "OpponentScore": 2,
     "Notes": "",
     "IsComplete": "Yes",
-    "SetScores": []
+    "SetScores": [],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2007-09-10."
   },
   {
     "GameID": "20070913",
@@ -3617,7 +3858,8 @@
     "OpponentScore": 0,
     "Notes": "",
     "IsComplete": "Yes",
-    "SetScores": []
+    "SetScores": [],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2007-09-13."
   },
   {
     "GameID": "20071005",
@@ -3642,7 +3884,8 @@
     "OpponentScore": 3,
     "Notes": "",
     "IsComplete": "Yes",
-    "SetScores": []
+    "SetScores": [],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2007-10-05."
   },
   {
     "GameID": "20071015",
@@ -3667,7 +3910,8 @@
     "OpponentScore": 0,
     "Notes": "",
     "IsComplete": "Yes",
-    "SetScores": []
+    "SetScores": [],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2007-10-15."
   },
   {
     "GameID": "20071020",
@@ -3708,7 +3952,8 @@
         "Team": 23,
         "Opponent": 25
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2007-10-20."
   },
   {
     "GameID": "20080819",
@@ -3754,7 +3999,8 @@
         "Team": 20,
         "Opponent": 25
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2008-08-19."
   },
   {
     "GameID": "20080825",
@@ -3800,7 +4046,8 @@
         "Team": 17,
         "Opponent": 25
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2008-08-25."
   },
   {
     "GameID": "20080827",
@@ -3841,7 +4088,8 @@
         "Team": 15,
         "Opponent": 25
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2008-08-27."
   },
   {
     "GameID": "20080828",
@@ -3882,7 +4130,8 @@
         "Team": 12,
         "Opponent": 25
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2008-08-28."
   },
   {
     "GameID": "20080902",
@@ -3928,7 +4177,8 @@
         "Team": 15,
         "Opponent": 25
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2008-09-02."
   },
   {
     "GameID": "20080903",
@@ -3969,7 +4219,8 @@
         "Team": 20,
         "Opponent": 25
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2008-09-03."
   },
   {
     "GameID": "20080908",
@@ -4010,7 +4261,8 @@
         "Team": 20,
         "Opponent": 25
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2008-09-08."
   },
   {
     "GameID": "20080909",
@@ -4061,7 +4313,8 @@
         "Team": 15,
         "Opponent": 13
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2008-09-09."
   },
   {
     "GameID": "20080911",
@@ -4102,7 +4355,8 @@
         "Team": 16,
         "Opponent": 25
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2008-09-11."
   },
   {
     "GameID": "20080923",
@@ -4143,7 +4397,8 @@
         "Team": 25,
         "Opponent": 27
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2008-09-23."
   },
   {
     "GameID": "20080925",
@@ -4189,7 +4444,8 @@
         "Team": 24,
         "Opponent": 26
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2008-09-25."
   },
   {
     "GameID": "20080929",
@@ -4230,7 +4486,8 @@
         "Team": 5,
         "Opponent": 25
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2008-09-29."
   },
   {
     "GameID": "20081002",
@@ -4266,7 +4523,8 @@
         "Team": 25,
         "Opponent": 17
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2008-10-02."
   },
   {
     "GameID": "20081003",
@@ -4317,7 +4575,8 @@
         "Team": 15,
         "Opponent": 25
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2008-10-03."
   },
   {
     "GameID": "20081006",
@@ -4358,7 +4617,8 @@
         "Team": 23,
         "Opponent": 25
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2008-10-06."
   },
   {
     "GameID": "20081007",
@@ -4404,7 +4664,8 @@
         "Team": 15,
         "Opponent": 25
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2008-10-07."
   },
   {
     "GameID": "20081014",
@@ -4445,7 +4706,8 @@
         "Team": 25,
         "Opponent": 21
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2008-10-14."
   },
   {
     "GameID": "20081015",
@@ -4491,7 +4753,8 @@
         "Team": 19,
         "Opponent": 25
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2008-10-15."
   },
   {
     "GameID": "20081016",
@@ -4542,7 +4805,8 @@
         "Team": 7,
         "Opponent": 15
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2008-10-16."
   },
   {
     "GameID": "20081018",
@@ -4593,7 +4857,8 @@
         "Team": 12,
         "Opponent": 15
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2008-10-18."
   },
   {
     "GameID": "20081020",
@@ -4634,7 +4899,8 @@
         "Team": 17,
         "Opponent": 25
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2008-10-20."
   },
   {
     "GameID": "20081021",
@@ -4675,7 +4941,8 @@
         "Team": 23,
         "Opponent": 25
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2008-10-21."
   },
   {
     "GameID": "20090820",
@@ -4716,7 +4983,8 @@
         "Team": 25,
         "Opponent": 14
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2009-08-20."
   },
   {
     "GameID": "20090824",
@@ -4767,7 +5035,8 @@
         "Team": 11,
         "Opponent": 15
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2009-08-24."
   },
   {
     "GameID": "20090825",
@@ -4808,7 +5077,8 @@
         "Team": 25,
         "Opponent": 23
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2009-08-25."
   },
   {
     "GameID": "20090827",
@@ -4854,7 +5124,8 @@
         "Team": 25,
         "Opponent": 19
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2009-08-27."
   },
   {
     "GameID": "20090901",
@@ -4900,7 +5171,8 @@
         "Team": 25,
         "Opponent": 10
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2009-09-01."
   },
   {
     "GameID": "20090903",
@@ -4946,7 +5218,8 @@
         "Team": 21,
         "Opponent": 25
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2009-09-03."
   },
   {
     "GameID": "20090908",
@@ -4992,7 +5265,8 @@
         "Team": 12,
         "Opponent": 25
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2009-09-08."
   },
   {
     "GameID": "20090909",
@@ -5038,7 +5312,8 @@
         "Team": 25,
         "Opponent": 14
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2009-09-09."
   },
   {
     "GameID": "20090910",
@@ -5084,7 +5359,8 @@
         "Team": 25,
         "Opponent": 19
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2009-09-10."
   },
   {
     "GameID": "20090922",
@@ -5135,7 +5411,8 @@
         "Team": 6,
         "Opponent": 15
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2009-09-22."
   },
   {
     "GameID": "20090924",
@@ -5176,7 +5453,8 @@
         "Team": 25,
         "Opponent": 17
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2009-09-24."
   },
   {
     "GameID": "20090930",
@@ -5217,7 +5495,8 @@
         "Team": 25,
         "Opponent": 14
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2009-09-30."
   },
   {
     "GameID": "20091001",
@@ -5258,7 +5537,8 @@
         "Team": 25,
         "Opponent": 23
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2009-10-01."
   },
   {
     "GameID": "20091001-1",
@@ -5294,7 +5574,8 @@
         "Team": 25,
         "Opponent": 17
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2009-10-01."
   },
   {
     "GameID": "20091003",
@@ -5335,7 +5616,8 @@
         "Team": 25,
         "Opponent": 23
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2009-10-03."
   },
   {
     "GameID": "20091003-1",
@@ -5371,7 +5653,8 @@
         "Team": 25,
         "Opponent": 22
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2009-10-03."
   },
   {
     "GameID": "20091005",
@@ -5412,7 +5695,8 @@
         "Team": 25,
         "Opponent": 13
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2009-10-05."
   },
   {
     "GameID": "20091006",
@@ -5458,7 +5742,8 @@
         "Team": 25,
         "Opponent": 18
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2009-10-06."
   },
   {
     "GameID": "20091008",
@@ -5509,7 +5794,8 @@
         "Team": 15,
         "Opponent": 5
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2009-10-08."
   },
   {
     "GameID": "20091013",
@@ -5555,7 +5841,8 @@
         "Team": 21,
         "Opponent": 25
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2009-10-13."
   },
   {
     "GameID": "20091015",
@@ -5601,7 +5888,8 @@
         "Team": 25,
         "Opponent": 16
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2009-10-15."
   },
   {
     "GameID": "20091017",
@@ -5637,7 +5925,8 @@
         "Team": 25,
         "Opponent": 14
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2009-10-17."
   },
   {
     "GameID": "20091017-1",
@@ -5673,7 +5962,8 @@
         "Team": 18,
         "Opponent": 25
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2009-10-17."
   },
   {
     "GameID": "20091017-2",
@@ -5714,7 +6004,8 @@
         "Team": 25,
         "Opponent": 23
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2009-10-17."
   },
   {
     "GameID": "20091020",
@@ -5765,7 +6056,8 @@
         "Team": 15,
         "Opponent": 11
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2009-10-20."
   },
   {
     "GameID": "20091023",
@@ -5801,7 +6093,8 @@
         "Team": 25,
         "Opponent": 12
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2009-10-23."
   },
   {
     "GameID": "20091023-1",
@@ -5837,7 +6130,8 @@
         "Team": 17,
         "Opponent": 25
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2009-10-23."
   },
   {
     "GameID": "20091024",
@@ -5873,7 +6167,8 @@
         "Team": 25,
         "Opponent": 11
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2009-10-24."
   },
   {
     "GameID": "20091024-1",
@@ -5914,7 +6209,8 @@
         "Team": 9,
         "Opponent": 25
       }
-    ]
+    ],
+    "SourceCitation": "\"St. Andrew's girls volleyball report,\" Savannah Morning News archive, event date 2009-10-24."
   },
   {
     "GameID": "20100807",

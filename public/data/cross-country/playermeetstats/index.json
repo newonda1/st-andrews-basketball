@@ -1,0 +1,202 @@
+[
+  {
+    "season": 2004,
+    "file": "2004.json",
+    "rows": 14,
+    "meets": 1,
+    "Season": 2004,
+    "Path": "/data/cross-country/playermeetstats/2004.json",
+    "Rows": 14,
+    "Meets": 1
+  },
+  {
+    "season": 2005,
+    "file": "2005.json",
+    "rows": 5,
+    "meets": 1,
+    "Season": 2005,
+    "Path": "/data/cross-country/playermeetstats/2005.json",
+    "Rows": 5,
+    "Meets": 1
+  },
+  {
+    "season": 2006,
+    "file": "2006.json",
+    "rows": 40,
+    "meets": 4,
+    "Season": 2006,
+    "Path": "/data/cross-country/playermeetstats/2006.json",
+    "Rows": 40,
+    "Meets": 4
+  },
+  {
+    "season": 2008,
+    "file": "2008.json",
+    "rows": 6,
+    "meets": 1,
+    "Season": 2008,
+    "Path": "/data/cross-country/playermeetstats/2008.json",
+    "Rows": 6,
+    "Meets": 1
+  },
+  {
+    "season": 2009,
+    "file": "2009.json",
+    "rows": 6,
+    "meets": 1,
+    "Season": 2009,
+    "Path": "/data/cross-country/playermeetstats/2009.json",
+    "Rows": 6,
+    "Meets": 1
+  },
+  {
+    "season": 2010,
+    "file": "2010.json",
+    "rows": 7,
+    "meets": 1,
+    "Season": 2010,
+    "Path": "/data/cross-country/playermeetstats/2010.json",
+    "Rows": 7,
+    "Meets": 1
+  },
+  {
+    "season": 2011,
+    "file": "2011.json",
+    "rows": 6,
+    "meets": 1,
+    "Season": 2011,
+    "Path": "/data/cross-country/playermeetstats/2011.json",
+    "Rows": 6,
+    "Meets": 1
+  },
+  {
+    "season": 2012,
+    "file": "2012.json",
+    "rows": 8,
+    "meets": 1,
+    "Season": 2012,
+    "Path": "/data/cross-country/playermeetstats/2012.json",
+    "Rows": 8,
+    "Meets": 1
+  },
+  {
+    "season": 2015,
+    "file": "2015.json",
+    "rows": 13,
+    "meets": 1,
+    "Season": 2015,
+    "Path": "/data/cross-country/playermeetstats/2015.json",
+    "Rows": 13,
+    "Meets": 1
+  },
+  {
+    "season": 2016,
+    "file": "2016.json",
+    "rows": 31,
+    "meets": 3,
+    "Season": 2016,
+    "Path": "/data/cross-country/playermeetstats/2016.json",
+    "Rows": 31,
+    "Meets": 3
+  },
+  {
+    "season": 2017,
+    "file": "2017.json",
+    "rows": 107,
+    "meets": 6,
+    "Season": 2017,
+    "Path": "/data/cross-country/playermeetstats/2017.json",
+    "Rows": 107,
+    "Meets": 6
+  },
+  {
+    "season": 2018,
+    "file": "2018.json",
+    "rows": 62,
+    "meets": 5,
+    "Season": 2018,
+    "Path": "/data/cross-country/playermeetstats/2018.json",
+    "Rows": 62,
+    "Meets": 5
+  },
+  {
+    "season": 2019,
+    "file": "2019.json",
+    "rows": 142,
+    "meets": 8,
+    "Season": 2019,
+    "Path": "/data/cross-country/playermeetstats/2019.json",
+    "Rows": 142,
+    "Meets": 8
+  },
+  {
+    "season": 2020,
+    "file": "2020.json",
+    "rows": 139,
+    "meets": 8,
+    "Season": 2020,
+    "Path": "/data/cross-country/playermeetstats/2020.json",
+    "Rows": 139,
+    "Meets": 8
+  },
+  {
+    "season": 2021,
+    "file": "2021.json",
+    "rows": 54,
+    "meets": 5,
+    "Season": 2021,
+    "Path": "/data/cross-country/playermeetstats/2021.json",
+    "Rows": 54,
+    "Meets": 5
+  },
+  {
+    "season": 2022,
+    "file": "2022.json",
+    "rows": 119,
+    "meets": 8,
+    "Season": 2022,
+    "Path": "/data/cross-country/playermeetstats/2022.json",
+    "Rows": 119,
+    "Meets": 8
+  },
+  {
+    "season": 2023,
+    "file": "2023.json",
+    "rows": 97,
+    "meets": 8,
+    "Season": 2023,
+    "Path": "/data/cross-country/playermeetstats/2023.json",
+    "Rows": 97,
+    "Meets": 8
+  },
+  {
+    "season": 2024,
+    "file": "2024.json",
+    "rows": 76,
+    "meets": 8,
+    "Season": 2024,
+    "Path": "/data/cross-country/playermeetstats/2024.json",
+    "Rows": 76,
+    "Meets": 8
+  },
+  {
+    "season": 2025,
+    "file": "2025.json",
+    "rows": 83,
+    "meets": 6,
+    "Season": 2025,
+    "Path": "/data/cross-country/playermeetstats/2025.json",
+    "Rows": 83,
+    "Meets": 6
+  },
+  {
+    "season": 2026,
+    "file": "2026.json",
+    "rows": 125,
+    "meets": 8,
+    "Season": 2026,
+    "Path": "/data/cross-country/playermeetstats/2026.json",
+    "Rows": 125,
+    "Meets": 8
+  }
+]

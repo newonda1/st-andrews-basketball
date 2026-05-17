@@ -1,0 +1,72 @@
+[
+  {
+    "StatID": "8786-001-maggie-samons-5k-run-girls-1a-2a",
+    "MeetID": 8786,
+    "PlayerID": 2027005,
+    "Gender": "Girls",
+    "Event": "5K Run",
+    "Race": "Girls 1A/2A",
+    "Mark": "23:12",
+    "Place": "9th",
+    "Round": "Finals",
+    "Status": "Complete",
+    "AthleteName": "Maggie Sammons",
+    "Division": "High School"
+  },
+  {
+    "StatID": "8786-002-jessica-topolewski-5k-run-girls-1a-2a",
+    "MeetID": 8786,
+    "PlayerID": 2027008,
+    "Gender": "Girls",
+    "Event": "5K Run",
+    "Race": "Girls 1A/2A",
+    "Mark": "27:28",
+    "Place": "34th",
+    "Round": "Finals",
+    "Status": "Complete",
+    "AthleteName": "Jessica Topolewski",
+    "Division": "High School"
+  },
+  {
+    "StatID": "8786-003-michelle-griffin-5k-run-girls-1a-2a",
+    "MeetID": 8786,
+    "PlayerID": 200408,
+    "Gender": "Girls",
+    "Event": "5K Run",
+    "Race": "Girls 1A/2A",
+    "Mark": "27:57",
+    "Place": "36th",
+    "Round": "Finals",
+    "Status": "Complete",
+    "AthleteName": "Michelle Griffin",
+    "Division": "High School"
+  },
+  {
+    "StatID": "8786-004-stephanie-griffin-5k-run-girls-1a-2a",
+    "MeetID": 8786,
+    "PlayerID": 200407,
+    "Gender": "Girls",
+    "Event": "5K Run",
+    "Race": "Girls 1A/2A",
+    "Mark": "28:38",
+    "Place": "39th",
+    "Round": "Finals",
+    "Status": "Complete",
+    "AthleteName": "Stephanie Griffin",
+    "Division": "High School"
+  },
+  {
+    "StatID": "8786-005-jennie-wilburn-5k-run-girls-1a-2a",
+    "MeetID": 8786,
+    "PlayerID": 2027002,
+    "Gender": "Girls",
+    "Event": "5K Run",
+    "Race": "Girls 1A/2A",
+    "Mark": "29:37",
+    "Place": "42nd",
+    "Round": "Finals",
+    "Status": "Complete",
+    "AthleteName": "Jennie Wilburn",
+    "Division": "High School"
+  }
+]

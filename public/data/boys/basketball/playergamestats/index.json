@@ -1,0 +1,452 @@
+[
+  {
+    "season": 1978,
+    "file": "1978.json",
+    "rows": 175,
+    "games": 19,
+    "Season": 1978,
+    "Path": "/data/boys/basketball/playergamestats/1978.json",
+    "Rows": 175,
+    "Games": 19
+  },
+  {
+    "season": 1979,
+    "file": "1979.json",
+    "rows": 244,
+    "games": 23,
+    "Season": 1979,
+    "Path": "/data/boys/basketball/playergamestats/1979.json",
+    "Rows": 244,
+    "Games": 23
+  },
+  {
+    "season": 1980,
+    "file": "1980.json",
+    "rows": 271,
+    "games": 24,
+    "Season": 1980,
+    "Path": "/data/boys/basketball/playergamestats/1980.json",
+    "Rows": 271,
+    "Games": 24
+  },
+  {
+    "season": 1981,
+    "file": "1981.json",
+    "rows": 182,
+    "games": 18,
+    "Season": 1981,
+    "Path": "/data/boys/basketball/playergamestats/1981.json",
+    "Rows": 182,
+    "Games": 18
+  },
+  {
+    "season": 1982,
+    "file": "1982.json",
+    "rows": 197,
+    "games": 16,
+    "Season": 1982,
+    "Path": "/data/boys/basketball/playergamestats/1982.json",
+    "Rows": 197,
+    "Games": 16
+  },
+  {
+    "season": 1983,
+    "file": "1983.json",
+    "rows": 127,
+    "games": 17,
+    "Season": 1983,
+    "Path": "/data/boys/basketball/playergamestats/1983.json",
+    "Rows": 127,
+    "Games": 17
+  },
+  {
+    "season": 1984,
+    "file": "1984.json",
+    "rows": 220,
+    "games": 22,
+    "Season": 1984,
+    "Path": "/data/boys/basketball/playergamestats/1984.json",
+    "Rows": 220,
+    "Games": 22
+  },
+  {
+    "season": 1985,
+    "file": "1985.json",
+    "rows": 181,
+    "games": 19,
+    "Season": 1985,
+    "Path": "/data/boys/basketball/playergamestats/1985.json",
+    "Rows": 181,
+    "Games": 19
+  },
+  {
+    "season": 1986,
+    "file": "1986.json",
+    "rows": 130,
+    "games": 13,
+    "Season": 1986,
+    "Path": "/data/boys/basketball/playergamestats/1986.json",
+    "Rows": 130,
+    "Games": 13
+  },
+  {
+    "season": 1987,
+    "file": "1987.json",
+    "rows": 220,
+    "games": 20,
+    "Season": 1987,
+    "Path": "/data/boys/basketball/playergamestats/1987.json",
+    "Rows": 220,
+    "Games": 20
+  },
+  {
+    "season": 1988,
+    "file": "1988.json",
+    "rows": 198,
+    "games": 18,
+    "Season": 1988,
+    "Path": "/data/boys/basketball/playergamestats/1988.json",
+    "Rows": 198,
+    "Games": 18
+  },
+  {
+    "season": 1989,
+    "file": "1989.json",
+    "rows": 280,
+    "games": 20,
+    "Season": 1989,
+    "Path": "/data/boys/basketball/playergamestats/1989.json",
+    "Rows": 280,
+    "Games": 20
+  },
+  {
+    "season": 1990,
+    "file": "1990.json",
+    "rows": 365,
+    "games": 26,
+    "Season": 1990,
+    "Path": "/data/boys/basketball/playergamestats/1990.json",
+    "Rows": 365,
+    "Games": 26
+  },
+  {
+    "season": 1991,
+    "file": "1991.json",
+    "rows": 420,
+    "games": 28,
+    "Season": 1991,
+    "Path": "/data/boys/basketball/playergamestats/1991.json",
+    "Rows": 420,
+    "Games": 28
+  },
+  {
+    "season": 1992,
+    "file": "1992.json",
+    "rows": 189,
+    "games": 28,
+    "Season": 1992,
+    "Path": "/data/boys/basketball/playergamestats/1992.json",
+    "Rows": 189,
+    "Games": 28
+  },
+  {
+    "season": 1993,
+    "file": "1993.json",
+    "rows": 243,
+    "games": 17,
+    "Season": 1993,
+    "Path": "/data/boys/basketball/playergamestats/1993.json",
+    "Rows": 243,
+    "Games": 17
+  },
+  {
+    "season": 1994,
+    "file": "1994.json",
+    "rows": 165,
+    "games": 15,
+    "Season": 1994,
+    "Path": "/data/boys/basketball/playergamestats/1994.json",
+    "Rows": 165,
+    "Games": 15
+  },
+  {
+    "season": 1995,
+    "file": "1995.json",
+    "rows": 148,
+    "games": 13,
+    "Season": 1995,
+    "Path": "/data/boys/basketball/playergamestats/1995.json",
+    "Rows": 148,
+    "Games": 13
+  },
+  {
+    "season": 1999,
+    "file": "1999.json",
+    "rows": 131,
+    "games": 22,
+    "Season": 1999,
+    "Path": "/data/boys/basketball/playergamestats/1999.json",
+    "Rows": 131,
+    "Games": 22
+  },
+  {
+    "season": 2000,
+    "file": "2000.json",
+    "rows": 324,
+    "games": 27,
+    "Season": 2000,
+    "Path": "/data/boys/basketball/playergamestats/2000.json",
+    "Rows": 324,
+    "Games": 27
+  },
+  {
+    "season": 2001,
+    "file": "2001.json",
+    "rows": 247,
+    "games": 19,
+    "Season": 2001,
+    "Path": "/data/boys/basketball/playergamestats/2001.json",
+    "Rows": 247,
+    "Games": 19
+  },
+  {
+    "season": 2002,
+    "file": "2002.json",
+    "rows": 336,
+    "games": 24,
+    "Season": 2002,
+    "Path": "/data/boys/basketball/playergamestats/2002.json",
+    "Rows": 336,
+    "Games": 24
+  },
+  {
+    "season": 2003,
+    "file": "2003.json",
+    "rows": 378,
+    "games": 27,
+    "Season": 2003,
+    "Path": "/data/boys/basketball/playergamestats/2003.json",
+    "Rows": 378,
+    "Games": 27
+  },
+  {
+    "season": 2004,
+    "file": "2004.json",
+    "rows": 157,
+    "games": 24,
+    "Season": 2004,
+    "Path": "/data/boys/basketball/playergamestats/2004.json",
+    "Rows": 157,
+    "Games": 24
+  },
+  {
+    "season": 2005,
+    "file": "2005.json",
+    "rows": 145,
+    "games": 24,
+    "Season": 2005,
+    "Path": "/data/boys/basketball/playergamestats/2005.json",
+    "Rows": 145,
+    "Games": 24
+  },
+  {
+    "season": 2006,
+    "file": "2006.json",
+    "rows": 160,
+    "games": 24,
+    "Season": 2006,
+    "Path": "/data/boys/basketball/playergamestats/2006.json",
+    "Rows": 160,
+    "Games": 24
+  },
+  {
+    "season": 2007,
+    "file": "2007.json",
+    "rows": 178,
+    "games": 23,
+    "Season": 2007,
+    "Path": "/data/boys/basketball/playergamestats/2007.json",
+    "Rows": 178,
+    "Games": 23
+  },
+  {
+    "season": 2008,
+    "file": "2008.json",
+    "rows": 300,
+    "games": 25,
+    "Season": 2008,
+    "Path": "/data/boys/basketball/playergamestats/2008.json",
+    "Rows": 300,
+    "Games": 25
+  },
+  {
+    "season": 2009,
+    "file": "2009.json",
+    "rows": 243,
+    "games": 27,
+    "Season": 2009,
+    "Path": "/data/boys/basketball/playergamestats/2009.json",
+    "Rows": 243,
+    "Games": 27
+  },
+  {
+    "season": 2010,
+    "file": "2010.json",
+    "rows": 238,
+    "games": 28,
+    "Season": 2010,
+    "Path": "/data/boys/basketball/playergamestats/2010.json",
+    "Rows": 238,
+    "Games": 28
+  },
+  {
+    "season": 2011,
+    "file": "2011.json",
+    "rows": 160,
+    "games": 26,
+    "Season": 2011,
+    "Path": "/data/boys/basketball/playergamestats/2011.json",
+    "Rows": 160,
+    "Games": 26
+  },
+  {
+    "season": 2012,
+    "file": "2012.json",
+    "rows": 180,
+    "games": 25,
+    "Season": 2012,
+    "Path": "/data/boys/basketball/playergamestats/2012.json",
+    "Rows": 180,
+    "Games": 25
+  },
+  {
+    "season": 2013,
+    "file": "2013.json",
+    "rows": 207,
+    "games": 24,
+    "Season": 2013,
+    "Path": "/data/boys/basketball/playergamestats/2013.json",
+    "Rows": 207,
+    "Games": 24
+  },
+  {
+    "season": 2014,
+    "file": "2014.json",
+    "rows": 211,
+    "games": 25,
+    "Season": 2014,
+    "Path": "/data/boys/basketball/playergamestats/2014.json",
+    "Rows": 211,
+    "Games": 25
+  },
+  {
+    "season": 2015,
+    "file": "2015.json",
+    "rows": 208,
+    "games": 22,
+    "Season": 2015,
+    "Path": "/data/boys/basketball/playergamestats/2015.json",
+    "Rows": 208,
+    "Games": 22
+  },
+  {
+    "season": 2016,
+    "file": "2016.json",
+    "rows": 200,
+    "games": 21,
+    "Season": 2016,
+    "Path": "/data/boys/basketball/playergamestats/2016.json",
+    "Rows": 200,
+    "Games": 21
+  },
+  {
+    "season": 2017,
+    "file": "2017.json",
+    "rows": 181,
+    "games": 19,
+    "Season": 2017,
+    "Path": "/data/boys/basketball/playergamestats/2017.json",
+    "Rows": 181,
+    "Games": 19
+  },
+  {
+    "season": 2018,
+    "file": "2018.json",
+    "rows": 301,
+    "games": 30,
+    "Season": 2018,
+    "Path": "/data/boys/basketball/playergamestats/2018.json",
+    "Rows": 301,
+    "Games": 30
+  },
+  {
+    "season": 2019,
+    "file": "2019.json",
+    "rows": 278,
+    "games": 27,
+    "Season": 2019,
+    "Path": "/data/boys/basketball/playergamestats/2019.json",
+    "Rows": 278,
+    "Games": 27
+  },
+  {
+    "season": 2020,
+    "file": "2020.json",
+    "rows": 167,
+    "games": 17,
+    "Season": 2020,
+    "Path": "/data/boys/basketball/playergamestats/2020.json",
+    "Rows": 167,
+    "Games": 17
+  },
+  {
+    "season": 2021,
+    "file": "2021.json",
+    "rows": 271,
+    "games": 29,
+    "Season": 2021,
+    "Path": "/data/boys/basketball/playergamestats/2021.json",
+    "Rows": 271,
+    "Games": 29
+  },
+  {
+    "season": 2022,
+    "file": "2022.json",
+    "rows": 326,
+    "games": 29,
+    "Season": 2022,
+    "Path": "/data/boys/basketball/playergamestats/2022.json",
+    "Rows": 326,
+    "Games": 29
+  },
+  {
+    "season": 2023,
+    "file": "2023.json",
+    "rows": 232,
+    "games": 30,
+    "Season": 2023,
+    "Path": "/data/boys/basketball/playergamestats/2023.json",
+    "Rows": 232,
+    "Games": 30
+  },
+  {
+    "season": 2024,
+    "file": "2024.json",
+    "rows": 311,
+    "games": 29,
+    "Season": 2024,
+    "Path": "/data/boys/basketball/playergamestats/2024.json",
+    "Rows": 311,
+    "Games": 29
+  },
+  {
+    "season": 2025,
+    "file": "2025.json",
+    "rows": 307,
+    "games": 28,
+    "Season": 2025,
+    "Path": "/data/boys/basketball/playergamestats/2025.json",
+    "Rows": 307,
+    "Games": 28
+  }
+]

@@ -76,7 +76,10 @@
       "Boys: 8th at Seahawk Cross Country Invitational, 219 points.",
       "Source: Savannah Morning News, Sept. 5, 1999."
     ],
-    "SourceCitation": "\"SEAHAWK CROSS COUNTRY INVITATIONAL,\" Savannah Morning News, 1999-09-05, Page 4C"
+    "SourceCitation": "\"SEAHAWK CROSS COUNTRY INVITATIONAL,\" Savannah Morning News, 1999-09-05, Page 4C",
+    "ArchiveStatus": "newsbank",
+    "ArchiveStatusNote": "NewsBank recovery found a St. Andrew's boys team finish at the Seahawk Cross Country Invitational.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "SeasonID": 2001,
@@ -95,7 +98,10 @@
     "HighlightNotes": [
       "No public St. Andrew's MileSplit result rows were found.",
       "Georgia and South Carolina MileSplit pages were checked for this crawl."
-    ]
+    ],
+    "ArchiveStatus": "not-found",
+    "ArchiveStatusNote": "No public MileSplit Georgia or South Carolina result files were found for St. Andrew's during this crawl. Season shell retained for 2000-01 so the SCISA-era range stays visible.",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "SeasonID": 2002,
@@ -114,7 +120,10 @@
     "HighlightNotes": [
       "No public St. Andrew's MileSplit result rows were found.",
       "Georgia and South Carolina MileSplit pages were checked for this crawl."
-    ]
+    ],
+    "ArchiveStatus": "not-found",
+    "ArchiveStatusNote": "No public MileSplit Georgia or South Carolina result files were found for St. Andrew's during this crawl. Season shell retained for 2001-02 so the SCISA-era range stays visible.",
+    "SourceSeasonLabel": "2001-02"
   },
   {
     "SeasonID": 2003,
@@ -133,7 +142,10 @@
     "HighlightNotes": [
       "No public St. Andrew's MileSplit result rows were found.",
       "Georgia and South Carolina MileSplit pages were checked for this crawl."
-    ]
+    ],
+    "ArchiveStatus": "not-found",
+    "ArchiveStatusNote": "No public MileSplit Georgia or South Carolina result files were found for St. Andrew's during this crawl. Season shell retained for 2002-03 so the SCISA-era range stays visible.",
+    "SourceSeasonLabel": "2002-03"
   },
   {
     "SeasonID": 2004,
@@ -285,7 +297,10 @@
         "Name": "Andy Miller",
         "Grade": "Head Coach"
       }
-    ]
+    ],
+    "ArchiveStatus": "verified",
+    "ArchiveStatusNote": "MileSplit Georgia/South Carolina exposes 1 St. Andrew's cross country schedule or SCISA result entry for 2003-04, including 1 meet with public St. Andrew's result rows.",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "SeasonID": 2005,
@@ -396,7 +411,10 @@
         "Name": "Andy Miller",
         "Grade": "Head Coach"
       }
-    ]
+    ],
+    "ArchiveStatus": "verified",
+    "ArchiveStatusNote": "The 2004-05 archive includes the SCISA Championships with official MileSplit individual rows and supplied newspaper team placements.",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "SeasonID": 2006,
@@ -559,7 +577,10 @@
         "Grade": 12,
         "PlayerID": 200408
       }
-    ]
+    ],
+    "ArchiveStatus": "partial",
+    "ArchiveStatusNote": "The 2005-06 archive now includes a supplied Augusta Prep relay recap, roster, and season images. MileSplit Georgia/South Carolina also exposes 1 St. Andrew's cross country schedule or SCISA result entry for 2005-06, including 0 meets with public St. Andrew's result rows.",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "SeasonID": 2007,

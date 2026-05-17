@@ -1414,7 +1414,11 @@
     "SeasonRecapTitle": "Season Recap",
     "SeasonRecap": "David Boylston's 1999 Saints were defending SCISA Class AA champions, but the fall became a rebuild around a much younger roster. The preseason preview listed only five returning starters and 20 first-year players, with seniors Michael Paton, Evan Aldrich, Andy Moreland and Joseph Hinely carrying the bridge from the 1998 title team.\n\nThe opening two weeks showed the cost of that turnover. Byrnes Academy ended St. Andrew's 11-game winning streak with a 6-0 win, holding the Saints to 101 total yards, and Dorchester followed with a 26-3 result despite Matt Mahany's first-quarter field goal. St. Andrew's answered at Thomas Heyward, where Paton ran for 219 yards and Evan Aldrich hit Ryan Stratz for a 41-yard fourth-quarter touchdown in a 13-6 win.\n\nPaton's surge became the season's center. He ran for 240 yards and five touchdowns against Colleton Prep, then set a school single-game rushing record with 259 yards and four touchdowns in a 28-21 upset at Sea Island. By the Nov. 10 Coastal Empire leaders, Paton had 1,784 rushing yards and 20 rushing touchdowns through the regular season, while Aldrich had thrown for 656 yards and four scores.\n\nThe Saints stayed in the SCISA AA playoff race despite midseason losses to Williamsburg, Calhoun and Hilton Head Prep. A scoreboard-only Patrick Henry result and the rescheduled Thomas Sumter game completed the regular season, with Paton running for 260 yards and five touchdowns against Thomas Sumter while Zack Hillard returned an interception for a score and Matt Hunt broke the school tackles record. St. Andrew's finished 5-6 after a 27-22 playoff loss at Williamsburg, where Paton scored rushing and receiving touchdowns and Lee Stubbs returned a fumble 83 yards.\n\nThe winter archive added the postseason coda. Michael Paton and Evan Aldrich represented St. Andrew's in the SCISA North-South All-Star Game, with Paton rushing for 89 yards and Aldrich recording 14 tackles in the South's 17-0 win. Boylston then resigned for Pinewood Prep after a 41-17 five-year run, and St. Andrew's hired Karl DeMasi in January to lead football, baseball and eventually boys basketball.\n\nPaton later earned second-team All-Coastal Empire honors at running back after his 1,784-yard, 20-touchdown season, while Zack Hillard and Matt Hunt were honorable mention linebackers.",
     "ShowSeasonImagesPlaceholder": true,
-    "SeasonRecapSourceCitation": "\"SCISA REGION 2-AA / ST. ANDREW'S,\" Savannah Morning News, 1999-08-27, Page 21; Victor Fernandes, \"ST. ANDREW'S FALLS TO BYRNE IN SEASON OPENER,\" Savannah Morning News, 1999-08-28, Page 1F; Victor Fernandes, \"PATON PERFORMS MIRACLES FOR SAINTS,\" Savannah Morning News, 1999-10-06, Page 1D; \"STATISTICS,\" Savannah Morning News, 1999-11-10, Page 4D; \"BLOCKED FG ATTEMPTS KEY TO BC VICTORY,\" Savannah Morning News, 1999-11-13, Page 4F; \"FOOTBALL,\" Savannah Morning News (GA), December 5, 1999, Page 5C.; \"FOOTBALL COACH LEAVES ST. ANDREW'S AFTER FIVE YEARS,\" Savannah Morning News (GA), December 7, 1999, Page 5D.; \"DEMASI TAPPED FOR ST. ANDREW'S HEAD COACHING JOB,\" Savannah Morning News (GA), January 27, 2000, Page 3D."
+    "SeasonRecapSourceCitation": "\"SCISA REGION 2-AA / ST. ANDREW'S,\" Savannah Morning News, 1999-08-27, Page 21; Victor Fernandes, \"ST. ANDREW'S FALLS TO BYRNE IN SEASON OPENER,\" Savannah Morning News, 1999-08-28, Page 1F; Victor Fernandes, \"PATON PERFORMS MIRACLES FOR SAINTS,\" Savannah Morning News, 1999-10-06, Page 1D; \"STATISTICS,\" Savannah Morning News, 1999-11-10, Page 4D; \"BLOCKED FG ATTEMPTS KEY TO BC VICTORY,\" Savannah Morning News, 1999-11-13, Page 4F; \"FOOTBALL,\" Savannah Morning News (GA), December 5, 1999, Page 5C.; \"FOOTBALL COACH LEAVES ST. ANDREW'S AFTER FIVE YEARS,\" Savannah Morning News (GA), December 7, 1999, Page 5D.; \"DEMASI TAPPED FOR ST. ANDREW'S HEAD COACHING JOB,\" Savannah Morning News (GA), January 27, 2000, Page 3D.",
+    "ArchiveStatus": "partial",
+    "RecordSource": "seasons.json source-of-truth row; event pages reconcile to this record.",
+    "FinishLabel": "SCISA AA Region II • Lost in first round vs. Williamsburg • 3-2 region record",
+    "ArchiveStatusNote": "Boys Football 1999-00 remains partial; recovered archive data is limited to the currently documented schedule, result, roster, and newspaper-source material."
   },
   {
     "SeasonID": 2000,
@@ -1556,7 +1560,11 @@
           "SchoolID": "sc-sea-island-academy-johns-island"
         }
       ]
-    }
+    },
+    "ArchiveStatus": "partial",
+    "RecordSource": "seasons.json source-of-truth row; event pages reconcile to this record.",
+    "FinishLabel": "Third / First Round / SCISA AA Region II • Lost in first round at Williamsburg • 3-2 region record",
+    "ArchiveStatusNote": "Boys Football 2000-01 remains partial; recovered archive data is limited to the currently documented schedule, result, roster, and newspaper-source material."
   },
   {
     "SeasonID": 2001,
@@ -1599,7 +1607,11 @@
       "Adam Ciccio became the season's statistical engine. He ran for 909 yards and 14 rushing touchdowns, scored 15 total touchdowns, earned multiple City Player of the Week mentions, and joined Zack Hillard, Davy Clay, Matt Hunt, Billy McCarthy, Jake Smith, and Jeff Smith on the all-region list. Hillard was named SCISA Region 2-AA Player of the Year after leading the defense with 98 total tackles.",
       "The Saints started 4-1 after wins over Hilton Head Prep, Memorial Day, Thomas Heyward, and a First Baptist forfeit, with the only early loss coming 21-20 at James F. Byrnes Academy. Region play was tighter: Dorchester shut out St. Andrew's in St. George, the Saints beat Calhoun Academy on homecoming, Colleton Prep won on Wilmington Island, and St. Andrew's answered with a 43-8 road win at Pinewood Prep behind five Ciccio touchdowns.",
       "The postseason began with a 17-14 win at Pee Dee Academy, where Fred Kryner's 34-yard field goal made the difference and Ciccio and Hillard both topped 100 rushing yards. A week later, Dorchester scored three fourth-quarter touchdowns to beat St. Andrew's 28-7. The season still left a clear paper trail: Ciccio, Hillard, and Jake Smith were selected for the SCISA Senior All-Star Game, and seven Saints earned all-region recognition."
-    ]
+    ],
+    "ArchiveStatusNote": "Karl Demasi's 2001 Saints opened quickly and rode a senior-heavy core to a 7-4 season, a 2-2 SCISA AA Region II record, and a playoff win before Dorchester Academy ended the run in the state semifinal round. The recovered Savannah Morning News articles fill in all 11 results, including a First Baptist forfeit and the two-game playoff finish. Adam Ciccio became the season's statistical engine. He ran for 909 yards and 14 rushing touchdowns, scored 15 total touchdowns, earned multiple City Player of the Week mentions, and joined Zack Hillard, Davy Clay, Matt Hunt, Billy McCarthy, Jake Smith, and Jeff Smith on the all-region list. Hillard was named SCISA Region 2-AA Player of the Year after leading the defense with 98 total tackles. The Saints started 4-1 after wins over Hilton Head Prep, Memorial Day, Thomas Heyward, and a First Baptist forfeit, with the only early loss coming 21-20 at James F. Byrnes Academy. Region play was tighter: Dorchester shut out St. Andrew's in St. George, the Saints beat Calhoun Academy on homecoming, Colleton Prep won on Wilmington Island, and St. Andrew's answered with a 43-8 road win at Pinewood Prep behind five Ciccio touchdowns. The postseason began with a 17-14 win at Pee Dee Academy, where Fred Kryner's 34-yard field goal made the difference and Ciccio and Hillard both topped 100 rushing yards. A week later, Dorchester scored three fourth-quarter touchdowns to beat St. Andrew's 28-7. The season still left a clear paper trail: Ciccio, Hillard, and Jake Smith were selected for the SCISA Senior All-Star Game, and seven Saints earned all-region recognition.",
+    "RecordSource": "seasons.json source-of-truth row; event pages reconcile to this record.",
+    "FinishLabel": "State Semifinalist / SCISA AA Region II • State semifinalist • Lost second-round playoff at Dorchester • 2-2 region record",
+    "ArchiveStatus": "archived"
   },
   {
     "SeasonID": 2002,
@@ -1797,7 +1809,11 @@
     },
     "SourceUrls": {
       "stats": "https://docs.google.com/spreadsheets/d/1XL5VrGsFQXz0ezl-EGCMfHTMMAcu6j5tdltStxssJAk/htmlembed"
-    }
+    },
+    "RecordSource": "seasons.json source-of-truth row; event pages reconcile to this record.",
+    "FinishLabel": "Region Champion / State Runner-up / SCISA AA Region II • State runner-up vs. Colleton Prep Academy • 4-1 region record",
+    "ArchiveStatus": "partial",
+    "ArchiveStatusNote": "Boys Football 2002-03 remains partial; recovered archive data is limited to the currently documented schedule, result, roster, and newspaper-source material."
   },
   {
     "SeasonID": 2003,
@@ -1899,7 +1915,11 @@
     "SeasonRecapSourceCitation": "Compiled from the 2003 game recaps and scoring summaries in the football archive, including Savannah Morning News recaps from Aug. 29 and Nov. 1, 2003.",
     "SourceUrls": {
       "stats": "https://docs.google.com/spreadsheets/d/1XL5VrGsFQXz0ezl-EGCMfHTMMAcu6j5tdltStxssJAk/htmlembed"
-    }
+    },
+    "RecordSource": "seasons.json source-of-truth row; event pages reconcile to this record.",
+    "FinishLabel": "SCISA AA Region II • Lost in first round vs. Robert E. Lee • 2-2 region record",
+    "ArchiveStatus": "partial",
+    "ArchiveStatusNote": "Boys Football 2003-04 remains partial; recovered archive data is limited to the currently documented schedule, result, roster, and newspaper-source material."
   },
   {
     "SeasonID": 2004,
@@ -1986,7 +2006,11 @@
       "roster": "https://www.maxpreps.com/ga/savannah/st-andrews-lions/football/04-05/roster/print/?print=1",
       "stats": "https://www.maxpreps.com/print/team_stats.aspx?admin=0&bygame=0&league=0&print=1&schoolid=1019c441-d956-4e70-a61c-6cbc2ba6e073&ssid=aa457e4c-bb59-4abe-b350-10f34b2d5b4b",
       "scisaStats": "https://docs.google.com/spreadsheets/d/1XL5VrGsFQXz0ezl-EGCMfHTMMAcu6j5tdltStxssJAk/htmlembed"
-    }
+    },
+    "RecordSource": "seasons.json source-of-truth row; event pages reconcile to this record.",
+    "FinishLabel": "SCISA AA Region III • 5th in region • 0-4 region record",
+    "ArchiveStatus": "partial",
+    "ArchiveStatusNote": "Boys Football 2004-05 remains partial; recovered archive data is limited to the currently documented schedule, result, roster, and newspaper-source material."
   },
   {
     "SeasonID": 2005,
@@ -2076,7 +2100,11 @@
       "roster": "https://www.maxpreps.com/ga/savannah/st-andrews-lions/football/05-06/roster/print/?print=1",
       "stats": "https://www.maxpreps.com/print/team_stats.aspx?admin=0&bygame=0&league=0&print=1&schoolid=1019c441-d956-4e70-a61c-6cbc2ba6e073&ssid=a64eb952-14c9-45bb-aa51-2e09948db58c",
       "scisaStats": "https://docs.google.com/spreadsheets/d/1XL5VrGsFQXz0ezl-EGCMfHTMMAcu6j5tdltStxssJAk/htmlembed"
-    }
+    },
+    "RecordSource": "seasons.json source-of-truth row; event pages reconcile to this record.",
+    "FinishLabel": "SCISA AA Region III • 5th in region • 0-4 region record",
+    "ArchiveStatus": "partial",
+    "ArchiveStatusNote": "Boys Football 2005-06 remains partial; recovered archive data is limited to the currently documented schedule, result, roster, and newspaper-source material."
   },
   {
     "SeasonID": 2006,

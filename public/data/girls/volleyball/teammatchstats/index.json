@@ -1,0 +1,102 @@
+[
+  {
+    "season": 2008,
+    "file": "2008.json",
+    "rows": 2,
+    "matches": 2,
+    "Season": 2008,
+    "Path": "/data/girls/volleyball/teammatchstats/2008.json",
+    "Rows": 2,
+    "Matches": 2
+  },
+  {
+    "season": 2009,
+    "file": "2009.json",
+    "rows": 4,
+    "matches": 4,
+    "Season": 2009,
+    "Path": "/data/girls/volleyball/teammatchstats/2009.json",
+    "Rows": 4,
+    "Matches": 4
+  },
+  {
+    "season": 2012,
+    "file": "2012.json",
+    "rows": 3,
+    "matches": 3,
+    "Season": 2012,
+    "Path": "/data/girls/volleyball/teammatchstats/2012.json",
+    "Rows": 3,
+    "Matches": 3
+  },
+  {
+    "season": 2019,
+    "file": "2019.json",
+    "rows": 12,
+    "matches": 12,
+    "Season": 2019,
+    "Path": "/data/girls/volleyball/teammatchstats/2019.json",
+    "Rows": 12,
+    "Matches": 12
+  },
+  {
+    "season": 2020,
+    "file": "2020.json",
+    "rows": 2,
+    "matches": 2,
+    "Season": 2020,
+    "Path": "/data/girls/volleyball/teammatchstats/2020.json",
+    "Rows": 2,
+    "Matches": 2
+  },
+  {
+    "season": 2021,
+    "file": "2021.json",
+    "rows": 4,
+    "matches": 4,
+    "Season": 2021,
+    "Path": "/data/girls/volleyball/teammatchstats/2021.json",
+    "Rows": 4,
+    "Matches": 4
+  },
+  {
+    "season": 2022,
+    "file": "2022.json",
+    "rows": 12,
+    "matches": 12,
+    "Season": 2022,
+    "Path": "/data/girls/volleyball/teammatchstats/2022.json",
+    "Rows": 12,
+    "Matches": 12
+  },
+  {
+    "season": 2023,
+    "file": "2023.json",
+    "rows": 7,
+    "matches": 7,
+    "Season": 2023,
+    "Path": "/data/girls/volleyball/teammatchstats/2023.json",
+    "Rows": 7,
+    "Matches": 7
+  },
+  {
+    "season": 2024,
+    "file": "2024.json",
+    "rows": 11,
+    "matches": 11,
+    "Season": 2024,
+    "Path": "/data/girls/volleyball/teammatchstats/2024.json",
+    "Rows": 11,
+    "Matches": 11
+  },
+  {
+    "season": 2025,
+    "file": "2025.json",
+    "rows": 31,
+    "matches": 31,
+    "Season": 2025,
+    "Path": "/data/girls/volleyball/teammatchstats/2025.json",
+    "Rows": 31,
+    "Matches": 31
+  }
+]

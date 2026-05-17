@@ -1,6 +1,7 @@
 import React, { useMemo } from "react";
 import { Link, useParams } from "react-router-dom";
 
+import SourceMeta from "../../../archive/SourceMeta";
 import {
   buildPlayerMap,
   formatSoccerDate,
@@ -213,11 +214,7 @@ export default function GameDetail({ data, status = "" }) {
         <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
           <div>
             <h2 className="text-xl font-bold text-slate-900">Game Recap</h2>
-            {game?.SourceCitation ? (
-              <p className="mt-1 text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
-                {game.SourceCitation}
-              </p>
-            ) : null}
+            <SourceMeta record={game} className="mt-2" />
           </div>
           {game?.RecordNote ? (
             <p className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-slate-600">

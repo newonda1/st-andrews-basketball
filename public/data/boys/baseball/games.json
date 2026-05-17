@@ -13,7 +13,10 @@
     "OpponentScore": null,
     "IsPlaceholder": true,
     "Notes": "Placeholder region loss added because the March 29 Patrick Henry box score listed St. Andrew's at 3-3 overall and 1-2 in SCISA Region 4-AA after the known March 22-28 results.",
-    "SourceCitation": "Record-path placeholder from NewsBank baseball reports, Spring 2000."
+    "SourceCitation": "Record-path placeholder from NewsBank baseball reports, Spring 2000.",
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder region loss added because the March 29 Patrick Henry box score listed St. Andrew's at 3-3 overall and 1-2 in SCISA Region 4-AA after the known March 22-28 results.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "Season": 2000,
@@ -29,7 +32,10 @@
     "OpponentScore": null,
     "IsPlaceholder": true,
     "Notes": "Second placeholder region loss needed to reconcile the March 29 Patrick Henry record line of 3-3 overall and 1-2 in SCISA Region 4-AA.",
-    "SourceCitation": "Record-path placeholder from NewsBank baseball reports, Spring 2000."
+    "SourceCitation": "Record-path placeholder from NewsBank baseball reports, Spring 2000.",
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Second placeholder region loss needed to reconcile the March 29 Patrick Henry record line of 3-3 overall and 1-2 in SCISA Region 4-AA.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "Season": 2000,
@@ -88,7 +94,10 @@
     },
     "Notes": "Jeff Smith went 2-for-2 with an RBI and earned the win. Matt Hunt went 3-for-3 with three RBIs, Jake Smith went 2-for-2 with two RBIs, and Tyson Lenka went 3-for-3 with an RBI.",
     "SourceDate": "2000-03-23",
-    "SourceCitation": "\"GROVES RALLIES SEVERAL TIMES TO BEAT WINDSOR FOREST,\" Savannah Morning News (GA), March 23, 2000, Page 4D."
+    "SourceCitation": "\"GROVES RALLIES SEVERAL TIMES TO BEAT WINDSOR FOREST,\" Savannah Morning News (GA), March 23, 2000, Page 4D.",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Jeff Smith went 2-for-2 with an RBI and earned the win. Matt Hunt went 3-for-3 with three RBIs, Jake Smith went 2-for-2 with two RBIs, and Tyson Lenka went 3-for-3 with an RBI.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "Season": 2000,
@@ -147,7 +156,10 @@
     },
     "Notes": "Adam Ciccio and Ryan Stratz combined on a no-hitter in the second game of the doubleheader. Zack Hillard went 2-for-2 with three RBIs as St. Andrew's improved to 2-2.",
     "SourceDate": "2000-03-23",
-    "SourceCitation": "\"GROVES RALLIES SEVERAL TIMES TO BEAT WINDSOR FOREST,\" Savannah Morning News (GA), March 23, 2000, Page 4D."
+    "SourceCitation": "\"GROVES RALLIES SEVERAL TIMES TO BEAT WINDSOR FOREST,\" Savannah Morning News (GA), March 23, 2000, Page 4D.",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Adam Ciccio and Ryan Stratz combined on a no-hitter in the second game of the doubleheader. Zack Hillard went 2-for-2 with three RBIs as St. Andrew's improved to 2-2.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "Season": 2000,
@@ -211,7 +223,10 @@
     },
     "Notes": "Memorial Day defeated St. Andrew's 8-4. The box score listed St. Andrew's at 2-3.",
     "SourceDate": "2000-03-24",
-    "SourceCitation": "\"BASEBALL,\" Savannah Morning News (GA), March 24, 2000, Page 6B."
+    "SourceCitation": "\"BASEBALL,\" Savannah Morning News (GA), March 24, 2000, Page 6B.",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Memorial Day defeated St. Andrew's 8-4. The box score listed St. Andrew's at 2-3.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "Season": 2000,
@@ -279,7 +294,10 @@
     },
     "Notes": "Adam Ciccio went 2-for-4 and scored the eventual winning run in the eighth inning on a throwing error. St. Andrew's improved to 3-3 overall and 1-2 in SCISA Region 4-AA.",
     "SourceDate": "2000-03-29",
-    "SourceCitation": "\"BASEBALL,\" Savannah Morning News (GA), March 29, 2000, Page 5D."
+    "SourceCitation": "\"BASEBALL,\" Savannah Morning News (GA), March 29, 2000, Page 5D.",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Adam Ciccio went 2-for-4 and scored the eventual winning run in the eighth inning on a throwing error. St. Andrew's improved to 3-3 overall and 1-2 in SCISA Region 4-AA.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "Season": 2000,
@@ -295,7 +313,10 @@
     "OpponentScore": null,
     "IsPlaceholder": true,
     "Notes": "Placeholder non-region win added because the April 5 Beaufort Academy report listed St. Andrew's at 5-3 overall and 2-2 in SCISA Region 4-AA after the known March 29 Patrick Henry win and the Beaufort region win.",
-    "SourceCitation": "Record-path placeholder from NewsBank baseball reports, Spring 2000."
+    "SourceCitation": "Record-path placeholder from NewsBank baseball reports, Spring 2000.",
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder non-region win added because the April 5 Beaufort Academy report listed St. Andrew's at 5-3 overall and 2-2 in SCISA Region 4-AA after the known March 29 Patrick Henry win and the Beaufort region win.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "Season": 2000,
@@ -364,7 +385,10 @@
     },
     "Notes": "Ryan Stratz went 3-for-4 with an RBI, Jeff Smith went 2-for-4 with two RBIs, and Jake Smith went 2-for-2 with three RBIs. St. Andrew's improved to 5-3 overall and 2-2 in SCISA Region 4-AA.",
     "SourceDate": "2000-04-05",
-    "SourceCitation": "\"BASEBALL,\" Savannah Morning News (GA), April 5, 2000, Page 5D."
+    "SourceCitation": "\"BASEBALL,\" Savannah Morning News (GA), April 5, 2000, Page 5D.",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Ryan Stratz went 3-for-4 with an RBI, Jeff Smith went 2-for-4 with two RBIs, and Jake Smith went 2-for-2 with three RBIs. St. Andrew's improved to 5-3 overall and 2-2 in SCISA Region 4-AA.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "Season": 2000,
@@ -426,7 +450,10 @@
     },
     "Notes": "Zack Hillard went 3-for-5 with five RBIs, Adam Ciccio went 3-for-5 with an RBI and earned the win, Adam Sumers and Stevie Gregory homered, and St. Andrew's improved to 6-3.",
     "SourceDate": "2000-04-07",
-    "SourceCitation": "\"BASEBALL,\" Savannah Morning News (GA), April 7, 2000, Page 8B."
+    "SourceCitation": "\"BASEBALL,\" Savannah Morning News (GA), April 7, 2000, Page 8B.",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Zack Hillard went 3-for-5 with five RBIs, Adam Ciccio went 3-for-5 with an RBI and earned the win, Adam Sumers and Stevie Gregory homered, and St. Andrew's improved to 6-3.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "Season": 2000,
@@ -492,7 +519,10 @@
     },
     "Notes": "Adam Ciccio went 2-for-3 with three RBIs and Adam Sumers went 1-for-3 with two RBIs. This St. Andrew's result was embedded in a Groves playoff article uncovered during the broad sweep. Records: Sea Island 8-2, 4-0 SCISA Region 4-AA; St. Andrew's 6-4, 2-3.",
     "SourceDate": "2000-04-08",
-    "SourceCitation": "\"CAMDEN COUNTY BLUDGEONS GROVES' PLAYOFF HOPES,\" Savannah Morning News (GA), April 8, 2000, Page 8E."
+    "SourceCitation": "\"CAMDEN COUNTY BLUDGEONS GROVES' PLAYOFF HOPES,\" Savannah Morning News (GA), April 8, 2000, Page 8E.",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Adam Ciccio went 2-for-3 with three RBIs and Adam Sumers went 1-for-3 with two RBIs. This St. Andrew's result was embedded in a Groves playoff article uncovered during the broad sweep. Records: Sea Island 8-2, 4-0 SCISA Region 4-AA; St. Andrew's 6-4, 2-3.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "Season": 2000,
@@ -551,7 +581,10 @@
     },
     "Notes": "Ryan Stratz went 4-for-4 with three RBIs, Jeff Smith went 2-for-3 with three RBIs, Jake Smith went 2-for-2 with two RBIs, and Zack Hillard went 2-for-3 with four RBIs. St. Andrew's improved to 7-4 overall and 3-3 in SCISA Region 4-AA.",
     "SourceDate": "2000-04-11",
-    "SourceCitation": "\"MEMORIAL'S DENNIS THROWS NO-HITTER,\" Savannah Morning News (GA), April 11, 2000, Page 5D."
+    "SourceCitation": "\"MEMORIAL'S DENNIS THROWS NO-HITTER,\" Savannah Morning News (GA), April 11, 2000, Page 5D.",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Ryan Stratz went 4-for-4 with three RBIs, Jeff Smith went 2-for-3 with three RBIs, Jake Smith went 2-for-2 with two RBIs, and Zack Hillard went 2-for-3 with four RBIs. St. Andrew's improved to 7-4 overall and 3-3 in SCISA Region 4-AA.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "Season": 2000,
@@ -567,7 +600,10 @@
     "OpponentScore": 9,
     "Notes": "Late Tuesday's results listed St. Andrew's 11, Bible Baptist 9. No box score or individual St. Andrew's statistics were printed in the recovered item.",
     "SourceDate": "2000-04-13",
-    "SourceCitation": "\"CALVARY THROWS A SHOCK AT SAVANNAH CHRISTIAN,\" Savannah Morning News (GA), April 13, 2000, Page 5D."
+    "SourceCitation": "\"CALVARY THROWS A SHOCK AT SAVANNAH CHRISTIAN,\" Savannah Morning News (GA), April 13, 2000, Page 5D.",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Late Tuesday's results listed St. Andrew's 11, Bible Baptist 9. No box score or individual St. Andrew's statistics were printed in the recovered item.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "Season": 2000,
@@ -632,7 +668,10 @@
     },
     "Notes": "Adam Ciccio went 1-for-2. St. Andrew's fell to 8-5 overall and 3-4 in SCISA Region 4-AA.",
     "SourceDate": "2000-04-27",
-    "SourceCitation": "\"BASEBALL,\" Savannah Morning News (GA), April 27, 2000, Page 5D."
+    "SourceCitation": "\"BASEBALL,\" Savannah Morning News (GA), April 27, 2000, Page 5D.",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Adam Ciccio went 1-for-2. St. Andrew's fell to 8-5 overall and 3-4 in SCISA Region 4-AA.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "Season": 2000,
@@ -697,7 +736,10 @@
     },
     "Notes": "Jeff Smith went 3-for-4 and scored twice, and Matt Hunt went 2-for-3. St. Andrew's improved to 9-5 overall and 4-4 in SCISA Region 4-AA.",
     "SourceDate": "2000-04-28",
-    "SourceCitation": "\"ECI BEGINS STATE TOURNEY,\" Savannah Morning News (GA), April 28, 2000, Page 3B."
+    "SourceCitation": "\"ECI BEGINS STATE TOURNEY,\" Savannah Morning News (GA), April 28, 2000, Page 3B.",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Jeff Smith went 3-for-4 and scored twice, and Matt Hunt went 2-for-3. St. Andrew's improved to 9-5 overall and 4-4 in SCISA Region 4-AA.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "Season": 2000,
@@ -755,7 +797,10 @@
     },
     "Notes": "Memorial Day defeated St. Andrew's 10-0 in five innings.",
     "SourceDate": "2000-04-29",
-    "SourceCitation": "\"BASEBALL,\" Savannah Morning News (GA), April 29, 2000, Page 3F."
+    "SourceCitation": "\"BASEBALL,\" Savannah Morning News (GA), April 29, 2000, Page 3F.",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Memorial Day defeated St. Andrew's 10-0 in five innings.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "Season": 2000,
@@ -771,7 +816,10 @@
     "OpponentScore": null,
     "IsPlaceholder": true,
     "Notes": "Placeholder region loss added because the May 4 Beaufort Academy box score listed St. Andrew's at 10-7 overall and 5-5 in SCISA Region 4-AA after the known April 28 Memorial Day loss and the May 3 Beaufort Academy win.",
-    "SourceCitation": "Record-path placeholder from NewsBank baseball reports, Spring 2000."
+    "SourceCitation": "Record-path placeholder from NewsBank baseball reports, Spring 2000.",
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder region loss added because the May 4 Beaufort Academy box score listed St. Andrew's at 10-7 overall and 5-5 in SCISA Region 4-AA after the known April 28 Memorial Day loss and the May 3 Beaufort Academy win.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "Season": 2000,
@@ -836,7 +884,10 @@
     },
     "Notes": "Matt Hunt and Ricky Wiggins each hit a three-run home run. Jeff Smith, Jake Smith, Zack Hillard, and Hunt each had two hits as St. Andrew's improved to 10-7 overall and 5-5 in SCISA Region 4-AA.",
     "SourceDate": "2000-05-04",
-    "SourceCitation": "\"BASEBALL,\" Savannah Morning News (GA), May 4, 2000, Page 5D."
+    "SourceCitation": "\"BASEBALL,\" Savannah Morning News (GA), May 4, 2000, Page 5D.",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Matt Hunt and Ricky Wiggins each hit a three-run home run. Jeff Smith, Jake Smith, Zack Hillard, and Hunt each had two hits as St. Andrew's improved to 10-7 overall and 5-5 in SCISA Region 4-AA.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "Season": 2001,
@@ -887,7 +938,10 @@
     "LosingPitcher": "Robert Roper",
     "Notes": "Ryan Stratz went 2-for-5 with a home run and three RBIs, Matt Hunt homered and drove in three, Adam Ciccio went 3-for-4 with two doubles and three RBIs, Jeff Smith doubled twice, and Beau Hinton added two hits.",
     "SourceCitation": "\"BASEBALL,\" Savannah Morning News (GA), March 7, 2001, Page 4D.",
-    "SourceDate": "2001-03-07"
+    "SourceDate": "2001-03-07",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Ryan Stratz went 2-for-5 with a home run and three RBIs, Matt Hunt homered and drove in three, Adam Ciccio went 3-for-4 with two doubles and three RBIs, Jeff Smith doubled twice, and Beau Hinton added two hits.",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "Season": 2001,
@@ -903,7 +957,10 @@
     "OpponentScore": null,
     "IsPlaceholder": true,
     "Notes": "Placeholder loss added because the March 24 Sea Island Academy box score listed St. Andrew's at 1-2 after the known March 6 win and the Sea Island loss.",
-    "SourceCitation": "Record-path placeholder from NewsBank baseball reports, Spring 2001."
+    "SourceCitation": "Record-path placeholder from NewsBank baseball reports, Spring 2001.",
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder loss added because the March 24 Sea Island Academy box score listed St. Andrew's at 1-2 after the known March 6 win and the Sea Island loss.",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "Season": 2001,
@@ -960,7 +1017,10 @@
     "LosingPitcher": "Jeff Smith",
     "Notes": "A.J. Nichols hit a one-out, two-run double in the bottom of the seventh for Sea Island. Jake Smith went 2-for-3 with a double and Matt Hunt went 1-for-2 with two RBIs for St. Andrew's.",
     "SourceCitation": "\"HERNDON'S GRAND SLAM RALLIES LONG COUNTY PAST ECI\" Savannah Morning News (GA), March 24, 2001, Page 3F.",
-    "SourceDate": "2001-03-24"
+    "SourceDate": "2001-03-24",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "A.J. Nichols hit a one-out, two-run double in the bottom of the seventh for Sea Island. Jake Smith went 2-for-3 with a double and Matt Hunt went 1-for-2 with two RBIs for St. Andrew's.",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "Season": 2001,
@@ -1012,7 +1072,10 @@
     "LosingPitcher": "Zack Hillard",
     "Notes": "Laurence Manning defeated St. Andrew's in five innings in the opening round at Kingstree. Beau Hinton went 1-for-1 with a walk and a stolen base, and Ryan Stratz doubled and drove in the Saints' run.",
     "SourceCitation": "\"VIDALIA HOLDS ON TO BEAT SOUTH EFFINGHAM\" Savannah Morning News (GA), March 25, 2001, Page 3B.",
-    "SourceDate": "2001-03-25"
+    "SourceDate": "2001-03-25",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Laurence Manning defeated St. Andrew's in five innings in the opening round at Kingstree. Beau Hinton went 1-for-1 with a walk and a stolen base, and Ryan Stratz doubled and drove in the Saints' run.",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "Season": 2001,
@@ -1064,7 +1127,10 @@
     "LosingPitcher": "Bost",
     "Notes": "St. Andrew's won the consolation game in five innings. Ryan Stratz went 4-for-4 with three RBIs, Zack Hillard went 4-for-5 with four RBIs, Matt Hunt went 3-for-5 with three RBIs, Brent Adams went 2-for-2 with three RBIs, and Beau Hinton went 2-for-5 with three RBIs.",
     "SourceCitation": "\"VIDALIA HOLDS ON TO BEAT SOUTH EFFINGHAM\" Savannah Morning News (GA), March 25, 2001, Page 3B.",
-    "SourceDate": "2001-03-25"
+    "SourceDate": "2001-03-25",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "St. Andrew's won the consolation game in five innings. Ryan Stratz went 4-for-4 with three RBIs, Zack Hillard went 4-for-5 with four RBIs, Matt Hunt went 3-for-5 with three RBIs, Brent Adams went 2-for-2 with three RBIs, and Beau Hinton went 2-for-5 with three RBIs.",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "Season": 2001,
@@ -1121,7 +1187,10 @@
     "LosingPitcher": "Ryan Stratz",
     "Notes": "Memorial Day beat St. Andrew's 7-3. The box score did not list St. Andrew's individual hitting leaders.",
     "SourceCitation": "\"BASEBALL\" Savannah Morning News (GA), March 28, 2001, Page 4D.",
-    "SourceDate": "2001-03-28"
+    "SourceDate": "2001-03-28",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Memorial Day beat St. Andrew's 7-3. The box score did not list St. Andrew's individual hitting leaders.",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "Season": 2001,
@@ -1178,7 +1247,10 @@
     "LosingPitcher": "Green",
     "Notes": "Zack Hillard threw a one-hitter, walked two, and struck out five. Ryan Stratz went 2-for-3 with a double and an RBI; Beau Hinton, Hillard, and Victor Evans each drove in a run.",
     "SourceCitation": "\"BASEBALL\" Savannah Morning News (GA), April 6, 2001, Page 3C.",
-    "SourceDate": "2001-04-06"
+    "SourceDate": "2001-04-06",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Zack Hillard threw a one-hitter, walked two, and struck out five. Ryan Stratz went 2-for-3 with a double and an RBI; Beau Hinton, Hillard, and Victor Evans each drove in a run.",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "Season": 2001,
@@ -1235,7 +1307,10 @@
     "LosingPitcher": "Abraham",
     "Notes": "Matt Hunt and Jeff Smith combined for 13 strikeouts. Hunt struck out nine in four innings, Smith struck out four in three innings, Smith went 3-for-4, and Hunt went 2-for-3 with an RBI.",
     "SourceCitation": "\"MCBRIDE PERFECT IN SCREVEN CO. WIN AGAINST TATTNALL CO.\" Savannah Morning News (GA), April 7, 2001, Page 5F.",
-    "SourceDate": "2001-04-07"
+    "SourceDate": "2001-04-07",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Matt Hunt and Jeff Smith combined for 13 strikeouts. Hunt struck out nine in four innings, Smith struck out four in three innings, Smith went 3-for-4, and Hunt went 2-for-3 with an RBI.",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "Season": 2001,
@@ -1296,7 +1371,10 @@
     "LosingPitcher": "Zack Hillard",
     "Notes": "Beaufort Academy scored three in the eighth to beat St. Andrew's 7-6. Zack Hillard went 3-for-4 with three RBIs.",
     "SourceCitation": "\"BASEBALL\" Savannah Morning News (GA), April 11, 2001, Page 4D.",
-    "SourceDate": "2001-04-11"
+    "SourceDate": "2001-04-11",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Beaufort Academy scored three in the eighth to beat St. Andrew's 7-6. Zack Hillard went 3-for-4 with three RBIs.",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "Season": 2001,
@@ -1312,7 +1390,10 @@
     "OpponentScore": null,
     "IsPlaceholder": true,
     "Notes": "Placeholder loss added because the April 19 Agape Christian doubleheader listed St. Andrew's at 5-6 after the opening win, requiring one additional loss after the April 11 Beaufort Academy report.",
-    "SourceCitation": "Record-path placeholder from NewsBank baseball reports, Spring 2001."
+    "SourceCitation": "Record-path placeholder from NewsBank baseball reports, Spring 2001.",
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder loss added because the April 19 Agape Christian doubleheader listed St. Andrew's at 5-6 after the opening win, requiring one additional loss after the April 11 Beaufort Academy report.",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "Season": 2001,
@@ -1363,7 +1444,10 @@
     "LosingPitcher": "K. Davis",
     "Notes": "Matt Hunt's two-out single drove in Zack Hillard with the winning run in the bottom of the fifth. Hunt went 2-for-2 with an RBI.",
     "SourceCitation": "\"HUNT PACES ST. ANDREW'S TO TWINBILL WINS\" Savannah Morning News (GA), April 19, 2001, Page 4C.",
-    "SourceDate": "2001-04-19"
+    "SourceDate": "2001-04-19",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Matt Hunt's two-out single drove in Zack Hillard with the winning run in the bottom of the fifth. Hunt went 2-for-2 with an RBI.",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "Season": 2001,
@@ -1414,7 +1498,10 @@
     "LosingPitcher": "Brandon Roach",
     "Notes": "Ryan Stratz struck out eight and went 2-for-2 with an RBI. Matt Hunt went 2-for-3 with two RBIs and Beau Hinton went 2-for-3 with an RBI.",
     "SourceCitation": "\"HUNT PACES ST. ANDREW'S TO TWINBILL WINS\" Savannah Morning News (GA), April 19, 2001, Page 4C.",
-    "SourceDate": "2001-04-19"
+    "SourceDate": "2001-04-19",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Ryan Stratz struck out eight and went 2-for-2 with an RBI. Matt Hunt went 2-for-3 with two RBIs and Beau Hinton went 2-for-3 with an RBI.",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "Season": 2001,
@@ -1471,7 +1558,10 @@
     "LosingPitcher": "Matt Hunt",
     "Notes": "Colleton Prep scored six runs in the seventh. Zack Hillard went 2-for-3 with a home run and three RBIs; Jeff Smith, Matt Hunt, and Beau Hinton each had two hits.",
     "SourceCitation": "\"MEMORIAL DAY CLINCHES REGION BASEBALL TITLE\" Savannah Morning News (GA), April 24, 2001, Page 3D.",
-    "SourceDate": "2001-04-24"
+    "SourceDate": "2001-04-24",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Colleton Prep scored six runs in the seventh. Zack Hillard went 2-for-3 with a home run and three RBIs; Jeff Smith, Matt Hunt, and Beau Hinton each had two hits.",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "Season": 2001,
@@ -1487,7 +1577,10 @@
     "OpponentScore": null,
     "IsPlaceholder": true,
     "Notes": "Placeholder win added because the April 25 Beaufort Academy box score listed St. Andrew's at 8-7 after that victory, while the April 24 Colleton Prep report listed the Saints at 6-7.",
-    "SourceCitation": "Record-path placeholder from NewsBank baseball reports, Spring 2001."
+    "SourceCitation": "Record-path placeholder from NewsBank baseball reports, Spring 2001.",
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder win added because the April 25 Beaufort Academy box score listed St. Andrew's at 8-7 after that victory, while the April 24 Colleton Prep report listed the Saints at 6-7.",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "Season": 2001,
@@ -1538,7 +1631,10 @@
     "LosingPitcher": "B. Smith",
     "Notes": "St. Andrew's beat Beaufort Academy 12-2 in five innings. Ryan Stratz went 2-for-3 with four RBIs.",
     "SourceCitation": "\"SOCCER\" Savannah Morning News (GA), April 25, 2001, Page 4D.",
-    "SourceDate": "2001-04-25"
+    "SourceDate": "2001-04-25",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "St. Andrew's beat Beaufort Academy 12-2 in five innings. Ryan Stratz went 2-for-3 with four RBIs.",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "Season": 2001,
@@ -1589,7 +1685,10 @@
     "LosingPitcher": "Warren East",
     "Notes": "Jeff Smith homered and earned the win. Beau Hinton went 2-for-2 with an RBI, and Jake Smith went 2-for-3 with two RBIs.",
     "SourceCitation": "\"BASEBALL\" Savannah Morning News (GA), April 27, 2001, Page 3C.",
-    "SourceDate": "2001-04-27"
+    "SourceDate": "2001-04-27",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Jeff Smith homered and earned the win. Beau Hinton went 2-for-2 with an RBI, and Jake Smith went 2-for-3 with two RBIs.",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "Season": 2001,
@@ -1646,7 +1745,10 @@
     "LosingPitcher": "Zack Hillard",
     "Notes": "Hilton Head Christian scored nine in the sixth. Beau Hinton went 2-for-3 for St. Andrew's.",
     "SourceCitation": "\"OGLESBY KEYS SCREVEN COUNTY IN 7-2 WIN OVER SWAINSBORO\" Savannah Morning News (GA), May 2, 2001, Page 4D.",
-    "SourceDate": "2001-05-02"
+    "SourceDate": "2001-05-02",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Hilton Head Christian scored nine in the sixth. Beau Hinton went 2-for-3 for St. Andrew's.",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "Season": 2001,
@@ -1703,7 +1805,10 @@
     "LosingPitcher": "Ryan Stratz",
     "Notes": "Beau Hinton went 1-for-2 with an RBI for St. Andrew's.",
     "SourceCitation": "\"SOCCER\" Savannah Morning News (GA), May 3, 2001, Page 5D.",
-    "SourceDate": "2001-05-03"
+    "SourceDate": "2001-05-03",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Beau Hinton went 1-for-2 with an RBI for St. Andrew's.",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "Season": 2001,
@@ -1760,7 +1865,10 @@
     "LosingPitcher": "Matt Hunt",
     "Notes": "Jeff Smith went 1-for-3 with a triple. St. Andrew's finished the recovered record path at 9-10.",
     "SourceCitation": "\"BASEBALL\" Savannah Morning News (GA), May 5, 2001, Page 7F.",
-    "SourceDate": "2001-05-05"
+    "SourceDate": "2001-05-05",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Jeff Smith went 1-for-3 with a triple. St. Andrew's finished the recovered record path at 9-10.",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "GameID": 2002030101,
@@ -1775,7 +1883,11 @@
     "OpponentScore": null,
     "Season": 2002,
     "IsPlaceholder": true,
-    "Notes": "Placeholder win added because the March 22 Bible Baptist box score listed St. Andrew's at 4-5 after the known March 19 loss and March 21 win, indicating seven earlier games are missing."
+    "Notes": "Placeholder win added because the March 22 Bible Baptist box score listed St. Andrew's at 4-5 after the known March 19 loss and March 21 win, indicating seven earlier games are missing.",
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder win added because the March 22 Bible Baptist box score listed St. Andrew's at 4-5 after the known March 19 loss and March 21 win, indicating seven earlier games are missing.",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "Record-path placeholder from baseball archive reconciliation, 2001-02."
   },
   {
     "GameID": 2002030102,
@@ -1790,7 +1902,11 @@
     "OpponentScore": null,
     "Season": 2002,
     "IsPlaceholder": true,
-    "Notes": "Placeholder loss added to reconcile the March 22 Bible Baptist record line."
+    "Notes": "Placeholder loss added to reconcile the March 22 Bible Baptist record line.",
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder loss added to reconcile the March 22 Bible Baptist record line.",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "Record-path placeholder from baseball archive reconciliation, 2001-02."
   },
   {
     "GameID": 2002030103,
@@ -1805,7 +1921,11 @@
     "OpponentScore": null,
     "Season": 2002,
     "IsPlaceholder": true,
-    "Notes": "Placeholder loss added to reconcile the March 22 Bible Baptist record line."
+    "Notes": "Placeholder loss added to reconcile the March 22 Bible Baptist record line.",
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder loss added to reconcile the March 22 Bible Baptist record line.",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "Record-path placeholder from baseball archive reconciliation, 2001-02."
   },
   {
     "GameID": 2002030104,
@@ -1820,7 +1940,11 @@
     "OpponentScore": null,
     "Season": 2002,
     "IsPlaceholder": true,
-    "Notes": "Placeholder win added to reconcile the March 22 Bible Baptist record line."
+    "Notes": "Placeholder win added to reconcile the March 22 Bible Baptist record line.",
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder win added to reconcile the March 22 Bible Baptist record line.",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "Record-path placeholder from baseball archive reconciliation, 2001-02."
   },
   {
     "GameID": 2002030105,
@@ -1835,7 +1959,11 @@
     "OpponentScore": null,
     "Season": 2002,
     "IsPlaceholder": true,
-    "Notes": "Placeholder loss added to reconcile the March 22 Bible Baptist record line."
+    "Notes": "Placeholder loss added to reconcile the March 22 Bible Baptist record line.",
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder loss added to reconcile the March 22 Bible Baptist record line.",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "Record-path placeholder from baseball archive reconciliation, 2001-02."
   },
   {
     "GameID": 2002030106,
@@ -1850,7 +1978,11 @@
     "OpponentScore": null,
     "Season": 2002,
     "IsPlaceholder": true,
-    "Notes": "Placeholder win added to reconcile the March 22 Bible Baptist record line."
+    "Notes": "Placeholder win added to reconcile the March 22 Bible Baptist record line.",
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder win added to reconcile the March 22 Bible Baptist record line.",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "Record-path placeholder from baseball archive reconciliation, 2001-02."
   },
   {
     "GameID": 2002030107,
@@ -1865,7 +1997,11 @@
     "OpponentScore": null,
     "Season": 2002,
     "IsPlaceholder": true,
-    "Notes": "Placeholder loss added to reconcile the March 22 Bible Baptist record line."
+    "Notes": "Placeholder loss added to reconcile the March 22 Bible Baptist record line.",
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder loss added to reconcile the March 22 Bible Baptist record line.",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "Record-path placeholder from baseball archive reconciliation, 2001-02."
   },
   {
     "Season": 2002,
@@ -1922,7 +2058,10 @@
     "LosingPitcher": "Ryan Stratz",
     "Notes": "Ryan Stratz and Zack Hillard each went 2-for-3 for St. Andrew's.",
     "SourceCitation": "\"BASEBALL\" Savannah Morning News (GA), March 20, 2002, Page 4D.",
-    "SourceDate": "2002-03-20"
+    "SourceDate": "2002-03-20",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Ryan Stratz and Zack Hillard each went 2-for-3 for St. Andrew's.",
+    "SourceSeasonLabel": "2001-02"
   },
   {
     "Season": 2002,
@@ -1971,7 +2110,10 @@
     "Notes": "Zack Hillard struck out nine and walked two in the four-inning no-hitter. Jeff Smith doubled and Ryan Stratz tripled.",
     "SourceCitation": "\"BASEBALL\" Savannah Morning News (GA), March 22, 2002, Page 4C.",
     "SourceDate": "2002-03-22",
-    "RecordNote": "Records: St. Andrew's 4-5"
+    "RecordNote": "Records: St. Andrew's 4-5",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Zack Hillard struck out nine and walked two in the four-inning no-hitter. Jeff Smith doubled and Ryan Stratz tripled.",
+    "SourceSeasonLabel": "2001-02"
   },
   {
     "Season": 2002,
@@ -2029,7 +2171,10 @@
     "Notes": "Jeff Smith worked five innings of three-hit ball with eight strikeouts and went 3-for-4 with a double and two RBI.",
     "SourceCitation": "\"BASEBALL\" Savannah Morning News (GA), March 28, 2002, Page 4D.",
     "SourceDate": "2002-03-28",
-    "RecordNote": "Records: St. Andrew's 5-5"
+    "RecordNote": "Records: St. Andrew's 5-5",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Jeff Smith worked five innings of three-hit ball with eight strikeouts and went 3-for-4 with a double and two RBI.",
+    "SourceSeasonLabel": "2001-02"
   },
   {
     "Season": 2002,
@@ -2086,7 +2231,10 @@
     "LosingPitcher": "Matt Hunt",
     "Notes": "Jeff Smith and Ryan Stratz each went 2-for-4 for St. Andrew's.",
     "SourceCitation": "\"BASEBALL\" Savannah Morning News (GA), March 29, 2002, Page 4D.",
-    "SourceDate": "2002-03-29"
+    "SourceDate": "2002-03-29",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Jeff Smith and Ryan Stratz each went 2-for-4 for St. Andrew's.",
+    "SourceSeasonLabel": "2001-02"
   },
   {
     "GameID": 2002040601,
@@ -2101,7 +2249,11 @@
     "OpponentScore": null,
     "Season": 2002,
     "IsPlaceholder": true,
-    "Notes": "Placeholder loss added because the April 12 Bible Baptist box score listed St. Andrew's at 6-7 after the known March 28 Memorial Day loss and April 11 Bible Baptist win."
+    "Notes": "Placeholder loss added because the April 12 Bible Baptist box score listed St. Andrew's at 6-7 after the known March 28 Memorial Day loss and April 11 Bible Baptist win.",
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder loss added because the April 12 Bible Baptist box score listed St. Andrew's at 6-7 after the known March 28 Memorial Day loss and April 11 Bible Baptist win.",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "Record-path placeholder from baseball archive reconciliation, 2001-02."
   },
   {
     "Season": 2002,
@@ -2159,7 +2311,10 @@
     "Notes": "Zack Hillard struck out 15 and allowed one unearned run. Adam Ciccio and Davy Clay homered.",
     "SourceCitation": "\"BASEBALL\" Savannah Morning News (GA), April 12, 2002, Page 4D.",
     "SourceDate": "2002-04-12",
-    "RecordNote": "Records: St. Andrew's 6-7"
+    "RecordNote": "Records: St. Andrew's 6-7",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Zack Hillard struck out 15 and allowed one unearned run. Adam Ciccio and Davy Clay homered.",
+    "SourceSeasonLabel": "2001-02"
   },
   {
     "Season": 2002,
@@ -2210,7 +2365,10 @@
     "LosingPitcher": "Brian Roach",
     "Notes": "Ryan Stratz went 2-for-2 with a home run and two RBI, and Zack Hillard doubled in two runs.",
     "SourceCitation": "\"BASEBALL\" Savannah Morning News (GA), April 13, 2002, Page 6C.",
-    "SourceDate": "2002-04-13"
+    "SourceDate": "2002-04-13",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Ryan Stratz went 2-for-2 with a home run and two RBI, and Zack Hillard doubled in two runs.",
+    "SourceSeasonLabel": "2001-02"
   },
   {
     "Season": 2002,
@@ -2262,7 +2420,10 @@
     "Notes": "Jeff Smith and Beau Hinton each went 3-for-4, and Matt Hunt doubled and drove in three runs.",
     "SourceCitation": "\"BASEBALL\" Savannah Morning News (GA), April 13, 2002, Page 6C.",
     "SourceDate": "2002-04-13",
-    "RecordNote": "Records: St. Andrew's 8-7"
+    "RecordNote": "Records: St. Andrew's 8-7",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Jeff Smith and Beau Hinton each went 3-for-4, and Matt Hunt doubled and drove in three runs.",
+    "SourceSeasonLabel": "2001-02"
   },
   {
     "Season": 2002,
@@ -2320,7 +2481,10 @@
     "Notes": "Ryan Stratz threw a five-hitter and struck out 10 at Grayson Stadium. Adam Ciccio and Jeff Smith each doubled.",
     "SourceCitation": "\"BASEBALL\" Savannah Morning News (GA), April 14, 2002, Page 4C.",
     "SourceDate": "2002-04-14",
-    "RecordNote": "Records: St. Andrew's 8-8"
+    "RecordNote": "Records: St. Andrew's 8-8",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Ryan Stratz threw a five-hitter and struck out 10 at Grayson Stadium. Adam Ciccio and Jeff Smith each doubled.",
+    "SourceSeasonLabel": "2001-02"
   },
   {
     "Season": 2002,
@@ -2378,7 +2542,10 @@
     "Notes": "Beau Hinton went 3-for-3, Jeff Smith went 3-for-4 with a double, and Matt Hunt had two hits and two RBI.",
     "SourceCitation": "\"BASEBALL\" Savannah Morning News (GA), April 17, 2002, Page 4C.",
     "SourceDate": "2002-04-17",
-    "RecordNote": "Records: St. Andrew's 8-9, 0-2 SCISA Region 2-AA"
+    "RecordNote": "Records: St. Andrew's 8-9, 0-2 SCISA Region 2-AA",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Beau Hinton went 3-for-3, Jeff Smith went 3-for-4 with a double, and Matt Hunt had two hits and two RBI.",
+    "SourceSeasonLabel": "2001-02"
   },
   {
     "Season": 2002,
@@ -2436,7 +2603,10 @@
     "Notes": "Matt Hunt went 2-for-2 with an RBI. Published record line listed St. Andrew's at 9-9, which conflicts with the surrounding recovered 8-9 and 10-10 record path.",
     "SourceCitation": "\"BASEBALL\" Savannah Morning News (GA), April 26, 2002, Page 4C.",
     "SourceDate": "2002-04-26",
-    "RecordNote": "Records: St. Andrew's 9-9 (published; record path remains inconsistent)"
+    "RecordNote": "Records: St. Andrew's 9-9 (published; record path remains inconsistent)",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Matt Hunt went 2-for-2 with an RBI. Published record line listed St. Andrew's at 9-9, which conflicts with the surrounding recovered 8-9 and 10-10 record path.",
+    "SourceSeasonLabel": "2001-02"
   },
   {
     "GameID": 2002042901,
@@ -2451,7 +2621,11 @@
     "OpponentScore": null,
     "Season": 2002,
     "IsPlaceholder": true,
-    "Notes": "Placeholder win added to reconcile the known 8-9 Colleton Prep line, the inconsistent 9-9 Hilton Head Christian line, and the May 2 Patrick Henry line listing St. Andrew's at 10-10."
+    "Notes": "Placeholder win added to reconcile the known 8-9 Colleton Prep line, the inconsistent 9-9 Hilton Head Christian line, and the May 2 Patrick Henry line listing St. Andrew's at 10-10.",
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder win added to reconcile the known 8-9 Colleton Prep line, the inconsistent 9-9 Hilton Head Christian line, and the May 2 Patrick Henry line listing St. Andrew's at 10-10.",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "Record-path placeholder from baseball archive reconciliation, 2001-02."
   },
   {
     "Season": 2002,
@@ -2503,7 +2677,10 @@
     "Notes": "Ryan Stratz struck out eight in four innings and went 2-for-4 with two RBI. Jeff Smith went 4-for-4, Zack Hillard drove in three runs, and Beau Hinton had two RBI.",
     "SourceCitation": "\"BASEBALL\" Savannah Morning News (GA), May 2, 2002, Page 5C.",
     "SourceDate": "2002-05-02",
-    "RecordNote": "Records: St. Andrew's 10-10"
+    "RecordNote": "Records: St. Andrew's 10-10",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Ryan Stratz struck out eight in four innings and went 2-for-4 with two RBI. Jeff Smith went 4-for-4, Zack Hillard drove in three runs, and Beau Hinton had two RBI.",
+    "SourceSeasonLabel": "2001-02"
   },
   {
     "GameID": 2006030601,
@@ -2557,7 +2734,11 @@
         "H": 7,
         "E": 3
       }
-    }
+    },
+    "BoxScoreCompleteness": "partial",
+    "SourceSeasonLabel": "2005-06",
+    "SourceNote": "Archive games data is partial; only recovered source details are shown.",
+    "SourceCitation": "\"St. Andrew's baseball report,\" Savannah Morning News archive, event date 2006-03-06."
   },
   {
     "GameID": 2006031501,
@@ -2572,7 +2753,11 @@
     "OpponentScore": null,
     "Season": 2006,
     "IsPlaceholder": true,
-    "Notes": "Placeholder loss added because the March 23, 2006 Savannah Morning News box score listed St. Andrew's at 1-2 after the Beaufort Academy game, indicating one earlier loss is missing from the archive."
+    "Notes": "Placeholder loss added because the March 23, 2006 Savannah Morning News box score listed St. Andrew's at 1-2 after the Beaufort Academy game, indicating one earlier loss is missing from the archive.",
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder loss added because the March 23, 2006 Savannah Morning News box score listed St. Andrew's at 1-2 after the Beaufort Academy game, indicating one earlier loss is missing from the archive.",
+    "SourceSeasonLabel": "2005-06",
+    "SourceCitation": "Record-path placeholder from baseball archive reconciliation, 2005-06."
   },
   {
     "GameID": 2006032201,
@@ -2632,7 +2817,10 @@
         "H": 4,
         "E": 7
       }
-    }
+    },
+    "BoxScoreCompleteness": "partial",
+    "SourceSeasonLabel": "2005-06",
+    "SourceNote": "Archive games data is partial; only recovered source details are shown."
   },
   {
     "GameID": 2006032301,
@@ -2647,7 +2835,11 @@
     "OpponentScore": null,
     "Season": 2006,
     "IsPlaceholder": true,
-    "Notes": "Placeholder loss retained for one of the four still-unidentified games between March 22 and April 4, 2006. The April 4 Hilton Head Christian box score listed St. Andrew's at 1-7, requiring four missing losses in that span."
+    "Notes": "Placeholder loss retained for one of the four still-unidentified games between March 22 and April 4, 2006. The April 4 Hilton Head Christian box score listed St. Andrew's at 1-7, requiring four missing losses in that span.",
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder loss retained for one of the four still-unidentified games between March 22 and April 4, 2006. The April 4 Hilton Head Christian box score listed St. Andrew's at 1-7, requiring four missing losses in that span.",
+    "SourceSeasonLabel": "2005-06",
+    "SourceCitation": "Record-path placeholder from baseball archive reconciliation, 2005-06."
   },
   {
     "GameID": 2006032302,
@@ -2662,7 +2854,11 @@
     "OpponentScore": null,
     "Season": 2006,
     "IsPlaceholder": true,
-    "Notes": "Placeholder loss retained for one of the four still-unidentified games between March 22 and April 4, 2006. The April 4 Hilton Head Christian box score listed St. Andrew's at 1-7, requiring four missing losses in that span."
+    "Notes": "Placeholder loss retained for one of the four still-unidentified games between March 22 and April 4, 2006. The April 4 Hilton Head Christian box score listed St. Andrew's at 1-7, requiring four missing losses in that span.",
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder loss retained for one of the four still-unidentified games between March 22 and April 4, 2006. The April 4 Hilton Head Christian box score listed St. Andrew's at 1-7, requiring four missing losses in that span.",
+    "SourceSeasonLabel": "2005-06",
+    "SourceCitation": "Record-path placeholder from baseball archive reconciliation, 2005-06."
   },
   {
     "GameID": 2006032303,
@@ -2677,7 +2873,11 @@
     "OpponentScore": null,
     "Season": 2006,
     "IsPlaceholder": true,
-    "Notes": "Placeholder loss retained for one of the four still-unidentified games between March 22 and April 4, 2006. The April 4 Hilton Head Christian box score listed St. Andrew's at 1-7, requiring four missing losses in that span."
+    "Notes": "Placeholder loss retained for one of the four still-unidentified games between March 22 and April 4, 2006. The April 4 Hilton Head Christian box score listed St. Andrew's at 1-7, requiring four missing losses in that span.",
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder loss retained for one of the four still-unidentified games between March 22 and April 4, 2006. The April 4 Hilton Head Christian box score listed St. Andrew's at 1-7, requiring four missing losses in that span.",
+    "SourceSeasonLabel": "2005-06",
+    "SourceCitation": "Record-path placeholder from baseball archive reconciliation, 2005-06."
   },
   {
     "GameID": 2006032304,
@@ -2692,7 +2892,11 @@
     "OpponentScore": null,
     "Season": 2006,
     "IsPlaceholder": true,
-    "Notes": "Placeholder loss retained for one of the four still-unidentified games between March 22 and April 4, 2006. The April 4 Hilton Head Christian box score listed St. Andrew's at 1-7, requiring four missing losses in that span."
+    "Notes": "Placeholder loss retained for one of the four still-unidentified games between March 22 and April 4, 2006. The April 4 Hilton Head Christian box score listed St. Andrew's at 1-7, requiring four missing losses in that span.",
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder loss retained for one of the four still-unidentified games between March 22 and April 4, 2006. The April 4 Hilton Head Christian box score listed St. Andrew's at 1-7, requiring four missing losses in that span.",
+    "SourceSeasonLabel": "2005-06",
+    "SourceCitation": "Record-path placeholder from baseball archive reconciliation, 2005-06."
   },
   {
     "GameID": 2006040401,
@@ -2745,7 +2949,11 @@
         "PlayerName": "Jon Hope",
         "Record": "1-4"
       }
-    }
+    },
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Hilton Head Christian defeated St. Andrew's 16-1 on April 4, 2006. The box score listed John Hope as the losing pitcher, Jonathan Gort as the winning pitcher, and records of St. Andrew's 1-7 and Hilton Head Christian 5-7.",
+    "SourceSeasonLabel": "2005-06",
+    "SourceCitation": "\"St. Andrew's baseball report,\" Savannah Morning News archive, event date 2006-04-04."
   },
   {
     "GameID": 2006040601,
@@ -2758,7 +2966,11 @@
     "TeamScore": 1,
     "OpponentScore": 14,
     "Season": 2006,
-    "Notes": "Only the final score is currently known: Dorchester Academy defeated St. Andrew's 14-1 on April 6, 2006."
+    "Notes": "Only the final score is currently known: Dorchester Academy defeated St. Andrew's 14-1 on April 6, 2006.",
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Only the final score is currently known: Dorchester Academy defeated St. Andrew's 14-1 on April 6, 2006.",
+    "SourceSeasonLabel": "2005-06",
+    "SourceCitation": "\"St. Andrew's baseball report,\" Savannah Morning News archive, event date 2006-04-06."
   },
   {
     "GameID": 2006041201,
@@ -2820,7 +3032,11 @@
         "PlayerID": 200806,
         "PlayerName": "Jon Hope"
       }
-    }
+    },
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Bible Baptist defeated St. Andrew's 5-2 on April 12, 2006. Justin Remler earned the win for Bible Baptist, and Jon Hope took the loss for St. Andrew's. Hope went 3-for-4 with two home runs; the two home runs are recorded as two RBIs. The published records were St. Andrew's 1-8 overall and Bible Baptist 6-8 overall.",
+    "SourceSeasonLabel": "2005-06",
+    "SourceCitation": "\"St. Andrew's baseball report,\" Savannah Morning News archive, event date 2006-04-12."
   },
   {
     "GameID": 2006041301,
@@ -2835,7 +3051,11 @@
     "OpponentScore": null,
     "Season": 2006,
     "IsPlaceholder": true,
-    "Notes": "Placeholder loss added because the April 18, 2006 Beaufort Academy box score listed St. Andrew's at 1-11, indicating one additional missing loss between the April 12 Bible Baptist game and the April 18 Beaufort Academy game."
+    "Notes": "Placeholder loss added because the April 18, 2006 Beaufort Academy box score listed St. Andrew's at 1-11, indicating one additional missing loss between the April 12 Bible Baptist game and the April 18 Beaufort Academy game.",
+    "BoxScoreCompleteness": "placeholder",
+    "SourceNote": "Placeholder loss added because the April 18, 2006 Beaufort Academy box score listed St. Andrew's at 1-11, indicating one additional missing loss between the April 12 Bible Baptist game and the April 18 Beaufort Academy game.",
+    "SourceSeasonLabel": "2005-06",
+    "SourceCitation": "Record-path placeholder from baseball archive reconciliation, 2005-06."
   },
   {
     "GameID": 2006041801,
@@ -2891,7 +3111,11 @@
         "H": 5,
         "E": 4
       }
-    }
+    },
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Beaufort Academy defeated St. Andrew's 14-4 in five innings on April 18, 2006. Brown earned the win for Beaufort Academy, and John Hope took the loss for St. Andrew's with a published record of 1-5. Jim Kingston led St. Andrew's at the plate, going 1-for-2 with a double and two RBIs. The published record for St. Andrew's after the game was 1-11.",
+    "SourceSeasonLabel": "2005-06",
+    "SourceCitation": "\"St. Andrew's baseball report,\" Savannah Morning News archive, event date 2006-04-18."
   },
   {
     "GameID": 2006042001,
@@ -2953,7 +3177,11 @@
         "H": 9,
         "E": 7
       }
-    }
+    },
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Thomas Heyward defeated St. Andrew's 10-4 on April 20, 2006. Mahan earned the win for Thomas Heyward, and Bryan Lee took the loss for St. Andrew's with a published record of 0-4. Bryan Lee went 2-for-4 with an RBI, Jon Hope went 2-for-4, and Rob Cantrell went 2-for-3. The published record for St. Andrew's after the game was 1-12.",
+    "SourceSeasonLabel": "2005-06",
+    "SourceCitation": "\"St. Andrew's baseball report,\" Savannah Morning News archive, event date 2006-04-20."
   },
   {
     "GameID": 2006042401,
@@ -3009,7 +3237,11 @@
         "H": 6,
         "E": 6
       }
-    }
+    },
+    "BoxScoreCompleteness": "partial",
+    "SourceNote": "Hilton Head Prep defeated St. Andrew's 19-4 in five innings on April 24, 2006. Quinn earned the win for Hilton Head Prep, and John Hope took the loss for St. Andrew's with a published record of 1-6. Hope led St. Andrew's at the plate, going 2-for-3 with a double. The published records were St. Andrew's 1-13.",
+    "SourceSeasonLabel": "2005-06",
+    "SourceCitation": "\"St. Andrew's baseball report,\" Savannah Morning News archive, event date 2006-04-24."
   },
   {
     "GameID": 2008030301,

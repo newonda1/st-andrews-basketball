@@ -13,6 +13,10 @@ import {
   hydrateGamesWithSchools,
 } from "../dataUtils";
 import { athleteProfilePath, isPre2015Season } from "../../../athletes/archiveEra";
+import {
+  fetchBasketballStats,
+  resolveSeasonBriefs,
+} from "../../../basketball/archive/seasonMeta";
 
 const STAT_FIELDS = [
   "Minutes",
@@ -441,7 +445,7 @@ function MaxPrepsSeasonPage({
     async function fetchData() {
       const [
         gamesRes,
-        statsRes,
+        statsData,
         playersRes,
         bracketsRes,
         rostersRes,
@@ -450,7 +454,7 @@ function MaxPrepsSeasonPage({
         adjustmentsRes,
       ] = await Promise.all([
         fetch("/data/boys/basketball/games.json"),
-        fetch("/data/boys/basketball/playergamestats.json"),
+        fetchBasketballStats("/data/boys/basketball/", seasonId),
         fetch("/data/players.json"),
         fetch("/data/boys/basketball/brackets.json"),
         fetch(BOYS_BASKETBALL_ROSTERS_PATH),
@@ -461,7 +465,6 @@ function MaxPrepsSeasonPage({
 
       const [
         gamesData,
-        statsData,
         playersData,
         bracketsJson,
         rostersData,
@@ -470,7 +473,6 @@ function MaxPrepsSeasonPage({
         adjustmentsData,
       ] = await Promise.all([
         gamesRes.json(),
-        statsRes.json(),
         playersRes.json(),
         bracketsRes.json(),
         rostersRes.json(),
@@ -690,6 +692,11 @@ function MaxPrepsSeasonPage({
     ["steals", leaderText(leaders.steals, "Steals")],
   ].filter(([, text]) => text);
 
+  const resolvedSeasonBriefs = useMemo(
+    () => resolveSeasonBriefs({ seasonInfo, seasonSummary, seasonBriefs }),
+    [seasonInfo, seasonSummary, seasonBriefs]
+  );
+
   const formatDate = (gameOrId) => {
     if (gameOrId?.DisplayDate) return gameOrId.DisplayDate;
     const value = Number(gameOrId?.Date ?? gameOrId?.GameID ?? gameOrId);
@@ -779,7 +786,7 @@ function MaxPrepsSeasonPage({
         <SeasonRecapSection
           title={seasonRecapTitle}
           recap={seasonRecap}
-          briefItems={seasonBriefs}
+          briefItems={resolvedSeasonBriefs}
           article={recapArticle}
         />
       ) : (

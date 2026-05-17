@@ -48,7 +48,11 @@
       "Lee Stubbs scored twice in the state semifinal win over James Island Christian.",
       "Toni Popovic was listed with eight goals in five matches before his regular-season injury.",
       "Justin Dixon, Quint Dixon, and Lee Stubbs were listed as St. Andrew's Ashley Dearing Award candidates in April 2000."
-    ]
+    ],
+    "ArchiveStatus": "archived",
+    "ArchiveStatusNote": "NewsBank recovery includes the three scored SCISA Class AA playoff wins plus 13 regular-season record-path placeholders needed to reconcile the published 12-4 final record. Points for/against reflect recovered scored games only.",
+    "RecordSource": "seasons.json source-of-truth row; event pages reconcile to this record.",
+    "FinishLabel": "SCISA Class AA State Champion / St. Andrew's defeated Greenwood Christian 2-0 at Porter-Gaud to win the SCISA Class AA boys soccer championship and finish 12-4."
   },
   {
     "SeasonID": 2001,
@@ -98,7 +102,11 @@
       "Quint Dixon scored twice in the state quarterfinal win over Calhoun Academy.",
       "Cam Aldrich was credited with at least 25 saves in recovered reports and also scored four goals in the early Patrick Henry win.",
       "Cam Aldrich, Davy Clay, Justin Dixon, Chris Lowe, and Jeff Smith were listed as St. Andrew's Ashley Dearing Award candidates in April 2001."
-    ]
+    ],
+    "ArchiveStatus": "archived",
+    "ArchiveStatusNote": "NewsBank recovery includes 10 scored reports, one early Patrick Henry win with player-of-week goal totals but no final score, and two record-path placeholders needed to reconcile the published 9-4 final record. Points for/against reflect recovered scored games only.",
+    "RecordSource": "seasons.json source-of-truth row; event pages reconcile to this record.",
+    "FinishLabel": "SCISA Class AA State Semifinalist / St. Andrew's reached the SCISA Class AA state semifinals and finished 9-4 after a penalty-kick semifinal loss to James F. Byrnes Academy."
   },
   {
     "SeasonID": 2002,
@@ -148,7 +156,11 @@
       "Will Massey had two assists against Harvest Baptist and scored against James Island Christian.",
       "Nick Kenny was credited with 16 saves across the recovered Harvest Baptist, James Island Christian, and Byrnes Academy reports.",
       "The broad OCR sweep surfaced the missing March 15 Harvest Baptist result."
-    ]
+    ],
+    "ArchiveStatus": "archived",
+    "ArchiveStatusNote": "NewsBank recovery includes four scored regular-season reports, a state quarterfinal win over James F. Byrnes, and the state semifinal loss to Hilton Head Christian. Record-path placeholders reconcile the published 3-0, 4-0, 4-1, 9-7-1, and 9-8-1 lines; points for/against reflect recovered scored games only.",
+    "RecordSource": "seasons.json source-of-truth row; event pages reconcile to this record.",
+    "FinishLabel": "SCISA Class A/AA State Semifinalist / St. Andrew's reached the SCISA Class A/AA state semifinals and finished 9-8-1 after a semifinal loss to Hilton Head Christian."
   },
   {
     "SeasonID": 2003,
@@ -200,7 +212,11 @@
       "St. Andrew's outscored opponents 84-9, including 80-8 before the state final.",
       "Jacob Rauers scored three goals in the championship win over James Island Christian.",
       "Lyle McKenzie, Beau Hinton, Omar Glenn, and Jacob Rauers were the leading scorers in the recovered season record."
-    ]
+    ],
+    "ArchiveStatus": "archived",
+    "ArchiveStatusNote": "Archive build in progress. NewsBank confirms the 15-1 final record, 80-8 scoring margin entering the state final, and 84-9 final scoring margin. The schedule now includes five record-path placeholders: three unreported wins between Apr. 5-29, a broad-search Patrick Henry result from early May with exact citation pending, and one additional early-May unreported win before the May 9 Harvest Baptist result.",
+    "RecordSource": "seasons.json source-of-truth row; event pages reconcile to this record.",
+    "FinishLabel": "Region Champion / State Champion / St. Andrew's defeated James Island Christian 4-1 at Porter-Gaud to win the SCISA Class AA boys soccer championship and finish 15-1."
   },
   {
     "SeasonID": 2004,
@@ -253,7 +269,11 @@
       "Hamish Huntley scored 19 goals across the recovered games.",
       "Daniel Eichholz scored twice and had two assists in the state final.",
       "Jacob Rauers scored in the state semifinal and state championship matches."
-    ]
+    ],
+    "ArchiveStatus": "archived",
+    "ArchiveStatusNote": "Archive build in progress. The season currently includes 12 known games, including an inferred May 8 region championship win over Beaufort Academy with no reported score. The adjusted final record is 13-1-1, matching the published state championship record line. The May 13 semifinal recap indicated at least one additional unreported win in the recovered schedule.",
+    "RecordSource": "seasons.json source-of-truth row; event pages reconcile to this record.",
+    "FinishLabel": "Region Champion / State Champion / St. Andrew's won its second straight SCISA Class A/AA boys soccer championship with a 5-1 win over James Island Christian at Heathwood Hall."
   },
   {
     "SeasonID": 2005,
@@ -303,7 +323,11 @@
       "Emmett Eason made 39 saves across six recovered box scores.",
       "St. Andrew's finished 2-0 in SCISA Region 1-AA and received the region's top state-tournament seed.",
       "The published final record was 3-6, with one win still unidentified in the recovered articles."
-    ]
+    ],
+    "ArchiveStatus": "archived",
+    "ArchiveStatusNote": "Archive build in progress. The recovered NewsBank lines identify eight scored games plus one placeholder win needed to reconcile the May 12 Savannah Morning News final record of 3-6. The unidentified win is temporarily categorized as non-region, and points for/against reflect only recovered scored games.",
+    "RecordSource": "seasons.json source-of-truth row; event pages reconcile to this record.",
+    "FinishLabel": "Region 1-AA top seed / SCISA Class AA state tournament / St. Andrew's went 3-6 in Spring 2005, earned the top spot from SCISA Region 1-AA, and exited the SCISA Class AA state tournament against Byrnes Academy."
   },
   {
     "SeasonID": 2006,
@@ -314,9 +338,9 @@
     "HeadCoach": "",
     "League": "SCISA",
     "Division": "SCISA",
-    "OverallRecord": "1-0",
-    "OverallWins": 1,
-    "OverallLosses": 0,
+    "OverallRecord": "7-3",
+    "OverallWins": 7,
+    "OverallLosses": 3,
     "OverallTies": 0,
     "RegionRecord": null,
     "RegionWins": null,
@@ -331,7 +355,7 @@
     "PlayoffLosses": null,
     "PlayoffTies": null,
     "RegionFinish": null,
-    "StateFinish": null,
+    "StateFinish": "SCISA Class AA/A state semifinalist",
     "HomeWins": null,
     "HomeLosses": null,
     "HomeTies": null,
@@ -349,6 +373,10 @@
     "HighlightNotes": [
       "Javier Gutierrez, Ty Massey, and Andrew Chapman scored two goals apiece against Charleston Collegiate.",
       "Emmett Eason made 13 saves in the shutout."
-    ]
+    ],
+    "ArchiveStatus": "archived",
+    "ArchiveStatusNote": "Archive build in progress. The recovered Spring 2006 schedule now reconciles to 7-3, including two unknown-opponent record-path placeholders and the state semifinal loss to Thomas Sumter Academy.",
+    "RecordSource": "seasons.json source-of-truth row updated from recovered Spring 2006 schedule and playoff record path.",
+    "FinishLabel": "SCISA Class AA/A state semifinalist / St. Andrew's finished the recovered Spring 2006 record path at 7-3."
   }
 ]

@@ -1,0 +1,232 @@
+[
+  {
+    "season": 1999,
+    "file": "1999.json",
+    "rows": 84,
+    "games": 19,
+    "Season": 1999,
+    "Path": "/data/girls/basketball/playergamestats/1999.json",
+    "Rows": 84,
+    "Games": 19
+  },
+  {
+    "season": 2000,
+    "file": "2000.json",
+    "rows": 87,
+    "games": 18,
+    "Season": 2000,
+    "Path": "/data/girls/basketball/playergamestats/2000.json",
+    "Rows": 87,
+    "Games": 18
+  },
+  {
+    "season": 2001,
+    "file": "2001.json",
+    "rows": 141,
+    "games": 23,
+    "Season": 2001,
+    "Path": "/data/girls/basketball/playergamestats/2001.json",
+    "Rows": 141,
+    "Games": 23
+  },
+  {
+    "season": 2002,
+    "file": "2002.json",
+    "rows": 131,
+    "games": 23,
+    "Season": 2002,
+    "Path": "/data/girls/basketball/playergamestats/2002.json",
+    "Rows": 131,
+    "Games": 23
+  },
+  {
+    "season": 2003,
+    "file": "2003.json",
+    "rows": 133,
+    "games": 23,
+    "Season": 2003,
+    "Path": "/data/girls/basketball/playergamestats/2003.json",
+    "Rows": 133,
+    "Games": 23
+  },
+  {
+    "season": 2004,
+    "file": "2004.json",
+    "rows": 161,
+    "games": 29,
+    "Season": 2004,
+    "Path": "/data/girls/basketball/playergamestats/2004.json",
+    "Rows": 161,
+    "Games": 29
+  },
+  {
+    "season": 2005,
+    "file": "2005.json",
+    "rows": 169,
+    "games": 26,
+    "Season": 2005,
+    "Path": "/data/girls/basketball/playergamestats/2005.json",
+    "Rows": 169,
+    "Games": 26
+  },
+  {
+    "season": 2009,
+    "file": "2009.json",
+    "rows": 133,
+    "games": 20,
+    "Season": 2009,
+    "Path": "/data/girls/basketball/playergamestats/2009.json",
+    "Rows": 133,
+    "Games": 20
+  },
+  {
+    "season": 2010,
+    "file": "2010.json",
+    "rows": 119,
+    "games": 19,
+    "Season": 2010,
+    "Path": "/data/girls/basketball/playergamestats/2010.json",
+    "Rows": 119,
+    "Games": 19
+  },
+  {
+    "season": 2011,
+    "file": "2011.json",
+    "rows": 132,
+    "games": 20,
+    "Season": 2011,
+    "Path": "/data/girls/basketball/playergamestats/2011.json",
+    "Rows": 132,
+    "Games": 20
+  },
+  {
+    "season": 2012,
+    "file": "2012.json",
+    "rows": 184,
+    "games": 21,
+    "Season": 2012,
+    "Path": "/data/girls/basketball/playergamestats/2012.json",
+    "Rows": 184,
+    "Games": 21
+  },
+  {
+    "season": 2013,
+    "file": "2013.json",
+    "rows": 182,
+    "games": 20,
+    "Season": 2013,
+    "Path": "/data/girls/basketball/playergamestats/2013.json",
+    "Rows": 182,
+    "Games": 20
+  },
+  {
+    "season": 2014,
+    "file": "2014.json",
+    "rows": 150,
+    "games": 18,
+    "Season": 2014,
+    "Path": "/data/girls/basketball/playergamestats/2014.json",
+    "Rows": 150,
+    "Games": 18
+  },
+  {
+    "season": 2015,
+    "file": "2015.json",
+    "rows": 159,
+    "games": 20,
+    "Season": 2015,
+    "Path": "/data/girls/basketball/playergamestats/2015.json",
+    "Rows": 159,
+    "Games": 20
+  },
+  {
+    "season": 2016,
+    "file": "2016.json",
+    "rows": 154,
+    "games": 17,
+    "Season": 2016,
+    "Path": "/data/girls/basketball/playergamestats/2016.json",
+    "Rows": 154,
+    "Games": 17
+  },
+  {
+    "season": 2017,
+    "file": "2017.json",
+    "rows": 112,
+    "games": 16,
+    "Season": 2017,
+    "Path": "/data/girls/basketball/playergamestats/2017.json",
+    "Rows": 112,
+    "Games": 16
+  },
+  {
+    "season": 2019,
+    "file": "2019.json",
+    "rows": 114,
+    "games": 16,
+    "Season": 2019,
+    "Path": "/data/girls/basketball/playergamestats/2019.json",
+    "Rows": 114,
+    "Games": 16
+  },
+  {
+    "season": 2020,
+    "file": "2020.json",
+    "rows": 163,
+    "games": 19,
+    "Season": 2020,
+    "Path": "/data/girls/basketball/playergamestats/2020.json",
+    "Rows": 163,
+    "Games": 19
+  },
+  {
+    "season": 2021,
+    "file": "2021.json",
+    "rows": 77,
+    "games": 11,
+    "Season": 2021,
+    "Path": "/data/girls/basketball/playergamestats/2021.json",
+    "Rows": 77,
+    "Games": 11
+  },
+  {
+    "season": 2022,
+    "file": "2022.json",
+    "rows": 54,
+    "games": 7,
+    "Season": 2022,
+    "Path": "/data/girls/basketball/playergamestats/2022.json",
+    "Rows": 54,
+    "Games": 7
+  },
+  {
+    "season": 2023,
+    "file": "2023.json",
+    "rows": 209,
+    "games": 24,
+    "Season": 2023,
+    "Path": "/data/girls/basketball/playergamestats/2023.json",
+    "Rows": 209,
+    "Games": 24
+  },
+  {
+    "season": 2024,
+    "file": "2024.json",
+    "rows": 214,
+    "games": 23,
+    "Season": 2024,
+    "Path": "/data/girls/basketball/playergamestats/2024.json",
+    "Rows": 214,
+    "Games": 23
+  },
+  {
+    "season": 2025,
+    "file": "2025.json",
+    "rows": 252,
+    "games": 28,
+    "Season": 2025,
+    "Path": "/data/girls/basketball/playergamestats/2025.json",
+    "Rows": 252,
+    "Games": 28
+  }
+]

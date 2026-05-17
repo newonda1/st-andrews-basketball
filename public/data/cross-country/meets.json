@@ -106,7 +106,10 @@
         "Points": "132"
       }
     ],
-    "SourceCitation": "\"SEAHAWK CROSS COUNTRY INVITATIONAL,\" Savannah Morning News, 1999-09-05, Page 4C"
+    "SourceCitation": "\"SEAHAWK CROSS COUNTRY INVITATIONAL,\" Savannah Morning News, 1999-09-05, Page 4C",
+    "ResultCompleteness": "partial",
+    "SourceNote": "NewsBank result lists team standings for the 3.1-mile invitational. No St. Andrew's individual runners were printed.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "MeetID": 5290,
@@ -118,7 +121,11 @@
     "MeetType": "State",
     "Status": "Complete",
     "Notes": "Results loaded from MileSplit South Carolina raw result files. The public source exposed 14 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://sc.milesplit.com/meets/5290-scisa-championships-2003/results"
+    "SourceUrl": "https://sc.milesplit.com/meets/5290-scisa-championships-2003/results",
+    "ResultCompleteness": "partial",
+    "SourceNote": "Results loaded from MileSplit South Carolina raw result files. The public source exposed 14 St. Andrew's cross country result rows.",
+    "SourceSeasonLabel": "2003-04",
+    "SourceCitation": "MileSplit, \"SCISA Championships\", 2003-10-18, https://sc.milesplit.com/meets/5290-scisa-championships-2003/results."
   },
   {
     "MeetID": 8786,
@@ -157,7 +164,11 @@
         "Team": "St. Andrew's"
       }
     ],
-    "SourceUrl": "https://sc.milesplit.com/meets/8786-scisa-championships-2004/results"
+    "SourceUrl": "https://sc.milesplit.com/meets/8786-scisa-championships-2004/results",
+    "ResultCompleteness": "partial",
+    "SourceNote": "Official individual results loaded from MileSplit South Carolina raw result files. A supplied newspaper SCISA State Meet item adds team placements.",
+    "SourceSeasonLabel": "2004-05",
+    "SourceCitation": "MileSplit, \"SCISA Championships\", 2004-10-16, https://sc.milesplit.com/meets/8786-scisa-championships-2004/results."
   },
   {
     "MeetID": 20050827,
@@ -223,7 +234,11 @@
           "Michelle Griffin"
         ]
       }
-    ]
+    ],
+    "ResultCompleteness": "partial",
+    "SourceNote": "Archive recap supplied for the Augusta Prep mile relay. Relay times are indexed for each listed St. Andrew's runner.",
+    "SourceSeasonLabel": "2005-06",
+    "SourceCitation": "\"St. Andrew's cross country report,\" Savannah Morning News archive, event date 2005-08-27."
   },
   {
     "MeetID": 20050831,
@@ -276,7 +291,11 @@
         "Team": "St. Andrew's",
         "Note": "Did not have enough runners to place as a team."
       }
-    ]
+    ],
+    "ResultCompleteness": "partial",
+    "SourceNote": "Archive recap supplied for the 3.1-mile meet at St. George, South Carolina.",
+    "SourceSeasonLabel": "2005-06",
+    "SourceCitation": "\"St. Andrew's cross country report,\" Savannah Morning News archive, event date 2005-08-31."
   },
   {
     "MeetID": 20050907,
@@ -348,7 +367,11 @@
         "Team": "St. Andrew's",
         "Points": "142"
       }
-    ]
+    ],
+    "ResultCompleteness": "partial",
+    "SourceNote": "Archive recap supplied for the September 7 cross country meet at Augusta Prep.",
+    "SourceSeasonLabel": "2005-06",
+    "SourceCitation": "\"St. Andrew's cross country report,\" Savannah Morning News archive, event date 2005-09-07."
   },
   {
     "MeetID": 20051004,
@@ -414,7 +437,11 @@
         "Team": "Bluffton",
         "Points": "103"
       }
-    ]
+    ],
+    "ResultCompleteness": "partial",
+    "SourceNote": "Archive recap supplied for the 3.1-mile meet at Hilton Head Prep.",
+    "SourceSeasonLabel": "2005-06",
+    "SourceCitation": "\"St. Andrew's cross country report,\" Savannah Morning News archive, event date 2005-10-04."
   },
   {
     "MeetID": 13937,
@@ -426,7 +453,11 @@
     "MeetType": "State",
     "Status": "No Public Rows",
     "Notes": "MileSplit lists a results page for this meet, but the St. Andrew's team results page or raw files exposed no St. Andrew's performances.",
-    "SourceUrl": "https://sc.milesplit.com/meets/13937-scisa-championships-2005/results"
+    "SourceUrl": "https://sc.milesplit.com/meets/13937-scisa-championships-2005/results",
+    "ResultCompleteness": "partial",
+    "SourceNote": "MileSplit lists a results page for this meet, but the St. Andrew's team results page or raw files exposed no St. Andrew's performances.",
+    "SourceSeasonLabel": "2005-06",
+    "SourceCitation": "MileSplit, \"SCISA Championships\", 2005-10-29, https://sc.milesplit.com/meets/13937-scisa-championships-2005/results."
   },
   {
     "MeetID": 19394,
@@ -438,7 +469,8 @@
     "MeetType": "State",
     "Status": "No Public Rows",
     "Notes": "MileSplit lists a results page for this meet, but the St. Andrew's team results page or raw files exposed no St. Andrew's performances.",
-    "SourceUrl": "https://sc.milesplit.com/meets/19394-scisa-championships-2006/results"
+    "SourceUrl": "https://sc.milesplit.com/meets/19394-scisa-championships-2006/results",
+    "SourceCitation": "MileSplit, \"SCISA Championships\", 2006-10-28, https://sc.milesplit.com/meets/19394-scisa-championships-2006/results."
   },
   {
     "MeetID": 29433,
@@ -450,7 +482,8 @@
     "MeetType": "State",
     "Status": "Complete",
     "Notes": "Results loaded from MileSplit South Carolina raw result files. The public source exposed 6 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://sc.milesplit.com/meets/29433-scisa-championships-2007/results"
+    "SourceUrl": "https://sc.milesplit.com/meets/29433-scisa-championships-2007/results",
+    "SourceCitation": "MileSplit, \"SCISA Championships\", 2007-10-27, https://sc.milesplit.com/meets/29433-scisa-championships-2007/results."
   },
   {
     "MeetID": 43587,
@@ -462,7 +495,8 @@
     "MeetType": "State",
     "Status": "Complete",
     "Notes": "Results loaded from MileSplit South Carolina raw result files. The public source exposed 6 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://sc.milesplit.com/meets/43587-scisa-championships-2008/results"
+    "SourceUrl": "https://sc.milesplit.com/meets/43587-scisa-championships-2008/results",
+    "SourceCitation": "MileSplit, \"SCISA Championships\", 2008-10-18, https://sc.milesplit.com/meets/43587-scisa-championships-2008/results."
   },
   {
     "MeetID": 60679,
@@ -474,7 +508,8 @@
     "MeetType": "Region",
     "Status": "No Public Rows",
     "Notes": "MileSplit lists a results page for this meet, but the St. Andrew's team results page or raw files exposed no St. Andrew's performances.",
-    "SourceUrl": "https://sc.milesplit.com/meets/60679-scisa-aaa-region-2009/results"
+    "SourceUrl": "https://sc.milesplit.com/meets/60679-scisa-aaa-region-2009/results",
+    "SourceCitation": "MileSplit, \"SCISA AAA Region\", 2009-10-21, https://sc.milesplit.com/meets/60679-scisa-aaa-region-2009/results."
   },
   {
     "MeetID": 59136,
@@ -486,7 +521,8 @@
     "MeetType": "State",
     "Status": "Complete",
     "Notes": "Results loaded from MileSplit South Carolina raw result files. The public source exposed 7 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://sc.milesplit.com/meets/59136-scisa-championships-2009/results"
+    "SourceUrl": "https://sc.milesplit.com/meets/59136-scisa-championships-2009/results",
+    "SourceCitation": "MileSplit, \"SCISA Championships\", 2009-10-31, https://sc.milesplit.com/meets/59136-scisa-championships-2009/results."
   },
   {
     "MeetID": 72860,
@@ -498,7 +534,8 @@
     "MeetType": "State",
     "Status": "Complete",
     "Notes": "Results loaded from MileSplit South Carolina raw result files. The public source exposed 6 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://sc.milesplit.com/meets/72860-scisa-championships-2010/results"
+    "SourceUrl": "https://sc.milesplit.com/meets/72860-scisa-championships-2010/results",
+    "SourceCitation": "MileSplit, \"SCISA Championships\", 2010-10-30, https://sc.milesplit.com/meets/72860-scisa-championships-2010/results."
   },
   {
     "MeetID": 98946,
@@ -510,7 +547,8 @@
     "MeetType": "State",
     "Status": "Complete",
     "Notes": "Results loaded from MileSplit South Carolina raw result files. The public source exposed 8 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://sc.milesplit.com/meets/98946-scisa-championships-2011/results"
+    "SourceUrl": "https://sc.milesplit.com/meets/98946-scisa-championships-2011/results",
+    "SourceCitation": "MileSplit, \"SCISA Championships\", 2011-10-29, https://sc.milesplit.com/meets/98946-scisa-championships-2011/results."
   },
   {
     "MeetID": 122697,
@@ -522,7 +560,8 @@
     "MeetType": "State",
     "Status": "No Public Rows",
     "Notes": "MileSplit lists a results page for this meet, but the St. Andrew's team results page or raw files exposed no St. Andrew's performances.",
-    "SourceUrl": "https://sc.milesplit.com/meets/122697-scisa-championships-2012/results"
+    "SourceUrl": "https://sc.milesplit.com/meets/122697-scisa-championships-2012/results",
+    "SourceCitation": "MileSplit, \"SCISA Championships\", 2012-10-27, https://sc.milesplit.com/meets/122697-scisa-championships-2012/results."
   },
   {
     "MeetID": 152738,
@@ -534,7 +573,8 @@
     "MeetType": "State",
     "Status": "No Public Rows",
     "Notes": "MileSplit lists a results page for this meet, but the St. Andrew's team results page or raw files exposed no St. Andrew's performances.",
-    "SourceUrl": "https://sc.milesplit.com/meets/152738-scisa-championships-2013/results"
+    "SourceUrl": "https://sc.milesplit.com/meets/152738-scisa-championships-2013/results",
+    "SourceCitation": "MileSplit, \"SCISA Championships\", 2013-10-26, https://sc.milesplit.com/meets/152738-scisa-championships-2013/results."
   },
   {
     "MeetID": 179250,
@@ -546,7 +586,8 @@
     "MeetType": "State",
     "Status": "Complete",
     "Notes": "Results loaded from MileSplit South Carolina raw result files. The public source exposed 13 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://sc.milesplit.com/meets/179250-scisa-championships-2014/results"
+    "SourceUrl": "https://sc.milesplit.com/meets/179250-scisa-championships-2014/results",
+    "SourceCitation": "MileSplit, \"SCISA Championships\", 2014-10-25, https://sc.milesplit.com/meets/179250-scisa-championships-2014/results."
   },
   {
     "MeetID": 215393,
@@ -558,7 +599,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from MileSplit team results pages. The public source exposed 7 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/215393/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/215393/teams/28890",
+    "SourceCitation": "MileSplit, \"4th Annual Stinger Invitational\", 2015-09-24, https://ga.milesplit.com/meets/215393/teams/28890."
   },
   {
     "MeetID": 215161,
@@ -570,7 +612,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from MileSplit team results pages. The public source exposed 15 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/215161/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/215161/teams/28890",
+    "SourceCitation": "MileSplit, \"Richmond Hill Fishy XC Invitational (6th Annual)\", 2015-10-15, https://ga.milesplit.com/meets/215161/teams/28890."
   },
   {
     "MeetID": 217328,
@@ -582,7 +625,8 @@
     "MeetType": "State",
     "Status": "Complete",
     "Notes": "Results loaded from MileSplit South Carolina raw result files. The public source exposed 9 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://sc.milesplit.com/meets/217328-scisa-championships-2015/results"
+    "SourceUrl": "https://sc.milesplit.com/meets/217328-scisa-championships-2015/results",
+    "SourceCitation": "MileSplit, \"SCISA Championships\", 2015-10-31, https://sc.milesplit.com/meets/217328-scisa-championships-2015/results."
   },
   {
     "MeetID": 237219,
@@ -594,7 +638,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from MileSplit team results pages. The public source exposed 26 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/237219/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/237219/teams/28890",
+    "SourceCitation": "MileSplit, \"Saucony XC Kickoff Classic\", 2016-08-27, https://ga.milesplit.com/meets/237219/teams/28890."
   },
   {
     "MeetID": 244439,
@@ -606,7 +651,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from MileSplit team results pages. The public source exposed 18 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/244439/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/244439/teams/28890",
+    "SourceCitation": "MileSplit, \"Stinger Invitational\", 2016-09-22, https://ga.milesplit.com/meets/244439/teams/28890."
   },
   {
     "MeetID": 244440,
@@ -618,7 +664,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from MileSplit team results pages. The public source exposed 35 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/244440/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/244440/teams/28890",
+    "SourceCitation": "MileSplit, \"SCPS Home Race\", 2016-09-29, https://ga.milesplit.com/meets/244440/teams/28890."
   },
   {
     "MeetID": 219535,
@@ -630,7 +677,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from MileSplit team results pages. The public source exposed 9 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://sc.milesplit.com/meets/219535/teams/28890"
+    "SourceUrl": "https://sc.milesplit.com/meets/219535/teams/28890",
+    "SourceCitation": "MileSplit, \"Low Country Invitational\", 2016-10-01, https://sc.milesplit.com/meets/219535/teams/28890."
   },
   {
     "MeetID": 242377,
@@ -642,7 +690,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from MileSplit team results pages. The public source exposed 10 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/242377/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/242377/teams/28890",
+    "SourceCitation": "MileSplit, \"Caesarstone Fishy XC Invite, 7th Annual \", 2016-10-13, https://ga.milesplit.com/meets/242377/teams/28890."
   },
   {
     "MeetID": 251942,
@@ -654,7 +703,8 @@
     "MeetType": "State",
     "Status": "Scheduled",
     "Notes": "MileSplit lists this meet on the St. Andrew's cross country schedule, but no public results link was available from the team schedule.",
-    "SourceUrl": "https://ga.milesplit.com/meets/251942"
+    "SourceUrl": "https://ga.milesplit.com/meets/251942",
+    "SourceCitation": "MileSplit, \"Savannah Area Private School XC Championship\", 2016-10-18, https://ga.milesplit.com/meets/251942."
   },
   {
     "MeetID": 249462,
@@ -666,7 +716,8 @@
     "MeetType": "State",
     "Status": "Complete",
     "Notes": "Results loaded from MileSplit South Carolina raw result files. The public source exposed 9 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://sc.milesplit.com/meets/249462-scisa-championships-2016/results"
+    "SourceUrl": "https://sc.milesplit.com/meets/249462-scisa-championships-2016/results",
+    "SourceCitation": "MileSplit, \"SCISA Championships\", 2016-10-29, https://sc.milesplit.com/meets/249462-scisa-championships-2016/results."
   },
   {
     "MeetID": 282465,
@@ -678,7 +729,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from MileSplit team results pages. The public source exposed 10 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/282465/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/282465/teams/28890",
+    "SourceCitation": "MileSplit, \"Saucony XC Kickoff Classic\", 2017-08-26, https://ga.milesplit.com/meets/282465/teams/28890."
   },
   {
     "MeetID": 280023,
@@ -690,7 +742,8 @@
     "MeetType": "Regular Season",
     "Status": "Scheduled",
     "Notes": "MileSplit lists this meet on the St. Andrew's cross country schedule, but no public results link was available from the team schedule.",
-    "SourceUrl": "https://ga.milesplit.com/meets/280023"
+    "SourceUrl": "https://ga.milesplit.com/meets/280023",
+    "SourceCitation": "MileSplit, \"The 7th Annual Stinger Inv.- CANCELLED\", 2017-09-12, https://ga.milesplit.com/meets/280023."
   },
   {
     "MeetID": 280030,
@@ -702,7 +755,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from MileSplit team results pages. The public source exposed 20 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/280030/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/280030/teams/28890",
+    "SourceCitation": "MileSplit, \"SCPS Home Race\", 2017-09-28, https://ga.milesplit.com/meets/280030/teams/28890."
   },
   {
     "MeetID": 278782,
@@ -714,7 +768,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from MileSplit team results pages. The public source exposed 10 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/278782/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/278782/teams/28890",
+    "SourceCitation": "MileSplit, \"Hill on Wheels Fishy Invite\", 2017-10-12, https://ga.milesplit.com/meets/278782/teams/28890."
   },
   {
     "MeetID": 282451,
@@ -726,7 +781,8 @@
     "MeetType": "State",
     "Status": "Complete",
     "Notes": "Results loaded from MileSplit team results pages. The public source exposed 13 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/282451/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/282451/teams/28890",
+    "SourceCitation": "MileSplit, \"Savannah Area Private School XC Championship\", 2017-10-17, https://ga.milesplit.com/meets/282451/teams/28890."
   },
   {
     "MeetID": 291024,
@@ -738,7 +794,8 @@
     "MeetType": "State",
     "Status": "Complete",
     "Notes": "Results loaded from MileSplit team results pages. The public source exposed 9 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://sc.milesplit.com/meets/291024/teams/28890"
+    "SourceUrl": "https://sc.milesplit.com/meets/291024/teams/28890",
+    "SourceCitation": "MileSplit, \"SCISA Championships\", 2017-10-28, https://sc.milesplit.com/meets/291024/teams/28890."
   },
   {
     "MeetID": 323169,
@@ -750,7 +807,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 23 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/323169-saucony-xc-kickoff-classic-2018/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/323169-saucony-xc-kickoff-classic-2018/teams/28890",
+    "SourceCitation": "MileSplit, \"Saucony XC Kickoff Classic\", 2018-08-25, https://ga.milesplit.com/meets/323169-saucony-xc-kickoff-classic-2018/teams/28890."
   },
   {
     "MeetID": 325008,
@@ -762,7 +820,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 16 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/325008-hornet-invite-skidaway-park-2018/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/325008-hornet-invite-skidaway-park-2018/teams/28890",
+    "SourceCitation": "MileSplit, \"Hornet Invite @ Skidaway Park\", 2018-09-06, https://ga.milesplit.com/meets/325008-hornet-invite-skidaway-park-2018/teams/28890."
   },
   {
     "MeetID": 321915,
@@ -774,7 +833,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 24 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/321915-stinger-invitational-2018/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/321915-stinger-invitational-2018/teams/28890",
+    "SourceCitation": "MileSplit, \"Stinger Invitational\", 2018-09-18, https://ga.milesplit.com/meets/321915-stinger-invitational-2018/teams/28890."
   },
   {
     "MeetID": 321917,
@@ -786,7 +846,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 21 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/321917-scps-home-race-2018/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/321917-scps-home-race-2018/teams/28890",
+    "SourceCitation": "MileSplit, \"SCPS Home Race\", 2018-09-27, https://ga.milesplit.com/meets/321917-scps-home-race-2018/teams/28890."
   },
   {
     "MeetID": 318495,
@@ -798,7 +859,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 18 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/318495-hill-on-wheels-fishy-invite-2018/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/318495-hill-on-wheels-fishy-invite-2018/teams/28890",
+    "SourceCitation": "MileSplit, \"Hill on Wheels Fishy Invite\", 2018-10-13, https://ga.milesplit.com/meets/318495-hill-on-wheels-fishy-invite-2018/teams/28890."
   },
   {
     "MeetID": 330604,
@@ -810,7 +872,8 @@
     "MeetType": "Region",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 14 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/330604-gisa-region-2aaa2aa-2018/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/330604-gisa-region-2aaa2aa-2018/teams/28890",
+    "SourceCitation": "MileSplit, \"GISA Region 2AAA/2AA\", 2018-10-15, https://ga.milesplit.com/meets/330604-gisa-region-2aaa2aa-2018/teams/28890."
   },
   {
     "MeetID": 325011,
@@ -822,7 +885,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 15 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/325011-2nd-savannah-area-private-school-xc-championship-2018/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/325011-2nd-savannah-area-private-school-xc-championship-2018/teams/28890",
+    "SourceCitation": "MileSplit, \"2nd Savannah Area Private School XC Championship\", 2018-10-16, https://ga.milesplit.com/meets/325011-2nd-savannah-area-private-school-xc-championship-2018/teams/28890."
   },
   {
     "MeetID": 325488,
@@ -834,7 +898,8 @@
     "MeetType": "State",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 11 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/325488-gisa-state-championships-2018/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/325488-gisa-state-championships-2018/teams/28890",
+    "SourceCitation": "MileSplit, \"GISA State Championships\", 2018-10-27, https://ga.milesplit.com/meets/325488-gisa-state-championships-2018/teams/28890."
   },
   {
     "MeetID": 364794,
@@ -846,7 +911,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 21 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/364794-saucony-xc-kickoff-classic-2019/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/364794-saucony-xc-kickoff-classic-2019/teams/28890",
+    "SourceCitation": "MileSplit, \"Saucony XC Kickoff Classic\", 2019-08-24, https://ga.milesplit.com/meets/364794-saucony-xc-kickoff-classic-2019/teams/28890."
   },
   {
     "MeetID": 298098,
@@ -858,7 +924,8 @@
     "MeetType": "Regular Season",
     "Status": "No St. Andrew's Results",
     "Notes": "MileSplit lists a results page for this meet, but the St. Andrew's team results page reports no performances found for St. Andrews School.",
-    "SourceUrl": "https://fl.milesplit.com/meets/298098-6th-annual-florida-horse-park-invitational-presented-by-b3r-2019/teams/28890"
+    "SourceUrl": "https://fl.milesplit.com/meets/298098-6th-annual-florida-horse-park-invitational-presented-by-b3r-2019/teams/28890",
+    "SourceCitation": "MileSplit, \"6th Annual Florida Horse Park Invitational Presented by B3R\", 2019-09-07, https://fl.milesplit.com/meets/298098-6th-annual-florida-horse-park-invitational-presented-by-b3r-2019/teams/28890."
   },
   {
     "MeetID": 361351,
@@ -870,7 +937,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 19 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/361351-hornet-invite-skidaway-park-2019/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/361351-hornet-invite-skidaway-park-2019/teams/28890",
+    "SourceCitation": "MileSplit, \"Hornet Invite @ Skidaway Park\", 2019-09-10, https://ga.milesplit.com/meets/361351-hornet-invite-skidaway-park-2019/teams/28890."
   },
   {
     "MeetID": 360763,
@@ -882,7 +950,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 19 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/360763-stinger-invitational-2019/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/360763-stinger-invitational-2019/teams/28890",
+    "SourceCitation": "MileSplit, \"Stinger Invitational\", 2019-09-17, https://ga.milesplit.com/meets/360763-stinger-invitational-2019/teams/28890."
   },
   {
     "MeetID": 368158,
@@ -894,7 +963,8 @@
     "MeetType": "Regular Season",
     "Status": "No St. Andrew's Results",
     "Notes": "MileSplit lists a results page for this meet, but the St. Andrew's team results page reports no performances found for St. Andrews School.",
-    "SourceUrl": "https://ga.milesplit.com/meets/368158-sccpss-meet-2-2019/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/368158-sccpss-meet-2-2019/teams/28890",
+    "SourceCitation": "MileSplit, \"SCCPSS Meet 2\", 2019-09-18, https://ga.milesplit.com/meets/368158-sccpss-meet-2-2019/teams/28890."
   },
   {
     "MeetID": 360765,
@@ -906,7 +976,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 23 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/360765-raider-invitational-2019/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/360765-raider-invitational-2019/teams/28890",
+    "SourceCitation": "MileSplit, \"Raider Invitational\", 2019-09-24, https://ga.milesplit.com/meets/360765-raider-invitational-2019/teams/28890."
   },
   {
     "MeetID": 356291,
@@ -918,7 +989,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 11 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/356291-10th-annual-hill-on-wheels-fishy-invite-2019/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/356291-10th-annual-hill-on-wheels-fishy-invite-2019/teams/28890",
+    "SourceCitation": "MileSplit, \"10th Annual Hill on Wheels Fishy Invite\", 2019-10-12, https://ga.milesplit.com/meets/356291-10th-annual-hill-on-wheels-fishy-invite-2019/teams/28890."
   },
   {
     "MeetID": 361435,
@@ -930,7 +1002,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 22 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/361435-savannah-area-private-school-xc-championship-2019/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/361435-savannah-area-private-school-xc-championship-2019/teams/28890",
+    "SourceCitation": "MileSplit, \"Savannah Area Private School XC Championship\", 2019-10-17, https://ga.milesplit.com/meets/361435-savannah-area-private-school-xc-championship-2019/teams/28890."
   },
   {
     "MeetID": 372886,
@@ -942,7 +1015,8 @@
     "MeetType": "Region",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 12 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/372886-gisa-region-2-aa-meet-2019/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/372886-gisa-region-2-aa-meet-2019/teams/28890",
+    "SourceCitation": "MileSplit, \"GISA Region 2-AA Meet\", 2019-10-22, https://ga.milesplit.com/meets/372886-gisa-region-2-aa-meet-2019/teams/28890."
   },
   {
     "MeetID": 360576,
@@ -954,7 +1028,8 @@
     "MeetType": "State",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 12 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/360576-gisa-state-championship-2019/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/360576-gisa-state-championship-2019/teams/28890",
+    "SourceCitation": "MileSplit, \"GISA State Championship\", 2019-11-02, https://ga.milesplit.com/meets/360576-gisa-state-championship-2019/teams/28890."
   },
   {
     "MeetID": 389764,
@@ -966,7 +1041,8 @@
     "MeetType": "Regular Season",
     "Status": "No Results Link",
     "Notes": "The MileSplit St. Andrew's Cross Country schedule lists this meet, but no public results link was available from the team schedule.",
-    "SourceUrl": "https://ga.milesplit.com/meets/389764"
+    "SourceUrl": "https://ga.milesplit.com/meets/389764",
+    "SourceCitation": "MileSplit, \"Hoka One XC kickoff classic\", 2020-08-29, https://ga.milesplit.com/meets/389764."
   },
   {
     "MeetID": 389667,
@@ -978,7 +1054,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 9 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/389667-frazier-hite-invitational-2020/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/389667-frazier-hite-invitational-2020/teams/28890",
+    "SourceCitation": "MileSplit, \"Frazier-Hite Invitational\", 2020-09-03, https://ga.milesplit.com/meets/389667-frazier-hite-invitational-2020/teams/28890."
   },
   {
     "MeetID": 390063,
@@ -990,7 +1067,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 8 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/390063-hornet-invite-skidaway-park-2020/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/390063-hornet-invite-skidaway-park-2020/teams/28890",
+    "SourceCitation": "MileSplit, \"Hornet Invite @ Skidaway Park\", 2020-09-17, https://ga.milesplit.com/meets/390063-hornet-invite-skidaway-park-2020/teams/28890."
   },
   {
     "MeetID": 389711,
@@ -1002,7 +1080,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 22 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/389711-hill-on-wheels-fishy-invite-2020/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/389711-hill-on-wheels-fishy-invite-2020/teams/28890",
+    "SourceCitation": "MileSplit, \"Hill on Wheels Fishy Invite\", 2020-10-08, https://ga.milesplit.com/meets/389711-hill-on-wheels-fishy-invite-2020/teams/28890."
   },
   {
     "MeetID": 396964,
@@ -1014,7 +1093,8 @@
     "MeetType": "Region",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 9 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/396964-gisa-region-2aaa-2020/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/396964-gisa-region-2aaa-2020/teams/28890",
+    "SourceCitation": "MileSplit, \"GISA Region 2AAA\", 2020-10-20, https://ga.milesplit.com/meets/396964-gisa-region-2aaa-2020/teams/28890."
   },
   {
     "MeetID": 394848,
@@ -1026,7 +1106,8 @@
     "MeetType": "State",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 6 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/394848-gisa-state-championship-2020/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/394848-gisa-state-championship-2020/teams/28890",
+    "SourceCitation": "MileSplit, \"GISA State Championship\", 2020-11-07, https://ga.milesplit.com/meets/394848-gisa-state-championship-2020/teams/28890."
   },
   {
     "MeetID": 437242,
@@ -1038,7 +1119,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 6 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/437242-frazier-hite-invitational-2021/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/437242-frazier-hite-invitational-2021/teams/28890",
+    "SourceCitation": "MileSplit, \"Frazier-Hite Invitational\", 2021-09-02, https://ga.milesplit.com/meets/437242-frazier-hite-invitational-2021/teams/28890."
   },
   {
     "MeetID": 434654,
@@ -1050,7 +1132,8 @@
     "MeetType": "Middle School",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 24 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/434654-honey-ridge-5kmiddle-21-mile-2021/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/434654-honey-ridge-5kmiddle-21-mile-2021/teams/28890",
+    "SourceCitation": "MileSplit, \"Honey Ridge 5K/Middle 2.1 mile\", 2021-09-23, https://ga.milesplit.com/meets/434654-honey-ridge-5kmiddle-21-mile-2021/teams/28890."
   },
   {
     "MeetID": 446621,
@@ -1062,7 +1145,8 @@
     "MeetType": "Middle School",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 24 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/446621-ms-savannah-country-day-meet-2021/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/446621-ms-savannah-country-day-meet-2021/teams/28890",
+    "SourceCitation": "MileSplit, \"MS Savannah Country Day meet\", 2021-09-29, https://ga.milesplit.com/meets/446621-ms-savannah-country-day-meet-2021/teams/28890."
   },
   {
     "MeetID": 447501,
@@ -1074,7 +1158,8 @@
     "MeetType": "Middle School",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 22 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/447501-ms-hornet-invite-at-savannah-country-day-2021/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/447501-ms-hornet-invite-at-savannah-country-day-2021/teams/28890",
+    "SourceCitation": "MileSplit, \"MS Hornet Invite at Savannah Country Day\", 2021-10-05, https://ga.milesplit.com/meets/447501-ms-hornet-invite-at-savannah-country-day-2021/teams/28890."
   },
   {
     "MeetID": 439465,
@@ -1086,7 +1171,8 @@
     "MeetType": "Regular Season",
     "Status": "No St. Andrew's Results",
     "Notes": "MileSplit lists a results page for this meet, but the St. Andrew's team results page reports no performances found for St. Andrews School.",
-    "SourceUrl": "https://ga.milesplit.com/meets/439465-hornet-invite-skidaway-park-2021/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/439465-hornet-invite-skidaway-park-2021/teams/28890",
+    "SourceCitation": "MileSplit, \"Hornet Invite @ Skidaway Park\", 2021-10-07, https://ga.milesplit.com/meets/439465-hornet-invite-skidaway-park-2021/teams/28890."
   },
   {
     "MeetID": 437245,
@@ -1098,7 +1184,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 7 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/437245-7th-mile-farm-invitational-2021/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/437245-7th-mile-farm-invitational-2021/teams/28890",
+    "SourceCitation": "MileSplit, \"7th Mile Farm Invitational\", 2021-10-14, https://ga.milesplit.com/meets/437245-7th-mile-farm-invitational-2021/teams/28890."
   },
   {
     "MeetID": 449118,
@@ -1110,7 +1197,8 @@
     "MeetType": "Middle School",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 28 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/449118-ms-savannah-private-schools-championship-2021/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/449118-ms-savannah-private-schools-championship-2021/teams/28890",
+    "SourceCitation": "MileSplit, \"MS Savannah Private Schools Championship\", 2021-10-19, https://ga.milesplit.com/meets/449118-ms-savannah-private-schools-championship-2021/teams/28890."
   },
   {
     "MeetID": 444207,
@@ -1122,7 +1210,8 @@
     "MeetType": "Region",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 7 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/444207-gisa-region-2aaa-meet-2021/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/444207-gisa-region-2aaa-meet-2021/teams/28890",
+    "SourceCitation": "MileSplit, \"GISA Region 2AAA Meet\", 2021-10-21, https://ga.milesplit.com/meets/444207-gisa-region-2aaa-meet-2021/teams/28890."
   },
   {
     "MeetID": 438813,
@@ -1134,7 +1223,8 @@
     "MeetType": "State",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 1 St. Andrew's cross country result row.",
-    "SourceUrl": "https://ga.milesplit.com/meets/438813-gisa-state-championship-2021/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/438813-gisa-state-championship-2021/teams/28890",
+    "SourceCitation": "MileSplit, \"GISA State Championship\", 2021-11-06, https://ga.milesplit.com/meets/438813-gisa-state-championship-2021/teams/28890."
   },
   {
     "MeetID": 495129,
@@ -1146,7 +1236,8 @@
     "MeetType": "Middle School",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 22 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/495129-sccpss-middle-school-xc-season-opener-2022/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/495129-sccpss-middle-school-xc-season-opener-2022/teams/28890",
+    "SourceCitation": "MileSplit, \"SCCPSS Middle School XC Season Opener\", 2022-08-31, https://ga.milesplit.com/meets/495129-sccpss-middle-school-xc-season-opener-2022/teams/28890."
   },
   {
     "MeetID": 487082,
@@ -1158,7 +1249,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 6 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/487082-frazier-hite-invitational-2022/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/487082-frazier-hite-invitational-2022/teams/28890",
+    "SourceCitation": "MileSplit, \"Frazier-Hite Invitational\", 2022-09-01, https://ga.milesplit.com/meets/487082-frazier-hite-invitational-2022/teams/28890."
   },
   {
     "MeetID": 495137,
@@ -1170,7 +1262,8 @@
     "MeetType": "Middle School",
     "Status": "No Results Link",
     "Notes": "The MileSplit St. Andrew's Cross Country schedule lists this meet, but no public results link was available from the team schedule.",
-    "SourceUrl": "https://ga.milesplit.com/meets/495137"
+    "SourceUrl": "https://ga.milesplit.com/meets/495137",
+    "SourceCitation": "MileSplit, \"SCCPSS Middle School XC Invite\", 2022-09-12, https://ga.milesplit.com/meets/495137."
   },
   {
     "MeetID": 495585,
@@ -1182,7 +1275,8 @@
     "MeetType": "Middle School",
     "Status": "No Results Link",
     "Notes": "The MileSplit St. Andrew's Cross Country schedule lists this meet, but no public results link was available from the team schedule.",
-    "SourceUrl": "https://ga.milesplit.com/meets/495585"
+    "SourceUrl": "https://ga.milesplit.com/meets/495585",
+    "SourceCitation": "MileSplit, \"SCCPSS Middle School XC Invite\", 2022-09-12, https://ga.milesplit.com/meets/495585."
   },
   {
     "MeetID": 486986,
@@ -1194,7 +1288,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 16 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/486986-stinger-cross-country-invitational-2022/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/486986-stinger-cross-country-invitational-2022/teams/28890",
+    "SourceCitation": "MileSplit, \"Stinger Cross Country Invitational\", 2022-09-21, https://ga.milesplit.com/meets/486986-stinger-cross-country-invitational-2022/teams/28890."
   },
   {
     "MeetID": 495592,
@@ -1206,7 +1301,8 @@
     "MeetType": "Middle School",
     "Status": "No St. Andrew's Results",
     "Notes": "MileSplit lists a results page for this meet, but the St. Andrew's team results page reports no performances found for St. Andrews School.",
-    "SourceUrl": "https://ga.milesplit.com/meets/495592-sccpss-middle-school-xc-last-call-meet-2022/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/495592-sccpss-middle-school-xc-last-call-meet-2022/teams/28890",
+    "SourceCitation": "MileSplit, \"SCCPSS Middle School XC Last Call Meet\", 2022-09-26, https://ga.milesplit.com/meets/495592-sccpss-middle-school-xc-last-call-meet-2022/teams/28890."
   },
   {
     "MeetID": 503513,
@@ -1218,7 +1314,8 @@
     "MeetType": "Region",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 8 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/503513-giaa-region-2aaa-meet-2022/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/503513-giaa-region-2aaa-meet-2022/teams/28890",
+    "SourceCitation": "MileSplit, \"GIAA Region 2AAA Meet\", 2022-09-27, https://ga.milesplit.com/meets/503513-giaa-region-2aaa-meet-2022/teams/28890."
   },
   {
     "MeetID": 486994,
@@ -1230,7 +1327,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 10 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/486994-raider-cross-country-invitational-2022/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/486994-raider-cross-country-invitational-2022/teams/28890",
+    "SourceCitation": "MileSplit, \"Raider Cross Country Invitational\", 2022-09-28, https://ga.milesplit.com/meets/486994-raider-cross-country-invitational-2022/teams/28890."
   },
   {
     "MeetID": 486847,
@@ -1242,7 +1340,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 9 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/486847-hornet-invitational-2022/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/486847-hornet-invitational-2022/teams/28890",
+    "SourceCitation": "MileSplit, \"Hornet Invitational\", 2022-10-06, https://ga.milesplit.com/meets/486847-hornet-invitational-2022/teams/28890."
   },
   {
     "MeetID": 487085,
@@ -1254,7 +1353,8 @@
     "MeetType": "Regular Season",
     "Status": "No St. Andrew's Results",
     "Notes": "MileSplit lists a results page for this meet, but the St. Andrew's team results page reports no performances found for St. Andrews School.",
-    "SourceUrl": "https://ga.milesplit.com/meets/487085-7th-mile-farm-invitational-2022/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/487085-7th-mile-farm-invitational-2022/teams/28890",
+    "SourceCitation": "MileSplit, \"7th Mile Farm Invitational\", 2022-10-13, https://ga.milesplit.com/meets/487085-7th-mile-farm-invitational-2022/teams/28890."
   },
   {
     "MeetID": 504406,
@@ -1266,7 +1366,8 @@
     "MeetType": "Middle School",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 19 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/504406-spal-cross-country-championships-2022-2022/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/504406-spal-cross-country-championships-2022-2022/teams/28890",
+    "SourceCitation": "MileSplit, \"SPAL Cross Country Championships 2022\", 2022-10-19, https://ga.milesplit.com/meets/504406-spal-cross-country-championships-2022-2022/teams/28890."
   },
   {
     "MeetID": 486848,
@@ -1278,7 +1379,8 @@
     "MeetType": "Regular Season",
     "Status": "No St. Andrew's Results",
     "Notes": "MileSplit lists a results page for this meet, but the St. Andrew's team results page reports no performances found for St. Andrews School.",
-    "SourceUrl": "https://ga.milesplit.com/meets/486848-savannah-private-school-championships-2022/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/486848-savannah-private-school-championships-2022/teams/28890",
+    "SourceCitation": "MileSplit, \"Savannah Private School Championships\", 2022-10-20, https://ga.milesplit.com/meets/486848-savannah-private-school-championships-2022/teams/28890."
   },
   {
     "MeetID": 495045,
@@ -1290,7 +1392,8 @@
     "MeetType": "State",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 7 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/495045-giaa-state-championship-2022/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/495045-giaa-state-championship-2022/teams/28890",
+    "SourceCitation": "MileSplit, \"GIAA State Championship\", 2022-10-29, https://ga.milesplit.com/meets/495045-giaa-state-championship-2022/teams/28890."
   },
   {
     "MeetID": 556899,
@@ -1302,7 +1405,8 @@
     "MeetType": "Regular Season",
     "Status": "No St. Andrew's Results",
     "Notes": "MileSplit lists a results page for this meet, but the St. Andrew's team results page reports no performances found for St. Andrews School.",
-    "SourceUrl": "https://ga.milesplit.com/meets/556899-bi-tiger-invitational-2023/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/556899-bi-tiger-invitational-2023/teams/28890",
+    "SourceCitation": "MileSplit, \"BI Tiger Invitational\", 2023-08-17, https://ga.milesplit.com/meets/556899-bi-tiger-invitational-2023/teams/28890."
   },
   {
     "MeetID": 562128,
@@ -1314,7 +1418,8 @@
     "MeetType": "Regular Season",
     "Status": "No St. Andrew's Results",
     "Notes": "MileSplit lists a results page for this meet, but the St. Andrew's team results page reports no performances found for St. Andrews School.",
-    "SourceUrl": "https://ga.milesplit.com/meets/562128-island-breeze-invitational-2023/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/562128-island-breeze-invitational-2023/teams/28890",
+    "SourceCitation": "MileSplit, \"Island Breeze Invitational\", 2023-09-09, https://ga.milesplit.com/meets/562128-island-breeze-invitational-2023/teams/28890."
   },
   {
     "MeetID": 560957,
@@ -1326,7 +1431,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 1 St. Andrew's cross country result row.",
-    "SourceUrl": "https://ga.milesplit.com/meets/560957-blue-tide-run-2023/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/560957-blue-tide-run-2023/teams/28890",
+    "SourceCitation": "MileSplit, \"Blue Tide Run\", 2023-09-21, https://ga.milesplit.com/meets/560957-blue-tide-run-2023/teams/28890."
   },
   {
     "MeetID": 556262,
@@ -1338,7 +1444,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 14 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/556262-raider-invitational-2023/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/556262-raider-invitational-2023/teams/28890",
+    "SourceCitation": "MileSplit, \"Raider Invitational\", 2023-09-26, https://ga.milesplit.com/meets/556262-raider-invitational-2023/teams/28890."
   },
   {
     "MeetID": 539534,
@@ -1350,7 +1457,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 8 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/539534-viking-invitational-2023/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/539534-viking-invitational-2023/teams/28890",
+    "SourceCitation": "MileSplit, \"Viking Invitational\", 2023-09-27, https://ga.milesplit.com/meets/539534-viking-invitational-2023/teams/28890."
   },
   {
     "MeetID": 567794,
@@ -1362,7 +1470,8 @@
     "MeetType": "Middle School",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit team results page. The public page exposed 17 St. Andrew middle-school cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/567794-st-james-and-hancock-race-2023/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/567794-st-james-and-hancock-race-2023/teams/28890",
+    "SourceCitation": "MileSplit, \"St. James & Hancock Race\", 2023-10-03, https://ga.milesplit.com/meets/567794-st-james-and-hancock-race-2023/teams/28890."
   },
   {
     "MeetID": 551751,
@@ -1374,7 +1483,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 11 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/551751-run-the-plank-6th-annual-2023/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/551751-run-the-plank-6th-annual-2023/teams/28890",
+    "SourceCitation": "MileSplit, \"Run The Plank 6th Annual\", 2023-10-12, https://ga.milesplit.com/meets/551751-run-the-plank-6th-annual-2023/teams/28890."
   },
   {
     "MeetID": 576123,
@@ -1386,7 +1496,8 @@
     "MeetType": "Middle School",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 11 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/576123-spal-cross-country-championships-2023/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/576123-spal-cross-country-championships-2023/teams/28890",
+    "SourceCitation": "MileSplit, \"SPAL Cross Country Championships\", 2023-10-14, https://ga.milesplit.com/meets/576123-spal-cross-country-championships-2023/teams/28890."
   },
   {
     "MeetID": 578153,
@@ -1398,7 +1509,8 @@
     "MeetType": "Region",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 8 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/578153-gisa-district-2-aaa-meet-2023/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/578153-gisa-district-2-aaa-meet-2023/teams/28890",
+    "SourceCitation": "MileSplit, \"GISA District 2-AAA Meet\", 2023-10-21, https://ga.milesplit.com/meets/578153-gisa-district-2-aaa-meet-2023/teams/28890."
   },
   {
     "MeetID": 562805,
@@ -1410,7 +1522,8 @@
     "MeetType": "State",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 6 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/562805-giaa-state-championship-2023/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/562805-giaa-state-championship-2023/teams/28890",
+    "SourceCitation": "MileSplit, \"GIAA State Championship\", 2023-10-28, https://ga.milesplit.com/meets/562805-giaa-state-championship-2023/teams/28890."
   },
   {
     "MeetID": 623375,
@@ -1422,7 +1535,8 @@
     "MeetType": "Regular Season",
     "Status": "No Results Link",
     "Notes": "The MileSplit St. Andrew's Cross Country schedule lists this meet, but no public results link was available from the team schedule.",
-    "SourceUrl": "https://ga.milesplit.com/meets/623375"
+    "SourceUrl": "https://ga.milesplit.com/meets/623375",
+    "SourceCitation": "MileSplit, \"Gator Invitational\", 2024-09-05, https://ga.milesplit.com/meets/623375."
   },
   {
     "MeetID": 636808,
@@ -1434,7 +1548,8 @@
     "MeetType": "Middle School",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 13 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/636808-spal-middle-school-mile-2024/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/636808-spal-middle-school-mile-2024/teams/28890",
+    "SourceCitation": "MileSplit, \"SPAL Middle School Mile\", 2024-09-10, https://ga.milesplit.com/meets/636808-spal-middle-school-mile-2024/teams/28890."
   },
   {
     "MeetID": 624092,
@@ -1446,7 +1561,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 13 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/624092-stinger-cross-country-invitational-2024/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/624092-stinger-cross-country-invitational-2024/teams/28890",
+    "SourceCitation": "MileSplit, \"Stinger Cross Country Invitational\", 2024-09-25, https://ga.milesplit.com/meets/624092-stinger-cross-country-invitational-2024/teams/28890."
   },
   {
     "MeetID": 624097,
@@ -1458,7 +1574,8 @@
     "MeetType": "Regular Season",
     "Status": "No Results Link",
     "Notes": "The MileSplit St. Andrew's Cross Country schedule lists this meet, but no public results link was available from the team schedule.",
-    "SourceUrl": "https://ga.milesplit.com/meets/624097"
+    "SourceUrl": "https://ga.milesplit.com/meets/624097",
+    "SourceCitation": "MileSplit, \"Raider Invitational\", 2024-10-02, https://ga.milesplit.com/meets/624097."
   },
   {
     "MeetID": 599224,
@@ -1470,7 +1587,8 @@
     "MeetType": "Regular Season",
     "Status": "No Results Link",
     "Notes": "The MileSplit St. Andrew's Cross Country schedule lists this meet, but no public results link was available from the team schedule.",
-    "SourceUrl": "https://ga.milesplit.com/meets/599224"
+    "SourceUrl": "https://ga.milesplit.com/meets/599224",
+    "SourceCitation": "MileSplit, \"Run The Plank 8th Annual\", 2024-10-10, https://ga.milesplit.com/meets/599224."
   },
   {
     "MeetID": 579059,
@@ -1482,7 +1600,8 @@
     "MeetType": "State",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 5 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/579059-georgia-middle-school-state-cross-country-championships-2024/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/579059-georgia-middle-school-state-cross-country-championships-2024/teams/28890",
+    "SourceCitation": "MileSplit, \"Georgia Middle School State Cross Country Championships\", 2024-10-12, https://ga.milesplit.com/meets/579059-georgia-middle-school-state-cross-country-championships-2024/teams/28890."
   },
   {
     "MeetID": 638308,
@@ -1494,7 +1613,8 @@
     "MeetType": "Middle School",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 24 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/638308-spal-middle-school-cross-country-championship-2024/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/638308-spal-middle-school-cross-country-championship-2024/teams/28890",
+    "SourceCitation": "MileSplit, \"SPAL Middle School Cross Country Championship\", 2024-10-17, https://ga.milesplit.com/meets/638308-spal-middle-school-cross-country-championship-2024/teams/28890."
   },
   {
     "MeetID": 642279,
@@ -1506,7 +1626,8 @@
     "MeetType": "Region",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 7 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/642279-giaa-district-2-aaa-cross-country-region-2024/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/642279-giaa-district-2-aaa-cross-country-region-2024/teams/28890",
+    "SourceCitation": "MileSplit, \"GIAA District 2 AAA Cross Country Region\", 2024-10-19, https://ga.milesplit.com/meets/642279-giaa-district-2-aaa-cross-country-region-2024/teams/28890."
   },
   {
     "MeetID": 641247,
@@ -1518,7 +1639,8 @@
     "MeetType": "State",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 21 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/641247-giaa-state-championship-2024/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/641247-giaa-state-championship-2024/teams/28890",
+    "SourceCitation": "MileSplit, \"GIAA State Championship\", 2024-10-26, https://ga.milesplit.com/meets/641247-giaa-state-championship-2024/teams/28890."
   },
   {
     "MeetID": 683440,
@@ -1530,7 +1652,8 @@
     "MeetType": "Regular Season",
     "Status": "No Results Link",
     "Notes": "The MileSplit St. Andrew's Cross Country schedule lists this meet, but no public results link was available from the team schedule.",
-    "SourceUrl": "https://ga.milesplit.com/meets/683440"
+    "SourceUrl": "https://ga.milesplit.com/meets/683440",
+    "SourceCitation": "MileSplit, \"Gator Invitational (8/25)\", 2025-08-25, https://ga.milesplit.com/meets/683440."
   },
   {
     "MeetID": 701444,
@@ -1542,7 +1665,8 @@
     "MeetType": "Middle School",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 19 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/701444-spal-ms-mile-2025/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/701444-spal-ms-mile-2025/teams/28890",
+    "SourceCitation": "MileSplit, \"SPAL MS Mile\", 2025-09-03, https://ga.milesplit.com/meets/701444-spal-ms-mile-2025/teams/28890."
   },
   {
     "MeetID": 688464,
@@ -1554,7 +1678,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 16 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/688464-hornet-hustle-2025/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/688464-hornet-hustle-2025/teams/28890",
+    "SourceCitation": "MileSplit, \"Hornet Hustle\", 2025-09-10, https://ga.milesplit.com/meets/688464-hornet-hustle-2025/teams/28890."
   },
   {
     "MeetID": 692310,
@@ -1566,7 +1691,8 @@
     "MeetType": "Regular Season",
     "Status": "No Results Link",
     "Notes": "The MileSplit St. Andrew's Cross Country schedule lists this meet, but no public results link was available from the team schedule.",
-    "SourceUrl": "https://ga.milesplit.com/meets/692310"
+    "SourceUrl": "https://ga.milesplit.com/meets/692310",
+    "SourceCitation": "MileSplit, \"BA Invitational (9/15)\", 2025-09-15, https://ga.milesplit.com/meets/692310."
   },
   {
     "MeetID": 690548,
@@ -1578,7 +1704,8 @@
     "MeetType": "Regular Season",
     "Status": "No St. Andrew's Results",
     "Notes": "MileSplit lists a results page for this meet, but the St. Andrew's team results page reports no performances found for St. Andrews School.",
-    "SourceUrl": "https://ga.milesplit.com/meets/690548-raider-invitational-2025/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/690548-raider-invitational-2025/teams/28890",
+    "SourceCitation": "MileSplit, \"Raider Invitational\", 2025-09-17, https://ga.milesplit.com/meets/690548-raider-invitational-2025/teams/28890."
   },
   {
     "MeetID": 693742,
@@ -1590,7 +1717,8 @@
     "MeetType": "Regular Season",
     "Status": "No St. Andrew's Results",
     "Notes": "MileSplit lists a results page for this meet, but the St. Andrew's team results page reports no performances found for St. Andrews School.",
-    "SourceUrl": "https://ga.milesplit.com/meets/693742-viking-invitational-2025/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/693742-viking-invitational-2025/teams/28890",
+    "SourceCitation": "MileSplit, \"Viking Invitational\", 2025-09-23, https://ga.milesplit.com/meets/693742-viking-invitational-2025/teams/28890."
   },
   {
     "MeetID": 701446,
@@ -1602,7 +1730,8 @@
     "MeetType": "Middle School",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 18 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/701446-spal-championship-preview-2025/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/701446-spal-championship-preview-2025/teams/28890",
+    "SourceCitation": "MileSplit, \"SPAL Championship Preview\", 2025-09-24, https://ga.milesplit.com/meets/701446-spal-championship-preview-2025/teams/28890."
   },
   {
     "MeetID": 684735,
@@ -1614,7 +1743,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 14 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/684735-red-terror-run-xc-invitational-2025/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/684735-red-terror-run-xc-invitational-2025/teams/28890",
+    "SourceCitation": "MileSplit, \"Red Terror Run XC Invitational\", 2025-09-25, https://ga.milesplit.com/meets/684735-red-terror-run-xc-invitational-2025/teams/28890."
   },
   {
     "MeetID": 691855,
@@ -1626,7 +1756,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 18 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/691855-hornet-invitational-2025/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/691855-hornet-invitational-2025/teams/28890",
+    "SourceCitation": "MileSplit, \"Hornet Invitational\", 2025-10-08, https://ga.milesplit.com/meets/691855-hornet-invitational-2025/teams/28890."
   },
   {
     "MeetID": 709348,
@@ -1638,7 +1769,8 @@
     "MeetType": "Region",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 15 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/709348-giaa-district-2-aaa-cross-country-region-2025/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/709348-giaa-district-2-aaa-cross-country-region-2025/teams/28890",
+    "SourceCitation": "MileSplit, \"GIAA District 2 AAA Cross Country Region\", 2025-10-18, https://ga.milesplit.com/meets/709348-giaa-district-2-aaa-cross-country-region-2025/teams/28890."
   },
   {
     "MeetID": 701447,
@@ -1650,7 +1782,8 @@
     "MeetType": "Middle School",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 16 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/701447-spal-championships-2025/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/701447-spal-championships-2025/teams/28890",
+    "SourceCitation": "MileSplit, \"SPAL Championships\", 2025-10-22, https://ga.milesplit.com/meets/701447-spal-championships-2025/teams/28890."
   },
   {
     "MeetID": 697407,
@@ -1662,6 +1795,7 @@
     "MeetType": "State",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit St. Andrew's team results page. The public page exposed 9 St. Andrew's cross country result rows.",
-    "SourceUrl": "https://ga.milesplit.com/meets/697407-giaa-state-championship-2025/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/697407-giaa-state-championship-2025/teams/28890",
+    "SourceCitation": "MileSplit, \"GIAA State Championship\", 2025-10-25, https://ga.milesplit.com/meets/697407-giaa-state-championship-2025/teams/28890."
   }
 ]

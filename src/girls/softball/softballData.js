@@ -883,6 +883,60 @@ export const softballGames = [
   },
 ];
 
+const SOFTBALL_NEWSBANK_SOURCE =
+  "Savannah Morning News box scores recovered from the 2005-06 NewsBank sweep.";
+
+function softballSchoolYearLabel(season) {
+  const springYear = Number(season);
+  return Number.isFinite(springYear) ? `${springYear - 1}-${String(springYear).slice(-2)}` : "";
+}
+
+softballGames.forEach((game) => {
+  if (!game.SourceSeasonLabel) game.SourceSeasonLabel = softballSchoolYearLabel(game.Season || game.season);
+
+  if (game.isPlaceholder) {
+    game.BoxScoreCompleteness = game.BoxScoreCompleteness || "placeholder";
+    game.SourceNote = game.SourceNote || game.notes.join(" ");
+    return;
+  }
+
+  game.SourceCitation = game.SourceCitation || SOFTBALL_NEWSBANK_SOURCE;
+  game.BoxScoreCompleteness = game.BoxScoreCompleteness || (game.lineScore ? "partial" : "missing");
+  if (!game.SourceNote && game.BoxScoreCompleteness !== "complete") {
+    game.SourceNote =
+      "Published newspaper line scores and named leaders are preserved; complete pitch-by-pitch box score data was not published.";
+  }
+});
+
+export const softballSeasons = [
+  {
+    SeasonID: 2005,
+    DisplaySeason: "Spring 2005",
+    SourceSeasonLabel: "2004-05",
+    HeadCoach: "",
+    OverallWins: 5,
+    OverallLosses: 2,
+    OverallTies: 0,
+    ArchiveStatus: "partial",
+    ArchiveStatusNote:
+      "NewsBank recovery includes five recovered box scores and two record-path placeholders needed to reconcile the spring 2005 softball record path.",
+    RecordSource: "softballData.js source-of-truth row; game pages reconcile to this record.",
+  },
+  {
+    SeasonID: 2006,
+    DisplaySeason: "Spring 2006",
+    SourceSeasonLabel: "2005-06",
+    HeadCoach: "",
+    OverallWins: 5,
+    OverallLosses: 2,
+    OverallTies: 0,
+    ArchiveStatus: "partial",
+    ArchiveStatusNote:
+      "NewsBank recovery includes five recovered box scores and two record-path placeholders needed to reconcile the spring 2006 softball record path.",
+    RecordSource: "softballData.js source-of-truth row; game pages reconcile to this record.",
+  },
+];
+
 export function getSoftballGameById(gameId) {
   return softballGames.find((game) => game.id === String(gameId));
 }

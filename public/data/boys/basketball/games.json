@@ -5114,7 +5114,10 @@
     "DisplayDate": "Before Nov. 23, 1999",
     "SortDate": "1999-11-22",
     "Notes": "Placeholder for the unreported win required by the 1-1 record published after the Pinewood Prep game.",
-    "SourceCitation": "\"JENKINS SCORES 100 IN VICTORY AT JOE GREENE TIP-OFF,\" Savannah Morning News (GA), November 24, 1999, Page 5D."
+    "SourceCitation": "\"JENKINS SCORES 100 IN VICTORY AT JOE GREENE TIP-OFF,\" Savannah Morning News (GA), November 24, 1999, Page 5D.",
+    "ScoringCompleteness": "placeholder",
+    "SourceNote": "Placeholder for the unreported win required by the 1-1 record published after the Pinewood Prep game.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 19991123,
@@ -5128,7 +5131,9 @@
     "Season": 1999,
     "IsComplete": "Yes",
     "Recap": "Evan Aldrich scored 18 points and Lee Stubbs added 14, but St. Andrew's fell to Pinewood Prep 84-48 and moved to 1-1.",
-    "SourceCitation": "\"JENKINS SCORES 100 IN VICTORY AT JOE GREENE TIP-OFF,\" Savannah Morning News (GA), November 24, 1999, Page 5D."
+    "SourceCitation": "\"JENKINS SCORES 100 IN VICTORY AT JOE GREENE TIP-OFF,\" Savannah Morning News (GA), November 24, 1999, Page 5D.",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 19991201,
@@ -5144,7 +5149,10 @@
     "DisplayDate": "Before Dec. 9, 1999",
     "SortDate": "1999-12-01",
     "Notes": "Unreported early-season win required by the 3-4 record line after the Hilton Head Christian tournament game.",
-    "SourceCitation": "\"FRIDAY'S LATE GAMES,\" Savannah Morning News (GA), December 12, 1999, Page 6B."
+    "SourceCitation": "\"FRIDAY'S LATE GAMES,\" Savannah Morning News (GA), December 12, 1999, Page 6B.",
+    "ScoringCompleteness": "placeholder",
+    "SourceNote": "Unreported early-season win required by the 3-4 record line after the Hilton Head Christian tournament game.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 19991202,
@@ -5160,7 +5168,10 @@
     "DisplayDate": "Before Dec. 9, 1999",
     "SortDate": "1999-12-02",
     "Notes": "Unreported early-season loss required by the 3-4 record line after the Hilton Head Christian tournament game.",
-    "SourceCitation": "\"FRIDAY'S LATE GAMES,\" Savannah Morning News (GA), December 12, 1999, Page 6B."
+    "SourceCitation": "\"FRIDAY'S LATE GAMES,\" Savannah Morning News (GA), December 12, 1999, Page 6B.",
+    "ScoringCompleteness": "placeholder",
+    "SourceNote": "Unreported early-season loss required by the 3-4 record line after the Hilton Head Christian tournament game.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 19991203,
@@ -5176,7 +5187,10 @@
     "DisplayDate": "Before Dec. 9, 1999",
     "SortDate": "1999-12-03",
     "Notes": "Unreported early-season loss required by the 3-4 record line after the Hilton Head Christian tournament game.",
-    "SourceCitation": "\"FRIDAY'S LATE GAMES,\" Savannah Morning News (GA), December 12, 1999, Page 6B."
+    "SourceCitation": "\"FRIDAY'S LATE GAMES,\" Savannah Morning News (GA), December 12, 1999, Page 6B.",
+    "ScoringCompleteness": "placeholder",
+    "SourceNote": "Unreported early-season loss required by the 3-4 record line after the Hilton Head Christian tournament game.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 19991209,
@@ -5191,7 +5205,9 @@
     "IsComplete": "Yes",
     "Tournament": "St. Andrew's Tournament",
     "Recap": "Bible Baptist beat St. Andrew's 54-49 on the opening day of the St. Andrew's Tournament. Lee Stubbs scored 13, while Evan Aldrich and Andy Teitz had 12 apiece.",
-    "SourceCitation": "\"SAVANNAH HIGH BOYS FALL TO GLYNN IN OVERTIME,\" Savannah Morning News (GA), December 11, 1999, Page 4F."
+    "SourceCitation": "\"SAVANNAH HIGH BOYS FALL TO GLYNN IN OVERTIME,\" Savannah Morning News (GA), December 11, 1999, Page 4F.",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 19991210,
@@ -5206,11 +5222,14 @@
     "IsComplete": "Yes",
     "Tournament": "St. Andrew's Tournament",
     "Recap": "Evan Aldrich scored 21 and Lee Stubbs added 16 as St. Andrew's beat Hilton Head Christian in the tournament consolation bracket.",
-    "SourceCitation": "\"FRIDAY'S LATE GAMES,\" Savannah Morning News (GA), December 12, 1999, Page 6B."
+    "SourceCitation": "\"FRIDAY'S LATE GAMES,\" Savannah Morning News (GA), December 12, 1999, Page 6B.",
+    "ScoringCompleteness": "partial",
+    "SourceNote": "Named St. Andrew's scoring rows total 60 points against the reported team score of 63; the reported team score is preserved.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 19991211,
-    "OpponentID": "",
+    "OpponentID": "ga-west-georgia-christian",
     "Opponent": "West Georgia Christian",
     "LocationType": "Home",
     "GameType": "Tournament",
@@ -5221,7 +5240,10 @@
     "IsComplete": "Yes",
     "Tournament": "St. Andrew's Holiday Classic",
     "Recap": "Todd Tribble and Justin Dixon scored 18 each as five Saints reached double figures against West Georgia Christian.",
-    "SourceCitation": "\"JACKSON LEADS GLYNN BOYS OVER JENKINS,\" Savannah Morning News (GA), December 13, 1999, Page 6D."
+    "SourceCitation": "\"JACKSON LEADS GLYNN BOYS OVER JENKINS,\" Savannah Morning News (GA), December 13, 1999, Page 6D.",
+    "ScoringCompleteness": "partial",
+    "SourceNote": "Named St. Andrew's scoring rows total 75 points against the reported team score of 79; the reported team score is preserved.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 19991217,
@@ -5236,7 +5258,9 @@
     "IsComplete": "Yes",
     "Tournament": "Memorial Day School Christmas Tournament",
     "Recap": "St. Andrew's nearly forced overtime after Todd Tribble was fouled on a late 3-point attempt, but Memorial held on 72-70. Evan Aldrich scored 26 and Lee Stubbs added 20.",
-    "SourceCitation": "\"CLARK'S FREE THROWS LIFTS MEMORIAL BOYS OVER ST. ANDREW'S,\" Savannah Morning News (GA), December 18, 1999, Page 6F."
+    "SourceCitation": "\"CLARK'S FREE THROWS LIFTS MEMORIAL BOYS OVER ST. ANDREW'S,\" Savannah Morning News (GA), December 18, 1999, Page 6F.",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 19991230,
@@ -5252,7 +5276,10 @@
     "DisplayDate": "Between Dec. 18, 1999 and Jan. 4, 2000",
     "SortDate": "1999-12-30",
     "Notes": "Unreported win required by the 6-5 record published after the Abundant Life game.",
-    "SourceCitation": "\"PREP ROUNDUP,\" Savannah Morning News (GA), January 5, 2000, Page 5D."
+    "SourceCitation": "\"PREP ROUNDUP,\" Savannah Morning News (GA), January 5, 2000, Page 5D.",
+    "ScoringCompleteness": "placeholder",
+    "SourceNote": "Unreported win required by the 6-5 record published after the Abundant Life game.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 20000104,
@@ -5266,7 +5293,10 @@
     "Season": 1999,
     "IsComplete": "Yes",
     "Recap": "St. Andrew's outscored Abundant Life 51-19 after halftime. Lee Stubbs had 22 points and 14 rebounds, Evan Aldrich added 20 and 15, and Justin Dixon scored 17.",
-    "SourceCitation": "\"PREP ROUNDUP,\" Savannah Morning News (GA), January 5, 2000, Page 5D."
+    "SourceCitation": "\"PREP ROUNDUP,\" Savannah Morning News (GA), January 5, 2000, Page 5D.",
+    "ArticleID": "20000107-boys-honor-roll-abundant-life",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 20000107,
@@ -5280,7 +5310,10 @@
     "Season": 1999,
     "IsComplete": "Yes",
     "Recap": "Evan Aldrich scored 32 and Lee Stubbs added 17 with eight blocks as St. Andrew's beat St. Paul's.",
-    "SourceCitation": "\"BLUE JACKETS FOCUS IN TIME, TOP BC,\" Savannah Morning News (GA), January 8, 2000, Page 4F."
+    "SourceCitation": "\"BLUE JACKETS FOCUS IN TIME, TOP BC,\" Savannah Morning News (GA), January 8, 2000, Page 4F.",
+    "ArticleID": "20000114-aldrich-city-player-of-week",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 20000108,
@@ -5294,7 +5327,10 @@
     "Season": 1999,
     "IsComplete": "Yes",
     "Recap": "St. Andrew's handed Memorial its first loss of the season behind 26 from Evan Aldrich and 20 from Lee Stubbs.",
-    "SourceCitation": "\"ST. ANDREW'S BOYS HAND MEMORIAL ITS FIRST LOSS OF THE SEASON,\" Savannah Morning News (GA), January 10, 2000, Page 6D."
+    "SourceCitation": "\"ST. ANDREW'S BOYS HAND MEMORIAL ITS FIRST LOSS OF THE SEASON,\" Savannah Morning News (GA), January 10, 2000, Page 6D.",
+    "ArticleID": "20000114-aldrich-city-player-of-week",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 20000112,
@@ -5310,7 +5346,10 @@
     "DisplayDate": "Between Jan. 9 and Jan. 14, 2000",
     "SortDate": "2000-01-12",
     "Notes": "Unreported loss required by the record path between the Memorial Day and Hilton Head Christian games.",
-    "SourceCitation": "\"SCD GIRLS NIP PAIDEIA IN NON-REGIONAL PLAY,\" Savannah Morning News (GA), January 15, 2000, Page 4F."
+    "SourceCitation": "\"SCD GIRLS NIP PAIDEIA IN NON-REGIONAL PLAY,\" Savannah Morning News (GA), January 15, 2000, Page 4F.",
+    "ScoringCompleteness": "placeholder",
+    "SourceNote": "Unreported loss required by the record path between the Memorial Day and Hilton Head Christian games.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 20000114,
@@ -5325,7 +5364,11 @@
     "IsComplete": "Yes",
     "RegionGame": "Yes",
     "Recap": "St. Andrew's built a 47-19 halftime lead against Hilton Head Christian. Evan Aldrich scored 18 and Lee Stubbs had 17.",
-    "SourceCitation": "\"SCD GIRLS NIP PAIDEIA IN NON-REGIONAL PLAY,\" Savannah Morning News (GA), January 15, 2000, Page 4F."
+    "SourceCitation": "\"SCD GIRLS NIP PAIDEIA IN NON-REGIONAL PLAY,\" Savannah Morning News (GA), January 15, 2000, Page 4F.",
+    "ArticleID": "20000121-aldrich-stubbs-honor-roll",
+    "ScoringCompleteness": "partial",
+    "SourceNote": "Named St. Andrew's scoring rows total 70 points against the reported team score of 74; the reported team score is preserved.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 20000118,
@@ -5340,7 +5383,11 @@
     "IsComplete": "Yes",
     "RegionGame": "Yes",
     "Recap": "Evan Aldrich scored 18, Lee Stubbs 17, and Andy Teitz and Justin Dixon 11 each in a region win over Beaufort Academy.",
-    "SourceCitation": "\"SCD BOYS RALLY FOR VICTORY AGAINST BRYAN COUNTY,\" Savannah Morning News (GA), January 19, 2000, Page 5D."
+    "SourceCitation": "\"SCD BOYS RALLY FOR VICTORY AGAINST BRYAN COUNTY,\" Savannah Morning News (GA), January 19, 2000, Page 5D.",
+    "ArticleID": "20000121-aldrich-stubbs-honor-roll",
+    "ScoringCompleteness": "partial",
+    "SourceNote": "Named St. Andrew's scoring rows total 61 points against the reported team score of 62; the reported team score is preserved.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 20000121,
@@ -5355,7 +5402,11 @@
     "IsComplete": "Yes",
     "RegionGame": "Yes",
     "Recap": "Lee Stubbs scored 17 in a region loss at Sea Island. The St. Andrew's individual points in the printed box exceed the team score, so the team score is preserved from the headline line.",
-    "SourceCitation": "\"SAVANNAH CHRISTIAN HOLDS OFF COUNTRY DAY,\" Savannah Morning News (GA), January 22, 2000, Page 4F."
+    "SourceCitation": "\"SAVANNAH CHRISTIAN HOLDS OFF COUNTRY DAY,\" Savannah Morning News (GA), January 22, 2000, Page 4F.",
+    "ArticleID": "20000128-aldrich-stubbs-honor-roll",
+    "ScoringCompleteness": "partial",
+    "SourceNote": "Named St. Andrew's scoring rows total 49 points against the reported team score of 42; the reported team score is preserved.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 20000122,
@@ -5370,7 +5421,10 @@
     "IsComplete": "Yes",
     "RegionGame": "Yes",
     "Recap": "Evan Aldrich scored 30, while Lee Stubbs and Justin Dixon added 12 each at Harvest Baptist. The story text and Harvest box total support 58-57; the headline printed 58-47.",
-    "SourceCitation": "\"EARLY SURGE CARRIES BRADWELL GIRLS,\" Savannah Morning News (GA), January 23, 2000, Page 10B."
+    "SourceCitation": "\"EARLY SURGE CARRIES BRADWELL GIRLS,\" Savannah Morning News (GA), January 23, 2000, Page 10B.",
+    "ArticleID": "20000128-aldrich-stubbs-honor-roll",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 20000202,
@@ -5386,7 +5440,10 @@
     "DisplayDate": "Between Jan. 23 and Feb. 5, 2000",
     "SortDate": "2000-02-02",
     "Notes": "Unreported loss required by the 13-8 record published after the Patrick Henry game.",
-    "SourceCitation": "\"LONG COUNTY BOYS ROLL AGAINST SAVANNAH CHRISTIAN,\" Savannah Morning News (GA), February 6, 2000, Page 12C."
+    "SourceCitation": "\"LONG COUNTY BOYS ROLL AGAINST SAVANNAH CHRISTIAN,\" Savannah Morning News (GA), February 6, 2000, Page 12C.",
+    "ScoringCompleteness": "placeholder",
+    "SourceNote": "Unreported loss required by the 13-8 record published after the Patrick Henry game.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 20000204,
@@ -5401,7 +5458,10 @@
     "IsComplete": "Yes",
     "RegionGame": "Yes",
     "Recap": "Evan Aldrich scored 24 and Lee Stubbs added 22 with six blocks as St. Andrew's rallied after trailing 23-22 at halftime.",
-    "SourceCitation": "\"SCD GIRLS FINISH UNDEFEATED IN REGION,\" Savannah Morning News (GA), February 5, 2000, Page 4F."
+    "SourceCitation": "\"SCD GIRLS FINISH UNDEFEATED IN REGION,\" Savannah Morning News (GA), February 5, 2000, Page 4F.",
+    "ScoringCompleteness": "partial",
+    "SourceNote": "Named St. Andrew's scoring rows total 60 points against the reported team score of 61; the reported team score is preserved.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 20000205,
@@ -5416,7 +5476,9 @@
     "IsComplete": "Yes",
     "RegionGame": "Yes",
     "Recap": "Lee Stubbs scored 20, while Andy Teitz had 10 points, 10 rebounds and eight assists at Patrick Henry.",
-    "SourceCitation": "\"LONG COUNTY BOYS ROLL AGAINST SAVANNAH CHRISTIAN,\" Savannah Morning News (GA), February 6, 2000, Page 12C."
+    "SourceCitation": "\"LONG COUNTY BOYS ROLL AGAINST SAVANNAH CHRISTIAN,\" Savannah Morning News (GA), February 6, 2000, Page 12C.",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 20000208,
@@ -5431,7 +5493,9 @@
     "IsComplete": "Yes",
     "RegionGame": "Yes",
     "Recap": "Lee Stubbs scored 22 and blocked six shots, and Justin Dixon scored 17 with five 3-pointers at St. Paul's.",
-    "SourceCitation": "\"KELLY PACES SCPS GIRLS IN REGION 2-A TOURNAMENT,\" Savannah Morning News (GA), February 9, 2000, Page 5D."
+    "SourceCitation": "\"KELLY PACES SCPS GIRLS IN REGION 2-A TOURNAMENT,\" Savannah Morning News (GA), February 9, 2000, Page 5D.",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 20000211,
@@ -5446,7 +5510,9 @@
     "IsComplete": "Yes",
     "RegionGame": "Yes",
     "Recap": "Evan Aldrich scored 21 and Lee Stubbs added 20 as St. Andrew's beat Hilton Head Christian for the third recovered time.",
-    "SourceCitation": "\"SOSO LEADS SCD GIRLS INTO 2-A FINALS,\" Savannah Morning News (GA), February 12, 2000, Page 5F."
+    "SourceCitation": "\"SOSO LEADS SCD GIRLS INTO 2-A FINALS,\" Savannah Morning News (GA), February 12, 2000, Page 5F.",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 20000214,
@@ -5462,7 +5528,10 @@
     "DisplayDate": "Between Feb. 12 and Feb. 15, 2000",
     "SortDate": "2000-02-14",
     "Notes": "Unreported win required by the 17-8 record published after the Feb. 15 Harvest Baptist game.",
-    "SourceCitation": "\"BASKETBALL,\" Savannah Morning News (GA), February 16, 2000, Page 3D."
+    "SourceCitation": "\"BASKETBALL,\" Savannah Morning News (GA), February 16, 2000, Page 3D.",
+    "ScoringCompleteness": "placeholder",
+    "SourceNote": "Unreported win required by the 17-8 record published after the Feb. 15 Harvest Baptist game.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 20000215,
@@ -5476,7 +5545,10 @@
     "Season": 1999,
     "IsComplete": "Yes",
     "Recap": "Evan Aldrich scored 23 and Lee Stubbs added 20 in a non-region win over Harvest Baptist.",
-    "SourceCitation": "\"BASKETBALL,\" Savannah Morning News (GA), February 16, 2000, Page 3D."
+    "SourceCitation": "\"BASKETBALL,\" Savannah Morning News (GA), February 16, 2000, Page 3D.",
+    "ScoringCompleteness": "partial",
+    "SourceNote": "Named St. Andrew's scoring rows total 67 points against the reported team score of 68; the reported team score is preserved.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 20000218,
@@ -5491,7 +5563,11 @@
     "IsComplete": "Yes",
     "RegionGame": "Yes",
     "Recap": "Evan Aldrich scored 36 and broke St. Andrew's boys basketball career scoring record, passing Ray Rodgers with 1,595 career points.",
-    "SourceCitation": "\"ALDRICH SNAPS RECORD AS ST. ANDREW'S SHOOTS VICTORY,\" Savannah Morning News (GA), February 19, 2000, Page 5E."
+    "SourceCitation": "\"ALDRICH SNAPS RECORD AS ST. ANDREW'S SHOOTS VICTORY,\" Savannah Morning News (GA), February 19, 2000, Page 5E.",
+    "ArticleID": "20000219-aldrich-breaks-career-scoring-record",
+    "ScoringCompleteness": "partial",
+    "SourceNote": "Named St. Andrew's scoring rows total 71 points against the reported team score of 69; the reported team score is preserved.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 20000225,
@@ -5507,7 +5583,11 @@
     "Tournament": "SCISA Class AA Region IV Tournament",
     "RegionGame": "Yes",
     "Recap": "Andy Teitz scored 18 and Lee Stubbs led all scorers with 21 as top-seeded St. Andrew's beat Hilton Head Christian in the region semifinal.",
-    "SourceCitation": "\"SAINTS SLIDE BY HILTON HEAD,\" Savannah Morning News (GA), February 26, 2000, Page 5E."
+    "SourceCitation": "\"SAINTS SLIDE BY HILTON HEAD,\" Savannah Morning News (GA), February 26, 2000, Page 5E.",
+    "ArticleID": "20000226-boys-region-semifinal-hilton-head-christian",
+    "ScoringCompleteness": "partial",
+    "SourceNote": "Named St. Andrew's scoring rows total 59 points against the reported team score of 57; the reported team score is preserved.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 20000226,
@@ -5523,7 +5603,10 @@
     "Tournament": "SCISA Class AA Region IV Championship",
     "RegionGame": "Yes",
     "Recap": "Evan Aldrich hit the winner in the final seconds and Andy Teitz scored 19 as St. Andrew's won the SCISA Class AA Region IV championship.",
-    "SourceCitation": "\"SAINTS BOYS TRIUMPH IN REGION GAME, GIRLS FALL,\" Savannah Morning News (GA), February 27, 2000, Page 4B."
+    "SourceCitation": "\"SAINTS BOYS TRIUMPH IN REGION GAME, GIRLS FALL,\" Savannah Morning News (GA), February 27, 2000, Page 4B.",
+    "ArticleID": "20000227-boys-region-title-sea-island",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 20000229,
@@ -5538,7 +5621,10 @@
     "IsComplete": "Yes",
     "Tournament": "SCISA Class AA State Tournament",
     "Recap": "Andy Teitz hit a 3-pointer with five seconds left in regulation and St. Andrew's beat Hudgens Academy 63-54 in overtime to reach the state semifinals.",
-    "SourceCitation": "\"ST. ANDREW'S BOYS OFF TO SEMIS,\" Savannah Morning News (GA), March 1, 2000, Page 3D."
+    "SourceCitation": "\"ST. ANDREW'S BOYS OFF TO SEMIS,\" Savannah Morning News (GA), March 1, 2000, Page 3D.",
+    "ArticleID": "20000301-boys-state-quarterfinal-hudgens",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 20000303,
@@ -5553,7 +5639,11 @@
     "IsComplete": "Yes",
     "Tournament": "SCISA Class AA State Semifinals",
     "Recap": "St. Andrew's fell to Northwood Academy in the SCISA semifinals. The article printed a 21-4 final record, but the recovered record path supports 21-9.",
-    "SourceCitation": "\"ST. ANDREW'S SLIPS IN SEMIFINALS,\" Savannah Morning News (GA), March 4, 2000, Page 6F."
+    "SourceCitation": "\"ST. ANDREW'S SLIPS IN SEMIFINALS,\" Savannah Morning News (GA), March 4, 2000, Page 6F.",
+    "ArticleID": "20000304-boys-state-semifinal-northwood",
+    "ScoringCompleteness": "partial",
+    "SourceNote": "Named St. Andrew's scoring rows total 36 points against the reported team score of 62; the reported team score is preserved.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 20001201,
@@ -5565,7 +5655,10 @@
     "TeamScore": 67,
     "OpponentScore": 33,
     "Season": 2000,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2000-12-01."
   },
   {
     "GameID": 20001205,
@@ -5577,7 +5670,10 @@
     "TeamScore": 73,
     "OpponentScore": 47,
     "Season": 2000,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2000-12-05."
   },
   {
     "GameID": 20001208,
@@ -5589,7 +5685,10 @@
     "TeamScore": 62,
     "OpponentScore": 54,
     "Season": 2000,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2000-12-08."
   },
   {
     "GameID": 20001209,
@@ -5601,7 +5700,10 @@
     "TeamScore": 55,
     "OpponentScore": 73,
     "Season": 2000,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2000-12-09."
   },
   {
     "GameID": 20001215,
@@ -5613,7 +5715,10 @@
     "TeamScore": 62,
     "OpponentScore": 74,
     "Season": 2000,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2000-12-15."
   },
   {
     "GameID": 20001216,
@@ -5625,7 +5730,10 @@
     "TeamScore": 50,
     "OpponentScore": 42,
     "Season": 2000,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2000-12-16."
   },
   {
     "GameID": 20010102,
@@ -5637,7 +5745,10 @@
     "TeamScore": 52,
     "OpponentScore": 50,
     "Season": 2000,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2001-01-02."
   },
   {
     "GameID": 20010105,
@@ -5649,7 +5760,10 @@
     "TeamScore": 66,
     "OpponentScore": 64,
     "Season": 2000,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2001-01-05."
   },
   {
     "GameID": 20010106,
@@ -5661,7 +5775,10 @@
     "TeamScore": 61,
     "OpponentScore": 39,
     "Season": 2000,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2001-01-06."
   },
   {
     "GameID": 20010110,
@@ -5673,7 +5790,10 @@
     "TeamScore": 54,
     "OpponentScore": 45,
     "Season": 2000,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2001-01-10."
   },
   {
     "GameID": 20010112,
@@ -5685,7 +5805,10 @@
     "TeamScore": 64,
     "OpponentScore": 72,
     "Season": 2000,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2001-01-12."
   },
   {
     "GameID": 20010113,
@@ -5697,7 +5820,10 @@
     "TeamScore": 61,
     "OpponentScore": 39,
     "Season": 2000,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2001-01-13."
   },
   {
     "GameID": 20010116,
@@ -5709,7 +5835,10 @@
     "TeamScore": 60,
     "OpponentScore": 52,
     "Season": 2000,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2001-01-16."
   },
   {
     "GameID": 20010119,
@@ -5721,7 +5850,10 @@
     "TeamScore": 40,
     "OpponentScore": 45,
     "Season": 2000,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2001-01-19."
   },
   {
     "GameID": 20010120,
@@ -5733,7 +5865,10 @@
     "TeamScore": 47,
     "OpponentScore": 40,
     "Season": 2000,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2001-01-20."
   },
   {
     "GameID": 20010123,
@@ -5745,7 +5880,10 @@
     "TeamScore": 46,
     "OpponentScore": 53,
     "Season": 2000,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2001-01-23."
   },
   {
     "GameID": 20010126,
@@ -5757,7 +5895,10 @@
     "TeamScore": 54,
     "OpponentScore": 56,
     "Season": 2000,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2001-01-26."
   },
   {
     "GameID": 20010129,
@@ -5769,7 +5910,10 @@
     "TeamScore": 46,
     "OpponentScore": 60,
     "Season": 2000,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2001-01-29."
   },
   {
     "GameID": 20010202,
@@ -5781,7 +5925,10 @@
     "TeamScore": 52,
     "OpponentScore": 64,
     "Season": 2000,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2001-02-02."
   },
   {
     "GameID": 20010209,
@@ -5793,7 +5940,10 @@
     "TeamScore": 64,
     "OpponentScore": 49,
     "Season": 2000,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2001-02-09."
   },
   {
     "GameID": 20010210,
@@ -5805,7 +5955,10 @@
     "TeamScore": 75,
     "OpponentScore": 88,
     "Season": 2000,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2001-02-10."
   },
   {
     "GameID": 20010213,
@@ -5817,7 +5970,10 @@
     "TeamScore": 59,
     "OpponentScore": 65,
     "Season": 2000,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2001-02-13."
   },
   {
     "GameID": 20010220,
@@ -5829,7 +5985,10 @@
     "TeamScore": 70,
     "OpponentScore": 65,
     "Season": 2000,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2001-02-20."
   },
   {
     "GameID": 20010223,
@@ -5841,7 +6000,10 @@
     "TeamScore": 75,
     "OpponentScore": 53,
     "Season": 2000,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2001-02-23."
   },
   {
     "GameID": 20010226,
@@ -5853,7 +6015,10 @@
     "TeamScore": 72,
     "OpponentScore": 57,
     "Season": 2000,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2001-02-26."
   },
   {
     "GameID": 20010228,
@@ -5865,7 +6030,10 @@
     "TeamScore": 69,
     "OpponentScore": 60,
     "Season": 2000,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2001-02-28."
   },
   {
     "GameID": 20010302,
@@ -5877,7 +6045,10 @@
     "TeamScore": 52,
     "OpponentScore": 68,
     "Season": 2000,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2001-03-02."
   },
   {
     "GameID": 20011204,
@@ -5891,7 +6062,10 @@
     "Season": 2001,
     "IsComplete": "Yes",
     "Recap": "Patrick Burns scored 22 and St. Andrew's opened with a 65-45 non-region win over Patrick Henry.",
-    "ResultMargin": 20
+    "ResultMargin": 20,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2001-12-04."
   },
   {
     "GameID": 20011207,
@@ -5906,7 +6080,10 @@
     "Season": 2001,
     "IsComplete": "Yes",
     "Recap": "Jeff Smith posted a triple-double with 13 points, 10 rebounds, and 11 assists in the Holiday Invitational win.",
-    "ResultMargin": 16
+    "ResultMargin": 16,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2001-12-07."
   },
   {
     "GameID": 20011208,
@@ -5921,63 +6098,79 @@
     "Season": 2001,
     "IsComplete": "Yes",
     "Recap": "Memorial Day beat St. Andrew's 53-46 in the Holiday Invitational championship game.",
-    "ResultMargin": -7
+    "ResultMargin": -7,
+    "ArticleID": "20011209-memorial-day-captures-boys-tournament-title",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "\"MEMORIAL DAY CAPTURES BOYS' TOURNAMENT TITLE AT ST. ANDREW'S,\" Savannah Morning News (GA), December 9, 2001, Page 9C, Sports."
   },
   {
     "GameID": 20011231,
     "OpponentID": "",
     "Opponent": "Unknown opponent",
     "LocationType": "Unknown",
-    "GameType": "Unknown",
-    "Result": "",
+    "GameType": "Record-path placeholder",
+    "Result": "W",
     "TeamScore": null,
     "OpponentScore": null,
     "Season": 2001,
     "IsComplete": "No",
-    "SourceNote": "Published statistical totals imply an additional early-season game before Jan. 8; opponent, result, and box score were not recovered in the NewsBank sweep.",
-    "ResultMargin": null
+    "SourceNote": "Placeholder win added to reconcile the published 2001-02 final record; opponent, site, score, and box score remain unrecovered.",
+    "ResultMargin": null,
+    "ScoringCompleteness": "placeholder",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "Record-path placeholder from boys basketball archive reconciliation, 2001-02."
   },
   {
     "GameID": 20020102,
     "OpponentID": "",
     "Opponent": "Unknown opponent",
     "LocationType": "Unknown",
-    "GameType": "Unknown",
-    "Result": "",
+    "GameType": "Record-path placeholder",
+    "Result": "L",
     "TeamScore": null,
     "OpponentScore": null,
     "Season": 2001,
     "IsComplete": "No",
-    "SourceNote": "Published statistical totals imply an additional early-season game before Jan. 8; opponent, result, and box score were not recovered in the NewsBank sweep.",
-    "ResultMargin": null
+    "SourceNote": "Placeholder loss added to reconcile the published 2001-02 final record; opponent, site, score, and box score remain unrecovered.",
+    "ResultMargin": null,
+    "ScoringCompleteness": "placeholder",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "Record-path placeholder from boys basketball archive reconciliation, 2001-02."
   },
   {
     "GameID": 20020104,
     "OpponentID": "sc-beaufort-academy-beaufort",
     "Opponent": "Beaufort Academy",
     "LocationType": "Home",
-    "GameType": "Unknown",
-    "Result": "",
+    "GameType": "Record-path placeholder",
+    "Result": "W",
     "TeamScore": null,
     "OpponentScore": null,
     "Season": 2001,
     "IsComplete": "No",
-    "SourceNote": "Scheduled game inferred from the existing archive ledger; box score not recovered in this NewsBank sweep.",
-    "ResultMargin": null
+    "SourceNote": "Scheduled Beaufort Academy result is preserved as a placeholder win to reconcile the published 2001-02 final record; score and box score remain unrecovered.",
+    "ResultMargin": null,
+    "ScoringCompleteness": "placeholder",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "Record-path placeholder from boys basketball archive reconciliation, 2001-02."
   },
   {
     "GameID": 20020105,
     "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
     "Opponent": "Hilton Head Preparatory School",
     "LocationType": "Away",
-    "GameType": "Unknown",
-    "Result": "",
+    "GameType": "Record-path placeholder",
+    "Result": "L",
     "TeamScore": null,
     "OpponentScore": null,
     "Season": 2001,
     "IsComplete": "No",
-    "SourceNote": "Scheduled game inferred from the existing archive ledger; box score not recovered in this NewsBank sweep.",
-    "ResultMargin": null
+    "SourceNote": "Scheduled Hilton Head Prep result is preserved as a placeholder loss to reconcile the published 2001-02 final record; score and box score remain unrecovered.",
+    "ResultMargin": null,
+    "ScoringCompleteness": "placeholder",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "Record-path placeholder from boys basketball archive reconciliation, 2001-02."
   },
   {
     "GameID": 20020108,
@@ -5990,7 +6183,10 @@
     "OpponentScore": 53,
     "Season": 2001,
     "IsComplete": "Yes",
-    "ResultMargin": 5
+    "ResultMargin": 5,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2002-01-08."
   },
   {
     "GameID": 20020111,
@@ -6003,7 +6199,11 @@
     "OpponentScore": 63,
     "Season": 2001,
     "IsComplete": "Yes",
-    "ResultMargin": 4
+    "ResultMargin": 4,
+    "ScoringCompleteness": "partial",
+    "SourceNote": "Named St. Andrew's scoring rows total 65 points against the reported team score of 67; the reported team score is preserved.",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2002-01-11."
   },
   {
     "GameID": 20020112,
@@ -6016,7 +6216,10 @@
     "OpponentScore": 46,
     "Season": 2001,
     "IsComplete": "Yes",
-    "ResultMargin": 15
+    "ResultMargin": 15,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2002-01-12."
   },
   {
     "GameID": 20020115,
@@ -6029,7 +6232,10 @@
     "OpponentScore": 45,
     "Season": 2001,
     "IsComplete": "Yes",
-    "ResultMargin": 13
+    "ResultMargin": 13,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2002-01-15."
   },
   {
     "GameID": 20020118,
@@ -6042,7 +6248,10 @@
     "OpponentScore": 33,
     "Season": 2001,
     "IsComplete": "Yes",
-    "ResultMargin": 20
+    "ResultMargin": 20,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2002-01-18."
   },
   {
     "GameID": 20020119,
@@ -6055,7 +6264,10 @@
     "OpponentScore": 46,
     "Season": 2001,
     "IsComplete": "Yes",
-    "ResultMargin": 15
+    "ResultMargin": 15,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2002-01-19."
   },
   {
     "GameID": 20020122,
@@ -6068,7 +6280,10 @@
     "OpponentScore": 32,
     "Season": 2001,
     "IsComplete": "Yes",
-    "ResultMargin": 37
+    "ResultMargin": 37,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2002-01-22."
   },
   {
     "GameID": 20020125,
@@ -6081,7 +6296,10 @@
     "OpponentScore": 70,
     "Season": 2001,
     "IsComplete": "Yes",
-    "ResultMargin": -12
+    "ResultMargin": -12,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2002-01-25."
   },
   {
     "GameID": 20020126,
@@ -6094,7 +6312,10 @@
     "OpponentScore": 36,
     "Season": 2001,
     "IsComplete": "Yes",
-    "ResultMargin": 34
+    "ResultMargin": 34,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2002-01-26."
   },
   {
     "GameID": 20020129,
@@ -6107,7 +6328,10 @@
     "OpponentScore": 42,
     "Season": 2001,
     "IsComplete": "Yes",
-    "ResultMargin": 4
+    "ResultMargin": 4,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2002-01-29."
   },
   {
     "GameID": 20020201,
@@ -6120,7 +6344,10 @@
     "OpponentScore": 66,
     "Season": 2001,
     "IsComplete": "Yes",
-    "ResultMargin": 3
+    "ResultMargin": 3,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2002-02-01."
   },
   {
     "GameID": 20020202,
@@ -6133,7 +6360,10 @@
     "OpponentScore": 37,
     "Season": 2001,
     "IsComplete": "Yes",
-    "ResultMargin": 37
+    "ResultMargin": 37,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2002-02-02."
   },
   {
     "GameID": 20020205,
@@ -6146,7 +6376,10 @@
     "OpponentScore": 63,
     "Season": 2001,
     "IsComplete": "Yes",
-    "ResultMargin": -15
+    "ResultMargin": -15,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2002-02-05."
   },
   {
     "GameID": 20020209,
@@ -6159,7 +6392,10 @@
     "OpponentScore": 56,
     "Season": 2001,
     "IsComplete": "Yes",
-    "ResultMargin": -4
+    "ResultMargin": -4,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2002-02-09."
   },
   {
     "GameID": 20020212,
@@ -6172,7 +6408,10 @@
     "OpponentScore": 61,
     "Season": 2001,
     "IsComplete": "Yes",
-    "ResultMargin": 9
+    "ResultMargin": 9,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2002-02-12."
   },
   {
     "GameID": 20020219,
@@ -6186,7 +6425,11 @@
     "Season": 2001,
     "IsComplete": "Yes",
     "Recap": "St. Andrew's rallied from a 32-5 deficit but lost to Colleton Prep in the SCISA Region 4-AA Tournament.",
-    "ResultMargin": -5
+    "ResultMargin": -5,
+    "ArticleID": "20020220-loss-to-colleton-prep-ends-saints-season",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "\"LOSS TO COLLETON PREP ENDS SAINTS' SEASON,\" Savannah Morning News (GA), February 20, 2002, Page 6D, Sports."
   },
   {
     "GameID": 20021203,
@@ -6199,7 +6442,10 @@
     "OpponentScore": 24,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Tournament": null
+    "Tournament": null,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2002-12-03."
   },
   {
     "GameID": 20021206,
@@ -6212,7 +6458,10 @@
     "OpponentScore": 38,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Tournament": "St. Andrew's Holiday Invitational"
+    "Tournament": "St. Andrew's Holiday Invitational",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2002-12-06."
   },
   {
     "GameID": 20021207,
@@ -6225,7 +6474,10 @@
     "OpponentScore": 46,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Tournament": "St. Andrew's Holiday Invitational"
+    "Tournament": "St. Andrew's Holiday Invitational",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2002-12-07."
   },
   {
     "GameID": 20021213,
@@ -6238,7 +6490,10 @@
     "OpponentScore": 62,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Tournament": "Ret Thomas Memorial Tournament"
+    "Tournament": "Ret Thomas Memorial Tournament",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2002-12-13."
   },
   {
     "GameID": 20021214,
@@ -6251,7 +6506,10 @@
     "OpponentScore": 65,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Tournament": "Ret Thomas Memorial Tournament"
+    "Tournament": "Ret Thomas Memorial Tournament",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2002-12-14."
   },
   {
     "GameID": 20030103,
@@ -6264,7 +6522,10 @@
     "OpponentScore": 56,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Tournament": null
+    "Tournament": null,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2003-01-03."
   },
   {
     "GameID": 20030107,
@@ -6277,7 +6538,10 @@
     "OpponentScore": 58,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Tournament": null
+    "Tournament": null,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2003-01-07."
   },
   {
     "GameID": 20030110,
@@ -6290,7 +6554,10 @@
     "OpponentScore": 45,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Tournament": null
+    "Tournament": null,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2003-01-10."
   },
   {
     "GameID": 20030111,
@@ -6303,7 +6570,10 @@
     "OpponentScore": 46,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Tournament": null
+    "Tournament": null,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2003-01-11."
   },
   {
     "GameID": 20030114,
@@ -6316,7 +6586,10 @@
     "OpponentScore": 45,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Tournament": null
+    "Tournament": null,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2003-01-14."
   },
   {
     "GameID": 20030117,
@@ -6329,7 +6602,10 @@
     "OpponentScore": 45,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Tournament": null
+    "Tournament": null,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2003-01-17."
   },
   {
     "GameID": 20030118,
@@ -6342,7 +6618,10 @@
     "OpponentScore": 41,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Tournament": null
+    "Tournament": null,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2003-01-18."
   },
   {
     "GameID": 20030120,
@@ -6355,7 +6634,10 @@
     "OpponentScore": 48,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Tournament": null
+    "Tournament": null,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2003-01-20."
   },
   {
     "GameID": 20030124,
@@ -6368,7 +6650,10 @@
     "OpponentScore": 71,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Tournament": null
+    "Tournament": null,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2003-01-24."
   },
   {
     "GameID": 20030125,
@@ -6381,7 +6666,10 @@
     "OpponentScore": 92,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Tournament": null
+    "Tournament": null,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2003-01-25."
   },
   {
     "GameID": 20030128,
@@ -6394,7 +6682,10 @@
     "OpponentScore": 44,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Tournament": null
+    "Tournament": null,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2003-01-28."
   },
   {
     "GameID": 20030201,
@@ -6407,7 +6698,10 @@
     "OpponentScore": 46,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Tournament": null
+    "Tournament": null,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2003-02-01."
   },
   {
     "GameID": 20030204,
@@ -6420,7 +6714,10 @@
     "OpponentScore": 61,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Tournament": null
+    "Tournament": null,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2003-02-04."
   },
   {
     "GameID": 20030207,
@@ -6433,7 +6730,10 @@
     "OpponentScore": 71,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Tournament": null
+    "Tournament": null,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2003-02-07."
   },
   {
     "GameID": 20030211,
@@ -6446,7 +6746,10 @@
     "OpponentScore": 46,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Tournament": null
+    "Tournament": null,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2003-02-11."
   },
   {
     "GameID": 20030214,
@@ -6459,7 +6762,10 @@
     "OpponentScore": 74,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Tournament": null
+    "Tournament": null,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2003-02-14."
   },
   {
     "GameID": 20030219,
@@ -6472,7 +6778,10 @@
     "OpponentScore": 40,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Tournament": null
+    "Tournament": null,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2003-02-19."
   },
   {
     "GameID": 20030221,
@@ -6485,7 +6794,10 @@
     "OpponentScore": 52,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Tournament": null
+    "Tournament": null,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2003-02-21."
   },
   {
     "GameID": 20030226,
@@ -6498,7 +6810,10 @@
     "OpponentScore": 69,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Tournament": null
+    "Tournament": null,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2003-02-26."
   },
   {
     "GameID": 20031202,
@@ -6519,7 +6834,10 @@
         "alt": "Newspaper clipping for Memorial Day 64, St. Andrew's 47 on Dec. 2, 2003",
         "caption": "Newspaper clipping from the Dec. 2, 2003 Memorial Day game."
       }
-    ]
+    ],
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Memorial Day 64, St. Andrew's 47\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20031205,
@@ -6533,7 +6851,10 @@
     "Season": 2003,
     "IsComplete": "Yes",
     "RecapTitle": "Sawyer Leads Providence Win",
-    "Recap": "A Savannah Morning News boys basketball roundup reported that Cass Sawyer led all scorers with 19 points as St. Andrew's opened the region schedule with a 59-53 win over Providence Christian. The scoring totals here are taken from the team spreadsheet."
+    "Recap": "A Savannah Morning News boys basketball roundup reported that Cass Sawyer led all scorers with 19 points as St. Andrew's opened the region schedule with a 59-53 win over Providence Christian. The scoring totals here are taken from the team spreadsheet.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Sawyer Leads Providence Win\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20031212,
@@ -6553,7 +6874,10 @@
         "alt": "Newspaper clipping for Hilton Head Prep 68, St. Andrew's 50 on Dec. 12, 2003",
         "caption": "Savannah Morning News clipping from Dec. 14, 2003, covering the Dec. 12 Hilton Head Prep game."
       }
-    ]
+    ],
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2003-04",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2003-12-12."
   },
   {
     "GameID": 20031213,
@@ -6575,7 +6899,10 @@
         "alt": "Newspaper clipping for St. Andrew's 74, Hilton Head Christian 49 on Dec. 13, 2003",
         "caption": "Savannah Morning News clipping covering the Dec. 13, 2003 Hilton Head Christian game."
       }
-    ]
+    ],
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Clay Nears Triple-Double\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20031219,
@@ -6590,7 +6917,10 @@
     "Season": 2003,
     "IsComplete": "Yes",
     "RecapTitle": "Saints Fall To Robert Toombs",
-    "Recap": "Robert Toombs Christian defeated St. Andrew's 91-77 in the Coaches Against Cancer Tournament at Robert Toombs Christian Academy in Lyons. The Crusaders led 43-36 at halftime and were paced by Wesley Parker's game-high 28 points, with John Allmond, Mitch Pittman, and Derrick Bonner also scoring in double figures. Davy Clay and Josh Smith scored 20 points apiece for the Saints, Cass Sawyer added 17, and St. Andrew's moved to 2-3."
+    "Recap": "Robert Toombs Christian defeated St. Andrew's 91-77 in the Coaches Against Cancer Tournament at Robert Toombs Christian Academy in Lyons. The Crusaders led 43-36 at halftime and were paced by Wesley Parker's game-high 28 points, with John Allmond, Mitch Pittman, and Derrick Bonner also scoring in double figures. Davy Clay and Josh Smith scored 20 points apiece for the Saints, Cass Sawyer added 17, and St. Andrew's moved to 2-3.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Saints Fall To Robert Toombs\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20031220,
@@ -6605,7 +6935,10 @@
     "Season": 2003,
     "IsComplete": "Yes",
     "RecapTitle": "Pinewood Tops Saints",
-    "Recap": "Pinewood Christian defeated St. Andrew's 65-43 in the Robert Toombs Christian Coaches vs. Cancer Tournament in Lyons. Pinewood led 27-20 at halftime behind Speer Brannen, who scored 18 points, while Jeb Brannen and Daniel Barker added 13 apiece. Cass Sawyer led St. Andrew's with 15 points, Davy Clay added 10, and the Saints moved to 2-4."
+    "Recap": "Pinewood Christian defeated St. Andrew's 65-43 in the Robert Toombs Christian Coaches vs. Cancer Tournament in Lyons. Pinewood led 27-20 at halftime behind Speer Brannen, who scored 18 points, while Jeb Brannen and Daniel Barker added 13 apiece. Cass Sawyer led St. Andrew's with 15 points, Davy Clay added 10, and the Saints moved to 2-4.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Pinewood Tops Saints\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20040106,
@@ -6619,7 +6952,10 @@
     "Season": 2003,
     "IsComplete": "Yes",
     "RecapTitle": "Hilton Head Prep Stays Unbeaten",
-    "Recap": "Hilton Head Prep defeated St. Andrew's 68-41 in a SCISA matchup reported in the Jan. 8, 2004 Savannah Morning News. Senior forward Dan DiGenova scored 20 points and point guard Niles Murphy added 18 for the undefeated Dolphins, who led 33-17 at halftime and improved to 10-0. Davy Clay led St. Andrew's with 12 points, while Cass Sawyer added 9 as the Saints moved to 2-5."
+    "Recap": "Hilton Head Prep defeated St. Andrew's 68-41 in a SCISA matchup reported in the Jan. 8, 2004 Savannah Morning News. Senior forward Dan DiGenova scored 20 points and point guard Niles Murphy added 18 for the undefeated Dolphins, who led 33-17 at halftime and improved to 10-0. Davy Clay led St. Andrew's with 12 points, while Cass Sawyer added 9 as the Saints moved to 2-5.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Hilton Head Prep Stays Unbeaten\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20040109,
@@ -6633,7 +6969,10 @@
     "Season": 2003,
     "IsComplete": "Yes",
     "RecapTitle": "Sawyer, Clay Lead Region Win at Holly Hill",
-    "Recap": "Cass Sawyer scored 22 points and grabbed 12 rebounds, while Davy Clay added 14 points and 15 steals as St. Andrew's opened SCISA 2-AA play with a 58-43 road win at Holly Hill. Josh Smith added 19 points for the Saints, who led 28-20 at halftime and improved to 3-5 overall and 1-0 in region play. The recap was reported in the January 10, 2004 Savannah Morning News."
+    "Recap": "Cass Sawyer scored 22 points and grabbed 12 rebounds, while Davy Clay added 14 points and 15 steals as St. Andrew's opened SCISA 2-AA play with a 58-43 road win at Holly Hill. Josh Smith added 19 points for the Saints, who led 28-20 at halftime and improved to 3-5 overall and 1-0 in region play. The recap was reported in the January 10, 2004 Savannah Morning News.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Sawyer, Clay Lead Region Win at Holly Hill\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20040113,
@@ -6647,7 +6986,10 @@
     "Season": 2003,
     "IsComplete": "Yes",
     "RecapTitle": "Smith Leads Saints Past Charleston Collegiate",
-    "Recap": "Josh Smith had 15 points and 13 rebounds to pace St. Andrew's to a 59-52 road win at Charleston Collegiate in SCISA 2-AA play. Cass Sawyer added 13 points for the Saints, who led 32-19 at halftime and improved to 4-5 overall and 2-0 in region play. Alston Keith led Charleston Collegiate with 25 points. The recap was reported in the January 10, 2004 Savannah Morning News."
+    "Recap": "Josh Smith had 15 points and 13 rebounds to pace St. Andrew's to a 59-52 road win at Charleston Collegiate in SCISA 2-AA play. Cass Sawyer added 13 points for the Saints, who led 32-19 at halftime and improved to 4-5 overall and 2-0 in region play. Alston Keith led Charleston Collegiate with 25 points. The recap was reported in the January 10, 2004 Savannah Morning News.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Smith Leads Saints Past Charleston Collegiate\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20040116,
@@ -6668,7 +7010,11 @@
         "alt": "Newspaper clipping for St. Andrew's 71, James Island Christian 53 on Jan. 16, 2004",
         "caption": "Newspaper clipping covering the Jan. 16, 2004 James Island Christian game."
       }
-    ]
+    ],
+    "ScoringCompleteness": "partial",
+    "SourceNote": "Named St. Andrew's scoring rows total 69 points against the reported team score of 71; the reported team score is preserved.",
+    "SourceCitation": "\"Sawyer, Smith Lead Region Win Over James Island Christian\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20040117,
@@ -6689,7 +7035,10 @@
         "alt": "Newspaper clipping for St. Andrew's 76, Charleston Collegiate 59 on Jan. 17, 2004",
         "caption": "Savannah Morning News clipping from Jan. 18, 2004, covering the Jan. 17 Charleston Collegiate game."
       }
-    ]
+    ],
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Saints Move Into Region Lead\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20040120,
@@ -6710,7 +7059,11 @@
         "alt": "Newspaper clipping for Beaufort Academy 57, St. Andrew's 52 on Jan. 20, 2004",
         "caption": "Newspaper clipping covering the Jan. 20, 2004 Beaufort Academy game."
       }
-    ]
+    ],
+    "ScoringCompleteness": "partial",
+    "SourceNote": "Named St. Andrew's scoring rows total 54 points against the reported team score of 52; the reported team score is preserved.",
+    "SourceCitation": "\"Beaufort Academy Edges Saints in Overtime\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20040123,
@@ -6731,7 +7084,10 @@
         "alt": "Newspaper clipping for St. Andrew's 62, Colleton Prep 49 on Jan. 23, 2004",
         "caption": "Newspaper clipping covering the Jan. 23, 2004 Colleton Prep game."
       }
-    ]
+    ],
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Smith Leads Saints Past Colleton Prep\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20040124,
@@ -6752,7 +7108,10 @@
         "alt": "Newspaper clipping for Memorial Day 59, St. Andrew's 56 on Jan. 24, 2004",
         "caption": "Newspaper clipping covering the Jan. 24, 2004 Memorial Day game."
       }
-    ]
+    ],
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Memorial Day Outlasts St. Andrew's\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20040127,
@@ -6773,7 +7132,10 @@
         "alt": "Newspaper clipping for St. Andrew's 67, Patrick Henry 57 on Jan. 27, 2004",
         "caption": "Newspaper clipping covering the Jan. 27, 2004 Patrick Henry game."
       }
-    ]
+    ],
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Clay's Six Threes Spark Patrick Henry Win\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20040131,
@@ -6794,7 +7156,10 @@
         "alt": "Newspaper clipping for St. Andrew's 71, Holly Hill 60 on Jan. 31, 2004",
         "caption": "Newspaper clipping covering the Jan. 31, 2004 Holly Hill game."
       }
-    ]
+    ],
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Sawyer, Smith Lead Win Over Holly Hill\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20040203,
@@ -6815,7 +7180,10 @@
         "alt": "Newspaper clipping for Hilton Head Christian 68, St. Andrew's 61 on Feb. 3, 2004",
         "caption": "Newspaper clipping covering the Feb. 3, 2004 Hilton Head Christian game."
       }
-    ]
+    ],
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Smith Triple-Double Not Enough Against Hilton Head Christian\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20040206,
@@ -6836,7 +7204,10 @@
         "alt": "Newspaper clipping for St. Andrew's 49, James Island Christian 38 on Feb. 6, 2004",
         "caption": "Newspaper clipping covering the Feb. 6, 2004 James Island Christian game."
       }
-    ]
+    ],
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Saints Rally Past James Island Christian\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20040210,
@@ -6857,7 +7228,10 @@
         "alt": "Newspaper clipping for St. Andrew's 53, Beaufort Academy 47 on Feb. 10, 2004",
         "caption": "Newspaper clipping covering the Feb. 10, 2004 Beaufort Academy game."
       }
-    ]
+    ],
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Saints Clinch No. 1 Region Seed at Beaufort\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20040212,
@@ -6878,7 +7252,10 @@
         "alt": "Newspaper clipping for St. Andrew's 55, Patrick Henry 50 on Feb. 12, 2004",
         "caption": "Newspaper clipping covering the Feb. 12, 2004 Patrick Henry game."
       }
-    ]
+    ],
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Smith Leads Saints Past Patrick Henry\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20040213,
@@ -6904,7 +7281,11 @@
         "alt": "Newspaper clipping part 2 for St. Andrew's 64, Colleton Prep 39 on Feb. 13, 2004",
         "caption": "Newspaper clipping covering the Feb. 13, 2004 Colleton Prep game, part 2."
       }
-    ]
+    ],
+    "ScoringCompleteness": "partial",
+    "SourceNote": "Named St. Andrew's scoring rows total 63 points against the reported team score of 64; the reported team score is preserved.",
+    "SourceCitation": "\"Saints Clinch Regular-Season Region Title\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20040217,
@@ -6930,7 +7311,10 @@
         "alt": "Newspaper clipping part 2 for St. Andrew's 69, Providence Christian 55 on Feb. 17, 2004",
         "caption": "Newspaper clipping covering the Feb. 17, 2004 Providence Christian game, part 2."
       }
-    ]
+    ],
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Sawyer Leads Saints Past Providence Christian\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20040225,
@@ -6951,7 +7335,11 @@
         "alt": "Newspaper clipping for St. Andrew's 68, Colleton Prep 46 on Feb. 25, 2004",
         "caption": "Newspaper clipping covering the Feb. 25, 2004 Colleton Prep region semifinal."
       }
-    ]
+    ],
+    "ScoringCompleteness": "partial",
+    "SourceNote": "Named St. Andrew's scoring rows total 66 points against the reported team score of 68; the reported team score is preserved.",
+    "SourceCitation": "\"Smith Leads Saints Into Region Final\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20040227,
@@ -6977,7 +7365,10 @@
         "alt": "Newspaper clipping part 2 for St. Andrew's 65, Beaufort Academy 51 on Feb. 27, 2004",
         "caption": "Newspaper clipping covering the Feb. 27, 2004 Beaufort Academy region tournament final, part 2."
       }
-    ]
+    ],
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Saints Win Region Tournament Championship\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20040303,
@@ -6991,7 +7382,10 @@
     "Season": 2003,
     "IsComplete": "Yes",
     "RecapTitle": "Saints Advance Past Greenwood Christian",
-    "Recap": "Davy Clay scored 16 points and handed out seven assists to lead St. Andrew's past Greenwood Christian 63-54 in the SCISA Class AA quarterfinals at the Sumter County Exhibition Center. Josh Smith added 15 points and 10 rebounds for the Saints, Beau Hinton chipped in 11 points, and St. Andrew's recorded 17 steals on the afternoon. The Saints led 33-25 at halftime, improved to 17-8, and advanced to face Calhoun Academy in the semifinals."
+    "Recap": "Davy Clay scored 16 points and handed out seven assists to lead St. Andrew's past Greenwood Christian 63-54 in the SCISA Class AA quarterfinals at the Sumter County Exhibition Center. Josh Smith added 15 points and 10 rebounds for the Saints, Beau Hinton chipped in 11 points, and St. Andrew's recorded 17 steals on the afternoon. The Saints led 33-25 at halftime, improved to 17-8, and advanced to face Calhoun Academy in the semifinals.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Saints Advance Past Greenwood Christian\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20040305,
@@ -7007,7 +7401,10 @@
     "RecapTitle": "St. Andrew's to Play for SCISA Class AA Boys' Championship",
     "Recap": "Source: Savannah Morning News, March 6, 2004.\n\nST. ANDREW'S TO PLAY FOR SCISA CLASS AA BOYS' CHAMPIONSHIP\n\nThe St. Andrew's boys' basketball team apparently learned a valuable lesson while waiting in the stands of the Sumter County Exhibition Center prior to its semifinal contest against Calhoun Academy in the SCISAA AA state tournament.\n\nAfter seeing the school's girls' team fall behind early and never recover in its quest to get to the title game, coach Michael Bennet's team came out on fire and opened up a 15-6 first-quarter lead. That early burst propelled the Saints to an eventual 60-47 victory and a date with Sumter's Wardlaw Academy in today's 4 p.m. championship.\n\n\"It's hard to describe what it means for this group to finally get a chance to play for a state championship,\" said St. Andrew's coach Michael Bennet. \"Some of these kids have been playing varsity for four years. A lot of hard work went into this.\n\n\"Our guys saw the girls start a little slow, and I think that made them even more determined to come out and get off to a quick start tonight.\"\n\nDavy Clay, who finished with 14 points, 10 steals and eight assists, got his busy night started by draining a 3-pointer on the Saints' opening possession to make it 3-0, and with 5:29 left in the first quarter, Beau Hinton's trey stretched the lead to 11-4. Cass Sawyer, who led the Saints with 32 points, scored inside to make it 15-6.\n\nSawyer's performance came against a Calhoun squad that had built a 22-2 record coming into the game on the strength of a powerful inside game. But Bennet did not think his undersized team needed to do anything different from what it usually does to keep the Cavaliers under control.\n\n\"We're a team with a lot of quickness, and we think the best way for us to shut people down inside is to pressure the other team's guards so that they can't get the ball inside,\" Bennet said. \"We were able to do that tonight.\"\n\nThe Saints increased their lead to 32-18 late in the second quarter on a Clay 3-pointer, and enjoyed a 36-22 halftime margin. Calhoun slowly chipped away at the lead in the second half, pulling to within 45-38 by the end of the third quarter. But with the Saints on top 49-41 with four minutes remaining, Bennet put his team into a spread offense, and that allowed it to hold off the Cavaliers the rest of the way.\n\nCALHOUN ACADEMY (47)\n\nBen Felder 12, Brady 9, Dykes 6, Stabler 6, Rose 5, Hane 5, Brown 4.\n\nST. ANDREW'S (60)\n\nCass Sawyer 32, Davy Clay 17, Hinton 10, Smith 3, Glenn 3, Rauers 1.\n\nHalftime-SA, 37-25. Records-CA 22-3, SA 18-8.",
     "SourcePublication": "Savannah Morning News",
-    "SourceDate": "2004-03-06"
+    "SourceDate": "2004-03-06",
+    "SourceCitation": "Savannah Morning News • 2004-03-06",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20040306,
@@ -7023,7 +7420,11 @@
     "RecapTitle": "St. Andrew's Boys Capture SCISA Title",
     "Recap": "Source: Savannah Morning News, March 7, 2004.\n\nST. ANDREW'S BOYS CAPTURE SCISA TITLE - DAVY CLAY AND JOSH SMITH STAR AS SAINTS BEAT WARDLAW ACADEMY.\n\nThey're small, but they've been coming up big all season.\n\nDespite having three starters under 6 feet tall, the pesky St. Andrew's Saints used speed and quickness to race past Wardlaw Academy 61-48 for the South Carolina Independent School Association's Class AA state championship Saturday afternoon.\n\n\"Defense wins championships and that's what we believed all season,\" said 5-foot-4 guard Davy Clay, who directed St. Andrew's to its first state title since the 1998-99 season.\n\nClay instigated an annoying, swarming full-court pressure defense that took the defending champion Patriots from Johnson, S.C., more than a half to figure out.\n\nBy that time, the Saints were playing with a double-digit advantage and looking forward to postgame celebrations at the Sumter County Exhibition Center.\n\n\"You see some of the frustrations over the years,\" said St. Andrew's coach Michael Bennet. \"To get a championship makes me so proud of this group.\"\n\nThe last two seasons, the Saints lost in the state semifinals.\n\nBut determination and hustle gave St. Andrew's a winning edge this time. Twice, a Saint dove to the floor to get a loose ball, then called time-out to keep possession. Two other times, St. Andrew's forced 10-second violations before Wardlaw could get the ball over halfcourt.\n\nThe Patriots' frustration surfaced in the third quarter when Trevor Lyons drew a foul for swinging his elbows and connecting with Clay to get clear of the clinging defender.\n\n\"We knew what to expect,\" said Patriots coach Dennis Gibson. \"(The Saints) gamble on defense yet they recover so quickly. Give them a lot of credit.\"\n\nSt. Andrew's used a 15-0 run in a 6:15 span of the first and second quarters to build a 24-5 lead. Josh Smith fueled the run with 10 points, six coming on two long 3-pointers.\n\nThe Saints (19-8) led by 16 at halftime.\n\nWardlaw (21-10) fought back. Ben Bartley scored all 14 of his points in the second half, and teammate Craig Engle had 11 of his team-high 17 after intermission.\n\nBut when the Patriots closed within eight late in the third quarter, Clay and Smith teamed to quell the uprising.\n\nClay made a steal from Engle on the perimeter and pushed the ball up the court on a solo fastbreak. But seeing he was outnumbered, he appeared ready to pull the ball outside.\n\nBut then he dished to a streaking Smith for a layup that boosted St. Andrew's back to double-digit comfort.\n\n\"Davy's been giving me assists all season,\" Smith said. \"He sees the floor so well. He saw what we had and (the easy basket) was just what we needed at the time.\"\n\nThe Saints also knew how to protect the lead. Although they did not sink a field goal for the final 6:14, they made 11 of 14 free-throw attempts.\n\nThe only work left was to climb a ladder and cut down the nets.\n\n\"It's hard to put my feelings in words, but it's the best feeling ever,\" Clay said.\n\nNOTES: Clay, Smith and teammate Cass Sawyer were named to the all-tournament team. St. Andrew's Grace Wilkowski was named to the girls' all-tournament team.\n\nST. ANDREW'S (61)\n\nRauers 8, Sawyer 7, Hinton 7, Davy Clay 19, Josh Smith 19, Glenn 2\n\nWARDLAW ACADEMY (48)\n\nHayes 4, Craig Engle 17, Ben Bartley 14, Lyons 7, Bryan 3, Coldiron 3\n\nHalftime-St. Andrew's, 28-12. Records-St. Andrew's 19-8, Wardlaw 21-10",
     "SourcePublication": "Savannah Morning News",
-    "SourceDate": "2004-03-07"
+    "SourceDate": "2004-03-07",
+    "SourceCitation": "Savannah Morning News • 2004-03-07",
+    "ScoringCompleteness": "partial",
+    "SourceNote": "Named St. Andrew's scoring rows total 62 points against the reported team score of 61; the reported team score is preserved.",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20041122,
@@ -7037,7 +7438,10 @@
     "Season": 2004,
     "IsComplete": "Yes",
     "RecapTitle": "Bible Baptist Tops St. Andrew's in Season Opener",
-    "Recap": "Stephen Neisler scored 18 points to lead Bible Baptist to a 58-50 victory over St. Andrew's on Monday night in the Saints' 2004-05 season opener.\n\nRoss Glendye led St. Andrew's with 21 points, while Trevor Shanklin scored 12. Matt Knight and Thomas Withers added 6 points apiece, Billy Vine scored 3, and Jamie Cooper added 2.\n\nBible Baptist led 25-19 at halftime. The win moved Bible Baptist to 1-2, while St. Andrew's opened the season at 0-1.\n\nBIBLE BAPTIST (58)\n\nStephen Neisler 18, Nate Farrell 12, Rock Colson 10, Williams 6, Messer 5, Blackston 5, Ulin 2, Martinez 2.\n\nST. ANDREW'S (50)\n\nRoss Glendye 21, Trevor Shanklin 12, Knight 6, Vine 3, Withers 6, Cooper 2.\n\nHalftime-Bible Baptist, 25-19. Records-Bible Baptist 1-2, St. Andrew's 0-1."
+    "Recap": "Stephen Neisler scored 18 points to lead Bible Baptist to a 58-50 victory over St. Andrew's on Monday night in the Saints' 2004-05 season opener.\n\nRoss Glendye led St. Andrew's with 21 points, while Trevor Shanklin scored 12. Matt Knight and Thomas Withers added 6 points apiece, Billy Vine scored 3, and Jamie Cooper added 2.\n\nBible Baptist led 25-19 at halftime. The win moved Bible Baptist to 1-2, while St. Andrew's opened the season at 0-1.\n\nBIBLE BAPTIST (58)\n\nStephen Neisler 18, Nate Farrell 12, Rock Colson 10, Williams 6, Messer 5, Blackston 5, Ulin 2, Martinez 2.\n\nST. ANDREW'S (50)\n\nRoss Glendye 21, Trevor Shanklin 12, Knight 6, Vine 3, Withers 6, Cooper 2.\n\nHalftime-Bible Baptist, 25-19. Records-Bible Baptist 1-2, St. Andrew's 0-1.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Bible Baptist Tops St. Andrew's in Season Opener\"",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20041130,
@@ -7052,7 +7456,10 @@
     "IsComplete": "Yes",
     "RecapTitle": "Pinewood Christian Beats St. Andrew's",
     "Recap": "Junior point guard Ric Roderick poured in 21 points, while teammates Daniel Lynn and Chance Cofield added 16 and 10 apiece to lead Pinewood Christian to a season-opening 75-43 win over St. Andrew's.\n\nJamie Cooper led St. Andrew's with 16 points, and Ross Glendye added 10. Trevor Shanklin scored 9, while Matt Knight, Kevin Crouch, Billy Vine, and Thomas Withers added 2 points apiece.\n\nPinewood Christian led 40-18 at halftime. The win moved Pinewood Christian to 1-0, while St. Andrew's fell to 0-2.\n\nPINEWOOD CHRISTIAN (75)\n\nRic Roderick 21, Daniel Lynn 16, Chance Cofield 10, Brannen 6, Parker 2, Jarriel 8, Blaxton 6, Wilkinson 2.\n\nST. ANDREW'S (43)\n\nJaime Cooper 16, Ross Glendye 10, Shanklin 9, Knight 2, Crouch 2, Vine 2, Withers 2.\n\nHalftime-PC, 40-18. Records-PC 1-0, SA 0-2.",
-    "SourceNote": "The supplied Pinewood Christian individual scoring list totals 71 points against a reported team score of 75; the reported team score is preserved."
+    "SourceNote": "The supplied Pinewood Christian individual scoring list totals 71 points against a reported team score of 75; the reported team score is preserved.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Pinewood Christian Beats St. Andrew's\"",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20041202,
@@ -7067,7 +7474,10 @@
     "IsComplete": "Yes",
     "RecapTitle": "Colleton Prep Rallies Past St. Andrew's",
     "Recap": "WALTERBORO, S.C. - Colleton Prep trailed 31-25 at halftime but rallied to defeat St. Andrew's 64-58 in a non-region game.\n\nKevin Crouch led the Saints with a game-high 20 points. Billy Vine added 14, Ross Glendye scored 13, Thomas Withers had 5, and Jamie Cooper and Chris Miller scored 3 apiece.\n\nThe loss dropped St. Andrew's to 0-3, while Colleton Prep improved to 2-2.\n\nST. ANDREW'S (58)\n\nKevin Crouch 20, Billy Vine 14, Ross Glendye 13, Withers 5, Cooper 3, Miller 3.\n\nCOLLETON PREP (64)\n\nMartin 13, Smith 10, Hickman 10, Smoak 6, Murdaugh 4.\n\nHalftime-SA, 31-25. Records-SA 0-3, CP 2-2.",
-    "SourceNote": "The supplied Colleton Prep individual scoring list totals 43 points against a reported team score of 64; the reported team score is preserved. The original article listed St. Andrew's at 0-4, but the Dec. 3 Memorial Day recap identifies that game as the fourth game, so this result is treated as game three and St. Andrew's record is corrected to 0-3."
+    "SourceNote": "The supplied Colleton Prep individual scoring list totals 43 points against a reported team score of 64; the reported team score is preserved. The original article listed St. Andrew's at 0-4, but the Dec. 3 Memorial Day recap identifies that game as the fourth game, so this result is treated as game three and St. Andrew's record is corrected to 0-3.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Colleton Prep Rallies Past St. Andrew's\"",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20041203,
@@ -7082,7 +7492,10 @@
     "IsComplete": "Yes",
     "RecapTitle": "Memorial Day Pulls Away From St. Andrew's",
     "Recap": "Mikey Parrish scored 23 points to lead Memorial Day School past St. Andrew's 70-61 in a non-region game.\n\nThomas Conboy added 13 points for the Matadors, Warren Middlebrooks put in 10, and Ross Munro scored 17. Ross Glendye led the Saints with 30 points and Kevin Crouch added 12.\n\nSt. Andrew's led 31-29 at halftime, but Memorial outscored the Saints 25-12 in the third quarter. The loss dropped St. Andrew's to 0-4.\n\nMEMORIAL DAY (70)\n\nMikey Parrish 23, Ross Munro 17, Thomas Conboy 13, Warren Middlebrooks 10, Knight 4, Lord 2.\n\nST. ANDREW'S (61)\n\nRoss Glendye 30, Kevin Crouch 12, Shanklin 2, Withers 8, Cooper 6, Maleki 3.\n\nHalftime - SA, 31-29. Records - SA 0-4.",
-    "SourceNote": "The supplied Memorial Day individual scoring list totals 69 points against a reported team score of 70; the reported team score is preserved."
+    "SourceNote": "The supplied Memorial Day individual scoring list totals 69 points against a reported team score of 70; the reported team score is preserved.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Memorial Day Pulls Away From St. Andrew's\"",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20041204,
@@ -7097,7 +7510,10 @@
     "IsComplete": "Yes",
     "RecapTitle": "Frederica Academy Edges St. Andrew's",
     "Recap": "Matt Blumenfeld scored 19 points and Ward McCarthy chipped in 13 to lead Frederica Academy past St. Andrew's 52-50 in a non-region game.\n\nRoss Glendye led St. Andrew's with a game-high 21 points. Kevin Crouch added 10 points, Christian Maleki scored 8, Trevor Shanklin and Jamie Cooper each had 4, and Billy Vine added 3.\n\nFrederica Academy led 29-19 at halftime. The loss dropped St. Andrew's to 0-5.\n\nFREDERICA ACADEMY (52)\n\nMatt Blumenfeld 19, Ward McCarthy 13, Seymour 2, Goodhue 5, Jackson 2, Morgan 5, Wilson 6.\n\nST. ANDREW'S (50)\n\nRoss Glendye 21, Kevin Crouch 10, Maleki 8, Shaklin 4, Vine 3, Cooper 4.\n\nHalftime-FA 29-19. Records-STA 0-5.",
-    "SourceNote": "The source spelled Trevor Shanklin as Shaklin in the box score; the statistic is credited to Trevor Shanklin."
+    "SourceNote": "The source spelled Trevor Shanklin as Shaklin in the box score; the statistic is credited to Trevor Shanklin.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Frederica Academy Edges St. Andrew's\"",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20041207,
@@ -7112,7 +7528,10 @@
     "IsComplete": "Yes",
     "RecapTitle": "Frederica Academy Tops St. Andrew's in Rematch",
     "Recap": "ST. SIMONS ISLAND - Matt Bloomingfield scored 17 points to lead Frederica Academy over St. Andrew's 57-36 in a non-region game.\n\nEleven players scored for the Knights. Trevor Shanklin led St. Andrew's with 12 points, while Kevin Crouch and Thomas Withers each added 7, Ross Glendye scored 5, Matt Knight and Billy Vine had 2 apiece, and Jamie Cooper added 1.\n\nFrederica Academy led 22-16 at halftime. The loss dropped St. Andrew's to 0-6.\n\nST. ANDREW'S (36)\n\nTrevor Shanklin 12, Knight 2, Crouch 7, Vine 2, Glendye 5, Withers 7, Cooper 1.\n\nFREDERICA (57)\n\nMatt Bloomingfield 17, Higgins 2, Seymour 5, Cevere 2, Trawick 6, Anderson 2, Jackson 7, McCarthy 6, Morgan 5, Wilson 2, Wills 3.\n\nHalftime-FA, 22-16. Records-SA 0-5.",
-    "SourceNote": "The original article listed St. Andrew's at 0-5, but this result is identified as the sixth game of the season and is treated as dropping St. Andrew's to 0-6."
+    "SourceNote": "The original article listed St. Andrew's at 0-5, but this result is identified as the sixth game of the season and is treated as dropping St. Andrew's to 0-6.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Frederica Academy Tops St. Andrew's in Rematch\"",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20041210,
@@ -7127,7 +7546,10 @@
     "IsComplete": "Yes",
     "RecapTitle": "Hilton Head Prep Tops St. Andrew's",
     "Recap": "HILTON HEAD - Mikey Harrell scored 12 points to lead a balanced Hilton Head Prep offense past St. Andrew's 71-34 in a non-region game.\n\nThomas Withers paced St. Andrew's with 10 points. Trevor Shanklin added 8, Christian Maleki scored 5, Chris Miller and Kevin Crouch each had 3, Ross Glendye, Billy Vine, and Jamie Cooper added 2 apiece, and Matt Knight scored 1.\n\nHilton Head Prep led 41-11 at halftime. The loss dropped St. Andrew's to 0-7.\n\nST. ANDREW'S (34)\n\nThomas Whithers 10, Knight 1, Miller 3, Crouch 3, Shanklin 8, Vine 2, Glendye 2, Cooper 2, Malaki 5.\n\nHILTON HEAD PREP (71)\n\nMikey Harrell 12, Nick Strimpfel 10, Benton 8, Reeves 7, Breunsbach 7, Hazel 4, Murphy 8, Basirico 4, Strecansky 2, Foster 9.\n\nHalftime-HHP, 41-11.",
-    "SourceNote": "The supplied St. Andrew's individual scoring list totals 36 points against a reported team score of 34; the reported team score is preserved. The source spelled Thomas Withers as Whithers and Christian Maleki as Malaki in the box score; the statistics are credited to the roster names."
+    "SourceNote": "The supplied St. Andrew's individual scoring list totals 36 points against a reported team score of 34; the reported team score is preserved. The source spelled Thomas Withers as Whithers and Christian Maleki as Malaki in the box score; the statistics are credited to the roster names.",
+    "ScoringCompleteness": "partial",
+    "SourceCitation": "\"Hilton Head Prep Tops St. Andrew's\"",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20041211,
@@ -7142,7 +7564,10 @@
     "IsComplete": "Yes",
     "RecapTitle": "Laurence Manning Defeats St. Andrew's",
     "Recap": "HILTON HEAD - Alan Johnson scored a game-high 21 points to lead Laurence Manning Academy past St. Andrew's 67-46 in a non-region game.\n\nThomas Withers led the Saints with 12 points. Kevin Crouch added 11, Ross Glendye scored 10, Trevor Shanklin had 7, Jamie Cooper added 4, and Billy Vine scored 2.\n\nLaurence Manning led 37-22 at halftime. The loss dropped St. Andrew's to 0-8 overall.\n\nLAURENCE MANNING (67)\n\nAlan Johnson 21, Chris Roselend 14, Johnson James 13, McKessick 2, Welch 7, Goff 2, Wallace 8.\n\nST. ANDREW'S (46)\n\nThomas Whithers 12, Ross Glendye 10, Kevin Crouch 11, Shanklin 7, Vine 2, Cooper 4.\n\nHalftime-LM, 37-22. Record- SA 0-8 overall.",
-    "SourceNote": "The source spelled Thomas Withers as Whithers in the box score; the statistic is credited to the roster name."
+    "SourceNote": "The source spelled Thomas Withers as Whithers in the box score; the statistic is credited to the roster name.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Laurence Manning Defeats St. Andrew's\"",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20041216,
@@ -7157,7 +7582,10 @@
     "Season": 2004,
     "IsComplete": "Yes",
     "RecapTitle": "Pinewood Christian Beats St. Andrew's in Classic",
-    "Recap": "BELLVILLE - Ric Roderick scored a game-high 21 points to lead Pinewood Christian Academy past St. Andrew's 86-36 in the Bulloch Academy-Pinewood Christian Classic.\n\nSt. Andrew's was led by Christian Maleki, Kevin Crouch, Thomas Withers, and Jamie Cooper with 6 points apiece. Trevor Shanklin and Ross Glendye each scored 4, while Billy Vine and Ben Harrison added 2 apiece.\n\nPinewood Christian led 44-15 at halftime. The loss dropped St. Andrew's to 0-9.\n\nPINEWOOD CHRISTIAN (86)\n\nWilkenson 2, McCorkle 6, Jarrel 8, Cofield 8, Ric Roderick 21, Speer Brannen 15, Blaxton 6, Baker 2, Dasher 4, Bonner 3, Jeb Brannen 11.\n\nST. ANDREW'S (36)\n\nMaleki 6, Crouch 6, Shanklin 4, Vine 2, Harrison 2, Glendye 4, Withers 6, Cooper 6.\n\nHalftime-PC, 44-15."
+    "Recap": "BELLVILLE - Ric Roderick scored a game-high 21 points to lead Pinewood Christian Academy past St. Andrew's 86-36 in the Bulloch Academy-Pinewood Christian Classic.\n\nSt. Andrew's was led by Christian Maleki, Kevin Crouch, Thomas Withers, and Jamie Cooper with 6 points apiece. Trevor Shanklin and Ross Glendye each scored 4, while Billy Vine and Ben Harrison added 2 apiece.\n\nPinewood Christian led 44-15 at halftime. The loss dropped St. Andrew's to 0-9.\n\nPINEWOOD CHRISTIAN (86)\n\nWilkenson 2, McCorkle 6, Jarrel 8, Cofield 8, Ric Roderick 21, Speer Brannen 15, Blaxton 6, Baker 2, Dasher 4, Bonner 3, Jeb Brannen 11.\n\nST. ANDREW'S (36)\n\nMaleki 6, Crouch 6, Shanklin 4, Vine 2, Harrison 2, Glendye 4, Withers 6, Cooper 6.\n\nHalftime-PC, 44-15.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Pinewood Christian Beats St. Andrew's in Classic\"",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20041218,
@@ -7173,7 +7601,10 @@
     "IsComplete": "Yes",
     "RecapTitle": "David Emanuel Tops St. Andrew's in Overtime",
     "Recap": "BELLVILLE - Adam Callaway sank three straight free throws with four seconds left to tie St. Andrew's at 52 and send the game into overtime, then David Emanuel Academy pulled away for a 68-54 win in the Bulloch Academy-Pinewood Christian Classic.\n\nCallaway finished with 25 points for David Emanuel. Billy Vine, Thomas Withers, and Jamie Cooper each scored 10 points for the Saints. Ross Glendye and Trevor Shanklin added 8 apiece, Matt Knight scored 4, and Christian Maleki and Kevin Crouch had 2 apiece.\n\nDavid Emanuel led 30-20 at halftime and improved to 3-5.\n\nST. ANDREW'S (54)\n\nBilly Vine 10, Thomas Whithers 10, Jamie Cooper 10, Glendye 8, Shanklin 8, Knight 4, Maleki 2, Crouch 2.\n\nDAVID EMANUEL (68)\n\nAdam Callaway 25, Spencer Lanier 18, Michael Thigpen 12, Matt Mathis 7, Joseph Sparks 2, Ace Clark 2, Carl Glover 2.\n\nHalftime-DEA, 30-20. Records-DEA 3-5.",
-    "SourceNote": "The source spelled Thomas Withers as Whithers in the box score; the statistic is credited to the roster name."
+    "SourceNote": "The source spelled Thomas Withers as Whithers in the box score; the statistic is credited to the roster name.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"David Emanuel Tops St. Andrew's in Overtime\"",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20050105,
@@ -7188,7 +7619,10 @@
     "IsComplete": "Yes",
     "RecapTitle": "Colleton Prep Rallies Past St. Andrew's",
     "Recap": "Colleton Prep rallied from a five-point halftime deficit to defeat St. Andrew's 52-51 in a non-region game.\n\nThe Saints were outscored by 10 in the third quarter after leading 30-25 at halftime. Ross Glendye led all scorers with 21 points for St. Andrew's, while Kevin Crouch added 11. Nick Marriott led Colleton Prep with 13.\n\nThe loss dropped St. Andrew's to 0-11.\n\nCOLLETON PREP (52)\n\nNick Marriott 13, Mike Hickman 11, Walling 3, Hill 4, Smith 2, Gibbs 4, Murdauh 2, Martin 9, Steele 3.\n\nST. ANDREW'S (51)\n\nRoss Glendye 21, Kevin Crouch 11, Maleki 5, Shanklin 1, Vine 7, Withers 4, Cooper 2.\n\nHalftime-SA, 30-25. Records-SA 0-11.",
-    "SourceNote": "The supplied Colleton Prep individual scoring list totals 51 points against a reported team score of 52; the reported team score is preserved."
+    "SourceNote": "The supplied Colleton Prep individual scoring list totals 51 points against a reported team score of 52; the reported team score is preserved.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Colleton Prep Rallies Past St. Andrew's\"",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20050111,
@@ -7202,7 +7636,10 @@
     "Season": 2004,
     "IsComplete": "Yes",
     "RecapTitle": "Hilton Head Christian Wins Region Opener",
-    "Recap": "Jonathan Gort scored a game-high 16 points and Ryan Radloff added 10 as Hilton Head Christian Academy beat St. Andrew's 71-44 in the Saints' first SCISA Region 2-AA game of the season.\n\nRoss Glendye led St. Andrew's with 14 points. Thomas Withers added 7, Jamie Cooper scored 6, Christian Maleki and Billy Vine had 5 apiece, Kevin Crouch scored 3, and Matt Knight and Trevor Shanklin each added 2.\n\nHilton Head Christian led 31-27 at halftime. The loss dropped St. Andrew's to 0-12 overall and 0-1 in region play, while Hilton Head Christian improved to 6-6 and 1-0.\n\nHILTON HEAD CHRISTIAN (71)\n\nJonathan Gort 16, Ryan Radloff 10, Sonberg 9, Paul 4, Harrison 5, Short 2, Brown 5, J. Page 4, S. Page 8, Suess 8.\n\nST. ANDREW'S (44)\n\nRoss Glendye 14, Knight 2, Maleki 5, Crouch 3, Shanklin 2, Vine 5, Withers 7, Cooper 6.\n\nHalftime-HHC, 31-27. Records-HHC 6-6, 1-0 Region 2-AA; SA 0-12 overall, 0-1."
+    "Recap": "Jonathan Gort scored a game-high 16 points and Ryan Radloff added 10 as Hilton Head Christian Academy beat St. Andrew's 71-44 in the Saints' first SCISA Region 2-AA game of the season.\n\nRoss Glendye led St. Andrew's with 14 points. Thomas Withers added 7, Jamie Cooper scored 6, Christian Maleki and Billy Vine had 5 apiece, Kevin Crouch scored 3, and Matt Knight and Trevor Shanklin each added 2.\n\nHilton Head Christian led 31-27 at halftime. The loss dropped St. Andrew's to 0-12 overall and 0-1 in region play, while Hilton Head Christian improved to 6-6 and 1-0.\n\nHILTON HEAD CHRISTIAN (71)\n\nJonathan Gort 16, Ryan Radloff 10, Sonberg 9, Paul 4, Harrison 5, Short 2, Brown 5, J. Page 4, S. Page 8, Suess 8.\n\nST. ANDREW'S (44)\n\nRoss Glendye 14, Knight 2, Maleki 5, Crouch 3, Shanklin 2, Vine 5, Withers 7, Cooper 6.\n\nHalftime-HHC, 31-27. Records-HHC 6-6, 1-0 Region 2-AA; SA 0-12 overall, 0-1.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Hilton Head Christian Wins Region Opener\"",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20050114,
@@ -7217,7 +7654,10 @@
     "IsComplete": "Yes",
     "RecapTitle": "Providence Christian Tops St. Andrew's",
     "Recap": "Antron Floyd scored 17 points to lead visiting Providence Christian School over St. Andrew's 55-37 in a non-region game.\n\nAaron Pitts added 15 for Providence Christian. Kevin Crouch led St. Andrew's with 16 points, Ross Glendye scored 13, Jamie Cooper added 5, Christian Maleki scored 2, and Trevor Shanklin finished with 1.\n\nProvidence Christian led 28-16 at halftime. The win moved Providence Christian to 9-6, while St. Andrew's fell to 0-13.\n\nPROVIDENCE CHRISTIAN (55)\n\nAntron Floyd 17, Aaron Pitts 15, Chris Shaffell 8, Wood 4, Hughes 3, Dunn 2, Long 5, Tanner 1.\n\nST. ANDREW'S (37)\n\nCrouch 16, Glendye 13, Cooper 5, Maliki 2, Shanklin 1.\n\nHalftime-PC, 28-16. Records-PC 9-6, SA 0-13.",
-    "SourceNote": "The source spelled Christian Maleki as Maliki in the box score; the statistic is credited to the roster name."
+    "SourceNote": "The source spelled Christian Maleki as Maliki in the box score; the statistic is credited to the roster name.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Providence Christian Tops St. Andrew's\"",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20050115,
@@ -7232,7 +7672,10 @@
     "IsComplete": "Yes",
     "RecapTitle": "St. Andrew's Earns First Win at Bible Baptist",
     "Recap": "Jamie Cooper scored 17 points and pulled down 14 rebounds as St. Andrew's defeated Bible Baptist School 60-38 for its first win of the season.\n\nKevin Crouch added 14 points and Trevor Shanklin scored 11 for the Saints. Curley Williams led Bible Baptist with 10 points.\n\nSt. Andrew's led 34-11 at halftime. The win moved St. Andrew's to 1-13 in the entered schedule, while Bible Baptist was listed at 1-11.\n\nST. ANDREW'S (60)\n\nJaime Cooper 17, Trevor Shanklin 11, Kevin Crouch 14, Miller 3, Vine 4, Withers 4.\n\nBIBLE BAPTIST (38)\n\nCurley Williams 10, James 3, Thomas 7, Ulm 2, Messer 8, Colson 3, Brackston 3.\n\nHalftime-SA, 34-11. Records - SA 1-12, BB 1-11.",
-    "SourceNote": "The supplied St. Andrew's individual scoring line totals 53 points against a reported team score of 60; the reported team score is preserved. The source spelled Jamie Cooper as Jaime Cooper in the box score. The source listed St. Andrew's at 1-12, but the entered schedule leaves St. Andrew's at 1-13 after this win."
+    "SourceNote": "The supplied St. Andrew's individual scoring line totals 53 points against a reported team score of 60; the reported team score is preserved. The source spelled Jamie Cooper as Jaime Cooper in the box score. The source listed St. Andrew's at 1-12, but the entered schedule leaves St. Andrew's at 1-13 after this win.",
+    "ScoringCompleteness": "partial",
+    "SourceCitation": "\"St. Andrew's Earns First Win at Bible Baptist\"",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20050118,
@@ -7247,7 +7690,10 @@
     "IsComplete": "Yes",
     "RecapTitle": "Thomas Heyward Beats St. Andrew's in Region Play",
     "Recap": "RIDGELAND, S.C. - Ryan Roper scored 21 points and Thomas Heyward Academy jumped out to a 20-point halftime lead before beating St. Andrew's 68-46 in a SCISA region game.\n\nJeremy Garber added 16 points and Leon Ethridge scored 12 for Thomas Heyward. St. Andrew's was led by Billy Vine and Ross Glendye with 12 points apiece. Christian Maleki and Kevin Crouch added 8 each, Chris Miller and Trevor Shanklin scored 3 apiece, and Thomas Withers finished with 2.\n\nThomas Heyward led 41-21 at halftime. The loss dropped St. Andrew's to 1-14 overall and 0-2 in SCISA play.\n\nST. ANDREW'S (46)\n\nBilly Bine 12, Ross Glendye 12, Maleki 8, Miller 3, Crouch 8, Shanklin 3, Withers 2.\n\nTHOMAS HEYWARD (68)\n\nRyan Roper 21, Jeremy Garber 16, Leon Ethridge 12, Vincent 2, Altman 4, Cleand 9, Fleury 2, Daniel 2.\n\nHalftime-TH, 41-21. Records-SA 1-13, 0-2 SCISA.",
-    "SourceNote": "The supplied St. Andrew's individual scoring line totals 48 points against a reported team score of 46; the reported team score is preserved. The source listed St. Andrew's at 1-13 overall, but the entered Jan. 15 win leaves St. Andrew's at 1-14 after this loss. Billy Bine is credited to roster player Billy Vine."
+    "SourceNote": "The supplied St. Andrew's individual scoring line totals 48 points against a reported team score of 46; the reported team score is preserved. The source listed St. Andrew's at 1-13 overall, but the entered Jan. 15 win leaves St. Andrew's at 1-14 after this loss. Billy Bine is credited to roster player Billy Vine.",
+    "ScoringCompleteness": "partial",
+    "SourceCitation": "\"Thomas Heyward Beats St. Andrew's in Region Play\"",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20050121,
@@ -7262,7 +7708,10 @@
     "IsComplete": "Yes",
     "RecapTitle": "Beaufort Academy Downs St. Andrew's",
     "Recap": "BEAUFORT, S.C. - Trogdon Bradley scored 16 points and Matt Butler added 11 as Beaufort Academy defeated St. Andrew's 57-42 in a SCISA 4-AA game.\n\nRoss Glendye led the Saints with 11 points and Jamie Cooper scored 10. Kevin Crouch added 8, Billy Vine scored 6, Trevor Shanklin had 3, and Christian Maleki and Thomas Withers each added 2.\n\nThe loss dropped St. Andrew's to 1-15 overall and 0-3 in region play.\n\nST. ANDREW'S (42)\n\nRoss Glendye 11, Jaime Cooper 10, Maleki 2, Crouch 8, Shankin 3, Vine 6, Winters 2.\n\nBEAUFORT ACADEMY (57)\n\nTrogdon Bradley 16, Matt Butler 11, Theung 5, Brown 1, Gay 5, Long 4, Fowler 7, Maxon 4, Wedmann 4.",
-    "SourceNote": "The source spelled Jamie Cooper as Jaime Cooper, Trevor Shanklin as Shankin, and Thomas Withers as Winters in the box score; the statistics are credited to the roster names."
+    "SourceNote": "The source spelled Jamie Cooper as Jaime Cooper, Trevor Shanklin as Shankin, and Thomas Withers as Winters in the box score; the statistics are credited to the roster names.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Beaufort Academy Downs St. Andrew's\"",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20050122,
@@ -7277,7 +7726,10 @@
     "IsComplete": "Yes",
     "RecapTitle": "Parrish Leads Memorial Day Past St. Andrew's",
     "Recap": "Mikey Parrish scored a game-high 23 points, grabbed 16 rebounds and blocked 11 shots to lead Memorial Day School past St. Andrew's 60-47 in a non-region game.\n\nRoss Munro chipped in 15 points and Chris Sherrod added 14 for the Matadors. Ross Glendye led St. Andrew's with 19 points, Billy Vine scored 9, Kevin Crouch, Trevor Shanklin and Jamie Cooper each added 5, and Christian Maleki finished with 4.\n\nMemorial Day led 30-26 at halftime and improved to 6-10. The loss dropped St. Andrew's to 1-16 overall.\n\nST. ANDREW'S (47)\n\nRoss Glendye 19, Malers 4, Crouch 5, Shanklin 5, Vine 9, Cooper 5.\n\nMEMORIAL DAY (60)\n\nMikey Parrish 23, Ross Munro 15 points, Chris Sherrod 14, Knight 4, Middlebrooks 4.\n\nHalftime-MD, 30-26. Record-MD 6-10.",
-    "SourceNote": "The source listed Christian Maleki as Malers in the box score; the statistic is credited to the roster name."
+    "SourceNote": "The source listed Christian Maleki as Malers in the box score; the statistic is credited to the roster name.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Parrish Leads Memorial Day Past St. Andrew's\"",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20050125,
@@ -7292,7 +7744,10 @@
     "IsComplete": "Yes",
     "RecapTitle": "Hilton Head Prep Defeats St. Andrew's",
     "Recap": "Niles Murphy scored a game-high 21 points to lead Hilton Head Preparatory School past St. Andrew's 81-46 in a SCISA Region 2-AA game.\n\nAndrew Hazel chipped in 13 points and Dalton Benton added 11 for Hilton Head Prep. Ross Glendye led the Saints with 11 points. Jamie Cooper scored 9, Thomas Withers added 8, Christian Maleki and Kevin Crouch each scored 6, and Trevor Shanklin and Billy Vine had 3 apiece.\n\nHilton Head Prep led 35-17 at halftime. The loss dropped St. Andrew's to 1-17 overall and 0-4 in region play.\n\nHILTON HEAD PREP (81)\n\nNiles Murphy 21, Andrew Hazel 13, Dalton Benton 11, Harrell 8, Reeves 4, Nebraef 6, Strecanski 2, Strimpfel 5, Foster 8.\n\nST. ANDREW'S (46)\n\nRoss Glendye 11, Withers 8, Maleki 6, Crouch 6, Shanklin 3, Vine 3, Cooper 9.\n\nHalftime-HHP, 35-17. Record-SA 1-17, 0-3.",
-    "SourceNote": "The source listed St. Andrew's at 0-3 in region play, but the entered schedule leaves St. Andrew's at 0-4 in region play after this loss."
+    "SourceNote": "The source listed St. Andrew's at 0-3 in region play, but the entered schedule leaves St. Andrew's at 0-4 in region play after this loss.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Hilton Head Prep Defeats St. Andrew's\"",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20050128,
@@ -7307,7 +7762,9 @@
     "IsComplete": "Yes",
     "RecapTitle": "Hilton Head Christian Pulls Away From St. Andrew's",
     "Recap": "HILTON HEAD ISLAND, S.C. - Hilton Head Christian built a 34-13 halftime lead and defeated St. Andrew's 66-36 in a SCISA region game.\n\nChristian Maleki led the Saints with 10 points, while Jamie Cooper scored 9, Kevin Crouch added 8, Thomas Withers had 6, Trevor Shanklin scored 2, and Chris Miller added 1. The loss dropped St. Andrew's to 1-17 overall and 0-5 in SCISA Region 4-AA.",
-    "RecapSource": "Savannah Morning News (GA), January 29, 2005, Page 3C"
+    "SourceCitation": "Savannah Morning News (GA), January 29, 2005, Page 3C",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20050201,
@@ -7322,8 +7779,10 @@
     "IsComplete": "Yes",
     "RecapTitle": "Providence Christian Beats St. Andrew's",
     "Recap": "Providence Christian led 32-19 at halftime and defeated St. Andrew's 65-43 in a non-region game.\n\nJamie Cooper led St. Andrew's with 20 points. Christian Maleki scored 10, Chris Miller added 5, Matt Knight had 4, and Ty Massey scored 2. Providence Christian improved to 13-10.",
-    "RecapSource": "Savannah Morning News (GA), February 2, 2005, Page 3C",
-    "SourceNote": "The supplied St. Andrew's individual scoring line totals 41 points against a reported team score of 43; the reported team score is preserved. The source listed Massey by last name only; the statistic is credited to Ty Massey by roster-era inference."
+    "SourceNote": "The supplied St. Andrew's individual scoring line totals 41 points against a reported team score of 43; the reported team score is preserved. The source listed Massey by last name only; the statistic is credited to Ty Massey by roster-era inference.",
+    "SourceCitation": "Savannah Morning News (GA), February 2, 2005, Page 3C",
+    "ScoringCompleteness": "partial",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20050204,
@@ -7338,8 +7797,10 @@
     "IsComplete": "Yes",
     "RecapTitle": "Thomas Heyward Tops St. Andrew's",
     "Recap": "Thomas Heyward Academy led 45-24 at halftime and defeated St. Andrew's 76-52 in SCISA Region play.\n\nJamie Cooper led the Saints with 20 points. Billy Vine scored 10, Ross Glendye added 8, Kevin Crouch scored 5, Matt Knight had 4, Bryan Lee added 3, and Trevor Shanklin finished with 2. The loss dropped St. Andrew's to 1-19 overall and 0-6 in region play.",
-    "RecapSource": "Savannah Morning News (GA), February 5, 2005, Page 3B",
-    "SourceNote": "The source listed Lee by last name only; the statistic is credited to Bryan Lee by roster-era inference."
+    "SourceNote": "The source listed Lee by last name only; the statistic is credited to Bryan Lee by roster-era inference.",
+    "SourceCitation": "Savannah Morning News (GA), February 5, 2005, Page 3B",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20050208,
@@ -7354,8 +7815,10 @@
     "IsComplete": "Yes",
     "RecapTitle": "Beaufort Academy Defeats St. Andrew's",
     "Recap": "Beaufort Academy led 39-19 at halftime and defeated St. Andrew's 71-40 in a SCISA Region game.\n\nRoss Glendye led St. Andrew's with 16 points. Jamie Cooper scored 10, Christian Maleki added 5, Kevin Crouch scored 3, and Billy Vine had 2. The loss dropped St. Andrew's to 1-21 overall and 0-7 in Region 4-AAA.",
-    "RecapSource": "Savannah Morning News (GA), February 9, 2005, Page 5C",
-    "SourceNote": "The supplied St. Andrew's individual scoring line totals 36 points against a reported team score of 40; the reported team score is preserved."
+    "SourceNote": "The supplied St. Andrew's individual scoring line totals 36 points against a reported team score of 40; the reported team score is preserved.",
+    "SourceCitation": "Savannah Morning News (GA), February 9, 2005, Page 5C",
+    "ScoringCompleteness": "partial",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20050211,
@@ -7370,8 +7833,10 @@
     "IsComplete": "Yes",
     "RecapTitle": "Hilton Head Prep Rolls Past St. Andrew's",
     "Recap": "HILTON HEAD, S.C. - Hilton Head Prep led 48-16 at halftime and defeated St. Andrew's 87-34 in a SCISA regular-season game.\n\nRoss Glendye led the Saints with 9 points, Jamie Cooper scored 8, Trevor Shanklin added 6, Billy Vine had 4, Thomas Withers scored 3, and Christian Maleki and Kevin Crouch added 2 points apiece. Hilton Head Prep improved to 24-2.",
-    "RecapSource": "Savannah Morning News (GA), February 12, 2005, Page 3C",
-    "SourceNote": "The source record line listed St. Andrew's at 1-23 after this game, but the entered schedule and Feb. 11 final standings leave the Saints at 1-22 here and 1-23 after the Feb. 14 region playoff loss."
+    "SourceNote": "The source record line listed St. Andrew's at 1-23 after this game, but the entered schedule and Feb. 11 final standings leave the Saints at 1-22 here and 1-23 after the Feb. 14 region playoff loss.",
+    "SourceCitation": "Savannah Morning News (GA), February 12, 2005, Page 3C",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20050214,
@@ -7386,7 +7851,9 @@
     "IsComplete": "Yes",
     "RecapTitle": "Saints Fall at Beaufort Academy in Region Playoffs",
     "Recap": "BEAUFORT, S.C. - Beaufort Academy defeated St. Andrew's 66-57 in the first round of the SCISA Region 4 playoffs.\n\nRoss Glendye paced the Saints with 32 points and Kevin Crouch added 14. Trevor Shanklin scored 6, Christian Maleki had 4, and Billy Vine added 1. Beaufort Academy led 36-24 at halftime, and St. Andrew's ended its season 1-23.",
-    "RecapSource": "Savannah Morning News (GA), February 15, 2005, Page 3D"
+    "SourceCitation": "Savannah Morning News (GA), February 15, 2005, Page 3D",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20051121,
@@ -7400,7 +7867,11 @@
     "Season": 2005,
     "IsComplete": "Yes",
     "RecapTitle": "Cooper's double-double leads St. Andrew's past Bible Baptist",
-    "Recap": "Jamie Cooper posted a double-double with 20 points and 10 rebounds as St. Andrew's opened the 2005-06 season with a 61-35 win over Bible Baptist on Monday night.\n\nRoss Glendye added 13 points and Thomas Withers scored 12 for the Saints, who rolled to a comfortable home victory in non-region play."
+    "Recap": "Jamie Cooper posted a double-double with 20 points and 10 rebounds as St. Andrew's opened the 2005-06 season with a 61-35 win over Bible Baptist on Monday night.\n\nRoss Glendye added 13 points and Thomas Withers scored 12 for the Saints, who rolled to a comfortable home victory in non-region play.",
+    "ScoringCompleteness": "partial",
+    "SourceNote": "Named St. Andrew's scoring rows total 45 points against the reported team score of 61; the reported team score is preserved.",
+    "SourceCitation": "\"Cooper's double-double leads St. Andrew's past Bible Baptist\"",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20051129,
@@ -7414,7 +7885,10 @@
     "Season": 2005,
     "IsComplete": "Yes",
     "RecapTitle": "Withers' late foul shots seal St. Andrew's win over Patrick Henry",
-    "Recap": "Thomas Withers hit three of four foul shots in the final 20 seconds as St. Andrew's held off Patrick Henry 55-50 in a non-region game.\n\nRoss Glendye led St. Andrew's with 21 points, while Withers added 13 and Kevin Crouch scored 10. Jamie Cooper added 6 points, Ryan Kirby had 3, and Bryan Lee scored 2 for the Saints.\n\nPatrick Henry led 31-27 at halftime behind Stan Swofford's 18 points, Perry Gifferd's 13, and Vance Millerloadhat's 12. The win moved St. Andrew's to 2-0, while Patrick Henry fell to 0-1."
+    "Recap": "Thomas Withers hit three of four foul shots in the final 20 seconds as St. Andrew's held off Patrick Henry 55-50 in a non-region game.\n\nRoss Glendye led St. Andrew's with 21 points, while Withers added 13 and Kevin Crouch scored 10. Jamie Cooper added 6 points, Ryan Kirby had 3, and Bryan Lee scored 2 for the Saints.\n\nPatrick Henry led 31-27 at halftime behind Stan Swofford's 18 points, Perry Gifferd's 13, and Vance Millerloadhat's 12. The win moved St. Andrew's to 2-0, while Patrick Henry fell to 0-1.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Withers' late foul shots seal St. Andrew's win over Patrick Henry\"",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20051201,
@@ -7434,7 +7908,10 @@
     "SourceAuthor": "Christopher Lancia",
     "SourceByline": "Christopher Lancia 912.652.0329 christopher.lancia@savannahnow.com",
     "SourcePage": "1D",
-    "SourceSection": "SPORTS"
+    "SourceSection": "SPORTS",
+    "SourceCitation": "Savannah Morning News (GA) • By Christopher Lancia • December 2, 2005 • Page 1D • SPORTS",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20051202,
@@ -7450,7 +7927,10 @@
     "IsComplete": "Yes",
     "RecapTitle": "Vine leads St. Andrew's past Bible Baptist in Tip-Off Tournament",
     "Recap": "Billy Vine scored 14 points, Ross Glendye and Bryan Lee scored 12 points apiece, and Thomas Withers chipped in 10 as St. Andrew's defeated Bible Baptist 66-57 in the St. Andrew's Tip-Off Tournament.\n\nThe Saints improved to 4-0 after leading 37-25 at halftime. Gian Maleki added 6 points, while Ryan Kirby, Kevin Crouch, Steven Carbone, and Ben Harrison scored 2 apiece.\n\nBible Baptist was led by Rocky Colson's game-high 30 points. Blake Moore added 13 points and Terry Thomas had 10 for the Braves, who fell to 0-3.",
-    "SourceNote": "User-provided box score for Dec. 2, 2005 lists named St. Andrew's scorers totaling 62 points against a reported team score of 66; the named player scoring rows preserve the supplied box score."
+    "SourceNote": "User-provided box score for Dec. 2, 2005 lists named St. Andrew's scorers totaling 62 points against a reported team score of 66; the named player scoring rows preserve the supplied box score.",
+    "ScoringCompleteness": "partial",
+    "SourceCitation": "\"Vine leads St. Andrew's past Bible Baptist in Tip-Off Tournament\"",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20051203,
@@ -7465,7 +7945,10 @@
     "Season": 2005,
     "IsComplete": "Yes",
     "RecapTitle": "Providence outruns St. Andrew's in Tip-Off Tournament final",
-    "Recap": "Point guard Justin Gates scored 20 of his 32 points in the first half as Providence Christian out-ran St. Andrew's 79-54 in the championship game of the St. Andrew's Tip-Off Tournament.\n\nAntron Floyd added 15 for Providence, which improved to 8-3 after leading 48-22 at halftime.\n\nThomas Withers scored 20 points and Ross Glendye added 13 for the Saints, who fell to 4-1. Gian Maleki had 5 points, Kevin Crouch scored 6, Billy Vine added 7, Alex Chu had 1, and Bryan Lee scored 2."
+    "Recap": "Point guard Justin Gates scored 20 of his 32 points in the first half as Providence Christian out-ran St. Andrew's 79-54 in the championship game of the St. Andrew's Tip-Off Tournament.\n\nAntron Floyd added 15 for Providence, which improved to 8-3 after leading 48-22 at halftime.\n\nThomas Withers scored 20 points and Ross Glendye added 13 for the Saints, who fell to 4-1. Gian Maleki had 5 points, Kevin Crouch scored 6, Billy Vine added 7, Alex Chu had 1, and Bryan Lee scored 2.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Providence outruns St. Andrew's in Tip-Off Tournament final\"",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20051206,
@@ -7480,7 +7963,10 @@
     "Season": 2005,
     "IsComplete": "Yes",
     "RecapTitle": "Hilton Head Christian beats St. Andrew's in Colleton Prep opener",
-    "Recap": "Jonathan Gort led three Hilton Head Christian players in double figures with 14 points as the Eagles beat St. Andrew's 75-38 in the first round of the Colleton Prep Holiday Tournament in Hilton Head Island, S.C.\n\nThomas Withers led the Saints with 11 points. Bryan Lee added 9, Gian Maleki scored 7, Kevin Crouch and Jamie Cooper each had 4, Ross Glendye scored 2, and Billy Vine added 1.\n\nHilton Head Christian led 35-15 at halftime. The loss dropped St. Andrew's to 4-2."
+    "Recap": "Jonathan Gort led three Hilton Head Christian players in double figures with 14 points as the Eagles beat St. Andrew's 75-38 in the first round of the Colleton Prep Holiday Tournament in Hilton Head Island, S.C.\n\nThomas Withers led the Saints with 11 points. Bryan Lee added 9, Gian Maleki scored 7, Kevin Crouch and Jamie Cooper each had 4, Ross Glendye scored 2, and Billy Vine added 1.\n\nHilton Head Christian led 35-15 at halftime. The loss dropped St. Andrew's to 4-2.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Hilton Head Christian beats St. Andrew's in Colleton Prep opener\"",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20051208,
@@ -7493,7 +7979,10 @@
     "TeamScore": 39,
     "OpponentScore": 57,
     "Season": 2005,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2005-06",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2005-12-08."
   },
   {
     "GameID": 20051209,
@@ -7509,7 +7998,10 @@
     "IsComplete": "Yes",
     "RecapTitle": "Jeff Davis holds off St. Andrew's in Colleton Prep consolation game",
     "Recap": "Jeff Davis Academy built a seven-point halftime lead and held on for a 60-53 win over St. Andrew's in a consolation game in the Colleton Prep Holiday Tournament in Walterboro, S.C.\n\nJeremy Roland led the Raiders with 20 points, while Brian Williams added 15 and John Owens scored 12.\n\nRoss Glendye led the Saints with 13 points. Thomas Withers and Jamie Cooper each scored 11, Kevin Crouch added 10, Gian Maleki had 6, and Bryan Lee scored 2. Jeff Davis led 32-25 at halftime. The loss dropped St. Andrew's to 4-4, while Jeff Davis improved to 3-4.",
-    "SourceNote": "User-provided recap text says Ross Glendye led St. Andrew's with 12 points, while the supplied box score lists Glendye with 13. The player stat row and recap scoring line follow the box score so St. Andrew's totals reconcile to 53."
+    "SourceNote": "User-provided recap text says Ross Glendye led St. Andrew's with 12 points, while the supplied box score lists Glendye with 13. The player stat row and recap scoring line follow the box score so St. Andrew's totals reconcile to 53.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Jeff Davis holds off St. Andrew's in Colleton Prep consolation game\"",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20051216,
@@ -7521,7 +8013,10 @@
     "TeamScore": 34,
     "OpponentScore": 40,
     "Season": 2005,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2005-06",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2005-12-16."
   },
   {
     "GameID": 20060105,
@@ -7533,7 +8028,11 @@
     "TeamScore": 54,
     "OpponentScore": 41,
     "Season": 2005,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ScoringCompleteness": "partial",
+    "SourceNote": "Named St. Andrew's scoring rows total 53 points against the reported team score of 54; the reported team score is preserved.",
+    "SourceSeasonLabel": "2005-06",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2006-01-05."
   },
   {
     "GameID": 20060107,
@@ -7547,7 +8046,10 @@
     "Season": 2005,
     "IsComplete": "Yes",
     "RecapTitle": "Crouch scores 16 in loss to Trinity",
-    "Recap": "Andrew Rhea scored a game-high 26 points and Phil Hopewell added 25 to lead Trinity past St. Andrew's 67-48 in SCISA action.\n\nKevin Crouch led the Saints with 16 points, while Jamie Cooper added 10. Ross Glendye scored 7, Gian Maleki had 8, Ryan Kirby added 2, Billy Vine scored 4, and Alex Chu added 1.\n\nTrinity led 30-21 at halftime. The loss dropped St. Andrew's to 5-6, while Trinity improved to 4-4."
+    "Recap": "Andrew Rhea scored a game-high 26 points and Phil Hopewell added 25 to lead Trinity past St. Andrew's 67-48 in SCISA action.\n\nKevin Crouch led the Saints with 16 points, while Jamie Cooper added 10. Ross Glendye scored 7, Gian Maleki had 8, Ryan Kirby added 2, Billy Vine scored 4, and Alex Chu added 1.\n\nTrinity led 30-21 at halftime. The loss dropped St. Andrew's to 5-6, while Trinity improved to 4-4.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Crouch scores 16 in loss to Trinity\"",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20060109,
@@ -7563,7 +8065,10 @@
     "Season": 2005,
     "IsComplete": "Yes",
     "RecapTitle": "Saints hit free throws to hold off Providence",
-    "Recap": "St. Andrew's connected on 19 of 26 shots from the foul line and turned back Providence Christian 59-54 in a boys' non-conference game Monday night.\n\nRoss Glendye led the Saints with 16 points, Jamie Cooper had 13, and Gian Maleki added 10. Maleki also stole an inbounds pass late in the game with St. Andrew's up by two, helping the Saints push the lead to four and hold on for the close win.\n\nJebre Rutledge and Chris Shaffell led Providence with 11 points each. St. Andrew's led 28-26 at halftime and improved to 6-6, while Providence fell to 9-8."
+    "Recap": "St. Andrew's connected on 19 of 26 shots from the foul line and turned back Providence Christian 59-54 in a boys' non-conference game Monday night.\n\nRoss Glendye led the Saints with 16 points, Jamie Cooper had 13, and Gian Maleki added 10. Maleki also stole an inbounds pass late in the game with St. Andrew's up by two, helping the Saints push the lead to four and hold on for the close win.\n\nJebre Rutledge and Chris Shaffell led Providence with 11 points each. St. Andrew's led 28-26 at halftime and improved to 6-6, while Providence fell to 9-8.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Saints hit free throws to hold off Providence\"",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20060110,
@@ -7575,7 +8080,10 @@
     "TeamScore": 36,
     "OpponentScore": 77,
     "Season": 2005,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2005-06",
+    "SourceCitation": "\"St. Andrew's boys basketball game report,\" Savannah Morning News archive, game date 2006-01-10."
   },
   {
     "GameID": 20060113,
@@ -7589,7 +8097,10 @@
     "Season": 2005,
     "IsComplete": "Yes",
     "RecapTitle": "Crouch double-double leads Saints past Bible Baptist",
-    "Recap": "Kevin Crouch scored 15 points and pulled down 12 rebounds as St. Andrew's defeated Bible Baptist 48-35 in a non-region game.\n\nJamie Cooper and Bryan Lee added 9 points apiece for the Saints, while Gian Maleki scored 8, Alex Chu had 5, and Billy Vine added 2.\n\nBalle Moore and Teron Thomas scored 14 and 13 points, respectively, for Bible Baptist. St. Andrew's led 16-13 at halftime and improved to 7-7, while Bible Baptist fell to 3-11."
+    "Recap": "Kevin Crouch scored 15 points and pulled down 12 rebounds as St. Andrew's defeated Bible Baptist 48-35 in a non-region game.\n\nJamie Cooper and Bryan Lee added 9 points apiece for the Saints, while Gian Maleki scored 8, Alex Chu had 5, and Billy Vine added 2.\n\nBalle Moore and Teron Thomas scored 14 and 13 points, respectively, for Bible Baptist. St. Andrew's led 16-13 at halftime and improved to 7-7, while Bible Baptist fell to 3-11.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Crouch double-double leads Saints past Bible Baptist\"",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20060117,
@@ -7603,7 +8114,10 @@
     "Season": 2005,
     "IsComplete": "Yes",
     "RecapTitle": "Thomas Heyward rallies past St. Andrew's in fourth quarter",
-    "Recap": "Jared Cleland scored a game-high 27 points as Thomas Heyward came back to beat St. Andrew's 75-65 in a SCISA Region 4-AAA game in Ridgeland, S.C.\n\nThe Rebels outscored the Saints 25-10 in the fourth quarter and hit 13 of 19 from the foul line in the period to complete the comeback.\n\nRoss Glendye led St. Andrew's with 19 points, while Kevin Crouch and Jamie Cooper contributed 16 apiece. Gian Maleki added 8 points and Bryan Lee scored 6 for the Saints.\n\nSt. Andrew's led 38-33 at halftime. The loss dropped the Saints to 7-8 overall and 0-2 in SCISA Region 4-AAA, while Thomas Heyward improved to 6-2 and 1-1."
+    "Recap": "Jared Cleland scored a game-high 27 points as Thomas Heyward came back to beat St. Andrew's 75-65 in a SCISA Region 4-AAA game in Ridgeland, S.C.\n\nThe Rebels outscored the Saints 25-10 in the fourth quarter and hit 13 of 19 from the foul line in the period to complete the comeback.\n\nRoss Glendye led St. Andrew's with 19 points, while Kevin Crouch and Jamie Cooper contributed 16 apiece. Gian Maleki added 8 points and Bryan Lee scored 6 for the Saints.\n\nSt. Andrew's led 38-33 at halftime. The loss dropped the Saints to 7-8 overall and 0-2 in SCISA Region 4-AAA, while Thomas Heyward improved to 6-2 and 1-1.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Thomas Heyward rallies past St. Andrew's in fourth quarter\"",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20060120,
@@ -7617,7 +8131,10 @@
     "Season": 2005,
     "IsComplete": "Yes",
     "RecapTitle": "Beaufort Academy pulls away at St. Andrew's",
-    "Recap": "Kevin Butler scored 22 points to lead three Beaufort Academy players in double figures as the visiting Eagles beat St. Andrew's 72-38 in a SCISA Region 3-AAA game.\n\nRoss Glendye and Jamie Cooper led the Saints with 9 points apiece. Kevin Crouch added 8, Gian Maleki scored 6, Bryan Lee had 5, and Alex Chu added 1.\n\nBeaufort Academy led 42-19 at halftime. The loss dropped St. Andrew's to 7-9 overall and 0-3 in SCISA Region 3-AAA, while Beaufort Academy improved to 9-7 and 2-1."
+    "Recap": "Kevin Butler scored 22 points to lead three Beaufort Academy players in double figures as the visiting Eagles beat St. Andrew's 72-38 in a SCISA Region 3-AAA game.\n\nRoss Glendye and Jamie Cooper led the Saints with 9 points apiece. Kevin Crouch added 8, Gian Maleki scored 6, Bryan Lee had 5, and Alex Chu added 1.\n\nBeaufort Academy led 42-19 at halftime. The loss dropped St. Andrew's to 7-9 overall and 0-3 in SCISA Region 3-AAA, while Beaufort Academy improved to 9-7 and 2-1.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Beaufort Academy pulls away at St. Andrew's\"",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20060124,
@@ -7631,7 +8148,10 @@
     "Season": 2005,
     "IsComplete": "Yes",
     "RecapTitle": "Hilton Head Prep beats St. Andrew's behind Benton",
-    "Recap": "Dalton Benton scored a game-high 23 points and Andrew Hazel added 12 as Hilton Head Prep defeated St. Andrew's 72-41 in a SCISA game.\n\nKevin Crouch led St. Andrew's with 18 points, while Ross Glendye added 15. Jamie Cooper scored 6 and Alex Chu added 2 for the Saints.\n\nHilton Head Prep led 27-19 at halftime. The loss dropped St. Andrew's to 7-10 overall and 0-4 in region play."
+    "Recap": "Dalton Benton scored a game-high 23 points and Andrew Hazel added 12 as Hilton Head Prep defeated St. Andrew's 72-41 in a SCISA game.\n\nKevin Crouch led St. Andrew's with 18 points, while Ross Glendye added 15. Jamie Cooper scored 6 and Alex Chu added 2 for the Saints.\n\nHilton Head Prep led 27-19 at halftime. The loss dropped St. Andrew's to 7-10 overall and 0-4 in region play.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Hilton Head Prep beats St. Andrew's behind Benton\"",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20060127,
@@ -7646,7 +8166,10 @@
     "IsComplete": "Yes",
     "RecapTitle": "Hilton Head Christian beats St. Andrew's in region play",
     "Recap": "Jonathan Gore scored 21 points to lead Hilton Head Christian past St. Andrew's 72-26 in a SCISA Region 4-AAA game in Hilton Head Island.\n\nRoss Glendye led St. Andrew's with 14 points. Gian Maleki added 5, Chris Miller scored 3, and Kevin Crouch, Alex Chu, and Jamie Cooper each scored 2 for the Saints.\n\nHilton Head Christian led 41-10 at halftime. The loss dropped St. Andrew's to 7-11 overall and 0-4 in SCISA Region 4-AAA.",
-    "SourceNote": "The supplied St. Andrew's individual scoring line totals 28 points, while the reported final score lists St. Andrew's with 26. The game record preserves the reported 72-26 final and the supplied individual scoring rows."
+    "SourceNote": "The supplied St. Andrew's individual scoring line totals 28 points, while the reported final score lists St. Andrew's with 26. The game record preserves the reported 72-26 final and the supplied individual scoring rows.",
+    "ScoringCompleteness": "partial",
+    "SourceCitation": "\"Hilton Head Christian beats St. Andrew's in region play\"",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20060128,
@@ -7660,7 +8183,10 @@
     "Season": 2005,
     "IsComplete": "Yes",
     "RecapTitle": "Pinewood Christian beats St. Andrew's in Bellville",
-    "Recap": "Ric Roderick scored a game-high 19 points to lead Pinewood Christian past St. Andrew's 78-30 in a non-region game in Bellville.\n\nRoss Glendye led the Saints with 13 points. Gian Maleki added 7, Ben Harrison and Bryan Lee scored 4 apiece, and Kevin Crouch had 2.\n\nPinewood Christian led 39-15 at halftime and improved to 17-1."
+    "Recap": "Ric Roderick scored a game-high 19 points to lead Pinewood Christian past St. Andrew's 78-30 in a non-region game in Bellville.\n\nRoss Glendye led the Saints with 13 points. Gian Maleki added 7, Ben Harrison and Bryan Lee scored 4 apiece, and Kevin Crouch had 2.\n\nPinewood Christian led 39-15 at halftime and improved to 17-1.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Pinewood Christian beats St. Andrew's in Bellville\"",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20060203,
@@ -7675,7 +8201,10 @@
     "IsComplete": "Yes",
     "RecapTitle": "Thomas Heyward wins at St. Andrew's",
     "Recap": "Alex Cooler scored 21 points to lead visiting Thomas Heyward Academy past St. Andrew's 58-33 in a SCISA region game.\n\nKevin Crouch led the Saints with 10 points. Ross Glendye added 7, Jamie Cooper scored 6, Bryan Lee had 5, Kirby scored 3 and Chu added 2.\n\nThomas Heyward led 23-16 at halftime.",
-    "SourceNote": "The supplied Thomas Heyward individual scoring line totals 57 points, while the reported final score lists Thomas Heyward with 58. The game record preserves the reported 58-33 final."
+    "SourceNote": "The supplied Thomas Heyward individual scoring line totals 57 points, while the reported final score lists Thomas Heyward with 58. The game record preserves the reported 58-33 final.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Thomas Heyward wins at St. Andrew's\"",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20060204,
@@ -7689,7 +8218,10 @@
     "Season": 2005,
     "IsComplete": "Yes",
     "RecapTitle": "Glendye leads Saints past Patrick Henry",
-    "Recap": "Ross Glendye scored a game-high 20 points as St. Andrew's defeated Patrick Henry 57-55 in a non-region game in Estill, S.C.\n\nRyan Kirby added 17 points and Kevin Crouch scored 11 for the Saints. Jamie Cooper had 5 and Gian Maleki added 4.\n\nVance Miller Lockott led Patrick Henry with 18 points. Patrick Henry led 32-25 at halftime, and St. Andrew's improved to 8-12."
+    "Recap": "Ross Glendye scored a game-high 20 points as St. Andrew's defeated Patrick Henry 57-55 in a non-region game in Estill, S.C.\n\nRyan Kirby added 17 points and Kevin Crouch scored 11 for the Saints. Jamie Cooper had 5 and Gian Maleki added 4.\n\nVance Miller Lockott led Patrick Henry with 18 points. Patrick Henry led 32-25 at halftime, and St. Andrew's improved to 8-12.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Glendye leads Saints past Patrick Henry\"",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20060207,
@@ -7703,7 +8235,10 @@
     "Season": 2005,
     "IsComplete": "Yes",
     "RecapTitle": "Glendye scores 19 in loss at Beaufort Academy",
-    "Recap": "Josh Wegmann scored 16 points to lead Beaufort Academy past St. Andrew's 58-43 in a SCISA 4-AAA game.\n\nSteven Walker added 11 points and Matt Butler chipped in 10 for the Eagles.\n\nRoss Glendye led the Saints with a game-high 19 points, and Jamie Cooper added 13. Gian Maleki scored 5, Billy Vine and Alex Chu had 2 apiece, and Ryan Kirby and Thomas Withers each added 1.\n\nBeaufort Academy led 27-16 at halftime. The loss dropped St. Andrew's to 8-13 overall and 0-6 in SCISA 4-AAA."
+    "Recap": "Josh Wegmann scored 16 points to lead Beaufort Academy past St. Andrew's 58-43 in a SCISA 4-AAA game.\n\nSteven Walker added 11 points and Matt Butler chipped in 10 for the Eagles.\n\nRoss Glendye led the Saints with a game-high 19 points, and Jamie Cooper added 13. Gian Maleki scored 5, Billy Vine and Alex Chu had 2 apiece, and Ryan Kirby and Thomas Withers each added 1.\n\nBeaufort Academy led 27-16 at halftime. The loss dropped St. Andrew's to 8-13 overall and 0-6 in SCISA 4-AAA.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Glendye scores 19 in loss at Beaufort Academy\"",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20060210,
@@ -7718,7 +8253,10 @@
     "IsComplete": "Yes",
     "RecapTitle": "Maleki scores 28 at Hilton Head Prep",
     "Recap": "Niles Murphy scored 18 points to lead four Hilton Head Prep players in double figures as the Dolphins beat St. Andrew's 91-50 in a SCISA Region 4-AAA game in Hilton Head Island.\n\nDalton Benton added 17 points, Jeff Breunsbach scored 11 and Michael Reeves had 10 for Hilton Head Prep.\n\nPatrick Maleki was the only St. Andrew's player in double figures with 28 points. Kevin Crouch added 6, Ross Glendye scored 5, Bryan Lee had 4, Bubby Pavlo scored 3, and Thomas Withers and Taylor added 2 apiece.\n\nHilton Head Prep led 48-26 at halftime. The loss dropped St. Andrew's to 8-14 overall and 0-8 in SCISA Region 4-AAA.",
-    "SourceNote": "The supplied Hilton Head Prep individual scoring line totals 77 points, while the reported final score lists Hilton Head Prep with 91. The game record preserves the reported 91-50 final."
+    "SourceNote": "The supplied Hilton Head Prep individual scoring line totals 77 points, while the reported final score lists Hilton Head Prep with 91. The game record preserves the reported 91-50 final.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Maleki scores 28 at Hilton Head Prep\"",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20060213,
@@ -7732,7 +8270,10 @@
     "Season": 2005,
     "IsComplete": "Yes",
     "RecapTitle": "Vine scores 11 in region tournament loss",
-    "Recap": "Jared Cleland scored 22 points and Jeremy Garber added 18 to lead Thomas Heyward Academy to a 65-43 victory over St. Andrew's in the first round of the SCISA Region 4-AA/AAA Tournament in Ridgeland, S.C.\n\nBilly Vine led St. Andrew's with 11 points, and Patrick Maleki added 10. Kevin Crouch and Jamie Cooper scored 6 apiece, Ross Glendye had 4, and Ryan Kirby and Steven Carbone each added 3.\n\nThomas Heyward led 31-17 at halftime. The loss dropped St. Andrew's to 8-15."
+    "Recap": "Jared Cleland scored 22 points and Jeremy Garber added 18 to lead Thomas Heyward Academy to a 65-43 victory over St. Andrew's in the first round of the SCISA Region 4-AA/AAA Tournament in Ridgeland, S.C.\n\nBilly Vine led St. Andrew's with 11 points, and Patrick Maleki added 10. Kevin Crouch and Jamie Cooper scored 6 apiece, Ross Glendye had 4, and Ryan Kirby and Steven Carbone each added 3.\n\nThomas Heyward led 31-17 at halftime. The loss dropped St. Andrew's to 8-15.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Vine scores 11 in region tournament loss\"",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20061120,

@@ -1,5 +1,5 @@
 [
-{
+  {
     "StatID": 2021030301202006,
     "GameID": 2021030301,
     "PlayerID": 202006,
@@ -59,7 +59,7 @@
     "CF_Innings": 7,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021030301202109,
     "GameID": 2021030301,
     "PlayerID": 202109,
@@ -119,7 +119,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021030301202111,
     "GameID": 2021030301,
     "PlayerID": 202111,
@@ -179,7 +179,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021030301202112,
     "GameID": 2021030301,
     "PlayerID": 202112,
@@ -239,7 +239,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021030301202124,
     "GameID": 2021030301,
     "PlayerID": 202124,
@@ -299,7 +299,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021030301202125,
     "GameID": 2021030301,
     "PlayerID": 202125,
@@ -359,7 +359,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021030301202126,
     "GameID": 2021030301,
     "PlayerID": 202126,
@@ -419,7 +419,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021030301202129,
     "GameID": 2021030301,
     "PlayerID": 202129,
@@ -479,7 +479,7 @@
     "CF_Innings": 0,
     "RF_Innings": 7
   },
-{
+  {
     "StatID": 2021030301202131,
     "GameID": 2021030301,
     "PlayerID": 202131,
@@ -539,7 +539,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021030301202211,
     "GameID": 2021030301,
     "PlayerID": 202211,
@@ -599,7 +599,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021030801202006,
     "GameID": 2021030801,
     "PlayerID": 202006,
@@ -659,7 +659,7 @@
     "CF_Innings": 0,
     "RF_Innings": 7
   },
-{
+  {
     "StatID": 2021030801202109,
     "GameID": 2021030801,
     "PlayerID": 202109,
@@ -719,7 +719,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021030801202111,
     "GameID": 2021030801,
     "PlayerID": 202111,
@@ -779,7 +779,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021030801202112,
     "GameID": 2021030801,
     "PlayerID": 202112,
@@ -839,7 +839,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021030801202124,
     "GameID": 2021030801,
     "PlayerID": 202124,
@@ -899,7 +899,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021030801202126,
     "GameID": 2021030801,
     "PlayerID": 202126,
@@ -959,7 +959,7 @@
     "CF_Innings": 7,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021030801202129,
     "GameID": 2021030801,
     "PlayerID": 202129,
@@ -1019,7 +1019,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021030801202131,
     "GameID": 2021030801,
     "PlayerID": 202131,
@@ -1079,7 +1079,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021030801202211,
     "GameID": 2021030801,
     "PlayerID": 202211,
@@ -1139,7 +1139,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021030801202125,
     "GameID": 2021030801,
     "PlayerID": 202125,
@@ -1199,7 +1199,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021031101202006,
     "GameID": 2021031101,
     "PlayerID": 202006,
@@ -1259,7 +1259,7 @@
     "CF_Innings": 6,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021031101202109,
     "GameID": 2021031101,
     "PlayerID": 202109,
@@ -1319,7 +1319,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021031101202111,
     "GameID": 2021031101,
     "PlayerID": 202111,
@@ -1379,7 +1379,7 @@
     "CF_Innings": 0,
     "RF_Innings": 6
   },
-{
+  {
     "StatID": 2021031101202124,
     "GameID": 2021031101,
     "PlayerID": 202124,
@@ -1439,7 +1439,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021031101202126,
     "GameID": 2021031101,
     "PlayerID": 202126,
@@ -1499,7 +1499,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021031101202129,
     "GameID": 2021031101,
     "PlayerID": 202129,
@@ -1559,7 +1559,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021031101202131,
     "GameID": 2021031101,
     "PlayerID": 202131,
@@ -1619,7 +1619,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021031101202112,
     "GameID": 2021031101,
     "PlayerID": 202112,
@@ -1679,7 +1679,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021031101202125,
     "GameID": 2021031101,
     "PlayerID": 202125,
@@ -1739,7 +1739,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021031101202211,
     "GameID": 2021031101,
     "PlayerID": 202211,
@@ -1799,7 +1799,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021031301202006,
     "GameID": 2021031301,
     "PlayerID": 202006,
@@ -1859,7 +1859,7 @@
     "CF_Innings": 0,
     "RF_Innings": 5
   },
-{
+  {
     "StatID": 2021031301202109,
     "GameID": 2021031301,
     "PlayerID": 202109,
@@ -1919,7 +1919,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021031301202111,
     "GameID": 2021031301,
     "PlayerID": 202111,
@@ -1979,7 +1979,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021031301202112,
     "GameID": 2021031301,
     "PlayerID": 202112,
@@ -2039,7 +2039,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021031301202124,
     "GameID": 2021031301,
     "PlayerID": 202124,
@@ -2099,7 +2099,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021031301202126,
     "GameID": 2021031301,
     "PlayerID": 202126,
@@ -2159,7 +2159,7 @@
     "CF_Innings": 7,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021031301202127,
     "GameID": 2021031301,
     "PlayerID": 202127,
@@ -2219,7 +2219,7 @@
     "CF_Innings": 0,
     "RF_Innings": 2
   },
-{
+  {
     "StatID": 2021031301202129,
     "GameID": 2021031301,
     "PlayerID": 202129,
@@ -2279,7 +2279,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021031301202131,
     "GameID": 2021031301,
     "PlayerID": 202131,
@@ -2339,7 +2339,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021031301202211,
     "GameID": 2021031301,
     "PlayerID": 202211,
@@ -2399,7 +2399,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021031601202006,
     "GameID": 2021031601,
     "PlayerID": 202006,
@@ -2459,7 +2459,7 @@
     "CF_Innings": 0,
     "RF_Innings": 4
   },
-{
+  {
     "StatID": 2021031601202109,
     "GameID": 2021031601,
     "PlayerID": 202109,
@@ -2519,7 +2519,7 @@
     "CF_Innings": 0,
     "RF_Innings": 1
   },
-{
+  {
     "StatID": 2021031601202111,
     "GameID": 2021031601,
     "PlayerID": 202111,
@@ -2579,7 +2579,7 @@
     "CF_Innings": 6,
     "RF_Innings": 1
   },
-{
+  {
     "StatID": 2021031601202112,
     "GameID": 2021031601,
     "PlayerID": 202112,
@@ -2639,7 +2639,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021031601202124,
     "GameID": 2021031601,
     "PlayerID": 202124,
@@ -2699,7 +2699,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021031601202126,
     "GameID": 2021031601,
     "PlayerID": 202126,
@@ -2759,7 +2759,7 @@
     "CF_Innings": 0.2,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021031601202127,
     "GameID": 2021031601,
     "PlayerID": 202127,
@@ -2819,7 +2819,7 @@
     "CF_Innings": 0,
     "RF_Innings": 1
   },
-{
+  {
     "StatID": 2021031601202129,
     "GameID": 2021031601,
     "PlayerID": 202129,
@@ -2879,7 +2879,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021031601202131,
     "GameID": 2021031601,
     "PlayerID": 202131,
@@ -2939,7 +2939,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021031601202211,
     "GameID": 2021031601,
     "PlayerID": 202211,
@@ -2999,7 +2999,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021032501202006,
     "GameID": 2021032501,
     "PlayerID": 202006,
@@ -3059,7 +3059,7 @@
     "CF_Innings": 0,
     "RF_Innings": 3
   },
-{
+  {
     "StatID": 2021032501202109,
     "GameID": 2021032501,
     "PlayerID": 202109,
@@ -3119,7 +3119,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021032501202111,
     "GameID": 2021032501,
     "PlayerID": 202111,
@@ -3179,7 +3179,7 @@
     "CF_Innings": 3,
     "RF_Innings": 3
   },
-{
+  {
     "StatID": 2021032501202112,
     "GameID": 2021032501,
     "PlayerID": 202112,
@@ -3239,7 +3239,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021032501202124,
     "GameID": 2021032501,
     "PlayerID": 202124,
@@ -3299,7 +3299,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021032501202125,
     "GameID": 2021032501,
     "PlayerID": 202125,
@@ -3359,7 +3359,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021032501202126,
     "GameID": 2021032501,
     "PlayerID": 202126,
@@ -3419,7 +3419,7 @@
     "CF_Innings": 3,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021032501202129,
     "GameID": 2021032501,
     "PlayerID": 202129,
@@ -3479,7 +3479,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021032501202131,
     "GameID": 2021032501,
     "PlayerID": 202131,
@@ -3539,7 +3539,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021032501202211,
     "GameID": 2021032501,
     "PlayerID": 202211,
@@ -3599,7 +3599,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021032601202006,
     "GameID": 2021032601,
     "PlayerID": 202006,
@@ -3659,7 +3659,7 @@
     "CF_Innings": 0,
     "RF_Innings": 3.2
   },
-{
+  {
     "StatID": 2021032601202109,
     "GameID": 2021032601,
     "PlayerID": 202109,
@@ -3719,7 +3719,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021032601202111,
     "GameID": 2021032601,
     "PlayerID": 202111,
@@ -3779,7 +3779,7 @@
     "CF_Innings": 0,
     "RF_Innings": 2
   },
-{
+  {
     "StatID": 2021032601202124,
     "GameID": 2021032601,
     "PlayerID": 202124,
@@ -3839,7 +3839,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021032601202125,
     "GameID": 2021032601,
     "PlayerID": 202125,
@@ -3899,7 +3899,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021032601202126,
     "GameID": 2021032601,
     "PlayerID": 202126,
@@ -3959,7 +3959,7 @@
     "CF_Innings": 6,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021032601202129,
     "GameID": 2021032601,
     "PlayerID": 202129,
@@ -4019,7 +4019,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021032601202131,
     "GameID": 2021032601,
     "PlayerID": 202131,
@@ -4079,7 +4079,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021032601202211,
     "GameID": 2021032601,
     "PlayerID": 202211,
@@ -4139,7 +4139,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021033101202006,
     "GameID": 2021033101,
     "PlayerID": 202006,
@@ -4199,7 +4199,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021033101202109,
     "GameID": 2021033101,
     "PlayerID": 202109,
@@ -4259,7 +4259,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021033101202111,
     "GameID": 2021033101,
     "PlayerID": 202111,
@@ -4319,7 +4319,7 @@
     "CF_Innings": 6,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021033101202112,
     "GameID": 2021033101,
     "PlayerID": 202112,
@@ -4379,7 +4379,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021033101202124,
     "GameID": 2021033101,
     "PlayerID": 202124,
@@ -4439,7 +4439,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021033101202125,
     "GameID": 2021033101,
     "PlayerID": 202125,
@@ -4499,7 +4499,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021033101202126,
     "GameID": 2021033101,
     "PlayerID": 202126,
@@ -4559,7 +4559,7 @@
     "CF_Innings": 1,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021033101202127,
     "GameID": 2021033101,
     "PlayerID": 202127,
@@ -4619,7 +4619,7 @@
     "CF_Innings": 0,
     "RF_Innings": 7
   },
-{
+  {
     "StatID": 2021033101202129,
     "GameID": 2021033101,
     "PlayerID": 202129,
@@ -4679,7 +4679,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021033101202211,
     "GameID": 2021033101,
     "PlayerID": 202211,
@@ -4739,7 +4739,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040101202006,
     "GameID": 2021040101,
     "PlayerID": 202006,
@@ -4799,7 +4799,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040101202109,
     "GameID": 2021040101,
     "PlayerID": 202109,
@@ -4859,7 +4859,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040101202111,
     "GameID": 2021040101,
     "PlayerID": 202111,
@@ -4919,7 +4919,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040101202112,
     "GameID": 2021040101,
     "PlayerID": 202112,
@@ -4979,7 +4979,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040101202124,
     "GameID": 2021040101,
     "PlayerID": 202124,
@@ -5039,7 +5039,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040101202125,
     "GameID": 2021040101,
     "PlayerID": 202125,
@@ -5099,7 +5099,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040101202126,
     "GameID": 2021040101,
     "PlayerID": 202126,
@@ -5159,7 +5159,7 @@
     "CF_Innings": 2,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040101202127,
     "GameID": 2021040101,
     "PlayerID": 202127,
@@ -5219,7 +5219,7 @@
     "CF_Innings": 0,
     "RF_Innings": 2
   },
-{
+  {
     "StatID": 2021040101202128,
     "GameID": 2021040101,
     "PlayerID": 202128,
@@ -5279,7 +5279,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040101202129,
     "GameID": 2021040101,
     "PlayerID": 202129,
@@ -5339,7 +5339,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040101202130,
     "GameID": 2021040101,
     "PlayerID": 202130,
@@ -5399,7 +5399,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040101202211,
     "GameID": 2021040101,
     "PlayerID": 202211,
@@ -5459,7 +5459,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040101202313,
     "GameID": 2021040101,
     "PlayerID": 202313,
@@ -5519,7 +5519,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040501202006,
     "GameID": 2021040501,
     "PlayerID": 202006,
@@ -5579,7 +5579,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040501202109,
     "GameID": 2021040501,
     "PlayerID": 202109,
@@ -5639,7 +5639,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040501202111,
     "GameID": 2021040501,
     "PlayerID": 202111,
@@ -5699,7 +5699,7 @@
     "CF_Innings": 6.2,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040501202124,
     "GameID": 2021040501,
     "PlayerID": 202124,
@@ -5759,7 +5759,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040501202125,
     "GameID": 2021040501,
     "PlayerID": 202125,
@@ -5819,7 +5819,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040501202126,
     "GameID": 2021040501,
     "PlayerID": 202126,
@@ -5879,7 +5879,7 @@
     "CF_Innings": 1.1,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040501202129,
     "GameID": 2021040501,
     "PlayerID": 202129,
@@ -5939,7 +5939,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040501202130,
     "GameID": 2021040501,
     "PlayerID": 202130,
@@ -5999,7 +5999,7 @@
     "CF_Innings": 0,
     "RF_Innings": 8
   },
-{
+  {
     "StatID": 2021040501202211,
     "GameID": 2021040501,
     "PlayerID": 202211,
@@ -6059,7 +6059,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040601202006,
     "GameID": 2021040601,
     "PlayerID": 202006,
@@ -6119,7 +6119,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040601202109,
     "GameID": 2021040601,
     "PlayerID": 202109,
@@ -6179,7 +6179,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040601202111,
     "GameID": 2021040601,
     "PlayerID": 202111,
@@ -6239,7 +6239,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040601202112,
     "GameID": 2021040601,
     "PlayerID": 202112,
@@ -6299,7 +6299,7 @@
     "CF_Innings": 0,
     "RF_Innings": 8
   },
-{
+  {
     "StatID": 2021040601202124,
     "GameID": 2021040601,
     "PlayerID": 202124,
@@ -6359,7 +6359,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040601202125,
     "GameID": 2021040601,
     "PlayerID": 202125,
@@ -6419,7 +6419,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040601202126,
     "GameID": 2021040601,
     "PlayerID": 202126,
@@ -6479,7 +6479,7 @@
     "CF_Innings": 8,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040601202127,
     "GameID": 2021040601,
     "PlayerID": 202127,
@@ -6539,7 +6539,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040601202129,
     "GameID": 2021040601,
     "PlayerID": 202129,
@@ -6599,7 +6599,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040601202211,
     "GameID": 2021040601,
     "PlayerID": 202211,
@@ -6659,7 +6659,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040701202006,
     "GameID": 2021040701,
     "PlayerID": 202006,
@@ -6719,7 +6719,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040701202109,
     "GameID": 2021040701,
     "PlayerID": 202109,
@@ -6779,7 +6779,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040701202111,
     "GameID": 2021040701,
     "PlayerID": 202111,
@@ -6839,7 +6839,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040701202124,
     "GameID": 2021040701,
     "PlayerID": 202124,
@@ -6899,7 +6899,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040701202125,
     "GameID": 2021040701,
     "PlayerID": 202125,
@@ -6959,7 +6959,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040701202126,
     "GameID": 2021040701,
     "PlayerID": 202126,
@@ -7019,7 +7019,7 @@
     "CF_Innings": 3,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040701202128,
     "GameID": 2021040701,
     "PlayerID": 202128,
@@ -7079,7 +7079,7 @@
     "CF_Innings": 0,
     "RF_Innings": 2
   },
-{
+  {
     "StatID": 2021040701202129,
     "GameID": 2021040701,
     "PlayerID": 202129,
@@ -7139,7 +7139,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040701202211,
     "GameID": 2021040701,
     "PlayerID": 202211,
@@ -7199,7 +7199,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040701202130,
     "GameID": 2021040701,
     "PlayerID": 202130,
@@ -7259,7 +7259,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040701202313,
     "GameID": 2021040701,
     "PlayerID": 202313,
@@ -7319,7 +7319,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040702202006,
     "GameID": 2021040702,
     "PlayerID": 202006,
@@ -7379,7 +7379,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040702202109,
     "GameID": 2021040702,
     "PlayerID": 202109,
@@ -7439,7 +7439,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040702202111,
     "GameID": 2021040702,
     "PlayerID": 202111,
@@ -7499,7 +7499,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040702202112,
     "GameID": 2021040702,
     "PlayerID": 202112,
@@ -7559,7 +7559,7 @@
     "CF_Innings": 0,
     "RF_Innings": 5
   },
-{
+  {
     "StatID": 2021040702202124,
     "GameID": 2021040702,
     "PlayerID": 202124,
@@ -7619,7 +7619,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040702202125,
     "GameID": 2021040702,
     "PlayerID": 202125,
@@ -7679,7 +7679,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040702202126,
     "GameID": 2021040702,
     "PlayerID": 202126,
@@ -7739,7 +7739,7 @@
     "CF_Innings": 6,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040702202127,
     "GameID": 2021040702,
     "PlayerID": 202127,
@@ -7799,7 +7799,7 @@
     "CF_Innings": 0,
     "RF_Innings": 1
   },
-{
+  {
     "StatID": 2021040702202129,
     "GameID": 2021040702,
     "PlayerID": 202129,
@@ -7859,7 +7859,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021040702202211,
     "GameID": 2021040702,
     "PlayerID": 202211,
@@ -7919,7 +7919,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021041201202006,
     "GameID": 2021041201,
     "PlayerID": 202006,
@@ -7979,7 +7979,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021041201202109,
     "GameID": 2021041201,
     "PlayerID": 202109,
@@ -8039,7 +8039,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021041201202111,
     "GameID": 2021041201,
     "PlayerID": 202111,
@@ -8099,7 +8099,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021041201202112,
     "GameID": 2021041201,
     "PlayerID": 202112,
@@ -8159,7 +8159,7 @@
     "CF_Innings": 0,
     "RF_Innings": 1.1
   },
-{
+  {
     "StatID": 2021041201202124,
     "GameID": 2021041201,
     "PlayerID": 202124,
@@ -8219,7 +8219,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021041201202125,
     "GameID": 2021041201,
     "PlayerID": 202125,
@@ -8279,7 +8279,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021041201202126,
     "GameID": 2021041201,
     "PlayerID": 202126,
@@ -8339,7 +8339,7 @@
     "CF_Innings": 4,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021041201202127,
     "GameID": 2021041201,
     "PlayerID": 202127,
@@ -8399,7 +8399,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021041201202128,
     "GameID": 2021041201,
     "PlayerID": 202128,
@@ -8459,7 +8459,7 @@
     "CF_Innings": 0,
     "RF_Innings": 2.2
   },
-{
+  {
     "StatID": 2021041201202211,
     "GameID": 2021041201,
     "PlayerID": 202211,
@@ -8519,7 +8519,7 @@
     "CF_Innings": 0,
     "RF_Innings": 0
   },
-{
+  {
     "StatID": 2021041201202313,
     "GameID": 2021041201,
     "PlayerID": 202313,

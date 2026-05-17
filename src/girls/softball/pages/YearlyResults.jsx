@@ -1,22 +1,7 @@
 import React, { useMemo } from "react";
 import { Link } from "react-router-dom";
 
-import { SOFTBALL_BASE_PATH, getSoftballSeasonGames } from "../softballData";
-
-const seasons = [
-  {
-    seasonId: 2005,
-    schoolYear: "2004-05",
-    label: "Spring 2005",
-    coach: "-",
-  },
-  {
-    seasonId: 2006,
-    schoolYear: "2005-06",
-    label: "Spring 2006",
-    coach: "-",
-  },
-];
+import { SOFTBALL_BASE_PATH, getSoftballSeasonGames, softballSeasons } from "../softballData";
 
 const tableFrameClassName = "overflow-x-auto rounded-lg border border-gray-200 bg-white shadow";
 const tableClassName = "min-w-full bg-white text-sm";
@@ -53,14 +38,22 @@ function isLocationType(game, locationType) {
 export default function YearlyResults() {
   const rows = useMemo(
     () =>
-      seasons.map((season) => {
-        const games = getSoftballSeasonGames(season.seasonId);
+      softballSeasons.map((season) => {
+        const games = getSoftballSeasonGames(season.SeasonID);
         const placeholderCount = games.filter((game) => game.isPlaceholder).length;
         const recoveredCount = games.length - placeholderCount;
 
         return {
           ...season,
-          overall: formatRecord(buildRecord(games)),
+          seasonId: season.SeasonID,
+          schoolYear: season.SourceSeasonLabel,
+          label: season.DisplaySeason,
+          coach: season.HeadCoach || "-",
+          overall: formatRecord({
+            wins: Number(season.OverallWins || 0),
+            losses: Number(season.OverallLosses || 0),
+            ties: Number(season.OverallTies || 0),
+          }),
           region: formatRecord(buildRecord(games.filter(isRegionGame))),
           home: formatRecord(buildRecord(games.filter((game) => isLocationType(game, "home")))),
           away: formatRecord(buildRecord(games.filter((game) => isLocationType(game, "away")))),

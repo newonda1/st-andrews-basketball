@@ -44,7 +44,11 @@
     "HighlightNotes": [
       "Klie White made 37 saves across the three recovered reports.",
       "Meghan Lowe, Sarah Roddenberry, and Ann Cole scored in the Jefferson Davis win."
-    ]
+    ],
+    "ArchiveStatus": "archived",
+    "ArchiveStatusNote": "NewsBank recovery includes three scored reports and six record-path placeholders needed to reconcile the 0-4, 0-6, and 1-8 published record lines. Points for/against reflect recovered scored games only.",
+    "RecordSource": "seasons.json source-of-truth row; event pages reconcile to this record.",
+    "FinishLabel": "St. Andrew's finished the recovered Spring 2001 girls soccer record path at 1-8 after a 3-0 win over Jefferson Davis Academy."
   },
   {
     "SeasonID": 2002,
@@ -92,7 +96,11 @@
       "Klie White made 19 saves against Beaufort Academy, including eight penalty-kick saves.",
       "Brittany McLaughlin had two assists in the Jefferson Davis win.",
       "The broad OCR sweep found the Beaufort Academy playoff result even though it appeared in a St. Vincent's article."
-    ]
+    ],
+    "ArchiveStatus": "archived",
+    "ArchiveStatusNote": "NewsBank recovery includes the April 29 Jefferson Davis win and a broad-search May 7 playoff loss to Beaufort Academy. Nine placeholders reconcile the published 3-7 and 3-8 record lines; points for/against reflect recovered scored games only.",
+    "RecordSource": "seasons.json source-of-truth row; event pages reconcile to this record.",
+    "FinishLabel": "SCISA state tournament / St. Andrew's finished 3-8 after a penalty-kick state-tournament loss to Beaufort Academy."
   },
   {
     "SeasonID": 2003,
@@ -138,7 +146,11 @@
       "Meghan Lowe scored at least seven goals in the recovered results, including a hat trick against King's Academy.",
       "LeighAnne Evans and Emily Aimone both appeared in goal in the recovered box scores.",
       "Rebecca Cooper, LeighAnne Evans, Meghan Lowe, and Grace Wilkowski were listed among Hollis Stacy Award candidates in May 2003."
-    ]
+    ],
+    "ArchiveStatus": "archived",
+    "ArchiveStatusNote": "NewsBank confirms St. Andrew's final 5-6 record and state semifinal finish. One state tournament win is inferred from the record path from 4-5 after the regular season to 5-6 after the Lowcountry Day semifinal loss, but the opponent and score are still unrecovered.",
+    "RecordSource": "seasons.json source-of-truth row; event pages reconcile to this record.",
+    "FinishLabel": "Region No. 3 Seed / State Semifinalist / St. Andrew's reached the SCISA Class AA state semifinals and finished 5-6."
   },
   {
     "SeasonID": 2004,
@@ -149,10 +161,10 @@
     "HeadCoach": "Mark Gibbons",
     "League": "SCISA 2-AA",
     "Division": "SCISA 2-AA",
-    "OverallRecord": "14-3",
+    "OverallRecord": "14-3-1",
     "OverallWins": 14,
     "OverallLosses": 3,
-    "OverallTies": 0,
+    "OverallTies": 1,
     "RegionRecord": "4-0",
     "RegionWins": 4,
     "RegionLosses": 0,
@@ -195,7 +207,11 @@
       "Jennifer Moesch scored four goals in a 5-0 SCISA semifinal win over Lowcountry Day School.",
       "St. Andrew's finished as the SCISA Class A/AA State Runner-up.",
       "Jennifer Moesch and Mary Wilkowski were named to the Cavalier Classic all-tournament team."
-    ]
+    ],
+    "ArchiveStatus": "archived",
+    "ArchiveStatusNote": "Archive build in progress. The May 15 state final report listed St. Andrew's at 14-3, while the April 6 report preserved a 0-0 draw and listed the Saints at 9-2-1. The canonical archive record is 14-3-1 pending a source that explains whether the draw was omitted from the final newspaper line.",
+    "RecordSource": "seasons.json source-of-truth row reconciles the 14-win final record path with the preserved April 6, 2004 published 0-0 draw.",
+    "FinishLabel": "Region Champion / State Runner-up / St. Andrew's followed a third-place finish in the 16-team Cavalier Classic with two wins in the Kelme Tournament of Champions, four recovered region wins, an April 29 win over Beaufort Academy that clinched the SCISA Region 1-AA championship, and a run to the SCISA Class A/AA state final."
   },
   {
     "SeasonID": 2005,
@@ -237,6 +253,10 @@
       "Clara Rucker assisted all three St. Andrew's goals in the April 28 win over Colleton Prep.",
       "Mary Wilkowski made 70 saves across seven recovered box scores.",
       "St. Andrew's entered the SCISA Class AA state tournament as the No. 3 seed from Region 1-AA."
-    ]
+    ],
+    "ArchiveStatus": "archived",
+    "ArchiveStatusNote": "Archive build in progress. The season now includes 10 recovered results from Apr. 5-May 10, 2005. A May 8 record line appears inconsistent with the surrounding schedule, so the final record follows the May 12 state-tournament report listing St. Andrew's at 4-6.",
+    "RecordSource": "seasons.json source-of-truth row; event pages reconcile to this record.",
+    "FinishLabel": "Region 1-AA No. 3 seed / SCISA Class AA first round / St. Andrew's finished 4-6, took the No. 3 seed from SCISA Region 1-AA, and lost to Trinity Collegiate in the SCISA Class AA first round."
   }
 ]

@@ -13,11 +13,14 @@
     "DisplayDate": "Before Dec. 10, 1999",
     "SortDate": "1999-12-09",
     "Notes": "Opening St. Andrew's Tournament loss implied by the 0-2 record printed after the West Georgia consolation game.",
-    "SourceCitation": "\"FRIDAY'S LATE GAMES,\" Savannah Morning News (GA), December 12, 1999, Page 6B."
+    "SourceCitation": "\"FRIDAY'S LATE GAMES,\" Savannah Morning News (GA), December 12, 1999, Page 6B.",
+    "ScoringCompleteness": "placeholder",
+    "SourceNote": "Opening St. Andrew's Tournament loss implied by the 0-2 record printed after the West Georgia consolation game.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 19991210,
-    "OpponentID": "",
+    "OpponentID": "ga-west-georgia-christian",
     "Opponent": "West Georgia Christian",
     "LocationType": "Home",
     "GameType": "Tournament",
@@ -28,7 +31,9 @@
     "IsComplete": "Yes",
     "Tournament": "St. Andrew's Tournament",
     "Recap": "Nadine Kaiser scored 15, Adair Johnson 7 and Meghan Lowe 6 in a 32-30 tournament loss to West Georgia Christian.",
-    "SourceCitation": "\"FRIDAY'S LATE GAMES,\" Savannah Morning News (GA), December 12, 1999, Page 6B."
+    "SourceCitation": "\"FRIDAY'S LATE GAMES,\" Savannah Morning News (GA), December 12, 1999, Page 6B.",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 19991215,
@@ -44,7 +49,10 @@
     "DisplayDate": "Between Dec. 11 and Dec. 17, 1999",
     "SortDate": "1999-12-15",
     "Notes": "Unreported win required by the final 11-13 record path.",
-    "SourceCitation": "\"GIRLS BASKETBALL,\" Savannah Morning News (GA), March 2, 2000, Page 3D."
+    "SourceCitation": "\"GIRLS BASKETBALL,\" Savannah Morning News (GA), March 2, 2000, Page 3D.",
+    "ScoringCompleteness": "placeholder",
+    "SourceNote": "Unreported win required by the final 11-13 record path.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 19991216,
@@ -60,7 +68,10 @@
     "DisplayDate": "Between Dec. 11 and Dec. 17, 1999",
     "SortDate": "1999-12-16",
     "Notes": "Unreported loss required by the final 11-13 record path.",
-    "SourceCitation": "\"GIRLS BASKETBALL,\" Savannah Morning News (GA), March 2, 2000, Page 3D."
+    "SourceCitation": "\"GIRLS BASKETBALL,\" Savannah Morning News (GA), March 2, 2000, Page 3D.",
+    "ScoringCompleteness": "placeholder",
+    "SourceNote": "Unreported loss required by the final 11-13 record path.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 19991217,
@@ -75,7 +86,9 @@
     "IsComplete": "Yes",
     "Tournament": "Memorial Day School Christmas Tournament",
     "Recap": "Meghan Lowe scored 12 as St. Andrew's beat Memorial Day to advance to the tournament final.",
-    "SourceCitation": "\"CLARK'S FREE THROWS LIFTS MEMORIAL BOYS OVER ST. ANDREW'S,\" Savannah Morning News (GA), December 18, 1999, Page 6F."
+    "SourceCitation": "\"CLARK'S FREE THROWS LIFTS MEMORIAL BOYS OVER ST. ANDREW'S,\" Savannah Morning News (GA), December 18, 1999, Page 6F.",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 20000104,
@@ -89,7 +102,10 @@
     "Season": 1999,
     "IsComplete": "Yes",
     "Recap": "Meghan Lowe scored 22 and Nadine Kaiser added 16 in a 54-28 win over Abundant Life.",
-    "SourceCitation": "\"PREP ROUNDUP,\" Savannah Morning News (GA), January 5, 2000, Page 5D."
+    "SourceCitation": "\"PREP ROUNDUP,\" Savannah Morning News (GA), January 5, 2000, Page 5D.",
+    "ArticleID": "20000107-lowe-kaiser-honor-roll",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 20000107,
@@ -103,7 +119,10 @@
     "Season": 1999,
     "IsComplete": "Yes",
     "Recap": "Nadine Kaiser scored 24, but St. Paul's rallied from a 24-17 halftime deficit and won on a late 3-pointer.",
-    "SourceCitation": "\"BLUE JACKETS FOCUS IN TIME, TOP BC,\" Savannah Morning News (GA), January 8, 2000, Page 4F."
+    "SourceCitation": "\"BLUE JACKETS FOCUS IN TIME, TOP BC,\" Savannah Morning News (GA), January 8, 2000, Page 4F.",
+    "ArticleID": "20000114-kaiser-honor-roll",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 20000108,
@@ -117,7 +136,10 @@
     "Season": 1999,
     "IsComplete": "Yes",
     "Recap": "Nadine Kaiser scored 24 and Adair Johnson added 9 in a 42-27 win over Memorial Day.",
-    "SourceCitation": "\"ST. ANDREW'S BOYS HAND MEMORIAL ITS FIRST LOSS OF THE SEASON,\" Savannah Morning News (GA), January 10, 2000, Page 6D."
+    "SourceCitation": "\"ST. ANDREW'S BOYS HAND MEMORIAL ITS FIRST LOSS OF THE SEASON,\" Savannah Morning News (GA), January 10, 2000, Page 6D.",
+    "ArticleID": "20000114-kaiser-honor-roll",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 20000111,
@@ -131,7 +153,10 @@
     "Season": 1999,
     "IsComplete": "Yes",
     "Recap": "Nadine Kaiser scored 13 in a 50-21 loss to Pinewood Prep.",
-    "SourceCitation": "\"PORTER LEADS WINDSOR FOREST TO UPSET OF RICHMOND HILL,\" Savannah Morning News (GA), January 12, 2000, Page 4D."
+    "SourceCitation": "\"PORTER LEADS WINDSOR FOREST TO UPSET OF RICHMOND HILL,\" Savannah Morning News (GA), January 12, 2000, Page 4D.",
+    "ArticleID": "20000114-kaiser-honor-roll",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 20000114,
@@ -146,7 +171,9 @@
     "IsComplete": "Yes",
     "RegionGame": "Yes",
     "Recap": "Meghan Lowe scored 13 in a region loss to Hilton Head Christian.",
-    "SourceCitation": "\"SCD GIRLS NIP PAIDEIA IN NON-REGIONAL PLAY,\" Savannah Morning News (GA), January 15, 2000, Page 4F."
+    "SourceCitation": "\"SCD GIRLS NIP PAIDEIA IN NON-REGIONAL PLAY,\" Savannah Morning News (GA), January 15, 2000, Page 4F.",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 20000118,
@@ -161,7 +188,9 @@
     "IsComplete": "Yes",
     "RegionGame": "Yes",
     "Recap": "Nadine Kaiser scored 20 and Meghan Lowe added 12 in a region loss to Beaufort Academy.",
-    "SourceCitation": "\"SCD BOYS RALLY FOR VICTORY AGAINST BRYAN COUNTY,\" Savannah Morning News (GA), January 19, 2000, Page 5D."
+    "SourceCitation": "\"SCD BOYS RALLY FOR VICTORY AGAINST BRYAN COUNTY,\" Savannah Morning News (GA), January 19, 2000, Page 5D.",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 20000121,
@@ -176,7 +205,11 @@
     "IsComplete": "Yes",
     "RegionGame": "Yes",
     "Recap": "Nadine Kaiser scored 20 and Meghan Lowe added 12 as St. Andrew's beat Sea Island for its first recovered region win.",
-    "SourceCitation": "\"SAVANNAH CHRISTIAN HOLDS OFF COUNTRY DAY,\" Savannah Morning News (GA), January 22, 2000, Page 4F."
+    "SourceCitation": "\"SAVANNAH CHRISTIAN HOLDS OFF COUNTRY DAY,\" Savannah Morning News (GA), January 22, 2000, Page 4F.",
+    "ArticleID": "20000128-kaiser-city-player-of-week",
+    "ScoringCompleteness": "partial",
+    "SourceNote": "Named St. Andrew's scoring rows total 32 points against the reported team score of 49; the reported team score is preserved.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 20000122,
@@ -190,7 +223,11 @@
     "Season": 1999,
     "IsComplete": "Yes",
     "Recap": "Nadine Kaiser scored 17 and Meghan Lowe added 14 in a win at Harvest Baptist.",
-    "SourceCitation": "\"EARLY SURGE CARRIES BRADWELL GIRLS,\" Savannah Morning News (GA), January 23, 2000, Page 10B."
+    "SourceCitation": "\"EARLY SURGE CARRIES BRADWELL GIRLS,\" Savannah Morning News (GA), January 23, 2000, Page 10B.",
+    "ArticleID": "20000128-kaiser-city-player-of-week",
+    "ScoringCompleteness": "partial",
+    "SourceNote": "Named St. Andrew's scoring rows total 41 points against the reported team score of 48; the reported team score is preserved.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 20000201,
@@ -206,7 +243,10 @@
     "DisplayDate": "Before Feb. 4, 2000",
     "SortDate": "2000-02-01",
     "Notes": "Unreported loss required by the final 11-13 record path.",
-    "SourceCitation": "\"GIRLS BASKETBALL,\" Savannah Morning News (GA), March 2, 2000, Page 3D."
+    "SourceCitation": "\"GIRLS BASKETBALL,\" Savannah Morning News (GA), March 2, 2000, Page 3D.",
+    "ScoringCompleteness": "placeholder",
+    "SourceNote": "Unreported loss required by the final 11-13 record path.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 20000204,
@@ -221,7 +261,9 @@
     "IsComplete": "Yes",
     "RegionGame": "Yes",
     "Recap": "St. Andrew's led at halftime, but Beaufort Academy won 47-45. Nadine Kaiser scored 21 and Meghan Lowe added 11.",
-    "SourceCitation": "\"SCD GIRLS FINISH UNDEFEATED IN REGION,\" Savannah Morning News (GA), February 5, 2000, Page 4F."
+    "SourceCitation": "\"SCD GIRLS FINISH UNDEFEATED IN REGION,\" Savannah Morning News (GA), February 5, 2000, Page 4F.",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 20000208,
@@ -236,7 +278,9 @@
     "IsComplete": "Yes",
     "RegionGame": "Yes",
     "Recap": "Meghan Lowe scored 11 and Nadine Kaiser added 10 as St. Andrew's won at St. Paul's.",
-    "SourceCitation": "\"KELLY PACES SCPS GIRLS IN REGION 2-A TOURNAMENT,\" Savannah Morning News (GA), February 9, 2000, Page 5D."
+    "SourceCitation": "\"KELLY PACES SCPS GIRLS IN REGION 2-A TOURNAMENT,\" Savannah Morning News (GA), February 9, 2000, Page 5D.",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 20000211,
@@ -251,7 +295,9 @@
     "IsComplete": "Yes",
     "RegionGame": "Yes",
     "Recap": "Meghan Lowe scored 18 and Nadine Kaiser added 15 in a region loss at Hilton Head Christian.",
-    "SourceCitation": "\"SOSO LEADS SCD GIRLS INTO 2-A FINALS,\" Savannah Morning News (GA), February 12, 2000, Page 5F."
+    "SourceCitation": "\"SOSO LEADS SCD GIRLS INTO 2-A FINALS,\" Savannah Morning News (GA), February 12, 2000, Page 5F.",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 20000213,
@@ -267,7 +313,10 @@
     "DisplayDate": "Between Feb. 12 and Feb. 15, 2000",
     "SortDate": "2000-02-13",
     "Notes": "Unreported loss required by the final 11-13 record path.",
-    "SourceCitation": "\"GIRLS BASKETBALL,\" Savannah Morning News (GA), March 2, 2000, Page 3D."
+    "SourceCitation": "\"GIRLS BASKETBALL,\" Savannah Morning News (GA), March 2, 2000, Page 3D.",
+    "ScoringCompleteness": "placeholder",
+    "SourceNote": "Unreported loss required by the final 11-13 record path.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 20000215,
@@ -281,7 +330,9 @@
     "Season": 1999,
     "IsComplete": "Yes",
     "Recap": "Carie Bugos scored 14 and Nadine Kaiser 12 in a win over Harvest Baptist.",
-    "SourceCitation": "\"BASKETBALL,\" Savannah Morning News (GA), February 16, 2000, Page 3D."
+    "SourceCitation": "\"BASKETBALL,\" Savannah Morning News (GA), February 16, 2000, Page 3D.",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 20000218,
@@ -296,7 +347,9 @@
     "IsComplete": "Yes",
     "RegionGame": "Yes",
     "Recap": "Nadine Kaiser scored 21 of her 24 points in the second half and hit four 3-pointers in the fourth quarter against Patrick Henry.",
-    "SourceCitation": "\"ALDRICH SNAPS RECORD AS ST. ANDREW'S SHOOTS VICTORY,\" Savannah Morning News (GA), February 19, 2000, Page 5E."
+    "SourceCitation": "\"ALDRICH SNAPS RECORD AS ST. ANDREW'S SHOOTS VICTORY,\" Savannah Morning News (GA), February 19, 2000, Page 5E.",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 20000222,
@@ -312,7 +365,10 @@
     "Tournament": "SCISA Class AA Region IV Tournament",
     "RegionGame": "Yes",
     "Recap": "Nadine Kaiser scored 27 and Meghan Lowe 21 as St. Andrew's beat St. Paul's in the first round of the region tournament.",
-    "SourceCitation": "\"MIXED MARKS FOR COASTAL EMPIRE TEAMS IN STATE HOOPS TOURNEY,\" Savannah Morning News (GA), February 23, 2000, Page 4D."
+    "SourceCitation": "\"MIXED MARKS FOR COASTAL EMPIRE TEAMS IN STATE HOOPS TOURNEY,\" Savannah Morning News (GA), February 23, 2000, Page 4D.",
+    "ArticleID": "20000223-girls-region-first-round-st-pauls",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 20000225,
@@ -328,7 +384,10 @@
     "Tournament": "SCISA Class AA Region IV Tournament",
     "RegionGame": "Yes",
     "Recap": "Nadine Kaiser scored 18, Adair Johnson a career-high 13 and Meghan Lowe 16 as St. Andrew's clinched a state tournament berth.",
-    "SourceCitation": "\"SAINTS SLIDE BY HILTON HEAD,\" Savannah Morning News (GA), February 26, 2000, Page 5E."
+    "SourceCitation": "\"SAINTS SLIDE BY HILTON HEAD,\" Savannah Morning News (GA), February 26, 2000, Page 5E.",
+    "ArticleID": "20000226-girls-region-semifinal-patrick-henry",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 20000226,
@@ -344,7 +403,10 @@
     "Tournament": "SCISA Class AA Region IV Championship",
     "RegionGame": "Yes",
     "Recap": "Nadine Kaiser scored 18 in the region final. Deb Morrell said the young Saints had exceeded preseason expectations by reaching the region final and state tournament.",
-    "SourceCitation": "\"SAINTS BOYS TRIUMPH IN REGION GAME, GIRLS FALL,\" Savannah Morning News (GA), February 27, 2000, Page 4B."
+    "SourceCitation": "\"SAINTS BOYS TRIUMPH IN REGION GAME, GIRLS FALL,\" Savannah Morning News (GA), February 27, 2000, Page 4B.",
+    "ArticleID": "20000227-girls-region-final-hilton-head-christian",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 20000301,
@@ -359,7 +421,11 @@
     "IsComplete": "Yes",
     "Tournament": "SCISA State Tournament",
     "Recap": "Avalon ended St. Andrew's season in the SCISA tournament. Nadine Kaiser scored 11, and the article listed the Saints' final record at 11-13.",
-    "SourceCitation": "\"GIRLS BASKETBALL,\" Savannah Morning News (GA), March 2, 2000, Page 3D."
+    "SourceCitation": "\"GIRLS BASKETBALL,\" Savannah Morning News (GA), March 2, 2000, Page 3D.",
+    "ArticleID": "20000302-girls-state-tournament-avalon",
+    "ScoringCompleteness": "partial",
+    "SourceNote": "Named St. Andrew's scoring rows total 11 points against the reported team score of 22; the reported team score is preserved.",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "GameID": 20001201,
@@ -375,7 +441,10 @@
     "Season": 2000,
     "IsComplete": "Yes",
     "Recap": "St. Andrew's opened the winter sweep with a 41-11 win at Abundant Life Academy.",
-    "SourceCitation": "\"GRINER SCORES 32 AS CALVARY GIRLS STOP WINDSOR FOREST,\" Savannah Morning News (GA), December 2, 2000, Page 3B."
+    "SourceCitation": "\"GRINER SCORES 32 AS CALVARY GIRLS STOP WINDSOR FOREST,\" Savannah Morning News (GA), December 2, 2000, Page 3B.",
+    "ArticleID": "20001202-st-andrews-girls-open-with-abundant-life",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "GameID": 20001208,
@@ -392,7 +461,9 @@
     "IsComplete": "Yes",
     "Tournament": "St. Andrew's Holiday Tournament",
     "Recap": "Meghan Lowe scored 22 as St. Andrew's beat Sea Island in the Holiday Tournament.",
-    "SourceCitation": "\"ST. ANDREW'S RALLIES TO BEAT SEA ISLAND,\" Savannah Morning News (GA), December 9, 2000, Page 3C."
+    "SourceCitation": "\"ST. ANDREW'S RALLIES TO BEAT SEA ISLAND,\" Savannah Morning News (GA), December 9, 2000, Page 3C.",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "GameID": 20001209,
@@ -409,7 +480,9 @@
     "IsComplete": "Yes",
     "Tournament": "St. Andrew's Holiday Tournament",
     "Recap": "East Rockaway beat St. Andrew's in the Holiday Tournament.",
-    "SourceCitation": "\"ST. ANDREW'S HOLIDAY CLASSIC,\" Savannah Morning News (GA), December 11, 2000, Page 3C."
+    "SourceCitation": "\"ST. ANDREW'S HOLIDAY CLASSIC,\" Savannah Morning News (GA), December 11, 2000, Page 3C.",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "GameID": 20001215,
@@ -427,7 +500,9 @@
     "Tournament": "Memorial Christmas Tournament",
     "Recap": "St. Andrew's beat host Memorial Day in the Memorial Christmas Tournament.",
     "SourceNote": "A duplicate Dec. 17 roundup printed a slightly different split for Meghan Lowe and Becca Cooper; this archive uses the Dec. 16 box score.",
-    "SourceCitation": "\"GIRLS PREP BASKETBALL ROUNDUP,\" Savannah Morning News (GA), December 16, 2000, Page 3B."
+    "SourceCitation": "\"GIRLS PREP BASKETBALL ROUNDUP,\" Savannah Morning News (GA), December 16, 2000, Page 3B.",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "GameID": 20001216,
@@ -444,7 +519,9 @@
     "IsComplete": "Yes",
     "Tournament": "Memorial Christmas Tournament",
     "Recap": "Pinewood Christian beat St. Andrew's in the Memorial Christmas Tournament.",
-    "SourceCitation": "\"GIRLS PREP BASKETBALL ROUNDUP,\" Savannah Morning News (GA), December 17, 2000, Page 5C."
+    "SourceCitation": "\"GIRLS PREP BASKETBALL ROUNDUP,\" Savannah Morning News (GA), December 17, 2000, Page 5C.",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "GameID": 20010102,
@@ -460,7 +537,10 @@
     "Season": 2000,
     "IsComplete": "Yes",
     "Recap": "Meghan Lowe scored 25 as St. Andrew's beat Bible Baptist.",
-    "SourceCitation": "\"KOONTZ LEADS BLUE DEVILS PAST BUTLER,\" Savannah Morning News (GA), January 3, 2001, Page 5D."
+    "SourceCitation": "\"KOONTZ LEADS BLUE DEVILS PAST BUTLER,\" Savannah Morning News (GA), January 3, 2001, Page 5D.",
+    "ArticleID": "20010103-st-andrews-sweeps-bible-baptist",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "GameID": 20010105,
@@ -477,7 +557,9 @@
     "IsComplete": "Yes",
     "Recap": "Meghan Lowe scored 20 and Carie Bugos added 10 as St. Andrew's beat Sea Island.",
     "SourceNote": "The published individual scoring sums to 38 of St. Andrew's 42 points; the missing four points remain unassigned.",
-    "SourceCitation": "\"LADY SAINTS ROLL PAST SEA ISLAND,\" Savannah Morning News (GA), January 6, 2001, Page 4D."
+    "SourceCitation": "\"LADY SAINTS ROLL PAST SEA ISLAND,\" Savannah Morning News (GA), January 6, 2001, Page 4D.",
+    "ScoringCompleteness": "partial",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "GameID": 20010109,
@@ -495,7 +577,10 @@
     "DisplayDate": "Before Jan. 11",
     "IsPlaceholder": true,
     "Notes": "Placeholder win added because the Jan. 11 Sea Island report listed St. Andrew's at 7-2 after the win; recovered score lines account for six wins at that point.",
-    "SourceCitation": "\"ST. ANDREW'S RALLIES TO BEAT SEA ISLAND,\" Savannah Morning News (GA), January 11, 2001, Page 5D."
+    "SourceCitation": "\"ST. ANDREW'S RALLIES TO BEAT SEA ISLAND,\" Savannah Morning News (GA), January 11, 2001, Page 5D.",
+    "ScoringCompleteness": "placeholder",
+    "SourceNote": "Placeholder win added because the Jan. 11 Sea Island report listed St. Andrew's at 7-2 after the win; recovered score lines account for six wins at that point.",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "GameID": 20010110,
@@ -512,7 +597,9 @@
     "IsComplete": "Yes",
     "Recap": "Meghan Lowe hit four first-quarter 3-pointers and scored 19 as St. Andrew's beat Sea Island.",
     "SourceNote": "The box score listed Cooper without a first initial; the two points are assigned to Becca Cooper.",
-    "SourceCitation": "\"ST. ANDREW'S RALLIES TO BEAT SEA ISLAND,\" Savannah Morning News (GA), January 11, 2001, Page 5D."
+    "SourceCitation": "\"ST. ANDREW'S RALLIES TO BEAT SEA ISLAND,\" Savannah Morning News (GA), January 11, 2001, Page 5D.",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "GameID": 20010112,
@@ -528,7 +615,9 @@
     "Season": 2000,
     "IsComplete": "Yes",
     "Recap": "Meghan Lowe scored 21 and Becca Cooper added 13 as St. Andrew's beat Colleton Prep.",
-    "SourceCitation": "\"LIBERTY COUNTY NEEDS THREE OVERTIMES TO KNOCK OFF HEAVYWEIGHT BRUNSWICK,\" Savannah Morning News (GA), January 13, 2001, Page 3B."
+    "SourceCitation": "\"LIBERTY COUNTY NEEDS THREE OVERTIMES TO KNOCK OFF HEAVYWEIGHT BRUNSWICK,\" Savannah Morning News (GA), January 13, 2001, Page 3B.",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "GameID": 20010113,
@@ -544,7 +633,9 @@
     "Season": 2000,
     "IsComplete": "Yes",
     "Recap": "Meghan Lowe scored 20 as St. Andrew's won its ninth game.",
-    "SourceCitation": "\"ST. ANDREW'S GIRLS WIN NINTH GAME,\" Savannah Morning News (GA), January 15, 2001, Page 5C."
+    "SourceCitation": "\"ST. ANDREW'S GIRLS WIN NINTH GAME,\" Savannah Morning News (GA), January 15, 2001, Page 5C.",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "GameID": 20010116,
@@ -561,7 +652,9 @@
     "IsComplete": "Yes",
     "Recap": "Sarah Roddenberry scored 15 and Meghan Lowe added 16 in a region win over Beaufort Academy.",
     "SourceNote": "The box score listed Cooper without a first initial; the two points are assigned to Kim Cooper. The published individual scoring sums to 36 of St. Andrew's 38 points, leaving two points unassigned.",
-    "SourceCitation": "\"ST. ANDREW'S GIRLS DEFEAT BEAUFORT ACADEMY,\" Savannah Morning News (GA), January 17, 2001, Page 5D."
+    "SourceCitation": "\"ST. ANDREW'S GIRLS DEFEAT BEAUFORT ACADEMY,\" Savannah Morning News (GA), January 17, 2001, Page 5D.",
+    "ScoringCompleteness": "partial",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "GameID": 20010119,
@@ -577,7 +670,9 @@
     "Season": 2000,
     "IsComplete": "Yes",
     "Recap": "Meghan Lowe scored 19 as St. Andrew's beat James Island Christian.",
-    "SourceCitation": "\"GIRLS PREP ROUNDUP,\" Savannah Morning News (GA), January 20, 2001, Page 3C."
+    "SourceCitation": "\"GIRLS PREP ROUNDUP,\" Savannah Morning News (GA), January 20, 2001, Page 3C.",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "GameID": 20010123,
@@ -593,7 +688,9 @@
     "Season": 2000,
     "IsComplete": "Yes",
     "Recap": "Hilton Head Christian beat St. Andrew's in region play.",
-    "SourceCitation": "\"HILTON HEAD CHRISTIAN GIRLS ROLL PAST ST. ANDREW'S,\" Savannah Morning News (GA), January 24, 2001, Page 5D."
+    "SourceCitation": "\"HILTON HEAD CHRISTIAN GIRLS ROLL PAST ST. ANDREW'S,\" Savannah Morning News (GA), January 24, 2001, Page 5D.",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "GameID": 20010126,
@@ -609,7 +706,9 @@
     "Season": 2000,
     "IsComplete": "Yes",
     "Recap": "Bible Baptist held off St. Andrew's despite double-figure scoring from Lowe, Bugos, and Roddenberry.",
-    "SourceCitation": "\"BIBLE BAPTIST HOLDS OFF ST. ANDREW'S GIRLS,\" Savannah Morning News (GA), January 27, 2001, Page 3B."
+    "SourceCitation": "\"BIBLE BAPTIST HOLDS OFF ST. ANDREW'S GIRLS,\" Savannah Morning News (GA), January 27, 2001, Page 3B.",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "GameID": 20010130,
@@ -625,7 +724,9 @@
     "Season": 2000,
     "IsComplete": "Yes",
     "Recap": "Meghan Lowe scored 25 and Becca Cooper added 14 as St. Andrew's beat James Island Christian.",
-    "SourceCitation": "\"ST. ANDREW'S GIRLS BEAT JAMES ISLAND CHRISTIAN,\" Savannah Morning News (GA), January 31, 2001, Page 5D."
+    "SourceCitation": "\"ST. ANDREW'S GIRLS BEAT JAMES ISLAND CHRISTIAN,\" Savannah Morning News (GA), January 31, 2001, Page 5D.",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "GameID": 20010202,
@@ -641,7 +742,9 @@
     "Season": 2000,
     "IsComplete": "Yes",
     "Recap": "Meghan Lowe scored 23 as St. Andrew's improved to 13-4.",
-    "SourceCitation": "\"GIRLS PREP ROUNDUP,\" Savannah Morning News (GA), February 3, 2001, Page 3C."
+    "SourceCitation": "\"GIRLS PREP ROUNDUP,\" Savannah Morning News (GA), February 3, 2001, Page 3C.",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "GameID": 20010209,
@@ -657,7 +760,9 @@
     "Season": 2000,
     "IsComplete": "Yes",
     "Recap": "Carie Bugos scored 12 as St. Andrew's beat Beaufort Academy and improved to 14-4.",
-    "SourceCitation": "\"GROVES CLAIMS REGION TITLE WITH WIN OVER GLYNN ACADEMY,\" Savannah Morning News (GA), February 10, 2001, Page 3C."
+    "SourceCitation": "\"GROVES CLAIMS REGION TITLE WITH WIN OVER GLYNN ACADEMY,\" Savannah Morning News (GA), February 10, 2001, Page 3C.",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "GameID": 20010220,
@@ -674,7 +779,10 @@
     "IsComplete": "Yes",
     "Tournament": "SCISA Region 4-AA Tournament Semifinal",
     "Recap": "Beaufort Academy beat St. Andrew's in the region semifinals; the article listed St. Andrew's final record at 15-6.",
-    "SourceCitation": "\"BRIEFLY,\" Savannah Morning News (GA), February 21, 2001, Page 2D."
+    "SourceCitation": "\"BRIEFLY,\" Savannah Morning News (GA), February 21, 2001, Page 2D.",
+    "ArticleID": "20010221-st-andrews-girls-fall-in-region-semifinal",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "GameID": 2001021501,
@@ -692,7 +800,10 @@
     "DisplayDate": "Before Feb. 21",
     "IsPlaceholder": true,
     "Notes": "Placeholder win added because the Feb. 21 region semifinal report listed the final record as 15-6 while recovered scored results account for 14 wins.",
-    "SourceCitation": "\"BRIEFLY,\" Savannah Morning News (GA), February 21, 2001, Page 2D."
+    "SourceCitation": "\"BRIEFLY,\" Savannah Morning News (GA), February 21, 2001, Page 2D.",
+    "ScoringCompleteness": "placeholder",
+    "SourceNote": "Placeholder win added because the Feb. 21 region semifinal report listed the final record as 15-6 while recovered scored results account for 14 wins.",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "GameID": 2001021502,
@@ -710,7 +821,10 @@
     "DisplayDate": "Before Feb. 21",
     "IsPlaceholder": true,
     "Notes": "Placeholder loss added because the Feb. 21 region semifinal report listed the final record as 15-6 while recovered scored results account for five losses before this entry.",
-    "SourceCitation": "\"BRIEFLY,\" Savannah Morning News (GA), February 21, 2001, Page 2D."
+    "SourceCitation": "\"BRIEFLY,\" Savannah Morning News (GA), February 21, 2001, Page 2D.",
+    "ScoringCompleteness": "placeholder",
+    "SourceNote": "Placeholder loss added because the Feb. 21 region semifinal report listed the final record as 15-6 while recovered scored results account for five losses before this entry.",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "GameID": 20011204,
@@ -725,7 +839,11 @@
     "ResultMargin": 11,
     "Season": 2001,
     "IsComplete": "Yes",
-    "Recap": "St. Andrew's opened the season with a 42-31 win over Patrick Henry after leading 25-11 at halftime."
+    "Recap": "St. Andrew's opened the season with a 42-31 win over Patrick Henry after leading 25-11 at halftime.",
+    "ArticleID": "20011205-st-andrews-girls-bend-dont-break",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "\"ST. ANDREW'S GIRLS BEND, DON'T BREAK, UNDER PRESSURE,\" Savannah Morning News (GA), December 5, 2001, Page 5D, Sports."
   },
   {
     "GameID": 20011207,
@@ -742,7 +860,10 @@
     "Season": 2001,
     "IsComplete": "Yes",
     "Recap": "Grace Wilkowski scored 10 as St. Andrew's allowed only four points in the Holiday Invitational.",
-    "SourceNote": "The box score listed one scorer as Cooper without a first initial; the points are assigned to Becca Cooper."
+    "SourceNote": "The box score listed one scorer as Cooper without a first initial; the points are assigned to Becca Cooper.",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "\"St. Andrew's girls basketball game report,\" Savannah Morning News archive, game date 2001-12-07."
   },
   {
     "GameID": 20011208,
@@ -758,7 +879,11 @@
     "ResultMargin": -2,
     "Season": 2001,
     "IsComplete": "Yes",
-    "Recap": "St. Andrew's led early before Bible Baptist rallied in the Holiday Invitational championship game."
+    "Recap": "St. Andrew's led early before Bible Baptist rallied in the Holiday Invitational championship game.",
+    "ArticleID": "20011209-bible-baptist-survives-slow-finish",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "Jeff Sentell, \"BIBLE BAPTIST SURVIVES SLOW FINISH,\" Savannah Morning News (GA), December 9, 2001, Page 10C, Sports."
   },
   {
     "GameID": 20011214,
@@ -772,7 +897,10 @@
     "OpponentScore": 39,
     "ResultMargin": -13,
     "Season": 2001,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "\"St. Andrew's girls basketball game report,\" Savannah Morning News archive, game date 2001-12-14."
   },
   {
     "GameID": 20011231,
@@ -787,7 +915,10 @@
     "ResultMargin": null,
     "Season": 2001,
     "IsComplete": "No",
-    "SourceNote": "Placeholder for an unrecovered loss between Dec. 15 and Jan. 4; newspaper record lines show St. Andrew's was 3-3 after the Beaufort Academy win."
+    "SourceNote": "Placeholder for an unrecovered loss between Dec. 15 and Jan. 4; newspaper record lines show St. Andrew's was 3-3 after the Beaufort Academy win.",
+    "ScoringCompleteness": "placeholder",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "Record-path placeholder from girls basketball archive reconciliation, 2001-02."
   },
   {
     "GameID": 20020104,
@@ -802,7 +933,10 @@
     "ResultMargin": 6,
     "Season": 2001,
     "IsComplete": "Yes",
-    "Recap": "The Saints opened SCISA Region 4-AA play with a 40-34 win over Beaufort Academy."
+    "Recap": "The Saints opened SCISA Region 4-AA play with a 40-34 win over Beaufort Academy.",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "\"St. Andrew's girls basketball game report,\" Savannah Morning News archive, game date 2002-01-04."
   },
   {
     "GameID": 20020108,
@@ -818,7 +952,10 @@
     "Season": 2001,
     "IsComplete": "Yes",
     "Recap": "Grace Wilkowski produced a 24-point, 23-rebound game in a non-region win at Charleston.",
-    "SourceNote": "The box score appeared to OCR Meghan Lowe as Rowe."
+    "SourceNote": "The box score appeared to OCR Meghan Lowe as Rowe.",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "\"St. Andrew's girls basketball game report,\" Savannah Morning News archive, game date 2002-01-08."
   },
   {
     "GameID": 20020111,
@@ -834,7 +971,10 @@
     "Season": 2001,
     "IsComplete": "Yes",
     "Recap": "Grace Wilkowski had 15 points and 17 rebounds as St. Andrew's beat Colleton Prep.",
-    "SourceNote": "The box score listed one scorer as Cooper without a first initial; the points are assigned to Becca Cooper."
+    "SourceNote": "The box score listed one scorer as Cooper without a first initial; the points are assigned to Becca Cooper.",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "\"St. Andrew's girls basketball game report,\" Savannah Morning News archive, game date 2002-01-11."
   },
   {
     "GameID": 20020112,
@@ -848,7 +988,10 @@
     "OpponentScore": 27,
     "ResultMargin": 20,
     "Season": 2001,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "\"St. Andrew's girls basketball game report,\" Savannah Morning News archive, game date 2002-01-12."
   },
   {
     "GameID": 20020115,
@@ -862,7 +1005,10 @@
     "OpponentScore": 15,
     "ResultMargin": 27,
     "Season": 2001,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "\"St. Andrew's girls basketball game report,\" Savannah Morning News archive, game date 2002-01-15."
   },
   {
     "GameID": 20020118,
@@ -878,7 +1024,10 @@
     "Season": 2001,
     "IsComplete": "Yes",
     "Recap": "Grace Wilkowski scored 18 and grabbed 21 rebounds as the Saints improved to 3-0 in region play.",
-    "SourceNote": "The box score listed one scorer as Cooper without a first initial; the points are assigned to Becca Cooper."
+    "SourceNote": "The box score listed one scorer as Cooper without a first initial; the points are assigned to Becca Cooper.",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "\"St. Andrew's girls basketball game report,\" Savannah Morning News archive, game date 2002-01-18."
   },
   {
     "GameID": 20020119,
@@ -894,7 +1043,10 @@
     "Season": 2001,
     "IsComplete": "Yes",
     "Recap": "Grace Wilkowski had 18 points and 16 rebounds in a non-region win over St. John's Christian.",
-    "SourceNote": "The box score listed one scorer as Cooper without a first initial; the points are assigned to Becca Cooper."
+    "SourceNote": "The box score listed one scorer as Cooper without a first initial; the points are assigned to Becca Cooper.",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "\"St. Andrew's girls basketball game report,\" Savannah Morning News archive, game date 2002-01-19."
   },
   {
     "GameID": 20020122,
@@ -909,7 +1061,10 @@
     "ResultMargin": 29,
     "Season": 2001,
     "IsComplete": "Yes",
-    "SourceNote": "The box score listed one scorer as Cooper without a first initial; the points are assigned to Becca Cooper."
+    "SourceNote": "The box score listed one scorer as Cooper without a first initial; the points are assigned to Becca Cooper.",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "\"St. Andrew's girls basketball game report,\" Savannah Morning News archive, game date 2002-01-22."
   },
   {
     "GameID": 20020125,
@@ -923,7 +1078,10 @@
     "OpponentScore": 44,
     "ResultMargin": -4,
     "Season": 2001,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "\"St. Andrew's girls basketball game report,\" Savannah Morning News archive, game date 2002-01-25."
   },
   {
     "GameID": 20020129,
@@ -937,7 +1095,10 @@
     "OpponentScore": 24,
     "ResultMargin": 5,
     "Season": 2001,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "\"St. Andrew's girls basketball game report,\" Savannah Morning News archive, game date 2002-01-29."
   },
   {
     "GameID": 20020201,
@@ -951,7 +1112,10 @@
     "OpponentScore": 22,
     "ResultMargin": 15,
     "Season": 2001,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "\"St. Andrew's girls basketball game report,\" Savannah Morning News archive, game date 2002-02-01."
   },
   {
     "GameID": 20020202,
@@ -966,7 +1130,10 @@
     "ResultMargin": 31,
     "Season": 2001,
     "IsComplete": "Yes",
-    "Recap": "Grace Wilkowski had 11 points and 14 rebounds in a non-region win over St. Paul's Country Day."
+    "Recap": "Grace Wilkowski had 11 points and 14 rebounds in a non-region win over St. Paul's Country Day.",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "\"St. Andrew's girls basketball game report,\" Savannah Morning News archive, game date 2002-02-02."
   },
   {
     "GameID": 20020205,
@@ -980,7 +1147,10 @@
     "OpponentScore": 42,
     "ResultMargin": -7,
     "Season": 2001,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "\"St. Andrew's girls basketball game report,\" Savannah Morning News archive, game date 2002-02-05."
   },
   {
     "GameID": 20020209,
@@ -994,7 +1164,10 @@
     "OpponentScore": 22,
     "ResultMargin": 8,
     "Season": 2001,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "\"St. Andrew's girls basketball game report,\" Savannah Morning News archive, game date 2002-02-09."
   },
   {
     "GameID": 20020212,
@@ -1008,7 +1181,11 @@
     "OpponentScore": 17,
     "ResultMargin": 48,
     "Season": 2001,
-    "IsComplete": "Yes"
+    "IsComplete": "Yes",
+    "ScoringCompleteness": "partial",
+    "SourceNote": "Named St. Andrew's scoring rows total 64 points against the reported team score of 65; the reported team score is preserved.",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "\"St. Andrew's girls basketball game report,\" Savannah Morning News archive, game date 2002-02-12."
   },
   {
     "GameID": 20020219,
@@ -1023,7 +1200,11 @@
     "ResultMargin": 12,
     "Season": 2001,
     "IsComplete": "Yes",
-    "Recap": "St. Andrew's beat Colleton Prep in the first round of the SCISA Region 4-AA Tournament at Hilton Head Christian."
+    "Recap": "St. Andrew's beat Colleton Prep in the first round of the SCISA Region 4-AA Tournament at Hilton Head Christian.",
+    "ArticleID": "20020220-st-andrews-girls-beat-colleton-prep",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "\"LOSS TO COLLETON PREP ENDS SAINTS' SEASON,\" Savannah Morning News (GA), February 20, 2002, Page 6D, Sports."
   },
   {
     "GameID": 20020222,
@@ -1039,7 +1220,11 @@
     "Season": 2001,
     "IsComplete": "Yes",
     "Recap": "The Saints fell to Hilton Head Christian in the SCISA Region 4-AA Tournament championship game but qualified for the state tournament.",
-    "SourceNote": "The box score listed one scorer as Cooper without a first initial; the points are assigned to Becca Cooper."
+    "SourceNote": "The box score listed one scorer as Cooper without a first initial; the points are assigned to Becca Cooper.",
+    "ArticleID": "20020223-first-half-blues-cost-st-andrews-girls",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "Stephen Weeks, \"FIRST-HALF BLUES COST ST. ANDREW'S GIRLS,\" Savannah Morning News (GA), February 23, 2002, Page 4F, Sports."
   },
   {
     "GameID": 20020225,
@@ -1054,7 +1239,11 @@
     "ResultMargin": 25,
     "Season": 2001,
     "IsComplete": "Yes",
-    "Recap": "Meghan Lowe scored 20 as St. Andrew's beat Charleston Collegiate at Thomas Heyward Academy."
+    "Recap": "Meghan Lowe scored 20 as St. Andrew's beat Charleston Collegiate at Thomas Heyward Academy.",
+    "ArticleID": "20020226-st-andrews-advances-to-scisa-semis",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "\"ST. ANDREW'S ADVANCES TO SCISA SEMIS,\" Savannah Morning News (GA), February 26, 2002, Page 3D, Sports."
   },
   {
     "GameID": 20020227,
@@ -1069,7 +1258,11 @@
     "ResultMargin": -16,
     "Season": 2001,
     "IsComplete": "Yes",
-    "Recap": "Pee Dee opened with a 14-0 run and ended St. Andrew's season in the SCISA Class AA quarterfinals."
+    "Recap": "Pee Dee opened with a 14-0 run and ended St. Andrew's season in the SCISA Class AA quarterfinals.",
+    "ArticleID": "20020228-st-andrews-stumbles-in-scisa-quarterfinal",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2001-02",
+    "SourceCitation": "\"ST. ANDREW'S STUMBLES IN SCISA QUARTERFINAL,\" Savannah Morning News (GA), February 28, 2002, Page 3D, Sports."
   },
   {
     "GameID": 20021203,
@@ -1084,7 +1277,10 @@
     "ResultMargin": 22,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Recap": null
+    "Recap": null,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's girls basketball game report,\" Savannah Morning News archive, game date 2002-12-03."
   },
   {
     "GameID": 20021206,
@@ -1100,7 +1296,10 @@
     "ResultMargin": 32,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Recap": null
+    "Recap": null,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's girls basketball game report,\" Savannah Morning News archive, game date 2002-12-06."
   },
   {
     "GameID": 20021207,
@@ -1116,7 +1315,10 @@
     "ResultMargin": 23,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Recap": null
+    "Recap": null,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's girls basketball game report,\" Savannah Morning News archive, game date 2002-12-07."
   },
   {
     "GameID": 20021213,
@@ -1132,7 +1334,10 @@
     "ResultMargin": 8,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Recap": null
+    "Recap": null,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's girls basketball game report,\" Savannah Morning News archive, game date 2002-12-13."
   },
   {
     "GameID": 20021214,
@@ -1148,7 +1353,10 @@
     "ResultMargin": -24,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Recap": null
+    "Recap": null,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's girls basketball game report,\" Savannah Morning News archive, game date 2002-12-14."
   },
   {
     "GameID": 20030103,
@@ -1163,7 +1371,10 @@
     "ResultMargin": 50,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Recap": null
+    "Recap": null,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's girls basketball game report,\" Savannah Morning News archive, game date 2003-01-03."
   },
   {
     "GameID": 20030107,
@@ -1179,7 +1390,10 @@
     "Season": 2002,
     "IsComplete": "Yes",
     "Recap": null,
-    "SourceNote": "The Savannah Morning News printed the final as Hilton Head Prep 56, St. Andrew's 49, but the listed St. Andrew's scorers add to 50. The game score is preserved as printed."
+    "SourceNote": "The Savannah Morning News printed the final as Hilton Head Prep 56, St. Andrew's 49, but the listed St. Andrew's scorers add to 50. The game score is preserved as printed.",
+    "ScoringCompleteness": "partial",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's girls basketball game report,\" Savannah Morning News archive, game date 2003-01-07."
   },
   {
     "GameID": 20030111,
@@ -1194,7 +1408,10 @@
     "ResultMargin": 23,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Recap": null
+    "Recap": null,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's girls basketball game report,\" Savannah Morning News archive, game date 2003-01-11."
   },
   {
     "GameID": 20030114,
@@ -1209,7 +1426,10 @@
     "ResultMargin": 40,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Recap": null
+    "Recap": null,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's girls basketball game report,\" Savannah Morning News archive, game date 2003-01-14."
   },
   {
     "GameID": 20030117,
@@ -1224,7 +1444,10 @@
     "ResultMargin": 47,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Recap": null
+    "Recap": null,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's girls basketball game report,\" Savannah Morning News archive, game date 2003-01-17."
   },
   {
     "GameID": 20030118,
@@ -1239,7 +1462,10 @@
     "ResultMargin": 50,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Recap": null
+    "Recap": null,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's girls basketball game report,\" Savannah Morning News archive, game date 2003-01-18."
   },
   {
     "GameID": 20030121,
@@ -1254,7 +1480,10 @@
     "ResultMargin": 14,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Recap": null
+    "Recap": null,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's girls basketball game report,\" Savannah Morning News archive, game date 2003-01-21."
   },
   {
     "GameID": 20030124,
@@ -1269,7 +1498,10 @@
     "ResultMargin": 12,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Recap": null
+    "Recap": null,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's girls basketball game report,\" Savannah Morning News archive, game date 2003-01-24."
   },
   {
     "GameID": 20030125,
@@ -1284,7 +1516,10 @@
     "ResultMargin": 24,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Recap": null
+    "Recap": null,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's girls basketball game report,\" Savannah Morning News archive, game date 2003-01-25."
   },
   {
     "GameID": 20030128,
@@ -1299,7 +1534,10 @@
     "ResultMargin": 27,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Recap": null
+    "Recap": null,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's girls basketball game report,\" Savannah Morning News archive, game date 2003-01-28."
   },
   {
     "GameID": 20030201,
@@ -1314,7 +1552,10 @@
     "ResultMargin": 16,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Recap": null
+    "Recap": null,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's girls basketball game report,\" Savannah Morning News archive, game date 2003-02-01."
   },
   {
     "GameID": 20030207,
@@ -1330,7 +1571,10 @@
     "Season": 2002,
     "IsComplete": "Yes",
     "Recap": null,
-    "SourceNote": "The Savannah Morning News printed the final as St. Andrew's 67, James Island Christian 12, but the listed St. Andrew's scorers add to 68. The game score is preserved as printed."
+    "SourceNote": "The Savannah Morning News printed the final as St. Andrew's 67, James Island Christian 12, but the listed St. Andrew's scorers add to 68. The game score is preserved as printed.",
+    "ScoringCompleteness": "partial",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's girls basketball game report,\" Savannah Morning News archive, game date 2003-02-07."
   },
   {
     "GameID": 20030214,
@@ -1345,7 +1589,10 @@
     "ResultMargin": 14,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Recap": null
+    "Recap": null,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's girls basketball game report,\" Savannah Morning News archive, game date 2003-02-14."
   },
   {
     "GameID": 20030219,
@@ -1360,7 +1607,10 @@
     "ResultMargin": 35,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Recap": null
+    "Recap": null,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's girls basketball game report,\" Savannah Morning News archive, game date 2003-02-19."
   },
   {
     "GameID": 20030221,
@@ -1375,7 +1625,10 @@
     "ResultMargin": -3,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Recap": null
+    "Recap": null,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's girls basketball game report,\" Savannah Morning News archive, game date 2003-02-21."
   },
   {
     "GameID": 20030226,
@@ -1390,7 +1643,10 @@
     "ResultMargin": 21,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Recap": null
+    "Recap": null,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's girls basketball game report,\" Savannah Morning News archive, game date 2003-02-26."
   },
   {
     "GameID": 20030228,
@@ -1405,7 +1661,10 @@
     "ResultMargin": 12,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Recap": null
+    "Recap": null,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's girls basketball game report,\" Savannah Morning News archive, game date 2003-02-28."
   },
   {
     "GameID": 20030301,
@@ -1420,7 +1679,10 @@
     "ResultMargin": 5,
     "Season": 2002,
     "IsComplete": "Yes",
-    "Recap": null
+    "Recap": null,
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "\"St. Andrew's girls basketball game report,\" Savannah Morning News archive, game date 2003-03-01."
   },
   {
     "GameID": 20031202,
@@ -1443,7 +1705,10 @@
         "alt": "Newspaper clipping for St. Andrew's 56, Memorial Day 11 on Dec. 2, 2003",
         "caption": "Savannah Morning News clipping from the Dec. 2, 2003 Memorial Day game."
       }
-    ]
+    ],
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"St. Andrew's Takes Down Memorial\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20031205,
@@ -1451,13 +1716,17 @@
     "OpponentID": "ga-providence-christian-school-savannah",
     "Opponent": "Providence Christian School",
     "LocationType": "Home",
-    "GameType": "Non-Region",
-    "Result": null,
+    "GameType": "Record-path placeholder",
+    "Result": "W",
     "TeamScore": null,
     "OpponentScore": null,
     "Season": 2003,
     "IsComplete": "No",
-    "ResultMargin": null
+    "ResultMargin": null,
+    "ScoringCompleteness": "placeholder",
+    "SourceSeasonLabel": "2003-04",
+    "SourceNote": "Providence Christian result is preserved as a placeholder win to reconcile the published 2003-04 final record; score and box score remain unrecovered.",
+    "SourceCitation": "Record-path placeholder from girls basketball archive reconciliation, 2003-04."
   },
   {
     "GameID": 20031212,
@@ -1465,13 +1734,17 @@
     "OpponentID": null,
     "Opponent": "Unknown",
     "LocationType": "Unknown",
-    "GameType": "Non-Region",
-    "Result": null,
+    "GameType": "Record-path placeholder",
+    "Result": "W",
     "TeamScore": null,
     "OpponentScore": null,
     "Season": 2003,
     "IsComplete": "No",
-    "ResultMargin": null
+    "ResultMargin": null,
+    "ScoringCompleteness": "placeholder",
+    "SourceSeasonLabel": "2003-04",
+    "SourceNote": "Placeholder win added to reconcile the published 2003-04 final record; opponent, site, score, and box score remain unrecovered.",
+    "SourceCitation": "Record-path placeholder from girls basketball archive reconciliation, 2003-04."
   },
   {
     "GameID": 20031213,
@@ -1479,13 +1752,17 @@
     "OpponentID": null,
     "Opponent": "Unknown",
     "LocationType": "Away",
-    "GameType": "Non-Region",
-    "Result": null,
+    "GameType": "Record-path placeholder",
+    "Result": "L",
     "TeamScore": null,
     "OpponentScore": null,
     "Season": 2003,
     "IsComplete": "No",
-    "ResultMargin": null
+    "ResultMargin": null,
+    "ScoringCompleteness": "placeholder",
+    "SourceSeasonLabel": "2003-04",
+    "SourceNote": "Placeholder loss added to reconcile the published 2003-04 final record; opponent, site, score, and box score remain unrecovered.",
+    "SourceCitation": "Record-path placeholder from girls basketball archive reconciliation, 2003-04."
   },
   {
     "GameID": 20031219,
@@ -1502,7 +1779,10 @@
     "IsComplete": "Yes",
     "ResultMargin": -33,
     "RecapTitle": "Pinewood Tops St. Andrew's at Coaches Against Cancer Tournament",
-    "Recap": "Pinewood Christian defeated St. Andrew's 72-39 in the Coaches Against Cancer Tournament at Robert Toombs Christian Academy in Lyons. Pinewood led 44-21 at halftime behind Ramsey Blaxton, who scored 23 points, and Ashlan Durrence, who added 10. Jennifer Moesch led St. Andrew's with 21 points, while Grace Wilkowski scored 8, Cooper added 6, and Mary Wilkowski finished with 4."
+    "Recap": "Pinewood Christian defeated St. Andrew's 72-39 in the Coaches Against Cancer Tournament at Robert Toombs Christian Academy in Lyons. Pinewood led 44-21 at halftime behind Ramsey Blaxton, who scored 23 points, and Ashlan Durrence, who added 10. Jennifer Moesch led St. Andrew's with 21 points, while Grace Wilkowski scored 8, Cooper added 6, and Mary Wilkowski finished with 4.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Pinewood Tops St. Andrew's at Coaches Against Cancer Tournament\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20031220,
@@ -1519,7 +1799,10 @@
     "IsComplete": "Yes",
     "ResultMargin": 19,
     "RecapTitle": "Grace Wilkowski Leads Saints Past Robert Toombs",
-    "Recap": "Grace Wilkowski scored 31 points to lead St. Andrew's to a 59-40 win over Robert Toombs Christian in the RTCA Coaches vs. Cancer Tournament in Lyons. Becca Cooper added 12 points for the Saints, who led 28-15 at halftime and improved to 4-2. Robert Toombs was led by Alex Stanley with 21 points and Kaley Dees with 13."
+    "Recap": "Grace Wilkowski scored 31 points to lead St. Andrew's to a 59-40 win over Robert Toombs Christian in the RTCA Coaches vs. Cancer Tournament in Lyons. Becca Cooper added 12 points for the Saints, who led 28-15 at halftime and improved to 4-2. Robert Toombs was led by Alex Stanley with 21 points and Kaley Dees with 13.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Grace Wilkowski Leads Saints Past Robert Toombs\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20040106,
@@ -1535,7 +1818,10 @@
     "IsComplete": "Yes",
     "ResultMargin": -8,
     "RecapTitle": "Hilton Head Prep Edges St. Andrew's",
-    "Recap": "Hilton Head Prep defeated St. Andrew's 59-51 in a SCISA matchup reported in the Jan. 7, 2004 Savannah Morning News. Chris Compton scored a game-high 28 points and Meg Donley added 17 for Hilton Head Prep. Grace Wilkowski led St. Andrew's with 18 points, Jennifer Moesch added 15, Becca Cooper scored 9, Hinchey had 5, and Carie Bugos finished with 4. Mary Wilkowski sat out with an injury. St. Andrew's led 29-25 at halftime and moved to 4-3 overall."
+    "Recap": "Hilton Head Prep defeated St. Andrew's 59-51 in a SCISA matchup reported in the Jan. 7, 2004 Savannah Morning News. Chris Compton scored a game-high 28 points and Meg Donley added 17 for Hilton Head Prep. Grace Wilkowski led St. Andrew's with 18 points, Jennifer Moesch added 15, Becca Cooper scored 9, Hinchey had 5, and Carie Bugos finished with 4. Mary Wilkowski sat out with an injury. St. Andrew's led 29-25 at halftime and moved to 4-3 overall.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Hilton Head Prep Edges St. Andrew's\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20040109,
@@ -1551,7 +1837,11 @@
     "IsComplete": "Yes",
     "ResultMargin": 16,
     "RecapTitle": "Moesch Leads Saints Past Holly Hill",
-    "Recap": "Jennifer Moesch scored a game-high 24 points as St. Andrew's defeated Holly Hill 63-47 in a SCISA Region 2-AA road game reported in the Jan. 10, 2004 Savannah Morning News. Mary Wilkowski added 17 points and 14 rebounds, and Grace Wilkowski had 15 points and 13 rebounds. Becca Cooper scored 4, Leighanne Evans added 2, and S. Griffin scored 2 as the Saints led 35-15 at halftime and improved to 5-3 overall and 1-0 in SCISA 2-AA."
+    "Recap": "Jennifer Moesch scored a game-high 24 points as St. Andrew's defeated Holly Hill 63-47 in a SCISA Region 2-AA road game reported in the Jan. 10, 2004 Savannah Morning News. Mary Wilkowski added 17 points and 14 rebounds, and Grace Wilkowski had 15 points and 13 rebounds. Becca Cooper scored 4, Leighanne Evans added 2, and S. Griffin scored 2 as the Saints led 35-15 at halftime and improved to 5-3 overall and 1-0 in SCISA 2-AA.",
+    "ScoringCompleteness": "partial",
+    "SourceNote": "Named St. Andrew's scoring rows total 64 points against the reported team score of 63; the reported team score is preserved.",
+    "SourceCitation": "\"Moesch Leads Saints Past Holly Hill\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20040113,
@@ -1567,7 +1857,10 @@
     "IsComplete": "Yes",
     "ResultMargin": 44,
     "RecapTitle": "Four Saints Reach Double Figures at Charleston Collegiate",
-    "Recap": "Jennifer Moesch scored 21 points to lead four St. Andrew's players in double figures as the Saints defeated Charleston Collegiate 70-26 in a SCISA Region 2-AA road game reported in the Jan. 14, 2004 Savannah Morning News. Mary Wilkowski added 16 points, Grace Wilkowski and Becca Cooper scored 12 apiece, Carie Bugos had 7, and Maggie Hinchey finished with 2. St. Andrew's led 37-14 at halftime and improved to 6-3 overall and 2-0 in SCISA Region 2-AA."
+    "Recap": "Jennifer Moesch scored 21 points to lead four St. Andrew's players in double figures as the Saints defeated Charleston Collegiate 70-26 in a SCISA Region 2-AA road game reported in the Jan. 14, 2004 Savannah Morning News. Mary Wilkowski added 16 points, Grace Wilkowski and Becca Cooper scored 12 apiece, Carie Bugos had 7, and Maggie Hinchey finished with 2. St. Andrew's led 37-14 at halftime and improved to 6-3 overall and 2-0 in SCISA Region 2-AA.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Four Saints Reach Double Figures at Charleston Collegiate\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20040116,
@@ -1583,7 +1876,10 @@
     "IsComplete": "Yes",
     "ResultMargin": 32,
     "RecapTitle": "Grace Wilkowski Powers Region Win Over James Island Christian",
-    "Recap": "Grace Wilkowski recorded her fourth straight double-double to lead St. Andrew's to a 63-31 win over James Island Christian in a SCISA Region 2-AA game. The sophomore forward scored 27 points and pulled down 20 rebounds, while Jennifer Moesch added 20 points. Mary Wilkowski and Carie Bugos scored 6 apiece, and M. Griffin and Aimone each added 2. St. Andrew's led 30-9 at halftime and improved to 7-3 overall and 3-0 in SCISA Region 2-AA."
+    "Recap": "Grace Wilkowski recorded her fourth straight double-double to lead St. Andrew's to a 63-31 win over James Island Christian in a SCISA Region 2-AA game. The sophomore forward scored 27 points and pulled down 20 rebounds, while Jennifer Moesch added 20 points. Mary Wilkowski and Carie Bugos scored 6 apiece, and M. Griffin and Aimone each added 2. St. Andrew's led 30-9 at halftime and improved to 7-3 overall and 3-0 in SCISA Region 2-AA.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Grace Wilkowski Powers Region Win Over James Island Christian\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20040117,
@@ -1606,7 +1902,10 @@
         "alt": "Newspaper clipping for St. Andrew's 66, Charleston Collegiate 7 on Jan. 17, 2004",
         "caption": "Newspaper clipping covering the Jan. 17, 2004 Charleston Collegiate game."
       }
-    ]
+    ],
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Wilkowski Sisters Lead Saints Past Charleston Collegiate\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20040120,
@@ -1629,7 +1928,10 @@
         "alt": "Newspaper clipping for St. Andrew's 60, Beaufort Academy 32 on Jan. 20, 2004",
         "caption": "Newspaper clipping covering the Jan. 20, 2004 Beaufort Academy game."
       }
-    ]
+    ],
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Grace Wilkowski Leads Saints Past Beaufort Academy\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20040123,
@@ -1652,7 +1954,10 @@
         "alt": "Newspaper clipping for St. Andrew's 59, Colleton Prep 29 on Jan. 23, 2004",
         "caption": "Newspaper clipping covering the Jan. 23, 2004 Colleton Prep game."
       }
-    ]
+    ],
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Mary Wilkowski Leads Saints Past Colleton Prep\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20040124,
@@ -1675,7 +1980,10 @@
         "alt": "Newspaper clipping for St. Andrew's 56, Memorial Day 23 on Jan. 24, 2004",
         "caption": "Newspaper clipping covering the Jan. 24, 2004 Memorial Day game."
       }
-    ]
+    ],
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Wilkowski Sisters Lead Saints Past Memorial Day\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20040127,
@@ -1698,7 +2006,10 @@
         "alt": "Newspaper clipping for St. Andrew's 69, Patrick Henry 38 on Jan. 27, 2004",
         "caption": "Newspaper clipping covering the Jan. 27, 2004 Patrick Henry game."
       }
-    ]
+    ],
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Saints Top Patrick Henry in Non-Region Win\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20040131,
@@ -1721,7 +2032,10 @@
         "alt": "Newspaper clipping for St. Andrew's 50, Holly Hill 38 on Jan. 31, 2004",
         "caption": "Newspaper clipping covering the Jan. 31, 2004 Holly Hill game."
       }
-    ]
+    ],
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Moesch and Grace Wilkowski Spark First-Place Win\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20040203,
@@ -1744,7 +2058,10 @@
         "alt": "Newspaper clipping for St. Andrew's 59, Hilton Head Christian 43 on Feb. 3, 2004",
         "caption": "Newspaper clipping covering the Feb. 3, 2004 Hilton Head Christian game."
       }
-    ]
+    ],
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Becca Cooper Controls Glass in Win Over Hilton Head Christian\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20040206,
@@ -1767,7 +2084,11 @@
         "alt": "Newspaper clipping for St. Andrew's 72, James Island Christian 28 on Feb. 6, 2004",
         "caption": "Newspaper clipping covering the Feb. 6, 2004 James Island Christian game."
       }
-    ]
+    ],
+    "ScoringCompleteness": "partial",
+    "SourceNote": "Named St. Andrew's scoring rows total 70 points against the reported team score of 72; the reported team score is preserved.",
+    "SourceCitation": "\"Four Saints Score in Double Figures at James Island Christian\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20040210,
@@ -1795,7 +2116,10 @@
         "alt": "Newspaper clipping for St. Andrew's 48, Beaufort Academy 39 on Feb. 10, 2004, part 2",
         "caption": "Newspaper clipping covering the Feb. 10, 2004 Beaufort Academy game, part 2."
       }
-    ]
+    ],
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Grace Wilkowski Leads Saints Past Beaufort Academy\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20040212,
@@ -1818,7 +2142,10 @@
         "alt": "Newspaper clipping for St. Andrew's 61, Patrick Henry 22 on Feb. 12, 2004",
         "caption": "Newspaper clipping covering the Feb. 12, 2004 Patrick Henry game."
       }
-    ]
+    ],
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Wilkowski Sisters Lead Saints Past Patrick Henry\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20040213,
@@ -1846,7 +2173,10 @@
         "alt": "Newspaper clipping for St. Andrew's 51, Colleton Prep 31 on Feb. 13, 2004, part 2",
         "caption": "Newspaper clipping covering the Feb. 13, 2004 Colleton Prep game, part 2."
       }
-    ]
+    ],
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Saints Clinch Top Region Seed at Colleton Prep\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20040217,
@@ -1869,7 +2199,10 @@
         "alt": "Newspaper clipping for St. Andrew's 78, Providence Christian 24 on Feb. 17, 2004",
         "caption": "Newspaper clipping covering the Feb. 17, 2004 Providence Christian game."
       }
-    ]
+    ],
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Four Saints Score in Double Figures Against Providence Christian\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20040225,
@@ -1897,7 +2230,10 @@
         "alt": "Newspaper clipping for St. Andrew's 57, Beaufort Academy 20 on Feb. 25, 2004, part 2",
         "caption": "Newspaper clipping covering the Feb. 25, 2004 Beaufort Academy region semifinal, part 2."
       }
-    ]
+    ],
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Grace Wilkowski Leads Saints Into Region Final\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20040227,
@@ -1920,7 +2256,10 @@
         "alt": "Newspaper clipping for Holly Hill 52, St. Andrew's 40 on Feb. 27, 2004",
         "caption": "Newspaper clipping covering the Feb. 27, 2004 SCISA Region 2-AA championship game against Holly Hill."
       }
-    ]
+    ],
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Saints Fall to Holly Hill in Region Championship\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20040303,
@@ -1936,7 +2275,10 @@
     "IsComplete": "Yes",
     "ResultMargin": 30,
     "RecapTitle": "Saints Advance Past Greenwood Christian in State Quarterfinal",
-    "Recap": "Grace Wilkowski scored 23 points, pulled down eight rebounds and had four assists as St. Andrew's defeated Greenwood Christian 64-34 in a SCISA State Class AA quarterfinal at the Sumter County Exhibition Center. Becca Cooper added 15 points and 16 rebounds for the Saints, the defending SCISA Class AA champions. Jennifer Moesch scored 14, and Mary Wilkowski put in 12. St. Andrew's led 38-15 at halftime, improved to 21-4, and advanced to face Pee Dee Academy in the state semifinal."
+    "Recap": "Grace Wilkowski scored 23 points, pulled down eight rebounds and had four assists as St. Andrew's defeated Greenwood Christian 64-34 in a SCISA State Class AA quarterfinal at the Sumter County Exhibition Center. Becca Cooper added 15 points and 16 rebounds for the Saints, the defending SCISA Class AA champions. Jennifer Moesch scored 14, and Mary Wilkowski put in 12. St. Andrew's led 38-15 at halftime, improved to 21-4, and advanced to face Pee Dee Academy in the state semifinal.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Saints Advance Past Greenwood Christian in State Quarterfinal\"",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20040305,
@@ -1953,7 +2295,9 @@
     "ResultMargin": -12,
     "RecapTitle": "St. Andrew's Girls Fall in Semifinal",
     "Recap": "St. Andrew's saw its hopes of defending the SCISAA Class AA title come to a disappointing end with a 69-57 loss to a powerful Pee Dee Academy squad in the SCISAA semifinals at the Sumter County Exhibition Center on Friday.\n\nThe Saints, who finished the season 21-5, fell behind 7-0 in the early minutes, and to make matters worse, starting forward Mary Wilkowski picked up a pair of fouls in the first two minutes.\n\n\"We did not get off to the kind of start you want,\" said St. Andrew's coach Kevin Kunst. \"It took us a little while to adjust to their pressure, and then Mary, who averages 12 points and 12 rebounds for us, picked up those two fouls, and that made it even tougher.\"\n\nAfter Pee Dee got off to their 7-0 lead, a bucket and a pair of free throws by Grace Wilkowski pulled the Saints to within 7-4. But Pee Dee went on a 13-6 run to claim a 20-10 lead by the time the first quarter ended.\n\n\"We made some adjustments to their press, and actually forced then to get out of it,\" Kunst said. \"That helped us get back in the game.\"\n\nPee Dee stretched its lead to 31-20 with three minutes left in the second quarter before the Saints used a 3-pointer by Jennifer Moesch and a pair of free throws by Maggie Hinchey to trim the margin to 31-25. The quarter ended with Pee Dee's Anne Hunter, who scored 17 points in the half, putting an offensive rebound back in that allowed the Eagles to take a 35-27 lead into the locker room.\n\nPee Dee built its lead up to 17 points in the middle of the third quarter, but the Saints went on a 10-4 run at the end of the third quarter to pull within 42-31. A trey by Carie Bogus got St. Andrew's to within 61-51 with 2:40 left, and Moesch hit a trey with 40 seconds remaining to cut the lead to 66-57, the only time in the second half the Saints managed to reduce Pee Dee's lead to single digits. But the Eagles, who will take a 29-1 record into today's title game, put the game away at the foul line.\n\nKunst had a lot of praise for his four seniors, Moesch, Bogus, Becca Cooper, and Leigh Anne Evans.\n\n\"Our four seniors have meant a tremendous amount to our school's athletic program,\" said Kunst. \"They won a state championship last year, and the only thing they did not achieve this season was defending their state title.\"\n\nPEE DEE ACADEMY (69)\n\nAnne Hunter 24, Bridgett Elvington 17, Katy Padgett 11, Meg McMillan 10, Anderson 7.\n\nST. ANDREW'S (57)\n\nJennifer Moesch 10, M. Wilkowski 9, Grace Wilkowski 17, Cooper 8, Hinchey 4, Miller 3, Bogus 3, Evans 3.\n\nHalftime-PDA, 35-27. Records-SA 21-5, PDA 29-1.\n\nSource: Savannah Morning News, March 6, 2004.",
-    "RecapSource": "Savannah Morning News, March 6, 2004"
+    "SourceCitation": "Savannah Morning News, March 6, 2004",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2003-04"
   },
   {
     "GameID": 20041122,
@@ -1970,7 +2314,9 @@
     "ResultMargin": 30,
     "RecapTitle": "Wilkowski Sisters Lead St. Andrew's Past Bible Baptist",
     "Recap": "The Wilkowski sisters each recorded a double-double to lead St. Andrew's to a 57-27 home win over Bible Baptist on Monday night.\n\nGrace Wilkowski had 22 points and 10 rebounds, Rose Wilkowski had 12 points and 13 rebounds, and Mary Wilkowski had 10 points and 13 rebounds. Meghan Miller added 7 points, Emily Aimone scored 4, and Kristen Albritton finished with 2 as the Saints led 31-19 at halftime and opened the season 1-0.\n\nAlexia Grimes led Bible Baptist with 6 points, Brown and Lane scored 5 apiece, Crapse and Baker added 4 each, and Walker finished with 3.",
-    "RecapSource": "Savannah Morning News"
+    "SourceCitation": "Savannah Morning News",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20041130,
@@ -1987,8 +2333,10 @@
     "ResultMargin": -38,
     "RecapTitle": "Pinewood Christian Tops St. Andrew's",
     "Recap": "Kacey Kicklighter scored 25 points to lead visiting Pinewood Christian to a 68-30 win over St. Andrew's in a non-region game.\n\nJenna Lewis added 17 points for the Patriots, who led 34-17 at halftime and improved to 5-0. Rose Wilkowski led St. Andrew's with 12 points, Grace Wilkowski scored 9, Mary Wilkowski added 6, Katie Hall scored 5, and Meghan Miller finished with 2 as the Saints moved to 1-1.\n\nThe supplied St. Andrew's individual scoring line totals 34 points, while the reported final score lists St. Andrew's with 30. The game record preserves the reported 68-30 final and the supplied individual scoring rows.",
-    "RecapSource": "Savannah Morning News",
-    "SourceNote": "The supplied St. Andrew's individual scoring line totals 34 points, while the reported final score lists St. Andrew's with 30. The game record preserves the reported 68-30 final and the supplied individual scoring rows."
+    "SourceNote": "The supplied St. Andrew's individual scoring line totals 34 points, while the reported final score lists St. Andrew's with 30. The game record preserves the reported 68-30 final and the supplied individual scoring rows.",
+    "SourceCitation": "Savannah Morning News",
+    "ScoringCompleteness": "partial",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20041202,
@@ -2005,8 +2353,10 @@
     "ResultMargin": 5,
     "RecapTitle": "Grace Wilkowski Leads Saints Past Colleton Prep",
     "Recap": "Grace Wilkowski scored a game-high 13 points and grabbed 15 rebounds to lead St. Andrew's past Colleton Prep 42-37 in a non-region game in Walterboro, South Carolina.\n\nRose Wilkowski added 8 points, Meghan Miller scored 7, Emily Aimone added 6, Katie Hall scored 5, and Mary Wilkowski finished with 3 as the Saints erased a 22-21 halftime deficit and improved to 2-1 overall.\n\nMichelle Gruber led Colleton Prep with 10 points. Babb scored 9, Ulmer and Rizer added 6 apiece, and Johnson, Griffith, and Creech each finished with 2.",
-    "RecapSource": "Savannah Morning News",
-    "SourceNote": "The supplied clipping line appears as Colleton Prep (3), but the reported final score and Colleton Prep scorer totals indicate 37 points."
+    "SourceNote": "The supplied clipping line appears as Colleton Prep (3), but the reported final score and Colleton Prep scorer totals indicate 37 points.",
+    "SourceCitation": "Savannah Morning News",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20041203,
@@ -2025,8 +2375,10 @@
     "Recap": "ST. ANDREW'S GIRLS DELIVER 52-26 WIN OVER MEMORIAL - WILKOWSKI SISTERS PROVE A TOUGH ACT FOR SAINTS.\n\nTaking on the St. Andrew's girls' basketball team proved a tall order for Memorial Day on Friday.\n\nThe Wilkowski sisters helped the Saints tower over the Matadors 52-26 at St. Andrew's gym.\n\nRose and Grace scored a combined 34 points. Mary added six points, while dominating with her reach under the boards.\n\nShe led with 15 rebounds. Her sisters pulled in another 18.\n\n\"We don't have height,\" said Memorial coach Spencer Quarles. \"When you have the three Wilkowski sisters at 6-foot, what can you do?\"\n\nExcept try.\n\nDespite a meager nine-point performance in the first half, the Matadors returned to the game unwilling to surrender.\n\nSenior post player Amberly Proper drove them. Six of her team-high 10 points were notched in the waning minutes of the fourth period.\n\n\"We're a lot better then we were last year,\" she said. \"When someone passes the ball, we see it and read it better.\"\n\nLast week, Proper scored 27 points in leading Memorial (2-1) to a Thanksgiving tournament win over Bible Baptist.\n\nStill, Friday was a struggle for the improving team that enjoyed an opening win-streak.\n\n\"It's frustrating,\" Proper said. \"We should've won. But they're just so tall.\"\n\nThe GISA Class AA runner-up Saints (3-1) also executed better.\n\nNot just the Wilkowskis.\n\nPoint guard Meghan Miller positioned the shooters well enough for the Saints to take a 28-9 halftime lead.\n\nHer junior classmates Emily Aimone, Kristen Albritton and Stephanie Griffin also contributed from the field with nine points.\n\n\"We're not doing anything new except that we press most of the game,\" said St. Andrew's coach Michael Bennet, who started coaching the team this year. \"They work so well together at both ends of the court.\"\n\nST. ANDREW'S (52)\n\nMiller 3, Rose Wilkowski 16, Grace Wilkowski 18, M. Wilkowski 6, Aimone 2, Albritton 4, Griffen 3.\n\nMEMORIAL DAY (26)\n\nWillcoxon 3, Henderson 4, Stathopoulos 3, Taylor 4, Amberly Proper 10.\n\nHalftime-SA, 28-9. Records-MDS 2-1, SA 3-1.\n\nSource: Erin Rossiter, \"ST. ANDREW'S GIRLS DELIVER 52-26 WIN OVER MEMORIAL - WILKOWSKI SISTERS PROVE A TOUGH ACT FOR SAINTS,\" Savannah Morning News (GA), December 4, 2004, Page 4C, Sports.",
     "RecapAuthor": "Erin Rossiter",
     "RecapByline": "Erin Rossiter 912.652.0329 erin.rossiter@savannahnow.com",
-    "RecapSource": "Erin Rossiter, Savannah Morning News (GA), December 4, 2004, Page 4C, Sports",
-    "SourceNote": "Article reports Mary Wilkowski had 15 rebounds and Grace and Rose Wilkowski combined for 18 additional rebounds. The Grace/Rose rebound split is unavailable, so only Mary's 15 rebounds are entered as an individual rebound stat. Memorial Day's listed individual scoring totals 24 points, while the reported final score is 26."
+    "SourceNote": "Article reports Mary Wilkowski had 15 rebounds and Grace and Rose Wilkowski combined for 18 additional rebounds. The Grace/Rose rebound split is unavailable, so only Mary's 15 rebounds are entered as an individual rebound stat. Memorial Day's listed individual scoring totals 24 points, while the reported final score is 26.",
+    "SourceCitation": "Erin Rossiter, Savannah Morning News (GA), December 4, 2004, Page 4C, Sports",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20041204,
@@ -2043,8 +2395,10 @@
     "ResultMargin": 20,
     "RecapTitle": "Grace and Mary Wilkowski Lead Saints Past Frederica",
     "Recap": "Grace and Mary Wilkowski recorded double-doubles while leading St. Andrew's to a 51-31 home win over Frederica Academy.\n\nGrace Wilkowski scored 19 points and grabbed 14 rebounds, and Mary Wilkowski scored 19 points and grabbed 12 rebounds. Kristen Albritton added 5 points, Emily Aimone scored 4, and Rose Wilkowski finished with 4 as St. Andrew's led 26-18 at halftime.\n\nHernandez and Bryan led Frederica Academy with 10 points apiece. Cutia scored 5, Martelli added 4, and Dismer finished with 2.",
-    "RecapSource": "Savannah Morning News",
-    "SourceNote": "The supplied clipping reports St. Andrew's record as 3-1. With the previously entered Dec. 3 Memorial Day result included in the chronological game list, this game computes as the team's fourth win against one loss."
+    "SourceNote": "The supplied clipping reports St. Andrew's record as 3-1. With the previously entered Dec. 3 Memorial Day result included in the chronological game list, this game computes as the team's fourth win against one loss.",
+    "SourceCitation": "Savannah Morning News",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20041207,
@@ -2061,7 +2415,9 @@
     "ResultMargin": 4,
     "RecapTitle": "Grace Wilkowski Lifts Saints Past Frederica in Overtime",
     "Recap": "Junior guard Grace Wilkowski scored four of her game-high 26 points in overtime to lead St. Andrew's to a 46-42 non-region win at Frederica Academy in St. Simons Island.\n\nWilkowski added 9 rebounds for the Saints. Rose Wilkowski scored 9 points, Mary Wilkowski added 7, and Kristen Albritton finished with 4 as St. Andrew's led 27-21 at halftime and improved to 5-1.\n\nMaggie Bryan led Frederica Academy with 11 points. Shalene Cutia scored 10, Desmen added 8, Hernandez scored 7, Martelli added 4, and Day finished with 2.",
-    "RecapSource": "Savannah Morning News"
+    "SourceCitation": "Savannah Morning News",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20041210,
@@ -2078,7 +2434,9 @@
     "ResultMargin": -26,
     "RecapTitle": "Mary Wilkowski Double-Doubles in Loss at Hilton Head Prep",
     "Recap": "Mary Wilkowski earned a double-double with 10 points and 15 rebounds in St. Andrew's 68-42 non-region loss at Hilton Head Prep in Hilton Head, South Carolina.\n\nGrace Wilkowski led the Saints with 15 points, Rose Wilkowski scored 12, Kristen Albritton added 3, and Stephanie Vine finished with 2 as St. Andrew's trailed 39-23 at halftime and moved to 5-2.\n\nAlexandra Fuller led the Dolphins with 21 points. Megan Donley and Kris Compton scored 15 apiece, Aiken added 6, Butler scored 5, Petrus added 4, and Ka. Compton finished with 2 as Hilton Head Prep improved to 6-0.",
-    "RecapSource": "Savannah Morning News"
+    "SourceCitation": "Savannah Morning News",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20041211,
@@ -2095,8 +2453,10 @@
     "ResultMargin": -1,
     "RecapTitle": "Saints Fall by One at Hilton Head Christian",
     "Recap": "Kenya McCarthy hit a free throw with two seconds left to give Hilton Head Christian a 47-46 win over St. Andrew's in Hilton Head.\n\nMary Wilkowski scored a game-high 20 points for St. Andrew's. Grace Wilkowski added 18, Rose Wilkowski scored 6, and Emily Aimone finished with 2 as the Saints led 18-15 at halftime and moved to 5-3.\n\nJenny Johnson led Hilton Head Christian with 12 points. McCarthy scored 11, Fanning added 9, Sonberg and M.E. Fanning scored 6 apiece, and Radloff finished with 2.",
-    "RecapSource": "Savannah Morning News",
-    "SourceNote": "Hilton Head Christian's listed individual scoring totals 46 points, while the reported final score is 47. The supplied records line labels the opponent HHP, but the game heading and scoring identify Hilton Head Christian."
+    "SourceNote": "Hilton Head Christian's listed individual scoring totals 46 points, while the reported final score is 47. The supplied records line labels the opponent HHP, but the game heading and scoring identify Hilton Head Christian.",
+    "SourceCitation": "Savannah Morning News",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20041216,
@@ -2114,8 +2474,10 @@
     "ResultMargin": -26,
     "RecapTitle": "Saints Fall to Pinewood Christian at Bulloch-Pinewood Classic",
     "Recap": "Jenna Lewis scored a game-high 25 points and Casey Kicklighter chipped in 10 points to lead Pinewood Christian past St. Andrew's 63-37 in the Bulloch Academy-Pinewood Christian Classic in Bellville.\n\nRose Wilkowski led St. Andrew's with 15 points, Grace Wilkowski scored 10, Mary Wilkowski added 7, Meghan Miller and Kristen Albritton each scored 2, and Stephanie Griffin finished with 1.\n\nPinewood Christian improved to 10-0. Bracken added 9 points for the Patriots, while Tatum, A. Durrence, and Farrow scored 4 apiece, Boatwright, W. Crews, and Kennedy each scored 2, and K. Durrence finished with 1.",
-    "RecapSource": "Savannah Morning News",
-    "SourceNote": "The supplied St. Andrew's line lists Griffin with 1 point. The stat row is assigned to Stephanie Griffin, matching the earlier 2004-05 Griffin scoring entry."
+    "SourceNote": "The supplied St. Andrew's line lists Griffin with 1 point. The stat row is assigned to Stephanie Griffin, matching the earlier 2004-05 Griffin scoring entry.",
+    "SourceCitation": "Savannah Morning News",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20041218,
@@ -2133,7 +2495,9 @@
     "ResultMargin": 18,
     "RecapTitle": "Mary and Grace Wilkowski Lead Saints Past David Emanuel",
     "Recap": "Mary and Grace Wilkowski scored a combined 43 points to help St. Andrew's beat David Emanuel Academy 54-36 in the Bulloch Academy-Pinewood Christian Classic in Bellville.\n\nMary Wilkowski led St. Andrew's with 22 points, Grace Wilkowski scored 21, Meghan Miller added 5, Rose Wilkowski scored 4, and Kristen Albritton finished with 2 as the Saints led 24-19 at halftime.\n\nKayla Cody led David Emanuel with 10 points. Fagler scored 9, C. Johnson added 5, Cardell scored 4, and H. Johnson, Williams, Olliff, and Lanier each finished with 2 as David Emanuel moved to 0-8.",
-    "RecapSource": "Savannah Morning News"
+    "SourceCitation": "Savannah Morning News",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20050105,
@@ -2150,7 +2514,9 @@
     "ResultMargin": 16,
     "RecapTitle": "Rose Wilkowski Double-Doubles Against Colleton Prep",
     "Recap": "Freshman forward Rose Wilkowski scored 16 points and grabbed 10 rebounds to pace St. Andrew's to a 44-28 non-region home win over Colleton Prep.\n\nGrace Wilkowski added 11 points for the Saints, Mary Wilkowski scored 8, Kristen Albritton added 5, and Katie Hall and Emily Aimone each finished with 2 as St. Andrew's led 25-6 at halftime and improved to 7-4.\n\nRizer and Ulmer led Colleton Prep with 8 points apiece. Gruber and Benton each scored 5, and Johnston finished with 2 as Colleton Prep moved to 4-5.",
-    "RecapSource": "Savannah Morning News"
+    "SourceCitation": "Savannah Morning News",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20050111,
@@ -2167,7 +2533,9 @@
     "ResultMargin": 17,
     "RecapTitle": "Saints Pull Away From Hilton Head Christian in Region Opener",
     "Recap": "St. Andrew's pulled away from a five-point halftime lead to beat visiting Hilton Head Christian 50-33 in the Saints' first SCISA Region 4 game of the season.\n\nGrace Wilkowski led St. Andrew's with 21 points, Mary Wilkowski added 13, Rose Wilkowski scored 9, Emily Aimone finished with 5, and Katie Hall added 2. The Saints led 22-17 at halftime and improved to 8-4 overall and 1-0 in SCISA Region 4.\n\nJenny Johnson led Hilton Head Christian with 9 points. Sonberg scored 8, Dabrasky added 5, Me. Fanning scored 4, Radloff finished with 3, and Cubbage and Ma. Fanning each scored 2 as HHC moved to 4-6 overall and 0-1 in SCISA Region 4.",
-    "RecapSource": "Savannah Morning News"
+    "SourceCitation": "Savannah Morning News",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20050114,
@@ -2184,7 +2552,9 @@
     "ResultMargin": 26,
     "RecapTitle": "Wilkowski Sisters Double-Double Against Providence Christian",
     "Recap": "The Wilkowski sisters each recorded a double-double to lead St. Andrew's to a 60-34 non-region home win over Providence Christian.\n\nGrace Wilkowski had 19 points and 10 rebounds, Rose Wilkowski had 16 points and 10 rebounds, and Mary Wilkowski had 14 points and 15 rebounds. Emily Aimone added 11 points for the Saints, who had only four players score. St. Andrew's led 32-11 at halftime and improved to 9-4.\n\nProvidence Christian was led by Kellie Stiles with 15 points and Liane Thompkins with 11. Conlon scored 4, while Harley and Wynn each finished with 2.",
-    "RecapSource": "Savannah Morning News"
+    "SourceCitation": "Savannah Morning News",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20050115,
@@ -2201,7 +2571,9 @@
     "ResultMargin": 11,
     "RecapTitle": "Saints Win at Bible Baptist",
     "Recap": "St. Andrew's jumped out to a 36-15 halftime lead and coasted past host Bible Baptist 54-43 in a non-region game.\n\nGrace Wilkowski led the Saints with 17 points, followed by Mary Wilkowski with 15 and Rose Wilkowski with 13. Kristen Albritton scored 5 and Emily Aimone added 4 as St. Andrew's improved to 10-4.\n\nBible Baptist was led by Ariel Brown with 18 points and Alexia Grimes with 10. Baker scored 8, Crapse added 5, and Walker finished with 2.",
-    "RecapSource": "Savannah Morning News"
+    "SourceCitation": "Savannah Morning News",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20050118,
@@ -2218,8 +2590,10 @@
     "ResultMargin": 20,
     "RecapTitle": "Mary Wilkowski's Double-Double Leads Saints at Thomas Heyward",
     "Recap": "Mary Wilkowski scored 14 points and grabbed 13 rebounds to lead St. Andrew's to a 49-29 SCISA Region road win over Thomas Heyward in Ridgeland, S.C.\n\nGrace Wilkowski led the Saints with 19 points. Rose Wilkowski scored 8, Katie Hall added 6, and Emily Aimone finished with 2.\n\nThomas Heyward was led by Heather Hagler and Laice Lane with 10 points each. Christiansen, Henderson, Hodges, and Lettich each scored 2.",
-    "RecapSource": "Savannah Morning News",
-    "SourceNote": "The supplied Thomas Heyward individual scoring list totals 28 points against a reported team score of 29; the reported final score is preserved."
+    "SourceNote": "The supplied Thomas Heyward individual scoring list totals 28 points against a reported team score of 29; the reported final score is preserved.",
+    "SourceCitation": "Savannah Morning News",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20050121,
@@ -2236,7 +2610,9 @@
     "ResultMargin": 56,
     "RecapTitle": "Saints Roll Past Beaufort Academy",
     "Recap": "Grace Wilkowski scored a game-high 16 points to lead St. Andrew's to a 63-7 SCISA Region 2-AA road win over Beaufort Academy in Beaufort.\n\nMary Wilkowski added 12 points and 10 rebounds, Rose Wilkowski chipped in 12 points and 17 rebounds, and Kristen Albritton scored 10. Emily Aimone scored 5, while Katie Hall and Michelle Griffin each finished with 4. St. Andrew's led 34-5 at halftime and improved to 12-4 overall and 3-0 in region play.\n\nMary Laffitte led Beaufort Academy with 4 points. Stalsberg scored 2 and Turcotte finished with 1 as BA moved to 3-13 overall and 0-3 in region play.",
-    "RecapSource": "Savannah Morning News"
+    "SourceCitation": "Savannah Morning News",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20050122,
@@ -2253,7 +2629,9 @@
     "ResultMargin": 26,
     "RecapTitle": "Mary Wilkowski Leads Saints Past Memorial",
     "Recap": "Mary Wilkowski scored 20 points to lead visiting St. Andrew's to a 64-38 non-region win over Memorial Day.\n\nGrace Wilkowski added 15 points and Rose Wilkowski scored 13. Kristen Albritton finished with 7, Katie Hall scored 5, and Emily Aimone and Meghan Miller each added 2. St. Andrew's led 31-17 at halftime and improved to 13-4.\n\nAmber Lee Proper led Memorial with 9 points. Henderson scored 8, Stathopoulous added 7, Taylor and Lawson scored 6 apiece, and Woo finished with 2.",
-    "RecapSource": "Savannah Morning News"
+    "SourceCitation": "Savannah Morning News",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20050125,
@@ -2270,7 +2648,9 @@
     "ResultMargin": -23,
     "RecapTitle": "Saints Fall to Hilton Head Prep",
     "Recap": "Hilton Head Prep placed four players in double figures to beat St. Andrew's 71-48 in SCISA play.\n\nKris Compton led HHP with 21 points, followed by Courtney Aken with 13, Meg Donley with 12, and Alex Fuller with 10. Butler added 9, Lindgren scored 4, and Fennessey finished with 2.\n\nSt. Andrew's was led by Grace Wilkowski with 16 points and Katie Hall with 11. Mary Wilkowski scored 9, Rose Wilkowski added 7, Kristen Albritton scored 3, and Meghan Miller finished with 2.",
-    "RecapSource": "Savannah Morning News"
+    "SourceCitation": "Savannah Morning News",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20050128,
@@ -2287,7 +2667,9 @@
     "ResultMargin": 14,
     "RecapTitle": "Wilkowski Sisters Lead Saints at Hilton Head Christian",
     "Recap": "HILTON HEAD ISLAND, S.C. - Grace Wilkowski scored 24 points and grabbed 17 rebounds, and Mary Wilkowski added 17 points and 10 rebounds to lead St. Andrew's past Hilton Head Christian 50-36 in SCISA Region play.\n\nKatie Hall scored 7 points and Rose Wilkowski added 2 as the Saints led 19-15 at halftime. St. Andrew's improved to 14-5 overall and 4-1 in region play, while Hilton Head Christian fell to 7-10 and 2-2.",
-    "RecapSource": "Savannah Morning News (GA), January 29, 2005, Page 3C"
+    "SourceCitation": "Savannah Morning News (GA), January 29, 2005, Page 3C",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20050201,
@@ -2304,8 +2686,10 @@
     "ResultMargin": 18,
     "RecapTitle": "Mary Wilkowski Nears Triple-Double at Providence Christian",
     "Recap": "Mary Wilkowski finished with 18 points, 13 rebounds, and 8 assists as St. Andrew's defeated Providence Christian 64-46 in a non-region game. Grace Wilkowski scored 25 points, moving within six points of 1,500 for her career.\n\nRose Wilkowski and Katie Hall scored 8 points apiece, Stephanie Griffin added 3, and Stephanie Shanklin scored 2. St. Andrew's led 32-22 at halftime and improved to 15-5.",
-    "RecapSource": "Savannah Morning News (GA), February 2, 2005, Page 3C",
-    "SourceNote": "The source listed Shanklin by last name only; the statistic is credited to Stephanie Shanklin based on user confirmation."
+    "SourceNote": "The source listed Shanklin by last name only; the statistic is credited to Stephanie Shanklin based on user confirmation.",
+    "SourceCitation": "Savannah Morning News (GA), February 2, 2005, Page 3C",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20050204,
@@ -2322,8 +2706,10 @@
     "ResultMargin": 7,
     "RecapTitle": "Saints Outlast Thomas Heyward as Grace Wilkowski Reaches Milestone",
     "Recap": "St. Andrew's defeated Thomas Heyward Academy 60-53 in SCISA Region play after the teams went to halftime tied at 27. Mary Wilkowski led the Saints with 19 points and 13 rebounds, while Grace Wilkowski had 17 points and 13 rebounds and Rose Wilkowski scored 17.\n\nKatie Hall scored 3 points, and Kristen Albritton and Emily Aimone added 2 apiece. The win improved St. Andrew's to 16-5 overall and 5-1 in region play. A Feb. 11 Savannah Morning News feature later clarified that Grace reached 1,500 career points in this game.",
-    "RecapSource": "Savannah Morning News (GA), February 5, 2005, Page 3B",
-    "SourceNote": "The roundup item referred to Grace Wilkowski crossing 1,000 points, but the Feb. 11 feature identified the Thomas Heyward game as her 1,500-point milestone."
+    "SourceNote": "The roundup item referred to Grace Wilkowski crossing 1,000 points, but the Feb. 11 feature identified the Thomas Heyward game as her 1,500-point milestone.",
+    "SourceCitation": "Savannah Morning News (GA), February 5, 2005, Page 3B",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20050208,
@@ -2340,7 +2726,9 @@
     "ResultMargin": 49,
     "RecapTitle": "Saints Cruise Past Beaufort Academy",
     "Recap": "St. Andrew's led 29-11 at halftime and rolled past Beaufort Academy 70-21 in SCISA Region play. Grace Wilkowski led the Saints with 18 points, while Kristen Albritton scored 17.\n\nRose Wilkowski added 12 points, Mary Wilkowski had 9, Meghan Miller scored 7, Katie Hall added 5, and Emily Aimone finished with 2. The Saints improved to 17-5 overall and 6-1 in Region 4-AAA.",
-    "RecapSource": "Savannah Morning News (GA), February 9, 2005, Page 5C"
+    "SourceCitation": "Savannah Morning News (GA), February 9, 2005, Page 5C",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20050211,
@@ -2357,7 +2745,9 @@
     "ResultMargin": -26,
     "RecapTitle": "Hilton Head Prep Hands Saints Region Loss",
     "Recap": "HILTON HEAD, S.C. - Hilton Head Prep led 40-15 at halftime and defeated St. Andrew's 58-32 in SCISA Region play. Grace Wilkowski led St. Andrew's with 16 points and Mary Wilkowski scored 10.\n\nKatie Hall, Rose Wilkowski, and Stephanie Griffin added 2 points apiece. St. Andrew's fell to 17-6 overall and 6-2 in Region 4-AAA, while Hilton Head Prep improved to 22-2 and 8-0.",
-    "RecapSource": "Savannah Morning News (GA), February 12, 2005, Page 3C"
+    "SourceCitation": "Savannah Morning News (GA), February 12, 2005, Page 3C",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20050216,
@@ -2375,8 +2765,10 @@
     "ResultMargin": 9,
     "RecapTitle": "Saints Beat Hilton Head Christian in Region Tournament",
     "Recap": "Katie Hall scored a game-high 20 points and Rose Wilkowski added 10 as St. Andrew's defeated Hilton Head Christian 50-41 in the SCISA Region 4 tournament.\n\nThe Saints led 16-14 at halftime and improved to 18-6. Grace Wilkowski scored 9 points, Mary Wilkowski added 4, Meghan Miller scored 3, and Kristen Albritton and Emily Aimone each finished with 2. The source's St. Andrew's scoring line listed Aimone as \"Aman\"; the stat is assigned to Emily Aimone based on the 2004-05 roster and surrounding box scores.\n\nKenya McCarthan led Hilton Head Christian with 13 points. Radloff scored 7, Jenny Johnson and Me. Fanning added 6 apiece, while Dibrasky, Cubbage, and Ma. Fanning each scored 3.",
-    "RecapSource": "Savannah Morning News (GA), February 17, 2005, Page 5D, Sports",
-    "SourceNote": "The source scoring line appears to render Emily Aimone as \"Aman\"; the stat row is assigned to Aimone based on the 2004-05 roster and surrounding St. Andrew's box scores."
+    "SourceNote": "The source scoring line appears to render Emily Aimone as \"Aman\"; the stat row is assigned to Aimone based on the 2004-05 roster and surrounding St. Andrew's box scores.",
+    "SourceCitation": "Savannah Morning News (GA), February 17, 2005, Page 5D, Sports",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20050218,
@@ -2395,8 +2787,10 @@
     "ResultMargin": -21,
     "RecapTitle": "Hilton Head Prep Wins Region Tournament Final",
     "Recap": "Hilton Head Prep defeated St. Andrew's 52-31 in the SCISA Region 4 tournament championship game at Estill, South Carolina. Kris Compton scored 16 points and Alexandra Fuller added 15 for the Dolphins, who led 33-19 at halftime.\n\nRose Wilkowski led St. Andrew's with 10 points. Grace Wilkowski scored 8, Katie Hall added 7, and Meghan Miller, Michelle Griffin, and Mary Wilkowski each finished with 2. Both teams advanced to state tournament play, and the Saints moved to 18-7.",
-    "RecapSource": "Savannah Morning News (GA), February 19, 2005, Page 4D, Sports",
-    "SourceNote": "The source heading labels the section as SCISA Region 4-A, while the game text refers to the SCISA Region 4-AAA tournament. The recap uses the broader SCISA Region 4 tournament label."
+    "SourceNote": "The source heading labels the section as SCISA Region 4-A, while the game text refers to the SCISA Region 4-AAA tournament. The recap uses the broader SCISA Region 4 tournament label.",
+    "SourceCitation": "Savannah Morning News (GA), February 19, 2005, Page 4D, Sports",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20050225,
@@ -2415,7 +2809,9 @@
     "ResultMargin": 34,
     "RecapTitle": "Wilkowski Sisters Power State Tournament Opener",
     "Recap": "Grace and Rose Wilkowski combined for 37 points and 40 rebounds as top-seeded St. Andrew's opened the SCISA Class AA state tournament with a 65-31 win over Calhoun Academy at the Sumter County Exhibition Center.\n\nGrace Wilkowski scored 20 points and grabbed 19 rebounds, while Rose Wilkowski added 17 points and 21 rebounds. Katie Hall scored 10 points, Meghan Miller added 8, Mary Wilkowski scored 6, and Emily Aimone finished with 4. St. Andrew's outscored Calhoun 19-2 in the second quarter, led 34-15 at halftime, and improved to 19-7.\n\nMolly McCrary led Calhoun with 13 points. Davis scored 8, while Perrow and Howle each added 5.",
-    "RecapSource": "Savannah Morning News (GA), February 26, 2005, Page 4C, Sports"
+    "SourceCitation": "Savannah Morning News (GA), February 26, 2005, Page 4C, Sports",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20050302,
@@ -2434,8 +2830,10 @@
     "ResultMargin": 31,
     "RecapTitle": "Rose Wilkowski Triple-Double Sends Saints to Semifinals",
     "Recap": "Rose Wilkowski recorded the first triple-double of her varsity career as St. Andrew's defeated Marlboro Academy 83-52 in the SCISA Class AA state quarterfinals at the Sumter County Exhibition Center.\n\nRose finished with 14 points, 15 rebounds, and 10 assists, repeatedly finding teammates cutting to the basket. Grace Wilkowski led the scoring with 29 points and added 14 rebounds. Mary Wilkowski and Katie Hall scored 18 points apiece, with Mary also grabbing 13 rebounds, and Meghan Miller added 4. St. Andrew's led 40-22 at halftime and improved to 20-7.\n\nYvette Harris led Marlboro with 21 points, and Jennifer Powers added 10.",
-    "RecapSource": "Savannah Morning News (GA), March 3, 2005, Page 2D, Sports",
-    "SourceNote": "Marlboro Academy's listed individual scoring totals 51 points against a reported team score of 52; the reported final score is preserved."
+    "SourceNote": "Marlboro Academy's listed individual scoring totals 51 points against a reported team score of 52; the reported final score is preserved.",
+    "SourceCitation": "Savannah Morning News (GA), March 3, 2005, Page 2D, Sports",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20050304,
@@ -2456,7 +2854,9 @@
     "Recap": "St. Andrew's built a double-digit lead just over five minutes into the game and never let Colleton Prep back inside serious danger range, winning 44-28 in the SCISA Class AA semifinals at the Sumter County Exhibition Center.\n\nThe Saints opened with the Wilkowski sisters scoring their first 12 points: Mary Wilkowski had 6, Rose Wilkowski added 4, and Grace Wilkowski scored 2. Kristen Albritton followed with a 3-pointer to finish a 9-0 run and put St. Andrew's ahead 15-4. Mary and Rose led the Saints with 11 points each, Grace added 8, Katie Hall scored 7, Meghan Miller finished with 4, and Albritton added 3.\n\nColleton Prep used a triangle-and-two defense to slow Grace and Mary Wilkowski, but St. Andrew's found enough offense from Rose, Hall, Miller, and Albritton while holding the War Hawks to three field goals over the final 14:36. The Saints led 27-17 at halftime, improved to 21-7, and advanced to face W.W. King for the state championship.",
     "RecapAuthor": "Donald Heath",
     "RecapByline": "Donald Heath 912.652.0353 donald.heath@savannahnow.com",
-    "RecapSource": "Donald Heath, Savannah Morning News (GA), March 5, 2005, Page 1C, Sports"
+    "SourceCitation": "Donald Heath, Savannah Morning News (GA), March 5, 2005, Page 1C, Sports",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20050305,
@@ -2477,7 +2877,9 @@
     "Recap": "St. Andrew's erased a halftime deficit and outscored W.W. King 36-20 after the break to win the SCISA Class AA championship 60-49 at the Sumter County Exhibition Center. The title was the program's second in three seasons and gave coach Michael Bennet a girls championship one year after he guided the St. Andrew's boys to the SCISA Class AA title.\n\nW.W. King guard Kerianne Blease scored 31 points, but St. Andrew's controlled the boards and changed the game with second-half pressure. Mary Wilkowski's floating one-hander put the Saints ahead 37-36 with 2:08 left in the third quarter, the final lead change of the game. Meghan Miller, scoreless through three quarters, delivered a steal and layup early in the fourth quarter and followed with a short jumper to stretch a 42-38 lead.\n\nMary and Rose Wilkowski scored 16 points apiece, Grace Wilkowski added 12, Katie Hall scored 10, and Miller finished with 6. St. Andrew's closed the decisive stretch with a 13-2 run across the third and fourth quarters, finished 22-7, and cut down the nets after knocking off a W.W. King team that had won state championships in 2002, 2003, and 2004.",
     "RecapAuthor": "Donald Heath",
     "RecapByline": "Donald Heath 912.652.0353 donald.heath@savannahnow.com",
-    "RecapSource": "Donald Heath, Savannah Morning News (GA), March 6, 2005, Page 1C, Sports"
+    "SourceCitation": "Donald Heath, Savannah Morning News (GA), March 6, 2005, Page 1C, Sports",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2004-05"
   },
   {
     "GameID": 20051121,
@@ -2493,7 +2895,10 @@
     "IsComplete": "Yes",
     "ResultMargin": 52,
     "RecapTitle": "Wilkowski Sisters Lead Saints Past Bible Baptist",
-    "Recap": "Grace Wilkowski scored 19 points, Mary Wilkowski added 18, and Rose Wilkowski finished with 17 as St. Andrew's opened the 2005-06 season with a 69-17 home win over Bible Baptist.\n\nMary Wilkowski filled the box score with 14 rebounds and six assists for the Saints, who led 40-8 at halftime and moved to 1-0. Megan Hall and Sarah Lundgren each scored 4 points, Kristen Albritton and Meghan Miller added 3 apiece, and Stephanie Griffin scored 1.\n\nStephanie Crapse paced Bible Baptist with 8 points, Baker scored 6, Johnson added 2, and Garza finished with 1 as Bible Baptist moved to 1-1."
+    "Recap": "Grace Wilkowski scored 19 points, Mary Wilkowski added 18, and Rose Wilkowski finished with 17 as St. Andrew's opened the 2005-06 season with a 69-17 home win over Bible Baptist.\n\nMary Wilkowski filled the box score with 14 rebounds and six assists for the Saints, who led 40-8 at halftime and moved to 1-0. Megan Hall and Sarah Lundgren each scored 4 points, Kristen Albritton and Meghan Miller added 3 apiece, and Stephanie Griffin scored 1.\n\nStephanie Crapse paced Bible Baptist with 8 points, Baker scored 6, Johnson added 2, and Garza finished with 1 as Bible Baptist moved to 1-1.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Wilkowski Sisters Lead Saints Past Bible Baptist\"",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20051129,
@@ -2509,7 +2914,10 @@
     "IsComplete": "Yes",
     "ResultMargin": 46,
     "RecapTitle": "Wilkowski Sisters Power Saints Past Patrick Henry",
-    "Recap": "The Wilkowski sisters combined for 44 points as St. Andrew's downed Patrick Henry 58-12 in a non-region home game.\n\nRose Wilkowski led the Saints with 20 points and 13 rebounds. Grace Wilkowski scored 14 points and Mary Wilkowski added 10, with each finishing with six assists. Meghan Miller scored 8 points, Emily Aimone added 4, and Stephanie Vine finished with 2 as St. Andrew's led 34-4 at halftime and improved to 2-0.\n\nRuth paced Patrick Henry with 9 points, Kober added 2, and Smith scored 1 as Patrick Henry moved to 1-1."
+    "Recap": "The Wilkowski sisters combined for 44 points as St. Andrew's downed Patrick Henry 58-12 in a non-region home game.\n\nRose Wilkowski led the Saints with 20 points and 13 rebounds. Grace Wilkowski scored 14 points and Mary Wilkowski added 10, with each finishing with six assists. Meghan Miller scored 8 points, Emily Aimone added 4, and Stephanie Vine finished with 2 as St. Andrew's led 34-4 at halftime and improved to 2-0.\n\nRuth paced Patrick Henry with 9 points, Kober added 2, and Smith scored 1 as Patrick Henry moved to 1-1.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Wilkowski Sisters Power Saints Past Patrick Henry\"",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20051202,
@@ -2526,7 +2934,10 @@
     "IsComplete": "Yes",
     "ResultMargin": 42,
     "RecapTitle": "Mary Wilkowski Leads Saints in Tip-Off Tournament Opener",
-    "Recap": "Junior center Mary Wilkowski scored 16 points, grabbed 13 rebounds, and dished out five assists to lead St. Andrew's past Bible Baptist 63-21 in the first round of the St. Andrew's Tip-Off Tournament.\n\nGrace Wilkowski added 15 points, while Rose Wilkowski contributed 12 points and 10 rebounds. Megan Hall scored 6 points, Meghan Miller, Emily Aimone, and Stephanie Vine each added 4, and Michelle Griffin scored 2 as the Saints led 32-5 at halftime and improved to 3-0.\n\nJohnson led Bible Baptist with 9 points, Baker scored 8, and Stephanie Crapse added 4 as Bible Baptist moved to 3-3. St. Andrew's advanced to host Memorial Day in the tournament championship."
+    "Recap": "Junior center Mary Wilkowski scored 16 points, grabbed 13 rebounds, and dished out five assists to lead St. Andrew's past Bible Baptist 63-21 in the first round of the St. Andrew's Tip-Off Tournament.\n\nGrace Wilkowski added 15 points, while Rose Wilkowski contributed 12 points and 10 rebounds. Megan Hall scored 6 points, Meghan Miller, Emily Aimone, and Stephanie Vine each added 4, and Michelle Griffin scored 2 as the Saints led 32-5 at halftime and improved to 3-0.\n\nJohnson led Bible Baptist with 9 points, Baker scored 8, and Stephanie Crapse added 4 as Bible Baptist moved to 3-3. St. Andrew's advanced to host Memorial Day in the tournament championship.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Mary Wilkowski Leads Saints in Tip-Off Tournament Opener\"",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20051203,
@@ -2543,7 +2954,10 @@
     "IsComplete": "Yes",
     "ResultMargin": 20,
     "RecapTitle": "Wilkowski Sisters Carry Saints Past Memorial in Tip-Off Tournament",
-    "Recap": "Grace Wilkowski and Mary Wilkowski scored 18 points each, and Rose Wilkowski added 10 as St. Andrew's defeated Memorial Day 54-34 in the St. Andrew's Tip-Off Tournament.\n\nMary Wilkowski, a junior who passed the 1,000-point career scoring mark, added 11 rebounds. Grace Wilkowski grabbed 14 rebounds, and Rose Wilkowski pulled down nine. Megan Hall scored 4 points, while Stephanie Griffin and Kristen Albritton added 2 apiece as the Saints led 27-19 at halftime and improved to 4-0.\n\nFor Memorial, Nasia Stathopoulos led with 14 points and Sarah Weitman added 12. Grace and Mary Wilkowski, Stathopoulos, Weitman, and Bible Baptist's Stephanie Crapse were named to the all-tournament team."
+    "Recap": "Grace Wilkowski and Mary Wilkowski scored 18 points each, and Rose Wilkowski added 10 as St. Andrew's defeated Memorial Day 54-34 in the St. Andrew's Tip-Off Tournament.\n\nMary Wilkowski, a junior who passed the 1,000-point career scoring mark, added 11 rebounds. Grace Wilkowski grabbed 14 rebounds, and Rose Wilkowski pulled down nine. Megan Hall scored 4 points, while Stephanie Griffin and Kristen Albritton added 2 apiece as the Saints led 27-19 at halftime and improved to 4-0.\n\nFor Memorial, Nasia Stathopoulos led with 14 points and Sarah Weitman added 12. Grace and Mary Wilkowski, Stathopoulos, Weitman, and Bible Baptist's Stephanie Crapse were named to the all-tournament team.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Wilkowski Sisters Carry Saints Past Memorial in Tip-Off Tournament\"",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20051206,
@@ -2560,7 +2974,10 @@
     "IsComplete": "Yes",
     "ResultMargin": 22,
     "RecapTitle": "Grace Wilkowski Leads Saints Past Holly Hill at College Prep",
-    "Recap": "Grace Wilkowski scored 17 points, grabbed 10 rebounds, and handed out seven assists to pace St. Andrew's past Holly Hill Academy 55-33 in the first round of the College Prep Holiday Tournament on Hilton Head Island.\n\nSt. Andrew's entered the game ranked No. 7 in the SCISA all-classifications rankings, while Holly Hill was No. 10. Mary Wilkowski added 16 points and 14 rebounds for the Saints, Rose Wilkowski scored 7, Emily Aimone had 5, Kristen Albritton scored 4, Meghan Miller added 3, Megan Hall scored 2, and Stephanie Vine finished with 1. St. Andrew's led 34-17 at halftime and improved to 5-0.\n\nStephane Peagler led Holly Hill with 10 points. Cheek and Purvis scored 6 apiece, Shuler added 5, and Way, L. Way, and Bull each scored 2. St. Andrew's advanced to meet Ashley Hall in the tournament semifinal."
+    "Recap": "Grace Wilkowski scored 17 points, grabbed 10 rebounds, and handed out seven assists to pace St. Andrew's past Holly Hill Academy 55-33 in the first round of the College Prep Holiday Tournament on Hilton Head Island.\n\nSt. Andrew's entered the game ranked No. 7 in the SCISA all-classifications rankings, while Holly Hill was No. 10. Mary Wilkowski added 16 points and 14 rebounds for the Saints, Rose Wilkowski scored 7, Emily Aimone had 5, Kristen Albritton scored 4, Meghan Miller added 3, Megan Hall scored 2, and Stephanie Vine finished with 1. St. Andrew's led 34-17 at halftime and improved to 5-0.\n\nStephane Peagler led Holly Hill with 10 points. Cheek and Purvis scored 6 apiece, Shuler added 5, and Way, L. Way, and Bull each scored 2. St. Andrew's advanced to meet Ashley Hall in the tournament semifinal.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Grace Wilkowski Leads Saints Past Holly Hill at College Prep\"",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20051208,
@@ -2577,7 +2994,11 @@
     "IsComplete": "Yes",
     "ResultMargin": -15,
     "RecapTitle": "College Prep Holiday Tournament Semifinal",
-    "Recap": "St. Andrew's fell to Ashley Hall 55-40 in a College Prep Holiday Tournament game on Dec. 8, 2005. Individual statistics and additional game details will be added when they are recovered."
+    "Recap": "St. Andrew's fell to Ashley Hall 55-40 in a College Prep Holiday Tournament game on Dec. 8, 2005. Individual statistics and additional game details will be added when they are recovered.",
+    "ScoringCompleteness": "missing",
+    "SourceCitation": "\"College Prep Holiday Tournament Semifinal\"",
+    "SourceSeasonLabel": "2005-06",
+    "SourceNote": "Archive games data is missing; only recovered source details are shown."
   },
   {
     "GameID": 20051210,
@@ -2593,7 +3014,11 @@
     "IsComplete": "Yes",
     "ResultMargin": 41,
     "RecapTitle": "Saints Defeat Beaufort Academy",
-    "Recap": "St. Andrew's defeated Beaufort Academy 58-17 in an away non-region game on Dec. 10, 2005. Individual statistics and additional game details will be added when they are recovered."
+    "Recap": "St. Andrew's defeated Beaufort Academy 58-17 in an away non-region game on Dec. 10, 2005. Individual statistics and additional game details will be added when they are recovered.",
+    "ScoringCompleteness": "missing",
+    "SourceCitation": "\"Saints Defeat Beaufort Academy\"",
+    "SourceSeasonLabel": "2005-06",
+    "SourceNote": "Archive games data is missing; only recovered source details are shown."
   },
   {
     "GameID": 20051216,
@@ -2610,7 +3035,10 @@
     "IsComplete": "Yes",
     "ResultMargin": 44,
     "RecapTitle": "Grace Wilkowski Leads Saints Past Providence Christian",
-    "Recap": "Grace Wilkowski scored a game-high 12 points as St. Andrew's downed Providence Christian 65-21 at the Port Wentworth Recreation Center.\n\nStephanie Vine added 11 points, Rose Wilkowski scored 10, and Mary Wilkowski added 9 for the Saints. Kristen Albritton and Megan Hall scored 6 apiece, Michelle Griffin had 3, and Meghan Miller, Sarah Lundgren, Stephanie Griffin, and Emily Aimone each scored 2. St. Andrew's led 44-6 at halftime and improved to 7-1 overall, confirming that the two unresolved College Prep Holiday Tournament games included one win and one loss.\n\nMiranda Hopkins led Providence Christian with 7 points, Wynn scored 6, H. Hopkins added 4, Carbon scored 3, and Rigdon finished with 1 as Providence Christian moved to 1-6."
+    "Recap": "Grace Wilkowski scored a game-high 12 points as St. Andrew's downed Providence Christian 65-21 at the Port Wentworth Recreation Center.\n\nStephanie Vine added 11 points, Rose Wilkowski scored 10, and Mary Wilkowski added 9 for the Saints. Kristen Albritton and Megan Hall scored 6 apiece, Michelle Griffin had 3, and Meghan Miller, Sarah Lundgren, Stephanie Griffin, and Emily Aimone each scored 2. St. Andrew's led 44-6 at halftime and improved to 7-1 overall, confirming that the two unresolved College Prep Holiday Tournament games included one win and one loss.\n\nMiranda Hopkins led Providence Christian with 7 points, Wynn scored 6, H. Hopkins added 4, Carbon scored 3, and Rigdon finished with 1 as Providence Christian moved to 1-6.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Grace Wilkowski Leads Saints Past Providence Christian\"",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20060107,
@@ -2627,7 +3055,9 @@
     "ResultMargin": 22,
     "RecapTitle": "Grace Wilkowski Sets Saints' Scoring Mark",
     "Recap": "ST. ANDREW'S 62, TRINITY COLLEGIATE 40\n\nGrace Wilkowski wasn't counting.\n\nIn some ways, it was like having midnight approach on New Year's Eve and remaining silent.\n\nBut many in the stands at St. Andrew's kept a close vigil Saturday night for the high-scoring senior forward.\n\nAnd less than four minutes into the second half, Grace might have been the last to know she took over the school's career scoring record.\n\nA bounce pass from sister Mary led to Grace's layup, her 1,747th and 1,748th points of her high-school career, to top the mark previously set by Gigi Gibson 21 years ago.\n\nGrace finished with 25 points to help the Saints roll to a 62-40 victory over Trinity Collegiate of Darlington, S.C.\n\n\"I'm amazed,\" she said. \"It wasn't an accomplishment I set out to do, but I'm proud of it now. It's been fun.\"\n\nGrace, who has starred for the Saints since joining the team in the eighth grade, captured the record while drawing little attention to herself.\n\nWhen the school's boys basketball coach Davy Clay told officials at halftime that they planned on stopping the action and presenting Grace the ball when she broke the record, an official turned to Clay and asked, \"Which one is Grace?\"\n\nShe scored six points in the first quarter, five in the second, six in the third and eight in the fourth.\n\nMost of her scoring came in similar fashion, by getting good position around the basket and converting layups.\n\nAnd St. Andrew's continually pulled further ahead. The Saints led by eight after the first quarter. A dozen by halftime, 19 at the end of the third.\n\n\"The thing about it, she looks so at ease,\" Trinity coach John Wall said. \"That calmness helps everyone around her as well.\"\n\nAfter scoring 11 points in the first half, Grace just needed a basket to break the record.\n\nUnselfishly, she gave up a relatively easy shot just outside the lane to set up a layup for her sister Rose, possibly disappointing many fans with cameras in the front row of the stands hoping to get a keepsake of the occasion.\n\n\"I was nervous until the moment it happened,\" Grace's mother Deb said. \"Your stomach is in your throat the entire time.\"\n\nAthletic milestones will be in the Wilkowski family future for the next few years. Earlier this year, Mary, just a junior, topped the 1,000-point mark in her career. Rose, a sophomore, isn't far behind.\n\n\"They've been fun to watch,\" the girls' father Mike said. \"They've had good coaching and they've worked hard.\"\n\nMike said Gibson phoned Grace recently and wished her well.\n\nGibson's name dropped a notch in the Saints' record book when Grace sank a layup for her first points of the second half.\n\nMary said her teammates knew the record was near and they tried to get Grace the ball.\n\n\"I know everyone was expecting it so we might as well try,\" Mary said.\n\nEveryone was expecting the record to fall on this night except, apparently, Grace.\n\nThroughout the day, there was no talk about the record in the Wilkowski household. It's something she rarely thinks about, she said.\n\n\"You can't go five years thinking about points every day,\" Grace said.\n\nBut five years ago, her coach Michael Bennet saw this day coming.\n\n\"She was getting double-doubles every night as an eighth-grader,\" Bennet said. \"She had this amazing talent. Her name is so perfect. She's so graceful.\"\n\nTRINITY (40)\n\nZubel 9, Prgnone 2, Whisenhunt 1, Vaught 8, Sarah Thompson 14, Lane 6\n\nST. ANDREW'S (62)\n\nMeghan Miller 10, Hall 4, Rose Wilkowski 14, Grace Wilkowski 25, Mary Wilkowski 9\n\nHalftime-SA, 30-18. Records-TC 6-2, SA 8-1.\n\nSource: Savannah Morning News (GA), January 8, 2006, Page 1C, Sports. By Donald Heath.",
-    "RecapSource": "Savannah Morning News (GA), January 8, 2006, Page 1C, Sports. By Donald Heath"
+    "SourceCitation": "Savannah Morning News (GA), January 8, 2006, Page 1C, Sports. By Donald Heath",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20060109,
@@ -2643,7 +3073,10 @@
     "IsComplete": "Yes",
     "ResultMargin": 47,
     "RecapTitle": "Wilkowski Sisters Lead Saints Past Providence",
-    "Recap": "Mary Wilkowski and sister Grace Wilkowski scored 15 points apiece as St. Andrew's defeated Providence Christian 65-18 in a girls' basketball game Monday night.\n\nThe third Wilkowski sister, Rose, scored 11 points and pulled down 11 rebounds. Meghan Miller added 9 points, Stephanie Vine scored 6, Megan Hall and Emily Aimone each added 4, and Sarah Lundgren finished with 1. St. Andrew's led 44-8 at halftime and improved to 9-1.\n\nProvidence was led by Cristen Carlon's 12 points. Hodges, Hopkins, and Molly each scored 2 as Providence Christian moved to 1-8."
+    "Recap": "Mary Wilkowski and sister Grace Wilkowski scored 15 points apiece as St. Andrew's defeated Providence Christian 65-18 in a girls' basketball game Monday night.\n\nThe third Wilkowski sister, Rose, scored 11 points and pulled down 11 rebounds. Meghan Miller added 9 points, Stephanie Vine scored 6, Megan Hall and Emily Aimone each added 4, and Sarah Lundgren finished with 1. St. Andrew's led 44-8 at halftime and improved to 9-1.\n\nProvidence was led by Cristen Carlon's 12 points. Hodges, Hopkins, and Molly each scored 2 as Providence Christian moved to 1-8.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Wilkowski Sisters Lead Saints Past Providence\"",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20060110,
@@ -2659,7 +3092,10 @@
     "IsComplete": "Yes",
     "ResultMargin": 10,
     "RecapTitle": "Wilkowski Double-Doubles Lead Saints in Region Opener",
-    "Recap": "Mary Wilkowski and Grace Wilkowski each posted double-doubles to lead St. Andrew's to a 53-43 victory over visiting Hilton Head Christian in the SCISA Region 4-AAA opener for both teams.\n\nMary Wilkowski had 18 points and 10 rebounds, while Grace Wilkowski had 16 points and 10 rebounds. Rose Wilkowski added 11 points, Meghan Miller scored 6, and Megan Hall finished with 2. St. Andrew's led 26-16 at halftime and improved to 10-1 overall and 1-0 in SCISA Region 4-AAA.\n\nHilton Head Christian was led by Jenny Johnson with 18 points. Cubbage and Craver each scored 8, Dabrasky added 6, Bowen scored 2, and Patterson finished with 1 as HHCA moved to 1-11 overall and 0-1 in region play."
+    "Recap": "Mary Wilkowski and Grace Wilkowski each posted double-doubles to lead St. Andrew's to a 53-43 victory over visiting Hilton Head Christian in the SCISA Region 4-AAA opener for both teams.\n\nMary Wilkowski had 18 points and 10 rebounds, while Grace Wilkowski had 16 points and 10 rebounds. Rose Wilkowski added 11 points, Meghan Miller scored 6, and Megan Hall finished with 2. St. Andrew's led 26-16 at halftime and improved to 10-1 overall and 1-0 in SCISA Region 4-AAA.\n\nHilton Head Christian was led by Jenny Johnson with 18 points. Cubbage and Craver each scored 8, Dabrasky added 6, Bowen scored 2, and Patterson finished with 1 as HHCA moved to 1-11 overall and 0-1 in region play.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Wilkowski Double-Doubles Lead Saints in Region Opener\"",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20060113,
@@ -2675,7 +3111,10 @@
     "IsComplete": "Yes",
     "ResultMargin": 20,
     "RecapTitle": "Mary Wilkowski Leads Saints Past Bible Baptist",
-    "Recap": "Junior center Mary Wilkowski scored 11 points, grabbed 10 rebounds, and dished out eight assists to lead St. Andrew's past Bible Baptist 63-43 in a non-region home game.\n\nGrace Wilkowski contributed 16 points and 10 rebounds for the Saints, while Rose Wilkowski chipped in 13. Megan Hall scored 8 points, Emily Aimone added 6, Meghan Miller scored 5, and Kristen Albritton finished with 4. St. Andrew's led 32-12 at halftime and improved to 11-1.\n\nKim Baker led the Braves with 17 points, Stephanie Crapse scored 10, Johnson added 6, Land and K. Crapse each scored 4, and Naman finished with 2 as Bible Baptist moved to 7-5."
+    "Recap": "Junior center Mary Wilkowski scored 11 points, grabbed 10 rebounds, and dished out eight assists to lead St. Andrew's past Bible Baptist 63-43 in a non-region home game.\n\nGrace Wilkowski contributed 16 points and 10 rebounds for the Saints, while Rose Wilkowski chipped in 13. Megan Hall scored 8 points, Emily Aimone added 6, Meghan Miller scored 5, and Kristen Albritton finished with 4. St. Andrew's led 32-12 at halftime and improved to 11-1.\n\nKim Baker led the Braves with 17 points, Stephanie Crapse scored 10, Johnson added 6, Land and K. Crapse each scored 4, and Naman finished with 2 as Bible Baptist moved to 7-5.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Mary Wilkowski Leads Saints Past Bible Baptist\"",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20060117,
@@ -2691,7 +3130,10 @@
     "IsComplete": "Yes",
     "ResultMargin": 3,
     "RecapTitle": "Mary Wilkowski's Career High Lifts Saints at Thomas Heyward",
-    "Recap": "Junior Mary Wilkowski scored a career-high 30 points and grabbed 10 rebounds to lead St. Andrew's over Thomas Heyward Academy 57-54 in a SCISA Region 4-AAA game in Ridgeland, S.C.\n\nSenior Grace Wilkowski added 8 points and 20 rebounds for the Saints, while Rose Wilkowski scored 11, Meghan Miller added 6, and Emily Aimone finished with 2. Thomas Heyward led 26-24 at halftime, but St. Andrew's rallied to improve to 12-1 overall and 2-0 in SCISA Region 4-AAA.\n\nLaice Lane led Thomas Heyward with 14 points, Lydia Miles scored 12, Sara Jaskiowicz added 11, Sewell scored 8, Moser had 5, and C. Lane finished with 4 as the Rebels moved to 2-6 overall and 1-1 in region play."
+    "Recap": "Junior Mary Wilkowski scored a career-high 30 points and grabbed 10 rebounds to lead St. Andrew's over Thomas Heyward Academy 57-54 in a SCISA Region 4-AAA game in Ridgeland, S.C.\n\nSenior Grace Wilkowski added 8 points and 20 rebounds for the Saints, while Rose Wilkowski scored 11, Meghan Miller added 6, and Emily Aimone finished with 2. Thomas Heyward led 26-24 at halftime, but St. Andrew's rallied to improve to 12-1 overall and 2-0 in SCISA Region 4-AAA.\n\nLaice Lane led Thomas Heyward with 14 points, Lydia Miles scored 12, Sara Jaskiowicz added 11, Sewell scored 8, Moser had 5, and C. Lane finished with 4 as the Rebels moved to 2-6 overall and 1-1 in region play.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Mary Wilkowski's Career High Lifts Saints at Thomas Heyward\"",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20060120,
@@ -2707,7 +3149,10 @@
     "IsComplete": "Yes",
     "ResultMargin": 43,
     "RecapTitle": "Mary Wilkowski Leads Saints Past Beaufort Academy",
-    "Recap": "Mary Wilkowski scored 17 points and grabbed 16 rebounds to lead St. Andrew's over visiting Beaufort Academy 57-14 in a SCISA Region 3-AAA game.\n\nRose Wilkowski added 13 points, Kristen Albritton scored 10, Megan Hall and Grace Wilkowski each had 4, Meghan Miller scored 3, and Stephanie Griffin, Emily Aimone, and Krista Bisset each finished with 2. St. Andrew's led 28-8 at halftime and improved to 13-1 overall and 3-0 in region play.\n\nAshley Boulware led Beaufort Academy with 5 points, while Collins, Aitken, and Kern each scored 3 as the Eagles moved to 4-10 overall and 0-3 in SCISA Region 3-AAA."
+    "Recap": "Mary Wilkowski scored 17 points and grabbed 16 rebounds to lead St. Andrew's over visiting Beaufort Academy 57-14 in a SCISA Region 3-AAA game.\n\nRose Wilkowski added 13 points, Kristen Albritton scored 10, Megan Hall and Grace Wilkowski each had 4, Meghan Miller scored 3, and Stephanie Griffin, Emily Aimone, and Krista Bisset each finished with 2. St. Andrew's led 28-8 at halftime and improved to 13-1 overall and 3-0 in region play.\n\nAshley Boulware led Beaufort Academy with 5 points, while Collins, Aitken, and Kern each scored 3 as the Eagles moved to 4-10 overall and 0-3 in SCISA Region 3-AAA.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Mary Wilkowski Leads Saints Past Beaufort Academy\"",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20060121,
@@ -2723,7 +3168,10 @@
     "IsComplete": "Yes",
     "ResultMargin": 30,
     "RecapTitle": "Rose and Grace Wilkowski Lead Saints Past Memorial",
-    "Recap": "Sisters Rose and Grace Wilkowski scored 13 points apiece as St. Andrew's downed Memorial 50-20 in an away non-region game.\n\nGrace Wilkowski also pulled down 11 rebounds. Mary Wilkowski scored 8 points, while Meghan Miller and Sarah Lundgren each added 4. Kristen Albritton, Stephanie Griffin, Megan Hall, and Stephanie Vine each scored 2 as St. Andrew's led 20-10 at halftime and improved to 14-1.\n\nNasia Stathopoulos led Memorial with 6 points, Woo scored 5, Weitman added 3, and Dixon, Jones, and Adams each scored 2."
+    "Recap": "Sisters Rose and Grace Wilkowski scored 13 points apiece as St. Andrew's downed Memorial 50-20 in an away non-region game.\n\nGrace Wilkowski also pulled down 11 rebounds. Mary Wilkowski scored 8 points, while Meghan Miller and Sarah Lundgren each added 4. Kristen Albritton, Stephanie Griffin, Megan Hall, and Stephanie Vine each scored 2 as St. Andrew's led 20-10 at halftime and improved to 14-1.\n\nNasia Stathopoulos led Memorial with 6 points, Woo scored 5, Weitman added 3, and Dixon, Jones, and Adams each scored 2.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Rose and Grace Wilkowski Lead Saints Past Memorial\"",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20060124,
@@ -2739,7 +3187,10 @@
     "IsComplete": "Yes",
     "ResultMargin": -13,
     "RecapTitle": "Saints Fall at Hilton Head Prep",
-    "Recap": "Senior center Kris Compton scored a game-high 23 points as Hilton Head Prep beat St. Andrew's 64-51 to move into sole possession of first place in SCISA Region 4-AAA.\n\nGrace Wilkowski led St. Andrew's with 16 points, Rose Wilkowski scored 10, Mary Wilkowski added 9, Megan Hall had 8, Meghan Miller scored 6, and Stephanie Griffin finished with 2. Hilton Head Prep led 27-23 at halftime as St. Andrew's moved to 14-2 overall and 3-1 in SCISA Region 4-AAA.\n\nAlex Fuller added 20 points for Hilton Head Prep, Katie Butler scored 12, Fennessey had 7, and Calloway scored 2 as the Dolphins improved to 17-2 overall and 4-0 in region play."
+    "Recap": "Senior center Kris Compton scored a game-high 23 points as Hilton Head Prep beat St. Andrew's 64-51 to move into sole possession of first place in SCISA Region 4-AAA.\n\nGrace Wilkowski led St. Andrew's with 16 points, Rose Wilkowski scored 10, Mary Wilkowski added 9, Megan Hall had 8, Meghan Miller scored 6, and Stephanie Griffin finished with 2. Hilton Head Prep led 27-23 at halftime as St. Andrew's moved to 14-2 overall and 3-1 in SCISA Region 4-AAA.\n\nAlex Fuller added 20 points for Hilton Head Prep, Katie Butler scored 12, Fennessey had 7, and Calloway scored 2 as the Dolphins improved to 17-2 overall and 4-0 in region play.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Saints Fall at Hilton Head Prep\"",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20060127,
@@ -2755,7 +3206,10 @@
     "IsComplete": "Yes",
     "ResultMargin": 14,
     "RecapTitle": "Grace Wilkowski Leads Saints Past Hilton Head Christian",
-    "Recap": "Grace Wilkowski scored 19 points and pulled down 10 rebounds as St. Andrew's downed Hilton Head Christian 47-33 Friday night in Hilton Head Island.\n\nMary Wilkowski and Rose Wilkowski each scored 9 points, Megan Hall added 6, and Meghan Miller finished with 4. St. Andrew's led 21-18 at halftime and improved to 15-2 overall and 4-1 in SCISA Region 4-AAA.\n\nJenny Johnson led Hilton Head Christian with 11 points, Dabrasky scored 8, Bowen added 6, Cubbage scored 4, and Boulay and Peters each finished with 2 as HHC moved to 3-15 overall and 2-3 in SCISA Region 4-AAA."
+    "Recap": "Grace Wilkowski scored 19 points and pulled down 10 rebounds as St. Andrew's downed Hilton Head Christian 47-33 Friday night in Hilton Head Island.\n\nMary Wilkowski and Rose Wilkowski each scored 9 points, Megan Hall added 6, and Meghan Miller finished with 4. St. Andrew's led 21-18 at halftime and improved to 15-2 overall and 4-1 in SCISA Region 4-AAA.\n\nJenny Johnson led Hilton Head Christian with 11 points, Dabrasky scored 8, Bowen added 6, Cubbage scored 4, and Boulay and Peters each finished with 2 as HHC moved to 3-15 overall and 2-3 in SCISA Region 4-AAA.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Grace Wilkowski Leads Saints Past Hilton Head Christian\"",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20060128,
@@ -2771,7 +3225,10 @@
     "IsComplete": "Yes",
     "ResultMargin": 2,
     "RecapTitle": "Girls Roundup: St. Andrew's Wins Battle of Defending State Champs",
-    "Recap": "Grace Wilkowski scored 13 points and Mary Wilkowski added 12 as St. Andrew's beat Pinewood Christian 41-39 Saturday night in Bellville in a matchup of the defending state champions in the SCISA and GISA, respectively.\n\nMegan Hall scored 8 points for the Saints, while Rose Wilkowski and Meghan Miller each added 4. St. Andrew's led 20-19 at halftime and improved to 16-2.\n\nElizabeth Tatum led Pinewood Christian with 11 points, Durrence scored 8, Bracken added 6, Boatwright scored 4, Farrow and Kennedy each had 3, and Young and Crews each finished with 2 as Pinewood Christian moved to 19-2."
+    "Recap": "Grace Wilkowski scored 13 points and Mary Wilkowski added 12 as St. Andrew's beat Pinewood Christian 41-39 Saturday night in Bellville in a matchup of the defending state champions in the SCISA and GISA, respectively.\n\nMegan Hall scored 8 points for the Saints, while Rose Wilkowski and Meghan Miller each added 4. St. Andrew's led 20-19 at halftime and improved to 16-2.\n\nElizabeth Tatum led Pinewood Christian with 11 points, Durrence scored 8, Bracken added 6, Boatwright scored 4, Farrow and Kennedy each had 3, and Young and Crews each finished with 2 as Pinewood Christian moved to 19-2.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Girls Roundup: St. Andrew's Wins Battle of Defending State Champs\"",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20060131,
@@ -2787,7 +3244,10 @@
     "IsComplete": "Yes",
     "ResultMargin": 16,
     "RecapTitle": "Rose Wilkowski Leads Saints Past Ashley Hall",
-    "Recap": "Rose Wilkowski scored 12 points and grabbed 12 rebounds to lead St. Andrew's over Ashley Hall 41-25 in a non-region game in Charleston, S.C.\n\nMary Wilkowski led the Saints in scoring with 13 points, Grace Wilkowski added 8, Megan Hall scored 6, and Meghan Miller finished with 2. St. Andrew's led 18-16 at halftime and improved to 17-2.\n\nNelson led Ashley Hall with 10 points, Slonecki scored 5, Harrell added 4, and Drayton, Callahan, and Carlton each scored 2 as Ashley Hall moved to 11-10."
+    "Recap": "Rose Wilkowski scored 12 points and grabbed 12 rebounds to lead St. Andrew's over Ashley Hall 41-25 in a non-region game in Charleston, S.C.\n\nMary Wilkowski led the Saints in scoring with 13 points, Grace Wilkowski added 8, Megan Hall scored 6, and Meghan Miller finished with 2. St. Andrew's led 18-16 at halftime and improved to 17-2.\n\nNelson led Ashley Hall with 10 points, Slonecki scored 5, Harrell added 4, and Drayton, Callahan, and Carlton each scored 2 as Ashley Hall moved to 11-10.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Rose Wilkowski Leads Saints Past Ashley Hall\"",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20060203,
@@ -2803,7 +3263,10 @@
     "IsComplete": "Yes",
     "ResultMargin": 8,
     "RecapTitle": "Grace Wilkowski Leads Saints Past Thomas Heyward",
-    "Recap": "Grace Wilkowski scored a game-high 26 points and grabbed 15 rebounds to lead St. Andrew's past Thomas Heyward 56-48 in a SCISA Region 4-AAA home game.\n\nMary Wilkowski added 12 points, Rose Wilkowski scored 11, Meghan Miller had 5, and Sarah Lundgren finished with 2. St. Andrew's led 29-19 at halftime and improved to 18-2 overall and 5-1 in region play.\n\nLaice Lane led Thomas Heyward with 16 points, Lydia Miles scored 15, Cook added 6, Sewell and Jaskiewiac each scored 4, Moser had 2, and Fleury finished with 1 as THA moved to 8-6 overall and 2-4 in SCISA Region 4-AAA."
+    "Recap": "Grace Wilkowski scored a game-high 26 points and grabbed 15 rebounds to lead St. Andrew's past Thomas Heyward 56-48 in a SCISA Region 4-AAA home game.\n\nMary Wilkowski added 12 points, Rose Wilkowski scored 11, Meghan Miller had 5, and Sarah Lundgren finished with 2. St. Andrew's led 29-19 at halftime and improved to 18-2 overall and 5-1 in region play.\n\nLaice Lane led Thomas Heyward with 16 points, Lydia Miles scored 15, Cook added 6, Sewell and Jaskiewiac each scored 4, Moser had 2, and Fleury finished with 1 as THA moved to 8-6 overall and 2-4 in SCISA Region 4-AAA.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Grace Wilkowski Leads Saints Past Thomas Heyward\"",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20060204,
@@ -2819,7 +3282,10 @@
     "IsComplete": "Yes",
     "ResultMargin": 30,
     "RecapTitle": "Rose Wilkowski Leads Saints Past Patrick Henry",
-    "Recap": "Rose Wilkowski scored 19 points to lead St. Andrew's over Patrick Henry Academy 55-25 in Estill, S.C.\n\nGrace Wilkowski and Mary Wilkowski added 10 points apiece for the Saints, while Meghan Miller scored 6, Megan Hall and Kristen Albritton each had 5. St. Andrew's led 28-7 at halftime and improved to 19-2.\n\nAmber Smith led Patrick Henry with 10 points, Shaffer scored 8, McAlheney added 4, and Cooper finished with 3 as PHA moved to 10-9."
+    "Recap": "Rose Wilkowski scored 19 points to lead St. Andrew's over Patrick Henry Academy 55-25 in Estill, S.C.\n\nGrace Wilkowski and Mary Wilkowski added 10 points apiece for the Saints, while Meghan Miller scored 6, Megan Hall and Kristen Albritton each had 5. St. Andrew's led 28-7 at halftime and improved to 19-2.\n\nAmber Smith led Patrick Henry with 10 points, Shaffer scored 8, McAlheney added 4, and Cooper finished with 3 as PHA moved to 10-9.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Rose Wilkowski Leads Saints Past Patrick Henry\"",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20060207,
@@ -2835,7 +3301,11 @@
     "IsComplete": "Yes",
     "ResultMargin": 32,
     "RecapTitle": "Mary and Grace Wilkowski Lead Saints Past Beaufort Academy",
-    "Recap": "Mary Wilkowski scored a game-high 16 points and grabbed 14 rebounds, and Grace Wilkowski added 14 points and 14 rebounds as St. Andrew's defeated Beaufort Academy 50-18 in a SCISA 4-AAA game to qualify for the state tournament.\n\nRose Wilkowski added 8 points, Emily Aimone scored 4, and Megan Hall and Stephanie Griffin each finished with 2. St. Andrew's led 24-8 at halftime and improved to 20-2 overall and 6-1 in region play.\n\nElissa Dailey and Ashley Boulware led Beaufort Academy with 7 points apiece, while Aitken and Speights each scored 2 as BA moved to 5-10 overall and 0-8 in SCISA 4-AAA."
+    "Recap": "Mary Wilkowski scored a game-high 16 points and grabbed 14 rebounds, and Grace Wilkowski added 14 points and 14 rebounds as St. Andrew's defeated Beaufort Academy 50-18 in a SCISA 4-AAA game to qualify for the state tournament.\n\nRose Wilkowski added 8 points, Emily Aimone scored 4, and Megan Hall and Stephanie Griffin each finished with 2. St. Andrew's led 24-8 at halftime and improved to 20-2 overall and 6-1 in region play.\n\nElissa Dailey and Ashley Boulware led Beaufort Academy with 7 points apiece, while Aitken and Speights each scored 2 as BA moved to 5-10 overall and 0-8 in SCISA 4-AAA.",
+    "ScoringCompleteness": "partial",
+    "SourceNote": "Named St. Andrew's scoring rows total 46 points against the reported team score of 50; the reported team score is preserved.",
+    "SourceCitation": "\"Mary and Grace Wilkowski Lead Saints Past Beaufort Academy\"",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20060210,
@@ -2851,7 +3321,11 @@
     "IsComplete": "Yes",
     "ResultMargin": -13,
     "RecapTitle": "Wilkowski Sisters Lead Saints at Hilton Head Prep",
-    "Recap": "Kris Compton scored a game-high 36 points and Alex Fuller added 26 as Hilton Head Prep defeated St. Andrew's 75-62 in a regular-season SCISA game on Hilton Head Island.\n\nThe Saints were led by the Wilkowski sisters. Grace Wilkowski scored 19 points and had 10 assists, Mary Wilkowski added 19 points and 10 rebounds, and Rose Wilkowski chipped in 12 points. Megan Hall and Meghan Miller each scored 6, and Emily Aimone finished with 2. Hilton Head Prep led 34-30 at halftime as St. Andrew's moved to 20-3 overall and 6-2 in SCISA 4-AAA.\n\nButler scored 4 for Hilton Head Prep, Brunori and Aiken each scored 3, Calloway added 2, and Fennessey finished with 1 as the Dolphins improved to 23-2 overall and 8-0 in SCISA 4-AAA. Both teams had games Tuesday in the SCISA Region 4-AAA tournament at Hilton Head Christian."
+    "Recap": "Kris Compton scored a game-high 36 points and Alex Fuller added 26 as Hilton Head Prep defeated St. Andrew's 75-62 in a regular-season SCISA game on Hilton Head Island.\n\nThe Saints were led by the Wilkowski sisters. Grace Wilkowski scored 19 points and had 10 assists, Mary Wilkowski added 19 points and 10 rebounds, and Rose Wilkowski chipped in 12 points. Megan Hall and Meghan Miller each scored 6, and Emily Aimone finished with 2. Hilton Head Prep led 34-30 at halftime as St. Andrew's moved to 20-3 overall and 6-2 in SCISA 4-AAA.\n\nButler scored 4 for Hilton Head Prep, Brunori and Aiken each scored 3, Calloway added 2, and Fennessey finished with 1 as the Dolphins improved to 23-2 overall and 8-0 in SCISA 4-AAA. Both teams had games Tuesday in the SCISA Region 4-AAA tournament at Hilton Head Christian.",
+    "ScoringCompleteness": "partial",
+    "SourceNote": "Named St. Andrew's scoring rows total 64 points against the reported team score of 62; the reported team score is preserved.",
+    "SourceCitation": "\"Wilkowski Sisters Lead Saints at Hilton Head Prep\"",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20060214,
@@ -2868,7 +3342,10 @@
     "IsComplete": "Yes",
     "ResultMargin": 23,
     "RecapTitle": "Wilkowski Sisters Lead Saints Past Thomas Heyward",
-    "Recap": "Rose Wilkowski scored 21 points and sisters Grace and Mary added 17 and 10 points respectively as St. Andrew's defeated Thomas Heyward 58-35 in the Region 4-AAA Tournament at Hilton Head Christian.\n\nMegan Hall and Michelle Griffin each scored 4 points, and Meghan Miller finished with 2. St. Andrew's led 30-9 at halftime and improved to 21-3.\n\nLaice Lane led Thomas Heyward with 16 points, Cook scored 6, Jaskiewicz added 5, Moser scored 4, and Miles and Sewell each finished with 2 as THA moved to 9-8."
+    "Recap": "Rose Wilkowski scored 21 points and sisters Grace and Mary added 17 and 10 points respectively as St. Andrew's defeated Thomas Heyward 58-35 in the Region 4-AAA Tournament at Hilton Head Christian.\n\nMegan Hall and Michelle Griffin each scored 4 points, and Meghan Miller finished with 2. St. Andrew's led 30-9 at halftime and improved to 21-3.\n\nLaice Lane led Thomas Heyward with 16 points, Cook scored 6, Jaskiewicz added 5, Moser scored 4, and Miles and Sewell each finished with 2 as THA moved to 9-8.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Wilkowski Sisters Lead Saints Past Thomas Heyward\"",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20060214.1,
@@ -2885,7 +3362,10 @@
     "IsComplete": "Yes",
     "ResultMargin": -17,
     "RecapTitle": "Saints Fall to Hilton Head Prep in Region Championship",
-    "Recap": "Kris Compton scored a game-high 16 points and teammate Alex Fuller added 15 to lead Hilton Head Prep past St. Andrew's 46-29 in the championship game of the SCISA Region 4-AAA tournament at Hilton Head Christian.\n\nMary Wilkowski led the Saints with 11 points. Rose Wilkowski scored 7, Grace Wilkowski added 5, and Emily Aimone, Megan Hall, and Meghan Miller each finished with 2. Hilton Head Prep led 25-15 at halftime as St. Andrew's moved to 21-4 and HHP improved to 25-2.\n\nButler scored 8 points for Hilton Head Prep, Fennessey added 4, and Aiken finished with 3. St. Andrew's next game was scheduled for March 1 against a yet-to-be-determined opponent in the SCISA Class AA state tournament quarterfinals."
+    "Recap": "Kris Compton scored a game-high 16 points and teammate Alex Fuller added 15 to lead Hilton Head Prep past St. Andrew's 46-29 in the championship game of the SCISA Region 4-AAA tournament at Hilton Head Christian.\n\nMary Wilkowski led the Saints with 11 points. Rose Wilkowski scored 7, Grace Wilkowski added 5, and Emily Aimone, Megan Hall, and Meghan Miller each finished with 2. Hilton Head Prep led 25-15 at halftime as St. Andrew's moved to 21-4 and HHP improved to 25-2.\n\nButler scored 8 points for Hilton Head Prep, Fennessey added 4, and Aiken finished with 3. St. Andrew's next game was scheduled for March 1 against a yet-to-be-determined opponent in the SCISA Class AA state tournament quarterfinals.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Saints Fall to Hilton Head Prep in Region Championship\"",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20060301,
@@ -2902,7 +3382,10 @@
     "IsComplete": "Yes",
     "ResultMargin": 5,
     "RecapTitle": "Saints Hold Off Williamsburg in State Quarterfinal",
-    "Recap": "Mary Wilkowski scored 11 points and grabbed 10 rebounds to lead St. Andrew's past Williamsburg Academy 34-29 in the quarterfinals of the SCISA Class AA state basketball tournament at the Sumter County Exhibition Center in Sumter, S.C.\n\nGrace Wilkowski added 10 points for the Saints, who led 9-8 at halftime and improved to 22-4. Meghan Miller scored 6 points, Megan Hall added 5, and Rose Wilkowski finished with 2 as St. Andrew's advanced to meet the Colleton Prep-Greenwood Christian winner in the semifinals.\n\nSenior Adriane Price had a game-high 17 points for Williamsburg Academy, which finished 17-11. Duke scored 6 for the Stallions, Burrell added 4, and Tomlinson scored 2."
+    "Recap": "Mary Wilkowski scored 11 points and grabbed 10 rebounds to lead St. Andrew's past Williamsburg Academy 34-29 in the quarterfinals of the SCISA Class AA state basketball tournament at the Sumter County Exhibition Center in Sumter, S.C.\n\nGrace Wilkowski added 10 points for the Saints, who led 9-8 at halftime and improved to 22-4. Meghan Miller scored 6 points, Megan Hall added 5, and Rose Wilkowski finished with 2 as St. Andrew's advanced to meet the Colleton Prep-Greenwood Christian winner in the semifinals.\n\nSenior Adriane Price had a game-high 17 points for Williamsburg Academy, which finished 17-11. Duke scored 6 for the Stallions, Burrell added 4, and Tomlinson scored 2.",
+    "ScoringCompleteness": "complete",
+    "SourceCitation": "\"Saints Hold Off Williamsburg in State Quarterfinal\"",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20060303,
@@ -2920,7 +3403,9 @@
     "ResultMargin": 34,
     "RecapTitle": "Saints Advance to SCISA Class AA Title Game",
     "Recap": "After an official timeout was called when Saint Andrew's Grace Wilkowski scored her 2,000th career point with 5:18 left in the second quarter, it gave the Greenwood Christian School Hawks a brief chance to catch their breath.\n\nThat wasn't enough against the Saints Friday in the SCISA Class AA semifinals at the Sumter County Exhibition Center.\n\nThe Saints jumped on Greenwood Christian early and never stopped en route to a 65-31 thumping to advance to the state championship game for the third consecutive year.\n\nSt. Andrew's (22-3) will take on the Trinity Collegiate-Carolina Academy winner at 2:30 p.m. today in the final.\n\n\"We basically have the five starters back from last year,\" said St. Andrew's coach Michael Bennet. \"We have a lot of experience in games like this.\"\n\nA 3-pointer by Kristen Albritton gave St. Andrew's a 15-6 lead with just under two minutes left. The Saints stretched that into a 19-8 lead heading into the second quarter.\n\nMary Wilkowski picked up her second foul just 50 seconds into the second quarter and headed to the bench. No problem.\n\nMegan Hall scored on a layup and Grace Wilkowski's memorable layup made it 25-9 with just over five minutes left in the quarter. The officials called a timeout so everyone in attendance could honor Wilkowski's achievement.\n\nThe only one in the gym that didn't want the game to stop was Wilkowski herself.\n\n\"I wasn't expecting it because I wasn't keeping track,\" said the senior, who finished with 18 points and 16 rebounds. \"It was a surprise.\"\n\nBennet said that her response to wanting to keep playing was typical.\n\n\"She's not one for the limelight,\" he said. \"I didn't even tell her how close she was. She is so unselfish that she probably has as many points as she does assists in her career.\"\n\nAfter the brief intermission, the Hawks closed the lead to 25-13. The teams traded baskets for the rest of the quarter as St. Andrew's took a 31-19 lead into the break.\n\nMary Wilkowski, who had 10 points and 13 rebounds, picked up her third foul with just over six minutes left in the third and headed to the bench again. Greenwood Christian's Carolina Clarke took advantage going 4-for-4 at the charity stripe to make it 35-25 and give the Hawks a breath of life.\n\nAlbritton shattered that thought on St. Andrew's next possession. She lined up for a 3-pointer and hit nothing but net to give the Saints a 38-25 lead.\n\nAlbritton's trey sparked a 15-0 run that lasted into the fourth quarter to seal the game. Greenwood didn't break the run until Katie Hinrichs' jumper with 7:45 left and St. Andrew's comfortably ahead 50-27.\n\n\"That is the beauty of this team: who do you guard?\" said Bennet. \"You can pack it down inside and we can hit a 3. You can guard the outside and we'll take it to the basket.\"\n\nThe run only briefly stopped there. The Saints finished the game with a 15-4 run to give the them a chance to defend their state title.\n\nRose Wilkowski added 17 points for St. Andrew's.\n\nGREENWOOD CHRISTIAN (31)\n\nKoschel 8, Sheehy 4, Caroline Clarke 15, Hinrichs 2, Cain 2.\n\nST. ANDREW'S (65)\n\nMiller 6, Albritton 6, Hall 6, Aimone 2, Rose Wilkowski 17, Grace Wilkowski 18, Mary Wilkowski 10.\n\nHalftime-SA, 31-19. Records-SA 22-3.\n\nSource: Patrick Enzor, For the Savannah Morning News, \"SAINTS ADVANCE TO SCISA CLASS AA TITLE GAME,\" Savannah Morning News (GA), March 4, 2006, Page 4D, Sports.",
-    "RecapSource": "Patrick Enzor, For the Savannah Morning News, Savannah Morning News (GA), March 4, 2006, Page 4D, Sports"
+    "SourceCitation": "Patrick Enzor, For the Savannah Morning News, Savannah Morning News (GA), March 4, 2006, Page 4D, Sports",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20060304,
@@ -2938,7 +3423,9 @@
     "ResultMargin": 14,
     "RecapTitle": "Saints Be Praised! St. Andrew's Girls Repeat as SCISA Class AA Champions",
     "Recap": "Tears of joy flowed after St. Andrew's beat Trinity Collegiate, 54-40, to win its second consecutive SCISA Class AA girls' basketball state championship Saturday at Sumter County Exhibition Center.\n\nSome Saints said they also were shedding tears of relief because a season's worth of pressure to repeat had just been lifted. Others said they were crying tears of goodbye for St. Andrew's six seniors.\n\n\"I'm really happy,\" Mary Wilkowski, tears streaming down her cheeks, said before hugging Saints coach Michael Bennet. \"I'm really going to miss all the seniors.\"\n\nSCISA does not give out a most valuable player award, but if the association did it surely would have gone to Wilkowski. The junior scored a team-high 23 points, grabbed five rebounds and blocked three shots to lead St. Andrew's, which made its fourth straight trip to the Final Four.\n\n\"Mary had an awesome game. She really came through and did what she needed to do,\" sophomore forward Rose Wilkowski said of her sister, who was named to the all-tournament team along with their older sister, senior forward Grace Wilkowski, and sophomore guard Megan Hall.\n\nGrace Wilkowski finished with a team-high eight assists. She and Hall scored eight points apiece.\n\n\"It's really gratifying,\" Grace Wilkowski said. \"It was a good game, a well-played game.\"\n\nSt. Andrew's (24-4) received a scare with 4:36 left in the first quarter when Hall fell to the court in visible pain.\n\n\"I was reaching in to get a ball (during a play) and my shoulder went out of socket,\" said Hall, who returned only a minute later. \"Our trainer put it back in socket for me.\"\n\nHall's determination to play despite the pain set the tone for the Saints, who staked a 13-6 lead after the first quarter.\n\nBut Trinity Collegiate (21-5) rallied in the second quarter and outscored the Saints, 14-11. Senior guard Sarah Thompson, who finished with a team-high 23 points, scored three of her four 3-pointers in the second quarter to cut the score to 24-20 at halftime.\n\n\"We knew if we left her open she could sting us for some 3-point shots,\" Bennet said. \"We knew she was the one player that could carry that team.\"\n\nSt. Andrew's ratcheted up its pressure in the third quarter. After senior guard Meghan Miller's 3-pointer put the Saints up 33-24, Miller stole the ball during the Titans' next possession and passed it to Grace Wilkowski for a basket and a 35-24 lead.\n\n\"Our coaches (Bennet and assistant Kim Riordan) always say that the first three minutes of the second half are crucial,\" Miller said. \"We wanted to come out strong to start the third quarter and we did. I'm just so happy. I'm also relieved. I've got some goosebumps.\"\n\nRose Wilkowski began the fourth quarter with a 3-pointer, and the Saints held their opponent from Darlington, S.C., scoreless until Thompson's basket with 3:46 left in the game.\n\n\"There was pressure (to repeat as state champions), but it wasn't anything we couldn't handle,\" Rose Wilkowski said. \"It's a small school, so no matter what, everyone is going to love you. If you do win it, it's great. If you lose, it's OK because you're still going on to college.\"\n\nSt. Andrew's dedicated its victory to seniors Miller, Grace Wilkowski, Kristen Albritton, Stephanie Griffin, Michelle Griffin and Emily Aimone.\n\n\"We knew from day one we wanted to be here,\" Bennet said. \"We had six seniors, a lot of starters back, and we had the feeling once and we wanted it again. We wanted to send these seniors out in style.\"\n\nTRINITY COLLEGIATE (40)\n\nSarah Thompson 23, Vaught 9, Zubel 6, Lane 2.\n\nST. ANDREW'S (54)\n\nMary Wilkowski 23, Hall 8, G. Wilkowski 8, R. Wilkowski 7, Miller 6, S. Griffin 2.\n\nHalftime-SA, 24-20. Records-TC 21-5; SA 24-4.\n\nSCISA CLASS AA GIRLS ALL-TOURNAMENT TEAM\n\nSt. Andrew's: Grace Wilkowski, Mary Wilkowski, Megan Hall\n\nTrinity Collegiate: Sarah Thompson, Carolyn Vaught\n\nCarolina Academy: Jordan Osborne.\n\nSource: Noell Barnidge, \"SAINTS BE PRAISED! - ST. ANDREW'S GIRLS REPEAT AS SCISA CLASS AA CHAMPIONS,\" Savannah Morning News (GA), March 5, 2006, Page 1C, Sports.",
-    "RecapSource": "Noell Barnidge, Savannah Morning News (GA), March 5, 2006, Page 1C, Sports"
+    "SourceCitation": "Noell Barnidge, Savannah Morning News (GA), March 5, 2006, Page 1C, Sports",
+    "ScoringCompleteness": "complete",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "GameID": 20061118,
@@ -9417,5 +9904,62 @@
     "Season": 2025,
     "IsComplete": "Yes",
     "Recap": null
+  },
+  {
+    "GameID": 2002120401,
+    "Date": 1038960000000,
+    "DisplayDate": "Dec. 4, 2002",
+    "OpponentID": "",
+    "Opponent": "Unknown opponent",
+    "LocationType": "Unknown",
+    "GameType": "Record-path placeholder",
+    "Result": "W",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 2002,
+    "IsComplete": "No",
+    "ResultMargin": null,
+    "ScoringCompleteness": "placeholder",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "Record-path placeholder from girls basketball archive reconciliation, 2002-03.",
+    "SourceNote": "Placeholder win added to reconcile the published 2002-03 final record; opponent, site, score, and box score remain unrecovered."
+  },
+  {
+    "GameID": 2002120501,
+    "Date": 1039046400000,
+    "DisplayDate": "Dec. 5, 2002",
+    "OpponentID": "",
+    "Opponent": "Unknown opponent",
+    "LocationType": "Unknown",
+    "GameType": "Record-path placeholder",
+    "Result": "W",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 2002,
+    "IsComplete": "No",
+    "ResultMargin": null,
+    "ScoringCompleteness": "placeholder",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "Record-path placeholder from girls basketball archive reconciliation, 2002-03.",
+    "SourceNote": "Placeholder win added to reconcile the published 2002-03 final record; opponent, site, score, and box score remain unrecovered."
+  },
+  {
+    "GameID": 2003010201,
+    "Date": 1041465600000,
+    "DisplayDate": "Before Jan. 3, 2003",
+    "OpponentID": "",
+    "Opponent": "Unknown opponent",
+    "LocationType": "Unknown",
+    "GameType": "Record-path placeholder",
+    "Result": "W",
+    "TeamScore": null,
+    "OpponentScore": null,
+    "Season": 2002,
+    "IsComplete": "No",
+    "ResultMargin": null,
+    "ScoringCompleteness": "placeholder",
+    "SourceSeasonLabel": "2002-03",
+    "SourceCitation": "Record-path placeholder from girls basketball archive reconciliation, 2002-03.",
+    "SourceNote": "Placeholder win added to reconcile the published 2002-03 final record; opponent, site, score, and box score remain unrecovered."
   }
 ]

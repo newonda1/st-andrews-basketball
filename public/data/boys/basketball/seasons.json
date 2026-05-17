@@ -221,7 +221,11 @@
     "SourceCitation": "\"BOYS PREVIEW,\" Savannah Morning News, 1999-11-23, Page 6D; \"JENKINS SCORES 100 IN VICTORY AT JOE GREENE TIP-OFF,\" Savannah Morning News, 1999-11-24, Page 5D; \"BOYS STATS,\" Savannah Morning News (GA), February 11, 2000, Page 3B.; \"ALDRICH SNAPS RECORD AS ST. ANDREW'S SHOOTS VICTORY,\" Savannah Morning News (GA), February 19, 2000, Page 5E.; \"SAINTS BOYS TRIUMPH IN REGION GAME, GIRLS FALL,\" Savannah Morning News (GA), February 27, 2000, Page 4B.; \"ST. ANDREW'S SLIPS IN SEMIFINALS,\" Savannah Morning News (GA), March 4, 2000, Page 6F.",
     "ArchiveStatusNote": "Winter 1999-00 NewsBank recovery added 22 scored games, eight record-path placeholders, the Feb. 11 leaderboard snapshot, Clarence Wilson's interim head-coach role, Aldrich's career scoring record, the SCISA Region IV title and the state Final Four finish. The semifinal article printed 21-4, but the recovered record path supports 21-9.",
     "OverallWins": 21,
-    "OverallLosses": 9
+    "OverallLosses": 9,
+    "ArchiveStatus": "Recovered with record-path placeholders",
+    "RecordSource": "Archive schedule, published final record, and season-page reconciliation",
+    "FinishLabel": "SCISA Class AA Region IV Champion / State Final Four",
+    "SourceSeasonLabel": "1999-00"
   },
   {
     "SeasonID": 2000,
@@ -231,7 +235,14 @@
     "RegionSeed": null,
     "RegionFinish": "Region Champion",
     "StateSeed": null,
-    "StateFinish": "State Final Four"
+    "StateFinish": "State Final Four",
+    "OverallWins": 16,
+    "OverallLosses": 11,
+    "ArchiveStatus": "Recovered",
+    "RecordSource": "Archive schedule, published final record, and season-page reconciliation",
+    "FinishLabel": "Region Champion / State Final Four",
+    "SourceSeasonLabel": "2000-01",
+    "ArchiveStatusNote": "Boys Basketball 2000-01 remains partial; recovered archive data is limited to the currently documented schedule, result, roster, and newspaper-source material."
   },
   {
     "SeasonID": 2001,
@@ -241,7 +252,13 @@
     "RegionSeed": null,
     "RegionFinish": null,
     "StateSeed": null,
-    "StateFinish": null
+    "StateFinish": null,
+    "OverallWins": 16,
+    "OverallLosses": 7,
+    "ArchiveStatus": "Recovered with record-path placeholders",
+    "RecordSource": "Archive schedule, published final record, and season-page reconciliation",
+    "SourceSeasonLabel": "2001-02",
+    "ArchiveStatusNote": "Boys Basketball 2001-02 remains partial; recovered archive data is limited to the currently documented schedule, result, roster, and newspaper-source material."
   },
   {
     "SeasonID": 2002,
@@ -251,7 +268,14 @@
     "RegionSeed": null,
     "RegionFinish": "Region Champion",
     "StateSeed": null,
-    "StateFinish": "State Runner-Up"
+    "StateFinish": "State Runner-Up",
+    "OverallWins": 19,
+    "OverallLosses": 5,
+    "ArchiveStatus": "Recovered",
+    "RecordSource": "Archive schedule, published final record, and season-page reconciliation",
+    "FinishLabel": "Region Champion / State Runner-Up",
+    "SourceSeasonLabel": "2002-03",
+    "ArchiveStatusNote": "Boys Basketball 2002-03 remains partial; recovered archive data is limited to the currently documented schedule, result, roster, and newspaper-source material."
   },
   {
     "SeasonID": 2003,
@@ -261,7 +285,14 @@
     "RegionSeed": null,
     "RegionFinish": "Region Champion",
     "StateSeed": null,
-    "StateFinish": "State Champion"
+    "StateFinish": "State Champion",
+    "OverallWins": 19,
+    "OverallLosses": 8,
+    "ArchiveStatus": "Recovered",
+    "RecordSource": "Archive schedule, published final record, and season-page reconciliation",
+    "FinishLabel": "Region Champion / State Champion",
+    "SourceSeasonLabel": "2003-04",
+    "ArchiveStatusNote": "Boys Basketball 2003-04 remains partial; recovered archive data is limited to the currently documented schedule, result, roster, and newspaper-source material."
   },
   {
     "SeasonID": 2004,
@@ -271,7 +302,13 @@
     "RegionSeed": null,
     "RegionFinish": null,
     "StateSeed": null,
-    "StateFinish": null
+    "StateFinish": null,
+    "OverallWins": 1,
+    "OverallLosses": 23,
+    "ArchiveStatus": "Recovered",
+    "RecordSource": "Archive schedule, published final record, and season-page reconciliation",
+    "SourceSeasonLabel": "2004-05",
+    "ArchiveStatusNote": "Boys Basketball 2004-05 remains partial; recovered archive data is limited to the currently documented schedule, result, roster, and newspaper-source material."
   },
   {
     "SeasonID": 2005,
@@ -281,7 +318,13 @@
     "RegionSeed": null,
     "RegionFinish": null,
     "StateSeed": null,
-    "StateFinish": null
+    "StateFinish": null,
+    "OverallWins": 8,
+    "OverallLosses": 16,
+    "ArchiveStatus": "Recovered",
+    "RecordSource": "Archive schedule, published final record, and season-page reconciliation",
+    "SourceSeasonLabel": "2005-06",
+    "ArchiveStatusNote": "Boys Basketball 2005-06 remains partial; recovered archive data is limited to the currently documented schedule, result, roster, and newspaper-source material."
   },
   {
     "SeasonID": 2006,

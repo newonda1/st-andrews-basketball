@@ -13,7 +13,11 @@
     "GirlsOverallWins": 0,
     "GirlsOverallLosses": 1,
     "BoysOverallWins": 0,
-    "BoysOverallLosses": 5
+    "BoysOverallLosses": 5,
+    "ArchiveStatus": "archived",
+    "ArchiveStatusNote": "NewsBank recovery now documents one fall 2000 girls dual-match report and the spring 2001 boys record path, including three boys match reports and two boys loss placeholders needed to reconcile the published 0-2 and 0-5 record lines.",
+    "RecordSource": "seasons.json source-of-truth row; event pages reconcile to this record.",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "SeasonID": 2002,
@@ -27,21 +31,37 @@
       "Justin Howard, Preston Turner, Billy Vine, Martin Sullivan, Corey Wheeler, Jonathan Helmken, Martin Cooper, and Jonathan Salter appear in the recovered boys line scores."
     ],
     "BoysOverallWins": 0,
-    "BoysOverallLosses": 5
+    "BoysOverallLosses": 5,
+    "ArchiveStatus": "archived",
+    "ArchiveStatusNote": "NewsBank recovery documents five fall 2001 girls dual-match reports and three spring 2002 boys dual-match reports, plus boys placeholders needed to reconcile St. Andrew's 0-4 and 0-5 boys record lines.",
+    "RecordSource": "seasons.json source-of-truth row; event pages reconcile to this record.",
+    "SourceSeasonLabel": "2001-02"
   },
   {
     "SeasonID": 2003,
     "SeasonLabel": "2002-03",
     "Classification": "SCISA",
     "StatusBadge": "archived",
-    "StatusNote": "Archive data includes eight 2002 girls dual-match results against Hilton Head Christian Academy, Beaufort Academy, Charleston Collegiate, and Colleton Prep, plus two known losses with unavailable opponent details. St. Andrew's was 4-6 after the reported Oct. 17 Charleston Collegiate result."
+    "StatusNote": "Archive data includes eight 2002 girls dual-match results against Hilton Head Christian Academy, Beaufort Academy, Charleston Collegiate, and Colleton Prep, plus two known losses with unavailable opponent details. St. Andrew's was 4-6 after the reported Oct. 17 Charleston Collegiate result.",
+    "ArchiveStatus": "archived",
+    "ArchiveStatusNote": "Archive data includes eight 2002 girls dual-match results against Hilton Head Christian Academy, Beaufort Academy, Charleston Collegiate, and Colleton Prep, plus two known losses with unavailable opponent details. St. Andrew's was 4-6 after the reported Oct. 17 Charleston Collegiate result.",
+    "SourceSeasonLabel": "2002-03",
+    "GirlsOverallWins": 4,
+    "GirlsOverallLosses": 6,
+    "RecordSource": "seasons.json source-of-truth row; event pages reconcile to the recovered 2002-03 girls record path."
   },
   {
     "SeasonID": 2006,
     "SeasonLabel": "2005-06",
     "Classification": "SCISA",
     "StatusBadge": "archived",
-    "StatusNote": "Archive data includes Sept. 1 and Sept. 8, 2005 girls match results against Beaufort Academy, Sept. 15 and Sept. 26 results against Charleston Collegiate, a Sept. 27 result against Hilton Head Christian, and one placeholder loss needed to reconcile St. Andrew's record path from 0-4 after Sept. 15 to 0-6 after Sept. 27."
+    "StatusNote": "Archive data includes Sept. 1 and Sept. 8, 2005 girls match results against Beaufort Academy, Sept. 15 and Sept. 26 results against Charleston Collegiate, a Sept. 27 result against Hilton Head Christian, and one placeholder loss needed to reconcile St. Andrew's record path from 0-4 after Sept. 15 to 0-6 after Sept. 27.",
+    "ArchiveStatus": "archived",
+    "ArchiveStatusNote": "Archive data includes Sept. 1 and Sept. 8, 2005 girls match results against Beaufort Academy, Sept. 15 and Sept. 26 results against Charleston Collegiate, a Sept. 27 result against Hilton Head Christian, and one placeholder loss needed to reconcile St. Andrew's record path from 0-4 after Sept. 15 to 0-6 after Sept. 27.",
+    "SourceSeasonLabel": "2005-06",
+    "GirlsOverallWins": 0,
+    "GirlsOverallLosses": 6,
+    "RecordSource": "seasons.json source-of-truth row; event pages reconcile to the recovered 2005-06 girls record path."
   },
   {
     "SeasonID": 2012,

@@ -1,0 +1,58 @@
+[
+  {
+    "StatID": "2005043001-200501-100m",
+    "MeetID": 2005043001,
+    "PlayerID": 200501,
+    "Gender": "Boys",
+    "Event": "100 Meter Dash",
+    "Mark": "12.26",
+    "Place": "16th",
+    "Round": "Finals",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2005043001-200601-100m",
+    "MeetID": 2005043001,
+    "PlayerID": 200601,
+    "Gender": "Girls",
+    "Event": "100 Meter Dash",
+    "Mark": "14.94",
+    "Place": "14th",
+    "Round": "Finals",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2005043001-200602-400m",
+    "MeetID": 2005043001,
+    "PlayerID": 200602,
+    "Gender": "Girls",
+    "Event": "400 Meter Run",
+    "Mark": "1:04.64",
+    "Place": "4th",
+    "Round": "Finals",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2005043001-200601-100mh",
+    "MeetID": 2005043001,
+    "PlayerID": 200601,
+    "Gender": "Girls",
+    "Event": "100 Meter Hurdles",
+    "Mark": "18.73",
+    "Place": "4th",
+    "Round": "Finals",
+    "Status": "Complete"
+  },
+  {
+    "StatID": "2005043001-girls-relay-4x400m",
+    "MeetID": 2005043001,
+    "PlayerID": null,
+    "Gender": "Girls",
+    "Event": "4x400 Meter Relay",
+    "Mark": "4:46.03",
+    "Place": "7th",
+    "Round": "Finals",
+    "Status": "Complete",
+    "AthleteName": "M. Griffin / S. Griffin / Sarah Lundgren / Ann Kingston"
+  }
+]

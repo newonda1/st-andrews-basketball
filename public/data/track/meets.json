@@ -10,7 +10,10 @@
     "Status": "Partial",
     "DateApproximate": true,
     "Notes": "The April 5, 2001 Savannah Morning News This and That column reported that Toni Popovic and Tiffany Griffin qualified for the upcoming SCISA state meet at an eight-team event held the previous week at Wilson Hall School in Sumter. The exact meet date is not preserved in the article.",
-    "SourceCitation": "\"TEAMMATES KEEP STEWART'S MEMORY ALIVE AT LIBERTY COUNTY\" Savannah Morning News (GA), April 5, 2001, Page 7D."
+    "SourceCitation": "\"TEAMMATES KEEP STEWART'S MEMORY ALIVE AT LIBERTY COUNTY\" Savannah Morning News (GA), April 5, 2001, Page 7D.",
+    "ResultCompleteness": "partial",
+    "SourceNote": "The April 5, 2001 Savannah Morning News This and That column reported that Toni Popovic and Tiffany Griffin qualified for the upcoming SCISA state meet at an eight-team event held the previous week at Wilson Hall School in Sumter. The exact meet date is not preserved in the article.",
+    "SourceSeasonLabel": "2000-01"
   },
   {
     "MeetID": 2005043001,
@@ -22,7 +25,11 @@
     "MeetType": "State",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit raw boys results page shared by the user and the linked girls split for the 2005 SCISA state championships. The public files exposed five St. Andrew's entries, including a girls 4x400 relay lineup with two athletes listed only by initials, and verified an 11th-place girls team finish with eight points. St. Andrew's did not appear in the published boys team standings.",
-    "SourceUrl": "https://sc.milesplit.com/meets/11181-scisa-championships-2005/results/23991/raw"
+    "SourceUrl": "https://sc.milesplit.com/meets/11181-scisa-championships-2005/results/23991/raw",
+    "ResultCompleteness": "partial",
+    "SourceNote": "Results loaded from the MileSplit raw boys results page shared by the user and the linked girls split for the 2005 SCISA state championships. The public files exposed five St. Andrew's entries, including a girls 4x400 relay lineup with two athletes listed only by initials, and verified an 11th-place girls team finish with eight points. St. Andrew's did not appear in the published boys team standings.",
+    "SourceSeasonLabel": "2004-05",
+    "SourceCitation": "MileSplit, \"SCISA State Championships\", 2005-04-30, https://sc.milesplit.com/meets/11181-scisa-championships-2005/results/23991/raw."
   },
   {
     "MeetID": 2006042901,
@@ -34,7 +41,11 @@
     "MeetType": "State",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit raw boys results page shared by the user, along with the linked girls split and team-scores page for the 2006 SCISA state championships. The public files exposed six St. Andrew's individual entries and did not list a St. Andrew's team finish in the published standings.",
-    "SourceUrl": "https://sc.milesplit.com/meets/15283-scisa-championships-2006/results/34487/raw"
+    "SourceUrl": "https://sc.milesplit.com/meets/15283-scisa-championships-2006/results/34487/raw",
+    "ResultCompleteness": "partial",
+    "SourceNote": "Results loaded from the MileSplit raw boys results page shared by the user, along with the linked girls split and team-scores page for the 2006 SCISA state championships. The public files exposed six St. Andrew's individual entries and did not list a St. Andrew's team finish in the published standings.",
+    "SourceSeasonLabel": "2005-06",
+    "SourceCitation": "MileSplit, \"SCISA State Championships\", 2006-04-29, https://sc.milesplit.com/meets/15283-scisa-championships-2006/results/34487/raw."
   },
   {
     "MeetID": 2007042801,
@@ -46,7 +57,8 @@
     "MeetType": "State",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit raw boys results page shared by the user and the linked girls raw page for the 2007 SCISA state championships. The public files exposed one St. Andrew's result: a boys 4x800 relay mark without a published lineup. No St. Andrew's girls entries were visible in the linked girls raw page.",
-    "SourceUrl": "https://sc.milesplit.com/meets/21682-scisa-championships-2007/results/46698/raw"
+    "SourceUrl": "https://sc.milesplit.com/meets/21682-scisa-championships-2007/results/46698/raw",
+    "SourceCitation": "MileSplit, \"SCISA State Championships\", 2007-04-28, https://sc.milesplit.com/meets/21682-scisa-championships-2007/results/46698/raw."
   },
   {
     "MeetID": 2009050201,
@@ -58,7 +70,8 @@
     "MeetType": "State",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit raw boys Class A-AA page shared by the user, along with the linked girls split and team-scores page for the 2009 SCISA state championships. The public files exposed four St. Andrew's boys entries, no St. Andrew's girls entries, and a verified fourth-place boys team finish with eight points.",
-    "SourceUrl": "https://sc.milesplit.com/meets/44529-scisa-championships-2009/results/90475/raw"
+    "SourceUrl": "https://sc.milesplit.com/meets/44529-scisa-championships-2009/results/90475/raw",
+    "SourceCitation": "MileSplit, \"SCISA State Championships\", 2009-05-02, https://sc.milesplit.com/meets/44529-scisa-championships-2009/results/90475/raw."
   },
   {
     "MeetID": 2010050101,
@@ -70,7 +83,8 @@
     "MeetType": "State",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit raw A-AA boys page shared by the user and the linked A-AA girls split for the 2010 SCISA state championships. The public files exposed 15 St. Andrew's entries and verified team finishes of 10th for the girls and 9th for the boys. The girls high-jump row for Ciara Brown shows a malformed place field in the raw export, so the winning place was inferred from the listed five points and the girls team total.",
-    "SourceUrl": "https://sc.milesplit.com/meets/66738-scisa-championships-2010/results/120874/raw"
+    "SourceUrl": "https://sc.milesplit.com/meets/66738-scisa-championships-2010/results/120874/raw",
+    "SourceCitation": "MileSplit, \"SCISA State Championships\", 2010-05-01, https://sc.milesplit.com/meets/66738-scisa-championships-2010/results/120874/raw."
   },
   {
     "MeetID": 2011050701,
@@ -82,7 +96,8 @@
     "MeetType": "State",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit raw Class A and AA results page for the 2011 SCISA state championships. The embedded Hy-Tek header still says '2010 SCISA State Championship,' but the page is tied to the May 7, 2011 meet and exposed 19 St. Andrew's entries, including three relay lineups and verified team finishes of 11th for the girls and 9th for the boys.",
-    "SourceUrl": "https://sc.milesplit.com/meets/84515-scisa-championships-2011/results/158798/raw"
+    "SourceUrl": "https://sc.milesplit.com/meets/84515-scisa-championships-2011/results/158798/raw",
+    "SourceCitation": "MileSplit, \"SCISA State Championships\", 2011-05-07, https://sc.milesplit.com/meets/84515-scisa-championships-2011/results/158798/raw."
   },
   {
     "MeetID": 2012050501,
@@ -94,7 +109,8 @@
     "MeetType": "State",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit raw complete-results page and its linked Class A-AA girls, boys, and team-scores splits for the 2012 SCISA state championships. The public files exposed nine St. Andrew's entries, including the girls 4x100 relay lineup and verified team finishes of 15th for the girls and 17th for the boys.",
-    "SourceUrl": "https://sc.milesplit.com/meets/116360-scisa-championships-2012/results/199970?type=raw"
+    "SourceUrl": "https://sc.milesplit.com/meets/116360-scisa-championships-2012/results/199970?type=raw",
+    "SourceCitation": "MileSplit, \"SCISA State Championships\", 2012-05-05, https://sc.milesplit.com/meets/116360-scisa-championships-2012/results/199970?type=raw."
   },
   {
     "MeetID": 2014050301,
@@ -106,7 +122,8 @@
     "MeetType": "State",
     "Status": "Complete",
     "Notes": "Results loaded from the archived Perfect Timing Group live-results pages for the 2014 SCISA state championships. The event pages exposed six completed St. Andrew's results across hurdles, sprints, middle distance, and relays. The girls 100-meter page remained a meet-program heat sheet without final marks, so those St. Andrew's entries were not added as finished results.",
-    "SourceUrl": "https://www.ptgrouponline.com/Live/2014/HS/SCISA/TF/"
+    "SourceUrl": "https://www.ptgrouponline.com/Live/2014/HS/SCISA/TF/",
+    "SourceCitation": "MileSplit, \"SCISA State Championships\", 2014-05-03, https://www.ptgrouponline.com/Live/2014/HS/SCISA/TF/."
   },
   {
     "MeetID": 2015042401,
@@ -118,7 +135,8 @@
     "MeetType": "Qualifier",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit raw complete results page for the SCISA regional qualifier. The public raw page exposed 26 completed St. Andrew's results and included the girls 4x100 and 4x400 relay lineups.",
-    "SourceUrl": "https://sc.milesplit.com/meets/201175-rca-a-and-aa-scisa-regional-qualifier-2015/results/367765?type=raw"
+    "SourceUrl": "https://sc.milesplit.com/meets/201175-rca-a-and-aa-scisa-regional-qualifier-2015/results/367765?type=raw",
+    "SourceCitation": "MileSplit, \"RCA A and AA SCISA Regional Qualifier\", 2015-04-24, https://sc.milesplit.com/meets/201175-rca-a-and-aa-scisa-regional-qualifier-2015/results/367765?type=raw."
   },
   {
     "MeetID": 2015050201,
@@ -130,7 +148,8 @@
     "MeetType": "State",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit raw Class A-AA results page linked from the 2015 SCISA championships meet page. The embedded Hy-Tek header still says '2014 SCISA State Track and Field Championship,' but the page is tied to the May 2, 2015 meet and exposed six St. Andrew's entries.",
-    "SourceUrl": "https://sc.milesplit.com/meets/193174-scisa-championships-2015/results/372572/raw"
+    "SourceUrl": "https://sc.milesplit.com/meets/193174-scisa-championships-2015/results/372572/raw",
+    "SourceCitation": "MileSplit, \"SCISA State Championships\", 2015-05-02, https://sc.milesplit.com/meets/193174-scisa-championships-2015/results/372572/raw."
   },
   {
     "MeetID": 2016030901,
@@ -142,7 +161,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the public MileSplit St. Andrew's team results page for the meet. The page exposed 35 completed St. Andrew's results, including one girls 4x800 relay mark without a public lineup.",
-    "SourceUrl": "https://sc.milesplit.com/meets/228045-porter-gaud-meet-2016/teams/20895"
+    "SourceUrl": "https://sc.milesplit.com/meets/228045-porter-gaud-meet-2016/teams/20895",
+    "SourceCitation": "MileSplit, \"Porter-Gaud meet\", 2016-03-09, https://sc.milesplit.com/meets/228045-porter-gaud-meet-2016/teams/20895."
   },
   {
     "MeetID": 2016042001,
@@ -154,7 +174,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the public MileSplit St. Andrew's team results page for the meet. The page exposed 12 completed St. Andrew's results and did not list any St. Andrew's relay lineups.",
-    "SourceUrl": "https://sc.milesplit.com/meets/228048-porter-gaud-home-meet-3-2016/teams/20895"
+    "SourceUrl": "https://sc.milesplit.com/meets/228048-porter-gaud-home-meet-3-2016/teams/20895",
+    "SourceCitation": "MileSplit, \"Porter-Gaud Home Meet 3\", 2016-04-20, https://sc.milesplit.com/meets/228048-porter-gaud-home-meet-3-2016/teams/20895."
   },
   {
     "MeetID": 2017030801,
@@ -166,7 +187,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the public MileSplit St. Andrew's team results page for the meet. The page exposed 31 completed St. Andrew's results, including one boys 4x400 relay mark without a public lineup.",
-    "SourceUrl": "https://sc.milesplit.com/meets/265769-porter-gaud-home-meet-1-2017/teams/20895"
+    "SourceUrl": "https://sc.milesplit.com/meets/265769-porter-gaud-home-meet-1-2017/teams/20895",
+    "SourceCitation": "MileSplit, \"Porter Gaud Home Meet #1\", 2017-03-08, https://sc.milesplit.com/meets/265769-porter-gaud-home-meet-1-2017/teams/20895."
   },
   {
     "MeetID": 2017032201,
@@ -178,7 +200,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the public MileSplit St. Andrew's team results page for the meet. The page exposed 46 completed St. Andrew's results, including boys relay marks without public lineups.",
-    "SourceUrl": "https://sc.milesplit.com/meets/266134-orangeburg-prep-meet-2017/teams/20895"
+    "SourceUrl": "https://sc.milesplit.com/meets/266134-orangeburg-prep-meet-2017/teams/20895",
+    "SourceCitation": "MileSplit, \"Orangeburg Prep meet\", 2017-03-22, https://sc.milesplit.com/meets/266134-orangeburg-prep-meet-2017/teams/20895."
   },
   {
     "MeetID": 2017032901,
@@ -190,7 +213,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the public MileSplit St. Andrew's team results page for the meet. The page exposed 34 completed St. Andrew's results, including one boys 4x400 relay mark without a public lineup.",
-    "SourceUrl": "https://sc.milesplit.com/meets/265772-porter-gaud-home-meet-2-2017/teams/20895"
+    "SourceUrl": "https://sc.milesplit.com/meets/265772-porter-gaud-home-meet-2-2017/teams/20895",
+    "SourceCitation": "MileSplit, \"Porter-Gaud Home Meet #2\", 2017-03-29, https://sc.milesplit.com/meets/265772-porter-gaud-home-meet-2-2017/teams/20895."
   },
   {
     "MeetID": 2017041201,
@@ -202,7 +226,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the public MileSplit St. Andrew's team results page for the meet. The page exposed 33 completed St. Andrew's results, including boys and girls relay marks without public lineups.",
-    "SourceUrl": "https://sc.milesplit.com/meets/265777-porter-gaud-home-meet-3-2017/teams/20895"
+    "SourceUrl": "https://sc.milesplit.com/meets/265777-porter-gaud-home-meet-3-2017/teams/20895",
+    "SourceCitation": "MileSplit, \"Porter Gaud Home Meet #3\", 2017-04-12, https://sc.milesplit.com/meets/265777-porter-gaud-home-meet-3-2017/teams/20895."
   },
   {
     "MeetID": 2017050601,
@@ -214,7 +239,8 @@
     "MeetType": "State",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit raw boys results page for the SCISA state championships. The public raw file exposed five St. Andrew's boys entries: two 200-meter results, one 4x100 relay, one long jump result, and one shot put result.",
-    "SourceUrl": "https://sc.milesplit.com/meets/278275-scisa-championships-2017/results/522637/raw"
+    "SourceUrl": "https://sc.milesplit.com/meets/278275-scisa-championships-2017/results/522637/raw",
+    "SourceCitation": "MileSplit, \"SCISA State Championships\", 2017-05-06, https://sc.milesplit.com/meets/278275-scisa-championships-2017/results/522637/raw."
   },
   {
     "MeetID": 2018030701,
@@ -226,7 +252,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the public MileSplit St. Andrew's team results page for the meet. The page exposed 24 completed St. Andrew's results and did not list any relay lineups.",
-    "SourceUrl": "https://sc.milesplit.com/meets/304993-porter-gaud-home-meet-1-2018/teams/20895"
+    "SourceUrl": "https://sc.milesplit.com/meets/304993-porter-gaud-home-meet-1-2018/teams/20895",
+    "SourceCitation": "MileSplit, \"Porter Gaud Home Meet #1\", 2018-03-07, https://sc.milesplit.com/meets/304993-porter-gaud-home-meet-1-2018/teams/20895."
   },
   {
     "MeetID": 2018032101,
@@ -238,7 +265,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the public MileSplit St. Andrew's team results page for the meet. The page exposed 20 completed St. Andrew's results and did not list any relay lineups.",
-    "SourceUrl": "https://sc.milesplit.com/meets/304994-porter-gaud-home-meet-2-2018/teams/20895"
+    "SourceUrl": "https://sc.milesplit.com/meets/304994-porter-gaud-home-meet-2-2018/teams/20895",
+    "SourceCitation": "MileSplit, \"Porter Gaud Home Meet #2\", 2018-03-21, https://sc.milesplit.com/meets/304994-porter-gaud-home-meet-2-2018/teams/20895."
   },
   {
     "MeetID": 2018041101,
@@ -250,7 +278,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the public MileSplit St. Andrew's team results page for the meet. The page exposed 26 completed St. Andrew's results and did not list any relay lineups.",
-    "SourceUrl": "https://sc.milesplit.com/meets/304995-porter-gaud-home-meet-3-2018/teams/20895"
+    "SourceUrl": "https://sc.milesplit.com/meets/304995-porter-gaud-home-meet-3-2018/teams/20895",
+    "SourceCitation": "MileSplit, \"Porter Gaud Home Meet #3\", 2018-04-11, https://sc.milesplit.com/meets/304995-porter-gaud-home-meet-3-2018/teams/20895."
   },
   {
     "MeetID": 2018050501,
@@ -262,7 +291,8 @@
     "MeetType": "State",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit raw complete results page for the SCISA state championships. The public raw page listed one St. Andrew's entry: Jack Hagan's winning boys shot put result.",
-    "SourceUrl": "https://sc.milesplit.com/meets/298497-scisa-championships-2018/results/591575/raw"
+    "SourceUrl": "https://sc.milesplit.com/meets/298497-scisa-championships-2018/results/591575/raw",
+    "SourceCitation": "MileSplit, \"SCISA State Championships\", 2018-05-05, https://sc.milesplit.com/meets/298497-scisa-championships-2018/results/591575/raw."
   },
   {
     "MeetID": 2019042501,
@@ -274,7 +304,8 @@
     "MeetType": "State",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit raw complete results page for the GISA state championships. The public raw page listed individual St. Andrew's entries only.",
-    "SourceUrl": "https://ga.milesplit.com/meets/357222-gisa-state-championship-2019/results/648429/raw"
+    "SourceUrl": "https://ga.milesplit.com/meets/357222-gisa-state-championship-2019/results/648429/raw",
+    "SourceCitation": "MileSplit, \"GISA State Championships\", 2019-04-25, https://ga.milesplit.com/meets/357222-gisa-state-championship-2019/results/648429/raw."
   },
   {
     "MeetID": 2021042101,
@@ -286,7 +317,8 @@
     "MeetType": "Region",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit raw complete results page for the region championships. The public raw page listed individual St. Andrew's results and did not show any St. Andrew's relay entries.",
-    "SourceUrl": "https://ga.milesplit.com/meets/420229-gisa-region-2aaa-championship-2021/results/735209/raw"
+    "SourceUrl": "https://ga.milesplit.com/meets/420229-gisa-region-2aaa-championship-2021/results/735209/raw",
+    "SourceCitation": "MileSplit, \"GISA Region 2AAA Championships\", 2021-04-21, https://ga.milesplit.com/meets/420229-gisa-region-2aaa-championship-2021/results/735209/raw."
   },
   {
     "MeetID": 2021042901,
@@ -298,7 +330,8 @@
     "MeetType": "State",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit raw complete results page for the GISA state championships. The public raw page listed only Phoebe Mayo's individual St. Andrew's distance results.",
-    "SourceUrl": "https://ga.milesplit.com/meets/413105-gisa-state-championship-2021/results/740693/raw"
+    "SourceUrl": "https://ga.milesplit.com/meets/413105-gisa-state-championship-2021/results/740693/raw",
+    "SourceCitation": "MileSplit, \"GISA State Championships\", 2021-04-29, https://ga.milesplit.com/meets/413105-gisa-state-championship-2021/results/740693/raw."
   },
   {
     "MeetID": 2022030201,
@@ -310,7 +343,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit raw complete results page for the meet. The public raw page listed individual St. Andrew's results and did not show any St. Andrew's relay entries.",
-    "SourceUrl": "https://ga.milesplit.com/meets/453627-savannah-country-day-tandf-home-meet-2-2022/results/788340/raw"
+    "SourceUrl": "https://ga.milesplit.com/meets/453627-savannah-country-day-tandf-home-meet-2-2022/results/788340/raw",
+    "SourceCitation": "MileSplit, \"Savannah Country Day T&F home meet #2\", 2022-03-02, https://ga.milesplit.com/meets/453627-savannah-country-day-tandf-home-meet-2-2022/results/788340/raw."
   },
   {
     "MeetID": 2022040601,
@@ -322,7 +356,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit raw complete results page for the meet. The public raw page exposed the St. Andrew's boys 4x100 relay DNF and the boys 4x400 relay lineup that won the event.",
-    "SourceUrl": "https://ga.milesplit.com/meets/453630-savannah-country-day-tandf-home-meet-5-2022/results/799503/raw"
+    "SourceUrl": "https://ga.milesplit.com/meets/453630-savannah-country-day-tandf-home-meet-5-2022/results/799503/raw",
+    "SourceCitation": "MileSplit, \"Savannah Country Day T&F home meet #5\", 2022-04-06, https://ga.milesplit.com/meets/453630-savannah-country-day-tandf-home-meet-5-2022/results/799503/raw."
   },
   {
     "MeetID": 2022041301,
@@ -334,7 +369,8 @@
     "MeetType": "Region",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit raw complete results page for the region championships. The public raw page exposed the St. Andrew's girls 4x100 and boys 4x100 and 4x400 relay lineups.",
-    "SourceUrl": "https://ga.milesplit.com/meets/473084-gisa-region-2aaa-championship-2022/results/801790/raw"
+    "SourceUrl": "https://ga.milesplit.com/meets/473084-gisa-region-2aaa-championship-2022/results/801790/raw",
+    "SourceCitation": "MileSplit, \"GISA Region 2AAA Championships\", 2022-04-13, https://ga.milesplit.com/meets/473084-gisa-region-2aaa-championship-2022/results/801790/raw."
   },
   {
     "MeetID": 2022042201,
@@ -346,7 +382,8 @@
     "MeetType": "State",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit raw complete results page for the GISA state championships. The public raw page exposed the St. Andrew's boys 4x100 and 4x400 relay prelim lineups.",
-    "SourceUrl": "https://ga.milesplit.com/meets/473704-gisa-state-championship-2022/results/806899/raw"
+    "SourceUrl": "https://ga.milesplit.com/meets/473704-gisa-state-championship-2022/results/806899/raw",
+    "SourceCitation": "MileSplit, \"GISA State Championships\", 2022-04-22, https://ga.milesplit.com/meets/473704-gisa-state-championship-2022/results/806899/raw."
   },
   {
     "MeetID": 2023030101,
@@ -358,7 +395,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit raw complete results page for the meet. The public raw page listed individual St. Andrew's results but did not show any St. Andrew's relay entries.",
-    "SourceUrl": "https://ga.milesplit.com/meets/508610-savannah-country-day-school-varsity-meet-1-2023/results/877481/raw"
+    "SourceUrl": "https://ga.milesplit.com/meets/508610-savannah-country-day-school-varsity-meet-1-2023/results/877481/raw",
+    "SourceCitation": "MileSplit, \"Savannah Country Day School Varsity Meet #1\", 2023-03-01, https://ga.milesplit.com/meets/508610-savannah-country-day-school-varsity-meet-1-2023/results/877481/raw."
   },
   {
     "MeetID": 2023032201,
@@ -370,7 +408,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit raw complete results page for the meet. The public raw page listed individual St. Andrew's results but did not show any St. Andrew's relay entries.",
-    "SourceUrl": "https://ga.milesplit.com/meets/508611-savannah-country-day-school-varsity-meet-2-2023/results/884959/raw"
+    "SourceUrl": "https://ga.milesplit.com/meets/508611-savannah-country-day-school-varsity-meet-2-2023/results/884959/raw",
+    "SourceCitation": "MileSplit, \"Savannah Country Day School Varsity Meet #2\", 2023-03-22, https://ga.milesplit.com/meets/508611-savannah-country-day-school-varsity-meet-2-2023/results/884959/raw."
   },
   {
     "MeetID": 2023041901,
@@ -382,7 +421,8 @@
     "MeetType": "Region",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit raw complete results page for the region championships. The public raw page exposed the St. Andrew's girls 4x800 relay lineup along with the individual finals results.",
-    "SourceUrl": "https://ga.milesplit.com/meets/540400-giaa-region-2aaa-championships-2023/results/906897/raw"
+    "SourceUrl": "https://ga.milesplit.com/meets/540400-giaa-region-2aaa-championships-2023/results/906897/raw",
+    "SourceCitation": "MileSplit, \"GIAA Region 2AAA Championships\", 2023-04-19, https://ga.milesplit.com/meets/540400-giaa-region-2aaa-championships-2023/results/906897/raw."
   },
   {
     "MeetID": 2023042701,
@@ -394,7 +434,8 @@
     "MeetType": "State",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit raw complete results page for the state championships. The public raw page included St. Andrew's finals results and Andrew Futch's sprint prelims, while the official state-meet PDF supplied the girls 4x800 relay lineup.",
-    "SourceUrl": "https://ga.milesplit.com/meets/544745-giaa-state-championships-2023/results/915719/raw"
+    "SourceUrl": "https://ga.milesplit.com/meets/544745-giaa-state-championships-2023/results/915719/raw",
+    "SourceCitation": "MileSplit, \"GIAA State Championships\", 2023-04-27, https://ga.milesplit.com/meets/544745-giaa-state-championships-2023/results/915719/raw."
   },
   {
     "MeetID": 2024041701,
@@ -406,7 +447,8 @@
     "MeetType": "Region",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit raw region results pages. The event-level raw file exposed the St. Andrew's relay lineups and listed several DNS entries.",
-    "SourceUrl": "https://ga.milesplit.com/meets/611976-giaa-region-2aaa-championships-2024/results/1028188/raw"
+    "SourceUrl": "https://ga.milesplit.com/meets/611976-giaa-region-2aaa-championships-2024/results/1028188/raw",
+    "SourceCitation": "MileSplit, \"GIAA Region 2AAA Championships\", 2024-04-17, https://ga.milesplit.com/meets/611976-giaa-region-2aaa-championships-2024/results/1028188/raw."
   },
   {
     "MeetID": 2024042501,
@@ -418,7 +460,8 @@
     "MeetType": "State",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit raw results page for the GIAA AAA state meet.",
-    "SourceUrl": "https://ga.milesplit.com/meets/606560-giaa-aaa-state-meet-2024/results/1038995/raw"
+    "SourceUrl": "https://ga.milesplit.com/meets/606560-giaa-aaa-state-meet-2024/results/1038995/raw",
+    "SourceCitation": "MileSplit, \"GIAA AAA State Championships\", 2024-04-25, https://ga.milesplit.com/meets/606560-giaa-aaa-state-meet-2024/results/1038995/raw."
   },
   {
     "MeetID": 2025022601,
@@ -430,7 +473,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit raw results page. The boys 4x800 relay mark is verified, but the public results did not expose the St. Andrew's relay lineup.",
-    "SourceUrl": "https://ga.milesplit.com/meets/647584-savannah-country-day-school-varsity-meet-2-2025/results/1117227/raw"
+    "SourceUrl": "https://ga.milesplit.com/meets/647584-savannah-country-day-school-varsity-meet-2-2025/results/1117227/raw",
+    "SourceCitation": "MileSplit, \"Savannah Country Day School Varsity Meet #2\", 2025-02-26, https://ga.milesplit.com/meets/647584-savannah-country-day-school-varsity-meet-2-2025/results/1117227/raw."
   },
   {
     "MeetID": 2025031201,
@@ -442,7 +486,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit team results page. Relay marks are verified, but the public results did not expose the St. Andrew's relay lineups.",
-    "SourceUrl": "https://ga.milesplit.com/meets/647587-savannah-country-day-school-varsity-meet-4-2025/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/647587-savannah-country-day-school-varsity-meet-4-2025/teams/28890",
+    "SourceCitation": "MileSplit, \"Savannah Country Day School Varsity Meet #4\", 2025-03-12, https://ga.milesplit.com/meets/647587-savannah-country-day-school-varsity-meet-4-2025/teams/28890."
   },
   {
     "MeetID": 2025040901,
@@ -454,7 +499,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit raw results page. Relay marks are verified, but the public results did not expose the St. Andrew's relay lineups.",
-    "SourceUrl": "https://ga.milesplit.com/meets/647589-savannah-country-day-school-varsity-meet-6-2025/results/1141149/raw"
+    "SourceUrl": "https://ga.milesplit.com/meets/647589-savannah-country-day-school-varsity-meet-6-2025/results/1141149/raw",
+    "SourceCitation": "MileSplit, \"Savannah Country Day School Varsity Meet #6\", 2025-04-09, https://ga.milesplit.com/meets/647589-savannah-country-day-school-varsity-meet-6-2025/results/1141149/raw."
   },
   {
     "MeetID": 2025041601,
@@ -466,7 +512,8 @@
     "MeetType": "Region",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit raw results page for the region championships. The public raw file exposed the St. Andrew's relay lineups for the completed relay races.",
-    "SourceUrl": "https://ga.milesplit.com/meets/661736-giaa-region-2-aaa-championships-2025/results/1149392/raw"
+    "SourceUrl": "https://ga.milesplit.com/meets/661736-giaa-region-2-aaa-championships-2025/results/1149392/raw",
+    "SourceCitation": "MileSplit, \"GIAA Region 2-AAA Championships\", 2025-04-16, https://ga.milesplit.com/meets/661736-giaa-region-2-aaa-championships-2025/results/1149392/raw."
   },
   {
     "MeetID": 2025050101,
@@ -478,7 +525,8 @@
     "MeetType": "State",
     "Status": "Complete",
     "Notes": "Results loaded from the MileSplit raw AAA complete results page for the state championships. The public raw file exposed the St. Andrew's 4x800 relay lineup and also listed one SCR and one DNS for St. Andrew's individual entries.",
-    "SourceUrl": "https://ga.milesplit.com/meets/686028-giaa-state-track-field-championships-class-aa-aaa-2025/results/1166061/raw"
+    "SourceUrl": "https://ga.milesplit.com/meets/686028-giaa-state-track-field-championships-class-aa-aaa-2025/results/1166061/raw",
+    "SourceCitation": "MileSplit, \"GIAA AA/AAA State Championships\", 2025-05-01, https://ga.milesplit.com/meets/686028-giaa-state-track-field-championships-class-aa-aaa-2025/results/1166061/raw."
   },
   {
     "MeetID": 2026021101,
@@ -490,7 +538,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from MileSplit team results page.",
-    "SourceUrl": "https://ga.milesplit.com/meets/718237-savannah-country-day-school-varsity-meet-1-2026/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/718237-savannah-country-day-school-varsity-meet-1-2026/teams/28890",
+    "SourceCitation": "MileSplit, \"Savannah Country Day School Varsity Meet #1\", 2026-02-11, https://ga.milesplit.com/meets/718237-savannah-country-day-school-varsity-meet-1-2026/teams/28890."
   },
   {
     "MeetID": 2026030401,
@@ -502,7 +551,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from MileSplit team results page. The 4x800 relay mark is verified, but the public formatted page did not expose the St. Andrew's relay lineup.",
-    "SourceUrl": "https://ga.milesplit.com/meets/718241-savannah-country-day-school-varsity-meet-3-2026/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/718241-savannah-country-day-school-varsity-meet-3-2026/teams/28890",
+    "SourceCitation": "MileSplit, \"Savannah Country Day School Varsity Meet #3\", 2026-03-04, https://ga.milesplit.com/meets/718241-savannah-country-day-school-varsity-meet-3-2026/teams/28890."
   },
   {
     "MeetID": 2026031101,
@@ -514,7 +564,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from MileSplit team results page.",
-    "SourceUrl": "https://ga.milesplit.com/meets/718242-savannah-country-day-school-varsity-meet-4-2026/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/718242-savannah-country-day-school-varsity-meet-4-2026/teams/28890",
+    "SourceCitation": "MileSplit, \"Savannah Country Day School Varsity Meet #4\", 2026-03-11, https://ga.milesplit.com/meets/718242-savannah-country-day-school-varsity-meet-4-2026/teams/28890."
   },
   {
     "MeetID": 2026040102,
@@ -538,7 +589,8 @@
     "MeetType": "Regular Season",
     "Status": "Complete",
     "Notes": "Results loaded from MileSplit team results page. Relay marks are verified, but the public formatted page did not expose the St. Andrew's relay lineups.",
-    "SourceUrl": "https://ga.milesplit.com/meets/718244-savannah-country-day-school-varsity-meet-5-2026/teams/28890"
+    "SourceUrl": "https://ga.milesplit.com/meets/718244-savannah-country-day-school-varsity-meet-5-2026/teams/28890",
+    "SourceCitation": "MileSplit, \"Savannah Country Day School Varsity Meet #5\", 2026-04-08, https://ga.milesplit.com/meets/718244-savannah-country-day-school-varsity-meet-5-2026/teams/28890."
   },
   {
     "MeetID": 2026042201,
@@ -557,7 +609,8 @@
       "Cook's sprint double gave the meet a place in school history. His 23.03 in the 200 moved within 0.15 of Andrew Smith's school record 22.88 from 2011, and his 11.44 in the 100 edged past the 11.45 mark credited to Miller Cook in 1980. He now sits third in school history and just 0.03 seconds behind Malcolm Williams-Green record from 2011.",
       "The other champions added their own history. Josiah Bowers tied Stephen Todd's 1981 high jump school mark of 5-6 earlier in the season and his 5-8 clearance from the region meet now firmly puts him first overall in school history. Aubri Rutledge's 27.11 in the 200 gave St. Andrew's another standout sprint performance that is just 0.26 seconds off Rebecca Suh's state championship run from 2014. Lane Mandel claimed the 1600 title even though she is in 8th grade and competing in the varsity competition.",
       "The supporting points made the team finishes possible. Janiyah Johnson placed second in the girls shot put with a personal best of 29-1.50 that puts her within sight of Mary Wilkowski's school record of 30-2. Carson Brown finished third in the girls 3200, Pat Jackson took second in the boys long jump, Nick Brown and Ian Willis both scored in distance events, and the boys relays added second in the 4x100, third in the 4x800, and fourth in the 4x400."
-    ]
+    ],
+    "SourceCitation": "MileSplit, \"GIAA Region 2-AAA Championships\", 2026-04-22, https://ga.milesplit.com/meets/744044-giaa-region-2-aaa-2026/teams/28890."
   },
   {
     "MeetID": 2026043001,
@@ -576,6 +629,7 @@
       "Cook broke Malcolm Williams-Green's boys 100-meter school record by running 11.39 in the prelims. Williams-Green's record of 11.41 had stood since 2015, and Cook's state mark continued a spring in which he had already moved into elite historical territory with his region sprint double.",
       "Rutledge delivered the other record-breaking performance with a 26.50 in the girls 200-meter prelims, moving past Rebecca Suh's 2014 school record of 26.85 by 0.35 seconds. She came back to finish fifth in the 200 final and eighth in the 100 final, giving the girls team five sprint points after also running 12.86 in the 100 prelims.",
       "Lane Mandel added the girls team's other four points by placing fifth in the 1600 with a 5:40.08, moving past Sarah Rodenberry's school record of 5:42.00 from 2002. Amari Cook scored in the boys 200 with a sixth-place finish, and the boys 4x100 relay added two more points by finishing seventh after qualifying through prelims."
-    ]
+    ],
+    "SourceCitation": "MileSplit, \"GIAA State Championships\", 2026-04-30, https://ga.milesplit.com/meets/755619-giaa-state-track-field-championships-class-aa-aaa-2026/teams/28890."
   }
 ]

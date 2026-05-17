@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
+import SourceMeta from "../../../archive/SourceMeta";
 import { recordTableStyles } from "../../basketball/pages/recordTableStyles";
 import { formatGameDate, formatSeasonLabel } from "../footballData";
 import {
@@ -509,6 +510,7 @@ export default function GameDetail() {
         ) : null}
 
         <GameRecap game={game} />
+        <SourceMeta record={game} />
         <GameBoxScore game={game} />
         <GameVideo game={game} />
       </div>
@@ -541,6 +543,7 @@ export default function GameDetail() {
           <span>{game.GameType || "—"}</span>
           {game.Venue ? <span>{game.Venue}</span> : null}
         </div>
+        <SourceMeta record={game} className="mx-auto max-w-3xl text-left" />
       </section>
 
       {error ? (

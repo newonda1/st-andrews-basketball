@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import SourceMeta from "../../archive/SourceMeta";
 import TennisTournamentBracket from "../components/TennisTournamentBracket";
 import {
   getTennisDateLabel,
@@ -494,6 +495,8 @@ export default function MatchPage({
       </div>
 
       <MatchHeader match={match} schoolMap={schoolMap} tournament={tournament} />
+
+      <SourceMeta record={match} />
 
       <MatchNotes match={match} playerMap={playerMap} />
 

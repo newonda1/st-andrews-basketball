@@ -1,0 +1,1614 @@
+[
+  {
+    "GameID": "20250807",
+    "Season": 2025,
+    "Categories": {
+      "Attacking": {
+        "SetsPlayed": 3,
+        "Kills": 25,
+        "KillsPerSet": 8.3,
+        "KillPct": 48.1,
+        "AttackAttempts": 52,
+        "AttackErrors": 11,
+        "HittingPct": 0.269
+      },
+      "Serving": {
+        "SetsPlayed": 3,
+        "Aces": 20,
+        "AcesPerSet": 6.7,
+        "AcePct": 27,
+        "ServeAttempts": 74,
+        "ServeErrors": 10,
+        "ServePct": 86.5,
+        "ServingPoints": 57
+      },
+      "Blocking": {
+        "SetsPlayed": 3,
+        "SoloBlocks": 0,
+        "BlockAssists": 0,
+        "TotalBlocks": 0,
+        "BlocksPerSet": 0,
+        "BlockErrors": 0
+      },
+      "Digging": {
+        "SetsPlayed": 3,
+        "Digs": 13,
+        "DigErrors": 0,
+        "DigsPerSet": 4.3
+      },
+      "Ball Handling": {
+        "SetsPlayed": 3,
+        "Assists": 22,
+        "AssistsPerSet": 7.3,
+        "BallHandlingAttempts": 48,
+        "BallHandlingErrors": 0
+      },
+      "Serve Receiving": {
+        "SetsPlayed": 3,
+        "Receptions": 22,
+        "ReceptionErrors": 2,
+        "ReceptionsPerSet": 7.3
+      }
+    }
+  },
+  {
+    "GameID": "20250809",
+    "Season": 2025,
+    "Categories": {
+      "Attacking": {
+        "SetsPlayed": 3,
+        "Kills": 15,
+        "KillsPerSet": 5,
+        "KillPct": 21.7,
+        "AttackAttempts": 69,
+        "AttackErrors": 14,
+        "HittingPct": 0.014
+      },
+      "Serving": {
+        "SetsPlayed": 3,
+        "Aces": 7,
+        "AcesPerSet": 2.3,
+        "AcePct": 17.5,
+        "ServeAttempts": 40,
+        "ServeErrors": 13,
+        "ServePct": 67.5,
+        "ServingPoints": 15
+      },
+      "Blocking": {
+        "SetsPlayed": 3,
+        "SoloBlocks": 0,
+        "BlockAssists": 0,
+        "TotalBlocks": 0,
+        "BlocksPerSet": 0,
+        "BlockErrors": 0
+      },
+      "Digging": {
+        "SetsPlayed": 3,
+        "Digs": 27,
+        "DigErrors": 0,
+        "DigsPerSet": 9
+      },
+      "Ball Handling": {
+        "SetsPlayed": 3,
+        "Assists": 14,
+        "AssistsPerSet": 4.7,
+        "BallHandlingAttempts": 64,
+        "BallHandlingErrors": 0
+      },
+      "Serve Receiving": {
+        "SetsPlayed": 3,
+        "Receptions": 42,
+        "ReceptionErrors": 7,
+        "ReceptionsPerSet": 14
+      }
+    }
+  },
+  {
+    "GameID": "20250809-1",
+    "Season": 2025,
+    "Categories": {
+      "Attacking": {
+        "SetsPlayed": 2,
+        "Kills": 1,
+        "KillsPerSet": 0.5,
+        "KillPct": 14.3,
+        "AttackAttempts": 7,
+        "AttackErrors": null,
+        "HittingPct": null
+      },
+      "Serving": {
+        "SetsPlayed": 2,
+        "Aces": null,
+        "AcesPerSet": null,
+        "AcePct": null,
+        "ServeAttempts": null,
+        "ServeErrors": null,
+        "ServePct": null,
+        "ServingPoints": null
+      },
+      "Blocking": {
+        "SetsPlayed": 2,
+        "SoloBlocks": null,
+        "BlockAssists": null,
+        "TotalBlocks": null,
+        "BlocksPerSet": null,
+        "BlockErrors": null
+      },
+      "Digging": {
+        "SetsPlayed": 2,
+        "Digs": null,
+        "DigErrors": null,
+        "DigsPerSet": null
+      },
+      "Ball Handling": {
+        "SetsPlayed": 2,
+        "Assists": null,
+        "AssistsPerSet": null,
+        "BallHandlingAttempts": null,
+        "BallHandlingErrors": null
+      },
+      "Serve Receiving": {
+        "SetsPlayed": 2,
+        "Receptions": null,
+        "ReceptionErrors": null,
+        "ReceptionsPerSet": null
+      }
+    }
+  },
+  {
+    "GameID": "20250809-2",
+    "Season": 2025,
+    "Categories": {
+      "Attacking": {
+        "SetsPlayed": 2,
+        "Kills": 8,
+        "KillsPerSet": 4,
+        "KillPct": 13.6,
+        "AttackAttempts": 59,
+        "AttackErrors": 16,
+        "HittingPct": -0.136
+      },
+      "Serving": {
+        "SetsPlayed": 2,
+        "Aces": 4,
+        "AcesPerSet": 2,
+        "AcePct": 12.5,
+        "ServeAttempts": 32,
+        "ServeErrors": 8,
+        "ServePct": 75,
+        "ServingPoints": 14
+      },
+      "Blocking": {
+        "SetsPlayed": 2,
+        "SoloBlocks": 0,
+        "BlockAssists": 2,
+        "TotalBlocks": 1,
+        "BlocksPerSet": 0.5,
+        "BlockErrors": 0
+      },
+      "Digging": {
+        "SetsPlayed": 2,
+        "Digs": 25,
+        "DigErrors": 0,
+        "DigsPerSet": 12.5
+      },
+      "Ball Handling": {
+        "SetsPlayed": 2,
+        "Assists": 6,
+        "AssistsPerSet": 3,
+        "BallHandlingAttempts": 52,
+        "BallHandlingErrors": 3
+      },
+      "Serve Receiving": {
+        "SetsPlayed": 2,
+        "Receptions": 37,
+        "ReceptionErrors": 4,
+        "ReceptionsPerSet": 18.5
+      }
+    }
+  },
+  {
+    "GameID": "20250809-3",
+    "Season": 2025,
+    "Categories": {
+      "Attacking": {
+        "SetsPlayed": 2,
+        "Kills": 24,
+        "KillsPerSet": 12,
+        "KillPct": 42.1,
+        "AttackAttempts": 57,
+        "AttackErrors": 9,
+        "HittingPct": 0.263
+      },
+      "Serving": {
+        "SetsPlayed": 2,
+        "Aces": 14,
+        "AcesPerSet": 7,
+        "AcePct": 28.6,
+        "ServeAttempts": 49,
+        "ServeErrors": 6,
+        "ServePct": 87.8,
+        "ServingPoints": 34
+      },
+      "Blocking": {
+        "SetsPlayed": 2,
+        "SoloBlocks": 0,
+        "BlockAssists": 2,
+        "TotalBlocks": 1,
+        "BlocksPerSet": 0.5,
+        "BlockErrors": 0
+      },
+      "Digging": {
+        "SetsPlayed": 2,
+        "Digs": 19,
+        "DigErrors": 0,
+        "DigsPerSet": 9.5
+      },
+      "Ball Handling": {
+        "SetsPlayed": 2,
+        "Assists": 21,
+        "AssistsPerSet": 10.5,
+        "BallHandlingAttempts": 49,
+        "BallHandlingErrors": 0
+      },
+      "Serve Receiving": {
+        "SetsPlayed": 2,
+        "Receptions": 23,
+        "ReceptionErrors": 1,
+        "ReceptionsPerSet": 11.5
+      }
+    }
+  },
+  {
+    "GameID": "20250809-4",
+    "Season": 2025,
+    "Categories": {
+      "Attacking": {
+        "SetsPlayed": 2,
+        "Kills": 28,
+        "KillsPerSet": 14,
+        "KillPct": 57.1,
+        "AttackAttempts": 49,
+        "AttackErrors": 8,
+        "HittingPct": 0.408
+      },
+      "Serving": {
+        "SetsPlayed": 2,
+        "Aces": 5,
+        "AcesPerSet": 2.5,
+        "AcePct": 10.2,
+        "ServeAttempts": 49,
+        "ServeErrors": 7,
+        "ServePct": 85.7,
+        "ServingPoints": 24
+      },
+      "Blocking": {
+        "SetsPlayed": 2,
+        "SoloBlocks": 0,
+        "BlockAssists": 4,
+        "TotalBlocks": 2,
+        "BlocksPerSet": 1,
+        "BlockErrors": 0
+      },
+      "Digging": {
+        "SetsPlayed": 2,
+        "Digs": 19,
+        "DigErrors": 0,
+        "DigsPerSet": 9.5
+      },
+      "Ball Handling": {
+        "SetsPlayed": 2,
+        "Assists": 26,
+        "AssistsPerSet": 13,
+        "BallHandlingAttempts": 42,
+        "BallHandlingErrors": 0
+      },
+      "Serve Receiving": {
+        "SetsPlayed": 2,
+        "Receptions": 26,
+        "ReceptionErrors": 3,
+        "ReceptionsPerSet": 13
+      }
+    }
+  },
+  {
+    "GameID": "20250809-5",
+    "Season": 2025,
+    "Categories": {
+      "Attacking": {
+        "SetsPlayed": 2,
+        "Kills": 19,
+        "KillsPerSet": 9.5,
+        "KillPct": 27.9,
+        "AttackAttempts": 68,
+        "AttackErrors": 17,
+        "HittingPct": 0.029
+      },
+      "Serving": {
+        "SetsPlayed": 2,
+        "Aces": 5,
+        "AcesPerSet": 2.5,
+        "AcePct": 11.4,
+        "ServeAttempts": 44,
+        "ServeErrors": 7,
+        "ServePct": 84.1,
+        "ServingPoints": 21
+      },
+      "Blocking": {
+        "SetsPlayed": 2,
+        "SoloBlocks": 0,
+        "BlockAssists": 2,
+        "TotalBlocks": 1,
+        "BlocksPerSet": 0.5,
+        "BlockErrors": 0
+      },
+      "Digging": {
+        "SetsPlayed": 2,
+        "Digs": 22,
+        "DigErrors": 0,
+        "DigsPerSet": 11
+      },
+      "Ball Handling": {
+        "SetsPlayed": 2,
+        "Assists": 16,
+        "AssistsPerSet": 8,
+        "BallHandlingAttempts": 64,
+        "BallHandlingErrors": 0
+      },
+      "Serve Receiving": {
+        "SetsPlayed": 2,
+        "Receptions": 34,
+        "ReceptionErrors": 7,
+        "ReceptionsPerSet": 17
+      }
+    }
+  },
+  {
+    "GameID": "20250812",
+    "Season": 2025,
+    "Categories": {
+      "Attacking": {
+        "SetsPlayed": 2,
+        "Kills": 18,
+        "KillsPerSet": 9,
+        "KillPct": null,
+        "AttackAttempts": null,
+        "AttackErrors": 18,
+        "HittingPct": null
+      },
+      "Serving": {
+        "SetsPlayed": 2,
+        "Aces": 5,
+        "AcesPerSet": 2.5,
+        "AcePct": null,
+        "ServeAttempts": 34,
+        "ServeErrors": 6,
+        "ServePct": 82.4,
+        "ServingPoints": null
+      },
+      "Blocking": {
+        "SetsPlayed": 2,
+        "SoloBlocks": null,
+        "BlockAssists": null,
+        "TotalBlocks": null,
+        "BlocksPerSet": null,
+        "BlockErrors": null
+      },
+      "Digging": {
+        "SetsPlayed": 2,
+        "Digs": 25,
+        "DigErrors": null,
+        "DigsPerSet": 12.5
+      },
+      "Ball Handling": {
+        "SetsPlayed": 2,
+        "Assists": 17,
+        "AssistsPerSet": 8.5,
+        "BallHandlingAttempts": null,
+        "BallHandlingErrors": null
+      },
+      "Serve Receiving": {
+        "SetsPlayed": 2,
+        "Receptions": 24,
+        "ReceptionErrors": 21,
+        "ReceptionsPerSet": 12
+      }
+    }
+  },
+  {
+    "GameID": "20250812-1",
+    "Season": 2025,
+    "Categories": {
+      "Attacking": {
+        "SetsPlayed": 3,
+        "Kills": 22,
+        "KillsPerSet": 7.3,
+        "KillPct": 31.9,
+        "AttackAttempts": 69,
+        "AttackErrors": 7,
+        "HittingPct": 0.217
+      },
+      "Serving": {
+        "SetsPlayed": 3,
+        "Aces": 5,
+        "AcesPerSet": 1.7,
+        "AcePct": 8.5,
+        "ServeAttempts": 59,
+        "ServeErrors": 12,
+        "ServePct": 79.7,
+        "ServingPoints": 27
+      },
+      "Blocking": {
+        "SetsPlayed": 3,
+        "SoloBlocks": 2,
+        "BlockAssists": 0,
+        "TotalBlocks": 2,
+        "BlocksPerSet": 0.7,
+        "BlockErrors": 0
+      },
+      "Digging": {
+        "SetsPlayed": 3,
+        "Digs": 31,
+        "DigErrors": 0,
+        "DigsPerSet": 10.3
+      },
+      "Ball Handling": {
+        "SetsPlayed": 3,
+        "Assists": 19,
+        "AssistsPerSet": 6.3,
+        "BallHandlingAttempts": 65,
+        "BallHandlingErrors": 1
+      },
+      "Serve Receiving": {
+        "SetsPlayed": 3,
+        "Receptions": 37,
+        "ReceptionErrors": 6,
+        "ReceptionsPerSet": 12.3
+      }
+    }
+  },
+  {
+    "GameID": "20250814",
+    "Season": 2025,
+    "Categories": {
+      "Attacking": {
+        "SetsPlayed": 3,
+        "Kills": 31,
+        "KillsPerSet": 10.3,
+        "KillPct": 43.1,
+        "AttackAttempts": 72,
+        "AttackErrors": 16,
+        "HittingPct": 0.208
+      },
+      "Serving": {
+        "SetsPlayed": 3,
+        "Aces": 16,
+        "AcesPerSet": 5.3,
+        "AcePct": 21.6,
+        "ServeAttempts": 74,
+        "ServeErrors": 12,
+        "ServePct": 83.8,
+        "ServingPoints": 50
+      },
+      "Blocking": {
+        "SetsPlayed": 3,
+        "SoloBlocks": 0,
+        "BlockAssists": 0,
+        "TotalBlocks": 0,
+        "BlocksPerSet": 0,
+        "BlockErrors": 0
+      },
+      "Digging": {
+        "SetsPlayed": 3,
+        "Digs": 14,
+        "DigErrors": 0,
+        "DigsPerSet": 4.7
+      },
+      "Ball Handling": {
+        "SetsPlayed": 3,
+        "Assists": 28,
+        "AssistsPerSet": 9.3,
+        "BallHandlingAttempts": 66,
+        "BallHandlingErrors": 1
+      },
+      "Serve Receiving": {
+        "SetsPlayed": 3,
+        "Receptions": 27,
+        "ReceptionErrors": 0,
+        "ReceptionsPerSet": 9
+      }
+    }
+  },
+  {
+    "GameID": "20250819",
+    "Season": 2025,
+    "Categories": {
+      "Attacking": {
+        "SetsPlayed": 3,
+        "Kills": 17,
+        "KillsPerSet": 5.7,
+        "KillPct": 21.8,
+        "AttackAttempts": 78,
+        "AttackErrors": 24,
+        "HittingPct": -0.09
+      },
+      "Serving": {
+        "SetsPlayed": 3,
+        "Aces": 6,
+        "AcesPerSet": 2,
+        "AcePct": 14,
+        "ServeAttempts": 43,
+        "ServeErrors": 8,
+        "ServePct": 81.4,
+        "ServingPoints": 16
+      },
+      "Blocking": {
+        "SetsPlayed": 3,
+        "SoloBlocks": 1,
+        "BlockAssists": 12,
+        "TotalBlocks": 7,
+        "BlocksPerSet": 2.3,
+        "BlockErrors": 0
+      },
+      "Digging": {
+        "SetsPlayed": 3,
+        "Digs": 25,
+        "DigErrors": 0,
+        "DigsPerSet": 8.3
+      },
+      "Ball Handling": {
+        "SetsPlayed": 3,
+        "Assists": 16,
+        "AssistsPerSet": 5.3,
+        "BallHandlingAttempts": 70,
+        "BallHandlingErrors": 1
+      },
+      "Serve Receiving": {
+        "SetsPlayed": 3,
+        "Receptions": 45,
+        "ReceptionErrors": 9,
+        "ReceptionsPerSet": 15
+      }
+    }
+  },
+  {
+    "GameID": "20250819-1",
+    "Season": 2025,
+    "Categories": {
+      "Attacking": {
+        "SetsPlayed": 2,
+        "Kills": 20,
+        "KillsPerSet": 10,
+        "KillPct": 30.8,
+        "AttackAttempts": 65,
+        "AttackErrors": 11,
+        "HittingPct": 0.138
+      },
+      "Serving": {
+        "SetsPlayed": 2,
+        "Aces": 15,
+        "AcesPerSet": 7.5,
+        "AcePct": 30.6,
+        "ServeAttempts": 49,
+        "ServeErrors": 10,
+        "ServePct": 79.6,
+        "ServingPoints": 33
+      },
+      "Blocking": {
+        "SetsPlayed": 2,
+        "SoloBlocks": 0,
+        "BlockAssists": 2,
+        "TotalBlocks": 1,
+        "BlocksPerSet": 0.5,
+        "BlockErrors": 0
+      },
+      "Digging": {
+        "SetsPlayed": 2,
+        "Digs": 31,
+        "DigErrors": 0,
+        "DigsPerSet": 15.5
+      },
+      "Ball Handling": {
+        "SetsPlayed": 2,
+        "Assists": 19,
+        "AssistsPerSet": 9.5,
+        "BallHandlingAttempts": 63,
+        "BallHandlingErrors": 2
+      },
+      "Serve Receiving": {
+        "SetsPlayed": 2,
+        "Receptions": 24,
+        "ReceptionErrors": 5,
+        "ReceptionsPerSet": 12
+      }
+    }
+  },
+  {
+    "GameID": "20250821",
+    "Season": 2025,
+    "Categories": {
+      "Attacking": {
+        "SetsPlayed": 3,
+        "Kills": 24,
+        "KillsPerSet": 8,
+        "KillPct": 30.4,
+        "AttackAttempts": 79,
+        "AttackErrors": 14,
+        "HittingPct": 0.127
+      },
+      "Serving": {
+        "SetsPlayed": 3,
+        "Aces": 26,
+        "AcesPerSet": 8.7,
+        "AcePct": 35.6,
+        "ServeAttempts": 73,
+        "ServeErrors": 9,
+        "ServePct": 87.7,
+        "ServingPoints": 46
+      },
+      "Blocking": {
+        "SetsPlayed": 3,
+        "SoloBlocks": 0,
+        "BlockAssists": 4,
+        "TotalBlocks": 2,
+        "BlocksPerSet": 0.7,
+        "BlockErrors": 0
+      },
+      "Digging": {
+        "SetsPlayed": 3,
+        "Digs": 27,
+        "DigErrors": 0,
+        "DigsPerSet": 9
+      },
+      "Ball Handling": {
+        "SetsPlayed": 3,
+        "Assists": 21,
+        "AssistsPerSet": 7,
+        "BallHandlingAttempts": 74,
+        "BallHandlingErrors": 0
+      },
+      "Serve Receiving": {
+        "SetsPlayed": 3,
+        "Receptions": 41,
+        "ReceptionErrors": 1,
+        "ReceptionsPerSet": 13.7
+      }
+    }
+  },
+  {
+    "GameID": "20250825",
+    "Season": 2025,
+    "Categories": {
+      "Attacking": {
+        "SetsPlayed": 2,
+        "Kills": 19,
+        "KillsPerSet": 9.5,
+        "KillPct": 35.2,
+        "AttackAttempts": 54,
+        "AttackErrors": 10,
+        "HittingPct": 0.167
+      },
+      "Serving": {
+        "SetsPlayed": 2,
+        "Aces": 7,
+        "AcesPerSet": 3.5,
+        "AcePct": 14.3,
+        "ServeAttempts": 49,
+        "ServeErrors": 9,
+        "ServePct": 81.6,
+        "ServingPoints": 30
+      },
+      "Blocking": {
+        "SetsPlayed": 2,
+        "SoloBlocks": 0,
+        "BlockAssists": 2,
+        "TotalBlocks": 1,
+        "BlocksPerSet": 0.5,
+        "BlockErrors": 0
+      },
+      "Digging": {
+        "SetsPlayed": 2,
+        "Digs": 13,
+        "DigErrors": 0,
+        "DigsPerSet": 6.5
+      },
+      "Ball Handling": {
+        "SetsPlayed": 2,
+        "Assists": 18,
+        "AssistsPerSet": 9,
+        "BallHandlingAttempts": 50,
+        "BallHandlingErrors": 2
+      },
+      "Serve Receiving": {
+        "SetsPlayed": 2,
+        "Receptions": 23,
+        "ReceptionErrors": 1,
+        "ReceptionsPerSet": 11.5
+      }
+    }
+  },
+  {
+    "GameID": "20250825-1",
+    "Season": 2025,
+    "Categories": {
+      "Attacking": {
+        "SetsPlayed": 2,
+        "Kills": 11,
+        "KillsPerSet": 5.5,
+        "KillPct": 24.4,
+        "AttackAttempts": 45,
+        "AttackErrors": 15,
+        "HittingPct": -0.089
+      },
+      "Serving": {
+        "SetsPlayed": 2,
+        "Aces": 3,
+        "AcesPerSet": 1.5,
+        "AcePct": 9.7,
+        "ServeAttempts": 31,
+        "ServeErrors": 9,
+        "ServePct": 71,
+        "ServingPoints": 8
+      },
+      "Blocking": {
+        "SetsPlayed": 2,
+        "SoloBlocks": 0,
+        "BlockAssists": 0,
+        "TotalBlocks": 0,
+        "BlocksPerSet": 0,
+        "BlockErrors": 0
+      },
+      "Digging": {
+        "SetsPlayed": 2,
+        "Digs": 17,
+        "DigErrors": 0,
+        "DigsPerSet": 8.5
+      },
+      "Ball Handling": {
+        "SetsPlayed": 2,
+        "Assists": 10,
+        "AssistsPerSet": 5,
+        "BallHandlingAttempts": 44,
+        "BallHandlingErrors": 1
+      },
+      "Serve Receiving": {
+        "SetsPlayed": 2,
+        "Receptions": 33,
+        "ReceptionErrors": 4,
+        "ReceptionsPerSet": 16.5
+      }
+    }
+  },
+  {
+    "GameID": "20250827",
+    "Season": 2025,
+    "Categories": {
+      "Attacking": {
+        "SetsPlayed": 3,
+        "Kills": 34,
+        "KillsPerSet": 11.3,
+        "KillPct": 40.5,
+        "AttackAttempts": 84,
+        "AttackErrors": 24,
+        "HittingPct": 0.119
+      },
+      "Serving": {
+        "SetsPlayed": 3,
+        "Aces": 7,
+        "AcesPerSet": 2.3,
+        "AcePct": 9.1,
+        "ServeAttempts": 77,
+        "ServeErrors": 12,
+        "ServePct": 84.4,
+        "ServingPoints": 43
+      },
+      "Blocking": {
+        "SetsPlayed": 3,
+        "SoloBlocks": 1,
+        "BlockAssists": 0,
+        "TotalBlocks": 1,
+        "BlocksPerSet": 0.3,
+        "BlockErrors": 0
+      },
+      "Digging": {
+        "SetsPlayed": 3,
+        "Digs": 33,
+        "DigErrors": 0,
+        "DigsPerSet": 11
+      },
+      "Ball Handling": {
+        "SetsPlayed": 3,
+        "Assists": 32,
+        "AssistsPerSet": 10.7,
+        "BallHandlingAttempts": 81,
+        "BallHandlingErrors": 2
+      },
+      "Serve Receiving": {
+        "SetsPlayed": 3,
+        "Receptions": 41,
+        "ReceptionErrors": 8,
+        "ReceptionsPerSet": 13.7
+      }
+    }
+  },
+  {
+    "GameID": "20250829",
+    "Season": 2025,
+    "Categories": {
+      "Attacking": {
+        "SetsPlayed": 3,
+        "Kills": 25,
+        "KillsPerSet": 8.3,
+        "KillPct": 30.9,
+        "AttackAttempts": 81,
+        "AttackErrors": 17,
+        "HittingPct": 0.099
+      },
+      "Serving": {
+        "SetsPlayed": 3,
+        "Aces": 9,
+        "AcesPerSet": 3,
+        "AcePct": 15.8,
+        "ServeAttempts": 57,
+        "ServeErrors": 12,
+        "ServePct": 78.9,
+        "ServingPoints": 25
+      },
+      "Blocking": {
+        "SetsPlayed": 3,
+        "SoloBlocks": 1,
+        "BlockAssists": 0,
+        "TotalBlocks": 1,
+        "BlocksPerSet": 0.3,
+        "BlockErrors": 0
+      },
+      "Digging": {
+        "SetsPlayed": 3,
+        "Digs": 31,
+        "DigErrors": 0,
+        "DigsPerSet": 10.3
+      },
+      "Ball Handling": {
+        "SetsPlayed": 3,
+        "Assists": 21,
+        "AssistsPerSet": 7,
+        "BallHandlingAttempts": 71,
+        "BallHandlingErrors": 0
+      },
+      "Serve Receiving": {
+        "SetsPlayed": 3,
+        "Receptions": 44,
+        "ReceptionErrors": 6,
+        "ReceptionsPerSet": 14.7
+      }
+    }
+  },
+  {
+    "GameID": "20250829-1",
+    "Season": 2025,
+    "Categories": {
+      "Attacking": {
+        "SetsPlayed": 2,
+        "Kills": 26,
+        "KillsPerSet": 13,
+        "KillPct": 51,
+        "AttackAttempts": 51,
+        "AttackErrors": 6,
+        "HittingPct": 0.392
+      },
+      "Serving": {
+        "SetsPlayed": 2,
+        "Aces": 13,
+        "AcesPerSet": 6.5,
+        "AcePct": 26,
+        "ServeAttempts": 50,
+        "ServeErrors": 10,
+        "ServePct": 80,
+        "ServingPoints": 32
+      },
+      "Blocking": {
+        "SetsPlayed": 2,
+        "SoloBlocks": 0,
+        "BlockAssists": 0,
+        "TotalBlocks": 0,
+        "BlocksPerSet": 0,
+        "BlockErrors": 0
+      },
+      "Digging": {
+        "SetsPlayed": 2,
+        "Digs": 23,
+        "DigErrors": 0,
+        "DigsPerSet": 11.5
+      },
+      "Ball Handling": {
+        "SetsPlayed": 2,
+        "Assists": 26,
+        "AssistsPerSet": 13,
+        "BallHandlingAttempts": 48,
+        "BallHandlingErrors": 0
+      },
+      "Serve Receiving": {
+        "SetsPlayed": 2,
+        "Receptions": 27,
+        "ReceptionErrors": 3,
+        "ReceptionsPerSet": 13.5
+      }
+    }
+  },
+  {
+    "GameID": "20250902",
+    "Season": 2025,
+    "Categories": {
+      "Attacking": {
+        "SetsPlayed": 2,
+        "Kills": 27,
+        "KillsPerSet": 13.5,
+        "KillPct": 43.5,
+        "AttackAttempts": 62,
+        "AttackErrors": 15,
+        "HittingPct": 0.194
+      },
+      "Serving": {
+        "SetsPlayed": 2,
+        "Aces": 9,
+        "AcesPerSet": 4.5,
+        "AcePct": 18.4,
+        "ServeAttempts": 49,
+        "ServeErrors": 5,
+        "ServePct": 89.8,
+        "ServingPoints": 27
+      },
+      "Blocking": {
+        "SetsPlayed": 2,
+        "SoloBlocks": 0,
+        "BlockAssists": 0,
+        "TotalBlocks": 0,
+        "BlocksPerSet": 0,
+        "BlockErrors": 0
+      },
+      "Digging": {
+        "SetsPlayed": 2,
+        "Digs": 23,
+        "DigErrors": 0,
+        "DigsPerSet": 11.5
+      },
+      "Ball Handling": {
+        "SetsPlayed": 2,
+        "Assists": 26,
+        "AssistsPerSet": 13,
+        "BallHandlingAttempts": 61,
+        "BallHandlingErrors": 1
+      },
+      "Serve Receiving": {
+        "SetsPlayed": 2,
+        "Receptions": 35,
+        "ReceptionErrors": 2,
+        "ReceptionsPerSet": 17.5
+      }
+    }
+  },
+  {
+    "GameID": "20250902-1",
+    "Season": 2025,
+    "Categories": {
+      "Attacking": {
+        "SetsPlayed": 2,
+        "Kills": 16,
+        "KillsPerSet": 8,
+        "KillPct": 33.3,
+        "AttackAttempts": 48,
+        "AttackErrors": 12,
+        "HittingPct": 0.083
+      },
+      "Serving": {
+        "SetsPlayed": 2,
+        "Aces": 11,
+        "AcesPerSet": 5.5,
+        "AcePct": 22.9,
+        "ServeAttempts": 48,
+        "ServeErrors": 13,
+        "ServePct": 72.9,
+        "ServingPoints": 30
+      },
+      "Blocking": {
+        "SetsPlayed": 2,
+        "SoloBlocks": 1,
+        "BlockAssists": 0,
+        "TotalBlocks": 1,
+        "BlocksPerSet": 0.5,
+        "BlockErrors": 0
+      },
+      "Digging": {
+        "SetsPlayed": 2,
+        "Digs": 12,
+        "DigErrors": 0,
+        "DigsPerSet": 6
+      },
+      "Ball Handling": {
+        "SetsPlayed": 2,
+        "Assists": 16,
+        "AssistsPerSet": 8,
+        "BallHandlingAttempts": 47,
+        "BallHandlingErrors": 0
+      },
+      "Serve Receiving": {
+        "SetsPlayed": 2,
+        "Receptions": 24,
+        "ReceptionErrors": 2,
+        "ReceptionsPerSet": 12
+      }
+    }
+  },
+  {
+    "GameID": "20250904",
+    "Season": 2025,
+    "Categories": {
+      "Attacking": {
+        "SetsPlayed": 3,
+        "Kills": 27,
+        "KillsPerSet": 9,
+        "KillPct": 29.7,
+        "AttackAttempts": 91,
+        "AttackErrors": 23,
+        "HittingPct": 0.044
+      },
+      "Serving": {
+        "SetsPlayed": 3,
+        "Aces": 10,
+        "AcesPerSet": 3.3,
+        "AcePct": 15.6,
+        "ServeAttempts": 64,
+        "ServeErrors": 7,
+        "ServePct": 89.1,
+        "ServingPoints": 30
+      },
+      "Blocking": {
+        "SetsPlayed": 3,
+        "SoloBlocks": 0,
+        "BlockAssists": 0,
+        "TotalBlocks": 0,
+        "BlocksPerSet": 0,
+        "BlockErrors": 0
+      },
+      "Digging": {
+        "SetsPlayed": 3,
+        "Digs": 44,
+        "DigErrors": 0,
+        "DigsPerSet": 14.7
+      },
+      "Ball Handling": {
+        "SetsPlayed": 3,
+        "Assists": 27,
+        "AssistsPerSet": 9,
+        "BallHandlingAttempts": 91,
+        "BallHandlingErrors": 0
+      },
+      "Serve Receiving": {
+        "SetsPlayed": 3,
+        "Receptions": 52,
+        "ReceptionErrors": 9,
+        "ReceptionsPerSet": 17.3
+      }
+    }
+  },
+  {
+    "GameID": "20250908",
+    "Season": 2025,
+    "Categories": {
+      "Attacking": {
+        "SetsPlayed": 3,
+        "Kills": 36,
+        "KillsPerSet": 12,
+        "KillPct": 50.7,
+        "AttackAttempts": 71,
+        "AttackErrors": 19,
+        "HittingPct": 0.239
+      },
+      "Serving": {
+        "SetsPlayed": 3,
+        "Aces": 24,
+        "AcesPerSet": 8,
+        "AcePct": 32.4,
+        "ServeAttempts": 74,
+        "ServeErrors": 10,
+        "ServePct": 86.5,
+        "ServingPoints": 49
+      },
+      "Blocking": {
+        "SetsPlayed": 3,
+        "SoloBlocks": 0,
+        "BlockAssists": 0,
+        "TotalBlocks": 0,
+        "BlocksPerSet": 0,
+        "BlockErrors": 0
+      },
+      "Digging": {
+        "SetsPlayed": 3,
+        "Digs": 14,
+        "DigErrors": 0,
+        "DigsPerSet": 4.7
+      },
+      "Ball Handling": {
+        "SetsPlayed": 3,
+        "Assists": 33,
+        "AssistsPerSet": 11,
+        "BallHandlingAttempts": 66,
+        "BallHandlingErrors": 2
+      },
+      "Serve Receiving": {
+        "SetsPlayed": 3,
+        "Receptions": 33,
+        "ReceptionErrors": 4,
+        "ReceptionsPerSet": 11
+      }
+    }
+  },
+  {
+    "GameID": "20250911",
+    "Season": 2025,
+    "Categories": {
+      "Attacking": {
+        "SetsPlayed": 3,
+        "Kills": 22,
+        "KillsPerSet": 7.3,
+        "KillPct": 36.7,
+        "AttackAttempts": 60,
+        "AttackErrors": 10,
+        "HittingPct": 0.2
+      },
+      "Serving": {
+        "SetsPlayed": 3,
+        "Aces": 24,
+        "AcesPerSet": 8,
+        "AcePct": 32,
+        "ServeAttempts": 75,
+        "ServeErrors": 16,
+        "ServePct": 78.7,
+        "ServingPoints": 49
+      },
+      "Blocking": {
+        "SetsPlayed": 3,
+        "SoloBlocks": 0,
+        "BlockAssists": 0,
+        "TotalBlocks": 0,
+        "BlocksPerSet": 0,
+        "BlockErrors": 0
+      },
+      "Digging": {
+        "SetsPlayed": 3,
+        "Digs": 18,
+        "DigErrors": 0,
+        "DigsPerSet": 6
+      },
+      "Ball Handling": {
+        "SetsPlayed": 3,
+        "Assists": 21,
+        "AssistsPerSet": 7,
+        "BallHandlingAttempts": 56,
+        "BallHandlingErrors": 2
+      },
+      "Serve Receiving": {
+        "SetsPlayed": 3,
+        "Receptions": 28,
+        "ReceptionErrors": 8,
+        "ReceptionsPerSet": 9.3
+      }
+    }
+  },
+  {
+    "GameID": "20250924",
+    "Season": 2025,
+    "Categories": {
+      "Attacking": {
+        "SetsPlayed": 2,
+        "Kills": 17,
+        "KillsPerSet": 8.5,
+        "KillPct": 35.4,
+        "AttackAttempts": 48,
+        "AttackErrors": 11,
+        "HittingPct": 0.125
+      },
+      "Serving": {
+        "SetsPlayed": 2,
+        "Aces": 15,
+        "AcesPerSet": 7.5,
+        "AcePct": 30.6,
+        "ServeAttempts": 49,
+        "ServeErrors": 9,
+        "ServePct": 81.6,
+        "ServingPoints": 33
+      },
+      "Blocking": {
+        "SetsPlayed": 2,
+        "SoloBlocks": 0,
+        "BlockAssists": 0,
+        "TotalBlocks": 0,
+        "BlocksPerSet": 0,
+        "BlockErrors": 0
+      },
+      "Digging": {
+        "SetsPlayed": 2,
+        "Digs": 15,
+        "DigErrors": 0,
+        "DigsPerSet": 7.5
+      },
+      "Ball Handling": {
+        "SetsPlayed": 2,
+        "Assists": 15,
+        "AssistsPerSet": 7.5,
+        "BallHandlingAttempts": 44,
+        "BallHandlingErrors": 0
+      },
+      "Serve Receiving": {
+        "SetsPlayed": 2,
+        "Receptions": 21,
+        "ReceptionErrors": 2,
+        "ReceptionsPerSet": 10.5
+      }
+    }
+  },
+  {
+    "GameID": "20250924-1",
+    "Season": 2025,
+    "Categories": {
+      "Attacking": {
+        "SetsPlayed": 3,
+        "Kills": 20,
+        "KillsPerSet": 6.7,
+        "KillPct": 28.2,
+        "AttackAttempts": 71,
+        "AttackErrors": 11,
+        "HittingPct": 0.127
+      },
+      "Serving": {
+        "SetsPlayed": 3,
+        "Aces": 9,
+        "AcesPerSet": 3,
+        "AcePct": 14.3,
+        "ServeAttempts": 63,
+        "ServeErrors": 8,
+        "ServePct": 87.3,
+        "ServingPoints": 40
+      },
+      "Blocking": {
+        "SetsPlayed": 3,
+        "SoloBlocks": 1,
+        "BlockAssists": 0,
+        "TotalBlocks": 1,
+        "BlocksPerSet": 0.3,
+        "BlockErrors": 0
+      },
+      "Digging": {
+        "SetsPlayed": 3,
+        "Digs": 41,
+        "DigErrors": 0,
+        "DigsPerSet": 13.7
+      },
+      "Ball Handling": {
+        "SetsPlayed": 3,
+        "Assists": 20,
+        "AssistsPerSet": 6.7,
+        "BallHandlingAttempts": 69,
+        "BallHandlingErrors": 3
+      },
+      "Serve Receiving": {
+        "SetsPlayed": 3,
+        "Receptions": 25,
+        "ReceptionErrors": 7,
+        "ReceptionsPerSet": 8.3
+      }
+    }
+  },
+  {
+    "GameID": "20250926",
+    "Season": 2025,
+    "Categories": {
+      "Attacking": {
+        "SetsPlayed": 2,
+        "Kills": 27,
+        "KillsPerSet": 13.5,
+        "KillPct": 35.1,
+        "AttackAttempts": 77,
+        "AttackErrors": 14,
+        "HittingPct": 0.169
+      },
+      "Serving": {
+        "SetsPlayed": 2,
+        "Aces": 6,
+        "AcesPerSet": 3,
+        "AcePct": 12,
+        "ServeAttempts": 50,
+        "ServeErrors": 7,
+        "ServePct": 86,
+        "ServingPoints": 22
+      },
+      "Blocking": {
+        "SetsPlayed": 2,
+        "SoloBlocks": 2,
+        "BlockAssists": 2,
+        "TotalBlocks": 3,
+        "BlocksPerSet": 1.5,
+        "BlockErrors": 0
+      },
+      "Digging": {
+        "SetsPlayed": 2,
+        "Digs": 29,
+        "DigErrors": 0,
+        "DigsPerSet": 14.5
+      },
+      "Ball Handling": {
+        "SetsPlayed": 2,
+        "Assists": 26,
+        "AssistsPerSet": 13,
+        "BallHandlingAttempts": 72,
+        "BallHandlingErrors": 0
+      },
+      "Serve Receiving": {
+        "SetsPlayed": 2,
+        "Receptions": 41,
+        "ReceptionErrors": 2,
+        "ReceptionsPerSet": 20.5
+      }
+    }
+  },
+  {
+    "GameID": "20250926-1",
+    "Season": 2025,
+    "Categories": {
+      "Attacking": {
+        "SetsPlayed": 3,
+        "Kills": 28,
+        "KillsPerSet": 9.3,
+        "KillPct": 28.6,
+        "AttackAttempts": 98,
+        "AttackErrors": 25,
+        "HittingPct": 0.031
+      },
+      "Serving": {
+        "SetsPlayed": 3,
+        "Aces": 8,
+        "AcesPerSet": 2.7,
+        "AcePct": 14,
+        "ServeAttempts": 57,
+        "ServeErrors": 6,
+        "ServePct": 89.5,
+        "ServingPoints": 25
+      },
+      "Blocking": {
+        "SetsPlayed": 3,
+        "SoloBlocks": 0,
+        "BlockAssists": 0,
+        "TotalBlocks": 0,
+        "BlocksPerSet": 0,
+        "BlockErrors": 0
+      },
+      "Digging": {
+        "SetsPlayed": 3,
+        "Digs": 52,
+        "DigErrors": 0,
+        "DigsPerSet": 17.3
+      },
+      "Ball Handling": {
+        "SetsPlayed": 3,
+        "Assists": 26,
+        "AssistsPerSet": 8.7,
+        "BallHandlingAttempts": 93,
+        "BallHandlingErrors": 2
+      },
+      "Serve Receiving": {
+        "SetsPlayed": 3,
+        "Receptions": 47,
+        "ReceptionErrors": 4,
+        "ReceptionsPerSet": 15.7
+      }
+    }
+  },
+  {
+    "GameID": "20250927",
+    "Season": 2025,
+    "Categories": {
+      "Attacking": {
+        "SetsPlayed": 2,
+        "Kills": 25,
+        "KillsPerSet": 12.5,
+        "KillPct": 32.9,
+        "AttackAttempts": 76,
+        "AttackErrors": 12,
+        "HittingPct": 0.171
+      },
+      "Serving": {
+        "SetsPlayed": 2,
+        "Aces": 4,
+        "AcesPerSet": 2,
+        "AcePct": 8.3,
+        "ServeAttempts": 48,
+        "ServeErrors": 5,
+        "ServePct": 89.6,
+        "ServingPoints": 27
+      },
+      "Blocking": {
+        "SetsPlayed": 2,
+        "SoloBlocks": 0,
+        "BlockAssists": 2,
+        "TotalBlocks": 1,
+        "BlocksPerSet": 0.5,
+        "BlockErrors": 0
+      },
+      "Digging": {
+        "SetsPlayed": 2,
+        "Digs": 29,
+        "DigErrors": 0,
+        "DigsPerSet": 14.5
+      },
+      "Ball Handling": {
+        "SetsPlayed": 2,
+        "Assists": 22,
+        "AssistsPerSet": 11,
+        "BallHandlingAttempts": 71,
+        "BallHandlingErrors": 2
+      },
+      "Serve Receiving": {
+        "SetsPlayed": 2,
+        "Receptions": 33,
+        "ReceptionErrors": 5,
+        "ReceptionsPerSet": 16.5
+      }
+    }
+  },
+  {
+    "GameID": "20250927-1",
+    "Season": 2025,
+    "Categories": {
+      "Attacking": {
+        "SetsPlayed": 3,
+        "Kills": 32,
+        "KillsPerSet": 10.7,
+        "KillPct": 35.6,
+        "AttackAttempts": 90,
+        "AttackErrors": 14,
+        "HittingPct": 0.2
+      },
+      "Serving": {
+        "SetsPlayed": 3,
+        "Aces": 7,
+        "AcesPerSet": 2.3,
+        "AcePct": 9.6,
+        "ServeAttempts": 73,
+        "ServeErrors": 9,
+        "ServePct": 87.7,
+        "ServingPoints": 40
+      },
+      "Blocking": {
+        "SetsPlayed": 3,
+        "SoloBlocks": 0,
+        "BlockAssists": 16,
+        "TotalBlocks": 8,
+        "BlocksPerSet": 2.7,
+        "BlockErrors": 0
+      },
+      "Digging": {
+        "SetsPlayed": 3,
+        "Digs": 38,
+        "DigErrors": 0,
+        "DigsPerSet": 12.7
+      },
+      "Ball Handling": {
+        "SetsPlayed": 3,
+        "Assists": 31,
+        "AssistsPerSet": 10.3,
+        "BallHandlingAttempts": 86,
+        "BallHandlingErrors": 3
+      },
+      "Serve Receiving": {
+        "SetsPlayed": 3,
+        "Receptions": 47,
+        "ReceptionErrors": 3,
+        "ReceptionsPerSet": 15.7
+      }
+    }
+  },
+  {
+    "GameID": "20251004",
+    "Season": 2025,
+    "Categories": {
+      "Attacking": {
+        "SetsPlayed": 3,
+        "Kills": 31,
+        "KillsPerSet": 10.3,
+        "KillPct": null,
+        "AttackAttempts": null,
+        "AttackErrors": 50,
+        "HittingPct": null
+      },
+      "Serving": {
+        "SetsPlayed": 3,
+        "Aces": null,
+        "AcesPerSet": null,
+        "AcePct": null,
+        "ServeAttempts": null,
+        "ServeErrors": null,
+        "ServePct": null,
+        "ServingPoints": null
+      },
+      "Blocking": {
+        "SetsPlayed": 3,
+        "SoloBlocks": null,
+        "BlockAssists": null,
+        "TotalBlocks": null,
+        "BlocksPerSet": null,
+        "BlockErrors": null
+      },
+      "Digging": {
+        "SetsPlayed": 3,
+        "Digs": 37,
+        "DigErrors": null,
+        "DigsPerSet": 12.3
+      },
+      "Ball Handling": {
+        "SetsPlayed": 3,
+        "Assists": 29,
+        "AssistsPerSet": 9.7,
+        "BallHandlingAttempts": null,
+        "BallHandlingErrors": null
+      },
+      "Serve Receiving": {
+        "SetsPlayed": 3,
+        "Receptions": null,
+        "ReceptionErrors": null,
+        "ReceptionsPerSet": null
+      }
+    }
+  },
+  {
+    "GameID": "20251004-1",
+    "Season": 2025,
+    "Categories": {
+      "Attacking": {
+        "SetsPlayed": 3,
+        "Kills": 28,
+        "KillsPerSet": 9.3,
+        "KillPct": null,
+        "AttackAttempts": null,
+        "AttackErrors": 32,
+        "HittingPct": null
+      },
+      "Serving": {
+        "SetsPlayed": 3,
+        "Aces": null,
+        "AcesPerSet": null,
+        "AcePct": null,
+        "ServeAttempts": null,
+        "ServeErrors": null,
+        "ServePct": null,
+        "ServingPoints": null
+      },
+      "Blocking": {
+        "SetsPlayed": 3,
+        "SoloBlocks": null,
+        "BlockAssists": null,
+        "TotalBlocks": null,
+        "BlocksPerSet": null,
+        "BlockErrors": null
+      },
+      "Digging": {
+        "SetsPlayed": 3,
+        "Digs": 46,
+        "DigErrors": null,
+        "DigsPerSet": 15.3
+      },
+      "Ball Handling": {
+        "SetsPlayed": 3,
+        "Assists": 27,
+        "AssistsPerSet": 9,
+        "BallHandlingAttempts": null,
+        "BallHandlingErrors": null
+      },
+      "Serve Receiving": {
+        "SetsPlayed": 3,
+        "Receptions": null,
+        "ReceptionErrors": null,
+        "ReceptionsPerSet": null
+      }
+    }
+  }
+]

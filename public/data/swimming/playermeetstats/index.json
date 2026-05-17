@@ -1,0 +1,112 @@
+[
+  {
+    "season": 2015,
+    "file": "2015.json",
+    "rows": 4,
+    "meets": 1,
+    "Season": 2015,
+    "Path": "/data/swimming/playermeetstats/2015.json",
+    "Rows": 4,
+    "Meets": 1
+  },
+  {
+    "season": 2016,
+    "file": "2016.json",
+    "rows": 12,
+    "meets": 1,
+    "Season": 2016,
+    "Path": "/data/swimming/playermeetstats/2016.json",
+    "Rows": 12,
+    "Meets": 1
+  },
+  {
+    "season": 2017,
+    "file": "2017.json",
+    "rows": 24,
+    "meets": 1,
+    "Season": 2017,
+    "Path": "/data/swimming/playermeetstats/2017.json",
+    "Rows": 24,
+    "Meets": 1
+  },
+  {
+    "season": 2018,
+    "file": "2018.json",
+    "rows": 24,
+    "meets": 1,
+    "Season": 2018,
+    "Path": "/data/swimming/playermeetstats/2018.json",
+    "Rows": 24,
+    "Meets": 1
+  },
+  {
+    "season": 2019,
+    "file": "2019.json",
+    "rows": 28,
+    "meets": 2,
+    "Season": 2019,
+    "Path": "/data/swimming/playermeetstats/2019.json",
+    "Rows": 28,
+    "Meets": 2
+  },
+  {
+    "season": 2020,
+    "file": "2020.json",
+    "rows": 27,
+    "meets": 2,
+    "Season": 2020,
+    "Path": "/data/swimming/playermeetstats/2020.json",
+    "Rows": 27,
+    "Meets": 2
+  },
+  {
+    "season": 2022,
+    "file": "2022.json",
+    "rows": 24,
+    "meets": 2,
+    "Season": 2022,
+    "Path": "/data/swimming/playermeetstats/2022.json",
+    "Rows": 24,
+    "Meets": 2
+  },
+  {
+    "season": 2023,
+    "file": "2023.json",
+    "rows": 33,
+    "meets": 2,
+    "Season": 2023,
+    "Path": "/data/swimming/playermeetstats/2023.json",
+    "Rows": 33,
+    "Meets": 2
+  },
+  {
+    "season": 2024,
+    "file": "2024.json",
+    "rows": 16,
+    "meets": 1,
+    "Season": 2024,
+    "Path": "/data/swimming/playermeetstats/2024.json",
+    "Rows": 16,
+    "Meets": 1
+  },
+  {
+    "season": 2025,
+    "file": "2025.json",
+    "rows": 45,
+    "meets": 2,
+    "Season": 2025,
+    "Path": "/data/swimming/playermeetstats/2025.json",
+    "Rows": 45,
+    "Meets": 2
+  },
+  {
+    "season": 2026,
+    "file": "2026.json",
+    "rows": 51,
+    "meets": 2,
+    "Season": 2026,
+    "Path": "/data/swimming/playermeetstats/2026.json",
+    "Rows": 51,
+    "Meets": 2
+  }
+]

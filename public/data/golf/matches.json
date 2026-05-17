@@ -67,7 +67,10 @@
       }
     ],
     "OpponentID": "sc-sea-island-academy-johns-island",
-    "OpponentLocation": "Johns Island, SC"
+    "OpponentLocation": "Johns Island, SC",
+    "ResultCompleteness": "missing",
+    "SourceSeasonLabel": "2000-01",
+    "SourceNote": "Archive matches data is missing; only recovered source details are shown."
   },
   {
     "Season": 2001,
@@ -149,7 +152,10 @@
     "OpponentSchoolIDs": [
       "sc-st-pauls-country-day-school-hollywood",
       "sc-st-john-s-john-s-island"
-    ]
+    ],
+    "ResultCompleteness": "missing",
+    "SourceSeasonLabel": "2000-01",
+    "SourceNote": "Archive matches data is missing; only recovered source details are shown."
   },
   {
     "Season": 2001,
@@ -226,7 +232,10 @@
     "OpponentSchoolIDs": [
       "sc-st-pauls-country-day-school-hollywood",
       "sc-patrick-henry-academy-estill"
-    ]
+    ],
+    "ResultCompleteness": "missing",
+    "SourceSeasonLabel": "2000-01",
+    "SourceNote": "Archive matches data is missing; only recovered source details are shown."
   },
   {
     "Season": 2001,
@@ -303,7 +312,10 @@
     "OpponentSchoolIDs": [
       "sc-colleton-prep-academy-walterboro",
       "sc-john-c-calhoun-academy-st-matthews"
-    ]
+    ],
+    "ResultCompleteness": "missing",
+    "SourceSeasonLabel": "2000-01",
+    "SourceNote": "Archive matches data is missing; only recovered source details are shown."
   },
   {
     "MatchID": "20020425-scisa-region-2aa-wilmington-island",
@@ -389,7 +401,10 @@
       "sc-beaufort-academy-beaufort",
       "sc-hilton-head-christian-academy-hilton-head-island",
       "sc-colleton-prep-academy-walterboro"
-    ]
+    ],
+    "ResultCompleteness": "missing",
+    "SourceSeasonLabel": "2001-02",
+    "SourceNote": "Archive matches data is missing; only recovered source details are shown."
   },
   {
     "MatchID": "20030303-patrick-henry",
@@ -493,7 +508,10 @@
       }
     ],
     "OpponentID": "sc-patrick-henry-academy-estill",
-    "OpponentLocation": "Estill, SC"
+    "OpponentLocation": "Estill, SC",
+    "ResultCompleteness": "missing",
+    "SourceSeasonLabel": "2002-03",
+    "SourceNote": "Archive matches data is missing; only recovered source details are shown."
   },
   {
     "MatchID": "20030312-thomas-heyward",
@@ -595,7 +613,10 @@
       }
     ],
     "OpponentID": "sc-thomas-heyward-academy-ridgeland",
-    "OpponentLocation": "Ridgeland, SC"
+    "OpponentLocation": "Ridgeland, SC",
+    "ResultCompleteness": "missing",
+    "SourceSeasonLabel": "2002-03",
+    "SourceNote": "Archive matches data is missing; only recovered source details are shown."
   },
   {
     "MatchID": "20030325-indigo-run-tri",
@@ -684,7 +705,10 @@
     "OpponentSchoolIDs": [
       "sc-hilton-head-preparatory-school-hilton-head-island",
       "sc-hilton-head-christian-academy-hilton-head-island"
-    ]
+    ],
+    "ResultCompleteness": "missing",
+    "SourceSeasonLabel": "2002-03",
+    "SourceNote": "Archive matches data is missing; only recovered source details are shown."
   },
   {
     "MatchID": "20030401-scisa-region-santee-national",
@@ -776,7 +800,10 @@
       "sc-beaufort-academy-beaufort",
       "sc-charleston-collegiate-school-johns-island",
       "sc-colleton-prep-academy-walterboro"
-    ]
+    ],
+    "ResultCompleteness": "missing",
+    "SourceSeasonLabel": "2002-03",
+    "SourceNote": "Archive matches data is missing; only recovered source details are shown."
   },
   {
     "MatchID": "20030429-scisa-class-aa-state",
@@ -856,7 +883,10 @@
         ],
         "ResultNote": "The published report listed St. Andrew's team place and St. Andrew's individual two-day scores, but not the full team leaderboard."
       }
-    ]
+    ],
+    "ResultCompleteness": "missing",
+    "SourceSeasonLabel": "2002-03",
+    "SourceNote": "Archive matches data is missing; only recovered source details are shown."
   },
   {
     "MatchID": "20040303-groves",
@@ -1006,7 +1036,10 @@
       }
     ],
     "OpponentID": "ga-groves-high-school-garden-city",
-    "OpponentLocation": "Garden City, GA"
+    "OpponentLocation": "Garden City, GA",
+    "ResultCompleteness": "missing",
+    "SourceSeasonLabel": "2003-04",
+    "SourceNote": "Archive matches data is missing; only recovered source details are shown."
   },
   {
     "MatchID": "20040318-beaufort-academy",
@@ -1108,7 +1141,10 @@
       }
     ],
     "OpponentID": "sc-beaufort-academy-beaufort",
-    "OpponentLocation": "Beaufort, SC"
+    "OpponentLocation": "Beaufort, SC",
+    "ResultCompleteness": "missing",
+    "SourceSeasonLabel": "2003-04",
+    "SourceNote": "Archive matches data is missing; only recovered source details are shown."
   },
   {
     "MatchID": "20040325-penny-branch-quad",
@@ -1197,7 +1233,11 @@
       "sc-holly-hill-academy-holly-hill",
       "sc-patrick-henry-academy-estill",
       "sc-jefferson-davis-academy-blackville"
-    ]
+    ],
+    "ResultCompleteness": "missing",
+    "SourceSeasonLabel": "2003-04",
+    "SourceNote": "Archive matches data is missing; only recovered source details are shown.",
+    "SourceCitation": "Record-path placeholder from golf archive reconciliation, 2003-04."
   },
   {
     "MatchID": "20040326-hilton-head-prep",
@@ -1297,7 +1337,11 @@
       }
     ],
     "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
-    "OpponentLocation": "Hilton Head Island, SC"
+    "OpponentLocation": "Hilton Head Island, SC",
+    "ResultCompleteness": "missing",
+    "SourceSeasonLabel": "2003-04",
+    "SourceNote": "Archive matches data is missing; only recovered source details are shown.",
+    "SourceCitation": "Record-path placeholder from golf archive reconciliation, 2003-04."
   },
   {
     "MatchID": "20040330-patrick-henry",
@@ -1397,7 +1441,11 @@
       }
     ],
     "OpponentID": "sc-patrick-henry-academy-estill",
-    "OpponentLocation": "Estill, SC"
+    "OpponentLocation": "Estill, SC",
+    "ResultCompleteness": "missing",
+    "SourceSeasonLabel": "2003-04",
+    "SourceNote": "Archive matches data is missing; only recovered source details are shown.",
+    "SourceCitation": "Record-path placeholder from golf archive reconciliation, 2003-04."
   },
   {
     "MatchID": "20040401-santee-national-quad",
@@ -1477,7 +1525,11 @@
       "sc-holly-hill-academy-holly-hill",
       "sc-beaufort-academy-beaufort",
       "sc-charleston-collegiate-school-johns-island"
-    ]
+    ],
+    "ResultCompleteness": "missing",
+    "SourceSeasonLabel": "2003-04",
+    "SourceNote": "Archive matches data is missing; only recovered source details are shown.",
+    "SourceCitation": "Record-path placeholder from golf archive reconciliation, 2003-04."
   },
   {
     "MatchID": "20040402-hilton-head-prep",
@@ -1578,7 +1630,11 @@
       }
     ],
     "OpponentID": "sc-hilton-head-preparatory-school-hilton-head-island",
-    "OpponentLocation": "Hilton Head Island, SC"
+    "OpponentLocation": "Hilton Head Island, SC",
+    "ResultCompleteness": "missing",
+    "SourceSeasonLabel": "2003-04",
+    "SourceNote": "Archive matches data is missing; only recovered source details are shown.",
+    "SourceCitation": "Record-path placeholder from golf archive reconciliation, 2003-04."
   },
   {
     "MatchID": "20040406-south-carolina-national-tri",
@@ -1714,7 +1770,11 @@
     "OpponentSchoolIDs": [
       "sc-beaufort-academy-beaufort",
       "sc-thomas-heyward-academy-ridgeland"
-    ]
+    ],
+    "ResultCompleteness": "missing",
+    "SourceSeasonLabel": "2003-04",
+    "SourceNote": "Archive matches data is missing; only recovered source details are shown.",
+    "SourceCitation": "Record-path placeholder from golf archive reconciliation, 2003-04."
   },
   {
     "MatchID": "20040422-scisa-region-2-aa-final",
@@ -1805,7 +1865,11 @@
     "OpponentSchoolIDs": [
       "sc-holly-hill-academy-holly-hill",
       "sc-beaufort-academy-beaufort"
-    ]
+    ],
+    "ResultCompleteness": "missing",
+    "SourceSeasonLabel": "2003-04",
+    "SourceNote": "Archive matches data is missing; only recovered source details are shown.",
+    "SourceCitation": "Record-path placeholder from golf archive reconciliation, 2003-04."
   },
   {
     "MatchID": "20040427-scisa-class-aa-state",
@@ -1947,7 +2011,11 @@
     "OpponentSchoolIDs": [
       "sc-holly-hill-academy-holly-hill",
       "sc-beaufort-academy-beaufort"
-    ]
+    ],
+    "ResultCompleteness": "missing",
+    "SourceSeasonLabel": "2003-04",
+    "SourceNote": "Archive matches data is missing; only recovered source details are shown.",
+    "SourceCitation": "Record-path placeholder from golf archive reconciliation, 2003-04."
   },
   {
     "MatchID": "20050329-belfair",
@@ -2143,7 +2211,10 @@
           }
         ]
       }
-    ]
+    ],
+    "ResultCompleteness": "missing",
+    "SourceSeasonLabel": "2004-05",
+    "SourceNote": "Archive matches data is missing; only recovered source details are shown."
   },
   {
     "MatchID": "20050330-patrick-henry",
@@ -2238,7 +2309,10 @@
         ]
       }
     ],
-    "OpponentID": "sc-patrick-henry-academy-estill"
+    "OpponentID": "sc-patrick-henry-academy-estill",
+    "ResultCompleteness": "missing",
+    "SourceSeasonLabel": "2004-05",
+    "SourceNote": "Archive matches data is missing; only recovered source details are shown."
   },
   {
     "MatchID": "20050405-eagles-point",
@@ -2441,7 +2515,10 @@
           }
         ]
       }
-    ]
+    ],
+    "ResultCompleteness": "missing",
+    "SourceSeasonLabel": "2004-05",
+    "SourceNote": "Archive matches data is missing; only recovered source details are shown."
   },
   {
     "MatchID": "20050412-crescent-point",
@@ -2526,7 +2603,10 @@
         ],
         "ResultNote": "The report listed only St. Andrew's individual scores for this match."
       }
-    ]
+    ],
+    "ResultCompleteness": "missing",
+    "SourceSeasonLabel": "2004-05",
+    "SourceNote": "Archive matches data is missing; only recovered source details are shown."
   },
   {
     "MatchID": "20050421-scisa-2-aa-championship",
@@ -2676,7 +2756,10 @@
           }
         ]
       }
-    ]
+    ],
+    "ResultCompleteness": "missing",
+    "SourceSeasonLabel": "2004-05",
+    "SourceNote": "Archive matches data is missing; only recovered source details are shown."
   },
   {
     "MatchID": "20050421-scisa-2-aa-makeup-region-round",
@@ -2833,7 +2916,10 @@
         ],
         "ResultNote": "St. Andrew's and Beaufort Academy qualified for the AA state tournament at Fripp Island."
       }
-    ]
+    ],
+    "ResultCompleteness": "missing",
+    "SourceSeasonLabel": "2004-05",
+    "SourceNote": "Archive matches data is missing; only recovered source details are shown."
   },
   {
     "MatchID": "20050425-scisa-aa-state-round-1",
@@ -2967,7 +3053,10 @@
         "ResultNote": "The April 27 final-round brief listed St. Andrew's fourth-place team finish and final-round scores. Two-day totals are shown where both rounds were recovered."
       }
     ],
-    "MatchType": "State Tournament"
+    "MatchType": "State Tournament",
+    "ResultCompleteness": "missing",
+    "SourceSeasonLabel": "2004-05",
+    "SourceNote": "Archive matches data is missing; only recovered source details are shown."
   },
   {
     "MatchID": "20060307-colleton-prep",
@@ -3072,7 +3161,9 @@
       }
     ],
     "OpponentID": "sc-colleton-prep-academy-walterboro",
-    "OpponentLocation": "Walterboro, SC"
+    "OpponentLocation": "Walterboro, SC",
+    "ResultCompleteness": "missing",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "MatchID": "20060322-patrick-henry",
@@ -3175,7 +3266,10 @@
       }
     ],
     "OpponentID": "sc-patrick-henry-academy-estill",
-    "OpponentLocation": "Estill, SC"
+    "OpponentLocation": "Estill, SC",
+    "ResultCompleteness": "missing",
+    "SourceSeasonLabel": "2005-06",
+    "SourceNote": "Archive matches data is missing; only recovered source details are shown."
   },
   {
     "MatchID": "20060330-colleton-prep",
@@ -3288,7 +3382,9 @@
       }
     ],
     "OpponentID": "sc-colleton-prep-academy-walterboro",
-    "OpponentLocation": "Walterboro, SC"
+    "OpponentLocation": "Walterboro, SC",
+    "ResultCompleteness": "missing",
+    "SourceSeasonLabel": "2005-06"
   },
   {
     "MatchID": "20060404-beaufort-academy-invitational",
@@ -3423,7 +3519,10 @@
       "sc-hilton-head-christian-academy-hilton-head-island",
       "sc-beaufort-academy-beaufort",
       "sc-thomas-heyward-academy-ridgeland"
-    ]
+    ],
+    "ResultCompleteness": "missing",
+    "SourceSeasonLabel": "2005-06",
+    "SourceNote": "Archive matches data is missing; only recovered source details are shown."
   },
   {
     "MatchID": "20060417-patrick-henry",
@@ -3526,6 +3625,9 @@
       }
     ],
     "OpponentID": "sc-patrick-henry-academy-estill",
-    "OpponentLocation": "Estill, SC"
+    "OpponentLocation": "Estill, SC",
+    "ResultCompleteness": "missing",
+    "SourceSeasonLabel": "2005-06",
+    "SourceNote": "Archive matches data is missing; only recovered source details are shown."
   }
 ]

@@ -9,6 +9,7 @@ import {
   loadSchools,
   resolveSchoolForGame,
 } from "../dataLoaders";
+import { athleteProfilePath, isPre2015Season } from "../../../athletes/archiveEra";
 
 const DEFAULT_SEASON_ID = 2008;
 
@@ -78,6 +79,11 @@ function resultClassName(result) {
 function getPlayerName(playersMap, playerId) {
   const p = playersMap.get(playerId);
   return p ? `${p.FirstName} ${p.LastName}` : "Unknown Player";
+}
+
+function baseballPlayerPath(playerId, seasonId) {
+  if (isPre2015Season(seasonId)) return athleteProfilePath(playerId, "baseball");
+  return `/athletics/boys/baseball/players/${playerId}`;
 }
 
 function sortableString(value) {
@@ -414,7 +420,7 @@ export function BaseballSeasonPage({
       jersey: entry.JerseyNumber,
       name: getPlayerName(playersMap, Number(entry.PlayerID)),
       grade: entry.Grade,
-      path: `/athletics/boys/baseball/players/${entry.PlayerID}`,
+      path: baseballPlayerPath(entry.PlayerID, seasonId),
     }));
 
     const staffRows = rosterStaff.map((staff) => ({
@@ -426,7 +432,7 @@ export function BaseballSeasonPage({
     }));
 
     return [...playerRows, ...staffRows];
-  }, [playersMap, rosterEntries, rosterStaff]);
+  }, [playersMap, rosterEntries, rosterStaff, seasonId]);
 
   const groupedStats = useMemo(() => {
     const map = new Map();
@@ -1016,7 +1022,7 @@ export function BaseballSeasonPage({
                   <td className={statsBodyCellClassName}>{player.jersey === 999 ? "-" : player.jersey}</td>
                   <td className={statsBodyCellClassName}>
                     <Link
-                      to={`/athletics/boys/baseball/players/${player.PlayerID}`}
+                      to={baseballPlayerPath(player.PlayerID, seasonId)}
                       className="text-blue-600 hover:underline"
                     >
                       {player.name}
@@ -1078,7 +1084,7 @@ export function BaseballSeasonPage({
                   <td className={statsBodyCellClassName}>{player.jersey === 999 ? "-" : player.jersey}</td>
                   <td className={statsBodyCellClassName}>
                     <Link
-                      to={`/athletics/boys/baseball/players/${player.PlayerID}`}
+                      to={baseballPlayerPath(player.PlayerID, seasonId)}
                       className="text-blue-600 hover:underline"
                     >
                       {player.name}
@@ -1133,7 +1139,7 @@ export function BaseballSeasonPage({
                   <td className={statsBodyCellClassName}>{player.jersey === 999 ? "-" : player.jersey}</td>
                   <td className={statsBodyCellClassName}>
                     <Link
-                      to={`/athletics/boys/baseball/players/${player.PlayerID}`}
+                      to={baseballPlayerPath(player.PlayerID, seasonId)}
                       className="text-blue-600 hover:underline"
                     >
                       {player.name}
