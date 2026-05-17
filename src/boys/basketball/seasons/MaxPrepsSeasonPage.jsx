@@ -690,8 +690,9 @@ function MaxPrepsSeasonPage({
     ["steals", leaderText(leaders.steals, "Steals")],
   ].filter(([, text]) => text);
 
-  const formatDate = (gameId) => {
-    const value = Number(gameId);
+  const formatDate = (gameOrId) => {
+    if (gameOrId?.DisplayDate) return gameOrId.DisplayDate;
+    const value = Number(gameOrId?.Date ?? gameOrId?.GameID ?? gameOrId);
     const year = Math.floor(value / 10000);
     const month = Math.floor(value / 100) % 100;
     const day = value % 100;
@@ -850,7 +851,7 @@ function MaxPrepsSeasonPage({
                 >
                   <div className="flex items-start justify-between gap-4">
                     <div className="min-w-0">
-                      <p className="mb-2 text-sm text-gray-600">{formatDate(game.GameID)}</p>
+                      <p className="mb-2 text-sm text-gray-600">{formatDate(game)}</p>
                       <div className="flex items-start gap-3">
                         <div className="flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden">
                           {logoPath ? (
@@ -922,7 +923,7 @@ function MaxPrepsSeasonPage({
                       } hover:bg-gray-100`}
                     >
                       <td className={`${scheduleBodyCellClassName} text-left`}>
-                        {formatDate(game.GameID)}
+                        {formatDate(game)}
                       </td>
                       <td className={scheduleOpponentCellClassName}>
                         <div className="flex items-center gap-2">

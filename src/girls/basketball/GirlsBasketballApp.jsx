@@ -30,6 +30,7 @@ import Season2003_04 from "./seasons/Season2003_04";
 import Season2002_03 from "./seasons/Season2002_03";
 import Season2001_02 from "./seasons/Season2001_02";
 import Season2000_01 from "./seasons/Season2000_01";
+import Season1999_00 from "./seasons/Season1999_00";
 import MaxPrepsSeasonPage from "./seasons/MaxPrepsSeasonPage";
 import SeasonPlaceholder from "./seasons/SeasonPlaceholder";
 
@@ -46,6 +47,7 @@ const seasonPages = [
   { slug: "2002-03", Component: Season2002_03 },
   { slug: "2001-02", Component: Season2001_02 },
   { slug: "2000-01", Component: Season2000_01 },
+  { slug: "1999-00", Component: Season1999_00 },
 ];
 
 const maxPrepsArchiveSeasonPages = [

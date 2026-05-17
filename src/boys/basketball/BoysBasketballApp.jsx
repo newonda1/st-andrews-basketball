@@ -36,6 +36,7 @@ import Season1992_93 from "./seasons/Season1992_93";
 import Season1993_94 from "./seasons/Season1993_94";
 import Season1994_95 from "./seasons/Season1994_95";
 import Season1995_96 from "./seasons/Season1995_96";
+import Season1999_00 from "./seasons/Season1999_00";
 import Season2000_01 from "./seasons/Season2000_01";
 import Season2001_02 from "./seasons/Season2001_02";
 import Season2002_03 from "./seasons/Season2002_03";
@@ -83,6 +84,7 @@ const seasonPages = [
   { slug: "1993-94", Component: Season1993_94 },
   { slug: "1994-95", Component: Season1994_95 },
   { slug: "1995-96", Component: Season1995_96 },
+  { slug: "1999-00", Component: Season1999_00 },
   { slug: "2000-01", Component: Season2000_01 },
   { slug: "2001-02", Component: Season2001_02 },
   { slug: "2002-03", Component: Season2002_03 },

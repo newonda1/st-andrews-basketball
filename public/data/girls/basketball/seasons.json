@@ -5,11 +5,13 @@
     "YearEnd": 2000,
     "HeadCoach": "Deborah Morell",
     "RegionSeed": null,
-    "RegionFinish": null,
+    "RegionFinish": "Region Runner-Up",
     "StateSeed": null,
-    "StateFinish": null,
-    "SourceCitation": "\"GIRLS PREVIEW,\" Savannah Morning News, 1999-11-24, Page 4D",
-    "ArchiveStatusNote": "Fall 1999 NewsBank recovery found the preseason preview. Deb Morell reported only five players combined for varsity and JV and said the first three games had been canceled while the season remained in jeopardy."
+    "StateFinish": "State Tournament",
+    "SourceCitation": "\"GIRLS PREVIEW,\" Savannah Morning News, 1999-11-24, Page 4D; \"LACK OF INTEREST BAFFLES ST. ANDREW'S GIRLS COACH,\" Savannah Morning News (GA), January 18, 2000, Page 6D.; \"GIRLS STATS,\" Savannah Morning News (GA), February 11, 2000, Page 3B.; \"SAINTS BOYS TRIUMPH IN REGION GAME, GIRLS FALL,\" Savannah Morning News (GA), February 27, 2000, Page 4B.; \"GIRLS BASKETBALL,\" Savannah Morning News (GA), March 2, 2000, Page 3D.",
+    "ArchiveStatusNote": "Winter 1999-00 NewsBank recovery confirmed the season was played after the fall participation scare, added 19 scored games, five record-path placeholders, the Feb. 11 leaderboard snapshot, the Region IV runner-up finish, the state tournament berth and the 11-13 final record.",
+    "OverallWins": 11,
+    "OverallLosses": 13
   },
   {
     "SeasonID": 2000,

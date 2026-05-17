@@ -232,5 +232,286 @@
     "TranscriptHeading": "Archive Summary",
     "EmphasizeTranscriptLead": false,
     "Transcript": "The Savannah Morning News boys All-Coastal Empire basketball package included St. Andrew's Davy Clay and Jeff Smith among its honorable mention selections following the Saints' 2002-03 SCISA Class AA runner-up season."
+  },
+  {
+    "ArticleID": "20000211-1999-00-boys-basketball-statistics",
+    "Title": "Boys Stats",
+    "Subtitle": "The Feb. 11 area leaderboard included five St. Andrew's boys basketball players.",
+    "Date": "2000-02-11",
+    "Source": "Savannah Morning News (GA)",
+    "Author": "",
+    "Byline": "",
+    "Page": "3B",
+    "Section": "Sports",
+    "SeasonID": 1999,
+    "SeasonLabel": "1999-00",
+    "PlayerIDs": [
+      199601,
+      199903,
+      199909,
+      2027047,
+      200004
+    ],
+    "GameIDs": [],
+    "Summary": "The leaderboard credited Evan Aldrich, Lee Stubbs, Andy Teitz, Todd Tribble and Justin Dixon with St. Andrew's top cumulative statistics through the late regular-season stretch.",
+    "SourceCitation": "\"BOYS STATS,\" Savannah Morning News (GA), February 11, 2000, Page 3B.",
+    "ArchiveNote": "This archive page preserves citation details and an original summary. The full newspaper text is not republished here.",
+    "TranscriptHeading": "Archive Summary",
+    "EmphasizeTranscriptLead": false,
+    "Transcript": "The archive summary records St. Andrew's Feb. 11 leaderboard snapshot: Aldrich 453 points, Stubbs 372, Teitz 249, Dixon 131 and Tribble 125 through 22 listed games, with Stubbs also credited for 282 rebounds and 113 blocks."
+  },
+  {
+    "ArticleID": "20000219-aldrich-breaks-career-scoring-record",
+    "Title": "Aldrich Snaps Record as St. Andrew's Shoots Victory",
+    "Subtitle": "Evan Aldrich broke the St. Andrew's boys career scoring record against Patrick Henry.",
+    "Date": "2000-02-19",
+    "Source": "Savannah Morning News (GA)",
+    "Author": "",
+    "Byline": "",
+    "Page": "5E",
+    "Section": "Sports",
+    "SeasonID": 1999,
+    "SeasonLabel": "1999-00",
+    "PlayerIDs": [
+      199601,
+      199903,
+      199909,
+      2027047,
+      200004,
+      200007,
+      200005
+    ],
+    "GameIDs": [
+      20000218
+    ],
+    "Summary": "Aldrich scored 36 in a 69-49 win over Patrick Henry and passed Ray Rodgers on the school career scoring list.",
+    "SourceCitation": "\"ALDRICH SNAPS RECORD AS ST. ANDREW'S SHOOTS VICTORY,\" Savannah Morning News (GA), February 19, 2000, Page 5E.",
+    "ArchiveNote": "This archive page preserves citation details and an original summary. The full newspaper text is not republished here.",
+    "TranscriptHeading": "Archive Summary",
+    "EmphasizeTranscriptLead": false,
+    "Transcript": "The archive summary records St. Andrew's 69-49 region win over Patrick Henry. Evan Aldrich scored 36 and moved to 1,595 career points, while Lee Stubbs added 19."
+  },
+  {
+    "ArticleID": "20000226-boys-region-semifinal-hilton-head-christian",
+    "Title": "Saints Slide by Hilton Head",
+    "Subtitle": "St. Andrew's beat Hilton Head Christian in the SCISA Region IV semifinal.",
+    "Date": "2000-02-26",
+    "Source": "Savannah Morning News (GA)",
+    "Author": "",
+    "Byline": "",
+    "Page": "5E",
+    "Section": "Sports",
+    "SeasonID": 1999,
+    "SeasonLabel": "1999-00",
+    "PlayerIDs": [
+      199909,
+      199903,
+      199601,
+      2027047,
+      200004
+    ],
+    "GameIDs": [
+      20000225
+    ],
+    "Summary": "Andy Teitz scored 18 and Lee Stubbs led St. Andrew's with 21 in a 57-43 win over Hilton Head Christian.",
+    "SourceCitation": "\"SAINTS SLIDE BY HILTON HEAD,\" Savannah Morning News (GA), February 26, 2000, Page 5E.",
+    "ArchiveNote": "This archive page preserves citation details and an original summary. The full newspaper text is not republished here.",
+    "TranscriptHeading": "Archive Summary",
+    "EmphasizeTranscriptLead": false,
+    "Transcript": "The archive summary records the 57-43 region semifinal win over Hilton Head Christian. The story emphasized Teitz and Stubbs carrying the scoring while Clarence Wilson's top-seeded Saints clinched a state tournament berth."
+  },
+  {
+    "ArticleID": "20000227-boys-region-title-sea-island",
+    "Title": "Saints Boys Triumph in Region Game, Girls Fall",
+    "Subtitle": "Evan Aldrich's late shot gave St. Andrew's the SCISA Class AA Region IV title.",
+    "Date": "2000-02-27",
+    "Source": "Savannah Morning News (GA)",
+    "Author": "",
+    "Byline": "",
+    "Page": "4B",
+    "Section": "Sports",
+    "SeasonID": 1999,
+    "SeasonLabel": "1999-00",
+    "PlayerIDs": [
+      199601,
+      199909,
+      199903,
+      2027047,
+      200004,
+      200002
+    ],
+    "GameIDs": [
+      20000226
+    ],
+    "Summary": "Aldrich hit the winner in the closing seconds and Teitz scored 19 as St. Andrew's beat Sea Island 54-53 for the region championship.",
+    "SourceCitation": "\"SAINTS BOYS TRIUMPH IN REGION GAME, GIRLS FALL,\" Savannah Morning News (GA), February 27, 2000, Page 4B.",
+    "ArchiveNote": "This archive page preserves citation details and an original summary. The full newspaper text is not republished here.",
+    "TranscriptHeading": "Archive Summary",
+    "EmphasizeTranscriptLead": false,
+    "Transcript": "The archive summary records the SCISA Class AA Region IV championship win over Sea Island. St. Andrew's trailed by eight entering the fourth before Andy Teitz led the comeback and Evan Aldrich hit the winning shot."
+  },
+  {
+    "ArticleID": "20000301-boys-state-quarterfinal-hudgens",
+    "Title": "St. Andrew's Boys off to Semis",
+    "Subtitle": "The Saints beat Hudgens Academy in overtime in the SCISA state quarterfinals.",
+    "Date": "2000-03-01",
+    "Source": "Savannah Morning News (GA)",
+    "Author": "",
+    "Byline": "",
+    "Page": "3D",
+    "Section": "Sports",
+    "SeasonID": 1999,
+    "SeasonLabel": "1999-00",
+    "PlayerIDs": [
+      199601,
+      199909,
+      200004,
+      199903,
+      200007,
+      2027047
+    ],
+    "GameIDs": [
+      20000229
+    ],
+    "Summary": "St. Andrew's beat Hudgens Academy 63-54 in overtime as Teitz forced overtime with a late 3-pointer.",
+    "SourceCitation": "\"ST. ANDREW'S BOYS OFF TO SEMIS,\" Savannah Morning News (GA), March 1, 2000, Page 3D.",
+    "ArchiveNote": "This archive page preserves citation details and an original summary. The full newspaper text is not republished here.",
+    "TranscriptHeading": "Archive Summary",
+    "EmphasizeTranscriptLead": false,
+    "Transcript": "The archive summary records the overtime state quarterfinal win over Hudgens Academy. Aldrich scored 22, while Teitz and Dixon added 13 each."
+  },
+  {
+    "ArticleID": "20000304-boys-state-semifinal-northwood",
+    "Title": "St. Andrew's Slips in Semifinals",
+    "Subtitle": "Northwood Academy ended St. Andrew's state tournament run.",
+    "Date": "2000-03-04",
+    "Source": "Savannah Morning News (GA)",
+    "Author": "",
+    "Byline": "",
+    "Page": "6F",
+    "Section": "Sports",
+    "SeasonID": 1999,
+    "SeasonLabel": "1999-00",
+    "PlayerIDs": [
+      199601,
+      199903
+    ],
+    "GameIDs": [
+      20000303
+    ],
+    "Summary": "Northwood Academy beat St. Andrew's 83-62 in the SCISA semifinals. The recovered schedule path supports a 21-9 final record.",
+    "SourceCitation": "\"ST. ANDREW'S SLIPS IN SEMIFINALS,\" Savannah Morning News (GA), March 4, 2000, Page 6F.",
+    "ArchiveNote": "This archive page preserves citation details and an original summary. The full newspaper text is not republished here.",
+    "TranscriptHeading": "Archive Summary",
+    "EmphasizeTranscriptLead": false,
+    "Transcript": "The archive summary records St. Andrew's 83-62 state semifinal loss to Northwood Academy. Aldrich scored 19 and Stubbs added 17 as the Saints made their third Final Four trip in four SCISA seasons."
+  },
+  {
+    "ArticleID": "20000107-boys-honor-roll-abundant-life",
+    "Title": "Honor Roll",
+    "Subtitle": "Lee Stubbs, Evan Aldrich and Justin Dixon were recognized after the Abundant Life win.",
+    "Date": "2000-01-07",
+    "Source": "Savannah Morning News (GA)",
+    "Author": "",
+    "Byline": "",
+    "Page": "4B",
+    "Section": "Sports",
+    "SeasonID": 1999,
+    "SeasonLabel": "1999-00",
+    "PlayerIDs": [
+      199903,
+      199601,
+      200004
+    ],
+    "GameIDs": [
+      20000104
+    ],
+    "Summary": "The boys honor roll noted Stubbs, Aldrich and Dixon combining for 59 points in the win over Abundant Life.",
+    "SourceCitation": "\"HONOR ROLL,\" Savannah Morning News (GA), January 7, 2000, Page 4B.",
+    "ArchiveNote": "This archive page preserves citation details and an original summary. The full newspaper text is not republished here.",
+    "TranscriptHeading": "Archive Summary",
+    "EmphasizeTranscriptLead": false,
+    "Transcript": "The archive summary records the Jan. 7 honor-roll mention for Lee Stubbs, Evan Aldrich and Justin Dixon after the Abundant Life win. Stubbs scored 22, Aldrich 20 and Dixon 17."
+  },
+  {
+    "ArticleID": "20000114-aldrich-city-player-of-week",
+    "Title": "Honor Roll",
+    "Subtitle": "Evan Aldrich was named City Player of the Week after St. Paul's and Memorial Day wins.",
+    "Date": "2000-01-14",
+    "Source": "Savannah Morning News (GA)",
+    "Author": "",
+    "Byline": "",
+    "Page": "4B",
+    "Section": "Sports",
+    "SeasonID": 1999,
+    "SeasonLabel": "1999-00",
+    "PlayerIDs": [
+      199601,
+      199903
+    ],
+    "GameIDs": [
+      20000107,
+      20000108
+    ],
+    "Summary": "Aldrich earned City Player of the Week after scoring 32 against St. Paul's and 26 against previously unbeaten Memorial Day; Stubbs also made the honor roll.",
+    "SourceCitation": "\"HONOR ROLL,\" Savannah Morning News (GA), January 14, 2000, Page 4B.",
+    "ArchiveNote": "This archive page preserves citation details and an original summary. The full newspaper text is not republished here.",
+    "TranscriptHeading": "Archive Summary",
+    "EmphasizeTranscriptLead": false,
+    "Transcript": "The archive summary records Aldrich's City Player of the Week selection for the Jan. 7-8 wins, plus Stubbs' honor-roll mention for scoring 17 and 20 in those games."
+  },
+  {
+    "ArticleID": "20000121-aldrich-stubbs-honor-roll",
+    "Title": "Honor Roll",
+    "Subtitle": "Evan Aldrich and Lee Stubbs were listed after Hilton Head Christian and Beaufort Academy wins.",
+    "Date": "2000-01-21",
+    "Source": "Savannah Morning News (GA)",
+    "Author": "",
+    "Byline": "",
+    "Page": "4B",
+    "Section": "Sports",
+    "SeasonID": 1999,
+    "SeasonLabel": "1999-00",
+    "PlayerIDs": [
+      199601,
+      199903
+    ],
+    "GameIDs": [
+      20000114,
+      20000118
+    ],
+    "Summary": "Aldrich scored 18 in both wins and Stubbs scored 17 in both wins, earning honor-roll mentions.",
+    "SourceCitation": "\"HONOR ROLL,\" Savannah Morning News (GA), January 21, 2000, Page 4B.",
+    "ArchiveNote": "This archive page preserves citation details and an original summary. The full newspaper text is not republished here.",
+    "TranscriptHeading": "Archive Summary",
+    "EmphasizeTranscriptLead": false,
+    "Transcript": "The archive summary records the Jan. 21 boys honor-roll mentions for Aldrich and Stubbs following region wins over Hilton Head Christian and Beaufort Academy."
+  },
+  {
+    "ArticleID": "20000128-aldrich-stubbs-honor-roll",
+    "Title": "Honor Roll",
+    "Subtitle": "Lee Stubbs and Evan Aldrich were recognized after the Sea Island and Harvest Baptist games.",
+    "Date": "2000-01-28",
+    "Source": "Savannah Morning News (GA)",
+    "Author": "",
+    "Byline": "",
+    "Page": "4B",
+    "Section": "Sports",
+    "SeasonID": 1999,
+    "SeasonLabel": "1999-00",
+    "PlayerIDs": [
+      199903,
+      199601
+    ],
+    "GameIDs": [
+      20000121,
+      20000122
+    ],
+    "Summary": "The honor roll credited Stubbs with 39 points and Aldrich with 29 across two games.",
+    "SourceCitation": "\"HONOR ROLL,\" Savannah Morning News (GA), January 28, 2000, Page 4B.",
+    "ArchiveNote": "This archive page preserves citation details and an original summary. The full newspaper text is not republished here.",
+    "TranscriptHeading": "Archive Summary",
+    "EmphasizeTranscriptLead": false,
+    "Transcript": "The archive summary records the Jan. 28 boys honor-roll mention for Lee Stubbs and Evan Aldrich after the Sea Island and Harvest Baptist games."
   }
 ]

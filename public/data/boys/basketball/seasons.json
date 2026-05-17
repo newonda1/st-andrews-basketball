@@ -213,13 +213,15 @@
     "SeasonID": 1999,
     "YearStart": 1999,
     "YearEnd": 2000,
-    "HeadCoach": "Dave Clay",
+    "HeadCoach": "Clarence Wilson",
     "RegionSeed": null,
-    "RegionFinish": "Region Champion",
+    "RegionFinish": "SCISA Class AA Region IV Champion",
     "StateSeed": null,
-    "StateFinish": null,
-    "SourceCitation": "\"BOYS PREVIEW,\" Savannah Morning News, 1999-11-23, Page 6D; \"JENKINS SCORES 100 IN VICTORY AT JOE GREENE TIP-OFF,\" Savannah Morning News, 1999-11-24, Page 5D",
-    "ArchiveStatusNote": "Fall 1999 NewsBank recovery added the preseason preview, Evan Aldrich's Coastal Empire second-team note and the Nov. 23 Pinewood Prep result. Full winter sweep can complete the schedule path."
+    "StateFinish": "State Final Four",
+    "SourceCitation": "\"BOYS PREVIEW,\" Savannah Morning News, 1999-11-23, Page 6D; \"JENKINS SCORES 100 IN VICTORY AT JOE GREENE TIP-OFF,\" Savannah Morning News, 1999-11-24, Page 5D; \"BOYS STATS,\" Savannah Morning News (GA), February 11, 2000, Page 3B.; \"ALDRICH SNAPS RECORD AS ST. ANDREW'S SHOOTS VICTORY,\" Savannah Morning News (GA), February 19, 2000, Page 5E.; \"SAINTS BOYS TRIUMPH IN REGION GAME, GIRLS FALL,\" Savannah Morning News (GA), February 27, 2000, Page 4B.; \"ST. ANDREW'S SLIPS IN SEMIFINALS,\" Savannah Morning News (GA), March 4, 2000, Page 6F.",
+    "ArchiveStatusNote": "Winter 1999-00 NewsBank recovery added 22 scored games, eight record-path placeholders, the Feb. 11 leaderboard snapshot, Clarence Wilson's interim head-coach role, Aldrich's career scoring record, the SCISA Region IV title and the state Final Four finish. The semifinal article printed 21-4, but the recovered record path supports 21-9.",
+    "OverallWins": 21,
+    "OverallLosses": 9
   },
   {
     "SeasonID": 2000,
