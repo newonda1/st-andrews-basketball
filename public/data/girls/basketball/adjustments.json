@@ -77,7 +77,30 @@
     "TwoPA": null,
     "FTM": null,
     "FTA": null,
-    "StatComplete": "Adjustment"
+    "StatComplete": "Adjustment",
+    "SourceCitation": "\"FINAL 2001-02 PREP BASKETBALL STATISTICS,\" Savannah Morning News (GA), February 15, 2002, Page 6B, Sports.",
+    "SourceNote": "Existing adjustment reconciles the 221 recovered regular-season points to Grace Wilkowski's published 234 points in 19 games before adding the four recovered postseason scoring lines."
+  },
+  {
+    "StatID": 20030522200603,
+    "PlayerID": 200603,
+    "GameID": 20030522,
+    "SeasonID": 2002,
+    "GamesPlayed": 3,
+    "Points": 50,
+    "Rebounds": 215,
+    "Assists": null,
+    "Steals": null,
+    "Blocks": null,
+    "ThreePM": null,
+    "ThreePA": null,
+    "TwoPM": null,
+    "TwoPA": null,
+    "FTM": null,
+    "FTA": null,
+    "StatComplete": "Adjustment",
+    "SourceCitation": "\"BRIEFLY,\" Savannah Morning News (GA), May 22, 2003, Page 2C, Sports.",
+    "SourceNote": "Reconciles Grace Wilkowski's 2002-03 season to the published High School Sports Report averages of 14.7 points and 13 rebounds over 25 player games; the 25-game count excludes the documented Jan. 28 illness absence."
   },
   {
     "StatID": 20040401200401,
@@ -236,8 +259,8 @@
     "PlayerID": 200603,
     "GameID": 20040401,
     "SeasonID": 2003,
-    "GamesPlayed": 1,
-    "Points": -12,
+    "GamesPlayed": 3,
+    "Points": 48,
     "Rebounds": 92,
     "Assists": null,
     "Steals": 40,
@@ -249,7 +272,9 @@
     "FTM": null,
     "FTA": null,
     "StatComplete": "Adjustment",
-    "DoubleDoubles": 2
+    "DoubleDoubles": 2,
+    "SourceCitation": "\"MEEGAN A WITNESS TO ST. ANDREW'S BASKETBALL HISTORY,\" Savannah Morning News (GA), February 11, 2005, Page 4D.",
+    "SourceNote": "Career-milestone reconciliation: after the 2001-02 and 2002-03 source adjustments and the recovered 2004-05 scoring through Feb. 8, 2005, Grace Wilkowski's published 1,529-point career total implies 491 points for 2003-04. The exact split across the three unrecovered 2003-04 record-path games remains unavailable."
   },
   {
     "StatID": 20040402200603,
@@ -522,8 +547,8 @@
     "PlayerID": 200603,
     "GameID": 20051217,
     "SeasonID": 2005,
-    "GamesPlayed": 2,
-    "Points": 10,
+    "GamesPlayed": 1,
+    "Points": 11,
     "Rebounds": 113,
     "Assists": 77,
     "Steals": 77,
@@ -534,6 +559,8 @@
     "TwoPA": null,
     "FTM": null,
     "FTA": null,
-    "StatComplete": "Adjustment"
+    "StatComplete": "Adjustment",
+    "SourceCitation": "Chris Lancia, \"ST. ANDREW'S SAINTS - 2005-2006 SCISA CLASS AA CHAMPS A FAMILY ON AND OFF THE COURT,\" Savannah Morning News (GA), March 8, 2006, Page 6D, Sports.",
+    "SourceNote": "Points adjustment reconciles Grace Wilkowski's 2005-06 season scoring to 386 points over 27 player games, matching the published 14.3 points per game and the 2,017-point career total. The exact split for the unrecovered December scoring appearance remains unavailable."
   }
 ]
