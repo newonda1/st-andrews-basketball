@@ -966,75 +966,68 @@
     "Staff": [
       {
         "Name": "Clarence Wilson",
-        "Position": "Interim Head Coach"
+        "Position": "Head Coach"
+      },
+      {
+        "Name": "Coach Russell",
+        "Position": "Assistant Coach"
       }
     ],
     "Players": [
       {
         "PlayerID": 199601,
-        "JerseyNumber": null,
-        "Grade": 12,
-        "Subline": "Broke the school career scoring record and led the Feb. 11 archive leaderboard snapshot with 453 points through 22 games"
+        "JerseyNumber": 20,
+        "Grade": 12
       },
       {
         "PlayerID": 199903,
-        "JerseyNumber": null,
-        "Grade": 12,
-        "Subline": "Feb. 11 archive leaderboard snapshot credited him with 372 points, 282 rebounds and 113 blocks through 22 games"
+        "JerseyNumber": 32,
+        "Grade": 12
       },
       {
-        "PlayerID": 199909,
-        "JerseyNumber": null,
-        "Grade": 11,
-        "Subline": "Printed as Tietz in winter box scores; scored 19 in the Region IV championship win"
-      },
-      {
-        "PlayerID": 2027047,
-        "JerseyNumber": null,
-        "Grade": 11,
-        "Subline": "Preseason key player and regular starter in recovered winter box scores"
-      },
-      {
-        "PlayerID": 200007,
-        "JerseyNumber": null,
-        "Grade": 11,
-        "Subline": "Preseason key player; scored in recovered winter box scores"
+        "PlayerID": 200103,
+        "JerseyNumber": 55,
+        "Grade": 9
       },
       {
         "PlayerID": 200009,
         "JerseyNumber": null,
-        "Grade": 11,
-        "Subline": "Preseason key player; preview printed first name as Randall"
+        "Grade": 11
+      },
+      {
+        "PlayerID": 200002,
+        "JerseyNumber": 23,
+        "Grade": 9
+      },
+      {
+        "PlayerID": 199909,
+        "JerseyNumber": 3,
+        "Grade": 11
+      },
+      {
+        "PlayerID": 200005,
+        "JerseyNumber": 14,
+        "Grade": 10
+      },
+      {
+        "PlayerID": 200004,
+        "JerseyNumber": 22,
+        "Grade": 10
+      },
+      {
+        "PlayerID": 2027047,
+        "JerseyNumber": 10,
+        "Grade": 11
+      },
+      {
+        "PlayerID": 200007,
+        "JerseyNumber": null,
+        "Grade": 11
       },
       {
         "PlayerID": 199910,
         "JerseyNumber": null,
-        "Grade": 11,
-        "Subline": "Preseason key player"
-      },
-      {
-        "PlayerID": 200004,
-        "JerseyNumber": null,
-        "Grade": 10,
-        "Subline": "Feb. 11 archive leaderboard snapshot credited him with 131 points through 22 games"
-      },
-      {
-        "PlayerID": 200005,
-        "JerseyNumber": null,
-        "Grade": null,
-        "Subline": "Scored in recovered winter box scores"
-      },
-      {
-        "PlayerID": 200002,
-        "JerseyNumber": null,
-        "Grade": 9,
-        "Subline": "Scored in recovered winter box scores"
-      },
-      {
-        "PlayerID": 200103,
-        "JerseyNumber": null,
-        "Grade": 9,
-        "Subline": "Recovered winter box scores printed surname only as Howard"
+        "Grade": 11
       }
     ]
   },

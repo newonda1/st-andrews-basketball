@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-17T18:54:07.520Z",
+  "generatedAt": "2026-05-18T16:04:09.863Z",
   "itemCount": 1427,
   "items": [
     {
@@ -3762,9 +3762,66 @@
       ]
     },
     {
+      "id": "boys-basketball-athlete-200103",
+      "type": "athlete",
+      "title": "Justin Howard",
+      "subtitle": "Boys Basketball athlete - Class of 2003",
+      "to": "/athletics/boys/basketball/players/200103",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Justin",
+        "Howard",
+        "Howard Justin",
+        "class of 2003",
+        "grad 2003"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-200009",
+      "type": "athlete",
+      "title": "Randall Phillips",
+      "subtitle": "Boys Basketball athlete - Class of 2001",
+      "to": "/athletics/boys/basketball/players/200009",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Randall",
+        "Phillips",
+        "Phillips Randall",
+        "class of 2001",
+        "grad 2001"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-200002",
+      "type": "athlete",
+      "title": "Patrick Burns",
+      "subtitle": "Boys Basketball athlete - Class of 2003",
+      "to": "/athletics/boys/basketball/players/200002",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Patrick",
+        "Burns",
+        "Burns Patrick",
+        "class of 2003",
+        "grad 2003"
+      ]
+    },
+    {
       "id": "boys-basketball-athlete-199909",
       "type": "athlete",
-      "title": "Andy Teitz",
+      "title": "Andy Tietz",
       "subtitle": "Boys Basketball athlete - Class of 2001",
       "to": "/athletics/boys/basketball/players/199909",
       "keywords": [
@@ -3774,10 +3831,46 @@
         "stats",
         "records",
         "Andy",
-        "Teitz",
-        "Teitz Andy",
+        "Tietz",
+        "Tietz Andy",
         "class of 2001",
         "grad 2001"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-200005",
+      "type": "athlete",
+      "title": "Quint Dixon",
+      "subtitle": "Boys Basketball athlete",
+      "to": "/athletics/boys/basketball/players/200005",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Quint",
+        "Dixon",
+        "Dixon Quint"
+      ]
+    },
+    {
+      "id": "boys-basketball-athlete-200004",
+      "type": "athlete",
+      "title": "Justin Dixon",
+      "subtitle": "Boys Basketball athlete - Class of 2002",
+      "to": "/athletics/boys/basketball/players/200004",
+      "keywords": [
+        "Boys Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Justin",
+        "Dixon",
+        "Dixon Justin",
+        "class of 2002",
+        "grad 2002"
       ]
     },
     {
@@ -3817,25 +3910,6 @@
       ]
     },
     {
-      "id": "boys-basketball-athlete-200009",
-      "type": "athlete",
-      "title": "Randell Phillips",
-      "subtitle": "Boys Basketball athlete - Class of 2001",
-      "to": "/athletics/boys/basketball/players/200009",
-      "keywords": [
-        "Boys Basketball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Randell",
-        "Phillips",
-        "Phillips Randell",
-        "class of 2001",
-        "grad 2001"
-      ]
-    },
-    {
       "id": "boys-basketball-athlete-199910",
       "type": "athlete",
       "title": "Jeremy Steinbart",
@@ -3852,80 +3926,6 @@
         "Steinbart Jeremy",
         "class of 2001",
         "grad 2001"
-      ]
-    },
-    {
-      "id": "boys-basketball-athlete-200004",
-      "type": "athlete",
-      "title": "Justin Dixon",
-      "subtitle": "Boys Basketball athlete - Class of 2002",
-      "to": "/athletics/boys/basketball/players/200004",
-      "keywords": [
-        "Boys Basketball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Justin",
-        "Dixon",
-        "Dixon Justin",
-        "class of 2002",
-        "grad 2002"
-      ]
-    },
-    {
-      "id": "boys-basketball-athlete-200005",
-      "type": "athlete",
-      "title": "Quint Dixon",
-      "subtitle": "Boys Basketball athlete",
-      "to": "/athletics/boys/basketball/players/200005",
-      "keywords": [
-        "Boys Basketball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Quint",
-        "Dixon",
-        "Dixon Quint"
-      ]
-    },
-    {
-      "id": "boys-basketball-athlete-200002",
-      "type": "athlete",
-      "title": "Patrick Burns",
-      "subtitle": "Boys Basketball athlete - Class of 2003",
-      "to": "/athletics/boys/basketball/players/200002",
-      "keywords": [
-        "Boys Basketball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Patrick",
-        "Burns",
-        "Burns Patrick",
-        "class of 2003",
-        "grad 2003"
-      ]
-    },
-    {
-      "id": "boys-basketball-athlete-200103",
-      "type": "athlete",
-      "title": "Justin Howard",
-      "subtitle": "Boys Basketball athlete - Class of 2003",
-      "to": "/athletics/boys/basketball/players/200103",
-      "keywords": [
-        "Boys Basketball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Justin",
-        "Howard",
-        "Howard Justin",
-        "class of 2003",
-        "grad 2003"
       ]
     },
     {
@@ -19628,6 +19628,24 @@
       ]
     },
     {
+      "id": "boys-basketball-team-first-baptist-school",
+      "type": "team",
+      "title": "First Baptist School",
+      "subtitle": "Boys Basketball opponent history - Charleston, SC",
+      "to": "/athletics/boys/basketball/records/opponents?team=First+Baptist+School",
+      "keywords": [
+        "Boys Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "First Baptist School",
+        "Hurricanes",
+        "Charleston",
+        "SC"
+      ]
+    },
+    {
       "id": "boys-basketball-team-west-georgia-christian",
       "type": "team",
       "title": "West Georgia Christian",
@@ -20135,24 +20153,6 @@
         "records",
         "Dorchester Academy",
         "St. George",
-        "SC"
-      ]
-    },
-    {
-      "id": "boys-basketball-team-first-baptist-school",
-      "type": "team",
-      "title": "First Baptist School",
-      "subtitle": "Boys Basketball opponent history - Charleston, SC",
-      "to": "/athletics/boys/basketball/records/opponents?team=First+Baptist+School",
-      "keywords": [
-        "Boys Basketball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "First Baptist School",
-        "Hurricanes",
-        "Charleston",
         "SC"
       ]
     },
