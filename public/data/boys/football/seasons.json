@@ -1412,13 +1412,45 @@
       "regions": "https://docs.google.com/spreadsheets/d/1pTXBCIxf2RIoffWpP-VZCdBUVwoZH2ED-Abrvadb6xc/htmlembed"
     },
     "SeasonRecapTitle": "Season Recap",
-    "SeasonRecap": "David Boylston's 1999 Saints were defending SCISA Class AA champions, but the fall became a rebuild around a much younger roster. The preseason preview listed only five returning starters and 20 first-year players, with seniors Michael Paton, Evan Aldrich, Andy Moreland and Joseph Hinely carrying the bridge from the 1998 title team.\n\nThe opening two weeks showed the cost of that turnover. Byrnes Academy ended St. Andrew's 11-game winning streak with a 6-0 win, holding the Saints to 101 total yards, and Dorchester followed with a 26-3 result despite Matt Mahany's first-quarter field goal. St. Andrew's answered at Thomas Heyward, where Paton ran for 219 yards and Evan Aldrich hit Ryan Stratz for a 41-yard fourth-quarter touchdown in a 13-6 win.\n\nPaton's surge became the season's center. He ran for 240 yards and five touchdowns against Colleton Prep, then set a school single-game rushing record with 259 yards and four touchdowns in a 28-21 upset at Sea Island. By the Nov. 10 Coastal Empire leaders, Paton had 1,784 rushing yards and 20 rushing touchdowns through the regular season, while Aldrich had thrown for 656 yards and four scores.\n\nThe Saints stayed in the SCISA AA playoff race despite midseason losses to Williamsburg, Calhoun and Hilton Head Prep. A scoreboard-only Patrick Henry result and the rescheduled Thomas Sumter game completed the regular season, with Paton running for 260 yards and five touchdowns against Thomas Sumter while Zack Hillard returned an interception for a score and Matt Hunt broke the school tackles record. St. Andrew's finished 5-6 after a 27-22 playoff loss at Williamsburg, where Paton scored rushing and receiving touchdowns and Lee Stubbs returned a fumble 83 yards.\n\nThe winter archive added the postseason coda. Michael Paton and Evan Aldrich represented St. Andrew's in the SCISA North-South All-Star Game, with Paton rushing for 89 yards and Aldrich recording 14 tackles in the South's 17-0 win. Boylston then resigned for Pinewood Prep after a 41-17 five-year run, and St. Andrew's hired Karl DeMasi in January to lead football, baseball and eventually boys basketball.\n\nPaton later earned second-team All-Coastal Empire honors at running back after his 1,784-yard, 20-touchdown season, while Zack Hillard and Matt Hunt were honorable mention linebackers.",
-    "ShowSeasonImagesPlaceholder": true,
+    "SeasonRecap": "David Boylston's 1999 Saints were defending SCISA Class AA champions, but the fall became a rebuild around a much younger roster. The preseason preview listed only five returning starters and 20 first-year players, with seniors Michael Paton, Evan Aldrich, Andy Moreland and Joseph Hinely carrying the bridge from the 1998 title team.\n\nThe opening two weeks showed the cost of that turnover. Byrnes Academy ended St. Andrew's 11-game winning streak with a 6-0 win, holding the Saints to 101 total yards, and Dorchester followed with a 26-3 result despite Matt Mahany's first-quarter field goal. St. Andrew's answered at Thomas Heyward, where Paton ran for 219 yards and Evan Aldrich hit Ryan Stratz for a 41-yard fourth-quarter touchdown in a 13-6 win.\n\nPaton's surge became the season's center. He ran for 240 yards and five touchdowns against Colleton Prep, then set a school single-game rushing record with 259 yards and four touchdowns in a 28-21 upset at Sea Island. By the Nov. 10 Coastal Empire leaders, Paton had 1,784 rushing yards and 20 rushing touchdowns through the regular season, while Aldrich had thrown for 656 yards and four scores.\n\nThe Saints stayed in the SCISA AA playoff race despite midseason losses to Williamsburg, Calhoun and Hilton Head Prep. A scoreboard-only Patrick Henry result and the rescheduled Thomas Sumter game completed the regular season, with Paton running for 260 yards and five touchdowns against Thomas Sumter while Zach Hillard returned an interception for a score and Matt Hunt broke the school tackles record. St. Andrew's finished 5-6 after a 27-22 playoff loss at Williamsburg, where Paton scored rushing and receiving touchdowns and Lee Stubbs returned a fumble 83 yards.\n\nThe winter archive added the postseason coda. Michael Paton and Evan Aldrich represented St. Andrew's in the SCISA North-South All-Star Game, with Paton rushing for 89 yards and Aldrich recording 14 tackles in the South's 17-0 win. Boylston then resigned for Pinewood Prep after a 41-17 five-year run, and St. Andrew's hired Karl DeMasi in January to lead football, baseball and eventually boys basketball.\n\nPaton later earned second-team All-Coastal Empire honors at running back after his 1,784-yard, 20-touchdown season, while Zach Hillard and Matt Hunt were honorable mention linebackers.",
+    "ShowSeasonImagesPlaceholder": false,
     "SeasonRecapSourceCitation": "\"SCISA REGION 2-AA / ST. ANDREW'S,\" Savannah Morning News, 1999-08-27, Page 21; Victor Fernandes, \"ST. ANDREW'S FALLS TO BYRNE IN SEASON OPENER,\" Savannah Morning News, 1999-08-28, Page 1F; Victor Fernandes, \"PATON PERFORMS MIRACLES FOR SAINTS,\" Savannah Morning News, 1999-10-06, Page 1D; \"STATISTICS,\" Savannah Morning News, 1999-11-10, Page 4D; \"BLOCKED FG ATTEMPTS KEY TO BC VICTORY,\" Savannah Morning News, 1999-11-13, Page 4F; \"FOOTBALL,\" Savannah Morning News (GA), December 5, 1999, Page 5C.; \"FOOTBALL COACH LEAVES ST. ANDREW'S AFTER FIVE YEARS,\" Savannah Morning News (GA), December 7, 1999, Page 5D.; \"DEMASI TAPPED FOR ST. ANDREW'S HEAD COACHING JOB,\" Savannah Morning News (GA), January 27, 2000, Page 3D.",
     "ArchiveStatus": "partial",
     "RecordSource": "seasons.json source-of-truth row; event pages reconcile to this record.",
     "FinishLabel": "SCISA AA Region II • Lost in first round vs. Williamsburg • 3-2 region record",
-    "ArchiveStatusNote": "Boys Football 1999-00 remains partial; recovered archive data is limited to the currently documented schedule, result, roster, and newspaper-source material."
+    "ArchiveStatusNote": "Boys Football 1999-00 remains partial; recovered archive data is limited to the currently documented schedule, result, roster, and newspaper-source material.",
+    "SeasonImages": [
+      {
+        "src": "/images/boys/football/seasons/1999/1999-football-team.png",
+        "alt": "1999-00 St. Andrew's football team photo",
+        "caption": "(Top Row) Brooks Wood, Gabe Seales, Jake Freeman, Lee Stubbs, Coach Boylston, Evan Aldrich, Billy McCarthy, Brannon Hinely, Brenton Marona (Second Row) Coach Dickson, Ricky Wiggins, Tyson Lemka, Michael McClean, Andy Moreland, Matt Hunt, Adam Ciccio, Tommy Sandford, Cory Brinson, Coach Godbee (Third Row) Coach Glisson, Joseph Hinely, Michael Paton, Ryan Stratz, Zach Hillard, Jeff Smith, Franck Krynen, Quint Dixon, Justin Dixon, Jake Smith (Bottom Row) Stevie Gregory, Ben Robertson, Lisandro Gubiara, Cam Aldrich"
+      },
+      {
+        "src": "/images/boys/football/seasons/1999/1999-football-01-homecoming-sign.png",
+        "alt": "The Saints football team breaks through a Homecoming sign",
+        "caption": "The Saints get hyped up for the huge Homecoming game by bashing through the sign and leaving their fans yelling with pride."
+      },
+      {
+        "src": "/images/boys/football/seasons/1999/1999-football-02-huddle.png",
+        "alt": "The Saints football team huddles on the field",
+        "caption": "The Saints huddle up on the field for a quick run down on the next break so 'Ready, Set, BREAK!'"
+      },
+      {
+        "src": "/images/boys/football/seasons/1999/1999-football-03-tunnel.png",
+        "alt": "The Saints football team runs out of the tunnel",
+        "caption": "The Saints football team run out of the tunnel with their game faces on!"
+      },
+      {
+        "src": "/images/boys/football/seasons/1999/1999-football-04-fumble-scramble.png",
+        "alt": "Adam Ciccio and Zach Hillard scramble for a fumbled ball",
+        "caption": "Adam Ciccio and Zach Hillard scramble to gain possession of their opponents' fumbled ball."
+      },
+      {
+        "src": "/images/boys/football/seasons/1999/1999-football-05-matt-mahany.png",
+        "alt": "Matt Mahany cheers on the Saints football team",
+        "caption": "Matt Mahany cheers on this team as they head for another victory."
+      }
+    ]
   },
   {
     "SeasonID": 2000,

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-19T14:42:03.358Z",
-  "itemCount": 1435,
+  "generatedAt": "2026-05-19T16:38:16.159Z",
+  "itemCount": 1443,
   "items": [
     {
       "id": "athletics-home",
@@ -3841,7 +3841,7 @@
       "id": "boys-basketball-athlete-200005",
       "type": "athlete",
       "title": "Quint Dixon",
-      "subtitle": "Boys Basketball athlete",
+      "subtitle": "Boys Basketball athlete - Class of 2002",
       "to": "/athletics/boys/basketball/players/200005",
       "keywords": [
         "Boys Basketball",
@@ -3851,7 +3851,9 @@
         "records",
         "Quint",
         "Dixon",
-        "Dixon Quint"
+        "Dixon Quint",
+        "class of 2002",
+        "grad 2002"
       ]
     },
     {
@@ -3987,7 +3989,7 @@
       "id": "boys-basketball-athlete-200008",
       "type": "athlete",
       "title": "Billy McCarthy",
-      "subtitle": "Boys Basketball athlete",
+      "subtitle": "Boys Basketball athlete - Class of 2003",
       "to": "/athletics/boys/basketball/players/200008",
       "keywords": [
         "Boys Basketball",
@@ -3997,14 +3999,16 @@
         "records",
         "Billy",
         "McCarthy",
-        "McCarthy Billy"
+        "McCarthy Billy",
+        "class of 2003",
+        "grad 2003"
       ]
     },
     {
       "id": "boys-basketball-athlete-200010",
       "type": "athlete",
       "title": "Ben Robertson",
-      "subtitle": "Boys Basketball athlete",
+      "subtitle": "Boys Basketball athlete - Class of 2003",
       "to": "/athletics/boys/basketball/players/200010",
       "keywords": [
         "Boys Basketball",
@@ -4014,7 +4018,9 @@
         "records",
         "Ben",
         "Robertson",
-        "Robertson Ben"
+        "Robertson Ben",
+        "class of 2003",
+        "grad 2003"
       ]
     },
     {
@@ -7923,7 +7929,7 @@
       "id": "baseball-athlete-200462",
       "type": "athlete",
       "title": "Ryan Stratz",
-      "subtitle": "Baseball athlete",
+      "subtitle": "Baseball athlete - Class of 2002",
       "to": "/athletics/boys/baseball/players/200462",
       "keywords": [
         "Baseball",
@@ -7933,14 +7939,16 @@
         "records",
         "Ryan",
         "Stratz",
-        "Stratz Ryan"
+        "Stratz Ryan",
+        "class of 2002",
+        "grad 2002"
       ]
     },
     {
       "id": "baseball-athlete-2027051",
       "type": "athlete",
       "title": "Tyson Lenka",
-      "subtitle": "Baseball athlete",
+      "subtitle": "Baseball athlete - Class of 2003",
       "to": "/athletics/boys/baseball/players/2027051",
       "keywords": [
         "Baseball",
@@ -7950,7 +7958,9 @@
         "records",
         "Tyson",
         "Lenka",
-        "Lenka Tyson"
+        "Lenka Tyson",
+        "class of 2003",
+        "grad 2003"
       ]
     },
     {
@@ -7974,7 +7984,7 @@
       "id": "baseball-athlete-2027053",
       "type": "athlete",
       "title": "Stevie Gregory",
-      "subtitle": "Baseball athlete",
+      "subtitle": "Baseball athlete - Class of 2003",
       "to": "/athletics/boys/baseball/players/2027053",
       "keywords": [
         "Baseball",
@@ -7984,14 +7994,16 @@
         "records",
         "Stevie",
         "Gregory",
-        "Gregory Stevie"
+        "Gregory Stevie",
+        "class of 2003",
+        "grad 2003"
       ]
     },
     {
       "id": "baseball-athlete-2027054",
       "type": "athlete",
       "title": "Ricky Wiggins",
-      "subtitle": "Baseball athlete",
+      "subtitle": "Baseball athlete - Class of 2003",
       "to": "/athletics/boys/baseball/players/2027054",
       "keywords": [
         "Baseball",
@@ -8001,7 +8013,9 @@
         "records",
         "Ricky",
         "Wiggins",
-        "Wiggins Ricky"
+        "Wiggins Ricky",
+        "class of 2003",
+        "grad 2003"
       ]
     },
     {
@@ -8082,7 +8096,7 @@
       "id": "baseball-athlete-200005",
       "type": "athlete",
       "title": "Quint Dixon",
-      "subtitle": "Baseball athlete",
+      "subtitle": "Baseball athlete - Class of 2002",
       "to": "/athletics/boys/baseball/players/200005",
       "keywords": [
         "Baseball",
@@ -8092,7 +8106,9 @@
         "records",
         "Quint",
         "Dixon",
-        "Dixon Quint"
+        "Dixon Quint",
+        "class of 2002",
+        "grad 2002"
       ]
     },
     {
@@ -13147,60 +13163,79 @@
       ]
     },
     {
-      "id": "football-athlete-199901",
+      "id": "football-athlete-2027053",
       "type": "athlete",
-      "title": "Michael Paton",
-      "subtitle": "Football athlete - Class of 2000",
-      "to": "/athletics/football/players/199901",
+      "title": "Stevie Gregory",
+      "subtitle": "Football athlete - Class of 2003",
+      "to": "/athletics/football/players/2027053",
       "keywords": [
         "Football",
         "athlete",
         "player",
         "stats",
         "records",
-        "Michael",
-        "Paton",
-        "Paton Michael",
+        "Stevie",
+        "Gregory",
+        "Gregory Stevie",
+        "class of 2003",
+        "grad 2003"
+      ]
+    },
+    {
+      "id": "football-athlete-200010",
+      "type": "athlete",
+      "title": "Ben Robertson",
+      "subtitle": "Football athlete - Class of 2003",
+      "to": "/athletics/football/players/200010",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Ben",
+        "Robertson",
+        "Robertson Ben",
+        "class of 2003",
+        "grad 2003"
+      ]
+    },
+    {
+      "id": "football-athlete-2027065",
+      "type": "athlete",
+      "title": "Lisandro Gubiara",
+      "subtitle": "Football athlete - Class of 2000",
+      "to": "/athletics/football/players/2027065",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Lisandro",
+        "Gubiara",
+        "Gubiara Lisandro",
         "class of 2000",
         "grad 2000"
       ]
     },
     {
-      "id": "football-athlete-199601",
+      "id": "football-athlete-200001",
       "type": "athlete",
-      "title": "Evan Aldrich",
-      "subtitle": "Football athlete - Class of 2000",
-      "to": "/athletics/football/players/199601",
+      "title": "Cam Aldrich",
+      "subtitle": "Football athlete - Class of 2003",
+      "to": "/athletics/football/players/200001",
       "keywords": [
         "Football",
         "athlete",
         "player",
         "stats",
         "records",
-        "Evan",
+        "Cam",
         "Aldrich",
-        "Aldrich Evan",
-        "class of 2000",
-        "grad 2000"
-      ]
-    },
-    {
-      "id": "football-athlete-199906",
-      "type": "athlete",
-      "title": "Andy Moreland",
-      "subtitle": "Football athlete - Class of 2000",
-      "to": "/athletics/football/players/199906",
-      "keywords": [
-        "Football",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Andy",
-        "Moreland",
-        "Moreland Andy",
-        "class of 2000",
-        "grad 2000"
+        "Aldrich Cam",
+        "class of 2003",
+        "grad 2003"
       ]
     },
     {
@@ -13223,94 +13258,39 @@
       ]
     },
     {
-      "id": "football-athlete-199903",
+      "id": "football-athlete-199901",
       "type": "athlete",
-      "title": "Lee Stubbs",
+      "title": "Michael Paton",
       "subtitle": "Football athlete - Class of 2000",
-      "to": "/athletics/football/players/199903",
+      "to": "/athletics/football/players/199901",
       "keywords": [
         "Football",
         "athlete",
         "player",
         "stats",
         "records",
-        "Lee",
-        "Stubbs",
-        "Stubbs Lee",
+        "Michael",
+        "Paton",
+        "Paton Michael",
         "class of 2000",
         "grad 2000"
       ]
     },
     {
-      "id": "football-athlete-199902",
+      "id": "football-athlete-200462",
       "type": "athlete",
-      "title": "Matt Mahany",
-      "subtitle": "Football athlete",
-      "to": "/athletics/football/players/199902",
-      "keywords": [
-        "Football",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Matt",
-        "Mahany",
-        "Mahany Matt"
-      ]
-    },
-    {
-      "id": "football-athlete-200004",
-      "type": "athlete",
-      "title": "Justin Dixon",
+      "title": "Ryan Stratz",
       "subtitle": "Football athlete - Class of 2002",
-      "to": "/athletics/football/players/200004",
+      "to": "/athletics/football/players/200462",
       "keywords": [
         "Football",
         "athlete",
         "player",
         "stats",
         "records",
-        "Justin",
-        "Dixon",
-        "Dixon Justin",
-        "class of 2002",
-        "grad 2002"
-      ]
-    },
-    {
-      "id": "football-athlete-200104",
-      "type": "athlete",
-      "title": "Matt Hunt",
-      "subtitle": "Football athlete - Class of 2003",
-      "to": "/athletics/football/players/200104",
-      "keywords": [
-        "Football",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Matt",
-        "Hunt",
-        "Hunt Matt",
-        "class of 2003",
-        "grad 2003"
-      ]
-    },
-    {
-      "id": "football-athlete-200108",
-      "type": "athlete",
-      "title": "Adam Ciccio",
-      "subtitle": "Football athlete - Class of 2002",
-      "to": "/athletics/football/players/200108",
-      "keywords": [
-        "Football",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Adam",
-        "Ciccio",
-        "Ciccio Adam",
+        "Ryan",
+        "Stratz",
+        "Stratz Ryan",
         "class of 2002",
         "grad 2002"
       ]
@@ -13354,27 +13334,200 @@
       ]
     },
     {
-      "id": "football-athlete-200462",
+      "id": "football-athlete-2027044",
       "type": "athlete",
-      "title": "Ryan Stratz",
-      "subtitle": "Football athlete",
-      "to": "/athletics/football/players/200462",
+      "title": "Franck Krynen",
+      "subtitle": "Football athlete - Class of 2001",
+      "to": "/athletics/football/players/2027044",
       "keywords": [
         "Football",
         "athlete",
         "player",
         "stats",
         "records",
-        "Ryan",
-        "Stratz",
-        "Stratz Ryan"
+        "Franck",
+        "Krynen",
+        "Krynen Franck",
+        "class of 2001",
+        "grad 2001"
+      ]
+    },
+    {
+      "id": "football-athlete-200005",
+      "type": "athlete",
+      "title": "Quint Dixon",
+      "subtitle": "Football athlete - Class of 2002",
+      "to": "/athletics/football/players/200005",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Quint",
+        "Dixon",
+        "Dixon Quint",
+        "class of 2002",
+        "grad 2002"
+      ]
+    },
+    {
+      "id": "football-athlete-200004",
+      "type": "athlete",
+      "title": "Justin Dixon",
+      "subtitle": "Football athlete - Class of 2002",
+      "to": "/athletics/football/players/200004",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Justin",
+        "Dixon",
+        "Dixon Justin",
+        "class of 2002",
+        "grad 2002"
+      ]
+    },
+    {
+      "id": "football-athlete-2027054",
+      "type": "athlete",
+      "title": "Ricky Wiggins",
+      "subtitle": "Football athlete - Class of 2003",
+      "to": "/athletics/football/players/2027054",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Ricky",
+        "Wiggins",
+        "Wiggins Ricky",
+        "class of 2003",
+        "grad 2003"
+      ]
+    },
+    {
+      "id": "football-athlete-2027051",
+      "type": "athlete",
+      "title": "Tyson Lenka",
+      "subtitle": "Football athlete - Class of 2003",
+      "to": "/athletics/football/players/2027051",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Tyson",
+        "Lenka",
+        "Lenka Tyson",
+        "class of 2003",
+        "grad 2003"
+      ]
+    },
+    {
+      "id": "football-athlete-200014",
+      "type": "athlete",
+      "title": "Mike McLean",
+      "subtitle": "Football athlete - Class of 2003",
+      "to": "/athletics/football/players/200014",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Mike",
+        "McLean",
+        "McLean Mike",
+        "class of 2003",
+        "grad 2003"
+      ]
+    },
+    {
+      "id": "football-athlete-199906",
+      "type": "athlete",
+      "title": "Andy Moreland",
+      "subtitle": "Football athlete - Class of 2000",
+      "to": "/athletics/football/players/199906",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Andy",
+        "Moreland",
+        "Moreland Andy",
+        "class of 2000",
+        "grad 2000"
+      ]
+    },
+    {
+      "id": "football-athlete-200104",
+      "type": "athlete",
+      "title": "Matt Hunt",
+      "subtitle": "Football athlete - Class of 2003",
+      "to": "/athletics/football/players/200104",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Matt",
+        "Hunt",
+        "Hunt Matt",
+        "class of 2003",
+        "grad 2003"
+      ]
+    },
+    {
+      "id": "football-athlete-200108",
+      "type": "athlete",
+      "title": "Adam Ciccio",
+      "subtitle": "Football athlete - Class of 2002",
+      "to": "/athletics/football/players/200108",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Adam",
+        "Ciccio",
+        "Ciccio Adam",
+        "class of 2002",
+        "grad 2002"
+      ]
+    },
+    {
+      "id": "football-athlete-200015",
+      "type": "athlete",
+      "title": "Tony Sandford",
+      "subtitle": "Football athlete - Class of 2003",
+      "to": "/athletics/football/players/200015",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Tony",
+        "Sandford",
+        "Sandford Tony",
+        "class of 2003",
+        "grad 2003"
       ]
     },
     {
       "id": "football-athlete-199904",
       "type": "athlete",
       "title": "Corey Brinson",
-      "subtitle": "Football athlete",
+      "subtitle": "Football athlete - Class of 2003",
       "to": "/athletics/football/players/199904",
       "keywords": [
         "Football",
@@ -13384,7 +13537,47 @@
         "records",
         "Corey",
         "Brinson",
-        "Brinson Corey"
+        "Brinson Corey",
+        "class of 2003",
+        "grad 2003"
+      ]
+    },
+    {
+      "id": "football-athlete-2027066",
+      "type": "athlete",
+      "title": "Brooks Wood",
+      "subtitle": "Football athlete - Class of 2003",
+      "to": "/athletics/football/players/2027066",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Brooks",
+        "Wood",
+        "Wood Brooks",
+        "class of 2003",
+        "grad 2003"
+      ]
+    },
+    {
+      "id": "football-athlete-2027067",
+      "type": "athlete",
+      "title": "Gabe Seales",
+      "subtitle": "Football athlete - Class of 2002",
+      "to": "/athletics/football/players/2027067",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Gabe",
+        "Seales",
+        "Seales Gabe",
+        "class of 2002",
+        "grad 2002"
       ]
     },
     {
@@ -13405,20 +13598,98 @@
       ]
     },
     {
-      "id": "football-athlete-199908",
+      "id": "football-athlete-199903",
       "type": "athlete",
-      "title": "Adam Liscio",
-      "subtitle": "Football athlete",
-      "to": "/athletics/football/players/199908",
+      "title": "Lee Stubbs",
+      "subtitle": "Football athlete - Class of 2000",
+      "to": "/athletics/football/players/199903",
       "keywords": [
         "Football",
         "athlete",
         "player",
         "stats",
         "records",
-        "Adam",
-        "Liscio",
-        "Liscio Adam"
+        "Lee",
+        "Stubbs",
+        "Stubbs Lee",
+        "class of 2000",
+        "grad 2000"
+      ]
+    },
+    {
+      "id": "football-athlete-199601",
+      "type": "athlete",
+      "title": "Evan Aldrich",
+      "subtitle": "Football athlete - Class of 2000",
+      "to": "/athletics/football/players/199601",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Evan",
+        "Aldrich",
+        "Aldrich Evan",
+        "class of 2000",
+        "grad 2000"
+      ]
+    },
+    {
+      "id": "football-athlete-200008",
+      "type": "athlete",
+      "title": "Billy McCarthy",
+      "subtitle": "Football athlete - Class of 2003",
+      "to": "/athletics/football/players/200008",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Billy",
+        "McCarthy",
+        "McCarthy Billy",
+        "class of 2003",
+        "grad 2003"
+      ]
+    },
+    {
+      "id": "football-athlete-2027068",
+      "type": "athlete",
+      "title": "Brannon Hinely",
+      "subtitle": "Football athlete - Class of 2002",
+      "to": "/athletics/football/players/2027068",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Brannon",
+        "Hinely",
+        "Hinely Brannon",
+        "class of 2002",
+        "grad 2002"
+      ]
+    },
+    {
+      "id": "football-athlete-2027069",
+      "type": "athlete",
+      "title": "Brenton Marona",
+      "subtitle": "Football athlete - Class of 2003",
+      "to": "/athletics/football/players/2027069",
+      "keywords": [
+        "Football",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Brenton",
+        "Marona",
+        "Marona Brenton",
+        "class of 2003",
+        "grad 2003"
       ]
     },
     {
@@ -13438,25 +13709,6 @@
         "Clay Davy",
         "class of 2004",
         "grad 2004"
-      ]
-    },
-    {
-      "id": "football-athlete-200001",
-      "type": "athlete",
-      "title": "Cam Aldrich",
-      "subtitle": "Football athlete - Class of 2003",
-      "to": "/athletics/football/players/200001",
-      "keywords": [
-        "Football",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Cam",
-        "Aldrich",
-        "Aldrich Cam",
-        "class of 2003",
-        "grad 2003"
       ]
     },
     {
@@ -13496,23 +13748,6 @@
       ]
     },
     {
-      "id": "football-athlete-200008",
-      "type": "athlete",
-      "title": "Billy McCarthy",
-      "subtitle": "Football athlete",
-      "to": "/athletics/football/players/200008",
-      "keywords": [
-        "Football",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Billy",
-        "McCarthy",
-        "McCarthy Billy"
-      ]
-    },
-    {
       "id": "football-athlete-200106",
       "type": "athlete",
       "title": "Jake Smith",
@@ -13527,23 +13762,6 @@
         "Jake",
         "Smith",
         "Smith Jake"
-      ]
-    },
-    {
-      "id": "football-athlete-200010",
-      "type": "athlete",
-      "title": "Ben Robertson",
-      "subtitle": "Football athlete",
-      "to": "/athletics/football/players/200010",
-      "keywords": [
-        "Football",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Ben",
-        "Robertson",
-        "Robertson Ben"
       ]
     },
     {
@@ -13637,25 +13855,6 @@
         "Glenn Omar",
         "class of 2005",
         "grad 2005"
-      ]
-    },
-    {
-      "id": "football-athlete-200015",
-      "type": "athlete",
-      "title": "Tony Sandford",
-      "subtitle": "Football athlete - Class of 2003",
-      "to": "/athletics/football/players/200015",
-      "keywords": [
-        "Football",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Tony",
-        "Sandford",
-        "Sandford Tony",
-        "class of 2003",
-        "grad 2003"
       ]
     },
     {
@@ -13785,25 +13984,6 @@
         "Andy",
         "Crouch",
         "Crouch Andy"
-      ]
-    },
-    {
-      "id": "football-athlete-200014",
-      "type": "athlete",
-      "title": "Mike McLean",
-      "subtitle": "Football athlete - Class of 2003",
-      "to": "/athletics/football/players/200014",
-      "keywords": [
-        "Football",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Mike",
-        "McLean",
-        "McLean Mike",
-        "class of 2003",
-        "grad 2003"
       ]
     },
     {
@@ -15403,7 +15583,7 @@
       "id": "boys-soccer-athlete-2027044",
       "type": "athlete",
       "title": "Franck Krynen",
-      "subtitle": "Boys Soccer athlete",
+      "subtitle": "Boys Soccer athlete - Class of 2001",
       "to": "/athletics/boys/soccer/players/2027044",
       "keywords": [
         "Boys Soccer",
@@ -15413,7 +15593,9 @@
         "records",
         "Franck",
         "Krynen",
-        "Krynen Franck"
+        "Krynen Franck",
+        "class of 2001",
+        "grad 2001"
       ]
     },
     {
@@ -15458,7 +15640,7 @@
       "id": "boys-soccer-athlete-200005",
       "type": "athlete",
       "title": "Quint Dixon",
-      "subtitle": "Boys Soccer athlete",
+      "subtitle": "Boys Soccer athlete - Class of 2002",
       "to": "/athletics/boys/soccer/players/200005",
       "keywords": [
         "Boys Soccer",
@@ -15468,7 +15650,9 @@
         "records",
         "Quint",
         "Dixon",
-        "Dixon Quint"
+        "Dixon Quint",
+        "class of 2002",
+        "grad 2002"
       ]
     },
     {
