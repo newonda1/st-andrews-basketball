@@ -687,8 +687,8 @@
   },
   {
     "PlayerID": 199904,
-    "PlayerName": "Corey Brinson",
-    "FirstName": "Corey",
+    "PlayerName": "Cory Brinson",
+    "FirstName": "Cory",
     "LastName": "Brinson",
     "GradYear": 2003,
     "Gender": "Boys"
@@ -919,10 +919,10 @@
   },
   {
     "PlayerID": 200102,
-    "FirstName": "Zack",
+    "FirstName": "Zach",
     "LastName": "Hillard",
     "GradYear": 2002,
-    "PlayerName": "Zack Hillard",
+    "PlayerName": "Zach Hillard",
     "Gender": "Boys"
   },
   {
@@ -953,7 +953,9 @@
     "PlayerID": 200106,
     "FirstName": "Jake",
     "LastName": "Smith",
-    "GradYear": null
+    "GradYear": 2002,
+    "PlayerName": "Jake Smith",
+    "Gender": "Boys"
   },
   {
     "PlayerID": 200107,
@@ -6423,17 +6425,17 @@
   },
   {
     "PlayerID": 2027051,
-    "PlayerName": "Tyson Lenka",
+    "PlayerName": "Tyson Lemka",
     "FirstName": "Tyson",
-    "LastName": "Lenka",
+    "LastName": "Lemka",
     "GradYear": 2003,
     "Gender": "Boys"
   },
   {
     "PlayerID": 2027052,
-    "PlayerName": "Adam Sumers",
-    "FirstName": "Adam",
-    "LastName": "Sumers",
+    "PlayerName": "Adem Sumer",
+    "FirstName": "Adem",
+    "LastName": "Sumer",
     "GradYear": null,
     "Gender": "Boys"
   },

@@ -418,7 +418,7 @@ export function BaseballSeasonPage({
     const playerRows = rosterEntries.map((entry, index) => ({
       key: `player-${entry.PlayerID}-${index}`,
       jersey: entry.JerseyNumber,
-      name: getPlayerName(playersMap, Number(entry.PlayerID)),
+      name: entry.PlayerName || getPlayerName(playersMap, Number(entry.PlayerID)),
       grade: entry.Grade,
       path: baseballPlayerPath(entry.PlayerID, seasonId),
     }));

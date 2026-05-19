@@ -3,44 +3,88 @@
     "SeasonID": "2000",
     "Players": [
       {
-        "PlayerID": 200011,
-        "JerseyNumber": null
+        "PlayerID": 200103,
+        "PlayerName": "Justin Howard",
+        "JerseyNumber": null,
+        "Grade": 9
       },
       {
-        "PlayerID": 200104,
-        "JerseyNumber": null
-      },
-      {
-        "PlayerID": 200106,
-        "JerseyNumber": null
-      },
-      {
-        "PlayerID": 200108,
-        "JerseyNumber": null
-      },
-      {
-        "PlayerID": 200102,
-        "JerseyNumber": null
-      },
-      {
-        "PlayerID": 200462,
-        "JerseyNumber": null
+        "PlayerID": 200008,
+        "PlayerName": "Billy McCarthy",
+        "JerseyNumber": null,
+        "Grade": 9
       },
       {
         "PlayerID": 2027051,
-        "JerseyNumber": null
+        "PlayerName": "Tyson Lemka",
+        "JerseyNumber": null,
+        "Grade": 9
       },
       {
         "PlayerID": 2027052,
-        "JerseyNumber": null
+        "PlayerName": "Adem Sumer",
+        "JerseyNumber": null,
+        "Grade": null
       },
       {
-        "PlayerID": 2027053,
-        "JerseyNumber": null
+        "PlayerID": 200108,
+        "PlayerName": "Adam Ciccio",
+        "JerseyNumber": null,
+        "Grade": 10
+      },
+      {
+        "PlayerID": 200102,
+        "PlayerName": "Zach Hillard",
+        "JerseyNumber": null,
+        "Grade": 10
       },
       {
         "PlayerID": 2027054,
-        "JerseyNumber": null
+        "PlayerName": "Ricky Wiggins",
+        "JerseyNumber": null,
+        "Grade": 9
+      },
+      {
+        "PlayerID": 200106,
+        "PlayerName": "Jake Smith",
+        "JerseyNumber": null,
+        "Grade": 10
+      },
+      {
+        "PlayerID": 199904,
+        "PlayerName": "Cory Brinson",
+        "JerseyNumber": null,
+        "Grade": 9
+      },
+      {
+        "PlayerID": 2027069,
+        "PlayerName": "Brent Marona",
+        "JerseyNumber": null,
+        "Grade": 9
+      },
+      {
+        "PlayerID": 200011,
+        "PlayerName": "Jeff Smith",
+        "JerseyNumber": null,
+        "Grade": 9
+      },
+      {
+        "PlayerID": 2027053,
+        "PlayerName": "Stevie Gregory",
+        "JerseyNumber": null,
+        "Grade": 9
+      },
+      {
+        "PlayerID": 200462,
+        "PlayerName": "Ryan Stratz",
+        "JerseyNumber": null,
+        "Grade": 10
+      },
+      {
+        "PlayerID": 200104,
+        "PlayerName": "Matt Hunt",
+        "JerseyNumber": null,
+        "Grade": 9
       }
     ]
   },

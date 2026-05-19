@@ -5,17 +5,16 @@
     "GameType": "Region",
     "GameID": 2000031501,
     "DisplayDate": "Before March 22",
-    "OpponentID": "",
-    "Opponent": "Unknown",
-    "OpponentAbbr": "UNK",
+    "OpponentID": "sc-sea-island-academy-johns-island",
+    "Opponent": "Sea Island Academy",
+    "OpponentAbbr": "SIA",
     "Result": "L",
-    "TeamScore": null,
-    "OpponentScore": null,
-    "IsPlaceholder": true,
-    "Notes": "Placeholder region loss added because the March 29 Patrick Henry box score listed St. Andrew's at 3-3 overall and 1-2 in SCISA Region 4-AA after the known March 22-28 results.",
-    "SourceCitation": "Record-path placeholder from NewsBank baseball reports, Spring 2000.",
-    "BoxScoreCompleteness": "placeholder",
-    "SourceNote": "Placeholder region loss added because the March 29 Patrick Henry box score listed St. Andrew's at 3-3 overall and 1-2 in SCISA Region 4-AA after the known March 22-28 results.",
+    "TeamScore": 0,
+    "OpponentScore": 12,
+    "Notes": "Yearbook score-only result: St. Andrew's lost to Sea Island 12-0 before the March 22 Agape Christian doubleheader.",
+    "SourceCitation": "1999-00 St. Andrew's yearbook baseball team page.",
+    "BoxScoreCompleteness": "score-only",
+    "SourceNote": "Yearbook score-only result: St. Andrew's lost to Sea Island 12-0 before the March 22 Agape Christian doubleheader.",
     "SourceSeasonLabel": "1999-00"
   },
   {
@@ -24,17 +23,34 @@
     "GameType": "Region",
     "GameID": 2000031502,
     "DisplayDate": "Before March 22",
-    "OpponentID": "",
-    "Opponent": "Unknown",
-    "OpponentAbbr": "UNK",
+    "OpponentID": "sc-st-pauls-country-day-school-hollywood",
+    "Opponent": "St. Paul's Country Day School",
+    "OpponentAbbr": "SPCD",
     "Result": "L",
-    "TeamScore": null,
-    "OpponentScore": null,
-    "IsPlaceholder": true,
-    "Notes": "Second placeholder region loss needed to reconcile the March 29 Patrick Henry record line of 3-3 overall and 1-2 in SCISA Region 4-AA.",
-    "SourceCitation": "Record-path placeholder from NewsBank baseball reports, Spring 2000.",
-    "BoxScoreCompleteness": "placeholder",
-    "SourceNote": "Second placeholder region loss needed to reconcile the March 29 Patrick Henry record line of 3-3 overall and 1-2 in SCISA Region 4-AA.",
+    "TeamScore": 8,
+    "OpponentScore": 15,
+    "Notes": "Yearbook score-only result: St. Andrew's lost to St. Paul's Country Day 15-8 before the March 22 Agape Christian doubleheader.",
+    "SourceCitation": "1999-00 St. Andrew's yearbook baseball team page.",
+    "BoxScoreCompleteness": "score-only",
+    "SourceNote": "Yearbook score-only result: St. Andrew's lost to St. Paul's Country Day 15-8 before the March 22 Agape Christian doubleheader.",
+    "SourceSeasonLabel": "1999-00"
+  },
+  {
+    "Season": 2000,
+    "LocationType": "Unknown",
+    "GameType": "Non-Region",
+    "GameID": 2000031503,
+    "DisplayDate": "Before March 22",
+    "OpponentID": "ga-bible-baptist-school-savannah",
+    "Opponent": "Bible Baptist School",
+    "OpponentAbbr": "BB",
+    "Result": "W",
+    "TeamScore": 8,
+    "OpponentScore": 6,
+    "Notes": "Yearbook score-only result: St. Andrew's beat Bible Baptist 8-6 before the March 22 Agape Christian doubleheader.",
+    "SourceCitation": "1999-00 St. Andrew's yearbook baseball team page.",
+    "BoxScoreCompleteness": "score-only",
+    "SourceNote": "Yearbook score-only result: St. Andrew's beat Bible Baptist 8-6 before the March 22 Agape Christian doubleheader.",
     "SourceSeasonLabel": "1999-00"
   },
   {
@@ -92,11 +108,11 @@
         "PlayerName": "Cleland"
       }
     },
-    "Notes": "Jeff Smith went 2-for-2 with an RBI and earned the win. Matt Hunt went 3-for-3 with three RBIs, Jake Smith went 2-for-2 with two RBIs, and Tyson Lenka went 3-for-3 with an RBI.",
+    "Notes": "Jeff Smith went 2-for-2 with an RBI and earned the win. Matt Hunt went 3-for-3 with three RBIs, Jake Smith went 2-for-2 with two RBIs, and Tyson Lemka went 3-for-3 with an RBI.",
     "SourceDate": "2000-03-23",
     "SourceCitation": "\"GROVES RALLIES SEVERAL TIMES TO BEAT WINDSOR FOREST,\" Savannah Morning News (GA), March 23, 2000, Page 4D.",
     "BoxScoreCompleteness": "partial",
-    "SourceNote": "Jeff Smith went 2-for-2 with an RBI and earned the win. Matt Hunt went 3-for-3 with three RBIs, Jake Smith went 2-for-2 with two RBIs, and Tyson Lenka went 3-for-3 with an RBI.",
+    "SourceNote": "Jeff Smith went 2-for-2 with an RBI and earned the win. Matt Hunt went 3-for-3 with three RBIs, Jake Smith went 2-for-2 with two RBIs, and Tyson Lemka went 3-for-3 with an RBI.",
     "SourceSeasonLabel": "1999-00"
   },
   {
@@ -154,11 +170,11 @@
         "PlayerName": "Brandon"
       }
     },
-    "Notes": "Adam Ciccio and Ryan Stratz combined on a no-hitter in the second game of the doubleheader. Zack Hillard went 2-for-2 with three RBIs as St. Andrew's improved to 2-2.",
+    "Notes": "Adam Ciccio and Ryan Stratz combined on a no-hitter in the second game of the doubleheader. Zach Hillard went 2-for-2 with three RBIs as St. Andrew's improved to 2-2.",
     "SourceDate": "2000-03-23",
     "SourceCitation": "\"GROVES RALLIES SEVERAL TIMES TO BEAT WINDSOR FOREST,\" Savannah Morning News (GA), March 23, 2000, Page 4D.",
     "BoxScoreCompleteness": "partial",
-    "SourceNote": "Adam Ciccio and Ryan Stratz combined on a no-hitter in the second game of the doubleheader. Zack Hillard went 2-for-2 with three RBIs as St. Andrew's improved to 2-2.",
+    "SourceNote": "Adam Ciccio and Ryan Stratz combined on a no-hitter in the second game of the doubleheader. Zach Hillard went 2-for-2 with three RBIs as St. Andrew's improved to 2-2.",
     "SourceSeasonLabel": "1999-00"
   },
   {
@@ -218,7 +234,7 @@
       },
       "Loss": {
         "PlayerID": 200102,
-        "PlayerName": "Zack Hillard"
+        "PlayerName": "Zach Hillard"
       }
     },
     "Notes": "Memorial Day defeated St. Andrew's 8-4. The box score listed St. Andrew's at 2-3.",
@@ -302,25 +318,6 @@
   {
     "Season": 2000,
     "LocationType": "Unknown",
-    "GameType": "Non-Region",
-    "GameID": 2000040101,
-    "DisplayDate": "Between March 29 and April 5",
-    "OpponentID": "",
-    "Opponent": "Unknown",
-    "OpponentAbbr": "UNK",
-    "Result": "W",
-    "TeamScore": null,
-    "OpponentScore": null,
-    "IsPlaceholder": true,
-    "Notes": "Placeholder non-region win added because the April 5 Beaufort Academy report listed St. Andrew's at 5-3 overall and 2-2 in SCISA Region 4-AA after the known March 29 Patrick Henry win and the Beaufort region win.",
-    "SourceCitation": "Record-path placeholder from NewsBank baseball reports, Spring 2000.",
-    "BoxScoreCompleteness": "placeholder",
-    "SourceNote": "Placeholder non-region win added because the April 5 Beaufort Academy report listed St. Andrew's at 5-3 overall and 2-2 in SCISA Region 4-AA after the known March 29 Patrick Henry win and the Beaufort region win.",
-    "SourceSeasonLabel": "1999-00"
-  },
-  {
-    "Season": 2000,
-    "LocationType": "Unknown",
     "GameType": "Region",
     "GameID": 2000040401,
     "Date": "2000-04-04",
@@ -372,7 +369,7 @@
     "PitchingDecisions": {
       "Win": {
         "PlayerID": 200102,
-        "PlayerName": "Zack Hillard",
+        "PlayerName": "Zach Hillard",
         "Record": "1-2"
       },
       "Save": {
@@ -448,11 +445,11 @@
         "PlayerName": "East"
       }
     },
-    "Notes": "Zack Hillard went 3-for-5 with five RBIs, Adam Ciccio went 3-for-5 with an RBI and earned the win, Adam Sumers and Stevie Gregory homered, and St. Andrew's improved to 6-3.",
+    "Notes": "Zach Hillard went 3-for-5 with five RBIs, Adam Ciccio went 3-for-5 with an RBI and earned the win, Adem Sumer and Stevie Gregory homered, and St. Andrew's improved to 6-3.",
     "SourceDate": "2000-04-07",
     "SourceCitation": "\"BASEBALL,\" Savannah Morning News (GA), April 7, 2000, Page 8B.",
     "BoxScoreCompleteness": "partial",
-    "SourceNote": "Zack Hillard went 3-for-5 with five RBIs, Adam Ciccio went 3-for-5 with an RBI and earned the win, Adam Sumers and Stevie Gregory homered, and St. Andrew's improved to 6-3.",
+    "SourceNote": "Zach Hillard went 3-for-5 with five RBIs, Adam Ciccio went 3-for-5 with an RBI and earned the win, Adem Sumer and Stevie Gregory homered, and St. Andrew's improved to 6-3.",
     "SourceSeasonLabel": "1999-00"
   },
   {
@@ -517,11 +514,11 @@
         "Record": "0-1"
       }
     },
-    "Notes": "Adam Ciccio went 2-for-3 with three RBIs and Adam Sumers went 1-for-3 with two RBIs. This St. Andrew's result was embedded in a Groves playoff article uncovered during the broad sweep. Records: Sea Island 8-2, 4-0 SCISA Region 4-AA; St. Andrew's 6-4, 2-3.",
+    "Notes": "Adam Ciccio went 2-for-3 with three RBIs and Adem Sumer went 1-for-3 with two RBIs. This St. Andrew's result was embedded in a Groves playoff article uncovered during the broad sweep. Records: Sea Island 8-2, 4-0 SCISA Region 4-AA; St. Andrew's 6-4, 2-3.",
     "SourceDate": "2000-04-08",
     "SourceCitation": "\"CAMDEN COUNTY BLUDGEONS GROVES' PLAYOFF HOPES,\" Savannah Morning News (GA), April 8, 2000, Page 8E.",
     "BoxScoreCompleteness": "partial",
-    "SourceNote": "Adam Ciccio went 2-for-3 with three RBIs and Adam Sumers went 1-for-3 with two RBIs. This St. Andrew's result was embedded in a Groves playoff article uncovered during the broad sweep. Records: Sea Island 8-2, 4-0 SCISA Region 4-AA; St. Andrew's 6-4, 2-3.",
+    "SourceNote": "Adam Ciccio went 2-for-3 with three RBIs and Adem Sumer went 1-for-3 with two RBIs. This St. Andrew's result was embedded in a Groves playoff article uncovered during the broad sweep. Records: Sea Island 8-2, 4-0 SCISA Region 4-AA; St. Andrew's 6-4, 2-3.",
     "SourceSeasonLabel": "1999-00"
   },
   {
@@ -572,18 +569,18 @@
     "PitchingDecisions": {
       "Win": {
         "PlayerID": 200102,
-        "PlayerName": "Zack Hillard",
+        "PlayerName": "Zach Hillard",
         "Record": "2-2"
       },
       "Loss": {
         "PlayerName": "Inabine"
       }
     },
-    "Notes": "Ryan Stratz went 4-for-4 with three RBIs, Jeff Smith went 2-for-3 with three RBIs, Jake Smith went 2-for-2 with two RBIs, and Zack Hillard went 2-for-3 with four RBIs. St. Andrew's improved to 7-4 overall and 3-3 in SCISA Region 4-AA.",
+    "Notes": "Ryan Stratz went 4-for-4 with three RBIs, Jeff Smith went 2-for-3 with three RBIs, Jake Smith went 2-for-2 with two RBIs, and Zach Hillard went 2-for-3 with four RBIs. St. Andrew's improved to 7-4 overall and 3-3 in SCISA Region 4-AA.",
     "SourceDate": "2000-04-11",
     "SourceCitation": "\"MEMORIAL'S DENNIS THROWS NO-HITTER,\" Savannah Morning News (GA), April 11, 2000, Page 5D.",
     "BoxScoreCompleteness": "partial",
-    "SourceNote": "Ryan Stratz went 4-for-4 with three RBIs, Jeff Smith went 2-for-3 with three RBIs, Jake Smith went 2-for-2 with two RBIs, and Zack Hillard went 2-for-3 with four RBIs. St. Andrew's improved to 7-4 overall and 3-3 in SCISA Region 4-AA.",
+    "SourceNote": "Ryan Stratz went 4-for-4 with three RBIs, Jeff Smith went 2-for-3 with three RBIs, Jake Smith went 2-for-2 with two RBIs, and Zach Hillard went 2-for-3 with four RBIs. St. Andrew's improved to 7-4 overall and 3-3 in SCISA Region 4-AA.",
     "SourceSeasonLabel": "1999-00"
   },
   {
@@ -662,7 +659,7 @@
       },
       "Loss": {
         "PlayerID": 200102,
-        "PlayerName": "Zack Hillard",
+        "PlayerName": "Zach Hillard",
         "Record": "2-3"
       }
     },
@@ -808,17 +805,16 @@
     "GameType": "Region",
     "GameID": 2000050101,
     "DisplayDate": "Between April 29 and May 4",
-    "OpponentID": "",
-    "Opponent": "Unknown",
-    "OpponentAbbr": "UNK",
+    "OpponentID": "sc-hilton-head-christian-academy-hilton-head-island",
+    "Opponent": "Hilton Head Christian Academy",
+    "OpponentAbbr": "HHCA",
     "Result": "L",
-    "TeamScore": null,
-    "OpponentScore": null,
-    "IsPlaceholder": true,
-    "Notes": "Placeholder region loss added because the May 4 Beaufort Academy box score listed St. Andrew's at 10-7 overall and 5-5 in SCISA Region 4-AA after the known April 28 Memorial Day loss and the May 3 Beaufort Academy win.",
-    "SourceCitation": "Record-path placeholder from NewsBank baseball reports, Spring 2000.",
-    "BoxScoreCompleteness": "placeholder",
-    "SourceNote": "Placeholder region loss added because the May 4 Beaufort Academy box score listed St. Andrew's at 10-7 overall and 5-5 in SCISA Region 4-AA after the known April 28 Memorial Day loss and the May 3 Beaufort Academy win.",
+    "TeamScore": 1,
+    "OpponentScore": 14,
+    "Notes": "Yearbook score-only result: St. Andrew's lost to Hilton Head Christian 14-1 between the April 28 Memorial Day loss and the May 3 Beaufort Academy win.",
+    "SourceCitation": "1999-00 St. Andrew's yearbook baseball team page.",
+    "BoxScoreCompleteness": "score-only",
+    "SourceNote": "Yearbook score-only result: St. Andrew's lost to Hilton Head Christian 14-1 between the April 28 Memorial Day loss and the May 3 Beaufort Academy win.",
     "SourceSeasonLabel": "1999-00"
   },
   {
@@ -875,18 +871,18 @@
     "PitchingDecisions": {
       "Win": {
         "PlayerID": 200102,
-        "PlayerName": "Zack Hillard",
+        "PlayerName": "Zach Hillard",
         "Record": "3-3"
       },
       "Loss": {
         "PlayerName": "B. Davidson"
       }
     },
-    "Notes": "Matt Hunt and Ricky Wiggins each hit a three-run home run. Jeff Smith, Jake Smith, Zack Hillard, and Hunt each had two hits as St. Andrew's improved to 10-7 overall and 5-5 in SCISA Region 4-AA.",
+    "Notes": "Matt Hunt and Ricky Wiggins each hit a three-run home run. Jeff Smith, Jake Smith, Zach Hillard, and Hunt each had two hits as St. Andrew's improved to 10-7 overall and 5-5 in SCISA Region 4-AA.",
     "SourceDate": "2000-05-04",
     "SourceCitation": "\"BASEBALL,\" Savannah Morning News (GA), May 4, 2000, Page 5D.",
     "BoxScoreCompleteness": "partial",
-    "SourceNote": "Matt Hunt and Ricky Wiggins each hit a three-run home run. Jeff Smith, Jake Smith, Zack Hillard, and Hunt each had two hits as St. Andrew's improved to 10-7 overall and 5-5 in SCISA Region 4-AA.",
+    "SourceNote": "Matt Hunt and Ricky Wiggins each hit a three-run home run. Jeff Smith, Jake Smith, Zach Hillard, and Hunt each had two hits as St. Andrew's improved to 10-7 overall and 5-5 in SCISA Region 4-AA.",
     "SourceSeasonLabel": "1999-00"
   },
   {

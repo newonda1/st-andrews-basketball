@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-19T16:38:16.159Z",
-  "itemCount": 1443,
+  "generatedAt": "2026-05-19T18:53:35.254Z",
+  "itemCount": 1447,
   "items": [
     {
       "id": "athletics-home",
@@ -4081,7 +4081,7 @@
     {
       "id": "boys-basketball-athlete-200102",
       "type": "athlete",
-      "title": "Zack Hillard",
+      "title": "Zach Hillard",
       "subtitle": "Boys Basketball athlete - Class of 2002",
       "to": "/athletics/boys/basketball/players/200102",
       "keywords": [
@@ -4090,9 +4090,9 @@
         "player",
         "stats",
         "records",
-        "Zack",
+        "Zach",
         "Hillard",
-        "Hillard Zack",
+        "Hillard Zach",
         "class of 2002",
         "grad 2002"
       ]
@@ -4139,7 +4139,7 @@
       "id": "boys-basketball-athlete-200106",
       "type": "athlete",
       "title": "Jake Smith",
-      "subtitle": "Boys Basketball athlete",
+      "subtitle": "Boys Basketball athlete - Class of 2002",
       "to": "/athletics/boys/basketball/players/200106",
       "keywords": [
         "Boys Basketball",
@@ -4149,7 +4149,9 @@
         "records",
         "Jake",
         "Smith",
-        "Smith Jake"
+        "Smith Jake",
+        "class of 2002",
+        "grad 2002"
       ]
     },
     {
@@ -7833,58 +7835,77 @@
       ]
     },
     {
-      "id": "baseball-athlete-200011",
+      "id": "baseball-athlete-200103",
       "type": "athlete",
-      "title": "Jeff Smith",
+      "title": "Justin Howard",
       "subtitle": "Baseball athlete - Class of 2003",
-      "to": "/athletics/boys/baseball/players/200011",
+      "to": "/athletics/boys/baseball/players/200103",
       "keywords": [
         "Baseball",
         "athlete",
         "player",
         "stats",
         "records",
-        "Jeff",
-        "Smith",
-        "Smith Jeff",
+        "Justin",
+        "Howard",
+        "Howard Justin",
         "class of 2003",
         "grad 2003"
       ]
     },
     {
-      "id": "baseball-athlete-200104",
+      "id": "baseball-athlete-200008",
       "type": "athlete",
-      "title": "Matt Hunt",
+      "title": "Billy McCarthy",
       "subtitle": "Baseball athlete - Class of 2003",
-      "to": "/athletics/boys/baseball/players/200104",
+      "to": "/athletics/boys/baseball/players/200008",
       "keywords": [
         "Baseball",
         "athlete",
         "player",
         "stats",
         "records",
-        "Matt",
-        "Hunt",
-        "Hunt Matt",
+        "Billy",
+        "McCarthy",
+        "McCarthy Billy",
         "class of 2003",
         "grad 2003"
       ]
     },
     {
-      "id": "baseball-athlete-200106",
+      "id": "baseball-athlete-2027051",
       "type": "athlete",
-      "title": "Jake Smith",
+      "title": "Tyson Lemka",
+      "subtitle": "Baseball athlete - Class of 2003",
+      "to": "/athletics/boys/baseball/players/2027051",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Tyson",
+        "Lemka",
+        "Lemka Tyson",
+        "class of 2003",
+        "grad 2003"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2027052",
+      "type": "athlete",
+      "title": "Adem Sumer",
       "subtitle": "Baseball athlete",
-      "to": "/athletics/boys/baseball/players/200106",
+      "to": "/athletics/boys/baseball/players/2027052",
       "keywords": [
         "Baseball",
         "athlete",
         "player",
         "stats",
         "records",
-        "Jake",
-        "Smith",
-        "Smith Jake"
+        "Adem",
+        "Sumer",
+        "Sumer Adem"
       ]
     },
     {
@@ -7909,7 +7930,7 @@
     {
       "id": "baseball-athlete-200102",
       "type": "athlete",
-      "title": "Zack Hillard",
+      "title": "Zach Hillard",
       "subtitle": "Baseball athlete - Class of 2002",
       "to": "/athletics/boys/baseball/players/200102",
       "keywords": [
@@ -7918,66 +7939,106 @@
         "player",
         "stats",
         "records",
-        "Zack",
+        "Zach",
         "Hillard",
-        "Hillard Zack",
+        "Hillard Zach",
         "class of 2002",
         "grad 2002"
       ]
     },
     {
-      "id": "baseball-athlete-200462",
+      "id": "baseball-athlete-2027054",
       "type": "athlete",
-      "title": "Ryan Stratz",
-      "subtitle": "Baseball athlete - Class of 2002",
-      "to": "/athletics/boys/baseball/players/200462",
-      "keywords": [
-        "Baseball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Ryan",
-        "Stratz",
-        "Stratz Ryan",
-        "class of 2002",
-        "grad 2002"
-      ]
-    },
-    {
-      "id": "baseball-athlete-2027051",
-      "type": "athlete",
-      "title": "Tyson Lenka",
+      "title": "Ricky Wiggins",
       "subtitle": "Baseball athlete - Class of 2003",
-      "to": "/athletics/boys/baseball/players/2027051",
+      "to": "/athletics/boys/baseball/players/2027054",
       "keywords": [
         "Baseball",
         "athlete",
         "player",
         "stats",
         "records",
-        "Tyson",
-        "Lenka",
-        "Lenka Tyson",
+        "Ricky",
+        "Wiggins",
+        "Wiggins Ricky",
         "class of 2003",
         "grad 2003"
       ]
     },
     {
-      "id": "baseball-athlete-2027052",
+      "id": "baseball-athlete-200106",
       "type": "athlete",
-      "title": "Adam Sumers",
-      "subtitle": "Baseball athlete",
-      "to": "/athletics/boys/baseball/players/2027052",
+      "title": "Jake Smith",
+      "subtitle": "Baseball athlete - Class of 2002",
+      "to": "/athletics/boys/baseball/players/200106",
       "keywords": [
         "Baseball",
         "athlete",
         "player",
         "stats",
         "records",
-        "Adam",
-        "Sumers",
-        "Sumers Adam"
+        "Jake",
+        "Smith",
+        "Smith Jake",
+        "class of 2002",
+        "grad 2002"
+      ]
+    },
+    {
+      "id": "baseball-athlete-199904",
+      "type": "athlete",
+      "title": "Cory Brinson",
+      "subtitle": "Baseball athlete - Class of 2003",
+      "to": "/athletics/boys/baseball/players/199904",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Cory",
+        "Brinson",
+        "Brinson Cory",
+        "class of 2003",
+        "grad 2003"
+      ]
+    },
+    {
+      "id": "baseball-athlete-2027069",
+      "type": "athlete",
+      "title": "Brenton Marona",
+      "subtitle": "Baseball athlete - Class of 2003",
+      "to": "/athletics/boys/baseball/players/2027069",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Brenton",
+        "Marona",
+        "Marona Brenton",
+        "class of 2003",
+        "grad 2003"
+      ]
+    },
+    {
+      "id": "baseball-athlete-200011",
+      "type": "athlete",
+      "title": "Jeff Smith",
+      "subtitle": "Baseball athlete - Class of 2003",
+      "to": "/athletics/boys/baseball/players/200011",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Jeff",
+        "Smith",
+        "Smith Jeff",
+        "class of 2003",
+        "grad 2003"
       ]
     },
     {
@@ -8000,20 +8061,39 @@
       ]
     },
     {
-      "id": "baseball-athlete-2027054",
+      "id": "baseball-athlete-200462",
       "type": "athlete",
-      "title": "Ricky Wiggins",
-      "subtitle": "Baseball athlete - Class of 2003",
-      "to": "/athletics/boys/baseball/players/2027054",
+      "title": "Ryan Stratz",
+      "subtitle": "Baseball athlete - Class of 2002",
+      "to": "/athletics/boys/baseball/players/200462",
       "keywords": [
         "Baseball",
         "athlete",
         "player",
         "stats",
         "records",
-        "Ricky",
-        "Wiggins",
-        "Wiggins Ricky",
+        "Ryan",
+        "Stratz",
+        "Stratz Ryan",
+        "class of 2002",
+        "grad 2002"
+      ]
+    },
+    {
+      "id": "baseball-athlete-200104",
+      "type": "athlete",
+      "title": "Matt Hunt",
+      "subtitle": "Baseball athlete - Class of 2003",
+      "to": "/athletics/boys/baseball/players/200104",
+      "keywords": [
+        "Baseball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Matt",
+        "Hunt",
+        "Hunt Matt",
         "class of 2003",
         "grad 2003"
       ]
@@ -13298,7 +13378,7 @@
     {
       "id": "football-athlete-200102",
       "type": "athlete",
-      "title": "Zack Hillard",
+      "title": "Zach Hillard",
       "subtitle": "Football athlete - Class of 2002",
       "to": "/athletics/football/players/200102",
       "keywords": [
@@ -13307,9 +13387,9 @@
         "player",
         "stats",
         "records",
-        "Zack",
+        "Zach",
         "Hillard",
-        "Hillard Zack",
+        "Hillard Zach",
         "class of 2002",
         "grad 2002"
       ]
@@ -13412,7 +13492,7 @@
     {
       "id": "football-athlete-2027051",
       "type": "athlete",
-      "title": "Tyson Lenka",
+      "title": "Tyson Lemka",
       "subtitle": "Football athlete - Class of 2003",
       "to": "/athletics/football/players/2027051",
       "keywords": [
@@ -13422,8 +13502,8 @@
         "stats",
         "records",
         "Tyson",
-        "Lenka",
-        "Lenka Tyson",
+        "Lemka",
+        "Lemka Tyson",
         "class of 2003",
         "grad 2003"
       ]
@@ -13526,7 +13606,7 @@
     {
       "id": "football-athlete-199904",
       "type": "athlete",
-      "title": "Corey Brinson",
+      "title": "Cory Brinson",
       "subtitle": "Football athlete - Class of 2003",
       "to": "/athletics/football/players/199904",
       "keywords": [
@@ -13535,9 +13615,9 @@
         "player",
         "stats",
         "records",
-        "Corey",
+        "Cory",
         "Brinson",
-        "Brinson Corey",
+        "Brinson Cory",
         "class of 2003",
         "grad 2003"
       ]
@@ -13751,7 +13831,7 @@
       "id": "football-athlete-200106",
       "type": "athlete",
       "title": "Jake Smith",
-      "subtitle": "Football athlete",
+      "subtitle": "Football athlete - Class of 2002",
       "to": "/athletics/football/players/200106",
       "keywords": [
         "Football",
@@ -13761,7 +13841,9 @@
         "records",
         "Jake",
         "Smith",
-        "Smith Jake"
+        "Smith Jake",
+        "class of 2002",
+        "grad 2002"
       ]
     },
     {
@@ -21902,6 +21984,61 @@
       ]
     },
     {
+      "id": "baseball-team-sea-island-academy",
+      "type": "team",
+      "title": "Sea Island Academy",
+      "subtitle": "Baseball opponent history - Johns Island, SC",
+      "to": "/athletics/boys/baseball/records/opponents?team=Sea+Island+Academy",
+      "keywords": [
+        "Baseball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Sea Island Academy",
+        "Sea Island",
+        "Sun Devils",
+        "Johns Island",
+        "SC"
+      ]
+    },
+    {
+      "id": "baseball-team-st-paul-s-country-day-school",
+      "type": "team",
+      "title": "St. Paul's Country Day School",
+      "subtitle": "Baseball opponent history - Hollywood, SC",
+      "to": "/athletics/boys/baseball/records/opponents?team=St.+Paul%27s+Country+Day+School",
+      "keywords": [
+        "Baseball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "St. Paul's Country Day School",
+        "Hollywood",
+        "SC"
+      ]
+    },
+    {
+      "id": "baseball-team-bible-baptist-school",
+      "type": "team",
+      "title": "Bible Baptist School",
+      "subtitle": "Baseball opponent history - Savannah, GA",
+      "to": "/athletics/boys/baseball/records/opponents?team=Bible+Baptist+School",
+      "keywords": [
+        "Baseball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Bible Baptist School",
+        "Bible Baptist",
+        "Braves",
+        "Savannah",
+        "GA"
+      ]
+    },
+    {
       "id": "baseball-team-agape-christian",
       "type": "team",
       "title": "Agape Christian",
@@ -21968,61 +22105,6 @@
         "Beaufort Academy",
         "Eagles",
         "Beaufort",
-        "SC"
-      ]
-    },
-    {
-      "id": "baseball-team-bible-baptist-school",
-      "type": "team",
-      "title": "Bible Baptist School",
-      "subtitle": "Baseball opponent history - Savannah, GA",
-      "to": "/athletics/boys/baseball/records/opponents?team=Bible+Baptist+School",
-      "keywords": [
-        "Baseball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Bible Baptist School",
-        "Bible Baptist",
-        "Braves",
-        "Savannah",
-        "GA"
-      ]
-    },
-    {
-      "id": "baseball-team-sea-island-academy",
-      "type": "team",
-      "title": "Sea Island Academy",
-      "subtitle": "Baseball opponent history - Johns Island, SC",
-      "to": "/athletics/boys/baseball/records/opponents?team=Sea+Island+Academy",
-      "keywords": [
-        "Baseball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Sea Island Academy",
-        "Sea Island",
-        "Sun Devils",
-        "Johns Island",
-        "SC"
-      ]
-    },
-    {
-      "id": "baseball-team-st-paul-s-country-day-school",
-      "type": "team",
-      "title": "St. Paul's Country Day School",
-      "subtitle": "Baseball opponent history - Hollywood, SC",
-      "to": "/athletics/boys/baseball/records/opponents?team=St.+Paul%27s+Country+Day+School",
-      "keywords": [
-        "Baseball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "St. Paul's Country Day School",
-        "Hollywood",
         "SC"
       ]
     },
