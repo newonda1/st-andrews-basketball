@@ -498,6 +498,7 @@ function MaxPrepsSeasonPage({
   seasonImages = [],
   showSeasonRoster = false,
   headCoach = "",
+  hideSeasonFinishBrief = false,
 }) {
   const [games, setGames] = useState([]);
   const [playerStats, setPlayerStats] = useState([]);
@@ -830,8 +831,14 @@ function MaxPrepsSeasonPage({
   const shouldEmbedArticle = embedFeaturedArticleInRecap && featuredArticle;
   const shouldShowRecap = Boolean(splitParagraphs(seasonRecap).length);
   const resolvedSeasonBriefs = useMemo(
-    () => resolveSeasonBriefs({ seasonInfo, seasonSummary, seasonBriefs }),
-    [seasonInfo, seasonSummary, seasonBriefs]
+    () =>
+      resolveSeasonBriefs({
+        seasonInfo,
+        seasonSummary,
+        seasonBriefs,
+        includeFinish: !hideSeasonFinishBrief,
+      }),
+    [hideSeasonFinishBrief, seasonInfo, seasonSummary, seasonBriefs]
   );
   const scheduleHeaderCellClassName = "px-2 py-2 text-center text-xs whitespace-nowrap";
   const scheduleOpponentHeaderCellClassName =

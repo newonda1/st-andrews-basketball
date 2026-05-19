@@ -26,7 +26,12 @@ export function formatSeasonFinish(seasonInfo) {
   return parts.join(" / ");
 }
 
-export function resolveSeasonBriefs({ seasonInfo, seasonSummary, seasonBriefs = [] }) {
+export function resolveSeasonBriefs({
+  seasonInfo,
+  seasonSummary,
+  seasonBriefs = [],
+  includeFinish = true,
+}) {
   const extras = (Array.isArray(seasonBriefs) ? seasonBriefs : []).filter((item) => {
     const label = String(item?.label || "").trim().toLowerCase();
     return label && !["record", "coach", "finish"].includes(label);
@@ -34,7 +39,7 @@ export function resolveSeasonBriefs({ seasonInfo, seasonSummary, seasonBriefs = 
 
   const record = formatSeasonRecord(seasonInfo, seasonSummary);
   const coach = seasonInfo?.HeadCoach || "";
-  const finish = formatSeasonFinish(seasonInfo);
+  const finish = includeFinish ? formatSeasonFinish(seasonInfo) : "";
 
   return [
     record ? { label: "Record", value: record } : null,

@@ -9,7 +9,7 @@ The recovered schedule shows the team growing into February. Kaiser and Lowe wer
 
 The postseason gave the season its best stretch. Kaiser scored 27 and Lowe 21 in a 58-44 region first-round win over St. Paul's, then St. Andrew's beat Patrick Henry 52-41 behind Kaiser, Johnson, and Lowe to clinch a state tournament appearance. Hilton Head Christian won the region final, but Morrell told the paper that a team this young had already moved far beyond preseason expectations.
 
-Avalon ended the season in the SCISA tournament, 67-22. The final report listed St. Andrew's at 11-13, and the schedule still marks the remaining unrecovered results as placeholders until those game details are confirmed.
+Avalon ended the season in the SCISA tournament, 67-22. The final report listed St. Andrew's at 11-13, and the schedule still marks the remaining unrecovered losses as placeholders until those game details are confirmed.
 
 The spring awards sweep also found St. Andrew's Hollis Stacy Award nominees: Kimberly Cooper and Megan Lowe, matching the basketball archive's Kim Cooper and Meghan Lowe.`;
 
@@ -97,9 +97,9 @@ export default function Season1999_00() {
       seasonBriefs={[
         { label: "Record", value: "11-13" },
         { label: "Coach", value: "Debra Morrell" },
-        { label: "Finish", value: "Region Runner-Up / State Tournament" },
       ]}
       hideSeasonArticles
+      hideSeasonFinishBrief
       seasonImages={seasonImages}
       showSeasonRoster
       headCoach="Debra Morrell"

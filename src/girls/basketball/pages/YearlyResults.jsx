@@ -38,6 +38,36 @@ function seasonKeyToSlug(seasonKey) {
   return s;
 }
 
+function shouldShowRegionResult(result) {
+  const normalized = String(result || "").trim().toLowerCase();
+  return normalized === "region champion" || normalized === "region champions";
+}
+
+function shouldShowStateResult(result) {
+  const normalized = String(result || "").trim().toLowerCase();
+  if (
+    !normalized ||
+    normalized.includes("quarterfinal") ||
+    normalized === "state tournament"
+  ) {
+    return false;
+  }
+
+  return (
+    normalized.includes("state champion") ||
+    normalized.includes("state runner") ||
+    normalized.includes("state final four") ||
+    normalized.includes("state semifinal")
+  );
+}
+
+function formatSeasonResult(season) {
+  const parts = [];
+  if (shouldShowRegionResult(season.RegionFinish)) parts.push(season.RegionFinish);
+  if (shouldShowStateResult(season.StateFinish)) parts.push(season.StateFinish);
+  return parts.join(" & ");
+}
+
 function YearlyResults() {
   const [seasonStats, setSeasonStats] = useState([]);
 
@@ -79,10 +109,7 @@ function YearlyResults() {
         label = String(s.SeasonID);
       }
 
-      const parts = [];
-      if (s.RegionFinish) parts.push(s.RegionFinish);
-      if (s.StateFinish) parts.push(s.StateFinish);
-      const result = parts.join(" & ");
+      const result = formatSeasonResult(s);
 
       const meta = { coach, label, result };
 
