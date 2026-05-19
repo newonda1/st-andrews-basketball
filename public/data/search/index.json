@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-19T11:37:29.145Z",
-  "itemCount": 1434,
+  "generatedAt": "2026-05-19T12:58:20.687Z",
+  "itemCount": 1435,
   "items": [
     {
       "id": "athletics-home",
@@ -10526,25 +10526,6 @@
       ]
     },
     {
-      "id": "girls-basketball-athlete-199911",
-      "type": "athlete",
-      "title": "Adair Johnson",
-      "subtitle": "Girls Basketball athlete - Class of 2000",
-      "to": "/athletics/girls/basketball/players/199911",
-      "keywords": [
-        "Girls Basketball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Adair",
-        "Johnson",
-        "Johnson Adair",
-        "class of 2000",
-        "grad 2000"
-      ]
-    },
-    {
       "id": "girls-basketball-athlete-199912",
       "type": "athlete",
       "title": "Nadine Kaiser",
@@ -10561,63 +10542,6 @@
         "Kaiser Nadine",
         "class of 2001",
         "grad 2001"
-      ]
-    },
-    {
-      "id": "girls-basketball-athlete-200317",
-      "type": "athlete",
-      "title": "Kim Cooper",
-      "subtitle": "Girls Basketball athlete - Class of 2002",
-      "to": "/athletics/girls/basketball/players/200317",
-      "keywords": [
-        "Girls Basketball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Kim",
-        "Cooper",
-        "Cooper Kim",
-        "class of 2002",
-        "grad 2002"
-      ]
-    },
-    {
-      "id": "girls-basketball-athlete-200315",
-      "type": "athlete",
-      "title": "Meghan Lowe",
-      "subtitle": "Girls Basketball athlete - Class of 2003",
-      "to": "/athletics/girls/basketball/players/200315",
-      "keywords": [
-        "Girls Basketball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Meghan",
-        "Lowe",
-        "Lowe Meghan",
-        "class of 2003",
-        "grad 2003"
-      ]
-    },
-    {
-      "id": "girls-basketball-athlete-200404",
-      "type": "athlete",
-      "title": "Carie Bugos",
-      "subtitle": "Girls Basketball athlete - Class of 2004",
-      "to": "/athletics/girls/basketball/players/200404",
-      "keywords": [
-        "Girls Basketball",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Carie",
-        "Bugos",
-        "Bugos Carie",
-        "class of 2004",
-        "grad 2004"
       ]
     },
     {
@@ -10640,10 +10564,48 @@
       ]
     },
     {
+      "id": "girls-basketball-athlete-200317",
+      "type": "athlete",
+      "title": "Kim Cooper",
+      "subtitle": "Girls Basketball athlete - Class of 2002",
+      "to": "/athletics/girls/basketball/players/200317",
+      "keywords": [
+        "Girls Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Kim",
+        "Cooper",
+        "Cooper Kim",
+        "class of 2002",
+        "grad 2002"
+      ]
+    },
+    {
+      "id": "girls-basketball-athlete-199911",
+      "type": "athlete",
+      "title": "Adair Johnson",
+      "subtitle": "Girls Basketball athlete - Class of 2000",
+      "to": "/athletics/girls/basketball/players/199911",
+      "keywords": [
+        "Girls Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Adair",
+        "Johnson",
+        "Johnson Adair",
+        "class of 2000",
+        "grad 2000"
+      ]
+    },
+    {
       "id": "girls-basketball-athlete-199913",
       "type": "athlete",
-      "title": "Brooks",
-      "subtitle": "Girls Basketball athlete",
+      "title": "Gavin Brooks",
+      "subtitle": "Girls Basketball athlete - Class of 2004",
       "to": "/athletics/girls/basketball/players/199913",
       "keywords": [
         "Girls Basketball",
@@ -10651,7 +10613,68 @@
         "player",
         "stats",
         "records",
-        "Brooks"
+        "Gavin",
+        "Brooks",
+        "Brooks Gavin",
+        "class of 2004",
+        "grad 2004"
+      ]
+    },
+    {
+      "id": "girls-basketball-athlete-200315",
+      "type": "athlete",
+      "title": "Meghan Lowe",
+      "subtitle": "Girls Basketball athlete - Class of 2003",
+      "to": "/athletics/girls/basketball/players/200315",
+      "keywords": [
+        "Girls Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Meghan",
+        "Lowe",
+        "Lowe Meghan",
+        "class of 2003",
+        "grad 2003"
+      ]
+    },
+    {
+      "id": "girls-basketball-athlete-2027061",
+      "type": "athlete",
+      "title": "Erin Stuart",
+      "subtitle": "Girls Basketball athlete - Class of 2002",
+      "to": "/athletics/girls/basketball/players/2027061",
+      "keywords": [
+        "Girls Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Erin",
+        "Stuart",
+        "Stuart Erin",
+        "class of 2002",
+        "grad 2002"
+      ]
+    },
+    {
+      "id": "girls-basketball-athlete-200404",
+      "type": "athlete",
+      "title": "Carie Bugos",
+      "subtitle": "Girls Basketball athlete - Class of 2004",
+      "to": "/athletics/girls/basketball/players/200404",
+      "keywords": [
+        "Girls Basketball",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Carie",
+        "Bugos",
+        "Bugos Carie",
+        "class of 2004",
+        "grad 2004"
       ]
     },
     {
@@ -22978,6 +23001,25 @@
       ]
     },
     {
+      "id": "girls-basketball-team-pinewood-preparatory-school",
+      "type": "team",
+      "title": "Pinewood Preparatory School",
+      "subtitle": "Girls Basketball opponent history - Summerville, SC",
+      "to": "/athletics/girls/basketball/records/opponents?team=Pinewood+Preparatory+School",
+      "keywords": [
+        "Girls Basketball",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Pinewood Preparatory School",
+        "Pinewood Prep",
+        "Panthers",
+        "Summerville",
+        "SC"
+      ]
+    },
+    {
       "id": "girls-basketball-team-memorial-day-school",
       "type": "team",
       "title": "Memorial Day School",
@@ -23028,25 +23070,6 @@
         "records",
         "St. Paul's Country Day School",
         "Hollywood",
-        "SC"
-      ]
-    },
-    {
-      "id": "girls-basketball-team-pinewood-preparatory-school",
-      "type": "team",
-      "title": "Pinewood Preparatory School",
-      "subtitle": "Girls Basketball opponent history - Summerville, SC",
-      "to": "/athletics/girls/basketball/records/opponents?team=Pinewood+Preparatory+School",
-      "keywords": [
-        "Girls Basketball",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Pinewood Preparatory School",
-        "Pinewood Prep",
-        "Panthers",
-        "Summerville",
         "SC"
       ]
     },

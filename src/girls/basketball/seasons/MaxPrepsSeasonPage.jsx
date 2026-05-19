@@ -787,7 +787,7 @@ function MaxPrepsSeasonPage({
       .map((entry) => ({
         key: `player-${entry.PlayerID}`,
         jersey: entry.JerseyNumber,
-        name: playerName(entry.PlayerID),
+        name: entry.PlayerName || playerName(entry.PlayerID),
         grade: entry.Grade,
         subline: entry.Subline || "",
         path: useSharedAthletePage

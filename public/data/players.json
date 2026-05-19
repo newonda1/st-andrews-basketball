@@ -759,10 +759,10 @@
   },
   {
     "PlayerID": 199913,
-    "PlayerName": "Brooks",
-    "FirstName": "Brooks",
-    "LastName": "",
-    "GradYear": null,
+    "PlayerName": "Gavin Brooks",
+    "FirstName": "Gavin",
+    "LastName": "Brooks",
+    "GradYear": 2004,
     "Gender": "Girls"
   },
   {
@@ -6492,6 +6492,14 @@
     "FirstName": "Ashley",
     "LastName": "Bentley",
     "GradYear": 2000,
+    "Gender": "Girls"
+  },
+  {
+    "PlayerID": 2027061,
+    "PlayerName": "Erin Stuart",
+    "FirstName": "Erin",
+    "LastName": "Stuart",
+    "GradYear": 2002,
     "Gender": "Girls"
   }
 ]
