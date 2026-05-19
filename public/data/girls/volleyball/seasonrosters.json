@@ -1,5 +1,96 @@
 [
   {
+    "SeasonID": 1999,
+    "SourceSeasonLabel": "1999-00",
+    "HeadCoach": "Debra Morrell",
+    "Staff": [
+      {
+        "Name": "Debra Morrell",
+        "Position": "Head Coach"
+      }
+    ],
+    "Players": [
+      {
+        "PlayerID": 2027057,
+        "JerseyNumber": 13,
+        "Grade": 12,
+        "GradeLabel": "Sr.",
+        "Positions": []
+      },
+      {
+        "PlayerID": 199912,
+        "JerseyNumber": 5,
+        "Grade": 11,
+        "GradeLabel": "Jr.",
+        "Positions": []
+      },
+      {
+        "PlayerID": 200324,
+        "JerseyNumber": 14,
+        "Grade": 11,
+        "GradeLabel": "Jr.",
+        "Positions": []
+      },
+      {
+        "PlayerID": 200323,
+        "JerseyNumber": 12,
+        "Grade": 11,
+        "GradeLabel": "Jr.",
+        "Positions": []
+      },
+      {
+        "PlayerID": 200317,
+        "JerseyNumber": 6,
+        "Grade": 10,
+        "GradeLabel": "So.",
+        "Positions": []
+      },
+      {
+        "PlayerID": 200325,
+        "JerseyNumber": 1,
+        "Grade": 11,
+        "GradeLabel": "Jr.",
+        "Positions": []
+      },
+      {
+        "PlayerID": 2027058,
+        "JerseyNumber": null,
+        "Grade": 11,
+        "GradeLabel": "Jr.",
+        "Positions": []
+      },
+      {
+        "PlayerID": 2027048,
+        "JerseyNumber": 3,
+        "Grade": 10,
+        "GradeLabel": "So.",
+        "Positions": []
+      },
+      {
+        "PlayerID": 200315,
+        "PlayerName": "Megan Lowe",
+        "JerseyNumber": null,
+        "Grade": 9,
+        "GradeLabel": "Fr.",
+        "Positions": []
+      },
+      {
+        "PlayerID": 2027059,
+        "JerseyNumber": 9,
+        "Grade": 12,
+        "GradeLabel": "Sr.",
+        "Positions": []
+      },
+      {
+        "PlayerID": 2027060,
+        "JerseyNumber": 2,
+        "Grade": 12,
+        "GradeLabel": "Sr.",
+        "Positions": []
+      }
+    ]
+  },
+  {
     "SeasonID": 2000,
     "SourceSeasonLabel": "2000-01",
     "HeadCoach": null,

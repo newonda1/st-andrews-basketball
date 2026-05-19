@@ -1,7 +1,7 @@
 import React from "react";
 import MaxPrepsSeasonPage from "./MaxPrepsSeasonPage";
 
-const seasonRecap = `St. Andrew's turned a six-player varsity roster into the school's first girls basketball state championship, finishing 23-3 and winning the SCISA Class AA title under head coach Deborah Morell. The Saints opened the season with only six varsity players: senior Meghan Lowe, juniors Carie Bugos, LeighAnne Evans, and Becca Cooper, freshman Grace Wilkowski, and eighth-grader Mary Wilkowski. Morell told the Savannah Morning News early in December that the group was already one of her most cohesive teams, and that chemistry became the season's defining edge.
+const seasonRecap = `St. Andrew's turned a six-player varsity roster into the school's first girls basketball state championship, finishing 23-3 and winning the SCISA Class AA title under head coach Debra Morrell. The Saints opened the season with only six varsity players: senior Meghan Lowe, juniors Carie Bugos, LeighAnne Evans, and Becca Cooper, freshman Grace Wilkowski, and eighth-grader Mary Wilkowski. Morrell told the Savannah Morning News early in December that the group was already one of her most cohesive teams, and that chemistry became the season's defining edge.
 
 The Saints were immediately competitive. They opened with a 56-34 win over Bible Baptist as Cooper scored 16 points with 12 rebounds, Mary Wilkowski added 13, Grace Wilkowski scored 12, and Lowe had 9. Three days later they rolled through Providence Christian 40-8, then beat Memorial Day 50-27 for the St. Andrew's Holiday Invitational championship. Mary Wilkowski had 17 points and 10 rebounds in the final and was named tournament MVP, while Grace Wilkowski and Bugos also made the all-tournament team.
 
@@ -13,7 +13,7 @@ St. Andrew's finished regular-season region play unbeaten at 10-0 after a 60-46 
 
 In the Region 2-AA tournament, St. Andrew's beat Beaufort Academy 61-26 in the semifinal before falling 38-35 to Holly Hill in the championship game. The Saints regrouped in the state tournament. Grace Wilkowski scored a career-high 30 points with 15 rebounds in a 54-33 quarterfinal win over Avalon, then had 21 points and nine rebounds as St. Andrew's beat Trinity Collegiate 50-38 in the semifinal. In the championship game, the Saints rallied from a 30-23 halftime deficit to beat Carolina Academy 47-42. Lowe scored 17, Grace Wilkowski added 12, Mary Wilkowski scored 11, and Bugos hit four late free throws before Grace closed out the title at the line.
 
-The spring postseason honors kept the season in view after the final buzzer. Grace Wilkowski made the Savannah Morning News Girls All-Coastal Empire third team, Meghan Lowe received honorable mention, and High School Sports Report later named Wilkowski the SCISAA Class AA Player of the Year after averaging 14.7 points and 13 rebounds. Deborah Morell was also named Class AA Coach of the Year after guiding St. Andrew's to the 23-3 championship season.`;
+The spring postseason honors kept the season in view after the final buzzer. Grace Wilkowski made the Savannah Morning News Girls All-Coastal Empire third team, Meghan Lowe received honorable mention, and High School Sports Report later named Wilkowski the SCISAA Class AA Player of the Year after averaging 14.7 points and 13 rebounds. Debra Morrell was also named Class AA Coach of the Year after guiding St. Andrew's to the 23-3 championship season.`;
 
 export default function Season2002_03() {
   return (
@@ -48,13 +48,13 @@ export default function Season2002_03() {
       ]}
       seasonBriefs={[
         { label: "Record", value: "23-3" },
-        { label: "Coach", value: "Deborah Morell" },
+        { label: "Coach", value: "Debra Morrell" },
         { label: "Finish", value: "SCISA Class AA Champion" },
       ]}
       hideSeasonArticles
       showSeasonImagesPlaceholder
       showSeasonRoster
-      headCoach="Deborah Morell"
+      headCoach="Debra Morrell"
     />
   );
 }

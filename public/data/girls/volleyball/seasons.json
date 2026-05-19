@@ -5,7 +5,7 @@
     "YearEnd": 2000,
     "DisplaySeason": "1999",
     "SourceSeasonLabel": "1999-00",
-    "HeadCoach": null,
+    "HeadCoach": "Debra Morrell",
     "OverallWins": null,
     "OverallLosses": null,
     "RegionWins": null,
@@ -22,7 +22,19 @@
       "The recovered fall 1999 NewsBank window confirms St. Andrew's had a volleyball date at Williamsburg on Sept. 24, but no score or player statistics were found in the St. Andrew's, Andrews, broad name, or OCR-variant sweeps.",
       "The season remains a schedule-only shell until a result source is found."
     ],
-    "ArchiveStatus": "partial"
+    "ArchiveStatus": "partial",
+    "SeasonImages": [
+      {
+        "src": "/images/girls/volleyball/seasons/1999-00/1999-00-volleyball-team.png",
+        "alt": "1999-00 St. Andrew's volleyball team photo",
+        "caption": "Team - (Back Row) Coach Morrell, Holly Newton, Nadine Kaiser, Ashley McClean, Ashley Winston, Kim Cooper (Middle Row) Megan Loder, Leary Dixon, Tiffany Griffin, Megan Lowe (Front Row) Jessica Harvey, Ashley Bentley"
+      },
+      {
+        "src": "/images/girls/volleyball/seasons/1999-00/1999-00-volleyball-01-bonfire.png",
+        "alt": "St. Andrew's volleyball players at the Annual Bonfire",
+        "caption": "1 - The volleyball team kicks off their season along with the other fall athletes as the Annual Bonfire."
+      }
+    ]
   },
   {
     "SeasonID": 2000,
@@ -45,7 +57,7 @@
     "ArchiveStatusNote": "NewsBank recovery currently documents four reported losses plus one record-path placeholder loss needed to reconcile the 0-3 record published after the Sept. 7 St. Paul Country Day match.",
     "SeasonRecapParagraphs": [
       "The recovered 2000 St. Andrew's volleyball archive covers the opening stretch of the fall season. Four published match reports and one record-path placeholder show the Saints starting 0-5, including SCISA Region 2AA losses to St. Paul Country Day and Colleton Prep.",
-      "The surviving stat lines point to a young roster already featuring several names that would carry into later seasons. Kim Cooper, Becca Cooper, Carie Bugos, Layne Haggberg, Ashley Winston, Ashley McLean, and Megan Loder all appear in September match reports.",
+      "The surviving stat lines point to a young roster already featuring several names that would carry into later seasons. Kim Cooper, Becca Cooper, Carie Bugos, Layne Haggberg, Ashley Winston, Ashley McClean, and Megan Loder all appear in September match reports.",
       "Bible Baptist appeared twice in the recovered window. Becca Cooper had six kills and Kim Cooper added four in the first report, while Ashley Winston had eight kills and Kim Cooper added four when the teams met again on Sept. 14. Carie Bugos also had 10 assists in the first Bible Baptist report."
     ],
     "ArchiveStatus": "partial",

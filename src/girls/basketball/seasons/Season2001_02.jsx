@@ -1,7 +1,7 @@
 import React from "react";
 import MaxPrepsSeasonPage from "./MaxPrepsSeasonPage";
 
-const seasonRecap = `The winter NewsBank sweep turns the 2001-02 St. Andrew's girls basketball season from a preseason shell into a full archive season. Deborah Morell's Saints finished 17-7, went 4-2 in regular-season SCISA Region 4-AA play, reached the region tournament final, and advanced to the SCISA Class AA state quarterfinals one year before the program's first state championship.
+const seasonRecap = `The winter NewsBank sweep turns the 2001-02 St. Andrew's girls basketball season from a preseason shell into a full archive season. Debra Morrell's Saints finished 17-7, went 4-2 in regular-season SCISA Region 4-AA play, reached the region tournament final, and advanced to the SCISA Class AA state quarterfinals one year before the program's first state championship.
 
 St. Andrew's opened with a 42-31 win over Patrick Henry Academy as Becca Cooper scored 12, Meghan Lowe 10, Sarah Roddenberry 9, Kim Cooper 6, and Carie Bugos 5. At the St. Andrew's Holiday Invitational, the Saints beat Abundant Life 56-4 before falling 36-34 to Bible Baptist in the championship game. Grace Wilkowski, then an eighth-grader, scored all eight of her points in the fourth quarter of the final and added six rebounds.
 
@@ -62,13 +62,13 @@ export default function Season2001_02() {
       ]}
       seasonBriefs={[
         { label: "Record", value: "17-7" },
-        { label: "Coach", value: "Deborah Morell" },
+        { label: "Coach", value: "Debra Morrell" },
         { label: "Finish", value: "State Quarterfinals" },
       ]}
       hideSeasonArticles
       showSeasonImagesPlaceholder
       showSeasonRoster
-      headCoach="Deborah Morell"
+      headCoach="Debra Morrell"
     />
   );
 }

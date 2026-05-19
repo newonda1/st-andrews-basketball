@@ -1,13 +1,13 @@
 import React from "react";
 import MaxPrepsSeasonPage from "./MaxPrepsSeasonPage";
 
-const seasonRecap = `The winter NewsBank sweep confirms that Deborah Morell's 1999-00 team did make it through the season after the fall preview wondered whether St. Andrew's would have enough players. The Saints finished 11-13, reached the SCISA Region IV final, and earned a state tournament berth with a roster that leaned on Adair Johnson, Nadine Kaiser, Meghan Lowe, Kim Cooper, Carie Bugos, and Becca Cooper.
+const seasonRecap = `The winter NewsBank sweep confirms that Debra Morrell's 1999-00 team did make it through the season after the fall preview wondered whether St. Andrew's would have enough players. The Saints finished 11-13, reached the SCISA Region IV final, and earned a state tournament berth with a roster that leaned on Adair Johnson, Nadine Kaiser, Meghan Lowe, Kim Cooper, Carie Bugos, and Becca Cooper.
 
-A Jan. 18 feature explained how fragile the season had been. St. Andrew's began preseason practice with only four players, canceled early games, and eventually had to promote middle school players while adding inexperienced help. Johnson, Kaiser, and Lowe kept the season upright while Morell adjusted the program around the short roster.
+A Jan. 18 feature explained how fragile the season had been. St. Andrew's began preseason practice with only four players, canceled early games, and eventually had to promote middle school players while adding inexperienced help. Johnson, Kaiser, and Lowe kept the season upright while Morrell adjusted the program around the short roster.
 
 The recovered schedule shows the team growing into February. Kaiser and Lowe were the primary scorers in the regular season, and the Feb. 11 area leaderboard credited Kaiser with 229 points through 15 listed games while Lowe had 131. Kaiser scored 24 against St. Paul's, 20 against Beaufort Academy, 20 against Sea Island, 21 in the return game with Beaufort, and 24 against Patrick Henry. She was named Girls City Player of the Week after leading the Sea Island and Harvest Baptist wins.
 
-The postseason gave the season its best stretch. Kaiser scored 27 and Lowe 21 in a 58-44 region first-round win over St. Paul's, then St. Andrew's beat Patrick Henry 52-41 behind Kaiser, Johnson, and Lowe to clinch a state tournament appearance. Hilton Head Christian won the region final, but Morell told the paper that a team this young had already moved far beyond preseason expectations.
+The postseason gave the season its best stretch. Kaiser scored 27 and Lowe 21 in a 58-44 region first-round win over St. Paul's, then St. Andrew's beat Patrick Henry 52-41 behind Kaiser, Johnson, and Lowe to clinch a state tournament appearance. Hilton Head Christian won the region final, but Morrell told the paper that a team this young had already moved far beyond preseason expectations.
 
 Avalon ended the season in the SCISA tournament, 67-22. The final report listed St. Andrew's at 11-13, and the schedule uses five placeholders to preserve the unrecovered results needed to reconcile that published final record.
 
@@ -46,13 +46,13 @@ export default function Season1999_00() {
       ]}
       seasonBriefs={[
         { label: "Record", value: "11-13" },
-        { label: "Coach", value: "Deborah Morell" },
+        { label: "Coach", value: "Debra Morrell" },
         { label: "Finish", value: "Region Runner-Up / State Tournament" },
       ]}
       hideSeasonArticles
       showSeasonImagesPlaceholder
       showSeasonRoster
-      headCoach="Deborah Morell"
+      headCoach="Debra Morrell"
     />
   );
 }

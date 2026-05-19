@@ -1,7 +1,7 @@
 import React from "react";
 import MaxPrepsSeasonPage from "./MaxPrepsSeasonPage";
 
-const seasonRecap = `The winter NewsBank sweep turns the 2000-01 St. Andrew's girls basketball season from a preseason capsule into a working archive season. Deborah Morell's Saints finished 15-6, reached the SCISA Region 4-AA semifinals, and built the season around Meghan Lowe, Sarah Roddenberry, Becca Cooper, Kim Cooper, and Carie Bugos.
+const seasonRecap = `The winter NewsBank sweep turns the 2000-01 St. Andrew's girls basketball season from a preseason capsule into a working archive season. Debra Morrell's Saints finished 15-6, reached the SCISA Region 4-AA semifinals, and built the season around Meghan Lowe, Sarah Roddenberry, Becca Cooper, Kim Cooper, and Carie Bugos.
 
 St. Andrew's opened with a 41-11 win at Abundant Life and beat Sea Island 45-28 in the St. Andrew's Holiday Tournament behind Lowe's 22 points. The Saints split the Memorial Christmas Tournament, beating Memorial Day before falling to Pinewood Christian, then opened January with wins over Bible Baptist and Sea Island. A Jan. 11 record line listed St. Andrew's at 7-2, so the schedule preserves one early unrecovered win as a placeholder.
 
@@ -44,13 +44,13 @@ export default function Season2000_01() {
       ]}
       seasonBriefs={[
         { label: "Record", value: "15-6" },
-        { label: "Coach", value: "Deborah Morell" },
+        { label: "Coach", value: "Debra Morrell" },
         { label: "Finish", value: "Region Semifinals" },
       ]}
       hideSeasonArticles
       showSeasonImagesPlaceholder
       showSeasonRoster
-      headCoach="Deborah Morell"
+      headCoach="Debra Morrell"
     />
   );
 }

@@ -645,9 +645,9 @@ export default function SeasonPage({ data, status = "" }) {
   const rosterTableRows = useMemo(() => {
     const playerRows = roster.map((player) => {
       const canonicalPlayer = playerMap.get(String(player.PlayerID));
-      const playerName = canonicalPlayer
-        ? getPlayerName(canonicalPlayer)
-        : player.PlayerName || getPlayerName(player);
+      const playerName =
+        player.PlayerName ||
+        (canonicalPlayer ? getPlayerName(canonicalPlayer) : getPlayerName(player));
 
       return {
         key: `player-${player.PlayerID}`,
