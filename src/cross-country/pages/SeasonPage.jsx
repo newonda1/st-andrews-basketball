@@ -32,6 +32,8 @@ function formatRosterGrade(grade) {
 
   const value = Number(grade);
   if (Number.isFinite(value)) {
+    if (value === 6) return "6th";
+    if (value === 7) return "7th";
     if (value === 8) return "8th";
     if (value === 9) return "Fr.";
     if (value === 10) return "So.";

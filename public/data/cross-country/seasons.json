@@ -61,7 +61,7 @@
     "SeasonLabel": "1999-00",
     "Classification": "SCISA",
     "StatusBadge": "newsbank",
-    "StatusNote": "NewsBank recovery found a St. Andrew's boys team finish at the Seahawk Cross Country Invitational.",
+    "StatusNote": "NewsBank recovery found a St. Andrew's boys team finish at the Seahawk Cross Country Invitational; the season page now also includes the supplied yearbook roster and images.",
     "FirstRegularSeasonMeet": "1999-09-04",
     "RegionMeetDate": "",
     "StateMeetStart": "",
@@ -78,8 +78,91 @@
     ],
     "SourceCitation": "\"SEAHAWK CROSS COUNTRY INVITATIONAL,\" Savannah Morning News, 1999-09-05, Page 4C",
     "ArchiveStatus": "newsbank",
-    "ArchiveStatusNote": "NewsBank recovery found a St. Andrew's boys team finish at the Seahawk Cross Country Invitational.",
-    "SourceSeasonLabel": "1999-00"
+    "ArchiveStatusNote": "NewsBank recovery found a St. Andrew's boys team finish at the Seahawk Cross Country Invitational; the season page now also includes the supplied yearbook roster and images.",
+    "SourceSeasonLabel": "1999-00",
+    "Images": [
+      {
+        "src": "/images/cross-country/seasons/1999-00/gallery/1999-00-cross-country-team.png",
+        "alt": "1999-00 St. Andrew's cross country team photo",
+        "caption": "(Back Row) Juan Pablo Aragon, Joseph Hinely, Cam Aldrich, Jonathan Helmken, Andy Tietz, Michael Clay (Front Row) Tiffany Griffin, Stephanie Griffin, Michelle Griffin, Ryan Phillips, Will Massey, Coach Brown."
+      },
+      {
+        "src": "/images/cross-country/seasons/1999-00/gallery/1999-00-cross-country-01-football-spirit.png",
+        "alt": "Randall Phillips, Andy Tietz, and Chris Lowe showing team spirit at a football game",
+        "caption": "Cross Country team members Randall Phillips, Andy Tietz, and Chris Lowe show their team spirit at a football game."
+      }
+    ],
+    "Roster": [
+      {
+        "Name": "Juan Pablo Aragon",
+        "Grade": 12,
+        "PlayerID": 2027062
+      },
+      {
+        "Name": "Joseph Hinely",
+        "Grade": 12,
+        "PlayerID": 199905
+      },
+      {
+        "Name": "Cam Aldrich",
+        "Grade": 9,
+        "PlayerID": 200001
+      },
+      {
+        "Name": "Jonathan Helmken",
+        "Grade": 8,
+        "PlayerID": 200468
+      },
+      {
+        "Name": "Andy Tietz",
+        "Grade": 11,
+        "PlayerID": 199909
+      },
+      {
+        "Name": "Michael Clay",
+        "Grade": "",
+        "PlayerID": 2027063
+      },
+      {
+        "Name": "Tiffany Griffin",
+        "Grade": 10,
+        "PlayerID": 2027048
+      },
+      {
+        "Name": "Stephanie Griffin",
+        "Grade": 6,
+        "PlayerID": 200407
+      },
+      {
+        "Name": "Michelle Griffin",
+        "Grade": 6,
+        "PlayerID": 200408
+      },
+      {
+        "Name": "Ryan Phillips",
+        "Grade": 6,
+        "PlayerID": 2027064
+      },
+      {
+        "Name": "Will Massey",
+        "Grade": 8,
+        "PlayerID": 200105
+      },
+      {
+        "Name": "Randall Phillips",
+        "Grade": 11,
+        "PlayerID": 200009
+      },
+      {
+        "Name": "Chris Lowe",
+        "Grade": 11,
+        "PlayerID": 200007
+      },
+      {
+        "Name": "Jim Brown",
+        "Grade": "Head Coach"
+      }
+    ]
   },
   {
     "SeasonID": 2001,

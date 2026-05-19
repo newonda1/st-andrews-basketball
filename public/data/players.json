@@ -769,7 +769,9 @@
     "PlayerID": 200001,
     "FirstName": "Cam",
     "LastName": "Aldrich",
-    "GradYear": 2003
+    "GradYear": 2003,
+    "PlayerName": "Cam Aldrich",
+    "Gender": "Boys"
   },
   {
     "PlayerID": 200002,
@@ -940,7 +942,8 @@
     "FirstName": "Will",
     "LastName": "Massey",
     "GradYear": 2004,
-    "Gender": "Boys"
+    "Gender": "Boys",
+    "PlayerName": "Will Massey"
   },
   {
     "PlayerID": 200106,
@@ -1752,7 +1755,7 @@
     "PlayerName": "Jonathan Helmken",
     "FirstName": "Jonathan",
     "LastName": "Helmken",
-    "GradYear": null,
+    "GradYear": 2004,
     "Gender": "Boys"
   },
   {
@@ -6501,5 +6504,29 @@
     "LastName": "Stuart",
     "GradYear": 2002,
     "Gender": "Girls"
+  },
+  {
+    "PlayerID": 2027062,
+    "PlayerName": "Juan Pablo Aragon",
+    "FirstName": "Juan Pablo",
+    "LastName": "Aragon",
+    "GradYear": 2000,
+    "Gender": "Boys"
+  },
+  {
+    "PlayerID": 2027063,
+    "PlayerName": "Michael Clay",
+    "FirstName": "Michael",
+    "LastName": "Clay",
+    "GradYear": null,
+    "Gender": "Boys"
+  },
+  {
+    "PlayerID": 2027064,
+    "PlayerName": "Ryan Phillips",
+    "FirstName": "Ryan",
+    "LastName": "Phillips",
+    "GradYear": 2006,
+    "Gender": "Boys"
   }
 ]
