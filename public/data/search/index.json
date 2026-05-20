@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-19T18:53:35.254Z",
-  "itemCount": 1447,
+  "generatedAt": "2026-05-20T14:32:28.958Z",
+  "itemCount": 1453,
   "items": [
     {
       "id": "athletics-home",
@@ -7895,7 +7895,7 @@
       "id": "baseball-athlete-2027052",
       "type": "athlete",
       "title": "Adem Sumer",
-      "subtitle": "Baseball athlete",
+      "subtitle": "Baseball athlete - Class of 2000",
       "to": "/athletics/boys/baseball/players/2027052",
       "keywords": [
         "Baseball",
@@ -7905,7 +7905,9 @@
         "records",
         "Adem",
         "Sumer",
-        "Sumer Adem"
+        "Sumer Adem",
+        "class of 2000",
+        "grad 2000"
       ]
     },
     {
@@ -13511,7 +13513,7 @@
     {
       "id": "football-athlete-200014",
       "type": "athlete",
-      "title": "Mike McLean",
+      "title": "Michael McClean",
       "subtitle": "Football athlete - Class of 2003",
       "to": "/athletics/football/players/200014",
       "keywords": [
@@ -13520,9 +13522,9 @@
         "player",
         "stats",
         "records",
-        "Mike",
-        "McLean",
-        "McLean Mike",
+        "Michael",
+        "McClean",
+        "McClean Michael",
         "class of 2003",
         "grad 2003"
       ]
@@ -15624,22 +15626,41 @@
       ]
     },
     {
-      "id": "boys-soccer-athlete-199601",
+      "id": "boys-soccer-athlete-199901",
       "type": "athlete",
-      "title": "Evan Aldrich",
+      "title": "Michael Paton",
       "subtitle": "Boys Soccer athlete - Class of 2000",
-      "to": "/athletics/boys/soccer/players/199601",
+      "to": "/athletics/boys/soccer/players/199901",
       "keywords": [
         "Boys Soccer",
         "athlete",
         "player",
         "stats",
         "records",
-        "Evan",
-        "Aldrich",
-        "Aldrich Evan",
+        "Michael",
+        "Paton",
+        "Paton Michael",
         "class of 2000",
         "grad 2000"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-200009",
+      "type": "athlete",
+      "title": "Randall Phillips",
+      "subtitle": "Boys Soccer athlete - Class of 2001",
+      "to": "/athletics/boys/soccer/players/200009",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Randall",
+        "Phillips",
+        "Phillips Randall",
+        "class of 2001",
+        "grad 2001"
       ]
     },
     {
@@ -15657,6 +15678,44 @@
         "Lee",
         "Stubbs",
         "Stubbs Lee",
+        "class of 2000",
+        "grad 2000"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-2027070",
+      "type": "athlete",
+      "title": "Nathan Finley",
+      "subtitle": "Boys Soccer athlete - Class of 2000",
+      "to": "/athletics/boys/soccer/players/2027070",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Nathan",
+        "Finley",
+        "Finley Nathan",
+        "class of 2000",
+        "grad 2000"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-199905",
+      "type": "athlete",
+      "title": "Joseph Hinely",
+      "subtitle": "Boys Soccer athlete - Class of 2000",
+      "to": "/athletics/boys/soccer/players/199905",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Joseph",
+        "Hinely",
+        "Hinely Joseph",
         "class of 2000",
         "grad 2000"
       ]
@@ -15681,41 +15740,41 @@
       ]
     },
     {
-      "id": "boys-soccer-athlete-200007",
+      "id": "boys-soccer-athlete-200010",
       "type": "athlete",
-      "title": "Chris Lowe",
-      "subtitle": "Boys Soccer athlete - Class of 2001",
-      "to": "/athletics/boys/soccer/players/200007",
+      "title": "Ben Robertson",
+      "subtitle": "Boys Soccer athlete - Class of 2003",
+      "to": "/athletics/boys/soccer/players/200010",
       "keywords": [
         "Boys Soccer",
         "athlete",
         "player",
         "stats",
         "records",
-        "Chris",
-        "Lowe",
-        "Lowe Chris",
-        "class of 2001",
-        "grad 2001"
+        "Ben",
+        "Robertson",
+        "Robertson Ben",
+        "class of 2003",
+        "grad 2003"
       ]
     },
     {
-      "id": "boys-soccer-athlete-200004",
+      "id": "boys-soccer-athlete-2027062",
       "type": "athlete",
-      "title": "Justin Dixon",
-      "subtitle": "Boys Soccer athlete - Class of 2002",
-      "to": "/athletics/boys/soccer/players/200004",
+      "title": "Juan Pablo Aragon",
+      "subtitle": "Boys Soccer athlete - Class of 2000",
+      "to": "/athletics/boys/soccer/players/2027062",
       "keywords": [
         "Boys Soccer",
         "athlete",
         "player",
         "stats",
         "records",
-        "Justin",
-        "Dixon",
-        "Dixon Justin",
-        "class of 2002",
-        "grad 2002"
+        "Juan Pablo",
+        "Aragon",
+        "Aragon Juan Pablo",
+        "class of 2000",
+        "grad 2000"
       ]
     },
     {
@@ -15738,78 +15797,48 @@
       ]
     },
     {
-      "id": "boys-soccer-athlete-2027042",
+      "id": "boys-soccer-athlete-2027049",
       "type": "athlete",
-      "title": "Toni Popovic",
-      "subtitle": "Boys Soccer athlete",
-      "to": "/athletics/boys/soccer/players/2027042",
+      "title": "Ryan Haggberg",
+      "subtitle": "Boys Soccer athlete - Class of 2003",
+      "to": "/athletics/boys/soccer/players/2027049",
       "keywords": [
         "Boys Soccer",
         "athlete",
         "player",
         "stats",
         "records",
-        "Toni",
-        "Popovic",
-        "Popovic Toni"
+        "Ryan",
+        "Haggberg",
+        "Haggberg Ryan",
+        "class of 2003",
+        "grad 2003"
       ]
     },
     {
-      "id": "boys-soccer-athlete-199902",
+      "id": "boys-soccer-athlete-199601",
       "type": "athlete",
-      "title": "Matt Mahany",
-      "subtitle": "Boys Soccer athlete",
-      "to": "/athletics/boys/soccer/players/199902",
+      "title": "Evan Aldrich",
+      "subtitle": "Boys Soccer athlete - Class of 2000",
+      "to": "/athletics/boys/soccer/players/199601",
       "keywords": [
         "Boys Soccer",
         "athlete",
         "player",
         "stats",
         "records",
-        "Matt",
-        "Mahany",
-        "Mahany Matt"
-      ]
-    },
-    {
-      "id": "boys-soccer-athlete-2027055",
-      "type": "athlete",
-      "title": "Will Helmken",
-      "subtitle": "Boys Soccer athlete",
-      "to": "/athletics/boys/soccer/players/2027055",
-      "keywords": [
-        "Boys Soccer",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Will",
-        "Helmken",
-        "Helmken Will"
-      ]
-    },
-    {
-      "id": "boys-soccer-athlete-2027056",
-      "type": "athlete",
-      "title": "Scott Thornton",
-      "subtitle": "Boys Soccer athlete",
-      "to": "/athletics/boys/soccer/players/2027056",
-      "keywords": [
-        "Boys Soccer",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Scott",
-        "Thornton",
-        "Thornton Scott"
+        "Evan",
+        "Aldrich",
+        "Aldrich Evan",
+        "class of 2000",
+        "grad 2000"
       ]
     },
     {
       "id": "boys-soccer-athlete-2027043",
       "type": "athlete",
       "title": "Fred Krynen",
-      "subtitle": "Boys Soccer athlete",
+      "subtitle": "Boys Soccer athlete - Class of 2003",
       "to": "/athletics/boys/soccer/players/2027043",
       "keywords": [
         "Boys Soccer",
@@ -15819,7 +15848,123 @@
         "records",
         "Fred",
         "Krynen",
-        "Krynen Fred"
+        "Krynen Fred",
+        "class of 2003",
+        "grad 2003"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-2027042",
+      "type": "athlete",
+      "title": "Toni Popovic",
+      "subtitle": "Boys Soccer athlete - Class of 2001",
+      "to": "/athletics/boys/soccer/players/2027042",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Toni",
+        "Popovic",
+        "Popovic Toni",
+        "class of 2001",
+        "grad 2001"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-200458",
+      "type": "athlete",
+      "title": "Michael McClean",
+      "subtitle": "Boys Soccer athlete - Class of 2003",
+      "to": "/athletics/boys/soccer/players/200458",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Michael",
+        "McClean",
+        "McClean Michael",
+        "class of 2003",
+        "grad 2003"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-2027071",
+      "type": "athlete",
+      "title": "James McIntire",
+      "subtitle": "Boys Soccer athlete - Class of 2003",
+      "to": "/athletics/boys/soccer/players/2027071",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "James",
+        "McIntire",
+        "McIntire James",
+        "class of 2003",
+        "grad 2003"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-2027055",
+      "type": "athlete",
+      "title": "Will Helmken",
+      "subtitle": "Boys Soccer athlete - Class of 2000",
+      "to": "/athletics/boys/soccer/players/2027055",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Will",
+        "Helmken",
+        "Helmken Will",
+        "class of 2000",
+        "grad 2000"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-200004",
+      "type": "athlete",
+      "title": "Justin Dixon",
+      "subtitle": "Boys Soccer athlete - Class of 2002",
+      "to": "/athletics/boys/soccer/players/200004",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Justin",
+        "Dixon",
+        "Dixon Justin",
+        "class of 2002",
+        "grad 2002"
+      ]
+    },
+    {
+      "id": "boys-soccer-athlete-200007",
+      "type": "athlete",
+      "title": "Chris Lowe",
+      "subtitle": "Boys Soccer athlete - Class of 2001",
+      "to": "/athletics/boys/soccer/players/200007",
+      "keywords": [
+        "Boys Soccer",
+        "athlete",
+        "player",
+        "stats",
+        "records",
+        "Chris",
+        "Lowe",
+        "Lowe Chris",
+        "class of 2001",
+        "grad 2001"
       ]
     },
     {
@@ -15895,25 +16040,6 @@
       ]
     },
     {
-      "id": "boys-soccer-athlete-200458",
-      "type": "athlete",
-      "title": "Mike McLean",
-      "subtitle": "Boys Soccer athlete - Class of 2003",
-      "to": "/athletics/boys/soccer/players/200458",
-      "keywords": [
-        "Boys Soccer",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Mike",
-        "McLean",
-        "McLean Mike",
-        "class of 2003",
-        "grad 2003"
-      ]
-    },
-    {
       "id": "boys-soccer-athlete-200431",
       "type": "athlete",
       "title": "Will Chisholm",
@@ -15930,23 +16056,6 @@
         "Chisholm Will",
         "class of 2004",
         "grad 2004"
-      ]
-    },
-    {
-      "id": "boys-soccer-athlete-2027049",
-      "type": "athlete",
-      "title": "Ryan Haggberg",
-      "subtitle": "Boys Soccer athlete",
-      "to": "/athletics/boys/soccer/players/2027049",
-      "keywords": [
-        "Boys Soccer",
-        "athlete",
-        "player",
-        "stats",
-        "records",
-        "Ryan",
-        "Haggberg",
-        "Haggberg Ryan"
       ]
     },
     {
@@ -26123,6 +26232,79 @@
       ]
     },
     {
+      "id": "boys-soccer-team-sea-island-academy",
+      "type": "team",
+      "title": "Sea Island Academy",
+      "subtitle": "Boys Soccer opponent history - Johns Island, SC",
+      "to": "/athletics/boys/soccer/records/opponents?team=Sea+Island+Academy",
+      "keywords": [
+        "Boys Soccer",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Sea Island Academy",
+        "Sea Island",
+        "Sun Devils",
+        "Johns Island",
+        "SC"
+      ]
+    },
+    {
+      "id": "boys-soccer-team-james-f-byrnes-academy",
+      "type": "team",
+      "title": "James F. Byrnes Academy",
+      "subtitle": "Boys Soccer opponent history - Quinby, SC",
+      "to": "/athletics/boys/soccer/records/opponents?team=James+F.+Byrnes+Academy",
+      "keywords": [
+        "Boys Soccer",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "James F. Byrnes Academy",
+        "Quinby",
+        "SC"
+      ]
+    },
+    {
+      "id": "boys-soccer-team-beaufort-academy",
+      "type": "team",
+      "title": "Beaufort Academy",
+      "subtitle": "Boys Soccer opponent history - Beaufort, SC",
+      "to": "/athletics/boys/soccer/records/opponents?team=Beaufort+Academy",
+      "keywords": [
+        "Boys Soccer",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Beaufort Academy",
+        "Eagles",
+        "Beaufort",
+        "SC"
+      ]
+    },
+    {
+      "id": "boys-soccer-team-hilton-head-preparatory-school",
+      "type": "team",
+      "title": "Hilton Head Preparatory School",
+      "subtitle": "Boys Soccer opponent history - Hilton Head Island, SC",
+      "to": "/athletics/boys/soccer/records/opponents?team=Hilton+Head+Preparatory+School",
+      "keywords": [
+        "Boys Soccer",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Hilton Head Preparatory School",
+        "Hilton Head Prep",
+        "Dolphins",
+        "Hilton Head Island",
+        "SC"
+      ]
+    },
+    {
       "id": "boys-soccer-team-james-island-christian-school",
       "type": "team",
       "title": "James Island Christian School",
@@ -26136,6 +26318,24 @@
         "records",
         "James Island Christian School",
         "Lions",
+        "Charleston",
+        "SC"
+      ]
+    },
+    {
+      "id": "boys-soccer-team-northwood-academy",
+      "type": "team",
+      "title": "Northwood Academy",
+      "subtitle": "Boys Soccer opponent history - Charleston, SC",
+      "to": "/athletics/boys/soccer/records/opponents?team=Northwood+Academy",
+      "keywords": [
+        "Boys Soccer",
+        "team",
+        "opponent",
+        "history",
+        "records",
+        "Northwood Academy",
+        "Chargers",
         "Charleston",
         "SC"
       ]
@@ -26192,61 +26392,6 @@
         "Patrick Henry Academy",
         "Patriots",
         "Estill",
-        "SC"
-      ]
-    },
-    {
-      "id": "boys-soccer-team-sea-island-academy",
-      "type": "team",
-      "title": "Sea Island Academy",
-      "subtitle": "Boys Soccer opponent history - Johns Island, SC",
-      "to": "/athletics/boys/soccer/records/opponents?team=Sea+Island+Academy",
-      "keywords": [
-        "Boys Soccer",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Sea Island Academy",
-        "Sea Island",
-        "Sun Devils",
-        "Johns Island",
-        "SC"
-      ]
-    },
-    {
-      "id": "boys-soccer-team-hilton-head-preparatory-school",
-      "type": "team",
-      "title": "Hilton Head Preparatory School",
-      "subtitle": "Boys Soccer opponent history - Hilton Head Island, SC",
-      "to": "/athletics/boys/soccer/records/opponents?team=Hilton+Head+Preparatory+School",
-      "keywords": [
-        "Boys Soccer",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Hilton Head Preparatory School",
-        "Hilton Head Prep",
-        "Dolphins",
-        "Hilton Head Island",
-        "SC"
-      ]
-    },
-    {
-      "id": "boys-soccer-team-james-f-byrnes-academy",
-      "type": "team",
-      "title": "James F. Byrnes Academy",
-      "subtitle": "Boys Soccer opponent history - Quinby, SC",
-      "to": "/athletics/boys/soccer/records/opponents?team=James+F.+Byrnes+Academy",
-      "keywords": [
-        "Boys Soccer",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "James F. Byrnes Academy",
-        "Quinby",
         "SC"
       ]
     },
@@ -26358,24 +26503,6 @@
         "Charleston Collegiate",
         "Sun Devils",
         "Johns Island",
-        "SC"
-      ]
-    },
-    {
-      "id": "boys-soccer-team-beaufort-academy",
-      "type": "team",
-      "title": "Beaufort Academy",
-      "subtitle": "Boys Soccer opponent history - Beaufort, SC",
-      "to": "/athletics/boys/soccer/records/opponents?team=Beaufort+Academy",
-      "keywords": [
-        "Boys Soccer",
-        "team",
-        "opponent",
-        "history",
-        "records",
-        "Beaufort Academy",
-        "Eagles",
-        "Beaufort",
         "SC"
       ]
     },

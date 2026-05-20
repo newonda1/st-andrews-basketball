@@ -889,9 +889,9 @@
   },
   {
     "PlayerID": 200014,
-    "PlayerName": "Mike McLean",
-    "FirstName": "Mike",
-    "LastName": "McLean",
+    "PlayerName": "Michael McClean",
+    "FirstName": "Michael",
+    "LastName": "McClean",
     "GradYear": 2003,
     "Gender": "Boys"
   },
@@ -1678,9 +1678,9 @@
   },
   {
     "PlayerID": 200458,
-    "PlayerName": "Mike McLean",
-    "FirstName": "Mike",
-    "LastName": "McLean",
+    "PlayerName": "Michael McClean",
+    "FirstName": "Michael",
+    "LastName": "McClean",
     "GradYear": 2003,
     "Gender": "Boys"
   },
@@ -6356,7 +6356,7 @@
     "PlayerName": "Toni Popovic",
     "FirstName": "Toni",
     "LastName": "Popovic",
-    "GradYear": null,
+    "GradYear": 2001,
     "Gender": "Boys"
   },
   {
@@ -6364,7 +6364,7 @@
     "PlayerName": "Fred Krynen",
     "FirstName": "Fred",
     "LastName": "Krynen",
-    "GradYear": null,
+    "GradYear": 2003,
     "Gender": "Boys"
   },
   {
@@ -6412,7 +6412,7 @@
     "PlayerName": "Ryan Haggberg",
     "FirstName": "Ryan",
     "LastName": "Haggberg",
-    "GradYear": null,
+    "GradYear": 2003,
     "Gender": "Boys"
   },
   {
@@ -6436,7 +6436,7 @@
     "PlayerName": "Adem Sumer",
     "FirstName": "Adem",
     "LastName": "Sumer",
-    "GradYear": null,
+    "GradYear": 2000,
     "Gender": "Boys"
   },
   {
@@ -6460,7 +6460,7 @@
     "PlayerName": "Will Helmken",
     "FirstName": "Will",
     "LastName": "Helmken",
-    "GradYear": null,
+    "GradYear": 2000,
     "Gender": "Boys"
   },
   {
@@ -6572,6 +6572,22 @@
     "PlayerName": "Brenton Marona",
     "FirstName": "Brenton",
     "LastName": "Marona",
+    "GradYear": 2003,
+    "Gender": "Boys"
+  },
+  {
+    "PlayerID": 2027070,
+    "PlayerName": "Nathan Finley",
+    "FirstName": "Nathan",
+    "LastName": "Finley",
+    "GradYear": 2000,
+    "Gender": "Boys"
+  },
+  {
+    "PlayerID": 2027071,
+    "PlayerName": "James McIntire",
+    "FirstName": "James",
+    "LastName": "McIntire",
     "GradYear": 2003,
     "Gender": "Boys"
   }

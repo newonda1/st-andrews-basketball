@@ -32,27 +32,61 @@
     "AwayWins": null,
     "AwayLosses": null,
     "AwayTies": null,
-    "PointsFor": 11,
-    "PointsAgainst": 2,
+    "PointsFor": 44,
+    "PointsAgainst": 21,
     "SeasonResult": "St. Andrew's defeated Greenwood Christian 2-0 at Porter-Gaud to win the SCISA Class AA boys soccer championship and finish 12-4.",
-    "StatusNote": "NewsBank recovery includes the three scored SCISA Class AA playoff wins plus 13 regular-season record-path placeholders needed to reconcile the published 12-4 final record. Points for/against reflect recovered scored games only.",
+    "StatusNote": "Yearbook recovery now includes 11 scored regular-season games plus the three scored SCISA Class AA playoff wins. Two regular-season win placeholders remain to reconcile the published 12-4 final record. Points for/against reflect recovered scored games only.",
     "HistoricalSummary": [
-      "The Spring 2000 boys soccer archive now restores Jim Brown's final St. Andrew's season as another championship year. The full regular-season schedule has not surfaced, but the state quarterfinal report listed St. Andrew's at 10-4 after beating Jefferson Davis Academy, and the state final report gives the final record as 12-4.",
-      "One regular-season note is clear from the title preview: Toni Popovic had scored eight goals in five matches before breaking his left arm during a win over James Island Christian. The roster and statistics preserve that official snapshot while the schedule carries a placeholder for the unscored James Island win.",
-      "The postseason run was decisive. St. Andrew's beat Jefferson Davis Academy 5-1 in the quarterfinals behind two goals each from Frank Krynen and Chris Lowe, then came from a 1-0 halftime deficit to beat James Island Christian 4-1 in the semifinals as Lee Stubbs scored twice.",
+      "The Spring 2000 boys soccer archive now restores Jim Brown's final St. Andrew's season as another championship year. The yearbook supplies 11 regular-season scores, while two regular-season wins remain as record-path placeholders to match the published 12-4 final record.",
+      "The recovered regular-season results include wins over Sea Island Academy, James F. Byrnes Academy, James Island Christian School, and Northwood Academy, plus losses to Beaufort Academy and Hilton Head Prep.",
+      "One regular-season note is clear from the title preview: Toni Popovic had scored eight goals in five matches before breaking his left arm during a win over James Island Christian.",
+      "The postseason run was decisive. St. Andrew's beat Jefferson Davis Academy 5-1 in the quarterfinals behind two goals each from Franck Krynen and Chris Lowe, then came from a 1-0 halftime deficit to beat James Island Christian 4-1 in the semifinals as Lee Stubbs scored twice.",
       "In the championship match at Porter-Gaud, Evan Aldrich scored in the third minute and a Scott Thornton header forced a Greenwood Christian own goal for the 2-0 final. Cam Aldrich made 15 saves, and Will Helmken, Matt Mahany, and Chris Lowe anchored the shutout as St. Andrew's won its third SCISA boys soccer title in four years."
     ],
     "HighlightNotes": [
       "SCISA Class AA state champion with a 12-4 final record.",
+      "Yearbook schedule details now identify 11 scored regular-season games.",
       "Cam Aldrich made 15 saves in the state championship shutout.",
       "Lee Stubbs scored twice in the state semifinal win over James Island Christian.",
       "Toni Popovic was listed with eight goals in five matches before his regular-season injury.",
       "Justin Dixon, Quint Dixon, and Lee Stubbs were listed as St. Andrew's Ashley Dearing Award candidates in April 2000."
     ],
     "ArchiveStatus": "archived",
-    "ArchiveStatusNote": "NewsBank recovery includes the three scored SCISA Class AA playoff wins plus 13 regular-season record-path placeholders needed to reconcile the published 12-4 final record. Points for/against reflect recovered scored games only.",
-    "RecordSource": "seasons.json source-of-truth row; event pages reconcile to this record.",
-    "FinishLabel": "SCISA Class AA State Champion / St. Andrew's defeated Greenwood Christian 2-0 at Porter-Gaud to win the SCISA Class AA boys soccer championship and finish 12-4."
+    "ArchiveStatusNote": "Yearbook recovery now includes 11 scored regular-season games plus the three scored SCISA Class AA playoff wins. Two regular-season win placeholders remain to reconcile the published 12-4 final record. Points for/against reflect recovered scored games only.",
+    "RecordSource": "seasons.json source-of-truth row; yearbook schedule plus remaining record-path placeholders reconcile to this record.",
+    "FinishLabel": "SCISA Class AA State Champion / St. Andrew's defeated Greenwood Christian 2-0 at Porter-Gaud to win the SCISA Class AA boys soccer championship and finish 12-4.",
+    "SeasonImages": [
+      {
+        "src": "/images/boys/soccer/seasons/2000/2000-boys-soccer-team.png",
+        "alt": "Spring 2000 boys soccer team photo",
+        "caption": "Team - (Top Row) Cam Aldrich, Michael Paton, Randall Phillips, Lee Stubbs, Nathan Finley, Joseph Hinely, Franck Krynen, Ben Robertson, Juan Pablo Aragon, Coach Brown (Bottom Row) Quint Dixon, Ryan Haggberg, Evan Aldrich, Fred Krynen, Toni Popovic, Michael McClean, James McIntire"
+      },
+      {
+        "src": "/images/boys/soccer/seasons/2000/2000-boys-soccer-01-coach-brown-cam-aldrich.png",
+        "alt": "Coach Brown talking with Cam Aldrich at halftime",
+        "caption": "During half time, Coach Brown gives goalie, Cam Aldrich, some useful strategies on blocking more goals."
+      },
+      {
+        "src": "/images/boys/soccer/seasons/2000/2000-boys-soccer-02-michael-paton-justin-dixon.png",
+        "alt": "Michael Paton and Justin Dixon during a game",
+        "caption": "\"Now Justin, this is the third time I have told you we have scored 1, 2, 3 goals this game,\" says Michael Paton to fellow teammate Justin Dixon."
+      },
+      {
+        "src": "/images/boys/soccer/seasons/2000/2000-boys-soccer-03-will-helmken-michael-paton.png",
+        "alt": "Will Helmken and Michael Paton defending during a soccer game",
+        "caption": "Will Helmken blocks an opposing player while Michael Paton kicks the ball down the field."
+      },
+      {
+        "src": "/images/boys/soccer/seasons/2000/2000-boys-soccer-04-fred-krynen-water.png",
+        "alt": "Fred Krynen drinking water at halftime",
+        "caption": "Fred Krynen gets a drink of water during half time and gets ready for the rest of the game."
+      },
+      {
+        "src": "/images/boys/soccer/seasons/2000/2000-boys-soccer-05-bench.png",
+        "alt": "The boys soccer team watching from the sideline",
+        "caption": "The Saints watch their teammates win yet another game."
+      }
+    ]
   },
   {
     "SeasonID": 2001,

@@ -27,6 +27,10 @@ function formatLocation(game) {
   return game.LocationType || game.Location || game.Site || "-";
 }
 
+function opponentSubline(game) {
+  return game.OpponentSubline || game.Round || "";
+}
+
 function resultClassName(result) {
   if (result === "W") return "text-green-700";
   if (result === "L") return "text-red-700";
@@ -170,6 +174,11 @@ function SeasonImagesSection({ images = [], seasonLabel }) {
             </>
           ) : null}
         </div>
+        {selectedImage.caption ? (
+          <div className="border-t border-gray-200 px-4 py-3 text-sm leading-6 text-gray-700">
+            {selectedImage.caption}
+          </div>
+        ) : null}
       </div>
     </section>
   );
@@ -397,6 +406,12 @@ export default function SeasonPage({ data, status = "" }) {
     return map;
   }, [rosterEntries]);
 
+  const playerById = useMemo(() => {
+    const map = new Map();
+    (data?.players || []).forEach((player) => map.set(Number(player.PlayerID), player));
+    return map;
+  }, [data]);
+
   const calculatedTotals = useMemo(() => {
     const map = new Map();
 
@@ -506,7 +521,8 @@ export default function SeasonPage({ data, status = "" }) {
   );
 
   function playerName(playerId) {
-    return getPlayerName(rosterById.get(Number(playerId)));
+    const normalizedPlayerId = Number(playerId);
+    return getPlayerName(rosterById.get(normalizedPlayerId) || playerById.get(normalizedPlayerId));
   }
 
   function rosterJerseyNumber(playerId) {
@@ -594,6 +610,7 @@ export default function SeasonPage({ data, status = "" }) {
           {games.length ? (
             games.map((game) => {
               const logoPath = opponentLogoPath(game);
+              const subline = opponentSubline(game);
 
               return (
                 <Link
@@ -622,6 +639,9 @@ export default function SeasonPage({ data, status = "" }) {
                           <h3 className="text-lg font-semibold leading-snug">
                             {game.Opponent}
                           </h3>
+                          {subline ? (
+                            <p className="mt-1 text-sm text-gray-500">{subline}</p>
+                          ) : null}
                           <p className="mt-2 text-sm text-gray-600">
                             {[formatLocation(game), game.GameType || "Regular Season"]
                               .filter(Boolean)
@@ -663,6 +683,7 @@ export default function SeasonPage({ data, status = "" }) {
               {games.length ? (
                 games.map((game, index) => {
                   const logoPath = opponentLogoPath(game);
+                  const subline = opponentSubline(game);
 
                   return (
                     <tr key={game.GameID} className={tableRowClassName(index)}>
@@ -691,6 +712,9 @@ export default function SeasonPage({ data, status = "" }) {
                             >
                               {game.Opponent}
                             </Link>
+                            {subline ? (
+                              <div className="mt-0.5 text-xs text-gray-500">{subline}</div>
+                            ) : null}
                           </div>
                         </div>
                       </td>

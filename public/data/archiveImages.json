@@ -812,7 +812,38 @@
       "caption": "2005 football"
     }
   ],
-  "boysSoccer": [],
+  "boysSoccer": [
+    {
+      "src": "/images/boys/soccer/seasons/2000/2000-boys-soccer-01-coach-brown-cam-aldrich.png",
+      "alt": "St. Andrew's boys soccer archive image from 2000",
+      "caption": "2000 boys soccer"
+    },
+    {
+      "src": "/images/boys/soccer/seasons/2000/2000-boys-soccer-02-michael-paton-justin-dixon.png",
+      "alt": "St. Andrew's boys soccer archive image from 2000",
+      "caption": "2000 boys soccer"
+    },
+    {
+      "src": "/images/boys/soccer/seasons/2000/2000-boys-soccer-03-will-helmken-michael-paton.png",
+      "alt": "St. Andrew's boys soccer archive image from 2000",
+      "caption": "2000 boys soccer"
+    },
+    {
+      "src": "/images/boys/soccer/seasons/2000/2000-boys-soccer-04-fred-krynen-water.png",
+      "alt": "St. Andrew's boys soccer archive image from 2000",
+      "caption": "2000 boys soccer"
+    },
+    {
+      "src": "/images/boys/soccer/seasons/2000/2000-boys-soccer-05-bench.png",
+      "alt": "St. Andrew's boys soccer archive image from 2000",
+      "caption": "2000 boys soccer"
+    },
+    {
+      "src": "/images/boys/soccer/seasons/2000/2000-boys-soccer-team.png",
+      "alt": "St. Andrew's boys soccer archive image from 2000",
+      "caption": "2000 boys soccer"
+    }
+  ],
   "girlsSoccer": [],
   "golf": [],
   "softball": [],
