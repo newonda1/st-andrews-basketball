@@ -1234,15 +1234,36 @@ function buildSections(data, playerId) {
   );
 }
 
-function AthletePhoto({ playerId, sportKey, name }) {
-  const [failed, setFailed] = useState(false);
-  const imageBase =
-    sportKey === "girls-basketball"
-      ? "/images/girls/basketball/players"
-      : sportKey === "football"
-        ? "/images/boys/football/players"
-        : "/images/boys/basketball/players";
-  const src = `${imageBase}/${playerId}.jpg`;
+function buildAthletePhotoSources(playerId, sportKey, gender) {
+  const sportImageBase = {
+    "boys-baseball": "/images/boys/baseball/players",
+    "boys-basketball": "/images/boys/basketball/players",
+    football: "/images/boys/football/players",
+    "girls-basketball": "/images/girls/basketball/players",
+  }[sportKey];
+  const fallbackBases =
+    gender === "Girls"
+      ? ["/images/girls/basketball/players"]
+      : [
+          "/images/boys/basketball/players",
+          "/images/boys/football/players",
+          "/images/boys/baseball/players",
+        ];
+
+  return [
+    `/images/athletes/players/${playerId}.png`,
+    sportImageBase ? `${sportImageBase}/${playerId}.jpg` : "",
+    ...fallbackBases.map((base) => `${base}/${playerId}.jpg`),
+  ].filter((value, index, values) => value && values.indexOf(value) === index);
+}
+
+function AthletePhoto({ playerId, sportKey, name, gender }) {
+  const [imageIndex, setImageIndex] = useState(0);
+  const sources = useMemo(
+    () => buildAthletePhotoSources(playerId, sportKey, gender),
+    [gender, playerId, sportKey]
+  );
+  const src = sources[imageIndex] || "";
   const initials = name
     .split(/\s+/)
     .filter(Boolean)
@@ -1251,17 +1272,19 @@ function AthletePhoto({ playerId, sportKey, name }) {
     .join("");
 
   useEffect(() => {
-    setFailed(false);
-  }, [src]);
+    setImageIndex(0);
+  }, [sources]);
+
+  const showFallback = imageIndex >= sources.length;
 
   return (
     <div className="h-20 w-20 shrink-0 overflow-hidden rounded-full bg-slate-200 sm:h-24 sm:w-24">
-      {!failed ? (
+      {!showFallback ? (
         <img
           src={src}
           alt={name}
           className="h-full w-full object-cover"
-          onError={() => setFailed(true)}
+          onError={() => setImageIndex((index) => index + 1)}
         />
       ) : (
         <div className="flex h-full w-full items-center justify-center bg-slate-900 text-2xl text-white">
@@ -1460,6 +1483,7 @@ export default function AthleteProfilePage() {
                   playerId={playerId}
                   sportKey={activeSection?.key}
                   name={displayName}
+                  gender={player?.Gender}
                 />
                 <div>
                   <h1 className="text-3xl tracking-normal text-slate-700 sm:text-4xl">
