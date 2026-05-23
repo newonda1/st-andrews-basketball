@@ -2,10 +2,10 @@
 
 import React, { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import PlayerHeadshot from "../../../components/PlayerHeadshot";
 import { loadAllBaseballPlayerGameStats } from "../dataLoaders";
 
 const DATA_BASE = "/data/boys/baseball";
-const IMAGE_BASE = "/images/boys/baseball/players";
 
 function safeNumber(value) {
   const num = Number(value);
@@ -358,7 +358,6 @@ function PlayerPage() {
   const [selectedView, setSelectedView] = useState("batting");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const [imageError, setImageError] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -477,7 +476,6 @@ function PlayerPage() {
     return [...grouped.entries()].sort((a, b) => Number(b[0]) - Number(a[0]));
   }, [playerGameRows]);
 
-  const photoSrc = `${IMAGE_BASE}/${numericPlayerId}.jpg`;
   const activeView = STAT_VIEWS[selectedView];
 
   const thClass =
@@ -502,18 +500,13 @@ function PlayerPage() {
         <section className="mb-10">
           <div className="flex items-center gap-4 md:gap-5">
             <div className="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden bg-slate-100 border border-slate-200 shrink-0">
-              {!imageError ? (
-                <img
-                  src={photoSrc}
-                  alt={`${player.FirstName} ${player.LastName}`}
-                  className="w-full h-full object-cover"
-                  onError={() => setImageError(true)}
-                />
-              ) : (
-                <div className="w-full h-full flex items-center justify-center text-slate-400 text-xs font-semibold text-center px-2">
-                  No Image
-                </div>
-              )}
+              <PlayerHeadshot
+                playerId={numericPlayerId}
+                sportKey="boys-baseball"
+                gender="Boys"
+                name={`${player.FirstName} ${player.LastName}`}
+                className="h-full w-full object-cover"
+              />
             </div>
 
             <div className="min-w-0">

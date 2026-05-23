@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
+import PlayerHeadshot from "../../../components/PlayerHeadshot";
 import {
   buildSchoolLookup,
   getSchoolDisplayName,
@@ -846,6 +847,23 @@ export function BaseballSeasonPage({
   const scheduleBodyCellClassName = "px-2 py-1.5 text-center align-middle whitespace-nowrap";
   const scheduleOpponentCellClassName = "px-2 py-1.5 align-middle";
   const statsBodyCellClassName = "px-2 py-1.5 text-center whitespace-nowrap";
+  const renderPlayerLink = (player) => (
+    <div className="flex items-center gap-2 text-left">
+      <PlayerHeadshot
+        playerId={player.PlayerID}
+        sportKey="boys-baseball"
+        gender="Boys"
+        name={player.name}
+        className="h-8 w-8 shrink-0 rounded-full object-cover"
+      />
+      <Link
+        to={baseballPlayerPath(player.PlayerID, seasonId)}
+        className="text-blue-600 hover:underline"
+      >
+        {player.name}
+      </Link>
+    </div>
+  );
 
   return (
     <div className="mx-auto max-w-6xl space-y-8 px-4 pb-10 pt-2 lg:pb-40">
@@ -1020,14 +1038,7 @@ export function BaseballSeasonPage({
                   className={`border-t border-gray-200 ${index % 2 === 0 ? "bg-white" : "bg-gray-50/70"} hover:bg-gray-100`}
                 >
                   <td className={statsBodyCellClassName}>{player.jersey === 999 ? "-" : player.jersey}</td>
-                  <td className={statsBodyCellClassName}>
-                    <Link
-                      to={baseballPlayerPath(player.PlayerID, seasonId)}
-                      className="text-blue-600 hover:underline"
-                    >
-                      {player.name}
-                    </Link>
-                  </td>
+                  <td className={statsBodyCellClassName}>{renderPlayerLink(player)}</td>
                   <td className={statsBodyCellClassName}>{player.GP}</td>
                   <td className={statsBodyCellClassName}>{player.PA}</td>
                   <td className={statsBodyCellClassName}>{player.AB}</td>
@@ -1082,14 +1093,7 @@ export function BaseballSeasonPage({
                   className={`border-t border-gray-200 ${index % 2 === 0 ? "bg-white" : "bg-gray-50/70"} hover:bg-gray-100`}
                 >
                   <td className={statsBodyCellClassName}>{player.jersey === 999 ? "-" : player.jersey}</td>
-                  <td className={statsBodyCellClassName}>
-                    <Link
-                      to={baseballPlayerPath(player.PlayerID, seasonId)}
-                      className="text-blue-600 hover:underline"
-                    >
-                      {player.name}
-                    </Link>
-                  </td>
+                  <td className={statsBodyCellClassName}>{renderPlayerLink(player)}</td>
                   <td className={statsBodyCellClassName}>{player.appearances}</td>
                   <td className={statsBodyCellClassName}>{formatBaseballInningsFromOuts(player.ipOuts)}</td>
                   <td className={statsBodyCellClassName}>{player.W}</td>
@@ -1137,14 +1141,7 @@ export function BaseballSeasonPage({
                   className={`border-t border-gray-200 ${index % 2 === 0 ? "bg-white" : "bg-gray-50/70"} hover:bg-gray-100`}
                 >
                   <td className={statsBodyCellClassName}>{player.jersey === 999 ? "-" : player.jersey}</td>
-                  <td className={statsBodyCellClassName}>
-                    <Link
-                      to={baseballPlayerPath(player.PlayerID, seasonId)}
-                      className="text-blue-600 hover:underline"
-                    >
-                      {player.name}
-                    </Link>
-                  </td>
+                  <td className={statsBodyCellClassName}>{renderPlayerLink(player)}</td>
                   <td className={statsBodyCellClassName}>{player.GP}</td>
                   <td className={statsBodyCellClassName}>{formatBaseballInningsFromOuts(player.defensiveOuts)}</td>
                   <td className={statsBodyCellClassName}>{player.PO}</td>

@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link, useLocation, useParams } from "react-router-dom";
 import AthleticsProgramShell from "../components/AthleticsProgramShell";
+import PlayerHeadshot from "../components/PlayerHeadshot";
 import {
   getSoftballPlayerGameRows,
   getSoftballPlayerTotals,
@@ -1234,63 +1235,16 @@ function buildSections(data, playerId) {
   );
 }
 
-function buildAthletePhotoSources(playerId, sportKey, gender) {
-  const sportImageBase = {
-    "boys-baseball": "/images/boys/baseball/players",
-    "boys-basketball": "/images/boys/basketball/players",
-    football: "/images/boys/football/players",
-    "girls-basketball": "/images/girls/basketball/players",
-  }[sportKey];
-  const fallbackBases =
-    gender === "Girls"
-      ? ["/images/girls/basketball/players"]
-      : [
-          "/images/boys/basketball/players",
-          "/images/boys/football/players",
-          "/images/boys/baseball/players",
-        ];
-
-  return [
-    `/images/athletes/players/${playerId}.png`,
-    sportImageBase ? `${sportImageBase}/${playerId}.jpg` : "",
-    ...fallbackBases.map((base) => `${base}/${playerId}.jpg`),
-  ].filter((value, index, values) => value && values.indexOf(value) === index);
-}
-
 function AthletePhoto({ playerId, sportKey, name, gender }) {
-  const [imageIndex, setImageIndex] = useState(0);
-  const sources = useMemo(
-    () => buildAthletePhotoSources(playerId, sportKey, gender),
-    [gender, playerId, sportKey]
-  );
-  const src = sources[imageIndex] || "";
-  const initials = name
-    .split(/\s+/)
-    .filter(Boolean)
-    .slice(0, 2)
-    .map((part) => part[0])
-    .join("");
-
-  useEffect(() => {
-    setImageIndex(0);
-  }, [sources]);
-
-  const showFallback = imageIndex >= sources.length;
-
   return (
     <div className="h-20 w-20 shrink-0 overflow-hidden rounded-full bg-slate-200 sm:h-24 sm:w-24">
-      {!showFallback ? (
-        <img
-          src={src}
-          alt={name}
-          className="h-full w-full object-cover"
-          onError={() => setImageIndex((index) => index + 1)}
-        />
-      ) : (
-        <div className="flex h-full w-full items-center justify-center bg-slate-900 text-2xl text-white">
-          {initials}
-        </div>
-      )}
+      <PlayerHeadshot
+        playerId={playerId}
+        sportKey={sportKey}
+        name={name}
+        gender={gender}
+        className="h-full w-full object-cover"
+      />
     </div>
   );
 }

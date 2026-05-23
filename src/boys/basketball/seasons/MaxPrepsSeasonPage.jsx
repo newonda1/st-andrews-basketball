@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
+import PlayerHeadshot from "../../../components/PlayerHeadshot";
 import {
   RegionBracket5GameSVG,
   StateBracket16GameSVG,
@@ -1101,16 +1102,25 @@ function MaxPrepsSeasonPage({
                           {getRosterJerseyNumber(rosterEntries, player.PlayerID) || "-"}
                         </td>
                         <td className={statsBodyCellClassName}>
-                          <Link
-                            to={
-                              isPre2015Season(seasonId)
-                                ? athleteProfilePath(player.PlayerID, "boys-basketball")
-                                : `/athletics/boys/basketball/players/${player.PlayerID}`
-                            }
-                            className="text-blue-600 hover:underline"
-                          >
-                            {playerName(player.PlayerID)}
-                          </Link>
+                          <div className="flex items-center gap-2 text-left">
+                            <PlayerHeadshot
+                              playerId={player.PlayerID}
+                              sportKey="boys-basketball"
+                              gender="Boys"
+                              name={playerName(player.PlayerID)}
+                              className="h-8 w-8 shrink-0 rounded-full object-cover"
+                            />
+                            <Link
+                              to={
+                                isPre2015Season(seasonId)
+                                  ? athleteProfilePath(player.PlayerID, "boys-basketball")
+                                  : `/athletics/boys/basketball/players/${player.PlayerID}`
+                              }
+                              className="text-blue-600 hover:underline"
+                            >
+                              {playerName(player.PlayerID)}
+                            </Link>
+                          </div>
                         </td>
                         <td className={statsBodyCellClassName}>{player.GamesPlayed || "-"}</td>
                         <td className={statsBodyCellClassName}>{valueFor(player, "Points")}</td>

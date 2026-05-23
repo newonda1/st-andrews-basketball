@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
 import ArticleFeatureList from "../../../components/ArticleFeatureList";
+import PlayerHeadshot from "../../../components/PlayerHeadshot";
 import { StateBracket8GameSVG } from "../../basketball/components/GameCardBracketsSVG";
 import { recordTableStyles } from "../../basketball/pages/recordTableStyles";
 import {
@@ -67,12 +68,21 @@ function StatsTable({ title, columns, rows, totals = null }) {
     if (column.key === "name") {
       if (row.PlayerID) {
         return (
-          <Link
-            to={footballPlayerPath(row.PlayerID)}
-            className="text-blue-600 hover:underline"
-          >
-            {row.PlayerName || "—"}
-          </Link>
+          <div className="flex items-center gap-2 text-left">
+            <PlayerHeadshot
+              playerId={row.PlayerID}
+              sportKey="football"
+              gender="Boys"
+              name={row.PlayerName || ""}
+              className="h-7 w-7 shrink-0 rounded-full object-cover"
+            />
+            <Link
+              to={footballPlayerPath(row.PlayerID)}
+              className="text-blue-600 hover:underline"
+            >
+              {row.PlayerName || "—"}
+            </Link>
+          </div>
         );
       }
 

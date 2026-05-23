@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import PlayerHeadshot from "../../../components/PlayerHeadshot";
 
 import {
   formatSoccerDate,
@@ -771,12 +772,20 @@ export default function SeasonPage({ data, status = "" }) {
                   {seasonTotals.map((player, index) => (
                     <tr key={player.PlayerID} className={tableRowClassName(index)}>
                       <td className="sticky left-0 z-10 border bg-inherit px-2 py-1.5 text-left whitespace-nowrap">
-                        <Link
+                        <div className="flex items-center gap-2">
+                          <PlayerHeadshot
+                            playerId={player.PlayerID}
+                            name={playerName(player.PlayerID)}
+                            sportKey="boys-soccer"
+                            className="h-8 w-8 shrink-0 rounded-full object-cover"
+                          />
+                          <Link
                             to={athleteProfilePath(player.PlayerID, "boys-soccer")}
-                          className="text-blue-700 underline hover:text-blue-900"
-                        >
-                          {playerName(player.PlayerID)}
-                        </Link>
+                            className="text-blue-700 underline hover:text-blue-900"
+                          >
+                            {playerName(player.PlayerID)}
+                          </Link>
+                        </div>
                       </td>
                       <td className={statsBodyCellClassName}>{rosterJerseyNumber(player.PlayerID)}</td>
                       <td className={statsBodyCellClassName}>

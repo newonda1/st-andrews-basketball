@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
+import PlayerHeadshot from "../../../components/PlayerHeadshot";
 import { formatGameDate } from "../footballData";
 import { usePreparedFootballRecordsData } from "../footballRecordsData";
 
@@ -16,7 +17,6 @@ import {
   trackedGamesColumn,
 } from "./footballDetailUtils";
 
-const FOOTBALL_IMAGE_BASE = "/images/boys/football/players";
 const FOOTBALL_ICON = "/images/common/football_icon.png";
 
 const NON_AGGREGATE_KEYS = new Set([
@@ -296,7 +296,6 @@ export default function PlayerPage() {
   const { playerId } = useParams();
   const { data, error } = usePreparedFootballRecordsData();
   const [selectedView, setSelectedView] = useState("offense");
-  const [imageError, setImageError] = useState(false);
 
   const profile = useMemo(
     () => (data ? summarizePlayerProfile(data, playerId) : null),
@@ -355,7 +354,6 @@ export default function PlayerPage() {
 
   const player = profile.player;
   const playerName = getPlayerDisplayName(player);
-  const photoSrc = `${FOOTBALL_IMAGE_BASE}/${player.PlayerID}.jpg`;
   const latestSeasonId = player.SeasonID || seasonRows[0]?.SeasonID;
 
   return (
@@ -363,18 +361,15 @@ export default function PlayerPage() {
       <section className="mb-10">
         <div className="flex items-center gap-4 md:gap-5">
           <div className="h-20 w-20 shrink-0 overflow-hidden rounded-full border border-slate-200 bg-slate-100 md:h-24 md:w-24">
-            {!imageError ? (
-              <img
-                src={photoSrc}
-                alt={playerName}
-                className="h-full w-full object-cover"
-                onError={() => setImageError(true)}
-              />
-            ) : (
-              <div className="flex h-full w-full items-center justify-center p-4">
-                <img src={FOOTBALL_ICON} alt="" className="h-full w-full object-contain opacity-60" />
-              </div>
-            )}
+            <PlayerHeadshot
+              playerId={player.PlayerID}
+              sportKey="football"
+              gender="Boys"
+              name={playerName}
+              fallbackSrc={FOOTBALL_ICON}
+              className="h-full w-full object-cover"
+              fallbackClassName="h-full w-full object-contain p-4 opacity-60"
+            />
           </div>
 
           <div className="min-w-0">

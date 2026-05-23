@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import ArticleFeatureList from "../../../components/ArticleFeatureList";
+import PlayerHeadshot from "../../../components/PlayerHeadshot";
 import {
   BOYS_BASKETBALL_ROSTERS_PATH,
   SCHOOLS_PATH,
@@ -65,10 +66,6 @@ const formatDateFromGameID = (gameId) => {
     day: "numeric",
     year: "numeric",
   });
-};
-
-const getPlayerPhotoUrl = (playerId) => {
-  return `/images/boys/basketball/players/${playerId}.jpg`;
 };
 
 const calcPct = (made, att) => {
@@ -413,21 +410,18 @@ function PlayerPage() {
     null;
 
   const yearsWithTeam = player.YearsWithTeam || "";
-  const photoUrl = getPlayerPhotoUrl(playerId);
-
   return (
     <div className="player-page max-w-5xl mx-auto p-4 space-y-8">
       <header className="flex items-center gap-4 mb-4">
-        {photoUrl && (
-          <img
-            src={photoUrl}
-            alt={playerName}
-            onError={(e) =>
-              (e.currentTarget.src = "/images/common/logo.png")
-            }
-            className="w-24 h-24 object-cover rounded-full border"
-          />
-        )}
+        <PlayerHeadshot
+          playerId={playerId}
+          sportKey="boys-basketball"
+          gender="Boys"
+          name={playerName}
+          fallbackSrc="/images/common/logo.png"
+          className="h-24 w-24 shrink-0 rounded-full border object-cover"
+          fallbackClassName="h-24 w-24 shrink-0 rounded-full border bg-white object-contain p-3"
+        />
         <div>
           <h1 className="text-3xl font-bold">{playerName}</h1>
 
